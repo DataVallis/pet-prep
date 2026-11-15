@@ -67,7 +67,8 @@ describe('M5-R10-70 Russell Terrier (Jack Russell Terrier)', () => {
   it('is found by its EN / SL names and nicknames; never another terrier', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('Jack Russell Terrier')).toEqual([KEY]);
-    expect(find('Russell Terrier')).toEqual([KEY]);
+    // M5-R10-116: the Parson Russell Terrier (FCI 339) carries »Russell Terrier« in its official name — the only other match.
+    expect(find('Russell Terrier')).toEqual([KEY, 'parson_russell_terrier']);
     expect(find('jack russell')).toEqual([KEY]);
     expect(find('JRT')).toEqual([KEY]);
     expect(find('Jack Russell terier')).toEqual([KEY]);

@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "e67ad2f57a25f176945d3a015e22094d3557d76d49eedfa1e58e3734fc9bc6fc"
+      "sha256": "a2b24899b55e3c78fcf8a48098c1d5a22d4844a700d44593bf15fe6e88e2f457"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "139db52f05a0db8ea82537906e4b0ccd9f3042ccf946f35a6c57728b008f95f7"
+      "sha256": "3ce4dcf56968efe68a79953e8c85a9aedade4bee50ce7abfcb988dc8cf192594"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "e4dfd10faa21448898f3003807d7a42d151ae5da8ab041ef3e5fdf775ee6dbc8"
+      "sha256": "4fffe55353e40bd0fa4be5cdedaa9b16a34ce8419dccb204f6a7b4d6d95d89d0"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "15ae743823ec3a8a5e7e839c1cfcf30671e480e618125e29cc837a79ea63471a"
+      "sha256": "6c7f709f882a9f843511d49904bdc377d026557cc528fc9e57526f36fd491c68"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "a16f6ded11a2119296540be1363f4e04470fef892daf66e6a2a96b1cc77f1e63"
+      "sha256": "6499c22dfeb4b64bb8e98dae6e448f0f068f8bf4af3d98a42243cf2ede25b005"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "c41974a491e110537e39cb63ff61843842d5858c2599d8f6a2e7c6667d8f7d63"
+      "sha256": "560edbebfeee05634a5cbe8cb6a357524600b3d9589470dc00b7da1be3f0ebd2"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "a079be0c1d436eca21a6269fcdf81b93b47437e4260928fa532e37e0e20b3118"
+      "sha256": "245d7b1ba1b485054643333b9b42e5c445ee4f2c3d59454f3593fba427c31edd"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 108,
+      "breed_count": 109,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -65326,6 +65326,642 @@
       ]
     },
     {
+      "id": "parson_russell_terrier",
+      "species": "dog",
+      "order": 108,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Parson Russell Terrier",
+        "sl": "Parson russell terier"
+      },
+      "slug": {
+        "en": "parson-russell-terrier",
+        "sl": "parson-russell-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Parson Jack Russell Terrier",
+          "Parson Terrier",
+          "PRT"
+        ],
+        "sl": [
+          "parson jack russell terier",
+          "parson terier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S865"
+          ],
+          "ref": "parson_russell_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              36,
+              36
+            ],
+            "female": [
+              33,
+              33
+            ]
+          },
+          "source_ids": [
+            "S864"
+          ],
+          "ref": "parson_russell_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              6,
+              8
+            ],
+            "female": [
+              6,
+              8
+            ]
+          },
+          "source_ids": [
+            "S866"
+          ],
+          "ref": "parson_russell_terrier.adult_weight.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "parson_russell_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S865"
+          ],
+          "ref": "parson_russell_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            13,
+            15
+          ],
+          "source_ids": [
+            "S868"
+          ],
+          "ref": "parson_russell_terrier.lifespan.webmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S865"
+          ],
+          "ref": "parson_russell_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S865"
+          ],
+          "ref": "parson_russell_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S865"
+          ],
+          "ref": "parson_russell_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S865"
+          ],
+          "ref": "parson_russell_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 339,
+            "group": 3,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S864"
+          ],
+          "ref": "parson_russell_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S866"
+          ],
+          "ref": "parson_russell_terrier.health.patellar_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "primary_lens_luxation",
+          "source_ids": [
+            "S866"
+          ],
+          "ref": "parson_russell_terrier.health.primary_lens_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S866"
+          ],
+          "ref": "parson_russell_terrier.health.cataracts",
+          "confidence": "high"
+        },
+        {
+          "key": "glaucoma",
+          "source_ids": [
+            "S867"
+          ],
+          "ref": "parson_russell_terrier.health.glaucoma",
+          "confidence": "medium"
+        },
+        {
+          "key": "inherited_ataxia",
+          "source_ids": [
+            "S868"
+          ],
+          "ref": "parson_russell_terrier.health.ataxia",
+          "confidence": "high"
+        },
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S868"
+          ],
+          "ref": "parson_russell_terrier.health.deafness",
+          "confidence": "high"
+        },
+        {
+          "key": "dental_disease_tooth_brushing",
+          "source_ids": [
+            "S867"
+          ],
+          "ref": "parson_russell_terrier.health.dental",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S865",
+              "S866"
+            ],
+            "refs": [
+              "parson_russell_terrier.exercise.adult",
+              "parson_russell_terrier.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S866"
+            ],
+            "refs": [
+              "parson_russell_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S866"
+            ],
+            "refs": [
+              "parson_russell_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S865"
+            ],
+            "refs": [
+              "parson_russell_terrier.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S868"
+            ],
+            "refs": [
+              "parson_russell_terrier.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S867"
+            ],
+            "refs": [
+              "parson_russell_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 14
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 14
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.parson_russell_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S865"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S865 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.parson_russell_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.parson_russell_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S865"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × RKC lower bound 'Over 12 years', S865)"
+          },
+          {
+            "ref": "proposed_game_parameters.parson_russell_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          },
+          {
+            "ref": "proposed_game_parameters.parson_russell_terrier.grooming",
+            "basis_source_ids": [
+              "S865"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (RKC »Once a week« → 1); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.parson_russell_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S867"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily tooth brushing« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.parson_russell_terrier.ear_care",
+            "basis_source_ids": [
+              "S867"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes vsaka 2 tedna (PetMD »every two weeks«)"
+          },
+          {
+            "ref": "proposed_game_parameters.parson_russell_terrier.bathing",
+            "basis_source_ids": [
+              "S867"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): kopanje vsaka 2 tedna (PetMD »every two to four weeks« → spodnja meja)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S865",
+          "S867"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S865"
+            ]
+          },
+          {
+            "key": "dna_loa",
+            "level": "minimum",
+            "source_ids": [
+              "S865"
+            ]
+          },
+          {
+            "key": "dna_pll",
+            "level": "minimum",
+            "source_ids": [
+              "S865"
+            ]
+          },
+          {
+            "key": "dna_sca",
+            "level": "best_practice",
+            "source_ids": [
+              "S865"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S865"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S865"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S864",
+        "S865",
+        "S866",
+        "S867",
+        "S868",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -71610,6 +72246,41 @@
       "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Amy Flowers, DVM (2024-08-17)",
       "title": "What to Know About Silky Terriers",
       "url": "https://webmd.com/pets/dogs/what-to-know-silky-terriers"
+    },
+    {
+      "id": "S864",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 339 — Parson Russell Terrier (English PDF, header 17.10.2017/EN) + FCI nomenclature page",
+      "url": "https://dev.fci.be/Nomenclature/Standards/339g03-en.pdf"
+    },
+    {
+      "id": "S865",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Parson Russell Terrier",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/parson-russell-terrier/"
+    },
+    {
+      "id": "S866",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Parson Russell Terrier — breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/parson-russell-terrier"
+    },
+    {
+      "id": "S867",
+      "tier": "B",
+      "publisher": "PetMD — Virginia LaMon, DVM (published Oct. 17, 2022)",
+      "title": "Parson Jack Russell Terrier",
+      "url": "https://www.petmd.com/dog/breeds/parson-jack-russell-terrier"
+    },
+    {
+      "id": "S868",
+      "tier": "B",
+      "publisher": "WebMD Pets — Susan Adcox, medically reviewed by Zilpah Sheikh, MD (2026-05-07)",
+      "title": "What to Know About Parson Russell Terriers",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-parson-russell-terriers"
     },
     {
       "id": "C1",

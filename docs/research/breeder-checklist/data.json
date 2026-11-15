@@ -4111,6 +4111,54 @@
         }
       ],
       "notes": "RKC breed page (dog-data S856, 2026-11-15; heading 'Good Practice schemes and tests' = minimum; names as returned): minimum only the genetic-diversity link (inbreeding_coi; no named health test), no Best Practice section. 'We don't currently offer a breed-specific DNA testing package for this breed' (fragment). No new key."
+    },
+    "parson_russell_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S865",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S865",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_loa",
+          "level": "minimum",
+          "name": "DNA test for Late onset ataxia (LOA)",
+          "source_id": "S865",
+          "quote": "DNA test for Late onset ataxia (LOA)"
+        },
+        {
+          "key": "dna_pll",
+          "level": "minimum",
+          "name": "DNA test for Primary lens luxation (PLL)",
+          "source_id": "S865",
+          "quote": "DNA test for Primary lens luxation (PLL)"
+        },
+        {
+          "key": "dna_sca",
+          "level": "best_practice",
+          "name": "DNA test for spinocerebellar ataxia (SCA)",
+          "source_id": "S865",
+          "quote": "DNA test for spinocerebellar ataxia (SCA)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S865",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S865, 2026-11-15; the 'at a minimum' list = minimum, 'Best Practice schemes and tests' = best_practice; names as returned): minimum — the genetic-diversity link (inbreeding_coi), DNA LOA, DNA PLL; Best Practice — DNA SCA and the BVA/KC/ISDS eye scheme. Unlike the Jack Russell Terrier (FCI 345, LOA there is Best Practice). No new key."
     }
   }
 }

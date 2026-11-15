@@ -141,7 +141,8 @@ describe('breed, config and database', function () {
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
             // Other names are no breed keys (only search keywords).
             ->and($refused(['breed_type' => 'jack_russell_terrier']))->toThrow(QueryException::class)
-            ->and($refused(['breed_type' => 'parson_russell_terrier']))->toThrow(QueryException::class);
+            // M5-R10-116: `parson_russell_terrier` is a breed of its own since then (FCI 339) — the old name stays no key.
+            ->and($refused(['breed_type' => 'parson_jack_russell_terrier']))->toThrow(QueryException::class);
 
         $migration = require database_path('migrations/2027_02_01_120000_add_russell_terrier_breed.php');
         // down() refuses while a Russell Terrier exists (no silent data loss).

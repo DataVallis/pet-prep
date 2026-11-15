@@ -757,6 +757,13 @@ return [
     'australian_silky_terrier' => [
         ['key' => 'blue-tan', 'value' => 'silver blue and tan: silver to slate blue body with rich tan legs and face, a silver or fawn topknot', 'en' => 'Blue and tan', 'sl' => 'Modro-rjavkast'],
     ],
+    // M5-R10-116: FCI-Standard N° 339 (S864) white with tan, lemon or black markings, or any combination — same values as breed_appearance.php.
+    'parson_russell_terrier' => [
+        ['key' => 'white-tan', 'value' => 'white with tan markings', 'en' => 'White and tan', 'sl' => 'Bel z rjavimi lisami'],
+        ['key' => 'tricolour', 'value' => 'white with black and tan markings', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
+        ['key' => 'white-lemon', 'value' => 'white with lemon markings', 'en' => 'White and lemon', 'sl' => 'Bel z limonastimi lisami'],
+        ['key' => 'white-black', 'value' => 'white with black markings', 'en' => 'White and black', 'sl' => 'Bel s črnimi lisami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
