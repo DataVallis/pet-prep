@@ -3,6 +3,8 @@ import * as CANNON from 'cannon-es';
 import { STR } from './strings.js';
 
 /* ---------- Data (every number has its origin in SOURCES in strings.js) ---------- */
+// Free Lemon Squeezy product that e-mails the PDF summary to the parent (decision T7).
+const SUMMARY_URL = 'https://petprep.lemonsqueezy.com/checkout/buy/5cb18a19-22d9-4ec7-befe-19a82e687cc5';
 const LIFE_YEARS = 13.1; // McMillan 2024 (PetPrep S54)
 const PROFILES = {
   adult: { meals: 2, walkMin: 90, walks: 2, poops: 2, trainMin: 5, takeOuts: 0, groomWeek: 1 },
@@ -344,7 +346,7 @@ function applyStrings() {
   document.querySelectorAll('[data-t-ph]').forEach((el) => { el.placeholder = t(el.dataset.tPh); });
   document.querySelectorAll('#lang button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === state.lang));
   document.querySelectorAll('#stage button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.stage === state.stage));
-  document.title = t('title'); $('#sponsor-link').href = t('sponsor_url');
+  document.title = t('title'); $('#sponsor-link').href = t('sponsor_url'); $('#lead-link').href = SUMMARY_URL;
   if (state.step === 'sum') renderSummary();
   if (state.step === 'cost') renderCost(false);
   if (state.step === 'result') renderResult();
@@ -376,7 +378,6 @@ document.addEventListener('click', (e) => {
 });
 $('#monthly').addEventListener('input', (e) => { state.monthly = +e.target.value; renderCost(); });
 $('#setup').addEventListener('input', (e) => { state.setup = +e.target.value; renderCost(); });
-$('#lead').addEventListener('submit', (e) => { e.preventDefault(); $('#lead-msg').hidden = false; });
 
 /* ---------- Camera, resize, loop ---------- */
 let az = 0.35, azTarget = 0.35, drag = null, viewShift = [0, 0];
