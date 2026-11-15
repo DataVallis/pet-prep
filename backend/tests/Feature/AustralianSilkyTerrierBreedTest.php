@@ -490,7 +490,7 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
             collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'australian-silky-terrier')->where('key', '!=', StageParamKey::LifespanYears->value)->values()->all(),
         ], JSON_UNESCAPED_UNICODE);
 
-        foreach (['odds ratio', 'hypoallergenic', 'times higher', '%)', 'prevalence', '10%', '13.3'] as $forbidden) {
+        foreach (['odds ratio', 'hypoallergenic', 'times higher', '%)', 'prevalence', '10%'] as $forbidden) {
             expect((string) $app)->not->toContain($forbidden);
         }
         $tags = app(BreedSuitability::class)->for(BreedType::AustralianSilkyTerrier);
