@@ -107,6 +107,16 @@ export function fireGameRelease(testID: string, event: Record<string, number> = 
   gesture.handlers.finalize?.(e);
 }
 
+/**
+ * One phase of a pan on its own — for a finger that stays down while time passes (press and hold):
+ * `begin`, then timers, then `finalize` (add `update` / `end` for a drag in between).
+ */
+export function fireGameTouch(testID: string, phase: 'begin' | 'update' | 'end' | 'finalize', event: Record<string, number> = {}): void {
+  const gesture = registry.get(testID)?.find((g) => g.kind === 'pan');
+  if (gesture === undefined) throw new Error(`no pan gesture on ${testID}`);
+  gesture.handlers[phase]?.({ x: 0, y: 0, translationX: 0, translationY: 0, velocityX: 0, velocityY: 0, ...event });
+}
+
 export function GestureHandlerRootView({ children, ...props }: ViewProps & { children?: ReactNode }) {
   return <View {...props}>{children}</View>;
 }
