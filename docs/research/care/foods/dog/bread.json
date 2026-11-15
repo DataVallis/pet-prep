@@ -8,7 +8,8 @@
     "hr": "Kruh",
     "sv": "Bröd",
     "da": "Brød",
-    "fi": "Leipä"
+    "fi": "Leipä",
+    "nb": "Brød"
   },
   "question": {
     "en": "Can dogs eat bread?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti kruh?",
     "sv": "Får hundar äta bröd?",
     "da": "Må hunde spise brød?",
-    "fi": "Saako koira syödä leipää?"
+    "fi": "Saako koira syödä leipää?",
+    "nb": "Kan hunder spise brød?"
   },
   "url_slug": {
     "en": "bread",
@@ -26,7 +28,8 @@
     "hr": "kruh",
     "sv": "brod",
     "da": "broed",
-    "fi": "leipa"
+    "fi": "leipa",
+    "nb": "brod"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, u malim količinama. Običan, potpuno pečen bijeli ili pšenični kruh općenito je siguran za pse koji nisu alergični na pšenicu, ali ne donosi pravu korist i bogat je kalorijama. Nikad ne daj kruh s grožđicama, kruh s češnjakom ni sirovo tijesto.",
     "sv": "Ja, i små mängder. Okryddat, helt bakat vitt bröd eller bröd av vete är i allmänhet säkert för hundar utan veteallergi, men det ger ingen verklig nytta och är kaloririkt. Ge aldrig russinbröd, vitlöksbröd eller rå deg.",
     "da": "Ja, i små mængder. Almindeligt, gennembagt hvidt brød eller hvedebrød er som regel ufarligt for hunde uden hvedeallergi, men det gavner ikke rigtig og indeholder mange kalorier. Giv aldrig rosinbrød, hvidløgsbrød eller rå dej.",
-    "fi": "Saa, pieninä määrinä. Maustamaton, kokonaan kypsäksi leivottu vaalea leipä tai vehnäleipä on yleensä turvallista koirille, joilla ei ole vehnäallergiaa, mutta siitä ei ole todellista hyötyä ja se on runsaskalorista. Älä koskaan anna rusinaleipää, valkosipulileipää tai raakaa taikinaa."
+    "fi": "Saa, pieninä määrinä. Maustamaton, kokonaan kypsäksi leivottu vaalea leipä tai vehnäleipä on yleensä turvallista koirille, joilla ei ole vehnäallergiaa, mutta siitä ei ole todellista hyötyä ja se on runsaskalorista. Älä koskaan anna rusinaleipää, valkosipulileipää tai raakaa taikinaa.",
+    "nb": "Ja, i små mengder. Vanlig, gjennombakt hvitt brød eller hvetebrød er som regel trygt for hunder uten hveteallergi, men det gir ingen reell nytte og inneholder mange kalorier. Gi aldri rosinbrød, hvitløksbrød eller rå deig."
   },
   "why": {
     "en": "Bread is a filler food with no nutrients your dog's food doesn't already supply, and it is full of carbs and calories, so too much can put your dog on the path to obesity. The real dangers are ingredients: raisins are highly toxic and often found in breads, garlic bread can cause abdominal pain, vomiting, diarrhoea, weakness and collapse, and xylitol, a sweetener in some baked goods, is toxic to dogs. Raw yeast dough keeps rising in the stomach and releases alcohol.",
@@ -45,7 +49,8 @@
     "hr": "Kruh je samo punilo: nema hranjivih tvari koje psu već ne pruža njegova hrana, a pun je ugljikohidrata i kalorija, pa previše može dovesti do pretilosti. Prava opasnost leži u sastojcima: grožđice su vrlo otrovne i često se nalaze u kruhu, kruh s češnjakom može izazvati bolove u trbuhu, povraćanje, proljev, slabost i kolaps, a ksilitol, sladilo u nekim pekarskim proizvodima, otrovan je za pse. Sirovo tijesto s kvascem nastavlja rasti u želucu i oslobađa alkohol.",
     "sv": "Bröd är en utfyllnadsmat utan näringsämnen som hundens mat inte redan ger, och det är fullt av kolhydrater och kalorier, så för mycket kan göra att hunden riskerar fetma. De verkliga farorna är ingredienserna: russin är mycket giftiga och finns ofta i bröd, vitlöksbröd kan orsaka magont, kräkningar, diarré, svaghet och kollaps, och xylitol, ett sötningsmedel i en del bakverk, är giftigt för hundar. Rå jäsdeg fortsätter att jäsa i magen och frigör alkohol.",
     "da": "Brød er fyldstof uden næringsstoffer, som hundens foder ikke allerede indeholder, og det er fyldt med kulhydrater og kalorier, så for meget kan føre til fedme hos hunden. De virkelige farer er ingredienserne: rosiner er meget giftige og findes ofte i brød, hvidløgsbrød kan give mavesmerter, opkast, diarré, svaghed og sammenbrud, og xylitol, et sødemiddel i nogle bagværk, er giftigt for hunde. Rå gærdej bliver ved med at hæve i maven og frigør alkohol.",
-    "fi": "Leipä on täyteruokaa: siinä ei ole ravintoaineita, joita koirasi ei jo saisi omasta ruoastaan, ja se on täynnä hiilihydraatteja ja kaloreita, joten liika leipä voi johtaa lihavuuteen. Todelliset vaarat ovat ainesosissa: rusinat ovat erittäin myrkyllisiä ja niitä on usein leivissä, valkosipulileipä voi aiheuttaa vatsakipua, oksentelua, ripulia, voimattomuutta ja lyyhistymistä, ja ksylitoli, jota käytetään makeutusaineena joissakin leivonnaisissa, on koirille myrkyllistä. Raaka hiivataikina jatkaa kohoamista mahalaukussa ja vapauttaa alkoholia."
+    "fi": "Leipä on täyteruokaa: siinä ei ole ravintoaineita, joita koirasi ei jo saisi omasta ruoastaan, ja se on täynnä hiilihydraatteja ja kaloreita, joten liika leipä voi johtaa lihavuuteen. Todelliset vaarat ovat ainesosissa: rusinat ovat erittäin myrkyllisiä ja niitä on usein leivissä, valkosipulileipä voi aiheuttaa vatsakipua, oksentelua, ripulia, voimattomuutta ja lyyhistymistä, ja ksylitoli, jota käytetään makeutusaineena joissakin leivonnaisissa, on koirille myrkyllistä. Raaka hiivataikina jatkaa kohoamista mahalaukussa ja vapauttaa alkoholia.",
+    "nb": "Brød er fyllstoff uten næringsstoffer som hundens vanlige mat ikke allerede dekker, og det er fullt av karbohydrater og kalorier, så for mye kan føre til fedme. Det virkelige problemet er ingrediensene: rosiner er svært giftige og finnes ofte i brød, hvitløksbrød kan gi magesmerter, oppkast, diaré, svakhet og kollaps, og xylitol, et søtstoff i enkelte bakevarer, er giftig for hunder. Rå gjærdeig fortsetter å heve i magen og danner alkohol."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Običan kruh obično ne izaziva želučane tegobe kod psa. Ako redovito daješ kruh ili pekarske proizvode, provjeri sastojke. Ako pas pojede sirovo tijesto za kruh, odmah nazovi veterinara; isto vrijedi za kruh s grožđicama ili češnjakom.",
     "sv": "Okryddat bröd stör vanligtvis inte hundens mage. Om du ger bröd eller bakverk regelbundet ska du kontrollera ingredienserna. Om din hund äter rå bröddeg ska du ringa din veterinär direkt; detsamma gäller bröd med russin eller vitlök.",
     "da": "Almindeligt brød giver som regel ikke hunde dårlig mave. Hvis du giver brød eller bagværk jævnligt, skal du tjekke ingredienserne. Hvis din hund spiser rå brøddej, skal du ringe til din dyrlæge med det samme; det samme gælder brød med rosiner eller hvidløg.",
-    "fi": "Maustamaton leipä ei yleensä ärsytä koiran vatsaa. Jos annat leipää tai leivonnaisia säännöllisesti, tarkista ainesosat. Jos koirasi syö raakaa leipätaikinaa, soita heti eläinlääkärille; sama koskee rusinoita tai valkosipulia sisältävää leipää."
+    "fi": "Maustamaton leipä ei yleensä ärsytä koiran vatsaa. Jos annat leipää tai leivonnaisia säännöllisesti, tarkista ainesosat. Jos koirasi syö raakaa leipätaikinaa, soita heti eläinlääkärille; sama koskee rusinoita tai valkosipulia sisältävää leipää.",
+    "nb": "Vanlig brød gir som regel ikke urolig mage hos hunder. Hvis du jevnlig gir brød eller bakevarer, må du sjekke ingredienslisten. Hvis hunden spiser rå brøddeig, må du kontakte dyrlegen med en gang. Det samme gjelder brød med rosiner eller hvitløk."
   },
   "serving": {
     "en": "Only very small pieces of plain, fully baked white or wheat bread, now and then. No raisins, garlic, xylitol or other ingredients toxic to dogs.",
@@ -64,7 +70,8 @@
     "hr": "Samo vrlo mali komadići običnog, potpuno pečenog bijelog ili pšeničnog kruha, povremeno. Bez grožđica, češnjaka, ksilitola ni drugih sastojaka otrovnih za pse.",
     "sv": "Bara mycket små bitar okryddat, helt bakat vitt bröd eller bröd av vete, då och då. Inga russin, ingen vitlök, inget xylitol eller andra ingredienser som är giftiga för hundar.",
     "da": "Kun helt små stykker almindeligt, gennembagt hvidt brød eller hvedebrød, en gang imellem. Ingen rosiner, hvidløg, xylitol eller andre ingredienser, der er giftige for hunde.",
-    "fi": "Vain hyvin pieniä paloja maustamatonta, kokonaan kypsäksi leivottua vaaleaa leipää tai vehnäleipää silloin tällöin. Ei rusinoita, valkosipulia, ksylitolia eikä muita koirille myrkyllisiä ainesosia."
+    "fi": "Vain hyvin pieniä paloja maustamatonta, kokonaan kypsäksi leivottua vaaleaa leipää tai vehnäleipää silloin tällöin. Ei rusinoita, valkosipulia, ksylitolia eikä muita koirille myrkyllisiä ainesosia.",
+    "nb": "Bare helt små biter av vanlig, gjennombakt hvitt brød eller hvetebrød, av og til. Ingen rosiner, hvitløk, xylitol eller andre ingredienser som er giftige for hunder."
   },
   "child": {
     "en": "Dogs can have a tiny piece of plain bread. Raisin bread and garlic bread are not for dogs, so ask a grown-up first.",
@@ -73,7 +80,8 @@
     "hr": "Psi smiju dobiti sitan komadić običnog kruha. Kruh s grožđicama i kruh s češnjakom nisu za pse, zato prvo pitaj odraslu osobu.",
     "sv": "Hundar kan få en liten bit vanligt bröd. Russinbröd och vitlöksbröd är inget för hundar, så fråga en vuxen först.",
     "da": "Hunde kan få et lille stykke almindeligt brød. Rosinbrød og hvidløgsbrød er ikke til hunde, så spørg først en voksen.",
-    "fi": "Koira saa pienen palan maustamatonta leipää. Rusinaleipä ja valkosipulileipä eivät ole koirille, joten kysy ensin aikuiselta."
+    "fi": "Koira saa pienen palan maustamatonta leipää. Rusinaleipä ja valkosipulileipä eivät ole koirille, joten kysy ensin aikuiselta.",
+    "nb": "Hunder kan få en bitteliten bit vanlig brød. Rosinbrød og hvitløksbrød er ikke for hunder, så spør en voksen først."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Smiju li psi jesti kruh s češnjakom?",
         "sv": "Får hundar äta vitlöksbröd?",
         "da": "Må hunde spise hvidløgsbrød?",
-        "fi": "Saako koira syödä valkosipulileipää?"
+        "fi": "Saako koira syödä valkosipulileipää?",
+        "nb": "Kan hunder spise hvitløksbrød?"
       },
       "a": {
         "en": "No. Garlic bread can cause serious side effects such as abdominal pain, vomiting, diarrhoea, weakness and collapse.",
@@ -93,7 +102,8 @@
         "hr": "Ne. Kruh s češnjakom može izazvati ozbiljne nuspojave poput bolova u trbuhu, povraćanja, proljeva, slabosti i kolapsa.",
         "sv": "Nej. Vitlöksbröd kan orsaka allvarliga symtom som magont, kräkningar, diarré, svaghet och kollaps.",
         "da": "Nej. Hvidløgsbrød kan give alvorlige bivirkninger som mavesmerter, opkast, diarré, svaghed og sammenbrud.",
-        "fi": "Ei. Valkosipulileipä voi aiheuttaa vakavia haittavaikutuksia, kuten vatsakipua, oksentelua, ripulia, voimattomuutta ja lyyhistymisen."
+        "fi": "Ei. Valkosipulileipä voi aiheuttaa vakavia haittavaikutuksia, kuten vatsakipua, oksentelua, ripulia, voimattomuutta ja lyyhistymisen.",
+        "nb": "Nei. Hvitløksbrød kan gi alvorlige bivirkninger som magesmerter, oppkast, diaré, svakhet og kollaps."
       }
     },
     {
@@ -104,7 +114,8 @@
         "hr": "Je li kruh dobar kad psu pozli u želucu?",
         "sv": "Är bröd bra för en hund med orolig mage?",
         "da": "Er brød godt mod en hunds dårlige mave?",
-        "fi": "Onko leipä hyväksi koiran vatsavaivoihin?"
+        "fi": "Onko leipä hyväksi koiran vatsavaivoihin?",
+        "nb": "Er brød bra for en hund med urolig mage?"
       },
       "a": {
         "en": "A bland diet of rice and boiled chicken is a better option, and better still is calling your vet for advice.",
@@ -113,7 +124,8 @@
         "hr": "Bolji je izbor blaga dijeta od riže i kuhane piletine, a još je bolje nazvati veterinara za savjet.",
         "sv": "En skonsam kost med ris och tillagad kyckling är ett bättre val, och ännu bättre är att ringa din veterinär och be om råd.",
         "da": "Skånekost af ris og kogt kylling er et bedre valg, og det er endnu bedre at ringe til din dyrlæge for at få råd.",
-        "fi": "Parempi vaihtoehto on kevyt ruokavalio, jossa on riisiä ja keitettyä kanaa, ja vielä parempi on soittaa eläinlääkärille ja kysyä neuvoa."
+        "fi": "Parempi vaihtoehto on kevyt ruokavalio, jossa on riisiä ja keitettyä kanaa, ja vielä parempi on soittaa eläinlääkärille ja kysyä neuvoa.",
+        "nb": "Skånekost med ris og kokt kylling er et bedre valg, og enda bedre er det å ringe dyrlegen og be om råd."
       }
     },
     {
@@ -124,7 +136,8 @@
         "hr": "Što ako moj pas pojede sirovo tijesto za kruh?",
         "sv": "Vad gör jag om min hund äter rå bröddeg?",
         "da": "Hvad hvis min hund spiser rå brøddej?",
-        "fi": "Entä jos koirani syö raakaa leipätaikinaa?"
+        "fi": "Entä jos koirani syö raakaa leipätaikinaa?",
+        "nb": "Hva hvis hunden min spiser rå brøddeig?"
       },
       "a": {
         "en": "Call your vet immediately. The yeast keeps the dough rising, stretching the stomach and releasing toxic levels of alcohol into the blood.",
@@ -133,7 +146,8 @@
         "hr": "Odmah nazovi veterinara. Kvasac neprestano diže tijesto, rasteže želudac i u krv oslobađa otrovne količine alkohola.",
         "sv": "Ring din veterinär omedelbart. Jästen får degen att fortsätta jäsa, vilket sträcker ut magen och frigör giftiga mängder alkohol i blodet.",
         "da": "Ring til din dyrlæge med det samme. Gæren får dejen til at blive ved med at hæve, så maven bliver udspilet, og der frigives giftige mængder alkohol i blodet.",
-        "fi": "Soita heti eläinlääkärille. Hiiva saa taikinan kohoamaan edelleen, mikä venyttää mahalaukkua ja vapauttaa vereen myrkyllisiä määriä alkoholia."
+        "fi": "Soita heti eläinlääkärille. Hiiva saa taikinan kohoamaan edelleen, mikä venyttää mahalaukkua ja vapauttaa vereen myrkyllisiä määriä alkoholia.",
+        "nb": "Kontakt dyrlegen med en gang. Gjæren får deigen til å fortsette å heve, noe som strekker ut magesekken og gir giftige mengder alkohol i blodet."
       }
     }
   ],
@@ -291,6 +305,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bccfce7b9d9aea9bff3d61491448fc502f6e9883c17190afc08e8a00b4cf2665"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0fb4e60946df33c74573898054e580b6ac87639a6c1fe7e180ed1b2c13ab9623"
     }
   }
 }

@@ -8,7 +8,8 @@
     "hr": "Kečap",
     "sv": "Ketchup",
     "da": "Ketchup",
-    "fi": "Ketsuppi"
+    "fi": "Ketsuppi",
+    "nb": "Ketchup"
   },
   "question": {
     "en": "Can dogs eat ketchup?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti kečap?",
     "sv": "Får hundar äta ketchup?",
     "da": "Må hunde spise ketchup?",
-    "fi": "Saako koira syödä ketsuppia?"
+    "fi": "Saako koira syödä ketsuppia?",
+    "nb": "Kan hunder spise ketchup?"
   },
   "url_slug": {
     "en": "ketchup",
@@ -26,7 +28,8 @@
     "hr": "kecap",
     "sv": "ketchup",
     "da": "ketchup",
-    "fi": "ketsuppi"
+    "fi": "ketsuppi",
+    "nb": "ketchup"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Ne, kečap je najbolje ne dijeliti sa psom. Sam kečap nije otrovan, ali obično sadrži češnjak i luk, šećer i sol, a ponekad i ksilitol, koji je otrovan za pse.",
     "sv": "Nej, det är bäst att inte dela ketchup med din hund. Ketchup är inte giftig i sig, men den innehåller oftast vitlök och lök, socker och salt, och ibland xylitol, som är giftigt för hundar.",
     "da": "Nej, det er bedst ikke at dele ketchup med din hund. Ketchup er ikke giftigt i sig selv, men det indeholder som regel hvidløg og løg, sukker og salt og nogle gange xylitol, som er giftigt for hunde.",
-    "fi": "Ei suositella, ketsuppia on parasta olla jakamatta koiran kanssa. Ketsuppi ei sinänsä ole myrkyllistä, mutta siinä on yleensä valkosipulia ja sipulia, sokeria ja suolaa, ja joskus ksylitolia, joka on koirille myrkyllistä."
+    "fi": "Ei suositella, ketsuppia on parasta olla jakamatta koiran kanssa. Ketsuppi ei sinänsä ole myrkyllistä, mutta siinä on yleensä valkosipulia ja sipulia, sokeria ja suolaa, ja joskus ksylitolia, joka on koirille myrkyllistä.",
+    "nb": "Nei, det er best å ikke dele ketchup med hunden. Ketchup er ikke giftig i seg selv, men den inneholder som regel hvitløk og løk, sukker og salt, og noen ganger xylitol, som er giftig for hunder."
   },
   "why": {
     "en": "Commercial ketchup typically contains garlic and onions, cinnamon, sugar and salt, preservatives and chemicals, and many of these can harm dogs. Garlic and onions can upset a dog's stomach and sometimes have more serious effects. Some ketchup also contains xylitol, which is toxic to dogs. Sources differ on how strict to be (one calls ketchup not toxic, another simply says no), so we advise not giving it.",
@@ -45,7 +49,8 @@
     "hr": "Kupovni kečap obično sadrži češnjak i luk, cimet, šećer i sol, konzervanse i kemikalije, a mnogi od njih mogu naškoditi psima. Češnjak i luk mogu nadražiti želudac psa, a ponekad imaju i ozbiljnije učinke. Neki kečap sadrži i ksilitol, koji je otrovan za pse. Izvori se razlikuju u tome koliko su strogi (jedan kaže da kečap nije otrovan, drugi jednostavno kaže „ne“), zato savjetujemo da ga psu ne daješ.",
     "sv": "Köpt ketchup innehåller vanligtvis vitlök och lök, kanel, socker och salt samt konserveringsmedel och andra tillsatser, och många av dem kan skada hundar. Vitlök och lök kan reta hundens mage och ibland ge allvarligare effekter. Viss ketchup innehåller också xylitol, som är giftigt för hundar. Källorna är inte överens om hur strikt man ska vara (en kallar ketchup ogiftig, en annan säger helt enkelt nej), så vi rekommenderar att du inte ger den.",
     "da": "Ketchup fra butikken indeholder typisk hvidløg og løg, kanel, sukker og salt, konserveringsmidler og kemikalier, og mange af dem kan skade hunde. Hvidløg og løg kan give hunden dårlig mave og har nogle gange mere alvorlige virkninger. Noget ketchup indeholder også xylitol, som er giftigt for hunde. Kilderne er uenige om, hvor strenge man skal være (en kilde kalder ketchup ugiftigt, en anden siger blot nej), så vi fraråder at give den.",
-    "fi": "Kaupan ketsupissa on tyypillisesti valkosipulia ja sipulia, kanelia, sokeria ja suolaa sekä säilöntäaineita ja kemikaaleja, ja monet näistä voivat vahingoittaa koiria. Valkosipuli ja sipuli voivat ärsyttää koiran vatsaa ja joskus aiheuttaa vakavampia vaikutuksia. Joissakin ketsupeissa on myös ksylitolia, joka on koirille myrkyllistä. Lähteet ovat eri linjoilla siitä, kuinka tiukasti ketsuppiin pitäisi suhtautua (yksi pitää sitä myrkyttömänä, toinen sanoo yksinkertaisesti ei), joten neuvomme olemaan antamatta sitä."
+    "fi": "Kaupan ketsupissa on tyypillisesti valkosipulia ja sipulia, kanelia, sokeria ja suolaa sekä säilöntäaineita ja kemikaaleja, ja monet näistä voivat vahingoittaa koiria. Valkosipuli ja sipuli voivat ärsyttää koiran vatsaa ja joskus aiheuttaa vakavampia vaikutuksia. Joissakin ketsupeissa on myös ksylitolia, joka on koirille myrkyllistä. Lähteet ovat eri linjoilla siitä, kuinka tiukasti ketsuppiin pitäisi suhtautua (yksi pitää sitä myrkyttömänä, toinen sanoo yksinkertaisesti ei), joten neuvomme olemaan antamatta sitä.",
+    "nb": "Ketchup fra butikken inneholder vanligvis hvitløk og løk, kanel, sukker og salt, konserveringsmidler og kjemikalier, og mange av disse stoffene kan skade hunder. Hvitløk og løk kan gi hunder urolig mage og av og til mer alvorlige virkninger. Noen typer ketchup inneholder også xylitol, som er giftig for hunder. Kildene er uenige om hvor streng man bør være (én kaller ketchup ikke giftig, en annen sier rett og slett nei), så vi anbefaler å ikke gi den."
   },
   "signs": {
     "en": [
@@ -68,6 +73,9 @@
     ],
     "fi": [
       "Vatsavaivat"
+    ],
+    "nb": [
+      "Urolig mage"
     ]
   },
   "what_to_do": {
@@ -77,7 +85,8 @@
     "hr": "Neki kečap sadrži ksilitol, koji je otrovan za pse. Ako je pas pojeo kečap s ksilitolom, slijedi savjet na našoj stranici o ksilitolu.",
     "sv": "Viss ketchup innehåller xylitol, som är giftigt för hundar. Om din hund har ätit ketchup med xylitol ska du följa råden på vår sida om xylitol.",
     "da": "Noget ketchup indeholder xylitol, som er giftigt for hunde. Hvis din hund har spist ketchup med xylitol, skal du følge rådene på vores side om xylitol.",
-    "fi": "Joissakin ketsupeissa on ksylitolia, joka on koirille myrkyllistä. Jos koirasi söi ksylitolia sisältävää ketsuppia, noudata ksylitolia käsittelevän sivumme ohjeita."
+    "fi": "Joissakin ketsupeissa on ksylitolia, joka on koirille myrkyllistä. Jos koirasi söi ksylitolia sisältävää ketsuppia, noudata ksylitolia käsittelevän sivumme ohjeita.",
+    "nb": "Noen typer ketchup inneholder xylitol, som er giftig for hunder. Hvis hunden har spist ketchup med xylitol, følg rådene på siden vår om xylitol."
   },
   "serving": null,
   "child": {
@@ -87,7 +96,8 @@
     "hr": "Kečap je umak za ljude. U njemu ima stvari koje nisu dobre za pse, zato ga zadrži na svom tanjuru.",
     "sv": "Ketchup är en sås för människor. Den innehåller sådant som inte är bra för hundar, så behåll den på din egen tallrik.",
     "da": "Ketchup er en sovs til mennesker. Den indeholder ting, som ikke er gode for hunde, så behold den på din egen tallerken.",
-    "fi": "Ketsuppi on ihmisten kastike. Siinä on aineita, jotka eivät ole hyväksi koirille, joten pidä se omalla lautasellasi."
+    "fi": "Ketsuppi on ihmisten kastike. Siinä on aineita, jotka eivät ole hyväksi koirille, joten pidä se omalla lautasellasi.",
+    "nb": "Ketchup er saus for mennesker. Den inneholder ting som ikke er bra for hunder, så la den bli på din egen tallerken."
   },
   "faq": [
     {
@@ -98,7 +108,8 @@
         "hr": "Što je s umakom od rajčice?",
         "sv": "Hur är det med tomatsås?",
         "da": "Hvad med tomatsovs?",
-        "fi": "Entä tomaattikastike?"
+        "fi": "Entä tomaattikastike?",
+        "nb": "Hva med tomatsaus?"
       },
       "a": {
         "en": "No. Tomato sauce often contains harmful ingredients such as garlic, onion or unsafe herbs.",
@@ -107,7 +118,8 @@
         "hr": "Ne. Umak od rajčice često sadrži štetne sastojke poput češnjaka, luka ili nesigurnih začinskih biljaka.",
         "sv": "Nej. Tomatsås innehåller ofta skadliga ingredienser som vitlök, lök eller olämpliga örter.",
         "da": "Nej. Tomatsovs indeholder ofte skadelige ingredienser som hvidløg, løg eller urter, der ikke er sikre for hunde.",
-        "fi": "Ei. Tomaattikastikkeessa on usein haitallisia ainesosia, kuten valkosipulia, sipulia tai koirille sopimattomia yrttejä."
+        "fi": "Ei. Tomaattikastikkeessa on usein haitallisia ainesosia, kuten valkosipulia, sipulia tai koirille sopimattomia yrttejä.",
+        "nb": "Nei. Tomatsaus inneholder ofte skadelige ingredienser som hvitløk, løk eller urter som ikke er trygge for hunder."
       }
     }
   ],
@@ -180,6 +192,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e819a4920c774bb11553ccfce41ed4fcba1d3d524d36711481ae57f0ef0d4950"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b7bc03b0ff49b3b6ce59dfb94d3636965ae8ea7e33289fe0d13593bfdf2ac8c6"
     }
   }
 }

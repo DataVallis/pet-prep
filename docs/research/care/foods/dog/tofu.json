@@ -7,7 +7,8 @@
     "hr": "Tofu",
     "sv": "Tofu",
     "da": "Tofu",
-    "fi": "Tofu"
+    "fi": "Tofu",
+    "nb": "Tofu"
   },
   "question": {
     "en": "Can dogs eat tofu?",
@@ -15,7 +16,8 @@
     "hr": "Smiju li psi jesti tofu?",
     "sv": "Får hundar äta tofu?",
     "da": "Må hunde spise tofu?",
-    "fi": "Saako koira syödä tofua?"
+    "fi": "Saako koira syödä tofua?",
+    "nb": "Kan hunder spise tofu?"
   },
   "url_slug": {
     "en": "tofu",
@@ -23,7 +25,8 @@
     "hr": "tofu",
     "sv": "tofu",
     "da": "tofu",
-    "fi": "tofu"
+    "fi": "tofu",
+    "nb": "tofu"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "hr": "Da, umjereno. Tofu nije otrovan za pse i može biti povremena grickalica, ali ne bi smio biti glavni dio psećeg jelovnika. Daj samo običan, nesoljen, potpuno termički obrađen tofu, a izbjegavaj ga ako je pas alergičan na soju.",
     "sv": "Ja, med måtta. Tofu är inte giftigt för hundar och kan vara ett mellanmål då och då, men det ska inte vara en huvuddel av hundens kost. Ge bara okryddad, osaltad, helt tillagad tofu, och undvik den om din hund har sojaallergi.",
     "da": "Ja, med måde. Tofu er ikke giftigt for hunde og kan være en snack en gang imellem, men det bør ikke udgøre en stor del af hundens kost. Giv kun almindelig, usaltet og helt gennemtilberedt tofu, og undlad det, hvis din hund har sojaallergi.",
-    "fi": "Saa, kohtuudella. Tofu ei ole koirille myrkyllistä ja voi olla satunnainen välipala, mutta sen ei pidä olla koirasi ruokavalion pääosa. Anna vain maustamatonta, suolatonta ja täysin kypsennettyä tofua, ja vältä sitä, jos koirallasi on soija-allergia."
+    "fi": "Saa, kohtuudella. Tofu ei ole koirille myrkyllistä ja voi olla satunnainen välipala, mutta sen ei pidä olla koirasi ruokavalion pääosa. Anna vain maustamatonta, suolatonta ja täysin kypsennettyä tofua, ja vältä sitä, jos koirallasi on soija-allergia.",
+    "nb": "Ja, med måte. Tofu er ikke giftig for hunder og kan være en snack av og til, men den bør ikke utgjøre hovedtyngden av hundens kosthold. Gi bare naturell, usaltet og fullstendig tilberedt tofu, og unngå den hvis hunden har soyaallergi."
   },
   "why": {
     "en": "Tofu is made from soybeans but doesn't contain enough protein to meet a dog's needs, so it shouldn't replace dog food. Many dogs find tofu hard to digest and produce a lot of gas, so dogs with a history of bloat or breeds at higher risk should avoid it. Tofu is high in silicate, which may make kidney stones more likely, and soy contains phytoestrogens, which in large amounts could affect a male dog's hormone balance.",
@@ -40,7 +44,8 @@
     "hr": "Tofu se pravi od soje, ali ne sadrži dovoljno bjelančevina da zadovolji potrebe psa, pa ne bi smio zamijeniti hranu za pse. Mnogim je psima tofu teško probavljiv i stvara puno plinova, pa ga trebaju izbjegavati psi s poviješću nadutosti želuca ili pasmine s većim rizikom. Tofu je bogat silikatima, zbog kojih bubrežni kamenci mogu biti vjerojatniji, a soja sadrži fitoestrogene, koji bi u velikim količinama mogli utjecati na hormonsku ravnotežu mužjaka.",
     "sv": "Tofu görs av sojabönor men innehåller inte tillräckligt med protein för en hunds behov, så det ska inte ersätta hundmat. Många hundar har svårt att smälta tofu och får mycket gaser, så hundar som har haft uppblåsthet eller raser med högre risk bör undvika det. Tofu innehåller mycket silikat, som kan göra njurstenar vanligare, och soja innehåller fytoöstrogener, som i stora mängder kan påverka en hanhunds hormonbalans.",
     "da": "Tofu er lavet af sojabønner, men indeholder ikke nok protein til at dække en hunds behov, så det bør ikke erstatte hundefoder. Mange hunde har svært ved at fordøje tofu og får meget luft i maven, så hunde, der tidligere har haft oppustethed, eller racer med højere risiko bør undgå det. Tofu indeholder meget silikat, som kan gøre nyresten mere sandsynlige, og soja indeholder fytoøstrogener, som i store mængder kan påvirke en hanhunds hormonbalance.",
-    "fi": "Tofu on tehty soijapavuista, mutta siinä ei ole tarpeeksi proteiinia koiran tarpeisiin, joten se ei saa korvata koiranruokaa. Monen koiran on vaikea sulattaa tofua, ja se aiheuttaa runsaasti ilmavaivoja, joten koirien, joilla on ollut mahalaukun laajeneminen, tai suuremman riskin rotujen pitäisi välttää sitä. Tofussa on paljon silikaattia, joka voi lisätä munuaiskivien todennäköisyyttä, ja soijassa on fytoestrogeeneja, jotka suurina määrinä voisivat vaikuttaa uroskoiran hormonitasapainoon."
+    "fi": "Tofu on tehty soijapavuista, mutta siinä ei ole tarpeeksi proteiinia koiran tarpeisiin, joten se ei saa korvata koiranruokaa. Monen koiran on vaikea sulattaa tofua, ja se aiheuttaa runsaasti ilmavaivoja, joten koirien, joilla on ollut mahalaukun laajeneminen, tai suuremman riskin rotujen pitäisi välttää sitä. Tofussa on paljon silikaattia, joka voi lisätä munuaiskivien todennäköisyyttä, ja soijassa on fytoestrogeeneja, jotka suurina määrinä voisivat vaikuttaa uroskoiran hormonitasapainoon.",
+    "nb": "Tofu er laget av soyabønner, men inneholder ikke nok protein til å dekke en hunds behov, så den bør ikke erstatte hundefôr. Mange hunder synes tofu er vanskelig å fordøye og får mye gass, så hunder som har hatt oppblåst mage, eller raser med høyere risiko, bør unngå den. Tofu har mye silikat, som kan gjøre nyrestein mer sannsynlig, og soya inneholder fytoøstrogener, som i store mengder kan påvirke hormonbalansen hos hannhunder."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "hr": "Ako je pas alergičan na soju ili osjetljiv na nju, ne daj tofu. Razgovaraj s veterinarom prije promjene psećeg jelovnika, osobito ako je pas imao probavnih problema.",
     "sv": "Om din hund har sojaallergi eller är känslig mot soja ska du inte ge tofu. Prata med din veterinär innan du ändrar hundens kost, särskilt om din hund har haft matsmältningsproblem.",
     "da": "Hvis din hund har sojaallergi eller er følsom over for soja, skal du ikke give tofu. Tal med din dyrlæge, før du ændrer din hunds kost, især hvis din hund har haft problemer med fordøjelsen.",
-    "fi": "Jos koirallasi on soija-allergia tai -herkkyys, älä anna tofua. Puhu eläinlääkärin kanssa ennen kuin muutat koirasi ruokavaliota, etenkin jos koirallasi on ollut ruoansulatusongelmia."
+    "fi": "Jos koirallasi on soija-allergia tai -herkkyys, älä anna tofua. Puhu eläinlääkärin kanssa ennen kuin muutat koirasi ruokavaliota, etenkin jos koirallasi on ollut ruoansulatusongelmia.",
+    "nb": "Hvis hunden har soyaallergi eller er følsom for soya, ikke gi tofu. Snakk med dyrlegen før du endrer hundens kosthold, særlig hvis hunden har hatt fordøyelsesproblemer."
   },
   "serving": {
     "en": "Plain and unsalted, not flavoured, with no onion or garlic. Make sure it is fully cooked and has cooled. Give small amounts as an occasional snack.",
@@ -57,7 +63,8 @@
     "hr": "Običan i nesoljen, bez okusa, luka i češnjaka. Pazi da je potpuno termički obrađen i ohlađen. Daj male količine kao povremenu grickalicu.",
     "sv": "Okryddad och osaltad, inte smaksatt, utan lök eller vitlök. Se till att den är helt tillagad och har svalnat. Ge små mängder som ett mellanmål då och då.",
     "da": "Almindelig og usaltet, uden smagsstoffer og uden løg eller hvidløg. Sørg for, at den er helt gennemtilberedt og afkølet. Giv små mængder som en snack en gang imellem.",
-    "fi": "Maustamatonta ja suolatonta, ilman muita makuaineita, sipulia tai valkosipulia. Varmista, että se on täysin kypsennettyä ja jäähtynyttä. Anna pieniä määriä satunnaisena välipalana."
+    "fi": "Maustamatonta ja suolatonta, ilman muita makuaineita, sipulia tai valkosipulia. Varmista, että se on täysin kypsennettyä ja jäähtynyttä. Anna pieniä määriä satunnaisena välipalana.",
+    "nb": "Naturell og usaltet, ikke smaksatt, uten løk eller hvitløk. Pass på at den er fullstendig tilberedt og avkjølt. Gi små mengder som en snack av og til."
   },
   "child": {
     "en": "Dogs can try a little plain tofu as a treat now and then, but their main food should still be dog food.",
@@ -65,7 +72,8 @@
     "hr": "Psi smiju probati malo običnog tofua kao poslasticu s vremena na vrijeme, ali njihova glavna hrana i dalje treba biti hrana za pse.",
     "sv": "Hundar kan prova lite okryddad tofu som godbit då och då, men deras huvudmat ska fortfarande vara hundmat.",
     "da": "Hunde kan prøve lidt almindelig tofu som en godbid en gang imellem, men deres vigtigste mad skal stadig være hundefoder.",
-    "fi": "Koira voi maistaa vähän maustamatonta tofua herkuksi silloin tällöin, mutta sen pääruoan pitää silti olla koiranruokaa."
+    "fi": "Koira voi maistaa vähän maustamatonta tofua herkuksi silloin tällöin, mutta sen pääruoan pitää silti olla koiranruokaa.",
+    "nb": "Hunder kan få smake litt naturell tofu som godbit nå og da, men hovedmaten bør fortsatt være hundemat."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "hr": "Može li tofu zamijeniti meso u prehrani mog psa?",
         "sv": "Kan tofu ersätta kött i min hunds kost?",
         "da": "Kan tofu erstatte kød i min hunds kost?",
-        "fi": "Voiko tofu korvata lihan koirani ruokavaliossa?"
+        "fi": "Voiko tofu korvata lihan koirani ruokavaliossa?",
+        "nb": "Kan tofu erstatte kjøtt i hundens kosthold?"
       },
       "a": {
         "en": "No. Tofu doesn't contain enough protein for a dog's needs. For main meals, feed a vet-recommended dog food.",
@@ -83,7 +92,8 @@
         "hr": "Ne. Tofu ne sadrži dovoljno bjelančevina za potrebe psa. Za glavne obroke daj hranu za pse koju preporučuje veterinar.",
         "sv": "Nej. Tofu innehåller inte tillräckligt med protein för en hunds behov. Till huvudmåltiderna ska du ge ett hundfoder som veterinärer rekommenderar.",
         "da": "Nej. Tofu indeholder ikke nok protein til en hunds behov. Til de vigtigste måltider skal du give et hundefoder, som din dyrlæge anbefaler.",
-        "fi": "Ei. Tofussa ei ole tarpeeksi proteiinia koiran tarpeisiin. Pääaterioille anna eläinlääkärin suosittelemaa koiranruokaa."
+        "fi": "Ei. Tofussa ei ole tarpeeksi proteiinia koiran tarpeisiin. Pääaterioille anna eläinlääkärin suosittelemaa koiranruokaa.",
+        "nb": "Nei. Tofu inneholder ikke nok protein til en hunds behov. Til hovedmåltidene bør du gi et hundefôr anbefalt av dyrlege."
       }
     }
   ],
@@ -193,6 +203,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "82929b705ba91d06620a0aed2184b79b039d48bc93f7d9bef3d1b70c651f9cb8"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ce762300640d013881c2a60217082d8e7935de1410fbd2b7f0fee659d1f46811"
     }
   }
 }

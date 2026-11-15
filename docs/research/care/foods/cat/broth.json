@@ -7,7 +7,8 @@
     "hr": "Juha i temeljac",
     "sv": "Buljong och fond",
     "da": "Bouillon og fond",
-    "fi": "Liemi"
+    "fi": "Liemi",
+    "nb": "Buljong og kraft"
   },
   "question": {
     "en": "Can cats have broth?",
@@ -15,7 +16,8 @@
     "hr": "Smiju li mačke jesti juhu?",
     "sv": "Får katter dricka buljong?",
     "da": "Må katte få bouillon?",
-    "fi": "Saako kissa juoda lientä?"
+    "fi": "Saako kissa juoda lientä?",
+    "nb": "Kan katter få buljong?"
   },
   "url_slug": {
     "en": "broth",
@@ -23,7 +25,8 @@
     "hr": "juha-i-temeljac",
     "sv": "buljong",
     "da": "bouillon",
-    "fi": "liemi"
+    "fi": "liemi",
+    "nb": "buljong-og-kraft"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "hr": "Da, malo obične juhe u redu je. Veterinari predlažu malu količinu pileće juhe s malo soli i bez dodanih začina kojom se može dati okus mačjoj vodi. Kocke za juhu i temeljac namijenjene ljudima mogu biti vrlo slane i sadržavati luk ili češnjak, koji su otrovni za mačke.",
     "sv": "Ja, lite okryddad buljong går bra. Veterinärer föreslår en liten mängd natriumfattig kycklingbuljong utan tillsatta kryddor för att ge kattens vatten smak. Buljong och buljongtärningar för människor kan vara mycket salta och kan innehålla lök eller vitlök, som är giftigt för katter.",
     "da": "Ja, lidt almindelig bouillon er fint. Dyrlæger foreslår en lille smule natriumfattig hønsebouillon uden tilsatte krydderier, så kattens vand får smag. Bouillon- og fondterninger, der er lavet til mennesker, kan være meget salte og kan indeholde løg eller hvidløg, som er giftige for katte.",
-    "fi": "Saa, vähän maustamatonta lientä sopii. Eläinlääkärit ehdottavat pientä määrää vähäsuolaista, ilman mausteita tehtyä kanalientä kissan juomaveden maustamiseen. Ihmisille tarkoitetut liemet tai liemikuutiot voivat olla hyvin suolaisia, ja niissä voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä."
+    "fi": "Saa, vähän maustamatonta lientä sopii. Eläinlääkärit ehdottavat pientä määrää vähäsuolaista, ilman mausteita tehtyä kanalientä kissan juomaveden maustamiseen. Ihmisille tarkoitetut liemet tai liemikuutiot voivat olla hyvin suolaisia, ja niissä voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä.",
+    "nb": "Ja, litt naturell buljong er greit. Dyrleger foreslår en liten mengde natriumfattig kyllingbuljong uten tilsatt krydder for å gi kattens vann litt smak. Buljong- og kraftterninger til mennesker kan være veldig salte og kan inneholde løk eller hvitløk, som er giftig for katter."
   },
   "why": {
     "en": "The Cornell Feline Health Center says that flavouring the water with a small amount of low sodium chicken broth can prompt a cat to drink more, and VCA suggests low-sodium chicken broth with no additional spices. Bouillon cubes used for making stocks contain high amounts of sodium. Onion and garlic, found in many pre-made foods, are toxic to cats even when cooked or dried. Tufts vets advise looking closely at the ingredients list of commercial broths.",
@@ -40,7 +44,8 @@
     "hr": "Cornell Feline Health Center navodi da malo pileće juhe s malo natrija u vodi može potaknuti mačku da pije više, a VCA preporučuje pileću juhu s malo natrija i bez dodatnih začina. Kocke za temeljac sadrže mnogo natrija. Luk i češnjak, koji se nalaze u mnogim gotovim jelima, otrovni su za mačke čak i kad su kuhani ili sušeni. Veterinari sa Sveučilišta Tufts savjetuju da pažljivo pročitaš popis sastojaka gotovih juha.",
     "sv": "Cornell Feline Health Center säger att en liten mängd natriumfattig kycklingbuljong i vattnet kan få en katt att dricka mer, och VCA föreslår natriumfattig kycklingbuljong utan tillsatta kryddor. Buljongtärningar som används för att göra fond innehåller mycket natrium. Lök och vitlök, som finns i många färdiglagade livsmedel, är giftiga för katter även när de är tillagade eller torkade. Veterinärer vid Tufts råder dig att läsa ingredienslistan noga på köpt buljong.",
     "da": "Cornell Feline Health Center skriver at lidt natriumfattig hønsebouillon i vandet kan få en kat til at drikke mere, og VCA foreslår natriumfattig hønsebouillon uden ekstra krydderier. Bouillonterninger, som bruges til at lave fond, indeholder meget natrium. Løg og hvidløg, som findes i mange færdiglavede produkter, er giftige for katte, også når de er kogt eller tørret. Dyrlæger fra Tufts anbefaler at læse ingredienslisten på købt bouillon grundigt.",
-    "fi": "Cornell Feline Health Centerin mukaan veden maustaminen pienellä määrällä vähäsuolaista kanalientä voi saada kissan juomaan enemmän, ja VCA ehdottaa vähäsuolaista kanalientä ilman lisättyjä mausteita. Liemikuutiot sisältävät paljon natriumia. Sipuli ja valkosipuli, joita on monissa valmisruoissa, ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina. Tuftsin eläinlääkärit neuvovat tarkistamaan kaupan liemien ainesosaluettelon huolellisesti."
+    "fi": "Cornell Feline Health Centerin mukaan veden maustaminen pienellä määrällä vähäsuolaista kanalientä voi saada kissan juomaan enemmän, ja VCA ehdottaa vähäsuolaista kanalientä ilman lisättyjä mausteita. Liemikuutiot sisältävät paljon natriumia. Sipuli ja valkosipuli, joita on monissa valmisruoissa, ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina. Tuftsin eläinlääkärit neuvovat tarkistamaan kaupan liemien ainesosaluettelon huolellisesti.",
+    "nb": "Cornell Feline Health Center sier at litt natriumfattig kyllingbuljong i vannet kan få en katt til å drikke mer, og VCA foreslår natriumfattig kyllingbuljong uten tilsatt krydder. Buljongterninger og kraftterninger inneholder mye natrium. Løk og hvitløk, som finnes i mange ferdiglagde matvarer, er giftig for katter selv når de er kokt eller tørket. Dyrleger ved Tufts anbefaler å lese ingredienslisten på kjøpt buljong nøye."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "hr": "Ako je mačka popila juhu ili temeljac s lukom ili češnjakom, što prije se obrati veterinaru.",
     "sv": "Om din katt har druckit buljong eller fond som innehåller lök eller vitlök ska du kontakta din veterinär så snart som möjligt.",
     "da": "Hvis din kat har drukket bouillon eller fond med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt.",
-    "fi": "Jos kissasi joi lientä, jossa oli sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian."
+    "fi": "Jos kissasi joi lientä, jossa oli sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian.",
+    "nb": "Hvis katten har drukket buljong eller kraft med løk eller hvitløk, kontakt dyrlegen så fort som mulig."
   },
   "serving": {
     "en": "Only plain, low-sodium broth with no onion, garlic or added spices, a little mixed into your cat's water. The safest homemade broth is unseasoned meat boiled in plain water. Skip stock cubes.",
@@ -57,7 +63,8 @@
     "hr": "Samo obična juha s malo natrija, bez luka, češnjaka i dodanih začina, malo umiješana u mačju vodu. Najsigurnija je domaća juha od nezačinjenog mesa kuhanog u običnoj vodi. Kocke za juhu nemoj koristiti.",
     "sv": "Bara okryddad, natriumfattig buljong utan lök, vitlök eller tillsatta kryddor, en liten skvätt blandad i kattens vatten. Den säkraste hemmagjorda buljongen är okryddat kött kokt i vanligt vatten. Hoppa över buljongtärningar.",
     "da": "Kun almindelig, natriumfattig bouillon uden løg, hvidløg eller krydderier, en lille smule blandet i kattens vand. Den sikreste hjemmelavede bouillon er ukrydret kød kogt i almindeligt vand. Undlad bouillonterninger.",
-    "fi": "Vain maustamatonta, vähäsuolaista lientä, jossa ei ole sipulia, valkosipulia eikä mausteita, vähän kissan veteen sekoitettuna. Turvallisin kotitekoinen liemi on maustamatonta lihaa keitettynä pelkässä vedessä. Jätä liemikuutiot väliin."
+    "fi": "Vain maustamatonta, vähäsuolaista lientä, jossa ei ole sipulia, valkosipulia eikä mausteita, vähän kissan veteen sekoitettuna. Turvallisin kotitekoinen liemi on maustamatonta lihaa keitettynä pelkässä vedessä. Jätä liemikuutiot väliin.",
+    "nb": "Bare naturell, natriumfattig buljong uten løk, hvitløk eller tilsatt krydder, litt blandet i kattens vann. Den tryggeste hjemmelagde buljongen er usaltet kjøtt kokt i vanlig vann. La kraftterningene ligge."
   },
   "child": {
     "en": "A grown-up can add a little plain broth to kitty's water. Soup for people often has onion, so always ask first.",
@@ -65,7 +72,8 @@
     "hr": "Odrasla osoba može macinoj vodi dodati malo obične juhe. Juha za ljude često ima luk, zato uvijek prvo pitaj.",
     "sv": "En vuxen kan blanda lite okryddad buljong i kattens vatten. Soppa för människor innehåller ofta lök, så fråga alltid först.",
     "da": "En voksen kan komme lidt almindelig bouillon i din kats vand. Suppe til mennesker indeholder ofte løg, så spørg altid først.",
-    "fi": "Aikuinen voi lisätä kisun veteen vähän maustamatonta lientä. Ihmisten keitoissa on usein sipulia, joten kysy aina ensin."
+    "fi": "Aikuinen voi lisätä kisun veteen vähän maustamatonta lientä. Ihmisten keitoissa on usein sipulia, joten kysy aina ensin.",
+    "nb": "En voksen kan helle litt naturell buljong i pusens vann. Suppe til mennesker har ofte løk i seg, så spør alltid først."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "hr": "Smijem li upotrijebiti kocku za juhu?",
         "sv": "Kan jag använda en buljongtärning?",
         "da": "Må jeg bruge en bouillonterning?",
-        "fi": "Voinko käyttää liemikuutiota?"
+        "fi": "Voinko käyttää liemikuutiota?",
+        "nb": "Kan jeg bruke en kraftterning?"
       },
       "a": {
         "en": "Better not. Bouillon cubes used for making stocks contain high amounts of sodium, and pre-made foods may contain onion or garlic, which are toxic to cats.",
@@ -83,7 +92,8 @@
         "hr": "Bolje ne. Kocke za temeljac sadrže mnogo natrija, a gotova jela mogu sadržavati luk ili češnjak, koji su otrovni za mačke.",
         "sv": "Hellre inte. Buljongtärningar som används för att göra fond innehåller mycket natrium, och färdiglagade livsmedel kan innehålla lök eller vitlök, som är giftigt för katter.",
         "da": "Helst ikke. Bouillonterninger, som bruges til at lave fond, indeholder meget natrium, og færdiglavede produkter kan indeholde løg eller hvidløg, som er giftige for katte.",
-        "fi": "Parempi olla käyttämättä. Liemikuutiot sisältävät paljon natriumia, ja valmisruoissa voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä."
+        "fi": "Parempi olla käyttämättä. Liemikuutiot sisältävät paljon natriumia, ja valmisruoissa voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä.",
+        "nb": "Helst ikke. Buljongterninger og kraftterninger inneholder mye natrium, og ferdiglagde matvarer kan inneholde løk eller hvitløk, som er giftig for katter."
       }
     }
   ],
@@ -171,6 +181,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "864ed4880f2964a8be78ae79a429e2eeb5c0619af6f84db2d2f18435e57614c5"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6032a731ba7a061d4992271dcfdcfb989a3fa52370b8bf7f62337c3e2aeb11cc"
     }
   }
 }

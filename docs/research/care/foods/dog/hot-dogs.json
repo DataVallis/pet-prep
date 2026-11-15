@@ -7,7 +7,8 @@
     "hr": "Hrenovke (hot dog)",
     "sv": "Varmkorv",
     "da": "Hotdogs",
-    "fi": "Hot dogit"
+    "fi": "Hot dogit",
+    "nb": "Hotdoger"
   },
   "question": {
     "en": "Can dogs eat hot dogs?",
@@ -15,7 +16,8 @@
     "hr": "Smiju li psi jesti hrenovke?",
     "sv": "Får hundar äta varmkorv?",
     "da": "Må hunde spise hotdogs?",
-    "fi": "Saako koira syödä hot dogeja?"
+    "fi": "Saako koira syödä hot dogeja?",
+    "nb": "Kan hunder spise hotdoger?"
   },
   "url_slug": {
     "en": "hot-dogs",
@@ -23,7 +25,8 @@
     "hr": "hot-dog",
     "sv": "varmkorv",
     "da": "hotdogs",
-    "fi": "hot-dogit"
+    "fi": "hot-dogit",
+    "nb": "hotdoger"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "hr": "Ne, hrenovke nisu dobar izbor za pse. Vrlo su slane i često sadrže natrijev nitrat i začine poput češnjaka i luka u prahu, koji mogu biti otrovni za pse. Hrenovke mogu izazvati i gušenje.",
     "sv": "Nej, varmkorv är inget bra val för hundar. Den är mycket salt och innehåller ofta natriumnitrat och kryddor som vitlökspulver och lökpulver, som kan vara giftiga för hundar. Varmkorv kan också innebära en kvävningsrisk.",
     "da": "Nej, hotdogs er ikke et godt valg til hunde. Hotdogpølser er meget salte og indeholder ofte natriumnitrat og krydderier som hvidløgs- og løgpulver, som kan være giftige for hunde. De kan også give risiko for kvælning.",
-    "fi": "Ei suositella, hot dogit eivät ole hyvä valinta koirille. Ne ovat hyvin suolaisia ja sisältävät usein natriumnitraattia ja mausteita, kuten valkosipuli- ja sipulijauhetta, jotka voivat olla koirille myrkyllisiä. Hot dogit voivat myös aiheuttaa tukehtumisvaaran."
+    "fi": "Ei suositella, hot dogit eivät ole hyvä valinta koirille. Ne ovat hyvin suolaisia ja sisältävät usein natriumnitraattia ja mausteita, kuten valkosipuli- ja sipulijauhetta, jotka voivat olla koirille myrkyllisiä. Hot dogit voivat myös aiheuttaa tukehtumisvaaran.",
+    "nb": "Nei, hotdoger er ikke et godt valg for hunder. De er veldig salte og inneholder ofte natriumnitrat og krydder som hvitløks- og løkpulver, som kan være giftige for hunder. Hotdoger kan også gi kvelningsfare."
   },
   "why": {
     "en": "The biggest problem with hot dogs is salt: even half of one would probably put a dog way over its daily sodium limit, and too much sodium can lead to dehydration and high blood pressure. Hot dogs often contain sodium nitrate, which has been linked to cancer, MSG, and sugars or artificial sweeteners, as well as garlic and onion powder. Big dogs may try to swallow them without chewing.",
@@ -40,7 +44,8 @@
     "hr": "Najveći je problem hrenovki sol: čak bi i pola jedne hrenovke vjerojatno psa daleko odvelo preko dnevne granice natrija, a previše natrija može dovesti do dehidracije i visokog krvnog tlaka. Hrenovke često sadrže natrijev nitrat, koji se povezuje s rakom, zatim MSG, šećere ili umjetna sladila, kao i češnjak i luk u prahu. Veliki psi ih mogu pokušati progutati bez žvakanja.",
     "sv": "Det största problemet med varmkorv är saltet: redan en halv korv skulle förmodligen göra att en hund får i sig långt mer natrium än den klarar per dag, och för mycket natrium kan leda till uttorkning och högt blodtryck. Varmkorv innehåller ofta natriumnitrat, som har kopplats till cancer, MSG samt socker eller konstgjorda sötningsmedel, och dessutom vitlökspulver och lökpulver. Stora hundar kan försöka svälja dem utan att tugga.",
     "da": "Det største problem ved hotdogs er saltet: selv en halv hotdogpølse ville nok få en hund langt over dens daglige grænse for natrium, og for meget natrium kan føre til dehydrering og forhøjet blodtryk. Hotdogpølser indeholder ofte natriumnitrat, som man har sat i forbindelse med kræft, MSG og sukker eller kunstige sødemidler samt hvidløgs- og løgpulver. Store hunde kan prøve at sluge dem uden at tygge.",
-    "fi": "Hot dogien suurin ongelma on suola: jo puolikas hot dog ylittäisi todennäköisesti koiran päivittäisen natriumrajan reilusti, ja liika natrium voi johtaa nestehukkaan ja korkeaan verenpaineeseen. Hot dogeissa on usein natriumnitraattia, jonka on yhdistetty syöpään, glutamaattia (MSG) sekä sokereita tai keinotekoisia makeutusaineita, samoin valkosipuli- ja sipulijauhetta. Isot koirat saattavat yrittää niellä ne pureskelematta."
+    "fi": "Hot dogien suurin ongelma on suola: jo puolikas hot dog ylittäisi todennäköisesti koiran päivittäisen natriumrajan reilusti, ja liika natrium voi johtaa nestehukkaan ja korkeaan verenpaineeseen. Hot dogeissa on usein natriumnitraattia, jonka on yhdistetty syöpään, glutamaattia (MSG) sekä sokereita tai keinotekoisia makeutusaineita, samoin valkosipuli- ja sipulijauhetta. Isot koirat saattavat yrittää niellä ne pureskelematta.",
+    "nb": "Det største problemet med hotdoger er saltet: selv en halv hotdog vil trolig gi en hund langt mer natrium enn den tåler per dag, og for mye natrium kan gi dehydrering og høyt blodtrykk. Hotdoger inneholder ofte natriumnitrat, som er knyttet til kreft, og dessuten MSG, sukker eller kunstige søtstoffer, i tillegg til hvitløks- og løkpulver. Store hunder kan prøve å svelge dem uten å tygge."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Vatsakipu",
       "Ripuli",
       "Oksentelu ja ripuli yhtä aikaa"
+    ],
+    "nb": [
+      "Vondt i magen",
+      "Diaré",
+      "Oppkast sammen med diaré"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "hr": "Nakon hrenovke pas može dobiti bolove u trbuhu ili proljev, što bi trebalo proći unutar jednog dana. Nazovi veterinara ako proljev ne prestane ili pas povraća, jer to može dovesti do ozbiljne dehidracije.",
     "sv": "Efter en varmkorv kan din hund få ont i magen eller diarré, vilket borde gå över inom ett dygn. Kontakta din veterinär om diarrén inte upphör eller om hunden också kräks, eftersom det kan leda till allvarlig uttorkning.",
     "da": "Efter at have spist en hotdog kan din hund få ondt i maven eller diarré, der som regel går over inden for et døgn. Ring til din dyrlæge, hvis diarréen ikke stopper, eller hunden også kaster op, for det kan føre til alvorlig dehydrering.",
-    "fi": "Hot dogin syömisen jälkeen koirallasi voi olla vatsakipua tai ripulia, jonka pitäisi mennä ohi vuorokaudessa. Soita eläinlääkärille, jos ripuli ei lopu tai koira myös oksentelee, sillä se voi johtaa vakavaan nestehukkaan."
+    "fi": "Hot dogin syömisen jälkeen koirallasi voi olla vatsakipua tai ripulia, jonka pitäisi mennä ohi vuorokaudessa. Soita eläinlääkärille, jos ripuli ei lopu tai koira myös oksentelee, sillä se voi johtaa vakavaan nestehukkaan.",
+    "nb": "Etter å ha spist en hotdog kan hunden få vondt i magen eller diaré, som vanligvis går over i løpet av et døgn. Kontakt dyrlegen hvis diaréen ikke stopper eller hunden også kaster opp, for det kan føre til alvorlig dehydrering."
   },
   "serving": null,
   "child": {
@@ -89,7 +100,8 @@
     "hr": "Hrenovke su previše slane za pse. Na roštilju zamoli odraslu osobu da umjesto toga psu da malo običnog mesa.",
     "sv": "Varmkorv är för salt för hundar. Be en vuxen om lite okryddat kött till din hund i stället när ni grillar.",
     "da": "Hotdogs er for salte til hunde. Når der bliver grillet, kan du bede en voksen om lidt almindeligt kød til din hund i stedet.",
-    "fi": "Hot dogit ovat koirille liian suolaisia. Pyydä grillijuhlissa aikuiselta koirallesi vähän maustamatonta lihaa sen sijaan."
+    "fi": "Hot dogit ovat koirille liian suolaisia. Pyydä grillijuhlissa aikuiselta koirallesi vähän maustamatonta lihaa sen sijaan.",
+    "nb": "Hotdoger er for salte for hunder. Når dere griller, kan du be en voksen om litt naturelt kjøtt til hunden i stedet."
   },
   "faq": [
     {
@@ -99,7 +111,8 @@
         "hr": "Što mogu dati psu na roštilju umjesto toga?",
         "sv": "Vad kan jag ge min hund i stället när vi grillar?",
         "da": "Hvad kan jeg give min hund ved grillen i stedet?",
-        "fi": "Mitä voin antaa koirallesi grillijuhlissa sen sijaan?"
+        "fi": "Mitä voin antaa koirallesi grillijuhlissa sen sijaan?",
+        "nb": "Hva kan jeg gi hunden i stedet når vi griller?"
       },
       "a": {
         "en": "Some plain beef, pork or chicken with no salt or other seasoning, cut into bite-sized pieces.",
@@ -107,7 +120,8 @@
         "hr": "Malo običnog goveđeg, svinjskog ili pilećeg mesa bez soli i drugih začina, narezanog na komadiće za jedan zalogaj.",
         "sv": "Lite okryddat nötkött, fläsk eller kyckling utan salt eller andra kryddor, skuret i munsbitar.",
         "da": "Noget almindeligt oksekød, svinekød eller kylling uden salt eller andre krydderier, skåret i mundrette stykker.",
-        "fi": "Vähän maustamatonta naudan-, sian- tai kananlihaa ilman suolaa tai muita mausteita, suupalan kokoisiksi paloiksi leikattuna."
+        "fi": "Vähän maustamatonta naudan-, sian- tai kananlihaa ilman suolaa tai muita mausteita, suupalan kokoisiksi paloiksi leikattuna.",
+        "nb": "Litt naturell biff, svinekjøtt eller kylling uten salt eller annet krydder, skåret i passe store biter."
       }
     }
   ],
@@ -208,6 +222,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "afcd3c780c98086ff0fe950904f242e1f5b486582ddc1bee3bfcd3f76a41744c"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4ca318c86574e4509ab319b49912753476fc8a2f5e47459c5e837e66102747ee"
     }
   }
 }

@@ -8,7 +8,8 @@
     "hr": "Sojin umak",
     "sv": "Sojasås",
     "da": "Sojasovs",
-    "fi": "Soijakastike"
+    "fi": "Soijakastike",
+    "nb": "Soyasaus"
   },
   "question": {
     "en": "Can dogs have soy sauce?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti sojin umak?",
     "sv": "Får hundar äta sojasås?",
     "da": "Må hunde få sojasovs?",
-    "fi": "Saako koira syödä soijakastiketta?"
+    "fi": "Saako koira syödä soijakastiketta?",
+    "nb": "Kan hunder få soyasaus?"
   },
   "url_slug": {
     "en": "soy-sauce",
@@ -26,7 +28,8 @@
     "hr": "sojin-umak",
     "sv": "sojasas",
     "da": "sojasovs",
-    "fi": "soijakastike"
+    "fi": "soijakastike",
+    "nb": "soyasaus"
   },
   "level": "dangerous",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Ne, psu ne daj sojin umak. Psi se mogu otrovati solju ako pojedu previše kuhinjske soli ili sojinog umaka, a ni edamame začinjen sojinim umakom nije dobar za pse.",
     "sv": "Nej, ge inte din hund sojasås. Hundar kan få saltförgiftning av att äta för mycket bordssalt eller sojasås, och edamamebönor kryddade med sojasås är inte heller bra för hundar.",
     "da": "Nej, giv ikke din hund sojasovs. Hunde kan få saltforgiftning af at spise for meget bordsalt eller sojasovs, og edamame med sojasovs er heller ikke godt for hunde.",
-    "fi": "Ei saa, älä anna koirallesi soijakastiketta. Koirat voivat saada suolamyrkytyksen syötyään liikaa ruokasuolaa tai soijakastiketta, eikä soijakastikkeella maustettu edamame ole koirille hyväksi."
+    "fi": "Ei saa, älä anna koirallesi soijakastiketta. Koirat voivat saada suolamyrkytyksen syötyään liikaa ruokasuolaa tai soijakastiketta, eikä soijakastikkeella maustettu edamame ole koirille hyväksi.",
+    "nb": "Nei, ikke gi hunden soyasaus. Hunder kan få saltforgiftning av å spise for mye bordsalt eller soyasaus, og edamame krydret med soyasaus er heller ikke bra for hunder."
   },
   "why": {
     "en": "Dogs can suffer from salt poisoning if they eat excess amounts of table salt or soy sauce. Dogs cope with salt better when they can drink plenty of fresh water; without it the risk is higher. Too many salty foods are especially bad for dogs with medical issues such as heart disease, because salt can cause fluid retention.",
@@ -45,7 +49,8 @@
     "hr": "Psi mogu dobiti trovanje solju ako pojedu prekomjerne količine kuhinjske soli ili sojinog umaka. Psi bolje podnose sol kad mogu piti puno svježe vode; bez nje je rizik veći. Previše slane hrane osobito je loše za pse sa zdravstvenim problemima poput srčane bolesti, jer sol može izazvati zadržavanje tekućine.",
     "sv": "Hundar kan drabbas av saltförgiftning om de äter för stora mängder bordssalt eller sojasås. Hundar klarar salt bättre när de kan dricka gott om färskt vatten; utan det är risken högre. För mycket salt mat är särskilt dåligt för hundar med sjukdomar som hjärtsjukdom, eftersom salt kan orsaka vätskeansamling.",
     "da": "Hunde kan få saltforgiftning, hvis de spiser for meget bordsalt eller sojasovs. Hunde tåler salt bedre, når de kan drikke rigeligt med friskt vand; uden det er risikoen højere. For mange salte fødevarer er især skidt for hunde med sygdomme som hjertesygdom, fordi salt kan give væskeophobning.",
-    "fi": "Koirat voivat saada suolamyrkytyksen, jos ne syövät liikaa ruokasuolaa tai soijakastiketta. Koirat sietävät suolaa paremmin, kun ne voivat juoda paljon raikasta vettä; ilman sitä riski on suurempi. Liian suolaiset ruoat ovat erityisen haitallisia koirille, joilla on sairauksia, kuten sydänsairaus, koska suola voi aiheuttaa nesteen kertymistä elimistöön."
+    "fi": "Koirat voivat saada suolamyrkytyksen, jos ne syövät liikaa ruokasuolaa tai soijakastiketta. Koirat sietävät suolaa paremmin, kun ne voivat juoda paljon raikasta vettä; ilman sitä riski on suurempi. Liian suolaiset ruoat ovat erityisen haitallisia koirille, joilla on sairauksia, kuten sydänsairaus, koska suola voi aiheuttaa nesteen kertymistä elimistöön.",
+    "nb": "Hunder kan få saltforgiftning hvis de spiser for mye bordsalt eller soyasaus. Hunder tåler salt bedre når de kan drikke mye friskt vann; uten vann er risikoen høyere. For mye salt mat er særlig dårlig for hunder med sykdommer som hjertesykdom, fordi salt kan gi væskeansamling."
   },
   "signs": {
     "en": [
@@ -110,6 +115,15 @@
       "Horjuminen",
       "Liiallinen jano tai virtsaaminen",
       "Vapina tai kouristuskohtaukset"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Nedsatt matlyst",
+      "Sløvhet",
+      "Ustøhet",
+      "Sterk tørst eller mye tissing",
+      "Skjelvinger eller kramper"
     ]
   },
   "what_to_do": {
@@ -119,7 +133,8 @@
     "hr": "Ako misliš da je pas pojeo previše sojinog umaka, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Pazi da pas ima svježu vodu za piće.",
     "sv": "Om du tror att din hund har fått i sig för mycket sojasås ska du kontakta din veterinär eller giftrådgivningen för djur omedelbart. Se till att din hund har färskt vatten att dricka.",
     "da": "Hvis du tror, at din hund har fået for meget sojasovs, skal du straks kontakte din dyrlæge eller en giftrådgivning for dyr. Sørg for, at din hund har friskt vand at drikke.",
-    "fi": "Jos arvelet koirasi saaneen liikaa soijakastiketta, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Varmista, että koirallasi on raikasta vettä juotavaksi."
+    "fi": "Jos arvelet koirasi saaneen liikaa soijakastiketta, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Varmista, että koirallasi on raikasta vettä juotavaksi.",
+    "nb": "Hvis du tror at hunden har fått i seg for mye soyasaus, kontakt dyrlegen eller giftinformasjon for dyr med en gang. Sørg for at hunden har friskt vann å drikke."
   },
   "serving": null,
   "child": {
@@ -129,7 +144,8 @@
     "hr": "Sojin umak nije za pse. Od previše sojinog umaka pas se može razboljeti, zato psu daj pseću hranu i svježu vodu.",
     "sv": "Sojasås är inte för hundar. För mycket av den kan göra en hund sjuk, så ge din hund hundmat och färskt vatten i stället.",
     "da": "Sojasovs er ikke til hunde. For meget kan gøre en hund syg, så giv i stedet din hund hundemad og friskt vand.",
-    "fi": "Soijakastike ei ole koirille. Liika siitä voi tehdä koiran sairaaksi, joten anna koirallesi koiranruokaa ja raikasta vettä."
+    "fi": "Soijakastike ei ole koirille. Liika siitä voi tehdä koiran sairaaksi, joten anna koirallesi koiranruokaa ja raikasta vettä.",
+    "nb": "Soyasaus er ikke for hunder. For mye av den kan gjøre en hund syk, så gi hunden hundemat og friskt vann i stedet."
   },
   "faq": [
     {
@@ -140,7 +156,8 @@
         "hr": "Smije li moj pas jesti edamame sa sojinim umakom?",
         "sv": "Får min hund äta edamamebönor med sojasås?",
         "da": "Må min hund spise edamame med sojasovs?",
-        "fi": "Saako koirani syödä edamamea soijakastikkeella?"
+        "fi": "Saako koirani syödä edamamea soijakastikkeella?",
+        "nb": "Kan hunden min spise edamame med soyasaus?"
       },
       "a": {
         "en": "No. Stay away from edamame with added seasonings such as sea salt and soy sauce, as these aren't good for dogs. Stick to plain, fresh beans.",
@@ -149,7 +166,8 @@
         "hr": "Ne. Drži se podalje od zrna edamame s dodanim začinima poput morske soli i sojinog umaka, jer nisu dobri za pse. Drži se običnih svježih zrna.",
         "sv": "Nej. Undvik edamamebönor med tillsatta kryddor som havssalt och sojasås, eftersom de inte är bra för hundar. Håll dig till okryddade, färska bönor.",
         "da": "Nej. Hold dig fra edamame med tilsatte krydderier som havsalt og sojasovs, for de er ikke gode for hunde. Hold dig til almindelige, friske bønner.",
-        "fi": "Ei. Vältä edamamea, johon on lisätty mausteita, kuten merisuolaa ja soijakastiketta, sillä ne eivät ole koirille hyväksi. Pidä kiinni maustamattomista, tuoreista pavuista."
+        "fi": "Ei. Vältä edamamea, johon on lisätty mausteita, kuten merisuolaa ja soijakastiketta, sillä ne eivät ole koirille hyväksi. Pidä kiinni maustamattomista, tuoreista pavuista.",
+        "nb": "Nei. Hold deg unna edamame med tilsatt krydder som havsalt og soyasaus, for det er ikke bra for hunder. Hold deg til naturelle, ferske bønner."
       }
     }
   ],
@@ -277,6 +295,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f6cb33287a007df11305dc135aaa12c1c4d28975cdb13f3cebce7cbfa97fe320"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7152735de73ddac3071acac50bcd7223098cdd9e7c6f75b00774cd2a0aa8059a"
     }
   }
 }

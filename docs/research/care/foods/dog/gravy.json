@@ -7,7 +7,8 @@
     "hr": "Umak od mesa",
     "sv": "Sås",
     "da": "Sovs",
-    "fi": "Kastike"
+    "fi": "Kastike",
+    "nb": "Brun saus"
   },
   "question": {
     "en": "Can dogs eat gravy?",
@@ -15,7 +16,8 @@
     "hr": "Smiju li psi jesti umak od mesa?",
     "sv": "Får hundar äta sås?",
     "da": "Må hunde spise sovs?",
-    "fi": "Saako koira syödä kastiketta?"
+    "fi": "Saako koira syödä kastiketta?",
+    "nb": "Kan hunder spise brun saus?"
   },
   "url_slug": {
     "en": "gravy",
@@ -23,7 +25,8 @@
     "hr": "umak-od-mesa",
     "sv": "sas",
     "da": "sovs",
-    "fi": "kastike"
+    "fi": "kastike",
+    "nb": "brun-saus"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "hr": "Ne, umak od mesa najbolje je držati podalje od pasa. To je masna hrana koja može nadražiti želudac psa i dovesti do upale gušterače. Umak od kocke za juhu bogat je solju, a umak s lukom sadrži luk, koji psi ne smiju jesti.",
     "sv": "Nej, det är bäst att hålla sås borta från hundar. Sås är fet mat som kan reta hundens mage och leda till bukspottkörtelinflammation (pankreatit). Sås som är gjord på buljongtärning innehåller mycket salt, och lökbaserad sås innehåller lök, som hundar inte ska äta.",
     "da": "Nej, det er bedst at holde sovs væk fra hunde. Sovs er fed mad, som kan give hunden dårlig mave og kan føre til betændelse i bugspytkirtlen. Sovs lavet af bouillonterninger indeholder meget salt, og løgsovs indeholder løg, som hunde ikke må spise.",
-    "fi": "Ei suositella, kastike on parasta pitää poissa koirien ulottuvilta. Kastike on rasvaista ruokaa, joka voi ärsyttää koiran vatsaa ja johtaa haimatulehdukseen. Liemikuutioista tehty kastike on hyvin suolaista, ja sipulikastikkeessa on sipulia, jota koirien ei pidä syödä."
+    "fi": "Ei suositella, kastike on parasta pitää poissa koirien ulottuvilta. Kastike on rasvaista ruokaa, joka voi ärsyttää koiran vatsaa ja johtaa haimatulehdukseen. Liemikuutioista tehty kastike on hyvin suolaista, ja sipulikastikkeessa on sipulia, jota koirien ei pidä syödä.",
+    "nb": "Nei, det er best å holde brun saus unna hunder. Brun saus er fet mat som kan gi hunden urolig mage og føre til betennelse i bukspyttkjertelen (pankreatitt). Saus laget med buljongterninger er rik på salt, og løksaus inneholder løk, som hunder ikke skal spise."
   },
   "why": {
     "en": "Gravy is not toxic as such, but butter, meat drippings, gravies and other fatty foods can cause stomach upset with diarrhoea and vomiting. Fatty foods can also cause pancreatitis, an inflammation of the pancreas that may need hospital care. Stock cubes used for gravy contain a lot of sodium, and dogs should not eat cooked foods containing onion, such as onion gravy.",
@@ -40,7 +44,8 @@
     "hr": "Umak od mesa sam po sebi nije otrovan, ali maslac, masnoća od pečenja, umaci i druga masna hrana mogu izazvati želučane tegobe s proljevom i povraćanjem. Masna hrana može izazvati i upalu gušterače, koja može zahtijevati bolničko liječenje. Kocke za juhu koje se koriste za umak sadrže mnogo natrija, a psi ne bi smjeli jesti termički obrađenu hranu koja sadrži luk, poput umaka s lukom.",
     "sv": "Sås är inte giftig i sig, men smör, stekfett, såser och annan fet mat kan ge magbesvär med diarré och kräkningar. Fet mat kan också orsaka bukspottkörtelinflammation (pankreatit), som kan kräva sjukhusvård. Buljongtärningar som används till sås innehåller mycket natrium, och hundar ska inte äta tillagad mat som innehåller lök, till exempel lökbaserad sås.",
     "da": "Sovs er ikke giftigt i sig selv, men smør, stegefedt, sovs og anden fed mad kan give mavebesvær med diarré og opkast. Fed mad kan også give betændelse i bugspytkirtlen, som kan kræve behandling på dyrehospital. Bouillonterninger til sovs indeholder meget natrium, og hunde bør ikke spise tilberedt mad med løg, fx løgsovs.",
-    "fi": "Kastike ei sinänsä ole myrkyllistä, mutta rasvaiset ruoat, kuten voi, paistinrasva ja kastikkeet, voivat aiheuttaa vatsavaivoja, ripulia ja oksentelua. Rasvaiset ruoat voivat aiheuttaa myös haimatulehduksen, haiman tulehduksen, joka voi vaatia sairaalahoitoa. Kastikkeeseen käytettävät liemikuutiot sisältävät paljon natriumia, ja koirien ei pidä syödä kypsennettyjä sipulia sisältäviä ruokia, kuten sipulikastiketta."
+    "fi": "Kastike ei sinänsä ole myrkyllistä, mutta rasvaiset ruoat, kuten voi, paistinrasva ja kastikkeet, voivat aiheuttaa vatsavaivoja, ripulia ja oksentelua. Rasvaiset ruoat voivat aiheuttaa myös haimatulehduksen, haiman tulehduksen, joka voi vaatia sairaalahoitoa. Kastikkeeseen käytettävät liemikuutiot sisältävät paljon natriumia, ja koirien ei pidä syödä kypsennettyjä sipulia sisältäviä ruokia, kuten sipulikastiketta.",
+    "nb": "Brun saus er ikke giftig i seg selv, men smør, stekesaft, saus og annen fet mat kan gi urolig mage med diaré og oppkast. Fet mat kan også gi betennelse i bukspyttkjertelen (pankreatitt), som kan kreve sykehusbehandling. Buljongterninger som brukes i saus, inneholder mye natrium, og hunder skal ikke spise tilberedt mat med løk, for eksempel løksaus."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Vatsakipu",
       "Ruokahaluttomuus",
       "Väsymys"
+    ],
+    "nb": [
+      "Oppkast, noen ganger 1–4 dager etter det fete måltidet",
+      "Diaré",
+      "Vondt i magen",
+      "Mister matlysten",
+      "Slapphet"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "hr": "Ako je pas pojeo umak od mesa ili drugu masnu hranu i idućih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Znakovi se mogu javiti tek nakon nekoliko dana. Ako je umak sadržavao luk ili češnjak, što prije se obrati veterinaru.",
     "sv": "Om din hund har ätit sås eller annan fet mat och får kräkningar, ont i magen eller är slö under de följande dagarna: kontakta din veterinär. Tecknen kan komma med några dagars fördröjning. Om såsen innehöll lök eller vitlök ska du kontakta din veterinär utan dröjsmål.",
     "da": "Hvis din hund har spist sovs eller anden fed mad og får opkast, mavesmerter eller bliver træt i dagene efter, skal du kontakte din dyrlæge. Tegnene kan komme med nogle dages forsinkelse. Hvis sovsen indeholdt løg eller hvidløg, skal du kontakte din dyrlæge hurtigt.",
-    "fi": "Jos koirasi söi kastiketta tai muuta rasvaista ruokaa ja sillä on seuraavien päivien aikana oksentelua, vatsakipua tai väsymystä, ota yhteyttä eläinlääkäriin. Oireet voivat viivästyä muutamalla päivällä. Jos kastikkeessa oli sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin viipymättä."
+    "fi": "Jos koirasi söi kastiketta tai muuta rasvaista ruokaa ja sillä on seuraavien päivien aikana oksentelua, vatsakipua tai väsymystä, ota yhteyttä eläinlääkäriin. Oireet voivat viivästyä muutamalla päivällä. Jos kastikkeessa oli sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin viipymättä.",
+    "nb": "Hvis hunden har spist brun saus eller annen fet mat og får oppkast, vondt i magen eller blir slapp i dagene etterpå, må du kontakte dyrlegen. Tegnene kan komme noen dager senere. Hvis sausen inneholdt løk eller hvitløk, må du kontakte dyrlegen raskt."
   },
   "serving": null,
   "child": {
@@ -101,7 +114,8 @@
     "hr": "Umak od mesa je masan umak za ljude od kojeg psa može zaboljeti trbuščić. Neka ostane na tvom tanjuru.",
     "sv": "Sås är något tungt och fett för människor, och det kan ge hundar ont i magen. Behåll den på din egen tallrik.",
     "da": "Sovs er fed mad til mennesker og kan give hunde ondt i maven. Behold den på din egen tallerken.",
-    "fi": "Kastike on runsasrasvaista ihmisten ruokaa, joka voi tehdä koiran vatsan kipeäksi. Pidä se omalla lautasellasi."
+    "fi": "Kastike on runsasrasvaista ihmisten ruokaa, joka voi tehdä koiran vatsan kipeäksi. Pidä se omalla lautasellasi.",
+    "nb": "Brun saus er en tung saus for mennesker som kan gi hunder vondt i magen. Behold den på din egen tallerken."
   },
   "faq": [
     {
@@ -111,7 +125,8 @@
         "hr": "Smijem li psu malo umaka preliti preko hrane?",
         "sv": "Kan jag hälla lite sås över min hunds mat?",
         "da": "Må jeg hælde lidt sovs over min hunds mad?",
-        "fi": "Voinko kaataa vähän kastiketta koirani ruoan päälle?"
+        "fi": "Voinko kaataa vähän kastiketta koirani ruoan päälle?",
+        "nb": "Kan jeg helle litt saus over maten til hunden min?"
       },
       "a": {
         "en": "Better not. A vet charity advises keeping any food you share plain and not covered in gravy, sauce or seasoning, as this could upset your dog's stomach.",
@@ -119,7 +134,8 @@
         "hr": "Bolje ne. Dobrotvorna veterinarska organizacija savjetuje da svaka hrana koju dijeliš bude obična i da nije prelivena umakom ili začinima, jer to može nadražiti želudac psa.",
         "sv": "Hellre inte. En djurskyddsorganisation som bedriver veterinärvård rekommenderar att mat du delar är okryddad och inte täckt med sås, skysås eller kryddor, eftersom det kan reta hundens mage.",
         "da": "Helst ikke. En velgørende dyrlægeorganisation anbefaler at holde al mad, du deler, almindelig og uden sovs, saucer eller krydderier, da det kan give din hund dårlig mave.",
-        "fi": "Parempi olla kaatamatta. Eläinlääkintäalan hyväntekeväisyysjärjestö neuvoo pitämään jakamasi ruoan maustamattomana ja ilman kastiketta, kastikkeita tai mausteita, koska ne voivat ärsyttää koiran vatsaa."
+        "fi": "Parempi olla kaatamatta. Eläinlääkintäalan hyväntekeväisyysjärjestö neuvoo pitämään jakamasi ruoan maustamattomana ja ilman kastiketta, kastikkeita tai mausteita, koska ne voivat ärsyttää koiran vatsaa.",
+        "nb": "Det er best å la være. En veldedig dyrehelseorganisasjon anbefaler at all mat du deler, er naturell og ikke dekket av saus eller krydder, siden det kan gi hunden urolig mage."
       }
     }
   ],
@@ -220,6 +236,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2e62f512783cc929185ac6c11477690a341a79c1a4cc477803dc822fc73e1991"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4eb82d074e37d3ee04cfae5a808c1bffc1d0fff9a7aec76f9f3cd7bcb7d5951d"
     }
   }
 }

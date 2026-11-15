@@ -8,7 +8,8 @@
     "hr": "Kurkuma",
     "sv": "Gurkmeja",
     "da": "Gurkemeje",
-    "fi": "Kurkuma"
+    "fi": "Kurkuma",
+    "nb": "Gurkemeie"
   },
   "question": {
     "en": "Can dogs eat turmeric?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti kurkumu?",
     "sv": "Får hundar äta gurkmeja?",
     "da": "Må hunde spise gurkemeje?",
-    "fi": "Saako koira syödä kurkumaa?"
+    "fi": "Saako koira syödä kurkumaa?",
+    "nb": "Kan hunder spise gurkemeie?"
   },
   "url_slug": {
     "en": "turmeric",
@@ -26,7 +28,8 @@
     "hr": "kurkuma",
     "sv": "gurkmeja",
     "da": "gurkemeje",
-    "fi": "kurkuma"
+    "fi": "kurkuma",
+    "nb": "gurkemeie"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Bolje je psu ne davati kurkumu bez pitanja veterinara. Male količine smatraju se sigurnima, ali u velikim količinama kurkuma može djelovati kao razrjeđivač krvi i izazvati želučane tegobe, a o njezinim rizicima ima malo istraživanja.",
     "sv": "Det är bäst att inte ge din hund gurkmeja utan att fråga din veterinär. Små mängder anses säkra, men i stora mängder kan gurkmeja verka blodförtunnande och orsaka magbesvär, och det finns lite forskning om riskerna.",
     "da": "Det er bedst ikke at give din hund gurkemeje uden at spørge din dyrlæge. Små mængder regnes for ufarlige, men i store mængder kan gurkemeje virke blodfortyndende og give mavebesvær, og der findes kun lidt forskning i risiciene.",
-    "fi": "Ei suositella. Kurkumaa ei kannata antaa koiralle kysymättä eläinlääkäriltä. Pieniä määriä pidetään turvallisina, mutta suurina määrinä kurkuma voi ohentaa verta ja aiheuttaa vatsavaivoja, ja sen riskeistä on vähän tutkimusta."
+    "fi": "Ei suositella. Kurkumaa ei kannata antaa koiralle kysymättä eläinlääkäriltä. Pieniä määriä pidetään turvallisina, mutta suurina määrinä kurkuma voi ohentaa verta ja aiheuttaa vatsavaivoja, ja sen riskeistä on vähän tutkimusta.",
+    "nb": "Det er best å ikke gi hunden gurkemeie uten å spørre dyrlegen. Små mengder regnes som trygge, men i store mengder kan gurkemeie virke blodfortynnende og gi urolig mage, og det finnes lite forskning på risikoen."
   },
   "why": {
     "en": "Sources differ: one pet food expert article calls turmeric safe for dogs in small amounts, while another advises caution, notes that there is little research on its risks and that turmeric taken by mouth is poorly absorbed. Serious side effects are fairly uncommon, but in high amounts turmeric can act as a blood thinner and cause stomach upset. Because the sources disagree, we use the stricter rating. The small amounts used to colour or flavour dog food are not likely to bring any noticeable health benefits.",
@@ -45,7 +49,8 @@
     "hr": "Izvori se razlikuju: jedan članak stručnjaka za hranu za kućne ljubimce kurkumu naziva sigurnom za pse u malim količinama, a drugi savjetuje oprez, napominje da o njezinim rizicima ima malo istraživanja i da se kurkuma uzeta na usta slabo upija. Ozbiljne nuspojave prilično su rijetke, ali u velikim količinama kurkuma može djelovati kao razrjeđivač krvi i izazvati želučane tegobe. Budući da se izvori ne slažu, primjenjujemo strožu ocjenu. Male količine kojima se hrana za pse boji ili začinjava vjerojatno neće donijeti nikakvu uočljivu zdravstvenu korist.",
     "sv": "Källorna skiljer sig åt: en artikel av en expert på husdjursmat kallar gurkmeja säker för hundar i små mängder, medan en annan råder till försiktighet och påpekar att det finns lite forskning om riskerna och att gurkmeja tas upp dåligt när den ges via munnen. Allvarliga biverkningar är ganska ovanliga, men i stora mängder kan gurkmeja verka blodförtunnande och orsaka magbesvär. Eftersom källorna är oeniga använder vi den strängare bedömningen. De små mängder som används för att färga eller smaksätta hundfoder ger sannolikt inga märkbara hälsofördelar.",
     "da": "Kilderne er uenige: en artikel af en ekspert i kæledyrsfoder kalder gurkemeje ufarligt for hunde i små mængder, mens en anden anbefaler forsigtighed og skriver at der kun findes lidt forskning i risiciene, og at gurkemeje optages dårligt, når det tages gennem munden. Alvorlige bivirkninger er ret sjældne, men i store mængder kan gurkemeje virke blodfortyndende og give mavebesvær. Fordi kilderne er uenige, bruger vi den strengeste vurdering. De små mængder, der bruges til at farve eller give smag til hundefoder, giver sandsynligvis ingen mærkbare sundhedsmæssige fordele.",
-    "fi": "Lähteet ovat eri mieltä: yhden lemmikinruoka-asiantuntijan artikkelin mukaan kurkuma on koirille turvallista pieninä määrinä, kun taas toinen neuvoo varovaisuuteen ja toteaa, että sen riskeistä on vähän tutkimusta ja että suun kautta otettu kurkuma imeytyy huonosti. Vakavat haittavaikutukset ovat melko harvinaisia, mutta suurina määrinä kurkuma voi ohentaa verta ja aiheuttaa vatsavaivoja. Koska lähteet ovat eri mieltä, käytämme tiukempaa luokitusta. Koiranruoan värjäämiseen tai maustamiseen käytetyistä pienistä määristä ei todennäköisesti ole mitään havaittavaa terveyshyötyä."
+    "fi": "Lähteet ovat eri mieltä: yhden lemmikinruoka-asiantuntijan artikkelin mukaan kurkuma on koirille turvallista pieninä määrinä, kun taas toinen neuvoo varovaisuuteen ja toteaa, että sen riskeistä on vähän tutkimusta ja että suun kautta otettu kurkuma imeytyy huonosti. Vakavat haittavaikutukset ovat melko harvinaisia, mutta suurina määrinä kurkuma voi ohentaa verta ja aiheuttaa vatsavaivoja. Koska lähteet ovat eri mieltä, käytämme tiukempaa luokitusta. Koiranruoan värjäämiseen tai maustamiseen käytetyistä pienistä määristä ei todennäköisesti ole mitään havaittavaa terveyshyötyä.",
+    "nb": "Kildene er uenige: en artikkel av en ekspert på hundemat kaller gurkemeie trygg for hunder i små mengder, mens en annen anbefaler forsiktighet, påpeker at det finnes lite forskning på risikoen, og at gurkemeie som svelges tas dårlig opp i kroppen. Alvorlige bivirkninger er ganske sjeldne, men i store mengder kan gurkemeie virke blodfortynnende og gi urolig mage. Fordi kildene er uenige, bruker vi den strengeste vurderingen. De små mengdene som brukes til å farge eller gi smak til hundemat, gir neppe noen merkbare helsefordeler."
   },
   "signs": {
     "en": [
@@ -68,6 +73,9 @@
     ],
     "fi": [
       "Vatsavaivat (suuret määrät)"
+    ],
+    "nb": [
+      "Urolig mage (store mengder)"
     ]
   },
   "what_to_do": {
@@ -77,7 +85,8 @@
     "hr": "Razgovaraj s veterinarom prije nego što psu daš kurkumu ili bilo koji drugi dodatak prehrani, osobito ako pas uzima lijekove. Kurkuma se ne smije koristiti kao redovito liječenje bilo kojeg zdravstvenog stanja.",
     "sv": "Prata med din veterinär innan du ger din hund gurkmeja eller något annat tillskott, särskilt om din hund tar mediciner. Gurkmeja ska inte användas som rutinbehandling mot något hälsotillstånd.",
     "da": "Tal med din dyrlæge, før du giver din hund gurkemeje eller andre kosttilskud, især hvis din hund får medicin. Gurkemeje bør ikke bruges som fast behandling af nogen sygdom.",
-    "fi": "Puhu eläinlääkärin kanssa ennen kuin annat koirallesi kurkumaa tai mitä tahansa muuta ravintolisää, etenkin jos koirasi käyttää lääkitystä. Kurkumaa ei pidä käyttää minkään terveysongelman rutiinihoitoon."
+    "fi": "Puhu eläinlääkärin kanssa ennen kuin annat koirallesi kurkumaa tai mitä tahansa muuta ravintolisää, etenkin jos koirasi käyttää lääkitystä. Kurkumaa ei pidä käyttää minkään terveysongelman rutiinihoitoon.",
+    "nb": "Snakk med dyrlegen før du gir hunden gurkemeie eller andre kosttilskudd, særlig hvis hunden får medisiner. Gurkemeie bør ikke brukes som rutinebehandling mot noen helsetilstand."
   },
   "serving": null,
   "child": {
@@ -87,7 +96,8 @@
     "hr": "Kurkuma je žuti začin za ljudsku hranu. Samo veterinar može reći smije li je pas dobiti, zato to prepusti odraslima.",
     "sv": "Gurkmeja är en gul krydda för människors matlagning. Bara en veterinär kan säga om en hund ska ha det, så överlåt det åt de vuxna.",
     "da": "Gurkemeje er et gult krydderi til madlavning for mennesker. Kun en dyrlæge kan sige, om en hund må få det, så overlad det til de voksne.",
-    "fi": "Kurkuma on keltainen mauste ihmisten ruoanlaittoon. Vain eläinlääkäri voi sanoa, saako koira sitä, joten jätä asia aikuisille."
+    "fi": "Kurkuma on keltainen mauste ihmisten ruoanlaittoon. Vain eläinlääkäri voi sanoa, saako koira sitä, joten jätä asia aikuisille.",
+    "nb": "Gurkemeie er et gult krydder til mat for mennesker. Bare en dyrlege kan si om en hund bør få den, så overlat det til de voksne."
   },
   "faq": [
     {
@@ -98,7 +108,8 @@
         "hr": "Ima li kurkuma u hrani za pse zdravstvene koristi?",
         "sv": "Har gurkmejan i hundfoder några hälsofördelar?",
         "da": "Har gurkemejen i hundefoder sundhedsmæssige fordele?",
-        "fi": "Onko koiranruoan kurkumasta terveyshyötyä?"
+        "fi": "Onko koiranruoan kurkumasta terveyshyötyä?",
+        "nb": "Har gurkemeien i hundemat helsefordeler?"
       },
       "a": {
         "en": "The levels of turmeric used to colour or flavour dog food are not likely to have any noticeable health benefits.",
@@ -107,7 +118,8 @@
         "hr": "Količine kurkume kojima se hrana za pse boji ili začinjava vjerojatno neće imati nikakvu uočljivu zdravstvenu korist.",
         "sv": "De mängder gurkmeja som används för att färga eller smaksätta hundfoder ger sannolikt inga märkbara hälsofördelar.",
         "da": "De mængder gurkemeje, der bruges til at farve eller give smag til hundefoder, giver sandsynligvis ingen mærkbare sundhedsmæssige fordele.",
-        "fi": "Koiranruoan värjäämiseen tai maustamiseen käytetyt kurkumamäärät eivät todennäköisesti tuo mitään havaittavaa terveyshyötyä."
+        "fi": "Koiranruoan värjäämiseen tai maustamiseen käytetyt kurkumamäärät eivät todennäköisesti tuo mitään havaittavaa terveyshyötyä.",
+        "nb": "Mengdene gurkemeie som brukes til å farge eller gi smak til hundemat, gir neppe noen merkbare helsefordeler."
       }
     }
   ],
@@ -198,6 +210,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d6b590d82bc91a583879195fa64d0ebe31c094850abfa2a5790fdcb90ad7cf41"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a3ee8b470f3ae0d8fb816899671bce8a402b859f44ccdb9c274666125322f747"
     }
   }
 }
