@@ -820,6 +820,13 @@
 | (S841; natural). RKC Breed Watch Category 2 without returned points (S842) — no welfare trait. One standard colour;
 | weight unsourced → `verified => false`.
 |
+| Parson Russell Terrier (M5-R10-116, docs/research/dog-data parson_russell_terrier.appearance): "Workmanlike, active and
+| agile, without exaggeration." (FCI-Standard N° 339, S864); colour "White or predominantly white with tan, lemon or black
+| markings, or any combination of these colours." — preferably on the head and / or root of the tail (S864); coat rough,
+| broken or smooth, naturally harsh and dense; wedge-shaped head, V-shaped ears dropping forward; tail undocked (natural).
+| RKC Breed Watch Category 1 (S865) — no welfare trait. White with tan markings first with the highest weight (the portrait
+| default); weights unsourced → `verified => false`. Not the Jack Russell Terrier (FCI 345, `russell_terrier`).
+|
 | Australian Silky Terrier (M5-R10-115, docs/research/dog-data australian_silky_terrier.appearance): "It should display
 | Terrier characteristics, embodying keen alertness, activity and soundness." (FCI-Standard N° 236, S855); colour "All shades
 | of blue and tan are acceptable" — "Silver and white not acceptable.", "Silver blue or fawn topknot desirable." (S855; AKC
@@ -5002,6 +5009,42 @@ return [
             'tail' => ['natural tail carried erect or slightly curved, never over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-116 (docs/research/dog-data/data.json parson_russell_terrier.appearance; runbook rules 2026-10-10: the standard
+    // colours of FCI-Standard N° 339 (S864) — white with tan markings first = the portrait default; natural tail).
+    'parson_russell_terrier' => [
+        'display_name' => 'Parson Russell Terrier',
+        // Colour frequencies are in no source (parson_russell_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 339 (S864, https://dev.fci.be/Nomenclature/Standards/339g03-en.pdf), RKC breed page (S865), PDSA (S866) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S865 "Size: Small"; S864 "Males: Ideal height 36 cm" / "Females: Ideal height 33 cm"; S866 "6-8 kg"',
+            'build' => 'S864 "Workmanlike, active and agile, without exaggeration." "Built for stamina and endurance, overall picture of balance and flexibility."',
+            'coat_length' => 'S864 "Whether rough, broken or smooth naturally harsh, flat, straight, close and dense with good undercoat."; S865 "Coat length: Short"',
+            'coat_color' => 'S864 "White or predominantly white with tan, lemon or black markings, or any combination of these colours." (weights unsourced)',
+            'head' => 'S864 "Head wedge shaped." "Nose: Black."',
+            'ear_carriage' => 'S864 "V-shaped, dropping forward, tip of ear to be level with outer corner of eye."',
+            'eye_color' => 'S864 "Dark, almond shaped, never prominent."',
+            'tail' => 'S864 undocked: "Thick at the root and tapering towards the tip." "Moderately high set, carried well up on the move" (natural)',
+        ],
+        'traits' => [
+            'size' => ['small terrier, slightly longer than tall'],
+            'build' => [['value' => 'workmanlike, active and agile working terrier built for stamina, without exaggeration', 'weight' => 3], 'balanced, flexible and racy small working terrier'],
+            'coat_length' => [['value' => 'smooth, harsh, dense and close weather-resistant coat', 'weight' => 3], 'broken, harsh and dense weather-resistant coat'],
+            // FCI standard (S864); white with tan weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'white with tan markings', 'weight' => 4],
+                ['value' => 'white with black and tan markings', 'weight' => 2],
+                'white with lemon markings',
+                'white with black markings',
+            ],
+            'head' => ['wedge-shaped head with a flat, moderately broad skull and a black nose'],
+            'ear_carriage' => ['small V-shaped ears dropping forward'],
+            'eye_color' => ['dark, almond-shaped eyes with a keen expression'],
+            'tail' => ['natural undocked tail of moderate length, carried well up'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

@@ -2811,5 +2811,27 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S856'], 'refs' => ['australian_silky_terrier.suitability.rkc_grooming']],
             ],
         ],
+
+        // M5-R10-116: parson_russell_terrier.* (S865–S868), runbook rules (data.json
+        // proposed_game_parameters.parson_russell_terrier.suitability_tags). RKC Breed Watch Category 1 (S865) → no welfare
+        // chip; in marketing. No new vocabulary key.
+        'parson_russell_terrier' => [
+            'suits' => [
+                // S865 "Exercise: Up to 1 hour per day"; S866 "… full of energy and require plenty of exercise – ideally 1-2 hours per day."
+                ['tag' => 'active_family', 'source_ids' => ['S865', 'S866'], 'refs' => ['parson_russell_terrier.exercise.adult', 'parson_russell_terrier.exercise.daily_text']],
+                // S866 "and will make an excellent family pet."
+                ['tag' => 'family_pet', 'source_ids' => ['S866'], 'refs' => ['parson_russell_terrier.behaviour.family']],
+                // S866 "but will get on well with children"
+                ['tag' => 'children', 'source_ids' => ['S866'], 'refs' => ['parson_russell_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S865 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S865'], 'refs' => ['parson_russell_terrier.suitability.rkc_shedding']],
+                // S868 "They don't like being alone and may have separation anxiety."
+                ['tag' => 'needs_company', 'source_ids' => ['S868'], 'refs' => ['parson_russell_terrier.behaviour.time_alone']],
+                // S867 "Some Jack Russell Terriers have a high prey drive."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S867'], 'refs' => ['parson_russell_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

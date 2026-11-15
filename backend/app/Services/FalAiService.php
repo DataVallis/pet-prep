@@ -907,6 +907,13 @@ class FalAiService
                 .'rich tan legs and face with a silver or fawn topknot, a moderate-length head with a black nose, small dark oval eyes, '
                 .'small pricked V-shaped ears free from long hair, a natural tail carried erect, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-116: FCI-Standard N° 339 (S864) — a workmanlike, active and agile working terrier without exaggeration; white
+            // or predominantly white with tan, lemon or black markings (colour preferably on the head / root of the tail); natural tail.
+            BreedType::ParsonRussellTerrier => 'A small, workmanlike, active and agile Parson Russell Terrier working terrier, slightly longer than tall and built for stamina, '
+                .'predominantly white with tan markings on the head and at the root of the tail: a harsh, dense, close smooth or broken coat, '
+                .'a wedge-shaped head with a flat skull and a black nose, dark almond-shaped eyes with a keen expression, '
+                .'small V-shaped ears dropping forward, a natural undocked tail carried well up, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2149,6 +2156,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'straight, flat, fine, glossy silky coat parted along the back, following the body outline',
                 'markings' => 'tan legs and face, silver or fawn topknot, pricked ears free from long hair, natural erect tail',
+            ],
+            // M5-R10-116: FCI S864 "White or predominantly white with tan, lemon or black markings, or any combination of these colours."
+            BreedType::ParsonRussellTerrier => [
+                'color_scheme' => 'predominantly white with tan markings',
+                'eye_color' => 'dark',
+                'fur_texture' => 'harsh, dense, close smooth or broken coat with a good undercoat',
+                'markings' => 'tan markings on the head and at the root of the tail, small V-shaped drop ears, natural undocked tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
