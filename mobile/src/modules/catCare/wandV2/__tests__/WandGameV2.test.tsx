@@ -15,6 +15,7 @@ import { loadWandGameV2, resetWandGameV2ForTests } from '@/modules/catCare/wandV
 import { readWandHuntSession, scoreWandHunt, type WandHuntSession } from '@/modules/catCare/wandV2/wandRules';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
+import { GAME_BACK_HINT_MS } from '@/modules/gameLayer/gameExit';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { useAppStore } from '@/store/appStore';
 import { makeLiveChildState, makeMedia, makeWandState, withEasyGestures } from '@/test-utils/fixtures';
@@ -352,7 +353,9 @@ describe('z-order and exit', () => {
     jest.restoreAllMocks();
   });
 
-  it('while running the × and Android back stop the hunt (no dead end)', async () => {
+  // David 2026-11-15 (»1 ja«): dragging the feather from the screen edge is Android's back
+  // GESTURE — it must not throw the hunt away.
+  it('while running Android back only shows the »tap ×« hint (same hunt, nothing stopped); the × stops it (no dead end)', async () => {
     const back = captureAndroidBack();
     mocked.startWandHunt.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
     open(catView());
@@ -364,11 +367,24 @@ describe('z-order and exit', () => {
     expect(screen.getByTestId(`${ID}-top-close`)).toBeTruthy();
     expectHudAboveStage(ID, [`${ID}-top-close`, `${ID}-field-layer`]);
     expect(screen.queryByTestId(`${ID}-start`)).toBeNull();
-    // Back = the × while running = »stop«: the hunt goes back to its intro (nothing reported).
     expect(back.pressBack()).toBe(true);
+    await advance(0);
+    expect(screen.queryByTestId(`${ID}-start`)).toBeNull();
+    expect(screen.queryByTestId(`${ID}-intro`)).toBeNull();
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Za konec igre tapni ×.');
+    expect(useAppStore.getState().catOverlay).not.toBeNull();
+    await advance(GAME_BACK_HINT_MS);
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).not.toBe('Za konec igre tapni ×.');
+    expect(screen.queryByTestId(`${ID}-start`)).toBeNull();
+    expect(mocked.startWandHunt).toHaveBeenCalledTimes(1);
+    // The × while running = »stop«: the hunt goes back to its intro (nothing reported) …
+    fireEvent.press(screen.getByTestId(`${ID}-top-close`));
     await advance(0);
     expect(screen.getByTestId(`${ID}-start`)).toBeTruthy();
     expect(mocked.finishWandHunt).not.toHaveBeenCalled();
+    // … and on the intro card back closes the game, as before.
+    expect(back.pressBack()).toBe(true);
+    expect(useAppStore.getState().catOverlay).toBeNull();
     jest.restoreAllMocks();
   });
 });

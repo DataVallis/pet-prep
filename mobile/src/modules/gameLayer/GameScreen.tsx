@@ -11,11 +11,15 @@
  * (`zIndex: 2`) was sorted over the top bar, the ball, the buttons and the feedback (only the
  * video was visible, no way out). Never render a layer outside these wrappers.
  *
- * Exit (mandatory): Android back closes the game (like the top bar's ×, or does nothing while
- * the × is locked) — unless the game takes it over with `onBack` (the rub games: an edge swipe
- * while rubbing is Android's back gesture, David 2026-11-15; the × stays the way out); a video stage not ready after `GAME_STAGE_WATCHDOG_MS` or a layer that threw
- * while rendering opens the escape card (× + »Nazaj«) on top of everything; a locked × comes
- * back after `GAME_ESCAPE_MS`. The exit is `onExit`, else the host's `GameExitContext`.
+ * Exit (mandatory): the top bar's × is the way out. Android back never ends a RUNNING game
+ * (David 2026-11-15, every game: an edge swipe while playing is Android's back GESTURE and threw
+ * the session away) — while the × is there and no card covers the game (`overlay`: intro,
+ * result) back only shows the `backHint` line (»tap × to stop«) in the top bar for
+ * `GAME_BACK_HINT_MS`. With a card over the game back does what the × does; while the × is
+ * locked it does nothing (`gameBack`). A video stage not ready after `GAME_STAGE_WATCHDOG_MS` or
+ * a layer that threw while rendering opens the escape card (× + »Nazaj«, back = exit) on top of
+ * everything; a locked × comes back after `GAME_ESCAPE_MS`. The exit is `onExit`, else the
+ * host's `GameExitContext`.
  *
  * Wrapped in its own `GestureHandlerRootView` (the game is the only place with RNGH gestures).
  * Safe areas from the context (renders without a provider in tests).
@@ -30,11 +34,13 @@ import { X } from 'lucide-react-native';
 import { Text } from '@/components/ui/Text';
 import { strings } from '@/i18n/strings';
 import {
+  GAME_BACK_HINT_MS,
   GAME_ESCAPE_MS,
   GAME_STAGE_WATCHDOG_MS,
   GAME_Z,
   GameExitContext,
   GameScreenContext,
+  gameBack,
   gameEscape,
   type GameExit,
   type GameScreenLink,
@@ -51,17 +57,13 @@ export interface GameScreenProps {
   feedback?: ReactNode;
   topBar: ReactNode;
   dock?: ReactNode;
-  /** Anything over the whole screen (the result card). */
-  overlay?: ReactNode;
-  /** The way out (Android back, the escape card, the top bar's × fallback); else `GameExitContext`. */
-  onExit?: GameExit;
   /**
-   * Android back while the × is open and no escape card is up: return true = handled, the game
-   * keeps running (the × stays the way out). For games played with swipes near the screen edge —
-   * there Android's back GESTURE fires by accident mid-rub. Never called while the × is locked
-   * (back does nothing then) or the escape card shows (back = exit).
+   * A card over the whole screen (intro, result, failed, saving). While one is up the game is
+   * not RUNNING: Android back does what the × does instead of showing the hint.
    */
-  onBack?: () => boolean;
+  overlay?: ReactNode;
+  /** The way out (the escape card, the top bar's × fallback, Android back off a running game); else `GameExitContext`. */
+  onExit?: GameExit;
   testID?: string;
 }
 
@@ -83,7 +85,7 @@ class LayerBoundary extends Component<{ onError: () => void; children?: ReactNod
   }
 }
 
-export default function GameScreen({ stage, field, feedback, topBar, dock, overlay, onExit, onBack, testID = 'game-screen' }: GameScreenProps) {
+export default function GameScreen({ stage, field, feedback, topBar, dock, overlay, onExit, testID = 'game-screen' }: GameScreenProps) {
   const insets = useContext(SafeAreaInsetsContext) ?? { top: 0, bottom: 0, left: 0, right: 0 };
   const hostExit = useContext(GameExitContext);
   const exit = onExit ?? hostExit;
@@ -111,13 +113,24 @@ export default function GameScreen({ stage, field, feedback, topBar, dock, overl
 
   const escape = gameEscape({ stage: stageStatus, stalled, crashed, closeLocked, lockExpired });
 
-  // Android back = the ×: its own action (e.g. wand »stop«), else the exit; nothing while locked.
+  // Android back (`gameBack`): a running game → only the hint; a card over it / the escape card →
+  // the ×'s own action (e.g. wand »close«), else the exit; nothing while the × is locked.
+  const covered = overlay !== undefined && overlay !== null;
+  const back = gameBack({ card: escape.card, exitOpen: escape.exitOpen, hasBar: close !== null, closeLocked, covered });
+  const [backHintAt, setBackHintAt] = useState<number | null>(null);
+  useEffect(() => {
+    if (backHintAt === null) return;
+    const timer = setTimeout(() => setBackHintAt(null), GAME_BACK_HINT_MS);
+    return () => clearTimeout(timer);
+  }, [backHintAt]);
+  // The hint belongs to the running game: gone at once when a card comes up or the × locks.
+  const backHint = backHintAt !== null && back === 'hint' ? S.backHint : null;
   const backRef = useRef<() => boolean>(() => false);
   backRef.current = () => {
     const action = (escape.card ? null : close?.action) ?? exit;
     if (action === null) return false;
-    if (!escape.card && escape.exitOpen && onBack?.() === true) return true;
-    if (escape.exitOpen) action();
+    if (back === 'hint') setBackHintAt(Date.now());
+    else if (back === 'exit') action();
     return true;
   };
   useEffect(() => {
@@ -132,8 +145,8 @@ export default function GameScreen({ stage, field, feedback, topBar, dock, overl
   const stageReady = useCallback(() => setStageStatus('ready'), []);
   const onLayerError = useCallback(() => setCrashed(true), []);
   const link = useMemo<GameScreenLink>(
-    () => ({ exit, exitOpen: escape.exitOpen, reportClose, stageLoading, stageReady }),
-    [exit, escape.exitOpen, reportClose, stageLoading, stageReady],
+    () => ({ exit, exitOpen: escape.exitOpen, backHint, reportClose, stageLoading, stageReady }),
+    [exit, escape.exitOpen, backHint, reportClose, stageLoading, stageReady],
   );
 
   return (

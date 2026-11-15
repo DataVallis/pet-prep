@@ -10,6 +10,7 @@ import * as Haptics from 'expo-haptics';
 
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
+import { GAME_BACK_HINT_MS } from '@/modules/gameLayer/gameExit';
 import { DECK_READY_TIMEOUT_MS } from '@/modules/gameLayer/deck';
 import { GAME_SOUNDS } from '@/modules/gameLayer/gameFxCore';
 import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
@@ -298,13 +299,41 @@ describe('BallGameV2 (GAMES_SPEC §4.3)', () => {
     expectHudAboveStage(ID, [`${ID}-done`, `${ID}-again`, `${ID}-finish`]);
   });
 
-  it('the × is there before the deck is ready, and Android back closes the game', () => {
-    const back = captureAndroidBack();
+  it('the × is there before the deck is ready and closes the game', () => {
     const { onClose } = renderGame(ballView());
     expect(screen.getByTestId(`${ID}-top-close`)).toBeTruthy();
     expectHudAboveStage(ID, [`${ID}-top-close`]);
+    fireEvent.press(screen.getByTestId(`${ID}-top-close`));
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  // David 2026-11-15 (»1 ja«): a throw swiped from the screen edge is Android's back GESTURE — it
+  // must not end the round (PlayOverlay's own back listener closed it before).
+  it('Android back mid-round only shows the »tap ×« hint (same round, throws kept); on the result card it closes', async () => {
+    const back = captureAndroidBack();
+    const { onClose, onFinished } = renderGame(ballView());
+    deckReady();
+    layoutField();
+    await oneThrow();
+    expect(screen.getByTestId(`${ID}-top-progress`).props.accessibilityLabel).toBe('Met 1 od 3, ujete žoge: 1');
+    swipeThrow();
     expect(back.pressBack()).toBe(true);
-    expect(onClose).toHaveBeenCalled();
+    expect(onClose).not.toHaveBeenCalled();
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Za konec igre tapni ×.');
+    await advance(GAME_BACK_HINT_MS);
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).not.toBe('Za konec igre tapni ×.');
+    // The same round goes on: the flying ball's run ends, call, catch, one more throw → the result.
+    end(URLS.running);
+    fireEvent.press(screen.getByTestId(`${ID}-call`));
+    end(URLS.fetching);
+    tapBall();
+    expect(screen.getByTestId(`${ID}-top-progress`).props.accessibilityLabel).toBe('Met 2 od 3, ujete žoge: 2');
+    await oneThrow();
+    expect(screen.getByTestId(`${ID}-done`)).toBeTruthy();
+    expect(onFinished).toHaveBeenCalledTimes(1);
+    expect(onClose).not.toHaveBeenCalled();
+    expect(back.pressBack()).toBe(true);
+    expect(onClose).toHaveBeenCalledTimes(1);
     jest.restoreAllMocks();
   });
 
