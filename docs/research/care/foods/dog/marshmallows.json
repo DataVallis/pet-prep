@@ -5,32 +5,37 @@
     "en": "Marshmallows",
     "sl": "Penasti bonboni (marshmallow)",
     "cs": "Marshmallow (pěnové bonbony)",
-    "hr": "Marshmallowi"
+    "hr": "Marshmallowi",
+    "sv": "Marshmallows"
   },
   "question": {
     "en": "Can dogs eat marshmallows?",
     "sl": "Ali lahko psi jedo penaste bonbone (marshmallow)?",
     "cs": "Mohou psi jíst marshmallow (pěnové bonbony)?",
-    "hr": "Smiju li psi jesti marshmallowe?"
+    "hr": "Smiju li psi jesti marshmallowe?",
+    "sv": "Får hundar äta marshmallows?"
   },
   "url_slug": {
     "en": "marshmallows",
     "sl": "penasti-bonboni",
     "cs": "marshmallow",
-    "hr": "marshmallow"
+    "hr": "marshmallow",
+    "sv": "marshmallows"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No. Not all marshmallows are toxic to dogs, but they are not good for them: they are made from sugar, corn syrup and gelatin and have little or no nutritional value. Some contain xylitol, which is toxic to dogs.",
     "sl": "Ne. Penasti bonboni za pse niso vsi strupeni, a jim ne koristijo: narejeni so iz sladkorja, koruznega sirupa in želatine ter nimajo skoraj nobene hranilne vrednosti. Nekateri vsebujejo ksilitol, ki je za pse strupen.",
     "cs": "Ne. Ne všechny marshmallow jsou pro psy jedovaté, ale prospěšné nejsou: vyrábějí se z cukru, kukuřičného sirupu a želatiny a mají jen malou nebo žádnou výživovou hodnotu. Některé obsahují xylitol, který je pro psy jedovatý.",
-    "hr": "Ne. Nisu svi marshmallowi otrovni za pse, ali nisu dobri za njih: prave se od šećera, kukuruznog sirupa i želatine te imaju malu ili nikakvu hranjivu vrijednost. Neki sadrže ksilitol, koji je otrovan za pse."
+    "hr": "Ne. Nisu svi marshmallowi otrovni za pse, ali nisu dobri za njih: prave se od šećera, kukuruznog sirupa i želatine te imaju malu ili nikakvu hranjivu vrijednost. Neki sadrže ksilitol, koji je otrovan za pse.",
+    "sv": "Nej. Alla marshmallows är inte giftiga för hundar, men de är inte bra för dem: de görs av socker, glukossirap och gelatin och har litet eller inget näringsvärde. Vissa innehåller xylitol, som är giftigt för hundar."
   },
   "why": {
     "en": "Marshmallows contain a very high amount of sugar and calories, so they are especially risky for dogs with diabetes or weight problems, and even in healthy dogs sugary treats can contribute to obesity. Eating too many can cause gastrointestinal upset and puts a dog at risk of pancreatitis. A marshmallow with xylitol is toxic even in small amounts and can cause dangerously low blood sugar.",
     "sl": "Penasti bonboni vsebujejo zelo veliko sladkorja in kalorij, zato so posebej tvegani za pse s sladkorno boleznijo ali s prekomerno težo, pa tudi pri zdravih psih sladki priboljški prispevajo k debelosti. Preveč penastih bonbonov lahko povzroči prebavne težave, pes pa je ogrožen tudi za pankreatitis. Penasti bonbon s ksilitolom je strupen že v majhnih količinah in lahko povzroči nevarno nizek krvni sladkor.",
     "cs": "Marshmallow obsahují velmi mnoho cukru a kalorií, takže jsou obzvlášť rizikové pro psy s cukrovkou nebo problémy s váhou, a i u zdravých psů mohou sladké pamlsky přispívat k obezitě. Když jich pes sní příliš mnoho, mohou způsobit potíže se zažíváním a hrozí i zánět slinivky břišní. Marshmallow s xylitolem je jedovatý už v malém množství a může způsobit nebezpečně nízkou hladinu cukru v krvi.",
-    "hr": "Marshmallowi sadrže vrlo velike količine šećera i kalorija, pa su osobito rizični za pse s dijabetesom ili problemima s tjelesnom težinom, a čak i kod zdravih pasa slatke poslastice mogu pridonijeti pretilosti. Prejedanje može izazvati probavne tegobe i izlaže psa riziku od upale gušterače. Marshmallow s ksilitolom otrovan je čak i u malim količinama i može izazvati opasno nizak šećer u krvi."
+    "hr": "Marshmallowi sadrže vrlo velike količine šećera i kalorija, pa su osobito rizični za pse s dijabetesom ili problemima s tjelesnom težinom, a čak i kod zdravih pasa slatke poslastice mogu pridonijeti pretilosti. Prejedanje može izazvati probavne tegobe i izlaže psa riziku od upale gušterače. Marshmallow s ksilitolom otrovan je čak i u malim količinama i može izazvati opasno nizak šećer u krvi.",
+    "sv": "Marshmallows innehåller mycket socker och många kalorier, så de är särskilt riskabla för hundar med diabetes eller viktproblem, och även hos friska hundar kan söta godsaker bidra till fetma. Om hunden äter för många kan det ge magtarmbesvär och risk för bukspottkörtelinflammation (pankreatit). En marshmallow med xylitol är giftig även i små mängder och kan orsaka farligt lågt blodsocker."
   },
   "signs": {
     "en": [
@@ -56,25 +61,34 @@
       "Slab apetit",
       "Proljev",
       "Teturav hod ili napadaji (ksilitol)"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Dålig aptit",
+      "Diarré",
+      "Ostadig gång eller kramper (xylitol)"
     ]
   },
   "what_to_do": {
     "en": "Call your vet right away if your dog ate several marshmallows, or any marshmallow that may contain xylitol.",
     "sl": "Takoj pokličite veterinarja, če je pes pojedel več penastih bonbonov ali kateri koli penasti bonbon, ki bi lahko vseboval ksilitol.",
     "cs": "Okamžitě zavolejte veterináři, pokud pes snědl několik marshmallow nebo jakýkoli marshmallow, který může obsahovat xylitol.",
-    "hr": "Odmah nazovi veterinara ako je pas pojeo nekoliko marshmallowa ili bilo koji marshmallow koji bi mogao sadržavati ksilitol."
+    "hr": "Odmah nazovi veterinara ako je pas pojeo nekoliko marshmallowa ili bilo koji marshmallow koji bi mogao sadržavati ksilitol.",
+    "sv": "Kontakta din veterinär direkt om din hund har ätit flera marshmallows, eller någon marshmallow som kan innehålla xylitol."
   },
   "serving": {
     "en": "Instead of marshmallows: good-quality dog treats or healthier snacks such as carrots, green vegetables or blueberries.",
     "sl": "Namesto penastih bonbonov: kakovostni pasji priboljški ali bolj zdravi prigrizki, kot so korenje, zelena zelenjava ali borovnice.",
     "cs": "Místo marshmallow: kvalitní psí pamlsky nebo zdravější svačinky, například mrkev, zelená zelenina nebo borůvky.",
-    "hr": "Umjesto marshmallowa: kvalitetne poslastice za pse ili zdravije grickalice poput mrkve, zelenog povrća ili borovnica."
+    "hr": "Umjesto marshmallowa: kvalitetne poslastice za pse ili zdravije grickalice poput mrkve, zelenog povrća ili borovnica.",
+    "sv": "I stället för marshmallows: hundgodis av god kvalitet eller nyttigare mellanmål som morötter, gröna grönsaker eller blåbär."
   },
   "child": {
     "en": "Marshmallows are too sugary for dogs. Share a carrot or a few blueberries with your dog instead!",
     "sl": "Penasti bonboni so za pse presladki. Raje deli s psom korenček ali nekaj borovnic!",
     "cs": "Marshmallow jsou pro psy příliš sladké. Raději se se psem rozděl o mrkev nebo pár borůvek!",
-    "hr": "Marshmallowi su previše slatki za pse. Umjesto toga s psom podijeli mrkvu ili nekoliko borovnica!"
+    "hr": "Marshmallowi su previše slatki za pse. Umjesto toga s psom podijeli mrkvu ili nekoliko borovnica!",
+    "sv": "Marshmallows är för söta för hundar. Dela hellre en morot eller några blåbär med din hund!"
   },
   "faq": [
     {
@@ -82,13 +96,15 @@
         "en": "Are sugar-free marshmallows safer?",
         "sl": "Ali so penasti bonboni brez sladkorja varnejši?",
         "cs": "Jsou marshmallow bez cukru bezpečnější?",
-        "hr": "Jesu li marshmallowi bez šećera sigurniji?"
+        "hr": "Jesu li marshmallowi bez šećera sigurniji?",
+        "sv": "Är sockerfria marshmallows säkrare?"
       },
       "a": {
         "en": "No. Check the label: if a marshmallow contains xylitol, it is toxic to dogs and can be extremely harmful even in small amounts.",
         "sl": "Ne. Preberite deklaracijo: če penasti bonbon vsebuje ksilitol, je za pse strupen in lahko zelo škodi že v majhnih količinah.",
         "cs": "Ne. Přečtěte si složení: pokud marshmallow obsahuje xylitol, je pro psy jedovatý a může být nesmírně škodlivý i v malém množství.",
-        "hr": "Ne. Provjeri deklaraciju: ako marshmallow sadrži ksilitol, otrovan je za pse i može biti iznimno štetan čak i u malim količinama."
+        "hr": "Ne. Provjeri deklaraciju: ako marshmallow sadrži ksilitol, otrovan je za pse i može biti iznimno štetan čak i u malim količinama.",
+        "sv": "Nej. Kontrollera innehållsförteckningen: om en marshmallow innehåller xylitol är den giftig för hundar och kan vara extremt skadlig även i små mängder."
       }
     }
   ],
@@ -198,6 +214,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bb80a6b9f78455ea3cd3e1d403a7d7d41cc35c3815354a2f73317979b5e0b1e5"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d513a1b64ffece1a75c7d74fb1006f9f4ed9d7f6b56acb7abf77e664d171c9b6"
     }
   }
 }

@@ -5,32 +5,37 @@
     "en": "Sugar",
     "sl": "Sladkor",
     "cs": "Cukr",
-    "hr": "Šećer"
+    "hr": "Šećer",
+    "sv": "Socker"
   },
   "question": {
     "en": "Can dogs eat sugar?",
     "sl": "Ali lahko psi jedo sladkor?",
     "cs": "Mohou psi jíst cukr?",
-    "hr": "Smiju li psi jesti šećer?"
+    "hr": "Smiju li psi jesti šećer?",
+    "sv": "Får hundar äta socker?"
   },
   "url_slug": {
     "en": "sugar",
     "sl": "sladkor",
     "cs": "cukr",
-    "hr": "secer"
+    "hr": "secer",
+    "sv": "socker"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to give your dog sugar. A little sugar isn't toxic to dogs, but it offers no nutritional benefit and can cause stomach upset. Sugar-free products are no safer: they may contain xylitol, which is toxic to dogs.",
     "sl": "Ne, psu sladkorja raje ne dajajte. Malo sladkorja za pse ni strupeno, vendar psu ne koristi in lahko povzroči prebavne težave. Izdelki brez sladkorja niso nič varnejši, saj lahko vsebujejo ksilitol, ki je za pse strupen.",
     "cs": "Ne, psovi cukr raději nedávejte. Trocha cukru pro psy není jedovatá, ale nemá žádnou výživovou hodnotu a může způsobit podráždění žaludku. Výrobky bez cukru nejsou o nic bezpečnější: mohou obsahovat xylitol, který je pro psy jedovatý.",
-    "hr": "Ne, psu je bolje ne davati šećer. Malo šećera nije otrovno za pse, ali ne donosi nikakvu hranjivu korist i može izazvati želučane tegobe. Proizvodi bez šećera nisu sigurniji: mogu sadržavati ksilitol, koji je otrovan za pse."
+    "hr": "Ne, psu je bolje ne davati šećer. Malo šećera nije otrovno za pse, ali ne donosi nikakvu hranjivu korist i može izazvati želučane tegobe. Proizvodi bez šećera nisu sigurniji: mogu sadržavati ksilitol, koji je otrovan za pse.",
+    "sv": "Nej, det är bäst att inte ge din hund socker. Lite socker är inte giftigt för hundar, men det ger inget näringsvärde och kan orsaka magbesvär. Sockerfria produkter är inte säkrare: de kan innehålla xylitol, som är giftigt för hundar."
   },
   "why": {
     "en": "Sugar can cause stomach upset, including vomiting and diarrhoea. Sugary, high-fat foods can also lead to pancreatitis, a painful inflammation of the pancreas. Over time, sugary treats can contribute to obesity, and sugars can cause tooth decay.",
     "sl": "Sladkor lahko povzroči prebavne težave, tudi bruhanje in drisko. Sladka in mastna hrana lahko povzroči tudi pankreatitis, boleče vnetje trebušne slinavke. Sladki priboljški lahko sčasoma prispevajo k debelosti, sladkorji pa lahko povzročijo zobno gnilobo.",
     "cs": "Cukr může způsobit podráždění žaludku, včetně zvracení a průjmu. Sladká a tučná jídla mohou také vést k zánětu slinivky břišní, bolestivému zánětu této žlázy. Sladké pamlsky časem přispívají k obezitě a cukry mohou způsobit zubní kaz.",
-    "hr": "Šećer može izazvati želučane tegobe, uključujući povraćanje i proljev. Slatka hrana bogata mašću može dovesti i do upale gušterače, bolne upale te žlijezde. S vremenom slatke poslastice mogu pridonijeti pretilosti, a šećeri mogu uzrokovati karijes."
+    "hr": "Šećer može izazvati želučane tegobe, uključujući povraćanje i proljev. Slatka hrana bogata mašću može dovesti i do upale gušterače, bolne upale te žlijezde. S vremenom slatke poslastice mogu pridonijeti pretilosti, a šećeri mogu uzrokovati karijes.",
+    "sv": "Socker kan orsaka magbesvär, bland annat kräkningar och diarré. Söt och fet mat kan också leda till bukspottkörtelinflammation (pankreatit), en smärtsam inflammation i bukspottkörteln. Med tiden kan söta godsaker bidra till fetma, och socker kan ge karies."
   },
   "signs": {
     "en": [
@@ -52,20 +57,27 @@
       "Povraćanje",
       "Proljev",
       "Slab apetit, bezvoljnost ili bol u trbuhu (moguća upala gušterače; znakovi se mogu pojaviti tek nakon nekoliko dana)"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Dålig aptit, låg energi eller ont i magen (möjlig bukspottkörtelinflammation; tecknen kan ta några dagar att visa sig)"
     ]
   },
   "what_to_do": {
     "en": "Plain sugary sweets often cause mild stomach upset or no signs at all. If your dog ate a lot of sugary food, call your vet or a pet poison helpline right away, even if your dog seems fine. If it ate something sugar-free that may contain xylitol, call your vet immediately.",
     "sl": "Navadne sladkarije s sladkorjem pogosto povzročijo blage prebavne težave ali pa sploh nobenih znakov. Če je pes pojedel veliko sladke hrane, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se zdi, da je pes v redu. Če je pojedel kaj brez sladkorja, kar bi lahko vsebovalo ksilitol, nemudoma pokličite veterinarja.",
     "cs": "Obyčejné sladkosti často způsobí jen mírné podráždění žaludku, nebo žádné příznaky. Pokud pes snědl hodně sladkého jídla, ihned zavolejte veterináři nebo na toxikologickou linku pro zvířata, i když se zdá být v pořádku. Pokud snědl něco bez cukru, co může obsahovat xylitol, okamžitě zavolejte veterináři.",
-    "hr": "Obični slatkiši često izazivaju samo blage želučane tegobe ili nikakve znakove. Ako je pas pojeo puno slatke hrane, odmah nazovi veterinara ili telefonsku liniju za otrovanja životinja, čak i ako izgleda dobro. Ako je pojeo nešto bez šećera što bi moglo sadržavati ksilitol, odmah nazovi veterinara."
+    "hr": "Obični slatkiši često izazivaju samo blage želučane tegobe ili nikakve znakove. Ako je pas pojeo puno slatke hrane, odmah nazovi veterinara ili telefonsku liniju za otrovanja životinja, čak i ako izgleda dobro. Ako je pojeo nešto bez šećera što bi moglo sadržavati ksilitol, odmah nazovi veterinara.",
+    "sv": "Vanligt sockrigt godis ger ofta lindriga magbesvär eller inga tecken alls. Om din hund har ätit mycket sockrig mat ska du ringa din veterinär eller giftrådgivningen för djur direkt, även om hunden verkar frisk. Om den har ätit något sockerfritt som kan innehålla xylitol ska du kontakta din veterinär omedelbart."
   },
   "serving": null,
   "child": {
     "en": "Sugar is a people treat. It can give dogs a tummy ache, so keep sweets for yourself and give your dog a dog treat.",
     "sl": "Sladkor je priboljšek za ljudi. Psa lahko zaboli trebušček, zato sladkarije obdrži zase, psu pa daj pasji priboljšek.",
     "cs": "Cukr je pamlsek pro lidi. Psovi může rozbolet bříško, a tak sladkosti nech pro sebe a psovi dej psí pamlsek.",
-    "hr": "Šećer je poslastica za ljude. Od njega psa može zaboljeti trbuščić, zato slatkiše zadrži za sebe, a psu daj poslasticu za pse."
+    "hr": "Šećer je poslastica za ljude. Od njega psa može zaboljeti trbuščić, zato slatkiše zadrži za sebe, a psu daj poslasticu za pse.",
+    "sv": "Socker är en godbit för människor. Det kan ge hundar ont i magen, så behåll godiset själv och ge din hund en godbit för hundar."
   },
   "faq": [
     {
@@ -73,13 +85,15 @@
         "en": "Will a little bit of sugar hurt my dog?",
         "sl": "Ali bo malo sladkorja psu škodilo?",
         "cs": "Uškodí mému psovi trocha cukru?",
-        "hr": "Hoće li malo šećera naškoditi mom psu?"
+        "hr": "Hoće li malo šećera naškoditi mom psu?",
+        "sv": "Skadar lite socker min hund?"
       },
       "a": {
         "en": "A little sugar isn't toxic to dogs, but it can cause stomach upset and offers no nutritional benefit.",
         "sl": "Malo sladkorja za pse ni strupeno, vendar lahko povzroči prebavne težave in psu ne koristi.",
         "cs": "Trocha cukru pro psy není jedovatá, ale může způsobit podráždění žaludku a nemá žádnou výživovou hodnotu.",
-        "hr": "Malo šećera nije otrovno za pse, ali može izazvati želučane tegobe i ne donosi nikakvu hranjivu korist."
+        "hr": "Malo šećera nije otrovno za pse, ali može izazvati želučane tegobe i ne donosi nikakvu hranjivu korist.",
+        "sv": "Lite socker är inte giftigt för hundar, men det kan orsaka magbesvär och ger inget näringsvärde."
       }
     },
     {
@@ -87,13 +101,15 @@
         "en": "Are sugar-free sweets safer for dogs?",
         "sl": "Ali so sladkarije brez sladkorja za pse varnejše?",
         "cs": "Jsou sladkosti bez cukru pro psy bezpečnější?",
-        "hr": "Jesu li slatkiši bez šećera sigurniji za pse?"
+        "hr": "Jesu li slatkiši bez šećera sigurniji za pse?",
+        "sv": "Är sockerfritt godis säkrare för hundar?"
       },
       "a": {
         "en": "No. Sugar-free products often contain xylitol, which is toxic to dogs. Check the label; xylitol may also be listed as birch sugar.",
         "sl": "Ne. Izdelki brez sladkorja pogosto vsebujejo ksilitol, ki je za pse strupen. Preberite deklaracijo; ksilitol je lahko naveden tudi kot brezov sladkor.",
         "cs": "Ne. Výrobky bez cukru často obsahují xylitol, který je pro psy jedovatý. Zkontrolujte složení; xylitol může být uveden také jako březový cukr.",
-        "hr": "Ne. Proizvodi bez šećera često sadrže ksilitol, koji je otrovan za pse. Provjeri deklaraciju; ksilitol može biti naveden i kao brezov šećer."
+        "hr": "Ne. Proizvodi bez šećera često sadrže ksilitol, koji je otrovan za pse. Provjeri deklaraciju; ksilitol može biti naveden i kao brezov šećer.",
+        "sv": "Nej. Sockerfria produkter innehåller ofta xylitol, som är giftigt för hundar. Kontrollera innehållsförteckningen; xylitol kan också stå som björksocker."
       }
     }
   ],
@@ -185,6 +201,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c728ed5a6691fc00d311e5360aa3de4b316a17b0ba129da9993b837de539d56e"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0ff062d3d6adde11575063e7b0b8ee610d2cbd9f6061fe385ec060af9d9c780f"
     }
   }
 }

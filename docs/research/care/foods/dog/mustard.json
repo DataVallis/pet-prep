@@ -4,28 +4,33 @@
   "name": {
     "en": "Mustard",
     "sl": "Gorčica",
-    "hr": "Senf"
+    "hr": "Senf",
+    "sv": "Senap"
   },
   "question": {
     "en": "Can dogs eat mustard?",
     "sl": "Ali lahko psi jedo gorčico?",
-    "hr": "Smiju li psi jesti senf?"
+    "hr": "Smiju li psi jesti senf?",
+    "sv": "Får hundar äta senap?"
   },
   "url_slug": {
     "en": "mustard",
     "sl": "gorcica",
-    "hr": "senf"
+    "hr": "senf",
+    "sv": "senap"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, you should never give your dog mustard. Mustard seeds contain compounds that can inflame a dog's stomach and intestines, and mustard can cause vomiting. A small lick off your plate is unlikely to cause a problem, but a large amount could be serious.",
     "sl": "Ne, psu nikoli ne dajajte gorčice. Gorčična semena vsebujejo snovi, ki lahko pri psu povzročijo vnetje želodca in črevesja, gorčica pa lahko povzroči tudi bruhanje. Če pes s krožnika poliže le malo, to verjetno ne bo škodilo, večja količina pa je lahko resna težava.",
-    "hr": "Ne, psu nikad ne treba davati senf. Sjemenke gorušice sadrže spojeve koji mogu upaliti želudac i crijeva psa, a senf može izazvati povraćanje. Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi biti ozbiljna."
+    "hr": "Ne, psu nikad ne treba davati senf. Sjemenke gorušice sadrže spojeve koji mogu upaliti želudac i crijeva psa, a senf može izazvati povraćanje. Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi biti ozbiljna.",
+    "sv": "Nej, du ska aldrig ge din hund senap. Senapsfrön innehåller ämnen som kan ge inflammation i hundens mage och tarmar, och senap kan orsaka kräkningar. En liten slick från din tallrik orsakar sällan problem, men en stor mängd kan vara allvarlig."
   },
   "why": {
     "en": "Mustard contains mustard seeds, and these contain toxic compounds that can lead to gastroenteritis, an inflammation of the stomach and intestines. Shop-bought mustard may also contain other ingredients that could harm your dog. Smaller dogs need to eat less than larger dogs to react. One source simply says mustard can upset a dog's stomach, another calls it toxic, so we follow the stricter advice.",
     "sl": "Gorčica vsebuje gorčična semena, ta pa vsebujejo strupene snovi, ki lahko povzročijo gastroenteritis, vnetje želodca in črevesja. Kupljena gorčica lahko vsebuje tudi druge sestavine, ki bi psu lahko škodile. Manjši psi se odzovejo že na manjšo količino kot večji. En vir pravi le, da gorčica lahko psu povzroči prebavne težave, drugi jo označuje kot strupeno, zato upoštevamo strožji nasvet.",
-    "hr": "Senf sadrži sjemenke gorušice, a one sadrže otrovne spojeve koji mogu dovesti do gastroenteritisa, upale želuca i crijeva. Kupovni senf može sadržavati i druge sastojke koji bi mogli naškoditi psu. Manjim je psima dovoljno pojesti manje nego većima da bi reagirali. Jedan izvor jednostavno kaže da senf može nadražiti želudac psa, drugi ga naziva otrovnim, zato slijedimo strožu preporuku."
+    "hr": "Senf sadrži sjemenke gorušice, a one sadrže otrovne spojeve koji mogu dovesti do gastroenteritisa, upale želuca i crijeva. Kupovni senf može sadržavati i druge sastojke koji bi mogli naškoditi psu. Manjim je psima dovoljno pojesti manje nego većima da bi reagirali. Jedan izvor jednostavno kaže da senf može nadražiti želudac psa, drugi ga naziva otrovnim, zato slijedimo strožu preporuku.",
+    "sv": "Senap innehåller senapsfrön, och de innehåller giftiga ämnen som kan leda till gastroenterit, en inflammation i mage och tarmar. Senap från affären kan också innehålla andra ingredienser som kan skada din hund. Mindre hundar behöver äta mindre än större hundar för att reagera. En källa säger bara att senap kan reta hundens mage, en annan kallar den giftig, så vi följer det strängare rådet."
   },
   "signs": {
     "en": [
@@ -48,42 +53,55 @@
       "Povraćanje",
       "Proljev",
       "Bol u trbuhu"
+    ],
+    "sv": [
+      "Vill inte äta",
+      "Dregling",
+      "Kräkningar",
+      "Diarré",
+      "Ont i magen"
     ]
   },
   "what_to_do": {
     "en": "A small lick is unlikely to cause a problem. If your dog ate a lot of mustard, or you notice signs such as vomiting, drooling or tummy pain, contact your vet as soon as possible.",
     "sl": "Če pes poliže le malo, to verjetno ne bo povzročilo težav. Če je pes pojedel veliko gorčice ali opazite znake, kot so bruhanje, slinjenje ali bolečine v trebuhu, se čim prej obrnite na veterinarja.",
-    "hr": "Malo lizanje vjerojatno neće izazvati probleme. Ako je pas pojeo puno senfa ili primijetiš znakove poput povraćanja, slinjenja ili bolova u trbuhu, što prije se obrati veterinaru."
+    "hr": "Malo lizanje vjerojatno neće izazvati probleme. Ako je pas pojeo puno senfa ili primijetiš znakove poput povraćanja, slinjenja ili bolova u trbuhu, što prije se obrati veterinaru.",
+    "sv": "En liten slick orsakar sällan problem. Om din hund har ätit mycket senap, eller om du märker tecken som kräkningar, dregling eller ont i magen, kontakta din veterinär så snart som möjligt."
   },
   "serving": null,
   "child": {
     "en": "Mustard can give dogs a sore tummy. Keep it on your own plate, away from your dog.",
     "sl": "Zaradi gorčice lahko psa boli trebušček. Naj ostane na tvojem krožniku, stran od psa.",
-    "hr": "Od senfa psa može zaboljeti trbuščić. Zadrži ga na svom tanjuru, daleko od psa."
+    "hr": "Od senfa psa može zaboljeti trbuščić. Zadrži ga na svom tanjuru, daleko od psa.",
+    "sv": "Senap kan ge hundar ont i magen. Behåll den på din egen tallrik, långt från din hund."
   },
   "faq": [
     {
       "q": {
         "en": "My dog licked a little mustard. Is that a problem?",
         "sl": "Pes je polizal malo gorčice. Je to težava?",
-        "hr": "Moj je pas poližao malo senfa. Je li to problem?"
+        "hr": "Moj je pas poližao malo senfa. Je li to problem?",
+        "sv": "Min hund slickade i sig lite senap. Är det ett problem?"
       },
       "a": {
         "en": "A small lick off your plate is unlikely to cause a problem, but a large amount could cause a serious issue. Smaller dogs react to less than larger dogs.",
         "sl": "Če pes s krožnika poliže le malo, to verjetno ne bo povzročilo težav, večja količina pa lahko povzroči resno težavo. Manjši psi se odzovejo že na manjšo količino kot večji.",
-        "hr": "Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi izazvati ozbiljne tegobe. Manji psi reagiraju na manje od većih."
+        "hr": "Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi izazvati ozbiljne tegobe. Manji psi reagiraju na manje od većih.",
+        "sv": "En liten slick från din tallrik orsakar sällan problem, men en stor mängd kan ge ett allvarligt problem. Mindre hundar reagerar på mindre än större hundar."
       }
     },
     {
       "q": {
         "en": "Is any kind of mustard safe?",
         "sl": "Je katera vrsta gorčice varna?",
-        "hr": "Je li neka vrsta senfa sigurna?"
+        "hr": "Je li neka vrsta senfa sigurna?",
+        "sv": "Finns det någon sorts senap som är säker?"
       },
       "a": {
         "en": "No. All types of mustard should be avoided, including homemade, wild, English and Dijon mustard.",
         "sl": "Ne. Izogibajte se vsem vrstam gorčice, tudi domači, divji, angleški in dijonski.",
-        "hr": "Ne. Treba izbjegavati sve vrste senfa, uključujući domaći, divlji, engleski i dijonski senf."
+        "hr": "Ne. Treba izbjegavati sve vrste senfa, uključujući domaći, divlji, engleski i dijonski senf.",
+        "sv": "Nej. Alla sorters senap bör undvikas, även hemgjord, vild, engelsk och dijonsenap."
       }
     }
   ],
@@ -174,6 +192,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2c46cb6906bbe4683bbbc9843696ff3c53f00005479dad4a9247ca62c9a42769"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2b6af10ae39054f92112dd10eb38c7b88e6cbea4a81a74453d9b92cd08d489f7"
     }
   }
 }

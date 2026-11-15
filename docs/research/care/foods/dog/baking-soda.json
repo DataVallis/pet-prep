@@ -5,32 +5,37 @@
     "en": "Baking soda",
     "sl": "Soda bikarbona",
     "cs": "Jedlá soda",
-    "hr": "Soda bikarbona"
+    "hr": "Soda bikarbona",
+    "sv": "Bikarbonat"
   },
   "question": {
     "en": "Can dogs eat baking soda?",
     "sl": "Ali lahko psi jedo sodo bikarbono?",
     "cs": "Mohou psi jíst jedlou sodu?",
-    "hr": "Smiju li psi jesti sodu bikarbonu?"
+    "hr": "Smiju li psi jesti sodu bikarbonu?",
+    "sv": "Får hundar äta bikarbonat?"
   },
   "url_slug": {
     "en": "baking-soda",
     "sl": "soda-bikarbona",
     "cs": "jedla-soda",
-    "hr": "soda-bikarbona"
+    "hr": "soda-bikarbona",
+    "sv": "bikarbonat"
   },
   "level": "toxic",
   "answer": {
     "en": "No, baking soda is bad for dogs because of its high sodium content. Even small amounts can be harmful, especially to smaller dogs. If your dog ate baking soda, call a vet right away, even if the signs seem mild.",
     "sl": "Ne, soda bikarbona je za pse škodljiva zaradi visoke vsebnosti natrija. Škodijo lahko že majhne količine, še posebej manjšim psom. Če je pes pojedel sodo bikarbono, takoj pokličite veterinarja, tudi če se zdijo znaki blagi.",
     "cs": "Ne, jedlá soda je pro psy škodlivá kvůli vysokému obsahu sodíku. Ublížit může už malé množství, zvlášť menším psům. Pokud pes snědl jedlou sodu, zavolejte ihned veterináři, i když se příznaky zdají mírné.",
-    "hr": "Ne, soda bikarbona loša je za pse zbog visokog udjela natrija. Čak i male količine mogu biti štetne, osobito za manje pse. Ako je pas pojeo sodu bikarbonu, odmah nazovi veterinara, čak i ako se znakovi čine blagima."
+    "hr": "Ne, soda bikarbona loša je za pse zbog visokog udjela natrija. Čak i male količine mogu biti štetne, osobito za manje pse. Ako je pas pojeo sodu bikarbonu, odmah nazovi veterinara, čak i ako se znakovi čine blagima.",
+    "sv": "Nej, bikarbonat är dåligt för hundar på grund av det höga natriuminnehållet. Redan små mängder kan vara skadliga, särskilt för mindre hundar. Om din hund har ätit bikarbonat ska du ringa en veterinär direkt, även om tecknen verkar milda."
   },
   "why": {
     "en": "Baking soda (sodium bicarbonate) disrupts a dog's salt balance and can lead to sodium toxicity. As sodium levels in the blood rise, water is drawn out of cells, including brain cells. Baking soda is also found in household items such as toothpaste and deodorisers.",
     "sl": "Soda bikarbona (natrijev hidrogenkarbonat) poruši ravnovesje soli v pasjem telesu in lahko povzroči zastrupitev z natrijem. Ko se raven natrija v krvi zvišuje, telo vleče vodo iz celic, tudi iz možganskih. Soda bikarbona je tudi v gospodinjskih izdelkih, kot sta zobna pasta in sredstva proti neprijetnim vonjavam.",
     "cs": "Jedlá soda (hydrogenuhličitan sodný) narušuje rovnováhu solí v těle psa a může způsobit otravu sodíkem. Jakmile hladina sodíku v krvi stoupne, odčerpává se voda z buněk, včetně buněk mozku. Jedlou sodu najdete i v běžných domácích výrobcích, například v zubní pastě a pohlcovačích pachů.",
-    "hr": "Soda bikarbona (natrijev bikarbonat) remeti ravnotežu soli u tijelu psa i može dovesti do trovanja natrijem. Kad se razina natrija u krvi povisi, voda se izvlači iz stanica, uključujući stanice mozga. Soda bikarbona nalazi se i u kućanskim proizvodima poput zubne paste i sredstava za neutralizaciju mirisa."
+    "hr": "Soda bikarbona (natrijev bikarbonat) remeti ravnotežu soli u tijelu psa i može dovesti do trovanja natrijem. Kad se razina natrija u krvi povisi, voda se izvlači iz stanica, uključujući stanice mozga. Soda bikarbona nalazi se i u kućanskim proizvodima poput zubne paste i sredstava za neutralizaciju mirisa.",
+    "sv": "Bikarbonat (natriumbikarbonat) rubbar hundens saltbalans och kan leda till natriumförgiftning. När natriumhalten i blodet stiger dras vatten ut ur cellerna, även hjärnceller. Bikarbonat finns också i hushållsprodukter som tandkräm och luktborttagare."
   },
   "signs": {
     "en": [
@@ -64,20 +69,30 @@
       "Drhtanje mišića ili otežano hodanje",
       "Ubrzano ili otežano disanje",
       "U teškim slučajevima napadaji ili kolaps"
+    ],
+    "sv": [
+      "Orolig mage med enstaka kräkningar eller diarré",
+      "Dricker mer vatten, orkeslöshet",
+      "Ihållande kräkningar, svår orkeslöshet",
+      "Muskelskakningar eller svårt att gå",
+      "Snabb eller ansträngd andning",
+      "Kramper eller kollaps i svåra fall"
     ]
   },
   "what_to_do": {
     "en": "Call a vet right away, even if the signs seem mild. Don't give your dog any medicine unless your vet tells you to.",
     "sl": "Takoj pokličite veterinarja, tudi če se zdijo znaki blagi. Psu brez navodila veterinarja ne dajajte nobenih zdravil.",
     "cs": "Zavolejte ihned veterináři, i když se příznaky zdají mírné. Psovi nepodávejte žádné léky, pokud vám to neporadí veterinář.",
-    "hr": "Odmah nazovi veterinara, čak i ako se znakovi čine blagima. Psu ne daj nikakve lijekove osim ako ti veterinar to ne kaže."
+    "hr": "Odmah nazovi veterinara, čak i ako se znakovi čine blagima. Psu ne daj nikakve lijekove osim ako ti veterinar to ne kaže.",
+    "sv": "Ring en veterinär direkt, även om tecknen verkar milda. Ge inte din hund någon medicin om inte din veterinär säger det."
   },
   "serving": null,
   "child": {
     "en": "Baking soda is for cooking and cleaning, not for dogs. Keep the box in a cupboard and tell a grown-up if your dog finds it.",
     "sl": "Soda bikarbona je za peko in čiščenje, ne za pse. Škatlico imej v omari in povej odraslemu, če jo pes najde.",
     "cs": "Jedlá soda je na pečení a úklid, ne pro psy. Krabičku měj ve skříňce a když ji pes najde, řekni to dospělému.",
-    "hr": "Soda bikarbona služi za kuhanje i čišćenje, a ne za pse. Kutiju drži u ormariću i reci odrasloj osobi ako je pas pronađe."
+    "hr": "Soda bikarbona služi za kuhanje i čišćenje, a ne za pse. Kutiju drži u ormariću i reci odrasloj osobi ako je pas pronađe.",
+    "sv": "Bikarbonat är till för matlagning och städning, inte för hundar. Förvara asken i ett skåp och säg till en vuxen om hunden hittar den."
   },
   "faq": [
     {
@@ -85,13 +100,15 @@
         "en": "Where else can my dog find baking soda?",
         "sl": "Kje še lahko pes najde sodo bikarbono?",
         "cs": "Kde jinde může pes jedlou sodu najít?",
-        "hr": "Gdje još moj pas može naći sodu bikarbonu?"
+        "hr": "Gdje još moj pas može naći sodu bikarbonu?",
+        "sv": "Var kan min hund annars hitta bikarbonat?"
       },
       "a": {
         "en": "Baking soda is found in many household items, including toothpaste and deodorisers. Store it and cleaning products in latched cupboards or places your dog can't reach.",
         "sl": "Soda bikarbona je v številnih gospodinjskih izdelkih, tudi v zobni pasti in sredstvih proti neprijetnim vonjavam. Hranite jo skupaj s čistili v zaprtih omaricah ali tam, kamor pes ne more.",
         "cs": "Jedlou sodu obsahuje mnoho domácích výrobků, třeba zubní pasty a pohlcovače pachů. Uchovávejte ji spolu s čisticími prostředky v uzavíratelných skříňkách nebo tam, kam se pes nedostane.",
-        "hr": "Soda bikarbona nalazi se u mnogim kućanskim proizvodima, među ostalim u zubnoj pasti i sredstvima za neutralizaciju mirisa. Spremi je i sredstva za čišćenje u ormariće koji se čvrsto zatvaraju ili na mjesta koja pas ne može dosegnuti."
+        "hr": "Soda bikarbona nalazi se u mnogim kućanskim proizvodima, među ostalim u zubnoj pasti i sredstvima za neutralizaciju mirisa. Spremi je i sredstva za čišćenje u ormariće koji se čvrsto zatvaraju ili na mjesta koja pas ne može dosegnuti.",
+        "sv": "Bikarbonat finns i många hushållsprodukter, bland annat tandkräm och luktborttagare. Förvara det och rengöringsprodukter i skåp med lås eller på platser som hunden inte kommer åt."
       }
     }
   ],
@@ -175,6 +192,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "52cf010173f757c555000e13013810db2748fdc63f3361ecbdd7af1b69e41b52"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d2f4475facda5e2d47100e31afb36fe0f20873b7c65a73dc444f00adfd4685dd"
     }
   }
 }

@@ -5,32 +5,37 @@
     "en": "Vanilla extract",
     "sl": "Vanilijev ekstrakt",
     "cs": "Vanilkový extrakt",
-    "hr": "Ekstrakt vanilije"
+    "hr": "Ekstrakt vanilije",
+    "sv": "Vaniljextrakt"
   },
   "question": {
     "en": "Can dogs have vanilla extract?",
     "sl": "Ali lahko psi zaužijejo vanilijev ekstrakt?",
     "cs": "Mohou psi mít vanilkový extrakt?",
-    "hr": "Smiju li psi jesti ekstrakt vanilije?"
+    "hr": "Smiju li psi jesti ekstrakt vanilije?",
+    "sv": "Får hundar äta vaniljextrakt?"
   },
   "url_slug": {
     "en": "vanilla",
     "sl": "vanilija",
     "cs": "vanilkovy-extrakt",
-    "hr": "ekstrakt-vanilije"
+    "hr": "ekstrakt-vanilije",
+    "sv": "vaniljextrakt"
   },
   "level": "toxic",
   "answer": {
     "en": "No, keep vanilla extract away from your dog. Vanilla extract is mostly made from alcohol, and alcohol can easily cause vomiting, diarrhoea and a drunken walk in dogs. If your dog drank some, contact your vet straight away.",
     "sl": "Ne, vanilijev ekstrakt naj bo zunaj pasjega dosega. Vanilijev ekstrakt je večinoma narejen iz alkohola, alkohol pa pri psih zlahka povzroči bruhanje, drisko in opotekanje. Če ga je pes popil, takoj pokličite veterinarja.",
     "cs": "Ne, vanilkový extrakt psovi nedávejte. Vanilkový extrakt se vyrábí převážně z alkoholu a alkohol může u psů snadno způsobit zvracení, průjem a vrávoravou chůzi jako po opilosti. Pokud pes vanilkový extrakt vypil, ihned se obraťte na veterináře.",
-    "hr": "Ne, ekstrakt vanilije drži podalje od psa. Većim se dijelom sastoji od alkohola, a alkohol kod pasa lako izaziva povraćanje, proljev i teturav hod. Ako je pas popio malo, odmah se obrati veterinaru."
+    "hr": "Ne, ekstrakt vanilije drži podalje od psa. Većim se dijelom sastoji od alkohola, a alkohol kod pasa lako izaziva povraćanje, proljev i teturav hod. Ako je pas popio malo, odmah se obrati veterinaru.",
+    "sv": "Nej, håll vaniljextrakt borta från din hund. Vaniljextrakt består mest av alkohol, och alkohol kan lätt orsaka kräkningar, diarré och vinglig gång hos hundar. Om din hund har fått i sig något ska du kontakta din veterinär direkt."
   },
   "why": {
     "en": "Vanilla extract is mostly made from alcohol, and dogs are lightweights: alcohol can easily cause vomiting, diarrhoea, a drunken walk and even coma or death. Alcohol is absorbed quickly after it is swallowed, so it's important to get veterinary help promptly. Food products that contain alcohol can cause the same problems as alcoholic drinks.",
     "sl": "Vanilijev ekstrakt je večinoma narejen iz alkohola, psi pa ga prenesejo zelo malo: alkohol zlahka povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Alkohol se po zaužitju hitro vsrka, zato je pomembno, da hitro poiščete veterinarsko pomoč. Živila, ki vsebujejo alkohol, lahko povzročijo enake težave kot alkoholne pijače.",
     "cs": "Vanilkový extrakt se vyrábí převážně z alkoholu a psi mají malou tělesnou hmotnost: alkohol u nich snadno způsobí zvracení, průjem, vrávoravou chůzi jako po opilosti a dokonce kóma nebo smrt. Alkohol se po spolknutí rychle vstřebává, a proto je důležité rychle získat veterinární pomoc. Potraviny obsahující alkohol mohou způsobit stejné potíže jako alkoholické nápoje.",
-    "hr": "Ekstrakt vanilije većim se dijelom sastoji od alkohola, a psi su na alkohol vrlo osjetljivi, pa lako može izazvati povraćanje, proljev, teturav hod pa čak i komu ili smrt. Alkohol se nakon gutanja brzo upija, zato je važno brzo potražiti veterinarsku pomoć. Prehrambeni proizvodi koji sadrže alkohol mogu izazvati iste probleme kao alkoholna pića."
+    "hr": "Ekstrakt vanilije većim se dijelom sastoji od alkohola, a psi su na alkohol vrlo osjetljivi, pa lako može izazvati povraćanje, proljev, teturav hod pa čak i komu ili smrt. Alkohol se nakon gutanja brzo upija, zato je važno brzo potražiti veterinarsku pomoć. Prehrambeni proizvodi koji sadrže alkohol mogu izazvati iste probleme kao alkoholna pića.",
+    "sv": "Vaniljextrakt består mest av alkohol, och hundar är lättviktare och tål mycket lite alkohol: den kan lätt orsaka kräkningar, diarré, vinglig gång och till och med koma eller död. Alkohol tas upp snabbt efter att den har svalts, så det är viktigt att få veterinärhjälp utan dröjsmål. Livsmedel som innehåller alkohol kan orsaka samma problem som alkoholhaltiga drycker."
   },
   "signs": {
     "en": [
@@ -72,20 +77,32 @@
       "Usporeno disanje",
       "Nizak šećer u krvi, nizak krvni tlak, niska tjelesna temperatura",
       "Kolaps"
+    ],
+    "sv": [
+      "Kräkningar eller kväljningar",
+      "Diarré",
+      "Bristande koordination, vinglig gång",
+      "Dregling",
+      "Nedstämdhet eller slöhet, svaghet",
+      "Långsammare andning",
+      "Lågt blodsocker, lågt blodtryck, låg kroppstemperatur",
+      "Kollaps"
     ]
   },
   "what_to_do": {
     "en": "If your dog drank vanilla extract, note how much and contact your vet or a pet poison line right away. A dog showing signs should be seen by a vet as soon as possible.",
     "sl": "Če je pes popil vanilijev ekstrakt, si zapišite, koliko ga je bilo, in takoj pokličite veterinarja ali center za zastrupitve živali. Psa z znaki zastrupitve naj čim prej pregleda veterinar.",
     "cs": "Pokud pes vypil vanilkový extrakt, zjistěte, kolik, a ihned se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Pes s příznaky by měl být co nejdříve vyšetřen veterinářem.",
-    "hr": "Ako je pas popio ekstrakt vanilije, zapiši koliko i odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Psa koji pokazuje znakove treba što prije pregledati veterinar."
+    "hr": "Ako je pas popio ekstrakt vanilije, zapiši koliko i odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Psa koji pokazuje znakove treba što prije pregledati veterinar.",
+    "sv": "Om din hund har druckit vaniljextrakt: notera hur mycket och kontakta din veterinär eller giftrådgivningen för djur direkt. En hund som visar tecken ska komma till en veterinär så snart som möjligt."
   },
   "serving": null,
   "child": {
     "en": "Vanilla extract is for baking, not for dogs. Keep the little bottle closed and put away, and tell a grown-up if your dog finds it.",
     "sl": "Vanilijev ekstrakt je za peko, ne za pse. Stekleničko imej zaprto in pospravljeno ter povej odraslemu, če jo pes najde.",
     "cs": "Vanilkový extrakt je na pečení, ne pro psy. Lahvičku drž zavřenou a uklizenou, a když se k ní pes dostane, řekni to dospělému.",
-    "hr": "Ekstrakt vanilije služi za pečenje, a ne za pse. Bočicu drži zatvorenu i spremljenu i reci odrasloj osobi ako je pas pronađe."
+    "hr": "Ekstrakt vanilije služi za pečenje, a ne za pse. Bočicu drži zatvorenu i spremljenu i reci odrasloj osobi ako je pas pronađe.",
+    "sv": "Vaniljextrakt är till för bakning, inte för hundar. Håll den lilla flaskan stängd och undanställd, och berätta för en vuxen om din hund hittar den."
   },
   "faq": [],
   "sources": [
@@ -189,6 +206,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cd68a61fce99d016b4217a359d1affa70278e3ff615d3ef215bbf6155cf0d2b4"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "74eac8be9d94e9ee732ffd5a2a040ac4ded6520a2c5433e891dd746198b3b12a"
     }
   }
 }

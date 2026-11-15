@@ -4,28 +4,33 @@
   "name": {
     "en": "Gravy",
     "sl": "Mesna omaka",
-    "hr": "Umak od mesa"
+    "hr": "Umak od mesa",
+    "sv": "Sås"
   },
   "question": {
     "en": "Can dogs eat gravy?",
     "sl": "Ali lahko psi jedo mesno omako?",
-    "hr": "Smiju li psi jesti umak od mesa?"
+    "hr": "Smiju li psi jesti umak od mesa?",
+    "sv": "Får hundar äta sås?"
   },
   "url_slug": {
     "en": "gravy",
     "sl": "mesna-omaka",
-    "hr": "umak-od-mesa"
+    "hr": "umak-od-mesa",
+    "sv": "sas"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it's best to keep gravy away from dogs. Gravy is a fatty food that can upset a dog's stomach and can lead to pancreatitis. Gravy made from stock cubes is high in salt, and onion gravy contains onion, which dogs should not eat.",
     "sl": "Ne, mesno omako je bolje držati stran od psa. Omaka je mastna hrana, ki lahko psu povzroči prebavne težave in vodi v vnetje trebušne slinavke. Omaka iz jušnih kock je zelo slana, čebulna omaka pa vsebuje čebulo, ki je psi ne smejo jesti.",
-    "hr": "Ne, umak od mesa najbolje je držati podalje od pasa. To je masna hrana koja može nadražiti želudac psa i dovesti do upale gušterače. Umak od kocke za juhu bogat je solju, a umak s lukom sadrži luk, koji psi ne smiju jesti."
+    "hr": "Ne, umak od mesa najbolje je držati podalje od pasa. To je masna hrana koja može nadražiti želudac psa i dovesti do upale gušterače. Umak od kocke za juhu bogat je solju, a umak s lukom sadrži luk, koji psi ne smiju jesti.",
+    "sv": "Nej, det är bäst att hålla sås borta från hundar. Sås är fet mat som kan reta hundens mage och leda till bukspottkörtelinflammation (pankreatit). Sås som är gjord på buljongtärning innehåller mycket salt, och lökbaserad sås innehåller lök, som hundar inte ska äta."
   },
   "why": {
     "en": "Gravy is not toxic as such, but butter, meat drippings, gravies and other fatty foods can cause stomach upset with diarrhoea and vomiting. Fatty foods can also cause pancreatitis, an inflammation of the pancreas that may need hospital care. Stock cubes used for gravy contain a lot of sodium, and dogs should not eat cooked foods containing onion, such as onion gravy.",
     "sl": "Mesna omaka sama po sebi ni strupena, a maslo, mesni sok, omake in druga mastna hrana lahko povzročijo prebavne težave z drisko in bruhanjem. Mastna hrana lahko povzroči tudi vnetje trebušne slinavke (pankreatitis), ki lahko zahteva zdravljenje v bolnišnici. Jušne kocke, iz katerih se pripravlja omaka, vsebujejo veliko natrija, psi pa ne smejo jesti kuhane hrane s čebulo, kot je čebulna omaka.",
-    "hr": "Umak od mesa sam po sebi nije otrovan, ali maslac, masnoća od pečenja, umaci i druga masna hrana mogu izazvati želučane tegobe s proljevom i povraćanjem. Masna hrana može izazvati i upalu gušterače, koja može zahtijevati bolničko liječenje. Kocke za juhu koje se koriste za umak sadrže mnogo natrija, a psi ne bi smjeli jesti termički obrađenu hranu koja sadrži luk, poput umaka s lukom."
+    "hr": "Umak od mesa sam po sebi nije otrovan, ali maslac, masnoća od pečenja, umaci i druga masna hrana mogu izazvati želučane tegobe s proljevom i povraćanjem. Masna hrana može izazvati i upalu gušterače, koja može zahtijevati bolničko liječenje. Kocke za juhu koje se koriste za umak sadrže mnogo natrija, a psi ne bi smjeli jesti termički obrađenu hranu koja sadrži luk, poput umaka s lukom.",
+    "sv": "Sås är inte giftig i sig, men smör, stekfett, såser och annan fet mat kan ge magbesvär med diarré och kräkningar. Fet mat kan också orsaka bukspottkörtelinflammation (pankreatit), som kan kräva sjukhusvård. Buljongtärningar som används till sås innehåller mycket natrium, och hundar ska inte äta tillagad mat som innehåller lök, till exempel lökbaserad sås."
   },
   "signs": {
     "en": [
@@ -48,30 +53,41 @@
       "Bol u trbuhu",
       "Odbijanje hrane",
       "Umor"
+    ],
+    "sv": [
+      "Kräkningar, ibland först 1–4 dagar efter den feta måltiden",
+      "Diarré",
+      "Ont i magen",
+      "Vill inte äta",
+      "Trötthet"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate gravy or other fatty food and shows vomiting, tummy pain or tiredness in the following days, contact your vet. Signs can be delayed by a few days. If the gravy contained onions or garlic, contact your vet promptly.",
     "sl": "Če je pes pojedel omako ali drugo mastno hrano in v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Znaki se lahko pokažejo z nekajdnevno zamudo. Če je omaka vsebovala čebulo ali česen, se takoj obrnite na veterinarja.",
-    "hr": "Ako je pas pojeo umak od mesa ili drugu masnu hranu i idućih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Znakovi se mogu javiti tek nakon nekoliko dana. Ako je umak sadržavao luk ili češnjak, što prije se obrati veterinaru."
+    "hr": "Ako je pas pojeo umak od mesa ili drugu masnu hranu i idućih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Znakovi se mogu javiti tek nakon nekoliko dana. Ako je umak sadržavao luk ili češnjak, što prije se obrati veterinaru.",
+    "sv": "Om din hund har ätit sås eller annan fet mat och får kräkningar, ont i magen eller är slö under de följande dagarna: kontakta din veterinär. Tecknen kan komma med några dagars fördröjning. Om såsen innehöll lök eller vitlök ska du kontakta din veterinär utan dröjsmål."
   },
   "serving": null,
   "child": {
     "en": "Gravy is a rich people sauce that can give dogs a sore tummy. Keep it on your own plate.",
     "sl": "Mesna omaka je mastna omaka za ljudi, zaradi katere psa lahko boli trebušček. Naj ostane na tvojem krožniku.",
-    "hr": "Umak od mesa je masan umak za ljude od kojeg psa može zaboljeti trbuščić. Neka ostane na tvom tanjuru."
+    "hr": "Umak od mesa je masan umak za ljude od kojeg psa može zaboljeti trbuščić. Neka ostane na tvom tanjuru.",
+    "sv": "Sås är något tungt och fett för människor, och det kan ge hundar ont i magen. Behåll den på din egen tallrik."
   },
   "faq": [
     {
       "q": {
         "en": "Can I pour a little gravy over my dog's food?",
         "sl": "Ali lahko psu prelijem hrano z malo omake?",
-        "hr": "Smijem li psu malo umaka preliti preko hrane?"
+        "hr": "Smijem li psu malo umaka preliti preko hrane?",
+        "sv": "Kan jag hälla lite sås över min hunds mat?"
       },
       "a": {
         "en": "Better not. A vet charity advises keeping any food you share plain and not covered in gravy, sauce or seasoning, as this could upset your dog's stomach.",
         "sl": "Raje ne. Veterinarska dobrodelna organizacija svetuje, naj bo hrana, ki jo delite s psom, navadna in ne prelita z omako ali začinjena, saj bi to lahko psu povzročilo prebavne težave.",
-        "hr": "Bolje ne. Dobrotvorna veterinarska organizacija savjetuje da svaka hrana koju dijeliš bude obična i da nije prelivena umakom ili začinima, jer to može nadražiti želudac psa."
+        "hr": "Bolje ne. Dobrotvorna veterinarska organizacija savjetuje da svaka hrana koju dijeliš bude obična i da nije prelivena umakom ili začinima, jer to može nadražiti želudac psa.",
+        "sv": "Hellre inte. En djurskyddsorganisation som bedriver veterinärvård rekommenderar att mat du delar är okryddad och inte täckt med sås, skysås eller kryddor, eftersom det kan reta hundens mage."
       }
     }
   ],
@@ -157,6 +173,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "801197232588fd4657fa2bc85c93dfef7aabe0434fd58f7476258028eda53f9f"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ba922879b2ae0b9e04b9186e3ac0b8490c5dc9f31770c3309a4b45e94379514a"
     }
   }
 }
