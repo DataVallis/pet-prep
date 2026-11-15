@@ -7,7 +7,8 @@
     "hr": "Umak od mesa",
     "sv": "Sås (brunsås)",
     "da": "Sovs",
-    "fi": "Kastike"
+    "fi": "Kastike",
+    "nb": "Brun saus"
   },
   "question": {
     "en": "Can cats eat gravy?",
@@ -15,7 +16,8 @@
     "hr": "Smiju li mačke jesti umak od mesa?",
     "sv": "Får katter äta sås?",
     "da": "Må katte spise sovs?",
-    "fi": "Saako kissa syödä kastiketta?"
+    "fi": "Saako kissa syödä kastiketta?",
+    "nb": "Kan katter spise brun saus?"
   },
   "url_slug": {
     "en": "gravy",
@@ -23,7 +25,8 @@
     "hr": "umak-od-mesa",
     "sv": "sas",
     "da": "sovs",
-    "fi": "kastike"
+    "fi": "kastike",
+    "nb": "brun-saus"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "hr": "Ne, umak od mesa za ljude nije za mačke. Obično je slan i često sadrži luk, češnjak i začine, a luk i češnjak otrovni su za mačke. Umak može biti i bogat mašću. Drži ga podalje od mačjeg tanjura.",
     "sv": "Nej, sås som är gjord för människor är inget för katter. Den är oftast salt och innehåller ofta lök, vitlök och krydda, och lök och vitlök är giftigt för katter. Sås kan också innehålla mycket fett. Låt den inte hamna på kattens tallrik.",
     "da": "Nej, sovs lavet til mennesker er ikke noget for katte. Den er som regel salt og indeholder ofte løg, hvidløg og krydderier, og løg og hvidløg er giftige for katte. Sovs kan også være fed. Hold den væk fra kattens tallerken.",
-    "fi": "Ei saa, ihmisille tarkoitettu kastike ei sovi kissoille. Se on yleensä suolaista ja sisältää usein sipulia, valkosipulia ja mausteita, ja sipuli ja valkosipuli ovat kissoille myrkyllisiä. Kastikkeessa voi olla myös paljon rasvaa. Pidä se poissa kissan lautaselta."
+    "fi": "Ei saa, ihmisille tarkoitettu kastike ei sovi kissoille. Se on yleensä suolaista ja sisältää usein sipulia, valkosipulia ja mausteita, ja sipuli ja valkosipuli ovat kissoille myrkyllisiä. Kastikkeessa voi olla myös paljon rasvaa. Pidä se poissa kissan lautaselta.",
+    "nb": "Nei, brun saus laget for mennesker er ikke for katter. Den er vanligvis salt og inneholder ofte løk, hvitløk og krydder, og løk og hvitløk er giftig for katter. Saus kan også ha mye fett. Hold den unna kattens tallerken."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The ASPCA suggests a drizzle of gravy on a pet's holiday dinner, but Cats Protection warns that gravy made for humans is usually salty and contains garlic and seasoning, and PDSA says stuffing and gravy often contain onion, leeks and garlic, which can be deadly to cats and dogs. Onion, garlic, chives and leeks are toxic to cats even when cooked or dried. The RSPCA adds that gravy can contain high levels of salt and fat, and the ASPCA notes that bouillon cubes used for making gravy contain high amounts of sodium.",
@@ -40,7 +44,8 @@
     "hr": "Izvori se razilaze, pa primjenjujemo strožu razinu. ASPCA predlaže malo umaka preko blagdanske večere za kućnog ljubimca, ali Cats Protection upozorava da je umak za ljude obično slan i sadrži češnjak i začine, a PDSA kaže da nadjev i umak često sadrže luk, poriluk i češnjak, koji mogu biti smrtonosni za mačke i pse. Luk, češnjak, vlasac i poriluk otrovni su za mačke čak i kad su kuhani ili sušeni. RSPCA dodaje da umak može sadržavati mnogo soli i masti, a ASPCA napominje da kocke za juhu kojima se pravi umak sadrže mnogo natrija.",
     "sv": "Källorna är oense, så vi använder den strängare nivån. ASPCA föreslår en skvätt sås över husdjurets högtidsmiddag, men Cats Protection varnar för att sås som är gjord för människor oftast är salt och innehåller vitlök och krydda, och PDSA säger att fyllning och sås ofta innehåller lök, purjolök och vitlök, vilket kan vara dödligt för katter och hundar. Lök, vitlök, gräslök och purjolök är giftiga för katter även när de är tillagade eller torkade. RSPCA tillägger att sås kan innehålla höga halter salt och fett, och ASPCA påpekar att buljongtärningar som används för sås innehåller mycket natrium.",
     "da": "Kilderne er uenige, så vi bruger det strengeste niveau. ASPCA foreslår en smule sovs over kæledyrets festmiddag, men Cats Protection advarer om at sovs lavet til mennesker som regel er salt og indeholder hvidløg og krydderier, og PDSA skriver at fyld og sovs ofte indeholder løg, porrer og hvidløg, som kan være dødelige for katte og hunde. Løg, hvidløg, purløg og porrer er giftige for katte, også når de er kogt eller tørret. RSPCA tilføjer at sovs kan indeholde meget salt og fedt, og ASPCA nævner at bouillonterninger, der bruges til at lave sovs, indeholder meget natrium.",
-    "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. ASPCA ehdottaa vähän kastiketta lemmikin joulupäivälliselle, mutta Cats Protection varoittaa, että ihmisille tarkoitettu kastike on yleensä suolaista ja sisältää valkosipulia ja mausteita, ja PDSA toteaa, että täytteissä ja kastikkeissa on usein sipulia, purjoa ja valkosipulia, jotka voivat olla kissoille ja koirille tappavia. Sipuli, valkosipuli, ruohosipuli ja purjo ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina. RSPCA lisää, että kastike voi sisältää runsaasti suolaa ja rasvaa, ja ASPCA huomauttaa, että kastikkeen tekoon käytettävät liemikuutiot sisältävät paljon natriumia."
+    "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. ASPCA ehdottaa vähän kastiketta lemmikin joulupäivälliselle, mutta Cats Protection varoittaa, että ihmisille tarkoitettu kastike on yleensä suolaista ja sisältää valkosipulia ja mausteita, ja PDSA toteaa, että täytteissä ja kastikkeissa on usein sipulia, purjoa ja valkosipulia, jotka voivat olla kissoille ja koirille tappavia. Sipuli, valkosipuli, ruohosipuli ja purjo ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina. RSPCA lisää, että kastike voi sisältää runsaasti suolaa ja rasvaa, ja ASPCA huomauttaa, että kastikkeen tekoon käytettävät liemikuutiot sisältävät paljon natriumia.",
+    "nb": "Kildene er uenige, så vi bruker det strengeste nivået. ASPCA foreslår en skvett saus over kjæledyrets høytidsmiddag, men Cats Protection advarer om at saus laget for mennesker vanligvis er salt og inneholder hvitløk og krydder, og PDSA sier at fyll og saus ofte inneholder løk, purre og hvitløk, som kan være dødelig for både katter og hunder. Løk, hvitløk, gressløk og purre er giftig for katter selv når de er kokt eller tørket. RSPCA legger til at saus kan inneholde mye salt og fett, og ASPCA påpeker at buljongterninger til saus inneholder mye natrium."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Oksentelu",
       "Ripuli",
       "Vatsavaivat"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Urolig mage"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "hr": "Ako je mačka pojela umak koji bi mogao sadržavati luk ili češnjak, što prije se obrati veterinaru. Ako misliš da je pojela i druge ostatke hrane, reci veterinaru što je sve pojela.",
     "sv": "Om din katt har ätit sås som kan innehålla lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om du tror att hon har ätit andra rester också, berätta för veterinären vad hon fått i sig.",
     "da": "Hvis din kat har spist sovs, der kan indeholde løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis du tror, at katten også har spist andre rester, skal du fortælle dyrlægen, hvad den har spist.",
-    "fi": "Jos kissasi söi kastiketta, jossa voi olla sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos arvelet kissan syöneen myös muita ruoantähteitä, kerro eläinlääkärille, mitä se söi."
+    "fi": "Jos kissasi söi kastiketta, jossa voi olla sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos arvelet kissan syöneen myös muita ruoantähteitä, kerro eläinlääkärille, mitä se söi.",
+    "nb": "Hvis katten har spist saus som kan inneholde løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis du tror katten har spist andre rester også, fortell dyrlegen hva den har fått i seg."
   },
   "serving": null,
   "child": {
@@ -89,7 +100,8 @@
     "hr": "Umak od mesa hrana je za ljude, sa solju i lukom. Za macu je najbolja njezina mačja hrana.",
     "sv": "Sås är mat för människor med salt och lök i. Kattens egen kattmat är bäst för henne.",
     "da": "Sovs er menneskemad med salt og løg i. Din kats egen kattemad er det bedste for den.",
-    "fi": "Kastike on ihmisten ruokaa, jossa on suolaa ja sipulia. Kisulle paras valinta on sen oma kissanruoka."
+    "fi": "Kastike on ihmisten ruokaa, jossa on suolaa ja sipulia. Kisulle paras valinta on sen oma kissanruoka.",
+    "nb": "Saus er menneskemat med salt og løk i. Pusens egen kattemat er best."
   },
   "faq": [
     {
@@ -99,7 +111,8 @@
         "hr": "Što moja mačka umjesto toga može dobiti s blagdanske večere?",
         "sv": "Vad kan min katt få från högtidsmiddagen i stället?",
         "da": "Hvad kan min kat få af festmaden i stedet?",
-        "fi": "Mitä kissa voi syödä joulupöydästä sen sijaan?"
+        "fi": "Mitä kissa voi syödä joulupöydästä sen sijaan?",
+        "nb": "Hva kan katten få av høytidsmiddagen i stedet?"
       },
       "a": {
         "en": "PDSA says a small slice of skin- and bone-free turkey and boiled vegetables without any sauces shouldn't cause problems. Leave the gravy off.",
@@ -107,7 +120,8 @@
         "hr": "PDSA kaže da mala kriška puretine bez kože i kostiju te kuhano povrće bez ikakvih umaka ne bi trebali stvarati probleme. Umak izostavi.",
         "sv": "PDSA säger att en liten skiva kalkon utan skinn och ben och kokta grönsaker utan såser inte borde orsaka problem. Lämna såsen därhän.",
         "da": "PDSA skriver at en lille skive kalkun uden skind og ben og kogte grøntsager uden sovs ikke bør give problemer. Undlad sovsen.",
-        "fi": "PDSA:n mukaan pieni pala kalkkunaa ilman nahkaa ja luita sekä keitetyt kasvikset ilman kastikkeita eivät pitäisi aiheuttaa ongelmia. Jätä kastike pois."
+        "fi": "PDSA:n mukaan pieni pala kalkkunaa ilman nahkaa ja luita sekä keitetyt kasvikset ilman kastikkeita eivät pitäisi aiheuttaa ongelmia. Jätä kastike pois.",
+        "nb": "PDSA sier at en liten skive kalkun uten skinn og bein og kokte grønnsaker uten saus ikke skal gi problemer. La sausen være."
       }
     }
   ],
@@ -207,6 +221,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "143f41c65c70e6329bf473a94cc912d41b8cd0bd92b3486af2017db98a8681aa"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f9c9c92989fd354a13e93e64e813b2d280c26d00e11e6b9461a31ea2e191676d"
     }
   }
 }

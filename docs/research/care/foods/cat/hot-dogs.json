@@ -7,7 +7,8 @@
     "hr": "Hrenovke (hot dog)",
     "sv": "Varmkorv",
     "da": "Hotdogs",
-    "fi": "Hot dogit"
+    "fi": "Hot dogit",
+    "nb": "Hotdoger"
   },
   "question": {
     "en": "Can cats eat hot dogs?",
@@ -15,7 +16,8 @@
     "hr": "Smiju li mačke jesti hrenovke?",
     "sv": "Får katter äta varmkorv?",
     "da": "Må katte spise hotdogs?",
-    "fi": "Saako kissa syödä hot dogeja?"
+    "fi": "Saako kissa syödä hot dogeja?",
+    "nb": "Kan katter spise hotdoger?"
   },
   "url_slug": {
     "en": "hot-dogs",
@@ -23,7 +25,8 @@
     "hr": "hot-dog",
     "sv": "varmkorv",
     "da": "hotdogs",
-    "fi": "hot-dogit"
+    "fi": "hot-dogit",
+    "nb": "hotdoger"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "hr": "Bolje ne. Hrenovke su prerađeno meso, obično prepuno dodatne soli i začina, a neki dodani začini mogu čak biti otrovni za mačke. RSPCA Australia savjetuje da se mačkama ne daju kobasice ni termički obrađeni industrijski mesni proizvodi.",
     "sv": "Det är bäst att låta bli. Varmkorv är ett bearbetat kött, oftast fullt av extra salt och kryddor, och en del tillsatta kryddor kan till och med vara giftiga för katter. RSPCA Australia avråder från korv och tillagat, industriellt framställt kött åt katter.",
     "da": "Helst ikke. Hotdogpølser er forarbejdet kød, som regel fyldt med ekstra salt og krydderier, og nogle af de tilsatte krydderier kan endda være giftige for katte. RSPCA Australia fraråder at give katte pølser og forarbejdede, tilberedte kødprodukter.",
-    "fi": "Ei suositella. Hot dogit ovat jalostettua lihaa, jossa on yleensä paljon ylimääräistä suolaa ja mausteita, ja jotkin lisätyt mausteet voivat olla kissoille jopa myrkyllisiä. RSPCA Australia neuvoo välttämään makkaroita ja kypsennettyjä teollisia lihavalmisteita kissoille."
+    "fi": "Ei suositella. Hot dogit ovat jalostettua lihaa, jossa on yleensä paljon ylimääräistä suolaa ja mausteita, ja jotkin lisätyt mausteet voivat olla kissoille jopa myrkyllisiä. RSPCA Australia neuvoo välttämään makkaroita ja kypsennettyjä teollisia lihavalmisteita kissoille.",
+    "nb": "Det er best å la være. Hotdoger er bearbeidet kjøtt, vanligvis fullt av ekstra salt og krydder, og noen av krydderne kan til og med være giftige for katter. RSPCA Australia anbefaler å unngå pølser og ferdiglagde, tilberedte kjøttprodukter til katter."
   },
   "why": {
     "en": "Purina notes that turkey hot dogs, turkey sausage, deli meat and other processed meats are usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. The RSPCA warns that processed meats like pigs in blankets are incredibly high in salt, and onion and garlic, found in many pre-made foods, are toxic to cats.",
@@ -40,7 +44,8 @@
     "hr": "Purina napominje da su hrenovke od puretine, kobasice od puretine, narezak i drugo prerađeno meso obično prepuni dodatnog natrija i začina, a neki dodani začini mogu biti otrovni za mačke. RSPCA Australia savjetuje izbjegavanje kobasica i termički obrađenih industrijskih mesnih proizvoda, jer mogu sadržavati sulfitne konzervanse, koji se povezuju s nedostatkom tiamina (vitamina B1). RSPCA upozorava da je prerađeno meso poput kobasica omotanih slaninom (pigs in blankets) iznimno slano, a luk i češnjak, koji se nalaze u mnogim gotovim jelima, otrovni su za mačke.",
     "sv": "Purina påpekar att kalkonkorv, kalkonpålägg och annat bearbetat kött oftast är fullt av extra natrium och kryddor, och att vissa tillsatta kryddor kan vara giftiga för katter. RSPCA Australia avråder från korv och tillagat, industriellt framställt kött eftersom det kan innehålla sulfitkonserveringsmedel, som har kopplats till brist på tiamin (vitamin B1). RSPCA varnar för att bearbetat kött som baconlindad korv är otroligt salt, och lök och vitlök, som finns i många färdiglagade livsmedel, är giftiga för katter.",
     "da": "Purina skriver at hotdogpølser af kalkun, kalkunpølser, pålæg og andet forarbejdet kød som regel er fyldt med ekstra natrium og krydderier, og at nogle af de tilsatte krydderier kan være giftige for katte. RSPCA Australia fraråder pølser og forarbejdede, tilberedte kødprodukter, fordi de kan indeholde sulfitkonserveringsmidler, som man har sat i forbindelse med mangel på tiamin (vitamin B1). RSPCA advarer om at forarbejdet kød som pølser svøbt i bacon er utroligt salt, og løg og hvidløg, som findes i mange færdiglavede produkter, er giftige for katte.",
-    "fi": "Purina toteaa, että kalkkunasta tehdyt hot dogit, kalkkunamakkarat, leikkeleet ja muut jalostetut lihavalmisteet sisältävät yleensä paljon ylimääräistä natriumia ja mausteita, ja jotkin lisätyt mausteet voivat olla kissoille myrkyllisiä. RSPCA Australia neuvoo välttämään makkaroita ja kypsennettyjä teollisia lihavalmisteita, koska niissä voi olla sulfiittisäilöntäaineita, joiden on yhdistetty tiamiinin (B1-vitamiinin) puutokseen. RSPCA varoittaa, että jalostetut lihavalmisteet, kuten pekoniin käärityt makkarat (pigs in blankets), sisältävät erittäin paljon suolaa, ja monissa valmisruoissa oleva sipuli ja valkosipuli ovat kissoille myrkyllisiä."
+    "fi": "Purina toteaa, että kalkkunasta tehdyt hot dogit, kalkkunamakkarat, leikkeleet ja muut jalostetut lihavalmisteet sisältävät yleensä paljon ylimääräistä natriumia ja mausteita, ja jotkin lisätyt mausteet voivat olla kissoille myrkyllisiä. RSPCA Australia neuvoo välttämään makkaroita ja kypsennettyjä teollisia lihavalmisteita, koska niissä voi olla sulfiittisäilöntäaineita, joiden on yhdistetty tiamiinin (B1-vitamiinin) puutokseen. RSPCA varoittaa, että jalostetut lihavalmisteet, kuten pekoniin käärityt makkarat (pigs in blankets), sisältävät erittäin paljon suolaa, ja monissa valmisruoissa oleva sipuli ja valkosipuli ovat kissoille myrkyllisiä.",
+    "nb": "Purina påpeker at hotdoger av kalkun, kalkunpølse, kjøttpålegg og annet bearbeidet kjøtt vanligvis er fullt av ekstra natrium og krydder, og at noen av krydderne kan være giftige for katter. RSPCA Australia anbefaler å unngå pølser og ferdiglagde, tilberedte kjøttprodukter fordi de kan inneholde sulfitter som konserveringsmiddel, som er satt i sammenheng med mangel på tiamin (vitamin B1). RSPCA advarer om at bearbeidet kjøtt som pølser pakket inn i bacon er ekstremt salte, og løk og hvitløk, som finnes i mange ferdiglagde matvarer, er giftig for katter."
   },
   "signs": {
     "en": [
@@ -66,6 +71,10 @@
     "fi": [
       "Vatsavaivat",
       "Ripuli"
+    ],
+    "nb": [
+      "Urolig mage",
+      "Diaré"
     ]
   },
   "what_to_do": {
@@ -74,7 +83,8 @@
     "hr": "Ako je mačka pojela hrenovku koja bi mogla sadržavati luk ili češnjak, što prije se obrati veterinaru. Ako nakon toga ima želučane tegobe ili proljev, nazovi veterinara za savjet.",
     "sv": "Om din katt har ätit en varmkorv som kan innehålla lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om hon får orolig mage eller diarré efteråt, ring din veterinär och be om råd.",
     "da": "Hvis din kat har spist en hotdog, der kan indeholde løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis katten får mavebesvær eller diarré bagefter, skal du ringe til din dyrlæge for at få råd.",
-    "fi": "Jos kissasi söi hot dogin, jossa voi olla sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos kissalla on sen jälkeen vatsavaivoja tai ripulia, kysy neuvoa eläinlääkäriltä."
+    "fi": "Jos kissasi söi hot dogin, jossa voi olla sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos kissalla on sen jälkeen vatsavaivoja tai ripulia, kysy neuvoa eläinlääkäriltä.",
+    "nb": "Hvis katten har spist en hotdog som kan inneholde løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis katten får urolig mage eller diaré etterpå, ring dyrlegen for råd."
   },
   "serving": null,
   "child": {
@@ -83,7 +93,8 @@
     "hr": "Hrenovke su slana grickalica za ljude. Maci je draže sa svojim mačjim poslasticama.",
     "sv": "Varmkorv är en salt mellanmålsmat för människor. Katten blir gladare av sitt eget kattgodis.",
     "da": "Hotdogs er en salt snack til mennesker. Din kat er gladere for sine egne godbidder.",
-    "fi": "Hot dogit ovat suolainen ihmisten välipala. Kisu on tyytyväisempi omista kissanherkuistaan."
+    "fi": "Hot dogit ovat suolainen ihmisten välipala. Kisu on tyytyväisempi omista kissanherkuistaan.",
+    "nb": "Hotdoger er salt mat for mennesker. Pusen blir gladere for sine egne kattegodbiter."
   },
   "faq": [
     {
@@ -93,7 +104,8 @@
         "hr": "Je li jedan sitan zalogaj štetan?",
         "sv": "Är en pytteliten tugga skadlig?",
         "da": "Gør en lille bid noget?",
-        "fi": "Onko yksi pieni pala haitallinen?"
+        "fi": "Onko yksi pieni pala haitallinen?",
+        "nb": "Er en liten bit skadelig?"
       },
       "a": {
         "en": "A tiny piece of unseasoned processed turkey meat, such as a turkey hot dog, might not do a lot of harm, but it is best not to feed it regularly, and seasoned hot dogs may contain onion or garlic, which are toxic to cats.",
@@ -101,7 +113,8 @@
         "hr": "Sitan komadić nezačinjene prerađene puretine, poput hrenovke od puretine, vjerojatno neće mnogo naškoditi, ali je bolje ne davati je redovito, a začinjene hrenovke mogu sadržavati luk ili češnjak, koji su otrovni za mačke.",
         "sv": "En liten bit okryddat bearbetat kalkonkött, som en kalkonkorv, gör kanske inte så stor skada, men det är bäst att inte ge det regelbundet, och kryddade korvar kan innehålla lök eller vitlök, som är giftigt för katter.",
         "da": "En lille bid forarbejdet kalkunkød uden krydderier, fx en kalkunpølse, gør måske ikke ret meget skade, men det er bedst ikke at give det jævnligt, og krydrede hotdogpølser kan indeholde løg eller hvidløg, som er giftige for katte.",
-        "fi": "Pieni pala maustamatonta jalostettua kalkkunalihaa, kuten kalkkunahot dogia, ei välttämättä tee paljon haittaa, mutta sitä ei kannata antaa säännöllisesti, ja maustetuissa hot dogeissa voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä."
+        "fi": "Pieni pala maustamatonta jalostettua kalkkunalihaa, kuten kalkkunahot dogia, ei välttämättä tee paljon haittaa, mutta sitä ei kannata antaa säännöllisesti, ja maustetuissa hot dogeissa voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä.",
+        "nb": "En liten bit ukrydret, bearbeidet kalkunkjøtt, for eksempel en kalkunhotdog, gjør kanskje ikke stor skade, men det er best å ikke gi det jevnlig, og krydrede hotdoger kan inneholde løk eller hvitløk, som er giftig for katter."
       }
     }
   ],
@@ -201,6 +214,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "df85cc62d51ee844cb731ba06a808b513add05e69fa157fe86e38e59e76443e9"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "583bb32f5a95af4a50709d295c442c443b89756353c966bd9d1d4af3d8dd16ca"
     }
   }
 }

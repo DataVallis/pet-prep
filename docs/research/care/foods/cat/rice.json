@@ -8,7 +8,8 @@
     "hr": "Riža (kuhana)",
     "sv": "Ris (kokt)",
     "da": "Ris (kogte)",
-    "fi": "Riisi (keitetty)"
+    "fi": "Riisi (keitetty)",
+    "nb": "Ris (kokt)"
   },
   "question": {
     "en": "Can cats eat rice?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li mačke jesti rižu?",
     "sv": "Får katter äta ris?",
     "da": "Må katte spise ris?",
-    "fi": "Saako kissa syödä riisiä?"
+    "fi": "Saako kissa syödä riisiä?",
+    "nb": "Kan katter spise ris?"
   },
   "url_slug": {
     "en": "rice",
@@ -26,7 +28,8 @@
     "hr": "riza",
     "sv": "ris",
     "da": "ris",
-    "fi": "riisi"
+    "fi": "riisi",
+    "nb": "ris"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, malo obične kuhane riže povremeno je u redu za mačke. Blue Cross čak predlaže da se oskudna zaliha mačje hrane produži kuhanom rižom. No riža ne može zamijeniti mačju hranu: mačkama je meso potrebno svaki dan.",
     "sv": "Ja, lite okryddat tillagat ris går bra för katter då och då. Blue Cross föreslår till och med att du kan späda ut en liten mängd kattmat med tillagat ris. Men ris kan inte ersätta kattmat: katter behöver kött varje dag.",
     "da": "Ja, lidt almindelige kogte ris er fint til katte en gang imellem. Blue Cross foreslår endda at strække kattefoderet med kogte ris, når der er lidt tilbage. Men ris kan ikke erstatte kattefoder: katte har brug for kød hver dag.",
-    "fi": "Saa, vähän maustamatonta keitettyä riisiä sopii kissoille silloin tällöin. Blue Cross ehdottaa jopa, että vähiin käyvää kissanruokaa voi jatkaa keitetyllä riisillä. Riisi ei kuitenkaan voi korvata kissanruokaa: kissat tarvitsevat lihaa joka päivä."
+    "fi": "Saa, vähän maustamatonta keitettyä riisiä sopii kissoille silloin tällöin. Blue Cross ehdottaa jopa, että vähiin käyvää kissanruokaa voi jatkaa keitetyllä riisillä. Riisi ei kuitenkaan voi korvata kissanruokaa: kissat tarvitsevat lihaa joka päivä.",
+    "nb": "Ja, litt naturell kokt ris er greit for katter nå og da. Blue Cross foreslår til og med å strekke en liten mengde kattemat med kokt ris. Men ris kan ikke erstatte kattemat: katter trenger kjøtt hver dag."
   },
   "why": {
     "en": "Blue Cross says that if cat food has to last a few days, you can bulk it out with cooked veg or rice, but cats still need animal protein such as cooked meat or fish every day. VCA vets note that in pet food, grains like rice give dogs and cats an easily digestible source of energy, while International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates. Blue Cross adds that cats don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for dogs and cats.",
@@ -45,7 +49,8 @@
     "hr": "Blue Cross kaže da se, ako mačja hrana mora potrajati nekoliko dana, može nadopuniti kuhanim povrćem ili rižom, ali mačkama je i dalje svaki dan potrebna životinjska bjelančevina, poput termički obrađenog mesa ili ribe. Veterinari iz VCA-a napominju da u hrani za kućne ljubimce žitarice poput riže psima i mačkama daju lako probavljiv izvor energije, dok International Cat Care ističe da mačke, kao strogi mesojedi, slabije probavljaju i iskorištavaju ugljikohidrate. Blue Cross dodaje da mačkama ugljikohidrati nisu potrebni u blagoj dijeti, a VCA da u kuhanim pilećim prsima i bijeloj riži nedostaje mnogo esencijalnih hranjivih tvari za pse i mačke.",
     "sv": "Blue Cross säger att om kattmaten måste räcka några dagar kan du späda ut den med tillagade grönsaker eller ris, men katter behöver fortfarande animaliskt protein, som tillagat kött eller fisk, varje dag. Veterinärer på VCA påpekar att spannmål som ris i husdjursmat ger hundar och katter en lättsmält energikälla, medan International Cat Care säger att katter, som är obligata köttätare, har svårare att smälta och utnyttja kolhydrater. Blue Cross tillägger att katter inte behöver kolhydrater i en skonsam kost, och VCA säger att tillagad kycklingbröst och vitt ris saknar många nödvändiga näringsämnen för hundar och katter.",
     "da": "Blue Cross skriver at hvis kattefoderet skal række i et par dage, kan man supplere det med kogte grøntsager eller ris, men katte har stadig brug for animalsk protein som tilberedt kød eller fisk hver dag. Dyrlæger fra VCA skriver at korn som ris i kæledyrsfoder giver hunde og katte en let fordøjelig energikilde, mens International Cat Care skriver at katte som obligate kødædere har sværere ved at fordøje og udnytte kulhydrater. Blue Cross tilføjer at katte ikke har brug for kulhydrater i skånekost, og VCA skriver at tilberedt kyllingebryst med hvide ris mangler mange essentielle næringsstoffer for hunde og katte.",
-    "fi": "Blue Crossin mukaan kissanruokaa voi jatkaa keitetyillä kasviksilla tai riisillä, jos sen on riitettävä muutaman päivän, mutta kissat tarvitsevat silti joka päivä eläinproteiinia, kuten kypsennettyä lihaa tai kalaa. VCA:n eläinlääkärit toteavat, että lemmikinruoassa viljat, kuten riisi, antavat koirille ja kissoille helposti sulavaa energiaa, kun taas International Cat Caren mukaan kissat ovat ehdottomia lihansyöjiä, joiden kyky sulattaa ja hyödyntää hiilihydraatteja on rajallisempi. Blue Cross lisää, etteivät kissat tarvitse hiilihydraattia kevyessä ruokavaliossa, ja VCA:n mukaan kypsennetystä broilerinrinnasta ja valkoisesta riisistä puuttuu monia välttämättömiä ravintoaineita koirille ja kissoille."
+    "fi": "Blue Crossin mukaan kissanruokaa voi jatkaa keitetyillä kasviksilla tai riisillä, jos sen on riitettävä muutaman päivän, mutta kissat tarvitsevat silti joka päivä eläinproteiinia, kuten kypsennettyä lihaa tai kalaa. VCA:n eläinlääkärit toteavat, että lemmikinruoassa viljat, kuten riisi, antavat koirille ja kissoille helposti sulavaa energiaa, kun taas International Cat Caren mukaan kissat ovat ehdottomia lihansyöjiä, joiden kyky sulattaa ja hyödyntää hiilihydraatteja on rajallisempi. Blue Cross lisää, etteivät kissat tarvitse hiilihydraattia kevyessä ruokavaliossa, ja VCA:n mukaan kypsennetystä broilerinrinnasta ja valkoisesta riisistä puuttuu monia välttämättömiä ravintoaineita koirille ja kissoille.",
+    "nb": "Blue Cross sier at hvis kattematen må vare noen dager, kan du strekke den med kokte grønnsaker eller ris, men katter trenger fortsatt animalsk protein som tilberedt kjøtt eller fisk hver dag. Dyrleger hos VCA påpeker at kornslag som ris i kjæledyrmat gir hunder og katter en lettfordøyelig energikilde, mens International Cat Care sier at katter, som obligate kjøttetere, har dårligere evne til å fordøye og utnytte karbohydrater. Blue Cross legger til at katter ikke trenger karbohydrater i skånekost, og VCA sier at kokt kyllingbryst og hvit ris mangler mange essensielle næringsstoffer for hunder og katter."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Riža neka bude mali dodatak uz mačju hranu. Prije nego što rižu daš mački s osjetljivim želucem, pitaj veterinara, jer mačkama ugljikohidrati nisu potrebni u blagoj dijeti.",
     "sv": "Låt riset vara ett litet extra vid sidan av kattmaten. Fråga din veterinär innan du ger ris till en katt med orolig mage, eftersom katter inte behöver kolhydrater i en skonsam kost.",
     "da": "Lad ris være et lille ekstra ved siden af kattefoderet. Spørg din dyrlæge, før du giver ris til en kat med dårlig mave, for katte har ikke brug for kulhydrater i skånekost.",
-    "fi": "Pidä riisi pienenä lisänä kissanruoan rinnalla. Kysy eläinlääkäriltä ennen kuin annat riisiä vatsavaivaiselle kissalle, sillä kissat eivät tarvitse hiilihydraattia kevyessä ruokavaliossa."
+    "fi": "Pidä riisi pienenä lisänä kissanruoan rinnalla. Kysy eläinlääkäriltä ennen kuin annat riisiä vatsavaivaiselle kissalle, sillä kissat eivät tarvitse hiilihydraattia kevyessä ruokavaliossa.",
+    "nb": "La ris være et lite tillegg ved siden av kattematen. Spør dyrlegen før du gir ris til en katt med urolig mage, siden katter ikke trenger karbohydrater i skånekost."
   },
   "serving": {
     "en": "A little plain cooked rice with no added salt, as a small extra next to cat food.",
@@ -64,7 +70,8 @@
     "hr": "Malo obične kuhane riže bez dodane soli, kao mali dodatak uz mačju hranu.",
     "sv": "Lite okryddat tillagat ris utan tillsatt salt, som ett litet extra vid sidan av kattmaten.",
     "da": "Lidt almindelige kogte ris uden tilsat salt som et lille ekstra ved siden af kattefoderet.",
-    "fi": "Vähän maustamatonta keitettyä riisiä ilman lisättyä suolaa, pienenä lisänä kissanruoan rinnalla."
+    "fi": "Vähän maustamatonta keitettyä riisiä ilman lisättyä suolaa, pienenä lisänä kissanruoan rinnalla.",
+    "nb": "Litt naturell kokt ris uten tilsatt salt, som et lite tillegg ved siden av kattematen."
   },
   "child": {
     "en": "A little plain cooked rice is okay for a cat sometimes. But cats need their meaty cat food most of all.",
@@ -73,7 +80,8 @@
     "hr": "Malo obične kuhane riže ponekad je u redu za mačku. Ali mačkama je najpotrebnija njihova mesna hrana.",
     "sv": "Lite vanligt kokt ris är okej för en katt ibland. Men katter behöver framför allt sin köttiga kattmat.",
     "da": "Lidt almindelige kogte ris er fint til en kat en gang imellem. Men katte har mest brug for deres kødfulde kattemad.",
-    "fi": "Vähän maustamatonta keitettyä riisiä sopii kissalle joskus. Mutta kissat tarvitsevat ennen kaikkea lihaisaa kissanruokaansa."
+    "fi": "Vähän maustamatonta keitettyä riisiä sopii kissalle joskus. Mutta kissat tarvitsevat ennen kaikkea lihaisaa kissanruokaansa.",
+    "nb": "Litt naturell kokt ris er greit for en katt av og til. Men mest av alt trenger katter sin kjøttrike kattemat."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Je li piletina s rižom dobra za mačku s osjetljivim želucem?",
         "sv": "Är kyckling och ris bra för en katt med orolig mage?",
         "da": "Er kylling med ris godt for en kat med dårlig mave?",
-        "fi": "Sopiiko kana ja riisi kissalle, jolla on vatsavaivoja?"
+        "fi": "Sopiiko kana ja riisi kissalle, jolla on vatsavaivoja?",
+        "nb": "Er kylling og ris bra for en katt med urolig mage?"
       },
       "a": {
         "en": "Ask your vet first. Blue Cross says cats need a meat-based diet and don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for cats.",
@@ -93,7 +102,8 @@
         "hr": "Prvo pitaj veterinara. Blue Cross kaže da je mačkama potrebna prehrana temeljena na mesu i da im ugljikohidrati nisu potrebni u blagoj dijeti, a VCA da u kuhanim pilećim prsima i bijeloj riži nedostaje mnogo esencijalnih hranjivih tvari za mačke.",
         "sv": "Fråga din veterinär först. Blue Cross säger att katter behöver en köttbaserad kost och inte behöver kolhydrater i en skonsam kost, och VCA säger att tillagad kycklingbröst och vitt ris saknar många nödvändiga näringsämnen för katter.",
         "da": "Spørg først din dyrlæge. Blue Cross skriver at katte har brug for en kødbaseret kost og ikke har brug for kulhydrater i skånekost, og VCA skriver at tilberedt kyllingebryst med hvide ris mangler mange essentielle næringsstoffer for katte.",
-        "fi": "Kysy ensin eläinlääkäriltä. Blue Crossin mukaan kissat tarvitsevat lihapohjaista ruokavaliota eivätkä tarvitse hiilihydraattia kevyessä ruokavaliossa, ja VCA:n mukaan kypsennetystä broilerinrinnasta ja valkoisesta riisistä puuttuu monia välttämättömiä ravintoaineita kissoilta."
+        "fi": "Kysy ensin eläinlääkäriltä. Blue Crossin mukaan kissat tarvitsevat lihapohjaista ruokavaliota eivätkä tarvitse hiilihydraattia kevyessä ruokavaliossa, ja VCA:n mukaan kypsennetystä broilerinrinnasta ja valkoisesta riisistä puuttuu monia välttämättömiä ravintoaineita kissoilta.",
+        "nb": "Spør dyrlegen først. Blue Cross sier at katter trenger et kjøttbasert kosthold og ikke trenger karbohydrater i skånekost, og VCA sier at kokt kyllingbryst og hvit ris mangler mange essensielle næringsstoffer for katter."
       }
     }
   ],
@@ -181,6 +191,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b9f25a28cae20e93d3d0a8d5d551c446dda30656e7c65da6026001c9c7ed2dbe"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eff5d3307c27cf8b054d50f6f0f2a08fa08ac78db5518a1600d9dd686ce61433"
     }
   }
 }

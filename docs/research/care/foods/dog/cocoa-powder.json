@@ -8,7 +8,8 @@
     "hr": "Kakao u prahu",
     "sv": "Kakaopulver",
     "da": "Kakaopulver",
-    "fi": "Kaakaojauhe"
+    "fi": "Kaakaojauhe",
+    "nb": "Kakaopulver"
   },
   "question": {
     "en": "Can dogs eat cocoa powder?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti kakao u prahu?",
     "sv": "Får hundar äta kakaopulver?",
     "da": "Må hunde spise kakaopulver?",
-    "fi": "Saako koira syödä kaakaojauhetta?"
+    "fi": "Saako koira syödä kaakaojauhetta?",
+    "nb": "Kan hunder spise kakaopulver?"
   },
   "url_slug": {
     "en": "cocoa-powder",
@@ -26,7 +28,8 @@
     "hr": "kakao-u-prahu",
     "sv": "kakaopulver",
     "da": "kakaopulver",
-    "fi": "kaakaojauhe"
+    "fi": "kaakaojauhe",
+    "nb": "kakaopulver"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Ne, kakao u prahu otrovan je za pse. Čak je opasniji od tamne čokolade, jer čokolada za kuhanje i kakao u prahu imaju najviše štetnih tvari. Ako je pas pojeo kakao u prahu, odmah se obrati veterinaru.",
     "sv": "Nej, kakaopulver är giftigt för hundar. Det är till och med farligare än mörk choklad, eftersom bakchoklad och kakaopulver innehåller störst mängd av de skadliga ämnena. Har din hund ätit kakaopulver ska du kontakta din veterinär direkt.",
     "da": "Nej, kakaopulver er giftigt for hunde. Det er endnu farligere end mørk chokolade, fordi bagechokolade og kakaopulver indeholder de højeste mængder af de skadelige stoffer. Hvis din hund har spist kakaopulver, skal du kontakte din dyrlæge med det samme.",
-    "fi": "Ei saa, kaakaojauhe on koirille myrkyllistä. Se on vaarallisempaa kuin tumma suklaa, koska leivontasuklaassa ja kaakaojauheessa on eniten haitallisia aineita. Jos koirasi söi kaakaojauhetta, ota heti yhteyttä eläinlääkäriin."
+    "fi": "Ei saa, kaakaojauhe on koirille myrkyllistä. Se on vaarallisempaa kuin tumma suklaa, koska leivontasuklaassa ja kaakaojauheessa on eniten haitallisia aineita. Jos koirasi söi kaakaojauhetta, ota heti yhteyttä eläinlääkäriin.",
+    "nb": "Nei, kakaopulver er giftig for hunder. Det er enda farligere enn mørk sjokolade, for kokesjokolade og kakaopulver har mest av de skadelige stoffene. Hvis hunden har spist kakaopulver, må du kontakte dyrlegen med en gang."
   },
   "why": {
     "en": "Chocolate contains theobromine, which is toxic to dogs. The more cocoa, the more theobromine: white chocolate has the least, while baking chocolate and cocoa powder have the highest amounts, so cocoa powder is even more dangerous than dark chocolate. Dogs are most often affected because they eat almost anything and can easily reach chocolate.",
@@ -45,7 +49,8 @@
     "hr": "Čokolada sadrži teobromin, koji je otrovan za pse. Što je više kakaa, to je više teobromina: bijela čokolada ga ima najmanje, dok čokolada za kuhanje i kakao u prahu imaju najveće količine, pa je kakao u prahu čak opasniji od tamne čokolade. Najčešće su pogođeni psi, jer jedu gotovo sve i lako dođu do čokolade.",
     "sv": "Choklad innehåller teobromin, som är giftigt för hundar. Ju mer kakao, desto mer teobromin: vit choklad har minst, medan bakchoklad och kakaopulver har störst mängd, så kakaopulver är ännu farligare än mörk choklad. Hundar drabbas oftast eftersom de äter nästan vad som helst och lätt kommer åt choklad.",
     "da": "Chokolade indeholder theobromin, som er giftigt for hunde. Jo mere kakao, jo mere theobromin: hvid chokolade indeholder mindst, mens bagechokolade og kakaopulver indeholder mest, så kakaopulver er endnu farligere end mørk chokolade. Hunde bliver oftest ramt, fordi de spiser næsten alt og let kan komme til chokolade.",
-    "fi": "Suklaassa on teobromiinia, joka on koirille myrkyllistä. Mitä enemmän kaakaota, sitä enemmän teobromiinia: valkoisessa suklaassa sitä on vähiten, kun taas leivontasuklaassa ja kaakaojauheessa sitä on eniten, joten kaakaojauhe on vielä vaarallisempaa kuin tumma suklaa. Koirat kärsivät siitä useimmin, koska ne syövät lähes mitä tahansa ja pääsevät helposti suklaan luo."
+    "fi": "Suklaassa on teobromiinia, joka on koirille myrkyllistä. Mitä enemmän kaakaota, sitä enemmän teobromiinia: valkoisessa suklaassa sitä on vähiten, kun taas leivontasuklaassa ja kaakaojauheessa sitä on eniten, joten kaakaojauhe on vielä vaarallisempaa kuin tumma suklaa. Koirat kärsivät siitä useimmin, koska ne syövät lähes mitä tahansa ja pääsevät helposti suklaan luo.",
+    "nb": "Sjokolade inneholder teobromin, som er giftig for hunder. Jo mer kakao, desto mer teobromin: hvit sjokolade har minst, mens kokesjokolade og kakaopulver har mest, så kakaopulver er enda farligere enn mørk sjokolade. Hunder rammes oftest fordi de spiser nesten alt og lett får tak i sjokolade."
   },
   "signs": {
     "en": [
@@ -110,6 +115,15 @@
       "Nopea tai poikkeava sydämenlyönti",
       "Vapina ja vakavissa tapauksissa kouristuskohtaukset",
       "Oireet alkavat yleensä 6–12 tunnin kuluessa"
+    ],
+    "nb": [
+      "Oppkast og diaré",
+      "Pesing, sterk tørst og mer tissing",
+      "Uro, rastløshet og hyperaktivitet",
+      "Forhøyet kroppstemperatur",
+      "Rask eller unormal hjerterytme",
+      "Skjelvinger og, i alvorlige tilfeller, kramper",
+      "Tegnene viser seg vanligvis innen 6–12 timer"
     ]
   },
   "what_to_do": {
@@ -119,7 +133,8 @@
     "hr": "Ako je pas pojeo kakao u prahu, zapiši koliko i odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
     "sv": "Om din hund har ätit kakaopulver: notera hur mycket och kontakta din veterinär eller giftrådgivningen för djur direkt.",
     "da": "Hvis din hund har spist kakaopulver, skal du notere, hvor meget, og straks kontakte din dyrlæge eller en giftrådgivning for dyr.",
-    "fi": "Jos koirasi söi kaakaojauhetta, kirjaa ylös määrä ja ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan."
+    "fi": "Jos koirasi söi kaakaojauhetta, kirjaa ylös määrä ja ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan.",
+    "nb": "Hvis hunden har spist kakaopulver, må du notere hvor mye og kontakte dyrlegen eller giftinformasjon for dyr med en gang."
   },
   "serving": null,
   "child": {
@@ -129,7 +144,8 @@
     "hr": "Kakao u prahu služi za pečenje, a ne za pse. Drži limenku zatvorenu i odmah reci odrasloj osobi ako je pas dohvati.",
     "sv": "Kakaopulver är till för människors bakning, inte för hundar. Håll burken stängd och berätta direkt för en vuxen om din hund kommer åt den.",
     "da": "Kakaopulver er til bagning for mennesker, ikke til hunde. Hold dåsen lukket, og sig det straks til en voksen, hvis din hund får fat i det.",
-    "fi": "Kaakaojauhe on ihmisten leivontaan, ei koirille. Pidä purkki kiinni ja kerro heti aikuiselle, jos koirasi pääsee siihen käsiksi."
+    "fi": "Kaakaojauhe on ihmisten leivontaan, ei koirille. Pidä purkki kiinni ja kerro heti aikuiselle, jos koirasi pääsee siihen käsiksi.",
+    "nb": "Kakaopulver er til baking for mennesker, ikke for hunder. Hold boksen lukket, og si fra til en voksen med en gang hvis hunden kommer over den."
   },
   "faq": [
     {
@@ -140,7 +156,8 @@
         "hr": "Je li kakao u prahu gori od pločice čokolade?",
         "sv": "Är kakaopulver värre än en chokladkaka?",
         "da": "Er kakaopulver værre end en chokoladebar?",
-        "fi": "Onko kaakaojauhe pahempaa kuin suklaalevy?"
+        "fi": "Onko kaakaojauhe pahempaa kuin suklaalevy?",
+        "nb": "Er kakaopulver verre enn en sjokoladeplate?"
       },
       "a": {
         "en": "Yes. Cocoa powder is even more dangerous than dark chocolate, and white chocolate has the lowest amount of the harmful substances.",
@@ -149,7 +166,8 @@
         "hr": "Da. Kakao u prahu čak je opasniji od tamne čokolade, a bijela čokolada ima najmanje štetnih tvari.",
         "sv": "Ja. Kakaopulver är ännu farligare än mörk choklad, och vit choklad har lägst mängd av de skadliga ämnena.",
         "da": "Ja. Kakaopulver er endnu farligere end mørk chokolade, og hvid chokolade indeholder mindst af de skadelige stoffer.",
-        "fi": "On. Kaakaojauhe on vielä vaarallisempaa kuin tumma suklaa, ja valkoisessa suklaassa on vähiten haitallisia aineita."
+        "fi": "On. Kaakaojauhe on vielä vaarallisempaa kuin tumma suklaa, ja valkoisessa suklaassa on vähiten haitallisia aineita.",
+        "nb": "Ja. Kakaopulver er enda farligere enn mørk sjokolade, og hvit sjokolade har minst av de skadelige stoffene."
       }
     }
   ],
@@ -249,6 +267,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b20c3b4eda10f9537b410e66e5194642b768e1e56b29b310100387ea22627e24"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1fb7d434a1b1fce2456ed5a7d448da3094efd8af98114ff0528685db26e12984"
     }
   }
 }

@@ -8,7 +8,8 @@
     "hr": "Tjestenina",
     "sv": "Pasta",
     "da": "Pasta",
-    "fi": "Pasta"
+    "fi": "Pasta",
+    "nb": "Pasta"
   },
   "question": {
     "en": "Can dogs eat pasta?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti tjesteninu?",
     "sv": "Får hundar äta pasta?",
     "da": "Må hunde spise pasta?",
-    "fi": "Saako koira syödä pastaa?"
+    "fi": "Saako koira syödä pastaa?",
+    "nb": "Kan hunder spise pasta?"
   },
   "url_slug": {
     "en": "pasta",
@@ -26,7 +28,8 @@
     "hr": "tjestenina",
     "sv": "pasta",
     "da": "pasta",
-    "fi": "pasta"
+    "fi": "pasta",
+    "nb": "pasta"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, obična kuhana tjestenina u redu je u malim količinama, a veterinari je čak koriste u blagoj dijeti kad je pas bolestan. Izostavi umak: luk i češnjak česti su u kuhanju i otrovni su za pse, čak i kuhani.",
     "sv": "Ja, okryddad kokt pasta går bra i små mängder, och veterinärer använder den till och med i en skonkost när en hund är sjuk. Hoppa över såsen: lök och vitlök är vanliga i matlagning och giftiga för hundar, även tillagade.",
     "da": "Ja, almindelig kogt pasta er fint i små mængder, og dyrlæger bruger den endda i skånekost, når en hund er syg. Undlad sovsen: løg og hvidløg er almindelige i madlavning og er giftige for hunde, også når de er kogt.",
-    "fi": "Saa, maustamaton keitetty pasta sopii pieninä määrinä, ja eläinlääkärit käyttävät sitä jopa kevyessä ruokavaliossa, kun koira on sairas. Jätä kastike pois: sipuli ja valkosipuli ovat yleisiä ruoanlaitossa ja koirille myrkyllisiä, vaikka ne olisi kypsennetty."
+    "fi": "Saa, maustamaton keitetty pasta sopii pieninä määrinä, ja eläinlääkärit käyttävät sitä jopa kevyessä ruokavaliossa, kun koira on sairas. Jätä kastike pois: sipuli ja valkosipuli ovat yleisiä ruoanlaitossa ja koirille myrkyllisiä, vaikka ne olisi kypsennetty.",
+    "nb": "Ja, naturell kokt pasta går fint i små mengder, og dyrleger bruker den til og med i skånekost når en hund er syk. Hopp over sausen. Løk og hvitløk er vanlig i matlaging og er giftig for hunder, også tilberedt."
   },
   "why": {
     "en": "Dogs Trust lists pasta and plain noodles among human foods dogs can usually eat in moderation. Cornell names cooked pasta as an option when a dog needs a bland diet to soothe the gut, though such a diet is not balanced for long-term feeding. Onions, garlic, leeks and chives can cause anaemia in dogs, and even traces in cooked food can be toxic. Intolerance, fat content or portion size can still upset an individual dog.",
@@ -45,7 +49,8 @@
     "hr": "Dogs Trust navodi tjesteninu i obične rezance među ljudskom hranom koju psi obično smiju jesti umjereno. Cornell navodi kuhanu tjesteninu kao jednu od mogućnosti kad je psu potrebna blaga dijeta za smirivanje crijeva, iako takva dijeta nije uravnotežena za dugotrajno hranjenje. Luk, češnjak, poriluk i vlasac mogu kod pasa izazvati anemiju, a čak i tragovi u kuhanoj hrani mogu biti otrovni. Netolerancija, udio masti ili veličina porcije i dalje mogu naškoditi pojedinom psu.",
     "sv": "Dogs Trust listar pasta och vanliga nudlar bland den mat från matbordet som hundar oftast kan äta med måtta. Cornell nämner kokt pasta som ett alternativ när en hund behöver en skonkost för att lugna magen, men en sådan kost är inte balanserad för långvarig utfodring. Lökväxter som lök, vitlök, purjolök och gräslök kan orsaka blodbrist (anemi) hos hundar, och även spår i tillagad mat kan vara giftiga. Intolerans, fettinnehåll eller portionsstorlek kan ändå reta magen hos en enskild hund.",
     "da": "Dogs Trust nævner pasta og almindelige nudler blandt den menneskemad, hunde som regel kan spise med måde. Cornell nævner kogt pasta som en mulighed, når en hund har brug for skånekost for at berolige maven, selvom en sådan kost ikke er afbalanceret til langvarig fodring. Løg, hvidløg, porrer og purløg kan give blodmangel hos hunde, og selv spor i tilberedt mad kan være giftige. Intolerance, fedtindhold eller portionsstørrelse kan stadig give en enkelt hund problemer.",
-    "fi": "Dogs Trust luettelee pastan ja maustamattomat nuudelit ruokien joukkoon, joita koira voi yleensä syödä kohtuudella. Cornell mainitsee keitetyn pastan vaihtoehtona, kun koira tarvitsee kevyttä ruokavaliota suolen rauhoittamiseksi, vaikka sellainen ruokavalio ei ole tasapainoinen pitkäaikaiseen ruokintaan. Sipuli, valkosipuli, purjo ja ruohosipuli voivat aiheuttaa koirille anemiaa, ja jopa pienet jäämät niistä kypsennetyssä ruoassa voivat olla myrkyllisiä. Ruoka-aineyliherkkyys, rasvapitoisuus tai annoskoko voivat silti tehdä yksittäisen koiran olon huonoksi."
+    "fi": "Dogs Trust luettelee pastan ja maustamattomat nuudelit ruokien joukkoon, joita koira voi yleensä syödä kohtuudella. Cornell mainitsee keitetyn pastan vaihtoehtona, kun koira tarvitsee kevyttä ruokavaliota suolen rauhoittamiseksi, vaikka sellainen ruokavalio ei ole tasapainoinen pitkäaikaiseen ruokintaan. Sipuli, valkosipuli, purjo ja ruohosipuli voivat aiheuttaa koirille anemiaa, ja jopa pienet jäämät niistä kypsennetyssä ruoassa voivat olla myrkyllisiä. Ruoka-aineyliherkkyys, rasvapitoisuus tai annoskoko voivat silti tehdä yksittäisen koiran olon huonoksi.",
+    "nb": "Dogs Trust regner opp pasta og naturelle nudler blant menneskematen som hunder vanligvis kan spise med måte. Cornell nevner tilberedt pasta som et alternativ når en hund trenger skånekost for å roe magen, selv om en slik kost ikke er balansert nok til langvarig fôring. Løk, hvitløk, purre og gressløk kan gi blodmangel (anemi) hos hunder, og selv rester i tilberedt mat kan være giftige. Intoleranse, fettinnhold eller porsjonsstørrelse kan likevel gi enkelte hunder urolig mage."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Obična tjestenina obično ne treba ništa dodatno. Ako je pas pojeo tjesteninu s umakom koji bi mogao sadržavati luk ili češnjak, ne čekaj da vidiš: obrati se veterinaru. Pitaj veterinara prije nego što ponudiš hranu koju pas još nije jeo.",
     "sv": "Okryddad pasta behöver oftast inget mer. Om din hund har ätit pasta med en sås som kan innehålla lök eller vitlök ska du inte vänta och se: kontakta din veterinär. Fråga din veterinär innan du ger hunden något nytt som den inte har ätit förut.",
     "da": "Almindelig pasta kræver som regel ikke mere. Hvis din hund har spist pasta med en sovs, der kan indeholde løg eller hvidløg, skal du ikke se tiden an, men kontakte din dyrlæge. Spørg din dyrlæge, før du giver din hund noget mad, den ikke har fået før.",
-    "fi": "Maustamaton pasta ei yleensä vaadi muuta. Jos koirasi söi pastaa kastikkeella, jossa voi olla sipulia tai valkosipulia, älä jää odottamaan vaan ota yhteyttä eläinlääkäriin. Kysy eläinlääkäriltä ennen kuin tarjoat ruokaa, jota koirasi ei ole aiemmin syönyt."
+    "fi": "Maustamaton pasta ei yleensä vaadi muuta. Jos koirasi söi pastaa kastikkeella, jossa voi olla sipulia tai valkosipulia, älä jää odottamaan vaan ota yhteyttä eläinlääkäriin. Kysy eläinlääkäriltä ennen kuin tarjoat ruokaa, jota koirasi ei ole aiemmin syönyt.",
+    "nb": "Naturell pasta trenger vanligvis ingenting mer. Hvis hunden har spist pasta med en saus som kan inneholde løk eller hvitløk, ikke vent på symptomer. Kontakt dyrlegen. Spør dyrlegen før du gir hunden mat den ikke har fått før."
   },
   "serving": {
     "en": "Plain cooked pasta or noodles, in moderation, with no sauce, onion, garlic or seasoning.",
@@ -64,7 +70,8 @@
     "hr": "Obična kuhana tjestenina ili rezanci, umjereno, bez umaka, luka, češnjaka i začina.",
     "sv": "Okryddad kokt pasta eller nudlar, med måtta, utan sås, lök, vitlök eller kryddor.",
     "da": "Almindelig kogt pasta eller nudler, med måde, uden sovs, løg, hvidløg eller krydderier.",
-    "fi": "Maustamatonta keitettyä pastaa tai nuudeleita kohtuudella, ilman kastiketta, sipulia, valkosipulia tai mausteita."
+    "fi": "Maustamatonta keitettyä pastaa tai nuudeleita kohtuudella, ilman kastiketta, sipulia, valkosipulia tai mausteita.",
+    "nb": "Naturell tilberedt pasta eller nudler, med måte, uten saus, løk, hvitløk eller krydder."
   },
   "child": {
     "en": "A little plain cooked pasta is fine for dogs. Sauces can hide onion or garlic, so ask a grown-up first.",
@@ -73,7 +80,8 @@
     "hr": "Malo obične kuhane tjestenine u redu je za pse. Umaci mogu skrivati luk ili češnjak, zato prvo pitaj odraslu osobu.",
     "sv": "Lite okryddad kokt pasta är okej för hundar. Såser kan gömma lök eller vitlök, så fråga en vuxen först.",
     "da": "Lidt almindelig kogt pasta er fint til hunde. Sovse kan skjule løg eller hvidløg, så spørg først en voksen.",
-    "fi": "Vähän maustamatonta keitettyä pastaa sopii koirille. Kastikkeissa voi olla piilossa sipulia tai valkosipulia, joten kysy ensin aikuiselta."
+    "fi": "Vähän maustamatonta keitettyä pastaa sopii koirille. Kastikkeissa voi olla piilossa sipulia tai valkosipulia, joten kysy ensin aikuiselta.",
+    "nb": "Litt naturell kokt pasta er greit for hunder. Sauser kan skjule løk eller hvitløk, så spør en voksen først."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Smiju li psi jesti špagete s umakom?",
         "sv": "Får hundar äta spaghetti med sås?",
         "da": "Må hunde spise spaghetti med sovs?",
-        "fi": "Saako koira syödä spagettia kastikkeella?"
+        "fi": "Saako koira syödä spagettia kastikkeella?",
+        "nb": "Kan hunder spise spaghetti med saus?"
       },
       "a": {
         "en": "It's best not to. Sauces are often made with onion or garlic, and even traces of these in cooked food can be toxic to dogs.",
@@ -93,7 +102,8 @@
         "hr": "Bolje ne. Umaci se često prave s lukom ili češnjakom, a čak i tragovi toga u kuhanoj hrani mogu biti otrovni za pse.",
         "sv": "Det är bäst att låta bli. Såser görs ofta med lök eller vitlök, och även spår av dessa i tillagad mat kan vara giftiga för hundar.",
         "da": "Helst ikke. Sovse er ofte lavet med løg eller hvidløg, og selv spor af dem i tilberedt mad kan være giftige for hunde.",
-        "fi": "Ei kannata. Kastikkeet tehdään usein sipulista tai valkosipulista, ja jopa jäljet niistä kypsennetyssä ruoassa voivat olla koirille myrkyllisiä."
+        "fi": "Ei kannata. Kastikkeet tehdään usein sipulista tai valkosipulista, ja jopa jäljet niistä kypsennetyssä ruoassa voivat olla koirille myrkyllisiä.",
+        "nb": "Det er best å la være. Sauser lages ofte med løk eller hvitløk, og selv rester av disse i tilberedt mat kan være giftige for hunder."
       }
     },
     {
@@ -104,7 +114,8 @@
         "hr": "Može li tjestenina pomoći psu s osjetljivim želucem?",
         "sv": "Kan pasta hjälpa en hund med orolig mage?",
         "da": "Kan pasta hjælpe en hund med dårlig mave?",
-        "fi": "Voiko pasta auttaa koiraa, jolla on vatsavaivoja?"
+        "fi": "Voiko pasta auttaa koiraa, jolla on vatsavaivoja?",
+        "nb": "Kan pasta hjelpe en hund med urolig mage?"
       },
       "a": {
         "en": "Cooked pasta is one option when a sick dog needs a bland diet, but such a diet is not balanced and not safe to feed long-term.",
@@ -113,7 +124,8 @@
         "hr": "Kuhana tjestenina jedna je od mogućnosti kad bolesnom psu treba blaga dijeta, ali takva dijeta nije uravnotežena i nije sigurna za dugotrajno hranjenje.",
         "sv": "Kokt pasta är ett alternativ när en sjuk hund behöver skonkost, men en sådan kost är inte balanserad och inte säker att ge långvarigt.",
         "da": "Kogt pasta er en mulighed, når en syg hund har brug for skånekost, men sådan en kost er ikke afbalanceret og ikke sikker at give på længere sigt.",
-        "fi": "Keitetty pasta on yksi vaihtoehto, kun sairas koira tarvitsee kevyttä ruokavaliota, mutta sellainen ruokavalio ei ole tasapainoinen eikä turvallinen pitkäaikaiseen ruokintaan."
+        "fi": "Keitetty pasta on yksi vaihtoehto, kun sairas koira tarvitsee kevyttä ruokavaliota, mutta sellainen ruokavalio ei ole tasapainoinen eikä turvallinen pitkäaikaiseen ruokintaan.",
+        "nb": "Tilberedt pasta er et alternativ når en syk hund trenger skånekost, men en slik kost er ikke balansert og ikke trygg å gi over lang tid."
       }
     }
   ],
@@ -215,6 +227,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ea815d7e026b28143d52d857d5bd5172805d0cac708dbd3880a71825cbbed104"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7dc9d9b9e26c49c871fd954c6e228faff7ace826b758f7bfc07d3715fbe83ff4"
     }
   }
 }

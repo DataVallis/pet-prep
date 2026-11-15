@@ -8,7 +8,8 @@
     "hr": "Cimet",
     "sv": "Kanel",
     "da": "Kanel",
-    "fi": "Kaneli"
+    "fi": "Kaneli",
+    "nb": "Kanel"
   },
   "question": {
     "en": "Can cats eat cinnamon?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li mačke jesti cimet?",
     "sv": "Får katter äta kanel?",
     "da": "Må katte spise kanel?",
-    "fi": "Saako kissa syödä kanelia?"
+    "fi": "Saako kissa syödä kanelia?",
+    "nb": "Kan katter spise kanel?"
   },
   "url_slug": {
     "en": "cinnamon",
@@ -26,7 +28,8 @@
     "hr": "cimet",
     "sv": "kanel",
     "da": "kanel",
-    "fi": "kaneli"
+    "fi": "kaneli",
+    "nb": "kanel"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Bolje ne. ASPCA navodi cimet kao neotrovan za mačke, ali svaka biljna tvar može izazvati povraćanje i želučane tegobe, a mačkama cimet nije potreban. Cimetovo ulje je druga priča: otrovno je za mačke.",
     "sv": "Det är bäst att låta bli. ASPCA anger att kanel inte är giftigt för katter, men allt växtmaterial kan orsaka kräkningar och orolig mage, och katter behöver det inte. Kanelolja är annorlunda: den är giftig för katter.",
     "da": "Helst ikke. ASPCA klassificerer kanel som ugiftig for katte, men alt plantemateriale kan give opkast og mavebesvær, og katte har ikke brug for det. Kanelolie er noget andet: den er giftig for katte.",
-    "fi": "Ei suositella. ASPCA luokittelee kanelin kissoille myrkyttömäksi, mutta mikä tahansa kasviaines voi aiheuttaa oksentelua ja vatsavaivoja, eikä kissa tarvitse sitä. Kanelöljy on eri asia: se on kissoille myrkyllistä."
+    "fi": "Ei suositella. ASPCA luokittelee kanelin kissoille myrkyttömäksi, mutta mikä tahansa kasviaines voi aiheuttaa oksentelua ja vatsavaivoja, eikä kissa tarvitse sitä. Kanelöljy on eri asia: se on kissoille myrkyllistä.",
+    "nb": "Det er best å la være. ASPCA oppgir at kanel ikke er giftig for katter, men alt plantemateriale kan gi oppkast og urolig mage, og katter har ikke bruk for kanel. Kanelolje er noe annet: den er giftig for katter."
   },
   "why": {
     "en": "The ASPCA lists cinnamon (Cinnamomum zeylanicum) as non-toxic to cats, and notes that eating any plant material may cause vomiting and gastrointestinal upset in cats. PDSA says cats don't need anything other than a complete diet. Cats Protection lists cinnamon oil among the essential oils that are toxic to cats. Because cinnamon is not a cat food and its oil is harmful, we don't recommend it.",
@@ -45,7 +49,8 @@
     "hr": "ASPCA navodi cimet (Cinnamomum zeylanicum) kao neotrovan za mačke i napominje da jedenje bilo koje biljne tvari kod mačaka može izazvati povraćanje i probavne tegobe. PDSA kaže da mačkama ne treba ništa osim potpune hrane. Cats Protection ubraja cimetovo ulje među eterična ulja koja su otrovna za mačke. Budući da cimet nije mačja hrana, a njegovo je ulje štetno, ne preporučujemo ga.",
     "sv": "ASPCA anger att kanel (Cinnamomum zeylanicum) inte är giftigt för katter och påpekar att allt växtmaterial kan orsaka kräkningar och magtarmbesvär hos katter. PDSA säger att katter inte behöver något annat än en komplett kost. Cats Protection listar kanelolja bland de eteriska oljor som är giftiga för katter. Eftersom kanel inte är kattmat och oljan är skadlig rekommenderar vi det inte.",
     "da": "ASPCA klassificerer kanel (Cinnamomum zeylanicum) som ugiftig for katte og skriver at alt plantemateriale kan give opkast og mave-tarm-besvær hos katte. PDSA skriver at katte ikke har brug for andet end en komplet kost. Cats Protection nævner kanelolie blandt de æteriske olier, der er giftige for katte. Fordi kanel ikke er kattemad, og olien er skadelig, anbefaler vi det ikke.",
-    "fi": "ASPCA luokittelee kanelin (Cinnamomum zeylanicum) kissoille myrkyttömäksi ja toteaa, että minkä tahansa kasviaineksen syöminen voi aiheuttaa kissoille oksentelua ja vatsavaivoja. PDSA:n mukaan kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion. Cats Protection mainitsee kanelöljyn kissoille myrkyllisten eteeristen öljyjen joukossa. Koska kaneli ei ole kissanruokaa ja sen öljy on haitallista, emme suosittele sitä."
+    "fi": "ASPCA luokittelee kanelin (Cinnamomum zeylanicum) kissoille myrkyttömäksi ja toteaa, että minkä tahansa kasviaineksen syöminen voi aiheuttaa kissoille oksentelua ja vatsavaivoja. PDSA:n mukaan kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion. Cats Protection mainitsee kanelöljyn kissoille myrkyllisten eteeristen öljyjen joukossa. Koska kaneli ei ole kissanruokaa ja sen öljy on haitallista, emme suosittele sitä.",
+    "nb": "ASPCA oppgir at kanel (Cinnamomum zeylanicum) ikke er giftig for katter, og påpeker at alt plantemateriale kan gi oppkast og urolig mage hos katter. PDSA sier at katter ikke trenger noe annet enn et fullverdig kosthold. Cats Protection nevner kanelolje blant de eteriske oljene som er giftige for katter. Fordi kanel ikke er kattemat og oljen er skadelig, anbefaler vi det ikke."
   },
   "signs": {
     "en": [
@@ -75,6 +80,10 @@
     "fi": [
       "Oksentelu",
       "Vatsavaivat"
+    ],
+    "nb": [
+      "Oppkast",
+      "Urolig mage"
     ]
   },
   "what_to_do": {
@@ -84,7 +93,8 @@
     "hr": "Ako je mačka pojela malo cimeta, pazi na povraćanje ili želučane tegobe. Ako je polizala ili pojela cimetovo ulje, odmah se obrati veterinaru; ne čekaj da se pojave znakovi.",
     "sv": "Om din katt har ätit lite kanel: håll ett öga på om hon kräks eller får orolig mage. Om din katt har slickat i sig eller ätit kanelolja ska du kontakta din veterinär direkt, utan att vänta på att tecken ska dyka upp.",
     "da": "Hvis din kat har spist lidt kanel, skal du holde øje med opkast eller mavebesvær. Hvis din kat har slikket på eller spist kanelolie, skal du kontakte din dyrlæge med det samme; vent ikke på tegn.",
-    "fi": "Jos kissasi söi vähän kanelia, seuraa, tuleeko oksentelua tai vatsavaivoja. Jos kissasi nuoli tai söi kanelöljyä, ota heti yhteyttä eläinlääkäriin äläkä odota oireita."
+    "fi": "Jos kissasi söi vähän kanelia, seuraa, tuleeko oksentelua tai vatsavaivoja. Jos kissasi nuoli tai söi kanelöljyä, ota heti yhteyttä eläinlääkäriin äläkä odota oireita.",
+    "nb": "Hvis katten har spist litt kanel, følg med på oppkast eller urolig mage. Hvis katten har slikket i seg eller spist kanelolje, kontakt dyrlegen med en gang. Ikke vent på symptomer."
   },
   "serving": null,
   "child": {
@@ -94,7 +104,8 @@
     "hr": "Cimet je začin za kuhanje. Mačkama nije potreban, zato začine i mirisna ulja drži daleko od mace.",
     "sv": "Kanel är en krydda för matlagning. Katter behöver det inte, så håll kryddor och doftoljor borta från katten.",
     "da": "Kanel er et krydderi, man bruger i madlavning til mennesker. Katte har ikke brug for det, så hold krydderier og duftolier væk fra din kat.",
-    "fi": "Kaneli on mauste ihmisten ruoanlaittoon. Kissat eivät tarvitse sitä, joten pidä mausteet ja tuoksuöljyt poissa kisun luota."
+    "fi": "Kaneli on mauste ihmisten ruoanlaittoon. Kissat eivät tarvitse sitä, joten pidä mausteet ja tuoksuöljyt poissa kisun luota.",
+    "nb": "Kanel er et krydder til matlaging for mennesker. Katter trenger det ikke, så hold krydder og duftoljer unna pusen."
   },
   "faq": [
     {
@@ -105,7 +116,8 @@
         "hr": "Je li cimetovo ulje sigurno za mačke?",
         "sv": "Är kanelolja säker för katter?",
         "da": "Er kanelolie ufarlig for katte?",
-        "fi": "Onko kanelöljy turvallista kissoille?"
+        "fi": "Onko kanelöljy turvallista kissoille?",
+        "nb": "Er kanelolje trygg for katter?"
       },
       "a": {
         "en": "No. Cats Protection says most essential oils are toxic to cats and names cinnamon oil among them. Keep cinnamon oil and other essential oils away from your cat.",
@@ -114,7 +126,8 @@
         "hr": "Ne. Cats Protection navodi da je većina eteričnih ulja otrovna za mačke i među njima spominje cimetovo ulje. Cimetovo ulje i druga eterična ulja drži podalje od mačke.",
         "sv": "Nej. Cats Protection säger att de flesta eteriska oljor är giftiga för katter och nämner kanelolja bland dem. Håll kanelolja och andra eteriska oljor borta från din katt.",
         "da": "Nej. Cats Protection skriver at de fleste æteriske olier er giftige for katte, og nævner kanelolie blandt dem. Hold kanelolie og andre æteriske olier væk fra din kat.",
-        "fi": "Ei. Cats Protectionin mukaan useimmat eteeriset öljyt ovat kissoille myrkyllisiä, ja se mainitsee kanelöljyn niiden joukossa. Pidä kanelöljy ja muut eteeriset öljyt poissa kissan ulottuvilta."
+        "fi": "Ei. Cats Protectionin mukaan useimmat eteeriset öljyt ovat kissoille myrkyllisiä, ja se mainitsee kanelöljyn niiden joukossa. Pidä kanelöljy ja muut eteeriset öljyt poissa kissan ulottuvilta.",
+        "nb": "Nei. Cats Protection sier at de fleste eteriske oljer er giftige for katter, og nevner kanelolje blant dem. Hold kanelolje og andre eteriske oljer unna katten."
       }
     }
   ],
@@ -194,6 +207,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "093e0a6b1b9f8f278b88383a3dcee5ae4a843dedefc3b850aecc6eb2792d7961"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "24e64807eec30eb04b5bd96f433262a04eb3bae33da8face5bdec7ac45f4c3db"
     }
   }
 }

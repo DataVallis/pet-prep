@@ -7,7 +7,8 @@
     "hr": "Senf",
     "sv": "Senap",
     "da": "Sennep",
-    "fi": "Sinappi"
+    "fi": "Sinappi",
+    "nb": "Sennep"
   },
   "question": {
     "en": "Can dogs eat mustard?",
@@ -15,7 +16,8 @@
     "hr": "Smiju li psi jesti senf?",
     "sv": "Får hundar äta senap?",
     "da": "Må hunde spise sennep?",
-    "fi": "Saako koira syödä sinappia?"
+    "fi": "Saako koira syödä sinappia?",
+    "nb": "Kan hunder spise sennep?"
   },
   "url_slug": {
     "en": "mustard",
@@ -23,7 +25,8 @@
     "hr": "senf",
     "sv": "senap",
     "da": "sennep",
-    "fi": "sinappi"
+    "fi": "sinappi",
+    "nb": "sennep"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "hr": "Ne, psu nikad ne treba davati senf. Sjemenke gorušice sadrže spojeve koji mogu upaliti želudac i crijeva psa, a senf može izazvati povraćanje. Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi biti ozbiljna.",
     "sv": "Nej, du ska aldrig ge din hund senap. Senapsfrön innehåller ämnen som kan ge inflammation i hundens mage och tarmar, och senap kan orsaka kräkningar. En liten slick från din tallrik orsakar sällan problem, men en stor mängd kan vara allvarlig.",
     "da": "Nej, du bør aldrig give din hund sennep. Sennepsfrø indeholder stoffer, som kan give betændelse i hundens mave og tarme, og sennep kan give opkast. Hvis hunden bare slikker lidt af din tallerken, giver det næppe problemer, men en stor mængde kan være alvorligt.",
-    "fi": "Ei saa, älä koskaan anna koirallesi sinappia. Sinapinsiemenet sisältävät yhdisteitä, jotka voivat tulehduttaa koiran mahalaukkua ja suolistoa, ja sinappi voi aiheuttaa oksentelua. Pieni nuolaisu lautasestasi tuskin aiheuttaa ongelmaa, mutta suuri määrä voi olla vakava."
+    "fi": "Ei saa, älä koskaan anna koirallesi sinappia. Sinapinsiemenet sisältävät yhdisteitä, jotka voivat tulehduttaa koiran mahalaukkua ja suolistoa, ja sinappi voi aiheuttaa oksentelua. Pieni nuolaisu lautasestasi tuskin aiheuttaa ongelmaa, mutta suuri määrä voi olla vakava.",
+    "nb": "Nei, du bør aldri gi hunden sennep. Sennepsfrø inneholder stoffer som kan gi betennelse i magen og tarmene hos hunder, og sennep kan gi oppkast. En liten slikk fra tallerkenen er neppe noe problem, men en stor mengde kan være alvorlig."
   },
   "why": {
     "en": "Mustard contains mustard seeds, and these contain toxic compounds that can lead to gastroenteritis, an inflammation of the stomach and intestines. Shop-bought mustard may also contain other ingredients that could harm your dog. Smaller dogs need to eat less than larger dogs to react. One source simply says mustard can upset a dog's stomach, another calls it toxic, so we follow the stricter advice.",
@@ -40,7 +44,8 @@
     "hr": "Senf sadrži sjemenke gorušice, a one sadrže otrovne spojeve koji mogu dovesti do gastroenteritisa, upale želuca i crijeva. Kupovni senf može sadržavati i druge sastojke koji bi mogli naškoditi psu. Manjim je psima dovoljno pojesti manje nego većima da bi reagirali. Jedan izvor jednostavno kaže da senf može nadražiti želudac psa, drugi ga naziva otrovnim, zato slijedimo strožu preporuku.",
     "sv": "Senap innehåller senapsfrön, och de innehåller giftiga ämnen som kan leda till gastroenterit, en inflammation i mage och tarmar. Senap från affären kan också innehålla andra ingredienser som kan skada din hund. Mindre hundar behöver äta mindre än större hundar för att reagera. En källa säger bara att senap kan reta hundens mage, en annan kallar den giftig, så vi följer det strängare rådet.",
     "da": "Sennep indeholder sennepsfrø, og de indeholder giftige stoffer, som kan give mave-tarm-betændelse, en betændelse i mave og tarme. Sennep fra butikken kan også indeholde andre ingredienser, som kan skade din hund. Mindre hunde skal spise mindre end større hunde for at reagere. En kilde skriver blot at sennep kan give hunden dårlig mave, en anden kalder det giftigt, så vi følger det strengeste råd.",
-    "fi": "Sinappi sisältää sinapinsiemeniä, ja niissä on myrkyllisiä yhdisteitä, jotka voivat johtaa maha-suolitulehdukseen, mahalaukun ja suoliston tulehdukseen. Kaupan sinapissa voi olla myös muita koiralle haitallisia ainesosia. Pienemmät koirat reagoivat pienempiin määriin kuin suuremmat. Yksi lähde sanoo yksinkertaisesti, että sinappi voi ärsyttää koiran vatsaa, toinen kutsuu sitä myrkylliseksi, joten noudatamme tiukempaa neuvoa."
+    "fi": "Sinappi sisältää sinapinsiemeniä, ja niissä on myrkyllisiä yhdisteitä, jotka voivat johtaa maha-suolitulehdukseen, mahalaukun ja suoliston tulehdukseen. Kaupan sinapissa voi olla myös muita koiralle haitallisia ainesosia. Pienemmät koirat reagoivat pienempiin määriin kuin suuremmat. Yksi lähde sanoo yksinkertaisesti, että sinappi voi ärsyttää koiran vatsaa, toinen kutsuu sitä myrkylliseksi, joten noudatamme tiukempaa neuvoa.",
+    "nb": "Sennep er laget av sennepsfrø, og de inneholder giftige stoffer som kan gi mage-tarmbetennelse, altså betennelse i magen og tarmene. Sennep fra butikken kan dessuten inneholde andre ingredienser som kan skade hunden. Små hunder reagerer på mindre enn store hunder. En kilde sier bare at sennep kan gi urolig mage, en annen kaller den giftig, så vi følger det strengeste rådet."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Oksentelu",
       "Ripuli",
       "Vatsakipu"
+    ],
+    "nb": [
+      "Mister matlysten",
+      "Sikling",
+      "Oppkast",
+      "Diaré",
+      "Magesmerter"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "hr": "Malo lizanje vjerojatno neće izazvati probleme. Ako je pas pojeo puno senfa ili primijetiš znakove poput povraćanja, slinjenja ili bolova u trbuhu, što prije se obrati veterinaru.",
     "sv": "En liten slick orsakar sällan problem. Om din hund har ätit mycket senap, eller om du märker tecken som kräkningar, dregling eller ont i magen, kontakta din veterinär så snart som möjligt.",
     "da": "Hvis hunden bare har slikket lidt, giver det næppe problemer. Hvis din hund har spist meget sennep, eller du ser tegn som opkast, savlen eller mavesmerter, skal du kontakte din dyrlæge hurtigst muligt.",
-    "fi": "Pieni nuolaisu tuskin aiheuttaa ongelmaa. Jos koirasi söi paljon sinappia tai huomaat oireita, kuten oksentelua, kuolaamista tai vatsakipua, ota yhteyttä eläinlääkäriin mahdollisimman pian."
+    "fi": "Pieni nuolaisu tuskin aiheuttaa ongelmaa. Jos koirasi söi paljon sinappia tai huomaat oireita, kuten oksentelua, kuolaamista tai vatsakipua, ota yhteyttä eläinlääkäriin mahdollisimman pian.",
+    "nb": "En liten slikk er neppe noe problem. Hvis hunden har spist mye sennep, eller du ser symptomer som oppkast, sikling eller magesmerter, kontakt dyrlegen så snart som mulig."
   },
   "serving": null,
   "child": {
@@ -101,7 +114,8 @@
     "hr": "Od senfa psa može zaboljeti trbuščić. Zadrži ga na svom tanjuru, daleko od psa.",
     "sv": "Senap kan ge hundar ont i magen. Behåll den på din egen tallrik, långt från din hund.",
     "da": "Sennep kan give hunde ondt i maven. Behold den på din egen tallerken, væk fra din hund.",
-    "fi": "Sinappi voi tehdä koiran vatsan kipeäksi. Pidä se omalla lautasellasi, poissa koirasi ulottuvilta."
+    "fi": "Sinappi voi tehdä koiran vatsan kipeäksi. Pidä se omalla lautasellasi, poissa koirasi ulottuvilta.",
+    "nb": "Sennep kan gi hunder vondt i magen. La den bli på din egen tallerken, langt unna hunden."
   },
   "faq": [
     {
@@ -111,7 +125,8 @@
         "hr": "Moj je pas poližao malo senfa. Je li to problem?",
         "sv": "Min hund slickade i sig lite senap. Är det ett problem?",
         "da": "Min hund har slikket lidt sennep. Er det et problem?",
-        "fi": "Koirani nuolaisi vähän sinappia. Onko se ongelma?"
+        "fi": "Koirani nuolaisi vähän sinappia. Onko se ongelma?",
+        "nb": "Hunden min slikket litt sennep. Er det et problem?"
       },
       "a": {
         "en": "A small lick off your plate is unlikely to cause a problem, but a large amount could cause a serious issue. Smaller dogs react to less than larger dogs.",
@@ -119,7 +134,8 @@
         "hr": "Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi izazvati ozbiljne tegobe. Manji psi reagiraju na manje od većih.",
         "sv": "En liten slick från din tallrik orsakar sällan problem, men en stor mängd kan ge ett allvarligt problem. Mindre hundar reagerar på mindre än större hundar.",
         "da": "Hvis hunden bare har slikket lidt fra din tallerken, giver det næppe problemer, men en stor mængde kan give et alvorligt problem. Mindre hunde reagerer på mindre end større hunde.",
-        "fi": "Pieni nuolaisu lautasestasi tuskin aiheuttaa ongelmaa, mutta suuri määrä voi aiheuttaa vakavan ongelman. Pienemmät koirat reagoivat pienempiin määriin kuin suuremmat."
+        "fi": "Pieni nuolaisu lautasestasi tuskin aiheuttaa ongelmaa, mutta suuri määrä voi aiheuttaa vakavan ongelman. Pienemmät koirat reagoivat pienempiin määriin kuin suuremmat.",
+        "nb": "En liten slikk fra tallerkenen er neppe noe problem, men en stor mengde kan gi et alvorlig problem. Små hunder reagerer på mindre enn store hunder."
       }
     },
     {
@@ -129,7 +145,8 @@
         "hr": "Je li neka vrsta senfa sigurna?",
         "sv": "Finns det någon sorts senap som är säker?",
         "da": "Findes der en slags sennep, som er ufarlig?",
-        "fi": "Onko jokin sinappi turvallista?"
+        "fi": "Onko jokin sinappi turvallista?",
+        "nb": "Finnes det en type sennep som er trygg?"
       },
       "a": {
         "en": "No. All types of mustard should be avoided, including homemade, wild, English and Dijon mustard.",
@@ -137,7 +154,8 @@
         "hr": "Ne. Treba izbjegavati sve vrste senfa, uključujući domaći, divlji, engleski i dijonski senf.",
         "sv": "Nej. Alla sorters senap bör undvikas, även hemgjord, vild, engelsk och dijonsenap.",
         "da": "Nej. Alle slags sennep bør undgås, også hjemmelavet, vild, engelsk og Dijon-sennep.",
-        "fi": "Ei. Kaikkia sinappilajeja pitää välttää, myös kotitekoista, luonnonvaraista, englantilaista ja dijoninsinappia."
+        "fi": "Ei. Kaikkia sinappilajeja pitää välttää, myös kotitekoista, luonnonvaraista, englantilaista ja dijoninsinappia.",
+        "nb": "Nei. Alle typer sennep bør unngås, også hjemmelaget sennep, villsennep, engelsk sennep og dijonsennep."
       }
     }
   ],
@@ -243,6 +261,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "87f1b9fcc89c286ad4c73865d98c6e228bfe79c70ea48ba260c07ce565cbd702"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9d3a82483b1c5e2a2f64a179a9f8a0d21aece3f45516e23e729ab6a77ebd5006"
     }
   }
 }

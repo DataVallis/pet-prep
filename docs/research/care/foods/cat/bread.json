@@ -8,7 +8,8 @@
     "hr": "Kruh (pečen)",
     "sv": "Bröd (bakat)",
     "da": "Brød (bagt)",
-    "fi": "Leipä (leivottu)"
+    "fi": "Leipä (leivottu)",
+    "nb": "Brød (bakt)"
   },
   "question": {
     "en": "Can cats eat bread?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li mačke jesti kruh?",
     "sv": "Får katter äta bröd?",
     "da": "Må katte spise brød?",
-    "fi": "Saako kissa syödä leipää?"
+    "fi": "Saako kissa syödä leipää?",
+    "nb": "Kan katter spise brød?"
   },
   "url_slug": {
     "en": "bread",
@@ -26,7 +28,8 @@
     "hr": "kruh",
     "sv": "brod",
     "da": "broed",
-    "fi": "leipa"
+    "fi": "leipa",
+    "nb": "brod"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Da, mali komadić običnog, potpuno pečenog kruha u redu je kao povremena poslastica. ASPCA navodi da je pečen kruh siguran kao povremena poslastica, ali ne i kruh s grožđicama. Sirovo tijesto koje se diže druga je priča i mora biti izvan dosega mačke.",
     "sv": "Ja, en liten bit okryddat, helt bakat bröd går bra som godbit då och då. ASPCA säger att bakat bröd är säkert som godbit då och då, så länge det inte är russinbröd. Rå, jäsande deg är något helt annat och måste hållas borta från katter.",
     "da": "Ja, et lille stykke almindeligt, gennembagt brød er fint som en godbid af og til. ASPCA skriver at bagt brød er ufarligt som en godbid af og til, så længe det ikke er rosinbrød. Rå, hævende dej er noget andet og skal holdes væk fra katte.",
-    "fi": "Saa, pieni pala maustamatonta, kokonaan kypsäksi leivottua leipää kelpaa satunnaiseksi herkuksi. ASPCA:n mukaan leivottu leipä on turvallista satunnaisena herkkuna, kunhan se ei ole rusinaleipää. Raaka, kohoava taikina on eri asia, ja se on pidettävä poissa kissan ulottuvilta."
+    "fi": "Saa, pieni pala maustamatonta, kokonaan kypsäksi leivottua leipää kelpaa satunnaiseksi herkuksi. ASPCA:n mukaan leivottu leipä on turvallista satunnaisena herkkuna, kunhan se ei ole rusinaleipää. Raaka, kohoava taikina on eri asia, ja se on pidettävä poissa kissan ulottuvilta.",
+    "nb": "Ja, en liten bit vanlig, helt gjennombakt brød er greit som en godbit en gang iblant. ASPCA sier at bakt brød er trygt som en sjelden godbit, så lenge det ikke er rosinbrød. Rå deig som hever seg, er noe helt annet og må holdes unna katter."
   },
   "why": {
     "en": "On a page about dogs and cats, the ASPCA says fully baked bread is safe for pets as an occasional treat, so long as it is not raisin bread. Agriculture Victoria explains that the risk from yeast dough diminishes once the dough is cooked and the yeast has fully risen. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Blue Cross says cats need a meat-based diet. Cats Protection advises sticking to cat treats rather than human foods.",
@@ -45,7 +49,8 @@
     "hr": "ASPCA na stranici o psima i mačkama navodi da je potpuno pečen kruh za kućne ljubimce siguran kao povremena poslastica, osim kruha s grožđicama. Agriculture Victoria objašnjava da rizik od tijesta s kvascem slabi nakon pečenja, kad je kvasac do kraja narastao. International Cat Care ističe da mačke, kao strogi mesojedi, slabije probavljaju i iskorištavaju ugljikohidrate, a Blue Cross da im je potrebna prehrana temeljena na mesu. Cats Protection savjetuje da se umjesto ljudske hrane daju mačje poslastice.",
     "sv": "På en sida om hundar och katter säger ASPCA att helt bakat bröd är säkert för husdjur som godbit då och då, så länge det inte är russinbröd. Agriculture Victoria förklarar att risken med jäsdeg minskar när degen har gräddats och jästen har jäst färdigt. International Cat Care säger att katter, som är obligata köttätare, har svårare att smälta och utnyttja kolhydrater, och Blue Cross säger att katter behöver en köttbaserad kost. Cats Protection rekommenderar att du håller dig till kattgodis i stället för mat från matbordet.",
     "da": "På en side om hunde og katte skriver ASPCA at helt bagt brød er ufarligt for kæledyr som en godbid af og til, så længe det ikke er rosinbrød. Agriculture Victoria forklarer at risikoen ved gærdej bliver mindre, når dejen er bagt, og gæren har hævet helt. International Cat Care skriver at katte som obligate kødædere har sværere ved at fordøje og udnytte kulhydrater, og Blue Cross skriver at katte har brug for en kødbaseret kost. Cats Protection anbefaler at holde sig til godbidder til katte frem for menneskemad.",
-    "fi": "ASPCA toteaa koiria ja kissoja käsittelevällä sivullaan, että kokonaan kypsäksi leivottu leipä on lemmikeille turvallista satunnaisena herkkuna, kunhan se ei ole rusinaleipää. Agriculture Victorian mukaan hiivataikinan riski pienenee, kun taikina on kypsennetty ja hiiva on ehtinyt kohota kokonaan. International Cat Caren mukaan kissat ovat ehdottomia lihansyöjiä, joiden kyky sulattaa ja hyödyntää hiilihydraatteja on rajallisempi, ja Blue Crossin mukaan kissat tarvitsevat lihapohjaista ruokavaliota. Cats Protection neuvoo pitäytymään kissoille tarkoitetuissa herkuissa ihmisten ruoan sijaan."
+    "fi": "ASPCA toteaa koiria ja kissoja käsittelevällä sivullaan, että kokonaan kypsäksi leivottu leipä on lemmikeille turvallista satunnaisena herkkuna, kunhan se ei ole rusinaleipää. Agriculture Victorian mukaan hiivataikinan riski pienenee, kun taikina on kypsennetty ja hiiva on ehtinyt kohota kokonaan. International Cat Caren mukaan kissat ovat ehdottomia lihansyöjiä, joiden kyky sulattaa ja hyödyntää hiilihydraatteja on rajallisempi, ja Blue Crossin mukaan kissat tarvitsevat lihapohjaista ruokavaliota. Cats Protection neuvoo pitäytymään kissoille tarkoitetuissa herkuissa ihmisten ruoan sijaan.",
+    "nb": "På en side om hunder og katter sier ASPCA at helt gjennombakt brød er trygt for kjæledyr som en sjelden godbit, så lenge det ikke er rosinbrød. Agriculture Victoria forklarer at risikoen fra gjærdeig blir mindre når deigen er bakt og har hevet seg helt ferdig. International Cat Care sier at katter, som obligate kjøttetere, har dårligere evne til å fordøye og utnytte karbohydrater, og Blue Cross sier at katter trenger et kjøttbasert kosthold. Cats Protection anbefaler å holde seg til godbiter laget for katter i stedet for menneskemat."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "hr": "Daj samo mali komadić, povremeno. Ako je mačka pojela sirovo tijesto koje se diže, a ne pečen kruh, odmah nazovi veterinara i ne čekaj da se pojave znakovi.",
     "sv": "Ge bara en liten bit då och då. Om din katt har ätit rå eller jäsande deg i stället för bakat bröd ska du kontakta din veterinär direkt och inte vänta på att symtom ska dyka upp.",
     "da": "Giv kun et lille stykke af og til. Hvis din kat har spist rå eller hævende dej i stedet for bagt brød, skal du kontakte din dyrlæge med det samme og ikke vente på, at der kommer symptomer.",
-    "fi": "Anna vain pieni pala silloin tällöin. Jos kissasi on syönyt raakaa tai kohoavaa taikinaa leivotun leivän sijaan, ota heti yhteyttä eläinlääkäriin äläkä odota oireita."
+    "fi": "Anna vain pieni pala silloin tällöin. Jos kissasi on syönyt raakaa tai kohoavaa taikinaa leivotun leivän sijaan, ota heti yhteyttä eläinlääkäriin äläkä odota oireita.",
+    "nb": "Gi bare en liten bit nå og da. Hvis katten har spist rå deig, eller deig som hever seg, i stedet for bakt brød, kontakt dyrlegen med en gang, og ikke vent på symptomer."
   },
   "serving": {
     "en": "A small piece of plain, fully baked bread. Never raisin bread and never raw dough.",
@@ -64,7 +70,8 @@
     "hr": "Mali komadić običnog, potpuno pečenog kruha. Nikad kruh s grožđicama i nikad sirovo tijesto.",
     "sv": "En liten bit okryddat, helt bakat bröd. Aldrig russinbröd och aldrig rå deg.",
     "da": "Et lille stykke almindeligt, gennembagt brød. Aldrig rosinbrød og aldrig rå dej.",
-    "fi": "Pieni pala maustamatonta, kokonaan kypsäksi leivottua leipää. Ei koskaan rusinaleipää eikä raakaa taikinaa."
+    "fi": "Pieni pala maustamatonta, kokonaan kypsäksi leivottua leipää. Ei koskaan rusinaleipää eikä raakaa taikinaa.",
+    "nb": "En liten bit vanlig, helt gjennombakt brød. Aldri rosinbrød og aldri rå deig."
   },
   "child": {
     "en": "A tiny bit of plain bread is an okay treat now and then. Cats mostly need meat, and raw dough is only for baking.",
@@ -73,7 +80,8 @@
     "hr": "Sitan komadić običnog kruha povremeno je u redu kao poslastica. Mačkama je ponajviše potrebno meso, a sirovo tijesto služi samo za pečenje.",
     "sv": "Lite vanligt bröd är en okej godbit då och då. Katter behöver mest kött, och rå deg är bara till för att baka av.",
     "da": "En lille bid almindeligt brød er en fin godbid en gang imellem. Katte har mest brug for kød, og rå dej er kun til bagning.",
-    "fi": "Aivan pieni pala maustamatonta leipää kelpaa kissalle joskus herkuksi. Kissat tarvitsevat enimmäkseen lihaa, ja raaka taikina on tarkoitettu vain leivontaan."
+    "fi": "Aivan pieni pala maustamatonta leipää kelpaa kissalle joskus herkuksi. Kissat tarvitsevat enimmäkseen lihaa, ja raaka taikina on tarkoitettu vain leivontaan.",
+    "nb": "En bitteliten bit vanlig brød er greit som en godbit nå og da. Katter trenger mest kjøtt, og rå deig er bare til baking."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "hr": "Je li sirovo tijesto za kruh sigurno za mačke?",
         "sv": "Är rå bröddeg säker för katter?",
         "da": "Er rå brøddej ufarlig for katte?",
-        "fi": "Onko raaka leipätaikina turvallista kissoille?"
+        "fi": "Onko raaka leipätaikina turvallista kissoille?",
+        "nb": "Er rå brøddeig trygg for katter?"
       },
       "a": {
         "en": "No. The ASPCA says dogs and cats should never be allowed to eat uncooked, yeasted bread dough, and Agriculture Victoria says yeast dough can rise and cause gas to build up in a cat's digestive system.",
@@ -93,7 +102,8 @@
         "hr": "Ne. ASPCA navodi da psima i mačkama nikad ne treba dopustiti da jedu nepečeno tijesto s kvascem, a Agriculture Victoria da tijesto s kvascem može narasti i uzrokovati nakupljanje plinova u probavnom sustavu mačke.",
         "sv": "Nej. ASPCA säger att hundar och katter aldrig ska få äta obakad, jäst bröddeg, och Agriculture Victoria säger att jäsdeg kan jäsa vidare och göra att gas samlas i kattens matsmältningssystem.",
         "da": "Nej. ASPCA skriver at hunde og katte aldrig må få lov til at spise rå brøddej med gær, og Agriculture Victoria skriver at gærdej kan hæve og få gas til at samle sig i kattens fordøjelsessystem.",
-        "fi": "Ei. ASPCA:n mukaan koirien ja kissojen ei koskaan saa antaa syödä raakaa hiivataikinaa, ja Agriculture Victorian mukaan hiivataikina voi kohota ja aiheuttaa kaasun kertymistä kissan ruoansulatuskanavaan."
+        "fi": "Ei. ASPCA:n mukaan koirien ja kissojen ei koskaan saa antaa syödä raakaa hiivataikinaa, ja Agriculture Victorian mukaan hiivataikina voi kohota ja aiheuttaa kaasun kertymistä kissan ruoansulatuskanavaan.",
+        "nb": "Nei. ASPCA sier at hunder og katter aldri skal få spise rå gjærdeig, og Agriculture Victoria sier at gjærdeig kan heve seg og gi gassopphopning i kattens fordøyelsessystem."
       }
     },
     {
@@ -104,7 +114,8 @@
         "hr": "Smiju li mačke jesti kruh s grožđicama?",
         "sv": "Får katter äta russinbröd?",
         "da": "Må katte spise rosinbrød?",
-        "fi": "Saako kissa syödä rusinaleipää?"
+        "fi": "Saako kissa syödä rusinaleipää?",
+        "nb": "Kan katter spise rosinbrød?"
       },
       "a": {
         "en": "No. The ASPCA's advice that baked bread is fine as an occasional treat leaves out raisin bread.",
@@ -113,7 +124,8 @@
         "hr": "Ne. Savjet ASPCA-a da je pečen kruh u redu kao povremena poslastica ne odnosi se na kruh s grožđicama.",
         "sv": "Nej. ASPCA:s råd att bakat bröd går bra som godbit då och då gäller inte russinbröd.",
         "da": "Nej. Når ASPCA skriver at bagt brød er fint som en godbid af og til, gælder det ikke rosinbrød.",
-        "fi": "Ei. ASPCA:n neuvo, että leivottu leipä kelpaa satunnaiseksi herkuksi, ei koske rusinaleipää."
+        "fi": "Ei. ASPCA:n neuvo, että leivottu leipä kelpaa satunnaiseksi herkuksi, ei koske rusinaleipää.",
+        "nb": "Nei. ASPCAs råd om at bakt brød er greit som en sjelden godbit gjelder ikke rosinbrød."
       }
     }
   ],
@@ -200,6 +212,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "783db85415a48f93fe20af19259d8d9eae2e75965a354ecfc2ddab6c6af75513"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dd8523cccbeb9f2a7975279b2ca43a3a72c2d0e7d9071899625355e2a417844a"
     }
   }
 }

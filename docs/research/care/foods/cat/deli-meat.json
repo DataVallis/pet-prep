@@ -7,7 +7,8 @@
     "hr": "Mesni narezak",
     "sv": "Charkuterier och pålägg",
     "da": "Pålæg",
-    "fi": "Leikkele"
+    "fi": "Leikkele",
+    "nb": "Kjøttpålegg"
   },
   "question": {
     "en": "Can cats eat deli meat?",
@@ -15,7 +16,8 @@
     "hr": "Smiju li mačke jesti mesni narezak?",
     "sv": "Får katter äta pålägg?",
     "da": "Må katte spise pålæg?",
-    "fi": "Saako kissa syödä leikkelettä?"
+    "fi": "Saako kissa syödä leikkelettä?",
+    "nb": "Kan katter spise kjøttpålegg?"
   },
   "url_slug": {
     "en": "deli-meat",
@@ -23,7 +25,8 @@
     "hr": "mesni-narezak",
     "sv": "palagg",
     "da": "paalaeg",
-    "fi": "leikkele"
+    "fi": "leikkele",
+    "nb": "kjottpalegg"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "hr": "Bolje ne. Narezak je obično bogat soli i može sadržavati začine, konzervanse ili nitrate koji mogu nadražiti mačji želudac. RSPCA Australia savjetuje da se mačkama ne daju termički obrađeni industrijski mesni proizvodi. Bolji je izbor jednostavno termički obrađeno meso bez začina.",
     "sv": "Det är bäst att låta bli. Charkuterier och smörgåspålägg är oftast salta och kan innehålla kryddor, konserveringsmedel eller nitrat som kan reta kattens mage. RSPCA Australia avråder från tillagat, industriellt framställt kött åt katter. Okryddat, tillagat kött är ett bättre val.",
     "da": "Helst ikke. Pålæg af kød er som regel meget salt og kan indeholde krydderier, konserveringsmidler eller nitrater, som kan give kattens mave problemer. RSPCA Australia fraråder at give katte forarbejdede, tilberedte kødprodukter. Almindeligt tilberedt kød uden krydderier er et bedre valg.",
-    "fi": "Ei suositella. Leikkeleet ovat yleensä runsassuolaisia, ja niissä voi olla mausteita, säilöntäaineita tai nitraatteja, jotka voivat ärsyttää kissan vatsaa. RSPCA Australia neuvoo välttämään kypsennettyjä teollisia lihavalmisteita kissoille. Maustamaton kypsennetty liha on parempi valinta."
+    "fi": "Ei suositella. Leikkeleet ovat yleensä runsassuolaisia, ja niissä voi olla mausteita, säilöntäaineita tai nitraatteja, jotka voivat ärsyttää kissan vatsaa. RSPCA Australia neuvoo välttämään kypsennettyjä teollisia lihavalmisteita kissoille. Maustamaton kypsennetty liha on parempi valinta.",
+    "nb": "Det er best å la være. Kjøttpålegg er vanligvis salt og kan inneholde krydder, konserveringsmidler eller nitrat som kan gi katten urolig mage. RSPCA Australia anbefaler å unngå ferdiglagde, tilberedte kjøttprodukter til katter. Vanlig tilberedt kjøtt uten krydder er et bedre valg."
   },
   "why": {
     "en": "PetMD vets say cats shouldn't eat turkey lunch meat, because it is usually high in sodium and may contain seasonings, preservatives or nitrates. Purina notes that turkey deli meat and other processed turkey meat is usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency.",
@@ -40,7 +44,8 @@
     "hr": "Veterinari iz PetMD-a kažu da mačke ne bi smjele jesti puretinu iz narezaka, jer je obično bogata natrijem i može sadržavati začine, konzervanse ili nitrate. Purina napominje da su puretina iz narezaka i druga prerađena puretina obično prepune dodatnog natrija i začina, a neki dodani začini mogu biti otrovni za mačke. RSPCA Australia savjetuje izbjegavanje termički obrađenih industrijskih mesnih proizvoda, jer mogu sadržavati sulfitne konzervanse, koji se povezuju s nedostatkom tiamina (vitamina B1).",
     "sv": "Veterinärer på PetMD säger att katter inte bör äta kalkonpålägg, eftersom det oftast innehåller mycket natrium och kan innehålla kryddor, konserveringsmedel eller nitrat. Purina påpekar att kalkonpålägg och annat bearbetat kalkonkött oftast är fullt av extra natrium och kryddor, och att vissa tillsatta kryddor kan vara giftiga för katter. RSPCA Australia avråder från tillagat, industriellt framställt kött eftersom det kan innehålla sulfitkonserveringsmedel, som har kopplats till brist på tiamin (vitamin B1).",
     "da": "Dyrlæger fra PetMD skriver at katte ikke bør spise kalkunpålæg, fordi det som regel indeholder meget natrium og kan indeholde krydderier, konserveringsmidler eller nitrater. Purina skriver at kalkunpålæg og andet forarbejdet kalkunkød som regel er fyldt med ekstra natrium og krydderier, og at nogle af de tilsatte krydderier kan være giftige for katte. RSPCA Australia fraråder forarbejdede, tilberedte kødprodukter, fordi de kan indeholde sulfitkonserveringsmidler, som man har sat i forbindelse med mangel på tiamin (vitamin B1).",
-    "fi": "PetMD:n eläinlääkärien mukaan kissat eivät saa syödä kalkkunaleikkelettä, koska se on yleensä runsaasti natriumia sisältävää ja voi sisältää mausteita, säilöntäaineita tai nitraatteja. Purina toteaa, että kalkkunaleikkele ja muut jalostetut kalkkunalihavalmisteet sisältävät yleensä paljon ylimääräistä natriumia ja mausteita, ja jotkin lisätyt mausteet voivat olla kissoille myrkyllisiä. RSPCA Australia neuvoo välttämään kypsennettyjä teollisia lihavalmisteita, koska niissä voi olla sulfiittisäilöntäaineita, joiden on yhdistetty tiamiinin (B1-vitamiinin) puutokseen."
+    "fi": "PetMD:n eläinlääkärien mukaan kissat eivät saa syödä kalkkunaleikkelettä, koska se on yleensä runsaasti natriumia sisältävää ja voi sisältää mausteita, säilöntäaineita tai nitraatteja. Purina toteaa, että kalkkunaleikkele ja muut jalostetut kalkkunalihavalmisteet sisältävät yleensä paljon ylimääräistä natriumia ja mausteita, ja jotkin lisätyt mausteet voivat olla kissoille myrkyllisiä. RSPCA Australia neuvoo välttämään kypsennettyjä teollisia lihavalmisteita, koska niissä voi olla sulfiittisäilöntäaineita, joiden on yhdistetty tiamiinin (B1-vitamiinin) puutokseen.",
+    "nb": "Dyrleger hos PetMD sier at katter ikke bør spise kalkunpålegg, fordi det vanligvis har høyt natriuminnhold og kan inneholde krydder, konserveringsmidler eller nitrat. Purina påpeker at kalkunpålegg og annet bearbeidet kalkunkjøtt vanligvis er fullt av ekstra natrium og krydder, og at noen av krydderne kan være giftige for katter. RSPCA Australia anbefaler å unngå ferdiglagde, tilberedte kjøttprodukter fordi de kan inneholde sulfitter som konserveringsmiddel, som er satt i sammenheng med mangel på tiamin (vitamin B1)."
   },
   "signs": {
     "en": [
@@ -60,6 +65,9 @@
     ],
     "fi": [
       "Vatsavaivat"
+    ],
+    "nb": [
+      "Urolig mage"
     ]
   },
   "what_to_do": {
@@ -68,7 +76,8 @@
     "hr": "Ako je mačka pojela narezak začinjen lukom ili češnjakom, što prije se obrati veterinaru. Ako nakon toga ima želučane tegobe, nazovi veterinara za savjet.",
     "sv": "Om din katt har ätit pålägg som är kryddat med lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om katten får orolig mage efteråt, ring din veterinär och be om råd.",
     "da": "Hvis din kat har spist pålæg med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis katten får mavebesvær bagefter, skal du ringe til din dyrlæge for at få råd.",
-    "fi": "Jos kissasi söi leikkelettä, joka oli maustettu sipulilla tai valkosipulilla, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos kissalla on sen jälkeen vatsavaivoja, kysy neuvoa eläinlääkäriltä."
+    "fi": "Jos kissasi söi leikkelettä, joka oli maustettu sipulilla tai valkosipulilla, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos kissalla on sen jälkeen vatsavaivoja, kysy neuvoa eläinlääkäriltä.",
+    "nb": "Hvis katten har spist pålegg med løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis katten får urolig mage etterpå, ring dyrlegen for råd."
   },
   "serving": null,
   "child": {
@@ -77,7 +86,8 @@
     "hr": "Meso za sendviče previše je slano za mačke. Maca je najsretnija sa svojom mačjom hranom.",
     "sv": "Smörgåspålägg är för salt för katter. Katten mår bäst av sin egen kattmat.",
     "da": "Pålæg er for salt til katte. Din kat er gladest for sin egen kattemad.",
-    "fi": "Leivän päälle laitettava leikkele on kissalle liian suolaista. Kisu on onnellisin omalla kissanruoallaan."
+    "fi": "Leivän päälle laitettava leikkele on kissalle liian suolaista. Kisu on onnellisin omalla kissanruoallaan.",
+    "nb": "Pålegg er for salt for katter. Pusen blir gladest for sin egen kattemat."
   },
   "faq": [
     {
@@ -87,7 +97,8 @@
         "hr": "Koje meso mogu podijeliti s mačkom umjesto toga?",
         "sv": "Vilket kött kan jag dela med mig av i stället?",
         "da": "Hvilket kød kan jeg give i stedet?",
-        "fi": "Mitä lihaa voin antaa sen sijaan?"
+        "fi": "Mitä lihaa voin antaa sen sijaan?",
+        "nb": "Hvilket kjøtt kan jeg dele i stedet?"
       },
       "a": {
         "en": "Cooked, lean meats such as chicken or turkey without any spices or condiments are okay for cats. Avoid processed and seasoned meats.",
@@ -95,7 +106,8 @@
         "hr": "Termički obrađeno nemasno meso, poput piletine ili puretine bez ikakvih začina i dodataka, u redu je za mačke. Izbjegavaj prerađeno i začinjeno meso.",
         "sv": "Tillagat, magert kött som kyckling eller kalkon utan kryddor eller tillbehör går bra för katter. Undvik bearbetat och kryddat kött.",
         "da": "Tilberedt, magert kød som kylling eller kalkun uden krydderier eller sovs er fint til katte. Undgå forarbejdet og krydret kød.",
-        "fi": "Kypsennetty vähärasvainen liha, kuten kana tai kalkkuna ilman mausteita tai lisukkeita, sopii kissoille. Vältä jalostettuja ja maustettuja lihavalmisteita."
+        "fi": "Kypsennetty vähärasvainen liha, kuten kana tai kalkkuna ilman mausteita tai lisukkeita, sopii kissoille. Vältä jalostettuja ja maustettuja lihavalmisteita.",
+        "nb": "Magert, tilberedt kjøtt som kylling eller kalkun, uten krydder eller tilsetninger, er greit for katter. Unngå bearbeidet og krydret kjøtt."
       }
     }
   ],
@@ -199,6 +211,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4a3438d1d1fbc42594261cea9ff61a574b287c342edc237b126c9a99d5ad8f96"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d342d649a816fb1122cbce958bc5624097a751c926b25d302bf3c7a058bce2a6"
     }
   }
 }

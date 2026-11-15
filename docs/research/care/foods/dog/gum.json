@@ -8,7 +8,8 @@
     "hr": "Žvakaća guma",
     "sv": "Tuggummi",
     "da": "Tyggegummi",
-    "fi": "Purukumi"
+    "fi": "Purukumi",
+    "nb": "Tyggegummi"
   },
   "question": {
     "en": "Can dogs eat chewing gum?",
@@ -17,7 +18,8 @@
     "hr": "Smiju li psi jesti žvakaću gumu?",
     "sv": "Får hundar äta tuggummi?",
     "da": "Må hunde spise tyggegummi?",
-    "fi": "Saako koira syödä purukumia?"
+    "fi": "Saako koira syödä purukumia?",
+    "nb": "Kan hunder spise tyggegummi?"
   },
   "url_slug": {
     "en": "chewing-gum",
@@ -26,7 +28,8 @@
     "hr": "zvakaca-guma",
     "sv": "tuggummi",
     "da": "tyggegummi",
-    "fi": "purukumi"
+    "fi": "purukumi",
+    "nb": "tyggegummi"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "hr": "Ne. Žvakaća guma nije za pse. Guma bez šećera gotovo uvijek sadrži ksilitol, koji je za pse opasan kao čokolada: može izazvati nagli pad šećera u krvi, napadaje i zatajenje jetre. Ako pas pojede gumu, odmah ga odvedi veterinaru.",
     "sv": "Nej. Tuggummi är inte till för hundar. Sockerfritt tuggummi innehåller nästan alltid xylitol, som är lika farligt för hundar som choklad: det kan orsaka ett snabbt blodsockerfall, kramper och leversvikt. Om din hund äter tuggummi ska du åka till veterinären omedelbart.",
     "da": "Nej. Tyggegummi er ikke noget for hunde. Sukkerfrit tyggegummi indeholder næsten altid xylitol, som er lige så farligt for hunde som chokolade: det kan give et hurtigt fald i blodsukkeret, kramper og leversvigt. Hvis din hund spiser tyggegummi, skal du tage den med til dyrlægen med det samme.",
-    "fi": "Ei saa. Purukumi ei ole koirille. Sokeriton purukumi sisältää lähes aina ksylitolia, joka on koirille yhtä vaarallista kuin suklaa: se voi aiheuttaa verensokerin nopean laskun, kouristuskohtauksia ja maksan vajaatoiminnan. Jos koirasi syö purukumia, vie koira heti eläinlääkärille."
+    "fi": "Ei saa. Purukumi ei ole koirille. Sokeriton purukumi sisältää lähes aina ksylitolia, joka on koirille yhtä vaarallista kuin suklaa: se voi aiheuttaa verensokerin nopean laskun, kouristuskohtauksia ja maksan vajaatoiminnan. Jos koirasi syö purukumia, vie koira heti eläinlääkärille.",
+    "nb": "Nei. Tyggegummi er ikke for hunder. Sukkerfritt tyggegummi inneholder nesten alltid xylitol, som er like farlig for hunder som sjokolade: det kan gi et raskt fall i blodsukkeret, kramper og leversvikt. Hvis hunden spiser tyggegummi, må du til dyrlegen umiddelbart."
   },
   "why": {
     "en": "Xylitol is the most common and dangerous ingredient in gum, and some dogs develop severe liver damage after eating it. Gum also often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and large amounts of gum can clump in the stomach and cause a blockage. Because sugar-free gum almost always contains xylitol, we rate gum as toxic.",
@@ -45,7 +49,8 @@
     "hr": "Ksilitol je najčešći i najopasniji sastojak žvakaćih guma, a kod nekih pasa nakon što ga pojedu nastane teško oštećenje jetre. Žvakaća guma često sadrži i šećer, umjetna sladila i druge sastojke koji mogu biti otrovni za pse, a velike količine gume mogu se zgrudati u želucu i izazvati začepljenje. Budući da guma bez šećera gotovo uvijek sadrži ksilitol, gumu ocjenjujemo kao otrovnu.",
     "sv": "Xylitol är den vanligaste och farligaste ingrediensen i tuggummi, och vissa hundar får svåra leverskador efter att ha ätit det. Tuggummi innehåller dessutom ofta socker, konstgjorda sötningsmedel och andra ingredienser som kan vara giftiga för hundar, och stora mängder tuggummi kan klumpa ihop sig i magen och orsaka stopp. Eftersom sockerfritt tuggummi nästan alltid innehåller xylitol bedömer vi tuggummi som giftigt.",
     "da": "Xylitol er den mest almindelige og farligste ingrediens i tyggegummi, og nogle hunde får alvorlig leverskade efter at have spist det. Tyggegummi indeholder også ofte sukker, kunstige sødemidler og andre ingredienser, som kan være giftige for hunde, og store mængder tyggegummi kan klumpe sammen i maven og give en blokering. Fordi sukkerfrit tyggegummi næsten altid indeholder xylitol, vurderer vi tyggegummi som giftigt.",
-    "fi": "Ksylitoli on purukumin yleisin ja vaarallisin ainesosa, ja joillekin koirille on kehittynyt vaikea maksavaurio sen syömisen jälkeen. Purukumissa on usein myös sokeria, keinotekoisia makeutusaineita ja muita koirille myrkyllisiä ainesosia, ja suuret määrät purukumia voivat kasaantua mahalaukkuun ja aiheuttaa tukoksen. Koska sokeriton purukumi sisältää lähes aina ksylitolia, luokittelemme purukumin myrkylliseksi."
+    "fi": "Ksylitoli on purukumin yleisin ja vaarallisin ainesosa, ja joillekin koirille on kehittynyt vaikea maksavaurio sen syömisen jälkeen. Purukumissa on usein myös sokeria, keinotekoisia makeutusaineita ja muita koirille myrkyllisiä ainesosia, ja suuret määrät purukumia voivat kasaantua mahalaukkuun ja aiheuttaa tukoksen. Koska sokeriton purukumi sisältää lähes aina ksylitolia, luokittelemme purukumin myrkylliseksi.",
+    "nb": "Xylitol er den vanligste og farligste ingrediensen i tyggegummi, og noen hunder får alvorlig leverskade etter å ha spist det. Tyggegummi inneholder også ofte sukker, kunstige søtstoffer og andre ingredienser som kan være giftige for hunder, og store mengder tyggegummi kan klumpe seg sammen i magen og gi tarmblokkering. Siden sukkerfritt tyggegummi nesten alltid inneholder xylitol, vurderer vi tyggegummi som giftig."
   },
   "signs": {
     "en": [
@@ -103,6 +108,14 @@
       "Kouristuskohtaukset",
       "Väsymys",
       "Oireet voivat alkaa jo muutamassa minuutissa"
+    ],
+    "nb": [
+      "Oppkast",
+      "Vaklende gange eller problemer med å gå",
+      "Skjelvinger",
+      "Kramper",
+      "Sløvhet",
+      "Tegnene kan komme i løpet av minutter"
     ]
   },
   "what_to_do": {
@@ -112,7 +125,8 @@
     "hr": "Odmah odvedi psa veterinaru i nazovi telefonsku liniju za otrovanja životinja za savjet. Psu ne daj ništa na usta osim ako ti veterinar to ne kaže.",
     "sv": "Åk till veterinären omedelbart och ring giftrådgivningen för djur för råd. Ge inte din hund något genom munnen om inte din veterinär säger det.",
     "da": "Tag din hund med til dyrlægen med det samme, og ring til en giftrådgivning for dyr for at få råd. Giv ikke din hund noget gennem munden, medmindre din dyrlæge siger, at du skal.",
-    "fi": "Vie koirasi heti eläinlääkärille ja soita eläinten myrkytysneuvontaan neuvoja varten. Älä anna koiralle mitään suun kautta, ellei eläinlääkäri neuvo sitä."
+    "fi": "Vie koirasi heti eläinlääkärille ja soita eläinten myrkytysneuvontaan neuvoja varten. Älä anna koiralle mitään suun kautta, ellei eläinlääkäri neuvo sitä.",
+    "nb": "Ta hunden med til dyrlegen umiddelbart, og ring giftinformasjon for dyr for å få råd. Ikke gi hunden noe i munnen med mindre dyrlegen ber deg om det."
   },
   "serving": null,
   "child": {
@@ -122,7 +136,8 @@
     "hr": "Žvakaća guma nije za pse. Gumu drži podalje od psa i odmah reci odrasloj osobi ako je pas pojede.",
     "sv": "Tuggummi är inte för hundar. Håll tuggummi borta från din hund och berätta direkt för en vuxen om din hund äter något.",
     "da": "Tyggegummi er ikke til hunde. Hold tyggegummi væk fra din hund, og sig det straks til en voksen, hvis din hund har spist noget.",
-    "fi": "Purukumi ei ole koirille. Pidä purukumi poissa koirasi ulottuvilta ja kerro heti aikuiselle, jos koirasi syö sitä."
+    "fi": "Purukumi ei ole koirille. Pidä purukumi poissa koirasi ulottuvilta ja kerro heti aikuiselle, jos koirasi syö sitä.",
+    "nb": "Tyggegummi er ikke for hunder. Hold tyggegummi unna hunden din, og si fra til en voksen med en gang hvis hunden spiser noe."
   },
   "faq": [
     {
@@ -133,7 +148,8 @@
         "hr": "Je li obična guma sa šećerom sigurna za pse?",
         "sv": "Är vanligt tuggummi med socker säkert för hundar?",
         "da": "Er almindeligt tyggegummi med sukker ufarligt for hunde?",
-        "fi": "Onko tavallinen sokeria sisältävä purukumi turvallista koirille?"
+        "fi": "Onko tavallinen sokeria sisältävä purukumi turvallista koirille?",
+        "nb": "Er vanlig tyggegummi med sukker trygt for hunder?"
       },
       "a": {
         "en": "Not really. Gum often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and a lot of gum can clump in the stomach. Call your vet if your dog ate some.",
@@ -142,7 +158,8 @@
         "hr": "Ne baš. Guma često sadrži šećer, umjetna sladila i druge sastojke koji mogu biti otrovni za pse, a mnogo gume može se zgrudati u želucu. Nazovi veterinara ako je pas pojeo gumu.",
         "sv": "Inte direkt. Tuggummi innehåller ofta socker, konstgjorda sötningsmedel och andra ingredienser som kan vara giftiga för hundar, och mycket tuggummi kan klumpa ihop sig i magen. Kontakta din veterinär om din hund har ätit något.",
         "da": "Ikke rigtig. Tyggegummi indeholder ofte sukker, kunstige sødemidler og andre ingredienser, som kan være giftige for hunde, og meget tyggegummi kan klumpe sammen i maven. Ring til din dyrlæge, hvis din hund har spist noget.",
-        "fi": "Ei oikeastaan. Purukumissa on usein sokeria, keinotekoisia makeutusaineita ja muita koirille myrkyllisiä ainesosia, ja suuri määrä purukumia voi kasaantua mahalaukkuun. Soita eläinlääkärille, jos koirasi söi sitä."
+        "fi": "Ei oikeastaan. Purukumissa on usein sokeria, keinotekoisia makeutusaineita ja muita koirille myrkyllisiä ainesosia, ja suuri määrä purukumia voi kasaantua mahalaukkuun. Soita eläinlääkärille, jos koirasi söi sitä.",
+        "nb": "Egentlig ikke. Tyggegummi inneholder ofte sukker, kunstige søtstoffer og andre ingredienser som kan være giftige for hunder, og mye tyggegummi kan klumpe seg sammen i magen. Ring dyrlegen hvis hunden har spist noe."
       }
     },
     {
@@ -153,7 +170,8 @@
         "hr": "Koji još proizvodi sadrže ksilitol?",
         "sv": "Vilka andra produkter innehåller xylitol?",
         "da": "Hvilke andre produkter indeholder xylitol?",
-        "fi": "Missä muissa tuotteissa on ksylitolia?"
+        "fi": "Missä muissa tuotteissa on ksylitolia?",
+        "nb": "Hvilke andre produkter inneholder xylitol?"
       },
       "a": {
         "en": "Some sugar-free candy, toothpaste, baked goods, medicines and drink mixes. On labels it may also appear as birch sugar, wood sugar or birch bark extract.",
@@ -162,7 +180,8 @@
         "hr": "Neki bomboni bez šećera, zubne paste, pekarski proizvodi, lijekovi i praškovi za napitke. Na deklaracijama može biti naveden i kao brezov šećer, drvni šećer ili ekstrakt brezove kore.",
         "sv": "Vissa sockerfria godsaker, tandkrämer, bakverk, läkemedel och drickspulver. På innehållsförteckningar kan det också stå björksocker, vedsocker eller björkbarksextrakt.",
         "da": "Noget sukkerfrit slik, tandpasta, bagværk, medicin og drikkepulver. På varedeklarationer kan det også stå som birkesukker, træsukker eller birkebarkekstrakt.",
-        "fi": "Joissakin sokerittomissa karkeissa, hammastahnoissa, leivonnaisissa, lääkkeissä ja juomajauheissa. Pakkausmerkinnöissä se voi esiintyä myös nimellä koivusokeri, puusokeri tai koivun kuoren uute."
+        "fi": "Joissakin sokerittomissa karkeissa, hammastahnoissa, leivonnaisissa, lääkkeissä ja juomajauheissa. Pakkausmerkinnöissä se voi esiintyä myös nimellä koivusokeri, puusokeri tai koivun kuoren uute.",
+        "nb": "Noe sukkerfritt godteri, tannkrem, bakevarer, medisiner og drikkepulver. På ingredienslisten kan det også stå som bjørkesukker, tresukker eller bjørkebarkekstrakt."
       }
     }
   ],
@@ -291,6 +310,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "93560fec7668fe57d09a49ced0cca94b95cbefaf0c2df2f8ca500c6045b46fa7"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ff90ba52053974e012bdf73e4c8829d7a4a14f878db15902689deabc061bc0d0"
     }
   }
 }
