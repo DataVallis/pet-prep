@@ -914,6 +914,37 @@ describe('treats wait for their clip', function () {
         postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 8);
     });
 
+    it('migration: treat rows given up before the rule get one fresh round of the automatic recovery; durable rows stay given up', function () {
+        Queue::fake([SendItemMediaAlert::class]);
+        [, $child, $pet] = imFamily(null);
+        PetItem::create(['pet_id' => $pet->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 10, 'acquired_at' => now()->subDays(5)]);
+        artisan('media:item-media')->assertSuccessful();
+        $image = ItemMedia::where('item_key', 'treats')->where('kind', 'image')->firstOrFail();
+        sendFalWebhook(['request_id' => $image->request_id, 'status' => 'OK', 'payload' => ['images' => [['url' => "https://v3.fal.media/files/im/{$image->request_id}.jpg"]]]])->assertOk();
+        $clip = ItemMedia::where('item_key', 'treats')->where('kind', 'clip')->firstOrFail();
+        // Given up before the rule (failed generation, retries used, announced as »no action needed«).
+        imFailWebhook($clip);
+        $clip->refresh()->forceFill(['auto_retries' => 2, 'exhausted_at' => now()->subDays(3), 'alerted_at' => now()->subDays(3), 'completed_at' => now()->subDays(3)])->save();
+        $bed = ItemMedia::create(['scope' => 'pet', 'pet_id' => $pet->id, 'item_key' => 'bed', 'design' => 'dog_bed_round_grey', 'kind' => 'image',
+            'status' => 'failed', 'error_reason' => 'generation_failed', 'auto_retries' => 2, 'exhausted_at' => now()->subDays(3)]);
+        expect(imChildState($child)->json('wishes.treats.ready'))->toBeFalse();
+
+        $migration = require database_path('migrations/2027_04_07_130000_reopen_given_up_treat_content.php');
+        expect($migration->reopenGivenUpTreats())->toBe(1)
+            ->and($migration->reopenGivenUpTreats())->toBe(0) // idempotent
+            ->and($clip->fresh()->exhausted_at)->toBeNull()
+            ->and($clip->fresh()->auto_retries)->toBe(0)
+            ->and($bed->fresh()->exhausted_at)->not->toBeNull();
+
+        // The next scheduled pass retries it (no manual step) and the treat unlocks.
+        artisan('media:item-media')->assertSuccessful();
+        expect(imFalSubmits('clip'))->toHaveCount(2);
+        imComplete();
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9);
+        Queue::assertNotPushed(SendItemMediaAlert::class);
+    });
+
     it('never locks a pet that gets no AI media (drawn stage) and reports no_treats before the clip', function () {
         [$parent, $child, $pet] = imFamily(null, ['media_status' => 'disabled'], withPicture: false);
         imAs($child);
