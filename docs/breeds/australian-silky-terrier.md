@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `australian_silky_terrier` (viri S855–S863; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S856) |
 | Izvor | FCI št. 236, skupina 3, sekcija 4 (pritlikavi terierji), Avstralija (S855) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 111. mesto »Silky Terrier« (S174, zapisano 2026-11-14 v vrstici 113) |
-| PR-ji | pet-prep #1131 (pasma) · portret pet-prep PR `feat/M5-R10-115-australian-silky-terrier-portrait` · spletna stran: pet-prep-website `feat/register-australian-silky-terrier` |
+| PR-ji | pet-prep #1131 (pasma, združen `58d7ca9`) · portret pet-prep PR `feat/M5-R10-115-australian-silky-terrier-portrait` (zagon `breed-portraits.yml` 43670136362, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-australian-silky-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Česanje vsak dan, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-15 |
 | Ščetkanje zob vsak dan, čiščenje ušes vsaka 2 tedna (otrok), opomnik staršem: kopanje vsake 4 tedne | 🛠 | 💶 izziv | M5-R15 / M5-R18 / M5-R19 | 2026-11-15 |
 | Barva (izbirnik: modro-rjavkast, edina barva standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-15 |
-| AI portret v registru | 🗓 po združitvi (§8 runbooka) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/australian-silky-terrier`, `/sl/zivali/psi/avstralski-svilnati-terier`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), modro-rjavkast, pokončna ušesa, naraven rep | — | M5-R11-04 | 2026-11-15 |
+| Stran na petprep.si (`/animals/dogs/australian-silky-terrier`, `/sl/zivali/psi/avstralski-svilnati-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 

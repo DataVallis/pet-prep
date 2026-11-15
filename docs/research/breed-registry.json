@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "12e57530afa2c5db0882c299bb6fc173584accd7023202594b05acee6e38265e"
+      "sha256": "b5c4feb5e313c2c744c648a2e3e154d4138560644bc924f0d1042c656f176552"
     }
   },
   "suitability_vocabulary": {
@@ -65277,7 +65277,12 @@
           "S858"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "australian-silky-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
