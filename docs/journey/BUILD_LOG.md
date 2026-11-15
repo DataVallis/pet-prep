@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — Menjava peska s tremi kretnjami: vleci, drgni, drži
+
+**Kaj:** David je po popravku menjave peska rekel: »Želim da je bolj interaktivno.« Tedenska menjava ima zdaj za vsak korak svojo kretnjo in risbo, ki sledi prstu: stranišče povlečeš do koša (nagne se in star pesek se strese vanj, trije vleki), z drgnjenjem umiješ osem madežev (pena pod prstom), s pritiskom in držanjem vreče nasuješ svež pesek do označene črte (5 sekund). Vse je narisano v aplikaciji — brez AI posnetkov, strošek 0 $. Strežnik se ni spremenil: ista 30-sekundna seja, ista ocena, ista tedenska rutina. Zgrajeno in pokrito s testi (36 novih), **na telefonu še ni preverjeno**.
+**Zakaj je pomembno:** prej so bili vsi trije koraki isto drgnjenje po mirujoči sliki; zdaj otrok z roko naredi to, kar se pri menjavi peska res dela — izprazni, umije, napolni.
+**Kako povedati:** 🧒 »Stresi star pesek v koš, zdrgni madeže in nasuj svežega do črte.« 👩 »Opravilo, ki ga otrok razume z rokami — tri kretnje za tri korake, 30 sekund.« 🛠 »Nova igra brez spremembe API-ja: tri kretnje preslikane na iste poteze, ki jih strežnik že ocenjuje; gre v OTA.«
+
 ## 2026-11-15 — Nadgradnja v izziv: starš izbere, ali se ocena skrbi obdrži
 
 **Kaj:** Do zdaj se je ocena skrbi ob nadgradnji brezplačnega ljubljenčka v 12-tedenski izziv vedno začela na novo. David: otrok, ki že mesec dni lepo skrbi za mešančka in za nagrado dobi izziv, ne sme začeti od začetka. Zdaj starš na plačilnem zaslonu izbere »Obdrži dosedanjo oceno« ali »Začni na novo«. Vsaka izbira ima razlago, kaj pomeni za oceno in potrdilo; pri oceni pod 70 aplikacija opozori, če bi jo starš obdržal. 12 tednov v obeh primerih teče od nakupa, izbira je dokončna.

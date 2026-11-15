@@ -18,6 +18,7 @@ import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { GAME_BACK_HINT_MS, GAME_ESCAPE_MS } from '@/modules/gameLayer/gameExit';
 import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
 import { resetCareShellForTests } from '@/modules/gameLayer/loadCareShell';
+import { resetLitterChangeGameForTests } from '@/modules/catCare/litterChange/loadLitterChangeGame';
 import { useAppStore } from '@/store/appStore';
 import {
   makeCareTask,
@@ -93,6 +94,7 @@ describe('care games on the game layer', () => {
     await i18n.changeLanguage('sl');
     setGameLayerAvailableForTests(true);
     resetCareShellForTests();
+    resetLitterChangeGameForTests();
     mocked.getChildPet.mockResolvedValue(catState());
     useAppStore.setState(useAppStore.getInitialState(), true);
     useAppStore.getState().signIn({ token: 't', user: { id: 2, name: 'Maja', email: null, role: 'child' }, pet: makePet(), awaitingContract: false });
@@ -101,6 +103,7 @@ describe('care games on the game layer', () => {
   afterEach(() => {
     setGameLayerAvailableForTests(false);
     resetCareShellForTests();
+    resetLitterChangeGameForTests();
     jest.useRealTimers();
   });
 
@@ -208,7 +211,9 @@ describe('care games on the game layer', () => {
 
   // David 2026-11-15 (production, Android): rubbing across the screen edge is Android's back
   // GESTURE; back used to be the × = »stop«, so the litter change fell back to »Začni menjavo«
-  // right after step 1 and the session was thrown away.
+  // right after step 1 and the session was thrown away. (Since the three gestures of 2026-11-15 the
+  // game is `LitterChangeGame` — here in hold mode, one button per step; its own tests are in
+  // `catCare/litterChange/__tests__`.)
   it('litter change: an Android back mid-game (edge swipe) and a refetch between the steps never reset it — a hint, the same session, every stroke sent', async () => {
     const back = captureAndroidBack();
     const session = makeChoreSession('litter_change');
@@ -223,12 +228,12 @@ describe('care games on the game layer', () => {
     const { rerender, client } = renderWithQuery(ui(viewOf(catState())));
     fireEvent.press(screen.getByTestId('cat-litter_change-start'));
     await advance(0);
-    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Izprazni stranišče');
+    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Drži gumb »Izprazni«');
     await advance(1_000);
-    fireEvent.press(screen.getByLabelText('Enkrat podrgni stranišče'));
-    // Step 1 ends (✓, »Umij ga«) …
+    fireEvent.press(screen.getByTestId('cat-litter_change-hold'));
+    // Step 1 ends (»Umij«) …
     await advance(9_500);
-    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Umij ga');
+    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Drži gumb »Umij«');
     // … a broadcast / refetch lands (a new view object; the child's own session is in it) …
     const running = makeLitterState({}, { session_running: true, can_start: false, blocked_reason: 'litter_change_session_active', session });
     rerender(<QueryClientProvider client={client}>{ui(viewOf({ ...catState(), litter: running } as ChildPetState))}</QueryClientProvider>);
@@ -242,11 +247,11 @@ describe('care games on the game layer', () => {
     // The hint replaces the step line at once (GameScreen's rule for every game).
     expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Za konec igre tapni ×.');
     // The game goes on with the same session: the hint leaves, the strokes before and after count.
-    fireEvent.press(screen.getByLabelText('Enkrat podrgni stranišče'));
+    fireEvent.press(screen.getByTestId('cat-litter_change-hold'));
     await advance(GAME_BACK_HINT_MS);
-    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Umij ga');
+    expect(screen.getByTestId('cat-litter_change-layer-top-line').props.children).toBe('Drži gumb »Umij«');
     await advance(8_800 - GAME_BACK_HINT_MS);
-    fireEvent.press(screen.getByLabelText('Enkrat podrgni stranišče'));
+    fireEvent.press(screen.getByTestId('cat-litter_change-hold'));
     expect(back.pressBack()).toBe(true);
     await advance(10_000);
     expect(mocked.startCareChore).toHaveBeenCalledTimes(1);
@@ -293,6 +298,11 @@ describe('care games on the game layer', () => {
       const { unmount } = renderWithQuery(<ChoreOverlay kind="litter_change" view={view} onClose={jest.fn()} reduceMotion clock={clock} />);
       fireEvent.press(screen.getByTestId('cat-litter_change-start'));
       await advance(0);
+      if (layer) {
+        // The three-gesture game draws once it knows its field.
+        fireEvent(screen.getByTestId('cat-litter_change-field', { includeHiddenElements: true }), 'layout', { nativeEvent: { layout: { x: 0, y: 0, width: 336, height: 516 } } });
+        await advance(0);
+      }
       expect(screen.queryByTestId('cat-litter_change-stage-video')).toBeNull();
       expect(screen.getByTestId('cat-tray', { includeHiddenElements: true })).toBeTruthy();
       unmount();

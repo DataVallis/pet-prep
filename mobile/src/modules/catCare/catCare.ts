@@ -796,6 +796,12 @@ export const CHORE_STRINGS = strings('cat', 'chore', {
     weekOpen: (when: string) => t('cat:chore.litter_change.weekOpen', { when }),
     // M5-T17: the hold scrub (patches + bar) of the weekly change.
     scrub: { bar: (percent: number) => t('cat:chore.litter_change.scrub.bar', { percent }) },
+    // 2026-11-15: the three gestures — what the drawing shows, as words for the screen reader.
+    playReadout: {
+      old: (percent: number) => t('cat:chore.litter_change.playReadout.old', { percent }),
+      spots: (n: number) => t('cat:chore.litter_change.playReadout.spots', { n }),
+      fresh: (percent: number) => t('cat:chore.litter_change.playReadout.fresh', { percent }),
+    },
   },
 });
 
