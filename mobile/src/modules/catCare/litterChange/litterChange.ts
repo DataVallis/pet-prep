@@ -75,10 +75,7 @@ export function litterLayout(W: number, H: number): LitterLayout {
   const bin = { x: W - binW / 2 - EDGE_PT, y: H - binH / 2 - EDGE_PT, w: binW, h: binH, mouthX: 0, mouthY: 0 };
   bin.mouthX = bin.x - binW * 0.08;
   bin.mouthY = bin.y - binH / 2 + binH * 0.08;
-  const bagW = Math.max(64, Math.min(96, W * 0.24));
-  const bagH = bagW * 1.25;
-  const bag = { x: W - bagW / 2 - EDGE_PT - 4, y: EDGE_PT + bagH / 2, w: bagW, h: bagH };
-  const home = { x: W / 2, y: Math.max(bag.y + bagH / 2 + trayH / 2 - bagH * 0.18, H * 0.36) };
+  const home = { x: W / 2, y: Math.max(trayH / 2 + EDGE_PT + 40, H * 0.34) };
   // Fully tipped: the tray's upper right corner sits just above the bin's mouth.
   const rad = (MAX_TILT_DEG * Math.PI) / 180;
   const a = trayW * 0.47;
@@ -89,9 +86,13 @@ export function litterLayout(W: number, H: number): LitterLayout {
   const pathLen = Math.hypot(pose.x - home.x, pose.y - home.y);
   const top = home.y - trayH / 2;
   const bigScale = Math.max(1, Math.min(1.35, (W - 2 * EDGE_PT) / trayW, (H - EDGE_PT - top) / trayH));
-  // A little lower than at rest (under the thumb), never over the bag's corner or the bottom edge.
+  // A little lower than at rest (under the thumb), never past the bottom edge.
   const bigH = trayH * bigScale;
   const big = { x: W / 2, y: Math.min(H - EDGE_PT - bigH / 2, Math.max(top + bigH / 2, H * 0.46)) };
+  // The bag waits just above the enlarged tray's right half (its tilted corner pours into it).
+  const bagW = Math.max(64, Math.min(96, W * 0.24));
+  const bagH = bagW * 1.25;
+  const bag = { x: W - bagW / 2 - EDGE_PT - 4, y: Math.max(EDGE_PT + bagH / 2, big.y - bigH / 2 - bagH * 0.7 - 4), w: bagW, h: bagH };
   return { W, H, trayW, trayH, home, pose, ux: (pose.x - home.x) / pathLen, uy: (pose.y - home.y) / pathLen, pathLen, bin, bag, bigScale, big };
 }
 

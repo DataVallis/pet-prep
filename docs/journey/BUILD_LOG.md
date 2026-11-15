@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — Menjava peska s tremi kretnjami: vleci, drgni, drži
+
+**Kaj:** David je po popravku menjave peska rekel: »Želim da je bolj interaktivno.« Tedenska menjava ima zdaj za vsak korak svojo kretnjo in risbo, ki sledi prstu: stranišče povlečeš do koša (nagne se in star pesek se strese vanj, trije vleki), z drgnjenjem umiješ osem madežev (pena pod prstom), s pritiskom in držanjem vreče nasuješ svež pesek do označene črte (5 sekund). Vse je narisano v aplikaciji — brez AI posnetkov, strošek 0 $. Strežnik se ni spremenil: ista 30-sekundna seja, ista ocena, ista tedenska rutina. Zgrajeno in pokrito s testi (36 novih), **na telefonu še ni preverjeno**.
+**Zakaj je pomembno:** prej so bili vsi trije koraki isto drgnjenje po mirujoči sliki; zdaj otrok z roko naredi to, kar se pri menjavi peska res dela — izprazni, umije, napolni.
+**Kako povedati:** 🧒 »Stresi star pesek v koš, zdrgni madeže in nasuj svežega do črte.« 👩 »Opravilo, ki ga otrok razume z rokami — tri kretnje za tri korake, 30 sekund.« 🛠 »Nova igra brez spremembe API-ja: tri kretnje preslikane na iste poteze, ki jih strežnik že ocenjuje; gre v OTA.«
+
 ## 2026-11-15 — Menjava peska: stranišče na zaslonu in igra, ki se ne prekine sama
 
 **Kaj:** David je na Androidu posnel tedensko menjavo peska pri brezplačni domači mački: med igro je bil na zaslonu posnetek sedeče muce (brez stranišča), po prvem koraku pa je igra padla nazaj na »Začni menjavo«. Vzroka: oder je pokazal posnetek muce, kadar ga muca ima; drgnjenje od roba zaslona pa je Android razumel kot kretnjo »nazaj«, ki je igro ustavila. Zdaj menjava vedno kaže risbo stranišča po korakih (star pesek → prazno z mehurčki → svež pesek), »nazaj« pa med igrami nege samo pokaže »Za konec igre tapni ×.«. Brez novih posnetkov (0 $), samo aplikacija (OTA).
