@@ -20,6 +20,9 @@
  *   what is added, that it starts at once, price + no subscription — and lists only that pet.
  *   With an unused purchase the list also offers every upgradeable free pet (»Uporabi kupljen
  *   izziv«). The purchase records the intent for the pet first (no intent, no store sheet).
+ * - M6-U03 (U7, David 2026-11-15): a free pet with a Care Score gets the choice »Obdrži dosedanjo
+ *   oceno« / »Začni na novo« (UpgradeScoreChoice — explained, with a warning for a low score); the
+ *   choice travels with the intent and the activation. No score yet → no choice.
  */
 
 import { petZoneOf } from '@/modules/familyZone/familyZone';
@@ -38,6 +41,8 @@ import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
 import { privacyUrl, termsUrl } from '@/modules/auth/signup';
 import { breedLabel, caretakerNames, type FamilyOverview } from '@/modules/family/family';
 import { canUpgradePet, challengePets, isBillingPetPurchasable, isBillingPetUpgradeable } from '@/modules/plan/purchaseEntry';
+import { caretakerScores, defaultKeepScore } from '@/modules/plan/scoreChoice';
+import UpgradeScoreChoice from '@/components/parent/UpgradeScoreChoice';
 import { petGroup } from '@/modules/species/species';
 import {
   BILLING_KEY,
@@ -145,6 +150,8 @@ export default function ChallengeScreen({ family, onBack, focusPetId }: Challeng
   const restore = useRestorePurchases();
   const [message, setMessage] = useState<Message | null>(null);
   const [activating, setActivating] = useState<number | null>(null);
+  // M6-U03: the parent's score choice per upgradeable pet (unset = the default for its scores).
+  const [keepChoice, setKeepChoice] = useState<Record<number, boolean>>({});
 
   const pkg = challengePackage(offerings.data);
   const price = pkg?.product.priceString ?? null;
@@ -172,12 +179,20 @@ export default function ChallengeScreen({ family, onBack, focusPetId }: Challeng
     void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
   };
 
+  /** M6-U03: keep the Care Score so far (true) / start again (false); null = nothing to choose. */
+  const keepScoreFor = (petId: number): boolean | null => {
+    if (billing.data?.pets.find((p) => p.pet_id === petId)?.plan !== 'free') return null;
+    const fallback = defaultKeepScore(caretakerScores(family?.pets.find((p) => p.id === petId), family));
+    return fallback === null ? null : (keepChoice[petId] ?? fallback);
+  };
+
   const activate = async (petId: number): Promise<Message> => {
     setActivating(petId);
     const species = family?.pets.find((p) => p.id === petId)?.species ?? null;
     const upgrade = billing.data?.pets.find((p) => p.pet_id === petId)?.plan === 'free';
     try {
-      await api.activateChallenge(petId);
+      const keep = keepScoreFor(petId);
+      await (keep === null ? api.activateChallenge(petId) : api.activateChallenge(petId, keep));
       return { kind: 'activate', result: 'unlocked', species, upgrade };
     } catch (error) {
       if (error instanceof ApiError && error.status === 409) return { kind: 'activate', result: 'noCredit', species };
@@ -193,8 +208,9 @@ export default function ChallengeScreen({ family, onBack, focusPetId }: Challeng
     if (!pkg || busy) return;
     setMessage(null);
     const upgrade = billing.data?.pets.find((p) => p.pet_id === petId)?.plan === 'free';
+    const keep = keepScoreFor(petId);
     purchase.mutate(
-      { pkg, target: { petId, baselineCredits: credits } },
+      { pkg, target: { petId, baselineCredits: credits, ...(keep !== null ? { keepScore: keep } : {}) } },
       {
         onSuccess: (outcome) => {
           setMessage({ kind: 'purchase', outcome, upgrade });
@@ -315,6 +331,15 @@ export default function ChallengeScreen({ family, onBack, focusPetId }: Challeng
                             ? S.pausesAt(formatTrialEnd(pet.trial_ends_at, petZoneOf(familyPet, timezone) ?? timezone))
                             : S.notBought}
                   </Text>
+                  {upgrade && keepScoreFor(pet.pet_id) !== null && (
+                    <UpgradeScoreChoice
+                      petId={pet.pet_id}
+                      scores={caretakerScores(familyPet, family)}
+                      keep={keepScoreFor(pet.pet_id) === true}
+                      disabled={busy}
+                      onChange={(keep) => setKeepChoice((prev) => ({ ...prev, [pet.pet_id]: keep }))}
+                    />
+                  )}
                   {credits > 0 ? (
                     <Pressable
                       style={({ pressed }) => [styles.primaryButton, busy && styles.disabled, pressed && styles.pressed]}

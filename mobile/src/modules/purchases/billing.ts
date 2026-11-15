@@ -69,6 +69,11 @@ export interface PurchaseTarget {
   petId: number | null;
   /** `credits_available` before the purchase; the webhook adds one. */
   baselineCredits: number;
+  /**
+   * M6-U03 (U7): upgrade of a free pet — the parent chose to keep the Care Score so far (true)
+   * or to start again (false). Absent = nothing to choose (not an upgrade / no score yet).
+   */
+  keepScore?: boolean;
 }
 
 /** The server has the purchase: the pet is paid (webhook auto-assigned) or a new credit exists. */

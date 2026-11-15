@@ -329,7 +329,8 @@ class ChallengeCertificateService
      * the stored start, their contract, or the birth for grandfathered
      * caretakers; never before the birth — and (M6-U01) never before the purchase
      * that upgraded a free pet (`pets.challenge_started_at`): the 84 program days,
-     * the certificate's `started_at` and its score count from there.
+     * and the certificate's `started_at` count from there. The SCORE counts from there too,
+     * unless the parent kept the score at the upgrade (M6-U03, CareScoreService::scoreStartOf).
      *
      * @param  Collection<int, PetContract>  $contracts
      */

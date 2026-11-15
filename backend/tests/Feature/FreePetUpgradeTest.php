@@ -792,3 +792,162 @@ describe('safety net — unassigned purchase alert', function () {
         expect(fn () => $migration->down())->toThrow(RuntimeException::class, 'pets upgraded to the challenge exist');
     });
 });
+
+/* ───────────────────────────── Keep the score (M6-U03, U7) ───────────────────────────── */
+
+describe('keep the Care Score at the upgrade (M6-U03, David 2026-11-15)', function () {
+    /** The routines and the illness of the K1 test: 2 before the purchase missed, 1 open at it done, 2 weekly. */
+    function fuScoreHistory(Pet $pet, User $child): void
+    {
+        fuClosedLedger($pet);
+        fuRoutine($pet, '2026-10-05', 'feed', 0, '2026-10-05 07:00:00', '2026-10-05 09:00:00', 'missed', null);
+        fuRoutine($pet, '2026-10-07', 'feed', 0, '2026-10-07 07:00:00', '2026-10-07 09:00:00', 'done', $child);
+        fuRoutine($pet, '2026-10-07', 'feed', 1, '2026-10-07 09:00:00', '2026-10-07 11:00:00', 'done', $child);
+        fuRoutine($pet, '2026-10-12', 'grooming', 0, '2026-10-05 08:00:00', '2026-10-12 08:00:00', 'done', $child);
+        fuRoutine($pet, '2026-10-19', 'grooming', 0, '2026-10-12 08:00:00', '2026-10-19 08:00:00', 'done', $child);
+        PetStatusPeriod::create(['pet_id' => $pet->id, 'kind' => 'illness',
+            'started_at' => Carbon::parse('2026-10-06 08:00:00', 'UTC'), 'ended_at' => Carbon::parse('2026-10-06 20:00:00', 'UTC')]);
+    }
+
+    it('activate with keep_score: the score (child, pet, illnesses) counts from the child\'s start, the 12 weeks from the purchase, no day is »pred izzivom«', function () {
+        [$parent, $child, $pet] = fuFamily();
+        fuScoreHistory($pet, $child);
+
+        fuPurchase($parent)->assertOk();
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson("/api/parent/pets/{$pet->id}/challenge/activate", ['keep_score' => true])
+            ->assertOk()
+            ->assertJsonPath('status', 'activated')
+            ->assertJsonPath('plan.challenge_score_kept', true);
+        $pet = $pet->fresh();
+        expect($pet->challenge_score_kept)->toBeTrue()
+            ->and($pet->challenge_started_at->utc()->toDateTimeString())->toBe(FU_NOW);
+
+        fuAt('2026-10-20 10:00:00');
+        $scores = app(CareScoreService::class);
+        $board = $scores->board(collect([$pet]), 'Europe/Ljubljana');
+        $summary = $scores->childSummary($board, $child->id, $pet);
+        // 4 of 5 routines − one illness before the purchase = 70.
+        expect($summary['care_score']['done'])->toBe(4)
+            ->and($summary['care_score']['routines'])->toBe(5)
+            ->and($summary['care_score']['illnesses'])->toBe(1)
+            ->and($summary['care_score']['score'])->toBe(70)
+            ->and($summary['care_score']['since'])->not->toStartWith('2026-10-07T10:00:00')
+            // The 12 weeks still run from the purchase.
+            ->and($summary['progress']['started_at'])->toStartWith('2026-10-07T10:00:00')
+            ->and($summary['progress']['week'])->toBe(2);
+
+        $petScore = $scores->petSummary($board, $pet)['care_score'];
+        expect($petScore['done'])->toBe(4)
+            ->and($petScore['expected'])->toBe(5)
+            ->and($petScore['illnesses'])->toBe(1)
+            ->and($petScore['score'])->toBe(70);
+
+        expect(CareScoreService::isPreChallengeDate($board, $pet, '2026-10-05'))->toBeFalse();
+        // The certificate's 84 days are unchanged: they start at the purchase.
+        $caretaker = PetCaretaker::where('pet_id', $pet->id)->where('user_id', $child->id)->first();
+        expect(app(ChallengeCertificateService::class)->startOf($pet, $caretaker, PetContract::where('pet_id', $pet->id)->get())->toDateTimeString())->toBe(FU_NOW);
+    });
+
+    it('activate without keep_score (or false) starts the score again — the M6-U01 behaviour', function () {
+        [$parent, $child, $pet] = fuFamily();
+        fuScoreHistory($pet, $child);
+
+        fuPurchase($parent)->assertOk();
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson("/api/parent/pets/{$pet->id}/challenge/activate", ['keep_score' => false])
+            ->assertOk()
+            ->assertJsonMissingPath('plan.challenge_score_kept'); // only present when kept
+        $pet = $pet->fresh();
+
+        fuAt('2026-10-20 10:00:00');
+        $scores = app(CareScoreService::class);
+        $board = $scores->board(collect([$pet]), 'Europe/Ljubljana');
+        $score = $scores->childScore($board, $child->id, $pet);
+        expect($pet->challenge_score_kept)->toBeFalse()
+            ->and($score['routines'])->toBe(2)
+            ->and($score['illnesses'])->toBe(0)
+            ->and($score['score'])->toBe(100)
+            ->and(CareScoreService::isPreChallengeDate($board, $pet, '2026-10-05'))->toBeTrue();
+    });
+
+    it('the webhook applies the choice recorded with the intent; the later activate is idempotent', function () {
+        [$parent, , $pet] = fuFamily();
+
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson("/api/parent/pets/{$pet->id}/challenge/intent", ['keep_score' => true])->assertCreated();
+        expect(ChallengePurchaseIntent::first()->keep_score)->toBeTrue();
+
+        fuAt('2026-10-07 10:05:00');
+        fuPurchase($parent)->assertOk();
+        expect($pet->fresh()->challenge_score_kept)->toBeTrue()
+            ->and($pet->fresh()->plan)->toBe(PetPlan::Challenge);
+
+        // The app's activate afterwards cannot change the choice.
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson("/api/parent/pets/{$pet->id}/challenge/activate", ['keep_score' => false])
+            ->assertOk()->assertJsonPath('status', 'already_active');
+        expect($pet->fresh()->challenge_score_kept)->toBeTrue();
+    });
+
+    it('activate without a body uses the choice of the parent\'s recent open intent (the webhook could not use it) — never one older than a day', function () {
+        [$parent, , $pet] = fuFamily();
+        // An expired intent is not used by the webhook, but still says what the parent chose.
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson("/api/parent/pets/{$pet->id}/challenge/intent", ['keep_score' => true])->assertCreated();
+        fuAt('2026-10-07 10:45:00');
+        fuPurchase($parent)->assertOk();
+        expect($pet->fresh()->plan)->toBe(PetPlan::Free);
+
+        fuActivate($parent, $pet)->assertOk()->assertJsonPath('status', 'activated');
+        expect($pet->fresh()->challenge_score_kept)->toBeTrue();
+
+        // A choice abandoned more than a day ago says nothing about a later purchase.
+        [$parent2, , $pet2] = fuFamily();
+        app('auth')->forgetGuards();
+        actingAsRole($parent2);
+        postJson("/api/parent/pets/{$pet2->id}/challenge/intent", ['keep_score' => true])->assertCreated();
+        fuAt('2026-10-09 12:00:00');
+        fuPurchase($parent2)->assertOk();
+        fuActivate($parent2, $pet2)->assertOk()->assertJsonPath('status', 'activated');
+        expect($pet2->fresh()->challenge_score_kept)->toBeFalse();
+    });
+
+    it('never stores a choice for a pet that is not free, validates the flag, and a refund clears it', function () {
+        [$parent, , $pet] = fuFamily();
+        $collie = fuUnpaidChallengePet($parent);
+
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson("/api/parent/pets/{$collie->id}/challenge/intent", ['keep_score' => true])->assertCreated();
+        expect(ChallengePurchaseIntent::latest('id')->first()->keep_score)->toBeNull();
+        postJson("/api/parent/pets/{$pet->id}/challenge/intent", ['keep_score' => 'maybe'])->assertStatus(422);
+
+        ChallengePurchaseIntent::query()->delete();
+        fuPurchase($parent)->assertOk(); // old rule: the only unpaid challenge pet (the collie)
+        fuPurchase($parent, ['transaction_id' => 'fu-tx-keep', 'id' => 'fu-evt-keep'])->assertOk();
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson("/api/parent/pets/{$pet->id}/challenge/activate", ['keep_score' => true])->assertOk();
+        expect($pet->fresh()->challenge_score_kept)->toBeTrue();
+
+        fuRefund($parent, ChallengeCredit::where('pet_id', $pet->id)->first()->transaction_id)->assertOk();
+        expect($pet->fresh()->plan)->toBe(PetPlan::Free)
+            ->and($pet->fresh()->challenge_score_kept)->toBeFalse();
+    });
+
+    it('the migration refuses to roll back while a pet with a kept score exists', function () {
+        [$parent, , $pet] = fuFamily();
+        fuPurchase($parent)->assertOk();
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson("/api/parent/pets/{$pet->id}/challenge/activate", ['keep_score' => true])->assertOk();
+        $migration = require database_path('migrations/2027_04_07_120000_challenge_upgrade_keep_score.php');
+        expect(fn () => $migration->down())->toThrow(RuntimeException::class, 'kept Care Score');
+    });
+});

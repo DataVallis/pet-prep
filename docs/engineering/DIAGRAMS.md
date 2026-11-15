@@ -2322,7 +2322,7 @@ stateDiagram-v2
     [*] --> UnbornUnpaid: PIN with plan challenge (status payment_required — buy first, lock reason stays contract_required)
     note right of UnbornUnpaid: M6-U02 (U4 / K3) — also the mutt / domestic cat when the parent build declared free_breed_challenge; old builds: free plan (M5-F03)
     UnbornUnpaid --> Paid: credit assigned before birth (activate · webhook intent / auto-assign · held credit at the contract when it is the only unpaid pet)
-    FreeBorn --> Paid: M6-U01 upgrade (activate or webhook with intent): plan challenge, challenge_started_at = purchase, the 12 weeks start now, age stays
+    FreeBorn --> Paid: M6-U01 upgrade (activate or webhook with intent): plan challenge, challenge_started_at = purchase, the 12 weeks start now, age stays, challenge_score_kept = the parent's choice (M6-U03)
     Paid --> FreeBorn: refund of an upgraded free pet (or a mutt) → free plan, challenge_started_at cleared
     UnbornUnpaid --> Locked: contract signed = birth, trial_ends_at = born_at, lockAtBirth (payment_locked_at = birth, status period from birth, push parents + child, one PetUpdated signed_contract)
     Locked --> Paid: credit assigned → lock lifted, applyThaw, the 12 weeks start now (lock time is not program time)
@@ -2388,7 +2388,7 @@ sequenceDiagram
     P->>S: purchasePackage(petprep_challenge_12w)
     S->>RC: purchase
     RC->>A: POST /api/webhooks/revenuecat (app_user_id = parent id) — maybe late
-    A->>DB: credit; intent valid at purchased_at → consume, assign to pet X (free pet: upgrade, challenge_started_at = now)
+    A->>DB: credit; intent valid at purchased_at → consume, assign to pet X (free pet: upgrade, challenge_started_at = now, challenge_score_kept = intent.keep_score)
     A-)P: PetUpdated('challenge_paid')
     P->>A: poll GET /api/parent/billing (5 × 2 s)
     P->>A: POST …/X/challenge/activate if X not paid yet (idempotent: already_active / 409 no_credit)

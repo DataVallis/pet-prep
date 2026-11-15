@@ -98,10 +98,22 @@
     "stays": "Kaj ostane: {{name}} ostane isti — ime, videz, starost, naučeni ukazi in stvari iz »Želja«.",
     "staysNoName": "Kaj ostane: ljubljenček ostane isti — ime, videz, starost, naučeni ukazi in stvari iz »Želja«.",
     "adds": "Kaj se doda: 12-tedenski program s tedenskim napredkom, potrdilo ob uspešnem koncu, celotna zgodovina in vsi posnetki.",
-    "starts": "Kdaj se začne: takoj ob nakupu. Ocena skrbi šteje od nakupa naprej; dnevi prej ostanejo v zgodovini, označeni »pred izzivom«.",
+    "starts": "Kdaj se začne: takoj ob nakupu. 12 tednov teče od nakupa.",
     "price": "Enkratni nakup {{price}}. Brez naročnine in brez samodejnega plačila.",
     "priceNoPrice": "Enkratni nakup. Brez naročnine in brez samodejnega plačila.",
     "petLine": "Brezplačni načrt · izziv se začne ob nakupu."
+  },
+  "scoreChoice": {
+    "title": "Kaj naj se zgodi z dosedanjo oceno skrbi?",
+    "current": "Ocena skrbi do zdaj: {{score}} od 100.",
+    "currentMany": "Ocene skrbi do zdaj (od 100): {{list}}. Izbira velja za vse otroke, ki skrbijo za tega ljubljenčka.",
+    "keepTitle": "Obdrži dosedanjo oceno",
+    "keepBody": "Ocena se nadaljuje, kjer je zdaj. V končno oceno in potrdilo šteje vse od začetka skrbi: tudi opravljene in zamujene rutine ter bolezni pred izzivom.",
+    "freshTitle": "Začni na novo",
+    "freshBody": "Ocena se ob nakupu začne znova. V končno oceno in potrdilo šteje samo skrb od nakupa naprej. Dnevi prej ostanejo vidni v zgodovini, označeni »pred izzivom«, a ne štejejo.",
+    "warnKeepLow": "Pozor: dosedanja ocena je {{score}}, potrdilo pa zahteva končno oceno vsaj {{min}}. Če jo obdržite, jo mora otrok v 12 tednih popraviti, bolezni pred izzivom pa ostanejo v oceni. Za čist začetek izberite »Začni na novo«.",
+    "noteDropGood": "Dosedanja ocena {{score}} se v tem primeru ne prenese v izziv. Če želite, da dosedanja skrb šteje, izberite »Obdrži dosedanjo oceno«.",
+    "final": "12 tednov v obeh primerih teče od nakupa. Potrdilo dobi otrok s končno oceno {{min}} ali več. Izbire po nakupu ni mogoče spremeniti."
   },
   "unusedPurchase": {
     "title": "Imate neporabljen nakup — izberite ljubljenčka",

@@ -270,6 +270,19 @@ describe('purchasePackage', () => {
     expect(activateChallenge).not.toHaveBeenCalled(); // the webhook auto-assigned it
   });
 
+  it('M6-U03: the score choice of an upgrade travels with the intent and the activation', async () => {
+    jest.useFakeTimers();
+    sdk.purchasePackage.mockResolvedValueOnce({ productIdentifier: 'p', customerInfo: makeCustomerInfo(), transaction: {} });
+    getBilling.mockResolvedValueOnce({ credits_available: 1, pets: [pet('trial')] }).mockResolvedValueOnce(active());
+    activateChallenge.mockResolvedValueOnce({ status: 'activated' });
+
+    const result = purchasePackage(PKG, { ...TARGET, keepScore: true });
+    await jest.advanceTimersByTimeAsync(10_000);
+    await expect(result).resolves.toEqual({ status: 'success', serverConfirmed: true });
+    expect(createChallengeIntent).toHaveBeenCalledWith(7, true);
+    expect(activateChallenge).toHaveBeenCalledWith(7, true);
+  });
+
   it('success: a new credit that was not auto-assigned is activated for the dog bought for', async () => {
     jest.useFakeTimers();
     sdk.purchasePackage.mockResolvedValueOnce({ productIdentifier: 'p', customerInfo: makeCustomerInfo(), transaction: {} });

@@ -334,9 +334,9 @@ function writeBillingCache(billing: Billing): void {
  * dog). Idempotent on the server (`already_active` when the webhook auto-assigned it); one
  * call, no retry loop — a 409 `no_credit` means the webhook is still on its way.
  */
-async function activateFor(petId: number): Promise<boolean> {
+async function activateFor(petId: number, keepScore?: boolean): Promise<boolean> {
   try {
-    await api.activateChallenge(petId);
+    await (keepScore === undefined ? api.activateChallenge(petId) : api.activateChallenge(petId, keepScore));
     return true;
   } catch (error) {
     // Only "already unlocked another way" counts; pet_not_active / free_plan leave the
@@ -350,10 +350,11 @@ async function activateFor(petId: number): Promise<boolean> {
  * M6-U01 purchase intent (FREE_PET_UPGRADE_SPEC §5.3): tell the server which pet the purchase
  * is for BEFORE the store sheet opens, so the webhook assigns it to that pet (a free pet is
  * upgraded) however late it arrives. One call; any failure → false (the sheet must not open).
+ * M6-U03: it also carries the parent's score choice (`keepScore`) for that upgrade.
  */
-async function createIntentFor(petId: number): Promise<boolean> {
+async function createIntentFor(petId: number, keepScore?: boolean): Promise<boolean> {
   try {
-    await api.createChallengeIntent(petId);
+    await (keepScore === undefined ? api.createChallengeIntent(petId) : api.createChallengeIntent(petId, keepScore));
     return true;
   } catch {
     return false;
@@ -373,7 +374,7 @@ export function purchasePackage(pkg: PurchasesPackage, target: PurchaseTarget = 
     const blocked = await blockedReason();
     if (blocked !== null) return { status: blocked };
     const gen = generation;
-    if (target.petId !== null && !(await createIntentFor(target.petId))) return { status: 'intent_failed' };
+    if (target.petId !== null && !(await createIntentFor(target.petId, target.keepScore))) return { status: 'intent_failed' };
     if (gen !== generation) return { status: 'not_allowed' };
     let customerInfo: CustomerInfo;
     try {
@@ -394,7 +395,7 @@ export function purchasePackage(pkg: PurchasesPackage, target: PurchaseTarget = 
     if (target.petId !== null && gen === generation) {
       const cached = queryClient.getQueryData<Billing>(BILLING_KEY);
       if (billingPet(cached, target.petId)?.status !== 'paid') {
-        serverConfirmed = await activateFor(target.petId);
+        serverConfirmed = await activateFor(target.petId, target.keepScore);
         if (gen === generation) writeBillingCache(await fetchBilling().catch(() => cached ?? { credits_available: 0, pets: [] }));
       }
     }
