@@ -8,6 +8,7 @@ import { act, fireEvent, render, screen } from '@testing-library/react-native';
 import { i18n } from '@/i18n';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
+import { GAME_BACK_HINT_MS } from '@/modules/gameLayer/gameExit';
 import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
 import PlayOverlay, { loadCuddleGameV2, resetBallGameV2ForTests } from '@/modules/play/PlayOverlay';
 import { CUDDLE_V2_STRINGS } from '@/modules/play/play';
@@ -109,14 +110,43 @@ describe('cuddles v2', () => {
   });
 
   // Ball v2 device bug (David 2026-10-31): the HUD must sit above the video, with a way out.
-  it('the top bar, ×, field and dock are painted above the video; × and Android back close', () => {
-    const back = captureAndroidBack();
+  it('the top bar, ×, field and dock are painted above the video; the × closes', () => {
     const { onClose } = renderCuddle(view({ easy: true }));
     expectHudAboveStage(ID, [`${ID}-top-close`, `${ID}-field-layer`, `${ID}-feedback-layer`]);
     fireEvent.press(screen.getByTestId(`${ID}-top-close`));
     expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  // David 2026-11-15 (»1 ja«): stroking from the screen edge is Android's back GESTURE — it must
+  // not end the cuddle (PlayOverlay's own back listener closed it before).
+  it('Android back mid-cuddle only shows the »tap ×« hint (hearts kept, nothing closed); on the result card it closes', async () => {
+    const back = captureAndroidBack();
+    const { onClose, onFinished } = renderCuddle(view({ easy: true }));
+    const hold = screen.getByTestId(`${ID}-hold`);
+    fireEvent(hold, 'pressIn');
+    await advance(3_100);
+    fireEvent(hold, 'pressOut');
+    fireEvent.press(hold);
+    expect(screen.getAllByTestId(`${ID}-hearts-full`)).toHaveLength(1);
     expect(back.pressBack()).toBe(true);
-    expect(onClose).toHaveBeenCalledTimes(2);
+    expect(onClose).not.toHaveBeenCalled();
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Za konec igre tapni ×.');
+    expect(screen.getAllByTestId(`${ID}-hearts-full`)).toHaveLength(1);
+    await advance(GAME_BACK_HINT_MS);
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).not.toBe('Za konec igre tapni ×.');
+    // The same cuddle goes on to its end.
+    for (let heart = 2; heart <= 3; heart++) {
+      fireEvent(hold, 'pressIn');
+      await advance(3_100);
+      fireEvent(hold, 'pressOut');
+      fireEvent.press(hold);
+      await advance(2_500);
+    }
+    expect(screen.getByTestId(`${ID}-done`)).toBeTruthy();
+    expect(onFinished).toHaveBeenCalledTimes(1);
+    expect(onClose).not.toHaveBeenCalled();
+    expect(back.pressBack()).toBe(true);
+    expect(onClose).toHaveBeenCalledTimes(1);
     jest.restoreAllMocks();
   });
 });

@@ -14,15 +14,16 @@
  *
  * Android back never stops a running care game (David 2026-11-15, production: the weekly litter
  * change fell back to its start card mid-game — rubbing across the screen edge is Android's back
- * GESTURE, and back used to be the × = »stop«, which throws the session away). While the × is
- * there, back only shows `backHint` on the line for `CARE_BACK_HINT_MS`; the × stays the way out.
- * A locked × (finishing, the scratching carry) and the escape card keep `GameScreen`'s rules.
+ * GESTURE, and back used to be the × = »stop«, which throws the session away). That is now
+ * `GameScreen`'s rule for every game (`gameBack`): while the × is there, back only shows the
+ * `backHint` line for `GAME_BACK_HINT_MS`; a locked × (finishing, the scratching carry) and the
+ * escape card keep their rules. Nothing about it lives here.
  *
  * Reached ONLY through `loadCareShell()` behind `gameLayerAvailable()` (this file imports the
  * native layer); an older binary keeps the old card screens.
  */
 
-import { useCallback, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
+import { useContext, useEffect, useRef, type ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 
@@ -30,7 +31,7 @@ import { careCues, type CareFrame } from '@/modules/gameLayer/careFrame';
 import FeedbackLayer, { type FeedbackHandle } from '@/modules/gameLayer/FeedbackLayer';
 import type { GameSound } from '@/modules/gameLayer/gameFxCore';
 import { useGameLine } from '@/modules/gameLayer/GameLine';
-import GameScreen, { GAME_SCREEN_STRINGS } from '@/modules/gameLayer/GameScreen';
+import GameScreen from '@/modules/gameLayer/GameScreen';
 import GameTopBar from '@/modules/gameLayer/GameTopBar';
 import { useGameFx } from '@/modules/gameLayer/useGameFx';
 
@@ -57,11 +58,6 @@ export interface CareGameShellProps {
 }
 
 const SOUNDS: readonly GameSound[] = ['chime'];
-/**
- * How long the »tap × to stop« hint replaces the step line after an Android back — twice the
- * line's minimum, so a hint that had to wait for a fresh step line (≤ 2 s) is still readable.
- */
-export const CARE_BACK_HINT_MS = 4_000;
 
 export default function CareGameShell({
   stage,
@@ -84,22 +80,9 @@ export default function CareGameShell({
   const feedback = useRef<FeedbackHandle>(null);
   const say = gameLine.say;
 
-  // Android back (mostly the edge-swipe gesture mid-rub): a hint, never a stop.
-  const [backHintAt, setBackHintAt] = useState<number | null>(null);
   useEffect(() => {
-    if (backHintAt === null) return;
-    const timer = setTimeout(() => setBackHintAt(null), CARE_BACK_HINT_MS);
-    return () => clearTimeout(timer);
-  }, [backHintAt]);
-  const onBack = useCallback(() => {
-    setBackHintAt(Date.now());
-    return true;
-  }, []);
-  const shownLine = backHintAt !== null && onClose !== undefined ? GAME_SCREEN_STRINGS.backHint : line;
-
-  useEffect(() => {
-    if (shownLine !== null) say(shownLine);
-  }, [shownLine, say]);
+    if (line !== null) say(line);
+  }, [line, say]);
 
   const prev = useRef<CareFrame | null>(null);
   useEffect(() => {
@@ -133,7 +116,6 @@ export default function CareGameShell({
   return (
     <GameScreen
       testID={testID}
-      onBack={onClose === undefined ? undefined : onBack}
       stage={stage}
       field={
         <View

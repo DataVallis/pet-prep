@@ -14,6 +14,9 @@
  *   (`closeLocked`: a mess that must be cleaned, a request in flight); after `GAME_ESCAPE_MS` the
  *   × comes back anyway. A video stage that is not ready after `GAME_STAGE_WATCHDOG_MS`, or a
  *   layer that crashed while rendering, opens the escape card (× + »Nazaj«).
+ * - Android back never ends a RUNNING game (David 2026-11-15, every game of the layer): while the
+ *   × is there and no card (`GameScreen overlay`: intro / result) is up, back only shows the
+ *   »tap × to stop« hint on the game line for `GAME_BACK_HINT_MS` (`gameBack`).
  */
 
 import { createContext } from 'react';
@@ -37,6 +40,12 @@ export const GAME_STAGE_WATCHDOG_MS = 15_000;
 /** A locked × (forced mess, saving, starting / finishing) comes back after this long. */
 export const GAME_ESCAPE_MS = 20_000;
 
+/**
+ * How long the »tap × to stop« hint replaces the game line after an Android back in a running
+ * game — twice the line's minimum (2 s), long enough to read while the hand keeps playing.
+ */
+export const GAME_BACK_HINT_MS = 4_000;
+
 /** The host's exit for a game it mounted (the overlay's close). */
 export const GameExitContext = createContext<GameExit | null>(null);
 export const GameExitProvider = GameExitContext.Provider;
@@ -49,7 +58,9 @@ export interface GameScreenLink {
   exit: GameExit | null;
   /** A locked × is allowed again (escape timeout / watchdog / crash). */
   exitOpen: boolean;
-  /** The top bar reports its × (action + lock) so Android back does the same. */
+  /** The »tap × to stop« hint to show INSTEAD of the game line (Android back in a running game), else null. */
+  backHint: string | null;
+  /** The top bar reports its × (action + lock) so Android back knows it. */
   reportClose: (action: GameExit | null, locked: boolean) => void;
   /** A video stage (ClipDeck) mounted / became ready (either mode). */
   stageLoading: () => void;
@@ -57,7 +68,7 @@ export interface GameScreenLink {
 }
 
 const noop = () => undefined;
-export const DETACHED_SCREEN: GameScreenLink = { exit: null, exitOpen: false, reportClose: noop, stageLoading: noop, stageReady: noop };
+export const DETACHED_SCREEN: GameScreenLink = { exit: null, exitOpen: false, backHint: null, reportClose: noop, stageLoading: noop, stageReady: noop };
 export const GameScreenContext = createContext<GameScreenLink>(DETACHED_SCREEN);
 
 export interface EscapeInput {
@@ -86,4 +97,30 @@ export function gameEscape({ stage, stalled, crashed, closeLocked, lockExpired }
 /** The ×'s action: the top bar's own `onClose`, else the screen's exit. */
 export function closeActionOf(own: GameExit | undefined, screenExit: GameExit | null): GameExit | null {
   return own ?? screenExit;
+}
+
+export interface BackInput {
+  /** The escape card is up. */
+  card: boolean;
+  /** `gameEscape().exitOpen`. */
+  exitOpen: boolean;
+  /** A top bar reported its × (the hint needs its line). */
+  hasBar: boolean;
+  closeLocked: boolean;
+  /** A card covers the game (`GameScreen overlay`: intro, result, failed, saving). */
+  covered: boolean;
+}
+
+/**
+ * What Android back does on a game screen (GAMES_SPEC §7.1, David 2026-11-15 — an edge swipe
+ * mid-game is Android's back GESTURE and must never throw a running game away):
+ * - `hint`: a running game with its × on screen → only the »tap × to stop« hint;
+ * - `exit`: the escape card, a card over the game (intro / result), a × that came back after
+ *   `GAME_ESCAPE_MS`, or a screen without a top bar → the same as the × / the exit;
+ * - `none`: the × is locked (saving, a forced mess, starting / finishing) → swallowed.
+ */
+export function gameBack({ card, exitOpen, hasBar, closeLocked, covered }: BackInput): 'hint' | 'exit' | 'none' {
+  if (card) return 'exit';
+  if (hasBar && !closeLocked && !covered) return 'hint';
+  return exitOpen ? 'exit' : 'none';
 }

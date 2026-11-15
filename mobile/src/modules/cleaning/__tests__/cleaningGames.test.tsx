@@ -20,7 +20,7 @@ import { DOG_ZONE, SLIPPER_ITEMS, SLIPPER_TOY } from '@/modules/cleaning/Slipper
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { useAppStore } from '@/store/appStore';
 import { makeGroomingState, makeLitterState, makeLiveChildState, makePet, makeScratchingState, makeWandState, withEasyGestures } from '@/test-utils/fixtures';
-import { GAME_ESCAPE_MS } from '@/modules/gameLayer/gameExit';
+import { GAME_BACK_HINT_MS, GAME_ESCAPE_MS } from '@/modules/gameLayer/gameExit';
 import { captureAndroidBack, expectHudAboveStage, fireGameGesture } from '@/test-utils/gameLayer';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
@@ -305,17 +305,30 @@ describe('z-order and exit', () => {
     expect(onEscape).toHaveBeenCalledTimes(2);
   });
 
-  it('a mess the child opened: × and Android back close it at once', async () => {
+  // David 2026-11-15 (»1 ja«): wiping / swiping from the screen edge is Android's back GESTURE —
+  // it never ends a running game, it only shows the hint; the × is the way out.
+  it('a mess the child opened: Android back only shows the »tap ×« hint, the cleaning goes on; × closes it at once', async () => {
     const back = captureAndroidBack();
     const onClose = jest.fn();
+    const onCleaned = jest.fn();
     const { MessGame } = games();
-    renderWithQuery(<MessGame view={dogView()} stages={[{ kind: 'poop', pieces: 1, seed: 3 }]} reduceMotion onCleaned={jest.fn()} onClose={onClose} />);
+    renderWithQuery(<MessGame view={dogView({ easy: true })} stages={[{ kind: 'poop', pieces: 1, seed: 3 }]} reduceMotion onCleaned={onCleaned} onClose={onClose} />);
+    layout('mess-game-layout');
+    await advance(0);
     expectHudAboveStage('mess-game', ['mess-game-top-close']);
+    const line = screen.getByTestId('mess-game-top-line').props.children;
     expect(back.pressBack()).toBe(true);
+    expect(onClose).not.toHaveBeenCalled();
+    expect(screen.getByTestId('mess-game-top-line').props.children).toBe('Za konec igre tapni ×.');
+    await advance(GAME_BACK_HINT_MS);
+    expect(screen.getByTestId('mess-game-top-line').props.children).toBe(line);
+    expect(onClose).not.toHaveBeenCalled();
+    expect(onCleaned).not.toHaveBeenCalled();
+    fireEvent.press(screen.getByTestId('mess-game-top-close'));
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
-  it('the slipper: × and Android back close', async () => {
+  it('the slipper: Android back only shows the hint; × closes', async () => {
     const back = captureAndroidBack();
     const onClose = jest.fn();
     const { SlipperGame } = games();
@@ -323,20 +336,43 @@ describe('z-order and exit', () => {
     layout('slipper-game-field');
     await advance(0);
     expectHudAboveStage('slipper-game', ['slipper-game-top-close', 'slipper-game-field-layer', 'slipper-game-dock-layer']);
-    fireEvent.press(screen.getByTestId('slipper-game-top-close'));
     expect(back.pressBack()).toBe(true);
-    expect(onClose).toHaveBeenCalledTimes(2);
+    expect(onClose).not.toHaveBeenCalled();
+    expect(screen.getByTestId('slipper-game-top-line').props.children).toBe('Za konec igre tapni ×.');
+    fireEvent.press(screen.getByTestId('slipper-game-top-close'));
+    expect(onClose).toHaveBeenCalledTimes(1);
   });
 
-  it('the scoop: × and Android back close', async () => {
+  it('the scoop: Android back mid-game only shows the hint; nothing while saving; on the result card it closes like the ×', async () => {
     const back = captureAndroidBack();
     const onClose = jest.fn();
+    let resolve: (v: unknown) => void = () => undefined;
+    mocked.scoopLitter.mockReturnValue(new Promise((r) => (resolve = r)));
     const { ScoopGame } = games();
     renderWithQuery(<ScoopGame view={normalizeChildState(catState(), 0, T0)} reduceMotion={false} onClose={onClose} />);
     layout('scoop-game-field');
     await advance(0);
     expectHudAboveStage('scoop-game', ['scoop-game-top-close', 'scoop-game-field-layer']);
     expect(back.pressBack()).toBe(true);
+    expect(onClose).not.toHaveBeenCalled();
+    expect(screen.getByTestId('scoop-game-top-line').props.children).toBe('Za konec igre tapni ×.');
+    // The game goes on: both clumps into the bag → saving (× locked: back is swallowed).
+    const tray = trayGeometry(SIZE.width, SIZE.height);
+    const at = (i: number) => ({ x: tray.x + clumpInTray(i).x * tray.w, y: tray.y + clumpInTray(i).y * tray.h + LIFT });
+    fireGameGesture('scoop-game-field', 'pan', { ...at(0), velocityY: 0 });
+    fireGameGesture('scoop-game-field', 'pan', { ...at(1), velocityY: -1200, translationY: -60 });
+    await advance(1_000);
+    expect(screen.getByTestId('scoop-game-saving')).toBeTruthy();
+    expect(mocked.scoopLitter).toHaveBeenCalledTimes(1);
+    expect(back.pressBack()).toBe(true);
+    expect(onClose).not.toHaveBeenCalled();
+    await act(async () => {
+      resolve({ status: 'accepted', scooped: 1, state: catState(makeLitterState({ open_uses: [], can_scoop: false, next_due_at: null })) });
+      await jest.advanceTimersByTimeAsync(0);
+    });
+    expect(screen.getByTestId('scoop-game-done')).toBeTruthy();
+    expect(back.pressBack()).toBe(true);
     expect(onClose).toHaveBeenCalledTimes(1);
+    expect(mocked.scoopLitter).toHaveBeenCalledTimes(1);
   });
 });
