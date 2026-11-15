@@ -92,10 +92,22 @@
     "stays": "What stays: {{name}} stays the same — name, look, age, learned commands and the »Wishes« items.",
     "staysNoName": "What stays: your pet stays the same — name, look, age, learned commands and the »Wishes« items.",
     "adds": "What is added: the 12-week programme with weekly progress, a certificate when it ends well, the full history and every video.",
-    "starts": "When it starts: right at the purchase. The care score counts from the purchase; the days before stay in the history, marked »before the challenge«.",
+    "starts": "When it starts: right at the purchase. The 12 weeks run from the purchase.",
     "price": "One-time purchase {{price}}. No subscription and no automatic payment.",
     "priceNoPrice": "One-time purchase. No subscription and no automatic payment.",
     "petLine": "Free plan · the challenge starts at the purchase."
+  },
+  "scoreChoice": {
+    "title": "What should happen to the care score so far?",
+    "current": "Care score so far: {{score}} out of 100.",
+    "currentMany": "Care scores so far (out of 100): {{list}}. The choice applies to every child caring for this pet.",
+    "keepTitle": "Keep the score so far",
+    "keepBody": "The score carries on from where it is now. The final score and the certificate count everything since the care began: routines done and missed, and illnesses, before the challenge too.",
+    "freshTitle": "Start again",
+    "freshBody": "The score starts again at the purchase. The final score and the certificate count only the care from the purchase on. Earlier days stay visible in the history, marked »before the challenge«, but do not count.",
+    "warnKeepLow": "Careful: the score so far is {{score}}, and the certificate needs a final score of at least {{min}}. If you keep it, your child has to raise it within the 12 weeks, and illnesses from before the challenge stay in the score. For a clean start choose »Start again«.",
+    "noteDropGood": "The score so far, {{score}}, is not carried into the challenge this way. If the care so far should count, choose »Keep the score so far«.",
+    "final": "The 12 weeks run from the purchase either way. A final score of {{min}} or more earns the certificate. The choice cannot be changed after the purchase."
   },
   "unusedPurchase": {
     "title": "You have an unused purchase — choose a pet",

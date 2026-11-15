@@ -99,7 +99,7 @@ class ChallengeCreditService
                 DB::afterCommit(fn () => SendUnassignedCreditAlert::dispatch([$creditId], [$familyId], [$environment], SendUnassignedCreditAlert::REASON_INTENT_OVERRIDDEN));
                 Log::warning('Challenge: upgrade intent overridden by the only payment-locked pet', ['intent_id' => $intent->id, 'pet_id' => $intent->pet_id, 'assigned_pet_id' => $lockedOne->id]);
             } elseif ($pet !== null && self::intentTargetAllowed($pet)) {
-                $this->assignOrUpgrade($credit, $pet, ChallengeCredit::VIA_INTENT);
+                $this->assignOrUpgrade($credit, $pet, ChallengeCredit::VIA_INTENT, (bool) $intent->keep_score);
 
                 return $credit;
             } else {
@@ -205,14 +205,15 @@ class ChallengeCreditService
      * Assign the family's oldest available credit to $pet (parent action).
      * Works for an unborn pet too (M3-13: the parent buys before the contract).
      *
+     * @param  bool|null  $keepScore  M6-U03: upgrade of a free pet — keep the Care Score so far; null = the parent's recent open intent decides, else it starts again
      * @return array{status: 'activated'|'already_active', pet: Pet, credit: ChallengeCredit|null}
      *
      * @throws ChallengeException free_plan / already_paid / pet_not_active (422), no_credit (409);
      *                            for a free pet (M6-U01) game_over / pet_not_born / legacy_profile (422)
      */
-    public function activate(Pet $pet, ?User $parent = null): array
+    public function activate(Pet $pet, ?User $parent = null, ?bool $keepScore = null): array
     {
-        return DB::transaction(function () use ($pet, $parent): array {
+        return DB::transaction(function () use ($pet, $parent, $keepScore): array {
             Family::whereKey($pet->family_id)->lockForUpdate()->first();
             $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
 
@@ -243,7 +244,22 @@ class ChallengeCreditService
                 throw new ChallengeException('no_credit', 'No unused challenge purchase in this family.', 409);
             }
 
-            $this->assignOrUpgrade($credit, $locked, ChallengeCredit::VIA_PARENT);
+            // M6-U03 (U7): the parent's choice — this call's `keep_score`, else the one recorded
+            // with their open intent for this pet of the last INTENT_CHOICE_HOURS (the app
+            // bought, the webhook was late), else
+            // the score starts again at the purchase.
+            if ($keepScore === null && $parent !== null && $locked->plan === PetPlan::Free) {
+                $keepScore = ChallengePurchaseIntent::where('parent_user_id', $parent->id)
+                    ->where('pet_id', $locked->id)
+                    ->open()
+                    ->whereNotNull('keep_score')
+                    // Only the choice of this purchase attempt — never one abandoned days ago.
+                    ->where('created_at', '>=', now()->subHours(self::INTENT_CHOICE_HOURS))
+                    ->latest('id')
+                    ->value('keep_score');
+            }
+
+            $this->assignOrUpgrade($credit, $locked, ChallengeCredit::VIA_PARENT, (bool) $keepScore);
 
             // The parent's open intents for this pet are settled (single use).
             if ($parent !== null) {
@@ -480,11 +496,13 @@ class ChallengeCreditService
      * challenge clock starts now (`challenge_started_at`, a new start after a refund —
      * K7), `trial_ends_at = born_at` (no "trial available"), the M5-F02 conversion
      * marker cleared (CHECK: only on a free pet), the certificate scan looks again.
-     * Age, look, name, skills and items stay. markPaid() then saves the row once
+     * M6-U03 (U7, David 2026-11-15): `$keepScore` = the parent chose to keep the Care
+     * Score so far (`challenge_score_kept`) — the score then counts from each child's own
+     * start; the 12 weeks still run from now. Age, look, name, skills and items stay. markPaid() then saves the row once
      * (non-quiet: hooks), broadcasts `challenge_paid` and queues the full media set
      * (P6 / M4-10 — a shared look keeps its look). Caller holds family → pet → credit locks.
      */
-    private function assignOrUpgrade(ChallengeCredit $credit, Pet $pet, string $via): void
+    private function assignOrUpgrade(ChallengeCredit $credit, Pet $pet, string $via, bool $keepScore = false): void
     {
         if ($pet->plan !== PetPlan::Free) {
             $this->assign($credit, $pet, $via);
@@ -496,6 +514,7 @@ class ChallengeCreditService
         $pet->forceFill([
             'plan' => PetPlan::Challenge,
             'challenge_started_at' => $now,
+            'challenge_score_kept' => $keepScore,
             'trial_ends_at' => $pet->born_at,
             'payment_locked_at' => null,
             'converted_to_free_at' => null,
@@ -504,8 +523,11 @@ class ChallengeCreditService
         $credit->forceFill(['pet_id' => $pet->id, 'assigned_at' => $now, 'assigned_via' => $via])->save();
         $this->challenges->markPaid($pet, ChallengePaidSource::Purchase, $now, upgrade: true);
 
-        Log::info('Challenge: free pet upgraded to the 12-week challenge', ['pet_id' => $pet->id, 'via' => $via]);
+        Log::info('Challenge: free pet upgraded to the 12-week challenge', ['pet_id' => $pet->id, 'via' => $via, 'score_kept' => $keepScore]);
     }
+
+    /** M6-U03: how long an open intent's score choice (`keep_score`) still speaks for an activation without one. */
+    public const INTENT_CHOICE_HOURS = 24;
 
     /** Clock skew between the store's purchase time and our intent timestamps. */
     public const INTENT_SKEW_MINUTES = 5;

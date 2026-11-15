@@ -371,6 +371,7 @@ class Pet extends Model
             'converted_to_free_at' => 'datetime',
             // M6-U01: the purchase that upgraded a free pet — the challenge clock starts here.
             'challenge_started_at' => 'datetime',
+            'challenge_score_kept' => 'boolean',
             'happy_until' => 'datetime',
             'coat_matted_at' => 'datetime',
             'grooming_weeks_checked' => 'integer',

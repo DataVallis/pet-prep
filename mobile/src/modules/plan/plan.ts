@@ -73,12 +73,22 @@ export function readPetPlan(raw: unknown): PetPlan {
     display_type,
     // M6-U01: only an upgraded pet carries the key (every other plan stays exactly as before).
     ...(challengeStartedAt !== null ? { challenge_started_at: challengeStartedAt } : {}),
+    // M6-U03: only when the parent kept the Care Score at that upgrade.
+    ...(challengeStartedAt !== null && o.challenge_score_kept === true ? { challenge_score_kept: true } : {}),
   };
 }
 
 /** M6-U01: when a purchase upgraded this (former free) pet to the challenge; null otherwise. */
 export function challengeStartedAt(plan: PetPlan): string | null {
   return plan.type === 'challenge' ? (plan.challenge_started_at ?? null) : null;
+}
+
+/**
+ * M6-U03: from when activities are »pred izzivom« — the upgrade purchase, or null when the
+ * parent kept the Care Score at it (then every day counts and nothing gets the label).
+ */
+export function preChallengeBefore(plan: PetPlan): string | null {
+  return plan.challenge_score_kept === true ? null : challengeStartedAt(plan);
 }
 
 /** One `GET /api/parent/billing` pet as a {@link PetPlan}. */

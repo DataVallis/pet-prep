@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\DB;
  * Per parent (= the purchase's RevenueCat `app_user_id`): a new intent
  * supersedes the parent's earlier open ones; single use (consumed by the
  * webhook or by the activation of that pet); valid TTL_MINUTES at the purchase.
+ * M6-U03 (U7, David 2026-11-15): for a free pet the intent also carries the parent's
+ * choice `keep_score` (keep the Care Score so far, or start again) for the webhook.
  * Same eligibility as activation: an active unpaid challenge pet (also unborn)
  * or an upgradeable free pet. Lock order family → pet (like activate()).
  */
@@ -31,9 +33,9 @@ class ChallengePurchaseIntentService
     /**
      * @throws ChallengeException already_paid / pet_not_active / game_over / pet_not_born / legacy_profile / free_plan (422)
      */
-    public function create(User $parent, Pet $pet): ChallengePurchaseIntent
+    public function create(User $parent, Pet $pet, ?bool $keepScore = null): ChallengePurchaseIntent
     {
-        return DB::transaction(function () use ($parent, $pet): ChallengePurchaseIntent {
+        return DB::transaction(function () use ($parent, $pet, $keepScore): ChallengePurchaseIntent {
             Family::whereKey($pet->family_id)->lockForUpdate()->first();
             $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
 
@@ -57,6 +59,8 @@ class ChallengePurchaseIntentService
                 'parent_user_id' => $parent->id,
                 'pet_id' => $locked->id,
                 'expires_at' => $now->copy()->addMinutes(self::TTL_MINUTES),
+                // M6-U03: only an upgrade has a score to keep.
+                'keep_score' => $locked->isFreePlan() ? $keepScore : null,
             ]);
         });
     }

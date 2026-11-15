@@ -55,7 +55,7 @@ import { noPushesHintDue } from '@/modules/steps/adaptedPushHint';
 import CareRemindersCard, { reminderDate } from '@/components/parent/CareRemindersCard';
 import { careReminderTitle } from '@/modules/careTasks/careTasks';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
-import { challengeStartedAt } from '@/modules/plan/plan';
+import { preChallengeBefore } from '@/modules/plan/plan';
 import ChallengeUpgradeEntry from '@/components/parent/ChallengeUpgradeEntry';
 import { parentPetGrowthKey, useGrowthRefresh, useParentPetGrowth } from '@/hooks/queries/usePetGrowth';
 import PetAlbum from '@/components/PetAlbum';
@@ -623,7 +623,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
           )}
 
           {petId !== null && (
-            <Timeline petId={petId} family={family} species={species} zone={petZone} startedAt={pet ? challengeStartedAt(pet.plan) : null} />
+            <Timeline petId={petId} family={family} species={species} zone={petZone} startedAt={pet ? preChallengeBefore(pet.plan) : null} />
           )}
         </ScrollView>
       </View>
