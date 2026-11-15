@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — »Koliko dela je z labradorcem?«: povzetek brez datotek in e-naslovi brez podvajanja
+
+**Kaj:** Povzetek za starše smo isti dan naredili dvakrat. Najprej kot PDF v Lemon Squeezy, potem je David rekel, da to pri 300 pasmah in veliko jezikih ne gre: nihče ne bo nalagal tisočih datotek. Zdaj stran povzetek sestavi sama iz izbir obiskovalca (pes ali mladiček, jezik, valuta, njegove ocene stroškov), starš ga natisne ali shrani kot PDF. E-naslov je neobvezen: starš ga pusti s privolitvijo za novice, strežnik ga shrani enkrat, tudi če ga vpiše večkrat. IP-ja in imena ne shranjujemo, strežnik ne pošilja e-pošte.
+**Zakaj je pomembno:** partner, ki bo imel logotip na strani, hoče vedeti, koliko družin jo je videlo in katere pasme jih zanimajo. Dobi številke, ne naslovov.
+- 🛠 Ena stran namesto 4.500 datotek (300 pasem × 15 jezikov): podatki ostanejo na enem mestu.
+- 🤝 Partnerjem: »povemo vam, koliko družin je razmišljalo o labradorcu; njihovih naslovov ne delimo«.
+- 👩 Staršem: povzetek dobite brez e-naslova; če ga pustite, ga shranimo samo z vašo privolitvijo.
+
 ## 2026-11-15 — Three.js: prototip »Koliko dela je labradorec?«
 
 **Kaj:** David je vprašal, kje lahko three.js naredi korak naprej, tudi poslovno. Odgovor: na spletni strani, ne v aplikaciji — pes v aplikaciji ostane realističen video. Narejen je prototip za petprep.si: en dan z labradorcem v 3D, vsako opravilo pade kot žeton na kup, kup se pomnoži na teden, leto in 13 let (odrasel labradorec: 7.177 ur sprehodov in 9.570 obrokov), nato stroški z izbiro valute in poziv partnerjem. V prizoru so info točke z dejstvi in viri. Samo prototip (`docs/prototypes/real-cost/`), *ni objavljen*.
