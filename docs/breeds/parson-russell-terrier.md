@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `parson_russell_terrier` (viri S864–S870; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S865) |
 | Izvor | FCI št. 339, skupina 3, sekcija 1 (veliki in srednji terierji), Velika Britanija (S864) — ni jack russell terier (FCI 345, `russell_terrier`) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 112. mesto »Parson Russell Terrier« (S174, prebrano 2026-11-15) |
-| PR-ji | pet-prep #1133 (pasma) · portret: pet-prep PR `feat/M5-R10-116-parson-russell-terrier-portrait` · spletna stran: pet-prep-website `feat/register-parson-russell-terrier` |
+| PR-ji | pet-prep #1133 (pasma, združen `7adaec3`) · portret pet-prep #1134 (zagon `breed-portraits.yml` 43688540623, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-parson-russell-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-15 |
 | Ščetkanje zob vsak dan, čiščenje ušes vsaka 2 tedna (otrok), opomnik staršem: kopanje vsaka 2 tedna | 🛠 | 💶 izziv | M5-R15 / M5-R18 / M5-R19 | 2026-11-15 |
 | Barva (izbirnik: bel z rjavimi lisami, tribarven, bel z limonastimi lisami, bel s črnimi lisami) | 🛠 | 💶 izziv | M5-R21 | 2026-11-15 |
-| AI portret v registru | 🗓 po združitvi (breed-portraits.yml) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/parson-russell-terrier`, `/sl/zivali/psi/parson-russell-terier`) | 🗓 šele s portretom; nato »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), bel z rjavimi lisami, spuščena V-ušesa, naraven rep | — | M5-R11-04 | 2026-11-15 |
+| Stran na petprep.si (`/animals/dogs/parson-russell-terrier`, `/sl/zivali/psi/parson-russell-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 

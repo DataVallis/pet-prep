@@ -1416,6 +1416,19 @@
             "prompt_hash": "sha256:b51c4ef00a05bab47d11defa992fc14c93af1c0122727e061d2cf8b4b9514845",
             "generated_at": "2026-11-15T02:58:08+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "parson_russell_terrier",
+            "species": "dog",
+            "colour": "white-tan",
+            "file": "dog/parson-russell-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c18fe29a9a2cf5d279ae192389b23d15c894895138196504d8e0c4b61f233163",
+            "generated_at": "2026-11-15T07:08:35+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
