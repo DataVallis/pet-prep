@@ -15,6 +15,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 🛠 Ena stran namesto 4.500 datotek (300 pasem × 15 jezikov): podatki ostanejo na enem mestu.
 - 🤝 Partnerjem: »povemo vam, koliko družin je razmišljalo o labradorcu; njihovih naslovov ne delimo«.
 - 👩 Staršem: povzetek dobite brez e-naslova; če ga pustite, ga shranimo samo z vašo privolitvijo.
+- 📣 Isti dan je stran prenesena na petprep.si (»Koliko dela je z labradorcem?«, slovensko in angleško; `pet-prep-website` PR #406).
 ## 2026-11-15 — Sit kuža ne ostane brez hrane: lakota ne pade pod 25 % do naslednjega obroka
 
 **Kaj:** David je v nedeljo ob 15:32 poslal posnetek zaslona: francoski buldog, mladiček 6 mesecev, jutranji obrok opravljen (6–10 ✓), naslednji ob 17:00 — lakota pa 0 %. Vzrok je računski: lakota pade 12 % na uro, polna skleda zdrži 8 ur in 20 minut, okni pa se začneta 11 ur narazen. Med tednom šola (tihe ure, upadanje ×0,1) to skrije, ob vikendu ne. Otrok ni mogel storiti ničesar (nujni obrok je samo po zamujenem obroku), starš pa je uro kasneje dobil alarm »Nujno« — za popolnoma oskrbovanega kužka. David je izbral rešitev št. 1 z mejo 25 %: dokler je zadnji obrok opravljen, lakota obstane pri 25 % in počaka na naslednje okno; ko se okno odpre, pada naprej. Po zamujenem obroku ostane vse po starem (0 %, nujni obrok, alarm). Velja za pse in mačke, tudi za obstoječe ljubljenčke; samo strežnik, brez nove različice aplikacije.

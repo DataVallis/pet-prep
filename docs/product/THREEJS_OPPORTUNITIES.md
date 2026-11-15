@@ -1,7 +1,7 @@
 # PetPrep — three.js: kje se splača in kje ne
 
 > **Zapisano 15. 11. 2026 (pogovor David + Claude).** David je vprašal, kje lahko three.js (https://threejs.org/docs/) naredi korak naprej v interakciji in zanimivosti, tudi poslovno. Analiza je Claudova; Davidove odločitve so označene **(David)**.
-> **Stanje:** prototip št. 1 je narejen (§4) in je v repozitoriju kot `docs/prototypes/real-cost/`. Ni v aplikaciji, ni na strežniku in ni na petprep.si.
+> **Stanje:** prototip št. 1 (§4) je **15. 11. 2026 prenesen na petprep.si** (David: »Prenesi prototip na petprep.si«): `/how-much-work-is-a-labrador` · `/sl/koliko-dela-je-z-labradorcem`, SL + EN, repo `pet-prep-website` PR #406. Izvorna koda strani je od takrat v `pet-prep-website/tools/real-cost/`; `docs/prototypes/real-cost/` tukaj ostane kot zgodovina prototipa. Ni v aplikaciji.
 > Povezano: `GAMES_SPEC.md` (smer »pes ostane video«), `docs/business/VALIDATION_PLAN.md` §2 (kaj je zamrznjeno), `docs/business/REVENUE_MODELS.md` (R3 zavarovalnice, R4 spletna stran), `docs/business/BUSINESS_MODEL.md` §2 in §4 (kalkulator »Real Cost of a Dog«, lead magnet »Pet Promise Reality Check«), `docs/business/WEBSITE_SALES_SPEC.md` (Lemon Squeezy, brezplačen vzorec za e-naslov).
 
 ## 1. Sklep
@@ -39,7 +39,7 @@ Three.js se pri PetPrepu splača **na petprep.si**, ne v aplikaciji in ne za sam
 
 ## 4. Prototip št. 1 — »Koliko dela je z labradorcem?« (David: »ok daj ja«, 15. 11. 2026)
 
-- **Kje:** izvorna koda `docs/prototypes/real-cost/` (navodila v tamkajšnjem `README.md`); objavljen tudi kot zasebna stran Claude za Davida. Ni na petprep.si.
+- **Kje:** na petprep.si `/how-much-work-is-a-labrador` · `/sl/koliko-dela-je-z-labradorcem` (od 15. 11. 2026, `pet-prep-website` PR #406; v zemljevidu strani, ne v glavi ali nogi). Interaktivni del je samostojen dokument v okvirju iste domene (three.js in pisave so del strani, brez zahtevkov tretjim), okoli njega besedilo s številkami in viri. Izvorna koda: `pet-prep-website/tools/real-cost/`; prototip `docs/prototypes/real-cost/` ostane kot zgodovina.
 - **Tehnika:** three.js 0.187.0 in cannon-es 0.20.0 (fizika), brez strežnika. SL + EN, namizje in telefon, gumbi delujejo s tipkovnico, upošteva »zmanjšaj gibanje«. Preverjeno v brskalniku brez zaslona (namizje 1360 px, telefon 390 px), ne na pravem telefonu.
 - **Potek:** (1) izbira odrasel pes / mladiček 2 meseca → (2) en dan se odvrti (ura, obroki, sprehod, kakec, vaja; pri mladičku »ven« vsaki 2 uri), vsako opravilo pade kot žeton na kup → (3) kup se pomnoži na teden, leto in 13 let → (4) »Za starše: koliko stane« z drsnikoma, izbiro valute in kupom kovancev + **mesto za partnerja** (poziv k partnerstvu) → (5) »Bi zmogel vsak dan?« s seznamom obljub, gumboma do izziva in »Obljube o ljubljenčku« ter gumbom »Odpri povzetek za starše«, ki na strani sestavi povzetek za tisk ali shranjevanje v PDF (T8), in neobveznim obrazcem za e-naslov starša s privolitvijo (T9).
 - **V prizoru:** oznaka nad posodo pove, kaj je na kupu in koliko pomeni en žeton ali kovanec; pet info točk »i« odpre kratka dejstva z virom.
@@ -79,11 +79,11 @@ Izračun za 13 let uporabi številke odraslega psa za vsa leta (poenostavitev, n
 ### Odprto za Davida
 1. **Cene za Slovenijo.** Številke so britanski minimum PDSA, samo preračunan. Ali poiščemo slovenski vir ali ostane PDSA z opombo »cene v vaši državi so lahko drugačne«.
 2. **Pravi partner:** kdo in pod kakšnimi pogoji (REVENUE_MODELS §4).
-3. **Ali gre to na petprep.si pred koncem validacije** (VALIDATION_PLAN §2) in v katerih jezikih (stran ima 15 jezikov; prototip ima SL + EN).
+3. ~~Ali gre to na petprep.si pred koncem validacije~~ — David 15. 11. 2026: da, stran je prenesena (SL + EN). Odprto: ostalih 13 jezikov.
 4. Ali naj se pasma izbira (podatki za vse pasme so v registru) ali ostane ena stran na pasmo.
 
 ### Naslednji koraki, če David potrdi
-1. Prenos v `pet-prep-website` kot komponenta (three.js naložen šele ob odprtju strani), podatki iz `registry.json` namesto vpisanih v kodo.
+1. ~~Prenos v `pet-prep-website`~~ — narejeno 15. 11. 2026 (PR #406; three.js se naloži samo na tej strani). Odprto: podatki iz `registry.json` namesto vpisanih v kodo.
 2. Stran na pasmo v registru: »Koliko dela je s <pasmo>?« (predlog s / z po pasmi).
 3. Povzetek (T8) za vsako pasmo in jezik iz registra — brez datotek. E-naslov: T9 (lasten API, M6-S05) je narejen.
 4. Merjenje: delež obiskov, ki pridejo do koraka 5 in pustijo e-naslov (cena stika za H4).

@@ -1,3 +1,5 @@
+# (Superseded 2026-11-15 — the page now lives in `pet-prep-website`: `tools/real-cost/`, PR #406. Change it there; this folder is the prototype's history.)
+
 # Prototype — "How much work is a Labrador?" (three.js)
 
 Interactive 3D lead-magnet prototype for petprep.si (David, 2026-11-15). **Not shipped anywhere**: it is not part of
