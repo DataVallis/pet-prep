@@ -100,7 +100,8 @@
       "note": "Own organisation site (country page and home page) both say 24/7 emergency care. No street address and no separate after-hours number published. The ADI Google Sites page only lists Vietnam/Laos - not relevant.",
       "duty_i18n": {
         "it": "Aperto tutti i giorni 9:00–19:00 (festivi 9:00–12:00). Pronto soccorso e terapia intensiva 24 ore su 24, 7 giorni su 7; chiamare il numero dell'ospedale.",
-        "pt": "Aberto todos os dias, 9h00–19h00 (feriados 9h00–12h00). Urgências e cuidados intensivos 24 h/24, 7 dias por semana; liga para o número do hospital."
+        "pt": "Aberto todos os dias, 9h00–19h00 (feriados 9h00–12h00). Urgências e cuidados intensivos 24 h/24, 7 dias por semana; liga para o número do hospital.",
+        "nl": "Elke dag open 9.00–19.00 uur (feestdagen 9.00–12.00 uur). Spoed- en intensieve zorg 24/7; bel het nummer van het ziekenhuis."
       }
     },
     {
@@ -119,7 +120,8 @@
       "note": "Phone and hours from the own contact page. Address from easy-cambodia.com and thewellfrog.com (both agree; not on own site). Directories list other phones (010 666 742, 010 500 999) - not used. Directories say \"24/7\"; own page does not, so false.",
       "duty_i18n": {
         "it": "Aperto tutti i giorni 9:00–19:00 (può chiudere in anticipo: telefonare prima). Chiamate per urgenze dopo le 19:00 allo stesso numero, solo in inglese, con tariffa fuori orario.",
-        "pt": "Aberto todos os dias, 9h00–19h00 (pode fechar mais cedo – liga primeiro). Chamadas de urgência depois das 19h00 no mesmo número, apenas em inglês, com taxa fora de horas."
+        "pt": "Aberto todos os dias, 9h00–19h00 (pode fechar mais cedo – liga primeiro). Chamadas de urgência depois das 19h00 no mesmo número, apenas em inglês, com taxa fora de horas.",
+        "nl": "Dagelijks open 9.00–19.00 uur (kan eerder sluiten – bel eerst). Spoedoproepen na 19.00 uur op hetzelfde nummer, alleen in het Engels, met toeslag buiten kantooruren."
       }
     },
     {
@@ -138,7 +140,8 @@
       "note": "Phones (office 02 398-6640 / 01 746-4681, after hours 088 818-0022) from the IPATA member page; that page has no address and no 24 h statement. Address and 023 986 640 only from thewellfrog.com aggregator. vslveterinary.com not opened (WebFetch refused). Aggregator calls it 24/7 - not accepted.",
       "duty_i18n": {
         "it": "È disponibile una linea telefonica fuori orario: +855 88 818 0022.",
-        "pt": "Linha telefónica fora de horas disponível: +855 88 818 0022."
+        "pt": "Linha telefónica fora de horas disponível: +855 88 818 0022.",
+        "nl": "Er is een telefoonlijn buiten kantooruren: +855 88 818 0022."
       }
     },
     {
@@ -157,7 +160,8 @@
       "note": "Charity clinic. Only an expat-guide source (undated); ppaws.com could not be opened (not in search results, WebFetch refused). Verify before publishing.",
       "duty_i18n": {
         "it": "Aperto da martedì a venerdì e la domenica; telefonare o scrivere prima. Veterinari itineranti vengono anche a Kampot in date prestabilite.",
-        "pt": "Aberto de terça a sexta-feira e ao domingo; liga ou envia e-mail antes. Veterinários itinerantes também visitam Kampot em datas fixas."
+        "pt": "Aberto de terça a sexta-feira e ao domingo; liga ou envia e-mail antes. Veterinários itinerantes também visitam Kampot em datas fixas.",
+        "nl": "Open van dinsdag tot en met vrijdag en op zondag; bel of mail vooraf. Rondreizende dierenartsen komen op vaste data ook naar Kampot."
       }
     },
     {
@@ -176,7 +180,8 @@
       "note": "Expat guide only (undated); agrovet-cambodia.com could not be opened (WebFetch refused). small_animals assumed from the guide listing it as a pet vet - unverified.",
       "duty_i18n": {
         "it": "Orari di apertura non pubblicati.",
-        "pt": "Horário não divulgado."
+        "pt": "Horário não divulgado.",
+        "nl": "Openingstijden niet gepubliceerd."
       }
     },
     {
@@ -195,7 +200,8 @@
       "note": "Expat guide only (undated); a 2013-era forum thread says the founding vet left and another poster said there was no vet - verify current operation. Facebook page not openable.",
       "duty_i18n": {
         "it": "Visite su appuntamento, giorni feriali 9:00–16:00.",
-        "pt": "Consultas sob marcação, em dias úteis, 9h00–16h00."
+        "pt": "Consultas sob marcação, em dias úteis, 9h00–16h00.",
+        "nl": "Consulten op afspraak, op werkdagen 9.00–16.00 uur."
       }
     },
     {
@@ -214,7 +220,8 @@
       "note": "Expat guides only. Hours conflict between pages (10-18 vs 9-19), so no hours published. \"Emergency calls at any time\" is not a 24 h clinic statement.",
       "duty_i18n": {
         "it": "Visite su appuntamento, tutti i giorni. Chiamate per urgenze accettate a qualsiasi ora; visite a domicilio disponibili.",
-        "pt": "Consultas sob marcação, todos os dias. Chamadas de urgência atendidas a qualquer hora; visitas ao domicílio disponíveis."
+        "pt": "Consultas sob marcação, todos os dias. Chamadas de urgência atendidas a qualquer hora; visitas ao domicílio disponíveis.",
+        "nl": "Consulten op afspraak, dagelijks. Spoedoproepen op elk uur; huisbezoeken mogelijk."
       }
     },
     {
@@ -233,7 +240,8 @@
       "note": "Two expat-guide pages say \"available by phone 24 hours a day\" - a phone line of a single mobile vet, not a staffed 24 h hospital; Facebook facebook.com/Animal.Care.Veterinarian not openable. Consider downgrading to false if the 24 h flag should mean a staffed clinic.",
       "duty_i18n": {
         "it": "Raggiungibile per telefono 24 ore su 24; visite a domicilio.",
-        "pt": "Contactável por telefone 24 horas por dia; visitas ao domicílio."
+        "pt": "Contactável por telefone 24 horas por dia; visitas ao domicílio.",
+        "nl": "24 uur per dag telefonisch bereikbaar; huisbezoeken."
       }
     },
     {
@@ -252,7 +260,8 @@
       "note": "Expat guide only; two guide pages agree. kampot.city lists it without details.",
       "duty_i18n": {
         "it": "Aperto tutti i giorni 7:30–17:00.",
-        "pt": "Aberto todos os dias, 7h30–17h00."
+        "pt": "Aberto todos os dias, 7h30–17h00.",
+        "nl": "Dagelijks open 7.30–17.00 uur."
       }
     }
   ],

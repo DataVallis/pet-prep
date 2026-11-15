@@ -60,7 +60,8 @@
       "note": "Hours line 'Lunes - Domingo 24 hrs'; 'las 24 horas del día, los 7 días de la semana'.",
       "quote": "Disponibles 24 horas para atender",
       "duty_i18n": {
-        "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências veterinárias. Liga antes: +1 787 751 3737."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências veterinárias. Liga antes: +1 787 751 3737.",
+        "nl": "Dierenspoed 24 uur per dag, 7 dagen per week. Bel vooraf: +1 787 751 3737."
       }
     },
     {
@@ -79,7 +80,8 @@
       "note": "'24 horas los 7 días a la semana', 'Abierto todos los días 24/7'.",
       "quote": "¡Servicios las 24 Horas!",
       "duty_i18n": {
-        "pt": "Aberto 24 horas por dia, 7 dias por semana. Liga antes: +1 787 765 1120."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana. Liga antes: +1 787 765 1120.",
+        "nl": "24 uur per dag, 7 dagen per week open. Bel vooraf: +1 787 765 1120."
       }
     },
     {
@@ -98,7 +100,8 @@
       "note": "Page: 'come 24 hours a day, 7 days a week'. MetroVet page gives a different address description (Ave. Las Cumbres / Carr. 181); site address used.",
       "quote": "We attend to your pet's emergency 24/7",
       "duty_i18n": {
-        "pt": "Urgências 24 horas por dia, 7 dias por semana, sem marcação. Liga antes: +1 787 331 6060."
+        "pt": "Urgências 24 horas por dia, 7 dias por semana, sem marcação. Liga antes: +1 787 331 6060.",
+        "nl": "Spoedzorg 24 uur per dag, 7 dagen per week, zonder afspraak. Bel vooraf: +1 787 331 6060."
       }
     },
     {
@@ -117,7 +120,8 @@
       "note": "Page says emergencies 'disponible 24/7'; regular hours not listed. ZIP differs on page footer (00727).",
       "quote": "disponible 24/7",
       "duty_i18n": {
-        "pt": "Equipa de urgência disponível 24 h/24, 7 dias por semana. Liga antes: +1 787 979 3139."
+        "pt": "Equipa de urgência disponível 24 h/24, 7 dias por semana. Liga antes: +1 787 979 3139.",
+        "nl": "Spoedteam 24/7 beschikbaar. Bel vooraf: +1 787 979 3139."
       }
     },
     {
@@ -135,7 +139,8 @@
       "note": "Own page says 8am-10pm daily; prvets.com says 8am-midnight; Gardenville page calls it '24 horas' but lists until midnight. No explicit 24 h walk-in wording, so false.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Hospital de urgências aberto todos os dias, 8h00–22h00; os animais internados são monitorizados 24 horas por dia. Liga antes: +1 787 592 3939."
+        "pt": "Hospital de urgências aberto todos os dias, 8h00–22h00; os animais internados são monitorizados 24 horas por dia. Liga antes: +1 787 592 3939.",
+        "nl": "Spoedziekenhuis dagelijks 8.00–22.00 uur geopend; opgenomen patiënten staan 24 uur per dag onder toezicht. Bel vooraf: +1 787 592 3939."
       }
     },
     {
@@ -153,7 +158,8 @@
       "checked": "2026-11-13",
       "note": "No hours and no 24 h wording on page.",
       "duty_i18n": {
-        "pt": "Apresenta-se como especializada em urgências veterinárias; horário não divulgado. Liga antes: +1 787 842 7974 ou +1 939 313 0886."
+        "pt": "Apresenta-se como especializada em urgências veterinárias; horário não divulgado. Liga antes: +1 787 842 7974 ou +1 939 313 0886.",
+        "nl": "Zegt gespecialiseerd te zijn in spoedgevallen bij dieren; openingstijden niet bekendgemaakt. Bel vooraf: +1 787 842 7974 of +1 939 313 0886."
       }
     },
     {
@@ -171,7 +177,8 @@
       "checked": "2026-11-13",
       "note": "Page header says 8-18, hours section 8-17 (inconsistent). Second phone 939-235-1537.",
       "duty_i18n": {
-        "pt": "Segunda a sexta, 8h00–17h00; fechado aos fins de semana. Sem serviço de urgências indicado. Liga antes."
+        "pt": "Segunda a sexta, 8h00–17h00; fechado aos fins de semana. Sem serviço de urgências indicado. Liga antes.",
+        "nl": "Ma–vr 8.00–17.00 uur, in het weekend gesloten. Geen spoeddienst vermeld. Bel vooraf."
       }
     },
     {
@@ -189,7 +196,8 @@
       "note": "Near Rincón/Aguadilla.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Segunda a sexta, 9h00–17h00. Sem serviço de urgências indicado. Liga antes."
+        "pt": "Segunda a sexta, 9h00–17h00. Sem serviço de urgências indicado. Liga antes.",
+        "nl": "Ma–vr 9.00–17.00 uur. Geen spoeddienst vermeld. Bel vooraf."
       }
     },
     {
@@ -207,7 +215,8 @@
       "note": "No hours, no emergency wording.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Sob marcação; horário não divulgado. Liga antes."
+        "pt": "Sob marcação; horário não divulgado. Liga antes.",
+        "nl": "Op afspraak; openingstijden niet bekendgemaakt. Bel vooraf."
       }
     },
     {
@@ -225,7 +234,8 @@
       "note": "prvets.com lists phone 787-714-9531 and 7:30-17:30; CMVPR and own site 787-724-9333. Own site used.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Segunda a sábado, 7h30–17h30. Não funciona 24 horas por dia. Liga antes."
+        "pt": "Segunda a sábado, 7h30–17h30. Não funciona 24 horas por dia. Liga antes.",
+        "nl": "Ma–za 7.30–17.30 uur. Geen 24-uurskliniek. Bel vooraf."
       }
     },
     {
@@ -243,7 +253,8 @@
       "note": "Page says it offers no 24 h emergency care; prvets.com shows phone 787-710-2524 and 9-18 hours.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Segunda a sexta, 8h00–18h00, sábado, 9h00–14h00. Sem urgências 24 horas por dia; fora de horas encaminha para o Doctor Pet Emergency Hospital, +1 787 592 3939."
+        "pt": "Segunda a sexta, 8h00–18h00, sábado, 9h00–14h00. Sem urgências 24 horas por dia; fora de horas encaminha para o Doctor Pet Emergency Hospital, +1 787 592 3939.",
+        "nl": "Ma–vr 8.00–18.00 uur, za 9.00–14.00 uur. Geen 24-uurs spoedzorg; buiten openingstijden verwijzing naar Doctor Pet Emergency Hospital, +1 787 592 3939."
       }
     },
     {
@@ -261,7 +272,8 @@
       "note": "No hours or emergency wording.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Horário não divulgado. Liga antes."
+        "pt": "Horário não divulgado. Liga antes.",
+        "nl": "Openingstijden niet bekendgemaakt. Bel vooraf."
       }
     },
     {
@@ -279,7 +291,8 @@
       "note": "Directs life-threatening emergencies to a local emergency hospital.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Segunda a sexta, 8h00–18h00, sábado, 8h00–17h00, domingo, 10h00–17h00. Não é um hospital de urgências."
+        "pt": "Segunda a sexta, 8h00–18h00, sábado, 8h00–17h00, domingo, 10h00–17h00. Não é um hospital de urgências.",
+        "nl": "Ma–vr 8.00–18.00 uur, za 8.00–17.00 uur, zo 10.00–17.00 uur. Geen spoedziekenhuis."
       }
     },
     {
@@ -297,7 +310,8 @@
       "note": "Also 787-780-5583 (CMVPR). Page also says 7 days/week; listed hours omit Saturday.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Segunda a sexta, 8h00–18h00, domingo, 9h00–18h00. Liga antes."
+        "pt": "Segunda a sexta, 8h00–18h00, domingo, 9h00–18h00. Liga antes.",
+        "nl": "Ma–vr 8.00–18.00 uur, zo 9.00–18.00 uur. Bel vooraf."
       }
     },
     {
@@ -315,7 +329,8 @@
       "note": "CMVPR lists 787-763-2584 for this name.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Segunda a sexta, 8h00–18h00, sábado, 8h00–16h00. Liga antes."
+        "pt": "Segunda a sexta, 8h00–18h00, sábado, 8h00–16h00. Liga antes.",
+        "nl": "Ma–vr 8.00–18.00 uur, za 8.00–16.00 uur. Bel vooraf."
       }
     },
     {
@@ -333,7 +348,8 @@
       "note": "Phone matches CMVPR.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Segunda a sexta, 7h00–17h00, sábado, 8h00–14h00. Liga antes."
+        "pt": "Segunda a sexta, 7h00–17h00, sábado, 8h00–14h00. Liga antes.",
+        "nl": "Ma–vr 7.00–17.00 uur, za 8.00–14.00 uur. Bel vooraf."
       }
     },
     {
@@ -351,7 +367,8 @@
       "note": "CMVPR lists 787-789-2934 for Clínica Veterinaria Guaynabo; phones differ.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Segunda a sexta, 8h00–18h00, fechado aos fins de semana. Liga antes."
+        "pt": "Segunda a sexta, 8h00–18h00, fechado aos fins de semana. Liga antes.",
+        "nl": "Ma–vr 8.00–18.00 uur, in het weekend gesloten. Bel vooraf."
       }
     },
     {
@@ -369,7 +386,8 @@
       "note": "Page says emergencies evaluated 'as needed and assigned'. Non-profit clinic; CMVPR also lists Isla Nena Clínica de Animales (917-776-1231), no own page opened.",
       "checked": "2026-11-13",
       "duty_i18n": {
-        "pt": "Clínica com atendimento à terça, quarta e sexta-feira, 8h00–17h00. Sem linha de urgências fora de horas divulgada. Liga antes."
+        "pt": "Clínica com atendimento à terça, quarta e sexta-feira, 8h00–17h00. Sem linha de urgências fora de horas divulgada. Liga antes.",
+        "nl": "Kliniek bemand op di, wo en vr 8.00–17.00 uur. Geen aparte spoedlijn buiten openingstijden vermeld. Bel vooraf."
       }
     }
   ],

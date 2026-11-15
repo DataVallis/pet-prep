@@ -191,7 +191,8 @@
         "fr": "Cliniques de Berlin avec service d’urgence petits animaux 24 h/24 et cabinets avec urgences en soirée, le week-end et les jours fériés ; recherche : « Notdienst, Tierarzt, Berlin, Stadtbezirk » ; cliniques réservées aux cas mettant la vie en danger.",
         "es": "Clínicas de Berlín con servicio de urgencias de pequeños animales las 24 horas y clínicas con horario de urgencias por las tardes, fines de semana y festivos; busca «Notdienst, Tierarzt, Berlin, Stadtbezirk»; acude a las clínicas solo en casos con riesgo vital.",
         "it": "Cliniche di Berlino con pronto soccorso 24 ore su 24 per piccoli animali e studi con orari di urgenza serali, nei weekend e nei festivi; cercare 'Notdienst, Tierarzt, Berlin, Stadtbezirk'; rivolgersi alle cliniche solo per casi in pericolo di vita.",
-        "pt": "Clínicas de Berlim com serviço de urgência 24 h/24 para pequenos animais e consultórios com horário de urgência ao fim do dia, aos fins de semana e feriados; pesquisa «Notdienst, Tierarzt, Berlin, Stadtbezirk»; recorre às clínicas apenas em casos com risco de vida."
+        "pt": "Clínicas de Berlim com serviço de urgência 24 h/24 para pequenos animais e consultórios com horário de urgência ao fim do dia, aos fins de semana e feriados; pesquisa «Notdienst, Tierarzt, Berlin, Stadtbezirk»; recorre às clínicas apenas em casos com risco de vida.",
+        "nl": "Berlijnse klinieken met 24-uurs spoeddienst voor kleine huisdieren en praktijken met spoeduren in de avond, het weekend en op feestdagen; zoek op 'Notdienst, Tierarzt, Berlin, Stadtbezirk'; gebruik klinieken alleen bij levensbedreigende gevallen."
       },
       "note": "No central emergency phone; chamber office number is administrative only. Clinics report severe capacity shortages. Source: Tierärztekammer Berlin page listing these clinics/practices.",
       "source_url": "https://tieraerztekammer-berlin.de/notdienst/",
@@ -214,7 +215,8 @@
         "fr": "Planning du cabinet de garde : lun.–ven. 20 h–8 h, week-ends et jours fériés 8 h–8 h le lendemain ; ligne d’information 040 434379 ; appelez toujours le cabinet au préalable.",
         "es": "Turno de la clínica de guardia: lun–vie 20:00–8:00 h, fines de semana y festivos 8:00–8:00 h del día siguiente; línea de información 040 434379; llama siempre primero a la clínica.",
         "it": "Turno dello studio di guardia: lun–ven 20:00–08:00, weekend e festivi dalle 08:00 alle 08:00 del giorno dopo; linea informazioni 040 434379; telefonare sempre prima allo studio",
-        "pt": "Escala do consultório de serviço: segunda a sexta 20h00–8h00, fins de semana e feriados 8h00–8h00 do dia seguinte; linha de informação 040 434379; liga sempre primeiro para o consultório"
+        "pt": "Escala do consultório de serviço: segunda a sexta 20h00–8h00, fins de semana e feriados 8h00–8h00 do dia seguinte; linha de informação 040 434379; liga sempre primeiro para o consultório",
+        "nl": "Rooster van de dienstdoende praktijk: ma–vr 20.00–08.00 uur, weekenden en feestdagen 08.00–08.00 uur de volgende dag; informatielijn 040 434379; bel altijd eerst de praktijk."
       },
       "note": "Emergency surcharge 50 EUR + VAT under GOT.",
       "source_url": "https://tieraerztekammer-hamburg.de/aktueller-notdienstplan",
@@ -237,7 +239,8 @@
         "fr": "Lun.–ven. 18 h–22 h ; sam., dim. et jours fériés 8 h–22 h ; appel préalable obligatoire. En dehors de ces horaires : cliniques des environs (Posthausen, Sottrum, TiHo Hannover).",
         "es": "Lun–vie 18:00–22:00 h; sáb, dom y festivos 8:00–22:00 h; es obligatorio registrarse por teléfono. Fuera de este horario: clínicas de la zona (Posthausen, Sottrum, TiHo Hannover).",
         "it": "Lun–ven 18:00–22:00; sab, dom e festivi 08:00–22:00; registrazione telefonica obbligatoria. Fuori da questi orari: cliniche dei dintorni (Posthausen, Sottrum, TiHo Hannover)",
-        "pt": "Segunda a sexta 18h00–22h00; sábado, domingo e feriados 8h00–22h00; marcação telefónica obrigatória. Fora deste horário: clínicas da região (Posthausen, Sottrum, TiHo Hannover)"
+        "pt": "Segunda a sexta 18h00–22h00; sábado, domingo e feriados 8h00–22h00; marcação telefónica obrigatória. Fora deste horário: clínicas da região (Posthausen, Sottrum, TiHo Hannover)",
+        "nl": "ma–vr 18.00–22.00 uur; za, zo en feestdagen 08.00–22.00 uur; telefonische aanmelding verplicht. Buiten die tijden: klinieken in de omgeving (Posthausen, Sottrum, TiHo Hannover)."
       },
       "source_url": "https://tieraerztekammer-bremen.org/notdienst/",
       "checked": "2026-11-02",
@@ -259,7 +262,8 @@
         "fr": "Depuis le 1er janvier 2025 : lun.–ven. 18 h–8 h et toute la journée les week-ends et jours fériés ; l’appelant est mis en relation directement avec le cabinet de garde le plus proche (selon sa position). Petits animaux uniquement, généralement pas de visites à domicile.",
         "es": "Desde el 1 de enero de 2025: lun–vie 18:00–8:00 h y todo el día en fines de semana y festivos; la llamada se conecta directamente con la clínica de guardia más cercana (según la ubicación de quien llama). Solo pequeños animales, normalmente sin visitas a domicilio.",
         "it": "Dal 1° gennaio 2025: lun–ven 18:00–08:00 e tutto il giorno nei weekend e nei festivi; chi chiama viene collegato direttamente allo studio di guardia più vicino (scelto in base alla posizione di chi chiama). Solo piccoli animali, di norma senza visite a domicilio",
-        "pt": "Desde 1 de janeiro de 2025: segunda a sexta 18h00–8h00 e todo o dia aos fins de semana e feriados; quem liga é encaminhado diretamente para o consultório de serviço mais próximo (consoante a localização). Apenas pequenos animais, normalmente sem visitas ao domicílio"
+        "pt": "Desde 1 de janeiro de 2025: segunda a sexta 18h00–8h00 e todo o dia aos fins de semana e feriados; quem liga é encaminhado diretamente para o consultório de serviço mais próximo (consoante a localização). Apenas pequenos animais, normalmente sem visitas ao domicílio",
+        "nl": "Sinds 1 jan. 2025: ma–vr 18.00–08.00 uur en de hele dag in weekenden en op feestdagen; de beller wordt direct doorverbonden met de dichtstbijzijnde dienstdoende praktijk (op basis van locatie). Alleen kleine huisdieren, meestal geen huisbezoeken."
       },
       "quote": "Montag – Freitag 18:00 – 08:00 Uhr und ganztägig am Wochenende und an den Feiertagen",
       "note": "Sächsische Landestierärztekammer announcement. 01805 is a charged service number. vetnotdienst.de could not be fetched (not reachable from this tool).",
@@ -283,7 +287,8 @@
         "fr": "Lun.–jeu. 18 h–8 h, du ven. 18 h au lun. 8 h, jours fériés 0 h–24 h ; appelez avant de venir.",
         "es": "Lun–jue 18:00–8:00 h, del viernes a las 18:00 h al lunes a las 8:00 h, festivos 0:00–24:00 h; llama antes.",
         "it": "Lun–gio 18:00–08:00, da venerdì 18:00 a lunedì 08:00, festivi 0–24; telefonare in anticipo",
-        "pt": "Segunda a quinta 18h00–8h00, sexta 18h00 até segunda 8h00, feriados 0h00–24h00; liga antes"
+        "pt": "Segunda a quinta 18h00–8h00, sexta 18h00 até segunda 8h00, feriados 0h00–24h00; liga antes",
+        "nl": "ma–do 18.00–08.00 uur, vr 18.00 uur tot ma 08.00 uur, feestdagen 0–24 uur; bel vooraf."
       },
       "quote": "Die Brandenburg-weite Notdienstnummer ist die 01805843736.",
       "note": "Stated on a participating practice's page; AniCura Potsdam's page also names 'Tierärztlicher Notdienstring Berlin-Brandenburg' 01805 84 37 36. LTK Brandenburg page on the new emergency model could not be fetched (2 tries).",
@@ -306,7 +311,8 @@
         "fr": "Numéro régional unique qui met en relation avec le cabinet de garde le plus proche en Mecklembourg-Poméranie-Occidentale.",
         "es": "Número para todo el estado federado que conecta con la clínica de guardia más cercana en Mecklenburg-Vorpommern.",
         "it": "Numero regionale che collega allo studio di guardia più vicino nel Meclemburgo-Pomerania Anteriore",
-        "pt": "Número para todo o estado que liga ao consultório de serviço mais próximo em Mecklenburg-Vorpommern"
+        "pt": "Número para todo o estado que liga ao consultório de serviço mais próximo em Mecklenburg-Vorpommern",
+        "nl": "Deelstaatbreed nummer dat doorverbindt met de dichtstbijzijnde dienstdoende praktijk in Mecklenburg-Vorpommern."
       },
       "note": "Stated on Tierklinik Rostock's emergency page; Tierarztpraxis Puvogel (Rügen) and Tierarztpraxis Maack (Usedom) also refer small-animal emergencies to 01805 84 37 36. No chamber page found.",
       "source_url": "https://www.tierklinikrostock.de/notfallmedizin/",
@@ -330,7 +336,8 @@
         "fr": "Numéro central qui met en relation avec le vétérinaire de garde le plus proche ; annoncez l’urgence avant de venir.",
         "es": "El número central conecta con el veterinario de guardia más cercano; avisa de la urgencia antes de ir.",
         "it": "Il numero centrale collega al veterinario di guardia più vicino; preannunciare l'urgenza prima di arrivare",
-        "pt": "O número central liga ao veterinário de serviço mais próximo; anuncia a urgência antes de chegar"
+        "pt": "O número central liga ao veterinário de serviço mais próximo; anuncia a urgência antes de chegar",
+        "nl": "Centraal nummer verbindt door met de dichtstbijzijnde dienstdoende dierenarts; meld het spoedgeval vóór aankomst aan."
       },
       "quote": "Seit 2022 wird der 24-stündige tierärztliche Notdienst zentral von der Tierärztekammer Schleswig-Holstein organisiert.",
       "note": "Same number on Tiermedizin am Kurpark (heading '24-Stunden-Notdienst Schleswig-Holstein:'), Tierklinik Neustädter Bucht and fehmarn.de. Chamber's own Kleintiernotdienst page redirected to a login area and could not be read.",
@@ -352,7 +359,8 @@
         "fr": "Recherche en ligne du vétérinaire de garde ; en semaine 18 h–8 h, du ven. 18 h au lun. 8 h, jours fériés toute la journée ; annoncez l’urgence par téléphone au vétérinaire de garde.",
         "es": "Búsqueda en línea del veterinario de guardia; noches entre semana 18:00–8:00 h, del viernes a las 18:00 h al lunes a las 8:00 h, festivos todo el día; avisa de la urgencia por teléfono al veterinario de guardia.",
         "it": "Ricerca online del veterinario di guardia; notti feriali 18:00–08:00, da venerdì 18:00 a lunedì 08:00, festivi tutto il giorno; preannunciare l'urgenza al veterinario di guardia per telefono",
-        "pt": "Pesquisa online do veterinário de serviço; noites de dias úteis 18h00–8h00, sexta 18h00 até segunda 8h00, feriados todo o dia; anuncia a urgência por telefone ao veterinário de serviço"
+        "pt": "Pesquisa online do veterinário de serviço; noites de dias úteis 18h00–8h00, sexta 18h00 até segunda 8h00, feriados todo o dia; anuncia a urgência por telefone ao veterinário de serviço",
+        "nl": "Online zoeken naar de dienstdoende dierenarts; werkdagen 18.00–08.00 uur, vr 18.00 uur tot ma 08.00 uur, feestdagen de hele dag; meld het spoedgeval telefonisch aan bij de dienstdoende dierenarts."
       },
       "quote": "Der Notfall ist dem diensthabenden Tierarzt/ der diensthabenden Tierärztin vorab telefonisch anzukündigen.",
       "note": "Tierärztekammer Sachsen-Anhalt flyer and homepage link to tieraerztliche-notdienste.de ('Notdienstsuche für Tierhalter in Sachsen-Anhalt'). No central phone.",
@@ -376,7 +384,8 @@
         "fr": "Ligne indiquant les vétérinaires de garde en Thuringe en dehors des heures d’ouverture.",
         "es": "Línea que indica los veterinarios de guardia en Turingia fuera del horario de las clínicas.",
         "it": "Linea che indica i veterinari di guardia in Turingia fuori dall'orario degli studi",
-        "pt": "Linha que indica os veterinários de serviço na Turíngia fora do horário dos consultórios"
+        "pt": "Linha que indica os veterinários de serviço na Turíngia fora do horário dos consultórios",
+        "nl": "Lijn met de dienstdoende dierenartsen in Thüringen buiten openingstijden."
       },
       "quote": "diensthabenden Tierärzte in Thüringen 24 h",
       "note": "Number as printed on Tierärztliche Klinik Erfurt's contact page. Thüringer Landtag answer (Drs. 'Tierärztlicher Notdienst in Thüringen erneut nachgefragt') describes regional Notdienstringe with central call handling at the Kassenärztliche Vereinigung Thüringen. Landestierärztekammer site (ltkt.de) could not be fetched.",
@@ -398,7 +407,8 @@
         "fr": "Tour de garde des cabinets de Hanovre ; la TiHo y oriente les cas non critiques, et ailleurs vers les services de garde locaux.",
         "es": "Turno de urgencias de las clínicas de Hannover; TiHo deriva aquí los casos no críticos, y a los Ringnotdienste locales en otras zonas.",
         "it": "Turno di urgenza degli studi di Hannover; la TiHo indirizza qui i casi non critici e, altrove, ai Ringnotdienste locali",
-        "pt": "Escala de urgência dos consultórios de Hannover; a TiHo encaminha para aqui os casos não críticos e para os «Ringnotdienste» locais noutras zonas"
+        "pt": "Escala de urgência dos consultórios de Hannover; a TiHo encaminha para aqui os casos não críticos e para os «Ringnotdienste» locais noutras zonas",
+        "nl": "Spoedrooster van de praktijken in Hannover; TiHo verwijst niet-kritieke gevallen hierheen en elders naar de lokale Ringnotdienste."
       },
       "note": "URL taken from TiHo's emergency page; the rota site itself redirected in a loop and could not be read. Langenhagen practice page names an answering machine for the Hannover emergency service: 0511 65 51 18 21.",
       "source_url": "https://www.tiho-hannover.de/kliniken-institute/kliniken/klinik-fuer-kleintiere/notdienst-information",
@@ -418,7 +428,8 @@
         "fr": "Planning de garde janvier 2026–janvier 2027 : en semaine de 7 h à 7 h le lendemain, week-ends du sam. 12 h au lun. 7 h ; appelez d’abord.",
         "es": "Turno con fechas de enero de 2026 a enero de 2027: entre semana de 7:00 a 7:00 h de la mañana siguiente, fines de semana del sábado a las 12:00 h al lunes a las 7:00 h; llama primero.",
         "it": "Calendario dei turni da gen 2026 a gen 2027: giorni feriali dalle 07:00 alle 07:00 del mattino dopo, weekend da sabato 12:00 a lunedì 07:00; telefonare prima",
-        "pt": "Escala datada de janeiro de 2026 a janeiro de 2027: dias úteis das 7h00 às 7h00 da manhã seguinte, fins de semana de sábado 12h00 a segunda 7h00; liga primeiro"
+        "pt": "Escala datada de janeiro de 2026 a janeiro de 2027: dias úteis das 7h00 às 7h00 da manhã seguinte, fins de semana de sábado 12h00 a segunda 7h00; liga primeiro",
+        "nl": "Rooster met data van jan. 2026 tot jan. 2027: werkdagen 07.00 uur tot 07.00 uur de volgende ochtend, weekenden za 12.00 uur tot ma 07.00 uur; bel eerst."
       },
       "note": "Hosted by a participating practice. Moved from duty (2026-11-10): no guarantee of accuracy",
       "source_url": "https://kleintierpraxis-langenhagen.com/notdienstplan/",
@@ -438,7 +449,8 @@
         "fr": "Tour de garde commun des cabinets de la ville d’Oldenburg pour les nuits, week-ends et jours fériés ; appelez le cabinet de garde avant de vous déplacer ; pas de visites à domicile.",
         "es": "Turno conjunto de las clínicas de la ciudad de Oldenburg para noches, fines de semana y festivos; llama a la clínica de guardia antes de ir; sin visitas a domicilio",
         "it": "Turno congiunto degli studi della città di Oldenburg per notti, weekend e festivi; telefonare allo studio di guardia prima di andare; nessuna visita a domicilio",
-        "pt": "Escala conjunta dos consultórios da cidade de Oldenburg para noites, fins de semana e feriados; liga para o consultório de serviço antes de ires; sem visitas ao domicílio"
+        "pt": "Escala conjunta dos consultórios da cidade de Oldenburg para noites, fins de semana e feriados; liga para o consultório de serviço antes de ires; sem visitas ao domicílio",
+        "nl": "Gezamenlijk rooster van de praktijken in de stad Oldenburg voor nachten, weekenden en feestdagen; bel de dienstdoende praktijk voordat je komt; geen huisbezoeken."
       },
       "note": "Life-threatening emergencies only; emergency fee 50 EUR + VAT. Moved from duty (2026-11-10): see 'Dienstplan'",
       "source_url": "https://tierarztnotdienst-stadtol.de/",
@@ -462,7 +474,8 @@
         "fr": "Cabinet d’urgence mobile pour la ville d’Osnabrück et les communes voisines (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) ainsi que le Tecklenburger Land ; appel préalable requis.",
         "es": "Clínica de urgencias móvil para la ciudad de Osnabrück y los municipios cercanos (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) y el Tecklenburger Land; hay que avisar por teléfono",
         "it": "Studio di urgenza mobile per la città di Osnabrück e i comuni limitrofi (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) e per il Tecklenburger Land; registrazione telefonica necessaria",
-        "pt": "Consultório móvel de urgência para a cidade de Osnabrück e municípios vizinhos (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) e Tecklenburger Land; marcação telefónica obrigatória"
+        "pt": "Consultório móvel de urgência para a cidade de Osnabrück e municípios vizinhos (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) e Tecklenburger Land; marcação telefónica obrigatória",
+        "nl": "Mobiele spoedpraktijk voor de stad Osnabrück en omliggende gemeenten (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) en het Tecklenburger Land; telefonische aanmelding vereist."
       },
       "quote": "365 Tage im Jahr - 24 Stunden am Tag",
       "note": "Tecklenburger Land part lies in NRW. Operator not named on the page.",
@@ -484,7 +497,8 @@
         "fr": "Landkreis Cuxhaven et Bremerhaven, garde 24 h/24 sur appel ; contactez le groupe de garde de votre propre vétérinaire (groupe 1 : 04744 4563999 ; groupe 2 : 09001 144244, payant ; groupe 3 : planning en ligne ; groupe 4 : répondeur de votre vétérinaire). Pas de visites à domicile.",
         "es": "Landkreis Cuxhaven y Bremerhaven, guardia las 24 horas; contacta con el grupo de guardia (Notdienstgruppe) de tu veterinario (grupo 1: 04744 4563999; grupo 2: 09001 144244, con coste; grupo 3: turnos en línea; grupo 4: contestador de tu veterinario). Sin visitas a domicilio",
         "it": "Landkreis Cuxhaven e Bremerhaven, reperibilità continua; contattare il Notdienstgruppe del proprio veterinario (gruppo 1: 04744 4563999; gruppo 2: 09001 144244, a pagamento; gruppo 3: turni online; gruppo 4: segreteria del proprio veterinario). Nessuna visita a domicilio",
-        "pt": "Landkreis Cuxhaven e Bremerhaven, de piquete 24 horas por dia; contacta o grupo de urgência («Notdienstgruppe») do teu veterinário (grupo 1: 04744 4563999; grupo 2: 09001 144244, chamada paga; grupo 3: escala online; grupo 4: atendedor do teu veterinário). Sem visitas ao domicílio"
+        "pt": "Landkreis Cuxhaven e Bremerhaven, de piquete 24 horas por dia; contacta o grupo de urgência («Notdienstgruppe») do teu veterinário (grupo 1: 04744 4563999; grupo 2: 09001 144244, chamada paga; grupo 3: escala online; grupo 4: atendedor do teu veterinário). Sem visitas ao domicílio",
+        "nl": "Landkreis Cuxhaven en Bremerhaven, de klok rond bereikbaar; neem contact op met de Notdienstgruppe van de eigen dierenarts (groep 1: 04744 4563999; groep 2: 09001 144244, betaald; groep 3: online rooster; groep 4: antwoordapparaat van de eigen dierenarts). Geen huisbezoeken."
       },
       "note": "Backup named on the page: Tierklinik Posthausen and Klinik für Kleintiere Sottrum. Bremerhaven belongs to the Land Bremen.",
       "source_url": "https://kleintiernotdienst-cuxland-bremerhaven.de/",
@@ -506,7 +520,8 @@
         "fr": "Planning daté du cabinet de garde : en semaine 20 h–8 h, du sam. 12 h au lun. 8 h, jours fériés 8 h–8 h ; téléphonez toujours au préalable.",
         "es": "Turnos con fechas de la clínica de guardia: entre semana 20:00–8:00 h, sábado desde las 12:00 h hasta el lunes a las 8:00 h, festivos 8:00–8:00 h; llama siempre antes",
         "it": "Calendario dei turni dello studio di guardia: giorni feriali 20:00–08:00, da sab 12:00 a lun 08:00, festivi dalle 08:00 alle 08:00; telefonare sempre prima",
-        "pt": "Escala datada do consultório de serviço: dias úteis 20h00–8h00, sábado 12h00 a segunda 8h00, feriados 8h00–8h00; liga sempre antes"
+        "pt": "Escala datada do consultório de serviço: dias úteis 20h00–8h00, sábado 12h00 a segunda 8h00, feriados 8h00–8h00; liga sempre antes",
+        "nl": "Rooster met data van de dienstdoende praktijk: werkdagen 20.00–08.00 uur, za 12.00 uur tot ma 08.00 uur, feestdagen 08.00–08.00 uur; bel altijd vooraf."
       },
       "quote": "Melden Sie Ihren Besuch immer telefonisch an, die Praxen sind nicht dauerhaft besetzt.",
       "note": "Page also lists TiHo Hannover small-animal clinic (24 h) and Tierklinik Kaufungen (Hessen, 24 h) as fallbacks.",
@@ -532,7 +547,8 @@
         "fr": "Urgences critiques et mettant la vie en danger à toute heure ; tri préalable, les cas non urgents peuvent être orientés vers un service de garde local.",
         "es": "Urgencias críticas y con riesgo vital inmediato a cualquier hora; primero se hace triaje y los casos no urgentes pueden derivarse a un Ringnotdienst",
         "it": "Urgenze critiche e con pericolo di vita acuto a qualsiasi ora; prima il triage, i casi non urgenti possono essere indirizzati a un Ringnotdienst",
-        "pt": "Urgências críticas e com risco de vida agudo a qualquer hora; triagem primeiro, os casos não urgentes podem ser encaminhados para um «Ringnotdienst»"
+        "pt": "Urgências críticas e com risco de vida agudo a qualquer hora; triagem primeiro, os casos não urgentes podem ser encaminhados para um «Ringnotdienst»",
+        "nl": "Kritieke en acuut levensbedreigende spoedgevallen op elk moment; eerst triage, niet-dringende gevallen kunnen worden doorverwezen naar een Ringnotdienst."
       },
       "quote": "Kritische und akut lebensbedrohliche Notfälle versorgen wir jederzeit – rund um die Uhr",
       "note": "University small-animal hospital. Phone from tiho-hannover.de/kontakt (Klinik für Kleintiere, Notdienst); exotic pets: Klinik für Heimtiere, Reptilien, Zier- und Wildvögel +49 511 953-6800 (hannover.de).",
@@ -556,7 +572,8 @@
         "fr": "Urgences lun.–ven. 8 h–18 h, week-ends et jours fériés 10 h–18 h ; en dehors de ces horaires, uniquement après appel préalable (+49 160 37 58 447).",
         "es": "Urgencias lun–vie 8:00–18:00 h, fines de semana y festivos 10:00–18:00 h; fuera de este horario, solo con aviso previo por teléfono (+49 160 37 58 447)",
         "it": "Urgenze lun–ven 8–18, weekend e festivi 10–18; fuori da questi orari solo previa registrazione telefonica (+49 160 37 58 447)",
-        "pt": "Urgências de segunda a sexta 8h00–18h00, fins de semana e feriados 10h00–18h00; fora deste horário só após marcação telefónica (+49 160 37 58 447)"
+        "pt": "Urgências de segunda a sexta 8h00–18h00, fins de semana e feriados 10h00–18h00; fora deste horário só após marcação telefónica (+49 160 37 58 447)",
+        "nl": "Spoed ma–vr 8–18 uur, weekenden en feestdagen 10–18 uur; buiten die tijden alleen na telefonische aanmelding (+49 160 37 58 447)."
       },
       "note": "University hospital; ended its 24-h small-animal emergency care 'bis auf Weiteres' in May 2022 (FU press release). 24-h service exists only for Berlin wildlife.",
       "source_url": "https://www.vetmed.fu-berlin.de/einrichtungen/kliniken/we20/tierhalter/notdienst/index.html",
@@ -651,7 +668,8 @@
         "fr": "Vétérinaires d’urgence mobiles, visites à domicile uniquement.",
         "es": "Veterinarios de urgencias móviles, solo visitas a domicilio",
         "it": "Veterinari di pronto soccorso mobili, solo visite a domicilio",
-        "pt": "Veterinários móveis de urgência, apenas visitas ao domicílio"
+        "pt": "Veterinários móveis de urgência, apenas visitas ao domicílio",
+        "nl": "Mobiele spoeddierenartsen, alleen huisbezoeken."
       },
       "quote": "täglich 24 Stunden Hausbesuche",
       "note": "Listed on the Tierärztekammer Berlin emergency page; mobile service, no clinic.",
@@ -674,7 +692,8 @@
         "fr": "Urgences tous les jours 9 h–24 h.",
         "es": "Urgencias todos los días 9:00–24:00 h",
         "it": "Orari di urgenza tutti i giorni 9–24",
-        "pt": "Horário de urgência todos os dias 9h00–24h00"
+        "pt": "Horário de urgência todos os dias 9h00–24h00",
+        "nl": "Spoeduren dagelijks 9–24 uur."
       },
       "source_url": "https://tieraerztekammer-berlin.de/notdienst/",
       "checked": "2026-11-02",
@@ -698,7 +717,8 @@
         "fr": "Téléphone d’urgence (« Notdienst ») ; consultations sur rendez-vous lun.–ven. 8 h–20 h, sam. 9 h–12 h.",
         "es": "Teléfono de urgencias («Notdienst»); consultas con cita previa lun–vie 8:00–20:00 h, sáb 9:00–12:00 h.",
         "it": "Telefono di urgenza ('Notdienst'); visite su appuntamento lun–ven 8–20, sab 9–12.",
-        "pt": "Telefone de urgência («Notdienst»); consultas sob marcação de segunda a sexta 8h00–20h00, sábado 9h00–12h00."
+        "pt": "Telefone de urgência («Notdienst»); consultas sob marcação de segunda a sexta 8h00–20h00, sábado 9h00–12h00.",
+        "nl": "Spoedtelefoon ('Notdienst'); consulten op afspraak ma–vr 8–20 uur, za 9–12 uur."
       },
       "quote": "24h Notdienst",
       "note": "Named as fallback by Tierärztekammer Bremen and the Cuxland/Bremerhaven rota. 24-h wording is the site banner only. Original: 'phone listed'.",
@@ -723,7 +743,8 @@
         "fr": "Horaires habituels lun.–ven. 8 h 30–20 h.",
         "es": "Horario habitual lun–vie 8:30–20:00 h",
         "it": "Orari ordinari lun–ven 8:30–20:00",
-        "pt": "Horário normal de segunda a sexta 8h30–20h00"
+        "pt": "Horário normal de segunda a sexta 8h30–20h00",
+        "nl": "Reguliere tijden ma–vr 8.30–20.00 uur."
       },
       "quote": "24/7 NOTDIENST",
       "note": "About 25 km east of Bremen; named as fallback by Tierärztekammer Bremen. Site posted a temporary suspension of the night service on some dates – phone ahead.",
@@ -748,7 +769,8 @@
         "fr": "Urgences tous les jours, 24 h/24 ; appelez avant le transport.",
         "es": "Urgencias todos los días las 24 horas; llama antes de traer a tu mascota",
         "it": "Pronto soccorso tutti i giorni 24 ore su 24; telefonare prima del trasporto",
-        "pt": "Urgências todos os dias, 24 horas por dia; liga antes de transportares o animal"
+        "pt": "Urgências todos os dias, 24 horas por dia; liga antes de transportares o animal",
+        "nl": "Spoed elke dag de klok rond; bel vóór het vervoer."
       },
       "quote": "rund um die Uhr (24/7)",
       "source_url": "https://www.tierklinikrostock.de/notfallmedizin/",
@@ -772,7 +794,8 @@
         "fr": "Sonnez à l’entrée en cas d’urgence.",
         "es": "Para urgencias, llama al timbre de la entrada",
         "it": "Per le urgenze suonare all'ingresso",
-        "pt": "Toca à campainha na entrada em caso de urgência"
+        "pt": "Toca à campainha na entrada em caso de urgência",
+        "nl": "Bel bij spoedgevallen aan bij de ingang."
       },
       "quote": "24-Stunden-Notfall-Bereitschaft - 365 Tage im Jahr",
       "note": "Just north of Hamburg. Clinic now treats only on referral by the own vet or after pre-examination by the regional emergency service, except acutely life-threatening cases.",
@@ -797,7 +820,8 @@
         "fr": "Appelez avant de venir.",
         "es": "Llama antes de ir",
         "it": "Telefonare prima di entrare",
-        "pt": "Liga antes de entrares"
+        "pt": "Liga antes de entrares",
+        "nl": "Bel vooraf voordat je binnenkomt."
       },
       "quote": "Unser Rundum-Notdienst gewährleistet zudem schnelle Hilfe auch im Notfall - 24 Stunden am Tag - 365 Tage im Jahr.",
       "note": "North-west of Hamburg.",
@@ -822,7 +846,8 @@
         "fr": "Rendez-vous en semaine 9 h–19 h ; ligne d’urgence 24 h/24.",
         "es": "Entre semana con cita previa 9:00–19:00 h; línea de urgencias las 24 horas",
         "it": "Giorni feriali appuntamenti 9–19; linea di urgenza 24 ore su 24",
-        "pt": "Marcações em dias úteis 9h00–19h00; linha de urgência 24 horas por dia"
+        "pt": "Marcações em dias úteis 9h00–19h00; linha de urgência 24 horas por dia",
+        "nl": "Op werkdagen afspraken 9–19 uur; spoedlijn de klok rond."
       },
       "quote": "24 Stunden am Tag an 365 Tagen",
       "source_url": "https://www.tierklinik-lueneburg.de/",
@@ -846,7 +871,8 @@
         "fr": "Urgences lun.–ven. 8 h–18 h ; service d’urgence 24 h/24 ; vérifiez la capacité d’accueil actuelle.",
         "es": "Urgencias (Notfallambulanz) lun–vie 8:00–18:00 h; servicio de urgencias las 24 horas; consulta la capacidad actual",
         "it": "Notfallambulanz lun–ven 8–18; pronto soccorso 24 ore su 24; verificare la capacità attuale",
-        "pt": "Urgências («Notfallambulanz») de segunda a sexta 8h00–18h00; serviço de urgência 24 horas; verifica a lotação atual"
+        "pt": "Urgências («Notfallambulanz») de segunda a sexta 8h00–18h00; serviço de urgência 24 horas; verifica a lotação atual",
+        "nl": "Notfallambulanz ma–vr 8–18 uur; 24-uurs spoeddienst; controleer de actuele capaciteit."
       },
       "quote": "rund um die Uhr an 365 Tagen im Jahr",
       "note": "Page gives postcode 24637 in one place and 24647 in the footer. Posted occasional closures (no emergency service) – phone ahead.",
@@ -871,7 +897,8 @@
         "fr": "Urgences 24 h/24 pour les cas de petits animaux mettant la vie en danger ; pas de consultation libre la nuit et le week-end, appelez avant de venir.",
         "es": "Urgencias las 24 horas para pequeños animales con riesgo vital inmediato; no es una clínica con atención sin cita por la noche ni en fines de semana: llama antes",
         "it": "Pronto soccorso 24 ore su 24 per casi acuti di piccoli animali in pericolo di vita; non è una clinica ad accesso libero di notte/nei weekend: telefonare in anticipo",
-        "pt": "Serviço de urgência 24 horas para casos agudos com risco de vida em pequenos animais; à noite e aos fins de semana não é uma clínica de portas abertas – liga antes"
+        "pt": "Serviço de urgência 24 horas para casos agudos com risco de vida em pequenos animais; à noite e aos fins de semana não é uma clínica de portas abertas – liga antes",
+        "nl": "24-uurs spoeddienst voor acuut levensbedreigende gevallen bij kleine huisdieren; 's nachts en in het weekend geen inloopkliniek - bel vooraf."
       },
       "quote": "Für akut lebensbedrohlich erkrankte Kleintiere hält unsere Tierklinik einen 24stündigen Notdienst bereit.",
       "note": "Eastern edge of Leipzig.",
@@ -895,7 +922,8 @@
         "fr": "Ligne d’urgence propre 0431 668866 ; service partenaire de téléconsultation vétérinaire annoncé 24 h/24, 7 j/7.",
         "es": "Línea de urgencias propia 0431 668866; línea de televeterinario asociada anunciada las 24 horas, todos los días",
         "it": "Linea di urgenza propria 0431 668866; hotline partner di televeterinario indicata 24 ore su 24, 7 giorni su 7",
-        "pt": "Linha de urgência própria 0431 668866; linha de televeterinário parceira anunciada como disponível 24 h/24, 7 dias por semana"
+        "pt": "Linha de urgência própria 0431 668866; linha de televeterinário parceira anunciada como disponível 24 h/24, 7 dias por semana",
+        "nl": "Eigen spoedlijn 0431 668866; teledierenartslijn van een partner, geadverteerd als 24/7."
       },
       "note": "'24H Tierarzthotline' refers to the partner hotline (Pfotendoctor), not the clinic, so not marked 24 h. Out of hours use the Schleswig-Holstein central number.",
       "source_url": "https://kielvet.de/notdienst/",
@@ -919,7 +947,8 @@
         "fr": "Service d’urgence propre lun.–ven. 8 h–20 h, sam. 12 h–18 h, dim./jours fériés 9 h–18 h (mobile urgences 0151 16906850 en cas de répondeur) ; sinon numéro central du Schleswig-Holstein 0481 85823998.",
         "es": "Servicio de urgencias propio lun–vie 8:00–20:00 h, sáb 12:00–18:00 h, dom y festivos 9:00–18:00 h (móvil de urgencias 0151 16906850 si salta el contestador); en otros horarios, número central de Schleswig-Holstein 0481 85823998",
         "it": "Pronto soccorso proprio lun–ven 8–20, sab 12–18, dom/festivi 9–18 (cellulare urgenze 0151 16906850 se risponde la segreteria); altrimenti numero centrale dello SH 0481 85823998",
-        "pt": "Serviço de urgência próprio de segunda a sexta 8h00–20h00, sábado 12h00–18h00, domingo/feriados 9h00–18h00 (telemóvel de urgência 0151 16906850 se estiver no atendedor); caso contrário, número central de SH 0481 85823998"
+        "pt": "Serviço de urgência próprio de segunda a sexta 8h00–20h00, sábado 12h00–18h00, domingo/feriados 9h00–18h00 (telemóvel de urgência 0151 16906850 se estiver no atendedor); caso contrário, número central de SH 0481 85823998",
+        "nl": "Eigen spoeddienst ma–vr 8–20, za 12–18, zo/feestdagen 9–18 uur (spoedmobiel 0151 16906850 bij antwoordapparaat); anders het centrale nummer van SH 0481 85823998."
       },
       "source_url": "https://kleintierklinik-am-stadtpark.de/notdienst.html",
       "checked": "2026-11-02",
@@ -942,7 +971,8 @@
         "fr": "Consultations d’urgence lun. 20 h–21 h, mar./jeu. 20 h–22 h, sam. 12 h–14 h ; fermé dim./jours fériés ; sinon ligne de la Tierärztekammer Hamburg 040 434379.",
         "es": "Consultas de urgencias lun 20:00–21:00 h, mar y jue 20:00–22:00 h, sáb 12:00–14:00 h; dom y festivos cerrado; en otros horarios, línea del colegio de veterinarios de Hamburgo (Tierärztekammer Hamburg) 040 434379",
         "it": "Visite di urgenza lun 20–21, mar/gio 20–22, sab 12–14; chiuso dom/festivi; altrimenti linea della Tierärztekammer Hamburg 040 434379",
-        "pt": "Consultas de urgência segunda 20h00–21h00, terça/quinta 20h00–22h00, sábado 12h00–14h00; encerrado ao domingo/feriados; caso contrário, linha da Tierärztekammer Hamburg 040 434379"
+        "pt": "Consultas de urgência segunda 20h00–21h00, terça/quinta 20h00–22h00, sábado 12h00–14h00; encerrado ao domingo/feriados; caso contrário, linha da Tierärztekammer Hamburg 040 434379",
+        "nl": "Spoedconsulten ma 20–21, di/do 20–22, za 12–14 uur; gesloten op zo/feestdagen; anders de lijn van de Tierärztekammer Hamburg 040 434379."
       },
       "source_url": "https://www.tierarztfuhlsbuettel.de/notdienst-notfall/",
       "checked": "2026-11-02",
@@ -965,7 +995,8 @@
         "fr": "Urgences : lun.–ven. 8 h–12 h et 16 h–19 h, sam. 10 h–12 h, dim. 10 h–11 h ; service d’urgence pour les cas mettant la vie en danger aussi la nuit et le week-end.",
         "es": "Urgencias lun–vie 8:00–12:00 y 16:00–19:00 h, sáb 10:00–12:00 h, dom 10:00–11:00 h; servicio de urgencias para casos con riesgo vital también de noche y en fines de semana",
         "it": "Lun–ven 8–12 e 16–19, sab 10–12, dom 10–11 urgenze; pronto soccorso per casi in pericolo di vita anche di notte e nei weekend",
-        "pt": "Segunda a sexta 8h00–12h00 e 16h00–19h00, sábado 10h00–12h00, domingo 10h00–11h00 urgências; serviço de urgência para casos com risco de vida também à noite e aos fins de semana"
+        "pt": "Segunda a sexta 8h00–12h00 e 16h00–19h00, sábado 10h00–12h00, domingo 10h00–11h00 urgências; serviço de urgência para casos com risco de vida também à noite e aos fins de semana",
+        "nl": "Spoed ma–vr 8–12 en 16–19, za 10–12, zo 10–11 uur; spoeddienst voor levensbedreigende gevallen ook 's nachts en in het weekend."
       },
       "quote": "Notdienst bei lebensbedrohlichen Notfällen auch nachts und an Wochenenden",
       "note": "Not stated as 24 h. Weekend/emergency surcharges, cash only.",
@@ -990,7 +1021,8 @@
         "fr": "Urgences sur appel préalable lun.–ven. 8 h–22 h, sam./dim./jours fériés 10 h–16 h ; sinon numéro central de Sachsen 01805 84 37 36.",
         "es": "Servicio de urgencias con aviso previo por teléfono lun–vie 8:00–22:00 h, sáb, dom y festivos 10:00–16:00 h; en otros horarios, número central de Sajonia 01805 84 37 36",
         "it": "Pronto soccorso previa registrazione telefonica lun–ven 8–22, sab/dom/festivi 10–16; altrimenti numero centrale della Sassonia 01805 84 37 36",
-        "pt": "Serviço de urgência após marcação telefónica segunda a sexta 8h00–22h00, sábado/domingo/feriados 10h00–16h00; caso contrário, número central da Saxónia 01805 84 37 36"
+        "pt": "Serviço de urgência após marcação telefónica segunda a sexta 8h00–22h00, sábado/domingo/feriados 10h00–16h00; caso contrário, número central da Saxónia 01805 84 37 36",
+        "nl": "Spoeddienst na telefonische aanmelding ma–vr 8–22, za/zo/feestdagen 10–16 uur; anders het centrale nummer van Saksen 01805 84 37 36."
       },
       "note": "Dogs and cats.",
       "source_url": "https://avetia-dresden.de/",
@@ -1014,7 +1046,8 @@
         "fr": "Urgences vitales directement en semaine 7 h 30–19 h ; le reste du temps via la ligne des vétérinaires de garde de Thuringe 0361 644 788 08.",
         "es": "Urgencias con riesgo vital directamente entre semana 7:30–19:00 h; en otros horarios, línea del veterinario de guardia de Turingia 0361 644 788 08",
         "it": "Urgenze con pericolo di vita direttamente nei giorni feriali 7:30–19:00; negli altri orari tramite la linea dei veterinari di guardia della Turingia 0361 644 788 08",
-        "pt": "Urgências com risco de vida diretamente em dias úteis 7h30–19h00; nas restantes horas através da linha de veterinário de serviço da Turíngia 0361 644 788 08"
+        "pt": "Urgências com risco de vida diretamente em dias úteis 7h30–19h00; nas restantes horas através da linha de veterinário de serviço da Turíngia 0361 644 788 08",
+        "nl": "Levensbedreigende spoedgevallen rechtstreeks op werkdagen 7.30–19.00 uur; op andere tijden via de dienstlijn voor dierenartsen in Thüringen 0361 644 788 08."
       },
       "source_url": "https://www.tierklinik-erfurt.de/kontakt",
       "checked": "2026-11-02",
@@ -1037,7 +1070,8 @@
         "fr": "Ouvert lun.–dim. 8 h–20 h à partir du 19 octobre 2026 ; en dehors de ces horaires, Notdienstring Berlin-Brandenburg 01805 84 37 36 ; annoncez par téléphone les urgences chirurgicales.",
         "es": "Desde el 19 de octubre de 2026 abierto todos los días 8:00–20:00 h; fuera de este horario, Notdienstring Berlin-Brandenburg 01805 84 37 36; avisa por teléfono si se trata de una urgencia quirúrgica",
         "it": "Dal 19 ottobre 2026 aperto lun–dom 8–20; fuori da questi orari Notdienstring Berlin-Brandenburg 01805 84 37 36; preannunciare per telefono le urgenze chirurgiche",
-        "pt": "Desde 19/10/2026 aberto de segunda a domingo 8h00–20h00; fora deste horário Notdienstring Berlin-Brandenburg 01805 84 37 36; anuncia por telefone as urgências cirúrgicas"
+        "pt": "Desde 19/10/2026 aberto de segunda a domingo 8h00–20h00; fora deste horário Notdienstring Berlin-Brandenburg 01805 84 37 36; anuncia por telefone as urgências cirúrgicas",
+        "nl": "Vanaf 19.10.2026 open ma–zo 8–20 uur; buiten die tijden Notdienstring Berlin-Brandenburg 01805 84 37 36; meld chirurgische spoedgevallen telefonisch aan."
       },
       "note": "Former 24-h Tierklinik Potsdam site; page now states 8–20 only.",
       "source_url": "https://www.anicura.de/standorte/potsdam/infosundevents/notdienst/",
@@ -1061,7 +1095,8 @@
         "fr": "Urgences lun.–ven. 7 h–24 h, sam./dim./jours fériés 11 h–13 h et 19 h–21 h ; annoncez-vous par téléphone.",
         "es": "Urgencias (Notdienst) lun–vie 7:00–24:00 h, sáb, dom y festivos 11:00–13:00 y 19:00–21:00 h; avisa por teléfono",
         "it": "Notdienst lun–ven 7–24, sab/dom/festivi 11–13 e 19–21; registrarsi per telefono",
-        "pt": "Serviço de urgência segunda a sexta 7h00–24h00, sábado/domingo/feriados 11h00–13h00 e 19h00–21h00; marcação por telefone"
+        "pt": "Serviço de urgência segunda a sexta 7h00–24h00, sábado/domingo/feriados 11h00–13h00 e 19h00–21h00; marcação por telefone",
+        "nl": "Notdienst ma–vr 7–24, za/zo/feestdagen 11–13 en 19–21 uur; telefonisch aanmelden."
       },
       "quote": "NOTDIENST: Mo-Fr 7-24 Uhr, Sa 11-13 und 19-21 Uhr, So 11-13 und 19-21 Uhr und an Feiertagen 11-13 und 19-21 Uhr.",
       "source_url": "https://www.tierklinik-tholen.de/",
@@ -1085,7 +1120,8 @@
         "fr": "Lun./mar./jeu. 8 h–12 h et 14 h–16 h, mer./ven. 8 h–12 h ; mobile 0151 46341056.",
         "es": "Lun, mar y jue 8:00–12:00 y 14:00–16:00 h, mié y vie 8:00–12:00 h; móvil 0151 46341056",
         "it": "Lun/mar/gio 8–12 e 14–16, mer/ven 8–12; cellulare 0151 46341056",
-        "pt": "Segunda/terça/quinta 8h00–12h00 e 14h00–16h00, quarta/sexta 8h00–12h00; telemóvel 0151 46341056"
+        "pt": "Segunda/terça/quinta 8h00–12h00 e 14h00–16h00, quarta/sexta 8h00–12h00; telemóvel 0151 46341056",
+        "nl": "ma/di/do 8–12 en 14–16, wo/vr 8–12 uur; mobiel 0151 46341056."
       },
       "note": "Small animals and pets ('Klein- und Heimtiere'). Island practice.",
       "source_url": "https://sylter-tierarztpraxis.de/",
@@ -1123,7 +1159,8 @@
         "fr": "Lun.–ven. 9 h–12 h 30 sur rendez-vous ; après-midi et urgences sur accord ; téléphone urgences 0171 5254095.",
         "es": "Lun–vie 9:00–12:30 h con cita previa; tardes y urgencias a convenir; teléfono de urgencias 0171 5254095",
         "it": "Lun–ven 9:00–12:30 su appuntamento; pomeriggi e urgenze previo accordo; telefono urgenze 0171 5254095",
-        "pt": "Segunda a sexta 9h00–12h30 sob marcação; tardes e urgências por acordo; telefone de urgência 0171 5254095"
+        "pt": "Segunda a sexta 9h00–12h30 sob marcação; tardes e urgências por acordo; telefone de urgência 0171 5254095",
+        "nl": "ma–vr 9.00–12.30 uur op afspraak; middagen en spoed na overleg; spoedtelefoon 0171 5254095."
       },
       "quote": "in dringenden Fällen erreichen Sie uns über das Notfalltelefon unter 0171 / 5254095",
       "note": "East Frisian island; dogs, cats, small pets.",
@@ -1148,7 +1185,8 @@
         "fr": "Lun., mar., jeu., ven. 9 h–11 h, jeu. aussi 16 h–18 h 30 ; fermé mer., sam., dim.",
         "es": "Lun, mar, jue y vie 9:00–11:00 h, jue también 16:00–18:30 h; mié, sáb y dom cerrado",
         "it": "Lun, mar, gio, ven 9–11, gio anche 16–18:30; chiuso mer, sab, dom",
-        "pt": "Segunda, terça, quinta e sexta 9h00–11h00, quinta também 16h00–18h30; encerrado à quarta, sábado e domingo"
+        "pt": "Segunda, terça, quinta e sexta 9h00–11h00, quinta também 16h00–18h30; encerrado à quarta, sábado e domingo",
+        "nl": "ma, di, do, vr 9–11, do ook 16–18.30 uur; gesloten op wo, za, zo."
       },
       "note": "East Frisian island branch of the Norderney practice.",
       "source_url": "https://www.tierarztpraxis-solaro.de/",
@@ -1172,7 +1210,8 @@
         "fr": "Rendez-vous lun.–ven. 8 h 30–18 h, sam. 9 h–13 h ; urgences petits animaux lun.–ven. 18 h–22 h au 03838 23323 ; après 22 h et le week-end 01805 84 37 36.",
         "es": "Con cita previa lun–vie 8:30–18:00 h, sáb 9:00–13:00 h; urgencias de pequeños animales lun–vie 18:00–22:00 h en el 03838 23323; después de las 22:00 h y en fines de semana, 01805 84 37 36",
         "it": "Appuntamenti lun–ven 8:30–18, sab 9–13; pronto soccorso piccoli animali lun–ven 18–22 al 03838 23323; dopo le 22:00 e nei weekend 01805 84 37 36",
-        "pt": "Marcações de segunda a sexta 8h30–18h00, sábado 9h00–13h00; serviço de urgência de pequenos animais de segunda a sexta 18h00–22h00 pelo 03838 23323; depois das 22h00 e aos fins de semana 01805 84 37 36"
+        "pt": "Marcações de segunda a sexta 8h30–18h00, sábado 9h00–13h00; serviço de urgência de pequenos animais de segunda a sexta 18h00–22h00 pelo 03838 23323; depois das 22h00 e aos fins de semana 01805 84 37 36",
+        "nl": "Afspraken ma–vr 8.30–18, za 9–13 uur; spoeddienst voor kleine huisdieren ma–vr 18–22 uur via 03838 23323; na 22.00 uur en in weekenden 01805 84 37 36."
       },
       "note": "Second site in Schaprode (Streu 6, 18569 Schaprode, 038309 22836); 24-h readiness there is for horses and farm animals only.",
       "source_url": "https://www.tierarztpraxis-puvogel.de/",
@@ -1196,7 +1235,8 @@
         "fr": "Horaires d’hiver (1er octobre 2026–28 mars 2027) : mar./jeu. 9 h–12 h et 16 h–18 h, ven. 16 h–18 h.",
         "es": "Horario de invierno (del 1 de octubre de 2026 al 28 de marzo de 2027): mar y jue 9:00–12:00 y 16:00–18:00 h, vie 16:00–18:00 h",
         "it": "Orari invernali (dal 1° ottobre 2026 al 28 marzo 2027): mar/gio 9–12 e 16–18, ven 16–18",
-        "pt": "Horário de inverno (1/10/2026–28/03/2027): terça/quinta 9h00–12h00 e 16h00–18h00, sexta 16h00–18h00"
+        "pt": "Horário de inverno (1/10/2026–28/03/2027): terça/quinta 9h00–12h00 e 16h00–18h00, sexta 16h00–18h00",
+        "nl": "Winteruren (01.10.2026–28.03.2027): di/do 9–12 en 16–18, vr 16–18 uur."
       },
       "quote": "Unser praxiseigener Notdienst ist ein zusätzlicher Service und nicht täglich oder rund um die Uhr verfügbar.",
       "note": "Dogs, cats, small pets. Company holiday Oct–6 Nov 2026 with only a few open days.",
@@ -1221,7 +1261,8 @@
         "fr": "Rendez-vous lun.–jeu. 8 h–12 h (mer. aussi 13 h–15 h), ven. 8 h–10 h ; urgences petits animaux via le 01805 84 37 36.",
         "es": "Con cita previa lun–jue 8:00–12:00 h (mié también 13:00–15:00 h), vie 8:00–10:00 h; urgencias de pequeños animales en el 01805 84 37 36",
         "it": "Appuntamenti lun–gio 8–12 (mer anche 13–15), ven 8–10; urgenze per piccoli animali al 01805 84 37 36",
-        "pt": "Marcações segunda a quinta 8h00–12h00 (quarta também 13h00–15h00), sexta 8h00–10h00; urgências de pequenos animais através do 01805 84 37 36"
+        "pt": "Marcações segunda a quinta 8h00–12h00 (quarta também 13h00–15h00), sexta 8h00–10h00; urgências de pequenos animais através do 01805 84 37 36",
+        "nl": "Afspraken ma–do 8–12 (wo ook 13–15), vr 8–10 uur; spoed voor kleine huisdieren via 01805 84 37 36."
       },
       "note": "Page currently shows the practice as closed and names a substitute in Heringsdorf (see next entry).",
       "source_url": "https://www.tierarztpraxis-maack.de/",
@@ -1244,7 +1285,8 @@
         "fr": "Consultations libres lun. 10 h–12 h et 16 h–18 h, mar. 16 h–18 h, mer. 10 h–12 h, jeu. 10 h–12 h et 16 h–18 h, ven. 10 h–12 h.",
         "es": "Consultas sin cita lun 10:00–12:00 y 16:00–18:00 h, mar 16:00–18:00 h, mié 10:00–12:00 h, jue 10:00–12:00 y 16:00–18:00 h, vie 10:00–12:00 h",
         "it": "Visite senza appuntamento lun 10–12 e 16–18, mar 16–18, mer 10–12, gio 10–12 e 16–18, ven 10–12",
-        "pt": "Consultas sem marcação segunda 10h00–12h00 e 16h00–18h00, terça 16h00–18h00, quarta 10h00–12h00, quinta 10h00–12h00 e 16h00–18h00, sexta 10h00–12h00"
+        "pt": "Consultas sem marcação segunda 10h00–12h00 e 16h00–18h00, terça 16h00–18h00, quarta 10h00–12h00, quinta 10h00–12h00 e 16h00–18h00, sexta 10h00–12h00",
+        "nl": "Open spreekuur ma 10–12 en 16–18, di 16–18, wo 10–12, do 10–12 en 16–18, vr 10–12 uur."
       },
       "note": "Listed as substitute practice on Tierarztpraxis Maack's page; own website not found.",
       "source_url": "https://www.tierarztpraxis-maack.de/",
@@ -1281,7 +1323,8 @@
         "fr": "Grands et petits animaux, radiographie, visites à domicile possibles.",
         "es": "Animales grandes y pequeños, radiografías, posibles visitas a domicilio",
         "it": "Grandi e piccoli animali, radiografie, visite a domicilio possibili",
-        "pt": "Grandes e pequenos animais, radiografia, possibilidade de visitas ao domicílio"
+        "pt": "Grandes e pequenos animais, radiografia, possibilidade de visitas ao domicílio",
+        "nl": "Grote en kleine dieren, röntgen, huisbezoeken mogelijk."
       },
       "quote": "24 Stunden Notdienst nach telefonischer Absprache",
       "note": "From the municipality of St. Peter-Ording's page; no phone or address given there (practice website not opened).",
@@ -1305,7 +1348,8 @@
         "fr": "Cabinet pour petits animaux, rendez-vous lun./mar./jeu./ven. 9 h–13 h et 15 h–18 h, mer. 9 h–12 h ; urgences : ligne 24 h/24 du Schleswig-Holstein 0481 85823998.",
         "es": "Clínica de pequeños animales, con cita previa lun, mar, jue y vie 9:00–13:00 y 15:00–18:00 h, mié 9:00–12:00 h; urgencias: línea de 24 horas de Schleswig-Holstein 0481 85823998",
         "it": "Studio per piccoli animali, appuntamenti lun/mar/gio/ven 9–13 e 15–18, mer 9–12; urgenze: linea 24 ore su 24 dello SH 0481 85823998",
-        "pt": "Consultório de pequenos animais, marcações segunda/terça/quinta/sexta 9h00–13h00 e 15h00–18h00, quarta 9h00–12h00; urgências: linha 24 horas de SH 0481 85823998"
+        "pt": "Consultório de pequenos animais, marcações segunda/terça/quinta/sexta 9h00–13h00 e 15h00–18h00, quarta 9h00–12h00; urgências: linha 24 horas de SH 0481 85823998",
+        "nl": "Praktijk voor kleine huisdieren, afspraken ma/di/do/vr 9–13 en 15–18, wo 9–12 uur; spoed: 24-uurslijn SH 0481 85823998."
       },
       "source_url": "https://tiermedizin-kurpark.de/",
       "checked": "2026-11-02",
@@ -1328,7 +1372,8 @@
         "fr": "Centre antipoison pour la Basse-Saxe, Brême, Hambourg et le Schleswig-Holstein ; conseils téléphoniques 24 h/24.",
         "es": "Centro de información toxicológica de Baja Sajonia, Bremen, Hamburgo y Schleswig-Holstein; asesoramiento telefónico las 24 horas",
         "it": "Centro antiveleni per Bassa Sassonia, Brema, Amburgo e Schleswig-Holstein; consulenza telefonica 24 ore su 24",
-        "pt": "Centro de informação toxicológica para Niedersachsen, Bremen, Hamburgo e Schleswig-Holstein; aconselhamento telefónico 24 h/24"
+        "pt": "Centro de informação toxicológica para Niedersachsen, Bremen, Hamburgo e Schleswig-Holstein; aconselhamento telefónico 24 h/24",
+        "nl": "Vergiftigingsinformatiecentrum voor Niedersachsen, Bremen, Hamburg en Schleswig-Holstein; 24-uurs telefonisch advies."
       },
       "quote": "Besondere Erfahrungen bei der Beratung von Tiervergiftungen hat das GIZ Nord in Göttingen",
       "note": "Animal coverage per Deutsches Tierärzteblatt 3/2015 (BfR article): all eight German GIZ advise 'aber auch bei Tiervergiftungen', 'sieben Tage in der Woche rund um die Uhr'. Phone, 24-h wording ('täglich rund um die Uhr') and states served from UMG press release on the 2020 annual report. GIZ-Nord's own site could not be fetched (robots/client error).",
@@ -1366,7 +1411,8 @@
         "fr": "Urgences en semaine 18 h–8 h, du ven. 18 h au lun. 8 h et tous les jours fériés ; présentez-vous directement, l’équipe d’urgence n’est pas joignable par téléphone. Chiens et chats uniquement ; actuellement pas d’urgences dentaires ni oculaires.",
         "es": "Servicio de urgencias entre semana 18:00–8:00 h, del viernes a las 18:00 h al lunes a las 8:00 h y todos los festivos; acude directamente, el equipo de urgencias no atiende el teléfono. Solo perros y gatos; de momento sin urgencias dentales ni oculares.",
         "it": "Pronto soccorso nei giorni feriali 18:00–08:00, da venerdì 18:00 a lunedì 08:00 e in tutti i festivi; presentarsi direttamente, il team di urgenza non risponde al telefono. Solo cani e gatti; al momento nessuna urgenza dentale o oculistica.",
-        "pt": "Serviço de urgência em dias úteis 18h00–8h00, sexta 18h00 a segunda 8h00 e todos os feriados; vai diretamente, a equipa de urgência não atende telefone. Apenas cães e gatos; de momento sem urgências dentárias ou oftalmológicas."
+        "pt": "Serviço de urgência em dias úteis 18h00–8h00, sexta 18h00 a segunda 8h00 e todos os feriados; vai diretamente, a equipa de urgência não atende telefone. Apenas cães e gatos; de momento sem urgências dentárias ou oftalmológicas.",
+        "nl": "Spoeddienst op werkdagen 18.00–08.00 uur, vr 18.00 uur tot ma 08.00 uur en op alle feestdagen; kom direct, het spoedteam is niet telefonisch bereikbaar. Alleen honden en katten; momenteel geen tand- of oogspoedgevallen."
       },
       "small_animals": true,
       "url": "https://www.vetmed.lmu.de/kleintierklinik/de/fuer-tierhalterinnen-und-tierhalter/notfaelle/",
@@ -1391,7 +1437,8 @@
         "fr": "Urgences graves et vitales à toute heure du jour et de la nuit ; appelez avant de venir. Lignes hors horaires : médecine interne +49 151 55027008, chirurgie +49 175 2973717.",
         "es": "Urgencias graves y con riesgo vital a cualquier hora del día o de la noche; llama antes. Líneas fuera de horario: medicina interna +49 151 55027008, cirugía +49 175 2973717.",
         "it": "Urgenze e casi in pericolo di vita a qualsiasi ora del giorno e della notte; telefonare in anticipo. Linee fuori orario: Innere Medizin +49 151 55027008, Chirurgie +49 175 2973717.",
-        "pt": "Casos urgentes e com risco de vida a qualquer hora do dia ou da noite; por favor liga antes. Linhas fora de horas: medicina interna +49 151 55027008, cirurgia +49 175 2973717."
+        "pt": "Casos urgentes e com risco de vida a qualquer hora do dia ou da noite; por favor liga antes. Linhas fora de horas: medicina interna +49 151 55027008, cirurgia +49 175 2973717.",
+        "nl": "Dringende en levensbedreigende spoedgevallen op elk moment van dag en nacht; bel vooraf. Lijnen buiten kantooruren: Innere Medizin +49 151 55027008, Chirurgie +49 175 2973717."
       },
       "small_animals": true,
       "url": "https://www.uni-giessen.de/de/fbz/fb10/institute_klinikum/klinikum/kleintierklinik/Info/sprechstunde/notdienst",
@@ -1416,7 +1463,8 @@
         "fr": "Urgences à partir de 20 h lun.–ven. et toute la journée sam., dim. et jours fériés ; même numéro pour le service d’urgence 24 h/24.",
         "es": "Urgencias (Notdienst) lun–vie desde las 20:00 h y todo el día sáb, dom y festivos; el mismo número sirve para el servicio de urgencias las 24 horas.",
         "it": "Notdienst dalle 20:00 lun–ven e tutto il giorno sab, dom e festivi; stesso numero per il pronto soccorso 24 ore su 24.",
-        "pt": "Serviço de urgência a partir das 20h00 de segunda a sexta e todo o dia ao sábado, domingo e feriados; o mesmo número para o serviço de urgência 24 horas."
+        "pt": "Serviço de urgência a partir das 20h00 de segunda a sexta e todo o dia ao sábado, domingo e feriados; o mesmo número para o serviço de urgência 24 horas.",
+        "nl": "Notdienst vanaf 20.00 uur ma–vr en de hele dag op za, zo en feestdagen; hetzelfde nummer voor de 24-uurs spoeddienst."
       },
       "small_animals": true,
       "url": "https://tierklinik-oberhaching.de/",
@@ -1441,7 +1489,8 @@
         "fr": "Équipe d’urgence 24 h/24 et bloc opératoire opérationnel, week-ends compris ; horaires habituels lun.–ven. 8 h–20 h sur rendez-vous.",
         "es": "Personal de urgencias y quirófano preparados las 24 horas, también en fines de semana; horario habitual lun–vie 8:00–20:00 h con cita previa.",
         "it": "Personale di pronto soccorso e sala operatoria pronta 24 ore su 24, weekend inclusi; orari ordinari lun–ven 8–20 su appuntamento.",
-        "pt": "Equipa de urgência e bloco cirúrgico prontos 24 horas, incluindo fins de semana; horário normal de segunda a sexta 8h00–20h00 sob marcação."
+        "pt": "Equipa de urgência e bloco cirúrgico prontos 24 horas, incluindo fins de semana; horário normal de segunda a sexta 8h00–20h00 sob marcação.",
+        "nl": "24-uurs spoedbezetting en operatiekamer paraat, ook in weekenden; reguliere tijden ma–vr 8–20 uur op afspraak."
       },
       "small_animals": true,
       "url": "https://tierklinik-ismaning.de/",
@@ -1463,7 +1512,8 @@
         "fr": "Urgences 24 h/24, 7 j/7 pour les cas mettant la vie en danger ; urgences tous les jours 0 h–24 h.",
         "es": "Servicio de urgencias las 24 horas para urgencias con riesgo vital; horario de urgencias todos los días 0:00–24:00 h",
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7 per urgenze con pericolo di vita; orari di urgenza tutti i giorni 00–24",
-        "pt": "Serviço de urgência 24 h/24, 7 dias por semana para urgências com risco de vida; horário de urgência todos os dias 0h00–24h00"
+        "pt": "Serviço de urgência 24 h/24, 7 dias por semana para urgências com risco de vida; horário de urgência todos os dias 0h00–24h00",
+        "nl": "24/7 spoeddienst voor levensbedreigende gevallen; spoeduren elke dag 00–24 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierklinik-haar/",
@@ -1487,7 +1537,8 @@
         "fr": "Appelez d’abord.",
         "es": "Llama antes",
         "it": "Telefonare prima",
-        "pt": "Liga primeiro"
+        "pt": "Liga primeiro",
+        "nl": "Bel eerst."
       },
       "small_animals": true,
       "source_url": "https://www.kleintierklinik-lutz.vet/",
@@ -1513,7 +1564,8 @@
         "fr": "Urgences 365 jours par an, 24 h/24 ; téléphone uniquement pendant les heures de consultation (7 h–19 h, pas le week-end). Vérifiez l’affluence avant de venir ; les cas non vitaux peuvent attendre 4 à 6 h.",
         "es": "Servicio de urgencias los 365 días del año, las 24 horas; teléfono solo en horario de consulta (7:00–19:00 h, no en fines de semana). Consulta la carga actual de la clínica antes de ir; los casos sin riesgo vital pueden esperar de 4 a 6 h.",
         "it": "Pronto soccorso 365 giorni, 24 ore su 24; telefono solo durante l'orario delle visite (7–19, non nei weekend). Verificare il carico attuale della clinica prima di venire; i casi non in pericolo di vita possono attendere 4–6 ore.",
-        "pt": "Serviço de urgência 365 dias por ano, 24 horas; atendimento telefónico apenas durante o horário de consultas (7h00–19h00, não aos fins de semana). Verifica a lotação atual da clínica antes de vires; casos sem risco de vida podem esperar 4–6 h."
+        "pt": "Serviço de urgência 365 dias por ano, 24 horas; atendimento telefónico apenas durante o horário de consultas (7h00–19h00, não aos fins de semana). Verifica a lotação atual da clínica antes de vires; casos sem risco de vida podem esperar 4–6 h.",
+        "nl": "Spoeddienst 365 dagen per jaar, 24 uur per dag; telefonisch alleen tijdens het spreekuur (7–19 uur, niet in het weekend). Controleer de actuele drukte voordat je komt; niet-levensbedreigende gevallen kunnen 4–6 uur wachten."
       },
       "small_animals": true,
       "url": "https://www.vetzentrum-koeln.de/",
@@ -1538,7 +1590,8 @@
         "fr": "Urgences 24 h/24, 7 j/7 ; appelez avant si possible, en cas d’urgence aiguë présentez-vous directement. Horaires habituels : lun./mer./ven. 7 h–21 h, mar./jeu. 7 h–19 h. Standard : +49 221 4745430.",
         "es": "Servicio de urgencias las 24 horas; llama antes si es posible, en casos agudos acude directamente. Horario habitual: lun, mié y vie 7:00–21:00 h, mar y jue 7:00–19:00 h. Línea general +49 221 4745430.",
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; telefonare in anticipo se possibile, nei casi acuti venire direttamente. Orari ordinari: lun/mer/ven 7–21, mar/gio 7–19. Linea generale +49 221 4745430.",
-        "pt": "Serviço de urgência 24 h/24, 7 dias por semana; liga antes, se possível, e em casos agudos vai diretamente. Horário normal: segunda/quarta/sexta 7h00–21h00, terça/quinta 7h00–19h00. Linha geral +49 221 4745430."
+        "pt": "Serviço de urgência 24 h/24, 7 dias por semana; liga antes, se possível, e em casos agudos vai diretamente. Horário normal: segunda/quarta/sexta 7h00–21h00, terça/quinta 7h00–19h00. Linha geral +49 221 4745430.",
+        "nl": "24/7 spoeddienst; bel zo mogelijk vooraf, bij acute gevallen direct komen. Reguliere tijden: ma/wo/vr 7–21, di/do 7–19 uur. Algemene lijn +49 221 4745430."
       },
       "small_animals": true,
       "url": "https://koelner-tierklinik.de/",
@@ -1563,7 +1616,8 @@
         "fr": "Urgences 24 h/24, 7 j/7 pour les cas mettant la vie en danger ; le téléphone ne répond PAS pendant le service d’urgence ; patients triés selon l’urgence. Rendez-vous par téléphone lun.–ven. 8 h–19 h.",
         "es": "Servicio de urgencias las 24 horas para urgencias con riesgo vital; durante las urgencias NO se atiende el teléfono; los pacientes se atienden por orden de gravedad. Citas por teléfono lun–vie 8:00–19:00 h.",
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7 per urgenze con pericolo di vita; il telefono NON è presidiato durante il pronto soccorso; triage dei pazienti in base all'urgenza. Appuntamenti per telefono lun–ven 8–19.",
-        "pt": "Serviço de urgência 24 h/24, 7 dias por semana para urgências com risco de vida; o telefone NÃO é atendido durante o serviço de urgência; triagem dos animais por grau de urgência. Marcações por telefone de segunda a sexta 8h00–19h00."
+        "pt": "Serviço de urgência 24 h/24, 7 dias por semana para urgências com risco de vida; o telefone NÃO é atendido durante o serviço de urgência; triagem dos animais por grau de urgência. Marcações por telefone de segunda a sexta 8h00–19h00.",
+        "nl": "24/7 spoeddienst voor levensbedreigende gevallen; de telefoon wordt tijdens de spoeddienst NIET bemand; patiënten worden op urgentie ingedeeld. Afspraken telefonisch ma–vr 8–19 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierklinik-neandertal/",
@@ -1586,7 +1640,8 @@
         "fr": "Urgences 24 h/24 ; vétérinaire et auxiliaire sur place 365 jours par an ; urgences tous les jours 0 h–24 h.",
         "es": "Servicio de urgencias las 24 horas; veterinario y auxiliar veterinario presentes los 365 días del año; horario de urgencias todos los días 0:00–24:00 h",
         "it": "Pronto soccorso 24 ore su 24; veterinario e infermiere veterinario in sede 365 giorni all'anno; orari di urgenza tutti i giorni 00–24",
-        "pt": "Serviço de urgência 24 horas; veterinário e enfermeiro veterinário no local 365 dias por ano; horário de urgência todos os dias 0h00–24h00"
+        "pt": "Serviço de urgência 24 horas; veterinário e enfermeiro veterinário no local 365 dias por ano; horário de urgência todos os dias 0h00–24h00",
+        "nl": "24-uurs spoeddienst; dierenarts en dierenartsassistent ter plaatse, 365 dagen per jaar; spoeduren elke dag 00–24 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierarztliche-klinik-vom-bokelberg/",
@@ -1611,7 +1666,8 @@
         "fr": "Urgences 24 h/24 ; horaires habituels lun.–ven. 8 h–18 h ; frais d’urgence en dehors des heures d’ouverture.",
         "es": "Servicio de urgencias las 24 horas; horario habitual lun–vie 8:00–18:00 h; tarifa de urgencias fuera del horario de apertura.",
         "it": "Pronto soccorso 24 ore su 24; orari ordinari lun–ven 8–18; tariffe di urgenza fuori dall'orario di apertura.",
-        "pt": "Serviço de urgência 24 horas por dia; horário normal de segunda a sexta 8h00–18h00; taxas de urgência fora do horário de atendimento."
+        "pt": "Serviço de urgência 24 horas por dia; horário normal de segunda a sexta 8h00–18h00; taxas de urgência fora do horário de atendimento.",
+        "nl": "Spoeddienst de klok rond; reguliere tijden ma–vr 8–18 uur; spoedtarieven buiten openingstijden."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/recklinghausen-tieraerztliche-klinik-fuer-kleintiere/",
@@ -1635,7 +1691,8 @@
         "fr": "Urgences 24 h/24, 365 jours par an ; du 27 juillet au 31 octobre service réduit (lun.–jeu. 7 h–22 h, week-ends 24 h/24). Consultations habituelles sur rendez-vous.",
         "es": "Servicio de urgencias las 24 horas, los 365 días del año; del 27 de julio al 31 de octubre reducido (lun–jue 7:00–22:00 h, fines de semana las 24 horas). Consultas ordinarias con cita previa.",
         "it": "Pronto soccorso 24 ore su 24, 365 giorni; dal 27 luglio al 31 ottobre servizio limitato (lun–gio 7–22, weekend 24 ore su 24). Visite ordinarie su appuntamento.",
-        "pt": "Serviço de urgência 24 horas, 365 dias por ano; de 27/07 a 31/10 limitado (segunda a quinta 7h00–22h00, fins de semana 24 horas). Consultas regulares sob marcação."
+        "pt": "Serviço de urgência 24 horas, 365 dias por ano; de 27/07 a 31/10 limitado (segunda a quinta 7h00–22h00, fins de semana 24 horas). Consultas regulares sob marcação.",
+        "nl": "24-uurs spoeddienst 365 dagen; van 27.07. tot 31.10. beperkt (ma–do 7–22 uur, weekenden 24 uur). Reguliere bezoeken op afspraak."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/kleintierklinik-babenhausen/",
@@ -1660,7 +1717,8 @@
         "fr": "Urgences à toute heure, sans rendez-vous ; non joignable par téléphone pendant les heures d’urgence. Horaires habituels lun.–ven. 8 h–18 h.",
         "es": "Urgencias a cualquier hora, sin cita; no se atiende el teléfono durante el horario de urgencias. Horario habitual lun–vie 8:00–18:00 h.",
         "it": "Urgenze a qualsiasi ora, senza preavviso; non raggiungibile per telefono durante gli orari di urgenza. Orari ordinari lun–ven 8–18.",
-        "pt": "Urgências a qualquer hora, sem marcação; sem atendimento telefónico durante o horário de urgência. Horário normal de segunda a sexta 8h00–18h00."
+        "pt": "Urgências a qualquer hora, sem marcação; sem atendimento telefónico durante o horário de urgência. Horário normal de segunda a sexta 8h00–18h00.",
+        "nl": "Spoed op elk moment, gewoon binnenlopen; tijdens de spoeduren niet telefonisch bereikbaar. Regulier ma–vr 8–18 uur."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-hofheim.de/",
@@ -1684,7 +1742,8 @@
         "fr": "Urgences 24 h/24 pour les cas mettant la vie en danger, 365 jours par an ; secrétariat lun.–ven. 8 h–19 h.",
         "es": "Servicio de urgencias las 24 horas para urgencias con riesgo vital, los 365 días del año; horario de oficina lun–vie 8:00–19:00 h.",
         "it": "Pronto soccorso 24 ore su 24 per urgenze con pericolo di vita, 365 giorni; orari d'ufficio lun–ven 8–19.",
-        "pt": "Serviço de urgência 24 horas para urgências com risco de vida, 365 dias por ano; horário do consultório de segunda a sexta 8h00–19h00."
+        "pt": "Serviço de urgência 24 horas para urgências com risco de vida, 365 dias por ano; horário do consultório de segunda a sexta 8h00–19h00.",
+        "nl": "24-uurs spoeddienst voor levensbedreigende gevallen, 365 dagen; kantooruren ma–vr 8–19 uur."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-kalbach.de/",
@@ -1709,7 +1768,8 @@
         "fr": "Appelez d’abord.",
         "es": "Llama antes",
         "it": "Telefonare prima",
-        "pt": "Liga primeiro"
+        "pt": "Liga primeiro",
+        "nl": "Bel eerst."
       },
       "small_animals": true,
       "source_url": "https://www.anicura.de/standorte/tierklinik-frankfurt/kontakt/",
@@ -1733,7 +1793,8 @@
         "fr": "Urgences 0 h–24 h.",
         "es": "Horario de urgencias de 0:00 a 24:00 h",
         "it": "Orari di urgenza 0–24",
-        "pt": "Horário de urgência 0h00–24h00"
+        "pt": "Horário de urgência 0h00–24h00",
+        "nl": "Spoeduren 0–24 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierklinik-stuttgart/",
@@ -1758,7 +1819,8 @@
         "fr": "Urgences 24 h/24, 365 jours par an ; urgences 0 h–24 h.",
         "es": "Urgencias las 24 horas, los 365 días del año; horario de urgencias de 0:00 a 24:00 h.",
         "it": "Urgenze 24 ore su 24, 365 giorni; orari di urgenza 00–24.",
-        "pt": "Urgências 24 horas, 365 dias por ano; horário de urgência 0h00–24h00."
+        "pt": "Urgências 24 horas, 365 dias por ano; horário de urgência 0h00–24h00.",
+        "nl": "Spoed 24 uur per dag, 365 dagen; spoeduren 00–24 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/ludwigsburg-ossweil/",
@@ -1782,7 +1844,8 @@
         "fr": "Urgences 0 h–24 h, 7 j/7. Clinique ouverte 24 h/24 la plus proche pour la région du lac de Constance / Konstanz.",
         "es": "Urgencias de 0:00 a 24:00 h, los siete días de la semana. Clínica de 24 horas más cercana para la zona del lago de Constanza (Bodensee) y Konstanz",
         "it": "Urgenze 0–24, sette giorni su sette. Clinica 24 ore su 24 più vicina per il Lago di Costanza / zona di Costanza",
-        "pt": "Urgências 0h00–24h00, sete dias por semana. Clínica 24 horas mais próxima da zona do Bodensee / Konstanz"
+        "pt": "Urgências 0h00–24h00, sete dias por semana. Clínica 24 horas mais próxima da zona do Bodensee / Konstanz",
+        "nl": "Spoed 0–24 uur, zeven dagen per week. Dichtstbijzijnde 24-uurskliniek voor het Bodenseegebied / Konstanz."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/en/our-clinics/kleintierspezialisten-ravensburg/",
@@ -1806,7 +1869,8 @@
         "fr": "Urgences 24 h/24 ; clinique d’urgence de la Sarre en dehors des horaires du numéro central du week-end. Téléphone et e-mail lun.–ven.",
         "es": "Servicio de urgencias las 24 horas; clínica de urgencias del Sarre para el horario no cubierto por el número central de fin de semana. Teléfono y correo de lunes a viernes.",
         "it": "Pronto soccorso 24 ore su 24; clinica di urgenza fuori orario del Saarland negli orari non coperti dal numero centrale del weekend. Telefono ed e-mail lun–ven.",
-        "pt": "Serviço de urgência 24 horas; clínica de urgência fora de horas do Sarre, fora do horário do número central de fim de semana. Telefone e e-mail de segunda a sexta."
+        "pt": "Serviço de urgência 24 horas; clínica de urgência fora de horas do Sarre, fora do horário do número central de fim de semana. Telefone e e-mail de segunda a sexta.",
+        "nl": "24-uurs spoeddienst; de spoedkliniek van het Saarland buiten de uren van het centrale weekendnummer. Telefoon en e-mail ma–vr."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-elversberg.de/",
@@ -1831,7 +1895,8 @@
         "fr": "De garde pour les urgences, mais faute de personnel la clinique ne peut plus assurer toutes les gardes de nuit et d’urgence ; voir notdienst-rheinland-pfalz.de ; appelez avant de venir.",
         "es": "De guardia para urgencias, pero por falta de personal la clínica ya no puede cubrir todas las guardias nocturnas y de urgencias; consulta notdienst-rheinland-pfalz.de; llama antes de ir",
         "it": "Reperibile per le urgenze, ma per carenza di personale la clinica non riesce più a coprire tutti i turni notturni e di urgenza; vedere notdienst-rheinland-pfalz.de; telefonare prima di venire",
-        "pt": "Em regime de piquete para urgências, mas por falta de pessoal a clínica já não consegue cobrir todos os serviços noturnos e de urgência; ver notdienst-rheinland-pfalz.de; liga antes de vires"
+        "pt": "Em regime de piquete para urgências, mas por falta de pessoal a clínica já não consegue cobrir todos os serviços noturnos e de urgência; ver notdienst-rheinland-pfalz.de; liga antes de vires",
+        "nl": "Bereikbaar voor spoed, maar door personeelstekort kan de kliniek niet meer alle nacht- en spoeddiensten dekken; zie notdienst-rheinland-pfalz.de; bel voordat je komt."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-trier.de/",
@@ -1856,7 +1921,8 @@
         "fr": "Urgences 24 h/24 uniquement du lun. 19 h 30 au ven. 8 h ; le week-end, consultations d’urgence moyennant des frais d’urgence (59.50 EUR) — à confirmer par téléphone.",
         "es": "Servicio de urgencias las 24 horas solo desde el lunes a las 19:30 h hasta el viernes a las 8:00 h; en fines de semana, consultas de urgencias con tarifa de urgencias (59,50 EUR); confírmalo por teléfono.",
         "it": "Pronto soccorso 24 ore su 24 solo da lunedì 19:30 a venerdì 08:00; nei weekend visite di urgenza con tariffa di urgenza (59,50 EUR): confermare per telefono.",
-        "pt": "Serviço de urgência 24 horas apenas de segunda 19h30 a sexta 8h00; aos fins de semana consultas de urgência mediante taxa de urgência (59.50 EUR) — confirma por telefone."
+        "pt": "Serviço de urgência 24 horas apenas de segunda 19h30 a sexta 8h00; aos fins de semana consultas de urgência mediante taxa de urgência (59.50 EUR) — confirma por telefone.",
+        "nl": "24-uurs spoeddienst alleen ma 19.30 uur tot vr 08.00 uur; in weekenden spoedconsulten tegen spoedtarief (59,50 EUR) - telefonisch bevestigen."
       },
       "small_animals": true,
       "url": "https://tierklinik-zw.de/",
@@ -1881,7 +1947,8 @@
         "fr": "Heures d’urgence (« Notfall ») 8 h–20 h.",
         "es": "Horario de urgencias («Notfall») de 8:00 a 20:00 h.",
         "it": "Orari di urgenza ('Notfall') 08:00–20:00.",
-        "pt": "Horário de urgência («Notfall») 8h00–20h00."
+        "pt": "Horário de urgência («Notfall») 8h00–20h00.",
+        "nl": "Spoeduren ('Notfall') 08.00–20.00 uur."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/anicura-kassel/",
@@ -1904,7 +1971,8 @@
         "fr": "Permanence la nuit et le week-end pour les animaux gravement malades et les urgences ; appelez la ligne d’urgence pour convenir d’une visite. Standard : +49 821 4559000.",
         "es": "Guardia de noche y en fines de semana para mascotas gravemente enfermas y urgencias; llama a la línea de urgencias para concertar la visita. Línea general +49 821 4559000.",
         "it": "Reperibilità di notte e nei weekend per animali gravemente malati e urgenze; chiamare la linea di urgenza per concordare una visita. Linea generale +49 821 4559000.",
-        "pt": "Piquete à noite e aos fins de semana para animais gravemente doentes e urgências; liga para a linha de urgência para combinar a visita. Linha geral +49 821 4559000."
+        "pt": "Piquete à noite e aos fins de semana para animais gravemente doentes e urgências; liga para a linha de urgência para combinar a visita. Linha geral +49 821 4559000.",
+        "nl": "Stand-by 's nachts en in het weekend voor ernstig zieke dieren en dringende spoedgevallen; bel de spoedlijn om een bezoek af te spreken. Algemene lijn +49 821 4559000."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/kleintierspezialisten-augsburg/",
@@ -1929,7 +1997,8 @@
         "fr": "Urgences tous les jours 8 h–24 h. Couvre la région du Chiemsee / vallée de l’Inn.",
         "es": "Servicio de urgencias todos los días 8:00–24:00 h. Cubre la zona del Chiemsee y el valle del Inn.",
         "it": "Pronto soccorso tutti i giorni 8:00–24:00. Copre la zona del Chiemsee / Valle dell'Inn.",
-        "pt": "Serviço de urgência todos os dias 8h00–24h00. Cobre a zona de Chiemsee / vale do Inn."
+        "pt": "Serviço de urgência todos os dias 8h00–24h00. Cobre a zona de Chiemsee / vale do Inn.",
+        "nl": "Spoeddienst dagelijks 8.00–24.00 uur. Dekt het gebied Chiemsee / Inntal."
       },
       "small_animals": true,
       "url": "https://tierklinik-rosenheim.de/",
@@ -1953,7 +2022,8 @@
         "fr": "Urgences sam. 15 h–18 h 30, dim. 10 h–16 h ; lun.–jeu. 20 h–8 h au +49 931 69017 ; jours fériés/week-ends en dehors de ces horaires au +49 180 5009682.",
         "es": "Urgencias sáb 15:00–18:30 h, dom 10:00–16:00 h; lun–jue 20:00–8:00 h en el +49 931 69017; festivos y fines de semana fuera de este horario en el +49 180 5009682.",
         "it": "Orari di urgenza sab 15:00–18:30, dom 10:00–16:00; lun–gio 20:00–08:00 al +49 931 69017; festivi/weekend fuori da questi orari al +49 180 5009682.",
-        "pt": "Horário de urgência sábado 15h00–18h30, domingo 10h00–16h00; segunda a quinta 20h00–8h00 pelo +49 931 69017; feriados/fins de semana fora destes horários pelo +49 180 5009682."
+        "pt": "Horário de urgência sábado 15h00–18h30, domingo 10h00–16h00; segunda a quinta 20h00–8h00 pelo +49 931 69017; feriados/fins de semana fora destes horários pelo +49 180 5009682.",
+        "nl": "Spoeduren za 15.00–18.30 uur, zo 10.00–16.00 uur; ma–do 20.00–08.00 uur via +49 931 69017; feestdagen/weekenden buiten deze uren via +49 180 5009682."
       },
       "small_animals": true,
       "url": "https://ktz-mainfranken.de/",
@@ -1976,7 +2046,8 @@
         "fr": "Urgences reçues sans rendez-vous pendant les heures de consultation.",
         "es": "Urgencias atendidas sin cita durante el horario de consulta.",
         "it": "Urgenze visitate senza appuntamento durante l'orario delle visite.",
-        "pt": "Urgências atendidas sem marcação durante o horário de consultas."
+        "pt": "Urgências atendidas sem marcação durante o horário de consultas.",
+        "nl": "Spoedgevallen worden tijdens het spreekuur zonder afspraak gezien."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/kleintierspezialisten-kempten/",
@@ -2000,7 +2071,8 @@
         "fr": "Urgences : appelez pendant les heures d’ouverture ; en dehors, utilisez la carte en ligne des urgences.",
         "es": "Urgencias: llama en horario de apertura; fuera de él, usa el mapa de urgencias en línea",
         "it": "Urgenze: telefonare durante l'orario di apertura; fuori orario usare la mappa online delle urgenze",
-        "pt": "Urgências: liga durante o horário de funcionamento; fora dele usa o mapa de urgências online"
+        "pt": "Urgências: liga durante o horário de funcionamento; fora dele usa o mapa de urgências online",
+        "nl": "Spoed: bel tijdens openingstijden; gebruik buiten die tijden de online spoedkaart."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-garmisch.com/",
@@ -2024,7 +2096,8 @@
         "fr": "Surtout petits animaux ; lun.–ven. 8 h–12 h, lun./jeu./ven. aussi 16 h–18 h. Urgences prises en charge en priorité pendant les heures d’ouverture, téléphonez avant. Hors horaires, le cabinet n’est pas le contact d’urgence.",
         "es": "Especializada en pequeños animales; lun–vie 8:00–12:00 h, lun, jue y vie también 16:00–18:00 h. Las urgencias en horario de apertura se atienden con prioridad: llama antes. Fuera de horario la clínica no es contacto de urgencias.",
         "it": "Specializzato in piccoli animali; lun–ven 8–12, lun/gio/ven anche 16–18. Le urgenze durante l'orario di apertura sono trattate con priorità: telefonare in anticipo. Fuori orario lo studio non è il contatto per le urgenze.",
-        "pt": "Foco em pequenos animais; segunda a sexta 8h00–12h00, segunda/quinta/sexta também 16h00–18h00. As urgências durante o horário de funcionamento são tratadas com prioridade — liga antes. Fora do horário o consultório não é o contacto de urgência."
+        "pt": "Foco em pequenos animais; segunda a sexta 8h00–12h00, segunda/quinta/sexta também 16h00–18h00. As urgências durante o horário de funcionamento são tratadas com prioridade — liga antes. Fora do horário o consultório não é o contacto de urgência.",
+        "nl": "Gericht op kleine huisdieren; ma–vr 8–12, ma/do/vr ook 16–18 uur. Spoedgevallen tijdens openingstijden worden met voorrang behandeld - bel vooraf. Buiten openingstijden is de praktijk niet het aanspreekpunt voor spoed."
       },
       "small_animals": true,
       "url": "https://tierarztpraxis-werdenfels.de/",
@@ -2047,7 +2120,8 @@
         "fr": "Lun.–ven. 8 h–13 h et 14 h 30–18 h sur rendez-vous ; hors horaires, dimanches et jours fériés, un service d’urgence est joignable via le numéro du cabinet.",
         "es": "Lun–vie 8:00–13:00 y 14:30–18:00 h con cita previa; fuera de horario y los domingos y festivos hay un servicio de urgencias accesible a través del número de la clínica.",
         "it": "Lun–ven 8–13 e 14:30–18 su appuntamento; fuori orario e la domenica e nei festivi è raggiungibile un servizio di urgenza tramite il numero dello studio.",
-        "pt": "Segunda a sexta 8h00–13h00 e 14h30–18h00 sob marcação; fora do horário e aos domingos/feriados há um serviço de urgência acessível através do número do consultório."
+        "pt": "Segunda a sexta 8h00–13h00 e 14h30–18h00 sob marcação; fora do horário e aos domingos/feriados há um serviço de urgência acessível através do número do consultório.",
+        "nl": "ma–vr 8–13 en 14.30–18 uur op afspraak; buiten die tijden en op zon- en feestdagen is een spoeddienst bereikbaar via het praktijknummer."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-thiele.de/",
@@ -2071,7 +2145,8 @@
         "fr": "Petits animaux et NAC ; lun.–ven. 9 h–13 h, lun./mar./jeu./ven. 15 h–18 h ; soins d’urgence en ambulatoire et avec hospitalisation.",
         "es": "Pequeños animales y animales de compañía; lun–vie 9:00–13:00 h, lun, mar, jue y vie 15:00–18:00 h; tratamiento de urgencias ambulatorio y con hospitalización.",
         "it": "Piccoli animali e animali da compagnia; lun–ven 9–13, lun/mar/gio/ven 15–18; trattamento di urgenza ambulatoriale e con ricovero.",
-        "pt": "Pequenos animais e animais de estimação; segunda a sexta 9h00–13h00, segunda/terça/quinta/sexta 15h00–18h00; tratamento de urgência em ambulatório e com internamento."
+        "pt": "Pequenos animais e animais de estimação; segunda a sexta 9h00–13h00, segunda/terça/quinta/sexta 15h00–18h00; tratamento de urgência em ambulatório e com internamento.",
+        "nl": "Kleine en gezelschapsdieren; ma–vr 9–13, ma/di/do/vr 15–18 uur; ambulante en klinische spoedbehandeling."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-konstanz.de/",
@@ -2095,7 +2170,8 @@
         "fr": "Urgences tous les jours 7 h–22 h, 365 jours par an ; en dehors de ces horaires, ligne d’urgence du district de Karlsruhe +49 721 495566.",
         "es": "Urgencias todos los días 7:00–22:00 h, los 365 días del año; fuera de este horario, línea de urgencias del distrito de Karlsruhe +49 721 495566.",
         "it": "Urgenze tutti i giorni 7:00–22:00, 365 giorni; fuori da questi orari linea di urgenza del distretto di Karlsruhe +49 721 495566.",
-        "pt": "Urgências todos os dias 7h00–22h00, 365 dias por ano; fora deste horário, linha de urgência do distrito de Karlsruhe +49 721 495566."
+        "pt": "Urgências todos os dias 7h00–22h00, 365 dias por ano; fora deste horário, linha de urgência do distrito de Karlsruhe +49 721 495566.",
+        "nl": "Spoed dagelijks 7.00–22.00 uur, 365 dagen; buiten die tijden de spoedlijn van het district Karlsruhe +49 721 495566."
       },
       "small_animals": true,
       "url": "https://tierarzt-karlsruhe-durlach.de/en/",
@@ -2117,7 +2193,8 @@
         "fr": "Pas de numéro central : contactez votre vétérinaire ou les cliniques ouvertes 24 h/24 listées (Riem, Haar, Ismaning, Oberhaching, LMU ; Germering 8 h–22 h).",
         "es": "Sin número central: contacta con tu veterinario o con las clínicas 24 horas indicadas (Riem, Haar, Ismaning, Oberhaching, LMU; Germering de 8:00 a 22:00 h).",
         "it": "Nessun numero centrale: contattare il proprio veterinario o le cliniche 24 ore su 24 elencate (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22).",
-        "pt": "Sem número central: contacta o teu veterinário ou as clínicas 24 horas indicadas (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8h00–22h00)."
+        "pt": "Sem número central: contacta o teu veterinário ou as clínicas 24 horas indicadas (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8h00–22h00).",
+        "nl": "Geen centraal nummer: neem contact op met de eigen dierenarts of de vermelde 24-uursklinieken (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22)."
       },
       "small_animals": true,
       "url": "https://www.tbv-oberbayern.de/notdienst/muenchen-und-landkreis-muenchen",
@@ -2139,7 +2216,8 @@
         "fr": "Recherche en ligne du cabinet de garde par lieu et rayon ; uniquement les week-ends et jours fériés. En semaine, appelez la clinique la plus proche. Téléphonez d’abord au vétérinaire de garde.",
         "es": "Búsqueda en línea de la clínica de guardia por localidad y radio; solo fines de semana y festivos. Entre semana, llama a la clínica más cercana. Llama primero al veterinario de guardia.",
         "it": "Ricerca online dello studio di guardia per luogo e raggio; solo weekend e festivi. Nei giorni feriali chiamare la clinica più vicina. Telefonare prima al veterinario di guardia.",
-        "pt": "Pesquisa online do consultório de serviço por localidade e raio; apenas fins de semana e feriados. Em dias úteis liga para a clínica mais próxima. Liga primeiro ao veterinário de serviço."
+        "pt": "Pesquisa online do consultório de serviço por localidade e raio; apenas fins de semana e feriados. Em dias úteis liga para a clínica mais próxima. Liga primeiro ao veterinário de serviço.",
+        "nl": "Online zoeken naar de dienstdoende praktijk op plaats en straal; alleen weekenden en feestdagen. Op werkdagen de dichtstbijzijnde kliniek bellen. Bel eerst de dienstdoende dierenarts."
       },
       "small_animals": true,
       "url": "https://tierarztnotdienst-mittelfranken.de/",
@@ -2163,7 +2241,8 @@
         "fr": "Numéro d’urgence central pour Stuttgart ; demandez par téléphone qui est de garde. Voir aussi www.tierärzte-stuttgart.de.",
         "es": "Número central de urgencias de Stuttgart; pregunta por teléfono quién está de guardia. También www.tierärzte-stuttgart.de.",
         "it": "Numero di urgenza centrale per Stoccarda; chiedere per telefono chi è di guardia. Anche www.tierärzte-stuttgart.de.",
-        "pt": "Número central de urgência de Stuttgart; pergunta por telefone quem está de serviço. Também www.tierärzte-stuttgart.de."
+        "pt": "Número central de urgência de Stuttgart; pergunta por telefone quem está de serviço. Também www.tierärzte-stuttgart.de.",
+        "nl": "Centraal spoednummer voor Stuttgart; vraag telefonisch wie dienst heeft. Ook www.tierärzte-stuttgart.de."
       },
       "small_animals": true,
       "url": "https://lptbawue.de/notdienst/stuttgart",
@@ -2186,7 +2265,8 @@
         "fr": "Numéro central du Notdienstring, joignable jusqu’à 22 h ; le répondeur indique le cabinet de garde.",
         "es": "Número central del Notdienstring, disponible hasta las 22:00 h; el contestador indica la clínica de guardia.",
         "it": "Numero centrale del Notdienstring, raggiungibile fino alle 22:00; la segreteria indica lo studio di guardia.",
-        "pt": "Número central do Notdienstring, atendido até às 22h00; o atendedor indica o consultório de serviço."
+        "pt": "Número central do Notdienstring, atendido até às 22h00; o atendedor indica o consultório de serviço.",
+        "nl": "Centraal nummer van de Notdienstring, bereikbaar tot 22.00 uur; het antwoordapparaat noemt de dienstdoende praktijk."
       },
       "small_animals": true,
       "source_url": "https://lptbawue.de/notdienst/mannheim",
@@ -2208,7 +2288,8 @@
         "fr": "Week-ends et jours fériés 24 h/24, vous êtes mis en relation avec un cabinet de garde pour petits animaux ; le reste du temps, un message enregistré indique les cliniques de garde. Numéro surtaxé, 2.99 EUR/min.",
         "es": "Fines de semana y festivos, las 24 horas, te pasan con una clínica de pequeños animales de guardia; en otros horarios, una grabación indica las clínicas de guardia. Número de tarificación adicional, 2,99 EUR/min.",
         "it": "Nei weekend e nei festivi 24 ore su 24 si viene collegati a uno studio di guardia per piccoli animali; negli altri orari una registrazione indica le cliniche di guardia. Numero a tariffa maggiorata, 2,99 EUR/min.",
-        "pt": "Aos fins de semana e feriados, 24 horas por dia, és ligado a um consultório de pequenos animais de serviço; nas restantes horas uma gravação indica as clínicas de serviço. Número de tarifa especial, 2.99 EUR/min."
+        "pt": "Aos fins de semana e feriados, 24 horas por dia, és ligado a um consultório de pequenos animais de serviço; nas restantes horas uma gravação indica as clínicas de serviço. Número de tarifa especial, 2.99 EUR/min.",
+        "nl": "In weekenden en op feestdagen de klok rond doorverbonden met een dienstdoende praktijk voor kleine huisdieren; op andere tijden noemt een opname de dienstdoende klinieken. Betaalnummer, 2,99 EUR/min."
       },
       "small_animals": true,
       "url": "https://lptbawue.de/notdienst/heidelberg",
@@ -2232,7 +2313,8 @@
         "fr": "Service d’urgence tournant des vétérinaires d’Ulm et Neu-Ulm, numéro joignable tous les jours jusqu’à 23 h.",
         "es": "Servicio de urgencias rotatorio de veterinarios de Ulm y Neu-Ulm, número disponible todos los días hasta las 23:00 h.",
         "it": "Servizio di urgenza a rotazione dei veterinari di Ulm e Neu-Ulm, numero raggiungibile tutti i giorni fino alle 23:00.",
-        "pt": "Serviço de urgência rotativo de veterinários de Ulm e Neu-Ulm, número atendido todos os dias até às 23h00."
+        "pt": "Serviço de urgência rotativo de veterinários de Ulm e Neu-Ulm, número atendido todos os dias até às 23h00.",
+        "nl": "Wisselende spoeddienst van dierenartsen uit Ulm en Neu-Ulm, nummer dagelijks bereikbaar tot 23.00 uur."
       },
       "small_animals": true,
       "source_url": "https://lptbawue.de/notdienst/alb-donau-kreis",
@@ -2255,7 +2337,8 @@
         "fr": "Un message enregistré indique le vétérinaire de garde ; numéro disponible 24 h/24, 365 jours par an.",
         "es": "Una grabación indica el veterinario de guardia; número disponible las 24 horas, los 365 días del año",
         "it": "Un messaggio registrato indica il veterinario di guardia; numero disponibile 24 ore su 24 / 365 giorni",
-        "pt": "Mensagem gravada indica o veterinário de serviço; número disponível 24 h/24, 365 dias por ano"
+        "pt": "Mensagem gravada indica o veterinário de serviço; número disponível 24 h/24, 365 dias por ano",
+        "nl": "Een opname noemt de dienstdoende dierenarts; nummer 24 uur per dag / 365 dagen beschikbaar."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-notdienst-karlsruhe.de/",
@@ -2279,7 +2362,8 @@
         "fr": "Numéro régional d’urgence ; téléphonez d’abord au vétérinaire de garde.",
         "es": "Red regional de urgencias; llama antes al veterinario de guardia.",
         "it": "Rete regionale di urgenza; telefonare in anticipo al veterinario di guardia.",
-        "pt": "Anel regional de urgência; liga antes ao veterinário de serviço."
+        "pt": "Anel regional de urgência; liga antes ao veterinário de serviço.",
+        "nl": "Regionale spoedring; bel de dienstdoende dierenarts vooraf."
       },
       "small_animals": true,
       "url": "https://koelner-tieraerztenotdienst.de/",
@@ -2302,7 +2386,8 @@
         "fr": "Numéro régional d’urgence ; appelez avant de venir.",
         "es": "Número de la red regional de urgencias; llama antes.",
         "it": "Numero della rete regionale di urgenza; telefonare in anticipo.",
-        "pt": "Número do anel regional de urgência; liga antes."
+        "pt": "Número do anel regional de urgência; liga antes.",
+        "nl": "Nummer van de regionale spoedring; bel vooraf."
       },
       "small_animals": true,
       "source_url": "https://www.tieraerztekammer-nordrhein.de/informationen-zum-tieraerztlichen-notdienst/",
@@ -2324,7 +2409,8 @@
         "fr": "Numéro régional d’urgence ; appelez avant de venir.",
         "es": "Número de la red regional de urgencias; llama antes.",
         "it": "Numero della rete regionale di urgenza; telefonare in anticipo.",
-        "pt": "Número do anel regional de urgência; liga antes."
+        "pt": "Número do anel regional de urgência; liga antes.",
+        "nl": "Nummer van de regionale spoedring; bel vooraf."
       },
       "small_animals": true,
       "source_url": "https://www.tieraerztekammer-nordrhein.de/informationen-zum-tieraerztlichen-notdienst/",
@@ -2346,7 +2432,8 @@
         "fr": "Lun.–ven. 18 h–22 h, week-ends et jours fériés 10 h–22 h ; 20 centimes par appel.",
         "es": "Lun–vie 18:00–22:00 h, fines de semana y festivos 10:00–22:00 h; 20 céntimos por llamada",
         "it": "Lun–ven 18–22, weekend e festivi 10–22; 20 cent a chiamata",
-        "pt": "Segunda a sexta 18h00–22h00, fins de semana e feriados 10h00–22h00; 20 cêntimos por chamada"
+        "pt": "Segunda a sexta 18h00–22h00, fins de semana e feriados 10h00–22h00; 20 cêntimos por chamada",
+        "nl": "ma–vr 18–22 uur, weekenden en feestdagen 10–22 uur; 20 cent per gesprek."
       },
       "small_animals": true,
       "source_url": "https://www.tieraerztekammer-nordrhein.de/informationen-zum-tieraerztlichen-notdienst/",
@@ -2367,7 +2454,8 @@
         "fr": "Mer. et ven. 12 h–8 h le lendemain matin ; sam., dim. et jours fériés 8 h–8 h ; lun./mar./jeu., votre propre vétérinaire. Appelez toujours avant de venir. Uniquement pour les patients des cabinets membres.",
         "es": "Mié y vie 12:00–8:00 h de la mañana siguiente; sáb, dom y festivos 8:00–8:00 h; lun, mar y jue, tu propio veterinario. Llama siempre antes. Solo para pacientes de las clínicas asociadas.",
         "it": "Mer e ven 12:00–08:00 del mattino dopo; sab, dom e festivi 08:00–08:00; lun/mar/gio il proprio veterinario. Telefonare sempre prima. Solo per i pazienti degli studi aderenti.",
-        "pt": "Quarta e sexta 12h00–8h00 da manhã seguinte; sábado, domingo e feriados 8h00–8h00; segunda/terça/quinta o teu veterinário. Liga sempre primeiro. Apenas para pacientes dos consultórios associados."
+        "pt": "Quarta e sexta 12h00–8h00 da manhã seguinte; sábado, domingo e feriados 8h00–8h00; segunda/terça/quinta o teu veterinário. Liga sempre primeiro. Apenas para pacientes dos consultórios associados.",
+        "nl": "wo en vr 12.00 uur tot de volgende ochtend 08.00 uur; za, zo en feestdagen 08.00–08.00 uur; ma/di/do de eigen dierenarts. Bel altijd eerst. Alleen voor patiënten van aangesloten praktijken."
       },
       "small_animals": true,
       "url": "https://www.bonner-tieraerzte.de/",
@@ -2390,7 +2478,8 @@
       "duty_i18n": {
         "es": "Servicio regional de urgencias de guardia.",
         "it": "Servizio di guardia regionale per le urgenze.",
-        "pt": "Serviço regional de urgência."
+        "pt": "Serviço regional de urgência.",
+        "nl": "Regionale spoeddienst."
       }
     },
     {
@@ -2407,7 +2496,8 @@
         "fr": "Site du service d’urgence de la Kreisstelle Dortmund.",
         "es": "Página del servicio de urgencias de la Kreisstelle Dortmund.",
         "it": "Sito del servizio di urgenza della Kreisstelle Dortmund.",
-        "pt": "Página do serviço de urgência da Kreisstelle Dortmund."
+        "pt": "Página do serviço de urgência da Kreisstelle Dortmund.",
+        "nl": "Website van de spoeddienst van de Kreisstelle Dortmund."
       },
       "small_animals": true,
       "url": "https://tiernotdienst-dortmund.de",
@@ -2429,7 +2519,8 @@
         "fr": "Planning annuel de garde (PDF) publié par la chambre vétérinaire.",
         "es": "Plan anual de guardias (PDF) publicado por el colegio profesional.",
         "it": "Piano annuale dei turni di guardia (PDF) pubblicato dall'ordine.",
-        "pt": "Plano anual de serviço (PDF) publicado pela câmara."
+        "pt": "Plano anual de serviço (PDF) publicado pela câmara.",
+        "nl": "Jaarlijks dienstrooster (pdf), gepubliceerd door de dierenartsenkamer."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer-wl.de/fileadmin/user_upload/tak/04_Fuer_Tierhalter/04.3_Notdienst-Finder/NotdienstMuenster2026_240926.pdf",
@@ -2451,7 +2542,8 @@
         "fr": "Site du service d’urgence de la Kreisstelle Bielefeld/Herford.",
         "es": "Página del servicio de urgencias de la Kreisstelle Bielefeld/Herford.",
         "it": "Sito del servizio di urgenza della Kreisstelle Bielefeld/Herford.",
-        "pt": "Página do serviço de urgência da Kreisstelle Bielefeld/Herford."
+        "pt": "Página do serviço de urgência da Kreisstelle Bielefeld/Herford.",
+        "nl": "Website van de spoeddienst van de Kreisstelle Bielefeld/Herford."
       },
       "small_animals": true,
       "url": "https://tier-not-dienst.de/",
@@ -2473,7 +2565,8 @@
         "fr": "Planning jour par jour de janvier à décembre 2026 indiquant le cabinet de garde et son téléphone (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
         "es": "Plan día a día de enero a diciembre de 2026 con la clínica de guardia y su teléfono (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
         "it": "Piano giorno per giorno gen–dic 2026 con lo studio di guardia e il suo telefono (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
-        "pt": "Plano dia a dia de janeiro a dezembro de 2026 com o consultório de serviço e o respetivo telefone (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern)."
+        "pt": "Plano dia a dia de janeiro a dezembro de 2026 com o consultório de serviço e o respetivo telefone (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
+        "nl": "Dagelijks rooster jan.–dec. 2026 met de dienstdoende praktijk en telefoonnummer (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern)."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer-wl.de/fileadmin/user_upload/tak/04_Fuer_Tierhalter/04.3_Notdienst-Finder/Notdienste-Kreis-Recklinghausen-2026.pdf",
@@ -2496,7 +2589,8 @@
         "fr": "Week-ends et jours fériés 8 h–22 h, organisés via vetnotdienst.de (depuis un fixe, renvoi automatique ; mobile : saisir le code postal) ; 0.14 EUR/min. En dehors de ces horaires : Tierklinik Elversberg.",
         "es": "Fines de semana y festivos 8:00–22:00 h, organizado a través de vetnotdienst.de (desde fijo, la llamada se enruta automáticamente; desde móvil, introduce el código postal); 0,14 EUR/min. Fuera de este horario: Tierklinik Elversberg.",
         "it": "Weekend e festivi 8–22, organizzato tramite vetnotdienst.de (fisso instradato automaticamente; cellulare: inserire il codice postale); 0,14 EUR/min. Fuori da questi orari: Tierklinik Elversberg.",
-        "pt": "Fins de semana e feriados 8h00–22h00, organizado através de vetnotdienst.de (rede fixa encaminhada automaticamente; telemóvel: introduz o código postal); 0.14 EUR/min. Fora deste horário: Tierklinik Elversberg."
+        "pt": "Fins de semana e feriados 8h00–22h00, organizado através de vetnotdienst.de (rede fixa encaminhada automaticamente; telemóvel: introduz o código postal); 0.14 EUR/min. Fora deste horário: Tierklinik Elversberg.",
+        "nl": "Weekenden en feestdagen 8–22 uur, georganiseerd via vetnotdienst.de (vaste lijn automatisch doorgeschakeld; mobiel: postcode invoeren); 0,14 EUR/min. Buiten die tijden: Tierklinik Elversberg."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-saar.de/",
@@ -2519,7 +2613,8 @@
         "fr": "Service d’urgence week-ends et jours fériés 8 h–22 h assuré par les vétérinaires locaux ; planning modifiable à court terme ; appelez avant de venir.",
         "es": "Servicio de urgencias de fines de semana y festivos 8:00–22:00 h con veterinarios locales; el plan puede cambiar con poca antelación; llama antes.",
         "it": "Pronto soccorso nei weekend e nei festivi 08:00–22:00 con veterinari locali; il piano può cambiare con breve preavviso; telefonare in anticipo.",
-        "pt": "Serviço de urgência de fim de semana e feriados 8h00–22h00 por veterinários locais; o plano pode mudar em cima da hora; liga antes."
+        "pt": "Serviço de urgência de fim de semana e feriados 8h00–22h00 por veterinários locais; o plano pode mudar em cima da hora; liga antes.",
+        "nl": "Spoeddienst in weekenden en op feestdagen 08.00–22.00 uur door lokale dierenartsen; rooster kan op korte termijn wijzigen; bel vooraf."
       },
       "small_animals": true,
       "url": "https://www.kleintiernotdienst-regensburg.de/",
@@ -2542,7 +2637,8 @@
         "fr": "Réseau de garde volontaire des vétérinaires du Landkreis ; samedis et dimanches 10 h–18 h, un cabinet de garde ; numéro central ou appel du cabinet indiqué. Forfait d’urgence applicable.",
         "es": "Red voluntaria de veterinarios del Landkreis; los sábados y domingos de 10:00 a 18:00 h hay una clínica de guardia; llama al número central o a la clínica indicada. Se aplica una tarifa fija de urgencias.",
         "it": "Rete volontaria di veterinari nel Landkreis; sabato e domenica 10–18 uno studio di guardia; numero centrale o chiamare lo studio indicato. Si applica una tariffa fissa di urgenza.",
-        "pt": "Anel voluntário de veterinários do Landkreis; sábados e domingos 10h00–18h00 um consultório de serviço; número central ou liga para o consultório indicado. Aplica-se uma taxa fixa de urgência."
+        "pt": "Anel voluntário de veterinários do Landkreis; sábados e domingos 10h00–18h00 um consultório de serviço; número central ou liga para o consultório indicado. Aplica-se uma taxa fixa de urgência.",
+        "nl": "Vrijwillige kring van dierenartsen in de Landkreis; za en zo 10–18 uur heeft één praktijk dienst; centraal nummer of bel de vermelde praktijk. Vast spoedtarief van toepassing."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-bgd.de/wir-sind-f%C3%BCr-sie-da-notdienst/",
@@ -2567,7 +2663,8 @@
         "fr": "Lun.–jeu. 19 h–6 h ; du ven. 19 h au lun. 6 h en continu (pas de permanence en journée en semaine) ; appelez d’abord.",
         "es": "Lun–jue 19:00–6:00 h; del viernes a las 19:00 h al lunes a las 6:00 h sin interrupción (sin atención durante el día entre semana); llama antes",
         "it": "Lun–gio 19:00–06:00; da venerdì 19:00 a lunedì 06:00 in continuo (non presidiato di giorno nei feriali); telefonare prima",
-        "pt": "Segunda a quinta 19h00–6h00; sexta 19h00 a segunda 6h00 sem interrupção (sem atendimento durante o dia em dias úteis); liga primeiro"
+        "pt": "Segunda a quinta 19h00–6h00; sexta 19h00 a segunda 6h00 sem interrupção (sem atendimento durante o dia em dias úteis); liga primeiro",
+        "nl": "ma–do 19.00–06.00 uur; vr 19.00 uur tot ma 06.00 uur doorlopend (op werkdagen overdag niet bemand); bel eerst."
       },
       "small_animals": true,
       "url": "https://notfalltierarzt-leipzig.de/",
@@ -2591,7 +2688,8 @@
         "fr": "Téléphone urgences +49 341 9738781 ; rendez-vous tous les jours +49 341 9738711.",
         "es": "Teléfono de urgencias +49 341 9738781; citas todos los días en el +49 341 9738711",
         "it": "Telefono urgenze +49 341 9738781; appuntamenti tutti i giorni +49 341 9738711",
-        "pt": "Telefone de urgência +49 341 9738781; marcações todos os dias +49 341 9738711"
+        "pt": "Telefone de urgência +49 341 9738781; marcações todos os dias +49 341 9738711",
+        "nl": "Spoedtelefoon +49 341 9738781; afspraken dagelijks +49 341 9738711."
       },
       "small_animals": true,
       "url": "https://kleintierklinik.uni-leipzig.de/",
@@ -2616,7 +2714,8 @@
         "fr": "Consultations d’urgence certains week-ends (p. ex. sam. 8 h–18 h) ; après 18 h, orientation vers la clinique universitaire pour petits animaux ou la Notfallambulanz Stötteritz.",
         "es": "Consultas de urgencias en fines de semana concretos (p. ej., sáb 8:00–18:00 h); a partir de las 18:00 h, derivación a la clínica universitaria de pequeños animales o a la Notfallambulanz Stötteritz",
         "it": "Orari di visita di urgenza in singoli weekend (es. sab 08:00–18:00); dopo le 18:00 invio alla clinica universitaria per piccoli animali o alla Notfallambulanz Stötteritz",
-        "pt": "Horário de consultas de urgência em fins de semana pontuais (p. ex., sábado 8h00–18h00); depois das 18h00 encaminhamento para a clínica universitária de pequenos animais ou para a Notfallambulanz Stötteritz"
+        "pt": "Horário de consultas de urgência em fins de semana pontuais (p. ex., sábado 8h00–18h00); depois das 18h00 encaminhamento para a clínica universitária de pequenos animais ou para a Notfallambulanz Stötteritz",
+        "nl": "Spoedspreekuur in afzonderlijke weekenden (bijv. za 08.00–18.00 uur); na 18.00 uur verwijzing naar de universitaire kliniek voor kleine huisdieren of de Notfallambulanz Stötteritz."
       },
       "small_animals": true,
       "url": "https://tierpraxis-leipzig.de/",
@@ -2640,7 +2739,8 @@
         "fr": "Garde propre du ven. au dim. et jours fériés, par téléphone jusqu’à 21 h 30 (mobile urgences +49 171 7514405) ; consultation d’urgence dim./jours fériés 10 h–12 h.",
         "es": "Servicio de guardia propio vie–dom y festivos, por teléfono hasta las 21:30 h (móvil de urgencias +49 171 7514405); consulta de urgencias dom y festivos 10:00–12:00 h",
         "it": "Reperibilità propria ven–dom e festivi, per telefono fino alle 21:30 (cellulare urgenze +49 171 7514405); visita di urgenza dom/festivi 10–12",
-        "pt": "Serviço de piquete próprio de sexta a domingo e feriados, por telefone até às 21h30 (telemóvel de urgência +49 171 7514405); consulta de urgência ao domingo/feriados 10h00–12h00"
+        "pt": "Serviço de piquete próprio de sexta a domingo e feriados, por telefone até às 21h30 (telemóvel de urgência +49 171 7514405); consulta de urgência ao domingo/feriados 10h00–12h00",
+        "nl": "Eigen bereikbaarheidsdienst vr–zo en op feestdagen, telefonisch tot 21.30 uur (spoedmobiel +49 171 7514405); spoedspreekuur zo/feestdagen 10–12 uur."
       },
       "small_animals": true,
       "url": "https://www.tierarztleipzig.de/",
@@ -2663,7 +2763,8 @@
         "fr": "Service vétérinaire d’urgence sam. 12 h–14 h, dim. 10 h–14 h ; mobile urgences +49 176 45777675.",
         "es": "Servicio veterinario de urgencias sáb 12:00–14:00 h, dom 10:00–14:00 h; móvil de urgencias +49 176 45777675",
         "it": "Pronto soccorso veterinario sab 12:00–14:00, dom 10:00–14:00; cellulare urgenze +49 176 45777675",
-        "pt": "Serviço de urgência veterinária sábado 12h00–14h00, domingo 10h00–14h00; telemóvel de urgência +49 176 45777675"
+        "pt": "Serviço de urgência veterinária sábado 12h00–14h00, domingo 10h00–14h00; telemóvel de urgência +49 176 45777675",
+        "nl": "Dierenspoeddienst za 12.00–14.00 uur, zo 10.00–14.00 uur; spoedmobiel +49 176 45777675."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-sascha-weinlein.de/",
@@ -2686,7 +2787,8 @@
         "fr": "Consultations d’urgence dim./jours fériés 8 h–12 h et 16 h–20 h ; la nuit, uniquement cas aigus mettant la vie en danger.",
         "es": "Consultas de urgencias dom y festivos 8:00–12:00 y 16:00–20:00 h; de noche, solo casos con riesgo vital inmediato",
         "it": "Visite di urgenza dom/festivi 08–12 e 16–20; di notte solo casi acuti con pericolo di vita",
-        "pt": "Consultas de urgência ao domingo/feriados 8h00–12h00 e 16h00–20h00; à noite apenas casos agudos com risco de vida"
+        "pt": "Consultas de urgência ao domingo/feriados 8h00–12h00 e 16h00–20h00; à noite apenas casos agudos com risco de vida",
+        "nl": "Spoedspreekuur zo/feestdagen 08–12 en 16–20 uur; 's nachts alleen acuut levensbedreigende gevallen."
       },
       "small_animals": true,
       "url": "https://www.kleintierklinik-meisinger.de/",
@@ -2711,7 +2813,8 @@
         "fr": "Lun.–jeu. 8 h–12 h et 14 h–17 h, ven. 8 h–13 h ; urgences uniquement après appel préalable, selon les capacités.",
         "es": "Lun–jue 8:00–12:00 y 14:00–17:00 h, vie 8:00–13:00 h; urgencias solo con aviso previo por teléfono, según capacidad",
         "it": "Lun–gio 8–12 e 14–17, ven 8–13; urgenze solo previa registrazione telefonica, nei limiti della capacità",
-        "pt": "Segunda a quinta 8h00–12h00 e 14h00–17h00, sexta 8h00–13h00; urgências apenas após marcação telefónica, conforme a capacidade"
+        "pt": "Segunda a quinta 8h00–12h00 e 14h00–17h00, sexta 8h00–13h00; urgências apenas após marcação telefónica, conforme a capacidade",
+        "nl": "ma–do 8–12 en 14–17, vr 8–13 uur; spoed alleen na telefonische aanmelding, binnen de capaciteit."
       },
       "small_animals": true,
       "url": "https://www.vet-chemnitz.de/",
@@ -2735,7 +2838,8 @@
         "fr": "Lun.–ven., rendez-vous sur accord téléphonique ; service d’urgence via nottierarzt-chemnitz.de.",
         "es": "De lunes a viernes, citas a convenir por teléfono; servicio de urgencias a través de nottierarzt-chemnitz.de",
         "it": "Lun–ven, appuntamenti previo accordo telefonico; pronto soccorso tramite nottierarzt-chemnitz.de",
-        "pt": "Segunda a sexta, marcações por acordo telefónico; serviço de urgência através de nottierarzt-chemnitz.de"
+        "pt": "Segunda a sexta, marcações por acordo telefónico; serviço de urgência através de nottierarzt-chemnitz.de",
+        "nl": "ma–vr, afspraken na telefonisch overleg; spoeddienst via nottierarzt-chemnitz.de."
       },
       "small_animals": true,
       "url": "https://tiertagesklinik.de/",
@@ -2758,7 +2862,8 @@
         "fr": "Consultations en semaine ; en dehors, voir le tour de garde d’urgence de la ville de Magdebourg.",
         "es": "Horario de consulta entre semana; fuera de este horario, consulta el turno de urgencias de la ciudad de Magdeburgo",
         "it": "Orari di visita nei giorni feriali; fuori orario vedere i turni di urgenza della città di Magdeburgo",
-        "pt": "Horário de consultas em dias úteis; fora dele consulta a escala de urgência da cidade de Magdeburg"
+        "pt": "Horário de consultas em dias úteis; fora dele consulta a escala de urgência da cidade de Magdeburg",
+        "nl": "Spreekuur op werkdagen; daarbuiten zie het spoedrooster van de stad Magdeburg."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-zentrum-magdeburg.de/",
@@ -2781,7 +2886,8 @@
         "fr": "Urgences sur appel préalable lun.–ven. 7 h–22 h, sam. 7 h–13 h (mobile +49 170 7777365) ; urgences vitales aussi sans inscription.",
         "es": "Urgencias con aviso previo por teléfono lun–vie 7:00–22:00 h, sáb 7:00–13:00 h (móvil +49 170 7777365); las urgencias con riesgo vital inmediato también sin aviso",
         "it": "Urgenze previa registrazione telefonica lun–ven 07–22, sab 07–13 (cellulare +49 170 7777365); urgenze acute con pericolo di vita anche senza registrazione",
-        "pt": "Urgências após marcação telefónica segunda a sexta 7h00–22h00, sábado 7h00–13h00 (telemóvel +49 170 7777365); urgências agudas com risco de vida também sem marcação"
+        "pt": "Urgências após marcação telefónica segunda a sexta 7h00–22h00, sábado 7h00–13h00 (telemóvel +49 170 7777365); urgências agudas com risco de vida também sem marcação",
+        "nl": "Spoed na telefonische aanmelding ma–vr 07–22, za 07–13 uur (mobiel +49 170 7777365); acuut levensbedreigende gevallen ook zonder aanmelding."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-mensing.de/",
@@ -2817,7 +2923,8 @@
         "fr": "Le cabinet de garde change chaque semaine par district, planning avec numéros sur la page du district ; si possible, n’appelez pas entre 23 h et 6 h.",
         "es": "La clínica de guardia cambia cada semana por distrito; el turno con teléfonos está en la página del distrito; si es posible, no llames de 23:00 a 6:00 h",
         "it": "Lo studio di guardia cambia ogni settimana per distretto, turni con numeri di telefono sulla pagina del distretto; se possibile non telefonare tra le 23 e le 06",
-        "pt": "O consultório de serviço muda semanalmente por distrito, escala com números de telefone na página do distrito; se possível, não ligues entre as 23h00 e as 6h00"
+        "pt": "O consultório de serviço muda semanalmente por distrito, escala com números de telefone na página do distrito; se possível, não ligues entre as 23h00 e as 6h00",
+        "nl": "De dienstdoende praktijk wisselt wekelijks per district, rooster met telefoonnummers op de pagina van het district; bel indien mogelijk niet tussen 23 en 06 uur."
       },
       "small_animals": true,
       "url": "https://www.landkreis-boerde.de/menschen/natur-und-umwelt/notfalldienste-tieraerzte",
@@ -2839,7 +2946,8 @@
         "fr": "Service de garde changeant chaque jour ; plannings mensuels en PDF et liste des cabinets participants avec téléphone sur la page.",
         "es": "La guardia cambia cada día; turnos mensuales en PDF y lista de clínicas participantes con teléfono en la página",
         "it": "Il servizio di guardia cambia ogni giorno; turni mensili in PDF ed elenco degli studi aderenti con telefono sulla pagina",
-        "pt": "O serviço muda diariamente; escalas mensais em PDF e lista dos consultórios participantes com telefone na página"
+        "pt": "O serviço muda diariamente; escalas mensais em PDF e lista dos consultórios participantes com telefone na página",
+        "nl": "De dienst wisselt dagelijks; maandroosters als pdf en lijst van deelnemende praktijken met telefoonnummer op de pagina."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-sturm.de/informationen/notdienste/",
@@ -2863,7 +2971,8 @@
         "fr": "Lun., mar., jeu. 9 h–12 h et 14 h–18 h ; mer. 9 h–12 h ; ven. 9 h–12 h et 14 h–16 h (sur rendez-vous).",
         "es": "Lun, mar y jue 9:00–12:00 y 14:00–18:00 h; mié 9:00–12:00 h; vie 9:00–12:00 y 14:00–16:00 h (cita a convenir)",
         "it": "Lun, mar, gio 09–12 e 14–18; mer 09–12; ven 09–12 e 14–16 (appuntamento su accordo)",
-        "pt": "Segunda, terça e quinta 9h00–12h00 e 14h00–18h00; quarta 9h00–12h00; sexta 9h00–12h00 e 14h00–16h00 (marcação por acordo)"
+        "pt": "Segunda, terça e quinta 9h00–12h00 e 14h00–18h00; quarta 9h00–12h00; sexta 9h00–12h00 e 14h00–16h00 (marcação por acordo)",
+        "nl": "ma, di, do 09–12 en 14–18; wo 09–12; vr 09–12 en 14–16 uur (afspraak na overleg)."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-zipper.de/",
@@ -2886,7 +2995,8 @@
         "fr": "Lun., mar., jeu. 10 h–11 h 30 et 15 h–18 h 30 ; mer. 15 h–18 h 30 ; ven. 10 h–11 h 30 et 14 h–15 h 30 ; en dehors : vétérinaire d’urgence de garde.",
         "es": "Lun, mar y jue 10:00–11:30 y 15:00–18:30 h; mié 15:00–18:30 h; vie 10:00–11:30 y 14:00–15:30 h; fuera de este horario: veterinario de urgencias de guardia",
         "it": "Lun, mar, gio 10–11:30 e 15–18:30; mer 15–18:30; ven 10–11:30 e 14–15:30; fuori da questi orari: veterinario di guardia",
-        "pt": "Segunda, terça e quinta 10h00–11h30 e 15h00–18h30; quarta 15h00–18h30; sexta 10h00–11h30 e 14h00–15h30; fora deste horário: veterinário de urgência de serviço"
+        "pt": "Segunda, terça e quinta 10h00–11h30 e 15h00–18h30; quarta 15h00–18h30; sexta 10h00–11h30 e 14h00–15h30; fora deste horário: veterinário de urgência de serviço",
+        "nl": "ma, di, do 10–11.30 en 15–18.30; wo 15–18.30; vr 10–11.30 en 14–15.30 uur; buiten die tijden: dienstdoende spoeddierenarts."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-suedstadt.de/",
@@ -2909,7 +3019,8 @@
         "fr": "Lun.–jeu. 9 h–18 h, ven. 9 h–15 h ; uniquement sur rendez-vous téléphonique.",
         "es": "Lun–jue 9:00–18:00 h, vie 9:00–15:00 h; solo con cita previa por teléfono",
         "it": "Lun–gio 09–18, ven 09–15; solo su appuntamento telefonico",
-        "pt": "Segunda a quinta 9h00–18h00, sexta 9h00–15h00; apenas sob marcação telefónica"
+        "pt": "Segunda a quinta 9h00–18h00, sexta 9h00–15h00; apenas sob marcação telefónica",
+        "nl": "ma–do 09–18, vr 09–15 uur; alleen op telefonische afspraak."
       },
       "small_animals": true,
       "url": "https://kleintierpraxis-strauss.de/halle/",
@@ -2959,7 +3070,8 @@
         "fr": "Lun.–ven. 10 h–12 h, lun./mar./jeu. 16 h–17 h ; urgences hors de ces horaires : numéro d’urgence de Thuringe +49 361 64478808.",
         "es": "Lun–vie 10:00–12:00 h, lun, mar y jue 16:00–17:00 h; urgencias fuera de este horario: número de urgencias de Turingia +49 361 64478808",
         "it": "Lun–ven 10–12, lun/mar/gio 16–17; urgenze fuori da questi orari: numero di urgenza della Turingia +49 361 64478808",
-        "pt": "Segunda a sexta 10h00–12h00, segunda/terça/quinta 16h00–17h00; urgências fora deste horário: número de urgência da Turíngia +49 361 64478808"
+        "pt": "Segunda a sexta 10h00–12h00, segunda/terça/quinta 16h00–17h00; urgências fora deste horário: número de urgência da Turíngia +49 361 64478808",
+        "nl": "ma–vr 10–12, ma/di/do 16–17 uur; spoed buiten die tijden: spoednummer Thüringen +49 361 64478808."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-jena-nord.de/",
@@ -2982,7 +3094,8 @@
         "fr": "Lun.–ven. 8 h–18 h ; en dehors : service d’urgence petits animaux et NAC du Mecklembourg-Poméranie-Occidentale +49 1805 843736.",
         "es": "Lun–vie 8:00–18:00 h; fuera de este horario: servicio de urgencias de pequeños animales y de compañía de Mecklemburgo-Pomerania Occidental +49 1805 843736",
         "it": "Lun–ven 08–18; fuori da questi orari: pronto soccorso per piccoli animali e animali da compagnia del Meclemburgo-Pomerania Anteriore +49 1805 843736",
-        "pt": "Segunda a sexta 8h00–18h00; fora deste horário: serviço de urgência de pequenos animais e animais de estimação de Mecklenburg-Vorpommern +49 1805 843736"
+        "pt": "Segunda a sexta 8h00–18h00; fora deste horário: serviço de urgência de pequenos animais e animais de estimação de Mecklenburg-Vorpommern +49 1805 843736",
+        "nl": "ma–vr 08–18 uur; buiten die tijden: spoeddienst voor kleine huisdieren van Mecklenburg-Vorpommern +49 1805 843736."
       },
       "small_animals": true,
       "url": "https://kleintierzentrum-schwerin.de/",
@@ -3005,7 +3118,8 @@
         "fr": "Urgences lun.–ven. 8 h–19 h après accord téléphonique ; quand le cabinet est de garde : +49 172 3925086 ; sinon +49 1805 843736.",
         "es": "Urgencias lun–vie 8:00–19:00 h con cita telefónica; cuando la clínica está de guardia: +49 172 3925086; si no: +49 1805 843736",
         "it": "Urgenze lun–ven 08–19 previo accordo telefonico; quando lo studio è di guardia: +49 172 3925086; altrimenti +49 1805 843736",
-        "pt": "Urgências segunda a sexta 8h00–19h00 por acordo telefónico; quando o consultório está de serviço: +49 172 3925086; caso contrário +49 1805 843736"
+        "pt": "Urgências segunda a sexta 8h00–19h00 por acordo telefónico; quando o consultório está de serviço: +49 172 3925086; caso contrário +49 1805 843736",
+        "nl": "Spoed ma–vr 08–19 uur na telefonische afspraak; wanneer de praktijk dienst heeft: +49 172 3925086; anders +49 1805 843736."
       },
       "small_animals": true,
       "url": "https://www.tiergesundheitszentrum-schwerin.de/",
@@ -3029,7 +3143,8 @@
         "fr": "Lun., mar., jeu. 8 h 30–13 h 30 et 14 h–16 h ; mer. 8 h 30–14 h ; ven. 8 h 30–12 h ; consultation en urgence sans rendez-vous lun.–ven. 8 h–8 h 30.",
         "es": "Lun, mar y jue 8:30–13:30 y 14:00–16:00 h; mié 8:30–14:00 h; vie 8:30–12:00 h; consulta urgente sin cita lun–vie 8:00–8:30 h",
         "it": "Lun, mar, gio 8:30–13:30 e 14–16; mer 8:30–14; ven 8:30–12; visita per casi acuti senza appuntamento lun–ven 08:00–08:30",
-        "pt": "Segunda, terça e quinta 8h30–13h30 e 14h00–16h00; quarta 8h30–14h00; sexta 8h30–12h00; consulta aguda sem marcação segunda a sexta 8h00–8h30"
+        "pt": "Segunda, terça e quinta 8h30–13h30 e 14h00–16h00; quarta 8h30–14h00; sexta 8h30–12h00; consulta aguda sem marcação segunda a sexta 8h00–8h30",
+        "nl": "ma, di, do 8.30–13.30 en 14–16; wo 8.30–14; vr 8.30–12 uur; acuut spreekuur zonder afspraak ma–vr 08.00–08.30 uur."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-albrecht.de/",
@@ -3051,7 +3166,8 @@
         "fr": "Service d’urgence tournant des vétérinaires d’Osnabrück en dehors des heures de consultation ; appel transféré au cabinet de garde (0.14 €/min depuis un fixe, max. 0.42 €/min depuis un mobile).",
         "es": "Servicio de urgencias rotatorio de los veterinarios de Osnabrück fuera del horario de consulta; te pasan con la clínica de guardia (0,14 €/min desde fijo, máx. 0,42 €/min desde móvil)",
         "it": "Servizio di urgenza a rotazione dei veterinari di Osnabrück fuori dall'orario delle visite; inoltro allo studio di guardia (0,14 €/min da fisso, max 0,42 €/min da cellulare)",
-        "pt": "Serviço de urgência rotativo dos veterinários de Osnabrück fora do horário de consultas; reencaminhado para o consultório de serviço (0.14 €/min rede fixa, máx. 0.42 €/min telemóvel)"
+        "pt": "Serviço de urgência rotativo dos veterinários de Osnabrück fora do horário de consultas; reencaminhado para o consultório de serviço (0.14 €/min rede fixa, máx. 0.42 €/min telemóvel)",
+        "nl": "Wisselende spoeddienst van dierenartsen in Osnabrück buiten spreekuren; doorgeschakeld naar de dienstdoende praktijk (0,14 €/min vast net, max. 0,42 €/min mobiel)."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-osnabrueck.de/notdienst.html",
@@ -3090,7 +3206,8 @@
         "fr": "En dehors des heures de consultation : ligne d’urgence des vétérinaires d’Osnabrück +49 1805 000241.",
         "es": "Fuera del horario de consulta: línea de urgencias de los veterinarios de Osnabrück +49 1805 000241",
         "it": "Fuori dall'orario delle visite: linea di urgenza dei veterinari di Osnabrück +49 1805 000241",
-        "pt": "Fora do horário de consultas: linha de urgência dos veterinários de Osnabrück +49 1805 000241"
+        "pt": "Fora do horário de consultas: linha de urgência dos veterinários de Osnabrück +49 1805 000241",
+        "nl": "Buiten spreekuren: spoedlijn van de dierenartsen in Osnabrück +49 1805 000241."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-os.de/",
@@ -3113,7 +3230,8 @@
         "fr": "En dehors des heures de consultation : numéro d’urgence central +49 1805 000241.",
         "es": "Fuera del horario de consulta: número central de urgencias +49 1805 000241",
         "it": "Fuori dall'orario delle visite: numero centrale di urgenza +49 1805 000241",
-        "pt": "Fora do horário de consultas: número central de urgência +49 1805 000241"
+        "pt": "Fora do horário de consultas: número central de urgência +49 1805 000241",
+        "nl": "Buiten spreekuren: centraal spoednummer +49 1805 000241."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-osnabrueck.com/",
@@ -3136,7 +3254,8 @@
         "fr": "En dehors des heures de consultation : ligne d’urgence des vétérinaires d’Osnabrück +49 1805 000241.",
         "es": "Fuera del horario de consulta: línea de urgencias de los veterinarios de Osnabrück +49 1805 000241",
         "it": "Fuori dall'orario delle visite: linea di urgenza dei veterinari di Osnabrück +49 1805 000241",
-        "pt": "Fora do horário de consultas: linha de urgência dos veterinários de Osnabrück +49 1805 000241"
+        "pt": "Fora do horário de consultas: linha de urgência dos veterinários de Osnabrück +49 1805 000241",
+        "nl": "Buiten spreekuren: spoedlijn van de dierenartsen in Osnabrück +49 1805 000241."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-osnabrueck.de/",
@@ -3159,7 +3278,8 @@
         "fr": "Urgences lun.–ven. 19 h–20 h après appel préalable ; ensuite et le week-end : service d’urgence vétérinaire de Göttingen.",
         "es": "Urgencias lun–vie 19:00–20:00 h con aviso previo por teléfono; después y en fines de semana: servicio de urgencias veterinarias de Gotinga (Göttingen)",
         "it": "Urgenze lun–ven 19–20 previa registrazione telefonica; dopo e nei weekend: servizio di urgenza dei veterinari di Gottinga",
-        "pt": "Urgências segunda a sexta 19h00–20h00 após marcação telefónica; depois e aos fins de semana: serviço de urgência veterinário de Göttingen"
+        "pt": "Urgências segunda a sexta 19h00–20h00 após marcação telefónica; depois e aos fins de semana: serviço de urgência veterinário de Göttingen",
+        "nl": "Spoed ma–vr 19–20 uur na telefonische aanmelding; daarna en in weekenden: spoeddienst van de dierenartsen in Göttingen."
       },
       "small_animals": true,
       "url": "https://www.uni-goettingen.de/de/tierklinik/571084.html",
@@ -3183,7 +3303,8 @@
         "fr": "Service d’urgence lun./mar./jeu./ven. 19 h–22 h, mer. 19 h–8 h (lendemain), sam./dim. 8 h–22 h, jours fériés 8 h–17 h ; uniquement sur appel préalable.",
         "es": "Servicio de urgencias lun, mar, jue y vie 19:00–22:00 h, mié 19:00–8:00 h (del día siguiente), sáb y dom 8:00–22:00 h, festivos 8:00–17:00 h; solo con aviso previo por teléfono",
         "it": "Pronto soccorso lun/mar/gio/ven 19–22, mer 19–08 (giorno dopo), sab/dom 08–22, festivi 08–17; solo previa registrazione telefonica",
-        "pt": "Serviço de urgência segunda/terça/quinta/sexta 19h00–22h00, quarta 19h00–8h00 (dia seguinte), sábado/domingo 8h00–22h00, feriados 8h00–17h00; apenas com marcação telefónica"
+        "pt": "Serviço de urgência segunda/terça/quinta/sexta 19h00–22h00, quarta 19h00–8h00 (dia seguinte), sábado/domingo 8h00–22h00, feriados 8h00–17h00; apenas com marcação telefónica",
+        "nl": "Spoeddienst ma/di/do/vr 19–22, wo 19–08 (volgende dag), za/zo 08–22, feestdagen 08–17 uur; alleen na telefonische aanmelding."
       },
       "small_animals": true,
       "url": "https://tgz-suedharz.de/",
@@ -3204,7 +3325,8 @@
         "fr": "Service d’urgence week-ends et jours fériés du sam. 6 h au lun. 6 h, cabinets pour petits animaux en rotation, téléphone indiqué dans le planning ; appelez d’abord.",
         "es": "Servicio de urgencias de fines de semana y festivos del sábado a las 6:00 h al lunes a las 6:00 h, con clínicas rotativas de pequeños animales (teléfono en el turno); llama antes",
         "it": "Pronto soccorso nei weekend e nei festivi da sabato 06:00 a lunedì 06:00, studi per piccoli animali a rotazione con numero di telefono nei turni; telefonare prima",
-        "pt": "Serviço de urgência de fim de semana e feriados de sábado 6h00 a segunda 6h00, consultórios de pequenos animais rotativos com número de telefone na escala; liga primeiro"
+        "pt": "Serviço de urgência de fim de semana e feriados de sábado 6h00 a segunda 6h00, consultórios de pequenos animais rotativos com número de telefone na escala; liga primeiro",
+        "nl": "Spoeddienst in weekenden en op feestdagen za 06.00 uur tot ma 06.00 uur, wisselende praktijken voor kleine huisdieren met telefoonnummer in het rooster; bel eerst."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-notdienst-landkreis-northeim.de/",
@@ -3228,7 +3350,8 @@
         "fr": "Consultations en semaine ; demandez le vétérinaire de garde via la centrale d’urgence +49 3941 69999 ; mobile du cabinet +49 171 2433497.",
         "es": "Horario de consulta entre semana; pide al veterinario de guardia a través de la central de urgencias +49 3941 69999; móvil de la clínica +49 171 2433497",
         "it": "Orari di visita nei giorni feriali; chiedere del veterinario di guardia tramite la centrale di smistamento delle urgenze +49 3941 69999; cellulare dello studio +49 171 2433497",
-        "pt": "Horário de consultas em dias úteis; pede o veterinário de serviço através da central de despacho de urgência +49 3941 69999; telemóvel do consultório +49 171 2433497"
+        "pt": "Horário de consultas em dias úteis; pede o veterinário de serviço através da central de despacho de urgência +49 3941 69999; telemóvel do consultório +49 171 2433497",
+        "nl": "Spreekuur op werkdagen; vraag via de spoedcentrale +49 3941 69999 naar de dienstdoende dierenarts; praktijkmobiel +49 171 2433497."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-wernigerode.de/",
@@ -3251,7 +3374,8 @@
         "fr": "Garde tournante avec d’autres cabinets du district ; cabinet de garde sur tieraerztliche-notdienste.de.",
         "es": "Servicio de guardia rotatorio con otras clínicas del distrito; clínica de guardia en tieraerztliche-notdienste.de",
         "it": "Servizio di reperibilità a rotazione con altri studi del distretto; studio di guardia su tieraerztliche-notdienste.de",
-        "pt": "Serviço de piquete rotativo com outros consultórios do distrito; consultório de serviço em tieraerztliche-notdienste.de"
+        "pt": "Serviço de piquete rotativo com outros consultórios do distrito; consultório de serviço em tieraerztliche-notdienste.de",
+        "nl": "Wisselende bereikbaarheidsdienst met andere praktijken in het district; dienstdoende praktijk op tieraerztliche-notdienste.de."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-wernigerode.de/",
@@ -3274,7 +3398,8 @@
         "fr": "Hors horaires d’ouverture, service d’urgence pour tout le district (soirs, week-ends, jours fériés) ; planning de garde sur goslar-tierarzt.de.",
         "es": "Fuera del horario de apertura, servicio de urgencias de todo el distrito (tardes, fines de semana, festivos); turno de guardia en goslar-tierarzt.de",
         "it": "Fuori dall'orario di apertura servizio di urgenza di tutto il distretto (sera, weekend, festivi); turni di guardia su goslar-tierarzt.de",
-        "pt": "Fora do horário de funcionamento, serviço de urgência em todo o distrito (fins de tarde, fins de semana, feriados); escala de serviço em goslar-tierarzt.de"
+        "pt": "Fora do horário de funcionamento, serviço de urgência em todo o distrito (fins de tarde, fins de semana, feriados); escala de serviço em goslar-tierarzt.de",
+        "nl": "Buiten openingstijden districtsbrede spoeddienst (avonden, weekenden, feestdagen); dienstrooster op goslar-tierarzt.de."
       },
       "small_animals": true,
       "url": "https://kleintierpraxis-goslar.de/",
@@ -3311,7 +3436,8 @@
         "fr": "Lun., mar., jeu., ven. 9 h 30–10 h 30 et 18 h 30–19 h, et sur rendez-vous.",
         "es": "Lun, mar, jue y vie 9:30–10:30 y 18:30–19:00 h y a convenir",
         "it": "Lun, mar, gio, ven 09:30–10:30 e 18:30–19:00 e previo accordo",
-        "pt": "Segunda, terça, quinta e sexta 9h30–10h30 e 18h30–19h00 e por acordo"
+        "pt": "Segunda, terça, quinta e sexta 9h30–10h30 e 18h30–19h00 e por acordo",
+        "nl": "ma, di, do, vr 09.30–10.30 en 18.30–19.00 uur en op afspraak."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-fehmarn.de/",
@@ -3446,7 +3572,8 @@
         "fr": "Lun.–ven. 18 h–23 h, sam./dim./jours fériés 8 h–23 h ; après 23 h, Tierklinik Hofheim (+49 6192 290290).",
         "es": "Lun–vie 18:00–23:00 h, sáb, dom y festivos 8:00–23:00 h; después de las 23:00 h, Tierklinik Hofheim (+49 6192 290290)",
         "it": "Lun–ven 18:00–23:00, sab/dom/festivi 08:00–23:00; dopo le 23:00 Tierklinik Hofheim (+49 6192 290290)",
-        "pt": "Segunda a sexta 18h00–23h00, sábado/domingo/feriados 8h00–23h00; depois das 23h00 Tierklinik Hofheim (+49 6192 290290)"
+        "pt": "Segunda a sexta 18h00–23h00, sábado/domingo/feriados 8h00–23h00; depois das 23h00 Tierklinik Hofheim (+49 6192 290290)",
+        "nl": "ma–vr 18.00–23.00 uur, za/zo/feestdagen 08.00–23.00 uur; na 23.00 uur Tierklinik Hofheim (+49 6192 290290)."
       },
       "small_animals": true,
       "url": "https://tierarzt-notdienst-rtk.de/",
@@ -3469,7 +3596,8 @@
         "fr": "En semaine 19 h–23 h, week-ends 8 h–23 h ; après 23 h, Tierklinik Hofheim.",
         "es": "Entre semana 19:00–23:00 h, fines de semana 8:00–23:00 h; después de las 23:00 h, Tierklinik Hofheim",
         "it": "Giorni feriali 19:00–23:00, weekend 08:00–23:00; dopo le 23:00 Tierklinik Hofheim",
-        "pt": "Dias úteis 19h00–23h00, fins de semana 8h00–23h00; depois das 23h00 Tierklinik Hofheim"
+        "pt": "Dias úteis 19h00–23h00, fins de semana 8h00–23h00; depois das 23h00 Tierklinik Hofheim",
+        "nl": "Werkdagen 19.00–23.00 uur, weekenden 08.00–23.00 uur; na 23.00 uur Tierklinik Hofheim."
       },
       "small_animals": true,
       "url": "https://die-tierarztpraxis.eu/notdienstring/",
@@ -3516,7 +3644,8 @@
         "fr": "Du sam. 8 h au lun. 8 h et jours fériés.",
         "es": "Del sábado a las 8:00 h al lunes a las 8:00 h y festivos",
         "it": "Da sab 08:00 a lun 08:00 e festivi",
-        "pt": "Sábado 8h00 a segunda 8h00 e feriados"
+        "pt": "Sábado 8h00 a segunda 8h00 e feriados",
+        "nl": "za 08.00 uur tot ma 08.00 uur en op feestdagen."
       },
       "small_animals": true,
       "url": "https://tiernotdienst-kassel.de/",
@@ -3538,7 +3667,8 @@
         "fr": "En journée les week-ends et jours fériés.",
         "es": "De día en fines de semana y festivos",
         "it": "Di giorno nei weekend e nei festivi",
-        "pt": "De dia aos fins de semana e feriados"
+        "pt": "De dia aos fins de semana e feriados",
+        "nl": "Overdag in weekenden en op feestdagen."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-storck.de/willkommen-in-der-praxis/notdienst/",
@@ -3561,7 +3691,8 @@
         "fr": "8 h–0 h ; 0 h–8 h via Pfotendoctor.de +49 800 7777444.",
         "es": "De 8:00 a 0:00 h; de 0:00 a 8:00 h a través de Pfotendoctor.de +49 800 7777444",
         "it": "08:00–00:00; 00:00–08:00 tramite Pfotendoctor.de +49 800 7777444",
-        "pt": "8h00–0h00; 0h00–8h00 através de Pfotendoctor.de +49 800 7777444"
+        "pt": "8h00–0h00; 0h00–8h00 através de Pfotendoctor.de +49 800 7777444",
+        "nl": "08.00–00.00 uur; 00.00–08.00 uur via Pfotendoctor.de +49 800 7777444."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-pfennigsweg.de/notdienst",
@@ -3584,7 +3715,8 @@
         "fr": "Lun.–jeu. 19 h–8 h, week-ends/jours fériés 8 h–8 h.",
         "es": "Lun–jue 19:00–8:00 h, fines de semana y festivos 8:00–8:00 h",
         "it": "Lun–gio 19:00–08:00, weekend/festivi 08:00–08:00",
-        "pt": "Segunda a quinta 19h00–8h00, fins de semana/feriados 8h00–8h00"
+        "pt": "Segunda a quinta 19h00–8h00, fins de semana/feriados 8h00–8h00",
+        "nl": "ma–do 19.00–08.00 uur, weekenden/feestdagen 08.00–08.00 uur."
       },
       "small_animals": true,
       "url": "https://www.tieraerztlicherverbund-notdienst-in-der-ortenau.de/wer-hat-notdienst/",
@@ -3740,7 +3872,8 @@
         "fr": "Ligne d’urgence lun.–ven. 8 h–22 h, week-ends/jours fériés 8 h–20 h.",
         "es": "Línea de urgencias lun–vie 8:00–22:00 h, fines de semana y festivos 8:00–20:00 h",
         "it": "Linea di urgenza lun–ven 08:00–22:00, weekend/festivi 08:00–20:00",
-        "pt": "Linha de urgência segunda a sexta 8h00–22h00, fins de semana/feriados 8h00–20h00"
+        "pt": "Linha de urgência segunda a sexta 8h00–22h00, fins de semana/feriados 8h00–20h00",
+        "nl": "Spoedlijn ma–vr 08.00–22.00 uur, weekenden/feestdagen 08.00–20.00 uur."
       },
       "small_animals": true,
       "url": "https://kleintierzentrum-landwasser.de/",
@@ -3777,7 +3910,8 @@
         "fr": "Lun.–ven. 10 h–18 h.",
         "es": "Lun–vie 10:00–18:00 h",
         "it": "Lun–ven 10:00–18:00",
-        "pt": "Segunda a sexta 10h00–18h00"
+        "pt": "Segunda a sexta 10h00–18h00",
+        "nl": "ma–vr 10.00–18.00 uur."
       },
       "small_animals": true,
       "url": "https://kleintierzentrum-baden-baden.de/",
@@ -3801,7 +3935,8 @@
         "fr": "Ligne d’urgence +49 160 8007070, 8 h–20 h (pour les clients du cabinet).",
         "es": "Línea de urgencias (Notfall-Hotline) +49 160 8007070, de 8:00 a 20:00 h (para clientes de la clínica)",
         "it": "Hotline di urgenza +49 160 8007070, 08:00–20:00 (per i clienti dello studio)",
-        "pt": "Linha de urgência +49 160 8007070, 8h00–20h00 (para clientes do consultório)"
+        "pt": "Linha de urgência +49 160 8007070, 8h00–20h00 (para clientes do consultório)",
+        "nl": "Spoedhotline +49 160 8007070, 08.00–20.00 uur (voor klanten van de praktijk)."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-itkina.de/",
@@ -3839,7 +3974,8 @@
         "fr": "Consultation d’urgence le samedi 10 h–12 h.",
         "es": "Consulta de urgencias sáb 10:00–12:00 h",
         "it": "Sabato 10:00–12:00 visita di urgenza",
-        "pt": "Sábado 10h00–12h00 consulta de urgência"
+        "pt": "Sábado 10h00–12h00 consulta de urgência",
+        "nl": "Zaterdag 10.00–12.00 uur spoedspreekuur."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-dr-gruebl.de/",
@@ -3862,7 +3998,8 @@
         "fr": "20 h–8 h, appels transférés au vétérinaire de garde du Notfallverbund Wiesbadener Tierärzte.",
         "es": "De 20:00 a 8:00 h las llamadas se desvían al veterinario de guardia de la Notfallverbund Wiesbadener Tierärzte",
         "it": "20:00–08:00 le chiamate sono inoltrate al veterinario di guardia del Notfallverbund Wiesbadener Tierärzte",
-        "pt": "20h00–8h00 chamadas reencaminhadas para o veterinário de serviço do Notfallverbund Wiesbadener Tierärzte"
+        "pt": "20h00–8h00 chamadas reencaminhadas para o veterinário de serviço do Notfallverbund Wiesbadener Tierärzte",
+        "nl": "20.00–08.00 uur worden oproepen doorgeschakeld naar de dienstdoende dierenarts van het Notfallverbund Wiesbadener Tierärzte."
       },
       "small_animals": true,
       "url": "https://www.tiergesundheitszentrum-wiesbaden.de/",
@@ -3927,7 +4064,8 @@
         "fr": "Service d’urgence commun le week-end et les jours fériés avec Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), appel préalable obligatoire.",
         "es": "Servicio de urgencias de fines de semana y festivos conjunto con la Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), con aviso previo por teléfono",
         "it": "Pronto soccorso congiunto nei weekend/festivi con Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), registrazione telefonica",
-        "pt": "Serviço de urgência conjunto de fim de semana/feriados com a Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), marcação telefónica"
+        "pt": "Serviço de urgência conjunto de fim de semana/feriados com a Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), marcação telefónica",
+        "nl": "Gezamenlijke spoeddienst in weekenden/op feestdagen met Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), telefonische aanmelding."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-oberstdorf.de/",
@@ -3964,7 +4102,8 @@
         "fr": "Hors horaires et urgences : +49 171 7942360.",
         "es": "Fuera de horario y urgencias: +49 171 7942360",
         "it": "Fuori orario e urgenze: +49 171 7942360",
-        "pt": "Fora de horas e urgências: +49 171 7942360"
+        "pt": "Fora de horas e urgências: +49 171 7942360",
+        "nl": "Buiten kantooruren en bij spoed: +49 171 7942360."
       },
       "small_animals": true,
       "url": "https://tierarztpraxis-kamuf.de/",

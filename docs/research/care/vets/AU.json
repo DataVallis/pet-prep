@@ -154,7 +154,8 @@
         "fr": "Ouvert 24 h/24, 365 jours par an. Les urgences sont reçues sans rendez-vous.",
         "es": "Abierto las 24 horas, los 365 días del año. Las urgencias no necesitan cita previa.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Per le urgenze non serve appuntamento.",
-        "pt": "Aberto 24 horas por dia, 365 dias por ano. As urgências não precisam de marcação."
+        "pt": "Aberto 24 horas por dia, 365 dias por ano. As urgências não precisam de marcação.",
+        "nl": "Open 24 uur per dag, 365 dagen per jaar. Voor spoedgevallen is geen afspraak nodig."
       },
       "small_animals": true,
       "url": "https://www.sydney.edu.au/vet-hospital/emergency/sydney-emergency.html",
@@ -177,7 +178,8 @@
         "fr": "Lun.–ven. 8 h–18 h. Pas d’urgences 24 h/24 pour petits animaux ; en dehors des heures, adressez-vous à un hôpital ouvert 24 h/24.",
         "es": "Lun–vie 8:00–18:00 h. Sin urgencias 24 horas para animales pequeños; fuera de horario acude a un hospital 24 horas.",
         "it": "Lun–ven 8:00–18:00. Nessun pronto soccorso per piccoli animali 24 ore su 24; fuori orario rivolgersi a un ospedale aperto 24 ore su 24.",
-        "pt": "Segunda a sexta, 8h00–18h00. Sem urgências 24 horas para pequenos animais; fora de horas, recorre a um hospital 24 horas."
+        "pt": "Segunda a sexta, 8h00–18h00. Sem urgências 24 horas para pequenos animais; fora de horas, recorre a um hospital 24 horas.",
+        "nl": "Maandag tot en met vrijdag 8.00–18.00 uur. Geen 24-uurs spoedzorg voor kleine huisdieren; ga buiten openingstijden naar een 24-uurs dierenziekenhuis."
       },
       "small_animals": true,
       "url": "https://www.sydney.edu.au/vet-hospital/about-us/contact-us.html",
@@ -200,7 +202,8 @@
         "fr": "Ouvert 24 h/24, 365 jours par an. Urgences sans rendez-vous ; tri à l’arrivée.",
         "es": "Abierto las 24 horas, los 365 días del año. Urgencias sin cita previa; los casos se clasifican al llegar.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Per le urgenze non serve prenotare; i casi sono valutati con triage all'arrivo.",
-        "pt": "Aberto 24 horas, 365 dias por ano. Urgências sem marcação; os casos são triados à chegada."
+        "pt": "Aberto 24 horas, 365 dias por ano. Urgências sem marcação; os casos são triados à chegada.",
+        "nl": "Open 24 uur per dag, 365 dagen per jaar. Voor spoedgevallen is geen afspraak nodig; bij aankomst vindt triage plaats."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/sydney/",
@@ -223,7 +226,8 @@
         "fr": "Ouvert 24 h/24, 365 jours par an. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, los 365 días del año. Urgencias sin cita previa.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Per le urgenze non serve prenotare.",
-        "pt": "Aberto 24 horas, 365 dias por ano. Urgências sem marcação."
+        "pt": "Aberto 24 horas, 365 dias por ano. Urgências sem marcação.",
+        "nl": "Open 24 uur per dag, 365 dagen per jaar. Voor spoedgevallen is geen afspraak nodig."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/alexandria/",
@@ -246,7 +250,8 @@
         "fr": "Ouvert 24 h/24, 365 jours par an, y compris week-ends et jours fériés. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, los 365 días del año, también fines de semana y festivos. Urgencias sin cita previa.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno, fine settimana e festivi inclusi. Per le urgenze non serve appuntamento.",
-        "pt": "Aberto 24 horas por dia, 365 dias por ano, incluindo fins de semana e feriados. Urgências sem marcação."
+        "pt": "Aberto 24 horas por dia, 365 dias por ano, incluindo fins de semana e feriados. Urgências sem marcação.",
+        "nl": "Open 24 uur per dag, 365 dagen per jaar, ook in het weekend en op feestdagen. Voor spoedgevallen is geen afspraak nodig."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/northern-beaches/",
@@ -269,7 +274,8 @@
         "fr": "Ouvert 24 h/24, 365 jours par an. Urgences accueillies sans rendez-vous.",
         "es": "Abierto las 24 horas, los 365 días del año. Urgencias sin cita previa; puedes acudir directamente.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Urgenze accolte senza appuntamento.",
-        "pt": "Aberto 24 horas, 365 dias por ano. Urgências sem marcação são bem-vindas."
+        "pt": "Aberto 24 horas, 365 dias por ano. Urgências sem marcação são bem-vindas.",
+        "nl": "Open 24 uur per dag, 365 dagen per jaar. Spoedgevallen zonder afspraak welkom."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/central-coast/",
@@ -292,7 +298,8 @@
         "fr": "Urgences 24 h/24.",
         "es": "Urgencias las 24 horas.",
         "it": "Pronto soccorso 24 ore su 24.",
-        "pt": "Urgências 24 horas por dia."
+        "pt": "Urgências 24 horas por dia.",
+        "nl": "Spoedzorg 24 uur per dag."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/sydney/",
@@ -315,7 +322,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris. Consultations de spécialistes sur orientation, lun.–ven. 8 h–18 h.",
         "es": "Abierto las 24 horas, los 7 días de la semana, también festivos. Consultas de especialistas por derivación, lun–vie 8:00–18:00 h.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi inclusi. Consulti specialistici su invio del veterinario, lun–ven 8:00–18:00.",
-        "pt": "Aberto 24 horas por dia, 7 dias por semana, incluindo feriados. Consultas de especialidade por referenciação, segunda a sexta, 8h00–18h00."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, incluindo feriados. Consultas de especialidade por referenciação, segunda a sexta, 8h00–18h00.",
+        "nl": "Open 24 uur per dag, 7 dagen per week, ook op feestdagen. Specialistische consulten op verwijzing, ma–vr 8.00–18.00 uur."
       },
       "small_animals": true,
       "url": "https://emergencyvet.com.au/our-network/arh-home/arh-homebush.html",
@@ -338,7 +346,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, tous les jours de l’année.",
         "es": "Abierto las 24 horas, los 7 días de la semana, todos los días del año.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, tutti i giorni dell'anno.",
-        "pt": "Aberto 24 horas, 7 dias por semana, todos os dias do ano."
+        "pt": "Aberto 24 horas, 7 dias por semana, todos os dias do ano.",
+        "nl": "Open 24 uur per dag, 7 dagen per week, elke dag van het jaar."
       },
       "small_animals": true,
       "url": "https://emergencyvet.com.au/our-network/arh-home/arh-gosford.html",
@@ -361,7 +370,8 @@
         "fr": "Ouvert 24 h/24 le samedi et le dimanche, et en dehors des heures d’ouverture du lundi au vendredi, jours fériés compris. Appelez pour connaître les horaires en semaine.",
         "es": "Abierto las 24 horas los sábados y domingos, y fuera de horario de lunes a viernes, también festivos. Llama antes para conocer el horario entre semana.",
         "it": "Aperto 24 ore su 24 il sabato e la domenica, e fuori orario dal lunedì al venerdì, festivi inclusi. Telefonare in anticipo per gli orari dei giorni feriali.",
-        "pt": "Aberto 24 horas ao sábado e ao domingo, e fora de horas de segunda a sexta, incluindo feriados. Liga antes para saberes o horário em dias úteis."
+        "pt": "Aberto 24 horas ao sábado e ao domingo, e fora de horas de segunda a sexta, incluindo feriados. Liga antes para saberes o horário em dias úteis.",
+        "nl": "Za en zo 24 uur per dag open, en op werkdagen buiten kantooruren, ook op feestdagen. Bel vooraf voor de openingstijden op werkdagen."
       },
       "small_animals": true,
       "url": "https://www.emergencyvet.com.au/clinic/arh-wollongong.html",
@@ -384,7 +394,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences. Appelez avant de venir avec votre animal.",
         "es": "Abierto las 24 horas para urgencias. Llama antes de llevar a tu mascota.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per le urgenze. Telefonare prima di portare l'animale.",
-        "pt": "Aberto 24 h/24, 7 dias por semana, para urgências. Liga antes de levares o teu animal."
+        "pt": "Aberto 24 h/24, 7 dias por semana, para urgências. Liga antes de levares o teu animal.",
+        "nl": "24/7 open voor spoedgevallen. Bel vooraf voordat je je huisdier brengt."
       },
       "small_animals": true,
       "url": "https://arecvet.com.au/",
@@ -407,7 +418,8 @@
         "fr": "Hôpital de spécialités et d’urgences dans le Sutherland Shire. Appelez pour confirmer les horaires d’ouverture.",
         "es": "Hospital de especialidades y urgencias en Sutherland Shire. Llama antes para confirmar el horario.",
         "it": "Ospedale specialistico e di pronto soccorso nel Sutherland Shire. Telefonare in anticipo per confermare gli orari.",
-        "pt": "Hospital de especialidades e urgências no Sutherland Shire. Liga antes para confirmares o horário."
+        "pt": "Hospital de especialidades e urgências no Sutherland Shire. Liga antes para confirmares o horário.",
+        "nl": "Specialisten- en spoedziekenhuis in de Sutherland Shire. Bel vooraf om de openingstijden te bevestigen."
       },
       "small_animals": true,
       "url": "https://www.theleader.com.au/story/6794828/24-hour-vet-clinic-opens-at-miranda/",
@@ -430,7 +442,8 @@
         "fr": "Service d’urgences ouvert 24 h/24, 7 j/7, au nord de Sydney.",
         "es": "Urgencias abiertas las 24 horas en la zona norte de Sídney.",
         "it": "Pronto soccorso aperto 24 ore su 24, 7 giorni su 7, nella zona nord di Sydney.",
-        "pt": "Serviço de urgências aberto 24 h/24, 7 dias por semana, na zona norte de Sydney."
+        "pt": "Serviço de urgências aberto 24 h/24, 7 dias por semana, na zona norte de Sydney.",
+        "nl": "24/7 spoeddienst in het noorden van Sydney."
       },
       "small_animals": true,
       "url": "https://nevs.net.au",
@@ -453,7 +466,8 @@
         "fr": "Ouvert 7 j/7, 7 h 30–19 h. Pas d’ouverture 24 h/24 ; en dehors des heures, adressez-vous à NEVS Terrey Hills ou au SASH.",
         "es": "Abierto los 7 días, 7:30–19:00 h. No es un hospital 24 horas; fuera de horario acude a NEVS Terrey Hills o SASH.",
         "it": "Aperto 7 giorni su 7, 7:30–19:00. Non è un ospedale aperto 24 ore su 24; fuori orario rivolgersi a NEVS Terrey Hills o SASH.",
-        "pt": "Aberto 7 dias por semana, 7h30–19h00. Não é um hospital 24 horas; fora de horas, recorre ao NEVS Terrey Hills ou ao SASH."
+        "pt": "Aberto 7 dias por semana, 7h30–19h00. Não é um hospital 24 horas; fora de horas, recorre ao NEVS Terrey Hills ou ao SASH.",
+        "nl": "7 dagen per week open, 7.30–19.00 uur. Geen 24-uurs dierenziekenhuis; buiten openingstijden: NEVS Terrey Hills of SASH."
       },
       "small_animals": true,
       "url": "https://www.sydneyanimalhospitals.com.au/locations/northern-beaches/emergency-vet",
@@ -476,7 +490,8 @@
         "fr": "Lun.–ven. 8 h–19 h, sam. 8 h 30–16 h. Fermé les dimanches et jours fériés. Pas d’ouverture 24 h/24.",
         "es": "Lun–vie 8:00–19:00 h, sáb 8:30–16:00 h. Cerrado los domingos y festivos. No es un hospital 24 horas.",
         "it": "Lun–ven 8:00–19:00, sab 8:30–16:00. Chiuso la domenica e nei festivi. Non è un ospedale aperto 24 ore su 24.",
-        "pt": "Segunda a sexta 8h00–19h00, sábado 8h30–16h00. Fechado ao domingo e feriados. Não é um hospital 24 horas."
+        "pt": "Segunda a sexta 8h00–19h00, sábado 8h30–16h00. Fechado ao domingo e feriados. Não é um hospital 24 horas.",
+        "nl": "ma–vr 8.00–19.00 uur, za 8.30–16.00 uur. Zondag en feestdagen gesloten. Geen 24-uurs dierenziekenhuis."
       },
       "small_animals": true,
       "url": "https://www.sydneyanimalhospitals.com.au/locations/northern-beaches/emergency-vet",
@@ -499,7 +514,8 @@
         "fr": "Lun.–mar. 8 h–18 h, mer.–ven. 8 h–20 h, sam.–dim. 8 h–16 h. En dehors des heures, appelez avant de venir et rendez-vous dans un centre d’urgences ouvert 24 h/24.",
         "es": "Lun–mar 8:00–18:00 h, mié–vie 8:00–20:00 h, sáb–dom 8:00–16:00 h. Fuera de horario llama antes y acude a un centro de urgencias 24 horas.",
         "it": "Lun–mar 8:00–18:00, mer–ven 8:00–20:00, sab–dom 8:00–16:00. Fuori orario telefonare in anticipo e rivolgersi a un centro di pronto soccorso aperto 24 ore su 24.",
-        "pt": "Seg–ter 8h00–18h00, qua–sex 8h00–20h00, sáb–dom 8h00–16h00. Fora de horas, liga antes e dirige-te a um centro de urgências 24 horas."
+        "pt": "Seg–ter 8h00–18h00, qua–sex 8h00–20h00, sáb–dom 8h00–16h00. Fora de horas, liga antes e dirige-te a um centro de urgências 24 horas.",
+        "nl": "ma–di 8.00–18.00 uur, wo–vr 8.00–20.00 uur, za–zo 8.00–16.00 uur. Bel buiten openingstijden vooraf en ga naar een 24-uurs spoedcentrum."
       },
       "small_animals": true,
       "url": "https://cardiffvethospital.com.au/emergency-vet-newcastle/",
@@ -522,7 +538,8 @@
         "fr": "En dehors des heures, appelez d’abord la clinique ; les urgences sont orientées vers un centre d’urgences ouvert 24 h/24.",
         "es": "Fuera de horario llama primero a la clínica; las urgencias se derivan a un centro de urgencias 24 horas.",
         "it": "Fuori orario telefonare prima alla clinica; le urgenze sono indirizzate a un centro di pronto soccorso aperto 24 ore su 24.",
-        "pt": "Fora de horas, liga primeiro para a clínica; as urgências são encaminhadas para um centro de urgências 24 horas."
+        "pt": "Fora de horas, liga primeiro para a clínica; as urgências são encaminhadas para um centro de urgências 24 horas.",
+        "nl": "Bel buiten openingstijden eerst de praktijk; spoedgevallen worden doorverwezen naar een 24-uurs spoedcentrum."
       },
       "small_animals": true,
       "url": "https://brunkerroadvets.com.au/information/after-hours-emergency-service/",
@@ -544,7 +561,8 @@
         "fr": "Ligne d’aide 24 h/24, 7 j/7 pour les intoxications animales, destinée aux propriétaires d’animaux en Australie. Consultation payante (à partir de 79 AUD).",
         "es": "Línea de ayuda 24 horas sobre intoxicaciones de animales para propietarios de mascotas en Australia. Consulta de pago (desde 79 AUD).",
         "it": "Linea di assistenza per avvelenamenti animali 24 ore su 24, 7 giorni su 7, per i proprietari di animali in Australia. Consulto a pagamento (da AUD 79).",
-        "pt": "Linha de apoio toxicológico para animais 24 h/24, 7 dias por semana, para donos de animais na Austrália. Aplica-se uma taxa de consulta (a partir de AUD 79)."
+        "pt": "Linha de apoio toxicológico para animais 24 h/24, 7 dias por semana, para donos de animais na Austrália. Aplica-se uma taxa de consulta (a partir de AUD 79).",
+        "nl": "Helpline voor vergiftigingen bij dieren, 24/7, voor huisdiereigenaren in Australië. Er geldt een consulttarief (vanaf AUD 79)."
       },
       "small_animals": true,
       "url": "https://www.animalpoisons.com.au/",
@@ -567,7 +585,8 @@
         "fr": "Hôpital d’urgences hors heures ouvrables. Horaires : lun.–ven. 18 h–7 h, ouvert 24 h/24 le week-end ; horaires variables les jours fériés, appelez avant de venir.",
         "es": "Hospital de urgencias fuera de horario. Horario: lun–vie 18:00–7:00 h, abierto las 24 horas los fines de semana; el horario en festivos varía, así que llama antes.",
         "it": "Ospedale di pronto soccorso fuori orario. Orari: lun–ven 18:00–7:00, aperto 24 ore su 24 nei fine settimana; orari dei festivi variabili, telefonare in anticipo.",
-        "pt": "Hospital de urgências fora de horas. Horário: segunda a sexta 18h00–7h00, aberto 24 horas aos fins de semana; o horário em feriados varia, por isso liga antes."
+        "pt": "Hospital de urgências fora de horas. Horário: segunda a sexta 18h00–7h00, aberto 24 horas aos fins de semana; o horário em feriados varia, por isso liga antes.",
+        "nl": "Spoedziekenhuis buiten kantooruren. Openingstijden: maandag tot en met vrijdag 18.00–7.00 uur, in het weekend 24 uur open; op feestdagen wisselen de uren, dus bel vooraf."
       },
       "small_animals": true,
       "url": "https://www.emergencyvet.com.au/clinic/ARH_Baulkham_Hills.html",
@@ -590,7 +609,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, tous les jours de l’année.",
         "es": "Abierto las 24 horas, los 7 días de la semana, todos los días del año.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, tutti i giorni dell'anno.",
-        "pt": "Aberto 24 horas por dia, 7 dias por semana, todos os dias do ano."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, todos os dias do ano.",
+        "nl": "Open 24 uur per dag, 7 dagen per week, elke dag van het jaar."
       },
       "small_animals": true,
       "url": "https://www.emergencyvet.com.au/our-network/arh-home/arh-minchinbury.html",
@@ -614,7 +634,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h 30–12 h, fermé le dimanche et les jours fériés. En dehors des heures : Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:30–12:00 h, cerrado los domingos y festivos. Fuera de horario: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356.",
         "it": "Lun–ven 8:00–18:00, sab 8:30–12:00, chiuso la domenica e nei festivi. Fuori orario: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h30–12h00, fechado ao domingo e feriados. Fora de horas: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h30–12h00, fechado ao domingo e feriados. Fora de horas: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.30–12.00 uur, zondag en feestdagen gesloten. Buiten openingstijden: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356."
       },
       "small_animals": true,
       "url": "https://coffsharbourvet.com.au/services/",
@@ -637,7 +658,8 @@
         "fr": "Lun.–sam. 8 h–11 h 30 et 15 h–17 h 30. Le dimanche et en dehors des heures d’ouverture : urgences ou sur rendez-vous ; appelez et écoutez le message enregistré.",
         "es": "Lun–sáb 8:00–11:30 h y 15:00–17:30 h. Domingos y fuera de horario, urgencias o con cita previa; llama y escucha el mensaje grabado.",
         "it": "Lun–sab 8:00–11:30 e 15:00–17:30. Domenica e fuori orario per urgenze o su appuntamento; chiamare e ascoltare il messaggio registrato.",
-        "pt": "Segunda a sábado 8h00–11h30 e 15h00–17h30. Domingos e fora de horas, para urgências ou sob marcação; liga e ouve a mensagem gravada."
+        "pt": "Segunda a sábado 8h00–11h30 e 15h00–17h30. Domingos e fora de horas, para urgências ou sob marcação; liga e ouve a mensagem gravada.",
+        "nl": "ma–za 8.00–11.30 en 15.00–17.30 uur. Op zondag en buiten openingstijden voor spoedgevallen of op afspraak; bel en luister het ingesproken bericht af."
       },
       "small_animals": true,
       "url": "https://www.blueandwhitevet.com.au/contact",
@@ -660,7 +682,8 @@
         "fr": "Lun.–ven. 8 h 30–17 h 30, sam. 8 h 30–12 h, fermé le dimanche. Service d’urgence hors heures ouvrables disponible ; appelez la clinique.",
         "es": "Lun–vie 8:30–17:30 h, sáb 8:30–12:00 h, domingo cerrado. Servicio de urgencias fuera de horario; llama a la clínica.",
         "it": "Lun–ven 8:30–17:30, sab 8:30–12:00, chiuso la domenica. Servizio di pronto soccorso fuori orario disponibile; chiamare la clinica.",
-        "pt": "Segunda a sexta 8h30–17h30, sábado 8h30–12h00, fechado ao domingo. Serviço de urgências fora de horas disponível; liga para a clínica."
+        "pt": "Segunda a sexta 8h30–17h30, sábado 8h30–12h00, fechado ao domingo. Serviço de urgências fora de horas disponível; liga para a clínica.",
+        "nl": "ma–vr 8.30–17.30 uur, za 8.30–12.00 uur, zondag gesloten. Spoeddienst buiten kantooruren beschikbaar; bel de praktijk."
       },
       "small_animals": true,
       "url": "https://mooneevet.com.au/",
@@ -683,7 +706,8 @@
         "fr": "Lun.–ven. 8 h–17 h, fermé les week-ends et jours fériés. Urgences pendant les heures d’ouverture : appelez avant de venir. En dehors des heures, contactez le centre d’urgences le plus proche.",
         "es": "Lun–vie 8:00–17:00 h, cerrado los fines de semana y festivos. Urgencias en horario de apertura: llama antes. Fuera de horario, acude al centro de urgencias más cercano.",
         "it": "Lun–ven 8:00–17:00, chiuso nei fine settimana e nei festivi. Urgenze in orario di apertura: telefonare in anticipo. Fuori orario rivolgersi al centro di pronto soccorso più vicino.",
-        "pt": "Segunda a sexta 8h00–17h00, fechado aos fins de semana e feriados. Urgências em horário normal: liga antes. Fora de horas, contacta o centro de urgências mais próximo."
+        "pt": "Segunda a sexta 8h00–17h00, fechado aos fins de semana e feriados. Urgências em horário normal: liga antes. Fora de horas, contacta o centro de urgências mais próximo.",
+        "nl": "ma–vr 8.00–17.00 uur, weekend en feestdagen gesloten. Spoedgevallen binnen openingstijden: bel vooraf. Neem buiten openingstijden contact op met het dichtstbijzijnde spoedcentrum."
       },
       "small_animals": true,
       "url": "https://www.oxleyhighwayvet.com.au/emergency-vet",
@@ -706,7 +730,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–12 h.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–12:00.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–12h00."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–12h00.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.00–12.00 uur."
       },
       "small_animals": true,
       "url": "https://www.portvet.com.au/",
@@ -729,7 +754,8 @@
         "fr": "Lun.–ven. 8 h–17 h 30, sam. 9 h–12 h, fermé le dimanche et les jours fériés. Urgences pendant les heures d’ouverture : appelez avant de venir.",
         "es": "Lun–vie 8:00–17:30 h, sáb 9:00–12:00 h, cerrado los domingos y festivos. Urgencias en horario de apertura: llama antes.",
         "it": "Lun–ven 8:00–17:30, sab 9:00–12:00, chiuso la domenica e nei festivi. Urgenze in orario di apertura: telefonare in anticipo.",
-        "pt": "Segunda a sexta 8h00–17h30, sábado 9h00–12h00, fechado ao domingo e feriados. Urgências em horário normal: liga antes."
+        "pt": "Segunda a sexta 8h00–17h30, sábado 9h00–12h00, fechado ao domingo e feriados. Urgências em horário normal: liga antes.",
+        "nl": "ma–vr 8.00–17.30 uur, za 9.00–12.00 uur, zondag en feestdagen gesloten. Spoedgevallen binnen openingstijden: bel vooraf."
       },
       "small_animals": true,
       "url": "https://www.eastportvet.com/vetchat-call-service-for-veterinary-emergencies/",
@@ -752,7 +778,8 @@
         "fr": "Lun.–ven. 8 h 30–17 h, sam. 8 h 30–11 h. Urgences hors heures ouvrables : appelez le vétérinaire de garde ; majoration hors heures ouvrables.",
         "es": "Lun–vie 8:30–17:00 h, sáb 8:30–11:00 h. Urgencias fuera de horario: llama al veterinario de guardia; se aplica un recargo.",
         "it": "Lun–ven 8:30–17:00, sab 8:30–11:00. Urgenze fuori orario: chiamare il veterinario di guardia: con supplemento fuori orario.",
-        "pt": "Segunda a sexta 8h30–17h00, sábado 8h30–11h00. Urgências fora de horas: liga para o veterinário de serviço; aplica-se uma taxa fora de horas."
+        "pt": "Segunda a sexta 8h30–17h00, sábado 8h30–11h00. Urgências fora de horas: liga para o veterinário de serviço; aplica-se uma taxa fora de horas.",
+        "nl": "ma–vr 8.30–17.00 uur, za 8.30–11.00 uur. Spoedgevallen buiten openingstijden: bel de dienstdoende dierenarts; er geldt een toeslag voor buiten kantooruren."
       },
       "small_animals": true,
       "url": "https://wauchopevets.com.au/contact/",
@@ -775,7 +802,8 @@
         "fr": "Urgences 24 h/24 : appelez le cabinet et écoutez le message enregistré pour joindre le vétérinaire de garde. Consultations sur rendez-vous lun.–ven. 8 h 30–17 h 30, sam. 8 h 30–12 h.",
         "es": "Servicio de urgencias 24 horas: llama a la clínica y escucha el mensaje grabado para contactar con el veterinario de guardia. Consultas con cita previa lun–vie 8:30–17:30 h, sáb 8:30–12:00 h.",
         "it": "Pronto soccorso 24 ore su 24: chiamare lo studio e ascoltare il messaggio registrato per raggiungere il veterinario di guardia. Visite su appuntamento lun–ven 8:30–17:30, sab 8:30–12:00.",
-        "pt": "Serviço de urgências 24 horas: liga para a clínica e ouve a mensagem gravada para contactares o veterinário de serviço. Consultas sob marcação, segunda a sexta 8h30–17h30, sábado 8h30–12h00."
+        "pt": "Serviço de urgências 24 horas: liga para a clínica e ouve a mensagem gravada para contactares o veterinário de serviço. Consultas sob marcação, segunda a sexta 8h30–17h30, sábado 8h30–12h00.",
+        "nl": "24-uurs spoeddienst: bel de praktijk en luister het ingesproken bericht af om de dienstdoende dierenarts te bereiken. Consulten op afspraak ma–vr 8.30–17.30 uur, za 8.30–12.00 uur."
       },
       "small_animals": true,
       "url": "https://www.tamworthvet.com.au/contact-us",
@@ -799,7 +827,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–13 h, fermé le dimanche. En dehors des heures d’ouverture : 0409 487 486.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–13:00 h, domingo cerrado. Fuera de horario: 0409 487 486.",
         "it": "Lun–ven 8:00–18:00, sab 9:00–13:00, chiuso la domenica. Fuori orario: 0409 487 486.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–13h00, fechado ao domingo. Fora de horas: 0409 487 486."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–13h00, fechado ao domingo. Fora de horas: 0409 487 486.",
+        "nl": "ma–vr 8.00–18.00 uur, za 9.00–13.00 uur, zondag gesloten. Buiten openingstijden: 0409 487 486."
       },
       "small_animals": true,
       "url": "https://www.goonoovet.com.au/",
@@ -822,7 +851,8 @@
         "fr": "Service hors heures ouvrables 24 h/24, 7 j/7 avec vétérinaire de garde, 365 jours par an. Horaires : lun.–ven. 8 h 30–17 h 30, sam. 8 h 30–12 h.",
         "es": "Servicio fuera de horario las 24 horas con veterinario de guardia, los 365 días del año. Horario lun–vie 8:30–17:30 h, sáb 8:30–12:00 h.",
         "it": "Servizio fuori orario 24 ore su 24, 7 giorni su 7, con veterinario di guardia, 365 giorni all'anno. Orari lun–ven 8:30–17:30, sab 8:30–12:00.",
-        "pt": "Serviço fora de horas 24 h/24, com veterinário de serviço, 365 dias por ano. Horário: segunda a sexta 8h30–17h30, sábado 8h30–12h00."
+        "pt": "Serviço fora de horas 24 h/24, com veterinário de serviço, 365 dias por ano. Horário: segunda a sexta 8h30–17h30, sábado 8h30–12h00.",
+        "nl": "24/7 dienst buiten kantooruren met een dienstdoende dierenarts, 365 dagen per jaar. Openingstijden ma–vr 8.30–17.30 uur, za 8.30–12.00 uur."
       },
       "small_animals": true,
       "url": "https://orangevet.com.au/",
@@ -846,7 +876,8 @@
         "fr": "Lun., mar., jeu., ven. 8 h 30–18 h, mer. 8 h 30–17 h, sam. 8 h 30–11 h. Le numéro de la clinique est pris 24 h/24 par le vétérinaire de garde pour les cas urgents.",
         "es": "Lun, mar, jue, vie 8:30–18:00 h, mié 8:30–17:00 h, sáb 8:30–11:00 h. El veterinario de guardia atiende el teléfono de la clínica las 24 horas en casos urgentes.",
         "it": "Lun, mar, gio, ven 8:30–18:00, mer 8:30–17:00, sab 8:30–11:00. Al numero della clinica risponde 24 ore su 24 il veterinario di guardia per i casi urgenti.",
-        "pt": "Seg, ter, qui, sex 8h30–18h00, qua 8h30–17h00, sábado 8h30–11h00. O número da clínica é atendido 24 horas por dia pelo veterinário de piquete para casos urgentes."
+        "pt": "Seg, ter, qui, sex 8h30–18h00, qua 8h30–17h00, sábado 8h30–11h00. O número da clínica é atendido 24 horas por dia pelo veterinário de piquete para casos urgentes.",
+        "nl": "ma, di, do, vr 8.30–18.00 uur, wo 8.30–17.00 uur, za 8.30–11.00 uur. Het praktijknummer wordt 24 uur per dag beantwoord door de dienstdoende dierenarts voor dringende gevallen."
       },
       "small_animals": true,
       "url": "https://mulberrylanevet.com.au/",
@@ -869,7 +900,8 @@
         "fr": "Lun.–ven. 8 h 30–17 h 30, sam. 9 h–16 h, dim. 11 h–15 h, fermé les jours fériés. Urgences hors heures ouvrables : appelez la clinique.",
         "es": "Lun–vie 8:30–17:30 h, sáb 9:00–16:00 h, dom 11:00–15:00 h, cerrado los festivos. Urgencias fuera de horario: llama al teléfono de la clínica.",
         "it": "Lun–ven 8:30–17:30, sab 9:00–16:00, dom 11:00–15:00, chiuso nei festivi. Urgenze fuori orario: chiamare il numero della clinica.",
-        "pt": "Segunda a sexta 8h30–17h30, sábado 9h00–16h00, domingo 11h00–15h00, fechado aos feriados. Urgências fora de horas: liga para o número da clínica."
+        "pt": "Segunda a sexta 8h30–17h30, sábado 9h00–16h00, domingo 11h00–15h00, fechado aos feriados. Urgências fora de horas: liga para o número da clínica.",
+        "nl": "ma–vr 8.30–17.30 uur, za 9.00–16.00 uur, zo 11.00–15.00 uur, feestdagen gesloten. Spoedgevallen buiten openingstijden: bel het praktijknummer."
       },
       "small_animals": true,
       "url": "https://www.canobolasvet.com/contact-us.pml",
@@ -892,7 +924,8 @@
         "fr": "Lun.–ven. 8 h 30–17 h 30, fermé les week-ends et jours fériés. En dehors des heures, la clinique oriente les urgences vers ARH Homebush, (02) 9758 8666.",
         "es": "Lun–vie 8:30–17:30 h, cerrado los fines de semana y festivos. Fuera de horario la clínica deriva las urgencias a ARH Homebush, (02) 9758 8666.",
         "it": "Lun–ven 8:30–17:30, chiuso nei fine settimana e nei festivi. Fuori orario: la clinica indirizza le urgenze all'ARH Homebush, (02) 9758 8666.",
-        "pt": "Segunda a sexta 8h30–17h30, fechado aos fins de semana e feriados. Fora de horas: a clínica encaminha as urgências para o ARH Homebush, (02) 9758 8666."
+        "pt": "Segunda a sexta 8h30–17h30, fechado aos fins de semana e feriados. Fora de horas: a clínica encaminha as urgências para o ARH Homebush, (02) 9758 8666.",
+        "nl": "ma–vr 8.30–17.30 uur, weekend en feestdagen gesloten. Buiten openingstijden verwijst de praktijk spoedgevallen door naar ARH Homebush, (02) 9758 8666."
       },
       "small_animals": true,
       "url": "https://bathurstvethospital.com.au/emergency-vet/",
@@ -915,7 +948,8 @@
         "fr": "Lun.–ven. 8 h 30–18 h, sam. 9 h–17 h 30, fermé le dimanche. Appels hors heures ouvrables au même numéro.",
         "es": "Lun–vie 8:30–18:00 h, sáb 9:00–17:30 h, domingo cerrado. Llamadas fuera de horario en el mismo número.",
         "it": "Lun–ven 8:30–18:00, sab 9:00–17:30, chiuso la domenica. Chiamate fuori orario allo stesso numero.",
-        "pt": "Segunda a sexta 8h30–18h00, sábado 9h00–17h30, fechado ao domingo. Chamadas fora de horas para o mesmo número."
+        "pt": "Segunda a sexta 8h30–18h00, sábado 9h00–17h30, fechado ao domingo. Chamadas fora de horas para o mesmo número.",
+        "nl": "ma–vr 8.30–18.00 uur, za 9.00–17.30 uur, zondag gesloten. Buiten openingstijden bereikbaar op hetzelfde nummer."
       },
       "small_animals": true,
       "url": "https://www.stewartstreetvet.com.au/",
@@ -938,7 +972,8 @@
         "fr": "Soins vétérinaires 24 h/24, 7 j/7, tous les jours de l’année, via le service de garde. Horaires : lun.–ven. 8 h–18 h, sam. 8 h–12 h.",
         "es": "Atención veterinaria las 24 horas, todos los días del año, mediante el servicio de guardia. Horario lun–vie 8:00–18:00 h, sáb 8:00–12:00 h.",
         "it": "Assistenza veterinaria 24 ore su 24, 7 giorni su 7, tutti i giorni dell'anno tramite il servizio di guardia. Orari lun–ven 8:00–18:00, sab 8:00–12:00.",
-        "pt": "Cuidados veterinários disponíveis 24 h/24, todos os dias do ano, através do serviço de piquete. Horário segunda a sexta 8h00–18h00, sábado 8h00–12h00."
+        "pt": "Cuidados veterinários disponíveis 24 h/24, todos os dias do ano, através do serviço de piquete. Horário segunda a sexta 8h00–18h00, sábado 8h00–12h00.",
+        "nl": "Dierenartszorg 24/7, elke dag van het jaar, via de achterwacht. Openingstijden ma–vr 8.00–18.00 uur, za 8.00–12.00 uur."
       },
       "small_animals": true,
       "url": "https://www.waggavet.com.au/",
@@ -962,7 +997,8 @@
         "fr": "Hôpital d’urgences ouvert 24 h/24, personnel présent en permanence, tous les jours de l’année.",
         "es": "Hospital de urgencias 24 horas, con personal las 24 horas todos los días del año.",
         "it": "Ospedale di pronto soccorso aperto 24 ore su 24, con personale presente tutti i giorni dell'anno.",
-        "pt": "Hospital de urgências 24 horas, com equipa presente a toda a hora, todos os dias do ano."
+        "pt": "Hospital de urgências 24 horas, com equipa presente a toda a hora, todos os dias do ano.",
+        "nl": "24-uurs spoedziekenhuis, dag en nacht bemand, elke dag van het jaar."
       },
       "small_animals": true,
       "url": "https://www.lakerdvet.com.au/",
@@ -986,7 +1022,8 @@
         "fr": "En semaine 8 h–18 h. Urgences à toute heure : appelez le 02 6041 2522 (vétérinaire de garde jusqu’à 22 h pour les clients habituels). Après 22 h, la clinique ouverte 24 h/24 la plus proche est Lake Road Veterinary Clinic à Wagga Wagga.",
         "es": "Entre semana 8:00–18:00 h. Urgencias a cualquier hora: llama al 02 6041 2522 (veterinario de guardia fuera de horario hasta las 22:00 h para clientes habituales). Después de las 22:00 h, la clínica 24 horas más cercana es Lake Road Veterinary Clinic en Wagga Wagga.",
         "it": "Giorni feriali 8:00–18:00. Urgenze in qualsiasi momento: chiamare il 02 6041 2522 (veterinario di guardia fuori orario fino alle 22:00 per i clienti già registrati). Dopo le 22:00 la clinica aperta 24 ore su 24 più vicina è Lake Road Veterinary Clinic a Wagga Wagga.",
-        "pt": "Dias úteis 8h00–18h00. Urgências a qualquer hora: liga para 02 6041 2522 (veterinário de piquete fora de horas até às 22h00 para clientes já registados). Depois das 22h00, a clínica 24 horas mais próxima é a Lake Road Veterinary Clinic, em Wagga Wagga."
+        "pt": "Dias úteis 8h00–18h00. Urgências a qualquer hora: liga para 02 6041 2522 (veterinário de piquete fora de horas até às 22h00 para clientes já registados). Depois das 22h00, a clínica 24 horas mais próxima é a Lake Road Veterinary Clinic, em Wagga Wagga.",
+        "nl": "Werkdagen 8.00–18.00 uur. Spoedgevallen op elk moment: bel 02 6041 2522 (tot 22.00 uur dierenarts in achterwacht voor bestaande klanten). Na 22.00 uur is de dichtstbijzijnde 24-uurskliniek Lake Road Veterinary Clinic in Wagga Wagga."
       },
       "small_animals": true,
       "url": "https://familyvet.com.au/clinics/",
@@ -1009,7 +1046,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–13 h. Garde limitée en soirée ; aux autres heures, l’hôpital d’urgences 24 h/24, 7 j/7 le plus proche est Lake Road Veterinary Centre à Wagga Wagga.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–13:00 h. Guardia limitada por las tardes; en otros horarios el hospital de urgencias 24 horas más cercano es Lake Road Veterinary Centre en Wagga Wagga.",
         "it": "Lun–ven 8:00–18:00, sab 9:00–13:00. Copertura serale di guardia limitata; negli altri orari l'ospedale di pronto soccorso 24 ore su 24 più vicino è Lake Road Veterinary Centre a Wagga Wagga.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–13h00. Cobertura de urgências ao fim do dia limitada; nos outros horários, o hospital de urgências 24 h/24 mais próximo é o Lake Road Veterinary Centre, em Wagga Wagga."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–13h00. Cobertura de urgências ao fim do dia limitada; nos outros horários, o hospital de urgências 24 h/24 mais próximo é o Lake Road Veterinary Centre, em Wagga Wagga.",
+        "nl": "ma–vr 8.00–18.00 uur, za 9.00–13.00 uur. Beperkte achterwacht in de avond; op andere tijden is het dichtstbijzijnde 24/7 spoedziekenhuis Lake Road Veterinary Centre in Wagga Wagga."
       },
       "small_animals": true,
       "url": "https://alburyanimalhospital.com.au/about-us/",
@@ -1032,7 +1070,8 @@
         "fr": "Urgences hors heures ouvrables : appelez le numéro de la clinique pour joindre l’équipe de tri de garde.",
         "es": "Urgencias fuera de horario: llama al teléfono de la clínica para contactar con el equipo de triaje fuera de horario.",
         "it": "Urgenze fuori orario: chiamare il numero della clinica per raggiungere il team di triage fuori orario.",
-        "pt": "Urgências fora de horas: liga para o número da clínica para falares com a equipa de triagem fora de horas."
+        "pt": "Urgências fora de horas: liga para o número da clínica para falares com a equipa de triagem fora de horas.",
+        "nl": "Spoedgevallen buiten openingstijden: bel het praktijknummer om het triageteam buiten kantooruren te bereiken."
       },
       "small_animals": true,
       "url": "https://dubbo.furlifevet.com.au/",
@@ -1055,7 +1094,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h 30–12 h 30, fermé le dimanche. Service vétérinaire hors heures ouvrables pour les urgences qui ne peuvent attendre ; appelez la clinique.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:30–12:30 h, domingo cerrado. Servicio veterinario fuera de horario para urgencias que no pueden esperar; llama a la clínica.",
         "it": "Lun–ven 8:00–18:00, sab 8:30–12:30, chiuso la domenica. Servizio veterinario fuori orario per le urgenze che non possono attendere; chiamare la clinica.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h30–12h30, fechado ao domingo. Serviço veterinário fora de horas disponível para urgências que não podem esperar; liga para a clínica."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h30–12h30, fechado ao domingo. Serviço veterinário fora de horas disponível para urgências que não podem esperar; liga para a clínica.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.30–12.30 uur, zondag gesloten. Dierenartsdienst buiten kantooruren voor spoedgevallen die niet kunnen wachten; bel de praktijk."
       },
       "small_animals": true,
       "url": "https://www.petmedicalcentre.com.au/",
@@ -1078,7 +1118,8 @@
         "fr": "Lun.–ven. 8 h 30–18 h, sam. 8 h 30–13 h. Pas de service hors heures ouvrables ; pour les urgences, contactez Orana Veterinary Services ou une autre clinique.",
         "es": "Lun–vie 8:30–18:00 h, sáb 8:30–13:00 h. Sin servicio fuera de horario; en caso de urgencia contacta con Orana Veterinary Services u otra clínica.",
         "it": "Lun–ven 8:30–18:00, sab 8:30–13:00. Nessun servizio fuori orario; per le urgenze contattare Orana Veterinary Services o un'altra clinica.",
-        "pt": "Segunda a sexta 8h30–18h00, sábado 8h30–13h00. Sem serviço fora de horas; para urgências, contacta a Orana Veterinary Services ou outra clínica."
+        "pt": "Segunda a sexta 8h30–18h00, sábado 8h30–13h00. Sem serviço fora de horas; para urgências, contacta a Orana Veterinary Services ou outra clínica.",
+        "nl": "ma–vr 8.30–18.00 uur, za 8.30–13.00 uur. Geen dienst buiten kantooruren; neem voor spoedgevallen contact op met Orana Veterinary Services of een andere praktijk."
       },
       "small_animals": true,
       "url": "https://www.dmvs.com.au/contact-us",
@@ -1101,7 +1142,8 @@
         "fr": "Urgences hors heures ouvrables : appelez le numéro de la clinique pour joindre l’équipe de tri de garde.",
         "es": "Urgencias fuera de horario: llama al teléfono de la clínica para contactar con el equipo de triaje fuera de horario.",
         "it": "Urgenze fuori orario: chiamare il numero della clinica per raggiungere il team di triage fuori orario.",
-        "pt": "Urgências fora de horas: liga para o número da clínica para falares com a equipa de triagem fora de horas."
+        "pt": "Urgências fora de horas: liga para o número da clínica para falares com a equipa de triagem fora de horas.",
+        "nl": "Spoedgevallen buiten openingstijden: bel het praktijknummer om het triageteam buiten kantooruren te bereiken."
       },
       "small_animals": true,
       "url": "https://northhillvet.com.au/",
@@ -1124,7 +1166,8 @@
         "fr": "Urgences 24 h/24, 7 j/7. Horaires : lun.–ven. 8 h–18 h, sam. 9 h–12 h, fermé le dimanche.",
         "es": "Abierto las 24 horas para urgencias. Horario lun–vie 8:00–18:00 h, sáb 9:00–12:00 h, domingo cerrado.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per le urgenze. Orari lun–ven 8:00–18:00, sab 9:00–12:00, chiuso la domenica.",
-        "pt": "Aberto 24 h/24, 7 dias por semana, para urgências. Horário segunda a sexta 8h00–18h00, sábado 9h00–12h00, fechado ao domingo."
+        "pt": "Aberto 24 h/24, 7 dias por semana, para urgências. Horário segunda a sexta 8h00–18h00, sábado 9h00–12h00, fechado ao domingo.",
+        "nl": "24/7 open voor spoedgevallen. Openingstijden ma–vr 8.00–18.00 uur, za 9.00–12.00 uur, zondag gesloten."
       },
       "small_animals": true,
       "url": "https://www.newenglandvetservices.com.au/",
@@ -1148,7 +1191,8 @@
         "fr": "Lun.–ven. 8 h–17 h, sam. 8 h–12 h, fermé le dimanche et les jours fériés. En dehors des heures d’ouverture : North Coast Emergency Vets, (02) 7255 4095.",
         "es": "Lun–vie 8:00–17:00 h, sáb 8:00–12:00 h, cerrado los domingos y festivos. Fuera de horario: North Coast Emergency Vets, (02) 7255 4095.",
         "it": "Lun–ven 8:00–17:00, sab 8:00–12:00, chiuso la domenica e nei festivi. Fuori orario: North Coast Emergency Vets, (02) 7255 4095.",
-        "pt": "Segunda a sexta 8h00–17h00, sábado 8h00–12h00, fechado ao domingo e feriados. Fora de horas: North Coast Emergency Vets, (02) 7255 4095."
+        "pt": "Segunda a sexta 8h00–17h00, sábado 8h00–12h00, fechado ao domingo e feriados. Fora de horas: North Coast Emergency Vets, (02) 7255 4095.",
+        "nl": "ma–vr 8.00–17.00 uur, za 8.00–12.00 uur, zondag en feestdagen gesloten. Buiten openingstijden: North Coast Emergency Vets, (02) 7255 4095."
       },
       "small_animals": true,
       "url": "https://myvetbyronbay.com.au/",
@@ -1170,7 +1214,8 @@
         "fr": "Prend en charge la plupart des urgences pendant les heures d’ouverture, notamment paralysie par les tiques, accidents de la route et morsures de serpent. En dehors des heures d’ouverture : Animal Emergency Service ou North Coast Emergency Vets.",
         "es": "Atiende la mayoría de las urgencias en horario de apertura, incluidas parálisis por garrapata, accidentes de tráfico y mordeduras de serpiente. Fuera de horario: Animal Emergency Service o North Coast Emergency Vets.",
         "it": "Gestisce la maggior parte delle urgenze in orario di apertura, tra cui paralisi da zecca, incidenti stradali e morsi di serpente. Fuori orario: Animal Emergency Service o North Coast Emergency Vets.",
-        "pt": "Trata a maioria das urgências em horário normal, incluindo paralisia por carraça, acidentes rodoviários e mordeduras de cobra. Fora de horas: Animal Emergency Service ou North Coast Emergency Vets."
+        "pt": "Trata a maioria das urgências em horário normal, incluindo paralisia por carraça, acidentes rodoviários e mordeduras de cobra. Fora de horas: Animal Emergency Service ou North Coast Emergency Vets.",
+        "nl": "Behandelt de meeste spoedgevallen binnen openingstijden, waaronder tekenverlamming, verkeersongevallen en slangenbeten. Buiten openingstijden: Animal Emergency Service of North Coast Emergency Vets."
       },
       "small_animals": true,
       "url": "https://byronbayvet.com.au/",
@@ -1193,7 +1238,8 @@
         "fr": "Urgences vétérinaires pour les Northern Rivers. Horaires variables selon les jours (24 h/24 le samedi, le dimanche et le lundi, horaires réduits du mardi au vendredi) ; appelez avant de vous déplacer.",
         "es": "Veterinario de urgencias de Northern Rivers. El horario varía según el día (24 horas sábado, domingo y lunes, horario más corto de martes a viernes); llama antes de desplazarte.",
         "it": "Veterinario di pronto soccorso per i Northern Rivers. Orari variabili secondo il giorno (24 ore su 24 il sabato, la domenica e il lunedì, orari ridotti da martedì a venerdì); telefonare prima di mettersi in viaggio.",
-        "pt": "Veterinário de urgências para Northern Rivers. O horário varia consoante o dia (24 horas ao sábado, domingo e segunda-feira, horário mais curto de terça a sexta); liga antes de te deslocares."
+        "pt": "Veterinário de urgências para Northern Rivers. O horário varia consoante o dia (24 horas ao sábado, domingo e segunda-feira, horário mais curto de terça a sexta); liga antes de te deslocares.",
+        "nl": "Spoeddierenarts voor de Northern Rivers. De openingstijden verschillen per dag (zaterdag, zondag en maandag 24 uur, dinsdag tot en met vrijdag korter); bel voordat je vertrekt."
       },
       "small_animals": true,
       "url": "https://animalemergencyservice.com.au/aes_location/animal-emergency-service-north-coast/",
@@ -1216,7 +1262,8 @@
         "fr": "Lun.–jeu. 7 h–19 h, ven. 7 h–17 h, sam. 8 h–12 h, dimanche urgences uniquement. Service de garde en dehors de ces horaires.",
         "es": "Lun–jue 7:00–19:00 h, vie 7:00–17:00 h, sáb 8:00–12:00 h, domingo solo urgencias. Servicio de guardia fuera de este horario.",
         "it": "Lun–gio 7:00–19:00, ven 7:00–17:00, sab 8:00–12:00, domenica solo urgenze. Servizio di guardia fuori da questi orari.",
-        "pt": "Segunda a quinta 7h00–19h00, sexta 7h00–17h00, sábado 8h00–12h00, domingo só urgências. Serviço de piquete fora destes horários."
+        "pt": "Segunda a quinta 7h00–19h00, sexta 7h00–17h00, sábado 8h00–12h00, domingo só urgências. Serviço de piquete fora destes horários.",
+        "nl": "ma–do 7.00–19.00 uur, vr 7.00–17.00 uur, za 8.00–12.00 uur, zondag alleen spoed. Buiten deze uren achterwacht."
       },
       "small_animals": true,
       "url": "https://ballinacoastvets.com.au/",
@@ -1239,7 +1286,8 @@
         "fr": "Urgences hors heures ouvrables 24 h/24, 7 j/7 au numéro de la clinique. Horaires : lun.–ven. 8 h 30–18 h, sam. 8 h 30–12 h 30, fermé le dimanche.",
         "es": "Disponible las 24 horas para urgencias fuera de horario en el teléfono de la clínica. Horario lun–vie 8:30–18:00 h, sáb 8:30–12:30 h, domingo cerrado.",
         "it": "Disponibile 24 ore su 24, 7 giorni su 7 per le urgenze fuori orario al numero della clinica. Orari lun–ven 8:30–18:00, sab 8:30–12:30, chiuso la domenica.",
-        "pt": "Disponível 24 h/24, 7 dias por semana, para urgências fora de horas no número da clínica. Horário segunda a sexta 8h30–18h00, sábado 8h30–12h30, fechado ao domingo."
+        "pt": "Disponível 24 h/24, 7 dias por semana, para urgências fora de horas no número da clínica. Horário segunda a sexta 8h30–18h00, sábado 8h30–12h30, fechado ao domingo.",
+        "nl": "24/7 bereikbaar voor spoedgevallen buiten openingstijden via het praktijknummer. Openingstijden ma–vr 8.30–18.00 uur, za 8.30–12.30 uur, zondag gesloten."
       },
       "small_animals": true,
       "url": "https://lismorevet.com.au/",
@@ -1263,7 +1311,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–16 h, dim. 9 h–13 h (fermé de 13 h à 14 h du lundi au samedi). En dehors des heures d’ouverture : appelez la clinique, qui vous redirigera vers le portable de garde.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–16:00 h, dom 9:00–13:00 h (cierre 13:00–14:00 h de lunes a sábado). Fuera de horario: llama a la clínica para que te pasen al móvil de guardia.",
         "it": "Lun–ven 8:00–18:00, sab 9:00–16:00, dom 9:00–13:00 (pausa pranzo 13:00–14:00 lun–sab). Fuori orario: telefonare alla clinica per essere indirizzati al cellulare di guardia.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–16h00, domingo 9h00–13h00 (encerramento ao almoço 13h00–14h00, segunda a sábado). Fora de horas: liga para a clínica para seres encaminhado para o telemóvel de serviço fora de horas."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–16h00, domingo 9h00–13h00 (encerramento ao almoço 13h00–14h00, segunda a sábado). Fora de horas: liga para a clínica para seres encaminhado para o telemóvel de serviço fora de horas.",
+        "nl": "ma–vr 8.00–18.00 uur, za 9.00–16.00 uur, zo 9.00–13.00 uur (lunchpauze 13.00–14.00 uur ma–za). Buiten openingstijden: bel de praktijk om doorverwezen te worden naar het mobiele nummer voor buiten openingstijden."
       },
       "small_animals": true,
       "url": "https://www.northnowravet.com.au/",
@@ -1286,7 +1335,8 @@
         "fr": "Lun.–ven. 8 h–17 h 30 (fermé de 13 h à 14 h), fermé le week-end. En dehors des heures d’ouverture : appelez la clinique, qui vous redirigera vers le portable de garde.",
         "es": "Lun–vie 8:00–17:30 h (cerrado 13:00–14:00 h), cerrado los fines de semana. Fuera de horario: llama a la clínica para que te pasen al móvil de guardia.",
         "it": "Lun–ven 8:00–17:30 (chiuso 13:00–14:00), chiuso nei fine settimana. Fuori orario: telefonare alla clinica per essere indirizzati al cellulare di guardia.",
-        "pt": "Segunda a sexta 8h00–17h30 (fechado 13h00–14h00), fechado aos fins de semana. Fora de horas: liga para a clínica para seres encaminhado para o telemóvel de serviço fora de horas."
+        "pt": "Segunda a sexta 8h00–17h30 (fechado 13h00–14h00), fechado aos fins de semana. Fora de horas: liga para a clínica para seres encaminhado para o telemóvel de serviço fora de horas.",
+        "nl": "ma–vr 8.00–17.30 uur (gesloten 13.00–14.00 uur), weekend gesloten. Buiten openingstijden: bel de praktijk om doorverwezen te worden naar het mobiele nummer voor buiten openingstijden."
       },
       "small_animals": true,
       "url": "https://www.northnowravet.com.au/",
@@ -1309,7 +1359,8 @@
         "fr": "Le service hors heures ouvrables assure une assistance 24 h/24, 7 j/7 en cas d’urgence : appelez le 02 4421 3133. Horaires de la clinique : lun.–ven. 8 h–18 h, rendez-vous le week-end 9 h–13 h.",
         "es": "El servicio fuera de horario atiende urgencias las 24 horas; llama al 02 4421 3133. Horario de la clínica lun–vie 8:00–18:00 h, fines de semana con cita previa 9:00–13:00 h.",
         "it": "Il servizio fuori orario offre assistenza per le urgenze 24 ore su 24, 7 giorni su 7; chiamare il 02 4421 3133. Orari della clinica lun–ven 8:00–18:00, appuntamenti nel fine settimana 9:00–13:00.",
-        "pt": "O serviço fora de horas presta assistência 24 h/24 em urgências; liga para 02 4421 3133. Horário da clínica segunda a sexta 8h00–18h00, fins de semana com marcação 9h00–13h00."
+        "pt": "O serviço fora de horas presta assistência 24 h/24 em urgências; liga para 02 4421 3133. Horário da clínica segunda a sexta 8h00–18h00, fins de semana com marcação 9h00–13h00.",
+        "nl": "Dienst buiten kantooruren biedt 24/7 hulp bij spoedgevallen; bel 02 4421 3133. Openingstijden ma–vr 8.00–18.00 uur, afspraken in het weekend 9.00–13.00 uur."
       },
       "small_animals": true,
       "url": "https://bomaderryvets.com.au/",
@@ -1333,7 +1384,8 @@
         "fr": "En semaine 8 h–18 h, sam. 8 h 30–14 h, dim. 14 h–17 h (urgences uniquement), jours fériés 15 h–17 h (urgences uniquement).",
         "es": "Entre semana 8:00–18:00 h, sáb 8:30–14:00 h, dom 14:00–17:00 h (solo urgencias), festivos 15:00–17:00 h (solo urgencias).",
         "it": "Giorni feriali 8:00–18:00, sab 8:30–14:00, dom 14:00–17:00 (solo urgenze), festivi 15:00–17:00 (solo urgenze).",
-        "pt": "Dias úteis 8h00–18h00, sábado 8h30–14h00, domingo 14h00–17h00 (só urgências), feriados 15h00–17h00 (só urgências)."
+        "pt": "Dias úteis 8h00–18h00, sábado 8h30–14h00, domingo 14h00–17h00 (só urgências), feriados 15h00–17h00 (só urgências).",
+        "nl": "Werkdagen 8.00–18.00 uur, za 8.30–14.00 uur, zo 14.00–17.00 uur (alleen spoed), feestdagen 15.00–17.00 uur (alleen spoed)."
       },
       "small_animals": true,
       "url": "http://westqueanbeyanvet.com.au/",
@@ -1355,7 +1407,8 @@
         "fr": "Lun.–ven. 8 h–18 h 30, sam. 8 h–12 h, fermé le dimanche.",
         "es": "Lun–vie 8:00–18:30 h, sáb 8:00–12:00 h, domingo cerrado.",
         "it": "Lun–ven 8:00–18:30, sab 8:00–12:00, chiuso la domenica.",
-        "pt": "Segunda a sexta 8h00–18h30, sábado 8h00–12h00, fechado ao domingo."
+        "pt": "Segunda a sexta 8h00–18h30, sábado 8h00–12h00, fechado ao domingo.",
+        "nl": "ma–vr 8.00–18.30 uur, za 8.00–12.00 uur, zondag gesloten."
       },
       "small_animals": true,
       "url": "https://queanbeyanvet.com.au/",
@@ -1378,7 +1431,8 @@
         "fr": "En semaine 9 h–17 h 30, sam. 9 h–11 h, fermé le dimanche. Service d’urgence hors heures ouvrables pour les clients de la clinique via une permanence téléphonique ; orientation possible vers un centre d’urgences de Newcastle.",
         "es": "Entre semana 9:00–17:30 h, sáb 9:00–11:00 h, domingo cerrado. Servicio de urgencias fuera de horario para clientes de la clínica mediante servicio de atención telefónica; puede derivarse a un centro de urgencias de Newcastle.",
         "it": "Giorni feriali 9:00–17:30, sab 9:00–11:00, chiuso la domenica. Servizio di pronto soccorso fuori orario per i clienti della clinica tramite segreteria; possibile rinvio a un centro di pronto soccorso di Newcastle.",
-        "pt": "Dias úteis 9h00–17h30, sábado 9h00–11h00, fechado ao domingo. Serviço de urgências fora de horas para clientes da clínica através de serviço de atendimento telefónico; pode haver encaminhamento para um centro de urgências de Newcastle."
+        "pt": "Dias úteis 9h00–17h30, sábado 9h00–11h00, fechado ao domingo. Serviço de urgências fora de horas para clientes da clínica através de serviço de atendimento telefónico; pode haver encaminhamento para um centro de urgências de Newcastle.",
+        "nl": "Werkdagen 9.00–17.30 uur, za 9.00–11.00 uur, zondag gesloten. Spoeddienst buiten kantooruren voor klanten van de praktijk via een antwoorddienst; mogelijk doorverwijzing naar een spoedcentrum in Newcastle."
       },
       "small_animals": true,
       "url": "https://www.raymondterraceveterinaryclinic.com.au/",
@@ -1401,7 +1455,8 @@
         "fr": "Lun., mar., mer., ven. 8 h–17 h, sam. 8 h–12 h ; fermé le jeudi, le dimanche et les jours fériés.",
         "es": "Lun, mar, mié, vie 8:00–17:00 h, sáb 8:00–12:00 h; cerrado los jueves, domingos y festivos.",
         "it": "Lun, mar, mer, ven 8:00–17:00, sab 8:00–12:00; chiuso il giovedì, la domenica e nei festivi.",
-        "pt": "Seg, ter, qua, sex 8h00–17h00, sábado 8h00–12h00; fechado à quinta-feira, ao domingo e feriados."
+        "pt": "Seg, ter, qua, sex 8h00–17h00, sábado 8h00–12h00; fechado à quinta-feira, ao domingo e feriados.",
+        "nl": "ma, di, wo, vr 8.00–17.00 uur, za 8.00–12.00 uur; gesloten op donderdag, zondag en feestdagen."
       },
       "small_animals": true,
       "url": "https://www.golfcoursevets.com.au/",
@@ -1424,7 +1479,8 @@
         "fr": "Lun.–ven. 8 h 30–17 h 30, sam. 8 h 30–12 h 30. Urgences hors heures ouvrables : vétérinaire de garde via le numéro de la clinique (supplément) ou Animal Emergency Services 07 5530 6370.",
         "es": "Lun–vie 8:30–17:30 h, sáb 8:30–12:30 h. Urgencias fuera de horario: veterinario de guardia en el teléfono de la clínica (con recargo), o Animal Emergency Services 07 5530 6370.",
         "it": "Lun–ven 8:30–17:30, sab 8:30–12:30. Urgenze fuori orario: veterinario di guardia tramite il numero della clinica (con supplemento), oppure Animal Emergency Services 07 5530 6370.",
-        "pt": "Segunda a sexta 8h30–17h30, sábado 8h30–12h30. Urgências fora de horas: veterinário de piquete através do número da clínica (aplica-se suplemento), ou Animal Emergency Services 07 5530 6370."
+        "pt": "Segunda a sexta 8h30–17h30, sábado 8h30–12h30. Urgências fora de horas: veterinário de piquete através do número da clínica (aplica-se suplemento), ou Animal Emergency Services 07 5530 6370.",
+        "nl": "ma–vr 8.30–17.30 uur, za 8.30–12.30 uur. Spoedgevallen buiten openingstijden: dienstdoende dierenarts via het praktijknummer (toeslag) of Animal Emergency Services 07 5530 6370."
       },
       "small_animals": true,
       "url": "https://murwillumbahvet.com.au/",
@@ -1447,7 +1503,8 @@
         "fr": "En dehors des heures d’ouverture : appelez Newcastle Animal Referral and Emergency Centre au 02 4957 7106.",
         "es": "Fuera de horario: llama a Newcastle Animal Referral and Emergency Centre al 02 4957 7106.",
         "it": "Fuori orario: telefonare al Newcastle Animal Referral and Emergency Centre, 02 4957 7106.",
-        "pt": "Fora de horas: liga para o Newcastle Animal Referral and Emergency Centre, 02 4957 7106."
+        "pt": "Fora de horas: liga para o Newcastle Animal Referral and Emergency Centre, 02 4957 7106.",
+        "nl": "Buiten openingstijden: bel Newcastle Animal Referral and Emergency Centre op 02 4957 7106."
       },
       "small_animals": true,
       "url": "https://www.lakevet.com.au/",
@@ -1470,7 +1527,8 @@
         "fr": "Sur rendez-vous. En dehors des heures d’ouverture : appelez Charlestown (02 4943 6066) ou Belmont (02 4945 9677).",
         "es": "Con cita previa. Fuera de horario: llama a Charlestown (02 4943 6066) o a Belmont (02 4945 9677).",
         "it": "Su appuntamento. Fuori orario: telefonare a Charlestown (02 4943 6066) o Belmont (02 4945 9677).",
-        "pt": "Sob marcação. Fora de horas: liga para Charlestown (02 4943 6066) ou Belmont (02 4945 9677)."
+        "pt": "Sob marcação. Fora de horas: liga para Charlestown (02 4943 6066) ou Belmont (02 4945 9677).",
+        "nl": "Op afspraak. Buiten openingstijden: bel Charlestown (02 4943 6066) of Belmont (02 4945 9677)."
       },
       "small_animals": true,
       "url": "https://www.lakevet.com.au/",
@@ -1493,7 +1551,8 @@
         "fr": "En semaine 8 h–18 h, sam. 8 h–12 h. Urgences : appelez d’abord ; certains cas sont orientés vers le centre d’urgences de Newcastle à Broadmeadow.",
         "es": "Entre semana 8:00–18:00 h, sáb 8:00–12:00 h. Llama primero en caso de urgencia; algunos casos se derivan al centro de urgencias de Newcastle en Broadmeadow.",
         "it": "Giorni feriali 8:00–18:00, sab 8:00–12:00. Per le urgenze telefonare prima; alcuni casi sono indirizzati al centro di pronto soccorso di Newcastle a Broadmeadow.",
-        "pt": "Dias úteis 8h00–18h00, sábado 8h00–12h00. Liga primeiro em caso de urgência; alguns casos são encaminhados para o centro de urgências de Newcastle, em Broadmeadow."
+        "pt": "Dias úteis 8h00–18h00, sábado 8h00–12h00. Liga primeiro em caso de urgência; alguns casos são encaminhados para o centro de urgências de Newcastle, em Broadmeadow.",
+        "nl": "Werkdagen 8.00–18.00 uur, za 8.00–12.00 uur. Bel bij spoedgevallen eerst; sommige gevallen worden doorverwezen naar het spoedcentrum in Newcastle in Broadmeadow."
       },
       "small_animals": true,
       "url": "https://charlestownvet.com.au/",
@@ -1516,7 +1575,8 @@
         "fr": "Ouvert 7 j/7. En dehors des heures d’ouverture, les urgences sont prises en charge par AREC à Newcastle et SASH à Tuggerah.",
         "es": "Abierto los 7 días. Cuando está cerrado, las urgencias las atienden AREC en Newcastle y SASH Tuggerah.",
         "it": "Aperto 7 giorni su 7. Quando è chiuso, il pronto soccorso è garantito da AREC a Newcastle e SASH Tuggerah.",
-        "pt": "Aberto 7 dias por semana. Quando está fechado, as urgências são atendidas pelo AREC, em Newcastle, e pelo SASH Tuggerah."
+        "pt": "Aberto 7 dias por semana. Quando está fechado, as urgências são atendidas pelo AREC, em Newcastle, e pelo SASH Tuggerah.",
+        "nl": "7 dagen per week open. Als de praktijk gesloten is, wordt spoedzorg verleend door AREC in Newcastle en SASH Tuggerah."
       },
       "small_animals": true,
       "url": "https://merewethervets.com.au/",
@@ -1543,7 +1603,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, 365 jours par an. Sans rendez-vous.",
         "es": "Abierto las 24 horas, los 7 días de la semana, los 365 días del año. Sin cita previa.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno. Non serve appuntamento.",
-        "pt": "Aberto 24 horas, 7 dias por semana, 365 dias por ano. Sem necessidade de marcação."
+        "pt": "Aberto 24 horas, 7 dias por semana, 365 dias por ano. Sem necessidade de marcação.",
+        "nl": "Open 24 uur per dag, 7 dagen per week, 365 dagen per jaar. Geen afspraak nodig."
       }
     },
     {
@@ -1565,7 +1626,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, tous les jours de l’année.",
         "es": "Abierto las 24 horas, los 7 días de la semana, todos los días del año.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, tutti i giorni dell'anno.",
-        "pt": "Aberto 24 horas, 7 dias por semana, todos os dias do ano."
+        "pt": "Aberto 24 horas, 7 dias por semana, todos os dias do ano.",
+        "nl": "Open 24 uur per dag, 7 dagen per week, elke dag van het jaar."
       }
     },
     {
@@ -1587,7 +1649,8 @@
         "fr": "Urgences et soins intensifs 24 h/24, 365 jours par an.",
         "es": "Urgencias y cuidados intensivos las 24 horas, los 365 días del año.",
         "it": "Pronto soccorso e terapia intensiva 24 ore su 24, 365 giorni all'anno.",
-        "pt": "Urgências e cuidados intensivos 24 horas por dia, 365 dias por ano."
+        "pt": "Urgências e cuidados intensivos 24 horas por dia, 365 dias por ano.",
+        "nl": "Spoed- en intensieve zorg 24 uur per dag, 365 dagen per jaar."
       }
     },
     {
@@ -1609,7 +1672,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, tous les jours de l’année, jours fériés compris.",
         "es": "Abierto las 24 horas, los 7 días de la semana, todos los días del año, también festivos.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, tutti i giorni dell'anno, festivi inclusi.",
-        "pt": "Aberto 24 horas, 7 dias por semana, todos os dias do ano, incluindo feriados."
+        "pt": "Aberto 24 horas, 7 dias por semana, todos os dias do ano, incluindo feriados.",
+        "nl": "Open 24 uur per dag, 7 dagen per week, elke dag van het jaar, ook op feestdagen."
       }
     },
     {
@@ -1631,7 +1695,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, tous les jours de l’année.",
         "es": "Abierto las 24 horas, los 7 días de la semana, todos los días del año.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, tutti i giorni dell'anno.",
-        "pt": "Aberto 24 horas, 7 dias por semana, todos os dias do ano."
+        "pt": "Aberto 24 horas, 7 dias por semana, todos os dias do ano.",
+        "nl": "Open 24 uur per dag, 7 dagen per week, elke dag van het jaar."
       }
     },
     {
@@ -1653,7 +1718,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris. Urgences sans orientation préalable ni rendez-vous.",
         "es": "Abierto las 24 horas, los 7 días de la semana, también festivos. Las urgencias no necesitan derivación ni cita previa.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi inclusi. Per le urgenze non servono invio né prenotazione.",
-        "pt": "Aberto 24 horas por dia, 7 dias por semana, incluindo feriados. Urgências sem referenciação nem marcação."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, incluindo feriados. Urgências sem referenciação nem marcação.",
+        "nl": "Open 24 uur per dag, 7 dagen per week, ook op feestdagen. Voor spoedgevallen is geen verwijzing of afspraak nodig."
       }
     },
     {
@@ -1675,7 +1741,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris.",
         "es": "Abierto las 24 horas, los 7 días de la semana, también festivos.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi inclusi.",
-        "pt": "Aberto 24 horas, 7 dias por semana, incluindo feriados."
+        "pt": "Aberto 24 horas, 7 dias por semana, incluindo feriados.",
+        "nl": "Open 24 uur per dag, 7 dagen per week, ook op feestdagen."
       }
     },
     {
@@ -1697,7 +1764,8 @@
         "fr": "Service d’urgences ouvert 24 h/24, 7 j/7, 365 jours par an. Rendez-vous de médecine générale et de spécialités lun.–ven. 8 h–18 h, sam. 9 h–13 h.",
         "es": "Servicio de urgencias abierto las 24 horas, los 365 días del año. Citas de medicina general y especialistas lun–vie 8:00–18:00 h, sáb 9:00–13:00 h.",
         "it": "Pronto soccorso aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno. Appuntamenti di medicina generale e specialistica lun–ven 8:00–18:00, sab 9:00–13:00.",
-        "pt": "Serviço de urgências aberto 24 h/24, 365 dias por ano. Consultas de clínica geral e de especialidade segunda a sexta 8h00–18h00, sábado 9h00–13h00."
+        "pt": "Serviço de urgências aberto 24 h/24, 365 dias por ano. Consultas de clínica geral e de especialidade segunda a sexta 8h00–18h00, sábado 9h00–13h00.",
+        "nl": "Spoeddienst 24/7 open, 365 dagen per jaar. Reguliere en specialistische afspraken ma–vr 8.00–18.00 uur, za 9.00–13.00 uur."
       }
     },
     {
@@ -1719,7 +1787,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7.",
         "es": "Abierto las 24 horas, los 7 días de la semana.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7.",
-        "pt": "Aberto 24 horas, 7 dias por semana."
+        "pt": "Aberto 24 horas, 7 dias por semana.",
+        "nl": "Open 24 uur per dag, 7 dagen per week."
       }
     },
     {
@@ -1741,7 +1810,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, 365 jours par an.",
         "es": "Abierto las 24 horas, los 7 días de la semana, los 365 días del año.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno.",
-        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano.",
+        "nl": "Open 24 uur per dag, 7 dagen per week, 365 dagen per jaar."
       }
     },
     {
@@ -1763,7 +1833,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris. Sans rendez-vous ; appelez avant de venir si possible.",
         "es": "Abierto las 24 horas, también festivos. Sin cita previa; llama antes si puedes.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi inclusi. Non serve appuntamento; se possibile telefonare in anticipo.",
-        "pt": "Aberto 24 h/24, incluindo feriados. Sem marcação; se possível, liga antes."
+        "pt": "Aberto 24 h/24, incluindo feriados. Sem marcação; se possível, liga antes.",
+        "nl": "24/7 open, ook op feestdagen. Geen afspraak nodig; bel indien mogelijk vooraf."
       }
     },
     {
@@ -1785,7 +1856,8 @@
         "fr": "Hôpital d’urgences ouvert 24 h/24, 7 j/7. Urgences sans orientation préalable ni rendez-vous.",
         "es": "Hospital de urgencias abierto las 24 horas, los 7 días de la semana. Las urgencias no necesitan derivación ni cita previa.",
         "it": "Ospedale di pronto soccorso aperto 24 ore su 24, 7 giorni su 7. Per le urgenze non servono invio né appuntamento.",
-        "pt": "Hospital de urgências aberto 24 horas por dia, 7 dias por semana. Urgências sem referenciação nem marcação."
+        "pt": "Hospital de urgências aberto 24 horas por dia, 7 dias por semana. Urgências sem referenciação nem marcação.",
+        "nl": "Spoedziekenhuis 24 uur per dag, 7 dagen per week open. Voor spoedgevallen is geen verwijzing of afspraak nodig."
       }
     },
     {
@@ -1807,7 +1879,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7 pour les urgences ; sans rendez-vous.",
         "es": "Abierto las 24 horas para urgencias; sin cita previa.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per le urgenze; non serve appuntamento.",
-        "pt": "Aberto 24 h/24 para urgências; sem necessidade de marcação."
+        "pt": "Aberto 24 h/24 para urgências; sem necessidade de marcação.",
+        "nl": "24/7 open voor spoedgevallen; geen afspraak nodig."
       }
     },
     {
@@ -1828,7 +1901,8 @@
         "fr": "Urgences 24 h/24, 365 jours par an. Sans rendez-vous ; appelez avant de venir.",
         "es": "Urgencias disponibles las 24 horas, los 365 días del año. Sin cita previa; llama antes.",
         "it": "Pronto soccorso disponibile 24 ore su 24, 365 giorni all'anno. Non serve appuntamento; telefonare in anticipo.",
-        "pt": "Urgências disponíveis 24 horas por dia, 365 dias por ano. Sem marcação; liga antes."
+        "pt": "Urgências disponíveis 24 horas por dia, 365 dias por ano. Sem marcação; liga antes.",
+        "nl": "Spoedzorg 24 uur per dag, 365 dagen per jaar beschikbaar. Geen afspraak nodig; bel vooraf."
       }
     },
     {
@@ -1850,7 +1924,8 @@
         "fr": "Clinique d’urgences hors heures ouvrables : en semaine 7 h–9 h et 17 h–minuit, week-ends 7 h–minuit. Appelez avant de venir.",
         "es": "Clínica de urgencias fuera de horario: entre semana 7:00–9:00 h y 17:00–24:00 h, fines de semana 7:00–24:00 h. Llama antes.",
         "it": "Clinica di pronto soccorso fuori orario: giorni feriali 7:00–9:00 e 17:00–24:00, fine settimana 7:00–24:00. Telefonare in anticipo.",
-        "pt": "Clínica de urgências fora de horas: dias úteis 7h00–9h00 e 17h00–24h00, fins de semana 7h00–24h00. Liga antes."
+        "pt": "Clínica de urgências fora de horas: dias úteis 7h00–9h00 e 17h00–24h00, fins de semana 7h00–24h00. Liga antes.",
+        "nl": "Spoedkliniek buiten kantooruren: werkdagen 7.00–9.00 en 17.00–24.00 uur, weekend 7.00–24.00 uur. Bel vooraf."
       }
     },
     {
@@ -1872,7 +1947,8 @@
         "fr": "Urgences reçues 8 h–22 h tous les jours, jours fériés compris ; consultations courantes lun.–sam. 8 h–19 h.",
         "es": "Urgencias atendidas 8:00–22:00 h todos los días, también festivos; consultas ordinarias lun–sáb 8:00–19:00 h.",
         "it": "Urgenze visitate 8:00–22:00 tutti i giorni, festivi inclusi; visite di routine lun–sab 8:00–19:00.",
-        "pt": "Urgências atendidas todos os dias 8h00–22h00, incluindo feriados; consultas de rotina segunda a sábado 8h00–19h00."
+        "pt": "Urgências atendidas todos os dias 8h00–22h00, incluindo feriados; consultas de rotina segunda a sábado 8h00–19h00.",
+        "nl": "Spoedgevallen elke dag 8.00–22.00 uur, ook op feestdagen; reguliere consulten ma–za 8.00–19.00 uur."
       }
     },
     {
@@ -1894,7 +1970,8 @@
         "fr": "Service d’urgence week-end et jours fériés : ouvert 24 h/24 du vendredi 18 h au lundi 8 h et les jours fériés. Appelez pour confirmer.",
         "es": "Servicio de urgencias de fines de semana y festivos: abierto las 24 horas desde el viernes a las 18:00 h hasta el lunes a las 8:00 h y en festivos. Llama para confirmarlo.",
         "it": "Pronto soccorso nei fine settimana e nei festivi: aperto 24 ore su 24 da venerdì 18:00 a lunedì 8:00 e nei festivi. Chiamare per conferma.",
-        "pt": "Serviço de urgências de fim de semana e feriados: aberto 24 horas de sexta 18h00 a segunda 8h00 e em feriados. Liga para confirmar."
+        "pt": "Serviço de urgências de fim de semana e feriados: aberto 24 horas de sexta 18h00 a segunda 8h00 e em feriados. Liga para confirmar.",
+        "nl": "Spoeddienst in het weekend en op feestdagen: 24 uur open van vrijdag 18.00 uur tot maandag 8.00 uur en op feestdagen. Bel om te bevestigen."
       }
     },
     {
@@ -1916,7 +1993,8 @@
         "fr": "Lun.–ven. 8 h 30–18 h, sam. 9 h–12 h 30. En dehors des heures d’ouverture, appelez le même numéro ; relais par le service d’urgence 24 h/24 de Bendigo Combined Clinics.",
         "es": "Lun–vie 8:30–18:00 h, sáb 9:00–12:30 h. Fuera de horario llama al mismo número; cuenta con el apoyo del servicio de urgencias 24 horas de Bendigo Combined Clinics.",
         "it": "Lun–ven 8:30–18:00, sab 9:00–12:30. Fuori orario chiamare lo stesso numero; con il supporto del servizio di pronto soccorso 24 ore su 24 dei Bendigo Combined Clinics.",
-        "pt": "Segunda a sexta 8h30–18h00, sábado 9h00–12h30. Fora de horas, liga para o mesmo número; com o apoio do serviço de urgências 24 horas das Bendigo Combined Clinics."
+        "pt": "Segunda a sexta 8h30–18h00, sábado 9h00–12h30. Fora de horas, liga para o mesmo número; com o apoio do serviço de urgências 24 horas das Bendigo Combined Clinics.",
+        "nl": "ma–vr 8.30–18.00 uur, za 9.00–12.30 uur. Buiten openingstijden op hetzelfde nummer; ondersteund door de 24-uurs spoeddienst van Bendigo Combined Clinics."
       }
     },
     {
@@ -1938,7 +2016,8 @@
         "fr": "Lun.–jeu. 9 h–18 h, ven. 9 h–17 h, sam. 9 h–12 h. Urgences en dehors de ces horaires : appelez le 1800 387 543.",
         "es": "Lun–jue 9:00–18:00 h, vie 9:00–17:00 h, sáb 9:00–12:00 h. Para urgencias fuera de este horario llama al 1800 387 543.",
         "it": "Lun–gio 9:00–18:00, ven 9:00–17:00, sab 9:00–12:00. Per le urgenze fuori da questi orari chiamare il 1800 387 543.",
-        "pt": "Segunda a quinta 9h00–18h00, sexta 9h00–17h00, sábado 9h00–12h00. Para urgências fora destes horários, liga para o 1800 387 543."
+        "pt": "Segunda a quinta 9h00–18h00, sexta 9h00–17h00, sábado 9h00–12h00. Para urgências fora destes horários, liga para o 1800 387 543.",
+        "nl": "ma–do 9.00–18.00 uur, vr 9.00–17.00 uur, za 9.00–12.00 uur. Voor spoedgevallen buiten deze uren: 1800 387 543."
       }
     },
     {
@@ -1960,7 +2039,8 @@
         "fr": "Tri hors heures ouvrables en semaine 18 h–minuit, week-ends et jours fériés 8 h–minuit (clients inscrits ; les autres sont acceptés si leur clinique n’assure pas de garde). Soins 24 h/24, 7 j/7 via les hôpitaux d’urgences de Melbourne.",
         "es": "Triaje fuera de horario entre semana 18:00–24:00 h, fines de semana y festivos 8:00–24:00 h (clientes registrados; también atienden a otros si su clínica no tiene cobertura). Atención 24 horas en los hospitales de urgencias de Melbourne.",
         "it": "Triage fuori orario nei feriali 18:00–24:00, nei fine settimana e nei festivi 8:00–24:00 (clienti registrati; gli altri sono accolti se la loro clinica non ha copertura). Assistenza 24 ore su 24, 7 giorni su 7 tramite gli ospedali di pronto soccorso di Melbourne.",
-        "pt": "Triagem fora de horas: dias úteis 18h00–24h00, fins de semana e feriados 8h00–24h00 (clientes registados; outros são bem-vindos se a clínica habitual não tiver cobertura). Cuidados 24 h/24 através dos hospitais de urgências de Melbourne."
+        "pt": "Triagem fora de horas: dias úteis 18h00–24h00, fins de semana e feriados 8h00–24h00 (clientes registados; outros são bem-vindos se a clínica habitual não tiver cobertura). Cuidados 24 h/24 através dos hospitais de urgências de Melbourne.",
+        "nl": "Triage buiten kantooruren werkdagen 18.00–24.00 uur, weekend en feestdagen 8.00–24.00 uur (geregistreerde klanten; anderen welkom als hun praktijk geen dienst heeft). Zorg 24/7 via spoedziekenhuizen in Melbourne."
       }
     },
     {
@@ -1982,7 +2062,8 @@
         "fr": "Lun.–ven. 8 h–18 h ; ligne d’urgence hors heures ouvrables 18 h–8 h au même numéro.",
         "es": "Lun–vie 8:00–18:00 h; línea de urgencias fuera de horario 18:00–8:00 h en el mismo número.",
         "it": "Lun–ven 8:00–18:00; linea urgenze fuori orario 18:00–8:00 allo stesso numero.",
-        "pt": "Segunda a sexta 8h00–18h00; linha de urgências fora de horas 18h00–8h00 no mesmo número."
+        "pt": "Segunda a sexta 8h00–18h00; linha de urgências fora de horas 18h00–8h00 no mesmo número.",
+        "nl": "ma–vr 8.00–18.00 uur; spoedlijn buiten kantooruren 18.00–8.00 uur op hetzelfde nummer."
       }
     },
     {
@@ -2004,7 +2085,8 @@
         "fr": "Mar. et jeu. 9 h–19 h, autres jours de semaine 9 h–17 h. Le vétérinaire d’urgence ouvert 24 h/24, 7 j/7 le plus proche est Greencross Vet Hospital Werribee.",
         "es": "Mar y jue 9:00–19:00 h, el resto de días laborables 9:00–17:00 h. El veterinario de urgencias 24 horas más cercano es Greencross Vet Hospital Werribee.",
         "it": "Mar e gio 9:00–19:00, altri giorni feriali 9:00–17:00. Il veterinario di pronto soccorso 24 ore su 24 più vicino è Greencross Vet Hospital Werribee.",
-        "pt": "Terça e quinta 9h00–19h00, restantes dias úteis 9h00–17h00. O veterinário de urgências 24 h/24 mais próximo é o Greencross Vet Hospital Werribee."
+        "pt": "Terça e quinta 9h00–19h00, restantes dias úteis 9h00–17h00. O veterinário de urgências 24 h/24 mais próximo é o Greencross Vet Hospital Werribee.",
+        "nl": "di en do 9.00–19.00 uur, overige werkdagen 9.00–17.00 uur. Dichtstbijzijnde spoeddierenarts 24/7 is Greencross Vet Hospital Werribee."
       }
     },
     {
@@ -2026,7 +2108,8 @@
         "fr": "Lun.–jeu. 8 h–19 h 30, ven. 8 h–18 h, sam. 8 h–12 h, dim. 9 h–12 h. Service d’urgence téléphonique 24 h/24 au même numéro.",
         "es": "Lun–jue 8:00–19:30 h, vie 8:00–18:00 h, sáb 8:00–12:00 h, dom 9:00–12:00 h. Servicio de urgencias 24 horas por teléfono en el mismo número.",
         "it": "Lun–gio 8:00–19:30, ven 8:00–18:00, sab 8:00–12:00, dom 9:00–12:00. Pronto soccorso telefonico 24 ore su 24 allo stesso numero.",
-        "pt": "Segunda a quinta 8h00–19h30, sexta 8h00–18h00, sábado 8h00–12h00, domingo 9h00–12h00. Serviço de urgências 24 horas por telefone no mesmo número."
+        "pt": "Segunda a quinta 8h00–19h30, sexta 8h00–18h00, sábado 8h00–12h00, domingo 9h00–12h00. Serviço de urgências 24 horas por telefone no mesmo número.",
+        "nl": "ma–do 8.00–19.30 uur, vr 8.00–18.00 uur, za 8.00–12.00 uur, zo 9.00–12.00 uur. 24-uurs spoeddienst per telefoon op hetzelfde nummer."
       }
     },
     {
@@ -2048,7 +2131,8 @@
         "fr": "Consultations en journée ; relais en dehors des heures d’ouverture via Warrnambool Veterinary Clinic.",
         "es": "Consultas de día; apoyo fuera de horario a través de Warrnambool Veterinary Clinic.",
         "it": "Visite diurne; supporto fuori orario tramite Warrnambool Veterinary Clinic.",
-        "pt": "Consultas durante o dia; apoio fora de horas através da Warrnambool Veterinary Clinic."
+        "pt": "Consultas durante o dia; apoio fora de horas através da Warrnambool Veterinary Clinic.",
+        "nl": "Consulten overdag; ondersteuning buiten kantooruren via Warrnambool Veterinary Clinic."
       }
     },
     {
@@ -2070,7 +2154,8 @@
         "fr": "Lun.–ven. 9 h–18 h 30, sam. 9 h–13 h. En dehors des heures d’ouverture, appelez la clinique pour être orienté.",
         "es": "Lun–vie 9:00–18:30 h, sáb 9:00–13:00 h. Llama a la clínica para recibir orientación fuera de horario.",
         "it": "Lun–ven 9:00–18:30, sab 9:00–13:00. Fuori orario chiamare la clinica per indicazioni.",
-        "pt": "Segunda a sexta 9h00–18h30, sábado 9h00–13h00. Liga para a clínica para orientação fora de horas."
+        "pt": "Segunda a sexta 9h00–18h30, sábado 9h00–13h00. Liga para a clínica para orientação fora de horas.",
+        "nl": "ma–vr 9.00–18.30 uur, za 9.00–13.00 uur. Bel de praktijk voor advies buiten openingstijden."
       }
     },
     {
@@ -2092,7 +2177,8 @@
         "fr": "Lun.–ven. 9 h–17 h 30, sam. 9 h–12 h.",
         "es": "Lun–vie 9:00–17:30 h, sáb 9:00–12:00 h.",
         "it": "Lun–ven 9:00–17:30, sab 9:00–12:00.",
-        "pt": "Segunda a sexta 9h00–17h30, sábado 9h00–12h00."
+        "pt": "Segunda a sexta 9h00–17h30, sábado 9h00–12h00.",
+        "nl": "ma–vr 9.00–17.30 uur, za 9.00–12.00 uur."
       }
     },
     {
@@ -2114,7 +2200,8 @@
         "fr": "Lun.–ven. 8 h 30–18 h, sam. 8 h 30–12 h. En dehors des heures d’ouverture : AEC Frankston (03 9770 5555) ou Peninsula Vet Emergency (03 5979 9600).",
         "es": "Lun–vie 8:30–18:00 h, sáb 8:30–12:00 h. Fuera de horario: AEC Frankston (03 9770 5555) o Peninsula Vet Emergency (03 5979 9600).",
         "it": "Lun–ven 8:30–18:00, sab 8:30–12:00. Fuori orario: AEC Frankston (03 9770 5555) o Peninsula Vet Emergency (03 5979 9600).",
-        "pt": "Segunda a sexta 8h30–18h00, sábado 8h30–12h00. Fora de horas: AEC Frankston (03 9770 5555) ou Peninsula Vet Emergency (03 5979 9600)."
+        "pt": "Segunda a sexta 8h30–18h00, sábado 8h30–12h00. Fora de horas: AEC Frankston (03 9770 5555) ou Peninsula Vet Emergency (03 5979 9600).",
+        "nl": "ma–vr 8.30–18.00 uur, za 8.30–12.00 uur. Buiten openingstijden: AEC Frankston (03 9770 5555) of Peninsula Vet Emergency (03 5979 9600)."
       }
     },
     {
@@ -2136,7 +2223,8 @@
         "fr": "Clinique de jour ; pour les soins 24 h/24, voir Peninsula Vet Emergency & Referral Hospital.",
         "es": "Clínica de día; para atención 24 horas consulta Peninsula Vet Emergency & Referral Hospital.",
         "it": "Clinica diurna; per l'assistenza 24 ore su 24 rivolgersi al Peninsula Vet Emergency & Referral Hospital.",
-        "pt": "Clínica diurna; para cuidados 24 horas, consulta o Peninsula Vet Emergency & Referral Hospital."
+        "pt": "Clínica diurna; para cuidados 24 horas, consulta o Peninsula Vet Emergency & Referral Hospital.",
+        "nl": "Dagpraktijk; voor 24-uurszorg zie Peninsula Vet Emergency & Referral Hospital."
       }
     },
     {
@@ -2158,7 +2246,8 @@
         "fr": "Clinique de jour ; pour les soins 24 h/24, voir Peninsula Vet Emergency & Referral Hospital.",
         "es": "Clínica de día; para atención 24 horas consulta Peninsula Vet Emergency & Referral Hospital.",
         "it": "Clinica diurna; per l'assistenza 24 ore su 24 rivolgersi al Peninsula Vet Emergency & Referral Hospital.",
-        "pt": "Clínica diurna; para cuidados 24 horas, consulta o Peninsula Vet Emergency & Referral Hospital."
+        "pt": "Clínica diurna; para cuidados 24 horas, consulta o Peninsula Vet Emergency & Referral Hospital.",
+        "nl": "Dagpraktijk; voor 24-uurszorg zie Peninsula Vet Emergency & Referral Hospital."
       }
     },
     {
@@ -2180,7 +2269,8 @@
         "fr": "Clinique de jour ; pour les soins 24 h/24, voir Peninsula Vet Emergency & Referral Hospital.",
         "es": "Clínica de día; para atención 24 horas consulta Peninsula Vet Emergency & Referral Hospital.",
         "it": "Clinica diurna; per l'assistenza 24 ore su 24 rivolgersi al Peninsula Vet Emergency & Referral Hospital.",
-        "pt": "Clínica diurna; para cuidados 24 horas, consulta o Peninsula Vet Emergency & Referral Hospital."
+        "pt": "Clínica diurna; para cuidados 24 horas, consulta o Peninsula Vet Emergency & Referral Hospital.",
+        "nl": "Dagpraktijk; voor 24-uurszorg zie Peninsula Vet Emergency & Referral Hospital."
       }
     },
     {
@@ -2202,7 +2292,8 @@
         "fr": "Hôpital de référence lun.–ven. 8 h–20 h, sam. 8 h–12 h. Urgences hors heures ouvrables orientées vers Southpaws Malvern (24 h/24, 7 j/7).",
         "es": "Hospital de referencia lun–vie 8:00–20:00 h, sáb 8:00–12:00 h. Las urgencias fuera de horario van a Southpaws Malvern (24 horas).",
         "it": "Ospedale di riferimento lun–ven 8:00–20:00, sab 8:00–12:00. Le urgenze fuori orario vanno a Southpaws Malvern (24 ore su 24, 7 giorni su 7).",
-        "pt": "Hospital de referência segunda a sexta 8h00–20h00, sábado 8h00–12h00. Urgências fora de horas vão para o Southpaws Malvern (24 h/24, 7 dias por semana)."
+        "pt": "Hospital de referência segunda a sexta 8h00–20h00, sábado 8h00–12h00. Urgências fora de horas vão para o Southpaws Malvern (24 h/24, 7 dias por semana).",
+        "nl": "Verwijsziekenhuis ma–vr 8.00–20.00 uur, za 8.00–12.00 uur. Spoedgevallen buiten openingstijden gaan naar Southpaws Malvern (24/7)."
       }
     },
     {
@@ -2224,7 +2315,8 @@
         "fr": "Lun.–ven. 8 h 30–17 h 30, sam. 8 h 30–12 h. Service d’urgence hors heures ouvrables au même numéro pour les clients habituels ; orientation possible vers un autre centre d’urgences en cas de saturation.",
         "es": "Lun–vie 8:30–17:30 h, sáb 8:30–12:00 h. Servicio de urgencias fuera de horario en el mismo número para clientes habituales; puede derivar a otro centro de urgencias cuando está al completo.",
         "it": "Lun–ven 8:30–17:30, sab 8:30–12:00. Servizio di pronto soccorso fuori orario allo stesso numero per i clienti già registrati; può indirizzare a un altro centro di pronto soccorso quando è al completo.",
-        "pt": "Segunda a sexta 8h30–17h30, sábado 8h30–12h00. Serviço de urgências fora de horas no mesmo número para clientes já registados; pode encaminhar para outro centro de urgências quando estiver lotado."
+        "pt": "Segunda a sexta 8h30–17h30, sábado 8h30–12h00. Serviço de urgências fora de horas no mesmo número para clientes já registados; pode encaminhar para outro centro de urgências quando estiver lotado.",
+        "nl": "ma–vr 8.30–17.30 uur, za 8.30–12.00 uur. Spoeddienst buiten kantooruren op hetzelfde nummer voor bestaande klanten; bij volle capaciteit mogelijk doorverwijzing naar een ander spoedcentrum."
       }
     },
     {
@@ -2246,7 +2338,8 @@
         "fr": "Lun.–ven. 8 h–17 h/18 h, sam. 8 h 30–12 h. Urgences du week-end et des jours fériés redirigées vers Gippsland Pet Emergency (Warragul).",
         "es": "Lun–vie 8:00–17:00/18:00 h, sáb 8:30–12:00 h. Las urgencias de fines de semana y festivos se derivan a Gippsland Pet Emergency (Warragul).",
         "it": "Lun–ven 8:00–17:00/18:00, sab 8:30–12:00. Urgenze del fine settimana e dei festivi deviate a Gippsland Pet Emergency (Warragul).",
-        "pt": "Segunda a sexta 8h00–17h00/18h00, sábado 8h30–12h00. Urgências de fim de semana e feriados encaminhadas para o Gippsland Pet Emergency (Warragul)."
+        "pt": "Segunda a sexta 8h00–17h00/18h00, sábado 8h30–12h00. Urgências de fim de semana e feriados encaminhadas para o Gippsland Pet Emergency (Warragul).",
+        "nl": "ma–vr 8.00–17.00/18.00 uur, za 8.30–12.00 uur. Spoedgevallen in het weekend en op feestdagen worden omgeleid naar Gippsland Pet Emergency (Warragul)."
       }
     },
     {
@@ -2268,7 +2361,8 @@
         "fr": "Lun.–ven. 8 h 30–17 h 30, sam. 9 h–12 h. Urgences hors heures ouvrables par téléphone, service partagé avec Main St Vets.",
         "es": "Lun–vie 8:30–17:30 h, sáb 9:00–12:00 h. Urgencias fuera de horario por teléfono, compartidas con Main St Vets.",
         "it": "Lun–ven 8:30–17:30, sab 9:00–12:00. Pronto soccorso telefonico fuori orario, in condivisione con Main St Vets.",
-        "pt": "Segunda a sexta 8h30–17h30, sábado 9h00–12h00. Urgências fora de horas por telefone, partilhadas com a Main St Vets."
+        "pt": "Segunda a sexta 8h30–17h30, sábado 9h00–12h00. Urgências fora de horas por telefone, partilhadas com a Main St Vets.",
+        "nl": "ma–vr 8.30–17.30 uur, za 9.00–12.00 uur. Spoed buiten openingstijden telefonisch, gedeeld met Main St Vets."
       }
     },
     {
@@ -2290,7 +2384,8 @@
         "fr": "Lun.–ven. 8 h 30–18 h, sam. 9 h–12 h. Tri téléphonique des urgences hors heures ouvrables au même numéro.",
         "es": "Lun–vie 8:30–18:00 h, sáb 9:00–12:00 h. Triaje de urgencias fuera de horario por teléfono en el mismo número.",
         "it": "Lun–ven 8:30–18:00, sab 9:00–12:00. Triage telefonico delle urgenze fuori orario allo stesso numero.",
-        "pt": "Segunda a sexta 8h30–18h00, sábado 9h00–12h00. Triagem de urgências fora de horas por telefone no mesmo número."
+        "pt": "Segunda a sexta 8h30–18h00, sábado 9h00–12h00. Triagem de urgências fora de horas por telefone no mesmo número.",
+        "nl": "ma–vr 8.30–18.00 uur, za 9.00–12.00 uur. Spoedtriage buiten openingstijden telefonisch op hetzelfde nummer."
       }
     },
     {
@@ -2312,7 +2407,8 @@
         "fr": "Lun.–ven. 8 h 30–18 h, sam. 9 h–12 h. Conseils d’urgence hors heures ouvrables via le service téléphonique VETCHAT.",
         "es": "Lun–vie 8:30–18:00 h, sáb 9:00–12:00 h. Consejo de urgencias fuera de horario a través del servicio telefónico VETCHAT.",
         "it": "Lun–ven 8:30–18:00, sab 9:00–12:00. Consulenza per le urgenze fuori orario tramite il servizio telefonico VETCHAT.",
-        "pt": "Segunda a sexta 8h30–18h00, sábado 9h00–12h00. Aconselhamento de urgência fora de horas através do serviço telefónico VETCHAT."
+        "pt": "Segunda a sexta 8h30–18h00, sábado 9h00–12h00. Aconselhamento de urgência fora de horas através do serviço telefónico VETCHAT.",
+        "nl": "ma–vr 8.30–18.00 uur, za 9.00–12.00 uur. Spoedadvies buiten openingstijden via de telefoondienst VETCHAT."
       }
     },
     {
@@ -2334,7 +2430,8 @@
         "fr": "Lun., mar., jeu., ven. 8 h 30–17 h 30, sam. 9 h–13 h. Vétérinaire de garde 24 h/24, 7 j/7 au même numéro (surtout pour les clients habituels ; pas d’établissement ouvert 24 h/24).",
         "es": "Lun, mar, jue, vie 8:30–17:30 h, sáb 9:00–13:00 h. Veterinario de guardia las 24 horas en el mismo número (sobre todo para clientes habituales; no es un centro 24 horas).",
         "it": "Lun, mar, gio, ven 8:30–17:30, sab 9:00–13:00. Veterinario reperibile 24 ore su 24, 7 giorni su 7 allo stesso numero (soprattutto per i clienti già registrati; non è una struttura aperta 24 ore su 24).",
-        "pt": "Seg, ter, qui, sex 8h30–17h30, sábado 9h00–13h00. Veterinário de piquete 24 h/24, 7 dias por semana, no mesmo número (sobretudo para clientes já registados; não é uma unidade 24 horas)."
+        "pt": "Seg, ter, qui, sex 8h30–17h30, sábado 9h00–13h00. Veterinário de piquete 24 h/24, 7 dias por semana, no mesmo número (sobretudo para clientes já registados; não é uma unidade 24 horas).",
+        "nl": "ma, di, do, vr 8.30–17.30 uur, za 9.00–13.00 uur. Dierenarts 24/7 in achterwacht op hetzelfde nummer (vooral voor bestaande klanten; geen 24-uursvoorziening)."
       }
     },
     {
@@ -2356,7 +2453,8 @@
         "fr": "Lun.–ven. 8 h–20 h. Numéro d’urgence : 0419 353 965.",
         "es": "Lun–vie 8:00–20:00 h. Número de urgencias 0419 353 965.",
         "it": "Lun–ven 8:00–20:00. Numero per le urgenze 0419 353 965.",
-        "pt": "Segunda a sexta 8h00–20h00. Número de urgências 0419 353 965."
+        "pt": "Segunda a sexta 8h00–20h00. Número de urgências 0419 353 965.",
+        "nl": "ma–vr 8.00–20.00 uur. Spoednummer 0419 353 965."
       }
     },
     {
@@ -2377,7 +2475,8 @@
         "fr": "Lun.–ven. 8 h 30–18 h, sam. 9 h–12 h. Urgences hors heures ouvrables : 0417 529 462.",
         "es": "Lun–vie 8:30–18:00 h, sáb 9:00–12:00 h. Urgencias fuera de horario 0417 529 462.",
         "it": "Lun–ven 8:30–18:00, sab 9:00–12:00. Urgenze fuori orario 0417 529 462.",
-        "pt": "Segunda a sexta 8h30–18h00, sábado 9h00–12h00. Urgências fora de horas 0417 529 462."
+        "pt": "Segunda a sexta 8h30–18h00, sábado 9h00–12h00. Urgências fora de horas 0417 529 462.",
+        "nl": "ma–vr 8.30–18.00 uur, za 9.00–12.00 uur. Spoednummer buiten openingstijden 0417 529 462."
       }
     },
     {
@@ -2399,7 +2498,8 @@
         "fr": "Lun. 8 h–18 h, mar.–ven. 8 h 30–18 h, sam. 8 h 30–13 h. Vétérinaire de garde pour conseils et soins urgents hors heures ouvrables via le numéro de la clinique.",
         "es": "Lun 8:00–18:00 h, mar–vie 8:30–18:00 h, sáb 8:30–13:00 h. Veterinario de guardia para consejo fuera de horario y atención urgente a través del teléfono de la clínica.",
         "it": "Lun 8:00–18:00, mar–ven 8:30–18:00, sab 8:30–13:00. Veterinario di guardia per consulenza fuori orario e cure urgenti tramite il numero della clinica.",
-        "pt": "Seg 8h00–18h00, ter–sex 8h30–18h00, sábado 8h30–13h00. Veterinário de piquete para aconselhamento fora de horas e cuidados urgentes através do número da clínica."
+        "pt": "Seg 8h00–18h00, ter–sex 8h30–18h00, sábado 8h30–13h00. Veterinário de piquete para aconselhamento fora de horas e cuidados urgentes através do número da clínica.",
+        "nl": "ma 8.00–18.00 uur, di–vr 8.30–18.00 uur, za 8.30–13.00 uur. Dienstdoende dierenarts voor advies en spoedhulp buiten kantooruren via het nummer van de praktijk."
       }
     },
     {
@@ -2420,7 +2520,8 @@
         "fr": "Lun.–ven. 8 h 30–17 h 30. Urgences hors heures ouvrables : appelez la clinique.",
         "es": "Lun–vie 8:30–17:30 h. Para urgencias fuera de horario llama a la clínica.",
         "it": "Lun–ven 8:30–17:30. Per le urgenze fuori orario chiamare la clinica.",
-        "pt": "Segunda a sexta 8h30–17h30. Para urgências fora de horas, liga para a clínica."
+        "pt": "Segunda a sexta 8h30–17h30. Para urgências fora de horas, liga para a clínica.",
+        "nl": "ma–vr 8.30–17.30 uur. Bij spoed buiten kantooruren: bel de praktijk."
       }
     },
     {
@@ -2442,7 +2543,8 @@
         "fr": "Urgences hors heures ouvrables prises en charge par l’équipe téléphonique Vetriage via le numéro de la clinique.",
         "es": "Las urgencias fuera de horario las atiende el equipo telefónico de Vetriage a través del teléfono de la clínica.",
         "it": "Urgenze fuori orario gestite dal team telefonico Vetriage tramite il numero della clinica.",
-        "pt": "Urgências fora de horas atendidas pela equipa telefónica Vetriage através do número da clínica."
+        "pt": "Urgências fora de horas atendidas pela equipa telefónica Vetriage através do número da clínica.",
+        "nl": "Spoedgevallen buiten kantooruren worden afgehandeld door het telefoonteam van Vetriage via het nummer van de praktijk."
       }
     },
     {
@@ -2464,7 +2566,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–12 h. Service d’urgence de garde 24 h/24, 7 j/7 pour petits et grands animaux au même numéro.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–12:00 h. Servicio de urgencias de guardia las 24 horas, los 7 días, para animales pequeños y grandes en el mismo número.",
         "it": "Lun–ven 8:00–18:00, sab 9:00–12:00. Pronto soccorso di guardia 24 ore su 24, 7 giorni su 7 per piccoli e grandi animali allo stesso numero.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–12h00. Serviço de urgências de piquete 24 h/24, 7 dias por semana, para animais pequenos e grandes no mesmo número."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–12h00. Serviço de urgências de piquete 24 h/24, 7 dias por semana, para animais pequenos e grandes no mesmo número.",
+        "nl": "ma–vr 8.00–18.00 uur, za 9.00–12.00 uur. Spoeddienst voor kleine en grote dieren, 24 uur per dag en 7 dagen per week bereikbaar op hetzelfde nummer."
       }
     },
     {
@@ -2486,7 +2589,8 @@
         "fr": "Lun.–ven. 8 h–18 h ; équipe d’urgences et de soins intensifs de garde en dehors de ces horaires.",
         "es": "Lun–vie 8:00–18:00 h; fuera de este horario hay un equipo de urgencias y cuidados intensivos de guardia.",
         "it": "Lun–ven 8:00–18:00; fuori da questi orari è di guardia l'équipe di pronto soccorso e terapia intensiva.",
-        "pt": "Segunda a sexta 8h00–18h00; equipa de urgências e cuidados intensivos de piquete fora destes horários."
+        "pt": "Segunda a sexta 8h00–18h00; equipa de urgências e cuidados intensivos de piquete fora destes horários.",
+        "nl": "ma–vr 8.00–18.00 uur; daarbuiten is het spoed- en intensivecareteam oproepbaar."
       }
     },
     {
@@ -2508,7 +2612,8 @@
         "fr": "Lun.–ven. 8 h–18 h. En dehors de ces horaires, les propriétaires sont orientés vers un hôpital d’urgences.",
         "es": "Lun–vie 8:00–18:00 h. Fuera de este horario se deriva a los propietarios a un hospital de urgencias.",
         "it": "Lun–ven 8:00–18:00. Fuori da questi orari i proprietari sono indirizzati a un ospedale di pronto soccorso.",
-        "pt": "Segunda a sexta 8h00–18h00. Fora deste horário, os donos são encaminhados para um hospital de urgências."
+        "pt": "Segunda a sexta 8h00–18h00. Fora deste horário, os donos são encaminhados para um hospital de urgências.",
+        "nl": "ma–vr 8.00–18.00 uur. Buiten deze uren worden eigenaren doorverwezen naar een dierenziekenhuis voor spoedgevallen."
       }
     },
     {
@@ -2530,7 +2635,8 @@
         "fr": "Lun.–ven. 8 h 30–17 h 30.",
         "es": "Lun–vie 8:30–17:30 h.",
         "it": "Lun–ven 8:30–17:30.",
-        "pt": "Segunda a sexta 8h30–17h30."
+        "pt": "Segunda a sexta 8h30–17h30.",
+        "nl": "ma–vr 8.30–17.30 uur."
       }
     },
     {
@@ -2552,7 +2658,8 @@
         "fr": "Lun.–ven. 8 h–18 h 30, sam. 8 h 30–12 h 30. En dehors des heures d’ouverture : Geelong Animal Emergency (03 5222 2139).",
         "es": "Lun–vie 8:00–18:30 h, sáb 8:30–12:30 h. Fuera de horario: Geelong Animal Emergency (03 5222 2139).",
         "it": "Lun–ven 8:00–18:30, sab 8:30–12:30. Fuori orario: Geelong Animal Emergency (03 5222 2139).",
-        "pt": "Segunda a sexta 8h00–18h30, sábado 8h30–12h30. Fora de horas: Geelong Animal Emergency (03 5222 2139)."
+        "pt": "Segunda a sexta 8h00–18h30, sábado 8h30–12h30. Fora de horas: Geelong Animal Emergency (03 5222 2139).",
+        "nl": "ma–vr 8.00–18.30 uur, za 8.30–12.30 uur. Buiten kantooruren: Geelong Animal Emergency (03 5222 2139)."
       }
     },
     {
@@ -2574,7 +2681,8 @@
         "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–16 h, dim. 10 h–16 h. Appelez pour savoir que faire en dehors des heures d’ouverture.",
         "es": "Lun–vie 8:00–19:00 h, sáb 8:00–16:00 h, dom 10:00–16:00 h. Llama para información fuera de horario.",
         "it": "Lun–ven 8:00–19:00, sab 8:00–16:00, dom 10:00–16:00. Chiamare per informazioni fuori orario.",
-        "pt": "Segunda a sexta 8h00–19h00, sábado 8h00–16h00, domingo 10h00–16h00. Liga para obteres informações sobre o horário fora de horas."
+        "pt": "Segunda a sexta 8h00–19h00, sábado 8h00–16h00, domingo 10h00–16h00. Liga para obteres informações sobre o horário fora de horas.",
+        "nl": "ma–vr 8.00–19.00 uur, za 8.00–16.00 uur, zo 10.00–16.00 uur. Bel voor informatie over de dienst buiten kantooruren."
       }
     },
     {
@@ -2595,7 +2703,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–13 h. En dehors des heures d’ouverture : Geelong Animal Emergency (03 5222 2139).",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–13:00 h. Fuera de horario: Geelong Animal Emergency (03 5222 2139).",
         "it": "Lun–ven 8:00–18:00, sab 8:00–13:00. Fuori orario: Geelong Animal Emergency (03 5222 2139).",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–13h00. Fora de horas: Geelong Animal Emergency (03 5222 2139)."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–13h00. Fora de horas: Geelong Animal Emergency (03 5222 2139).",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.00–13.00 uur. Buiten kantooruren: Geelong Animal Emergency (03 5222 2139)."
       }
     },
     {
@@ -2616,7 +2725,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–13 h. Urgences hors heures ouvrables : Advanced Vetcare Kew.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–13:00 h. Urgencias fuera de horario: Advanced Vetcare Kew.",
         "it": "Lun–ven 8:00–18:00, sab 9:00–13:00. Urgenze fuori orario: Advanced Vetcare Kew.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–13h00. Urgências fora de horas: Advanced Vetcare Kew."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–13h00. Urgências fora de horas: Advanced Vetcare Kew.",
+        "nl": "ma–vr 8.00–18.00 uur, za 9.00–13.00 uur. Spoed buiten kantooruren: Advanced Vetcare Kew."
       }
     },
     {
@@ -2638,7 +2748,8 @@
         "fr": "Lun.–jeu. 8 h–20 h, ven. 8 h–18 h, sam. 9 h–15 h. En dehors des heures d’ouverture : VRH Dandenong (1300 385 874) ou Casey Pet Emergency (03 8790 1625).",
         "es": "Lun–jue 8:00–20:00 h, vie 8:00–18:00 h, sáb 9:00–15:00 h. Fuera de horario: VRH Dandenong (1300 385 874) o Casey Pet Emergency (03 8790 1625).",
         "it": "Lun–gio 8:00–20:00, ven 8:00–18:00, sab 9:00–15:00. Fuori orario: VRH Dandenong (1300 385 874) o Casey Pet Emergency (03 8790 1625).",
-        "pt": "Segunda a quinta 8h00–20h00, sexta 8h00–18h00, sábado 9h00–15h00. Fora de horas: VRH Dandenong (1300 385 874) ou Casey Pet Emergency (03 8790 1625)."
+        "pt": "Segunda a quinta 8h00–20h00, sexta 8h00–18h00, sábado 9h00–15h00. Fora de horas: VRH Dandenong (1300 385 874) ou Casey Pet Emergency (03 8790 1625).",
+        "nl": "ma–do 8.00–20.00 uur, vr 8.00–18.00 uur, za 9.00–15.00 uur. Buiten kantooruren: VRH Dandenong (1300 385 874) of Casey Pet Emergency (03 8790 1625)."
       }
     },
     {
@@ -2660,7 +2771,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–12 h. Urgences reçues sans rendez-vous pendant les heures d’ouverture.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h. Las urgencias en horario de apertura se atienden sin cita previa.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–12:00. Urgenze in orario di apertura visitate senza prenotazione.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–12h00. Urgências em horário normal atendidas sem marcação."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–12h00. Urgências em horário normal atendidas sem marcação.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.00–12.00 uur. Spoedgevallen tijdens openingstijden worden zonder afspraak geholpen."
       }
     },
     {
@@ -2682,7 +2794,8 @@
         "fr": "Ouvert 24 h/24, 365 jours par an. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, los 365 días del año. Las urgencias no necesitan cita previa.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Per le urgenze non serve prenotare.",
-        "pt": "Aberto 24 horas, 365 dias por ano. As urgências não precisam de marcação."
+        "pt": "Aberto 24 horas, 365 dias por ano. As urgências não precisam de marcação.",
+        "nl": "24 uur per dag open, 365 dagen per jaar. Voor spoedgevallen is geen afspraak nodig."
       }
     },
     {
@@ -2704,7 +2817,8 @@
         "fr": "Ouvert 24 h/24, 365 jours par an. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, los 365 días del año. Las urgencias no necesitan cita previa.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Per le urgenze non serve prenotare.",
-        "pt": "Aberto 24 horas, 365 dias por ano. As urgências não precisam de marcação."
+        "pt": "Aberto 24 horas, 365 dias por ano. As urgências não precisam de marcação.",
+        "nl": "24 uur per dag open, 365 dagen per jaar. Voor spoedgevallen is geen afspraak nodig."
       }
     },
     {
@@ -2726,7 +2840,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, 365 jours par an. Sans rendez-vous.",
         "es": "Abierto las 24 horas, los 7 días de la semana, los 365 días del año. Sin cita previa.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno. Non serve appuntamento.",
-        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano. Sem necessidade de marcação."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano. Sem necessidade de marcação.",
+        "nl": "24 uur per dag, 7 dagen per week, 365 dagen per jaar open. Geen afspraak nodig."
       }
     },
     {
@@ -2748,7 +2863,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris.",
         "es": "Abierto las 24 horas, los 7 días de la semana, también festivos.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi inclusi.",
-        "pt": "Aberto 24 horas, 7 dias por semana, incluindo feriados."
+        "pt": "Aberto 24 horas, 7 dias por semana, incluindo feriados.",
+        "nl": "24 uur per dag, 7 dagen per week open, ook op feestdagen."
       }
     },
     {
@@ -2770,7 +2886,8 @@
         "fr": "Service d’urgences ouvert 24 h/24, 365 jours par an. Consultations de spécialistes sur orientation, du lundi au vendredi, 8 h–18 h.",
         "es": "Urgencias abiertas las 24 horas, los 365 días del año. Consultas de especialistas por derivación, lun–vie 8:00–18:00 h.",
         "it": "Pronto soccorso aperto 24 ore su 24, 365 giorni all'anno. Consulti specialistici su invio del veterinario, dal lunedì al venerdì 8:00–18:00.",
-        "pt": "Urgências abertas 24 horas por dia, 365 dias por ano. Consultas de especialidade por referenciação, segunda a sexta, 8h00–18h00."
+        "pt": "Urgências abertas 24 horas por dia, 365 dias por ano. Consultas de especialidade por referenciação, segunda a sexta, 8h00–18h00.",
+        "nl": "Spoedeisende hulp 24 uur per dag, 365 dagen per jaar. Specialistische consulten op verwijzing, maandag–vrijdag 8.00–18.00 uur."
       }
     },
     {
@@ -2792,7 +2909,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, jours fériés compris.",
         "es": "Abierto las 24 horas, los 7 días de la semana, también festivos.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi inclusi.",
-        "pt": "Aberto 24 horas, 7 dias por semana, incluindo feriados."
+        "pt": "Aberto 24 horas, 7 dias por semana, incluindo feriados.",
+        "nl": "24 uur per dag, 7 dagen per week open, ook op feestdagen."
       }
     },
     {
@@ -2814,7 +2932,8 @@
         "fr": "Service d’urgences et de soins intensifs ouvert 24 h/24, 7 j/7. Médecine générale et consultations sur orientation, sur rendez-vous en semaine.",
         "es": "Urgencias y cuidados intensivos abiertos las 24 horas, los 7 días de la semana. Medicina general y derivaciones con cita previa entre semana.",
         "it": "Pronto soccorso e terapia intensiva aperti 24 ore su 24, 7 giorni su 7. Medicina generale e consulti su invio, su appuntamento nei giorni feriali.",
-        "pt": "Urgências e cuidados intensivos abertos 24 horas por dia, 7 dias por semana. Clínica geral e referenciação sob marcação em dias úteis."
+        "pt": "Urgências e cuidados intensivos abertos 24 horas por dia, 7 dias por semana. Clínica geral e referenciação sob marcação em dias úteis.",
+        "nl": "Spoed- en intensieve zorg 24 uur per dag, 7 dagen per week. Algemene praktijk en verwijzingen op werkdagen op afspraak."
       }
     },
     {
@@ -2836,7 +2955,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7. Sans rendez-vous.",
         "es": "Abierto las 24 horas, los 7 días de la semana. Puedes acudir sin cita.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7. Accesso libero senza appuntamento.",
-        "pt": "Aberto 24 horas por dia, 7 dias por semana. Sem marcação."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana. Sem marcação.",
+        "nl": "24 uur per dag, 7 dagen per week open. Zonder afspraak welkom."
       }
     },
     {
@@ -2858,7 +2978,8 @@
         "fr": "Hôpital d’urgences hors heures ouvrables : du lundi au vendredi la nuit (minuit–8 h) et à partir de 18 h ; ouvert 24 h/24 les week-ends et jours fériés.",
         "es": "Hospital de urgencias fuera de horario: lun–vie por la noche (0:00–8:00 h) y desde las 18:00 h; abierto las 24 horas los fines de semana y festivos.",
         "it": "Ospedale di pronto soccorso fuori orario: dal lunedì al venerdì di notte (0:00–8:00) e dalle 18:00; aperto 24 ore su 24 nei fine settimana e nei festivi.",
-        "pt": "Hospital de urgências fora de horas: segunda a sexta durante a noite (0h00–8h00) e a partir das 18h00; aberto 24 horas aos fins de semana e feriados."
+        "pt": "Hospital de urgências fora de horas: segunda a sexta durante a noite (0h00–8h00) e a partir das 18h00; aberto 24 horas aos fins de semana e feriados.",
+        "nl": "Spoedziekenhuis buiten kantooruren: maandag–vrijdag 's nachts (0.00–8.00 uur) en vanaf 18.00 uur; in het weekend en op feestdagen 24 uur per dag open."
       }
     },
     {
@@ -2880,7 +3001,8 @@
         "fr": "Hôpital d’urgences hors heures ouvrables : en semaine la nuit et à partir de 18 h ; ouvert 24 h/24 les week-ends et jours fériés.",
         "es": "Hospital de urgencias fuera de horario: entre semana por la noche y desde las 18:00 h; abierto las 24 horas los fines de semana y festivos.",
         "it": "Ospedale di pronto soccorso fuori orario: nei feriali di notte e dalle 18:00; aperto 24 ore su 24 nei fine settimana e nei festivi.",
-        "pt": "Hospital de urgências fora de horas: dias úteis durante a noite e a partir das 18h00; aberto 24 horas aos fins de semana e feriados."
+        "pt": "Hospital de urgências fora de horas: dias úteis durante a noite e a partir das 18h00; aberto 24 horas aos fins de semana e feriados.",
+        "nl": "Spoedziekenhuis buiten kantooruren: op werkdagen 's nachts en vanaf 18.00 uur; in het weekend en op feestdagen 24 uur per dag open."
       }
     },
     {
@@ -2902,7 +3024,8 @@
         "fr": "Hôpital d’urgences hors heures ouvrables : en semaine la nuit et à partir de 18 h ; ouvert 24 h/24 les week-ends et jours fériés.",
         "es": "Hospital de urgencias fuera de horario: entre semana por la noche y desde las 18:00 h; abierto las 24 horas los fines de semana y festivos.",
         "it": "Ospedale di pronto soccorso fuori orario: nei feriali di notte e dalle 18:00; aperto 24 ore su 24 nei fine settimana e nei festivi.",
-        "pt": "Hospital de urgências fora de horas: dias úteis durante a noite e a partir das 18h00; aberto 24 horas aos fins de semana e feriados."
+        "pt": "Hospital de urgências fora de horas: dias úteis durante a noite e a partir das 18h00; aberto 24 horas aos fins de semana e feriados.",
+        "nl": "Spoedziekenhuis buiten kantooruren: op werkdagen 's nachts en vanaf 18.00 uur; in het weekend en op feestdagen 24 uur per dag open."
       }
     },
     {
@@ -2924,7 +3047,8 @@
         "fr": "Service d’urgence hors heures ouvrables : du lundi au vendredi, nuits 18 h–8 h ; ouvert 24 h/24 les week-ends et jours fériés.",
         "es": "Servicio de urgencias fuera de horario: lun–vie por la noche, 18:00–8:00 h; abierto las 24 horas los fines de semana y festivos.",
         "it": "Pronto soccorso fuori orario: dal lunedì al venerdì di notte 18:00–8:00; aperto 24 ore su 24 nei fine settimana e nei festivi.",
-        "pt": "Serviço de urgências fora de horas: segunda a sexta à noite, 18h00–8h00; aberto 24 horas aos fins de semana e feriados."
+        "pt": "Serviço de urgências fora de horas: segunda a sexta à noite, 18h00–8h00; aberto 24 horas aos fins de semana e feriados.",
+        "nl": "Spoeddienst buiten kantooruren: maandag–vrijdag 's nachts van 18.00 tot 8.00 uur; in het weekend en op feestdagen 24 uur per dag open."
       }
     },
     {
@@ -2946,7 +3070,8 @@
         "fr": "Hôpital universitaire pour petits animaux avec service d’urgence pour la zone d’Ipswich à Toowoomba ; appelez pour connaître les horaires actuels.",
         "es": "Hospital universitario de animales pequeños con servicio de urgencias para la zona de Ipswich a Toowoomba; llama antes para conocer el horario actual.",
         "it": "Ospedale universitario per piccoli animali con servizio di pronto soccorso da Ipswich a Toowoomba; telefonare in anticipo per gli orari aggiornati.",
-        "pt": "Hospital universitário de pequenos animais com serviço de urgências de Ipswich a Toowoomba; liga antes para saberes o horário atual."
+        "pt": "Hospital universitário de pequenos animais com serviço de urgências de Ipswich a Toowoomba; liga antes para saberes o horário atual.",
+        "nl": "Universitair dierenziekenhuis voor kleine huisdieren met spoeddienst voor Ipswich tot Toowoomba; bel vooraf voor de actuele openingstijden."
       }
     },
     {
@@ -2968,7 +3093,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h, samedi 8 h–13 h ; fermé les dimanches et jours fériés. En dehors des heures d’ouverture, oriente les urgences vers REDVets Toowoomba.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–13:00 h; cerrado los domingos y festivos. Fuera de horario deriva las urgencias a REDVets Toowoomba.",
         "it": "Dal lunedì al venerdì 8:00–18:00, sabato 8:00–13:00; chiuso la domenica e nei festivi. Fuori orario indirizza le urgenze a REDVets Toowoomba.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–13h00; fechado ao domingo e feriados. Fora de horas, encaminha as urgências para a REDVets Toowoomba."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–13h00; fechado ao domingo e feriados. Fora de horas, encaminha as urgências para a REDVets Toowoomba.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–13.00 uur; zondag en feestdagen gesloten. Buiten kantooruren worden spoedgevallen doorverwezen naar REDVets Toowoomba."
       }
     },
     {
@@ -2990,7 +3116,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h, samedi 8 h–12 h, dimanche 9 h–11 h. Urgences hors heures ouvrables 24 h/24, 7 j/7 par téléphone (frais supplémentaires) ; pas de visites à domicile hors heures ouvrables.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h, dom 9:00–11:00 h. Urgencias fuera de horario las 24 horas por teléfono (con cargos adicionales); sin visitas a domicilio fuera de horario.",
         "it": "Dal lunedì al venerdì 8:00–18:00, sabato 8:00–12:00, domenica 9:00–11:00. Urgenze fuori orario per telefono 24 ore su 24, 7 giorni su 7 (costi aggiuntivi); nessuna visita a domicilio fuori orario.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–12h00, domingo 9h00–11h00. Urgências fora de horas 24 h/24 por telefone (aplicam-se custos adicionais); sem visitas ao domicílio fora de horas."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–12h00, domingo 9h00–11h00. Urgências fora de horas 24 h/24 por telefone (aplicam-se custos adicionais); sem visitas ao domicílio fora de horas.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–12.00 uur, zondag 9.00–11.00 uur. Spoed buiten kantooruren telefonisch 24/7 bereikbaar (met toeslag); geen huisbezoeken buiten kantooruren."
       }
     },
     {
@@ -3012,7 +3139,8 @@
         "fr": "Du lundi au vendredi 8 h–17 h, samedi 8 h–12 h ; fermé les dimanches et jours fériés.",
         "es": "Lun–vie 8:00–17:00 h, sáb 8:00–12:00 h; cerrado los domingos y festivos.",
         "it": "Dal lunedì al venerdì 8:00–17:00, sabato 8:00–12:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta 8h00–17h00, sábado 8h00–12h00; fechado ao domingo e feriados."
+        "pt": "Segunda a sexta 8h00–17h00, sábado 8h00–12h00; fechado ao domingo e feriados.",
+        "nl": "maandag–vrijdag 8.00–17.00 uur, zaterdag 8.00–12.00 uur; zondag en feestdagen gesloten."
       }
     },
     {
@@ -3034,7 +3162,8 @@
         "fr": "Du lundi au vendredi 7 h–17 h, samedi 8 h–13 h ; fermé les dimanches et jours fériés. Garde d’urgence hors heures ouvrables tous les jours de l’année, partagée avec d’autres cliniques de Hervey Bay.",
         "es": "Lun–vie 7:00–17:00 h, sáb 8:00–13:00 h; cerrado los domingos y festivos. Guardia de urgencias fuera de horario todos los días del año, compartida con otras clínicas de Hervey Bay.",
         "it": "Dal lunedì al venerdì 7:00–17:00, sabato 8:00–13:00; chiuso la domenica e nei festivi. Pronto soccorso di guardia fuori orario tutti i giorni dell'anno, in condivisione con altre cliniche di Hervey Bay.",
-        "pt": "Segunda a sexta 7h00–17h00, sábado 8h00–13h00; fechado ao domingo e feriados. Cobertura de urgências de piquete fora de horas todos os dias do ano, partilhada com outras clínicas de Hervey Bay."
+        "pt": "Segunda a sexta 7h00–17h00, sábado 8h00–13h00; fechado ao domingo e feriados. Cobertura de urgências de piquete fora de horas todos os dias do ano, partilhada com outras clínicas de Hervey Bay.",
+        "nl": "maandag–vrijdag 7.00–17.00 uur, zaterdag 8.00–13.00 uur; zondag en feestdagen gesloten. Spoeddienst buiten kantooruren elke dag van het jaar, gedeeld met andere praktijken in Hervey Bay."
       }
     },
     {
@@ -3056,7 +3185,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h, samedi 8 h–13 h ; fermé le dimanche. Pour les urgences, appelez l’accueil.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–13:00 h; domingo cerrado. Pregunta en recepción por las urgencias.",
         "it": "Dal lunedì al venerdì 8:00–18:00, sabato 8:00–13:00; chiuso la domenica. Per le urgenze chiamare la reception.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–13h00; fechado ao domingo. Para urgências, liga para a receção."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–13h00; fechado ao domingo. Para urgências, liga para a receção.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–13.00 uur; zondag gesloten. Bel de receptie voor spoedgevallen."
       }
     },
     {
@@ -3078,7 +3208,8 @@
         "fr": "Du lundi au vendredi 9 h–18 h, samedi 9 h–11 h ; fermé le dimanche. Pour des soins vétérinaires d’urgence 24 h/24, 7 j/7, appelez la clinique.",
         "es": "Lun–vie 9:00–18:00 h, sáb 9:00–11:00 h; domingo cerrado. Para urgencias veterinarias 24 horas, llama a la clínica.",
         "it": "Dal lunedì al venerdì 9:00–18:00, sabato 9:00–11:00; chiuso la domenica. Per il pronto soccorso veterinario 24 ore su 24 chiamare la clinica.",
-        "pt": "Segunda a sexta 9h00–18h00, sábado 9h00–11h00; fechado ao domingo. Para cuidados veterinários de urgência 24 h/24, liga para a clínica."
+        "pt": "Segunda a sexta 9h00–18h00, sábado 9h00–11h00; fechado ao domingo. Para cuidados veterinários de urgência 24 h/24, liga para a clínica.",
+        "nl": "maandag–vrijdag 9.00–18.00 uur, zaterdag 9.00–11.00 uur; zondag gesloten. Voor spoedeisende dierenartshulp 24/7: bel de praktijk."
       }
     },
     {
@@ -3100,7 +3231,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h, samedi 8 h–12 h ; fermé le dimanche.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h; domingo cerrado.",
         "it": "Dal lunedì al venerdì 8:00–18:00, sabato 8:00–12:00; chiuso la domenica.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–12h00; fechado ao domingo."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–12h00; fechado ao domingo.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–12.00 uur; zondag gesloten."
       }
     },
     {
@@ -3122,7 +3254,8 @@
         "fr": "Ouvert en semaine et le samedi ; appelez pour connaître les horaires actuels.",
         "es": "Abierto entre semana y sábados; llama para conocer el horario actual.",
         "it": "Orari nei giorni feriali e il sabato; chiamare per gli orari aggiornati.",
-        "pt": "Horário de dias úteis e sábado; liga para saberes o horário atual."
+        "pt": "Horário de dias úteis e sábado; liga para saberes o horário atual.",
+        "nl": "Open op werkdagen en zaterdag; bel voor de actuele tijden."
       }
     },
     {
@@ -3144,7 +3277,8 @@
         "fr": "Du lundi au vendredi 7 h 30–18 h 30 ; samedi, dimanche et jours fériés 8 h 30–13 h.",
         "es": "Lun–vie 7:30–18:30 h; sáb, dom y festivos 8:30–13:00 h.",
         "it": "Dal lunedì al venerdì 7:30–18:30; sabato, domenica e festivi 8:30–13:00.",
-        "pt": "Segunda a sexta 7h30–18h30; sábado, domingo e feriados 8h30–13h00."
+        "pt": "Segunda a sexta 7h30–18h30; sábado, domingo e feriados 8h30–13h00.",
+        "nl": "maandag–vrijdag 7.30–18.30 uur; zaterdag, zondag en feestdagen 8.30–13.00 uur."
       }
     },
     {
@@ -3166,7 +3300,8 @@
         "fr": "Du lundi au vendredi 9 h–17 h, samedi 8 h 30–12 h.",
         "es": "Lun–vie 9:00–17:00 h, sáb 8:30–12:00 h.",
         "it": "Dal lunedì al venerdì 9:00–17:00, sabato 8:30–12:00.",
-        "pt": "Segunda a sexta 9h00–17h00, sábado 8h30–12h00."
+        "pt": "Segunda a sexta 9h00–17h00, sábado 8h30–12h00.",
+        "nl": "maandag–vrijdag 9.00–17.00 uur, zaterdag 8.30–12.00 uur."
       }
     },
     {
@@ -3188,7 +3323,8 @@
         "fr": "Ouvert du lundi au vendredi jusqu’à 18 h et le samedi jusqu’à midi ; fermé le dimanche. Urgences hors heures ouvrables orientées vers Emergency Vets 24/7 à Manunda.",
         "es": "Abierto de lunes a viernes hasta las 18:00 h y sábados hasta el mediodía; domingo cerrado. Las urgencias fuera de horario se derivan a Emergency Vets 24/7 en Manunda.",
         "it": "Aperto dal lunedì al venerdì fino alle 18:00 e il sabato fino a mezzogiorno; chiuso la domenica. Le urgenze fuori orario sono indirizzate a Emergency Vets 24/7 a Manunda.",
-        "pt": "Aberto de segunda a sexta até às 18h00 e ao sábado até ao meio-dia; fechado ao domingo. Urgências fora de horas são encaminhadas para a Emergency Vets 24/7, em Manunda."
+        "pt": "Aberto de segunda a sexta até às 18h00 e ao sábado até ao meio-dia; fechado ao domingo. Urgências fora de horas são encaminhadas para a Emergency Vets 24/7, em Manunda.",
+        "nl": "Open maandag–vrijdag tot 18.00 uur en zaterdag tot 12.00 uur; zondag gesloten. Spoed buiten kantooruren wordt doorverwezen naar Emergency Vets 24/7 in Manunda."
       }
     },
     {
@@ -3210,7 +3346,8 @@
         "fr": "Du lundi au vendredi environ 8 h–17 h 30, samedi 8 h–14 h ; fermé le dimanche. Appelez pour confirmer.",
         "es": "Lun–vie 8:00–17:30 h aprox., sáb 8:00–14:00 h; domingo cerrado. Llama para confirmarlo.",
         "it": "Dal lunedì al venerdì circa 8:00–17:30, sabato 8:00–14:00; chiuso la domenica. Chiamare per conferma.",
-        "pt": "Segunda a sexta cerca de 8h00–17h30, sábado 8h00–14h00; fechado ao domingo. Liga para confirmar."
+        "pt": "Segunda a sexta cerca de 8h00–17h30, sábado 8h00–14h00; fechado ao domingo. Liga para confirmar.",
+        "nl": "maandag–vrijdag circa 8.00–17.30 uur, zaterdag 8.00–14.00 uur; zondag gesloten. Bel om te bevestigen."
       }
     },
     {
@@ -3232,7 +3369,8 @@
         "fr": "Du lundi au vendredi 8 h 30–18 h, samedi 8 h 30–12 h. Urgences hors heures ouvrables : appelez la clinique ; dessert aussi la région de Port Douglas.",
         "es": "Lun–vie 8:30–18:00 h, sáb 8:30–12:00 h. Urgencias fuera de horario: llama a la clínica; atiende también la zona de Port Douglas.",
         "it": "Dal lunedì al venerdì 8:30–18:00, sabato 8:30–12:00. Chiamate per urgenze fuori orario alla clinica; serve anche la zona di Port Douglas.",
-        "pt": "Segunda a sexta 8h30–18h00, sábado 8h30–12h00. Chamadas de urgência fora de horas para a clínica; serve também a zona de Port Douglas."
+        "pt": "Segunda a sexta 8h30–18h00, sábado 8h30–12h00. Chamadas de urgência fora de horas para a clínica; serve também a zona de Port Douglas.",
+        "nl": "maandag–vrijdag 8.30–18.00 uur, zaterdag 8.30–12.00 uur. Spoedgevallen buiten kantooruren: bel de praktijk; bedient ook de regio Port Douglas."
       }
     },
     {
@@ -3253,7 +3391,8 @@
         "fr": "Du lundi au vendredi 8 h 30–17 h ; le samedi, consultations à Kuranda. Urgences hors heures ouvrables : appelez la clinique.",
         "es": "Lun–vie 8:30–17:00 h; servicios los sábados en Kuranda. Urgencias fuera de horario: llama a la clínica.",
         "it": "Dal lunedì al venerdì 8:30–17:00; servizi del sabato a Kuranda. Chiamate per urgenze fuori orario alla clinica.",
-        "pt": "Segunda a sexta 8h30–17h00; serviços ao sábado em Kuranda. Chamadas de urgência fora de horas para a clínica."
+        "pt": "Segunda a sexta 8h30–17h00; serviços ao sábado em Kuranda. Chamadas de urgência fora de horas para a clínica.",
+        "nl": "maandag–vrijdag 8.30–17.00 uur; op zaterdag spreekuur in Kuranda. Spoed buiten kantooruren: bel de praktijk."
       }
     },
     {
@@ -3275,7 +3414,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h ; fermé le week-end et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h; cerrado los fines de semana y festivos.",
         "it": "Dal lunedì al venerdì 8:00–18:00; chiuso nei fine settimana e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00; fechado aos fins de semana e feriados."
+        "pt": "Segunda a sexta 8h00–18h00; fechado aos fins de semana e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur; weekend en feestdagen gesloten."
       }
     },
     {
@@ -3296,7 +3436,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h, samedi 8 h–16 h ; fermé les dimanches et jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–16:00 h; cerrado los domingos y festivos.",
         "it": "Dal lunedì al venerdì 8:00–18:00, sabato 8:00–16:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–16h00; fechado ao domingo e feriados."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–16h00; fechado ao domingo e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–16.00 uur; zondag en feestdagen gesloten."
       }
     },
     {
@@ -3318,7 +3459,8 @@
         "fr": "Du lundi au samedi 8 h–18 h ; fermé le dimanche. Pour les urgences, appelez JCU Vet.",
         "es": "Lun–sáb 8:00–18:00 h; domingo cerrado. Para urgencias llama a JCU Vet.",
         "it": "Dal lunedì al sabato 8:00–18:00; chiuso la domenica. Per le urgenze chiamare JCU Vet.",
-        "pt": "Segunda a sábado 8h00–18h00; fechado ao domingo. Para urgências, liga para a JCU Vet."
+        "pt": "Segunda a sábado 8h00–18h00; fechado ao domingo. Para urgências, liga para a JCU Vet.",
+        "nl": "maandag–zaterdag 8.00–18.00 uur; zondag gesloten. Bij spoed: bel JCU Vet."
       }
     },
     {
@@ -3340,7 +3482,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h ; samedi en alternance 8 h–15 h ou 8 h–18 h (appelez pour confirmer) ; fermé le dimanche.",
         "es": "Lun–vie 8:00–18:00 h; sábados alternos 8:00–15:00 h / 18:00 h (llama para confirmar); domingo cerrado.",
         "it": "Dal lunedì al venerdì 8:00–18:00; sabato a settimane alterne 8:00–15:00 / 18:00 (chiamare per conferma); chiuso la domenica.",
-        "pt": "Segunda a sexta 8h00–18h00; sábado alternadamente 8h00–15h00 / 18h00 (liga para confirmar); fechado ao domingo."
+        "pt": "Segunda a sexta 8h00–18h00; sábado alternadamente 8h00–15h00 / 18h00 (liga para confirmar); fechado ao domingo.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur; zaterdag wisselend 8.00–15.00 uur of 8.00–18.00 uur (bel om te bevestigen); zondag gesloten."
       }
     },
     {
@@ -3361,7 +3504,8 @@
         "fr": "Du lundi au jeudi 7 h–19 h, vendredi 7 h–18 h, samedi 8 h–17 h ; fermé le dimanche. En dehors des heures d’ouverture, la clinique oriente vers UQ VETS Small Animal Hospital.",
         "es": "Lun–jue 7:00–19:00 h, vie 7:00–18:00 h, sáb 8:00–17:00 h; domingo cerrado. Fuera de horario la clínica deriva a UQ VETS Small Animal Hospital.",
         "it": "Dal lunedì al giovedì 7:00–19:00, venerdì 7:00–18:00, sabato 8:00–17:00; chiuso la domenica. Fuori orario la clinica indirizza a UQ VETS Small Animal Hospital.",
-        "pt": "Segunda a quinta 7h00–19h00, sexta 7h00–18h00, sábado 8h00–17h00; fechado ao domingo. Fora de horas, a clínica encaminha para o UQ VETS Small Animal Hospital."
+        "pt": "Segunda a quinta 7h00–19h00, sexta 7h00–18h00, sábado 8h00–17h00; fechado ao domingo. Fora de horas, a clínica encaminha para o UQ VETS Small Animal Hospital.",
+        "nl": "maandag–donderdag 7.00–19.00 uur, vrijdag 7.00–18.00 uur, zaterdag 8.00–17.00 uur; zondag gesloten. Buiten kantooruren verwijst de praktijk door naar UQ VETS Small Animal Hospital."
       }
     },
     {
@@ -3382,7 +3526,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h, samedi 8 h–17 h ; fermé le dimanche. En dehors des heures d’ouverture, la clinique oriente vers UQ VETS Small Animal Hospital.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–17:00 h; domingo cerrado. Fuera de horario la clínica deriva a UQ VETS Small Animal Hospital.",
         "it": "Dal lunedì al venerdì 8:00–18:00, sabato 8:00–17:00; chiuso la domenica. Fuori orario la clinica indirizza a UQ VETS Small Animal Hospital.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–17h00; fechado ao domingo. Fora de horas, a clínica encaminha para o UQ VETS Small Animal Hospital."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–17h00; fechado ao domingo. Fora de horas, a clínica encaminha para o UQ VETS Small Animal Hospital.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–17.00 uur; zondag gesloten. Buiten kantooruren verwijst de praktijk door naar UQ VETS Small Animal Hospital."
       }
     },
     {
@@ -3403,7 +3548,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h, samedi 8 h–13 h ; fermé les dimanches et jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–13:00 h; cerrado los domingos y festivos.",
         "it": "Dal lunedì al venerdì 8:00–18:00, sabato 8:00–13:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–13h00; fechado ao domingo e feriados."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–13h00; fechado ao domingo e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–13.00 uur; zondag en feestdagen gesloten."
       }
     },
     {
@@ -3425,7 +3571,8 @@
         "fr": "En semaine 9 h–17 h (cinq jours par semaine à partir du 9 novembre 2026) ; appelez pour confirmer.",
         "es": "Entre semana 9:00–17:00 h (cinco días a la semana desde el 9 de noviembre de 2026); llama para confirmar.",
         "it": "Giorni feriali 9:00–17:00 (cinque giorni a settimana dal 9 novembre 2026); chiamare per conferma.",
-        "pt": "Dias úteis 9h00–17h00 (cinco dias por semana a partir de 9 de novembro de 2026); liga para confirmar."
+        "pt": "Dias úteis 9h00–17h00 (cinco dias por semana a partir de 9 de novembro de 2026); liga para confirmar.",
+        "nl": "Werkdagen 9.00–17.00 uur (vanaf 9 november 2026 vijf dagen per week); bel om te bevestigen."
       }
     },
     {
@@ -3446,7 +3593,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h, samedi 8 h–16 h ; fermé les dimanches et jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–16:00 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–16:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–16h00; fechado ao domingo e feriados."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–16h00; fechado ao domingo e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–16.00 uur; zondag en feestdagen gesloten."
       }
     },
     {
@@ -3467,7 +3615,8 @@
         "fr": "Du lundi au vendredi 8 h–18 h ; samedi sur rendez-vous ; fermé les dimanches et jours fériés.",
         "es": "Lun–vie 8:00–18:00 h; sábados con cita previa; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00; sabato su appuntamento; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00; sábados sob marcação; fechado ao domingo e feriados."
+        "pt": "Segunda a sexta 8h00–18h00; sábados sob marcação; fechado ao domingo e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur; zaterdag op afspraak; zondag en feestdagen gesloten."
       }
     },
     {
@@ -3489,7 +3638,8 @@
         "fr": "Soins urgents du lundi au vendredi 17 h–23 h et le week-end 8 h–18 h ; médecine générale du lundi au vendredi 8 h–18 h, samedi 8 h–12 h 30. Pas d’ouverture 24 h/24.",
         "es": "Urgencias lun–vie 17:00–23:00 h y fines de semana 8:00–18:00 h; clínica general lun–vie 8:00–18:00 h, sáb 8:00–12:30 h. No es un hospital 24 horas.",
         "it": "Pronto soccorso lun–ven 17:00–23:00 e nei weekend 8:00–18:00; ambulatorio lun–ven 8:00–18:00, sab 8:00–12:30. Non è un ospedale aperto 24 ore su 24.",
-        "pt": "Urgências de segunda a sexta 17h00–23h00 e fins de semana 8h00–18h00; clínica geral segunda a sexta 8h00–18h00, sábado 8h00–12h30. Não é um hospital 24 horas."
+        "pt": "Urgências de segunda a sexta 17h00–23h00 e fins de semana 8h00–18h00; clínica geral segunda a sexta 8h00–18h00, sábado 8h00–12h30. Não é um hospital 24 horas.",
+        "nl": "Spoedzorg maandag–vrijdag 17.00–23.00 uur en in het weekend 8.00–18.00 uur; reguliere praktijk maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–12.30 uur. Geen 24-uurs dierenziekenhuis."
       }
     },
     {
@@ -3510,7 +3660,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 7 h 30–12 h 30 ; fermé le dimanche et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 7:30–12:30 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00, sab 7:30–12:30; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 7h30–12h30; fechado ao domingo e feriados."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 7h30–12h30; fechado ao domingo e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 7.30–12.30 uur; zondag en feestdagen gesloten."
       }
     },
     {
@@ -3532,7 +3683,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–14 h ; fermé le dimanche et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–14:00 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–14:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–14h00; fechado ao domingo e feriados."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–14h00; fechado ao domingo e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–14.00 uur; zondag en feestdagen gesloten."
       }
     },
     {
@@ -3553,7 +3705,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–17 h ; fermé le dimanche et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–17:00 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–17:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–17h00; fechado ao domingo e feriados."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–17h00; fechado ao domingo e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–17.00 uur; zondag en feestdagen gesloten."
       }
     },
     {
@@ -3574,7 +3727,8 @@
         "fr": "Lun.–ven. 8 h–18 h ; fermé le week-end et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h; cerrado los fines de semana y festivos.",
         "it": "Lun–ven 8:00–18:00; chiuso nei weekend e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00; fechado aos fins de semana e feriados."
+        "pt": "Segunda a sexta 8h00–18h00; fechado aos fins de semana e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur; weekend en feestdagen gesloten."
       }
     },
     {
@@ -3595,7 +3749,8 @@
         "fr": "Lun.–ven. 8 h–18 h ; fermé le week-end et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h; cerrado los fines de semana y festivos.",
         "it": "Lun–ven 8:00–18:00; chiuso nei weekend e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00; fechado aos fins de semana e feriados."
+        "pt": "Segunda a sexta 8h00–18h00; fechado aos fins de semana e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur; weekend en feestdagen gesloten."
       }
     },
     {
@@ -3616,7 +3771,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–17 h ; fermé le dimanche et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–17:00 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–17:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–17h00; fechado ao domingo e feriados."
+        "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–17h00; fechado ao domingo e feriados.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–17.00 uur; zondag en feestdagen gesloten."
       }
     },
     {
@@ -3637,7 +3793,8 @@
         "fr": "Lun.–ven. 7 h–20 h, sam. 8 h–18 h ; fermé les jours fériés. Urgences : AEC Woolloongabba 07 3456 0500.",
         "es": "Lun–vie 7:00–20:00 h, sáb 8:00–18:00 h; cerrado los festivos. Urgencias: AEC Woolloongabba 07 3456 0500.",
         "it": "Lun–ven 7:00–20:00, sab 8:00–18:00; chiuso nei festivi. Emergenze: AEC Woolloongabba 07 3456 0500.",
-        "pt": "Segunda a sexta 7h00–20h00, sábado 8h00–18h00; fechado aos feriados. Urgências: AEC Woolloongabba 07 3456 0500."
+        "pt": "Segunda a sexta 7h00–20h00, sábado 8h00–18h00; fechado aos feriados. Urgências: AEC Woolloongabba 07 3456 0500.",
+        "nl": "maandag–vrijdag 7.00–20.00 uur, zaterdag 8.00–18.00 uur; op feestdagen gesloten. Spoed: AEC Woolloongabba 07 3456 0500."
       }
     },
     {
@@ -3658,7 +3815,8 @@
         "fr": "Lun.–ven. 7 h 30–18 h, sam. 8 h–13 h.",
         "es": "Lun–vie 7:30–18:00 h, sáb 8:00–13:00 h.",
         "it": "Lun–ven 7:30–18:00, sab 8:00–13:00.",
-        "pt": "Segunda a sexta 7h30–18h00, sábado 8h00–13h00."
+        "pt": "Segunda a sexta 7h30–18h00, sábado 8h00–13h00.",
+        "nl": "maandag–vrijdag 7.30–18.00 uur, zaterdag 8.00–13.00 uur."
       }
     },
     {
@@ -3679,7 +3837,8 @@
         "fr": "Lun.–ven. 7 h 30–18 h 30, sam. 8 h–15 h.",
         "es": "Lun–vie 7:30–18:30 h, sáb 8:00–15:00 h.",
         "it": "Lun–ven 7:30–18:30, sab 8:00–15:00.",
-        "pt": "Segunda a sexta 7h30–18h30, sábado 8h00–15h00."
+        "pt": "Segunda a sexta 7h30–18h30, sábado 8h00–15h00.",
+        "nl": "maandag–vrijdag 7.30–18.30 uur, zaterdag 8.00–15.00 uur."
       }
     },
     {
@@ -3700,7 +3859,8 @@
         "fr": "Lun.–ven. 7 h–18 h, sam. 8 h–17 h.",
         "es": "Lun–vie 7:00–18:00 h, sáb 8:00–17:00 h.",
         "it": "Lun–ven 7:00–18:00, sab 8:00–17:00.",
-        "pt": "Segunda a sexta 7h00–18h00, sábado 8h00–17h00."
+        "pt": "Segunda a sexta 7h00–18h00, sábado 8h00–17h00.",
+        "nl": "maandag–vrijdag 7.00–18.00 uur, zaterdag 8.00–17.00 uur."
       }
     },
     {
@@ -3721,7 +3881,8 @@
         "fr": "Lun.–ven. 7 h 30–20 h, sam. 7 h 30–17 h.",
         "es": "Lun–vie 7:30–20:00 h, sáb 7:30–17:00 h.",
         "it": "Lun–ven 7:30–20:00, sab 7:30–17:00.",
-        "pt": "Segunda a sexta, 7h30–20h00; sábado, 7h30–17h00."
+        "pt": "Segunda a sexta, 7h30–20h00; sábado, 7h30–17h00.",
+        "nl": "maandag–vrijdag 7.30–20.00 uur, zaterdag 7.30–17.00 uur."
       }
     },
     {
@@ -3742,7 +3903,8 @@
         "fr": "Lun.–ven. 7 h 30–19 h, sam. 8 h 30–16 h.",
         "es": "Lun–vie 7:30–19:00 h, sáb 8:30–16:00 h.",
         "it": "Lun–ven 7:30–19:00, sab 8:30–16:00.",
-        "pt": "Segunda a sexta, 7h30–19h00; sábado, 8h30–16h00."
+        "pt": "Segunda a sexta, 7h30–19h00; sábado, 8h30–16h00.",
+        "nl": "maandag–vrijdag 7.30–19.00 uur, zaterdag 8.30–16.00 uur."
       }
     },
     {
@@ -3763,7 +3925,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–12 h.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–12:00.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–12h00."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–12h00.",
+        "nl": "maandag–vrijdag 8.00–18.00 uur, zaterdag 8.00–12.00 uur."
       }
     },
     {
@@ -3785,7 +3948,8 @@
         "fr": "Urgences ouvertes 24 h/24, 7 j/7. Consultations de médecine générale : lun.–ven. 8 h–18 h, sam. 8 h–13 h.",
         "es": "Urgencias abiertas las 24 horas, los 7 días de la semana. Clínica general lun–vie 8:00–18:00 h, sáb 8:00–13:00 h.",
         "it": "Pronto soccorso aperto 24 ore su 24, 7 giorni su 7. Ambulatorio lun–ven 8:00–18:00, sab 8:00–13:00.",
-        "pt": "Urgências abertas 24 horas por dia, 7 dias por semana. Clínica geral: segunda a sexta, 8h00–18h00; sábado, 8h00–13h00."
+        "pt": "Urgências abertas 24 horas por dia, 7 dias por semana. Clínica geral: segunda a sexta, 8h00–18h00; sábado, 8h00–13h00.",
+        "nl": "Spoed 24 uur per dag open, 7 dagen per week. Reguliere praktijk ma–vr 8.00–18.00 uur, za 8.00–13.00 uur."
       }
     },
     {
@@ -3807,7 +3971,8 @@
         "fr": "Ouvert 24 h/24, 365 j/an. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, los 365 días del año. Las urgencias no necesitan cita previa.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Per le emergenze non serve appuntamento.",
-        "pt": "Aberto 24 horas por dia, 365 dias por ano. Urgências sem marcação."
+        "pt": "Aberto 24 horas por dia, 365 dias por ano. Urgências sem marcação.",
+        "nl": "24 uur per dag open, 365 dagen per jaar. Voor spoedgevallen is geen afspraak nodig."
       }
     },
     {
@@ -3829,7 +3994,8 @@
         "fr": "Urgences pour petits animaux 24 h/24, 7 j/7. Appelez avant de vous déplacer.",
         "es": "Urgencias de animales pequeños las 24 horas, los 7 días de la semana. Llama antes de desplazarte.",
         "it": "Pronto soccorso per piccoli animali 24 ore su 24, 7 giorni su 7. Telefonare prima di partire.",
-        "pt": "Urgências de animais de pequeno porte 24 horas por dia, 7 dias por semana. Liga antes de te deslocares."
+        "pt": "Urgências de animais de pequeno porte 24 horas por dia, 7 dias por semana. Liga antes de te deslocares.",
+        "nl": "Spoedgevallen voor kleine huisdieren 24 uur per dag, 7 dagen per week. Bel vooraf voordat je op weg gaat."
       }
     },
     {
@@ -3851,7 +4017,8 @@
         "fr": "Urgences ouvertes 24 h/24, tous les jours. Soins courants et consultations spécialisées en semaine, 8 h–18 h.",
         "es": "Urgencias abiertas las 24 horas, todos los días. Atención primaria y derivaciones entre semana 8:00–18:00 h.",
         "it": "Pronto soccorso aperto 24 ore su 24, tutti i giorni. Cure primarie e visite specialistiche nei giorni feriali 8:00–18:00.",
-        "pt": "Urgências abertas 24 horas por dia, todos os dias. Cuidados primários e referenciação: segunda a sexta, 8h00–18h00."
+        "pt": "Urgências abertas 24 horas por dia, todos os dias. Cuidados primários e referenciação: segunda a sexta, 8h00–18h00.",
+        "nl": "Spoed 24 uur per dag open, elke dag. Eerstelijnszorg en verwijzingen op werkdagen 8.00–18.00 uur."
       }
     },
     {
@@ -3873,7 +4040,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, 365 j/an. Sans rendez-vous.",
         "es": "Abierto las 24 horas, los 7 días de la semana, los 365 días del año. Sin cita previa.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno. Non serve appuntamento.",
-        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano. Sem marcação."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano. Sem marcação.",
+        "nl": "24 uur per dag, 7 dagen per week, 365 dagen per jaar open. Geen afspraak nodig."
       }
     },
     {
@@ -3895,7 +4063,8 @@
         "fr": "Ouvert 24 h/24, 7 j/7, 365 j/an. Sans rendez-vous.",
         "es": "Abierto las 24 horas, los 7 días de la semana, los 365 días del año. Sin cita previa.",
         "it": "Aperto 24 ore su 24, 7 giorni su 7, 365 giorni all'anno. Non serve appuntamento.",
-        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano. Sem marcação."
+        "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano. Sem marcação.",
+        "nl": "24 uur per dag, 7 dagen per week, 365 dagen per jaar open. Geen afspraak nodig."
       }
     },
     {
@@ -3917,7 +4086,8 @@
         "fr": "Ouvert 24 h/24, 365 j/an. Urgences sans rendez-vous.",
         "es": "Abierto las 24 horas, los 365 días del año. Las urgencias no necesitan cita previa.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Per le emergenze non serve appuntamento.",
-        "pt": "Aberto 24 horas por dia, 365 dias por ano. Urgências sem marcação."
+        "pt": "Aberto 24 horas por dia, 365 dias por ano. Urgências sem marcação.",
+        "nl": "24 uur per dag open, 365 dagen per jaar. Voor spoedgevallen is geen afspraak nodig."
       }
     },
     {
@@ -3939,7 +4109,8 @@
         "fr": "Urgences 24 h/24 ; appelez immédiatement. Consultations lun.–ven. 8 h–18 h, sam. 9 h–12 h.",
         "es": "Servicio de urgencias 24 horas; llama de inmediato. Consultas lun–vie 8:00–18:00 h, sáb 9:00–12:00 h.",
         "it": "Pronto soccorso 24 ore su 24; chiamare subito. Visite lun–ven 8:00–18:00, sab 9:00–12:00.",
-        "pt": "Urgências 24 horas por dia; liga de imediato. Consultas: segunda a sexta, 8h00–18h00; sábado, 9h00–12h00."
+        "pt": "Urgências 24 horas por dia; liga de imediato. Consultas: segunda a sexta, 8h00–18h00; sábado, 9h00–12h00.",
+        "nl": "Spoeddienst 24 uur per dag; bel direct. Spreekuur ma–vr 8.00–18.00 uur, za 9.00–12.00 uur."
       }
     },
     {
@@ -3961,7 +4132,8 @@
         "fr": "Urgences ouvertes 24 h/24, 7 j/7, tous les jours de l’année, jours fériés compris.",
         "es": "Urgencias abiertas las 24 horas, los 7 días de la semana, todos los días del año, también festivos.",
         "it": "Pronto soccorso aperto 24 ore su 24, 7 giorni su 7, tutti i giorni dell'anno, festivi inclusi.",
-        "pt": "Urgências abertas 24 horas por dia, 7 dias por semana, todos os dias do ano, incluindo feriados."
+        "pt": "Urgências abertas 24 horas por dia, 7 dias por semana, todos os dias do ano, incluindo feriados.",
+        "nl": "Spoed 24 uur per dag, 7 dagen per week open, elke dag van het jaar, ook op feestdagen."
       }
     },
     {
@@ -3983,7 +4155,8 @@
         "fr": "Ouvert en dehors des heures de bureau en semaine, et 24 h/24 le week-end. Actuellement fermé au public lun.–ven. 7 h–16 h ; appelez avant de venir.",
         "es": "Abierto fuera de horario entre semana y las 24 horas los fines de semana. Actualmente cerrado al público lun–vie 7:00–16:00 h; llama antes.",
         "it": "Aperto fuori orario nei giorni feriali e 24 ore su 24 nei weekend. Al momento chiuso al pubblico lun–ven 7:00–16:00; chiamare prima.",
-        "pt": "Aberto fora do horário normal durante a semana e 24 horas por dia aos fins de semana. Atualmente encerrado ao público de segunda a sexta, 7h00–16h00; liga antes."
+        "pt": "Aberto fora do horário normal durante a semana e 24 horas por dia aos fins de semana. Atualmente encerrado ao público de segunda a sexta, 7h00–16h00; liga antes.",
+        "nl": "Open buiten kantooruren op werkdagen en 24 uur per dag in het weekend. Momenteel ma–vr 7.00–16.00 uur niet open voor publiek; bel vooraf."
       }
     },
     {
@@ -4005,7 +4178,8 @@
         "fr": "Ouvert en semaine de minuit à 8 h et de 18 h à minuit, et 24 h/24 le week-end et les jours fériés. Sans rendez-vous.",
         "es": "Abierto fuera de horario entre semana (0:00–8:00 h y 18:00–24:00 h) y las 24 horas los fines de semana y festivos. Sin cita previa.",
         "it": "Aperto fuori orario nei giorni feriali (0:00–8:00 e 18:00–24:00) e 24 ore su 24 nei weekend e nei festivi. Non serve appuntamento.",
-        "pt": "Aberto fora do horário normal durante a semana (0h00–8h00 e 18h00–24h00) e 24 horas por dia aos fins de semana e feriados. Sem marcação."
+        "pt": "Aberto fora do horário normal durante a semana (0h00–8h00 e 18h00–24h00) e 24 horas por dia aos fins de semana e feriados. Sem marcação.",
+        "nl": "Open buiten kantooruren op werkdagen (0.00–8.00 uur en 18.00–24.00 uur) en 24 uur per dag in het weekend en op feestdagen. Geen afspraak nodig."
       }
     },
     {
@@ -4027,7 +4201,8 @@
         "fr": "Urgences le week-end et les jours fériés, du vendredi 17 h au lundi 8 h. Appelez d’abord.",
         "es": "Urgencias de fines de semana y festivos, abiertas desde el viernes a las 17:00 h hasta el lunes a las 8:00 h. Llama primero.",
         "it": "Pronto soccorso nei weekend e nei festivi, aperto dal venerdì alle 17:00 al lunedì alle 8:00. Chiamare prima.",
-        "pt": "Urgências de fim de semana e feriados, abertas de sexta às 17h00 até segunda às 8h00. Liga primeiro."
+        "pt": "Urgências de fim de semana e feriados, abertas de sexta às 17h00 até segunda às 8h00. Liga primeiro.",
+        "nl": "Spoedzorg in het weekend en op feestdagen, open van vrijdag 17.00 uur tot maandag 8.00 uur. Bel eerst."
       }
     },
     {
@@ -4049,7 +4224,8 @@
         "fr": "Lun.–ven. 7 h–19 h, sam.–dim. 8 h–13 h. Urgences hors horaires pour les clients de la clinique ; ouvert 24 h/24 les jours fériés.",
         "es": "Lun–vie 7:00–19:00 h, sáb–dom 8:00–13:00 h. Urgencias fuera de horario para clientes habituales; abierto las 24 horas en festivos.",
         "it": "Lun–ven 7:00–19:00, sab–dom 8:00–13:00. Pronto soccorso fuori orario per i clienti già seguiti; aperto 24 ore su 24 nei festivi.",
-        "pt": "Segunda a sexta, 7h00–19h00; sábado e domingo, 8h00–13h00. Urgências fora do horário para clientes já registados; aberto 24 horas nos feriados."
+        "pt": "Segunda a sexta, 7h00–19h00; sábado e domingo, 8h00–13h00. Urgências fora do horário para clientes já registados; aberto 24 horas nos feriados.",
+        "nl": "ma–vr 7.00–19.00 uur, za–zo 8.00–13.00 uur. Spoedzorg buiten kantooruren voor bestaande klanten; op feestdagen 24 uur per dag open."
       }
     },
     {
@@ -4071,7 +4247,8 @@
         "fr": "Lun.–ven. 8 h–17 h 30, sam. 9 h–12 h. Urgences 24 h/24 par téléphone, au même numéro.",
         "es": "Lun–vie 8:00–17:30 h, sáb 8:00–12:00 h. Servicio de urgencias 24 horas por teléfono en el mismo número.",
         "it": "Lun–ven 8:00–17:30, sab 9:00–12:00. Pronto soccorso telefonico 24 ore su 24 allo stesso numero.",
-        "pt": "Segunda a sexta, 8h00–17h30; sábado, 9h00–12h00. Urgências 24 horas por dia por telefone, no mesmo número."
+        "pt": "Segunda a sexta, 8h00–17h30; sábado, 9h00–12h00. Urgências 24 horas por dia por telefone, no mesmo número.",
+        "nl": "ma–vr 8.00–17.30 uur, za 9.00–12.00 uur. Telefonische spoeddienst 24 uur per dag op hetzelfde nummer."
       }
     },
     {
@@ -4093,7 +4270,8 @@
         "fr": "Lun.–ven. 8 h–17 h 30, sam. 9 h–12 h, dim. urgences uniquement. Urgences 24 h/24 au même numéro.",
         "es": "Lun–vie 8:00–17:30 h, sáb 8:00–12:00 h, domingo solo urgencias. Servicio de urgencias 24 horas en el mismo número.",
         "it": "Lun–ven 8:00–17:30, sab 9:00–12:00, dom solo emergenze. Pronto soccorso 24 ore su 24 allo stesso numero.",
-        "pt": "Segunda a sexta, 8h00–17h30; sábado, 9h00–12h00; domingo, só urgências. Urgências 24 horas por dia, no mesmo número."
+        "pt": "Segunda a sexta, 8h00–17h30; sábado, 9h00–12h00; domingo, só urgências. Urgências 24 horas por dia, no mesmo número.",
+        "nl": "ma–vr 8.00–17.30 uur, za 9.00–12.00 uur, zo alleen spoedgevallen. Spoeddienst 24 uur per dag op hetzelfde nummer."
       }
     },
     {
@@ -4115,7 +4293,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–16 h, dim. et jours fériés : urgences uniquement. Service d’urgences complet hors horaires : 0428 810 596.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–16:00 h, domingos y festivos solo urgencias. Servicio completo de urgencias fuera de horario: 0428 810 596.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–16:00, dom e festivi solo emergenze. Pronto soccorso completo fuori orario: 0428 810 596.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–16h00; domingo e feriados, só urgências. Serviço completo de urgências fora do horário: 0428 810 596."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–16h00; domingo e feriados, só urgências. Serviço completo de urgências fora do horário: 0428 810 596.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.00–16.00 uur, zo en feestdagen alleen spoed. Volledige spoeddienst buiten kantooruren: 0428 810 596."
       }
     },
     {
@@ -4136,7 +4315,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–14 h, fermé le dimanche. Hors horaires : appelez la clinique, vous serez mis en relation avec la clinique de garde.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–14:00 h, domingo cerrado. Fuera de horario: llama a la clínica y te pasarán con la clínica de guardia.",
         "it": "Lun–ven 8:00–18:00, sab 9:00–14:00, dom chiuso. Fuori orario: chiamare la clinica: la chiamata viene passata alla clinica di guardia.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 9h00–14h00; domingo encerrado. Fora do horário: liga para a clínica e a chamada é reencaminhada para a clínica de serviço."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 9h00–14h00; domingo encerrado. Fora do horário: liga para a clínica e a chamada é reencaminhada para a clínica de serviço.",
+        "nl": "ma–vr 8.00–18.00 uur, za 9.00–14.00 uur, zo gesloten. Buiten kantooruren: bel de praktijk, dan word je doorverbonden met de dienstdoende praktijk."
       }
     },
     {
@@ -4158,7 +4338,8 @@
         "fr": "Lun.–ven. environ 8 h–18 h 30, sam. 8 h–14 h. Service d’urgences disponible ; appelez la clinique.",
         "es": "Lun–vie 8:00–18:30 h aprox., sáb 8:00–14:00 h. Servicio de urgencias disponible; llama a la clínica.",
         "it": "Lun–ven circa 8:00–18:30, sab 8:00–14:00. Servizio di pronto soccorso disponibile; chiamare la clinica.",
-        "pt": "Segunda a sexta, cerca de 8h00–18h30; sábado, 8h00–14h00. Serviço de urgências disponível; liga para a clínica."
+        "pt": "Segunda a sexta, cerca de 8h00–18h30; sábado, 8h00–14h00. Serviço de urgências disponível; liga para a clínica.",
+        "nl": "ma–vr circa 8.00–18.30 uur, za 8.00–14.00 uur. Spoeddienst beschikbaar; bel de praktijk."
       }
     },
     {
@@ -4179,7 +4360,8 @@
         "fr": "Lun.–ven. 8 h–19 h, sam. 9 h–13 h. Pas de permanence hors horaires ; adressez-vous à un hôpital d’urgences.",
         "es": "Lun–vie 8:00–19:00 h, sáb 9:00–13:00 h. Sin cobertura fuera de horario; acude a un hospital de urgencias.",
         "it": "Lun–ven 8:00–19:00, sab 9:00–13:00. Nessuna copertura fuori orario; rivolgersi a un ospedale di pronto soccorso.",
-        "pt": "Segunda a sexta, 8h00–19h00; sábado, 9h00–13h00. Sem urgências fora do horário; recorre a um hospital veterinário de urgências."
+        "pt": "Segunda a sexta, 8h00–19h00; sábado, 9h00–13h00. Sem urgências fora do horário; recorre a um hospital veterinário de urgências.",
+        "nl": "ma–vr 8.00–19.00 uur, za 9.00–13.00 uur. Geen dienst buiten kantooruren; ga naar een dierenziekenhuis voor spoedgevallen."
       }
     },
     {
@@ -4201,7 +4383,8 @@
         "fr": "Appelez la clinique pour connaître les horaires de consultation.",
         "es": "Llama a la clínica para consultar el horario de consultas.",
         "it": "Chiamare la clinica per gli orari delle visite.",
-        "pt": "Liga para a clínica para saberes o horário das consultas."
+        "pt": "Liga para a clínica para saberes o horário das consultas.",
+        "nl": "Bel de praktijk voor de spreekuurtijden."
       }
     },
     {
@@ -4223,7 +4406,8 @@
         "fr": "Appelez la clinique pour connaître les horaires de consultation.",
         "es": "Llama a la clínica para consultar el horario de consultas.",
         "it": "Chiamare la clinica per gli orari delle visite.",
-        "pt": "Liga para a clínica para saberes o horário das consultas."
+        "pt": "Liga para a clínica para saberes o horário das consultas.",
+        "nl": "Bel de praktijk voor de spreekuurtijden."
       }
     },
     {
@@ -4245,7 +4429,8 @@
         "fr": "Appelez la clinique pour connaître les horaires de consultation.",
         "es": "Llama a la clínica para consultar el horario de consultas.",
         "it": "Chiamare la clinica per gli orari delle visite.",
-        "pt": "Liga para a clínica para saberes o horário das consultas."
+        "pt": "Liga para a clínica para saberes o horário das consultas.",
+        "nl": "Bel de praktijk voor de spreekuurtijden."
       }
     },
     {
@@ -4267,7 +4452,8 @@
         "fr": "Appelez la clinique pour connaître les horaires de consultation.",
         "es": "Llama a la clínica para consultar el horario de consultas.",
         "it": "Chiamare la clinica per gli orari delle visite.",
-        "pt": "Liga para a clínica para saberes o horário das consultas."
+        "pt": "Liga para a clínica para saberes o horário das consultas.",
+        "nl": "Bel de praktijk voor de spreekuurtijden."
       }
     },
     {
@@ -4289,7 +4475,8 @@
         "fr": "Lun.–ven. 8 h 30–17 h 30, sam. 8 h 30–11 h 30. Urgences hors horaires ; appelez avant de venir.",
         "es": "Lun–vie 8:30–17:30 h, sáb 8:30–11:30 h. Servicio de urgencias fuera de horario; llama antes de acudir.",
         "it": "Lun–ven 8:30–17:30, sab 8:30–11:30. Pronto soccorso fuori orario; telefonare prima di venire.",
-        "pt": "Segunda a sexta, 8h30–17h30; sábado, 8h30–11h30. Urgências fora do horário; liga antes de vires."
+        "pt": "Segunda a sexta, 8h30–17h30; sábado, 8h30–11h30. Urgências fora do horário; liga antes de vires.",
+        "nl": "ma–vr 8.30–17.30 uur, za 8.30–11.30 uur. Spoeddienst buiten kantooruren; bel voordat je komt."
       }
     },
     {
@@ -4311,7 +4498,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–17 h.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–17:00 h.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–17:00.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–17h00."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–17h00.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.00–17.00 uur."
       }
     },
     {
@@ -4333,7 +4521,8 @@
         "fr": "Lun.–mer. et ven. 8 h 30–17 h 30, jeu. 8 h 30–19 h, sam. 8 h 30–14 h 30.",
         "es": "Lun–mié y vie 8:30–17:30 h, jue 8:30–19:00 h, sáb 8:30–14:30 h.",
         "it": "Lun–mer e ven 8:30–17:30, gio 8:30–19:00, sab 8:30–14:30.",
-        "pt": "Segunda a quarta e sexta, 8h30–17h30; quinta, 8h30–19h00; sábado, 8h30–14h30."
+        "pt": "Segunda a quarta e sexta, 8h30–17h30; quinta, 8h30–19h00; sábado, 8h30–14h30.",
+        "nl": "ma–wo en vr 8.30–17.30 uur, do 8.30–19.00 uur, za 8.30–14.30 uur."
       }
     },
     {
@@ -4355,7 +4544,8 @@
         "fr": "Lun.–ven. 8 h–19 h, sam. 9 h–12 h.",
         "es": "Lun–vie 8:00–19:00 h, sáb 9:00–12:00 h.",
         "it": "Lun–ven 8:00–19:00, sab 9:00–12:00.",
-        "pt": "Segunda a sexta, 8h00–19h00; sábado, 9h00–12h00."
+        "pt": "Segunda a sexta, 8h00–19h00; sábado, 9h00–12h00.",
+        "nl": "ma–vr 8.00–19.00 uur, za 9.00–12.00 uur."
       }
     },
     {
@@ -4377,7 +4567,8 @@
         "fr": "Lun.–mer. et ven. 8 h–18 h 30, jeu. 8 h–17 h 30, sam. 8 h–15 h.",
         "es": "Lun–mié y vie 8:00–18:30 h, jue 8:00–17:30 h, sáb 8:00–15:00 h.",
         "it": "Lun–mer e ven 8:00–18:30, gio 8:00–17:30, sab 8:00–15:00.",
-        "pt": "Segunda a quarta e sexta, 8h00–18h30; quinta, 8h00–17h30; sábado, 8h00–15h00."
+        "pt": "Segunda a quarta e sexta, 8h00–18h30; quinta, 8h00–17h30; sábado, 8h00–15h00.",
+        "nl": "ma–wo en vr 8.00–18.30 uur, do 8.00–17.30 uur, za 8.00–15.00 uur."
       }
     },
     {
@@ -4399,7 +4590,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h 30–12 h, fermé le dimanche.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:30–12:00 h, domingo cerrado.",
         "it": "Lun–ven 8:00–18:00, sab 8:30–12:00, dom chiuso.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h30–12h00; domingo encerrado."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h30–12h00; domingo encerrado.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.30–12.00 uur, zo gesloten."
       }
     },
     {
@@ -4421,7 +4613,8 @@
         "fr": "Ouvert en soirée, la nuit et le week-end ; appelez avant de venir, les horaires pouvant changer au dernier moment.",
         "es": "Abierto fuera de horario y fines de semana; llama antes, ya que el horario puede cambiar con poco aviso.",
         "it": "Aperto fuori orario e nei weekend; telefonare prima perché gli orari possono cambiare con poco preavviso.",
-        "pt": "Aberto fora do horário normal e aos fins de semana; liga antes, pois o horário pode mudar em cima da hora."
+        "pt": "Aberto fora do horário normal e aos fins de semana; liga antes, pois o horário pode mudar em cima da hora.",
+        "nl": "Open buiten kantooruren en in het weekend; bel vooraf, want de tijden kunnen op korte termijn wijzigen."
       }
     },
     {
@@ -4443,7 +4636,8 @@
         "fr": "Lun.–ven. 8 h–18 h ; fermé le week-end et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h; cerrado los fines de semana y festivos.",
         "it": "Lun–ven 8:00–18:00; chiuso nei weekend e nei festivi.",
-        "pt": "Segunda a sexta, 8h00–18h00; encerrado aos fins de semana e feriados."
+        "pt": "Segunda a sexta, 8h00–18h00; encerrado aos fins de semana e feriados.",
+        "nl": "ma–vr 8.00–18.00 uur; weekend en feestdagen gesloten."
       }
     },
     {
@@ -4465,7 +4659,8 @@
         "fr": "Lun.–ven. 8 h–18 h ; fermé le week-end et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h; cerrado los fines de semana y festivos.",
         "it": "Lun–ven 8:00–18:00; chiuso nei weekend e nei festivi.",
-        "pt": "Segunda a sexta, 8h00–18h00; encerrado aos fins de semana e feriados."
+        "pt": "Segunda a sexta, 8h00–18h00; encerrado aos fins de semana e feriados.",
+        "nl": "ma–vr 8.00–18.00 uur; weekend en feestdagen gesloten."
       }
     },
     {
@@ -4487,7 +4682,8 @@
         "fr": "Lun.–ven. 7 h 30–18 h, sam. 8 h 30–13 h ; fermé le dimanche et les jours fériés.",
         "es": "Lun–vie 7:30–18:00 h, sáb 8:30–13:00 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 7:30–18:00, sab 8:30–13:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta, 7h30–18h00; sábado, 8h30–13h00; encerrado ao domingo e feriados."
+        "pt": "Segunda a sexta, 7h30–18h00; sábado, 8h30–13h00; encerrado ao domingo e feriados.",
+        "nl": "ma–vr 7.30–18.00 uur, za 8.30–13.00 uur; zo en feestdagen gesloten."
       }
     },
     {
@@ -4509,7 +4705,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–17 h ; fermé le dimanche et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–17:00 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–17:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–17h00; encerrado ao domingo e feriados."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–17h00; encerrado ao domingo e feriados.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.00–17.00 uur; zo en feestdagen gesloten."
       }
     },
     {
@@ -4531,7 +4728,8 @@
         "fr": "Lun.–ven. 8 h–18 h ; fermé le week-end et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h; cerrado los fines de semana y festivos.",
         "it": "Lun–ven 8:00–18:00; chiuso nei weekend e nei festivi.",
-        "pt": "Segunda a sexta, 8h00–18h00; encerrado aos fins de semana e feriados."
+        "pt": "Segunda a sexta, 8h00–18h00; encerrado aos fins de semana e feriados.",
+        "nl": "ma–vr 8.00–18.00 uur; weekend en feestdagen gesloten."
       }
     },
     {
@@ -4553,7 +4751,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–12 h ; fermé le dimanche et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–12:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–12h00; encerrado ao domingo e feriados."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–12h00; encerrado ao domingo e feriados.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.00–12.00 uur; zo en feestdagen gesloten."
       }
     },
     {
@@ -4575,7 +4774,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–16 h 30 ; fermé le dimanche et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–16:30 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–16:30; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–16h30; encerrado ao domingo e feriados."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–16h30; encerrado ao domingo e feriados.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.00–16.30 uur; zo en feestdagen gesloten."
       }
     },
     {
@@ -4597,7 +4797,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–17 h ; fermé le dimanche et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–17:00 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00, sab 8:00–17:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–17h00; encerrado ao domingo e feriados."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h00–17h00; encerrado ao domingo e feriados.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.00–17.00 uur; zo en feestdagen gesloten."
       }
     },
     {
@@ -4619,7 +4820,8 @@
         "fr": "Lun.–ven. environ 8 h 30–18 h 30 (variable le mardi) ; fermé le week-end et les jours fériés. Pas de service hors horaires ; adressez-vous à un hôpital d’urgences.",
         "es": "Lun–vie 8:30–18:30 h aprox. (el martes varía); cerrado los fines de semana y festivos. Sin servicio fuera de horario; acude a un hospital de urgencias.",
         "it": "Lun–ven circa 8:30–18:30 (il martedì varia); chiuso nei weekend e nei festivi. Nessun servizio fuori orario; rivolgersi a un ospedale di pronto soccorso.",
-        "pt": "Segunda a sexta, cerca de 8h30–18h30 (à terça varia); encerrado aos fins de semana e feriados. Sem serviço fora do horário; recorre a um hospital veterinário de urgências."
+        "pt": "Segunda a sexta, cerca de 8h30–18h30 (à terça varia); encerrado aos fins de semana e feriados. Sem serviço fora do horário; recorre a um hospital veterinário de urgências.",
+        "nl": "ma–vr circa 8.30–18.30 uur (di wisselend); weekend en feestdagen gesloten. Geen dienst buiten kantooruren; ga naar een dierenziekenhuis voor spoedgevallen."
       }
     },
     {
@@ -4641,7 +4843,8 @@
         "fr": "Appelez pour connaître les horaires. Du lundi au jeudi, appelez la clinique pour un premier tri ; du vendredi soir au lundi matin, adressez-vous à l’Animal Emergency Hospital Launceston (03 6310 8499).",
         "es": "Llama para consultar el horario. Entre semana, de lunes a jueves, llama a la clínica para el triaje; de viernes por la tarde a lunes por la mañana acude a Animal Emergency Hospital Launceston (03 6310 8499).",
         "it": "Chiamare per gli orari di apertura. Da lunedì a giovedì chiamare la clinica per il triage; dal venerdì sera al lunedì mattina rivolgersi all'Animal Emergency Hospital Launceston (03 6310 8499).",
-        "pt": "Liga para saberes o horário. De segunda a quinta, liga para a clínica para triagem; de sexta à noite até segunda de manhã, recorre ao Animal Emergency Hospital Launceston (03 6310 8499)."
+        "pt": "Liga para saberes o horário. De segunda a quinta, liga para a clínica para triagem; de sexta à noite até segunda de manhã, recorre ao Animal Emergency Hospital Launceston (03 6310 8499).",
+        "nl": "Bel voor de openingstijden. Ma–do: bel de praktijk voor triage; van vrijdagavond tot maandagochtend: Animal Emergency Hospital Launceston (03 6310 8499)."
       }
     },
     {
@@ -4662,7 +4865,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–14 h. Hors horaires : Animal Emergency Service Hobart 1300 302 912.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–14:00 h. Fuera de horario: Animal Emergency Service Hobart 1300 302 912.",
         "it": "Lun–ven 8:00–18:00, sab 9:00–14:00. Fuori orario: Animal Emergency Service Hobart 1300 302 912.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 9h00–14h00. Fora do horário: Animal Emergency Service Hobart 1300 302 912."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 9h00–14h00. Fora do horário: Animal Emergency Service Hobart 1300 302 912.",
+        "nl": "ma–vr 8.00–18.00 uur, za 9.00–14.00 uur. Buiten kantooruren: Animal Emergency Service Hobart 1300 302 912."
       }
     },
     {
@@ -4684,7 +4888,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h 30–12 h 30, fermé le dimanche. Urgences hors horaires : 1300 302 912.",
         "es": "Lun–vie 8:00–18:00 h, sáb 8:30–12:30 h, domingo cerrado. Urgencias fuera de horario: 1300 302 912.",
         "it": "Lun–ven 8:00–18:00, sab 8:30–12:30, dom chiuso. Emergenze fuori orario: 1300 302 912.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h30–12h30; domingo encerrado. Urgências fora do horário: 1300 302 912."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 8h30–12h30; domingo encerrado. Urgências fora do horário: 1300 302 912.",
+        "nl": "ma–vr 8.00–18.00 uur, za 8.30–12.30 uur, zo gesloten. Spoed buiten kantooruren: 1300 302 912."
       }
     },
     {
@@ -4706,7 +4911,8 @@
         "fr": "Lun.–ven. 8 h–18 h 30, sam. 9 h–13 h.",
         "es": "Lun–vie 8:00–18:30 h, sáb 9:00–13:00 h.",
         "it": "Lun–ven 8:00–18:30, sab 9:00–13:00.",
-        "pt": "Segunda a sexta, 8h00–18h30; sábado, 9h00–13h00."
+        "pt": "Segunda a sexta, 8h00–18h30; sábado, 9h00–13h00.",
+        "nl": "ma–vr 8.00–18.30 uur, za 9.00–13.00 uur."
       }
     },
     {
@@ -4727,7 +4933,8 @@
         "fr": "Lun.–ven. 8 h–18 h, sam. 9 h–13 h ; fermé le dimanche et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–13:00 h; cerrado los domingos y festivos.",
         "it": "Lun–ven 8:00–18:00, sab 9:00–13:00; chiuso la domenica e nei festivi.",
-        "pt": "Segunda a sexta, 8h00–18h00; sábado, 9h00–13h00; encerrado ao domingo e feriados."
+        "pt": "Segunda a sexta, 8h00–18h00; sábado, 9h00–13h00; encerrado ao domingo e feriados.",
+        "nl": "ma–vr 8.00–18.00 uur, za 9.00–13.00 uur; zo en feestdagen gesloten."
       }
     },
     {
@@ -4748,7 +4955,8 @@
         "fr": "Lun.–ven. 8 h–18 h ; fermé le week-end et les jours fériés.",
         "es": "Lun–vie 8:00–18:00 h; cerrado los fines de semana y festivos.",
         "it": "Lun–ven 8:00–18:00; chiuso nei weekend e nei festivi.",
-        "pt": "Segunda a sexta, 8h00–18h00; encerrado aos fins de semana e feriados."
+        "pt": "Segunda a sexta, 8h00–18h00; encerrado aos fins de semana e feriados.",
+        "nl": "ma–vr 8.00–18.00 uur; weekend en feestdagen gesloten."
       }
     },
     {
@@ -4770,7 +4978,8 @@
         "fr": "Lun.–ven. 9 h–17 h ; fermé le week-end et les jours fériés.",
         "es": "Lun–vie 9:00–17:00 h; cerrado los fines de semana y festivos.",
         "it": "Lun–ven 9:00–17:00; chiuso nei weekend e nei festivi.",
-        "pt": "Segunda a sexta, 9h00–17h00; encerrado aos fins de semana e feriados."
+        "pt": "Segunda a sexta, 9h00–17h00; encerrado aos fins de semana e feriados.",
+        "nl": "ma–vr 9.00–17.00 uur; weekend en feestdagen gesloten."
       }
     },
     {
@@ -4792,7 +5001,8 @@
         "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–14 h. Pas de service hors horaires à l’hôpital.",
         "es": "Lun–vie 8:00–19:00 h, sáb 8:00–14:00 h. El hospital no tiene servicio fuera de horario.",
         "it": "Lun–ven 8:00–19:00, sab 8:00–14:00. Nessun servizio fuori orario in ospedale.",
-        "pt": "Segunda a sexta, 8h00–19h00; sábado, 8h00–14h00. Sem serviço fora do horário no hospital."
+        "pt": "Segunda a sexta, 8h00–19h00; sábado, 8h00–14h00. Sem serviço fora do horário no hospital.",
+        "nl": "ma–vr 8.00–19.00 uur, za 8.00–14.00 uur. Het ziekenhuis heeft geen dienst buiten kantooruren."
       }
     },
     {
@@ -4813,7 +5023,8 @@
         "fr": "Lun.–ven. 8 h 30–18 h ; fermé le week-end et les jours fériés.",
         "es": "Lun–vie 8:30–18:00 h; cerrado los fines de semana y festivos.",
         "it": "Lun–ven 8:30–18:00; chiuso nei weekend e nei festivi.",
-        "pt": "Segunda a sexta, 8h30–18h00; encerrado aos fins de semana e feriados."
+        "pt": "Segunda a sexta, 8h30–18h00; encerrado aos fins de semana e feriados.",
+        "nl": "ma–vr 8.30–18.00 uur; weekend en feestdagen gesloten."
       }
     }
   ],

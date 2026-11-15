@@ -45,7 +45,8 @@
       "note": "Page headline 'Emergencias veterinarias 24 horas'; FAQ 'Atendemos 24/7, incluyendo dias festivos'; staff physically present 24 h. Daytime emergency line 5518-8301; 24 h pharmacy 5555-8004.",
       "quote": "Emergencias veterinarias 24 horas",
       "duty_i18n": {
-        "pt": "Urgências 24 horas por dia, 365 dias por ano, incluindo feriados: +502 2375 8700. Consultas externas 7h00–18h00; horário de urgências a partir das 18h00. Ambulância só durante o dia."
+        "pt": "Urgências 24 horas por dia, 365 dias por ano, incluindo feriados: +502 2375 8700. Consultas externas 7h00–18h00; horário de urgências a partir das 18h00. Ambulância só durante o dia.",
+        "nl": "Spoedeisende zorg 24 uur per dag, 365 dagen per jaar, ook op feestdagen: +502 2375 8700. Poliklinische consulten 7.00–18.00 uur; spoeddienst vanaf 18.00 uur. Ambulance alleen overdag."
       }
     },
     {
@@ -64,7 +65,8 @@
       "note": "Page title 'Emergencias Veterinarias 24 Horas en Zona 10 | VETMAS'; text 'Atencion de urgencias veterinarias a cualquier hora'. Address on page is Zona 7 though the title says Zona 10; the Zona 16 (aves) page also does not give 24 h. No opening hours published.",
       "quote": "Emergencias Veterinarias 24 Horas en Zona 10, Guatemala",
       "duty_i18n": {
-        "pt": "Casos veterinários urgentes atendidos a qualquer hora. Telefone/WhatsApp +502 4363 4958, também +502 2394 9324. Liga para confirmar."
+        "pt": "Casos veterinários urgentes atendidos a qualquer hora. Telefone/WhatsApp +502 4363 4958, também +502 2394 9324. Liga para confirmar.",
+        "nl": "Spoedgevallen worden op elk uur gezien. Telefoon/WhatsApp +502 4363 4958, ook +502 2394 9324. Bel om te bevestigen."
       }
     },
     {
@@ -82,7 +84,8 @@
       "note": "Only source is the Vet IT SOS list (third-party page); the hospital's own site was not found. Name on the list contains '24/7'. Pharmacy 7:00-19:00. Verify in independent check.",
       "quote": "Hospital de Mascotas Mariscal 24/7",
       "duty_i18n": {
-        "pt": "Indicado como 24 h/24, 7 dias por semana, com serviço de urgências. Liga antes: +502 5480 8888."
+        "pt": "Indicado como 24 h/24, 7 dias por semana, com serviço de urgências. Liga antes: +502 5480 8888.",
+        "nl": "Vermeld als 24/7 met spoedzorg. Bel vooraf: +502 5480 8888."
       }
     },
     {
@@ -100,7 +103,8 @@
       "note": "Only source is the Vet IT SOS list (third-party page); own site not found. Text 'Emergencias 24/7'. Verify in independent check.",
       "quote": "Emergencias 24/7",
       "duty_i18n": {
-        "pt": "Serviço de urgências indicado como 24 h/24, 7 dias por semana. Liga antes: +502 2215 2777."
+        "pt": "Serviço de urgências indicado como 24 h/24, 7 dias por semana. Liga antes: +502 2215 2777.",
+        "nl": "Spoeddienst vermeld als 24/7. Bel vooraf: +502 2215 2777."
       }
     },
     {
@@ -118,7 +122,8 @@
       "checked": "2026-11-13",
       "note": "No 24 h wording.",
       "duty_i18n": {
-        "pt": "Aberto todos os dias 7h00–19h00; urgências atendidas sem marcação nesse horário. WhatsApp +502 5106 4444. Para urgências noturnas, a clínica encaminha para um hospital veterinário noturno."
+        "pt": "Aberto todos os dias 7h00–19h00; urgências atendidas sem marcação nesse horário. WhatsApp +502 5106 4444. Para urgências noturnas, a clínica encaminha para um hospital veterinário noturno.",
+        "nl": "Dagelijks open 7.00–19.00 uur; spoedgevallen worden in die uren zonder afspraak gezien. WhatsApp +502 5106 4444. Bij spoed 's nachts verwijst de praktijk door naar een dierenziekenhuis met nachtdienst."
       }
     },
     {
@@ -136,7 +141,8 @@
       "checked": "2026-11-13",
       "note": "No emergency or 24 h wording.",
       "duty_i18n": {
-        "pt": "Seg–sex 8h00–17h00, sáb 7h00–14h00. WhatsApp +502 3040 8152."
+        "pt": "Seg–sex 8h00–17h00, sáb 7h00–14h00. WhatsApp +502 3040 8152.",
+        "nl": "Ma–vr 8.00–17.00 uur, za 7.00–14.00 uur. WhatsApp +502 3040 8152."
       }
     }
   ],
