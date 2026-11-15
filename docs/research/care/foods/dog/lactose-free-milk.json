@@ -1,0 +1,115 @@
+{
+  "slug": "lactose-free-milk",
+  "species": "dog",
+  "name": {
+    "en": "Lactose-free milk",
+    "sl": "Mleko brez laktoze"
+  },
+  "question": {
+    "en": "Can dogs drink lactose-free milk?",
+    "sl": "Ali lahko psi pijejo mleko brez laktoze?"
+  },
+  "url_slug": {
+    "en": "lactose-free-milk",
+    "sl": "mleko-brez-laktoze"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Only a little, and it isn't needed. Some dogs may tolerate small amounts of lactose-free milk, but dogs on a good, balanced diet don't need it, and it can still upset the stomach of dogs allergic to milk protein.",
+    "sl": "Le malo, potrebno pa ni. Nekateri psi morda prenesejo majhne količine mleka brez laktoze, a psi, ki dobivajo kakovostno, uravnoteženo hrano, ga ne potrebujejo, pri psih z alergijo na mlečne beljakovine pa lahko še vedno povzroči prebavne težave."
+  },
+  "why": {
+    "en": "Lactose-free milk has the same nutrients as regular milk but without the lactose that can cause digestive problems, and a vet hospital calls it a suitable alternative for lactose-intolerant dogs. The Australian Veterinary Association is stricter: it is not necessary for dogs on a balanced diet and can still cause stomach problems linked to milk-protein allergy, so we follow the stricter view: only a little.",
+    "sl": "Mleko brez laktoze ima enake hranilne snovi kot navadno mleko, a brez laktoze, ki lahko povzroča prebavne težave; ena veterinarska bolnišnica ga opisuje kot primerno nadomestilo za pse, ki ne prenašajo laktoze. Avstralsko veterinarsko združenje je strožje: psi na uravnoteženi prehrani ga ne potrebujejo, pri alergiji na mlečne beljakovine pa lahko še vedno povzroči prebavne težave, zato upoštevamo strožje stališče: le malo."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog gets diarrhoea, vomiting, gas or bloating after milk and it doesn't go away, contact your vet.",
+    "sl": "Če ima pes po mleku drisko, bruha, ima vetrove ali je napihnjen in to ne mine, pokličite veterinarja."
+  },
+  "serving": {
+    "en": "Start with a small amount, ideally a lactose-free milk made for dogs, and watch for tummy upset.",
+    "sl": "Začnite z malo, najbolje z mlekom brez laktoze, ki je narejeno za pse, in opazujte, ali ima pes prebavne težave."
+  },
+  "child": {
+    "en": "Dogs don't need milk to stay healthy, so ask a grown-up before sharing any with your dog.",
+    "sl": "Psi za zdravje ne potrebujejo mleka, zato vprašaj odraslega, preden psu daš kaj mleka."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is lactose-free milk better for dogs than regular milk?",
+        "sl": "Ali je mleko brez laktoze za pse boljše od navadnega?"
+      },
+      "a": {
+        "en": "It has no lactose, which can cause digestive problems, but it can still upset dogs that are allergic to milk protein.",
+        "sl": "Ne vsebuje laktoze, ki lahko povzroča prebavne težave, a pri psih z alergijo na mlečne beljakovine lahko še vedno povzroči težave."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD235",
+      "quote": "Not all dogs are completely lactose intolerant."
+    },
+    {
+      "id": "KD235",
+      "quote": "Theoretically, some dogs may tolerate small amounts of these products"
+    },
+    {
+      "id": "KD235",
+      "quote": "balanced diet these are not necessary"
+    },
+    {
+      "id": "KD235",
+      "quote": "Lactose-free milk and goat’s milk can still cause gastrointestinal problems associated with allergies to the milk protein."
+    },
+    {
+      "id": "KD235",
+      "quote": "Feeding milk is not necessary after your puppy or kitten is weaned."
+    },
+    {
+      "id": "KD236",
+      "quote": "Lactose-free milk is a suitable alternative for dogs with lactose intolerance."
+    },
+    {
+      "id": "KD236",
+      "quote": "It contains the same nutrients as regular milk but without the lactose that can cause digestive problems."
+    },
+    {
+      "id": "KD236",
+      "quote": "Always choose lactose-free milk specifically formulated for dogs to ensure it meets their dietary needs."
+    },
+    {
+      "id": "KD236",
+      "quote": "Start with a small amount and observe your dog for any signs of digestive upset."
+    },
+    {
+      "id": "KD236",
+      "quote": "If you decide to give your dog milk, watch for signs of lactose intolerance, such as diarrhea, vomiting, gas, and bloating."
+    },
+    {
+      "id": "KD236",
+      "quote": "These symptoms can appear within hours of consumption and may require veterinary attention if they persist."
+    }
+  ],
+  "related": [
+    "milk",
+    "yogurt",
+    "cheese",
+    "water"
+  ],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d20bdc22254d59eeb10f5ae6cbbad9bcbf8af7f12a5160f45977a3ecb4504a07"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a778b4f96c9865925fc34102dc306596ad0eab61ce55affd829ddf81342a6c7a"
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "slug": "water",
+  "species": "dog",
+  "name": {
+    "en": "Water",
+    "sl": "Voda"
+  },
+  "question": {
+    "en": "Do dogs need fresh water all the time?",
+    "sl": "Ali psi potrebujejo ves čas svežo vodo?"
+  },
+  "url_slug": {
+    "en": "water",
+    "sl": "voda"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes. Dogs need fresh, clean drinking water available at all times. Wash the water bowl often, and remember that dogs may need more water in hot weather or when they exercise more. Never restrict your dog's water.",
+    "sl": "Da. Psi morajo imeti ves čas na voljo svežo, čisto pitno vodo. Posodo za vodo pogosto umivajte in pomnite, da pes v vročem vremenu ali ob več gibanja morda potrebuje več vode. Psu vode nikoli ne omejujte."
+  },
+  "why": {
+    "en": "Water is essential for all life. How much a dog drinks can change with the weather, temperature and exercise. A sudden increase in drinking can mean something is wrong. Salt water is different: when dogs drink salt water, it can be dangerous for them.",
+    "sl": "Voda je nujna za vse življenje. Koliko pes pije, se lahko spreminja z vremenom, temperaturo in gibanjem. Nenadoma večje pitje lahko pomeni, da je nekaj narobe. S slano vodo je drugače: če psi pijejo slano vodo, je to zanje lahko nevarno."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If you think your dog is drinking or peeing more than normal, contact your vet. If your dog shows signs of dehydration, take them to the vet immediately.",
+    "sl": "Če mislite, da pes pije ali lula več kot običajno, pokličite veterinarja. Če ima pes znake dehidracije, ga takoj odpeljite k veterinarju."
+  },
+  "serving": {
+    "en": "Fresh, clean water in a frequently washed bowl, available all the time, including outdoors, in hot weather and at the beach.",
+    "sl": "Sveža, čista voda v pogosto umiti posodi, ves čas na voljo, tudi zunaj, v vročini in na plaži."
+  },
+  "child": {
+    "en": "Dogs need fresh water all day long. Checking that the water bowl is full and clean is a great way to help!",
+    "sl": "Psi potrebujejo svežo vodo ves dan. Če preveriš, ali je posoda za vodo polna in čista, zelo pomagaš!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "How can I tell if my dog is dehydrated?",
+        "sl": "Kako prepoznam, da je pes dehidriran?"
+      },
+      "a": {
+        "en": "Signs include loss of skin elasticity, loss of appetite, low energy, panting, sunken dry-looking eyes, a dry nose, dry sticky gums and thick saliva. Take your dog to the vet immediately if you see them.",
+        "sl": "Znaki so manj prožna koža, izguba apetita, malo energije, sopihanje, udrte in suhe oči, suh smrček, suhe in lepljive dlesni ter gosta slina. Če jih opazite, psa takoj odpeljite k veterinarju."
+      }
+    },
+    {
+      "q": {
+        "en": "Should I limit my dog's water if they drink a lot?",
+        "sl": "Ali naj psu omejim vodo, če veliko pije?"
+      },
+      "a": {
+        "en": "No. Never restrict your dog's water; always let them have fresh drinking water, and contact your vet if they drink more than normal.",
+        "sl": "Ne. Psu vode nikoli ne omejujte; vedno naj ima na voljo svežo pitno vodo, če pa pije več kot običajno, pokličite veterinarja."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs drink sea water?",
+        "sl": "Ali lahko psi pijejo morsko vodo?"
+      },
+      "a": {
+        "en": "It's best not to: salt water can be dangerous for dogs. At the beach, make sure your dog always has access to fresh water.",
+        "sl": "Raje ne: slana voda je za pse lahko nevarna. Na plaži poskrbite, da ima pes vedno na voljo svežo vodo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD230",
+      "quote": "Water is essential for all life, and fresh, clean drinking water should always be available to your dog."
+    },
+    {
+      "id": "KD230",
+      "quote": "Changes in drinking behavior (e.g., sudden increase in water consumption) can indicate something is wrong"
+    },
+    {
+      "id": "KD231",
+      "quote": "Clean, fresh water should be available at all times, and be sure to wash food and water dishes frequently."
+    },
+    {
+      "id": "KD231",
+      "quote": "be sure she has access to shade and plenty of cool water in hot weather"
+    },
+    {
+      "id": "KD232",
+      "quote": "Provide them with a constant supply of clean, clear water at all times."
+    },
+    {
+      "id": "KD232",
+      "quote": "Depending on the weather and temperature, they may need more water on some days than others."
+    },
+    {
+      "id": "KD232",
+      "quote": "including when you take them outside"
+    },
+    {
+      "id": "KD232",
+      "quote": "Loss of skin elasticity"
+    },
+    {
+      "id": "KD232",
+      "quote": "Loss of appetite"
+    },
+    {
+      "id": "KD232",
+      "quote": "Reduced energy levels and lethargy"
+    },
+    {
+      "id": "KD232",
+      "quote": "Panting"
+    },
+    {
+      "id": "KD232",
+      "quote": "Sunken, dry-looking eyes"
+    },
+    {
+      "id": "KD232",
+      "quote": "Dry nose"
+    },
+    {
+      "id": "KD232",
+      "quote": "Dry, sticky gums"
+    },
+    {
+      "id": "KD232",
+      "quote": "Thick saliva"
+    },
+    {
+      "id": "KD232",
+      "quote": "take them to the vet immediately"
+    },
+    {
+      "id": "KD233",
+      "quote": "Never restrict your dog’s water to control the problem and always allow them access to fresh drinking water."
+    },
+    {
+      "id": "KD233",
+      "quote": "If you think your dog is drinking or peeing more than normal, contact your vet."
+    },
+    {
+      "id": "KD233",
+      "quote": "Hot weather"
+    },
+    {
+      "id": "KD233",
+      "quote": "Doing more exercise"
+    },
+    {
+      "id": "KD234",
+      "quote": "But when dogs drink salt water, it can be dangerous for them, and it can even be deadly."
+    },
+    {
+      "id": "KD234",
+      "quote": "The best thing you can do to keep your dog safe at the beach is to make sure they always have access to fresh water."
+    }
+  ],
+  "related": [
+    "salt",
+    "broth",
+    "lactose-free-milk"
+  ],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6869db6228fcde2e8eb39e1a1752a84b7768280fc620c3b379ea8eb70e06962a"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4dac23535e6318aadfe6582dc61ac9df7039904c04b6876b08d1051333cdb00f"
+    }
+  }
+}

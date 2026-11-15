@@ -1,0 +1,94 @@
+{
+  "slug": "lentils",
+  "species": "dog",
+  "name": {
+    "en": "Lentils",
+    "sl": "Leča"
+  },
+  "question": {
+    "en": "Can dogs eat lentils?",
+    "sl": "Ali lahko psi jedo lečo?"
+  },
+  "url_slug": {
+    "en": "lentils",
+    "sl": "leca"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, if they are cooked. Lentils are a pulse, like beans, and dogs can have legumes that have been soaked first and then cooked. Some dogs find legumes hard to digest, so introduce cooked lentils slowly.",
+    "sl": "Da, če je kuhana. Leča je stročnica, tako kot fižol, psi pa lahko jedo stročnice, ki so bile najprej namočene in nato kuhane. Nekateri psi stročnice težko prebavijo, zato kuhano lečo uvajajte počasi."
+  },
+  "why": {
+    "en": "Legumes such as lentils are a good source of fibre and protein for dogs. However, some dogs have trouble digesting them, which is why they should be cooked well and added to the diet slowly.",
+    "sl": "Stročnice, kot je leča, so za pse dober vir vlaknin in beljakovin. Nekateri psi pa jih težko prebavijo, zato jih je treba dobro skuhati in jih v prehrano uvajati počasi."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a little well-cooked lentil and introduce it slowly, because some dogs have trouble digesting legumes.",
+    "sl": "Začnite z malo dobro kuhane leče in jo uvajajte počasi, ker nekateri psi stročnice težko prebavijo."
+  },
+  "serving": {
+    "en": "Well cooked (dried lentils soaked first, then cooked), introduced slowly.",
+    "sl": "Dobro kuhana (suha leča najprej namočena, nato kuhana), uvajana počasi."
+  },
+  "child": {
+    "en": "Cooked lentils can be a little treat for dogs. A grown-up should cook them well first!",
+    "sl": "Kuhana leča je lahko majhen priboljšek za psa. Odrasel jo mora najprej dobro skuhati!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat uncooked lentils?",
+        "sl": "Ali lahko psi jedo nekuhano lečo?"
+      },
+      "a": {
+        "en": "No. Dogs can have legumes that have been soaked first and then cooked, and lentils should be cooked well.",
+        "sl": "Ne. Psi lahko jedo stročnice, ki so bile najprej namočene in nato kuhane, lečo pa je treba dobro skuhati."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD223",
+      "quote": "Legumes like beans are a good source of fibre and protein for dogs."
+    },
+    {
+      "id": "KD223",
+      "quote": "some dogs may have trouble digesting them, so they should be cooked well and introduced slowly"
+    },
+    {
+      "id": "KD223",
+      "quote": "Lentils (cooked)"
+    },
+    {
+      "id": "KD138",
+      "quote": "When removed from the pod, a pea is a pulse, just like beans and lentils."
+    },
+    {
+      "id": "KD220",
+      "quote": "Dogs can have beans or legumes that have been soaked first and then cooked."
+    },
+    {
+      "id": "KD220",
+      "quote": "Dogs can have beans as a treat."
+    }
+  ],
+  "related": [
+    "beans",
+    "chickpeas",
+    "peas"
+  ],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c51a17eed7028fb5338f6eb39e8d40668294bcc5ff421e2fe78540b499014b12"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5fe93ed2400629a187883fd8c2a1c4018201c11163786195be9ca1aba634991c"
+    }
+  }
+}
