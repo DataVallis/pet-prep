@@ -24,7 +24,7 @@ Obstoječe (15. 11. 2026):
 ```
 PetPrep/                              id 1WyxEZRV_TGWn8ivuqnGyJF8SGGLn_I1S
 ├── (poslovni Google Docs: MVP, Go To Market, Upsales, …)
-├── spletna-prodaja/                  id 1TCvBQlnBjszvM2f46f5gVYeO-0xmDnqZ  (15. 11. 2026; PDF-ji za prodajo in zbiranje e-naslovov na petprep.si: 2026-11-15_povzetek-labradorec-sl_v1.pdf, 2026-11-15_summary-labrador-en_v1.pdf — vir v gitu docs/prototypes/real-cost/summary/)
+├── spletna-prodaja/                  id 1TCvBQlnBjszvM2f46f5gVYeO-0xmDnqZ  (15. 11. 2026; PDF-ji za prodajo in zbiranje e-naslovov na petprep.si: 2026-11-15_povzetek-labradorec-sl_v1.pdf in _v2.pdf, 2026-11-15_summary-labrador-en_v1.pdf — arhiv; povzetek je od 15. 11. 2026 dinamična stran, skripta je v zgodovini gita, PR #1146)
 └── CGP/                              id 1eEIo_8HNp_ZUhXep1c9QKPmQaCmigC7y
     ├── BRAND_CGP_za_agente.md
     ├── petprep-logotip-v2/           id 1kill13WF-v79KLDMFx0o-qBG9USC0hBk

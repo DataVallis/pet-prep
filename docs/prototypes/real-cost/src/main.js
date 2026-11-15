@@ -3,8 +3,6 @@ import * as CANNON from 'cannon-es';
 import { STR } from './strings.js';
 
 /* ---------- Data (every number has its origin in SOURCES in strings.js) ---------- */
-// Free Lemon Squeezy product that e-mails the PDF summary to the parent (decision T7).
-const SUMMARY_URL = 'https://petprep.lemonsqueezy.com/checkout/buy/5cb18a19-22d9-4ec7-befe-19a82e687cc5';
 const LIFE_YEARS = 13.1; // McMillan 2024 (PetPrep S54)
 const PROFILES = {
   adult: { meals: 2, walkMin: 90, walks: 2, poops: 2, trainMin: 5, takeOuts: 0, groomWeek: 1 },
@@ -300,10 +298,10 @@ function renderHud() {
   $('#hud-meals').textContent = c.meal; $('#hud-bags').textContent = c.poop; $('#hud-steps').textContent = nf(c.steps);
   $('#hud-min').textContent = c.min; $('#hud-outs').textContent = c.out;
 }
+const hours = (m) => (m >= 6000 ? `${nf(m / 60)} ${t('h')}` : m >= 60 ? `${nf(m / 60, 1)} ${t('h')}` : `${nf(m)} ${t('min')}`);
 function renderSummary(keepPile = false) {
   const days = SCALES[state.scale], x = totals(state.stage, days), isLife = state.scale === 'life';
   const row = (label, value, tag) => `<li><span>${label}<em class="tag ${tag}">${t('tag_' + tag)}</em></span><b>${value}</b></li>`;
-  const hours = (m) => (m >= 6000 ? `${nf(m / 60)} ${t('h')}` : m >= 60 ? `${nf(m / 60, 1)} ${t('h')}` : `${nf(m)} ${t('min')}`);
   let html = row(t('r_walk'), hours(x.walkMin), 'src') + row(t('r_steps'), nf(x.steps), 'rule') + row(t('r_meals'), nf(x.meals), 'src');
   if (x.takeOuts) html += row(t('r_outs'), nf(x.takeOuts), 'src');
   html += row(t('r_bags'), nf(x.poops), 'rule') + row(t('r_train'), hours(x.trainMin), 'src');
@@ -331,27 +329,70 @@ function renderCost(respawn = true) {
   clearTimeout(costTimer);
   costTimer = setTimeout(() => { clearTokens(); queueTokens([['coin', Math.max(1, conv(life) / unit)]]); }, 220);
 }
-function renderResult() {
+function promiseItems() {
   const d = totals(state.stage, 1), w = totals(state.stage, 7);
-  $('#promise').innerHTML = [
+  return [
     t('p_walk').replace('{m}', nf(d.walkMin)), t('p_meals').replace('{n}', nf(d.meals)),
     ...(d.takeOuts ? [t('p_outs').replace('{n}', nf(d.takeOuts))] : []),
     t('p_bags'), t('p_week').replace('{h}', nf((w.walkMin + w.trainMin) / 60, 1)),
     t('p_cost').replace('{c}', money(state.monthly)),
-  ].map((s) => `<li>${s}</li>`).join('');
+  ];
 }
+function renderResult() { $('#promise').innerHTML = promiseItems().map((s) => `<li>${s}</li>`).join(''); }
+/* Summary sheet (decision T8): built in the browser from the current choices, printed or saved as PDF by the
+   parent. No files, no e-mail. On petprep.si the same builder takes the breed's numbers from registry.json. */
+function renderSheet() {
+  const cols = ['day', 'week', 'year', 'life'], X = cols.map((c) => totals(state.stage, SCALES[c]));
+  const tag = (k) => `<em class="tag ${k}">${t('tag_' + k)}</em>`;
+  const row = (label, k, f) => `<tr><td>${label}${tag(k)}</td>${X.map((x, i) => `<td>${f(x, i)}</td>`).join('')}</tr>`;
+  const year = state.monthly * 12, life = state.setup + year * LIFE_YEARS;
+  const note = [state.stage === 'puppy' ? t('note_life_puppy') : t('note_life'), state.stage === 'puppy' ? t('note_puppy') : ''].filter(Boolean).join(' ');
+  $('#sheet-page').innerHTML = `
+    <header><div class="brand">${document.querySelector('header .brand').innerHTML}</div><span class="kick">${t('sheet_k')}</span></header>
+    <h1 id="sheet-h">${t('sheet_h')}</h1>
+    <p class="lede">${t(state.stage === 'puppy' ? 'stage_puppy' : 'stage_adult')}. ${t('sheet_sub')}</p>
+    <h2>${t('sheet_care')}</h2>
+    <table><thead><tr><th></th>${cols.map((c) => `<th>${t('s_' + c)}</th>`).join('')}</tr></thead><tbody>
+      ${row(t('r_walk'), 'src', (x) => hours(x.walkMin))}${row(t('r_steps'), 'rule', (x) => nf(x.steps))}${row(t('r_meals'), 'src', (x) => nf(x.meals))}
+      ${X[0].takeOuts ? row(t('r_outs'), 'src', (x) => nf(x.takeOuts)) : ''}${row(t('r_bags'), 'rule', (x) => nf(x.poops))}
+      ${row(t('r_train'), 'src', (x) => hours(x.trainMin))}${row(t('r_groom'), 'src', (x, i) => (i ? nf(x.groom) : '–'))}
+    </tbody></table>
+    <p class="small">${note}</p>
+    <h2>${t('sheet_cost')}</h2>
+    <div class="costs"><div><span>${t('monthly')}</span><b>${money(state.monthly)}</b></div><div><span>${t('setup')}</span><b>${money(state.setup)}</b></div>
+      <div><span>${t('c_year')}</span><b>${money(year)}</b></div><div><span>${t('c_life')}</span><b>${money(life, 0, 10)}</b></div></div>
+    <p class="small">${t('cost_note')} ${state.cur === 'GBP' ? '' : t('rate_note').replace('{r}', `1 £ = ${nf(RATES[state.cur], 4)} ${SYMBOL[state.cur]}`)}</p>
+    <h2>${t('sheet_promise')}</h2>
+    <p>${t('sheet_promise_p')}</p>
+    <ul class="chk">${promiseItems().map((s) => `<li>${s}</li>`).join('')}</ul>
+    <div class="sign"><div>${t('sign_child')}</div><div>${t('sign_parent')}</div><div>${t('sign_date')}</div></div>
+    <p class="small"><b>${t('src_h')}.</b> ${t('src')}</p>
+    <p class="small">${t('sheet_foot')}</p>`;
+}
+let sheetReturn = null;
+function openSheet() {
+  renderSheet(); sheetReturn = document.activeElement;
+  $('#sheet').hidden = false; document.body.classList.add('sheet-open'); $('#sheet-print').focus();
+}
+function closeSheet() { $('#sheet').hidden = true; document.body.classList.remove('sheet-open'); sheetReturn?.focus(); }
+$('#sheet-open').addEventListener('click', openSheet);
+$('#sheet-close').addEventListener('click', closeSheet);
+$('#sheet-print').addEventListener('click', () => window.print());
+$('#sheet').addEventListener('click', (e) => { if (e.target.id === 'sheet') closeSheet(); });
+addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('#sheet').hidden) closeSheet(); });
 function applyStrings() {
   document.documentElement.lang = state.lang;
   document.querySelectorAll('[data-t]').forEach((el) => { el.innerHTML = t(el.dataset.t); });
   document.querySelectorAll('[data-t-ph]').forEach((el) => { el.placeholder = t(el.dataset.tPh); });
   document.querySelectorAll('#lang button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === state.lang));
   document.querySelectorAll('#stage button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.stage === state.stage));
-  document.title = t('title'); $('#sponsor-link').href = t('sponsor_url'); $('#lead-link').href = SUMMARY_URL;
+  document.title = t('title'); $('#sponsor-link').href = t('sponsor_url');
   if (state.step === 'sum') renderSummary();
   if (state.step === 'cost') renderCost(false);
   if (state.step === 'result') renderResult();
   if (state.step === 'day') binUnit = t('legend1');
   renderBinLabel(); showInfo(openSpot);
+  if (!$('#sheet').hidden) renderSheet();
 }
 function go(step, keep = false) {
   state.step = step; document.body.dataset.step = step;
