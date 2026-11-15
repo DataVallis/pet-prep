@@ -32,7 +32,7 @@ def font_css():
 
 T = {
     "sl": dict(
-        title="Koliko dela je labradorec?", kicker="Povzetek za starše", file="petprep-povzetek-labradorec-sl.pdf",
+        title="Koliko dela je z labradorcem?", kicker="Povzetek za starše", file="petprep-povzetek-labradorec-sl.pdf",
         intro="Številke za odraslega labradorca. Preden se odločite za psa, jih preberite skupaj z otrokom.",
         care="Skrb", cols=["Dan", "Teden", "Leto", "13 let"],
         rows=["Sprehodi", "Koraki", "Obroki", "Vrečke za kakce", "Vaja", "Krtačenje"], h="h", min="min",

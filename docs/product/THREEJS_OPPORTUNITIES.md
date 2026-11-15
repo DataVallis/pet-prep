@@ -37,7 +37,7 @@ Three.js se pri PetPrepu splača **na petprep.si**, ne v aplikaciji in ne za sam
 - »Kuža na obisku« s three.js: načrtovana pot (fotografija sobe → urejanje slike → Kling) ohrani realizem.
 - Curio v 3D na domači strani: krepi zmedo med maskoto in realističnim psom v aplikaciji (odločitev 25. 10. 2026).
 
-## 4. Prototip št. 1 — »Koliko dela je labradorec?« (David: »ok daj ja«, 15. 11. 2026)
+## 4. Prototip št. 1 — »Koliko dela je z labradorcem?« (David: »ok daj ja«, 15. 11. 2026)
 
 - **Kje:** izvorna koda `docs/prototypes/real-cost/` (navodila v tamkajšnjem `README.md`); objavljen tudi kot zasebna stran Claude za Davida. Ni na petprep.si.
 - **Tehnika:** three.js 0.187.0 in cannon-es 0.20.0 (fizika), brez strežnika. SL + EN, namizje in telefon, gumbi delujejo s tipkovnico, upošteva »zmanjšaj gibanje«. Preverjeno v brskalniku brez zaslona (namizje 1360 px, telefon 390 px), ne na pravem telefonu.
@@ -69,7 +69,7 @@ Izračun za 13 let uporabi številke odraslega psa za vsa leta (poenostavitev, n
 | T1 | **Valuto izbere uporabnik: €, $ ali £.** Zneski ostanejo v funtih (valuta vira PDSA), druge valute so preračunane po **fiksnem** tečaju ECB z dne 13. 11. 2026 in označene s tildo (»~139 €«). Tečaj se ne osvežuje sam; ob prenosu na splet se zamenja ročno in datum se izpiše. |
 | T2 | **Partner je izmišljen:** logotip PetPrep in pod njim manjši napis »partner« (`petprep-partner-placeholder.svg`). To je nadomestek za prototip, ne sredstvo znamke. |
 | T3 | Vse se zapiše v repozitorij (ta dokument + izvorna koda prototipa). |
-| T4 | **Posoda mora biti razumljiva.** David: »kaj je tam v steklenem boxu? ne razumem«, »zakaj so coini napisani desno zgoraj«. Oznaka ni več v kotu zaslona, ampak je pripeta nad posodo: naslov (»Kup opravil« / »Stroški v 13 letih«), merilo (»1 žeton = 500 opravil«, »1 kovanec = 200 €«) in legenda barv žetonov (obrok, sprehod, vrečka za kakec, hitro ven, vaja). |
+| T4 | **Posoda mora biti razumljiva.** David: »kaj je tam v steklenem boxu? ne razumem«, »zakaj so coini napisani desno zgoraj«. Oznaka ni več v kotu zaslona, ampak je pripeta nad posodo: naslov (»Opravila«, do 15. 11. 2026 »Kup opravil« / »Stroški v 13 letih«), merilo (»1 žeton = 500 opravil«, »1 kovanec = 200 €«) in legenda barv žetonov (obrok, sprehod, vrečka za kakec, hitro ven, vaja). |
 | T5 | **Info točke z vsebino**, da si obiskovalec vmes kaj prebere: pet gumbov »i« v prizoru (skleda, pot, vrata, ležišče, 13 let), vsak odpre kratko dejstvo z virom. Med predvajanjem dneva so skrite. |
 | T7 | **E-naslov starša gre prek Lemon Squeezy, brez SMTP** (David 15. 11. 2026, »ok se strinjam«): enako kot brezplačen vzorec »Obljube« (WEBSITE_SALES_SPEC) — brezplačen izdelek »Povzetek za <pasmo>« v trgovini PetPrep na Lemon Squeezy. Lemon Squeezy pošlje sporočilo staršu, shrani naslov s privolitvijo in obvesti Davida. Strežnik PetPrep ne pošilja e-pošte (`MAIL_MAILER=log` ostane) in ne dobi nove tabele. **PDF »Povzetek za labradorca« je narejen 15. 11. 2026** (SL + EN, 2 strani, `docs/prototypes/real-cost/summary/`). **Izdelek v Lemon Squeezy je objavljen 15. 11. 2026** (»PetPrep Summary: How Much Work Is a Labrador? (free)«, id 1528939, Lead magnet 0 €, datoteki SL + EN) in **korak 5 prototipa ima namesto polja za e-naslov gumb** »Pošlji mi povzetek (PDF, brezplačno)« do `https://petprep.lemonsqueezy.com/checkout/buy/5cb18a19-22d9-4ec7-befe-19a82e687cc5`. **Dve omejitvi (preverjeno 15. 11. 2026):** (1) trgovina je še v **testnem načinu** (preverjanje identitete pri Lemon Squeezy »In Review«), blagajna kaže »Test mode is currently enabled« — po aktivaciji je treba izdelek prenesti v živi način in zamenjati povezavo; (2) blagajna Lemon Squeezy **nima polja za privolitev v obveščanje**, zato zgornje »shrani naslov s privolitvijo« ne drži: naslov se sme uporabiti samo za dostavo povzetka, za novice potrebujemo ločeno izrecno privolitev (odprto). |
 | T6 | **Mesto za partnerja je poziv, ne prazen okvir:** »Želite postati naš partner? Tu lahko predstavite svojo storitev in logotip …« s povezavo na stran za partnerje (`/sl/partnerji`, `/partners`), da je stran smiselna tudi, ko se povezava deli naokrog. |
@@ -82,6 +82,6 @@ Izračun za 13 let uporabi številke odraslega psa za vsa leta (poenostavitev, n
 
 ### Naslednji koraki, če David potrdi
 1. Prenos v `pet-prep-website` kot komponenta (three.js naložen šele ob odprtju strani), podatki iz `registry.json` namesto vpisanih v kodo.
-2. Stran na pasmo v registru: »Koliko dela je <pasma>?«.
+2. Stran na pasmo v registru: »Koliko dela je s <pasmo>?« (predlog s / z po pasmi).
 3. E-naslov (T7): PDF »Povzetek za <pasmo>« (številke iz koraka 3 in 4 + obljuba), brezplačen izdelek v Lemon Squeezy, v koraku 5 gumb do nakupa namesto polja za e-naslov (**narejeno za labradorca 15. 11. 2026**, trgovina še v testnem načinu). Izrecne privolitve za obveščanje blagajna Lemon Squeezy nima — rešiti ločeno, preden se naslovi uporabijo za novice.
 4. Merjenje: delež obiskov, ki pridejo do koraka 5 in pustijo e-naslov (cena stika za H4).

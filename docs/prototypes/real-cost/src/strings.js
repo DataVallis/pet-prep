@@ -1,7 +1,7 @@
 export const STR = {
   sl: {
-    title: 'Koliko dela je labradorec? — PetPrep (prototip)',
-    bin_jobs: 'Kup opravil', bin_cost: 'Stroški v 13 letih',
+    title: 'Koliko dela je z labradorcem? — PetPrep (prototip)',
+    bin_jobs: 'Opravila', bin_cost: 'Stroški v 13 letih',
     tok_meal: 'obrok', tok_walk: 'sprehod', tok_poop: 'vrečka za kakec', tok_out: 'hitro ven', tok_train: 'vaja',
     i_close: 'Zapri',
     i_bowl_h: 'Obroki', i_bowl_p: 'Odrasel pes je 2-krat na dan. Mladiček pri 2 mesecih 4-krat, od 3. do 6. meseca 3-krat.', i_bowl_s: 'Vir: register pasem PetPrep (viri o hranjenju po starosti).',
@@ -10,7 +10,7 @@ export const STR = {
     i_bed_h: 'Spanje', i_bed_p: 'Mladiček spi 15 do 20 ur na dan, odrasel pes 12 do 14 ur. Ko spi, ga ne motimo.', i_bed_s: 'Vir: The Royal Kennel Club.',
     i_life_h: '13 let', i_life_p: 'Labradorec živi približno 13 let. Vsa ta leta potrebuje sprehode, hrano in krtačenje enkrat na teden.', i_life_s: 'Vir: McMillan idr. 2024; register pasem PetPrep.',
     proto: 'Prototip',
-    intro_h: 'Koliko dela je labradorec?',
+    intro_h: 'Koliko dela je z labradorcem?',
     intro_p: 'Poglej en dan z labradorcem. Vsako opravilo pade na kup. Potem ga pomnoži na teden, leto in celo življenje.',
     stage_adult: 'Odrasel pes', stage_puppy: 'Mladiček (2 meseca)',
     start: 'Zaženi en dan', skip: 'Preskoči', drag: 'Povleci po sliki, da jo zavrtiš.',
