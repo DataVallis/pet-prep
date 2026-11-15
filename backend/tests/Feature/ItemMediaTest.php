@@ -13,6 +13,7 @@ use App\Models\Pet;
 use App\Models\PetItem;
 use App\Models\PetLook;
 use App\Models\PetMedia;
+use App\Models\PetTreatEvent;
 use App\Models\PetWish;
 use App\Models\PushNotification;
 use App\Models\User;
@@ -131,6 +132,13 @@ function imComplete(): int
     }
 
     return $done;
+}
+
+/** Answer the submitted CATALOGUE pictures only (the pet's key images / clips keep running). */
+function imCompletePictures(): void
+{
+    ItemMedia::query()->where('kind', 'picture')->where('status', 'running')->whereNotNull('request_id')->whereNull('source_url')->orderBy('id')->get()
+        ->each(fn (ItemMedia $row) => sendFalWebhook(['request_id' => $row->request_id, 'status' => 'OK', 'payload' => ['images' => [['url' => "https://v3.fal.media/files/im/{$row->request_id}.jpg"]]]])->assertOk());
 }
 
 /** Fail the running request of $row at fal (webhook ERROR, optionally fal's deterministic refusal). */
@@ -544,7 +552,7 @@ describe('pet content', function () {
             ->and(imChildState($child)->json('pet.media.items.treats.video'))->not->toBeNull();
     });
 
-    it('never repeats a refused request: next prompt variant, then gives up → shown without content, one alert', function () {
+    it('never repeats a refused request: next prompt variant, then gives up → one alert; treats stay locked (never usable without the clip)', function () {
         Queue::fake([SendItemMediaAlert::class]);
         [$parent, $child, $pet] = imFamily(null);
         PetItem::create(['pet_id' => $pet->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 10, 'acquired_at' => now()]);
@@ -567,17 +575,52 @@ describe('pet content', function () {
         imFailWebhook($row->fresh(), noMedia: true);
         $this->travel(31)->minutes();
         artisan('media:item-media')->assertSuccessful();
+        // David 2026-11-15: treats are an ACTION item — given up never means »shown without content«:
+        // »Priboljšek« stays disabled, nothing is announced, the alert asks the admin to regenerate.
         expect(imFalSubmits('image'))->toHaveCount(2)
             ->and($row->fresh()->exhausted_at)->not->toBeNull()
-            ->and(app(ItemMediaService::class)->readiness($pet->fresh()))->toBe(['treats' => true])
-            ->and(imChildState($child)->json('pet.media.items'))->toBe([]);
-        Queue::assertPushed(SendItemMediaAlert::class, fn ($job) => $job->count === 1);
-        expect(ItemMediaNotice::where('pet_id', $pet->id)->value('outcome'))->toBe('fallback')
-            ->and(PushNotification::where('type', 'item_ready')->where('pet_id', $pet->id)->count())->toBe(1);
+            ->and(app(ItemMediaService::class)->readiness($pet->fresh()))->toBe(['treats' => false])
+            ->and(app(ItemMediaService::class)->statesFor($pet->fresh())['treats']['given_up'])->toBeTrue()
+            ->and(imChildState($child)->json('pet.media.items'))->toBe([])
+            ->and(imChildState($child)->json('wishes.treats.ready'))->toBeFalse();
+        Queue::assertPushed(SendItemMediaAlert::class, fn ($job) => $job->count === 1 && $job->locked === 1);
+        expect(ItemMediaNotice::where('pet_id', $pet->id)->count())->toBe(0)
+            ->and(PushNotification::where('type', 'item_ready')->where('pet_id', $pet->id)->count())->toBe(0);
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertStatus(422)->assertJsonPath('reason', 'media_not_ready')->assertJsonPath('treats_left', 10);
 
         $this->travel(2)->hours();
         artisan('media:item-media')->assertSuccessful();
         Queue::assertPushed(SendItemMediaAlert::class, 1);
+
+        // The admin's Regenerate (a new chain) unlocks it — announced once.
+        app(ItemMediaService::class)->regenerate($row->fresh());
+        imComplete();
+        expect(app(ItemMediaService::class)->readiness($pet->fresh()))->toBe(['treats' => true])
+            ->and(PushNotification::where('type', 'item_ready')->where('pet_id', $pet->id)->count())->toBe(1);
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9);
+    });
+
+    it('a durable item whose recovery gave up is still shown without its content (it has no action to lock)', function () {
+        Queue::fake([SendItemMediaAlert::class]);
+        [, $child, $pet] = imFamily(null);
+        PetItem::create(['pet_id' => $pet->id, 'item_key' => 'bowls', 'kind' => 'durable', 'variant' => 'dog_bowls', 'design' => 'dog_bowls_steel_stand', 'quantity_total' => 1, 'quantity_left' => 1, 'acquired_at' => now()]);
+        artisan('media:item-media')->assertSuccessful();
+        imCompletePictures();
+        $row = ItemMedia::where('scope', 'pet')->where('kind', 'image')->firstOrFail();
+        foreach ([0, 1] as $try) {
+            imFailWebhook($row->fresh(), noMedia: true);
+            $this->travel(31)->minutes();
+            artisan('media:item-media')->assertSuccessful();
+        }
+
+        expect($row->fresh()->exhausted_at)->not->toBeNull()
+            ->and(app(ItemMediaService::class)->readiness($pet->fresh()))->toBe(['bowls' => true])
+            ->and(app(ItemMediaService::class)->statesFor($pet->fresh())['bowls']['given_up'])->toBeTrue()
+            ->and(ItemMediaNotice::where('pet_id', $pet->id)->value('outcome'))->toBe('fallback')
+            ->and(imChildState($child)->json('wishes.items.0.media_ready'))->toBeTrue();
+        Queue::assertPushed(SendItemMediaAlert::class, fn ($job) => $job->count === 1 && $job->locked === 0);
     });
 
     it('retries a generation failure at most twice per chain, then shows the picture without its clip', function () {
@@ -723,5 +766,164 @@ describe('pet content', function () {
     it('builds species-correct prompts for a cat', function () {
         $prompt = app(PetAppearancePrompt::class)->itemImagePrompt('domestic_cat', 'toy_2', ItemDesigns::description('cat_wand_peacock'), ['coat_color' => 'grey tabby'], null, true);
         expect($prompt)->toContain('cat')->toContain('peacock feather')->not->toMatch('/\bdog\b/');
+    });
+});
+
+/*
+| David 2026-11-15 — the general media rule (PRODUCT_SPEC »stanje → medij«): a feature whose
+| clip does not exist yet is disabled (»se pripravlja«), never usable without its animation.
+| Treats: the clip is queued when the pack is bought; »Priboljšek« is refused 422
+| `media_not_ready` (nothing used up) until the clip of the pet's current picture is stored.
+*/
+describe('treats wait for their clip', function () {
+    it('queues the clip once at the purchase, refuses the treat while it is made (count unchanged) and gives it once the clip is there', function () {
+        Event::fake([PetUpdated::class]);
+        [$parent, $child, $pet] = imFamily(null);
+
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk()
+            ->assertJsonPath('items.4.key', 'treats')->assertJsonPath('items.4.treats_left', 10)->assertJsonPath('items.4.media_ready', false);
+        // Bought → the key image is submitted at once (after commit), exactly once.
+        expect(imFalSubmits('image'))->toHaveCount(1)->and(imFalSubmits('clip'))->toHaveCount(0);
+
+        // The contract an OLDER app build meets: 422 with the same body as every treat refusal.
+        imAs($child);
+        $refusal = postJson('/api/child/pet/treat')->assertStatus(422)
+            ->assertJsonPath('status', 'refused')->assertJsonPath('reason', 'media_not_ready')->assertJsonPath('next_at', null)
+            ->assertJsonPath('treats_left', 10)->assertJsonPath('given_today', 0)->assertJsonPath('daily_limit', 2)
+            ->assertJsonPath('state.wishes.treats', ['left' => 10, 'given_today' => 0, 'daily_limit' => 2, 'ready' => false]);
+        expect($refusal->json('message'))->toBeString();
+        expect(PetTreatEvent::where('pet_id', $pet->id)->count())->toBe(0)
+            ->and(PetItem::where('pet_id', $pet->id)->where('item_key', 'treats')->value('quantity_left'))->toBe(10);
+        getJson('/api/child/wishes')->assertJsonPath('items.4.key', 'treats')->assertJsonPath('items.4.media_ready', false)->assertJsonPath('items.4.treats_left', 10);
+
+        // The key image alone is not enough: the clip is what the treat plays.
+        $image = ItemMedia::where('kind', 'image')->firstOrFail();
+        sendFalWebhook(['request_id' => $image->request_id, 'status' => 'OK', 'payload' => ['images' => [['url' => "https://v3.fal.media/files/im/{$image->request_id}.jpg"]]]])->assertOk();
+        expect(imFalSubmits('clip'))->toHaveCount(1);
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertStatus(422)->assertJsonPath('reason', 'media_not_ready')->assertJsonPath('treats_left', 10);
+        expect(imChildState($child)->json('wishes.treats.ready'))->toBeFalse();
+
+        imComplete();
+        // A second pack and later scheduler passes never make it again.
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk()->assertJsonPath('items.4.media_ready', true);
+        artisan('media:item-media')->assertSuccessful();
+        expect(imFalSubmits('image'))->toHaveCount(1)->and(imFalSubmits('clip'))->toHaveCount(1);
+
+        // Ready: the apps were told (PetUpdated `item_media_ready` + the `item_ready` push), the treat is given.
+        expect(collect(Event::dispatched(PetUpdated::class))->filter(fn ($e) => $e[0]->eventType === 'item_media_ready'))->toHaveCount(1)
+            ->and(PushNotification::where('type', 'item_ready')->where('pet_id', $pet->id)->count())->toBe(1)
+            ->and(imChildState($child)->json('wishes.treats'))->toBe(['left' => 20, 'given_today' => 0, 'daily_limit' => 2, 'ready' => true]);
+        imAs($child);
+        $given = postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('status', 'accepted')
+            ->assertJsonPath('treats_left', 19)->assertJsonPath('given_today', 1)
+            ->assertJsonPath('state.wishes.treats', ['left' => 19, 'given_today' => 1, 'daily_limit' => 2, 'ready' => true]);
+        expect($given->json('media.video'))->toContain('/api/media/items/')
+            ->and(PetTreatEvent::where('pet_id', $pet->id)->count())->toBe(1);
+    });
+
+    it('is ready at once when the shared look already has the treat clip (0 $ for the next buyer)', function () {
+        $look = imLook();
+        [$parent, , $pet] = imFamily($look);
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk()->assertJsonPath('items.4.media_ready', false);
+        imComplete();
+        $calls = imFalSubmits()->count();
+
+        [$parent2, $child2, $pet2] = imFamily($look);
+        imRedeem($parent2, $pet2, 'petprep_wish_treats_10')->assertOk()->assertJsonPath('items.4.media_ready', true);
+        expect(imFalSubmits()->count())->toBe($calls)
+            ->and(imChildState($child2)->json('wishes.treats.ready'))->toBeTrue();
+        imAs($child2);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9);
+    });
+
+    it('stays locked while the AI budget is used up — the bought treats are kept — and unlocks once the budget allows', function () {
+        config(['media.budget.daily_usd' => 0.01]);
+        [$parent, $child, $pet] = imFamily(null);
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk()->assertJsonPath('items.4.media_ready', false);
+        expect(imFalSubmits())->toHaveCount(0)
+            ->and(ItemMedia::where('kind', 'image')->value('error_reason'))->toBe('budget_daily');
+
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertStatus(422)->assertJsonPath('reason', 'media_not_ready')->assertJsonPath('treats_left', 10);
+        // Waiting for money is never counted as a retry and never given up.
+        $this->travel(3)->hours();
+        artisan('media:item-media')->assertSuccessful();
+        expect(ItemMedia::where('kind', 'image')->value('exhausted_at'))->toBeNull()
+            ->and(imChildState($child)->json('wishes.treats'))->toBe(['left' => 10, 'given_today' => 0, 'daily_limit' => 2, 'ready' => false]);
+
+        config(['media.budget.daily_usd' => 50.0]);
+        artisan('media:item-media')->assertSuccessful();
+        imComplete();
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9);
+    });
+
+    it('a failed clip keeps the treat locked while it is retried automatically, then unlocks', function () {
+        [$parent, $child, $pet] = imFamily(null);
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk();
+        $image = ItemMedia::where('kind', 'image')->firstOrFail();
+        sendFalWebhook(['request_id' => $image->request_id, 'status' => 'OK', 'payload' => ['images' => [['url' => "https://v3.fal.media/files/im/{$image->request_id}.jpg"]]]])->assertOk();
+        $clip = ItemMedia::where('kind', 'clip')->firstOrFail();
+        imFailWebhook($clip);
+
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertStatus(422)->assertJsonPath('reason', 'media_not_ready')->assertJsonPath('treats_left', 10);
+
+        $this->travel(31)->minutes();
+        artisan('media:item-media')->assertSuccessful(); // the automatic retry (1 of 2)
+        expect($clip->fresh()->auto_retries)->toBe(1)->and(imFalSubmits('clip'))->toHaveCount(2);
+        imComplete();
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9);
+    });
+
+    it('existing owners without a clip: locked at once, queued by the scheduled pass (no manual step), then unlocked', function () {
+        Carbon::setTestNow(Carbon::parse('2026-11-15 10:00:00', 'UTC'));
+        [, $child, $pet] = imFamily(null);
+        // A pack owned from before (no content row at all).
+        PetItem::create(['pet_id' => $pet->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 6, 'acquired_at' => now()->subDays(9)]);
+
+        expect(imChildState($child)->json('wishes.treats'))->toBe(['left' => 6, 'given_today' => 0, 'daily_limit' => 2, 'ready' => false]);
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertStatus(422)->assertJsonPath('reason', 'media_not_ready')->assertJsonPath('treats_left', 6);
+
+        artisan('media:item-media')->assertSuccessful();
+        artisan('media:item-media')->assertSuccessful();
+        imComplete();
+        expect(imFalSubmits('image'))->toHaveCount(1)->and(imFalSubmits('clip'))->toHaveCount(1);
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 5);
+    });
+
+    it('a new life stage locks the treat again until the new picture has its clip', function () {
+        [$parent, $child, $pet] = imFamily(null);
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk();
+        imComplete();
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9);
+
+        imPicture($pet, 'adult', null, 2); // the pet grew: a new reference image
+        expect(imChildState($child)->json('wishes.treats.ready'))->toBeFalse();
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertStatus(422)->assertJsonPath('reason', 'media_not_ready')->assertJsonPath('treats_left', 9);
+
+        artisan('media:item-media')->assertSuccessful();
+        imComplete();
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 8);
+    });
+
+    it('never locks a pet that gets no AI media (drawn stage) and reports no_treats before the clip', function () {
+        [$parent, $child, $pet] = imFamily(null, ['media_status' => 'disabled'], withPicture: false);
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertStatus(422)->assertJsonPath('reason', 'no_treats');
+        expect(imChildState($child)->json('wishes.treats.ready'))->toBeTrue(); // no pack → nothing to wait for
+
+        imRedeem($parent, $pet, 'petprep_wish_treats_10')->assertOk()->assertJsonPath('items.4.media_ready', true);
+        expect(imFalSubmits())->toHaveCount(0);
+        imAs($child);
+        postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9)->assertJsonPath('media', null)
+            ->assertJsonPath('state.wishes.treats.ready', true);
     });
 });

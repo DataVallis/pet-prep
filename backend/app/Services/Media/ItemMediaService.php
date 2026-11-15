@@ -53,7 +53,8 @@ use Illuminate\Support\Facades\URL;
  * Readiness (`media_ready`, payload `media.items`): content (the clip of the current picture
  * is stored) · fallback (recovery exhausted — the item is shown without that content; the key
  * image alone when only the clip failed) · no_media (the pet gets no AI media: AI off, media
- * disabled, its own picture given up) · waiting (»Na poti …«). Free plan (S8): only the item's
+ * disabled, its own picture given up) · waiting (»Na poti …«; an ACTION item's action is
+ * disabled meanwhile). Free plan (S8): only the item's
  * own content — the pet's state media set is never touched. Items never touch game rules (S1).
  *
  * Self-healing like ActivityClipRetryService (PR #547): failures with http_error /
@@ -62,7 +63,10 @@ use Illuminate\Support\Facades\URL;
  * (the next prompt variant; none left → exhausted); `timed_out` → exhausted (a late webhook still
  * stores); budget / balance / switched-off failures wait for money (no retry counted). Exhausted
  * → the item is shown without that content + ONE Discord alert per run (counts only). No admin
- * click is ever needed; /admin can Regenerate a row or »Generate missing« for a pet.
+ * click is ever needed for a durable item; /admin can Regenerate a row or »Generate missing« for
+ * a pet. ACTION items (treats — {@see ACTION_ITEMS}, David 2026-11-15) are the exception: their
+ * action is disabled until the clip exists ({@see actionReady()}), so an exhausted treat chain
+ * keeps »Priboljšek« locked (the treats stay on the pet) until the admin regenerates it.
  *
  * Quality check (David 2026-11-04, StillQualityService): a downloaded catalogue picture / key
  * image (stills mode on) or clip (clip mode on) is a CANDIDATE (`candidate_path`) until its check
@@ -76,6 +80,17 @@ class ItemMediaService
 {
     /** Bed and toys loop; bowls and treats are played once. */
     public const LOOP_ITEMS = ['bed', 'toy_1', 'toy_2'];
+
+    /**
+     * Items whose child ACTION plays their clip (»Priboljšek«). David 2026-11-15: a feature whose
+     * clip does not exist yet is disabled (»se pripravlja«) — never usable without its animation.
+     * Such an item is never »shown without its content« once the recovery gave up: it stays
+     * WAITING (the action stays locked, the bought treats stay on the pet) until its clip is there
+     * — the next automatic chain (a new picture / stage) or the admin's Regenerate / »Approve
+     * anyway« after the Discord alert. Durable items have no action of their own (bed, bowls, toys
+     * only dress a scene that works without them), so they keep the fallback.
+     */
+    public const ACTION_ITEMS = [ShopItem::TREATS];
 
     public const OUTCOME_CONTENT = 'content';
 
@@ -225,7 +240,9 @@ class ItemMediaService
      * The state of every owned item: its design, outcome and the current rows.
      *
      * @param  Collection<int, PetMedia>|null  $slots
-     * @return array<string, array{item_key: string, design: string|null, content_key: string, outcome: string, stage: string|null, image: ItemMedia|null, clip: ItemMedia|null}>
+     *                                                 `given_up` = the recovery of the current chain is exhausted and no clip is shown (a durable
+     *                                                 item is then a fallback, an ACTION item keeps waiting — locked).
+     * @return array<string, array{item_key: string, design: string|null, content_key: string, outcome: string, stage: string|null, image: ItemMedia|null, clip: ItemMedia|null, given_up: bool}>
      */
     public function statesFor(Pet $pet, ?Collection $slots = null): array
     {
@@ -241,7 +258,7 @@ class ItemMediaService
 
         $states = [];
         foreach ($owned as $key => $own) {
-            $state = $own + ['outcome' => self::OUTCOME_WAITING, 'stage' => $picture['stage'] ?? null, 'image' => null, 'clip' => null];
+            $state = $own + ['outcome' => self::OUTCOME_WAITING, 'stage' => $picture['stage'] ?? null, 'image' => null, 'clip' => null, 'given_up' => false];
 
             if ($picture === null) {
                 if ($noMedia) {
@@ -259,12 +276,16 @@ class ItemMediaService
 
             $state['image'] = $imageCurrent ? $image : null;
             $state['clip'] = $clipCurrent ? $clip : null;
+            // The automatic recovery of the current chain gave up (heal(): exhausted + one alert).
+            $givenUp = (! $imageCurrent && $image !== null && $image->isExhausted() && $image->target_path === $picture['path'])
+                || ($imageCurrent && $clip !== null && $clip->isExhausted() && $clip->target_path === $image->storage_path);
+            $state['given_up'] = ! $clipCurrent && ! $noMedia && $givenUp;
             $state['outcome'] = match (true) {
                 $clipCurrent => self::OUTCOME_CONTENT,
                 // AI / the item profile switched off: what is already made stays shown, else none comes.
                 $noMedia => $imageCurrent ? self::OUTCOME_FALLBACK : self::OUTCOME_NO_MEDIA,
-                ! $imageCurrent && $image !== null && $image->isExhausted() && $image->target_path === $picture['path'] => self::OUTCOME_FALLBACK,
-                $imageCurrent && $clip !== null && $clip->isExhausted() && $clip->target_path === $image->storage_path => self::OUTCOME_FALLBACK,
+                // David 2026-11-15: an action item is never usable without its clip — it stays locked.
+                $givenUp => in_array($key, self::ACTION_ITEMS, true) ? self::OUTCOME_WAITING : self::OUTCOME_FALLBACK,
                 $imageCurrent && ! $clips => self::OUTCOME_FALLBACK, // clip profile off: the picture alone
                 default => self::OUTCOME_WAITING,
             };
@@ -282,6 +303,21 @@ class ItemMediaService
     public function readiness(Pet $pet): array
     {
         return array_map(fn (array $s): bool => $s['outcome'] !== self::OUTCOME_WAITING, $this->statesFor($pet));
+    }
+
+    /**
+     * The general media rule (David 2026-11-15, PRODUCT_SPEC »stanje → medij«): may the child use
+     * the ACTION of $itemKey now? False while the item's clip for the pet's current picture is
+     * not there (being made, waiting for the AI budget, failed, given up) — the action is
+     * disabled (»se pripravlja«) and refused with 422 `media_not_ready`, like a game or the
+     * school (GameMediaReadiness). True once the clip is shown, for a pet that gets no AI media
+     * at all (the drawn stage — no clip will ever come) and while the clip profile is switched off
+     * (the picture alone; a switch never locks a feature for clips that will not come). An item
+     * the pet does not own has nothing to wait for (true — the owner check is the caller's).
+     */
+    public function actionReady(Pet $pet, string $itemKey): bool
+    {
+        return $this->readiness($pet)[$itemKey] ?? true;
     }
 
     /**
@@ -1293,7 +1329,9 @@ class ItemMediaService
      *  - `no_media_generated` → the next prompt variant (≥ RETRY_AFTER minutes later), none left → exhausted;
      *  - http_error / invalid_response / generation_failed → ≤ MAX_AUTO_RETRIES per chain, then exhausted;
      *  - anything else (timed_out, …) → exhausted.
-     * Exhausted rows get ONE Discord alert per run (counts only); their pets are told (fallback).
+     * Exhausted rows get ONE Discord alert per run (counts only); their pets are told (fallback) —
+     * except ACTION items (treats, David 2026-11-15): those stay locked (»se pripravlja«) and the
+     * alert says how many need the admin's Regenerate.
      *
      * @return array{retried: int, waiting: int, exhausted: int}
      */
@@ -1352,13 +1390,16 @@ class ItemMediaService
 
         if (! $dryRun && $exhausted !== []) {
             $marked = 0;
+            $locked = 0; // rows of ACTION items: their action stays disabled until an admin regenerates
             foreach ($exhausted as $row) {
-                $marked += ItemMedia::query()->whereKey($row->id)->where('status', ItemMedia::STATUS_FAILED)->whereNull('exhausted_at')
+                $done = ItemMedia::query()->whereKey($row->id)->where('status', ItemMedia::STATUS_FAILED)->whereNull('exhausted_at')
                     ->update(['exhausted_at' => now(), 'alerted_at' => now()]);
+                $marked += $done;
+                $locked += in_array($row->item_key, self::ACTION_ITEMS, true) ? $done : 0;
             }
             if ($marked > 0) {
-                Log::warning('ItemMediaService: item media recovery exhausted — items shown without their content', ['count' => $marked]);
-                SendItemMediaAlert::dispatch($marked);
+                Log::warning('ItemMediaService: item media recovery exhausted — durable items shown without their content, action items (treats) stay locked', ['count' => $marked, 'locked' => $locked]);
+                SendItemMediaAlert::dispatch($marked, $locked);
             }
             foreach ($exhausted as $row) {
                 if ($row->isPicture()) {

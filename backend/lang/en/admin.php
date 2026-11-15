@@ -721,6 +721,7 @@ return [
         'discord' => [
             'title' => 'Item content: :count item picture(s) / clip(s) failed for good',
             'body' => 'AI content of bought items (a catalogue picture, a pet-with-item picture or clip) failed after every automatic strategy (retries, prompt variants) or timed out. The items are already shown without that content — no admin action needed. Optional: Shop → Item media → Regenerate (or Pets → Item media → »Generate missing«). List: php artisan media:item-media --dry-run',
+            'locked' => 'ACTION NEEDED — :count of them belong to treats: »Treat« stays disabled (»preparing«) for those pets, because a treat is never given without its clip (the bought treats stay on the pet). Unlock: Shop → Item media → Regenerate the failed treat row (or »Approve anyway« for a clip that only failed the quality check).',
         ],
     ],
     'app_errors' => [

@@ -720,6 +720,7 @@ return [
         'discord' => [
             'title' => 'Vsebine stvari: :count slik / posnetkov stvari dokončno neuspelih',
             'body' => 'AI vsebina kupljene stvari (slika v katalogu, slika ali posnetek ljubljenčka s stvarjo) ni uspela niti po vseh samodejnih poskusih (ponovitve, različice poziva) ali je potekla. Stvari se že prikazujejo brez te vsebine — skrbnik ni potreben. Po želji: Shop → Item media → Regenerate (ali Ljubljenčki → Item media → »Generate missing«). Seznam: php artisan media:item-media --dry-run',
+            'locked' => 'POTREBNO UKREPANJE — :count od teh pripada priboljškom: gumb »Priboljšek« ostane pri teh ljubljenčkih onemogočen (»se pripravlja«), ker se priboljšek nikoli ne da brez svojega posnetka (kupljeni priboljški ostanejo pri ljubljenčku). Odklep: Shop → Item media → Regenerate pri neuspeli vrstici priboljškov (ali »Approve anyway« pri posnetku, ki je padel samo na preverjanju kakovosti).',
         ],
     ],
     'app_errors' => [

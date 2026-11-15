@@ -210,7 +210,7 @@ describe('child wishes', function () {
         getJson('/api/child/wishes')->assertJsonPath('items.0.status', 'requested')->assertJsonPath('items.0.wish_id', $id);
         getJson('/api/child/pet')->assertJsonPath('wishes.open_count', 1)
             ->assertJsonPath('wishes.items', [])
-            ->assertJsonPath('wishes.treats', ['left' => 0, 'given_today' => 0, 'daily_limit' => 2]);
+            ->assertJsonPath('wishes.treats', ['left' => 0, 'given_today' => 0, 'daily_limit' => 2, 'ready' => true]);
 
         wiAs($parent);
         getJson('/api/parent/wishes')->assertOk()
@@ -451,7 +451,7 @@ describe('treats', function () {
         postJson('/api/child/pet/treat')->assertOk()
             ->assertJsonPath('treats_left', 9)->assertJsonPath('given_today', 1)->assertJsonPath('daily_limit', 2)
             ->assertJsonPath('media', null)
-            ->assertJsonPath('state.wishes.treats', ['left' => 9, 'given_today' => 1, 'daily_limit' => 2]);
+            ->assertJsonPath('state.wishes.treats', ['left' => 9, 'given_today' => 1, 'daily_limit' => 2, 'ready' => true]);
         postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 8)->assertJsonPath('given_today', 2);
         postJson('/api/child/pet/treat')->assertStatus(422)->assertJsonPath('reason', 'treat_limit_today')
             ->assertJsonPath('next_at', '2026-10-28T00:00:00+01:00');
