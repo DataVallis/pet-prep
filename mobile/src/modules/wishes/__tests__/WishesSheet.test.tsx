@@ -1,10 +1,10 @@
 /** M6-W04 child »Želje«: no prices, »Prosi starša«, states, limit, refusals; treat error texts. */
-import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react-native';
 
 import { ApiError, api } from '@/api/client';
 import { i18n } from '@/i18n';
 import WishesSheet from '@/modules/wishes/WishesSheet';
-import { treatErrorText } from '@/modules/wishes/TreatChip';
+import { TreatChip, treatErrorText } from '@/modules/wishes/TreatChip';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -187,5 +187,75 @@ describe('treatErrorText', () => {
     const locked = treatErrorText(new ApiError('x', 423, { reason: 'hard_stopped', locked_until: null }), null);
     expect(locked.length).toBeGreaterThan(0);
     expect(locked).not.toBe('Ni uspelo. Poskusi znova.');
+  });
+
+  it('media_not_ready → »se še pripravljajo« (SL + EN), never a word about videos', async () => {
+    const refusal = new ApiError('x', 422, { reason: 'media_not_ready' });
+    await i18n.changeLanguage('sl');
+    expect(treatErrorText(refusal, null)).toBe('Priboljški se še pripravljajo — to lahko traja nekaj minut');
+    await i18n.changeLanguage('en');
+    expect(treatErrorText(refusal, null)).toBe('The treats are still getting ready — this can take a few minutes');
+    for (const lang of ['sl', 'en']) {
+      await i18n.changeLanguage(lang);
+      expect(treatErrorText(refusal, null)).not.toMatch(/video|posnet|slik|clip|picture|generat/i);
+    }
+  });
+});
+
+// David 2026-11-15: a feature is never usable without its animation — the chip is shown but off.
+describe('TreatChip', () => {
+  it.each(['dog', 'cat'])('%s: gives a treat on press while ready', (species) => {
+    const onPress = jest.fn();
+    renderWithQuery(<TreatChip left={8} species={species} busy={false} onPress={onPress} />);
+    const chip = screen.getByTestId('hud-treat');
+    expect(chip).toBeEnabled();
+    expect(chip.props.accessibilityHint).toBeUndefined();
+    fireEvent.press(chip);
+    expect(onPress).toHaveBeenCalledTimes(1);
+  });
+
+  it.each(['dog', 'cat'])('%s: is off with the »preparing« hint while the treats are not ready — a press does nothing', (species) => {
+    const onPress = jest.fn();
+    renderWithQuery(<TreatChip left={8} species={species} busy={false} preparing onPress={onPress} />);
+    const chip = screen.getByTestId('hud-treat');
+    expect(chip).toBeDisabled();
+    expect(chip.props.accessibilityHint).toBe('Priboljški se še pripravljajo — to lahko traja nekaj minut');
+    expect(chip.props.accessibilityState).toMatchObject({ disabled: true, busy: false });
+    fireEvent.press(chip);
+    expect(onPress).not.toHaveBeenCalled();
+  });
+
+  it('turns on as soon as the state says ready (compact chip too)', () => {
+    const onPress = jest.fn();
+    const view = render(<TreatChip compact left={8} species="dog" busy={false} preparing onPress={onPress} />);
+    expect(screen.getByTestId('hud-treat')).toBeDisabled();
+    view.rerender(<TreatChip compact left={8} species="dog" busy={false} preparing={false} onPress={onPress} />);
+    expect(screen.getByTestId('hud-treat')).toBeEnabled();
+    fireEvent.press(screen.getByTestId('hud-treat'));
+    expect(onPress).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('WishesSheet treats preparing', () => {
+  it('says the bought treats are still getting ready, without a price or a word about videos', async () => {
+    getChildWishes.mockResolvedValue({
+      ...CATALOGUE,
+      items: [{ key: 'treats', kind: 'consumable', variant: 'dog_treats', status: 'available', treats_left: 10, media_ready: false }],
+    });
+    renderWithQuery(<WishesSheet visible onClose={jest.fn()} nowMs={NOW} />);
+    await flush();
+    expect(await screen.findByTestId('wish-treats-preparing')).toHaveTextContent('Priboljški se še pripravljajo — to lahko traja nekaj minut');
+    expect(screen.queryByText(/€/)).toBeNull();
+  });
+
+  it('shows no such note once they are ready', async () => {
+    getChildWishes.mockResolvedValue({
+      ...CATALOGUE,
+      items: [{ key: 'treats', kind: 'consumable', variant: 'dog_treats', status: 'available', treats_left: 10, media_ready: true }],
+    });
+    renderWithQuery(<WishesSheet visible onClose={jest.fn()} nowMs={NOW} />);
+    await flush();
+    expect(await screen.findByTestId('wish-status-treats')).toBeTruthy();
+    expect(screen.queryByTestId('wish-treats-preparing')).toBeNull();
   });
 });

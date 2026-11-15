@@ -112,9 +112,11 @@ class WishController extends Controller
      * Give the pet one treat (max 2 per family-local day; looks only — never a
      * need, score or certificate). 200 {treats_left, given_today, daily_limit,
      * media: the treat clip (M6-W03 — `media.items.treats` + `video_url` / `url`)
-     * or null while it is made / for a pet without AI media}; 422 no_treats | treat_limit_today (+ next_at =
-     * the next local midnight) | pet_sleeping (+ next_at = wake time); 423 as
-     * every child action. Every body carries `state`.
+     * or null for a pet without AI media}; 422 no_treats | media_not_ready (David
+     * 2026-11-15: the treat clip is not there yet — `state.wishes.treats.ready`
+     * false, the app shows »se pripravlja«; nothing is used up) | treat_limit_today
+     * (+ next_at = the next local midnight) | pet_sleeping (+ next_at = wake time);
+     * 423 as every child action. Every body carries `state`.
      *
      * POST /api/child/pet/treat
      */
@@ -146,6 +148,7 @@ class WishController extends Controller
                 'message' => match ($result['reason']) {
                     'no_treats' => 'No treats left.',
                     'treat_limit_today' => 'Enough treats for today.',
+                    'media_not_ready' => 'The treats are still being prepared.',
                     default => 'The pet is sleeping.',
                 },
                 'status' => 'refused',
@@ -157,7 +160,8 @@ class WishController extends Controller
         return response()->json(array_merge(['status' => 'accepted'], $counts, [
             // M6-W03: the treat clip of the pet's current picture (signed URLs of our files, never fal):
             // `image`, `video`, `video_seconds`, `loop` (false) as `media.items.treats`, plus `video_url` /
-            // `url` (what the M6-W04 app reads). Null while it is made / for a pet without AI media.
+            // `url` (what the M6-W04 app reads). Null for a pet without AI media (a treat is never given
+            // while the clip is being made — 422 media_not_ready).
             /** @var array{image: string|null, video: string|null, video_seconds: float|null, loop: bool, video_url: string|null, url: string|null}|null */
             'media' => $this->wishes->treatMedia($pet),
             'state' => $state,

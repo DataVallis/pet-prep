@@ -16,6 +16,7 @@ import {
   showBundleOffer,
   showTreatButton,
   treatFailureOf,
+  treatsPreparing,
   type ChildWishItem,
 } from '@/modules/wishes/wishes';
 import { normalizeChildState } from '@/modules/childPet/childPetView';
@@ -106,6 +107,41 @@ describe('child pet state `wishes`', () => {
     expect(showTreatButton(view.wishes, true)).toBe(false);
     expect(showTreatButton(readChildWishesState({ treats: { left: 0 } }), false)).toBe(false);
   });
+
+  // David 2026-11-15: a feature is never usable without its animation — »Priboljšek« is off until it is ready.
+  it('`treats.ready` false → the treats are preparing (button shown, off); absent (older server) → ready', () => {
+    const older = readChildWishesState({ treats: { left: 8, given_today: 0, daily_limit: 2 } });
+    expect(older?.treats.ready).toBe(true);
+    expect(treatsPreparing(older)).toBe(false);
+
+    const waiting = readChildWishesState({ treats: { left: 8, given_today: 0, daily_limit: 2, ready: false } });
+    expect(waiting?.treats.ready).toBe(false);
+    expect(showTreatButton(waiting, false)).toBe(true);
+    expect(treatsPreparing(waiting)).toBe(true);
+
+    expect(treatsPreparing(readChildWishesState({ treats: { left: 8, ready: true } }))).toBe(false);
+    // No treats → nothing to wait for (and no button at all).
+    expect(treatsPreparing(readChildWishesState({ treats: { left: 0, ready: false } }))).toBe(false);
+    expect(treatsPreparing(null)).toBe(false);
+  });
+
+  it('catalogue / parent rows: bought treats that are not ready yet are `preparing`; no pack or an older server → not', () => {
+    const row = (extra: Record<string, unknown>) =>
+      readChildWishes({ ...CATALOGUE, items: [{ key: 'treats', kind: 'consumable', variant: 'dog_treats', status: 'available', ...extra }] })!.items[0];
+    expect(row({ treats_left: 10, media_ready: false }).preparing).toBe(true);
+    expect(row({ treats_left: 10, media_ready: true }).preparing).toBe(false);
+    expect(row({ treats_left: 10 }).preparing).toBe(false);
+    expect(row({ treats_left: 0, media_ready: false }).preparing).toBe(false);
+    expect(readChildWishes(CATALOGUE)!.items.find((i) => i.key === 'bed')!.preparing).toBe(false);
+
+    const parent = (extra: Record<string, unknown>) =>
+      readParentWishes({ open_count: 0, wishes: [], unassigned_credits: [], pets: [{ pet_id: 12, pet_name: 'Suki', species: 'dog', bundle_eligible: false, items: [{ key: 'treats', variant: 'dog_treats', product_id: 'petprep_wish_treats_10', ...extra }] }] })!.pets[0].items[0];
+    expect(parent({ treats_left: 10, media_ready: false }).preparing).toBe(true);
+    expect(parent({ treats_left: 10, media_ready: true }).preparing).toBe(false);
+    expect(parent({ treats_left: 0 }).preparing).toBe(false);
+    // Treats can always be bought again, preparing or not.
+    expect(parentItemState(parent({ treats_left: 10, media_ready: false }))).toBe('buy');
+  });
 });
 
 describe('treat answers', () => {
@@ -119,6 +155,7 @@ describe('treat answers', () => {
     expect(treatFailureOf(new ApiError('x', 422, { reason: 'treat_limit_today', next_at: '2026-10-28T00:00:00+01:00' }))).toBe('treat_limit_today');
     expect(treatFailureOf(new ApiError('x', 422, { reason: 'no_treats' }))).toBe('no_treats');
     expect(treatFailureOf(new ApiError('x', 422, { reason: 'pet_sleeping' }))).toBe('pet_sleeping');
+    expect(treatFailureOf(new ApiError('x', 422, { reason: 'media_not_ready' }))).toBe('media_not_ready');
     expect(treatFailureOf(new ApiError('x', 423, { reason: 'hard_stopped' }))).toBeNull();
   });
 });

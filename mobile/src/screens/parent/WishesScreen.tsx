@@ -521,6 +521,11 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                             <View style={styles.flex}>
                               <Text style={[styles.body, styles.bold]}>{owned !== null ? designLabel(owned, item.variant) : name}</Text>
                               {item.treats_left !== null && <Text style={styles.muted}>{t('wishes:parent.treatsLeft', { count: item.treats_left })}</Text>}
+                              {item.preparing && (
+                                <Text style={styles.muted} testID={`surprise-treats-preparing-${surprise.pet_id}`}>
+                                  {t('wishes:parent.treatsPreparing')}
+                                </Text>
+                              )}
                             </View>
                           </View>
                           {state === 'buy' ? (

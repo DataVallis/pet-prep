@@ -921,7 +921,9 @@ sequenceDiagram
     API-->>P: 200 assigned | 409 no_credit (retry)
   end
   RC->>API: REFUND / CANCELLATION → credit revoked · its pet_items revoked (treats → 0)
+  Note over API,C: David 2026-11-15: redeem queues the treat clip (QueuePetItemMedia after commit)<br/>until it is stored: wishes.treats.ready = false → »Priboljšek« disabled (»se še pripravljajo«)
   C->>API: POST /api/child/pet/treat (max 2 / local day, not asleep, 423 when locked)
+  API-->>C: 422 media_not_ready while the clip is not stored (nothing used up) · 200 accepted + media once it is
   Note over API,C: M6-W03: item content ready → PetUpdated item_media_ready + push item_ready<br/>media.items → bed (sleeping), toy (playing), bowls / treats once; »Na poti …« → »Že ima«
 ```
 

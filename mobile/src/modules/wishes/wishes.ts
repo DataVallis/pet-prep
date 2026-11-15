@@ -209,6 +209,12 @@ export interface ChildTreats {
   left: number;
   given_today: number;
   daily_limit: number;
+  /**
+   * David 2026-11-15 (the general media rule): the treat's animation is there (server
+   * `wishes.treats.ready`). False = »Priboljšek« is disabled (»se pripravlja«) — the server
+   * refuses the give with 422 `media_not_ready` and nothing is used up. Absent (older server) → true.
+   */
+  ready: boolean;
 }
 
 export interface ChildWishesState {
@@ -230,8 +236,18 @@ export function readChildWishesState(raw: unknown): ChildWishesState | null {
   return {
     open_count: count(raw.open_count),
     items,
-    treats: { left: count(t.left), given_today: count(t.given_today), daily_limit: count(t.daily_limit, 2) },
+    treats: { left: count(t.left), given_today: count(t.given_today), daily_limit: count(t.daily_limit, 2), ready: t.ready !== false },
   };
+}
+
+/**
+ * »Priboljšek« is shown but OFF: the pet has treats and their animation is not ready yet
+ * (David 2026-11-15 — a feature is never usable without its animation). The chip is disabled
+ * and the HUD says »Priboljški se še pripravljajo«; `PetUpdated` `item_media_ready` (and the
+ * `item_ready` push) refetch the state, which turns it on.
+ */
+export function treatsPreparing(wishes: ChildWishesState | null): boolean {
+  return wishes !== null && wishes.treats.left > 0 && !wishes.treats.ready;
 }
 
 /** »Priboljšek« is on the pet screen only while the pet has treats. */
@@ -260,6 +276,8 @@ export interface ChildWishItem {
   media_ready: boolean;
   /** Treats only (null for a durable item). */
   treats_left: number | null;
+  /** Treats only: the pet has treats and the server says they are not ready yet (`media_ready` false). */
+  preparing: boolean;
   /** M6-W03 designs of this item (treats / older server: []). */
   designs: WishDesign[];
   /** The owned / requested design (null = none / older server). */
@@ -296,6 +314,7 @@ export function readChildWishes(raw: unknown): ChildWishes | null {
             retry_at: str(i.retry_at),
             media_ready: i.media_ready === true,
             treats_left: treatsLeft,
+            preparing: i.key === 'treats' && (treatsLeft ?? 0) > 0 && i.media_ready === false,
             designs: i.key === 'treats' ? [] : readDesigns(i.designs),
             design: str(i.design),
           },
@@ -410,12 +429,13 @@ export function readTreatResult(raw: unknown): TreatResult | null {
   };
 }
 
-export type TreatFailure = 'no_treats' | 'treat_limit_today' | 'pet_sleeping';
+/** `media_not_ready` (David 2026-11-15): the treat's animation is not there yet — nothing was used up. */
+export type TreatFailure = 'no_treats' | 'treat_limit_today' | 'pet_sleeping' | 'media_not_ready';
 
 export function treatFailureOf(error: unknown): TreatFailure | null {
   if (!(error instanceof ApiError) || error.status !== 422) return null;
   const reason = errorReason(error);
-  return reason === 'no_treats' || reason === 'treat_limit_today' || reason === 'pet_sleeping' ? reason : null;
+  return reason === 'no_treats' || reason === 'treat_limit_today' || reason === 'pet_sleeping' || reason === 'media_not_ready' ? reason : null;
 }
 
 // ──────────────────────────────────────────────────────────────
@@ -447,6 +467,8 @@ export interface ParentPetItem {
   owned: boolean;
   media_ready: boolean;
   treats_left: number | null;
+  /** Treats only: the pet has treats and the server says they are not ready yet (`media_ready` false). */
+  preparing: boolean;
   /** M6-W03 designs of this item (treats / older server: []). */
   designs: WishDesign[];
   /** The owned design (null = none / not owned / older server). */
@@ -489,6 +511,7 @@ export function readParentPetItems(raw: unknown, species: 'dog' | 'cat'): Parent
         owned: i.owned === true,
         media_ready: i.media_ready === true,
         treats_left: i.key === 'treats' ? count(i.treats_left) : null,
+        preparing: i.key === 'treats' && count(i.treats_left) > 0 && i.media_ready === false,
         designs: i.key === 'treats' ? [] : readDesigns(i.designs),
         design: str(i.design),
       },

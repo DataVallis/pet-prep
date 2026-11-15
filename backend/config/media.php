@@ -207,6 +207,9 @@ return [
         'picture_aspect_ratio' => '1:1',
         'max_auto_retries' => 2,
         'retry_after_minutes' => 30,
+        // QA #1139 M2: the daily watchdog reports active pets whose treats (an ACTION item) have
+        // been »preparing« for more than this many hours (ItemMediaService::watch()).
+        'watchdog_hours' => 2,
         // Pass the design's catalogue picture to the item image edit as a 2nd reference image.
         'picture_as_reference' => true,
     ],

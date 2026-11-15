@@ -24,11 +24,25 @@ class QueuePetItemMedia implements ShouldBeUnique, ShouldQueue
 
     public int $uniqueFor = 60;
 
-    public function __construct(public readonly int $petId) {}
+    /**
+     * QA #1139 M1: the item keys a purchase just put on the pet (redeem only) — an ACTION item's
+     * given-up chain gets one fresh round for them. A plain property with a default: a job queued
+     * by an older release unserializes without it.
+     *
+     * @var list<string>
+     */
+    public array $purchased = [];
 
+    /** @param  list<string>  $purchased */
+    public function __construct(public readonly int $petId, array $purchased = [])
+    {
+        $this->purchased = array_values($purchased);
+    }
+
+    /** A purchase is never swallowed by a queued picture / stage job of the same pet. */
     public function uniqueId(): string
     {
-        return (string) $this->petId;
+        return $this->petId.($this->purchased === [] ? '' : ':'.implode(',', $this->purchased));
     }
 
     public function handle(ItemMediaService $items): void
@@ -39,7 +53,10 @@ class QueuePetItemMedia implements ShouldBeUnique, ShouldQueue
             return;
         }
 
-        $items->ensure($pet);
+        if ($this->purchased !== []) {
+            $items->reopenGivenUp($pet, $this->purchased);
+        }
+        $items->ensure($pet->fresh() ?? $pet);
         $items->settle($pet->fresh() ?? $pet);
     }
 }

@@ -170,7 +170,7 @@ import { useBirthdayCard } from '@/modules/birthday/birthdaySeen';
 import ChildSettingsSheet from '@/components/ChildSettingsSheet';
 import WishesSheet from '@/modules/wishes/WishesSheet';
 import { TreatChip, treatErrorText } from '@/modules/wishes/TreatChip';
-import { showTreatButton } from '@/modules/wishes/wishes';
+import { showTreatButton, treatsPreparing } from '@/modules/wishes/wishes';
 import { useGiveTreat } from '@/hooks/queries/useWishes';
 
 import { mediaModeOf } from '@/modules/display/display';
@@ -800,6 +800,9 @@ export default function ChildHudScreen() {
   // is off with a calm »Šola se še pripravlja …« card (never a word about pictures or videos).
   const trainingPreparing = hasTraining && rules.training.reason === 'preparing';
   const schoolPreparingNote = trainingPreparing ? rules.training.text : undefined;
+  // David 2026-11-15: »Priboljšek« is off until the treat's animation is ready (never over a lock).
+  const treatPreparing = showTreatButton(view.wishes, locked) && treatsPreparing(view.wishes);
+  const treatPreparingNote = treatPreparing ? t('wishes:child.treat.preparing') : undefined;
   const playSleeps = rules.play.reason === 'sleeping';
   const groomingSleeps = rules.grooming.reason === 'sleeping';
   const sleepNote = trainingSleeps
@@ -893,6 +896,9 @@ export default function ChildHudScreen() {
     ...(schoolPreparingNote !== undefined
       ? [{ key: 'school-preparing', priority: STACK_PRIORITY.hint, short: schoolPreparingNote, icon: Hourglass, node: <PlayBlockedNote text={schoolPreparingNote} testID="hud-school-preparing" /> }]
       : []),
+    ...(treatPreparingNote !== undefined
+      ? [{ key: 'treat-preparing', priority: STACK_PRIORITY.hint, short: treatPreparingNote, icon: Hourglass, node: <PlayBlockedNote text={treatPreparingNote} testID="hud-treat-preparing" /> }]
+      : []),
     ...(playBlockedText !== null
       ? [{ key: 'play-blocked', priority: STACK_PRIORITY.hint, short: playBlockedText, icon: HandHeart, node: <PlayBlockedNote text={playBlockedText} /> }]
       : []),
@@ -965,7 +971,7 @@ export default function ChildHudScreen() {
           <PlayChip compact={compact} block={entry.block} onPress={() => setPlayOverlay('pick')} />
         ))}
       {treatChip && view.wishes !== null && (
-        <TreatChip compact={compact} left={view.wishes.treats.left} species={pet.species} busy={giveTreat.isPending} onPress={handleTreat} />
+        <TreatChip compact={compact} left={view.wishes.treats.left} species={pet.species} busy={giveTreat.isPending} preparing={treatPreparing} onPress={handleTreat} />
       )}
     </>
   );

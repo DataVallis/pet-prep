@@ -2093,9 +2093,11 @@ export interface paths {
          * Give the pet one treat (max 2 per family-local day; looks only — never a
          *     need, score or certificate). 200 {treats_left, given_today, daily_limit,
          *     media: the treat clip (M6-W03 — `media.items.treats` + `video_url` / `url`)
-         *     or null while it is made / for a pet without AI media}; 422 no_treats | treat_limit_today (+ next_at =
-         *     the next local midnight) | pet_sleeping (+ next_at = wake time); 423 as
-         *     every child action. Every body carries `state`
+         *     or null for a pet without AI media}; 422 no_treats | media_not_ready (David
+         *     2026-11-15: the treat clip is not there yet — `state.wishes.treats.ready`
+         *     false, the app shows »se pripravlja«; nothing is used up) | treat_limit_today
+         *     (+ next_at = the next local midnight) | pet_sleeping (+ next_at = wake time);
+         *     423 as every child action. Every body carries `state`
          * @description POST /api/child/pet/treat
          */
         post: operations["wish.treat"];
@@ -5504,6 +5506,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -6544,6 +6547,7 @@ export interface operations {
                                 left: number;
                                 given_today: number;
                                 daily_limit: number;
+                                ready: boolean;
                             };
                         };
                     };
@@ -7604,6 +7608,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -8662,6 +8667,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -9720,6 +9726,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -10778,6 +10785,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -11836,6 +11844,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -12898,6 +12907,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -13960,6 +13970,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -15022,6 +15033,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -16084,6 +16096,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -17146,6 +17159,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -18204,6 +18218,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -19262,6 +19277,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -20324,6 +20340,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -21382,6 +21399,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -22444,6 +22462,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -23502,6 +23521,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -24564,6 +24584,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -25626,6 +25647,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -26688,6 +26710,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -27750,6 +27773,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -28812,6 +28836,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -32915,6 +32940,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };
@@ -33955,6 +33981,7 @@ export interface operations {
                                     left: number;
                                     given_today: number;
                                     daily_limit: number;
+                                    ready: boolean;
                                 };
                             };
                         };

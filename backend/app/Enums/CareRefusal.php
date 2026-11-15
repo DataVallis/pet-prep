@@ -241,6 +241,9 @@ enum CareRefusal: string
      * David 2026-10-28 (home first, school locked) — the training start
      * (»Šolo še pripravljamo«). A failed clip keeps it locked while its automatic
      * recovery runs; once that is exhausted the activity is ready in simple mode (2026-11-02).
+     * David 2026-11-15 (the general rule — a feature whose clip does not exist is
+     * disabled): also POST /api/child/pet/treat while the treat clip is not there
+     * (Media\ItemMediaService::actionReady) — no treat is used up.
      */
     case MediaNotReady = 'media_not_ready';
 

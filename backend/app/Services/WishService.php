@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Enums\CareRefusal;
 use App\Enums\PetLockReason;
 use App\Enums\PushType;
 use App\Enums\Species;
@@ -40,7 +41,9 @@ use Illuminate\Support\Facades\Log;
  *    ≤ TREATS_WISH_MAX are left, the same child + pet + key again only
  *    RETRY_DAYS after a decline; the welcome bundle is never wishable (S12);
  *  - treats: max TREATS_PER_DAY per pet and family-local day, not while the
- *    pet sleeps (PetSleepService), 423 like every child action.
+ *    pet sleeps (PetSleepService), 423 like every child action; never while the
+ *    treat clip is not there (422 `media_not_ready`, `treats.ready` false —
+ *    David 2026-11-15, ItemMediaService::actionReady): the count stays.
  *
  * Lock order: child user row → pet row (create); pet row → treat pack rows
  * (treat); wish row (decline).
@@ -292,6 +295,11 @@ class WishService
             if ($left <= 0) {
                 return $base + ['status' => 'refused', 'reason' => 'no_treats', 'next_at' => null];
             }
+            // David 2026-11-15 (the general media rule): no treat while its clip is not there — the
+            // count never goes down for a treat the child could not see being eaten.
+            if (! $this->itemMedia()->actionReady($locked, ShopItem::TREATS)) {
+                return $base + ['status' => 'refused', 'reason' => CareRefusal::MediaNotReady->value, 'next_at' => null];
+            }
             if ($givenToday >= self::TREATS_PER_DAY) {
                 $midnight = $now->setTimezone($locked->effectiveTimezone())->addDay()->startOfDay()->utc();
 
@@ -323,14 +331,20 @@ class WishService
      * THIS PET (all children; QA #417 m9) — the per-child count for the limit is
      * on GET /api/child/wishes.
      *
-     * @return array{open_count: int, items: list<array{key: string, variant: string, design: string|null, media_ready: bool}>, treats: array{left: int, given_today: int, daily_limit: int}}
+     * `treats.ready` (David 2026-11-15): the treat clip is there (or the pet gets no AI media) —
+     * false = »Priboljšek« is disabled (»se pripravlja«), the give is refused 422 `media_not_ready`.
+     * True while the pet has no pack (nothing to wait for).
+     *
+     * @return array{open_count: int, items: list<array{key: string, variant: string, design: string|null, media_ready: bool}>, treats: array{left: int, given_today: int, daily_limit: int, ready: bool}}
      */
     public function stateBlock(Pet $pet, ?User $child, ?CarbonInterface $now = null): array
     {
         $now = $now ?? now();
         $owned = $this->ownedItems($pet);
         $species = $pet->speciesValue();
-        $ready = $owned->isEmpty() ? [] : $this->itemMedia()->readiness($pet);
+        $left = $this->treatsLeft($pet);
+        // Only a pet with items / treats pays for the readiness read (every state and broadcast).
+        $ready = $owned->isEmpty() && $left <= 0 ? [] : $this->itemMedia()->readiness($pet);
 
         return [
             'open_count' => $this->openCountOfPet($pet),
@@ -338,9 +352,10 @@ class WishService
                 ->map(fn (PetItem $i): array => ['key' => $i->item_key, 'variant' => $i->variant, 'design' => $this->ownedDesign($i, $species), 'media_ready' => $ready[$i->item_key] ?? true])
                 ->values()->all(),
             'treats' => [
-                'left' => $this->treatsLeft($pet),
+                'left' => $left,
                 'given_today' => PetTreatEvent::where('pet_id', $pet->id)->where('local_date', $pet->localDate($now))->count(),
                 'daily_limit' => self::TREATS_PER_DAY,
+                'ready' => $ready[ShopItem::TREATS] ?? true,
             ],
         ];
     }
