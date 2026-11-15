@@ -313,6 +313,101 @@ jobs:
           retention-days: 14
           overwrite: true
 
+  # API types (David 2026-11-15): mobile/src/api/schema.ts is generated from the backend's
+  # OpenAPI spec and must never drift. The cloud agents cannot boot Laravel (no Packagist, no
+  # PostgreSQL), so CI does it: migrate a fresh database (Scramble reads model columns from it),
+  # serve the API exactly like `npm run sail:up` + `npm run generate-api-types` locally, generate,
+  # and fail when the committed file differs. The fresh file is uploaded as the artifact
+  # `api-schema` — commit it (scripts/ci-api-types.sh explains how).
+  api-types:
+    name: API types (schema.ts up to date)
+    needs: plan
+    if: needs.plan.outputs.backend == 'true' || needs.plan.outputs.mobile == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_DB: api_types
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      APP_ENV: local # Scramble serves /docs/api.json in the local environment only
+      APP_URL: http://localhost:8000
+      DB_CONNECTION: pgsql
+      DB_HOST: 127.0.0.1
+      DB_PORT: 5432
+      DB_DATABASE: api_types
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      SESSION_DRIVER: array
+      CACHE_STORE: array
+      QUEUE_CONNECTION: sync
+      BROADCAST_CONNECTION: log
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP & Extensions
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_pgsql, pgsql, redis, bcmath, gd, zip, sodium
+          coverage: none
+
+      - name: Composer cache dir
+        id: composer-cache
+        working-directory: backend
+        run: echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Composer downloads
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: composer-${{ runner.os }}-php8.3-${{ hashFiles('backend/composer.lock') }}
+          restore-keys: composer-${{ runner.os }}-php8.3-
+
+      - name: Install PHP Dependencies
+        working-directory: backend
+        run: |
+          cp .env.example .env
+          composer install --prefer-dist --no-progress --no-interaction
+          php artisan key:generate
+
+      - name: Migrate
+        working-directory: backend
+        run: php artisan migrate --force --no-interaction
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: yarn
+          cache-dependency-path: yarn.lock
+
+      - name: Install generator (openapi-typescript)
+        run: yarn install --frozen-lockfile --non-interactive
+
+      - name: Generate and compare
+        run: bash scripts/ci-api-types.sh
+
+      - name: Upload fresh schema.ts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-schema
+          path: mobile/src/api/schema.ts
+          if-no-files-found: ignore
+          retention-days: 7
+
   deploy-script-tests:
     name: Deploy + CI scripts (shellcheck + harnesses)
     needs: plan
@@ -324,7 +419,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shellcheck
-        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh scripts/ci-deploy-target.sh scripts/ci-remote-deploy.sh scripts/ci-image-refs.sh scripts/mobile-ota-plan.sh scripts/tests/mobile-ota-plan.test.sh scripts/mobile-ota.sh scripts/tests/mobile-ota.test.sh scripts/daily-deploy.sh scripts/tests/daily-deploy.test.sh scripts/ci-install-ffmpeg.sh scripts/tests/ci-install-ffmpeg.test.sh
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh scripts/ci-deploy-target.sh scripts/ci-remote-deploy.sh scripts/ci-image-refs.sh scripts/mobile-ota-plan.sh scripts/tests/mobile-ota-plan.test.sh scripts/mobile-ota.sh scripts/tests/mobile-ota.test.sh scripts/daily-deploy.sh scripts/tests/daily-deploy.test.sh scripts/ci-install-ffmpeg.sh scripts/tests/ci-install-ffmpeg.test.sh scripts/ci-api-types.sh
 
       # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
       - name: Harness (deploy-production.sh)
@@ -619,7 +714,7 @@ jobs:
   ci-ok:
     name: CI OK
     if: always()
-    needs: [plan, backend-tests, backend-green, mobile-checks, deploy-script-tests, production-image]
+    needs: [plan, backend-tests, backend-green, mobile-checks, api-types, deploy-script-tests, production-image]
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
@@ -635,6 +730,9 @@ jobs:
           MOBILE_RESULT: ${{ needs.mobile-checks.result }}
           SCRIPTS_RESULT: ${{ needs.deploy-script-tests.result }}
           IMAGE_RESULT: ${{ needs.production-image.result }}
+          # API types: planned whenever the backend or the mobile suite is.
+          PLAN_API_TYPES: ${{ (needs.plan.outputs.backend == 'true' || needs.plan.outputs.mobile == 'true') && 'true' || 'false' }}
+          API_TYPES_RESULT: ${{ needs.api-types.result }}
         run: |
           set -u
           ok=1
@@ -648,6 +746,7 @@ jobs:
           verdict mobile-checks "$PLAN_MOBILE" "$MOBILE_RESULT"
           verdict deploy-script-tests "$PLAN_SCRIPTS" "$SCRIPTS_RESULT"
           verdict production-image "$PLAN_IMAGE" "$IMAGE_RESULT"
+          verdict api-types "$PLAN_API_TYPES" "$API_TYPES_RESULT"
           [ "$ok" = 1 ]
 
   # D18 (David 2026-10-14): manual production deploys. Only "Run workflow" on main with

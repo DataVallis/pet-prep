@@ -38,7 +38,7 @@ cd backend && ./vendor/bin/sail pint                        # code style
 cd mobile && yarn install && npx expo start      # yarn 1 is the package manager (M0-05)
 cd mobile && yarn test && npx tsc --noEmit
 # contract
-npm run generate-api-types # backend must be running
+npm run generate-api-types # backend must be running — CI job »API types« does the same and fails when schema.ts is stale (artifact api-schema = the fresh file)
 ```
 Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, password `password`). Never seed them in production.
 
@@ -46,7 +46,7 @@ Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, 
 1. Behaviour matches `PRODUCT_SPEC.md`; if the spec is ambiguous, ask David — don't invent rules.
 2. Tests: Pest feature test for every endpoint/service change; Jest for mobile logic. Time-dependent logic uses `Carbon::setTestNow()` / fake timers.
 3. `sail test`, `pint --test`, `npx tsc --noEmit`, `npm test` all green.
-4. API changed → regenerate types (`npm run generate-api-types`) and update `ARCHITECTURE.md` §3.
+4. API changed → regenerate types (`npm run generate-api-types`; without a local backend take the CI artifact `api-schema` — `scripts/ci-api-types.sh`) and update `ARCHITECTURE.md` §3.
 5. Tick the task in `ROADMAP.md`, add a dated entry to `HANDOFF.md` (what changed, new debt, next step).
 6. Notable progress → entry in `docs/journey/BUILD_LOG.md` (Slovenian; raw material for social, investor, partner and parent content).
 7. Any user-visible feature added, changed, removed or verified on a device → update its row in `docs/product/FEATURES.md` (status, roadmap ID, date) in the same PR.
