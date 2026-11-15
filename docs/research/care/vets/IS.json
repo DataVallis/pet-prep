@@ -1,0 +1,224 @@
+{
+  "country": "IS",
+  "checked": "2026-11-15",
+  "sources": [
+    {
+      "name": "Dýralæknastofa Dagfinns — own website",
+      "url": "https://dagfinnur.is/",
+      "note": "Opened: hours, address, on-call number 530 4888, fee; no 24 h claim."
+    },
+    {
+      "name": "Gæludýraklíníkin — own website",
+      "url": "https://www.gdk.is/",
+      "note": "Opened: hours; says Animalía is a round-the-clock emergency clinic (555 0112)."
+    },
+    {
+      "name": "Dýralæknastofa Reykjavíkur — own website",
+      "url": "https://dyri.is/en/contact",
+      "note": "Opened (home and contact): hours, address, refers urgent cases to Animalía."
+    },
+    {
+      "name": "hundaheimar.is — vet list",
+      "url": "https://www.hundaheimar.is/dyralaeknar",
+      "note": "Third-party list (opened) of clinics and regional duty phones; used only for clinics whose own sites could not be opened; needs the independent check."
+    },
+    {
+      "name": "Matvælastofnun (MAST) licensed vets list (PDF)",
+      "url": "https://mast.is/static/files/listar/heimasida-mast-dyralaeknalisti_20250401.pdf",
+      "note": "Opened: only ~280 licensed vets' names and licence numbers; no practices, towns or phones, so no entries taken."
+    },
+    {
+      "name": "Stjórnarráðið — vets and animal health staff",
+      "url": "https://www.stjornarradid.is/verkefni/atvinnuvegir/landbunadur/dyralaeknar-og-heilbrigdisstarfsmenn-dyra/",
+      "note": "Opened: general MAST district vet offices; no practice list or duty rota."
+    },
+    {
+      "name": "Reykjavíkurborg — Animals in Need",
+      "url": "https://reykjavik.is/en/node/26993",
+      "note": "Opened: no vet clinics or emergency vet number (only city animal service 822 7820)."
+    }
+  ],
+  "entries": [
+    {
+      "name": "Dýralæknastofa Dagfinns (Dagfinnur Dýralæknir)",
+      "city": "Reykjavík",
+      "region": "Höfuðborgarsvæðið",
+      "address": "Skólavörðustígur 35, Reykjavík",
+      "phone": "+354 552 3621",
+      "duty": "Open weekdays 08:00-17:00 and weekends 10:00-13:00. Outside opening hours an on-call vet for seriously ill or injured animals can be reached on +354 530 4888 (call-out fee applies, higher at night and on public holidays).",
+      "small_animals": true,
+      "url": "https://dagfinnur.is/",
+      "source_url": "https://dagfinnur.is/",
+      "note": "Own page opened. Page does not say 24 h, so false. Call-out fee ~35,000 ISK (~48,000 ISK nights/holidays) per page. Hundaheimar list gives weekdays 08:30-17:00 (conflict, clinic page used).",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Gæludýraklíníkin",
+      "city": "Reykjavík",
+      "region": "Höfuðborgarsvæðið",
+      "address": "Stórhöfði 17, 110 Reykjavík",
+      "phone": "+354 556 0700",
+      "duty": "Open Monday-Friday 08:00-17:00, closed at weekends. Outside opening hours the capital-area emergency clinic Animalía is on +354 555 0112.",
+      "small_animals": true,
+      "url": "https://www.gdk.is/",
+      "source_url": "https://www.gdk.is/",
+      "note": "Own page opened. Footer also lists capital-area duty line 530 48 88 (not explained on page). Email mottaka@gdk.is.",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýralæknastofa Reykjavíkur",
+      "city": "Reykjavík",
+      "region": "Höfuðborgarsvæðið",
+      "address": "Langholtsvegur 109 (Drekavogsmegin), 104 Reykjavík",
+      "phone": "+354 578 5454",
+      "duty": "Open Monday-Thursday 08:00-17:00, Friday 08:00-15:00, Saturday 10:00-12:00. Part of the capital-area emergency cooperation; urgent cases can also call Animalía on +354 555 0112.",
+      "small_animals": true,
+      "url": "https://dyri.is/en",
+      "source_url": "https://dyri.is/en/contact",
+      "note": "Own pages opened (home + contact). Home page says patients needing help outside hours are received 'around the clock' but does not say 24 h/nonstop and the contact page does not repeat it, so false. Email dyri@dyri.is.",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Animalía (emergency clinic)",
+      "region": "Höfuðborgarsvæðið",
+      "phone": "+354 555 0112",
+      "emergency_24h": true,
+      "duty": "Round-the-clock emergency reception for pets in the capital area; call +354 555 0112.",
+      "small_animals": true,
+      "source_url": "https://www.gdk.is/",
+      "note": "CLAIM FROM A THIRD-PARTY CLINIC PAGE: gdk.is says 'Animalía sólarhringsopin bráðamóttaka: s. 555 0112'; dyri.is also refers to Animalía for emergencies. Animalía's own site (animalia.is) could not be opened (not retrievable by the research tool), so address/town unknown and the 24 h claim needs the independent check. Independent check: gdk.is opened and says Animalía is a sólarhringsopin (24 h) bráðamóttaka, tel 555 0112; own site not opened.",
+      "kind": "clinic",
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýraspítalinn Kirkjulundi",
+      "city": "Garðabær",
+      "region": "Höfuðborgarsvæðið",
+      "url": "http://www.dyralaeknastofan.is/",
+      "source_url": "https://www.hundaheimar.is/dyralaeknar",
+      "small_animals": true,
+      "note": "Listed only on hundaheimar.is directory (opened); clinic's own site could not be opened (fetch tool blocked it), so no phone/hours. Needs check. Independent check: name+URL confirmed on hundaheimar.is (aggregator only; own site not openable).",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýralæknirinn Mosfellsbæ",
+      "city": "Mosfellsbær",
+      "region": "Höfuðborgarsvæðið",
+      "url": "https://dyralaeknirinn-mosfellsbae.business.site/",
+      "source_url": "https://www.hundaheimar.is/dyralaeknar",
+      "small_animals": true,
+      "note": "Only on hundaheimar.is (opened); own page not openable. Part of the capital-area evening/weekend duty per that list. Independent check: name+URL confirmed on hundaheimar.is (aggregator only; own site not openable).",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýraspítalinn í Víðidal",
+      "city": "Reykjavík",
+      "region": "Höfuðborgarsvæðið",
+      "url": "https://www.facebook.com/dyraspitalinn/",
+      "source_url": "https://www.hundaheimar.is/dyralaeknar",
+      "small_animals": true,
+      "note": "Only on hundaheimar.is (opened); Facebook page not opened. Part of capital-area duty per that list. Independent check: name+URL confirmed on hundaheimar.is (aggregator only; own site not openable).",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýralækningastofa Helgu Finnsdóttur",
+      "city": "Reykjavík",
+      "region": "Höfuðborgarsvæðið",
+      "url": "http://www.dyralaeknir.com/",
+      "source_url": "https://www.hundaheimar.is/dyralaeknar",
+      "small_animals": true,
+      "note": "Only on hundaheimar.is (opened); own site not openable. Independent check: name+URL confirmed on hundaheimar.is (aggregator only; own site not openable).",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýralæknamiðstöðin Grafarholti",
+      "city": "Reykjavík",
+      "region": "Höfuðborgarsvæðið",
+      "url": "https://www.dyrin.is/",
+      "source_url": "https://www.hundaheimar.is/dyralaeknar",
+      "small_animals": true,
+      "note": "Website from hundaheimar.is (opened). Address from a reykjavik.is registration PDF title (not opened) - verify. Own site not openable. Independent check 2026-11-15: address not confirmed on any opened page, removed; name+URL confirmed on hundaheimar.is only.",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýraspítalinn Lögmannshlíð",
+      "city": "Akureyri",
+      "region": "Norðurland",
+      "url": "http://dyraspitali.is/",
+      "source_url": "https://www.hundaheimar.is/dyralaeknar",
+      "small_animals": true,
+      "note": "Only on hundaheimar.is (opened); own site not openable. Independent check: name+URL confirmed on hundaheimar.is (aggregator only; own site not openable).",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýralæknastofa Suðurnesja",
+      "city": "Njarðvík (Reykjanesbær)",
+      "region": "Reykjanes",
+      "url": "http://www.dskef.is/",
+      "source_url": "https://www.hundaheimar.is/dyralaeknar",
+      "small_animals": true,
+      "note": "Address and site from hundaheimar.is (opened); own site not openable (noona booking page opened but shows no business details). Independent check: address not shown on the opened list, removed; name+URL confirmed on hundaheimar.is only.",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýralæknaþjónusta Eyjafjarðar",
+      "city": "Akureyri",
+      "region": "Norðurland",
+      "address": "Kaupangur, Eyjafjörður",
+      "url": "https://www.dyrey.is/is",
+      "source_url": "https://www.hundaheimar.is/dyralaeknar",
+      "small_animals": false,
+      "note": "Only on hundaheimar.is (opened): hours Mon/Wed/Thu 16-18, Tue/Fri 13-16. Small-animal service unconfirmed (probably mixed/farm), so not published. Eyjafjarðarsýsla duty phones listed there 461 4950 / 461 2550. Independent check: name+URL confirmed on hundaheimar.is (aggregator only; own site not openable).",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýralæknamiðstöðin á Hellu",
+      "city": "Hella",
+      "region": "Suðurland",
+      "phone": "+354 487 5141",
+      "url": "http://www.dlm.is/",
+      "source_url": "https://www.hundaheimar.is/dyralaeknar",
+      "small_animals": false,
+      "note": "Only on hundaheimar.is (opened): weekdays 08-17, evening/weekend duty phone (number not listed). Small-animal service unconfirmed (probably farm), so not published. Independent check: phone 487 5141 confirmed on hundaheimar.is; address not confirmed, removed.",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Dýralæknaþjónusta Suðurlands",
+      "city": "Ölfus",
+      "region": "Suðurland",
+      "phone": "+354 482 3060",
+      "url": "http://dyralaeknir.is/",
+      "source_url": "https://www.hundaheimar.is/dyralaeknar",
+      "small_animals": false,
+      "note": "Only on hundaheimar.is (opened): weekdays 09-17, emergency service after hours via same number. Small-animal service unconfirmed (probably farm), so not published. Independent check: name+URL confirmed on hundaheimar.is (aggregator only; own site not openable).",
+      "kind": "clinic",
+      "emergency_24h": false,
+      "checked": "2026-11-15"
+    }
+  ],
+  "notes": "No official poison line and no official duty-rota page were opened (MAST's regional vaktsími list is only seen second-hand via hundaheimar.is: capital area 530 4888, official duty 17:00-08:00 weekdays and Fri 17:00-Mon 08:00; not entered as duty_rota). Animalia (animalia.is), Dýralæknafélag Íslands, dyralaeknamidstodin/dyrin.is, dlm.is, dskef.is, dyrey.is, dyralaeknir.is and others could not be opened (the fetch tool only allowed URLs surfaced by search). Left: Akureyri, Egilsstaðir, Selfoss, Borgarnes, Ísafjörður, Vestmannaeyjar clinics."
+}
