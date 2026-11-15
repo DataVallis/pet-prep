@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Hot dogs",
-    "sl": "Hrenovke"
+    "sl": "Hrenovke",
+    "hr": "Hrenovke (hot dog)"
   },
   "question": {
     "en": "Can cats eat hot dogs?",
-    "sl": "Ali lahko mačke jedo hrenovke?"
+    "sl": "Ali lahko mačke jedo hrenovke?",
+    "hr": "Smiju li mačke jesti hrenovke?"
   },
   "url_slug": {
     "en": "hot-dogs",
-    "sl": "hrenovke"
+    "sl": "hrenovke",
+    "hr": "hot-dog"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Hot dogs are a processed meat, usually packed with extra salt and spices, and some added seasonings may even be toxic to cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats for cats.",
-    "sl": "Raje ne. Hrenovke so predelano meso, običajno polno dodane soli in začimb, nekatere dodane začimbe pa so lahko za mačke celo strupene. RSPCA Avstralija svetuje, da mačkam ne dajete klobas in kuhanih mesnih izdelkov."
+    "sl": "Raje ne. Hrenovke so predelano meso, običajno polno dodane soli in začimb, nekatere dodane začimbe pa so lahko za mačke celo strupene. RSPCA Avstralija svetuje, da mačkam ne dajete klobas in kuhanih mesnih izdelkov.",
+    "hr": "Bolje ne. Hrenovke su prerađeno meso, obično prepuno dodatne soli i začina, a neki dodani začini mogu čak biti otrovni za mačke. RSPCA Australia savjetuje da se mačkama ne daju kobasice ni termički obrađeni industrijski mesni proizvodi."
   },
   "why": {
     "en": "Purina notes that turkey hot dogs, turkey sausage, deli meat and other processed meats are usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. The RSPCA warns that processed meats like pigs in blankets are incredibly high in salt, and onion and garlic, found in many pre-made foods, are toxic to cats.",
-    "sl": "Purina navaja, da so puranje hrenovke, puranje klobase, mesni narezki in drugo predelano meso običajno polni dodanega natrija in začimb, nekatere dodane začimbe pa so lahko za mačke strupene. RSPCA Avstralija svetuje, naj se mačke izogibajo klobasam in kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1). RSPCA opozarja, da je predelano meso, kot so hrenovke v slanini, izjemno slano, čebula in česen, ki ju najdemo v številnih že pripravljenih jedeh, pa sta za mačke strupena."
+    "sl": "Purina navaja, da so puranje hrenovke, puranje klobase, mesni narezki in drugo predelano meso običajno polni dodanega natrija in začimb, nekatere dodane začimbe pa so lahko za mačke strupene. RSPCA Avstralija svetuje, naj se mačke izogibajo klobasam in kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1). RSPCA opozarja, da je predelano meso, kot so hrenovke v slanini, izjemno slano, čebula in česen, ki ju najdemo v številnih že pripravljenih jedeh, pa sta za mačke strupena.",
+    "hr": "Purina napominje da su hrenovke od puretine, kobasice od puretine, narezak i drugo prerađeno meso obično prepuni dodatnog natrija i začina, a neki dodani začini mogu biti otrovni za mačke. RSPCA Australia savjetuje izbjegavanje kobasica i termički obrađenih industrijskih mesnih proizvoda, jer mogu sadržavati sulfitne konzervanse, koji se povezuju s nedostatkom tiamina (vitamina B1). RSPCA upozorava da je prerađeno meso poput kobasica omotanih slaninom (pigs in blankets) iznimno slano, a luk i češnjak, koji se nalaze u mnogim gotovim jelima, otrovni su za mačke."
   },
   "signs": {
     "en": [
@@ -30,26 +35,34 @@
     "sl": [
       "Prebavne težave",
       "Driska"
+    ],
+    "hr": [
+      "Želučane tegobe",
+      "Proljev"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate a hot dog that may contain onion or garlic, contact your vet as soon as possible. If she has a stomach upset or diarrhoea afterwards, call your vet for advice.",
-    "sl": "Če je mačka pojedla hrenovko, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če ima nato prebavne težave ali drisko, se za nasvet obrnite na veterinarja."
+    "sl": "Če je mačka pojedla hrenovko, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če ima nato prebavne težave ali drisko, se za nasvet obrnite na veterinarja.",
+    "hr": "Ako je mačka pojela hrenovku koja bi mogla sadržavati luk ili češnjak, što prije se obrati veterinaru. Ako nakon toga ima želučane tegobe ili proljev, nazovi veterinara za savjet."
   },
   "serving": null,
   "child": {
     "en": "Hot dogs are a salty people snack. Kitty is happier with her own cat treats.",
-    "sl": "Hrenovke so slan prigrizek za ljudi. Muca je bolj vesela svojih mačjih priboljškov."
+    "sl": "Hrenovke so slan prigrizek za ljudi. Muca je bolj vesela svojih mačjih priboljškov.",
+    "hr": "Hrenovke su slana grickalica za ljude. Maci je draže sa svojim mačjim poslasticama."
   },
   "faq": [
     {
       "q": {
         "en": "Is one tiny bite harmful?",
-        "sl": "Ali en majhen grižljaj škodi?"
+        "sl": "Ali en majhen grižljaj škodi?",
+        "hr": "Je li jedan sitan zalogaj štetan?"
       },
       "a": {
         "en": "A tiny piece of unseasoned processed turkey meat, such as a turkey hot dog, might not do a lot of harm, but it is best not to feed it regularly, and seasoned hot dogs may contain onion or garlic, which are toxic to cats.",
-        "sl": "Majhen košček nezačinjenega predelanega puranjega mesa, na primer puranje hrenovke, morda ne bo zelo škodil, vendar ga je bolje ne dajati redno, začinjene hrenovke pa lahko vsebujejo čebulo ali česen, ki sta za mačke strupena."
+        "sl": "Majhen košček nezačinjenega predelanega puranjega mesa, na primer puranje hrenovke, morda ne bo zelo škodil, vendar ga je bolje ne dajati redno, začinjene hrenovke pa lahko vsebujejo čebulo ali česen, ki sta za mačke strupena.",
+        "hr": "Sitan komadić nezačinjene prerađene puretine, poput hrenovke od puretine, vjerojatno neće mnogo naškoditi, ali je bolje ne davati je redovito, a začinjene hrenovke mogu sadržavati luk ili češnjak, koji su otrovni za mačke."
       }
     }
   ],
@@ -129,6 +142,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "19fada0a04befa9fea72cee45d5d0d1fb4b18fa87836ac6adf23e902c7d03b58"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "01750855903dfac7bdc128f8d0682ee84968bbb84e0d1a3a91df4f724bf61380"
     }
   }
 }

@@ -4,28 +4,33 @@
   "name": {
     "en": "Sugar",
     "sl": "Sladkor",
-    "cs": "Cukr"
+    "cs": "Cukr",
+    "hr": "Šećer"
   },
   "question": {
     "en": "Can cats eat sugar?",
     "sl": "Ali lahko mačke jedo sladkor?",
-    "cs": "Mohou kočky jíst cukr?"
+    "cs": "Mohou kočky jíst cukr?",
+    "hr": "Smiju li mačke jesti šećer?"
   },
   "url_slug": {
     "en": "sugar",
     "sl": "sladkor",
-    "cs": "cukr"
+    "cs": "cukr",
+    "hr": "secer"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Sugar isn't toxic to cats, but it's unhealthy for them and offers no nutritional value. Cats can't even taste sweetness. A lick of something sweet is no emergency, but regular sugary treats can lead to weight gain, diabetes and dental disease.",
     "sl": "Raje ne. Sladkor za mačke ni strupen, je pa nezdrav in nima nobene hranilne vrednosti. Mačke sladkega okusa sploh ne zaznajo. Oblizek nečesa sladkega ni nujen primer, redni sladki priboljški pa lahko vodijo v debelost, sladkorno bolezen in bolezni zob.",
-    "cs": "Raději ne. Cukr pro kočky není toxický, ale je pro ně nezdravý a nemá žádnou nutriční hodnotu. Kočky sladkou chuť ani nevnímají. Olíznutí něčeho sladkého není pohotovost, ale pravidelné sladké pamlsky mohou vést k nárůstu hmotnosti, cukrovce a zubním potížím."
+    "cs": "Raději ne. Cukr pro kočky není toxický, ale je pro ně nezdravý a nemá žádnou nutriční hodnotu. Kočky sladkou chuť ani nevnímají. Olíznutí něčeho sladkého není pohotovost, ale pravidelné sladké pamlsky mohou vést k nárůstu hmotnosti, cukrovce a zubním potížím.",
+    "hr": "Bolje ne. Šećer nije otrovan za mačke, ali im je nezdrav i ne daje nikakvu hranjivu vrijednost. Mačke slatkoću uopće ne osjećaju. Lizanje nečeg slatkog nije hitan slučaj, ali redovite slatke poslastice mogu dovesti do debljanja, dijabetesa i bolesti zubi."
   },
   "why": {
     "en": "Cats are carnivores: their bodies are built to eat meat, not carbohydrates or sugar, and none of their taste buds can detect sweet flavours. Sugar adds unnecessary calories that can quickly lead to weight gain; over time, too much sugar can cause insulin resistance and eventually diabetes, and sugar contributes to cavities and gum disease. Brown sugar is no different. VCA notes that a little sugar isn't bad for most cats, but Cats Protection warns that regularly giving sugary foods could lead to health problems, so we use the stricter level.",
     "sl": "Mačke so mesojedke: njihovo telo je ustvarjeno za meso, ne za ogljikove hidrate ali sladkor, in nobena njihova okušalna brbončica ne zazna sladkega okusa. Sladkor prinaša nepotrebne kalorije, ki hitro vodijo v pridobivanje teže; sčasoma lahko preveč sladkorja povzroči inzulinsko rezistenco in nazadnje sladkorno bolezen, prispeva pa tudi h kariesu in boleznim dlesni. Rjavi sladkor ni nič drugačen. VCA navaja, da malo sladkorja večini mačk ne škodi, Cats Protection pa opozarja, da lahko redno dajanje sladke hrane vodi v zdravstvene težave, zato uporabljamo strožjo raven.",
-    "cs": "Kočky jsou masožravci: jejich tělo je uzpůsobené ke zpracování masa, ne sacharidů nebo cukru, a žádný z jejich chuťových pohárků nedokáže vnímat sladkou chuť. Cukr přidává zbytečné kalorie, které mohou rychle vést k nárůstu hmotnosti. Časem může příliš mnoho cukru způsobit inzulinovou rezistenci a nakonec cukrovku a přispívá také ke vzniku zubního kazu a onemocnění dásní. Hnědý cukr na tom není jinak. VCA poznamenává, že trocha cukru většině koček neškodí, Cats Protection však varuje, že pravidelné podávání sladkých jídel by mohlo vést ke zdravotním problémům, a proto používáme přísnější úroveň."
+    "cs": "Kočky jsou masožravci: jejich tělo je uzpůsobené ke zpracování masa, ne sacharidů nebo cukru, a žádný z jejich chuťových pohárků nedokáže vnímat sladkou chuť. Cukr přidává zbytečné kalorie, které mohou rychle vést k nárůstu hmotnosti. Časem může příliš mnoho cukru způsobit inzulinovou rezistenci a nakonec cukrovku a přispívá také ke vzniku zubního kazu a onemocnění dásní. Hnědý cukr na tom není jinak. VCA poznamenává, že trocha cukru většině koček neškodí, Cats Protection však varuje, že pravidelné podávání sladkých jídel by mohlo vést ke zdravotním problémům, a proto používáme přísnější úroveň.",
+    "hr": "Mačke su mesojedi: njihovo je tijelo građeno za meso, a ne za ugljikohidrate ili šećer, i nijedan njihov okusni pupoljak ne prepoznaje slatke okuse. Šećer dodaje nepotrebne kalorije koje brzo mogu dovesti do debljanja; s vremenom previše šećera može izazvati inzulinsku rezistenciju i naposljetku dijabetes, a šećer pridonosi karijesu i bolestima desni. Smeđi šećer nije drukčiji. VCA napominje da malo šećera većini mačaka ne škodi, ali Cats Protection upozorava da redovito davanje slatke hrane može dovesti do zdravstvenih problema, zato primjenjujemo strožu razinu."
   },
   "signs": {
     "en": [
@@ -39,42 +44,52 @@
     "cs": [
       "Průjem",
       "Podrážděný žaludek"
+    ],
+    "hr": [
+      "Proljev",
+      "Želučane tegobe"
     ]
   },
   "what_to_do": {
     "en": "If your cat just licked something sweet, there's no need to rush to the vet. If she ate a lot of a sugary food, or the food contained chocolate, contact your vet straight away.",
     "sl": "Če je mačka le oblizala nekaj sladkega, ni treba hiteti k veterinarju. Če je pojedla veliko sladke hrane ali je bila v hrani čokolada, takoj pokličite veterinarja.",
-    "cs": "Pokud kočka jen olízla něco sladkého, není třeba spěchat k veterináři. Pokud snědla hodně sladkého jídla nebo jídlo obsahovalo čokoládu, okamžitě se obraťte na veterináře."
+    "cs": "Pokud kočka jen olízla něco sladkého, není třeba spěchat k veterináři. Pokud snědla hodně sladkého jídla nebo jídlo obsahovalo čokoládu, okamžitě se obraťte na veterináře.",
+    "hr": "Ako je mačka samo poliznula nešto slatko, ne treba žuriti veterinaru. Ako je pojela puno slatke hrane ili je hrana sadržavala čokoladu, odmah se obrati veterinaru."
   },
   "serving": null,
   "child": {
     "en": "Cats can't even taste sweet things, and sugar isn't good for them. Sweets are for people, not for kitty.",
     "sl": "Muce sladkega okusa sploh ne zaznajo, sladkor pa jim ne koristi. Sladkarije so za ljudi, ne za muco.",
-    "cs": "Kočky sladkou chuť ani nevnímají a cukr jim neprospívá. Sladkosti jsou pro lidi, ne pro kočičku."
+    "cs": "Kočky sladkou chuť ani nevnímají a cukr jim neprospívá. Sladkosti jsou pro lidi, ne pro kočičku.",
+    "hr": "Mačke slatko uopće ne osjećaju, a šećer im nije dobar. Slatkiši su za ljude, a ne za macu."
   },
   "faq": [
     {
       "q": {
         "en": "Can cats taste sugar?",
         "sl": "Ali mačke okusijo sladkor?",
-        "cs": "Cítí kočky chuť cukru?"
+        "cs": "Cítí kočky chuť cukru?",
+        "hr": "Osjećaju li mačke okus šećera?"
       },
       "a": {
         "en": "No. Cats are carnivores and none of their taste buds can detect sweet flavours. If a cat shows interest in a sweet food, she is reacting to other ingredients, such as fat or umami flavours.",
         "sl": "Ne. Mačke so mesojedke in nobena njihova okušalna brbončica ne zazna sladkega okusa. Če mačko zanima sladka hrana, se odziva na druge sestavine, na primer maščobo ali okus umami.",
-        "cs": "Ne. Kočky jsou masožravci a žádný z jejich chuťových pohárků nedokáže vnímat sladkou chuť. Pokud kočka projeví o sladké jídlo zájem, reaguje na jiné složky, například na tuk nebo chuť umami."
+        "cs": "Ne. Kočky jsou masožravci a žádný z jejich chuťových pohárků nedokáže vnímat sladkou chuť. Pokud kočka projeví o sladké jídlo zájem, reaguje na jiné složky, například na tuk nebo chuť umami.",
+        "hr": "Ne. Mačke su mesojedi i nijedan njihov okusni pupoljak ne prepoznaje slatke okuse. Ako mačka pokazuje zanimanje za slatku hranu, reagira na druge sastojke, poput masnoće ili umami okusa."
       }
     },
     {
       "q": {
         "en": "Is brown sugar better for cats?",
         "sl": "Ali je rjavi sladkor boljši za mačke?",
-        "cs": "Je hnědý cukr pro kočky lepší?"
+        "cs": "Je hnědý cukr pro kočky lepší?",
+        "hr": "Je li smeđi šećer bolji za mačke?"
       },
       "a": {
         "en": "No. Brown sugar is still sugar; to a cat's body it's no different from white sugar.",
         "sl": "Ne. Rjavi sladkor je še vedno sladkor; za mačje telo se ne razlikuje od belega.",
-        "cs": "Ne. Hnědý cukr je pořád cukr; pro kočičí tělo se od bílého nijak neliší."
+        "cs": "Ne. Hnědý cukr je pořád cukr; pro kočičí tělo se od bílého nijak neliší.",
+        "hr": "Ne. Smeđi šećer je i dalje šećer; za mačje tijelo nije drukčiji od bijelog."
       }
     }
   ],
@@ -187,6 +202,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5d31ea85e76c66bb1e11cf12084a5513dfa62576bb1307097ea52da726332806"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "48fc7d2e3cc483593a20d932f5dd327746c9aa9a6eb74e0041facc0723c7be51"
     }
   }
 }

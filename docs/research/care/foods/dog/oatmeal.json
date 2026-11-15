@@ -4,68 +4,80 @@
   "name": {
     "en": "Oatmeal",
     "sl": "Ovseni kosmiči",
-    "cs": "Ovesná kaše"
+    "cs": "Ovesná kaše",
+    "hr": "Zobena kaša"
   },
   "question": {
     "en": "Can dogs eat oatmeal?",
     "sl": "Ali lahko psi jedo ovsene kosmiče?",
-    "cs": "Mohou psi jíst ovesnou kaši?"
+    "cs": "Mohou psi jíst ovesnou kaši?",
+    "hr": "Smiju li psi jesti zobenu kašu?"
   },
   "url_slug": {
     "en": "oatmeal",
     "sl": "ovseni-kosmici",
-    "cs": "ovesna-kase"
+    "cs": "ovesna-kase",
+    "hr": "zobena-kasa"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. Plain oatmeal, cooked with water rather than milk, is fine for dogs. Never give flavoured or instant oatmeal, and leave out salt, butter, chocolate and raisins.",
     "sl": "Da, v majhnih količinah. Navadna ovsena kaša, kuhana z vodo namesto z mlekom, je za pse v redu. Nikoli ne dajajte aromatizirane ali instant kaše in ne dodajajte soli, masla, čokolade ali rozin.",
-    "cs": "Ano, v malém množství. Obyčejná ovesná kaše uvařená na vodě, ne na mléce, je pro psy v pořádku. Nikdy nedávejte ochucenou ani instantní kaši a vynechte sůl, máslo, čokoládu a rozinky."
+    "cs": "Ano, v malém množství. Obyčejná ovesná kaše uvařená na vodě, ne na mléce, je pro psy v pořádku. Nikdy nedávejte ochucenou ani instantní kaši a vynechte sůl, máslo, čokoládu a rozinky.",
+    "hr": "Da, u malim količinama. Obična zobena kaša, kuhana u vodi, a ne u mlijeku, u redu je za pse. Nikad ne daj kašu s okusima ni instant kašu, a izostavi sol, maslac, čokoladu i grožđice."
   },
   "why": {
     "en": "Oatmeal is high in fibre, including soluble fibre that can help dogs with irregular bowel movements. But dogs digest dairy poorly, raw oats are harder to digest, and a lot of fibre can cause stomach upset, diarrhoea and vomiting; a large amount can even lead to bloat. It is also fairly high in carbs and calories. Flavoured oatmeal often has more sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
     "sl": "Ovseni kosmiči imajo veliko vlaknin, tudi topnih, ki lahko pomagajo psom z neredno prebavo. Toda psi slabo prebavljajo mlečne izdelke, surovi kosmiči so težje prebavljivi, veliko vlaknin pa lahko povzroči prebavne težave, drisko in bruhanje; velika količina lahko celo povzroči napihnjenost želodca. Imajo tudi precej ogljikovih hidratov in kalorij. Aromatizirana kaša ima pogosto več sladkorja in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana.",
-    "cs": "Ovesné vločky jsou bohaté na vlákninu, včetně rozpustné vlákniny, která může pomoci psům s nepravidelným vyprazdňováním. Psi ale špatně tráví mléčné výrobky, syrové ovesné vločky se tráví hůř a hodně vlákniny může způsobit podráždění žaludku, průjem a zvracení; velké množství může dokonce vést k nadmutí žaludku. Kaše má také poměrně hodně sacharidů a kalorií. Ochucená kaše často obsahuje víc cukru a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná."
+    "cs": "Ovesné vločky jsou bohaté na vlákninu, včetně rozpustné vlákniny, která může pomoci psům s nepravidelným vyprazdňováním. Psi ale špatně tráví mléčné výrobky, syrové ovesné vločky se tráví hůř a hodně vlákniny může způsobit podráždění žaludku, průjem a zvracení; velké množství může dokonce vést k nadmutí žaludku. Kaše má také poměrně hodně sacharidů a kalorií. Ochucená kaše často obsahuje víc cukru a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná.",
+    "hr": "Zobena kaša bogata je vlaknima, uključujući topiva vlakna koja mogu pomoći psima s nepravilnom stolicom. No psi slabo probavljaju mliječne proizvode, sirova zob teže se probavlja, a puno vlakana može izazvati želučane tegobe, proljev i povraćanje; velika količina može čak izazvati nadutost želuca. Prilično je bogata i ugljikohidratima i kalorijama. Kaša s okusima često ima više šećera i može sadržavati ksilitol, koji je otrovan za pse, a instant kaša jako je prerađena."
   },
   "signs": null,
   "what_to_do": {
     "en": "Introduce it gradually and watch how your dog handles it. If your dog seems to react badly, contact your vet straight away.",
     "sl": "Ovseno kašo uvajajte postopoma in opazujte, kako jo pes prenaša. Če se zdi, da se nanjo slabo odziva, takoj pokličite veterinarja.",
-    "cs": "Zavádějte ji postupně a sledujte, jak ji pes snáší. Pokud se zdá, že na ni pes reaguje špatně, ihned se obraťte na veterináře."
+    "cs": "Zavádějte ji postupně a sledujte, jak ji pes snáší. Pokud se zdá, že na ni pes reaguje špatně, ihned se obraťte na veterináře.",
+    "hr": "Uvodi je postupno i promatraj kako je pas podnosi. Ako pas loše reagira, odmah se obrati veterinaru."
   },
   "serving": {
     "en": "Plain, cooked oatmeal made with water, not milk, and not too much at once. Not raw, not instant, and no sugar, salt, butter, chocolate, raisins or flavourings.",
     "sl": "Navadna kuhana ovsena kaša, pripravljena z vodo, ne z mlekom, in ne preveč naenkrat. Ne surova, ne instant, brez sladkorja, soli, masla, čokolade, rozin in arom.",
-    "cs": "Obyčejná kaše uvařená na vodě, ne na mléce, a ne příliš mnoho najednou. Ne syrová, ne instantní a bez cukru, soli, másla, čokolády, rozinek a ochucovadel."
+    "cs": "Obyčejná kaše uvařená na vodě, ne na mléce, a ne příliš mnoho najednou. Ne syrová, ne instantní a bez cukru, soli, másla, čokolády, rozinek a ochucovadel.",
+    "hr": "Obična kuhana kaša od zobi u vodi, ne u mlijeku, i ne previše odjednom. Ne sirova, ne instant i bez šećera, soli, maslaca, čokolade, grožđica ni aroma."
   },
   "child": {
     "en": "Dogs can have a little plain oatmeal made with water. Sweet or flavoured porridge is not for dogs.",
     "sl": "Psi lahko dobijo malo navadne ovsene kaše, kuhane z vodo. Sladka ali aromatizirana kaša ni za pse.",
-    "cs": "Psi mohou dostat trochu obyčejné ovesné kaše uvařené na vodě. Sladká nebo ochucená kaše pro psy není."
+    "cs": "Psi mohou dostat trochu obyčejné ovesné kaše uvařené na vodě. Sladká nebo ochucená kaše pro psy není.",
+    "hr": "Psi smiju dobiti malo obične zobene kaše kuhane u vodi. Slatka kaša ili kaša s okusima nije za pse."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat raw oats?",
         "sl": "Ali lahko psi jedo surove ovsene kosmiče?",
-        "cs": "Mohou psi jíst syrové ovesné vločky?"
+        "cs": "Mohou psi jíst syrové ovesné vločky?",
+        "hr": "Smiju li psi jesti sirovu zob?"
       },
       "a": {
         "en": "It's better to cook them. Raw oats sprinkled over food are only harder for your dog to digest.",
         "sl": "Bolje jih je skuhati. Surovi kosmiči, posuti po hrani, so za psa le težje prebavljivi.",
-        "cs": "Je lepší je uvařit. Syrové vločky posypané na krmivo se psovi jen hůř tráví."
+        "cs": "Je lepší je uvařit. Syrové vločky posypané na krmivo se psovi jen hůř tráví.",
+        "hr": "Bolje je skuhati je. Sirova zob posuta po hrani psu je samo teže probavljiva."
       }
     },
     {
       "q": {
         "en": "Is flavoured instant oatmeal safe for dogs?",
         "sl": "Je aromatizirana instant kaša za pse varna?",
-        "cs": "Je ochucená instantní ovesná kaše pro psy bezpečná?"
+        "cs": "Je ochucená instantní ovesná kaše pro psy bezpečná?",
+        "hr": "Je li instant kaša s okusima sigurna za pse?"
       },
       "a": {
         "en": "No. Flavoured oatmeal often has extra sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
         "sl": "Ne. Aromatizirana kaša ima pogosto dodan sladkor in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana.",
-        "cs": "Ne. Ochucená kaše často obsahuje další cukr a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná."
+        "cs": "Ne. Ochucená kaše často obsahuje další cukr a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná.",
+        "hr": "Ne. Kaša s okusima često ima dodatni šećer i može sadržavati ksilitol, koji je otrovan za pse, a instant kaša jako je prerađena."
       }
     }
   ],
@@ -179,6 +191,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6fde4f2b640312f1b72030d6249f08f5865168bca44574e010559c9a69026238"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2b21bb7837ea224a70a9c28a0e5fafc88add26007f9ddc218ced0582df836c90"
     }
   }
 }

@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Beans",
-    "sl": "Fižol"
+    "sl": "Fižol",
+    "hr": "Grah"
   },
   "question": {
     "en": "Can dogs eat beans?",
-    "sl": "Ali lahko psi jedo fižol?"
+    "sl": "Ali lahko psi jedo fižol?",
+    "hr": "Smiju li psi jesti grah?"
   },
   "url_slug": {
     "en": "beans",
-    "sl": "fizol"
+    "sl": "fizol",
+    "hr": "grah"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as a treat. Dogs can eat many kinds of beans, such as black, kidney, pinto, lima and navy beans, if they have been soaked and then cooked. Beans may give your dog some gas. Baked beans in sauce are not a good idea.",
-    "sl": "Da, kot priboljšek. Psi lahko jedo številne vrste fižola, na primer črni, rdeči (ledvičasti), pinto, lima in beli fižol, če je bil prej namočen in nato kuhan. Fižol lahko psu povzroči nekaj vetrov. Pečen fižol v omaki (baked beans) ni dobra izbira."
+    "sl": "Da, kot priboljšek. Psi lahko jedo številne vrste fižola, na primer črni, rdeči (ledvičasti), pinto, lima in beli fižol, če je bil prej namočen in nato kuhan. Fižol lahko psu povzroči nekaj vetrov. Pečen fižol v omaki (baked beans) ni dobra izbira.",
+    "hr": "Da, kao poslastica. Psi mogu jesti mnoge vrste graha, poput crnog, crvenog (kidney), pinto, lima i bijelog graha, ako je namočen pa kuhan. Grah može kod psa izazvati nadutost. Grah u umaku (baked beans) nije dobra ideja."
   },
   "why": {
     "en": "Beans contain a lot of fibre, and uncooked they are almost indigestible. Soaking and cooking them helps dogs digest them and may reduce wind. Beans should not replace meat in a dog's diet. Baked beans themselves aren't toxic, but they are high in salt and sugar and their sauce can irritate a dog's stomach; eaten regularly, they could increase the risk of pancreatitis.",
-    "sl": "Fižol vsebuje veliko vlaknin, nekuhan pa je skoraj neprebavljiv. Namakanje in kuhanje psu pomagata, da ga prebavi, in lahko zmanjšata vetrove. Fižol ne sme nadomestiti mesa v pasji prehrani. Pečen fižol sam po sebi ni strupen, a vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec; če ga pes je redno, se lahko poveča tveganje za vnetje trebušne slinavke."
+    "sl": "Fižol vsebuje veliko vlaknin, nekuhan pa je skoraj neprebavljiv. Namakanje in kuhanje psu pomagata, da ga prebavi, in lahko zmanjšata vetrove. Fižol ne sme nadomestiti mesa v pasji prehrani. Pečen fižol sam po sebi ni strupen, a vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec; če ga pes je redno, se lahko poveča tveganje za vnetje trebušne slinavke.",
+    "hr": "Grah sadrži mnogo vlakana, a sirov je gotovo neprobavljiv. Namakanje i kuhanje pomažu psima da ga probave i mogu smanjiti nadutost. Grah ne bi smio zamijeniti meso u prehrani psa. Grah u umaku (baked beans) sam po sebi nije otrovan, ali je bogat solju i šećerom, a njegov umak može nadražiti želudac psa; ako se jede redovito, mogao bi povećati rizik od upale gušterače."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate some baked beans, a small amount is unlikely to cause much harm. Watch your dog for 24 hours and contact your vet for advice if you notice concerning signs such as an upset stomach or diarrhoea.",
-    "sl": "Če je pes pojedel nekaj pečenega fižola, majhna količina verjetno ne bo škodila. Psa 24 ur opazujte in se za nasvet obrnite na veterinarja, če opazite zaskrbljujoče znake, kot so prebavne težave ali driska."
+    "sl": "Če je pes pojedel nekaj pečenega fižola, majhna količina verjetno ne bo škodila. Psa 24 ur opazujte in se za nasvet obrnite na veterinarja, če opazite zaskrbljujoče znake, kot so prebavne težave ali driska.",
+    "hr": "Ako je pas pojeo malo graha u umaku, mala količina vjerojatno neće mnogo naškoditi. Promatraj psa 24 sata i obrati se veterinaru za savjet ako primijetiš zabrinjavajuće znakove poput želučanih tegoba ili proljeva."
   },
   "serving": {
     "en": "Soaked first and then cooked, without sauce, as an occasional treat.",
-    "sl": "Najprej namočen in nato kuhan, brez omake, kot občasen priboljšek."
+    "sl": "Najprej namočen in nato kuhan, brez omake, kot občasen priboljšek.",
+    "hr": "Prvo namočen, zatim kuhan, bez umaka, kao povremena poslastica."
   },
   "child": {
     "en": "Cooked beans can be a little treat for dogs, but they might make your dog a bit windy!",
-    "sl": "Kuhan fižol je lahko majhen priboljšek za psa, a ga lahko malo napihne!"
+    "sl": "Kuhan fižol je lahko majhen priboljšek za psa, a ga lahko malo napihne!",
+    "hr": "Kuhani grah može biti mala poslastica za pse, ali kod psa može izazvati i malo nadutosti!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat baked beans?",
-        "sl": "Ali lahko psi jedo pečen fižol v omaki?"
+        "sl": "Ali lahko psi jedo pečen fižol v omaki?",
+        "hr": "Smiju li psi jesti grah u umaku (baked beans)?"
       },
       "a": {
         "en": "It's best not to. The beans themselves aren't toxic, but baked beans are high in salt and sugar and the sauce can irritate a dog's stomach. If your dog ate a little you spilt on the floor, it's probably not a cause for concern.",
-        "sl": "Raje ne. Fižol sam ni strupen, a pečen fižol vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec. Če je pes pojedel malo fižola, ki vam je padel na tla, to verjetno ni razlog za skrb."
+        "sl": "Raje ne. Fižol sam ni strupen, a pečen fižol vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec. Če je pes pojedel malo fižola, ki vam je padel na tla, to verjetno ni razlog za skrb.",
+        "hr": "Bolje ne. Sam grah nije otrovan, ali je grah u umaku bogat solju i šećerom, a umak može nadražiti želudac psa. Ako je pas pojeo malo onoga što ti je palo na pod, vjerojatno nema razloga za zabrinutost."
       }
     },
     {
       "q": {
         "en": "Can beans replace meat in my dog's diet?",
-        "sl": "Ali lahko fižol nadomesti meso v pasji prehrani?"
+        "sl": "Ali lahko fižol nadomesti meso v pasji prehrani?",
+        "hr": "Može li grah zamijeniti meso u prehrani mog psa?"
       },
       "a": {
         "en": "No. Feeding just beans is bad for dogs if it replaces meat in their diet.",
-        "sl": "Ne. Če fižol v pasji prehrani nadomesti meso, je to za psa slabo."
+        "sl": "Ne. Če fižol v pasji prehrani nadomesti meso, je to za psa slabo.",
+        "hr": "Ne. Hranjenje samo grahom loše je za pse ako zamjenjuje meso u njihovoj prehrani."
       }
     }
   ],
@@ -175,6 +187,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "90d083c9179da00cc565f27ab6432e07d06d000da146487967a2837c560e6052"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "59de08530181225684a30626a62dedd578eb8b6fdcfdd9467db8f29004cbddd7"
     }
   }
 }

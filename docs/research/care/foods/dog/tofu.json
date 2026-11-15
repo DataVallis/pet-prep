@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Tofu",
-    "sl": "Tofu"
+    "sl": "Tofu",
+    "hr": "Tofu"
   },
   "question": {
     "en": "Can dogs eat tofu?",
-    "sl": "Ali lahko psi jedo tofu?"
+    "sl": "Ali lahko psi jedo tofu?",
+    "hr": "Smiju li psi jesti tofu?"
   },
   "url_slug": {
     "en": "tofu",
-    "sl": "tofu"
+    "sl": "tofu",
+    "hr": "tofu"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Tofu is not toxic to dogs and can be an occasional snack, but it shouldn't be a main part of your dog's diet. Give only plain, unsalted, fully cooked tofu, and avoid it if your dog has a soy allergy.",
-    "sl": "Da, zmerno. Tofu za pse ni strupen in je lahko občasen priboljšek, ne sme pa biti glavni del pasje prehrane. Dajte le navaden, nesoljen, povsem kuhan tofu in ga ne dajajte, če je pes alergičen na sojo."
+    "sl": "Da, zmerno. Tofu za pse ni strupen in je lahko občasen priboljšek, ne sme pa biti glavni del pasje prehrane. Dajte le navaden, nesoljen, povsem kuhan tofu in ga ne dajajte, če je pes alergičen na sojo.",
+    "hr": "Da, umjereno. Tofu nije otrovan za pse i može biti povremena grickalica, ali ne bi smio biti glavni dio psećeg jelovnika. Daj samo običan, nesoljen, potpuno termički obrađen tofu, a izbjegavaj ga ako je pas alergičan na soju."
   },
   "why": {
     "en": "Tofu is made from soybeans but doesn't contain enough protein to meet a dog's needs, so it shouldn't replace dog food. Many dogs find tofu hard to digest and produce a lot of gas, so dogs with a history of bloat or breeds at higher risk should avoid it. Tofu is high in silicate, which may make kidney stones more likely, and soy contains phytoestrogens, which in large amounts could affect a male dog's hormone balance.",
-    "sl": "Tofu je narejen iz sojinih zrn, a ne vsebuje dovolj beljakovin za potrebe psa, zato ne sme nadomestiti pasje hrane. Mnogi psi tofu težko prebavijo in imajo veliko plinov, zato naj se mu izogibajo psi, ki so že imeli napihnjenost želodca, in pasme z večjim tveganjem zanjo. Tofu vsebuje veliko silikatov, ki lahko povečajo verjetnost ledvičnih kamnov, soja pa vsebuje fitoestrogene, ki bi v velikih količinah lahko vplivali na hormonsko ravnovesje psov samcev."
+    "sl": "Tofu je narejen iz sojinih zrn, a ne vsebuje dovolj beljakovin za potrebe psa, zato ne sme nadomestiti pasje hrane. Mnogi psi tofu težko prebavijo in imajo veliko plinov, zato naj se mu izogibajo psi, ki so že imeli napihnjenost želodca, in pasme z večjim tveganjem zanjo. Tofu vsebuje veliko silikatov, ki lahko povečajo verjetnost ledvičnih kamnov, soja pa vsebuje fitoestrogene, ki bi v velikih količinah lahko vplivali na hormonsko ravnovesje psov samcev.",
+    "hr": "Tofu se pravi od soje, ali ne sadrži dovoljno bjelančevina da zadovolji potrebe psa, pa ne bi smio zamijeniti hranu za pse. Mnogim je psima tofu teško probavljiv i stvara puno plinova, pa ga trebaju izbjegavati psi s poviješću nadutosti želuca ili pasmine s većim rizikom. Tofu je bogat silikatima, zbog kojih bubrežni kamenci mogu biti vjerojatniji, a soja sadrži fitoestrogene, koji bi u velikim količinama mogli utjecati na hormonsku ravnotežu mužjaka."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog has a soy allergy or sensitivity, don't give tofu. Talk to your vet before changing your dog's diet, especially if your dog has had digestive problems.",
-    "sl": "Če je pes alergičen ali občutljiv na sojo, mu tofuja ne dajajte. Preden spremenite pasjo prehrano, se posvetujte z veterinarjem, še posebej, če je imel pes že prebavne težave."
+    "sl": "Če je pes alergičen ali občutljiv na sojo, mu tofuja ne dajajte. Preden spremenite pasjo prehrano, se posvetujte z veterinarjem, še posebej, če je imel pes že prebavne težave.",
+    "hr": "Ako je pas alergičan na soju ili osjetljiv na nju, ne daj tofu. Razgovaraj s veterinarom prije promjene psećeg jelovnika, osobito ako je pas imao probavnih problema."
   },
   "serving": {
     "en": "Plain and unsalted, not flavoured, with no onion or garlic. Make sure it is fully cooked and has cooled. Give small amounts as an occasional snack.",
-    "sl": "Navaden in nesoljen, brez okusov, brez čebule in česna. Poskrbite, da je povsem kuhan in ohlajen. Dajte ga v majhnih količinah kot občasen priboljšek."
+    "sl": "Navaden in nesoljen, brez okusov, brez čebule in česna. Poskrbite, da je povsem kuhan in ohlajen. Dajte ga v majhnih količinah kot občasen priboljšek.",
+    "hr": "Običan i nesoljen, bez okusa, luka i češnjaka. Pazi da je potpuno termički obrađen i ohlađen. Daj male količine kao povremenu grickalicu."
   },
   "child": {
     "en": "Dogs can try a little plain tofu as a treat now and then, but their main food should still be dog food.",
-    "sl": "Psi lahko kdaj pa kdaj poskusijo malo navadnega tofuja kot priboljšek, njihova glavna hrana pa naj ostane pasja hrana."
+    "sl": "Psi lahko kdaj pa kdaj poskusijo malo navadnega tofuja kot priboljšek, njihova glavna hrana pa naj ostane pasja hrana.",
+    "hr": "Psi smiju probati malo običnog tofua kao poslasticu s vremena na vrijeme, ali njihova glavna hrana i dalje treba biti hrana za pse."
   },
   "faq": [
     {
       "q": {
         "en": "Can tofu replace meat in my dog's diet?",
-        "sl": "Ali lahko tofu nadomesti meso v pasji prehrani?"
+        "sl": "Ali lahko tofu nadomesti meso v pasji prehrani?",
+        "hr": "Može li tofu zamijeniti meso u prehrani mog psa?"
       },
       "a": {
         "en": "No. Tofu doesn't contain enough protein for a dog's needs. For main meals, feed a vet-recommended dog food.",
-        "sl": "Ne. Tofu ne vsebuje dovolj beljakovin za potrebe psa. Za glavne obroke dajajte pasjo hrano, ki jo priporoča veterinar."
+        "sl": "Ne. Tofu ne vsebuje dovolj beljakovin za potrebe psa. Za glavne obroke dajajte pasjo hrano, ki jo priporoča veterinar.",
+        "hr": "Ne. Tofu ne sadrži dovoljno bjelančevina za potrebe psa. Za glavne obroke daj hranu za pse koju preporučuje veterinar."
       }
     }
   ],
@@ -133,6 +143,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2b76d47b87761d60242ec159b117a860a14947b51a9de4421571a858592d698a"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "962d55a35c12e077c6010737e0300201e62a1217f6cd962f2a52c0fc7508121d"
     }
   }
 }

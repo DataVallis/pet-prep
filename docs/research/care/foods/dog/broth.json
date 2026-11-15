@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Broth and stock",
-    "sl": "Juha in jušna osnova"
+    "sl": "Juha in jušna osnova",
+    "hr": "Juha i temeljac"
   },
   "question": {
     "en": "Can dogs have broth?",
-    "sl": "Ali lahko psi pijejo juho?"
+    "sl": "Ali lahko psi pijejo juho?",
+    "hr": "Smiju li psi jesti juhu?"
   },
   "url_slug": {
     "en": "broth",
-    "sl": "juha"
+    "sl": "juha",
+    "hr": "juha-i-temeljac"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little low-sodium broth is fine. Vets sometimes suggest adding a bit of low-sodium chicken, vegetable or beef broth to a dog's food for flavour. Skip stock cubes, which are very salty, and broths made with onions, garlic or added salt.",
-    "sl": "Da, malo juhe z nizko vsebnostjo soli je v redu. Veterinarji včasih svetujejo, da psu v hrano za boljši okus dodate malo piščančje, zelenjavne ali goveje juhe z malo soli. Izogibajte se jušnim kockam, ki so zelo slane, in juham s čebulo, česnom ali dodano soljo."
+    "sl": "Da, malo juhe z nizko vsebnostjo soli je v redu. Veterinarji včasih svetujejo, da psu v hrano za boljši okus dodate malo piščančje, zelenjavne ali goveje juhe z malo soli. Izogibajte se jušnim kockam, ki so zelo slane, in juham s čebulo, česnom ali dodano soljo.",
+    "hr": "Da, malo juhe s malo natrija u redu je. Veterinari ponekad predlažu da se hrani za psa doda malo pileće, povrtne ili goveđe juhe s malo natrija radi okusa. Ne koristi kocke za juhu, koje su jako slane, ni juhe s lukom, češnjakom ili dodanom soli."
   },
   "why": {
     "en": "Bouillon (stock) cubes used to make stock and gravy contain a lot of sodium, which can cause stomach and gut problems and even seizures. Some ready-made broths may contain onions, garlic or salt, added for taste and to keep them longer, and onions and garlic can be found in many pre-made foods. That's why only plain, low-sodium broth with dog-safe ingredients is a good choice.",
-    "sl": "Jušne kocke, iz katerih se pripravljata osnova in omaka, vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče. Nekatere kupljene juhe lahko vsebujejo čebulo, česen ali sol, dodane za okus in daljšo obstojnost, čebula in česen pa sta lahko v številnih pripravljenih jedeh. Zato je primerna le navadna juha z malo soli in sestavinami, ki so za pse varne."
+    "sl": "Jušne kocke, iz katerih se pripravljata osnova in omaka, vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče. Nekatere kupljene juhe lahko vsebujejo čebulo, česen ali sol, dodane za okus in daljšo obstojnost, čebula in česen pa sta lahko v številnih pripravljenih jedeh. Zato je primerna le navadna juha z malo soli in sestavinami, ki so za pse varne.",
+    "hr": "Kocke za juhu (temeljac) kojima se pripremaju juha i umak sadrže mnogo natrija, što može izazvati probleme sa želucem i crijevima, pa čak i napadaje. Neke gotove juhe mogu sadržavati luk, češnjak ili sol, dodane radi okusa i dulje trajnosti, a luk i češnjak nalaze se u mnogim gotovim jelima. Zato je dobar izbor samo obična juha s malo natrija i sastojcima sigurnima za pse."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog had broth made with onions or garlic, contact your vet as soon as possible.",
-    "sl": "Če je pes dobil juho s čebulo ali česnom, se čim prej obrnite na veterinarja."
+    "sl": "Če je pes dobil juho s čebulo ali česnom, se čim prej obrnite na veterinarja.",
+    "hr": "Ako je pas pojeo juhu s lukom ili češnjakom, što prije se obrati veterinaru."
   },
   "serving": {
     "en": "Choose a plain, low-sodium broth without onion or garlic, and add just a bit to your dog's food for flavour. If you make broth at home, remove the hardened layer of fat once it has cooled, and never give your dog the cooked bones.",
-    "sl": "Izberite navadno juho z malo soli, brez čebule in česna, in je psu dodajte le malo v hrano za okus. Če juho skuhate doma, z ohlajene juhe odstranite strjeno plast maščobe, kuhanih kosti pa psu nikoli ne dajajte."
+    "sl": "Izberite navadno juho z malo soli, brez čebule in česna, in je psu dodajte le malo v hrano za okus. Če juho skuhate doma, z ohlajene juhe odstranite strjeno plast maščobe, kuhanih kosti pa psu nikoli ne dajajte.",
+    "hr": "Odaberi običnu juhu s malo natrija, bez luka i češnjaka, i dodaj samo malo u hranu psa radi okusa. Ako juhu kuhaš kod kuće, kad se ohladi skini stvrdnuti sloj masti i psu nikad ne daj kuhane kosti."
   },
   "child": {
     "en": "A little plain broth can make dog food extra tasty. Ask a grown-up first, because some broths have onion and lots of salt.",
-    "sl": "Malo navadne juhe lahko pasjo hrano naredi še bolj okusno. Najprej vprašaj odraslega, ker imajo nekatere juhe čebulo in veliko soli."
+    "sl": "Malo navadne juhe lahko pasjo hrano naredi še bolj okusno. Najprej vprašaj odraslega, ker imajo nekatere juhe čebulo in veliko soli.",
+    "hr": "Malo obične juhe može hranu za psa učiniti još ukusnijom. Prvo pitaj odraslu osobu, jer neke juhe imaju luk i puno soli."
   },
   "faq": [
     {
       "q": {
         "en": "Can I use a stock cube?",
-        "sl": "Ali lahko uporabim jušno kocko?"
+        "sl": "Ali lahko uporabim jušno kocko?",
+        "hr": "Smijem li upotrijebiti kocku za juhu?"
       },
       "a": {
         "en": "No. Bouillon cubes used for making stock and gravy contain high amounts of sodium, which can lead to stomach and gut problems and even seizures.",
-        "sl": "Ne. Jušne kocke za pripravo osnove in omake vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče."
+        "sl": "Ne. Jušne kocke za pripravo osnove in omake vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče.",
+        "hr": "Ne. Kocke za temeljac kojima se pripremaju juha i umak sadrže mnogo natrija, što može dovesti do problema sa želucem i crijevima, pa čak i do napadaja."
       }
     },
     {
       "q": {
         "en": "Can broth help a dog who won't eat?",
-        "sl": "Ali lahko juha pomaga psu, ki noče jesti?"
+        "sl": "Ali lahko juha pomaga psu, ki noče jesti?",
+        "hr": "Može li juha pomoći psu koji ne želi jesti?"
       },
       "a": {
         "en": "Adding a bit of low-sodium broth is one of the simple steps vets suggest to make food tastier. Your vet can give you specific advice.",
-        "sl": "Dodajanje malo juhe z nizko vsebnostjo soli je eden od preprostih korakov, ki jih veterinarji svetujejo, da bi bila hrana bolj okusna. Veterinar vam lahko svetuje bolj natančno."
+        "sl": "Dodajanje malo juhe z nizko vsebnostjo soli je eden od preprostih korakov, ki jih veterinarji svetujejo, da bi bila hrana bolj okusna. Veterinar vam lahko svetuje bolj natančno.",
+        "hr": "Dodavanje malo juhe s malo natrija jedan je od jednostavnih koraka koje veterinari predlažu da bi hrana bila ukusnija. Veterinar ti može dati konkretan savjet."
       }
     }
   ],
@@ -125,6 +137,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "269d92a8fd5c6f4b21a117ff293ffdc0d809ff61daedd5c93c7df6fd6f10a117"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "826515cfa707671b23b18b28b4f54ad21d51ce840c3bbd58704392ef3789f9c4"
     }
   }
 }

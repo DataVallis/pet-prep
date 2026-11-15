@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Gravy",
-    "sl": "Mesna omaka"
+    "sl": "Mesna omaka",
+    "hr": "Umak od mesa"
   },
   "question": {
     "en": "Can dogs eat gravy?",
-    "sl": "Ali lahko psi jedo mesno omako?"
+    "sl": "Ali lahko psi jedo mesno omako?",
+    "hr": "Smiju li psi jesti umak od mesa?"
   },
   "url_slug": {
     "en": "gravy",
-    "sl": "mesna-omaka"
+    "sl": "mesna-omaka",
+    "hr": "umak-od-mesa"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it's best to keep gravy away from dogs. Gravy is a fatty food that can upset a dog's stomach and can lead to pancreatitis. Gravy made from stock cubes is high in salt, and onion gravy contains onion, which dogs should not eat.",
-    "sl": "Ne, mesno omako je bolje držati stran od psa. Omaka je mastna hrana, ki lahko psu povzroči prebavne težave in vodi v vnetje trebušne slinavke. Omaka iz jušnih kock je zelo slana, čebulna omaka pa vsebuje čebulo, ki je psi ne smejo jesti."
+    "sl": "Ne, mesno omako je bolje držati stran od psa. Omaka je mastna hrana, ki lahko psu povzroči prebavne težave in vodi v vnetje trebušne slinavke. Omaka iz jušnih kock je zelo slana, čebulna omaka pa vsebuje čebulo, ki je psi ne smejo jesti.",
+    "hr": "Ne, umak od mesa najbolje je držati podalje od pasa. To je masna hrana koja može nadražiti želudac psa i dovesti do upale gušterače. Umak od kocke za juhu bogat je solju, a umak s lukom sadrži luk, koji psi ne smiju jesti."
   },
   "why": {
     "en": "Gravy is not toxic as such, but butter, meat drippings, gravies and other fatty foods can cause stomach upset with diarrhoea and vomiting. Fatty foods can also cause pancreatitis, an inflammation of the pancreas that may need hospital care. Stock cubes used for gravy contain a lot of sodium, and dogs should not eat cooked foods containing onion, such as onion gravy.",
-    "sl": "Mesna omaka sama po sebi ni strupena, a maslo, mesni sok, omake in druga mastna hrana lahko povzročijo prebavne težave z drisko in bruhanjem. Mastna hrana lahko povzroči tudi vnetje trebušne slinavke (pankreatitis), ki lahko zahteva zdravljenje v bolnišnici. Jušne kocke, iz katerih se pripravlja omaka, vsebujejo veliko natrija, psi pa ne smejo jesti kuhane hrane s čebulo, kot je čebulna omaka."
+    "sl": "Mesna omaka sama po sebi ni strupena, a maslo, mesni sok, omake in druga mastna hrana lahko povzročijo prebavne težave z drisko in bruhanjem. Mastna hrana lahko povzroči tudi vnetje trebušne slinavke (pankreatitis), ki lahko zahteva zdravljenje v bolnišnici. Jušne kocke, iz katerih se pripravlja omaka, vsebujejo veliko natrija, psi pa ne smejo jesti kuhane hrane s čebulo, kot je čebulna omaka.",
+    "hr": "Umak od mesa sam po sebi nije otrovan, ali maslac, masnoća od pečenja, umaci i druga masna hrana mogu izazvati želučane tegobe s proljevom i povraćanjem. Masna hrana može izazvati i upalu gušterače, koja može zahtijevati bolničko liječenje. Kocke za juhu koje se koriste za umak sadrže mnogo natrija, a psi ne bi smjeli jesti termički obrađenu hranu koja sadrži luk, poput umaka s lukom."
   },
   "signs": {
     "en": [
@@ -36,26 +41,37 @@
       "Bolečine v trebuhu",
       "Pes noče jesti",
       "Utrujenost"
+    ],
+    "hr": [
+      "Povraćanje, ponekad 1–4 dana nakon masnog obroka",
+      "Proljev",
+      "Bol u trbuhu",
+      "Odbijanje hrane",
+      "Umor"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate gravy or other fatty food and shows vomiting, tummy pain or tiredness in the following days, contact your vet. Signs can be delayed by a few days. If the gravy contained onions or garlic, contact your vet promptly.",
-    "sl": "Če je pes pojedel omako ali drugo mastno hrano in v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Znaki se lahko pokažejo z nekajdnevno zamudo. Če je omaka vsebovala čebulo ali česen, se takoj obrnite na veterinarja."
+    "sl": "Če je pes pojedel omako ali drugo mastno hrano in v naslednjih dneh bruha, ga boli trebuh ali je utrujen, pokličite veterinarja. Znaki se lahko pokažejo z nekajdnevno zamudo. Če je omaka vsebovala čebulo ali česen, se takoj obrnite na veterinarja.",
+    "hr": "Ako je pas pojeo umak od mesa ili drugu masnu hranu i idućih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Znakovi se mogu javiti tek nakon nekoliko dana. Ako je umak sadržavao luk ili češnjak, što prije se obrati veterinaru."
   },
   "serving": null,
   "child": {
     "en": "Gravy is a rich people sauce that can give dogs a sore tummy. Keep it on your own plate.",
-    "sl": "Mesna omaka je mastna omaka za ljudi, zaradi katere psa lahko boli trebušček. Naj ostane na tvojem krožniku."
+    "sl": "Mesna omaka je mastna omaka za ljudi, zaradi katere psa lahko boli trebušček. Naj ostane na tvojem krožniku.",
+    "hr": "Umak od mesa je masan umak za ljude od kojeg psa može zaboljeti trbuščić. Neka ostane na tvom tanjuru."
   },
   "faq": [
     {
       "q": {
         "en": "Can I pour a little gravy over my dog's food?",
-        "sl": "Ali lahko psu prelijem hrano z malo omake?"
+        "sl": "Ali lahko psu prelijem hrano z malo omake?",
+        "hr": "Smijem li psu malo umaka preliti preko hrane?"
       },
       "a": {
         "en": "Better not. A vet charity advises keeping any food you share plain and not covered in gravy, sauce or seasoning, as this could upset your dog's stomach.",
-        "sl": "Raje ne. Veterinarska dobrodelna organizacija svetuje, naj bo hrana, ki jo delite s psom, navadna in ne prelita z omako ali začinjena, saj bi to lahko psu povzročilo prebavne težave."
+        "sl": "Raje ne. Veterinarska dobrodelna organizacija svetuje, naj bo hrana, ki jo delite s psom, navadna in ne prelita z omako ali začinjena, saj bi to lahko psu povzročilo prebavne težave.",
+        "hr": "Bolje ne. Dobrotvorna veterinarska organizacija savjetuje da svaka hrana koju dijeliš bude obična i da nije prelivena umakom ili začinima, jer to može nadražiti želudac psa."
       }
     }
   ],
@@ -136,6 +152,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "638b00d818ec2c6b3b0675c905e7eca2cc6d9cf9b6d3884ba27c7272aa968946"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "801197232588fd4657fa2bc85c93dfef7aabe0434fd58f7476258028eda53f9f"
     }
   }
 }
