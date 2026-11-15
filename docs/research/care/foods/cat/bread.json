@@ -7,7 +7,8 @@
     "cs": "Chléb (pečený)",
     "hr": "Kruh (pečen)",
     "sv": "Bröd (bakat)",
-    "da": "Brød (bagt)"
+    "da": "Brød (bagt)",
+    "fi": "Leipä (leivottu)"
   },
   "question": {
     "en": "Can cats eat bread?",
@@ -15,7 +16,8 @@
     "cs": "Mohou kočky jíst chléb?",
     "hr": "Smiju li mačke jesti kruh?",
     "sv": "Får katter äta bröd?",
-    "da": "Må katte spise brød?"
+    "da": "Må katte spise brød?",
+    "fi": "Saako kissa syödä leipää?"
   },
   "url_slug": {
     "en": "bread",
@@ -23,7 +25,8 @@
     "cs": "chleb",
     "hr": "kruh",
     "sv": "brod",
-    "da": "broed"
+    "da": "broed",
+    "fi": "leipa"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ano, malý kousek obyčejného, důkladně upečeného chleba je jako občasný pamlsek v pořádku. ASPCA uvádí, že pečený chléb je jako občasný pamlsek bezpečný, pokud nejde o chléb s rozinkami. Syrové, kynoucí těsto je ale něco jiného a kočka se k němu nesmí dostat.",
     "hr": "Da, mali komadić običnog, potpuno pečenog kruha u redu je kao povremena poslastica. ASPCA navodi da je pečen kruh siguran kao povremena poslastica, ali ne i kruh s grožđicama. Sirovo tijesto koje se diže druga je priča i mora biti izvan dosega mačke.",
     "sv": "Ja, en liten bit okryddat, helt bakat bröd går bra som godbit då och då. ASPCA säger att bakat bröd är säkert som godbit då och då, så länge det inte är russinbröd. Rå, jäsande deg är något helt annat och måste hållas borta från katter.",
-    "da": "Ja, et lille stykke almindeligt, gennembagt brød er fint som en godbid af og til. ASPCA skriver at bagt brød er ufarligt som en godbid af og til, så længe det ikke er rosinbrød. Rå, hævende dej er noget andet og skal holdes væk fra katte."
+    "da": "Ja, et lille stykke almindeligt, gennembagt brød er fint som en godbid af og til. ASPCA skriver at bagt brød er ufarligt som en godbid af og til, så længe det ikke er rosinbrød. Rå, hævende dej er noget andet og skal holdes væk fra katte.",
+    "fi": "Saa, pieni pala maustamatonta, kokonaan kypsäksi leivottua leipää kelpaa satunnaiseksi herkuksi. ASPCA:n mukaan leivottu leipä on turvallista satunnaisena herkkuna, kunhan se ei ole rusinaleipää. Raaka, kohoava taikina on eri asia, ja se on pidettävä poissa kissan ulottuvilta."
   },
   "why": {
     "en": "On a page about dogs and cats, the ASPCA says fully baked bread is safe for pets as an occasional treat, so long as it is not raisin bread. Agriculture Victoria explains that the risk from yeast dough diminishes once the dough is cooked and the yeast has fully risen. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Blue Cross says cats need a meat-based diet. Cats Protection advises sticking to cat treats rather than human foods.",
@@ -40,7 +44,8 @@
     "cs": "ASPCA na stránce o psech a kočkách uvádí, že důkladně upečený chléb je pro domácí zvířata jako občasný pamlsek bezpečný, pokud nejde o chléb s rozinkami. Agriculture Victoria vysvětluje, že riziko spojené s kvasnicovým těstem se po upečení a plném vykynutí kvasnic snižuje. International Cat Care uvádí, že kočky jako striktní masožravci hůře tráví a využívají sacharidy, a Blue Cross, že kočky potřebují stravu založenou na mase. Cats Protection radí držet se raději pamlsků pro kočky než lidského jídla.",
     "hr": "ASPCA na stranici o psima i mačkama navodi da je potpuno pečen kruh za kućne ljubimce siguran kao povremena poslastica, osim kruha s grožđicama. Agriculture Victoria objašnjava da rizik od tijesta s kvascem slabi nakon pečenja, kad je kvasac do kraja narastao. International Cat Care ističe da mačke, kao strogi mesojedi, slabije probavljaju i iskorištavaju ugljikohidrate, a Blue Cross da im je potrebna prehrana temeljena na mesu. Cats Protection savjetuje da se umjesto ljudske hrane daju mačje poslastice.",
     "sv": "På en sida om hundar och katter säger ASPCA att helt bakat bröd är säkert för husdjur som godbit då och då, så länge det inte är russinbröd. Agriculture Victoria förklarar att risken med jäsdeg minskar när degen har gräddats och jästen har jäst färdigt. International Cat Care säger att katter, som är obligata köttätare, har svårare att smälta och utnyttja kolhydrater, och Blue Cross säger att katter behöver en köttbaserad kost. Cats Protection rekommenderar att du håller dig till kattgodis i stället för mat från matbordet.",
-    "da": "På en side om hunde og katte skriver ASPCA at helt bagt brød er ufarligt for kæledyr som en godbid af og til, så længe det ikke er rosinbrød. Agriculture Victoria forklarer at risikoen ved gærdej bliver mindre, når dejen er bagt, og gæren har hævet helt. International Cat Care skriver at katte som obligate kødædere har sværere ved at fordøje og udnytte kulhydrater, og Blue Cross skriver at katte har brug for en kødbaseret kost. Cats Protection anbefaler at holde sig til godbidder til katte frem for menneskemad."
+    "da": "På en side om hunde og katte skriver ASPCA at helt bagt brød er ufarligt for kæledyr som en godbid af og til, så længe det ikke er rosinbrød. Agriculture Victoria forklarer at risikoen ved gærdej bliver mindre, når dejen er bagt, og gæren har hævet helt. International Cat Care skriver at katte som obligate kødædere har sværere ved at fordøje og udnytte kulhydrater, og Blue Cross skriver at katte har brug for en kødbaseret kost. Cats Protection anbefaler at holde sig til godbidder til katte frem for menneskemad.",
+    "fi": "ASPCA toteaa koiria ja kissoja käsittelevällä sivullaan, että kokonaan kypsäksi leivottu leipä on lemmikeille turvallista satunnaisena herkkuna, kunhan se ei ole rusinaleipää. Agriculture Victorian mukaan hiivataikinan riski pienenee, kun taikina on kypsennetty ja hiiva on ehtinyt kohota kokonaan. International Cat Caren mukaan kissat ovat ehdottomia lihansyöjiä, joiden kyky sulattaa ja hyödyntää hiilihydraatteja on rajallisempi, ja Blue Crossin mukaan kissat tarvitsevat lihapohjaista ruokavaliota. Cats Protection neuvoo pitäytymään kissoille tarkoitetuissa herkuissa ihmisten ruoan sijaan."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "cs": "Nabídněte jen malý kousek a jen občas. Pokud kočka snědla syrové nebo kynoucí těsto místo upečeného chleba, okamžitě se obraťte na veterináře a nečekejte, až se objeví příznaky.",
     "hr": "Daj samo mali komadić, povremeno. Ako je mačka pojela sirovo tijesto koje se diže, a ne pečen kruh, odmah nazovi veterinara i ne čekaj da se pojave znakovi.",
     "sv": "Ge bara en liten bit då och då. Om din katt har ätit rå eller jäsande deg i stället för bakat bröd ska du kontakta din veterinär direkt och inte vänta på att symtom ska dyka upp.",
-    "da": "Giv kun et lille stykke af og til. Hvis din kat har spist rå eller hævende dej i stedet for bagt brød, skal du kontakte din dyrlæge med det samme og ikke vente på, at der kommer symptomer."
+    "da": "Giv kun et lille stykke af og til. Hvis din kat har spist rå eller hævende dej i stedet for bagt brød, skal du kontakte din dyrlæge med det samme og ikke vente på, at der kommer symptomer.",
+    "fi": "Anna vain pieni pala silloin tällöin. Jos kissasi on syönyt raakaa tai kohoavaa taikinaa leivotun leivän sijaan, ota heti yhteyttä eläinlääkäriin äläkä odota oireita."
   },
   "serving": {
     "en": "A small piece of plain, fully baked bread. Never raisin bread and never raw dough.",
@@ -57,7 +63,8 @@
     "cs": "Malý kousek obyčejného, důkladně upečeného chleba. Nikdy chléb s rozinkami a nikdy syrové těsto.",
     "hr": "Mali komadić običnog, potpuno pečenog kruha. Nikad kruh s grožđicama i nikad sirovo tijesto.",
     "sv": "En liten bit okryddat, helt bakat bröd. Aldrig russinbröd och aldrig rå deg.",
-    "da": "Et lille stykke almindeligt, gennembagt brød. Aldrig rosinbrød og aldrig rå dej."
+    "da": "Et lille stykke almindeligt, gennembagt brød. Aldrig rosinbrød og aldrig rå dej.",
+    "fi": "Pieni pala maustamatonta, kokonaan kypsäksi leivottua leipää. Ei koskaan rusinaleipää eikä raakaa taikinaa."
   },
   "child": {
     "en": "A tiny bit of plain bread is an okay treat now and then. Cats mostly need meat, and raw dough is only for baking.",
@@ -65,7 +72,8 @@
     "cs": "Drobek obyčejného chleba je občas v pořádku jako pamlsek. Kočky potřebují hlavně maso a syrové těsto je jen na pečení.",
     "hr": "Sitan komadić običnog kruha povremeno je u redu kao poslastica. Mačkama je ponajviše potrebno meso, a sirovo tijesto služi samo za pečenje.",
     "sv": "Lite vanligt bröd är en okej godbit då och då. Katter behöver mest kött, och rå deg är bara till för att baka av.",
-    "da": "En lille bid almindeligt brød er en fin godbid en gang imellem. Katte har mest brug for kød, og rå dej er kun til bagning."
+    "da": "En lille bid almindeligt brød er en fin godbid en gang imellem. Katte har mest brug for kød, og rå dej er kun til bagning.",
+    "fi": "Aivan pieni pala maustamatonta leipää kelpaa kissalle joskus herkuksi. Kissat tarvitsevat enimmäkseen lihaa, ja raaka taikina on tarkoitettu vain leivontaan."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "cs": "Je syrové chlebové těsto pro kočky bezpečné?",
         "hr": "Je li sirovo tijesto za kruh sigurno za mačke?",
         "sv": "Är rå bröddeg säker för katter?",
-        "da": "Er rå brøddej ufarlig for katte?"
+        "da": "Er rå brøddej ufarlig for katte?",
+        "fi": "Onko raaka leipätaikina turvallista kissoille?"
       },
       "a": {
         "en": "No. The ASPCA says dogs and cats should never be allowed to eat uncooked, yeasted bread dough, and Agriculture Victoria says yeast dough can rise and cause gas to build up in a cat's digestive system.",
@@ -83,7 +92,8 @@
         "cs": "Ne. ASPCA uvádí, že psi ani kočky nikdy nesmějí jíst syrové kvasnicové těsto, a Agriculture Victoria, že kvasnicové těsto může v kočičím trávicím ústrojí kynout a způsobit hromadění plynů.",
         "hr": "Ne. ASPCA navodi da psima i mačkama nikad ne treba dopustiti da jedu nepečeno tijesto s kvascem, a Agriculture Victoria da tijesto s kvascem može narasti i uzrokovati nakupljanje plinova u probavnom sustavu mačke.",
         "sv": "Nej. ASPCA säger att hundar och katter aldrig ska få äta obakad, jäst bröddeg, och Agriculture Victoria säger att jäsdeg kan jäsa vidare och göra att gas samlas i kattens matsmältningssystem.",
-        "da": "Nej. ASPCA skriver at hunde og katte aldrig må få lov til at spise rå brøddej med gær, og Agriculture Victoria skriver at gærdej kan hæve og få gas til at samle sig i kattens fordøjelsessystem."
+        "da": "Nej. ASPCA skriver at hunde og katte aldrig må få lov til at spise rå brøddej med gær, og Agriculture Victoria skriver at gærdej kan hæve og få gas til at samle sig i kattens fordøjelsessystem.",
+        "fi": "Ei. ASPCA:n mukaan koirien ja kissojen ei koskaan saa antaa syödä raakaa hiivataikinaa, ja Agriculture Victorian mukaan hiivataikina voi kohota ja aiheuttaa kaasun kertymistä kissan ruoansulatuskanavaan."
       }
     },
     {
@@ -93,7 +103,8 @@
         "cs": "Mohou kočky jíst chléb s rozinkami?",
         "hr": "Smiju li mačke jesti kruh s grožđicama?",
         "sv": "Får katter äta russinbröd?",
-        "da": "Må katte spise rosinbrød?"
+        "da": "Må katte spise rosinbrød?",
+        "fi": "Saako kissa syödä rusinaleipää?"
       },
       "a": {
         "en": "No. The ASPCA's advice that baked bread is fine as an occasional treat leaves out raisin bread.",
@@ -101,7 +112,8 @@
         "cs": "Ne. Rada ASPCA, že pečený chléb je jako občasný pamlsek v pořádku, se na chléb s rozinkami nevztahuje.",
         "hr": "Ne. Savjet ASPCA-a da je pečen kruh u redu kao povremena poslastica ne odnosi se na kruh s grožđicama.",
         "sv": "Nej. ASPCA:s råd att bakat bröd går bra som godbit då och då gäller inte russinbröd.",
-        "da": "Nej. Når ASPCA skriver at bagt brød er fint som en godbid af og til, gælder det ikke rosinbrød."
+        "da": "Nej. Når ASPCA skriver at bagt brød er fint som en godbid af og til, gælder det ikke rosinbrød.",
+        "fi": "Ei. ASPCA:n neuvo, että leivottu leipä kelpaa satunnaiseksi herkuksi, ei koske rusinaleipää."
       }
     }
   ],
@@ -183,6 +195,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2dcf6732415b878fadc1f8d744b98b2cf473f4539e84128ee2a403851c419eef"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "783db85415a48f93fe20af19259d8d9eae2e75965a354ecfc2ddab6c6af75513"
     }
   }
 }

@@ -7,7 +7,8 @@
     "cs": "Popcorn",
     "hr": "Kokice",
     "sv": "Popcorn",
-    "da": "Popcorn"
+    "da": "Popcorn",
+    "fi": "Popcorn"
   },
   "question": {
     "en": "Can dogs eat popcorn?",
@@ -15,7 +16,8 @@
     "cs": "Mohou psi jíst popcorn?",
     "hr": "Smiju li psi jesti kokice?",
     "sv": "Får hundar äta popcorn?",
-    "da": "Må hunde spise popcorn?"
+    "da": "Må hunde spise popcorn?",
+    "fi": "Saako koira syödä popcornia?"
   },
   "url_slug": {
     "en": "popcorn",
@@ -23,7 +25,8 @@
     "cs": "popcorn",
     "hr": "kokice",
     "sv": "popcorn",
-    "da": "popcorn"
+    "da": "popcorn",
+    "fi": "popcorn"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ano, obyčejný popcorn připravený horkým vzduchem je pro psy v malém množství jako občasný pamlsek obvykle bezpečný. Vynechte máslo, sůl, olej a ochucovadla a nenechte psa dostat se k nerozpukaným zrnkům.",
     "hr": "Da, obične kokice pripremljene vrućim zrakom općenito su sigurne za pse u malim količinama kao povremena poslastica. Izostavi maslac, sol, ulje i arome, a zrna koja nisu pukla drži podalje od psa.",
     "sv": "Ja, okryddat luftpoppat popcorn är i allmänhet säkert för hundar i små mängder som en godbit då och då. Hoppa över smör, salt, olja och smaktillsatser, och håll opoppade kärnor borta från din hund.",
-    "da": "Ja, almindelig luftpoppet popcorn er som regel ufarligt for hunde i små mængder som en godbid en gang imellem. Undlad smør, salt, olie og smagsstoffer, og hold uopsprungne kerner væk fra din hund."
+    "da": "Ja, almindelig luftpoppet popcorn er som regel ufarligt for hunde i små mængder som en godbid en gang imellem. Undlad smør, salt, olie og smagsstoffer, og hold uopsprungne kerner væk fra din hund.",
+    "fi": "Saa, maustamaton kuumailmapopattu popcorn on yleensä turvallista koirille pieninä määrinä satunnaisena herkkuna. Jätä pois voi, suola, öljy ja makuaineet, ja pidä poksahtamattomat jyvät poissa koirasi ulottuvilta."
   },
   "why": {
     "en": "Popcorn itself isn't bad for dogs, though it isn't a nutritional necessity. Many kinds are loaded with butter, oil, salt and flavourings, which can upset some dogs' digestion, and the fats can add to obesity over time. Unpopped and partly popped kernels can get stuck between teeth, damage teeth and pose a choking hazard, especially for smaller dogs.",
@@ -40,7 +44,8 @@
     "cs": "Samotný popcorn psům neškodí, i když ho nepotřebují k výživě. Mnoho druhů popcornu je plných másla, oleje, soli a ochucovadel, která mohou některým psům podráždit zažívání, a tuky časem přispívají k obezitě. Nerozpukaná a částečně rozpukaná zrnka se mohou zaseknout mezi zuby, poškodit je a představují riziko udušení, zejména u menších psů.",
     "hr": "Kokice same po sebi nisu loše za pse, iako nisu nužne za prehranu. Mnoge su vrste preplavljene maslacem, uljem, solju i aromama, što kod nekih pasa može poremetiti probavu, a masnoće s vremenom pridonose pretilosti. Zrna koja nisu pukla ili su pukla samo djelomično mogu zapeti među zubima, oštetiti zube i izazvati gušenje, osobito za manje pse.",
     "sv": "Popcorn i sig är inte dåligt för hundar, även om det inte är något näringsbehov. Många sorter är fyllda med smör, olja, salt och smaktillsatser, som kan reta matsmältningen hos vissa hundar, och fettet kan med tiden bidra till fetma. Opoppade och delvis poppade kärnor kan fastna mellan tänderna, skada tänderna och innebära en kvävningsrisk, särskilt för mindre hundar.",
-    "da": "Popcorn er ikke dårligt for hunde i sig selv, men det er ikke nødvendigt for deres ernæring. Mange slags er fyldt med smør, olie, salt og smagsstoffer, som kan give nogle hunde fordøjelsesproblemer, og fedtet kan med tiden bidrage til fedme. Uopsprungne og delvist poppede kerner kan sætte sig fast mellem tænderne, beskadige tænderne og give risiko for kvælning, især hos mindre hunde."
+    "da": "Popcorn er ikke dårligt for hunde i sig selv, men det er ikke nødvendigt for deres ernæring. Mange slags er fyldt med smør, olie, salt og smagsstoffer, som kan give nogle hunde fordøjelsesproblemer, og fedtet kan med tiden bidrage til fedme. Uopsprungne og delvist poppede kerner kan sætte sig fast mellem tænderne, beskadige tænderne og give risiko for kvælning, især hos mindre hunde.",
+    "fi": "Popcorn ei sinänsä ole koirille pahaa, vaikka sitä ei tarvita ravinnoksi. Monenlaiset popcornit ovat täynnä voita, öljyä, suolaa ja makuaineita, jotka voivat häiritä joidenkin koirien ruoansulatusta, ja rasvat voivat ajan myötä edistää lihavuutta. Poksahtamattomat ja vain osittain poksahtaneet jyvät voivat jäädä kiinni hampaiden väliin, vaurioittaa hampaita ja aiheuttaa tukehtumisvaaran, etenkin pienemmillä koirilla."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "cs": "Pár upuštěných kousků popcornu s máslem pravděpodobně neuškodí. Zavolejte veterináři, pokud pes snědl velké množství nebo se po něm objeví zvracení, průjem nebo malátnost.",
     "hr": "Nekoliko komadića kokica s maslacem koji su pali na pod vjerojatno neće naškoditi. Nazovi veterinara ako pas pojede veliku količinu ili nakon toga povraća, ima proljev ili je bezvoljan.",
     "sv": "Några tappade bitar smörpopcorn skadar förmodligen inte. Kontakta din veterinär om din hund äter en stor mängd eller får kräkningar, diarré eller orkeslöshet efteråt.",
-    "da": "Et par tabte stykker popcorn med smør gør sandsynligvis ingen skade. Ring til din dyrlæge, hvis din hund spiser en stor mængde eller bagefter får opkast, diarré eller sløvhed."
+    "da": "Et par tabte stykker popcorn med smør gør sandsynligvis ingen skade. Ring til din dyrlæge, hvis din hund spiser en stor mængde eller bagefter får opkast, diarré eller sløvhed.",
+    "fi": "Muutama lattialle pudonnut pala voilla maustettua popcornia ei todennäköisesti aiheuta haittaa. Soita eläinlääkärille, jos koirasi syö paljon tai sillä ilmenee sen jälkeen oksentelua, ripulia tai väsymystä."
   },
   "serving": {
     "en": "Plain, air-popped pieces only, now and then. No butter, salt, oil, caramel or candy coating, cheese or seasoning, and no unpopped kernels.",
@@ -57,7 +63,8 @@
     "cs": "Jen obyčejné kousky připravené horkým vzduchem, a to jen občas. Žádné máslo, sůl, olej, karamel ani cukrová poleva, sýr či koření a žádná nerozpukaná zrnka.",
     "hr": "Samo obični komadići pripremljeni vrućim zrakom, povremeno. Bez maslaca, soli, ulja, karamele ni bombonske glazure, sira ni začina te bez zrna koja nisu pukla.",
     "sv": "Bara okryddade, luftpoppade bitar, då och då. Inget smör, salt, olja, karamell eller godisöverdrag, ost eller kryddor, och inga opoppade kärnor.",
-    "da": "Kun almindelige, luftpoppede stykker, en gang imellem. Intet smør, salt, olie, karamel eller slikovertræk, ost eller krydderier og ingen uopsprungne kerner."
+    "da": "Kun almindelige, luftpoppede stykker, en gang imellem. Intet smør, salt, olie, karamel eller slikovertræk, ost eller krydderier og ingen uopsprungne kerner.",
+    "fi": "Vain maustamattomia, kuumailmapopattuja paloja silloin tällöin. Ei voita, suolaa, öljyä, karamellia tai makeispinnoitetta, juustoa eikä mausteita, eikä poksahtamattomia jyviä."
   },
   "child": {
     "en": "Dogs can have a few pieces of plain popcorn. Buttery or salty popcorn and hard kernels are not for dogs.",
@@ -65,7 +72,8 @@
     "cs": "Psi mohou dostat pár kousků obyčejného popcornu. Popcorn s máslem nebo solí a tvrdá zrnka pro psy nejsou.",
     "hr": "Psi smiju dobiti nekoliko običnih kokica. Kokice s maslacem ili solju te tvrda zrna nisu za pse.",
     "sv": "Hundar kan få några bitar okryddat popcorn. Popcorn med smör eller salt och hårda kärnor är inte för hundar.",
-    "da": "Hunde kan få nogle få stykker almindelig popcorn. Popcorn med smør eller salt og hårde kerner er ikke til hunde."
+    "da": "Hunde kan få nogle få stykker almindelig popcorn. Popcorn med smør eller salt og hårde kerner er ikke til hunde.",
+    "fi": "Koira saa muutaman palan maustamatonta popcornia. Voilla maustettu tai suolainen popcorn ja kovat jyvät eivät ole koirille."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "cs": "Můj pes snědl trochu popcornu s máslem. Je to problém?",
         "hr": "Moj je pas pojeo kokice s maslacem. Je li to problem?",
         "sv": "Min hund åt lite smörpopcorn. Är det ett problem?",
-        "da": "Min hund har spist lidt popcorn med smør. Er det et problem?"
+        "da": "Min hund har spist lidt popcorn med smør. Er det et problem?",
+        "fi": "Koirani söi voilla maustettua popcornia. Onko se ongelma?"
       },
       "a": {
         "en": "A few pieces probably won't cause harm. Call your vet if your dog ate a lot or develops vomiting, diarrhoea or lethargy.",
@@ -83,7 +92,8 @@
         "cs": "Pár kousků pravděpodobně neuškodí. Zavolejte veterináři, pokud pes snědl hodně nebo se u něj objeví zvracení, průjem či malátnost.",
         "hr": "Nekoliko komadića vjerojatno neće naškoditi. Nazovi veterinara ako je pas pojeo puno ili nakon toga povraća, ima proljev ili je bezvoljan.",
         "sv": "Några bitar skadar förmodligen inte. Kontakta din veterinär om din hund har ätit mycket eller får kräkningar, diarré eller orkeslöshet.",
-        "da": "Nogle få stykker gør sandsynligvis ingen skade. Ring til din dyrlæge, hvis din hund har spist meget eller får opkast, diarré eller sløvhed."
+        "da": "Nogle få stykker gør sandsynligvis ingen skade. Ring til din dyrlæge, hvis din hund har spist meget eller får opkast, diarré eller sløvhed.",
+        "fi": "Muutama pala ei todennäköisesti aiheuta haittaa. Soita eläinlääkärille, jos koirasi söi paljon tai sille tulee oksentelua, ripulia tai väsymystä."
       }
     },
     {
@@ -93,7 +103,8 @@
         "cs": "Mohou psi jíst karamelový nebo sýrový popcorn?",
         "hr": "Smiju li psi jesti kokice s karamelom ili sirom?",
         "sv": "Får hundar äta karamell- eller ostpopcorn?",
-        "da": "Må hunde spise popcorn med karamel eller ost?"
+        "da": "Må hunde spise popcorn med karamel eller ost?",
+        "fi": "Saako koira syödä karamelli- tai juustopopcornia?"
       },
       "a": {
         "en": "No. Skip popcorn with candy or caramel coatings, cheese or seasoning.",
@@ -101,7 +112,8 @@
         "cs": "Ne. Vynechte popcorn s cukrovou nebo karamelovou polevou, se sýrem nebo s kořením.",
         "hr": "Ne. Izbjegavaj kokice s glazurom od bombona ili karamele, sirom ili začinima.",
         "sv": "Nej. Hoppa över popcorn med godis- eller karamellöverdrag, ost eller kryddor.",
-        "da": "Nej. Undlad popcorn med slik- eller karamelovertræk, ost eller krydderier."
+        "da": "Nej. Undlad popcorn med slik- eller karamelovertræk, ost eller krydderier.",
+        "fi": "Ei. Jätä väliin popcorn, jossa on makeis- tai karamellipinnoite, juustoa tai mausteita."
       }
     }
   ],
@@ -214,6 +226,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9bce9ca0c6502e0c8031bf2e9d431bdcc3feca57c2394cc598f2052d2c48d34e"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a5d704d08774d3598fe03f08d7c946a0a62dcee3e2a56f19631afc62af9fba22"
     }
   }
 }

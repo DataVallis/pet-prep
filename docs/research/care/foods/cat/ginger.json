@@ -7,7 +7,8 @@
     "cs": "Zázvor",
     "hr": "Đumbir",
     "sv": "Ingefära",
-    "da": "Ingefær"
+    "da": "Ingefær",
+    "fi": "Inkivääri"
   },
   "question": {
     "en": "Can cats eat ginger?",
@@ -15,7 +16,8 @@
     "cs": "Mohou kočky jíst zázvor?",
     "hr": "Smiju li mačke jesti đumbir?",
     "sv": "Får katter äta ingefära?",
-    "da": "Må katte spise ingefær?"
+    "da": "Må katte spise ingefær?",
+    "fi": "Saako kissa syödä inkivääriä?"
   },
   "url_slug": {
     "en": "ginger",
@@ -23,7 +25,8 @@
     "cs": "zazvor",
     "hr": "dumbir",
     "sv": "ingefara",
-    "da": "ingefaer"
+    "da": "ingefaer",
+    "fi": "inkivaari"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Zázvor kočce raději nedávejte, pokud to nedoporučí veterinář. Zázvorový kořen se u koček používá jako bylinný doplněk, hlavně proti nevolnosti a zvracení, ale přírodní neznamená bezpečné: může způsobit mírné podráždění žaludku.",
     "hr": "Bolje je mački ne davati đumbir osim ako to ne predloži veterinar. Korijen đumbira koristi se kao biljni dodatak prehrani kod mačaka, ponajprije protiv mučnine i povraćanja, ali prirodno ne znači sigurno: može izazvati blage želučane tegobe.",
     "sv": "Det är bäst att inte ge din katt ingefära om inte din veterinär föreslår det. Ingefärsrot används som växtbaserat tillskott till katter, främst mot illamående och kräkningar, men naturligt betyder inte säkert: det kan orsaka lätt orolig mage.",
-    "da": "Det er bedst ikke at give din kat ingefær, medmindre din dyrlæge anbefaler det. Ingefærrod bruges som urtetilskud til katte, hovedsageligt mod kvalme og opkast, men naturligt betyder ikke ufarligt: det kan give lidt mavebesvær."
+    "da": "Det er bedst ikke at give din kat ingefær, medmindre din dyrlæge anbefaler det. Ingefærrod bruges som urtetilskud til katte, hovedsageligt mod kvalme og opkast, men naturligt betyder ikke ufarligt: det kan give lidt mavebesvær.",
+    "fi": "Ei suositella. Inkivääriä ei kannata antaa kissalle, ellei eläinlääkäri sitä ehdota. Inkiväärin juurta käytetään kissoilla rohdosvalmisteena lähinnä pahoinvoinnin ja oksentelun lievittämiseen, mutta luonnollinen ei tarkoita turvallista: se voi aiheuttaa lievän vatsavaivan."
   },
   "why": {
     "en": "VCA Animal Hospitals says ginger root is used in Traditional Chinese Medicine and Western herbal medicine in cats, dogs and other animals, most often as an anti-nausea and anti-vomiting supplement. The same page warns that just because a product is natural does not mean it is safe, that all medicinal plants are potentially toxic if used inappropriately or at high doses, and that pets with known bleeding disorders should not be given ginger. Your vet is the best source of information on such products. Cats don't need anything other than a complete diet.",
@@ -40,7 +44,8 @@
     "cs": "VCA Animal Hospitals uvádějí, že zázvorový kořen se v tradiční čínské medicíně i v západní bylinné medicíně používá u koček, psů a dalších zvířat, nejčastěji jako doplněk proti nevolnosti a zvracení. Na téže stránce varují, že přírodní původ výrobku ještě neznamená, že je bezpečný, že všechny léčivé rostliny mohou být při nesprávném použití nebo ve vysokých dávkách potenciálně toxické a že zvířatům se známými poruchami krevní srážlivosti by se zázvor podávat neměl. Nejlepším zdrojem informací o takových přípravcích je váš veterinář. Kočky nepotřebují nic jiného než kompletní stravu.",
     "hr": "VCA Animal Hospitals navodi da se korijen đumbira u tradicionalnoj kineskoj i zapadnoj biljnoj medicini koristi kod mačaka, pasa i drugih životinja, najčešće kao dodatak protiv mučnine i povraćanja. Ista stranica upozorava da proizvod koji je prirodan nije nužno siguran, da su sve ljekovite biljke potencijalno otrovne ako se koriste nepravilno ili u visokim dozama te da kućnim ljubimcima s poznatim poremećajima krvarenja ne treba davati đumbir. Najbolji izvor informacija o takvim proizvodima je veterinar. Mačkama ne treba ništa osim potpune hrane.",
     "sv": "VCA Animal Hospitals säger att ingefärsrot används inom traditionell kinesisk medicin och västerländsk växtmedicin för katter, hundar och andra djur, oftast som tillskott mot illamående och kräkningar. Samma sida varnar för att en produkt inte är säker bara för att den är naturlig, att alla medicinalväxter potentiellt är giftiga om de används fel eller i höga doser, och att husdjur med kända blödarsjukdomar inte ska få ingefära. Din veterinär är den bästa källan till information om sådana produkter. Katter behöver inget annat än en komplett kost.",
-    "da": "VCA Animal Hospitals skriver at ingefærrod bruges i traditionel kinesisk medicin og i vestlig urtemedicin til katte, hunde og andre dyr, oftest som tilskud mod kvalme og opkast. Samme side advarer om at et produkt ikke er ufarligt, bare fordi det er naturligt, at alle lægeplanter potentielt er giftige, hvis de bruges forkert eller i høje doser, og at kæledyr med kendte blødningssygdomme ikke bør have ingefær. Din dyrlæge er den bedste kilde til oplysninger om den slags produkter. Katte har ikke brug for andet end en komplet kost."
+    "da": "VCA Animal Hospitals skriver at ingefærrod bruges i traditionel kinesisk medicin og i vestlig urtemedicin til katte, hunde og andre dyr, oftest som tilskud mod kvalme og opkast. Samme side advarer om at et produkt ikke er ufarligt, bare fordi det er naturligt, at alle lægeplanter potentielt er giftige, hvis de bruges forkert eller i høje doser, og at kæledyr med kendte blødningssygdomme ikke bør have ingefær. Din dyrlæge er den bedste kilde til oplysninger om den slags produkter. Katte har ikke brug for andet end en komplet kost.",
+    "fi": "VCA Animal Hospitalsin mukaan inkiväärin juurta käytetään perinteisessä kiinalaisessa lääketieteessä ja länsimaisessa rohdoslääketieteessä kissoilla, koirilla ja muilla eläimillä, useimmiten pahoinvointia ja oksentelua lievittävänä valmisteena. Samalla sivulla varoitetaan, ettei tuote ole turvallinen vain siksi, että se on luonnollinen, että kaikki lääkekasvit voivat olla myrkyllisiä, jos niitä käytetään väärin tai suurina annoksina, ja että inkivääriä ei pidä antaa lemmikeille, joilla on todettu verenvuotohäiriö. Eläinlääkäri on paras tietolähde tällaisista tuotteista. Kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Opkast",
       "Let hudirritation",
       "Tegn på allergisk reaktion: uregelmæssig vejrtrækning, udslæt, feber eller hævelse omkring ansigtet"
+    ],
+    "fi": [
+      "Lievä vatsavaiva",
+      "Oksentelu",
+      "Lievä ihon ärsytys",
+      "Allergisen reaktion merkit: epäsäännöllinen hengitys, ihottuma, kuume tai kasvojen turvotus"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "cs": "Pokud kočka ochutnala trochu zázvoru, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud zaznamenáte příznaky alergické reakce, například nepravidelné dýchání, vyrážku nebo oteklý obličej, okamžitě se obraťte na veterináře. Zázvor jako lék nepodávejte, aniž byste se předem zeptali veterináře.",
     "hr": "Ako je mačka zagrizla malo đumbira, pazi na povraćanje ili želučane tegobe. Ako primijetiš znakove alergijske reakcije, poput nepravilnog disanja, osipa ili otečenog lica, odmah se obrati veterinaru. Ne daj đumbir kao lijek bez prethodnog pitanja veterinara.",
     "sv": "Om din katt har nafsat i sig lite ingefära: håll ett öga på om hon kräks eller får orolig mage. Om du ser tecken på allergisk reaktion, som onormal andning, utslag eller svullet ansikte, ska du kontakta din veterinär omedelbart. Ge inte ingefära som medicin utan att fråga din veterinär först.",
-    "da": "Hvis din kat har nippet til lidt ingefær, skal du holde øje med opkast eller mavebesvær. Hvis du ser tegn på en allergisk reaktion, som uregelmæssig vejrtrækning, udslæt eller et hævet ansigt, skal du kontakte din dyrlæge med det samme. Giv ikke ingefær som middel uden først at spørge din dyrlæge."
+    "da": "Hvis din kat har nippet til lidt ingefær, skal du holde øje med opkast eller mavebesvær. Hvis du ser tegn på en allergisk reaktion, som uregelmæssig vejrtrækning, udslæt eller et hævet ansigt, skal du kontakte din dyrlæge med det samme. Giv ikke ingefær som middel uden først at spørge din dyrlæge.",
+    "fi": "Jos kissasi nappasi vähän inkivääriä, seuraa, tuleeko oksentelua tai vatsavaivoja. Jos huomaat allergisen reaktion merkkejä, kuten epäsäännöllistä hengitystä, ihottumaa tai kasvojen turvotusta, ota heti yhteyttä eläinlääkäriin. Älä anna inkivääriä lääkkeeksi kysymättä ensin eläinlääkäriltä."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "cs": "Zázvor je kořen do jídel pro lidi. Kočky ho nepotřebují, takže ať o něm rozhodnou dospělí a veterinář.",
     "hr": "Đumbir je korijen za kuhanje. Mačkama nije potreban, zato neka o njemu odlučuju odrasli i veterinar.",
     "sv": "Ingefära är en rot för människors matlagning. Katter behöver den inte, så låt de vuxna och veterinären avgöra.",
-    "da": "Ingefær er en rod, man bruger i madlavning til mennesker. Katte har ikke brug for den, så lad de voksne og dyrlægen bestemme."
+    "da": "Ingefær er en rod, man bruger i madlavning til mennesker. Katte har ikke brug for den, så lad de voksne og dyrlægen bestemme.",
+    "fi": "Inkivääri on juuri, jota käytetään ihmisten ruoanlaitossa. Kissat eivät tarvitse sitä, joten jätä asia aikuisten ja eläinlääkärin päätettäväksi."
   },
   "faq": [
     {
@@ -105,7 +118,8 @@
         "cs": "Může zázvor kočce pomoci při nevolnosti?",
         "hr": "Može li đumbir pomoći mojoj mački kod mučnine?",
         "sv": "Kan ingefära hjälpa min katt mot illamående?",
-        "da": "Kan ingefær hjælpe min kat mod kvalme?"
+        "da": "Kan ingefær hjælpe min kat mod kvalme?",
+        "fi": "Voiko inkivääri auttaa kissaani pahoinvointiin?"
       },
       "a": {
         "en": "Ginger is used as an anti-nausea and anti-vomiting supplement in animals, but only your vet can tell you whether it is safe for your cat. Medicinal plants can be toxic if used inappropriately.",
@@ -113,7 +127,8 @@
         "cs": "Zázvor se u zvířat používá jako doplněk proti nevolnosti a zvracení, ale jen veterinář vám řekne, zda je pro vaši kočku bezpečný. Léčivé rostliny mohou být při nesprávném použití toxické.",
         "hr": "Đumbir se kod životinja koristi kao dodatak protiv mučnine i povraćanja, ali samo ti veterinar može reći je li siguran za tvoju mačku. Ljekovite biljke mogu biti otrovne ako se koriste nepravilno.",
         "sv": "Ingefära används som tillskott mot illamående och kräkningar hos djur, men bara din veterinär kan säga om det är säkert för just din katt. Medicinalväxter kan vara giftiga om de används fel.",
-        "da": "Ingefær bruges som tilskud mod kvalme og opkast hos dyr, men kun din dyrlæge kan sige, om det er ufarligt for din kat. Lægeplanter kan være giftige, hvis de bruges forkert."
+        "da": "Ingefær bruges som tilskud mod kvalme og opkast hos dyr, men kun din dyrlæge kan sige, om det er ufarligt for din kat. Lægeplanter kan være giftige, hvis de bruges forkert.",
+        "fi": "Inkivääriä käytetään eläimillä pahoinvointia ja oksentelua lievittävänä valmisteena, mutta vain eläinlääkäri voi kertoa, onko se turvallista juuri sinun kissallesi. Lääkekasvit voivat olla myrkyllisiä, jos niitä käytetään väärin."
       }
     }
   ],
@@ -204,6 +219,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4386157a6459c3a0e35cff60df5aceb051538115b96d84a20996896ec46e28a8"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d11169423d04a7098edd62801c15865e6ec2dc86b1aa80388fb348de598b7f88"
     }
   }
 }

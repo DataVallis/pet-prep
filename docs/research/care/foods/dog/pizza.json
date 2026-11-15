@@ -7,7 +7,8 @@
     "cs": "Pizza",
     "hr": "Pizza",
     "sv": "Pizza",
-    "da": "Pizza"
+    "da": "Pizza",
+    "fi": "Pizza"
   },
   "question": {
     "en": "Can dogs eat pizza?",
@@ -15,7 +16,8 @@
     "cs": "Mohou psi jíst pizzu?",
     "hr": "Smiju li psi jesti pizzu?",
     "sv": "Får hundar äta pizza?",
-    "da": "Må hunde spise pizza?"
+    "da": "Må hunde spise pizza?",
+    "fi": "Saako koira syödä pizzaa?"
   },
   "url_slug": {
     "en": "pizza",
@@ -23,7 +25,8 @@
     "cs": "pizza",
     "hr": "pizza",
     "sv": "pizza",
-    "da": "pizza"
+    "da": "pizza",
+    "fi": "pizza"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ne, pizzu raději nesdílejte. Může psovi podráždit žaludek a dokonce vést k zánětu slinivky břišní; polevy mohou obsahovat česnek nebo cibuli, které poškozují červené krvinky, a okraj pizzy má příliš mnoho kalorií. Riziko představuje i syrové pizzové těsto.",
     "hr": "Ne, pizzu je najbolje ne dijeliti. Može nadražiti želudac psa pa čak i dovesti do upale gušterače, dodaci mogu sadržavati češnjak ili luk, koji oštećuju crvena krvna zrnca, a kora je previše kalorična. Sirovo tijesto za pizzu također je rizično.",
     "sv": "Nej, det är bäst att inte dela pizza. Den kan reta hundens mage och till och med leda till bukspottkörtelinflammation (pankreatit), pålägg kan innehålla vitlök eller lök, som skadar de röda blodkropparna, och pizzabotten innehåller alldeles för många kalorier. Rå pizzadeg är också riskabel.",
-    "da": "Nej, det er bedst ikke at dele pizza. Den kan give hunden dårlig mave og endda føre til betændelse i bugspytkirtlen, toppings kan indeholde hvidløg eller løg, som skader de røde blodlegemer, og skorpen indeholder alt for mange kalorier. Rå pizzadej er også risikabel."
+    "da": "Nej, det er bedst ikke at dele pizza. Den kan give hunden dårlig mave og endda føre til betændelse i bugspytkirtlen, toppings kan indeholde hvidløg eller løg, som skader de røde blodlegemer, og skorpen indeholder alt for mange kalorier. Rå pizzadej er også risikabel.",
+    "fi": "Ei suositella, pizzaa on parasta olla jakamatta. Se voi ärsyttää koiran vatsaa ja jopa johtaa haimatulehdukseen, täytteissä voi olla valkosipulia tai sipulia, jotka vahingoittavat punasoluja, ja pizzanpohja on aivan liian runsaskalorinen. Myös raaka pizzataikina on riski."
   },
   "why": {
     "en": "AKC lists pizza among party foods to keep away from dogs, and VCA and the ASPCA say leftovers and party food like pizza can cause stomach upset and even pancreatitis. Cheese is high in fat, and pepperoni is too fatty and spicy and risks salt poisoning. Garlic and onion, which can be in toppings and seasonings, damage red blood cells and kidneys. Pizza crust is way too high in calories and can lead to obesity. Uncooked pizza dough produces ethanol inside a dog's body.",
@@ -40,7 +44,8 @@
     "cs": "Organizace AKC řadí pizzu mezi jídla z oslav, která se psům nemají dávat, a VCA i ASPCA uvádějí, že zbytky a jídla z oslav, jako je pizza, mohou způsobit podráždění žaludku a dokonce zánět slinivky břišní. Sýr je bohatý na tuk a feferonková salámová poleva je příliš tučná a pálivá a hrozí i otrava solí. Česnek a cibule, které mohou být v polevách a koření, poškozují červené krvinky a ledviny. Okraj pizzy má mnohem víc kalorií, než by měl, a může vést k obezitě. Nepečené pizzové těsto produkuje ve psím těle etanol.",
     "hr": "AKC navodi pizzu među hranom sa zabava koju treba držati podalje od pasa, a VCA i ASPCA kažu da ostaci hrane i hrana sa zabava poput pizze mogu izazvati želučane tegobe pa čak i upalu gušterače. Sir je bogat mašću, a pepperoni je previše masan i začinjen te nosi rizik od trovanja solju. Češnjak i luk, koji mogu biti u dodacima i začinima, oštećuju crvena krvna zrnca i bubrege. Kora pizze previše je kalorična i može dovesti do pretilosti. Nepečeno tijesto za pizzu stvara etanol u tijelu psa.",
     "sv": "AKC listar pizza bland festmat som ska hållas borta från hundar, och VCA och ASPCA säger att rester och festmat som pizza kan orsaka magbesvär och till och med bukspottkörtelinflammation (pankreatit). Ost är fet, och pepperoni är för fet och kryddig och innebär risk för saltförgiftning. Vitlök och lök, som kan finnas i pålägg och kryddor, skadar de röda blodkropparna och njurarna. Pizzabotten innehåller alldeles för många kalorier och kan leda till fetma. Obakad pizzadeg bildar etanol inne i hundens kropp.",
-    "da": "AKC nævner pizza blandt festmad, som hunde skal holdes væk fra, og VCA og ASPCA skriver at rester og festmad som pizza kan give mavebesvær og endda betændelse i bugspytkirtlen. Ost indeholder meget fedt, og pepperoni er for fed og krydret og giver risiko for saltforgiftning. Hvidløg og løg, som kan findes i toppings og krydderier, skader de røde blodlegemer og nyrerne. Pizzaskorpe indeholder alt for mange kalorier og kan føre til fedme. Rå pizzadej danner ethanol inde i en hunds krop."
+    "da": "AKC nævner pizza blandt festmad, som hunde skal holdes væk fra, og VCA og ASPCA skriver at rester og festmad som pizza kan give mavebesvær og endda betændelse i bugspytkirtlen. Ost indeholder meget fedt, og pepperoni er for fed og krydret og giver risiko for saltforgiftning. Hvidløg og løg, som kan findes i toppings og krydderier, skader de røde blodlegemer og nyrerne. Pizzaskorpe indeholder alt for mange kalorier og kan føre til fedme. Rå pizzadej danner ethanol inde i en hunds krop.",
+    "fi": "AKC luettelee pizzan juhlaruokien joukkoon, jotka kannattaa pitää poissa koirien ulottuvilta, ja VCA ja ASPCA toteavat, että ruoantähteet ja juhlaruoka, kuten pizza, voivat aiheuttaa vatsavaivoja ja jopa haimatulehduksen. Juusto on rasvaista, ja pepperoni on liian rasvaista ja mausteista ja siinä on suolamyrkytyksen riski. Valkosipuli ja sipuli, joita voi olla täytteissä ja mausteissa, vahingoittavat punasoluja ja munuaisia. Pizzanpohja on aivan liian runsaskalorinen ja voi johtaa lihavuuteen. Kypsentämätön pizzataikina tuottaa etanolia koiran elimistössä."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Mavebesvær, opkast eller diarré",
       "Mavesmerter, kvalme, feber, lav energi eller dårlig appetit (mulig betændelse i bugspytkirtlen)",
       "Appetitløshed eller nedtrykthed efter toppings med løg eller hvidløg"
+    ],
+    "fi": [
+      "Vatsavaivat, oksentelu tai ripuli",
+      "Vatsakipu, pahoinvointi, kuume, väsymys tai heikko ruokahalu (mahdollinen haimatulehdus)",
+      "Ruokahaluttomuus tai alakuloisuus sipuli- tai valkosipulitäytteiden jälkeen"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "cs": "Pokud se pes dostal k pizze, obraťte se na veterináře. Pokud poleva mohla obsahovat česnek nebo cibuli, nečekejte, co se stane. Obraťte se na veterináře i tehdy, když pes snědl syrové pizzové těsto.",
     "hr": "Ako je pas dohvatio pizzu, obrati se veterinaru. Ako su dodaci mogli sadržavati češnjak ili luk, ne čekaj da vidiš. Ako je pas pojeo sirovo tijesto za pizzu, također se obrati veterinaru.",
     "sv": "Om din hund har ätit pizza ska du kontakta din veterinär. Om pålägget kan ha innehållit vitlök eller lök ska du inte vänta och se. Om din hund har ätit rå pizzadeg ska du också kontakta din veterinär.",
-    "da": "Hvis din hund har fået fat i pizza, skal du kontakte din dyrlæge. Hvis toppingen kan have indeholdt hvidløg eller løg, skal du ikke se tiden an. Hvis din hund har spist rå pizzadej, skal du også kontakte din dyrlæge."
+    "da": "Hvis din hund har fået fat i pizza, skal du kontakte din dyrlæge. Hvis toppingen kan have indeholdt hvidløg eller løg, skal du ikke se tiden an. Hvis din hund har spist rå pizzadej, skal du også kontakte din dyrlæge.",
+    "fi": "Jos koirasi pääsi pizzan kimppuun, ota yhteyttä eläinlääkäriin. Jos täytteissä on voinut olla valkosipulia tai sipulia, älä jää odottamaan. Jos koirasi söi raakaa pizzataikinaa, ota yhteyttä myös silloin eläinlääkäriin."
   },
   "serving": null,
   "child": {
@@ -89,7 +100,8 @@
     "cs": "Pizza je jídlo pro lidi. Sýr a polevy mohou psovi rozbolet bříško, a tak mu radši dej jeho vlastní pamlsek.",
     "hr": "Pizza je hrana za ljude. Od sira i dodataka na pizzi psa može zaboljeti trbuščić, zato mu radije daj njegovu poslasticu.",
     "sv": "Pizza är mat för människor. Osten och pålägget kan ge hunden ont i magen, så ge din hund en egen godbit i stället.",
-    "da": "Pizza er menneskemad. Osten og toppingen kan give en hund ondt i maven, så giv din hund en af sine egne godbidder i stedet."
+    "da": "Pizza er menneskemad. Osten og toppingen kan give en hund ondt i maven, så giv din hund en af sine egne godbidder i stedet.",
+    "fi": "Pizza on ihmisten ruokaa. Sen juusto ja täytteet voivat tehdä koiran vatsan kipeäksi, joten anna koirallesi sen oma herkku."
   },
   "faq": [
     {
@@ -99,7 +111,8 @@
         "cs": "Mohou psi jíst okraj pizzy?",
         "hr": "Smiju li psi jesti koru pizze?",
         "sv": "Får hundar äta pizzabotten?",
-        "da": "Må hunde spise pizzaskorpe?"
+        "da": "Må hunde spise pizzaskorpe?",
+        "fi": "Saako koira syödä pizzanpohjaa?"
       },
       "a": {
         "en": "It's best not to. A vet nutritionist at Cornell says pizza crust is way too high in calories and can lead to obesity.",
@@ -107,7 +120,8 @@
         "cs": "Raději ne. Veterinární specialistka na výživu z Cornellovy univerzity uvádí, že okraj pizzy má mnohem víc kalorií, než by měl, a může vést k obezitě.",
         "hr": "Bolje ne. Veterinarski nutricionist sa Sveučilišta Cornell kaže da je kora pizze previše kalorična i može dovesti do pretilosti.",
         "sv": "Det är bäst att låta bli. En veterinärnutritionist vid Cornell säger att pizzabotten innehåller alldeles för många kalorier och kan leda till fetma.",
-        "da": "Det er bedst ikke at give det. En ernæringsdyrlæge fra Cornell skriver at pizzaskorpe indeholder alt for mange kalorier og kan føre til fedme."
+        "da": "Det er bedst ikke at give det. En ernæringsdyrlæge fra Cornell skriver at pizzaskorpe indeholder alt for mange kalorier og kan føre til fedme.",
+        "fi": "Ei kannata. Cornellin eläinlääkäri-ravitsemusasiantuntijan mukaan pizzanpohja on aivan liian runsaskalorinen ja voi johtaa lihavuuteen."
       }
     },
     {
@@ -117,7 +131,8 @@
         "cs": "Je syrové pizzové těsto nebezpečné?",
         "hr": "Je li sirovo tijesto za pizzu opasno?",
         "sv": "Är rå pizzadeg farlig?",
-        "da": "Er rå pizzadej farlig?"
+        "da": "Er rå pizzadej farlig?",
+        "fi": "Onko raaka pizzataikina vaarallista?"
       },
       "a": {
         "en": "Yes. Uncooked bread and pizza dough produce ethanol inside a dog's body, and raw yeast dough can expand in the stomach. Contact your vet.",
@@ -125,7 +140,8 @@
         "cs": "Ano. Nepečený chléb a pizzové těsto produkují ve psím těle etanol a syrové kvasnicové těsto se může v žaludku zvětšovat. Obraťte se na veterináře.",
         "hr": "Da. Nepečeni kruh i tijesto za pizzu stvaraju etanol u tijelu psa, a sirovo tijesto s kvascem može se širiti u želucu. Obrati se veterinaru.",
         "sv": "Ja. Obakat bröd och obakad pizzadeg bildar etanol inne i hundens kropp, och rå jästdeg kan svälla i magen. Kontakta din veterinär.",
-        "da": "Ja. Rå brød- og pizzadej danner ethanol inde i en hunds krop, og rå gærdej kan udvide sig i maven. Kontakt din dyrlæge."
+        "da": "Ja. Rå brød- og pizzadej danner ethanol inde i en hunds krop, og rå gærdej kan udvide sig i maven. Kontakt din dyrlæge.",
+        "fi": "On. Kypsentämätön leipä- ja pizzataikina tuottaa etanolia koiran elimistössä, ja raaka hiivataikina voi laajentua mahalaukussa. Ota yhteyttä eläinlääkäriin."
       }
     }
   ],
@@ -275,6 +291,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "78cce817b1e3bf2eb9c579545fb98934005e01052f39bbf775a534f3cc41eb69"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3ebeaeaf0721b42b0adc79975fd0d31f7e2e16272800e17bd1a7ebd25ec277e3"
     }
   }
 }

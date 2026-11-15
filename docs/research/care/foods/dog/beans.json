@@ -6,21 +6,24 @@
     "sl": "Fižol",
     "hr": "Grah",
     "sv": "Bönor",
-    "da": "Bønner"
+    "da": "Bønner",
+    "fi": "Pavut"
   },
   "question": {
     "en": "Can dogs eat beans?",
     "sl": "Ali lahko psi jedo fižol?",
     "hr": "Smiju li psi jesti grah?",
     "sv": "Får hundar äta bönor?",
-    "da": "Må hunde spise bønner?"
+    "da": "Må hunde spise bønner?",
+    "fi": "Saako koira syödä papuja?"
   },
   "url_slug": {
     "en": "beans",
     "sl": "fizol",
     "hr": "grah",
     "sv": "bonor",
-    "da": "boenner"
+    "da": "boenner",
+    "fi": "pavut"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, kot priboljšek. Psi lahko jedo številne vrste fižola, na primer črni, rdeči (ledvičasti), pinto, lima in beli fižol, če je bil prej namočen in nato kuhan. Fižol lahko psu povzroči nekaj vetrov. Pečen fižol v omaki (baked beans) ni dobra izbira.",
     "hr": "Da, kao poslastica. Psi mogu jesti mnoge vrste graha, poput crnog, crvenog (kidney), pinto, lima i bijelog graha, ako je namočen pa kuhan. Grah može kod psa izazvati nadutost. Grah u umaku (baked beans) nije dobra ideja.",
     "sv": "Ja, som godbit. Hundar kan äta många sorters bönor, som svarta bönor, kidneybönor, pintobönor, limabönor och vita bönor, om de har blötlagts och sedan kokats. Bönor kan ge din hund lite gaser. Bakade bönor i sås är ingen bra idé.",
-    "da": "Ja, som en godbid. Hunde kan spise mange slags bønner, fx sorte bønner, kidneybønner, pintobønner, limabønner og hvide bønner, hvis de er udblødt og derefter kogt. Bønner kan give din hund luft i maven. Bagte bønner i sovs er ikke en god idé."
+    "da": "Ja, som en godbid. Hunde kan spise mange slags bønner, fx sorte bønner, kidneybønner, pintobønner, limabønner og hvide bønner, hvis de er udblødt og derefter kogt. Bønner kan give din hund luft i maven. Bagte bønner i sovs er ikke en god idé.",
+    "fi": "Saa, herkuksi. Koira voi syödä monenlaisia papuja, kuten mustia papuja, kidneypapuja, pintopapuja, limapapuja ja valkoisia papuja, jos ne on liotettu ja sitten keitetty. Pavut voivat aiheuttaa koiralle ilmavaivoja. Kastikkeessa tarjottavat valmispavut (baked beans) eivät sovi koiralle."
   },
   "why": {
     "en": "Beans contain a lot of fibre, and uncooked they are almost indigestible. Soaking and cooking them helps dogs digest them and may reduce wind. Beans should not replace meat in a dog's diet. Baked beans themselves aren't toxic, but they are high in salt and sugar and their sauce can irritate a dog's stomach; eaten regularly, they could increase the risk of pancreatitis.",
     "sl": "Fižol vsebuje veliko vlaknin, nekuhan pa je skoraj neprebavljiv. Namakanje in kuhanje psu pomagata, da ga prebavi, in lahko zmanjšata vetrove. Fižol ne sme nadomestiti mesa v pasji prehrani. Pečen fižol sam po sebi ni strupen, a vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec; če ga pes je redno, se lahko poveča tveganje za vnetje trebušne slinavke.",
     "hr": "Grah sadrži mnogo vlakana, a sirov je gotovo neprobavljiv. Namakanje i kuhanje pomažu psima da ga probave i mogu smanjiti nadutost. Grah ne bi smio zamijeniti meso u prehrani psa. Grah u umaku (baked beans) sam po sebi nije otrovan, ali je bogat solju i šećerom, a njegov umak može nadražiti želudac psa; ako se jede redovito, mogao bi povećati rizik od upale gušterače.",
     "sv": "Bönor innehåller mycket fibrer, och okokta är de nästan osmältbara. Att blötlägga och koka dem hjälper hundar att smälta dem och kan minska gaser. Bönor ska inte ersätta kött i hundens kost. Bakade bönor är i sig inte giftiga, men de innehåller mycket salt och socker och såsen kan reta hundens mage; om de äts regelbundet kan de öka risken för bukspottkörtelinflammation (pankreatit).",
-    "da": "Bønner indeholder meget fiber, og når de er rå, er de næsten ufordøjelige. Udblødning og kogning hjælper hunde med at fordøje dem og kan mindske luft i maven. Bønner bør ikke erstatte kød i en hunds kost. Bagte bønner er ikke giftige i sig selv, men de indeholder meget salt og sukker, og sovsen kan irritere hundens mave; hvis hunden får dem jævnligt, kan det øge risikoen for betændelse i bugspytkirtlen."
+    "da": "Bønner indeholder meget fiber, og når de er rå, er de næsten ufordøjelige. Udblødning og kogning hjælper hunde med at fordøje dem og kan mindske luft i maven. Bønner bør ikke erstatte kød i en hunds kost. Bagte bønner er ikke giftige i sig selv, men de indeholder meget salt og sukker, og sovsen kan irritere hundens mave; hvis hunden får dem jævnligt, kan det øge risikoen for betændelse i bugspytkirtlen.",
+    "fi": "Pavuissa on paljon kuitua, ja raakoina ne ovat lähes sulamattomia. Liottaminen ja keittäminen auttavat koiraa sulattamaan ne ja voi vähentää ilmavaivoja. Pavut eivät saa korvata lihaa koiran ruokavaliossa. Kastikkeessa tarjottavat valmispavut eivät sinänsä ole myrkyllisiä, mutta niissä on paljon suolaa ja sokeria ja niiden kastike voi ärsyttää koiran vatsaa; säännöllisesti syötynä ne voivat lisätä haimatulehduksen riskiä."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če je pes pojedel nekaj pečenega fižola, majhna količina verjetno ne bo škodila. Psa 24 ur opazujte in se za nasvet obrnite na veterinarja, če opazite zaskrbljujoče znake, kot so prebavne težave ali driska.",
     "hr": "Ako je pas pojeo malo graha u umaku, mala količina vjerojatno neće mnogo naškoditi. Promatraj psa 24 sata i obrati se veterinaru za savjet ako primijetiš zabrinjavajuće znakove poput želučanih tegoba ili proljeva.",
     "sv": "Om din hund har ätit lite bakade bönor är det osannolikt att det orsakar större skada. Håll ett öga på hunden i 24 timmar och kontakta din veterinär för råd om du ser oroande tecken som orolig mage eller diarré.",
-    "da": "Hvis din hund har spist nogle få bagte bønner, er en lille mængde næppe skadelig. Hold øje med din hund i 24 timer, og kontakt din dyrlæge for at få råd, hvis du ser bekymrende tegn som dårlig mave eller diarré."
+    "da": "Hvis din hund har spist nogle få bagte bønner, er en lille mængde næppe skadelig. Hold øje med din hund i 24 timer, og kontakt din dyrlæge for at få råd, hvis du ser bekymrende tegn som dårlig mave eller diarré.",
+    "fi": "Jos koirasi söi vähän kastikkeessa tarjottavia valmispapuja, pieni määrä tuskin aiheuttaa suurta haittaa. Seuraa koiraa vuorokauden ajan ja kysy neuvoa eläinlääkäriltä, jos huomaat huolestuttavia oireita, kuten vatsavaivoja tai ripulia."
   },
   "serving": {
     "en": "Soaked first and then cooked, without sauce, as an occasional treat.",
     "sl": "Najprej namočen in nato kuhan, brez omake, kot občasen priboljšek.",
     "hr": "Prvo namočen, zatim kuhan, bez umaka, kao povremena poslastica.",
     "sv": "Först blötlagda och sedan kokta, utan sås, som godbit då och då.",
-    "da": "Udblødt først og derefter kogt, uden sovs, som en godbid en gang imellem."
+    "da": "Udblødt først og derefter kogt, uden sovs, som en godbid en gang imellem.",
+    "fi": "Ensin liotettuna ja sitten keitettynä, ilman kastiketta, satunnaisena herkkuna."
   },
   "child": {
     "en": "Cooked beans can be a little treat for dogs, but they might make your dog a bit windy!",
     "sl": "Kuhan fižol je lahko majhen priboljšek za psa, a ga lahko malo napihne!",
     "hr": "Kuhani grah može biti mala poslastica za pse, ali kod psa može izazvati i malo nadutosti!",
     "sv": "Kokta bönor kan vara en liten godbit för hundar, men din hund kan bli lite pruttig!",
-    "da": "Kogte bønner kan være en lille godbid til hunde, men de kan give din hund lidt luft i maven!"
+    "da": "Kogte bønner kan være en lille godbid til hunde, men de kan give din hund lidt luft i maven!",
+    "fi": "Keitetyt pavut voivat olla koiralle pieni herkku, mutta ne voivat saada koirasi pierrelemään!"
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo pečen fižol v omaki?",
         "hr": "Smiju li psi jesti grah u umaku (baked beans)?",
         "sv": "Får hundar äta bakade bönor?",
-        "da": "Må hunde spise bagte bønner?"
+        "da": "Må hunde spise bagte bønner?",
+        "fi": "Saako koira syödä kastikkeessa tarjottavia valmispapuja (baked beans)?"
       },
       "a": {
         "en": "It's best not to. The beans themselves aren't toxic, but baked beans are high in salt and sugar and the sauce can irritate a dog's stomach. If your dog ate a little you spilt on the floor, it's probably not a cause for concern.",
         "sl": "Raje ne. Fižol sam ni strupen, a pečen fižol vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec. Če je pes pojedel malo fižola, ki vam je padel na tla, to verjetno ni razlog za skrb.",
         "hr": "Bolje ne. Sam grah nije otrovan, ali je grah u umaku bogat solju i šećerom, a umak može nadražiti želudac psa. Ako je pas pojeo malo onoga što ti je palo na pod, vjerojatno nema razloga za zabrinutost.",
         "sv": "Det är bäst att låta bli. Bönorna i sig är inte giftiga, men bakade bönor innehåller mycket salt och socker och såsen kan reta hundens mage. Om din hund åt lite som du råkade spilla på golvet är det förmodligen inget att oroa sig för.",
-        "da": "Helst ikke. Bønnerne er ikke giftige i sig selv, men bagte bønner indeholder meget salt og sukker, og sovsen kan irritere hundens mave. Hvis din hund har spist en smule, du har spildt på gulvet, er det sandsynligvis ikke noget at bekymre sig om."
+        "da": "Helst ikke. Bønnerne er ikke giftige i sig selv, men bagte bønner indeholder meget salt og sukker, og sovsen kan irritere hundens mave. Hvis din hund har spist en smule, du har spildt på gulvet, er det sandsynligvis ikke noget at bekymre sig om.",
+        "fi": "Ei kannata. Pavut eivät sinänsä ole myrkyllisiä, mutta valmispavuissa on paljon suolaa ja sokeria, ja kastike voi ärsyttää koiran vatsaa. Jos koirasi söi vähän lattialle läikkyneitä papuja, se tuskin on huolen aihe."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali lahko fižol nadomesti meso v pasji prehrani?",
         "hr": "Može li grah zamijeniti meso u prehrani mog psa?",
         "sv": "Kan bönor ersätta kött i min hunds kost?",
-        "da": "Kan bønner erstatte kød i min hunds kost?"
+        "da": "Kan bønner erstatte kød i min hunds kost?",
+        "fi": "Voivatko pavut korvata lihan koirani ruokavaliossa?"
       },
       "a": {
         "en": "No. Feeding just beans is bad for dogs if it replaces meat in their diet.",
         "sl": "Ne. Če fižol v pasji prehrani nadomesti meso, je to za psa slabo.",
         "hr": "Ne. Hranjenje samo grahom loše je za pse ako zamjenjuje meso u njihovoj prehrani.",
         "sv": "Nej. Att bara ge bönor är dåligt för hundar om det ersätter kött i kosten.",
-        "da": "Nej. Det er dårligt for hunde kun at få bønner, hvis de erstatter kød i kosten."
+        "da": "Nej. Det er dårligt for hunde kun at få bønner, hvis de erstatter kød i kosten.",
+        "fi": "Eivät. Pelkkien papujen syöttäminen on koirille haitallista, jos ne korvaavat lihan koiran ruokavaliossa."
       }
     }
   ],
@@ -226,6 +238,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f2c03414ae9b4162be1921526c5b3a219bbe51957e4ec93bc1da4896fe3ca17e"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "23d2dcf15badbbfeb6d87891df4e83d7c1356c758499521f4a30ed3dbf469caf"
     }
   }
 }

@@ -7,7 +7,8 @@
     "cs": "Kakaový prášek",
     "hr": "Kakao u prahu",
     "sv": "Kakaopulver",
-    "da": "Kakaopulver"
+    "da": "Kakaopulver",
+    "fi": "Kaakaojauhe"
   },
   "question": {
     "en": "Can cats eat cocoa powder?",
@@ -15,7 +16,8 @@
     "cs": "Mohou kočky jíst kakaový prášek?",
     "hr": "Smiju li mačke jesti kakao u prahu?",
     "sv": "Får katter äta kakaopulver?",
-    "da": "Må katte spise kakaopulver?"
+    "da": "Må katte spise kakaopulver?",
+    "fi": "Saako kissa syödä kaakaojauhetta?"
   },
   "url_slug": {
     "en": "cocoa-powder",
@@ -23,7 +25,8 @@
     "cs": "kakaovy-prasek",
     "hr": "kakao-u-prahu",
     "sv": "kakaopulver",
-    "da": "kakaopulver"
+    "da": "kakaopulver",
+    "fi": "kaakaojauhe"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ne. Kakaový prášek je pro kočky obzvlášť toxický, protože obsahuje extrémně vysoký podíl kakaové sušiny, která obsahuje theobromin. Pokud kočka snědla byť jen trochu, uschovejte obal a ihned zavolejte veterináři.",
     "hr": "Ne. Kakao u prahu osobito je otrovan za mačke, jer sadrži izuzetno visoku koncentraciju kakaove suhe tvari, u kojoj je teobromin. Ako mačka pojede imalo, sačuvaj ambalažu i odmah nazovi veterinara.",
     "sv": "Nej. Kakaopulver är särskilt giftigt för katter eftersom det innehåller en extremt hög halt kakaotorrsubstans, som innehåller teobromin. Om din katt äter något ska du spara förpackningen och ringa din veterinär omedelbart.",
-    "da": "Nej. Kakaopulver er særligt giftigt for katte, fordi det indeholder en ekstremt høj koncentration af kakaotørstof, som indeholder theobromin. Hvis din kat får noget, skal du gemme emballagen og ringe til din dyrlæge med det samme."
+    "da": "Nej. Kakaopulver er særligt giftigt for katte, fordi det indeholder en ekstremt høj koncentration af kakaotørstof, som indeholder theobromin. Hvis din kat får noget, skal du gemme emballagen og ringe til din dyrlæge med det samme.",
+    "fi": "Ei saa. Kaakaojauhe on kissoille erityisen myrkyllistä, koska siinä on erittäin paljon kaakaokuiva-ainetta, joka sisältää teobromiinia. Jos kissasi syö sitä vähänkin, säilytä pakkaus ja soita heti eläinlääkärille."
   },
   "why": {
     "en": "PDSA explains that chocolate contains theobromine, which is perfectly safe for humans but toxic for cats. The darker the chocolate, the more cocoa solids and theobromine it contains, and the more toxic it is. Cocoa powder is especially toxic because it contains an extremely high concentration of cocoa solids.",
@@ -40,7 +44,8 @@
     "cs": "PDSA vysvětluje, že čokoláda obsahuje theobromin, který je pro lidi naprosto bezpečný, ale pro kočky toxický. Čím tmavší čokoláda, tím více kakaové sušiny a theobrominu obsahuje a tím je toxičtější. Kakaový prášek je obzvlášť toxický, protože obsahuje extrémně vysoký podíl kakaové sušiny.",
     "hr": "PDSA objašnjava da čokolada sadrži teobromin, koji je za ljude potpuno siguran, ali je za mačke otrovan. Što je čokolada tamnija, to ima više kakaove suhe tvari i teobromina te je otrovnija. Kakao u prahu osobito je otrovan, jer sadrži izuzetno visoku koncentraciju kakaove suhe tvari.",
     "sv": "PDSA förklarar att choklad innehåller teobromin, som är helt ofarligt för människor men giftigt för katter. Ju mörkare choklad, desto mer kakaotorrsubstans och teobromin innehåller den, och desto giftigare är den. Kakaopulver är särskilt giftigt eftersom det innehåller en extremt hög halt kakaotorrsubstans.",
-    "da": "PDSA forklarer at chokolade indeholder theobromin, som er helt ufarligt for mennesker, men giftigt for katte. Jo mørkere chokoladen er, jo mere kakaotørstof og theobromin indeholder den, og jo giftigere er den. Kakaopulver er særligt giftigt, fordi det indeholder en ekstremt høj koncentration af kakaotørstof."
+    "da": "PDSA forklarer at chokolade indeholder theobromin, som er helt ufarligt for mennesker, men giftigt for katte. Jo mørkere chokoladen er, jo mere kakaotørstof og theobromin indeholder den, og jo giftigere er den. Kakaopulver er særligt giftigt, fordi det indeholder en ekstremt høj koncentration af kakaotørstof.",
+    "fi": "PDSA kertoo, että suklaassa on teobromiinia, joka on ihmisille täysin vaaratonta mutta kissoille myrkyllistä. Mitä tummempaa suklaa on, sitä enemmän siinä on kaakaokuiva-ainetta ja teobromiinia ja sitä myrkyllisempää se on. Kaakaojauhe on erityisen myrkyllistä, koska siinä on erittäin suuri pitoisuus kaakaokuiva-ainetta."
   },
   "signs": {
     "en": [
@@ -108,6 +113,17 @@
       "Feber",
       "Hurtig puls",
       "Kramper"
+    ],
+    "fi": [
+      "Kiihtyneisyys, levottomuus tai ylivilkkaus",
+      "Oksentelu tai ripuli",
+      "Tavallista runsaampi juominen ja virtsaaminen",
+      "Vatsakipu",
+      "Nopea hengitys tai läähätys",
+      "Vapina tai tärinä",
+      "Kuume",
+      "Nopea syke",
+      "Kouristuskohtaukset"
     ]
   },
   "what_to_do": {
@@ -116,7 +132,8 @@
     "cs": "Uschovejte obal a ihned zavolejte veterináři. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Sačuvaj ambalažu i odmah nazovi veterinara. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Spara förpackningen och ring din veterinär omedelbart. Vänta inte på att symtom ska dyka upp, och försök inte få katten att kräkas hemma.",
-    "da": "Gem emballagen, og ring til din dyrlæge med det samme. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op."
+    "da": "Gem emballagen, og ring til din dyrlæge med det samme. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
+    "fi": "Säilytä pakkaus ja soita heti eläinlääkärille. Älä odota oireita äläkä yritä oksennuttaa kissaa itse."
   },
   "serving": null,
   "child": {
@@ -125,7 +142,8 @@
     "cs": "Kakaový prášek je na pečení pro lidi, ne pro kočky. Kdyby se k němu kočička dostala, hned to řekni dospělému, ať zavolá veterináře.",
     "hr": "Kakao u prahu služi za pečenje, a ne za mačke. Ako ga maca dohvati, odmah reci odrasloj osobi da nazove veterinara.",
     "sv": "Kakaopulver är till för människors bakning, inte för katter. Om katten har kommit åt det: säg till en vuxen direkt så att de kan ringa veterinären.",
-    "da": "Kakaopulver er til bagning for mennesker, ikke til katte. Hvis din kat får fat i noget, skal du straks sige det til en voksen, så de kan ringe til dyrlægen."
+    "da": "Kakaopulver er til bagning for mennesker, ikke til katte. Hvis din kat får fat i noget, skal du straks sige det til en voksen, så de kan ringe til dyrlægen.",
+    "fi": "Kaakaojauhe on ihmisten leivontaan, ei kissoille. Jos kisu pääsee siihen käsiksi, kerro heti aikuiselle, jotta hän voi soittaa eläinlääkärille."
   },
   "faq": [
     {
@@ -135,7 +153,8 @@
         "cs": "Představuje zahradní mulč z kakaových slupek pro kočky riziko?",
         "hr": "Je li malč od kakaovih ljuski opasan za mačke?",
         "sv": "Är kakaoskal som trädgårdsmulch en risk för katter?",
-        "da": "Er mulch af kakaoskaller en risiko for katte?"
+        "da": "Er mulch af kakaoskaller en risiko for katte?",
+        "fi": "Onko kaakaonkuorikate vaarallinen kissoille?"
       },
       "a": {
         "en": "PDSA advises avoiding gardening mulches that contain cocoa shell.",
@@ -143,7 +162,8 @@
         "cs": "PDSA radí vyhýbat se zahradnímu mulči, který obsahuje kakaové slupky.",
         "hr": "PDSA savjetuje izbjegavanje vrtnog malča koji sadrži kakaove ljuske.",
         "sv": "PDSA råder dig att undvika trädgårdsmulch som innehåller kakaoskal.",
-        "da": "PDSA fraråder at bruge havemulch, der indeholder kakaoskaller."
+        "da": "PDSA fraråder at bruge havemulch, der indeholder kakaoskaller.",
+        "fi": "PDSA neuvoo välttämään puutarhan katteita, joissa on kaakaonkuorta."
       }
     }
   ],
@@ -254,6 +274,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "aed3c69cfe6fe23ece81f6e6dbd44d224d0609a86e2c187457941c7a58108367"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b7c2376913593be295a3192b4a0ee5c6a9d690938e632532b4b29b2dc495a367"
     }
   }
 }
