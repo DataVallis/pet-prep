@@ -115,6 +115,7 @@ return [
     'toy_fox_terrier' => 'Toy Fox Terrier',
     'gordon_setter' => 'Gordon Setter',
     'afghan_hound' => 'Afghan Hound',
+    'australian_silky_terrier' => 'Australian Silky Terrier',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

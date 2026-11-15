@@ -900,6 +900,13 @@ class FalAiService
                 .'low-set ears carried close to the head and covered with long silky hair, large feet covered in long hair, '
                 .'a natural tail set low with a ring at the end, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-115: FCI-Standard N° 236 (S855) — a compact, keenly alert toy terrier; blue and tan only (silver / fawn
+            // topknot); coat follows the body outline (never floor-length); ears free from long hair; natural tail.
+            BreedType::AustralianSilkyTerrier => 'A small, compact, keenly alert Australian Silky Terrier toy terrier, slightly longer than tall, '
+                .'silver blue and tan: a straight, flat, fine, glossy silky coat parted along the back that follows the body outline and never touches the floor, '
+                .'rich tan legs and face with a silver or fawn topknot, a moderate-length head with a black nose, small dark oval eyes, '
+                .'small pricked V-shaped ears free from long hair, a natural tail carried erect, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2135,6 +2142,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'long, very fine, silky coat with a short saddle along the back',
                 'markings' => 'black mask on the muzzle, long silky ear hair, natural tail with a ring at the end, never merle',
+            ],
+            // M5-R10-115: FCI S855 "All shades of blue and tan are acceptable" — "Silver and white not acceptable."
+            BreedType::AustralianSilkyTerrier => [
+                'color_scheme' => 'silver blue and tan',
+                'eye_color' => 'dark',
+                'fur_texture' => 'straight, flat, fine, glossy silky coat parted along the back, following the body outline',
+                'markings' => 'tan legs and face, silver or fawn topknot, pricked ears free from long hair, natural erect tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

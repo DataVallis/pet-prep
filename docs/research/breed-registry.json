@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "2d9dc7174aa0733f064137ac50a3da0664c91df3e8caf0320cec532b11b06cb7"
+      "sha256": "e67ad2f57a25f176945d3a015e22094d3557d76d49eedfa1e58e3734fc9bc6fc"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "06aff1ddc994950f738dbb0a082c4346de9bcb4e7be0017afc29b079d62ce3a1"
+      "sha256": "139db52f05a0db8ea82537906e4b0ccd9f3042ccf946f35a6c57728b008f95f7"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "a67210fef7c14c03638f4cf9754071ac4b5d4cd9518f42b3c87458a94b1e1b60"
+      "sha256": "e4dfd10faa21448898f3003807d7a42d151ae5da8ab041ef3e5fdf775ee6dbc8"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "49345e3bf00b24ed2ab17ff22f5f9b189edbe070ace1bc1053735d8bdbb01f8a"
+      "sha256": "15ae743823ec3a8a5e7e839c1cfcf30671e480e618125e29cc837a79ea63471a"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "c75a6e1d8ebb7718c29a37aaadf55c86a3a8547e34a503e1d48ec95360282c6c"
+      "sha256": "a16f6ded11a2119296540be1363f4e04470fef892daf66e6a2a96b1cc77f1e63"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "527e5c489edca30e13d3408f1acb41d808612c97cc685a1508de68f3bf22aa9f"
+      "sha256": "c41974a491e110537e39cb63ff61843842d5858c2599d8f6a2e7c6667d8f7d63"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "205d8f3dda91388430276762a2940d8b9312259af8d616296f3930ee5d38cfbe"
+      "sha256": "a079be0c1d436eca21a6269fcdf81b93b47437e4260928fa532e37e0e20b3118"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 107,
+      "breed_count": 108,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -64730,6 +64730,597 @@
       ]
     },
     {
+      "id": "australian_silky_terrier",
+      "species": "dog",
+      "order": 107,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Australian Silky Terrier",
+        "sl": "Avstralski svilnati terier"
+      },
+      "slug": {
+        "en": "australian-silky-terrier",
+        "sl": "avstralski-svilnati-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Silky Terrier",
+          "Silky"
+        ],
+        "sl": [
+          "silky terier",
+          "svilnati terier"
+        ]
+      },
+      "facets": {
+        "size": "toy",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "toy",
+          "source_ids": [
+            "S856"
+          ],
+          "ref": "australian_silky_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              23,
+              26
+            ],
+            "female": [
+              23,
+              26
+            ]
+          },
+          "source_ids": [
+            "S855"
+          ],
+          "ref": "australian_silky_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "about",
+          "value": {
+            "male": [
+              4.5,
+              4.5
+            ],
+            "female": [
+              4.5,
+              4.5
+            ]
+          },
+          "source_ids": [
+            "S857"
+          ],
+          "ref": "australian_silky_terrier.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "australian_silky_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S856"
+          ],
+          "ref": "australian_silky_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            13,
+            15
+          ],
+          "source_ids": [
+            "S857"
+          ],
+          "ref": "australian_silky_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 30,
+          "source_ids": [
+            "S856"
+          ],
+          "ref": "australian_silky_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S856"
+          ],
+          "ref": "australian_silky_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S856"
+          ],
+          "ref": "australian_silky_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S856"
+          ],
+          "ref": "australian_silky_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 37,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "australian_silky_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 236,
+            "group": 3,
+            "section": 4,
+            "origin": "AU"
+          },
+          "source_ids": [
+            "S855"
+          ],
+          "ref": "australian_silky_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S857"
+          ],
+          "ref": "australian_silky_terrier.health.patella",
+          "confidence": "high"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S857"
+          ],
+          "ref": "australian_silky_terrier.health.legg_perthes",
+          "confidence": "high"
+        },
+        {
+          "key": "liver_shunt",
+          "source_ids": [
+            "S857"
+          ],
+          "ref": "australian_silky_terrier.health.liver_shunt",
+          "confidence": "high"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S857"
+          ],
+          "ref": "australian_silky_terrier.health.cataracts",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S857"
+          ],
+          "ref": "australian_silky_terrier.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "dental_disease_tooth_brushing",
+          "source_ids": [
+            "S858"
+          ],
+          "ref": "australian_silky_terrier.health.dental",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S856"
+            ],
+            "refs": [
+              "australian_silky_terrier.suitability.rkc_size_of_home"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S857"
+            ],
+            "refs": [
+              "australian_silky_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S856"
+            ],
+            "refs": [
+              "australian_silky_terrier.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S856"
+            ],
+            "refs": [
+              "australian_silky_terrier.suitability.rkc_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 14
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_silky_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S856"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S856 'Up to 30 minutes per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_silky_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_silky_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S856"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × RKC lower bound 'Over 12 years', S856)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_silky_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 37, Above average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_silky_terrier.grooming",
+            "basis_source_ids": [
+              "S856"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Every day« → 7); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_silky_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S858"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »Brush their teeth daily« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_silky_terrier.ear_care",
+            "basis_source_ids": [
+              "S857"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes vsaka 2 tedna (PetMD »every two to three weeks« → spodnja meja)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_silky_terrier.bathing",
+            "basis_source_ids": [
+              "S858"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): kopanje vsake 4 tedne (WebMD »about once a month«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S856",
+          "S857",
+          "S858"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S856"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S856"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S855",
+        "S856",
+        "S857",
+        "S858",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -70986,6 +71577,34 @@
       "publisher": "American Kennel Club (copy hosted on storyblok.com)",
       "title": "Official Standard for the Afghan Hound (PDF, approved September 14, 1948)",
       "url": "https://a.storyblok.com/f/92981/x/a4469962fb/akc-afghan-hound.pdf"
+    },
+    {
+      "id": "S855",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 236 — Australian Silky Terrier (English PDF, header 05.12.2012/EN) + FCI nomenclature page",
+      "url": "https://dev.fci.be/Nomenclature/Standards/236g03-en.pdf"
+    },
+    {
+      "id": "S856",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Australian Silky Terrier",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/australian-silky-terrier/"
+    },
+    {
+      "id": "S857",
+      "tier": "B",
+      "publisher": "PetMD — Michelle Diener, DVM (published Feb. 20, 2024)",
+      "title": "Silky Terrier",
+      "url": "https://www.petmd.com/dog/breeds/silky-terrier"
+    },
+    {
+      "id": "S858",
+      "tier": "B",
+      "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Amy Flowers, DVM (2024-08-17)",
+      "title": "What to Know About Silky Terriers",
+      "url": "https://webmd.com/pets/dogs/what-to-know-silky-terriers"
     },
     {
       "id": "C1",
