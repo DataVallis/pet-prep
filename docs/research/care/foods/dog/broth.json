@@ -6,21 +6,24 @@
     "sl": "Juha in jušna osnova",
     "hr": "Juha i temeljac",
     "sv": "Buljong och fond",
-    "da": "Bouillon og fond"
+    "da": "Bouillon og fond",
+    "fi": "Liemi"
   },
   "question": {
     "en": "Can dogs have broth?",
     "sl": "Ali lahko psi pijejo juho?",
     "hr": "Smiju li psi jesti juhu?",
     "sv": "Får hundar dricka buljong?",
-    "da": "Må hunde få bouillon?"
+    "da": "Må hunde få bouillon?",
+    "fi": "Saako koira juoda lientä?"
   },
   "url_slug": {
     "en": "broth",
     "sl": "juha",
     "hr": "juha-i-temeljac",
     "sv": "buljong",
-    "da": "bouillon"
+    "da": "bouillon",
+    "fi": "liemi"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, malo juhe z nizko vsebnostjo soli je v redu. Veterinarji včasih svetujejo, da psu v hrano za boljši okus dodate malo piščančje, zelenjavne ali goveje juhe z malo soli. Izogibajte se jušnim kockam, ki so zelo slane, in juham s čebulo, česnom ali dodano soljo.",
     "hr": "Da, malo juhe s malo natrija u redu je. Veterinari ponekad predlažu da se hrani za psa doda malo pileće, povrtne ili goveđe juhe s malo natrija radi okusa. Ne koristi kocke za juhu, koje su jako slane, ni juhe s lukom, češnjakom ili dodanom soli.",
     "sv": "Ja, lite natriumfattig buljong går bra. Veterinärer föreslår ibland att man tillsätter lite natriumfattig kyckling-, grönsaks- eller nötbuljong i hundens mat för smakens skull. Hoppa över buljongtärningar, som är mycket salta, och buljonger gjorda med lök, vitlök eller tillsatt salt.",
-    "da": "Ja, lidt natriumfattig bouillon er fint. Dyrlæger foreslår nogle gange at komme lidt natriumfattig hønsebouillon, grøntsagsbouillon eller oksebouillon i hundens foder for at give det smag. Undlad bouillonterninger, som er meget salte, og bouillon lavet med løg, hvidløg eller tilsat salt."
+    "da": "Ja, lidt natriumfattig bouillon er fint. Dyrlæger foreslår nogle gange at komme lidt natriumfattig hønsebouillon, grøntsagsbouillon eller oksebouillon i hundens foder for at give det smag. Undlad bouillonterninger, som er meget salte, og bouillon lavet med løg, hvidløg eller tilsat salt.",
+    "fi": "Saa, vähän vähäsuolaista lientä sopii. Eläinlääkärit ehdottavat joskus lisäämään koiran ruokaan vähän vähäsuolaista kana-, kasvis- tai naudanlientä maun vuoksi. Jätä väliin liemikuutiot, jotka ovat hyvin suolaisia, sekä liemet, joissa on sipulia, valkosipulia tai lisättyä suolaa."
   },
   "why": {
     "en": "Bouillon (stock) cubes used to make stock and gravy contain a lot of sodium, which can cause stomach and gut problems and even seizures. Some ready-made broths may contain onions, garlic or salt, added for taste and to keep them longer, and onions and garlic can be found in many pre-made foods. That's why only plain, low-sodium broth with dog-safe ingredients is a good choice.",
     "sl": "Jušne kocke, iz katerih se pripravljata osnova in omaka, vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče. Nekatere kupljene juhe lahko vsebujejo čebulo, česen ali sol, dodane za okus in daljšo obstojnost, čebula in česen pa sta lahko v številnih pripravljenih jedeh. Zato je primerna le navadna juha z malo soli in sestavinami, ki so za pse varne.",
     "hr": "Kocke za juhu (temeljac) kojima se pripremaju juha i umak sadrže mnogo natrija, što može izazvati probleme sa želucem i crijevima, pa čak i napadaje. Neke gotove juhe mogu sadržavati luk, češnjak ili sol, dodane radi okusa i dulje trajnosti, a luk i češnjak nalaze se u mnogim gotovim jelima. Zato je dobar izbor samo obična juha s malo natrija i sastojcima sigurnima za pse.",
     "sv": "Buljongtärningar som används för att göra fond och sås innehåller mycket natrium, vilket kan orsaka mag- och tarmproblem och till och med kramper. En del färdiga buljonger kan innehålla lök, vitlök eller salt, som tillsätts för smakens skull och för att hålla längre, och lök och vitlök finns i många färdiglagade livsmedel. Därför är bara okryddad, natriumfattig buljong med hundsäkra ingredienser ett bra val.",
-    "da": "Bouillonterninger (fondterninger), der bruges til at lave fond og sovs, indeholder meget natrium, som kan give problemer med mave og tarm og endda kramper. Nogle færdiglavede bouilloner kan indeholde løg, hvidløg eller salt, tilsat for smagens skyld og for at holde sig længere, og løg og hvidløg findes i mange færdiglavede produkter. Derfor er det kun almindelig, natriumfattig bouillon med ingredienser, der er ufarlige for hunde, der er et godt valg."
+    "da": "Bouillonterninger (fondterninger), der bruges til at lave fond og sovs, indeholder meget natrium, som kan give problemer med mave og tarm og endda kramper. Nogle færdiglavede bouilloner kan indeholde løg, hvidløg eller salt, tilsat for smagens skyld og for at holde sig længere, og løg og hvidløg findes i mange færdiglavede produkter. Derfor er det kun almindelig, natriumfattig bouillon med ingredienser, der er ufarlige for hunde, der er et godt valg.",
+    "fi": "Liemikuutiot, joita käytetään liemen ja kastikkeen tekoon, sisältävät paljon natriumia, mikä voi aiheuttaa vatsa- ja suolisto-ongelmia ja jopa kouristuksia. Joissakin valmisliemissä voi olla sipulia, valkosipulia tai suolaa, joita on lisätty makua varten ja säilyvyyden parantamiseksi, ja sipulia ja valkosipulia on monissa valmisruoissa. Siksi hyvä valinta on vain maustamaton, vähäsuolainen liemi, jossa on koiralle turvallisia ainesosia."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če je pes dobil juho s čebulo ali česnom, se čim prej obrnite na veterinarja.",
     "hr": "Ako je pas pojeo juhu s lukom ili češnjakom, što prije se obrati veterinaru.",
     "sv": "Om din hund har fått buljong gjord med lök eller vitlök ska du kontakta din veterinär så snart som möjligt.",
-    "da": "Hvis din hund har fået bouillon lavet med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt."
+    "da": "Hvis din hund har fået bouillon lavet med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt.",
+    "fi": "Jos koirasi sai lientä, jossa oli sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian."
   },
   "serving": {
     "en": "Choose a plain, low-sodium broth without onion or garlic, and add just a bit to your dog's food for flavour. If you make broth at home, remove the hardened layer of fat once it has cooled, and never give your dog the cooked bones.",
     "sl": "Izberite navadno juho z malo soli, brez čebule in česna, in je psu dodajte le malo v hrano za okus. Če juho skuhate doma, z ohlajene juhe odstranite strjeno plast maščobe, kuhanih kosti pa psu nikoli ne dajajte.",
     "hr": "Odaberi običnu juhu s malo natrija, bez luka i češnjaka, i dodaj samo malo u hranu psa radi okusa. Ako juhu kuhaš kod kuće, kad se ohladi skini stvrdnuti sloj masti i psu nikad ne daj kuhane kosti.",
     "sv": "Välj en okryddad, natriumfattig buljong utan lök eller vitlök och tillsätt bara lite i hundens mat för smakens skull. Om du gör buljong hemma, ta bort det stelnade fettlagret när den har svalnat, och ge aldrig hunden de tillagade benen.",
-    "da": "Vælg en almindelig, natriumfattig bouillon uden løg og hvidløg, og kom kun lidt i hundens foder for at give smag. Hvis du laver bouillon hjemme, skal du fjerne det størknede lag fedt, når den er kølet af, og aldrig give din hund de kogte knogler."
+    "da": "Vælg en almindelig, natriumfattig bouillon uden løg og hvidløg, og kom kun lidt i hundens foder for at give smag. Hvis du laver bouillon hjemme, skal du fjerne det størknede lag fedt, når den er kølet af, og aldrig give din hund de kogte knogler.",
+    "fi": "Valitse maustamaton, vähäsuolainen liemi ilman sipulia ja valkosipulia ja lisää koiran ruokaan vain vähän maun vuoksi. Jos teet lientä kotona, poista jähmettynyt rasvakerros sen jäähdyttyä äläkä koskaan anna koiralle kypsennettyjä luita."
   },
   "child": {
     "en": "A little plain broth can make dog food extra tasty. Ask a grown-up first, because some broths have onion and lots of salt.",
     "sl": "Malo navadne juhe lahko pasjo hrano naredi še bolj okusno. Najprej vprašaj odraslega, ker imajo nekatere juhe čebulo in veliko soli.",
     "hr": "Malo obične juhe može hranu za psa učiniti još ukusnijom. Prvo pitaj odraslu osobu, jer neke juhe imaju luk i puno soli.",
     "sv": "Lite okryddad buljong kan göra hundmaten extra god. Fråga en vuxen först, för en del buljonger innehåller lök och mycket salt.",
-    "da": "Lidt almindelig bouillon kan få hundefoder til at smage ekstra godt. Spørg først en voksen, for nogle bouilloner indeholder løg og meget salt."
+    "da": "Lidt almindelig bouillon kan få hundefoder til at smage ekstra godt. Spørg først en voksen, for nogle bouilloner indeholder løg og meget salt.",
+    "fi": "Vähän maustamatonta lientä voi tehdä koiranruoasta erityisen herkullista. Kysy ensin aikuiselta, sillä joissakin liemissä on sipulia ja paljon suolaa."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko uporabim jušno kocko?",
         "hr": "Smijem li upotrijebiti kocku za juhu?",
         "sv": "Kan jag använda en buljongtärning?",
-        "da": "Må jeg bruge en bouillonterning?"
+        "da": "Må jeg bruge en bouillonterning?",
+        "fi": "Voinko käyttää liemikuutiota?"
       },
       "a": {
         "en": "No. Bouillon cubes used for making stock and gravy contain high amounts of sodium, which can lead to stomach and gut problems and even seizures.",
         "sl": "Ne. Jušne kocke za pripravo osnove in omake vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče.",
         "hr": "Ne. Kocke za temeljac kojima se pripremaju juha i umak sadrže mnogo natrija, što može dovesti do problema sa želucem i crijevima, pa čak i do napadaja.",
         "sv": "Nej. Buljongtärningar som används för att göra fond och sås innehåller mycket natrium, vilket kan leda till mag- och tarmproblem och till och med kramper.",
-        "da": "Nej. Bouillonterninger, som bruges til at lave fond og sovs, indeholder meget natrium, som kan give problemer med mave og tarm og endda kramper."
+        "da": "Nej. Bouillonterninger, som bruges til at lave fond og sovs, indeholder meget natrium, som kan give problemer med mave og tarm og endda kramper.",
+        "fi": "Ei. Liemen ja kastikkeen tekoon käytettävät liemikuutiot sisältävät paljon natriumia, mikä voi johtaa vatsa- ja suolisto-ongelmiin ja jopa kouristuksiin."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali lahko juha pomaga psu, ki noče jesti?",
         "hr": "Može li juha pomoći psu koji ne želi jesti?",
         "sv": "Kan buljong hjälpa en hund som inte vill äta?",
-        "da": "Kan bouillon hjælpe en hund, der ikke vil spise?"
+        "da": "Kan bouillon hjælpe en hund, der ikke vil spise?",
+        "fi": "Voiko liemi auttaa koiraa, joka ei syö?"
       },
       "a": {
         "en": "Adding a bit of low-sodium broth is one of the simple steps vets suggest to make food tastier. Your vet can give you specific advice.",
         "sl": "Dodajanje malo juhe z nizko vsebnostjo soli je eden od preprostih korakov, ki jih veterinarji svetujejo, da bi bila hrana bolj okusna. Veterinar vam lahko svetuje bolj natančno.",
         "hr": "Dodavanje malo juhe s malo natrija jedan je od jednostavnih koraka koje veterinari predlažu da bi hrana bila ukusnija. Veterinar ti može dati konkretan savjet.",
         "sv": "Att tillsätta lite natriumfattig buljong är ett av de enkla steg som veterinärer föreslår för att göra maten godare. Din veterinär kan ge dig specifika råd.",
-        "da": "Lidt natriumfattig bouillon i maden er et af de enkle trin, som dyrlæger foreslår for at få maden til at smage bedre. Din dyrlæge kan give dig konkrete råd."
+        "da": "Lidt natriumfattig bouillon i maden er et af de enkle trin, som dyrlæger foreslår for at få maden til at smage bedre. Din dyrlæge kan give dig konkrete råd.",
+        "fi": "Vähän vähäsuolaista lientä on yksi eläinlääkärien ehdottamista yksinkertaisista keinoista tehdä ruoasta maukkaampaa. Eläinlääkäri voi antaa tarkempia neuvoja."
       }
     }
   ],
@@ -176,6 +188,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "394a8d058a1758292932f8b298eb81067a23560880b5011224688c0de73f1d99"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "021d44e4f78bfb9e22536da1e0ffab7d3d47193b64529bb172a58788614f5e14"
     }
   }
 }

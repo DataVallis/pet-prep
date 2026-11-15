@@ -7,7 +7,8 @@
     "cs": "Sušenky",
     "hr": "Keksi",
     "sv": "Kakor",
-    "da": "Småkager"
+    "da": "Småkager",
+    "fi": "Keksit"
   },
   "question": {
     "en": "Can dogs eat cookies?",
@@ -15,7 +16,8 @@
     "cs": "Mohou psi jíst sušenky?",
     "hr": "Smiju li psi jesti kekse?",
     "sv": "Får hundar äta kakor?",
-    "da": "Må hunde spise småkager?"
+    "da": "Må hunde spise småkager?",
+    "fi": "Saako koira syödä keksejä?"
   },
   "url_slug": {
     "en": "cookies",
@@ -23,7 +25,8 @@
     "cs": "susenky",
     "hr": "keksi",
     "sv": "kakor",
-    "da": "smaakager"
+    "da": "smaakager",
+    "fi": "keksit"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ne, nejlepší je nedávat je. Sušenky mohou obsahovat hodně cukru, který může psovi rozhodit žaludek, a některé obsahují čokoládu, rozinky nebo xylitol, které jsou pro psy jedovaté. Dejte psovi raději pamlsky určené pro psy.",
     "hr": "Ne, bolje je ne davati. Keksi mogu sadržavati mnogo šećera, koji može nadražiti želudac psa, a neki sadrže čokoladu, grožđice ili ksilitol, koji su otrovni za pse. Umjesto toga daj poslastice napravljene za pse.",
     "sv": "Nej, det är bäst att låta bli. Kakor kan innehålla mycket socker, som kan reta hundens mage, och vissa innehåller choklad, russin eller xylitol, som är giftigt för hundar. Ge godbitar som är gjorda för hundar i stället.",
-    "da": "Nej, det er bedst ikke at gøre det. Småkager kan indeholde meget sukker, som kan give hunden dårlig mave, og nogle indeholder chokolade, rosiner eller xylitol, som er giftige for hunde. Giv i stedet godbidder, der er lavet til hunde."
+    "da": "Nej, det er bedst ikke at gøre det. Småkager kan indeholde meget sukker, som kan give hunden dårlig mave, og nogle indeholder chokolade, rosiner eller xylitol, som er giftige for hunde. Giv i stedet godbidder, der er lavet til hunde.",
+    "fi": "Ei suositella. Keksit voivat sisältää paljon sokeria, mikä voi ärsyttää koiran vatsaa, ja joissakin on suklaata, rusinoita tai ksylitolia, jotka ovat koirille myrkyllisiä. Anna sen sijaan koirille tarkoitettuja herkkuja."
   },
   "why": {
     "en": "A sugar-free cookie is no safer: sugar-free cookies commonly contain xylitol, which causes a dangerous drop in blood sugar. All types of chocolate contain theobromine and caffeine, which are toxic to dogs, and raisins can be hidden in cookies. Cookies without these ingredients mainly cause stomach upset from sugar, so we rate cookies not recommended; cookies with chocolate, raisins or xylitol need a vet right away.",
@@ -40,7 +44,8 @@
     "cs": "Sušenka bez cukru není bezpečnější: sušenky bez cukru běžně obsahují xylitol, který způsobuje nebezpečný pokles hladiny cukru v krvi. Všechny druhy čokolády obsahují theobromin a kofein, které jsou pro psy jedovaté, a rozinky se mohou v sušenkách skrývat. Sušenky bez těchto přísad způsobují hlavně potíže se žaludkem z cukru, takže je hodnotíme jako nedoporučené; sušenky s čokoládou, rozinkami nebo xylitolem vyžadují okamžitou péči veterináře.",
     "hr": "Keks bez šećera nije sigurniji: keksi bez šećera obično sadrže ksilitol, koji uzrokuje opasan pad šećera u krvi. Sve vrste čokolade sadrže teobromin i kofein, koji su otrovni za pse, a grožđice se mogu skrivati u keksima. Keksi bez tih sastojaka uglavnom izazivaju želučane tegobe od šećera, zato kekse ocjenjujemo kao nepreporučene; keksi s čokoladom, grožđicama ili ksilitolom hitno trebaju veterinara.",
     "sv": "En sockerfri kaka är inte säkrare: sockerfria kakor innehåller ofta xylitol, som orsakar ett farligt blodsockerfall. Alla sorters choklad innehåller teobromin och koffein, som är giftiga för hundar, och russin kan finnas gömda i kakor. Kakor utan dessa ingredienser ger framför allt magbesvär av sockret, så vi rekommenderar inte kakor. Kakor med choklad, russin eller xylitol kräver veterinärvård direkt.",
-    "da": "En sukkerfri småkage er ikke mere sikker: sukkerfri småkager indeholder ofte xylitol, som giver et farligt fald i blodsukkeret. Alle slags chokolade indeholder theobromin og koffein, som er giftige for hunde, og rosiner kan gemme sig i småkager. Småkager uden disse ingredienser giver mest mavebesvær på grund af sukkeret, så vi vurderer småkager som ikke anbefalet; småkager med chokolade, rosiner eller xylitol kræver dyrlægehjælp med det samme."
+    "da": "En sukkerfri småkage er ikke mere sikker: sukkerfri småkager indeholder ofte xylitol, som giver et farligt fald i blodsukkeret. Alle slags chokolade indeholder theobromin og koffein, som er giftige for hunde, og rosiner kan gemme sig i småkager. Småkager uden disse ingredienser giver mest mavebesvær på grund af sukkeret, så vi vurderer småkager som ikke anbefalet; småkager med chokolade, rosiner eller xylitol kræver dyrlægehjælp med det samme.",
+    "fi": "Sokeriton keksi ei ole sen turvallisempi: sokerittomissa keksissä on yleisesti ksylitolia, joka aiheuttaa vaarallisen verensokerin laskun. Kaikenlaisessa suklaassa on teobromiinia ja kofeiinia, jotka ovat koirille myrkyllisiä, ja rusinat voivat olla piilossa keksissä. Keksit ilman näitä ainesosia aiheuttavat lähinnä sokerin aiheuttamia vatsavaivoja, joten emme suosittele keksejä; suklaata, rusinoita tai ksylitolia sisältävien keksien jälkeen tarvitaan heti eläinlääkäri."
   },
   "signs": {
     "en": [
@@ -72,6 +77,11 @@
       "Mavebesvær",
       "Opkast, usikker gang, svaghed, rysten eller kramper (xylitol)",
       "Uro, rysten, hurtig eller uregelmæssig puls eller kramper (chokolade)"
+    ],
+    "fi": [
+      "Vatsavaivat",
+      "Oksentelu, horjuminen, voimattomuus, vapina tai kouristuskohtaukset (ksylitoli)",
+      "Levottomuus, vapina, nopea tai epäsäännöllinen sydämenlyönti tai kouristuskohtaukset (suklaa)"
     ]
   },
   "what_to_do": {
@@ -80,7 +90,8 @@
     "cs": "Pokud sušenka obsahovala čokoládu, rozinky nebo xylitol, nebo pokud má pes příznaky otravy, odvezte ho okamžitě k veterináři, aby ho vyšetřil a léčil.",
     "hr": "Ako je keks sadržavao čokoladu, grožđice ili ksilitol ili pas pokazuje znakove trovanja, odmah potraži pomoć i odvedi psa veterinaru da ga pregleda i liječi.",
     "sv": "Om kakan innehöll choklad, russin eller xylitol, eller om din hund visar tecken på förgiftning: åk direkt till en veterinär så att hunden kan undersökas och behandlas.",
-    "da": "Hvis småkagen indeholdt chokolade, rosiner eller xylitol, eller din hund viser tegn på forgiftning, skal du straks søge hjælp og tage din hund med til en dyrlæge, så den kan blive undersøgt og behandlet."
+    "da": "Hvis småkagen indeholdt chokolade, rosiner eller xylitol, eller din hund viser tegn på forgiftning, skal du straks søge hjælp og tage din hund med til en dyrlæge, så den kan blive undersøgt og behandlet.",
+    "fi": "Jos keksissä oli suklaata, rusinoita tai ksylitolia tai koirallasi on myrkytyksen merkkejä, hae heti apua ja vie koira eläinlääkärin tutkittavaksi ja hoidettavaksi."
   },
   "serving": {
     "en": "Instead of people cookies: treats and cookies made especially for dogs, after checking with your vet.",
@@ -88,7 +99,8 @@
     "cs": "Místo sušenek pro lidi: pamlsky a sušenky vyrobené speciálně pro psy, po poradě s veterinářem.",
     "hr": "Umjesto keksa za ljude: poslastice i keksi napravljeni posebno za pse, nakon što provjeriš s veterinarom.",
     "sv": "I stället för människors kakor: godbitar och kakor som är gjorda särskilt för hundar, efter att du har frågat din veterinär.",
-    "da": "I stedet for småkager til mennesker: godbidder og småkager lavet specielt til hunde, efter at du har tjekket med din dyrlæge."
+    "da": "I stedet for småkager til mennesker: godbidder og småkager lavet specielt til hunde, efter at du har tjekket med din dyrlæge.",
+    "fi": "Ihmisten keksien sijaan: erityisesti koirille tehtyjä herkkuja ja keksejä, kun olet kysynyt asiaa eläinlääkäriltä."
   },
   "child": {
     "en": "Cookies are a people treat. Some have chocolate or raisins that are bad for dogs, so give your dog a dog treat instead.",
@@ -96,7 +108,8 @@
     "cs": "Sušenky jsou pamlsek pro lidi. Některé mají čokoládu nebo rozinky, které psům škodí, takže dej psovi raději pamlsek pro psy.",
     "hr": "Keksi su poslastica za ljude. Neki imaju čokoladu ili grožđice koje psu škode, zato psu radije daj poslasticu za pse.",
     "sv": "Kakor är en godbit för människor. Vissa innehåller choklad eller russin, som är dåligt för hundar, så ge din hund en godbit för hundar i stället.",
-    "da": "Småkager er en godbid for mennesker. Nogle indeholder chokolade eller rosiner, som er skidt for hunde, så giv din hund en hundegodbid i stedet."
+    "da": "Småkager er en godbid for mennesker. Nogle indeholder chokolade eller rosiner, som er skidt for hunde, så giv din hund en hundegodbid i stedet.",
+    "fi": "Keksit ovat ihmisten herkkuja. Joissakin on suklaata tai rusinoita, jotka ovat koirille haitallisia, joten anna koirallesi sen oma herkku."
   },
   "faq": [
     {
@@ -106,7 +119,8 @@
         "cs": "Je sušenka bez cukru pro psa bezpečnější?",
         "hr": "Je li keks bez šećera sigurniji za mog psa?",
         "sv": "Är en sockerfri kaka säkrare för min hund?",
-        "da": "Er en sukkerfri småkage sikrere for min hund?"
+        "da": "Er en sukkerfri småkage sikrere for min hund?",
+        "fi": "Onko sokeriton keksi turvallisempi koiralleni?"
       },
       "a": {
         "en": "No. Sugar-free cookies commonly contain xylitol, a sugar alternative that is poisonous to dogs.",
@@ -114,7 +128,8 @@
         "cs": "Ne. Sušenky bez cukru běžně obsahují xylitol, náhradní sladidlo, které je pro psy jedovaté.",
         "hr": "Ne. Keksi bez šećera obično sadrže ksilitol, zamjenu za šećer koja je otrovna za pse.",
         "sv": "Nej. Sockerfria kakor innehåller ofta xylitol, ett sötningsmedel som är giftigt för hundar.",
-        "da": "Nej. Sukkerfri småkager indeholder ofte xylitol, en sukkererstatning, som er giftig for hunde."
+        "da": "Nej. Sukkerfri småkager indeholder ofte xylitol, en sukkererstatning, som er giftig for hunde.",
+        "fi": "Ei. Sokerittomissa keksissä on yleisesti ksylitolia, joka on sokerin korvike ja koirille myrkyllistä."
       }
     },
     {
@@ -124,7 +139,8 @@
         "cs": "A co ovesné sušenky s rozinkami?",
         "hr": "Što je s keksima od zobenih pahuljica s grožđicama?",
         "sv": "Hur är det med havrekakor med russin?",
-        "da": "Hvad med havregrynskager med rosiner?"
+        "da": "Hvad med havregrynskager med rosiner?",
+        "fi": "Entä kaura-rusinakeksit?"
       },
       "a": {
         "en": "They are not safe. Raisins can be hidden in cookies, and just a small number of raisins can cause kidney failure in dogs.",
@@ -132,7 +148,8 @@
         "cs": "Bezpečné nejsou. Rozinky se mohou v sušenkách skrývat a už malý počet rozinek může u psů způsobit selhání ledvin.",
         "hr": "Nisu sigurni. Grožđice se mogu skrivati u keksima, a već mali broj grožđica može kod pasa izazvati zatajenje bubrega.",
         "sv": "De är inte säkra. Russin kan finnas gömda i kakor, och bara ett fåtal russin kan orsaka njursvikt hos hundar.",
-        "da": "De er ikke sikre. Rosiner kan gemme sig i småkager, og selv et lille antal rosiner kan give nyresvigt hos hunde."
+        "da": "De er ikke sikre. Rosiner kan gemme sig i småkager, og selv et lille antal rosiner kan give nyresvigt hos hunde.",
+        "fi": "Ne eivät ole turvallisia. Rusinat voivat olla piilossa keksissä, ja jo pieni määrä rusinoita voi aiheuttaa koirille munuaisten vajaatoiminnan."
       }
     }
   ],
@@ -269,6 +286,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "eef298f835a6184e46777fb5251c61d8f9322dc06152d7628cd3aed8db703fbf"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "df630a5e7685c38878bb1cd19b1751612f5f2862639605ee6e536603bc73e7d7"
     }
   }
 }

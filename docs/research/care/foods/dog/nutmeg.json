@@ -7,7 +7,8 @@
     "cs": "Muškátový ořech",
     "hr": "Muškatni oraščić",
     "sv": "Muskotnöt",
-    "da": "Muskatnød"
+    "da": "Muskatnød",
+    "fi": "Muskottipähkinä"
   },
   "question": {
     "en": "Can dogs eat nutmeg?",
@@ -15,7 +16,8 @@
     "cs": "Mohou psi jíst muškátový ořech?",
     "hr": "Smiju li psi jesti muškatni oraščić?",
     "sv": "Får hundar äta muskotnöt?",
-    "da": "Må hunde spise muskatnød?"
+    "da": "Må hunde spise muskatnød?",
+    "fi": "Saako koira syödä muskottipähkinää?"
   },
   "url_slug": {
     "en": "nutmeg",
@@ -23,7 +25,8 @@
     "cs": "muskatovy-orech",
     "hr": "muskatni-orascic",
     "sv": "muskotnot",
-    "da": "muskatnoed"
+    "da": "muskatnoed",
+    "fi": "muskottipahkina"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ne, muškátový ořech psovi nedávejte. Obsahuje toxin zvaný myristicin. Malé množství použité v pečivu je obvykle bezpečné, ale velké množství muškátového ořechu může způsobit halucinace, dezorientaci a zrychlený tep.",
     "hr": "Ne, muškatni oraščić drži podalje od psa. Sadrži toksin miristicin. Mala količina u pekarskim proizvodima općenito je sigurna, ali velika količina muškatnog oraščića može izazvati halucinacije, dezorijentiranost i ubrzan rad srca.",
     "sv": "Nej, håll muskotnöt borta från din hund. Den innehåller ett gift som heter myristicin. Den lilla mängd som används i bakverk är i allmänhet säker, men en stor mängd muskotnöt kan orsaka hallucinationer, förvirring och snabb hjärtrytm.",
-    "da": "Nej, hold muskatnød væk fra din hund. Den indeholder et giftstof, der hedder myristicin. Den lille mængde, der bruges i bagværk, er som regel ufarlig, men en stor mængde muskatnød kan give hallucinationer, desorientering og hurtig puls."
+    "da": "Nej, hold muskatnød væk fra din hund. Den indeholder et giftstof, der hedder myristicin. Den lille mængde, der bruges i bagværk, er som regel ufarlig, men en stor mængde muskatnød kan give hallucinationer, desorientering og hurtig puls.",
+    "fi": "Ei saa, pidä muskottipähkinä poissa koirasi ulottuvilta. Siinä on myristisiini-nimistä myrkkyä. Leivonnaisissa käytettävä pieni määrä on yleensä turvallista, mutta suuri määrä muskottipähkinää voi aiheuttaa aistiharhoja, sekavuutta ja nopean sykkeen."
   },
   "why": {
     "en": "In large amounts, myristicin can cause hallucinations, disorientation, a faster heart rate, high blood pressure, dry mouth, belly pain and possibly seizures, and the signs can last up to 48 hours. A dog would need to eat a very large amount for this; the small amount used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Because the spice itself contains a toxin, we rate it dangerous.",
@@ -40,7 +44,8 @@
     "cs": "Ve velkém množství může myristicin způsobit halucinace, dezorientaci, zrychlený tep, vysoký krevní tlak, sucho v ústech, bolest břicha a případně záchvaty a příznaky mohou trvat až 48 hodin. Pes by na to musel sníst opravdu velké množství; malé množství z receptu velmi pravděpodobně vážné potíže nezpůsobí, i když může dojít k mírnému podráždění žaludku. Protože samotné koření obsahuje toxin, hodnotíme ho jako nebezpečné.",
     "hr": "U velikim količinama miristicin može izazvati halucinacije, dezorijentiranost, ubrzan rad srca, visok krvni tlak, suha usta, bol u trbuhu i moguće napadaje, a znakovi mogu trajati i do 48 sati. Pas bi za to morao pojesti vrlo veliku količinu; mala količina koja se koristi u receptima vrlo vjerojatno neće izazvati ozbiljne probleme, iako se mogu javiti blage želučane tegobe. Budući da sam začin sadrži toksin, ocjenjujemo ga kao opasan.",
     "sv": "I stora mängder kan myristicin orsaka hallucinationer, förvirring, snabbare hjärtrytm, högt blodtryck, torr mun, ont i magen och möjligen kramper, och tecknen kan hålla i sig i upp till 48 timmar. En hund skulle behöva äta en mycket stor mängd för att det ska hända; den lilla mängd som används i recept orsakar mycket sällan allvarliga problem, även om lindriga magbesvär kan förekomma. Eftersom själva kryddan innehåller ett gift bedömer vi den som farlig.",
-    "da": "I store mængder kan myristicin give hallucinationer, desorientering, hurtigere puls, forhøjet blodtryk, tør mund, mavesmerter og muligvis kramper, og tegnene kan vare op til 48 timer. En hund skulle spise en meget stor mængde for at få det; den lille mængde, der bruges i opskrifter, giver meget sjældent alvorlige problemer, men let mavebesvær kan forekomme. Fordi selve krydderiet indeholder et giftstof, vurderer vi det som farligt."
+    "da": "I store mængder kan myristicin give hallucinationer, desorientering, hurtigere puls, forhøjet blodtryk, tør mund, mavesmerter og muligvis kramper, og tegnene kan vare op til 48 timer. En hund skulle spise en meget stor mængde for at få det; den lille mængde, der bruges i opskrifter, giver meget sjældent alvorlige problemer, men let mavebesvær kan forekomme. Fordi selve krydderiet indeholder et giftstof, vurderer vi det som farligt.",
+    "fi": "Suurina määrinä myristisiini voi aiheuttaa aistiharhoja, sekavuutta, nopeampaa sykettä, korkeaa verenpainetta, suun kuivumista, vatsakipua ja mahdollisesti kouristuskohtauksia, ja oireet voivat kestää jopa 48 tuntia. Tähän koiran pitäisi syödä hyvin suuri määrä; reseptissä käytetty pieni määrä aiheuttaa hyvin epätodennäköisesti vakavia ongelmia, vaikka lievä vatsavaiva voi tulla. Koska itse mauste sisältää myrkkyä, luokittelemme sen vaaralliseksi."
   },
   "signs": {
     "en": [
@@ -96,6 +101,15 @@
       "Mavesmerter",
       "Muligvis kramper",
       "Tegnene kan vare op til 48 timer"
+    ],
+    "fi": [
+      "Lievä vatsavaiva (pienet määrät)",
+      "Aistiharhat ja sekavuus",
+      "Nopea sydämenlyönti",
+      "Korkea verenpaine ja suun kuivuminen",
+      "Vatsakipu",
+      "Mahdollisesti kouristuskohtauksia",
+      "Oireet voivat kestää jopa 48 tuntia"
     ]
   },
   "what_to_do": {
@@ -104,7 +118,8 @@
     "cs": "Trocha muškátového ořechu v upečeném pamlsku velmi pravděpodobně nezpůsobí vážné potíže. Pokud pes omylem snědl velké množství muškátového ořechu, zavolejte veterináři a poraďte se.",
     "hr": "Malo muškatnog oraščića u pekarskoj poslastici vrlo vjerojatno neće izazvati ozbiljne probleme. Ako je pas slučajno pojeo veliku količinu muškatnog oraščića, nazovi veterinara za savjet.",
     "sv": "Lite muskotnöt i ett bakverk orsakar mycket sällan allvarliga problem. Om din hund av misstag har ätit en stor mängd muskotnöt ska du kontakta din veterinär för råd.",
-    "da": "Lidt muskatnød i en bagt godbid giver meget sjældent alvorlige problemer. Hvis din hund ved et uheld har spist en stor mængde muskatnød, skal du ringe til din dyrlæge for at få råd."
+    "da": "Lidt muskatnød i en bagt godbid giver meget sjældent alvorlige problemer. Hvis din hund ved et uheld har spist en stor mængde muskatnød, skal du ringe til din dyrlæge for at få råd.",
+    "fi": "Vähän muskottipähkinää leivotussa herkussa aiheuttaa hyvin epätodennäköisesti vakavia ongelmia. Jos koirasi söi vahingossa suuren määrän muskottipähkinää, soita eläinlääkärille neuvoja varten."
   },
   "serving": null,
   "child": {
@@ -113,7 +128,8 @@
     "cs": "Muškátový ořech je koření do jídel pro lidi. Pro psy není, proto nádobky s kořením ukládej tam, kam se pes nedostane.",
     "hr": "Muškatni oraščić je začin za kuhanje. Nije za pse, zato staklenke s začinima drži tamo gdje ih pas ne može dohvatiti.",
     "sv": "Muskotnöt är en krydda för människors matlagning. Det är inte för hundar, så förvara kryddburkarna där din hund inte når.",
-    "da": "Muskatnød er et krydderi til madlavning for mennesker. Det er ikke til hunde, så hold krydderiglas uden for din hunds rækkevidde."
+    "da": "Muskatnød er et krydderi til madlavning for mennesker. Det er ikke til hunde, så hold krydderiglas uden for din hunds rækkevidde.",
+    "fi": "Muskottipähkinä on mauste ihmisten ruoanlaittoon. Se ei ole koirille, joten pidä maustepurkit paikassa, johon koirasi ei ylety."
   },
   "faq": [
     {
@@ -123,7 +139,8 @@
         "cs": "Můj pes snědl sušenku s trochou muškátového ořechu. Je to nebezpečné?",
         "hr": "Moj je pas pojeo keks s malo muškatnog oraščića. Je li to opasno?",
         "sv": "Min hund åt en kaka med lite muskotnöt. Är det farligt?",
-        "da": "Min hund har spist en småkage med lidt muskatnød. Er det farligt?"
+        "da": "Min hund har spist en småkage med lidt muskatnød. Er det farligt?",
+        "fi": "Koirani söi keksin, jossa oli vähän muskottipähkinää. Onko se vaarallista?"
       },
       "a": {
         "en": "The small amount of nutmeg used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Also check the cookie for xylitol, which some baked goods contain and which is very toxic.",
@@ -131,7 +148,8 @@
         "cs": "Malé množství muškátového ořechu použité v receptech velmi pravděpodobně nezpůsobí vážné potíže, i když může dojít k mírnému podráždění žaludku. Zkontrolujte také, zda sušenka neobsahuje xylitol, který se v některém pečivu vyskytuje a je velmi jedovatý.",
         "hr": "Mala količina muškatnog oraščića koja se koristi u receptima vrlo vjerojatno neće izazvati ozbiljne probleme, iako se mogu javiti blage želučane tegobe. Provjeri i sadrži li keks ksilitol, koji se nalazi u nekim pekarskim proizvodima i vrlo je otrovan.",
         "sv": "Den lilla mängd muskotnöt som används i recept orsakar mycket sällan allvarliga problem, även om lindriga magbesvär kan förekomma. Kontrollera också om kakan innehåller xylitol, som en del bakverk gör och som är mycket giftigt.",
-        "da": "Den lille mængde muskatnød, der bruges i opskrifter, giver meget sjældent alvorlige problemer, men let mavebesvær kan forekomme. Tjek også småkagen for xylitol, som noget bagværk indeholder, og som er meget giftigt."
+        "da": "Den lille mængde muskatnød, der bruges i opskrifter, giver meget sjældent alvorlige problemer, men let mavebesvær kan forekomme. Tjek også småkagen for xylitol, som noget bagværk indeholder, og som er meget giftigt.",
+        "fi": "Reseptien pieni määrä muskottipähkinää aiheuttaa hyvin epätodennäköisesti vakavia ongelmia, vaikka lievä vatsavaiva voi tulla. Tarkista keksistä myös ksylitoli, jota joissakin leivonnaisissa on ja joka on erittäin myrkyllistä."
       }
     }
   ],
@@ -226,6 +244,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f194ca723bb5ee5054205adc49ede840621b69cb8f8cb45003ef5b284fcc55b2"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a574d5ad8e995658914753c4b357762152fdf20613f53cfacafc2ce983b51f10"
     }
   }
 }

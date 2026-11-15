@@ -7,7 +7,8 @@
     "cs": "Muškátový ořech",
     "hr": "Muškatni oraščić",
     "sv": "Muskotnöt",
-    "da": "Muskatnød"
+    "da": "Muskatnød",
+    "fi": "Muskottipähkinä"
   },
   "question": {
     "en": "Can cats eat nutmeg?",
@@ -15,7 +16,8 @@
     "cs": "Mohou kočky jíst muškátový ořech?",
     "hr": "Smiju li mačke jesti muškatni oraščić?",
     "sv": "Får katter äta muskotnöt?",
-    "da": "Må katte spise muskatnød?"
+    "da": "Må katte spise muskatnød?",
+    "fi": "Saako kissa syödä muskottipähkinää?"
   },
   "url_slug": {
     "en": "nutmeg",
@@ -23,7 +25,8 @@
     "cs": "muskatovy-orech",
     "hr": "muskatni-orascic",
     "sv": "muskotnot",
-    "da": "muskatnoed"
+    "da": "muskatnoed",
+    "fi": "muskottipahkina"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Muškátový ořech kočkám raději nedávejte. Malé množství používané v receptech jen těžko způsobí vážnou újmu, i když může vyvolat mírné podráždění žaludku. Velmi velké množství muškátového ořechu však může být toxické.",
     "hr": "Bolje je mačkama ne davati muškatni oraščić. Mala količina koja se koristi u receptima vrlo vjerojatno neće izazvati ozbiljnu štetu, ali može izazvati blage želučane tegobe. Vrlo velika količina muškatnog oraščića može biti otrovna.",
     "sv": "Det är bäst att inte ge katter muskotnöt. Den lilla mängd som används i recept orsakar mycket sannolikt ingen allvarlig skada, men den kan ge lätt orolig mage. En mycket stor mängd muskotnöt kan vara giftig.",
-    "da": "Det er bedst ikke at give katte muskatnød. Den lille mængde, der bruges i opskrifter, vil meget sjældent gøre alvorlig skade, men den kan give lidt mavebesvær. En meget stor mængde muskatnød kan være giftig."
+    "da": "Det er bedst ikke at give katte muskatnød. Den lille mængde, der bruges i opskrifter, vil meget sjældent gøre alvorlig skade, men den kan give lidt mavebesvær. En meget stor mængde muskatnød kan være giftig.",
+    "fi": "Ei suositella. Muskottipähkinää ei kannata antaa kissoille. Reseptissä käytetty pieni määrä aiheuttaa hyvin epätodennäköisesti vakavaa haittaa, vaikka lievä vatsavaiva on mahdollinen. Hyvin suuri määrä muskottipähkinää voi olla myrkyllistä."
   },
   "why": {
     "en": "Nutmeg contains a toxin called myristicin. Pet Poison Helpline says the small amount used in recipes is very unlikely to cause serious toxicity, and that a problem is very unlikely if a cat eats food with nutmeg in it. VCA notes that spices in eggnog, such as nutmeg, could have toxic effects in large quantities. Cats don't need anything other than a complete diet.",
@@ -40,7 +44,8 @@
     "cs": "Muškátový ořech obsahuje toxin zvaný myristicin. Pet Poison Helpline uvádí, že malé množství používané v receptech sotva způsobí vážnou otravu a že problém je velmi nepravděpodobný, pokud kočka sní jídlo s muškátovým ořechem. VCA poznamenává, že koření v nápoji eggnog, například muškátový ořech, může mít ve velkém množství toxické účinky. Kočky nepotřebují nic jiného než kompletní stravu.",
     "hr": "Muškatni oraščić sadrži toksin miristicin. Pet Poison Helpline navodi da mala količina koja se koristi u receptima vrlo vjerojatno neće izazvati ozbiljno trovanje te da je problem vrlo malo vjerojatan ako mačka pojede hranu s muškatnim oraščićem. VCA napominje da začini u eggnogu (blagdanskom napitku od jaja), poput muškatnog oraščića, u velikim količinama mogu djelovati otrovno. Mačkama ne treba ništa osim potpune hrane.",
     "sv": "Muskotnöt innehåller ett gift som heter myristicin. Pet Poison Helpline säger att den lilla mängd som används i recept mycket sällan orsakar allvarlig förgiftning, och att det är mycket osannolikt att det blir problem om en katt äter mat med muskotnöt i. VCA påpekar att kryddor i äggtoddy, som muskotnöt, kan ha giftig effekt i stora mängder. Katter behöver inget annat än en komplett kost.",
-    "da": "Muskatnød indeholder et giftstof, der hedder myristicin. Pet Poison Helpline skriver at den lille mængde, der bruges i opskrifter, meget sjældent giver alvorlig forgiftning, og at et problem er meget usandsynligt, hvis en kat spiser mad med muskatnød i. VCA skriver at krydderier i æggepunch, fx muskatnød, kan virke giftigt i store mængder. Katte har ikke brug for andet end en komplet kost."
+    "da": "Muskatnød indeholder et giftstof, der hedder myristicin. Pet Poison Helpline skriver at den lille mængde, der bruges i opskrifter, meget sjældent giver alvorlig forgiftning, og at et problem er meget usandsynligt, hvis en kat spiser mad med muskatnød i. VCA skriver at krydderier i æggepunch, fx muskatnød, kan virke giftigt i store mængder. Katte har ikke brug for andet end en komplet kost.",
+    "fi": "Muskottipähkinässä on myristisiini-nimistä myrkkyä. Pet Poison Helplinen mukaan reseptissä käytetty pieni määrä aiheuttaa hyvin epätodennäköisesti vakavaa myrkytystä, ja ongelma on hyvin epätodennäköinen, jos kissa syö ruokaa, jossa on muskottipähkinää. VCA huomauttaa, että munatodin mausteet, kuten muskottipähkinä, voivat suurina määrinä olla myrkyllisiä. Kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion."
   },
   "signs": {
     "en": [
@@ -66,6 +71,10 @@
     "da": [
       "Let mavebesvær",
       "Efter en meget stor mængde: hallucinationer, desorientering, hurtig puls, tør mund, mavesmerter eller kramper"
+    ],
+    "fi": [
+      "Lievä vatsavaiva",
+      "Hyvin suuren määrän jälkeen: aistiharhat, sekavuus, nopea syke, suun kuivuminen, vatsakipu tai kouristukset"
     ]
   },
   "what_to_do": {
@@ -74,7 +83,8 @@
     "cs": "Pokud kočka snědla jídlo s trochou muškátového ořechu, sledujte, zda nemá mírně podrážděný žaludek. Pokud snědla velké množství muškátového ořechu, okamžitě se obraťte na veterináře. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Ako je mačka pojela hranu s malo muškatnog oraščića, pazi na blage želučane tegobe. Ako je pojela veliku količinu muškatnog oraščića, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Om din katt har ätit mat med lite muskotnöt: håll ett öga på om hon får lätt orolig mage. Om hon har ätit en stor mängd muskotnöt ska du kontakta din veterinär direkt. Vänta inte på att tecken ska dyka upp, och försök inte få katten att kräkas hemma.",
-    "da": "Hvis din kat har spist mad med lidt muskatnød, skal du holde øje med let mavebesvær. Hvis den har spist en stor mængde muskatnød, skal du kontakte din dyrlæge med det samme. Vent ikke på tegn, og prøv ikke selv at få katten til at kaste op."
+    "da": "Hvis din kat har spist mad med lidt muskatnød, skal du holde øje med let mavebesvær. Hvis den har spist en stor mængde muskatnød, skal du kontakte din dyrlæge med det samme. Vent ikke på tegn, og prøv ikke selv at få katten til at kaste op.",
+    "fi": "Jos kissasi söi ruokaa, jossa oli vähän muskottipähkinää, seuraa, tuleeko lievää vatsavaivaa. Jos se söi suuren määrän muskottipähkinää, ota heti yhteyttä eläinlääkäriin. Älä odota oireita äläkä yritä oksennuttaa kissaa itse."
   },
   "serving": null,
   "child": {
@@ -83,7 +93,8 @@
     "cs": "Muškátový ořech je koření do jídel pro lidi. Kočky koření nepotřebují, takže dózu s kořením drž od kočičky dál.",
     "hr": "Muškatni oraščić je začin za kuhanje. Mačkama začini nisu potrebni, zato staklenku s začinima drži podalje od mace.",
     "sv": "Muskotnöt är en krydda för människors matlagning. Katter behöver inga kryddor, så håll kryddburken borta från katten.",
-    "da": "Muskatnød er et krydderi, man bruger i madlavning til mennesker. Katte har ikke brug for krydderier, så hold krydderiglasset væk fra din kat."
+    "da": "Muskatnød er et krydderi, man bruger i madlavning til mennesker. Katte har ikke brug for krydderier, så hold krydderiglasset væk fra din kat.",
+    "fi": "Muskottipähkinä on mauste ihmisten ruoanlaittoon. Kissat eivät tarvitse mausteita, joten pidä maustepurkki poissa kisun luota."
   },
   "faq": [
     {
@@ -93,7 +104,8 @@
         "cs": "Je vaječný nápoj eggnog s muškátovým ořechem pro kočky bezpečný?",
         "hr": "Je li eggnog s muškatnim oraščićem siguran za mačke?",
         "sv": "Är äggtoddy med muskotnöt säker för katter?",
-        "da": "Er æggepunch med muskatnød ufarlig for katte?"
+        "da": "Er æggepunch med muskatnød ufarlig for katte?",
+        "fi": "Onko muskottipähkinällä maustettu munatoddi turvallista kissoille?"
       },
       "a": {
         "en": "No. VCA says spices in eggnog, such as nutmeg, could have toxic effects in large quantities, and advises contacting your vet if you think your cat drank eggnog.",
@@ -101,7 +113,8 @@
         "cs": "Ne. VCA uvádí, že koření v nápoji eggnog, například muškátový ořech, může mít ve velkém množství toxické účinky, a radí obrátit se na veterináře, pokud se domníváte, že kočka eggnog pila.",
         "hr": "Ne. VCA navodi da začini u eggnogu, poput muškatnog oraščića, u velikim količinama mogu djelovati otrovno, i savjetuje da se obratiš veterinaru ako misliš da je mačka popila eggnog.",
         "sv": "Nej. VCA säger att kryddor i äggtoddy, som muskotnöt, kan ha giftig effekt i stora mängder, och råder dig att kontakta din veterinär om du tror att din katt har druckit äggtoddy.",
-        "da": "Nej. VCA skriver at krydderier i æggepunch, fx muskatnød, kan virke giftigt i store mængder, og anbefaler at kontakte din dyrlæge, hvis du tror, at din kat har drukket æggepunch."
+        "da": "Nej. VCA skriver at krydderier i æggepunch, fx muskatnød, kan virke giftigt i store mængder, og anbefaler at kontakte din dyrlæge, hvis du tror, at din kat har drukket æggepunch.",
+        "fi": "Ei. VCA:n mukaan munatodin mausteet, kuten muskottipähkinä, voivat suurina määrinä olla myrkyllisiä, ja se neuvoo ottamaan yhteyttä eläinlääkäriin, jos epäilet kissan juoneen munatoddia."
       }
     }
   ],
@@ -196,6 +209,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "66917c0b3aae354acf3728612a0f29b1e8e851173a90cdc915667600d1e5e2db"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9e51856596b1f452fdc55b726a12e911507c3595d4ea2648cb9ad5e6d8899700"
     }
   }
 }

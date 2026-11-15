@@ -7,7 +7,8 @@
     "cs": "Hranolky",
     "hr": "Pomfrit",
     "sv": "Pommes frites",
-    "da": "Pomfritter"
+    "da": "Pomfritter",
+    "fi": "Ranskalaiset perunat"
   },
   "question": {
     "en": "Can dogs eat french fries?",
@@ -15,7 +16,8 @@
     "cs": "Mohou psi jíst hranolky?",
     "hr": "Smiju li psi jesti pomfrit?",
     "sv": "Får hundar äta pommes frites?",
-    "da": "Må hunde spise pomfritter?"
+    "da": "Må hunde spise pomfritter?",
+    "fi": "Saako koira syödä ranskalaisia perunoita?"
   },
   "url_slug": {
     "en": "french-fries",
@@ -23,7 +25,8 @@
     "cs": "hranolky",
     "hr": "pomfrit",
     "sv": "pommes-frites",
-    "da": "pomfritter"
+    "da": "pomfritter",
+    "fi": "ranskalaiset-perunat"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Nedoporučuje se. Hranolky mají pro psy příliš mnoho kalorií a mohou vést k obezitě a příliš slané jídlo jim neprospívá. Jeden spadlý hranolek sotva způsobí otravu solí a obyčejný tepelně upravený brambor je v malém množství v pořádku.",
     "hr": "Ne preporučuje se. Pomfrit je previše kaloričan za pse i može dovesti do pretilosti, a previše slane hrane nije dobro za njih. Jedan komadić pomfrita koji je pao na pod vjerojatno neće izazvati trovanje solju, a umjesto toga u malim je količinama u redu običan kuhani krumpir.",
     "sv": "Rekommenderas inte. Pommes frites innehåller alldeles för många kalorier för hundar och kan leda till fetma, och för mycket salt mat är inte bra för dem. En tappad pommes frites orsakar sällan saltförgiftning, och vanlig kokt potatis går bra i små mängder i stället.",
-    "da": "Anbefales ikke. Pomfritter indeholder alt for mange kalorier til hunde og kan føre til fedme, og for meget salt mad er ikke godt for dem. En tabt pomfrit giver næppe saltforgiftning, og almindelig kogt kartoffel er fint i små mængder i stedet."
+    "da": "Anbefales ikke. Pomfritter indeholder alt for mange kalorier til hunde og kan føre til fedme, og for meget salt mad er ikke godt for dem. En tabt pomfrit giver næppe saltforgiftning, og almindelig kogt kartoffel er fint i små mængder i stedet.",
+    "fi": "Ei suositella. Ranskalaiset perunat ovat koiralle aivan liian runsaskalorisia ja voivat johtaa lihavuuteen, eikä liian suolainen ruoka ole niille hyväksi. Lattialle pudonnut ranskalainen tuskin aiheuttaa suolamyrkytystä, ja maustamaton keitetty peruna sopii sen sijaan pieninä määrinä."
   },
   "why": {
     "en": "AKC notes it's possible to have too much of a good thing with foods like French fries, and a Cornell vet nutritionist says fries are way too high in calories and can lead to obesity and poor nutrient intake. Salty food in moderation should not cause salt poisoning, but excessive salty food is not good for dogs, especially those with heart disease, because it can cause fluid retention.",
@@ -40,7 +44,8 @@
     "cs": "AKC upozorňuje, že u jídel jako hranolky se dá snadno přehnat, a veterinární nutriční specialistka z Cornellovy univerzity říká, že hranolky mají příliš mnoho kalorií a mohou vést k obezitě a nedostatečnému příjmu živin. Slané jídlo s mírou by otravu solí způsobit nemělo, ale nadměrné množství slaného jídla psům neprospívá, zvlášť těm se srdečním onemocněním, protože může způsobit zadržování tekutin.",
     "hr": "AKC upozorava da se s hranom poput pomfrita lako pretjera, a veterinarski nutricionist sa Sveučilišta Cornell kaže da je pomfrit previše kaloričan i može dovesti do pretilosti i slabog unosa hranjivih tvari. Slana hrana u umjerenim količinama ne bi smjela izazvati trovanje solju, ali prekomjerna količina slane hrane nije dobra za pse, osobito za one sa srčanom bolešću, jer može izazvati zadržavanje tekućine.",
     "sv": "AKC påpekar att för mycket av något gott kan vara ett problem, och det gäller mat som pommes frites. En veterinärnutritionist vid Cornell säger att pommes frites innehåller alldeles för många kalorier och kan leda till fetma och dåligt näringsintag. Salt mat i måttliga mängder bör inte orsaka saltförgiftning, men alldeles för mycket salt mat är inte bra för hundar, särskilt inte för dem med hjärtsjukdom, eftersom det kan ge vätskeansamling.",
-    "da": "AKC skriver at man kan få for meget af det gode med mad som pomfritter, og en dyrlæge og ernæringsekspert fra Cornell skriver at pomfritter indeholder alt for mange kalorier og kan føre til fedme og dårligt næringsindtag. Salt mad med måde bør ikke give saltforgiftning, men for meget salt mad er ikke godt for hunde, især ikke for dem med hjertesygdom, fordi det kan give væskeophobning."
+    "da": "AKC skriver at man kan få for meget af det gode med mad som pomfritter, og en dyrlæge og ernæringsekspert fra Cornell skriver at pomfritter indeholder alt for mange kalorier og kan føre til fedme og dårligt næringsindtag. Salt mad med måde bør ikke give saltforgiftning, men for meget salt mad er ikke godt for hunde, især ikke for dem med hjertesygdom, fordi det kan give væskeophobning.",
+    "fi": "AKC toteaa, että liiasta hyvästä voi olla haittaa, ja näin on myös ranskalaisten perunoiden kaltaisten ruokien kohdalla. Cornellin eläinravitsemukseen perehtyneen eläinlääkärin mukaan ranskalaiset ovat aivan liian runsaskalorisia ja voivat johtaa lihavuuteen ja puutteelliseen ravintoaineiden saantiin. Kohtuudella syötynä suolaisen ruoan ei pitäisi aiheuttaa suolamyrkytystä, mutta liian suolainen ruoka ei ole koirille hyväksi, etenkään sydänsairaille, koska se voi aiheuttaa nesteen kertymistä elimistöön."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Opkast eller diarré",
       "Dårlig appetit eller sløvhed",
       "Usikker gang, rysten eller kramper (for meget salt)"
+    ],
+    "fi": [
+      "Voimakas jano ja runsas virtsaaminen",
+      "Oksentelu tai ripuli",
+      "Heikko ruokahalu tai väsymys",
+      "Horjuminen, vapina tai kouristuskohtaukset (liikaa suolaa)"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "cs": "Po jednom či dvou hranolcích obvykle stačí čerstvá pitná voda. Pokud si myslíte, že pes snědl příliš mnoho slaného jídla, obraťte se ihned na veterináře.",
     "hr": "Za jedan ili dva komadića obično je dovoljna samo svježa voda za piće. Ako misliš da je pas pojeo previše slane hrane, odmah se obrati veterinaru.",
     "sv": "En eller ett par pommes frites kräver oftast inget mer än färskt dricksvatten. Om du tror att din hund har ätit för mycket salt mat ska du kontakta din veterinär direkt.",
-    "da": "En pomfrit eller to kræver som regel kun friskt drikkevand. Hvis du tror, at din hund har spist for meget salt mad, skal du kontakte din dyrlæge med det samme."
+    "da": "En pomfrit eller to kræver som regel kun friskt drikkevand. Hvis du tror, at din hund har spist for meget salt mad, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Yksi tai kaksi ranskalaista perunaa ei yleensä vaadi muuta kuin raikasta juomavettä. Jos arvelet koirasi syöneen liikaa suolaista ruokaa, ota heti yhteyttä eläinlääkäriin."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "cs": "Hranolky jsou slaná svačina pro lidi. Psům víc prospějí jejich vlastní pamlsky, takže hranolky nech lidem.",
     "hr": "Pomfrit je slana grickalica za ljude. Psima su bolje njihove poslastice, zato pomfrit ostavi ljudima.",
     "sv": "Pommes frites är ett salt tilltugg för människor. Hundar mår bättre av sina egna godbitar, så spara pommes fritesen till människorna.",
-    "da": "Pomfritter er en salt snack til mennesker. Hunde har det bedre med deres egne godbidder, så behold pomfritterne til mennesker."
+    "da": "Pomfritter er en salt snack til mennesker. Hunde har det bedre med deres egne godbidder, så behold pomfritterne til mennesker.",
+    "fi": "Ranskalaiset perunat ovat suolainen ihmisten välipala. Koirille sopivat paremmin niiden omat herkut, joten pidä ranskalaiset ihmisten ruokana."
   },
   "faq": [
     {
@@ -105,7 +118,8 @@
         "cs": "Je obyčejný brambor lepší než hranolky?",
         "hr": "Je li obični krumpir bolji od pomfrita?",
         "sv": "Är vanlig potatis bättre än pommes frites?",
-        "da": "Er almindelig kartoffel bedre end pomfritter?"
+        "da": "Er almindelig kartoffel bedre end pomfritter?",
+        "fi": "Onko tavallinen peruna parempaa kuin ranskalaiset?"
       },
       "a": {
         "en": "Yes. Plain mashed or soft cooked potatoes are fine in small amounts, without butter or spices.",
@@ -113,7 +127,8 @@
         "cs": "Ano. Obyčejná bramborová kaše nebo měkce uvařené brambory jsou v malém množství v pořádku, bez másla a koření.",
         "hr": "Da. Običan pire ili mekano kuhan krumpir u malim je količinama u redu, bez maslaca i začina.",
         "sv": "Ja. Vanlig potatismos eller mjukt kokt potatis går bra i små mängder, utan smör och kryddor.",
-        "da": "Ja. Almindelig kartoffelmos eller blødkogte kartofler er fine i små mængder, uden smør eller krydderier."
+        "da": "Ja. Almindelig kartoffelmos eller blødkogte kartofler er fine i små mængder, uden smør eller krydderier.",
+        "fi": "On. Maustamaton perunamuusi tai pehmeäksi keitetyt perunat sopivat pieninä määrinä, ilman voita ja mausteita."
       }
     }
   ],
@@ -225,6 +240,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "35b5775b5fdaded3cd762761284a01c7f245293c9d32f6d5266d636a7fa3e60c"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c467f55efc4dcf838036f2084d5ea0d0eac193d31a33542ffc46774fcd8ebc55"
     }
   }
 }

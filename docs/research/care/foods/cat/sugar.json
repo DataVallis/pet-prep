@@ -7,7 +7,8 @@
     "cs": "Cukr",
     "hr": "Šećer",
     "sv": "Socker",
-    "da": "Sukker"
+    "da": "Sukker",
+    "fi": "Sokeri"
   },
   "question": {
     "en": "Can cats eat sugar?",
@@ -15,7 +16,8 @@
     "cs": "Mohou kočky jíst cukr?",
     "hr": "Smiju li mačke jesti šećer?",
     "sv": "Får katter äta socker?",
-    "da": "Må katte spise sukker?"
+    "da": "Må katte spise sukker?",
+    "fi": "Saako kissa syödä sokeria?"
   },
   "url_slug": {
     "en": "sugar",
@@ -23,7 +25,8 @@
     "cs": "cukr",
     "hr": "secer",
     "sv": "socker",
-    "da": "sukker"
+    "da": "sukker",
+    "fi": "sokeri"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Raději ne. Cukr pro kočky není toxický, ale je pro ně nezdravý a nemá žádnou nutriční hodnotu. Kočky sladkou chuť ani nevnímají. Olíznutí něčeho sladkého není pohotovost, ale pravidelné sladké pamlsky mohou vést k nárůstu hmotnosti, cukrovce a zubním potížím.",
     "hr": "Bolje ne. Šećer nije otrovan za mačke, ali im je nezdrav i ne daje nikakvu hranjivu vrijednost. Mačke slatkoću uopće ne osjećaju. Lizanje nečeg slatkog nije hitan slučaj, ali redovite slatke poslastice mogu dovesti do debljanja, dijabetesa i bolesti zubi.",
     "sv": "Det är bäst att låta bli. Socker är inte giftigt för katter, men det är onyttigt för dem och ger inget näringsvärde. Katter kan inte ens känna sötma. En slick av något sött är ingen nödsituation, men regelbundna söta godbitar kan leda till viktuppgång, diabetes och tandsjukdom.",
-    "da": "Helst ikke. Sukker er ikke giftigt for katte, men det er usundt for dem og har ingen næringsværdi. Katte kan slet ikke smage sødt. At slikke på noget sødt er ikke en nødsituation, men jævnlige sukkerholdige godbidder kan føre til vægtstigning, diabetes og tandsygdomme."
+    "da": "Helst ikke. Sukker er ikke giftigt for katte, men det er usundt for dem og har ingen næringsværdi. Katte kan slet ikke smage sødt. At slikke på noget sødt er ikke en nødsituation, men jævnlige sukkerholdige godbidder kan føre til vægtstigning, diabetes og tandsygdomme.",
+    "fi": "Ei suositella. Sokeri ei ole kissoille myrkyllistä, mutta se on niille epäterveellistä eikä anna ravintoarvoa. Kissat eivät edes maista makeaa. Makean nuolaisu ei ole hätätilanne, mutta säännölliset sokeriset herkut voivat johtaa painonnousuun, diabetekseen ja hammassairauksiin."
   },
   "why": {
     "en": "Cats are carnivores: their bodies are built to eat meat, not carbohydrates or sugar, and none of their taste buds can detect sweet flavours. Sugar adds unnecessary calories that can quickly lead to weight gain; over time, too much sugar can cause insulin resistance and eventually diabetes, and sugar contributes to cavities and gum disease. Brown sugar is no different. VCA notes that a little sugar isn't bad for most cats, but Cats Protection warns that regularly giving sugary foods could lead to health problems, so we use the stricter level.",
@@ -40,7 +44,8 @@
     "cs": "Kočky jsou masožravci: jejich tělo je uzpůsobené ke zpracování masa, ne sacharidů nebo cukru, a žádný z jejich chuťových pohárků nedokáže vnímat sladkou chuť. Cukr přidává zbytečné kalorie, které mohou rychle vést k nárůstu hmotnosti. Časem může příliš mnoho cukru způsobit inzulinovou rezistenci a nakonec cukrovku a přispívá také ke vzniku zubního kazu a onemocnění dásní. Hnědý cukr na tom není jinak. VCA poznamenává, že trocha cukru většině koček neškodí, Cats Protection však varuje, že pravidelné podávání sladkých jídel by mohlo vést ke zdravotním problémům, a proto používáme přísnější úroveň.",
     "hr": "Mačke su mesojedi: njihovo je tijelo građeno za meso, a ne za ugljikohidrate ili šećer, i nijedan njihov okusni pupoljak ne prepoznaje slatke okuse. Šećer dodaje nepotrebne kalorije koje brzo mogu dovesti do debljanja; s vremenom previše šećera može izazvati inzulinsku rezistenciju i naposljetku dijabetes, a šećer pridonosi karijesu i bolestima desni. Smeđi šećer nije drukčiji. VCA napominje da malo šećera većini mačaka ne škodi, ali Cats Protection upozorava da redovito davanje slatke hrane može dovesti do zdravstvenih problema, zato primjenjujemo strožu razinu.",
     "sv": "Katter är köttätare: deras kroppar är byggda för att äta kött, inte kolhydrater eller socker, och ingen av deras smaklökar kan känna söta smaker. Socker ger onödiga kalorier som snabbt kan leda till viktuppgång; med tiden kan för mycket socker orsaka insulinresistens och till slut diabetes, och socker bidrar till hål i tänderna och tandköttssjukdom. Brunt socker gör ingen skillnad. VCA påpekar att lite socker inte är dåligt för de flesta katter, men Cats Protection varnar för att regelbundet ge sockrad mat kan leda till hälsoproblem, så vi använder den strängare nivån.",
-    "da": "Katte er kødædere: deres krop er bygget til at spise kød, ikke kulhydrater eller sukker, og ingen af deres smagsløg kan registrere sød smag. Sukker giver unødvendige kalorier, som hurtigt kan føre til vægtstigning; med tiden kan for meget sukker give insulinresistens og til sidst diabetes, og sukker bidrager til huller i tænderne og tandkødssygdom. Brun farin er ikke anderledes. VCA skriver at lidt sukker ikke er skadeligt for de fleste katte, men Cats Protection advarer om at det kan give helbredsproblemer, hvis man jævnligt giver sukkerholdig mad, så vi bruger det strengeste niveau."
+    "da": "Katte er kødædere: deres krop er bygget til at spise kød, ikke kulhydrater eller sukker, og ingen af deres smagsløg kan registrere sød smag. Sukker giver unødvendige kalorier, som hurtigt kan føre til vægtstigning; med tiden kan for meget sukker give insulinresistens og til sidst diabetes, og sukker bidrager til huller i tænderne og tandkødssygdom. Brun farin er ikke anderledes. VCA skriver at lidt sukker ikke er skadeligt for de fleste katte, men Cats Protection advarer om at det kan give helbredsproblemer, hvis man jævnligt giver sukkerholdig mad, så vi bruger det strengeste niveau.",
+    "fi": "Kissat ovat lihansyöjiä: niiden elimistö on tehty lihan syömiseen, ei hiilihydraateille tai sokerille, eikä yksikään niiden makusilmuista tunnista makeaa. Sokeri lisää turhia kaloreita, jotka voivat nopeasti johtaa painonnousuun. Ajan myötä liiallinen sokeri voi aiheuttaa insuliiniresistenssin ja lopulta diabeteksen, ja sokeri edistää hampaiden reikiintymistä ja ientulehdusta. Ruskea sokeri ei ole sen parempaa. VCA toteaa, ettei pieni määrä sokeria useimmille kissoille haittaa, mutta Cats Protection varoittaa, että sokeristen ruokien säännöllinen antaminen voi johtaa terveysongelmiin, joten käytämme tiukempaa luokitusta."
   },
   "signs": {
     "en": [
@@ -66,6 +71,10 @@
     "da": [
       "Diarré",
       "Mavebesvær"
+    ],
+    "fi": [
+      "Ripuli",
+      "Vatsavaivat"
     ]
   },
   "what_to_do": {
@@ -74,7 +83,8 @@
     "cs": "Pokud kočka jen olízla něco sladkého, není třeba spěchat k veterináři. Pokud snědla hodně sladkého jídla nebo jídlo obsahovalo čokoládu, okamžitě se obraťte na veterináře.",
     "hr": "Ako je mačka samo poliznula nešto slatko, ne treba žuriti veterinaru. Ako je pojela puno slatke hrane ili je hrana sadržavala čokoladu, odmah se obrati veterinaru.",
     "sv": "Om din katt bara har slickat på något sött behöver du inte rusa till veterinären. Om hon har ätit mycket av en sockrad mat, eller om maten innehöll choklad, ska du kontakta din veterinär direkt.",
-    "da": "Hvis din kat bare har slikket på noget sødt, behøver du ikke at skynde dig til dyrlægen. Hvis den har spist meget sukkerholdig mad, eller maden indeholdt chokolade, skal du kontakte din dyrlæge med det samme."
+    "da": "Hvis din kat bare har slikket på noget sødt, behøver du ikke at skynde dig til dyrlægen. Hvis den har spist meget sukkerholdig mad, eller maden indeholdt chokolade, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Jos kissasi vain nuolaisi jotain makeaa, eläinlääkäriin ei tarvitse rynnätä. Jos se söi paljon sokerista ruokaa tai ruoassa oli suklaata, ota heti yhteyttä eläinlääkäriin."
   },
   "serving": null,
   "child": {
@@ -83,7 +93,8 @@
     "cs": "Kočky sladkou chuť ani nevnímají a cukr jim neprospívá. Sladkosti jsou pro lidi, ne pro kočičku.",
     "hr": "Mačke slatko uopće ne osjećaju, a šećer im nije dobar. Slatkiši su za ljude, a ne za macu.",
     "sv": "Katter kan inte ens känna sötma, och socker är inte bra för dem. Godis är till för människor, inte för katten.",
-    "da": "Katte kan slet ikke smage sødt, og sukker er ikke godt for dem. Slik er til mennesker, ikke til katte."
+    "da": "Katte kan slet ikke smage sødt, og sukker er ikke godt for dem. Slik er til mennesker, ikke til katte.",
+    "fi": "Kissat eivät edes maista makeaa, eikä sokeri ole niille hyväksi. Makeiset ovat ihmisille, eivät kisulle."
   },
   "faq": [
     {
@@ -93,7 +104,8 @@
         "cs": "Cítí kočky chuť cukru?",
         "hr": "Osjećaju li mačke okus šećera?",
         "sv": "Kan katter känna smaken av socker?",
-        "da": "Kan katte smage sukker?"
+        "da": "Kan katte smage sukker?",
+        "fi": "Maistavatko kissat sokerin?"
       },
       "a": {
         "en": "No. Cats are carnivores and none of their taste buds can detect sweet flavours. If a cat shows interest in a sweet food, she is reacting to other ingredients, such as fat or umami flavours.",
@@ -101,7 +113,8 @@
         "cs": "Ne. Kočky jsou masožravci a žádný z jejich chuťových pohárků nedokáže vnímat sladkou chuť. Pokud kočka projeví o sladké jídlo zájem, reaguje na jiné složky, například na tuk nebo chuť umami.",
         "hr": "Ne. Mačke su mesojedi i nijedan njihov okusni pupoljak ne prepoznaje slatke okuse. Ako mačka pokazuje zanimanje za slatku hranu, reagira na druge sastojke, poput masnoće ili umami okusa.",
         "sv": "Nej. Katter är köttätare och ingen av deras smaklökar kan känna söta smaker. Om en katt visar intresse för sötsaker reagerar hon på andra ingredienser, som fett eller umami.",
-        "da": "Nej. Katte er kødædere, og ingen af deres smagsløg kan registrere sød smag. Hvis en kat viser interesse for noget sødt, reagerer den på andre ingredienser, fx fedt eller umami-smag."
+        "da": "Nej. Katte er kødædere, og ingen af deres smagsløg kan registrere sød smag. Hvis en kat viser interesse for noget sødt, reagerer den på andre ingredienser, fx fedt eller umami-smag.",
+        "fi": "Eivät. Kissat ovat lihansyöjiä, eikä yksikään niiden makusilmuista pysty tunnistamaan makeaa. Jos kissa kiinnostuu makeasta ruoasta, se reagoi muihin ainesosiin, kuten rasvaan tai umamin makuihin."
       }
     },
     {
@@ -111,7 +124,8 @@
         "cs": "Je hnědý cukr pro kočky lepší?",
         "hr": "Je li smeđi šećer bolji za mačke?",
         "sv": "Är brunt socker bättre för katter?",
-        "da": "Er brun farin bedre for katte?"
+        "da": "Er brun farin bedre for katte?",
+        "fi": "Onko ruskea sokeri parempaa kissoille?"
       },
       "a": {
         "en": "No. Brown sugar is still sugar; to a cat's body it's no different from white sugar.",
@@ -119,7 +133,8 @@
         "cs": "Ne. Hnědý cukr je pořád cukr; pro kočičí tělo se od bílého nijak neliší.",
         "hr": "Ne. Smeđi šećer je i dalje šećer; za mačje tijelo nije drukčiji od bijelog.",
         "sv": "Nej. Brunt socker är fortfarande socker; för en katts kropp är det ingen skillnad mot vitt socker.",
-        "da": "Nej. Brun farin er stadig sukker; for en kats krop er det ikke anderledes end hvidt sukker."
+        "da": "Nej. Brun farin er stadig sukker; for en kats krop er det ikke anderledes end hvidt sukker.",
+        "fi": "Ei. Ruskea sokeri on silti sokeria; kissan elimistölle se ei eroa valkoisesta sokerista."
       }
     }
   ],
@@ -247,6 +262,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3f676c6c8a4252ef519013529a6fdfe96ed711cbb905014689ac56e025a96a9d"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7cf552ef912b0d2d64baa5c527f504165dfa814d08c08df8e6ce7682adf4b578"
     }
   }
 }

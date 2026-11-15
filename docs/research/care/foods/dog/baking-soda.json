@@ -7,7 +7,8 @@
     "cs": "Jedlá soda",
     "hr": "Soda bikarbona",
     "sv": "Bikarbonat",
-    "da": "Natron"
+    "da": "Natron",
+    "fi": "Ruokasooda"
   },
   "question": {
     "en": "Can dogs eat baking soda?",
@@ -15,7 +16,8 @@
     "cs": "Mohou psi jíst jedlou sodu?",
     "hr": "Smiju li psi jesti sodu bikarbonu?",
     "sv": "Får hundar äta bikarbonat?",
-    "da": "Må hunde spise natron?"
+    "da": "Må hunde spise natron?",
+    "fi": "Saako koira syödä ruokasoodaa?"
   },
   "url_slug": {
     "en": "baking-soda",
@@ -23,7 +25,8 @@
     "cs": "jedla-soda",
     "hr": "soda-bikarbona",
     "sv": "bikarbonat",
-    "da": "natron"
+    "da": "natron",
+    "fi": "ruokasooda"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ne, jedlá soda je pro psy škodlivá kvůli vysokému obsahu sodíku. Ublížit může už malé množství, zvlášť menším psům. Pokud pes snědl jedlou sodu, zavolejte ihned veterináři, i když se příznaky zdají mírné.",
     "hr": "Ne, soda bikarbona loša je za pse zbog visokog udjela natrija. Čak i male količine mogu biti štetne, osobito za manje pse. Ako je pas pojeo sodu bikarbonu, odmah nazovi veterinara, čak i ako se znakovi čine blagima.",
     "sv": "Nej, bikarbonat är dåligt för hundar på grund av det höga natriuminnehållet. Redan små mängder kan vara skadliga, särskilt för mindre hundar. Om din hund har ätit bikarbonat ska du ringa en veterinär direkt, även om tecknen verkar milda.",
-    "da": "Nej, natron er skadeligt for hunde på grund af det høje natriumindhold. Selv små mængder kan være skadelige, især for mindre hunde. Hvis din hund har spist natron, skal du ringe til en dyrlæge med det samme, selvom tegnene virker milde."
+    "da": "Nej, natron er skadeligt for hunde på grund af det høje natriumindhold. Selv små mængder kan være skadelige, især for mindre hunde. Hvis din hund har spist natron, skal du ringe til en dyrlæge med det samme, selvom tegnene virker milde.",
+    "fi": "Ei saa, ruokasooda on koiralle haitallista suuren natriumpitoisuutensa vuoksi. Jo pienet määrät voivat olla haitallisia, etenkin pienemmille koirille. Jos koirasi söi ruokasoodaa, soita heti eläinlääkärille, vaikka oireet vaikuttaisivat lieviltä."
   },
   "why": {
     "en": "Baking soda (sodium bicarbonate) disrupts a dog's salt balance and can lead to sodium toxicity. As sodium levels in the blood rise, water is drawn out of cells, including brain cells. Baking soda is also found in household items such as toothpaste and deodorisers.",
@@ -40,7 +44,8 @@
     "cs": "Jedlá soda (hydrogenuhličitan sodný) narušuje rovnováhu solí v těle psa a může způsobit otravu sodíkem. Jakmile hladina sodíku v krvi stoupne, odčerpává se voda z buněk, včetně buněk mozku. Jedlou sodu najdete i v běžných domácích výrobcích, například v zubní pastě a pohlcovačích pachů.",
     "hr": "Soda bikarbona (natrijev bikarbonat) remeti ravnotežu soli u tijelu psa i može dovesti do trovanja natrijem. Kad se razina natrija u krvi povisi, voda se izvlači iz stanica, uključujući stanice mozga. Soda bikarbona nalazi se i u kućanskim proizvodima poput zubne paste i sredstava za neutralizaciju mirisa.",
     "sv": "Bikarbonat (natriumbikarbonat) rubbar hundens saltbalans och kan leda till natriumförgiftning. När natriumhalten i blodet stiger dras vatten ut ur cellerna, även hjärnceller. Bikarbonat finns också i hushållsprodukter som tandkräm och luktborttagare.",
-    "da": "Natron (natriumbicarbonat) forstyrrer hundens saltbalance og kan føre til natriumforgiftning. Når natriumniveauet i blodet stiger, trækkes vand ud af cellerne, også hjerneceller. Natron findes også i husholdningsprodukter som tandpasta og lugtfjernere."
+    "da": "Natron (natriumbicarbonat) forstyrrer hundens saltbalance og kan føre til natriumforgiftning. Når natriumniveauet i blodet stiger, trækkes vand ud af cellerne, også hjerneceller. Natron findes også i husholdningsprodukter som tandpasta og lugtfjernere.",
+    "fi": "Ruokasooda (natriumbikarbonaatti) sekoittaa koiran suolatasapainon ja voi johtaa natriummyrkytykseen. Kun veren natriumpitoisuus nousee, vettä siirtyy pois soluista, myös aivosoluista. Ruokasoodaa on myös kodin tuotteissa, kuten hammastahnassa ja hajunpoistoaineissa."
   },
   "signs": {
     "en": [
@@ -90,6 +95,14 @@
       "Muskelrystelser eller besvær med at gå",
       "Hurtig eller anstrengt vejrtrækning",
       "Kramper eller sammenbrud i svære tilfælde"
+    ],
+    "fi": [
+      "Vatsavaivat ja ajoittainen oksentelu tai ripuli",
+      "Tavallista runsaampi juominen, velttous",
+      "Jatkuva oksentelu, voimakas velttous",
+      "Lihasvapina tai kävelyvaikeudet",
+      "Nopea tai raskas hengitys",
+      "Vakavissa tapauksissa kouristuskohtauksia tai lyyhistymistä"
     ]
   },
   "what_to_do": {
@@ -98,7 +111,8 @@
     "cs": "Zavolejte ihned veterináři, i když se příznaky zdají mírné. Psovi nepodávejte žádné léky, pokud vám to neporadí veterinář.",
     "hr": "Odmah nazovi veterinara, čak i ako se znakovi čine blagima. Psu ne daj nikakve lijekove osim ako ti veterinar to ne kaže.",
     "sv": "Ring en veterinär direkt, även om tecknen verkar milda. Ge inte din hund någon medicin om inte din veterinär säger det.",
-    "da": "Ring til en dyrlæge med det samme, selvom tegnene virker milde. Giv ikke din hund medicin, medmindre din dyrlæge siger, at du skal."
+    "da": "Ring til en dyrlæge med det samme, selvom tegnene virker milde. Giv ikke din hund medicin, medmindre din dyrlæge siger, at du skal.",
+    "fi": "Soita heti eläinlääkärille, vaikka oireet vaikuttaisivat lieviltä. Älä anna koiralle mitään lääkettä, ellei eläinlääkäri neuvo sitä."
   },
   "serving": null,
   "child": {
@@ -107,7 +121,8 @@
     "cs": "Jedlá soda je na pečení a úklid, ne pro psy. Krabičku měj ve skříňce a když ji pes najde, řekni to dospělému.",
     "hr": "Soda bikarbona služi za kuhanje i čišćenje, a ne za pse. Kutiju drži u ormariću i reci odrasloj osobi ako je pas pronađe.",
     "sv": "Bikarbonat är till för matlagning och städning, inte för hundar. Förvara asken i ett skåp och säg till en vuxen om hunden hittar den.",
-    "da": "Natron er til madlavning og rengøring, ikke til hunde. Opbevar æsken i et skab, og sig det til en voksen, hvis din hund finder den."
+    "da": "Natron er til madlavning og rengøring, ikke til hunde. Opbevar æsken i et skab, og sig det til en voksen, hvis din hund finder den.",
+    "fi": "Ruokasooda on ruoanlaittoon ja siivoukseen, ei koirille. Pidä pakkaus kaapissa ja kerro aikuiselle, jos koirasi löytää sen."
   },
   "faq": [
     {
@@ -117,7 +132,8 @@
         "cs": "Kde jinde může pes jedlou sodu najít?",
         "hr": "Gdje još moj pas može naći sodu bikarbonu?",
         "sv": "Var kan min hund annars hitta bikarbonat?",
-        "da": "Hvor kan min hund ellers finde natron?"
+        "da": "Hvor kan min hund ellers finde natron?",
+        "fi": "Mistä muualta koirani voi löytää ruokasoodaa?"
       },
       "a": {
         "en": "Baking soda is found in many household items, including toothpaste and deodorisers. Store it and cleaning products in latched cupboards or places your dog can't reach.",
@@ -125,7 +141,8 @@
         "cs": "Jedlou sodu obsahuje mnoho domácích výrobků, třeba zubní pasty a pohlcovače pachů. Uchovávejte ji spolu s čisticími prostředky v uzavíratelných skříňkách nebo tam, kam se pes nedostane.",
         "hr": "Soda bikarbona nalazi se u mnogim kućanskim proizvodima, među ostalim u zubnoj pasti i sredstvima za neutralizaciju mirisa. Spremi je i sredstva za čišćenje u ormariće koji se čvrsto zatvaraju ili na mjesta koja pas ne može dosegnuti.",
         "sv": "Bikarbonat finns i många hushållsprodukter, bland annat tandkräm och luktborttagare. Förvara det och rengöringsprodukter i skåp med lås eller på platser som hunden inte kommer åt.",
-        "da": "Natron findes i mange husholdningsprodukter, blandt andet tandpasta og lugtfjernere. Opbevar det og rengøringsmidler i skabe med lås eller steder, som din hund ikke kan nå."
+        "da": "Natron findes i mange husholdningsprodukter, blandt andet tandpasta og lugtfjernere. Opbevar det og rengøringsmidler i skabe med lås eller steder, som din hund ikke kan nå.",
+        "fi": "Ruokasoodaa on monissa kotitalouden tuotteissa, myös hammastahnassa ja hajunpoistoaineissa. Säilytä sitä ja siivousaineita kaapeissa, joissa on salpa, tai paikoissa, joihin koira ei ylety."
       }
     }
   ],
@@ -219,6 +236,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1e9e40e5faea028b785049cd4a42a8982b878e01b6fff60b1246209a74d4baa3"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "53f4caec5457e25601cfcdea6549b983e3cff1da7058bd9cb05e7182a0ec5bfe"
     }
   }
 }
