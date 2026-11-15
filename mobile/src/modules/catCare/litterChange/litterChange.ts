@@ -12,11 +12,13 @@
  *
  * NO server change (`CatChoreService`, GAMES_SPEC §7.7): the session is still 30 s in three equal
  * parts, the steps ARE those parts (`choreStepAt`), and the app still reports strokes `{t}` — one
- * per piece of real work at its real time: a poured fifth of the tray (step 1), a rub turn / lift
- * exactly as before (step 2, `rubMove` = `catGames#moveRub`), a held pour beat at the irregular
- * `holdGap`s the hold mode always used (step 3). A child who finishes each gesture in its part has
- * ≥ `min_strokes` strokes in all three parts; the server's verdict decides as before. A step whose
- * time ran out is settled without a ✓ (`settleBefore`) — never a penalty, never shaming.
+ * per piece of real work at its real time: a poured fifth of the tray (step 1); a rub turn / lift
+ * exactly as before (`rubMove` = `catGames#moveRub`) and every spot rubbed away (step 2); a pour
+ * beat per stretch of HELD time, at the irregular `holdGap`s the hold mode always used (step 3 —
+ * the held time adds up across presses, so a full tray is always the same 7 beats). A child who
+ * finishes each gesture in its part has ≥ `min_strokes` (10) counted strokes in all three parts
+ * (at least 3 + 1 + 7); the server's verdict decides as before. A step whose time ran out is
+ * settled without a ✓ (`settleBefore`) — never a penalty, never shaming.
  *
  * Functions marked `'worklet'` run on the UI thread inside the gesture callbacks.
  */
@@ -93,39 +95,6 @@ export function litterLayout(W: number, H: number): LitterLayout {
   return { W, H, trayW, trayH, home, pose, ux: (pose.x - home.x) / pathLen, uy: (pose.y - home.y) / pathLen, pathLen, bin, bag, bigScale, big };
 }
 
-/** A spot's drawn width (share of the cavity's width). */
-export const SPOT_DRAW = 0.17;
-/** The bag's tilt (degrees, anticlockwise) while it pours. */
-export const BAG_TILT_DEG = 50;
-
-/** Where the tilted bag's corner pours from (field points). */
-export function bagSpout(L: LitterLayout): { x: number; y: number } {
-  const rad = (-BAG_TILT_DEG * Math.PI) / 180;
-  const a = -L.bag.w * 0.42;
-  const b = -L.bag.h * 0.45;
-  return { x: L.bag.x + a * Math.cos(rad) - b * Math.sin(rad), y: L.bag.y + a * Math.sin(rad) + b * Math.cos(rad) };
-}
-
-/** y (field points) of the fresh litter's surface in the enlarged tray at fill 0…1. */
-export function freshSurfaceY(L: LitterLayout, fill: number): number {
-  'worklet';
-  const k = (L.trayW * L.bigScale) / TRAY_ART.w;
-  const bottom = L.big.y + (TRAY_ART.cavity.y + TRAY_ART.cavity.h - TRAY_ART.h / 2) * k;
-  return bottom - fill * FRESH_FILL * TRAY_ART.cavity.h * k;
-}
-
-/** The tray's pouring corner (field points) at drag progress `d`. */
-export function trayLip(L: LitterLayout, d: number): { x: number; y: number } {
-  'worklet';
-  const rad = (tiltAt(d) * Math.PI) / 180;
-  const a = L.trayW * 0.47;
-  const b = -L.trayH * 0.42;
-  return {
-    x: L.home.x + (L.pose.x - L.home.x) * d + a * Math.cos(rad) - b * Math.sin(rad),
-    y: L.home.y + (L.pose.y - L.home.y) * d + a * Math.sin(rad) + b * Math.cos(rad),
-  };
-}
-
 // ── Step 1: drag → tilt → pour ────────────────────────────────────────────────
 
 /** The tray starts to pour once it is this far along its way to the bin. */
@@ -172,6 +141,41 @@ export function pourChunks(left: number): number {
   return n < 0 ? 0 : n > POUR_CHUNKS ? POUR_CHUNKS : n;
 }
 
+// (Worklets are `const`s after the Babel transform — a worklet must be defined BEFORE the worklet that calls it.)
+
+/** A spot's drawn width (share of the cavity's width). */
+export const SPOT_DRAW = 0.17;
+/** The bag's tilt (degrees, anticlockwise) while it pours. */
+export const BAG_TILT_DEG = 50;
+
+/** Where the tilted bag's corner pours from (field points). */
+export function bagSpout(L: LitterLayout): { x: number; y: number } {
+  const rad = (-BAG_TILT_DEG * Math.PI) / 180;
+  const a = -L.bag.w * 0.42;
+  const b = -L.bag.h * 0.45;
+  return { x: L.bag.x + a * Math.cos(rad) - b * Math.sin(rad), y: L.bag.y + a * Math.sin(rad) + b * Math.cos(rad) };
+}
+
+/** y (field points) of the fresh litter's surface in the enlarged tray at fill 0…1. */
+export function freshSurfaceY(L: LitterLayout, fill: number): number {
+  'worklet';
+  const k = (L.trayW * L.bigScale) / TRAY_ART.w;
+  const bottom = L.big.y + (TRAY_ART.cavity.y + TRAY_ART.cavity.h - TRAY_ART.h / 2) * k;
+  return bottom - fill * FRESH_FILL * TRAY_ART.cavity.h * k;
+}
+
+/** The tray's pouring corner (field points) at drag progress `d`. */
+export function trayLip(L: LitterLayout, d: number): { x: number; y: number } {
+  'worklet';
+  const rad = (tiltAt(d) * Math.PI) / 180;
+  const a = L.trayW * 0.47;
+  const b = -L.trayH * 0.42;
+  return {
+    x: L.home.x + (L.pose.x - L.home.x) * d + a * Math.cos(rad) - b * Math.sin(rad),
+    y: L.home.y + (L.pose.y - L.home.y) * d + a * Math.sin(rad) + b * Math.cos(rad),
+  };
+}
+
 // ── Step 2: rub → spots ───────────────────────────────────────────────────────
 
 /** Dirt spots inside the cavity: u = share of its width, v = share of its height. */
@@ -214,8 +218,8 @@ export function cavityPoint(x: number, y: number, cx: number, cy: number, trayW:
 
 /**
  * Rub from (u0, v0) to (u1, v1) (cavity units): every spot the stroke passes within `SPOT_REACH`
- * of loses dirt in proportion to the travel (at most one spot width per sample → about two passes
- * whatever the sampling rate). Returns the same array when nothing changed.
+ * of loses dirt in proportion to the travel OVER it (the stroke's chord through the spot — the same
+ * whatever the sampling rate → about two passes). Returns the same array when nothing changed.
  * A finger that rests (no travel) cleans nothing — holding is not washing.
  */
 export function scrubSpots(dirt: readonly number[], u0: number, v0: number, u1: number, v1: number): readonly number[] {
@@ -231,14 +235,18 @@ export function scrubSpots(dirt: readonly number[], u0: number, v0: number, u1: 
     if (dirt[i] <= 0) continue;
     const px = SPOT_US[i] - u0;
     const py = (SPOT_VS[i] - v0) * CAVITY_ASPECT;
-    let t = (px * dx + py * dy) / len2;
-    t = t < 0 ? 0 : t > 1 ? 1 : t;
-    const qx = dx * t - px;
-    const qy = dy * t - py;
-    if (qx * qx + qy * qy > SPOT_REACH * SPOT_REACH) continue;
+    // The part of the stroke that lies over the spot (its chord through the spot's circle).
+    const tc = (px * dx + py * dy) / len2;
+    const qx = dx * tc - px;
+    const qy = dy * tc - py;
+    const off2 = qx * qx + qy * qy;
+    if (off2 > SPOT_REACH * SPOT_REACH) continue;
+    const half = Math.sqrt(SPOT_REACH * SPOT_REACH - off2) / travel;
+    const from = tc - half < 0 ? 0 : tc - half;
+    const to = tc + half > 1 ? 1 : tc + half;
+    if (to <= from) continue;
     if (next === null) next = dirt.slice();
-    // One pass counts at most the spot's own width — a long, coarse sample never cleans it at once.
-    const left = dirt[i] - (travel > 2 * SPOT_REACH ? 2 * SPOT_REACH : travel) / SCRUB_TRAVEL;
+    const left = dirt[i] - ((to - from) * travel) / SCRUB_TRAVEL;
     next[i] = left < 0.04 ? 0 : left;
   }
   return next === null ? dirt : next;

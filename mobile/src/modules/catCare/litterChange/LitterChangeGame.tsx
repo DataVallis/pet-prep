@@ -155,7 +155,8 @@ function Spot({ i, left, top, width, dirt, suds, testID }: { i: number; left: nu
 interface Pour {
   start: number;
   base: number;
-  beats: number;
+  /** When this hold's current beat interval began. */
+  beatFrom: number;
   beat: ReturnType<typeof setTimeout> | null;
   end: ReturnType<typeof setTimeout> | null;
 }
@@ -247,10 +248,20 @@ export default function LitterChangeGame({ Shell, view, session, strokes, elapse
     [update, stroke],
   );
   // ── Step 2 (JS side) ──
-  const onCleaned = useCallback((mask: number) => void update((q) => afterScrub(q, mask)), [update]);
+  const onCleaned = useCallback(
+    (mask: number) => {
+      const before = pRef.current.clean;
+      const next = update((q) => afterScrub(q, mask));
+      // A spot rubbed away is a piece of work too (next to the rub's own turns / lift).
+      if (next.clean !== before) stroke();
+    },
+    [update, stroke],
+  );
 
   // ── Step 3: press and hold pours (JS timers decide; the level glides on the UI thread) ──
   const pour = useRef<Pour | null>(null);
+  /** Pour beats so far and the holding since the last one — kept across holds, so short presses add up to the same strokes as one long hold. */
+  const beats = useRef({ n: 0, sinceMs: 0 });
   const stopPour = useCallback(
     (atLine = false) => {
       const h = pour.current;
@@ -258,7 +269,9 @@ export default function LitterChangeGame({ Shell, view, session, strokes, elapse
       pour.current = null;
       if (h.beat !== null) clearTimeout(h.beat);
       if (h.end !== null) clearTimeout(h.end);
-      const level = atLine ? 1 : fillLevel(h.base, msAtRef.current(null) - h.start);
+      const now = msAtRef.current(null);
+      beats.current.sinceMs += Math.max(0, now - h.beatFrom);
+      const level = atLine ? 1 : fillLevel(h.base, now - h.start);
       const next = update((q) => afterFill(q, level));
       cancelAnimation(fill);
       fill.value = next.fill;
@@ -270,21 +283,24 @@ export default function LitterChangeGame({ Shell, view, session, strokes, elapse
   const startPour = useCallback(() => {
     if (pour.current !== null || disabledRef.current || stepRef.current !== 3 || pRef.current.fill >= 1) return;
     const base = pRef.current.fill;
-    const h: Pour = { start: msAtRef.current(null), base, beats: 0, beat: null, end: null };
+    const start = msAtRef.current(null);
+    const h: Pour = { start, base, beatFrom: start, beat: null, end: null };
     pour.current = h;
     const remaining = fillRemainingMs(base);
     if (!reduceRef.current) fill.value = withTiming(1, { duration: remaining, easing: Easing.linear });
     bagTilt.value = glide(1, 160);
     stream.value = 1;
+    const gap = () => (beats.current.n === 0 ? FILL_FIRST_BEAT_MS : holdGap(beats.current.n));
     const beat = () => {
       if (pour.current !== h) return;
       stroke();
-      h.beats += 1;
-      const next = update((q) => afterFill(q, fillLevel(h.base, msAtRef.current(null) - h.start)));
+      beats.current = { n: beats.current.n + 1, sinceMs: 0 };
+      h.beatFrom = msAtRef.current(null);
+      const next = update((q) => afterFill(q, fillLevel(h.base, h.beatFrom - h.start)));
       if (reduceRef.current) fill.value = next.fill;
-      h.beat = setTimeout(beat, holdGap(h.beats));
+      h.beat = setTimeout(beat, gap());
     };
-    h.beat = setTimeout(beat, FILL_FIRST_BEAT_MS);
+    h.beat = setTimeout(beat, Math.max(0, gap() - beats.current.sinceMs));
     h.end = setTimeout(() => stopPour(true), remaining);
   }, [fill, bagTilt, stream, glide, stroke, update, stopPour]);
   const endPour = useCallback(() => stopPour(), [stopPour]);
