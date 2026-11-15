@@ -13,7 +13,8 @@
     "nb": "Godteri",
     "it": "Caramelle",
     "de": "Süßigkeiten und Bonbons",
-    "fr": "Bonbons"
+    "fr": "Bonbons",
+    "pt": "Doces"
   },
   "question": {
     "en": "Can dogs eat candy?",
@@ -27,7 +28,8 @@
     "nb": "Kan hunder spise godteri?",
     "it": "I cani possono mangiare le caramelle?",
     "de": "Dürfen Hunde Süßigkeiten fressen?",
-    "fr": "Les chiens peuvent-ils manger des bonbons ?"
+    "fr": "Les chiens peuvent-ils manger des bonbons ?",
+    "pt": "Os cães podem comer doces?"
   },
   "url_slug": {
     "en": "candy",
@@ -41,7 +43,8 @@
     "nb": "godteri",
     "it": "caramelle",
     "de": "suessigkeiten",
-    "fr": "bonbons"
+    "fr": "bonbons",
+    "pt": "doces"
   },
   "level": "dangerous",
   "answer": {
@@ -56,7 +59,8 @@
     "nb": "Nei. Godteri er ikke trygt for hunder. Sukkeret kan gi hunden urolig mage, og noe godteri inneholder sjokolade, xylitol eller rosiner, som er giftige for hunder. Innpakning som blir svelget, kan også gi tarmblokkering.",
     "it": "No. Le caramelle non sono sicure per i cani. Lo zucchero può far venire mal di pancia, e alcune caramelle contengono cioccolato, xilitolo o uvetta, tossici per i cani. Anche gli involucri ingoiati possono causare un’ostruzione.",
     "de": "Nein. Süßigkeiten sind für Hunde nicht sicher. Der Zucker kann einem Hund auf den Magen schlagen, und manche Süßigkeiten enthalten Schokolade, Xylit oder Rosinen, die für Hunde giftig sind. Verschluckte Verpackungen können außerdem Darmverschlüsse verursachen.",
-    "fr": "Non. Les bonbons ne sont pas sans danger pour les chiens. Leur sucre peut irriter l’estomac d’un chien, et certains contiennent du chocolat, du xylitol ou des raisins secs, toxiques pour les chiens. Les emballages avalés peuvent aussi provoquer des occlusions."
+    "fr": "Non. Les bonbons ne sont pas sans danger pour les chiens. Leur sucre peut irriter l’estomac d’un chien, et certains contiennent du chocolat, du xylitol ou des raisins secs, toxiques pour les chiens. Les emballages avalés peuvent aussi provoquer des occlusions.",
+    "pt": "Não. Os doces não são seguros para os cães. O açúcar pode irritar o estômago do cão, e alguns doces contêm chocolate, xilitol ou passas, que são tóxicos para os cães. As embalagens engolidas também podem causar obstruções."
   },
   "why": {
     "en": "Candy offers dogs no nutritional value, and sugary, high-fat candy can lead to pancreatitis, a painful inflammation of the pancreas. Chocolate, xylitol (in sugar-free candy and gum) and raisins are toxic. Wrappers can be a choking risk, foil and cellophane wrappers can block the intestines, and large amounts of hard candy can clump in the stomach. Plain sugary candy often causes only mild stomach upset, but because candy can hide toxic ingredients and wrappers, we rate it dangerous.",
@@ -70,7 +74,8 @@
     "nb": "Godteri gir hunder ingen næringsverdi, og sukkerrikt og fettrikt godteri kan føre til betennelse i bukspyttkjertelen (pankreatitt), en smertefull tilstand. Sjokolade, xylitol (i sukkerfritt godteri og tyggegummi) og rosiner er giftige. Innpakning kan gi kvelningsfare, folie og cellofan kan blokkere tarmen, og store mengder hardt godteri kan klumpe seg sammen i magen. Vanlig sukkerrikt godteri gir ofte bare mild urolig mage, men siden godteri kan skjule giftige ingredienser og innpakning, vurderer vi det som farlig.",
     "it": "Le caramelle non hanno alcun valore nutritivo per i cani, e quelle molto zuccherate e ricche di grassi possono portare alla pancreatite, una dolorosa infiammazione del pancreas. Cioccolato, xilitolo (nelle caramelle e nelle gomme senza zucchero) e uvetta sono tossici. Gli involucri possono comportare un rischio di soffocamento, quelli di alluminio e cellophane possono ostruire l’intestino, e grandi quantità di caramelle dure possono formare un grumo nello stomaco. Le semplici caramelle zuccherate spesso causano solo un lieve disturbo di stomaco, ma poiché le caramelle possono nascondere ingredienti tossici e involucri pericolosi, le valutiamo come pericolose.",
     "de": "Süßigkeiten haben für Hunde keinen Nährwert, und zucker- und fettreiche Süßigkeiten können zu einer Bauchspeicheldrüsenentzündung führen, einer schmerzhaften Entzündung der Bauchspeicheldrüse. Schokolade, Xylit (in zuckerfreien Süßigkeiten und Kaugummi) und Rosinen sind giftig. Verpackungen können Erstickungsgefahr bergen, Folie und Zellophan können den Darm blockieren, und große Mengen Hartbonbons können sich im Magen zusammenballen. Süßigkeiten, die nur aus Zucker bestehen, verursachen oft nur leichte Magenbeschwerden, doch weil Süßigkeiten giftige Zutaten und Verpackungen verbergen können, stufen wir sie als gefährlich ein.",
-    "fr": "Les bonbons n’ont aucune valeur nutritive pour les chiens, et les bonbons sucrés et très gras peuvent provoquer une pancréatite, une inflammation douloureuse du pancréas. Le chocolat, le xylitol (dans les bonbons et les chewing-gums sans sucre) et les raisins secs sont toxiques. Les emballages présentent un risque d’étouffement, les emballages en aluminium et en cellophane peuvent obstruer l’intestin, et de grandes quantités de bonbons durs peuvent s’agglomérer dans l’estomac. Les bonbons simplement sucrés ne causent souvent qu’un léger trouble digestif, mais comme ils peuvent cacher des ingrédients toxiques et des emballages, nous les classons parmi les aliments dangereux."
+    "fr": "Les bonbons n’ont aucune valeur nutritive pour les chiens, et les bonbons sucrés et très gras peuvent provoquer une pancréatite, une inflammation douloureuse du pancréas. Le chocolat, le xylitol (dans les bonbons et les chewing-gums sans sucre) et les raisins secs sont toxiques. Les emballages présentent un risque d’étouffement, les emballages en aluminium et en cellophane peuvent obstruer l’intestin, et de grandes quantités de bonbons durs peuvent s’agglomérer dans l’estomac. Les bonbons simplement sucrés ne causent souvent qu’un léger trouble digestif, mais comme ils peuvent cacher des ingrédients toxiques et des emballages, nous les classons parmi les aliments dangereux.",
+    "pt": "Os doces não têm valor nutricional para os cães, e os doces açucarados e muito gordos podem levar a pancreatite, uma inflamação dolorosa do pâncreas. O chocolate, o xilitol (em doces e pastilhas elásticas sem açúcar) e as passas são tóxicos. As embalagens podem ser um risco de engasgo, as de alumínio e de celofane podem obstruir os intestinos, e grandes quantidades de rebuçados duros podem formar uma massa no estômago. Os doces simples com açúcar costumam causar apenas uma ligeira indisposição de estômago, mas, como os doces podem esconder ingredientes tóxicos e as embalagens são um perigo, classificamo-los como perigosos."
   },
   "signs": {
     "en": [
@@ -144,6 +149,12 @@
       "Diarrhée",
       "Perte d’appétit, manque d’énergie ou douleurs au ventre (les signes de pancréatite peuvent mettre quelques jours à apparaître)",
       "Faiblesse, démarche chancelante ou convulsions (xylitol)"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Falta de apetite, pouca energia ou dor de barriga (os sinais de pancreatite podem demorar alguns dias a aparecer)",
+      "Fraqueza, andar cambaleante ou convulsões (xilitol)"
     ]
   },
   "what_to_do": {
@@ -158,7 +169,8 @@
     "nb": "Legg resten av godteriet utenfor rekkevidde og samle inn innpakningen. Den hjelper deg å finne ut hva hunden har spist og omtrent hvor mye. Sjekk ingredienslisten for sjokolade, xylitol (kan også stå oppført som bjørkesukker) og rosiner, og kontakt deretter dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden virker frisk.",
     "it": "Metti le caramelle rimaste fuori dalla portata del cane e raccogli gli involucri: ti aiutano a capire che cosa ha mangiato il tuo cane e più o meno in che quantità. Controlla sulle etichette se ci sono cioccolato, xilitolo (indicato anche come zucchero di betulla) e uvetta, poi chiama subito il veterinario o un centro antiveleni veterinario, anche se il tuo cane sembra stare bene.",
     "de": "Räumen Sie die übrigen Süßigkeiten außer Reichweite und sammeln Sie die Verpackungen ein. Daran können Sie erkennen, was Ihr Hund gefressen hat und ungefähr wie viel. Prüfen Sie die Etiketten auf Schokolade, Xylit (auch als Birkenzucker angegeben) und Rosinen und rufen Sie dann sofort Ihren Tierarzt oder einen Giftnotruf für Tiere an, auch wenn Ihr Hund gesund wirkt.",
-    "fr": "Mettez les bonbons restants hors de portée et récupérez les emballages : ils vous aident à savoir ce que votre chien a mangé et en quelle quantité environ. Vérifiez les étiquettes pour repérer le chocolat, le xylitol (parfois indiqué comme sucre de bouleau) et les raisins secs, puis appelez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chien semble aller bien."
+    "fr": "Mettez les bonbons restants hors de portée et récupérez les emballages : ils vous aident à savoir ce que votre chien a mangé et en quelle quantité environ. Vérifiez les étiquettes pour repérer le chocolat, le xylitol (parfois indiqué comme sucre de bouleau) et les raisins secs, puis appelez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chien semble aller bien.",
+    "pt": "Põe os doces que sobraram fora do alcance e junta as embalagens: ajudam a perceber o que o teu cão comeu e mais ou menos quanto. Verifica nos rótulos se há chocolate, xilitol (que também aparece como açúcar de bétula) e passas, e depois liga imediatamente ao teu veterinário ou a uma linha de apoio toxicológico para animais, mesmo que o teu cão pareça estar bem."
   },
   "serving": null,
   "child": {
@@ -173,7 +185,8 @@
     "nb": "Godteri er for mennesker, ikke for hunder. Hold godteri og innpakning utenfor rekkevidde, og si fra til en voksen hvis hunden spiser noe.",
     "it": "Le caramelle sono per le persone, non per i cani. Tieni caramelle e involucri fuori dalla sua portata e dillo a un adulto se il tuo cane ne mangia.",
     "de": "Süßigkeiten sind für Menschen da, nicht für Hunde. Halte Süßigkeiten und Verpackungen außer Reichweite und sag einem Erwachsenen Bescheid, wenn dein Hund etwas davon frisst.",
-    "fr": "Les bonbons sont pour les humains, pas pour les chiens. Garde les bonbons et leurs emballages hors de portée, et préviens un adulte si ton chien en mange."
+    "fr": "Les bonbons sont pour les humains, pas pour les chiens. Garde les bonbons et leurs emballages hors de portée, et préviens un adulte si ton chien en mange.",
+    "pt": "Os doces são para as pessoas, não para os cães. Guarda os doces e as embalagens fora do alcance e avisa um adulto se o teu cão comer algum."
   },
   "faq": [
     {
@@ -189,7 +202,8 @@
         "nb": "Hunden min svelget innpakningen fra et godteri. Er det farlig?",
         "it": "Il mio cane ha ingoiato l’involucro di una caramella. È pericoloso?",
         "de": "Mein Hund hat ein Bonbonpapier verschluckt. Ist das gefährlich?",
-        "fr": "Mon chien a avalé un emballage de bonbon. Est-ce dangereux ?"
+        "fr": "Mon chien a avalé un emballage de bonbon. Est-ce dangereux ?",
+        "pt": "O meu cão engoliu a embalagem de um doce. É perigoso?"
       },
       "a": {
         "en": "It can be. Candy wrappers can be a choking risk, and foil and cellophane wrappers can cause a blockage in the intestines. Contact your vet or a pet poison helpline for guidance.",
@@ -203,7 +217,8 @@
         "nb": "Det kan være det. Innpakning fra godteri kan gi kvelningsfare, og innpakning av folie og cellofan kan gi tarmblokkering. Kontakt dyrlegen eller giftinformasjon for dyr for veiledning.",
         "it": "Può esserlo. Gli involucri delle caramelle possono comportare un rischio di soffocamento, e quelli di alluminio e cellophane possono causare un’ostruzione dell’intestino. Contatta il veterinario o un centro antiveleni veterinario per sapere come comportarti.",
         "de": "Ja, das kann gefährlich sein. Bonbonpapier kann Erstickungsgefahr bergen, und Folie und Zellophan können einen Darmverschluss verursachen. Wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere und lassen Sie sich beraten.",
-        "fr": "Cela peut l’être. Les emballages de bonbons présentent un risque d’étouffement, et les emballages en aluminium ou en cellophane peuvent provoquer une occlusion de l’intestin. Contactez votre vétérinaire ou un centre antipoison vétérinaire pour savoir quoi faire."
+        "fr": "Cela peut l’être. Les emballages de bonbons présentent un risque d’étouffement, et les emballages en aluminium ou en cellophane peuvent provoquer une occlusion de l’intestin. Contactez votre vétérinaire ou un centre antipoison vétérinaire pour savoir quoi faire.",
+        "pt": "Pode ser. As embalagens dos doces podem ser um risco de engasgo, e as de alumínio e de celofane podem causar uma obstrução nos intestinos. Fala com o teu veterinário ou com uma linha de apoio toxicológico para animais."
       }
     },
     {
@@ -219,7 +234,8 @@
         "nb": "Kan hunder spise slikkepinner eller geléboner?",
         "it": "I cani possono mangiare lecca-lecca o caramelle gommose?",
         "de": "Dürfen Hunde Lutscher oder Jelly Beans fressen?",
-        "fr": "Les chiens peuvent-ils manger des sucettes ou des jelly beans ?"
+        "fr": "Les chiens peuvent-ils manger des sucettes ou des jelly beans ?",
+        "pt": "Os cães podem comer chupa-chupas ou gomas?"
       },
       "a": {
         "en": "No. Jelly beans are mostly sugar, which can cause stomach upset. Sugar-free lollipops may contain xylitol, and dogs may chew and swallow the lollipop stick.",
@@ -233,7 +249,8 @@
         "nb": "Nei. Geléboner består mest av sukker, som kan gi urolig mage. Sukkerfrie slikkepinner kan inneholde xylitol, og hunder kan tygge og svelge pinnen.",
         "it": "No. Le caramelle gommose sono fatte soprattutto di zucchero, che può dare mal di pancia. I lecca-lecca senza zucchero possono contenere xilitolo, e il cane può masticare e ingoiare lo stecco del lecca-lecca.",
         "de": "Nein. Jelly Beans bestehen größtenteils aus Zucker, der Magenbeschwerden verursachen kann. Zuckerfreie Lutscher können Xylit enthalten, und Hunde kauen und schlucken womöglich den Lutscherstiel mit.",
-        "fr": "Non. Les jelly beans sont surtout composés de sucre, ce qui peut irriter l’estomac. Les sucettes sans sucre peuvent contenir du xylitol, et un chien peut mâcher et avaler le bâtonnet de la sucette."
+        "fr": "Non. Les jelly beans sont surtout composés de sucre, ce qui peut irriter l’estomac. Les sucettes sans sucre peuvent contenir du xylitol, et un chien peut mâcher et avaler le bâtonnet de la sucette.",
+        "pt": "Não. As gomas são sobretudo açúcar, que pode causar indisposição de estômago. Os chupa-chupas sem açúcar podem conter xilitol, e os cães podem mastigar e engolir o pauzinho."
       }
     }
   ],
@@ -404,6 +421,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "951cf450997f1da49938789bb0d6f7c6c87a90cb22625f2dca956bfbd7cf638c"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "af6df968d829af3f32310e780c114894133908dd4ebfbfcfde11afd8d4c4b760"
     }
   }
 }

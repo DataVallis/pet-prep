@@ -12,7 +12,8 @@
     "it": "Brodo",
     "de": "Brühe und Fond",
     "fr": "Bouillon",
-    "es": "Caldo"
+    "es": "Caldo",
+    "pt": "Caldo"
   },
   "question": {
     "en": "Can cats have broth?",
@@ -25,7 +26,8 @@
     "it": "I gatti possono bere il brodo?",
     "de": "Dürfen Katzen Brühe bekommen?",
     "fr": "Les chats peuvent-ils avoir du bouillon ?",
-    "es": "¿Pueden los gatos tomar caldo?"
+    "es": "¿Pueden los gatos tomar caldo?",
+    "pt": "Os gatos podem tomar caldo?"
   },
   "url_slug": {
     "en": "broth",
@@ -38,7 +40,8 @@
     "it": "brodo",
     "de": "bruehe",
     "fr": "bouillon",
-    "es": "caldo"
+    "es": "caldo",
+    "pt": "caldo"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "it": "Sì, un po’ di brodo semplice va bene. I veterinari suggeriscono una piccola quantità di brodo di pollo a basso contenuto di sodio, senza spezie aggiunte, per insaporire l’acqua del gatto. Il brodo o i dadi da brodo per le persone possono essere molto salati e contenere cipolla o aglio, che sono tossici per i gatti.",
     "de": "Ja, ein wenig ungewürzte Brühe ist in Ordnung. Tierärzte empfehlen eine kleine Menge salzarme Hühnerbrühe ohne zugesetzte Gewürze, um Katzen das Wasser schmackhaft zu machen. Brühwürfel und Fertigbrühen für Menschen können sehr salzig sein und Zwiebel oder Knoblauch enthalten, die für Katzen giftig sind.",
     "fr": "Oui, un peu de bouillon nature ne pose pas de problème. Les vétérinaires suggèrent une petite quantité de bouillon de poulet pauvre en sel, sans épices ajoutées, pour parfumer l’eau du chat. Les bouillons et les cubes de bouillon pour humains peuvent être très salés et contenir de l’oignon ou de l’ail, toxiques pour les chats.",
-    "es": "Sí, un poco de caldo natural está bien. Los veterinarios sugieren una pequeña cantidad de caldo de pollo bajo en sal y sin especias añadidas para dar sabor al agua del gato. Los caldos o las pastillas de caldo para personas pueden ser muy salados y llevar cebolla o ajo, que son tóxicos para los gatos."
+    "es": "Sí, un poco de caldo natural está bien. Los veterinarios sugieren una pequeña cantidad de caldo de pollo bajo en sal y sin especias añadidas para dar sabor al agua del gato. Los caldos o las pastillas de caldo para personas pueden ser muy salados y llevar cebolla o ajo, que son tóxicos para los gatos.",
+    "pt": "Sim, um pouco de caldo simples não faz mal. Os veterinários sugerem uma pequena quantidade de caldo de galinha com pouco sal e sem temperos para dar sabor à água do gato. Os caldos e os cubos de caldo feitos para pessoas podem ser muito salgados e conter cebola ou alho, que são tóxicos para os gatos."
   },
   "why": {
     "en": "The Cornell Feline Health Center says that flavouring the water with a small amount of low sodium chicken broth can prompt a cat to drink more, and VCA suggests low-sodium chicken broth with no additional spices. Bouillon cubes used for making stocks contain high amounts of sodium. Onion and garlic, found in many pre-made foods, are toxic to cats even when cooked or dried. Tufts vets advise looking closely at the ingredients list of commercial broths.",
@@ -65,7 +69,8 @@
     "it": "Il Cornell Feline Health Center afferma che insaporire l’acqua con una piccola quantità di brodo di pollo a basso contenuto di sodio può spingere il gatto a bere di più, e VCA suggerisce un brodo di pollo povero di sodio e senza spezie aggiunte. I dadi da brodo contengono grandi quantità di sodio. Cipolla e aglio, presenti in molti cibi pronti, sono tossici per i gatti anche se cotti o essiccati. I veterinari della Tufts consigliano di leggere con attenzione l’elenco degli ingredienti dei brodi industriali.",
     "de": "Das Cornell Feline Health Center sagt, dass ein wenig salzarme Hühnerbrühe im Wasser eine Katze zum Trinken anregen kann, und VCA empfiehlt salzarme Hühnerbrühe ohne zusätzliche Gewürze. Brühwürfel zur Herstellung von Fond enthalten sehr viel Natrium. Zwiebel und Knoblauch, die in vielen Fertiggerichten stecken, sind für Katzen giftig, auch gekocht oder getrocknet. Die Tierärzte von Tufts raten, bei fertiger Brühe die Zutatenliste genau zu lesen.",
     "fr": "Le Cornell Feline Health Center indique que parfumer l’eau avec une petite quantité de bouillon de poulet pauvre en sodium peut inciter un chat à boire davantage, et VCA suggère un bouillon de poulet pauvre en sel, sans épices supplémentaires. Les cubes de bouillon contiennent beaucoup de sodium. L’oignon et l’ail, présents dans de nombreux plats préparés, sont toxiques pour les chats, même cuits ou séchés. Les vétérinaires de Tufts conseillent de lire attentivement la liste des ingrédients des bouillons du commerce.",
-    "es": "El Cornell Feline Health Center dice que dar sabor al agua con una pequeña cantidad de caldo de pollo bajo en sodio puede animar al gato a beber más, y VCA sugiere un caldo de pollo bajo en sodio y sin especias añadidas. Las pastillas de caldo contienen mucho sodio. La cebolla y el ajo, presentes en muchos alimentos preparados, son tóxicos para los gatos aunque estén cocinados o secos. Los veterinarios de Tufts aconsejan mirar con atención la lista de ingredientes de los caldos comerciales."
+    "es": "El Cornell Feline Health Center dice que dar sabor al agua con una pequeña cantidad de caldo de pollo bajo en sodio puede animar al gato a beber más, y VCA sugiere un caldo de pollo bajo en sodio y sin especias añadidas. Las pastillas de caldo contienen mucho sodio. La cebolla y el ajo, presentes en muchos alimentos preparados, son tóxicos para los gatos aunque estén cocinados o secos. Los veterinarios de Tufts aconsejan mirar con atención la lista de ingredientes de los caldos comerciales.",
+    "pt": "O Cornell Feline Health Center diz que dar sabor à água com uma pequena quantidade de caldo de galinha com pouco sódio pode levar o gato a beber mais, e a VCA sugere caldo de galinha com pouco sódio e sem temperos adicionais. Os cubos de caldo usados para fazer caldos têm muito sódio. A cebola e o alho, presentes em muitos alimentos pré-preparados, são tóxicos para os gatos mesmo cozinhados ou secos. Os veterinários da Tufts aconselham a ler com atenção a lista de ingredientes dos caldos comerciais."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "it": "Se il tuo gatto ha bevuto brodo che contiene cipolla o aglio, contatta il veterinario il prima possibile.",
     "de": "Hat Ihre Katze Brühe oder Fond mit Zwiebel oder Knoblauch getrunken, wenden Sie sich so schnell wie möglich an Ihren Tierarzt.",
     "fr": "Si votre chat a bu du bouillon contenant de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible.",
-    "es": "Si tu gato ha bebido caldo que lleve cebolla o ajo, ponte en contacto con tu veterinario lo antes posible."
+    "es": "Si tu gato ha bebido caldo que lleve cebolla o ajo, ponte en contacto con tu veterinario lo antes posible.",
+    "pt": "Se o teu gato bebeu caldo que contém cebola ou alho, contacta o teu veterinário o mais depressa possível."
   },
   "serving": {
     "en": "Only plain, low-sodium broth with no onion, garlic or added spices, a little mixed into your cat's water. The safest homemade broth is unseasoned meat boiled in plain water. Skip stock cubes.",
@@ -92,7 +98,8 @@
     "it": "Solo brodo semplice, a basso contenuto di sodio, senza cipolla, aglio né spezie aggiunte, in piccola quantità mescolato all’acqua del gatto. Il brodo fatto in casa più sicuro è fatto bollendo carne non condita in sola acqua. Niente dadi da brodo.",
     "de": "Nur ungewürzte, salzarme Brühe ohne Zwiebel, Knoblauch oder zugesetzte Gewürze, ein kleiner Schuss davon im Wasser Ihrer Katze. Am sichersten ist selbst gekochte Brühe aus ungewürztem Fleisch in reinem Wasser. Brühwürfel lassen Sie weg.",
     "fr": "Uniquement du bouillon nature, pauvre en sel, sans oignon, sans ail et sans épices, un peu mélangé à l’eau de votre chat. Le bouillon maison le plus sûr se prépare avec de la viande non assaisonnée cuite dans de l’eau simple. Évitez les cubes de bouillon.",
-    "es": "Solo caldo natural, bajo en sodio y sin cebolla, ajo ni especias añadidas, un poco mezclado con el agua de tu gato. El caldo casero más seguro es carne sin condimentar hervida en agua sola. Evita las pastillas de caldo."
+    "es": "Solo caldo natural, bajo en sodio y sin cebolla, ajo ni especias añadidas, un poco mezclado con el agua de tu gato. El caldo casero más seguro es carne sin condimentar hervida en agua sola. Evita las pastillas de caldo.",
+    "pt": "Apenas caldo simples, com pouco sódio e sem cebola, alho nem temperos, um pouco misturado na água do teu gato. O caldo caseiro mais seguro é carne sem tempero cozida em água simples. Não uses cubos de caldo."
   },
   "child": {
     "en": "A grown-up can add a little plain broth to kitty's water. Soup for people often has onion, so always ask first.",
@@ -105,7 +112,8 @@
     "it": "Un adulto può aggiungere un po’ di brodo semplice all’acqua del micio. La zuppa per le persone spesso contiene cipolla, quindi chiedi sempre prima a un adulto.",
     "de": "Ein Erwachsener kann ein bisschen ungewürzte Brühe ins Wasser der Katze geben. Suppe für Menschen enthält oft Zwiebel, also frag immer vorher nach.",
     "fr": "Un adulte peut ajouter un peu de bouillon nature dans l’eau de ton chat. La soupe pour les humains contient souvent de l’oignon : demande toujours d’abord.",
-    "es": "Un adulto puede añadir un poco de caldo natural al agua del gatito. La sopa para personas suele llevar cebolla, así que pregunta siempre antes."
+    "es": "Un adulto puede añadir un poco de caldo natural al agua del gatito. La sopa para personas suele llevar cebolla, así que pregunta siempre antes.",
+    "pt": "Um adulto pode juntar um pouco de caldo simples à água do gatinho. A sopa das pessoas costuma ter cebola, por isso pergunta sempre primeiro."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "it": "Posso usare un dado da brodo?",
         "de": "Darf ich einen Brühwürfel verwenden?",
         "fr": "Puis-je utiliser un cube de bouillon ?",
-        "es": "¿Puedo usar una pastilla de caldo?"
+        "es": "¿Puedo usar una pastilla de caldo?",
+        "pt": "Posso usar um cubo de caldo?"
       },
       "a": {
         "en": "Better not. Bouillon cubes used for making stocks contain high amounts of sodium, and pre-made foods may contain onion or garlic, which are toxic to cats.",
@@ -133,7 +142,8 @@
         "it": "Meglio di no. I dadi da brodo contengono grandi quantità di sodio, e i cibi pronti possono contenere cipolla o aglio, che sono tossici per i gatti.",
         "de": "Besser nicht. Brühwürfel enthalten sehr viel Natrium, und Fertiggerichte können Zwiebel oder Knoblauch enthalten, die für Katzen giftig sind.",
         "fr": "Mieux vaut éviter. Les cubes de bouillon contiennent beaucoup de sodium, et les plats préparés peuvent contenir de l’oignon ou de l’ail, toxiques pour les chats.",
-        "es": "Mejor no. Las pastillas de caldo contienen mucho sodio, y los alimentos preparados pueden llevar cebolla o ajo, que son tóxicos para los gatos."
+        "es": "Mejor no. Las pastillas de caldo contienen mucho sodio, y los alimentos preparados pueden llevar cebolla o ajo, que son tóxicos para los gatos.",
+        "pt": "É melhor não. Os cubos de caldo têm muito sódio, e os alimentos pré-preparados podem conter cebola ou alho, que são tóxicos para os gatos."
       }
     }
   ],
@@ -246,6 +256,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4ee100bbe84fd351d4e7e2de7a54eeaf4407e7eebb02d6a6e94e35638216aa50"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "99a01d5395f3bd9ed18960cdb083022b70a49a84029fe9e5a99dbcd7017b7ffe"
     }
   }
 }

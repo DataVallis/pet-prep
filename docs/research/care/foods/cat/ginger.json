@@ -13,7 +13,8 @@
     "it": "Zenzero",
     "de": "Ingwer",
     "fr": "Gingembre",
-    "es": "Jengibre"
+    "es": "Jengibre",
+    "pt": "Gengibre"
   },
   "question": {
     "en": "Can cats eat ginger?",
@@ -27,7 +28,8 @@
     "it": "I gatti possono mangiare lo zenzero?",
     "de": "Dürfen Katzen Ingwer fressen?",
     "fr": "Les chats peuvent-ils manger du gingembre ?",
-    "es": "¿Pueden los gatos comer jengibre?"
+    "es": "¿Pueden los gatos comer jengibre?",
+    "pt": "Os gatos podem comer gengibre?"
   },
   "url_slug": {
     "en": "ginger",
@@ -41,7 +43,8 @@
     "it": "zenzero",
     "de": "ingwer",
     "fr": "gingembre",
-    "es": "jengibre"
+    "es": "jengibre",
+    "pt": "gengibre"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "it": "Meglio non dare lo zenzero al gatto, a meno che non lo suggerisca il veterinario. La radice di zenzero viene usata come integratore erboristico nei gatti, soprattutto contro nausea e vomito, ma naturale non significa sicuro: può causare un lieve mal di stomaco.",
     "de": "Geben Sie Ihrer Katze besser keinen Ingwer, es sei denn, Ihr Tierarzt empfiehlt es. Ingwerwurzel wird bei Katzen als pflanzliches Ergänzungsmittel eingesetzt, vor allem gegen Übelkeit und Erbrechen. „Natürlich“ heißt aber nicht „sicher“: Ingwer kann leichte Magenbeschwerden auslösen.",
     "fr": "Mieux vaut ne pas donner de gingembre à votre chat, sauf si votre vétérinaire le conseille. La racine de gingembre est utilisée comme complément à base de plantes chez les chats, surtout contre les nausées et les vomissements, mais naturel ne veut pas dire sans danger : le gingembre peut provoquer de légers troubles digestifs.",
-    "es": "Es mejor no darle jengibre a tu gato, salvo que te lo sugiera tu veterinario. La raíz de jengibre se usa como suplemento herbal en gatos, sobre todo contra las náuseas y los vómitos, pero natural no significa seguro: puede causar un malestar de estómago leve."
+    "es": "Es mejor no darle jengibre a tu gato, salvo que te lo sugiera tu veterinario. La raíz de jengibre se usa como suplemento herbal en gatos, sobre todo contra las náuseas y los vómitos, pero natural no significa seguro: puede causar un malestar de estómago leve.",
+    "pt": "É melhor não dar gengibre ao teu gato, a não ser que o veterinário o sugira. A raiz de gengibre é usada como suplemento à base de plantas nos gatos, sobretudo contra náuseas e vómitos, mas natural não quer dizer seguro: pode causar uma ligeira indisposição de estômago."
   },
   "why": {
     "en": "VCA Animal Hospitals says ginger root is used in Traditional Chinese Medicine and Western herbal medicine in cats, dogs and other animals, most often as an anti-nausea and anti-vomiting supplement. The same page warns that just because a product is natural does not mean it is safe, that all medicinal plants are potentially toxic if used inappropriately or at high doses, and that pets with known bleeding disorders should not be given ginger. Your vet is the best source of information on such products. Cats don't need anything other than a complete diet.",
@@ -70,7 +74,8 @@
     "it": "VCA Animal Hospitals afferma che la radice di zenzero viene usata nella medicina tradizionale cinese e nella fitoterapia occidentale in gatti, cani e altri animali, soprattutto come integratore contro nausea e vomito. La stessa pagina avverte che il fatto che un prodotto sia naturale non significa che sia sicuro, che tutte le piante medicinali sono potenzialmente tossiche se usate in modo inappropriato o a dosi elevate, e che agli animali con disturbi emorragici noti non va dato zenzero. Il veterinario è la migliore fonte di informazioni su questi prodotti. Ai gatti non serve altro che un’alimentazione completa.",
     "de": "VCA Animal Hospitals schreibt, dass Ingwerwurzel in der Traditionellen Chinesischen Medizin und in der westlichen Pflanzenheilkunde bei Katzen, Hunden und anderen Tieren eingesetzt wird, am häufigsten als Mittel gegen Übelkeit und Erbrechen. Dieselbe Seite warnt, dass ein natürliches Produkt nicht automatisch sicher ist, dass alle Heilpflanzen bei unsachgemäßer Anwendung oder in hoher Dosis giftig sein können und dass Tiere mit bekannten Blutgerinnungsstörungen keinen Ingwer bekommen sollten. Ihr Tierarzt ist die beste Informationsquelle zu solchen Produkten. Katzen brauchen außer einer vollwertigen Ernährung nichts.",
     "fr": "VCA Animal Hospitals indique que la racine de gingembre est utilisée en médecine traditionnelle chinoise et en phytothérapie occidentale chez les chats, les chiens et d’autres animaux, le plus souvent comme complément contre les nausées et les vomissements. La même page avertit que ce n’est pas parce qu’un produit est naturel qu’il est sans danger, que toutes les plantes médicinales sont potentiellement toxiques si elles sont mal utilisées ou données à forte dose, et qu’il ne faut pas donner de gingembre aux animaux ayant des troubles de la coagulation connus. Votre vétérinaire est la meilleure source d’information sur ces produits. Les chats n’ont besoin de rien d’autre qu’une alimentation complète.",
-    "es": "VCA Animal Hospitals dice que la raíz de jengibre se usa en la medicina tradicional china y en la fitoterapia occidental en gatos, perros y otros animales, sobre todo como suplemento contra las náuseas y los vómitos. La misma página advierte de que el hecho de que un producto sea natural no significa que sea seguro, de que todas las plantas medicinales son potencialmente tóxicas si se usan de forma inadecuada o en dosis altas, y de que no se debe dar jengibre a mascotas con trastornos hemorrágicos conocidos. Tu veterinario es la mejor fuente de información sobre estos productos. Los gatos no necesitan nada más que una alimentación completa."
+    "es": "VCA Animal Hospitals dice que la raíz de jengibre se usa en la medicina tradicional china y en la fitoterapia occidental en gatos, perros y otros animales, sobre todo como suplemento contra las náuseas y los vómitos. La misma página advierte de que el hecho de que un producto sea natural no significa que sea seguro, de que todas las plantas medicinales son potencialmente tóxicas si se usan de forma inadecuada o en dosis altas, y de que no se debe dar jengibre a mascotas con trastornos hemorrágicos conocidos. Tu veterinario es la mejor fuente de información sobre estos productos. Los gatos no necesitan nada más que una alimentación completa.",
+    "pt": "A VCA Animal Hospitals diz que a raiz de gengibre é usada na medicina tradicional chinesa e na fitoterapia ocidental em gatos, cães e outros animais, na maioria das vezes como suplemento contra náuseas e vómitos. A mesma página avisa que um produto ser natural não quer dizer que seja seguro, que todas as plantas medicinais são potencialmente tóxicas se usadas de forma inadequada ou em doses altas, e que os animais com perturbações hemorrágicas conhecidas não devem tomar gengibre. O teu veterinário é a melhor fonte de informação sobre estes produtos. Os gatos não precisam de mais nada além de uma alimentação completa."
   },
   "signs": {
     "en": [
@@ -144,6 +149,12 @@
       "Vómitos",
       "Irritación leve de la piel",
       "Síntomas de reacción alérgica: respiración irregular, sarpullido, fiebre o hinchazón alrededor de la cara"
+    ],
+    "pt": [
+      "Ligeira indisposição de estômago",
+      "Vómitos",
+      "Ligeira irritação da pele",
+      "Sinais de reação alérgica: respiração irregular, erupção cutânea, febre ou inchaço à volta da cara"
     ]
   },
   "what_to_do": {
@@ -158,7 +169,8 @@
     "it": "Se il tuo gatto ha assaggiato un po’ di zenzero, controlla se compaiono vomito o mal di stomaco. Se noti segni di reazione allergica, come respiro irregolare, eruzione cutanea o viso gonfio, contatta subito il veterinario. Non dare lo zenzero come rimedio senza prima chiedere al veterinario.",
     "de": "Hat Ihre Katze ein wenig Ingwer genascht, achten Sie auf Erbrechen oder Magenbeschwerden. Sehen Sie Anzeichen einer allergischen Reaktion wie unregelmäßige Atmung, Hautausschlag oder ein geschwollenes Gesicht, wenden Sie sich sofort an Ihren Tierarzt. Geben Sie Ingwer nicht als Hausmittel, ohne vorher Ihren Tierarzt zu fragen.",
     "fr": "Si votre chat a grignoté un peu de gingembre, surveillez l’apparition de vomissements ou de troubles digestifs. Si vous observez des signes de réaction allergique, comme une respiration irrégulière, une éruption cutanée ou un visage gonflé, contactez immédiatement votre vétérinaire. Ne donnez pas de gingembre comme remède sans l’avis de votre vétérinaire.",
-    "es": "Si tu gato ha mordisqueado un poco de jengibre, observa si tiene vómitos o malestar de estómago. Si ves síntomas de reacción alérgica, como respiración irregular, sarpullido o la cara hinchada, ponte en contacto con tu veterinario inmediatamente. No le des jengibre como remedio sin preguntar antes a tu veterinario."
+    "es": "Si tu gato ha mordisqueado un poco de jengibre, observa si tiene vómitos o malestar de estómago. Si ves síntomas de reacción alérgica, como respiración irregular, sarpullido o la cara hinchada, ponte en contacto con tu veterinario inmediatamente. No le des jengibre como remedio sin preguntar antes a tu veterinario.",
+    "pt": "Se o teu gato mordiscou um pouco de gengibre, vigia se aparecem vómitos ou indisposição de estômago. Se vires sinais de reação alérgica, como respiração irregular, erupção cutânea ou a cara inchada, contacta imediatamente o teu veterinário. Não dês gengibre como remédio sem perguntares primeiro ao teu veterinário."
   },
   "serving": null,
   "child": {
@@ -173,7 +185,8 @@
     "it": "Lo zenzero è una radice che le persone usano in cucina. I gatti non ne hanno bisogno: lascia decidere agli adulti e al veterinario.",
     "de": "Ingwer ist eine Wurzel, die Menschen zum Kochen benutzen. Katzen brauchen ihn nicht, also überlass es den Erwachsenen und dem Tierarzt, darüber zu entscheiden.",
     "fr": "Le gingembre est une racine pour la cuisine des humains. Les chats n’en ont pas besoin : laisse les adultes et le vétérinaire décider.",
-    "es": "El jengibre es una raíz para cocinar para las personas. Los gatos no lo necesitan, así que deja que decidan los adultos y el veterinario."
+    "es": "El jengibre es una raíz para cocinar para las personas. Los gatos no lo necesitan, así que deja que decidan los adultos y el veterinario.",
+    "pt": "O gengibre é uma raiz para a cozinha das pessoas. Os gatos não precisam dele, por isso deixa que sejam os adultos e o veterinário a decidir."
   },
   "faq": [
     {
@@ -189,7 +202,8 @@
         "it": "Lo zenzero può aiutare il mio gatto contro la nausea?",
         "de": "Kann Ingwer meiner Katze bei Übelkeit helfen?",
         "fr": "Le gingembre peut-il aider mon chat contre les nausées ?",
-        "es": "¿Puede el jengibre ayudar a mi gato con las náuseas?"
+        "es": "¿Puede el jengibre ayudar a mi gato con las náuseas?",
+        "pt": "O gengibre pode ajudar o meu gato com as náuseas?"
       },
       "a": {
         "en": "Ginger is used as an anti-nausea and anti-vomiting supplement in animals, but only your vet can tell you whether it is safe for your cat. Medicinal plants can be toxic if used inappropriately.",
@@ -203,7 +217,8 @@
         "it": "Lo zenzero viene usato come integratore contro nausea e vomito negli animali, ma solo il veterinario può dirti se è sicuro per il tuo gatto. Le piante medicinali possono essere tossiche se usate in modo inappropriato.",
         "de": "Ingwer wird bei Tieren als Mittel gegen Übelkeit und Erbrechen eingesetzt, aber nur Ihr Tierarzt kann sagen, ob er für Ihre Katze unbedenklich ist. Heilpflanzen können bei unsachgemäßer Anwendung giftig sein.",
         "fr": "Le gingembre est utilisé comme complément contre les nausées et les vomissements chez les animaux, mais seul votre vétérinaire peut vous dire s’il est sans danger pour votre chat. Les plantes médicinales peuvent être toxiques si elles sont mal utilisées.",
-        "es": "El jengibre se usa como suplemento contra las náuseas y los vómitos en animales, pero solo tu veterinario puede decirte si es seguro para tu gato. Las plantas medicinales pueden ser tóxicas si se usan de forma inadecuada."
+        "es": "El jengibre se usa como suplemento contra las náuseas y los vómitos en animales, pero solo tu veterinario puede decirte si es seguro para tu gato. Las plantas medicinales pueden ser tóxicas si se usan de forma inadecuada.",
+        "pt": "O gengibre é usado como suplemento contra náuseas e vómitos nos animais, mas só o teu veterinário pode dizer se é seguro para o teu gato. As plantas medicinais podem ser tóxicas se usadas de forma inadequada."
       }
     }
   ],
@@ -324,6 +339,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "edd2ac622a74ec5d7f04cb18e46ff2e31fb829c6b74ecdd40d985e62410a7505"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f49340599377ef232d1bdc982032b6ea8941b7f4fbb225680a191cf1757361ba"
     }
   }
 }

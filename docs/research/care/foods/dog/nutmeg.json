@@ -13,7 +13,8 @@
     "nb": "Muskatnøtt",
     "it": "Noce moscata",
     "de": "Muskatnuss",
-    "fr": "Noix de muscade"
+    "fr": "Noix de muscade",
+    "pt": "Noz-moscada"
   },
   "question": {
     "en": "Can dogs eat nutmeg?",
@@ -27,7 +28,8 @@
     "nb": "Kan hunder spise muskatnøtt?",
     "it": "I cani possono mangiare la noce moscata?",
     "de": "Dürfen Hunde Muskatnuss fressen?",
-    "fr": "Les chiens peuvent-ils manger de la noix de muscade ?"
+    "fr": "Les chiens peuvent-ils manger de la noix de muscade ?",
+    "pt": "Os cães podem comer noz-moscada?"
   },
   "url_slug": {
     "en": "nutmeg",
@@ -41,7 +43,8 @@
     "nb": "muskatnot",
     "it": "noce-moscata",
     "de": "muskatnuss",
-    "fr": "noix-de-muscade"
+    "fr": "noix-de-muscade",
+    "pt": "noz-moscada"
   },
   "level": "dangerous",
   "answer": {
@@ -56,7 +59,8 @@
     "nb": "Nei, hold muskatnøtt unna hunden. Den inneholder giftstoffet myristicin. Den lille mengden som brukes i bakverk, er vanligvis trygg, men en stor mengde muskatnøtt kan gi hallusinasjoner, forvirring og hurtig hjerterytme.",
     "it": "No, tieni la noce moscata lontana dal tuo cane. Contiene una tossina chiamata miristicina. La piccola quantità usata nei dolci da forno è in genere sicura, ma una grande quantità di noce moscata può causare allucinazioni, disorientamento e battito cardiaco accelerato.",
     "de": "Nein, halten Sie Muskatnuss von Ihrem Hund fern. Sie enthält einen Giftstoff namens Myristicin. Die kleine Menge in Backwaren ist in der Regel unbedenklich, aber eine große Menge Muskatnuss kann Halluzinationen, Orientierungslosigkeit und schnellen Herzschlag verursachen.",
-    "fr": "Non, tenez la noix de muscade hors de portée de votre chien. Elle contient une toxine appelée myristicine. La petite quantité utilisée dans les pâtisseries est généralement sans danger, mais une grande quantité de noix de muscade peut provoquer des hallucinations, une désorientation et une accélération du rythme cardiaque."
+    "fr": "Non, tenez la noix de muscade hors de portée de votre chien. Elle contient une toxine appelée myristicine. La petite quantité utilisée dans les pâtisseries est généralement sans danger, mais une grande quantité de noix de muscade peut provoquer des hallucinations, une désorientation et une accélération du rythme cardiaque.",
+    "pt": "Não, mantém a noz-moscada longe do teu cão. Contém uma toxina chamada miristicina. A pequena quantidade usada em produtos de pastelaria é geralmente segura, mas uma grande quantidade de noz-moscada pode causar alucinações, desorientação e batimento cardíaco acelerado."
   },
   "why": {
     "en": "In large amounts, myristicin can cause hallucinations, disorientation, a faster heart rate, high blood pressure, dry mouth, belly pain and possibly seizures, and the signs can last up to 48 hours. A dog would need to eat a very large amount for this; the small amount used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Because the spice itself contains a toxin, we rate it dangerous.",
@@ -70,7 +74,8 @@
     "nb": "I store mengder kan myristicin gi hallusinasjoner, forvirring, hurtigere hjerterytme, høyt blodtrykk, tørr munn, magesmerter og muligens kramper, og symptomene kan vare i opptil 48 timer. En hund må spise svært mye for at det skal skje; den lille mengden som brukes i oppskrifter, er svært lite sannsynlig å gi alvorlige problemer, men lett urolig mage kan forekomme. Fordi selve krydderet inneholder et giftstoff, vurderer vi det som farlig.",
     "it": "In grandi quantità la miristicina può causare allucinazioni, disorientamento, battito cardiaco accelerato, pressione alta, secchezza delle fauci, mal di pancia ed eventualmente convulsioni, e i sintomi possono durare fino a 48 ore. Il cane dovrebbe mangiarne una quantità molto grande perché succeda; la piccola quantità usata nelle ricette difficilmente causa problemi seri, anche se è possibile un lieve disturbo di stomaco. Poiché la spezia contiene di per sé una tossina, la classifichiamo come pericolosa.",
     "de": "In großen Mengen kann Myristicin Halluzinationen, Orientierungslosigkeit, schnelleren Herzschlag, Bluthochdruck, trockenen Mund, Bauchschmerzen und möglicherweise Krampfanfälle verursachen, und die Anzeichen können bis zu 48 Stunden anhalten. Dafür müsste ein Hund eine sehr große Menge fressen. Die kleine Menge in Rezepten verursacht sehr wahrscheinlich keine ernsten Probleme, auch wenn leichte Magenbeschwerden auftreten können. Weil das Gewürz selbst einen Giftstoff enthält, stufen wir es als gefährlich ein.",
-    "fr": "En grande quantité, la myristicine peut provoquer des hallucinations, une désorientation, une accélération du rythme cardiaque, une hypertension, une bouche sèche, des douleurs au ventre et éventuellement des convulsions, et les signes peuvent durer jusqu’à 48 heures. Il faudrait qu’un chien en mange une très grande quantité ; il est très peu probable que la petite quantité utilisée dans les recettes cause de graves problèmes, même si de légers troubles digestifs sont possibles. Comme l’épice elle-même contient une toxine, nous la classons comme dangereuse."
+    "fr": "En grande quantité, la myristicine peut provoquer des hallucinations, une désorientation, une accélération du rythme cardiaque, une hypertension, une bouche sèche, des douleurs au ventre et éventuellement des convulsions, et les signes peuvent durer jusqu’à 48 heures. Il faudrait qu’un chien en mange une très grande quantité ; il est très peu probable que la petite quantité utilisée dans les recettes cause de graves problèmes, même si de légers troubles digestifs sont possibles. Comme l’épice elle-même contient une toxine, nous la classons comme dangereuse.",
+    "pt": "Em grandes quantidades, a miristicina pode causar alucinações, desorientação, batimento cardíaco mais rápido, tensão arterial alta, boca seca, dor de barriga e possivelmente convulsões, e os sinais podem durar até 48 horas. Um cão teria de comer uma quantidade muito grande para isto acontecer; a pequena quantidade usada nas receitas dificilmente causa problemas graves, embora possa haver uma ligeira indisposição de estômago. Como o próprio tempero contém uma toxina, classificamo-lo como perigoso."
   },
   "signs": {
     "en": [
@@ -180,6 +185,15 @@
       "Douleurs au ventre",
       "Éventuellement des convulsions",
       "Les signes peuvent durer jusqu’à 48 heures"
+    ],
+    "pt": [
+      "Ligeira indisposição de estômago (pequenas quantidades)",
+      "Alucinações e desorientação",
+      "Batimento cardíaco acelerado",
+      "Tensão arterial alta e boca seca",
+      "Dor de barriga",
+      "Possivelmente convulsões",
+      "Os sinais podem durar até 48 horas"
     ]
   },
   "what_to_do": {
@@ -194,7 +208,8 @@
     "nb": "Litt muskatnøtt i en hjemmebakt godbit er svært lite sannsynlig å gi alvorlige problemer. Hvis hunden ved et uhell har spist en stor mengde muskatnøtt, ring dyrlegen for råd.",
     "it": "Un po’ di noce moscata in un dolce da forno difficilmente causa problemi seri. Se il tuo cane ha mangiato per sbaglio una grande quantità di noce moscata, chiama il veterinario per un consiglio.",
     "de": "Ein wenig Muskatnuss in einem Gebäck verursacht sehr wahrscheinlich keine ernsten Probleme. Hat Ihr Hund versehentlich eine große Menge Muskatnuss gefressen, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten.",
-    "fr": "Il est très peu probable qu’un peu de noix de muscade dans une friandise cuite au four cause de graves problèmes. Si votre chien a mangé accidentellement une grande quantité de noix de muscade, appelez votre vétérinaire pour demander conseil."
+    "fr": "Il est très peu probable qu’un peu de noix de muscade dans une friandise cuite au four cause de graves problèmes. Si votre chien a mangé accidentellement une grande quantité de noix de muscade, appelez votre vétérinaire pour demander conseil.",
+    "pt": "Um pouco de noz-moscada numa guloseima de pastelaria dificilmente causa problemas graves. Se o teu cão comeu por acidente uma grande quantidade de noz-moscada, liga ao teu veterinário para pedires conselho."
   },
   "serving": null,
   "child": {
@@ -209,7 +224,8 @@
     "nb": "Muskatnøtt er et krydder til mat for mennesker. Det er ikke for hunder, så sett krydderglassene der hunden ikke kommer til.",
     "it": "La noce moscata è una spezia che le persone usano in cucina. Non è per i cani, quindi tieni i barattoli delle spezie dove il tuo cane non arriva.",
     "de": "Muskatnuss ist ein Gewürz, das Menschen zum Kochen benutzen. Sie ist nichts für Hunde, also stell Gewürzgläser dorthin, wo dein Hund nicht herankommt.",
-    "fr": "La noix de muscade est une épice pour la cuisine des humains. Elle n’est pas faite pour les chiens : range les pots d’épices hors de portée de ton chien."
+    "fr": "La noix de muscade est une épice pour la cuisine des humains. Elle n’est pas faite pour les chiens : range les pots d’épices hors de portée de ton chien.",
+    "pt": "A noz-moscada é um tempero para a cozinha das pessoas. Não é para cães, por isso guarda os frascos de temperos onde o teu cão não chegue."
   },
   "faq": [
     {
@@ -225,7 +241,8 @@
         "nb": "Hunden min spiste en kjeks med litt muskatnøtt. Er det farlig?",
         "it": "Il mio cane ha mangiato un biscotto con un po’ di noce moscata. È pericoloso?",
         "de": "Mein Hund hat einen Keks mit ein wenig Muskatnuss gefressen. Ist das gefährlich?",
-        "fr": "Mon chien a mangé un biscuit contenant un peu de noix de muscade. Est-ce dangereux ?"
+        "fr": "Mon chien a mangé un biscuit contenant un peu de noix de muscade. Est-ce dangereux ?",
+        "pt": "O meu cão comeu uma bolacha com um pouco de noz-moscada. É perigoso?"
       },
       "a": {
         "en": "The small amount of nutmeg used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Also check the cookie for xylitol, which some baked goods contain and which is very toxic.",
@@ -239,7 +256,8 @@
         "nb": "Den lille mengden muskatnøtt som brukes i oppskrifter, er svært lite sannsynlig å gi alvorlige problemer, men lett urolig mage kan forekomme. Sjekk også kjeksen for xylitol, som enkelte bakverk inneholder, og som er svært giftig.",
         "it": "La piccola quantità di noce moscata usata nelle ricette difficilmente causa problemi seri, anche se è possibile un lieve disturbo di stomaco. Controlla anche che il biscotto non contenga xilitolo, presente in alcuni dolci da forno e molto tossico.",
         "de": "Die kleine Menge Muskatnuss in Rezepten verursacht sehr wahrscheinlich keine ernsten Probleme, auch wenn leichte Magenbeschwerden auftreten können. Prüfen Sie den Keks außerdem auf Xylit, das manche Backwaren enthalten und das sehr giftig ist.",
-        "fr": "Il est très peu probable que la petite quantité de noix de muscade utilisée dans les recettes cause de graves problèmes, même si de légers troubles digestifs sont possibles. Vérifiez aussi que le biscuit ne contient pas de xylitol, présent dans certaines pâtisseries et très toxique."
+        "fr": "Il est très peu probable que la petite quantité de noix de muscade utilisée dans les recettes cause de graves problèmes, même si de légers troubles digestifs sont possibles. Vérifiez aussi que le biscuit ne contient pas de xylitol, présent dans certaines pâtisseries et très toxique.",
+        "pt": "A pequena quantidade de noz-moscada usada nas receitas dificilmente causa problemas graves, embora possa haver uma ligeira indisposição de estômago. Verifica também se a bolacha tem xilitol, que alguns produtos de pastelaria contêm e que é muito tóxico."
       }
     }
   ],
@@ -364,6 +382,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4aa13cee8a5c415e77f75c32037c3580d354dc5600745b870b352b26b74d50e7"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ac68d34eb63add835131eb34fe3b229e6f8ab1ecbcd83c7594ea2c6c44a73096"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nb": "Bønner",
     "it": "Fagioli",
     "de": "Bohnen",
-    "fr": "Haricots"
+    "fr": "Haricots",
+    "pt": "Feijão"
   },
   "question": {
     "en": "Can dogs eat beans?",
@@ -25,7 +26,8 @@
     "nb": "Kan hunder spise bønner?",
     "it": "I cani possono mangiare i fagioli?",
     "de": "Dürfen Hunde Bohnen fressen?",
-    "fr": "Les chiens peuvent-ils manger des haricots ?"
+    "fr": "Les chiens peuvent-ils manger des haricots ?",
+    "pt": "Os cães podem comer feijão?"
   },
   "url_slug": {
     "en": "beans",
@@ -38,7 +40,8 @@
     "nb": "bonner",
     "it": "fagioli",
     "de": "bohnen",
-    "fr": "haricots"
+    "fr": "haricots",
+    "pt": "feijao"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nb": "Ja, som godbit. Hunder kan spise mange slags bønner, for eksempel svarte bønner, kidneybønner, pintobønner, limabønner og hvite bønner, hvis de er bløtlagt og deretter kokt. Bønner kan gi hunden litt gass. Bakte bønner i saus er ikke en god idé.",
     "it": "Sì, come premio. I cani possono mangiare molti tipi di fagioli, come i fagioli neri, rossi, pinto, di Lima e bianchi, purché siano stati messi in ammollo e poi cotti. I fagioli possono causare al cane un po’ di flatulenza. I fagioli in salsa, tipo baked beans, non sono una buona idea.",
     "de": "Ja, als Leckerli. Hunde dürfen viele Bohnensorten fressen, etwa schwarze Bohnen, Kidneybohnen, Pintobohnen, Limabohnen und weiße Bohnen, wenn sie eingeweicht und danach gekocht wurden. Bohnen können bei Ihrem Hund Blähungen verursachen. Baked Beans in Soße sind keine gute Idee.",
-    "fr": "Oui, en friandise. Les chiens peuvent manger de nombreuses sortes de haricots, comme les haricots noirs, rouges, pinto, de Lima et blancs (navy), à condition qu’ils aient été trempés puis cuits. Les haricots peuvent provoquer des gaz chez votre chien. Les haricots cuits en sauce (baked beans) ne sont pas une bonne idée."
+    "fr": "Oui, en friandise. Les chiens peuvent manger de nombreuses sortes de haricots, comme les haricots noirs, rouges, pinto, de Lima et blancs (navy), à condition qu’ils aient été trempés puis cuits. Les haricots peuvent provoquer des gaz chez votre chien. Les haricots cuits en sauce (baked beans) ne sont pas une bonne idée.",
+    "pt": "Sim, como guloseima. Os cães podem comer muitos tipos de feijão, como feijão-preto, feijão-encarnado, feijão-pinto, feijão-de-lima e feijão-branco, desde que tenha sido demolhado e depois cozido. O feijão pode provocar gases no teu cão. O feijão em molho (baked beans) não é boa ideia."
   },
   "why": {
     "en": "Beans contain a lot of fibre, and uncooked they are almost indigestible. Soaking and cooking them helps dogs digest them and may reduce wind. Beans should not replace meat in a dog's diet. Baked beans themselves aren't toxic, but they are high in salt and sugar and their sauce can irritate a dog's stomach; eaten regularly, they could increase the risk of pancreatitis.",
@@ -65,7 +69,8 @@
     "nb": "Bønner inneholder mye fiber, og rå er de nesten umulige å fordøye. Bløtlegging og koking gjør dem lettere for hunder å fordøye og kan redusere gassplager. Bønner bør ikke erstatte kjøtt i kosten til en hund. Bakte bønner er ikke giftige i seg selv, men de inneholder mye salt og sukker, og sausen kan irritere magen til en hund. Hvis hunden får dem jevnlig, kan det øke risikoen for betennelse i bukspyttkjertelen (pankreatitt).",
     "it": "I fagioli contengono molte fibre e, crudi, sono quasi indigeribili. Metterli in ammollo e cuocerli aiuta i cani a digerirli e può ridurre la flatulenza. I fagioli non devono sostituire la carne nell’alimentazione del cane. I fagioli in salsa non sono tossici in sé, ma contengono molto sale e zucchero e la salsa può irritare lo stomaco del cane; mangiati con regolarità, potrebbero aumentare il rischio di pancreatite.",
     "de": "Bohnen enthalten viele Ballaststoffe, und roh sind sie fast unverdaulich. Werden sie eingeweicht und gekocht, können Hunde sie besser verdauen, und es kann Blähungen verringern. Bohnen sollten Fleisch in der Ernährung eines Hundes nicht ersetzen. Baked Beans sind an sich nicht giftig, enthalten aber viel Salz und Zucker, und ihre Soße kann den Magen eines Hundes reizen. Regelmäßig gefressen, könnten sie das Risiko einer Bauchspeicheldrüsenentzündung erhöhen.",
-    "fr": "Les haricots contiennent beaucoup de fibres et, crus, ils sont presque indigestes. Les faire tremper puis cuire aide les chiens à les digérer et peut réduire les gaz. Les haricots ne doivent pas remplacer la viande dans l’alimentation d’un chien. Les baked beans ne sont pas toxiques en eux-mêmes, mais ils sont riches en sel et en sucre et leur sauce peut irriter l’estomac du chien ; consommés régulièrement, ils pourraient augmenter le risque de pancréatite."
+    "fr": "Les haricots contiennent beaucoup de fibres et, crus, ils sont presque indigestes. Les faire tremper puis cuire aide les chiens à les digérer et peut réduire les gaz. Les haricots ne doivent pas remplacer la viande dans l’alimentation d’un chien. Les baked beans ne sont pas toxiques en eux-mêmes, mais ils sont riches en sel et en sucre et leur sauce peut irriter l’estomac du chien ; consommés régulièrement, ils pourraient augmenter le risque de pancréatite.",
+    "pt": "O feijão tem muita fibra e, cru, é quase indigerível. Demolhá-lo e cozê-lo ajuda os cães a digeri-lo e pode reduzir os gases. O feijão não deve substituir a carne na alimentação do cão. O feijão em molho (baked beans) não é tóxico em si, mas tem muito sal e açúcar e o molho pode irritar o estômago do cão; se for comido com regularidade, pode aumentar o risco de pancreatite."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nb": "Hvis hunden har spist noen bakte bønner, er en liten mengde lite sannsynlig å gjøre stor skade. Følg med på hunden i 24 timer, og kontakt dyrlegen for råd hvis du ser bekymringsfulle tegn, som urolig mage eller diaré.",
     "it": "Se il tuo cane ha mangiato dei fagioli in salsa, è improbabile che una piccola quantità faccia grossi danni. Tienilo d’occhio per 24 ore e chiedi consiglio al veterinario se noti segnali preoccupanti, come disturbi di stomaco o diarrea.",
     "de": "Hat Ihr Hund ein paar Baked Beans gefressen, richtet eine kleine Menge wahrscheinlich kaum Schaden an. Beobachten Sie Ihren Hund 24 Stunden lang und wenden Sie sich an Ihren Tierarzt, wenn Sie besorgniserregende Anzeichen wie Magenbeschwerden oder Durchfall bemerken.",
-    "fr": "Si votre chien a mangé quelques baked beans, il est peu probable qu’une petite quantité fasse beaucoup de mal. Surveillez-le pendant 24 heures et contactez votre vétérinaire pour demander conseil si vous remarquez des signes inquiétants, comme un mal de ventre ou de la diarrhée."
+    "fr": "Si votre chien a mangé quelques baked beans, il est peu probable qu’une petite quantité fasse beaucoup de mal. Surveillez-le pendant 24 heures et contactez votre vétérinaire pour demander conseil si vous remarquez des signes inquiétants, comme un mal de ventre ou de la diarrhée.",
+    "pt": "Se o teu cão comeu um pouco de feijão em molho, é pouco provável que faça muito mal. Observa o teu cão durante 24 horas e liga ao teu veterinário para pedir conselho se notares sinais preocupantes, como indisposição de estômago ou diarreia."
   },
   "serving": {
     "en": "Soaked first and then cooked, without sauce, as an occasional treat.",
@@ -92,7 +98,8 @@
     "nb": "Bløtlagt først og deretter kokt, uten saus, som en godbit av og til.",
     "it": "Prima in ammollo e poi cotti, senza salsa, come premio occasionale.",
     "de": "Erst eingeweicht und dann gekocht, ohne Soße, als gelegentliches Leckerli.",
-    "fr": "D’abord trempés puis cuits, sans sauce, en friandise occasionnelle."
+    "fr": "D’abord trempés puis cuits, sans sauce, en friandise occasionnelle.",
+    "pt": "Demolhado primeiro e depois cozido, sem molho, como guloseima ocasional."
   },
   "child": {
     "en": "Cooked beans can be a little treat for dogs, but they might make your dog a bit windy!",
@@ -105,7 +112,8 @@
     "nb": "Kokte bønner kan være en liten godbit for hunder, men de kan gi litt gass!",
     "it": "I fagioli cotti possono essere un piccolo premio per i cani, ma potrebbero far fare al tuo cane qualche puzzetta!",
     "de": "Gekochte Bohnen können für Hunde ein kleines Leckerli sein, aber dein Hund muss davon vielleicht ein bisschen pupsen!",
-    "fr": "Les haricots cuits peuvent être une petite friandise pour les chiens, mais ton chien risque de faire quelques pets !"
+    "fr": "Les haricots cuits peuvent être une petite friandise pour les chiens, mais ton chien risque de faire quelques pets !",
+    "pt": "O feijão cozido pode ser uma pequena guloseima para os cães, mas pode deixar o teu cão cheio de gases!"
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nb": "Kan hunder spise bakte bønner?",
         "it": "I cani possono mangiare i fagioli in salsa?",
         "de": "Dürfen Hunde Baked Beans fressen?",
-        "fr": "Les chiens peuvent-ils manger des baked beans ?"
+        "fr": "Les chiens peuvent-ils manger des baked beans ?",
+        "pt": "Os cães podem comer feijão em molho (baked beans)?"
       },
       "a": {
         "en": "It's best not to. The beans themselves aren't toxic, but baked beans are high in salt and sugar and the sauce can irritate a dog's stomach. If your dog ate a little you spilt on the floor, it's probably not a cause for concern.",
@@ -133,7 +142,8 @@
         "nb": "Det er best å la være. Bønnene i seg selv er ikke giftige, men bakte bønner inneholder mye salt og sukker, og sausen kan irritere magen til en hund. Hvis hunden spiste litt som du sølte på gulvet, er det trolig ingen grunn til bekymring.",
         "it": "Meglio di no. I fagioli in sé non sono tossici, ma quelli in salsa contengono molto sale e zucchero e la salsa può irritare lo stomaco del cane. Se il tuo cane ha mangiato un po’ di quelli che ti sono caduti sul pavimento, probabilmente non c’è da preoccuparsi.",
         "de": "Besser nicht. Die Bohnen selbst sind nicht giftig, aber Baked Beans enthalten viel Salz und Zucker, und die Soße kann den Magen eines Hundes reizen. Hat Ihr Hund nur ein wenig aufgeleckt, das Ihnen auf den Boden gefallen ist, ist das wahrscheinlich kein Grund zur Sorge.",
-        "fr": "Mieux vaut éviter. Les haricots eux-mêmes ne sont pas toxiques, mais les baked beans sont riches en sel et en sucre et la sauce peut irriter l’estomac du chien. Si votre chien en a mangé un peu que vous aviez renversé par terre, ce n’est probablement pas inquiétant."
+        "fr": "Mieux vaut éviter. Les haricots eux-mêmes ne sont pas toxiques, mais les baked beans sont riches en sel et en sucre et la sauce peut irriter l’estomac du chien. Si votre chien en a mangé un peu que vous aviez renversé par terre, ce n’est probablement pas inquiétant.",
+        "pt": "O melhor é não dar. O feijão em si não é tóxico, mas o feijão em molho tem muito sal e açúcar e o molho pode irritar o estômago do cão. Se o teu cão comeu um pouco que caiu no chão, provavelmente não há motivo para preocupação."
       }
     },
     {
@@ -148,7 +158,8 @@
         "nb": "Kan bønner erstatte kjøtt i kosten til hunden min?",
         "it": "I fagioli possono sostituire la carne nell’alimentazione del mio cane?",
         "de": "Können Bohnen das Fleisch in der Ernährung meines Hundes ersetzen?",
-        "fr": "Les haricots peuvent-ils remplacer la viande dans l’alimentation de mon chien ?"
+        "fr": "Les haricots peuvent-ils remplacer la viande dans l’alimentation de mon chien ?",
+        "pt": "O feijão pode substituir a carne na alimentação do meu cão?"
       },
       "a": {
         "en": "No. Feeding just beans is bad for dogs if it replaces meat in their diet.",
@@ -161,7 +172,8 @@
         "nb": "Nei. Det er ikke bra for hunder å få bare bønner i stedet for kjøtt.",
         "it": "No. Dare solo fagioli fa male ai cani se prendono il posto della carne nella loro alimentazione.",
         "de": "Nein. Wenn Bohnen das Fleisch im Futter ersetzen, ist das schlecht für Hunde.",
-        "fr": "Non. Nourrir un chien uniquement de haricots est mauvais pour lui s’ils remplacent la viande dans son alimentation."
+        "fr": "Non. Nourrir un chien uniquement de haricots est mauvais pour lui s’ils remplacent la viande dans son alimentation.",
+        "pt": "Não. Dar só feijão faz mal aos cães se substituir a carne na alimentação deles."
       }
     }
   ],
@@ -328,6 +340,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dc083c8ffb17d657d38df21b45aa8ada77dc0d4f21d2cb8f85483fb62b51ab70"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf7e16cf03b43692a1baf96a01b1ab9998bbe6c15bc339afa931a7e99f1d2cb6"
     }
   }
 }

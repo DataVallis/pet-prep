@@ -12,7 +12,8 @@
     "nb": "Brun saus",
     "it": "Sugo di carne",
     "de": "Bratensoße",
-    "fr": "Sauce au jus"
+    "fr": "Sauce au jus",
+    "pt": "Molho de carne"
   },
   "question": {
     "en": "Can dogs eat gravy?",
@@ -25,7 +26,8 @@
     "nb": "Kan hunder spise brun saus?",
     "it": "I cani possono mangiare il sugo di carne?",
     "de": "Dürfen Hunde Bratensoße fressen?",
-    "fr": "Les chiens peuvent-ils manger de la sauce au jus ?"
+    "fr": "Les chiens peuvent-ils manger de la sauce au jus ?",
+    "pt": "Os cães podem comer molho de carne?"
   },
   "url_slug": {
     "en": "gravy",
@@ -38,7 +40,8 @@
     "nb": "brun-saus",
     "it": "sugo-di-carne",
     "de": "bratensosse",
-    "fr": "sauce-au-jus-de-viande"
+    "fr": "sauce-au-jus-de-viande",
+    "pt": "molho-de-carne"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "nb": "Nei, det er best å holde brun saus unna hunder. Brun saus er fet mat som kan gi hunden urolig mage og føre til betennelse i bukspyttkjertelen (pankreatitt). Saus laget med buljongterninger er rik på salt, og løksaus inneholder løk, som hunder ikke skal spise.",
     "it": "No, meglio tenere il sugo di carne lontano dai cani. È un alimento grasso che può far venire mal di pancia al cane e portare alla pancreatite. Il sugo preparato con i dadi è molto salato, e quello alla cipolla contiene cipolla, che i cani non devono mangiare.",
     "de": "Nein, halten Sie Bratensoße besser von Hunden fern. Soße ist sehr fettig, kann einem Hund auf den Magen schlagen und zu einer Bauchspeicheldrüsenentzündung führen. Soße aus Brühwürfeln enthält viel Salz, und Zwiebelsoße enthält Zwiebeln, die Hunde nicht fressen sollten.",
-    "fr": "Non, mieux vaut tenir la sauce au jus à l’écart des chiens. C’est un aliment gras qui peut irriter l’estomac d’un chien et provoquer une pancréatite. Celle préparée avec des cubes de bouillon est très salée, et la sauce à l’oignon contient de l’oignon, que les chiens ne doivent pas manger."
+    "fr": "Non, mieux vaut tenir la sauce au jus à l’écart des chiens. C’est un aliment gras qui peut irriter l’estomac d’un chien et provoquer une pancréatite. Celle préparée avec des cubes de bouillon est très salée, et la sauce à l’oignon contient de l’oignon, que les chiens ne doivent pas manger.",
+    "pt": "Não, o melhor é manter o molho de carne longe dos cães. O molho de carne é um alimento gorduroso que pode irritar o estômago do cão e causar pancreatite. O molho feito com cubos de caldo tem muito sal, e o molho de cebola leva cebola, que os cães não devem comer."
   },
   "why": {
     "en": "Gravy is not toxic as such, but butter, meat drippings, gravies and other fatty foods can cause stomach upset with diarrhoea and vomiting. Fatty foods can also cause pancreatitis, an inflammation of the pancreas that may need hospital care. Stock cubes used for gravy contain a lot of sodium, and dogs should not eat cooked foods containing onion, such as onion gravy.",
@@ -65,7 +69,8 @@
     "nb": "Brun saus er ikke giftig i seg selv, men smør, stekesaft, saus og annen fet mat kan gi urolig mage med diaré og oppkast. Fet mat kan også gi betennelse i bukspyttkjertelen (pankreatitt), som kan kreve sykehusbehandling. Buljongterninger som brukes i saus, inneholder mye natrium, og hunder skal ikke spise tilberedt mat med løk, for eksempel løksaus.",
     "it": "Il sugo di carne non è tossico in sé, ma burro, grassi di cottura della carne, sughi e altri cibi grassi possono causare mal di pancia con diarrea e vomito. I cibi grassi possono causare anche la pancreatite, un’infiammazione del pancreas che può richiedere il ricovero. I dadi usati per il sugo contengono molto sodio, e i cani non devono mangiare cibi cotti con cipolla, come il sugo alla cipolla.",
     "de": "Bratensoße ist an sich nicht giftig, aber Butter, Bratenfett, Soßen und andere fettige Lebensmittel können Magenbeschwerden mit Durchfall und Erbrechen verursachen. Fettiges Essen kann außerdem eine Bauchspeicheldrüsenentzündung auslösen, die möglicherweise stationär behandelt werden muss. Brühwürfel für Soßen enthalten viel Natrium, und Hunde sollten keine gekochten Speisen mit Zwiebeln fressen, etwa Zwiebelsoße.",
-    "fr": "La sauce au jus n’est pas toxique en soi, mais le beurre, les jus de cuisson, les sauces au jus et d’autres aliments gras peuvent provoquer des troubles digestifs avec diarrhée et vomissements. Les aliments gras peuvent aussi provoquer une pancréatite, une inflammation du pancréas qui peut nécessiter une hospitalisation. Les cubes de bouillon utilisés pour les sauces contiennent beaucoup de sodium, et les chiens ne doivent pas manger d’aliments cuits contenant de l’oignon, comme la sauce à l’oignon."
+    "fr": "La sauce au jus n’est pas toxique en soi, mais le beurre, les jus de cuisson, les sauces au jus et d’autres aliments gras peuvent provoquer des troubles digestifs avec diarrhée et vomissements. Les aliments gras peuvent aussi provoquer une pancréatite, une inflammation du pancréas qui peut nécessiter une hospitalisation. Les cubes de bouillon utilisés pour les sauces contiennent beaucoup de sodium, et les chiens ne doivent pas manger d’aliments cuits contenant de l’oignon, comme la sauce à l’oignon.",
+    "pt": "O molho de carne não é tóxico em si, mas a manteiga, a gordura dos assados, os molhos e outros alimentos gordurosos podem causar indisposição de estômago, com diarreia e vómitos. Os alimentos gordurosos também podem causar pancreatite, uma inflamação do pâncreas que pode exigir internamento. Os cubos de caldo usados para fazer molho têm muito sódio, e os cães não devem comer alimentos cozinhados com cebola, como o molho de cebola."
   },
   "signs": {
     "en": [
@@ -144,6 +149,13 @@
       "Douleurs au ventre",
       "Refus de manger",
       "Fatigue"
+    ],
+    "pt": [
+      "Vómitos, por vezes a começar 1–4 dias depois da refeição gordurosa",
+      "Diarreia",
+      "Dor de barriga",
+      "Falta de vontade de comer",
+      "Cansaço"
     ]
   },
   "what_to_do": {
@@ -157,7 +169,8 @@
     "nb": "Hvis hunden har spist brun saus eller annen fet mat og får oppkast, vondt i magen eller blir slapp i dagene etterpå, må du kontakte dyrlegen. Tegnene kan komme noen dager senere. Hvis sausen inneholdt løk eller hvitløk, må du kontakte dyrlegen raskt.",
     "it": "Se il tuo cane ha mangiato sugo di carne o un altro cibo grasso e nei giorni seguenti ha vomito, mal di pancia o stanchezza, contatta il veterinario. I sintomi possono comparire con qualche giorno di ritardo. Se il sugo conteneva cipolla o aglio, contatta subito il veterinario.",
     "de": "Hat Ihr Hund Bratensoße oder anderes fettiges Essen gefressen und zeigt in den folgenden Tagen Erbrechen, Bauchschmerzen oder Müdigkeit, wenden Sie sich an Ihren Tierarzt. Die Anzeichen können sich um einige Tage verzögern. Enthielt die Soße Zwiebeln oder Knoblauch, wenden Sie sich umgehend an Ihren Tierarzt.",
-    "fr": "Si votre chien a mangé de la sauce ou un autre aliment gras et présente des vomissements, des douleurs au ventre ou de la fatigue dans les jours qui suivent, contactez votre vétérinaire. Les signes peuvent apparaître avec quelques jours de retard. Si la sauce contenait de l’oignon ou de l’ail, contactez rapidement votre vétérinaire."
+    "fr": "Si votre chien a mangé de la sauce ou un autre aliment gras et présente des vomissements, des douleurs au ventre ou de la fatigue dans les jours qui suivent, contactez votre vétérinaire. Les signes peuvent apparaître avec quelques jours de retard. Si la sauce contenait de l’oignon ou de l’ail, contactez rapidement votre vétérinaire.",
+    "pt": "Se o teu cão comeu molho de carne ou outro alimento gorduroso e tiver vómitos, dor de barriga ou cansaço nos dias seguintes, fala com o teu veterinário. Os sinais podem aparecer alguns dias depois. Se o molho tinha cebola ou alho, fala com o teu veterinário o mais depressa possível."
   },
   "serving": null,
   "child": {
@@ -171,7 +184,8 @@
     "nb": "Brun saus er en tung saus for mennesker som kan gi hunder vondt i magen. Behold den på din egen tallerken.",
     "it": "Il sugo di carne è una salsa pesante per le persone, che può far venire mal di pancia ai cani. Tienilo nel tuo piatto.",
     "de": "Bratensoße ist eine schwere Soße für Menschen, von der Hunde Bauchweh bekommen können. Lass sie auf deinem eigenen Teller.",
-    "fr": "La sauce au jus est une sauce riche pour les humains, qui peut donner mal au ventre aux chiens. Garde-la dans ton assiette."
+    "fr": "La sauce au jus est une sauce riche pour les humains, qui peut donner mal au ventre aux chiens. Garde-la dans ton assiette.",
+    "pt": "O molho de carne é muito pesado para os cães e pode dar-lhes dor de barriga. Deixa-o no teu prato."
   },
   "faq": [
     {
@@ -186,7 +200,8 @@
         "nb": "Kan jeg helle litt saus over maten til hunden min?",
         "it": "Posso versare un po’ di sugo sul cibo del mio cane?",
         "de": "Darf ich ein wenig Bratensoße über das Futter meines Hundes gießen?",
-        "fr": "Puis-je verser un peu de sauce sur la gamelle de mon chien ?"
+        "fr": "Puis-je verser un peu de sauce sur la gamelle de mon chien ?",
+        "pt": "Posso deitar um bocadinho de molho de carne na comida do meu cão?"
       },
       "a": {
         "en": "Better not. A vet charity advises keeping any food you share plain and not covered in gravy, sauce or seasoning, as this could upset your dog's stomach.",
@@ -199,7 +214,8 @@
         "nb": "Det er best å la være. En veldedig dyrehelseorganisasjon anbefaler at all mat du deler, er naturell og ikke dekket av saus eller krydder, siden det kan gi hunden urolig mage.",
         "it": "Meglio di no. Un ente benefico veterinario consiglia di dare solo cibi semplici, senza coprirli di sugo, salse o condimenti, perché potrebbero far venire mal di pancia al cane.",
         "de": "Besser nicht. Eine tiermedizinische Hilfsorganisation rät, alles, was Sie teilen, ungewürzt zu lassen und nicht mit Soße oder Gewürzen zu bedecken, weil das Ihrem Hund auf den Magen schlagen könnte.",
-        "fr": "Mieux vaut éviter. Une association caritative vétérinaire conseille de ne partager que des aliments nature, sans les napper de sauce, de jus de viande ou d’assaisonnement, car cela pourrait irriter l’estomac de votre chien."
+        "fr": "Mieux vaut éviter. Une association caritative vétérinaire conseille de ne partager que des aliments nature, sans les napper de sauce, de jus de viande ou d’assaisonnement, car cela pourrait irriter l’estomac de votre chien.",
+        "pt": "Melhor não. Uma organização de beneficência veterinária aconselha a manter simples qualquer alimento que partilhes, sem molho nem temperos por cima, porque isso pode irritar o estômago do teu cão."
       }
     }
   ],
@@ -325,6 +341,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "abcf8855167d37570904f35c15b0a80c810e330aea7c7435491f3594cc7f24bf"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8c328c004742b29364f15c3fd3f57c1a5d88a51c95e18479819668fafe57d61e"
     }
   }
 }

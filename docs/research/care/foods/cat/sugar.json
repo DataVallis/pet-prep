@@ -13,7 +13,8 @@
     "it": "Zucchero",
     "de": "Zucker",
     "fr": "Sucre",
-    "es": "Azúcar"
+    "es": "Azúcar",
+    "pt": "Açúcar"
   },
   "question": {
     "en": "Can cats eat sugar?",
@@ -27,7 +28,8 @@
     "it": "I gatti possono mangiare lo zucchero?",
     "de": "Dürfen Katzen Zucker fressen?",
     "fr": "Les chats peuvent-ils manger du sucre ?",
-    "es": "¿Pueden los gatos comer azúcar?"
+    "es": "¿Pueden los gatos comer azúcar?",
+    "pt": "Os gatos podem comer açúcar?"
   },
   "url_slug": {
     "en": "sugar",
@@ -41,7 +43,8 @@
     "it": "zucchero",
     "de": "zucker",
     "fr": "sucre",
-    "es": "azucar"
+    "es": "azucar",
+    "pt": "acucar"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "it": "Meglio di no. Lo zucchero non è tossico per i gatti, ma fa male e non ha alcun valore nutritivo. I gatti non sentono nemmeno il sapore dolce. Se lecca qualcosa di dolce non è un’emergenza, ma dare spesso dolcetti zuccherati può portare a un aumento di peso, al diabete e a malattie dei denti.",
     "de": "Besser nicht. Zucker ist für Katzen nicht giftig, aber ungesund und ohne jeden Nährwert. Katzen können Süßes nicht einmal schmecken. Ein kurzes Lecken an etwas Süßem ist kein Notfall, aber regelmäßig zuckerhaltige Leckereien können zu Gewichtszunahme, Diabetes und Zahnerkrankungen führen.",
     "fr": "Mieux vaut éviter. Le sucre n’est pas toxique pour les chats, mais il n’est pas bon pour eux et ne leur apporte aucune valeur nutritionnelle. Les chats ne perçoivent même pas le goût sucré. Un coup de langue n’est pas une urgence, mais des friandises sucrées données régulièrement peuvent entraîner une prise de poids, un diabète et des maladies dentaires.",
-    "es": "Es mejor no dárselo. El azúcar no es tóxico para los gatos, pero no es sano para ellos y no les aporta ningún valor nutritivo. Los gatos ni siquiera perciben el sabor dulce. Que lama algo dulce no es una urgencia, pero los premios azucarados con regularidad pueden llevar a engordar, a la diabetes y a enfermedades dentales."
+    "es": "Es mejor no dárselo. El azúcar no es tóxico para los gatos, pero no es sano para ellos y no les aporta ningún valor nutritivo. Los gatos ni siquiera perciben el sabor dulce. Que lama algo dulce no es una urgencia, pero los premios azucarados con regularidad pueden llevar a engordar, a la diabetes y a enfermedades dentales.",
+    "pt": "É melhor não. O açúcar não é tóxico para os gatos, mas não lhes faz bem e não tem valor nutricional. Os gatos nem sequer distinguem o sabor doce. Uma lambidela de algo doce não é uma emergência, mas guloseimas açucaradas com regularidade podem levar a excesso de peso, diabetes e doenças dentárias."
   },
   "why": {
     "en": "Cats are carnivores: their bodies are built to eat meat, not carbohydrates or sugar, and none of their taste buds can detect sweet flavours. Sugar adds unnecessary calories that can quickly lead to weight gain; over time, too much sugar can cause insulin resistance and eventually diabetes, and sugar contributes to cavities and gum disease. Brown sugar is no different. VCA notes that a little sugar isn't bad for most cats, but Cats Protection warns that regularly giving sugary foods could lead to health problems, so we use the stricter level.",
@@ -70,7 +74,8 @@
     "it": "I gatti sono carnivori: il loro corpo è fatto per mangiare carne, non carboidrati o zucchero, e nessuna delle loro papille gustative riconosce i sapori dolci. Lo zucchero aggiunge calorie inutili che possono portare rapidamente a un aumento di peso; col tempo, troppo zucchero può causare insulino-resistenza e, alla fine, diabete, e lo zucchero favorisce carie e malattie delle gengive. Lo zucchero di canna non è diverso. VCA osserva che un po’ di zucchero non fa male alla maggior parte dei gatti, ma Cats Protection avverte che dare con regolarità cibi zuccherati potrebbe causare problemi di salute, perciò usiamo il livello più prudente.",
     "de": "Katzen sind Fleischfresser: ihr Körper ist darauf ausgelegt, Fleisch zu verdauen, nicht Kohlenhydrate oder Zucker, und keine ihrer Geschmacksknospen kann süße Aromen wahrnehmen. Zucker liefert unnötige Kalorien, die schnell zu Gewichtszunahme führen können. Mit der Zeit kann zu viel Zucker eine Insulinresistenz und schließlich Diabetes verursachen, und Zucker trägt zu Karies und Zahnfleischerkrankungen bei. Brauner Zucker macht da keinen Unterschied. VCA weist darauf hin, dass ein wenig Zucker für die meisten Katzen nicht schlecht ist, doch Cats Protection warnt, dass regelmäßig zuckerhaltiges Futter zu gesundheitlichen Problemen führen kann. Deshalb gilt die strengere Stufe.",
     "fr": "Les chats sont des carnivores : leur corps est conçu pour manger de la viande, pas des glucides ni du sucre, et aucune de leurs papilles ne peut détecter les saveurs sucrées. Le sucre ajoute des calories inutiles qui peuvent rapidement entraîner une prise de poids ; avec le temps, trop de sucre peut provoquer une résistance à l’insuline et, à terme, du diabète, et le sucre contribue aux caries et aux maladies des gencives. Le sucre roux n’y change rien. VCA note qu’un peu de sucre n’est pas mauvais pour la plupart des chats, mais Cats Protection avertit que donner régulièrement des aliments sucrés pourrait entraîner des problèmes de santé : nous appliquons donc le niveau le plus strict.",
-    "es": "Los gatos son carnívoros: su cuerpo está hecho para comer carne, no carbohidratos ni azúcar, y ninguna de sus papilas gustativas detecta los sabores dulces. El azúcar añade calorías innecesarias que pueden llevar rápidamente a engordar; con el tiempo, demasiado azúcar puede causar resistencia a la insulina y, al final, diabetes, y el azúcar contribuye a las caries y a las enfermedades de las encías. El azúcar moreno no es diferente. VCA señala que un poco de azúcar no es malo para la mayoría de los gatos, pero Cats Protection advierte de que dar alimentos azucarados con regularidad podría llevar a problemas de salud, así que aplicamos el nivel más estricto."
+    "es": "Los gatos son carnívoros: su cuerpo está hecho para comer carne, no carbohidratos ni azúcar, y ninguna de sus papilas gustativas detecta los sabores dulces. El azúcar añade calorías innecesarias que pueden llevar rápidamente a engordar; con el tiempo, demasiado azúcar puede causar resistencia a la insulina y, al final, diabetes, y el azúcar contribuye a las caries y a las enfermedades de las encías. El azúcar moreno no es diferente. VCA señala que un poco de azúcar no es malo para la mayoría de los gatos, pero Cats Protection advierte de que dar alimentos azucarados con regularidad podría llevar a problemas de salud, así que aplicamos el nivel más estricto.",
+    "pt": "Os gatos são carnívoros: o organismo deles está feito para comer carne, não hidratos de carbono nem açúcar, e nenhuma das suas papilas gustativas deteta sabores doces. O açúcar acrescenta calorias desnecessárias que podem levar rapidamente ao aumento de peso; com o tempo, açúcar a mais pode causar resistência à insulina e, por fim, diabetes, e o açúcar contribui para as cáries e para a doença das gengivas. O açúcar amarelo não é diferente. A VCA refere que um pouco de açúcar não faz mal à maioria dos gatos, mas a Cats Protection avisa que dar alimentos açucarados com regularidade pode levar a problemas de saúde, por isso usamos o nível mais rigoroso."
   },
   "signs": {
     "en": [
@@ -120,6 +125,10 @@
     "es": [
       "Diarrea",
       "Malestar de estómago"
+    ],
+    "pt": [
+      "Diarreia",
+      "Indisposição de estômago"
     ]
   },
   "what_to_do": {
@@ -134,7 +143,8 @@
     "it": "Se il tuo gatto ha solo leccato qualcosa di dolce, non serve correre dal veterinario. Se ha mangiato una grande quantità di un cibo zuccherato, o se il cibo conteneva cioccolato, contatta subito il veterinario.",
     "de": "Hat Ihre Katze nur an etwas Süßem geleckt, müssen Sie nicht sofort zum Tierarzt eilen. Hat sie viel von einem zuckerhaltigen Lebensmittel gefressen oder enthielt es Schokolade, wenden Sie sich sofort an Ihren Tierarzt.",
     "fr": "Si votre chat vient de lécher quelque chose de sucré, il n’est pas nécessaire de se précipiter chez le vétérinaire. S’il a mangé beaucoup d’un aliment sucré, ou si l’aliment contenait du chocolat, contactez immédiatement votre vétérinaire.",
-    "es": "Si tu gato solo ha lamido algo dulce, no hace falta correr al veterinario. Si ha comido mucho de un alimento azucarado, o el alimento llevaba chocolate, ponte en contacto con tu veterinario enseguida."
+    "es": "Si tu gato solo ha lamido algo dulce, no hace falta correr al veterinario. Si ha comido mucho de un alimento azucarado, o el alimento llevaba chocolate, ponte en contacto con tu veterinario enseguida.",
+    "pt": "Se o teu gato só lambeu algo doce, não é preciso correr ao veterinário. Se comeu muito de um alimento açucarado, ou se o alimento tinha chocolate, contacta imediatamente o teu veterinário."
   },
   "serving": null,
   "child": {
@@ -149,7 +159,8 @@
     "it": "I gatti non sentono nemmeno il sapore dolce e lo zucchero non gli fa bene. I dolci sono per le persone, non per il micio.",
     "de": "Katzen können Süßes nicht einmal schmecken, und Zucker tut ihnen nicht gut. Süßigkeiten sind für Menschen da, nicht für deine Katze.",
     "fr": "Les chats ne perçoivent même pas le goût sucré, et le sucre n’est pas bon pour eux. Les sucreries sont pour les humains, pas pour ton chat.",
-    "es": "Los gatos ni siquiera notan el sabor dulce, y el azúcar no les sienta bien. Las golosinas son para las personas, no para el gatito."
+    "es": "Los gatos ni siquiera notan el sabor dulce, y el azúcar no les sienta bien. Las golosinas son para las personas, no para el gatito.",
+    "pt": "Os gatos nem sequer distinguem o sabor doce, e o açúcar não lhes faz bem. Os doces são para as pessoas, não para o gatinho."
   },
   "faq": [
     {
@@ -165,7 +176,8 @@
         "it": "I gatti sentono il sapore dello zucchero?",
         "de": "Können Katzen Zucker schmecken?",
         "fr": "Les chats perçoivent-ils le goût du sucre ?",
-        "es": "¿Pueden los gatos percibir el sabor del azúcar?"
+        "es": "¿Pueden los gatos percibir el sabor del azúcar?",
+        "pt": "Os gatos sentem o sabor do açúcar?"
       },
       "a": {
         "en": "No. Cats are carnivores and none of their taste buds can detect sweet flavours. If a cat shows interest in a sweet food, she is reacting to other ingredients, such as fat or umami flavours.",
@@ -179,7 +191,8 @@
         "it": "No. I gatti sono carnivori e nessuna delle loro papille gustative riconosce i sapori dolci. Se un gatto si interessa a un cibo dolce, sta reagendo ad altri ingredienti, come i grassi o i sapori umami.",
         "de": "Nein. Katzen sind Fleischfresser, und keine ihrer Geschmacksknospen kann süße Aromen wahrnehmen. Zeigt eine Katze Interesse an einem süßen Lebensmittel, reagiert sie auf andere Zutaten wie Fett oder Umami-Aromen.",
         "fr": "Non. Les chats sont des carnivores et aucune de leurs papilles ne peut détecter les saveurs sucrées. Si un chat s’intéresse à un aliment sucré, il réagit à d’autres ingrédients, comme les graisses ou les saveurs umami.",
-        "es": "No. Los gatos son carnívoros y ninguna de sus papilas gustativas detecta los sabores dulces. Si un gato muestra interés por un alimento dulce, está reaccionando a otros ingredientes, como la grasa o los sabores umami."
+        "es": "No. Los gatos son carnívoros y ninguna de sus papilas gustativas detecta los sabores dulces. Si un gato muestra interés por un alimento dulce, está reaccionando a otros ingredientes, como la grasa o los sabores umami.",
+        "pt": "Não. Os gatos são carnívoros e nenhuma das suas papilas gustativas deteta sabores doces. Se um gato mostra interesse por um alimento doce, está a reagir a outros ingredientes, como a gordura ou os sabores umami."
       }
     },
     {
@@ -195,7 +208,8 @@
         "it": "Lo zucchero di canna è meglio per i gatti?",
         "de": "Ist brauner Zucker besser für Katzen?",
         "fr": "Le sucre roux est-il meilleur pour les chats ?",
-        "es": "¿Es mejor el azúcar moreno para los gatos?"
+        "es": "¿Es mejor el azúcar moreno para los gatos?",
+        "pt": "O açúcar amarelo é melhor para os gatos?"
       },
       "a": {
         "en": "No. Brown sugar is still sugar; to a cat's body it's no different from white sugar.",
@@ -209,7 +223,8 @@
         "it": "No. Lo zucchero di canna è sempre zucchero: per il corpo di un gatto non è diverso da quello bianco.",
         "de": "Nein. Brauner Zucker ist trotzdem Zucker. Für den Körper einer Katze macht er keinen Unterschied zu weißem Zucker.",
         "fr": "Non. Le sucre roux reste du sucre : pour le corps d’un chat, il n’est pas différent du sucre blanc.",
-        "es": "No. El azúcar moreno sigue siendo azúcar; para el cuerpo de un gato no es diferente del azúcar blanco."
+        "es": "No. El azúcar moreno sigue siendo azúcar; para el cuerpo de un gato no es diferente del azúcar blanco.",
+        "pt": "Não. O açúcar amarelo continua a ser açúcar; para o corpo de um gato não é diferente do açúcar branco."
       }
     }
   ],
@@ -367,6 +382,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "90578e45a362a729bb5cdbd4b134e4d956784443bafa52561b9a97795246fa9b"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "445dea696f65eaa713b13fd072e9f676e8bd745b860d20d68cc89deb9110f369"
     }
   }
 }

@@ -13,7 +13,8 @@
     "nb": "Vaniljeekstrakt",
     "it": "Estratto di vaniglia",
     "de": "Vanilleextrakt",
-    "fr": "Extrait de vanille"
+    "fr": "Extrait de vanille",
+    "pt": "Extrato de baunilha"
   },
   "question": {
     "en": "Can dogs have vanilla extract?",
@@ -27,7 +28,8 @@
     "nb": "Kan hunder få vaniljeekstrakt?",
     "it": "I cani possono mangiare l’estratto di vaniglia?",
     "de": "Dürfen Hunde Vanilleextrakt bekommen?",
-    "fr": "Les chiens peuvent-ils manger de l’extrait de vanille ?"
+    "fr": "Les chiens peuvent-ils manger de l’extrait de vanille ?",
+    "pt": "Os cães podem comer extrato de baunilha?"
   },
   "url_slug": {
     "en": "vanilla",
@@ -41,7 +43,8 @@
     "nb": "vaniljeekstrakt",
     "it": "estratto-di-vaniglia",
     "de": "vanilleextrakt",
-    "fr": "extrait-de-vanille"
+    "fr": "extrait-de-vanille",
+    "pt": "extrato-de-baunilha"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "nb": "Nei, hold vaniljeekstrakt unna hunden. Vaniljeekstrakt er for det meste laget av alkohol, og alkohol kan lett gi hunder oppkast, diaré og ustø gange som om de var fulle. Hvis hunden har drukket noe, kontakt dyrlegen med en gang.",
     "it": "No, tieni l’estratto di vaniglia lontano dal tuo cane. L’estratto di vaniglia è fatto per lo più di alcol, e l’alcol può facilmente causare nei cani vomito, diarrea e un’andatura da ubriaco. Se il tuo cane ne ha bevuto un po’, contatta subito il veterinario.",
     "de": "Nein, halten Sie Vanilleextrakt von Ihrem Hund fern. Vanilleextrakt besteht größtenteils aus Alkohol, und Alkohol kann bei Hunden leicht Erbrechen, Durchfall und einen torkelnden Gang verursachen. Hat Ihr Hund davon getrunken, wenden Sie sich sofort an Ihren Tierarzt.",
-    "fr": "Non, tenez l’extrait de vanille hors de portée de votre chien. L’extrait de vanille est fait en grande partie d’alcool, et l’alcool peut facilement provoquer chez le chien des vomissements, de la diarrhée et une démarche titubante. Si votre chien en a bu, contactez immédiatement votre vétérinaire."
+    "fr": "Non, tenez l’extrait de vanille hors de portée de votre chien. L’extrait de vanille est fait en grande partie d’alcool, et l’alcool peut facilement provoquer chez le chien des vomissements, de la diarrhée et une démarche titubante. Si votre chien en a bu, contactez immédiatement votre vétérinaire.",
+    "pt": "Não, mantém o extrato de baunilha longe do teu cão. O extrato de baunilha é feito sobretudo de álcool, e o álcool pode facilmente causar vómitos, diarreia e um andar cambaleante nos cães. Se o teu cão bebeu um pouco, fala imediatamente com o teu veterinário."
   },
   "why": {
     "en": "Vanilla extract is mostly made from alcohol, and dogs are lightweights: alcohol can easily cause vomiting, diarrhoea, a drunken walk and even coma or death. Alcohol is absorbed quickly after it is swallowed, so it's important to get veterinary help promptly. Food products that contain alcohol can cause the same problems as alcoholic drinks.",
@@ -70,7 +74,8 @@
     "nb": "Vaniljeekstrakt er for det meste laget av alkohol, og hunder tåler lite: alkohol kan lett gi oppkast, diaré, ustø gange som om de var fulle og til og med koma eller død. Alkohol tas raskt opp i kroppen etter at den er svelget, så det er viktig å få dyrlegehjelp raskt. Matvarer som inneholder alkohol, kan gi de samme problemene som alkoholholdige drikker.",
     "it": "L’estratto di vaniglia è fatto per lo più di alcol, e i cani sono molto sensibili: l’alcol può facilmente causare vomito, diarrea, un’andatura da ubriaco e perfino coma o morte. L’alcol viene assorbito rapidamente dopo l’ingestione, quindi è importante rivolgersi subito al veterinario. I prodotti alimentari che contengono alcol possono causare gli stessi problemi delle bevande alcoliche.",
     "de": "Vanilleextrakt besteht größtenteils aus Alkohol, und Hunde sind Leichtgewichte: Alkohol kann leicht Erbrechen, Durchfall, einen torkelnden Gang und sogar Koma oder Tod verursachen. Alkohol wird nach dem Schlucken schnell aufgenommen, deshalb ist es wichtig, rasch tierärztliche Hilfe zu holen. Lebensmittel, die Alkohol enthalten, können dieselben Probleme verursachen wie alkoholische Getränke.",
-    "fr": "L’extrait de vanille est fait en grande partie d’alcool, et les chiens sont des poids plume : l’alcool peut facilement provoquer des vomissements, de la diarrhée, une démarche titubante, voire un coma ou la mort. L’alcool est absorbé rapidement après avoir été avalé ; il est donc important d’obtenir rapidement l’aide d’un vétérinaire. Les produits alimentaires contenant de l’alcool peuvent provoquer les mêmes problèmes que les boissons alcoolisées."
+    "fr": "L’extrait de vanille est fait en grande partie d’alcool, et les chiens sont des poids plume : l’alcool peut facilement provoquer des vomissements, de la diarrhée, une démarche titubante, voire un coma ou la mort. L’alcool est absorbé rapidement après avoir été avalé ; il est donc important d’obtenir rapidement l’aide d’un vétérinaire. Les produits alimentaires contenant de l’alcool peuvent provoquer les mêmes problèmes que les boissons alcoolisées.",
+    "pt": "O extrato de baunilha é feito sobretudo de álcool, e os cães pesam pouco: o álcool pode facilmente causar vómitos, diarreia, um andar cambaleante e até coma ou morte. O álcool é absorvido rapidamente depois de engolido, por isso é importante procurar ajuda veterinária sem demora. Os produtos alimentares com álcool podem causar os mesmos problemas das bebidas alcoólicas."
   },
   "signs": {
     "en": [
@@ -192,6 +197,16 @@
       "Respiration ralentie",
       "Baisse de la glycémie, de la tension artérielle et de la température corporelle",
       "Effondrement"
+    ],
+    "pt": [
+      "Vómitos ou ânsias de vómito",
+      "Diarreia",
+      "Falta de coordenação, andar cambaleante, como se estivesse embriagado",
+      "Salivação excessiva",
+      "Abatimento ou apatia, fraqueza",
+      "Respiração mais lenta",
+      "Açúcar baixo no sangue, tensão arterial baixa, temperatura corporal baixa",
+      "Colapso"
     ]
   },
   "what_to_do": {
@@ -206,7 +221,8 @@
     "nb": "Hvis hunden har drukket vaniljeekstrakt, merk deg hvor mye, og kontakt dyrlegen eller giftinformasjon for dyr med en gang. En hund som viser symptomer, bør til dyrlegen så snart som mulig.",
     "it": "Se il tuo cane ha bevuto l’estratto di vaniglia, annota quanto ne ha bevuto e contatta subito il veterinario o un centro antiveleni veterinario. Un cane che mostra sintomi deve essere visitato da un veterinario il prima possibile.",
     "de": "Hat Ihr Hund Vanilleextrakt getrunken, notieren Sie, wie viel, und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Ein Hund mit Anzeichen sollte so schnell wie möglich von einem Tierarzt untersucht werden.",
-    "fr": "Si votre chien a bu de l’extrait de vanille, notez la quantité et contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Un chien qui présente des signes doit être vu par un vétérinaire dès que possible."
+    "fr": "Si votre chien a bu de l’extrait de vanille, notez la quantité et contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Un chien qui présente des signes doit être vu par un vétérinaire dès que possible.",
+    "pt": "Se o teu cão bebeu extrato de baunilha, anota a quantidade e liga logo ao teu veterinário ou a uma linha de apoio toxicológico para animais. Um cão com sinais deve ser visto por um veterinário o mais depressa possível."
   },
   "serving": null,
   "child": {
@@ -221,7 +237,8 @@
     "nb": "Vaniljeekstrakt er til baking, ikke til hunder. Hold den lille flasken lukket og lagt bort, og si fra til en voksen hvis hunden finner den.",
     "it": "L’estratto di vaniglia serve per i dolci, non per i cani. Tieni la boccetta chiusa e al suo posto, e dillo a un adulto se il tuo cane la trova.",
     "de": "Vanilleextrakt ist zum Backen da, nicht für Hunde. Lass das Fläschchen verschlossen, räum es weg und sag einem Erwachsenen Bescheid, wenn dein Hund es findet.",
-    "fr": "L’extrait de vanille sert à faire des gâteaux, pas à nourrir les chiens. Garde le petit flacon bien fermé et rangé, et préviens un adulte si ton chien le trouve."
+    "fr": "L’extrait de vanille sert à faire des gâteaux, pas à nourrir les chiens. Garde le petit flacon bien fermé et rangé, et préviens un adulte si ton chien le trouve.",
+    "pt": "O extrato de baunilha é para pastelaria, não para os cães. Mantém o frasquinho fechado e guardado, e avisa um adulto se o teu cão o encontrar."
   },
   "faq": [],
   "sources": [
@@ -365,6 +382,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "99a51cc7eb4e5850113c9c8e688fda5b7cf03fefafd15cb61fa53885112c4ea6"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fc73de72bbebfa56547dd86d7b0e00e928f11c5a1e93f06c586ca3473b3e1954"
     }
   }
 }
