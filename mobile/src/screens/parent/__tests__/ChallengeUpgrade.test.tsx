@@ -13,7 +13,7 @@ import ChallengeUpgradeEntry, { slovenianWithS, upgradeButtonLabel } from '@/com
 import UnusedPurchasePrompt from '@/components/parent/UnusedPurchasePrompt';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import { readDayRows } from '@/modules/family/scoring';
-import { challengeStartedAt, readPetPlan, readPetUpgrade } from '@/modules/plan/plan';
+import { challengeStartedAt, preChallengeBefore, readPetPlan, readPetUpgrade } from '@/modules/plan/plan';
 import {
   canBuyChallenge,
   canUpgradePet,
@@ -261,6 +261,19 @@ describe('score choice at the upgrade (M6-U03, U7)', () => {
     expect(scoreChoiceWarning(scores(86), true)).toBeNull();
     expect(caretakerScores(familyScored(null).pets[0], familyScored(null))).toEqual([]);
     expect(caretakerScores(familyScored(86).pets[0], familyScored(86))).toEqual([{ childId: 2, name: expect.any(String), score: 86 }]);
+  });
+
+  it('a kept score: the plan carries the flag and nothing is »pred izzivom« (timeline)', () => {
+    const base = { type: 'challenge', status: 'paid', trial_ends_at: '2026-07-01T10:00:00+02:00', paid_at: '2026-10-07T12:00:00+02:00', payments_enforced: true, display_type: 'challenge', challenge_started_at: '2026-10-07T12:00:00+02:00' };
+    const fresh = readPetPlan(base);
+    const kept = readPetPlan({ ...base, challenge_score_kept: true });
+    expect(fresh.challenge_score_kept).toBeUndefined();
+    expect(preChallengeBefore(fresh)).toBe('2026-10-07T12:00:00+02:00');
+    expect(kept.challenge_score_kept).toBe(true);
+    expect(challengeStartedAt(kept)).toBe('2026-10-07T12:00:00+02:00'); // the 12 weeks still start at the purchase
+    expect(preChallengeBefore(kept)).toBeNull();
+    expect(isPreChallenge('2026-10-05T08:00:00+02:00', preChallengeBefore(kept))).toBe(false);
+    expect(isPreChallenge('2026-10-05T08:00:00+02:00', preChallengeBefore(fresh))).toBe(true);
   });
 
   it('explains both options, preselects »Obdrži« for a good score and sends the changed choice', async () => {

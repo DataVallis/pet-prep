@@ -102,7 +102,7 @@ Odrasli uporabljajo isti izdelek brez spremembe aplikacije: račun starša → d
 
 | # | Odločitev |
 |---|---|
-| U1–U3 | **Nadgradnja brezplačnega ljubljenčka v izziv** *(zgrajeno 11. 11. 2026, PR 1 / ROADMAP M6-U01 — pri uporabnikih od 11. 11. 2026)*: starš lahko mešančka ali domačo mačko, za katerega otrok že skrbi, nadgradi v 12-tedenski izziv **z istim ljubljenčkom** (ime, videz, starost, naučeni ukazi ostanejo). **49,99 €, isti izdelek** `petprep_challenge_12w` — v trgovinah ni novega izdelka. 12 tednov teče od nakupa; dnevi pred nakupom ne štejejo v oceno in certifikat. |
+| U1–U3 | **Nadgradnja brezplačnega ljubljenčka v izziv** *(zgrajeno 11. 11. 2026, PR 1 / ROADMAP M6-U01 — pri uporabnikih od 11. 11. 2026)*: starš lahko mešančka ali domačo mačko, za katerega otrok že skrbi, nadgradi v 12-tedenski izziv **z istim ljubljenčkom** (ime, videz, starost, naučeni ukazi ostanejo). **49,99 €, isti izdelek** `petprep_challenge_12w` — v trgovinah ni novega izdelka. 12 tednov teče od nakupa; dnevi pred nakupom ne štejejo v oceno in certifikat — razen če starš ob nakupu izbere »Obdrži dosedanjo oceno« (U7, M6-U03, 15. 11. 2026: starš izbere, ali se ocena skrbi obdrži ali začne na novo). |
 | U4–U5 | *(zgrajeno 11. 11. 2026, PR 2 / ROADMAP M6-U02 — pri uporabnikih od 11. 11. 2026)* Izbira »mešanček + izziv« že ob ustvarjanju (samo nove aplikacije; nadomesti pravilo M5-F03 »izziv samo s plačljivo pasmo«; ista cena 49,99 €, ob rojstvu čaka na nakup) in en opomnik staršu 7. dan, ko je otrok skrbel vsaj 5 od prvih 7 dni. Učinek na konverzijo še ni izmerjen. |
 
 ### Razmejitev brezplačno / plačljivo (potrdil David 7. 10. 2026, P4)

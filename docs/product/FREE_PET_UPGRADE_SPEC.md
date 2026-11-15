@@ -150,9 +150,9 @@ Besedila so EN + SL, za psa in muco.
 
 **5.4a Izbira ocene (U7, M6-U03, 15. 11. 2026)**
 - Stolpec `pets.challenge_score_kept` (bool, privzeto false, brez polnjenja obstoječih; CHECK: samo pri nadgrajenem ljubljenčku; vračilo ga počisti) in `challenge_purchase_intents.keep_score` (nullable).
-- Aplikacija pošlje `keep_score` v `POST …/challenge/intent` (pred odprtjem trgovine) in v `POST …/challenge/activate`. Webhook z namenom uporabi izbiro iz namena. Aktivacija brez polja uporabi izbiro iz odprtega namena tega starša za tega ljubljenčka, sicer »začni na novo« (stare aplikacije).
+- Aplikacija pošlje `keep_score` v `POST …/challenge/intent` (pred odprtjem trgovine) in v `POST …/challenge/activate`. Webhook z namenom uporabi izbiro iz namena. Aktivacija brez polja uporabi izbiro iz odprtega namena tega starša za tega ljubljenčka iz zadnjih 24 ur, sicer »začni na novo« (stare aplikacije).
 - `CareScoreService::scoreSinceOf()` / `scoreStartOf()`: pri obdržani oceni `childScore`, `petSummary`, bolezni in `pre_challenge` ne režejo pri nakupu (štejejo od otrokovega začetka oz. rojstva). `challengeStartOf()` / `challengeStartedOf()` (teden N, 84 dni, konec potrdila, »konec simulacije«) ostanejo pri nakupu.
-- `plan.challenge_score_kept` v podatkih načrta in v izvozu družine.
+- `plan.challenge_score_kept: true` v podatkih načrta samo pri obdržani oceni (ključa sicer ni — drugi načrti in stare aplikacije dobijo enake podatke kot prej); vedno v izvozu družine. Aplikacija pri obdržani oceni tudi v časovnici ne označi ničesar »pred izzivom« (`preChallengeBefore`).
 
 **5.5 Zgodovina 7 dni (PR 1)**
 - Omejitev velja po `isFreePlan()` (`FamilyDashboardService.php:41-63, 358-374, 476-483`, `ParentDashboardController.php:141-142, 195-196`) in ob spremembi načrta izgine sama. Podatki niso pobrisani.

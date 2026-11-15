@@ -53,7 +53,7 @@ export default function UpgradeScoreChoice({ petId, scores, keep, disabled = fal
   };
 
   return (
-    <View style={styles.box} accessibilityRole="radiogroup" testID={`score-choice-${petId}`}>
+    <View style={styles.box} accessibilityRole="radiogroup" accessibilityLabel={t('paywall:scoreChoice.title')} testID={`score-choice-${petId}`}>
       <Text style={styles.title}>{t('paywall:scoreChoice.title')}</Text>
       <Text style={styles.body}>{current}</Text>
       {option(true, t('paywall:scoreChoice.keepTitle'), t('paywall:scoreChoice.keepBody'))}

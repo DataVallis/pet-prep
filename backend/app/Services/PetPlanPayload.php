@@ -29,7 +29,7 @@ use Carbon\CarbonInterface;
  * `challenge_started_at` (M6-U01, additive): the purchase that upgraded a free pet to
  * the challenge — its 12 weeks, score and certificate count from here, days before it
  * are »pred izzivom« in the history; null for every other pet (unchanged behaviour).
- * `challenge_score_kept` (M6-U03, additive): the parent chose at that purchase to keep the
+ * `challenge_score_kept` (M6-U03, additive, present only when true): the parent chose at that purchase to keep the
  * Care Score so far — only the 12 weeks count from the purchase, the score from each
  * child's own start.
  */
@@ -88,7 +88,7 @@ final class PetPlanPayload
     }
 
     /**
-     * @return array{type: 'free'|'challenge', status: 'trial'|'payment_required'|'paid'|null, trial_ends_at: string|null, paid_at: string|null, payments_enforced: bool, display_type: 'free'|'challenge', challenge_started_at: string|null, challenge_score_kept: bool}
+     * @return array{type: 'free'|'challenge', status: 'trial'|'payment_required'|'paid'|null, trial_ends_at: string|null, paid_at: string|null, payments_enforced: bool, display_type: 'free'|'challenge', challenge_started_at: string|null, challenge_score_kept?: true}
      */
     public function toArray(): array
     {
@@ -111,13 +111,11 @@ final class PetPlanPayload
              * @var string|null
              */
             'challenge_started_at' => $this->challengeStartedAt,
-            /**
-             * M6-U03: the parent kept the Care Score at the upgrade — the score (and the
-             * certificate's) counts from each child's own start, no day is »pred izzivom«.
-             *
-             * @var bool
-             */
-            'challenge_score_kept' => $this->challengeScoreKept,
+            // M6-U03: `challenge_score_kept: true` — only present when the parent kept the Care
+            // Score at the upgrade (the score and the certificate's count from each child's own
+            // start, no day is »pred izzivom«). Absent otherwise: every other plan stays byte
+            // for byte as before (older apps, regression snapshots).
+            ...($this->challengeScoreKept ? ['challenge_score_kept' => true] : []),
         ];
     }
 }

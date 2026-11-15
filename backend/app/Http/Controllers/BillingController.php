@@ -38,7 +38,7 @@ class BillingController extends Controller
      * null for a challenge pet) says whether the free pet can be upgraded to the
      * challenge (`reason` when not — `legacy_profile` → the app explains);
      * `challenge_started_at` = the purchase that upgraded a free pet (its 12 weeks
-     * start there), null for every other pet.
+     * start there; the score too, unless the parent kept it — M6-U03), null for every other pet.
      *
      * GET /api/parent/billing
      */

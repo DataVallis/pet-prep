@@ -585,6 +585,11 @@ export interface PetPlan {
    * pet (and from an older server).
    */
   challenge_started_at?: string | null;
+  /**
+   * M6-U03: present (true) only when the parent chose at the upgrade to keep the Care Score —
+   * the score counts from the child's own start and no day is »pred izzivom«.
+   */
+  challenge_score_kept?: boolean;
 }
 
 /** M6-U01: why a free pet can't be upgraded to the challenge (server `upgrade.reason`). */

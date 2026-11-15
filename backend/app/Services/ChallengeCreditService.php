@@ -205,9 +205,8 @@ class ChallengeCreditService
      * Assign the family's oldest available credit to $pet (parent action).
      * Works for an unborn pet too (M3-13: the parent buys before the contract).
      *
+     * @param  bool|null  $keepScore  M6-U03: upgrade of a free pet — keep the Care Score so far; null = the parent's recent open intent decides, else it starts again
      * @return array{status: 'activated'|'already_active', pet: Pet, credit: ChallengeCredit|null}
-     *
-     * @param  bool|null  $keepScore  M6-U03: upgrade of a free pet — keep the Care Score so far; null = the parent's open intent decides, else it starts again
      *
      * @throws ChallengeException free_plan / already_paid / pet_not_active (422), no_credit (409);
      *                            for a free pet (M6-U01) game_over / pet_not_born / legacy_profile (422)
@@ -246,13 +245,16 @@ class ChallengeCreditService
             }
 
             // M6-U03 (U7): the parent's choice — this call's `keep_score`, else the one recorded
-            // with their open intent for this pet (the app bought, the webhook was late), else
+            // with their open intent for this pet of the last INTENT_CHOICE_HOURS (the app
+            // bought, the webhook was late), else
             // the score starts again at the purchase.
             if ($keepScore === null && $parent !== null && $locked->plan === PetPlan::Free) {
                 $keepScore = ChallengePurchaseIntent::where('parent_user_id', $parent->id)
                     ->where('pet_id', $locked->id)
                     ->open()
                     ->whereNotNull('keep_score')
+                    // Only the choice of this purchase attempt — never one abandoned days ago.
+                    ->where('created_at', '>=', now()->subHours(self::INTENT_CHOICE_HOURS))
                     ->latest('id')
                     ->value('keep_score');
             }
@@ -523,6 +525,9 @@ class ChallengeCreditService
 
         Log::info('Challenge: free pet upgraded to the 12-week challenge', ['pet_id' => $pet->id, 'via' => $via, 'score_kept' => $keepScore]);
     }
+
+    /** M6-U03: how long an open intent's score choice (`keep_score`) still speaks for an activation without one. */
+    public const INTENT_CHOICE_HOURS = 24;
 
     /** Clock skew between the store's purchase time and our intent timestamps. */
     public const INTENT_SKEW_MINUTES = 5;

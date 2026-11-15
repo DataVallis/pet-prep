@@ -859,7 +859,7 @@ describe('keep the Care Score at the upgrade (M6-U03, David 2026-11-15)', functi
         actingAsRole($parent);
         postJson("/api/parent/pets/{$pet->id}/challenge/activate", ['keep_score' => false])
             ->assertOk()
-            ->assertJsonPath('plan.challenge_score_kept', false);
+            ->assertJsonMissingPath('plan.challenge_score_kept'); // only present when kept
         $pet = $pet->fresh();
 
         fuAt('2026-10-20 10:00:00');
@@ -894,7 +894,7 @@ describe('keep the Care Score at the upgrade (M6-U03, David 2026-11-15)', functi
         expect($pet->fresh()->challenge_score_kept)->toBeTrue();
     });
 
-    it('activate without a body uses the choice of the parent\'s open intent (two waiting pets: the webhook could not assign)', function () {
+    it('activate without a body uses the choice of the parent\'s recent open intent (the webhook could not use it) — never one older than a day', function () {
         [$parent, , $pet] = fuFamily();
         // An expired intent is not used by the webhook, but still says what the parent chose.
         app('auth')->forgetGuards();
@@ -906,6 +906,16 @@ describe('keep the Care Score at the upgrade (M6-U03, David 2026-11-15)', functi
 
         fuActivate($parent, $pet)->assertOk()->assertJsonPath('status', 'activated');
         expect($pet->fresh()->challenge_score_kept)->toBeTrue();
+
+        // A choice abandoned more than a day ago says nothing about a later purchase.
+        [$parent2, , $pet2] = fuFamily();
+        app('auth')->forgetGuards();
+        actingAsRole($parent2);
+        postJson("/api/parent/pets/{$pet2->id}/challenge/intent", ['keep_score' => true])->assertCreated();
+        fuAt('2026-10-09 12:00:00');
+        fuPurchase($parent2)->assertOk();
+        fuActivate($parent2, $pet2)->assertOk()->assertJsonPath('status', 'activated');
+        expect($pet2->fresh()->challenge_score_kept)->toBeFalse();
     });
 
     it('never stores a choice for a pet that is not free, validates the flag, and a refund clears it', function () {
