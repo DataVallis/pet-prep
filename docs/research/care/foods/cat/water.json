@@ -1,0 +1,69 @@
+{
+  "slug": "water",
+  "species": "cat",
+  "name": {"en": "Water", "sl": "Voda"},
+  "question": {"en": "What should cats drink?", "sl": "Kaj naj pijejo mačke?"},
+  "url_slug": {"en": "water", "sl": "voda"},
+  "level": "small_amounts",
+  "answer": {
+    "en": "Water. Plain, fresh water is the best drink for adult cats, and your cat should have it available at all times and be able to drink as much as it wants. Cats don't need anything else to drink.",
+    "sl": "Vodo. Navadna sveža voda je najboljša pijača za odrasle mačke; mačka naj jo ima na voljo ves čas in naj je lahko popije, kolikor želi. Drugih pijač mačke ne potrebujejo."
+  },
+  "why": {
+    "en": "Water helps keep a cat's kidneys working and its organs in good order, and helping cats avoid becoming dehydrated is a very important part of keeping them healthy. Cats Protection and PDSA both say water is the only drink a cat needs.",
+    "sl": "Voda pomaga ohranjati delovanje mačjih ledvic in dobro stanje organov, preprečevanje dehidracije pa je zelo pomemben del skrbi za mačje zdravje. Cats Protection in PDSA navajata, da je voda edina pijača, ki jo mačka potrebuje."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If you are worried your cat is dehydrated, for example it seems lethargic or weak, has a poor appetite or dry gums, contact a vet promptly.",
+    "sl": "Če vas skrbi, da je mačka dehidrirana, na primer je zaspana ali šibka, slabo je ali ima suhe dlesni, se nemudoma obrnite na veterinarja."
+  },
+  "serving": {
+    "en": "Keep fresh water where your cat can easily reach it and replace it at least once a day. Several bowls around the home, cleaned regularly and placed away from the food bowl, help, and some cats drink more from a water fountain.",
+    "sl": "Svežo vodo imejte tam, kjer jo mačka zlahka doseže, in jo zamenjajte vsaj enkrat na dan. Pomaga več posod po stanovanju, ki jih redno čistite in postavite stran od posode s hrano; nekatere mačke več pijejo iz fontane za vodo."
+  },
+  "child": {
+    "en": "Fresh water is the best drink for a cat! You can help by checking that kitty's water bowl is clean and full.",
+    "sl": "Sveža voda je za muco najboljša pijača! Pomagaš lahko tako, da preveriš, ali je njena posodica za vodo čista in polna."
+  },
+  "faq": [
+    {
+      "q": {"en": "How can I help my cat drink more?", "sl": "Kako lahko mački pomagam, da pije več?"},
+      "a": {
+        "en": "Put several clean water bowls around the home, away from the food bowl. Some cats drink more from a fountain, and wet food or water added to food also increases how much water they take in.",
+        "sl": "Po stanovanju postavite več čistih posod z vodo, stran od posode s hrano. Nekatere mačke več pijejo iz fontane, več vode pa zaužijejo tudi z mokro hrano ali z vodo, dodano hrani."
+      }
+    },
+    {
+      "q": {"en": "Do cats need milk as well?", "sl": "Ali mačke potrebujejo tudi mleko?"},
+      "a": {
+        "en": "No. Cats Protection says the best thing for adult cats to drink is water and that they don't need anything else to stay healthy.",
+        "sl": "Ne. Cats Protection navaja, da je za odrasle mačke najboljša pijača voda in da za zdravje ne potrebujejo ničesar drugega."
+      }
+    }
+  ],
+  "sources": [
+    {"id": "KC31", "quote": "The best thing for adult cats to drink is water."},
+    {"id": "KC31", "quote": "Water is essential for helping to maintain kidney function and keep their organs in good working order."},
+    {"id": "KC31", "quote": "They don’t need anything else to drink to keep them healthy."},
+    {"id": "KC31", "quote": "Make sure your cat has access to plain, fresh water at all times."},
+    {"id": "KC31", "quote": "They should be able to drink as much as they want."},
+    {"id": "KC15", "quote": "Your cat only needs to drink water."},
+    {"id": "KC15", "quote": "If you don’t think your cat is drinking enough, try putting several water bowls scattered around the house"},
+    {"id": "KC15", "quote": "and refresh and clean them regularly."},
+    {"id": "KC15", "quote": "Remember many cats don’t like their food and water bowls to be in the same place."},
+    {"id": "KC48", "quote": "Make sure they always have access to a bowl of water, and replace the water at least once a day to keep it fresh"},
+    {"id": "KC119", "quote": "Clearly, helping cats avoid becoming dehydrated is a very important aspect of their health maintenance"},
+    {"id": "KC119", "quote": "always having fresh water available in places that they can easily access"},
+    {"id": "KC119", "quote": "Some cats increase their intake of water when provided with water fountains"},
+    {"id": "KC119", "quote": "Feeding wet food and/or adding water to food is another good way to increase water intake"},
+    {"id": "KC119", "quote": "Signs of dehydration include lethargy, weakness, poor appetite, dry mucous membranes"},
+    {"id": "KC119", "quote": "If you are concerned that your cat is dehydrated, you should contact a veterinarian promptly."}
+  ],
+  "related": ["milk", "broth"],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "f48fb5b7b6ca786fb87b45f39ed36185751e571dc3bc3da04573a9a875328a6f"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "57619801d88bd4aac3b02d11b979544be172ed0a15eebbd0339d072e83076da1"}
+  }
+}

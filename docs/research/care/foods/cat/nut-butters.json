@@ -1,0 +1,98 @@
+{
+  "slug": "nut-butters",
+  "species": "cat",
+  "name": {
+    "en": "Nut butters (almond, walnut …)",
+    "sl": "Maslo iz oreščkov (mandljevo, orehovo …)"
+  },
+  "question": {
+    "en": "Can cats eat nut butters?",
+    "sl": "Ali lahko mačke jedo maslo iz oreščkov?"
+  },
+  "url_slug": {
+    "en": "nut-butters",
+    "sl": "maslo-iz-oresckov"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to. Nut butters are made from nuts, and nuts contain high amounts of oils and fats that can make a cat unwell, with vomiting or diarrhoea. Never give macadamia nut butter: macadamia nuts are toxic to cats.",
+    "sl": "Raje ne. Maslo iz oreščkov je narejeno iz oreščkov, ti pa vsebujejo veliko olj in maščob, zaradi katerih je mački lahko slabo, bruha ali ima drisko. Nikoli ji ne dajte masla iz makadamij: makadamije so za mačke strupene."
+  },
+  "why": {
+    "en": "Cats Protection says nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which can make a cat unwell. VCA vets say most nuts are very fatty and can cause vomiting and diarrhoea, and that macadamia nuts are very fatty, can cause pancreatitis and are also toxic to cats. Cats Protection advises sticking to cat food treats rather than human foods.",
+    "sl": "Cats Protection navaja, da oreščki, kot so makadamije, mandlji in orehi, vsebujejo veliko olj in maščob, zaradi katerih je mački lahko slabo. Veterinarji VCA pravijo, da je večina oreščkov zelo mastnih in lahko povzroči bruhanje in drisko ter da so makadamije zelo mastne, lahko povzročijo vnetje trebušne slinavke in so za mačke tudi strupene. Cats Protection svetuje, naj mački raje dajemo priboljške za mačke kot hrano za ljudi."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate macadamia nut butter, or seems unwell after eating any nut butter, book an urgent appointment with your vet.",
+    "sl": "Če je mačka pojedla maslo iz makadamij ali se po kateremkoli maslu iz oreščkov ne počuti dobro, se nujno naročite pri veterinarju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Nut butters are a people food and too oily for a cat's tummy. Give your cat its own cat treats instead.",
+    "sl": "Maslo iz oreščkov je hrana za ljudi in je preveč mastno za mačji trebušček. Muci raje daj njene priboljške za mačke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What about peanut butter?",
+        "sl": "Kaj pa arašidovo maslo?"
+      },
+      "a": {
+        "en": "Peanut butter has its own page. VCA vets say any peanut butter must be free of preservatives and life-threatening additives such as xylitol.",
+        "sl": "Arašidovo maslo ima svojo stran. Veterinarji VCA pravijo, da arašidovo maslo ne sme vsebovati konzervansov in življenjsko nevarnih dodatkov, kot je ksilitol."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "Nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which if eaten can make your cat unwell"
+    },
+    {
+      "id": "KC5",
+      "quote": "If you notice or suspect your cat has eaten food that can be harmful to them, book an urgent appointment with your vet"
+    },
+    {
+      "id": "KC43",
+      "quote": "Most nuts are very fatty and can cause vomiting and diarrhea,"
+    },
+    {
+      "id": "KC44",
+      "quote": "Not only are macadamia nuts very fatty, potentially causing pancreatitis, they’re also toxic and can cause illness in cats."
+    },
+    {
+      "id": "KC44",
+      "quote": "Don't share spicy or fatty foods with your cat."
+    },
+    {
+      "id": "KC48",
+      "quote": "It’s best to stick to cat food treats rather than giving your cat any human foods."
+    },
+    {
+      "id": "KC45",
+      "quote": "Note: Be sure your peanut butter is free of preservatives and life-threatening additives, such as xylitol."
+    }
+  ],
+  "related": [
+    "peanut-butter",
+    "almonds",
+    "walnuts",
+    "macadamia-nuts",
+    "butter"
+  ],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "53c83f6e7cc3cf86ed80b9de72a67a06fae602801df0099ef35f012f7e0699ef"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "5f21ccf842d0fa9fadedccedab9a501fda79af8352a4f0bb7aef9f93d598cc41"}
+  }
+}

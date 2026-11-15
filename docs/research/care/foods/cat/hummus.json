@@ -1,0 +1,126 @@
+{
+  "slug": "hummus",
+  "species": "cat",
+  "name": {
+    "en": "Hummus",
+    "sl": "Humus"
+  },
+  "question": {
+    "en": "Can cats eat hummus?",
+    "sl": "Ali lahko mačke jedo humus?"
+  },
+  "url_slug": {
+    "en": "hummus",
+    "sl": "humus"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, hummus is not for cats. It is usually made with garlic, and garlic is toxic to cats even when cooked. VCA vets also warn that creamy dips left on plates can cause stomach upset. Keep the dip bowl out of your cat's reach.",
+    "sl": "Ne, humus ni za mačke. Običajno vsebuje česen, ta pa je za mačke strupen, tudi kuhan. Veterinarji VCA opozarjajo tudi, da kremasti namazi, ki ostanejo na krožnikih, lahko povzročijo prebavne težave. Posodo z namazom imejte zunaj mačjega dosega."
+  },
+  "why": {
+    "en": "Hummus is mainly made from chickpeas, tahini, olive oil, lemon juice, garlic and other seasonings. Garlic belongs to the alliums, which are toxic to cats even when cooked or dried, and onion and garlic are found in many pre-made foods. Tufts vets list onion and garlic flavouring in prepared dishes among foods cats should avoid, as it can cause vomiting and diarrhoea, and VCA says these flavour boosters damage red blood cells, especially in cats.",
+    "sl": "Humus je narejen predvsem iz čičerike, tahinija, olivnega olja, limoninega soka, česna in drugih začimb. Česen spada med lukovke, ki so za mačke strupene, tudi kuhane ali posušene, čebula in česen pa sta v mnogih že pripravljenih jedeh. Veterinarji Tufts čebulo in česen kot začimbo v pripravljenih jedeh uvrščajo med živila, ki se jim morajo mačke izogibati, ker lahko povzročita bruhanje in drisko, VCA pa navaja, da ta dodatka za okus poškodujeta rdeče krvničke, še posebej pri mačkah."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Reduced appetite",
+      "Dehydration"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slabši tek",
+      "Dehidracija"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat has eaten hummus with garlic, contact your vet as soon as possible, even if your cat seems fine, because signs of anaemia can take a few days to appear.",
+    "sl": "Če je mačka pojedla humus s česnom, se čim prej obrnite na veterinarja, tudi če se zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh."
+  },
+  "serving": null,
+  "child": {
+    "en": "Hummus is a dip for people, and it usually has garlic that cats must not eat. Keep your snack plate away from kitty.",
+    "sl": "Humus je namaz za ljudi in običajno vsebuje česen, ki ga mačke ne smejo jesti. Svoj krožnik s prigrizki imej stran od muce."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What if the hummus has no garlic?",
+        "sl": "Kaj pa, če humus nima česna?"
+      },
+      "a": {
+        "en": "It is still a people food. Cats Protection advises sticking to cat food treats rather than giving your cat any human foods.",
+        "sl": "Še vedno je hrana za ljudi. Cats Protection svetuje, naj mački raje dajemo priboljške za mačke kot katero koli hrano za ljudi."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC130",
+      "quote": "Hummus is primarily made from chickpeas, tahini (sesame seed paste), olive oil, lemon juice, garlic, and other seasonings"
+    },
+    {
+      "id": "KC130",
+      "quote": "Garlic is one ingredient in hummus that can pose severe risks to your cat's wellbeing."
+    },
+    {
+      "id": "KC4",
+      "quote": "Cats shouldn’t eat onions because they are part of a group of plants called alliums, which are toxic to cats."
+    },
+    {
+      "id": "KC4",
+      "quote": "garlic, chives and leeks are also toxic, even when cooked or dried."
+    },
+    {
+      "id": "KC4",
+      "quote": "Onion and garlic can be found in many pre-made foods like sauces and baby food."
+    },
+    {
+      "id": "KC4",
+      "quote": "Symptoms include vomiting, diarrhoea, a reduced appetite, and dehydration."
+    },
+    {
+      "id": "KC4",
+      "quote": "Symptoms of anaemia (low red blood cell count) often take a bit longer to appear, usually within one to five days."
+    },
+    {
+      "id": "KC4",
+      "quote": "If your cat has eaten onions, garlic, leeks, or chives contact your vet as soon as possible."
+    },
+    {
+      "id": "KC125",
+      "quote": "Onion/garlic (the flavoring in many prepared dishes can cause vomiting, diarrhea)"
+    },
+    {
+      "id": "KC43",
+      "quote": "These flavor boosters damage the red blood cells of pets, especially in cats."
+    },
+    {
+      "id": "KC44",
+      "quote": "Other leftovers on plates, such as creamy dips, potato chips and pizza, can cause stomach upset."
+    },
+    {
+      "id": "KC5",
+      "quote": "Steer clear of garlic and onion as these can be difficult to digest and can make cats very ill."
+    },
+    {
+      "id": "KC48",
+      "quote": "It’s best to stick to cat food treats rather than giving your cat any human foods."
+    }
+  ],
+  "related": [
+    "garlic",
+    "onion",
+    "lemons",
+    "salt",
+    "pizza"
+  ],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "fa7106d7faa387a5c42e0a4437ad1df845626629086ed570ef6c204d69c50758"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "fb3721dafd9837676394ea2f114c212106b6bc1b12c89a951707c3b179c4aefa"}
+  }
+}

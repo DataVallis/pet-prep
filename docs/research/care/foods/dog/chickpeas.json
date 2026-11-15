@@ -1,0 +1,129 @@
+{
+  "slug": "chickpeas",
+  "species": "dog",
+  "name": {
+    "en": "Chickpeas",
+    "sl": "Čičerika"
+  },
+  "question": {
+    "en": "Can dogs eat chickpeas?",
+    "sl": "Ali lahko psi jedo čičeriko?"
+  },
+  "url_slug": {
+    "en": "chickpeas",
+    "sl": "cicerika"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation, if they are thoroughly cooked. Freshly cooked chickpeas (garbanzo beans) can be a treat for dogs. Dry chickpeas are a choking hazard, canned ones are usually salty, and hummus is not safe for dogs.",
+    "sl": "Da, zmerno, če je dobro kuhana. Sveže kuhana čičerika je lahko priboljšek za psa. Suha čičerika lahko povzroči dušenje, konzervirana je običajno slana, humus pa za pse ni varen."
+  },
+  "why": {
+    "en": "Chickpeas are legumes, a good source of fibre and protein for dogs, but some dogs have trouble digesting them, so they should be cooked well and introduced slowly. Dry chickpeas are much harder to digest. Canned chickpeas usually contain a lot of sodium, which is not healthy for dogs. Like other beans, chickpeas may give your dog some gas.",
+    "sl": "Čičerika je stročnica in za pse dober vir vlaknin in beljakovin, a jo nekateri psi težko prebavijo, zato jo je treba dobro skuhati in uvajati počasi. Suha čičerika je precej težje prebavljiva. Konzervirana čičerika običajno vsebuje veliko natrija, kar za pse ni zdravo. Kot drug fižol lahko tudi čičerika psu povzroči nekaj vetrov."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Introduce cooked chickpeas slowly. If you use canned chickpeas, choose a low-sodium kind and rinse them well to remove as much salt as possible.",
+    "sl": "Kuhano čičeriko uvajajte počasi. Če uporabite konzervirano, izberite takšno z malo natrija in jo dobro sperite, da odstranite čim več soli."
+  },
+  "serving": {
+    "en": "Soaked and thoroughly cooked until soft, in moderation; canned only low-sodium and well rinsed.",
+    "sl": "Namočena in dobro kuhana, da je mehka, zmerno; konzervirana le z malo natrija in dobro sprana."
+  },
+  "child": {
+    "en": "Soft, cooked chickpeas can be a little treat for dogs, but they might make your dog a bit windy!",
+    "sl": "Mehka, kuhana čičerika je lahko majhen priboljšek za psa, a ga lahko malo napihne!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat hummus?",
+        "sl": "Ali lahko psi jedo humus?"
+      },
+      "a": {
+        "en": "No. Hummus contains other ingredients that are not dog-friendly, including garlic, onion and spices.",
+        "sl": "Ne. Humus vsebuje druge sestavine, ki za pse niso primerne, med njimi česen, čebulo in začimbe."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat dry chickpeas?",
+        "sl": "Ali lahko psi jedo suho čičeriko?"
+      },
+      "a": {
+        "en": "No. Dry chickpeas can be a choking hazard and are much harder for dogs to digest; cook them thoroughly first.",
+        "sl": "Ne. Suha čičerika lahko povzroči dušenje in jo psi veliko težje prebavijo; najprej jo dobro skuhajte."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD220",
+      "quote": "Garbanzo beans"
+    },
+    {
+      "id": "KD220",
+      "quote": "Dogs can have beans or legumes that have been soaked first and then cooked."
+    },
+    {
+      "id": "KD220",
+      "quote": "Dogs can have beans as a treat."
+    },
+    {
+      "id": "KD220",
+      "quote": "(Beans may still give your dog some gas!)"
+    },
+    {
+      "id": "KD223",
+      "quote": "Legumes like beans are a good source of fibre and protein for dogs."
+    },
+    {
+      "id": "KD223",
+      "quote": "some dogs may have trouble digesting them, so they should be cooked well and introduced slowly"
+    },
+    {
+      "id": "KD223",
+      "quote": "Chickpeas (in moderation)"
+    },
+    {
+      "id": "KD224",
+      "quote": "As long as the chickpeas are freshly prepared and thoroughly cooked, they are a safe and nutritious treat for dogs."
+    },
+    {
+      "id": "KD224",
+      "quote": "When dry, chickpeas can present a choking hazard for dogs and are much harder for them to digest."
+    },
+    {
+      "id": "KD224",
+      "quote": "When chickpeas are canned, a large amount of sodium is typically used, and this is not so healthy for our dogs."
+    },
+    {
+      "id": "KD224",
+      "quote": "purchase a low-sodium variety and wash them thoroughly to remove as much salt as possible"
+    },
+    {
+      "id": "KD224",
+      "quote": "This is because hummus contains many other ingredients that are not dog-friendly, including garlic, onion, and spices."
+    }
+  ],
+  "related": [
+    "beans",
+    "lentils",
+    "garlic",
+    "salt"
+  ],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9fae2580a0181a119e123ecb00edf64cb92af1c2515021650724a3b4291bad98"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "26333f56fdcf07ba7673c7ff9702609ad3a17bc30c64d1da8575d9a857bcb99e"
+    }
+  }
+}

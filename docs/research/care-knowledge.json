@@ -9228,6 +9228,120 @@
       "updated": "2026-11-09"
     },
     {
+      "slug": "cow-milk-kittens",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Cow's milk for kittens",
+        "sl": "Kravje mleko za mladičke"
+      },
+      "question": {
+        "en": "Can kittens drink cow's milk?",
+        "sl": "Ali lahko mačji mladički pijejo kravje mleko?"
+      },
+      "url_slug": {
+        "en": "cow-milk-kittens",
+        "sl": "kravje-mleko-za-mladicke"
+      },
+      "answer": {
+        "en": "No. Kittens should drink their mother's milk, and a kitten that needs bottle-feeding should only get substitute kitten milk. Cats Protection says never to give cow's milk, as kittens find it difficult to digest. Once weaned, kittens only need water.",
+        "sl": "Ne. Mladički naj pijejo materino mleko, mladiček, ki ga je treba hraniti po steklenički, pa naj dobi le nadomestno mleko za mladičke. Cats Protection svetuje, naj jim nikoli ne dajemo kravjega mleka, ker ga težko prebavijo. Ko so odstavljeni, potrebujejo le vodo."
+      },
+      "why": {
+        "en": "Cats Protection advises never giving cow's or goat's milk to kittens because they find it difficult to digest, and PDSA calls cow's milk unsuitable. Compared with cow's milk, a mother cat's milk contains much more protein, while cow's milk has fewer calories, less fat and taurine and more lactose. Substitute kitten milk is made for kittens and contains all the nutrients they need; other milks don't have the right balance.",
+        "sl": "Cats Protection svetuje, naj mladičkom nikoli ne dajemo kravjega ali kozjega mleka, ker ga težko prebavijo, PDSA pa kravje mleko označuje kot neprimerno. Materino mačje mleko vsebuje veliko več beljakovin kot kravje, kravje mleko pa ima manj kalorij, maščob in tavrina ter več laktoze. Nadomestno mleko za mladičke je narejeno zanje in vsebuje vsa hranila, ki jih potrebujejo; druga mleka nimajo pravega razmerja hranil."
+      },
+      "signs": {
+        "en": [
+          "Diarrhoea",
+          "Weakness",
+          "Losing weight or not thriving"
+        ],
+        "sl": [
+          "Driska",
+          "Šibkost",
+          "Izguba teže ali slabo napredovanje"
+        ]
+      },
+      "what_to_do": {
+        "en": "Stop the cow's milk and ask your vet which kitten milk to use. Contact your vet straight away if a young kitten has diarrhoea, seems weak, loses weight or isn't thriving, because a kitten's condition can get worse quickly.",
+        "sl": "Prenehajte s kravjim mlekom in veterinarja vprašajte, katero mleko za mladičke uporabiti. Če ima mlad mladiček drisko, je šibek, izgublja težo ali slabo napreduje, takoj pokličite veterinarja, saj se lahko mladičkovo stanje hitro poslabša."
+      },
+      "serving": null,
+      "child": {
+        "en": "Baby cats drink their mummy's milk or special kitten milk, not milk from the fridge. Grown-up kittens just need fresh water!",
+        "sl": "Mačji mladički pijejo mamino mleko ali posebno mleko za mladičke, ne mleka iz hladilnika. Večji mladički potrebujejo le svežo vodo!"
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What should I feed an orphaned kitten?",
+            "sl": "S čim naj hranim osirotelega mladička?"
+          },
+          "a": {
+            "en": "Ask your vet first. Use a substitute kitten milk made specifically for kittens, available from vets and some pet shops, and follow the instructions on the label. Supermarket kitten or puppy milk is not suitable.",
+            "sl": "Najprej vprašajte veterinarja. Uporabite nadomestno mleko, narejeno posebej za mladičke, ki ga dobite pri veterinarju in v nekaterih trgovinah za živali, ter upoštevajte navodila na embalaži. Mleko za mladičke ali kužke iz supermarketa ni primerno."
+          }
+        },
+        {
+          "q": {
+            "en": "When do kittens stop drinking milk?",
+            "sl": "Kdaj mladički nehajo piti mleko?"
+          },
+          "a": {
+            "en": "By six to eight weeks old, kittens should be fully weaned onto solid food. From then on they only need to drink water, not milk, and their body may start making less lactase.",
+            "sl": "Do starosti šest do osem tednov naj bodo mladički popolnoma odstavljeni na trdno hrano. Od takrat naprej potrebujejo le vodo, ne mleka, njihovo telo pa lahko začne izdelovati manj laktaze."
+          }
+        },
+        {
+          "q": {
+            "en": "And adult cats?",
+            "sl": "Kaj pa odrasle mačke?"
+          },
+          "a": {
+            "en": "Most cats are lactose intolerant, and once weaned they only need to drink water, not milk. See our page on milk for cats.",
+            "sl": "Večina mačk ne prenaša laktoze, po odstavitvi pa potrebujejo le vodo, ne mleka. Oglejte si našo stran o mleku za mačke."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC127",
+        "KC127",
+        "KC127",
+        "KC127",
+        "KC128",
+        "KC128",
+        "KC128",
+        "KC128",
+        "KC128",
+        "KC128",
+        "KC128",
+        "KC129",
+        "KC129",
+        "KC129",
+        "KC129",
+        "KC31",
+        "KC31",
+        "KC31",
+        "KC31",
+        "KC31",
+        "KC15",
+        "KC15",
+        "KC15",
+        "KC15"
+      ],
+      "related": [
+        "milk",
+        "lactose-free-milk",
+        "water"
+      ],
+      "updated": "2026-11-15"
+    },
+    {
       "slug": "cranberries",
       "species": "cat",
       "level": "small_amounts",
@@ -13610,6 +13724,93 @@
       "updated": "2026-11-14"
     },
     {
+      "slug": "hummus",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Hummus",
+        "sl": "Humus"
+      },
+      "question": {
+        "en": "Can cats eat hummus?",
+        "sl": "Ali lahko mačke jedo humus?"
+      },
+      "url_slug": {
+        "en": "hummus",
+        "sl": "humus"
+      },
+      "answer": {
+        "en": "No, hummus is not for cats. It is usually made with garlic, and garlic is toxic to cats even when cooked. VCA vets also warn that creamy dips left on plates can cause stomach upset. Keep the dip bowl out of your cat's reach.",
+        "sl": "Ne, humus ni za mačke. Običajno vsebuje česen, ta pa je za mačke strupen, tudi kuhan. Veterinarji VCA opozarjajo tudi, da kremasti namazi, ki ostanejo na krožnikih, lahko povzročijo prebavne težave. Posodo z namazom imejte zunaj mačjega dosega."
+      },
+      "why": {
+        "en": "Hummus is mainly made from chickpeas, tahini, olive oil, lemon juice, garlic and other seasonings. Garlic belongs to the alliums, which are toxic to cats even when cooked or dried, and onion and garlic are found in many pre-made foods. Tufts vets list onion and garlic flavouring in prepared dishes among foods cats should avoid, as it can cause vomiting and diarrhoea, and VCA says these flavour boosters damage red blood cells, especially in cats.",
+        "sl": "Humus je narejen predvsem iz čičerike, tahinija, olivnega olja, limoninega soka, česna in drugih začimb. Česen spada med lukovke, ki so za mačke strupene, tudi kuhane ali posušene, čebula in česen pa sta v mnogih že pripravljenih jedeh. Veterinarji Tufts čebulo in česen kot začimbo v pripravljenih jedeh uvrščajo med živila, ki se jim morajo mačke izogibati, ker lahko povzročita bruhanje in drisko, VCA pa navaja, da ta dodatka za okus poškodujeta rdeče krvničke, še posebej pri mačkah."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Reduced appetite",
+          "Dehydration"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Slabši tek",
+          "Dehidracija"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat has eaten hummus with garlic, contact your vet as soon as possible, even if your cat seems fine, because signs of anaemia can take a few days to appear.",
+        "sl": "Če je mačka pojedla humus s česnom, se čim prej obrnite na veterinarja, tudi če se zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh."
+      },
+      "serving": null,
+      "child": {
+        "en": "Hummus is a dip for people, and it usually has garlic that cats must not eat. Keep your snack plate away from kitty.",
+        "sl": "Humus je namaz za ljudi in običajno vsebuje česen, ki ga mačke ne smejo jesti. Svoj krožnik s prigrizki imej stran od muce."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What if the hummus has no garlic?",
+            "sl": "Kaj pa, če humus nima česna?"
+          },
+          "a": {
+            "en": "It is still a people food. Cats Protection advises sticking to cat food treats rather than giving your cat any human foods.",
+            "sl": "Še vedno je hrana za ljudi. Cats Protection svetuje, naj mački raje dajemo priboljške za mačke kot katero koli hrano za ljudi."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC130",
+        "KC130",
+        "KC4",
+        "KC4",
+        "KC4",
+        "KC4",
+        "KC4",
+        "KC4",
+        "KC125",
+        "KC43",
+        "KC44",
+        "KC5",
+        "KC48"
+      ],
+      "related": [
+        "garlic",
+        "onion",
+        "lemons",
+        "salt",
+        "pizza"
+      ],
+      "updated": "2026-11-15"
+    },
+    {
       "slug": "ice-cream",
       "species": "cat",
       "level": "not_recommended",
@@ -13883,6 +14084,87 @@
         "chocolate"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "lactose-free-milk",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Lactose-free milk and cat milk",
+        "sl": "Mleko brez laktoze in mleko za mačke"
+      },
+      "question": {
+        "en": "Can cats drink lactose-free milk?",
+        "sl": "Ali lahko mačke pijejo mleko brez laktoze?"
+      },
+      "url_slug": {
+        "en": "lactose-free-milk",
+        "sl": "mleko-brez-laktoze"
+      },
+      "answer": {
+        "en": "It's best not to. Lactose-free milk and special cat milk are less likely to upset a cat's stomach, but they contain a lot of calories and lack the nutrients a cat needs. Cats Protection advises avoiding any type of milk; water is all cats need.",
+        "sl": "Raje ne. Mleko brez laktoze in posebno mleko za mačke manj verjetno povzročita prebavne težave, vendar vsebujeta veliko kalorij in nimata hranil, ki jih mačka potrebuje. Cats Protection svetuje, naj se izogibamo vsem vrstam mleka; mačke potrebujejo le vodo."
+      },
+      "why": {
+        "en": "Sources disagree, so we use the stricter level. Cats Protection says lactose-free milk and cat milk don't contain lactose, but they have a lot of calories that could make a cat put on weight, and it is best to avoid giving cats any type of milk. PDSA says cat milk could be an occasional treat, but its fat is often as high as other milk and its calories must be counted in the daily food allowance.",
+        "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Cats Protection navaja, da mleko brez laktoze in mleko za mačke ne vsebujeta laktoze, imata pa veliko kalorij, zaradi katerih se mačka lahko zredi, in da se je najbolje izogibati vsem vrstam mleka. PDSA pravi, da je mleko za mačke lahko občasen priboljšek, vendar ima pogosto prav toliko maščob kot drugo mleko, njegove kalorije pa je treba všteti v dnevno količino hrane."
+      },
+      "signs": {
+        "en": [
+          "Weight gain over time"
+        ],
+        "sl": [
+          "Postopno pridobivanje teže"
+        ]
+      },
+      "what_to_do": {
+        "en": "Offer fresh water instead. If you ever give cat milk as a rare treat, keep its extra calories in mind, but don't cut back your cat's complete food for it, as your cat could then get fewer vital vitamins and nutrients.",
+        "sl": "Namesto mleka ponudite svežo vodo. Če mački kdaj redko daste mleko za mačke kot priboljšek, upoštevajte njegove dodatne kalorije, vendar zaradi njega ne zmanjšajte popolne mačje hrane, saj bi mačka tako lahko dobila manj nujnih vitaminov in hranil."
+      },
+      "serving": null,
+      "child": {
+        "en": "Even special cat milk is just a treat. The drink that keeps kitty healthy every day is fresh water.",
+        "sl": "Tudi posebno mleko za mačke je le priboljšek. Pijača, ki muco vsak dan ohranja zdravo, je sveža voda."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is cat milk from the pet shop better than cow's milk?",
+            "sl": "Ali je mleko za mačke iz trgovine boljše od kravjega?"
+          },
+          "a": {
+            "en": "It usually has a lot less lactose or none, so it is less likely to make your cat poorly. But its fat content is often just as high as any other milk, and it is not a complete meal.",
+            "sl": "Običajno ima veliko manj laktoze ali je sploh nima, zato mački manj verjetno škodi. Vendar ima pogosto prav toliko maščob kot katero koli drugo mleko in ni popoln obrok."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC31",
+        "KC31",
+        "KC31",
+        "KC31",
+        "KC31",
+        "KC31",
+        "KC15",
+        "KC15",
+        "KC15",
+        "KC15",
+        "KC15",
+        "KC15",
+        "KC15"
+      ],
+      "related": [
+        "milk",
+        "cow-milk-kittens",
+        "water",
+        "yogurt",
+        "cheese"
+      ],
+      "updated": "2026-11-15"
     },
     {
       "slug": "lamb",
@@ -17220,6 +17502,83 @@
         "butter"
       ],
       "updated": "2026-11-09"
+    },
+    {
+      "slug": "nut-butters",
+      "species": "cat",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Nut butters (almond, walnut …)",
+        "sl": "Maslo iz oreščkov (mandljevo, orehovo …)"
+      },
+      "question": {
+        "en": "Can cats eat nut butters?",
+        "sl": "Ali lahko mačke jedo maslo iz oreščkov?"
+      },
+      "url_slug": {
+        "en": "nut-butters",
+        "sl": "maslo-iz-oresckov"
+      },
+      "answer": {
+        "en": "It's best not to. Nut butters are made from nuts, and nuts contain high amounts of oils and fats that can make a cat unwell, with vomiting or diarrhoea. Never give macadamia nut butter: macadamia nuts are toxic to cats.",
+        "sl": "Raje ne. Maslo iz oreščkov je narejeno iz oreščkov, ti pa vsebujejo veliko olj in maščob, zaradi katerih je mački lahko slabo, bruha ali ima drisko. Nikoli ji ne dajte masla iz makadamij: makadamije so za mačke strupene."
+      },
+      "why": {
+        "en": "Cats Protection says nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which can make a cat unwell. VCA vets say most nuts are very fatty and can cause vomiting and diarrhoea, and that macadamia nuts are very fatty, can cause pancreatitis and are also toxic to cats. Cats Protection advises sticking to cat food treats rather than human foods.",
+        "sl": "Cats Protection navaja, da oreščki, kot so makadamije, mandlji in orehi, vsebujejo veliko olj in maščob, zaradi katerih je mački lahko slabo. Veterinarji VCA pravijo, da je večina oreščkov zelo mastnih in lahko povzroči bruhanje in drisko ter da so makadamije zelo mastne, lahko povzročijo vnetje trebušne slinavke in so za mačke tudi strupene. Cats Protection svetuje, naj mački raje dajemo priboljške za mačke kot hrano za ljudi."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate macadamia nut butter, or seems unwell after eating any nut butter, book an urgent appointment with your vet.",
+        "sl": "Če je mačka pojedla maslo iz makadamij ali se po kateremkoli maslu iz oreščkov ne počuti dobro, se nujno naročite pri veterinarju."
+      },
+      "serving": null,
+      "child": {
+        "en": "Nut butters are a people food and too oily for a cat's tummy. Give your cat its own cat treats instead.",
+        "sl": "Maslo iz oreščkov je hrana za ljudi in je preveč mastno za mačji trebušček. Muci raje daj njene priboljške za mačke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What about peanut butter?",
+            "sl": "Kaj pa arašidovo maslo?"
+          },
+          "a": {
+            "en": "Peanut butter has its own page. VCA vets say any peanut butter must be free of preservatives and life-threatening additives such as xylitol.",
+            "sl": "Arašidovo maslo ima svojo stran. Veterinarji VCA pravijo, da arašidovo maslo ne sme vsebovati konzervansov in življenjsko nevarnih dodatkov, kot je ksilitol."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC5",
+        "KC5",
+        "KC43",
+        "KC44",
+        "KC44",
+        "KC48",
+        "KC45"
+      ],
+      "related": [
+        "peanut-butter",
+        "almonds",
+        "walnuts",
+        "macadamia-nuts",
+        "butter"
+      ],
+      "updated": "2026-11-15"
     },
     {
       "slug": "nutmeg",
@@ -26713,6 +27072,93 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "water",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Water",
+        "sl": "Voda"
+      },
+      "question": {
+        "en": "What should cats drink?",
+        "sl": "Kaj naj pijejo mačke?"
+      },
+      "url_slug": {
+        "en": "water",
+        "sl": "voda"
+      },
+      "answer": {
+        "en": "Water. Plain, fresh water is the best drink for adult cats, and your cat should have it available at all times and be able to drink as much as it wants. Cats don't need anything else to drink.",
+        "sl": "Vodo. Navadna sveža voda je najboljša pijača za odrasle mačke; mačka naj jo ima na voljo ves čas in naj je lahko popije, kolikor želi. Drugih pijač mačke ne potrebujejo."
+      },
+      "why": {
+        "en": "Water helps keep a cat's kidneys working and its organs in good order, and helping cats avoid becoming dehydrated is a very important part of keeping them healthy. Cats Protection and PDSA both say water is the only drink a cat needs.",
+        "sl": "Voda pomaga ohranjati delovanje mačjih ledvic in dobro stanje organov, preprečevanje dehidracije pa je zelo pomemben del skrbi za mačje zdravje. Cats Protection in PDSA navajata, da je voda edina pijača, ki jo mačka potrebuje."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If you are worried your cat is dehydrated, for example it seems lethargic or weak, has a poor appetite or dry gums, contact a vet promptly.",
+        "sl": "Če vas skrbi, da je mačka dehidrirana, na primer je zaspana ali šibka, slabo je ali ima suhe dlesni, se nemudoma obrnite na veterinarja."
+      },
+      "serving": {
+        "en": "Keep fresh water where your cat can easily reach it and replace it at least once a day. Several bowls around the home, cleaned regularly and placed away from the food bowl, help, and some cats drink more from a water fountain.",
+        "sl": "Svežo vodo imejte tam, kjer jo mačka zlahka doseže, in jo zamenjajte vsaj enkrat na dan. Pomaga več posod po stanovanju, ki jih redno čistite in postavite stran od posode s hrano; nekatere mačke več pijejo iz fontane za vodo."
+      },
+      "child": {
+        "en": "Fresh water is the best drink for a cat! You can help by checking that kitty's water bowl is clean and full.",
+        "sl": "Sveža voda je za muco najboljša pijača! Pomagaš lahko tako, da preveriš, ali je njena posodica za vodo čista in polna."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "How can I help my cat drink more?",
+            "sl": "Kako lahko mački pomagam, da pije več?"
+          },
+          "a": {
+            "en": "Put several clean water bowls around the home, away from the food bowl. Some cats drink more from a fountain, and wet food or water added to food also increases how much water they take in.",
+            "sl": "Po stanovanju postavite več čistih posod z vodo, stran od posode s hrano. Nekatere mačke več pijejo iz fontane, več vode pa zaužijejo tudi z mokro hrano ali z vodo, dodano hrani."
+          }
+        },
+        {
+          "q": {
+            "en": "Do cats need milk as well?",
+            "sl": "Ali mačke potrebujejo tudi mleko?"
+          },
+          "a": {
+            "en": "No. Cats Protection says the best thing for adult cats to drink is water and that they don't need anything else to stay healthy.",
+            "sl": "Ne. Cats Protection navaja, da je za odrasle mačke najboljša pijača voda in da za zdravje ne potrebujejo ničesar drugega."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC31",
+        "KC31",
+        "KC31",
+        "KC31",
+        "KC31",
+        "KC15",
+        "KC15",
+        "KC15",
+        "KC15",
+        "KC48",
+        "KC119",
+        "KC119",
+        "KC119",
+        "KC119",
+        "KC119",
+        "KC119"
+      ],
+      "related": [
+        "milk",
+        "broth"
+      ],
+      "updated": "2026-11-15"
+    },
+    {
       "slug": "watermelon",
       "species": "cat",
       "level": "small_amounts",
@@ -35822,6 +36268,91 @@
         "grapes"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "chickpeas",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Chickpeas",
+        "sl": "Čičerika"
+      },
+      "question": {
+        "en": "Can dogs eat chickpeas?",
+        "sl": "Ali lahko psi jedo čičeriko?"
+      },
+      "url_slug": {
+        "en": "chickpeas",
+        "sl": "cicerika"
+      },
+      "answer": {
+        "en": "Yes, in moderation, if they are thoroughly cooked. Freshly cooked chickpeas (garbanzo beans) can be a treat for dogs. Dry chickpeas are a choking hazard, canned ones are usually salty, and hummus is not safe for dogs.",
+        "sl": "Da, zmerno, če je dobro kuhana. Sveže kuhana čičerika je lahko priboljšek za psa. Suha čičerika lahko povzroči dušenje, konzervirana je običajno slana, humus pa za pse ni varen."
+      },
+      "why": {
+        "en": "Chickpeas are legumes, a good source of fibre and protein for dogs, but some dogs have trouble digesting them, so they should be cooked well and introduced slowly. Dry chickpeas are much harder to digest. Canned chickpeas usually contain a lot of sodium, which is not healthy for dogs. Like other beans, chickpeas may give your dog some gas.",
+        "sl": "Čičerika je stročnica in za pse dober vir vlaknin in beljakovin, a jo nekateri psi težko prebavijo, zato jo je treba dobro skuhati in uvajati počasi. Suha čičerika je precej težje prebavljiva. Konzervirana čičerika običajno vsebuje veliko natrija, kar za pse ni zdravo. Kot drug fižol lahko tudi čičerika psu povzroči nekaj vetrov."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Introduce cooked chickpeas slowly. If you use canned chickpeas, choose a low-sodium kind and rinse them well to remove as much salt as possible.",
+        "sl": "Kuhano čičeriko uvajajte počasi. Če uporabite konzervirano, izberite takšno z malo natrija in jo dobro sperite, da odstranite čim več soli."
+      },
+      "serving": {
+        "en": "Soaked and thoroughly cooked until soft, in moderation; canned only low-sodium and well rinsed.",
+        "sl": "Namočena in dobro kuhana, da je mehka, zmerno; konzervirana le z malo natrija in dobro sprana."
+      },
+      "child": {
+        "en": "Soft, cooked chickpeas can be a little treat for dogs, but they might make your dog a bit windy!",
+        "sl": "Mehka, kuhana čičerika je lahko majhen priboljšek za psa, a ga lahko malo napihne!"
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat hummus?",
+            "sl": "Ali lahko psi jedo humus?"
+          },
+          "a": {
+            "en": "No. Hummus contains other ingredients that are not dog-friendly, including garlic, onion and spices.",
+            "sl": "Ne. Humus vsebuje druge sestavine, ki za pse niso primerne, med njimi česen, čebulo in začimbe."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat dry chickpeas?",
+            "sl": "Ali lahko psi jedo suho čičeriko?"
+          },
+          "a": {
+            "en": "No. Dry chickpeas can be a choking hazard and are much harder for dogs to digest; cook them thoroughly first.",
+            "sl": "Ne. Suha čičerika lahko povzroči dušenje in jo psi veliko težje prebavijo; najprej jo dobro skuhajte."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD220",
+        "KD223",
+        "KD223",
+        "KD223",
+        "KD224",
+        "KD224",
+        "KD224",
+        "KD224",
+        "KD224"
+      ],
+      "related": [
+        "beans",
+        "lentils",
+        "garlic",
+        "salt"
+      ],
+      "updated": "2026-11-15"
     },
     {
       "slug": "chili-peppers",
@@ -47947,6 +48478,80 @@
       "updated": "2026-11-02"
     },
     {
+      "slug": "lactose-free-milk",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Lactose-free milk",
+        "sl": "Mleko brez laktoze"
+      },
+      "question": {
+        "en": "Can dogs drink lactose-free milk?",
+        "sl": "Ali lahko psi pijejo mleko brez laktoze?"
+      },
+      "url_slug": {
+        "en": "lactose-free-milk",
+        "sl": "mleko-brez-laktoze"
+      },
+      "answer": {
+        "en": "Only a little, and it isn't needed. Some dogs may tolerate small amounts of lactose-free milk, but dogs on a good, balanced diet don't need it, and it can still upset the stomach of dogs allergic to milk protein.",
+        "sl": "Le malo, potrebno pa ni. Nekateri psi morda prenesejo majhne količine mleka brez laktoze, a psi, ki dobivajo kakovostno, uravnoteženo hrano, ga ne potrebujejo, pri psih z alergijo na mlečne beljakovine pa lahko še vedno povzroči prebavne težave."
+      },
+      "why": {
+        "en": "Lactose-free milk has the same nutrients as regular milk but without the lactose that can cause digestive problems, and a vet hospital calls it a suitable alternative for lactose-intolerant dogs. The Australian Veterinary Association is stricter: it is not necessary for dogs on a balanced diet and can still cause stomach problems linked to milk-protein allergy, so we follow the stricter view: only a little.",
+        "sl": "Mleko brez laktoze ima enake hranilne snovi kot navadno mleko, a brez laktoze, ki lahko povzroča prebavne težave; ena veterinarska bolnišnica ga opisuje kot primerno nadomestilo za pse, ki ne prenašajo laktoze. Avstralsko veterinarsko združenje je strožje: psi na uravnoteženi prehrani ga ne potrebujejo, pri alergiji na mlečne beljakovine pa lahko še vedno povzroči prebavne težave, zato upoštevamo strožje stališče: le malo."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog gets diarrhoea, vomiting, gas or bloating after milk and it doesn't go away, contact your vet.",
+        "sl": "Če ima pes po mleku drisko, bruha, ima vetrove ali je napihnjen in to ne mine, pokličite veterinarja."
+      },
+      "serving": {
+        "en": "Start with a small amount, ideally a lactose-free milk made for dogs, and watch for tummy upset.",
+        "sl": "Začnite z malo, najbolje z mlekom brez laktoze, ki je narejeno za pse, in opazujte, ali ima pes prebavne težave."
+      },
+      "child": {
+        "en": "Dogs don't need milk to stay healthy, so ask a grown-up before sharing any with your dog.",
+        "sl": "Psi za zdravje ne potrebujejo mleka, zato vprašaj odraslega, preden psu daš kaj mleka."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is lactose-free milk better for dogs than regular milk?",
+            "sl": "Ali je mleko brez laktoze za pse boljše od navadnega?"
+          },
+          "a": {
+            "en": "It has no lactose, which can cause digestive problems, but it can still upset dogs that are allergic to milk protein.",
+            "sl": "Ne vsebuje laktoze, ki lahko povzroča prebavne težave, a pri psih z alergijo na mlečne beljakovine lahko še vedno povzroči težave."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD235",
+        "KD235",
+        "KD235",
+        "KD235",
+        "KD235",
+        "KD236",
+        "KD236",
+        "KD236",
+        "KD236",
+        "KD236",
+        "KD236"
+      ],
+      "related": [
+        "milk",
+        "yogurt",
+        "cheese",
+        "water"
+      ],
+      "updated": "2026-11-15"
+    },
+    {
       "slug": "lamb",
       "species": "dog",
       "level": "small_amounts",
@@ -48788,6 +49393,74 @@
         "oranges"
       ],
       "updated": "2026-11-02"
+    },
+    {
+      "slug": "lentils",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Lentils",
+        "sl": "Leča"
+      },
+      "question": {
+        "en": "Can dogs eat lentils?",
+        "sl": "Ali lahko psi jedo lečo?"
+      },
+      "url_slug": {
+        "en": "lentils",
+        "sl": "leca"
+      },
+      "answer": {
+        "en": "Yes, if they are cooked. Lentils are a pulse, like beans, and dogs can have legumes that have been soaked first and then cooked. Some dogs find legumes hard to digest, so introduce cooked lentils slowly.",
+        "sl": "Da, če je kuhana. Leča je stročnica, tako kot fižol, psi pa lahko jedo stročnice, ki so bile najprej namočene in nato kuhane. Nekateri psi stročnice težko prebavijo, zato kuhano lečo uvajajte počasi."
+      },
+      "why": {
+        "en": "Legumes such as lentils are a good source of fibre and protein for dogs. However, some dogs have trouble digesting them, which is why they should be cooked well and added to the diet slowly.",
+        "sl": "Stročnice, kot je leča, so za pse dober vir vlaknin in beljakovin. Nekateri psi pa jih težko prebavijo, zato jih je treba dobro skuhati in jih v prehrano uvajati počasi."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Start with a little well-cooked lentil and introduce it slowly, because some dogs have trouble digesting legumes.",
+        "sl": "Začnite z malo dobro kuhane leče in jo uvajajte počasi, ker nekateri psi stročnice težko prebavijo."
+      },
+      "serving": {
+        "en": "Well cooked (dried lentils soaked first, then cooked), introduced slowly.",
+        "sl": "Dobro kuhana (suha leča najprej namočena, nato kuhana), uvajana počasi."
+      },
+      "child": {
+        "en": "Cooked lentils can be a little treat for dogs. A grown-up should cook them well first!",
+        "sl": "Kuhana leča je lahko majhen priboljšek za psa. Odrasel jo mora najprej dobro skuhati!"
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat uncooked lentils?",
+            "sl": "Ali lahko psi jedo nekuhano lečo?"
+          },
+          "a": {
+            "en": "No. Dogs can have legumes that have been soaked first and then cooked, and lentils should be cooked well.",
+            "sl": "Ne. Psi lahko jedo stročnice, ki so bile najprej namočene in nato kuhane, lečo pa je treba dobro skuhati."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD223",
+        "KD223",
+        "KD223",
+        "KD138",
+        "KD220",
+        "KD220"
+      ],
+      "related": [
+        "beans",
+        "chickpeas",
+        "peas"
+      ],
+      "updated": "2026-11-15"
     },
     {
       "slug": "lettuce",
@@ -51630,6 +52303,80 @@
         "salt"
       ],
       "updated": "2026-11-14"
+    },
+    {
+      "slug": "nut-butters",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Nut butters",
+        "sl": "Oreščkova masla"
+      },
+      "question": {
+        "en": "Can dogs eat almond butter and other nut butters?",
+        "sl": "Ali lahko psi jedo mandljevo maslo in druga oreščkova masla?"
+      },
+      "url_slug": {
+        "en": "nut-butters",
+        "sl": "oresckova-masla"
+      },
+      "answer": {
+        "en": "Almond butter, yes, in small amounts, if it contains no xylitol. Many almond butters contain salt and sweeteners like xylitol, which is toxic to dogs, so always check the label. Not all nuts are safe: macadamia nuts are very toxic to dogs.",
+        "sl": "Mandljevo maslo da, v majhnih količinah, če ne vsebuje ksilitola. Mnoga mandljeva masla vsebujejo sol in sladila, kot je ksilitol, ki je za pse strupen, zato vedno preberite deklaracijo. Vsi oreščki niso varni: makadamija je za pse zelo strupena."
+      },
+      "why": {
+        "en": "Almonds themselves are not recommended for dogs, but a little almond butter can be a safe alternative. Nuts are high in fat, and too much almond butter can lead to pancreatitis. Some peanut and other nut butters contain xylitol, a sweetener that is toxic to dogs.",
+        "sl": "Mandlji sami za pse niso priporočljivi, malo mandljevega masla pa je lahko varna izbira. Oreščki vsebujejo veliko maščob, preveč mandljevega masla pa lahko povzroči vnetje trebušne slinavke. Nekatera arašidova in druga oreščkova masla vsebujejo ksilitol, sladilo, ki je za pse strupeno."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If you think your dog ate a nut butter containing xylitol, call your vet, an emergency clinic or an animal poison control centre right away.",
+        "sl": "Če mislite, da je pes pojedel oreščkovo maslo s ksilitolom, takoj pokličite veterinarja, dežurno veterinarsko kliniko ali center za zastrupitve živali."
+      },
+      "serving": {
+        "en": "A small amount of almond butter whose label lists no xylitol; as an occasional treat.",
+        "sl": "Malo mandljevega masla, ki na deklaraciji nima ksilitola; kot občasen priboljšek."
+      },
+      "child": {
+        "en": "A little almond butter can be a treat, but a grown-up must check the jar first. Some kinds are not safe for dogs.",
+        "sl": "Malo mandljevega masla je lahko priboljšek, a odrasel mora najprej preveriti kozarec. Nekatere vrste za pse niso varne."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "How do I know if a nut butter has xylitol?",
+            "sl": "Kako vem, ali oreščkovo maslo vsebuje ksilitol?"
+          },
+          "a": {
+            "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
+            "sl": "Preberite seznam sestavin na deklaraciji, zlasti pri izdelkih z oznako „brez sladkorja“ ali „z malo sladkorja“."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD226",
+        "KD226",
+        "KD225",
+        "KD225",
+        "KD59",
+        "KD59",
+        "KD53",
+        "KD53",
+        "KD53",
+        "KD53"
+      ],
+      "related": [
+        "peanut-butter",
+        "almonds",
+        "xylitol",
+        "macadamia-nuts",
+        "cashews"
+      ],
+      "updated": "2026-11-15"
     },
     {
       "slug": "nutmeg",
@@ -63073,6 +63820,78 @@
       "updated": "2026-11-10"
     },
     {
+      "slug": "seeds-sunflower",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Sunflower seeds",
+        "sl": "Sončnična semena"
+      },
+      "question": {
+        "en": "Can dogs eat sunflower seeds?",
+        "sl": "Ali lahko psi jedo sončnična semena?"
+      },
+      "url_slug": {
+        "en": "sunflower-seeds",
+        "sl": "soncnicna-semena"
+      },
+      "answer": {
+        "en": "Yes, as an occasional snack, if they are shelled and unsalted. Give only plain raw or toasted sunflower seeds, never the shells, which are a choking hazard and can't be digested. Too many seeds can upset your dog's stomach.",
+        "sl": "Da, kot občasen prigrizek, če so oluščena in nesoljena. Dajte le navadna surova ali popražena sončnična semena, nikoli lupin, ki lahko povzročijo dušenje in jih pes ne prebavi. Preveč semen lahko psu razdraži želodec."
+      },
+      "why": {
+        "en": "The husks are extremely hard, can't be broken down during digestion and can get stuck in the gut, causing a blockage. The salt in packaged seeds is harmful to dogs. Sunflower seeds are also high in fat, and too many can bring on vomiting, lethargy, a decreased appetite or other stomach upset.",
+        "sl": "Lupine so zelo trde, med prebavo se ne razgradijo in se lahko zataknejo v prebavilih ter jih zamašijo. Sol v pakiranih semenih psom škodi. Sončnična semena vsebujejo tudi veliko maščob; preveč jih lahko povzroči bruhanje, utrujenost, slabši apetit ali druge prebavne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Give only shelled, unsalted seeds, and talk to your vet before adding sunflower seeds to your dog's diet.",
+        "sl": "Dajte le oluščena, nesoljena semena in se pred dodajanjem sončničnih semen v pasjo prehrano posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Shelled, plain (unsalted) raw or toasted seeds, now and then in moderate amounts.",
+        "sl": "Oluščena, navadna (nesoljena) surova ali popražena semena, občasno in zmerno."
+      },
+      "child": {
+        "en": "Dogs can nibble a few plain sunflower seeds without shells, but never the salty ones from a snack bag.",
+        "sl": "Psi lahko pojedo nekaj navadnih sončničnih semen brez lupin, nikoli pa slanih iz vrečke za prigrizke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat sunflower seed shells?",
+            "sl": "Ali lahko psi jedo lupine sončničnih semen?"
+          },
+          "a": {
+            "en": "No. The shells are extremely hard, can't be digested, are a serious choking hazard and can cause a blockage in the gut.",
+            "sl": "Ne. Lupine so zelo trde, pes jih ne prebavi, lahko povzročijo dušenje in zamašijo prebavila."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD227",
+        "KD227",
+        "KD227",
+        "KD227",
+        "KD227",
+        "KD227",
+        "KD227",
+        "KD227",
+        "KD227",
+        "KD227",
+        "KD227"
+      ],
+      "related": [
+        "salt",
+        "salty-snacks"
+      ],
+      "updated": "2026-11-15"
+    },
+    {
       "slug": "shrimp",
       "species": "dog",
       "level": "small_amounts",
@@ -67353,6 +68172,110 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "water",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Water",
+        "sl": "Voda"
+      },
+      "question": {
+        "en": "Do dogs need fresh water all the time?",
+        "sl": "Ali psi potrebujejo ves čas svežo vodo?"
+      },
+      "url_slug": {
+        "en": "water",
+        "sl": "voda"
+      },
+      "answer": {
+        "en": "Yes. Dogs need fresh, clean drinking water available at all times. Wash the water bowl often, and remember that dogs may need more water in hot weather or when they exercise more. Never restrict your dog's water.",
+        "sl": "Da. Psi morajo imeti ves čas na voljo svežo, čisto pitno vodo. Posodo za vodo pogosto umivajte in pomnite, da pes v vročem vremenu ali ob več gibanja morda potrebuje več vode. Psu vode nikoli ne omejujte."
+      },
+      "why": {
+        "en": "Water is essential for all life. How much a dog drinks can change with the weather, temperature and exercise. A sudden increase in drinking can mean something is wrong. Salt water is different: when dogs drink salt water, it can be dangerous for them.",
+        "sl": "Voda je nujna za vse življenje. Koliko pes pije, se lahko spreminja z vremenom, temperaturo in gibanjem. Nenadoma večje pitje lahko pomeni, da je nekaj narobe. S slano vodo je drugače: če psi pijejo slano vodo, je to zanje lahko nevarno."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If you think your dog is drinking or peeing more than normal, contact your vet. If your dog shows signs of dehydration, take them to the vet immediately.",
+        "sl": "Če mislite, da pes pije ali lula več kot običajno, pokličite veterinarja. Če ima pes znake dehidracije, ga takoj odpeljite k veterinarju."
+      },
+      "serving": {
+        "en": "Fresh, clean water in a frequently washed bowl, available all the time, including outdoors, in hot weather and at the beach.",
+        "sl": "Sveža, čista voda v pogosto umiti posodi, ves čas na voljo, tudi zunaj, v vročini in na plaži."
+      },
+      "child": {
+        "en": "Dogs need fresh water all day long. Checking that the water bowl is full and clean is a great way to help!",
+        "sl": "Psi potrebujejo svežo vodo ves dan. Če preveriš, ali je posoda za vodo polna in čista, zelo pomagaš!"
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "How can I tell if my dog is dehydrated?",
+            "sl": "Kako prepoznam, da je pes dehidriran?"
+          },
+          "a": {
+            "en": "Signs include loss of skin elasticity, loss of appetite, low energy, panting, sunken dry-looking eyes, a dry nose, dry sticky gums and thick saliva. Take your dog to the vet immediately if you see them.",
+            "sl": "Znaki so manj prožna koža, izguba apetita, malo energije, sopihanje, udrte in suhe oči, suh smrček, suhe in lepljive dlesni ter gosta slina. Če jih opazite, psa takoj odpeljite k veterinarju."
+          }
+        },
+        {
+          "q": {
+            "en": "Should I limit my dog's water if they drink a lot?",
+            "sl": "Ali naj psu omejim vodo, če veliko pije?"
+          },
+          "a": {
+            "en": "No. Never restrict your dog's water; always let them have fresh drinking water, and contact your vet if they drink more than normal.",
+            "sl": "Ne. Psu vode nikoli ne omejujte; vedno naj ima na voljo svežo pitno vodo, če pa pije več kot običajno, pokličite veterinarja."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs drink sea water?",
+            "sl": "Ali lahko psi pijejo morsko vodo?"
+          },
+          "a": {
+            "en": "It's best not to: salt water can be dangerous for dogs. At the beach, make sure your dog always has access to fresh water.",
+            "sl": "Raje ne: slana voda je za pse lahko nevarna. Na plaži poskrbite, da ima pes vedno na voljo svežo vodo."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD230",
+        "KD230",
+        "KD231",
+        "KD231",
+        "KD232",
+        "KD232",
+        "KD232",
+        "KD232",
+        "KD232",
+        "KD232",
+        "KD232",
+        "KD232",
+        "KD232",
+        "KD232",
+        "KD232",
+        "KD232",
+        "KD233",
+        "KD233",
+        "KD233",
+        "KD233",
+        "KD234",
+        "KD234"
+      ],
+      "related": [
+        "salt",
+        "broth",
+        "lactose-free-milk"
+      ],
+      "updated": "2026-11-15"
+    },
+    {
       "slug": "watermelon",
       "species": "dog",
       "level": "small_amounts",
@@ -69120,11 +70043,43 @@
     },
     {
       "species": "cat",
+      "id": "KC127",
+      "tier": "B",
+      "publisher": "Cats Protection (no date shown)",
+      "title": "Hand-rearing kittens",
+      "url": "https://www.cats.org.uk/help-and-advice/pregnancy-and-kitten-care/hand-rearing"
+    },
+    {
+      "species": "cat",
+      "id": "KC128",
+      "tier": "B",
+      "publisher": "PDSA (written by vets and vet nurses; February 2021)",
+      "title": "Hand rearing kittens",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/pet-health-hub/other-veterinary-advice/hand-rearing-kittens"
+    },
+    {
+      "species": "cat",
+      "id": "KC129",
+      "tier": "B",
+      "publisher": "VCA Canada / CAVN (C. Grant DVM DVSc Dip ECVCN, K. Williams DVM, R. Downing DVM; updated 2025-02-04)",
+      "title": "Orphaned Kittens",
+      "url": "https://vcacanada.com/know-your-pet/orphaned-kittens"
+    },
+    {
+      "species": "cat",
       "id": "KC13",
       "tier": "A",
       "publisher": "Merck Veterinary Manual (C. Hayes; updated Aug 2025)",
       "title": "Bread Dough Toxicosis in Animals",
       "url": "https://www.merckvetmanual.com/toxicology/food-hazards/bread-dough-toxicosis-in-animals"
+    },
+    {
+      "species": "cat",
+      "id": "KC130",
+      "tier": "C",
+      "publisher": "ManyPets (UK; no author, vet reviewer or date shown)",
+      "title": "Can dogs or cats eat hummus?",
+      "url": "https://manypets.com/uk/pet-food-safety/can-my-pet-eat-hummus/"
     },
     {
       "species": "cat",
@@ -70928,11 +71883,107 @@
     },
     {
       "species": "dog",
+      "id": "KD223",
+      "tier": "B",
+      "publisher": "Purina UK, Purina Editorial Team (2026-05-14; page also shows 2025-04-04)",
+      "title": "Recommended Sources of Fibre for Dogs (on-page: The Importance of Fibre in Your Dog's Diet)",
+      "url": "https://www.purina.co.uk/articles/dogs/feeding/fibre-for-dogs"
+    },
+    {
+      "species": "dog",
+      "id": "KD224",
+      "tier": "C",
+      "publisher": "PetMD, Sandra C. Mitchell, DVM, DABVP (published 2024-02-05)",
+      "title": "Can Dogs Eat Chickpeas?",
+      "url": "https://www.petmd.com/dog/nutrition/can-dogs-eat-chickpeas"
+    },
+    {
+      "species": "dog",
+      "id": "KD225",
+      "tier": "B",
+      "publisher": "Hill's Pet Nutrition, Jean Marie Bauhaus (published 2021-09-30)",
+      "title": "Can Dogs Eat Almonds?",
+      "url": "https://www.hillspet.com/dog-care/nutrition-feeding/can-dogs-eat-almonds"
+    },
+    {
+      "species": "dog",
+      "id": "KD226",
+      "tier": "B",
+      "publisher": "Purina (US), Purina Pet Expert Team (updated 2026-11-11)",
+      "title": "Can Dogs Eat Nuts? A Guide to Safety",
+      "url": "https://www.purina.com/articles/dog/feeding/can-dogs-eat/nuts"
+    },
+    {
+      "species": "dog",
+      "id": "KD227",
+      "tier": "B",
+      "publisher": "American Kennel Club, Jan Reisen (updated 2025-06-24)",
+      "title": "Can Dogs Eat Sunflower Seeds?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-sunflower-seeds/"
+    },
+    {
+      "species": "dog",
       "id": "KD23",
       "tier": "B",
       "publisher": "American Kennel Club (Updated Oct 16, 2026)",
       "title": "Can Dogs Eat Corn?",
       "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-corn/"
+    },
+    {
+      "species": "dog",
+      "id": "KD230",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals, Canadian Academy of Veterinary Nutrition; Caitlin Grant DVM, Ryan Llera DVM, Cheryl Yuill DVM (updated 2025-08-20)",
+      "title": "Nutrition - General Feeding Guidelines for Dogs",
+      "url": "https://vcahospitals.com/know-your-pet/nutrition-general-feeding-guidelines-for-dogs"
+    },
+    {
+      "species": "dog",
+      "id": "KD231",
+      "tier": "B",
+      "publisher": "ASPCA (no date)",
+      "title": "General Dog Care",
+      "url": "https://www.aspca.org/pet-care/dog-care/general-dog-care"
+    },
+    {
+      "species": "dog",
+      "id": "KD232",
+      "tier": "B",
+      "publisher": "American Kennel Club, Jan Reisen (updated 2026-03-30)",
+      "title": "Dehydration in Dogs: Signs, Symptoms. Treatments",
+      "url": "https://www.akc.org/expert-advice/health/warning-signs-dehydration-dogs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD233",
+      "tier": "B",
+      "publisher": "PDSA (published 2024-07)",
+      "title": "Why is my dog drinking lots of water and weeing more than usual?",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/symptoms/is-my-dog-drinking-and-weeing-too-much"
+    },
+    {
+      "species": "dog",
+      "id": "KD234",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2024-12-06)",
+      "title": "Is It Dangerous for Dogs to Drink Salt Water? What You Need to Know About Saltwater Poisoning",
+      "url": "https://www.akc.org/expert-advice/health/dogs-drinking-salt-water/"
+    },
+    {
+      "species": "dog",
+      "id": "KD235",
+      "tier": "B",
+      "publisher": "Australian Veterinary Association (Vet Voice) (2019-09-02)",
+      "title": "Is milk safe for pets?",
+      "url": "https://www.vetvoice.com.au/articles/is-milk-safe-for-pets/"
+    },
+    {
+      "species": "dog",
+      "id": "KD236",
+      "tier": "B",
+      "publisher": "Little Silver Animal Hospital, NJ (Suveto Veterinary Health), MeganM (published 2024-07-31)",
+      "title": "Can Dogs Safely Drink Milk? Debunking a Common Canine Misconception",
+      "url": "https://littlesilveranimalhospital.com/blog/can-dogs-safely-drink-milk-debunking-a-common-canine-misconception/"
     },
     {
       "species": "dog",
