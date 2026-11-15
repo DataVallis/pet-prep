@@ -316,8 +316,8 @@ jobs:
   # API types (David 2026-11-15): mobile/src/api/schema.ts is generated from the backend's
   # OpenAPI spec and must never drift. The cloud agents cannot boot Laravel (no Packagist, no
   # PostgreSQL), so CI does it: migrate a fresh database (Scramble reads model columns from it),
-  # serve the API exactly like `npm run sail:up` + `npm run generate-api-types` locally, generate,
-  # and fail when the committed file differs. The fresh file is uploaded as the artifact
+  # export the spec (`php artisan scramble:export`), generate with the same script as a local
+  # `npm run generate-api-types`, and fail when the committed file differs. The fresh file is uploaded as the artifact
   # `api-schema` — commit it (scripts/ci-api-types.sh explains how).
   api-types:
     name: API types (schema.ts up to date)
@@ -340,7 +340,6 @@ jobs:
           --health-timeout 5s
           --health-retries 10
     env:
-      APP_ENV: local # Scramble serves /docs/api.json in the local environment only
       APP_URL: http://localhost:8000
       DB_CONNECTION: pgsql
       DB_HOST: 127.0.0.1
