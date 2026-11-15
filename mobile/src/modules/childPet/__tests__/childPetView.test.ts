@@ -29,12 +29,13 @@ describe('normalizeChildState', () => {
   });
 
   it('copes with the loose generated types (strings, empty instants, unknown values)', () => {
-    const raw = makeChildState({ breed_type: 'poodle', pet_state: 'dancing' });
+    const raw = makeChildState({ breed_type: 'poodle' as never, pet_state: 'dancing' as never });
     const view = normalizeChildState({
       ...raw,
       lock: { is_locked: true, reason: 'nonsense', until: null },
       water: { ...raw.water, remaining_today: '2', can_water: 'true', next_allowed_at: '' },
-    } as ChildPetState);
+      // Deliberately outside the schema: the reader must survive an older / odd server.
+    } as unknown as ChildPetState);
     // M5-R06-02: an unknown breed stays unknown (never the mutt).
     expect(view.pet.breed_type).toBe('unknown');
     expect(view.pet.pet_state).toBe('idle');
@@ -197,7 +198,7 @@ describe('lockFromFlags priority (game over › inactive › hard stop › contr
 describe('nextRefreshDelay (M3 time-based staleness, N2 clock skew)', () => {
   const MIN = 60_000;
   /** State received when the device clock showed `deviceMs` (default: same as the server). */
-  const viewAt = (raw: ChildPetState, deviceMs = Date.parse(raw.server_time)) => normalizeChildState(raw, 0, deviceMs);
+  const viewAt = (raw: ChildPetState, deviceMs = Date.parse(raw.server_time ?? '')) => normalizeChildState(raw, 0, deviceMs);
   const now = Date.parse('2026-10-04T10:00:00Z'); // 12:00 Ljubljana
 
   it('earliest of next feed window, water gap end, current window end, family midnight', () => {

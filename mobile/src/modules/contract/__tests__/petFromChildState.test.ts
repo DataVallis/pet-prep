@@ -38,7 +38,7 @@ describe('petFromChildState', () => {
   });
 
   it('falls back for unknown enum values', () => {
-    const pet = petFromChildState(makeChildState({ breed_type: 'poodle', pet_state: 'dancing' }), { userId: 2, petDna: null });
+    const pet = petFromChildState(makeChildState({ breed_type: 'poodle' as never, pet_state: 'dancing' as never }), { userId: 2, petDna: null });
     // M5-R06-02: an unknown breed stays unknown (never the mutt).
     expect(pet.breed_type).toBe('unknown');
     expect(pet.pet_state).toBe('idle');

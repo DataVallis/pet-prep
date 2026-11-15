@@ -88,7 +88,7 @@ describe('runBackgroundStepSync', () => {
 
   it('skips while the pet is locked (the server would answer 423 anyway)', async () => {
     const d = deps({
-      getChildPet: jest.fn(async () => childState({ lock: { is_locked: true, reason: 'hard_stop', until: null } })),
+      getChildPet: jest.fn(async () => childState({ lock: { is_locked: true, reason: 'hard_stop' as never, until: null } })),
     });
     expect(await runBackgroundStepSync(d)).toBe('skipped');
     expect(d.syncSteps).not.toHaveBeenCalled();
