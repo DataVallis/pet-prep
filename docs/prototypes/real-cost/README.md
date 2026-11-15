@@ -17,8 +17,15 @@ the app, the backend or `pet-prep-website`. Product context, numbers with their 
 - `summary/build_summary.py` builds `summary/petprep-povzetek-labradorec-sl.pdf` and `summary/petprep-summary-labrador-en.pdf`
   (A4, 2 pages: care table, puppy note, costs in GBP with `~` EUR / USD, promise with signature lines, sources) from
   HTML with headless Chrome, fonts and logo from `brand/`. Numbers mirror `src/main.js` — change both.
-- Planned use (David 2026-11-15, T7): the file of a **free Lemon Squeezy product**; Lemon Squeezy e-mails it to the
-  parent. The product does not exist yet.
+- Use (David 2026-11-15, T7): both PDFs are the files of the **free Lemon Squeezy product** »PetPrep Summary: How Much
+  Work Is a Labrador? (free)« (id 1528939, lead magnet, €0, published 2026-11-15). Step 5 of the page has a button
+  (`SUMMARY_URL` in `src/main.js`) that opens its checkout: `https://petprep.lemonsqueezy.com/checkout/buy/5cb18a19-22d9-4ec7-befe-19a82e687cc5`.
+  The parent enters an e-mail there and Lemon Squeezy sends the files.
+- **Store is still in test mode** (Lemon Squeezy identity verification »In Review« on 2026-11-15): the checkout shows
+  »Test mode is currently enabled«. After activation the product must be copied to live mode and `SUMMARY_URL` replaced
+  with the live link.
+- **No marketing consent:** the Lemon Squeezy checkout has no opt-in checkbox (checked 2026-11-15), so the addresses
+  may be used only to deliver the summary, not for news.
 
 ## Run
 ```bash
@@ -38,4 +45,4 @@ npm run serve      # http://localhost:8765/index.html
   position to the screen (`placeOverlays`). Info-point copy: `i_*` keys in `src/strings.js`.
 
 ## Not done
-The e-mail form sends nothing. The dog is a toy figure on purpose (the app pet is a realistic AI video).
+The summary button points to a test-mode checkout (see above); the page itself collects nothing. The dog is a toy figure on purpose (the app pet is a realistic AI video).

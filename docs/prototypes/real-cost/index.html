@@ -91,9 +91,7 @@ input[type=range]{width:100%;accent-color:var(--ink);height:28px}
 #promise li{padding-left:30px;position:relative;font-weight:500}
 #promise li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;border-radius:6px;border:2px solid var(--ink)}
 #lead{display:flex;flex-direction:column;gap:8px}
-#lead input{font:inherit;padding:12px 14px;border-radius:12px;border:1px solid #B9C2BB}
-#lead label{font-weight:600;font-size:14px}
-#lead-msg{color:var(--warn);font-weight:600;font-size:14px}
+#lead-note{margin:0;font-size:14px;color:var(--muted,#5B645E)}
 details{font-size:14px;color:var(--muted)}summary{cursor:pointer;font-weight:600;color:var(--ink)}
 @media (max-width:760px){
   #info{width:calc(100vw - 16px)}
@@ -193,12 +191,10 @@ details{font-size:14px;color:var(--muted)}summary{cursor:pointer;font-weight:600
   <ul id="promise"></ul>
   <a class="btn mint" href="https://petprep.si" data-t="cta_try"></a>
   <a class="btn ghost" href="https://petprep.si" data-t="cta_kit"></a>
-  <form id="lead">
-    <label for="email" data-t="lead_l"></label>
-    <input id="email" type="email" autocomplete="email" data-t-ph="lead_ph">
-    <button class="btn" type="submit" data-t="lead_b"></button>
-    <span id="lead-msg" role="status" hidden data-t="lead_msg"></span>
-  </form>
+  <div id="lead">
+    <a class="btn" id="lead-link" target="_blank" rel="noopener" data-t="lead_b"></a>
+    <p id="lead-note" data-t="lead_note"></p>
+  </div>
   <details><summary data-t="src_h"></summary><p data-t="src"></p></details>
   <button class="btn ghost" data-go="intro" data-t="again"></button>
 </section>
