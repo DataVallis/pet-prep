@@ -9,7 +9,8 @@
     "sv": "Ingefära",
     "da": "Ingefær",
     "fi": "Inkivääri",
-    "nb": "Ingefær"
+    "nb": "Ingefær",
+    "it": "Zenzero"
   },
   "question": {
     "en": "Can cats eat ginger?",
@@ -19,7 +20,8 @@
     "sv": "Får katter äta ingefära?",
     "da": "Må katte spise ingefær?",
     "fi": "Saako kissa syödä inkivääriä?",
-    "nb": "Kan katter spise ingefær?"
+    "nb": "Kan katter spise ingefær?",
+    "it": "I gatti possono mangiare lo zenzero?"
   },
   "url_slug": {
     "en": "ginger",
@@ -29,7 +31,8 @@
     "sv": "ingefara",
     "da": "ingefaer",
     "fi": "inkivaari",
-    "nb": "ingefaer"
+    "nb": "ingefaer",
+    "it": "zenzero"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "sv": "Det är bäst att inte ge din katt ingefära om inte din veterinär föreslår det. Ingefärsrot används som växtbaserat tillskott till katter, främst mot illamående och kräkningar, men naturligt betyder inte säkert: det kan orsaka lätt orolig mage.",
     "da": "Det er bedst ikke at give din kat ingefær, medmindre din dyrlæge anbefaler det. Ingefærrod bruges som urtetilskud til katte, hovedsageligt mod kvalme og opkast, men naturligt betyder ikke ufarligt: det kan give lidt mavebesvær.",
     "fi": "Ei suositella. Inkivääriä ei kannata antaa kissalle, ellei eläinlääkäri sitä ehdota. Inkiväärin juurta käytetään kissoilla rohdosvalmisteena lähinnä pahoinvoinnin ja oksentelun lievittämiseen, mutta luonnollinen ei tarkoita turvallista: se voi aiheuttaa lievän vatsavaivan.",
-    "nb": "Det er best å ikke gi katten ingefær med mindre dyrlegen foreslår det. Ingefærrot brukes som urtetilskudd til katter, hovedsakelig mot kvalme og oppkast, men naturlig betyr ikke trygt: den kan gi litt urolig mage."
+    "nb": "Det er best å ikke gi katten ingefær med mindre dyrlegen foreslår det. Ingefærrot brukes som urtetilskudd til katter, hovedsakelig mot kvalme og oppkast, men naturlig betyr ikke trygt: den kan gi litt urolig mage.",
+    "it": "Meglio non dare lo zenzero al gatto, a meno che non lo suggerisca il veterinario. La radice di zenzero viene usata come integratore erboristico nei gatti, soprattutto contro nausea e vomito, ma naturale non significa sicuro: può causare un lieve mal di stomaco."
   },
   "why": {
     "en": "VCA Animal Hospitals says ginger root is used in Traditional Chinese Medicine and Western herbal medicine in cats, dogs and other animals, most often as an anti-nausea and anti-vomiting supplement. The same page warns that just because a product is natural does not mean it is safe, that all medicinal plants are potentially toxic if used inappropriately or at high doses, and that pets with known bleeding disorders should not be given ginger. Your vet is the best source of information on such products. Cats don't need anything other than a complete diet.",
@@ -50,7 +54,8 @@
     "sv": "VCA Animal Hospitals säger att ingefärsrot används inom traditionell kinesisk medicin och västerländsk växtmedicin för katter, hundar och andra djur, oftast som tillskott mot illamående och kräkningar. Samma sida varnar för att en produkt inte är säker bara för att den är naturlig, att alla medicinalväxter potentiellt är giftiga om de används fel eller i höga doser, och att husdjur med kända blödarsjukdomar inte ska få ingefära. Din veterinär är den bästa källan till information om sådana produkter. Katter behöver inget annat än en komplett kost.",
     "da": "VCA Animal Hospitals skriver at ingefærrod bruges i traditionel kinesisk medicin og i vestlig urtemedicin til katte, hunde og andre dyr, oftest som tilskud mod kvalme og opkast. Samme side advarer om at et produkt ikke er ufarligt, bare fordi det er naturligt, at alle lægeplanter potentielt er giftige, hvis de bruges forkert eller i høje doser, og at kæledyr med kendte blødningssygdomme ikke bør have ingefær. Din dyrlæge er den bedste kilde til oplysninger om den slags produkter. Katte har ikke brug for andet end en komplet kost.",
     "fi": "VCA Animal Hospitalsin mukaan inkiväärin juurta käytetään perinteisessä kiinalaisessa lääketieteessä ja länsimaisessa rohdoslääketieteessä kissoilla, koirilla ja muilla eläimillä, useimmiten pahoinvointia ja oksentelua lievittävänä valmisteena. Samalla sivulla varoitetaan, ettei tuote ole turvallinen vain siksi, että se on luonnollinen, että kaikki lääkekasvit voivat olla myrkyllisiä, jos niitä käytetään väärin tai suurina annoksina, ja että inkivääriä ei pidä antaa lemmikeille, joilla on todettu verenvuotohäiriö. Eläinlääkäri on paras tietolähde tällaisista tuotteista. Kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion.",
-    "nb": "VCA Animal Hospitals sier at ingefærrot brukes i tradisjonell kinesisk medisin og i vestlig urtemedisin hos katter, hunder og andre dyr, oftest som kosttilskudd mot kvalme og oppkast. Samme side advarer om at et produkt ikke er trygt bare fordi det er naturlig, at alle medisinplanter potensielt er giftige hvis de brukes feil eller i store mengder, og at kjæledyr med kjente blødningsforstyrrelser ikke bør få ingefær. Dyrlegen er den beste kilden til informasjon om slike produkter. Katter trenger ikke noe annet enn et fullverdig kosthold."
+    "nb": "VCA Animal Hospitals sier at ingefærrot brukes i tradisjonell kinesisk medisin og i vestlig urtemedisin hos katter, hunder og andre dyr, oftest som kosttilskudd mot kvalme og oppkast. Samme side advarer om at et produkt ikke er trygt bare fordi det er naturlig, at alle medisinplanter potensielt er giftige hvis de brukes feil eller i store mengder, og at kjæledyr med kjente blødningsforstyrrelser ikke bør få ingefær. Dyrlegen er den beste kilden til informasjon om slike produkter. Katter trenger ikke noe annet enn et fullverdig kosthold.",
+    "it": "VCA Animal Hospitals afferma che la radice di zenzero viene usata nella medicina tradizionale cinese e nella fitoterapia occidentale in gatti, cani e altri animali, soprattutto come integratore contro nausea e vomito. La stessa pagina avverte che il fatto che un prodotto sia naturale non significa che sia sicuro, che tutte le piante medicinali sono potenzialmente tossiche se usate in modo inappropriato o a dosi elevate, e che agli animali con disturbi emorragici noti non va dato zenzero. Il veterinario è la migliore fonte di informazioni su questi prodotti. Ai gatti non serve altro che un’alimentazione completa."
   },
   "signs": {
     "en": [
@@ -100,6 +105,12 @@
       "Oppkast",
       "Lett hudirritasjon",
       "Tegn på allergisk reaksjon: uregelmessig pust, utslett, feber eller hevelse rundt ansiktet"
+    ],
+    "it": [
+      "Lieve mal di stomaco",
+      "Vomito",
+      "Lieve irritazione della pelle",
+      "Segni di reazione allergica: respiro irregolare, eruzione cutanea, febbre o gonfiore intorno al viso"
     ]
   },
   "what_to_do": {
@@ -110,7 +121,8 @@
     "sv": "Om din katt har nafsat i sig lite ingefära: håll ett öga på om hon kräks eller får orolig mage. Om du ser tecken på allergisk reaktion, som onormal andning, utslag eller svullet ansikte, ska du kontakta din veterinär omedelbart. Ge inte ingefära som medicin utan att fråga din veterinär först.",
     "da": "Hvis din kat har nippet til lidt ingefær, skal du holde øje med opkast eller mavebesvær. Hvis du ser tegn på en allergisk reaktion, som uregelmæssig vejrtrækning, udslæt eller et hævet ansigt, skal du kontakte din dyrlæge med det samme. Giv ikke ingefær som middel uden først at spørge din dyrlæge.",
     "fi": "Jos kissasi nappasi vähän inkivääriä, seuraa, tuleeko oksentelua tai vatsavaivoja. Jos huomaat allergisen reaktion merkkejä, kuten epäsäännöllistä hengitystä, ihottumaa tai kasvojen turvotusta, ota heti yhteyttä eläinlääkäriin. Älä anna inkivääriä lääkkeeksi kysymättä ensin eläinlääkäriltä.",
-    "nb": "Hvis katten har smakt litt ingefær, følg med på oppkast eller urolig mage. Hvis du ser tegn på allergisk reaksjon, som uregelmessig pust, utslett eller hovent ansikt, kontakt dyrlegen med en gang. Ikke gi ingefær som middel uten å spørre dyrlegen først."
+    "nb": "Hvis katten har smakt litt ingefær, følg med på oppkast eller urolig mage. Hvis du ser tegn på allergisk reaksjon, som uregelmessig pust, utslett eller hovent ansikt, kontakt dyrlegen med en gang. Ikke gi ingefær som middel uten å spørre dyrlegen først.",
+    "it": "Se il tuo gatto ha assaggiato un po’ di zenzero, controlla se compaiono vomito o mal di stomaco. Se noti segni di reazione allergica, come respiro irregolare, eruzione cutanea o viso gonfio, contatta subito il veterinario. Non dare lo zenzero come rimedio senza prima chiedere al veterinario."
   },
   "serving": null,
   "child": {
@@ -121,7 +133,8 @@
     "sv": "Ingefära är en rot för människors matlagning. Katter behöver den inte, så låt de vuxna och veterinären avgöra.",
     "da": "Ingefær er en rod, man bruger i madlavning til mennesker. Katte har ikke brug for den, så lad de voksne og dyrlægen bestemme.",
     "fi": "Inkivääri on juuri, jota käytetään ihmisten ruoanlaitossa. Kissat eivät tarvitse sitä, joten jätä asia aikuisten ja eläinlääkärin päätettäväksi.",
-    "nb": "Ingefær er en rot som voksne bruker i matlaging. Katter trenger det ikke, så la de voksne og dyrlegen avgjøre."
+    "nb": "Ingefær er en rot som voksne bruker i matlaging. Katter trenger det ikke, så la de voksne og dyrlegen avgjøre.",
+    "it": "Lo zenzero è una radice che le persone usano in cucina. I gatti non ne hanno bisogno: lascia decidere agli adulti e al veterinario."
   },
   "faq": [
     {
@@ -133,7 +146,8 @@
         "sv": "Kan ingefära hjälpa min katt mot illamående?",
         "da": "Kan ingefær hjælpe min kat mod kvalme?",
         "fi": "Voiko inkivääri auttaa kissaani pahoinvointiin?",
-        "nb": "Kan ingefær hjelpe katten min mot kvalme?"
+        "nb": "Kan ingefær hjelpe katten min mot kvalme?",
+        "it": "Lo zenzero può aiutare il mio gatto contro la nausea?"
       },
       "a": {
         "en": "Ginger is used as an anti-nausea and anti-vomiting supplement in animals, but only your vet can tell you whether it is safe for your cat. Medicinal plants can be toxic if used inappropriately.",
@@ -143,7 +157,8 @@
         "sv": "Ingefära används som tillskott mot illamående och kräkningar hos djur, men bara din veterinär kan säga om det är säkert för just din katt. Medicinalväxter kan vara giftiga om de används fel.",
         "da": "Ingefær bruges som tilskud mod kvalme og opkast hos dyr, men kun din dyrlæge kan sige, om det er ufarligt for din kat. Lægeplanter kan være giftige, hvis de bruges forkert.",
         "fi": "Inkivääriä käytetään eläimillä pahoinvointia ja oksentelua lievittävänä valmisteena, mutta vain eläinlääkäri voi kertoa, onko se turvallista juuri sinun kissallesi. Lääkekasvit voivat olla myrkyllisiä, jos niitä käytetään väärin.",
-        "nb": "Ingefær brukes som tilskudd mot kvalme og oppkast hos dyr, men bare dyrlegen kan si om det er trygt for katten din. Medisinplanter kan være giftige hvis de brukes feil."
+        "nb": "Ingefær brukes som tilskudd mot kvalme og oppkast hos dyr, men bare dyrlegen kan si om det er trygt for katten din. Medisinplanter kan være giftige hvis de brukes feil.",
+        "it": "Lo zenzero viene usato come integratore contro nausea e vomito negli animali, ma solo il veterinario può dirti se è sicuro per il tuo gatto. Le piante medicinali possono essere tossiche se usate in modo inappropriato."
       }
     }
   ],
@@ -244,6 +259,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "738e1bd354ed6e7fb44959df094ab59293c33bd934dee58162f201789941e595"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "30da17f0453443fd36cd2de1a7073ca0b11b9d94e8529d84111241e21f7b531d"
     }
   }
 }

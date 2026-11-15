@@ -9,7 +9,8 @@
     "sv": "Kakaopulver",
     "da": "Kakaopulver",
     "fi": "Kaakaojauhe",
-    "nb": "Kakaopulver"
+    "nb": "Kakaopulver",
+    "it": "Cacao in polvere"
   },
   "question": {
     "en": "Can cats eat cocoa powder?",
@@ -19,7 +20,8 @@
     "sv": "Får katter äta kakaopulver?",
     "da": "Må katte spise kakaopulver?",
     "fi": "Saako kissa syödä kaakaojauhetta?",
-    "nb": "Kan katter spise kakaopulver?"
+    "nb": "Kan katter spise kakaopulver?",
+    "it": "I gatti possono mangiare il cacao in polvere?"
   },
   "url_slug": {
     "en": "cocoa-powder",
@@ -29,7 +31,8 @@
     "sv": "kakaopulver",
     "da": "kakaopulver",
     "fi": "kaakaojauhe",
-    "nb": "kakaopulver"
+    "nb": "kakaopulver",
+    "it": "cacao-in-polvere"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "sv": "Nej. Kakaopulver är särskilt giftigt för katter eftersom det innehåller en extremt hög halt kakaotorrsubstans, som innehåller teobromin. Om din katt äter något ska du spara förpackningen och ringa din veterinär omedelbart.",
     "da": "Nej. Kakaopulver er særligt giftigt for katte, fordi det indeholder en ekstremt høj koncentration af kakaotørstof, som indeholder theobromin. Hvis din kat får noget, skal du gemme emballagen og ringe til din dyrlæge med det samme.",
     "fi": "Ei saa. Kaakaojauhe on kissoille erityisen myrkyllistä, koska siinä on erittäin paljon kaakaokuiva-ainetta, joka sisältää teobromiinia. Jos kissasi syö sitä vähänkin, säilytä pakkaus ja soita heti eläinlääkärille.",
-    "nb": "Nei. Kakaopulver er spesielt giftig for katter fordi det inneholder ekstremt mye kakaotørrstoff, og det inneholder teobromin. Hvis katten spiser noe av det, ta vare på emballasjen og ring dyrlegen med en gang."
+    "nb": "Nei. Kakaopulver er spesielt giftig for katter fordi det inneholder ekstremt mye kakaotørrstoff, og det inneholder teobromin. Hvis katten spiser noe av det, ta vare på emballasjen og ring dyrlegen med en gang.",
+    "it": "No. Il cacao in polvere è particolarmente tossico per i gatti perché contiene una concentrazione altissima di solidi del cacao, che contengono teobromina. Se il tuo gatto ne mangia, conserva la confezione e chiama subito il veterinario."
   },
   "why": {
     "en": "PDSA explains that chocolate contains theobromine, which is perfectly safe for humans but toxic for cats. The darker the chocolate, the more cocoa solids and theobromine it contains, and the more toxic it is. Cocoa powder is especially toxic because it contains an extremely high concentration of cocoa solids.",
@@ -50,7 +54,8 @@
     "sv": "PDSA förklarar att choklad innehåller teobromin, som är helt ofarligt för människor men giftigt för katter. Ju mörkare choklad, desto mer kakaotorrsubstans och teobromin innehåller den, och desto giftigare är den. Kakaopulver är särskilt giftigt eftersom det innehåller en extremt hög halt kakaotorrsubstans.",
     "da": "PDSA forklarer at chokolade indeholder theobromin, som er helt ufarligt for mennesker, men giftigt for katte. Jo mørkere chokoladen er, jo mere kakaotørstof og theobromin indeholder den, og jo giftigere er den. Kakaopulver er særligt giftigt, fordi det indeholder en ekstremt høj koncentration af kakaotørstof.",
     "fi": "PDSA kertoo, että suklaassa on teobromiinia, joka on ihmisille täysin vaaratonta mutta kissoille myrkyllistä. Mitä tummempaa suklaa on, sitä enemmän siinä on kaakaokuiva-ainetta ja teobromiinia ja sitä myrkyllisempää se on. Kaakaojauhe on erityisen myrkyllistä, koska siinä on erittäin suuri pitoisuus kaakaokuiva-ainetta.",
-    "nb": "PDSA forklarer at sjokolade inneholder teobromin, som er ufarlig for mennesker, men giftig for katter. Jo mørkere sjokoladen er, desto mer kakaotørrstoff og teobromin inneholder den, og desto giftigere er den. Kakaopulver er spesielt giftig fordi det inneholder ekstremt mye kakaotørrstoff."
+    "nb": "PDSA forklarer at sjokolade inneholder teobromin, som er ufarlig for mennesker, men giftig for katter. Jo mørkere sjokoladen er, desto mer kakaotørrstoff og teobromin inneholder den, og desto giftigere er den. Kakaopulver er spesielt giftig fordi det inneholder ekstremt mye kakaotørrstoff.",
+    "it": "PDSA spiega che il cioccolato contiene teobromina, una sostanza del tutto sicura per le persone ma tossica per i gatti. Più il cioccolato è fondente, più solidi del cacao e teobromina contiene e più è tossico. Il cacao in polvere è particolarmente tossico perché contiene una concentrazione altissima di solidi del cacao."
   },
   "signs": {
     "en": [
@@ -140,6 +145,17 @@
       "Feber",
       "Hurtig hjerterytme",
       "Kramper"
+    ],
+    "it": [
+      "Eccitazione, irrequietezza o iperattività",
+      "Vomito o diarrea",
+      "Più sete e più pipì del solito",
+      "Mal di pancia",
+      "Respiro rapido o affannoso",
+      "Tremori",
+      "Febbre",
+      "Battito cardiaco accelerato",
+      "Convulsioni"
     ]
   },
   "what_to_do": {
@@ -150,7 +166,8 @@
     "sv": "Spara förpackningen och ring din veterinär omedelbart. Vänta inte på att symtom ska dyka upp, och försök inte få katten att kräkas hemma.",
     "da": "Gem emballagen, og ring til din dyrlæge med det samme. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
     "fi": "Säilytä pakkaus ja soita heti eläinlääkärille. Älä odota oireita äläkä yritä oksennuttaa kissaa itse.",
-    "nb": "Ta vare på emballasjen og ring dyrlegen med en gang. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
+    "nb": "Ta vare på emballasjen og ring dyrlegen med en gang. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv.",
+    "it": "Conserva la confezione e chiama subito il veterinario. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa."
   },
   "serving": null,
   "child": {
@@ -161,7 +178,8 @@
     "sv": "Kakaopulver är till för människors bakning, inte för katter. Om katten har kommit åt det: säg till en vuxen direkt så att de kan ringa veterinären.",
     "da": "Kakaopulver er til bagning for mennesker, ikke til katte. Hvis din kat får fat i noget, skal du straks sige det til en voksen, så de kan ringe til dyrlægen.",
     "fi": "Kaakaojauhe on ihmisten leivontaan, ei kissoille. Jos kisu pääsee siihen käsiksi, kerro heti aikuiselle, jotta hän voi soittaa eläinlääkärille.",
-    "nb": "Kakaopulver er til baking for mennesker, ikke for katter. Hvis pusen kommer borti det, si fra til en voksen med en gang, så de kan ringe dyrlegen."
+    "nb": "Kakaopulver er til baking for mennesker, ikke for katter. Hvis pusen kommer borti det, si fra til en voksen med en gang, så de kan ringe dyrlegen.",
+    "it": "Il cacao in polvere serve per i dolci delle persone, non per i gatti. Se il micio lo trova, dillo subito a un adulto, così può chiamare il veterinario."
   },
   "faq": [
     {
@@ -173,7 +191,8 @@
         "sv": "Är kakaoskal som trädgårdsmulch en risk för katter?",
         "da": "Er mulch af kakaoskaller en risiko for katte?",
         "fi": "Onko kaakaonkuorikate vaarallinen kissoille?",
-        "nb": "Er kakaoskall som mulch i hagen en risiko for katter?"
+        "nb": "Er kakaoskall som mulch i hagen en risiko for katter?",
+        "it": "Il pacciame di gusci di cacao per il giardino è un rischio per i gatti?"
       },
       "a": {
         "en": "PDSA advises avoiding gardening mulches that contain cocoa shell.",
@@ -183,7 +202,8 @@
         "sv": "PDSA råder dig att undvika trädgårdsmulch som innehåller kakaoskal.",
         "da": "PDSA fraråder at bruge havemulch, der indeholder kakaoskaller.",
         "fi": "PDSA neuvoo välttämään puutarhan katteita, joissa on kaakaonkuorta.",
-        "nb": "PDSA fraråder å bruke mulch med kakaoskall i hagen."
+        "nb": "PDSA fraråder å bruke mulch med kakaoskall i hagen.",
+        "it": "PDSA consiglia di evitare i pacciami da giardinaggio che contengono gusci di cacao."
       }
     }
   ],
@@ -304,6 +324,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ad645b26f6182b72170eea3cae128c1c5c20fa4b16a4d957a62b35e3368333a7"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a9eca81ea3f5cda23578bd46bb8d941f21e13c80cf61014cdb0a123ac1d3c800"
     }
   }
 }

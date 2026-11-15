@@ -8,7 +8,8 @@
     "sv": "Korv",
     "da": "Pølser",
     "fi": "Makkarat",
-    "nb": "Pølser"
+    "nb": "Pølser",
+    "it": "Salsicce"
   },
   "question": {
     "en": "Can cats eat sausages?",
@@ -17,7 +18,8 @@
     "sv": "Får katter äta korv?",
     "da": "Må katte spise pølser?",
     "fi": "Saako kissa syödä makkaraa?",
-    "nb": "Kan katter spise pølser?"
+    "nb": "Kan katter spise pølser?",
+    "it": "I gatti possono mangiare le salsicce?"
   },
   "url_slug": {
     "en": "sausages",
@@ -26,7 +28,8 @@
     "sv": "korv",
     "da": "poelser",
     "fi": "makkarat",
-    "nb": "polser"
+    "nb": "polser",
+    "it": "salsicce"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "sv": "Det är bäst att låta bli. Korv är bearbetad, fet och oftast salt, och många innehåller konserveringsmedel, kryddor, lök eller vitlök som kan vara skadligt för katter. RSPCA Australia avråder från korv åt katter eftersom den kan innehålla sulfitkonserveringsmedel.",
     "da": "Helst ikke. Pølser er forarbejdede, fede og som regel meget salte, og mange indeholder konserveringsmidler, krydderier, løg eller hvidløg, som kan være skadelige for katte. RSPCA Australia fraråder pølser til katte, fordi de kan indeholde sulfitkonserveringsmidler.",
     "fi": "Ei suositella. Makkarat ovat jalostettuja, rasvaisia ja yleensä runsassuolaisia, ja monissa on säilöntäaineita, mausteita, sipulia tai valkosipulia, jotka voivat olla kissoille haitallisia. RSPCA Australia neuvoo välttämään makkaraa kissoille, koska siinä voi olla sulfiittisäilöntäaineita.",
-    "nb": "Det er best å la være. Pølser er bearbeidet, fete og vanligvis salte, og mange inneholder konserveringsmidler, krydder, løk eller hvitløk som kan være skadelig for katter. RSPCA Australia anbefaler å unngå pølser til katter fordi de kan inneholde sulfitter som konserveringsmiddel."
+    "nb": "Det er best å la være. Pølser er bearbeidet, fete og vanligvis salte, og mange inneholder konserveringsmidler, krydder, løk eller hvitløk som kan være skadelig for katter. RSPCA Australia anbefaler å unngå pølser til katter fordi de kan inneholde sulfitter som konserveringsmiddel.",
+    "it": "Meglio di no. Le salsicce sono lavorate, grasse e di solito molto salate, e molte contengono conservanti, spezie, cipolla o aglio che possono far male ai gatti. L’RSPCA Australia consiglia di evitare le salsicce per i gatti perché possono contenere conservanti a base di solfiti."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. Purina says a very small piece of sausage made purely from meat, with no preservatives or seasoning, is generally okay, but RSPCA Australia advises avoiding sausages, sausage meat and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. Even meat-only sausages are very fatty, sausages are typically high in salt, and onion, garlic and some spices in them can be toxic to cats.",
@@ -45,7 +49,8 @@
     "sv": "Källorna skiljer sig åt, så vi använder den strängare nivån. Purina säger att en mycket liten bit korv gjord av enbart kött, utan konserveringsmedel eller krydda, i allmänhet är okej, men RSPCA Australia avråder från korv, korvfärs och tillagat, industriellt framställt kött eftersom de kan innehålla sulfitkonserveringsmedel, som har kopplats till brist på tiamin (vitamin B1). Även korv med bara kött är mycket fet, korv är vanligtvis salt, och lök, vitlök och en del kryddor i den kan vara giftiga för katter.",
     "da": "Kilderne er uenige, så vi bruger det strengeste niveau. Purina skriver at et meget lille stykke pølse af rent kød uden konserveringsmidler eller krydderier som regel er i orden, men RSPCA Australia fraråder pølser, pølsekød og forarbejdede, tilberedte kødprodukter, fordi de kan indeholde sulfitkonserveringsmidler, som man har sat i forbindelse med mangel på tiamin (vitamin B1). Selv pølser af rent kød er meget fede, pølser er typisk meget salte, og løg, hvidløg og nogle krydderier i dem kan være giftige for katte.",
     "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. Purinan mukaan hyvin pieni pala pelkästään lihasta tehtyä makkaraa ilman säilöntäaineita ja mausteita on yleensä sopiva, mutta RSPCA Australia neuvoo välttämään makkaroita, makkaramassaa ja kypsennettyjä teollisia lihavalmisteita, koska niissä voi olla sulfiittisäilöntäaineita, joiden on yhdistetty tiamiinin (B1-vitamiinin) puutokseen. Myös pelkästä lihasta tehdyt makkarat ovat erittäin rasvaisia, makkarat ovat tyypillisesti runsassuolaisia, ja niiden sipuli, valkosipuli ja jotkin mausteet voivat olla kissoille myrkyllisiä.",
-    "nb": "Kildene er forskjellige, så vi bruker det strengeste nivået. Purina sier at en helt liten bit pølse laget bare av kjøtt, uten konserveringsmidler eller krydder, vanligvis er greit, men RSPCA Australia anbefaler å unngå pølser, pølsekjøtt og ferdiglagde, tilberedte kjøttprodukter fordi de kan inneholde sulfitter som konserveringsmiddel, som er satt i sammenheng med mangel på tiamin (vitamin B1). Selv rene kjøttpølser er svært fete, pølser er vanligvis salte, og løk, hvitløk og enkelte krydder i dem kan være giftige for katter."
+    "nb": "Kildene er forskjellige, så vi bruker det strengeste nivået. Purina sier at en helt liten bit pølse laget bare av kjøtt, uten konserveringsmidler eller krydder, vanligvis er greit, men RSPCA Australia anbefaler å unngå pølser, pølsekjøtt og ferdiglagde, tilberedte kjøttprodukter fordi de kan inneholde sulfitter som konserveringsmiddel, som er satt i sammenheng med mangel på tiamin (vitamin B1). Selv rene kjøttpølser er svært fete, pølser er vanligvis salte, og løk, hvitløk og enkelte krydder i dem kan være giftige for katter.",
+    "it": "Le fonti non concordano, quindi usiamo il livello più prudente. Purina afferma che un pezzettino piccolissimo di salsiccia fatta solo di carne, senza conservanti né condimenti, in genere va bene, ma l’RSPCA Australia consiglia di evitare salsicce, impasto di salsiccia e carni cotte industriali perché possono contenere conservanti a base di solfiti, associati a una carenza di tiamina (vitamina B1). Anche quelle di sola carne sono molto grasse, in genere sono molto salate, e la cipolla, l’aglio e alcune spezie che contengono possono essere tossici per i gatti."
   },
   "signs": {
     "en": [
@@ -75,6 +80,10 @@
     "nb": [
       "Urolig mage",
       "Diaré"
+    ],
+    "it": [
+      "Mal di stomaco",
+      "Diarrea"
     ]
   },
   "what_to_do": {
@@ -84,7 +93,8 @@
     "sv": "Om din katt har ätit korv som kan innehålla lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om hon har ätit vanlig korv och sedan får orolig mage eller diarré, ring din veterinär och be om råd.",
     "da": "Hvis din kat har spist pølse, der kan indeholde løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis katten har spist en almindelig pølse og derefter får mavebesvær eller diarré, skal du ringe til din dyrlæge for at få råd.",
     "fi": "Jos kissasi söi makkaraa, jossa voi olla sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos se söi maustamatonta makkaraa ja sillä on sen jälkeen vatsavaivoja tai ripulia, kysy neuvoa eläinlääkäriltä.",
-    "nb": "Hvis katten har spist pølse som kan inneholde løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis den har spist en ukrydret pølse og deretter får urolig mage eller diaré, ring dyrlegen for råd."
+    "nb": "Hvis katten har spist pølse som kan inneholde løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis den har spist en ukrydret pølse og deretter får urolig mage eller diaré, ring dyrlegen for råd.",
+    "it": "Se il tuo gatto ha mangiato salsiccia che può contenere cipolla o aglio, contatta il veterinario il prima possibile. Se ha mangiato salsiccia senza condimenti e poi ha mal di stomaco o diarrea, chiama il veterinario per un consiglio."
   },
   "serving": null,
   "child": {
@@ -94,7 +104,8 @@
     "sv": "Korv är för salt och fet för katter. Kattens egna godbitar är en mycket bättre överraskning.",
     "da": "Pølser er for salte og fede til katte. Din kats egne godbidder er en meget bedre overraskelse.",
     "fi": "Makkarat ovat kissalle liian suolaisia ja rasvaisia. Kisun omat kissanherkut ovat paljon parempi yllätys.",
-    "nb": "Pølser er for salte og feite for katter. Pusen blir mye gladere for sine egne kattegodbiter."
+    "nb": "Pølser er for salte og feite for katter. Pusen blir mye gladere for sine egne kattegodbiter.",
+    "it": "Le salsicce sono troppo salate e grasse per i gatti. Per il micio, i suoi premi per gatti sono una sorpresa molto più bella."
   },
   "faq": [
     {
@@ -105,7 +116,8 @@
         "sv": "Hur är det med korvskinnet eller rå korv?",
         "da": "Hvad med pølseskindet eller en rå pølse?",
         "fi": "Entä makkaran kuori tai raaka makkara?",
-        "nb": "Hva med pølsepellen eller en rå pølse?"
+        "nb": "Hva med pølsepellen eller en rå pølse?",
+        "it": "E il budello della salsiccia o una salsiccia cruda?"
       },
       "a": {
         "en": "The casing can be hard to chew and swallow, which could lead to choking. Raw sausages should never be given, as they often contain harmful bacteria such as salmonella.",
@@ -114,7 +126,8 @@
         "sv": "Skinnet kan vara svårt att tugga och svälja, vilket kan innebära kvävningsrisk. Rå korv ska aldrig ges, eftersom den ofta innehåller skadliga bakterier som salmonella.",
         "da": "Skindet kan være svært at tygge og sluge, hvilket kan føre til kvælning. Rå pølser må aldrig gives, fordi de ofte indeholder skadelige bakterier som salmonella.",
         "fi": "Kuori voi olla vaikea pureskella ja niellä, mikä voi johtaa tukehtumiseen. Raakaa makkaraa ei saa antaa koskaan, koska siinä on usein haitallisia bakteereita, kuten salmonellaa.",
-        "nb": "Pellen kan være vanskelig å tygge og svelge, noe som kan føre til kvelning. Rå pølser skal aldri gis, siden de ofte inneholder skadelige bakterier som salmonella."
+        "nb": "Pellen kan være vanskelig å tygge og svelge, noe som kan føre til kvelning. Rå pølser skal aldri gis, siden de ofte inneholder skadelige bakterier som salmonella.",
+        "it": "Il budello può essere difficile da masticare e da ingoiare e potrebbe causare soffocamento. Le salsicce crude non vanno mai date, perché contengono spesso batteri dannosi come la salmonella."
       }
     }
   ],
@@ -228,6 +241,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "addcb56cacc833c81b4c7fd4aeabb69f673e19a7a1aeb5e95968917754e62186"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bf4fb4bfbf5a4efd4113f6bb79db624c2d218d9c1c0bedb0e378852175d515fd"
     }
   }
 }

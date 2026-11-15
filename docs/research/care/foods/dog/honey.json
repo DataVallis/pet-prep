@@ -9,7 +9,8 @@
     "sv": "Honung",
     "da": "Honning",
     "fi": "Hunaja",
-    "nb": "Honning"
+    "nb": "Honning",
+    "it": "Miele"
   },
   "question": {
     "en": "Can dogs eat honey?",
@@ -19,7 +20,8 @@
     "sv": "Får hundar äta honung?",
     "da": "Må hunde spise honning?",
     "fi": "Saako koira syödä hunajaa?",
-    "nb": "Kan hunder spise honning?"
+    "nb": "Kan hunder spise honning?",
+    "it": "I cani possono mangiare il miele?"
   },
   "url_slug": {
     "en": "honey",
@@ -29,7 +31,8 @@
     "sv": "honung",
     "da": "honning",
     "fi": "hunaja",
-    "nb": "honning"
+    "nb": "honning",
+    "it": "miele"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "sv": "Ja, i små mängder. Honung är i allmänhet okej för friska, vuxna hundar i små mängder, men den består mest av socker, så det finns lite skäl att ge den regelbundet. Ge inte rå honung till valpar eller hundar med svagt immunförsvar, och ingen honung alls till hundar med diabetes.",
     "da": "Ja, i små mængder. Honning er som regel fint for raske, voksne hunde i små mængder, men den består mest af sukker, så der er ikke megen grund til at give den jævnligt. Giv ikke rå honning til hvalpe eller hunde med svagt immunforsvar og ingen slags honning til hunde med diabetes.",
     "fi": "Saa, pieninä määrinä. Hunaja on yleensä sopivaa terveille aikuisille koirille pieninä määrinä, mutta se on enimmäkseen sokeria, joten sen säännölliseen antamiseen ei ole juuri syytä. Älä anna raakaa hunajaa pennuille tai koirille, joiden immuunipuolustus on heikko, äläkä mitään hunajaa diabeetikkokoirille.",
-    "nb": "Ja, i små mengder. Honning er vanligvis greit for friske, voksne hunder i små mengder, men den består mest av sukker, så det er lite grunn til å gi den jevnlig. Ikke gi rå honning til valper eller hunder med svekket immunforsvar, og ingen honning til hunder med diabetes."
+    "nb": "Ja, i små mengder. Honning er vanligvis greit for friske, voksne hunder i små mengder, men den består mest av sukker, så det er lite grunn til å gi den jevnlig. Ikke gi rå honning til valper eller hunder med svekket immunforsvar, og ingen honning til hunder med diabetes.",
+    "it": "Sì, in piccole quantità. In genere il miele va bene per i cani adulti sani in piccole quantità, ma è fatto soprattutto di zucchero, quindi ci sono pochi motivi per darlo regolarmente. Non dare miele crudo ai cuccioli o ai cani con difese immunitarie deboli, né alcun tipo di miele ai cani diabetici."
   },
   "why": {
     "en": "Honey contains natural sugars and small amounts of vitamins and minerals. Its high sugar content can lead to obesity if a dog gets too much, and sugars can cause tooth decay. Raw honey may contain botulism, so it is not for puppies or dogs with weak immune systems.",
@@ -50,7 +54,8 @@
     "sv": "Honung innehåller naturliga sockerarter och små mängder vitaminer och mineraler. Det höga sockerinnehållet kan leda till fetma om en hund får för mycket, och socker kan ge karies. Rå honung kan innehålla botulismbakterier och är därför inte för valpar eller hundar med svagt immunförsvar.",
     "da": "Honning indeholder naturlige sukkerarter og små mængder vitaminer og mineraler. Det høje sukkerindhold kan føre til fedme, hvis en hund får for meget, og sukker kan give huller i tænderne. Rå honning kan indeholde botulismebakterier, så den ikke er til hvalpe eller hunde med svagt immunforsvar.",
     "fi": "Hunajassa on luonnollisia sokereita ja pieniä määriä vitamiineja ja kivennäisaineita. Sen runsas sokeripitoisuus voi johtaa lihavuuteen, jos koira saa liikaa, ja sokerit voivat aiheuttaa hampaiden reikiintymistä. Raakassa hunajassa voi olla botulismia, joten se ei sovi pennuille eikä koirille, joiden immuunipuolustus on heikko.",
-    "nb": "Honning inneholder naturlig sukker og små mengder vitaminer og mineraler. Det høye sukkerinnholdet kan føre til fedme hvis hunden får for mye, og sukker kan gi hull i tennene. Rå honning kan inneholde botulisme, så den er ikke for valper eller hunder med svekket immunforsvar."
+    "nb": "Honning inneholder naturlig sukker og små mengder vitaminer og mineraler. Det høye sukkerinnholdet kan føre til fedme hvis hunden får for mye, og sukker kan gi hull i tennene. Rå honning kan inneholde botulisme, så den er ikke for valper eller hunder med svekket immunforsvar.",
+    "it": "Il miele contiene zuccheri naturali e piccole quantità di vitamine e minerali. L’alto contenuto di zuccheri può portare all’obesità se il cane ne riceve troppo, e gli zuccheri possono causare carie. Il miele crudo può contenere botulino, quindi non è adatto ai cuccioli né ai cani con difese immunitarie deboli."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "sv": "Små mängder honung är i allmänhet okej för en frisk, vuxen hund. Om din hund har ett hälsotillstånd som diabetes, eller om du är osäker på hur mycket som är okej, prata med din veterinär.",
     "da": "Små mængder honning er som regel fint for en rask, voksen hund. Hvis din hund har en sygdom som diabetes, eller du er i tvivl om, hvor meget der er i orden, skal du tale med din dyrlæge.",
     "fi": "Pienet määrät hunajaa ovat yleensä sopivia terveelle aikuiselle koiralle. Jos koirallasi on jokin terveysongelma, kuten diabetes, tai et ole varma, kuinka paljon sopii, puhu eläinlääkärin kanssa.",
-    "nb": "Små mengder honning er vanligvis greit for en frisk, voksen hund. Hvis hunden har en sykdom som diabetes, eller du er usikker på hvor mye som er greit, bør du snakke med dyrlegen."
+    "nb": "Små mengder honning er vanligvis greit for en frisk, voksen hund. Hvis hunden har en sykdom som diabetes, eller du er usikker på hvor mye som er greit, bør du snakke med dyrlegen.",
+    "it": "Piccole quantità di miele in genere vanno bene per un cane adulto sano. Se il tuo cane ha un problema di salute come il diabete, o non sei sicuro di quanto ne possa mangiare, parlane con il veterinario."
   },
   "serving": {
     "en": "A little now and then, for healthy adult dogs only; less is more, especially for small breeds. Ask your vet how much is okay, and consider brushing your dog's teeth afterwards.",
@@ -71,7 +77,8 @@
     "sv": "Lite då och då, bara till friska vuxna hundar; mindre är mer, särskilt för små raser. Fråga din veterinär hur mycket som är okej och överväg att borsta hundens tänder efteråt.",
     "da": "Lidt en gang imellem, kun til raske, voksne hunde; mindre er mere, især til små racer. Spørg din dyrlæge, hvor meget der er i orden, og overvej at børste din hunds tænder bagefter.",
     "fi": "Vähän silloin tällöin, vain terveille aikuisille koirille; vähemmän on parempi, etenkin pienillä roduilla. Kysy eläinlääkäriltä, kuinka paljon sopii, ja harkitse koirasi hampaiden harjausta sen jälkeen.",
-    "nb": "Litt av og til, bare til friske, voksne hunder; mindre er bedre, særlig for små raser. Spør dyrlegen hvor mye som er greit, og vurder å pusse tennene til hunden etterpå."
+    "nb": "Litt av og til, bare til friske, voksne hunder; mindre er bedre, særlig for små raser. Spør dyrlegen hvor mye som er greit, og vurder å pusse tennene til hunden etterpå.",
+    "it": "Un pochino ogni tanto, solo per cani adulti sani; meno è meglio, soprattutto per le razze di piccola taglia. Chiedi al veterinario quanto ne puoi dare e valuta di lavare i denti al tuo cane dopo."
   },
   "child": {
     "en": "Dogs can have a tiny bit of honey sometimes. It is very sweet, so ask a grown-up first.",
@@ -81,7 +88,8 @@
     "sv": "Hundar kan få lite honung då och då. Den är väldigt söt, så fråga en vuxen först.",
     "da": "Hunde kan få en lille smule honning en gang imellem. Den er meget sød, så spørg først en voksen.",
     "fi": "Koira saa joskus aivan pienen määrän hunajaa. Se on hyvin makeaa, joten kysy ensin aikuiselta.",
-    "nb": "Hunder kan av og til få en bitteliten bit honning. Den er veldig søt, så spør en voksen først."
+    "nb": "Hunder kan av og til få en bitteliten bit honning. Den er veldig søt, så spør en voksen først.",
+    "it": "Ogni tanto i cani possono mangiare un pochino di miele. È molto dolce, quindi chiedi prima a un adulto."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "sv": "Kan honung hjälpa min hunds allergier?",
         "da": "Kan honning hjælpe min hunds allergi?",
         "fi": "Voiko hunaja auttaa koirani allergioihin?",
-        "nb": "Kan honning hjelpe mot allergien til hunden min?"
+        "nb": "Kan honning hjelpe mot allergien til hunden min?",
+        "it": "Il miele può aiutare contro le allergie del mio cane?"
       },
       "a": {
         "en": "Honey is often said to help with seasonal allergies, but it isn't guaranteed or even likely to help.",
@@ -103,7 +112,8 @@
         "sv": "Man säger ofta att honung hjälper mot säsongsallergier, men det är varken säkert eller ens troligt att den hjälper.",
         "da": "Man siger ofte, at honning hjælper mod sæsonallergi, men det er ikke garanteret og ikke engang sandsynligt.",
         "fi": "Hunajan sanotaan usein auttavan kausiallergioihin, mutta apua ei voi taata, eikä se ole edes todennäköistä.",
-        "nb": "Det sies ofte at honning hjelper mot sesongallergier, men det er verken sikkert eller engang sannsynlig at den hjelper."
+        "nb": "Det sies ofte at honning hjelper mot sesongallergier, men det er verken sikkert eller engang sannsynlig at den hjelper.",
+        "it": "Si dice spesso che il miele aiuti contro le allergie stagionali, ma non è garantito che funzioni, e non è nemmeno probabile."
       }
     },
     {
@@ -115,7 +125,8 @@
         "sv": "Får jag ge honung till min valp?",
         "da": "Må jeg give min hvalp honning?",
         "fi": "Voinko antaa hunajaa pennulleni?",
-        "nb": "Kan jeg gi honning til valpen min?"
+        "nb": "Kan jeg gi honning til valpen min?",
+        "it": "Posso dare il miele al mio cucciolo?"
       },
       "a": {
         "en": "Not raw honey. Raw honey shouldn't be given to puppies or dogs with weak immune systems, because it may contain botulism.",
@@ -125,7 +136,8 @@
         "sv": "Inte rå honung. Rå honung ska inte ges till valpar eller hundar med svagt immunförsvar, eftersom den kan innehålla botulismbakterier.",
         "da": "Ikke rå honning. Rå honning bør ikke gives til hvalpe eller hunde med svagt immunforsvar, fordi den kan indeholde botulismebakterier.",
         "fi": "Raakaa hunajaa ei. Raakaa hunajaa ei pidä antaa pennuille eikä koirille, joiden immuunipuolustus on heikko, koska siinä voi olla botulismia.",
-        "nb": "Ikke rå honning. Rå honning bør ikke gis til valper eller hunder med svekket immunforsvar, fordi den kan inneholde botulisme."
+        "nb": "Ikke rå honning. Rå honning bør ikke gis til valper eller hunder med svekket immunforsvar, fordi den kan inneholde botulisme.",
+        "it": "Non quello crudo. Il miele crudo non va dato ai cuccioli né ai cani con difese immunitarie deboli, perché può contenere botulino."
       }
     }
   ],
@@ -237,6 +249,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "100e0fec1fa6b402218b712082bb9db366cd9fe31046088d8925fbeb4499b399"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a69fb32432f3c6b52c80c8ef21188199fca261cdba9ba694e08b03bf09e3b1f2"
     }
   }
 }

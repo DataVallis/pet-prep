@@ -9,7 +9,8 @@
     "sv": "Godis",
     "da": "Slik",
     "fi": "Karkit",
-    "nb": "Godteri"
+    "nb": "Godteri",
+    "it": "Caramelle"
   },
   "question": {
     "en": "Can dogs eat candy?",
@@ -19,7 +20,8 @@
     "sv": "Får hundar äta godis?",
     "da": "Må hunde spise slik?",
     "fi": "Saako koira syödä karkkia?",
-    "nb": "Kan hunder spise godteri?"
+    "nb": "Kan hunder spise godteri?",
+    "it": "I cani possono mangiare le caramelle?"
   },
   "url_slug": {
     "en": "candy",
@@ -29,7 +31,8 @@
     "sv": "godis",
     "da": "slik",
     "fi": "karkit",
-    "nb": "godteri"
+    "nb": "godteri",
+    "it": "caramelle"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "sv": "Nej. Godis är inte säkert för hundar. Sockret kan göra hundens mage orolig, och en del godis innehåller choklad, xylitol eller russin, som alla är giftiga för hundar. Uppätna godispapper kan också orsaka stopp.",
     "da": "Nej. Slik er ikke ufarligt for hunde. Sukkeret kan give hunden dårlig mave, og noget slik indeholder chokolade, xylitol eller rosiner, som er giftige for hunde. Slugt slikpapir kan også give blokeringer.",
     "fi": "Ei saa. Karkki ei ole koirille turvallista. Sen sokeri voi ärsyttää koiran vatsaa, ja joissakin karkeissa on suklaata, ksylitolia tai rusinoita, jotka ovat koirille myrkyllisiä. Myös nielty kääre voi aiheuttaa tukoksen.",
-    "nb": "Nei. Godteri er ikke trygt for hunder. Sukkeret kan gi hunden urolig mage, og noe godteri inneholder sjokolade, xylitol eller rosiner, som er giftige for hunder. Innpakning som blir svelget, kan også gi tarmblokkering."
+    "nb": "Nei. Godteri er ikke trygt for hunder. Sukkeret kan gi hunden urolig mage, og noe godteri inneholder sjokolade, xylitol eller rosiner, som er giftige for hunder. Innpakning som blir svelget, kan også gi tarmblokkering.",
+    "it": "No. Le caramelle non sono sicure per i cani. Lo zucchero può far venire mal di pancia, e alcune caramelle contengono cioccolato, xilitolo o uvetta, tossici per i cani. Anche gli involucri ingoiati possono causare un’ostruzione."
   },
   "why": {
     "en": "Candy offers dogs no nutritional value, and sugary, high-fat candy can lead to pancreatitis, a painful inflammation of the pancreas. Chocolate, xylitol (in sugar-free candy and gum) and raisins are toxic. Wrappers can be a choking risk, foil and cellophane wrappers can block the intestines, and large amounts of hard candy can clump in the stomach. Plain sugary candy often causes only mild stomach upset, but because candy can hide toxic ingredients and wrappers, we rate it dangerous.",
@@ -50,7 +54,8 @@
     "sv": "Godis ger hundar inget näringsvärde, och sött, fett godis kan leda till bukspottkörtelinflammation (pankreatit), en smärtsam inflammation i bukspottkörteln. Choklad, xylitol (i sockerfritt godis och tuggummi) och russin är giftiga. Godispapper kan vara en kvävningsrisk, folie och cellofan kan blockera tarmarna, och stora mängder hårt godis kan klumpa ihop sig i magen. Vanligt sött godis ger ofta bara lätt orolig mage, men eftersom godis kan dölja giftiga ingredienser och papper bedömer vi det som farligt.",
     "da": "Slik har ingen næringsværdi for hunde, og sukkerholdigt, fedt slik kan give betændelse i bugspytkirtlen (pankreatitis), som er en smertefuld betændelse. Chokolade, xylitol (i sukkerfrit slik og tyggegummi) og rosiner er giftige. Slikpapir kan udgøre en kvælningsrisiko, folie- og cellofanpapir kan blokere tarmene, og store mængder hårdt slik kan klumpe sammen i maven. Almindeligt sukkerholdigt slik giver ofte kun let mavebesvær, men fordi slik kan skjule giftige ingredienser og papir, vurderer vi det som farligt.",
     "fi": "Karkista ei ole koirille ravitsemuksellista hyötyä, ja sokerinen, runsasrasvainen karkki voi johtaa haimatulehdukseen, joka on haiman kivulias tulehdus. Suklaa, ksylitoli (sokerittomissa karkeissa ja purukumissa) ja rusinat ovat myrkyllisiä. Kääreet voivat aiheuttaa tukehtumisvaaran, folio- ja sellofaanikääreet voivat tukkia suolen, ja suuret määrät kovia karamelleja voivat kasaantua mahalaukkuun. Tavallinen sokerinen karkki aiheuttaa usein vain lievän vatsavaivan, mutta koska karkeissa ja kääreissä voi olla piilossa vaarallisia ainesosia, luokittelemme sen vaaralliseksi.",
-    "nb": "Godteri gir hunder ingen næringsverdi, og sukkerrikt og fettrikt godteri kan føre til betennelse i bukspyttkjertelen (pankreatitt), en smertefull tilstand. Sjokolade, xylitol (i sukkerfritt godteri og tyggegummi) og rosiner er giftige. Innpakning kan gi kvelningsfare, folie og cellofan kan blokkere tarmen, og store mengder hardt godteri kan klumpe seg sammen i magen. Vanlig sukkerrikt godteri gir ofte bare mild urolig mage, men siden godteri kan skjule giftige ingredienser og innpakning, vurderer vi det som farlig."
+    "nb": "Godteri gir hunder ingen næringsverdi, og sukkerrikt og fettrikt godteri kan føre til betennelse i bukspyttkjertelen (pankreatitt), en smertefull tilstand. Sjokolade, xylitol (i sukkerfritt godteri og tyggegummi) og rosiner er giftige. Innpakning kan gi kvelningsfare, folie og cellofan kan blokkere tarmen, og store mengder hardt godteri kan klumpe seg sammen i magen. Vanlig sukkerrikt godteri gir ofte bare mild urolig mage, men siden godteri kan skjule giftige ingredienser og innpakning, vurderer vi det som farlig.",
+    "it": "Le caramelle non hanno alcun valore nutritivo per i cani, e quelle molto zuccherate e ricche di grassi possono portare alla pancreatite, una dolorosa infiammazione del pancreas. Cioccolato, xilitolo (nelle caramelle e nelle gomme senza zucchero) e uvetta sono tossici. Gli involucri possono comportare un rischio di soffocamento, quelli di alluminio e cellophane possono ostruire l’intestino, e grandi quantità di caramelle dure possono formare un grumo nello stomaco. Le semplici caramelle zuccherate spesso causano solo un lieve disturbo di stomaco, ma poiché le caramelle possono nascondere ingredienti tossici e involucri pericolosi, le valutiamo come pericolose."
   },
   "signs": {
     "en": [
@@ -100,6 +105,12 @@
       "Diaré",
       "Dårlig matlyst, lite energi eller vondt i magen (tegn på pankreatitt kan ta noen dager å vise seg)",
       "Svakhet, ustø gange eller kramper (xylitol)"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Poco appetito, poca energia o mal di pancia (i sintomi della pancreatite possono comparire dopo qualche giorno)",
+      "Debolezza, andatura incerta o convulsioni (xilitolo)"
     ]
   },
   "what_to_do": {
@@ -110,7 +121,8 @@
     "sv": "Flytta undan resten av godiset och samla ihop godispappren: de hjälper dig att räkna ut vad hunden åt och ungefär hur mycket. Kontrollera etiketterna efter choklad, xylitol (anges också som björksocker) och russin, och ring sedan din veterinär eller giftrådgivningen för djur direkt, även om hunden verkar må bra.",
     "da": "Læg det resterende slik uden for rækkevidde, og saml slikpapiret: det hjælper dig med at finde ud af, hvad din hund har spist, og nogenlunde hvor meget. Tjek varedeklarationen for chokolade, xylitol (også kaldet birkesukker) og rosiner, og ring så til din dyrlæge eller en giftrådgivning for dyr med det samme, også selvom din hund virker upåvirket.",
     "fi": "Siirrä jäljellä olevat karkit pois koiran ulottuvilta ja kerää kääreet talteen: ne auttavat selvittämään, mitä koirasi söi ja suunnilleen kuinka paljon. Tarkista pakkausmerkinnöistä suklaa, ksylitoli (merkitty myös koivusokeriksi) ja rusinat ja soita sitten heti eläinlääkärille tai eläinten myrkytysneuvontaan, vaikka koirasi vaikuttaisi voivan hyvin.",
-    "nb": "Legg resten av godteriet utenfor rekkevidde og samle inn innpakningen. Den hjelper deg å finne ut hva hunden har spist og omtrent hvor mye. Sjekk ingredienslisten for sjokolade, xylitol (kan også stå oppført som bjørkesukker) og rosiner, og kontakt deretter dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden virker frisk."
+    "nb": "Legg resten av godteriet utenfor rekkevidde og samle inn innpakningen. Den hjelper deg å finne ut hva hunden har spist og omtrent hvor mye. Sjekk ingredienslisten for sjokolade, xylitol (kan også stå oppført som bjørkesukker) og rosiner, og kontakt deretter dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden virker frisk.",
+    "it": "Metti le caramelle rimaste fuori dalla portata del cane e raccogli gli involucri: ti aiutano a capire che cosa ha mangiato il tuo cane e più o meno in che quantità. Controlla sulle etichette se ci sono cioccolato, xilitolo (indicato anche come zucchero di betulla) e uvetta, poi chiama subito il veterinario o un centro antiveleni veterinario, anche se il tuo cane sembra stare bene."
   },
   "serving": null,
   "child": {
@@ -121,7 +133,8 @@
     "sv": "Godis är till för människor, inte för hundar. Håll godis och godispapper utom räckhåll, och säg till en vuxen om hunden äter något.",
     "da": "Slik er til mennesker, ikke til hunde. Hold slik og slikpapir uden for rækkevidde, og sig det til en voksen, hvis din hund har spist noget.",
     "fi": "Makeiset ovat ihmisille, eivät koirille. Pidä karkit ja kääreet poissa koiran ulottuvilta ja kerro aikuiselle, jos koirasi syö niitä.",
-    "nb": "Godteri er for mennesker, ikke for hunder. Hold godteri og innpakning utenfor rekkevidde, og si fra til en voksen hvis hunden spiser noe."
+    "nb": "Godteri er for mennesker, ikke for hunder. Hold godteri og innpakning utenfor rekkevidde, og si fra til en voksen hvis hunden spiser noe.",
+    "it": "Le caramelle sono per le persone, non per i cani. Tieni caramelle e involucri fuori dalla sua portata e dillo a un adulto se il tuo cane ne mangia."
   },
   "faq": [
     {
@@ -133,7 +146,8 @@
         "sv": "Min hund svalde ett godispapper. Är det farligt?",
         "da": "Min hund har slugt et stykke slikpapir. Er det farligt?",
         "fi": "Koirani nieli karkin kääreen. Onko se vaarallista?",
-        "nb": "Hunden min svelget innpakningen fra et godteri. Er det farlig?"
+        "nb": "Hunden min svelget innpakningen fra et godteri. Er det farlig?",
+        "it": "Il mio cane ha ingoiato l’involucro di una caramella. È pericoloso?"
       },
       "a": {
         "en": "It can be. Candy wrappers can be a choking risk, and foil and cellophane wrappers can cause a blockage in the intestines. Contact your vet or a pet poison helpline for guidance.",
@@ -143,7 +157,8 @@
         "sv": "Det kan det vara. Godispapper kan vara en kvävningsrisk, och folie och cellofan kan orsaka stopp i tarmarna. Kontakta din veterinär eller giftrådgivningen för djur och be om råd.",
         "da": "Det kan det være. Slikpapir kan udgøre en risiko for kvælning, og slikpapir af folie eller cellofan kan give en blokering i tarmene. Kontakt din dyrlæge eller en giftrådgivning for dyr for at få vejledning.",
         "fi": "Se voi olla. Karkkien kääreet voivat aiheuttaa tukehtumisvaaran, ja folio- ja sellofaanikääreet voivat tukkia suolen. Ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan ohjeita varten.",
-        "nb": "Det kan være det. Innpakning fra godteri kan gi kvelningsfare, og innpakning av folie og cellofan kan gi tarmblokkering. Kontakt dyrlegen eller giftinformasjon for dyr for veiledning."
+        "nb": "Det kan være det. Innpakning fra godteri kan gi kvelningsfare, og innpakning av folie og cellofan kan gi tarmblokkering. Kontakt dyrlegen eller giftinformasjon for dyr for veiledning.",
+        "it": "Può esserlo. Gli involucri delle caramelle possono comportare un rischio di soffocamento, e quelli di alluminio e cellophane possono causare un’ostruzione dell’intestino. Contatta il veterinario o un centro antiveleni veterinario per sapere come comportarti."
       }
     },
     {
@@ -155,7 +170,8 @@
         "sv": "Får hundar äta klubbor eller gelébönor?",
         "da": "Må hunde spise slikkepinde eller jelly beans?",
         "fi": "Saako koira syödä tikkareita tai jelly beaneja?",
-        "nb": "Kan hunder spise slikkepinner eller geléboner?"
+        "nb": "Kan hunder spise slikkepinner eller geléboner?",
+        "it": "I cani possono mangiare lecca-lecca o caramelle gommose?"
       },
       "a": {
         "en": "No. Jelly beans are mostly sugar, which can cause stomach upset. Sugar-free lollipops may contain xylitol, and dogs may chew and swallow the lollipop stick.",
@@ -165,7 +181,8 @@
         "sv": "Nej. Gelébönor består mest av socker, vilket kan ge orolig mage. Sockerfria klubbor kan innehålla xylitol, och hundar kan tugga sönder och svälja klubbpinnen.",
         "da": "Nej. Jelly beans består mest af sukker, som kan give mavebesvær. Sukkerfri slikkepinde kan indeholde xylitol, og hunde kan tygge på slikkepindens pind og sluge den.",
         "fi": "Ei. Jelly beanit ovat enimmäkseen sokeria, mikä voi aiheuttaa vatsavaivoja. Sokerittomissa tikkareissa voi olla ksylitolia, ja koira voi pureskella ja niellä tikkarin tikun.",
-        "nb": "Nei. Geléboner består mest av sukker, som kan gi urolig mage. Sukkerfrie slikkepinner kan inneholde xylitol, og hunder kan tygge og svelge pinnen."
+        "nb": "Nei. Geléboner består mest av sukker, som kan gi urolig mage. Sukkerfrie slikkepinner kan inneholde xylitol, og hunder kan tygge og svelge pinnen.",
+        "it": "No. Le caramelle gommose sono fatte soprattutto di zucchero, che può dare mal di pancia. I lecca-lecca senza zucchero possono contenere xilitolo, e il cane può masticare e ingoiare lo stecco del lecca-lecca."
       }
     }
   ],
@@ -316,6 +333,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "18fa722ba835283dbcd2a5cdbf53af817b0eaaa0826442dae6eb0f955b33107c"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "66d6eaf488f131fbc782201dfa8d33b3a94d20d94c1c0757325ca8403d8f4fd7"
     }
   }
 }

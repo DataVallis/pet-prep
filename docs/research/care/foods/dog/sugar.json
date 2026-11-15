@@ -9,7 +9,8 @@
     "sv": "Socker",
     "da": "Sukker",
     "fi": "Sokeri",
-    "nb": "Sukker"
+    "nb": "Sukker",
+    "it": "Zucchero"
   },
   "question": {
     "en": "Can dogs eat sugar?",
@@ -19,7 +20,8 @@
     "sv": "Får hundar äta socker?",
     "da": "Må hunde spise sukker?",
     "fi": "Saako koira syödä sokeria?",
-    "nb": "Kan hunder spise sukker?"
+    "nb": "Kan hunder spise sukker?",
+    "it": "I cani possono mangiare lo zucchero?"
   },
   "url_slug": {
     "en": "sugar",
@@ -29,7 +31,8 @@
     "sv": "socker",
     "da": "sukker",
     "fi": "sokeri",
-    "nb": "sukker"
+    "nb": "sukker",
+    "it": "zucchero"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "sv": "Nej, det är bäst att inte ge din hund socker. Lite socker är inte giftigt för hundar, men det ger inget näringsvärde och kan orsaka magbesvär. Sockerfria produkter är inte säkrare: de kan innehålla xylitol, som är giftigt för hundar.",
     "da": "Nej, det er bedst ikke at give din hund sukker. Lidt sukker er ikke giftigt for hunde, men det giver ingen næringsmæssig fordel og kan give mavebesvær. Sukkerfri produkter er ikke mere sikre: de kan indeholde xylitol, som er giftigt for hunde.",
     "fi": "Ei suositella, koiralle ei kannata antaa sokeria. Vähän sokeria ei ole koirille myrkyllistä, mutta siitä ei ole ravitsemuksellista hyötyä ja se voi aiheuttaa vatsavaivoja. Sokerittomat tuotteet eivät ole sen turvallisempia: niissä voi olla ksylitolia, joka on koirille myrkyllistä.",
-    "nb": "Nei, det er best å ikke gi hunden sukker. Litt sukker er ikke giftig for hunder, men det gir ingen næringsmessig nytte og kan gi urolig mage. Sukkerfrie produkter er ikke tryggere: de kan inneholde xylitol, som er giftig for hunder."
+    "nb": "Nei, det er best å ikke gi hunden sukker. Litt sukker er ikke giftig for hunder, men det gir ingen næringsmessig nytte og kan gi urolig mage. Sukkerfrie produkter er ikke tryggere: de kan inneholde xylitol, som er giftig for hunder.",
+    "it": "No, è meglio non dare lo zucchero al tuo cane. Un po’ di zucchero non è tossico per i cani, ma non ha alcun beneficio nutrizionale e può causare mal di stomaco. I prodotti senza zucchero non sono più sicuri: possono contenere xilitolo, che è tossico per i cani."
   },
   "why": {
     "en": "Sugar can cause stomach upset, including vomiting and diarrhoea. Sugary, high-fat foods can also lead to pancreatitis, a painful inflammation of the pancreas. Over time, sugary treats can contribute to obesity, and sugars can cause tooth decay.",
@@ -50,7 +54,8 @@
     "sv": "Socker kan orsaka magbesvär, bland annat kräkningar och diarré. Söt och fet mat kan också leda till bukspottkörtelinflammation (pankreatit), en smärtsam inflammation i bukspottkörteln. Med tiden kan söta godsaker bidra till fetma, och socker kan ge karies.",
     "da": "Sukker kan give mavebesvær, herunder opkast og diarré. Sukkerholdig, fed mad kan også give betændelse i bugspytkirtlen, som er en smertefuld betændelse. Med tiden kan sukkerholdige godbidder bidrage til fedme, og sukker kan give huller i tænderne.",
     "fi": "Sokeri voi aiheuttaa vatsavaivoja, myös oksentelua ja ripulia. Sokeriset, runsasrasvaiset ruoat voivat johtaa myös haimatulehdukseen, haiman kivuliaaseen tulehdukseen. Ajan myötä sokeriset herkut voivat edistää lihavuutta, ja sokerit voivat aiheuttaa hampaiden reikiintymistä.",
-    "nb": "Sukker kan gi urolig mage, blant annet oppkast og diaré. Sukkerholdig og fet mat kan også føre til betennelse i bukspyttkjertelen, som er smertefull. Over tid kan sukkerholdig godbit bidra til fedme, og sukker kan gi hull i tennene."
+    "nb": "Sukker kan gi urolig mage, blant annet oppkast og diaré. Sukkerholdig og fet mat kan også føre til betennelse i bukspyttkjertelen, som er smertefull. Over tid kan sukkerholdig godbit bidra til fedme, og sukker kan gi hull i tennene.",
+    "it": "Lo zucchero può causare mal di stomaco, compresi vomito e diarrea. I cibi zuccherati e ricchi di grassi possono anche portare alla pancreatite, una dolorosa infiammazione del pancreas. Con il tempo i dolcetti zuccherati possono contribuire all’obesità, e gli zuccheri possono causare carie."
   },
   "signs": {
     "en": [
@@ -92,6 +97,11 @@
       "Oppkast",
       "Diaré",
       "Dårlig matlyst, lite energi eller magesmerter (mulig betennelse i bukspyttkjertelen; symptomene kan komme først etter noen dager)"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Scarso appetito, poca energia o mal di pancia (possibile pancreatite; i sintomi possono impiegare qualche giorno a comparire)"
     ]
   },
   "what_to_do": {
@@ -102,7 +112,8 @@
     "sv": "Vanligt sockrigt godis ger ofta lindriga magbesvär eller inga tecken alls. Om din hund har ätit mycket sockrig mat ska du ringa din veterinär eller giftrådgivningen för djur direkt, även om hunden verkar frisk. Om den har ätit något sockerfritt som kan innehålla xylitol ska du kontakta din veterinär omedelbart.",
     "da": "Almindeligt sukkerholdigt slik giver ofte kun let mavebesvær eller slet ingen tegn. Hvis din hund har spist meget sukkerholdig mad, skal du ringe til din dyrlæge eller en giftrådgivning for dyr med det samme, også selvom din hund virker upåvirket. Hvis den har spist noget sukkerfrit, som kan indeholde xylitol, skal du ringe til din dyrlæge med det samme.",
     "fi": "Tavallinen sokerinen makeinen aiheuttaa usein vain lievän vatsavaivan tai ei oireita lainkaan. Jos koirasi söi paljon sokerista ruokaa, soita heti eläinlääkärille tai eläinten myrkytysneuvontaan, vaikka koirasi vaikuttaisi voivan hyvin. Jos se söi jotain sokeritonta, jossa voi olla ksylitolia, soita eläinlääkärille välittömästi.",
-    "nb": "Vanlig sukkerholdig godteri gir ofte lett urolig mage eller ingen symptomer i det hele tatt. Hvis hunden har spist mye sukkerholdig mat, ring dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden virker frisk. Hvis den har spist noe sukkerfritt som kan inneholde xylitol, ring dyrlegen umiddelbart."
+    "nb": "Vanlig sukkerholdig godteri gir ofte lett urolig mage eller ingen symptomer i det hele tatt. Hvis hunden har spist mye sukkerholdig mat, ring dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden virker frisk. Hvis den har spist noe sukkerfritt som kan inneholde xylitol, ring dyrlegen umiddelbart.",
+    "it": "I dolciumi fatti solo di zucchero causano spesso un lieve mal di stomaco o nessun sintomo. Se il tuo cane ha mangiato molto cibo zuccherato, chiama subito il veterinario o un centro antiveleni veterinario, anche se sembra stare bene. Se ha mangiato qualcosa senza zucchero che può contenere xilitolo, chiama subito il veterinario."
   },
   "serving": null,
   "child": {
@@ -113,7 +124,8 @@
     "sv": "Socker är en godbit för människor. Det kan ge hundar ont i magen, så behåll godiset själv och ge din hund en godbit för hundar.",
     "da": "Sukker er en godbid for mennesker. Det kan give hunde ondt i maven, så behold slikket selv, og giv din hund en hundegodbid.",
     "fi": "Sokeri on ihmisten herkkua. Se voi tehdä koiran vatsan kipeäksi, joten pidä makeiset itselläsi ja anna koirallesi koiranherkku.",
-    "nb": "Sukker er en godbit for mennesker. Det kan gi hunder vondt i magen, så spis godteriet selv og gi hunden en hundegodbit."
+    "nb": "Sukker er en godbit for mennesker. Det kan gi hunder vondt i magen, så spis godteriet selv og gi hunden en hundegodbit.",
+    "it": "Lo zucchero è per le persone. Può far venire il mal di pancia ai cani, quindi tieni i dolci per te e dai al tuo cane un premietto per cani."
   },
   "faq": [
     {
@@ -125,7 +137,8 @@
         "sv": "Skadar lite socker min hund?",
         "da": "Skader lidt sukker min hund?",
         "fi": "Vahingoittaako vähän sokeria koiraani?",
-        "nb": "Skader litt sukker hunden min?"
+        "nb": "Skader litt sukker hunden min?",
+        "it": "Un po’ di zucchero fa male al mio cane?"
       },
       "a": {
         "en": "A little sugar isn't toxic to dogs, but it can cause stomach upset and offers no nutritional benefit.",
@@ -135,7 +148,8 @@
         "sv": "Lite socker är inte giftigt för hundar, men det kan orsaka magbesvär och ger inget näringsvärde.",
         "da": "Lidt sukker er ikke giftigt for hunde, men det kan give mavebesvær og giver ingen næringsmæssig fordel.",
         "fi": "Vähän sokeria ei ole koirille myrkyllistä, mutta se voi aiheuttaa vatsavaivoja eikä siitä ole ravitsemuksellista hyötyä.",
-        "nb": "Litt sukker er ikke giftig for hunder, men det kan gi urolig mage og gir ingen næringsmessig nytte."
+        "nb": "Litt sukker er ikke giftig for hunder, men det kan gi urolig mage og gir ingen næringsmessig nytte.",
+        "it": "Un po’ di zucchero non è tossico per i cani, ma può causare mal di stomaco e non ha alcun beneficio nutrizionale."
       }
     },
     {
@@ -147,7 +161,8 @@
         "sv": "Är sockerfritt godis säkrare för hundar?",
         "da": "Er sukkerfrit slik sikrere for hunde?",
         "fi": "Ovatko sokerittomat makeiset turvallisempia koirille?",
-        "nb": "Er sukkerfritt godteri tryggere for hunder?"
+        "nb": "Er sukkerfritt godteri tryggere for hunder?",
+        "it": "I dolci senza zucchero sono più sicuri per i cani?"
       },
       "a": {
         "en": "No. Sugar-free products often contain xylitol, which is toxic to dogs. Check the label; xylitol may also be listed as birch sugar.",
@@ -157,7 +172,8 @@
         "sv": "Nej. Sockerfria produkter innehåller ofta xylitol, som är giftigt för hundar. Kontrollera innehållsförteckningen; xylitol kan också stå som björksocker.",
         "da": "Nej. Sukkerfri produkter indeholder ofte xylitol, som er giftigt for hunde. Tjek varedeklarationen; xylitol kan også stå som birkesukker.",
         "fi": "Eivät. Sokerittomissa tuotteissa on usein ksylitolia, joka on koirille myrkyllistä. Tarkista pakkausmerkinnät; ksylitoli voi olla merkitty myös koivusokeriksi.",
-        "nb": "Nei. Sukkerfrie produkter inneholder ofte xylitol, som er giftig for hunder. Sjekk ingredienslisten; xylitol kan også stå oppført som bjørkesukker."
+        "nb": "Nei. Sukkerfrie produkter inneholder ofte xylitol, som er giftig for hunder. Sjekk ingredienslisten; xylitol kan også stå oppført som bjørkesukker.",
+        "it": "No. I prodotti senza zucchero contengono spesso xilitolo, tossico per i cani. Controlla l’etichetta; lo xilitolo può comparire anche come zucchero di betulla."
       }
     }
   ],
@@ -269,6 +285,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2d42b4eb16052c0d4ca48e28722b2472bdbf68ab509c88df9ebd14c18b5fa39a"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b2944eebf4ded801c40fd0eb6513fd24fd1440e9440e01d2849eeda0c71ddc60"
     }
   }
 }

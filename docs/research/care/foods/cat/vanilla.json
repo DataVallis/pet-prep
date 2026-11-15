@@ -9,7 +9,8 @@
     "sv": "Vaniljextrakt",
     "da": "Vaniljeekstrakt",
     "fi": "Vaniljauute",
-    "nb": "Vaniljeekstrakt"
+    "nb": "Vaniljeekstrakt",
+    "it": "Estratto di vaniglia"
   },
   "question": {
     "en": "Can cats have vanilla extract?",
@@ -19,7 +20,8 @@
     "sv": "Får katter äta vaniljextrakt?",
     "da": "Må katte få vaniljeekstrakt?",
     "fi": "Saako kissa vaniljauutetta?",
-    "nb": "Kan katter få vaniljeekstrakt?"
+    "nb": "Kan katter få vaniljeekstrakt?",
+    "it": "I gatti possono mangiare l’estratto di vaniglia?"
   },
   "url_slug": {
     "en": "vanilla",
@@ -29,7 +31,8 @@
     "sv": "vaniljextrakt",
     "da": "vaniljeekstrakt",
     "fi": "vaniljauute",
-    "nb": "vaniljeekstrakt"
+    "nb": "vaniljeekstrakt",
+    "it": "estratto-di-vaniglia"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "sv": "Nej, håll vaniljextrakt borta från din katt. Vaniljextrakt består mest av alkohol, och katter är särskilt känsliga för alkohol. Det kan orsaka kräkningar, diarré, vinglig gång och till och med koma eller död. Ring din veterinär direkt om din katt får i sig något.",
     "da": "Nej, hold vaniljeekstrakt væk fra din kat. Vaniljeekstrakt er for det meste lavet af alkohol, og katte er særligt følsomme over for alkohol. Det kan give opkast, diarré, vaklende gang som hos en beruset og endda koma eller død. Ring straks til din dyrlæge, hvis din kat drikker noget.",
     "fi": "Ei saa, pidä vaniljauute poissa kissan ulottuvilta. Vaniljauute koostuu pääosin alkoholista, ja kissat ovat erityisen herkkiä alkoholille. Se voi aiheuttaa oksentelua, ripulia, huojuvaa kävelyä ja jopa kooman tai kuoleman. Soita heti eläinlääkärille, jos kissasi juo sitä yhtään.",
-    "nb": "Nei, hold vaniljeekstrakt unna katten. Vaniljeekstrakt består for det meste av alkohol, og katter er spesielt følsomme for alkohol. Det kan gi oppkast, diaré, ustø gange og til og med koma eller død. Ring dyrlegen med en gang hvis katten drikker noe av det."
+    "nb": "Nei, hold vaniljeekstrakt unna katten. Vaniljeekstrakt består for det meste av alkohol, og katter er spesielt følsomme for alkohol. Det kan gi oppkast, diaré, ustø gange og til og med koma eller død. Ring dyrlegen med en gang hvis katten drikker noe av det.",
+    "it": "No, tieni l’estratto di vaniglia lontano dal gatto. L’estratto di vaniglia è fatto per lo più di alcol, e i gatti sono particolarmente sensibili all’alcol. Può causare vomito, diarrea, andatura barcollante, da ubriaco, e persino coma o morte. Se il tuo gatto ne beve anche solo un po’, chiama subito il veterinario."
   },
   "why": {
     "en": "VCA Animal Hospitals says vanilla extract is mostly made from alcohol, and that alcohol can cause vomiting, diarrhoea, a drunken gait and even coma or death. All animals are at risk of alcohol poisoning, but cats are especially sensitive.",
@@ -50,7 +54,8 @@
     "sv": "VCA Animal Hospitals säger att vaniljextrakt mestadels består av alkohol, och att alkohol kan orsaka kräkningar, diarré, vinglig gång och till och med koma eller död. Alla djur riskerar alkoholförgiftning, men katter är särskilt känsliga.",
     "da": "VCA Animal Hospitals skriver at vaniljeekstrakt for det meste er lavet af alkohol, og at alkohol kan give opkast, diarré, beruset gang og endda koma eller død. Alle dyr er i risiko for alkoholforgiftning, men katte er særligt følsomme.",
     "fi": "VCA Animal Hospitalsin mukaan vaniljauute koostuu pääosin alkoholista, ja alkoholi voi aiheuttaa oksentelua, ripulia, humalaista kävelyä ja jopa kooman tai kuoleman. Kaikki eläimet ovat alkoholimyrkytysvaarassa, mutta kissat ovat erityisen herkkiä.",
-    "nb": "VCA Animal Hospitals sier at vaniljeekstrakt for det meste består av alkohol, og at alkohol kan gi oppkast, diaré, ustø gange og til og med koma eller død. Alle dyr kan få alkoholforgiftning, men katter er spesielt følsomme."
+    "nb": "VCA Animal Hospitals sier at vaniljeekstrakt for det meste består av alkohol, og at alkohol kan gi oppkast, diaré, ustø gange og til og med koma eller død. Alle dyr kan få alkoholforgiftning, men katter er spesielt følsomme.",
+    "it": "VCA Animal Hospitals spiega che l’estratto di vaniglia è fatto per lo più di alcol e che l’alcol può causare vomito, diarrea, andatura da ubriaco e persino coma o morte. Tutti gli animali rischiano l’intossicazione da alcol, ma i gatti sono particolarmente sensibili."
   },
   "signs": {
     "en": [
@@ -108,6 +113,13 @@
       "Uvanlig søvnighet eller sløvhet",
       "Langsom pust",
       "I alvorlige tilfeller: skjelvinger, kramper eller koma"
+    ],
+    "it": [
+      "Vomito o diarrea",
+      "Andatura instabile, da ubriaco",
+      "Sonnolenza o abbattimento insoliti",
+      "Respirazione lenta",
+      "Nei casi gravi: tremori, convulsioni o coma"
     ]
   },
   "what_to_do": {
@@ -118,7 +130,8 @@
     "sv": "Ring din veterinär eller giftrådgivningen för djur omedelbart. Vänta inte på att tecken ska dyka upp, och försök inte få katten att kräkas hemma om inte din veterinär säger det.",
     "da": "Ring til din dyrlæge eller en giftrådgivning for dyr med det samme. Vent ikke på tegn, og prøv ikke selv at få katten til at kaste op, medmindre din dyrlæge siger, at du skal.",
     "fi": "Soita heti eläinlääkärille tai eläinten myrkytysneuvontaan. Älä odota oireita äläkä yritä oksennuttaa kissaa itse, ellei eläinlääkäri neuvo sitä.",
-    "nb": "Ring dyrlegen eller giftinformasjon for dyr med en gang. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv med mindre dyrlegen sier det."
+    "nb": "Ring dyrlegen eller giftinformasjon for dyr med en gang. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv med mindre dyrlegen sier det.",
+    "it": "Chiama subito il veterinario o un centro antiveleni veterinario. Non aspettare che compaiano i sintomi e non cercare di far vomitare il gatto a casa, a meno che non sia il veterinario a dirtelo."
   },
   "serving": null,
   "child": {
@@ -129,7 +142,8 @@
     "sv": "Vaniljextrakt doftar sött, men det är inget för katter. Håll den lilla flaskan borta från katten och säg till en vuxen om hon slickar i sig något.",
     "da": "Vaniljeekstrakt dufter sødt, men det er ikke til katte. Hold den lille flaske væk fra din kat, og sig det til en voksen, hvis den slikker på noget.",
     "fi": "Vaniljauute tuoksuu makealta, mutta se ei ole kissoille. Pidä pieni pullo poissa kisun luota ja kerro aikuiselle, jos kisu nuolee sitä.",
-    "nb": "Vaniljeekstrakt lukter søtt, men det er ikke for katter. Hold den lille flasken unna pusen, og si fra til en voksen hvis den slikker i seg noe."
+    "nb": "Vaniljeekstrakt lukter søtt, men det er ikke for katter. Hold den lille flasken unna pusen, og si fra til en voksen hvis den slikker i seg noe.",
+    "it": "L’estratto di vaniglia ha un profumo dolce, ma non è per i gatti. Tieni la boccetta lontana dal micio e dillo a un adulto se ne lecca un po’."
   },
   "faq": [
     {
@@ -141,7 +155,8 @@
         "sv": "Är äggtoddy med vanilj säker för katter?",
         "da": "Er æggepunch med vanilje ufarlig for katte?",
         "fi": "Onko vaniljalla maustettu munatoddi turvallista kissoille?",
-        "nb": "Er eggnog med vanilje trygg for katter?"
+        "nb": "Er eggnog med vanilje trygg for katter?",
+        "it": "L’eggnog alla vaniglia è sicuro per i gatti?"
       },
       "a": {
         "en": "No. VCA lists vanilla extract among eggnog's risks because it is mostly alcohol, and advises contacting your vet right away if you think your cat drank eggnog.",
@@ -151,7 +166,8 @@
         "sv": "Nej. VCA nämner vaniljextrakt bland riskerna med äggtoddy, eftersom det mest består av alkohol, och råder dig att kontakta din veterinär direkt om du tror att din katt har druckit äggtoddy.",
         "da": "Nej. VCA nævner vaniljeekstrakt blandt risiciene ved æggepunch, fordi det for det meste er alkohol, og anbefaler at kontakte din dyrlæge med det samme, hvis du tror, at din kat har drukket æggepunch.",
         "fi": "Ei. VCA mainitsee vaniljauutteen munatodin riskien joukossa, koska se on pääosin alkoholia, ja neuvoo ottamaan heti yhteyttä eläinlääkäriin, jos epäilet kissan juoneen munatoddia.",
-        "nb": "Nei. VCA nevner vaniljeekstrakt blant risikoene ved eggnog fordi det for det meste er alkohol, og anbefaler å kontakte dyrlegen med en gang hvis du tror katten har drukket eggnog."
+        "nb": "Nei. VCA nevner vaniljeekstrakt blant risikoene ved eggnog fordi det for det meste er alkohol, og anbefaler å kontakte dyrlegen med en gang hvis du tror katten har drukket eggnog.",
+        "it": "No. VCA inserisce l’estratto di vaniglia tra i rischi dell’eggnog perché è fatto per lo più di alcol, e consiglia di contattare subito il veterinario se pensi che il tuo gatto abbia bevuto eggnog."
       }
     }
   ],
@@ -268,6 +284,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0b7b37cd185b5715f765bd2c097d51c58f031e146dfde6211e00197829909654"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "20c4ff832e07a15f7fa4585fe9a73d004b1d81282d05cf78c1e09f5d3ec37a8c"
     }
   }
 }
