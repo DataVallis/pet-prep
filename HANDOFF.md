@@ -273,6 +273,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-15 (cloud, backend) — hunger floor until the next meal (`feat/hunger-floor-until-next-meal`, PR #1158, David »Izberem št. 1 in mejo 25 %«)
+- While the last child meal window that started is fed (child / emergency meal / parent meal) or none started since the birth, hunger stops at 25 % until the next child window opens (`CareScheduleService::hungerFloorActive`, applied in `PetDecayService`; number in `config/feeding.php`, no migration). A missed window is unchanged (0 %, emergency meal, alarm). Values are never raised. At the floor: `hungry` state + one phase-1 reminder with the next meal time, no phase 2 / parent alarm. Server only → live with the next production deploy; no app change. Snapshot `dog_regression_snapshot.json`: the fed legacy collie no longer reaches 0 % / phase 3 before its 17:00 window. Defaults David may change: thresholds 30 / 10 unchanged; the floor also holds after an emergency meal. Tests `HungerFloorTest`.
+
 ### 2026-11-15 (cloud, docs) — three.js analysis + »How much work is a Labrador?« prototype (`docs/threejs-real-cost-prototype-2`, David »ok daj ja, pa vse zapiši«)
 - Analysis: three.js pays off on petprep.si, not in the app and not for the pet (the pet stays video). `docs/product/THREEJS_OPPORTUNITIES.md`, ROADMAP M6-S04, DECISIONS 2026-11-15.
 - Prototype source in `docs/prototypes/real-cost/` (three.js 0.187.0 + cannon-es 0.20.0, SL + EN; `npm install && npm run serve`). **Nothing shipped:** no app, backend or website change; the e-mail form sends nothing.

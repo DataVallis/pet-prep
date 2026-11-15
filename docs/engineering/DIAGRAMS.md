@@ -428,7 +428,7 @@ flowchart TD
   REC --> F{Frozen?<br/>hard stop · ill · game over}
   F -- yes --> FC["Advance last_decay_at<br/>(no catch-up, neglect clocks paused)<br/>midnight: close day, no walk illness"]
   F -- no --> SEG["Split elapsed time since last_decay_at<br/>into normal / quiet segments<br/>(pet zone = own or family, DST-aware)"]
-  SEG --> D["Decay from breed_configs:<br/>hunger 8|12 %/h · thirst 10|15 %/h<br/>quiet hours ×0.10"]
+  SEG --> D["Decay from breed_configs:<br/>hunger 8|12 %/h · thirst 10|15 %/h<br/>quiet hours ×0.10<br/>hunger floor 25 % (config/feeding.php) while the last<br/>child meal window is fed — until the next one opens"]
   D --> MN{"New pet-local day?<br/>(Pet::effectiveTimezone)"}
   MN -- yes --> RS["Close yesterday: pet_daily_walks row<br/>energy showed 0 % → walk_illness_due_at<br/>= end of the night's quiet hours<br/>Steps → 0, energy → 0 %"]
   MN -- no --> HS
