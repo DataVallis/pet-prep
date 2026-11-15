@@ -58823,6 +58823,546 @@
       }
     }
   },
+  "afghan_hound": {
+    "_note": "Added 2026-11-15 (M5-R10-114, unattended run — appended after the Gordon Setter: AKC 2024 No. 110 'Afghan Hound', S174 full-list table '110 Afghan Hound'). Quotes as returned by the web-fetch tool on 2026-11-15 (non-preapproved pages: short fragments only); paraphrase only in notes. Sources S848–S854 (+ S10 growth, S11 AAHA, S14 Dogs Trust, S34 Coren, S35 Coren table, S45 steps). No health percentages anywhere. A large long-coated sighthound from Afghanistan (FCI Group 10, patronage Great Britain), RKC Breed Watch Category 1.",
+    "identity": {
+      "value": "FCI No. 228, Group 10 Section 1 (Long-haired or fringed Sighthounds), Afghanistan",
+      "unit": "—",
+      "source_id": "S848",
+      "quote": "AFGHAN HOUND (228)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S848): 'Group : n°10 - Sighthounds', section 'Long-haired or fringed Sighthounds', country of origin 'AFGHANISTAN', patronage 'GREAT BRITAIN', 'Not subject to a working trial according to the FCI breeds nomenclature', accepted on a definitive basis 12/12/1961. FCI standard No. 228 (S849): 'FCI-CLASSIFICATION: Group 10 Sighthounds', 'Section 1 Long-haired or fringed sighthounds', 'Without working trial'."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S850",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC Breeds A–Z key fact 'Size' (S850, value as returned); PDSA (S851) 'Size: Large' agrees; WebMD (S853) 'medium-large' (alternative)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            68,
+            74
+          ],
+          "female": [
+            63,
+            69
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S849",
+        "quote": "Males: 68 – 74 cm",
+        "confidence": "high",
+        "notes": "FCI standard No. 228 (S849) 'Ideal height at the withers': 'Males: 68 – 74 cm', 'Females: 63 – 69 cm'. PDSA (S851) average 63–74 cm; AKC standard (S854) 'Dogs, 27 inches, plus or minus one inch; bitches, 25 inches, plus or minus one inch.'; PetMD (S852) 25–27 in — alternatives."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            27.2,
+            27.2
+          ],
+          "female": [
+            22.7,
+            22.7
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S854",
+        "quote": "Dogs, about 60 pounds; bitches, about 50 pounds.",
+        "confidence": "high",
+        "notes": "AKC Official Standard for the Afghan Hound (S854, approved September 14, 1948; copy hosted on storyblok.com): dogs about 60 lb = 27.2 kg, bitches about 50 lb = 22.7 kg (our conversion, rounded to 0.1 kg). Single values → the game range 22.7–27.2 kg. The FCI standard gives no weight (S849). Alternatives: PDSA 'Average weight' 23-27 kg (S851, both sexes); PetMD / WebMD 50–60 lb (S852, S853).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                23,
+                27
+              ],
+              "female": [
+                23,
+                27
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S851",
+            "quote": "23-27 kg",
+            "notes": "PDSA key facts 'Average weight' (S851, value as returned), one range for both sexes."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: RKC 'Large' (S850); AKC 50–60 lb sits on the Medium / Large border → the RKC class (Gordon / English Setter precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Afghan Hound growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S850",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S850, value as returned); PDSA (S851) 'Average lifespan: Over 10 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024 (nature.com PDF, re-read 2026-11-15): the 'Afghan Hound' appears only as a tip label in Fig. 5 ('Median lifespan for 148 purebreds…'); the value is in Supplementary Table 3 (not reached); the Dogs Trust breed table S123 is not in the fetch tool's provenance. PetMD / WebMD (S852, S853) give no lifespan."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S850) → 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S850"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S850",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Exercise' (S850, value as returned) — the runbook's preferred source. PDSA (S851) 'Minimum exercise (per day): 2 hours' and 'ideally over 2 hours per day is needed for their mental and physical wellbeing.'; WebMD (S853) 'At least 2 hours of exercise a day is best for an Afghan hound's mental and physical well-being.' agree; PetMD (S852) 'at least an hour' (60) → alternative."
+      },
+      "pdsa": {
+        "value": "ideally over 2 hours a day",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": "ideally over 2 hours per day is needed for their mental and physical wellbeing.",
+        "confidence": "high",
+        "notes": "PDSA (S851, fragment). Agrees with 120."
+      },
+      "petmd": {
+        "value": "at least an hour a day",
+        "unit": "—",
+        "source_id": "S852",
+        "quote": "Afghan Hounds are athletic dogs who need at least an hour of exercise every day.",
+        "confidence": "high",
+        "notes": "PetMD (S852). Lower than RKC → alternative only (runbook: RKC value wins). Also 'these dogs should never be let loose in an unfenced area.' (S852)."
+      },
+      "webmd": {
+        "value": "at least 2 hours a day",
+        "unit": "—",
+        "source_id": "S853",
+        "quote": "At least 2 hours of exercise a day is best for an Afghan hound's mental and physical well-being.",
+        "confidence": "high",
+        "notes": "WebMD (S853); also 'Daily walks are not enough exercise for this active breed' (fragment)."
+      },
+      "after_meals": {
+        "value": "wait at least an hour after a meal before exercise (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S852",
+        "quote": "It’s important to wait at least an hour after your Afghan Hound eats before letting them exercise",
+        "confidence": "high",
+        "notes": "PetMD (S852, fragment as returned, curly apostrophe); 'Like other sight hounds, Afghan Hounds have a deep chest that can increase the likelihood of bloat.' (S852). PDSA (S851) lists GDV as an emergency seen in large, deep-chested breeds (paraphrase). Basis of the meal_exercise_gap row (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "dignified and aloof, with a certain keen fierceness",
+        "unit": "—",
+        "source_id": "S849",
+        "quote": "Dignified and aloof, with a certain keen fierceness.",
+        "confidence": "high",
+        "notes": "FCI standard No. 228 (S849) 'BEHAVIOUR / TEMPERAMENT'; also 'The Afghan looks at and through one.' (S849). RKC (S850): only the Hound-group text 'dignified, aloof but trustworthy companions' (not breed-specific)."
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific family-pet statement with a quote → no family_pet chip (children: see behaviour.children)."
+      },
+      "children": {
+        "value": "good with children if well socialised; monitor around young children",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": "Afghan Hounds, if well socialised, are good with children.",
+        "confidence": "high",
+        "notes": "PDSA (S851) — an explicit children statement with a socialisation caveat (kept here) → children chip (runbook: explicit statement, caveat in notes). PetMD (S852) 'Due to their prey drive nature, it’s important to monitor them around children, especially young children' → never small_children."
+      },
+      "other_pets": {
+        "value": "strong chase instinct — care around other pets; not for homes with small animals",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": "They do have a strong chase instinct, so be aware of this if they are around other pets at home",
+        "confidence": "high",
+        "notes": "PDSA (S851). PetMD (S852) 'may chase smaller animals like squirrels and rabbits.'; WebMD (S853) 'they aren't a good fit for houses with small animals such as rabbits or guinea pigs.'; FCI (S849) 'is a hunter and will chase if given opportunity'. No quote names a 'high / strong prey drive' verbatim (PetMD: 'prey drive nature') → no chases_small_pets chip by the runbook rule; open for David. Never other_pets."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found → no needs_company / often_alone chip."
+      },
+      "socialisation": {
+        "value": "puppies need socialisation (new people, animals, environments, sounds)",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": "Afghan Hounds, if well socialised, are good with children.",
+        "confidence": "high",
+        "notes": "PDSA (S851) — a condition ('if well socialised'), the runbook's M5-R17 quote form. PetMD (S852) puppy socialisation by 'exposing them to new people, animals, environments, and sounds.' (fragment)."
+      },
+      "training": {
+        "value": "independent; recall not always easy; positive reinforcement",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": "even basic training – and especially recall – will not always be easy.",
+        "confidence": "high",
+        "notes": "PDSA (S851, fragment); PetMD (S852) 'Positive reinforcement is the best way to engage with an Afghan Hound.' WebMD (S853) 'walking an Afghan hound off-leash is not recommended.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 with no breed-specific points of concern (S850). Conditions named by PDSA (S851), PetMD (S852) and WebMD (S853).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S850, fragment): Category 1 → no welfare chip, in marketing."
+      },
+      "hips": {
+        "value": "hip dysplasia — BVA/KC hip scheme (RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC Best Practice test (S850, breeder checklist)."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (bloat) — an emergency in deep-chested dogs",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S851) list item 'Gastric Dilatation Volvulus (GDV)' ('This is an emergency and requires urgent veterinary attention.'); PetMD (S852), WebMD (S853) agree. Basis of the meal / exercise warning (exercise.after_meals)."
+      },
+      "thyroid": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S851) list item; WebMD (S853) agrees."
+      },
+      "panosteitis": {
+        "value": "panosteitis (growing pains in young dogs)",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S851) list item 'Panosteitis'; WebMD (S853) agrees."
+      },
+      "other": {
+        "value": "necrotising myelopathy, laryngeal paralysis, chylothorax, sensitivity to anaesthesia and cortisone",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S851) list (necrotic myelopathy, sensitivity to anaesthesia and cortisone, laryngeal paralysis); PetMD (S852) chylothorax ('The disease is more common in Afghan Hounds than other breeds.'); WebMD (S853) hereditary necrotizing myelopathy, anaesthesia sensitivity (paraphrase). No register health key (background only)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 79,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Afghan Hound",
+        "confidence": "medium",
+        "notes": "Wikipedia 'The Intelligence of Dogs' ranking table (S35, tier C; read 2026-11-15 through the mirror https://cavac.at/cavacopedia/The%20Intelligence%20of%20Dogs): row 'Afghan Hound' at rank 79, category 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79). Cross-check: Coren's own article (S34, re-read 2026-11-15) lists the Afghan Hound last of the bottom 10 — 'Of the 199 judges, 121 ranked the Afghan Hound in the bottom 10.' Borzoi 75 (as already recorded)."
+      },
+      "coren_tier": {
+        "value": "Lowest",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79); S34 bottom 10."
+      },
+      "training_notes": {
+        "value": "independent; recall not always easy",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": "even basic training – and especially recall – will not always be easy.",
+        "confidence": "medium",
+        "notes": "PDSA (S851, fragment)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.afghan_hound.learning_multiplier (0.5, runbook rule: Lowest tier, rank 79).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "strength and dignity, combining speed and power; head held proudly",
+        "unit": "—",
+        "source_id": "S849",
+        "quote": "Gives the impression of strength and dignity, combining speed and power. Head held proudly.",
+        "confidence": "high",
+        "notes": "FCI standard No. 228 (S849)."
+      },
+      "colours": {
+        "value": [
+          "gold_black_mask",
+          "cream",
+          "red",
+          "black",
+          "black_and_tan",
+          "blue",
+          "brindle"
+        ],
+        "unit": "list",
+        "source_id": "S849",
+        "quote": "All colours, except merle which is unacceptable. However white markings on the head or collar are highly undesirable.",
+        "confidence": "high",
+        "notes": "FCI standard No. 228 (S849) 'COLOUR'; AKC (S854) 'All colors are permissible' (fragment); white markings undesirable (S849, S854). The game list is a selection of common colours (paraphrase of 'all colours'); never merle, never white head / collar markings."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): gold with a black mask first with the highest weight (the portrait default), then cream, red, black, black and tan, blue, brindle."
+      },
+      "coat": {
+        "value": "long and very fine on ribs, fore and hindquarters and flanks; short and close saddle on the back in mature dogs; never clipped",
+        "unit": "—",
+        "source_id": "S849",
+        "quote": "Long and very fine texture on ribs, fore and hindquarters and flanks.",
+        "confidence": "high",
+        "notes": "FCI (S849) fragment; 'Any evidence of clipping or scissoring should be penalized.' (S849)."
+      },
+      "muzzle": {
+        "value": "long, with punishing jaws; nose preferably black (liver permissible in light-coloured dogs)",
+        "unit": "—",
+        "source_id": "S849",
+        "quote": "Muzzle: Long, with punishing jaws.",
+        "confidence": "high",
+        "notes": "FCI (S849); 'Nose: Preferably black, liver permissible in light-coloured dogs.'"
+      },
+      "eyes": {
+        "value": "preferably dark, golden permissible",
+        "unit": "—",
+        "source_id": "S849",
+        "quote": "Preferably dark, but golden colour permissible.",
+        "confidence": "high",
+        "notes": "FCI (S849); 'The Afghan looks at and through one.'"
+      },
+      "ears": {
+        "value": "set low and well back, carried close to the head, covered with long silky hair",
+        "unit": "—",
+        "source_id": "S849",
+        "quote": "Set low and well back, carried close to head.",
+        "confidence": "high",
+        "notes": "FCI (S849); long silky hair (paraphrase)."
+      },
+      "tail": {
+        "value": "not too short, set on low with a ring at the end, raised in action (natural)",
+        "unit": "—",
+        "source_id": "S849",
+        "quote": "Not too short. Set on low with ring at end.",
+        "confidence": "high",
+        "notes": "FCI (S849); 'Raised when in action.' Never docked."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z key facts (S850, returned as values — quoted here as the value), PDSA (S851), PetMD (S852), WebMD (S853). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S850)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Basis of 120 min (PDSA S851 / WebMD S853 2 hours agree). Basis of long_daily_exercise / active_family."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Large house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S850). Basis of the large_home chip; never apartment."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S850)."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Every day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S850). The basis of brushing every day (M5-R13: 'Every day' → 7) and of frequent_grooming; PDSA (S851) 'daily brushing' agrees."
+      },
+      "rkc_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Long",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S850); PDSA (S851) 'Long' agrees."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S850). Basis of the sheds chip; never low_shedding / hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S850)."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Country",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S850)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact (S850)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC breed page (S850) Breed Watch category — no breed-specific points of concern."
+      },
+      "pdsa_grooming": {
+        "value": "daily brushing — the adult coat is prone to matting",
+        "unit": "—",
+        "source_id": "S851",
+        "quote": "They have long silky coats that will require daily brushing as their adult coats in particular are prone to matting.",
+        "confidence": "high",
+        "notes": "PDSA (S851). Agrees with RKC 'Every day'. PetMD (S852) 'a few hours of brushing each week' (AHCA) and WebMD (S853) 'several hours of brushing every week' give hours, not sessions → alternatives."
+      },
+      "petmd_grooming": {
+        "value": "a few hours of brushing each week; bath at least every week or two",
+        "unit": "—",
+        "source_id": "S852",
+        "quote": "According to the Afghan Hound Club of America (AHCA), these dogs require a few hours of brushing each week.",
+        "confidence": "high",
+        "notes": "PetMD (S852). Ears: 'frequently lift the ear and check' — no cleaning frequency → no ear task."
+      },
+      "petmd_bath": {
+        "value": "bath at least once every week or two",
+        "unit": "—",
+        "source_id": "S852",
+        "quote": "Bathing your dog at least once every week or two is important for keeping the coat clean and conditioned",
+        "confidence": "high",
+        "notes": "PetMD (S852, fragment; reviewed by Jo Cornett, DVM). Basis of the parent's weekly bath reminder (M5-R19: 'every week or two' → range → lower bound = every week). WebMD (S853) 'An Afghan hound needs to be bathed and groomed twice a week.' → alternative (open for David)."
+      },
+      "webmd_grooming": {
+        "value": "several hours of brushing a week; bathe and groom twice a week; teeth daily; nails before they touch the ground",
+        "unit": "—",
+        "source_id": "S853",
+        "quote": "Afghan hounds require several hours of brushing every week",
+        "confidence": "high",
+        "notes": "WebMD (S853). Also 'An Afghan hound needs to be bathed and groomed twice a week.', 'Nails should be trimmed before they touch the ground when walking' (no frequency → no nail task)."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth daily",
+        "unit": "—",
+        "source_id": "S853",
+        "quote": "Their teeth should be brushed daily with dog-friendly toothpaste.",
+        "confidence": "high",
+        "notes": "WebMD (S853). Basis of the child's tooth-brushing mini-game every day (M5-R15)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -88198,6 +88738,309 @@
         "confidence": "high",
         "notes": "FCI-St. N°6 (S841). One standard colour (black and tan) → portrait default.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan (FCI S841) is the portrait default; natural tail; only the standard colour"
+      }
+    },
+    "afghan_hound": {
+      "_note": "Unattended run M5-R10-114 (2026-11-15): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. No new vocabulary key, no new register health key, no new breeder-checklist key. Sourced needs built from day one: brushing every day (RKC S850 'Every day', M5-R13), tooth brushing every day (WebMD S853, M5-R15), a bath every week (PetMD S852 'at least once every week or two', M5-R19), puppy socialisation (PDSA S851 quote, M5-R17), the 'wait with the walk' digestion warning (PetMD S852 quote, M5-R16). Nails / ears / groomer — no frequency → no care task.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S850",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC 'Exercise: More than 2 hours per day' (S850). Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [
+          {
+            "value": 120,
+            "source_id": "S851",
+            "notes": "PDSA 'Minimum exercise (per day): 2 hours'"
+          },
+          {
+            "value": 120,
+            "source_id": "S853",
+            "notes": "WebMD 'At least 2 hours'"
+          },
+          {
+            "value": 60,
+            "source_id": "S852",
+            "notes": "PetMD 'at least an hour'"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S850 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S850",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S850 — no McMillan 2024 / VetCompass value reachable).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S850"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior round(0.75 × 10 y × 12) = 90 (RKC lower bound 'Over 10 years', S850)"
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × RKC lower bound 'Over 10 years', S850). Runbook rule row 'else the RKC lower bound' (McMillan 2024: only a Fig. 5 label, value in Supplementary Table 3 not reached; Dogs Trust table S123 not in provenance; no VetCompass median).",
+        "derived_from": [
+          "S11",
+          "S850"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): RKC lower bound 'Over 10 years' (S850) → 90"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 79 (S35) → 'Lowest degree' (ranks 70–79) → 0.5; S34 bottom 10. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 79, Lowest, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. WebMD (S853) bloat risk factors include feeding only one meal a day (paraphrase) — the game keeps its meal windows.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S850",
+        "quote": "Every day",
+        "confidence": "high",
+        "notes": "afghan_hound.suitability.rkc_grooming. Runbook »Dog grooming«: 'Every day' → 7; PDSA (S851) 'daily brushing' agrees. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": "a few / several hours a week",
+            "source_id": "S852",
+            "notes": "PetMD (AHCA) / WebMD S853 — hours, not sessions."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Every day«, PDSA »daily brushing«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S853",
+        "quote": "Their teeth should be brushed daily with dog-friendly toothpaste.",
+        "confidence": "high",
+        "notes": "afghan_hound.suitability.webmd_teeth → every day. Built: the child's tooth-brushing mini-game every day (DOG_CARE_TASKS tooth_brushing [7, day], M5-R15).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily« → vsak dan"
+      },
+      "bathing": {
+        "value": "bath at least once every week or two",
+        "unit": "baths (sourced need)",
+        "source_id": "S852",
+        "quote": "Bathing your dog at least once every week or two is important for keeping the coat clean and conditioned",
+        "confidence": "high",
+        "notes": "PetMD (S852), afghan_hound.suitability.petmd_bath. Built: the parent's bath reminder every week (DOG_CARE_TASKS bath [1, week], M5-R19; never scored) — 'every week or two' is a range → its lower bound (one week). Alternative: WebMD (S853) 'bathed and groomed twice a week' (open for David).",
+        "alternatives": [
+          {
+            "value": "twice a week",
+            "source_id": "S853",
+            "notes": "WebMD 'An Afghan hound needs to be bathed and groomed twice a week.'"
+          }
+        ],
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »at least once every week or two« → razpon → spodnja meja = vsak teden"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S852",
+        "quote": "It’s important to wait at least an hour after your Afghan Hound eats before letting them exercise",
+        "confidence": "high",
+        "notes": "PetMD (S852), afghan_hound.exercise.after_meals; bloat in the PDSA / PetMD / WebMD health lists (health.gdv). Built in M5-R16: 60 minutes of the warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S851",
+        "quote": "Afghan Hounds, if well socialised, are good with children.",
+        "confidence": "high",
+        "notes": "afghan_hound.behaviour.socialisation (PDSA S851, a condition). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S851)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-114); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S850"
+            ],
+            "refs": [
+              "afghan_hound.exercise.adult",
+              "afghan_hound.suitability.rkc_exercise"
+            ],
+            "quote": "S850 'More than 2 hours per day'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S851"
+            ],
+            "refs": [
+              "afghan_hound.behaviour.children"
+            ],
+            "quote": "S851 'Afghan Hounds, if well socialised, are good with children.'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S850"
+            ],
+            "refs": [
+              "afghan_hound.suitability.rkc_size_of_home"
+            ],
+            "quote": "S850 'Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S850"
+            ],
+            "refs": [
+              "afghan_hound.exercise.adult",
+              "afghan_hound.suitability.rkc_exercise"
+            ],
+            "quote": "S850 'More than 2 hours per day'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S850"
+            ],
+            "refs": [
+              "afghan_hound.suitability.rkc_shedding"
+            ],
+            "quote": "S850 'Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S850",
+              "S851"
+            ],
+            "refs": [
+              "afghan_hound.suitability.rkc_grooming",
+              "afghan_hound.suitability.pdsa_grooming"
+            ],
+            "quote": "S850 'Every day'; S851 'They have long silky coats that will require daily brushing as their adult coats in particular are prone to matting.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No breed-specific family-pet statement.",
+          "small_children": "PetMD (S852) advises monitoring around young children.",
+          "chases_small_pets": "PDSA (S851) 'strong chase instinct', PetMD (S852) 'prey drive nature', WebMD (S853) not for homes with small animals — no verbatim 'high / strong prey drive' → no chip by the runbook rule; open for David.",
+          "other_pets": "Strong chase instinct (S851); not for homes with small animals (S853).",
+          "apartment": "RKC 'Large house' (S850).",
+          "needs_company": "No source.",
+          "often_alone": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S850).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S850).",
+          "first_time_owner": "No source.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, children, large_home; consider long_daily_exercise, sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": "S850",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1, no breed-specific points of concern (S850); no BVA / UFAW / VetCompass conformation concern found, no veterinary advice against advertising the breed type. Never promise the breed's health.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising found)"
+      },
+      "ai_appearance": {
+        "value": "adult Afghan Hound, golden with a black mask: a tall, elegant sighthound giving an impression of strength and dignity, head held proudly; a long, refined head with a long muzzle and a black nose; dark eyes with an aloof, far-seeing expression; low-set ears carried close to the head and covered with long silky hair; a long, very fine, silky coat on the ribs, flanks and legs with a short, close saddle along the back; prominent hip bones, large feet covered in long hair; a natural tail set low with a ring at the end — never merle, never clipped, never white head markings",
+        "unit": "—",
+        "source_id": "S849",
+        "quote": "All colours, except merle which is unacceptable.",
+        "confidence": "high",
+        "notes": "FCI standard No. 228 (S849). Gold with a black mask (a common colour of 'all colours') → portrait default (weights unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): gold with a black mask is the portrait default (FCI S849 'All colours, except merle'); natural tail; never merle"
       }
     }
   }
