@@ -820,6 +820,15 @@
 | (S841; natural). RKC Breed Watch Category 2 without returned points (S842) — no welfare trait. One standard colour;
 | weight unsourced → `verified => false`.
 |
+| Afghan Hound (M5-R10-114, docs/research/dog-data afghan_hound.appearance): "Gives the impression of strength and dignity,
+| combining speed and power. Head held proudly." (FCI-Standard N° 228, S849); colour "All colours, except merle which is
+| unacceptable. However white markings on the head or collar are highly undesirable." (S849; AKC S854 "All colors are
+| permissible"); coat "Long and very fine texture on ribs, fore and hindquarters and flanks." and never clipped (S849); muzzle
+| "Long, with punishing jaws.", nose preferably black; ears "Set low and well back, carried close to head."; tail "Not too
+| short. Set on low with ring at end." (S849; natural). RKC Breed Watch Category 1 (S850) — no welfare trait. Seven common
+| colours of "all colours", gold with a black mask first with the highest weight (the portrait default, Claude's choice);
+| weights unsourced → `verified => false`.
+|
 | Belgian Tervuren (M5-R10-111, docs/research/dog-data belgian_tervuren.appearance): "Only fawn with black overlay or grey
 | with black overlay, with black mask" (FCI standard No. 15, S831 — "the fawn with black overlay is still preferred"; grey
 | is a fault but allowed; never black, brindle or white patches); long-haired variety with a ruff, breeches and a plumed
@@ -4913,6 +4922,44 @@ return [
             'ear_carriage' => ['thin, low-set ears of medium size lying close to the head, with silky feathering'],
             'eye_color' => ['bright dark brown eyes with a keen, intelligent expression'],
             'tail' => ['natural tail, straight or slightly curved, carried level or below the back, with feathering'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-114 (docs/research/dog-data/data.json afghan_hound.appearance; runbook rules 2026-10-10: colours of FCI-Standard
+    // N° 228 (S849) "All colours, except merle", gold with a black mask = the portrait default; natural tail; never clipped).
+    'afghan_hound' => [
+        'display_name' => 'Afghan Hound',
+        // Colour frequencies are in no source (afghan_hound.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 228 (S849), the AKC standard (S854) and the RKC breed page (S850) — for the traits listed in `sources`. The colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S849 "Males: 68 – 74 cm" / "Females: 63 – 69 cm"; AKC S854 "Dogs, about 60 pounds; bitches, about 50 pounds."; RKC S850 "Large"',
+            'build' => 'S849 "Gives the impression of strength and dignity, combining speed and power. Head held proudly."',
+            'coat_length' => 'S849 "Long and very fine texture on ribs, fore and hindquarters and flanks." (never clipped)',
+            'coat_color' => 'S849 "All colours, except merle which is unacceptable. However white markings on the head or collar are highly undesirable." (weights unsourced)',
+            'muzzle' => 'S849 "Muzzle: Long, with punishing jaws."; "Nose: Preferably black, liver permissible in light-coloured dogs."',
+            'ear_carriage' => 'S849 "Set low and well back, carried close to head."',
+            'eye_color' => 'S849 "Preferably dark, but golden colour permissible."',
+            'tail' => 'S849 "Not too short. Set on low with ring at end." (natural)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'tall, elegant sighthound of strength and dignity, head held proudly', 'weight' => 3], 'lean, athletic sighthound with prominent hip bones'],
+            'coat_length' => ['long, very fine, silky coat on the ribs, flanks and legs with a short, close saddle along the back'],
+            // "All colours, except merle" (FCI S849) — seven common colours, never white head / collar markings.
+            'coat_color' => [
+                ['value' => 'golden with a black mask', 'weight' => 30],
+                ['value' => 'cream', 'weight' => 15],
+                ['value' => 'red with a black mask', 'weight' => 15],
+                ['value' => 'black', 'weight' => 15],
+                ['value' => 'black and tan', 'weight' => 10],
+                ['value' => 'blue (slate grey)', 'weight' => 8],
+                ['value' => 'brindle', 'weight' => 7],
+            ],
+            'muzzle' => ['long, refined muzzle with a black nose'],
+            'ear_carriage' => ['low-set ears carried close to the head, covered with long silky hair'],
+            'eye_color' => ['dark eyes with an aloof, far-seeing expression'],
+            'tail' => ['natural tail set low with a ring at the end'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],

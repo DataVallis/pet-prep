@@ -892,6 +892,14 @@ class FalAiService
                 .'thin, low-set ears of medium size lying close to the head, a natural straight or slightly curved tail carried level or below the back, '
                 .'kindly, dignified expression, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-114: FCI-Standard N° 228 (S849) — a tall, dignified long-coated sighthound; "All colours, except merle"
+            // (the portrait default gold with a black mask); never clipped; natural tail with a ring at the end.
+            BreedType::AfghanHound => 'A tall, elegant Afghan Hound sighthound giving an impression of strength and dignity, head held proudly, '
+                .'golden with a black mask: a long, very fine, silky coat on the ribs, flanks and legs with a short, close saddle along the back, '
+                .'a long, refined head with a long muzzle and a black nose, dark eyes with an aloof, far-seeing expression, '
+                .'low-set ears carried close to the head and covered with long silky hair, large feet covered in long hair, '
+                .'a natural tail set low with a ring at the end, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2120,6 +2128,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'flat coat of moderate length with long silky feathering',
                 'markings' => 'tan above the eyes, on the muzzle, throat, chest, legs and under the tail, never another colour',
+            ],
+            // M5-R10-114: FCI S849 "All colours, except merle which is unacceptable." (gold with a black mask = default).
+            BreedType::AfghanHound => [
+                'color_scheme' => 'golden with a black mask',
+                'eye_color' => 'dark',
+                'fur_texture' => 'long, very fine, silky coat with a short saddle along the back',
+                'markings' => 'black mask on the muzzle, long silky ear hair, natural tail with a ring at the end, never merle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

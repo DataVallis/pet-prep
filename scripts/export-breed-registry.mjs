@@ -496,6 +496,7 @@ const SPECIES = [
       { id: 'belgian_tervuren', synonyms: { en: ['Tervuren', 'Tervueren', 'Belgian Shepherd Dog (Tervueren)', 'Terv'], sl: ['tervuren', 'belgijski ovcar tervuren'] } },
       { id: 'toy_fox_terrier', synonyms: { en: ['American Toy Terrier', 'Amertoy', 'TFT'], sl: ['toy fox terrier', 'amertoy'] } },
       { id: 'gordon_setter', synonyms: { en: ['Black and Tan Setter', 'Scottish Setter', 'Setter'], sl: ['gordon seter', 'škotski seter', 'seter'] } },
+      { id: 'afghan_hound', synonyms: { en: ['Afghan', 'Tazi', 'Baluchi Hound'], sl: ['afganec', 'afgan', 'tazi'] } },
     ],
   },
   {
@@ -520,7 +521,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG', Afghanistan: 'AF' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -2934,6 +2935,28 @@ const DOG_FACTS = {
       ['pra_inherited_blindness', 'health.eyes'],
     ],
   },
+  // M5-R10-114. RKC page (S850): exercise 'More than 2 hours per day', coat 'Long', grooming 'Every day', sheds 'Yes',
+  // lifespan 'Over 10 years'; FCI N° 228 (S849) height males 68–74 / females 63–69 cm (no weight); AKC standard (S854)
+  // weight dogs about 60 lb / bitches about 50 lb (single values, our conversion). Coren rank 79 (S35). FCI origin
+  // Afghanistan (AF, new). Not exported: the PDSA weight alternative, lifespan.mcmillan_2024 (null) / senior_from
+  // (derived), health.breed_watch (Category 1), health.other (necrotising myelopathy, laryngeal paralysis, chylothorax,
+  // anaesthesia sensitivity — background, no register key). No new health key.
+  afghan_hound: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', 'about']],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hips'],
+      ['bloat_gdv', 'health.gdv'],
+      ['hypothyroidism', 'health.thyroid'],
+      ['panosteitis', 'health.panosteitis'],
+    ],
+  },
 
 
 
@@ -3007,6 +3030,7 @@ export const DOG_CARE_TASKS = {
   belgian_tervuren: [['ear_cleaning', 1, 7, 'proposed_game_parameters.belgian_tervuren.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.belgian_tervuren.bathing']],
   toy_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.toy_fox_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.toy_fox_terrier.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.toy_fox_terrier.nail_trimming']],
   gordon_setter: [['tooth_brushing', 7, 7, 'proposed_game_parameters.gordon_setter.tooth_brushing'], ['bath', 1, 28, 'proposed_game_parameters.gordon_setter.bathing']],
+  afghan_hound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.afghan_hound.tooth_brushing'], ['bath', 1, 7, 'proposed_game_parameters.afghan_hound.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -3877,6 +3901,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.gordon_setter.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.gordon_setter.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.gordon_setter.exercise_minutes_senior',
+  },
+  afghan_hound: {
+    adult_minutes: ['proposed_game_parameters.afghan_hound.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.afghan_hound.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.afghan_hound.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.afghan_hound.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.afghan_hound.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.afghan_hound.exercise_minutes_senior',
   },
 
 

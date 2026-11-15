@@ -743,6 +743,16 @@ return [
     'gordon_setter' => [
         ['key' => 'black-tan', 'value' => 'black and tan (deep coal black with chestnut-red tan markings)', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
     ],
+    // M5-R10-114: FCI-Standard N° 228 (S849) "All colours, except merle" — same values / order as breed_appearance.php.
+    'afghan_hound' => [
+        ['key' => 'gold-black-mask', 'value' => 'golden with a black mask', 'en' => 'Golden with a black mask', 'sl' => 'Zlat s črno masko'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'red-black-mask', 'value' => 'red with a black mask', 'en' => 'Red with a black mask', 'sl' => 'Rdeč s črno masko'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+        ['key' => 'blue', 'value' => 'blue (slate grey)', 'en' => 'Blue', 'sl' => 'Moder'],
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -114,6 +114,7 @@ return [
     'belgian_tervuren' => 'Belgian Tervuren',
     'toy_fox_terrier' => 'Toy Fox Terrier',
     'gordon_setter' => 'Gordon Setter',
+    'afghan_hound' => 'Afghan Hound',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

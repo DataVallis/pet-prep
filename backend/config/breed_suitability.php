@@ -2771,5 +2771,26 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S844'], 'refs' => ['gordon_setter.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-114: afghan_hound.* (S850, S851), runbook rules (data.json proposed_game_parameters.afghan_hound.suitability_tags).
+        // RKC Breed Watch Category 1 (S850) → no welfare chip; in marketing. No new vocabulary key. No chases_small_pets:
+        // PDSA "strong chase instinct" / PetMD "prey drive nature" are not a verbatim high prey drive (open for David).
+        'afghan_hound' => [
+            'suits' => [
+                // S850 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S850'], 'refs' => ['afghan_hound.exercise.adult', 'afghan_hound.suitability.rkc_exercise']],
+                // S851 "Afghan Hounds, if well socialised, are good with children."
+                ['tag' => 'children', 'source_ids' => ['S851'], 'refs' => ['afghan_hound.behaviour.children']],
+                // S850 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S850'], 'refs' => ['afghan_hound.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S850'], 'refs' => ['afghan_hound.exercise.adult', 'afghan_hound.suitability.rkc_exercise']],
+                // S850 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S850'], 'refs' => ['afghan_hound.suitability.rkc_shedding']],
+                // S850 "Grooming: Every day"; S851 daily brushing.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S850', 'S851'], 'refs' => ['afghan_hound.suitability.rkc_grooming', 'afghan_hound.suitability.pdsa_grooming']],
+            ],
+        ],
     ],
 ];

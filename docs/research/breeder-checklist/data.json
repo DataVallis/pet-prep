@@ -4065,6 +4065,33 @@
         }
       ],
       "notes": "RKC breed page (dog-data S842, 2026-11-14; 'Good Practice' tests = minimum, 'Best Practice'; names as returned — the PRA line has an unclosed parenthesis on the page): minimum genetic diversity (inbreeding_coi), PRA rcd4 DNA test (dna_rcd4_pra), BVA/KC hip scheme (hip_scheme); Best Practice eye scheme (eye_scheme) and elbow scheme (elbow_scheme). No new key."
+    },
+    "afghan_hound": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S850",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S850",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S850",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S850, 2026-11-15; 'Good Practice' = minimum, 'Best Practice'; names as returned): minimum only the genetic-diversity link (inbreeding_coi; no named health test), Best Practice the BVA/KC hip scheme (hip_scheme). 'We don't currently offer a breed-specific DNA testing package for this breed.' No new key."
     }
   }
 }
