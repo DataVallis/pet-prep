@@ -5,51 +5,59 @@
     "en": "Rice (cooked)",
     "sl": "Riž (kuhan)",
     "cs": "Rýže (vařená)",
-    "hr": "Riža (kuhana)"
+    "hr": "Riža (kuhana)",
+    "sv": "Ris (kokt)"
   },
   "question": {
     "en": "Can cats eat rice?",
     "sl": "Ali lahko mačke jedo riž?",
     "cs": "Mohou kočky jíst rýži?",
-    "hr": "Smiju li mačke jesti rižu?"
+    "hr": "Smiju li mačke jesti rižu?",
+    "sv": "Får katter äta ris?"
   },
   "url_slug": {
     "en": "rice",
     "sl": "riz",
     "cs": "ryze",
-    "hr": "riza"
+    "hr": "riza",
+    "sv": "ris"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain cooked rice is fine for cats now and then. Blue Cross even suggests bulking out a short supply of cat food with cooked rice. But rice can't replace cat food: cats need meat every day.",
     "sl": "Da, malo navadnega kuhanega riža je za mačke občasno v redu. Blue Cross celo predlaga, da kratkotrajno pomanjkanje mačje hrane zapolnimo s kuhanim rižem. Riž pa ne more nadomestiti mačje hrane: mačke vsak dan potrebujejo meso.",
     "cs": "Ano, trocha neochucené vařené rýže je pro kočky tu a tam v pořádku. Blue Cross dokonce navrhuje, aby se při nedostatku kočičího krmiva jeho množství doplnilo vařenou rýží. Rýže ale kočičí krmivo nenahradí: kočky potřebují maso každý den.",
-    "hr": "Da, malo obične kuhane riže povremeno je u redu za mačke. Blue Cross čak predlaže da se oskudna zaliha mačje hrane produži kuhanom rižom. No riža ne može zamijeniti mačju hranu: mačkama je meso potrebno svaki dan."
+    "hr": "Da, malo obične kuhane riže povremeno je u redu za mačke. Blue Cross čak predlaže da se oskudna zaliha mačje hrane produži kuhanom rižom. No riža ne može zamijeniti mačju hranu: mačkama je meso potrebno svaki dan.",
+    "sv": "Ja, lite okryddat tillagat ris går bra för katter då och då. Blue Cross föreslår till och med att du kan späda ut en liten mängd kattmat med tillagat ris. Men ris kan inte ersätta kattmat: katter behöver kött varje dag."
   },
   "why": {
     "en": "Blue Cross says that if cat food has to last a few days, you can bulk it out with cooked veg or rice, but cats still need animal protein such as cooked meat or fish every day. VCA vets note that in pet food, grains like rice give dogs and cats an easily digestible source of energy, while International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates. Blue Cross adds that cats don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for dogs and cats.",
     "sl": "Blue Cross navaja, da lahko mačjo hrano, ki mora zdržati nekaj dni, zapolnimo s kuhano zelenjavo ali rižem, a mačke vseeno vsak dan potrebujejo živalske beljakovine, na primer kuhano meso ali ribe. Veterinarji VCA navajajo, da so žita, kot je riž, v hrani za živali za pse in mačke lahko prebavljiv vir energije, International Cat Care pa, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo. Blue Cross dodaja, da mačke v dieti za občutljiv želodec ogljikovih hidratov ne potrebujejo, VCA pa, da kuhanim piščančjim prsim z belim rižem za pse in mačke manjka veliko nujnih hranil.",
     "cs": "Blue Cross uvádí, že pokud musí krmivo pro kočky vydržet několik dní, lze je doplnit vařenou zeleninou nebo rýží, ale kočky stále potřebují každý den živočišné bílkoviny, například vařené maso nebo ryby. Veterináři z VCA poznamenávají, že obiloviny, jako je rýže, poskytují v krmivech pro zvířata psům a kočkám snadno stravitelný zdroj energie, zatímco International Cat Care uvádí, že kočky jako striktní masožravci hůře tráví a využívají sacharidy. Blue Cross dodává, že kočky nepotřebují sacharidy při šetřící dietě, a VCA uvádí, že vařená kuřecí prsa s bílou rýží postrádají mnoho základních živin pro psy i kočky.",
-    "hr": "Blue Cross kaže da se, ako mačja hrana mora potrajati nekoliko dana, može nadopuniti kuhanim povrćem ili rižom, ali mačkama je i dalje svaki dan potrebna životinjska bjelančevina, poput termički obrađenog mesa ili ribe. Veterinari iz VCA-a napominju da u hrani za kućne ljubimce žitarice poput riže psima i mačkama daju lako probavljiv izvor energije, dok International Cat Care ističe da mačke, kao strogi mesojedi, slabije probavljaju i iskorištavaju ugljikohidrate. Blue Cross dodaje da mačkama ugljikohidrati nisu potrebni u blagoj dijeti, a VCA da u kuhanim pilećim prsima i bijeloj riži nedostaje mnogo esencijalnih hranjivih tvari za pse i mačke."
+    "hr": "Blue Cross kaže da se, ako mačja hrana mora potrajati nekoliko dana, može nadopuniti kuhanim povrćem ili rižom, ali mačkama je i dalje svaki dan potrebna životinjska bjelančevina, poput termički obrađenog mesa ili ribe. Veterinari iz VCA-a napominju da u hrani za kućne ljubimce žitarice poput riže psima i mačkama daju lako probavljiv izvor energije, dok International Cat Care ističe da mačke, kao strogi mesojedi, slabije probavljaju i iskorištavaju ugljikohidrate. Blue Cross dodaje da mačkama ugljikohidrati nisu potrebni u blagoj dijeti, a VCA da u kuhanim pilećim prsima i bijeloj riži nedostaje mnogo esencijalnih hranjivih tvari za pse i mačke.",
+    "sv": "Blue Cross säger att om kattmaten måste räcka några dagar kan du späda ut den med tillagade grönsaker eller ris, men katter behöver fortfarande animaliskt protein, som tillagat kött eller fisk, varje dag. Veterinärer på VCA påpekar att spannmål som ris i husdjursmat ger hundar och katter en lättsmält energikälla, medan International Cat Care säger att katter, som är obligata köttätare, har svårare att smälta och utnyttja kolhydrater. Blue Cross tillägger att katter inte behöver kolhydrater i en skonsam kost, och VCA säger att tillagad kycklingbröst och vitt ris saknar många nödvändiga näringsämnen för hundar och katter."
   },
   "signs": null,
   "what_to_do": {
     "en": "Keep rice a small extra next to cat food. Ask your vet before giving rice to a cat with an upset stomach, as cats don't need carbohydrate in a bland diet.",
     "sl": "Riž naj bo le majhen dodatek k mačji hrani. Preden ga ponudite mački s prebavnimi težavami, se posvetujte z veterinarjem, saj mačke v dieti za občutljiv želodec ogljikovih hidratov ne potrebujejo.",
     "cs": "Rýže ať je jen malý doplněk ke kočičímu krmivu. Než dáte rýži kočce s podrážděným žaludkem, zeptejte se veterináře, protože kočky sacharidy při šetřící dietě nepotřebují.",
-    "hr": "Riža neka bude mali dodatak uz mačju hranu. Prije nego što rižu daš mački s osjetljivim želucem, pitaj veterinara, jer mačkama ugljikohidrati nisu potrebni u blagoj dijeti."
+    "hr": "Riža neka bude mali dodatak uz mačju hranu. Prije nego što rižu daš mački s osjetljivim želucem, pitaj veterinara, jer mačkama ugljikohidrati nisu potrebni u blagoj dijeti.",
+    "sv": "Låt riset vara ett litet extra vid sidan av kattmaten. Fråga din veterinär innan du ger ris till en katt med orolig mage, eftersom katter inte behöver kolhydrater i en skonsam kost."
   },
   "serving": {
     "en": "A little plain cooked rice with no added salt, as a small extra next to cat food.",
     "sl": "Malo navadnega kuhanega riža brez dodane soli, kot majhen dodatek k mačji hrani.",
     "cs": "Trocha neochucené vařené rýže bez přidané soli, jako malý doplněk ke kočičímu krmivu.",
-    "hr": "Malo obične kuhane riže bez dodane soli, kao mali dodatak uz mačju hranu."
+    "hr": "Malo obične kuhane riže bez dodane soli, kao mali dodatak uz mačju hranu.",
+    "sv": "Lite okryddat tillagat ris utan tillsatt salt, som ett litet extra vid sidan av kattmaten."
   },
   "child": {
     "en": "A little plain cooked rice is okay for a cat sometimes. But cats need their meaty cat food most of all.",
     "sl": "Malo navadnega kuhanega riža je za muco včasih v redu. Najbolj pa potrebuje svojo mesno mačjo hrano.",
     "cs": "Trocha neochucené uvařené rýže je pro kočku občas v pořádku. Hlavně ale potřebuje své masité kočičí krmivo.",
-    "hr": "Malo obične kuhane riže ponekad je u redu za mačku. Ali mačkama je najpotrebnija njihova mesna hrana."
+    "hr": "Malo obične kuhane riže ponekad je u redu za mačku. Ali mačkama je najpotrebnija njihova mesna hrana.",
+    "sv": "Lite vanligt kokt ris är okej för en katt ibland. Men katter behöver framför allt sin köttiga kattmat."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Is chicken and rice good for a cat with an upset tummy?",
         "sl": "Ali sta piščanec in riž dobra za mačko s prebavnimi težavami?",
         "cs": "Je kuře s rýží dobré pro kočku s bolavým bříškem?",
-        "hr": "Je li piletina s rižom dobra za mačku s osjetljivim želucem?"
+        "hr": "Je li piletina s rižom dobra za mačku s osjetljivim želucem?",
+        "sv": "Är kyckling och ris bra för en katt med orolig mage?"
       },
       "a": {
         "en": "Ask your vet first. Blue Cross says cats need a meat-based diet and don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for cats.",
         "sl": "Najprej vprašajte veterinarja. Blue Cross navaja, da mačke potrebujejo prehrano na osnovi mesa in v dieti za občutljiv želodec ne potrebujejo ogljikovih hidratov, VCA pa, da kuhanim piščančjim prsim z belim rižem za mačke manjka veliko nujnih hranil.",
         "cs": "Nejdřív se zeptejte veterináře. Blue Cross uvádí, že kočky potřebují stravu založenou na mase a sacharidy při šetřící dietě nepotřebují, a VCA, že vařená kuřecí prsa s bílou rýží postrádají mnoho základních živin pro kočky.",
-        "hr": "Prvo pitaj veterinara. Blue Cross kaže da je mačkama potrebna prehrana temeljena na mesu i da im ugljikohidrati nisu potrebni u blagoj dijeti, a VCA da u kuhanim pilećim prsima i bijeloj riži nedostaje mnogo esencijalnih hranjivih tvari za mačke."
+        "hr": "Prvo pitaj veterinara. Blue Cross kaže da je mačkama potrebna prehrana temeljena na mesu i da im ugljikohidrati nisu potrebni u blagoj dijeti, a VCA da u kuhanim pilećim prsima i bijeloj riži nedostaje mnogo esencijalnih hranjivih tvari za mačke.",
+        "sv": "Fråga din veterinär först. Blue Cross säger att katter behöver en köttbaserad kost och inte behöver kolhydrater i en skonsam kost, och VCA säger att tillagad kycklingbröst och vitt ris saknar många nödvändiga näringsämnen för katter."
       }
     }
   ],
@@ -136,6 +146,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "33f4939d45c33e2367d0c0442c3afdbf1fa65c13233638c5780f5f83f539d96c"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "452b84c76941569dbfcf0043574476fe42a866947bf8fa96f22a3f957d3a7d12"
     }
   }
 }

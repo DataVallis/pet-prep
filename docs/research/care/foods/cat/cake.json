@@ -5,32 +5,37 @@
     "en": "Cake",
     "sl": "Torte in kolači",
     "cs": "Dort",
-    "hr": "Kolač"
+    "hr": "Kolač",
+    "sv": "Kaka"
   },
   "question": {
     "en": "Can cats eat cake?",
     "sl": "Ali lahko mačke jedo torto?",
     "cs": "Mohou kočky jíst dort?",
-    "hr": "Smiju li mačke jesti kolač?"
+    "hr": "Smiju li mačke jesti kolač?",
+    "sv": "Får katter äta kaka?"
   },
   "url_slug": {
     "en": "cake",
     "sl": "torta",
     "cs": "dort",
-    "hr": "kolac"
+    "hr": "kolac",
+    "sv": "kaka"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, cake is not for cats. It is sugary, which is unhealthy for cats, and many cakes, especially Christmas and fruit cakes, contain dried fruit or chocolate, which are harmful to cats. The RSPCA warns that Christmas cakes are dangerous for cats.",
     "sl": "Ne, torta ni za mačke. Je sladka, kar je za mačke nezdravo, veliko tort, zlasti božičnih in sadnih, pa vsebuje suho sadje ali čokolado, ki mačkam škodita. RSPCA opozarja, da so božične torte za mačke nevarne.",
     "cs": "Ne, dort není pro kočky. Je sladký, což kočkám škodí, a mnoho dortů, zejména vánoční a ovocné, obsahuje sušené ovoce nebo čokoládu, které jsou pro kočky škodlivé. RSPCA upozorňuje, že vánoční ovocné dorty jsou pro kočky nebezpečné.",
-    "hr": "Ne, kolač nije za mačke. Sladak je, što mačkama šteti, a mnogi kolači, osobito božićni i voćni, sadrže suho voće ili čokoladu, koji su štetni za mačke. RSPCA upozorava da su božićni kolači opasni za mačke."
+    "hr": "Ne, kolač nije za mačke. Sladak je, što mačkama šteti, a mnogi kolači, osobito božićni i voćni, sadrže suho voće ili čokoladu, koji su štetni za mačke. RSPCA upozorava da su božićni kolači opasni za mačke.",
+    "sv": "Nej, kaka är inget för katter. Den är söt, vilket inte är nyttigt för katter, och många kakor, särskilt julkakor och fruktkakor, innehåller torkad frukt eller choklad, som är skadligt för katter. RSPCA varnar för att julkakor är farliga för katter."
   },
   "why": {
     "en": "The RSPCA says Christmas cakes are dangerous for cats. Such cakes often contain sultanas, raisins and currants, which the RSPCA calls toxic, and it says not to let cats eat any grapes. Chocolate is a complete no-no for cats. A plain sponge has none of these, but its sugar is unhealthy for cats and offers them no nutritional value, so we use the stricter level for all cake.",
     "sl": "RSPCA navaja, da so božične torte za mačke nevarne. Takšne torte pogosto vsebujejo sultanine, rozine in korinte, ki jih RSPCA označuje kot strupene, in svetuje, naj mačke ne pojedo nič grozdja. Čokolada je za mačke strogo prepovedana. Navaden biskvit teh sestavin nima, a njegov sladkor je za mačke nezdrav in nima hranilne vrednosti, zato za vse torte uporabljamo strožjo raven.",
     "cs": "RSPCA uvádí, že vánoční ovocné dorty jsou pro kočky nebezpečné. Takové dorty často obsahují sultánky, rozinky a korintky, které RSPCA označuje za toxické, a radí kočkám žádné hrozny nedopřávat. Čokoláda je pro kočky naprosto nevhodná. Obyčejný piškot nic z toho neobsahuje, ale jeho cukr kočkám škodí a nemá pro ně žádnou nutriční hodnotu, proto u všech dortů používáme přísnější úroveň.",
-    "hr": "RSPCA navodi da su božićni kolači opasni za mačke. Takvi kolači često sadrže sultanije, grožđice i korintsko grožđe, koje RSPCA naziva otrovnima, i savjetuje da se mačkama ne dopusti ni grožđe. Čokolada je za mačke potpuno zabranjena. Običan biskvit ništa od toga ne sadrži, ali je njegov šećer za mačke nezdrav i ne daje im nikakvu hranjivu vrijednost, zato za sve kolače primjenjujemo strožu razinu."
+    "hr": "RSPCA navodi da su božićni kolači opasni za mačke. Takvi kolači često sadrže sultanije, grožđice i korintsko grožđe, koje RSPCA naziva otrovnima, i savjetuje da se mačkama ne dopusti ni grožđe. Čokolada je za mačke potpuno zabranjena. Običan biskvit ništa od toga ne sadrži, ali je njegov šećer za mačke nezdrav i ne daje im nikakvu hranjivu vrijednost, zato za sve kolače primjenjujemo strožu razinu.",
+    "sv": "RSPCA säger att julkakor är farliga för katter. Sådana kakor innehåller ofta sultanrussin, russin och korinter, som RSPCA kallar giftiga, och organisationen säger att katter inte ska få äta några druvor. Choklad är absolut förbjudet för katter. En vanlig sockerkaka innehåller inget av detta, men sockret är onyttigt för katter och ger dem inget näringsvärde, så vi använder den strängare nivån för all kaka."
   },
   "signs": {
     "en": [
@@ -48,20 +53,26 @@
     "hr": [
       "Povraćanje",
       "Proljev ili želučane tegobe"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré eller orolig mage"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate cake with dried fruit or chocolate in it, contact your vet straight away. Don't wait for signs to appear, and don't try to make your cat sick at home. After a lick of plain sponge, watch for an upset stomach.",
     "sl": "Če je mačka pojedla torto s suhim sadjem ali čokolado, takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja. Če je le oblizala navaden biskvit, bodite pozorni na želodčne težave.",
     "cs": "Pokud kočka snědla dort se sušeným ovocem nebo čokoládou, okamžitě se obraťte na veterináře. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení. Po olíznutí obyčejného piškotu sledujte, zda nemá podrážděný žaludek.",
-    "hr": "Ako je mačka pojela kolač sa suhim voćem ili čokoladom, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje. Nakon što je polizala običan biskvit, pazi na želučane tegobe."
+    "hr": "Ako je mačka pojela kolač sa suhim voćem ili čokoladom, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje. Nakon što je polizala običan biskvit, pazi na želučane tegobe.",
+    "sv": "Om din katt har ätit kaka med torkad frukt eller choklad ska du kontakta din veterinär direkt. Vänta inte på att tecken ska dyka upp, och försök inte få katten att kräkas hemma. Efter en slick av vanlig sockerkaka: håll ett öga på om magen blir orolig."
   },
   "serving": null,
   "child": {
     "en": "Cake is a people treat. Some cakes have raisins or chocolate that can make cats poorly, so keep your slice for yourself.",
     "sl": "Torta je posladek za ljudi. Nekatere torte imajo rozine ali čokolado, ki muci škodijo, zato svoj kos obdrži zase.",
     "cs": "Dort je mlsání pro lidi. Některé dorty obsahují rozinky nebo čokoládu, po kterých může být kočičce špatně, takže svůj kousek si nech pro sebe.",
-    "hr": "Kolač je poslastica za ljude. U nekima su grožđice ili čokolada zbog kojih se mačke mogu razboljeti, zato svoj komad zadrži za sebe."
+    "hr": "Kolač je poslastica za ljude. U nekima su grožđice ili čokolada zbog kojih se mačke mogu razboljeti, zato svoj komad zadrži za sebe.",
+    "sv": "Kaka är en godbit för människor. Vissa kakor innehåller russin eller choklad som kan göra katter sjuka, så behåll din bit själv."
   },
   "faq": [
     {
@@ -69,13 +80,15 @@
         "en": "Is Christmas cake dangerous for cats?",
         "sl": "Ali je božična torta nevarna za mačke?",
         "cs": "Je vánoční ovocný dort pro kočky nebezpečný?",
-        "hr": "Je li božićni kolač opasan za mačke?"
+        "hr": "Je li božićni kolač opasan za mačke?",
+        "sv": "Är julkaka farlig för katter?"
       },
       "a": {
         "en": "Yes. The RSPCA warns that Christmas cakes are dangerous for cats, as they often contain dried fruit. Blue Cross tells of a cat who was sick after eating a rich Christmas cake and was kept at the vet overnight on a drip.",
         "sl": "Da. RSPCA opozarja, da so božične torte za mačke nevarne, saj pogosto vsebujejo suho sadje. Blue Cross opisuje mačka, ki je bruhal, potem ko je pojedel bogato božično torto, in je moral čez noč ostati pri veterinarju na infuziji.",
         "cs": "Ano. RSPCA upozorňuje, že vánoční ovocné dorty jsou pro kočky nebezpečné, protože často obsahují sušené ovoce. Blue Cross popisuje kočku, které bylo po snědení tučného vánočního dortu špatně a která musela zůstat přes noc u veterináře na kapačce.",
-        "hr": "Da. RSPCA upozorava da su božićni kolači opasni za mačke, jer često sadrže suho voće. Blue Cross opisuje mačku koja je povraćala nakon što je pojela bogat božićni kolač i morala je prenoćiti kod veterinara na infuziji."
+        "hr": "Da. RSPCA upozorava da su božićni kolači opasni za mačke, jer često sadrže suho voće. Blue Cross opisuje mačku koja je povraćala nakon što je pojela bogat božićni kolač i morala je prenoćiti kod veterinara na infuziji.",
+        "sv": "Ja. RSPCA varnar för att julkakor är farliga för katter, eftersom de ofta innehåller torkad frukt. Blue Cross berättar om en katt som mådde dåligt efter att ha ätit en mustig julkaka och fick stanna över natten hos veterinären i dropp."
       }
     }
   ],
@@ -181,6 +194,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7d4bad4019014ee9b4fd68f043f7b45a8e080a79f22f82f731c9f2c0a9958468"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7408586492b3135b820ecac2e8685cfd1ae039e3a9fb6f91873831a0f93f1907"
     }
   }
 }

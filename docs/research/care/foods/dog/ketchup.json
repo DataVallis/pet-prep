@@ -5,32 +5,37 @@
     "en": "Ketchup",
     "sl": "Kečap",
     "cs": "Kečup",
-    "hr": "Kečap"
+    "hr": "Kečap",
+    "sv": "Ketchup"
   },
   "question": {
     "en": "Can dogs eat ketchup?",
     "sl": "Ali lahko psi jedo kečap?",
     "cs": "Mohou psi jíst kečup?",
-    "hr": "Smiju li psi jesti kečap?"
+    "hr": "Smiju li psi jesti kečap?",
+    "sv": "Får hundar äta ketchup?"
   },
   "url_slug": {
     "en": "ketchup",
     "sl": "kecap",
     "cs": "kecup",
-    "hr": "kecap"
+    "hr": "kecap",
+    "sv": "ketchup"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it's best not to share ketchup with your dog. Ketchup itself is not toxic, but it usually contains garlic and onions, sugar and salt, and sometimes xylitol, which is toxic to dogs.",
     "sl": "Ne, kečapa raje ne delite s psom. Kečap sam po sebi ni strupen, a običajno vsebuje česen in čebulo, sladkor in sol, včasih pa tudi ksilitol, ki je za pse strupen.",
     "cs": "Ne, kečup je lepší se psem nesdílet. Kečup sám o sobě jedovatý není, ale obvykle obsahuje česnek a cibuli, cukr a sůl a někdy xylitol, který je pro psy jedovatý.",
-    "hr": "Ne, kečap je najbolje ne dijeliti sa psom. Sam kečap nije otrovan, ali obično sadrži češnjak i luk, šećer i sol, a ponekad i ksilitol, koji je otrovan za pse."
+    "hr": "Ne, kečap je najbolje ne dijeliti sa psom. Sam kečap nije otrovan, ali obično sadrži češnjak i luk, šećer i sol, a ponekad i ksilitol, koji je otrovan za pse.",
+    "sv": "Nej, det är bäst att inte dela ketchup med din hund. Ketchup är inte giftig i sig, men den innehåller oftast vitlök och lök, socker och salt, och ibland xylitol, som är giftigt för hundar."
   },
   "why": {
     "en": "Commercial ketchup typically contains garlic and onions, cinnamon, sugar and salt, preservatives and chemicals, and many of these can harm dogs. Garlic and onions can upset a dog's stomach and sometimes have more serious effects. Some ketchup also contains xylitol, which is toxic to dogs. Sources differ on how strict to be (one calls ketchup not toxic, another simply says no), so we advise not giving it.",
     "sl": "Kupljeni kečap običajno vsebuje česen in čebulo, cimet, sladkor in sol, konzervanse in kemikalije, mnoge od teh sestavin pa lahko psom škodijo. Česen in čebula lahko psu povzročita prebavne težave, včasih pa tudi resnejše posledice. Nekateri kečapi vsebujejo tudi ksilitol, ki je za pse strupen. Viri se razlikujejo v strogosti (eden pravi, da kečap ni strupen, drugi preprosto odsvetuje), zato ga psu ne priporočamo.",
     "cs": "Kupovaný kečup obvykle obsahuje česnek a cibuli, skořici, cukr a sůl, konzervanty a chemické látky a mnohé z nich mohou psům škodit. Česnek a cibule mohou psovi rozhodit žaludek a někdy mají i vážnější účinky. Některý kečup obsahuje také xylitol, který je pro psy jedovatý. Zdroje se liší v přísnosti (jeden říká, že kečup není jedovatý, jiný jednoduše odpoví ne), proto ho doporučujeme nedávat.",
-    "hr": "Kupovni kečap obično sadrži češnjak i luk, cimet, šećer i sol, konzervanse i kemikalije, a mnogi od njih mogu naškoditi psima. Češnjak i luk mogu nadražiti želudac psa, a ponekad imaju i ozbiljnije učinke. Neki kečap sadrži i ksilitol, koji je otrovan za pse. Izvori se razlikuju u tome koliko su strogi (jedan kaže da kečap nije otrovan, drugi jednostavno kaže „ne“), zato savjetujemo da ga psu ne daješ."
+    "hr": "Kupovni kečap obično sadrži češnjak i luk, cimet, šećer i sol, konzervanse i kemikalije, a mnogi od njih mogu naškoditi psima. Češnjak i luk mogu nadražiti želudac psa, a ponekad imaju i ozbiljnije učinke. Neki kečap sadrži i ksilitol, koji je otrovan za pse. Izvori se razlikuju u tome koliko su strogi (jedan kaže da kečap nije otrovan, drugi jednostavno kaže „ne“), zato savjetujemo da ga psu ne daješ.",
+    "sv": "Köpt ketchup innehåller vanligtvis vitlök och lök, kanel, socker och salt samt konserveringsmedel och andra tillsatser, och många av dem kan skada hundar. Vitlök och lök kan reta hundens mage och ibland ge allvarligare effekter. Viss ketchup innehåller också xylitol, som är giftigt för hundar. Källorna är inte överens om hur strikt man ska vara (en kallar ketchup ogiftig, en annan säger helt enkelt nej), så vi rekommenderar att du inte ger den."
   },
   "signs": {
     "en": [
@@ -44,20 +49,25 @@
     ],
     "hr": [
       "Želučane tegobe"
+    ],
+    "sv": [
+      "Magbesvär"
     ]
   },
   "what_to_do": {
     "en": "Some ketchup contains xylitol, which is toxic to dogs. If your dog ate ketchup with xylitol, follow the advice on our xylitol page.",
     "sl": "Nekateri kečapi vsebujejo ksilitol, ki je za pse strupen. Če je pes pojedel kečap s ksilitolom, ravnajte po nasvetih na naši strani o ksilitolu.",
     "cs": "Některý kečup obsahuje xylitol, který je pro psy jedovatý. Pokud pes snědl kečup s xylitolem, řiďte se radami na naší stránce o xylitolu.",
-    "hr": "Neki kečap sadrži ksilitol, koji je otrovan za pse. Ako je pas pojeo kečap s ksilitolom, slijedi savjet na našoj stranici o ksilitolu."
+    "hr": "Neki kečap sadrži ksilitol, koji je otrovan za pse. Ako je pas pojeo kečap s ksilitolom, slijedi savjet na našoj stranici o ksilitolu.",
+    "sv": "Viss ketchup innehåller xylitol, som är giftigt för hundar. Om din hund har ätit ketchup med xylitol ska du följa råden på vår sida om xylitol."
   },
   "serving": null,
   "child": {
     "en": "Ketchup is a people sauce. It has things inside that are not good for dogs, so keep it on your own plate.",
     "sl": "Kečap je omaka za ljudi. V njem so sestavine, ki niso dobre za pse, zato naj ostane na tvojem krožniku.",
     "cs": "Kečup je omáčka pro lidi. Obsahuje věci, které psům neprospívají, takže ho nech na svém talíři.",
-    "hr": "Kečap je umak za ljude. U njemu ima stvari koje nisu dobre za pse, zato ga zadrži na svom tanjuru."
+    "hr": "Kečap je umak za ljude. U njemu ima stvari koje nisu dobre za pse, zato ga zadrži na svom tanjuru.",
+    "sv": "Ketchup är en sås för människor. Den innehåller sådant som inte är bra för hundar, så behåll den på din egen tallrik."
   },
   "faq": [
     {
@@ -65,13 +75,15 @@
         "en": "What about tomato sauce?",
         "sl": "Kaj pa paradižnikova omaka?",
         "cs": "A co rajčatová omáčka?",
-        "hr": "Što je s umakom od rajčice?"
+        "hr": "Što je s umakom od rajčice?",
+        "sv": "Hur är det med tomatsås?"
       },
       "a": {
         "en": "No. Tomato sauce often contains harmful ingredients such as garlic, onion or unsafe herbs.",
         "sl": "Ne. Paradižnikova omaka pogosto vsebuje škodljive sestavine, kot so česen, čebula ali neprimerna zelišča.",
         "cs": "Ne. Rajčatová omáčka často obsahuje škodlivé přísady, například česnek, cibuli nebo nevhodné bylinky.",
-        "hr": "Ne. Umak od rajčice često sadrži štetne sastojke poput češnjaka, luka ili nesigurnih začinskih biljaka."
+        "hr": "Ne. Umak od rajčice često sadrži štetne sastojke poput češnjaka, luka ili nesigurnih začinskih biljaka.",
+        "sv": "Nej. Tomatsås innehåller ofta skadliga ingredienser som vitlök, lök eller olämpliga örter."
       }
     }
   ],
@@ -129,6 +141,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9aeb37dedc36756ffcaa75befa5c2da3ce5225e4316d70ab4ffe634413ce4735"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5bf3d7e1dcee7818ab8e46daa5f3bf1be89da32210a347626ac50dc176525f75"
     }
   }
 }

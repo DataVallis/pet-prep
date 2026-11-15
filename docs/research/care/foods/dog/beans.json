@@ -4,68 +4,80 @@
   "name": {
     "en": "Beans",
     "sl": "Fižol",
-    "hr": "Grah"
+    "hr": "Grah",
+    "sv": "Bönor"
   },
   "question": {
     "en": "Can dogs eat beans?",
     "sl": "Ali lahko psi jedo fižol?",
-    "hr": "Smiju li psi jesti grah?"
+    "hr": "Smiju li psi jesti grah?",
+    "sv": "Får hundar äta bönor?"
   },
   "url_slug": {
     "en": "beans",
     "sl": "fizol",
-    "hr": "grah"
+    "hr": "grah",
+    "sv": "bonor"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as a treat. Dogs can eat many kinds of beans, such as black, kidney, pinto, lima and navy beans, if they have been soaked and then cooked. Beans may give your dog some gas. Baked beans in sauce are not a good idea.",
     "sl": "Da, kot priboljšek. Psi lahko jedo številne vrste fižola, na primer črni, rdeči (ledvičasti), pinto, lima in beli fižol, če je bil prej namočen in nato kuhan. Fižol lahko psu povzroči nekaj vetrov. Pečen fižol v omaki (baked beans) ni dobra izbira.",
-    "hr": "Da, kao poslastica. Psi mogu jesti mnoge vrste graha, poput crnog, crvenog (kidney), pinto, lima i bijelog graha, ako je namočen pa kuhan. Grah može kod psa izazvati nadutost. Grah u umaku (baked beans) nije dobra ideja."
+    "hr": "Da, kao poslastica. Psi mogu jesti mnoge vrste graha, poput crnog, crvenog (kidney), pinto, lima i bijelog graha, ako je namočen pa kuhan. Grah može kod psa izazvati nadutost. Grah u umaku (baked beans) nije dobra ideja.",
+    "sv": "Ja, som godbit. Hundar kan äta många sorters bönor, som svarta bönor, kidneybönor, pintobönor, limabönor och vita bönor, om de har blötlagts och sedan kokats. Bönor kan ge din hund lite gaser. Bakade bönor i sås är ingen bra idé."
   },
   "why": {
     "en": "Beans contain a lot of fibre, and uncooked they are almost indigestible. Soaking and cooking them helps dogs digest them and may reduce wind. Beans should not replace meat in a dog's diet. Baked beans themselves aren't toxic, but they are high in salt and sugar and their sauce can irritate a dog's stomach; eaten regularly, they could increase the risk of pancreatitis.",
     "sl": "Fižol vsebuje veliko vlaknin, nekuhan pa je skoraj neprebavljiv. Namakanje in kuhanje psu pomagata, da ga prebavi, in lahko zmanjšata vetrove. Fižol ne sme nadomestiti mesa v pasji prehrani. Pečen fižol sam po sebi ni strupen, a vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec; če ga pes je redno, se lahko poveča tveganje za vnetje trebušne slinavke.",
-    "hr": "Grah sadrži mnogo vlakana, a sirov je gotovo neprobavljiv. Namakanje i kuhanje pomažu psima da ga probave i mogu smanjiti nadutost. Grah ne bi smio zamijeniti meso u prehrani psa. Grah u umaku (baked beans) sam po sebi nije otrovan, ali je bogat solju i šećerom, a njegov umak može nadražiti želudac psa; ako se jede redovito, mogao bi povećati rizik od upale gušterače."
+    "hr": "Grah sadrži mnogo vlakana, a sirov je gotovo neprobavljiv. Namakanje i kuhanje pomažu psima da ga probave i mogu smanjiti nadutost. Grah ne bi smio zamijeniti meso u prehrani psa. Grah u umaku (baked beans) sam po sebi nije otrovan, ali je bogat solju i šećerom, a njegov umak može nadražiti želudac psa; ako se jede redovito, mogao bi povećati rizik od upale gušterače.",
+    "sv": "Bönor innehåller mycket fibrer, och okokta är de nästan osmältbara. Att blötlägga och koka dem hjälper hundar att smälta dem och kan minska gaser. Bönor ska inte ersätta kött i hundens kost. Bakade bönor är i sig inte giftiga, men de innehåller mycket salt och socker och såsen kan reta hundens mage; om de äts regelbundet kan de öka risken för bukspottkörtelinflammation (pankreatit)."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate some baked beans, a small amount is unlikely to cause much harm. Watch your dog for 24 hours and contact your vet for advice if you notice concerning signs such as an upset stomach or diarrhoea.",
     "sl": "Če je pes pojedel nekaj pečenega fižola, majhna količina verjetno ne bo škodila. Psa 24 ur opazujte in se za nasvet obrnite na veterinarja, če opazite zaskrbljujoče znake, kot so prebavne težave ali driska.",
-    "hr": "Ako je pas pojeo malo graha u umaku, mala količina vjerojatno neće mnogo naškoditi. Promatraj psa 24 sata i obrati se veterinaru za savjet ako primijetiš zabrinjavajuće znakove poput želučanih tegoba ili proljeva."
+    "hr": "Ako je pas pojeo malo graha u umaku, mala količina vjerojatno neće mnogo naškoditi. Promatraj psa 24 sata i obrati se veterinaru za savjet ako primijetiš zabrinjavajuće znakove poput želučanih tegoba ili proljeva.",
+    "sv": "Om din hund har ätit lite bakade bönor är det osannolikt att det orsakar större skada. Håll ett öga på hunden i 24 timmar och kontakta din veterinär för råd om du ser oroande tecken som orolig mage eller diarré."
   },
   "serving": {
     "en": "Soaked first and then cooked, without sauce, as an occasional treat.",
     "sl": "Najprej namočen in nato kuhan, brez omake, kot občasen priboljšek.",
-    "hr": "Prvo namočen, zatim kuhan, bez umaka, kao povremena poslastica."
+    "hr": "Prvo namočen, zatim kuhan, bez umaka, kao povremena poslastica.",
+    "sv": "Först blötlagda och sedan kokta, utan sås, som godbit då och då."
   },
   "child": {
     "en": "Cooked beans can be a little treat for dogs, but they might make your dog a bit windy!",
     "sl": "Kuhan fižol je lahko majhen priboljšek za psa, a ga lahko malo napihne!",
-    "hr": "Kuhani grah može biti mala poslastica za pse, ali kod psa može izazvati i malo nadutosti!"
+    "hr": "Kuhani grah može biti mala poslastica za pse, ali kod psa može izazvati i malo nadutosti!",
+    "sv": "Kokta bönor kan vara en liten godbit för hundar, men din hund kan bli lite pruttig!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat baked beans?",
         "sl": "Ali lahko psi jedo pečen fižol v omaki?",
-        "hr": "Smiju li psi jesti grah u umaku (baked beans)?"
+        "hr": "Smiju li psi jesti grah u umaku (baked beans)?",
+        "sv": "Får hundar äta bakade bönor?"
       },
       "a": {
         "en": "It's best not to. The beans themselves aren't toxic, but baked beans are high in salt and sugar and the sauce can irritate a dog's stomach. If your dog ate a little you spilt on the floor, it's probably not a cause for concern.",
         "sl": "Raje ne. Fižol sam ni strupen, a pečen fižol vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec. Če je pes pojedel malo fižola, ki vam je padel na tla, to verjetno ni razlog za skrb.",
-        "hr": "Bolje ne. Sam grah nije otrovan, ali je grah u umaku bogat solju i šećerom, a umak može nadražiti želudac psa. Ako je pas pojeo malo onoga što ti je palo na pod, vjerojatno nema razloga za zabrinutost."
+        "hr": "Bolje ne. Sam grah nije otrovan, ali je grah u umaku bogat solju i šećerom, a umak može nadražiti želudac psa. Ako je pas pojeo malo onoga što ti je palo na pod, vjerojatno nema razloga za zabrinutost.",
+        "sv": "Det är bäst att låta bli. Bönorna i sig är inte giftiga, men bakade bönor innehåller mycket salt och socker och såsen kan reta hundens mage. Om din hund åt lite som du råkade spilla på golvet är det förmodligen inget att oroa sig för."
       }
     },
     {
       "q": {
         "en": "Can beans replace meat in my dog's diet?",
         "sl": "Ali lahko fižol nadomesti meso v pasji prehrani?",
-        "hr": "Može li grah zamijeniti meso u prehrani mog psa?"
+        "hr": "Može li grah zamijeniti meso u prehrani mog psa?",
+        "sv": "Kan bönor ersätta kött i min hunds kost?"
       },
       "a": {
         "en": "No. Feeding just beans is bad for dogs if it replaces meat in their diet.",
         "sl": "Ne. Če fižol v pasji prehrani nadomesti meso, je to za psa slabo.",
-        "hr": "Ne. Hranjenje samo grahom loše je za pse ako zamjenjuje meso u njihovoj prehrani."
+        "hr": "Ne. Hranjenje samo grahom loše je za pse ako zamjenjuje meso u njihovoj prehrani.",
+        "sv": "Nej. Att bara ge bönor är dåligt för hundar om det ersätter kött i kosten."
       }
     }
   ],
@@ -192,6 +204,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "59de08530181225684a30626a62dedd578eb8b6fdcfdd9467db8f29004cbddd7"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "acbd05b2993a872b2dc7391441bb39accb016f5366c58eba3f89f54fba049ca3"
     }
   }
 }

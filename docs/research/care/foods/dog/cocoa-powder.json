@@ -5,32 +5,37 @@
     "en": "Cocoa powder",
     "sl": "Kakav v prahu",
     "cs": "Kakaový prášek",
-    "hr": "Kakao u prahu"
+    "hr": "Kakao u prahu",
+    "sv": "Kakaopulver"
   },
   "question": {
     "en": "Can dogs eat cocoa powder?",
     "sl": "Ali lahko psi jedo kakav v prahu?",
     "cs": "Mohou psi jíst kakaový prášek?",
-    "hr": "Smiju li psi jesti kakao u prahu?"
+    "hr": "Smiju li psi jesti kakao u prahu?",
+    "sv": "Får hundar äta kakaopulver?"
   },
   "url_slug": {
     "en": "cocoa-powder",
     "sl": "kakav-v-prahu",
     "cs": "kakaovy-prasek",
-    "hr": "kakao-u-prahu"
+    "hr": "kakao-u-prahu",
+    "sv": "kakaopulver"
   },
   "level": "toxic",
   "answer": {
     "en": "No, cocoa powder is toxic to dogs. It is even more dangerous than dark chocolate, because baking chocolate and cocoa powder have the highest amounts of the harmful substances. If your dog ate cocoa powder, speak to your vet straight away.",
     "sl": "Ne, kakav v prahu je za pse strupen. Je še nevarnejši od temne čokolade, saj imata čokolada za peko in kakav v prahu največ škodljivih snovi. Če je pes pojedel kakav v prahu, takoj pokličite veterinarja.",
     "cs": "Ne, kakaový prášek je pro psy jedovatý. Je ještě nebezpečnější než hořká čokoláda, protože čokoláda na vaření a kakaový prášek obsahují nejvíce škodlivých látek. Pokud pes snědl kakaový prášek, obraťte se ihned na veterináře.",
-    "hr": "Ne, kakao u prahu otrovan je za pse. Čak je opasniji od tamne čokolade, jer čokolada za kuhanje i kakao u prahu imaju najviše štetnih tvari. Ako je pas pojeo kakao u prahu, odmah se obrati veterinaru."
+    "hr": "Ne, kakao u prahu otrovan je za pse. Čak je opasniji od tamne čokolade, jer čokolada za kuhanje i kakao u prahu imaju najviše štetnih tvari. Ako je pas pojeo kakao u prahu, odmah se obrati veterinaru.",
+    "sv": "Nej, kakaopulver är giftigt för hundar. Det är till och med farligare än mörk choklad, eftersom bakchoklad och kakaopulver innehåller störst mängd av de skadliga ämnena. Har din hund ätit kakaopulver ska du kontakta din veterinär direkt."
   },
   "why": {
     "en": "Chocolate contains theobromine, which is toxic to dogs. The more cocoa, the more theobromine: white chocolate has the least, while baking chocolate and cocoa powder have the highest amounts, so cocoa powder is even more dangerous than dark chocolate. Dogs are most often affected because they eat almost anything and can easily reach chocolate.",
     "sl": "Čokolada vsebuje teobromin, ki je za pse strupen. Več kot je kakava, več je teobromina: bela čokolada ga ima najmanj, čokolada za peko in kakav v prahu pa največ, zato je kakav v prahu še nevarnejši od temne čokolade. Psi so najpogosteje prizadeti, ker pojedo skoraj vse in čokolado zlahka dosežejo.",
     "cs": "Čokoláda obsahuje theobromin, který je pro psy jedovatý. Čím více kakaa, tím více theobrominu: bílá čokoláda ho má nejméně, zatímco čokoláda na vaření a kakaový prášek ho obsahují nejvíce, takže kakaový prášek je ještě nebezpečnější než hořká čokoláda. Psi bývají otráveni nejčastěji proto, že sní skoro cokoli a k čokoládě se snadno dostanou.",
-    "hr": "Čokolada sadrži teobromin, koji je otrovan za pse. Što je više kakaa, to je više teobromina: bijela čokolada ga ima najmanje, dok čokolada za kuhanje i kakao u prahu imaju najveće količine, pa je kakao u prahu čak opasniji od tamne čokolade. Najčešće su pogođeni psi, jer jedu gotovo sve i lako dođu do čokolade."
+    "hr": "Čokolada sadrži teobromin, koji je otrovan za pse. Što je više kakaa, to je više teobromina: bijela čokolada ga ima najmanje, dok čokolada za kuhanje i kakao u prahu imaju najveće količine, pa je kakao u prahu čak opasniji od tamne čokolade. Najčešće su pogođeni psi, jer jedu gotovo sve i lako dođu do čokolade.",
+    "sv": "Choklad innehåller teobromin, som är giftigt för hundar. Ju mer kakao, desto mer teobromin: vit choklad har minst, medan bakchoklad och kakaopulver har störst mängd, så kakaopulver är ännu farligare än mörk choklad. Hundar drabbas oftast eftersom de äter nästan vad som helst och lätt kommer åt choklad."
   },
   "signs": {
     "en": [
@@ -68,20 +73,31 @@
       "Ubrzan ili nepravilan rad srca",
       "Drhtanje i, u teškim slučajevima, napadaji",
       "Znakovi se obično pojavljuju unutar 6–12 sati"
+    ],
+    "sv": [
+      "Kräkningar och diarré",
+      "Flåsande, ökad törst och ökat kissande",
+      "Rastlöshet, oro, överaktivitet",
+      "Förhöjd kroppstemperatur",
+      "Snabb eller onormal hjärtrytm",
+      "Darrningar och, i svåra fall, kramper",
+      "Tecknen visar sig vanligtvis inom 6–12 timmar"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate cocoa powder, note how much and speak to your vet or a pet poison line straight away.",
     "sl": "Če je pes pojedel kakav v prahu, si zapišite, koliko ga je bilo, in takoj pokličite veterinarja ali center za zastrupitve živali.",
     "cs": "Pokud pes snědl kakaový prášek, poznamenejte si, kolik, a obraťte se ihned na veterináře nebo na toxikologickou linku pro zvířata.",
-    "hr": "Ako je pas pojeo kakao u prahu, zapiši koliko i odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja."
+    "hr": "Ako je pas pojeo kakao u prahu, zapiši koliko i odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
+    "sv": "Om din hund har ätit kakaopulver: notera hur mycket och kontakta din veterinär eller giftrådgivningen för djur direkt."
   },
   "serving": null,
   "child": {
     "en": "Cocoa powder is for people's baking, not for dogs. Keep the tin closed and tell a grown-up right away if your dog gets into it.",
     "sl": "Kakav v prahu je za peko, ne za pse. Škatlo imej zaprto in takoj povej odraslemu, če pes pride do nje.",
     "cs": "Kakaový prášek je na pečení pro lidi, ne pro psy. Měj dózu zavřenou a řekni to hned dospělému, když se do ní pes dostane.",
-    "hr": "Kakao u prahu služi za pečenje, a ne za pse. Drži limenku zatvorenu i odmah reci odrasloj osobi ako je pas dohvati."
+    "hr": "Kakao u prahu služi za pečenje, a ne za pse. Drži limenku zatvorenu i odmah reci odrasloj osobi ako je pas dohvati.",
+    "sv": "Kakaopulver är till för människors bakning, inte för hundar. Håll burken stängd och berätta direkt för en vuxen om din hund kommer åt den."
   },
   "faq": [
     {
@@ -89,13 +105,15 @@
         "en": "Is cocoa powder worse than a chocolate bar?",
         "sl": "Ali je kakav v prahu slabši od čokoladne tablice?",
         "cs": "Je kakaový prášek horší než tabulka čokolády?",
-        "hr": "Je li kakao u prahu gori od pločice čokolade?"
+        "hr": "Je li kakao u prahu gori od pločice čokolade?",
+        "sv": "Är kakaopulver värre än en chokladkaka?"
       },
       "a": {
         "en": "Yes. Cocoa powder is even more dangerous than dark chocolate, and white chocolate has the lowest amount of the harmful substances.",
         "sl": "Da. Kakav v prahu je še nevarnejši od temne čokolade, bela čokolada pa ima škodljivih snovi najmanj.",
         "cs": "Ano. Kakaový prášek je ještě nebezpečnější než hořká čokoláda a bílá čokoláda obsahuje škodlivých látek nejméně.",
-        "hr": "Da. Kakao u prahu čak je opasniji od tamne čokolade, a bijela čokolada ima najmanje štetnih tvari."
+        "hr": "Da. Kakao u prahu čak je opasniji od tamne čokolade, a bijela čokolada ima najmanje štetnih tvari.",
+        "sv": "Ja. Kakaopulver är ännu farligare än mörk choklad, och vit choklad har lägst mängd av de skadliga ämnena."
       }
     }
   ],
@@ -180,6 +198,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3267db36f40ba7552cd94136910862541f0ae3c32f997c657da6ec30a31c1b7b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9740c509d3e180db30a4309d0a5319025571820d733d84b202d16bdf35975d04"
     }
   }
 }
