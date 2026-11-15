@@ -497,6 +497,7 @@ const SPECIES = [
       { id: 'toy_fox_terrier', synonyms: { en: ['American Toy Terrier', 'Amertoy', 'TFT'], sl: ['toy fox terrier', 'amertoy'] } },
       { id: 'gordon_setter', synonyms: { en: ['Black and Tan Setter', 'Scottish Setter', 'Setter'], sl: ['gordon seter', 'škotski seter', 'seter'] } },
       { id: 'afghan_hound', synonyms: { en: ['Afghan', 'Tazi', 'Baluchi Hound'], sl: ['afganec', 'afgan', 'tazi'] } },
+      { id: 'australian_silky_terrier', synonyms: { en: ['Silky Terrier', 'Silky'], sl: ['silky terier', 'svilnati terier'] } },
     ],
   },
   {
@@ -2957,6 +2958,29 @@ const DOG_FACTS = {
       ['panosteitis', 'health.panosteitis'],
     ],
   },
+  // M5-R10-115. RKC page (S856): exercise 'Up to 30 minutes per day', coat 'Medium', grooming 'Every day', sheds 'Yes',
+  // lifespan 'Over 12 years'; FCI N° 236 (S855) height males 23–26 cm (females 'slightly less' — stored as the same range);
+  // PetMD (S857) weight around 10 lb (single value, our conversion — the standards give none); PetMD / WebMD 13–15 years.
+  // Coren rank 37 (S35). FCI origin Australia (AU). Not exported: lifespan.mcmillan_2024 (Wikipedia, tier C) / senior_from
+  // (derived), health.breed_watch (Category 1), health.other (background, no register key). No new health key.
+  australian_silky_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.petmd', 'about']],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patella'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['liver_shunt', 'health.liver_shunt'],
+      ['cataracts', 'health.cataracts'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['dental_disease_tooth_brushing', 'health.dental'],
+    ],
+  },
 
 
 
@@ -3031,6 +3055,7 @@ export const DOG_CARE_TASKS = {
   toy_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.toy_fox_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.toy_fox_terrier.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.toy_fox_terrier.nail_trimming']],
   gordon_setter: [['tooth_brushing', 7, 7, 'proposed_game_parameters.gordon_setter.tooth_brushing'], ['bath', 1, 28, 'proposed_game_parameters.gordon_setter.bathing']],
   afghan_hound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.afghan_hound.tooth_brushing'], ['bath', 1, 7, 'proposed_game_parameters.afghan_hound.bathing']],
+  australian_silky_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.australian_silky_terrier.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.australian_silky_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.australian_silky_terrier.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -3909,6 +3934,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.afghan_hound.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.afghan_hound.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.afghan_hound.exercise_minutes_senior',
+  },
+  australian_silky_terrier: {
+    adult_minutes: ['proposed_game_parameters.australian_silky_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.australian_silky_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.australian_silky_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.australian_silky_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.australian_silky_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.australian_silky_terrier.exercise_minutes_senior',
   },
 
 
