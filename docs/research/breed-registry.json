@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "310b01ba3d555d1cf79ff518a4c2062353f1e03d1f94ed3e9f765bf6d1f4ce8a"
+      "sha256": "2d9dc7174aa0733f064137ac50a3da0664c91df3e8caf0320cec532b11b06cb7"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "cb73c80b2f6e40ad25b255cbf2047b8868460969cfe3f02cbab368e7b505bd41"
+      "sha256": "06aff1ddc994950f738dbb0a082c4346de9bcb4e7be0017afc29b079d62ce3a1"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "b55c61a7b324b1fc135b2ebac4691fd4624301cf925e523d59424dc1badcf433"
+      "sha256": "a67210fef7c14c03638f4cf9754071ac4b5d4cd9518f42b3c87458a94b1e1b60"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "13712ca9651ce81d09889d540e15e2a3f828d17df90c0acc16072eb5ada811f3"
+      "sha256": "49345e3bf00b24ed2ab17ff22f5f9b189edbe070ace1bc1053735d8bdbb01f8a"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "c799141095f2e0636a263d7307e82b43f6f0299fce099ee2f0938df1e871bee1"
+      "sha256": "c75a6e1d8ebb7718c29a37aaadf55c86a3a8547e34a503e1d48ec95360282c6c"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "c84a7bc6f9adee170ee99de0265f1bf46ef55d4c7085918dfd3fc98c94c4900b"
+      "sha256": "527e5c489edca30e13d3408f1acb41d808612c97cc685a1508de68f3bf22aa9f"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "3caf665baf14b70924460c744ba634013f2c159e4b3919e5a81e17aa0511ca5d"
+      "sha256": "205d8f3dda91388430276762a2940d8b9312259af8d616296f3930ee5d38cfbe"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 106,
+      "breed_count": 107,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -64147,6 +64147,584 @@
       ]
     },
     {
+      "id": "afghan_hound",
+      "species": "dog",
+      "order": 106,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Afghan Hound",
+        "sl": "Afganski hrt"
+      },
+      "slug": {
+        "en": "afghan-hound",
+        "sl": "afganski-hrt"
+      },
+      "synonyms": {
+        "en": [
+          "Afghan",
+          "Tazi",
+          "Baluchi Hound"
+        ],
+        "sl": [
+          "afganec",
+          "afgan",
+          "tazi"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S850"
+          ],
+          "ref": "afghan_hound.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              68,
+              74
+            ],
+            "female": [
+              63,
+              69
+            ]
+          },
+          "source_ids": [
+            "S849"
+          ],
+          "ref": "afghan_hound.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "about",
+          "value": {
+            "male": [
+              27.2,
+              27.2
+            ],
+            "female": [
+              22.7,
+              22.7
+            ]
+          },
+          "source_ids": [
+            "S854"
+          ],
+          "ref": "afghan_hound.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "afghan_hound.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S850"
+          ],
+          "ref": "afghan_hound.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S850"
+          ],
+          "ref": "afghan_hound.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S850"
+          ],
+          "ref": "afghan_hound.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S850"
+          ],
+          "ref": "afghan_hound.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S850"
+          ],
+          "ref": "afghan_hound.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 79,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "afghan_hound.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 228,
+            "group": 10,
+            "section": 1,
+            "origin": "AF"
+          },
+          "source_ids": [
+            "S848"
+          ],
+          "ref": "afghan_hound.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S850"
+          ],
+          "ref": "afghan_hound.health.hips",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S851"
+          ],
+          "ref": "afghan_hound.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S851"
+          ],
+          "ref": "afghan_hound.health.thyroid",
+          "confidence": "medium"
+        },
+        {
+          "key": "panosteitis",
+          "source_ids": [
+            "S851"
+          ],
+          "ref": "afghan_hound.health.panosteitis",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S850"
+            ],
+            "refs": [
+              "afghan_hound.exercise.adult",
+              "afghan_hound.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S851"
+            ],
+            "refs": [
+              "afghan_hound.behaviour.children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S850"
+            ],
+            "refs": [
+              "afghan_hound.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S850"
+            ],
+            "refs": [
+              "afghan_hound.exercise.adult",
+              "afghan_hound.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S850"
+            ],
+            "refs": [
+              "afghan_hound.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S850",
+              "S851"
+            ],
+            "refs": [
+              "afghan_hound.suitability.rkc_grooming",
+              "afghan_hound.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.afghan_hound.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S850"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S850 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.afghan_hound.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.afghan_hound.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S850"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior round(0.75 × 10 y × 12) = 90 (RKC lower bound 'Over 10 years', S850)"
+          },
+          {
+            "ref": "proposed_game_parameters.afghan_hound.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 79, Lowest, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.afghan_hound.grooming",
+            "basis_source_ids": [
+              "S850"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Every day«, PDSA »daily brushing«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.afghan_hound.tooth_brushing",
+            "basis_source_ids": [
+              "S853"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.afghan_hound.bathing",
+            "basis_source_ids": [
+              "S852"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »at least once every week or two« → razpon → spodnja meja = vsak teden"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S850",
+          "S852",
+          "S853"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S850"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S850"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S850"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S848",
+        "S849",
+        "S850",
+        "S851",
+        "S852",
+        "S853",
+        "S854",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -70354,6 +70932,55 @@
       "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Shruthi N, MD (2024-08-07)",
       "title": "What to Know About Gordon Setters",
       "url": "https://www.webmd.com/pets/dogs/what-to-know-gordon-setters"
+    },
+    {
+      "id": "S848",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — AFGHAN HOUND (228)",
+      "url": "https://fci.be/en/nomenclature/AFGHAN-HOUND-228.html"
+    },
+    {
+      "id": "S849",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 228 — Afghan Hound (English PDF, header 06.10.2026)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/228g10-en.pdf"
+    },
+    {
+      "id": "S850",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Afghan Hound",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/afghan-hound/"
+    },
+    {
+      "id": "S851",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Afghan Hound breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/afghan-hound"
+    },
+    {
+      "id": "S852",
+      "tier": "B",
+      "publisher": "PetMD — Erica Puisis, reviewed by Jo Cornett, DVM (updated Nov. 11, 2025)",
+      "title": "Afghan Hound",
+      "url": "https://petmd.com/dog/breeds/afghan-hound"
+    },
+    {
+      "id": "S853",
+      "tier": "B",
+      "publisher": "WebMD Pets — Ariel Grucza, medically reviewed by Shruthi N, MD (2025-03-03)",
+      "title": "What to Know About Afghan Hounds",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-afghan-hounds"
+    },
+    {
+      "id": "S854",
+      "tier": "A",
+      "publisher": "American Kennel Club (copy hosted on storyblok.com)",
+      "title": "Official Standard for the Afghan Hound (PDF, approved September 14, 1948)",
+      "url": "https://a.storyblok.com/f/92981/x/a4469962fb/akc-afghan-hound.pdf"
     },
     {
       "id": "C1",
