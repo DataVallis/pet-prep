@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "76a03572009eed72622e4feeac695864e0659dc4c469f8c3bf0d72524dbc4769"
+      "sha256": "c4e58a68abafa241cd29bea0d7051e726906124e8f43aafb3031ae83f294ebbf"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -64150,7 +64150,7 @@
       "id": "afghan_hound",
       "species": "dog",
       "order": 106,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Afghan Hound",
         "sl": "Afganski hrt"
@@ -64733,7 +64733,7 @@
       "id": "australian_silky_terrier",
       "species": "dog",
       "order": 107,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Australian Silky Terrier",
         "sl": "Avstralski svilnati terier"
@@ -65329,7 +65329,7 @@
       "id": "parson_russell_terrier",
       "species": "dog",
       "order": 108,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Parson Russell Terrier",
         "sl": "Parson russell terier"
