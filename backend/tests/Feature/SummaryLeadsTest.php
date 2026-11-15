@@ -9,6 +9,7 @@ use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Database\QueryException;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Schema;
@@ -21,8 +22,8 @@ use Livewire\Livewire;
 |
 | POST /api/summary-leads: public, 10 / hour per IP, honeypot `website`,
 | consent required, ONE row per e-mail (a repeat visit updates it), no e-mail
-| sent, no IP stored, /admin list + delete (superadmin), prune 24 months after
-| the last visit.
+| sent, no IP stored, /admin list + delete (superadmin), never deleted
+| automatically (David 2026-11-15).
 |
 */
 
@@ -243,27 +244,14 @@ describe('database', function () {
     });
 });
 
-describe('summary-leads:prune', function () {
-    it('deletes rows not seen for 24 months and keeps the rest', function () {
-        $old = SummaryLead::factory()->create(['last_seen_at' => now()->subMonths(24)->subDay()]);
-        $edge = SummaryLead::factory()->create(['last_seen_at' => now()->subMonths(24)->addDay()]);
-        // first left long ago but seen again recently → stays
-        $returning = SummaryLead::factory()->create(['created_at' => now()->subMonths(40), 'last_seen_at' => now()->subMonth()]);
+describe('retention', function () {
+    it('never deletes rows automatically: no prune command and nothing scheduled', function () {
+        SummaryLead::factory()->create(['created_at' => now()->subYears(6), 'last_seen_at' => now()->subYears(5)]);
 
-        $this->artisan('summary-leads:prune')->assertSuccessful();
-
-        expect(SummaryLead::find($old->id))->toBeNull()
-            ->and(SummaryLead::find($edge->id))->not->toBeNull()
-            ->and(SummaryLead::find($returning->id))->not->toBeNull();
-    });
-
-    it('is scheduled daily with an explicit overlap expiry', function () {
-        $event = collect(app(Schedule::class)->events())->first(fn ($e) => str_contains((string) $e->command, 'summary-leads:prune'));
-
-        expect($event)->not->toBeNull()
-            ->and($event->expression)->toBe('47 3 * * *')
-            ->and($event->withoutOverlapping)->toBeTrue()
-            ->and($event->expiresAt)->toBe(30);
+        expect(array_keys(Artisan::all()))->not->toContain('summary-leads:prune');
+        $scheduled = collect(app(Schedule::class)->events())->filter(fn ($e) => str_contains((string) $e->command, 'summary-leads'));
+        expect($scheduled)->toBeEmpty();
+        expect(SummaryLead::count())->toBe(1);
     });
 });
 
