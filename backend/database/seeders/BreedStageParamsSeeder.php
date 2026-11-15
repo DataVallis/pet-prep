@@ -1369,6 +1369,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_AFGHAN_HOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-114)';
 
     /**
+     * M5-R10-115 Australian Silky Terrier (unattended run 2026-11-15, data.json
+     * proposed_game_parameters.australian_silky_terrier.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 30 min (RKC S856 "Up to 30
+     * minutes per day"), senior 23 min, puppy 10 min × age capped at 30, stages young 9 / adult 36 / senior 108 (0.75 × RKC
+     * lower bound "Over 12 years", S856 — McMillan 2024's breed value not reachable), arrival 2 / 9 / 36 / 108, learning
+     * multiplier 1.2 (Coren rank 37, Above average, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_AUSTRALIAN_SILKY_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-115)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1736,6 +1746,11 @@ class BreedStageParamsSeeder extends Seeder
             'tooth_brushing' => [7, 'day', 'S853', 'Their teeth should be brushed daily with dog-friendly toothpaste.', 'proposed_game_parameters.afghan_hound.tooth_brushing', '"daily" → every day'],
             'bath' => [1, 'week', 'S852', 'Bathing your dog at least once every week or two is important for keeping the coat clean and conditioned', 'proposed_game_parameters.afghan_hound.bathing', '"at least once every week or two" → the lower bound, every week (WebMD "twice a week" alternative; nails / ears / groomer: no frequency → no task)'],
         ],
+        'australian_silky_terrier' => [
+            'tooth_brushing' => [7, 'day', 'S858', 'Brush their teeth daily to help prevent dental disease.', 'proposed_game_parameters.australian_silky_terrier.tooth_brushing', '"daily" → every day'],
+            'ear_cleaning' => [1, 'two_weeks', 'S857', 'Do this every two to three weeks for maintenance and after any water activities, like a bath.', 'proposed_game_parameters.australian_silky_terrier.ear_care', '"every two to three weeks" → the lower bound, every 2 weeks'],
+            'bath' => [1, 'month', 'S858', 'You should also give your dog a bath about once a month with a dog-safe shampoo.', 'proposed_game_parameters.australian_silky_terrier.bathing', '"about once a month" → every 4 weeks (PetMD "every four to six weeks" agrees; nails "regularly", groomer: no frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1870,6 +1885,7 @@ class BreedStageParamsSeeder extends Seeder
         'toy_fox_terrier' => [2, 'S833', "It's helpful to brush their coat once or twice a week to minimize what shedding does occur", 'high', false],
         'gordon_setter' => [7, 'S843', 'They have a heavy coat which will require daily grooming to keep it free from debris and tangles.', 'high', false],
         'afghan_hound' => [7, 'S850', 'Every day', 'high', false],
+        'australian_silky_terrier' => [7, 'S856', 'Every day', 'high', false],
     ];
 
     /**
@@ -2050,13 +2066,14 @@ class BreedStageParamsSeeder extends Seeder
         'toy_fox_terrier' => ['S834', 'Early training and socialization will ensure your dog grows to be a friendly and well-mannered companion.'],
         'gordon_setter' => ['S844', 'Gordon Setter puppies need socialization to grow into confident adults.'],
         'afghan_hound' => ['S851', 'Afghan Hounds, if well socialised, are good with children.'],
+        'australian_silky_terrier' => ['S857', 'Enrolling Silky puppies in socialization classes before 16 weeks of age can help them become comfortable around children, other dogs, and new people.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2889,6 +2906,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::ToyFoxTerrier => self::toyFoxTerrierProfile(),
             BreedType::GordonSetter => self::gordonSetterProfile(),
             BreedType::AfghanHound => self::afghanHoundProfile(),
+            BreedType::AustralianSilkyTerrier => self::australianSilkyTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -10939,6 +10957,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'afghan_hound.lifespan.rkc',
                 'quote' => 'Over 10 years',
                 'notes' => 'RKC Breeds A–Z lower bound (S850); PDSA "Over 10 years" (S851) agrees. No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Australian Silky Terrier (M5-R10-115). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_AUSTRALIAN_SILKY_TERRIER); weight, growth, Coren rank and lifespan
+     * are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function australianSilkyTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_AUSTRALIAN_SILKY_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S856', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.australian_silky_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog reaches adult weight at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S856) = 9 y = 108 months. No McMillan 2024 / VetCompass median reachable (13.3 y only via Wikipedia, S862 → 120, open for David). Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_silky_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 30 minutes, which 10 × age reaches at 3 months.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S856', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_silky_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Up to 30 minutes per day',
+                'notes' => 'RKC breed page key fact "Exercise: Up to 30 minutes per day" (S856) → 30 min = 3,000 steps (runbook rule: "up to N" → N). PetMD (S857) "at least one hour of exercise daily" is an alternative.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_silky_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5 → 23 min (half up) = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[4.5, 4.5], [
+                'unit' => 'kg', 'source_id' => 'S857', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_silky_terrier.adult_weight.petmd',
+                'quote' => 'This breed weighs in at around 10 pounds',
+                'notes' => 'PetMD (S857): around 10 lb = 4.5 kg (our conversion), both sexes; WebMD (S858) "about 10 pounds" agrees. The FCI / ANKC / AKC / UKC standards give no weight ("in proportion to height").',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_silky_terrier.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (around 10 lb, S857 → the Toy class of S10).',
+            ]],
+            'coren_rank' => [37, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_silky_terrier.trainability.coren_rank',
+                'notes' => 'Coren rank 37 "Australian Silky Terrier", Above Average Working Dogs (ranks 27–39) — Wikipedia "The Intelligence of Dogs" table (S35, read through a mirror, checked 2026-11-15).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_silky_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 37 = Above average (S35) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12, [
+                'unit' => 'years', 'source_id' => 'S856', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_silky_terrier.lifespan.rkc',
+                'quote' => 'Over 12 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S856); PetMD / WebMD 13–15 years (S857, S858). No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

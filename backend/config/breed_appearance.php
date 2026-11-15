@@ -820,6 +820,15 @@
 | (S841; natural). RKC Breed Watch Category 2 without returned points (S842) — no welfare trait. One standard colour;
 | weight unsourced → `verified => false`.
 |
+| Australian Silky Terrier (M5-R10-115, docs/research/dog-data australian_silky_terrier.appearance): "It should display
+| Terrier characteristics, embodying keen alertness, activity and soundness." (FCI-Standard N° 236, S855); colour "All shades
+| of blue and tan are acceptable" — "Silver and white not acceptable.", "Silver blue or fawn topknot desirable." (S855; AKC
+| S860 "Blue and tan. The blue may be silver blue, pigeon blue or slate blue, the tan deep and rich."); hair "flat, fine and
+| glossy and of a silky texture" (S855; AKC: falls below and follows the body outline — not to the floor, unlike the
+| Yorkshire Terrier); ears "small, V-shaped … pricked, and entirely free from long hair"; tail undocked "carried erect or
+| slightly curved" (S855; natural). RKC Breed Watch Category 1 (S856) — no welfare trait. One standard colour; weight
+| unsourced in the standards → `verified => false`.
+|
 | Afghan Hound (M5-R10-114, docs/research/dog-data afghan_hound.appearance): "Gives the impression of strength and dignity,
 | combining speed and power. Head held proudly." (FCI-Standard N° 228, S849); colour "All colours, except merle which is
 | unacceptable. However white markings on the head or collar are highly undesirable." (S849; AKC S854 "All colors are
@@ -4960,6 +4969,37 @@ return [
             'ear_carriage' => ['low-set ears carried close to the head, covered with long silky hair'],
             'eye_color' => ['dark eyes with an aloof, far-seeing expression'],
             'tail' => ['natural tail set low with a ring at the end'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-115 (docs/research/dog-data/data.json australian_silky_terrier.appearance; runbook rules 2026-10-10: the one
+    // standard colour of FCI-Standard N° 236 (S855) — blue and tan with a silver / fawn topknot = the portrait default;
+    // natural tail; coat following the body outline, never floor-length).
+    'australian_silky_terrier' => [
+        'display_name' => 'Australian Silky Terrier',
+        // One standard colour; the trait list itself is an unchecked draft → false.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 236 (S855), the AKC standard (S860) and the RKC breed page (S856) — for the traits listed in `sources`.',
+        'sources' => [
+            'size' => 'S856 "Size: Small"; S855 "Height at the withers: Males: 23 to 26 cms."; PetMD S857 "around 10 pounds"',
+            'build' => 'S860 "The body is about one fifth longer than the dog\'s height at the withers."; S855 "keen alertness, activity and soundness"',
+            'coat_length' => 'S855 "Hair: Must be flat, fine and glossy and of a silky texture."; S860 "On matured specimens the coat falls below and follows the body outline."',
+            'coat_color' => 'S855 "All shades of blue and tan are acceptable, the richer these colours and more clearly defined the better." "Silver blue or fawn topknot desirable."; S860 "Blue and tan. The blue may be silver blue, pigeon blue or slate blue, the tan deep and rich."',
+            'muzzle' => 'S855 "Of moderate length, slightly shorter from the tip of the nose to between the eyes than from the same position to the occiput." "Nose: Black."',
+            'ear_carriage' => 'S855 "Should be small, V-shaped with fine leather, set high on the skull, pricked, and entirely free from long hair."',
+            'eye_color' => 'S855 "Shall be small, oval never round or prominent, dark as possible in colour with a keen intelligent expression."',
+            'tail' => 'S855 undocked: "the first three vertebrae to be carried erect or slightly curved but not curved over back." (natural)',
+        ],
+        'traits' => [
+            'size' => ['small toy-sized'],
+            'build' => [['value' => 'compact, moderately low-set toy terrier, slightly longer than tall, keenly alert', 'weight' => 3], 'small, sturdy and lively terrier'],
+            'coat_length' => ['straight, flat, fine and glossy silky coat parted along the back, falling below and following the body outline, never touching the floor'],
+            // Blue and tan is the only standard colour (S855, S860, S861).
+            'coat_color' => ['silver blue and tan: silver to slate blue body with rich tan legs and face, a silver or fawn topknot'],
+            'muzzle' => ['moderate-length head with a black nose'],
+            'ear_carriage' => ['small, pricked, V-shaped ears free from long hair'],
+            'eye_color' => ['small, dark, oval eyes with a keen expression'],
+            'tail' => ['natural tail carried erect or slightly curved, never over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],

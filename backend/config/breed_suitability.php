@@ -2792,5 +2792,24 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S850', 'S851'], 'refs' => ['afghan_hound.suitability.rkc_grooming', 'afghan_hound.suitability.pdsa_grooming']],
             ],
         ],
+
+        // M5-R10-115: australian_silky_terrier.* (S856, S857), runbook rules (data.json
+        // proposed_game_parameters.australian_silky_terrier.suitability_tags). RKC Breed Watch Category 1 (S856) → no welfare
+        // chip; in marketing. No new vocabulary key. No chases_small_pets: PetMD "the prey drive inherited from their parent
+        // breeds" is not a verbatim high prey drive (open for David).
+        'australian_silky_terrier' => [
+            'suits' => [
+                // S856 "Size of home: Flat/ Apartment"
+                ['tag' => 'apartment', 'source_ids' => ['S856'], 'refs' => ['australian_silky_terrier.suitability.rkc_size_of_home']],
+                // S857 "they're good around other pets and children if your pup is socialized properly at a young age"
+                ['tag' => 'children', 'source_ids' => ['S857'], 'refs' => ['australian_silky_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S856 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S856'], 'refs' => ['australian_silky_terrier.suitability.rkc_shedding']],
+                // S856 "Grooming: Every day"
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S856'], 'refs' => ['australian_silky_terrier.suitability.rkc_grooming']],
+            ],
+        ],
     ],
 ];

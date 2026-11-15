@@ -753,6 +753,10 @@ return [
         ['key' => 'blue', 'value' => 'blue (slate grey)', 'en' => 'Blue', 'sl' => 'Moder'],
         ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
     ],
+    // M5-R10-115: FCI-Standard N° 236 (S855) blue and tan only — same value as breed_appearance.php.
+    'australian_silky_terrier' => [
+        ['key' => 'blue-tan', 'value' => 'silver blue and tan: silver to slate blue body with rich tan legs and face, a silver or fawn topknot', 'en' => 'Blue and tan', 'sl' => 'Modro-rjavkast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

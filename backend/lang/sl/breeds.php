@@ -115,6 +115,7 @@ return [
     'toy_fox_terrier' => 'Toy fox terier',
     'gordon_setter' => 'Gordonski seter',
     'afghan_hound' => 'Afganski hrt',
+    'australian_silky_terrier' => 'Avstralski svilnati terier',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
