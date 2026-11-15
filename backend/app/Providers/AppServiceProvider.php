@@ -216,6 +216,12 @@ class AppServiceProvider extends ServiceProvider
             return Limit::perHour(5)->by('partner-inquiries:'.ClientIp::rateLimitKey($request->ip()));
         });
 
+        // M6-S05 parent e-mail on the page »Koliko dela je pes« (petprep.si): unauthenticated,
+        // writes or updates one row → 10 per hour per IP (IPv6 /64). Live in testing too.
+        RateLimiter::for('summary-leads', function (Request $request) {
+            return Limit::perHour(10)->by('summary-leads:'.ClientIp::rateLimitKey($request->ip()));
+        });
+
         // Parent self-registration (M2-10a): unauthenticated, creates rows →
         // 5 per minute and 20 per hour per IP (IPv6 /64). Live in testing too
         // (like pin-login); tests that register more often vary the IP.
