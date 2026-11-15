@@ -164,6 +164,37 @@
     "litter_change": {
       "title": "Change all the litter",
       "intro": "Once a week all the litter goes out: empty the box, wash it and fill it with fresh litter. Scrub with your finger.",
+      "introPlay": "Once a week all the litter goes out. Three steps, each with its own move: drag the box to the bin, rub it clean, and hold the bag to pour fresh litter.",
+      "play": {
+        "1": "Drag the box to the bin",
+        "2": "Rub the dirty spots away",
+        "3": "Press and hold the litter bag"
+      },
+      "playDone": {
+        "1": "Empty! Well done!",
+        "2": "Clean! Well done!",
+        "3": "Full to the line! Well done!"
+      },
+      "playHold": {
+        "1": "Hold the “Empty” button",
+        "2": "Hold the “Wash” button",
+        "3": "Hold the “Fill” button"
+      },
+      "playButton": {
+        "1": "Empty",
+        "2": "Wash",
+        "3": "Fill"
+      },
+      "playButtonA11y": {
+        "1": "Empty the litter box. Hold to pour the litter into the bin.",
+        "2": "Wash the litter box. Hold to rub the spots away.",
+        "3": "Fill fresh litter. Hold to pour it up to the line."
+      },
+      "playReadout": {
+        "old": "Old litter left: {{percent}} %.",
+        "spots": "Dirty spots left: {{n}}.",
+        "fresh": "Fresh litter: {{percent}} % of the way to the line."
+      },
       "weekDone": "This week's litter change is done ✓",
       "weekOpen": "Change the litter {{when}} at the latest.",
       "overdue": "Last week's change was missed, so the box smells — scoop quickly until you change it.",
