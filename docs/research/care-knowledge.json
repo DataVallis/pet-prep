@@ -76862,6 +76862,36 @@
       "checked": "2026-11-03"
     },
     {
+      "country": "BG",
+      "kind": "clinic",
+      "name": "Blue Cross Veterinary Clinic (Sofia)",
+      "city": "Sofia",
+      "region": "Sofia City",
+      "address": "1 Sinya Svetlina St., Pancharevo, 1137 Sofia",
+      "phone": "+359 898 361 903",
+      "emergency_24h": false,
+      "duty": "Open daily 08:00-22:00; emergencies accepted in these hours, no new patients after 22:00. 24-hour inpatient ward for hospitalised animals.",
+      "duty_i18n": null,
+      "url": "https://bluecrossbg.com/en/",
+      "source_url": "https://bluecrossbg.com/en/clinic-sofia/",
+      "checked": "2026-11-15"
+    },
+    {
+      "country": "BG",
+      "kind": "clinic",
+      "name": "Blue Cross Veterinary Clinic (Blagoevgrad)",
+      "city": "Blagoevgrad",
+      "region": "Blagoevgrad",
+      "address": "2 Peyo K. Yavorov Blvd., 2704 Blagoevgrad",
+      "phone": "+359 899 711 722",
+      "emergency_24h": false,
+      "duty": "Open Tuesday-Saturday 09:30-19:00; closed Sunday and Monday.",
+      "duty_i18n": null,
+      "url": "https://bluecrossbg.com/en/",
+      "source_url": "https://bluecrossbg.com/en/",
+      "checked": "2026-11-15"
+    },
+    {
       "country": "BO",
       "kind": "clinic",
       "name": "Veterinaria Lassie",
