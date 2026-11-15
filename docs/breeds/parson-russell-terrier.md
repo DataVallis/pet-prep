@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `parson_russell_terrier` (viri S864–S870; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S865) |
 | Izvor | FCI št. 339, skupina 3, sekcija 1 (veliki in srednji terierji), Velika Britanija (S864) — ni jack russell terier (FCI 345, `russell_terrier`) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 112. mesto »Parson Russell Terrier« (S174, prebrano 2026-11-15) |
-| PR-ji | pet-prep #1133 (pasma, združen `7adaec3`) · portret pet-prep PR `feat/M5-R10-116-parson-russell-terrier-portrait` (zagon `breed-portraits.yml` 43688540623, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-parson-russell-terrier` |
+| PR-ji | pet-prep #1133 (pasma, združen `7adaec3`) · portret pet-prep #1134 (zagon `breed-portraits.yml` 43688540623, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-parson-russell-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
