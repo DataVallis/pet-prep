@@ -279,7 +279,7 @@ export interface paths {
          *     null for a challenge pet) says whether the free pet can be upgraded to the
          *     challenge (`reason` when not — `legacy_profile` → the app explains);
          *     `challenge_started_at` = the purchase that upgraded a free pet (its 12 weeks
-         *     start there), null for every other pet
+         *     start there; the score too, unless the parent kept it — M6-U03), null for every other pet
          * @description GET /api/parent/billing
          */
         get: operations["billing.index"];
@@ -310,7 +310,10 @@ export interface paths {
          *     pet → 404 `pet_not_found`. M6-U01: a born, active free pet (mutt / domestic
          *     cat) is upgraded to the 12-week challenge — the challenge starts now; 422
          *     `game_over`, `pet_not_born`, `legacy_profile` (a pre-M5 mutt), `free_plan`
-         *     (a free pet of a paid breed)
+         *     (a free pet of a paid breed). M6-U03: optional body `keep_score` (bool) for that
+         *     upgrade — true keeps the Care Score so far (it counts from each child's start), false /
+         *     absent starts it again at the purchase (absent: the choice of the parent's open intent
+         *     for this pet, if any). The 12 weeks run from the purchase either way
          * @description POST /api/parent/pets/{pet}/challenge/activate
          */
         post: operations["billing.activate"];
@@ -339,7 +342,9 @@ export interface paths {
          *     unpaid challenge pet (also unborn) or an upgradeable free pet; 422
          *     `already_paid`, `pet_not_active`, `game_over`, `pet_not_born`,
          *     `legacy_profile`, `free_plan`. Another family's pet → 404 `pet_not_found`.
-         *     The app must not open the store sheet when this fails
+         *     The app must not open the store sheet when this fails. M6-U03: optional body
+         *     `keep_score` (bool) for a free pet — the parent's choice to keep the Care Score so far
+         *     (true) or start again (false); the webhook applies it when it upgrades the pet
          * @description POST /api/parent/pets/{pet}/challenge/intent
          */
         post: operations["billing.intent"];
@@ -2250,6 +2255,21 @@ export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
         /**
+         * ActivateChallengeRequest
+         * @description POST /api/parent/pets/{pet}/challenge/activate (M3-11). Parents only
+         *     (UserPolicy::viewBilling → 403 for a child); whether the pet belongs to the
+         *     parent's family is checked in the controller (PetPolicy::manage) so another
+         *     family's pet looks exactly like a missing one (404). Optional body
+         *     `keep_score` (M6-U03).
+         */
+        ActivateChallengeRequest: {
+            /**
+             * @description M6-U03 (U7): upgrade of a free pet — keep the Care Score so far (true) or start
+             *     again at the purchase (false / absent). Ignored for a pet that is not free.
+             */
+            keep_score?: boolean;
+        };
+        /**
          * AppErrorScope
          * @description Where an app error report comes from (M5-05). Error-boundary scopes mirror the app's `RenderErrorScope` (`app`, `child-hud`, `locked-overlay`); the global handlers report `global` (ErrorUtils: uncaught JS error) and `unhandled-rejection` (promise without a catch). Mirrored in the `app_error_fingerprints_scope_check` constraint.
          * @enum {string}
@@ -2310,6 +2330,21 @@ export interface components {
          * @enum {string}
          */
         BreedType: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+        /**
+         * ChallengeIntentRequest
+         * @description POST /api/parent/pets/{pet}/challenge/intent (M6-U01, FREE_PET_UPGRADE_SPEC
+         *     §5.3). Parents only (UserPolicy::viewBilling → 403 for a child); the pet is
+         *     authorized in the controller with PetPolicy::buyChallenge so another
+         *     family's pet looks exactly like a missing one (404). Optional body
+         *     `keep_score` (M6-U03).
+         */
+        ChallengeIntentRequest: {
+            /**
+             * @description M6-U03 (U7): upgrade of a free pet — keep the Care Score so far (true) or start
+             *     again at the purchase (false / absent). Ignored for a pet that is not free.
+             */
+            keep_score?: boolean;
+        };
         /**
          * ChallengePaidSource
          * @description Why a challenge pet counts as paid (pets.challenge_paid_source, M3-11). Mirrored by the pets_challenge_paid_check constraint.
@@ -3931,7 +3966,11 @@ export interface operations {
             };
             cookie?: never;
         };
-        requestBody?: never;
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["ActivateChallengeRequest"];
+            };
+        };
         responses: {
             200: {
                 headers: {
@@ -3943,22 +3982,15 @@ export interface operations {
                         status: "activated" | "already_active";
                         pet_id: string;
                         plan: {
-                            type: string;
-                            /** @enum {string|null} */
-                            status: "trial" | "payment_required" | "paid" | null;
-                            trial_ends_at: string | null;
-                            paid_at: string | null;
-                            payments_enforced: boolean;
-                            /**
-                             * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                             * @enum {string}
-                             */
-                            display_type: "free" | "challenge";
-                            /**
-                             * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                             *     start here); null for every other pet.
-                             */
-                            challenge_started_at: string | null;
+                            type: string | unknown;
+                            status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                            trial_ends_at: (string | null) | unknown;
+                            paid_at: (string | null) | unknown;
+                            payments_enforced: boolean | unknown;
+                            display_type: ("free" | "challenge") | unknown;
+                            challenge_started_at: (string | null) | unknown;
+                        } & {
+                            [key: string]: unknown;
                         };
                         credits_available: number;
                     } | string;
@@ -3991,7 +4023,11 @@ export interface operations {
             };
             cookie?: never;
         };
-        requestBody?: never;
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["ChallengeIntentRequest"];
+            };
+        };
         responses: {
             200: {
                 headers: {
@@ -4827,22 +4863,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -5868,22 +5897,15 @@ export interface operations {
                             certificate_eligible: boolean;
                             /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                             plan: {
-                                type: string;
-                                /** @enum {string|null} */
-                                status: "trial" | "payment_required" | "paid" | null;
-                                trial_ends_at: string | null;
-                                paid_at: string | null;
-                                payments_enforced: boolean;
-                                /**
-                                 * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                 * @enum {string}
-                                 */
-                                display_type: "free" | "challenge";
-                                /**
-                                 * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                 *     start here); null for every other pet.
-                                 */
-                                challenge_started_at: string | null;
+                                type: string | unknown;
+                                status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                trial_ends_at: (string | null) | unknown;
+                                paid_at: (string | null) | unknown;
+                                payments_enforced: boolean | unknown;
+                                display_type: ("free" | "challenge") | unknown;
+                                challenge_started_at: (string | null) | unknown;
+                            } & {
+                                [key: string]: unknown;
                             };
                             /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                             current_video_url: string | null;
@@ -6929,22 +6951,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -7988,22 +8003,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -9047,22 +9055,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -10106,22 +10107,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -11165,22 +11159,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -12228,22 +12215,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -13291,22 +13271,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -14354,22 +14327,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -15417,22 +15383,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -16480,22 +16439,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -17539,22 +17491,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -18598,22 +18543,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -19661,22 +19599,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -20720,22 +20651,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -21783,22 +21707,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -22842,22 +22759,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -23905,22 +23815,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -24968,22 +24871,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -26031,22 +25927,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -27094,22 +26983,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -28157,22 +28039,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -29840,22 +29715,15 @@ export interface operations {
                             virtual_age_months: number;
                             /** @description M3-11: plan + payment status (paywall per pet). */
                             plan: {
-                                type: string;
-                                /** @enum {string|null} */
-                                status: "trial" | "payment_required" | "paid" | null;
-                                trial_ends_at: string | null;
-                                paid_at: string | null;
-                                payments_enforced: boolean;
-                                /**
-                                 * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                 * @enum {string}
-                                 */
-                                display_type: "free" | "challenge";
-                                /**
-                                 * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                 *     start here); null for every other pet.
-                                 */
-                                challenge_started_at: string | null;
+                                type: string | unknown;
+                                status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                trial_ends_at: (string | null) | unknown;
+                                paid_at: (string | null) | unknown;
+                                payments_enforced: boolean | unknown;
+                                display_type: ("free" | "challenge") | unknown;
+                                challenge_started_at: (string | null) | unknown;
+                            } & {
+                                [key: string]: unknown;
                             };
                             /** @description M5-R01: origin, age, life stage and today's rules. */
                             profile: {
@@ -30159,22 +30027,15 @@ export interface operations {
                                 pet_state: string;
                                 /** @description M3-11: plan + payment status (paywall per pet). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /**
                                  * @description M6-U01: a free pet — can the parent upgrade it to the 12-week challenge
@@ -30763,22 +30624,15 @@ export interface operations {
                                 pet_state: string;
                                 /** @description M3-11: plan + payment status (paywall per pet). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /**
                                  * @description M6-U01: a free pet — can the parent upgrade it to the 12-week challenge
@@ -32400,22 +32254,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -33441,22 +33288,15 @@ export interface operations {
                                 certificate_eligible: boolean;
                                 /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
-                                    type: string;
-                                    /** @enum {string|null} */
-                                    status: "trial" | "payment_required" | "paid" | null;
-                                    trial_ends_at: string | null;
-                                    paid_at: string | null;
-                                    payments_enforced: boolean;
-                                    /**
-                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
-                                     * @enum {string}
-                                     */
-                                    display_type: "free" | "challenge";
-                                    /**
-                                     * @description M6-U01: when a purchase upgraded this free pet to the challenge (its 12 weeks
-                                     *     start here); null for every other pet.
-                                     */
-                                    challenge_started_at: string | null;
+                                    type: string | unknown;
+                                    status: ("trial" | "payment_required" | "paid" | null) | unknown;
+                                    trial_ends_at: (string | null) | unknown;
+                                    paid_at: (string | null) | unknown;
+                                    payments_enforced: boolean | unknown;
+                                    display_type: ("free" | "challenge") | unknown;
+                                    challenge_started_at: (string | null) | unknown;
+                                } & {
+                                    [key: string]: unknown;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
