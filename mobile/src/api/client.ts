@@ -585,6 +585,11 @@ export interface PetPlan {
    * pet (and from an older server).
    */
   challenge_started_at?: string | null;
+  /**
+   * M6-U03: present (true) only when the parent chose at the upgrade to keep the Care Score —
+   * the score counts from the child's own start and no day is »pred izzivom«.
+   */
+  challenge_score_kept?: boolean;
 }
 
 /** M6-U01: why a free pet can't be upgraded to the challenge (server `upgrade.reason`). */
@@ -1483,8 +1488,12 @@ export const api = {
       ...(idempotencyKey ? { headers: { 'Idempotency-Key': idempotencyKey } } : {}),
     }),
 
-  activateChallenge: (petId: number) =>
-    apiRequest<unknown>(`/api/parent/pets/${petId}/challenge/activate`, { method: 'POST' }),
+  /** M6-U03: `keepScore` (upgrade of a free pet) — keep the Care Score so far (true) or start again (false). */
+  activateChallenge: (petId: number, keepScore?: boolean) =>
+    apiRequest<unknown>(`/api/parent/pets/${petId}/challenge/activate`, {
+      method: 'POST',
+      ...(keepScore !== undefined ? { body: { keep_score: keepScore } } : {}),
+    }),
 
   /**
    * POST /api/parent/pets/{pet}/challenge/intent (M6-U01, FREE_PET_UPGRADE_SPEC §5.3) — tell the
@@ -1492,9 +1501,13 @@ export const api = {
    * webhook then assigns the purchase to it; a free pet is upgraded). 201 `{intent_id, pet_id,
    * expires_at}`; 422 `already_paid` / `pet_not_active` / `game_over` / `pet_not_born` /
    * `legacy_profile` / `free_plan`; 404 `pet_not_found`. Never open the store sheet when it fails.
+   * M6-U03: `keepScore` = the parent's choice for a free pet (keep the Care Score so far / start again).
    */
-  createChallengeIntent: (petId: number) =>
-    apiRequest<unknown>(`/api/parent/pets/${petId}/challenge/intent`, { method: 'POST' }),
+  createChallengeIntent: (petId: number, keepScore?: boolean) =>
+    apiRequest<unknown>(`/api/parent/pets/${petId}/challenge/intent`, {
+      method: 'POST',
+      ...(keepScore !== undefined ? { body: { keep_score: keepScore } } : {}),
+    }),
 
   /**
    * GET /api/parent/certificates (M2-01d, parent only) — every finished child challenge of

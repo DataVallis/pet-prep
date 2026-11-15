@@ -3,47 +3,57 @@
   "species": "cat",
   "name": {
     "en": "Popcorn (plain)",
-    "sl": "Pokovka (navadna)"
+    "sl": "Pokovka (navadna)",
+    "cs": "Popcorn (neochucený)"
   },
   "question": {
     "en": "Can cats eat popcorn?",
-    "sl": "Ali lahko mačke jedo pokovko?"
+    "sl": "Ali lahko mačke jedo pokovko?",
+    "cs": "Mohou kočky jíst popcorn?"
   },
   "url_slug": {
     "en": "popcorn",
-    "sl": "pokovka"
+    "sl": "pokovka",
+    "cs": "popcorn"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few pieces of plain popcorn are fine as an occasional treat. Pet Poison Helpline lists popcorn among foods safe for cats and dogs, as long as you hold the butter and salt. Buttered or salted popcorn is not for cats.",
-    "sl": "Da, nekaj kosov navadne pokovke je v redu kot občasen priboljšek. Pet Poison Helpline pokovko navaja med živili, ki so varna za mačke in pse, če je brez masla in soli. Pokovka z maslom ali soljo ni za mačke."
+    "sl": "Da, nekaj kosov navadne pokovke je v redu kot občasen priboljšek. Pet Poison Helpline pokovko navaja med živili, ki so varna za mačke in pse, če je brez masla in soli. Pokovka z maslom ali soljo ni za mačke.",
+    "cs": "Ano, pár kousků neochuceného popcornu je jako občasný pamlsek v pořádku. Pet Poison Helpline uvádí popcorn mezi potravinami bezpečnými pro kočky i psy, pokud se vynechá máslo a sůl. Popcorn s máslem nebo solený popcorn pro kočky není."
   },
   "why": {
     "en": "Pet Poison Helpline lists popcorn, without butter and salt, among foods that are safe for cats and dogs, and the ASPCA includes popcorn among easy treats in its snack ideas for cats and dogs. Salt is the catch: Pet Poison Helpline says excessive salt should not be in a cat's diet. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Cats Protection says it's best to stick to cat food treats rather than human foods.",
-    "sl": "Pet Poison Helpline pokovko brez masla in soli navaja med živili, ki so varna za mačke in pse, ASPCA pa jo v svojih idejah za prigrizke za mačke in pse navaja med preprostimi priboljški. Težava je sol: Pet Poison Helpline navaja, da preveč soli ne sodi v mačjo prehrano. International Cat Care navaja, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo, Cats Protection pa, da se je najbolje držati priboljškov za mačke in ne človeške hrane."
+    "sl": "Pet Poison Helpline pokovko brez masla in soli navaja med živili, ki so varna za mačke in pse, ASPCA pa jo v svojih idejah za prigrizke za mačke in pse navaja med preprostimi priboljški. Težava je sol: Pet Poison Helpline navaja, da preveč soli ne sodi v mačjo prehrano. International Cat Care navaja, da mačke kot obvezni mesojedci ogljikove hidrate slabše prebavijo in izkoristijo, Cats Protection pa, da se je najbolje držati priboljškov za mačke in ne človeške hrane.",
+    "cs": "Pet Poison Helpline uvádí popcorn bez másla a soli mezi potravinami, které jsou bezpečné pro kočky i psy, a ASPCA řadí popcorn mezi snadné pamlsky ve svých tipech na svačinky pro kočky a psy. Háček je v soli: Pet Poison Helpline uvádí, že nadměrné množství soli by v jídelníčku kočky být nemělo. International Cat Care uvádí, že kočky jako striktní masožravci hůře tráví a využívají sacharidy, a Cats Protection radí držet se spíše pamlsků pro kočky než lidského jídla."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer just a few plain pieces. If your cat has eaten a lot of salty popcorn and is vomiting, has diarrhoea, seems very thirsty or unusually tired, contact your vet.",
-    "sl": "Ponudite le nekaj kosov navadne pokovke. Če je mačka pojedla veliko slane pokovke in bruha, ima drisko, je zelo žejna ali nenavadno utrujena, pokličite veterinarja."
+    "sl": "Ponudite le nekaj kosov navadne pokovke. Če je mačka pojedla veliko slane pokovke in bruha, ima drisko, je zelo žejna ali nenavadno utrujena, pokličite veterinarja.",
+    "cs": "Nabídněte jen pár neochucených kousků. Pokud kočka snědla hodně slaného popcornu a zvrací, má průjem, je velmi žíznivá nebo neobvykle unavená, obraťte se na veterináře."
   },
   "serving": {
     "en": "A few pieces of plain popcorn with no butter or salt.",
-    "sl": "Nekaj kosov navadne pokovke brez masla in soli."
+    "sl": "Nekaj kosov navadne pokovke brez masla in soli.",
+    "cs": "Pár kousků neochuceného popcornu bez másla a soli."
   },
   "child": {
     "en": "A piece of plain popcorn can be a cat treat sometimes. Buttery, salty popcorn is just for people.",
-    "sl": "Košček navadne pokovke je lahko včasih priboljšek za muco. Pokovka z maslom in soljo pa je samo za ljudi."
+    "sl": "Košček navadne pokovke je lahko včasih priboljšek za muco. Pokovka z maslom in soljo pa je samo za ljudi.",
+    "cs": "Kousek neochuceného popcornu může být pro kočku občas pamlsek. Máslový a slaný popcorn je jen pro lidi."
   },
   "faq": [
     {
       "q": {
         "en": "Can cats eat salted or buttered popcorn?",
-        "sl": "Ali lahko mačke jedo slano pokovko ali pokovko z maslom?"
+        "sl": "Ali lahko mačke jedo slano pokovko ali pokovko z maslom?",
+        "cs": "Mohou kočky jíst solený nebo máslový popcorn?"
       },
       "a": {
         "en": "No. Pet Poison Helpline says to hold the butter and salt, and that excessive salt should not be in a cat's diet. Agriculture Victoria says large amounts of salt can cause excessive thirst and urination.",
-        "sl": "Ne. Pet Poison Helpline svetuje pokovko brez masla in soli ter navaja, da preveč soli ne sodi v mačjo prehrano. Agriculture Victoria navaja, da lahko velike količine soli povzročijo močno žejo in pogosto uriniranje."
+        "sl": "Ne. Pet Poison Helpline svetuje pokovko brez masla in soli ter navaja, da preveč soli ne sodi v mačjo prehrano. Agriculture Victoria navaja, da lahko velike količine soli povzročijo močno žejo in pogosto uriniranje.",
+        "cs": "Ne. Pet Poison Helpline radí vynechat máslo a sůl a uvádí, že nadměrné množství soli by v jídelníčku kočky být nemělo. Agriculture Victoria uvádí, že velké množství soli může způsobit nadměrnou žízeň a močení."
       }
     }
   ],
@@ -121,6 +131,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8959312b4d786ec1ed80224b360fff2dcfcbc37f20940a968dba173230b759ee"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "311b121c377c1fb5a19edd4422d46b8e43cf8c14e9f16e18faecd5c1e2f798b7"
     }
   }
 }

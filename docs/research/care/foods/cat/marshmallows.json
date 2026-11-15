@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Marshmallows",
-    "sl": "Penasti bonboni (marshmallow)"
+    "sl": "Penasti bonboni (marshmallow)",
+    "cs": "Marshmallow"
   },
   "question": {
     "en": "Can cats eat marshmallows?",
-    "sl": "Ali lahko mačke jedo penaste bonbone (marshmallow)?"
+    "sl": "Ali lahko mačke jedo penaste bonbone (marshmallow)?",
+    "cs": "Mohou kočky jíst marshmallow?"
   },
   "url_slug": {
     "en": "marshmallows",
-    "sl": "penasti-bonboni"
+    "sl": "penasti-bonboni",
+    "cs": "marshmallow"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, cats shouldn't eat marshmallows. They offer cats no nutritional benefit, excess sugar can be a concern for cats, and marshmallow treats may contain chocolate, which is toxic to cats.",
-    "sl": "Ne, mačke ne smejo jesti penastih bonbonov. Mačkam ne koristijo, preveč sladkorja je zanje lahko težava, penasti priboljški pa lahko vsebujejo čokolado, ki je za mačke strupena."
+    "sl": "Ne, mačke ne smejo jesti penastih bonbonov. Mačkam ne koristijo, preveč sladkorja je zanje lahko težava, penasti priboljški pa lahko vsebujejo čokolado, ki je za mačke strupena.",
+    "cs": "Ne, kočky by marshmallow jíst neměly. Nemá pro ně žádný nutriční přínos, nadbytek cukru může být pro kočky problém a pamlsky s marshmallow mohou obsahovat čokoládu, která je pro kočky toxická."
   },
   "why": {
     "en": "Pet Poison Helpline says marshmallows aren't a good choice for cats: cats have a decreased ability to taste sweetness, marshmallows offer them no nutritional benefit, and excess sugar can be a concern. Cats Protection explains that sugar isn't toxic to cats but is still unhealthy, adding unnecessary calories that can lead to weight gain. Marshmallow treats may also contain chocolate, which is toxic to cats.",
-    "sl": "Pet Poison Helpline navaja, da penasti bonboni za mačke niso dobra izbira: mačke slabše zaznajo sladek okus, penasti bonboni jim ne koristijo, preveč sladkorja pa je lahko težava. Cats Protection pojasnjuje, da sladkor za mačke ni strupen, je pa vseeno nezdrav, saj prinaša nepotrebne kalorije, ki lahko vodijo v pridobivanje teže. Penasti priboljški lahko vsebujejo tudi čokolado, ki je za mačke strupena."
+    "sl": "Pet Poison Helpline navaja, da penasti bonboni za mačke niso dobra izbira: mačke slabše zaznajo sladek okus, penasti bonboni jim ne koristijo, preveč sladkorja pa je lahko težava. Cats Protection pojasnjuje, da sladkor za mačke ni strupen, je pa vseeno nezdrav, saj prinaša nepotrebne kalorije, ki lahko vodijo v pridobivanje teže. Penasti priboljški lahko vsebujejo tudi čokolado, ki je za mačke strupena.",
+    "cs": "Pet Poison Helpline uvádí, že marshmallow není pro kočky dobrá volba: kočky mají sníženou schopnost vnímat sladkou chuť, marshmallow pro ně nemá žádný nutriční přínos a nadbytek cukru může být problém. Cats Protection vysvětluje, že cukr pro kočky není toxický, ale přesto je nezdravý, protože přidává zbytečné kalorie, které mohou vést k nárůstu hmotnosti. Pamlsky s marshmallow mohou navíc obsahovat čokoládu, která je pro kočky toxická."
   },
   "signs": {
     "en": [
@@ -30,26 +35,34 @@
     "sl": [
       "Driska",
       "Želodčne težave"
+    ],
+    "cs": [
+      "Průjem",
+      "Podrážděný žaludek"
     ]
   },
   "what_to_do": {
     "en": "If your cat got into marshmallows or a marshmallow treat, contact your vet or a pet poison helpline for guidance. If the treat contained chocolate, contact your vet straight away.",
-    "sl": "Če je mačka prišla do penastih bonbonov ali penastega priboljška, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Če je bila v priboljšku čokolada, takoj pokličite veterinarja."
+    "sl": "Če je mačka prišla do penastih bonbonov ali penastega priboljška, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Če je bila v priboljšku čokolada, takoj pokličite veterinarja.",
+    "cs": "Pokud se kočka dostala k marshmallow nebo k pamlsku s marshmallow, obraťte se pro radu na veterináře nebo na toxikologickou linku pro zvířata. Pokud pamlsek obsahoval čokoládu, okamžitě se obraťte na veterináře."
   },
   "serving": null,
   "child": {
     "en": "Marshmallows are a sweet treat for people. Cats can hardly taste sweet things, so they're not for kitty.",
-    "sl": "Penasti bonboni so sladek priboljšek za ljudi. Muce sladkega skoraj ne okusijo, zato niso za muco."
+    "sl": "Penasti bonboni so sladek priboljšek za ljudi. Muce sladkega skoraj ne okusijo, zato niso za muco.",
+    "cs": "Marshmallow je sladký pamlsek pro lidi. Kočky sladkou chuť sotva vnímají, takže kočičku vůbec nepotěší."
   },
   "faq": [
     {
       "q": {
         "en": "Are sugar-free marshmallows dangerous for cats?",
-        "sl": "Ali so penasti bonboni brez sladkorja nevarni za mačke?"
+        "sl": "Ali so penasti bonboni brez sladkorja nevarni za mačke?",
+        "cs": "Jsou marshmallow bez cukru pro kočky nebezpečné?"
       },
       "a": {
         "en": "Some sugar-free marshmallows contain xylitol, which is toxic to dogs. Pet Poison Helpline says cats don't appear to be affected by xylitol the way dogs are, but marshmallows still aren't a good choice for cats.",
-        "sl": "Nekateri penasti bonboni brez sladkorja vsebujejo ksilitol, ki je strupen za pse. Pet Poison Helpline navaja, da ksilitol na mačke očitno ne vpliva tako kot na pse, a penasti bonboni za mačke še vedno niso dobra izbira."
+        "sl": "Nekateri penasti bonboni brez sladkorja vsebujejo ksilitol, ki je strupen za pse. Pet Poison Helpline navaja, da ksilitol na mačke očitno ne vpliva tako kot na pse, a penasti bonboni za mačke še vedno niso dobra izbira.",
+        "cs": "Některé marshmallow bez cukru obsahují xylitol, který je pro psy toxický. Pet Poison Helpline uvádí, že na kočky xylitol zřejmě nepůsobí tak jako na psy, ale marshmallow přesto pro kočky není dobrá volba."
       }
     }
   ],
@@ -124,6 +137,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e84c34f887042d91bb4368d78da39935d041dcd06904a6f974ebcfcda3cdcafc"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8345621449a57f25c13494da50581318617115cf30b39ca098608f3dedd17ed2"
     }
   }
 }

@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Chewing gum",
-    "sl": "Žvečilni gumi"
+    "sl": "Žvečilni gumi",
+    "cs": "Žvýkačky"
   },
   "question": {
     "en": "Can dogs eat chewing gum?",
-    "sl": "Ali lahko psi jedo žvečilni gumi?"
+    "sl": "Ali lahko psi jedo žvečilni gumi?",
+    "cs": "Mohou psi jíst žvýkačky?"
   },
   "url_slug": {
     "en": "chewing-gum",
-    "sl": "zvecilni-gumi"
+    "sl": "zvecilni-gumi",
+    "cs": "zvykacky"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Chewing gum is not for dogs. Sugar-free gum almost always contains xylitol, which is as dangerous to dogs as chocolate: it can cause a rapid drop in blood sugar, seizures and liver failure. If your dog eats gum, take it to the vet immediately.",
-    "sl": "Ne. Žvečilni gumi ni za pse. Žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ki je za pse enako nevaren kot čokolada: lahko povzroči hiter padec krvnega sladkorja, krče in odpoved jeter. Če pes poje žvečilni gumi, ga takoj odpeljite k veterinarju."
+    "sl": "Ne. Žvečilni gumi ni za pse. Žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ki je za pse enako nevaren kot čokolada: lahko povzroči hiter padec krvnega sladkorja, krče in odpoved jeter. Če pes poje žvečilni gumi, ga takoj odpeljite k veterinarju.",
+    "cs": "Ne. Žvýkačky psům nepatří. Žvýkačky bez cukru téměř vždy obsahují xylitol, který je pro psy stejně nebezpečný jako čokoláda: může způsobit rychlý pokles hladiny cukru v krvi, záchvaty a selhání jater. Pokud pes snědl žvýkačku, jeďte okamžitě k veterináři."
   },
   "why": {
     "en": "Xylitol is the most common and dangerous ingredient in gum, and some dogs develop severe liver damage after eating it. Gum also often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and large amounts of gum can clump in the stomach and cause a blockage. Because sugar-free gum almost always contains xylitol, we rate gum as toxic.",
-    "sl": "Ksilitol je najpogostejša in najnevarnejša sestavina žvečilnih gumijev, pri nekaterih psih pa po zaužitju pride do hude okvare jeter. Žvečilni gumi pogosto vsebuje tudi sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo in povzroči zaporo. Ker žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ga uvrščamo med strupene."
+    "sl": "Ksilitol je najpogostejša in najnevarnejša sestavina žvečilnih gumijev, pri nekaterih psih pa po zaužitju pride do hude okvare jeter. Žvečilni gumi pogosto vsebuje tudi sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo in povzroči zaporo. Ker žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ga uvrščamo med strupene.",
+    "cs": "Xylitol je nejčastější a nejnebezpečnější přísada ve žvýkačkách a u některých psů po jeho pozření dojde k těžkému poškození jater. Žvýkačky také často obsahují cukr, umělá sladidla a další přísady, které mohou být pro psy jedovaté, a velké množství žvýkaček se může v žaludku slepit a způsobit ucpání. Protože žvýkačky bez cukru téměř vždy obsahují xylitol, hodnotíme žvýkačky jako jedovaté."
   },
   "signs": {
     "en": [
@@ -38,36 +43,50 @@
       "Krči",
       "Utrujenost in brezvoljnost",
       "Znaki se lahko začnejo že v nekaj minutah"
+    ],
+    "cs": [
+      "Zvracení",
+      "Vrávorání nebo potíže při chůzi",
+      "Třes",
+      "Záchvaty",
+      "Malátnost",
+      "Příznaky se mohou objevit během několika minut"
     ]
   },
   "what_to_do": {
     "en": "Take your dog to the vet immediately and call a pet poison helpline for advice. Don't give your dog anything by mouth unless your vet tells you to.",
-    "sl": "Psa takoj odpeljite k veterinarju in za nasvet pokličite telefonsko linijo za zastrupitve živali. Psu ne dajajte ničesar v usta, razen če tako naroči veterinar."
+    "sl": "Psa takoj odpeljite k veterinarju in za nasvet pokličite telefonsko linijo za zastrupitve živali. Psu ne dajajte ničesar v usta, razen če tako naroči veterinar.",
+    "cs": "Jeďte okamžitě k veterináři a pro radu zavolejte na toxikologickou linku pro zvířata. Nepodávejte psovi nic do tlamy, pokud vám to veterinář neporadí."
   },
   "serving": null,
   "child": {
     "en": "Chewing gum is not for dogs. Keep gum away from your dog, and tell a grown-up right away if your dog eats some.",
-    "sl": "Žvečilni gumi ni za pse. Gumi pospravi, da ga pes ne doseže, in takoj povej odraslemu, če ga pes poje."
+    "sl": "Žvečilni gumi ni za pse. Gumi pospravi, da ga pes ne doseže, in takoj povej odraslemu, če ga pes poje.",
+    "cs": "Žvýkačky nejsou pro psy. Měj žvýkačky mimo dosah psa a řekni to hned dospělému, když pes nějakou sní."
   },
   "faq": [
     {
       "q": {
         "en": "Is regular gum with sugar safe for dogs?",
-        "sl": "Ali je navaden žvečilni gumi s sladkorjem za pse varen?"
+        "sl": "Ali je navaden žvečilni gumi s sladkorjem za pse varen?",
+        "cs": "Je běžná žvýkačka s cukrem pro psy bezpečná?"
       },
       "a": {
         "en": "Not really. Gum often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and a lot of gum can clump in the stomach. Call your vet if your dog ate some.",
-        "sl": "Ne zares. Žvečilni gumi pogosto vsebuje sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo. Če ga je pes pojedel, pokličite veterinarja."
+        "sl": "Ne zares. Žvečilni gumi pogosto vsebuje sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo. Če ga je pes pojedel, pokličite veterinarja.",
+        "cs": "Ne tak úplně. Žvýkačky často obsahují cukr, umělá sladidla a další přísady, které mohou být pro psy jedovaté, a velké množství žvýkaček se může v žaludku slepit. Pokud pes nějakou snědl, zavolejte veterináři."
       }
     },
     {
       "q": {
         "en": "Which other products contain xylitol?",
-        "sl": "Kateri drugi izdelki vsebujejo ksilitol?"
+        "sl": "Kateri drugi izdelki vsebujejo ksilitol?",
+        "cs": "Které další výrobky obsahují xylitol?"
       },
       "a": {
         "en": "Some sugar-free candy, toothpaste, baked goods, medicines and drink mixes. On labels it may also appear as birch sugar, wood sugar or birch bark extract.",
-        "sl": "Nekatere sladkarije brez sladkorja, zobne paste, pecivo, zdravila in mešanice za napitke. Na deklaraciji je lahko naveden tudi kot brezov sladkor, lesni sladkor ali izvleček brezovega lubja."
+        "sl": "Nekatere sladkarije brez sladkorja, zobne paste, pecivo, zdravila in mešanice za napitke. Na deklaraciji je lahko naveden tudi kot brezov sladkor, lesni sladkor ali izvleček brezovega lubja.",
+        "cs": "Některé bonbony bez cukru, zubní pasty, pečivo, léky a práškové nápoje. Na etiketách se může uvádět také jako březový cukr, dřevný cukr nebo extrakt z březové kůry."
       }
     }
   ],
@@ -171,6 +190,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5665313aa60313c173e987a842f074cc38a94e7ded62c356b3eb228d3fe15b22"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7d2becc3df48961eec2575c454c2cfda96e437a97b8bb7340fed079492fb2957"
     }
   }
 }

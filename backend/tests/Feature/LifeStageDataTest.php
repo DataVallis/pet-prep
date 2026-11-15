@@ -166,8 +166,10 @@ describe('import provenance', function () {
         // "occasional" — no number) is Claude's proposal 2 per week, open for David.
         // M5-R10-78: likewise the Pyrenean Mountain Dog's brushing (RKC "More than once a week"; VCA / PetMD
         // "weekly" would contradict it) — Claude's proposal 2 per week, open for David.
+        // M5-R10-112: the Toy Fox Terrier's senior boundary / senior arrival 117 (PetMD lower bound, no A/B median) — Claude's
+        // suggestion, open for David (Rat Terrier precedent).
         $dogOpen = BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false);
-        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute', 'basenji', 'rat-terrier', 'brussels-griffon', 'pekingese', 'chow-chow', 'old-english-sheepdog', 'keeshond', 'borzoi'])->pluck('key')->unique()->values()->all())
+        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute', 'basenji', 'rat-terrier', 'brussels-griffon', 'pekingese', 'chow-chow', 'old-english-sheepdog', 'keeshond', 'borzoi', 'toy-fox-terrier'])->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);

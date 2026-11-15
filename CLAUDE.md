@@ -38,7 +38,7 @@ cd backend && ./vendor/bin/sail pint                        # code style
 cd mobile && yarn install && npx expo start      # yarn 1 is the package manager (M0-05)
 cd mobile && yarn test && npx tsc --noEmit
 # contract
-npm run generate-api-types # backend must be running
+npm run generate-api-types # backend must be running — CI job »API types« does the same and fails when schema.ts is stale (artifact api-schema = the fresh file)
 ```
 Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, password `password`). Never seed them in production.
 
@@ -46,7 +46,7 @@ Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, 
 1. Behaviour matches `PRODUCT_SPEC.md`; if the spec is ambiguous, ask David — don't invent rules.
 2. Tests: Pest feature test for every endpoint/service change; Jest for mobile logic. Time-dependent logic uses `Carbon::setTestNow()` / fake timers.
 3. `sail test`, `pint --test`, `npx tsc --noEmit`, `npm test` all green.
-4. API changed → regenerate types (`npm run generate-api-types`) and update `ARCHITECTURE.md` §3.
+4. API changed → regenerate types (`npm run generate-api-types`; without a local backend take the CI artifact `api-schema` — `scripts/ci-api-types.sh`) and update `ARCHITECTURE.md` §3.
 5. Tick the task in `ROADMAP.md`, add a dated entry to `HANDOFF.md` (what changed, new debt, next step).
 6. Notable progress → entry in `docs/journey/BUILD_LOG.md` (Slovenian; raw material for social, investor, partner and parent content).
 7. Any user-visible feature added, changed, removed or verified on a device → update its row in `docs/product/FEATURES.md` (status, roadmap ID, date) in the same PR.
@@ -84,7 +84,7 @@ Keep the claude.ai Project copies (`petprep/*.md`) in sync after merges. No chil
 ## Engineering rules
 **Backend:** thin controllers → Service classes; FormRequest for every input; Policies/Sanctum abilities for authz (not ad-hoc `isParent()`); multi-row writes in `DB::transaction`; **no external HTTP inside transactions** — dispatch a queued Job; webhooks fail **closed** when the secret is missing; broadcasts on `PrivateChannel`; every per-pet wall-clock rule (quiet hours, midnight, feed windows, step day …) evaluated in `Pet::effectiveTimezone()` (the pet's own zone, falling back to the family zone — David 2026-11-09); family-wide rules without a pet in the family zone; store UTC.
 **Mobile:** strict TS, no `any`; server state via TanStack Query, UI-only state in Zustand; types from `schema.ts`; every user-visible string through i18n (once M1-18 lands); test on a dev build for native modules (HealthKit, RevenueCat, notifications don't run in Expo Go).
-**Both:** the child is a minor — collect the minimum data, no analytics SDK without David's OK, no third-party calls carrying child PII.
+**Both:** the child is a minor — collect the minimum data, no analytics SDK without David's OK, no third-party calls carrying child PII. **General media rule (David 2026-11-15: »Če nek video še ne obstaja, mora biti funkcija onemogočena … preparing«; PRODUCT_SPEC §10.1):** a feature that plays its own clip is never usable without it — the server reports readiness in the state (`media_ready` / `ready`) and refuses the action with 422 `media_not_ready` without changing anything; the app shows it disabled with »… se še pripravlja« (never a word about pictures / videos being made) and enables it live when the state says ready. Media a feature needs are queued when it is bought / unlocked, not on first use. Reuse `GameMediaReadiness` (`pet_media`) or `ItemMediaService::actionReady()` (`item_media`) — no parallel mechanism; core care (feed, water, clean, take out / walk; also cleaning up accident / chewing / scratching events) is **never locked for missing media** and no gate may be added to it — the pet must not suffer because of us (**confirmed by David 2026-11-15**, PRODUCT_SPEC §10.1); confirmed the same day: the simple mode of school / games after exhausted automatic clip retries (David 2026-11-02) stays as the accepted exception to the rule, and treats re-lock for a few minutes at a life-stage change until the new stage's clip is stored; every new clip-playing feature adds its row to ARCHITECTURE *Feature readiness*.
 
 ## Scope guard (MVP)
 Do NOT build: AR, GPS maps, weather API, LLM/vision vet, B2B QR coupons. (Cats are IN scope since 2026-10-07 — species → breed picker, ROADMAP M5-R06 — but need a care spec first; don't build cat rules before David approves it. Multiple parents/children/pets per family is IN scope since 2026-10-04 — see `docs/decisions/ADR-012-family-model.md`.) Post-MVP ideas go to the backlog in `ROADMAP.md`.

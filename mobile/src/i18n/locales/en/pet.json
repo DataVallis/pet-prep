@@ -200,6 +200,12 @@
       "norwich_terrier": "Part of the 12-week challenge · brushing 2× a week",
       "miniature_bull_terrier": "Part of the 12-week challenge · brushing 1× a week",
       "schipperke": "Part of the 12-week challenge · brushing 2× a week",
+      "belgian_tervuren": "Part of the 12-week challenge · brushing 1× a week",
+      "toy_fox_terrier": "Part of the 12-week challenge · brushing 2× a week",
+      "gordon_setter": "Part of the 12-week challenge · brushing every day",
+      "afghan_hound": "Part of the 12-week challenge · brushing every day",
+      "australian_silky_terrier": "Part of the 12-week challenge · brushing every day",
+      "parson_russell_terrier": "Part of the 12-week challenge · brushing 1× a week",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
       "british_shorthair": "Short, dense coat · brushing 1× a week",
@@ -682,6 +688,42 @@
         "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
         "adult": "2 meals a day; walks of 6,000 steps a day.",
         "senior": "2 meals a day; shorter walks — 4,500 steps a day."
+      },
+      "belgian_tervuren": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "toy_fox_terrier": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.",
+        "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 6,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 4,500 steps a day."
+      },
+      "gordon_setter": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "australian_silky_terrier": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 3,000 at 3 months.",
+        "young": "2 meals a day; walks of 3,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 3,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 2,300 steps a day."
+      },
+      "parson_russell_terrier": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.",
+        "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 6,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 4,500 steps a day."
+      },
+      "afghan_hound": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
       },
       "beauceron": {
         "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",

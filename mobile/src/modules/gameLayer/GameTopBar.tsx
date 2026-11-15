@@ -6,7 +6,8 @@
  * The × is ALWAYS there (David 2026-10-31, ball v2 device bug): its action is `onClose`, else the
  * screen's exit (`GameScreen onExit` / the host's `GameExitContext`). `closeLocked` hides it for a
  * while (a mess that must be cleaned, a request in flight); after `GAME_ESCAPE_MS` it comes back.
- * The bar reports its × to `GameScreen`, so Android back does the same thing.
+ * The bar reports its × to `GameScreen` (Android back: `gameBack`); after an Android back in a
+ * running game the screen's `backHint` (»tap × to stop«) replaces the line for a few seconds.
  */
 
 import { useContext, useEffect } from 'react';
@@ -56,7 +57,7 @@ export default function GameTopBar({ dots, stars, line, closeLabel, progressLabe
           </View>
         )}
       </View>
-      <GameLine text={line} testID={`${testID}-line`} />
+      <GameLine text={screen.backHint ?? line} testID={`${testID}-line`} />
       {showClose ? (
         <Pressable
           accessibilityRole="button"

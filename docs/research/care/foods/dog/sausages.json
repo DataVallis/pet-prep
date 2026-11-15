@@ -1,0 +1,130 @@
+{
+  "slug": "sausages",
+  "species": "dog",
+  "name": {
+    "en": "Sausages",
+    "sl": "Klobase"
+  },
+  "question": {
+    "en": "Can dogs eat sausages?",
+    "sl": "Ali lahko psi jedo klobase?"
+  },
+  "url_slug": {
+    "en": "sausages",
+    "sl": "klobase"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it's best not to give your dog sausages. Sausage is high in fat and salt and often contains seasonings like garlic and onion. Too much fat or salt can lead to painful health problems such as pancreatitis.",
+    "sl": "Ne, klobas psu raje ne dajajte. Klobasa vsebuje veliko maščob in soli, pogosto pa tudi začimbe, kot sta česen in čebula. Preveč maščob ali soli lahko vodi v boleče zdravstvene težave, kot je vnetje trebušne slinavke."
+  },
+  "why": {
+    "en": "Unlike plain chicken or beef, sausage is high in fat and sodium and is often seasoned with garlic, onion or other spicy additives. Salty, fatty or preserved meats can be unhealthy for dogs. A vet at a UK vet charity says pigs in blankets aren't dangerous but are high in fat and can easily upset a dog's stomach; another source says dogs should not eat sausage at all, so we follow the stricter advice.",
+    "sl": "Za razliko od navadne piščančjine ali govedine vsebuje klobasa veliko maščob in natrija, pogosto pa je začinjena s česnom, čebulo ali drugimi pekočimi dodatki. Slano, mastno ali konzervirano meso je lahko za pse nezdravo. Veterinarka britanske veterinarske dobrodelne organizacije pravi, da klobasice, ovite v slanino (pigs in blankets), niso nevarne, a so zelo mastne in psu zlahka povzročijo prebavne težave; drug vir pravi, da psi klobas sploh ne bi smeli jesti, zato upoštevamo strožji nasvet."
+  },
+  "signs": {
+    "en": [
+      "Vomiting, sometimes starting 1–4 days after the fatty meal",
+      "Tummy pain",
+      "Diarrhoea",
+      "Not wanting to eat",
+      "Tiredness"
+    ],
+    "sl": [
+      "Bruhanje, včasih šele 1–4 dni po mastnem obroku",
+      "Bolečine v trebuhu",
+      "Driska",
+      "Pes noče jesti",
+      "Utrujenost"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate some sausage, watch them and call your vet for advice. Contact your vet if your dog vomits, has tummy pain or seems tired in the following days, because signs after a fatty meal can be delayed.",
+    "sl": "Če je pes pojedel nekaj klobase, ga opazujte in pokličite veterinarja za nasvet. Če v naslednjih dneh bruha, ga boli trebuh ali je utrujen, se obrnite na veterinarja, saj se znaki po mastnem obroku lahko pokažejo z zamudo."
+  },
+  "serving": null,
+  "child": {
+    "en": "Sausages are too fatty and salty for dogs, so keep them on your own plate.",
+    "sl": "Klobase so za pse premastne in preslane, zato naj ostanejo na tvojem krožniku."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What about pigs in blankets at Christmas?",
+        "sl": "Kaj pa klobasice, ovite v slanino, za božič?"
+      },
+      "a": {
+        "en": "According to a vet, they aren't dangerous, but they are high in fat and could easily upset your dog's stomach.",
+        "sl": "Po besedah veterinarke niso nevarne, a so zelo mastne in lahko psu zlahka povzročijo prebavne težave."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD216",
+      "quote": "As much as they’d like to share a savory bite with you, dogs should not eat sausage."
+    },
+    {
+      "id": "KD216",
+      "quote": "Unlike other protein options like plain chicken or ground beef, sausage is high in fat and sodium."
+    },
+    {
+      "id": "KD216",
+      "quote": "Even worse, sausage often contains seasonings like garlic, onion, or other spicy additives that should always be avoided."
+    },
+    {
+      "id": "KD216",
+      "quote": "Too much of either can lead to serious (and painful) health conditions in dogs, such as pancreatitis."
+    },
+    {
+      "id": "KD216",
+      "quote": "If you know your dog has eaten some sausage, monitor them and call your vet for advice."
+    },
+    {
+      "id": "KD214",
+      "quote": "“Other foods, such as cheese sauce, roast potatoes, bacon, and pigs in blankets aren’t dangerous but are high in fat"
+    },
+    {
+      "id": "KD214",
+      "quote": "and could easily upset your dog’s stomach, and they will likely pile on the pounds with all those extra calories.”"
+    },
+    {
+      "id": "KD215",
+      "quote": "there are a few types of processed meat that are better left entirely off the canine menu."
+    },
+    {
+      "id": "KD215",
+      "quote": "and be careful not to overdo it because salty, fatty, or preserved meats can be unhealthy for your dog."
+    },
+    {
+      "id": "KD37",
+      "quote": "Delayed onset vomiting (1-4 days after fatty meal ingestion), abdominal pain, diarrhea (+/- blood),"
+    },
+    {
+      "id": "KD37",
+      "quote": "reduced appetite and lethargy."
+    }
+  ],
+  "related": [
+    "ham",
+    "bacon",
+    "fatty-meat",
+    "pork",
+    "salt",
+    "garlic",
+    "onion"
+  ],
+  "updated": "2026-11-14",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "15f40e579fa0fb5f552af0b20ee18e1d97e59b43232d1f1ca0b38f9500847143"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0fba43516066ce2caf3573c8f55d6cd1eb3788f726557454c3946279dec54631"
+    }
+  }
+}

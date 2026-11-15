@@ -1,0 +1,143 @@
+{
+  "slug": "sausages",
+  "species": "cat",
+  "name": {
+    "en": "Sausages",
+    "sl": "Klobase"
+  },
+  "question": {
+    "en": "Can cats eat sausages?",
+    "sl": "Ali lahko mačke jedo klobase?"
+  },
+  "url_slug": {
+    "en": "sausages",
+    "sl": "klobase"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to. Sausages are processed, fatty and usually high in salt, and many contain preservatives, spices, onion or garlic that can be harmful to cats. RSPCA Australia advises avoiding sausages for cats because they can contain sulphite preservatives.",
+    "sl": "Raje ne. Klobase so predelane, mastne in običajno zelo slane, mnoge pa vsebujejo konzervanse, začimbe, čebulo ali česen, ki mački lahko škodijo. RSPCA Avstralija svetuje, da mačkam klobas ne dajete, ker lahko vsebujejo sulfitne konzervanse."
+  },
+  "why": {
+    "en": "Sources differ, so we use the stricter level. Purina says a very small piece of sausage made purely from meat, with no preservatives or seasoning, is generally okay, but RSPCA Australia advises avoiding sausages, sausage meat and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. Even meat-only sausages are very fatty, sausages are typically high in salt, and onion, garlic and some spices in them can be toxic to cats.",
+    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Purina pravi, da je zelo majhen košček klobase iz samega mesa, brez konzervansov in začimb, na splošno v redu, RSPCA Avstralija pa svetuje, naj se mačke izogibajo klobasam, klobasnemu mesu in kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1). Tudi klobase iz samega mesa so zelo mastne, klobase so običajno zelo slane, čebula, česen in nekatere začimbe v njih pa so lahko za mačke strupeni."
+  },
+  "signs": {
+    "en": [
+      "Stomach upset",
+      "Diarrhoea"
+    ],
+    "sl": [
+      "Prebavne težave",
+      "Driska"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate sausage that may contain onion or garlic, contact your vet as soon as possible. If she ate plain sausage and then has a stomach upset or diarrhoea, call your vet for advice.",
+    "sl": "Če je mačka pojedla klobaso, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če je pojedla navadno klobaso in ima nato prebavne težave ali drisko, se za nasvet obrnite na veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Sausages are too salty and fatty for cats. Kitty's own cat treats make a much better surprise.",
+    "sl": "Klobase so za muce preslane in premastne. Njeni mačji priboljški so veliko boljše presenečenje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What about the sausage skin or a raw sausage?",
+        "sl": "Kaj pa ovoj klobase ali surova klobasa?"
+      },
+      "a": {
+        "en": "The casing can be hard to chew and swallow, which could lead to choking. Raw sausages should never be given, as they often contain harmful bacteria such as salmonella.",
+        "sl": "Ovoj je lahko težko prežvečiti in pogoltniti, zato se mačka lahko zaduši. Surovih klobas ji nikoli ne dajajte, ker pogosto vsebujejo škodljive bakterije, kot je salmonela."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC121",
+      "quote": "sausages, sausage meat and cooked manufactured meats as they can contain sulphite preservatives."
+    },
+    {
+      "id": "KC121",
+      "quote": "There have been many pet food safety incidents linked to sulphite preservative-induced thiamine"
+    },
+    {
+      "id": "KC121",
+      "quote": "(Vitamin B1) deficiency, which can be fatal."
+    },
+    {
+      "id": "KC122",
+      "quote": "Choosing the right product can be difficult though, and it’s important to speak with your vet"
+    },
+    {
+      "id": "KC122",
+      "quote": "We wouldn’t recommend feeding your cat sausage, as this meat is normally processed"
+    },
+    {
+      "id": "KC122",
+      "quote": "even sausages that are made from meat alone will still be very fatty"
+    },
+    {
+      "id": "KC122",
+      "quote": "Sausages are also typically high in salt, and some sausages also contain sulphites, nitrates, and other preservatives"
+    },
+    {
+      "id": "KC122",
+      "quote": "which can be poisonous for your cat or cause stomach upsets"
+    },
+    {
+      "id": "KC122",
+      "quote": "as well as onion, garlic and other additives which can also be toxic to cats."
+    },
+    {
+      "id": "KC122",
+      "quote": "If you manage to find a sausage that is made purely from meat (with no added preservatives or seasoning)"
+    },
+    {
+      "id": "KC122",
+      "quote": "it’s generally okay to feed a very small piece to your cat"
+    },
+    {
+      "id": "KC122",
+      "quote": "very infrequently, to avoid stomach upset or diarrhoea"
+    },
+    {
+      "id": "KC122",
+      "quote": "making it hard to chew and swallow, which could lead to choking."
+    },
+    {
+      "id": "KC122",
+      "quote": "as these often contain harmful bacteria, such as salmonella."
+    },
+    {
+      "id": "KC4",
+      "quote": "If your cat has eaten onions, garlic, leeks, or chives contact your vet as soon as possible."
+    },
+    {
+      "id": "KC76",
+      "quote": "Don't feed wildlife or pets any processed meats – like pigs in blankets and stuffing – as these are incredibly high in salt."
+    }
+  ],
+  "related": [
+    "ham",
+    "pork",
+    "fatty-meat",
+    "salt",
+    "onion",
+    "garlic"
+  ],
+  "updated": "2026-11-14",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3771f2a11401290e4966bae29f2afc4bf7234dae2b485bb67da9080cf71c0493"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "516de2dd8b90528b9b28c0221ad707d1d9bf9742f891fe60a626b6c6d42df506"
+    }
+  }
+}

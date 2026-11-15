@@ -725,6 +725,45 @@ return [
     'schipperke' => [
         ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
     ],
+    // M5-R10-111: FCI standard 15 (S831) "Only fawn with black overlay or grey with black overlay, with black mask"; same order
+    // and values as breed_appearance.php.
+    'belgian_tervuren' => [
+        ['key' => 'fawn', 'value' => 'fawn with black overlay (black-tipped hairs) and a pronounced black mask', 'en' => 'Fawn with black mask', 'sl' => 'Plav s črno masko'],
+        ['key' => 'grey', 'value' => 'grey with black overlay (black-tipped hairs) and a pronounced black mask', 'en' => 'Grey with black mask', 'sl' => 'Siv s črno masko'],
+    ],
+    // M5-R10-112: AKC standard (S835) — tri-colour, white chocolate and tan, white and tan, white and black; same order and
+    // values as breed_appearance.php.
+    'toy_fox_terrier' => [
+        ['key' => 'tricolour', 'value' => 'tricolour: predominantly white body, black head with sharply defined tan markings on the cheeks, lips and eye dots', 'en' => 'Tricolour (white, black, tan)', 'sl' => 'Trobarven (bel, črn, rjavkast)'],
+        ['key' => 'chocolate-tan-white', 'value' => 'white, chocolate and tan: predominantly white body, chocolate-brown head with tan markings and a self-coloured brown nose', 'en' => 'White, chocolate and tan', 'sl' => 'Belo-čokoladno-rjavkast'],
+        ['key' => 'tan-white', 'value' => 'white and tan: predominantly white body with a tan head', 'en' => 'White and tan', 'sl' => 'Belo-rjavkast'],
+        ['key' => 'black-white', 'value' => 'white and black: predominantly white body with a black head', 'en' => 'White and black', 'sl' => 'Belo-črn'],
+    ],
+    // M5-R10-113: FCI-Standard N° 6 (S841) — the one standard colour, same value as breed_appearance.php.
+    'gordon_setter' => [
+        ['key' => 'black-tan', 'value' => 'black and tan (deep coal black with chestnut-red tan markings)', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+    ],
+    // M5-R10-114: FCI-Standard N° 228 (S849) "All colours, except merle" — same values / order as breed_appearance.php.
+    'afghan_hound' => [
+        ['key' => 'gold-black-mask', 'value' => 'golden with a black mask', 'en' => 'Golden with a black mask', 'sl' => 'Zlat s črno masko'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'red-black-mask', 'value' => 'red with a black mask', 'en' => 'Red with a black mask', 'sl' => 'Rdeč s črno masko'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+        ['key' => 'blue', 'value' => 'blue (slate grey)', 'en' => 'Blue', 'sl' => 'Moder'],
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+    ],
+    // M5-R10-115: FCI-Standard N° 236 (S855) blue and tan only — same value as breed_appearance.php.
+    'australian_silky_terrier' => [
+        ['key' => 'blue-tan', 'value' => 'silver blue and tan: silver to slate blue body with rich tan legs and face, a silver or fawn topknot', 'en' => 'Blue and tan', 'sl' => 'Modro-rjavkast'],
+    ],
+    // M5-R10-116: FCI-Standard N° 339 (S864) white with tan, lemon or black markings, or any combination — same values as breed_appearance.php.
+    'parson_russell_terrier' => [
+        ['key' => 'white-tan', 'value' => 'white with tan markings', 'en' => 'White and tan', 'sl' => 'Bel z rjavimi lisami'],
+        ['key' => 'tricolour', 'value' => 'white with black and tan markings', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
+        ['key' => 'white-lemon', 'value' => 'white with lemon markings', 'en' => 'White and lemon', 'sl' => 'Bel z limonastimi lisami'],
+        ['key' => 'white-black', 'value' => 'white with black markings', 'en' => 'White and black', 'sl' => 'Bel s črnimi lisami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

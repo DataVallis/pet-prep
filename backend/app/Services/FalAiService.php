@@ -868,6 +868,52 @@ class FalAiService
                 .'exaggerated stop and a black nose, small dark brown almond-shaped lively eyes, erect, very small, pointed triangular ears set high, '
                 .'a natural tail, alert, lively, mischievous expression, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-111: FCI standard No. 15 (S313, S831) — long-haired Tervueren variety, fawn with black overlay and a pronounced
+            // black mask (the preferred colour); erect triangular ears, natural plumed tail.
+            BreedType::BelgianTervuren => 'A medium-sized, harmoniously proportioned, elegant and powerful Belgian Tervuren dog (Belgian Shepherd, long-haired variety) '
+                .'with a long, smooth fawn coat with black overlay and a pronounced black mask, a full ruff around the neck, breeches and a plumed tail, '
+                .'short hair on the head and lower legs, rather small high-set triangular erect ears, medium slightly almond-shaped dark brown eyes, '
+                .'a long wedge-shaped muzzle, natural tail reaching the hock carried low, watchful expression, '
+                .'photorealistic, studio quality, natural lighting',
+
+            // M5-R10-112: AKC standard (S835) — well-balanced athletic toy terrier, tricolour (white body, black head with tan
+            // markings), short satiny coat, erect V-shaped ears; natural tail (UKC S838 does not penalise a full tail).
+            BreedType::ToyFoxTerrier => 'A tiny, well-balanced, athletic Toy Fox Terrier with a short, satiny, shiny coat, a predominantly white body '
+                .'and a black head with sharply defined tan markings on the cheeks, lips and eye dots, an elegant wedge-shaped head with a black nose, '
+                .'erect, pointed, inverted V-shaped ears set high, clear bright dark eyes, a natural tail set high and held erect, alert, spirited expression, '
+                .'photorealistic, studio quality, natural lighting',
+
+            // M5-R10-113: FCI-Standard N° 6 (S841) — a stylish, symmetrical large setter, black and tan (the only standard
+            // colour), flat coat of moderate length with silky feathering, low-set thin ears; natural tail.
+            BreedType::GordonSetter => 'A stylish, symmetrical Gordon Setter gundog with galloping lines, black and tan: a deep, shining coal-black coat '
+                .'with chestnut-red tan markings above the eyes, on the muzzle, throat, chest, legs and under the tail, '
+                .'a flat coat of moderate length with long silky feathering on the ears, chest, legs and tail, '
+                .'a long head with a long muzzle and a large, broad black nose, bright dark brown eyes with a keen, intelligent expression, '
+                .'thin, low-set ears of medium size lying close to the head, a natural straight or slightly curved tail carried level or below the back, '
+                .'kindly, dignified expression, photorealistic, studio quality, natural lighting',
+
+            // M5-R10-114: FCI-Standard N° 228 (S849) — a tall, dignified long-coated sighthound; "All colours, except merle"
+            // (the portrait default gold with a black mask); never clipped; natural tail with a ring at the end.
+            BreedType::AfghanHound => 'A tall, elegant Afghan Hound sighthound giving an impression of strength and dignity, head held proudly, '
+                .'golden with a black mask: a long, very fine, silky coat on the ribs, flanks and legs with a short, close saddle along the back, '
+                .'a long, refined head with a long muzzle and a black nose, dark eyes with an aloof, far-seeing expression, '
+                .'low-set ears carried close to the head and covered with long silky hair, large feet covered in long hair, '
+                .'a natural tail set low with a ring at the end, photorealistic, studio quality, natural lighting',
+
+            // M5-R10-115: FCI-Standard N° 236 (S855) — a compact, keenly alert toy terrier; blue and tan only (silver / fawn
+            // topknot); coat follows the body outline (never floor-length); ears free from long hair; natural tail.
+            BreedType::AustralianSilkyTerrier => 'A small, compact, keenly alert Australian Silky Terrier toy terrier, slightly longer than tall, '
+                .'silver blue and tan: a straight, flat, fine, glossy silky coat parted along the back that follows the body outline and never touches the floor, '
+                .'rich tan legs and face with a silver or fawn topknot, a moderate-length head with a black nose, small dark oval eyes, '
+                .'small pricked V-shaped ears free from long hair, a natural tail carried erect, photorealistic, studio quality, natural lighting',
+
+            // M5-R10-116: FCI-Standard N° 339 (S864) — a workmanlike, active and agile working terrier without exaggeration; white
+            // or predominantly white with tan, lemon or black markings (colour preferably on the head / root of the tail); natural tail.
+            BreedType::ParsonRussellTerrier => 'A small, workmanlike, active and agile Parson Russell Terrier working terrier, slightly longer than tall and built for stamina, '
+                .'predominantly white with tan markings on the head and at the root of the tail: a harsh, dense, close smooth or broken coat, '
+                .'a wedge-shaped head with a flat skull and a black nose, dark almond-shaped eyes with a keen expression, '
+                .'small V-shaped ears dropping forward, a natural undocked tail carried well up, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2067,6 +2113,56 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'abundant, thick, straight, harsh coat with a ruff, mane and culottes',
                 'markings' => 'solid black coat without white spots, black nose, erect very small pointed ears',
+            ],
+            // M5-R10-111: the two Tervueren colours of FCI standard 15 (S831) — fawn (preferred) and grey, both with black overlay and mask.
+            BreedType::BelgianTervuren => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn with black overlay',
+                    1 => 'rich fawn with black overlay',
+                    2 => 'grey with black overlay',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'long, smooth coat with a dense undercoat, a ruff, breeches and a plumed tail',
+                'markings' => 'pronounced black mask over the muzzle, lips and eyelids, black-tipped hairs, erect triangular ears',
+            ],
+            // M5-R10-112: AKC colours (S835) — tricolour (the portrait default), white and tan, white and black; always a mostly white body.
+            BreedType::ToyFoxTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'tricolour: white body, black head with tan markings',
+                    1 => 'white body with a tan head',
+                    2 => 'white body with a black head',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, satiny, shiny, smooth coat',
+                'markings' => 'predominantly white body, erect pointed V-shaped ears, natural tail held erect',
+            ],
+            // M5-R10-113: the one standard colour (FCI S841 "No other colour permissible.").
+            BreedType::GordonSetter => [
+                'color_scheme' => 'black and tan (coal black with chestnut-red tan markings)',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'flat coat of moderate length with long silky feathering',
+                'markings' => 'tan above the eyes, on the muzzle, throat, chest, legs and under the tail, never another colour',
+            ],
+            // M5-R10-114: FCI S849 "All colours, except merle which is unacceptable." (gold with a black mask = default).
+            BreedType::AfghanHound => [
+                'color_scheme' => 'golden with a black mask',
+                'eye_color' => 'dark',
+                'fur_texture' => 'long, very fine, silky coat with a short saddle along the back',
+                'markings' => 'black mask on the muzzle, long silky ear hair, natural tail with a ring at the end, never merle',
+            ],
+            // M5-R10-115: FCI S855 "All shades of blue and tan are acceptable" — "Silver and white not acceptable."
+            BreedType::AustralianSilkyTerrier => [
+                'color_scheme' => 'silver blue and tan',
+                'eye_color' => 'dark',
+                'fur_texture' => 'straight, flat, fine, glossy silky coat parted along the back, following the body outline',
+                'markings' => 'tan legs and face, silver or fawn topknot, pricked ears free from long hair, natural erect tail',
+            ],
+            // M5-R10-116: FCI S864 "White or predominantly white with tan, lemon or black markings, or any combination of these colours."
+            BreedType::ParsonRussellTerrier => [
+                'color_scheme' => 'predominantly white with tan markings',
+                'eye_color' => 'dark',
+                'fur_texture' => 'harsh, dense, close smooth or broken coat with a good undercoat',
+                'markings' => 'tan markings on the head and at the root of the tail, small V-shaped drop ears, natural undocked tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

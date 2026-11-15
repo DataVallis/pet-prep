@@ -2713,5 +2713,125 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S827'], 'refs' => ['schipperke.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-111: belgian_tervuren.* (S830–S832), runbook rules (data.json proposed_game_parameters.belgian_tervuren.suitability_tags).
+        // RKC key facts (S830) + PetMD (S832). RKC Breed Watch Category 1 (S830) → no welfare chip; in marketing.
+        'belgian_tervuren' => [
+            'suits' => [
+                // S830 "Exercise: More than 2 hours per day"; S832 "a lot of physical activity and mental stimulation".
+                ['tag' => 'active_family', 'source_ids' => ['S830', 'S832'], 'refs' => ['belgian_tervuren.exercise.adult', 'belgian_tervuren.exercise.daily_text']],
+                // S830 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S830'], 'refs' => ['belgian_tervuren.suitability.rkc_size_of_home', 'belgian_tervuren.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S830 "More than 2 hours per day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S830'], 'refs' => ['belgian_tervuren.exercise.adult', 'belgian_tervuren.suitability.rkc_exercise']],
+                // S832 "As a herding breed, the Belgian Tervuren may try to "herd" children and smaller animals such as cats."
+                ['tag' => 'may_herd_children', 'source_ids' => ['S832'], 'refs' => ['belgian_tervuren.behaviour.children']],
+                // S832 "a lot of physical activity and mental stimulation"; "Bored Tervs may get into trouble …".
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S832'], 'refs' => ['belgian_tervuren.exercise.daily_text', 'belgian_tervuren.behaviour.boredom']],
+                // S830 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S830'], 'refs' => ['belgian_tervuren.suitability.rkc_shedding']],
+                // S830 "Grooming: More than once a week"; S832 weekly brushing, near-daily while shedding.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S830', 'S832'], 'refs' => ['belgian_tervuren.suitability.rkc_grooming', 'belgian_tervuren.suitability.petmd_grooming']],
+            ],
+        ],
+
+        // M5-R10-112: toy_fox_terrier.* (S833–S839), runbook rules (data.json proposed_game_parameters.toy_fox_terrier.suitability_tags).
+        // PetMD (S833) + WebMD (S834); no RKC page (not RKC-recognised) → no RKC-only chips (apartment, large_home, sheds);
+        // no welfare chip; in marketing. No suits chip: WebMD advises against small children.
+        'toy_fox_terrier' => [
+            'suits' => [],
+            'consider' => [
+                // S834 "TFTs are not recommended for families with small children because they are skittish and prone to biting."
+                ['tag' => 'older_children', 'source_ids' => ['S834'], 'refs' => ['toy_fox_terrier.behaviour.children']],
+                // S834 "TFTs may show separation anxiety when they're left alone for long."
+                ['tag' => 'needs_company', 'source_ids' => ['S834'], 'refs' => ['toy_fox_terrier.behaviour.time_alone']],
+                // S833 "… Toy Fox Terriers were historically used as hunters and still maintain a strong prey drive".
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S833'], 'refs' => ['toy_fox_terrier.behaviour.other_pets']],
+            ],
+        ],
+
+        // M5-R10-113: gordon_setter.* (S842–S845), runbook rules (data.json proposed_game_parameters.gordon_setter.suitability_tags).
+        // RKC Breed Watch Category 2 without returned points (S842) → no welfare chip; in marketing. No new vocabulary key.
+        'gordon_setter' => [
+            'suits' => [
+                // S842 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S842'], 'refs' => ['gordon_setter.exercise.adult', 'gordon_setter.suitability.rkc_exercise']],
+                // S842 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S842'], 'refs' => ['gordon_setter.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S842'], 'refs' => ['gordon_setter.exercise.adult', 'gordon_setter.suitability.rkc_exercise']],
+                // S842 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S842'], 'refs' => ['gordon_setter.suitability.rkc_shedding']],
+                // S842 "Grooming: More than once a week"; S843 daily grooming.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S842', 'S843'], 'refs' => ['gordon_setter.suitability.rkc_grooming', 'gordon_setter.suitability.pdsa_grooming']],
+                // S844 "Recall training is especially important for Gordon Setters due to their high prey drive."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S844'], 'refs' => ['gordon_setter.behaviour.other_pets']],
+            ],
+        ],
+
+        // M5-R10-114: afghan_hound.* (S850, S851), runbook rules (data.json proposed_game_parameters.afghan_hound.suitability_tags).
+        // RKC Breed Watch Category 1 (S850) → no welfare chip; in marketing. No new vocabulary key. No chases_small_pets:
+        // PDSA "strong chase instinct" / PetMD "prey drive nature" are not a verbatim high prey drive (open for David).
+        'afghan_hound' => [
+            'suits' => [
+                // S850 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S850'], 'refs' => ['afghan_hound.exercise.adult', 'afghan_hound.suitability.rkc_exercise']],
+                // S851 "Afghan Hounds, if well socialised, are good with children."
+                ['tag' => 'children', 'source_ids' => ['S851'], 'refs' => ['afghan_hound.behaviour.children']],
+                // S850 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S850'], 'refs' => ['afghan_hound.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S850'], 'refs' => ['afghan_hound.exercise.adult', 'afghan_hound.suitability.rkc_exercise']],
+                // S850 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S850'], 'refs' => ['afghan_hound.suitability.rkc_shedding']],
+                // S850 "Grooming: Every day"; S851 daily brushing.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S850', 'S851'], 'refs' => ['afghan_hound.suitability.rkc_grooming', 'afghan_hound.suitability.pdsa_grooming']],
+            ],
+        ],
+
+        // M5-R10-115: australian_silky_terrier.* (S856, S857), runbook rules (data.json
+        // proposed_game_parameters.australian_silky_terrier.suitability_tags). RKC Breed Watch Category 1 (S856) → no welfare
+        // chip; in marketing. No new vocabulary key. No chases_small_pets: PetMD "the prey drive inherited from their parent
+        // breeds" is not a verbatim high prey drive (open for David).
+        'australian_silky_terrier' => [
+            'suits' => [
+                // S856 "Size of home: Flat/ Apartment"
+                ['tag' => 'apartment', 'source_ids' => ['S856'], 'refs' => ['australian_silky_terrier.suitability.rkc_size_of_home']],
+                // S857 "they're good around other pets and children if your pup is socialized properly at a young age"
+                ['tag' => 'children', 'source_ids' => ['S857'], 'refs' => ['australian_silky_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S856 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S856'], 'refs' => ['australian_silky_terrier.suitability.rkc_shedding']],
+                // S856 "Grooming: Every day"
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S856'], 'refs' => ['australian_silky_terrier.suitability.rkc_grooming']],
+            ],
+        ],
+
+        // M5-R10-116: parson_russell_terrier.* (S865–S868), runbook rules (data.json
+        // proposed_game_parameters.parson_russell_terrier.suitability_tags). RKC Breed Watch Category 1 (S865) → no welfare
+        // chip; in marketing. No new vocabulary key.
+        'parson_russell_terrier' => [
+            'suits' => [
+                // S865 "Exercise: Up to 1 hour per day"; S866 "… full of energy and require plenty of exercise – ideally 1-2 hours per day."
+                ['tag' => 'active_family', 'source_ids' => ['S865', 'S866'], 'refs' => ['parson_russell_terrier.exercise.adult', 'parson_russell_terrier.exercise.daily_text']],
+                // S866 "and will make an excellent family pet."
+                ['tag' => 'family_pet', 'source_ids' => ['S866'], 'refs' => ['parson_russell_terrier.behaviour.family']],
+                // S866 "but will get on well with children"
+                ['tag' => 'children', 'source_ids' => ['S866'], 'refs' => ['parson_russell_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S865 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S865'], 'refs' => ['parson_russell_terrier.suitability.rkc_shedding']],
+                // S868 "They don't like being alone and may have separation anxiety."
+                ['tag' => 'needs_company', 'source_ids' => ['S868'], 'refs' => ['parson_russell_terrier.behaviour.time_alone']],
+                // S867 "Some Jack Russell Terriers have a high prey drive."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S867'], 'refs' => ['parson_russell_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

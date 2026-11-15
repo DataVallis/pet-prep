@@ -381,6 +381,8 @@ class AccountExportService
                 'certificate_eligible' => (bool) $pet->certificate_eligible,
                 // M6-U01: when a purchase upgraded this free pet to the 12-week challenge (null = never).
                 'challenge_started_at' => $this->iso($pet->challenge_started_at),
+                // M6-U03: the parent kept the Care Score so far at that upgrade.
+                'challenge_score_kept' => (bool) $pet->challenge_score_kept,
                 'metrics' => $pet->displayMetrics(),
                 'daily_step_count' => (int) $pet->daily_step_count,
                 // M5-R06-05: the Maine Coon's matted coat (null = not matted).

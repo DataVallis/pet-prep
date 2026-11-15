@@ -1,0 +1,134 @@
+{
+  "slug": "hot-dogs",
+  "species": "cat",
+  "name": {
+    "en": "Hot dogs",
+    "sl": "Hrenovke"
+  },
+  "question": {
+    "en": "Can cats eat hot dogs?",
+    "sl": "Ali lahko mačke jedo hrenovke?"
+  },
+  "url_slug": {
+    "en": "hot-dogs",
+    "sl": "hrenovke"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to. Hot dogs are a processed meat, usually packed with extra salt and spices, and some added seasonings may even be toxic to cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats for cats.",
+    "sl": "Raje ne. Hrenovke so predelano meso, običajno polno dodane soli in začimb, nekatere dodane začimbe pa so lahko za mačke celo strupene. RSPCA Avstralija svetuje, da mačkam ne dajete klobas in kuhanih mesnih izdelkov."
+  },
+  "why": {
+    "en": "Purina notes that turkey hot dogs, turkey sausage, deli meat and other processed meats are usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. The RSPCA warns that processed meats like pigs in blankets are incredibly high in salt, and onion and garlic, found in many pre-made foods, are toxic to cats.",
+    "sl": "Purina navaja, da so puranje hrenovke, puranje klobase, mesni narezki in drugo predelano meso običajno polni dodanega natrija in začimb, nekatere dodane začimbe pa so lahko za mačke strupene. RSPCA Avstralija svetuje, naj se mačke izogibajo klobasam in kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1). RSPCA opozarja, da je predelano meso, kot so hrenovke v slanini, izjemno slano, čebula in česen, ki ju najdemo v številnih že pripravljenih jedeh, pa sta za mačke strupena."
+  },
+  "signs": {
+    "en": [
+      "Stomach upset",
+      "Diarrhoea"
+    ],
+    "sl": [
+      "Prebavne težave",
+      "Driska"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate a hot dog that may contain onion or garlic, contact your vet as soon as possible. If she has a stomach upset or diarrhoea afterwards, call your vet for advice.",
+    "sl": "Če je mačka pojedla hrenovko, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če ima nato prebavne težave ali drisko, se za nasvet obrnite na veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Hot dogs are a salty people snack. Kitty is happier with her own cat treats.",
+    "sl": "Hrenovke so slan prigrizek za ljudi. Muca je bolj vesela svojih mačjih priboljškov."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is one tiny bite harmful?",
+        "sl": "Ali en majhen grižljaj škodi?"
+      },
+      "a": {
+        "en": "A tiny piece of unseasoned processed turkey meat, such as a turkey hot dog, might not do a lot of harm, but it is best not to feed it regularly, and seasoned hot dogs may contain onion or garlic, which are toxic to cats.",
+        "sl": "Majhen košček nezačinjenega predelanega puranjega mesa, na primer puranje hrenovke, morda ne bo zelo škodil, vendar ga je bolje ne dajati redno, začinjene hrenovke pa lahko vsebujejo čebulo ali česen, ki sta za mačke strupena."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC123",
+      "quote": "The reason is because turkey deli meat, turkey bacon, turkey hot dogs, turkey sausage, smoked turkey,"
+    },
+    {
+      "id": "KC123",
+      "quote": "and other forms of processed turkey meat are usually packed with extra sodium and spices."
+    },
+    {
+      "id": "KC123",
+      "quote": "Some of the added seasonings might even be toxic for your loved one."
+    },
+    {
+      "id": "KC123",
+      "quote": "A tiny piece of unseasoned, processed turkey meat might not do a lot of harm,"
+    },
+    {
+      "id": "KC123",
+      "quote": "but it is best to not feed them these forms of turkey regularly."
+    },
+    {
+      "id": "KC121",
+      "quote": "sausages, sausage meat and cooked manufactured meats as they can contain sulphite preservatives."
+    },
+    {
+      "id": "KC121",
+      "quote": "There have been many pet food safety incidents linked to sulphite preservative-induced thiamine"
+    },
+    {
+      "id": "KC121",
+      "quote": "(Vitamin B1) deficiency, which can be fatal."
+    },
+    {
+      "id": "KC76",
+      "quote": "Don't feed wildlife or pets any processed meats – like pigs in blankets and stuffing – as these are incredibly high in salt."
+    },
+    {
+      "id": "KC4",
+      "quote": "Remember that sauces, baby food and other pre-made foods may contain onions or garlic"
+    },
+    {
+      "id": "KC4",
+      "quote": "but garlic, chives and leeks are also toxic, even when cooked or dried."
+    },
+    {
+      "id": "KC4",
+      "quote": "If your cat has eaten onions, garlic, leeks, or chives contact your vet as soon as possible."
+    },
+    {
+      "id": "KC122",
+      "quote": "very infrequently, to avoid stomach upset or diarrhoea"
+    },
+    {
+      "id": "KC122",
+      "quote": "Choosing the right product can be difficult though, and it’s important to speak with your vet"
+    }
+  ],
+  "related": [
+    "sausages",
+    "ham",
+    "salt",
+    "onion",
+    "garlic"
+  ],
+  "updated": "2026-11-14",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3cb7136ddbb37e1fe8f690b1cfd2ca220de8e46770dbad9ad0d0c53da605b96f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "19fada0a04befa9fea72cee45d5d0d1fb4b18fa87836ac6adf23e902c7d03b58"
+    }
+  }
+}

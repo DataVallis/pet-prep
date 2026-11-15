@@ -450,7 +450,7 @@ class ChildPetStateResource extends JsonResource
             // M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose.
             'care_guide' => CareGuidePayload::for($pet, $now, $profile)->toArray(),
             // M6-W01 »Želje«: open wishes for this pet (all children), the pet's durable items, treats (left / today / limit).
-            /** @var array{open_count: int, items: list<array{key: 'bed'|'bowls'|'toy_1'|'toy_2', variant: string, media_ready: bool}>, treats: array{left: int, given_today: int, daily_limit: int}} */
+            /** @var array{open_count: int, items: list<array{key: 'bed'|'bowls'|'toy_1'|'toy_2', variant: string, media_ready: bool}>, treats: array{left: int, given_today: int, daily_limit: int, ready: bool}} */
             'wishes' => app(WishService::class)->stateBlock($pet, $actor, $now),
         ];
     }

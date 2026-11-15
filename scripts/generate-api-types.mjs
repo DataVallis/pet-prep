@@ -6,6 +6,9 @@
  * into mobile/src/api/schema.ts for the React Native app.
  *
  * Usage: npm run generate-api-types
+ *        API_SPEC_FILE=/path/api.json node scripts/generate-api-types.mjs  (CI: a spec exported
+ *        with `php artisan scramble:export`; the header still names the default URL, so the
+ *        bytes match a local run)
  *
  * Prerequisites:
  *   1. The Laravel backend must be running (php artisan serve)
@@ -28,13 +31,19 @@ async function main() {
   console.log(`Fetching OpenAPI spec from: ${OPENAPI_SPEC_URL}`);
 
   try {
-    const response = await fetch(OPENAPI_SPEC_URL);
+    let spec;
+    if (process.env.API_SPEC_FILE) {
+      const { readFileSync: readSpec } = await import('fs');
+      spec = JSON.parse(readSpec(process.env.API_SPEC_FILE, 'utf-8'));
+    } else {
+      const response = await fetch(OPENAPI_SPEC_URL);
 
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      spec = await response.json();
     }
-
-    const spec = await response.json();
     console.log(`✓ OpenAPI spec fetched successfully (${spec.info?.title || 'Unknown API'} v${spec.info?.version || '0.0.0'})`);
 
     // Ensure output directory exists

@@ -166,6 +166,37 @@
     "litter_change": {
       "title": "Zamenjaj ves pesek",
       "intro": "Enkrat na teden gre ves pesek ven: izprazni stranišče, ga umij in napolni s svežim peskom. Drgni s prstom.",
+      "introPlay": "Enkrat na teden gre ves pesek ven. Trije koraki, vsak ima svojo kretnjo: stranišče povleci do koša, ga zdrgni in drži vrečo, da se nasuje svež pesek.",
+      "play": {
+        "1": "Povleci stranišče do koša",
+        "2": "Drgni po madežih, da izginejo",
+        "3": "Pritisni in drži vrečo s peskom"
+      },
+      "playDone": {
+        "1": "Prazno! Bravo!",
+        "2": "Čisto! Bravo!",
+        "3": "Polno do črte! Bravo!"
+      },
+      "playHold": {
+        "1": "Drži gumb »Izprazni«",
+        "2": "Drži gumb »Umij«",
+        "3": "Drži gumb »Napolni«"
+      },
+      "playButton": {
+        "1": "Izprazni",
+        "2": "Umij",
+        "3": "Napolni"
+      },
+      "playButtonA11y": {
+        "1": "Izprazni stranišče. Pridrži, da pesek steče v koš.",
+        "2": "Umij stranišče. Pridrži, da madeži izginejo.",
+        "3": "Napolni svež pesek. Pridrži, da se nasuje do črte."
+      },
+      "playReadout": {
+        "old": "Stari pesek: še {{percent}} %.",
+        "spots": "Preostali madeži: {{n}}.",
+        "fresh": "Svež pesek: {{percent}} % do črte."
+      },
       "weekDone": "Menjava peska ta teden je opravljena ✓",
       "weekOpen": "Pesek zamenjaj najkasneje {{when}}.",
       "overdue": "Prejšnji teden menjava ni bila opravljena, zato pesek smrdi — hitro ga čisti, dokler ga ne zamenjaš.",

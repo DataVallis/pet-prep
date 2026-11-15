@@ -14,7 +14,9 @@ use Illuminate\Queue\InteractsWithQueue;
 /**
  * M6-W03: ONE Discord post per `media:item-media` run whose self-healing gave up item content
  * (catalogue pictures, item images / clips). Counts only — no pet, family or child. Informative:
- * the items are already shown without that content; /admin can Regenerate.
+ * durable items are already shown without that content; /admin can Regenerate. `$locked` of them
+ * are ACTION item rows (treats, David 2026-11-15): »Priboljšek« stays disabled for those pets
+ * until the row is regenerated — the alert then asks for it.
  */
 class SendItemMediaAlert implements ShouldQueue
 {
@@ -22,7 +24,7 @@ class SendItemMediaAlert implements ShouldQueue
 
     public int $tries = 1;
 
-    public function __construct(public readonly int $count)
+    public function __construct(public readonly int $count, public readonly int $locked = 0)
     {
         $this->onQueue((string) config('system_health.app_errors.alert_queue', 'alerts'));
     }
@@ -37,7 +39,9 @@ class SendItemMediaAlert implements ShouldQueue
             $discord->send(new AdminAlert(
                 AdminAlertKind::ItemMediaStuck,
                 __('admin.item_media.discord.title', ['count' => $this->count]),
-                __('admin.item_media.discord.body'),
+                $this->locked > 0
+                    ? __('admin.item_media.discord.body_locked', ['locked' => $this->locked, 'others' => max(0, $this->count - $this->locked)])
+                    : __('admin.item_media.discord.body'),
                 [],
             ));
         } catch (DiscordWebhookException $e) {

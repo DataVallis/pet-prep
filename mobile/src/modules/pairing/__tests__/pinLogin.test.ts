@@ -110,9 +110,9 @@ describe('sessionFromPinLogin', () => {
       illness_until: null,
     });
     // M5-R06-02: an unknown breed is never coerced into the mutt (a cat must never look like a free dog).
-    expect(petFromPairedPet({ ...response.pet, breed_type: 'poodle' }, 9).breed_type).toBe('unknown');
+    expect(petFromPairedPet({ ...response.pet, breed_type: 'poodle' as never }, 9).breed_type).toBe('unknown');
     expect(petFromPairedPet({ ...response.pet, breed_type: 'maine_coon', species: 'cat' }, 9)).toMatchObject({ breed_type: 'maine_coon', species: 'cat' });
-    expect(petFromPairedPet({ ...response.pet, breed_type: 'sphynx', species: 'cat' }, 9)).toMatchObject({ breed_type: 'unknown', species: 'cat' });
+    expect(petFromPairedPet({ ...response.pet, breed_type: 'sphynx' as never, species: 'cat' }, 9)).toMatchObject({ breed_type: 'unknown', species: 'cat' });
   });
 });
 

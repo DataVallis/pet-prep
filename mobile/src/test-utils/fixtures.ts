@@ -222,7 +222,7 @@ export function makeChildState(
       windows: [],
       current_window: null,
       fed_in_current_window: false,
-      can_feed: 'false',
+      can_feed: false,
       // M3-12 (additive): emergency meal at ≤ 20 % hunger.
       feed_mode: null,
       emergency_threshold: 20,
@@ -239,7 +239,7 @@ export function makeChildState(
       // M5-F11 (additive): water allowed at displayed thirst ≤ this.
       refill_below: 60,
       last_watered_at: '',
-      can_water: 'false',
+      can_water: false,
       next_allowed_at: '',
       // David 2026-10-25 (additive): display time of the next refill.
       shown_at: null,
@@ -1120,7 +1120,7 @@ export function makeBreedFact(overrides: Partial<BreedFact> = {}): BreedFact {
 
 /** M5-R09c: a breed's fact list (read count derived from the facts). */
 export function makeBreedFacts(facts: BreedFact[], breed = 'border_collie'): BreedFactsResponse {
-  return { breed, facts, read_count: facts.filter((f) => f.read).length, total_count: facts.length };
+  return { breed: breed as BreedFactsResponse['breed'], facts, read_count: facts.filter((f) => f.read).length, total_count: facts.length };
 }
 
 /** M5-R09c: `GET /api/child/fact-of-the-day` — a day the sheet may open by itself. */

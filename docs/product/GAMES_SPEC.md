@@ -59,7 +59,7 @@
 - **Roke:** vlečenje peresa po odru; »Lažje kretnje«: pero beži samo (premik vsakih 0,56–0,90 s).
 
 ### 1.6 Ostale otroške mini-igre (kratko)
-- **Česanje** (muca + pes, `ChoreOverlay` / `BrushArea`, `config/cat_care.php`): 30 s, ≥ 10 potez v 3 korakih, strgalna srečka. **Menjava peska:** 30 s drgnjenja. **Nega pasme** (`CareTaskOverlay.tsx`, `config/care_tasks.php`): zobki / gube / ušesa 30 s krtača, kremplji 8 tapov v 12 s. **Praskanje** (`ScratchingOverlay.tsx`, `cat_care.scratching`): muca pristane na praskalniku 0,8–2 s po začetku, pohvala 150 ms–3 s.
+- **Česanje** (muca + pes, `ChoreOverlay` / `BrushArea`, `config/cat_care.php`): 30 s, ≥ 10 potez v 3 korakih, strgalna srečka. **Menjava peska:** 30 s drgnjenja (od 15. 11. 2026 tri kretnje — §7.7). **Nega pasme** (`CareTaskOverlay.tsx`, `config/care_tasks.php`): zobki / gube / ušesa 30 s krtača, kremplji 8 tapov v 12 s. **Praskanje** (`ScratchingOverlay.tsx`, `cat_care.scratching`): muca pristane na praskalniku 0,8–2 s po začetku, pohvala 150 ms–3 s.
 - Vse so že ≤ 30 s, točkovanje je »dovolj potez, razporejenih« — niso predmet prenove; dobijo samo skupni sloj (§7.7).
 
 ### 1.7 Neredi in čiščenje
@@ -331,7 +331,7 @@ Konfiguracija `config/wand.php` → `simple`: `stalk_ms` 3000, `first_cue_ms` [4
 ### 5.5 Praskanje, pesek, česanje
 - **Praskanje:** pravila nespremenjena (pohvala 150 ms–3 s po pristanku). Dobi skupni sloj: celozaslonski prizor, ikona ✓ / ✗ prekrivni odziv, priboljšek kot pri šoli (»Pohvali« = tap žetona), besedilo zgoraj.
 - **Pesek in nered zraven peska:** §6.
-- **Česanje, menjava peska, nega pasme:** samo skupni sloj (§7.7) — pravila ostanejo.
+- **Česanje, menjava peska, nega pasme:** samo skupni sloj (§7.7) — pravila ostanejo. (Menjava peska ima od 15. 11. 2026 v aplikaciji tri kretnje, §7.7; pravilo strežnika je isto.)
 
 ---
 
@@ -367,7 +367,7 @@ Konfiguracija `config/wand.php` → `simple`: `stalk_ms` 3000, `first_cue_ms` [4
 ### 7.1 Gradniki (`mobile/src/modules/gameLayer/`)
 | Gradnik | Naloga |
 |---|---|
-| `GameScreen` | celozaslonska postavitev: `GameStage` (video), `GameTopBar` (zgoraj: čip / vrstica / pike / zvezdice / ×), `FeedbackLayer` (sredina), `PlayField` (fizikalni predmeti), `ActionDock` (spodaj: žeton / gumb). Varna območja. **Vrstni red plasti in izhod (napaka na telefonu 31. 10. 2026, žoga v2):** vsaka plast je svoj kontekst nalaganja z jasnim `zIndex` (`gameExit.ts#GAME_Z`: video 0 < polje < povratna informacija < zgornja vrstica / spodnji gumbi < kartica rezultata < izhod v sili), zato video nikoli ne prekrije gumbov. **Vsaka igra ima vedno izhod:** × v zgornji vrstici (velika tarča, varno območje), Androidov gumb »nazaj«, in če se video po 15 s še ni pripravil ali je plast med izrisom padla, kartica »Igra se ne odziva.« z × in »Nazaj«. Igra sme × začasno skriti (nered, ki ga je treba počistiti; shranjevanje; začetek / konec seje), a po 20 s se vrne. Pri neredu, ki ga je treba počistiti, izhod ne zapre čiščenja, ampak ga nadaljuje na preprostem zaslonu s tapkanjem (čistoča še vedno zahteva čiščenje, otrok pa ni ujet v igri, ki ne dela). |
+| `GameScreen` | celozaslonska postavitev: `GameStage` (video), `GameTopBar` (zgoraj: čip / vrstica / pike / zvezdice / ×), `FeedbackLayer` (sredina), `PlayField` (fizikalni predmeti), `ActionDock` (spodaj: žeton / gumb). Varna območja. **Vrstni red plasti in izhod (napaka na telefonu 31. 10. 2026, žoga v2):** vsaka plast je svoj kontekst nalaganja z jasnim `zIndex` (`gameExit.ts#GAME_Z`: video 0 < polje < povratna informacija < zgornja vrstica / spodnji gumbi < kartica rezultata < izhod v sili), zato video nikoli ne prekrije gumbov. **Vsaka igra ima vedno izhod:** × v zgornji vrstici (velika tarča, varno območje), in če se video po 15 s še ni pripravil ali je plast med izrisom padla, kartica »Igra se ne odziva.« z × in »Nazaj«. Igra sme × začasno skriti (nered, ki ga je treba počistiti; shranjevanje; začetek / konec seje), a po 20 s se vrne. Pri neredu, ki ga je treba počistiti, izhod ne zapre čiščenja, ampak ga nadaljuje na preprostem zaslonu s tapkanjem (čistoča še vedno zahteva čiščenje, otrok pa ni ujet v igri, ki ne dela). **Androidov »nazaj« (David 15. 11. 2026, velja za vse igre):** med tekočo igro igre nikoli ne konča — poteg od roba zaslona je sistemska kretnja »nazaj« in otrok bi sredi igre izgubil sejo. »Nazaj« samo za 4 s pokaže v vrstici igre »Za konec igre tapni ×.« (EN »Tap × to stop the game.«); izhod je ×. »Nazaj« dela enako kot × le, kadar je čez igro kartica (uvod, rezultat) ali kartica »Igra se ne odziva.«; dokler je × skrit (shranjevanje, nered, ki ga je treba počistiti, začetek / konec seje), »nazaj« ne naredi nič. |
 | `ClipDeck` | posplošen `SchoolStage`: za igro izmeri seznam vlog (`hub_loop`, `move_a`, `move_b`, …) → en trajen `expo-video` predvajalnik na vlogo, ob odprtju naložen iz lokalnega predpomnilnika, zaustavljen na okvirju 0, skrit. `ready` = vsi izrisali prvi okvir (ali `readyToPlay` 600 ms); 12 s brez → način »Slika«. |
 | `ClipQueue` | čista logika: časovnica segmentov iz urnika strežnika (`schoolTimeline` → `gameTimeline`) + pravila verige (§3.2): preklop iz zanke s prelivom ≤ 200 ms, iz posnetka poza→poza šele ob koncu (`playToEnd`), rez samo pod masko (`FeedbackLayer.isMasking()`). Jest, lažne ure. |
 | `FeedbackLayer` | reanimated: ✓ / ✗ / ★ / premor kroga; `show(kind, {mask})` vrne obljubo; maska = zatemnitev ≥ 85 % + glif 120 pt, vstop 150 ms, drža, izstop 250 ms. |
@@ -417,6 +417,27 @@ Brez glasbe, brez zvokov, ki strašijo; glas ukaza (šola) posnet v sl in en (8 
 
 ### 7.7 Česanje, menjava peska, nega pasme, praskanje
 Brez spremembe pravil; prestavitev na `GameScreen`: besedilo zgoraj, celozaslonska žival / predmet, haptika ob vsaki šteti potezi, ✓ ob koncu koraka (3 koraki = 3 pike).
+
+**Popravek 15. 11. 2026 (Davidova prijava s produkcije, Android):**
+- **Menjava peska kaže stranišče, ne muce.** Oder menjave je vedno risba mačjega stranišča po korakih (star pesek → prazno z mehurčki → svež pesek; `TrayGraphic`, `CatStage objectOnly`), tudi pri muci, ki ima posnetke. Prej je vsaka muca s posnetki (odkar imajo brezplačne muce skupne videze, tudi domača mačka) dobila svoj posnetek mirovanja in otrok je drgnil sedečo muco. Posnetkov menjave peska ni in se ne ustvarjajo (0 $).
+- **Sistemska kretnja »nazaj« ne prekine igre nege.** Drgnjenje od roba zaslona je na Androidu kretnja »nazaj«; ta je bila enaka × = »ustavi«, zato je igra sredi drgnjenja padla nazaj na »Začni menjavo« in seja je bila izgubljena. Zdaj »nazaj« med igro nege (česanje, menjava peska, nega pasme, praskanje) samo pokaže vrstico »Za konec igre tapni ×.« (4 s); izhod ostane ×. Med shranjevanjem (zaklenjen ×) »nazaj« ne naredi nič, pri kartici »Igra se ne odziva.« zapre igro. **Od 15. 11. 2026 (David) to pravilo velja za vse igre igralnega sloja** — palica s peresom, žoga, crkljanje, čiščenje nereda (vrečka, krpa), lopatka, copat in šola; glej pravilo o izhodu v §7.1.
+
+**Menjava peska: tri kretnje (David 15. 11. 2026 — »Želim da je bolj interaktivno«).** Vsak korak ima svojo kretnjo, risba sledi prstu, brez plačanih medijev (nič posnetkov, nič generiranja — vse je narisano v aplikaciji; 0 $). Velja na gradnji z igralnim slojem (`catCare/litterChange/`, `LitterChangeGame` prek `loadLitterChangeGame()`); starejša gradnja ostane pri kartici z drgnjenjem.
+
+| Korak (tretjina seje, 10 s) | Kretnja | Kaj se riše | Korak je opravljen (✓), ko |
+|---|---|---|---|
+| 1 **Izprazni** — »Povleci stranišče do koša« | **vleci** stranišče navzdol h košu v spodnjem desnem kotu | stranišče se z vlekom nagiba (do 35°), star pesek ostaja vodoraven in se od 55 % poti naprej siplje v koš (zrna); ko otrok spusti, se stranišče vrne | je stranišče **prazno**: en vlek izsuje največ 40 % → 3 vleki (40 + 40 + 20 %) |
+| 2 **Umij** — »Drgni po madežih, da izginejo« | **drgni** po notranjosti stranišča | pena sledi prstu, madež bledi sorazmerno s potjo prsta čez njega (pribl. dva prehoda), kjer izgine, ostanejo mehurčki | je čistih **7 od 8 madežev** (zadnji izgine z iskricami) |
+| 3 **Napolni** — »Pritisni in drži vrečo s peskom« | **pritisni in drži** (vrečo ali stranišče) | vreča se nagne, svež pesek se siplje in gladina raste do **označene črte** (mint, črtkana); spust ustavi sipanje | je gladina **na črti**: 5 s držanja skupaj (lahko v več pritiskih); čez črto ne gre |
+
+- **Napredek kaže risba sama** (gladina starega peska, preostali madeži, gladina do črte) — brez dodatne vrstice napredka; za bralnik zaslona isti podatek v oznaki pik (»Stari pesek: še 60 %.« / »Preostali madeži: 3.« / »Svež pesek: 50 % do črte.«).
+- **Vrstica igre** (≤ 32 znakov, sl + en): navodilo koraka, po opravljenem koraku »Prazno! Bravo!« / »Čisto! Bravo!« / »Polno do črte! Bravo!«; pike in ✓ + zvok + vibracija kot pri drugih igrah nege, **✓ pride v trenutku, ko otrok korak res opravi** (ne ob izteku časa koraka).
+- **Kretnja šteje samo v svojem koraku:** drgnjenje ali držanje ne izprazni, držanje ne umije (pot prsta 0 = nič), vlek ne napolni.
+- **Strežnik nespremenjen** (`CatChoreService`, isti `strokes: [{t}]`, ista ocena, ista rutina tedna, »Poteze: N«): seja ostane 30 s v treh enakih delih in koraki SO ti deli (vsak korak 10 s; pravilo »poteze v vseh treh delih« zato velja kot prej). Aplikacija za vsak **kos resničnega dela ob njegovem resničnem času** zapiše eno potezo: vsaka izsuta petina stranišča (korak 1), vsak obrat / dvig prsta pri drgnjenju kot doslej in vsak zdrgnjen madež (korak 2), vsak »utrip« sipanja na 0,6–0,9 s držanja v nepravilnem ritmu »Lažjih kretenj« (korak 3; čas držanja se sešteva čez pritiske — polno stranišče je vedno 7 utripov). Otrok, ki vsak korak opravi v njegovem delu, ima vsaj 3 + 1 + 7 = 11 štetih potez v vseh treh delih (strežnik zahteva 10). Kdor korak izpusti, dobi isto prijazno »ni štelo« kot doslej.
+- **Korak, ki mu poteče čas, se uredi sam, brez ✓** (stranišče se pokaže prazno / umito, da slika ostane smiselna) — brez kazni. **Trije koraki po 10 s — potrdil David 15. 11. 2026** (»V redu je 10 sek. Kdo je hiter, bo pač počakal«): ker strežnik zahteva poteze v vseh treh tretjinah in konec ne prej kot 3 s pred iztekom, hiter otrok po opravljenem koraku počaka do konca njegovih 10 s (vidi ✓ in »… Bravo!«). Nove različice pravil na strežniku ne bo.
+- **»Lažje kretnje« / bralnik zaslona:** v doku en gumb na korak — »Izprazni« / »Umij« / »Napolni« (pridrži = delo v enakih utripih: 5 petin, 7 madežev, 6 delov do črte; tap = en utrip); kretnje ostanejo vklopljene.
+- **»Zmanjšaj gibanje«:** iste kretnje; brez zanke padajočih zrn, brez vzmeti pri vračanju, brez iskric, gladina se premika v korakih.
+- **Rob zaslona:** koš in vreča sta ≥ 24 dp od roba (Androidova kretnja »nazaj«); vlek gre navzdol, ne vstran.
 
 ---
 

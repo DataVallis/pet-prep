@@ -3939,6 +3939,226 @@
         }
       ],
       "notes": "RKC breed page (dog-data S826, 2026-11-13): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the DNA tests for MPS IIIB and T-box (bob tail). Two new test keys (dna_mps3b, dna_tbox). PetMD (S827) names no breeder tests."
+    },
+    "belgian_tervuren": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S830",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S830",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S830",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S830",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S830",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S830, 2026-11-14): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding') only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the BVA/KC elbow and hip dysplasia schemes and the BVA/KC/ISDS eye scheme (link labels as returned). No new test key. PetMD (S832) names no breeder tests."
+    },
+    "toy_fox_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K42",
+        "quote": "It is important to know the status before breeding a dog or bitch"
+      },
+      "tests": [
+        {
+          "key": "dna_pll",
+          "level": "other_scheme",
+          "name": "DNA test for primary lens luxation (US breed club)",
+          "source_id": "K42",
+          "quote": "Primary Lens Luxation (PLL)"
+        },
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Kneecap (patella) evaluation of breeding dogs (US breed club)",
+          "source_id": "K42",
+          "quote": "this is not a DNA test, download a form from the OFA and have your veterinarian test and certify"
+        },
+        {
+          "key": "dna_chg",
+          "level": "other_scheme",
+          "name": "DNA test for congenital hypothyroidism with goiter (US breed club)",
+          "source_id": "K42",
+          "quote": "Congenital hypothyroidism with goiter (CHG)"
+        },
+        {
+          "key": "dna_sca",
+          "level": "other_scheme",
+          "name": "DNA test for spinocerebellar ataxia (US breed club)",
+          "source_id": "K42",
+          "quote": "Spinocerebellar Ataxia (SCA)"
+        }
+      ],
+      "notes": "Not RKC-registered → no RKC minimum / best_practice level. American Toy Fox Terrier Club health page (K42): 'The following health conditions have been identified in the Toy Fox Terrier.' and 'Except for Patellar Luxation, these conditions have DNA tests available.' — PLL, patellar luxation (OFA form), CHG, SCA; degenerative myelopathy 'not an ATFTC required test' (not taken); CHIC certification optional (not taken). New key dna_chg."
+    },
+    "gordon_setter": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S842",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S842",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_rcd4_pra",
+          "level": "minimum",
+          "name": "DNA test for progressive retinal atrophy (PRA (rcd4)",
+          "source_id": "S842",
+          "quote": "DNA test for progressive retinal atrophy (PRA (rcd4)"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S842",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S842",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S842",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S842, 2026-11-14; 'Good Practice' tests = minimum, 'Best Practice'; names as returned — the PRA line has an unclosed parenthesis on the page): minimum genetic diversity (inbreeding_coi), PRA rcd4 DNA test (dna_rcd4_pra), BVA/KC hip scheme (hip_scheme); Best Practice eye scheme (eye_scheme) and elbow scheme (elbow_scheme). No new key."
+    },
+    "afghan_hound": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S850",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S850",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S850",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S850, 2026-11-15; 'Good Practice' = minimum, 'Best Practice'; names as returned): minimum only the genetic-diversity link (inbreeding_coi; no named health test), Best Practice the BVA/KC hip scheme (hip_scheme). 'We don't currently offer a breed-specific DNA testing package for this breed.' No new key."
+    },
+    "australian_silky_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S856",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S856",
+          "quote": "Prioritising genetic diversity"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S856, 2026-11-15; heading 'Good Practice schemes and tests' = minimum; names as returned): minimum only the genetic-diversity link (inbreeding_coi; no named health test), no Best Practice section. 'We don't currently offer a breed-specific DNA testing package for this breed' (fragment). No new key."
+    },
+    "parson_russell_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S865",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S865",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_loa",
+          "level": "minimum",
+          "name": "DNA test for Late onset ataxia (LOA)",
+          "source_id": "S865",
+          "quote": "DNA test for Late onset ataxia (LOA)"
+        },
+        {
+          "key": "dna_pll",
+          "level": "minimum",
+          "name": "DNA test for Primary lens luxation (PLL)",
+          "source_id": "S865",
+          "quote": "DNA test for Primary lens luxation (PLL)"
+        },
+        {
+          "key": "dna_sca",
+          "level": "best_practice",
+          "name": "DNA test for spinocerebellar ataxia (SCA)",
+          "source_id": "S865",
+          "quote": "DNA test for spinocerebellar ataxia (SCA)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S865",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S865, 2026-11-15; the 'at a minimum' list = minimum, 'Best Practice schemes and tests' = best_practice; names as returned): minimum — the genetic-diversity link (inbreeding_coi), DNA LOA, DNA PLL; Best Practice — DNA SCA and the BVA/KC/ISDS eye scheme. Unlike the Jack Russell Terrier (FCI 345, LOA there is Best Practice). No new key."
     }
   }
 }

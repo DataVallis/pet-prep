@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Rice",
-    "sl": "Riž"
+    "sl": "Riž",
+    "cs": "Rýže"
   },
   "question": {
     "en": "Can dogs eat rice?",
-    "sl": "Ali lahko psi jedo riž?"
+    "sl": "Ali lahko psi jedo riž?",
+    "cs": "Mohou psi jíst rýži?"
   },
   "url_slug": {
     "en": "rice",
-    "sl": "riz"
+    "sl": "riz",
+    "cs": "rize"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes. Plain cooked rice is fine for most dogs in small amounts, and vets use it in a bland diet after a tummy upset. Boil it in water without seasonings or spices, and keep portions modest, because too many carbs can lead to weight gain.",
-    "sl": "Da. Navaden kuhan riž je za večino psov v majhnih količinah v redu, veterinarji pa ga uporabljajo v blagi dieti po prebavnih težavah. Skuhajte ga v vodi brez začimb in naj bodo porcije zmerne, saj lahko preveč ogljikovih hidratov povzroči pridobivanje teže."
+    "sl": "Da. Navaden kuhan riž je za večino psov v majhnih količinah v redu, veterinarji pa ga uporabljajo v blagi dieti po prebavnih težavah. Skuhajte ga v vodi brez začimb in naj bodo porcije zmerne, saj lahko preveč ogljikovih hidratov povzroči pridobivanje teže.",
+    "cs": "Ano. Obyčejná uvařená rýže je pro většinu psů v malém množství v pořádku a veterináři ji používají v šetřící dietě po potížích se žaludkem. Vařte ji ve vodě bez koření a dbejte na rozumné porce, protože příliš mnoho sacharidů může vést k nárůstu hmotnosti."
   },
   "why": {
     "en": "Rice is an ingredient in some commercial dog foods, and vets use it as a carb source in a bland diet after stomach upset. Seasonings and spices can upset the stomach or even be toxic. White rice has a higher glycemic index than brown rice and can raise blood sugar, so a diabetic dog should have only a little, not regularly. Chicken and rice is meant as a temporary diet for upset digestion, not a balanced long-term one.",
-    "sl": "Riž je sestavina nekaterih komercialnih pasjih hran, veterinarji pa ga uporabljajo kot vir ogljikovih hidratov v blagi dieti po prebavnih težavah. Začimbe lahko razdražijo želodec ali so celo strupene. Beli riž ima višji glikemični indeks od rjavega in lahko dvigne krvni sladkor, zato naj ga pes s sladkorno boleznijo dobi le malo in ne redno. Piščanec z rižem je mišljen kot začasna dieta pri prebavnih težavah, ne kot uravnotežena dolgoročna prehrana."
+    "sl": "Riž je sestavina nekaterih komercialnih pasjih hran, veterinarji pa ga uporabljajo kot vir ogljikovih hidratov v blagi dieti po prebavnih težavah. Začimbe lahko razdražijo želodec ali so celo strupene. Beli riž ima višji glikemični indeks od rjavega in lahko dvigne krvni sladkor, zato naj ga pes s sladkorno boleznijo dobi le malo in ne redno. Piščanec z rižem je mišljen kot začasna dieta pri prebavnih težavah, ne kot uravnotežena dolgoročna prehrana.",
+    "cs": "Rýže se přidává do některých průmyslových krmiv pro psy a veterináři ji používají jako zdroj sacharidů v šetřící dietě po potížích se žaludkem. Koření a dochucovadla mohou žaludek podráždit nebo být dokonce jedovatá. Bílá rýže má vyšší glykemický index než hnědá a může zvýšit hladinu cukru v krvi, takže pes s cukrovkou by měl dostat jen trochu a ne pravidelně. Kuře s rýží je určeno jako dočasná strava při potížích se zažíváním, ne jako vyvážená dlouhodobá strava."
   },
   "signs": null,
   "what_to_do": {
     "en": "As with any new food, ask your vet first and start slowly. If your dog is diabetic, give only a little white rice, and not on a regular basis.",
-    "sl": "Kot pri vsaki novi hrani se najprej posvetujte z veterinarjem in začnite počasi. Če ima pes sladkorno bolezen, mu dajte le malo belega riža in ne redno."
+    "sl": "Kot pri vsaki novi hrani se najprej posvetujte z veterinarjem in začnite počasi. Če ima pes sladkorno bolezen, mu dajte le malo belega riža in ne redno.",
+    "cs": "Jako u každé nové potraviny se nejdřív zeptejte veterináře a začněte pomalu. Pokud má pes cukrovku, dávejte jen trochu bílé rýže a ne pravidelně."
   },
   "serving": {
     "en": "Plain rice boiled in water, with no seasonings or spices, as a small part of a meal.",
-    "sl": "Navaden riž, kuhan v vodi, brez začimb, kot majhen del obroka."
+    "sl": "Navaden riž, kuhan v vodi, brez začimb, kot majhen del obroka.",
+    "cs": "Obyčejná rýže uvařená ve vodě, bez koření a dochucovadel, jako malá část jídla."
   },
   "child": {
     "en": "Dogs can have a little plain cooked rice. A grown-up cooks it in water without spices, just for the dog.",
-    "sl": "Psi lahko dobijo malo navadnega kuhanega riža. Odrasli ga skuha v vodi brez začimb, posebej za psa."
+    "sl": "Psi lahko dobijo malo navadnega kuhanega riža. Odrasli ga skuha v vodi brez začimb, posebej za psa.",
+    "cs": "Psi mohou dostat trochu obyčejné uvařené rýže. Dospělý ji uvaří ve vodě bez koření, jen pro psa."
   },
   "faq": [
     {
       "q": {
         "en": "White or brown rice — which is better?",
-        "sl": "Beli ali rjavi riž – kateri je boljši?"
+        "sl": "Beli ali rjavi riž – kateri je boljši?",
+        "cs": "Bílá, nebo hnědá rýže – která je lepší?"
       },
       "a": {
         "en": "White rice has a higher glycemic index than brown rice and can raise blood sugar, so diabetic dogs should have only a little white rice, not regularly.",
-        "sl": "Beli riž ima višji glikemični indeks od rjavega in lahko dvigne krvni sladkor, zato naj psi s sladkorno boleznijo belega riža dobijo le malo in ne redno."
+        "sl": "Beli riž ima višji glikemični indeks od rjavega in lahko dvigne krvni sladkor, zato naj psi s sladkorno boleznijo belega riža dobijo le malo in ne redno.",
+        "cs": "Bílá rýže má vyšší glykemický index než hnědá a může zvýšit hladinu cukru v krvi, takže psi s cukrovkou by měli dostat jen trochu bílé rýže a ne pravidelně."
       }
     },
     {
       "q": {
         "en": "Can rice help when my dog has diarrhoea?",
-        "sl": "Ali riž pomaga, ko ima pes drisko?"
+        "sl": "Ali riž pomaga, ko ima pes drisko?",
+        "cs": "Pomůže rýže, když má pes průjem?"
       },
       "a": {
         "en": "Plain boiled chicken and rice can help when a dog has diarrhoea, but it is a temporary diet and not balanced for long-term feeding.",
-        "sl": "Navaden kuhan piščanec z rižem lahko pomaga, ko ima pes drisko, vendar je to začasna dieta, ki za dolgoročno hranjenje ni uravnotežena."
+        "sl": "Navaden kuhan piščanec z rižem lahko pomaga, ko ima pes drisko, vendar je to začasna dieta, ki za dolgoročno hranjenje ni uravnotežena.",
+        "cs": "Obyčejné vařené kuře s rýží může pomoci, když má pes průjem, ale je to dočasná dieta a není vyvážená pro dlouhodobé krmení."
       }
     }
   ],
@@ -129,6 +141,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5b504a950da8699a28ef45bbb71722e2199d88c0110da292ad4c22cf726fc5b9"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "da175f28bbaac6ccf940f692d27399792ded027d506756cb4ff900fa4a1b5125"
     }
   }
 }

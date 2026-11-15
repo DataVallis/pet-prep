@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Cinnamon",
-    "sl": "Cimet"
+    "sl": "Cimet",
+    "cs": "Skořice"
   },
   "question": {
     "en": "Can cats eat cinnamon?",
-    "sl": "Ali lahko mačke jedo cimet?"
+    "sl": "Ali lahko mačke jedo cimet?",
+    "cs": "Mohou kočky jíst skořici?"
   },
   "url_slug": {
     "en": "cinnamon",
-    "sl": "cimet"
+    "sl": "cimet",
+    "cs": "skorice"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. The ASPCA lists cinnamon as non-toxic to cats, but any plant material may cause vomiting and stomach upset, and cats don't need it. Cinnamon oil is different: it is toxic to cats.",
-    "sl": "Raje ne. ASPCA cimet navaja kot nestrupen za mačke, vendar lahko vsaka rastlinska snov povzroči bruhanje in želodčne težave, mačke pa ga ne potrebujejo. Cimetovo olje je nekaj drugega: za mačke je strupeno."
+    "sl": "Raje ne. ASPCA cimet navaja kot nestrupen za mačke, vendar lahko vsaka rastlinska snov povzroči bruhanje in želodčne težave, mačke pa ga ne potrebujejo. Cimetovo olje je nekaj drugega: za mačke je strupeno.",
+    "cs": "Raději ne. Podle ASPCA skořice pro kočky toxická není, ale jakákoli rostlinná hmota může způsobit zvracení a podráždění žaludku a kočky ji nepotřebují. Skořicový olej je něco jiného: pro kočky je toxický."
   },
   "why": {
     "en": "The ASPCA lists cinnamon (Cinnamomum zeylanicum) as non-toxic to cats, and notes that eating any plant material may cause vomiting and gastrointestinal upset in cats. PDSA says cats don't need anything other than a complete diet. Cats Protection lists cinnamon oil among the essential oils that are toxic to cats. Because cinnamon is not a cat food and its oil is harmful, we don't recommend it.",
-    "sl": "ASPCA cimet (Cinnamomum zeylanicum) navaja kot nestrupen za mačke in opozarja, da lahko uživanje katere koli rastlinske snovi pri mačkah povzroči bruhanje in prebavne težave. PDSA navaja, da mačke poleg popolne hrane ne potrebujejo ničesar drugega. Cats Protection cimetovo olje navaja med eteričnimi olji, ki so za mačke strupena. Ker cimet ni mačja hrana, njegovo olje pa škodi, ga ne priporočamo."
+    "sl": "ASPCA cimet (Cinnamomum zeylanicum) navaja kot nestrupen za mačke in opozarja, da lahko uživanje katere koli rastlinske snovi pri mačkah povzroči bruhanje in prebavne težave. PDSA navaja, da mačke poleg popolne hrane ne potrebujejo ničesar drugega. Cats Protection cimetovo olje navaja med eteričnimi olji, ki so za mačke strupena. Ker cimet ni mačja hrana, njegovo olje pa škodi, ga ne priporočamo.",
+    "cs": "Podle ASPCA není skořice (Cinnamomum zeylanicum) pro kočky toxická, ale pozření jakékoli rostlinné hmoty může u koček způsobit zvracení a podráždění trávicího traktu. PDSA uvádí, že kočky nepotřebují nic jiného než kompletní stravu. Cats Protection řadí skořicový olej mezi silice, které jsou pro kočky toxické. Protože skořice není kočičí potrava a její olej je škodlivý, nedoporučujeme ji."
   },
   "signs": {
     "en": [
@@ -30,26 +35,34 @@
     "sl": [
       "Bruhanje",
       "Želodčne težave"
+    ],
+    "cs": [
+      "Zvracení",
+      "Podrážděný žaludek"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate a little cinnamon, watch for vomiting or an upset stomach. If your cat licked or ate cinnamon oil, contact your vet straight away; don't wait for signs to appear.",
-    "sl": "Če je mačka pojedla malo cimeta, bodite pozorni na bruhanje ali želodčne težave. Če je mačka oblizala ali zaužila cimetovo olje, takoj pokličite veterinarja; ne čakajte, da se pokažejo znaki."
+    "sl": "Če je mačka pojedla malo cimeta, bodite pozorni na bruhanje ali želodčne težave. Če je mačka oblizala ali zaužila cimetovo olje, takoj pokličite veterinarja; ne čakajte, da se pokažejo znaki.",
+    "cs": "Pokud kočka snědla trochu skořice, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud kočka olízla nebo snědla skořicový olej, okamžitě se obraťte na veterináře a nečekejte, až se objeví příznaky."
   },
   "serving": null,
   "child": {
     "en": "Cinnamon is a spice for people's cooking. Cats don't need it, so keep spices and scented oils away from kitty.",
-    "sl": "Cimet je začimba za kuhanje za ljudi. Muce ga ne potrebujejo, zato naj bodo začimbe in dišeča olja daleč od muce."
+    "sl": "Cimet je začimba za kuhanje za ljudi. Muce ga ne potrebujejo, zato naj bodo začimbe in dišeča olja daleč od muce.",
+    "cs": "Skořice je koření do jídel pro lidi. Kočky ji nepotřebují, takže koření i vonné oleje drž od kočičky dál."
   },
   "faq": [
     {
       "q": {
         "en": "Is cinnamon oil safe for cats?",
-        "sl": "Ali je cimetovo olje varno za mačke?"
+        "sl": "Ali je cimetovo olje varno za mačke?",
+        "cs": "Je skořicový olej pro kočky bezpečný?"
       },
       "a": {
         "en": "No. Cats Protection says most essential oils are toxic to cats and names cinnamon oil among them. Keep cinnamon oil and other essential oils away from your cat.",
-        "sl": "Ne. Cats Protection navaja, da je večina eteričnih olj za mačke strupena, in med njimi navaja tudi cimetovo olje. Cimetovo olje in druga eterična olja hranite zunaj mačjega dosega."
+        "sl": "Ne. Cats Protection navaja, da je večina eteričnih olj za mačke strupena, in med njimi navaja tudi cimetovo olje. Cimetovo olje in druga eterična olja hranite zunaj mačjega dosega.",
+        "cs": "Ne. Cats Protection uvádí, že většina silic je pro kočky toxická, a skořicový olej mezi nimi jmenuje. Skořicový olej i další silice uchovávejte mimo dosah kočky."
       }
     }
   ],
@@ -104,6 +117,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e441758ab7a0a2151db396a7726ba7d242a408e27df8b5288adc467414e7561d"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "62ca1e2a0e1063345d05375436072e398bc693535f5cb22f774fddcc36076427"
     }
   }
 }

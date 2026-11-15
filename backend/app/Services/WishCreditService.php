@@ -173,7 +173,9 @@ class WishCreditService
             PetUpdated::afterCommit($locked, 'item_acquired');
             // M6-W03: its AI content (a shared look's already made content costs 0 $; a pet
             // without AI media is ready at once) — after commit, outside the transaction.
-            QueuePetItemMedia::dispatch($locked->id)->afterCommit();
+            // QA #1139 M1: the bought keys — an action item (treats) whose chain was given up earlier
+            // gets one fresh round for this purchase.
+            QueuePetItemMedia::dispatch($locked->id, array_values($covers))->afterCommit();
 
             return ['status' => 'assigned', 'pet' => $locked, 'credit' => $credit];
         });

@@ -518,7 +518,7 @@ describe('generate-pin plan', function () {
         seedLifeStageData();
     });
 
-    function ctPin(User $parent, array $body): TestResponse
+    function chTrialPin(User $parent, array $body): TestResponse
     {
         $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
         app('auth')->forgetGuards();
@@ -537,7 +537,7 @@ describe('generate-pin plan', function () {
 
     it('creates a free mutt from plan free, without a trial', function () {
         $parent = User::factory()->parent()->create();
-        $pin = ctPin($parent, ['plan' => 'free', 'breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy'])
+        $pin = chTrialPin($parent, ['plan' => 'free', 'breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy'])
             ->assertOk()->assertJsonPath('plan', 'free')->json('pin');
         $pet = Pet::findOrFail(ctPinLogin($pin)->assertSuccessful()->json('pet.id'));
 
@@ -546,10 +546,10 @@ describe('generate-pin plan', function () {
 
     it('refuses a premium breed on the free plan; allows it on the challenge (default for old builds)', function () {
         $parent = User::factory()->parent()->create();
-        ctPin($parent, ['plan' => 'free', 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])
+        chTrialPin($parent, ['plan' => 'free', 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])
             ->assertStatus(422)->assertJsonPath('reason', 'breed_locked');
 
-        $pin = ctPin($parent, ['breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])
+        $pin = chTrialPin($parent, ['breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])
             ->assertOk()->assertJsonPath('plan', 'challenge')->json('pin');
         $pet = Pet::findOrFail(ctPinLogin($pin)->assertSuccessful()->json('pet.id'));
         // M3-13: no trial — unpaid from creation on (unborn until the contract).
@@ -557,16 +557,16 @@ describe('generate-pin plan', function () {
             ->and($pet->challengeStatus())->toBe(ChallengeStatus::PaymentRequired)
             ->and($pet->trial_ends_at)->toBeNull();
 
-        ctPin($parent, ['plan' => 'gold'])->assertUnprocessable()->assertJsonValidationErrors('plan');
+        chTrialPin($parent, ['plan' => 'gold'])->assertUnprocessable()->assertJsonValidationErrors('plan');
     });
 
     it('a PIN without plan (old build) makes a challenge pet for a paid breed (the mutt is free — M5-F03); joining never changes the plan', function () {
         $parent = User::factory()->parent()->create();
-        $pin = ctPin($parent, ['breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()->assertJsonPath('plan', 'challenge')->json('pin');
+        $pin = chTrialPin($parent, ['breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()->assertJsonPath('plan', 'challenge')->json('pin');
         $pet = Pet::findOrFail(ctPinLogin($pin)->assertSuccessful()->json('pet.id'));
         expect($pet->plan)->toBe(PetPlan::Challenge);
 
-        ctPin($parent, ['pet_id' => $pet->id, 'plan' => 'free'])->assertOk()->assertJsonPath('plan', null)->assertJsonPath('mode', 'join_pet');
+        chTrialPin($parent, ['pet_id' => $pet->id, 'plan' => 'free'])->assertOk()->assertJsonPath('plan', null)->assertJsonPath('mode', 'join_pet');
         expect($pet->fresh()->plan)->toBe(PetPlan::Challenge);
     });
 });

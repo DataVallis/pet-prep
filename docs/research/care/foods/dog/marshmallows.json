@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Marshmallows",
-    "sl": "Penasti bonboni (marshmallow)"
+    "sl": "Penasti bonboni (marshmallow)",
+    "cs": "Marshmallow (pěnové bonbony)"
   },
   "question": {
     "en": "Can dogs eat marshmallows?",
-    "sl": "Ali lahko psi jedo penaste bonbone (marshmallow)?"
+    "sl": "Ali lahko psi jedo penaste bonbone (marshmallow)?",
+    "cs": "Mohou psi jíst marshmallow (pěnové bonbony)?"
   },
   "url_slug": {
     "en": "marshmallows",
-    "sl": "penasti-bonboni"
+    "sl": "penasti-bonboni",
+    "cs": "marshmallow"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No. Not all marshmallows are toxic to dogs, but they are not good for them: they are made from sugar, corn syrup and gelatin and have little or no nutritional value. Some contain xylitol, which is toxic to dogs.",
-    "sl": "Ne. Penasti bonboni za pse niso vsi strupeni, a jim ne koristijo: narejeni so iz sladkorja, koruznega sirupa in želatine ter nimajo skoraj nobene hranilne vrednosti. Nekateri vsebujejo ksilitol, ki je za pse strupen."
+    "sl": "Ne. Penasti bonboni za pse niso vsi strupeni, a jim ne koristijo: narejeni so iz sladkorja, koruznega sirupa in želatine ter nimajo skoraj nobene hranilne vrednosti. Nekateri vsebujejo ksilitol, ki je za pse strupen.",
+    "cs": "Ne. Ne všechny marshmallow jsou pro psy jedovaté, ale prospěšné nejsou: vyrábějí se z cukru, kukuřičného sirupu a želatiny a mají jen malou nebo žádnou výživovou hodnotu. Některé obsahují xylitol, který je pro psy jedovatý."
   },
   "why": {
     "en": "Marshmallows contain a very high amount of sugar and calories, so they are especially risky for dogs with diabetes or weight problems, and even in healthy dogs sugary treats can contribute to obesity. Eating too many can cause gastrointestinal upset and puts a dog at risk of pancreatitis. A marshmallow with xylitol is toxic even in small amounts and can cause dangerously low blood sugar.",
-    "sl": "Penasti bonboni vsebujejo zelo veliko sladkorja in kalorij, zato so posebej tvegani za pse s sladkorno boleznijo ali s prekomerno težo, pa tudi pri zdravih psih sladki priboljški prispevajo k debelosti. Preveč penastih bonbonov lahko povzroči prebavne težave, pes pa je ogrožen tudi za pankreatitis. Penasti bonbon s ksilitolom je strupen že v majhnih količinah in lahko povzroči nevarno nizek krvni sladkor."
+    "sl": "Penasti bonboni vsebujejo zelo veliko sladkorja in kalorij, zato so posebej tvegani za pse s sladkorno boleznijo ali s prekomerno težo, pa tudi pri zdravih psih sladki priboljški prispevajo k debelosti. Preveč penastih bonbonov lahko povzroči prebavne težave, pes pa je ogrožen tudi za pankreatitis. Penasti bonbon s ksilitolom je strupen že v majhnih količinah in lahko povzroči nevarno nizek krvni sladkor.",
+    "cs": "Marshmallow obsahují velmi mnoho cukru a kalorií, takže jsou obzvlášť rizikové pro psy s cukrovkou nebo problémy s váhou, a i u zdravých psů mohou sladké pamlsky přispívat k obezitě. Když jich pes sní příliš mnoho, mohou způsobit potíže se zažíváním a hrozí i zánět slinivky břišní. Marshmallow s xylitolem je jedovatý už v malém množství a může způsobit nebezpečně nízkou hladinu cukru v krvi."
   },
   "signs": {
     "en": [
@@ -34,29 +39,40 @@
       "Slabši apetit",
       "Driska",
       "Opotekanje ali krči (ksilitol)"
+    ],
+    "cs": [
+      "Zvracení",
+      "Snížená chuť k jídlu",
+      "Průjem",
+      "Vrávorání nebo záchvaty (xylitol)"
     ]
   },
   "what_to_do": {
     "en": "Call your vet right away if your dog ate several marshmallows, or any marshmallow that may contain xylitol.",
-    "sl": "Takoj pokličite veterinarja, če je pes pojedel več penastih bonbonov ali kateri koli penasti bonbon, ki bi lahko vseboval ksilitol."
+    "sl": "Takoj pokličite veterinarja, če je pes pojedel več penastih bonbonov ali kateri koli penasti bonbon, ki bi lahko vseboval ksilitol.",
+    "cs": "Okamžitě zavolejte veterináři, pokud pes snědl několik marshmallow nebo jakýkoli marshmallow, který může obsahovat xylitol."
   },
   "serving": {
     "en": "Instead of marshmallows: good-quality dog treats or healthier snacks such as carrots, green vegetables or blueberries.",
-    "sl": "Namesto penastih bonbonov: kakovostni pasji priboljški ali bolj zdravi prigrizki, kot so korenje, zelena zelenjava ali borovnice."
+    "sl": "Namesto penastih bonbonov: kakovostni pasji priboljški ali bolj zdravi prigrizki, kot so korenje, zelena zelenjava ali borovnice.",
+    "cs": "Místo marshmallow: kvalitní psí pamlsky nebo zdravější svačinky, například mrkev, zelená zelenina nebo borůvky."
   },
   "child": {
     "en": "Marshmallows are too sugary for dogs. Share a carrot or a few blueberries with your dog instead!",
-    "sl": "Penasti bonboni so za pse presladki. Raje deli s psom korenček ali nekaj borovnic!"
+    "sl": "Penasti bonboni so za pse presladki. Raje deli s psom korenček ali nekaj borovnic!",
+    "cs": "Marshmallow jsou pro psy příliš sladké. Raději se se psem rozděl o mrkev nebo pár borůvek!"
   },
   "faq": [
     {
       "q": {
         "en": "Are sugar-free marshmallows safer?",
-        "sl": "Ali so penasti bonboni brez sladkorja varnejši?"
+        "sl": "Ali so penasti bonboni brez sladkorja varnejši?",
+        "cs": "Jsou marshmallow bez cukru bezpečnější?"
       },
       "a": {
         "en": "No. Check the label: if a marshmallow contains xylitol, it is toxic to dogs and can be extremely harmful even in small amounts.",
-        "sl": "Ne. Preberite deklaracijo: če penasti bonbon vsebuje ksilitol, je za pse strupen in lahko zelo škodi že v majhnih količinah."
+        "sl": "Ne. Preberite deklaracijo: če penasti bonbon vsebuje ksilitol, je za pse strupen in lahko zelo škodi že v majhnih količinah.",
+        "cs": "Ne. Přečtěte si složení: pokud marshmallow obsahuje xylitol, je pro psy jedovatý a může být nesmírně škodlivý i v malém množství."
       }
     }
   ],
@@ -156,6 +172,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "52cdaf5972c72e4907456a01e062b04165ea21cd4ad197d0b2c9f1398df44383"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fc05e982e0cc0259288216f26bc123e9f6ae7cdb523a5a7ee944f95be18d5dbc"
     }
   }
 }

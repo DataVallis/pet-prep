@@ -77,7 +77,15 @@ class ItemMediaResource extends Resource
                     ItemMedia::STATUS_READY => 'ready',
                     ItemMedia::STATUS_FAILED => 'failed',
                 ]),
-                Tables\Filters\Filter::make('exhausted')->label('Given up (shown without content)')
+                // QA #1139 m2: find the rows of one item (HANDOFF §1b: the treat rows that keep »Priboljšek« locked).
+                Tables\Filters\SelectFilter::make('item_key')->label('Item')->options([
+                    'bed' => 'Bed / basket',
+                    'bowls' => 'Bowls',
+                    'toy_1' => 'Toy 1',
+                    'toy_2' => 'Toy 2',
+                    'treats' => 'Treats',
+                ]),
+                Tables\Filters\Filter::make('exhausted')->label('Given up (durable: shown without content · treats: »Treat« stays locked)')
                     ->query(fn ($q) => $q->whereNotNull('exhausted_at')),
                 Tables\Filters\Filter::make('quality')->label('Needs review / failed check')
                     ->query(fn ($q) => $q->where(fn ($q) => $q->where(fn ($q) => $q->where('error_reason', 'quality_failed')->whereNotNull('candidate_path'))

@@ -91,7 +91,7 @@ export function treatStateOf(body: unknown): ChildPetState | null {
 /** The cached view with the treat counters of a 200 answer (when the body carries no `state`). */
 export function withTreats(view: ChildPetView, result: TreatResult): ChildPetView {
   if (view.wishes === null) return view;
-  return { ...view, wishes: { ...view.wishes, treats: { left: result.treats_left, given_today: result.given_today, daily_limit: result.daily_limit } } };
+  return { ...view, wishes: { ...view.wishes, treats: { ...view.wishes.treats, left: result.treats_left, given_today: result.given_today, daily_limit: result.daily_limit } } };
 }
 
 /**

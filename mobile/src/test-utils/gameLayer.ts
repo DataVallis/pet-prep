@@ -33,6 +33,11 @@ export function fireGameRelease(testID: string, event: Record<string, number> = 
   jest.requireMock<typeof GestureMock>('react-native-gesture-handler').fireGameRelease(testID, event);
 }
 
+/** One phase of a pan on its own (press and hold: `begin`, advance the timers, `finalize`). */
+export function fireGameTouch(testID: string, phase: 'begin' | 'update' | 'end' | 'finalize', event: Record<string, number> = {}): void {
+  jest.requireMock<typeof GestureMock>('react-native-gesture-handler').fireGameTouch(testID, phase, event);
+}
+
 // ── Exit + z-order (ball v2 device bug, 2026-10-31) ─────────────────────────────
 
 type BackPressHandler = Parameters<typeof BackHandler.addEventListener>[1];

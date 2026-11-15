@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Candy",
-    "sl": "Sladkarije"
+    "sl": "Sladkarije",
+    "cs": "Bonbony"
   },
   "question": {
     "en": "Can dogs eat candy?",
-    "sl": "Ali lahko psi jedo sladkarije?"
+    "sl": "Ali lahko psi jedo sladkarije?",
+    "cs": "Mohou psi jíst bonbony?"
   },
   "url_slug": {
     "en": "candy",
-    "sl": "sladkarije"
+    "sl": "sladkarije",
+    "cs": "bonbony"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. Candy is not safe for dogs. Its sugar can upset a dog's stomach, and some candy contains chocolate, xylitol or raisins, which are toxic to dogs. Swallowed wrappers can also cause blockages.",
-    "sl": "Ne. Sladkarije za pse niso varne. Sladkor psu lahko razdraži želodec, nekatere sladkarije pa vsebujejo čokolado, ksilitol ali rozine, ki so za pse strupeni. Pogoltnjeni ovitki lahko povzročijo tudi zaporo."
+    "sl": "Ne. Sladkarije za pse niso varne. Sladkor psu lahko razdraži želodec, nekatere sladkarije pa vsebujejo čokolado, ksilitol ali rozine, ki so za pse strupeni. Pogoltnjeni ovitki lahko povzročijo tudi zaporo.",
+    "cs": "Ne. Bonbony nejsou pro psy bezpečné. Cukr může psovi rozhodit žaludek a některé bonbony obsahují čokoládu, xylitol nebo rozinky, které jsou pro psy jedovaté. Spolknuté obaly mohou také způsobit ucpání střev."
   },
   "why": {
     "en": "Candy offers dogs no nutritional value, and sugary, high-fat candy can lead to pancreatitis, a painful inflammation of the pancreas. Chocolate, xylitol (in sugar-free candy and gum) and raisins are toxic. Wrappers can be a choking risk, foil and cellophane wrappers can block the intestines, and large amounts of hard candy can clump in the stomach. Plain sugary candy often causes only mild stomach upset, but because candy can hide toxic ingredients and wrappers, we rate it dangerous.",
-    "sl": "Sladkarije psu ne dajo nobene hranilne vrednosti, sladke in mastne sladkarije pa lahko povzročijo pankreatitis, boleče vnetje trebušne slinavke. Čokolada, ksilitol (v sladkarijah in žvečilnih gumijih brez sladkorja) in rozine so strupeni. Pes se lahko z ovitki zaduši, ovitki iz folije in celofana lahko zamašijo črevesje, večja količina trdih bonbonov pa se lahko v želodcu zlepi v kepo. Navadne sladkarije pogosto povzročijo le blage prebavne težave, a ker lahko skrivajo strupene sestavine in ovitke, jih uvrščamo med nevarne."
+    "sl": "Sladkarije psu ne dajo nobene hranilne vrednosti, sladke in mastne sladkarije pa lahko povzročijo pankreatitis, boleče vnetje trebušne slinavke. Čokolada, ksilitol (v sladkarijah in žvečilnih gumijih brez sladkorja) in rozine so strupeni. Pes se lahko z ovitki zaduši, ovitki iz folije in celofana lahko zamašijo črevesje, večja količina trdih bonbonov pa se lahko v želodcu zlepi v kepo. Navadne sladkarije pogosto povzročijo le blage prebavne težave, a ker lahko skrivajo strupene sestavine in ovitke, jih uvrščamo med nevarne.",
+    "cs": "Bonbony nemají pro psy žádnou výživovou hodnotu a sladké a tučné bonbony mohou vést k zánětu slinivky břišní, bolestivému zánětu slinivky. Čokoláda, xylitol (v bonbonech a žvýkačkách bez cukru) a rozinky jsou jedovaté. Obaly mohou představovat riziko udušení, obaly z fólie a celofánu mohou ucpat střeva a velké množství tvrdých bonbonů se může v žaludku slepit. Obyčejné sladké bonbony často způsobí jen mírné potíže se žaludkem, ale protože bonbony mohou skrývat jedovaté přísady a obaly, hodnotíme je jako nebezpečné."
   },
   "signs": {
     "en": [
@@ -34,36 +39,48 @@
       "Driska",
       "Slabši apetit, utrujenost ali bolečine v trebuhu (znaki pankreatitisa se lahko pokažejo šele po nekaj dneh)",
       "Šibkost, opotekanje ali krči (ksilitol)"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Špatná chuť k jídlu, malátnost nebo bolest břicha (příznaky zánětu slinivky se mohou objevit až za několik dní)",
+      "Slabost, vrávorání nebo záchvaty (xylitol)"
     ]
   },
   "what_to_do": {
     "en": "Move the remaining candy out of reach and gather the wrappers: they help you work out what your dog ate and roughly how much. Check the labels for chocolate, xylitol (also listed as birch sugar) and raisins, then call your vet or a pet poison helpline right away, even if your dog seems fine.",
-    "sl": "Preostale sladkarije pospravite iz pasjega dosega in zberite ovitke: pomagajo vam ugotoviti, kaj in približno koliko je pes pojedel. Na deklaracijah preverite, ali vsebujejo čokolado, ksilitol (naveden je lahko tudi kot brezov sladkor) ali rozine, nato takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se zdi, da je pes v redu."
+    "sl": "Preostale sladkarije pospravite iz pasjega dosega in zberite ovitke: pomagajo vam ugotoviti, kaj in približno koliko je pes pojedel. Na deklaracijah preverite, ali vsebujejo čokolado, ksilitol (naveden je lahko tudi kot brezov sladkor) ali rozine, nato takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se zdi, da je pes v redu.",
+    "cs": "Zbylé bonbony dejte mimo dosah a seberte obaly: pomohou vám zjistit, co pes snědl a zhruba kolik. Zkontrolujte na etiketách čokoládu, xylitol (uváděný také jako březový cukr) a rozinky a hned zavolejte veterináři nebo na toxikologickou linku pro zvířata, i když pes vypadá v pořádku."
   },
   "serving": null,
   "child": {
     "en": "Sweets are for people, not dogs. Keep candy and wrappers out of reach, and tell a grown-up if your dog eats some.",
-    "sl": "Sladkarije so za ljudi, ne za pse. Sladkarije in ovitke pospravi, da jih pes ne doseže, in povej odraslemu, če jih pes poje."
+    "sl": "Sladkarije so za ljudi, ne za pse. Sladkarije in ovitke pospravi, da jih pes ne doseže, in povej odraslemu, če jih pes poje.",
+    "cs": "Bonbony jsou pro lidi, ne pro psy. Bonbony i obaly měj mimo dosah a řekni to dospělému, když pes nějaké sní."
   },
   "faq": [
     {
       "q": {
         "en": "My dog swallowed a candy wrapper. Is that dangerous?",
-        "sl": "Pes je pogoltnil ovitek bonbona. Je to nevarno?"
+        "sl": "Pes je pogoltnil ovitek bonbona. Je to nevarno?",
+        "cs": "Můj pes spolkl obal od bonbonu. Je to nebezpečné?"
       },
       "a": {
         "en": "It can be. Candy wrappers can be a choking risk, and foil and cellophane wrappers can cause a blockage in the intestines. Contact your vet or a pet poison helpline for guidance.",
-        "sl": "Lahko je. Pes se lahko z ovitki zaduši, ovitki iz folije in celofana pa lahko zamašijo črevesje. Za nasvet pokličite veterinarja ali telefonsko linijo za zastrupitve živali."
+        "sl": "Lahko je. Pes se lahko z ovitki zaduši, ovitki iz folije in celofana pa lahko zamašijo črevesje. Za nasvet pokličite veterinarja ali telefonsko linijo za zastrupitve živali.",
+        "cs": "Může být. Obaly od bonbonů mohou představovat riziko udušení a obaly z fólie a celofánu mohou ucpat střeva. Obraťte se na veterináře nebo na toxikologickou linku pro zvířata, poradí vám."
       }
     },
     {
       "q": {
         "en": "Can dogs eat lollipops or jelly beans?",
-        "sl": "Ali lahko psi jedo lizike ali želejeve bonbone?"
+        "sl": "Ali lahko psi jedo lizike ali želejeve bonbone?",
+        "cs": "Mohou psi jíst lízátka nebo želé bonbony?"
       },
       "a": {
         "en": "No. Jelly beans are mostly sugar, which can cause stomach upset. Sugar-free lollipops may contain xylitol, and dogs may chew and swallow the lollipop stick.",
-        "sl": "Ne. Želejevi bonboni so večinoma sladkor, ki lahko povzroči prebavne težave. Lizike brez sladkorja lahko vsebujejo ksilitol, pes pa lahko palčko lizike pregrizne in pogoltne."
+        "sl": "Ne. Želejevi bonboni so večinoma sladkor, ki lahko povzroči prebavne težave. Lizike brez sladkorja lahko vsebujejo ksilitol, pes pa lahko palčko lizike pregrizne in pogoltne.",
+        "cs": "Ne. Želé bonbony jsou z velké části cukr, který může způsobit potíže se žaludkem. Lízátka bez cukru mohou obsahovat xylitol a pes může tyčinku od lízátka rozkousat a spolknout."
       }
     }
   ],
@@ -184,6 +201,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fba87fcfd9a2d18212a26eccab24e0e479c807d3b46bd6d8fc3741b1212cf6df"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "784aa9ac325a7838cb00efd77fbeacc6fcd17cb7e1a7d9e04b2bdf49c548a403"
     }
   }
 }

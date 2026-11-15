@@ -8,6 +8,48 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — Three.js: prototip »Koliko dela je labradorec?«
+
+**Kaj:** David je vprašal, kje lahko three.js naredi korak naprej, tudi poslovno. Odgovor: na spletni strani, ne v aplikaciji — pes v aplikaciji ostane realističen video. Narejen je prototip za petprep.si: en dan z labradorcem v 3D, vsako opravilo pade kot žeton na kup, kup se pomnoži na teden, leto in 13 let (odrasel labradorec: 7.177 ur sprehodov in 9.570 obrokov), nato stroški z izbiro valute in poziv partnerjem. V prizoru so info točke z dejstvi in viri. Samo prototip (`docs/prototypes/real-cost/`), *ni objavljen*.
+**Zakaj je pomembno:** kalkulator »koliko res stane in koliko dela je pes« je v poslovnem modelu kot vaba za starše, a še ni bil zgrajen; hkrati je prostor, ki ga lahko sponzorira zavarovalnica.
+**Kako povedati:** 🧒 »Poglej, koliko opravil pade na kup v enem dnevu — in v 13 letih.« 👩 »Preden se odločite: številke iz virov, stroški v vaši valuti.« 🤝 »Želite postati naš partner? Tu lahko predstavite svojo storitev.« 🛠 »three.js + cannon-es, ena stran brez strežnika; številke skrbi iz registra pasem, stroški PDSA, tečaj ECB fiksiran na 13. 11. 2026.«
+
+## 2026-11-15 — Priboljšek šele, ko je pripravljen (in pravilo za vse funkcije)
+
+**Kaj:** David je na produkciji kupil priboljške in dal prvega: število se je zmanjšalo za 1, na zaslonu pa se ni zgodilo nič — video, kako kuža poje priboljšek, še ni bil narejen. Vzrok: strežnik je video sicer začel pripravljati ob nakupu, a gumb »Priboljšek« in strežniška pot za dajanje priboljška pripravljenosti sploh nista preverjala. Zdaj je gumb viden, a onemogočen z napisom »Priboljški se še pripravljajo — to lahko traja nekaj minut«, strežnik dajanje zavrne in **priboljšek se ne porabi**. Ko je video pripravljen, se gumb vklopi sam in otrok dobi obvestilo.
+
+**Pravilo za naprej (David):** »Če nek video še ne obstaja, mora biti funkcija onemogočena.« Zapisano je v PRODUCT_SPEC §10.1 in v navodilih za razvoj; narejen je pregled vseh 17 skupin otrokovih dejanj (tabela v ARCHITECTURE). Šola in igre so to pravilo že imele, priboljški so bili edini primer »tiho se nič ne zgodi«. Osnovna skrb (hranjenje, voda, čiščenje, sprehod) ne potrebuje svoje animacije in ni nikoli zaklenjena.
+
+**Številke:** video priboljška stane ≈ 0,49 $ enkrat na videz in obdobje (0,15 $ slika + 0,34 $ video); naslednji kupci istega videza 0 $. 9 novih strežniških testov, 14 novih testov aplikacije.
+
+**Kako povedati:** 👩 Kar otrok kupi z vami, deluje od prvega tapa — če še ni pripravljeno, aplikacija to pove in ničesar ne porabi. 🧒 Priboljšek daš, ko je pripravljen; nič se ne izgubi. 💼 Plačana vsebina se nikoli ne porabi brez prikazane vrednosti; pravilo velja za vse prihodnje plačljive dodatke. 🛠 En koncept pripravljenosti (`media_ready` + 422 `media_not_ready`) za posnetke v `pet_media` in `item_media`.
+
+---
+
+## 2026-11-15 — Menjava peska s tremi kretnjami: vleci, drgni, drži
+
+**Kaj:** David je po popravku menjave peska rekel: »Želim da je bolj interaktivno.« Tedenska menjava ima zdaj za vsak korak svojo kretnjo in risbo, ki sledi prstu: stranišče povlečeš do koša (nagne se in star pesek se strese vanj, trije vleki), z drgnjenjem umiješ osem madežev (pena pod prstom), s pritiskom in držanjem vreče nasuješ svež pesek do označene črte (5 sekund). Vse je narisano v aplikaciji — brez AI posnetkov, strošek 0 $. Strežnik se ni spremenil: ista 30-sekundna seja, ista ocena, ista tedenska rutina. Zgrajeno in pokrito s testi (36 novih), **na telefonu še ni preverjeno**.
+**Zakaj je pomembno:** prej so bili vsi trije koraki isto drgnjenje po mirujoči sliki; zdaj otrok z roko naredi to, kar se pri menjavi peska res dela — izprazni, umije, napolni.
+**Kako povedati:** 🧒 »Stresi star pesek v koš, zdrgni madeže in nasuj svežega do črte.« 👩 »Opravilo, ki ga otrok razume z rokami — tri kretnje za tri korake, 30 sekund.« 🛠 »Nova igra brez spremembe API-ja: tri kretnje preslikane na iste poteze, ki jih strežnik že ocenjuje; gre v OTA.«
+
+## 2026-11-15 — Nadgradnja v izziv: starš izbere, ali se ocena skrbi obdrži
+
+**Kaj:** Do zdaj se je ocena skrbi ob nadgradnji brezplačnega ljubljenčka v 12-tedenski izziv vedno začela na novo. David: otrok, ki že mesec dni lepo skrbi za mešančka in za nagrado dobi izziv, ne sme začeti od začetka. Zdaj starš na plačilnem zaslonu izbere »Obdrži dosedanjo oceno« ali »Začni na novo«. Vsaka izbira ima razlago, kaj pomeni za oceno in potrdilo; pri oceni pod 70 aplikacija opozori, če bi jo starš obdržal. 12 tednov v obeh primerih teče od nakupa, izbira je dokončna.
+**Zakaj je pomembno:** nakup izziva je pogosto nagrada za dobro skrb — ponastavitev ocene bi bila ravno takrat kazen. Otrok s slabim začetkom pa lahko dobi čist list.
+**Kako povedati:** 👩 »Mesec dobre skrbi šteje tudi v izzivu — ali pa začnete na novo. Izberete vi.« 🧒 otrok o izbiri ne vidi ničesar; njegova ocena ostane ali se začne znova. 💼 manj trenja pri nadgradnji iz brezplačnega v plačljivo. 🛠 »Ura izziva in začetek ocene sta ločena: 84 dni od nakupa, ocena od otrokovega začetka.«
+
+## 2026-11-15 — »Nazaj« ne konča nobene igre več
+
+**Kaj:** David je potrdil (»1 ja«), da pravilo iz iger nege velja za vse igre: palica s peresom, žoga, crkljanje, čiščenje nereda, lopatka, copat in šola. Če otrok na Androidu med igro potegne od roba zaslona (sistemska kretnja »nazaj«), igra teče naprej in v vrstici se za 4 sekunde pokaže »Za konec igre tapni ×.«. Pravilo je zdaj na enem mestu v igralnem sloju, zato ga dobi tudi vsaka nova igra. Samo aplikacija (OTA), 0 $.
+**Zakaj je pomembno:** met, krog šole ali napolnjeno srce se ne sme izgubiti zaradi kretnje, ki je otrok ni nameraval narediti.
+**Kako povedati:** 👩 »Igra se konča, ko otrok tapne ×, ne po nesreči.« · 🛠 eno pravilo v `GameScreen` namesto kopij po igrah; gostiteljski sloj ne sme imeti svojega poslušalca za »nazaj« nad igro.
+
+## 2026-11-15 — Menjava peska: stranišče na zaslonu in igra, ki se ne prekine sama
+
+**Kaj:** David je na Androidu posnel tedensko menjavo peska pri brezplačni domači mački: med igro je bil na zaslonu posnetek sedeče muce (brez stranišča), po prvem koraku pa je igra padla nazaj na »Začni menjavo«. Vzroka: oder je pokazal posnetek muce, kadar ga muca ima; drgnjenje od roba zaslona pa je Android razumel kot kretnjo »nazaj«, ki je igro ustavila. Zdaj menjava vedno kaže risbo stranišča po korakih (star pesek → prazno z mehurčki → svež pesek), »nazaj« pa med igrami nege samo pokaže »Za konec igre tapni ×.«. Brez novih posnetkov (0 $), samo aplikacija (OTA).
+**Zakaj je pomembno:** otrok, ki pridno drgne, ne sme izgubiti igre zaradi sistemske kretnje; in opravilo mora pokazati to, kar otrok v resnici čisti.
+**Kako povedati:** 🧒 »Zdaj res vidiš stranišče, ki ga prazniš, umivaš in polniš.« 👩 »Igra se ne prekine več sama, če otrok s prstom zaide na rob zaslona.« 🛠 »Robna kretnja ‚nazaj‘ + igra z drgnjenjem = izgubljena seja; rešitev: nazaj je namig, izhod je ×.«
+
 ## 2026-11-11 — Prijava staršev je zaščitena pred ugibanjem gesla
 
 **Kaj:** Prijava s e-naslovom in geslom ima zdaj omejitev: največ 10 poskusov na minuto in 30 na uro z enega naslova IP, račun pa se po 5 napačnih geslih v 15 minutah za 15 minut zaklene (z katerega koli naslova). Uspešna prijava in odgovor aplikacije se nista spremenila; stare različice aplikacije pokažejo običajno »Prijava ni uspela«. Otroška prijava s PIN-om in Google / Apple prijava sta že imeli omejitve in ostaneta takšni. Preverjeno v testih (zaklep, ponastavitev, drugi računi niso prizadeti).

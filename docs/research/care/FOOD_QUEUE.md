@@ -162,10 +162,27 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [d] gum — no source cat 2026-11-12 (cat sources conflict on xylitol; no cat signs)
 - [x] nutmeg
 - [x] cinnamon
-- [ ] ginger
-- [ ] turmeric · black-pepper · vanilla · cocoa-powder · baking-soda · vinegar · soy-sauce · ketchup
-- [ ] mayonnaise · mustard · gravy · broth · hot-dogs · sausages · deli-meat · fish-sticks · sushi
-- [ ] tofu · beans · lentils · chickpeas · hummus · nut-butters · seeds-sunflower · chia-seeds · flaxseed
+- [x] ginger
+- [x] turmeric
+- [-] black-pepper — no source dog 2026-11-13 — no source cat 2026-11-13
+- [x] vanilla (vanilla extract)
+- [x] cocoa-powder
+- [d] baking-soda — no source cat 2026-11-13
+- [-] vinegar — no source dog 2026-11-13 — no source cat 2026-11-13
+- [d] soy-sauce — no source cat 2026-11-13
+- [d] ketchup — no source cat 2026-11-13
+- [-] mayonnaise — no source dog 2026-11-13 — no source cat 2026-11-13
+- [d] mustard — no source cat 2026-11-14
+- [x] gravy
+- [x] broth
+- [x] hot-dogs
+- [x] sausages
+- [c] deli-meat — no source dog 2026-11-14 (only a tier C blog; verifier rejected)
+- [-] fish-sticks — no source dog 2026-11-14 — no source cat 2026-11-14
+- [-] sushi — no source dog 2026-11-14 — no source cat 2026-11-14
+- [d] tofu — no source cat 2026-11-14
+- [d] beans — no source cat 2026-11-14
+- [ ] lentils · chickpeas · hummus · nut-butters · seeds-sunflower · chia-seeds · flaxseed
 
 ## W5 — drinks and other
 - [ ] water · cow-milk-kittens (cat) · lactose-free-milk · goat-milk · kefir · juice · soda · coconut-water

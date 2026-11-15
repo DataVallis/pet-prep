@@ -806,6 +806,51 @@
 | welfare breed (RKC Breed Watch Category 1, S787). Black and tan first with the highest weight (the portrait default);
 | weights unsourced → `verified => false`.
 |
+| Toy Fox Terrier (M5-R10-112, docs/research/dog-data toy_fox_terrier.appearance): "The Toy Fox Terrier is a well-balanced
+| Toy dog of athletic appearance" (AKC standard via KUSA, S835); tri-colour, white chocolate and tan, white and tan, white
+| and black — the body over half white; never a solid colour, a blaze into the eyes or ears, or blue / grey (S835, UKC
+| S838); short, satiny, shiny coat; erect pointed V-shaped ears; tail customarily docked (the portrait shows a natural tail,
+| UKC S838 does not penalise it). Tricolour first with the highest weight (the portrait default, Claude's choice); weights
+| unsourced → `verified => false`.
+|
+| Gordon Setter (M5-R10-113, docs/research/dog-data gordon_setter.appearance): "Stylish dog, with galloping lines."
+| (FCI-Standard N° 6, S841); colour "Deep, shining coal black, without rustiness, with markings of chestnut red, i.e. lustrous
+| tan." and "No other colour permissible." (S841); muzzle "Long with almost parallel lines", eyes dark brown, ears "Set low,
+| lying close to head", coat flat and of moderate length with silky feathering, tail "Straight or slightly scimitar"
+| (S841; natural). RKC Breed Watch Category 2 without returned points (S842) — no welfare trait. One standard colour;
+| weight unsourced → `verified => false`.
+|
+| Parson Russell Terrier (M5-R10-116, docs/research/dog-data parson_russell_terrier.appearance): "Workmanlike, active and
+| agile, without exaggeration." (FCI-Standard N° 339, S864); colour "White or predominantly white with tan, lemon or black
+| markings, or any combination of these colours." — preferably on the head and / or root of the tail (S864); coat rough,
+| broken or smooth, naturally harsh and dense; wedge-shaped head, V-shaped ears dropping forward; tail undocked (natural).
+| RKC Breed Watch Category 1 (S865) — no welfare trait. White with tan markings first with the highest weight (the portrait
+| default); weights unsourced → `verified => false`. Not the Jack Russell Terrier (FCI 345, `russell_terrier`).
+|
+| Australian Silky Terrier (M5-R10-115, docs/research/dog-data australian_silky_terrier.appearance): "It should display
+| Terrier characteristics, embodying keen alertness, activity and soundness." (FCI-Standard N° 236, S855); colour "All shades
+| of blue and tan are acceptable" — "Silver and white not acceptable.", "Silver blue or fawn topknot desirable." (S855; AKC
+| S860 "Blue and tan. The blue may be silver blue, pigeon blue or slate blue, the tan deep and rich."); hair "flat, fine and
+| glossy and of a silky texture" (S855; AKC: falls below and follows the body outline — not to the floor, unlike the
+| Yorkshire Terrier); ears "small, V-shaped … pricked, and entirely free from long hair"; tail undocked "carried erect or
+| slightly curved" (S855; natural). RKC Breed Watch Category 1 (S856) — no welfare trait. One standard colour; weight
+| unsourced in the standards → `verified => false`.
+|
+| Afghan Hound (M5-R10-114, docs/research/dog-data afghan_hound.appearance): "Gives the impression of strength and dignity,
+| combining speed and power. Head held proudly." (FCI-Standard N° 228, S849); colour "All colours, except merle which is
+| unacceptable. However white markings on the head or collar are highly undesirable." (S849; AKC S854 "All colors are
+| permissible"); coat "Long and very fine texture on ribs, fore and hindquarters and flanks." and never clipped (S849); muzzle
+| "Long, with punishing jaws.", nose preferably black; ears "Set low and well back, carried close to head."; tail "Not too
+| short. Set on low with ring at end." (S849; natural). RKC Breed Watch Category 1 (S850) — no welfare trait. Seven common
+| colours of "all colours", gold with a black mask first with the highest weight (the portrait default, Claude's choice);
+| weights unsourced → `verified => false`.
+|
+| Belgian Tervuren (M5-R10-111, docs/research/dog-data belgian_tervuren.appearance): "Only fawn with black overlay or grey
+| with black overlay, with black mask" (FCI standard No. 15, S831 — "the fawn with black overlay is still preferred"; grey
+| is a fault but allowed; never black, brindle or white patches); long-haired variety with a ruff, breeches and a plumed
+| tail, rather small erect triangular ears, pronounced black mask. Not flat-faced; RKC Breed Watch Category 1 (S830). Fawn
+| first with the highest weight (the portrait default); weights unsourced → `verified => false`.
+|
 | Schipperke (M5-R10-110, docs/research/dog-data schipperke.appearance): "Totally black." (FCI-Standard N° 83, S825; any
 | other top-coat colour or tiny white spots disqualify); abundant straight harsh coat with a ruff, mane, frill and culottes,
 | erect very small pointed ears, wedge-shaped lupoid head, natural tail (born tailless allowed). Not flat-faced; RKC Breed
@@ -4791,6 +4836,213 @@ return [
             'ear_carriage' => ['erect, very small, pointed triangular ears set high'],
             'eye_color' => ['small, dark brown, almond-shaped, lively eyes'],
             'tail' => ['natural tail'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-111 (docs/research/dog-data/data.json belgian_tervuren.appearance; runbook rules 2026-10-10: the standard's
+    // Tervueren colours only — fawn or grey with black overlay and black mask (FCI S831); erect ears, natural plumed tail).
+    'belgian_tervuren' => [
+        'display_name' => 'Belgian Tervuren',
+        // Colour frequencies are in no source (belgian_tervuren.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard No. 15 (S313, KUSA reprint S831), RKC Breeds A–Z (S830) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S830 "Size: Medium-Large"; S313 ideal height 62 cm (males) / 58 cm (females)',
+            'build' => 'S313 "The Belgian Shepherd is a mediolineal dog, harmoniously proportioned, combining elegance and power."',
+            'coat_length' => 'S831 "The Groenendael and the Tervueren are the long-haired varieties." — short on the head and lower legs, long on the body, ruff, breeches, plumed tail',
+            'coat_color' => 'S831 "Only fawn with black overlay or grey with black overlay, with black mask"; "the fawn with black overlay is still preferred" (weights unsourced)',
+            'ear_carriage' => 'S831 "Rather small, set high, distinctly triangular appearance"; "stiff, carried upright, and vertical when dog is alert"',
+            'eye_color' => 'S831 "Medium size, neither protruding nor sunken, slightly almond-shaped"; "brownish colour, preferably dark"',
+            'tail' => 'S831 "Well set on, strong at the base, of medium length, reaching at least to hock"; "at rest carried down, with tip curved backwards at level of hock"',
+            'muzzle' => 'S831 "the mask must be very pronounced"; "narrowing gradually toward the nose like an elongated wedge"',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'harmoniously proportioned, elegant and powerful long-haired shepherd build with a proud head carriage', 'weight' => 3], 'lean, athletic, square shepherd build'],
+            'coat_length' => ['long, smooth coat with a dense undercoat, a full ruff around the neck, breeches and a plumed tail, short hair on the head and lower legs'],
+            // FCI Tervueren colours only (S831); fawn highest (the preferred colour) → the register portrait.
+            'coat_color' => [
+                ['value' => 'fawn with black overlay (black-tipped hairs) and a pronounced black mask', 'weight' => 4],
+                'grey with black overlay (black-tipped hairs) and a pronounced black mask',
+            ],
+            'ear_carriage' => ['rather small, high-set, distinctly triangular ears carried stiffly erect'],
+            'eye_color' => ['medium, slightly almond-shaped, dark brown eyes'],
+            'tail' => ['natural plumed tail reaching the hock, carried low at rest with the tip curved slightly back'],
+            'muzzle' => ['black mask covering the muzzle and lips; long muzzle narrowing like an elongated wedge'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-112 (docs/research/dog-data/data.json toy_fox_terrier.appearance; runbook rules 2026-10-10: the AKC standard's
+    // colours only — tri-colour, white chocolate and tan, white and tan, white and black, the body over half white (S835);
+    // never solid, never blue / grey; erect ears, natural tail).
+    'toy_fox_terrier' => [
+        'display_name' => 'Toy Fox Terrier',
+        // Colour frequencies are in no source (toy_fox_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'AKC Official Standard of the Toy Fox Terrier, effective 2016, KUSA reprint (S835), UKC standard 2024 (S838) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S835 "21.5cm – 28cm (approx. 8½” – 11½”) acceptable."; S833 "weighing 4–9 pounds"',
+            'build' => 'S835 "The Toy Fox Terrier is a well-balanced Toy dog of athletic appearance, displaying grace and agility in equal measure"',
+            'coat_length' => 'S838 "the coat is short, satiny and shiny; fine in texture and smooth to the touch."',
+            'coat_color' => 'S835 "Tri-colour: Predominately black head with sharply defined tan markings on cheeks, lips, and eye dots." — also white, chocolate and tan; white and tan; white and black; body over 50 % white (weights unsourced)',
+            'head' => 'S835 "The head is elegant, balanced, and expressive with no indication of coarseness."',
+            'ear_carriage' => 'S835 "The ears are erect, pointed, inverted V-shaped, set high and close together, but never touching."',
+            'eye_color' => 'S835 "Clear, bright, and dark, including eye-rims, with the exception of chocolates, whose eye-rims should be selfcoloured."',
+            'tail' => 'S835 "Set high, held erect, and in proportion to the size of the dog. Docked to the third or fourth joint." (UKC S838: a full tail is not penalised — the portrait shows a natural tail)',
+        ],
+        'traits' => [
+            'size' => ['tiny toy-sized'],
+            'build' => [['value' => 'well-balanced, athletic toy terrier with a graceful, agile and strong build', 'weight' => 3], 'small, lithe and sturdy terrier build'],
+            'coat_length' => ['short, satiny, shiny coat, fine and smooth to the touch'],
+            // AKC colours (S835), always a predominantly white body; tricolour first with the highest weight → the register
+            // portrait (Claude's choice: the most typical, PetMD S833 "predominantly white color with striking patches of black and tan").
+            'coat_color' => [
+                ['value' => 'tricolour: predominantly white body, black head with sharply defined tan markings on the cheeks, lips and eye dots', 'weight' => 40],
+                ['value' => 'white, chocolate and tan: predominantly white body, chocolate-brown head with tan markings and a self-coloured brown nose', 'weight' => 20],
+                ['value' => 'white and tan: predominantly white body with a tan head', 'weight' => 20],
+                ['value' => 'white and black: predominantly white body with a black head', 'weight' => 20],
+            ],
+            'head' => ['elegant, balanced, expressive wedge-shaped head with a black nose'],
+            'ear_carriage' => ['erect, pointed, inverted V-shaped ears set high and close together'],
+            'eye_color' => ['clear, bright, dark round eyes with dark eye-rims'],
+            'tail' => ['natural tail, set high and held erect'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-113 (docs/research/dog-data/data.json gordon_setter.appearance; runbook rules 2026-10-10: the one standard colour
+    // of FCI-Standard N° 6 (S841), black and tan = the portrait default; natural tail).
+    'gordon_setter' => [
+        'display_name' => 'Gordon Setter',
+        // Colour frequencies are in no source (gordon_setter.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 6 (S841) and the RKC breed page (S842) — for the traits listed in `sources`. The colour weight is unsourced.',
+        'sources' => [
+            'size' => 'S841 "Height at the withers: Males 66 cm (26 ins.)." / "Weight: Males 29.5 kg (65 lbs)."; RKC S842 "Large"',
+            'build' => 'S841 "Stylish dog, with galloping lines."',
+            'coat_length' => 'S841 "moderate length, flat and free from curl or wave on all other parts of body."',
+            'coat_color' => 'S841 "Deep, shining coal black, without rustiness, with markings of chestnut red, i.e. lustrous tan." / "No other colour permissible." (weight unsourced)',
+            'muzzle' => 'S841 "Long with almost parallel lines, neither pointed nor snipey."; nose "Large, broad, nostrils open and black."',
+            'ear_carriage' => 'S841 "Medium size, thin. Set low, lying close to head."',
+            'eye_color' => 'S841 "Dark brown, bright. Neither deep nor prominent, set sufficiently under brows, showing keen, intelligent expression."',
+            'tail' => 'S841 "Straight or slightly scimitar, not reaching below hocks." (natural)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'stylish, symmetrical setter with galloping lines', 'weight' => 3], 'strong, athletic gundog'],
+            'coat_length' => ['flat coat of moderate length with long silky feathering on the ears, chest, legs and tail'],
+            // The one standard colour (FCI S841) → the register portrait.
+            'coat_color' => [
+                ['value' => 'black and tan (deep coal black with chestnut-red tan markings)', 'weight' => 100],
+            ],
+            'muzzle' => ['long muzzle with almost parallel lines and a large, broad black nose'],
+            'ear_carriage' => ['thin, low-set ears of medium size lying close to the head, with silky feathering'],
+            'eye_color' => ['bright dark brown eyes with a keen, intelligent expression'],
+            'tail' => ['natural tail, straight or slightly curved, carried level or below the back, with feathering'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-114 (docs/research/dog-data/data.json afghan_hound.appearance; runbook rules 2026-10-10: colours of FCI-Standard
+    // N° 228 (S849) "All colours, except merle", gold with a black mask = the portrait default; natural tail; never clipped).
+    'afghan_hound' => [
+        'display_name' => 'Afghan Hound',
+        // Colour frequencies are in no source (afghan_hound.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 228 (S849), the AKC standard (S854) and the RKC breed page (S850) — for the traits listed in `sources`. The colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S849 "Males: 68 – 74 cm" / "Females: 63 – 69 cm"; AKC S854 "Dogs, about 60 pounds; bitches, about 50 pounds."; RKC S850 "Large"',
+            'build' => 'S849 "Gives the impression of strength and dignity, combining speed and power. Head held proudly."',
+            'coat_length' => 'S849 "Long and very fine texture on ribs, fore and hindquarters and flanks." (never clipped)',
+            'coat_color' => 'S849 "All colours, except merle which is unacceptable. However white markings on the head or collar are highly undesirable." (weights unsourced)',
+            'muzzle' => 'S849 "Muzzle: Long, with punishing jaws."; "Nose: Preferably black, liver permissible in light-coloured dogs."',
+            'ear_carriage' => 'S849 "Set low and well back, carried close to head."',
+            'eye_color' => 'S849 "Preferably dark, but golden colour permissible."',
+            'tail' => 'S849 "Not too short. Set on low with ring at end." (natural)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'tall, elegant sighthound of strength and dignity, head held proudly', 'weight' => 3], 'lean, athletic sighthound with prominent hip bones'],
+            'coat_length' => ['long, very fine, silky coat on the ribs, flanks and legs with a short, close saddle along the back'],
+            // "All colours, except merle" (FCI S849) — seven common colours, never white head / collar markings.
+            'coat_color' => [
+                ['value' => 'golden with a black mask', 'weight' => 30],
+                ['value' => 'cream', 'weight' => 15],
+                ['value' => 'red with a black mask', 'weight' => 15],
+                ['value' => 'black', 'weight' => 15],
+                ['value' => 'black and tan', 'weight' => 10],
+                ['value' => 'blue (slate grey)', 'weight' => 8],
+                ['value' => 'brindle', 'weight' => 7],
+            ],
+            'muzzle' => ['long, refined muzzle with a black nose'],
+            'ear_carriage' => ['low-set ears carried close to the head, covered with long silky hair'],
+            'eye_color' => ['dark eyes with an aloof, far-seeing expression'],
+            'tail' => ['natural tail set low with a ring at the end'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-115 (docs/research/dog-data/data.json australian_silky_terrier.appearance; runbook rules 2026-10-10: the one
+    // standard colour of FCI-Standard N° 236 (S855) — blue and tan with a silver / fawn topknot = the portrait default;
+    // natural tail; coat following the body outline, never floor-length).
+    'australian_silky_terrier' => [
+        'display_name' => 'Australian Silky Terrier',
+        // One standard colour; the trait list itself is an unchecked draft → false.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 236 (S855), the AKC standard (S860) and the RKC breed page (S856) — for the traits listed in `sources`.',
+        'sources' => [
+            'size' => 'S856 "Size: Small"; S855 "Height at the withers: Males: 23 to 26 cms."; PetMD S857 "around 10 pounds"',
+            'build' => 'S860 "The body is about one fifth longer than the dog\'s height at the withers."; S855 "keen alertness, activity and soundness"',
+            'coat_length' => 'S855 "Hair: Must be flat, fine and glossy and of a silky texture."; S860 "On matured specimens the coat falls below and follows the body outline."',
+            'coat_color' => 'S855 "All shades of blue and tan are acceptable, the richer these colours and more clearly defined the better." "Silver blue or fawn topknot desirable."; S860 "Blue and tan. The blue may be silver blue, pigeon blue or slate blue, the tan deep and rich."',
+            'muzzle' => 'S855 "Of moderate length, slightly shorter from the tip of the nose to between the eyes than from the same position to the occiput." "Nose: Black."',
+            'ear_carriage' => 'S855 "Should be small, V-shaped with fine leather, set high on the skull, pricked, and entirely free from long hair."',
+            'eye_color' => 'S855 "Shall be small, oval never round or prominent, dark as possible in colour with a keen intelligent expression."',
+            'tail' => 'S855 undocked: "the first three vertebrae to be carried erect or slightly curved but not curved over back." (natural)',
+        ],
+        'traits' => [
+            'size' => ['small toy-sized'],
+            'build' => [['value' => 'compact, moderately low-set toy terrier, slightly longer than tall, keenly alert', 'weight' => 3], 'small, sturdy and lively terrier'],
+            'coat_length' => ['straight, flat, fine and glossy silky coat parted along the back, falling below and following the body outline, never touching the floor'],
+            // Blue and tan is the only standard colour (S855, S860, S861).
+            'coat_color' => ['silver blue and tan: silver to slate blue body with rich tan legs and face, a silver or fawn topknot'],
+            'muzzle' => ['moderate-length head with a black nose'],
+            'ear_carriage' => ['small, pricked, V-shaped ears free from long hair'],
+            'eye_color' => ['small, dark, oval eyes with a keen expression'],
+            'tail' => ['natural tail carried erect or slightly curved, never over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-116 (docs/research/dog-data/data.json parson_russell_terrier.appearance; runbook rules 2026-10-10: the standard
+    // colours of FCI-Standard N° 339 (S864) — white with tan markings first = the portrait default; natural tail).
+    'parson_russell_terrier' => [
+        'display_name' => 'Parson Russell Terrier',
+        // Colour frequencies are in no source (parson_russell_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 339 (S864, https://dev.fci.be/Nomenclature/Standards/339g03-en.pdf), RKC breed page (S865), PDSA (S866) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S865 "Size: Small"; S864 "Males: Ideal height 36 cm" / "Females: Ideal height 33 cm"; S866 "6-8 kg"',
+            'build' => 'S864 "Workmanlike, active and agile, without exaggeration." "Built for stamina and endurance, overall picture of balance and flexibility."',
+            'coat_length' => 'S864 "Whether rough, broken or smooth naturally harsh, flat, straight, close and dense with good undercoat."; S865 "Coat length: Short"',
+            'coat_color' => 'S864 "White or predominantly white with tan, lemon or black markings, or any combination of these colours." (weights unsourced)',
+            'head' => 'S864 "Head wedge shaped." "Nose: Black."',
+            'ear_carriage' => 'S864 "V-shaped, dropping forward, tip of ear to be level with outer corner of eye."',
+            'eye_color' => 'S864 "Dark, almond shaped, never prominent."',
+            'tail' => 'S864 undocked: "Thick at the root and tapering towards the tip." "Moderately high set, carried well up on the move" (natural)',
+        ],
+        'traits' => [
+            'size' => ['small terrier, slightly longer than tall'],
+            'build' => [['value' => 'workmanlike, active and agile working terrier built for stamina, without exaggeration', 'weight' => 3], 'balanced, flexible and racy small working terrier'],
+            'coat_length' => [['value' => 'smooth, harsh, dense and close weather-resistant coat', 'weight' => 3], 'broken, harsh and dense weather-resistant coat'],
+            // FCI standard (S864); white with tan weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'white with tan markings', 'weight' => 4],
+                ['value' => 'white with black and tan markings', 'weight' => 2],
+                'white with lemon markings',
+                'white with black markings',
+            ],
+            'head' => ['wedge-shaped head with a flat, moderately broad skull and a black nose'],
+            'ear_carriage' => ['small V-shaped ears dropping forward'],
+            'eye_color' => ['dark, almond-shaped eyes with a keen expression'],
+            'tail' => ['natural undocked tail of moderate length, carried well up'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

@@ -25,6 +25,18 @@
  * swipe only. In hold mode the weekly litter change plays on the same `BrushArea` (hold on the
  * box scrubs it gradually, patches fade, a bar fills) — same strokes, same server verdict, it
  * still finishes at the session's end. In swipe mode the litter change keeps its plain stage.
+ *
+ * Litter change, three gestures (David 2026-11-15, »Želim da je bolj interaktivno«): on a
+ * game-layer binary the running weekly change is `litterChange/LitterChangeGame` — drag the tray
+ * to the bin (Izprazni), rub the spots away (Umij), press and hold to pour to the line (Napolni);
+ * the same session, the same `strokes` payload and the same server verdict (rules in
+ * `litterChange/litterChange.ts`). Reached only through `loadLitterChangeGame()`; without the
+ * layer (or if it fails to load) the rub below stays.
+ *
+ * Litter change stage (David 2026-11-15, production bug): the stage is ALWAYS the litter box
+ * drawing (`TrayGraphic` per step: old litter → empty + bubbles → fresh litter), never the
+ * cat's video (`CatStage objectOnly`). Before, every cat with videos — since the shared looks
+ * also the free domestic cat — got its resting clip there and the child rubbed a sitting cat.
  */
 
 import { useMemo, useRef, useState } from 'react';
@@ -58,6 +70,7 @@ import { careFrame } from '@/modules/gameLayer/careFrame';
 import { gameFeedbackOf } from '@/modules/gameLayer/gameFeedback';
 import { GameExitProvider } from '@/modules/gameLayer/gameExit';
 import { loadCareShell, type CareGameShellType } from '@/modules/gameLayer/loadCareShell';
+import { loadLitterChangeGame } from '@/modules/catCare/litterChange/loadLitterChangeGame';
 import { palette } from '@/theme';
 
 const S = CHORE_STRINGS;
@@ -135,6 +148,28 @@ export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock,
   const icon = kind === 'grooming' ? <Brush color={palette.mint} size={22} /> : <Sparkles color={palette.mint} size={22} />;
   // GAMES_SPEC §7.7: on a game-layer binary the running game is full screen (same rules).
   const [Shell] = useState(() => loadCareShell());
+  // The weekly change's three gestures (same layer; null → the rub in `ChoreRunning`).
+  const [LitterGame] = useState(() => (kind === 'litter_change' ? loadLitterChangeGame() : null));
+
+  if (Shell !== null && LitterGame !== null && (phase.kind === 'running' || phase.kind === 'finishing')) {
+    return (
+      <GameExitProvider value={onClose}>
+        <LitterGame
+          Shell={Shell}
+          view={view}
+          session={phase.session}
+          strokes={phase.input}
+          elapsedMs={game.elapsedMs}
+          finishing={phase.kind === 'finishing'}
+          reduceMotion={reduceMotion}
+          msAt={game.msAt}
+          onStroke={(ms) => game.setInput((strokes) => addStroke(strokes, ms, phase.session.duration_ms))}
+          onStop={game.stop}
+          testID={testID}
+        />
+      </GameExitProvider>
+    );
+  }
 
   if (Shell !== null && (phase.kind === 'running' || phase.kind === 'finishing')) {
     return (
@@ -172,7 +207,9 @@ export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock,
     >
       {phase.kind === 'intro' && (
         <ScrollView contentContainerStyle={styles.content} testID={`${testID}-intro`}>
-          <Text style={styles.body}>{texts.intro}</Text>
+          <Text style={styles.body} testID={`${testID}-intro-text`}>
+            {LitterGame !== null && Shell !== null ? S.litter_change.introPlay : texts.intro}
+          </Text>
           {intro.lines.map((line, i) => (
             <Text key={i} style={[line.strong ? styles.bodyStrong : styles.muted, line.done && styles.doneText]} testID={`${testID}-line-${i}`}>
               {line.text}
@@ -350,6 +387,8 @@ function ChoreRunning({
     [],
   );
 
+  // The litter change is about the box, not the cat: its drawing on every tier (never a video).
+  const objectOnly = kind === 'litter_change';
   const illustration = dog ? (
     // M5-R13: the dog's drawing — happy once enough strokes are in (a change, not an animation).
     <Text style={dogStyles.figure} accessible={false}>
@@ -366,7 +405,7 @@ function ChoreRunning({
   if (Shell !== null) {
     // Full screen: the pet / the box edge to edge, the step on the top line, ✓ per step.
     const full = (
-      <CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} full testID={`${testID}-stage`} />
+      <CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} full objectOnly={objectOnly} testID={`${testID}-stage`} />
     );
     return (
       <Shell
@@ -431,7 +470,7 @@ function ChoreRunning({
           msAt={msAt}
           onStroke={onStroke}
           renderStage={(layers) => (
-            <CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} testID={`${testID}-stage`}>
+            <CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} objectOnly={objectOnly} testID={`${testID}-stage`}>
               {layers}
             </CatStage>
           )}
@@ -445,6 +484,7 @@ function ChoreRunning({
               petState="idle"
               illustration={illustration}
               onMediaExpired={onMediaExpired}
+              objectOnly={objectOnly}
               accessibilityLabel={texts.stageA11y}
               testID={`${testID}-stage`}
             />

@@ -2234,6 +2234,126 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.schipperke',
                 'search_keywords' => ['schipperke', 'siperke', 'šiperke', 'little captain'],
             ],
+            // M5-R10-111 Belgian Tervuren (docs/research/dog-data/data.json belgian_tervuren, sources S830–S832; runbook rules
+            // confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.belgian_tervuren.step_goal_adult: 120 min × 100 steps/min — RKC S830 "More than 2 hours
+            // per day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::BelgianTervuren->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1040,
+                'label_key' => 'breeds.belgian_tervuren',
+                'search_keywords' => ['belgian tervuren', 'belgijski ovčar tervuren', 'belgijski ovcar tervuren', 'tervuren', 'tervueren', 'terv', 'belgian shepherd tervueren', 'belgian shepherd dog tervueren'],
+            ],
+            // M5-R10-112 Toy Fox Terrier (docs/research/dog-data/data.json toy_fox_terrier, sources S833–S839; runbook rules
+            // confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.toy_fox_terrier.step_goal_adult: 60 min × 100 steps/min — PetMD S833 "at least an hour
+            // every day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::ToyFoxTerrier->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1050,
+                'label_key' => 'breeds.toy_fox_terrier',
+                'search_keywords' => ['toy fox terrier', 'toy fox terier', 'tft', 'american toy terrier', 'amertoy'],
+            ],
+            // M5-R10-113 Gordon Setter (docs/research/dog-data/data.json gordon_setter, sources S840–S847; runbook rules
+            // confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.gordon_setter.step_goal_adult: 120 min × 100 steps/min — RKC S842 "More than 2 hours
+            // per day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::GordonSetter->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1060,
+                'label_key' => 'breeds.gordon_setter',
+                'search_keywords' => ['gordon setter', 'gordonski seter', 'gordon seter', 'setter', 'seter', 'black and tan setter', 'scottish setter', 'škotski seter', 'skotski seter'],
+            ],
+            // M5-R10-114 Afghan Hound (docs/research/dog-data/data.json afghan_hound, sources S848–S854; runbook rules
+            // confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.afghan_hound.step_goal_adult: 120 min × 100 steps/min — RKC S850 "More than 2 hours
+            // per day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::AfghanHound->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1070,
+                'label_key' => 'breeds.afghan_hound',
+                'search_keywords' => ['afghan hound', 'afganski hrt', 'afghan', 'afganec', 'hrt', 'tazi', 'baluchi hound', 'sighthound'],
+            ],
+            // M5-R10-115 Australian Silky Terrier (docs/research/dog-data/data.json australian_silky_terrier, sources S855–S863;
+            // runbook rules confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.australian_silky_terrier.step_goal_adult: 30 min × 100 steps/min — RKC S856 "Up to 30
+            // minutes per day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::AustralianSilkyTerrier->slug(),
+                'daily_steps_required' => 3000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1080,
+                'label_key' => 'breeds.australian_silky_terrier',
+                'search_keywords' => ['australian silky terrier', 'avstralski svilnati terier', 'silky terrier', 'silky', 'silky terier', 'svilnati terier', 'svilni terier', 'terier', 'terrier'],
+            ],
+            // M5-R10-116 Parson Russell Terrier (docs/research/dog-data/data.json parson_russell_terrier, sources S864–S870;
+            // runbook rules confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.parson_russell_terrier.step_goal_adult: 60 min × 100 steps/min — RKC S865 "Up to 1 hour
+            // per day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::ParsonRussellTerrier->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1090,
+                'label_key' => 'breeds.parson_russell_terrier',
+                'search_keywords' => ['parson russell terrier', 'parson russell terier', 'parson terrier', 'parson terier', 'parson', 'prt', 'terier', 'terrier'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

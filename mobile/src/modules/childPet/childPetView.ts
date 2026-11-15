@@ -400,7 +400,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       until: isoOrNull(raw.lock.until),
     },
     timezone: raw.timezone,
-    server_time: raw.server_time,
+    // The schema allows null (a server always sends it); fall back to the device clock.
+    server_time: raw.server_time ?? new Date().toISOString(),
     // M5-T02: an older server sends no `sleep` (typed as required by the current schema).
     sleep: readSleep((raw as { sleep?: unknown }).sleep, petState(p.pet_state)),
     feeding: {

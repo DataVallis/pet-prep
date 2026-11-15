@@ -12,6 +12,13 @@
  *   (`careFrame.ts`); `okSignal` / `missSignal` counters for a one-shot verdict (scratching:
  *   ✓ for a praise in time, a soft amber ✗ for one too early — never a sound or haptic for it).
  *
+ * Android back never stops a running care game (David 2026-11-15, production: the weekly litter
+ * change fell back to its start card mid-game — rubbing across the screen edge is Android's back
+ * GESTURE, and back used to be the × = »stop«, which throws the session away). That is now
+ * `GameScreen`'s rule for every game (`gameBack`): while the × is there, back only shows the
+ * `backHint` line for `GAME_BACK_HINT_MS`; a locked × (finishing, the scratching carry) and the
+ * escape card keep their rules. Nothing about it lives here.
+ *
  * Reached ONLY through `loadCareShell()` behind `gameLayerAvailable()` (this file imports the
  * native layer); an older binary keeps the old card screens.
  */

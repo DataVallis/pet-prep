@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Honey",
-    "sl": "Med"
+    "sl": "Med",
+    "cs": "Med"
   },
   "question": {
     "en": "Can dogs eat honey?",
-    "sl": "Ali lahko psi jedo med?"
+    "sl": "Ali lahko psi jedo med?",
+    "cs": "Mohou psi jíst med?"
   },
   "url_slug": {
     "en": "honey",
-    "sl": "med"
+    "sl": "med",
+    "cs": "med"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. Honey is generally fine for healthy adult dogs in small quantities, but it is mostly sugar, so there is little reason to give it regularly. Don't give raw honey to puppies or dogs with weak immune systems, or any honey to diabetic dogs.",
-    "sl": "Da, v majhnih količinah. Med je za zdrave odrasle pse v majhnih količinah na splošno v redu, vendar je večinoma sladkor, zato ga ni smiselno dajati redno. Surovega medu ne dajajte mladičem in psom s šibkim imunskim sistemom, psom s sladkorno boleznijo pa nobenega medu."
+    "sl": "Da, v majhnih količinah. Med je za zdrave odrasle pse v majhnih količinah na splošno v redu, vendar je večinoma sladkor, zato ga ni smiselno dajati redno. Surovega medu ne dajajte mladičem in psom s šibkim imunskim sistemom, psom s sladkorno boleznijo pa nobenega medu.",
+    "cs": "Ano, v malém množství. Med je pro zdravé dospělé psy v malém množství obvykle v pořádku, ale je to hlavně cukr, takže není důvod ho dávat pravidelně. Nedávejte syrový med štěňatům ani psům se slabou imunitou a žádný med psům s cukrovkou."
   },
   "why": {
     "en": "Honey contains natural sugars and small amounts of vitamins and minerals. Its high sugar content can lead to obesity if a dog gets too much, and sugars can cause tooth decay. Raw honey may contain botulism, so it is not for puppies or dogs with weak immune systems.",
-    "sl": "Med vsebuje naravne sladkorje ter majhne količine vitaminov in mineralov. Med ima veliko sladkorja, zato lahko pri prevelikih količinah vodi v debelost, sladkorji pa lahko povzročijo zobno gnilobo. Surov med lahko vsebuje botulizem, zato ni primeren za mladiče in pse s šibkim imunskim sistemom."
+    "sl": "Med vsebuje naravne sladkorje ter majhne količine vitaminov in mineralov. Med ima veliko sladkorja, zato lahko pri prevelikih količinah vodi v debelost, sladkorji pa lahko povzročijo zobno gnilobo. Surov med lahko vsebuje botulizem, zato ni primeren za mladiče in pse s šibkim imunskim sistemom.",
+    "cs": "Med obsahuje přírodní cukry a malé množství vitamínů a minerálů. Vysoký obsah cukru může při příliš velkém množství vést k obezitě a cukry mohou způsobit zubní kaz. Syrový med může obsahovat původce botulismu, proto není pro štěňata ani psy se slabou imunitou."
   },
   "signs": null,
   "what_to_do": {
     "en": "Small amounts of honey are generally fine for a healthy adult dog. If your dog has a health condition such as diabetes, or you are unsure how much is okay, talk to your vet.",
-    "sl": "Majhne količine medu so za zdravega odraslega psa na splošno v redu. Če ima pes kakšno bolezen, na primer sladkorno, ali če niste prepričani, koliko je v redu, se posvetujte z veterinarjem."
+    "sl": "Majhne količine medu so za zdravega odraslega psa na splošno v redu. Če ima pes kakšno bolezen, na primer sladkorno, ali če niste prepričani, koliko je v redu, se posvetujte z veterinarjem.",
+    "cs": "Malé množství medu je pro zdravého dospělého psa obvykle v pořádku. Pokud má pes zdravotní potíže, například cukrovku, nebo si nejste jistí, kolik je v pořádku, poraďte se s veterinářem."
   },
   "serving": {
     "en": "A little now and then, for healthy adult dogs only; less is more, especially for small breeds. Ask your vet how much is okay, and consider brushing your dog's teeth afterwards.",
-    "sl": "Le malo in občasno, samo za zdrave odrasle pse; manj je več, zlasti pri majhnih pasmah. Veterinarja vprašajte, koliko je v redu, in psu po medu morda umijte zobe."
+    "sl": "Le malo in občasno, samo za zdrave odrasle pse; manj je več, zlasti pri majhnih pasmah. Veterinarja vprašajte, koliko je v redu, in psu po medu morda umijte zobe.",
+    "cs": "Trochu a občas, jen pro zdravé dospělé psy; méně je více, zvlášť u malých plemen. Zeptejte se veterináře, kolik je v pořádku, a zvažte, zda psovi po podání nevyčistit zuby."
   },
   "child": {
     "en": "Dogs can have a tiny bit of honey sometimes. It is very sweet, so ask a grown-up first.",
-    "sl": "Psi lahko včasih dobijo čisto malo medu. Je zelo sladek, zato najprej vprašaj odraslega."
+    "sl": "Psi lahko včasih dobijo čisto malo medu. Je zelo sladek, zato najprej vprašaj odraslega.",
+    "cs": "Pes může někdy dostat malinkou špetku medu. Je moc sladký, takže se nejdřív zeptej dospělého."
   },
   "faq": [
     {
       "q": {
         "en": "Can honey help my dog's allergies?",
-        "sl": "Ali med pomaga pri pasjih alergijah?"
+        "sl": "Ali med pomaga pri pasjih alergijah?",
+        "cs": "Může med pomoci mému psovi s alergiemi?"
       },
       "a": {
         "en": "Honey is often said to help with seasonal allergies, but it isn't guaranteed or even likely to help.",
-        "sl": "Pogosto slišimo, da med pomaga pri sezonskih alergijah, vendar to ni zagotovljeno in niti ni verjetno."
+        "sl": "Pogosto slišimo, da med pomaga pri sezonskih alergijah, vendar to ni zagotovljeno in niti ni verjetno.",
+        "cs": "Často se říká, že med pomáhá při sezónních alergiích, ale není zaručeno, ani pravděpodobné, že pomůže."
       }
     },
     {
       "q": {
         "en": "Can I give honey to my puppy?",
-        "sl": "Ali lahko mladiču dam med?"
+        "sl": "Ali lahko mladiču dam med?",
+        "cs": "Mohu dát med štěněti?"
       },
       "a": {
         "en": "Not raw honey. Raw honey shouldn't be given to puppies or dogs with weak immune systems, because it may contain botulism.",
-        "sl": "Surovega ne. Surovega medu ne dajajte mladičem in psom s šibkim imunskim sistemom, ker lahko vsebuje botulizem."
+        "sl": "Surovega ne. Surovega medu ne dajajte mladičem in psom s šibkim imunskim sistemom, ker lahko vsebuje botulizem.",
+        "cs": "Syrový ne. Syrový med by se neměl dávat štěňatům ani psům se slabou imunitou, protože může obsahovat původce botulismu."
       }
     }
   ],
@@ -135,6 +147,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9bf59eaa528bbdb753a149cdd9cd50e6e0f385caff5e820426f38c95f00b8254"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b6f7323953e7776e855a2d824c3d29234491c084f14e120f981cd59106534748"
     }
   }
 }

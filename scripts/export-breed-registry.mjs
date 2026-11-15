@@ -493,6 +493,12 @@ const SPECIES = [
       { id: 'norwich_terrier', synonyms: { en: ['Norwich'], sl: ['norwiški terier'] } },
       { id: 'miniature_bull_terrier', synonyms: { en: ['Bull Terrier (Miniature)', 'Mini Bull Terrier', 'Mini Bull'], sl: ['mini bulterier', 'miniaturni bul terier'] } },
       { id: 'schipperke', synonyms: { en: ['Little Captain', 'Little Black Devil', 'Spitzke'], sl: ['šiperke', 'siperke'] } },
+      { id: 'belgian_tervuren', synonyms: { en: ['Tervuren', 'Tervueren', 'Belgian Shepherd Dog (Tervueren)', 'Terv'], sl: ['tervuren', 'belgijski ovcar tervuren'] } },
+      { id: 'toy_fox_terrier', synonyms: { en: ['American Toy Terrier', 'Amertoy', 'TFT'], sl: ['toy fox terrier', 'amertoy'] } },
+      { id: 'gordon_setter', synonyms: { en: ['Black and Tan Setter', 'Scottish Setter', 'Setter'], sl: ['gordon seter', 'škotski seter', 'seter'] } },
+      { id: 'afghan_hound', synonyms: { en: ['Afghan', 'Tazi', 'Baluchi Hound'], sl: ['afganec', 'afgan', 'tazi'] } },
+      { id: 'australian_silky_terrier', synonyms: { en: ['Silky Terrier', 'Silky'], sl: ['silky terier', 'svilnati terier'] } },
+      { id: 'parson_russell_terrier', synonyms: { en: ['Parson Jack Russell Terrier', 'Parson Terrier', 'PRT'], sl: ['parson jack russell terier', 'parson terier'] } },
     ],
   },
   {
@@ -517,7 +523,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG', Afghanistan: 'AF' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -2861,6 +2867,147 @@ const DOG_FACTS = {
       ['dental_disease_home_brushing', 'health.dental'],
     ],
   },
+  // M5-R10-111. Height = FCI standard 15 (S313; KUSA reprint S831), weight = FCI 'Males about 25-30 kg.' (S313),
+  // lifespan = RKC 'Over 10 years' (S830; McMillan 2024 not reachable for the variety — Wikipedia S318 tier C not exported),
+  // exercise = RKC 'More than 2 hours per day' (S830), grooming / shedding = RKC key facts (S830). Coren rank 14 (S35). FCI
+  // origin Belgium (BE). Not exported: height.petmd / adult_weight.petmd / lifespan.petmd (alternatives), lifespan.mcmillan_2024
+  // (tier C), senior_from (derived), health.breed_watch (Category 1). No new health key.
+  belgian_tervuren: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_dysplasia'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['bleeding_disorder_vwd', 'health.vwd'],
+      ['bloat_gdv', 'health.gdv'],
+    ],
+  },
+  // M5-R10-112. Height = the AKC standard 21.5–28 cm (KUSA reprint S835), weight = PetMD 4–9 lb (S833; the AKC standard gives
+  // none), lifespan = the PetMD span 13–15 y (S833; WebMD the same span — not exported twice; McMillan 2024 12.9 y only via
+  // Wikipedia S837, tier C — not exported), exercise = PetMD 'at least an hour every day' (S833, at least 60), coat 'Short'
+  // (UKC standard S838), grooming = WebMD weekly brushing (S834, Once a week). Not FCI-recognised, not ranked by Coren.
+  // Not exported: adult_weight alternatives (UKC), senior_from (derived), health.demodectic_mange (no register key), the
+  // shedding statement (no register shedding code for 'not a lot'). No new health key.
+  toy_fox_terrier: {
+    height: ['height.akc'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.toy_fox_terrier.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.ukc_coat_length'],
+    grooming: [['suitability.webmd_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: 'behaviour.food_motivation',
+    coren_rank: false,
+    fci_standard: false,
+    health: [
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['bleeding_disorder_vwd', 'health.vwd'],
+      ['primary_lens_luxation', 'health.primary_lens_luxation'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
+  // M5-R10-113. RKC page (S842): exercise 'More than 2 hours per day', coat 'Medium', grooming 'More than once a week',
+  // sheds 'Yes', lifespan 'Over 10 years'; FCI N° 6 (S841) height males 66 / females 62 cm, weight males 29.5 / females
+  // 25.5 kg (single values). Coren rank 34 (S35). FCI origin Great Britain (GB). Not exported: adult_weight.pdsa
+  // (alternative), lifespan.petmd / mcmillan_2024 (null; 12.4 y only via Wikipedia, tier C) / senior_from (derived),
+  // health.breed_watch (Category 2, points not returned), health.elbows (inside hip_elbow_dysplasia), health.ears
+  // ('regularly'), health.other (WebMD list, paraphrase). No new health key.
+  gordon_setter: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hips'],
+      ['bloat_gdv', 'health.gdv'],
+      ['itchy_skin_allergy', 'health.skin'],
+      ['hypothyroidism', 'health.thyroid'],
+      ['pra_inherited_blindness', 'health.eyes'],
+    ],
+  },
+  // M5-R10-114. RKC page (S850): exercise 'More than 2 hours per day', coat 'Long', grooming 'Every day', sheds 'Yes',
+  // lifespan 'Over 10 years'; FCI N° 228 (S849) height males 68–74 / females 63–69 cm (no weight); AKC standard (S854)
+  // weight dogs about 60 lb / bitches about 50 lb (single values, our conversion). Coren rank 79 (S35). FCI origin
+  // Afghanistan (AF, new). Not exported: the PDSA weight alternative, lifespan.mcmillan_2024 (null) / senior_from
+  // (derived), health.breed_watch (Category 1), health.other (necrotising myelopathy, laryngeal paralysis, chylothorax,
+  // anaesthesia sensitivity — background, no register key). No new health key.
+  afghan_hound: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', 'about']],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hips'],
+      ['bloat_gdv', 'health.gdv'],
+      ['hypothyroidism', 'health.thyroid'],
+      ['panosteitis', 'health.panosteitis'],
+    ],
+  },
+  // M5-R10-115. RKC page (S856): exercise 'Up to 30 minutes per day', coat 'Medium', grooming 'Every day', sheds 'Yes',
+  // lifespan 'Over 12 years'; FCI N° 236 (S855) height males 23–26 cm (females 'slightly less' — stored as the same range);
+  // PetMD (S857) weight around 10 lb (single value, our conversion — the standards give none); PetMD / WebMD 13–15 years.
+  // Coren rank 37 (S35). FCI origin Australia (AU). Not exported: lifespan.mcmillan_2024 (Wikipedia, tier C) / senior_from
+  // (derived), health.breed_watch (Category 1), health.other (background, no register key). No new health key.
+  australian_silky_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.petmd', 'about']],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patella'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['liver_shunt', 'health.liver_shunt'],
+      ['cataracts', 'health.cataracts'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['dental_disease_tooth_brushing', 'health.dental'],
+    ],
+  },
+  // M5-R10-116. RKC page (S865): exercise 'Up to 1 hour per day', coat 'Short', grooming 'Once a week', sheds 'Yes',
+  // lifespan 'Over 12 years'; FCI N° 339 (S864) ideal height males 36 / females 33 cm; PDSA (S866) weight 6–8 kg (FCI gives
+  // none); WebMD 13–15 years. Not ranked by Coren (S35). FCI origin Great Britain (GB). Not exported: lifespan.mcmillan_2024
+  // (Wikipedia, tier C) / senior_from (derived), health.breed_watch (Category 1), health.other (background, no register key).
+  // No new health key.
+  parson_russell_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.webmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35): no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['kneecap_luxation', 'health.patellar_luxation'],
+      ['primary_lens_luxation', 'health.primary_lens_luxation'],
+      ['cataracts', 'health.cataracts'],
+      ['glaucoma', 'health.glaucoma'],
+      ['inherited_ataxia', 'health.ataxia'],
+      ['deafness', 'health.deafness'],
+      ['dental_disease_tooth_brushing', 'health.dental'],
+    ],
+  },
 
 
 
@@ -2931,6 +3078,12 @@ export const DOG_CARE_TASKS = {
   japanese_chin: [['ear_cleaning', 1, 14, 'proposed_game_parameters.japanese_chin.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.japanese_chin.bathing']],
   norwich_terrier: [['tooth_brushing', 1, 7, 'proposed_game_parameters.norwich_terrier.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.norwich_terrier.nail_trimming'], ['bath', 1, 84, 'proposed_game_parameters.norwich_terrier.bathing']],
   schipperke: [['tooth_brushing', 7, 7, 'proposed_game_parameters.schipperke.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.schipperke.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.schipperke.bathing']],
+  belgian_tervuren: [['ear_cleaning', 1, 7, 'proposed_game_parameters.belgian_tervuren.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.belgian_tervuren.bathing']],
+  toy_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.toy_fox_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.toy_fox_terrier.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.toy_fox_terrier.nail_trimming']],
+  gordon_setter: [['tooth_brushing', 7, 7, 'proposed_game_parameters.gordon_setter.tooth_brushing'], ['bath', 1, 28, 'proposed_game_parameters.gordon_setter.bathing']],
+  afghan_hound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.afghan_hound.tooth_brushing'], ['bath', 1, 7, 'proposed_game_parameters.afghan_hound.bathing']],
+  australian_silky_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.australian_silky_terrier.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.australian_silky_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.australian_silky_terrier.bathing']],
+  parson_russell_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.parson_russell_terrier.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.parson_russell_terrier.ear_care'], ['bath', 1, 14, 'proposed_game_parameters.parson_russell_terrier.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -3777,6 +3930,54 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.schipperke.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.schipperke.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.schipperke.exercise_minutes_senior',
+  },
+  belgian_tervuren: {
+    adult_minutes: ['proposed_game_parameters.belgian_tervuren.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.belgian_tervuren.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.belgian_tervuren.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.belgian_tervuren.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.belgian_tervuren.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.belgian_tervuren.exercise_minutes_senior',
+  },
+  toy_fox_terrier: {
+    adult_minutes: ['proposed_game_parameters.toy_fox_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.toy_fox_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.toy_fox_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.toy_fox_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.toy_fox_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.toy_fox_terrier.exercise_minutes_senior',
+  },
+  gordon_setter: {
+    adult_minutes: ['proposed_game_parameters.gordon_setter.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.gordon_setter.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.gordon_setter.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.gordon_setter.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.gordon_setter.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.gordon_setter.exercise_minutes_senior',
+  },
+  afghan_hound: {
+    adult_minutes: ['proposed_game_parameters.afghan_hound.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.afghan_hound.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.afghan_hound.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.afghan_hound.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.afghan_hound.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.afghan_hound.exercise_minutes_senior',
+  },
+  australian_silky_terrier: {
+    adult_minutes: ['proposed_game_parameters.australian_silky_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.australian_silky_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.australian_silky_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.australian_silky_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.australian_silky_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.australian_silky_terrier.exercise_minutes_senior',
+  },
+  parson_russell_terrier: {
+    adult_minutes: ['proposed_game_parameters.parson_russell_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.parson_russell_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.parson_russell_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.parson_russell_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.parson_russell_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.parson_russell_terrier.exercise_minutes_senior',
   },
 
 

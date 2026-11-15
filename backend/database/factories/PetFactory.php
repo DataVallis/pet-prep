@@ -1179,6 +1179,66 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Belgian Tervuren (paid breed, M5-R10-111).
+     */
+    public function belgianTervuren(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::BelgianTervuren->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is a Toy Fox Terrier (paid breed, M5-R10-112).
+     */
+    public function toyFoxTerrier(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::ToyFoxTerrier->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is a Gordon Setter (paid breed, M5-R10-113).
+     */
+    public function gordonSetter(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::GordonSetter->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is an Afghan Hound (paid breed, M5-R10-114).
+     */
+    public function afghanHound(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::AfghanHound->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is an Australian Silky Terrier (paid breed, M5-R10-115).
+     */
+    public function australianSilkyTerrier(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::AustralianSilkyTerrier->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is a Parson Russell Terrier (paid breed, M5-R10-116).
+     */
+    public function parsonRussellTerrier(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::ParsonRussellTerrier->value,
+        ]);
+    }
+
+    /**
      * Indicate the pet is a British Shorthair (paid cat breed, M5-R10-14; species follows the breed).
      */
     public function britishShorthair(): static

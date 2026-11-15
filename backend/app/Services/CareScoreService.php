@@ -53,6 +53,11 @@ use Illuminate\Support\Collection;
  *        opens after it (challengeCounts()). History (`starts`, day rows, last 7
  *        days, the fair share) is unchanged — days before the purchase stay
  *        visible, marked `pre_challenge`.
+ * Kept score (M6-U03, FREE_PET_UPGRADE_SPEC U7, David 2026-11-15): when the parent
+ *        chose at the upgrade to keep the score (`pets.challenge_score_kept`), the
+ *        Care Score, the pet score and the illnesses count from each child's own
+ *        start (scoreSinceOf() / scoreStartOf()) and no day is `pre_challenge`; only
+ *        the 12-week progress (and the certificate's end) still count from the purchase.
  */
 class CareScoreService
 {
@@ -247,8 +252,9 @@ class CareScoreService
      */
     public function petSummary(array $board, Pet $pet): array
     {
-        // K2 (M6-U01): an upgraded pet's score counts from the purchase, like the certificate.
-        $since = self::challengeStartedOf($board, $pet);
+        // K2 (M6-U01): an upgraded pet's score counts from the purchase, like the certificate —
+        // unless the parent kept the score (M6-U03): then from the birth, as for any pet.
+        $since = self::scoreSinceOf($board, $pet);
         $routines = array_values(array_filter($board['routines'][$pet->id] ?? [], fn (Routine $r) => ! $r->isPending() && self::challengeCounts($r, $since)));
         $done = count(array_filter($routines, fn (Routine $r) => $r->isDone()));
         $expected = count($routines);
@@ -336,11 +342,12 @@ class CareScoreService
     public function childScore(array $board, int $childId, ?Pet $pet, ?string $fromDate = null, ?string $toDate = null): array
     {
         // M6-U01: the child's CHALLENGE start (an upgraded pet: never before the purchase).
-        $start = $pet !== null ? self::challengeStartOf($board, $pet, $childId) : null;
+        // M6-U03: a kept score counts from the child's own start instead.
+        $start = $pet !== null ? self::scoreStartOf($board, $pet, $childId) : null;
         if ($pet === null || $start === null) {
             return ['score' => null, 'done' => 0, 'expected' => 0, 'routines' => 0, 'illnesses' => 0, 'since' => null];
         }
-        $since = self::challengeStartedOf($board, $pet);
+        $since = self::scoreSinceOf($board, $pet);
 
         $fair = 0.0;
         $done = 0;
@@ -666,6 +673,32 @@ class CareScoreService
     }
 
     /**
+     * M6-U03 (U7, David 2026-11-15): from when the SCORE of an upgraded pet counts — the
+     * purchase, or null (= no cut: everything since the birth / the child's start) when the
+     * parent chose to keep the score so far (`pets.challenge_score_kept`). The 12-week
+     * clock (challengeStartedOf / challengeStartOf) is never affected.
+     *
+     * @param  array<string, mixed>  $board
+     */
+    public static function scoreSinceOf(array $board, Pet $pet): ?CarbonImmutable
+    {
+        return $pet->challenge_score_kept ? null : self::challengeStartedOf($board, $pet);
+    }
+
+    /**
+     * From when one child's Care Score counts: their challenge start, or — with a kept
+     * score (M6-U03) — their own start (contract / birth / stored start).
+     *
+     * @param  array<string, mixed>  $board
+     */
+    public static function scoreStartOf(array $board, Pet $pet, int $childId): ?CarbonImmutable
+    {
+        return $pet->challenge_score_kept
+            ? ($board['starts'][$pet->id][$childId] ?? null)
+            : self::challengeStartOf($board, $pet, $childId);
+    }
+
+    /**
      * K1 (M6-U01, David 2026-11-10): does routine $r count for a challenge that
      * started at $since? Daily routines count when their deadline is after the
      * purchase (an already open feed window / mess / today's walk included); a weekly
@@ -686,12 +719,13 @@ class CareScoreService
     /**
      * A local date of the pet (its own zone) wholly before the upgrade purchase —
      * »pred izzivom« in the history (§5.5). The purchase day itself is a challenge day.
+     * Never with a kept score (M6-U03): those days count.
      *
      * @param  array<string, mixed>  $board
      */
     public static function isPreChallengeDate(array $board, Pet $pet, string $date): bool
     {
-        $since = self::challengeStartedOf($board, $pet);
+        $since = self::scoreSinceOf($board, $pet);
 
         return $since !== null && $date < $since->setTimezone(self::zoneOf($board, $pet))->toDateString();
     }

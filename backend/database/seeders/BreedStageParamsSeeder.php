@@ -1322,6 +1322,73 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_SCHIPPERKE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-110)';
 
     /**
+     * M5-R10-111 Belgian Tervuren (unattended run 2026-11-14, data.json proposed_game_parameters.belgian_tervuren.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S830 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound 10 y, S830 — provisional until McMillan 2024 is checked, like
+     * the Belgian Malinois), arrival 2 / 9 / 36 / 90, learning multiplier 1.5 (Coren rank 14, Excellent, S35); care rates
+     * the Border Collie's.
+     */
+    public const CONFIRMED_R10_BELGIAN_TERVUREN = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-111)';
+
+    /**
+     * M5-R10-112 Toy Fox Terrier (unattended run 2026-11-14, data.json proposed_game_parameters.toy_fox_terrier.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (PetMD S833 "at least an hour every day"; no RKC / PDSA page exists for this American breed), senior
+     * 45 min, puppy 10 min × age capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.0 (not
+     * ranked by Coren); care rates the Border Collie's. The senior boundary uses the closest rule row (PetMD lower bound
+     * "13–15 years", S833 — no McMillan 2024 / VetCompass median reachable, no RKC band) and is NOT covered by the
+     * confirmation: see PROPOSED_R10_TOY_FOX_TERRIER_SENIOR.
+     */
+    public const CONFIRMED_R10_TOY_FOX_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-112)';
+
+    /**
+     * M5-R10-112 Toy Fox Terrier senior boundary / senior arrival (117 months): Claude's suggestion from the closest rule row
+     * (0.75 × PetMD lower bound 13 y, S833 — Rat Terrier precedent), verified=false until David decides
+     * (data.json proposed_game_parameters.toy_fox_terrier.senior_boundary_months).
+     */
+    public const PROPOSED_R10_TOY_FOX_TERRIER_SENIOR = 'predlog Claude 2026-11-14 (najbližja vrstica pravila runbooka, M5-R10-112) — čaka Davida';
+
+    /**
+     * M5-R10-113 Gordon Setter (unattended run 2026-11-14, data.json proposed_game_parameters.gordon_setter.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S842 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound "Over 10 years", S842 — McMillan 2024's breed value not
+     * reachable, 12.4 y only via Wikipedia S847, tier C), arrival 2 / 9 / 36 / 90, learning multiplier 1.2 (Coren rank 34,
+     * Above average, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_GORDON_SETTER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-113)';
+
+    /**
+     * M5-R10-114 Afghan Hound (unattended run 2026-11-15, data.json proposed_game_parameters.afghan_hound.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S850 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound "Over 10 years", S850 — McMillan 2024's breed value not
+     * reachable), arrival 2 / 9 / 36 / 90, learning multiplier 0.5 (Coren rank 79, Lowest, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_AFGHAN_HOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-114)';
+
+    /**
+     * M5-R10-115 Australian Silky Terrier (unattended run 2026-11-15, data.json
+     * proposed_game_parameters.australian_silky_terrier.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 30 min (RKC S856 "Up to 30
+     * minutes per day"), senior 23 min, puppy 10 min × age capped at 30, stages young 9 / adult 36 / senior 108 (0.75 × RKC
+     * lower bound "Over 12 years", S856 — McMillan 2024's breed value not reachable), arrival 2 / 9 / 36 / 108, learning
+     * multiplier 1.2 (Coren rank 37, Above average, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_AUSTRALIAN_SILKY_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-115)';
+
+    /**
+     * M5-R10-116 Parson Russell Terrier (unattended run 2026-11-15, data.json
+     * proposed_game_parameters.parson_russell_terrier.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 60 min (RKC S865 "Up to 1 hour
+     * per day"), senior 45 min, puppy 10 min × age capped at 60, stages young 9 / adult 36 / senior 108 (0.75 × RKC lower
+     * bound "Over 12 years", S865 — McMillan 2024's breed value not reachable), arrival 2 / 9 / 36 / 108, learning
+     * multiplier 1.0 (not ranked by Coren under this name, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_PARSON_RUSSELL_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-116)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1672,6 +1739,33 @@ class BreedStageParamsSeeder extends Seeder
             'ear_cleaning' => [1, 'two_weeks', 'S827', 'cleaning the ears every two weeks for maintenance may help prevent ear infections.', 'proposed_game_parameters.schipperke.ear_care', '"every two weeks" → every 2 weeks'],
             'bath' => [1, 'month', 'S827', 'only needs a monthly bath', 'proposed_game_parameters.schipperke.bathing', '"a monthly bath" → every 4 weeks (nails: no frequency; "Schipperkes do not require professional grooming." → no groomer task)'],
         ],
+        'belgian_tervuren' => [
+            'ear_cleaning' => [1, 'week', 'S832', "Cleaning your Terv's ears every one or two weeks helps prevent ear infections and keeps the canals clean.", 'proposed_game_parameters.belgian_tervuren.ear_care', '"every one or two weeks" → a range → its lower bound → once a week'],
+            'bath' => [1, 'month', 'S832', 'The Belgian Tervuren will benefit from a bath every four to six weeks.', 'proposed_game_parameters.belgian_tervuren.bathing', '"every four to six weeks" → every 4 weeks (teeth, nails, groomer: no frequency → no task)'],
+        ],
+        'toy_fox_terrier' => [
+            'tooth_brushing' => [7, 'day', 'S834', 'Aim to trim your dog’s nails every month and brush their teeth daily with dog toothpaste.', 'proposed_game_parameters.toy_fox_terrier.tooth_brushing', '"brush their teeth daily" → every day'],
+            'ear_cleaning' => [1, 'week', 'S834', 'Wash your TFT’s ears every week to prevent wax and dirt buildup.', 'proposed_game_parameters.toy_fox_terrier.ear_care', '"every week" → once a week'],
+            'nail_trim' => [1, 'month', 'S834', 'Aim to trim your dog’s nails every month and brush their teeth daily with dog toothpaste.', 'proposed_game_parameters.toy_fox_terrier.nail_trimming', '"every month" → every 4 weeks (bath "occasional", groomer: no frequency → no reminder)'],
+        ],
+        'gordon_setter' => [
+            'tooth_brushing' => [7, 'day', 'S845', 'You should also brush their teeth on a daily basis to prevent dental disease.', 'proposed_game_parameters.gordon_setter.tooth_brushing', '"on a daily basis" → every day'],
+            'bath' => [1, 'month', 'S845', 'Your dog will need a bath about once a month.', 'proposed_game_parameters.gordon_setter.bathing', '"about once a month" → every 4 weeks (nails / ears "regularly", groomer: no frequency → no task)'],
+        ],
+        'afghan_hound' => [
+            'tooth_brushing' => [7, 'day', 'S853', 'Their teeth should be brushed daily with dog-friendly toothpaste.', 'proposed_game_parameters.afghan_hound.tooth_brushing', '"daily" → every day'],
+            'bath' => [1, 'week', 'S852', 'Bathing your dog at least once every week or two is important for keeping the coat clean and conditioned', 'proposed_game_parameters.afghan_hound.bathing', '"at least once every week or two" → the lower bound, every week (WebMD "twice a week" alternative; nails / ears / groomer: no frequency → no task)'],
+        ],
+        'australian_silky_terrier' => [
+            'tooth_brushing' => [7, 'day', 'S858', 'Brush their teeth daily to help prevent dental disease.', 'proposed_game_parameters.australian_silky_terrier.tooth_brushing', '"daily" → every day'],
+            'ear_cleaning' => [1, 'two_weeks', 'S857', 'Do this every two to three weeks for maintenance and after any water activities, like a bath.', 'proposed_game_parameters.australian_silky_terrier.ear_care', '"every two to three weeks" → the lower bound, every 2 weeks'],
+            'bath' => [1, 'month', 'S858', 'You should also give your dog a bath about once a month with a dog-safe shampoo.', 'proposed_game_parameters.australian_silky_terrier.bathing', '"about once a month" → every 4 weeks (PetMD "every four to six weeks" agrees; nails "regularly", groomer: no frequency → no task)'],
+        ],
+        'parson_russell_terrier' => [
+            'tooth_brushing' => [7, 'day', 'S867', 'The best way to prevent dental disease is with daily tooth brushing.', 'proposed_game_parameters.parson_russell_terrier.tooth_brushing', '"daily" → every day (WebMD "daily teeth brushing" agrees)'],
+            'ear_cleaning' => [1, 'two_weeks', 'S867', 'Cleaning the ears every two weeks for maintenance helps to prevent ear infections.', 'proposed_game_parameters.parson_russell_terrier.ear_care', '"every two weeks" → every 2 weeks'],
+            'bath' => [1, 'two_weeks', 'S867', 'should be bathed every two to four weeks with a gentle, dog-specific shampoo.', 'proposed_game_parameters.parson_russell_terrier.bathing', '"every two to four weeks" → the lower bound, every 2 weeks (nails / groomer: no frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1802,6 +1896,12 @@ class BreedStageParamsSeeder extends Seeder
         'norwich_terrier' => [2, 'S814', 'Routine coat care for Norwich Terriers includes regular brushing (at least twice a week)', 'high', false],
         'miniature_bull_terrier' => [1, 'S820', 'Grooming: Once a week', 'high', false],
         'schipperke' => [2, 'S828', 'must be brushed at least twice a week for fifteen minutes', 'high', false],
+        'belgian_tervuren' => [1, 'S832', "You'll also need to set aside time to brush their beautiful, long double coat every week.", 'medium', false],
+        'toy_fox_terrier' => [2, 'S833', "It's helpful to brush their coat once or twice a week to minimize what shedding does occur", 'high', false],
+        'gordon_setter' => [7, 'S843', 'They have a heavy coat which will require daily grooming to keep it free from debris and tangles.', 'high', false],
+        'afghan_hound' => [7, 'S850', 'Every day', 'high', false],
+        'australian_silky_terrier' => [7, 'S856', 'Every day', 'high', false],
+        'parson_russell_terrier' => [1, 'S865', 'Once a week', 'high', false],
     ];
 
     /**
@@ -1860,6 +1960,8 @@ class BreedStageParamsSeeder extends Seeder
         'beauceron' => ['S791', 'Prevent any exercise one hour before and one hour after eating'],
         'bouvier_des_flandres' => ['S798', 'Prevent exercise one hour before and one hour after eating'],
         'borzoi' => ['S800', 'Remember to leave a gap between eating and exercising.'],
+        'gordon_setter' => ['S844', 'Restrict exercise an hour before and after mealtimes'],
+        'afghan_hound' => ['S852', 'It’s important to wait at least an hour after your Afghan Hound eats before letting them exercise'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1976,13 +2078,19 @@ class BreedStageParamsSeeder extends Seeder
         'norwich_terrier' => ['S814', 'Socializing your Norwich Terrier puppy from an early age is crucial'],
         'miniature_bull_terrier' => ['S821', 'need early socialization to adapt well to new situations.'],
         'schipperke' => ['S827', 'Like all dogs, Schipperkes should begin obedience training and socialization at an early age.'],
+        'belgian_tervuren' => ['S832', 'This makes socializing your Belgian Tervuren puppy a vital part of their care.'],
+        'toy_fox_terrier' => ['S834', 'Early training and socialization will ensure your dog grows to be a friendly and well-mannered companion.'],
+        'gordon_setter' => ['S844', 'Gordon Setter puppies need socialization to grow into confident adults.'],
+        'afghan_hound' => ['S851', 'Afghan Hounds, if well socialised, are good with children.'],
+        'australian_silky_terrier' => ['S857', 'Enrolling Silky puppies in socialization classes before 16 weeks of age can help them become comfortable around children, other dogs, and new people.'],
+        'parson_russell_terrier' => ['S866', 'They will need to be socialised at a young age with any other family pets'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2811,6 +2919,12 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::NorwichTerrier => self::norwichTerrierProfile(),
             BreedType::MiniatureBullTerrier => self::miniatureBullTerrierProfile(),
             BreedType::Schipperke => self::schipperkeProfile(),
+            BreedType::BelgianTervuren => self::belgianTervurenProfile(),
+            BreedType::ToyFoxTerrier => self::toyFoxTerrierProfile(),
+            BreedType::GordonSetter => self::gordonSetterProfile(),
+            BreedType::AfghanHound => self::afghanHoundProfile(),
+            BreedType::AustralianSilkyTerrier => self::australianSilkyTerrierProfile(),
+            BreedType::ParsonRussellTerrier => self::parsonRussellTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -10558,6 +10672,455 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'schipperke.lifespan.median_uk',
                 'quote' => 'Schipperke (x̃ = 14.2, HR 0.6, 0.4–0.9)',
                 'notes' => 'McMillan et al. 2024 median (S771, results text). RKC "Over 12 years" (S826), PetMD 12–16 years (S827). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Belgian Tervuren (M5-R10-111). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_BELGIAN_TERVUREN); weight, growth, Coren rank and lifespan are sourced. The
+     * senior boundary uses the RKC lower bound (no McMillan 2024 / VetCompass median reachable for the variety) —
+     * provisional, like the Belgian Malinois.
+     *
+     * @return array<string, mixed>
+     */
+    private static function belgianTervurenProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BELGIAN_TERVUREN;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S830', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.belgian_tervuren.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S830) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median was reachable for the Tervueren (McMillan 2024 13.8 y only via Wikipedia, S318, tier C → 124; PetMD lower bound 12 y, S832 → 108 — alternatives only). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_tervuren.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S830', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_tervuren.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S830) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PetMD (S832) "a lot of physical activity and mental stimulation" gives no number.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_tervuren.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20.0, 30.0], [
+                'unit' => 'kg', 'source_id' => 'S313', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'belgian_tervuren.adult_weight.fci',
+                'quote' => 'Males about 25-30 kg.',
+                'notes' => 'FCI standard 15 (S313; KUSA reprint S831 agrees): males about 25–30 kg, females about 20–25 kg → 20–30 kg for the game. PetMD (S832) 45–75 lb is an alternative only.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'belgian_tervuren.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 20–30 kg ≈ 44–66 lb, mostly the Medium class of S10; RKC size "Medium-Large", S830 — Belgian Malinois precedent).',
+            ]],
+            'coren_rank' => [14, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'belgian_tervuren.trainability.coren_rank',
+                'quote' => 'Belgian Shepherd Dog (Tervuren)',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, read 2026-11-14): rank 14 "Belgian Shepherd Dog (Tervuren)", tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_tervuren.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 14 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S830', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'belgian_tervuren.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S830); PetMD "12–14 years" (S832). McMillan 2024 13.8 y only via Wikipedia (S318, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Toy Fox Terrier (M5-R10-112). Stage boundaries young / adult, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_TOY_FOX_TERRIER); weight, growth and lifespan are sourced; not ranked
+     * by Coren. The senior boundary is Claude's suggestion (PROPOSED_R10_TOY_FOX_TERRIER_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function toyFoxTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_TOY_FOX_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S833', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.toy_fox_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog reaches adult weight at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [117, [
+                    'unit' => 'months', 'source_id' => 'S11,S833', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.toy_fox_terrier.senior_boundary_months', 'decision' => self::PROPOSED_R10_TOY_FOX_TERRIER_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PetMD lower bound "13–15 years" (S833; WebMD S834 13–15 y too) = 9.75 y = 117 months. Not RKC-registered, no McMillan 2024 / VetCompass median reachable. Alternatives: McMillan 2024 12.9 y only via Wikipedia (S837, tier C) → 116; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 117],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.toy_fox_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.toy_fox_terrier.senior_boundary_months', 'decision' => self::PROPOSED_R10_TOY_FOX_TERRIER_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 117 months (0.75 × 13 y, S833).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S833', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.toy_fox_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'so regular exercise—at least an hour every day—is crucial to prevent boredom and help positively channel their energy',
+                'notes' => 'PetMD (S833): "at least an hour every day" → 60 min = 6,000 steps (runbook rule: "at least N" → N; no RKC / PDSA page exists for this breed). WebMD (S834) gives no number.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.toy_fox_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[1.8, 4.1], [
+                'unit' => 'kg', 'source_id' => 'S833', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'toy_fox_terrier.adult_weight.petmd',
+                'quote' => 'Toy Fox Terriers are pint-size powerhouses weighing 4–9 pounds and standing 8.5–11.5 inches tall.',
+                'notes' => 'PetMD (S833): 4–9 lb = 1.8–4.1 kg, one range for both sexes (WebMD S834 agrees). The AKC standard (S835) gives no weight; UKC preferred 4.5–7.5 lb (S838).',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'toy_fox_terrier.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (4–9 lb, the Toy class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'toy_fox_terrier.trainability.coren_rank',
+                'notes' => 'Not ranked: the Toy Fox Terrier is not in the Wikipedia table of Coren\'s ranking (S35, checked 2026-11-14).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.toy_fox_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (AKC standard S835: "intelligent, alert, and friendly"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [13.0, [
+                'unit' => 'years', 'source_id' => 'S833', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'toy_fox_terrier.lifespan.petmd',
+                'quote' => 'The average lifespan of a Toy Fox Terrier is 13–15 years, and they’re known to be a generally healthy breed.',
+                'notes' => 'PetMD lower bound "13–15 years" (S833); WebMD 13–15 y (S834); McMillan 2024 12.9 y only via Wikipedia (S837, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Gordon Setter (M5-R10-113). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_GORDON_SETTER); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function gordonSetterProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_GORDON_SETTER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S842', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.gordon_setter.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog reaches adult weight at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S842) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median reachable — provisional. Not chosen: 112 (McMillan 12.4 y only via Wikipedia S847, tier C), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.gordon_setter.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S842', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.gordon_setter.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC breed page key fact "Exercise: More than 2 hours per day" (S842) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA (S843) "at least 2 hours per day" agrees; PetMD (S844) "at least an hour" is an alternative.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.gordon_setter.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[25.5, 29.5], [
+                'unit' => 'kg', 'source_id' => 'S841', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'gordon_setter.adult_weight.fci',
+                'quote' => 'Weight: Males 29.5 kg (65 lbs).',
+                'notes' => 'FCI-St. N°6 (S841): males 29.5 kg, females 25.5 kg → the range 25.5–29.5 kg. PDSA "25-30 kg" (S843) is an alternative.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'gordon_setter.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (RKC "Large", S842 → the Large class of S10).',
+            ]],
+            'coren_rank' => [34, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'gordon_setter.trainability.coren_rank',
+                'notes' => 'Coren rank 34 "Gordon Setter", Above Average Working Dogs (ranks 27–39) — Wikipedia "The Intelligence of Dogs" table (S35, read through a Kiwix mirror, checked 2026-11-14).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.gordon_setter.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 34 = Above average (S35) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10, [
+                'unit' => 'years', 'source_id' => 'S842', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'gordon_setter.lifespan.rkc',
+                'quote' => 'Over 10 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S842); PDSA "Over 10 years" (S843), PetMD / WebMD 12–13 y (S844, S845) and VCA 10–13 y (S846) are consistent. No McMillan 2024 value reachable (12.4 y only via Wikipedia S847, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Afghan Hound (M5-R10-114). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_AFGHAN_HOUND); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function afghanHoundProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_AFGHAN_HOUND;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S850', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.afghan_hound.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog reaches adult weight at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S850) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median reachable — provisional. Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.afghan_hound.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S850', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.afghan_hound.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC breed page key fact "Exercise: More than 2 hours per day" (S850) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA (S851) and WebMD (S853) 2 hours agree; PetMD (S852) "at least an hour" is an alternative.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.afghan_hound.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[22.7, 27.2], [
+                'unit' => 'kg', 'source_id' => 'S854', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'afghan_hound.adult_weight.akc',
+                'quote' => 'Dogs, about 60 pounds; bitches, about 50 pounds.',
+                'notes' => 'AKC standard (S854): dogs about 60 lb (27.2 kg), bitches about 50 lb (22.7 kg) → the range 22.7–27.2 kg (our conversion). The FCI standard gives no weight; PDSA "23-27 kg" (S851) is an alternative.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'afghan_hound.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (RKC "Large", S850 → the Large class of S10).',
+            ]],
+            'coren_rank' => [79, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'afghan_hound.trainability.coren_rank',
+                'notes' => 'Coren rank 79 "Afghan Hound", Lowest Degree of Working/Obedience Intelligence (ranks 70–79) — Wikipedia "The Intelligence of Dogs" table (S35, read through a mirror, checked 2026-11-15); Coren\'s own article lists it last of the bottom 10 (S34).',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.afghan_hound.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 79 = Lowest (S35) → 0.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10, [
+                'unit' => 'years', 'source_id' => 'S850', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'afghan_hound.lifespan.rkc',
+                'quote' => 'Over 10 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S850); PDSA "Over 10 years" (S851) agrees. No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Australian Silky Terrier (M5-R10-115). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_AUSTRALIAN_SILKY_TERRIER); weight, growth, Coren rank and lifespan
+     * are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function australianSilkyTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_AUSTRALIAN_SILKY_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S856', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.australian_silky_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog reaches adult weight at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S856) = 9 y = 108 months. No McMillan 2024 / VetCompass median reachable (13.3 y only via Wikipedia, S862 → 120, open for David). Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_silky_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 30 minutes, which 10 × age reaches at 3 months.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S856', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_silky_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Up to 30 minutes per day',
+                'notes' => 'RKC breed page key fact "Exercise: Up to 30 minutes per day" (S856) → 30 min = 3,000 steps (runbook rule: "up to N" → N). PetMD (S857) "at least one hour of exercise daily" is an alternative.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_silky_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5 → 23 min (half up) = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[4.5, 4.5], [
+                'unit' => 'kg', 'source_id' => 'S857', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_silky_terrier.adult_weight.petmd',
+                'quote' => 'This breed weighs in at around 10 pounds',
+                'notes' => 'PetMD (S857): around 10 lb = 4.5 kg (our conversion), both sexes; WebMD (S858) "about 10 pounds" agrees. The FCI / ANKC / AKC / UKC standards give no weight ("in proportion to height").',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_silky_terrier.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (around 10 lb, S857 → the Toy class of S10).',
+            ]],
+            'coren_rank' => [37, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_silky_terrier.trainability.coren_rank',
+                'notes' => 'Coren rank 37 "Australian Silky Terrier", Above Average Working Dogs (ranks 27–39) — Wikipedia "The Intelligence of Dogs" table (S35, read through a mirror, checked 2026-11-15).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_silky_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 37 = Above average (S35) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12, [
+                'unit' => 'years', 'source_id' => 'S856', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_silky_terrier.lifespan.rkc',
+                'quote' => 'Over 12 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S856); PetMD / WebMD 13–15 years (S857, S858). No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Parson Russell Terrier (M5-R10-116). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_PARSON_RUSSELL_TERRIER); weight, growth, Coren rank and lifespan
+     * are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function parsonRussellTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_PARSON_RUSSELL_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S865', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.parson_russell_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog reaches adult weight at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S865) = 9 y = 108 months. No McMillan 2024 / VetCompass median reachable (13.8 y only via Wikipedia, S870 → 124, open for David). Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.parson_russell_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S865', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.parson_russell_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Up to 1 hour per day',
+                'notes' => 'RKC breed page key fact "Exercise: Up to 1 hour per day" (S865) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA (S866) "ideally 1-2 hours per day" → the same lower bound.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.parson_russell_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[6.0, 8.0], [
+                'unit' => 'kg', 'source_id' => 'S866', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'parson_russell_terrier.adult_weight.pdsa',
+                'quote' => '6-8 kg',
+                'notes' => 'PDSA key fact "Average weight" (S866), both sexes; PetMD / WebMD 13–17 lb (S867, S868). The FCI standard (S864) gives no weight.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'parson_russell_terrier.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (6–8 kg, S866 → the Small class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'parson_russell_terrier.trainability.coren_rank',
+                'notes' => 'Not ranked: the Parson Russell Terrier is not in the Wikipedia table of Coren\'s ranking (S35, checked 2026-11-15; only the Jack Russell Terrier, FCI 345).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.parson_russell_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (WebMD S868: "highly trainable"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12, [
+                'unit' => 'years', 'source_id' => 'S865', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'parson_russell_terrier.lifespan.rkc',
+                'quote' => 'Over 12 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S865); PDSA "Over 12 years" (S866); WebMD 13–15 years (S868). No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

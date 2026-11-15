@@ -921,7 +921,9 @@ sequenceDiagram
     API-->>P: 200 assigned | 409 no_credit (retry)
   end
   RC->>API: REFUND / CANCELLATION → credit revoked · its pet_items revoked (treats → 0)
+  Note over API,C: David 2026-11-15: redeem queues the treat clip (QueuePetItemMedia after commit)<br/>until it is stored: wishes.treats.ready = false → »Priboljšek« disabled (»se še pripravljajo«)
   C->>API: POST /api/child/pet/treat (max 2 / local day, not asleep, 423 when locked)
+  API-->>C: 422 media_not_ready while the clip is not stored (nothing used up) · 200 accepted + media once it is
   Note over API,C: M6-W03: item content ready → PetUpdated item_media_ready + push item_ready<br/>media.items → bed (sleeping), toy (playing), bowls / treats once; »Na poti …« → »Že ima«
 ```
 
@@ -1821,7 +1823,7 @@ flowchart TD
   GS --> FB[FeedbackLayer ✓ ✗ ★ round · mask ≥ 85 % → ClipQueue.setMasked]
   GS --> TB[GameTopBar: dots · ★ · GameLine ≤ 32 chars ≥ 2 s · × always - own onClose else the screen exit]
   GS --> Z[Layers = own stacking contexts, GAME_Z: stage 0 · field 2 · feedback 3 · top / dock 10 · overlay 20 · escape 100]
-  GS --> EX[Exit: × · Android back · watchdog card × + Nazaj - stage not ready 15 s or a layer crashed · locked × back after 20 s]
+  GS --> EX[Exit: × · Android back - running game, every game: hint only for 4 s, the × stops; card over the game or escape card: back = × · watchdog card × + Nazaj - stage not ready 15 s or a layer crashed · locked × back after 20 s]
   GS --> FX[GameFx: own WAVs + positive haptics<br/>off when settings.game_feedback = false · silent mode respected]
 ```
 
@@ -2320,7 +2322,7 @@ stateDiagram-v2
     [*] --> UnbornUnpaid: PIN with plan challenge (status payment_required — buy first, lock reason stays contract_required)
     note right of UnbornUnpaid: M6-U02 (U4 / K3) — also the mutt / domestic cat when the parent build declared free_breed_challenge; old builds: free plan (M5-F03)
     UnbornUnpaid --> Paid: credit assigned before birth (activate · webhook intent / auto-assign · held credit at the contract when it is the only unpaid pet)
-    FreeBorn --> Paid: M6-U01 upgrade (activate or webhook with intent): plan challenge, challenge_started_at = purchase, the 12 weeks start now, age stays
+    FreeBorn --> Paid: M6-U01 upgrade (activate or webhook with intent): plan challenge, challenge_started_at = purchase, the 12 weeks start now, age stays, challenge_score_kept = the parent's choice (M6-U03)
     Paid --> FreeBorn: refund of an upgraded free pet (or a mutt) → free plan, challenge_started_at cleared
     UnbornUnpaid --> Locked: contract signed = birth, trial_ends_at = born_at, lockAtBirth (payment_locked_at = birth, status period from birth, push parents + child, one PetUpdated signed_contract)
     Locked --> Paid: credit assigned → lock lifted, applyThaw, the 12 weeks start now (lock time is not program time)
@@ -2386,7 +2388,7 @@ sequenceDiagram
     P->>S: purchasePackage(petprep_challenge_12w)
     S->>RC: purchase
     RC->>A: POST /api/webhooks/revenuecat (app_user_id = parent id) — maybe late
-    A->>DB: credit; intent valid at purchased_at → consume, assign to pet X (free pet: upgrade, challenge_started_at = now)
+    A->>DB: credit; intent valid at purchased_at → consume, assign to pet X (free pet: upgrade, challenge_started_at = now, challenge_score_kept = intent.keep_score)
     A-)P: PetUpdated('challenge_paid')
     P->>A: poll GET /api/parent/billing (5 × 2 s)
     P->>A: POST …/X/challenge/activate if X not paid yet (idempotent: already_active / 409 no_credit)

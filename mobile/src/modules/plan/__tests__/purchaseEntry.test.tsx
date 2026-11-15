@@ -197,7 +197,7 @@ describe('shared purchase rule — paywall list and banner (M5-F01 QA)', () => {
     expect(isOfferablePet(coon)).toBe(true);
     expect(canBuyChallenge(coon)).toBe(true);
     // A free-plan pet of a breed this build doesn't know: free (plan), not offered.
-    expect(isOfferablePet(pet(FREE, { breed_type: 'sphynx', species: 'cat' }))).toBe(false);
+    expect(isOfferablePet(pet(FREE, { breed_type: 'sphynx' as never, species: 'cat' }))).toBe(false);
     // A grandfathered dog the server shows as free (display_type) is not offered either.
     expect(isOfferablePet(pet({ ...TRIAL, display_type: 'free' }))).toBe(false);
     expect(showPurchasesRow(family([freeCat]))).toBe(false);

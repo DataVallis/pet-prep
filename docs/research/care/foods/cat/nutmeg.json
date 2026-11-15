@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Nutmeg",
-    "sl": "Muškatni orešček"
+    "sl": "Muškatni orešček",
+    "cs": "Muškátový ořech"
   },
   "question": {
     "en": "Can cats eat nutmeg?",
-    "sl": "Ali lahko mačke jedo muškatni orešček?"
+    "sl": "Ali lahko mačke jedo muškatni orešček?",
+    "cs": "Mohou kočky jíst muškátový ořech?"
   },
   "url_slug": {
     "en": "nutmeg",
-    "sl": "muskatni-orescek"
+    "sl": "muskatni-orescek",
+    "cs": "muskatovy-orech"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to give cats nutmeg. The small amount used in recipes is very unlikely to cause serious harm, though it may cause a mild stomach upset. A very large amount of nutmeg can be toxic.",
-    "sl": "Mački muškatnega oreščka raje ne dajajte. Majhna količina, ki jo uporabimo v receptih, zelo verjetno ne bo resno škodovala, lahko pa povzroči blage želodčne težave. Zelo velika količina muškatnega oreščka je lahko strupena."
+    "sl": "Mački muškatnega oreščka raje ne dajajte. Majhna količina, ki jo uporabimo v receptih, zelo verjetno ne bo resno škodovala, lahko pa povzroči blage želodčne težave. Zelo velika količina muškatnega oreščka je lahko strupena.",
+    "cs": "Muškátový ořech kočkám raději nedávejte. Malé množství používané v receptech jen těžko způsobí vážnou újmu, i když může vyvolat mírné podráždění žaludku. Velmi velké množství muškátového ořechu však může být toxické."
   },
   "why": {
     "en": "Nutmeg contains a toxin called myristicin. Pet Poison Helpline says the small amount used in recipes is very unlikely to cause serious toxicity, and that a problem is very unlikely if a cat eats food with nutmeg in it. VCA notes that spices in eggnog, such as nutmeg, could have toxic effects in large quantities. Cats don't need anything other than a complete diet.",
-    "sl": "Muškatni orešček vsebuje strup miristicin. Pet Poison Helpline navaja, da majhna količina, uporabljena v receptih, zelo verjetno ne povzroči resne zastrupitve in da so težave zelo malo verjetne, če mačka poje hrano z muškatnim oreščkom. VCA navaja, da imajo lahko začimbe v jajčnem likerju, na primer muškatni orešček, v velikih količinah strupene učinke. Mačke poleg popolne hrane ne potrebujejo ničesar drugega."
+    "sl": "Muškatni orešček vsebuje strup miristicin. Pet Poison Helpline navaja, da majhna količina, uporabljena v receptih, zelo verjetno ne povzroči resne zastrupitve in da so težave zelo malo verjetne, če mačka poje hrano z muškatnim oreščkom. VCA navaja, da imajo lahko začimbe v jajčnem likerju, na primer muškatni orešček, v velikih količinah strupene učinke. Mačke poleg popolne hrane ne potrebujejo ničesar drugega.",
+    "cs": "Muškátový ořech obsahuje toxin zvaný myristicin. Pet Poison Helpline uvádí, že malé množství používané v receptech sotva způsobí vážnou otravu a že problém je velmi nepravděpodobný, pokud kočka sní jídlo s muškátovým ořechem. VCA poznamenává, že koření v nápoji eggnog, například muškátový ořech, může mít ve velkém množství toxické účinky. Kočky nepotřebují nic jiného než kompletní stravu."
   },
   "signs": {
     "en": [
@@ -30,26 +35,34 @@
     "sl": [
       "Blage želodčne težave",
       "Po zelo veliki količini: halucinacije, zmedenost, pospešen srčni utrip, suha usta, bolečine v trebuhu ali krči"
+    ],
+    "cs": [
+      "Mírné podráždění žaludku",
+      "Po velmi velkém množství: halucinace, dezorientace, zrychlený tep, sucho v ústech, bolest břicha nebo záchvaty"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate food with a little nutmeg, watch for a mild stomach upset. If she ate a large amount of nutmeg, contact your vet straight away. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Če je mačka pojedla hrano z malo muškatnega oreščka, bodite pozorni na blage želodčne težave. Če je pojedla veliko muškatnega oreščka, takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja."
+    "sl": "Če je mačka pojedla hrano z malo muškatnega oreščka, bodite pozorni na blage želodčne težave. Če je pojedla veliko muškatnega oreščka, takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
+    "cs": "Pokud kočka snědla jídlo s trochou muškátového ořechu, sledujte, zda nemá mírně podrážděný žaludek. Pokud snědla velké množství muškátového ořechu, okamžitě se obraťte na veterináře. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
   },
   "serving": null,
   "child": {
     "en": "Nutmeg is a spice for people's cooking. Cats don't need spices, so keep the spice jar away from kitty.",
-    "sl": "Muškatni orešček je začimba za kuhanje za ljudi. Muce začimb ne potrebujejo, zato naj bo kozarček z začimbo daleč od muce."
+    "sl": "Muškatni orešček je začimba za kuhanje za ljudi. Muce začimb ne potrebujejo, zato naj bo kozarček z začimbo daleč od muce.",
+    "cs": "Muškátový ořech je koření do jídel pro lidi. Kočky koření nepotřebují, takže dózu s kořením drž od kočičky dál."
   },
   "faq": [
     {
       "q": {
         "en": "Is eggnog with nutmeg safe for cats?",
-        "sl": "Ali je jajčni liker z muškatnim oreščkom varen za mačke?"
+        "sl": "Ali je jajčni liker z muškatnim oreščkom varen za mačke?",
+        "cs": "Je vaječný nápoj eggnog s muškátovým ořechem pro kočky bezpečný?"
       },
       "a": {
         "en": "No. VCA says spices in eggnog, such as nutmeg, could have toxic effects in large quantities, and advises contacting your vet if you think your cat drank eggnog.",
-        "sl": "Ne. VCA navaja, da imajo lahko začimbe v jajčnem likerju, na primer muškatni orešček, v velikih količinah strupene učinke, in svetuje, da pokličete veterinarja, če mislite, da je mačka pila jajčni liker."
+        "sl": "Ne. VCA navaja, da imajo lahko začimbe v jajčnem likerju, na primer muškatni orešček, v velikih količinah strupene učinke, in svetuje, da pokličete veterinarja, če mislite, da je mačka pila jajčni liker.",
+        "cs": "Ne. VCA uvádí, že koření v nápoji eggnog, například muškátový ořech, může mít ve velkém množství toxické účinky, a radí obrátit se na veterináře, pokud se domníváte, že kočka eggnog pila."
       }
     }
   ],
@@ -124,6 +137,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3b98f36eedfb285e6e44dc86faa7bed2fe4db5338907bc11c152e865bbf6f830"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d83fe70f75ecbfdf171fb56f383bfa7f04aab9c2165da42062442361d0e10042"
     }
   }
 }
