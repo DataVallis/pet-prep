@@ -375,23 +375,68 @@ class PetDecayService
         // Hunger decays piecewise — up to each meal, 100 % at the meal, then
         // on to $now — so a late tick (scheduler outage) gives the same value
         // as ticks in real time. Without a meal this is the single interval.
-        $hunger = (float) $pet->hunger_level;
-        $cursor = $from;
-        foreach ($this->schedule->dueParentMeals($pet, $breedConfig, $from, $now, $quietHours) as [$mealAt]) {
-            $hunger = $this->decayMetric($hunger, $breedConfig->hunger_decay_rate * $this->weightedHours($quietHours, $cursor, $mealAt));
-            ActivityLog::withoutEvents(fn () => (new ActivityLog)->forceFill([
-                'pet_id' => $pet->id,
-                'actor_user_id' => null,
-                'activity_type' => ActivityType::ParentFedPet,
-                'value' => Pet::displayValue($hunger),
-                'created_at' => $mealAt->utc(),
-            ])->save());
-            $hunger = 100.0;
-            $cursor = $mealAt;
+        //
+        // Hunger floor until the next meal (David 2026-11-15, PRODUCT_SPEC §5):
+        // while the meal obligation is met (CareScheduleService::hungerFloorActive)
+        // decay stops at the floor until the next child window opens. The
+        // interval is cut at every child-window start too, so a late tick floors
+        // up to the opening instant and decays normally after it.
+        $rate = (float) $breedConfig->hunger_decay_rate;
+        $parentMeals = $this->schedule->dueParentMeals($pet, $breedConfig, $from, $now, $quietHours);
+        $newHunger = $this->decayMetric((float) $pet->hunger_level, $rate * $weightedHours);
+        $floor = CareScheduleService::hungerFloor();
+
+        // Fast path (most ticks): no parent meal and the plain result is not
+        // below the floor — the floor cannot have held anywhere (decay is monotone).
+        if ($parentMeals !== [] || $newHunger < $floor) {
+            $facts = $floor > 0
+                ? $this->schedule->hungerFloorFacts($pet, $breedConfig, $from, $now, $quietHours)
+                : ['governing' => null, 'starts' => [], 'lastFedAt' => null];
+            $governing = $facts['governing'];
+            $lastFedAt = $facts['lastFedAt'];
+
+            // Cut points in ($from, $now]: parent meals and child-window starts, in time order.
+            $cuts = [];
+            foreach ($parentMeals as [$mealAt]) {
+                $cuts[] = [$mealAt, null];
+            }
+            foreach ($facts['starts'] as $window) {
+                $cuts[] = [$window[0], $window];
+            }
+            usort($cuts, fn (array $a, array $b): int => $a[0] <=> $b[0]);
+
+            $hunger = (float) $pet->hunger_level;
+            $cursor = $from;
+            $step = function (CarbonInterface $until) use (&$hunger, &$cursor, &$governing, &$lastFedAt, $pet, $rate, $quietHours, $floor): void {
+                $decayed = $this->decayMetric($hunger, $rate * $this->weightedHours($quietHours, $cursor, $until));
+                if ($floor > 0 && $this->schedule->hungerFloorActive($pet, $governing, $lastFedAt)) {
+                    // Never raised: a value already under the floor only stops decaying.
+                    $decayed = max($decayed, min($hunger, $floor));
+                }
+                $hunger = $decayed;
+                $cursor = $until;
+            };
+
+            foreach ($cuts as [$at, $window]) {
+                $step($at);
+                if ($window !== null) {
+                    $governing = $window;
+
+                    continue;
+                }
+                ActivityLog::withoutEvents(fn () => (new ActivityLog)->forceFill([
+                    'pet_id' => $pet->id,
+                    'actor_user_id' => null,
+                    'activity_type' => ActivityType::ParentFedPet,
+                    'value' => Pet::displayValue($hunger),
+                    'created_at' => $at->utc(),
+                ])->save());
+                $hunger = 100.0;
+                $lastFedAt = $at;
+            }
+            $step($now);
+            $newHunger = $hunger;
         }
-        $newHunger = $cursor === $from
-            ? $this->decayMetric($hunger, $breedConfig->hunger_decay_rate * $weightedHours)
-            : $this->decayMetric($hunger, $breedConfig->hunger_decay_rate * $this->weightedHours($quietHours, $cursor, $now));
 
         // Energy is not time-decayed (M1-04): it follows the step count, which
         // goes back to 0 at the family's local midnight (energy → 0 with it).

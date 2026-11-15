@@ -1131,15 +1131,9 @@
                         "child"
                     ],
                     [
-                        "ignored_warning",
-                        "2026-10-24T15:20:00+00:00",
-                        0,
-                        null
-                    ],
-                    [
                         "fed_pet",
                         "2026-10-24T15:30:00+00:00",
-                        0,
+                        19,
                         "child"
                     ],
                     [
@@ -1399,14 +1393,6 @@
                         null,
                         null,
                         "2026-10-24T12:00:00+00:00"
-                    ],
-                    [
-                        "parent_intervention_alarm",
-                        "hunger",
-                        "queued",
-                        null,
-                        null,
-                        "2026-10-24T15:20:00+00:00"
                     ],
                     [
                         "soft_warning",
@@ -2800,7 +2786,7 @@
                     "daily_step_count": 20000,
                     "illness_until": "2026-10-26T08:00:00+00:00",
                     "walk_illness_due_at": null,
-                    "hunger_zero_since": "2026-10-25T15:00:00+00:00",
+                    "hunger_zero_since": "2026-10-25T18:05:00+00:00",
                     "thirst_zero_since": "2026-10-25T17:50:00+00:00",
                     "energy_zero_since": null,
                     "hygiene_zero_since": "2026-10-25T14:00:00+00:00",
@@ -2867,15 +2853,9 @@
                         "child"
                     ],
                     [
-                        "ignored_warning",
-                        "2026-10-24T15:20:00+00:00",
-                        0,
-                        null
-                    ],
-                    [
                         "fed_pet",
                         "2026-10-24T15:30:00+00:00",
-                        0,
+                        19,
                         "child"
                     ],
                     [
@@ -3347,14 +3327,6 @@
                         null,
                         null,
                         "2026-10-24T12:00:00+00:00"
-                    ],
-                    [
-                        "parent_intervention_alarm",
-                        "hunger",
-                        "queued",
-                        null,
-                        null,
-                        "2026-10-24T15:20:00+00:00"
                     ],
                     [
                         "soft_warning",
@@ -5060,15 +5032,9 @@
                         "child"
                     ],
                     [
-                        "ignored_warning",
-                        "2026-10-24T15:20:00+00:00",
-                        0,
-                        null
-                    ],
-                    [
                         "fed_pet",
                         "2026-10-24T15:30:00+00:00",
-                        0,
+                        19,
                         "child"
                     ],
                     [
@@ -5604,14 +5570,6 @@
                         null,
                         null,
                         "2026-10-24T12:00:00+00:00"
-                    ],
-                    [
-                        "parent_intervention_alarm",
-                        "hunger",
-                        "queued",
-                        null,
-                        null,
-                        "2026-10-24T15:20:00+00:00"
                     ],
                     [
                         "soft_warning",
