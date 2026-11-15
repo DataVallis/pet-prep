@@ -13,8 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Parent e-mails from the page »Koliko dela je pes« (M6-S05) — superadmin
  * only, list + delete (a parent who asks to be removed). Written only by
- * SummaryLeadService (POST /api/summary-leads); pruned 24 months after the
- * last visit.
+ * SummaryLeadService (POST /api/summary-leads); never deleted automatically.
  */
 class SummaryLeadResource extends Resource
 {

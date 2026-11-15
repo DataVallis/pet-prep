@@ -706,7 +706,7 @@ return [
         'first_seen' => 'Prvič',
         'last_seen' => 'Nazadnje',
         'consent' => 'Različica privolitve',
-        'retention_note' => 'Starši, ki so na strani »Koliko dela je pes« pustili e-naslov s privolitvijo za novice PetPrep. En e-naslov je ena vrstica. Samodejno se izbriše 24 mesecev po zadnjem obisku; vrstico izbrišite, ko starš to zahteva. IP-naslov se ne shranjuje in strežnik ne pošlje ničesar. Partnerji dobijo samo številke, nikoli naslovov.',
+        'retention_note' => 'Starši, ki so na strani »Koliko dela je pes« pustili e-naslov s privolitvijo za novice PetPrep. En e-naslov je ena vrstica. Nič se ne izbriše samodejno: vrstico izbrišite samo, ko starš to zahteva (in ko se odjavi v Klaviyu). IP-naslov se ne shranjuje in strežnik ne pošlje ničesar. Partnerji dobijo samo številke, nikoli naslovov.',
     ],
     'partner_inquiries' => [
         'discord' => [

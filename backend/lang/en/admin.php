@@ -707,7 +707,7 @@ return [
         'first_seen' => 'First left',
         'last_seen' => 'Last left',
         'consent' => 'Consent version',
-        'retention_note' => 'Parents who left an e-mail with consent to PetPrep news on the page »How much work is a dog«. One row per e-mail. Deleted automatically 24 months after the last visit; delete a row when a parent asks. No IP address is stored and the server sends nothing. Partners get numbers only, never the addresses.',
+        'retention_note' => 'Parents who left an e-mail with consent to PetPrep news on the page »How much work is a dog«. One row per e-mail. Nothing is deleted automatically: delete a row only when a parent asks (and when they unsubscribe in Klaviyo). No IP address is stored and the server sends nothing. Partners get numbers only, never the addresses.',
     ],
     'partner_inquiries' => [
         'discord' => [

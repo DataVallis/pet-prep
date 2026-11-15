@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\Schema;
  * M6-S05 (THREEJS_OPPORTUNITIES T9): parents who leave an e-mail on the
  * petprep.si page »Koliko dela je pes« with explicit consent to PetPrep news.
  * One row per e-mail (stored lower-case, unique) — a second visit updates the
- * row instead of adding one. No IP, no name, no child or family data. Deleted
- * 24 months after the last visit by `summary-leads:prune`.
+ * row instead of adding one. No IP, no name, no child or family data. Never
+ * deleted automatically — only when the parent asks (admin delete).
  */
 return new class extends Migration
 {

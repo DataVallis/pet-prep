@@ -69,15 +69,6 @@ Schedule::command('partner-inquiries:prune')
     ->name('prune-partner-inquiries')
     ->description('Delete partner inquiries older than 12 months');
 
-// Daily (M6-S05): delete parent e-mails from the page »Koliko dela je pes« not seen for
-// 24 months. 03:47 UTC.
-Schedule::command('summary-leads:prune')
-    ->dailyAt('03:47')
-    // One DELETE query; 30 min covers any run (D34: explicit expiry).
-    ->withoutOverlapping(30)
-    ->name('prune-summary-leads')
-    ->description('Delete summary leads not seen for 24 months');
-
 // Daily (M4, PR #22 review; videos since M4-03): re-queue reference images and
 // state videos blocked by the AI budget or an exhausted fal balance. 00:23 UTC —
 // just after the budget day rolls over (AI_BUDGET_TIMEZONE defaults to UTC).
