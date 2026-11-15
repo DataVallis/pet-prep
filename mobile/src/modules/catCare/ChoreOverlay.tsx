@@ -25,6 +25,11 @@
  * swipe only. In hold mode the weekly litter change plays on the same `BrushArea` (hold on the
  * box scrubs it gradually, patches fade, a bar fills) — same strokes, same server verdict, it
  * still finishes at the session's end. In swipe mode the litter change keeps its plain stage.
+ *
+ * Litter change stage (David 2026-11-15, production bug): the stage is ALWAYS the litter box
+ * drawing (`TrayGraphic` per step: old litter → empty + bubbles → fresh litter), never the
+ * cat's video (`CatStage objectOnly`). Before, every cat with videos — since the shared looks
+ * also the free domestic cat — got its resting clip there and the child rubbed a sitting cat.
  */
 
 import { useMemo, useRef, useState } from 'react';
@@ -350,6 +355,8 @@ function ChoreRunning({
     [],
   );
 
+  // The litter change is about the box, not the cat: its drawing on every tier (never a video).
+  const objectOnly = kind === 'litter_change';
   const illustration = dog ? (
     // M5-R13: the dog's drawing — happy once enough strokes are in (a change, not an animation).
     <Text style={dogStyles.figure} accessible={false}>
@@ -366,7 +373,7 @@ function ChoreRunning({
   if (Shell !== null) {
     // Full screen: the pet / the box edge to edge, the step on the top line, ✓ per step.
     const full = (
-      <CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} full testID={`${testID}-stage`} />
+      <CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} full objectOnly={objectOnly} testID={`${testID}-stage`} />
     );
     return (
       <Shell
@@ -431,7 +438,7 @@ function ChoreRunning({
           msAt={msAt}
           onStroke={onStroke}
           renderStage={(layers) => (
-            <CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} testID={`${testID}-stage`}>
+            <CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} objectOnly={objectOnly} testID={`${testID}-stage`}>
               {layers}
             </CatStage>
           )}
@@ -445,6 +452,7 @@ function ChoreRunning({
               petState="idle"
               illustration={illustration}
               onMediaExpired={onMediaExpired}
+              objectOnly={objectOnly}
               accessibilityLabel={texts.stageA11y}
               testID={`${testID}-stage`}
             />

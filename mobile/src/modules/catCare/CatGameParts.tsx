@@ -106,13 +106,19 @@ export interface CatStageProps {
   phase?: PhasePlayback | null;
   /** GAMES_SPEC §7.7: edge to edge (the game-layer care screens), not a card. */
   full?: boolean;
+  /**
+   * The stage shows an OBJECT, not the pet (the litter box of the weekly change): always the
+   * drawing, never the pet's video — also for a pet that has videos (David 2026-11-15: the
+   * child rubbed a resting cat instead of the box).
+   */
+  objectOnly?: boolean;
   testID?: string;
 }
 
 /** The stage: the cat's own video (premium) or the illustration, with game layers on top. */
-export function CatStage({ view, petState, scene = null, illustration, onMediaExpired, children, accessibilityLabel, phase = null, full = false, testID = 'cat-stage' }: CatStageProps) {
+export function CatStage({ view, petState, scene = null, illustration, onMediaExpired, children, accessibilityLabel, phase = null, full = false, objectOnly = false, testID = 'cat-stage' }: CatStageProps) {
   const ownVideo = useHasVideo(view, scene ?? petState, scene !== null);
-  const hasVideo = phase !== null || ownVideo;
+  const hasVideo = !objectOnly && (phase !== null || ownVideo);
   return (
     <View style={full ? styles.stageFull : styles.stage} testID={testID} accessible={accessibilityLabel !== undefined} accessibilityLabel={accessibilityLabel}>
       {hasVideo ? (

@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-15 — Menjava peska: stranišče na zaslonu in igra, ki se ne prekine sama
+
+**Kaj:** David je na Androidu posnel tedensko menjavo peska pri brezplačni domači mački: med igro je bil na zaslonu posnetek sedeče muce (brez stranišča), po prvem koraku pa je igra padla nazaj na »Začni menjavo«. Vzroka: oder je pokazal posnetek muce, kadar ga muca ima; drgnjenje od roba zaslona pa je Android razumel kot kretnjo »nazaj«, ki je igro ustavila. Zdaj menjava vedno kaže risbo stranišča po korakih (star pesek → prazno z mehurčki → svež pesek), »nazaj« pa med igrami nege samo pokaže »Za konec igre tapni ×.«. Brez novih posnetkov (0 $), samo aplikacija (OTA).
+**Zakaj je pomembno:** otrok, ki pridno drgne, ne sme izgubiti igre zaradi sistemske kretnje; in opravilo mora pokazati to, kar otrok v resnici čisti.
+**Kako povedati:** 🧒 »Zdaj res vidiš stranišče, ki ga prazniš, umivaš in polniš.« 👩 »Igra se ne prekine več sama, če otrok s prstom zaide na rob zaslona.« 🛠 »Robna kretnja ‚nazaj‘ + igra z drgnjenjem = izgubljena seja; rešitev: nazaj je namig, izhod je ×.«
+
 ## 2026-11-11 — Prijava staršev je zaščitena pred ugibanjem gesla
 
 **Kaj:** Prijava s e-naslovom in geslom ima zdaj omejitev: največ 10 poskusov na minuto in 30 na uro z enega naslova IP, račun pa se po 5 napačnih geslih v 15 minutah za 15 minut zaklene (z katerega koli naslova). Uspešna prijava in odgovor aplikacije se nista spremenila; stare različice aplikacije pokažejo običajno »Prijava ni uspela«. Otroška prijava s PIN-om in Google / Apple prijava sta že imeli omejitve in ostaneta takšni. Preverjeno v testih (zaklep, ponastavitev, drugi računi niso prizadeti).

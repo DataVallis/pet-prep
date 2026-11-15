@@ -418,6 +418,10 @@ Brez glasbe, brez zvokov, ki strašijo; glas ukaza (šola) posnet v sl in en (8 
 ### 7.7 Česanje, menjava peska, nega pasme, praskanje
 Brez spremembe pravil; prestavitev na `GameScreen`: besedilo zgoraj, celozaslonska žival / predmet, haptika ob vsaki šteti potezi, ✓ ob koncu koraka (3 koraki = 3 pike).
 
+**Popravek 15. 11. 2026 (Davidova prijava s produkcije, Android):**
+- **Menjava peska kaže stranišče, ne muce.** Oder menjave je vedno risba mačjega stranišča po korakih (star pesek → prazno z mehurčki → svež pesek; `TrayGraphic`, `CatStage objectOnly`), tudi pri muci, ki ima posnetke. Prej je vsaka muca s posnetki (odkar imajo brezplačne muce skupne videze, tudi domača mačka) dobila svoj posnetek mirovanja in otrok je drgnil sedečo muco. Posnetkov menjave peska ni in se ne ustvarjajo (0 $).
+- **Sistemska kretnja »nazaj« ne prekine igre nege.** Drgnjenje od roba zaslona je na Androidu kretnja »nazaj«; ta je bila enaka × = »ustavi«, zato je igra sredi drgnjenja padla nazaj na »Začni menjavo« in seja je bila izgubljena. Zdaj »nazaj« med igro nege (česanje, menjava peska, nega pasme, praskanje) samo pokaže vrstico »Za konec igre tapni ×.« (4 s); izhod ostane ×. Med shranjevanjem (zaklenjen ×) in pri kartici »Igra se ne odziva.« velja staro pravilo. Druge igre (palica, žoga, crkljanje, čiščenje nereda) imajo še staro pravilo »nazaj = ×« — glej dolg v HANDOFF.
+
 ---
 
 ## 8. Posnetki
