@@ -7,6 +7,7 @@
  * the learning line. Too early / never = nothing. Hold mode: »Pusti!« is the let-go.
  */
 import { act, fireEvent, screen } from '@testing-library/react-native';
+import { QueryClientProvider } from '@tanstack/react-query';
 
 import { api, ApiError, type ChildPetState } from '@/api/client';
 import { i18n } from '@/i18n';
@@ -19,7 +20,7 @@ import { GAME_BACK_HINT_MS } from '@/modules/gameLayer/gameExit';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { useAppStore } from '@/store/appStore';
 import { makeLiveChildState, makeMedia, makeWandState, withEasyGestures } from '@/test-utils/fixtures';
-import { captureAndroidBack, expectHudAboveStage, fireGamePan, fireGameRelease } from '@/test-utils/gameLayer';
+import { captureAndroidBack, expectCloseAboveCard, expectHudAboveStage, fireGamePan, fireGameRelease } from '@/test-utils/gameLayer';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -386,5 +387,139 @@ describe('z-order and exit', () => {
     expect(back.pressBack()).toBe(true);
     expect(useAppStore.getState().catOverlay).toBeNull();
     jest.restoreAllMocks();
+  });
+});
+
+/**
+ * David's iPhone, 2026-11-16 (production OTA, 5 s video): after a hunt the game showed the intro
+ * card again — »Igre danes: 1 od 3«, »Muca po zadnji igri počiva. Igrata se lahko spet ob 21:13.«,
+ * »Začni lov« disabled — and nothing reacted: the card's full-screen backdrop (overlay layer,
+ * zIndex 20) was painted over the top bar (zIndex 10), so the × got no touch, the card had no
+ * other way out and iOS has no back. The app had to be killed.
+ */
+describe('device bug 2026-11-16: never stuck on a card after the hunt', () => {
+  function cooldownView(): ChildPetView {
+    const base = catView();
+    const wand = {
+      ...base.cat.wand!,
+      goal: 3,
+      sessions_today: 1,
+      my_sessions_today: 1,
+      can_start: false,
+      blocked_reason: 'wand_too_soon',
+      next_allowed_at: '2026-10-31T20:13:00Z',
+    };
+    return { ...base, server_time: new Date(T0).toISOString(), cat: { ...base.cat, wand } } as ChildPetView;
+  }
+
+  async function huntThenCooldown(success: boolean) {
+    const back = captureAndroidBack();
+    mocked.startWandHunt.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
+    answerFinish();
+    useAppStore.getState().openCatGame('wand');
+    const { client, rerender } = renderWithQuery(<CatCareOverlay view={catView()} reduceMotion={false} clock={clock} />);
+    deckReady();
+    layoutField();
+    await advance(0);
+    fireEvent.press(screen.getByTestId(`${ID}-start`));
+    await advance(0);
+    if (success) {
+      for (const at of [5_300, 11_400, 17_500]) {
+        await advance(at - (at === 5_300 ? 0 : at === 11_400 ? 5_300 : 11_400));
+        liftResting();
+      }
+      await advance(3_700);
+    } else {
+      await advance(29_200);
+    }
+    expect(mocked.finishWandHunt).toHaveBeenCalledTimes(1);
+    await advance(0);
+    expect(screen.getByTestId(`${ID}-result`)).toBeTruthy();
+    // The refetched state: the cat rests until 21:13, one hunt of three today.
+    rerender(
+      <QueryClientProvider client={client}>
+        <CatCareOverlay view={cooldownView()} reduceMotion={false} clock={clock} />
+      </QueryClientProvider>,
+    );
+    await advance(0);
+    // On the result card the × is reachable too.
+    expectCloseAboveCard(ID);
+    return back;
+  }
+
+  function expectDavidsCard() {
+    expect(screen.getByTestId(`${ID}-intro`)).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-today`).props.children).toBe('Igre danes: 1 od 3');
+    expect(screen.getByTestId(`${ID}-blocked`).props.children).toBe('Muca po zadnji igri počiva. Igrata se lahko spet ob 21:13.');
+    expect(screen.getByTestId(`${ID}-start`).props.accessibilityState?.disabled).toBe(true);
+    expect(screen.getByTestId(`${ID}-top-line`).props.children).toBe('Ko se pritaji, spusti pero!');
+  }
+
+  it('not caught → »Poskusi znova« → the resting cat: the × works over the card', async () => {
+    await huntThenCooldown(false);
+    fireEvent.press(screen.getByTestId(`${ID}-again`));
+    await advance(0);
+    deckReady();
+    await advance(2_500);
+    expectDavidsCard();
+    expectCloseAboveCard(ID);
+    fireEvent.press(screen.getByTestId(`${ID}-top-close`));
+    expect(useAppStore.getState().catOverlay).toBeNull();
+    jest.restoreAllMocks();
+  });
+
+  it('not caught → the resting cat: »Zapri« on the card closes the game', async () => {
+    await huntThenCooldown(false);
+    fireEvent.press(screen.getByTestId(`${ID}-again`));
+    await advance(0);
+    deckReady();
+    await advance(2_500);
+    expectDavidsCard();
+    // Every touch target on the card responds: the disabled start does nothing, »Zapri« leads out.
+    fireEvent.press(screen.getByTestId(`${ID}-start`));
+    expect(mocked.startWandHunt).toHaveBeenCalledTimes(1);
+    fireEvent.press(screen.getByTestId(`${ID}-intro-close`));
+    expect(useAppStore.getState().catOverlay).toBeNull();
+    jest.restoreAllMocks();
+  });
+
+  it('caught (3 ★): »Končano« closes the game; the × over the result card does too', async () => {
+    await huntThenCooldown(true);
+    expect(screen.getByTestId(`${ID}-result-title`).props.children).toBe('Kakšen lov!');
+    expect(screen.queryByTestId(`${ID}-again`)).toBeNull();
+    fireEvent.press(screen.getByTestId(`${ID}-done`));
+    expect(useAppStore.getState().catOverlay).toBeNull();
+    jest.restoreAllMocks();
+  });
+
+  it('stopped mid-hunt with the × → the intro card keeps an enabled × above it and »Zapri«', async () => {
+    mocked.startWandHunt.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
+    open(catView());
+    deckReady();
+    layoutField();
+    await advance(0);
+    fireEvent.press(screen.getByTestId(`${ID}-start`));
+    await advance(1_000);
+    fireEvent.press(screen.getByTestId(`${ID}-top-close`));
+    await advance(0);
+    expect(screen.getByTestId(`${ID}-intro`)).toBeTruthy();
+    expectCloseAboveCard(ID);
+    expect(screen.getByTestId(`${ID}-intro-close`)).toBeTruthy();
+  });
+
+  it('a failed finish that may be retried also offers »Zapri«', async () => {
+    mocked.startWandHunt.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
+    mocked.finishWandHunt.mockRejectedValue(new TypeError('Network request failed'));
+    open(catView());
+    deckReady();
+    layoutField();
+    await advance(0);
+    fireEvent.press(screen.getByTestId(`${ID}-start`));
+    await advance(29_200);
+    await advance(0);
+    expect(screen.getByTestId(`${ID}-retry`)).toBeTruthy();
+    expectCloseAboveCard(ID);
+    fireEvent.press(screen.getByTestId(`${ID}-failed-close`));
+    expect(useAppStore.getState().catOverlay).toBeNull();
   });
 });

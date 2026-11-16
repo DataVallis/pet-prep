@@ -8,12 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-16 — Igra se konča, otrok pa ne more ven: × je zdaj vedno nad kartico
+
+**Kaj:** David je na iPhonu igral palico s peresom z muco. Po lovu se je vrnila uvodna kartica z »Muca po zadnji igri počiva. Igrata se lahko spet ob 21:13.« in onemogočenim »Začni lov« — nič ni reagiralo, aplikacijo je moral ubiti. Vzrok: polprosojno ozadje kartice je bilo narisano čez zgornjo vrstico, zato je × izgledal tam, a dotika ni dobil; iOS pa nima sistemskega »nazaj«. Zdaj je × v vseh igrah vedno nad kartico (uvod, rezultat, napaka), uvodna kartica palice ima še gumb »Zapri«.
+**Zakaj je pomembno:** otrok, ki obtiči v igri, ne ve, kako naprej — in starš dobi vtis pokvarjene aplikacije. Izhod mora biti vedno viden in delujoč.
+- 👩 Staršem: »Iz vsake igre je vedno izhod — × zgoraj desno, tudi ko mora muca počivati.«
+- 🛠 Tehnično: plasti igralnega zaslona imajo jasen vrstni red (`GAME_Z`); zgornja vrstica je zdaj nad kartico. Test v Jestu po pravilih risanja Fabric preveri, da je × nad kartico — prejšnji testi so × »pritisnili« ne glede na to, kaj ga prekriva. Posodobitev prek OTA.
+
+---
+
 ## 2026-11-16 — Manj besedila, več reda: seznam otrok v Nadzoru je zložen
 
 **Kaj:** David je posnel zaslon »Nadzor in družina«: pri vsakem otroku so bile vse nastavitve (prilagojen način, lažje kretnje, zvoki, prikaz) z dolgimi razlagami, gumb »Dodaj otroka« pa je bil čisto spodaj in je izgledal kot del zadnjega otroka. »Preveč informacij … daj gumb čisto na vrh.« Zdaj je »Dodaj otroka« na vrhu, vsak otrok pa pokaže samo osnovno (ime, ljubljenček, naprave, kratka vrstica vklopljenih posebnih nastavitev) in »Več nastavitev« za ostalo. Besedilo privolitve za prilagojen način ostane vedno vidno.
 **Zakaj je pomembno:** družina s tremi otroki je imela več zaslonov besedila; starš zdaj na prvi pogled vidi, kaj je pri katerem otroku vklopljeno.
 - 👩 Staršem: »Seznam otrok je krajši — nastavitve posameznega otroka odprete z ›Več nastavitev‹.«
 - 🛠 Tehnično: en vzorec za zložljive starševske razdelke (`ExpandRow` + `MoreInfo`), brez novega native modula — pride s posodobitvijo OTA.
+
+---
 
 ## 2026-11-16 — Trije psi in mačka, štirje urniki: tihe ure za vsakega ljubljenčka in ura 12 / 24 h
 

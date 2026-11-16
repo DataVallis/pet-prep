@@ -281,6 +281,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-16 (cloud, mobile) — no dead end after a game (`fix/game-stuck-after-end`, JS only → OTA)
+- David's iPhone: wand intro card after a hunt (cat resting, »Začni lov« disabled) — the card's backdrop (overlay 20) covered the top bar (10), × got no touch, no iOS back. `GAME_Z.top` → 30 (all games), wand intro »Zapri« + failed-retry »Zapri«; Jest `expectCloseAboveCard`. Debt: RNTL `fireEvent.press` ignores what covers a node — use `expectCloseAboveCard` for every card.
+
 ### 2026-11-16 (cloud, mobile) — collapsible child cards in »Nadzor in družina« (`feat/controls-child-cards-collapsible`, David »preveč informacij … daj gumb čisto na vrh«; JS only → OTA)
 - `FamilyChildrenCard`: »Dodaj otroka« at the top; each child collapsed (basics, non-default settings summary, PIN + sign-out); »Več nastavitev« (`components/parent/Disclosure#ExpandRow`, LayoutAnimation, reduce motion respected) reveals the four settings rows (short line + »Več o tem« `MoreInfo`, adapted-mode consent always visible) and »Izbriši profil«. Layout only, same API calls. Not verified on a device. Debt: none new.
 

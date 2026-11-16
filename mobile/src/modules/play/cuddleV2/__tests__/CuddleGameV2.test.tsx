@@ -13,7 +13,7 @@ import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
 import PlayOverlay, { loadCuddleGameV2, resetBallGameV2ForTests } from '@/modules/play/PlayOverlay';
 import { CUDDLE_V2_STRINGS } from '@/modules/play/play';
 import { makeLiveChildState, makePlayState, withEasyGestures } from '@/test-utils/fixtures';
-import { captureAndroidBack, expectHudAboveStage, fireGamePan } from '@/test-utils/gameLayer';
+import { captureAndroidBack, expectCloseAboveCard, expectHudAboveStage, fireGamePan } from '@/test-utils/gameLayer';
 
 const ID = 'play-cuddle-v2';
 const T0 = Date.parse('2026-10-31T12:00:00+01:00');
@@ -145,6 +145,8 @@ describe('cuddles v2', () => {
     expect(screen.getByTestId(`${ID}-done`)).toBeTruthy();
     expect(onFinished).toHaveBeenCalledTimes(1);
     expect(onClose).not.toHaveBeenCalled();
+    // The result card never covers the × (wand cooldown dead end on iOS, 2026-11-16).
+    expectCloseAboveCard(ID);
     expect(back.pressBack()).toBe(true);
     expect(onClose).toHaveBeenCalledTimes(1);
     jest.restoreAllMocks();

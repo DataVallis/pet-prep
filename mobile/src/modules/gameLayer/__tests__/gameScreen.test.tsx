@@ -17,6 +17,7 @@ import {
   GAME_BACK_HINT_MS,
   GAME_ESCAPE_MS,
   GAME_STAGE_WATCHDOG_MS,
+  GAME_Z,
   GameExitProvider,
   GameScreenContext,
   closeActionOf,
@@ -26,7 +27,7 @@ import {
 import GameScreen from '@/modules/gameLayer/GameScreen';
 import GameTopBar from '@/modules/gameLayer/GameTopBar';
 import { fabricPaintedTestIDs } from '@/test-utils/fabricPaintOrder';
-import { captureAndroidBack, expectHudAboveStage } from '@/test-utils/gameLayer';
+import { captureAndroidBack, expectCloseAboveCard, expectHudAboveStage } from '@/test-utils/gameLayer';
 import { resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 
 const CLIPS = [
@@ -71,7 +72,14 @@ function Game({
       field={<View style={StyleSheet.absoluteFill} testID="g-field">{Broken !== undefined && <Broken />}</View>}
       topBar={<GameTopBar dots={[false]} stars={0} line={line} closeLabel="Zapri" progressLabel="" onClose={onClose} closeLocked={closeLocked} testID="g-top" />}
       dock={dock ? <View testID="g-button" /> : null}
-      overlay={card ? <View testID="g-card" /> : null}
+      overlay={
+        card ? (
+          // Like every real card: a full-screen backdrop that takes the touches, a box in the middle.
+          <View style={StyleSheet.absoluteFill} testID="g-card-backdrop">
+            <View testID="g-card" />
+          </View>
+        ) : null
+      }
     />
   );
 }
@@ -120,6 +128,14 @@ describe('gameBack (pure)', () => {
   });
 });
 
+describe('GAME_Z', () => {
+  it('the top bar (and its ×) sits above the overlay card; only the escape card is higher', () => {
+    expect(GAME_Z.top).toBeGreaterThan(GAME_Z.overlay);
+    expect(GAME_Z.escape).toBeGreaterThan(GAME_Z.top);
+    expect(GAME_Z.overlay).toBeGreaterThan(GAME_Z.dock);
+  });
+});
+
 describe('GameScreen', () => {
   beforeEach(() => {
     jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
@@ -138,6 +154,27 @@ describe('GameScreen', () => {
     expect(order).toContain('g-deck-player-0-front');
     expect(order.indexOf('g-deck-player-0-front')).toBeLessThan(order.indexOf('g-top-close'));
     expectHudAboveStage('g', ['g-field', 'g-top-close', 'g-button', 'g-dock-layer', 'g-feedback-layer']);
+  });
+
+  // David's iPhone 2026-11-16 (wand cooldown card): the card's backdrop covered the ×, iOS has no back.
+  it('a card in the overlay slot never covers the ×: it is enabled, painted above the card and closes', () => {
+    const exit = jest.fn();
+    const close = jest.fn();
+    render(<Game onExit={exit} onClose={close} card />);
+    deckReady();
+    expectCloseAboveCard('g');
+    const order = fabricPaintedTestIDs(screen.getByTestId('g', { includeHiddenElements: true }));
+    expect(order.indexOf('g-card-backdrop')).toBeLessThan(order.indexOf('g-top-close'));
+    fireEvent.press(screen.getByTestId('g-top-close'));
+    expect(close).toHaveBeenCalledTimes(1);
+  });
+
+  it('a card with the screen exit only (no own onClose): the × is still above it and leads out', () => {
+    const exit = jest.fn();
+    render(<Game onExit={exit} card />);
+    expectCloseAboveCard('g');
+    fireEvent.press(screen.getByTestId('g-top-close'));
+    expect(exit).toHaveBeenCalledTimes(1);
   });
 
   it('the × without its own onClose uses the screen exit — from the prop or the host context', () => {

@@ -84,3 +84,18 @@ export function expectHudAboveStage(gameTestID: string, extra: readonly string[]
   const above = [`${gameTestID}-top-layer`, ...extra].map((id) => screen.getByTestId(id, opts));
   expectPaintedAbove(root, stage, above);
 }
+
+/**
+ * A card in `GameScreen overlay` (intro / result / refusal) never covers the way out (wand
+ * cooldown dead end on iOS, David 2026-11-16): the top bar's × is on screen, enabled, and
+ * painted ABOVE everything in the overlay layer (its backdrop swallowed every touch before).
+ * `topTestID` = the game's `GameTopBar` testID (default `<game>-top`).
+ */
+export function expectCloseAboveCard(gameTestID: string, topTestID = `${gameTestID}-top`): void {
+  const opts = { includeHiddenElements: true };
+  const root = screen.getByTestId(gameTestID, opts);
+  const overlay = screen.getByTestId(`${gameTestID}-overlay-layer`, opts);
+  const close = screen.getByTestId(`${topTestID}-close`, opts);
+  expect((close.props as { accessibilityState?: { disabled?: boolean } }).accessibilityState?.disabled ?? false).toBe(false);
+  expectPaintedAbove(root, overlay, [close]);
+}

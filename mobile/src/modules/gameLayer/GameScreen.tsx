@@ -11,7 +11,9 @@
  * (`zIndex: 2`) was sorted over the top bar, the ball, the buttons and the feedback (only the
  * video was visible, no way out). Never render a layer outside these wrappers.
  *
- * Exit (mandatory): the top bar's × is the way out. Android back never ends a RUNNING game
+ * Exit (mandatory): the top bar's × is the way out — its layer is painted ABOVE the `overlay`
+ * card (`GAME_Z.top` > `GAME_Z.overlay`; a card's backdrop used to swallow every touch on the ×,
+ * so an intro card with a disabled start was a dead end on iOS — David 2026-11-16). Android back never ends a RUNNING game
  * (David 2026-11-15, every game: an edge swipe while playing is Android's back GESTURE and threw
  * the session away) — while the × is there and no card covers the game (`overlay`: intro,
  * result) back only shows the `backHint` line (»tap × to stop«) in the top bar for

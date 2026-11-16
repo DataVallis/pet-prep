@@ -21,7 +21,7 @@ import { ballAtRest } from '@/modules/play/ballV2/ballFlight';
 import { CALL_WAIT_MS, CATCH_WINDOW_MS } from '@/modules/play/ballV2/ballMachine';
 import { BALL_V2_STRINGS } from '@/modules/play/play';
 import { makeLiveChildState, makeMedia, makePlayState, withEasyGestures } from '@/test-utils/fixtures';
-import { captureAndroidBack, expectHudAboveStage, fakeAudioPlayers, fireGameGesture, resetFakeAudioPlayers } from '@/test-utils/gameLayer';
+import { captureAndroidBack, expectCloseAboveCard, expectHudAboveStage, fakeAudioPlayers, fireGameGesture, resetFakeAudioPlayers } from '@/test-utils/gameLayer';
 import { mockVideoPlayers, resetMockVideoPlayers, sourceUri, type MockVideoPlayer } from '@/test-utils/videoPlayers';
 
 const URLS = {
@@ -297,6 +297,8 @@ describe('BallGameV2 (GAMES_SPEC §4.3)', () => {
     await oneThrow();
     await oneThrow();
     expectHudAboveStage(ID, [`${ID}-done`, `${ID}-again`, `${ID}-finish`]);
+    // The result card never covers the × (wand cooldown dead end on iOS, 2026-11-16).
+    expectCloseAboveCard(ID);
   });
 
   it('the × is there before the deck is ready and closes the game', () => {
