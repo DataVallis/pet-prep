@@ -15,7 +15,8 @@
     "es": "Salsa de carne",
     "pt": "Molho de carne",
     "nl": "Jus",
-    "pl": "Sos pieczeniowy"
+    "pl": "Sos pieczeniowy",
+    "cs": "Omáčka z pečeně (gravy)"
   },
   "question": {
     "en": "Can cats eat gravy?",
@@ -31,7 +32,8 @@
     "es": "¿Pueden los gatos comer salsa de carne?",
     "pt": "Os gatos podem comer molho de carne?",
     "nl": "Mogen katten jus eten?",
-    "pl": "Czy koty mogą jeść sos pieczeniowy?"
+    "pl": "Czy koty mogą jeść sos pieczeniowy?",
+    "cs": "Mohou kočky jíst omáčku z pečeně?"
   },
   "url_slug": {
     "en": "gravy",
@@ -47,7 +49,8 @@
     "es": "salsa-de-carne",
     "pt": "molho-de-carne",
     "nl": "jus",
-    "pl": "sos-pieczeniowy"
+    "pl": "sos-pieczeniowy",
+    "cs": "omacka-k-masu"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "es": "No, la salsa de carne hecha para personas no es para los gatos. Suele ser salada y a menudo lleva cebolla, ajo y condimentos, y la cebolla y el ajo son tóxicos para los gatos. Además, la salsa de carne puede tener mucha grasa. No la pongas en el plato de tu gato.",
     "pt": "Não, o molho feito para pessoas não é para gatos. Costuma ser salgado e leva muitas vezes cebola, alho e temperos, e a cebola e o alho são tóxicos para os gatos. O molho pode ainda ter muita gordura. Não o ponhas no prato do teu gato.",
     "nl": "Nee, jus voor mensen is niets voor katten. Het is meestal zout en bevat vaak ui, knoflook en kruiden, en ui en knoflook zijn giftig voor katten. Jus kan ook veel vet bevatten. Laat jus dus niet in het bakje van je kat belanden.",
-    "pl": "Nie, sos pieczeniowy przygotowany dla ludzi nie jest dla kotów. Zwykle jest słony i często zawiera cebulę, czosnek i przyprawy, a cebula i czosnek są toksyczne dla kotów. Sos może też zawierać dużo tłuszczu. Nie dawaj go kotu."
+    "pl": "Nie, sos pieczeniowy przygotowany dla ludzi nie jest dla kotów. Zwykle jest słony i często zawiera cebulę, czosnek i przyprawy, a cebula i czosnek są toksyczne dla kotów. Sos może też zawierać dużo tłuszczu. Nie dawaj go kotu.",
+    "cs": "Ne, omáčka pro lidi není pro kočky. Bývá slaná a často obsahuje cibuli, česnek a koření, přitom cibule a česnek jsou pro kočky jedovaté. Může být také hodně tučná. Kočce ji do misky nedávejte."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The ASPCA suggests a drizzle of gravy on a pet's holiday dinner, but Cats Protection warns that gravy made for humans is usually salty and contains garlic and seasoning, and PDSA says stuffing and gravy often contain onion, leeks and garlic, which can be deadly to cats and dogs. Onion, garlic, chives and leeks are toxic to cats even when cooked or dried. The RSPCA adds that gravy can contain high levels of salt and fat, and the ASPCA notes that bouillon cubes used for making gravy contain high amounts of sodium.",
@@ -80,7 +84,8 @@
     "es": "Las fuentes no coinciden, así que aplicamos el nivel más estricto. La ASPCA sugiere un chorrito de salsa de carne en la cena festiva de una mascota, pero Cats Protection advierte de que la salsa hecha para personas suele ser salada y llevar ajo y condimentos, y PDSA dice que el relleno y la salsa de carne suelen llevar cebolla, puerro y ajo, que pueden ser mortales para gatos y perros. La cebolla, el ajo, el cebollino y el puerro son tóxicos para los gatos aunque estén cocinados o secos. La RSPCA añade que la salsa de carne puede llevar mucha sal y grasa, y la ASPCA señala que las pastillas de caldo que se usan para hacer salsas contienen mucho sodio.",
     "pt": "As fontes não estão de acordo, por isso usamos o nível mais rigoroso. A ASPCA sugere um fio de molho no jantar de festa do animal, mas a Cats Protection avisa que o molho feito para pessoas costuma ser salgado e conter alho e temperos, e a PDSA diz que o recheio e o molho levam muitas vezes cebola, alho-francês e alho, que podem ser mortais para gatos e cães. A cebola, o alho, o cebolinho e o alho-francês são tóxicos para os gatos mesmo cozinhados ou secos. A RSPCA acrescenta que o molho pode ter muito sal e gordura, e a ASPCA refere que os cubos de caldo usados para fazer molho têm muito sódio.",
     "nl": "De bronnen zijn het niet met elkaar eens, dus we hanteren het strengere niveau. De ASPCA stelt voor om wat jus over het feestdiner van je huisdier te sprenkelen, maar Cats Protection waarschuwt dat jus voor mensen meestal zout is en knoflook en kruiden bevat, en PDSA zegt dat vulling en jus vaak ui, prei en knoflook bevatten, en dat kan dodelijk zijn voor katten en honden. Ui, knoflook, bieslook en prei zijn giftig voor katten, ook als ze gekookt of gedroogd zijn. De RSPCA voegt toe dat jus veel zout en vet kan bevatten, en de ASPCA merkt op dat bouillonblokjes voor het maken van jus veel natrium bevatten.",
-    "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. ASPCA proponuje dodać odrobinę sosu pieczeniowego do świątecznego obiadu dla zwierzęcia domowego, ale Cats Protection ostrzega, że sos pieczeniowy przygotowany dla ludzi jest zwykle słony i zawiera czosnek oraz przyprawy, a PDSA podaje, że farsz i sos pieczeniowy często zawierają cebulę, por i czosnek, które mogą być śmiertelnie niebezpieczne dla kotów i psów. Cebula, czosnek, szczypiorek i por są toksyczne dla kotów nawet po ugotowaniu lub wysuszeniu. RSPCA dodaje, że sos może zawierać dużo soli i tłuszczu, a ASPCA zaznacza, że kostki rosołowe używane do robienia sosu zawierają bardzo dużo sodu."
+    "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. ASPCA proponuje dodać odrobinę sosu pieczeniowego do świątecznego obiadu dla zwierzęcia domowego, ale Cats Protection ostrzega, że sos pieczeniowy przygotowany dla ludzi jest zwykle słony i zawiera czosnek oraz przyprawy, a PDSA podaje, że farsz i sos pieczeniowy często zawierają cebulę, por i czosnek, które mogą być śmiertelnie niebezpieczne dla kotów i psów. Cebula, czosnek, szczypiorek i por są toksyczne dla kotów nawet po ugotowaniu lub wysuszeniu. RSPCA dodaje, że sos może zawierać dużo soli i tłuszczu, a ASPCA zaznacza, że kostki rosołowe używane do robienia sosu zawierają bardzo dużo sodu.",
+    "cs": "Zdroje se různí, proto jsme zvolili přísnější úroveň. ASPCA navrhuje pokapat sváteční večeři pro domácí zvíře trochou omáčky, ale Cats Protection varuje, že omáčka určená pro lidi bývá slaná a obsahuje česnek a koření, a PDSA uvádí, že nádivka a omáčka často obsahují cibuli, pórek a česnek, které mohou být pro kočky i psy smrtelně nebezpečné. Cibule, česnek, pažitka a pórek jsou pro kočky jedovaté, i když jsou tepelně upravené nebo sušené. RSPCA dodává, že omáčka může obsahovat hodně soli a tuku, a ASPCA upozorňuje, že bujónové kostky na přípravu omáček obsahují velké množství sodíku."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Wymioty",
       "Biegunka",
       "Rozstrój żołądka"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Podrážděný žaludek"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "es": "Si tu gato ha comido salsa de carne que pueda llevar cebolla o ajo, ponte en contacto con tu veterinario lo antes posible. Si crees que también ha comido otras sobras, dile a tu veterinario qué ha comido.",
     "pt": "Se o teu gato comeu molho que possa conter cebola ou alho, contacta o teu veterinário o mais depressa possível. Se achas que ele comeu também outras sobras, diz ao veterinário o que foi.",
     "nl": "Heeft je kat jus gegeten waar mogelijk ui of knoflook in zat, neem dan zo snel mogelijk contact op met je dierenarts. Denk je dat ze ook andere restjes heeft gegeten, vertel je dierenarts dan wat ze heeft gegeten.",
-    "pl": "Jeśli twój kot zjadł sos pieczeniowy, który mógł zawierać cebulę lub czosnek, jak najszybciej skontaktuj się z weterynarzem. Jeśli sądzisz, że zjadł też inne resztki, powiedz weterynarzowi, co to było."
+    "pl": "Jeśli twój kot zjadł sos pieczeniowy, który mógł zawierać cebulę lub czosnek, jak najszybciej skontaktuj się z weterynarzem. Jeśli sądzisz, że zjadł też inne resztki, powiedz weterynarzowi, co to było.",
+    "cs": "Pokud kočka snědla omáčku, která mohla obsahovat cibuli nebo česnek, co nejdříve se obraťte na veterináře. Pokud si myslíte, že snědla i další zbytky, řekněte veterináři, co všechno snědla."
   },
   "serving": null,
   "child": {
@@ -185,7 +196,8 @@
     "es": "La salsa de carne es comida de personas y lleva sal y cebolla. La comida para gatos es la mejor opción para el gatito.",
     "pt": "O molho é comida de pessoas, com sal e cebola. A comida própria do gatinho é a melhor escolha para ele.",
     "nl": "Jus is voor mensen en zit vol zout en ui. Het beste voor je kat is haar eigen kattenvoer.",
-    "pl": "Sos pieczeniowy to jedzenie dla ludzi, z solą i cebulą. Najlepszym wyborem dla kotka jest jego własna karma."
+    "pl": "Sos pieczeniowy to jedzenie dla ludzi, z solą i cebulą. Najlepszym wyborem dla kotka jest jego własna karma.",
+    "cs": "Omáčka je jídlo pro lidi a bývá v ní sůl a cibule. Nejlepší volbou pro kočičku je její vlastní kočičí krmivo."
   },
   "faq": [
     {
@@ -203,7 +215,8 @@
         "es": "¿Qué puede comer mi gato de la cena festiva en su lugar?",
         "pt": "O que posso dar ao meu gato do jantar de festa?",
         "nl": "Wat kan mijn kat in plaats daarvan krijgen van het feestdiner?",
-        "pl": "Co mój kot może dostać ze świątecznego obiadu zamiast sosu?"
+        "pl": "Co mój kot może dostać ze świątecznego obiadu zamiast sosu?",
+        "cs": "Co může kočka ze sváteční večeře dostat místo toho?"
       },
       "a": {
         "en": "PDSA says a small slice of skin- and bone-free turkey and boiled vegetables without any sauces shouldn't cause problems. Leave the gravy off.",
@@ -219,7 +232,8 @@
         "es": "PDSA dice que un trocito pequeño de pavo sin piel ni huesos y verduras hervidas sin ninguna salsa no deberían causar problemas. No le pongas salsa de carne.",
         "pt": "A PDSA diz que uma fatia pequena de peru sem pele nem ossos e legumes cozidos sem molhos não deve causar problemas. Deixa o molho de fora.",
         "nl": "PDSA zegt dat een klein plakje kalkoen zonder vel en botjes en gekookte groente zonder saus geen problemen zou moeten opleveren. Laat de jus weg.",
-        "pl": "PDSA podaje, że mały plasterek indyka bez skóry i kości oraz gotowane warzywa bez żadnych sosów nie powinny sprawić problemów. Pomiń sos pieczeniowy."
+        "pl": "PDSA podaje, że mały plasterek indyka bez skóry i kości oraz gotowane warzywa bez żadnych sosów nie powinny sprawić problemów. Pomiń sos pieczeniowy.",
+        "cs": "PDSA uvádí, že malý plátek krůtího masa bez kůže a kostí a vařená zelenina bez jakýchkoli omáček by neměly způsobit potíže. Omáčku vynechte."
       }
     }
   ],
@@ -359,6 +373,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-16",
       "verified_hash": "fd51e5fb5a622b3dbfc1407745ef404aa54a0e933ccbbe128301eedb8c9a45af"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "b00f18c18105b21ba683fdd6ddd0fe7c0d79a36aa64661b6dea38296c31ed4a0"
     }
   }
 }

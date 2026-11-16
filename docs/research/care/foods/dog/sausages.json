@@ -15,7 +15,8 @@
     "fr": "Saucisses",
     "pt": "Salsichas",
     "nl": "Worst",
-    "pl": "Kiełbasy"
+    "pl": "Kiełbasy",
+    "cs": "Klobásy a párky"
   },
   "question": {
     "en": "Can dogs eat sausages?",
@@ -31,7 +32,8 @@
     "fr": "Les chiens peuvent-ils manger des saucisses ?",
     "pt": "Os cães podem comer salsichas?",
     "nl": "Mogen honden worst eten?",
-    "pl": "Czy psy mogą jeść kiełbasę?"
+    "pl": "Czy psy mogą jeść kiełbasę?",
+    "cs": "Mohou psi jíst klobásy a párky?"
   },
   "url_slug": {
     "en": "sausages",
@@ -47,7 +49,8 @@
     "fr": "saucisses",
     "pt": "salsichas",
     "nl": "worst",
-    "pl": "kielbasy"
+    "pl": "kielbasy",
+    "cs": "klobasy-a-parky"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Non, mieux vaut ne pas donner de saucisses à votre chien. La saucisse est riche en graisses et en sel et contient souvent des assaisonnements comme l’ail et l’oignon. Trop de graisse ou de sel peut entraîner des problèmes de santé douloureux comme la pancréatite.",
     "pt": "Não, o melhor é não dar salsichas ao teu cão. A salsicha tem muita gordura e sal e leva muitas vezes temperos como alho e cebola. Demasiada gordura ou sal pode causar problemas de saúde dolorosos, como a pancreatite.",
     "nl": "Nee, geef je hond liever geen worst. Worst bevat veel vet en zout en is vaak gekruid met onder meer knoflook en ui. Te veel vet of zout kan leiden tot pijnlijke gezondheidsproblemen zoals alvleesklierontsteking.",
-    "pl": "Nie, lepiej nie dawać psu kiełbasy. Kiełbasa ma dużo tłuszczu i soli i często zawiera przyprawy, takie jak czosnek i cebula. Zbyt dużo tłuszczu lub soli może prowadzić do bolesnych problemów zdrowotnych, takich jak zapalenie trzustki."
+    "pl": "Nie, lepiej nie dawać psu kiełbasy. Kiełbasa ma dużo tłuszczu i soli i często zawiera przyprawy, takie jak czosnek i cebula. Zbyt dużo tłuszczu lub soli może prowadzić do bolesnych problemów zdrowotnych, takich jak zapalenie trzustki.",
+    "cs": "Ne, psovi je nejlepší klobásy nedávat. Klobásy mají hodně tuku a soli a často obsahují koření, například česnek a cibuli. Příliš mnoho tuku nebo soli může vést k bolestivým zdravotním potížím, například k zánětu slinivky břišní."
   },
   "why": {
     "en": "Unlike plain chicken or beef, sausage is high in fat and sodium and is often seasoned with garlic, onion or other spicy additives. Salty, fatty or preserved meats can be unhealthy for dogs. A vet at a UK vet charity says pigs in blankets aren't dangerous but are high in fat and can easily upset a dog's stomach; another source says dogs should not eat sausage at all, so we follow the stricter advice.",
@@ -80,7 +84,8 @@
     "fr": "Contrairement au poulet ou au bœuf nature, la saucisse est riche en graisses et en sodium et est souvent assaisonnée d’ail, d’oignon ou d’autres additifs épicés. Les viandes salées, grasses ou conservées peuvent être mauvaises pour les chiens. Un vétérinaire travaillant pour une association caritative britannique de soins vétérinaires explique que les « pigs in blankets » (petites saucisses enrobées de bacon) ne sont pas dangereux mais sont très gras et peuvent facilement déranger l’estomac d’un chien ; une autre source dit que les chiens ne doivent pas manger de saucisse du tout ; nous suivons donc l’avis le plus strict.",
     "pt": "Ao contrário do frango ou da carne de vaca simples, a salsicha tem muita gordura e sódio e é muitas vezes temperada com alho, cebola ou outros condimentos picantes. As carnes salgadas, gordas ou conservadas podem não ser saudáveis para os cães. Um veterinário de uma organização de beneficência veterinária do Reino Unido diz que as salsichas embrulhadas em bacon (pigs in blankets) não são perigosas, mas têm muita gordura e podem facilmente irritar o estômago de um cão; outra fonte diz que os cães não devem comer salsicha de forma alguma, por isso seguimos o conselho mais rigoroso.",
     "nl": "In tegenstelling tot gewone kip of rundvlees bevat worst veel vet en natrium en is het vaak gekruid met knoflook, ui of andere pittige toevoegingen. Zout, vet of geconserveerd vlees kan ongezond zijn voor honden. Een dierenarts van een Britse liefdadigheidsorganisatie voor dierenzorg zegt dat worstjes in bacon (pigs in blankets) niet gevaarlijk zijn, maar wel veel vet bevatten en de maag van een hond gemakkelijk van streek kunnen maken; een andere bron zegt dat honden helemaal geen worst mogen eten, dus we volgen het strengere advies.",
-    "pl": "W przeciwieństwie do kurczaka lub wołowiny bez dodatków kiełbasa ma dużo tłuszczu i sodu i często jest przyprawiana czosnkiem, cebulą lub innymi pikantnymi dodatkami. Słone, tłuste lub konserwowane mięso może być niezdrowe dla psów. Weterynarz z brytyjskiej weterynaryjnej organizacji charytatywnej mówi, że kiełbaski owinięte bekonem (pigs in blankets) nie są niebezpieczne, ale mają dużo tłuszczu i łatwo mogą rozstroić psu żołądek; inne źródło twierdzi, że psy w ogóle nie powinny jeść kiełbasy, dlatego przyjmujemy surowsze stanowisko."
+    "pl": "W przeciwieństwie do kurczaka lub wołowiny bez dodatków kiełbasa ma dużo tłuszczu i sodu i często jest przyprawiana czosnkiem, cebulą lub innymi pikantnymi dodatkami. Słone, tłuste lub konserwowane mięso może być niezdrowe dla psów. Weterynarz z brytyjskiej weterynaryjnej organizacji charytatywnej mówi, że kiełbaski owinięte bekonem (pigs in blankets) nie są niebezpieczne, ale mają dużo tłuszczu i łatwo mogą rozstroić psu żołądek; inne źródło twierdzi, że psy w ogóle nie powinny jeść kiełbasy, dlatego przyjmujemy surowsze stanowisko.",
+    "cs": "Na rozdíl od obyčejného kuřecího nebo hovězího masa mají klobásy hodně tuku a sodíku a často jsou ochucené česnekem, cibulí nebo jinými kořenícími přísadami. Slané, tučné nebo konzervované maso může být pro psy nezdravé. Veterinář z britské veterinární charitativní organizace uvádí, že klobásky ve slanině nejsou nebezpečné, ale mají hodně tuku a mohou psovi snadno podráždit žaludek; jiný zdroj říká, že psi by klobásy neměli jíst vůbec, proto se řídíme přísnější radou."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Biegunka",
       "Niechęć do jedzenia",
       "Zmęczenie"
+    ],
+    "cs": [
+      "Zvracení, někdy až 1–4 dny po tučném jídle",
+      "Bolest břicha",
+      "Průjem",
+      "Nechuť k jídlu",
+      "Únava"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "fr": "Si votre chien a mangé de la saucisse, surveillez-le et appelez votre vétérinaire pour demander conseil. Contactez votre vétérinaire si votre chien vomit, a mal au ventre ou semble fatigué dans les jours qui suivent, car les signes peuvent apparaître avec retard après un repas gras.",
     "pt": "Se o teu cão comeu salsicha, observa-o e fala com o teu veterinário para pedires conselho. Liga ao teu veterinário se o teu cão vomitar, tiver dor de barriga ou parecer cansado nos dias seguintes, porque os sinais depois de uma refeição gorda podem demorar a aparecer.",
     "nl": "Heeft je hond wat worst gegeten, houd hem dan in de gaten en bel je dierenarts voor advies. Neem contact op met je dierenarts als je hond de dagen daarna moet braken, buikpijn heeft of moe lijkt, want verschijnselen na een vette maaltijd kunnen op zich laten wachten.",
-    "pl": "Jeśli pies zjadł trochę kiełbasy, obserwuj go i zadzwoń do weterynarza po radę. Skontaktuj się z weterynarzem, jeśli w kolejnych dniach pies ma wymioty, ból brzucha lub wydaje się zmęczony, bo objawy po tłustym posiłku mogą pojawić się dopiero po pewnym czasie."
+    "pl": "Jeśli pies zjadł trochę kiełbasy, obserwuj go i zadzwoń do weterynarza po radę. Skontaktuj się z weterynarzem, jeśli w kolejnych dniach pies ma wymioty, ból brzucha lub wydaje się zmęczony, bo objawy po tłustym posiłku mogą pojawić się dopiero po pewnym czasie.",
+    "cs": "Pokud pes snědl trochu klobásy, sledujte ho a požádejte veterináře o radu. Obraťte se na veterináře, pokud pes v následujících dnech zvrací, má bolesti břicha nebo je unavený, protože příznaky po tučném jídle se mohou objevit se zpožděním."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "fr": "Les saucisses sont trop grasses et trop salées pour les chiens : garde-les dans ton assiette.",
     "pt": "As salsichas são gordas e salgadas demais para os cães, por isso deixa-as no teu prato.",
     "nl": "Worst is te vet en te zout voor honden, dus houd het op je eigen bord.",
-    "pl": "Kiełbasy są dla psów zbyt tłuste i słone, więc zostaw je na swoim talerzu."
+    "pl": "Kiełbasy są dla psów zbyt tłuste i słone, więc zostaw je na swoim talerzu.",
+    "cs": "Klobásy jsou pro psy moc tučné a slané, proto si je nech na svém talíři."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "fr": "Et les « pigs in blankets » de Noël (petites saucisses enrobées de bacon) ?",
         "pt": "E as salsichas embrulhadas em bacon (pigs in blankets) do Natal?",
         "nl": "En worstjes in bacon met Kerst?",
-        "pl": "A co ze świątecznymi kiełbaskami owiniętymi bekonem (pigs in blankets)?"
+        "pl": "A co ze świątecznymi kiełbaskami owiniętymi bekonem (pigs in blankets)?",
+        "cs": "A co vánoční klobásky ve slanině (pigs in blankets)?"
       },
       "a": {
         "en": "According to a vet, they aren't dangerous, but they are high in fat and could easily upset your dog's stomach.",
@@ -247,7 +262,8 @@
         "fr": "D’après un vétérinaire, elles ne sont pas dangereuses, mais elles sont très grasses et pourraient facilement déranger l’estomac de votre chien.",
         "pt": "Segundo um veterinário, não são perigosas, mas têm muita gordura e podem facilmente irritar o estômago do teu cão.",
         "nl": "Volgens een dierenarts zijn ze niet gevaarlijk, maar ze bevatten veel vet en kunnen de maag van je hond gemakkelijk van streek maken.",
-        "pl": "Według weterynarza nie są niebezpieczne, ale mają dużo tłuszczu i łatwo mogą rozstroić psu żołądek."
+        "pl": "Według weterynarza nie są niebezpieczne, ale mają dużo tłuszczu i łatwo mogą rozstroić psu żołądek.",
+        "cs": "Podle veterináře nejsou nebezpečné, ale mají hodně tuku a mohou psovi snadno podráždit žaludek."
       }
     }
   ],
@@ -377,6 +393,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-16",
       "verified_hash": "bc385f4f6add380ba4a6695807bb4e80a1a6e8db318d659a6b1ecdace69eb8de"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "e1f1744c1dcde8d6bf6fdf4562050530d654fae35fc31c1cedb0505ca9ba8098"
     }
   }
 }

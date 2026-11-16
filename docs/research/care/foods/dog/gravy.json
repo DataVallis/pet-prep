@@ -15,7 +15,8 @@
     "fr": "Sauce au jus",
     "pt": "Molho de carne",
     "nl": "Jus",
-    "pl": "Sos pieczeniowy"
+    "pl": "Sos pieczeniowy",
+    "cs": "Omáčka z pečeně (gravy)"
   },
   "question": {
     "en": "Can dogs eat gravy?",
@@ -31,7 +32,8 @@
     "fr": "Les chiens peuvent-ils manger de la sauce au jus ?",
     "pt": "Os cães podem comer molho de carne?",
     "nl": "Mogen honden jus eten?",
-    "pl": "Czy psy mogą jeść sos pieczeniowy?"
+    "pl": "Czy psy mogą jeść sos pieczeniowy?",
+    "cs": "Mohou psi jíst omáčku z pečeně?"
   },
   "url_slug": {
     "en": "gravy",
@@ -47,7 +49,8 @@
     "fr": "sauce-au-jus-de-viande",
     "pt": "molho-de-carne",
     "nl": "jus",
-    "pl": "sos-pieczeniowy"
+    "pl": "sos-pieczeniowy",
+    "cs": "omacka-k-masu"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Non, mieux vaut tenir la sauce au jus à l’écart des chiens. C’est un aliment gras qui peut irriter l’estomac d’un chien et provoquer une pancréatite. Celle préparée avec des cubes de bouillon est très salée, et la sauce à l’oignon contient de l’oignon, que les chiens ne doivent pas manger.",
     "pt": "Não, o melhor é manter o molho de carne longe dos cães. O molho de carne é um alimento gorduroso que pode irritar o estômago do cão e causar pancreatite. O molho feito com cubos de caldo tem muito sal, e o molho de cebola leva cebola, que os cães não devem comer.",
     "nl": "Nee, houd jus liever bij honden uit de buurt. Jus is vet voedsel dat de maag van een hond van streek kan maken en kan leiden tot alvleesklierontsteking. Jus van bouillonblokjes bevat veel zout, en uiensaus bevat ui, die honden niet mogen eten.",
-    "pl": "Nie, lepiej trzymać sos pieczeniowy z dala od psów. To tłusta potrawa, która może rozstroić psu żołądek i wywołać zapalenie trzustki. Sos zrobiony z kostek bulionowych jest bardzo słony, a sos cebulowy zawiera cebulę, której psom nie należy dawać."
+    "pl": "Nie, lepiej trzymać sos pieczeniowy z dala od psów. To tłusta potrawa, która może rozstroić psu żołądek i wywołać zapalenie trzustki. Sos zrobiony z kostek bulionowych jest bardzo słony, a sos cebulowy zawiera cebulę, której psom nie należy dawać.",
+    "cs": "Ne, omáčku je nejlepší psům nedávat. Je to tučné jídlo, které může psovi podráždit žaludek a vést k zánětu slinivky břišní. Omáčka z bujónových kostek má hodně soli a cibulová omáčka obsahuje cibuli, kterou psi jíst nesmějí."
   },
   "why": {
     "en": "Gravy is not toxic as such, but butter, meat drippings, gravies and other fatty foods can cause stomach upset with diarrhoea and vomiting. Fatty foods can also cause pancreatitis, an inflammation of the pancreas that may need hospital care. Stock cubes used for gravy contain a lot of sodium, and dogs should not eat cooked foods containing onion, such as onion gravy.",
@@ -80,7 +84,8 @@
     "fr": "La sauce au jus n’est pas toxique en soi, mais le beurre, les jus de cuisson, les sauces au jus et d’autres aliments gras peuvent provoquer des troubles digestifs avec diarrhée et vomissements. Les aliments gras peuvent aussi provoquer une pancréatite, une inflammation du pancréas qui peut nécessiter une hospitalisation. Les cubes de bouillon utilisés pour les sauces contiennent beaucoup de sodium, et les chiens ne doivent pas manger d’aliments cuits contenant de l’oignon, comme la sauce à l’oignon.",
     "pt": "O molho de carne não é tóxico em si, mas a manteiga, a gordura dos assados, os molhos e outros alimentos gordurosos podem causar indisposição de estômago, com diarreia e vómitos. Os alimentos gordurosos também podem causar pancreatite, uma inflamação do pâncreas que pode exigir internamento. Os cubos de caldo usados para fazer molho têm muito sódio, e os cães não devem comer alimentos cozinhados com cebola, como o molho de cebola.",
     "nl": "Jus is op zich niet giftig, maar boter, vleesvet, jus en ander vet voedsel kunnen maagklachten met diarree en braken veroorzaken. Vet voedsel kan ook alvleesklierontsteking veroorzaken, een ontsteking van de alvleesklier die soms een ziekenhuisopname vereist. Bouillonblokjes voor jus bevatten veel natrium, en honden mogen geen gekookt eten met ui krijgen, zoals uiensaus.",
-    "pl": "Sos pieczeniowy sam w sobie nie jest toksyczny, ale masło, tłuszcz z pieczeni, sosy i inne tłuste potrawy mogą powodować rozstrój żołądka z biegunką i wymiotami. Tłuste jedzenie może też wywołać zapalenie trzustki, które może wymagać hospitalizacji. Kostki bulionowe używane do sosów zawierają dużo sodu, a psy nie powinny jeść ugotowanych potraw z cebulą, takich jak sos cebulowy."
+    "pl": "Sos pieczeniowy sam w sobie nie jest toksyczny, ale masło, tłuszcz z pieczeni, sosy i inne tłuste potrawy mogą powodować rozstrój żołądka z biegunką i wymiotami. Tłuste jedzenie może też wywołać zapalenie trzustki, które może wymagać hospitalizacji. Kostki bulionowe używane do sosów zawierają dużo sodu, a psy nie powinny jeść ugotowanych potraw z cebulą, takich jak sos cebulowy.",
+    "cs": "Omáčka sama o sobě není jedovatá, ale máslo, výpek z masa, omáčky a další tučná jídla mohou způsobit podrážděný žaludek s průjmem a zvracením. Tučná jídla mohou také způsobit zánět slinivky břišní, který může vyžadovat léčbu v nemocnici. Bujónové kostky používané do omáček obsahují hodně sodíku a psi by neměli jíst tepelně upravená jídla s cibulí, například cibulovou omáčku."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Ból brzucha",
       "Niechęć do jedzenia",
       "Zmęczenie"
+    ],
+    "cs": [
+      "Zvracení, někdy až 1–4 dny po tučném jídle",
+      "Průjem",
+      "Bolest břicha",
+      "Nechuť k jídlu",
+      "Únava"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "fr": "Si votre chien a mangé de la sauce ou un autre aliment gras et présente des vomissements, des douleurs au ventre ou de la fatigue dans les jours qui suivent, contactez votre vétérinaire. Les signes peuvent apparaître avec quelques jours de retard. Si la sauce contenait de l’oignon ou de l’ail, contactez rapidement votre vétérinaire.",
     "pt": "Se o teu cão comeu molho de carne ou outro alimento gorduroso e tiver vómitos, dor de barriga ou cansaço nos dias seguintes, fala com o teu veterinário. Os sinais podem aparecer alguns dias depois. Se o molho tinha cebola ou alho, fala com o teu veterinário o mais depressa possível.",
     "nl": "Heeft je hond jus of ander vet voedsel gegeten en krijgt hij de dagen daarna last van braken, buikpijn of moeheid, neem dan contact op met je dierenarts. De verschijnselen kunnen een paar dagen op zich laten wachten. Bevatte de jus ui of knoflook, neem dan snel contact op met je dierenarts.",
-    "pl": "Jeśli pies zjadł sos pieczeniowy lub inne tłuste jedzenie, a w kolejnych dniach ma wymioty, ból brzucha lub jest ospały, skontaktuj się z weterynarzem. Objawy mogą pojawić się dopiero po kilku dniach. Jeśli sos zawierał cebulę lub czosnek, niezwłocznie skontaktuj się z weterynarzem."
+    "pl": "Jeśli pies zjadł sos pieczeniowy lub inne tłuste jedzenie, a w kolejnych dniach ma wymioty, ból brzucha lub jest ospały, skontaktuj się z weterynarzem. Objawy mogą pojawić się dopiero po kilku dniach. Jeśli sos zawierał cebulę lub czosnek, niezwłocznie skontaktuj się z weterynarzem.",
+    "cs": "Pokud pes snědl omáčku nebo jiné tučné jídlo a v následujících dnech zvrací, má bolesti břicha nebo je unavený, obraťte se na veterináře. Příznaky se mohou projevit se zpožděním i několika dní. Pokud omáčka obsahovala cibuli nebo česnek, neprodleně se obraťte na veterináře."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "fr": "La sauce au jus est une sauce riche pour les humains, qui peut donner mal au ventre aux chiens. Garde-la dans ton assiette.",
     "pt": "O molho de carne é muito pesado para os cães e pode dar-lhes dor de barriga. Deixa-o no teu prato.",
     "nl": "Jus is een machtige saus voor mensen waar honden buikpijn van kunnen krijgen. Houd hem op je eigen bord.",
-    "pl": "Sos pieczeniowy to tłusty sos dla ludzi, po którym psu może rozboleć brzuszek. Zostaw go na swoim talerzu."
+    "pl": "Sos pieczeniowy to tłusty sos dla ludzi, po którym psu może rozboleć brzuszek. Zostaw go na swoim talerzu.",
+    "cs": "Omáčka je tučná dobrota pro lidi, po které může psa bolet bříško. Nech si ji na svém talíři."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "fr": "Puis-je verser un peu de sauce sur la gamelle de mon chien ?",
         "pt": "Posso deitar um bocadinho de molho de carne na comida do meu cão?",
         "nl": "Mag ik een beetje jus over het eten van mijn hond gieten?",
-        "pl": "Czy mogę polać karmę psa odrobiną sosu pieczeniowego?"
+        "pl": "Czy mogę polać karmę psa odrobiną sosu pieczeniowego?",
+        "cs": "Mohu psovi polít krmivo trochou omáčky?"
       },
       "a": {
         "en": "Better not. A vet charity advises keeping any food you share plain and not covered in gravy, sauce or seasoning, as this could upset your dog's stomach.",
@@ -247,7 +262,8 @@
         "fr": "Mieux vaut éviter. Une association caritative vétérinaire conseille de ne partager que des aliments nature, sans les napper de sauce, de jus de viande ou d’assaisonnement, car cela pourrait irriter l’estomac de votre chien.",
         "pt": "Melhor não. Uma organização de beneficência veterinária aconselha a manter simples qualquer alimento que partilhes, sem molho nem temperos por cima, porque isso pode irritar o estômago do teu cão.",
         "nl": "Liever niet. Een liefdadigheidsorganisatie voor dierenzorg adviseert om voedsel dat je deelt gewoon te houden en niet te bedekken met jus, saus of kruiden, omdat dat de maag van je hond van streek kan maken.",
-        "pl": "Lepiej nie. Organizacja charytatywna działająca na rzecz opieki weterynaryjnej radzi, by jedzenie, którym częstujesz psa, było bez dodatków, bez sosu, polewy i przypraw, bo mogłyby rozstroić mu żołądek."
+        "pl": "Lepiej nie. Organizacja charytatywna działająca na rzecz opieki weterynaryjnej radzi, by jedzenie, którym częstujesz psa, było bez dodatków, bez sosu, polewy i przypraw, bo mogłyby rozstroić mu żołądek.",
+        "cs": "Raději ne. Veterinární charitativní organizace radí, aby jídlo, které se psem sdílíte, bylo obyčejné, bez omáčky, dochucovadel a koření, protože by to mohlo psovi podráždit žaludek."
       }
     }
   ],
@@ -388,6 +404,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-16",
       "verified_hash": "7f2c43267540b8c71f561e40b8aee15fa0a235ae2f9b8e5d738020bfc15650a0"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "b4a404288d92a0e388433a2db5a6571fb471e5609e67c146b27d14fa646058dd"
     }
   }
 }

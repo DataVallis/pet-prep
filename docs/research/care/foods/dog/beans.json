@@ -15,7 +15,8 @@
     "fr": "Haricots",
     "pt": "Feijão",
     "nl": "Bonen",
-    "pl": "Fasola"
+    "pl": "Fasola",
+    "cs": "Fazole"
   },
   "question": {
     "en": "Can dogs eat beans?",
@@ -31,7 +32,8 @@
     "fr": "Les chiens peuvent-ils manger des haricots ?",
     "pt": "Os cães podem comer feijão?",
     "nl": "Mogen honden bonen eten?",
-    "pl": "Czy psy mogą jeść fasolę?"
+    "pl": "Czy psy mogą jeść fasolę?",
+    "cs": "Mohou psi jíst fazole?"
   },
   "url_slug": {
     "en": "beans",
@@ -47,7 +49,8 @@
     "fr": "haricots",
     "pt": "feijao",
     "nl": "bonen",
-    "pl": "fasola"
+    "pl": "fasola",
+    "cs": "fazole"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Oui, en friandise. Les chiens peuvent manger de nombreuses sortes de haricots, comme les haricots noirs, rouges, pinto, de Lima et blancs (navy), à condition qu’ils aient été trempés puis cuits. Les haricots peuvent provoquer des gaz chez votre chien. Les haricots cuits en sauce (baked beans) ne sont pas une bonne idée.",
     "pt": "Sim, como guloseima. Os cães podem comer muitos tipos de feijão, como feijão-preto, feijão-encarnado, feijão-pinto, feijão-de-lima e feijão-branco, desde que tenha sido demolhado e depois cozido. O feijão pode provocar gases no teu cão. O feijão em molho (baked beans) não é boa ideia.",
     "nl": "Ja, als snoepje. Honden mogen veel soorten bonen eten, zoals zwarte bonen, kidneybonen, pintobonen, limabonen en witte bonen, als ze zijn geweekt en daarna gaar gemaakt. Bonen kunnen je hond wat last van winderigheid geven. Baked beans in saus zijn geen goed idee.",
-    "pl": "Tak, jako smakołyk. Psy mogą jeść wiele rodzajów fasoli, np. czarną, czerwoną, pinto, limeńską czy białą, pod warunkiem że została namoczona, a potem ugotowana. Po fasoli psu mogą dokuczać gazy. Fasoli w sosie (baked beans) lepiej nie podawać."
+    "pl": "Tak, jako smakołyk. Psy mogą jeść wiele rodzajów fasoli, np. czarną, czerwoną, pinto, limeńską czy białą, pod warunkiem że została namoczona, a potem ugotowana. Po fasoli psu mogą dokuczać gazy. Fasoli w sosie (baked beans) lepiej nie podawać.",
+    "cs": "Ano, jako pamlsek. Psi mohou jíst mnoho druhů fazolí, například černé, červené (kidney), pinto, lima a bílé fazole, pokud byly namočené a pak uvařené. Fazole mohou psovi způsobit plynatost. Fazole v omáčce z konzervy (baked beans) nejsou dobrý nápad."
   },
   "why": {
     "en": "Beans contain a lot of fibre, and uncooked they are almost indigestible. Soaking and cooking them helps dogs digest them and may reduce wind. Beans should not replace meat in a dog's diet. Baked beans themselves aren't toxic, but they are high in salt and sugar and their sauce can irritate a dog's stomach; eaten regularly, they could increase the risk of pancreatitis.",
@@ -80,7 +84,8 @@
     "fr": "Les haricots contiennent beaucoup de fibres et, crus, ils sont presque indigestes. Les faire tremper puis cuire aide les chiens à les digérer et peut réduire les gaz. Les haricots ne doivent pas remplacer la viande dans l’alimentation d’un chien. Les baked beans ne sont pas toxiques en eux-mêmes, mais ils sont riches en sel et en sucre et leur sauce peut irriter l’estomac du chien ; consommés régulièrement, ils pourraient augmenter le risque de pancréatite.",
     "pt": "O feijão tem muita fibra e, cru, é quase indigerível. Demolhá-lo e cozê-lo ajuda os cães a digeri-lo e pode reduzir os gases. O feijão não deve substituir a carne na alimentação do cão. O feijão em molho (baked beans) não é tóxico em si, mas tem muito sal e açúcar e o molho pode irritar o estômago do cão; se for comido com regularidade, pode aumentar o risco de pancreatite.",
     "nl": "Bonen bevatten veel vezels en zijn rauw bijna onverteerbaar. Weken en gaar maken helpt honden om ze te verteren en kan winderigheid verminderen. Bonen mogen vlees in het voer van een hond niet vervangen. Baked beans zelf zijn niet giftig, maar ze bevatten veel zout en suiker en de saus kan de maag van een hond irriteren; regelmatig gegeten kunnen ze het risico op alvleesklierontsteking vergroten.",
-    "pl": "Fasola zawiera dużo błonnika, a surowa jest prawie niestrawna. Namoczenie i ugotowanie ułatwia psom jej trawienie i może zmniejszyć ilość gazów. Fasola nie powinna zastępować psu mięsa w diecie. Sama fasola w sosie (baked beans) nie jest toksyczna, ale ma dużo soli i cukru, a sos może podrażnić psi żołądek; podawana regularnie, może zwiększać ryzyko zapalenia trzustki."
+    "pl": "Fasola zawiera dużo błonnika, a surowa jest prawie niestrawna. Namoczenie i ugotowanie ułatwia psom jej trawienie i może zmniejszyć ilość gazów. Fasola nie powinna zastępować psu mięsa w diecie. Sama fasola w sosie (baked beans) nie jest toksyczna, ale ma dużo soli i cukru, a sos może podrażnić psi żołądek; podawana regularnie, może zwiększać ryzyko zapalenia trzustki.",
+    "cs": "Fazole obsahují hodně vlákniny a syrové jsou téměř nestravitelné. Namočení a uvaření psům pomáhá je strávit a může omezit nadýmání. Fazole by neměly nahrazovat maso ve stravě psa. Fazole v omáčce samy o sobě nejsou jedovaté, ale mají hodně soli a cukru a jejich omáčka může psovi podráždit žaludek; pokud se podávají pravidelně, mohou zvýšit riziko zánětu slinivky břišní."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "fr": "Si votre chien a mangé quelques baked beans, il est peu probable qu’une petite quantité fasse beaucoup de mal. Surveillez-le pendant 24 heures et contactez votre vétérinaire pour demander conseil si vous remarquez des signes inquiétants, comme un mal de ventre ou de la diarrhée.",
     "pt": "Se o teu cão comeu um pouco de feijão em molho, é pouco provável que faça muito mal. Observa o teu cão durante 24 horas e liga ao teu veterinário para pedir conselho se notares sinais preocupantes, como indisposição de estômago ou diarreia.",
     "nl": "Heeft je hond wat baked beans gegeten, dan is een kleine hoeveelheid waarschijnlijk niet erg schadelijk. Houd je hond 24 uur in de gaten en neem contact op met je dierenarts als je verontrustende verschijnselen ziet, zoals maagklachten of diarree.",
-    "pl": "Jeśli pies zjadł trochę fasoli w sosie, niewielka ilość raczej nie zaszkodzi. Obserwuj psa przez 24 godziny i skontaktuj się z weterynarzem, jeśli zauważysz niepokojące objawy, np. rozstrój żołądka lub biegunkę."
+    "pl": "Jeśli pies zjadł trochę fasoli w sosie, niewielka ilość raczej nie zaszkodzi. Obserwuj psa przez 24 godziny i skontaktuj się z weterynarzem, jeśli zauważysz niepokojące objawy, np. rozstrój żołądka lub biegunkę.",
+    "cs": "Pokud pes snědl trochu fazolí v omáčce, malé množství pravděpodobně mnoho škody nenadělá. Sledujte psa 24 hodin a pokud zaznamenáte znepokojivé příznaky, například podrážděný žaludek nebo průjem, poraďte se s veterinářem."
   },
   "serving": {
     "en": "Soaked first and then cooked, without sauce, as an occasional treat.",
@@ -113,7 +119,8 @@
     "fr": "D’abord trempés puis cuits, sans sauce, en friandise occasionnelle.",
     "pt": "Demolhado primeiro e depois cozido, sem molho, como guloseima ocasional.",
     "nl": "Eerst geweekt en daarna gaar gemaakt, zonder saus, af en toe als snoepje.",
-    "pl": "Najpierw namoczona, potem ugotowana, bez sosu, jako smakołyk od czasu do czasu."
+    "pl": "Najpierw namoczona, potem ugotowana, bez sosu, jako smakołyk od czasu do czasu.",
+    "cs": "Nejdřív namočené a potom uvařené, bez omáčky, jako občasný pamlsek."
   },
   "child": {
     "en": "Cooked beans can be a little treat for dogs, but they might make your dog a bit windy!",
@@ -129,7 +136,8 @@
     "fr": "Les haricots cuits peuvent être une petite friandise pour les chiens, mais ton chien risque de faire quelques pets !",
     "pt": "O feijão cozido pode ser uma pequena guloseima para os cães, mas pode deixar o teu cão cheio de gases!",
     "nl": "Gare bonen zijn een klein snoepje voor honden, maar je hond kan er wel een beetje winderig van worden!",
-    "pl": "Ugotowana fasola może być małym smakołykiem dla psa, ale po niej pies może mieć trochę gazów!"
+    "pl": "Ugotowana fasola może być małym smakołykiem dla psa, ale po niej pies może mieć trochę gazów!",
+    "cs": "Uvařené fazole mohou být pro psy malým pamlskem, ale pejskovi se z nich může trochu nadýmat bříško!"
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "fr": "Les chiens peuvent-ils manger des baked beans ?",
         "pt": "Os cães podem comer feijão em molho (baked beans)?",
         "nl": "Mogen honden baked beans eten?",
-        "pl": "Czy psy mogą jeść fasolę w sosie (baked beans)?"
+        "pl": "Czy psy mogą jeść fasolę w sosie (baked beans)?",
+        "cs": "Mohou psi jíst fazole v omáčce z konzervy?"
       },
       "a": {
         "en": "It's best not to. The beans themselves aren't toxic, but baked beans are high in salt and sugar and the sauce can irritate a dog's stomach. If your dog ate a little you spilt on the floor, it's probably not a cause for concern.",
@@ -163,7 +172,8 @@
         "fr": "Mieux vaut éviter. Les haricots eux-mêmes ne sont pas toxiques, mais les baked beans sont riches en sel et en sucre et la sauce peut irriter l’estomac du chien. Si votre chien en a mangé un peu que vous aviez renversé par terre, ce n’est probablement pas inquiétant.",
         "pt": "O melhor é não dar. O feijão em si não é tóxico, mas o feijão em molho tem muito sal e açúcar e o molho pode irritar o estômago do cão. Se o teu cão comeu um pouco que caiu no chão, provavelmente não há motivo para preocupação.",
         "nl": "Liever niet. De bonen zelf zijn niet giftig, maar baked beans bevatten veel zout en suiker en de saus kan de maag van een hond irriteren. Heeft je hond een klein beetje opgegeten dat op de grond was gemorst, dan is dat waarschijnlijk geen reden tot zorg.",
-        "pl": "Lepiej nie. Sama fasola nie jest toksyczna, ale fasola w sosie ma dużo soli i cukru, a sos może podrażnić psi żołądek. Jeśli pies zlizał odrobinę, która spadła na podłogę, zapewne nie ma powodu do niepokoju."
+        "pl": "Lepiej nie. Sama fasola nie jest toksyczna, ale fasola w sosie ma dużo soli i cukru, a sos może podrażnić psi żołądek. Jeśli pies zlizał odrobinę, która spadła na podłogę, zapewne nie ma powodu do niepokoju.",
+        "cs": "Raději ne. Samotné fazole nejsou jedovaté, ale fazole v omáčce mají hodně soli a cukru a omáčka může psovi podráždit žaludek. Pokud pes sebral trochu fazolí, které vám spadly na podlahu, nejspíš není důvod k obavám."
       }
     },
     {
@@ -181,7 +191,8 @@
         "fr": "Les haricots peuvent-ils remplacer la viande dans l’alimentation de mon chien ?",
         "pt": "O feijão pode substituir a carne na alimentação do meu cão?",
         "nl": "Kunnen bonen vlees in het voer van mijn hond vervangen?",
-        "pl": "Czy fasola może zastąpić psu mięso w diecie?"
+        "pl": "Czy fasola może zastąpić psu mięso w diecie?",
+        "cs": "Mohou fazole nahradit psovi maso?"
       },
       "a": {
         "en": "No. Feeding just beans is bad for dogs if it replaces meat in their diet.",
@@ -197,7 +208,8 @@
         "fr": "Non. Nourrir un chien uniquement de haricots est mauvais pour lui s’ils remplacent la viande dans son alimentation.",
         "pt": "Não. Dar só feijão faz mal aos cães se substituir a carne na alimentação deles.",
         "nl": "Nee. Alleen bonen geven is niet goed voor honden als daardoor het vlees uit hun voer verdwijnt.",
-        "pl": "Nie. Jeśli fasola zastępuje psu mięso w diecie, karmienie samą fasolą mu szkodzi."
+        "pl": "Nie. Jeśli fasola zastępuje psu mięso w diecie, karmienie samą fasolą mu szkodzi.",
+        "cs": "Ne. Krmit psa jen fazolemi mu škodí, pokud tím nahradíte maso v jeho stravě."
       }
     }
   ],
@@ -379,6 +391,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-16",
       "verified_hash": "4230a5a7bf4ced40326324b9406a68f41ab5cb0215ce76d7c24871616609c144"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "d8c64d2a1d00c2bdd2e5c6bd76de6a58d99221533ce822f381b64355dcb5e814"
     }
   }
 }
