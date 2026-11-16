@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AppErrorController;
+use App\Http\Controllers\BreedQuizEventController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\BreedController;
@@ -90,6 +91,11 @@ Route::post('partner-inquiries', [PartnerInquiryController::class, 'store'])
 // Public; per-IP throttle (10 / hour); one row per e-mail, no e-mail is sent.
 Route::post('summary-leads', [SummaryLeadController::class, 'store'])
     ->middleware('throttle:summary-leads');
+
+// M6-S06: anonymous counters of the petprep.si breed quiz (BREED_QUIZ_SPEC §8). Public,
+// per-IP throttle (60 / hour), no IP / cookie stored, 204.
+Route::post('breed-quiz/events', [BreedQuizEventController::class, 'store'])
+    ->middleware('throttle:breed-quiz-events');
 
 // M5-05: crash / render-error reports from the app, with or without a token
 // (a token only gives the role; an invalid one is ignored, never a 401).

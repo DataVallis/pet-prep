@@ -46,6 +46,8 @@ return [
         'partner_inquiry_model' => 'povpraševanje partnerja',
         'summary_leads' => 'E-naslovi staršev (spletna stran)',
         'summary_lead_model' => 'e-naslov starša',
+        'breed_quiz_stats' => 'Kviz pasem (statistika)',
+        'breed_quiz_stat_model' => 'števec kviza pasem',
     ],
 
     'dashboard' => [
@@ -696,6 +698,18 @@ return [
             'title' => 'Preverjanje slik: :count ključnih slik zavrnjenih po vseh samodejnih poskusih',
             'body' => 'Ključna slika stanja ni prestala AI preverjanja (odvečne / prosojne tačke, druga žival, ljudje, besedilo …) niti po samodejnih ponovitvah z novimi semeni. Ni bila uporabljena — ljubljenček obdrži, kar prikazuje, to stanje še nima nove zanke. Po želji: Ljubljenčki → AI media → odpri kandidata → »Approve anyway« ali Regenerate. Slike poz (aktivnosti: preprost način) in slike stvari (prikazane brez vsebine) javljajo svoja opozorila.',
         ],
+    ],
+    'breed_quiz_stats' => [
+        'note' => 'Anonimni števci kviza pasem na petprep.si: končani kvizi (3 najboljše pasme z mestom) in kliki na gumba kalkulator / aplikacija, po dnevu (UTC), jeziku in pasmi. Samo za branje. IP naslov, piškotek ali identiteta obiskovalca se ne shranjujejo.',
+        'day' => 'Dan (UTC)',
+        'event' => 'Dogodek',
+        'breed' => 'Pasma',
+        'rank' => 'Mesto',
+        'locale' => 'Jezik',
+        'count' => 'Število',
+        'total' => 'Skupaj',
+        'from' => 'Od',
+        'until' => 'Do',
     ],
     'summary_leads' => [
         'email' => 'E-naslov',

@@ -70,6 +70,14 @@ describe('POST /api/summary-leads', function () {
             ->and($row->last_seen_at->toIso8601String())->toBe('2026-11-15T10:00:00+00:00');
     });
 
+    it('accepts the breed_quiz source (M6-S06) with the first breed of the quiz result', function () {
+        $this->postJson('/api/summary-leads', slBody(['source' => 'breed_quiz', 'breed' => 'beagle', 'stage' => null]))
+            ->assertCreated()->assertExactJson(['ok' => true]);
+
+        $row = SummaryLead::sole();
+        expect($row->source)->toBe('breed_quiz')->and($row->breed)->toBe('beagle');
+    });
+
     it('accepts an absent locale, breed, stage and honeypot', function () {
         $body = slBody();
         unset($body['locale'], $body['breed'], $body['stage'], $body['website']);

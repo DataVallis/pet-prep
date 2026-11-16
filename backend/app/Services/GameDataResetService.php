@@ -77,6 +77,8 @@ class GameDataResetService
         // M6-S05 parent e-mails from the petprep.si page »Koliko dela je pes«: website leads
         // with consent, not game data (no user/family FK; deleted only when the parent asks).
         'summary_leads',
+        // M6-S06 anonymous breed-quiz counters from petprep.si: website statistics, not game data.
+        'breed_quiz_stats',
     ];
 
     /** Tables where only some rows go (see keptQuery()). */
