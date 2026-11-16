@@ -139,7 +139,7 @@
 | Nova izkušnja (mladiček) | ne (»💤 Kuža spi do …«) | ne | izkušnja tedna opravljena |
 
 - Med spanjem so »Šola«, »Igra« / »Crkljanje« in »Počeši« **vidni, a onemogočeni**; pod njimi ena vrstica »💤 Kuža spi do 7:00« (EN »💤 Your pup is asleep until 7:00«; muca »💤 Muca spi do 7:00«). Ura je ura bujenja po času družine.
-- **Zapis ure (David 21. 10.):** vse ure, ki jih vidi uporabnik, so v obliki »7:00« (24-urna, brez vodilne ničle pri uri, minute vedno dvomestne) — namigi na HUD, zavrnitve (»Kuža spi do 7:00«), »najkasneje ob 9:30«, okna hranjenja, obvestila; SL in EN enako (EN je že prej uporabljal 24-urni zapis, odpade samo ničla). Ena funkcija: `clockText` (aplikacija) / `ClockText::at` (strežnik).
+- **Zapis ure (David 21. 10.):** vse ure, ki jih vidi uporabnik, so v obliki »7:00« (24-urna, brez vodilne ničle pri uri, minute vedno dvomestne) — namigi na HUD, zavrnitve (»Kuža spi do 7:00«), »najkasneje ob 9:30«, okna hranjenja, obvestila; SL in EN enako (EN je že prej uporabljal 24-urni zapis, odpade samo ničla). Ena funkcija: `clockText` (aplikacija) / `ClockText::at` (strežnik). **Dopolnilo 16. 11. 2026 (David):** to je 24-urni zapis; kdor izbere 12-urnega (ali ga ima telefon pri »Samodejno«), vidi »7:00 AM« / »5:00 PM« (SL »dop.« / »pop.«) — ista funkcija `clockText` (aplikacija, `modules/time/clock.ts`) in `ClockText::to12h` (obvestila); PRODUCT_SPEC §5.
 - Brez ure (starejši strežnik): »💤 Kuža spi«.
 
 ## 9. Rojstni dan

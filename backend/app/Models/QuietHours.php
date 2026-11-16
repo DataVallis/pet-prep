@@ -195,10 +195,11 @@ class QuietHours extends Model
 
     /**
      * A copy of these quiet hours read on another wall clock (David
-     * 2026-11-09, time zone per pet): the windows stay the family's, the
-     * clock is the pet's — 21–07 in Lisbon for a Lisbon pet. Pet::quietHours()
-     * returns its row through this; code that loads rows itself
-     * (RoutineLedgerService::loadInputs) calls it per pet.
+     * 2026-11-09, time zone per pet): the windows stay the same (the family's
+     * or the pet's own, David 2026-11-16), the clock is the pet's — 21–07 in
+     * Lisbon for a Lisbon pet. Pet::quietHours() returns its schedule through
+     * this; code that loads rows itself (RoutineLedgerService::loadInputs)
+     * calls it per pet.
      */
     public function readIn(?string $timezone): static
     {
