@@ -1,0 +1,84 @@
+{
+  "country": "NI",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "Hospital Veterinarios Asociados",
+      "url": "https://asociados.vet/",
+      "note": "Opened; single-page site of a veterinary hospital/clinic group in Managua with two locations, addresses, phones, hours; Las Colinas says 'Abierto 24 Horas / Emergencias'. No subpages."
+    },
+    {
+      "name": "SOS Animales Nicaragua - Veterinary Clinic Services",
+      "url": "https://www.sos-animales-nica.org/vetclinic",
+      "note": "Opened; nonprofit clinic in San Juan del Sur with address, phone and weekday hours; no emergency or 24 h wording."
+    },
+    {
+      "name": "SOS Animales Nicaragua - home",
+      "url": "https://www.sos-animales-nica.org/",
+      "note": "Opened; confirms Barrio Chino, San Juan del Sur and phone +505 7651 9025; no hours on this page."
+    },
+    {
+      "name": "Banco Ficohsa Nicaragua - veterinary discount rules (Mar-25)",
+      "url": "https://www.ficohsa.ni/content/dam/grupo-ficohsa-site/nicaragua/centro-de-ayuda/tarifario-e-informacion-regulatoria/reglamento-de-promociones/ReglamentoDescuentos30VeterinariasMar-25.pdf",
+      "note": "Opened; lists only names of participating vets (León, Granada, Estelí, Managua, Chinandega, Carazo), no addresses/phones/hours; used as a lead only, no entries taken from it."
+    },
+    {
+      "name": "Innova Pet's (innova-pets.pages.dev)",
+      "url": "https://innova-pets.pages.dev/en/",
+      "note": "Opened; looks like a demo/draft site with placeholder testimonials; not used."
+    },
+    {
+      "name": "NicaSeeker listings (Seaside Clinica Veterinaria, Veterinaria Animal Health)",
+      "url": "https://nicaseeker.com/directory/services/seaside-clinica-veterinaria/",
+      "note": "Opened; directory listings without phone, address or hours (data 'temporarily unavailable'); aggregator, not used."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Hospital Veterinarios Asociados - Hospital Las Colinas",
+      "city": "Managua",
+      "region": "Managua",
+      "address": "Las Colinas, 1 block east of Iglesia Espana, Managua",
+      "phone": "+505 8966-5221",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, including emergencies. Phone/WhatsApp +505 8966-5221.",
+      "small_animals": true,
+      "url": "https://asociados.vet/",
+      "source_url": "https://asociados.vet/",
+      "checked": "2026-11-16",
+      "note": "Page wording: 'Abierto 24 Horas / Emergencias'; booking form also says 'Las Colinas Hospital 24 Horas'. Address on page: 'Las Colinas, de la Iglesia España 1c al este'."
+    },
+    {
+      "kind": "clinic",
+      "name": "Hospital Veterinarios Asociados - Clinica Carretera Sur",
+      "city": "Managua",
+      "region": "Managua",
+      "address": "KM 9.5 Carretera Sur, opposite a hardware store, Managua",
+      "phone": "+505 8966-5220",
+      "emergency_24h": false,
+      "duty": "Open Monday to Saturday 8:00-18:00.",
+      "small_animals": true,
+      "url": "https://asociados.vet/",
+      "source_url": "https://asociados.vet/",
+      "checked": "2026-11-16",
+      "note": "No 24 h wording for this location; 24 h care is at Las Colinas."
+    },
+    {
+      "kind": "clinic",
+      "name": "SOS Clinica Veterinaria (SOS Animales Nicaragua)",
+      "city": "San Juan del Sur",
+      "region": "Rivas",
+      "address": "Barrio Chino, San Juan del Sur",
+      "phone": "+505 7651 9025",
+      "emergency_24h": false,
+      "duty": "Open Monday to Friday 9:00-17:00, closed Saturday and Sunday.",
+      "small_animals": true,
+      "url": "https://www.sos-animales-nica.org/vetclinic",
+      "source_url": "https://www.sos-animales-nica.org/vetclinic",
+      "checked": "2026-11-16",
+      "note": "Nonprofit rescue clinic. Email on the home page: sos.animales.nica@gmail.com. No emergency wording."
+    }
+  ],
+  "notes": "Thin coverage: search returned mostly aggregators, theses and classifieds; only 3 entries had an own-site page with phone and hours. No official Nicaraguan veterinary college/association (CMVN), MAG/IPSA or university vet-hospital page listing clinics was found or usable. La Prensa article could not be fetched (client_error). Leads not verified (only names, from a Ficohsa promo PDF): Vet Life Clinica Veterinaria (Granada), VetNorte and Todo Para Tu Mascota (Esteli), Veterinaria Her Za and Farmacia Veterinaria Bienestar Animal (Leon), Clinica Veterinaria Manchas (Carazo), Clinica Veterinaria Robles / Dog Happy / Dog's House / Rances / AquaNimal (Managua), Raymari (Bolonia, Managua, phone 2264-0072 mentioned on a third-party blog). Not used: Yo Pet Clinic (suspicious, non-Nicaraguan contact number), Innova Pet's (demo site). No duty-rota page and no animal poison line found for Nicaragua."
+}
