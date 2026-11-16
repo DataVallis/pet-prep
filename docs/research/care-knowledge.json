@@ -10773,32 +10773,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Dog food",
         "sl": "Pasja hrana",
-        "fr": "Nourriture pour chiens"
+        "fr": "Nourriture pour chiens",
+        "fi": "Koiranruoka"
       },
       "question": {
         "en": "Can cats eat dog food?",
         "sl": "Ali lahko mačke jedo pasjo hrano?",
-        "fr": "Les chats peuvent-ils manger de la nourriture pour chiens ?"
+        "fr": "Les chats peuvent-ils manger de la nourriture pour chiens ?",
+        "fi": "Saako kissa syödä koiranruokaa?"
       },
       "url_slug": {
         "en": "dog-food",
         "sl": "pasja-hrana",
-        "fr": "nourriture-pour-chiens"
+        "fr": "nourriture-pour-chiens",
+        "fi": "koiranruoka"
       },
       "answer": {
         "en": "Not as their food. A morsel or two of dog food won't hurt most healthy cats, but you should not feed your dog's food to your cat. Dog food doesn't meet a cat's nutritional needs – for example, it doesn't contain enough taurine for a cat.",
         "sl": "Ne kot njihova hrana. Grižljaj ali dva pasje hrane večini zdravih mačk ne bo škodil, vendar mački ne bi smeli dajati pasje hrane. Ta ne pokrije mačjih prehranskih potreb – na primer ne vsebuje dovolj tavrina za mačko.",
-        "fr": "Pas comme alimentation. Une bouchée ou deux de nourriture pour chiens ne feront pas de mal à la plupart des chats en bonne santé, mais ne leur donnez pas la nourriture de votre chien : elle ne couvre pas leurs besoins, par exemple en taurine."
+        "fr": "Pas comme alimentation. Une bouchée ou deux de nourriture pour chiens ne feront pas de mal à la plupart des chats en bonne santé, mais ne leur donnez pas la nourriture de votre chien : elle ne couvre pas leurs besoins, par exemple en taurine.",
+        "fi": "Ei kissan ruoaksi. Muutama muru koiranruokaa ei useimmille terveille kissoille vahingoita, mutta älä anna kissalle koirasi ruokaa. Se ei kata kissan ravinnontarvetta, ja siinä on esimerkiksi liian vähän tauriinia."
       },
       "why": {
         "en": "Dogs and cats need different nutrients. Cats require taurine, an essential amino acid for them, while dogs do not, and dog food does not contain enough of it for a cat. The Merck Veterinary Manual adds that some dog foods are lower in protein and may lack nutrients cats need but dogs don't, such as preformed vitamin A and arachidonic acid. Too little taurine can weaken the heart muscle and damage the eyes, impairing vision.",
         "sl": "Psi in mačke potrebujejo različna hranila. Mačke potrebujejo tavrin, ki je zanje esencialna aminokislina, psi pa ne, in pasja hrana ga za mačko ne vsebuje dovolj. Veterinarski priročnik Merck dodaja, da imajo nekatere pasje hrane manj beljakovin in jim lahko manjkajo hranila, ki jih potrebujejo mačke, psi pa ne, na primer že izoblikovan vitamin A in arahidonska kislina. Premalo tavrina lahko oslabi srčno mišico in okvari oči, kar poslabša vid.",
-        "fr": "Les chiens et les chats n’ont pas besoin des mêmes nutriments. Les chats ont besoin de taurine, un acide aminé essentiel pour eux, alors que ce n’est pas le cas des chiens, et la nourriture pour chiens n’en contient pas assez pour un chat. Le Manuel vétérinaire Merck ajoute que certains aliments pour chiens sont moins riches en protéines et peuvent manquer de nutriments dont les chats ont besoin mais pas les chiens, comme la vitamine A préformée et l’acide arachidonique. Un manque de taurine peut affaiblir le muscle cardiaque et abîmer les yeux et altérer la vue."
+        "fr": "Les chiens et les chats n’ont pas besoin des mêmes nutriments. Les chats ont besoin de taurine, un acide aminé essentiel pour eux, alors que ce n’est pas le cas des chiens, et la nourriture pour chiens n’en contient pas assez pour un chat. Le Manuel vétérinaire Merck ajoute que certains aliments pour chiens sont moins riches en protéines et peuvent manquer de nutriments dont les chats ont besoin mais pas les chiens, comme la vitamine A préformée et l’acide arachidonique. Un manque de taurine peut affaiblir le muscle cardiaque et abîmer les yeux et altérer la vue.",
+        "fi": "Koirat ja kissat tarvitsevat eri ravintoaineita. Kissa tarvitsee tauriinia, joka on sille välttämätön aminohappo, mutta koira ei, eikä koiranruoassa ole sitä kissalle riittävästi. Merck Veterinary Manual -käsikirja lisää, että joissakin koiranruoissa on vähemmän proteiinia ja niistä voi puuttua ravintoaineita, joita kissa tarvitsee mutta koira ei, kuten valmista A-vitamiinia ja arakidonihappoa. Tauriinin puute voi heikentää sydänlihasta sekä vaurioittaa silmiä ja heikentää näköä."
       },
       "signs": {
         "en": [
@@ -10818,30 +10824,40 @@
           "Vomissements",
           "Perte de poids",
           "Convulsions"
+        ],
+        "fi": [
+          "Pahoinvointi",
+          "Oksentelu",
+          "Painon lasku",
+          "Kouristukset"
         ]
       },
       "what_to_do": {
         "en": "A nibble from the dog's bowl is usually fine for a healthy cat. Feed each pet from its own bowl in separate areas of the home. A cat that eats only dog food can become ill within hours, days or weeks – contact your vet if you are worried.",
         "sl": "Grižljaj iz pasje sklede zdravi muci običajno ne škodi. Vsako žival hranite iz njene sklede in v ločenih delih doma. Mačka, ki je le pasjo hrano, lahko zboli v nekaj urah, dneh ali tednih – če vas skrbi, pokličite veterinarja.",
-        "fr": "Une petite bouchée prise dans la gamelle du chien ne pose généralement pas de problème à un chat en bonne santé. Nourrissez chaque animal dans sa propre gamelle, dans des endroits séparés de la maison. Un chat qui ne mange que de la nourriture pour chiens peut tomber malade en quelques heures, quelques jours ou quelques semaines : contactez votre vétérinaire si vous vous inquiétez."
+        "fr": "Une petite bouchée prise dans la gamelle du chien ne pose généralement pas de problème à un chat en bonne santé. Nourrissez chaque animal dans sa propre gamelle, dans des endroits séparés de la maison. Un chat qui ne mange que de la nourriture pour chiens peut tomber malade en quelques heures, quelques jours ou quelques semaines : contactez votre vétérinaire si vous vous inquiétez.",
+        "fi": "Kerran koiran kupista nokkaiseminen ei yleensä haittaa terveää kissaa. Ruoki kumpaakin lemmikkiä omasta kupistaan ja eri puolilla kotia. Kissa, joka syö pelkkää koiranruokaa, voi sairastua tuntien, päivien tai viikkojen kuluessa. Jos olet huolissasi, ota yhteyttä eläinlääkäriin."
       },
       "serving": null,
       "child": {
         "en": "Dog food is made for dogs. Cats need their very own cat food to stay healthy!",
         "sl": "Pasja hrana je narejena za pse. Muce za zdravje potrebujejo svojo, mačjo hrano!",
-        "fr": "La nourriture pour chiens est faite pour les chiens. Les chats, eux, ont besoin de leur propre nourriture pour rester en bonne santé !"
+        "fr": "La nourriture pour chiens est faite pour les chiens. Les chats, eux, ont besoin de leur propre nourriture pour rester en bonne santé !",
+        "fi": "Koiranruoka on tehty koirille. Kissat tarvitsevat omaa kissanruokaansa pysyäkseen terveinä!"
       },
       "faq": [
         {
           "q": {
             "en": "What is taurine and why do cats need it?",
             "sl": "Kaj je tavrin in zakaj ga mačke potrebujejo?",
-            "fr": "Qu’est-ce que la taurine, et pourquoi les chats en ont-ils besoin ?"
+            "fr": "Qu’est-ce que la taurine, et pourquoi les chats en ont-ils besoin ?",
+            "fi": "Mitä tauriini on ja miksi kissat tarvitsevat sitä?"
           },
           "a": {
             "en": "Taurine is an essential amino acid for cats, and cats have only a limited ability to make it themselves. Without enough of it, the heart muscle weakens and the cells of the retina eventually degenerate, impairing vision.",
             "sl": "Tavrin je za mačke esencialna aminokislina, ki jo mačke same tvorijo le v omejeni meri. Če ga primanjkuje, srčna mišica oslabi, celice mrežnice pa sčasoma propadejo, kar poslabša vid.",
-            "fr": "La taurine est un acide aminé essentiel pour les chats, qui n’ont qu’une capacité limitée à la fabriquer eux-mêmes. Sans quantité suffisante, le muscle cardiaque s’affaiblit et les cellules de la rétine finissent par dégénérer, ce qui altère la vue."
+            "fr": "La taurine est un acide aminé essentiel pour les chats, qui n’ont qu’une capacité limitée à la fabriquer eux-mêmes. Sans quantité suffisante, le muscle cardiaque s’affaiblit et les cellules de la rétine finissent par dégénérer, ce qui altère la vue.",
+            "fi": "Tauriini on kissoille välttämätön aminohappo, ja kissat pystyvät valmistamaan sitä itse vain rajallisesti. Ilman sitä sydänlihas heikkenee ja verkkokalvon solut rappeutuvat vähitellen, mikä heikentää näköä."
           }
         }
       ],
@@ -11706,32 +11722,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Fish oil",
         "sl": "Ribje olje",
-        "fr": "Huile de poisson"
+        "fr": "Huile de poisson",
+        "fi": "Kalaöljy"
       },
       "question": {
         "en": "Can cats have fish oil?",
         "sl": "Ali lahko mačke dobijo ribje olje?",
-        "fr": "Les chats peuvent-ils prendre de l’huile de poisson ?"
+        "fr": "Les chats peuvent-ils prendre de l’huile de poisson ?",
+        "fi": "Saako kissa kalaöljyä?"
       },
       "url_slug": {
         "en": "fish-oil",
         "sl": "ribje-olje",
-        "fr": "huile-de-poisson"
+        "fr": "huile-de-poisson",
+        "fi": "kalaoljy"
       },
       "answer": {
         "en": "Only if your vet recommends it. Fish oil is a supplement used widely in cats, but it may not be appropriate for every pet and can have side effects. Always talk to your vet before giving fish oil or any other supplement.",
         "sl": "Le če ga priporoči veterinar. Ribje olje je prehransko dopolnilo, ki se pri mačkah pogosto uporablja, vendar morda ni primerno za vsako žival in ima lahko stranske učinke. Preden muci daste ribje olje ali katero koli drugo dopolnilo, se vedno posvetujte z veterinarjem.",
-        "fr": "Seulement si votre vétérinaire la recommande. L’huile de poisson est un complément très utilisé chez les chats, mais elle ne convient pas forcément à tous les animaux et peut avoir des effets indésirables. Demandez toujours conseil à votre vétérinaire avant de donner de l’huile de poisson ou tout autre complément."
+        "fr": "Seulement si votre vétérinaire la recommande. L’huile de poisson est un complément très utilisé chez les chats, mais elle ne convient pas forcément à tous les animaux et peut avoir des effets indésirables. Demandez toujours conseil à votre vétérinaire avant de donner de l’huile de poisson ou tout autre complément.",
+        "fi": "Vain, jos eläinlääkäri suosittelee sitä. Kissoille annetaan usein kalaöljyä ravintolisänä, mutta se ei välttämättä sovi jokaiselle lemmikille ja voi aiheuttaa sivuvaikutuksia. Keskustele aina eläinlääkärin kanssa ennen kalaöljyn tai minkään muun ravintolisän antamista."
       },
       "why": {
         "en": "Fish oil is used widely in cats, but omega-3 supplements may not be appropriate for every pet, and less is known about supplementing cats that have kidney disease. Possible side effects include mild stomach upset, a fishy odour, an oily coat and itchy, flaky skin; serious reactions include abnormal bruising or bleeding, especially in cats. Fish oil should not be given if a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity.",
         "sl": "Ribje olje se pri mačkah pogosto uporablja, vendar dopolnila z omega-3 morda niso primerna za vsako žival, o dodajanju pri mačkah z boleznijo ledvic pa je znanega manj. Možni stranski učinki so blage prebavne težave, ribji vonj, masten kožuh ter srbeča, luskasta koža; resnejši odzivi so nenavadne modrice ali krvavitve, zlasti pri mačkah. Ribjega olja ne dajemo, če ni na voljo iz zanesljivega vira, saj nekateri viri nosijo veliko tveganje za zastrupitev s težkimi kovinami.",
-        "fr": "L’huile de poisson est très utilisée chez les chats, mais les compléments d’oméga-3 ne conviennent pas forcément à tous les animaux, et on sait moins de choses sur leur utilisation chez les chats atteints d’une maladie rénale. Parmi les effets indésirables possibles : de légers maux d’estomac, une odeur de poisson, un pelage gras et une peau qui démange ou qui desquame ; parmi les réactions graves figurent des bleus ou des saignements anormaux, surtout chez les chats. Il ne faut pas donner d’huile de poisson si l’on ne peut pas se procurer une source fiable, car certaines sources présentent un risque élevé de toxicité par les métaux lourds."
+        "fr": "L’huile de poisson est très utilisée chez les chats, mais les compléments d’oméga-3 ne conviennent pas forcément à tous les animaux, et on sait moins de choses sur leur utilisation chez les chats atteints d’une maladie rénale. Parmi les effets indésirables possibles : de légers maux d’estomac, une odeur de poisson, un pelage gras et une peau qui démange ou qui desquame ; parmi les réactions graves figurent des bleus ou des saignements anormaux, surtout chez les chats. Il ne faut pas donner d’huile de poisson si l’on ne peut pas se procurer une source fiable, car certaines sources présentent un risque élevé de toxicité par les métaux lourds.",
+        "fi": "Kissoille annetaan usein kalaöljyä, mutta omega-3-lisät eivät välttämättä sovi jokaiselle lemmikille, ja munuaissairaiden kissojen ravintolisistä tiedetään vähemmän. Mahdollisia sivuvaikutuksia ovat lievät vatsaoireet, kalan haju, rasvainen turkki sekä kutiseva ja hilseilevä iho; vakavia reaktioita ovat epätavalliset mustelmat tai verenvuoto, etenkin kissoilla. Älä anna kalaöljyä, jos luotettavaa lähdettä ei löydy, sillä joissakin lähteissä on suuri raskasmetallimyrkytyksen riski."
       },
       "signs": {
         "en": [
@@ -11766,30 +11788,45 @@
           "Réaction allergique : respiration irrégulière, éruption cutanée, fièvre, gonflement autour du visage",
           "Perte d’appétit",
           "Démarche chancelante ou convulsions"
+        ],
+        "fi": [
+          "Lievä vatsaoire",
+          "Kalan haju",
+          "Rasvainen turkki",
+          "Kutina tai hilseilevä iho",
+          "Hidas haavojen paraneminen",
+          "Epätavalliset mustelmat tai verenvuoto",
+          "Allerginen reaktio: epäsäännöllinen hengitys, ihottuma, kuume, kasvojen turvotus",
+          "Ruokahaluttomuus",
+          "Horjuminen tai kouristukset"
         ]
       },
       "what_to_do": {
         "en": "Talk to your vet before giving fish oil, and tell them about any vitamins or supplements your cat already gets. If serious signs appear, stop the fish oil and contact your vet immediately.",
         "sl": "Pred dajanjem ribjega olja se posvetujte z veterinarjem in mu povejte za vse vitamine ali dopolnila, ki jih muca že dobiva. Če se pojavijo resni znaki, prenehajte z ribjim oljem in takoj pokličite veterinarja.",
-        "fr": "Parlez-en à votre vétérinaire avant de donner de l’huile de poisson, et signalez-lui les vitamines ou compléments que votre chat reçoit déjà. Si des signes graves apparaissent, arrêtez l’huile de poisson et contactez immédiatement votre vétérinaire."
+        "fr": "Parlez-en à votre vétérinaire avant de donner de l’huile de poisson, et signalez-lui les vitamines ou compléments que votre chat reçoit déjà. Si des signes graves apparaissent, arrêtez l’huile de poisson et contactez immédiatement votre vétérinaire.",
+        "fi": "Keskustele eläinlääkärin kanssa ennen kalaöljyn antamista ja kerro hänelle kaikista vitamiineista ja ravintolisistä, joita kissasi jo saa. Jos ilmenee vakavia oireita, lopeta kalaöljyn antaminen ja ota heti yhteyttä eläinlääkäriin."
       },
       "serving": null,
       "child": {
         "en": "Only the vet can decide if a cat needs fish oil. Ask a grown-up to talk to the vet first!",
         "sl": "Ali muca potrebuje ribje olje, lahko odloči le veterinar. Prosi odraslega, naj se najprej pogovori z njim!",
-        "fr": "Seul le vétérinaire peut décider si un chat a besoin d’huile de poisson. Demande à un adulte d’en parler d’abord au vétérinaire !"
+        "fr": "Seul le vétérinaire peut décider si un chat a besoin d’huile de poisson. Demande à un adulte d’en parler d’abord au vétérinaire !",
+        "fi": "Vain eläinlääkäri voi päättää, tarvitseeko kissa kalaöljyä. Pyydä aikuista puhumaan ensin eläinlääkärin kanssa!"
       },
       "faq": [
         {
           "q": {
             "en": "Does the brand of fish oil matter?",
             "sl": "Ali je pomembno, katero ribje olje izberem?",
-            "fr": "La marque d’huile de poisson a-t-elle de l’importance ?"
+            "fr": "La marque d’huile de poisson a-t-elle de l’importance ?",
+            "fi": "Onko kalaöljyn valmistajalla väliä?"
           },
           "a": {
             "en": "Yes. VCA advises against fish oil when a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity, and Tufts vets recommend a brand with good quality control. Your vet can advise.",
             "sl": "Da. VCA odsvetuje ribje olje, če ni na voljo iz zanesljivega vira, saj nekateri viri nosijo veliko tveganje za zastrupitev s težkimi kovinami, veterinarji Tufts pa priporočajo znamko z dobrim nadzorom kakovosti. Svetuje vam lahko veterinar.",
-            "fr": "Oui. VCA déconseille l’huile de poisson lorsqu’on ne peut pas se procurer une source fiable, car certaines sources présentent un risque élevé de toxicité par les métaux lourds, et les vétérinaires de Tufts recommandent une marque dont la qualité est bien contrôlée. Votre vétérinaire peut vous conseiller."
+            "fr": "Oui. VCA déconseille l’huile de poisson lorsqu’on ne peut pas se procurer une source fiable, car certaines sources présentent un risque élevé de toxicité par les métaux lourds, et les vétérinaires de Tufts recommandent une marque dont la qualité est bien contrôlée. Votre vétérinaire peut vous conseiller.",
+            "fi": "On. VCA neuvoo välttämään kalaöljyä, jos luotettavaa lähdettä ei löydy, koska joissakin lähteissä on suuri raskasmetallimyrkytyksen riski, ja Tuftsin eläinlääkärit suosittelevat valmistetta, jonka laadunvalvonta on hyvä. Eläinlääkäri osaa neuvoa."
           }
         }
       ],
@@ -12813,32 +12850,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Goat's milk",
         "sl": "Kozje mleko",
-        "fr": "Lait de chèvre"
+        "fr": "Lait de chèvre",
+        "fi": "Vuohenmaito"
       },
       "question": {
         "en": "Can cats drink goat's milk?",
         "sl": "Ali lahko mačke pijejo kozje mleko?",
-        "fr": "Les chats peuvent-ils boire du lait de chèvre ?"
+        "fr": "Les chats peuvent-ils boire du lait de chèvre ?",
+        "fi": "Saako kissa juoda vuohenmaitoa?"
       },
       "url_slug": {
         "en": "goat-milk",
         "sl": "kozje-mleko",
-        "fr": "lait-de-chevre"
+        "fr": "lait-de-chevre",
+        "fi": "vuohenmaito"
       },
       "answer": {
         "en": "It's best not to. Vets list goat's milk, like cow's milk, among the drinks that cause tummy trouble in lactose-intolerant cats, and most cats are lactose intolerant. Cat charities advise avoiding any type of milk – your cat only needs water.",
         "sl": "Bolje ne. Veterinarji kozje mleko, tako kot kravje, navajajo med pijačami, ki mačkam z laktozno intoleranco povzročijo prebavne težave, večina mačk pa laktoze ne prenaša. Dobrodelne organizacije za mačke svetujejo, naj se mleku izognemo – muca potrebuje le vodo.",
-        "fr": "Mieux vaut s’en abstenir. Les vétérinaires rangent le lait de chèvre, comme le lait de vache, parmi les boissons qui causent des maux de ventre chez les chats intolérants au lactose, et la plupart des chats le sont. Les associations de protection des chats conseillent d’éviter tout type de lait : votre chat n’a besoin que d’eau."
+        "fr": "Mieux vaut s’en abstenir. Les vétérinaires rangent le lait de chèvre, comme le lait de vache, parmi les boissons qui causent des maux de ventre chez les chats intolérants au lactose, et la plupart des chats le sont. Les associations de protection des chats conseillent d’éviter tout type de lait : votre chat n’a besoin que d’eau.",
+        "fi": "Parempi olla antamatta. Eläinlääkärit lukevat vuohenmaidon lehmänmaidon tavoin juomiin, jotka aiheuttavat vatsavaivoja laktoosia sietämättömille kissoille, ja useimmat kissat eivät siedä laktoosia. Kissayhdistykset neuvovat välttämään kaikkia maitolajeja – kissasi tarvitsee vain vettä."
       },
       "why": {
         "en": "Lactose intolerance is a common food reaction in cats, and VCA vets list diarrhoea, vomiting, bloating and tummy discomfort after cow's or goat's milk as its signs. There are no benefits to a cat having milk. For kittens the sources differ: VCA says goat's milk is not recommended for kittens because it is far too low in protein and fat, and allows pasteurised goat's milk only in an emergency until kitten milk replacer is available, while Cats Protection says never to give it, as kittens find it difficult to digest. We follow the stricter advice.",
         "sl": "Laktozna intoleranca je pri mačkah pogost odziv na hrano; veterinarji VCA kot njene znake navajajo drisko, bruhanje, napihnjenost in bolečine v trebuhu po kravjem ali kozjem mleku. Mleko mački ne prinaša nobenih koristi. Pri mladičkih se viri razlikujejo: VCA pravi, da kozje mleko za mladičke ni priporočljivo, ker ima občutno premalo beljakovin in maščob, pasterizirano kozje mleko pa dopušča le v sili, dokler ni na voljo nadomestno mleko za mladičke; Cats Protection pa svetuje, naj ga mladičkom nikoli ne dajemo, ker ga težko prebavijo. Upoštevamo strožji nasvet.",
-        "fr": "L’intolérance au lactose est une réaction alimentaire courante chez les chats, et les vétérinaires de VCA citent parmi ses signes la diarrhée, les vomissements, les ballonnements et la gêne au ventre après du lait de vache ou de chèvre. Le lait n’apporte aucun bénéfice à un chat. Pour les chatons, les sources divergent : VCA indique que le lait de chèvre n’est pas recommandé pour les chatons, car il est bien trop pauvre en protéines et en graisses, et n’autorise le lait de chèvre pasteurisé qu’en cas d’urgence, en attendant de disposer d’un lait de remplacement pour chatons, tandis que Cats Protection recommande de ne jamais en donner, car les chatons le digèrent difficilement. Nous suivons l’avis le plus strict."
+        "fr": "L’intolérance au lactose est une réaction alimentaire courante chez les chats, et les vétérinaires de VCA citent parmi ses signes la diarrhée, les vomissements, les ballonnements et la gêne au ventre après du lait de vache ou de chèvre. Le lait n’apporte aucun bénéfice à un chat. Pour les chatons, les sources divergent : VCA indique que le lait de chèvre n’est pas recommandé pour les chatons, car il est bien trop pauvre en protéines et en graisses, et n’autorise le lait de chèvre pasteurisé qu’en cas d’urgence, en attendant de disposer d’un lait de remplacement pour chatons, tandis que Cats Protection recommande de ne jamais en donner, car les chatons le digèrent difficilement. Nous suivons l’avis le plus strict.",
+        "fi": "Laktoosi-intoleranssi on kissoilla yleinen ruokareaktio, ja VCA:n eläinlääkärien mukaan oireita ovat ripuli, oksentelu, turvotus ja vatsavaivat lehmän- tai vuohenmaidon jälkeen. Maidosta ei ole kissalle mitään hyötyä. Kissanpentujen kohdalla lähteet eroavat: VCA ei suosittele vuohenmaitoa kissanpennuille, koska siinä on aivan liian vähän proteiinia ja rasvaa. Pastöroitua vuohenmaitoa saa antaa vain hätätilanteessa, kunnes kissanpennun maidonkorviketta on saatavilla. Cats Protectionin mukaan sitä ei sen sijaan pidä koskaan antaa, koska kissanpennut sulattavat sitä huonosti. Noudatamme tiukempaa ohjetta."
       },
       "signs": {
         "en": [
@@ -12864,42 +12907,56 @@
           "Douleurs ou gêne au ventre",
           "Gargouillis dans le ventre",
           "Manque d’énergie"
+        ],
+        "fi": [
+          "Ripuli",
+          "Oksentelu",
+          "Turvonnut vatsa",
+          "Vatsakipu tai -vaivat",
+          "Vatsan kurina",
+          "Vähäinen energia"
         ]
       },
       "what_to_do": {
         "en": "Stop the goat's milk and offer fresh water. If your cat gets diarrhoea after dairy, feed small, bland, frequent meals, and speak to your vet if your cat refuses to eat – severe cases may need veterinary attention.",
         "sl": "Prenehajte s kozjim mlekom in ponudite svežo vodo. Če ima muca po mlečnih izdelkih drisko, ji dajte majhne, lahke, pogoste obroke; če noče jesti, se posvetujte z veterinarjem – v hujših primerih potrebuje veterinarsko pomoč.",
-        "fr": "Arrêtez le lait de chèvre et proposez de l’eau fraîche. Si votre chat a de la diarrhée après des produits laitiers, donnez-lui de petits repas fréquents et faciles à digérer, et parlez-en à votre vétérinaire s’il refuse de manger : les cas graves peuvent nécessiter des soins vétérinaires."
+        "fr": "Arrêtez le lait de chèvre et proposez de l’eau fraîche. Si votre chat a de la diarrhée après des produits laitiers, donnez-lui de petits repas fréquents et faciles à digérer, et parlez-en à votre vétérinaire s’il refuse de manger : les cas graves peuvent nécessiter des soins vétérinaires.",
+        "fi": "Lopeta vuohenmaidon antaminen ja tarjoa raikasta vettä. Jos kissalle tulee ripuli maitotuotteiden jälkeen, ruoki sitä tiheästi pienillä, miedoilla aterioilla. Jos kissa ei suostu syömään, ota yhteyttä eläinlääkäriin: vaikeat tapaukset voivat vaatia eläinlääkärin hoitoa."
       },
       "serving": null,
       "child": {
         "en": "Cats don't need goat's milk or any other milk. A bowl of fresh water is the best drink for your cat!",
         "sl": "Muce ne potrebujejo kozjega ali drugega mleka. Skledica sveže vode je zanje najboljša pijača!",
-        "fr": "Les chats n’ont pas besoin de lait de chèvre ni d’aucun autre lait. Une gamelle d’eau fraîche est la meilleure boisson pour ton chat !"
+        "fr": "Les chats n’ont pas besoin de lait de chèvre ni d’aucun autre lait. Une gamelle d’eau fraîche est la meilleure boisson pour ton chat !",
+        "fi": "Kissa ei tarvitse vuohenmaitoa eikä mitään muutakaan maitoa. Kuppi raikasta vettä on kissan paras juoma!"
       },
       "faq": [
         {
           "q": {
             "en": "Can kittens drink goat's milk?",
             "sl": "Ali lahko mačji mladički pijejo kozje mleko?",
-            "fr": "Les chatons peuvent-ils boire du lait de chèvre ?"
+            "fr": "Les chatons peuvent-ils boire du lait de chèvre ?",
+            "fi": "Saavatko kissanpennut juoda vuohenmaitoa?"
           },
           "a": {
             "en": "No. Cats Protection says never give cow's or goat's milk to kittens, as they find it difficult to digest – use substitute kitten milk made specifically for kittens. VCA vets add that goat's milk is far too low in protein and fat for kittens.",
             "sl": "Ne. Cats Protection svetuje, naj mladičkom nikoli ne dajemo kravjega ali kozjega mleka, ker ga težko prebavijo – uporabite nadomestno mleko, narejeno posebej za mladičke. Veterinarji VCA dodajajo, da ima kozje mleko za mladičke občutno premalo beljakovin in maščob.",
-            "fr": "Non. Cats Protection recommande de ne jamais donner de lait de vache ni de chèvre aux chatons, car ils le digèrent difficilement : utilisez un lait de remplacement conçu spécialement pour les chatons. Les vétérinaires de VCA ajoutent que le lait de chèvre est bien trop pauvre en protéines et en graisses pour les chatons."
+            "fr": "Non. Cats Protection recommande de ne jamais donner de lait de vache ni de chèvre aux chatons, car ils le digèrent difficilement : utilisez un lait de remplacement conçu spécialement pour les chatons. Les vétérinaires de VCA ajoutent que le lait de chèvre est bien trop pauvre en protéines et en graisses pour les chatons.",
+            "fi": "Eivät. Cats Protectionin mukaan kissanpennuille ei pidä koskaan antaa lehmän- tai vuohenmaitoa, koska ne sulattavat sitä huonosti – käytä erityisesti kissanpennuille tarkoitettua maidonkorviketta. VCA:n eläinlääkärit lisäävät, että vuohenmaidossa on aivan liian vähän proteiinia ja rasvaa kissanpennuille."
           }
         },
         {
           "q": {
             "en": "Is goat's milk better for cats than cow's milk?",
             "sl": "Je kozje mleko za mačke boljše od kravjega?",
-            "fr": "Le lait de chèvre est-il meilleur pour les chats que le lait de vache ?"
+            "fr": "Le lait de chèvre est-il meilleur pour les chats que le lait de vache ?",
+            "fi": "Onko vuohenmaito kissoille parempaa kuin lehmänmaito?"
           },
           "a": {
             "en": "Not according to vets: signs of lactose intolerance can appear after either cow's or goat's milk. It is best to avoid giving your cat any type of milk.",
             "sl": "Po mnenju veterinarjev ne: znaki laktozne intolerance se lahko pojavijo po kravjem ali po kozjem mleku. Najbolje je, da mački ne dajemo nobene vrste mleka.",
-            "fr": "Pas selon les vétérinaires : des signes d’intolérance au lactose peuvent apparaître après du lait de vache comme après du lait de chèvre. Mieux vaut ne donner aucun type de lait à votre chat."
+            "fr": "Pas selon les vétérinaires : des signes d’intolérance au lactose peuvent apparaître après du lait de vache comme après du lait de chèvre. Mieux vaut ne donner aucun type de lait à votre chat.",
+            "fi": "Eläinlääkärien mukaan ei: laktoosi-intoleranssin oireita voi ilmetä sekä lehmän- että vuohenmaidon jälkeen. Kissalle on parasta olla antamatta mitään maitoa."
           }
         }
       ],
@@ -26427,32 +26484,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Soda (soft drinks)",
         "sl": "Gazirane pijače",
-        "fr": "Soda (boissons gazeuses)"
+        "fr": "Soda (boissons gazeuses)",
+        "fi": "Limsa (virvoitusjuomat)"
       },
       "question": {
         "en": "Can cats drink soda?",
         "sl": "Ali lahko mačke pijejo gazirane pijače?",
-        "fr": "Les chats peuvent-ils boire du soda ?"
+        "fr": "Les chats peuvent-ils boire du soda ?",
+        "fi": "Saako kissa juoda limsaa?"
       },
       "url_slug": {
         "en": "soda",
         "sl": "gazirane-pijace",
-        "fr": "soda"
+        "fr": "soda",
+        "fi": "limsa"
       },
       "answer": {
         "en": "No. Many sodas contain caffeine, and cats are more sensitive to caffeine than people. One or two licks is unlikely to cause poisoning, but if your cat drank more, call your vet. Your cat only needs to drink water.",
         "sl": "Ne. Veliko gaziranih pijač vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Lizanje ali dve verjetno ne bo povzročilo zastrupitve, če pa je muca popila več, pokličite veterinarja. Muca potrebuje le vodo.",
-        "fr": "Non. De nombreux sodas contiennent de la caféine, et les chats y sont plus sensibles que les humains. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais si votre chat en a bu davantage, appelez votre vétérinaire. Votre chat n’a besoin que d’eau."
+        "fr": "Non. De nombreux sodas contiennent de la caféine, et les chats y sont plus sensibles que les humains. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais si votre chat en a bu davantage, appelez votre vétérinaire. Votre chat n’a besoin que d’eau.",
+        "fi": "Ei saa. Monissa limsoissa on kofeiinia, ja kissat ovat kofeiinille herkempiä kuin ihmiset. Yksi tai kaksi nuolaisua tuskin aiheuttaa myrkytystä, mutta jos kissasi joi enemmän, soita eläinlääkärille. Kissasi tarvitsee juomaksi vain vettä."
       },
       "why": {
         "en": "Many teas and sodas contain caffeine, and dogs and cats are more sensitive to caffeine than humans. Caffeine stimulates the heart and nervous system, which can be dangerous, and it can also upset the stomach. Signs can start within a few hours and last up to several days.",
         "sl": "Veliko čajev in gaziranih pijač vsebuje kofein, psi in mačke pa so nanj bolj občutljivi kot ljudje. Kofein spodbuja srce in živčevje, kar je lahko nevarno, poleg tega lahko razdraži želodec. Znaki se lahko pojavijo v nekaj urah in trajajo tudi več dni.",
-        "fr": "De nombreux thés et sodas contiennent de la caféine, et les chiens comme les chats y sont plus sensibles que les humains. La caféine stimule le cœur et le système nerveux, ce qui peut être dangereux, et elle peut aussi irriter l’estomac. Les signes peuvent apparaître en quelques heures et durer plusieurs jours."
+        "fr": "De nombreux thés et sodas contiennent de la caféine, et les chiens comme les chats y sont plus sensibles que les humains. La caféine stimule le cœur et le système nerveux, ce qui peut être dangereux, et elle peut aussi irriter l’estomac. Les signes peuvent apparaître en quelques heures et durer plusieurs jours.",
+        "fi": "Monissa teissä ja limsoissa on kofeiinia, ja koirat ja kissat ovat kofeiinille herkempiä kuin ihmiset. Kofeiini kiihdyttää sydämen ja hermoston toimintaa, mikä voi olla vaarallista, ja se voi myös sotkea vatsan. Oireet voivat alkaa muutaman tunnin kuluessa ja kestää jopa useita päiviä."
       },
       "signs": {
         "en": [
@@ -26478,30 +26541,42 @@
           "Maux d’estomac, vomissements ou diarrhée",
           "Tremblements",
           "Besoin d’uriner plus souvent"
+        ],
+        "fi": [
+          "Nopea syke",
+          "Ylivilkkaus, levottomuus, haluttomuus pysyä aloillaan",
+          "Edestakaisin kulkeminen tai runsas naukuminen",
+          "Vatsavaivat, oksentelu tai ripuli",
+          "Vapina",
+          "Tihentynyt virtsaaminen"
         ]
       },
       "what_to_do": {
         "en": "If your cat drank soda, call your vet or a pet poison helpline as soon as you realise. One or two licks is unlikely to cause poisoning in most pets.",
         "sl": "Če je muca pila gazirano pijačo, takoj ko to opazite, pokličite veterinarja ali center za zastrupitve živali. Lizanje ali dve pri večini živali verjetno ne bo povzročilo zastrupitve.",
-        "fr": "Si votre chat a bu du soda, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte. Un ou deux coups de langue ont peu de chances d’intoxiquer la plupart des animaux."
+        "fr": "Si votre chat a bu du soda, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte. Un ou deux coups de langue ont peu de chances d’intoxiquer la plupart des animaux.",
+        "fi": "Jos kissasi joi limsaa, soita eläinlääkärille tai eläinten myrkytysneuvontaan heti, kun huomaat sen. Yksi tai kaksi nuolaisua tuskin aiheuttaa myrkytystä useimmille lemmikeille."
       },
       "serving": null,
       "child": {
         "en": "Fizzy drinks aren't for cats. A bowl of fresh water is all your cat needs!",
         "sl": "Gazirane pijače niso za muce. Skledica sveže vode je vse, kar muca potrebuje!",
-        "fr": "Les boissons gazeuses ne sont pas pour les chats. Une gamelle d’eau fraîche, c’est tout ce dont ton chat a besoin !"
+        "fr": "Les boissons gazeuses ne sont pas pour les chats. Une gamelle d’eau fraîche, c’est tout ce dont ton chat a besoin !",
+        "fi": "Kuplivat juomat eivät ole kissoille. Kupillinen raikasta vettä on kaikki, mitä kissasi tarvitsee!"
       },
       "faq": [
         {
           "q": {
             "en": "My cat licked my soda – what should I do?",
             "sl": "Muca je polizala mojo gazirano pijačo – kaj naj naredim?",
-            "fr": "Mon chat a léché mon soda : que faire ?"
+            "fr": "Mon chat a léché mon soda : que faire ?",
+            "fi": "Kissani nuolaisi limsaani – mitä teen?"
           },
           "a": {
             "en": "One or two licks of soda is unlikely to cause poisoning in most pets. If your cat drank more, call your vet or a pet poison helpline as soon as you realise, because cats are more sensitive to caffeine than people.",
             "sl": "Lizanje ali dve gazirane pijače pri večini živali verjetno ne bo povzročilo zastrupitve. Če je muca popila več, takoj pokličite veterinarja ali center za zastrupitve živali, saj so mačke na kofein bolj občutljive kot ljudje.",
-            "fr": "Un ou deux coups de langue de soda ont peu de chances d’intoxiquer la plupart des animaux. Si votre chat en a bu davantage, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte, car les chats sont plus sensibles à la caféine que les humains."
+            "fr": "Un ou deux coups de langue de soda ont peu de chances d’intoxiquer la plupart des animaux. Si votre chat en a bu davantage, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte, car les chats sont plus sensibles à la caféine que les humains.",
+            "fi": "Yksi tai kaksi nuolaisua limsasta tuskin aiheuttaa myrkytystä useimmille lemmikeille. Jos kissasi joi enemmän, soita eläinlääkärille tai eläinten myrkytysneuvontaan heti, kun huomaat sen, sillä kissat ovat kofeiinille herkempiä kuin ihmiset."
           }
         }
       ],
@@ -26755,32 +26830,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Sports drinks",
         "sl": "Športni napitki",
-        "fr": "Boissons pour sportifs"
+        "fr": "Boissons pour sportifs",
+        "fi": "Urheilujuomat"
       },
       "question": {
         "en": "Can cats drink sports drinks?",
         "sl": "Ali lahko mačke pijejo športne napitke?",
-        "fr": "Les chats peuvent-ils boire des boissons pour sportifs ?"
+        "fr": "Les chats peuvent-ils boire des boissons pour sportifs ?",
+        "fi": "Saako kissa juoda urheilujuomia?"
       },
       "url_slug": {
         "en": "sports-drinks",
         "sl": "sportni-napitki",
-        "fr": "boissons-pour-sportifs"
+        "fr": "boissons-pour-sportifs",
+        "fi": "urheilujuomat"
       },
       "answer": {
         "en": "No. Energy or sports drinks often contain a lot of caffeine, and cats are more sensitive to caffeine than people. No other drink is a substitute for water – it's the only drink your cat needs.",
         "sl": "Ne. Energijski in športni napitki pogosto vsebujejo veliko kofeina, mačke pa so nanj bolj občutljive kot ljudje. Nobena pijača ne more nadomestiti vode – to je edina pijača, ki jo muca potrebuje.",
-        "fr": "Non. Les boissons énergisantes ou pour sportifs contiennent souvent beaucoup de caféine, et les chats y sont plus sensibles que les humains. Aucune autre boisson ne remplace l’eau : c’est la seule boisson dont votre chat a besoin."
+        "fr": "Non. Les boissons énergisantes ou pour sportifs contiennent souvent beaucoup de caféine, et les chats y sont plus sensibles que les humains. Aucune autre boisson ne remplace l’eau : c’est la seule boisson dont votre chat a besoin.",
+        "fi": "Ei saa. Energia- tai urheilujuomissa on usein paljon kofeiinia, ja kissat ovat kofeiinille herkempiä kuin ihmiset. Mikään muu juoma ei korvaa vettä – se on ainoa juoma, jota kissasi tarvitsee."
       },
       "why": {
         "en": "VCA vets warn that energy or sports drinks in the fridge often contain a lot of caffeine. Dogs and cats are more sensitive to caffeine than humans; it stimulates the heart and nervous system, which can be dangerous, and can upset the stomach. Cats Protection adds that milk, cream or any other liquid is no substitute for water in a cat's diet.",
         "sl": "Veterinarji VCA opozarjajo, da energijski in športni napitki v hladilniku pogosto vsebujejo veliko kofeina. Psi in mačke so na kofein bolj občutljivi kot ljudje; spodbuja srce in živčevje, kar je lahko nevarno, in lahko razdraži želodec. Cats Protection dodaja, da mleko, smetana ali katera koli druga tekočina v mačji prehrani ne more nadomestiti vode.",
-        "fr": "Les vétérinaires de VCA préviennent que les boissons énergisantes ou pour sportifs gardées au réfrigérateur contiennent souvent beaucoup de caféine. Les chiens et les chats y sont plus sensibles que les humains ; la caféine stimule le cœur et le système nerveux, ce qui peut être dangereux, et peut irriter l’estomac. Cats Protection ajoute que le lait, la crème ou tout autre liquide ne remplace pas l’eau dans l’alimentation d’un chat."
+        "fr": "Les vétérinaires de VCA préviennent que les boissons énergisantes ou pour sportifs gardées au réfrigérateur contiennent souvent beaucoup de caféine. Les chiens et les chats y sont plus sensibles que les humains ; la caféine stimule le cœur et le système nerveux, ce qui peut être dangereux, et peut irriter l’estomac. Cats Protection ajoute que le lait, la crème ou tout autre liquide ne remplace pas l’eau dans l’alimentation d’un chat.",
+        "fi": "VCA:n eläinlääkärit varoittavat, että jääkaapissa olevissa energia- tai urheilujuomissa on usein paljon kofeiinia. Koirat ja kissat ovat kofeiinille herkempiä kuin ihmiset; se kiihdyttää sydämen ja hermoston toimintaa, mikä voi olla vaarallista, ja se voi myös sotkea vatsan. Cats Protection lisää, että maito, kerma tai mikään muu neste ei korvaa vettä kissan ruokavaliossa."
       },
       "signs": {
         "en": [
@@ -26806,30 +26887,42 @@
           "Maux d’estomac, vomissements ou diarrhée",
           "Tremblements",
           "Besoin d’uriner plus souvent"
+        ],
+        "fi": [
+          "Nopea syke",
+          "Ylivilkkaus, levottomuus, haluttomuus pysyä aloillaan",
+          "Edestakaisin kulkeminen tai runsas naukuminen",
+          "Vatsavaivat, oksentelu tai ripuli",
+          "Vapina",
+          "Tihentynyt virtsaaminen"
         ]
       },
       "what_to_do": {
         "en": "If your cat drank a sports drink with caffeine, call your vet or a pet poison helpline as soon as you realise. Signs can start within a few hours.",
         "sl": "Če je muca pila športni napitek s kofeinom, takoj ko to opazite, pokličite veterinarja ali center za zastrupitve živali. Znaki se lahko pojavijo v nekaj urah.",
-        "fr": "Si votre chat a bu une boisson pour sportifs contenant de la caféine, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte. Les signes peuvent apparaître en quelques heures."
+        "fr": "Si votre chat a bu une boisson pour sportifs contenant de la caféine, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte. Les signes peuvent apparaître en quelques heures.",
+        "fi": "Jos kissasi joi kofeiinia sisältävää urheilujuomaa, soita eläinlääkärille tai eläinten myrkytysneuvontaan heti, kun huomaat sen. Oireet voivat alkaa muutaman tunnin kuluessa."
       },
       "serving": null,
       "child": {
         "en": "Sports drinks aren't for cats. Fresh, clean water is the best drink to keep your cat healthy!",
         "sl": "Športni napitki niso za muce. Sveža, čista voda je najboljša pijača za zdravo muco!",
-        "fr": "Les boissons pour sportifs ne sont pas faites pour les chats. L’eau fraîche et propre est la meilleure boisson pour garder ton chat en bonne santé !"
+        "fr": "Les boissons pour sportifs ne sont pas faites pour les chats. L’eau fraîche et propre est la meilleure boisson pour garder ton chat en bonne santé !",
+        "fi": "Urheilujuomat eivät ole kissoille. Raikas, puhdas vesi on paras juoma, jotta kissa pysyy terveenä!"
       },
       "faq": [
         {
           "q": {
             "en": "Can a sports drink help if my cat isn't drinking enough?",
             "sl": "Ali športni napitek pomaga, če muca premalo pije?",
-            "fr": "Une boisson pour sportifs peut-elle aider si mon chat ne boit pas assez ?"
+            "fr": "Une boisson pour sportifs peut-elle aider si mon chat ne boit pas assez ?",
+            "fi": "Voiko urheilujuoma auttaa, jos kissani ei juo tarpeeksi?"
           },
           "a": {
             "en": "Give fresh water instead – no other liquid is a substitute for it. Signs of dehydration include lethargy, weakness, poor appetite and dry gums. If you are concerned that your cat is dehydrated, contact a vet promptly.",
             "sl": "Namesto tega ji ponudite svežo vodo – nobena druga tekočina je ne more nadomestiti. Znaki dehidracije so med drugim utrujenost, šibkost, slab apetit in suhe sluznice. Če vas skrbi, da je muca dehidrirana, se čim prej obrnite na veterinarja.",
-            "fr": "Donnez plutôt de l’eau fraîche : aucun autre liquide ne la remplace. Parmi les signes de déshydratation : apathie, faiblesse, mauvais appétit et gencives sèches. Si vous craignez que votre chat soit déshydraté, contactez rapidement un vétérinaire."
+            "fr": "Donnez plutôt de l’eau fraîche : aucun autre liquide ne la remplace. Parmi les signes de déshydratation : apathie, faiblesse, mauvais appétit et gencives sèches. Si vous craignez que votre chat soit déshydraté, contactez rapidement un vétérinaire.",
+            "fi": "Anna sen sijaan raikasta vettä – mikään muu neste ei korvaa sitä. Nestehukan merkkejä ovat velttous, heikkous, huono ruokahalu ja kuivat ikenet. Jos epäilet kissasi kärsivän nestehukasta, ota viipymättä yhteyttä eläinlääkäriin."
           }
         }
       ],
@@ -35603,84 +35696,99 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Bone broth",
         "sl": "Kostna juha",
-        "fr": "Bouillon d’os"
+        "fr": "Bouillon d’os",
+        "fi": "Luuliemi"
       },
       "question": {
         "en": "Can dogs have bone broth?",
         "sl": "Ali lahko psi jedo kostno juho?",
-        "fr": "Les chiens peuvent-ils avoir du bouillon d’os ?"
+        "fr": "Les chiens peuvent-ils avoir du bouillon d’os ?",
+        "fi": "Saako koira juoda luulientä?"
       },
       "url_slug": {
         "en": "bone-broth",
         "sl": "kostna-juha",
-        "fr": "bouillon-d-os"
+        "fr": "bouillon-d-os",
+        "fi": "luuliemi"
       },
       "answer": {
         "en": "Yes, plain bone broth made with dog-safe ingredients is fine. It is mild and easy on sensitive stomachs. Strain out every bone before serving, remove the fat layer, and skip broths with onions, garlic or salt.",
         "sl": "Da, navadna kostna juha iz sestavin, ki so za pse varne, je v redu. Je blaga in nežna do občutljivih želodcev. Pred serviranjem precedite vse kosti, odstranite plast maščobe in se izognite juham s čebulo, česnom ali soljo.",
-        "fr": "Oui, un bouillon d’os nature préparé avec des ingrédients sans danger pour les chiens convient. Il est doux et est bien toléré par les estomacs sensibles. Retirez tous les os avant de le servir, enlevez la couche de graisse et évitez les bouillons contenant de l’oignon, de l’ail ou du sel."
+        "fr": "Oui, un bouillon d’os nature préparé avec des ingrédients sans danger pour les chiens convient. Il est doux et est bien toléré par les estomacs sensibles. Retirez tous les os avant de le servir, enlevez la couche de graisse et évitez les bouillons contenant de l’oignon, de l’ail ou du sel.",
+        "fi": "Saa, kunhan luuliemi on maustamatonta ja tehty koiralle turvallisista aineksista. Se on mietoa ja hellää herkälle vatsalle. Siivilöi kaikki luut pois ennen tarjoamista, poista rasvakerros ja vältä liemiä, joissa on sipulia, valkosipulia tai suolaa."
       },
       "why": {
         "en": "Bone broth is a stock made by slowly cooking animal bones at low heat for a long time. It is mild, flavourful and easy on sensitive stomachs, and it can make food more appealing to dogs with a reduced appetite. The risks come from what goes into it: some broths contain additives such as onions, garlic or salt, and cooked bones can splinter and injure your dog or get lodged in the throat.",
         "sl": "Kostna juha je osnova, ki nastane s počasnim kuhanjem živalskih kosti pri nizki temperaturi dalj časa. Je blaga, okusna in nežna do občutljivih želodcev, psom s slabšim apetitom pa lahko naredi hrano bolj privlačno. Tveganja izvirajo iz sestavin: nekatere juhe vsebujejo dodatke, kot so čebula, česen ali sol, kuhane kosti pa se lahko razcepijo in psa poškodujejo ali se mu zataknejo v grlu.",
-        "fr": "Le bouillon d’os est un fond obtenu en faisant cuire longuement des os d’animaux à feu doux. Il est doux, savoureux et est bien toléré par les estomacs sensibles, et il peut rendre la nourriture plus appétissante pour les chiens qui mangent peu. Les risques viennent de ce qu’on y met : certains bouillons contiennent des additifs comme de l’oignon, de l’ail ou du sel, et les os cuits peuvent éclater, blesser votre chien ou rester coincés dans sa gorge."
+        "fr": "Le bouillon d’os est un fond obtenu en faisant cuire longuement des os d’animaux à feu doux. Il est doux, savoureux et est bien toléré par les estomacs sensibles, et il peut rendre la nourriture plus appétissante pour les chiens qui mangent peu. Les risques viennent de ce qu’on y met : certains bouillons contiennent des additifs comme de l’oignon, de l’ail ou du sel, et les os cuits peuvent éclater, blesser votre chien ou rester coincés dans sa gorge.",
+        "fi": "Luuliemi syntyy, kun eläinten luita haudutetaan hitaasti matalalla lämmöllä pitkään. Se on mietoa, maukasta ja hellää herkälle vatsalle, ja se voi tehdä ruoasta houkuttelevampaa koiralle, jonka ruokahalu on heikko. Riskit liittyvät liemen aineksiin: joissakin liemissä on lisäaineina sipulia, valkosipulia tai suolaa, ja kypsennetyt luut voivat sirpaloitua ja vahingoittaa koiraa tai juuttua sen kurkkuun."
       },
       "signs": null,
       "what_to_do": {
         "en": "If your dog had broth that contains onions, garlic or a lot of salt, see our onion, garlic and salt pages. If your dog swallowed a cooked bone, see our cooked bones page. Bone broth won't fix joint problems on its own, so talk to your vet about them.",
         "sl": "Če je pes pojedel juho s čebulo, česnom ali veliko soli, poglejte naše strani o čebuli, česnu in soli. Če je pes pogoltnil kuhano kost, poglejte našo stran o kuhanih kosteh. Kostna juha sama ne odpravi težav s sklepi, zato se o njih pogovorite z veterinarjem.",
-        "fr": "Si votre chien a bu un bouillon contenant de l’oignon, de l’ail ou beaucoup de sel, consultez nos pages sur l’oignon, l’ail et le sel. Si votre chien a avalé un os cuit, consultez notre page sur les os cuits. Le bouillon d’os ne suffit pas à soigner des problèmes articulaires : parlez-en à votre vétérinaire."
+        "fr": "Si votre chien a bu un bouillon contenant de l’oignon, de l’ail ou beaucoup de sel, consultez nos pages sur l’oignon, l’ail et le sel. Si votre chien a avalé un os cuit, consultez notre page sur les os cuits. Le bouillon d’os ne suffit pas à soigner des problèmes articulaires : parlez-en à votre vétérinaire.",
+        "fi": "Jos koirasi sai lientä, jossa oli sipulia, valkosipulia tai paljon suolaa, lue sivumme sipulista, valkosipulista ja suolasta. Jos koirasi nieli kypsennetyn luun, lue sivumme kypsennetyistä luista. Luuliemi ei yksinään korjaa nivelongelmia, joten keskustele niistä eläinlääkärin kanssa."
       },
       "serving": {
         "en": "Use only natural, dog-safe ingredients, with no onions, garlic or salt. After cooking, refrigerate the broth, remove the hardened layer of fat from the top and strain out every bone. Serve it on its own or mixed into dry food.",
         "sl": "Uporabite le naravne sestavine, ki so za pse varne, brez čebule, česna in soli. Po kuhanju juho ohladite v hladilniku, odstranite strjeno plast maščobe z vrha in precedite vse kosti. Ponudite jo samo ali primešano suhi hrani.",
-        "fr": "N’utilisez que des ingrédients naturels et sans danger pour les chiens, sans oignon, ail ni sel. Après la cuisson, mettez le bouillon au réfrigérateur, retirez la couche de graisse figée à la surface et enlevez tous les os. Servez-le seul ou mélangé aux croquettes."
+        "fr": "N’utilisez que des ingrédients naturels et sans danger pour les chiens, sans oignon, ail ni sel. Après la cuisson, mettez le bouillon au réfrigérateur, retirez la couche de graisse figée à la surface et enlevez tous les os. Servez-le seul ou mélangé aux croquettes.",
+        "fi": "Käytä vain luonnollisia, koiralle turvallisia aineksia ilman sipulia, valkosipulia ja suolaa. Laita liemi keittämisen jälkeen jääkaappiin, poista pinnalle jähmettynyt rasvakerros ja siivilöi kaikki luut pois. Tarjoa se sellaisenaan tai sekoitettuna kuivaruokaan."
       },
       "child": {
         "en": "Bone broth can be a tasty treat for dogs. A grown-up makes it and takes out every bone first, because bones aren't safe for dogs.",
         "sl": "Kostna juha je lahko okusna posladica za pse. Pripravi jo odrasla oseba, ki prej odstrani vse kosti, saj kosti za pse niso varne.",
-        "fr": "Le bouillon d’os peut être une friandise savoureuse pour les chiens. Un adulte le prépare et retire d’abord tous les os, car ils sont dangereux pour les chiens."
+        "fr": "Le bouillon d’os peut être une friandise savoureuse pour les chiens. Un adulte le prépare et retire d’abord tous les os, car ils sont dangereux pour les chiens.",
+        "fi": "Luuliemi voi olla koiralle maukas herkku. Aikuinen tekee sen ja ottaa ensin kaikki luut pois, sillä luut eivät ole koirille turvallisia."
       },
       "faq": [
         {
           "q": {
             "en": "How is bone broth different from regular broth?",
             "sl": "V čem se kostna juha razlikuje od navadne juhe?",
-            "fr": "En quoi le bouillon d’os diffère-t-il d’un bouillon ordinaire ?"
+            "fr": "En quoi le bouillon d’os diffère-t-il d’un bouillon ordinaire ?",
+            "fi": "Miten luuliemi eroaa tavallisesta liemestä?"
           },
           "a": {
             "en": "Bone broth is a stock liquid made by slowly cooking animal bones at low heat for an extended period. For everyday broth and stock cubes, see our broth page.",
             "sl": "Kostna juha je tekoča osnova, ki nastane s počasnim kuhanjem živalskih kosti pri nizki temperaturi dalj časa. O navadni juhi in jušnih kockah si preberite našo stran o juhi.",
-            "fr": "Le bouillon d’os est un fond obtenu en faisant cuire longuement des os d’animaux à feu doux. Pour les bouillons du quotidien et les cubes de bouillon, consultez notre page sur le bouillon."
+            "fr": "Le bouillon d’os est un fond obtenu en faisant cuire longuement des os d’animaux à feu doux. Pour les bouillons du quotidien et les cubes de bouillon, consultez notre page sur le bouillon.",
+            "fi": "Luuliemi syntyy, kun eläinten luita haudutetaan hitaasti matalalla lämmöllä pitkään. Tavallisesta liemestä ja liemikuutioista kerromme liemisivullamme."
           }
         },
         {
           "q": {
             "en": "Can I use store-bought bone broth?",
             "sl": "Ali lahko uporabim kupljeno kostno juho?",
-            "fr": "Puis-je utiliser du bouillon d’os du commerce ?"
+            "fr": "Puis-je utiliser du bouillon d’os du commerce ?",
+            "fi": "Voinko käyttää kaupan luulientä?"
           },
           "a": {
             "en": "Look for one with natural, dog-safe ingredients, because some contain additives for preservation and taste, such as onions, garlic or salt.",
             "sl": "Izberite takšno z naravnimi sestavinami, ki so za pse varne, saj nekatere vsebujejo dodatke za obstojnost in okus, kot so čebula, česen ali sol.",
-            "fr": "Choisissez-en un avec des ingrédients naturels et sans danger pour les chiens, car certains contiennent des additifs de conservation ou de goût, comme de l’oignon, de l’ail ou du sel."
+            "fr": "Choisissez-en un avec des ingrédients naturels et sans danger pour les chiens, car certains contiennent des additifs de conservation ou de goût, comme de l’oignon, de l’ail ou du sel.",
+            "fi": "Valitse sellainen, jossa on luonnollisia, koiralle turvallisia aineksia, sillä joissakin on säilyvyyden ja maun vuoksi lisäaineita, kuten sipulia, valkosipulia tai suolaa."
           }
         },
         {
           "q": {
             "en": "Does bone broth help my dog's joints?",
             "sl": "Ali kostna juha pomaga pasjim sklepom?",
-            "fr": "Le bouillon d’os est-il bon pour les articulations de mon chien ?"
+            "fr": "Le bouillon d’os est-il bon pour les articulations de mon chien ?",
+            "fi": "Auttaako luuliemi koiran niveliä?"
           },
           "a": {
             "en": "The AKC says the collagen in bone broth contributes to joint health, but bone broth won't cure joint problems without other treatments, so contact your vet.",
             "sl": "AKC navaja, da kolagen v kostni juhi prispeva k zdravju sklepov, vendar kostna juha brez drugih zdravljenj težav s sklepi ne odpravi, zato se obrnite na veterinarja.",
-            "fr": "Selon l’AKC, le collagène du bouillon d’os contribue à la santé des articulations, mais le bouillon d’os ne guérit pas les problèmes articulaires sans autres traitements : contactez donc votre vétérinaire."
+            "fr": "Selon l’AKC, le collagène du bouillon d’os contribue à la santé des articulations, mais le bouillon d’os ne guérit pas les problèmes articulaires sans autres traitements : contactez donc votre vétérinaire.",
+            "fi": "AKC:n mukaan luuliemen kollageeni edistää nivelten terveyttä, mutta luuliemi ei yksinään paranna nivelongelmia, joten ota yhteyttä eläinlääkäriin."
           }
         }
       ],
@@ -38530,32 +38638,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Cat food",
         "sl": "Mačja hrana",
-        "fr": "Nourriture pour chats"
+        "fr": "Nourriture pour chats",
+        "fi": "Kissanruoka"
       },
       "question": {
         "en": "Can dogs eat cat food?",
         "sl": "Ali lahko psi jedo mačjo hrano?",
-        "fr": "Les chiens peuvent-ils manger de la nourriture pour chats ?"
+        "fr": "Les chiens peuvent-ils manger de la nourriture pour chats ?",
+        "fi": "Saako koira syödä kissanruokaa?"
       },
       "url_slug": {
         "en": "cat-food",
         "sl": "macja-hrana",
-        "fr": "nourriture-pour-chats"
+        "fr": "nourriture-pour-chats",
+        "fi": "kissanruoka"
       },
       "answer": {
         "en": "Not regularly. A dog that sneaks some of the cat's food now and then probably won't be harmed, but it shouldn't become a habit. Cat food is much higher in meat-based protein and doesn't have the right balance of nutrients for dogs.",
         "sl": "Ne redno. Psu, ki občasno izmakne malo mačje hrane, to verjetno ne bo škodilo, vendar to ne sme postati navada. Mačja hrana ima veliko več beljakovin iz mesa in nima pravega razmerja hranil za pse.",
-        "fr": "Pas de façon régulière. Un chien qui chipe de temps en temps un peu de la nourriture du chat ne risque probablement rien, mais cela ne doit pas devenir une habitude. La nourriture pour chats est beaucoup plus riche en protéines d’origine animale et n’offre pas le bon équilibre nutritionnel pour les chiens."
+        "fr": "Pas de façon régulière. Un chien qui chipe de temps en temps un peu de la nourriture du chat ne risque probablement rien, mais cela ne doit pas devenir une habitude. La nourriture pour chats est beaucoup plus riche en protéines d’origine animale et n’offre pas le bon équilibre nutritionnel pour les chiens.",
+        "fi": "Ei säännöllisesti. Koira, joka näpistää silloin tällöin vähän kissan ruokaa, ei todennäköisesti vahingoitu, mutta siitä ei saa tulla tapaa. Kissanruoassa on paljon enemmän lihapohjaista proteiinia, eikä sen ravintoaineiden tasapaino sovi koiralle."
       },
       "why": {
         "en": "Cats are obligate carnivores, so cat food is much higher in meat-based protein than dog food and doesn't have the correct balance of protein, fibre and nutrients dogs need. Over time the imbalance can lead to stomach and gut upset, obesity and pancreatitis, and the high protein levels can be hard on a dog's liver and kidneys.",
         "sl": "Mačke so obvezni mesojedci, zato ima mačja hrana veliko več beljakovin iz mesa kot pasja in nima pravega razmerja beljakovin, vlaknin in hranil, ki jih psi potrebujejo. Sčasoma lahko to neravnovesje povzroči težave z želodcem in črevesjem, debelost in vnetje trebušne slinavke, veliko beljakovin pa lahko obremeni pasja jetra in ledvice.",
-        "fr": "Les chats sont des carnivores stricts : leur nourriture contient donc beaucoup plus de protéines d’origine animale que celle des chiens, et n’offre pas l’équilibre de protéines, de fibres et de nutriments dont les chiens ont besoin. À la longue, ce déséquilibre peut provoquer des troubles de l’estomac et de l’intestin, de l’obésité et une pancréatite, et la forte teneur en protéines peut mettre à rude épreuve le foie et les reins du chien."
+        "fr": "Les chats sont des carnivores stricts : leur nourriture contient donc beaucoup plus de protéines d’origine animale que celle des chiens, et n’offre pas l’équilibre de protéines, de fibres et de nutriments dont les chiens ont besoin. À la longue, ce déséquilibre peut provoquer des troubles de l’estomac et de l’intestin, de l’obésité et une pancréatite, et la forte teneur en protéines peut mettre à rude épreuve le foie et les reins du chien.",
+        "fi": "Kissat ovat ehdottomia lihansyöjiä, joten kissanruoassa on paljon enemmän lihapohjaista proteiinia kuin koiranruoassa, eikä sen proteiinin, kuidun ja muiden ravintoaineiden suhde sovi koiran tarpeisiin. Epätasapaino voi ajan mittaan aiheuttaa vatsa- ja suolisto-ongelmia, lihavuutta ja haimatulehduksen, ja runsas proteiini voi rasittaa koiran maksaa ja munuaisia."
       },
       "signs": {
         "en": [
@@ -38584,42 +38698,57 @@
           "Diarrhée",
           "Ventre gonflé",
           "Fièvre"
+        ],
+        "fi": [
+          "Vatsakipu ja köyryselkä",
+          "Väsymys ja heikkous",
+          "Ruokahaluttomuus",
+          "Oksentelu",
+          "Ripuli",
+          "Turvonnut vatsa",
+          "Kuume"
         ]
       },
       "what_to_do": {
         "en": "If your dog shows signs of tummy discomfort after eating cat food, call your vet. Signs of pancreatitis, such as a hunched back with tummy pain, vomiting, weakness or fever, need immediate veterinary care.",
         "sl": "Če ima pes po mačji hrani znake nelagodja v trebuhu, pokličite veterinarja. Znaki vnetja trebušne slinavke, kot so usločen hrbet z bolečinami v trebuhu, bruhanje, šibkost ali vročina, zahtevajo takojšnjo veterinarsko oskrbo.",
-        "fr": "Si votre chien semble avoir mal au ventre après avoir mangé de la nourriture pour chats, appelez votre vétérinaire. Les signes de pancréatite, comme un dos voûté avec des douleurs au ventre, des vomissements, de la faiblesse ou de la fièvre, nécessitent des soins vétérinaires immédiats."
+        "fr": "Si votre chien semble avoir mal au ventre après avoir mangé de la nourriture pour chats, appelez votre vétérinaire. Les signes de pancréatite, comme un dos voûté avec des douleurs au ventre, des vomissements, de la faiblesse ou de la fièvre, nécessitent des soins vétérinaires immédiats.",
+        "fi": "Jos koirallasi on vatsavaivoja kissanruoan syömisen jälkeen, soita eläinlääkärille. Haimatulehduksen oireet, kuten köyryselkä ja vatsakipu, oksentelu, heikkous tai kuume, vaativat välitöntä eläinlääkärinhoitoa."
       },
       "serving": null,
       "child": {
         "en": "Cat food is made for cats. Dogs stay healthiest with their own dog food, so help keep the cat's bowl up high!",
         "sl": "Mačja hrana je narejena za mačke. Psi so najbolj zdravi s svojo pasjo hrano, zato pomagaj, da je mačja skledica visoko!",
-        "fr": "La nourriture pour chats est faite pour les chats. Les chiens sont en meilleure santé avec leur propre nourriture : pense à mettre la gamelle du chat en hauteur !"
+        "fr": "La nourriture pour chats est faite pour les chats. Les chiens sont en meilleure santé avec leur propre nourriture : pense à mettre la gamelle du chat en hauteur !",
+        "fi": "Kissanruoka on tehty kissoille. Koira pysyy terveimpänä omalla koiranruoallaan, joten pidä kissan kuppi poissa sen ulottuvilta!"
       },
       "faq": [
         {
           "q": {
             "en": "How do I keep my dog out of the cat's food?",
             "sl": "Kako preprečim, da bi pes jedel mačjo hrano?",
-            "fr": "Comment empêcher mon chien de manger la nourriture du chat ?"
+            "fr": "Comment empêcher mon chien de manger la nourriture du chat ?",
+            "fi": "Miten estän koiraa pääsemästä kissan ruokaan?"
           },
           "a": {
             "en": "Place the cat's food out of your dog's reach. If your dog regularly gets into it, change where you keep the cat's food or where and how you feed your cat.",
             "sl": "Mačjo hrano postavite izven pasjega dosega. Če pes do nje redno pride, spremenite, kje jo hranite ali kje in kako hranite mačko.",
-            "fr": "Placez la nourriture du chat hors de portée de votre chien. Si votre chien y a régulièrement accès, changez l’endroit où vous la rangez, ou le lieu et la manière dont vous nourrissez votre chat."
+            "fr": "Placez la nourriture du chat hors de portée de votre chien. Si votre chien y a régulièrement accès, changez l’endroit où vous la rangez, ou le lieu et la manière dont vous nourrissez votre chat.",
+            "fi": "Pidä kissan ruoka koirasi ulottumattomissa. Jos koira pääsee siihen toistuvasti, vaihda kissanruoan säilytyspaikkaa tai sitä, missä ja miten kissaa ruokitaan."
           }
         },
         {
           "q": {
             "en": "Can my dog eat cat food in an emergency?",
             "sl": "Ali lahko pes v sili je mačjo hrano?",
-            "fr": "Mon chien peut-il manger de la nourriture pour chats en cas d’urgence ?"
+            "fr": "Mon chien peut-il manger de la nourriture pour chats en cas d’urgence ?",
+            "fi": "Voiko koira syödä kissanruokaa hätätilanteessa?"
           },
           "a": {
             "en": "Dogs can survive on cat food in a tough spot, but unless your vet recommends otherwise, the best food for your dog is dog food.",
             "sl": "Psi lahko v stiski preživijo tudi z mačjo hrano, vendar je za psa, razen če veterinar svetuje drugače, najboljša pasja hrana.",
-            "fr": "Un chien peut s’en sortir avec de la nourriture pour chats si l’on n’a pas d’autre solution, mais, sauf avis contraire de votre vétérinaire, la meilleure nourriture pour votre chien est la nourriture pour chiens."
+            "fr": "Un chien peut s’en sortir avec de la nourriture pour chats si l’on n’a pas d’autre solution, mais, sauf avis contraire de votre vétérinaire, la meilleure nourriture pour votre chien est la nourriture pour chiens.",
+            "fi": "Hätätilanteessa koira pärjää kissanruoalla, mutta ellei eläinlääkäri neuvo toisin, koiralle paras ruoka on koiranruoka."
           }
         }
       ],
@@ -42652,60 +42781,71 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Coconut water",
         "sl": "Kokosova voda",
-        "fr": "Eau de coco"
+        "fr": "Eau de coco",
+        "fi": "Kookosvesi"
       },
       "question": {
         "en": "Can dogs drink coconut water?",
         "sl": "Ali lahko psi pijejo kokosovo vodo?",
-        "fr": "Les chiens peuvent-ils boire de l’eau de coco ?"
+        "fr": "Les chiens peuvent-ils boire de l’eau de coco ?",
+        "fi": "Saako koira juoda kookosvettä?"
       },
       "url_slug": {
         "en": "coconut-water",
         "sl": "kokosova-voda",
-        "fr": "eau-de-coco"
+        "fr": "eau-de-coco",
+        "fi": "kookosvesi"
       },
       "answer": {
         "en": "Yes, as an occasional treat. A vet quoted by the AKC says coconut water is safe for dogs but should be a treat, not a substitute for regular water. Choose pure coconut water with no added sugars or preservatives, and offer it in moderation.",
         "sl": "Da, kot občasno posladico. Veterinarka, ki jo navaja AKC, pravi, da je kokosova voda za pse varna, vendar naj bo posladica in ne nadomestek za navadno vodo. Izberite čisto kokosovo vodo brez dodanega sladkorja ali konzervansov in jo ponudite zmerno.",
-        "fr": "Oui, en friandise occasionnelle. Un vétérinaire cité par l’AKC explique que l’eau de coco est sans danger pour les chiens, mais qu’elle doit rester une friandise et ne pas remplacer l’eau habituelle. Choisissez de l’eau de coco pure, sans sucre ajouté ni conservateurs, et donnez-en avec modération."
+        "fr": "Oui, en friandise occasionnelle. Un vétérinaire cité par l’AKC explique que l’eau de coco est sans danger pour les chiens, mais qu’elle doit rester une friandise et ne pas remplacer l’eau habituelle. Choisissez de l’eau de coco pure, sans sucre ajouté ni conservateurs, et donnez-en avec modération.",
+        "fi": "Saa, satunnaisena herkkuna. AKC:n lainaaman eläinlääkärin mukaan kookosvesi on koiralle turvallista, mutta sen pitää olla herkku eikä tavallisen veden korvike. Valitse puhdas kookosvesi ilman lisättyä sokeria tai säilöntäaineita ja tarjoa sitä kohtuudella."
       },
       "why": {
         "en": "Coconut is high in potassium, so caution is needed for dogs with kidney disease or other electrolyte disturbances. Too much coconut can make a dog sick, mainly with stomach upset such as diarrhoea. Anything you offer must be free of artificial sweeteners like xylitol, which is toxic for dogs.",
         "sl": "Kokos vsebuje veliko kalija, zato je potrebna previdnost pri psih z boleznijo ledvic ali drugimi motnjami elektrolitov. Preveč kokosa lahko psu škoduje, predvsem s prebavnimi težavami, kot je driska. Karkoli ponudite, ne sme vsebovati umetnih sladil, kot je ksilitol, ki je za pse strupen.",
-        "fr": "La noix de coco est riche en potassium : la prudence s’impose donc pour les chiens atteints d’une maladie rénale ou d’autres déséquilibres électrolytiques. Trop de noix de coco peut rendre un chien malade, surtout avec des troubles digestifs comme la diarrhée. Tout ce que vous proposez doit être exempt d’édulcorants artificiels comme le xylitol, toxique pour les chiens."
+        "fr": "La noix de coco est riche en potassium : la prudence s’impose donc pour les chiens atteints d’une maladie rénale ou d’autres déséquilibres électrolytiques. Trop de noix de coco peut rendre un chien malade, surtout avec des troubles digestifs comme la diarrhée. Tout ce que vous proposez doit être exempt d’édulcorants artificiels comme le xylitol, toxique pour les chiens.",
+        "fi": "Kookoksessa on paljon kaliumia, joten munuaissairaiden tai muista elektrolyyttihäiriöistä kärsivien koirien kohdalla on oltava varovainen. Liian suuri määrä kookosta voi tehdä koiran sairaaksi, yleensä vatsaoireina, kuten ripulina. Kaiken, mitä tarjoat, pitää olla ilman keinotekoisia makeutusaineita, kuten ksylitolia, joka on koirille myrkyllistä."
       },
       "signs": null,
       "what_to_do": {
         "en": "Stop the coconut water if your dog gets an upset stomach or diarrhoea. Coconut is high in potassium, so be cautious with it if your dog has kidney disease or an electrolyte problem.",
         "sl": "Če ima pes po kokosovi vodi prebavne težave ali drisko, je ne dajajte več. Kokos vsebuje veliko kalija, zato bodite pri psu z boleznijo ledvic ali motnjo elektrolitov z njo previdni.",
-        "fr": "Arrêtez l’eau de coco si votre chien a mal à l’estomac ou de la diarrhée. La noix de coco est riche en potassium : soyez prudent si votre chien a une maladie rénale ou un déséquilibre électrolytique."
+        "fr": "Arrêtez l’eau de coco si votre chien a mal à l’estomac ou de la diarrhée. La noix de coco est riche en potassium : soyez prudent si votre chien a une maladie rénale ou un déséquilibre électrolytique.",
+        "fi": "Lopeta kookosveden antaminen, jos koiran vatsa menee sekaisin tai sille tulee ripuli. Kookoksessa on paljon kaliumia, joten ole varovainen, jos koirallasi on munuaissairaus tai elektrolyyttiongelma."
       },
       "serving": {
         "en": "Pure, unsweetened coconut water only, with no added sugar, preservatives or xylitol, offered in moderation as a treat and never instead of fresh water.",
         "sl": "Le čista, nesladkana kokosova voda brez dodanega sladkorja, konzervansov ali ksilitola, ponujena zmerno kot posladica in nikoli namesto sveže vode.",
-        "fr": "Uniquement de l’eau de coco pure et non sucrée, sans sucre ajouté, sans conservateurs et sans xylitol, donnée avec modération en friandise, jamais à la place de l’eau fraîche."
+        "fr": "Uniquement de l’eau de coco pure et non sucrée, sans sucre ajouté, sans conservateurs et sans xylitol, donnée avec modération en friandise, jamais à la place de l’eau fraîche.",
+        "fi": "Vain puhdasta, makeuttamatonta kookosvettä ilman lisättyä sokeria, säilöntäaineita tai ksylitolia, kohtuudella herkkuna eikä koskaan raikkaan veden tilalla."
       },
       "child": {
         "en": "Coconut water is an occasional treat for dogs. Fresh water is still what they need to drink every day!",
         "sl": "Kokosova voda je za pse občasna posladica. Vsak dan pa morajo piti svežo vodo!",
-        "fr": "L’eau de coco est une friandise occasionnelle pour les chiens. Ce qu’ils doivent boire tous les jours, c’est de l’eau fraîche !"
+        "fr": "L’eau de coco est une friandise occasionnelle pour les chiens. Ce qu’ils doivent boire tous les jours, c’est de l’eau fraîche !",
+        "fi": "Kookosvesi on koiralle satunnainen herkku. Raikas vesi on silti se, mitä koira tarvitsee juodakseen joka päivä!"
       },
       "faq": [
         {
           "q": {
             "en": "Can coconut water help my dog after exercise?",
             "sl": "Ali kokosova voda psu pomaga po gibanju?",
-            "fr": "L’eau de coco peut-elle aider mon chien après l’effort ?"
+            "fr": "L’eau de coco peut-elle aider mon chien après l’effort ?",
+            "fi": "Voiko kookosvesi auttaa koiraani liikunnan jälkeen?"
           },
           "a": {
             "en": "One vet quoted by the AKC offers her dogs coconut water for extra electrolytes after dog sport events. For the average house dog, though, a fresh bowl of water is perfectly sufficient.",
             "sl": "Veterinarka, ki jo navaja AKC, svojim psom po pasjih športnih tekmovanjih ponudi kokosovo vodo za dodatne elektrolite. Za povprečnega hišnega psa pa je skleda sveže vode povsem dovolj.",
-            "fr": "Une vétérinaire citée par l’AKC donne de l’eau de coco à ses chiens pour un apport supplémentaire en électrolytes après des épreuves de sport canin. Pour un chien de maison ordinaire, une gamelle d’eau fraîche suffit tout à fait."
+            "fr": "Une vétérinaire citée par l’AKC donne de l’eau de coco à ses chiens pour un apport supplémentaire en électrolytes après des épreuves de sport canin. Pour un chien de maison ordinaire, une gamelle d’eau fraîche suffit tout à fait.",
+            "fi": "Yksi AKC:n lainaama eläinlääkäri antaa koirilleen kookosvettä lisäelektrolyyttien vuoksi koiraurheilutapahtumien jälkeen. Tavalliselle kotikoiralle riittää kuitenkin hyvin kuppi raikasta vettä."
           }
         }
       ],
@@ -47730,32 +47870,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Fish oil",
         "sl": "Ribje olje",
-        "fr": "Huile de poisson"
+        "fr": "Huile de poisson",
+        "fi": "Kalaöljy"
       },
       "question": {
         "en": "Can dogs have fish oil?",
         "sl": "Ali lahko psi dobijo ribje olje?",
-        "fr": "Les chiens peuvent-ils prendre de l’huile de poisson ?"
+        "fr": "Les chiens peuvent-ils prendre de l’huile de poisson ?",
+        "fi": "Saako koira kalaöljyä?"
       },
       "url_slug": {
         "en": "fish-oil",
         "sl": "ribje-olje",
-        "fr": "huile-de-poisson"
+        "fr": "huile-de-poisson",
+        "fi": "kalaoljy"
       },
       "answer": {
         "en": "Only if your vet recommends it. Fish oil is a supplement, not a snack, and vets advise always talking to your veterinarian before giving your dog any supplements. It can cause side effects such as diarrhoea, vomiting, gas and fishy breath.",
         "sl": "Le če ga priporoči veterinar. Ribje olje je prehransko dopolnilo, ne prigrizek, veterinarji pa svetujejo, da se pred dajanjem kakršnihkoli dopolnil vedno posvetujete z veterinarjem. Lahko povzroči neželene učinke, kot so driska, bruhanje, vetrovi in ribji zadah.",
-        "fr": "Seulement si votre vétérinaire la recommande. L’huile de poisson est un complément alimentaire, pas une friandise, et il faut toujours demander conseil à votre vétérinaire avant de donner un complément à votre chien. Elle peut provoquer des effets indésirables comme de la diarrhée, des vomissements, des gaz et une haleine de poisson."
+        "fr": "Seulement si votre vétérinaire la recommande. L’huile de poisson est un complément alimentaire, pas une friandise, et il faut toujours demander conseil à votre vétérinaire avant de donner un complément à votre chien. Elle peut provoquer des effets indésirables comme de la diarrhée, des vomissements, des gaz et une haleine de poisson.",
+        "fi": "Vain, jos eläinlääkäri suosittelee sitä. Kalaöljy on ravintolisä eikä välipala, ja ennen minkä tahansa ravintolisän antamista koiralle on aina keskusteltava eläinlääkärin kanssa. Se voi aiheuttaa sivuvaikutuksia, kuten ripulia, oksentelua, ilmavaivoja ja kalan hajua hengityksessä."
       },
       "why": {
         "en": "Fish oil comes from oily fish such as salmon, mackerel and sardines, and its omega-3 fatty acids have been used to support a dog's skin, coat, joints and heart. But it is a health product: possible side effects include diarrhoea, vomiting, gas, fishy-smelling breath or skin and, in rare cases, a higher bleeding risk. VCA advises caution in dogs taking blood thinners, dogs with a clotting disorder, diabetes or a history of pancreatitis. Just because a product is natural does not mean it is safe.",
         "sl": "Ribje olje pridobivajo iz mastnih rib, kot so losos, skuša in sardele, njegove omega-3 maščobne kisline pa se uporabljajo za podporo pasje kože, dlake, sklepov in srca. Vendar gre za zdravstveni izdelek: možni neželeni učinki so driska, bruhanje, vetrovi, ribji vonj iz ust ali kože in redko večje tveganje za krvavitve. VCA svetuje previdnost pri psih, ki jemljejo zdravila proti strjevanju krvi, ter pri psih z motnjo strjevanja krvi, sladkorno boleznijo ali preteklim vnetjem trebušne slinavke. Če je izdelek naraven, še ni nujno varen.",
-        "fr": "L’huile de poisson provient de poissons gras comme le saumon, le maquereau et les sardines, et ses acides gras oméga-3 sont utilisés pour soutenir la peau, le pelage, les articulations et le cœur du chien. Mais c’est un produit de santé : parmi les effets indésirables possibles figurent la diarrhée, les vomissements, les gaz, une haleine ou une peau à l’odeur de poisson et, dans de rares cas, un risque accru de saignement. VCA recommande la prudence chez les chiens sous anticoagulants, ceux qui ont un trouble de la coagulation, du diabète ou des antécédents de pancréatite. Ce n’est pas parce qu’un produit est naturel qu’il est sans danger."
+        "fr": "L’huile de poisson provient de poissons gras comme le saumon, le maquereau et les sardines, et ses acides gras oméga-3 sont utilisés pour soutenir la peau, le pelage, les articulations et le cœur du chien. Mais c’est un produit de santé : parmi les effets indésirables possibles figurent la diarrhée, les vomissements, les gaz, une haleine ou une peau à l’odeur de poisson et, dans de rares cas, un risque accru de saignement. VCA recommande la prudence chez les chiens sous anticoagulants, ceux qui ont un trouble de la coagulation, du diabète ou des antécédents de pancréatite. Ce n’est pas parce qu’un produit est naturel qu’il est sans danger.",
+        "fi": "Kalaöljy on peräisin rasvaisista kaloista, kuten lohesta, makrillista ja sardiineista, ja sen omega-3-rasvahappoja käytetään tukemaan koiran ihoa, turkkia, niveliä ja sydäntä. Se on kuitenkin terveystuote: mahdollisia sivuvaikutuksia ovat ripuli, oksentelu, ilmavaivat, kalan hajuinen hengitys tai iho ja harvinaisissa tapauksissa suurempi verenvuotoriski. VCA neuvoo olemaan varovainen, jos koira käyttää verenohennuslääkkeitä tai sillä on hyytymishäiriö, diabetes tai aiempi haimatulehdus. Se, että tuote on luonnollinen, ei tarkoita, että se on turvallinen."
       },
       "signs": {
         "en": [
@@ -47778,42 +47924,55 @@
           "Gaz",
           "Haleine ou peau à l’odeur de poisson",
           "Saignements plus faciles (rare)"
+        ],
+        "fi": [
+          "Ripuli",
+          "Oksentelu",
+          "Ilmavaivat",
+          "Kalalle haiseva hengitys tai iho",
+          "Herkempi verenvuoto (harvinaista)"
         ]
       },
       "what_to_do": {
         "en": "Talk to your vet before starting fish oil or any other supplement. If your dog has a serious reaction, stop giving fish oil and contact your vet immediately. Keep the container out of reach of children and pets.",
         "sl": "Preden začnete dajati ribje olje ali katerokoli drugo dopolnilo, se posvetujte z veterinarjem. Če ima pes resno reakcijo, ribjega olja ne dajajte več in takoj pokličite veterinarja. Embalažo hranite izven dosega otrok in živali.",
-        "fr": "Parlez-en à votre vétérinaire avant de commencer l’huile de poisson ou tout autre complément. Si votre chien a une réaction grave, arrêtez de lui donner de l’huile de poisson et contactez immédiatement votre vétérinaire. Gardez le flacon hors de portée des enfants et des animaux."
+        "fr": "Parlez-en à votre vétérinaire avant de commencer l’huile de poisson ou tout autre complément. Si votre chien a une réaction grave, arrêtez de lui donner de l’huile de poisson et contactez immédiatement votre vétérinaire. Gardez le flacon hors de portée des enfants et des animaux.",
+        "fi": "Keskustele eläinlääkärin kanssa ennen kalaöljyn tai minkään muun ravintolisän aloittamista. Jos koirallasi on vakava reaktio, lopeta kalaöljyn antaminen ja ota heti yhteyttä eläinlääkäriin. Pidä pakkaus poissa lasten ja lemmikkien ulottuvilta."
       },
       "serving": null,
       "child": {
         "en": "Fish oil is a special supplement. Only the vet and grown-ups decide if a dog needs it!",
         "sl": "Ribje olje je posebno dopolnilo. Ali ga pes potrebuje, odločijo le veterinar in odrasli!",
-        "fr": "L’huile de poisson est un complément très spécial. Seuls le vétérinaire et les adultes décident si un chien en a besoin !"
+        "fr": "L’huile de poisson est un complément très spécial. Seuls le vétérinaire et les adultes décident si un chien en a besoin !",
+        "fi": "Kalaöljy on erityinen ravintolisä. Vain eläinlääkäri ja aikuiset päättävät, tarvitseeko koira sitä!"
       },
       "faq": [
         {
           "q": {
             "en": "Can old or rancid fish oil upset my dog?",
             "sl": "Ali lahko staro ali žarko ribje olje psu škoduje?",
-            "fr": "Une huile de poisson ancienne ou rance peut-elle rendre mon chien malade ?"
+            "fr": "Une huile de poisson ancienne ou rance peut-elle rendre mon chien malade ?",
+            "fi": "Voiko vanha tai härskiintynyt kalaöljy vaivata koiraani?"
           },
           "a": {
             "en": "Yes. Consuming rancid fish oil may lead to stomach and gut upset, including vomiting or diarrhoea.",
             "sl": "Da. Žarko ribje olje lahko povzroči prebavne težave, vključno z bruhanjem ali drisko.",
-            "fr": "Oui. Consommer de l’huile de poisson rance peut provoquer des troubles de l’estomac et de l’intestin, notamment des vomissements ou de la diarrhée."
+            "fr": "Oui. Consommer de l’huile de poisson rance peut provoquer des troubles de l’estomac et de l’intestin, notamment des vomissements ou de la diarrhée.",
+            "fi": "Voi. Härskiintynyt kalaöljy voi aiheuttaa vatsa- ja suolisto-ongelmia, kuten oksentelua tai ripulia."
           }
         },
         {
           "q": {
             "en": "Is fish oil safe because it's natural?",
             "sl": "Ali je ribje olje varno, ker je naravno?",
-            "fr": "L’huile de poisson est-elle sans danger parce qu’elle est naturelle ?"
+            "fr": "L’huile de poisson est-elle sans danger parce qu’elle est naturelle ?",
+            "fi": "Onko kalaöljy turvallista, koska se on luonnollista?"
           },
           "a": {
             "en": "Not automatically. Just because a product is natural does not mean it is safe. Your vet is the best source of information about the safety of non-drug health products for your dog.",
             "sl": "Ne samodejno. Če je izdelek naraven, še ni nujno varen. Veterinar je najboljši vir informacij o varnosti zdravstvenih izdelkov, ki niso zdravila, za vašega psa.",
-            "fr": "Pas automatiquement. Ce n’est pas parce qu’un produit est naturel qu’il est sans danger. Votre vétérinaire est la meilleure source d’information sur l’innocuité des produits de santé non médicamenteux pour votre chien."
+            "fr": "Pas automatiquement. Ce n’est pas parce qu’un produit est naturel qu’il est sans danger. Votre vétérinaire est la meilleure source d’information sur l’innocuité des produits de santé non médicamenteux pour votre chien.",
+            "fi": "Ei automaattisesti. Luonnollinen tuote ei ole aina turvallinen. Eläinlääkäri osaa parhaiten kertoa, ovatko lääkkeettömät terveystuotteet turvallisia koirallesi."
           }
         }
       ],
@@ -49145,32 +49304,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Goat's milk",
         "sl": "Kozje mleko",
-        "fr": "Lait de chèvre"
+        "fr": "Lait de chèvre",
+        "fi": "Vuohenmaito"
       },
       "question": {
         "en": "Can dogs drink goat's milk?",
         "sl": "Ali lahko psi pijejo kozje mleko?",
-        "fr": "Les chiens peuvent-ils boire du lait de chèvre ?"
+        "fr": "Les chiens peuvent-ils boire du lait de chèvre ?",
+        "fi": "Saako koira juoda vuohenmaitoa?"
       },
       "url_slug": {
         "en": "goat-milk",
         "sl": "kozje-mleko",
-        "fr": "lait-de-chevre"
+        "fr": "lait-de-chevre",
+        "fi": "vuohenmaito"
       },
       "answer": {
         "en": "Only a little, now and then. Goat's milk can be an occasional reward, but it has almost as much lactose as cow's milk and can still upset a dog's stomach. Dogs on a good, balanced diet don't need it. Don't give raw goat's milk.",
         "sl": "Le malo in le občasno. Kozje mleko je lahko občasna nagrada, vendar ima skoraj toliko laktoze kot kravje in lahko psu vseeno razdraži želodec. Psi, ki jedo dobro, uravnoteženo hrano, ga ne potrebujejo. Surovega kozjega mleka ne dajajte.",
-        "fr": "Seulement un peu, de temps en temps. Le lait de chèvre peut être une petite récompense occasionnelle, mais il contient presque autant de lactose que le lait de vache et peut quand même déranger l’estomac d’un chien. Un chien qui suit une alimentation équilibrée de qualité n’en a pas besoin. Ne donnez pas de lait de chèvre cru."
+        "fr": "Seulement un peu, de temps en temps. Le lait de chèvre peut être une petite récompense occasionnelle, mais il contient presque autant de lactose que le lait de vache et peut quand même déranger l’estomac d’un chien. Un chien qui suit une alimentation équilibrée de qualité n’en a pas besoin. Ne donnez pas de lait de chèvre cru.",
+        "fi": "Vain vähän, silloin tällöin. Vuohenmaito voi olla satunnainen palkinto, mutta siinä on lähes yhtä paljon laktoosia kuin lehmänmaidossa, ja se voi silti sotkea koiran vatsan. Hyvin ja tasapainoisesti ruokitut koirat eivät tarvitse sitä. Älä anna raakaa vuohenmaitoa."
       },
       "why": {
         "en": "Goat's milk has almost the same amount of lactose as cow's milk, and dogs can have varying degrees of lactose intolerance. The Australian Veterinary Association notes that goat's milk and lactose-free milk can still cause stomach and gut problems, and that some dogs can develop an allergy to milk protein. Raw milk can also carry germs such as E. coli, Salmonella and Listeria.",
         "sl": "Kozje mleko ima skoraj enako količino laktoze kot kravje, psi pa laktozo prenašajo različno slabo. Avstralsko veterinarsko združenje opozarja, da lahko kozje mleko in mleko brez laktoze vseeno povzročita težave z želodcem in črevesjem ter da se lahko pri nekaterih psih razvije alergija na mlečne beljakovine. Surovo mleko lahko poleg tega prenaša klice, kot so E. coli, salmonela in listerija.",
-        "fr": "Le lait de chèvre contient presque autant de lactose que le lait de vache, et l’intolérance au lactose varie d’un chien à l’autre. L’Australian Veterinary Association précise que le lait de chèvre et le lait sans lactose peuvent malgré tout provoquer des troubles de l’estomac et de l’intestin, et que certains chiens peuvent développer une allergie aux protéines du lait. Le lait cru peut en outre contenir des germes comme E. coli, Salmonella et Listeria."
+        "fr": "Le lait de chèvre contient presque autant de lactose que le lait de vache, et l’intolérance au lactose varie d’un chien à l’autre. L’Australian Veterinary Association précise que le lait de chèvre et le lait sans lactose peuvent malgré tout provoquer des troubles de l’estomac et de l’intestin, et que certains chiens peuvent développer une allergie aux protéines du lait. Le lait cru peut en outre contenir des germes comme E. coli, Salmonella et Listeria.",
+        "fi": "Vuohenmaidossa on lähes yhtä paljon laktoosia kuin lehmänmaidossa, ja laktoosi-intoleranssin aste vaihtelee koirilla. Australian eläinlääkäriliitto huomauttaa, että vuohenmaito ja laktoositon maito voivat silti aiheuttaa vatsa- ja suolisto-ongelmia ja että joillekin koirille voi kehittyä maitoproteiiniallergia. Raa’assa maidossa voi myös olla bakteereja, kuten E. colia, salmonellaa ja listeriaa."
       },
       "signs": {
         "en": [
@@ -49193,46 +49358,60 @@
           "Vomissements",
           "Maux de ventre",
           "Diarrhée"
+        ],
+        "fi": [
+          "Löysä uloste",
+          "Ilmavaivat",
+          "Oksentelu",
+          "Vatsakipu",
+          "Ripuli"
         ]
       },
       "what_to_do": {
         "en": "Stop the goat's milk if your dog gets loose stools, gas, vomiting, tummy pain or diarrhoea, and make sure fresh water is always available. Before adding goat's milk to your dog's diet, discuss it with your vet first.",
         "sl": "Če ima pes po kozjem mleku mehko blato, vetrove, bruha, ga boli trebuh ali ima drisko, mleka ne dajajte več in poskrbite, da ima vedno na voljo svežo vodo. Preden kozje mleko dodate v pasji jedilnik, se najprej posvetujte z veterinarjem.",
-        "fr": "Arrêtez le lait de chèvre si votre chien a les selles molles, des gaz, des vomissements, mal au ventre ou de la diarrhée, et veillez à ce qu’il ait toujours de l’eau fraîche à disposition. Avant d’ajouter du lait de chèvre à l’alimentation de votre chien, parlez-en d’abord à votre vétérinaire."
+        "fr": "Arrêtez le lait de chèvre si votre chien a les selles molles, des gaz, des vomissements, mal au ventre ou de la diarrhée, et veillez à ce qu’il ait toujours de l’eau fraîche à disposition. Avant d’ajouter du lait de chèvre à l’alimentation de votre chien, parlez-en d’abord à votre vétérinaire.",
+        "fi": "Lopeta vuohenmaidon antaminen, jos koiralla on löysää ulostetta, ilmavaivoja, oksentelua, vatsakipua tai ripulia, ja huolehdi, että raikasta vettä on aina saatavilla. Keskustele eläinlääkärin kanssa, ennen kuin lisäät vuohenmaitoa koiran ruokavalioon."
       },
       "serving": {
         "en": "Never raw. Offer it only as an occasional reward, never instead of fresh water or a balanced dog food.",
         "sl": "Nikoli surovo. Ponudite ga le kot občasno nagrado, nikoli namesto sveže vode ali uravnotežene pasje hrane.",
-        "fr": "Jamais cru. À donner uniquement comme petite récompense occasionnelle, jamais à la place de l’eau fraîche ni d’une alimentation équilibrée pour chiens."
+        "fr": "Jamais cru. À donner uniquement comme petite récompense occasionnelle, jamais à la place de l’eau fraîche ni d’une alimentation équilibrée pour chiens.",
+        "fi": "Ei koskaan raakana. Tarjoa vain satunnaisena palkintona, ei koskaan raikkaan veden tai tasapainoisen koiranruoan tilalla."
       },
       "child": {
         "en": "Goat's milk is only a rare little treat for dogs. Fresh water is the best drink for them every day!",
         "sl": "Kozje mleko je za pse le redka majhna posladica. Najboljša pijača zanje je vsak dan sveža voda!",
-        "fr": "Le lait de chèvre n’est qu’une petite friandise très rare pour les chiens. L’eau fraîche reste la meilleure boisson pour eux, tous les jours !"
+        "fr": "Le lait de chèvre n’est qu’une petite friandise très rare pour les chiens. L’eau fraîche reste la meilleure boisson pour eux, tous les jours !",
+        "fi": "Vuohenmaito on koiralle vain harvinainen pieni herkku. Raikas vesi on koiran paras juoma joka päivä!"
       },
       "faq": [
         {
           "q": {
             "en": "Is goat's milk easier for dogs to digest than cow's milk?",
             "sl": "Ali psi kozje mleko prebavijo lažje kot kravje?",
-            "fr": "Le lait de chèvre est-il plus facile à digérer pour un chien que le lait de vache ?"
+            "fr": "Le lait de chèvre est-il plus facile à digérer pour un chien que le lait de vache ?",
+            "fi": "Onko vuohenmaito koiralle helpompaa sulattaa kuin lehmänmaito?"
           },
           "a": {
             "en": "Not really. Goat's milk has almost the same amount of lactose as cow's milk. Its smaller fat globules are often mentioned, but homogenisation also makes the fat globules in cow's milk smaller.",
             "sl": "Pravzaprav ne. Kozje mleko ima skoraj enako količino laktoze kot kravje. Pogosto se omenjajo njegove manjše maščobne kroglice, vendar homogenizacija zmanjša tudi maščobne kroglice v kravjem mleku.",
-            "fr": "Pas vraiment. Le lait de chèvre contient presque autant de lactose que le lait de vache. On cite souvent ses globules gras plus petits, mais l’homogénéisation rend aussi plus petits ceux du lait de vache."
+            "fr": "Pas vraiment. Le lait de chèvre contient presque autant de lactose que le lait de vache. On cite souvent ses globules gras plus petits, mais l’homogénéisation rend aussi plus petits ceux du lait de vache.",
+            "fi": "Ei oikeastaan. Vuohenmaidossa on lähes yhtä paljon laktoosia kuin lehmänmaidossa. Usein mainitaan vuohenmaidon pienemmät rasvapallot, mutta myös homogenointi pienentää lehmänmaidon rasvapalloja."
           }
         },
         {
           "q": {
             "en": "Can goat's milk replace my dog's treatment?",
             "sl": "Ali lahko kozje mleko nadomesti zdravljenje mojega psa?",
-            "fr": "Le lait de chèvre peut-il remplacer le traitement de mon chien ?"
+            "fr": "Le lait de chèvre peut-il remplacer le traitement de mon chien ?",
+            "fi": "Voiko vuohenmaito korvata koirani saamaa hoitoa?"
           },
           "a": {
             "en": "No. A vet at the Drake Center warns that it can be dangerous if goat's milk is used in place of known appropriate treatments. Discuss it with your vet first.",
             "sl": "Ne. Veterinarka iz centra Drake opozarja, da je lahko nevarno, če kozje mleko uporabimo namesto znanih ustreznih zdravljenj. Najprej se posvetujte z veterinarjem.",
-            "fr": "Non. Un vétérinaire du Drake Center avertit que cela peut être dangereux si le lait de chèvre est utilisé à la place de traitements reconnus. Parlez-en d’abord à votre vétérinaire."
+            "fr": "Non. Un vétérinaire du Drake Center avertit que cela peut être dangereux si le lait de chèvre est utilisé à la place de traitements reconnus. Parlez-en d’abord à votre vétérinaire.",
+            "fi": "Ei. Drake Centerin eläinlääkäri varoittaa, että vuohenmaidon käyttäminen tunnettujen, asianmukaisten hoitojen sijaan voi olla vaarallista. Keskustele asiasta ensin eläinlääkärin kanssa."
           }
         }
       ],
@@ -52821,32 +53000,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Fruit juice",
         "sl": "Sadni sok",
-        "fr": "Jus de fruits"
+        "fr": "Jus de fruits",
+        "fi": "Hedelmämehu"
       },
       "question": {
         "en": "Can dogs drink fruit juice?",
         "sl": "Ali lahko psi pijejo sadni sok?",
-        "fr": "Les chiens peuvent-ils boire du jus de fruits ?"
+        "fr": "Les chiens peuvent-ils boire du jus de fruits ?",
+        "fi": "Saako koira juoda hedelmämehua?"
       },
       "url_slug": {
         "en": "juice",
         "sl": "sadni-sok",
-        "fr": "jus-de-fruits"
+        "fr": "jus-de-fruits",
+        "fi": "hedelmamehu"
       },
       "answer": {
         "en": "It's best not to. Whole fruit is a better snack than juice. Orange juice, for example, isn't toxic but has concentrated sugars and none of the fruit's fibre. Lemon juice is high in citric acid, which is toxic to dogs, and sugar-free drinks may contain xylitol.",
         "sl": "Raje ne. Celo sadje je boljši prigrizek kot sok. Pomarančni sok na primer ni strupen, vendar ima zgoščen sladkor in nič vlaknin iz sadja. Limonin sok vsebuje veliko citronske kisline, ki je za pse strupena, pijače brez sladkorja pa lahko vsebujejo ksilitol.",
-        "fr": "Mieux vaut s’en abstenir. Un fruit entier est un meilleur en-cas qu’un jus. Le jus d’orange, par exemple, n’est pas toxique, mais il contient des sucres concentrés et ne contient pas les fibres du fruit. Le jus de citron contient beaucoup d’acide citrique, toxique pour les chiens, et les boissons sans sucre peuvent contenir du xylitol."
+        "fr": "Mieux vaut s’en abstenir. Un fruit entier est un meilleur en-cas qu’un jus. Le jus d’orange, par exemple, n’est pas toxique, mais il contient des sucres concentrés et ne contient pas les fibres du fruit. Le jus de citron contient beaucoup d’acide citrique, toxique pour les chiens, et les boissons sans sucre peuvent contenir du xylitol.",
+        "fi": "Parempi olla antamatta. Kokonainen hedelmä on mehua parempi välipala. Appelsiinimehu ei esimerkiksi ole myrkyllistä, mutta siinä on tiivistyneitä sokereita eikä lainkaan hedelmän kuitua. Sitruunamehussa on paljon sitruunahappoa, joka on koirille myrkyllistä, ja sokerittomissa juomissa voi olla ksylitolia."
       },
       "why": {
         "en": "Juice contains concentrated natural sugars and lacks the fibre of whole fruit; because it is higher in sugar and easy to drink in large amounts, it may increase the risk of digestive upset. Fruit juice concentrates are high in fructose, which may increase the risk of obesity. Lemon juice is a concentrated form of the fruit with high amounts of citric acid, which is toxic to dogs. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
         "sl": "Sok vsebuje zgoščen naravni sladkor in nima vlaknin celega sadja; ker ima več sladkorja in ga pes zlahka popije veliko, lahko poveča tveganje za prebavne težave. Sadni koncentrati imajo veliko fruktoze, ki lahko poveča tveganje za debelost. Limonin sok je zgoščena oblika sadeža z veliko citronske kisline, ki je za pse strupena. Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen.",
-        "fr": "Le jus contient des sucres naturels concentrés et n’a pas les fibres du fruit entier ; comme il est plus riche en sucre et facile à boire en grande quantité, il peut augmenter le risque de troubles digestifs. Les jus de fruits concentrés sont riches en fructose, ce qui peut augmenter le risque d’obésité. Le jus de citron est une forme concentrée du fruit, avec beaucoup d’acide citrique, toxique pour les chiens. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens."
+        "fr": "Le jus contient des sucres naturels concentrés et n’a pas les fibres du fruit entier ; comme il est plus riche en sucre et facile à boire en grande quantité, il peut augmenter le risque de troubles digestifs. Les jus de fruits concentrés sont riches en fructose, ce qui peut augmenter le risque d’obésité. Le jus de citron est une forme concentrée du fruit, avec beaucoup d’acide citrique, toxique pour les chiens. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens.",
+        "fi": "Mehussa on tiivistyneitä luonnollisia sokereita, eikä siinä ole kokonaisen hedelmän kuitua. Koska siinä on enemmän sokeria ja sitä on helppo juoda paljon, se voi lisätä ruoansulatusvaivojen riskiä. Hedelmämehutiivisteissä on paljon fruktoosia, joka voi lisätä lihavuuden riskiä. Sitruunamehu on hedelmän tiivistetty muoto, ja siinä on paljon sitruunahappoa, joka on koirille myrkyllistä. Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä."
       },
       "signs": {
         "en": [
@@ -52857,42 +53042,51 @@
         ],
         "fr": [
           "Troubles digestifs"
+        ],
+        "fi": [
+          "Ruoansulatusvaivat"
         ]
       },
       "what_to_do": {
         "en": "Offer fresh water instead and watch your dog for any signs of digestive upset. If the drink was sugar-free or may contain xylitol, see our xylitol page straight away. If your dog had grape juice, see our grapes page.",
         "sl": "Namesto soka ponudite svežo vodo in psa opazujte, ali se pojavijo prebavne težave. Če je bila pijača brez sladkorja ali morda vsebuje ksilitol, takoj poglejte našo stran o ksilitolu. Če je pes popil grozdni sok, poglejte našo stran o grozdju.",
-        "fr": "Proposez plutôt de l’eau fraîche et surveillez votre chien pour repérer d’éventuels signes de troubles digestifs. Si la boisson était sans sucre ou pouvait contenir du xylitol, consultez tout de suite notre page sur le xylitol. Si votre chien a bu du jus de raisin, consultez notre page sur le raisin."
+        "fr": "Proposez plutôt de l’eau fraîche et surveillez votre chien pour repérer d’éventuels signes de troubles digestifs. Si la boisson était sans sucre ou pouvait contenir du xylitol, consultez tout de suite notre page sur le xylitol. Si votre chien a bu du jus de raisin, consultez notre page sur le raisin.",
+        "fi": "Tarjoa sen sijaan raikasta vettä ja tarkkaile koiraasi ruoansulatusvaivojen varalta. Jos juoma oli sokeriton tai siinä voi olla ksylitolia, lue heti ksylitolisivumme. Jos koirasi sai viinirypälemehua, lue viinirypälesivumme."
       },
       "serving": null,
       "child": {
         "en": "Juice is too sugary for dogs. A small piece of dog-safe fresh fruit or a bowl of fresh water is a much better treat!",
         "sl": "Sok je za pse preveč sladek. Majhen košček sadja, ki je za pse varno, ali skleda sveže vode je veliko boljša izbira!",
-        "fr": "Le jus est trop sucré pour les chiens. Un petit morceau de fruit frais qu’il peut manger ou une gamelle d’eau fraîche, c’est une bien meilleure friandise !"
+        "fr": "Le jus est trop sucré pour les chiens. Un petit morceau de fruit frais qu’il peut manger ou une gamelle d’eau fraîche, c’est une bien meilleure friandise !",
+        "fi": "Mehu on koirille liian sokerista. Pieni pala koiralle sopivaa tuoretta hedelmää tai kuppi raikasta vettä on paljon parempi valinta!"
       },
       "faq": [
         {
           "q": {
             "en": "Is orange juice toxic to dogs?",
             "sl": "Ali je pomarančni sok za pse strupen?",
-            "fr": "Le jus d’orange est-il toxique pour les chiens ?"
+            "fr": "Le jus d’orange est-il toxique pour les chiens ?",
+            "fi": "Onko appelsiinimehu myrkyllistä koiralle?"
           },
           "a": {
             "en": "No, but it is not recommended because it contains concentrated sugars and lacks the fibre found in whole fruit. If you want to share the taste of oranges, offer small pieces of fresh fruit instead.",
             "sl": "Ne, vendar ga ne priporočamo, ker vsebuje zgoščen sladkor in nima vlaknin celega sadja. Če želite psu ponuditi okus pomaranče, mu raje dajte majhne koščke svežega sadja.",
-            "fr": "Non, mais il n’est pas recommandé, car il contient des sucres concentrés et n’a pas les fibres du fruit entier. Si vous voulez partager le goût des oranges, proposez plutôt de petits morceaux de fruit frais."
+            "fr": "Non, mais il n’est pas recommandé, car il contient des sucres concentrés et n’a pas les fibres du fruit entier. Si vous voulez partager le goût des oranges, proposez plutôt de petits morceaux de fruit frais.",
+            "fi": "Ei, mutta sitä ei suositella, koska siinä on tiivistyneitä sokereita eikä kokonaisen hedelmän kuitua. Jos haluat antaa koiralle appelsiinin makua, tarjoa sen sijaan pieniä paloja tuoretta hedelmää."
           }
         },
         {
           "q": {
             "en": "What about grape juice?",
             "sl": "Kaj pa grozdni sok?",
-            "fr": "Et le jus de raisin ?"
+            "fr": "Et le jus de raisin ?",
+            "fi": "Entä viinirypälemehu?"
           },
           "a": {
             "en": "Sources disagree. VCA says grape juice does not appear to cause the poisoning seen with grapes and raisins, while FirstVet says grape juice should never be given to dogs. We follow the stricter advice: don't give it.",
             "sl": "Viri se ne strinjajo. VCA navaja, da grozdni sok očitno ne povzroča zastrupitve, kakršno povzročata grozdje in rozine, FirstVet pa pravi, da psom grozdnega soka nikoli ne smemo dati. Upoštevamo strožji nasvet: ne dajajte ga.",
-            "fr": "Les sources ne sont pas d’accord. VCA indique que le jus de raisin ne semble pas provoquer l’intoxication observée avec le raisin et les raisins secs, alors que FirstVet affirme qu’il ne faut jamais en donner aux chiens. Nous suivons l’avis le plus strict : n’en donnez pas."
+            "fr": "Les sources ne sont pas d’accord. VCA indique que le jus de raisin ne semble pas provoquer l’intoxication observée avec le raisin et les raisins secs, alors que FirstVet affirme qu’il ne faut jamais en donner aux chiens. Nous suivons l’avis le plus strict : n’en donnez pas.",
+            "fi": "Lähteet ovat eri mieltä. VCA:n mukaan viinirypälemehu ei näytä aiheuttavan samaa myrkytystä kuin viinirypäleet ja rusinat, mutta FirstVetin mukaan koiralle ei pidä koskaan antaa viinirypälemehua. Noudatamme tiukempaa ohjetta: älä anna sitä."
           }
         }
       ],
@@ -53261,32 +53455,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Kefir",
         "sl": "Kefir",
-        "fr": "Kéfir"
+        "fr": "Kéfir",
+        "fi": "Kefiiri"
       },
       "question": {
         "en": "Can dogs drink kefir?",
         "sl": "Ali lahko psi pijejo kefir?",
-        "fr": "Les chiens peuvent-ils boire du kéfir ?"
+        "fr": "Les chiens peuvent-ils boire du kéfir ?",
+        "fi": "Saako koira juoda kefiiriä?"
       },
       "url_slug": {
         "en": "kefir",
         "sl": "kefir",
-        "fr": "kefir"
+        "fr": "kefir",
+        "fi": "kefiiri"
       },
       "answer": {
         "en": "Only a little, and ask your vet first. The AKC lists yogurt or kefir with live cultures among the foods a vet may suggest to boost beneficial bacteria, but many dogs have trouble digesting lactose. Never give kefir with xylitol or other artificial sweeteners.",
         "sl": "Le malo in najprej vprašajte veterinarja. AKC jogurt ali kefir z živimi kulturami navaja med živili, ki jih lahko veterinar predlaga za krepitev koristnih bakterij, vendar mnogi psi težko prebavljajo laktozo. Nikoli ne dajajte kefirja s ksilitolom ali drugimi umetnimi sladili.",
-        "fr": "Seulement un peu, et demandez d’abord conseil à votre vétérinaire. L’AKC cite le yaourt ou le kéfir contenant des ferments vivants parmi les aliments qu’un vétérinaire peut suggérer pour favoriser les bonnes bactéries, mais beaucoup de chiens digèrent mal le lactose. Ne donnez jamais de kéfir contenant du xylitol ou d’autres édulcorants artificiels."
+        "fr": "Seulement un peu, et demandez d’abord conseil à votre vétérinaire. L’AKC cite le yaourt ou le kéfir contenant des ferments vivants parmi les aliments qu’un vétérinaire peut suggérer pour favoriser les bonnes bactéries, mais beaucoup de chiens digèrent mal le lactose. Ne donnez jamais de kéfir contenant du xylitol ou d’autres édulcorants artificiels.",
+        "fi": "Vain vähän, ja kysy ensin eläinlääkäriltä. AKC:n mukaan eläinlääkäri voi ehdottaa eläviä bakteerikantoja sisältävää jogurttia tai kefiiriä lisäämään hyödyllisiä bakteereja, mutta monen koiran on vaikea sulattaa laktoosia. Älä koskaan anna kefiiriä, jossa on ksylitolia tai muita keinotekoisia makeutusaineita."
       },
       "why": {
         "en": "Many dogs have trouble digesting foods that contain lactose; a dog's body isn't designed to digest lactose after puppyhood, so it can cause gas and other tummy trouble. Some dogs can also develop an allergy to milk protein. Some artificial sweeteners, such as xylitol, are toxic to dogs, so kefir with artificial sweeteners is a risk.",
         "sl": "Mnogi psi težko prebavljajo živila, ki vsebujejo laktozo; pasje telo po obdobju mladička ni narejeno za prebavo laktoze, zato lahko povzroči vetrove in druge težave s trebuhom. Pri nekaterih psih se lahko razvije tudi alergija na mlečne beljakovine. Nekatera umetna sladila, na primer ksilitol, so za pse strupena, zato je kefir z umetnimi sladili tvegan.",
-        "fr": "Beaucoup de chiens digèrent mal les aliments contenant du lactose ; l’organisme du chien n’est pas conçu pour digérer le lactose après le stade de chiot, ce qui peut provoquer des gaz et d’autres maux de ventre. Certains chiens peuvent aussi développer une allergie aux protéines du lait. Certains édulcorants artificiels, comme le xylitol, sont toxiques pour les chiens : un kéfir contenant des édulcorants artificiels représente donc un risque."
+        "fr": "Beaucoup de chiens digèrent mal les aliments contenant du lactose ; l’organisme du chien n’est pas conçu pour digérer le lactose après le stade de chiot, ce qui peut provoquer des gaz et d’autres maux de ventre. Certains chiens peuvent aussi développer une allergie aux protéines du lait. Certains édulcorants artificiels, comme le xylitol, sont toxiques pour les chiens : un kéfir contenant des édulcorants artificiels représente donc un risque.",
+        "fi": "Monen koiran on vaikea sulattaa laktoosia sisältäviä ruokia; koiran elimistö ei ole tehty sulattamaan laktoosia pentuiän jälkeen, joten se voi aiheuttaa ilmavaivoja ja muita vatsavaivoja. Joillekin koirille voi myös kehittyä maitoproteiiniallergia. Jotkin keinotekoiset makeutusaineet, kuten ksylitoli, ovat koirille myrkyllisiä, joten keinotekoisilla makeutusaineilla makeutettu kefiiri on riski."
       },
       "signs": {
         "en": [
@@ -53309,34 +53509,46 @@
           "Vomissements",
           "Maux de ventre",
           "Diarrhée"
+        ],
+        "fi": [
+          "Löysä uloste",
+          "Ilmavaivat",
+          "Oksentelu",
+          "Vatsakipu",
+          "Ripuli"
         ]
       },
       "what_to_do": {
         "en": "As with yogurt, offer a small amount at first and see how your dog reacts. If your dog gets loose stools, gas, vomiting or diarrhoea, stop the kefir. Ask your vet whether probiotic foods suit your dog.",
         "sl": "Kot pri jogurtu najprej ponudite majhno količino in opazujte, kako se pes odzove. Če ima pes mehko blato, vetrove, bruha ali ima drisko, kefirja ne dajajte več. Veterinarja vprašajte, ali so probiotična živila primerna za vašega psa.",
-        "fr": "Comme pour le yaourt, commencez par une petite quantité et observez la réaction de votre chien. Si votre chien a les selles molles, des gaz, des vomissements ou de la diarrhée, arrêtez le kéfir. Demandez à votre vétérinaire si les aliments probiotiques conviennent à votre chien."
+        "fr": "Comme pour le yaourt, commencez par une petite quantité et observez la réaction de votre chien. Si votre chien a les selles molles, des gaz, des vomissements ou de la diarrhée, arrêtez le kéfir. Demandez à votre vétérinaire si les aliments probiotiques conviennent à votre chien.",
+        "fi": "Kuten jogurtin kanssa, tarjoa ensin pieni määrä ja katso, miten koirasi reagoi. Jos koiralla on löysää ulostetta, ilmavaivoja, oksentelua tai ripulia, lopeta kefiirin antaminen. Kysy eläinlääkäriltä, sopivatko probioottiset ruoat koirallesi."
       },
       "serving": {
         "en": "Choose plain kefir and read the label carefully to avoid all artificial sweeteners, especially xylitol. Start with a small amount.",
         "sl": "Izberite navaden kefir in natančno preberite deklaracijo, da se izognete vsem umetnim sladilom, predvsem ksilitolu. Začnite z majhno količino.",
-        "fr": "Choisissez du kéfir nature et lisez attentivement l’étiquette pour éviter tous les édulcorants artificiels, en particulier le xylitol. Commencez par une petite quantité."
+        "fr": "Choisissez du kéfir nature et lisez attentivement l’étiquette pour éviter tous les édulcorants artificiels, en particulier le xylitol. Commencez par une petite quantité.",
+        "fi": "Valitse maustamaton kefiiri ja lue pakkausmerkinnät tarkasti, jotta vältät kaikki keinotekoiset makeutusaineet, etenkin ksylitolin. Aloita pienellä määrällä."
       },
       "child": {
         "en": "Some dogs can have a tiny taste of plain kefir, but many get a sore tummy from milk drinks. Fresh water is always best!",
         "sl": "Nekateri psi lahko poskusijo čisto malo navadnega kefirja, mnoge pa od mlečnih pijač boli trebušček. Sveža voda je vedno najboljša!",
-        "fr": "Certains chiens peuvent goûter un tout petit peu de kéfir nature, mais beaucoup ont mal au ventre avec les boissons lactées. L’eau fraîche reste toujours le mieux !"
+        "fr": "Certains chiens peuvent goûter un tout petit peu de kéfir nature, mais beaucoup ont mal au ventre avec les boissons lactées. L’eau fraîche reste toujours le mieux !",
+        "fi": "Jotkut koirat voivat maistaa pikkuisen maustamatonta kefiiriä, mutta monen vatsa menee maitojuomista kipeäksi. Raikas vesi on aina parasta!"
       },
       "faq": [
         {
           "q": {
             "en": "Is kefir a good probiotic for dogs?",
             "sl": "Ali je kefir dober probiotik za pse?",
-            "fr": "Le kéfir est-il un bon probiotique pour les chiens ?"
+            "fr": "Le kéfir est-il un bon probiotique pour les chiens ?",
+            "fi": "Onko kefiiri hyvä probiootti koiralle?"
           },
           "a": {
             "en": "The AKC lists yogurt or kefir with live cultures among the options a vet may suggest to boost beneficial bacteria. Ask your vet before adding it to your dog's diet.",
             "sl": "AKC jogurt ali kefir z živimi kulturami navaja med možnostmi, ki jih lahko veterinar predlaga za krepitev koristnih bakterij. Preden ga dodate v pasji jedilnik, vprašajte veterinarja.",
-            "fr": "L’AKC cite le yaourt ou le kéfir contenant des ferments vivants parmi les options qu’un vétérinaire peut suggérer pour favoriser les bonnes bactéries. Demandez conseil à votre vétérinaire avant d’en ajouter à l’alimentation de votre chien."
+            "fr": "L’AKC cite le yaourt ou le kéfir contenant des ferments vivants parmi les options qu’un vétérinaire peut suggérer pour favoriser les bonnes bactéries. Demandez conseil à votre vétérinaire avant d’en ajouter à l’alimentation de votre chien.",
+            "fi": "AKC:n mukaan eläinlääkäri voi ehdottaa eläviä bakteerikantoja sisältävää jogurttia tai kefiiriä lisäämään hyödyllisiä bakteereja. Kysy eläinlääkäriltä, ennen kuin lisäät sitä koirasi ruokavalioon."
           }
         }
       ],
@@ -70838,32 +71050,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Soda (soft drinks)",
         "sl": "Gazirane pijače",
-        "fr": "Soda (boissons gazeuses)"
+        "fr": "Soda (boissons gazeuses)",
+        "fi": "Limsa (virvoitusjuomat)"
       },
       "question": {
         "en": "Can dogs drink soda?",
         "sl": "Ali lahko psi pijejo gazirane pijače?",
-        "fr": "Les chiens peuvent-ils boire du soda ?"
+        "fr": "Les chiens peuvent-ils boire du soda ?",
+        "fi": "Saako koira juoda limsaa?"
       },
       "url_slug": {
         "en": "soda",
         "sl": "gazirane-pijace",
-        "fr": "soda"
+        "fr": "soda",
+        "fi": "limsa"
       },
       "answer": {
         "en": "No. Dogs should not drink soda. It is high in sugar and caffeine, has no nutritional value for dogs, and the caffeine can cause signs of poisoning. One or two licks are unlikely to cause poisoning, but keep soda out of your dog's reach.",
         "sl": "Ne. Psi ne smejo piti gaziranih pijač. Vsebujejo veliko sladkorja in kofeina, za pse nimajo nobene hranilne vrednosti, kofein pa lahko povzroči znake zastrupitve. Lizanje ali dve verjetno ne bosta povzročila zastrupitve, vendar pijače hranite izven pasjega dosega.",
-        "fr": "Non. Les chiens ne doivent pas boire de soda. Il est riche en sucre et en caféine, n’a aucune valeur nutritive pour les chiens, et la caféine peut provoquer des signes d’intoxication. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais gardez le soda hors de portée de votre chien."
+        "fr": "Non. Les chiens ne doivent pas boire de soda. Il est riche en sucre et en caféine, n’a aucune valeur nutritive pour les chiens, et la caféine peut provoquer des signes d’intoxication. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais gardez le soda hors de portée de votre chien.",
+        "fi": "Ei saa. Koiran ei pidä juoda limsaa. Siinä on paljon sokeria ja kofeiinia, siitä ei ole koiralle ravitsemuksellista hyötyä, ja kofeiini voi aiheuttaa myrkytysoireita. Yksi tai kaksi nuolaisua tuskin aiheuttaa myrkytystä, mutta pidä limsa koirasi ulottumattomissa."
       },
       "why": {
         "en": "Pet Poison Helpline explains that soda has high levels of sugar, caffeine and other ingredients that can harm dogs, and there is no reason for dogs to drink it. The caffeine in soda can lead to signs of toxicity, and how much a dog drinks determines how severe they are. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
         "sl": "Pet Poison Helpline pojasnjuje, da gazirane pijače vsebujejo veliko sladkorja, kofeina in drugih sestavin, ki lahko psom škodijo, in da ni nobenega razloga, da bi jih psi pili. Kofein v teh pijačah lahko povzroči znake zastrupitve, njihova resnost pa je odvisna od tega, koliko je pes popil. Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen.",
-        "fr": "Le Pet Poison Helpline explique que le soda contient beaucoup de sucre, de caféine et d’autres ingrédients qui peuvent nuire aux chiens, et qu’il n’y a aucune raison d’en donner. La caféine du soda peut entraîner des signes de toxicité, dont la gravité dépend de la quantité bue. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens."
+        "fr": "Le Pet Poison Helpline explique que le soda contient beaucoup de sucre, de caféine et d’autres ingrédients qui peuvent nuire aux chiens, et qu’il n’y a aucune raison d’en donner. La caféine du soda peut entraîner des signes de toxicité, dont la gravité dépend de la quantité bue. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens.",
+        "fi": "Pet Poison Helpline kertoo, että limsassa on paljon sokeria, kofeiinia ja muita aineita, jotka voivat vahingoittaa koiria, eikä koiralla ole mitään syytä juoda sitä. Limsan kofeiini voi aiheuttaa myrkytysoireita, ja oireiden vakavuus riippuu siitä, kuinka paljon koira joi. Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä."
       },
       "signs": {
         "en": [
@@ -70901,42 +71119,60 @@
           "Tremblements",
           "Convulsions",
           "Effondrement"
+        ],
+        "fi": [
+          "Ylivilkkaus",
+          "Levottomuus",
+          "Oksentelu",
+          "Nopea syke",
+          "Korkea verenpaine",
+          "Kohonnut ruumiinlämpö",
+          "Epäsäännöllinen syke",
+          "Vapina",
+          "Kouristukset",
+          "Lyyhistyminen"
         ]
       },
       "what_to_do": {
         "en": "If your dog drank soda, watch for symptoms. If they drank a large amount, contact your vet or a pet poison helpline straight away so your dog can get the right treatment. If the soda was sugar-free, see our xylitol page.",
         "sl": "Če je pes popil gazirano pijačo, ga opazujte, ali se pojavijo znaki. Če je popil veliko, takoj pokličite veterinarja ali center za zastrupitve živali, da bo pes dobil pravo zdravljenje. Če je bila pijača brez sladkorja, poglejte našo stran o ksilitolu.",
-        "fr": "Si votre chien a bu du soda, surveillez l’apparition de signes. S’il en a bu une grande quantité, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire afin qu’il reçoive le traitement adapté. Si le soda était sans sucre, consultez notre page sur le xylitol."
+        "fr": "Si votre chien a bu du soda, surveillez l’apparition de signes. S’il en a bu une grande quantité, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire afin qu’il reçoive le traitement adapté. Si le soda était sans sucre, consultez notre page sur le xylitol.",
+        "fi": "Jos koirasi joi limsaa, tarkkaile oireita. Jos se joi paljon, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, jotta koira saa oikean hoidon. Jos limsa oli sokeritonta, lue ksylitolisivumme."
       },
       "serving": null,
       "child": {
         "en": "Fizzy drinks are for people, not dogs. Dogs only need fresh water, so keep cans and cups up high!",
         "sl": "Gazirane pijače so za ljudi, ne za pse. Psi potrebujejo le svežo vodo, zato pločevinke in kozarce pospravi visoko!",
-        "fr": "Les boissons gazeuses sont faites pour les humains, pas pour les chiens. Les chiens n’ont besoin que d’eau fraîche : range bien les canettes et les gobelets en hauteur !"
+        "fr": "Les boissons gazeuses sont faites pour les humains, pas pour les chiens. Les chiens n’ont besoin que d’eau fraîche : range bien les canettes et les gobelets en hauteur !",
+        "fi": "Kuplivat juomat ovat ihmisille, eivät koirille. Koira tarvitsee vain raikasta vettä, joten pidä tölkit ja mukit korkealla!"
       },
       "faq": [
         {
           "q": {
             "en": "My dog licked a bit of spilled soda. Is that a problem?",
             "sl": "Pes je polizal malo razlite gazirane pijače. Je to težava?",
-            "fr": "Mon chien a léché un peu de soda renversé. Est-ce un problème ?"
+            "fr": "Mon chien a léché un peu de soda renversé. Est-ce un problème ?",
+            "fi": "Koirani nuolaisi läikkynyttä limsaa. Onko se ongelma?"
           },
           "a": {
             "en": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets. Keep an eye on your dog and keep soda stored away so it can't happen again.",
             "sl": "Lizanje ali dve kave, čaja ali gazirane pijače pri večini živali verjetno ne bo povzročilo zastrupitve. Psa opazujte in pijače shranjujte tako, da do njih ne more.",
-            "fr": "Un ou deux coups de langue de café, de thé ou de soda ont peu de chances d’intoxiquer la plupart des animaux. Gardez un œil sur votre chien et rangez le soda pour que cela ne se reproduise pas."
+            "fr": "Un ou deux coups de langue de café, de thé ou de soda ont peu de chances d’intoxiquer la plupart des animaux. Gardez un œil sur votre chien et rangez le soda pour que cela ne se reproduise pas.",
+            "fi": "Yksi tai kaksi nuolaisua kahvia, teetä tai limsaa tuskin aiheuttaa myrkytystä useimmille lemmikeille. Tarkkaile koiraasi ja säilytä limsa poissa ulottuvilta, jottei näin enää tapahdu."
           }
         },
         {
           "q": {
             "en": "What about diet or sugar-free soda?",
             "sl": "Kaj pa dietne pijače ali pijače brez sladkorja?",
-            "fr": "Et les sodas light ou sans sucre ?"
+            "fr": "Et les sodas light ou sans sucre ?",
+            "fi": "Entä kevyt- tai sokeriton limsa?"
           },
           "a": {
             "en": "Many zero-sugar drinks contain xylitol, which is highly toxic to dogs, so keep diet drinks away from your dog too.",
             "sl": "Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen, zato tudi dietne pijače hranite izven pasjega dosega.",
-            "fr": "De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens : gardez donc aussi les boissons light hors de portée de votre chien."
+            "fr": "De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens : gardez donc aussi les boissons light hors de portée de votre chien.",
+            "fi": "Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä, joten pidä myös kevytjuomat poissa koirasi ulottuvilta."
           }
         }
       ],
@@ -71609,32 +71845,38 @@
       "locales": [
         "en",
         "sl",
-        "fr"
+        "fr",
+        "fi"
       ],
       "name": {
         "en": "Sports drinks",
         "sl": "Športni napitki",
-        "fr": "Boissons pour sportifs"
+        "fr": "Boissons pour sportifs",
+        "fi": "Urheilujuomat"
       },
       "question": {
         "en": "Can dogs drink sports drinks?",
         "sl": "Ali lahko psi pijejo športne napitke?",
-        "fr": "Les chiens peuvent-ils boire des boissons pour sportifs ?"
+        "fr": "Les chiens peuvent-ils boire des boissons pour sportifs ?",
+        "fi": "Saako koira juoda urheilujuomia?"
       },
       "url_slug": {
         "en": "sports-drinks",
         "sl": "sportni-napitki",
-        "fr": "boissons-pour-sportifs"
+        "fr": "boissons-pour-sportifs",
+        "fi": "urheilujuomat"
       },
       "answer": {
         "en": "No, dogs should not drink sports drinks like Gatorade. A tiny sip isn't strictly toxic, but they contain too much sodium and sugar, which can upset a dog's stomach and worsen dehydration. Sugar-free versions may contain xylitol, which is highly toxic.",
         "sl": "Ne, psi ne smejo piti športnih napitkov, kot je Gatorade. Majhen požirek sicer ni strupen, vendar vsebujejo preveč natrija in sladkorja, ki lahko psu razdražita želodec in poslabšata dehidracijo. Različice brez sladkorja lahko vsebujejo ksilitol, ki je zelo strupen.",
-        "fr": "Non, les chiens ne doivent pas boire de boissons pour sportifs comme le Gatorade. Une toute petite gorgée n’est pas strictement toxique, mais ces boissons contiennent trop de sodium et de sucre, ce qui peut irriter l’estomac d’un chien et aggraver la déshydratation. Les versions sans sucre peuvent contenir du xylitol, très toxique."
+        "fr": "Non, les chiens ne doivent pas boire de boissons pour sportifs comme le Gatorade. Une toute petite gorgée n’est pas strictement toxique, mais ces boissons contiennent trop de sodium et de sucre, ce qui peut irriter l’estomac d’un chien et aggraver la déshydratation. Les versions sans sucre peuvent contenir du xylitol, très toxique.",
+        "fi": "Ei saa. Koiran ei pidä juoda urheilujuomia, kuten Gatoradea. Pieni siemaus ei ole varsinaisesti myrkyllinen, mutta niissä on liikaa natriumia ja sokeria, jotka voivat sotkea koiran vatsan ja pahentaa nestehukkaa. Sokerittomissa versioissa voi olla ksylitolia, joka on erittäin myrkyllistä."
       },
       "why": {
         "en": "Human sports drinks contain excessive amounts of sodium and sugar, as well as artificial ingredients that aren't appropriate for dogs. CityVet says a tiny sip isn't strictly toxic but is highly discouraged, while PetMD says dogs should not drink Gatorade at all, so we follow the stricter advice. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
         "sl": "Športni napitki za ljudi vsebujejo preveč natrija in sladkorja ter umetne sestavine, ki za pse niso primerne. CityVet pravi, da majhen požirek sicer ni strupen, a ga odločno odsvetuje, PetMD pa, da psi Gatoreda sploh ne smejo piti, zato upoštevamo strožji nasvet. Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen.",
-        "fr": "Les boissons pour sportifs destinées aux humains contiennent des quantités excessives de sodium et de sucre, ainsi que des ingrédients artificiels qui ne conviennent pas aux chiens. CityVet indique qu’une toute petite gorgée n’est pas strictement toxique mais qu’elle est fortement déconseillée, tandis que PetMD affirme que les chiens ne doivent pas du tout boire de Gatorade : nous suivons l’avis le plus strict. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens."
+        "fr": "Les boissons pour sportifs destinées aux humains contiennent des quantités excessives de sodium et de sucre, ainsi que des ingrédients artificiels qui ne conviennent pas aux chiens. CityVet indique qu’une toute petite gorgée n’est pas strictement toxique mais qu’elle est fortement déconseillée, tandis que PetMD affirme que les chiens ne doivent pas du tout boire de Gatorade : nous suivons l’avis le plus strict. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens.",
+        "fi": "Ihmisille tarkoitetuissa urheilujuomissa on liikaa natriumia ja sokeria sekä keinotekoisia aineita, jotka eivät sovi koirille. CityVetin mukaan pieni siemaus ei ole varsinaisesti myrkyllinen, mutta sitä ei suositella lainkaan, ja PetMD:n mukaan koiran ei pidä juoda Gatoradea ollenkaan, joten noudatamme tiukempaa ohjetta. Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä."
       },
       "signs": {
         "en": [
@@ -71648,30 +71890,38 @@
         "fr": [
           "Maux d’estomac",
           "Déshydratation aggravée"
+        ],
+        "fi": [
+          "Vatsavaivat",
+          "Nestehukan paheneminen"
         ]
       },
       "what_to_do": {
         "en": "Give fresh water instead. If you notice signs of dehydration, offer a small amount of cool water, not all at once, so your dog doesn't drink too quickly and vomit. If your dog is dehydrated, vomiting or has diarrhoea, call your vet. If the drink was sugar-free, see our xylitol page.",
         "sl": "Namesto tega ponudite svežo vodo. Če opazite znake dehidracije, ponudite malo hladne vode, ne vse naenkrat, da pes ne pije prehitro in ne bruha. Če je pes dehidriran, bruha ali ima drisko, pokličite veterinarja. Če je bil napitek brez sladkorja, poglejte našo stran o ksilitolu.",
-        "fr": "Donnez plutôt de l’eau fraîche. Si vous remarquez des signes de déshydratation, proposez un peu d’eau fraîche, mais pas tout d’un coup, pour que votre chien ne boive pas trop vite et ne vomisse pas. Si votre chien est déshydraté, vomit ou a de la diarrhée, appelez votre vétérinaire. Si la boisson était sans sucre, consultez notre page sur le xylitol."
+        "fr": "Donnez plutôt de l’eau fraîche. Si vous remarquez des signes de déshydratation, proposez un peu d’eau fraîche, mais pas tout d’un coup, pour que votre chien ne boive pas trop vite et ne vomisse pas. Si votre chien est déshydraté, vomit ou a de la diarrhée, appelez votre vétérinaire. Si la boisson était sans sucre, consultez notre page sur le xylitol.",
+        "fi": "Anna sen sijaan raikasta vettä. Jos huomaat nestehukan merkkejä, tarjoa pieni määrä viileää vettä, ei kaikkea kerralla, jottei koira juo liian nopeasti ja oksenna. Jos koirallasi on nestehukka, se oksentaa tai sillä on ripuli, soita eläinlääkärille. Jos juoma oli sokeriton, lue ksylitolisivumme."
       },
       "serving": null,
       "child": {
         "en": "Sports drinks are for people. After running and playing, dogs just need a bowl of fresh water!",
         "sl": "Športni napitki so za ljudi. Po teku in igri psi potrebujejo le skledo sveže vode!",
-        "fr": "Les boissons pour sportifs sont faites pour les humains. Après avoir couru et joué, les chiens n’ont besoin que d’une gamelle d’eau fraîche !"
+        "fr": "Les boissons pour sportifs sont faites pour les humains. Après avoir couru et joué, les chiens n’ont besoin que d’une gamelle d’eau fraîche !",
+        "fi": "Urheilujuomat ovat ihmisille. Juoksun ja leikin jälkeen koira tarvitsee vain kupillisen raikasta vettä!"
       },
       "faq": [
         {
           "q": {
             "en": "What can I give my active dog instead?",
             "sl": "Kaj lahko namesto tega dam aktivnemu psu?",
-            "fr": "Que puis-je donner à la place à mon chien très actif ?"
+            "fr": "Que puis-je donner à la place à mon chien très actif ?",
+            "fi": "Mitä voin antaa aktiiviselle koiralleni sen sijaan?"
           },
           "a": {
             "en": "For the average house dog, a fresh bowl of water is perfectly sufficient. Instead of sharing your gym drink, choose an electrolyte solution made for dogs, and if you think your dog may be dehydrated, contact your vet about next steps.",
             "sl": "Za povprečnega hišnega psa je skleda sveže vode povsem dovolj. Namesto da z njim delite svoj športni napitek, izberite elektrolitsko raztopino, narejeno za pse, in če mislite, da je pes dehidriran, se z veterinarjem posvetujte o nadaljnjih korakih.",
-            "fr": "Pour un chien de maison ordinaire, une gamelle d’eau fraîche suffit tout à fait. Plutôt que de partager votre boisson pour sportifs, choisissez une solution d’électrolytes conçue pour les chiens, et si vous pensez que votre chien est peut-être déshydraté, contactez votre vétérinaire pour savoir quoi faire."
+            "fr": "Pour un chien de maison ordinaire, une gamelle d’eau fraîche suffit tout à fait. Plutôt que de partager votre boisson pour sportifs, choisissez une solution d’électrolytes conçue pour les chiens, et si vous pensez que votre chien est peut-être déshydraté, contactez votre vétérinaire pour savoir quoi faire.",
+            "fi": "Tavalliselle kotikoiralle riittää hyvin kuppi raikasta vettä. Älä jaa omaa urheilujuomaasi, vaan valitse koirille tarkoitettu elektrolyyttiliuos. Jos epäilet koirasi kärsivän nestehukasta, ota yhteyttä eläinlääkäriin ja sovi jatkotoimista."
           }
         }
       ],

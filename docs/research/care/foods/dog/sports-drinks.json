@@ -4,28 +4,33 @@
   "name": {
     "en": "Sports drinks",
     "sl": "Športni napitki",
-    "fr": "Boissons pour sportifs"
+    "fr": "Boissons pour sportifs",
+    "fi": "Urheilujuomat"
   },
   "question": {
     "en": "Can dogs drink sports drinks?",
     "sl": "Ali lahko psi pijejo športne napitke?",
-    "fr": "Les chiens peuvent-ils boire des boissons pour sportifs ?"
+    "fr": "Les chiens peuvent-ils boire des boissons pour sportifs ?",
+    "fi": "Saako koira juoda urheilujuomia?"
   },
   "url_slug": {
     "en": "sports-drinks",
     "sl": "sportni-napitki",
-    "fr": "boissons-pour-sportifs"
+    "fr": "boissons-pour-sportifs",
+    "fi": "urheilujuomat"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, dogs should not drink sports drinks like Gatorade. A tiny sip isn't strictly toxic, but they contain too much sodium and sugar, which can upset a dog's stomach and worsen dehydration. Sugar-free versions may contain xylitol, which is highly toxic.",
     "sl": "Ne, psi ne smejo piti športnih napitkov, kot je Gatorade. Majhen požirek sicer ni strupen, vendar vsebujejo preveč natrija in sladkorja, ki lahko psu razdražita želodec in poslabšata dehidracijo. Različice brez sladkorja lahko vsebujejo ksilitol, ki je zelo strupen.",
-    "fr": "Non, les chiens ne doivent pas boire de boissons pour sportifs comme le Gatorade. Une toute petite gorgée n’est pas strictement toxique, mais ces boissons contiennent trop de sodium et de sucre, ce qui peut irriter l’estomac d’un chien et aggraver la déshydratation. Les versions sans sucre peuvent contenir du xylitol, très toxique."
+    "fr": "Non, les chiens ne doivent pas boire de boissons pour sportifs comme le Gatorade. Une toute petite gorgée n’est pas strictement toxique, mais ces boissons contiennent trop de sodium et de sucre, ce qui peut irriter l’estomac d’un chien et aggraver la déshydratation. Les versions sans sucre peuvent contenir du xylitol, très toxique.",
+    "fi": "Ei saa. Koiran ei pidä juoda urheilujuomia, kuten Gatoradea. Pieni siemaus ei ole varsinaisesti myrkyllinen, mutta niissä on liikaa natriumia ja sokeria, jotka voivat sotkea koiran vatsan ja pahentaa nestehukkaa. Sokerittomissa versioissa voi olla ksylitolia, joka on erittäin myrkyllistä."
   },
   "why": {
     "en": "Human sports drinks contain excessive amounts of sodium and sugar, as well as artificial ingredients that aren't appropriate for dogs. CityVet says a tiny sip isn't strictly toxic but is highly discouraged, while PetMD says dogs should not drink Gatorade at all, so we follow the stricter advice. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
     "sl": "Športni napitki za ljudi vsebujejo preveč natrija in sladkorja ter umetne sestavine, ki za pse niso primerne. CityVet pravi, da majhen požirek sicer ni strupen, a ga odločno odsvetuje, PetMD pa, da psi Gatoreda sploh ne smejo piti, zato upoštevamo strožji nasvet. Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen.",
-    "fr": "Les boissons pour sportifs destinées aux humains contiennent des quantités excessives de sodium et de sucre, ainsi que des ingrédients artificiels qui ne conviennent pas aux chiens. CityVet indique qu’une toute petite gorgée n’est pas strictement toxique mais qu’elle est fortement déconseillée, tandis que PetMD affirme que les chiens ne doivent pas du tout boire de Gatorade : nous suivons l’avis le plus strict. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens."
+    "fr": "Les boissons pour sportifs destinées aux humains contiennent des quantités excessives de sodium et de sucre, ainsi que des ingrédients artificiels qui ne conviennent pas aux chiens. CityVet indique qu’une toute petite gorgée n’est pas strictement toxique mais qu’elle est fortement déconseillée, tandis que PetMD affirme que les chiens ne doivent pas du tout boire de Gatorade : nous suivons l’avis le plus strict. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens.",
+    "fi": "Ihmisille tarkoitetuissa urheilujuomissa on liikaa natriumia ja sokeria sekä keinotekoisia aineita, jotka eivät sovi koirille. CityVetin mukaan pieni siemaus ei ole varsinaisesti myrkyllinen, mutta sitä ei suositella lainkaan, ja PetMD:n mukaan koiran ei pidä juoda Gatoradea ollenkaan, joten noudatamme tiukempaa ohjetta. Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä."
   },
   "signs": {
     "en": [
@@ -39,30 +44,38 @@
     "fr": [
       "Maux d’estomac",
       "Déshydratation aggravée"
+    ],
+    "fi": [
+      "Vatsavaivat",
+      "Nestehukan paheneminen"
     ]
   },
   "what_to_do": {
     "en": "Give fresh water instead. If you notice signs of dehydration, offer a small amount of cool water, not all at once, so your dog doesn't drink too quickly and vomit. If your dog is dehydrated, vomiting or has diarrhoea, call your vet. If the drink was sugar-free, see our xylitol page.",
     "sl": "Namesto tega ponudite svežo vodo. Če opazite znake dehidracije, ponudite malo hladne vode, ne vse naenkrat, da pes ne pije prehitro in ne bruha. Če je pes dehidriran, bruha ali ima drisko, pokličite veterinarja. Če je bil napitek brez sladkorja, poglejte našo stran o ksilitolu.",
-    "fr": "Donnez plutôt de l’eau fraîche. Si vous remarquez des signes de déshydratation, proposez un peu d’eau fraîche, mais pas tout d’un coup, pour que votre chien ne boive pas trop vite et ne vomisse pas. Si votre chien est déshydraté, vomit ou a de la diarrhée, appelez votre vétérinaire. Si la boisson était sans sucre, consultez notre page sur le xylitol."
+    "fr": "Donnez plutôt de l’eau fraîche. Si vous remarquez des signes de déshydratation, proposez un peu d’eau fraîche, mais pas tout d’un coup, pour que votre chien ne boive pas trop vite et ne vomisse pas. Si votre chien est déshydraté, vomit ou a de la diarrhée, appelez votre vétérinaire. Si la boisson était sans sucre, consultez notre page sur le xylitol.",
+    "fi": "Anna sen sijaan raikasta vettä. Jos huomaat nestehukan merkkejä, tarjoa pieni määrä viileää vettä, ei kaikkea kerralla, jottei koira juo liian nopeasti ja oksenna. Jos koirallasi on nestehukka, se oksentaa tai sillä on ripuli, soita eläinlääkärille. Jos juoma oli sokeriton, lue ksylitolisivumme."
   },
   "serving": null,
   "child": {
     "en": "Sports drinks are for people. After running and playing, dogs just need a bowl of fresh water!",
     "sl": "Športni napitki so za ljudi. Po teku in igri psi potrebujejo le skledo sveže vode!",
-    "fr": "Les boissons pour sportifs sont faites pour les humains. Après avoir couru et joué, les chiens n’ont besoin que d’une gamelle d’eau fraîche !"
+    "fr": "Les boissons pour sportifs sont faites pour les humains. Après avoir couru et joué, les chiens n’ont besoin que d’une gamelle d’eau fraîche !",
+    "fi": "Urheilujuomat ovat ihmisille. Juoksun ja leikin jälkeen koira tarvitsee vain kupillisen raikasta vettä!"
   },
   "faq": [
     {
       "q": {
         "en": "What can I give my active dog instead?",
         "sl": "Kaj lahko namesto tega dam aktivnemu psu?",
-        "fr": "Que puis-je donner à la place à mon chien très actif ?"
+        "fr": "Que puis-je donner à la place à mon chien très actif ?",
+        "fi": "Mitä voin antaa aktiiviselle koiralleni sen sijaan?"
       },
       "a": {
         "en": "For the average house dog, a fresh bowl of water is perfectly sufficient. Instead of sharing your gym drink, choose an electrolyte solution made for dogs, and if you think your dog may be dehydrated, contact your vet about next steps.",
         "sl": "Za povprečnega hišnega psa je skleda sveže vode povsem dovolj. Namesto da z njim delite svoj športni napitek, izberite elektrolitsko raztopino, narejeno za pse, in če mislite, da je pes dehidriran, se z veterinarjem posvetujte o nadaljnjih korakih.",
-        "fr": "Pour un chien de maison ordinaire, une gamelle d’eau fraîche suffit tout à fait. Plutôt que de partager votre boisson pour sportifs, choisissez une solution d’électrolytes conçue pour les chiens, et si vous pensez que votre chien est peut-être déshydraté, contactez votre vétérinaire pour savoir quoi faire."
+        "fr": "Pour un chien de maison ordinaire, une gamelle d’eau fraîche suffit tout à fait. Plutôt que de partager votre boisson pour sportifs, choisissez une solution d’électrolytes conçue pour les chiens, et si vous pensez que votre chien est peut-être déshydraté, contactez votre vétérinaire pour savoir quoi faire.",
+        "fi": "Tavalliselle kotikoiralle riittää hyvin kuppi raikasta vettä. Älä jaa omaa urheilujuomaasi, vaan valitse koirille tarkoitettu elektrolyyttiliuos. Jos epäilet koirasi kärsivän nestehukasta, ota yhteyttä eläinlääkäriin ja sovi jatkotoimista."
       }
     }
   ],
@@ -133,6 +146,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3dc78028ce704d18f272c0b6e54ef17aad4271f8d0600726d41a6e6162f0d487"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eecbe79410563cacdf91370dda0a40b25e8e3b7c0270d2fd08cba7a1bd105640"
     }
   }
 }

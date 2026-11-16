@@ -4,28 +4,33 @@
   "name": {
     "en": "Cat food",
     "sl": "Mačja hrana",
-    "fr": "Nourriture pour chats"
+    "fr": "Nourriture pour chats",
+    "fi": "Kissanruoka"
   },
   "question": {
     "en": "Can dogs eat cat food?",
     "sl": "Ali lahko psi jedo mačjo hrano?",
-    "fr": "Les chiens peuvent-ils manger de la nourriture pour chats ?"
+    "fr": "Les chiens peuvent-ils manger de la nourriture pour chats ?",
+    "fi": "Saako koira syödä kissanruokaa?"
   },
   "url_slug": {
     "en": "cat-food",
     "sl": "macja-hrana",
-    "fr": "nourriture-pour-chats"
+    "fr": "nourriture-pour-chats",
+    "fi": "kissanruoka"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not regularly. A dog that sneaks some of the cat's food now and then probably won't be harmed, but it shouldn't become a habit. Cat food is much higher in meat-based protein and doesn't have the right balance of nutrients for dogs.",
     "sl": "Ne redno. Psu, ki občasno izmakne malo mačje hrane, to verjetno ne bo škodilo, vendar to ne sme postati navada. Mačja hrana ima veliko več beljakovin iz mesa in nima pravega razmerja hranil za pse.",
-    "fr": "Pas de façon régulière. Un chien qui chipe de temps en temps un peu de la nourriture du chat ne risque probablement rien, mais cela ne doit pas devenir une habitude. La nourriture pour chats est beaucoup plus riche en protéines d’origine animale et n’offre pas le bon équilibre nutritionnel pour les chiens."
+    "fr": "Pas de façon régulière. Un chien qui chipe de temps en temps un peu de la nourriture du chat ne risque probablement rien, mais cela ne doit pas devenir une habitude. La nourriture pour chats est beaucoup plus riche en protéines d’origine animale et n’offre pas le bon équilibre nutritionnel pour les chiens.",
+    "fi": "Ei säännöllisesti. Koira, joka näpistää silloin tällöin vähän kissan ruokaa, ei todennäköisesti vahingoitu, mutta siitä ei saa tulla tapaa. Kissanruoassa on paljon enemmän lihapohjaista proteiinia, eikä sen ravintoaineiden tasapaino sovi koiralle."
   },
   "why": {
     "en": "Cats are obligate carnivores, so cat food is much higher in meat-based protein than dog food and doesn't have the correct balance of protein, fibre and nutrients dogs need. Over time the imbalance can lead to stomach and gut upset, obesity and pancreatitis, and the high protein levels can be hard on a dog's liver and kidneys.",
     "sl": "Mačke so obvezni mesojedci, zato ima mačja hrana veliko več beljakovin iz mesa kot pasja in nima pravega razmerja beljakovin, vlaknin in hranil, ki jih psi potrebujejo. Sčasoma lahko to neravnovesje povzroči težave z želodcem in črevesjem, debelost in vnetje trebušne slinavke, veliko beljakovin pa lahko obremeni pasja jetra in ledvice.",
-    "fr": "Les chats sont des carnivores stricts : leur nourriture contient donc beaucoup plus de protéines d’origine animale que celle des chiens, et n’offre pas l’équilibre de protéines, de fibres et de nutriments dont les chiens ont besoin. À la longue, ce déséquilibre peut provoquer des troubles de l’estomac et de l’intestin, de l’obésité et une pancréatite, et la forte teneur en protéines peut mettre à rude épreuve le foie et les reins du chien."
+    "fr": "Les chats sont des carnivores stricts : leur nourriture contient donc beaucoup plus de protéines d’origine animale que celle des chiens, et n’offre pas l’équilibre de protéines, de fibres et de nutriments dont les chiens ont besoin. À la longue, ce déséquilibre peut provoquer des troubles de l’estomac et de l’intestin, de l’obésité et une pancréatite, et la forte teneur en protéines peut mettre à rude épreuve le foie et les reins du chien.",
+    "fi": "Kissat ovat ehdottomia lihansyöjiä, joten kissanruoassa on paljon enemmän lihapohjaista proteiinia kuin koiranruoassa, eikä sen proteiinin, kuidun ja muiden ravintoaineiden suhde sovi koiran tarpeisiin. Epätasapaino voi ajan mittaan aiheuttaa vatsa- ja suolisto-ongelmia, lihavuutta ja haimatulehduksen, ja runsas proteiini voi rasittaa koiran maksaa ja munuaisia."
   },
   "signs": {
     "en": [
@@ -54,42 +59,57 @@
       "Diarrhée",
       "Ventre gonflé",
       "Fièvre"
+    ],
+    "fi": [
+      "Vatsakipu ja köyryselkä",
+      "Väsymys ja heikkous",
+      "Ruokahaluttomuus",
+      "Oksentelu",
+      "Ripuli",
+      "Turvonnut vatsa",
+      "Kuume"
     ]
   },
   "what_to_do": {
     "en": "If your dog shows signs of tummy discomfort after eating cat food, call your vet. Signs of pancreatitis, such as a hunched back with tummy pain, vomiting, weakness or fever, need immediate veterinary care.",
     "sl": "Če ima pes po mačji hrani znake nelagodja v trebuhu, pokličite veterinarja. Znaki vnetja trebušne slinavke, kot so usločen hrbet z bolečinami v trebuhu, bruhanje, šibkost ali vročina, zahtevajo takojšnjo veterinarsko oskrbo.",
-    "fr": "Si votre chien semble avoir mal au ventre après avoir mangé de la nourriture pour chats, appelez votre vétérinaire. Les signes de pancréatite, comme un dos voûté avec des douleurs au ventre, des vomissements, de la faiblesse ou de la fièvre, nécessitent des soins vétérinaires immédiats."
+    "fr": "Si votre chien semble avoir mal au ventre après avoir mangé de la nourriture pour chats, appelez votre vétérinaire. Les signes de pancréatite, comme un dos voûté avec des douleurs au ventre, des vomissements, de la faiblesse ou de la fièvre, nécessitent des soins vétérinaires immédiats.",
+    "fi": "Jos koirallasi on vatsavaivoja kissanruoan syömisen jälkeen, soita eläinlääkärille. Haimatulehduksen oireet, kuten köyryselkä ja vatsakipu, oksentelu, heikkous tai kuume, vaativat välitöntä eläinlääkärinhoitoa."
   },
   "serving": null,
   "child": {
     "en": "Cat food is made for cats. Dogs stay healthiest with their own dog food, so help keep the cat's bowl up high!",
     "sl": "Mačja hrana je narejena za mačke. Psi so najbolj zdravi s svojo pasjo hrano, zato pomagaj, da je mačja skledica visoko!",
-    "fr": "La nourriture pour chats est faite pour les chats. Les chiens sont en meilleure santé avec leur propre nourriture : pense à mettre la gamelle du chat en hauteur !"
+    "fr": "La nourriture pour chats est faite pour les chats. Les chiens sont en meilleure santé avec leur propre nourriture : pense à mettre la gamelle du chat en hauteur !",
+    "fi": "Kissanruoka on tehty kissoille. Koira pysyy terveimpänä omalla koiranruoallaan, joten pidä kissan kuppi poissa sen ulottuvilta!"
   },
   "faq": [
     {
       "q": {
         "en": "How do I keep my dog out of the cat's food?",
         "sl": "Kako preprečim, da bi pes jedel mačjo hrano?",
-        "fr": "Comment empêcher mon chien de manger la nourriture du chat ?"
+        "fr": "Comment empêcher mon chien de manger la nourriture du chat ?",
+        "fi": "Miten estän koiraa pääsemästä kissan ruokaan?"
       },
       "a": {
         "en": "Place the cat's food out of your dog's reach. If your dog regularly gets into it, change where you keep the cat's food or where and how you feed your cat.",
         "sl": "Mačjo hrano postavite izven pasjega dosega. Če pes do nje redno pride, spremenite, kje jo hranite ali kje in kako hranite mačko.",
-        "fr": "Placez la nourriture du chat hors de portée de votre chien. Si votre chien y a régulièrement accès, changez l’endroit où vous la rangez, ou le lieu et la manière dont vous nourrissez votre chat."
+        "fr": "Placez la nourriture du chat hors de portée de votre chien. Si votre chien y a régulièrement accès, changez l’endroit où vous la rangez, ou le lieu et la manière dont vous nourrissez votre chat.",
+        "fi": "Pidä kissan ruoka koirasi ulottumattomissa. Jos koira pääsee siihen toistuvasti, vaihda kissanruoan säilytyspaikkaa tai sitä, missä ja miten kissaa ruokitaan."
       }
     },
     {
       "q": {
         "en": "Can my dog eat cat food in an emergency?",
         "sl": "Ali lahko pes v sili je mačjo hrano?",
-        "fr": "Mon chien peut-il manger de la nourriture pour chats en cas d’urgence ?"
+        "fr": "Mon chien peut-il manger de la nourriture pour chats en cas d’urgence ?",
+        "fi": "Voiko koira syödä kissanruokaa hätätilanteessa?"
       },
       "a": {
         "en": "Dogs can survive on cat food in a tough spot, but unless your vet recommends otherwise, the best food for your dog is dog food.",
         "sl": "Psi lahko v stiski preživijo tudi z mačjo hrano, vendar je za psa, razen če veterinar svetuje drugače, najboljša pasja hrana.",
-        "fr": "Un chien peut s’en sortir avec de la nourriture pour chats si l’on n’a pas d’autre solution, mais, sauf avis contraire de votre vétérinaire, la meilleure nourriture pour votre chien est la nourriture pour chiens."
+        "fr": "Un chien peut s’en sortir avec de la nourriture pour chats si l’on n’a pas d’autre solution, mais, sauf avis contraire de votre vétérinaire, la meilleure nourriture pour votre chien est la nourriture pour chiens.",
+        "fi": "Hätätilanteessa koira pärjää kissanruoalla, mutta ellei eläinlääkäri neuvo toisin, koiralle paras ruoka on koiranruoka."
       }
     }
   ],
@@ -180,6 +200,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4b92bf52ab1f4c53a0bb94282dcae3324842a48981054866a94a8ce44e1866b0"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc48073ccca8893a0fdf2b8e8abbb55d27196a8941226427b50dd62ab1a8a57f"
     }
   }
 }

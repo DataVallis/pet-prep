@@ -4,28 +4,33 @@
   "name": {
     "en": "Fish oil",
     "sl": "Ribje olje",
-    "fr": "Huile de poisson"
+    "fr": "Huile de poisson",
+    "fi": "Kalaöljy"
   },
   "question": {
     "en": "Can dogs have fish oil?",
     "sl": "Ali lahko psi dobijo ribje olje?",
-    "fr": "Les chiens peuvent-ils prendre de l’huile de poisson ?"
+    "fr": "Les chiens peuvent-ils prendre de l’huile de poisson ?",
+    "fi": "Saako koira kalaöljyä?"
   },
   "url_slug": {
     "en": "fish-oil",
     "sl": "ribje-olje",
-    "fr": "huile-de-poisson"
+    "fr": "huile-de-poisson",
+    "fi": "kalaoljy"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Only if your vet recommends it. Fish oil is a supplement, not a snack, and vets advise always talking to your veterinarian before giving your dog any supplements. It can cause side effects such as diarrhoea, vomiting, gas and fishy breath.",
     "sl": "Le če ga priporoči veterinar. Ribje olje je prehransko dopolnilo, ne prigrizek, veterinarji pa svetujejo, da se pred dajanjem kakršnihkoli dopolnil vedno posvetujete z veterinarjem. Lahko povzroči neželene učinke, kot so driska, bruhanje, vetrovi in ribji zadah.",
-    "fr": "Seulement si votre vétérinaire la recommande. L’huile de poisson est un complément alimentaire, pas une friandise, et il faut toujours demander conseil à votre vétérinaire avant de donner un complément à votre chien. Elle peut provoquer des effets indésirables comme de la diarrhée, des vomissements, des gaz et une haleine de poisson."
+    "fr": "Seulement si votre vétérinaire la recommande. L’huile de poisson est un complément alimentaire, pas une friandise, et il faut toujours demander conseil à votre vétérinaire avant de donner un complément à votre chien. Elle peut provoquer des effets indésirables comme de la diarrhée, des vomissements, des gaz et une haleine de poisson.",
+    "fi": "Vain, jos eläinlääkäri suosittelee sitä. Kalaöljy on ravintolisä eikä välipala, ja ennen minkä tahansa ravintolisän antamista koiralle on aina keskusteltava eläinlääkärin kanssa. Se voi aiheuttaa sivuvaikutuksia, kuten ripulia, oksentelua, ilmavaivoja ja kalan hajua hengityksessä."
   },
   "why": {
     "en": "Fish oil comes from oily fish such as salmon, mackerel and sardines, and its omega-3 fatty acids have been used to support a dog's skin, coat, joints and heart. But it is a health product: possible side effects include diarrhoea, vomiting, gas, fishy-smelling breath or skin and, in rare cases, a higher bleeding risk. VCA advises caution in dogs taking blood thinners, dogs with a clotting disorder, diabetes or a history of pancreatitis. Just because a product is natural does not mean it is safe.",
     "sl": "Ribje olje pridobivajo iz mastnih rib, kot so losos, skuša in sardele, njegove omega-3 maščobne kisline pa se uporabljajo za podporo pasje kože, dlake, sklepov in srca. Vendar gre za zdravstveni izdelek: možni neželeni učinki so driska, bruhanje, vetrovi, ribji vonj iz ust ali kože in redko večje tveganje za krvavitve. VCA svetuje previdnost pri psih, ki jemljejo zdravila proti strjevanju krvi, ter pri psih z motnjo strjevanja krvi, sladkorno boleznijo ali preteklim vnetjem trebušne slinavke. Če je izdelek naraven, še ni nujno varen.",
-    "fr": "L’huile de poisson provient de poissons gras comme le saumon, le maquereau et les sardines, et ses acides gras oméga-3 sont utilisés pour soutenir la peau, le pelage, les articulations et le cœur du chien. Mais c’est un produit de santé : parmi les effets indésirables possibles figurent la diarrhée, les vomissements, les gaz, une haleine ou une peau à l’odeur de poisson et, dans de rares cas, un risque accru de saignement. VCA recommande la prudence chez les chiens sous anticoagulants, ceux qui ont un trouble de la coagulation, du diabète ou des antécédents de pancréatite. Ce n’est pas parce qu’un produit est naturel qu’il est sans danger."
+    "fr": "L’huile de poisson provient de poissons gras comme le saumon, le maquereau et les sardines, et ses acides gras oméga-3 sont utilisés pour soutenir la peau, le pelage, les articulations et le cœur du chien. Mais c’est un produit de santé : parmi les effets indésirables possibles figurent la diarrhée, les vomissements, les gaz, une haleine ou une peau à l’odeur de poisson et, dans de rares cas, un risque accru de saignement. VCA recommande la prudence chez les chiens sous anticoagulants, ceux qui ont un trouble de la coagulation, du diabète ou des antécédents de pancréatite. Ce n’est pas parce qu’un produit est naturel qu’il est sans danger.",
+    "fi": "Kalaöljy on peräisin rasvaisista kaloista, kuten lohesta, makrillista ja sardiineista, ja sen omega-3-rasvahappoja käytetään tukemaan koiran ihoa, turkkia, niveliä ja sydäntä. Se on kuitenkin terveystuote: mahdollisia sivuvaikutuksia ovat ripuli, oksentelu, ilmavaivat, kalan hajuinen hengitys tai iho ja harvinaisissa tapauksissa suurempi verenvuotoriski. VCA neuvoo olemaan varovainen, jos koira käyttää verenohennuslääkkeitä tai sillä on hyytymishäiriö, diabetes tai aiempi haimatulehdus. Se, että tuote on luonnollinen, ei tarkoita, että se on turvallinen."
   },
   "signs": {
     "en": [
@@ -48,42 +53,55 @@
       "Gaz",
       "Haleine ou peau à l’odeur de poisson",
       "Saignements plus faciles (rare)"
+    ],
+    "fi": [
+      "Ripuli",
+      "Oksentelu",
+      "Ilmavaivat",
+      "Kalalle haiseva hengitys tai iho",
+      "Herkempi verenvuoto (harvinaista)"
     ]
   },
   "what_to_do": {
     "en": "Talk to your vet before starting fish oil or any other supplement. If your dog has a serious reaction, stop giving fish oil and contact your vet immediately. Keep the container out of reach of children and pets.",
     "sl": "Preden začnete dajati ribje olje ali katerokoli drugo dopolnilo, se posvetujte z veterinarjem. Če ima pes resno reakcijo, ribjega olja ne dajajte več in takoj pokličite veterinarja. Embalažo hranite izven dosega otrok in živali.",
-    "fr": "Parlez-en à votre vétérinaire avant de commencer l’huile de poisson ou tout autre complément. Si votre chien a une réaction grave, arrêtez de lui donner de l’huile de poisson et contactez immédiatement votre vétérinaire. Gardez le flacon hors de portée des enfants et des animaux."
+    "fr": "Parlez-en à votre vétérinaire avant de commencer l’huile de poisson ou tout autre complément. Si votre chien a une réaction grave, arrêtez de lui donner de l’huile de poisson et contactez immédiatement votre vétérinaire. Gardez le flacon hors de portée des enfants et des animaux.",
+    "fi": "Keskustele eläinlääkärin kanssa ennen kalaöljyn tai minkään muun ravintolisän aloittamista. Jos koirallasi on vakava reaktio, lopeta kalaöljyn antaminen ja ota heti yhteyttä eläinlääkäriin. Pidä pakkaus poissa lasten ja lemmikkien ulottuvilta."
   },
   "serving": null,
   "child": {
     "en": "Fish oil is a special supplement. Only the vet and grown-ups decide if a dog needs it!",
     "sl": "Ribje olje je posebno dopolnilo. Ali ga pes potrebuje, odločijo le veterinar in odrasli!",
-    "fr": "L’huile de poisson est un complément très spécial. Seuls le vétérinaire et les adultes décident si un chien en a besoin !"
+    "fr": "L’huile de poisson est un complément très spécial. Seuls le vétérinaire et les adultes décident si un chien en a besoin !",
+    "fi": "Kalaöljy on erityinen ravintolisä. Vain eläinlääkäri ja aikuiset päättävät, tarvitseeko koira sitä!"
   },
   "faq": [
     {
       "q": {
         "en": "Can old or rancid fish oil upset my dog?",
         "sl": "Ali lahko staro ali žarko ribje olje psu škoduje?",
-        "fr": "Une huile de poisson ancienne ou rance peut-elle rendre mon chien malade ?"
+        "fr": "Une huile de poisson ancienne ou rance peut-elle rendre mon chien malade ?",
+        "fi": "Voiko vanha tai härskiintynyt kalaöljy vaivata koiraani?"
       },
       "a": {
         "en": "Yes. Consuming rancid fish oil may lead to stomach and gut upset, including vomiting or diarrhoea.",
         "sl": "Da. Žarko ribje olje lahko povzroči prebavne težave, vključno z bruhanjem ali drisko.",
-        "fr": "Oui. Consommer de l’huile de poisson rance peut provoquer des troubles de l’estomac et de l’intestin, notamment des vomissements ou de la diarrhée."
+        "fr": "Oui. Consommer de l’huile de poisson rance peut provoquer des troubles de l’estomac et de l’intestin, notamment des vomissements ou de la diarrhée.",
+        "fi": "Voi. Härskiintynyt kalaöljy voi aiheuttaa vatsa- ja suolisto-ongelmia, kuten oksentelua tai ripulia."
       }
     },
     {
       "q": {
         "en": "Is fish oil safe because it's natural?",
         "sl": "Ali je ribje olje varno, ker je naravno?",
-        "fr": "L’huile de poisson est-elle sans danger parce qu’elle est naturelle ?"
+        "fr": "L’huile de poisson est-elle sans danger parce qu’elle est naturelle ?",
+        "fi": "Onko kalaöljy turvallista, koska se on luonnollista?"
       },
       "a": {
         "en": "Not automatically. Just because a product is natural does not mean it is safe. Your vet is the best source of information about the safety of non-drug health products for your dog.",
         "sl": "Ne samodejno. Če je izdelek naraven, še ni nujno varen. Veterinar je najboljši vir informacij o varnosti zdravstvenih izdelkov, ki niso zdravila, za vašega psa.",
-        "fr": "Pas automatiquement. Ce n’est pas parce qu’un produit est naturel qu’il est sans danger. Votre vétérinaire est la meilleure source d’information sur l’innocuité des produits de santé non médicamenteux pour votre chien."
+        "fr": "Pas automatiquement. Ce n’est pas parce qu’un produit est naturel qu’il est sans danger. Votre vétérinaire est la meilleure source d’information sur l’innocuité des produits de santé non médicamenteux pour votre chien.",
+        "fi": "Ei automaattisesti. Luonnollinen tuote ei ole aina turvallinen. Eläinlääkäri osaa parhaiten kertoa, ovatko lääkkeettömät terveystuotteet turvallisia koirallesi."
       }
     }
   ],
@@ -167,6 +185,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e65bbc7621f28282638bac9bb9b99237df46bc42b58fa55ec0d70e56101a946f"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "00034c0ac057639d613408e49fc22d86cbfffc7794fa928e492e9f4058d75a96"
     }
   }
 }
