@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "138e302c436b78ea0e7f10698a8deb2c70c1242244056b8219eafe8e09401bed"
+      "sha256": "effbae40e2187fa48d157ca49502940ddcd098ae6fd55955ee0a1a6b90ec8c0c"
     }
   },
   "suitability_vocabulary": {
@@ -2123,7 +2123,58 @@
         "file": "labrador-retriever.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/labrador-retriever--black.webp"
+          },
+          {
+            "key": "yellow",
+            "label": {
+              "en": "Yellow",
+              "sl": "Rumen"
+            },
+            "file": "dog/labrador-retriever.webp",
+            "default": true
+          },
+          {
+            "key": "light-cream",
+            "label": {
+              "en": "Light cream",
+              "sl": "Svetlo kremast"
+            },
+            "file": "dog/labrador-retriever--light-cream.webp"
+          },
+          {
+            "key": "fox-red",
+            "label": {
+              "en": "Fox red",
+              "sl": "Lisičje rdeč"
+            },
+            "file": "dog/labrador-retriever--fox-red.webp"
+          },
+          {
+            "key": "chocolate",
+            "label": {
+              "en": "Chocolate",
+              "sl": "Čokoladno rjav"
+            },
+            "file": "dog/labrador-retriever--chocolate.webp"
+          },
+          {
+            "key": "light-liver",
+            "label": {
+              "en": "Light liver",
+              "sl": "Svetlo jetrno rjav"
+            },
+            "file": "dog/labrador-retriever--light-liver.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -2909,7 +2960,50 @@
         "file": "golden-retriever.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "rich-gold",
+            "label": {
+              "en": "Rich gold",
+              "sl": "Temno zlat"
+            },
+            "file": "dog/golden-retriever.webp",
+            "default": true
+          },
+          {
+            "key": "light-gold",
+            "label": {
+              "en": "Light gold",
+              "sl": "Svetlo zlat"
+            },
+            "file": "dog/golden-retriever--light-gold.webp"
+          },
+          {
+            "key": "deep-gold",
+            "label": {
+              "en": "Deep gold",
+              "sl": "Globoko zlat"
+            },
+            "file": "dog/golden-retriever--deep-gold.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/golden-retriever--cream.webp"
+          },
+          {
+            "key": "pale-cream",
+            "label": {
+              "en": "Pale cream",
+              "sl": "Bledo kremast"
+            },
+            "file": "dog/golden-retriever--pale-cream.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -3597,7 +3691,34 @@
         "file": "french-bulldog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/french-bulldog.webp",
+            "default": true
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/french-bulldog--brindle.webp"
+          },
+          {
+            "key": "light-fawn",
+            "label": {
+              "en": "Light fawn",
+              "sl": "Svetlo plavo rjav"
+            },
+            "file": "dog/french-bulldog--light-fawn.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -4240,7 +4361,42 @@
         "file": "german-shepherd-dog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/german-shepherd-dog.webp",
+            "default": true
+          },
+          {
+            "key": "black-gold",
+            "label": {
+              "en": "Black and gold",
+              "sl": "Črn z zlatimi oznakami"
+            },
+            "file": "dog/german-shepherd-dog--black-gold.webp"
+          },
+          {
+            "key": "sable",
+            "label": {
+              "en": "Sable",
+              "sl": "Sobolji"
+            },
+            "file": "dog/german-shepherd-dog--sable.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/german-shepherd-dog--black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -4832,7 +4988,42 @@
         "file": "cavalier-king-charles-spaniel.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "blenheim",
+            "label": {
+              "en": "Blenheim (chestnut and white)",
+              "sl": "Blenheim (kostanjev z belo)"
+            },
+            "file": "dog/cavalier-king-charles-spaniel.webp",
+            "default": true
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour (black, white, tan)",
+              "sl": "Trobarven (črn, bel, rjavkast)"
+            },
+            "file": "dog/cavalier-king-charles-spaniel--tricolour.webp"
+          },
+          {
+            "key": "ruby",
+            "label": {
+              "en": "Ruby (rich red)",
+              "sl": "Rubin (temno rdeč)"
+            },
+            "file": "dog/cavalier-king-charles-spaniel--ruby.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/cavalier-king-charles-spaniel--black-tan.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -5364,7 +5555,42 @@
         "file": "beagle.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour (black, tan, white)",
+              "sl": "Trobarven (črn, rjavkast, bel)"
+            },
+            "file": "dog/beagle.webp",
+            "default": true
+          },
+          {
+            "key": "tan-white",
+            "label": {
+              "en": "Tan and white",
+              "sl": "Rjavkasto-bel"
+            },
+            "file": "dog/beagle--tan-white.webp"
+          },
+          {
+            "key": "lemon-white",
+            "label": {
+              "en": "Lemon and white",
+              "sl": "Limonasto-bel"
+            },
+            "file": "dog/beagle--lemon-white.webp"
+          },
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/beagle--red-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -5919,7 +6145,50 @@
         "file": "poodle-standard.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/poodle-standard.webp",
+            "default": true
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/poodle-standard--white.webp"
+          },
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "dog/poodle-standard--brown.webp"
+          },
+          {
+            "key": "grey",
+            "label": {
+              "en": "Grey",
+              "sl": "Siv"
+            },
+            "file": "dog/poodle-standard--grey.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn (apricot)",
+              "sl": "Plavo rjav (marelični)"
+            },
+            "file": "dog/poodle-standard--fawn.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -6443,7 +6712,34 @@
         "file": "dachshund.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/dachshund.webp",
+            "default": true
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/dachshund--black-tan.webp"
+          },
+          {
+            "key": "chocolate-tan",
+            "label": {
+              "en": "Chocolate and tan",
+              "sl": "Čokoladen z rjavimi oznakami"
+            },
+            "file": "dog/dachshund--chocolate-tan.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -7023,7 +7319,34 @@
         "file": "australian-shepherd.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "blue-merle",
+            "label": {
+              "en": "Blue merle",
+              "sl": "Modri merle"
+            },
+            "file": "dog/australian-shepherd.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/australian-shepherd--black.webp"
+          },
+          {
+            "key": "red-merle",
+            "label": {
+              "en": "Red merle",
+              "sl": "Rdeči merle"
+            },
+            "file": "dog/australian-shepherd--red-merle.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -7562,7 +7885,58 @@
         "file": "havanese.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/havanese.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/havanese--black.webp"
+          },
+          {
+            "key": "havana-brown",
+            "label": {
+              "en": "Havana brown",
+              "sl": "Havansko rjav"
+            },
+            "file": "dog/havanese--havana-brown.webp"
+          },
+          {
+            "key": "tobacco",
+            "label": {
+              "en": "Tobacco",
+              "sl": "Tobačno rjav"
+            },
+            "file": "dog/havanese--tobacco.webp"
+          },
+          {
+            "key": "reddish-brown",
+            "label": {
+              "en": "Reddish brown",
+              "sl": "Rdečkasto rjav"
+            },
+            "file": "dog/havanese--reddish-brown.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/havanese--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",

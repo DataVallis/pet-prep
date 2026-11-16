@@ -760,8 +760,13 @@ test('colour variants: the committed Border Collie variants → portrait.colours
   assert.deepEqual(bc.portrait.colours[0], { key: 'black-white', label: { en: 'Black and white', sl: 'Črno-bel' }, file: 'dog/border-collie.webp', default: true });
   assert.deepEqual(Object.keys(bc.portrait.colours[1]), ['key', 'label', 'file']);
   for (const c of bc.portrait.colours) assert.ok(existsSync(resolve(ROOT, PORTRAITS_DIR, c.file)), `${c.file} exists`);
-  // Breeds without variants have no `colours` key at all.
-  for (const b of registry.breeds.filter((x) => x.portrait && x.id !== 'border_collie')) assert.ok(!('colours' in b.portrait), `${b.id} has no colours`);
+  // Breeds without committed variants have no `colours` key at all; breeds with variants list each of them.
+  const manifest = JSON.parse(readFileSync(resolve(ROOT, PORTRAITS_DIR, 'manifest.json'), 'utf8'));
+  const withCommitted = new Set(manifest.colour_variants.map((v) => v.breed));
+  for (const b of registry.breeds.filter((x) => x.portrait && !withCommitted.has(x.id))) assert.ok(!('colours' in b.portrait), `${b.id} has no colours`);
+  for (const b of registry.breeds.filter((x) => withCommitted.has(x.id))) {
+    assert.equal(b.portrait.colours.length, 1 + manifest.colour_variants.filter((v) => v.breed === b.id).length, `${b.id} colours`);
+  }
   assert.equal(registry.inputs.breed_colours.path, INPUTS.breed_colours);
 });
 
