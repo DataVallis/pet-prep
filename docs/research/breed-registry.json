@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "ae54a20c5062ce26e0bba9cc1cc6ffac220dc9f85b2fcd85639ecafd1c93a369"
+      "sha256": "138e302c436b78ea0e7f10698a8deb2c70c1242244056b8219eafe8e09401bed"
     }
   },
   "suitability_vocabulary": {
@@ -67082,7 +67082,12 @@
           "S891"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "manchester-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_checked",
         "tests": [],
