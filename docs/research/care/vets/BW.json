@@ -1,0 +1,65 @@
+{
+  "country": "BW",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "Matshwane Vet Clinic - Services (clinic's own site)",
+      "url": "https://matshwanevetclinic.weebly.com/services.html",
+      "note": "Opened: small-animal services (vaccination, internal medicine, surgery, dentistry, ICU hospitalisation, home visits in and around Gaborone), horses, farm animals. States 'We have an emergency service out of opening hours in place.' No phone, address or hours on this page; no 24 h statement."
+    },
+    {
+      "name": "Vet & Agric Consultants - home (clinic's own site)",
+      "url": "https://www.vetagric.co.bw/index.php/home",
+      "note": "Opened: 'Oxbow Investments (Pty) Ltd trading as Vet and Agric Consultants', based in Gaborone. No address, phone, hours or emergency statement in the fetched content."
+    },
+    {
+      "name": "Sky Jobs - employer profile Vet and Agric Consultants (job board, not an entry source on its own)",
+      "url": "https://skyjobs.co.bw/employer/vet-and-agric-consultants/",
+      "note": "Opened: profile says main branch Block 3 Industrial, Gaborone and a satellite clinic in Phakalane (consulting hours extended to 18h00 Mon-Fri), and 'We are providing a 24 hours emergency service to our clients and patients.' Phone shown partly masked (+267 3928689). Third-party job board, so the 24 h claim was NOT used for emergency_24h."
+    },
+    {
+      "name": "Department of Veterinary Services - District Veterinary Offices list (Ministry of Agriculture)",
+      "url": "https://cms2.gov.bw/sites/default/files/2021-07/District%20Veterinary%20Offices.pdf",
+      "note": "Opened: government district veterinary offices (e.g. Gaborone Field Office 397 4152, Francistown 241 3425, Maun 686 0236/7, Kasane 625 0244, Palapye 492 0261, Serowe 463 0351). Livestock/regulatory offices, no small-animal or hours information; not published as clinics."
+    },
+    {
+      "name": "Daily News (gov.bw) - BAMB veterinary clinic in Gaborone, 6 Nov 2023",
+      "url": "https://dailynews.gov.bw/news-detail/76177",
+      "note": "Opened: Botswana Agricultural Marketing Board opened a vet clinic in Gaborone extending services to companion animals. No address, phone or hours published; not published as an entry."
+    },
+    {
+      "name": "Mmegi - BSPCA veterinary surgeon vacancy",
+      "url": "https://mmegi.bw/ampArticle/114999",
+      "note": "Opened: BSPCA, Plot 53949, Broadhurst, Tsholofelo East, Gaborone, +267 71820111 (job advertisement only). Shelter; no clinic hours or services confirmed; not published."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Matshwane Vet Clinic",
+      "city": "Gaborone",
+      "region": "South-East District",
+      "emergency_24h": false,
+      "duty": "Emergency service available outside opening hours; call ahead. Home visits for vaccinations and consultations in and around Gaborone.",
+      "small_animals": true,
+      "url": "https://matshwanevetclinic.weebly.com/services.html",
+      "source_url": "https://matshwanevetclinic.weebly.com/services.html",
+      "checked": "2026-11-16",
+      "note": "Own site states an out-of-hours emergency service exists; no 24 h statement, no phone, address or hours published on the page opened. Needs phone from another own page in a later run."
+    },
+    {
+      "kind": "clinic",
+      "name": "Vet and Agric Consultants",
+      "city": "Gaborone",
+      "region": "South-East District",
+      "emergency_24h": false,
+      "duty": "Veterinary practice in Gaborone offering small animal, livestock and wildlife services; call the clinic for hours and emergencies.",
+      "small_animals": true,
+      "url": "https://www.vetagric.co.bw/index.php/home",
+      "source_url": "https://www.vetagric.co.bw/index.php/home",
+      "checked": "2026-11-16",
+      "note": "Own site (re-checked 2026-11-16) confirms Gaborone base and small animal services but gives no phone, address or 24 h statement. Branch locations (Block 3 Industrial, Phakalane) and the claim of a '24 hours emergency service' come only from the Sky Jobs employer profile (job board), so emergency_24h left false pending an own-site page. Phone seen masked (+267 3928689), not used. small_animals inferred from the clinic description, not stated on the own site."
+    }
+  ],
+  "notes": "Very thin run. Search surfaced almost no clinic own-sites for Botswana. No Botswana Veterinary Association, BUAN or Department of Veterinary Services page listing private small-animal clinics, duty rotas or an animal poison line was found. WebFetch refused (PROVENANCE_REQUIRED): https://www.vetagric.co.bw/ (root; the /index.php/home page was opened instead), https://familygems.co.bw/2017/11/28/owning-pet-botswana-medical-info/ (client_error). Not used (aggregator/directory only, not opened as entry source): localbotswana.com listings (Gaborone Veterinary Clinic +267 391 4121; Bhatanani Veterinary Clinic Francistown), medpages.info, directory.africa-business.com, goafricaonline (0 results). Nothing found for Francistown, Maun, Kasane, Palapye, Serowe private clinics. No 24 h clinic verified, no duty rota, no poison line. Government district veterinary offices (cms2.gov.bw PDF) are livestock/regulatory and not published. Needs own-site verification in a later run."
+}

@@ -93353,6 +93353,36 @@
       "checked": "2026-11-13"
     },
     {
+      "country": "BW",
+      "kind": "clinic",
+      "name": "Matshwane Vet Clinic",
+      "city": "Gaborone",
+      "region": "South-East District",
+      "address": null,
+      "phone": null,
+      "emergency_24h": false,
+      "duty": "Emergency service available outside opening hours; call ahead. Home visits for vaccinations and consultations in and around Gaborone.",
+      "duty_i18n": null,
+      "url": "https://matshwanevetclinic.weebly.com/services.html",
+      "source_url": "https://matshwanevetclinic.weebly.com/services.html",
+      "checked": "2026-11-16"
+    },
+    {
+      "country": "BW",
+      "kind": "clinic",
+      "name": "Vet and Agric Consultants",
+      "city": "Gaborone",
+      "region": "South-East District",
+      "address": null,
+      "phone": null,
+      "emergency_24h": false,
+      "duty": "Veterinary practice in Gaborone offering small animal, livestock and wildlife services; call the clinic for hours and emergencies.",
+      "duty_i18n": null,
+      "url": "https://www.vetagric.co.bw/index.php/home",
+      "source_url": "https://www.vetagric.co.bw/index.php/home",
+      "checked": "2026-11-16"
+    },
+    {
       "country": "BY",
       "kind": "clinic",
       "name": "SQ-lap veterinary clinic (Antistress)",
