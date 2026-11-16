@@ -115,6 +115,12 @@ class ChildAuthController extends Controller
                 'id' => $child->id,
                 'name' => $child->name,
                 'role' => $child->role->value,
+                /**
+                 * 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                 *
+                 * @var 'auto'|'24h'|'12h'
+                 */
+                'time_format' => $child->timeFormat()->value,
             ],
             'mode' => $session->mode,
             'joined_existing' => $session->joinedExisting,

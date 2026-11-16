@@ -725,7 +725,7 @@ class RoutineLedgerService
                 $value = $this->lifeStages->stageValueOn($pet, $pet->localDate($opens), StageParamKey::GroomingSessionsPerWeek)['value'] ?? 0;
                 $goal = is_int($value) ? $value : 0;
                 // M5-T02b (David 2026-10-21): no grooming while the pet sleeps, one per
-                // day — a slot the family's quiet hours leave no day for is not expected
+                // day — a slot the pet's quiet hours leave no day for is not expected
                 // (never missed only because of sleep; like the wand's feasibleSessions).
                 if ($goal > 0) {
                     $need = max(1, (int) config('cat_care.grooming.session_seconds', 30)) + CatChoreService::graceSeconds(CareSessionKind::Grooming);

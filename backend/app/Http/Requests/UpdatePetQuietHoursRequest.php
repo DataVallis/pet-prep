@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use App\Models\Pet;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 /**
  * PUT /api/parent/pets/{pet}/quiet-hours (David 2026-11-16, quiet hours per
@@ -29,21 +30,27 @@ class UpdatePetQuietHoursRequest extends FormRequest
      */
     public function rules(): array
     {
+        // QA #1259 M5: an object must carry the WHOLE schedule — a partial object or `{}`
+        // would otherwise silently wipe windows (missing → null) or switch them on. Every
+        // key is required to be present (times may be null = no window, as in the family
+        // editor); skipped entirely when `quiet_hours` is null (follow the family).
+        $notObject = Rule::excludeIf(fn (): bool => ! is_array($this->input('quiet_hours')));
+
         return [
             // The pet's own schedule; null = follow the family's quiet hours.
             'quiet_hours' => ['present', 'nullable', 'array'],
-            'quiet_hours.school_start' => ['nullable', 'string', 'date_format:H:i'],
-            'quiet_hours.school_end' => ['nullable', 'string', 'date_format:H:i'],
-            'quiet_hours.bedtime_start' => ['nullable', 'string', 'date_format:H:i'],
-            'quiet_hours.bedtime_end' => ['nullable', 'string', 'date_format:H:i'],
-            'quiet_hours.is_active' => ['sometimes', 'boolean'],
+            'quiet_hours.school_start' => [$notObject, 'present', 'nullable', 'string', 'date_format:H:i'],
+            'quiet_hours.school_end' => [$notObject, 'present', 'nullable', 'string', 'date_format:H:i'],
+            'quiet_hours.bedtime_start' => [$notObject, 'present', 'nullable', 'string', 'date_format:H:i'],
+            'quiet_hours.bedtime_end' => [$notObject, 'present', 'nullable', 'string', 'date_format:H:i'],
+            'quiet_hours.is_active' => [$notObject, 'required', 'boolean'],
         ];
     }
 
     /**
      * The pet's own schedule, or null = follow the family.
      *
-     * @return array{school_start?: string|null, school_end?: string|null, bedtime_start?: string|null, bedtime_end?: string|null, is_active?: bool}|null
+     * @return array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool}|null
      */
     public function petQuietHours(): ?array
     {
