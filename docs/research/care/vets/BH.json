@@ -1,0 +1,64 @@
+{
+  "country": "BH",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "Advanced Veterinary Clinic (own site)",
+      "url": "https://www.avcbh.com/",
+      "note": "Opened: Villa 158, Avenue 66, Block 362, Bilad Al-Qadeem, Manama; +973-17271003, WhatsApp +973 3620 0210; 9am-8pm Saturday-Thursday, closed Friday. No 24 h / emergency statement (only that hospitalised pets are monitored 24/7)."
+    },
+    {
+      "name": "Blue Cross Veterinary Clinic, Riffa (own site)",
+      "url": "https://www.bluecrossvetbh.com/",
+      "note": "Opened: Building 148A, Road 4104, Block 941, Riffa; (+973) 38806969; hours inconsistent on the page (9:00-19:00 Sat-Thu in contacts vs 9:00-19:15 Tue-Sat in doctor sections). No 24 h statement."
+    },
+    {
+      "name": "Ministry of Municipalities Affairs and Agriculture - Animal Wealth services page",
+      "url": "https://www.mun.gov.bh/portal/pages/animalWealthServicesEn.jsp",
+      "note": "Opened: licensing guide for veterinary professionals only; no clinic directory, no hotline, no poison line, no phone numbers."
+    },
+    {
+      "name": "US Navy FDRMC Bahrain - Pet Care page (directory, not used for entries)",
+      "url": "https://www.navsea.navy.mil/Home/RMC/FDRMC/Bahrain/LivingInBahrain/DayToDayLife/PetCare/",
+      "note": "Opened: list of ~12 clinics with addresses/phones, no hours, no 24 h statements. Used only as a lead list."
+    },
+    {
+      "name": "Expat Focus - Bahrain veterinary care (not used for entries)",
+      "url": "https://www.expatfocus.com/bahrain/guide/bahrain-veterinary-care",
+      "note": "Opened: names Bahrain Veterinary Society (P.O. Box 30161, Manama, +973 1759 1251); no clinic details, no 24 h."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Advanced Veterinary Clinic (AVC)",
+      "city": "Manama",
+      "region": "Bilad Al-Qadeem",
+      "address": "Villa 158, Avenue 66, Block 362, Bilad Al-Qadeem, Manama",
+      "phone": "+973 1727 1003",
+      "emergency_24h": false,
+      "duty": "Open 9am-8pm Saturday to Thursday, closed Friday. WhatsApp +973 3620 0210.",
+      "small_animals": true,
+      "url": "https://www.avcbh.com/",
+      "source_url": "https://www.avcbh.com/",
+      "checked": "2026-11-16",
+      "note": "Own site; no emergency or 24 h statement for walk-ins."
+    },
+    {
+      "kind": "clinic",
+      "name": "Blue Cross Veterinary Clinic",
+      "city": "Riffa",
+      "region": "Southern Governorate",
+      "address": "Building 148A, Road 4104, Block 941, Riffa",
+      "phone": "+973 3880 6969",
+      "emergency_24h": false,
+      "duty": "Open daytime hours (about 9am-7pm); call ahead to confirm days.",
+      "small_animals": true,
+      "url": "https://www.bluecrossvetbh.com/",
+      "source_url": "https://www.bluecrossvetbh.com/",
+      "checked": "2026-11-16",
+      "note": "Own site gives conflicting hours (Sat-Thu 9:00-19:00 vs Tue-Sat 9:00-19:15); address given as 148A and 148 in different places. No 24 h statement."
+    }
+  ],
+  "notes": "Thin run: WebFetch only allowed URLs that appeared in earlier results; most clinic own-sites (bahrainvet.com, charisvets.com, noniecoutts.com, awalvc.weebly.com, emanvetclinic.wixsite.com) were refused with PROVENANCE_REQUIRED and not worked around; Blue Cross Facebook refused (robots). Not published (only seen on the US Navy FDRMC pet-care list / localbh.com directory, own pages not opened): Al Ahli Animal Health Centre (Sitra, 1762 2102), Animal Care Clinic (Hamala, 1761 2459), Awal Veterinary Center (Al Markh, 1779 1097), Bahrain Veterinary Centre (Maqabah/Hamala, 1769 2221), Charis Vets (BSPCA Askar, 1310 6800), Dr Nonie Coutts (Salmaniya, 1724 5515), Eman Veterinary Clinic (East Riffa, 3944 2216), Four Paws Veterinary Clinic (Umm Al Hassam, 1776 4757), House Veterinary Centre (Arad, Muharraq, 1720 0075), Tails Veterinary Centre (Um Al Hassam, 7711 3334), SAVE Veterinary Clinic (Janabiyah, 17999898), My Pets Vet, Oka Veterinary Clinic, Al Maha Vet Clinic, Barri's Vet Hospital (Saar), Animalia by Yara (Gardens Plaza). NSA Bahrain US Navy veterinary clinic (Bldg 328, 1785 4295, Sun-Thu 8-4) is military-only, not published. Ministry of Municipalities (mun.gov.bh) page has no clinic list. Bahrain Veterinary Society directory website not found/opened. No 24 h clinics verified, no duty rotas, no official animal poison line found."
+}

@@ -87799,6 +87799,36 @@
       "checked": "2026-11-15"
     },
     {
+      "country": "BH",
+      "kind": "clinic",
+      "name": "Advanced Veterinary Clinic (AVC)",
+      "city": "Manama",
+      "region": "Bilad Al-Qadeem",
+      "address": "Villa 158, Avenue 66, Block 362, Bilad Al-Qadeem, Manama",
+      "phone": "+973 1727 1003",
+      "emergency_24h": false,
+      "duty": "Open 9am-8pm Saturday to Thursday, closed Friday. WhatsApp +973 3620 0210.",
+      "duty_i18n": null,
+      "url": "https://www.avcbh.com/",
+      "source_url": "https://www.avcbh.com/",
+      "checked": "2026-11-16"
+    },
+    {
+      "country": "BH",
+      "kind": "clinic",
+      "name": "Blue Cross Veterinary Clinic",
+      "city": "Riffa",
+      "region": "Southern Governorate",
+      "address": "Building 148A, Road 4104, Block 941, Riffa",
+      "phone": "+973 3880 6969",
+      "emergency_24h": false,
+      "duty": "Open daytime hours (about 9am-7pm); call ahead to confirm days.",
+      "duty_i18n": null,
+      "url": "https://www.bluecrossvetbh.com/",
+      "source_url": "https://www.bluecrossvetbh.com/",
+      "checked": "2026-11-16"
+    },
+    {
       "country": "BO",
       "kind": "clinic",
       "name": "Veterinaria Lassie",
