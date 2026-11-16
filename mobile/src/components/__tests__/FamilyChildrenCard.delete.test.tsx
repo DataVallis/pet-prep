@@ -9,6 +9,7 @@ import FamilyChildrenCard, { FAMILY_STRINGS } from '@/components/FamilyChildrenC
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { openChildSettings } from '@/test-utils/childSettings';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -41,7 +42,10 @@ async function flush() {
 }
 
 function renderCard() {
-  return renderWithQuery(<FamilyChildrenCard family={FAMILY} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+  const view = renderWithQuery(<FamilyChildrenCard family={FAMILY} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+  openChildSettings(2);
+  openChildSettings(5);
+  return view;
 }
 
 function fillAndSubmit(childId: number, password: string) {

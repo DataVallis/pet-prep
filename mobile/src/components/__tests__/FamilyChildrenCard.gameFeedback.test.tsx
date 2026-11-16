@@ -11,6 +11,7 @@ import { normalizeChildState } from '@/modules/childPet/childPetView';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import { makeFamilyPet, makeLiveChildState, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { openChildSettings } from '@/test-utils/childSettings';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -40,6 +41,7 @@ describe('FamilyChildrenCard — game sounds and vibration (GAMES_SPEC §7.6)', 
   it('on by default (older server: no field); turning it off sends only the boolean', async () => {
     updateChildSettings.mockResolvedValue({ child_id: 2, adapted_mode: false, media_display: 'video', game_feedback: false });
     renderWithQuery(<FamilyChildrenCard family={family(undefined)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     const sw = screen.getByTestId('game-feedback-switch-2');
     expect(sw.props.value).toBe(true);
     expect(screen.getByText('Zvoki in vibracija v igrah')).toBeTruthy();
@@ -53,6 +55,7 @@ describe('FamilyChildrenCard — game sounds and vibration (GAMES_SPEC §7.6)', 
   it('off from the server; turning it on sends true', async () => {
     updateChildSettings.mockResolvedValue({ child_id: 2, adapted_mode: false, media_display: 'video', game_feedback: true });
     renderWithQuery(<FamilyChildrenCard family={family(false)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     expect(screen.getByTestId('game-feedback-switch-2').props.value).toBe(false);
     fireEvent(screen.getByTestId('game-feedback-switch-2'), 'valueChange', true);
     await flush();
@@ -62,6 +65,7 @@ describe('FamilyChildrenCard — game sounds and vibration (GAMES_SPEC §7.6)', 
   it('a failure shows an error and keeps the server value', async () => {
     updateChildSettings.mockRejectedValue(new ApiError('Server Error', 500, {}));
     renderWithQuery(<FamilyChildrenCard family={family(true)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     fireEvent(screen.getByTestId('game-feedback-switch-2'), 'valueChange', false);
     await flush();
     expect(screen.getByTestId('game-feedback-error-2')).toBeTruthy();

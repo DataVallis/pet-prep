@@ -20,9 +20,11 @@ import { Pressable, StyleSheet, Switch, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { Accessibility, Footprints, Info } from 'lucide-react-native';
 
+import { MoreInfo } from '@/components/parent/Disclosure';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { useSetAdaptedMode } from '@/hooks/queries/useFamilyMutations';
 import { palette } from '@/theme';
+import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { pushSourceLines } from '@/modules/steps/adaptedPushHint';
 
@@ -69,11 +71,21 @@ export default function AdaptedModeRow({ childId, childName, enabled, onLogWalk 
           testID={`adapted-mode-switch-${childId}`}
         />
       </View>
-      <Text style={styles.hint}>{S.hint}</Text>
+      <Text style={styles.hint} testID={`adapted-mode-short-${childId}`}>
+        {S.short}
+      </Text>
       {/* QA M5-T12 / David 2026-10-21: the switch itself is the parent's explicit consent (GDPR Art. 9). */}
       <Text style={styles.hint} testID={`adapted-mode-consent-${childId}`}>
         {S.consent}
       </Text>
+      {/* David 2026-11-16: the long explanation behind »Več o tem«; the consent above stays visible. */}
+      <MoreInfo
+        label={ADAPTED_MODE_STRINGS.moreInfo}
+        accessibilityLabel={t('family:children.moreInfoFor', { setting: S.label })}
+        testID={`adapted-mode-info-${childId}`}
+      >
+        <Text style={styles.hint}>{S.hint}</Text>
+      </MoreInfo>
       {shown && (
         <View style={styles.sources} testID={`adapted-mode-sources-${childId}`}>
           <View style={styles.row}>

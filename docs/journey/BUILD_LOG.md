@@ -17,6 +17,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-16 — Manj besedila, več reda: seznam otrok v Nadzoru je zložen
+
+**Kaj:** David je posnel zaslon »Nadzor in družina«: pri vsakem otroku so bile vse nastavitve (prilagojen način, lažje kretnje, zvoki, prikaz) z dolgimi razlagami, gumb »Dodaj otroka« pa je bil čisto spodaj in je izgledal kot del zadnjega otroka. »Preveč informacij … daj gumb čisto na vrh.« Zdaj je »Dodaj otroka« na vrhu, vsak otrok pa pokaže samo osnovno (ime, ljubljenček, naprave, kratka vrstica vklopljenih posebnih nastavitev) in »Več nastavitev« za ostalo. Besedilo privolitve za prilagojen način ostane vedno vidno.
+**Zakaj je pomembno:** družina s tremi otroki je imela več zaslonov besedila; starš zdaj na prvi pogled vidi, kaj je pri katerem otroku vklopljeno.
+- 👩 Staršem: »Seznam otrok je krajši — nastavitve posameznega otroka odprete z ›Več nastavitev‹.«
+- 🛠 Tehnično: en vzorec za zložljive starševske razdelke (`ExpandRow` + `MoreInfo`), brez novega native modula — pride s posodobitvijo OTA.
+
+---
+
 ## 2026-11-16 — Trije psi in mačka, štirje urniki: tihe ure za vsakega ljubljenčka in ura 12 / 24 h
 
 **Kaj:** David: »Mi imamo 3 pse in mačko. Hčerka mačko, sin psa. Jaz psa in žena psa. Zdaj pa ko nastavim school hours mi avtomatsko za vse živali velja. To ni ok.« Tihe ure so bile ena nastavitev za celo družino. Zdaj vsak ljubljenček sledi družinskim uram, starš pa mu lahko nastavi lastne (šola, spanje). Hkrati: ure v aplikaciji in obvestilih po telefonu (24-urni ali 12-urni zapis) z ročno izbiro, ure pa se ne tipkajo več, ampak nastavijo z vrtljivimi kolesi kot na budilki (minute po 15).
