@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `manchester_terrier` (viri S888–S894; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: ni preverjen (stran RKC ni bila dosegljiva) |
 | Izvor | FCI št. 71, skupina 3, sekcija 1 (veliki in srednji terierji), Velika Britanija (S888) — le standardna velikost; ni angleški toy terier (FCI 13) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 115. mesto »Manchester Terrier« (S174, prebrano 2026-11-16; 114. boerboel je blokiran) |
-| PR-ji | pet-prep #1229 (pasma) · portret: sledi · spletna stran: pet-prep-website `feat/register-manchester-terrier` |
+| PR-ji | pet-prep #1229 (pasma, združen `acbd29b`) · portret pet-prep (zagon `breed-portraits.yml` 43821147714, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-manchester-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-16 |
 | Ščetkanje zob vsak dan (otrok) | 🛠 | 💶 izziv | M5-R15 | 2026-11-16 |
 | Barva (izbirnik: črno-rjav) | 🛠 | 💶 izziv | M5-R21 | 2026-11-16 |
-| AI portret v registru | 🗓 sledi takoj po združitvi | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/manchester-terrier`, `/sl/zivali/psi/manchesterski-terier`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črno-rjav, naravna V-ušesa, naraven rep | — | M5-R11-04 | 2026-11-16 |
+| Stran na petprep.si (`/animals/dogs/manchester-terrier`, `/sl/zivali/psi/manchesterski-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
