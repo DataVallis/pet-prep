@@ -14,7 +14,8 @@
     "sv": "Laktosfri mjölk",
     "da": "Laktosefri mælk",
     "fi": "Laktoositon maito",
-    "fr": "Lait sans lactose"
+    "fr": "Lait sans lactose",
+    "nb": "Laktosefri melk"
   },
   "question": {
     "en": "Can dogs drink lactose-free milk?",
@@ -29,7 +30,8 @@
     "sv": "Får hundar dricka laktosfri mjölk?",
     "da": "Må hunde drikke laktosefri mælk?",
     "fi": "Saako koira juoda laktoositonta maitoa?",
-    "fr": "Les chiens peuvent-ils boire du lait sans lactose ?"
+    "fr": "Les chiens peuvent-ils boire du lait sans lactose ?",
+    "nb": "Kan hunder drikke laktosefri melk?"
   },
   "url_slug": {
     "en": "lactose-free-milk",
@@ -44,7 +46,8 @@
     "sv": "laktosfri-mjolk",
     "da": "laktosefri-maelk",
     "fi": "laktoositon-maito",
-    "fr": "lait-sans-lactose"
+    "fr": "lait-sans-lactose",
+    "nb": "laktosefri-melk"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "sv": "Bara lite, och den behövs inte. Vissa hundar tål små mängder laktosfri mjölk, men hundar som får en bra och balanserad kost behöver den inte. Hos hundar som är allergiska mot mjölkprotein kan den dessutom ge orolig mage.",
     "da": "Kun lidt, og det er ikke nødvendigt. Nogle hunde kan tåle små mængder laktosefri mælk, men hunde, der får en god og afbalanceret kost, har ikke brug for den, og den kan stadig give ondt i maven hos hunde, der er allergiske over for mælkeprotein.",
     "fi": "Saa, mutta vain vähän, eikä koira sitä tarvitse. Osa koirista sietää pieniä määriä laktoositonta maitoa, mutta hyvin ja monipuolisesti ruokitut koirat eivät sitä tarvitse, ja maitoproteiinille allergisen koiran vatsa voi silti mennä siitä sekaisin.",
-    "fr": "Seulement un peu, et ce n’est pas nécessaire. Certains chiens tolèrent de petites quantités de lait sans lactose, mais un chien qui a une alimentation équilibrée de qualité n’en a pas besoin, et ce lait peut malgré tout donner mal au ventre aux chiens allergiques aux protéines du lait."
+    "fr": "Seulement un peu, et ce n’est pas nécessaire. Certains chiens tolèrent de petites quantités de lait sans lactose, mais un chien qui a une alimentation équilibrée de qualité n’en a pas besoin, et ce lait peut malgré tout donner mal au ventre aux chiens allergiques aux protéines du lait.",
+    "nb": "Bare litt, og det er ikke nødvendig. Noen hunder tåler små mengder laktosefri melk, men hunder som får et godt og balansert kosthold, trenger den ikke, og den kan fortsatt gi urolig mage hos hunder med allergi mot melkeprotein."
   },
   "why": {
     "en": "Lactose-free milk has the same nutrients as regular milk but without the lactose that can cause digestive problems, and a vet hospital calls it a suitable alternative for lactose-intolerant dogs. The Australian Veterinary Association is stricter: it is not necessary for dogs on a balanced diet and can still cause stomach problems linked to milk-protein allergy, so we follow the stricter view: only a little.",
@@ -75,7 +79,8 @@
     "sv": "Laktosfri mjölk innehåller samma näringsämnen som vanlig mjölk, men utan den laktos som kan ge matsmältningsproblem, och ett djursjukhus beskriver den som ett lämpligt alternativ för laktosintoleranta hundar. Den australiska veterinärföreningen Australian Veterinary Association är striktare: enligt den behövs mjölken inte för hundar som får en balanserad kost, och den kan ändå ge magproblem som hänger ihop med allergi mot mjölkprotein. Vi följer den strängare bedömningen: bara lite.",
     "da": "Laktosefri mælk indeholder de samme næringsstoffer som almindelig mælk, men uden den laktose, der kan give fordøjelsesproblemer, og et dyrehospital kalder den et passende alternativ til hunde med laktoseintolerans. Den australske dyrlægeforening (Australian Veterinary Association) er strengere: den er ikke nødvendig for hunde på en afbalanceret kost og kan stadig give maveproblemer, der hænger sammen med allergi over for mælkeprotein. Vi følger den strengere vurdering: kun lidt.",
     "fi": "Laktoosittomassa maidossa on samat ravintoaineet kuin tavallisessa maidossa, mutta siinä ei ole ruoansulatusongelmia aiheuttavaa laktoosia, ja yksi eläinsairaala pitää sitä sopivana vaihtoehtona laktoosi-intoleranteille koirille. Australian eläinlääkäriliitto suhtautuu tiukemmin: sen mukaan maito ei ole tarpeen tasapainoisella ruokavaliolla olevalle koiralle, ja se voi silti aiheuttaa vatsaongelmia maitoproteiinille allergiselle koiralle. Noudatamme tiukempaa kantaa: vain vähän.",
-    "fr": "Le lait sans lactose contient les mêmes nutriments que le lait ordinaire, mais pas le lactose, qui peut causer des troubles digestifs, et une clinique vétérinaire le juge adapté aux chiens intolérants au lactose. L’Australian Veterinary Association est plus stricte : il n’est pas nécessaire pour les chiens qui ont une alimentation équilibrée et peut encore provoquer des troubles digestifs liés à l’allergie aux protéines du lait. Nous retenons donc l’avis le plus strict : seulement un peu."
+    "fr": "Le lait sans lactose contient les mêmes nutriments que le lait ordinaire, mais pas le lactose, qui peut causer des troubles digestifs, et une clinique vétérinaire le juge adapté aux chiens intolérants au lactose. L’Australian Veterinary Association est plus stricte : il n’est pas nécessaire pour les chiens qui ont une alimentation équilibrée et peut encore provoquer des troubles digestifs liés à l’allergie aux protéines du lait. Nous retenons donc l’avis le plus strict : seulement un peu.",
+    "nb": "Laktosefri melk har de samme næringsstoffene som vanlig melk, men uten laktosen som kan gi fordøyelsesproblemer, og et dyresykehus kaller den et egnet alternativ for hunder som ikke tåler laktose. Den australske dyrlegeforeningen (Australian Veterinary Association) er strengere: Den er ikke nødvendig for hunder på et balansert kosthold og kan fortsatt gi mageproblemer knyttet til allergi mot melkeprotein, så vi følger det strengeste synet: bare litt."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "sv": "Om hunden får diarré, kräkningar, gaser eller uppblåst mage av mjölk och det inte går över, kontakta veterinären.",
     "da": "Hvis din hund får diarré, opkast, luft i maven eller oppustethed efter at have fået mælk, og det ikke går over, så kontakt din dyrlæge.",
     "fi": "Jos koirasi saa maidosta ripulin, oksentelua, ilmavaivoja tai turvotusta, eivätkä oireet mene ohi, ota yhteyttä eläinlääkäriin.",
-    "fr": "Si, après avoir bu du lait, votre chien a de la diarrhée, des vomissements, des gaz ou le ventre gonflé et que cela ne passe pas, contactez votre vétérinaire."
+    "fr": "Si, après avoir bu du lait, votre chien a de la diarrhée, des vomissements, des gaz ou le ventre gonflé et que cela ne passe pas, contactez votre vétérinaire.",
+    "nb": "Hvis hunden får diaré, oppkast, luft i magen eller oppblåst mage etter melk, og det ikke går over, bør du kontakte dyrlegen."
   },
   "serving": {
     "en": "Start with a small amount, ideally a lactose-free milk made for dogs, and watch for tummy upset.",
@@ -106,7 +112,8 @@
     "sv": "Börja med en liten mängd, helst laktosfri mjölk som är gjord för hundar, och håll utkik efter magbesvär.",
     "da": "Start med en lille mængde, helst laktosefri mælk lavet til hunde, og hold øje med, om maven reagerer.",
     "fi": "Aloita pienellä määrällä, mieluiten koirille tarkoitetulla laktoosittomalla maidolla, ja tarkkaile, tuleeko vatsavaivoja.",
-    "fr": "Commencez par une petite quantité, de préférence d’un lait sans lactose conçu pour les chiens, et surveillez l’apparition de maux de ventre."
+    "fr": "Commencez par une petite quantité, de préférence d’un lait sans lactose conçu pour les chiens, et surveillez l’apparition de maux de ventre.",
+    "nb": "Begynn med en liten mengde, helst laktosefri melk laget for hunder, og følg med på om hunden får vondt i magen."
   },
   "child": {
     "en": "Dogs don't need milk to stay healthy, so ask a grown-up before sharing any with your dog.",
@@ -121,7 +128,8 @@
     "sv": "Hundar behöver inte mjölk för att hålla sig friska, så fråga en vuxen innan du ger din hund mjölk.",
     "da": "Hunde har ikke brug for mælk for at holde sig sunde, så spørg en voksen, før du deler mælk med din hund.",
     "fi": "Koirat eivät tarvitse maitoa pysyäkseen terveinä, joten kysy ensin aikuiselta, saako koiralle antaa sitä.",
-    "fr": "Les chiens n’ont pas besoin de lait pour rester en bonne santé : demande donc à un adulte avant d’en partager avec ton chien."
+    "fr": "Les chiens n’ont pas besoin de lait pour rester en bonne santé : demande donc à un adulte avant d’en partager avec ton chien.",
+    "nb": "Hunder trenger ikke melk for å holde seg friske, så spør en voksen før du deler noe med hunden din."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "sv": "Är laktosfri mjölk bättre för hundar än vanlig mjölk?",
         "da": "Er laktosefri mælk bedre for hunde end almindelig mælk?",
         "fi": "Onko laktoositon maito koirille parempaa kuin tavallinen maito?",
-        "fr": "Le lait sans lactose est-il meilleur pour les chiens que le lait ordinaire ?"
+        "fr": "Le lait sans lactose est-il meilleur pour les chiens que le lait ordinaire ?",
+        "nb": "Er laktosefri melk bedre for hunder enn vanlig melk?"
       },
       "a": {
         "en": "It has no lactose, which can cause digestive problems, but it can still upset dogs that are allergic to milk protein.",
@@ -153,7 +162,8 @@
         "sv": "Den innehåller ingen laktos, som kan orsaka matsmältningsproblem, men den kan ändå ge orolig mage hos hundar som är allergiska mot mjölkprotein.",
         "da": "Den indeholder ikke laktose, som kan give fordøjelsesproblemer, men den kan stadig give ondt i maven hos hunde, der er allergiske over for mælkeprotein.",
         "fi": "Siinä ei ole laktoosia, joka voi aiheuttaa ruoansulatusongelmia, mutta maitoproteiinille allergisen koiran vatsa voi silti mennä siitä sekaisin.",
-        "fr": "Il ne contient pas de lactose, qui peut causer des troubles digestifs, mais il peut malgré tout donner mal au ventre aux chiens allergiques aux protéines du lait."
+        "fr": "Il ne contient pas de lactose, qui peut causer des troubles digestifs, mais il peut malgré tout donner mal au ventre aux chiens allergiques aux protéines du lait.",
+        "nb": "Den har ingen laktose, som kan gi fordøyelsesproblemer, men den kan fortsatt gi urolig mage hos hunder med allergi mot melkeprotein."
       }
     }
   ],
@@ -275,6 +285,11 @@
       "status": "verified",
       "verified_by": "claude-c-fr-2026-11-16",
       "verified_hash": "526dd50d0076d60468f3688673534e204b3a577a280f7b5a265d40f4239929fa"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "31a8bb7135ff0f01b4ed33d77df4a07bc361323e1b995a6fa9617dd290f32f11"
     }
   }
 }
