@@ -46,7 +46,7 @@ Three.js se pri PetPrepu splača **na petprep.si**, ne v aplikaciji in ne za sam
 - **Znana omejitev:** na telefonu je prizor majhen in info točke so tesno skupaj.
 - **Figura psa je namenoma igrača** iz osnovnih oblik, z napisom »V aplikaciji PetPrep je ljubljenček realističen.«
 
-### M6-S07 — vse pasme (David 16. 11. 2026, `pet-prep-website` PR #442, **čaka združitev**)
+### M6-S07 — vse pasme (David 16. 11. 2026, `pet-prep-website` PR #442, združeno 16. 11. 2026)
 - David: »Kalkulator razširi na vse pasme, pa da bo dinamično dodajalo tudi vse bodoče pasme« in »brez sklanjanja … koliko-je-dela-s-psom je pravilno«.
 - **URL-ji:** `/how-much-work-is-a-dog/<breed>` · `/sl/koliko-je-dela-s-psom/<pasma>` za vseh 111 psov registra; nova pasma v registru dobi stran, vnos v zemljevidu strani in kartico na strani pasme ob naslednji gradnji. Stara labradorčeva URL-ja trajno preusmerita (308).
 - **Naslovi brez sklanjanja:** »Labradorec: koliko je dela s tem psom?« · »How much work is a Labrador Retriever?«. Sredi stavka je ime pasme z malo začetnico (»s psom pasme labradorec«).
@@ -87,7 +87,7 @@ Izračun za 13 let uporabi številke odraslega psa za vsa leta (poenostavitev, n
 ### Odprto za Davida
 1. **Cene za Slovenijo.** Številke so britanski minimum PDSA, samo preračunan. Ali poiščemo slovenski vir ali ostane PDSA z opombo »cene v vaši državi so lahko drugačne«.
 2. **Pravi partner:** kdo in pod kakšnimi pogoji (REVENUE_MODELS §4).
-3. ~~Ali gre to na petprep.si pred koncem validacije~~ — David 15. 11. 2026: da, stran je prenesena (SL + EN). Odprto: ostalih 13 jezikov.
+3. ~~Ali gre to na petprep.si pred koncem validacije~~ — David 15. 11. 2026: da, stran je prenesena (SL + EN). Ostalih 13 jezikov: David 16. 11. 2026 — pravilo »vse v vseh jezikih« (ROADMAP M6-S08).
 4. ~~Ali naj se pasma izbira ali ostane ena stran na pasmo~~ — David 16. 11. 2026: kalkulator za **vse pasme**, dinamično iz registra, vsaka nova pasma samodejno (ROADMAP M6-S07).
 
 ### Naslednji koraki, če David potrdi

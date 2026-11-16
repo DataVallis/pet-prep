@@ -4,7 +4,7 @@
 > najprimernejše pasme za način življenja družine, nato upsell na PetPrep s to pasmo. David je izbral: **ločena
 > podstran s karticami mini orodij + najprej specifikacija** (anketa, 16. 11. 2026). Ostalo je Claudov predlog;
 > Davidove odločitve so označene **(David)**.
-> **Stanje:** 🗓 predlog, čaka Davidove odgovore v §10. Nič ni zgrajeno.
+> **Stanje:** 🗓 odobreno za gradnjo (David 16. 11. 2026, §10). Nič ni zgrajeno.
 > **Davidove odločitve 16. 11. 2026 (21:46):** (1) **brez PDF-jev in brez Lemon Squeezy za povzetke** — povzetek je dinamična stran
 > za tisk (enako kot T8); (2) **e-naslove zbiramo** (prek našega API-ja, T9); (3) **kalkulator »Koliko dela je pes« se
 > razširi na vse pasme in samodejno dobi vsako novo pasmo**, ko jo dodamo v register; (4) kartica »Je vaš dom
@@ -24,13 +24,13 @@
 
 ## 2. Podstran »Pred nakupom psa« (hub)
 
-- URL: `/sl/pred-nakupom-psa` · `/before-you-get-a-dog` (SL + EN). V glavi strani ali v nogi — odloči David (§10).
+- URL: `/sl/pred-nakupom-psa` · `/before-you-get-a-dog` in slugi v **vseh 15 jezikih** (pravilo, David 16. 11. 2026). **V glavi strani** (David 16. 11. 2026).
 - Kartice mini orodij, vsaka s svojim URL-jem (SEO, oglasi, deljenje):
 
 | Kartica | Orodje | Stanje |
 |---|---|---|
 | Katera pasma je za vas? | ta kviz | 🗓 ta spec |
-| Koliko dela in denarja je pes? | three.js kalkulator (THREEJS §4) | ✅ samo labradorec |
+| Koliko je dela s psom? | three.js kalkulator (THREEJS §4), stran za vsako pasmo (M6-S07) | ✅ vse pasme (SL + EN; ostali jeziki M6-S08) |
 | Kako velik bo zares? | primerjalnik velikosti (THREEJS §3 #2) | 🗓 predlog |
 | Je vaš dom pripravljen? | kontrolni seznam doma in stanovanja pred prihodom psa (ležišče, varna tla, ograjice, kabli, prostor za hrano) | 🗓 ideja (David 16. 11. 2026), dummy kartica »Kmalu« |
 
@@ -115,6 +115,8 @@ pokritimi pasmami in to pove: »Izbiramo med X pasmami, za katere imamo preverje
 
 ## 8. Zasebnost in podatki
 
+**David 16. 11. 2026: anonimno štetje je dovoljeno.**
+
 - Kviz teče v brskalniku; odgovori se ne pošiljajo na strežnik PetPrep.
 - Brez analitičnih orodij brez Davidovega OK (pravilo repozitorija). Če David odobri, šteti samo anonimno
   (zaključeni kvizi, kateri top 3, kliki na CTA) — to je tudi vrednost za sponzorja (»koliko družin je razmišljalo o X«),
@@ -123,17 +125,18 @@ pokritimi pasmami in to pove: »Izbiramo med X pasmami, za katere imamo preverje
 
 ## 9. Tehnika (predlog)
 
-- Stran v `pet-prep-website` (Next.js), SL + EN; vprašanja in točkovanje kot čista funkcija s testi
+- Stran v `pet-prep-website` (Next.js), vseh 15 jezikov; vprašanja in točkovanje kot čista funkcija s testi
   (vhod: odgovori + podatki pasem → izhod: razvrščen seznam z razlogi).
 - Podatki: `registry.json` na spletni strani + izvoz oznak iz `backend/config/breed_suitability.php`
   (preveriti, ali so oznake že v izvozu za splet; če ne, skripta izvoza, da ostane en vir resnice).
 - Prevodi oznak iz obstoječih nizov `breedSuitability.<tag>` (naravno, ne dobesedno).
 - Meritve uspeha (če David odobri štetje): delež zaključenih kvizov, klik na kalkulator, klik na CTA PetPrep.
 
-## 10. Odprta vprašanja za Davida
+## 10. Odločitve (David, 16. 11. 2026)
 
-1. ~~Ali kalkulator razširimo na vse pasme?~~ — David 16. 11. 2026: da, na vse in dinamično za vse prihodnje pasme.
-2. Podstran v glavi strani ali samo v nogi in v zemljevidu strani?
-3. Kviz samo za pse ali tudi mačke (6 pasem, premalo za smiseln rezultat — predlog: v1 samo psi)?
-4. Ali dovoliš anonimno štetje (§8)?
-5. Kdaj: zdaj ali z valom 2 (plačani oglasi, VALIDATION_PLAN)? Kviz ni na zamrznjenem seznamu, je kanal pridobivanja.
+1. Kalkulator za vse pasme, dinamično tudi za prihodnje — **narejeno** (M6-S07, pet-prep-website #442).
+2. Podstran **v glavi strani**.
+3. Kviz v1 **samo psi**.
+4. **Anonimno štetje dovoljeno** (§8): števci na našem strežniku, brez osebnih podatkov in piškotkov.
+5. **Gradimo zdaj.**
+6. **Vseh 15 jezikov** — pravilo za vse na spletni strani (»Vse mora biti v vseh jezikih ki jih podpiramo. To je. Pravilo«).
