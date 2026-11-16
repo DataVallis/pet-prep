@@ -13,7 +13,8 @@
     "de": "Bratensoße",
     "fr": "Sauce au jus",
     "es": "Salsa de carne",
-    "pt": "Molho de carne"
+    "pt": "Molho de carne",
+    "nl": "Jus"
   },
   "question": {
     "en": "Can cats eat gravy?",
@@ -27,7 +28,8 @@
     "de": "Dürfen Katzen Bratensoße fressen?",
     "fr": "Les chats peuvent-ils manger de la sauce au jus ?",
     "es": "¿Pueden los gatos comer salsa de carne?",
-    "pt": "Os gatos podem comer molho de carne?"
+    "pt": "Os gatos podem comer molho de carne?",
+    "nl": "Mogen katten jus eten?"
   },
   "url_slug": {
     "en": "gravy",
@@ -41,7 +43,8 @@
     "de": "bratensosse",
     "fr": "sauce-au-jus",
     "es": "salsa-de-carne",
-    "pt": "molho-de-carne"
+    "pt": "molho-de-carne",
+    "nl": "jus"
   },
   "level": "dangerous",
   "answer": {
@@ -56,7 +59,8 @@
     "de": "Nein, Bratensoße für Menschen ist nichts für Katzen. Sie ist meist salzig und enthält oft Zwiebel, Knoblauch und Gewürze, und Zwiebel und Knoblauch sind für Katzen giftig. Außerdem kann Soße viel Fett enthalten. Halten Sie sie vom Napf Ihrer Katze fern.",
     "fr": "Non, la sauce au jus préparée pour les humains n’est pas faite pour les chats. Elle est généralement salée et contient souvent de l’oignon, de l’ail et des assaisonnements, or l’oignon et l’ail sont toxiques pour les chats. Elle peut aussi être très grasse. Ne la mettez pas dans l’assiette de votre chat.",
     "es": "No, la salsa de carne hecha para personas no es para los gatos. Suele ser salada y a menudo lleva cebolla, ajo y condimentos, y la cebolla y el ajo son tóxicos para los gatos. Además, la salsa de carne puede tener mucha grasa. No la pongas en el plato de tu gato.",
-    "pt": "Não, o molho feito para pessoas não é para gatos. Costuma ser salgado e leva muitas vezes cebola, alho e temperos, e a cebola e o alho são tóxicos para os gatos. O molho pode ainda ter muita gordura. Não o ponhas no prato do teu gato."
+    "pt": "Não, o molho feito para pessoas não é para gatos. Costuma ser salgado e leva muitas vezes cebola, alho e temperos, e a cebola e o alho são tóxicos para os gatos. O molho pode ainda ter muita gordura. Não o ponhas no prato do teu gato.",
+    "nl": "Nee, jus voor mensen is niets voor katten. Het is meestal zout en bevat vaak ui, knoflook en kruiden, en ui en knoflook zijn giftig voor katten. Jus kan ook veel vet bevatten. Laat jus dus niet in het bakje van je kat belanden."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The ASPCA suggests a drizzle of gravy on a pet's holiday dinner, but Cats Protection warns that gravy made for humans is usually salty and contains garlic and seasoning, and PDSA says stuffing and gravy often contain onion, leeks and garlic, which can be deadly to cats and dogs. Onion, garlic, chives and leeks are toxic to cats even when cooked or dried. The RSPCA adds that gravy can contain high levels of salt and fat, and the ASPCA notes that bouillon cubes used for making gravy contain high amounts of sodium.",
@@ -70,7 +74,8 @@
     "de": "Die Quellen sind sich nicht einig, deshalb gilt die strengere Stufe. Die ASPCA schlägt vor, das Festtagsessen eines Haustiers mit einem Spritzer Bratensoße abzurunden, doch Cats Protection warnt, dass Bratensoße für Menschen meist salzig ist und Knoblauch und Gewürze enthält, und PDSA sagt, dass Füllung und Bratensoße oft Zwiebel, Lauch und Knoblauch enthalten, die für Katzen und Hunde tödlich sein können. Zwiebel, Knoblauch, Schnittlauch und Lauch sind für Katzen auch gekocht oder getrocknet giftig. Die RSPCA ergänzt, dass Bratensoße viel Salz und Fett enthalten kann, und die ASPCA weist darauf hin, dass Brühwürfel zum Anrühren von Soße sehr viel Natrium enthalten.",
     "fr": "Les sources divergent : nous appliquons donc le niveau le plus strict. L’ASPCA suggère d’ajouter un filet de sauce au jus au repas de fête d’un animal, mais Cats Protection avertit que la sauce préparée pour les humains est généralement salée et contient de l’ail et des assaisonnements, et la PDSA indique que la farce et la sauce au jus contiennent souvent de l’oignon, du poireau et de l’ail, qui peuvent être mortels pour les chats et les chiens. L’oignon, l’ail, la ciboulette et le poireau sont toxiques pour les chats, même cuits ou séchés. La RSPCA ajoute que la sauce au jus peut contenir beaucoup de sel et de graisses, et l’ASPCA note que les cubes de bouillon utilisés pour préparer la sauce contiennent beaucoup de sodium.",
     "es": "Las fuentes no coinciden, así que aplicamos el nivel más estricto. La ASPCA sugiere un chorrito de salsa de carne en la cena festiva de una mascota, pero Cats Protection advierte de que la salsa hecha para personas suele ser salada y llevar ajo y condimentos, y PDSA dice que el relleno y la salsa de carne suelen llevar cebolla, puerro y ajo, que pueden ser mortales para gatos y perros. La cebolla, el ajo, el cebollino y el puerro son tóxicos para los gatos aunque estén cocinados o secos. La RSPCA añade que la salsa de carne puede llevar mucha sal y grasa, y la ASPCA señala que las pastillas de caldo que se usan para hacer salsas contienen mucho sodio.",
-    "pt": "As fontes não estão de acordo, por isso usamos o nível mais rigoroso. A ASPCA sugere um fio de molho no jantar de festa do animal, mas a Cats Protection avisa que o molho feito para pessoas costuma ser salgado e conter alho e temperos, e a PDSA diz que o recheio e o molho levam muitas vezes cebola, alho-francês e alho, que podem ser mortais para gatos e cães. A cebola, o alho, o cebolinho e o alho-francês são tóxicos para os gatos mesmo cozinhados ou secos. A RSPCA acrescenta que o molho pode ter muito sal e gordura, e a ASPCA refere que os cubos de caldo usados para fazer molho têm muito sódio."
+    "pt": "As fontes não estão de acordo, por isso usamos o nível mais rigoroso. A ASPCA sugere um fio de molho no jantar de festa do animal, mas a Cats Protection avisa que o molho feito para pessoas costuma ser salgado e conter alho e temperos, e a PDSA diz que o recheio e o molho levam muitas vezes cebola, alho-francês e alho, que podem ser mortais para gatos e cães. A cebola, o alho, o cebolinho e o alho-francês são tóxicos para os gatos mesmo cozinhados ou secos. A RSPCA acrescenta que o molho pode ter muito sal e gordura, e a ASPCA refere que os cubos de caldo usados para fazer molho têm muito sódio.",
+    "nl": "De bronnen zijn het niet met elkaar eens, dus we hanteren het strengere niveau. De ASPCA stelt voor om wat jus over het feestdiner van je huisdier te sprenkelen, maar Cats Protection waarschuwt dat jus voor mensen meestal zout is en knoflook en kruiden bevat, en PDSA zegt dat vulling en jus vaak ui, prei en knoflook bevatten, en dat kan dodelijk zijn voor katten en honden. Ui, knoflook, bieslook en prei zijn giftig voor katten, ook als ze gekookt of gedroogd zijn. De RSPCA voegt toe dat jus veel zout en vet kan bevatten, en de ASPCA merkt op dat bouillonblokjes voor het maken van jus veel natrium bevatten."
   },
   "signs": {
     "en": [
@@ -132,6 +137,11 @@
       "Vómitos",
       "Diarreia",
       "Indisposição de estômago"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Buikklachten"
     ]
   },
   "what_to_do": {
@@ -146,7 +156,8 @@
     "de": "Hat Ihre Katze Bratensoße gefressen, die Zwiebel oder Knoblauch enthalten könnte, wenden Sie sich so schnell wie möglich an Ihren Tierarzt. Vermuten Sie, dass sie auch andere Reste gefressen hat, sagen Sie Ihrem Tierarzt, was es genau war.",
     "fr": "Si votre chat a mangé de la sauce au jus pouvant contenir de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible. Si vous pensez qu’il a aussi mangé d’autres restes, dites à votre vétérinaire ce qu’il a mangé.",
     "es": "Si tu gato ha comido salsa de carne que pueda llevar cebolla o ajo, ponte en contacto con tu veterinario lo antes posible. Si crees que también ha comido otras sobras, dile a tu veterinario qué ha comido.",
-    "pt": "Se o teu gato comeu molho que possa conter cebola ou alho, contacta o teu veterinário o mais depressa possível. Se achas que ele comeu também outras sobras, diz ao veterinário o que foi."
+    "pt": "Se o teu gato comeu molho que possa conter cebola ou alho, contacta o teu veterinário o mais depressa possível. Se achas que ele comeu também outras sobras, diz ao veterinário o que foi.",
+    "nl": "Heeft je kat jus gegeten waar mogelijk ui of knoflook in zat, neem dan zo snel mogelijk contact op met je dierenarts. Denk je dat ze ook andere restjes heeft gegeten, vertel je dierenarts dan wat ze heeft gegeten."
   },
   "serving": null,
   "child": {
@@ -161,7 +172,8 @@
     "de": "Bratensoße ist Essen für Menschen und enthält Salz und Zwiebel. Für deine Katze ist ihr eigenes Katzenfutter das Beste.",
     "fr": "La sauce au jus, c’est pour les humains, avec du sel et de l’oignon. Ce qu’il y a de mieux pour ton chat, c’est sa propre nourriture pour chats.",
     "es": "La salsa de carne es comida de personas y lleva sal y cebolla. La comida para gatos es la mejor opción para el gatito.",
-    "pt": "O molho é comida de pessoas, com sal e cebola. A comida própria do gatinho é a melhor escolha para ele."
+    "pt": "O molho é comida de pessoas, com sal e cebola. A comida própria do gatinho é a melhor escolha para ele.",
+    "nl": "Jus is voor mensen en zit vol zout en ui. Het beste voor je kat is haar eigen kattenvoer."
   },
   "faq": [
     {
@@ -177,7 +189,8 @@
         "de": "Was darf meine Katze stattdessen vom Festtagsessen haben?",
         "fr": "Que peut manger mon chat du repas de fête à la place ?",
         "es": "¿Qué puede comer mi gato de la cena festiva en su lugar?",
-        "pt": "O que posso dar ao meu gato do jantar de festa?"
+        "pt": "O que posso dar ao meu gato do jantar de festa?",
+        "nl": "Wat kan mijn kat in plaats daarvan krijgen van het feestdiner?"
       },
       "a": {
         "en": "PDSA says a small slice of skin- and bone-free turkey and boiled vegetables without any sauces shouldn't cause problems. Leave the gravy off.",
@@ -191,7 +204,8 @@
         "de": "PDSA sagt, eine kleine Scheibe Pute ohne Haut und Knochen und gekochtes Gemüse ohne Soßen sollten keine Probleme machen. Lassen Sie die Bratensoße weg.",
         "fr": "La PDSA indique qu’une petite tranche de dinde sans peau ni os et des légumes bouillis sans aucune sauce ne devraient pas poser de problème. Laissez la sauce de côté.",
         "es": "PDSA dice que un trocito pequeño de pavo sin piel ni huesos y verduras hervidas sin ninguna salsa no deberían causar problemas. No le pongas salsa de carne.",
-        "pt": "A PDSA diz que uma fatia pequena de peru sem pele nem ossos e legumes cozidos sem molhos não deve causar problemas. Deixa o molho de fora."
+        "pt": "A PDSA diz que uma fatia pequena de peru sem pele nem ossos e legumes cozidos sem molhos não deve causar problemas. Deixa o molho de fora.",
+        "nl": "PDSA zegt dat een klein plakje kalkoen zonder vel en botjes en gekookte groente zonder saus geen problemen zou moeten opleveren. Laat de jus weg."
       }
     }
   ],
@@ -321,6 +335,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "54a5315d01941f1411c020eb4562286c899252975e36572490c29d7cf998d03c"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dd3a142d9fbeae6420a20102ddf2571e86fbfe5197b7d5ec99962b7e31b37653"
     }
   }
 }

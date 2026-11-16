@@ -14,7 +14,8 @@
     "it": "Marshmallow",
     "de": "Marshmallows",
     "fr": "Guimauves",
-    "pt": "Marshmallows"
+    "pt": "Marshmallows",
+    "nl": "Marshmallows"
   },
   "question": {
     "en": "Can dogs eat marshmallows?",
@@ -29,7 +30,8 @@
     "it": "I cani possono mangiare i marshmallow?",
     "de": "Dürfen Hunde Marshmallows fressen?",
     "fr": "Les chiens peuvent-ils manger des guimauves ?",
-    "pt": "Os cães podem comer marshmallows?"
+    "pt": "Os cães podem comer marshmallows?",
+    "nl": "Mogen honden marshmallows eten?"
   },
   "url_slug": {
     "en": "marshmallows",
@@ -44,7 +46,8 @@
     "it": "marshmallow",
     "de": "marshmallows",
     "fr": "guimauves",
-    "pt": "marshmallows"
+    "pt": "marshmallows",
+    "nl": "marshmallows"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "it": "No. Non tutti i marshmallow sono tossici per i cani, ma non gli fanno bene: sono fatti di zucchero, sciroppo di mais e gelatina e hanno un valore nutritivo scarso o nullo. Alcuni contengono xilitolo, che è tossico per i cani.",
     "de": "Nein. Nicht alle Marshmallows sind für Hunde giftig, aber gut sind sie nicht: Sie bestehen aus Zucker, Maissirup und Gelatine und haben kaum oder keinen Nährwert. Manche enthalten Xylit, das für Hunde giftig ist.",
     "fr": "Non. Toutes les guimauves ne sont pas toxiques pour les chiens, mais elles ne sont pas bonnes pour eux : elles sont faites de sucre, de sirop de maïs et de gélatine, et n’ont que peu ou pas de valeur nutritive. Certaines contiennent du xylitol, toxique pour les chiens.",
-    "pt": "Não. Nem todos os marshmallows são tóxicos para os cães, mas não lhes fazem bem: são feitos de açúcar, xarope de milho e gelatina e têm pouco ou nenhum valor nutricional. Alguns contêm xilitol, que é tóxico para os cães."
+    "pt": "Não. Nem todos os marshmallows são tóxicos para os cães, mas não lhes fazem bem: são feitos de açúcar, xarope de milho e gelatina e têm pouco ou nenhum valor nutricional. Alguns contêm xilitol, que é tóxico para os cães.",
+    "nl": "Nee. Niet alle marshmallows zijn giftig voor honden, maar ze zijn niet goed voor ze: ze zijn gemaakt van suiker, maïssiroop en gelatine en hebben weinig tot geen voedingswaarde. Sommige bevatten xylitol, dat giftig is voor honden."
   },
   "why": {
     "en": "Marshmallows contain a very high amount of sugar and calories, so they are especially risky for dogs with diabetes or weight problems, and even in healthy dogs sugary treats can contribute to obesity. Eating too many can cause gastrointestinal upset and puts a dog at risk of pancreatitis. A marshmallow with xylitol is toxic even in small amounts and can cause dangerously low blood sugar.",
@@ -75,7 +79,8 @@
     "it": "I marshmallow contengono moltissimo zucchero e molte calorie, quindi sono particolarmente rischiosi per i cani con diabete o problemi di peso, e anche nei cani sani i dolci zuccherati possono contribuire all’obesità. Mangiarne troppi può causare disturbi gastrointestinali e mette il cane a rischio di pancreatite. Un marshmallow con xilitolo è tossico anche in piccole quantità e può provocare un calo pericoloso della glicemia.",
     "de": "Marshmallows enthalten extrem viel Zucker und Kalorien, deshalb sind sie besonders riskant für Hunde mit Diabetes oder Gewichtsproblemen, und selbst bei gesunden Hunden können zuckerhaltige Leckereien zu Übergewicht beitragen. Zu viele können Magen-Darm-Beschwerden verursachen und bergen das Risiko einer Bauchspeicheldrüsenentzündung. Ein Marshmallow mit Xylit ist schon in kleinen Mengen giftig und kann gefährlich niedrigen Blutzucker verursachen.",
     "fr": "Les guimauves contiennent énormément de sucre et de calories ; elles sont donc particulièrement risquées pour les chiens diabétiques ou en surpoids, et même chez un chien en bonne santé, les friandises sucrées peuvent favoriser l’obésité. En manger trop peut provoquer des troubles gastro-intestinaux et expose le chien à une pancréatite. Une guimauve contenant du xylitol est toxique même en petite quantité et peut provoquer une chute dangereuse de la glycémie.",
-    "pt": "Os marshmallows têm uma quantidade muito elevada de açúcar e calorias, por isso são especialmente arriscados para cães com diabetes ou problemas de peso, e mesmo em cães saudáveis as guloseimas açucaradas podem contribuir para a obesidade. Comer muitos pode causar problemas gastrointestinais e aumenta o risco de pancreatite no cão. Um marshmallow com xilitol é tóxico mesmo em pequenas quantidades e pode causar uma descida perigosa do açúcar no sangue."
+    "pt": "Os marshmallows têm uma quantidade muito elevada de açúcar e calorias, por isso são especialmente arriscados para cães com diabetes ou problemas de peso, e mesmo em cães saudáveis as guloseimas açucaradas podem contribuir para a obesidade. Comer muitos pode causar problemas gastrointestinais e aumenta o risco de pancreatite no cão. Um marshmallow com xilitol é tóxico mesmo em pequenas quantidades e pode causar uma descida perigosa do açúcar no sangue.",
+    "nl": "Marshmallows bevatten heel veel suiker en calorieën, dus ze zijn vooral riskant voor honden met diabetes of gewichtsproblemen, en zelfs bij gezonde honden kunnen suikerrijke snoepjes bijdragen aan overgewicht. Te veel eten kan maag-darmklachten veroorzaken en vergroot het risico op alvleesklierontsteking. Een marshmallow met xylitol is zelfs in kleine hoeveelheden giftig en kan een gevaarlijk lage bloedsuikerspiegel veroorzaken."
   },
   "signs": {
     "en": [
@@ -155,6 +160,12 @@
       "Falta de apetite",
       "Diarreia",
       "Andar cambaleante ou convulsões (xilitol)"
+    ],
+    "nl": [
+      "Braken",
+      "Weinig eetlust",
+      "Diarree",
+      "Wankelend lopen of toevallen (xylitol)"
     ]
   },
   "what_to_do": {
@@ -170,7 +181,8 @@
     "it": "Chiama subito il veterinario se il tuo cane ha mangiato diversi marshmallow, o anche un solo marshmallow che potrebbe contenere xilitolo.",
     "de": "Rufen Sie sofort Ihren Tierarzt an, wenn Ihr Hund mehrere Marshmallows gefressen hat oder ein Marshmallow, das Xylit enthalten könnte.",
     "fr": "Appelez immédiatement votre vétérinaire si votre chien a mangé plusieurs guimauves, ou une guimauve pouvant contenir du xylitol.",
-    "pt": "Liga imediatamente ao teu veterinário se o teu cão comeu vários marshmallows, ou algum que possa conter xilitol."
+    "pt": "Liga imediatamente ao teu veterinário se o teu cão comeu vários marshmallows, ou algum que possa conter xilitol.",
+    "nl": "Bel meteen je dierenarts als je hond meerdere marshmallows heeft gegeten, of een marshmallow die xylitol kan bevatten."
   },
   "serving": {
     "en": "Instead of marshmallows: good-quality dog treats or healthier snacks such as carrots, green vegetables or blueberries.",
@@ -185,7 +197,8 @@
     "it": "Al posto dei marshmallow: premi per cani di buona qualità o spuntini più sani come carote, ortaggi verdi o mirtilli.",
     "de": "Statt Marshmallows: hochwertige Hundeleckerlis oder gesündere Snacks wie Karotten, grünes Gemüse oder Heidelbeeren.",
     "fr": "À la place des guimauves : de bonnes friandises pour chiens ou des en-cas plus sains, comme des carottes, des légumes verts ou des myrtilles.",
-    "pt": "Em vez de marshmallows: guloseimas para cães de boa qualidade ou alternativas mais saudáveis, como cenouras, legumes verdes ou mirtilos."
+    "pt": "Em vez de marshmallows: guloseimas para cães de boa qualidade ou alternativas mais saudáveis, como cenouras, legumes verdes ou mirtilos.",
+    "nl": "In plaats van marshmallows: hondensnoepjes van goede kwaliteit of gezondere tussendoortjes zoals wortels, groene groenten of blauwe bessen."
   },
   "child": {
     "en": "Marshmallows are too sugary for dogs. Share a carrot or a few blueberries with your dog instead!",
@@ -200,7 +213,8 @@
     "it": "I marshmallow sono troppo zuccherati per i cani. Dividi invece con il tuo cane una carota o qualche mirtillo!",
     "de": "Marshmallows sind für Hunde zu zuckerig. Teile mit deinem Hund lieber eine Karotte oder ein paar Heidelbeeren!",
     "fr": "Les guimauves sont trop sucrées pour les chiens. Partage plutôt une carotte ou quelques myrtilles avec ton chien !",
-    "pt": "Os marshmallows são doces demais para os cães. Partilha antes uma cenoura ou uns mirtilos com o teu cão!"
+    "pt": "Os marshmallows são doces demais para os cães. Partilha antes uma cenoura ou uns mirtilos com o teu cão!",
+    "nl": "Marshmallows zijn te zoet voor honden. Deel liever een wortel of een paar blauwe bessen met je hond!"
   },
   "faq": [
     {
@@ -217,7 +231,8 @@
         "it": "I marshmallow senza zucchero sono più sicuri?",
         "de": "Sind zuckerfreie Marshmallows sicherer?",
         "fr": "Les guimauves sans sucre sont-elles plus sûres ?",
-        "pt": "Os marshmallows sem açúcar são mais seguros?"
+        "pt": "Os marshmallows sem açúcar são mais seguros?",
+        "nl": "Zijn suikervrije marshmallows veiliger?"
       },
       "a": {
         "en": "No. Check the label: if a marshmallow contains xylitol, it is toxic to dogs and can be extremely harmful even in small amounts.",
@@ -232,7 +247,8 @@
         "it": "No. Controlla l’etichetta: se un marshmallow contiene xilitolo, è tossico per i cani e può fare molto male anche in piccole quantità.",
         "de": "Nein. Prüfen Sie das Etikett: Enthält ein Marshmallow Xylit, ist es für Hunde giftig und kann schon in kleinen Mengen extrem schädlich sein.",
         "fr": "Non. Vérifiez l’étiquette : si une guimauve contient du xylitol, elle est toxique pour les chiens et peut être extrêmement dangereuse, même en petite quantité.",
-        "pt": "Não. Verifica o rótulo: se um marshmallow contém xilitol, é tóxico para os cães e pode ser extremamente nocivo mesmo em pequenas quantidades."
+        "pt": "Não. Verifica o rótulo: se um marshmallow contém xilitol, é tóxico para os cães e pode ser extremamente nocivo mesmo em pequenas quantidades.",
+        "nl": "Nee. Lees het etiket: als een marshmallow xylitol bevat, is hij giftig voor honden en kan hij zelfs in kleine hoeveelheden uiterst schadelijk zijn."
       }
     }
   ],
@@ -387,6 +403,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "92d2381ab01542bba8933730125277fbada0b3a46449d3de8755082083982e25"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "99f468ad5ca1f6b652b1ec74d43cdca41bd93811ed8278a7b610f522ef888148"
     }
   }
 }

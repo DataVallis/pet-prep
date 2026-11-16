@@ -14,7 +14,8 @@
     "it": "Riso",
     "de": "Reis",
     "fr": "Riz",
-    "pt": "Arroz"
+    "pt": "Arroz",
+    "nl": "Rijst"
   },
   "question": {
     "en": "Can dogs eat rice?",
@@ -29,7 +30,8 @@
     "it": "I cani possono mangiare il riso?",
     "de": "Dürfen Hunde Reis fressen?",
     "fr": "Les chiens peuvent-ils manger du riz ?",
-    "pt": "Os cães podem comer arroz?"
+    "pt": "Os cães podem comer arroz?",
+    "nl": "Mogen honden rijst eten?"
   },
   "url_slug": {
     "en": "rice",
@@ -44,7 +46,8 @@
     "it": "riso",
     "de": "reis",
     "fr": "riz",
-    "pt": "arroz"
+    "pt": "arroz",
+    "nl": "rijst"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "it": "Sì. Il riso cotto in bianco va bene per la maggior parte dei cani in piccole quantità, e i veterinari lo usano in una dieta in bianco dopo un mal di pancia. Lessalo in acqua senza condimenti né spezie e tieni le porzioni contenute, perché troppi carboidrati possono far ingrassare.",
     "de": "Ja. Einfacher gekochter Reis ist für die meisten Hunde in kleinen Mengen in Ordnung, und Tierärzte setzen ihn bei Magenbeschwerden in der Schonkost ein. Kochen Sie ihn in Wasser ohne Gewürze und halten Sie die Portionen klein, denn zu viele Kohlenhydrate können zu Gewichtszunahme führen.",
     "fr": "Oui. Le riz cuit nature convient à la plupart des chiens en petites quantités, et les vétérinaires l’utilisent dans une alimentation douce après des troubles digestifs. Faites-le cuire à l’eau, sans assaisonnement ni épices, et gardez des portions modestes, car trop de glucides peuvent entraîner une prise de poids.",
-    "pt": "Sim. O arroz simples cozido não faz mal à maioria dos cães em pequenas quantidades, e os veterinários usam-no numa dieta suave depois de uma indisposição de estômago. Coze-o em água, sem qualquer tempero, e mantém as porções moderadas, porque demasiados hidratos de carbono podem levar ao aumento de peso."
+    "pt": "Sim. O arroz simples cozido não faz mal à maioria dos cães em pequenas quantidades, e os veterinários usam-no numa dieta suave depois de uma indisposição de estômago. Coze-o em água, sem qualquer tempero, e mantém as porções moderadas, porque demasiados hidratos de carbono podem levar ao aumento de peso.",
+    "nl": "Ja. Gewone gekookte rijst is voor de meeste honden in kleine hoeveelheden prima, en dierenartsen gebruiken die in een licht verteerbaar dieet na maagklachten. Kook de rijst in water zonder kruiden of specerijen en houd de porties bescheiden, want te veel koolhydraten kunnen leiden tot gewichtstoename."
   },
   "why": {
     "en": "Rice is an ingredient in some commercial dog foods, and vets use it as a carb source in a bland diet after stomach upset. Seasonings and spices can upset the stomach or even be toxic. White rice has a higher glycemic index than brown rice and can raise blood sugar, so a diabetic dog should have only a little, not regularly. Chicken and rice is meant as a temporary diet for upset digestion, not a balanced long-term one.",
@@ -75,7 +79,8 @@
     "it": "Il riso è un ingrediente di alcuni alimenti industriali per cani, e i veterinari lo usano come fonte di carboidrati in una dieta in bianco dopo un disturbo di stomaco. Condimenti e spezie possono irritare lo stomaco o addirittura essere tossici. Il riso bianco ha un indice glicemico più alto del riso integrale e può far salire la glicemia, quindi un cane diabetico ne deve mangiare solo un po’ e non regolarmente. Pollo e riso sono pensati come dieta temporanea per una digestione in difficoltà, non come dieta equilibrata a lungo termine.",
     "de": "Reis ist eine Zutat in manchen Fertigfuttern für Hunde, und Tierärzte nutzen ihn als Kohlenhydratquelle in der Schonkost bei Magenbeschwerden. Gewürze können den Magen reizen oder sogar giftig sein. Weißer Reis hat einen höheren glykämischen Index als Naturreis und kann den Blutzucker ansteigen lassen, deshalb sollte ein Hund mit Diabetes nur ein wenig davon bekommen, nicht regelmäßig. Huhn mit Reis ist als vorübergehende Kost bei gereizter Verdauung gedacht, nicht als ausgewogene Dauerkost.",
     "fr": "Le riz entre dans la composition de certains aliments du commerce pour chiens, et les vétérinaires l’utilisent comme source de glucides dans une alimentation douce après des troubles digestifs. Les assaisonnements et les épices peuvent déranger l’estomac, voire être toxiques. Le riz blanc a un indice glycémique plus élevé que le riz complet et peut faire monter la glycémie : un chien diabétique ne doit donc en recevoir qu’un peu, et pas régulièrement. Le poulet au riz est un régime temporaire en cas de troubles digestifs, pas une alimentation équilibrée à long terme.",
-    "pt": "O arroz é um ingrediente de alguns alimentos comerciais para cães, e os veterinários usam-no como fonte de hidratos de carbono numa dieta suave depois de uma indisposição de estômago. Os temperos podem irritar o estômago ou até ser tóxicos. O arroz branco tem um índice glicémico mais alto do que o integral e pode aumentar o açúcar no sangue, por isso um cão diabético deve comer só um pouco, e não com regularidade. O frango com arroz serve como dieta temporária para problemas digestivos, não como alimentação equilibrada a longo prazo."
+    "pt": "O arroz é um ingrediente de alguns alimentos comerciais para cães, e os veterinários usam-no como fonte de hidratos de carbono numa dieta suave depois de uma indisposição de estômago. Os temperos podem irritar o estômago ou até ser tóxicos. O arroz branco tem um índice glicémico mais alto do que o integral e pode aumentar o açúcar no sangue, por isso um cão diabético deve comer só um pouco, e não com regularidade. O frango com arroz serve como dieta temporária para problemas digestivos, não como alimentação equilibrada a longo prazo.",
+    "nl": "Rijst zit in sommige commerciële hondenvoeding, en dierenartsen gebruiken die als bron van koolhydraten in een licht verteerbaar dieet na maagklachten. Kruiden en specerijen kunnen de maag van streek maken of zelfs giftig zijn. Witte rijst heeft een hogere glycemische index dan bruine rijst en kan de bloedsuikerspiegel verhogen, dus een hond met diabetes mag er maar een beetje van krijgen, en niet regelmatig. Kip met rijst is bedoeld als tijdelijk dieet bij een verstoorde spijsvertering, niet als uitgebalanceerd dieet voor de lange termijn."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "it": "Come per ogni alimento nuovo, chiedi prima al veterinario e comincia con poco. Se il tuo cane è diabetico, dagli solo un po’ di riso bianco, e non regolarmente.",
     "de": "Wie bei jedem neuen Futter gilt: Fragen Sie zuerst Ihren Tierarzt und beginnen Sie langsam. Hat Ihr Hund Diabetes, geben Sie nur ein wenig weißen Reis und nicht regelmäßig.",
     "fr": "Comme pour tout nouvel aliment, demandez d’abord l’avis de votre vétérinaire et allez-y doucement. Si votre chien est diabétique, ne lui donnez qu’un peu de riz blanc, et pas de façon régulière.",
-    "pt": "Como com qualquer alimento novo, pergunta primeiro ao teu veterinário e começa devagar. Se o teu cão for diabético, dá apenas um pouco de arroz branco, e não regularmente."
+    "pt": "Como com qualquer alimento novo, pergunta primeiro ao teu veterinário e começa devagar. Se o teu cão for diabético, dá apenas um pouco de arroz branco, e não regularmente.",
+    "nl": "Vraag, zoals bij elk nieuw voedsel, eerst je dierenarts en begin langzaam. Heeft je hond diabetes, geef dan maar een beetje witte rijst en niet regelmatig."
   },
   "serving": {
     "en": "Plain rice boiled in water, with no seasonings or spices, as a small part of a meal.",
@@ -106,7 +112,8 @@
     "it": "Riso lessato in acqua, senza condimenti né spezie, come piccola parte di un pasto.",
     "de": "Einfacher, in Wasser gekochter Reis ohne Gewürze, als kleiner Teil einer Mahlzeit.",
     "fr": "Riz cuit à l’eau, sans assaisonnement ni épices, comme petite part d’un repas.",
-    "pt": "Arroz simples cozido em água, sem qualquer tempero, como uma pequena parte de uma refeição."
+    "pt": "Arroz simples cozido em água, sem qualquer tempero, como uma pequena parte de uma refeição.",
+    "nl": "Gewone rijst, gekookt in water, zonder kruiden of specerijen, als klein onderdeel van een maaltijd."
   },
   "child": {
     "en": "Dogs can have a little plain cooked rice. A grown-up cooks it in water without spices, just for the dog.",
@@ -121,7 +128,8 @@
     "it": "I cani possono mangiare un po’ di riso cotto in bianco. Lo cuoce un adulto in acqua, senza spezie, apposta per il cane.",
     "de": "Hunde dürfen ein wenig einfachen gekochten Reis haben. Ein Erwachsener kocht ihn in Wasser ohne Gewürze, extra für den Hund.",
     "fr": "Les chiens peuvent manger un peu de riz cuit nature. Un adulte le fait cuire à l’eau, sans épices, rien que pour le chien.",
-    "pt": "Os cães podem comer um pouco de arroz simples cozido. Um adulto coze-o em água, sem temperos, só para o cão."
+    "pt": "Os cães podem comer um pouco de arroz simples cozido. Um adulto coze-o em água, sem temperos, só para o cão.",
+    "nl": "Honden mogen een beetje gewone gekookte rijst. Een volwassene kookt die in water zonder kruiden, speciaal voor de hond."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "it": "Riso bianco o integrale: qual è meglio?",
         "de": "Weißer oder brauner Reis – was ist besser?",
         "fr": "Riz blanc ou riz complet, lequel est préférable ?",
-        "pt": "Arroz branco ou integral – qual é melhor?"
+        "pt": "Arroz branco ou integral – qual é melhor?",
+        "nl": "Witte of bruine rijst: welke is beter?"
       },
       "a": {
         "en": "White rice has a higher glycemic index than brown rice and can raise blood sugar, so diabetic dogs should have only a little white rice, not regularly.",
@@ -153,7 +162,8 @@
         "it": "Il riso bianco ha un indice glicemico più alto del riso integrale e può far salire la glicemia, quindi i cani diabetici devono mangiarne solo un po’ e non regolarmente.",
         "de": "Weißer Reis hat einen höheren glykämischen Index als Naturreis und kann den Blutzucker ansteigen lassen, deshalb sollten Hunde mit Diabetes nur wenig weißen Reis bekommen, nicht regelmäßig.",
         "fr": "Le riz blanc a un indice glycémique plus élevé que le riz complet et peut faire monter la glycémie ; les chiens diabétiques ne doivent donc en recevoir qu’un peu, et pas régulièrement.",
-        "pt": "O arroz branco tem um índice glicémico mais alto do que o integral e pode aumentar o açúcar no sangue, por isso os cães diabéticos devem comer só um pouco de arroz branco, e não com regularidade."
+        "pt": "O arroz branco tem um índice glicémico mais alto do que o integral e pode aumentar o açúcar no sangue, por isso os cães diabéticos devem comer só um pouco de arroz branco, e não com regularidade.",
+        "nl": "Witte rijst heeft een hogere glycemische index dan bruine rijst en kan de bloedsuikerspiegel verhogen, dus honden met diabetes mogen maar een beetje witte rijst krijgen, en niet regelmatig."
       }
     },
     {
@@ -170,7 +180,8 @@
         "it": "Il riso può aiutare quando il mio cane ha la diarrea?",
         "de": "Kann Reis helfen, wenn mein Hund Durchfall hat?",
         "fr": "Le riz peut-il aider quand mon chien a la diarrhée ?",
-        "pt": "O arroz pode ajudar quando o meu cão tem diarreia?"
+        "pt": "O arroz pode ajudar quando o meu cão tem diarreia?",
+        "nl": "Kan rijst helpen als mijn hond diarree heeft?"
       },
       "a": {
         "en": "Plain boiled chicken and rice can help when a dog has diarrhoea, but it is a temporary diet and not balanced for long-term feeding.",
@@ -185,7 +196,8 @@
         "it": "Pollo lesso e riso in bianco possono aiutare quando un cane ha la diarrea, ma è una dieta temporanea e non è equilibrata per un’alimentazione a lungo termine.",
         "de": "Einfaches gekochtes Huhn mit Reis kann bei Durchfall helfen, ist aber eine vorübergehende Kost und für die Dauerfütterung nicht ausgewogen.",
         "fr": "Du poulet et du riz bouillis nature peuvent aider quand un chien a la diarrhée, mais c’est un régime temporaire, non équilibré pour une alimentation à long terme.",
-        "pt": "O frango cozido simples com arroz pode ajudar quando um cão tem diarreia, mas é uma dieta temporária e não é equilibrada para uma alimentação a longo prazo."
+        "pt": "O frango cozido simples com arroz pode ajudar quando um cão tem diarreia, mas é uma dieta temporária e não é equilibrada para uma alimentação a longo prazo.",
+        "nl": "Gekookte kip met rijst, zonder kruiden of iets anders erbij, kan helpen als een hond diarree heeft, maar het is een tijdelijk dieet en niet uitgebalanceerd genoeg om langdurig te geven."
       }
     }
   ],
@@ -316,6 +328,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c677b89f0544a7135db582d8ad90ca335a00ea57b5edb58fb300697e690510c3"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b3f60bf463a27279b4fb8568d492402e75c980cf695519396df81730f7d32e6a"
     }
   }
 }

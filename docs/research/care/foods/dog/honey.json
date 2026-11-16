@@ -14,7 +14,8 @@
     "it": "Miele",
     "de": "Honig",
     "fr": "Miel",
-    "pt": "Mel"
+    "pt": "Mel",
+    "nl": "Honing"
   },
   "question": {
     "en": "Can dogs eat honey?",
@@ -29,7 +30,8 @@
     "it": "I cani possono mangiare il miele?",
     "de": "Dürfen Hunde Honig fressen?",
     "fr": "Les chiens peuvent-ils manger du miel ?",
-    "pt": "Os cães podem comer mel?"
+    "pt": "Os cães podem comer mel?",
+    "nl": "Mogen honden honing eten?"
   },
   "url_slug": {
     "en": "honey",
@@ -44,7 +46,8 @@
     "it": "miele",
     "de": "honig",
     "fr": "miel",
-    "pt": "mel"
+    "pt": "mel",
+    "nl": "honing"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "it": "Sì, in piccole quantità. In genere il miele va bene per i cani adulti sani in piccole quantità, ma è fatto soprattutto di zucchero, quindi ci sono pochi motivi per darlo regolarmente. Non dare miele crudo ai cuccioli o ai cani con difese immunitarie deboli, né alcun tipo di miele ai cani diabetici.",
     "de": "Ja, in kleinen Mengen. Honig ist für gesunde erwachsene Hunde in kleinen Mengen in der Regel in Ordnung, besteht aber hauptsächlich aus Zucker. Es gibt daher kaum einen Grund, ihn regelmäßig zu geben. Geben Sie Welpen und Hunden mit geschwächtem Immunsystem keinen rohen Honig und Hunden mit Diabetes gar keinen Honig.",
     "fr": "Oui, en petite quantité. Le miel convient généralement aux chiens adultes en bonne santé, en petites quantités, mais il est surtout composé de sucre : il y a donc peu de raisons d’en donner régulièrement. Ne donnez pas de miel cru aux chiots ni aux chiens dont le système immunitaire est affaibli, ni de miel du tout aux chiens diabétiques.",
-    "pt": "Sim, em pequenas quantidades. Em pequenas quantidades, o mel geralmente não faz mal a cães adultos saudáveis, mas é sobretudo açúcar, por isso não há grande motivo para o dar com regularidade. Não dês mel cru a cachorros nem a cães com o sistema imunitário debilitado, nem qualquer mel a cães diabéticos."
+    "pt": "Sim, em pequenas quantidades. Em pequenas quantidades, o mel geralmente não faz mal a cães adultos saudáveis, mas é sobretudo açúcar, por isso não há grande motivo para o dar com regularidade. Não dês mel cru a cachorros nem a cães com o sistema imunitário debilitado, nem qualquer mel a cães diabéticos.",
+    "nl": "Ja, in kleine hoeveelheden. Honing is over het algemeen prima voor gezonde volwassen honden in kleine hoeveelheden, maar het bestaat vooral uit suiker, dus er is weinig reden om het regelmatig te geven. Geef geen rauwe honing aan pups of honden met een zwak immuunsysteem, en geef geen enkele honing aan honden met diabetes."
   },
   "why": {
     "en": "Honey contains natural sugars and small amounts of vitamins and minerals. Its high sugar content can lead to obesity if a dog gets too much, and sugars can cause tooth decay. Raw honey may contain botulism, so it is not for puppies or dogs with weak immune systems.",
@@ -75,7 +79,8 @@
     "it": "Il miele contiene zuccheri naturali e piccole quantità di vitamine e minerali. L’alto contenuto di zuccheri può portare all’obesità se il cane ne riceve troppo, e gli zuccheri possono causare carie. Il miele crudo può contenere botulino, quindi non è adatto ai cuccioli né ai cani con difese immunitarie deboli.",
     "de": "Honig enthält natürliche Zucker und kleine Mengen Vitamine und Mineralstoffe. Sein hoher Zuckergehalt kann zu Übergewicht führen, wenn ein Hund zu viel bekommt, und Zucker kann Karies verursachen. Roher Honig kann Botulismus-Erreger enthalten, deshalb ist er nichts für Welpen oder Hunde mit geschwächtem Immunsystem.",
     "fr": "Le miel contient des sucres naturels et de petites quantités de vitamines et de minéraux. Sa forte teneur en sucre peut mener à l’obésité si un chien en reçoit trop, et les sucres peuvent favoriser les caries. Le miel cru peut présenter un risque de botulisme : il n’est donc pas destiné aux chiots ni aux chiens dont le système immunitaire est affaibli.",
-    "pt": "O mel contém açúcares naturais e pequenas quantidades de vitaminas e minerais. O seu elevado teor de açúcar pode levar à obesidade se o cão comer demasiado, e os açúcares podem causar cáries. O mel cru pode conter esporos do botulismo, por isso não é para cachorros nem para cães com o sistema imunitário debilitado."
+    "pt": "O mel contém açúcares naturais e pequenas quantidades de vitaminas e minerais. O seu elevado teor de açúcar pode levar à obesidade se o cão comer demasiado, e os açúcares podem causar cáries. O mel cru pode conter esporos do botulismo, por isso não é para cachorros nem para cães com o sistema imunitário debilitado.",
+    "nl": "Honing bevat natuurlijke suikers en kleine hoeveelheden vitamines en mineralen. Door het hoge suikergehalte kan het leiden tot overgewicht als een hond te veel krijgt, en suikers kunnen tandbederf veroorzaken. Rauwe honing kan botulisme bevatten, dus het is niets voor pups of honden met een zwak immuunsysteem."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "it": "Piccole quantità di miele in genere vanno bene per un cane adulto sano. Se il tuo cane ha un problema di salute come il diabete, o non sei sicuro di quanto ne possa mangiare, parlane con il veterinario.",
     "de": "Kleine Mengen Honig sind für einen gesunden erwachsenen Hund in der Regel in Ordnung. Hat Ihr Hund eine Erkrankung wie Diabetes oder sind Sie unsicher, welche Menge passt, sprechen Sie mit Ihrem Tierarzt.",
     "fr": "De petites quantités de miel conviennent généralement à un chien adulte en bonne santé. Si votre chien a un problème de santé comme le diabète, ou si vous ne savez pas quelle quantité est acceptable, parlez-en à votre vétérinaire.",
-    "pt": "Pequenas quantidades de mel geralmente não fazem mal a um cão adulto saudável. Se o teu cão tem um problema de saúde, como diabetes, ou não tens a certeza da quantidade certa, fala com o teu veterinário."
+    "pt": "Pequenas quantidades de mel geralmente não fazem mal a um cão adulto saudável. Se o teu cão tem um problema de saúde, como diabetes, ou não tens a certeza da quantidade certa, fala com o teu veterinário.",
+    "nl": "Kleine hoeveelheden honing zijn over het algemeen prima voor een gezonde volwassen hond. Heeft je hond een gezondheidsprobleem zoals diabetes, of weet je niet zeker hoeveel er kan, bespreek het dan met je dierenarts."
   },
   "serving": {
     "en": "A little now and then, for healthy adult dogs only; less is more, especially for small breeds. Ask your vet how much is okay, and consider brushing your dog's teeth afterwards.",
@@ -106,7 +112,8 @@
     "it": "Un pochino ogni tanto, solo per cani adulti sani; meno è meglio, soprattutto per le razze di piccola taglia. Chiedi al veterinario quanto ne puoi dare e valuta di lavare i denti al tuo cane dopo.",
     "de": "Ab und zu ein wenig, nur für gesunde erwachsene Hunde. Weniger ist mehr, besonders bei kleinen Rassen. Fragen Sie Ihren Tierarzt, wie viel in Ordnung ist, und putzen Sie Ihrem Hund danach am besten die Zähne.",
     "fr": "Un peu, de temps en temps, uniquement pour les chiens adultes en bonne santé ; mieux vaut en donner peu, surtout aux petites races. Demandez à votre vétérinaire quelle quantité convient et pensez à brosser les dents de votre chien ensuite.",
-    "pt": "Um bocadinho de vez em quando, só para cães adultos saudáveis; menos é mais, sobretudo nas raças pequenas. Pergunta ao teu veterinário que quantidade é aceitável e pensa em escovar os dentes do teu cão depois."
+    "pt": "Um bocadinho de vez em quando, só para cães adultos saudáveis; menos é mais, sobretudo nas raças pequenas. Pergunta ao teu veterinário que quantidade é aceitável e pensa em escovar os dentes do teu cão depois.",
+    "nl": "Af en toe een beetje, alleen voor gezonde volwassen honden; minder is beter, vooral bij kleine rassen. Vraag je dierenarts hoeveel er kan en overweeg om daarna de tanden van je hond te poetsen."
   },
   "child": {
     "en": "Dogs can have a tiny bit of honey sometimes. It is very sweet, so ask a grown-up first.",
@@ -121,7 +128,8 @@
     "it": "Ogni tanto i cani possono mangiare un pochino di miele. È molto dolce, quindi chiedi prima a un adulto.",
     "de": "Hunde dürfen ab und zu ein ganz kleines bisschen Honig haben. Er ist sehr süß, also frag vorher einen Erwachsenen.",
     "fr": "Les chiens peuvent parfois manger un tout petit peu de miel. Il est très sucré : demande d’abord à un adulte.",
-    "pt": "Os cães podem comer um bocadinho de mel de vez em quando. É muito doce, por isso pergunta primeiro a um adulto."
+    "pt": "Os cães podem comer um bocadinho de mel de vez em quando. É muito doce, por isso pergunta primeiro a um adulto.",
+    "nl": "Honden mogen soms een heel klein beetje honing. Het is erg zoet, dus vraag het eerst aan een volwassene."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "it": "Il miele può aiutare contro le allergie del mio cane?",
         "de": "Kann Honig bei den Allergien meines Hundes helfen?",
         "fr": "Le miel peut-il aider contre les allergies de mon chien ?",
-        "pt": "O mel pode ajudar nas alergias do meu cão?"
+        "pt": "O mel pode ajudar nas alergias do meu cão?",
+        "nl": "Kan honing helpen bij de allergieën van mijn hond?"
       },
       "a": {
         "en": "Honey is often said to help with seasonal allergies, but it isn't guaranteed or even likely to help.",
@@ -153,7 +162,8 @@
         "it": "Si dice spesso che il miele aiuti contro le allergie stagionali, ma non è garantito che funzioni, e non è nemmeno probabile.",
         "de": "Oft heißt es, Honig helfe bei saisonalen Allergien, aber das ist weder sicher noch auch nur wahrscheinlich.",
         "fr": "On dit souvent que le miel aide contre les allergies saisonnières, mais ce n’est ni garanti ni même probable.",
-        "pt": "Diz-se muitas vezes que o mel ajuda nas alergias sazonais, mas isso não está garantido nem é sequer provável."
+        "pt": "Diz-se muitas vezes que o mel ajuda nas alergias sazonais, mas isso não está garantido nem é sequer provável.",
+        "nl": "Er wordt vaak gezegd dat honing helpt bij seizoensallergieën, maar het is niet gegarandeerd en zelfs niet waarschijnlijk dat het helpt."
       }
     },
     {
@@ -170,7 +180,8 @@
         "it": "Posso dare il miele al mio cucciolo?",
         "de": "Darf ich meinem Welpen Honig geben?",
         "fr": "Puis-je donner du miel à mon chiot ?",
-        "pt": "Posso dar mel ao meu cachorro?"
+        "pt": "Posso dar mel ao meu cachorro?",
+        "nl": "Mag ik mijn pup honing geven?"
       },
       "a": {
         "en": "Not raw honey. Raw honey shouldn't be given to puppies or dogs with weak immune systems, because it may contain botulism.",
@@ -185,7 +196,8 @@
         "it": "Non quello crudo. Il miele crudo non va dato ai cuccioli né ai cani con difese immunitarie deboli, perché può contenere botulino.",
         "de": "Keinen rohen Honig. Roher Honig sollte nicht an Welpen oder Hunde mit geschwächtem Immunsystem gegeben werden, weil er Botulismus-Erreger enthalten kann.",
         "fr": "Pas du miel cru. Le miel cru ne doit pas être donné aux chiots ni aux chiens dont le système immunitaire est affaibli, car il peut présenter un risque de botulisme.",
-        "pt": "Mel cru não. O mel cru não deve ser dado a cachorros nem a cães com o sistema imunitário debilitado, porque pode conter esporos do botulismo."
+        "pt": "Mel cru não. O mel cru não deve ser dado a cachorros nem a cães com o sistema imunitário debilitado, porque pode conter esporos do botulismo.",
+        "nl": "Geen rauwe honing. Rauwe honing mag je niet geven aan pups of honden met een zwak immuunsysteem, omdat het botulisme kan bevatten."
       }
     }
   ],
@@ -322,6 +334,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d6a8ed4d269e7353396f29cf0f64280dd3c59a9a8bba476780b29406c24357f4"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2469898859a53940af10b53fddd94eac6246b386a2254be2dada1a323a9f9d5a"
     }
   }
 }

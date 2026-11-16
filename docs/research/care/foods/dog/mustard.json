@@ -13,7 +13,8 @@
     "it": "Senape",
     "de": "Senf",
     "fr": "Moutarde",
-    "pt": "Mostarda"
+    "pt": "Mostarda",
+    "nl": "Mosterd"
   },
   "question": {
     "en": "Can dogs eat mustard?",
@@ -27,7 +28,8 @@
     "it": "I cani possono mangiare la senape?",
     "de": "Dürfen Hunde Senf fressen?",
     "fr": "Les chiens peuvent-ils manger de la moutarde ?",
-    "pt": "Os cães podem comer mostarda?"
+    "pt": "Os cães podem comer mostarda?",
+    "nl": "Mogen honden mosterd eten?"
   },
   "url_slug": {
     "en": "mustard",
@@ -41,7 +43,8 @@
     "it": "senape",
     "de": "senf",
     "fr": "moutarde",
-    "pt": "mostarda"
+    "pt": "mostarda",
+    "nl": "mosterd"
   },
   "level": "dangerous",
   "answer": {
@@ -56,7 +59,8 @@
     "it": "No, non dare mai la senape al tuo cane. I semi di senape contengono composti che possono infiammare lo stomaco e l’intestino del cane, e la senape può provocare vomito. Una piccola leccata dal tuo piatto difficilmente crea problemi, ma una grande quantità potrebbe causare problemi seri.",
     "de": "Nein, geben Sie Ihrem Hund niemals Senf. Senfkörner enthalten Stoffe, die Magen und Darm eines Hundes entzünden können, und Senf kann Erbrechen verursachen. Kurzes Ablecken von Ihrem Teller verursacht wahrscheinlich kein Problem, eine große Menge kann aber ernst werden.",
     "fr": "Non, ne donnez jamais de moutarde à votre chien. Les graines de moutarde contiennent des composés qui peuvent irriter l’estomac et l’intestin d’un chien, et la moutarde peut provoquer des vomissements. Il est peu probable qu’un petit coup de langue dans votre assiette pose problème, mais une grande quantité pourrait être grave.",
-    "pt": "Não, nunca dês mostarda ao teu cão. As sementes de mostarda contêm compostos que podem inflamar o estômago e os intestinos do cão, e a mostarda pode causar vómitos. É pouco provável que uma pequena lambidela do teu prato cause problemas, mas uma grande quantidade pode ser grave."
+    "pt": "Não, nunca dês mostarda ao teu cão. As sementes de mostarda contêm compostos que podem inflamar o estômago e os intestinos do cão, e a mostarda pode causar vómitos. É pouco provável que uma pequena lambidela do teu prato cause problemas, mas uma grande quantidade pode ser grave.",
+    "nl": "Nee, geef je hond nooit mosterd. Mosterdzaad bevat stoffen die de maag en darmen van een hond kunnen ontsteken, en mosterd kan braken veroorzaken. Een klein likje van je bord geeft waarschijnlijk geen problemen, maar een grote hoeveelheid kan ernstig zijn."
   },
   "why": {
     "en": "Mustard contains mustard seeds, and these contain toxic compounds that can lead to gastroenteritis, an inflammation of the stomach and intestines. Shop-bought mustard may also contain other ingredients that could harm your dog. Smaller dogs need to eat less than larger dogs to react. One source simply says mustard can upset a dog's stomach, another calls it toxic, so we follow the stricter advice.",
@@ -70,7 +74,8 @@
     "it": "La senape è fatta con semi di senape, che contengono composti tossici che possono causare una gastroenterite, un’infiammazione di stomaco e intestino. La senape che si compra al supermercato può contenere anche altri ingredienti dannosi per il cane. I cani di taglia piccola reagiscono a quantità minori rispetto a quelli più grandi. Una fonte dice semplicemente che la senape può far venire mal di stomaco al cane, un’altra la definisce tossica, quindi seguiamo il consiglio più severo.",
     "de": "Senf enthält Senfkörner mit giftigen Stoffen, die zu einer Magen-Darm-Entzündung führen können. Senf aus dem Laden kann außerdem andere Zutaten enthalten, die Ihrem Hund schaden könnten. Kleinere Hunde reagieren schon auf geringere Mengen als größere. Eine Quelle sagt schlicht, Senf könne einem Hund auf den Magen schlagen, eine andere nennt ihn giftig, deshalb folgen wir dem strengeren Rat.",
     "fr": "La moutarde contient des graines de moutarde, qui renferment des composés toxiques pouvant provoquer une gastro-entérite, c’est-à-dire une inflammation de l’estomac et de l’intestin. La moutarde du commerce peut aussi contenir d’autres ingrédients nocifs pour votre chien. Les petits chiens réagissent à de plus petites quantités que les grands. Une source dit simplement que la moutarde peut déranger l’estomac d’un chien, une autre la juge toxique ; nous suivons donc l’avis le plus strict.",
-    "pt": "A mostarda contém sementes de mostarda, e estas têm compostos tóxicos que podem levar a gastroenterite, uma inflamação do estômago e dos intestinos. A mostarda comercial também pode ter outros ingredientes que podem fazer mal ao teu cão. Os cães mais pequenos podem reagir a quantidades menores do que os maiores. Uma fonte diz simplesmente que a mostarda pode irritar o estômago do cão, outra diz que é tóxica, por isso seguimos o conselho mais rigoroso."
+    "pt": "A mostarda contém sementes de mostarda, e estas têm compostos tóxicos que podem levar a gastroenterite, uma inflamação do estômago e dos intestinos. A mostarda comercial também pode ter outros ingredientes que podem fazer mal ao teu cão. Os cães mais pequenos podem reagir a quantidades menores do que os maiores. Uma fonte diz simplesmente que a mostarda pode irritar o estômago do cão, outra diz que é tóxica, por isso seguimos o conselho mais rigoroso.",
+    "nl": "Mosterd bevat mosterdzaad, en dat bevat giftige stoffen die kunnen leiden tot een maag-darmontsteking, een ontsteking van de maag en darmen. Mosterd uit de winkel kan ook andere ingrediënten bevatten die je hond kunnen schaden. Kleinere honden hoeven minder te eten dan grotere honden om te reageren. De ene bron zegt alleen dat mosterd de maag van een hond van streek kan maken, een andere noemt het giftig, dus we volgen het strengere advies."
   },
   "signs": {
     "en": [
@@ -156,6 +161,13 @@
       "Vómitos",
       "Diarreia",
       "Dor de barriga"
+    ],
+    "nl": [
+      "Niet willen eten",
+      "Kwijlen",
+      "Braken",
+      "Diarree",
+      "Buikpijn"
     ]
   },
   "what_to_do": {
@@ -170,7 +182,8 @@
     "it": "Una piccola leccata difficilmente crea problemi. Se il tuo cane ha mangiato molta senape, o noti sintomi come vomito, salivazione eccessiva o mal di pancia, contatta il veterinario il prima possibile.",
     "de": "Kurzes Ablecken verursacht wahrscheinlich kein Problem. Hat Ihr Hund viel Senf gefressen oder bemerken Sie Anzeichen wie Erbrechen, Sabbern oder Bauchschmerzen, wenden Sie sich so schnell wie möglich an Ihren Tierarzt.",
     "fr": "Il est peu probable qu’un petit coup de langue pose problème. Si votre chien a mangé beaucoup de moutarde, ou si vous remarquez des signes comme des vomissements, une salivation excessive ou des douleurs au ventre, contactez votre vétérinaire dès que possible.",
-    "pt": "É pouco provável que uma pequena lambidela cause problemas. Se o teu cão comeu muita mostarda, ou notares sinais como vómitos, salivação excessiva ou dor de barriga, fala com o teu veterinário o mais depressa possível."
+    "pt": "É pouco provável que uma pequena lambidela cause problemas. Se o teu cão comeu muita mostarda, ou notares sinais como vómitos, salivação excessiva ou dor de barriga, fala com o teu veterinário o mais depressa possível.",
+    "nl": "Een klein likje geeft waarschijnlijk geen problemen. Heeft je hond veel mosterd gegeten, of zie je verschijnselen zoals braken, kwijlen of buikpijn, neem dan zo snel mogelijk contact op met je dierenarts."
   },
   "serving": null,
   "child": {
@@ -185,7 +198,8 @@
     "it": "La senape può far venire il mal di pancia ai cani. Tienila nel tuo piatto, lontano dal tuo cane.",
     "de": "Von Senf können Hunde Bauchweh bekommen. Lass ihn auf deinem eigenen Teller, weit weg von deinem Hund.",
     "fr": "La moutarde peut donner mal au ventre aux chiens. Garde-la dans ton assiette, loin de ton chien.",
-    "pt": "A mostarda pode dar dor de barriga aos cães. Deixa-a no teu prato, longe do teu cão."
+    "pt": "A mostarda pode dar dor de barriga aos cães. Deixa-a no teu prato, longe do teu cão.",
+    "nl": "Mosterd kan honden buikpijn geven. Houd hem op je eigen bord, uit de buurt van je hond."
   },
   "faq": [
     {
@@ -201,7 +215,8 @@
         "it": "Il mio cane ha leccato un po’ di senape. È un problema?",
         "de": "Mein Hund hat ein bisschen Senf geleckt. Ist das ein Problem?",
         "fr": "Mon chien a léché un peu de moutarde. Est-ce un problème ?",
-        "pt": "O meu cão lambeu um pouco de mostarda. É um problema?"
+        "pt": "O meu cão lambeu um pouco de mostarda. É um problema?",
+        "nl": "Mijn hond heeft een beetje mosterd opgelikt. Is dat een probleem?"
       },
       "a": {
         "en": "A small lick off your plate is unlikely to cause a problem, but a large amount could cause a serious issue. Smaller dogs react to less than larger dogs.",
@@ -215,7 +230,8 @@
         "it": "Una piccola leccata dal tuo piatto difficilmente crea problemi, ma una grande quantità potrebbe causare problemi seri. I cani di taglia piccola reagiscono a quantità minori rispetto a quelli più grandi.",
         "de": "Kurzes Ablecken von Ihrem Teller verursacht wahrscheinlich kein Problem, eine große Menge könnte aber ernste Probleme verursachen. Kleinere Hunde reagieren auf weniger als größere.",
         "fr": "Il est peu probable qu’un petit coup de langue dans votre assiette pose problème, mais une grande quantité pourrait être grave. Les petits chiens réagissent à de plus petites quantités que les grands.",
-        "pt": "É pouco provável que uma pequena lambidela do teu prato cause problemas, mas uma grande quantidade pode causar um problema grave. Os cães mais pequenos podem reagir a quantidades menores do que os maiores."
+        "pt": "É pouco provável que uma pequena lambidela do teu prato cause problemas, mas uma grande quantidade pode causar um problema grave. Os cães mais pequenos podem reagir a quantidades menores do que os maiores.",
+        "nl": "Een klein likje van je bord geeft waarschijnlijk geen problemen, maar een grote hoeveelheid kan een ernstig probleem veroorzaken. Kleinere honden reageren op minder dan grotere honden."
       }
     },
     {
@@ -231,7 +247,8 @@
         "it": "Esiste una senape sicura?",
         "de": "Ist irgendeine Senfsorte unbedenklich?",
         "fr": "Existe-t-il une moutarde sans danger ?",
-        "pt": "Há algum tipo de mostarda seguro?"
+        "pt": "Há algum tipo de mostarda seguro?",
+        "nl": "Is er een soort mosterd die wel veilig is?"
       },
       "a": {
         "en": "No. All types of mustard should be avoided, including homemade, wild, English and Dijon mustard.",
@@ -245,7 +262,8 @@
         "it": "No. Tutti i tipi di senape vanno evitati, compresa quella fatta in casa, quella selvatica, quella inglese e quella di Digione.",
         "de": "Nein. Verzichten Sie auf jede Senfsorte, auch auf selbst gemachten, Wild-, englischen und Dijon-Senf.",
         "fr": "Non. Il faut éviter tous les types de moutarde, y compris la moutarde maison, la moutarde sauvage, la moutarde anglaise et la moutarde de Dijon.",
-        "pt": "Não. Todos os tipos de mostarda devem ser evitados, incluindo a caseira, a selvagem, a inglesa e a de Dijon."
+        "pt": "Não. Todos os tipos de mostarda devem ser evitados, incluindo a caseira, a selvagem, a inglesa e a de Dijon.",
+        "nl": "Nee. Alle soorten mosterd moet je vermijden, ook zelfgemaakte, wilde, Engelse en Dijonmosterd."
       }
     }
   ],
@@ -381,6 +399,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "81106614b9a9ed2ddc5fdd1c486f8a0f23719f4dbca8e1c09d091caddc539b75"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ca52616051e655bf7841002c0550e50c2db2c10e0c28322cbf2f6d1b47bcea92"
     }
   }
 }
