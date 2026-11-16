@@ -11,10 +11,12 @@ import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import MediaDisplaySwitch from '@/components/MediaDisplaySwitch';
+import { MoreInfo } from '@/components/parent/Disclosure';
 import { Text } from '@/components/ui/Text';
 import { useSetChildMediaDisplay } from '@/hooks/queries/useFamilyMutations';
 import type { MediaDisplay } from '@/modules/display/display';
 import { palette } from '@/theme';
+import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
 /** All user-visible strings (`family:children.display`). */
@@ -52,7 +54,14 @@ export default function MediaDisplayRow({ childId, childName, value }: MediaDisp
           testID={`media-display-switch-${childId}`}
         />
       </View>
-      <Text style={styles.hint}>{S.hint}</Text>
+      <Text style={styles.hint}>{S.short}</Text>
+      <MoreInfo
+        label={MEDIA_DISPLAY_STRINGS.moreInfo}
+        accessibilityLabel={t('family:children.moreInfoFor', { setting: S.label })}
+        testID={`media-display-info-${childId}`}
+      >
+        <Text style={styles.hint}>{S.hint}</Text>
+      </MoreInfo>
       {failed && (
         <Text style={styles.error} testID={`media-display-error-${childId}`}>
           {S.error}

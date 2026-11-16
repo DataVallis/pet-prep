@@ -15,6 +15,7 @@ import { familyFromDashboard, type FamilyOverview } from '@/modules/family/famil
 import { useAppStore } from '@/store/appStore';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { openChildSettings } from '@/test-utils/childSettings';
 import { FAMILY_STRINGS } from '@/components/FamilyChildrenCard';
 
 jest.mock('@/api/client', () => {
@@ -192,6 +193,7 @@ describe('child deletion — parent signed in with Apple', () => {
     });
     deleteChild.mockResolvedValueOnce({ status: 'deleted', child_id: 2, pets_deleted: 1, pets_kept: 0 });
     renderWithQuery(<FamilyChildrenCard family={FAMILY} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
 
     fireEvent.press(screen.getByTestId('child-delete-2'));
     expect(screen.queryByTestId('child-delete-form-2-password')).toBeNull();
@@ -213,6 +215,7 @@ describe('child deletion — parent signed in with Apple', () => {
     obtain.mockResolvedValueOnce({ kind: 'credential', credential: { provider: 'apple', idToken: 'apple.jwt', nonce: 'n' } });
     deleteChild.mockRejectedValueOnce(new ApiError('down', 503, { message: 'down', reason: 'provider_unavailable' }));
     renderWithQuery(<FamilyChildrenCard family={FAMILY} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
 
     fireEvent.press(screen.getByTestId('child-delete-2'));
     fireEvent.changeText(screen.getByTestId('child-delete-form-2-confirm'), 'IZBRIŠI');

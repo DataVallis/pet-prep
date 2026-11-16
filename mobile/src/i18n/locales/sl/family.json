@@ -260,12 +260,23 @@
   "children": {
     "title": "Otroci",
     "addChild": "Dodaj otroka",
+    "moreSettings": "Več nastavitev",
+    "moreSettingsFor": "Več nastavitev za {{name}}",
+    "moreInfo": "Več o tem",
+    "moreInfoFor": "Več o tem: {{setting}}",
+    "summary": {
+      "adapted": "Prilagojen način",
+      "easyGestures": "Lažje kretnje",
+      "noGameFeedback": "Brez zvokov v igrah",
+      "picture": "Prikaz: slika"
+    },
     "noPet": "Še brez ljubljenčka",
     "awaitingContract": "čaka na podpis pogodbe",
     "gameOver": "igra končana",
     "legacyEmail": "stari račun z e-pošto",
     "adapted": {
       "label": "Prilagojen način",
+      "short": "Namesto korakov štejejo potiski vozička.",
       "hint": "Namesto korakov štejejo potiski invalidskega vozička (1 potisk = 1 korak). Cilji in ocena skrbi ostanejo enaki. Ne sprašujemo in ne shranjujemo, zakaj.",
       "on": "Prilagojen način je vklopljen: sprehod šteje potiske vozička.",
       "off": "Prilagojen način je izklopljen: sprehod šteje korake.",
@@ -286,17 +297,20 @@
     },
     "easyGestures": {
       "label": "Lažje kretnje",
+      "short": "Otrok v igrah drži prst ali pritisne gumb namesto potega.",
       "hint": "Namesto potegov s prstom otrok drži prst ali pritisne gumb. Za otroke, ki jim potegi delajo težave.",
       "screenReader": "Ko je na otrokovem telefonu vklopljen VoiceOver ali TalkBack, so lažje kretnje vedno vklopljene.",
       "error": "Nastavitev ni shranjena. Poskusite znova."
     },
     "gameFeedback": {
       "label": "Zvoki in vibracija v igrah",
+      "short": "Kratek zvok in rahla vibracija ob uspehu v igrah.",
       "hint": "Kratki zvoki in rahla vibracija ob uspehu v igrah (nikoli ob napaki). Zvoki upoštevajo tihi način telefona.",
       "error": "Nastavitev ni shranjena. Poskusite znova."
     },
     "display": {
       "label": "Prikaz",
+      "short": "Slika porabi manj mobilnih podatkov.",
       "video": "Video",
       "picture": "Slika",
       "hint": "Slika pokaže ključno sliko tega, kar ljubljenček ravno počne, namesto videa — aplikacija ne prenaša videov, zato porabi manj mobilnih podatkov. Otrok lahko nastavitev spremeni tudi sam.",

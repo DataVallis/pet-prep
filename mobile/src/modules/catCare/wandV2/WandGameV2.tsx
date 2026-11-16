@@ -436,6 +436,13 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
           {phase.kind === 'starting' || deckMode === null ? <ActivityIndicator color={palette.graphite} /> : null}
           <Text style={styles.primaryText}>{phase.kind === 'starting' ? C.starting : deckMode === null ? S.preparing : S.start}</Text>
         </Pressable>
+        {/* Always a way out on the card (David's iPhone 2026-11-16: the cat resting after a hunt
+            disabled »Začni lov« and nothing else on the card led out — iOS has no back). */}
+        {phase.kind === 'intro' && (
+          <Pressable testID={`${testID}-intro-close`} accessibilityRole="button" onPress={onClose} style={({ pressed }) => [styles.secondary, pressed && styles.pressed]}>
+            <Text style={styles.secondaryText}>{C.close}</Text>
+          </Pressable>
+        )}
       </>,
       'intro',
     );
@@ -486,9 +493,14 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
           {phase.message}
         </Text>
         {phase.retry !== null ? (
-          <Pressable testID={`${testID}-retry`} accessibilityRole="button" onPress={game.retryFinish} style={({ pressed }) => [styles.primary, pressed && styles.pressed]}>
-            <Text style={styles.primaryText}>{C.retry}</Text>
-          </Pressable>
+          <>
+            <Pressable testID={`${testID}-retry`} accessibilityRole="button" onPress={game.retryFinish} style={({ pressed }) => [styles.primary, pressed && styles.pressed]}>
+              <Text style={styles.primaryText}>{C.retry}</Text>
+            </Pressable>
+            <Pressable testID={`${testID}-failed-close`} accessibilityRole="button" onPress={onClose} style={({ pressed }) => [styles.secondary, pressed && styles.pressed]}>
+              <Text style={styles.secondaryText}>{C.close}</Text>
+            </Pressable>
+          </>
         ) : (
           <Pressable testID={`${testID}-back`} accessibilityRole="button" onPress={again} style={({ pressed }) => [styles.secondary, pressed && styles.pressed]}>
             <Text style={styles.secondaryText}>{C.back}</Text>

@@ -277,6 +277,23 @@ export function devicesLabel(count: number): string {
   return t('family:devices', { count: Math.max(0, Math.floor(count)) });
 }
 
+/** A child setting that differs from its default (shown on the collapsed child card). */
+export type ChildSettingChange = 'adapted' | 'easyGestures' | 'noGameFeedback' | 'picture';
+
+/**
+ * The child's settings that are not at their default, in the order of the expanded card
+ * (David 2026-11-16: the collapsed card shows at a glance what is on). Defaults: adapted mode
+ * off, easier gestures off, game sounds on, display video.
+ */
+export function childSettingChanges(child: Pick<FamilyChild, 'adapted_mode' | 'easy_gestures' | 'game_feedback' | 'media_display'>): ChildSettingChange[] {
+  const changes: ChildSettingChange[] = [];
+  if (child.adapted_mode) changes.push('adapted');
+  if (child.easy_gestures) changes.push('easyGestures');
+  if (!child.game_feedback) changes.push('noGameFeedback');
+  if (child.media_display === 'picture') changes.push('picture');
+  return changes;
+}
+
 /** What the parent knew about the child when the PIN was issued. */
 export interface ChildBaseline {
   devices: number;
