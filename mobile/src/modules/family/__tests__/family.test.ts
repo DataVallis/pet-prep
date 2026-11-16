@@ -7,6 +7,7 @@ import {
   caretakerNames,
   classifyCreateChildError,
   classifyRevokeError,
+  childSettingChanges,
   devicesLabel,
   familyFromDashboard,
   isChildConnected,
@@ -113,5 +114,18 @@ describe('family helpers', () => {
     expect(classifyPinError(new ApiError('x', 422, { reason: 'breed_locked' })).kind).toBe('breed_locked');
     expect(classifyPinError(new ApiError('x', 422, { errors: { age_stage: ['required'] } })).kind).toBe('invalid_profile');
     expect(classifyPinError(new ApiError('x', 422, { errors: { child_id: ['x'] } })).kind).toBe('server');
+  });
+});
+
+describe('childSettingChanges (collapsed child card summary, David 2026-11-16)', () => {
+  const base = { adapted_mode: false, easy_gestures: false, game_feedback: true, media_display: 'video' as const };
+  it('nothing for the defaults', () => {
+    expect(childSettingChanges(base)).toEqual([]);
+  });
+  it('every non-default setting, in the order of the expanded card', () => {
+    expect(
+      childSettingChanges({ adapted_mode: true, easy_gestures: true, game_feedback: false, media_display: 'picture' }),
+    ).toEqual(['adapted', 'easyGestures', 'noGameFeedback', 'picture']);
+    expect(childSettingChanges({ ...base, game_feedback: false })).toEqual(['noGameFeedback']);
   });
 });

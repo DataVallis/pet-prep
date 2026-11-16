@@ -15,6 +15,7 @@ import { familyFromDashboard, type FamilyOverview } from '@/modules/family/famil
 import { useAppStore } from '@/store/appStore';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { openChildSettings } from '@/test-utils/childSettings';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -57,6 +58,7 @@ it('Apple-only parent on an iPhone: »Potrdi z Apple« is offered and deletes th
   });
   (api.deleteChild as jest.Mock).mockResolvedValueOnce({ status: 'deleted', child_id: 2, pets_deleted: 1, pets_kept: 0 });
   renderWithQuery(<FamilyChildrenCard family={FAMILY} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+  openChildSettings(2);
 
   fireEvent.press(screen.getByTestId('child-delete-2'));
   expect(screen.queryByText(DELETION_FORM_STRINGS.reauth.unavailable)).toBeNull();
@@ -77,6 +79,7 @@ it('"no password, nothing linked" is re-read from /api/user before deciding', as
   signInAppleParent([]);
   (api.getUser as jest.Mock).mockResolvedValueOnce({ id: 1, name: 'David', email: null, role: 'parent', pet: null, has_password: false, linked_providers: ['apple'] });
   renderWithQuery(<FamilyChildrenCard family={FAMILY} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+  openChildSettings(2);
 
   fireEvent.press(screen.getByTestId('child-delete-2'));
   // While checking nothing can be sent.

@@ -14,9 +14,11 @@ import { useState } from 'react';
 import { StyleSheet, Switch, View } from 'react-native';
 import { Hand } from 'lucide-react-native';
 
+import { MoreInfo } from '@/components/parent/Disclosure';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { Text } from '@/components/ui/Text';
 import { useSetEasyGestures } from '@/hooks/queries/useFamilyMutations';
+import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { palette } from '@/theme';
 
@@ -56,8 +58,15 @@ export default function EasyGesturesRow({ childId, childName, enabled }: EasyGes
           testID={`easy-gestures-switch-${childId}`}
         />
       </View>
-      <Text style={styles.hint}>{S.hint}</Text>
-      <Text style={styles.hint}>{S.screenReader}</Text>
+      <Text style={styles.hint}>{S.short}</Text>
+      <MoreInfo
+        label={EASY_GESTURES_STRINGS.moreInfo}
+        accessibilityLabel={t('family:children.moreInfoFor', { setting: S.label })}
+        testID={`easy-gestures-info-${childId}`}
+      >
+        <Text style={styles.hint}>{S.hint}</Text>
+        <Text style={styles.hint}>{S.screenReader}</Text>
+      </MoreInfo>
       {failed && (
         <Text style={styles.error} testID={`easy-gestures-error-${childId}`}>
           {S.error}
