@@ -13,9 +13,11 @@ import { useState } from 'react';
 import { StyleSheet, Switch, View } from 'react-native';
 import { Volume2 } from 'lucide-react-native';
 
+import { MoreInfo } from '@/components/parent/Disclosure';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { Text } from '@/components/ui/Text';
 import { useSetGameFeedback } from '@/hooks/queries/useFamilyMutations';
+import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { palette } from '@/theme';
 
@@ -55,7 +57,14 @@ export default function GameFeedbackRow({ childId, childName, enabled }: GameFee
           testID={`game-feedback-switch-${childId}`}
         />
       </View>
-      <Text style={styles.hint}>{S.hint}</Text>
+      <Text style={styles.hint}>{S.short}</Text>
+      <MoreInfo
+        label={GAME_FEEDBACK_STRINGS.moreInfo}
+        accessibilityLabel={t('family:children.moreInfoFor', { setting: S.label })}
+        testID={`game-feedback-info-${childId}`}
+      >
+        <Text style={styles.hint}>{S.hint}</Text>
+      </MoreInfo>
       {failed && (
         <Text style={styles.error} testID={`game-feedback-error-${childId}`}>
           {S.error}

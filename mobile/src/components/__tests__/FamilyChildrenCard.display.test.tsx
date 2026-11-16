@@ -9,6 +9,7 @@ import FamilyChildrenCard from '@/components/FamilyChildrenCard';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { openChildSettings } from '@/test-utils/childSettings';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -38,6 +39,7 @@ describe('FamilyChildrenCard — Prikaz', () => {
   it('shows video by default (also for an older server) and sets picture with only that field', async () => {
     updateChildSettings.mockResolvedValue({ child_id: 2, adapted_mode: false, media_display: 'picture' });
     renderWithQuery(<FamilyChildrenCard family={family(undefined)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
 
     expect(screen.getByText('Prikaz')).toBeTruthy();
     expect(screen.getByTestId('media-display-switch-2-video').props.accessibilityState.selected).toBe(true);
@@ -50,12 +52,14 @@ describe('FamilyChildrenCard — Prikaz', () => {
 
   it('shows the server value picture', () => {
     renderWithQuery(<FamilyChildrenCard family={family('picture')} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     expect(screen.getByTestId('media-display-switch-2-picture').props.accessibilityState.selected).toBe(true);
   });
 
   it('a failure shows an error and keeps the server value', async () => {
     updateChildSettings.mockRejectedValue(new ApiError('Server Error', 500, {}));
     renderWithQuery(<FamilyChildrenCard family={family('video')} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     fireEvent.press(screen.getByTestId('media-display-switch-2-picture'));
     await flush();
     expect(screen.getByTestId('media-display-error-2')).toBeTruthy();

@@ -9,6 +9,7 @@ import FamilyChildrenCard from '@/components/FamilyChildrenCard';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { openChildSettings } from '@/test-utils/childSettings';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -38,9 +39,12 @@ describe('FamilyChildrenCard — easier gestures (M5-T17)', () => {
   it('shows the switch off with its help text; turning it on sends only the boolean', async () => {
     updateChildSettings.mockResolvedValue({ child_id: 2, adapted_mode: false, media_display: 'video', easy_gestures: true });
     renderWithQuery(<FamilyChildrenCard family={family(false)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     const sw = screen.getByTestId('easy-gestures-switch-2');
     expect(sw.props.value).toBe(false);
     expect(screen.getByText('Lažje kretnje')).toBeTruthy();
+    expect(screen.getByText('Otrok v igrah drži prst ali pritisne gumb namesto potega.')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('easy-gestures-info-2'));
     expect(screen.getByText('Namesto potegov s prstom otrok drži prst ali pritisne gumb. Za otroke, ki jim potegi delajo težave.')).toBeTruthy();
     expect(sw.props.accessibilityLabel).toBe('Lažje kretnje, Maja');
 
@@ -53,6 +57,7 @@ describe('FamilyChildrenCard — easier gestures (M5-T17)', () => {
   it('on from the server; turning it off sends false', async () => {
     updateChildSettings.mockResolvedValue({ child_id: 2, adapted_mode: false, media_display: 'video', easy_gestures: false });
     renderWithQuery(<FamilyChildrenCard family={family(true)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     expect(screen.getByTestId('easy-gestures-switch-2').props.value).toBe(true);
     fireEvent(screen.getByTestId('easy-gestures-switch-2'), 'valueChange', false);
     await flush();
@@ -62,6 +67,7 @@ describe('FamilyChildrenCard — easier gestures (M5-T17)', () => {
   it('a failure shows an error and keeps the server value', async () => {
     updateChildSettings.mockRejectedValue(new ApiError('Server Error', 500, {}));
     renderWithQuery(<FamilyChildrenCard family={family(false)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     fireEvent(screen.getByTestId('easy-gestures-switch-2'), 'valueChange', true);
     await flush();
     expect(screen.getByTestId('easy-gestures-error-2')).toBeTruthy();
