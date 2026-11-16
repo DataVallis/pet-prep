@@ -13,7 +13,8 @@
     "hr": "Kravlje mlijeko za mačiće",
     "sv": "Komjölk till kattungar",
     "da": "Komælk til killinger",
-    "fi": "Lehmänmaito kissanpennuille"
+    "fi": "Lehmänmaito kissanpennuille",
+    "fr": "Lait de vache pour les chatons"
   },
   "question": {
     "en": "Can kittens drink cow's milk?",
@@ -27,7 +28,8 @@
     "hr": "Smiju li mačići piti kravlje mlijeko?",
     "sv": "Får kattungar dricka komjölk?",
     "da": "Må killinger drikke komælk?",
-    "fi": "Saako kissanpentu juoda lehmänmaitoa?"
+    "fi": "Saako kissanpentu juoda lehmänmaitoa?",
+    "fr": "Les chatons peuvent-ils boire du lait de vache ?"
   },
   "url_slug": {
     "en": "cow-milk-kittens",
@@ -41,7 +43,8 @@
     "hr": "kravlje-mlijeko-za-macice",
     "sv": "komjolk-kattungar",
     "da": "komaelk-killinger",
-    "fi": "lehmanmaito-kissanpennuille"
+    "fi": "lehmanmaito-kissanpennuille",
+    "fr": "lait-de-vache-chatons"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "hr": "Ne. Mačići trebaju piti majčino mlijeko, a mačić kojeg treba hraniti na bočicu smije dobiti samo zamjensko mlijeko za mačiće. Cats Protection upozorava da se kravlje mlijeko ne smije davati nikada, jer ga mačići teško probavljaju. Kad prestanu sisati, mačićima treba samo voda.",
     "sv": "Nej. Kattungar ska dricka sin mammas mjölk, och en kattunge som måste flaskmatas ska bara få särskild kattungemjölk. Cats Protection skriver att man aldrig ska ge komjölk, eftersom kattungar har svårt att smälta den. När de är avvanda behöver kattungar bara vatten.",
     "da": "Nej. Killinger skal drikke deres mors mælk, og en killing, der skal have flaske, må kun få erstatningsmælk til killinger. Cats Protection skriver, at man aldrig skal give komælk, fordi killinger har svært ved at fordøje den. Når killinger er fravænnet, har de kun brug for vand.",
-    "fi": "Ei suositella. Kissanpentu juo emonsa maitoa, ja pulloruokittavalle kissanpennulle sopii vain kissanpennuille tarkoitettu korvikemaito. Cats Protection kehottaa olemaan antamatta lehmänmaitoa lainkaan, koska kissanpentujen on vaikea sulattaa sitä. Vieroituksen jälkeen kissanpentu tarvitsee juomaksi vain vettä."
+    "fi": "Ei suositella. Kissanpentu juo emonsa maitoa, ja pulloruokittavalle kissanpennulle sopii vain kissanpennuille tarkoitettu korvikemaito. Cats Protection kehottaa olemaan antamatta lehmänmaitoa lainkaan, koska kissanpentujen on vaikea sulattaa sitä. Vieroituksen jälkeen kissanpentu tarvitsee juomaksi vain vettä.",
+    "fr": "Non. Les chatons doivent boire le lait de leur mère, et un chaton nourri au biberon ne doit recevoir qu’un lait de substitution pour chatons. Cats Protection recommande de ne jamais donner de lait de vache, car les chatons le digèrent difficilement. Une fois sevrés, les chatons n’ont besoin que d’eau."
   },
   "why": {
     "en": "Cats Protection advises never giving cow's or goat's milk to kittens because they find it difficult to digest, and PDSA calls cow's milk unsuitable. Compared with cow's milk, a mother cat's milk contains much more protein, while cow's milk has fewer calories, less fat and taurine and more lactose. Substitute kitten milk is made for kittens and contains all the nutrients they need; other milks don't have the right balance.",
@@ -70,7 +74,8 @@
     "hr": "Cats Protection savjetuje da se mačićima nikad ne daje kravlje ni kozje mlijeko, jer ga teško probavljaju, a PDSA kravlje mlijeko smatra neprikladnim. U usporedbi s kravljim mlijekom, mlijeko mačke majke sadrži mnogo više bjelančevina, dok kravlje ima manje kalorija, masti i taurina te više laktoze. Zamjensko mlijeko za mačiće proizvedeno je upravo za njih i sadrži sve hranjive tvari koje trebaju; druge vrste mlijeka nemaju pravi omjer hranjivih tvari.",
     "sv": "Cats Protection rekommenderar att man aldrig ger ko- eller getmjölk till kattungar, eftersom de har svårt att smälta den, och PDSA kallar komjölk olämplig. Jämfört med komjölk innehåller kattmammans mjölk mycket mer protein, medan komjölk har färre kalorier, mindre fett och taurin och mer laktos. Särskild kattungemjölk är gjord för kattungar och innehåller alla näringsämnen de behöver, medan andra sorters mjölk inte har rätt balans.",
     "da": "Cats Protection anbefaler, at man aldrig giver ko- eller gedemælk til killinger, fordi de har svært ved at fordøje den, og PDSA kalder komælk uegnet. Sammenlignet med komælk indeholder en kattemors mælk meget mere protein, mens komælk har færre kalorier, mindre fedt og taurin og mere laktose. Erstatningsmælk til killinger er lavet til killinger og indeholder alle de næringsstoffer, de har brug for; andre slags mælk har ikke den rette balance.",
-    "fi": "Cats Protectionin ohjeen mukaan kissanpennuille ei pidä antaa lehmän- eikä vuohenmaitoa lainkaan, koska ne sulattavat sitä huonosti, ja PDSA pitää lehmänmaitoa sopimattomana. Kissaemon maidossa on lehmänmaitoon verrattuna paljon enemmän proteiinia, kun taas lehmänmaidossa on vähemmän kaloreita, rasvaa ja tauriinia ja enemmän laktoosia. Kissanpennun korvikemaito on valmistettu kissanpennuille ja sisältää kaikki niiden tarvitsemat ravintoaineet, kun taas muiden maitojen ravintoaineet ovat väärissä suhteissa."
+    "fi": "Cats Protectionin ohjeen mukaan kissanpennuille ei pidä antaa lehmän- eikä vuohenmaitoa lainkaan, koska ne sulattavat sitä huonosti, ja PDSA pitää lehmänmaitoa sopimattomana. Kissaemon maidossa on lehmänmaitoon verrattuna paljon enemmän proteiinia, kun taas lehmänmaidossa on vähemmän kaloreita, rasvaa ja tauriinia ja enemmän laktoosia. Kissanpennun korvikemaito on valmistettu kissanpennuille ja sisältää kaikki niiden tarvitsemat ravintoaineet, kun taas muiden maitojen ravintoaineet ovat väärissä suhteissa.",
+    "fr": "Cats Protection conseille de ne jamais donner de lait de vache ou de chèvre aux chatons, car ils le digèrent difficilement, et PDSA juge le lait de vache inadapté. Comparé au lait de vache, le lait de la mère contient beaucoup plus de protéines ; le lait de vache, lui, est moins calorique, moins gras, plus pauvre en taurine et plus riche en lactose. Le lait de substitution pour chatons est conçu pour eux et contient tous les nutriments dont ils ont besoin ; les autres laits n’ont pas le bon équilibre."
   },
   "signs": {
     "en": [
@@ -132,6 +137,11 @@
       "Ripuli",
       "Heikkous",
       "Laihtuminen tai kehityksen viivästyminen"
+    ],
+    "fr": [
+      "Diarrhée",
+      "Faiblesse",
+      "Perte de poids ou mauvaise croissance"
     ]
   },
   "what_to_do": {
@@ -146,7 +156,8 @@
     "hr": "Prestani davati kravlje mlijeko i pitaj veterinara koje mlijeko za mačiće odabrati. Odmah se obrati veterinaru ako mlad mačić ima proljev, djeluje malaksalo, gubi na težini ili slabo napreduje, jer se njegovo stanje može brzo pogoršati.",
     "sv": "Sluta ge komjölk och fråga veterinären vilken kattungemjölk du ska använda. Kontakta veterinären direkt om en liten kattunge får diarré, verkar svag, går ned i vikt eller inte växer som den ska, eftersom kattungens tillstånd kan försämras snabbt.",
     "da": "Stop med komælken, og spørg din dyrlæge, hvilken killingemælk du skal bruge. Kontakt straks din dyrlæge, hvis en lille killing får diarré, virker svag, taber sig eller ikke trives, for en killings tilstand kan forværres hurtigt.",
-    "fi": "Lopeta lehmänmaidon antaminen ja kysy eläinlääkäriltä, mikä korvikemaito sopii kissanpennulle. Ota heti yhteyttä eläinlääkäriin, jos nuorella kissanpennulla on ripulia, se on veltto, laihtuu tai ei kehity kunnolla: kissanpennun vointi voi huonontua nopeasti."
+    "fi": "Lopeta lehmänmaidon antaminen ja kysy eläinlääkäriltä, mikä korvikemaito sopii kissanpennulle. Ota heti yhteyttä eläinlääkäriin, jos nuorella kissanpennulla on ripulia, se on veltto, laihtuu tai ei kehity kunnolla: kissanpennun vointi voi huonontua nopeasti.",
+    "fr": "Cessez de donner du lait de vache et demandez à votre vétérinaire quel lait pour chatons utiliser. Contactez votre vétérinaire sans attendre si un jeune chaton a de la diarrhée, semble faible, perd du poids ou ne se développe pas bien, car l’état d’un chaton peut s’aggraver rapidement."
   },
   "serving": null,
   "child": {
@@ -161,7 +172,8 @@
     "hr": "Mačići piju mamino mlijeko ili posebno mlijeko za mačiće, a ne mlijeko iz hladnjaka. Veći mačići trebaju samo svježu vodu!",
     "sv": "Kattbebisar dricker sin mammas mjölk eller särskild kattungemjölk, inte mjölk från kylskåpet. Större kattungar behöver bara färskt vatten!",
     "da": "Helt små killinger drikker deres mors mælk eller særlig killingemælk, ikke mælk fra køleskabet. Når killinger er blevet større, har de kun brug for friskt vand!",
-    "fi": "Kissanpennut juovat emonsa maitoa tai erityistä kissanpennun korvikemaitoa, eivät jääkaapin maitoa. Isommat kissanpennut tarvitsevat vain raikasta vettä!"
+    "fi": "Kissanpennut juovat emonsa maitoa tai erityistä kissanpennun korvikemaitoa, eivät jääkaapin maitoa. Isommat kissanpennut tarvitsevat vain raikasta vettä!",
+    "fr": "Les bébés chats boivent le lait de leur maman ou un lait spécial pour chatons, pas celui du frigo. Une fois grands, ils n’ont besoin que d’eau fraîche !"
   },
   "faq": [
     {
@@ -177,7 +189,8 @@
         "hr": "Čime hraniti mačića bez majke?",
         "sv": "Vad ska jag ge en moderlös kattunge?",
         "da": "Hvad skal jeg give en moderløs killing?",
-        "fi": "Millä orpoa kissanpentua ruokitaan?"
+        "fi": "Millä orpoa kissanpentua ruokitaan?",
+        "fr": "Que donner à un chaton orphelin ?"
       },
       "a": {
         "en": "Ask your vet first. Use a substitute kitten milk made specifically for kittens, available from vets and some pet shops, and follow the instructions on the label. Supermarket kitten or puppy milk is not suitable.",
@@ -191,7 +204,8 @@
         "hr": "Prvo pitaj veterinara. Daj zamjensko mlijeko napravljeno posebno za mačiće, koje se može kupiti kod veterinara i u nekim trgovinama za kućne ljubimce, i slijedi upute na pakiranju. Mlijeko za mačiće ili štenad iz supermarketa nije prikladno.",
         "sv": "Fråga veterinären först. Använd särskild kattungemjölk som är gjord för kattungar. Den finns hos veterinärer och i vissa djuraffärer. Följ instruktionerna på förpackningen. Kattungemjölk eller valpmjölk från mataffären passar inte.",
         "da": "Spørg først din dyrlæge. Brug erstatningsmælk lavet specielt til killinger, som fås hos dyrlæger og i nogle dyrebutikker, og følg anvisningerne på etiketten. Killinge- eller hvalpemælk fra supermarkedet er ikke egnet.",
-        "fi": "Kysy ensin neuvoa eläinlääkäriltä. Käytä nimenomaan kissanpennuille tarkoitettua korvikemaitoa, jota myyvät eläinlääkärit ja jotkin lemmikkikaupat, ja noudata pakkauksen ohjeita. Ruokakaupan kissanpentu- tai koiranpennunmaito ei sovi."
+        "fi": "Kysy ensin neuvoa eläinlääkäriltä. Käytä nimenomaan kissanpennuille tarkoitettua korvikemaitoa, jota myyvät eläinlääkärit ja jotkin lemmikkikaupat, ja noudata pakkauksen ohjeita. Ruokakaupan kissanpentu- tai koiranpennunmaito ei sovi.",
+        "fr": "Demandez d’abord conseil à votre vétérinaire. Utilisez un lait de substitution conçu spécialement pour les chatons, en vente chez les vétérinaires et dans certaines animaleries, et suivez le mode d’emploi de l’étiquette. Le lait pour chatons ou pour chiots vendu en supermarché ne convient pas."
       }
     },
     {
@@ -207,7 +221,8 @@
         "hr": "Kada mačići prestaju piti mlijeko?",
         "sv": "När slutar kattungar dricka mjölk?",
         "da": "Hvornår holder killinger op med at drikke mælk?",
-        "fi": "Milloin kissanpentu lopettaa maidon juomisen?"
+        "fi": "Milloin kissanpentu lopettaa maidon juomisen?",
+        "fr": "À quel âge les chatons arrêtent-ils de boire du lait ?"
       },
       "a": {
         "en": "By six to eight weeks old, kittens should be fully weaned onto solid food. From then on they only need to drink water, not milk, and their body may start making less lactase.",
@@ -221,7 +236,8 @@
         "hr": "Do šestog do osmog tjedna života mačići bi trebali potpuno prijeći na krutu hranu. Od tada za piće trebaju samo vodu, a ne mlijeko, a tijelo im može početi stvarati manje laktaze.",
         "sv": "Vid sex till åtta veckors ålder ska kattungar vara helt avvanda och äta fast föda. Därefter behöver de bara dricka vatten, inte mjölk, och kroppen kan börja bilda mindre laktas.",
         "da": "Når killinger er seks til otte uger gamle, skal de være helt fravænnet og spise fast føde. Derefter har de kun brug for at drikke vand, ikke mælk, og deres krop begynder måske at danne mindre laktase.",
-        "fi": "Kuuden–kahdeksan viikon iässä kissanpentujen pitäisi olla vieroitettu kokonaan kiinteään ruokaan. Siitä lähtien ne tarvitsevat juomaksi vain vettä, ei maitoa, ja niiden elimistö voi alkaa tuottaa vähemmän laktaasia."
+        "fi": "Kuuden–kahdeksan viikon iässä kissanpentujen pitäisi olla vieroitettu kokonaan kiinteään ruokaan. Siitä lähtien ne tarvitsevat juomaksi vain vettä, ei maitoa, ja niiden elimistö voi alkaa tuottaa vähemmän laktaasia.",
+        "fr": "Vers six à huit semaines, les chatons doivent être complètement sevrés et manger de la nourriture solide. À partir de là, ils n’ont besoin que d’eau, pas de lait, et leur organisme peut commencer à produire moins de lactase."
       }
     },
     {
@@ -237,7 +253,8 @@
         "hr": "A odrasle mačke?",
         "sv": "Och vuxna katter?",
         "da": "Og voksne katte?",
-        "fi": "Entä aikuiset kissat?"
+        "fi": "Entä aikuiset kissat?",
+        "fr": "Et les chats adultes ?"
       },
       "a": {
         "en": "Most cats are lactose intolerant, and once weaned they only need to drink water, not milk. See our page on milk for cats.",
@@ -251,7 +268,8 @@
         "hr": "Većina mačaka ne podnosi laktozu, a nakon prestanka sisanja za piće im treba samo voda, ne mlijeko. Pogledaj našu stranicu o mlijeku za mačke.",
         "sv": "De flesta katter är laktosintoleranta, och när de är avvanda behöver de bara dricka vatten, inte mjölk. Se vår sida om mjölk till katter.",
         "da": "De fleste katte er laktoseintolerante, og når de er fravænnet, har de kun brug for at drikke vand, ikke mælk. Se vores side om mælk til katte.",
-        "fi": "Useimmat kissat ovat laktoosi-intolerantteja, ja vieroituksen jälkeen ne tarvitsevat juomaksi vain vettä, ei maitoa. Lue lisää sivultamme kissojen maidonjuonnista."
+        "fi": "Useimmat kissat ovat laktoosi-intolerantteja, ja vieroituksen jälkeen ne tarvitsevat juomaksi vain vettä, ei maitoa. Lue lisää sivultamme kissojen maidonjuonnista.",
+        "fr": "La plupart des chats sont intolérants au lactose et, une fois sevrés, ils n’ont besoin que d’eau, pas de lait. Consultez notre page sur le lait pour les chats."
       }
     }
   ],
@@ -419,6 +437,11 @@
       "status": "verified",
       "verified_by": "claude-c-fi-2026-11-16",
       "verified_hash": "59b19b32c1c599f7288cc0da03e6df647b1dba6e7c83462219502bc401fed71e"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-c-fr-2026-11-16",
+      "verified_hash": "6a0d74daeef916d6405d9c3a219a2bde9654c4453e0e74b35779db426d58d00a"
     }
   }
 }

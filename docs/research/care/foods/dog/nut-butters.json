@@ -13,7 +13,8 @@
     "hr": "Maslaci od orašastih plodova",
     "sv": "Nötsmör",
     "da": "Nøddesmør",
-    "fi": "Pähkinävoit"
+    "fi": "Pähkinävoit",
+    "fr": "Purées de fruits à coque"
   },
   "question": {
     "en": "Can dogs eat almond butter and other nut butters?",
@@ -27,7 +28,8 @@
     "hr": "Smiju li psi jesti maslac od badema i druge maslace od orašastih plodova?",
     "sv": "Får hundar äta mandelsmör och andra nötsmör?",
     "da": "Må hunde spise mandelsmør og andre slags nøddesmør?",
-    "fi": "Saako koira syödä mantelivoita ja muita pähkinävoita?"
+    "fi": "Saako koira syödä mantelivoita ja muita pähkinävoita?",
+    "fr": "Les chiens peuvent-ils manger de la purée d’amande et d’autres purées de fruits à coque ?"
   },
   "url_slug": {
     "en": "nut-butters",
@@ -41,7 +43,8 @@
     "hr": "maslaci-od-orasastih-plodova",
     "sv": "notsmor",
     "da": "noddesmor",
-    "fi": "pahkinavoit"
+    "fi": "pahkinavoit",
+    "fr": "puree-de-fruits-a-coque"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "hr": "Maslac od badema smije, u malim količinama, ako ne sadrži ksilitol. Mnogi maslaci od badema sadrže sol i sladila poput ksilitola, koji je otrovan za pse, zato uvijek provjeri deklaraciju. Nisu svi orašasti plodovi sigurni za pse: makadamija je vrlo otrovna za pse.",
     "sv": "Mandelsmör går bra i små mängder, så länge det inte innehåller xylitol. Många sorter mandelsmör innehåller salt och sötningsmedel som xylitol, som är giftigt för hundar. Kontrollera därför alltid innehållsförteckningen. Alla nötter är inte ofarliga: macadamianötter är mycket giftiga för hundar.",
     "da": "Mandelsmør: ja, i små mængder, hvis det ikke indeholder xylitol. Mange slags mandelsmør indeholder salt og sødemidler som xylitol, der er giftigt for hunde, så tjek altid varedeklarationen. Ikke alle nødder er sikre: macadamianødder er meget giftige for hunde.",
-    "fi": "Mantelivoita saa pieninä määrinä, jos siinä ei ole ksylitolia. Monissa mantelivoissa on suolaa ja makeutusaineita, esimerkiksi koirille myrkyllistä ksylitolia, joten tarkista aina tuoteseloste. Kaikki pähkinät eivät ole turvallisia: makadamiapähkinät ovat koirille erittäin myrkyllisiä."
+    "fi": "Mantelivoita saa pieninä määrinä, jos siinä ei ole ksylitolia. Monissa mantelivoissa on suolaa ja makeutusaineita, esimerkiksi koirille myrkyllistä ksylitolia, joten tarkista aina tuoteseloste. Kaikki pähkinät eivät ole turvallisia: makadamiapähkinät ovat koirille erittäin myrkyllisiä.",
+    "fr": "Oui pour la purée d’amande, en petite quantité et à condition qu’elle ne contienne pas de xylitol. Beaucoup de purées d’amande contiennent du sel et des édulcorants comme le xylitol, toxique pour les chiens : vérifiez donc toujours l’étiquette. Tous les fruits à coque ne sont pas inoffensifs : les noix de macadamia sont très toxiques pour les chiens."
   },
   "why": {
     "en": "Almonds themselves are not recommended for dogs, but a little almond butter can be a safe alternative. Nuts are high in fat, and too much almond butter can lead to pancreatitis. Some peanut and other nut butters contain xylitol, a sweetener that is toxic to dogs.",
@@ -70,7 +74,8 @@
     "hr": "Sami se bademi psima ne preporučuju, ali malo maslaca od badema može biti sigurna zamjena. Orašasti plodovi bogati su mastima, a previše maslaca od badema može dovesti do upale gušterače. Neki maslaci od kikirikija i drugih orašastih plodova sadrže ksilitol, sladilo koje je otrovno za pse.",
     "sv": "Själva mandlarna rekommenderas inte till hundar, men lite mandelsmör kan vara ett ofarligt alternativ. Nötter innehåller mycket fett, och för mycket mandelsmör kan leda till bukspottkörtelinflammation. Vissa sorters jordnötssmör och andra nötsmör innehåller xylitol, ett sötningsmedel som är giftigt för hundar.",
     "da": "Selve mandlerne anbefales ikke til hunde, men lidt mandelsmør kan være et sikkert alternativ. Nødder indeholder meget fedt, og for meget mandelsmør kan give betændelse i bugspytkirtlen. Noget peanutbutter og andet nøddesmør indeholder xylitol, et sødemiddel der er giftigt for hunde.",
-    "fi": "Mantelit sellaisenaan eivät ole koirille suositeltavia, mutta pieni määrä mantelivoita voi olla turvallinen vaihtoehto. Pähkinät ovat rasvaisia, ja liian suuri määrä mantelivoita voi johtaa haimatulehdukseen. Joissakin maapähkinävoissa ja muissa pähkinävoissa on ksylitolia, makeutusainetta, joka on koirille myrkyllistä."
+    "fi": "Mantelit sellaisenaan eivät ole koirille suositeltavia, mutta pieni määrä mantelivoita voi olla turvallinen vaihtoehto. Pähkinät ovat rasvaisia, ja liian suuri määrä mantelivoita voi johtaa haimatulehdukseen. Joissakin maapähkinävoissa ja muissa pähkinävoissa on ksylitolia, makeutusainetta, joka on koirille myrkyllistä.",
+    "fr": "Les amandes ne sont pas recommandées pour les chiens, mais un peu de purée d’amande peut en être une alternative sans danger. Les fruits à coque sont riches en graisses, et trop de purée d’amande peut provoquer une pancréatite. Certains beurres de cacahuète et d’autres purées de fruits à coque contiennent du xylitol, un édulcorant toxique pour les chiens."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "hr": "Ako misliš da je tvoj pas pojeo maslac od orašastih plodova s ksilitolom, odmah nazovi veterinara, dežurnu veterinarsku ambulantu ili telefonsku liniju za otrovanja životinja.",
     "sv": "Om du tror att hunden har ätit ett nötsmör som innehåller xylitol, ring direkt till veterinären, ett djursjukhus med akutjour eller giftrådgivning för djur.",
     "da": "Hvis du tror, at din hund har spist nøddesmør med xylitol, skal du straks kontakte din dyrlæge, en akut dyreklinik eller en giftrådgivning for dyr.",
-    "fi": "Jos epäilet koirasi syöneen ksylitolia sisältävää pähkinävoita, soita heti omalle eläinlääkärillesi, päivystävälle eläinlääkärille tai eläinten myrkytysneuvontaan."
+    "fi": "Jos epäilet koirasi syöneen ksylitolia sisältävää pähkinävoita, soita heti omalle eläinlääkärillesi, päivystävälle eläinlääkärille tai eläinten myrkytysneuvontaan.",
+    "fr": "Si vous pensez que votre chien a mangé une purée de fruits à coque contenant du xylitol, appelez tout de suite votre vétérinaire, une clinique d’urgence ou un centre antipoison vétérinaire."
   },
   "serving": {
     "en": "A small amount of almond butter whose label lists no xylitol; as an occasional treat.",
@@ -99,7 +105,8 @@
     "hr": "Malo maslaca od badema bez ksilitola na deklaraciji, kao povremena poslastica.",
     "sv": "Lite mandelsmör utan xylitol i innehållsförteckningen, som en godbit då och då.",
     "da": "En lille mængde mandelsmør uden xylitol i ingredienslisten; som godbid en gang imellem.",
-    "fi": "Pieni määrä mantelivoita, jonka tuoteselosteessa ei ole ksylitolia; satunnaisena herkkuna."
+    "fi": "Pieni määrä mantelivoita, jonka tuoteselosteessa ei ole ksylitolia; satunnaisena herkkuna.",
+    "fr": "Une petite quantité de purée d’amande dont l’étiquette ne mentionne pas de xylitol, en friandise occasionnelle."
   },
   "child": {
     "en": "A little almond butter can be a treat, but a grown-up must check the jar first. Some kinds are not safe for dogs.",
@@ -113,7 +120,8 @@
     "hr": "Malo maslaca od badema može biti poslastica, ali odrasla osoba prvo mora provjeriti staklenku. Neke vrste nisu sigurne za pse.",
     "sv": "Lite mandelsmör kan vara en godbit, men en vuxen måste kolla burken först. Vissa sorter är inte säkra för hundar.",
     "da": "Lidt mandelsmør kan være en godbid, men en voksen skal tjekke glasset først. Nogle slags er ikke sikre for hunde.",
-    "fi": "Vähän mantelivoita voi olla herkku, mutta aikuisen pitää ensin tarkistaa purkki. Osa tuotteista ei ole koirille turvallisia."
+    "fi": "Vähän mantelivoita voi olla herkku, mutta aikuisen pitää ensin tarkistaa purkki. Osa tuotteista ei ole koirille turvallisia.",
+    "fr": "Un peu de purée d’amande peut être une friandise, mais un adulte doit d’abord vérifier le pot. Certaines sortes sont dangereuses pour les chiens."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "hr": "Kako znati ima li maslac od orašastih plodova ksilitol?",
         "sv": "Hur vet jag om ett nötsmör innehåller xylitol?",
         "da": "Hvordan kan jeg se, om et nøddesmør indeholder xylitol?",
-        "fi": "Mistä tiedän, onko pähkinävoissa ksylitolia?"
+        "fi": "Mistä tiedän, onko pähkinävoissa ksylitolia?",
+        "fr": "Comment savoir si une purée de fruits à coque contient du xylitol ?"
       },
       "a": {
         "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
@@ -143,7 +152,8 @@
         "hr": "Pročitaj sastojke na deklaraciji, osobito na proizvodima označenima kao „bez šećera“ ili „sa smanjenim udjelom šećera“.",
         "sv": "Läs innehållsförteckningen, särskilt på produkter som är märkta sockerfria eller med lågt sockerinnehåll.",
         "da": "Læs varedeklarationen, især på produkter, der er mærket sukkerfri eller med lavt sukkerindhold.",
-        "fi": "Lue tuoteselosteen ainesosaluettelo, varsinkin jos tuotteessa lukee ”sokeriton” tai ”vähäsokerinen”."
+        "fi": "Lue tuoteselosteen ainesosaluettelo, varsinkin jos tuotteessa lukee ”sokeriton” tai ”vähäsokerinen”.",
+        "fr": "Lisez la liste des ingrédients sur l’étiquette, surtout pour les produits « sans sucre » ou « allégés en sucre »."
       }
     }
   ],
@@ -257,6 +267,11 @@
       "status": "verified",
       "verified_by": "claude-c-fi-2026-11-16",
       "verified_hash": "08cd000f1acb8ae20c671b4f0cb8ba755b602bce73459cc17977cbf03a7be409"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-c-fr-2026-11-16",
+      "verified_hash": "bf2fc1e01cd4bd0cc3d8dd261c5dd83543195520a59cd34be66c3478d98b770a"
     }
   }
 }

@@ -13,7 +13,8 @@
     "hr": "Leća",
     "sv": "Linser",
     "da": "Linser",
-    "fi": "Linssit"
+    "fi": "Linssit",
+    "fr": "Lentilles"
   },
   "question": {
     "en": "Can dogs eat lentils?",
@@ -27,7 +28,8 @@
     "hr": "Smiju li psi jesti leću?",
     "sv": "Får hundar äta linser?",
     "da": "Må hunde spise linser?",
-    "fi": "Saako koira syödä linssejä?"
+    "fi": "Saako koira syödä linssejä?",
+    "fr": "Les chiens peuvent-ils manger des lentilles ?"
   },
   "url_slug": {
     "en": "lentils",
@@ -41,7 +43,8 @@
     "hr": "leca",
     "sv": "linser",
     "da": "linser",
-    "fi": "linssit"
+    "fi": "linssit",
+    "fr": "lentilles"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "hr": "Da, ako je kuhana. Leća je mahunarka, kao i grah, a psi smiju jesti mahunarke koje su prvo namočene, a zatim kuhane. Neki psi teško probavljaju mahunarke, zato kuhanu leću uvodi postupno.",
     "sv": "Ja, om de är kokta. Linser är baljväxter, precis som bönor, och hundar kan äta baljväxter som först har blötlagts och sedan kokats. Vissa hundar har svårt att smälta baljväxter, så vänj hunden vid kokta linser långsamt.",
     "da": "Ja, hvis de er tilberedt. Linser er bælgfrugter, ligesom bønner, og hunde kan få bælgfrugter, der først er udblødt og derefter tilberedt. Nogle hunde har svært ved at fordøje bælgfrugter, så væn din hund langsomt til tilberedte linser.",
-    "fi": "Saa, jos ne on keitetty. Linssit ovat palkokasveja, kuten pavutkin, ja koira voi syödä palkokasveja, kun ne on ensin liotettu ja sitten keitetty. Osalle koirista palkokasvit ovat vaikeasti sulavia, joten aloita keitetyillä linsseillä vähitellen."
+    "fi": "Saa, jos ne on keitetty. Linssit ovat palkokasveja, kuten pavutkin, ja koira voi syödä palkokasveja, kun ne on ensin liotettu ja sitten keitetty. Osalle koirista palkokasvit ovat vaikeasti sulavia, joten aloita keitetyillä linsseillä vähitellen.",
+    "fr": "Oui, à condition qu’elles soient cuites. Comme les haricots, les lentilles sont des légumineuses : votre chien peut en manger si elles ont d’abord été trempées, puis bien cuites. Certains chiens digèrent mal les légumineuses ; introduisez donc les lentilles cuites progressivement."
   },
   "why": {
     "en": "Legumes such as lentils are a good source of fibre and protein for dogs. However, some dogs have trouble digesting them, which is why they should be cooked well and added to the diet slowly.",
@@ -70,7 +74,8 @@
     "hr": "Mahunarke poput leće dobar su izvor vlakana i bjelančevina za pse. Međutim, neki ih psi teško probavljaju, zbog čega ih treba dobro skuhati i u prehranu uvoditi postupno.",
     "sv": "Baljväxter som linser är en bra källa till fibrer och protein för hundar. Vissa hundar har dock svårt att smälta dem, så linserna ska kokas ordentligt och införas gradvis i kosten.",
     "da": "Bælgfrugter som linser er en god kilde til fibre og protein for hunde. Nogle hunde har dog svært ved at fordøje dem, og derfor skal de tilberedes grundigt og indføres langsomt i kosten.",
-    "fi": "Palkokasvit, kuten linssit, ovat hyvä kuidun ja proteiinin lähde koirille. Osan koirien on kuitenkin vaikea sulattaa niitä, joten ne on keitettävä hyvin ja lisättävä ruokavalioon vähitellen."
+    "fi": "Palkokasvit, kuten linssit, ovat hyvä kuidun ja proteiinin lähde koirille. Osan koirien on kuitenkin vaikea sulattaa niitä, joten ne on keitettävä hyvin ja lisättävä ruokavalioon vähitellen.",
+    "fr": "Les lentilles, comme les autres légumineuses, apportent aux chiens des fibres et des protéines. Certains les digèrent toutefois difficilement : il faut donc bien les cuire et les introduire peu à peu dans leur alimentation."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "hr": "Počni s malo dobro kuhane leće i uvodi je postupno jer neki psi teško probavljaju mahunarke.",
     "sv": "Börja med lite välkokta linser och vänj hunden vid dem långsamt, eftersom vissa hundar har svårt att smälta baljväxter.",
     "da": "Start med lidt grundigt tilberedte linser, og indfør dem langsomt, for nogle hunde har svært ved at fordøje bælgfrugter.",
-    "fi": "Aloita pienellä määrällä hyvin keitettyjä linssejä ja lisää niitä vähitellen, sillä osan koirien on vaikea sulattaa palkokasveja."
+    "fi": "Aloita pienellä määrällä hyvin keitettyjä linssejä ja lisää niitä vähitellen, sillä osan koirien on vaikea sulattaa palkokasveja.",
+    "fr": "Commencez par un peu de lentilles bien cuites et introduisez-les progressivement, car certains chiens digèrent mal les légumineuses."
   },
   "serving": {
     "en": "Well cooked (dried lentils soaked first, then cooked), introduced slowly.",
@@ -99,7 +105,8 @@
     "hr": "Dobro kuhana (suha leća prvo se namoči, a zatim kuha), uvedena postupno.",
     "sv": "Välkokta; torkade linser blötläggs först och kokas sedan. Införs långsamt i kosten.",
     "da": "Grundigt tilberedte (tørrede linser udblødes først og tilberedes derefter) og indført langsomt.",
-    "fi": "Hyvin keitettyinä (kuivat linssit ensin liotettuina ja sitten keitettyinä); ruokavalioon vähitellen."
+    "fi": "Hyvin keitettyinä (kuivat linssit ensin liotettuina ja sitten keitettyinä); ruokavalioon vähitellen.",
+    "fr": "Bien cuites (lentilles sèches préalablement trempées), introduites progressivement."
   },
   "child": {
     "en": "Cooked lentils can be a little treat for dogs. A grown-up should cook them well first!",
@@ -113,7 +120,8 @@
     "hr": "Kuhana leća može biti mala poslastica za pse. Odrasla osoba prvo je mora dobro skuhati!",
     "sv": "Kokta linser kan vara en liten godbit för hundar. En vuxen ska koka dem ordentligt först!",
     "da": "Kogte linser kan være en lille godbid til hunde. En voksen skal først koge dem grundigt!",
-    "fi": "Keitetyt linssit voivat olla koiralle pieni herkku. Aikuisen pitää ensin keittää ne hyvin!"
+    "fi": "Keitetyt linssit voivat olla koiralle pieni herkku. Aikuisen pitää ensin keittää ne hyvin!",
+    "fr": "Les lentilles cuites peuvent être une petite friandise pour les chiens. Un adulte doit d’abord bien les faire cuire !"
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "hr": "Smiju li psi jesti nekuhanu leću?",
         "sv": "Får hundar äta okokta linser?",
         "da": "Må hunde spise ukogte linser?",
-        "fi": "Saako koira syödä keittämättömiä linssejä?"
+        "fi": "Saako koira syödä keittämättömiä linssejä?",
+        "fr": "Les chiens peuvent-ils manger des lentilles crues ?"
       },
       "a": {
         "en": "No. Dogs can have legumes that have been soaked first and then cooked, and lentils should be cooked well.",
@@ -143,7 +152,8 @@
         "hr": "Ne. Psi smiju jesti mahunarke koje su prvo namočene pa kuhane, a leću treba dobro skuhati.",
         "sv": "Nej. Hundar kan äta baljväxter som först har blötlagts och sedan kokats, och linser ska kokas ordentligt.",
         "da": "Nej. Hunde kan få bælgfrugter, der først er udblødt og derefter tilberedt, og linser skal tilberedes grundigt.",
-        "fi": "Ei saa. Koira voi syödä palkokasveja vasta, kun ne on liotettu ja keitetty, ja linssit täytyy keittää kunnolla."
+        "fi": "Ei saa. Koira voi syödä palkokasveja vasta, kun ne on liotettu ja keitetty, ja linssit täytyy keittää kunnolla.",
+        "fr": "Non. Les lentilles doivent d’abord être trempées, puis bien cuites avant d’être données à un chien."
       }
     }
   ],
@@ -239,6 +249,11 @@
       "status": "verified",
       "verified_by": "claude-c-fi-2026-11-16",
       "verified_hash": "f7d5defe6033fff9b5147b8edeb4f2c5856d362e29e094dcfb8df04c3ce12119"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-c-fr-2026-11-16",
+      "verified_hash": "d7dea09241ad409a4e0f78f813a247e18668bb340607421b34b73bb4c753f40c"
     }
   }
 }
