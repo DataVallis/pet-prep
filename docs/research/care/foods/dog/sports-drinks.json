@@ -1,0 +1,120 @@
+{
+  "slug": "sports-drinks",
+  "species": "dog",
+  "name": {
+    "en": "Sports drinks",
+    "sl": "Športni napitki"
+  },
+  "question": {
+    "en": "Can dogs drink sports drinks?",
+    "sl": "Ali lahko psi pijejo športne napitke?"
+  },
+  "url_slug": {
+    "en": "sports-drinks",
+    "sl": "sportni-napitki"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, dogs should not drink sports drinks like Gatorade. A tiny sip isn't strictly toxic, but they contain too much sodium and sugar, which can upset a dog's stomach and worsen dehydration. Sugar-free versions may contain xylitol, which is highly toxic.",
+    "sl": "Ne, psi ne smejo piti športnih napitkov, kot je Gatorade. Majhen požirek sicer ni strupen, vendar vsebujejo preveč natrija in sladkorja, ki lahko psu razdražita želodec in poslabšata dehidracijo. Različice brez sladkorja lahko vsebujejo ksilitol, ki je zelo strupen."
+  },
+  "why": {
+    "en": "Human sports drinks contain excessive amounts of sodium and sugar, as well as artificial ingredients that aren't appropriate for dogs. CityVet says a tiny sip isn't strictly toxic but is highly discouraged, while PetMD says dogs should not drink Gatorade at all, so we follow the stricter advice. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
+    "sl": "Športni napitki za ljudi vsebujejo preveč natrija in sladkorja ter umetne sestavine, ki za pse niso primerne. CityVet pravi, da majhen požirek sicer ni strupen, a ga odločno odsvetuje, PetMD pa, da psi Gatoreda sploh ne smejo piti, zato upoštevamo strožji nasvet. Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen."
+  },
+  "signs": {
+    "en": [
+      "Upset stomach",
+      "Worse dehydration"
+    ],
+    "sl": [
+      "Prebavne težave",
+      "Poslabšana dehidracija"
+    ]
+  },
+  "what_to_do": {
+    "en": "Give fresh water instead. If you notice signs of dehydration, offer a small amount of cool water, not all at once, so your dog doesn't drink too quickly and vomit. If your dog is dehydrated, vomiting or has diarrhoea, call your vet. If the drink was sugar-free, see our xylitol page.",
+    "sl": "Namesto tega ponudite svežo vodo. Če opazite znake dehidracije, ponudite malo hladne vode, ne vse naenkrat, da pes ne pije prehitro in ne bruha. Če je pes dehidriran, bruha ali ima drisko, pokličite veterinarja. Če je bil napitek brez sladkorja, poglejte našo stran o ksilitolu."
+  },
+  "serving": null,
+  "child": {
+    "en": "Sports drinks are for people. After running and playing, dogs just need a bowl of fresh water!",
+    "sl": "Športni napitki so za ljudi. Po teku in igri psi potrebujejo le skledo sveže vode!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What can I give my active dog instead?",
+        "sl": "Kaj lahko namesto tega dam aktivnemu psu?"
+      },
+      "a": {
+        "en": "For the average house dog, a fresh bowl of water is perfectly sufficient. Instead of sharing your gym drink, choose an electrolyte solution made for dogs, and if you think your dog may be dehydrated, contact your vet about next steps.",
+        "sl": "Za povprečnega hišnega psa je skleda sveže vode povsem dovolj. Namesto da z njim delite svoj športni napitek, izberite elektrolitsko raztopino, narejeno za pse, in če mislite, da je pes dehidriran, se z veterinarjem posvetujte o nadaljnjih korakih."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD240",
+      "quote": "While a tiny sip of a traditional sports drink isn’t strictly toxic, it is highly discouraged."
+    },
+    {
+      "id": "KD240",
+      "quote": "Human sports drinks contain excessive amounts of sodium and sugar, which can upset a dog’s stomach and worsen dehydration."
+    },
+    {
+      "id": "KD240",
+      "quote": "Many zero-sugar human drinks contain xylitol (birch sugar), which is highly toxic"
+    },
+    {
+      "id": "KD240",
+      "quote": "For the average house dog, a fresh bowl of water is perfectly sufficient."
+    },
+    {
+      "id": "KD240",
+      "quote": "Instead of sharing your gym drink, always opt for dog specific electrolyte solutions."
+    },
+    {
+      "id": "KD241",
+      "quote": "No, dogs should not drink Gatorade."
+    },
+    {
+      "id": "KD241",
+      "quote": "Gatorade contains sugar, sodium, and artificial ingredients that aren’t appropriate for dogs."
+    },
+    {
+      "id": "KD241",
+      "quote": "If you notice signs of dehydration, offer a small amount of cool water (not all at once, as they may drink too quickly and vomit)"
+    },
+    {
+      "id": "KD241",
+      "quote": "If your dog is dehydrated, vomiting, or has diarrhea, call your veterinarian."
+    },
+    {
+      "id": "KD246",
+      "quote": "If you think your dog may be dehydrated, contact your vet about next steps."
+    }
+  ],
+  "related": [
+    "water",
+    "coconut-water",
+    "energy-drinks",
+    "soda",
+    "salt",
+    "sugar",
+    "xylitol"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5b04af4cccae161f02c9b54d2ea6a383639f8f36c24534ad04882158ccb4715c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "392d93c056a8c8e2c61c737a6e3174885ba939608ef9e2e230947fca743a0af5"
+    }
+  }
+}

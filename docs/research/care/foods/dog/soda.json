@@ -1,0 +1,202 @@
+{
+  "slug": "soda",
+  "species": "dog",
+  "name": {
+    "en": "Soda (soft drinks)",
+    "sl": "Gazirane pijače"
+  },
+  "question": {
+    "en": "Can dogs drink soda?",
+    "sl": "Ali lahko psi pijejo gazirane pijače?"
+  },
+  "url_slug": {
+    "en": "soda",
+    "sl": "gazirane-pijace"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Dogs should not drink soda. It is high in sugar and caffeine, has no nutritional value for dogs, and the caffeine can cause signs of poisoning. One or two licks are unlikely to cause poisoning, but keep soda out of your dog's reach.",
+    "sl": "Ne. Psi ne smejo piti gaziranih pijač. Vsebujejo veliko sladkorja in kofeina, za pse nimajo nobene hranilne vrednosti, kofein pa lahko povzroči znake zastrupitve. Lizanje ali dve verjetno ne bosta povzročila zastrupitve, vendar pijače hranite izven pasjega dosega."
+  },
+  "why": {
+    "en": "Pet Poison Helpline explains that soda has high levels of sugar, caffeine and other ingredients that can harm dogs, and there is no reason for dogs to drink it. The caffeine in soda can lead to signs of toxicity, and how much a dog drinks determines how severe they are. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
+    "sl": "Pet Poison Helpline pojasnjuje, da gazirane pijače vsebujejo veliko sladkorja, kofeina in drugih sestavin, ki lahko psom škodijo, in da ni nobenega razloga, da bi jih psi pili. Kofein v teh pijačah lahko povzroči znake zastrupitve, njihova resnost pa je odvisna od tega, koliko je pes popil. Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen."
+  },
+  "signs": {
+    "en": [
+      "Hyperactivity",
+      "Restlessness",
+      "Vomiting",
+      "Fast heartbeat",
+      "High blood pressure",
+      "Raised body temperature",
+      "Irregular heartbeat",
+      "Trembling",
+      "Seizures",
+      "Collapse"
+    ],
+    "sl": [
+      "Pretirana živahnost",
+      "Nemir",
+      "Bruhanje",
+      "Hiter srčni utrip",
+      "Visok krvni tlak",
+      "Zvišana telesna temperatura",
+      "Nereden srčni utrip",
+      "Tresenje",
+      "Krči (napadi)",
+      "Kolaps"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog drank soda, watch for symptoms. If they drank a large amount, contact your vet or a pet poison helpline straight away so your dog can get the right treatment. If the soda was sugar-free, see our xylitol page.",
+    "sl": "Če je pes popil gazirano pijačo, ga opazujte, ali se pojavijo znaki. Če je popil veliko, takoj pokličite veterinarja ali center za zastrupitve živali, da bo pes dobil pravo zdravljenje. Če je bila pijača brez sladkorja, poglejte našo stran o ksilitolu."
+  },
+  "serving": null,
+  "child": {
+    "en": "Fizzy drinks are for people, not dogs. Dogs only need fresh water, so keep cans and cups up high!",
+    "sl": "Gazirane pijače so za ljudi, ne za pse. Psi potrebujejo le svežo vodo, zato pločevinke in kozarce pospravi visoko!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My dog licked a bit of spilled soda. Is that a problem?",
+        "sl": "Pes je polizal malo razlite gazirane pijače. Je to težava?"
+      },
+      "a": {
+        "en": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets. Keep an eye on your dog and keep soda stored away so it can't happen again.",
+        "sl": "Lizanje ali dve kave, čaja ali gazirane pijače pri večini živali verjetno ne bo povzročilo zastrupitve. Psa opazujte in pijače shranjujte tako, da do njih ne more."
+      }
+    },
+    {
+      "q": {
+        "en": "What about diet or sugar-free soda?",
+        "sl": "Kaj pa dietne pijače ali pijače brez sladkorja?"
+      },
+      "a": {
+        "en": "Many zero-sugar drinks contain xylitol, which is highly toxic to dogs, so keep diet drinks away from your dog too.",
+        "sl": "Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen, zato tudi dietne pijače hranite izven pasjega dosega."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD239",
+      "quote": "While many people safely consume soda everyday worldwide, dogs cannot drink soda."
+    },
+    {
+      "id": "KD239",
+      "quote": "Soda has high levels of sugar, caffeine and other ingredients which can have an adverse effect on dogs."
+    },
+    {
+      "id": "KD239",
+      "quote": "Soda does not have any nutritional value and there is no reason for dogs to drink it."
+    },
+    {
+      "id": "KD239",
+      "quote": "The caffeine found in soda can lead to clinical signs of toxicity."
+    },
+    {
+      "id": "KD239",
+      "quote": "The amount ingested will determine the severity of the symptoms."
+    },
+    {
+      "id": "KD239",
+      "quote": "Common signs to watch out for include:"
+    },
+    {
+      "id": "KD239",
+      "quote": "Hyperactivity"
+    },
+    {
+      "id": "KD239",
+      "quote": "Restlessness"
+    },
+    {
+      "id": "KD239",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD239",
+      "quote": "Elevated heart rate"
+    },
+    {
+      "id": "KD239",
+      "quote": "Elevated blood pressure"
+    },
+    {
+      "id": "KD239",
+      "quote": "Elevated body temperature"
+    },
+    {
+      "id": "KD239",
+      "quote": "Abnormal heart rhythm"
+    },
+    {
+      "id": "KD239",
+      "quote": "Tremors"
+    },
+    {
+      "id": "KD239",
+      "quote": "Seizures"
+    },
+    {
+      "id": "KD239",
+      "quote": "Collapse"
+    },
+    {
+      "id": "KD239",
+      "quote": "Monitor your pup for symptoms if they've consumed soda."
+    },
+    {
+      "id": "KD239",
+      "quote": "If they have drank a large amount, contact your veterinarian and Pet Poison Helpline"
+    },
+    {
+      "id": "KD239",
+      "quote": "Take your dog to the veterinary clinic so your veterinarian can administer the correct course of treatment."
+    },
+    {
+      "id": "KD239",
+      "quote": "Keep all soda stored away so your pup can't get to it."
+    },
+    {
+      "id": "KD239",
+      "quote": "Dogs only need to drink fresh water daily."
+    },
+    {
+      "id": "KD19",
+      "quote": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets."
+    },
+    {
+      "id": "KD19",
+      "quote": "Many common products contain caffeine including coffee, tea, soda, energy drinks, some supplements"
+    },
+    {
+      "id": "KD240",
+      "quote": "Many zero-sugar human drinks contain xylitol (birch sugar), which is highly toxic"
+    }
+  ],
+  "related": [
+    "energy-drinks",
+    "coffee",
+    "tea",
+    "sports-drinks",
+    "sugar",
+    "xylitol",
+    "water"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4395aea7ca295c4f3efb2b25b2d791d54a4d4e2d3bd87719f2e906d558e00c82"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d317606e5b3db24bb3c95c0a00082c1830c36683f853c4c64fc91b654716559d"
+    }
+  }
+}

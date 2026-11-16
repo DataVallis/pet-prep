@@ -1,0 +1,153 @@
+{
+  "slug": "juice",
+  "species": "dog",
+  "name": {
+    "en": "Fruit juice",
+    "sl": "Sadni sok"
+  },
+  "question": {
+    "en": "Can dogs drink fruit juice?",
+    "sl": "Ali lahko psi pijejo sadni sok?"
+  },
+  "url_slug": {
+    "en": "juice",
+    "sl": "sadni-sok"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to. Whole fruit is a better snack than juice. Orange juice, for example, isn't toxic but has concentrated sugars and none of the fruit's fibre. Lemon juice is high in citric acid, which is toxic to dogs, and sugar-free drinks may contain xylitol.",
+    "sl": "Raje ne. Celo sadje je boljši prigrizek kot sok. Pomarančni sok na primer ni strupen, vendar ima zgoščen sladkor in nič vlaknin iz sadja. Limonin sok vsebuje veliko citronske kisline, ki je za pse strupena, pijače brez sladkorja pa lahko vsebujejo ksilitol."
+  },
+  "why": {
+    "en": "Juice contains concentrated natural sugars and lacks the fibre of whole fruit; because it is higher in sugar and easy to drink in large amounts, it may increase the risk of digestive upset. Fruit juice concentrates are high in fructose, which may increase the risk of obesity. Lemon juice is a concentrated form of the fruit with high amounts of citric acid, which is toxic to dogs. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
+    "sl": "Sok vsebuje zgoščen naravni sladkor in nima vlaknin celega sadja; ker ima več sladkorja in ga pes zlahka popije veliko, lahko poveča tveganje za prebavne težave. Sadni koncentrati imajo veliko fruktoze, ki lahko poveča tveganje za debelost. Limonin sok je zgoščena oblika sadeža z veliko citronske kisline, ki je za pse strupena. Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen."
+  },
+  "signs": {
+    "en": [
+      "Digestive upset"
+    ],
+    "sl": [
+      "Prebavne težave"
+    ]
+  },
+  "what_to_do": {
+    "en": "Offer fresh water instead and watch your dog for any signs of digestive upset. If the drink was sugar-free or may contain xylitol, see our xylitol page straight away. If your dog had grape juice, see our grapes page.",
+    "sl": "Namesto soka ponudite svežo vodo in psa opazujte, ali se pojavijo prebavne težave. Če je bila pijača brez sladkorja ali morda vsebuje ksilitol, takoj poglejte našo stran o ksilitolu. Če je pes popil grozdni sok, poglejte našo stran o grozdju."
+  },
+  "serving": null,
+  "child": {
+    "en": "Juice is too sugary for dogs. A small piece of dog-safe fresh fruit or a bowl of fresh water is a much better treat!",
+    "sl": "Sok je za pse preveč sladek. Majhen košček sadja, ki je za pse varno, ali skleda sveže vode je veliko boljša izbira!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is orange juice toxic to dogs?",
+        "sl": "Ali je pomarančni sok za pse strupen?"
+      },
+      "a": {
+        "en": "No, but it is not recommended because it contains concentrated sugars and lacks the fibre found in whole fruit. If you want to share the taste of oranges, offer small pieces of fresh fruit instead.",
+        "sl": "Ne, vendar ga ne priporočamo, ker vsebuje zgoščen sladkor in nima vlaknin celega sadja. Če želite psu ponuditi okus pomaranče, mu raje dajte majhne koščke svežega sadja."
+      }
+    },
+    {
+      "q": {
+        "en": "What about grape juice?",
+        "sl": "Kaj pa grozdni sok?"
+      },
+      "a": {
+        "en": "Sources disagree. VCA says grape juice does not appear to cause the poisoning seen with grapes and raisins, while FirstVet says grape juice should never be given to dogs. We follow the stricter advice: don't give it.",
+        "sl": "Viri se ne strinjajo. VCA navaja, da grozdni sok očitno ne povzroča zastrupitve, kakršno povzročata grozdje in rozine, FirstVet pa pravi, da psom grozdnega soka nikoli ne smemo dati. Upoštevamo strožji nasvet: ne dajajte ga."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD101",
+      "quote": "Orange juice isn’t toxic to dogs, but it’s generally not a good choice."
+    },
+    {
+      "id": "KD101",
+      "quote": "Juice contains concentrated natural sugars and lacks the fiber found in whole oranges."
+    },
+    {
+      "id": "KD101",
+      "quote": "Because it’s higher in sugar and easier to consume in large quantities,"
+    },
+    {
+      "id": "KD101",
+      "quote": "orange juice may increase the risk of digestive upset."
+    },
+    {
+      "id": "KD101",
+      "quote": "If you want to share the taste of oranges with your dog, offer small pieces of fresh fruit instead."
+    },
+    {
+      "id": "KD101",
+      "quote": "Orange juice is not toxic, but it is not recommended because it contains concentrated sugars"
+    },
+    {
+      "id": "KD101",
+      "quote": "watch them for any signs of digestive upset."
+    },
+    {
+      "id": "KD102",
+      "quote": "Lemon juice, which is a more concentrated version of the fruit, contains high amounts of citric acid, which is toxic to dogs."
+    },
+    {
+      "id": "KD6",
+      "quote": "Other grape-related products do not appear to cause poisoning, including grape juice, wine,"
+    },
+    {
+      "id": "KD242",
+      "quote": "should never be given to dogs because it’s toxic."
+    },
+    {
+      "id": "KD242",
+      "quote": "it’s better to feed your pet whole fruits as snacks than have him drink juice."
+    },
+    {
+      "id": "KD242",
+      "quote": "high levels of fructose"
+    },
+    {
+      "id": "KD242",
+      "quote": "may increase the risk of obesity"
+    },
+    {
+      "id": "KD242",
+      "quote": "Xylitol is a very toxic chemical to dogs."
+    },
+    {
+      "id": "KD240",
+      "quote": "Many zero-sugar human drinks contain xylitol (birch sugar), which is highly toxic"
+    },
+    {
+      "id": "KD239",
+      "quote": "Dogs only need to drink fresh water daily."
+    }
+  ],
+  "related": [
+    "oranges",
+    "lemons",
+    "limes",
+    "grapes",
+    "apples",
+    "sugar",
+    "xylitol",
+    "water"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1149d0c497fd9817e95cab16bd6101aa1e7ca2cee60866c42a091f65ee00644c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e0fabfe3ee39360e7bd4be8680d7dadc4701a8c0d0af42904819bc94d74ee67d"
+    }
+  }
+}

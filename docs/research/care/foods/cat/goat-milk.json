@@ -1,0 +1,164 @@
+{
+  "slug": "goat-milk",
+  "species": "cat",
+  "name": {
+    "en": "Goat's milk",
+    "sl": "Kozje mleko"
+  },
+  "question": {
+    "en": "Can cats drink goat's milk?",
+    "sl": "Ali lahko mačke pijejo kozje mleko?"
+  },
+  "url_slug": {
+    "en": "goat-milk",
+    "sl": "kozje-mleko"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "It's best not to. Vets list goat's milk, like cow's milk, among the drinks that cause tummy trouble in lactose-intolerant cats, and most cats are lactose intolerant. Cat charities advise avoiding any type of milk – your cat only needs water.",
+    "sl": "Bolje ne. Veterinarji kozje mleko, tako kot kravje, navajajo med pijačami, ki mačkam z laktozno intoleranco povzročijo prebavne težave, večina mačk pa laktoze ne prenaša. Dobrodelne organizacije za mačke svetujejo, naj se mleku izognemo – muca potrebuje le vodo."
+  },
+  "why": {
+    "en": "Lactose intolerance is a common food reaction in cats, and VCA vets list diarrhoea, vomiting, bloating and tummy discomfort after cow's or goat's milk as its signs. There are no benefits to a cat having milk. For kittens the sources differ: VCA says goat's milk is not recommended for kittens because it is far too low in protein and fat, and allows pasteurised goat's milk only in an emergency until kitten milk replacer is available, while Cats Protection says never to give it, as kittens find it difficult to digest. We follow the stricter advice.",
+    "sl": "Laktozna intoleranca je pri mačkah pogost odziv na hrano; veterinarji VCA kot njene znake navajajo drisko, bruhanje, napihnjenost in bolečine v trebuhu po kravjem ali kozjem mleku. Mleko mački ne prinaša nobenih koristi. Pri mladičkih se viri razlikujejo: VCA pravi, da kozje mleko za mladičke ni priporočljivo, ker ima občutno premalo beljakovin in maščob, pasterizirano kozje mleko pa dopušča le v sili, dokler ni na voljo nadomestno mleko za mladičke; Cats Protection pa svetuje, naj ga mladičkom nikoli ne dajemo, ker ga težko prebavijo. Upoštevamo strožji nasvet."
+  },
+  "signs": {
+    "en": [
+      "Diarrhoea",
+      "Vomiting",
+      "Bloated tummy",
+      "Tummy pain or discomfort",
+      "Gurgling stomach noises",
+      "Low energy"
+    ],
+    "sl": [
+      "Driska",
+      "Bruhanje",
+      "Napihnjen trebušček",
+      "Bolečine ali nelagodje v trebuhu",
+      "Kruljenje v trebuhu",
+      "Pomanjkanje energije"
+    ]
+  },
+  "what_to_do": {
+    "en": "Stop the goat's milk and offer fresh water. If your cat gets diarrhoea after dairy, feed small, bland, frequent meals, and speak to your vet if your cat refuses to eat – severe cases may need veterinary attention.",
+    "sl": "Prenehajte s kozjim mlekom in ponudite svežo vodo. Če ima muca po mlečnih izdelkih drisko, ji dajte majhne, lahke, pogoste obroke; če noče jesti, se posvetujte z veterinarjem – v hujših primerih potrebuje veterinarsko pomoč."
+  },
+  "serving": null,
+  "child": {
+    "en": "Cats don't need goat's milk or any other milk. A bowl of fresh water is the best drink for your cat!",
+    "sl": "Muce ne potrebujejo kozjega ali drugega mleka. Skledica sveže vode je zanje najboljša pijača!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can kittens drink goat's milk?",
+        "sl": "Ali lahko mačji mladički pijejo kozje mleko?"
+      },
+      "a": {
+        "en": "No. Cats Protection says never give cow's or goat's milk to kittens, as they find it difficult to digest – use substitute kitten milk made specifically for kittens. VCA vets add that goat's milk is far too low in protein and fat for kittens.",
+        "sl": "Ne. Cats Protection svetuje, naj mladičkom nikoli ne dajemo kravjega ali kozjega mleka, ker ga težko prebavijo – uporabite nadomestno mleko, narejeno posebej za mladičke. Veterinarji VCA dodajajo, da ima kozje mleko za mladičke občutno premalo beljakovin in maščob."
+      }
+    },
+    {
+      "q": {
+        "en": "Is goat's milk better for cats than cow's milk?",
+        "sl": "Je kozje mleko za mačke boljše od kravjega?"
+      },
+      "a": {
+        "en": "Not according to vets: signs of lactose intolerance can appear after either cow's or goat's milk. It is best to avoid giving your cat any type of milk.",
+        "sl": "Po mnenju veterinarjev ne: znaki laktozne intolerance se lahko pojavijo po kravjem ali po kozjem mleku. Najbolje je, da mački ne dajemo nobene vrste mleka."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC131",
+      "quote": "Recognized carbohydrate intolerance in cats is less frequent, but a common carbohydrate reaction in cats is lactose intolerance."
+    },
+    {
+      "id": "KC131",
+      "quote": "Signs of lactose intolerance include diarrhea, vomiting, bloating, and abdominal discomfort after ingesting cow's or goat's milk."
+    },
+    {
+      "id": "KC15",
+      "quote": "Most cats are actually ‘lactose intolerant’"
+    },
+    {
+      "id": "KC15",
+      "quote": "There are actually no benefits to your cat having milk"
+    },
+    {
+      "id": "KC15",
+      "quote": "They can get vomiting, diarrhoea and stomach pain from drinking it"
+    },
+    {
+      "id": "KC15",
+      "quote": "Your cat only needs to drink water."
+    },
+    {
+      "id": "KC31",
+      "quote": "It is best to avoid giving your cat any type of milk."
+    },
+    {
+      "id": "KC31",
+      "quote": "The best thing for adult cats to drink is water."
+    },
+    {
+      "id": "KC31",
+      "quote": "gurgling stomach noises"
+    },
+    {
+      "id": "KC31",
+      "quote": "lethargic/low in energy"
+    },
+    {
+      "id": "KC31",
+      "quote": "If your cat does get diarrhoea as a result of eating dairy, feed them small, bland, frequent meals."
+    },
+    {
+      "id": "KC31",
+      "quote": "If your cat refuses to eat, speak to your vet for advice."
+    },
+    {
+      "id": "KC31",
+      "quote": "In severe cases, your cat may need veterinary attention."
+    },
+    {
+      "id": "KC133",
+      "quote": "Goat's milk is not recommended for kittens, as it is far too low in protein and fat."
+    },
+    {
+      "id": "KC133",
+      "quote": "Pasteurized goat's milk can be used in an emergency, but kitten milk replacer should be provided as soon as possible."
+    },
+    {
+      "id": "KC127",
+      "quote": "Never give cow or goat's milk as kittens find this difficult to digest."
+    },
+    {
+      "id": "KC127",
+      "quote": "Use substitute kitten milk, formulated specifically for kittens."
+    }
+  ],
+  "related": [
+    "milk",
+    "lactose-free-milk",
+    "cow-milk-kittens",
+    "yogurt",
+    "water"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d93f4473154aa00e0eff111d5bb6a42a3eb4f65198be2ddcfc31a4b87c0f9a79"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9066bc736d9d191437e407161ee3230c016b82948146158fbf854110774edf52"
+    }
+  }
+}
