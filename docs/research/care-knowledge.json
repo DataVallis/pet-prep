@@ -9694,7 +9694,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Cow's milk for kittens",
@@ -9703,7 +9704,8 @@
         "pt": "Leite de vaca para gatinhos",
         "nl": "Koemelk voor kittens",
         "pl": "Mleko krowie dla kociąt",
-        "cs": "Kravské mléko pro koťata"
+        "cs": "Kravské mléko pro koťata",
+        "hr": "Kravlje mlijeko za mačiće"
       },
       "question": {
         "en": "Can kittens drink cow's milk?",
@@ -9712,7 +9714,8 @@
         "pt": "Os gatinhos podem beber leite de vaca?",
         "nl": "Mogen kittens koemelk drinken?",
         "pl": "Czy kocięta mogą pić mleko krowie?",
-        "cs": "Mohou koťata pít kravské mléko?"
+        "cs": "Mohou koťata pít kravské mléko?",
+        "hr": "Smiju li mačići piti kravlje mlijeko?"
       },
       "url_slug": {
         "en": "cow-milk-kittens",
@@ -9721,7 +9724,8 @@
         "pt": "leite-de-vaca-para-gatinhos",
         "nl": "koemelk-kittens",
         "pl": "mleko-krowie-dla-kociat",
-        "cs": "kravske-mleko-pro-kotata"
+        "cs": "kravske-mleko-pro-kotata",
+        "hr": "kravlje-mlijeko-za-macice"
       },
       "answer": {
         "en": "No. Kittens should drink their mother's milk, and a kitten that needs bottle-feeding should only get substitute kitten milk. Cats Protection says never to give cow's milk, as kittens find it difficult to digest. Once weaned, kittens only need water.",
@@ -9730,7 +9734,8 @@
         "pt": "Não. Os gatinhos devem beber o leite da mãe, e um gatinho que precise de biberão só deve tomar leite de substituição próprio para gatinhos. A Cats Protection diz que nunca se deve dar leite de vaca, porque os gatinhos têm dificuldade em digeri-lo. Depois do desmame, os gatinhos só precisam de água.",
         "nl": "Nee. Kittens horen de melk van hun moeder te drinken, en een kitten dat met de fles gevoed moet worden, mag alleen een kittenmelkvervanger krijgen. Cats Protection zegt dat je kittens nooit koemelk moet geven, omdat ze die moeilijk verteren. Zodra ze gespeend zijn, hebben kittens alleen water nodig.",
         "pl": "Nie. Kocięta powinny pić mleko matki, a kocię karmione butelką powinno dostawać wyłącznie mleko zastępcze dla kociąt. Cats Protection podaje, że nigdy nie należy dawać mleka krowiego, bo kocięta trawią je z trudem. Po odstawieniu od mleka matki kocięta do picia potrzebują już tylko wody.",
-        "cs": "Ne. Koťata mají pít mléko své matky a kotě, které je třeba krmit z lahvičky, má dostávat jen speciální náhradní mléko pro koťata. Organizace Cats Protection radí kravské mléko nikdy nedávat, protože ho koťata špatně tráví. Jakmile jsou odstavená, potřebují k pití jen vodu."
+        "cs": "Ne. Koťata mají pít mléko své matky a kotě, které je třeba krmit z lahvičky, má dostávat jen speciální náhradní mléko pro koťata. Organizace Cats Protection radí kravské mléko nikdy nedávat, protože ho koťata špatně tráví. Jakmile jsou odstavená, potřebují k pití jen vodu.",
+        "hr": "Ne. Mačići trebaju piti majčino mlijeko, a mačić kojeg treba hraniti na bočicu smije dobiti samo zamjensko mlijeko za mačiće. Cats Protection upozorava da se kravlje mlijeko ne smije davati nikada, jer ga mačići teško probavljaju. Kad prestanu sisati, mačićima treba samo voda."
       },
       "why": {
         "en": "Cats Protection advises never giving cow's or goat's milk to kittens because they find it difficult to digest, and PDSA calls cow's milk unsuitable. Compared with cow's milk, a mother cat's milk contains much more protein, while cow's milk has fewer calories, less fat and taurine and more lactose. Substitute kitten milk is made for kittens and contains all the nutrients they need; other milks don't have the right balance.",
@@ -9739,7 +9744,8 @@
         "pt": "A Cats Protection aconselha a nunca dar leite de vaca ou de cabra aos gatinhos, porque têm dificuldade em digeri-lo, e a PDSA considera o leite de vaca inadequado. Em comparação com o leite de vaca, o leite da gata tem muito mais proteína, enquanto o leite de vaca tem menos calorias, menos gordura, menos taurina e mais lactose. O leite de substituição para gatinhos é feito para eles e contém todos os nutrientes de que precisam; os outros leites não têm o equilíbrio certo.",
         "nl": "Cats Protection raadt aan om kittens nooit koe- of geitenmelk te geven, omdat ze die moeilijk verteren, en PDSA noemt koemelk ongeschikt. Vergeleken met koemelk bevat de melk van een moederkat veel meer eiwit, terwijl koemelk minder calorieën, vet en taurine bevat en meer lactose. Speciale kittenmelk is gemaakt voor kittens en bevat alle voedingsstoffen die ze nodig hebben; andere melk heeft niet de juiste samenstelling.",
         "pl": "Cats Protection radzi, by nigdy nie dawać kociętom mleka krowiego ani koziego, ponieważ trawią je z trudem, a PDSA uznaje mleko krowie za nieodpowiednie. W porównaniu z mlekiem krowim mleko kotki-matki zawiera znacznie więcej białka, natomiast mleko krowie ma mniej kalorii, tłuszczu i tauryny oraz więcej laktozy. Mleko zastępcze dla kociąt jest przeznaczone dla kociąt i zawiera wszystkie potrzebne im składniki odżywcze; inne rodzaje mleka nie mają właściwych proporcji.",
-        "cs": "Cats Protection radí nikdy nedávat koťatům kravské ani kozí mléko, protože ho špatně tráví, a PDSA označuje kravské mléko za nevhodné. Mléko kočičí matky obsahuje mnohem víc bílkovin než kravské, zatímco kravské mléko má méně kalorií, tuku a taurinu a víc laktózy. Náhradní mléko pro koťata je vyrobené přímo pro ně a obsahuje všechny živiny, které potřebují; jiná mléka nemají správné složení."
+        "cs": "Cats Protection radí nikdy nedávat koťatům kravské ani kozí mléko, protože ho špatně tráví, a PDSA označuje kravské mléko za nevhodné. Mléko kočičí matky obsahuje mnohem víc bílkovin než kravské, zatímco kravské mléko má méně kalorií, tuku a taurinu a víc laktózy. Náhradní mléko pro koťata je vyrobené přímo pro ně a obsahuje všechny živiny, které potřebují; jiná mléka nemají správné složení.",
+        "hr": "Cats Protection savjetuje da se mačićima nikad ne daje kravlje ni kozje mlijeko, jer ga teško probavljaju, a PDSA kravlje mlijeko smatra neprikladnim. U usporedbi s kravljim mlijekom, mlijeko mačke majke sadrži mnogo više bjelančevina, dok kravlje ima manje kalorija, masti i taurina te više laktoze. Zamjensko mlijeko za mačiće proizvedeno je upravo za njih i sadrži sve hranjive tvari koje trebaju; druge vrste mlijeka nemaju pravi omjer hranjivih tvari."
       },
       "signs": {
         "en": [
@@ -9776,6 +9782,11 @@
           "Průjem",
           "Slabost",
           "Hubnutí nebo neprospívání"
+        ],
+        "hr": [
+          "Proljev",
+          "Slabost",
+          "Gubitak tjelesne mase ili slabo napredovanje"
         ]
       },
       "what_to_do": {
@@ -9785,7 +9796,8 @@
         "pt": "Para de dar leite de vaca e pergunta ao teu veterinário que leite para gatinhos deves usar. Contacta imediatamente o teu veterinário se um gatinho pequeno tiver diarreia, parecer fraco, perder peso ou não se desenvolver bem, porque o estado de um gatinho pode agravar-se depressa.",
         "nl": "Stop met de koemelk en vraag je dierenarts welke kittenmelk je het best kunt geven. Neem meteen contact op met je dierenarts als een jong kitten diarree heeft, zwak lijkt, afvalt of niet goed groeit, want de toestand van een kitten kan snel verslechteren.",
         "pl": "Przestań podawać mleko krowie i zapytaj weterynarza, jakiego mleka dla kociąt użyć. Jeśli małe kocię ma biegunkę, wydaje się osłabione, traci na wadze lub nie rozwija się prawidłowo, od razu skontaktuj się z weterynarzem, ponieważ stan kocięcia może szybko się pogorszyć.",
-        "cs": "Přestaňte kravské mléko podávat a zeptejte se veterináře, jaké mléko pro koťata použít. Pokud má malé kotě průjem, působí slabě, hubne nebo neprospívá, ihned se obraťte na veterináře, protože se stav koťat může rychle zhoršit."
+        "cs": "Přestaňte kravské mléko podávat a zeptejte se veterináře, jaké mléko pro koťata použít. Pokud má malé kotě průjem, působí slabě, hubne nebo neprospívá, ihned se obraťte na veterináře, protože se stav koťat může rychle zhoršit.",
+        "hr": "Prestani davati kravlje mlijeko i pitaj veterinara koje mlijeko za mačiće odabrati. Odmah se obrati veterinaru ako mlad mačić ima proljev, djeluje malaksalo, gubi na težini ili slabo napreduje, jer se njegovo stanje može brzo pogoršati."
       },
       "serving": null,
       "child": {
@@ -9795,7 +9807,8 @@
         "pt": "Os gatinhos bebés bebem o leite da mãe ou um leite especial para gatinhos, não o leite do frigorífico. Os gatinhos crescidos só precisam de água fresca!",
         "nl": "Kleine katjes drinken de melk van hun moeder of speciale kittenmelk, geen melk uit de koelkast. Kittens die al wat groter zijn, hebben alleen vers water nodig!",
         "pl": "Kocięta piją mleko swojej mamy albo specjalne mleko dla kociąt, a nie mleko z lodówki. Starsze kocięta potrzebują tylko świeżej wody!",
-        "cs": "Malá koťátka pijí mléko od své maminky nebo speciální mléko pro koťata, ne mléko z lednice. Odrostlejší koťata potřebují jen čerstvou vodu!"
+        "cs": "Malá koťátka pijí mléko od své maminky nebo speciální mléko pro koťata, ne mléko z lednice. Odrostlejší koťata potřebují jen čerstvou vodu!",
+        "hr": "Mačići piju mamino mlijeko ili posebno mlijeko za mačiće, a ne mlijeko iz hladnjaka. Veći mačići trebaju samo svježu vodu!"
       },
       "faq": [
         {
@@ -9806,7 +9819,8 @@
             "pt": "O que devo dar a um gatinho órfão?",
             "nl": "Wat moet ik een weeskitten te eten geven?",
             "pl": "Czym karmić osierocone kocię?",
-            "cs": "Čím krmit osiřelé kotě?"
+            "cs": "Čím krmit osiřelé kotě?",
+            "hr": "Čime hraniti mačića bez majke?"
           },
           "a": {
             "en": "Ask your vet first. Use a substitute kitten milk made specifically for kittens, available from vets and some pet shops, and follow the instructions on the label. Supermarket kitten or puppy milk is not suitable.",
@@ -9815,7 +9829,8 @@
             "pt": "Pergunta primeiro ao teu veterinário. Usa um leite de substituição feito especificamente para gatinhos, que se encontra em veterinários e em algumas lojas de animais, e segue as instruções do rótulo. O leite para gatinhos ou cachorros vendido no supermercado não é adequado.",
             "nl": "Vraag het eerst aan je dierenarts. Gebruik speciale kittenmelk die voor kittens is gemaakt, verkrijgbaar bij de dierenarts en in sommige dierenwinkels, en volg de aanwijzingen op het etiket. Kitten- of puppymelk uit de supermarkt is niet geschikt.",
             "pl": "Najpierw zapytaj weterynarza. Użyj mleka zastępczego przeznaczonego specjalnie dla kociąt, dostępnego u weterynarzy i w niektórych sklepach zoologicznych, i stosuj się do instrukcji na etykiecie. Mleko dla kociąt lub szczeniąt z supermarketu się nie nadaje.",
-            "cs": "Nejdřív se poraďte s veterinářem. Použijte náhradní mléko vyrobené speciálně pro koťata, které dostanete u veterináře a v některých zverimexech, a řiďte se návodem na obalu. Mléko pro koťata nebo štěňata ze supermarketu se nehodí."
+            "cs": "Nejdřív se poraďte s veterinářem. Použijte náhradní mléko vyrobené speciálně pro koťata, které dostanete u veterináře a v některých zverimexech, a řiďte se návodem na obalu. Mléko pro koťata nebo štěňata ze supermarketu se nehodí.",
+            "hr": "Prvo pitaj veterinara. Daj zamjensko mlijeko napravljeno posebno za mačiće, koje se može kupiti kod veterinara i u nekim trgovinama za kućne ljubimce, i slijedi upute na pakiranju. Mlijeko za mačiće ili štenad iz supermarketa nije prikladno."
           }
         },
         {
@@ -9826,7 +9841,8 @@
             "pt": "Quando é que os gatinhos deixam de beber leite?",
             "nl": "Wanneer stoppen kittens met melk drinken?",
             "pl": "Kiedy kocięta przestają pić mleko?",
-            "cs": "Kdy koťata přestanou pít mléko?"
+            "cs": "Kdy koťata přestanou pít mléko?",
+            "hr": "Kada mačići prestaju piti mlijeko?"
           },
           "a": {
             "en": "By six to eight weeks old, kittens should be fully weaned onto solid food. From then on they only need to drink water, not milk, and their body may start making less lactase.",
@@ -9835,7 +9851,8 @@
             "pt": "Aos seis a oito semanas de idade, os gatinhos devem estar totalmente desmamados e a comer alimentos sólidos. A partir daí só precisam de beber água, não leite, e o organismo pode começar a produzir menos lactase.",
             "nl": "Rond zes tot acht weken moeten kittens volledig zijn overgestapt op vast voer. Vanaf dan hebben ze alleen water nodig, geen melk, en hun lichaam kan minder lactase gaan aanmaken.",
             "pl": "W wieku sześciu do ośmiu tygodni kocięta powinny być już całkowicie przestawione na stały pokarm. Od tej pory potrzebują do picia tylko wody, nie mleka, a ich organizm może zacząć produkować mniej laktazy.",
-            "cs": "Do šesti až osmi týdnů věku by koťata měla být zcela odstavená a krmená pevnou stravou. Od té doby potřebují k pití jen vodu, ne mléko, a jejich tělo může začít tvořit méně laktázy."
+            "cs": "Do šesti až osmi týdnů věku by koťata měla být zcela odstavená a krmená pevnou stravou. Od té doby potřebují k pití jen vodu, ne mléko, a jejich tělo může začít tvořit méně laktázy.",
+            "hr": "Do šestog do osmog tjedna života mačići bi trebali potpuno prijeći na krutu hranu. Od tada za piće trebaju samo vodu, a ne mlijeko, a tijelo im može početi stvarati manje laktaze."
           }
         },
         {
@@ -9846,7 +9863,8 @@
             "pt": "E os gatos adultos?",
             "nl": "En volwassen katten?",
             "pl": "A dorosłe koty?",
-            "cs": "A dospělé kočky?"
+            "cs": "A dospělé kočky?",
+            "hr": "A odrasle mačke?"
           },
           "a": {
             "en": "Most cats are lactose intolerant, and once weaned they only need to drink water, not milk. See our page on milk for cats.",
@@ -9855,7 +9873,8 @@
             "pt": "A maioria dos gatos é intolerante à lactose e, depois do desmame, só precisa de beber água, não leite. Vê a nossa página sobre o leite para gatos.",
             "nl": "De meeste katten zijn lactose-intolerant en hebben na het spenen alleen water nodig, geen melk. Lees ook onze pagina over melk voor katten.",
             "pl": "Większość kotów nie toleruje laktozy, a po odstawieniu od mleka matki potrzebują do picia tylko wody, nie mleka. Zobacz naszą stronę o mleku dla kotów.",
-            "cs": "Většina koček nesnáší laktózu a po odstavení potřebují k pití jen vodu, ne mléko. Více najdete na naší stránce o mléku pro kočky."
+            "cs": "Většina koček nesnáší laktózu a po odstavení potřebují k pití jen vodu, ne mléko. Více najdete na naší stránce o mléku pro kočky.",
+            "hr": "Većina mačaka ne podnosi laktozu, a nakon prestanka sisanja za piće im treba samo voda, ne mlijeko. Pogledaj našu stranicu o mlijeku za mačke."
           }
         }
       ],
@@ -14617,7 +14636,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Hummus",
@@ -14626,7 +14646,8 @@
         "pt": "Hummus",
         "nl": "Hummus",
         "pl": "Hummus",
-        "cs": "Hummus"
+        "cs": "Hummus",
+        "hr": "Humus"
       },
       "question": {
         "en": "Can cats eat hummus?",
@@ -14635,7 +14656,8 @@
         "pt": "Os gatos podem comer hummus?",
         "nl": "Mogen katten hummus eten?",
         "pl": "Czy koty mogą jeść hummus?",
-        "cs": "Mohou kočky jíst hummus?"
+        "cs": "Mohou kočky jíst hummus?",
+        "hr": "Smiju li mačke jesti humus?"
       },
       "url_slug": {
         "en": "hummus",
@@ -14644,7 +14666,8 @@
         "pt": "hummus",
         "nl": "hummus",
         "pl": "hummus",
-        "cs": "hummus"
+        "cs": "hummus",
+        "hr": "humus"
       },
       "answer": {
         "en": "No, hummus is not for cats. It is usually made with garlic, and garlic is toxic to cats even when cooked. VCA vets also warn that creamy dips left on plates can cause stomach upset. Keep the dip bowl out of your cat's reach.",
@@ -14653,7 +14676,8 @@
         "pt": "Não, o hummus não é para gatos. Costuma levar alho, que é tóxico para os gatos mesmo cozinhado. Os veterinários da VCA avisam também que os cremes e molhos deixados nos pratos podem causar indisposição de estômago. Mantém a taça do hummus fora do alcance do teu gato.",
         "nl": "Nee, hummus is niets voor katten. Er zit meestal knoflook in, en knoflook is giftig voor katten, ook als het gekookt is. Dierenartsen van VCA waarschuwen ook dat romige dips die op borden achterblijven maagklachten kunnen veroorzaken. Houd het dipbakje buiten het bereik van je kat.",
         "pl": "Nie, hummus nie jest dla kotów. Zwykle zawiera czosnek, a czosnek jest toksyczny dla kotów nawet po ugotowaniu. Weterynarze z VCA ostrzegają też, że kremowe pasty i sosy do maczania, które zostają na talerzach, mogą wywołać rozstrój żołądka. Miseczkę z hummusem trzymaj poza zasięgiem kota.",
-        "cs": "Ne, hummus není pro kočky. Obvykle se vyrábí s česnekem a česnek je pro kočky jedovatý, i když je tepelně upravený. Veterináři z VCA také varují, že krémové pomazánky zbylé na talířích mohou způsobit podrážděný žaludek. Misku s pomazánkou nechte mimo dosah kočky."
+        "cs": "Ne, hummus není pro kočky. Obvykle se vyrábí s česnekem a česnek je pro kočky jedovatý, i když je tepelně upravený. Veterináři z VCA také varují, že krémové pomazánky zbylé na talířích mohou způsobit podrážděný žaludek. Misku s pomazánkou nechte mimo dosah kočky.",
+        "hr": "Ne, humus nije za mačke. Obično se pravi s češnjakom, a češnjak je otrovan za mačke čak i kad je termički obrađen. Veterinari iz VCA-a upozoravaju i da kremasti namazi ostavljeni na tanjurima mogu izazvati želučane tegobe. Zdjelicu s namazom drži izvan dosega svoje mačke."
       },
       "why": {
         "en": "Hummus is mainly made from chickpeas, tahini, olive oil, lemon juice, garlic and other seasonings. Garlic belongs to the alliums, which are toxic to cats even when cooked or dried, and onion and garlic are found in many pre-made foods. Tufts vets list onion and garlic flavouring in prepared dishes among foods cats should avoid, as it can cause vomiting and diarrhoea, and VCA says these flavour boosters damage red blood cells, especially in cats.",
@@ -14662,7 +14686,8 @@
         "pt": "O hummus é feito sobretudo de grão-de-bico, tahini, azeite, sumo de limão, alho e outros temperos. O alho pertence às aliáceas, que são tóxicas para os gatos mesmo cozinhadas ou secas, e a cebola e o alho estão presentes em muitos alimentos pré-preparados. Os veterinários da Tufts incluem o sabor a cebola e alho nos pratos preparados entre os alimentos que os gatos devem evitar, porque pode causar vómitos e diarreia, e a VCA diz que estes intensificadores de sabor danificam os glóbulos vermelhos, sobretudo nos gatos.",
         "nl": "Hummus wordt vooral gemaakt van kikkererwten, tahin, olijfolie, citroensap, knoflook en andere kruiden. Knoflook behoort tot de alliums (de uienfamilie), die giftig zijn voor katten, ook als ze gekookt of gedroogd zijn, en ui en knoflook zitten in veel kant-en-klare producten. Dierenartsen van Tufts rekenen ui- en knoflookaroma in bereide gerechten tot het eten dat katten moeten vermijden, omdat het braken en diarree kan veroorzaken, en VCA zegt dat deze smaakmakers de rode bloedcellen beschadigen, vooral bij katten.",
         "pl": "Hummus składa się głównie z ciecierzycy, tahini, oliwy z oliwek, soku z cytryny, czosnku i innych przypraw. Czosnek należy do roślin czosnkowatych, które są toksyczne dla kotów nawet po ugotowaniu lub wysuszeniu, a cebula i czosnek znajdują się w wielu gotowych produktach. Weterynarze z Tufts zaliczają cebulę i czosnek dodawane do gotowych potraw do pokarmów, których koty powinny unikać, bo mogą wywołać wymioty i biegunkę, a według VCA te wzmacniacze smaku uszkadzają czerwone krwinki, zwłaszcza u kotów.",
-        "cs": "Hummus se vyrábí hlavně z cizrny, tahini, olivového oleje, citronové šťávy, česneku a dalšího koření. Česnek patří mezi cibuloviny (rod Allium), které jsou pro kočky jedovaté, i když jsou tepelně upravené nebo sušené, a cibule i česnek jsou v mnoha hotových potravinách. Veterináři z Tufts řadí cibulovou a česnekovou příchuť v hotových pokrmech mezi potraviny, kterým by se kočky měly vyhýbat, protože mohou způsobit zvracení a průjem, a VCA uvádí, že tato dochucovadla poškozují červené krvinky, zejména u koček."
+        "cs": "Hummus se vyrábí hlavně z cizrny, tahini, olivového oleje, citronové šťávy, česneku a dalšího koření. Česnek patří mezi cibuloviny (rod Allium), které jsou pro kočky jedovaté, i když jsou tepelně upravené nebo sušené, a cibule i česnek jsou v mnoha hotových potravinách. Veterináři z Tufts řadí cibulovou a česnekovou příchuť v hotových pokrmech mezi potraviny, kterým by se kočky měly vyhýbat, protože mohou způsobit zvracení a průjem, a VCA uvádí, že tato dochucovadla poškozují červené krvinky, zejména u koček.",
+        "hr": "Humus se uglavnom pravi od slanutka, tahinija, maslinova ulja, limunova soka, češnjaka i drugih začina. Češnjak pripada biljkama iz roda Allium, koje su otrovne za mačke čak i kad su termički obrađene ili sušene, a luk i češnjak nalaze se u mnogim gotovim jelima. Veterinari s Tuftsa među hranom koju mačke trebaju izbjegavati navode luk i češnjak kao začin u pripremljenim jelima, jer mogu izazvati povraćanje i proljev, a VCA kaže da ti pojačivači okusa oštećuju crvene krvne stanice, osobito kod mačaka."
       },
       "signs": {
         "en": [
@@ -14706,6 +14731,12 @@
           "Průjem",
           "Snížená chuť k jídlu",
           "Dehydratace"
+        ],
+        "hr": [
+          "Povraćanje",
+          "Proljev",
+          "Smanjen apetit",
+          "Dehidracija"
         ]
       },
       "what_to_do": {
@@ -14715,7 +14746,8 @@
         "pt": "Se o teu gato comeu hummus com alho, contacta o teu veterinário o mais depressa possível, mesmo que ele pareça estar bem, porque os sinais de anemia podem demorar alguns dias a aparecer.",
         "nl": "Heeft je kat hummus met knoflook gegeten, neem dan zo snel mogelijk contact op met je dierenarts, ook als het goed lijkt te gaan met je kat, want verschijnselen van bloedarmoede kunnen pas na een paar dagen optreden.",
         "pl": "Jeśli twój kot zjadł hummus z czosnkiem, jak najszybciej skontaktuj się z weterynarzem, nawet jeśli kot wygląda na zdrowego, bo objawy anemii mogą pojawić się dopiero po kilku dniach.",
-        "cs": "Pokud kočka snědla hummus s česnekem, co nejdříve se obraťte na veterináře, i když se zdá být v pořádku, protože příznaky chudokrevnosti se mohou objevit až za několik dní."
+        "cs": "Pokud kočka snědla hummus s česnekem, co nejdříve se obraťte na veterináře, i když se zdá být v pořádku, protože příznaky chudokrevnosti se mohou objevit až za několik dní.",
+        "hr": "Ako je mačka pojela humus s češnjakom, obrati se veterinaru što prije, čak i ako se čini da je dobro, jer se znakovi anemije mogu pojaviti tek nakon nekoliko dana."
       },
       "serving": null,
       "child": {
@@ -14725,7 +14757,8 @@
         "pt": "O hummus é uma pasta para pessoas e costuma ter alho, que os gatos não podem comer. Mantém o teu prato de petiscos longe do gatinho.",
         "nl": "Hummus is een dip voor mensen. Er zit meestal knoflook in, en dat mogen katten niet eten. Houd je snackbord uit de buurt van je kat.",
         "pl": "Hummus to pasta dla ludzi, zwykle z czosnkiem, którego koty jeść nie mogą. Trzymaj swój talerz z przekąskami z dala od kotka.",
-        "cs": "Hummus je pomazánka pro lidi a obvykle obsahuje česnek, který kočky jíst nesmějí. Drž svůj talíř se svačinou dál od kočičky."
+        "cs": "Hummus je pomazánka pro lidi a obvykle obsahuje česnek, který kočky jíst nesmějí. Drž svůj talíř se svačinou dál od kočičky.",
+        "hr": "Humus je namaz za ljude i obično sadrži češnjak, koji mačke ne smiju jesti. Tanjur s grickalicama drži podalje od mace."
       },
       "faq": [
         {
@@ -14736,7 +14769,8 @@
             "pt": "E se o hummus não tiver alho?",
             "nl": "Wat als er geen knoflook in de hummus zit?",
             "pl": "A jeśli w hummusie nie ma czosnku?",
-            "cs": "A co když hummus česnek neobsahuje?"
+            "cs": "A co když hummus česnek neobsahuje?",
+            "hr": "Što ako humus nema češnjaka?"
           },
           "a": {
             "en": "It is still a people food. Cats Protection advises sticking to cat food treats rather than giving your cat any human foods.",
@@ -14745,7 +14779,8 @@
             "pt": "Continua a ser comida de pessoas. A Cats Protection aconselha a dar guloseimas próprias para gatos em vez de comida de pessoas.",
             "nl": "Het blijft menselijk voedsel. Cats Protection adviseert om bij kattensnoepjes te blijven en je kat geen menselijk voedsel te geven.",
             "pl": "To nadal jedzenie dla ludzi. Cats Protection radzi dawać kotu smakołyki przeznaczone dla kotów, a nie jakiekolwiek jedzenie dla ludzi.",
-            "cs": "Pořád je to jídlo pro lidi. Cats Protection radí držet se pamlsků pro kočky a nedávat kočkám žádná lidská jídla."
+            "cs": "Pořád je to jídlo pro lidi. Cats Protection radí držet se pamlsků pro kočky a nedávat kočkám žádná lidská jídla.",
+            "hr": "I dalje je hrana za ljude. Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke."
           }
         }
       ],
@@ -15059,7 +15094,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Lactose-free milk and cat milk",
@@ -15068,7 +15104,8 @@
         "pt": "Leite sem lactose e leite para gatos",
         "nl": "Lactosevrije melk en kattenmelk",
         "pl": "Mleko bez laktozy i mleko dla kotów",
-        "cs": "Bezlaktózové mléko a mléko pro kočky"
+        "cs": "Bezlaktózové mléko a mléko pro kočky",
+        "hr": "Mlijeko bez laktoze i mlijeko za mačke"
       },
       "question": {
         "en": "Can cats drink lactose-free milk?",
@@ -15077,7 +15114,8 @@
         "pt": "Os gatos podem beber leite sem lactose?",
         "nl": "Mogen katten lactosevrije melk drinken?",
         "pl": "Czy koty mogą pić mleko bez laktozy?",
-        "cs": "Mohou kočky pít bezlaktózové mléko?"
+        "cs": "Mohou kočky pít bezlaktózové mléko?",
+        "hr": "Smiju li mačke piti mlijeko bez laktoze?"
       },
       "url_slug": {
         "en": "lactose-free-milk",
@@ -15086,7 +15124,8 @@
         "pt": "leite-sem-lactose",
         "nl": "lactosevrije-melk",
         "pl": "mleko-bez-laktozy",
-        "cs": "bezlaktozove-mleko"
+        "cs": "bezlaktozove-mleko",
+        "hr": "mlijeko-bez-laktoze"
       },
       "answer": {
         "en": "It's best not to. Lactose-free milk and special cat milk are less likely to upset a cat's stomach, but they contain a lot of calories and lack the nutrients a cat needs. Cats Protection advises avoiding any type of milk; water is all cats need.",
@@ -15095,7 +15134,8 @@
         "pt": "É melhor não. O leite sem lactose e o leite especial para gatos são menos suscetíveis de fazer mal ao estômago do gato, mas têm muitas calorias e não têm os nutrientes de que um gato precisa. A Cats Protection aconselha a evitar qualquer tipo de leite; os gatos só precisam de água.",
         "nl": "Liever niet. Lactosevrije melk en speciale kattenmelk belasten de maag van een kat minder snel, maar ze bevatten veel calorieën en missen de voedingsstoffen die een kat nodig heeft. Cats Protection adviseert om geen enkele soort melk te geven; water is het enige wat katten nodig hebben.",
         "pl": "Lepiej nie. Mleko bez laktozy i specjalne mleko dla kotów rzadziej rozstrajają kotu żołądek, ale są bardzo kaloryczne i nie dostarczają składników odżywczych, których kot potrzebuje. Cats Protection radzi nie dawać kotom żadnego mleka – wystarczy im woda.",
-        "cs": "Raději ne. Bezlaktózové mléko a speciální mléko pro kočky způsobují žaludeční potíže méně často, ale obsahují hodně kalorií a chybí v nich živiny, které kočka potřebuje. Cats Protection radí vyhýbat se jakémukoli mléku; kočky potřebují jen vodu."
+        "cs": "Raději ne. Bezlaktózové mléko a speciální mléko pro kočky způsobují žaludeční potíže méně často, ale obsahují hodně kalorií a chybí v nich živiny, které kočka potřebuje. Cats Protection radí vyhýbat se jakémukoli mléku; kočky potřebují jen vodu.",
+        "hr": "Bolje ne. Mlijeko bez laktoze i posebno mlijeko za mačke rjeđe će mački pokvariti želudac, ali sadrže mnogo kalorija i ne sadrže hranjive tvari koje mački trebaju. Cats Protection savjetuje da se izbjegava svaka vrsta mlijeka; mačkama treba samo voda."
       },
       "why": {
         "en": "Sources disagree, so we use the stricter level. Cats Protection says lactose-free milk and cat milk don't contain lactose, but they have a lot of calories that could make a cat put on weight, and it is best to avoid giving cats any type of milk. PDSA says cat milk could be an occasional treat, but its fat is often as high as other milk and its calories must be counted in the daily food allowance.",
@@ -15104,7 +15144,8 @@
         "pt": "As fontes não estão de acordo, por isso usamos o nível mais rigoroso. A Cats Protection diz que o leite sem lactose e o leite para gatos não têm lactose, mas têm muitas calorias que podem fazer o gato engordar, e que é melhor evitar dar aos gatos qualquer tipo de leite. A PDSA diz que o leite para gatos pode ser uma guloseima ocasional, mas a gordura é muitas vezes tanta como a de outros leites e as calorias têm de ser contadas na quantidade diária de comida.",
         "nl": "De bronnen zijn het niet met elkaar eens, dus we hanteren het strengere niveau. Cats Protection zegt dat lactosevrije melk en kattenmelk geen lactose bevatten, maar wel veel calorieën, waardoor een kat kan aankomen, en dat je een kat het best helemaal geen melk geeft. PDSA zegt dat kattenmelk af en toe een traktatie kan zijn, maar dat het vetgehalte vaak net zo hoog is als bij andere melk en dat de calorieën moeten meetellen bij de dagelijkse hoeveelheid voer.",
         "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. Cats Protection podaje, że mleko bez laktozy i mleko dla kotów nie zawierają laktozy, ale mają dużo kalorii, które mogą sprawić, że kot przytyje, i że najlepiej nie dawać kotom żadnego mleka. PDSA podaje, że mleko dla kotów może być smakołykiem od czasu do czasu, ale zawartość tłuszczu jest w nim często równie wysoka jak w innych mlekach, a jego kalorie trzeba wliczać do dziennej porcji jedzenia.",
-        "cs": "Zdroje se různí, proto jsme zvolili přísnější úroveň. Cats Protection uvádí, že bezlaktózové mléko a mléko pro kočky laktózu neobsahují, ale mají hodně kalorií, po kterých může kočka přibrat, a nejlepší je nedávat kočkám žádný druh mléka. PDSA říká, že mléko pro kočky může být občasným pamlskem, ale tuku v něm bývá stejně jako v jiných mlécích a jeho kalorie je třeba započítat do denní dávky krmiva."
+        "cs": "Zdroje se různí, proto jsme zvolili přísnější úroveň. Cats Protection uvádí, že bezlaktózové mléko a mléko pro kočky laktózu neobsahují, ale mají hodně kalorií, po kterých může kočka přibrat, a nejlepší je nedávat kočkám žádný druh mléka. PDSA říká, že mléko pro kočky může být občasným pamlskem, ale tuku v něm bývá stejně jako v jiných mlécích a jeho kalorie je třeba započítat do denní dávky krmiva.",
+        "hr": "Izvori se ne slažu, pa se držimo strožeg stajališta. Cats Protection kaže da mlijeko bez laktoze i mlijeko za mačke ne sadrže laktozu, ali imaju mnogo kalorija, zbog kojih bi mačka mogla dobiti na težini, pa je najbolje mačkama ne davati nikakvu vrstu mlijeka. PDSA kaže da bi mlijeko za mačke moglo biti povremena poslastica, ali da je udio masti u njemu često jednako visok kao u drugom mlijeku i da se njegove kalorije moraju uračunati u dnevni obrok."
       },
       "signs": {
         "en": [
@@ -15127,6 +15168,9 @@
         ],
         "cs": [
           "Postupné přibírání na váze"
+        ],
+        "hr": [
+          "Debljanje tijekom vremena"
         ]
       },
       "what_to_do": {
@@ -15136,7 +15180,8 @@
         "pt": "Oferece água fresca em vez disso. Se alguma vez deres leite para gatos como guloseima rara, tem em conta as calorias extra, mas não reduzas a comida completa do teu gato por causa disso, porque o teu gato poderia receber menos vitaminas e nutrientes essenciais.",
         "nl": "Geef in plaats daarvan vers water. Geef je een enkele keer kattenmelk als traktatie, houd dan rekening met de extra calorieën, maar geef je kat er niet minder volwaardig voer voor, want dan krijgt je kat misschien te weinig van de belangrijke vitamines en voedingsstoffen binnen.",
         "pl": "Podaj zamiast tego świeżą wodę. Jeśli kiedyś dasz kotu mleko dla kotów jako rzadki smakołyk, pamiętaj o dodatkowych kaloriach, ale nie zmniejszaj przez to porcji pełnowartościowej karmy, bo kot mógłby dostać za mało ważnych witamin i składników odżywczych.",
-        "cs": "Nabídněte místo toho čerstvou vodu. Pokud někdy dáte mléko pro kočky jako vzácný pamlsek, pamatujte na kalorie navíc, ale neubírejte kvůli němu z kompletního krmiva, jinak by kočka mohla dostávat méně důležitých vitaminů a živin."
+        "cs": "Nabídněte místo toho čerstvou vodu. Pokud někdy dáte mléko pro kočky jako vzácný pamlsek, pamatujte na kalorie navíc, ale neubírejte kvůli němu z kompletního krmiva, jinak by kočka mohla dostávat méně důležitých vitaminů a živin.",
+        "hr": "Umjesto toga ponudi svježu vodu. Ako ikada daš mlijeko za mačke kao rijetku poslasticu, uračunaj njegove dodatne kalorije, ali zbog njega ne smanjuj količinu potpune hrane koju mačka dobiva, jer bi mačka tada mogla dobiti manje vitalnih vitamina i hranjivih tvari."
       },
       "serving": null,
       "child": {
@@ -15146,7 +15191,8 @@
         "pt": "Até o leite especial para gatos é só uma guloseima. A bebida que mantém o gatinho saudável todos os dias é água fresca.",
         "nl": "Zelfs speciale kattenmelk is maar een traktatie. De drank die je kat elke dag gezond houdt, is vers water.",
         "pl": "Nawet specjalne mleko dla kotów to tylko smakołyk. Na co dzień o zdrowie kotka dba świeża woda.",
-        "cs": "I speciální mléko pro kočky je jen pamlsek. Čerstvá voda je nápoj, který kočičku udrží každý den zdravou."
+        "cs": "I speciální mléko pro kočky je jen pamlsek. Čerstvá voda je nápoj, který kočičku udrží každý den zdravou.",
+        "hr": "Čak je i posebno mlijeko za mačke samo poslastica. Piće koje mačku svaki dan održava zdravom jest svježa voda."
       },
       "faq": [
         {
@@ -15157,7 +15203,8 @@
             "pt": "O leite para gatos da loja de animais é melhor do que o leite de vaca?",
             "nl": "Is kattenmelk uit de dierenwinkel beter dan koemelk?",
             "pl": "Czy mleko dla kotów ze sklepu zoologicznego jest lepsze niż mleko krowie?",
-            "cs": "Je mléko pro kočky z obchodu lepší než kravské?"
+            "cs": "Je mléko pro kočky z obchodu lepší než kravské?",
+            "hr": "Je li mlijeko za mačke iz trgovine za kućne ljubimce bolje od kravljeg?"
           },
           "a": {
             "en": "It usually has a lot less lactose or none, so it is less likely to make your cat poorly. But its fat content is often just as high as any other milk, and it is not a complete meal.",
@@ -15166,7 +15213,8 @@
             "pt": "Normalmente tem muito menos lactose ou nenhuma, por isso é menos provável que ponha o teu gato doente. Mas tem muitas vezes tanta gordura como qualquer outro leite, e não é uma refeição completa.",
             "nl": "Er zit meestal veel minder lactose in, of helemaal geen, dus de kans is kleiner dat je kat er ziek van wordt. Maar het vetgehalte is vaak net zo hoog als bij andere melk, en het is geen complete voeding.",
             "pl": "Zwykle zawiera dużo mniej laktozy albo wcale jej nie ma, więc jest mniejsze ryzyko, że kot się po nim rozchoruje. Ale zawartość tłuszczu jest często równie wysoka jak w każdym innym mleku, a to nie jest pełnowartościowy posiłek.",
-            "cs": "Obvykle obsahuje mnohem méně laktózy nebo žádnou, takže se po něm kočce méně často udělá špatně. Tuku v něm ale bývá často stejně jako v jakémkoli jiném mléce a není to kompletní jídlo."
+            "cs": "Obvykle obsahuje mnohem méně laktózy nebo žádnou, takže se po něm kočce méně často udělá špatně. Tuku v něm ale bývá často stejně jako v jakémkoli jiném mléce a není to kompletní jídlo.",
+            "hr": "Obično ima mnogo manje laktoze ili je uopće nema, pa je manje vjerojatno da će mački biti loše. No udio masti u njemu često je jednako visok kao u svakom drugom mlijeku, a ono nije potpun obrok."
           }
         }
       ],
@@ -18612,7 +18660,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Nut butters (almond, walnut …)",
@@ -18621,7 +18670,8 @@
         "pt": "Manteigas de frutos secos (amêndoa, noz …)",
         "nl": "Notenpasta (amandel, walnoot …)",
         "pl": "Masła z orzechów (migdałowe, z orzechów włoskich …)",
-        "cs": "Ořechová másla (mandlové, z vlašských ořechů …)"
+        "cs": "Ořechová másla (mandlové, z vlašských ořechů …)",
+        "hr": "Maslaci od orašastih plodova (badem, orah …)"
       },
       "question": {
         "en": "Can cats eat nut butters?",
@@ -18630,7 +18680,8 @@
         "pt": "Os gatos podem comer manteigas de frutos secos?",
         "nl": "Mogen katten notenpasta eten?",
         "pl": "Czy koty mogą jeść masła z orzechów?",
-        "cs": "Mohou kočky jíst ořechová másla?"
+        "cs": "Mohou kočky jíst ořechová másla?",
+        "hr": "Smiju li mačke jesti maslace od orašastih plodova?"
       },
       "url_slug": {
         "en": "nut-butters",
@@ -18639,7 +18690,8 @@
         "pt": "manteigas-de-frutos-secos",
         "nl": "notenpasta",
         "pl": "masla-z-orzechow",
-        "cs": "orechova-masla"
+        "cs": "orechova-masla",
+        "hr": "maslaci-od-orasastih-plodova"
       },
       "answer": {
         "en": "It's best not to. Nut butters are made from nuts, and nuts contain high amounts of oils and fats that can make a cat unwell, with vomiting or diarrhoea. Never give macadamia nut butter: macadamia nuts are toxic to cats.",
@@ -18648,7 +18700,8 @@
         "pt": "É melhor não. As manteigas de frutos secos são feitas de frutos secos, que têm muito óleo e gordura e podem pôr o gato doente, com vómitos ou diarreia. Nunca dês manteiga de nozes de macadâmia: as nozes de macadâmia são tóxicas para os gatos.",
         "nl": "Liever niet. Notenpasta is gemaakt van noten, en noten bevatten veel oliën en vetten die een kat ziek kunnen maken, met braken of diarree. Geef nooit macadamiapasta: macadamianoten zijn giftig voor katten.",
         "pl": "Lepiej nie. Masła z orzechów powstają z orzechów, a te zawierają duże ilości olejów i tłuszczów, które mogą zaszkodzić kotu i wywołać wymioty lub biegunkę. Nigdy nie dawaj masła z orzechów makadamia: orzechy makadamia są toksyczne dla kotów.",
-        "cs": "Raději ne. Ořechová másla se vyrábějí z ořechů a ořechy obsahují velké množství olejů a tuků, které mohou kočce způsobit zvracení nebo průjem. Makadamové máslo nedávejte nikdy: makadamové ořechy jsou pro kočky jedovaté."
+        "cs": "Raději ne. Ořechová másla se vyrábějí z ořechů a ořechy obsahují velké množství olejů a tuků, které mohou kočce způsobit zvracení nebo průjem. Makadamové máslo nedávejte nikdy: makadamové ořechy jsou pro kočky jedovaté.",
+        "hr": "Bolje ne. Maslaci od orašastih plodova prave se od orašastih plodova, a oni sadrže velike količine ulja i masti zbog kojih mački može pozliti, a mogu izazvati i povraćanje ili proljev. Nikad ne daj maslac od makadamije: makadamija je otrovna za mačke."
       },
       "why": {
         "en": "Cats Protection says nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which can make a cat unwell. VCA vets say most nuts are very fatty and can cause vomiting and diarrhoea, and that macadamia nuts are very fatty, can cause pancreatitis and are also toxic to cats. Cats Protection advises sticking to cat food treats rather than human foods.",
@@ -18657,7 +18710,8 @@
         "pt": "A Cats Protection diz que frutos secos como as nozes de macadâmia, as amêndoas e as nozes têm muito óleo e gordura, o que pode pôr o gato doente. Os veterinários da VCA dizem que a maioria dos frutos secos tem muita gordura e pode causar vómitos e diarreia, e que as nozes de macadâmia têm muita gordura, podem causar pancreatite e são também tóxicas para os gatos. A Cats Protection aconselha a dar guloseimas próprias para gatos em vez de comida de pessoas.",
         "nl": "Cats Protection zegt dat noten zoals macadamia, amandelen en walnoten veel oliën en vetten bevatten die een kat ziek kunnen maken. Dierenartsen van VCA zeggen dat de meeste noten erg vet zijn en braken en diarree kunnen veroorzaken, en dat macadamianoten erg vet zijn, alvleesklierontsteking kunnen veroorzaken en bovendien giftig zijn voor katten. Cats Protection adviseert om bij kattensnoepjes te blijven in plaats van menselijk voedsel te geven.",
         "pl": "Cats Protection podaje, że orzechy, takie jak makadamia, migdały i orzechy włoskie, zawierają duże ilości olejów i tłuszczów, które mogą zaszkodzić kotu. Weterynarze z VCA podają, że większość orzechów jest bardzo tłusta i może wywołać wymioty i biegunkę oraz że orzechy makadamia są bardzo tłuste, mogą wywołać zapalenie trzustki i są też toksyczne dla kotów. Cats Protection radzi dawać kotom smakołyki przeznaczone dla kotów, a nie jedzenie dla ludzi.",
-        "cs": "Cats Protection uvádí, že ořechy, jako jsou makadamové ořechy, mandle a vlašské ořechy, obsahují velké množství olejů a tuků, po kterých může být kočce špatně. Veterináři z VCA uvádějí, že většina ořechů je velmi tučná a může způsobit zvracení a průjem a že makadamové ořechy jsou velmi tučné, mohou způsobit zánět slinivky břišní a jsou pro kočky navíc jedovaté. Cats Protection radí držet se pamlsků pro kočky a nedávat jim lidské jídlo."
+        "cs": "Cats Protection uvádí, že ořechy, jako jsou makadamové ořechy, mandle a vlašské ořechy, obsahují velké množství olejů a tuků, po kterých může být kočce špatně. Veterináři z VCA uvádějí, že většina ořechů je velmi tučná a může způsobit zvracení a průjem a že makadamové ořechy jsou velmi tučné, mohou způsobit zánět slinivky břišní a jsou pro kočky navíc jedovaté. Cats Protection radí držet se pamlsků pro kočky a nedávat jim lidské jídlo.",
+        "hr": "Cats Protection kaže da orašasti plodovi poput makadamije, badema i oraha sadrže velike količine ulja i masti zbog kojih mački može pozliti. Veterinari iz VCA-a kažu da je većina orašastih plodova vrlo masna i može izazvati povraćanje i proljev te da je makadamija vrlo masna, može izazvati upalu gušterače i otrovna je za mačke. Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke."
       },
       "signs": {
         "en": [
@@ -18687,6 +18741,10 @@
         "cs": [
           "Zvracení",
           "Průjem"
+        ],
+        "hr": [
+          "Povraćanje",
+          "Proljev"
         ]
       },
       "what_to_do": {
@@ -18696,7 +18754,8 @@
         "pt": "Se o teu gato comeu manteiga de nozes de macadâmia, ou parece doente depois de comer qualquer manteiga de frutos secos, marca uma consulta urgente com o teu veterinário.",
         "nl": "Heeft je kat macadamiapasta gegeten, of lijkt je kat na het eten van een andere notenpasta ziek, maak dan met spoed een afspraak met je dierenarts.",
         "pl": "Jeśli twój kot zjadł masło z orzechów makadamia albo źle się czuje po zjedzeniu jakiegokolwiek masła z orzechów, jak najszybciej umów wizytę u weterynarza.",
-        "cs": "Pokud kočka snědla makadamové máslo nebo se jí po jakémkoli ořechovém másle udělalo zle, neodkladně se objednejte k veterináři."
+        "cs": "Pokud kočka snědla makadamové máslo nebo se jí po jakémkoli ořechovém másle udělalo zle, neodkladně se objednejte k veterináři.",
+        "hr": "Ako je mačka pojela maslac od makadamije ili joj se nakon bilo kojeg maslaca od orašastih plodova čini da nije dobro, hitno zakaži pregled kod veterinara."
       },
       "serving": null,
       "child": {
@@ -18706,7 +18765,8 @@
         "pt": "As manteigas de frutos secos são comida de pessoas e demasiado gordurosas para a barriga do gato. Dá antes ao teu gato as guloseimas próprias para gatos.",
         "nl": "Notenpasta is voor mensen en te vet voor het buikje van een kat. Geef je kat liever haar eigen kattensnoepjes.",
         "pl": "Masła z orzechów to jedzenie dla ludzi, a dla kociego brzuszka są zbyt tłuste. Daj kotu lepiej jego własne kocie smakołyki.",
-        "cs": "Ořechová másla jsou jídlo pro lidi a pro kočičí bříško jsou příliš mastná. Dej kočičce raději její vlastní kočičí pamlsky."
+        "cs": "Ořechová másla jsou jídlo pro lidi a pro kočičí bříško jsou příliš mastná. Dej kočičce raději její vlastní kočičí pamlsky.",
+        "hr": "Maslaci od orašastih plodova hrana su za ljude i previše su masni za mačji trbuščić. Maci radije daj njezine poslastice za mačke."
       },
       "faq": [
         {
@@ -18717,7 +18777,8 @@
             "pt": "E a manteiga de amendoim?",
             "nl": "En pindakaas?",
             "pl": "A co z masłem orzechowym?",
-            "cs": "A co arašídové máslo?"
+            "cs": "A co arašídové máslo?",
+            "hr": "A maslac od kikirikija?"
           },
           "a": {
             "en": "Peanut butter has its own page. VCA vets say any peanut butter must be free of preservatives and life-threatening additives such as xylitol.",
@@ -18726,7 +18787,8 @@
             "pt": "A manteiga de amendoim tem a sua própria página. Os veterinários da VCA dizem que qualquer manteiga de amendoim tem de estar livre de conservantes e de aditivos que põem a vida em risco, como o xilitol.",
             "nl": "Pindakaas heeft een eigen pagina. Dierenartsen van VCA zeggen dat pindakaas vrij moet zijn van conserveermiddelen en levensgevaarlijke toevoegingen zoals xylitol.",
             "pl": "Masło orzechowe ma własną stronę. Weterynarze z VCA podają, że masło orzechowe nie może zawierać konserwantów ani zagrażających życiu dodatków, takich jak ksylitol.",
-            "cs": "Arašídové máslo má vlastní stránku. Veterináři z VCA uvádějí, že každé arašídové máslo musí být bez konzervantů a životu nebezpečných přísad, jako je xylitol."
+            "cs": "Arašídové máslo má vlastní stránku. Veterináři z VCA uvádějí, že každé arašídové máslo musí být bez konzervantů a životu nebezpečných přísad, jako je xylitol.",
+            "hr": "Maslac od kikirikija ima vlastitu stranicu. Veterinari iz VCA-a kažu da svaki maslac od kikirikija mora biti bez konzervansa i dodataka opasnih po život, kao što je ksilitol."
           }
         }
       ],
@@ -28814,7 +28876,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Water",
@@ -28823,7 +28886,8 @@
         "pt": "Água",
         "nl": "Water",
         "pl": "Woda",
-        "cs": "Voda"
+        "cs": "Voda",
+        "hr": "Voda"
       },
       "question": {
         "en": "What should cats drink?",
@@ -28832,7 +28896,8 @@
         "pt": "O que devem os gatos beber?",
         "nl": "Wat moeten katten drinken?",
         "pl": "Co powinny pić koty?",
-        "cs": "Co by měly kočky pít?"
+        "cs": "Co by měly kočky pít?",
+        "hr": "Što bi mačke trebale piti?"
       },
       "url_slug": {
         "en": "water",
@@ -28841,7 +28906,8 @@
         "pt": "agua",
         "nl": "water",
         "pl": "woda",
-        "cs": "voda"
+        "cs": "voda",
+        "hr": "voda"
       },
       "answer": {
         "en": "Water. Plain, fresh water is the best drink for adult cats, and your cat should have it available at all times and be able to drink as much as it wants. Cats don't need anything else to drink.",
@@ -28850,7 +28916,8 @@
         "pt": "Água. A água simples e fresca é a melhor bebida para os gatos adultos; o teu gato deve tê-la sempre disponível e poder beber tanta quanta quiser. Os gatos não precisam de mais nada para beber.",
         "nl": "Water. Gewoon vers water is de beste drank voor volwassen katten, en je kat moet de hele dag bij vers water kunnen en zoveel kunnen drinken als ze wil. Katten hebben niets anders te drinken nodig.",
         "pl": "Wodę. Czysta, świeża woda to najlepszy napój dla dorosłych kotów; twój kot powinien mieć do niej dostęp przez cały czas i móc pić tyle, ile chce. Koty nie potrzebują do picia niczego innego.",
-        "cs": "Vodu. Obyčejná čerstvá voda je pro dospělé kočky nejlepším nápojem. Má být stále k dispozici a kočka by se z ní měla moct napít, kolik chce. Kočky k pití nepotřebují nic jiného."
+        "cs": "Vodu. Obyčejná čerstvá voda je pro dospělé kočky nejlepším nápojem. Má být stále k dispozici a kočka by se z ní měla moct napít, kolik chce. Kočky k pití nepotřebují nic jiného.",
+        "hr": "Voda. Obična svježa voda najbolje je piće za odrasle mačke; mačka bi uvijek trebala imati pristup vodi i moći piti koliko želi. Mačkama ne treba nikakvo drugo piće."
       },
       "why": {
         "en": "Water helps keep a cat's kidneys working and its organs in good order, and helping cats avoid becoming dehydrated is a very important part of keeping them healthy. Cats Protection and PDSA both say water is the only drink a cat needs.",
@@ -28859,7 +28926,8 @@
         "pt": "A água ajuda os rins do gato a funcionar e os órgãos a manterem-se em bom estado, e ajudar os gatos a evitar a desidratação é uma parte muito importante de os manter saudáveis. A Cats Protection e a PDSA dizem ambas que a água é a única bebida de que um gato precisa.",
         "nl": "Water helpt de nieren van een kat goed te blijven werken en houdt de organen gezond. Voorkomen dat een kat uitdroogt is een heel belangrijk onderdeel van haar gezond houden. Cats Protection en PDSA zeggen allebei dat water de enige drank is die een kat nodig heeft.",
         "pl": "Woda pomaga nerkom kota prawidłowo pracować, a pozostałym narządom funkcjonować, a zapobieganie odwodnieniu to bardzo ważna część dbania o zdrowie kota. Cats Protection i PDSA podają, że woda to jedyny napój, którego kot potrzebuje.",
-        "cs": "Voda pomáhá ledvinám i dalším orgánům kočky dobře fungovat a předcházet dehydrataci je velmi důležitou součástí péče o její zdraví. Cats Protection i PDSA uvádějí, že voda je jediný nápoj, který kočka potřebuje."
+        "cs": "Voda pomáhá ledvinám i dalším orgánům kočky dobře fungovat a předcházet dehydrataci je velmi důležitou součástí péče o její zdraví. Cats Protection i PDSA uvádějí, že voda je jediný nápoj, který kočka potřebuje.",
+        "hr": "Voda pomaže bubrezima mačke da rade i održava njezine organe zdravima, a sprječavanje dehidracije vrlo je važan dio brige za mačje zdravlje. I Cats Protection i PDSA kažu da je voda jedino piće koje mački treba."
       },
       "signs": null,
       "what_to_do": {
@@ -28869,7 +28937,8 @@
         "pt": "Se receias que o teu gato esteja desidratado, por exemplo se parece apático ou fraco, tem pouco apetite ou as gengivas secas, contacta rapidamente um veterinário.",
         "nl": "Maak je je zorgen dat je kat uitgedroogd is, bijvoorbeeld omdat ze loom of zwak lijkt, weinig eetlust heeft of droog tandvlees heeft, neem dan snel contact op met je dierenarts.",
         "pl": "Jeśli martwisz się, że twój kot jest odwodniony, na przykład wydaje się ospały lub osłabiony, ma słaby apetyt albo suche dziąsła, skontaktuj się z weterynarzem bez zwłoki.",
-        "cs": "Pokud se obáváte, že je vaše kočka dehydratovaná, například působí malátně nebo slabě, má sníženou chuť k jídlu nebo suché dásně, neprodleně se obraťte na veterináře."
+        "cs": "Pokud se obáváte, že je vaše kočka dehydratovaná, například působí malátně nebo slabě, má sníženou chuť k jídlu nebo suché dásně, neprodleně se obraťte na veterináře.",
+        "hr": "Ako sumnjaš da je mačka dehidrirana, na primjer djeluje bezvoljno ili malaksalo, slabo jede ili ima suhe desni, bez odlaganja se obrati veterinaru."
       },
       "serving": {
         "en": "Keep fresh water where your cat can easily reach it and replace it at least once a day. Several bowls around the home, cleaned regularly and placed away from the food bowl, help, and some cats drink more from a water fountain.",
@@ -28878,7 +28947,8 @@
         "pt": "Deixa água fresca num sítio a que o teu gato chegue facilmente e muda-a pelo menos uma vez por dia. Ajudam várias tigelas pela casa, lavadas com regularidade e longe da tigela da comida, e alguns gatos bebem mais numa fonte de água.",
         "nl": "Zorg dat er vers water staat waar je kat er makkelijk bij kan komen, en ververs het minstens één keer per dag. Meerdere bakjes door het huis, regelmatig schoongemaakt en op afstand van het voerbakje, helpen, en sommige katten drinken meer uit een drinkfontein.",
         "pl": "Trzymaj świeżą wodę w miejscu, do którego kot łatwo sięgnie, i wymieniaj ją co najmniej raz dziennie. Pomaga rozstawienie po domu kilku misek, regularnie myte i ustawione z dala od miski z jedzeniem, a niektóre koty chętniej piją z fontanny na wodę.",
-        "cs": "Čerstvou vodu mějte na místě, kam kočka snadno dosáhne, a vyměňujte ji alespoň jednou denně. Pomáhá i několik misek rozmístěných po domácnosti, které se pravidelně myjí a stojí dál od misky s krmivem. Některé kočky pijí víc z pítka s fontánkou."
+        "cs": "Čerstvou vodu mějte na místě, kam kočka snadno dosáhne, a vyměňujte ji alespoň jednou denně. Pomáhá i několik misek rozmístěných po domácnosti, které se pravidelně myjí a stojí dál od misky s krmivem. Některé kočky pijí víc z pítka s fontánkou.",
+        "hr": "Svježu vodu drži na mjestu do kojeg mačka lako dolazi i mijenjaj je barem jednom dnevno. Pomaže ako je po kući postavljeno više redovito opranih zdjelica, podalje od zdjelice s hranom, a neke mačke više piju s fontane."
       },
       "child": {
         "en": "Fresh water is the best drink for a cat! You can help by checking that kitty's water bowl is clean and full.",
@@ -28887,7 +28957,8 @@
         "pt": "A água fresca é a melhor bebida para um gato! Uma ótima forma de ajudar é ver se a tigela de água do gatinho está limpa e cheia.",
         "nl": "Vers water is de beste drank voor een kat! Jij kunt helpen door te kijken of het waterbakje van je kat schoon en vol is.",
         "pl": "Świeża woda to najlepszy napój dla kota! Możesz pomóc, sprawdzając, czy miska kotka jest czysta i pełna.",
-        "cs": "Čerstvá voda je pro kočku nejlepší nápoj! Můžeš pomoct tím, že zkontroluješ, jestli je kočičí miska s vodou čistá a plná."
+        "cs": "Čerstvá voda je pro kočku nejlepší nápoj! Můžeš pomoct tím, že zkontroluješ, jestli je kočičí miska s vodou čistá a plná.",
+        "hr": "Svježa voda najbolje je piće za mačku! Možeš pomoći tako da provjeriš je li mačja zdjelica s vodom čista i puna."
       },
       "faq": [
         {
@@ -28898,7 +28969,8 @@
             "pt": "Como posso ajudar o meu gato a beber mais?",
             "nl": "Hoe kan ik mijn kat helpen meer te drinken?",
             "pl": "Jak mogę zachęcić kota do picia większej ilości wody?",
-            "cs": "Jak pomoci kočce, aby pila víc?"
+            "cs": "Jak pomoci kočce, aby pila víc?",
+            "hr": "Kako mogu pomoći mački da pije više?"
           },
           "a": {
             "en": "Put several clean water bowls around the home, away from the food bowl. Some cats drink more from a fountain, and wet food or water added to food also increases how much water they take in.",
@@ -28907,7 +28979,8 @@
             "pt": "Põe várias tigelas de água limpa pela casa, longe da tigela da comida. Alguns gatos bebem mais numa fonte de água, e a comida húmida ou água acrescentada à comida também aumenta a quantidade de água que ingerem.",
             "nl": "Zet meerdere schone waterbakjes door het huis, uit de buurt van het voerbakje. Sommige katten drinken meer uit een drinkfontein, en ook natvoer, of water door het voer, zorgt dat ze meer vocht binnenkrijgen.",
             "pl": "Postaw kilka czystych misek z wodą w różnych miejscach domu, z dala od miski z jedzeniem. Niektóre koty piją więcej z fontanny na wodę, a kot przyjmuje więcej wody także z mokrą karmą albo gdy dodasz wodę do jedzenia.",
-            "cs": "Rozmístěte po domácnosti několik čistých misek s vodou, dál od misky s krmivem. Některé kočky pijí víc z pítka s fontánkou a příjem vody zvyšuje také vlhké krmivo nebo voda přidaná ke krmivu."
+            "cs": "Rozmístěte po domácnosti několik čistých misek s vodou, dál od misky s krmivem. Některé kočky pijí víc z pítka s fontánkou a příjem vody zvyšuje také vlhké krmivo nebo voda přidaná ke krmivu.",
+            "hr": "Postavi nekoliko čistih zdjelica s vodom po kući, podalje od zdjelice s hranom. Neke mačke više piju s fontane, a mokra hrana ili voda dodana hrani također povećavaju unos vode."
           }
         },
         {
@@ -28918,7 +28991,8 @@
             "pt": "Os gatos também precisam de leite?",
             "nl": "Hebben katten ook melk nodig?",
             "pl": "Czy koty potrzebują też mleka?",
-            "cs": "Potřebují kočky i mléko?"
+            "cs": "Potřebují kočky i mléko?",
+            "hr": "Treba li mačkama i mlijeko?"
           },
           "a": {
             "en": "No. Cats Protection says the best thing for adult cats to drink is water and that they don't need anything else to stay healthy.",
@@ -28927,7 +29001,8 @@
             "pt": "Não. A Cats Protection diz que a melhor bebida para os gatos adultos é a água e que não precisam de mais nada para se manterem saudáveis.",
             "nl": "Nee. Cats Protection zegt dat water het beste is wat volwassen katten kunnen drinken en dat ze niets anders nodig hebben om gezond te blijven.",
             "pl": "Nie. Cats Protection podaje, że najlepszym napojem dla dorosłych kotów jest woda i że nie potrzebują niczego innego, by zachować zdrowie.",
-            "cs": "Ne. Cats Protection uvádí, že nejlepším nápojem pro dospělé kočky je voda a že k udržení zdraví nepotřebují nic jiného."
+            "cs": "Ne. Cats Protection uvádí, že nejlepším nápojem pro dospělé kočky je voda a že k udržení zdraví nepotřebují nic jiného.",
+            "hr": "Ne. Cats Protection kaže da je za odrasle mačke najbolje piće voda i da im ne treba ništa drugo da bi ostale zdrave."
           }
         }
       ],
@@ -38638,7 +38713,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Chickpeas",
@@ -38647,7 +38723,8 @@
         "pt": "Grão-de-bico",
         "nl": "Kikkererwten",
         "pl": "Ciecierzyca",
-        "cs": "Cizrna"
+        "cs": "Cizrna",
+        "hr": "Slanutak"
       },
       "question": {
         "en": "Can dogs eat chickpeas?",
@@ -38656,7 +38733,8 @@
         "pt": "Os cães podem comer grão-de-bico?",
         "nl": "Mogen honden kikkererwten eten?",
         "pl": "Czy psy mogą jeść ciecierzycę?",
-        "cs": "Mohou psi jíst cizrnu?"
+        "cs": "Mohou psi jíst cizrnu?",
+        "hr": "Smiju li psi jesti slanutak?"
       },
       "url_slug": {
         "en": "chickpeas",
@@ -38665,7 +38743,8 @@
         "pt": "grao-de-bico",
         "nl": "kikkererwten",
         "pl": "ciecierzyca",
-        "cs": "cizrna"
+        "cs": "cizrna",
+        "hr": "slanutak"
       },
       "answer": {
         "en": "Yes, in moderation, if they are thoroughly cooked. Freshly cooked chickpeas (garbanzo beans) can be a treat for dogs. Dry chickpeas are a choking hazard, canned ones are usually salty, and hummus is not safe for dogs.",
@@ -38674,7 +38753,8 @@
         "pt": "Sim, com moderação, se estiver bem cozido. O grão-de-bico acabado de cozer pode ser uma guloseima para os cães. O grão-de-bico seco é um risco de engasgo, o de conserva costuma ser salgado e o hummus não é seguro para os cães.",
         "nl": "Ja, met mate, als ze goed gaar zijn. Vers gekookte kikkererwten kunnen een snoepje zijn voor honden. Droge kikkererwten zijn een verstikkingsgevaar, kikkererwten uit blik zijn meestal zout en hummus is niet veilig voor honden.",
         "pl": "Tak, z umiarem, jeśli jest dokładnie ugotowana. Świeżo ugotowana ciecierzyca (cieciorka) może być smakołykiem dla psów. Sucha ciecierzyca grozi zadławieniem, ta z puszki jest zwykle słona, a hummus nie jest bezpieczny dla psów.",
-        "cs": "Ano, s mírou, pokud je dobře uvařená. Čerstvě uvařená cizrna může být pro psy pamlskem. Suchá cizrna představuje riziko udušení, ta z konzervy bývá slaná a hummus pro psy bezpečný není."
+        "cs": "Ano, s mírou, pokud je dobře uvařená. Čerstvě uvařená cizrna může být pro psy pamlskem. Suchá cizrna představuje riziko udušení, ta z konzervy bývá slaná a hummus pro psy bezpečný není.",
+        "hr": "Da, umjereno, ako je temeljito kuhan. Svježe kuhan slanutak može biti poslastica za pse. Suh slanutak može izazvati gušenje, konzervirani je obično slan, a humus nije siguran za pse."
       },
       "why": {
         "en": "Chickpeas are legumes, a good source of fibre and protein for dogs, but some dogs have trouble digesting them, so they should be cooked well and introduced slowly. Dry chickpeas are much harder to digest. Canned chickpeas usually contain a lot of sodium, which is not healthy for dogs. Like other beans, chickpeas may give your dog some gas.",
@@ -38683,7 +38763,8 @@
         "pt": "O grão-de-bico é uma leguminosa, uma boa fonte de fibra e proteína para os cães, mas alguns cães têm dificuldade em digeri-lo, por isso deve estar bem cozido e ser introduzido aos poucos. O grão-de-bico seco é muito mais difícil de digerir. O grão-de-bico de conserva costuma ter muito sódio, que não é saudável para os cães. Tal como outros feijões, o grão-de-bico pode provocar gases no teu cão.",
         "nl": "Kikkererwten zijn peulvruchten en een goede bron van vezels en eiwit voor honden, maar sommige honden kunnen ze moeilijk verteren. Maak ze daarom goed gaar en laat je hond er langzaam aan wennen. Droge kikkererwten zijn veel moeilijker te verteren. Kikkererwten uit blik bevatten meestal veel natrium, en dat is niet gezond voor honden. Net als andere bonen kunnen kikkererwten je hond wat last van winderigheid geven.",
         "pl": "Ciecierzyca to roślina strączkowa, dobre źródło błonnika i białka dla psów, ale niektóre psy mają problemy z jej trawieniem, dlatego trzeba ją dobrze ugotować i wprowadzać do diety stopniowo. Sucha ciecierzyca jest znacznie trudniejsza do strawienia. Ciecierzyca z puszki zwykle zawiera dużo sodu, który nie jest zdrowy dla psów. Podobnie jak fasola, ciecierzyca może wywoływać u psa gazy.",
-        "cs": "Cizrna je luštěnina, dobrý zdroj vlákniny a bílkovin pro psy, ale někteří psi ji špatně tráví, proto by měla být dobře uvařená a zařazovat se pomalu. Suchá cizrna se tráví mnohem hůř. Cizrna z konzervy obvykle obsahuje hodně sodíku, který psům nesvědčí. Stejně jako jiné luštěniny může cizrna psovi způsobit plynatost."
+        "cs": "Cizrna je luštěnina, dobrý zdroj vlákniny a bílkovin pro psy, ale někteří psi ji špatně tráví, proto by měla být dobře uvařená a zařazovat se pomalu. Suchá cizrna se tráví mnohem hůř. Cizrna z konzervy obvykle obsahuje hodně sodíku, který psům nesvědčí. Stejně jako jiné luštěniny může cizrna psovi způsobit plynatost.",
+        "hr": "Slanutak je mahunarka, dobar izvor vlakana i bjelančevina za pse, ali neki ga psi teško probavljaju, pa ga treba dobro skuhati i uvoditi postupno. Suh slanutak mnogo je teže probavljiv. Konzerviran slanutak obično sadrži mnogo natrija, što nije zdravo za pse. Kao i grah, slanutak može izazvati plinove kod psa."
       },
       "signs": null,
       "what_to_do": {
@@ -38693,7 +38774,8 @@
         "pt": "Introduz o grão-de-bico cozido aos poucos. Se usares grão-de-bico de conserva, escolhe um com pouco sal e lava-o bem para tirar o máximo de sal possível.",
         "nl": "Laat je hond langzaam aan gare kikkererwten wennen. Gebruik je kikkererwten uit blik, kies dan een zoutarme soort en spoel ze goed af om zoveel mogelijk zout te verwijderen.",
         "pl": "Wprowadzaj ugotowaną ciecierzycę powoli. Jeśli używasz ciecierzycy z puszki, wybierz taką o niskiej zawartości sodu i dobrze ją opłucz, żeby usunąć jak najwięcej soli.",
-        "cs": "Uvařenou cizrnu zařazujte pomalu. Pokud použijete cizrnu z konzervy, vyberte druh s nízkým obsahem soli a dobře ji propláchněte, aby se odstranilo co nejvíc soli."
+        "cs": "Uvařenou cizrnu zařazujte pomalu. Pokud použijete cizrnu z konzervy, vyberte druh s nízkým obsahem soli a dobře ji propláchněte, aby se odstranilo co nejvíc soli.",
+        "hr": "Kuhan slanutak uvodi postupno. Ako koristiš konzerviran slanutak, odaberi onaj s malo natrija i dobro ga isperi kako bi se uklonilo što više soli."
       },
       "serving": {
         "en": "Soaked and thoroughly cooked until soft, in moderation; canned only low-sodium and well rinsed.",
@@ -38702,7 +38784,8 @@
         "pt": "Demolhado e bem cozido até ficar macio, com moderação; o de conserva só com pouco sal e bem lavado.",
         "nl": "Geweekt en daarna helemaal zacht gekookt, met mate; uit blik alleen zoutarm en goed afgespoeld.",
         "pl": "Namoczona i dokładnie ugotowana do miękkości, z umiarem; z puszki tylko o niskiej zawartości sodu i dobrze opłukana.",
-        "cs": "Namočená a důkladně uvařená do měkka, s mírou; z konzervy jen s nízkým obsahem soli a dobře propláchnutá."
+        "cs": "Namočená a důkladně uvařená do měkka, s mírou; z konzervy jen s nízkým obsahem soli a dobře propláchnutá.",
+        "hr": "Namočen i temeljito kuhan do mekoće, u umjerenim količinama; konzerviran samo s malo natrija i dobro ispran."
       },
       "child": {
         "en": "Soft, cooked chickpeas can be a little treat for dogs, but they might make your dog a bit windy!",
@@ -38711,7 +38794,8 @@
         "pt": "O grão-de-bico cozido e macio pode ser uma pequena guloseima para os cães, mas pode deixar o teu cão cheio de gases!",
         "nl": "Zachte, gare kikkererwten zijn een klein snoepje voor honden, maar je hond kan er wel een beetje winderig van worden!",
         "pl": "Miękka, ugotowana ciecierzyca może być małym smakołykiem dla psa, ale po niej pies może mieć trochę gazów!",
-        "cs": "Měkká uvařená cizrna může být pro psy malým pamlskem, ale pejskovi se z ní může trochu nadýmat bříško!"
+        "cs": "Měkká uvařená cizrna může být pro psy malým pamlskem, ale pejskovi se z ní může trochu nadýmat bříško!",
+        "hr": "Mekan kuhani slanutak može biti mala poslastica za pse, ali psu može izazvati i malo vjetrova!"
       },
       "faq": [
         {
@@ -38722,7 +38806,8 @@
             "pt": "Os cães podem comer hummus?",
             "nl": "Mogen honden hummus eten?",
             "pl": "Czy psy mogą jeść hummus?",
-            "cs": "Mohou psi jíst hummus?"
+            "cs": "Mohou psi jíst hummus?",
+            "hr": "Smiju li psi jesti humus?"
           },
           "a": {
             "en": "No. Hummus contains other ingredients that are not dog-friendly, including garlic, onion and spices.",
@@ -38731,7 +38816,8 @@
             "pt": "Não. O hummus contém outros ingredientes que não são adequados para cães, como alho, cebola e temperos.",
             "nl": "Nee. Hummus bevat andere ingrediënten die niet goed zijn voor honden, zoals knoflook, ui en kruiden.",
             "pl": "Nie. Hummus zawiera inne składniki nieodpowiednie dla psów, m.in. czosnek, cebulę i przyprawy.",
-            "cs": "Ne. Hummus obsahuje další přísady, které pro psy nejsou vhodné, včetně česneku, cibule a koření."
+            "cs": "Ne. Hummus obsahuje další přísady, které pro psy nejsou vhodné, včetně česneku, cibule a koření.",
+            "hr": "Ne. Humus sadrži druge sastojke koji nisu dobri za pse, uključujući češnjak, luk i začine."
           }
         },
         {
@@ -38742,7 +38828,8 @@
             "pt": "Os cães podem comer grão-de-bico seco?",
             "nl": "Mogen honden droge kikkererwten eten?",
             "pl": "Czy psy mogą jeść suchą ciecierzycę?",
-            "cs": "Mohou psi jíst suchou cizrnu?"
+            "cs": "Mohou psi jíst suchou cizrnu?",
+            "hr": "Smiju li psi jesti suh slanutak?"
           },
           "a": {
             "en": "No. Dry chickpeas can be a choking hazard and are much harder for dogs to digest; cook them thoroughly first.",
@@ -38751,7 +38838,8 @@
             "pt": "Não. O grão-de-bico seco pode ser um risco de engasgo e é muito mais difícil de digerir para os cães; cozinha-o bem primeiro.",
             "nl": "Nee. Droge kikkererwten kunnen een verstikkingsgevaar zijn en zijn veel moeilijker te verteren voor honden; kook ze eerst goed gaar.",
             "pl": "Nie. Sucha ciecierzyca może grozić zadławieniem i jest dla psów znacznie trudniejsza do strawienia; najpierw dokładnie ją ugotuj.",
-            "cs": "Ne. Suchá cizrna může představovat riziko udušení a psi ji tráví mnohem hůř; nejdřív ji důkladně uvařte."
+            "cs": "Ne. Suchá cizrna může představovat riziko udušení a psi ji tráví mnohem hůř; nejdřív ji důkladně uvařte.",
+            "hr": "Ne. Suh slanutak može izazvati gušenje, a psi ga mnogo teže probavljaju, zato ga prvo temeljito skuhaj."
           }
         }
       ],
@@ -51763,7 +51851,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Lactose-free milk",
@@ -51772,7 +51861,8 @@
         "pt": "Leite sem lactose",
         "nl": "Lactosevrije melk",
         "pl": "Mleko bez laktozy",
-        "cs": "Bezlaktózové mléko"
+        "cs": "Bezlaktózové mléko",
+        "hr": "Mlijeko bez laktoze"
       },
       "question": {
         "en": "Can dogs drink lactose-free milk?",
@@ -51781,7 +51871,8 @@
         "pt": "Os cães podem beber leite sem lactose?",
         "nl": "Mogen honden lactosevrije melk drinken?",
         "pl": "Czy psy mogą pić mleko bez laktozy?",
-        "cs": "Mohou psi pít bezlaktózové mléko?"
+        "cs": "Mohou psi pít bezlaktózové mléko?",
+        "hr": "Smiju li psi piti mlijeko bez laktoze?"
       },
       "url_slug": {
         "en": "lactose-free-milk",
@@ -51790,7 +51881,8 @@
         "pt": "leite-sem-lactose",
         "nl": "lactosevrije-melk",
         "pl": "mleko-bez-laktozy",
-        "cs": "bezlaktozove-mleko"
+        "cs": "bezlaktozove-mleko",
+        "hr": "mlijeko-bez-laktoze"
       },
       "answer": {
         "en": "Only a little, and it isn't needed. Some dogs may tolerate small amounts of lactose-free milk, but dogs on a good, balanced diet don't need it, and it can still upset the stomach of dogs allergic to milk protein.",
@@ -51799,7 +51891,8 @@
         "pt": "Só um pouco, e não é necessário. Alguns cães podem tolerar pequenas quantidades de leite sem lactose, mas os cães com uma alimentação boa e equilibrada não precisam dele, e pode mesmo assim irritar o estômago dos cães alérgicos à proteína do leite.",
         "nl": "Alleen een beetje, en het is niet nodig. Sommige honden verdragen kleine hoeveelheden lactosevrije melk, maar honden met een goed, uitgebalanceerd dieet hebben het niet nodig, en het kan nog steeds de maag van honden die allergisch zijn voor melkeiwit van streek maken.",
         "pl": "Tylko odrobinę, i to wcale niekonieczne. Niektóre psy mogą tolerować małe ilości mleka bez laktozy, ale psy na dobrej, zbilansowanej diecie go nie potrzebują, a mleko bez laktozy nadal może rozstroić żołądek psom uczulonym na białko mleka.",
-        "cs": "Jen trochu, a ani to není potřeba. Někteří psi mohou malé množství bezlaktózového mléka snášet, ale psi s dobrou vyváženou stravou ho nepotřebují a psům s alergií na mléčnou bílkovinu může i tak podráždit žaludek."
+        "cs": "Jen trochu, a ani to není potřeba. Někteří psi mohou malé množství bezlaktózového mléka snášet, ale psi s dobrou vyváženou stravou ho nepotřebují a psům s alergií na mléčnou bílkovinu může i tak podráždit žaludek.",
+        "hr": "Samo malo, a nije ni potrebno. Neki psi možda podnose male količine mlijeka bez laktoze, ali psima na dobroj, uravnoteženoj prehrani ono ne treba, a kod pasa alergičnih na mliječne bjelančevine i dalje može izazvati probavne tegobe."
       },
       "why": {
         "en": "Lactose-free milk has the same nutrients as regular milk but without the lactose that can cause digestive problems, and a vet hospital calls it a suitable alternative for lactose-intolerant dogs. The Australian Veterinary Association is stricter: it is not necessary for dogs on a balanced diet and can still cause stomach problems linked to milk-protein allergy, so we follow the stricter view: only a little.",
@@ -51808,7 +51901,8 @@
         "pt": "O leite sem lactose tem os mesmos nutrientes do leite normal, mas sem a lactose que pode causar problemas digestivos, e um hospital veterinário considera-o uma alternativa adequada para cães intolerantes à lactose. A Associação Veterinária Australiana é mais rigorosa: não é necessário para cães com uma alimentação equilibrada e pode mesmo assim causar problemas de estômago ligados à alergia à proteína do leite, por isso seguimos a opinião mais rigorosa: só um pouco.",
         "nl": "Lactosevrije melk bevat dezelfde voedingsstoffen als gewone melk, maar zonder de lactose die spijsverteringsklachten kan veroorzaken, en een dierenziekenhuis noemt het een geschikt alternatief voor honden met lactose-intolerantie. De Australian Veterinary Association is strenger: het is niet nodig voor honden met een uitgebalanceerd dieet en kan nog steeds maagklachten veroorzaken door een allergie voor melkeiwit. Wij volgen de strengere opvatting: alleen een beetje.",
         "pl": "Mleko bez laktozy ma te same składniki odżywcze co zwykłe mleko, ale bez laktozy, która może powodować problemy trawienne, a szpital weterynaryjny nazywa je odpowiednim zamiennikiem dla psów z nietolerancją laktozy. Australian Veterinary Association (AVA) ma bardziej restrykcyjne stanowisko: uważa, że mleko bez laktozy nie jest konieczne dla psów na zbilansowanej diecie i nadal może powodować problemy żołądkowe związane z alergią na białko mleka, dlatego kierujemy się surowszą oceną: tylko odrobina.",
-        "cs": "Bezlaktózové mléko má stejné živiny jako běžné mléko, ale bez laktózy, která může způsobovat potíže s trávením, a jedna veterinární nemocnice ho označuje za vhodnou alternativu pro psy, kteří nesnášejí laktózu. Australian Veterinary Association je přísnější: pro psy s vyváženou stravou není potřeba a může i tak způsobit žaludeční potíže spojené s alergií na mléčnou bílkovinu. Řídíme se proto přísnějším názorem: jen trochu."
+        "cs": "Bezlaktózové mléko má stejné živiny jako běžné mléko, ale bez laktózy, která může způsobovat potíže s trávením, a jedna veterinární nemocnice ho označuje za vhodnou alternativu pro psy, kteří nesnášejí laktózu. Australian Veterinary Association je přísnější: pro psy s vyváženou stravou není potřeba a může i tak způsobit žaludeční potíže spojené s alergií na mléčnou bílkovinu. Řídíme se proto přísnějším názorem: jen trochu.",
+        "hr": "Mlijeko bez laktoze ima iste hranjive tvari kao obično mlijeko, ali bez laktoze, koja može izazvati probavne tegobe, a jedna ga veterinarska bolnica smatra prikladnom zamjenom za pse koji ne podnose laktozu. Australsko veterinarsko udruženje strože je: kaže da psima na uravnoteženoj prehrani nije potrebno te da i dalje može izazvati želučane tegobe povezane s alergijom na mliječne bjelančevine, pa se držimo strožeg stajališta: samo malo."
       },
       "signs": null,
       "what_to_do": {
@@ -51818,7 +51912,8 @@
         "pt": "Se o teu cão tiver diarreia, vómitos, gases ou barriga inchada depois de beber leite e isso não passar, liga ao teu veterinário.",
         "nl": "Krijgt je hond na het drinken van melk diarree, braken, winderigheid of een opgeblazen buik en gaat dat niet over, neem dan contact op met je dierenarts.",
         "pl": "Jeśli po mleku pies ma biegunkę, wymioty, gazy lub wzdęcia, które nie mijają, skontaktuj się z weterynarzem.",
-        "cs": "Pokud pes po mléce dostane průjem, zvrací nebo má plynatost či nafouknuté břicho a potíže nepřejdou, obraťte se na veterináře."
+        "cs": "Pokud pes po mléce dostane průjem, zvrací nebo má plynatost či nafouknuté břicho a potíže nepřejdou, obraťte se na veterináře.",
+        "hr": "Ako pas nakon mlijeka dobije proljev, povraćanje, plinove ili nadutost koji ne prolaze, obrati se veterinaru."
       },
       "serving": {
         "en": "Start with a small amount, ideally a lactose-free milk made for dogs, and watch for tummy upset.",
@@ -51827,7 +51922,8 @@
         "pt": "Começa com uma pequena quantidade, de preferência de um leite sem lactose feito para cães, e observa se há indisposição de estômago.",
         "nl": "Begin met een kleine hoeveelheid, het liefst een lactosevrije melk die voor honden is gemaakt, en let op buikklachten.",
         "pl": "Zacznij od małej ilości, najlepiej mleka bez laktozy przeznaczonego dla psów, i obserwuj, czy nie dochodzi do rozstroju żołądka.",
-        "cs": "Začněte malým množstvím, nejlépe bezlaktózovým mlékem vyrobeným pro psy, a sledujte, zda se psovi nepodráždí žaludek."
+        "cs": "Začněte malým množstvím, nejlépe bezlaktózovým mlékem vyrobeným pro psy, a sledujte, zda se psovi nepodráždí žaludek.",
+        "hr": "Počni s malom količinom, najbolje mlijekom bez laktoze namijenjenim psima, i pazi pojavljuju li se probavne tegobe."
       },
       "child": {
         "en": "Dogs don't need milk to stay healthy, so ask a grown-up before sharing any with your dog.",
@@ -51836,7 +51932,8 @@
         "pt": "Os cães não precisam de leite para se manterem saudáveis, por isso pergunta a um adulto antes de partilhares leite com o teu cão.",
         "nl": "Honden hebben geen melk nodig om gezond te blijven, dus vraag het eerst aan een volwassene voordat je er wat van aan je hond geeft.",
         "pl": "Psy nie potrzebują mleka, żeby być zdrowe, więc zanim dasz psu odrobinę, zapytaj dorosłego.",
-        "cs": "Psi mléko ke zdraví nepotřebují, proto se nejdřív zeptej dospělého, než se o ně se psem podělíš."
+        "cs": "Psi mléko ke zdraví nepotřebují, proto se nejdřív zeptej dospělého, než se o ně se psem podělíš.",
+        "hr": "Psima mlijeko ne treba da bi ostali zdravi, zato prije nego što ga podijeliš sa psom pitaj odraslu osobu."
       },
       "faq": [
         {
@@ -51847,7 +51944,8 @@
             "pt": "O leite sem lactose é melhor para os cães do que o leite normal?",
             "nl": "Is lactosevrije melk beter voor honden dan gewone melk?",
             "pl": "Czy mleko bez laktozy jest dla psów lepsze niż zwykłe?",
-            "cs": "Je bezlaktózové mléko pro psy lepší než běžné mléko?"
+            "cs": "Je bezlaktózové mléko pro psy lepší než běžné mléko?",
+            "hr": "Je li mlijeko bez laktoze bolje za pse od običnog?"
           },
           "a": {
             "en": "It has no lactose, which can cause digestive problems, but it can still upset dogs that are allergic to milk protein.",
@@ -51856,7 +51954,8 @@
             "pt": "Não tem lactose, que pode causar problemas digestivos, mas pode mesmo assim irritar os cães alérgicos à proteína do leite.",
             "nl": "Er zit geen lactose in, die spijsverteringsklachten kan veroorzaken, maar het kan nog steeds honden van streek maken die allergisch zijn voor melkeiwit.",
             "pl": "Nie zawiera laktozy, która może powodować problemy trawienne, ale nadal może rozstroić psy uczulone na białko mleka.",
-            "cs": "Neobsahuje laktózu, která může způsobovat potíže s trávením, ale psům s alergií na mléčnou bílkovinu může i tak podráždit žaludek."
+            "cs": "Neobsahuje laktózu, která může způsobovat potíže s trávením, ale psům s alergií na mléčnou bílkovinu může i tak podráždit žaludek.",
+            "hr": "Ne sadrži laktozu, koja može izazvati probavne tegobe, ali i dalje može izazvati tegobe kod pasa alergičnih na mliječne bjelančevine."
           }
         }
       ],
@@ -52735,7 +52834,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Lentils",
@@ -52744,7 +52844,8 @@
         "pt": "Lentilhas",
         "nl": "Linzen",
         "pl": "Soczewica",
-        "cs": "Čočka"
+        "cs": "Čočka",
+        "hr": "Leća"
       },
       "question": {
         "en": "Can dogs eat lentils?",
@@ -52753,7 +52854,8 @@
         "pt": "Os cães podem comer lentilhas?",
         "nl": "Mogen honden linzen eten?",
         "pl": "Czy psy mogą jeść soczewicę?",
-        "cs": "Mohou psi jíst čočku?"
+        "cs": "Mohou psi jíst čočku?",
+        "hr": "Smiju li psi jesti leću?"
       },
       "url_slug": {
         "en": "lentils",
@@ -52762,7 +52864,8 @@
         "pt": "lentilhas",
         "nl": "linzen",
         "pl": "soczewica",
-        "cs": "cocka"
+        "cs": "cocka",
+        "hr": "leca"
       },
       "answer": {
         "en": "Yes, if they are cooked. Lentils are a pulse, like beans, and dogs can have legumes that have been soaked first and then cooked. Some dogs find legumes hard to digest, so introduce cooked lentils slowly.",
@@ -52771,7 +52874,8 @@
         "pt": "Sim, se estiverem cozidas. As lentilhas são uma leguminosa, tal como o feijão, e os cães podem comer leguminosas que tenham sido primeiro demolhadas e depois cozidas. Alguns cães têm dificuldade em digerir leguminosas, por isso introduz as lentilhas cozidas aos poucos.",
         "nl": "Ja, als ze gaar zijn. Linzen zijn een peulvrucht, net als bonen, en honden mogen peulvruchten eten die eerst zijn geweekt en daarna gaar gemaakt. Sommige honden kunnen peulvruchten moeilijk verteren, dus laat je hond langzaam aan wennen aan gare linzen.",
         "pl": "Tak, jeśli jest ugotowana. Soczewica to roślina strączkowa, podobnie jak fasola, a psom można dawać rośliny strączkowe, jeśli najpierw je namoczono, a potem ugotowano. Niektóre psy mają kłopoty z trawieniem roślin strączkowych, więc ugotowaną soczewicę wprowadzaj stopniowo.",
-        "cs": "Ano, pokud je uvařená. Čočka je luštěnina stejně jako fazole a psi mohou jíst luštěniny, které byly nejdřív namočené a potom uvařené. Někteří psi luštěniny špatně tráví, proto uvařenou čočku zařazujte pomalu."
+        "cs": "Ano, pokud je uvařená. Čočka je luštěnina stejně jako fazole a psi mohou jíst luštěniny, které byly nejdřív namočené a potom uvařené. Někteří psi luštěniny špatně tráví, proto uvařenou čočku zařazujte pomalu.",
+        "hr": "Da, ako je kuhana. Leća je mahunarka, kao i grah, a psi smiju jesti mahunarke koje su prvo namočene, a zatim kuhane. Neki psi teško probavljaju mahunarke, zato kuhanu leću uvodi postupno."
       },
       "why": {
         "en": "Legumes such as lentils are a good source of fibre and protein for dogs. However, some dogs have trouble digesting them, which is why they should be cooked well and added to the diet slowly.",
@@ -52780,7 +52884,8 @@
         "pt": "As leguminosas, como as lentilhas, são uma boa fonte de fibra e proteína para os cães. No entanto, alguns cães têm dificuldade em digeri-las, por isso devem estar bem cozidas e ser introduzidas aos poucos na alimentação.",
         "nl": "Peulvruchten zoals linzen zijn een goede bron van vezels en eiwit voor honden. Sommige honden kunnen ze echter moeilijk verteren. Maak ze daarom goed gaar en laat je hond er langzaam aan wennen.",
         "pl": "Rośliny strączkowe, takie jak soczewica, są dobrym źródłem błonnika i białka dla psów. Jednak niektóre psy mają problemy z ich trawieniem, dlatego należy je dobrze ugotować i wprowadzać do diety stopniowo.",
-        "cs": "Luštěniny, například čočka, jsou pro psy dobrým zdrojem vlákniny a bílkovin. Někteří psi je ale špatně tráví, proto by měly být dobře uvařené a do stravy zařazované pomalu."
+        "cs": "Luštěniny, například čočka, jsou pro psy dobrým zdrojem vlákniny a bílkovin. Někteří psi je ale špatně tráví, proto by měly být dobře uvařené a do stravy zařazované pomalu.",
+        "hr": "Mahunarke poput leće dobar su izvor vlakana i bjelančevina za pse. Međutim, neki ih psi teško probavljaju, zbog čega ih treba dobro skuhati i u prehranu uvoditi postupno."
       },
       "signs": null,
       "what_to_do": {
@@ -52790,7 +52895,8 @@
         "pt": "Começa com um pouco de lentilhas bem cozidas e introduz aos poucos, porque alguns cães têm dificuldade em digerir leguminosas.",
         "nl": "Begin met een beetje goed gare linzen en laat je hond er langzaam aan wennen, want sommige honden kunnen peulvruchten moeilijk verteren.",
         "pl": "Zacznij od odrobiny dobrze ugotowanej soczewicy i wprowadzaj ją stopniowo, bo niektóre psy mają problemy z trawieniem roślin strączkowych.",
-        "cs": "Začněte trochou dobře uvařené čočky a zařazujte ji pomalu, protože někteří psi mají s trávením luštěnin potíže."
+        "cs": "Začněte trochou dobře uvařené čočky a zařazujte ji pomalu, protože někteří psi mají s trávením luštěnin potíže.",
+        "hr": "Počni s malo dobro kuhane leće i uvodi je postupno jer neki psi teško probavljaju mahunarke."
       },
       "serving": {
         "en": "Well cooked (dried lentils soaked first, then cooked), introduced slowly.",
@@ -52799,7 +52905,8 @@
         "pt": "Bem cozidas (as lentilhas secas demolhadas primeiro e depois cozidas), introduzidas aos poucos.",
         "nl": "Goed gaar (gedroogde linzen eerst geweekt en daarna gekookt), langzaam opgebouwd.",
         "pl": "Dobrze ugotowana (suszoną soczewicę najpierw namocz, potem ugotuj), wprowadzana stopniowo.",
-        "cs": "Dobře uvařená (sušenou čočku nejdřív namočit, pak uvařit), do jídelníčku zařazovat pomalu."
+        "cs": "Dobře uvařená (sušenou čočku nejdřív namočit, pak uvařit), do jídelníčku zařazovat pomalu.",
+        "hr": "Dobro kuhana (suha leća prvo se namoči, a zatim kuha), uvedena postupno."
       },
       "child": {
         "en": "Cooked lentils can be a little treat for dogs. A grown-up should cook them well first!",
@@ -52808,7 +52915,8 @@
         "pt": "As lentilhas cozidas podem ser uma pequena guloseima para os cães. Primeiro, um adulto tem de as cozer bem!",
         "nl": "Gare linzen zijn een klein snoepje voor honden. Een volwassene moet ze eerst goed gaar maken!",
         "pl": "Ugotowana soczewica może być małym smakołykiem dla psa. Dorosły musi ją najpierw dobrze ugotować!",
-        "cs": "Uvařená čočka může být pro psy malým pamlskem. Dospělý ji musí nejdřív dobře uvařit!"
+        "cs": "Uvařená čočka může být pro psy malým pamlskem. Dospělý ji musí nejdřív dobře uvařit!",
+        "hr": "Kuhana leća može biti mala poslastica za pse. Odrasla osoba prvo je mora dobro skuhati!"
       },
       "faq": [
         {
@@ -52819,7 +52927,8 @@
             "pt": "Os cães podem comer lentilhas cruas?",
             "nl": "Mogen honden ongekookte linzen eten?",
             "pl": "Czy psy mogą jeść niegotowaną soczewicę?",
-            "cs": "Mohou psi jíst syrovou čočku?"
+            "cs": "Mohou psi jíst syrovou čočku?",
+            "hr": "Smiju li psi jesti nekuhanu leću?"
           },
           "a": {
             "en": "No. Dogs can have legumes that have been soaked first and then cooked, and lentils should be cooked well.",
@@ -52828,7 +52937,8 @@
             "pt": "Não. Os cães podem comer leguminosas que tenham sido primeiro demolhadas e depois cozidas, e as lentilhas devem estar bem cozidas.",
             "nl": "Nee. Honden mogen peulvruchten eten die eerst zijn geweekt en daarna gaar gemaakt, en linzen moeten goed gaar zijn.",
             "pl": "Nie. Psom można dawać rośliny strączkowe, jeśli najpierw je namoczono, a potem ugotowano, a soczewicę trzeba dobrze ugotować.",
-            "cs": "Ne. Psi mohou jíst luštěniny, které byly nejdřív namočené a potom uvařené, a čočka by měla být dobře uvařená."
+            "cs": "Ne. Psi mohou jíst luštěniny, které byly nejdřív namočené a potom uvařené, a čočka by měla být dobře uvařená.",
+            "hr": "Ne. Psi smiju jesti mahunarke koje su prvo namočene pa kuhane, a leću treba dobro skuhati."
           }
         }
       ],
@@ -55899,7 +56009,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Nut butters",
@@ -55908,7 +56019,8 @@
         "pt": "Manteigas de frutos secos",
         "nl": "Notenpasta’s",
         "pl": "Masła z orzechów",
-        "cs": "Ořechová másla"
+        "cs": "Ořechová másla",
+        "hr": "Maslaci od orašastih plodova"
       },
       "question": {
         "en": "Can dogs eat almond butter and other nut butters?",
@@ -55917,7 +56029,8 @@
         "pt": "Os cães podem comer manteiga de amêndoa e outras manteigas de frutos secos?",
         "nl": "Mogen honden amandelpasta en andere notenpasta’s eten?",
         "pl": "Czy psy mogą jeść masło migdałowe i inne masła z orzechów?",
-        "cs": "Mohou psi jíst mandlové máslo a další ořechová másla?"
+        "cs": "Mohou psi jíst mandlové máslo a další ořechová másla?",
+        "hr": "Smiju li psi jesti maslac od badema i druge maslace od orašastih plodova?"
       },
       "url_slug": {
         "en": "nut-butters",
@@ -55926,7 +56039,8 @@
         "pt": "manteigas-de-frutos-secos",
         "nl": "notenpasta",
         "pl": "masla-orzechowe",
-        "cs": "orechova-masla"
+        "cs": "orechova-masla",
+        "hr": "maslaci-od-orasastih-plodova"
       },
       "answer": {
         "en": "Almond butter, yes, in small amounts, if it contains no xylitol. Many almond butters contain salt and sweeteners like xylitol, which is toxic to dogs, so always check the label. Not all nuts are safe: macadamia nuts are very toxic to dogs.",
@@ -55935,7 +56049,8 @@
         "pt": "Manteiga de amêndoa, sim, em pequenas quantidades, se não tiver xilitol. Muitas manteigas de amêndoa têm sal e adoçantes como o xilitol, que é tóxico para os cães, por isso verifica sempre o rótulo. Nem todos os frutos secos são seguros: as nozes de macadâmia são muito tóxicas para os cães.",
         "nl": "Amandelpasta mag, in kleine hoeveelheden, als er geen xylitol in zit. Veel amandelpasta’s bevatten zout en zoetstoffen zoals xylitol, dat giftig is voor honden, dus lees altijd het etiket. Niet alle noten zijn veilig: macadamianoten zijn zeer giftig voor honden.",
         "pl": "Masło migdałowe – tak, w małych ilościach, o ile nie zawiera ksylitolu. Wiele maseł migdałowych zawiera sól i słodziki, takie jak ksylitol, który jest toksyczny dla psów, więc zawsze sprawdzaj etykietę. Nie wszystkie orzechy są bezpieczne: orzechy makadamia są bardzo toksyczne dla psów.",
-        "cs": "Mandlové máslo ano, v malém množství, pokud neobsahuje xylitol. Mnohá mandlová másla obsahují sůl a sladidla, například xylitol, který je pro psy jedovatý, proto vždy zkontrolujte etiketu. Ne všechny ořechy jsou bezpečné: makadamové ořechy jsou pro psy velmi jedovaté."
+        "cs": "Mandlové máslo ano, v malém množství, pokud neobsahuje xylitol. Mnohá mandlová másla obsahují sůl a sladidla, například xylitol, který je pro psy jedovatý, proto vždy zkontrolujte etiketu. Ne všechny ořechy jsou bezpečné: makadamové ořechy jsou pro psy velmi jedovaté.",
+        "hr": "Maslac od badema smije, u malim količinama, ako ne sadrži ksilitol. Mnogi maslaci od badema sadrže sol i sladila poput ksilitola, koji je otrovan za pse, zato uvijek provjeri deklaraciju. Nisu svi orašasti plodovi sigurni za pse: makadamija je vrlo otrovna za pse."
       },
       "why": {
         "en": "Almonds themselves are not recommended for dogs, but a little almond butter can be a safe alternative. Nuts are high in fat, and too much almond butter can lead to pancreatitis. Some peanut and other nut butters contain xylitol, a sweetener that is toxic to dogs.",
@@ -55944,7 +56059,8 @@
         "pt": "As amêndoas em si não são recomendadas para os cães, mas um pouco de manteiga de amêndoa pode ser uma alternativa segura. Os frutos secos têm muita gordura, e demasiada manteiga de amêndoa pode levar a pancreatite. Algumas manteigas de amendoim e de outros frutos secos contêm xilitol, um adoçante tóxico para os cães.",
         "nl": "Amandelen zelf worden niet aanbevolen voor honden, maar een beetje amandelpasta kan een veilig alternatief zijn. Noten bevatten veel vet, en te veel amandelpasta kan leiden tot alvleesklierontsteking. Sommige pindakaas en andere notenpasta’s bevatten xylitol, een zoetstof die giftig is voor honden.",
         "pl": "Same migdały nie są zalecane dla psów, ale odrobina masła migdałowego może być bezpieczną alternatywą. Orzechy mają dużo tłuszczu, a zbyt dużo masła migdałowego może prowadzić do zapalenia trzustki. Niektóre masła z orzeszków ziemnych i innych orzechów zawierają ksylitol, słodzik toksyczny dla psów.",
-        "cs": "Samotné mandle se psům nedoporučují, ale trocha mandlového másla může být bezpečnou alternativou. Ořechy mají hodně tuku a příliš mnoho mandlového másla může vést k zánětu slinivky břišní. Některá arašídová a další ořechová másla obsahují xylitol, sladidlo, které je pro psy jedovaté."
+        "cs": "Samotné mandle se psům nedoporučují, ale trocha mandlového másla může být bezpečnou alternativou. Ořechy mají hodně tuku a příliš mnoho mandlového másla může vést k zánětu slinivky břišní. Některá arašídová a další ořechová másla obsahují xylitol, sladidlo, které je pro psy jedovaté.",
+        "hr": "Sami se bademi psima ne preporučuju, ali malo maslaca od badema može biti sigurna zamjena. Orašasti plodovi bogati su mastima, a previše maslaca od badema može dovesti do upale gušterače. Neki maslaci od kikirikija i drugih orašastih plodova sadrže ksilitol, sladilo koje je otrovno za pse."
       },
       "signs": null,
       "what_to_do": {
@@ -55954,7 +56070,8 @@
         "pt": "Se achas que o teu cão comeu uma manteiga de frutos secos com xilitol, liga logo ao teu veterinário, a uma clínica de urgência ou a uma linha de apoio toxicológico para animais.",
         "nl": "Denk je dat je hond notenpasta met xylitol heeft gegeten, bel dan meteen je dierenarts, een spoedkliniek voor dieren of een vergiftigingenlijn voor dieren.",
         "pl": "Jeśli podejrzewasz, że pies zjadł masło z orzechów z ksylitolem, od razu zadzwoń do weterynarza, do całodobowej przychodni weterynaryjnej lub na telefon informacji toksykologicznej dla zwierząt.",
-        "cs": "Pokud si myslíte, že pes snědl ořechové máslo s xylitolem, ihned zavolejte veterináři, na pohotovost nebo na toxikologickou linku pro zvířata."
+        "cs": "Pokud si myslíte, že pes snědl ořechové máslo s xylitolem, ihned zavolejte veterináři, na pohotovost nebo na toxikologickou linku pro zvířata.",
+        "hr": "Ako misliš da je tvoj pas pojeo maslac od orašastih plodova s ksilitolom, odmah nazovi veterinara, dežurnu veterinarsku ambulantu ili telefonsku liniju za otrovanja životinja."
       },
       "serving": {
         "en": "A small amount of almond butter whose label lists no xylitol; as an occasional treat.",
@@ -55963,7 +56080,8 @@
         "pt": "Uma pequena quantidade de manteiga de amêndoa cujo rótulo não indique xilitol; como guloseima ocasional.",
         "nl": "Een kleine hoeveelheid amandelpasta waarvan op het etiket geen xylitol staat; af en toe als snoepje.",
         "pl": "Odrobina masła migdałowego, w którego składzie na etykiecie nie ma ksylitolu; jako smakołyk od czasu do czasu.",
-        "cs": "Malé množství mandlového másla, na jehož etiketě xylitol není uveden; jako občasný pamlsek."
+        "cs": "Malé množství mandlového másla, na jehož etiketě xylitol není uveden; jako občasný pamlsek.",
+        "hr": "Malo maslaca od badema bez ksilitola na deklaraciji, kao povremena poslastica."
       },
       "child": {
         "en": "A little almond butter can be a treat, but a grown-up must check the jar first. Some kinds are not safe for dogs.",
@@ -55972,7 +56090,8 @@
         "pt": "Um pouco de manteiga de amêndoa pode ser uma guloseima, mas um adulto tem de verificar primeiro o frasco. Alguns tipos não são seguros para os cães.",
         "nl": "Een beetje amandelpasta kan een snoepje zijn, maar een volwassene moet eerst de pot controleren. Sommige soorten zijn niet veilig voor honden.",
         "pl": "Odrobina masła migdałowego może być smakołykiem, ale dorosły musi najpierw sprawdzić słoik. Niektóre rodzaje nie są bezpieczne dla psów.",
-        "cs": "Trocha mandlového másla může být pamlsek, ale dospělý musí nejdřív zkontrolovat složení na sklenici. Některé druhy pro psy bezpečné nejsou."
+        "cs": "Trocha mandlového másla může být pamlsek, ale dospělý musí nejdřív zkontrolovat složení na sklenici. Některé druhy pro psy bezpečné nejsou.",
+        "hr": "Malo maslaca od badema može biti poslastica, ali odrasla osoba prvo mora provjeriti staklenku. Neke vrste nisu sigurne za pse."
       },
       "faq": [
         {
@@ -55983,7 +56102,8 @@
             "pt": "Como sei se uma manteiga de frutos secos tem xilitol?",
             "nl": "Hoe weet ik of een notenpasta xylitol bevat?",
             "pl": "Jak sprawdzić, czy masło z orzechów zawiera ksylitol?",
-            "cs": "Jak poznám, že ořechové máslo obsahuje xylitol?"
+            "cs": "Jak poznám, že ořechové máslo obsahuje xylitol?",
+            "hr": "Kako znati ima li maslac od orašastih plodova ksilitol?"
           },
           "a": {
             "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
@@ -55992,7 +56112,8 @@
             "pt": "Lê os ingredientes no rótulo, sobretudo nos produtos indicados como sem açúcar ou com pouco açúcar.",
             "nl": "Lees de ingrediënten op het etiket, vooral bij producten die als suikervrij of suikerarm zijn aangeduid.",
             "pl": "Przeczytaj skład na etykiecie, zwłaszcza na produktach oznaczonych jako „bez cukru” lub „o obniżonej zawartości cukru”.",
-            "cs": "Přečtěte si složení na etiketě, zejména u výrobků označených jako bez cukru nebo se sníženým obsahem cukru."
+            "cs": "Přečtěte si složení na etiketě, zejména u výrobků označených jako bez cukru nebo se sníženým obsahem cukru.",
+            "hr": "Pročitaj sastojke na deklaraciji, osobito na proizvodima označenima kao „bez šećera“ ili „sa smanjenim udjelom šećera“."
           }
         }
       ],
@@ -68076,7 +68197,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Sunflower seeds",
@@ -68085,7 +68207,8 @@
         "pt": "Sementes de girassol",
         "nl": "Zonnebloempitten",
         "pl": "Nasiona słonecznika",
-        "cs": "Slunečnicová semínka"
+        "cs": "Slunečnicová semínka",
+        "hr": "Sjemenke suncokreta"
       },
       "question": {
         "en": "Can dogs eat sunflower seeds?",
@@ -68094,7 +68217,8 @@
         "pt": "Os cães podem comer sementes de girassol?",
         "nl": "Mogen honden zonnebloempitten eten?",
         "pl": "Czy psy mogą jeść nasiona słonecznika?",
-        "cs": "Mohou psi jíst slunečnicová semínka?"
+        "cs": "Mohou psi jíst slunečnicová semínka?",
+        "hr": "Smiju li psi jesti sjemenke suncokreta?"
       },
       "url_slug": {
         "en": "sunflower-seeds",
@@ -68103,7 +68227,8 @@
         "pt": "sementes-de-girassol",
         "nl": "zonnebloempitten",
         "pl": "nasiona-slonecznika",
-        "cs": "slunecnicova-seminka"
+        "cs": "slunecnicova-seminka",
+        "hr": "sjemenke-suncokreta"
       },
       "answer": {
         "en": "Yes, as an occasional snack, if they are shelled and unsalted. Give only plain raw or toasted sunflower seeds, never the shells, which are a choking hazard and can't be digested. Too many seeds can upset your dog's stomach.",
@@ -68112,7 +68237,8 @@
         "pt": "Sim, como lanche ocasional, se estiverem sem casca e sem sal. Dá só sementes de girassol simples, cruas ou torradas, nunca as cascas, que são um risco de engasgo e não se digerem. Demasiadas sementes podem irritar o estômago do teu cão.",
         "nl": "Ja, af en toe als tussendoortje, mits ze gepeld en ongezouten zijn. Geef alleen gewone rauwe of geroosterde zonnebloempitten, nooit de doppen, die een verstikkingsgevaar zijn en niet te verteren zijn. Te veel pitten kunnen de maag van je hond van streek maken.",
         "pl": "Tak, jako przekąska od czasu do czasu, jeśli są łuskane i niesolone. Dawaj tylko nasiona słonecznika bez dodatków, surowe lub prażone, i nigdy łusek, które grożą zadławieniem i nie nadają się do strawienia. Zbyt dużo nasion może rozstroić psu żołądek.",
-        "cs": "Ano, jako občasná svačinka, pokud jsou loupaná a nesolená. Dávejte jen obyčejná syrová nebo pražená slunečnicová semínka, nikdy ne slupky, které představují riziko udušení a nedají se strávit. Příliš mnoho semínek může psovi podráždit žaludek."
+        "cs": "Ano, jako občasná svačinka, pokud jsou loupaná a nesolená. Dávejte jen obyčejná syrová nebo pražená slunečnicová semínka, nikdy ne slupky, které představují riziko udušení a nedají se strávit. Příliš mnoho semínek může psovi podráždit žaludek.",
+        "hr": "Da, kao povremena grickalica, ako su oljuštene i neslane. Daj samo obične sirove ili pržene sjemenke, nikad ljuske, koje mogu izazvati gušenje i ne mogu se probaviti. Previše sjemenki može psu pokvariti želudac."
       },
       "why": {
         "en": "The husks are extremely hard, can't be broken down during digestion and can get stuck in the gut, causing a blockage. The salt in packaged seeds is harmful to dogs. Sunflower seeds are also high in fat, and too many can bring on vomiting, lethargy, a decreased appetite or other stomach upset.",
@@ -68121,7 +68247,8 @@
         "pt": "As cascas são extremamente duras, não se decompõem na digestão e podem ficar presas no intestino, causando uma obstrução. O sal das sementes embaladas faz mal aos cães. As sementes de girassol também têm muita gordura, e demasiadas podem causar vómitos, apatia, menos apetite ou outra indisposição de estômago.",
         "nl": "De doppen zijn extreem hard, kunnen tijdens de spijsvertering niet worden afgebroken en kunnen in de darmen blijven steken en een verstopping veroorzaken. Het zout in verpakte pitten is schadelijk voor honden. Zonnebloempitten bevatten ook veel vet, en te veel pitten kunnen braken, lusteloosheid, minder eetlust of andere maagklachten veroorzaken.",
         "pl": "Łuski są wyjątkowo twarde, nie rozkładają się w trakcie trawienia i mogą utknąć w jelitach, powodując niedrożność. Sól w paczkowanych nasionach szkodzi psom. Nasiona słonecznika mają też dużo tłuszczu, a zbyt duża ich ilość może wywołać wymioty, ospałość, spadek apetytu lub inny rozstrój żołądka.",
-        "cs": "Slupky jsou mimořádně tvrdé, při trávení se nerozloží a mohou uvíznout ve střevě a způsobit jeho ucpání. Sůl v balených semínkách psům škodí. Slunečnicová semínka mají také hodně tuku a příliš mnoho z nich může vyvolat zvracení, malátnost, sníženou chuť k jídlu nebo jiné potíže se žaludkem."
+        "cs": "Slupky jsou mimořádně tvrdé, při trávení se nerozloží a mohou uvíznout ve střevě a způsobit jeho ucpání. Sůl v balených semínkách psům škodí. Slunečnicová semínka mají také hodně tuku a příliš mnoho z nich může vyvolat zvracení, malátnost, sníženou chuť k jídlu nebo jiné potíže se žaludkem.",
+        "hr": "Ljuske su iznimno tvrde, ne mogu se razgraditi u probavi i mogu zapeti u crijevima te izazvati začepljenje. Sol u pakiranim sjemenkama štetna je za pse. Sjemenke suncokreta bogate su i mastima, a previše ih može izazvati povraćanje, malaksalost, smanjen apetit ili druge želučane tegobe."
       },
       "signs": null,
       "what_to_do": {
@@ -68131,7 +68258,8 @@
         "pt": "Dá só sementes sem casca e sem sal, e fala com o teu veterinário antes de juntar sementes de girassol à alimentação do teu cão.",
         "nl": "Geef alleen gepelde, ongezouten pitten en overleg met je dierenarts voordat je zonnebloempitten aan het voer van je hond toevoegt.",
         "pl": "Dawaj tylko łuskane, niesolone nasiona i porozmawiaj z weterynarzem, zanim dodasz nasiona słonecznika do diety psa.",
-        "cs": "Dávejte jen loupaná nesolená semínka a než slunečnicová semínka zařadíte do psího jídelníčku, poraďte se s veterinářem."
+        "cs": "Dávejte jen loupaná nesolená semínka a než slunečnicová semínka zařadíte do psího jídelníčku, poraďte se s veterinářem.",
+        "hr": "Daj samo oljuštene, neslane sjemenke, a prije nego što ih psu uvedeš u prehranu, porazgovaraj s veterinarom."
       },
       "serving": {
         "en": "Shelled, plain (unsalted) raw or toasted seeds, now and then in moderate amounts.",
@@ -68140,7 +68268,8 @@
         "pt": "Sementes simples (sem sal) e sem casca, cruas ou torradas, de vez em quando e em quantidades moderadas.",
         "nl": "Gepelde, ongezouten rauwe of geroosterde pitten, af en toe in een matige hoeveelheid.",
         "pl": "Łuskane, bez dodatków (niesolone), surowe lub prażone, od czasu do czasu w umiarkowanej ilości.",
-        "cs": "Loupaná, obyčejná (nesolená) syrová nebo pražená semínka, občas a ve střídmém množství."
+        "cs": "Loupaná, obyčejná (nesolená) syrová nebo pražená semínka, občas a ve střídmém množství.",
+        "hr": "Oljuštene, obične (neslane) sirove ili pržene sjemenke, povremeno i u umjerenim količinama."
       },
       "child": {
         "en": "Dogs can nibble a few plain sunflower seeds without shells, but never the salty ones from a snack bag.",
@@ -68149,7 +68278,8 @@
         "pt": "Os cães podem mordiscar algumas sementes de girassol simples e sem casca, mas nunca as salgadas de um pacote de aperitivos.",
         "nl": "Honden mogen een paar gewone zonnebloempitten zonder dop knabbelen, maar nooit de zoute uit een zakje.",
         "pl": "Pies może schrupać kilka nasion słonecznika bez dodatków i bez łusek, ale nigdy tych słonych z paczki przekąsek.",
-        "cs": "Psi mohou ochutnat pár obyčejných slunečnicových semínek bez slupek, ale nikdy ne ta slaná ze sáčku s pochutinami."
+        "cs": "Psi mohou ochutnat pár obyčejných slunečnicových semínek bez slupek, ale nikdy ne ta slaná ze sáčku s pochutinami.",
+        "hr": "Psi smiju grickati nekoliko običnih sjemenki suncokreta bez ljuske, ali nikad slane iz vrećice s grickalicama."
       },
       "faq": [
         {
@@ -68160,7 +68290,8 @@
             "pt": "Os cães podem comer cascas de sementes de girassol?",
             "nl": "Mogen honden de doppen van zonnebloempitten eten?",
             "pl": "Czy psy mogą jeść łuski nasion słonecznika?",
-            "cs": "Mohou psi jíst slupky ze slunečnicových semínek?"
+            "cs": "Mohou psi jíst slupky ze slunečnicových semínek?",
+            "hr": "Smiju li psi jesti ljuske sjemenki suncokreta?"
           },
           "a": {
             "en": "No. The shells are extremely hard, can't be digested, are a serious choking hazard and can cause a blockage in the gut.",
@@ -68169,7 +68300,8 @@
             "pt": "Não. As cascas são extremamente duras, não se digerem, são um sério risco de engasgo e podem causar uma obstrução no intestino.",
             "nl": "Nee. De doppen zijn extreem hard, kunnen niet worden verteerd, zijn een ernstig verstikkingsgevaar en kunnen een verstopping in de darmen veroorzaken.",
             "pl": "Nie. Łuski są wyjątkowo twarde, nie nadają się do strawienia, stwarzają poważne ryzyko zadławienia i mogą spowodować niedrożność jelit.",
-            "cs": "Ne. Slupky jsou mimořádně tvrdé, nedají se strávit, představují vážné riziko udušení a mohou způsobit ucpání střeva."
+            "cs": "Ne. Slupky jsou mimořádně tvrdé, nedají se strávit, představují vážné riziko udušení a mohou způsobit ucpání střeva.",
+            "hr": "Ne. Ljuske su iznimno tvrde, ne mogu se probaviti, predstavljaju ozbiljnu opasnost od gušenja i mogu izazvati začepljenje crijeva."
           }
         }
       ],
@@ -72884,7 +73016,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "hr"
       ],
       "name": {
         "en": "Water",
@@ -72893,7 +73026,8 @@
         "pt": "Água",
         "nl": "Water",
         "pl": "Woda",
-        "cs": "Voda"
+        "cs": "Voda",
+        "hr": "Voda"
       },
       "question": {
         "en": "Do dogs need fresh water all the time?",
@@ -72902,7 +73036,8 @@
         "pt": "Os cães precisam de ter sempre água fresca?",
         "nl": "Hebben honden altijd vers water nodig?",
         "pl": "Czy psy zawsze potrzebują świeżej wody?",
-        "cs": "Potřebují psi stále čerstvou vodu?"
+        "cs": "Potřebují psi stále čerstvou vodu?",
+        "hr": "Trebaju li psi stalno imati svježu vodu?"
       },
       "url_slug": {
         "en": "water",
@@ -72911,7 +73046,8 @@
         "pt": "agua",
         "nl": "water",
         "pl": "woda",
-        "cs": "voda"
+        "cs": "voda",
+        "hr": "voda"
       },
       "answer": {
         "en": "Yes. Dogs need fresh, clean drinking water available at all times. Wash the water bowl often, and remember that dogs may need more water in hot weather or when they exercise more. Never restrict your dog's water.",
@@ -72920,7 +73056,8 @@
         "pt": "Sim. Os cães precisam de água potável fresca e limpa sempre disponível. Lava a tigela da água com frequência e lembra-te de que os cães podem precisar de mais água com tempo quente ou quando fazem mais exercício. Nunca limites a água do teu cão.",
         "nl": "Ja. Honden hebben altijd vers, schoon drinkwater nodig. Maak de waterbak vaak schoon en houd er rekening mee dat honden bij warm weer of als ze meer bewegen meer water nodig kunnen hebben. Beperk het water van je hond nooit.",
         "pl": "Tak. Psy potrzebują stałego dostępu do świeżej, czystej wody do picia. Często myj miskę z wodą i pamiętaj, że w upały lub przy większym wysiłku psy mogą potrzebować więcej wody. Nigdy nie ograniczaj psu wody.",
-        "cs": "Ano. Psi potřebují mít stále k dispozici čerstvou, čistou pitnou vodu. Misku na vodu často myjte a pamatujte, že v horkém počasí nebo při větší námaze mohou potřebovat vody víc. Psovi nikdy vodu neomezujte."
+        "cs": "Ano. Psi potřebují mít stále k dispozici čerstvou, čistou pitnou vodu. Misku na vodu často myjte a pamatujte, že v horkém počasí nebo při větší námaze mohou potřebovat vody víc. Psovi nikdy vodu neomezujte.",
+        "hr": "Da. Psima treba svježa, čista pitka voda koja im je dostupna cijelo vrijeme. Zdjelicu za vodu često peri i imaj na umu da će psima možda trebati više vode po vrućem vremenu ili kad se više kreću. Nikad psu ne ograničavaj vodu."
       },
       "why": {
         "en": "Water is essential for all life. How much a dog drinks can change with the weather, temperature and exercise. A sudden increase in drinking can mean something is wrong. Salt water is different: when dogs drink salt water, it can be dangerous for them.",
@@ -72929,7 +73066,8 @@
         "pt": "A água é essencial para toda a vida. A quantidade que um cão bebe pode mudar com o tempo, a temperatura e o exercício. Um aumento repentino da sede pode significar que algo está errado. Beber água salgada é diferente: pode ser perigoso para os cães.",
         "nl": "Water is voor al het leven onmisbaar. Hoeveel een hond drinkt, kan veranderen met het weer, de temperatuur en beweging. Als een hond ineens veel meer drinkt, kan dat betekenen dat er iets mis is. Zout water is een ander verhaal: dat kan gevaarlijk zijn voor honden.",
         "pl": "Woda jest niezbędna do życia. To, ile pies pije, może się zmieniać w zależności od pogody, temperatury i wysiłku. Nagły wzrost picia może oznaczać, że coś jest nie tak. Inaczej jest ze słoną wodą: picie jej może być dla psów niebezpieczne.",
-        "cs": "Voda je nezbytná pro všechny živé tvory. Kolik pes vypije, závisí na počasí, teplotě a pohybu. Náhlé zvýšení pití může znamenat, že něco není v pořádku. Slaná voda je ale jiný případ: pokud ji pes pije, může být pro něj nebezpečná."
+        "cs": "Voda je nezbytná pro všechny živé tvory. Kolik pes vypije, závisí na počasí, teplotě a pohybu. Náhlé zvýšení pití může znamenat, že něco není v pořádku. Slaná voda je ale jiný případ: pokud ji pes pije, může být pro něj nebezpečná.",
+        "hr": "Voda je bitna za sav život. Koliko pas pije može se mijenjati ovisno o vremenu, temperaturi i tjelesnoj aktivnosti. Ako pas naglo počne piti mnogo više, to može značiti da nešto nije u redu. Slana voda je druga priča: ako je psi piju, može im biti opasna."
       },
       "signs": null,
       "what_to_do": {
@@ -72939,7 +73077,8 @@
         "pt": "Se achas que o teu cão bebe ou urina mais do que o normal, fala com o teu veterinário. Se o teu cão mostrar sinais de desidratação, leva-o imediatamente ao veterinário.",
         "nl": "Denk je dat je hond meer drinkt of plast dan normaal, neem dan contact op met je dierenarts. Vertoont je hond verschijnselen van uitdroging, ga dan meteen met hem naar de dierenarts.",
         "pl": "Jeśli podejrzewasz, że pies pije albo oddaje mocz częściej niż zwykle, skontaktuj się z weterynarzem. Jeśli pies ma objawy odwodnienia, od razu zawieź go do weterynarza.",
-        "cs": "Pokud se domníváte, že pes pije nebo močí víc než obvykle, obraťte se na veterináře. Pokud má pes známky dehydratace, ihned ho vezměte k veterináři."
+        "cs": "Pokud se domníváte, že pes pije nebo močí víc než obvykle, obraťte se na veterináře. Pokud má pes známky dehydratace, ihned ho vezměte k veterináři.",
+        "hr": "Ako misliš da tvoj pas pije ili mokri više nego inače, obrati se veterinaru. Ako pas pokazuje znakove dehidracije, odmah ga odvedi veterinaru."
       },
       "serving": {
         "en": "Fresh, clean water in a frequently washed bowl, available all the time, including outdoors, in hot weather and at the beach.",
@@ -72948,7 +73087,8 @@
         "pt": "Água fresca e limpa numa tigela lavada com frequência, sempre disponível, incluindo ao ar livre, com tempo quente e na praia.",
         "nl": "Vers, schoon water in een bak die je regelmatig schoonmaakt, de hele dag beschikbaar, ook buiten, bij warm weer en op het strand.",
         "pl": "Świeża, czysta woda w często myjonej misce, dostępna przez cały czas, także na dworze, w upał i na plaży.",
-        "cs": "Čerstvá čistá voda v často myté misce, stále k dispozici, i venku, v horku a u moře."
+        "cs": "Čerstvá čistá voda v často myté misce, stále k dispozici, i venku, v horku a u moře.",
+        "hr": "Svježa, čista voda u često opranoj zdjelici, uvijek dostupna, i na otvorenom, po vrućem vremenu i na plaži."
       },
       "child": {
         "en": "Dogs need fresh water all day long. Checking that the water bowl is full and clean is a great way to help!",
@@ -72957,7 +73097,8 @@
         "pt": "Os cães precisam de água fresca o dia todo. Verificar se a tigela da água está cheia e limpa é uma ótima forma de ajudar!",
         "nl": "Honden hebben de hele dag vers water nodig. Kijken of de waterbak vol en schoon is, is een geweldige manier om te helpen!",
         "pl": "Psy potrzebują świeżej wody przez cały dzień. Możesz pomóc, sprawdzając, czy miska z wodą jest pełna i czysta!",
-        "cs": "Psi potřebují čerstvou vodu celý den. Zkontrolovat, jestli je miska s vodou plná a čistá, je skvělý způsob, jak pomoct!"
+        "cs": "Psi potřebují čerstvou vodu celý den. Zkontrolovat, jestli je miska s vodou plná a čistá, je skvělý způsob, jak pomoct!",
+        "hr": "Psima je svježa voda potrebna cijeli dan. Provjeravati je li zdjelica s vodom puna i čista odličan je način da pomogneš!"
       },
       "faq": [
         {
@@ -72968,7 +73109,8 @@
             "pt": "Como sei se o meu cão está desidratado?",
             "nl": "Hoe zie ik of mijn hond uitgedroogd is?",
             "pl": "Jak poznać, że pies jest odwodniony?",
-            "cs": "Jak poznám, že je pes dehydratovaný?"
+            "cs": "Jak poznám, že je pes dehydratovaný?",
+            "hr": "Kako mogu prepoznati da je moj pas dehidriran?"
           },
           "a": {
             "en": "Signs include loss of skin elasticity, loss of appetite, low energy, panting, sunken dry-looking eyes, a dry nose, dry sticky gums and thick saliva. Take your dog to the vet immediately if you see them.",
@@ -72977,7 +73119,8 @@
             "pt": "Os sinais incluem perda de elasticidade da pele, perda de apetite, pouca energia, respiração ofegante, olhos fundos e de aspeto seco, nariz seco, gengivas secas e pegajosas e saliva espessa. Leva o teu cão imediatamente ao veterinário se os vires.",
             "nl": "Verschijnselen zijn onder meer verlies van huidelasticiteit, verlies van eetlust, weinig energie, hijgen, ingevallen, droge ogen, een droge neus, droog, plakkerig tandvlees en dik speeksel. Ga meteen met je hond naar de dierenarts als je dit ziet.",
             "pl": "Objawy to utrata elastyczności skóry, brak apetytu, spadek energii, ziajanie, zapadnięte oczy, które wyglądają na suche, suchy nos, suche, lepkie dziąsła i gęsta ślina. Jeśli zauważysz któryś z nich, od razu zawieź psa do weterynarza.",
-            "cs": "Mezi příznaky patří snížená pružnost kůže, nechuť k jídlu, nedostatek energie, zrychlené dýchání s funěním, propadlé, suché oči, suchý nos, suché lepkavé dásně a hustá slina. Pokud tyto příznaky u psa zaznamenáte, ihned s ním jeďte k veterináři."
+            "cs": "Mezi příznaky patří snížená pružnost kůže, nechuť k jídlu, nedostatek energie, zrychlené dýchání s funěním, propadlé, suché oči, suchý nos, suché lepkavé dásně a hustá slina. Pokud tyto příznaky u psa zaznamenáte, ihned s ním jeďte k veterináři.",
+            "hr": "Znakovi su gubitak elastičnosti kože, gubitak apetita, malaksalost, dahtanje, upale i suhe oči, suh nos, suhe ljepljive desni i gusta slina. Ako ih primijetiš, odmah odvedi psa veterinaru."
           }
         },
         {
@@ -72988,7 +73131,8 @@
             "pt": "Devo limitar a água do meu cão se ele beber muita?",
             "nl": "Moet ik het water van mijn hond beperken als hij veel drinkt?",
             "pl": "Czy mam ograniczać psu wodę, jeśli dużo pije?",
-            "cs": "Mám psovi omezit vodu, když hodně pije?"
+            "cs": "Mám psovi omezit vodu, když hodně pije?",
+            "hr": "Smijem li ograničiti vodu psu koji mnogo pije?"
           },
           "a": {
             "en": "No. Never restrict your dog's water; always let them have fresh drinking water, and contact your vet if they drink more than normal.",
@@ -72997,7 +73141,8 @@
             "pt": "Não. Nunca limites a água do teu cão; deixa-o ter sempre água potável fresca e fala com o teu veterinário se ele beber mais do que o normal.",
             "nl": "Nee. Beperk het water van je hond nooit; zorg dat hij altijd vers drinkwater heeft en neem contact op met je dierenarts als hij meer drinkt dan normaal.",
             "pl": "Nie. Nigdy nie ograniczaj psu wody; zawsze zapewniaj mu dostęp do świeżej wody i skontaktuj się z weterynarzem, jeśli pije więcej niż zwykle.",
-            "cs": "Ne. Psovi nikdy vodu neomezujte; nechte ho napít se čerstvé vody, kdykoli chce, a pokud pije víc než obvykle, obraťte se na veterináře."
+            "cs": "Ne. Psovi nikdy vodu neomezujte; nechte ho napít se čerstvé vody, kdykoli chce, a pokud pije víc než obvykle, obraťte se na veterináře.",
+            "hr": "Ne. Nikad ne ograničavaj psu vodu; uvijek mu daj svježu pitku vodu i obrati se veterinaru ako pije više nego inače."
           }
         },
         {
@@ -73008,7 +73153,8 @@
             "pt": "Os cães podem beber água do mar?",
             "nl": "Mogen honden zeewater drinken?",
             "pl": "Czy psy mogą pić wodę morską?",
-            "cs": "Mohou psi pít mořskou vodu?"
+            "cs": "Mohou psi pít mořskou vodu?",
+            "hr": "Smiju li psi piti morsku vodu?"
           },
           "a": {
             "en": "It's best not to: salt water can be dangerous for dogs. At the beach, make sure your dog always has access to fresh water.",
@@ -73017,7 +73163,8 @@
             "pt": "É melhor não deixar: a água salgada pode ser perigosa para os cães. Na praia, garante que o teu cão tem sempre acesso a água fresca.",
             "nl": "Liever niet: zout water kan gevaarlijk zijn voor honden. Zorg dat je hond op het strand altijd vers water kan drinken.",
             "pl": "Lepiej nie: słona woda może być dla psów niebezpieczna. Na plaży zadbaj, żeby pies zawsze miał dostęp do świeżej wody.",
-            "cs": "Raději ne: slaná voda může být pro psy nebezpečná. U moře dbejte na to, aby měl pes vždy přístup k čerstvé vodě."
+            "cs": "Raději ne: slaná voda může být pro psy nebezpečná. U moře dbejte na to, aby měl pes vždy přístup k čerstvé vodě.",
+            "hr": "Bolje ne: slana voda može biti opasna za pse. Na plaži se pobrini da pas uvijek ima pristup svježoj vodi."
           }
         }
       ],
