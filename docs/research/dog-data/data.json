@@ -60524,6 +60524,624 @@
       }
     }
   },
+  "wire_fox_terrier": {
+    "_note": "Added 2026-11-16 (M5-R10-117, unattended run — appended after the Parson Russell Terrier: AKC 2024 No. 113 'Wire Fox Terrier', S174 full-list table recorded 2026-11-15 in queue row 116 '112 Parson Russell Terrier', '113 Wire Fox Terrier', '114 Boerboel'). Quotes as returned by the web-fetch tool on 2026-11-16 (non-preapproved pages: short fragments only); paraphrase only in notes, marked '(paraphrase)'. Sources S871–S878 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Standard: FCI-Standard N° 169 Fox Terrier (Wire) (S871, header '06.10.2026/ EN'; group, section and origin from the standard itself — the FCI nomenclature page was not reached). RKC Breeds A–Z page (S872) for size, exercise ('Up to 1 hour per day'), home, grooming ('More than once a week'), coat, shedding, lifespan ('Over 12 years'), Breed Watch (Category 1) and the breeder tests. PDSA (S873, one 'Fox Terrier' page for both coats) for exercise, grooming ('once or twice a week'), socialisation and health. PetMD (S874, Jamie Lovejoy, DVM, updated 2025-11-24) and WebMD (S875, medically reviewed 2026-09-14) for care frequencies and behaviour. Weight from the AKC standard (S876, 18 lb ± 1 for dogs, two pounds less for bitches); FCI (S871) 'Ideal weight in show condition 8,25 kg for males' and KC (S877) '8kg' as alternatives. Lifespan: the Dogs Trust McMillan 2024 table (S123) was not reachable this run (fetch refused); Wikipedia (S878, tier C) quotes McMillan 2024 at 13.5 y → 122, listed for David → senior boundary from the RKC lower bound 12 y = 108 (runbook rule, Parson Russell Terrier precedent). Coren rank 51 'Wire Fox Terrier' (S35, Average) → 1.0. Never hypoallergenic. Names: FCI 'Fox Terrier (Wire)', RKC 'Fox Terrier (Wire)', AKC 'Wire Fox Terrier' — not the Toy Fox Terrier (toy_fox_terrier) and not the Smooth Fox Terrier (FCI 12, not in the app). Slovenian »ostrodlaki foksterier« (no KZS page reached — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 169, Group 3 Section 1 (Large and medium-sized Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S871",
+      "quote": "Section 1 Large and medium-sized Terriers.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 169 (S871): 'ORIGIN: Great Britain.', 'UTILIZATION: Terrier.', 'FCI-CLASSIFICATION: Group 3 Terriers.', 'Section 1 Large and medium-sized Terriers.', 'Working trial optional.'; header '06.10.2026/ EN', 'DATE OF PUBLICATION OF THE ORIGINAL VALID STANDARD: 08.09.2026.'. The FCI nomenclature page was not reached (refused) — number 169 from the standard's file name / header. Not the Toy Fox Terrier (toy_fox_terrier, not FCI-recognised) nor the Smooth Fox Terrier (FCI 12)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S872",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S872) 'Small' — runbook first choice. PDSA (S873) 'Medium' (alternative). AKC 17–19 lb (S876) → the 'Small (12–24 pounds)' class of S10 for growth.",
+      "alternatives": [
+        {
+          "value": "medium",
+          "unit": "—",
+          "source_id": "S873",
+          "quote": "Medium",
+          "confidence": "medium",
+          "notes": "PDSA key fact 'Size' (S873, one Fox Terrier page for both coats)."
+        }
+      ]
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            39,
+            39
+          ],
+          "female": [
+            39,
+            39
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S871",
+        "quote": "Height at the withers not exceeding 39 cm in dogs, females slightly less.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 169 (S871): an upper limit for males ('not exceeding 39 cm'), females 'slightly less' (no number) — stored as the 39 cm limit for both (the register shows it as 'up to'). KC (S877) 'Males: not exceeding 39cm (approx. 15½”).', 'Females: Slightly less.'; AKC (S876) 'should not exceed 15½ inches at the withers'; PDSA (S873) 'Average height | 39 cm'; PetMD (S874) 'Standing about 15 inches tall'.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                39,
+                39
+              ],
+              "female": [
+                39,
+                39
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S873",
+            "quote": "39 cm",
+            "notes": "PDSA key fact 'Average height' (S873)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            7.7,
+            8.6
+          ],
+          "female": [
+            6.8,
+            7.7
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S876",
+        "quote": "A dog with these measurements should scale 18 pounds in show condition - a bitch weighing some two pounds less - with a margin of one pound either way.",
+        "confidence": "high",
+        "notes": "AKC standard (S876, approved 1991): males 18 lb ± 1 = 17–19 lb = 7.7–8.6 kg; bitches 16 lb ± 1 = 15–17 lb = 6.8–7.7 kg (our conversion) — the game / register value (the only standard with a number for both sexes). FCI (S871) 'Ideal weight in show condition 8,25 kg for males, females slightly less.'; KC (S877) 'Males: Ideal weight in show condition 8kg.'; PDSA (S873) 'Average weight | 8 kg'; PetMD (S874) 'weighing 15–18 pounds'; WebMD (S875) 'Males weigh around 18 pounds, while females weigh a little less, at 15 to 17 pounds.'; Wikipedia (S878) the same 7.7–8.6 / 6.8–7.7 kg.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                8.25,
+                8.25
+              ],
+              "female": null
+            },
+            "unit": "kg",
+            "source_id": "S871",
+            "quote": "Ideal weight in show condition 8,25 kg for males",
+            "notes": "FCI-Standard N° 169 (S871) — one ideal value for males; females 'slightly less' (no number)."
+          },
+          {
+            "value": {
+              "male": [
+                8,
+                8
+              ],
+              "female": [
+                8,
+                8
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S873",
+            "quote": "8 kg",
+            "notes": "PDSA key fact 'Average weight' (S873)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. AKC 17–19 lb / 15–17 lb (S876) → the 'Small (12–24 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Wire Fox Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S872",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S872); PDSA (S873) 'Average lifespan | Over 12 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S874",
+        "quote": "They typically live 12–15 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S874). WebMD (S875) 'Wire fox terriers have a longer-than-average life expectancy between 12 and 15 years.' Background; the RKC lower bound is used."
+      },
+      "mcmillan_2024": {
+        "value": 13.5,
+        "unit": "years",
+        "source_id": "S878",
+        "quote": "A 2024 UK study found a life expectancy of 13.5 years for the breed",
+        "confidence": "low",
+        "notes": "Wikipedia (S878, tier C, fragment as returned 2026-11-16) citing McMillan et al. 2024 — background only, never alone. The paper's PDF text (doi 10.1038/s41598-023-50458-w, read 2026-11-16) has no breed row in the text (supplement), and the Dogs Trust table (S123) was refused → not used for the senior boundary; 0.75 × 13.5 × 12 = 121.5 → 122 would be the senior boundary — open for David."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (RKC lower bound 'Over 12 years', S872) → 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14); McMillan 2024 via Wikipedia (S878) 13.5 y → 122 (open for David).",
+        "derived_from": [
+          "S11",
+          "S872"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S872",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S872), runbook first choice → 60 min ('up to N' → N). PDSA (S873) 'Minimum exercise (per day) | 1 hour' and PetMD (S874) 'They need at least an hour of exercise every day.' agree (60).",
+        "alternatives": [
+          {
+            "value": "≥ 60",
+            "unit": "minutes/day",
+            "source_id": "S874",
+            "quote": "They need at least an hour of exercise every day.",
+            "notes": "PetMD (S874) — 'at least N' → 60, the same number."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "energetic, loves to play and explore; needs around an hour's exercise daily",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Fox Terriers need around an hour's exercise daily and will happily play games that are on offer too.",
+        "confidence": "high",
+        "notes": "PDSA (S873). WebMD (S875): 'Wire fox terriers need a decent amount of exercise.'"
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PDSA / PetMD / WebMD name no bloat) → no meal gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, quick and keen; friendly, forthcoming and fearless",
+        "unit": "—",
+        "source_id": "S871",
+        "quote": "Friendly, forthcoming and fearless.",
+        "confidence": "high",
+        "notes": "FCI standard (S871): 'Alert, quick of movement, keen of expression, on tiptoe of expectation at slightest provocation.' RKC (S872) tagline 'Friendly, forthcoming and fearless with distinctive wiry coat'; PDSA (S873) 'Fox Terriers are energetic dogs that love to play and explore.', 'They are known to have quite a mischievous streak!'"
+      },
+      "family": {
+        "value": "energetic and playful; makes an excellent family pet",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "For this reason, they make excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S873), after 'Fox Terriers need around an hour's exercise daily and will happily play games that are on offer too.' — the basis of the family_pet chip. PetMD (S874): 'Wire Fox Terriers are usually great family dogs, though they may prefer older children who understand boundaries'."
+      },
+      "children": {
+        "value": "great companions for children — always supervise around young kids; may prefer older children",
+        "unit": "—",
+        "source_id": "S875",
+        "quote": "Wire fox terriers are protective and social, making them great companions for children.",
+        "confidence": "high",
+        "notes": "WebMD (S875), followed by 'Always supervise your dog around young kids.' (supervision caveat kept) — the basis of the children chip. PetMD (S874): 'though they may prefer older children who understand boundaries' (fragment). No small_children chip (supervision caveat, older children preferred)."
+      },
+      "other_pets": {
+        "value": "high / strong prey drive — may chase cats and other small pets; monitor closely with small pets",
+        "unit": "—",
+        "source_id": "S874",
+        "quote": "They should be closely monitored with young children and small pets because of their high prey drive.",
+        "confidence": "high",
+        "notes": "PetMD (S874) → chases_small_pets chip. WebMD (S875): 'They have a strong prey drive, so they may chase cats and other small pets.', 'Wire fox terriers may take some time to warm up to other animals.' PDSA (S873): 'They generally get on well with other pets in the household providing they're given adequate socialisation and training as a puppy.'; 'They are hardy, brave dogs bred to pursue the likes of foxes, badgers and rats (to name a few) above and below ground.'"
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on being left alone (PDSA / PetMD / WebMD do not cover it) → no needs_company chip."
+      },
+      "socialisation": {
+        "value": "socialise the puppy well while young",
+        "unit": "—",
+        "source_id": "S874",
+        "quote": "Socialize your Wire Fox Terrier puppy well when they are young",
+        "confidence": "high",
+        "notes": "PetMD (S874, a need) → breed DOG_SOCIALISATION entry (M5-R17). PDSA (S873): 'providing they're given adequate socialisation and training as a puppy' (fragment, a condition)."
+      },
+      "training": {
+        "value": "bright but mischievous; reward-based training",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "They generally get on well with other pets in the household providing they're given adequate socialisation and training as a puppy.",
+        "confidence": "medium",
+        "notes": "PDSA (S873) links reward-based training (paraphrase). Background."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found. WebMD (S875): 'You should feed your wire fox terrier at least twice each day.' (background)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S872) — no points of concern; no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: RKC minimum genetic diversity, Best Practice BVA/KC/ISDS eye scheme; no breed DNA package (S872).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S872, fragment): Category 1 → no welfare chip, in marketing."
+      },
+      "primary_lens_luxation": {
+        "value": "lens luxation — dislocation of the lens of the eye",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Lens luxation",
+        "confidence": "high",
+        "notes": "PDSA (S873) list item; PetMD (S874) 'Primary lens luxation'; WebMD (S875) 'primary lens luxation (PLL)'. Register health key primary_lens_luxation."
+      },
+      "legg_perthes": {
+        "value": "Legg-Calvé-Perthes disease — a hip problem of young small dogs",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Legg-Perthes disease",
+        "confidence": "high",
+        "notes": "PDSA (S873) list item ('Legg-Perthes disease (Legg-Calvé-Perthes)' as returned); PetMD (S874) 'Legg-Calve-Perthes Disease'. Register health key legg_perthes."
+      },
+      "cataracts": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Cataracts",
+        "confidence": "high",
+        "notes": "PDSA (S873); WebMD (S875). Register health key cataracts."
+      },
+      "atopy": {
+        "value": "atopy — skin allergy",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Atopy",
+        "confidence": "high",
+        "notes": "PDSA (S873) list item. Register health key atopic_dermatitis."
+      },
+      "patellar_luxation": {
+        "value": "luxating patella — the kneecap slips out of place",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Luxating patellas",
+        "confidence": "high",
+        "notes": "PDSA (S873); PetMD (S874) 'Patella Luxation'; WebMD (S875) 'patellar luxation'. Register health key kneecap_luxation."
+      },
+      "glaucoma": {
+        "value": "glaucoma",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Glaucoma",
+        "confidence": "high",
+        "notes": "PDSA (S873); WebMD (S875); PetMD (S874) lens luxation can lead to glaucoma (paraphrase). Register health key glaucoma."
+      },
+      "dental": {
+        "value": "dental disease — daily tooth brushing",
+        "unit": "—",
+        "source_id": "S874",
+        "quote": "training your puppy to accept daily tooth brushing",
+        "confidence": "high",
+        "notes": "PetMD (S874) 'Dental Disease'; WebMD (S875) 'Daily teeth brushing'. Register health key dental_disease_tooth_brushing."
+      },
+      "other": {
+        "value": "hip and elbow dysplasia, wobbler disease (WebMD)",
+        "unit": "—",
+        "source_id": "S875",
+        "quote": null,
+        "confidence": "low",
+        "notes": "WebMD (S875) list (as returned by the tool, names only). Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 51,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Wire Fox Terrier",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read through the Kiwix mirror kaweah.freedombox.rocks wikipedia_en_all_maxi_2023-10, 2026-11-16): rank 51 shared by 'Whippet', 'Chinese Shar Pei' and 'Wire Fox Terrier' (continuation row) under 'Average Working/Obedience Intelligence' (ranks 40–54). The Smooth Fox Terrier is rank 40 (not this breed)."
+      },
+      "coren_tier": {
+        "value": "Average Working/Obedience Intelligence",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Average Working/Obedience Intelligence",
+        "confidence": "medium",
+        "notes": "S35 heading for ranks 40–54."
+      },
+      "training_notes": {
+        "value": "bright and mischievous; reward-based training",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S873) (paraphrase). The game uses Coren's rank only (51 → 1.0)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.wire_fox_terrier.learning_multiplier (1.0, runbook rule: Average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "active and lively small terrier, bone and strength in small compass, never cloddy or coarse",
+        "unit": "—",
+        "source_id": "S871",
+        "quote": "Active and lively, bone and strength in small compass, never cloddy or coarse.",
+        "confidence": "high",
+        "notes": "FCI standard (S871)."
+      },
+      "colours": {
+        "value": [
+          "white with black and tan markings",
+          "white with tan markings",
+          "white with black markings"
+        ],
+        "unit": "list",
+        "source_id": "S871",
+        "quote": "White predominates with black, black and tan or tan markings.",
+        "confidence": "high",
+        "notes": "FCI standard (S871); 'Brindle, red, liver or slate-blue markings undesirable.'; 'Any other colour or combination of colours unacceptable.' KC (S877) the same. Never brindle / red / liver / slate-blue markings, never solid colour."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). White with black and tan markings first and highest (the portrait default; Claude — the most familiar standard pattern)."
+      },
+      "coat": {
+        "value": "dense, very wiry texture with a short, softer undercoat",
+        "unit": "—",
+        "source_id": "S871",
+        "quote": "Dense, very wiry texture, 2 cm on shoulder to 4 cm on withers, back, ribs and quarters with undercoat of short, softer hair.",
+        "confidence": "high",
+        "notes": "FCI standard (S871). RKC (S872) 'Coat length: Medium'."
+      },
+      "eyes": {
+        "value": "dark, moderately small, not prominent; full of fire and intelligence",
+        "unit": "—",
+        "source_id": "S871",
+        "quote": "Dark, full of fire and intelligence, moderately small, not prominent.",
+        "confidence": "high",
+        "notes": "FCI standard (S871); 'Light eyes undesirable.'"
+      },
+      "ears": {
+        "value": "small V-shaped ears, flaps folded over and dropping forward close to the cheeks",
+        "unit": "—",
+        "source_id": "S871",
+        "quote": "Small, V-shaped, of moderate thickness, flaps neatly folded over and dropping forward close the cheeks.",
+        "confidence": "high",
+        "notes": "FCI standard (S871); 'Prick, tulip or rose ears undesirable.'"
+      },
+      "tail": {
+        "value": "set high, carried erect, not over the back or curled; undocked: of good strength and fair length",
+        "unit": "—",
+        "source_id": "S871",
+        "quote": "Undocked: Set high. Carried erect, not over back or curled.",
+        "confidence": "high",
+        "notes": "FCI standard (S871): 'Previously customarily docked.'; undocked 'Of good strength and fair length to maintain a balanced appearance.' Portrait: natural tail (Claude — natural-tail precedent; docking is not shown)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S872), PDSA (S873), PetMD (S874), WebMD (S875). RKC key facts reached on 2026-11-16.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "Small",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S872) → small (size class)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (S872) → 60 min. Not long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "Small house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S872). Not 'Flat/ Apartment' → no apartment chip."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S872). Background."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S872) — no number → the dog-grooming rule takes PDSA 'once or twice a week' (S873) → 2. Not frequent_grooming (the chip is for daily grooming)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S872); PDSA (S873) 'Coat length | Medium'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S872) — conflicts with PetMD (S874) 'Their wiry coat sheds minimally' and WebMD (S875) 'Wire fox terriers don't shed much' → neither sheds nor low_shedding (runbook: conflicting sources → neither tag). Never hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S872) — see lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S872). Background."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact 'Vulnerable native breed' (S872). Background."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S872) — see health.breed_watch."
+      },
+      "pdsa_grooming": {
+        "value": "once or twice a week; shaping every few months",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Fox Terriers will need grooming once or twice a week to keep their coat in tip-top condition.",
+        "confidence": "high",
+        "notes": "PDSA (S873, one Fox Terrier page for both coats) → brushing 2× a week (dog-grooming rule: RKC 'More than once a week' without a number → this number; 'once or twice' → the upper bound 2; English Springer Spaniel precedent). 'They may also need shaping every few months.' (no number → no task)."
+      },
+      "petmd_grooming": {
+        "value": "brushing every other day; hand-stripping three to four times a year",
+        "unit": "—",
+        "source_id": "S874",
+        "quote": "is recommended three to four times a year.",
+        "confidence": "high",
+        "notes": "PetMD (S874): 'brushing your dog every other day' (fragment) — alternative for brushing (≈ 3–4×/week), recorded for David; 'hand-stripping— wherein the dead hairs are plucked from the coat to avoid a bushy appearance—is recommended three to four times a year.'; the topcoat is stripped 'by a groomer a few times a year' → the parent's groomer reminder every 12 weeks (M5-R20, Airedale precedent)."
+      },
+      "petmd_bath": {
+        "value": "about once a month, or as needed",
+        "unit": "—",
+        "source_id": "S874",
+        "quote": "about once a month, or as needed",
+        "confidence": "high",
+        "notes": "PetMD (S874, fragment) → the parent's bath reminder every 4 weeks (M5-R19). WebMD (S875) 'baths at least once a month' agrees."
+      },
+      "petmd_teeth": {
+        "value": "daily tooth brushing",
+        "unit": "—",
+        "source_id": "S874",
+        "quote": "training your puppy to accept daily tooth brushing",
+        "confidence": "high",
+        "notes": "PetMD (S874) → tooth brushing every day (M5-R15). WebMD (S875) 'Daily teeth brushing' agrees."
+      },
+      "petmd_ears": {
+        "value": "no frequency — ask the vet",
+        "unit": "—",
+        "source_id": "S874",
+        "quote": "Talk to your vet about how often you should clean your dog's ears.",
+        "confidence": "high",
+        "notes": "PetMD (S874): no frequency → no ear-cleaning task."
+      },
+      "webmd_nails": {
+        "value": "trim the nails about once a month",
+        "unit": "—",
+        "source_id": "S875",
+        "quote": "You should trim your wire fox terrier's nails about once a month.",
+        "confidence": "high",
+        "notes": "WebMD (S875) → nail trimming every 4 weeks (M5-R14)."
+      },
+      "webmd_grooming": {
+        "value": "brushing a couple of times a week; pet coats trimmed monthly; hand-stripping for the show ring",
+        "unit": "—",
+        "source_id": "S875",
+        "quote": "regular brushing a couple of times a week to prevent matting",
+        "confidence": "medium",
+        "notes": "WebMD (S875, fragment): 'Wire fox terriers need to be hand-stripped if you intend to show them in competitions.'; pet coats 'trimmed monthly' (fragment) — alternative for the groomer reminder (4 weeks), recorded for David; PetMD's hand-stripping frequency is used."
+      },
+      "petmd_shedding": {
+        "value": "sheds minimally",
+        "unit": "—",
+        "source_id": "S874",
+        "quote": "Their wiry coat sheds minimally and is relatively low-maintenance",
+        "confidence": "high",
+        "notes": "PetMD (S874) — conflicts with RKC 'Sheds: Yes' (S872) → no shedding chip either way."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -90730,6 +91348,278 @@
         "confidence": "medium",
         "notes": "FCI standard (S864) as in parson_russell_terrier.appearance. Weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with tan markings is the portrait default (FCI S864); never solid tan / black, natural tail"
+      }
+    },
+    "wire_fox_terrier": {
+      "_note": "Unattended run M5-R10-117 (2026-11-16): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC page (S872 'Up to 1 hour per day' → 60). Senior boundary 108 from the RKC lower bound 'Over 12 years' (S872; McMillan 2024 13.5 y only via Wikipedia S878 → 122, open for David). Learning 1.0 (Coren 51, Average, S35). Built: brushing twice a week (RKC 'More than once a week' without a number → PDSA 'once or twice a week' → 2, M5-R13), tooth brushing every day (PetMD S874, M5-R15), nail trimming every 4 weeks (WebMD S875, M5-R14), groomer reminder every 12 weeks (PetMD hand-stripping 'three to four times a year', M5-R20), bath every 4 weeks (PetMD 'about once a month', M5-R19), puppy socialisation with the PetMD quote (M5-R17). No ear task (no frequency), no meal gap, no heat warning. No new vocabulary key. In marketing (RKC Breed Watch Category 1). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S872",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (S872) → rule 'up to N' → 60. PDSA (S873) '1 hour', PetMD (S874) 'at least an hour' agree.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S874",
+            "quote": "They need at least an hour of exercise every day."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S872 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S872",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + the RKC lower bound 'Over 12 years', S872 — no McMillan 2024 / VetCompass row reachable).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S872"
+        ],
+        "alternatives": {
+          "senior_mcmillan_2024_via_wikipedia_13_5_y": 122,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × RKC lower bound 'Over 12 years', S872)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 51 'Wire Fox Terrier' (S35) → Average tier (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren 51, Average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S873",
+        "quote": "Fox Terriers will need grooming once or twice a week to keep their coat in tip-top condition.",
+        "confidence": "medium",
+        "notes": "wire_fox_terrier.suitability.pdsa_grooming. RKC 'More than once a week' (S872) has no number → the most specific number of another A/B source: PDSA 'once or twice a week' → the upper bound 2 (English Springer Spaniel precedent). Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": "every other day",
+            "source_id": "S874",
+            "quote": "brushing your dog every other day",
+            "notes": "PetMD (S874) ≈ 3–4×/week — not used (the PDSA number is the rule's); open for David."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): dvakrat na teden (RKC »More than once a week« brez števila → PDSA »once or twice a week« → 2); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S874",
+        "quote": "training your puppy to accept daily tooth brushing",
+        "confidence": "high",
+        "notes": "wire_fox_terrier.suitability.petmd_teeth → every day (WebMD S875 'Daily teeth brushing' agrees). Built: DOG_CARE_TASKS tooth_brushing [7, day], M5-R15.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily tooth brushing« → vsak dan"
+      },
+      "nail_trimming": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R14)",
+        "source_id": "S875",
+        "quote": "You should trim your wire fox terrier's nails about once a month.",
+        "confidence": "high",
+        "notes": "wire_fox_terrier.suitability.webmd_nails. 'about once a month' → every 4 weeks.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): striženje krempljev vsake 4 tedne (WebMD »about once a month«)"
+      },
+      "professional_grooming": {
+        "value": [
+          1,
+          84
+        ],
+        "unit": "[times, period days] — parent reminder (M5-R20, never scored)",
+        "source_id": "S874",
+        "quote": "is recommended three to four times a year.",
+        "confidence": "high",
+        "notes": "wire_fox_terrier.suitability.petmd_grooming. PetMD hand-stripping 'three to four times a year' (by a groomer 'a few times a year') → every 3 months = 12 program weeks (Airedale Terrier precedent 'three or four times a year'). WebMD (S875) pet coats 'trimmed monthly' — alternative, open for David.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): obisk frizerja / ročno trimanje vsakih 12 tednov (PetMD »three to four times a year«)"
+      },
+      "bathing": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — parent reminder (M5-R19, never scored)",
+        "source_id": "S874",
+        "quote": "about once a month, or as needed",
+        "confidence": "high",
+        "notes": "wire_fox_terrier.suitability.petmd_bath. 'about once a month' → every 4 weeks (WebMD 'baths at least once a month' agrees). Ears: no frequency (PetMD S874 'Talk to your vet…') → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): kopanje vsake 4 tedne (PetMD »about once a month«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S874",
+        "quote": "Socialize your Wire Fox Terrier puppy well when they are young",
+        "confidence": "high",
+        "notes": "wire_fox_terrier.behaviour.socialisation (PetMD S874, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S874)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-117); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S872",
+              "S873"
+            ],
+            "refs": [
+              "wire_fox_terrier.exercise.adult",
+              "wire_fox_terrier.exercise.daily_text"
+            ],
+            "quote": "S872 'Up to 1 hour per day'; S873 'Fox Terriers need around an hour's exercise daily and will happily play games that are on offer too.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S873"
+            ],
+            "refs": [
+              "wire_fox_terrier.behaviour.family"
+            ],
+            "quote": "S873 'For this reason, they make excellent family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S875"
+            ],
+            "refs": [
+              "wire_fox_terrier.behaviour.children"
+            ],
+            "quote": "S875 'Wire fox terriers are protective and social, making them great companions for children.' (supervision caveat kept in notes)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S874"
+            ],
+            "refs": [
+              "wire_fox_terrier.behaviour.other_pets"
+            ],
+            "quote": "S874 'They should be closely monitored with young children and small pets because of their high prey drive.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "Supervision caveat (WebMD S875) and 'may prefer older children' (PetMD S874).",
+          "apartment": "RKC 'Small house' (S872), not 'Flat/ Apartment'.",
+          "long_daily_exercise": "60 minutes a day (RKC S872) — the chip is for 2 hours or more.",
+          "frequent_grooming": "Twice a week (PDSA S873), not daily.",
+          "sheds": "Conflicting sources: RKC 'Sheds: Yes' (S872) vs PetMD 'sheds minimally' (S874) / WebMD 'don't shed much' (S875) → neither tag.",
+          "low_shedding": "Conflicting sources (see sheds).",
+          "needs_company": "No source on time alone.",
+          "other_pets": "High prey drive (S874).",
+          "first_time_owner": "No source.",
+          "shorter_lifespan": "RKC 'Over 12 years' (S872).",
+          "hypoallergenic": "Never a tag (runbook; WebMD S875 'their hair and dander can still cause allergies').",
+          "welfare": "RKC Breed Watch Category 1 (S872); no veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children; consider chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S872",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch Category 1 (S872). Marketing never shows the Wire Fox Terrier as hypoallergenic, with small pets or with a docked tail (S871, S874, S875).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Wire Fox Terrier, white with black and tan markings: active and lively, bone and strength in small compass; dense, very wiry coat; dark, moderately small eyes; small V-shaped ears folded forward; natural tail set high and carried erect",
+        "unit": "—",
+        "source_id": "S871",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S871) as in wire_fox_terrier.appearance. Weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with black and tan markings is the portrait default (FCI S871 'White predominates with black, black and tan or tan markings'); never brindle / red / liver / slate-blue markings, natural tail"
       }
     }
   }

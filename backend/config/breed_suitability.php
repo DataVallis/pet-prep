@@ -2833,5 +2833,23 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S867'], 'refs' => ['parson_russell_terrier.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-117: wire_fox_terrier.* (S872–S875), runbook rules (data.json
+        // proposed_game_parameters.wire_fox_terrier.suitability_tags). RKC Breed Watch Category 1 (S872) → no welfare
+        // chip; in marketing. Shedding: RKC "Yes" vs PetMD / WebMD minimal → neither chip. No new vocabulary key.
+        'wire_fox_terrier' => [
+            'suits' => [
+                // S872 "Exercise: Up to 1 hour per day"; S873 "Fox Terriers need around an hour's exercise daily and will happily play games that are on offer too."
+                ['tag' => 'active_family', 'source_ids' => ['S872', 'S873'], 'refs' => ['wire_fox_terrier.exercise.adult', 'wire_fox_terrier.exercise.daily_text']],
+                // S873 "For this reason, they make excellent family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S873'], 'refs' => ['wire_fox_terrier.behaviour.family']],
+                // S875 "Wire fox terriers are protective and social, making them great companions for children."
+                ['tag' => 'children', 'source_ids' => ['S875'], 'refs' => ['wire_fox_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S874 "They should be closely monitored with young children and small pets because of their high prey drive."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S874'], 'refs' => ['wire_fox_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];
