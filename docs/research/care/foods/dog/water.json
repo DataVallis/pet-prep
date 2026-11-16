@@ -7,7 +7,8 @@
     "es": "Agua",
     "pt": "Água",
     "nl": "Water",
-    "pl": "Woda"
+    "pl": "Woda",
+    "cs": "Voda"
   },
   "question": {
     "en": "Do dogs need fresh water all the time?",
@@ -15,7 +16,8 @@
     "es": "¿Necesitan los perros agua fresca en todo momento?",
     "pt": "Os cães precisam de ter sempre água fresca?",
     "nl": "Hebben honden altijd vers water nodig?",
-    "pl": "Czy psy zawsze potrzebują świeżej wody?"
+    "pl": "Czy psy zawsze potrzebują świeżej wody?",
+    "cs": "Potřebují psi stále čerstvou vodu?"
   },
   "url_slug": {
     "en": "water",
@@ -23,7 +25,8 @@
     "es": "agua",
     "pt": "agua",
     "nl": "water",
-    "pl": "woda"
+    "pl": "woda",
+    "cs": "voda"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "es": "Sí. Los perros necesitan tener a su disposición agua limpia y fresca para beber en todo momento. Lava el bebedero a menudo y recuerda que los perros pueden necesitar más agua cuando hace calor o cuando hacen más ejercicio. No le restrinjas nunca el agua a tu perro.",
     "pt": "Sim. Os cães precisam de água potável fresca e limpa sempre disponível. Lava a tigela da água com frequência e lembra-te de que os cães podem precisar de mais água com tempo quente ou quando fazem mais exercício. Nunca limites a água do teu cão.",
     "nl": "Ja. Honden hebben altijd vers, schoon drinkwater nodig. Maak de waterbak vaak schoon en houd er rekening mee dat honden bij warm weer of als ze meer bewegen meer water nodig kunnen hebben. Beperk het water van je hond nooit.",
-    "pl": "Tak. Psy potrzebują stałego dostępu do świeżej, czystej wody do picia. Często myj miskę z wodą i pamiętaj, że w upały lub przy większym wysiłku psy mogą potrzebować więcej wody. Nigdy nie ograniczaj psu wody."
+    "pl": "Tak. Psy potrzebują stałego dostępu do świeżej, czystej wody do picia. Często myj miskę z wodą i pamiętaj, że w upały lub przy większym wysiłku psy mogą potrzebować więcej wody. Nigdy nie ograniczaj psu wody.",
+    "cs": "Ano. Psi potřebují mít stále k dispozici čerstvou, čistou pitnou vodu. Misku na vodu často myjte a pamatujte, že v horkém počasí nebo při větší námaze mohou potřebovat vody víc. Psovi nikdy vodu neomezujte."
   },
   "why": {
     "en": "Water is essential for all life. How much a dog drinks can change with the weather, temperature and exercise. A sudden increase in drinking can mean something is wrong. Salt water is different: when dogs drink salt water, it can be dangerous for them.",
@@ -40,7 +44,8 @@
     "es": "El agua es esencial para toda la vida. La cantidad que bebe un perro puede cambiar con el clima, la temperatura y el ejercicio. Un aumento repentino de lo que bebe puede significar que algo va mal. El agua salada es distinta: cuando los perros beben agua salada, puede ser peligroso para ellos.",
     "pt": "A água é essencial para toda a vida. A quantidade que um cão bebe pode mudar com o tempo, a temperatura e o exercício. Um aumento repentino da sede pode significar que algo está errado. Beber água salgada é diferente: pode ser perigoso para os cães.",
     "nl": "Water is voor al het leven onmisbaar. Hoeveel een hond drinkt, kan veranderen met het weer, de temperatuur en beweging. Als een hond ineens veel meer drinkt, kan dat betekenen dat er iets mis is. Zout water is een ander verhaal: dat kan gevaarlijk zijn voor honden.",
-    "pl": "Woda jest niezbędna do życia. To, ile pies pije, może się zmieniać w zależności od pogody, temperatury i wysiłku. Nagły wzrost picia może oznaczać, że coś jest nie tak. Inaczej jest ze słoną wodą: picie jej może być dla psów niebezpieczne."
+    "pl": "Woda jest niezbędna do życia. To, ile pies pije, może się zmieniać w zależności od pogody, temperatury i wysiłku. Nagły wzrost picia może oznaczać, że coś jest nie tak. Inaczej jest ze słoną wodą: picie jej może być dla psów niebezpieczne.",
+    "cs": "Voda je nezbytná pro všechny živé tvory. Kolik pes vypije, závisí na počasí, teplotě a pohybu. Náhlé zvýšení pití může znamenat, že něco není v pořádku. Slaná voda je ale jiný případ: pokud ji pes pije, může být pro něj nebezpečná."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "es": "Si crees que tu perro bebe u orina más de lo normal, ponte en contacto con tu veterinario. Si tu perro muestra síntomas de deshidratación, llévalo al veterinario inmediatamente.",
     "pt": "Se achas que o teu cão bebe ou urina mais do que o normal, fala com o teu veterinário. Se o teu cão mostrar sinais de desidratação, leva-o imediatamente ao veterinário.",
     "nl": "Denk je dat je hond meer drinkt of plast dan normaal, neem dan contact op met je dierenarts. Vertoont je hond verschijnselen van uitdroging, ga dan meteen met hem naar de dierenarts.",
-    "pl": "Jeśli podejrzewasz, że pies pije albo oddaje mocz częściej niż zwykle, skontaktuj się z weterynarzem. Jeśli pies ma objawy odwodnienia, od razu zawieź go do weterynarza."
+    "pl": "Jeśli podejrzewasz, że pies pije albo oddaje mocz częściej niż zwykle, skontaktuj się z weterynarzem. Jeśli pies ma objawy odwodnienia, od razu zawieź go do weterynarza.",
+    "cs": "Pokud se domníváte, že pes pije nebo močí víc než obvykle, obraťte se na veterináře. Pokud má pes známky dehydratace, ihned ho vezměte k veterináři."
   },
   "serving": {
     "en": "Fresh, clean water in a frequently washed bowl, available all the time, including outdoors, in hot weather and at the beach.",
@@ -57,7 +63,8 @@
     "es": "Agua limpia y fresca en un bebedero que se lave con frecuencia, disponible en todo momento, también al aire libre, cuando hace calor y en la playa.",
     "pt": "Água fresca e limpa numa tigela lavada com frequência, sempre disponível, incluindo ao ar livre, com tempo quente e na praia.",
     "nl": "Vers, schoon water in een bak die je regelmatig schoonmaakt, de hele dag beschikbaar, ook buiten, bij warm weer en op het strand.",
-    "pl": "Świeża, czysta woda w często myjonej misce, dostępna przez cały czas, także na dworze, w upał i na plaży."
+    "pl": "Świeża, czysta woda w często myjonej misce, dostępna przez cały czas, także na dworze, w upał i na plaży.",
+    "cs": "Čerstvá čistá voda v často myté misce, stále k dispozici, i venku, v horku a u moře."
   },
   "child": {
     "en": "Dogs need fresh water all day long. Checking that the water bowl is full and clean is a great way to help!",
@@ -65,7 +72,8 @@
     "es": "Los perros necesitan agua fresca todo el día. ¡Comprobar que el bebedero esté lleno y limpio es una gran forma de ayudar!",
     "pt": "Os cães precisam de água fresca o dia todo. Verificar se a tigela da água está cheia e limpa é uma ótima forma de ajudar!",
     "nl": "Honden hebben de hele dag vers water nodig. Kijken of de waterbak vol en schoon is, is een geweldige manier om te helpen!",
-    "pl": "Psy potrzebują świeżej wody przez cały dzień. Możesz pomóc, sprawdzając, czy miska z wodą jest pełna i czysta!"
+    "pl": "Psy potrzebują świeżej wody przez cały dzień. Możesz pomóc, sprawdzając, czy miska z wodą jest pełna i czysta!",
+    "cs": "Psi potřebují čerstvou vodu celý den. Zkontrolovat, jestli je miska s vodou plná a čistá, je skvělý způsob, jak pomoct!"
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "es": "¿Cómo puedo saber si mi perro está deshidratado?",
         "pt": "Como sei se o meu cão está desidratado?",
         "nl": "Hoe zie ik of mijn hond uitgedroogd is?",
-        "pl": "Jak poznać, że pies jest odwodniony?"
+        "pl": "Jak poznać, że pies jest odwodniony?",
+        "cs": "Jak poznám, že je pes dehydratovaný?"
       },
       "a": {
         "en": "Signs include loss of skin elasticity, loss of appetite, low energy, panting, sunken dry-looking eyes, a dry nose, dry sticky gums and thick saliva. Take your dog to the vet immediately if you see them.",
@@ -83,7 +92,8 @@
         "es": "Los síntomas incluyen pérdida de elasticidad de la piel, pérdida de apetito, poca energía, jadeo, ojos hundidos y de aspecto seco, nariz seca, encías secas y pegajosas y saliva espesa. Lleva a tu perro al veterinario inmediatamente si los ves.",
         "pt": "Os sinais incluem perda de elasticidade da pele, perda de apetite, pouca energia, respiração ofegante, olhos fundos e de aspeto seco, nariz seco, gengivas secas e pegajosas e saliva espessa. Leva o teu cão imediatamente ao veterinário se os vires.",
         "nl": "Verschijnselen zijn onder meer verlies van huidelasticiteit, verlies van eetlust, weinig energie, hijgen, ingevallen, droge ogen, een droge neus, droog, plakkerig tandvlees en dik speeksel. Ga meteen met je hond naar de dierenarts als je dit ziet.",
-        "pl": "Objawy to utrata elastyczności skóry, brak apetytu, spadek energii, ziajanie, zapadnięte oczy, które wyglądają na suche, suchy nos, suche, lepkie dziąsła i gęsta ślina. Jeśli zauważysz któryś z nich, od razu zawieź psa do weterynarza."
+        "pl": "Objawy to utrata elastyczności skóry, brak apetytu, spadek energii, ziajanie, zapadnięte oczy, które wyglądają na suche, suchy nos, suche, lepkie dziąsła i gęsta ślina. Jeśli zauważysz któryś z nich, od razu zawieź psa do weterynarza.",
+        "cs": "Mezi příznaky patří snížená pružnost kůže, nechuť k jídlu, nedostatek energie, zrychlené dýchání s funěním, propadlé, suché oči, suchý nos, suché lepkavé dásně a hustá slina. Pokud tyto příznaky u psa zaznamenáte, ihned s ním jeďte k veterináři."
       }
     },
     {
@@ -93,7 +103,8 @@
         "es": "¿Debo limitarle el agua a mi perro si bebe mucho?",
         "pt": "Devo limitar a água do meu cão se ele beber muita?",
         "nl": "Moet ik het water van mijn hond beperken als hij veel drinkt?",
-        "pl": "Czy mam ograniczać psu wodę, jeśli dużo pije?"
+        "pl": "Czy mam ograniczać psu wodę, jeśli dużo pije?",
+        "cs": "Mám psovi omezit vodu, když hodně pije?"
       },
       "a": {
         "en": "No. Never restrict your dog's water; always let them have fresh drinking water, and contact your vet if they drink more than normal.",
@@ -101,7 +112,8 @@
         "es": "No. No le restrinjas nunca el agua a tu perro; deja siempre que tenga agua fresca para beber, y ponte en contacto con tu veterinario si bebe más de lo normal.",
         "pt": "Não. Nunca limites a água do teu cão; deixa-o ter sempre água potável fresca e fala com o teu veterinário se ele beber mais do que o normal.",
         "nl": "Nee. Beperk het water van je hond nooit; zorg dat hij altijd vers drinkwater heeft en neem contact op met je dierenarts als hij meer drinkt dan normaal.",
-        "pl": "Nie. Nigdy nie ograniczaj psu wody; zawsze zapewniaj mu dostęp do świeżej wody i skontaktuj się z weterynarzem, jeśli pije więcej niż zwykle."
+        "pl": "Nie. Nigdy nie ograniczaj psu wody; zawsze zapewniaj mu dostęp do świeżej wody i skontaktuj się z weterynarzem, jeśli pije więcej niż zwykle.",
+        "cs": "Ne. Psovi nikdy vodu neomezujte; nechte ho napít se čerstvé vody, kdykoli chce, a pokud pije víc než obvykle, obraťte se na veterináře."
       }
     },
     {
@@ -111,7 +123,8 @@
         "es": "¿Pueden los perros beber agua de mar?",
         "pt": "Os cães podem beber água do mar?",
         "nl": "Mogen honden zeewater drinken?",
-        "pl": "Czy psy mogą pić wodę morską?"
+        "pl": "Czy psy mogą pić wodę morską?",
+        "cs": "Mohou psi pít mořskou vodu?"
       },
       "a": {
         "en": "It's best not to: salt water can be dangerous for dogs. At the beach, make sure your dog always has access to fresh water.",
@@ -119,7 +132,8 @@
         "es": "Es mejor que no: el agua salada puede ser peligrosa para los perros. En la playa, asegúrate de que tu perro tenga siempre acceso a agua fresca.",
         "pt": "É melhor não deixar: a água salgada pode ser perigosa para os cães. Na praia, garante que o teu cão tem sempre acesso a água fresca.",
         "nl": "Liever niet: zout water kan gevaarlijk zijn voor honden. Zorg dat je hond op het strand altijd vers water kan drinken.",
-        "pl": "Lepiej nie: słona woda może być dla psów niebezpieczna. Na plaży zadbaj, żeby pies zawsze miał dostęp do świeżej wody."
+        "pl": "Lepiej nie: słona woda może być dla psów niebezpieczna. Na plaży zadbaj, żeby pies zawsze miał dostęp do świeżej wody.",
+        "cs": "Raději ne: slaná voda může být pro psy nebezpečná. U moře dbejte na to, aby měl pes vždy přístup k čerstvé vodě."
       }
     }
   ],
@@ -249,6 +263,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-16",
       "verified_hash": "1fdd0ff67f72eca1f5ed09d9b5ed4d12b27e0241b05845455701a07a278f5f61"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "b67691ac70d24c9c7a565c19209d8062d044bafcd09773a07b465cc110e566f0"
     }
   }
 }

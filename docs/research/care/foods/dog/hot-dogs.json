@@ -15,7 +15,8 @@
     "fr": "Hot-dogs",
     "pt": "Cachorros-quentes",
     "nl": "Hotdogs",
-    "pl": "Hot dogi"
+    "pl": "Hot dogi",
+    "cs": "Hot dogy (párky v rohlíku)"
   },
   "question": {
     "en": "Can dogs eat hot dogs?",
@@ -31,7 +32,8 @@
     "fr": "Les chiens peuvent-ils manger des hot-dogs ?",
     "pt": "Os cães podem comer cachorros-quentes?",
     "nl": "Mogen honden hotdogs eten?",
-    "pl": "Czy psy mogą jeść hot dogi?"
+    "pl": "Czy psy mogą jeść hot dogi?",
+    "cs": "Mohou psi jíst hot dogy?"
   },
   "url_slug": {
     "en": "hot-dogs",
@@ -47,7 +49,8 @@
     "fr": "hot-dogs",
     "pt": "cachorros-quentes",
     "nl": "hotdogs",
-    "pl": "hot-dogi"
+    "pl": "hot-dogi",
+    "cs": "hot-dogy"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Non, les hot-dogs ne sont pas un bon choix pour les chiens. Ils sont très salés et contiennent souvent du nitrate de sodium et des assaisonnements comme la poudre d’ail et d’oignon, qui peuvent être toxiques pour les chiens. Les hot-dogs peuvent aussi présenter un risque d’étouffement.",
     "pt": "Não, os cachorros-quentes não são boa escolha para os cães. São muito salgados e contêm muitas vezes nitrato de sódio e temperos como alho e cebola em pó, que podem ser tóxicos para os cães. Os cachorros-quentes também podem ser um risco de engasgo.",
     "nl": "Nee, hotdogs zijn geen goede keuze voor honden. Ze zijn erg zout en bevatten vaak natriumnitraat en kruiden zoals knoflook- en uipoeder, die giftig kunnen zijn voor honden. Hotdogs kunnen ook een verstikkingsgevaar zijn.",
-    "pl": "Nie, hot dogi (parówki w bułce) nie są dobrym wyborem dla psów. Są bardzo słone i często zawierają azotan sodu oraz przyprawy, takie jak czosnek i cebula w proszku, które mogą być toksyczne dla psów. Hot dogi mogą też grozić zadławieniem."
+    "pl": "Nie, hot dogi (parówki w bułce) nie są dobrym wyborem dla psów. Są bardzo słone i często zawierają azotan sodu oraz przyprawy, takie jak czosnek i cebula w proszku, które mogą być toksyczne dla psów. Hot dogi mogą też grozić zadławieniem.",
+    "cs": "Ne, hot dogy pro psy nejsou dobrou volbou. Jsou velmi slané a často obsahují dusičnan sodný a koření, například česnekový a cibulový prášek, které mohou být pro psy jedovaté. Hot dog může psa také udusit."
   },
   "why": {
     "en": "The biggest problem with hot dogs is salt: even half of one would probably put a dog way over its daily sodium limit, and too much sodium can lead to dehydration and high blood pressure. Hot dogs often contain sodium nitrate, which has been linked to cancer, MSG, and sugars or artificial sweeteners, as well as garlic and onion powder. Big dogs may try to swallow them without chewing.",
@@ -80,7 +84,8 @@
     "fr": "Le plus gros problème des hot-dogs, c’est le sel : même un demi-hot-dog ferait probablement dépasser largement la limite quotidienne de sodium d’un chien, et trop de sodium peut entraîner une déshydratation et une hypertension. Les hot-dogs contiennent souvent du nitrate de sodium, associé au cancer, du glutamate monosodique, des sucres ou des édulcorants artificiels, ainsi que de la poudre d’ail et d’oignon. Les gros chiens peuvent essayer de les avaler sans mâcher.",
     "pt": "O maior problema dos cachorros-quentes é o sal: bastaria meio cachorro-quente para um cão ultrapassar em muito o limite diário de sódio, e demasiado sódio pode levar a desidratação e tensão arterial alta. Os cachorros-quentes contêm muitas vezes nitrato de sódio, que tem sido associado ao cancro, glutamato monossódico (MSG), e açúcares ou adoçantes artificiais, bem como alho e cebola em pó. Os cães grandes podem tentar engoli-los sem mastigar.",
     "nl": "Het grootste probleem van hotdogs is zout: zelfs een halve hotdog zou een hond waarschijnlijk ruim boven zijn dagelijkse natriumgrens brengen, en te veel natrium kan leiden tot uitdroging en hoge bloeddruk. Hotdogs bevatten vaak natriumnitraat (dat met kanker in verband wordt gebracht), MSG, suikers of kunstmatige zoetstoffen, en knoflook- en uipoeder. Grote honden slikken ze soms zo door zonder te kauwen.",
-    "pl": "Największym problemem hot dogów jest sól: nawet połowa hot doga mogłaby prawdopodobnie znacznie przekroczyć dzienny limit sodu u psa, a zbyt dużo sodu może prowadzić do odwodnienia i nadciśnienia. Hot dogi często zawierają azotan sodu, który wiązano z rakiem, glutaminian sodu oraz cukry lub sztuczne słodziki, a także czosnek i cebulę w proszku. Duże psy mogą próbować połknąć je w całości."
+    "pl": "Największym problemem hot dogów jest sól: nawet połowa hot doga mogłaby prawdopodobnie znacznie przekroczyć dzienny limit sodu u psa, a zbyt dużo sodu może prowadzić do odwodnienia i nadciśnienia. Hot dogi często zawierają azotan sodu, który wiązano z rakiem, glutaminian sodu oraz cukry lub sztuczne słodziki, a także czosnek i cebulę w proszku. Duże psy mogą próbować połknąć je w całości.",
+    "cs": "Největším problémem hot dogů je sůl: už půl hot dogu by psa pravděpodobně dostalo výrazně nad jeho denní limit sodíku a příliš mnoho sodíku může vést k dehydrataci a vysokému krevnímu tlaku. Hot dogy často obsahují dusičnan sodný, který se dává do souvislosti s rakovinou, glutamát sodný a cukry nebo umělá sladidla a také česnekový a cibulový prášek. Velcí psi se je mohou pokusit spolknout bez rozkousání."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Ból brzucha",
       "Biegunka",
       "Wymioty razem z biegunką"
+    ],
+    "cs": [
+      "Bolest břicha",
+      "Průjem",
+      "Zvracení spolu s průjmem"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "fr": "Après avoir mangé un hot-dog, votre chien peut avoir mal au ventre ou la diarrhée, qui devrait disparaître en un jour. Appelez votre vétérinaire si la diarrhée ne s’arrête pas ou si votre chien vomit en plus, car cela peut entraîner une déshydratation grave.",
     "pt": "Depois de comer um cachorro-quente, o teu cão pode ter dor de barriga ou diarreia, que deve passar num dia. Liga ao teu veterinário se a diarreia não parar ou se o teu cão também estiver a vomitar, porque isso pode levar a uma desidratação grave.",
     "nl": "Na het eten van een hotdog kan je hond buikpijn of diarree krijgen, wat binnen een dag zou moeten overgaan. Bel je dierenarts als de diarree niet ophoudt of je hond ook moet braken, want dat kan leiden tot ernstige uitdroging.",
-    "pl": "Po zjedzeniu hot doga pies może mieć ból brzucha lub biegunkę, które powinny minąć w ciągu doby. Zadzwoń do weterynarza, jeśli biegunka nie ustępuje albo pies ma też wymioty, bo może to prowadzić do poważnego odwodnienia."
+    "pl": "Po zjedzeniu hot doga pies może mieć ból brzucha lub biegunkę, które powinny minąć w ciągu doby. Zadzwoń do weterynarza, jeśli biegunka nie ustępuje albo pies ma też wymioty, bo może to prowadzić do poważnego odwodnienia.",
+    "cs": "Po hot dogu může mít pes bolest břicha nebo průjem, které by měly do jednoho dne odeznít. Zavolejte veterináři, pokud průjem neustává nebo pes navíc zvrací, protože to může vést k vážné dehydrataci."
   },
   "serving": null,
   "child": {
@@ -185,7 +196,8 @@
     "fr": "Les hot-dogs sont trop salés pour les chiens. Au barbecue, demande plutôt à un adulte un peu de viande nature pour ton chien.",
     "pt": "Os cachorros-quentes são salgados demais para os cães. Num churrasco, pede a um adulto um bocadinho de carne simples para o teu cão.",
     "nl": "Hotdogs zijn te zout voor honden. Vraag bij een barbecue liever een volwassene om een beetje ongekruid vlees voor je hond.",
-    "pl": "Hot dogi są dla psów zbyt słone. Na grillu poproś dorosłego o kawałek mięsa bez dodatków dla psa."
+    "pl": "Hot dogi są dla psów zbyt słone. Na grillu poproś dorosłego o kawałek mięsa bez dodatków dla psa.",
+    "cs": "Hot dogy jsou pro psy moc slané. Na grilování raději požádej dospělého o kousek obyčejného masa pro psa."
   },
   "faq": [
     {
@@ -203,7 +215,8 @@
         "fr": "Que puis-je donner à mon chien au barbecue à la place ?",
         "pt": "O que posso dar ao meu cão num churrasco em vez disso?",
         "nl": "Wat kan ik mijn hond dan wel geven bij een barbecue?",
-        "pl": "Co mogę dać psu zamiast tego na grillu?"
+        "pl": "Co mogę dać psu zamiast tego na grillu?",
+        "cs": "Co můžu psovi dát místo toho na grilování?"
       },
       "a": {
         "en": "Some plain beef, pork or chicken with no salt or other seasoning, cut into bite-sized pieces.",
@@ -219,7 +232,8 @@
         "fr": "Un peu de bœuf, de porc ou de poulet nature, sans sel ni autre assaisonnement, coupé en petits morceaux.",
         "pt": "Um pouco de carne de vaca, de porco ou de frango simples, sem sal nem outros temperos, cortada em pedaços pequenos.",
         "nl": "Wat rundvlees, varkensvlees of kip zonder zout of andere kruiden, in hapklare stukjes gesneden.",
-        "pl": "Trochę wołowiny, wieprzowiny lub kurczaka bez soli i innych przypraw, pokrojonych w małe kęsy."
+        "pl": "Trochę wołowiny, wieprzowiny lub kurczaka bez soli i innych przypraw, pokrojonych w małe kęsy.",
+        "cs": "Trochu obyčejného hovězího, vepřového nebo kuřecího masa bez soli a jiného koření, nakrájeného na malé kousky."
       }
     }
   ],
@@ -360,6 +374,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-16",
       "verified_hash": "5ca62fd925ba8d4df0a316de8b7e4a9f08b5572fbfabf127002297f836e9cfce"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "f853781369d403cd3be33c936928bc05e075d49d1448a4a2f9ca7d2c761debda"
     }
   }
 }

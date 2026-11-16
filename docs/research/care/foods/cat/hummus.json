@@ -7,7 +7,8 @@
     "es": "Hummus",
     "pt": "Hummus",
     "nl": "Hummus",
-    "pl": "Hummus"
+    "pl": "Hummus",
+    "cs": "Hummus"
   },
   "question": {
     "en": "Can cats eat hummus?",
@@ -15,7 +16,8 @@
     "es": "¿Pueden los gatos comer hummus?",
     "pt": "Os gatos podem comer hummus?",
     "nl": "Mogen katten hummus eten?",
-    "pl": "Czy koty mogą jeść hummus?"
+    "pl": "Czy koty mogą jeść hummus?",
+    "cs": "Mohou kočky jíst hummus?"
   },
   "url_slug": {
     "en": "hummus",
@@ -23,7 +25,8 @@
     "es": "hummus",
     "pt": "hummus",
     "nl": "hummus",
-    "pl": "hummus"
+    "pl": "hummus",
+    "cs": "hummus"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "es": "No, el hummus no es para los gatos. Suele llevar ajo, y el ajo es tóxico para los gatos aunque esté cocinado. Los veterinarios de VCA también advierten de que las salsas cremosas que quedan en los platos pueden causar malestar de estómago. Mantén el bol del hummus fuera del alcance de tu gato.",
     "pt": "Não, o hummus não é para gatos. Costuma levar alho, que é tóxico para os gatos mesmo cozinhado. Os veterinários da VCA avisam também que os cremes e molhos deixados nos pratos podem causar indisposição de estômago. Mantém a taça do hummus fora do alcance do teu gato.",
     "nl": "Nee, hummus is niets voor katten. Er zit meestal knoflook in, en knoflook is giftig voor katten, ook als het gekookt is. Dierenartsen van VCA waarschuwen ook dat romige dips die op borden achterblijven maagklachten kunnen veroorzaken. Houd het dipbakje buiten het bereik van je kat.",
-    "pl": "Nie, hummus nie jest dla kotów. Zwykle zawiera czosnek, a czosnek jest toksyczny dla kotów nawet po ugotowaniu. Weterynarze z VCA ostrzegają też, że kremowe pasty i sosy do maczania, które zostają na talerzach, mogą wywołać rozstrój żołądka. Miseczkę z hummusem trzymaj poza zasięgiem kota."
+    "pl": "Nie, hummus nie jest dla kotów. Zwykle zawiera czosnek, a czosnek jest toksyczny dla kotów nawet po ugotowaniu. Weterynarze z VCA ostrzegają też, że kremowe pasty i sosy do maczania, które zostają na talerzach, mogą wywołać rozstrój żołądka. Miseczkę z hummusem trzymaj poza zasięgiem kota.",
+    "cs": "Ne, hummus není pro kočky. Obvykle se vyrábí s česnekem a česnek je pro kočky jedovatý, i když je tepelně upravený. Veterináři z VCA také varují, že krémové pomazánky zbylé na talířích mohou způsobit podrážděný žaludek. Misku s pomazánkou nechte mimo dosah kočky."
   },
   "why": {
     "en": "Hummus is mainly made from chickpeas, tahini, olive oil, lemon juice, garlic and other seasonings. Garlic belongs to the alliums, which are toxic to cats even when cooked or dried, and onion and garlic are found in many pre-made foods. Tufts vets list onion and garlic flavouring in prepared dishes among foods cats should avoid, as it can cause vomiting and diarrhoea, and VCA says these flavour boosters damage red blood cells, especially in cats.",
@@ -40,7 +44,8 @@
     "es": "El hummus se hace sobre todo con garbanzos, tahini, aceite de oliva, zumo de limón, ajo y otros condimentos. El ajo pertenece a las aliáceas, que son tóxicas para los gatos aunque estén cocinadas o secas, y la cebolla y el ajo están presentes en muchos alimentos preparados. Los veterinarios de Tufts incluyen la cebolla y el ajo como condimento de platos preparados entre los alimentos que los gatos deben evitar, ya que pueden causar vómitos y diarrea, y VCA dice que estos potenciadores del sabor dañan los glóbulos rojos, sobre todo en los gatos.",
     "pt": "O hummus é feito sobretudo de grão-de-bico, tahini, azeite, sumo de limão, alho e outros temperos. O alho pertence às aliáceas, que são tóxicas para os gatos mesmo cozinhadas ou secas, e a cebola e o alho estão presentes em muitos alimentos pré-preparados. Os veterinários da Tufts incluem o sabor a cebola e alho nos pratos preparados entre os alimentos que os gatos devem evitar, porque pode causar vómitos e diarreia, e a VCA diz que estes intensificadores de sabor danificam os glóbulos vermelhos, sobretudo nos gatos.",
     "nl": "Hummus wordt vooral gemaakt van kikkererwten, tahin, olijfolie, citroensap, knoflook en andere kruiden. Knoflook behoort tot de alliums (de uienfamilie), die giftig zijn voor katten, ook als ze gekookt of gedroogd zijn, en ui en knoflook zitten in veel kant-en-klare producten. Dierenartsen van Tufts rekenen ui- en knoflookaroma in bereide gerechten tot het eten dat katten moeten vermijden, omdat het braken en diarree kan veroorzaken, en VCA zegt dat deze smaakmakers de rode bloedcellen beschadigen, vooral bij katten.",
-    "pl": "Hummus składa się głównie z ciecierzycy, tahini, oliwy z oliwek, soku z cytryny, czosnku i innych przypraw. Czosnek należy do roślin czosnkowatych, które są toksyczne dla kotów nawet po ugotowaniu lub wysuszeniu, a cebula i czosnek znajdują się w wielu gotowych produktach. Weterynarze z Tufts zaliczają cebulę i czosnek dodawane do gotowych potraw do pokarmów, których koty powinny unikać, bo mogą wywołać wymioty i biegunkę, a według VCA te wzmacniacze smaku uszkadzają czerwone krwinki, zwłaszcza u kotów."
+    "pl": "Hummus składa się głównie z ciecierzycy, tahini, oliwy z oliwek, soku z cytryny, czosnku i innych przypraw. Czosnek należy do roślin czosnkowatych, które są toksyczne dla kotów nawet po ugotowaniu lub wysuszeniu, a cebula i czosnek znajdują się w wielu gotowych produktach. Weterynarze z Tufts zaliczają cebulę i czosnek dodawane do gotowych potraw do pokarmów, których koty powinny unikać, bo mogą wywołać wymioty i biegunkę, a według VCA te wzmacniacze smaku uszkadzają czerwone krwinki, zwłaszcza u kotów.",
+    "cs": "Hummus se vyrábí hlavně z cizrny, tahini, olivového oleje, citronové šťávy, česneku a dalšího koření. Česnek patří mezi cibuloviny (rod Allium), které jsou pro kočky jedovaté, i když jsou tepelně upravené nebo sušené, a cibule i česnek jsou v mnoha hotových potravinách. Veterináři z Tufts řadí cibulovou a česnekovou příchuť v hotových pokrmech mezi potraviny, kterým by se kočky měly vyhýbat, protože mohou způsobit zvracení a průjem, a VCA uvádí, že tato dochucovadla poškozují červené krvinky, zejména u koček."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Biegunka",
       "Zmniejszony apetyt",
       "Odwodnienie"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Snížená chuť k jídlu",
+      "Dehydratace"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "es": "Si tu gato ha comido hummus con ajo, ponte en contacto con tu veterinario lo antes posible, aunque tu gato parezca estar bien, porque los síntomas de anemia pueden tardar unos días en aparecer.",
     "pt": "Se o teu gato comeu hummus com alho, contacta o teu veterinário o mais depressa possível, mesmo que ele pareça estar bem, porque os sinais de anemia podem demorar alguns dias a aparecer.",
     "nl": "Heeft je kat hummus met knoflook gegeten, neem dan zo snel mogelijk contact op met je dierenarts, ook als het goed lijkt te gaan met je kat, want verschijnselen van bloedarmoede kunnen pas na een paar dagen optreden.",
-    "pl": "Jeśli twój kot zjadł hummus z czosnkiem, jak najszybciej skontaktuj się z weterynarzem, nawet jeśli kot wygląda na zdrowego, bo objawy anemii mogą pojawić się dopiero po kilku dniach."
+    "pl": "Jeśli twój kot zjadł hummus z czosnkiem, jak najszybciej skontaktuj się z weterynarzem, nawet jeśli kot wygląda na zdrowego, bo objawy anemii mogą pojawić się dopiero po kilku dniach.",
+    "cs": "Pokud kočka snědla hummus s česnekem, co nejdříve se obraťte na veterináře, i když se zdá být v pořádku, protože příznaky chudokrevnosti se mohou objevit až za několik dní."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "es": "El hummus es una salsa para personas y suele llevar ajo, que los gatos no pueden comer. Mantén tu plato de picoteo lejos del gatito.",
     "pt": "O hummus é uma pasta para pessoas e costuma ter alho, que os gatos não podem comer. Mantém o teu prato de petiscos longe do gatinho.",
     "nl": "Hummus is een dip voor mensen. Er zit meestal knoflook in, en dat mogen katten niet eten. Houd je snackbord uit de buurt van je kat.",
-    "pl": "Hummus to pasta dla ludzi, zwykle z czosnkiem, którego koty jeść nie mogą. Trzymaj swój talerz z przekąskami z dala od kotka."
+    "pl": "Hummus to pasta dla ludzi, zwykle z czosnkiem, którego koty jeść nie mogą. Trzymaj swój talerz z przekąskami z dala od kotka.",
+    "cs": "Hummus je pomazánka pro lidi a obvykle obsahuje česnek, který kočky jíst nesmějí. Drž svůj talíř se svačinou dál od kočičky."
   },
   "faq": [
     {
@@ -105,7 +118,8 @@
         "es": "¿Y si el hummus no lleva ajo?",
         "pt": "E se o hummus não tiver alho?",
         "nl": "Wat als er geen knoflook in de hummus zit?",
-        "pl": "A jeśli w hummusie nie ma czosnku?"
+        "pl": "A jeśli w hummusie nie ma czosnku?",
+        "cs": "A co když hummus česnek neobsahuje?"
       },
       "a": {
         "en": "It is still a people food. Cats Protection advises sticking to cat food treats rather than giving your cat any human foods.",
@@ -113,7 +127,8 @@
         "es": "Sigue siendo comida de personas. Cats Protection aconseja ceñirse a los premios para gatos en lugar de dar a tu gato cualquier comida de personas.",
         "pt": "Continua a ser comida de pessoas. A Cats Protection aconselha a dar guloseimas próprias para gatos em vez de comida de pessoas.",
         "nl": "Het blijft menselijk voedsel. Cats Protection adviseert om bij kattensnoepjes te blijven en je kat geen menselijk voedsel te geven.",
-        "pl": "To nadal jedzenie dla ludzi. Cats Protection radzi dawać kotu smakołyki przeznaczone dla kotów, a nie jakiekolwiek jedzenie dla ludzi."
+        "pl": "To nadal jedzenie dla ludzi. Cats Protection radzi dawać kotu smakołyki przeznaczone dla kotów, a nie jakiekolwiek jedzenie dla ludzi.",
+        "cs": "Pořád je to jídlo pro lidi. Cats Protection radí držet se pamlsků pro kočky a nedávat kočkám žádná lidská jídla."
       }
     }
   ],
@@ -209,6 +224,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-16",
       "verified_hash": "3c958357bbe2e14841cc203503f74dc3f6ba62de5d0a8769f441d5f06eddefb2"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "e52609c1f27120c912fd20c3ca800fcf14df19ec253a117ad0202ff25a62a359"
     }
   }
 }

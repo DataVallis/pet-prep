@@ -15,7 +15,8 @@
     "es": "Salchichas",
     "pt": "Salsichas",
     "nl": "Worst",
-    "pl": "Kiełbasy"
+    "pl": "Kiełbasy",
+    "cs": "Klobásy a párky"
   },
   "question": {
     "en": "Can cats eat sausages?",
@@ -31,7 +32,8 @@
     "es": "¿Pueden los gatos comer salchichas?",
     "pt": "Os gatos podem comer salsichas?",
     "nl": "Mogen katten worst eten?",
-    "pl": "Czy koty mogą jeść kiełbasę?"
+    "pl": "Czy koty mogą jeść kiełbasę?",
+    "cs": "Mohou kočky jíst klobásy a párky?"
   },
   "url_slug": {
     "en": "sausages",
@@ -47,7 +49,8 @@
     "es": "salchichas",
     "pt": "salsichas",
     "nl": "worst",
-    "pl": "kielbasy"
+    "pl": "kielbasy",
+    "cs": "klobasy-a-parky"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "es": "Es mejor no dárselas. Las salchichas son un producto procesado, graso y normalmente con mucha sal, y muchas llevan conservantes, especias, cebolla o ajo que pueden ser dañinos para los gatos. RSPCA Australia aconseja evitar las salchichas para los gatos porque pueden llevar conservantes con sulfitos.",
     "pt": "É melhor não. As salsichas são processadas, gordurosas e normalmente têm muito sal, e muitas contêm conservantes, temperos, cebola ou alho que podem fazer mal aos gatos. A RSPCA Australia aconselha a evitar salsichas para gatos porque podem conter conservantes à base de sulfitos.",
     "nl": "Liever niet. Worst is bewerkt, vet en meestal erg zout, en veel worsten bevatten conserveermiddelen, kruiden, ui of knoflook die schadelijk kunnen zijn voor katten. RSPCA Australia raadt af om katten worst te geven, omdat die conserveermiddelen met sulfiet kan bevatten.",
-    "pl": "Lepiej nie. Kiełbasy są przetworzone, tłuste i zwykle bardzo słone, a wiele z nich zawiera konserwanty, przyprawy, cebulę lub czosnek, które mogą szkodzić kotom. RSPCA Australia radzi nie podawać kotom kiełbas, ponieważ mogą zawierać konserwanty siarczynowe."
+    "pl": "Lepiej nie. Kiełbasy są przetworzone, tłuste i zwykle bardzo słone, a wiele z nich zawiera konserwanty, przyprawy, cebulę lub czosnek, które mogą szkodzić kotom. RSPCA Australia radzi nie podawać kotom kiełbas, ponieważ mogą zawierać konserwanty siarczynowe.",
+    "cs": "Raději ne. Klobásy jsou zpracované, tučné a obvykle hodně slané. Mnohé obsahují konzervanty, koření, cibuli nebo česnek, které mohou kočkám uškodit. RSPCA Australia radí kočkám klobásy nedávat, protože mohou obsahovat konzervanty na bázi siřičitanů."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. Purina says a very small piece of sausage made purely from meat, with no preservatives or seasoning, is generally okay, but RSPCA Australia advises avoiding sausages, sausage meat and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. Even meat-only sausages are very fatty, sausages are typically high in salt, and onion, garlic and some spices in them can be toxic to cats.",
@@ -80,7 +84,8 @@
     "es": "Las fuentes difieren, así que aplicamos el nivel más estricto. Purina dice que un trocito muy pequeño de salchicha hecha solo con carne, sin conservantes ni condimentos, suele estar bien, pero RSPCA Australia aconseja evitar las salchichas, la carne de salchicha y las carnes cocinadas de fabricación industrial porque pueden llevar conservantes con sulfitos, que se han relacionado con la deficiencia de tiamina (vitamina B1). Incluso las salchichas solo de carne son muy grasas, las salchichas suelen tener mucha sal, y la cebolla, el ajo y algunas especias que llevan pueden ser tóxicos para los gatos.",
     "pt": "As fontes divergem, por isso usamos o nível mais rigoroso. A Purina diz que um pedaço muito pequeno de salsicha feita só de carne, sem conservantes nem tempero, em geral não faz mal, mas a RSPCA Australia aconselha a evitar salsichas, carne de salsicha e carnes cozinhadas industriais porque podem conter conservantes à base de sulfitos, que têm sido associados a carência de tiamina (vitamina B1). Mesmo as salsichas só de carne são muito gordurosas, as salsichas costumam ter muito sal, e a cebola, o alho e alguns temperos que levam podem ser tóxicos para os gatos.",
     "nl": "De bronnen zijn het niet met elkaar eens, dus we hanteren het strengere niveau. Purina zegt dat een heel klein stukje worst van puur vlees, zonder conserveermiddelen of kruiden, over het algemeen oké is, maar RSPCA Australia raadt worst, worstvlees en gekookt, industrieel bereid vlees af, omdat die conserveermiddelen met sulfiet kunnen bevatten, die in verband zijn gebracht met een tekort aan thiamine (vitamine B1). Zelfs worsten van puur vlees zijn erg vet, worst is meestal erg zout, en ui, knoflook en sommige kruiden erin kunnen giftig zijn voor katten.",
-    "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. Purina podaje, że bardzo mały kawałek kiełbasy zrobionej wyłącznie z mięsa, bez konserwantów i przypraw, jest na ogół w porządku, ale RSPCA Australia radzi unikać kiełbas, farszu do kiełbas i gotowanych wyrobów mięsnych, ponieważ mogą zawierać konserwanty siarczynowe, które łączono z niedoborem tiaminy (witaminy B1). Nawet kiełbasy wyłącznie z mięsa są bardzo tłuste, zwykle mają też dużo soli, a cebula, czosnek i niektóre przyprawy, które mogą się w nich znaleźć, bywają toksyczne dla kotów."
+    "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. Purina podaje, że bardzo mały kawałek kiełbasy zrobionej wyłącznie z mięsa, bez konserwantów i przypraw, jest na ogół w porządku, ale RSPCA Australia radzi unikać kiełbas, farszu do kiełbas i gotowanych wyrobów mięsnych, ponieważ mogą zawierać konserwanty siarczynowe, które łączono z niedoborem tiaminy (witaminy B1). Nawet kiełbasy wyłącznie z mięsa są bardzo tłuste, zwykle mają też dużo soli, a cebula, czosnek i niektóre przyprawy, które mogą się w nich znaleźć, bywają toksyczne dla kotów.",
+    "cs": "Zdroje se liší, proto jsme zvolili přísnější úroveň. Purina uvádí, že velmi malý kousek klobásy vyrobené čistě z masa, bez konzervantů a koření, je obecně v pořádku, ale RSPCA Australia radí vyhýbat se klobásám, náplni do klobás a tepelně upraveným průmyslově zpracovaným masům, protože mohou obsahovat konzervanty na bázi siřičitanů, které se dávají do souvislosti s nedostatkem thiaminu (vitaminu B1). Dokonce i čistě masové klobásy jsou velmi tučné, klobásy jsou typicky hodně slané a cibule, česnek a některé druhy koření v nich mohou být pro kočky jedovaté."
   },
   "signs": {
     "en": [
@@ -138,6 +143,10 @@
     "pl": [
       "Rozstrój żołądka",
       "Biegunka"
+    ],
+    "cs": [
+      "Podrážděný žaludek",
+      "Průjem"
     ]
   },
   "what_to_do": {
@@ -154,7 +163,8 @@
     "es": "Si tu gato ha comido salchicha que pueda llevar cebolla o ajo, ponte en contacto con tu veterinario lo antes posible. Si ha comido salchicha natural y después tiene malestar de estómago o diarrea, llama a tu veterinario para que te aconseje.",
     "pt": "Se o teu gato comeu salsicha que possa conter cebola ou alho, contacta o teu veterinário o mais depressa possível. Se comeu salsicha simples e depois tem indisposição de estômago ou diarreia, liga ao teu veterinário para pedir conselho.",
     "nl": "Heeft je kat worst gegeten waar mogelijk ui of knoflook in zat, neem dan zo snel mogelijk contact op met je dierenarts. Heeft ze gewone worst gegeten en daarna maagklachten of diarree, bel dan je dierenarts voor advies.",
-    "pl": "Jeśli twój kot zjadł kiełbasę, która mogła zawierać cebulę lub czosnek, jak najszybciej skontaktuj się z weterynarzem. Jeśli zjadł kiełbasę bez przypraw, a potem ma rozstrój żołądka lub biegunkę, zadzwoń do weterynarza po poradę."
+    "pl": "Jeśli twój kot zjadł kiełbasę, która mogła zawierać cebulę lub czosnek, jak najszybciej skontaktuj się z weterynarzem. Jeśli zjadł kiełbasę bez przypraw, a potem ma rozstrój żołądka lub biegunkę, zadzwoń do weterynarza po poradę.",
+    "cs": "Pokud kočka snědla klobásu, která mohla obsahovat cibuli nebo česnek, co nejdříve se obraťte na veterináře. Pokud snědla obyčejnou klobásu a potom má podrážděný žaludek nebo průjem, zavolejte veterináři a poraďte se."
   },
   "serving": null,
   "child": {
@@ -171,7 +181,8 @@
     "es": "Las salchichas son demasiado saladas y grasas para los gatos. Los premios para gatos son una sorpresa mucho mejor para el gatito.",
     "pt": "As salsichas são demasiado salgadas e gordurosas para os gatos. As guloseimas próprias do gatinho são uma surpresa muito melhor.",
     "nl": "Worst is te zout en te vet voor katten. Een eigen kattensnoepje is een veel leukere verrassing voor je kat.",
-    "pl": "Kiełbasy są dla kotów zbyt słone i tłuste. Własne kocie smakołyki to dla kotka dużo lepsza niespodzianka."
+    "pl": "Kiełbasy są dla kotów zbyt słone i tłuste. Własne kocie smakołyki to dla kotka dużo lepsza niespodzianka.",
+    "cs": "Klobásy jsou pro kočky moc slané a tučné. Mnohem lepším překvapením pro kočičku jsou její vlastní kočičí pamlsky."
   },
   "faq": [
     {
@@ -189,7 +200,8 @@
         "es": "¿Y la piel de la salchicha o una salchicha cruda?",
         "pt": "E a tripa da salsicha ou uma salsicha crua?",
         "nl": "En het worstvel of een rauwe worst?",
-        "pl": "A co z osłonką kiełbasy albo surową kiełbasą?"
+        "pl": "A co z osłonką kiełbasy albo surową kiełbasą?",
+        "cs": "A co střívko nebo syrová klobása?"
       },
       "a": {
         "en": "The casing can be hard to chew and swallow, which could lead to choking. Raw sausages should never be given, as they often contain harmful bacteria such as salmonella.",
@@ -205,7 +217,8 @@
         "es": "La tripa puede ser difícil de masticar y tragar, lo que podría provocar atragantamiento. Nunca se deben dar salchichas crudas, ya que a menudo contienen bacterias dañinas como la salmonela.",
         "pt": "A tripa pode ser difícil de mastigar e engolir, o que pode levar a engasgo. Nunca se devem dar salsichas cruas, porque costumam conter bactérias nocivas, como a salmonela.",
         "nl": "Het worstvel kan moeilijk te kauwen en door te slikken zijn, waardoor je kat zich kan verslikken. Geef nooit rauwe worst, want die bevat vaak schadelijke bacteriën zoals salmonella.",
-        "pl": "Osłonka bywa trudna do przeżucia i połknięcia, a to grozi zadławieniem. Surowej kiełbasy nigdy nie dawaj, bo często zawiera szkodliwe bakterie, takie jak Salmonella."
+        "pl": "Osłonka bywa trudna do przeżucia i połknięcia, a to grozi zadławieniem. Surowej kiełbasy nigdy nie dawaj, bo często zawiera szkodliwe bakterie, takie jak Salmonella.",
+        "cs": "Střívko se špatně žvýká i polyká a kočka by se jím mohla udusit. Syrové klobásy nikdy nedávejte, protože často obsahují škodlivé bakterie, například salmonelu."
       }
     }
   ],
@@ -354,6 +367,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-16",
       "verified_hash": "f275f835eced06abb2403e9d324220cd815a0d1dd4f5c0375d3b5422062e3fb3"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "4167eaa9d420c20c87c63fe9efea01ce61df263f1dc50cc9cadc9264865b369c"
     }
   }
 }

@@ -15,7 +15,8 @@
     "fr": "Moutarde",
     "pt": "Mostarda",
     "nl": "Mosterd",
-    "pl": "Musztarda"
+    "pl": "Musztarda",
+    "cs": "Hořčice"
   },
   "question": {
     "en": "Can dogs eat mustard?",
@@ -31,7 +32,8 @@
     "fr": "Les chiens peuvent-ils manger de la moutarde ?",
     "pt": "Os cães podem comer mostarda?",
     "nl": "Mogen honden mosterd eten?",
-    "pl": "Czy psy mogą jeść musztardę?"
+    "pl": "Czy psy mogą jeść musztardę?",
+    "cs": "Mohou psi jíst hořčici?"
   },
   "url_slug": {
     "en": "mustard",
@@ -47,7 +49,8 @@
     "fr": "moutarde",
     "pt": "mostarda",
     "nl": "mosterd",
-    "pl": "musztarda"
+    "pl": "musztarda",
+    "cs": "horcice"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Non, ne donnez jamais de moutarde à votre chien. Les graines de moutarde contiennent des composés qui peuvent irriter l’estomac et l’intestin d’un chien, et la moutarde peut provoquer des vomissements. Il est peu probable qu’un petit coup de langue dans votre assiette pose problème, mais une grande quantité pourrait être grave.",
     "pt": "Não, nunca dês mostarda ao teu cão. As sementes de mostarda contêm compostos que podem inflamar o estômago e os intestinos do cão, e a mostarda pode causar vómitos. É pouco provável que uma pequena lambidela do teu prato cause problemas, mas uma grande quantidade pode ser grave.",
     "nl": "Nee, geef je hond nooit mosterd. Mosterdzaad bevat stoffen die de maag en darmen van een hond kunnen ontsteken, en mosterd kan braken veroorzaken. Een klein likje van je bord geeft waarschijnlijk geen problemen, maar een grote hoeveelheid kan ernstig zijn.",
-    "pl": "Nie, nigdy nie dawaj psu musztardy. Ziarna gorczycy zawierają związki, które mogą wywołać stan zapalny żołądka i jelit psa, a musztarda może powodować wymioty. Jedno małe liźnięcie z talerza raczej nie zaszkodzi, ale duża ilość mogłaby być groźna."
+    "pl": "Nie, nigdy nie dawaj psu musztardy. Ziarna gorczycy zawierają związki, które mogą wywołać stan zapalny żołądka i jelit psa, a musztarda może powodować wymioty. Jedno małe liźnięcie z talerza raczej nie zaszkodzi, ale duża ilość mogłaby być groźna.",
+    "cs": "Ne, psovi nikdy nedávejte hořčici. Hořčičná semínka obsahují látky, které mohou psovi způsobit zánět žaludku a střev, a hořčice může vyvolat zvracení. Malé olíznutí z talíře pravděpodobně potíže nezpůsobí, ale větší množství může být vážné."
   },
   "why": {
     "en": "Mustard contains mustard seeds, and these contain toxic compounds that can lead to gastroenteritis, an inflammation of the stomach and intestines. Shop-bought mustard may also contain other ingredients that could harm your dog. Smaller dogs need to eat less than larger dogs to react. One source simply says mustard can upset a dog's stomach, another calls it toxic, so we follow the stricter advice.",
@@ -80,7 +84,8 @@
     "fr": "La moutarde contient des graines de moutarde, qui renferment des composés toxiques pouvant provoquer une gastro-entérite, c’est-à-dire une inflammation de l’estomac et de l’intestin. La moutarde du commerce peut aussi contenir d’autres ingrédients nocifs pour votre chien. Les petits chiens réagissent à de plus petites quantités que les grands. Une source dit simplement que la moutarde peut déranger l’estomac d’un chien, une autre la juge toxique ; nous suivons donc l’avis le plus strict.",
     "pt": "A mostarda contém sementes de mostarda, e estas têm compostos tóxicos que podem levar a gastroenterite, uma inflamação do estômago e dos intestinos. A mostarda comercial também pode ter outros ingredientes que podem fazer mal ao teu cão. Os cães mais pequenos podem reagir a quantidades menores do que os maiores. Uma fonte diz simplesmente que a mostarda pode irritar o estômago do cão, outra diz que é tóxica, por isso seguimos o conselho mais rigoroso.",
     "nl": "Mosterd bevat mosterdzaad, en dat bevat giftige stoffen die kunnen leiden tot een maag-darmontsteking, een ontsteking van de maag en darmen. Mosterd uit de winkel kan ook andere ingrediënten bevatten die je hond kunnen schaden. Kleinere honden hoeven minder te eten dan grotere honden om te reageren. De ene bron zegt alleen dat mosterd de maag van een hond van streek kan maken, een andere noemt het giftig, dus we volgen het strengere advies.",
-    "pl": "Musztarda zawiera ziarna gorczycy, które mają w sobie toksyczne związki mogące prowadzić do zapalenia żołądka i jelit. Musztarda ze sklepu może też zawierać inne składniki, które mogłyby zaszkodzić psu. Małe psy reagują po zjedzeniu mniejszej ilości niż duże. Jedno ze źródeł pisze po prostu, że musztarda może rozstroić psu żołądek, a inne nazywa ją toksyczną, więc przyjmujemy surowsze stanowisko."
+    "pl": "Musztarda zawiera ziarna gorczycy, które mają w sobie toksyczne związki mogące prowadzić do zapalenia żołądka i jelit. Musztarda ze sklepu może też zawierać inne składniki, które mogłyby zaszkodzić psu. Małe psy reagują po zjedzeniu mniejszej ilości niż duże. Jedno ze źródeł pisze po prostu, że musztarda może rozstroić psu żołądek, a inne nazywa ją toksyczną, więc przyjmujemy surowsze stanowisko.",
+    "cs": "Hořčice obsahuje hořčičná semínka a ta obsahují jedovaté látky, které mohou vést ke gastroenteritidě, tedy zánětu žaludku a střev. Hořčice z obchodu může obsahovat i další přísady, které by mohly psovi uškodit. Menší psi reagují už na menší množství než větší psi. Jeden zdroj uvádí jen to, že hořčice může psovi podráždit žaludek, jiný ji označuje za jedovatou, proto se řídíme přísnější radou."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Wymioty",
       "Biegunka",
       "Ból brzucha"
+    ],
+    "cs": [
+      "Nechuť k jídlu",
+      "Slinění",
+      "Zvracení",
+      "Průjem",
+      "Bolest břicha"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "fr": "Il est peu probable qu’un petit coup de langue pose problème. Si votre chien a mangé beaucoup de moutarde, ou si vous remarquez des signes comme des vomissements, une salivation excessive ou des douleurs au ventre, contactez votre vétérinaire dès que possible.",
     "pt": "É pouco provável que uma pequena lambidela cause problemas. Se o teu cão comeu muita mostarda, ou notares sinais como vómitos, salivação excessiva ou dor de barriga, fala com o teu veterinário o mais depressa possível.",
     "nl": "Een klein likje geeft waarschijnlijk geen problemen. Heeft je hond veel mosterd gegeten, of zie je verschijnselen zoals braken, kwijlen of buikpijn, neem dan zo snel mogelijk contact op met je dierenarts.",
-    "pl": "Jedno małe liźnięcie raczej nie zaszkodzi. Jeśli pies zjadł dużo musztardy albo zauważysz u niego objawy, takie jak wymioty, ślinienie się lub ból brzucha, jak najszybciej skontaktuj się z weterynarzem."
+    "pl": "Jedno małe liźnięcie raczej nie zaszkodzi. Jeśli pies zjadł dużo musztardy albo zauważysz u niego objawy, takie jak wymioty, ślinienie się lub ból brzucha, jak najszybciej skontaktuj się z weterynarzem.",
+    "cs": "Malé olíznutí pravděpodobně potíže nezpůsobí. Pokud pes snědl hodně hořčice nebo si všimnete příznaků, například zvracení, slinění nebo bolesti břicha, co nejdříve se obraťte na veterináře."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "fr": "La moutarde peut donner mal au ventre aux chiens. Garde-la dans ton assiette, loin de ton chien.",
     "pt": "A mostarda pode dar dor de barriga aos cães. Deixa-a no teu prato, longe do teu cão.",
     "nl": "Mosterd kan honden buikpijn geven. Houd hem op je eigen bord, uit de buurt van je hond.",
-    "pl": "Od musztardy psu może rozboleć brzuszek. Zostaw ją na swoim talerzu, z dala od psa."
+    "pl": "Od musztardy psu może rozboleć brzuszek. Zostaw ją na swoim talerzu, z dala od psa.",
+    "cs": "Po hořčici může psa bolet bříško. Nech si ji na svém talíři, daleko od pejska."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "fr": "Mon chien a léché un peu de moutarde. Est-ce un problème ?",
         "pt": "O meu cão lambeu um pouco de mostarda. É um problema?",
         "nl": "Mijn hond heeft een beetje mosterd opgelikt. Is dat een probleem?",
-        "pl": "Mój pies polizał odrobinę musztardy. Czy to problem?"
+        "pl": "Mój pies polizał odrobinę musztardy. Czy to problem?",
+        "cs": "Můj pes olízl trochu hořčice. Je to problém?"
       },
       "a": {
         "en": "A small lick off your plate is unlikely to cause a problem, but a large amount could cause a serious issue. Smaller dogs react to less than larger dogs.",
@@ -247,7 +262,8 @@
         "fr": "Il est peu probable qu’un petit coup de langue dans votre assiette pose problème, mais une grande quantité pourrait être grave. Les petits chiens réagissent à de plus petites quantités que les grands.",
         "pt": "É pouco provável que uma pequena lambidela do teu prato cause problemas, mas uma grande quantidade pode causar um problema grave. Os cães mais pequenos podem reagir a quantidades menores do que os maiores.",
         "nl": "Een klein likje van je bord geeft waarschijnlijk geen problemen, maar een grote hoeveelheid kan een ernstig probleem veroorzaken. Kleinere honden reageren op minder dan grotere honden.",
-        "pl": "Jedno małe liźnięcie z talerza raczej nie zaszkodzi, ale duża ilość mogłaby wywołać poważne dolegliwości. Małe psy reagują na mniejszą ilość niż duże."
+        "pl": "Jedno małe liźnięcie z talerza raczej nie zaszkodzi, ale duża ilość mogłaby wywołać poważne dolegliwości. Małe psy reagują na mniejszą ilość niż duże.",
+        "cs": "Malé olíznutí z vašeho talíře pravděpodobně potíže nezpůsobí, ale velké množství by mohlo způsobit vážné potíže. Menší psi reagují na menší množství než větší psi."
       }
     },
     {
@@ -265,7 +281,8 @@
         "fr": "Existe-t-il une moutarde sans danger ?",
         "pt": "Há algum tipo de mostarda seguro?",
         "nl": "Is er een soort mosterd die wel veilig is?",
-        "pl": "Czy jakaś musztarda jest bezpieczna dla psa?"
+        "pl": "Czy jakaś musztarda jest bezpieczna dla psa?",
+        "cs": "Je nějaký druh hořčice bezpečný?"
       },
       "a": {
         "en": "No. All types of mustard should be avoided, including homemade, wild, English and Dijon mustard.",
@@ -281,7 +298,8 @@
         "fr": "Non. Il faut éviter tous les types de moutarde, y compris la moutarde maison, la moutarde sauvage, la moutarde anglaise et la moutarde de Dijon.",
         "pt": "Não. Todos os tipos de mostarda devem ser evitados, incluindo a caseira, a selvagem, a inglesa e a de Dijon.",
         "nl": "Nee. Alle soorten mosterd moet je vermijden, ook zelfgemaakte, wilde, Engelse en Dijonmosterd.",
-        "pl": "Nie. Należy unikać wszystkich rodzajów musztardy, także domowej, dzikiej, angielskiej i dijońskiej."
+        "pl": "Nie. Należy unikać wszystkich rodzajów musztardy, także domowej, dzikiej, angielskiej i dijońskiej.",
+        "cs": "Ne. Vyhněte se všem druhům hořčice, včetně domácí, divoké, anglické i dijonské."
       }
     }
   ],
@@ -427,6 +445,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-16",
       "verified_hash": "2736aba8924d945d608186407859462a9e485902bd40357802e794232b015e36"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "be72a812db5156f85070276d0e44cf53474c2d97c9f888dcb712e97631670983"
     }
   }
 }
