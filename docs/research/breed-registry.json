@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "11a70901c924fd9a1133f56b2f03beab1ebc04159acf79f6c4fa8e3edb4cb0dd"
+      "sha256": "666f24e21a45df7cc283829fc557cc25ab2dfbb8d85de1e1ac64840fc42441a4"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -65970,7 +65970,7 @@
       "id": "wire_fox_terrier",
       "species": "dog",
       "order": 109,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Wire Fox Terrier",
         "sl": "Ostrodlaki foksterier"
@@ -66591,7 +66591,7 @@
       "id": "manchester_terrier",
       "species": "dog",
       "order": 110,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Manchester Terrier",
         "sl": "Manchesterski terier"
