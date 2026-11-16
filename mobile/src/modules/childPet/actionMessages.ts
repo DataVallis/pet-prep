@@ -9,7 +9,7 @@ import { stateFromErrorBody } from '@/modules/contract/signContract';
 import type { ChildPetState } from '@/api/client';
 import type { CareAction, ChildPetView, LockReason } from '@/modules/childPet/childPetView';
 import { familyClock, isLaterDay, whenText } from '@/modules/childPet/familyTime';
-import { shortClock } from '@/modules/childPet/mealWindows';
+import { windowLabel } from '@/modules/time/clock';
 import { dockText, dockWhen, type DockHint } from '@/modules/childPet/dockHint';
 import { BEHAVIOUR_STRINGS, nextTakeOutText, onlyChewingOpen, onlyScratchingEventsOpen } from '@/modules/behaviour/behaviour';
 import { onlyScratchingOpen } from '@/modules/catCare/catCare';
@@ -291,7 +291,7 @@ export function feedSuccessMessage(
   if (status !== 'accepted' || feedMode !== 'emergency') return successMessage('feed', status);
   const when = view ? whenText(view.feeding.next_feed_window?.start ?? null, view.server_time, view.timezone) : null;
   if (coversWindow) {
-    const label = `${shortClock(coversWindow.start)}–${shortClock(coversWindow.end)}`;
+    const label = windowLabel(coversWindow.start, coversWindow.end);
     return when ? CHILD_ACTION_STRINGS.emergencyFeedCovers(label, when) : CHILD_ACTION_STRINGS.emergencyFeedCoversNoTime(label);
   }
   return when ? CHILD_ACTION_STRINGS.emergencyFeed(when) : CHILD_ACTION_STRINGS.emergencyFeedNoTime;

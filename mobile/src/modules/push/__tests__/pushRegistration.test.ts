@@ -18,6 +18,7 @@ import {
 import { logout, REVOKE_TIMEOUT_MS, UNREGISTER_TIMEOUT_MS } from '@/modules/session/logout';
 import { useAppStore } from '@/store/appStore';
 import { i18n, setTextSpecies } from '@/i18n';
+import { setDeviceHour12ForTests } from '@/modules/time/clock';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -72,8 +73,20 @@ describe('registerForPush', () => {
     await expect(registerForPush()).resolves.toEqual({ status: 'registered', token: TOKEN });
 
     expect(getToken).toHaveBeenCalledWith({ projectId: 'project-uuid' });
-    expect(registerDevice).toHaveBeenCalledWith({ expo_push_token: TOKEN, platform: 'ios', app_version: '1.10.4 (abc1234)', locale: 'sl' });
+    expect(registerDevice).toHaveBeenCalledWith({ expo_push_token: TOKEN, platform: 'ios', app_version: '1.10.4 (abc1234)', locale: 'sl', hour12: false });
     expect(setItem).toHaveBeenCalledWith(PUSH_STORAGE_KEYS.token, TOKEN);
+  });
+
+  it('sends the phone\'s own 12 h setting; a change of it re-registers (David 2026-11-16)', async () => {
+    await registerForPush();
+    expect(registerDevice).toHaveBeenCalledTimes(1);
+    await registerForPush();
+    expect(registerDevice).toHaveBeenCalledTimes(1);
+
+    setDeviceHour12ForTests(true);
+    await registerForPush();
+    expect(registerDevice).toHaveBeenCalledTimes(2);
+    expect(registerDevice).toHaveBeenLastCalledWith(expect.objectContaining({ hour12: true }));
   });
 
   it('creates the reminder and alarm channels on Android before asking for a token', async () => {

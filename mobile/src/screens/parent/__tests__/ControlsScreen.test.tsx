@@ -32,6 +32,8 @@ jest.mock('@/api/client', () => {
       setHardStop: jest.fn(),
       getQuietHours: jest.fn(),
       updateQuietHours: jest.fn(),
+      updatePetQuietHours: jest.fn(),
+      updateTimeFormat: jest.fn(),
       inviteParent: jest.fn(),
       joinFamily: jest.fn(),
       getParentDashboard: jest.fn(),
@@ -240,19 +242,20 @@ describe('ControlsScreen — quiet hours', () => {
   });
 
   it('a shown message follows a language switch (M1-18 review)', async () => {
+    updateQuietHours.mockRejectedValueOnce(new ApiError('bad', 422, {}));
     renderWithQuery(<LocalizedControls />);
     await flush();
-    fireEvent.changeText(screen.getByTestId('qh-school-start'), '7:3');
     fireEvent.press(screen.getByTestId('qh-save'));
-    const slovenian = QUIET_HOURS_STRINGS.invalidTime;
+    await flush();
+    const slovenian = QUIET_HOURS_STRINGS.saveError;
     expect(screen.getByTestId('qh-message')).toHaveTextContent(slovenian);
 
     try {
       await act(async () => {
         await i18n.changeLanguage('en');
       });
-      expect(QUIET_HOURS_STRINGS.invalidTime).not.toBe(slovenian);
-      expect(screen.getByTestId('qh-message')).toHaveTextContent(QUIET_HOURS_STRINGS.invalidTime);
+      expect(QUIET_HOURS_STRINGS.saveError).not.toBe(slovenian);
+      expect(screen.getByTestId('qh-message')).toHaveTextContent(QUIET_HOURS_STRINGS.saveError);
     } finally {
       await act(async () => {
         await i18n.changeLanguage('sl');
@@ -260,21 +263,22 @@ describe('ControlsScreen — quiet hours', () => {
     }
   });
 
-  it('loads, validates HH:MM and saves', async () => {
+  it('loads, sets a time with the wheels (no typing) and saves (David 2026-11-16)', async () => {
     updateQuietHours.mockResolvedValueOnce({
       message: 'ok',
       quiet_hours: { id: 1, school_start: '07:30', school_end: '13:00', bedtime_start: '21:00', bedtime_end: '07:00', is_active: true },
     });
     renderControls();
     await flush();
-    expect(screen.getByTestId('qh-school-start').props.value).toBe('08:00');
+    expect(screen.getByTestId('qh-school-start-value')).toHaveTextContent('8:00');
+    expect(screen.queryByTestId('qh-school-start-wheel')).toBeNull();
 
-    fireEvent.changeText(screen.getByTestId('qh-school-start'), '7:3');
-    fireEvent.press(screen.getByTestId('qh-save'));
-    expect(screen.getByTestId('qh-message')).toHaveTextContent(QUIET_HOURS_STRINGS.invalidTime);
-    expect(updateQuietHours).not.toHaveBeenCalled();
-
-    fireEvent.changeText(screen.getByTestId('qh-school-start'), '07:30');
+    fireEvent.press(screen.getByTestId('qh-school-start'));
+    // Wheel rows are hidden from screen readers (the column is the adjustable element).
+    const hidden = { includeHiddenElements: true };
+    fireEvent.press(screen.getByTestId('qh-school-start-wheel-hour-item-7', hidden));
+    fireEvent.press(screen.getByTestId('qh-school-start-wheel-minute-item-30', hidden));
+    expect(screen.getByTestId('qh-school-start-value')).toHaveTextContent('7:30');
     fireEvent.press(screen.getByTestId('qh-save'));
     await flush();
     expect(updateQuietHours).toHaveBeenCalledWith({
@@ -285,6 +289,76 @@ describe('ControlsScreen — quiet hours', () => {
       is_active: true,
     });
     expect(screen.getByTestId('qh-message')).toHaveTextContent(QUIET_HOURS_STRINGS.saved);
+  });
+});
+
+describe('ControlsScreen — quiet hours per pet + time format (David 2026-11-16)', () => {
+  const updatePetQuietHours = api.updatePetQuietHours as jest.Mock;
+  const updateTimeFormat = api.updateTimeFormat as jest.Mock;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    (api.getQuietHours as jest.Mock).mockResolvedValue({
+      quiet_hours: { id: 1, school_start: null, school_end: null, bedtime_start: '21:00', bedtime_end: '07:00', is_active: true, saved: true },
+      timezone: 'Europe/Ljubljana',
+    });
+    updatePetQuietHours.mockResolvedValue({ pet_id: 7, quiet_hours: null, quiet_hours_follow_family: false });
+    updateTimeFormat.mockResolvedValue({ time_format: '12h' });
+  });
+
+  it('a pet follows the family by default; »Lastne ure« opens the editor prefilled and saves only that pet', async () => {
+    renderControls();
+    await flush();
+    expect(screen.getByTestId('pqh-7-summary')).toHaveTextContent('Sledi tihim uram družine: Spanje 21:00–7:00');
+    expect(screen.queryByTestId('pqh-7-save')).toBeNull();
+
+    fireEvent.press(screen.getByTestId('pqh-7-own'));
+    expect(screen.getByTestId('pqh-7-bed-start-value')).toHaveTextContent('21:00');
+    expect(updatePetQuietHours).not.toHaveBeenCalled();
+
+    // School 08:00–13:00 for this pet only.
+    fireEvent(screen.getByTestId('pqh-7-school-switch'), 'valueChange', true);
+    fireEvent.press(screen.getByTestId('pqh-7-save'));
+    await flush();
+    expect(updatePetQuietHours).toHaveBeenCalledWith(7, {
+      school_start: '08:00',
+      school_end: '13:00',
+      bedtime_start: '21:00',
+      bedtime_end: '07:00',
+      is_active: true,
+    });
+    expect(updateQuietHours).not.toHaveBeenCalled();
+  });
+
+  it('a pet with own hours goes back to the family with null', async () => {
+    const family = familyFromDashboard(
+      makeScoredDashboard([makeScoredChild()], [
+        makeFamilyPet({
+          id: 7,
+          quiet_hours: { school_start: '08:00', school_end: '13:00', bedtime_start: '20:00', bedtime_end: '06:30', is_active: true, follows_family: false },
+          quiet_hours_follow_family: false,
+        }),
+      ]) as never,
+    ) as FamilyOverview;
+    renderControls(family);
+    await flush();
+    expect(screen.getByTestId('pqh-7-school-start-value')).toHaveTextContent('8:00');
+
+    fireEvent.press(screen.getByTestId('pqh-7-family'));
+    await flush();
+    expect(updatePetQuietHours).toHaveBeenCalledWith(7, null);
+  });
+
+  it('»Zapis ure« 12-urni switches every clock in the app and is saved on the server', async () => {
+    renderControls();
+    await flush();
+    expect(screen.getByTestId('qh-bed-start-value')).toHaveTextContent('21:00');
+
+    fireEvent.press(screen.getByTestId('time-format-12h'));
+    await flush();
+    expect(updateTimeFormat).toHaveBeenCalledWith('12h');
+    expect(screen.getByTestId('qh-bed-start-value')).toHaveTextContent('9:00 pop.');
+    expect(screen.getByTestId('qh-bed-end-value')).toHaveTextContent('7:00 dop.');
   });
 });
 
@@ -306,11 +380,11 @@ describe('ControlsScreen — quiet hours show server truth (fix/quiet-hours-defa
     await flush();
 
     expect(screen.getByTestId('qh-not-saved')).toHaveTextContent(QUIET_HOURS_STRINGS.defaultsApply);
-    // Pre-filled with the server default: night 21:00–07:00, no school window.
-    expect(screen.getByTestId('qh-bed-start').props.value).toBe('21:00');
-    expect(screen.getByTestId('qh-bed-end').props.value).toBe('07:00');
-    expect(screen.getByTestId('qh-school-start').props.value).toBe('');
-    expect(screen.getByTestId('qh-school-end').props.value).toBe('');
+    // Pre-filled with the server default: night 21:00–07:00, no school window (switch off).
+    expect(screen.getByTestId('qh-bed-start-value')).toHaveTextContent('21:00');
+    expect(screen.getByTestId('qh-bed-end-value')).toHaveTextContent('7:00');
+    expect(screen.getByTestId('qh-school-switch').props.value).toBe(false);
+    expect(screen.queryByTestId('qh-school-start')).toBeNull();
 
     fireEvent.press(screen.getByTestId('qh-save'));
     await flush();
@@ -334,7 +408,7 @@ describe('ControlsScreen — quiet hours show server truth (fix/quiet-hours-defa
     await flush();
 
     expect(screen.queryByTestId('qh-not-saved')).toBeNull();
-    expect(screen.getByTestId('qh-bed-start').props.value).toBe('22:00');
+    expect(screen.getByTestId('qh-bed-start-value')).toHaveTextContent('22:00');
   });
 
   it('shows no "not saved" notice while loading or after a load error', async () => {

@@ -4,6 +4,7 @@
 
 import { isAwaitingContract, lockStateFromBroadcast, lockStateFromPet, useAppStore } from '@/store/appStore';
 import type { Pet, PetUpdatedBroadcast } from '@/types';
+import { clockText, getTimeFormat } from '@/modules/time/clock';
 
 // Helper to create a mock pet
 function createMockPet(overrides: Partial<Pet> = {}): Pet {
@@ -209,6 +210,21 @@ describe('session (M1-12)', () => {
     expect(s.pairingStatus).toBe('paired');
     expect(s.lockState).toBe('none');
     expect(s.bootStatus).toBe('ready');
+  });
+
+  it('signIn applies the server\'s 12 / 24 h choice at once (login / PIN / restore user, QA #1259 m7)', () => {
+    expect(getTimeFormat()).toBe('auto');
+    useAppStore.getState().signIn({
+      token: 'tok',
+      user: { id: 1, name: 'Starš', email: 'p@x.si', role: 'parent', time_format: '12h' } as never,
+      pet: null,
+    });
+    expect(getTimeFormat()).toBe('12h');
+    expect(clockText('17:00')).toBe('5:00 pop.');
+
+    // An older server (no field) keeps the device's choice.
+    useAppStore.getState().signIn({ token: 'tok', user: { id: 1, name: 'Starš', email: 'p@x.si', role: 'parent' }, pet: null });
+    expect(getTimeFormat()).toBe('12h');
   });
 
   it('signIn without a pet leaves the pairing status unpaired', () => {

@@ -13,6 +13,7 @@ import type { CatGameKind } from '@/modules/catCare/catCare';
 import type { CareTaskKey } from '@/modules/careTasks/careTasks';
 import type { SignInMethod } from '@/modules/session/signInMethod';
 import { readAuthMethods, type AuthMethods } from '@/modules/session/authMethods';
+import { isTimeFormat, saveTimeFormat } from '@/modules/time/clock';
 
 export interface AppUser {
   id: number;
@@ -270,6 +271,10 @@ export const useAppStore = create<AppStore>((set, get) => ({
     set({ pairingStatus: status, pairingError: error }),
   signIn: ({ token, user, pet, awaitingContract, familyTimezone, signInMethod, sharedSession }) => {
     const sessionPet = petWithContractFlag(pet, awaitingContract);
+    // David 2026-11-16: the person's 12 / 24 h choice from the server (`GET /api/user`,
+    // login) wins over this device's copy; missing (older server) → keep the device's.
+    const timeFormat = (user as { time_format?: unknown }).time_format;
+    if (isTimeFormat(timeFormat)) void saveTimeFormat(timeFormat);
     set({
       authToken: token,
       user: { id: user.id, name: user.name, email: user.email, role: user.role },

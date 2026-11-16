@@ -36,6 +36,7 @@ import { ApiError, api } from '@/api/client';
 import { Text } from '@/components/ui/Text';
 import { Card, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { currentLanguageTag, t, tPets, tSpecies, type PetGroup } from '@/i18n';
+import { dateTimeText } from '@/modules/childPet/familyTime';
 import { strings } from '@/i18n/strings';
 import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
 import { privacyUrl, termsUrl } from '@/modules/auth/signup';
@@ -106,21 +107,8 @@ function isGoodMessage(m: Message): boolean {
 
 /** "pon., 14. okt., 18:30" in the family's zone; the raw ISO string if Intl can't. */
 export function formatTrialEnd(iso: string, timeZone: string): string {
-  const date = new Date(iso);
-  if (Number.isNaN(date.getTime())) return iso;
-  try {
-    return new Intl.DateTimeFormat(currentLanguageTag(), {
-      weekday: 'short',
-      day: 'numeric',
-      month: 'short',
-      // David 2026-10-21: "7:00" style everywhere (no leading zero on the hour).
-      hour: 'numeric',
-      minute: '2-digit',
-      timeZone,
-    }).format(date);
-  } catch {
-    return iso;
-  }
+  // David 2026-10-21 "7:00" / 2026-11-16 12 / 24 h: the time through `clockText`.
+  return dateTimeText(iso, timeZone, currentLanguageTag()) ?? iso;
 }
 
 interface ChallengeScreenProps {

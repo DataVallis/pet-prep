@@ -281,6 +281,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-16 (cloud, mobile) — wheel time picker, per-pet quiet hours editor, 12 / 24 h setting (`feat/time-format-wheel-picker`, stacked on `feat/per-pet-quiet-hours`; JS only → OTA; merge only after the backend PR)
+- `modules/time/clock.ts` = the one clock formatter (12 / 24 h, `auto` = phone); `familyTime#clockText`, meal chips (`windowLabel`), Challenge trial end / Wishes dates rerouted. `TimeFormatCard` (Nadzor), device + server copy, push registration `hour12`. `TimeWheelPicker` / `WheelColumn` (no native dep) in `QuietHoursForm` (family card, no more text inputs) and `PetQuietHoursRow` (»Kot družina« / »Lastne ure«). Not verified on a device.
+
 ### 2026-11-16 (cloud, backend) — quiet hours per pet + 12 / 24 h clock, server part (`feat/per-pet-quiet-hours`, David »3 psi in mačka … za vsakega posebej«, **not merged — one QA round first**: migration on `pets`/`users`/`device_push_tokens` + game rules)
 - `pets.own_quiet_hours` (jsonb, null = follow the family) — `Pet::quietHours()` = own ?? family row ?? DEFAULTS on the pet clock; `RoutineLedgerService::loadInputs` the only other reader rerouted (every other rule already called `Pet::quietHours()`). `PUT /api/parent/pets/{pet}/quiet-hours` (`PetQuietHoursService`, family → pet lock, `pet_quiet_hours_changed`); dashboard `family.pets[].quiet_hours` + child state `quiet_hours`; export. Takes effect like a family change (no recompute). Old family endpoint byte for byte.
 - `users.time_format` (auto|24h|12h, `PUT /api/user/time-format`, `GET /api/user`), `device_push_tokens.hour12` (`POST /api/devices`); push `:time` per phone in `NotificationService::message()` (`ClockText::to12h`); old apps → 24 h as before. Tests `PetQuietHoursTest` (18). Next: mobile PR (wheel picker, per-pet editor, format setting).

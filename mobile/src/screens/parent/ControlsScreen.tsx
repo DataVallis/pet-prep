@@ -19,6 +19,7 @@ import AccountCard from '@/components/parent/AccountCard';
 import FamilyParentsCard from '@/components/parent/FamilyParentsCard';
 import JoinFamilyCard, { joinNoticeText, type JoinNotice } from '@/components/parent/JoinFamilyCard';
 import LanguageCard from '@/components/parent/LanguageCard';
+import TimeFormatCard from '@/components/parent/TimeFormatCard';
 import NotificationsCard from '@/components/parent/NotificationsCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
 import QuietHoursCard from '@/components/parent/QuietHoursCard';
@@ -103,6 +104,8 @@ export default function ControlsScreen({
         {isEmpty && <JoinFamilyCard onJoined={(joined) => onNotice?.(joined)} />}
 
         <LanguageCard />
+        {/* David 2026-11-16: 12 / 24 h (auto = the phone). */}
+        <TimeFormatCard />
         <AccountCard family={family} />
         {/* Build + bundle identity and the update check (which code David / testers run, 2026-10-29). */}
         <View style={styles.about} testID="controls-about">

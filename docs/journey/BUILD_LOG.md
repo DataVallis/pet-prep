@@ -8,6 +8,17 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-16 — Trije psi in mačka, štirje urniki: tihe ure za vsakega ljubljenčka in ura 12 / 24 h
+
+**Kaj:** David: »Mi imamo 3 pse in mačko. Hčerka mačko, sin psa. Jaz psa in žena psa. Zdaj pa ko nastavim school hours mi avtomatsko za vse živali velja. To ni ok.« Tihe ure so bile ena nastavitev za celo družino. Zdaj vsak ljubljenček sledi družinskim uram, starš pa mu lahko nastavi lastne (šola, spanje). Hkrati: ure v aplikaciji in obvestilih po telefonu (24-urni ali 12-urni zapis) z ročno izbiro, ure pa se ne tipkajo več, ampak nastavijo z vrtljivimi kolesi kot na budilki (minute po 15).
+**Zakaj je pomembno:** družina z več živalmi in več otroki nima enega urnika; če velja ena ura za vse, en ljubljenček spi, ko bi moral jesti, drugi pa je lačen med poukom. In ker gremo v tujino: v ZDA nihče ne bere »17:00«.
+- 👩 Staršem: »Vsak ljubljenček ima lahko svoje tihe ure. Sprememba družinskih ur ne premakne tistih, ki imajo svoje.«
+- 🧒 Otrokom: »Tvoj kuža spi takrat, ko imaš ti šolo — ne takrat, ko jo ima sestra.«
+- 💼 Investitorjem: pripravljeno za trge z 12-urnim zapisom (ZDA, Kanada, Avstralija) brez nove gradnje v trgovini — vse prek posodobitve OTA.
+- 🛠 Tehnično: en dostop `Pet::quietHours()` (lastne ure ljubljenčka → družinske → privzete, po uri ljubljenčka), sprememba velja kot pri družini (brez preračuna zaključenih dni); ura v obvestilu se oblikuje za vsak telefon posebej (izbira osebe, »samodejno« = nastavitev telefona); kolesa brez nove nativne knjižnice. 18 novih testov na strežniku, 18 v aplikaciji.
+
+---
+
 ## 2026-11-15 — »Koliko dela je z labradorcem?«: povzetek brez datotek in e-naslovi brez podvajanja
 
 **Kaj:** Povzetek za starše smo isti dan naredili dvakrat. Najprej kot PDF v Lemon Squeezy, potem je David rekel, da to pri 300 pasmah in veliko jezikih ne gre: nihče ne bo nalagal tisočih datotek. Zdaj stran povzetek sestavi sama iz izbir obiskovalca (pes ali mladiček, jezik, valuta, njegove ocene stroškov), starš ga natisne ali shrani kot PDF. E-naslov je neobvezen: starš ga pusti s privolitvijo za novice, strežnik ga shrani enkrat, tudi če ga vpiše večkrat. IP-ja in imena ne shranjujemo, strežnik ne pošilja e-pošte.

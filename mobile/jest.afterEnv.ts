@@ -11,6 +11,7 @@ import { memoryPendingStore, setPendingPurchaseStoreForTests } from '@/modules/w
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { resetZoneSuggestionForTests, setZoneSuggestionStoreForTests } from '@/modules/familyZone/zoneSuggestionPrefs';
 import { setPhoneZoneForTests } from '@/modules/familyZone/familyZone';
+import { applyTimeFormat, setDeviceHour12ForTests } from '@/modules/time/clock';
 
 beforeEach(() => {
   childPetFetchGate.reset();
@@ -31,4 +32,7 @@ beforeEach(() => {
   setZoneSuggestionStoreForTests({ getItemAsync: async () => null, setItemAsync: async () => undefined });
   resetZoneSuggestionForTests();
   setPhoneZoneForTests(null);
+  // David 2026-11-16: 24 h phone, `auto` choice — the clock texts tests assert stay "7:00".
+  applyTimeFormat('auto');
+  setDeviceHour12ForTests(false);
 });
