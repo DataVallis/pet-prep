@@ -1,0 +1,141 @@
+{
+  "slug": "bone-broth",
+  "species": "dog",
+  "name": {
+    "en": "Bone broth",
+    "sl": "Kostna juha"
+  },
+  "question": {
+    "en": "Can dogs have bone broth?",
+    "sl": "Ali lahko psi jedo kostno juho?"
+  },
+  "url_slug": {
+    "en": "bone-broth",
+    "sl": "kostna-juha"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, plain bone broth made with dog-safe ingredients is fine. It is mild and easy on sensitive stomachs. Strain out every bone before serving, remove the fat layer, and skip broths with onions, garlic or salt.",
+    "sl": "Da, navadna kostna juha iz sestavin, ki so za pse varne, je v redu. Je blaga in nežna do občutljivih želodcev. Pred serviranjem precedite vse kosti, odstranite plast maščobe in se izognite juham s čebulo, česnom ali soljo."
+  },
+  "why": {
+    "en": "Bone broth is a stock made by slowly cooking animal bones at low heat for a long time. It is mild, flavourful and easy on sensitive stomachs, and it can make food more appealing to dogs with a reduced appetite. The risks come from what goes into it: some broths contain additives such as onions, garlic or salt, and cooked bones can splinter and injure your dog or get lodged in the throat.",
+    "sl": "Kostna juha je osnova, ki nastane s počasnim kuhanjem živalskih kosti pri nizki temperaturi dalj časa. Je blaga, okusna in nežna do občutljivih želodcev, psom s slabšim apetitom pa lahko naredi hrano bolj privlačno. Tveganja izvirajo iz sestavin: nekatere juhe vsebujejo dodatke, kot so čebula, česen ali sol, kuhane kosti pa se lahko razcepijo in psa poškodujejo ali se mu zataknejo v grlu."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog had broth that contains onions, garlic or a lot of salt, see our onion, garlic and salt pages. If your dog swallowed a cooked bone, see our cooked bones page. Bone broth won't fix joint problems on its own, so talk to your vet about them.",
+    "sl": "Če je pes pojedel juho s čebulo, česnom ali veliko soli, poglejte naše strani o čebuli, česnu in soli. Če je pes pogoltnil kuhano kost, poglejte našo stran o kuhanih kosteh. Kostna juha sama ne odpravi težav s sklepi, zato se o njih pogovorite z veterinarjem."
+  },
+  "serving": {
+    "en": "Use only natural, dog-safe ingredients, with no onions, garlic or salt. After cooking, refrigerate the broth, remove the hardened layer of fat from the top and strain out every bone. Serve it on its own or mixed into dry food.",
+    "sl": "Uporabite le naravne sestavine, ki so za pse varne, brez čebule, česna in soli. Po kuhanju juho ohladite v hladilniku, odstranite strjeno plast maščobe z vrha in precedite vse kosti. Ponudite jo samo ali primešano suhi hrani."
+  },
+  "child": {
+    "en": "Bone broth can be a tasty treat for dogs. A grown-up makes it and takes out every bone first, because bones aren't safe for dogs.",
+    "sl": "Kostna juha je lahko okusna posladica za pse. Pripravi jo odrasla oseba, ki prej odstrani vse kosti, saj kosti za pse niso varne."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "How is bone broth different from regular broth?",
+        "sl": "V čem se kostna juha razlikuje od navadne juhe?"
+      },
+      "a": {
+        "en": "Bone broth is a stock liquid made by slowly cooking animal bones at low heat for an extended period. For everyday broth and stock cubes, see our broth page.",
+        "sl": "Kostna juha je tekoča osnova, ki nastane s počasnim kuhanjem živalskih kosti pri nizki temperaturi dalj časa. O navadni juhi in jušnih kockah si preberite našo stran o juhi."
+      }
+    },
+    {
+      "q": {
+        "en": "Can I use store-bought bone broth?",
+        "sl": "Ali lahko uporabim kupljeno kostno juho?"
+      },
+      "a": {
+        "en": "Look for one with natural, dog-safe ingredients, because some contain additives for preservation and taste, such as onions, garlic or salt.",
+        "sl": "Izberite takšno z naravnimi sestavinami, ki so za pse varne, saj nekatere vsebujejo dodatke za obstojnost in okus, kot so čebula, česen ali sol."
+      }
+    },
+    {
+      "q": {
+        "en": "Does bone broth help my dog's joints?",
+        "sl": "Ali kostna juha pomaga pasjim sklepom?"
+      },
+      "a": {
+        "en": "The AKC says the collagen in bone broth contributes to joint health, but bone broth won't cure joint problems without other treatments, so contact your vet.",
+        "sl": "AKC navaja, da kolagen v kostni juhi prispeva k zdravju sklepov, vendar kostna juha brez drugih zdravljenj težav s sklepi ne odpravi, zato se obrnite na veterinarja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD211",
+      "quote": "Bone broth is a stock liquid made from slowly cooking animal bones at low heat for an extended period."
+    },
+    {
+      "id": "KD211",
+      "quote": "When choosing a bone broth for your dog, you need to look for ones with natural, dog-safe ingredients."
+    },
+    {
+      "id": "KD211",
+      "quote": "Some may contain additives for preservation and taste, such as onions, garlic, or salt."
+    },
+    {
+      "id": "KD211",
+      "quote": "unlike giving your dog cooked bones, which can be dangerous and can get lodged in their throats."
+    },
+    {
+      "id": "KD211",
+      "quote": "The collagen in bone broth also contributes to the health and stability of your dog's joints."
+    },
+    {
+      "id": "KD211",
+      "quote": "Bone broth won't cure joint problems without other treatments, however,"
+    },
+    {
+      "id": "KD211",
+      "quote": "so you should also contact your vet for additional solutions."
+    },
+    {
+      "id": "KD222",
+      "quote": "Bone broth is mild, flavorful, and easy on sensitive stomachs."
+    },
+    {
+      "id": "KD222",
+      "quote": "It can also make food more appealing to dogs with reduced appetites."
+    },
+    {
+      "id": "KD222",
+      "quote": "After cooking, refrigerate the broth and remove the hardened layer of fat from the top before serving."
+    },
+    {
+      "id": "KD222",
+      "quote": "Cooked bones can splinter and injure your dog, so strain out every bone before serving."
+    },
+    {
+      "id": "KD222",
+      "quote": "You can serve bone broth on its own or mix it with dry food to add moisture and flavor."
+    }
+  ],
+  "related": [
+    "broth",
+    "cooked-bones",
+    "raw-bones",
+    "onion",
+    "garlic",
+    "salt"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "05cd498b2fe33c24a570e11a902dafc053a44d19c787ae6ca3d880b446bde6a2"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d27a3c4f067c327a375e198227c83ea378531afbd0dbd2e82cd68bf2da2eca9b"
+    }
+  }
+}

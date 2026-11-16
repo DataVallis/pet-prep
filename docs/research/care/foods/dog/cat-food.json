@@ -1,0 +1,160 @@
+{
+  "slug": "cat-food",
+  "species": "dog",
+  "name": {
+    "en": "Cat food",
+    "sl": "Mačja hrana"
+  },
+  "question": {
+    "en": "Can dogs eat cat food?",
+    "sl": "Ali lahko psi jedo mačjo hrano?"
+  },
+  "url_slug": {
+    "en": "cat-food",
+    "sl": "macja-hrana"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not regularly. A dog that sneaks some of the cat's food now and then probably won't be harmed, but it shouldn't become a habit. Cat food is much higher in meat-based protein and doesn't have the right balance of nutrients for dogs.",
+    "sl": "Ne redno. Psu, ki občasno izmakne malo mačje hrane, to verjetno ne bo škodilo, vendar to ne sme postati navada. Mačja hrana ima veliko več beljakovin iz mesa in nima pravega razmerja hranil za pse."
+  },
+  "why": {
+    "en": "Cats are obligate carnivores, so cat food is much higher in meat-based protein than dog food and doesn't have the correct balance of protein, fibre and nutrients dogs need. Over time the imbalance can lead to stomach and gut upset, obesity and pancreatitis, and the high protein levels can be hard on a dog's liver and kidneys.",
+    "sl": "Mačke so obvezni mesojedci, zato ima mačja hrana veliko več beljakovin iz mesa kot pasja in nima pravega razmerja beljakovin, vlaknin in hranil, ki jih psi potrebujejo. Sčasoma lahko to neravnovesje povzroči težave z želodcem in črevesjem, debelost in vnetje trebušne slinavke, veliko beljakovin pa lahko obremeni pasja jetra in ledvice."
+  },
+  "signs": {
+    "en": [
+      "Tummy pain and a hunched back",
+      "Tiredness and weakness",
+      "Not wanting to eat",
+      "Vomiting",
+      "Diarrhoea",
+      "Swollen belly",
+      "Fever"
+    ],
+    "sl": [
+      "Bolečine v trebuhu in usločen hrbet",
+      "Utrujenost in šibkost",
+      "Neješčnost",
+      "Bruhanje",
+      "Driska",
+      "Napihnjen trebuh",
+      "Vročina"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog shows signs of tummy discomfort after eating cat food, call your vet. Signs of pancreatitis, such as a hunched back with tummy pain, vomiting, weakness or fever, need immediate veterinary care.",
+    "sl": "Če ima pes po mačji hrani znake nelagodja v trebuhu, pokličite veterinarja. Znaki vnetja trebušne slinavke, kot so usločen hrbet z bolečinami v trebuhu, bruhanje, šibkost ali vročina, zahtevajo takojšnjo veterinarsko oskrbo."
+  },
+  "serving": null,
+  "child": {
+    "en": "Cat food is made for cats. Dogs stay healthiest with their own dog food, so help keep the cat's bowl up high!",
+    "sl": "Mačja hrana je narejena za mačke. Psi so najbolj zdravi s svojo pasjo hrano, zato pomagaj, da je mačja skledica visoko!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "How do I keep my dog out of the cat's food?",
+        "sl": "Kako preprečim, da bi pes jedel mačjo hrano?"
+      },
+      "a": {
+        "en": "Place the cat's food out of your dog's reach. If your dog regularly gets into it, change where you keep the cat's food or where and how you feed your cat.",
+        "sl": "Mačjo hrano postavite izven pasjega dosega. Če pes do nje redno pride, spremenite, kje jo hranite ali kje in kako hranite mačko."
+      }
+    },
+    {
+      "q": {
+        "en": "Can my dog eat cat food in an emergency?",
+        "sl": "Ali lahko pes v sili je mačjo hrano?"
+      },
+      "a": {
+        "en": "Dogs can survive on cat food in a tough spot, but unless your vet recommends otherwise, the best food for your dog is dog food.",
+        "sl": "Psi lahko v stiski preživijo tudi z mačjo hrano, vendar je za psa, razen če veterinar svetuje drugače, najboljša pasja hrana."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD245",
+      "quote": "Your dog probably won't be harmed by sneaking some of the cat's food now and then,"
+    },
+    {
+      "id": "KD245",
+      "quote": "but it isn't something you should give them on a consistent basis."
+    },
+    {
+      "id": "KD245",
+      "quote": "Cats are obligate carnivores, which means that cats must eat meat."
+    },
+    {
+      "id": "KD245",
+      "quote": "Cat food is much higher in meat-based protein than dog food."
+    },
+    {
+      "id": "KD245",
+      "quote": "it doesn’t have the correct balance of protein, fiber, and all of the nutrients dogs need to stay healthy"
+    },
+    {
+      "id": "KD245",
+      "quote": "Dogs can certainly survive on cat food in a tough spot, but the nutrient imbalance can lead to gastrointestinal upset,"
+    },
+    {
+      "id": "KD245",
+      "quote": "the nutrient imbalance can lead to gastrointestinal upset, obesity, and pancreatitis."
+    },
+    {
+      "id": "KD245",
+      "quote": "can be hard on their liver and kidney."
+    },
+    {
+      "id": "KD245",
+      "quote": "Symptoms include abdominal pain and a hunched back, lethargy and weakness, appetite loss, vomiting and diarrhea,"
+    },
+    {
+      "id": "KD245",
+      "quote": "a distended abdomen, and fever."
+    },
+    {
+      "id": "KD245",
+      "quote": "Pancreatitis requires immediate veterinary care."
+    },
+    {
+      "id": "KD245",
+      "quote": "If your dog exhibits signs of intestinal discomfort after eating cat food, call your veterinarian."
+    },
+    {
+      "id": "KD245",
+      "quote": "As a general rule, try to discourage your dog from eating cat food unsupervised by placing it out of their reach."
+    },
+    {
+      "id": "KD245",
+      "quote": "If your dog regularly gets into cat food, it's best to change where you keep your cat's food"
+    },
+    {
+      "id": "KD245",
+      "quote": "or where and how you feed your cat."
+    },
+    {
+      "id": "KD245",
+      "quote": "Unless your veterinarian recommends otherwise, the best food for your dog is dog food, not cat food."
+    }
+  ],
+  "related": [
+    "fatty-meat",
+    "cooked-chicken",
+    "tuna"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f0ce75ebeec56d87075cc7572c00c78d81aa5eaad323b8b0927539c768f5f4ef"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "98cd3fb68c2e4a0efa61d474e43257895e011f5482144ea969d1c655731b9015"
+    }
+  }
+}

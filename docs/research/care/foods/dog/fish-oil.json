@@ -1,0 +1,149 @@
+{
+  "slug": "fish-oil",
+  "species": "dog",
+  "name": {
+    "en": "Fish oil",
+    "sl": "Ribje olje"
+  },
+  "question": {
+    "en": "Can dogs have fish oil?",
+    "sl": "Ali lahko psi dobijo ribje olje?"
+  },
+  "url_slug": {
+    "en": "fish-oil",
+    "sl": "ribje-olje"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Only if your vet recommends it. Fish oil is a supplement, not a snack, and vets advise always talking to your veterinarian before giving your dog any supplements. It can cause side effects such as diarrhoea, vomiting, gas and fishy breath.",
+    "sl": "Le če ga priporoči veterinar. Ribje olje je prehransko dopolnilo, ne prigrizek, veterinarji pa svetujejo, da se pred dajanjem kakršnihkoli dopolnil vedno posvetujete z veterinarjem. Lahko povzroči neželene učinke, kot so driska, bruhanje, vetrovi in ribji zadah."
+  },
+  "why": {
+    "en": "Fish oil comes from oily fish such as salmon, mackerel and sardines, and its omega-3 fatty acids have been used to support a dog's skin, coat, joints and heart. But it is a health product: possible side effects include diarrhoea, vomiting, gas, fishy-smelling breath or skin and, in rare cases, a higher bleeding risk. VCA advises caution in dogs taking blood thinners, dogs with a clotting disorder, diabetes or a history of pancreatitis. Just because a product is natural does not mean it is safe.",
+    "sl": "Ribje olje pridobivajo iz mastnih rib, kot so losos, skuša in sardele, njegove omega-3 maščobne kisline pa se uporabljajo za podporo pasje kože, dlake, sklepov in srca. Vendar gre za zdravstveni izdelek: možni neželeni učinki so driska, bruhanje, vetrovi, ribji vonj iz ust ali kože in redko večje tveganje za krvavitve. VCA svetuje previdnost pri psih, ki jemljejo zdravila proti strjevanju krvi, ter pri psih z motnjo strjevanja krvi, sladkorno boleznijo ali preteklim vnetjem trebušne slinavke. Če je izdelek naraven, še ni nujno varen."
+  },
+  "signs": {
+    "en": [
+      "Diarrhoea",
+      "Vomiting",
+      "Gas",
+      "Fishy-smelling breath or skin",
+      "Bleeding more easily (rare)"
+    ],
+    "sl": [
+      "Driska",
+      "Bruhanje",
+      "Vetrovi",
+      "Ribji vonj iz ust ali kože",
+      "Lažje krvavenje (redko)"
+    ]
+  },
+  "what_to_do": {
+    "en": "Talk to your vet before starting fish oil or any other supplement. If your dog has a serious reaction, stop giving fish oil and contact your vet immediately. Keep the container out of reach of children and pets.",
+    "sl": "Preden začnete dajati ribje olje ali katerokoli drugo dopolnilo, se posvetujte z veterinarjem. Če ima pes resno reakcijo, ribjega olja ne dajajte več in takoj pokličite veterinarja. Embalažo hranite izven dosega otrok in živali."
+  },
+  "serving": null,
+  "child": {
+    "en": "Fish oil is a special supplement. Only the vet and grown-ups decide if a dog needs it!",
+    "sl": "Ribje olje je posebno dopolnilo. Ali ga pes potrebuje, odločijo le veterinar in odrasli!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can old or rancid fish oil upset my dog?",
+        "sl": "Ali lahko staro ali žarko ribje olje psu škoduje?"
+      },
+      "a": {
+        "en": "Yes. Consuming rancid fish oil may lead to stomach and gut upset, including vomiting or diarrhoea.",
+        "sl": "Da. Žarko ribje olje lahko povzroči prebavne težave, vključno z bruhanjem ali drisko."
+      }
+    },
+    {
+      "q": {
+        "en": "Is fish oil safe because it's natural?",
+        "sl": "Ali je ribje olje varno, ker je naravno?"
+      },
+      "a": {
+        "en": "Not automatically. Just because a product is natural does not mean it is safe. Your vet is the best source of information about the safety of non-drug health products for your dog.",
+        "sl": "Ne samodejno. Če je izdelek naraven, še ni nujno varen. Veterinar je najboljši vir informacij o varnosti zdravstvenih izdelkov, ki niso zdravila, za vašega psa."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD243",
+      "quote": "Fish oil is derived from the tissues of oily fish such as salmon, mackerel, and sardines."
+    },
+    {
+      "id": "KD243",
+      "quote": "Omega-3 fatty acids have been used to aid in a dog’s skin, coat, joint, brain, heart, and vision health,"
+    },
+    {
+      "id": "KD243",
+      "quote": "Possible side effects include diarrhea, vomiting, gas, and fishy-smelling breath or skin."
+    },
+    {
+      "id": "KD243",
+      "quote": "Increased bleeding risk in rare cases"
+    },
+    {
+      "id": "KD243",
+      "quote": "Consuming rancid fish oil may lead to gastrointestinal upset, including vomiting or diarrhea."
+    },
+    {
+      "id": "KD243",
+      "quote": "Always speak to your veterinarian before giving your dog any supplements,"
+    },
+    {
+      "id": "KD244",
+      "quote": "is a supplement derived from cold-water fish such as salmon."
+    },
+    {
+      "id": "KD244",
+      "quote": "Pets that are taking anticoagulants"
+    },
+    {
+      "id": "KD244",
+      "quote": "Pets with a blood clotting disorder"
+    },
+    {
+      "id": "KD244",
+      "quote": "Pets that are diabetic or have a history of pancreatitis"
+    },
+    {
+      "id": "KD244",
+      "quote": "stop giving fish oil and contact your veterinarian immediately"
+    },
+    {
+      "id": "KD244",
+      "quote": "Your veterinarian is the best source of information about the safety of non-drug health products in pets."
+    },
+    {
+      "id": "KD244",
+      "quote": "Just because a product is natural does not mean it is safe."
+    },
+    {
+      "id": "KD244",
+      "quote": "Keep the container out of reach of children and pets."
+    }
+  ],
+  "related": [
+    "salmon",
+    "sardines",
+    "tuna",
+    "coconut-oil"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "62e27d0a6b101bccda8fe9ad5f397329e599c0231855ae4a07b510e21ed2f695"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1433347412c46b787a6097bb053b55a181560bff2f07886e7c3ac69a4e18e3a8"
+    }
+  }
+}

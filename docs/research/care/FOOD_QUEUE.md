@@ -194,8 +194,16 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [x] water
 - [c] cow-milk-kittens (cat)
 - [x] lactose-free-milk
-- [ ] goat-milk · kefir · juice · soda · coconut-water
-- [ ] bone-broth · sports-drinks · fish-oil · vitamins-human (→ hazards, not food) · pet-treats-for-other-species
-  (dog food for cats, cat food for dogs)
+- [x] goat-milk
+- [d] kefir — no source cat 2026-11-16
+- [d] juice — no source cat 2026-11-16 (only tier C cat pages)
+- [x] soda
+- [d] coconut-water — no source cat 2026-11-16 (ASPCA coconut text names "pets", not cats)
+- [d] bone-broth — no source cat 2026-11-16 (generic cat broth stays in `broth`)
+- [x] sports-drinks
+- [x] fish-oil
+- [-] vitamins-human → hazards, not food
+- [d] cat-food (dog) — pet food for the other species
+- [c] dog-food (cat) — pet food for the other species
 
 Hazards that are not food (lilies, poinsettia, medicines, permethrin, antifreeze …) → steber B, separate queue.

@@ -1,0 +1,154 @@
+{
+  "slug": "soda",
+  "species": "cat",
+  "name": {
+    "en": "Soda (soft drinks)",
+    "sl": "Gazirane pijače"
+  },
+  "question": {
+    "en": "Can cats drink soda?",
+    "sl": "Ali lahko mačke pijejo gazirane pijače?"
+  },
+  "url_slug": {
+    "en": "soda",
+    "sl": "gazirane-pijace"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Many sodas contain caffeine, and cats are more sensitive to caffeine than people. One or two licks is unlikely to cause poisoning, but if your cat drank more, call your vet. Your cat only needs to drink water.",
+    "sl": "Ne. Veliko gaziranih pijač vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Lizanje ali dve verjetno ne bo povzročilo zastrupitve, če pa je muca popila več, pokličite veterinarja. Muca potrebuje le vodo."
+  },
+  "why": {
+    "en": "Many teas and sodas contain caffeine, and dogs and cats are more sensitive to caffeine than humans. Caffeine stimulates the heart and nervous system, which can be dangerous, and it can also upset the stomach. Signs can start within a few hours and last up to several days.",
+    "sl": "Veliko čajev in gaziranih pijač vsebuje kofein, psi in mačke pa so nanj bolj občutljivi kot ljudje. Kofein spodbuja srce in živčevje, kar je lahko nevarno, poleg tega lahko razdraži želodec. Znaki se lahko pojavijo v nekaj urah in trajajo tudi več dni."
+  },
+  "signs": {
+    "en": [
+      "Fast heart rate",
+      "Hyperactivity, restlessness, not wanting to lie still",
+      "Pacing or meowing a lot",
+      "Stomach upset, vomiting or diarrhoea",
+      "Tremors",
+      "Needing to pee more"
+    ],
+    "sl": [
+      "Pospešen srčni utrip",
+      "Prekomerna aktivnost, nemir, muca ne želi mirno ležati",
+      "Hoja sem ter tja ali pretirano mijavkanje",
+      "Težave z želodcem, bruhanje ali driska",
+      "Tresenje",
+      "Pogostejše uriniranje"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat drank soda, call your vet or a pet poison helpline as soon as you realise. One or two licks is unlikely to cause poisoning in most pets.",
+    "sl": "Če je muca pila gazirano pijačo, takoj ko to opazite, pokličite veterinarja ali center za zastrupitve živali. Lizanje ali dve pri večini živali verjetno ne bo povzročilo zastrupitve."
+  },
+  "serving": null,
+  "child": {
+    "en": "Fizzy drinks aren't for cats. A bowl of fresh water is all your cat needs!",
+    "sl": "Gazirane pijače niso za muce. Skledica sveže vode je vse, kar muca potrebuje!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "My cat licked my soda – what should I do?",
+        "sl": "Muca je polizala mojo gazirano pijačo – kaj naj naredim?"
+      },
+      "a": {
+        "en": "One or two licks of soda is unlikely to cause poisoning in most pets. If your cat drank more, call your vet or a pet poison helpline as soon as you realise, because cats are more sensitive to caffeine than people.",
+        "sl": "Lizanje ali dve gazirane pijače pri večini živali verjetno ne bo povzročilo zastrupitve. Če je muca popila več, takoj pokličite veterinarja ali center za zastrupitve živali, saj so mačke na kofein bolj občutljive kot ljudje."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC9",
+      "quote": "Most households have coffee in the pantry, which is a key source of caffeine, but many teas and sodas contain caffeine too."
+    },
+    {
+      "id": "KC10",
+      "quote": "Many common products contain caffeine including coffee, tea, soda, energy drinks"
+    },
+    {
+      "id": "KC10",
+      "quote": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets."
+    },
+    {
+      "id": "KC9",
+      "quote": "Dogs and cats are more sensitive to caffeine than humans are."
+    },
+    {
+      "id": "KC10",
+      "quote": "Dogs and cats appear to be more sensitive to the effects of caffeine than people."
+    },
+    {
+      "id": "KC9",
+      "quote": "Caffeine causes cardiac and central nervous system stimulation, which can be dangerous."
+    },
+    {
+      "id": "KC9",
+      "quote": "Caffeine also affects the gastrointestinal tract and can cause stomach upset."
+    },
+    {
+      "id": "KC9",
+      "quote": "Pets that consume caffeine may have an increased heart rate and become hyperactive."
+    },
+    {
+      "id": "KC9",
+      "quote": "They can get jittery and restless and do not want to lie still."
+    },
+    {
+      "id": "KC9",
+      "quote": "They may also pace or vocalize excessively."
+    },
+    {
+      "id": "KC9",
+      "quote": "Pets may also need to urinate more."
+    },
+    {
+      "id": "KC10",
+      "quote": "Clinical signs are agitation, aggression, vomiting, diarrhea, drooling, tremors, & respiratory or cardiovascular depression."
+    },
+    {
+      "id": "KC9",
+      "quote": "Symptoms can start within a few hours of ingestion and can last up to several days."
+    },
+    {
+      "id": "KC9",
+      "quote": "Call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center,"
+    },
+    {
+      "id": "KC9",
+      "quote": "as soon as you realize your pet has consumed caffeine."
+    },
+    {
+      "id": "KC15",
+      "quote": "Your cat only needs to drink water."
+    },
+    {
+      "id": "KC132",
+      "quote": "There’s nothing else your cat should be drinking."
+    }
+  ],
+  "related": [
+    "energy-drinks",
+    "sports-drinks",
+    "coffee",
+    "tea",
+    "water"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "542730653bc7f76c75fa3c5dbf1a28f441ccfccb94dcea6e7602515d7106174a"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4983b8e5dba0d2129e5814fa8b2b0161da283ae19a97914b47cdd481d48b3b76"
+    }
+  }
+}

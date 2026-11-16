@@ -1,0 +1,163 @@
+{
+  "slug": "fish-oil",
+  "species": "cat",
+  "name": {
+    "en": "Fish oil",
+    "sl": "Ribje olje"
+  },
+  "question": {
+    "en": "Can cats have fish oil?",
+    "sl": "Ali lahko mačke dobijo ribje olje?"
+  },
+  "url_slug": {
+    "en": "fish-oil",
+    "sl": "ribje-olje"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Only if your vet recommends it. Fish oil is a supplement used widely in cats, but it may not be appropriate for every pet and can have side effects. Always talk to your vet before giving fish oil or any other supplement.",
+    "sl": "Le če ga priporoči veterinar. Ribje olje je prehransko dopolnilo, ki se pri mačkah pogosto uporablja, vendar morda ni primerno za vsako žival in ima lahko stranske učinke. Preden muci daste ribje olje ali katero koli drugo dopolnilo, se vedno posvetujte z veterinarjem."
+  },
+  "why": {
+    "en": "Fish oil is used widely in cats, but omega-3 supplements may not be appropriate for every pet, and less is known about supplementing cats that have kidney disease. Possible side effects include mild stomach upset, a fishy odour, an oily coat and itchy, flaky skin; serious reactions include abnormal bruising or bleeding, especially in cats. Fish oil should not be given if a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity.",
+    "sl": "Ribje olje se pri mačkah pogosto uporablja, vendar dopolnila z omega-3 morda niso primerna za vsako žival, o dodajanju pri mačkah z boleznijo ledvic pa je znanega manj. Možni stranski učinki so blage prebavne težave, ribji vonj, masten kožuh ter srbeča, luskasta koža; resnejši odzivi so nenavadne modrice ali krvavitve, zlasti pri mačkah. Ribjega olja ne dajemo, če ni na voljo iz zanesljivega vira, saj nekateri viri nosijo veliko tveganje za zastrupitev s težkimi kovinami."
+  },
+  "signs": {
+    "en": [
+      "Mild stomach upset",
+      "Fishy odour",
+      "Oily coat",
+      "Itchiness or flaky skin",
+      "Slow wound healing",
+      "Abnormal bruising or bleeding",
+      "Allergic reaction: irregular breathing, rash, fever, swelling around the face",
+      "Loss of appetite",
+      "Wobbliness or seizures"
+    ],
+    "sl": [
+      "Blage prebavne težave",
+      "Ribji vonj",
+      "Masten kožuh",
+      "Srbenje ali luskasta koža",
+      "Počasnejše celjenje ran",
+      "Nenavadne modrice ali krvavitve",
+      "Alergijski odziv: nepravilno dihanje, izpuščaj, vročina, otekanje okrog obraza",
+      "Izguba apetita",
+      "Nekoordinirano gibanje ali krči"
+    ]
+  },
+  "what_to_do": {
+    "en": "Talk to your vet before giving fish oil, and tell them about any vitamins or supplements your cat already gets. If serious signs appear, stop the fish oil and contact your vet immediately.",
+    "sl": "Pred dajanjem ribjega olja se posvetujte z veterinarjem in mu povejte za vse vitamine ali dopolnila, ki jih muca že dobiva. Če se pojavijo resni znaki, prenehajte z ribjim oljem in takoj pokličite veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Only the vet can decide if a cat needs fish oil. Ask a grown-up to talk to the vet first!",
+    "sl": "Ali muca potrebuje ribje olje, lahko odloči le veterinar. Prosi odraslega, naj se najprej pogovori z njim!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Does the brand of fish oil matter?",
+        "sl": "Ali je pomembno, katero ribje olje izberem?"
+      },
+      "a": {
+        "en": "Yes. VCA advises against fish oil when a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity, and Tufts vets recommend a brand with good quality control. Your vet can advise.",
+        "sl": "Da. VCA odsvetuje ribje olje, če ni na voljo iz zanesljivega vira, saj nekateri viri nosijo veliko tveganje za zastrupitev s težkimi kovinami, veterinarji Tufts pa priporočajo znamko z dobrim nadzorom kakovosti. Svetuje vam lahko veterinar."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC137",
+      "quote": "Fish oil is used widely in cats, dogs, and other animals."
+    },
+    {
+      "id": "KC138",
+      "quote": "Remember to always consult with your veterinarian before giving omega-3 fatty acids (or any supplement) to your pet."
+    },
+    {
+      "id": "KC138",
+      "quote": "omega-3 fatty acid supplementation may not be appropriate for every pet, such as those with gastrointestinal"
+    },
+    {
+      "id": "KC138",
+      "quote": "Less information is currently known about supplementing cats that have kidney disease"
+    },
+    {
+      "id": "KC138",
+      "quote": "a brand with good quality control"
+    },
+    {
+      "id": "KC137",
+      "quote": "Mild gastrointestinal upset"
+    },
+    {
+      "id": "KC137",
+      "quote": "Fishy odor"
+    },
+    {
+      "id": "KC137",
+      "quote": "Delayed wound healing"
+    },
+    {
+      "id": "KC137",
+      "quote": "Oily coat"
+    },
+    {
+      "id": "KC137",
+      "quote": "Itchiness or skin flaking"
+    },
+    {
+      "id": "KC137",
+      "quote": "An allergic reaction, such as irregular breathing, rash, fever, puffiness and swelling around the face"
+    },
+    {
+      "id": "KC137",
+      "quote": "Abnormal bruising or bleeding, especially in cats"
+    },
+    {
+      "id": "KC137",
+      "quote": "Appetite loss"
+    },
+    {
+      "id": "KC137",
+      "quote": "Incoordination, seizures"
+    },
+    {
+      "id": "KC137",
+      "quote": "If any of the following signs develop, stop giving fish oil and contact your veterinarian immediately"
+    },
+    {
+      "id": "KC137",
+      "quote": "Cases where a reputable source of fish oil cannot be obtained (high risk of heavy metal toxicity from some sources)"
+    },
+    {
+      "id": "KC137",
+      "quote": "Be sure to tell your veterinarian about any medications (including all vitamins, supplements, or herbal therapies)"
+    },
+    {
+      "id": "KC137",
+      "quote": "Your veterinarian is the best source of information about the safety of non-drug health products in pets."
+    }
+  ],
+  "related": [
+    "salmon",
+    "sardines",
+    "tuna",
+    "liver"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fa61753f118e01c3520e93c8401b5715f8ccadc154b951602b24c35c85ed369b"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6ef49b080d71429f22a342482fd6c66d990cc1c6a74d3f5cf573b27c27a78508"
+    }
+  }
+}

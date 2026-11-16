@@ -1,0 +1,173 @@
+{
+  "slug": "goat-milk",
+  "species": "dog",
+  "name": {
+    "en": "Goat's milk",
+    "sl": "Kozje mleko"
+  },
+  "question": {
+    "en": "Can dogs drink goat's milk?",
+    "sl": "Ali lahko psi pijejo kozje mleko?"
+  },
+  "url_slug": {
+    "en": "goat-milk",
+    "sl": "kozje-mleko"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Only a little, now and then. Goat's milk can be an occasional reward, but it has almost as much lactose as cow's milk and can still upset a dog's stomach. Dogs on a good, balanced diet don't need it. Don't give raw goat's milk.",
+    "sl": "Le malo in le občasno. Kozje mleko je lahko občasna nagrada, vendar ima skoraj toliko laktoze kot kravje in lahko psu vseeno razdraži želodec. Psi, ki jedo dobro, uravnoteženo hrano, ga ne potrebujejo. Surovega kozjega mleka ne dajajte."
+  },
+  "why": {
+    "en": "Goat's milk has almost the same amount of lactose as cow's milk, and dogs can have varying degrees of lactose intolerance. The Australian Veterinary Association notes that goat's milk and lactose-free milk can still cause stomach and gut problems, and that some dogs can develop an allergy to milk protein. Raw milk can also carry germs such as E. coli, Salmonella and Listeria.",
+    "sl": "Kozje mleko ima skoraj enako količino laktoze kot kravje, psi pa laktozo prenašajo različno slabo. Avstralsko veterinarsko združenje opozarja, da lahko kozje mleko in mleko brez laktoze vseeno povzročita težave z želodcem in črevesjem ter da se lahko pri nekaterih psih razvije alergija na mlečne beljakovine. Surovo mleko lahko poleg tega prenaša klice, kot so E. coli, salmonela in listerija."
+  },
+  "signs": {
+    "en": [
+      "Loose stools",
+      "Gas",
+      "Vomiting",
+      "Tummy pain",
+      "Diarrhoea"
+    ],
+    "sl": [
+      "Mehko blato",
+      "Vetrovi",
+      "Bruhanje",
+      "Bolečine v trebuhu",
+      "Driska"
+    ]
+  },
+  "what_to_do": {
+    "en": "Stop the goat's milk if your dog gets loose stools, gas, vomiting, tummy pain or diarrhoea, and make sure fresh water is always available. Before adding goat's milk to your dog's diet, discuss it with your vet first.",
+    "sl": "Če ima pes po kozjem mleku mehko blato, vetrove, bruha, ga boli trebuh ali ima drisko, mleka ne dajajte več in poskrbite, da ima vedno na voljo svežo vodo. Preden kozje mleko dodate v pasji jedilnik, se najprej posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Never raw. Offer it only as an occasional reward, never instead of fresh water or a balanced dog food.",
+    "sl": "Nikoli surovo. Ponudite ga le kot občasno nagrado, nikoli namesto sveže vode ali uravnotežene pasje hrane."
+  },
+  "child": {
+    "en": "Goat's milk is only a rare little treat for dogs. Fresh water is the best drink for them every day!",
+    "sl": "Kozje mleko je za pse le redka majhna posladica. Najboljša pijača zanje je vsak dan sveža voda!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is goat's milk easier for dogs to digest than cow's milk?",
+        "sl": "Ali psi kozje mleko prebavijo lažje kot kravje?"
+      },
+      "a": {
+        "en": "Not really. Goat's milk has almost the same amount of lactose as cow's milk. Its smaller fat globules are often mentioned, but homogenisation also makes the fat globules in cow's milk smaller.",
+        "sl": "Pravzaprav ne. Kozje mleko ima skoraj enako količino laktoze kot kravje. Pogosto se omenjajo njegove manjše maščobne kroglice, vendar homogenizacija zmanjša tudi maščobne kroglice v kravjem mleku."
+      }
+    },
+    {
+      "q": {
+        "en": "Can goat's milk replace my dog's treatment?",
+        "sl": "Ali lahko kozje mleko nadomesti zdravljenje mojega psa?"
+      },
+      "a": {
+        "en": "No. A vet at the Drake Center warns that it can be dangerous if goat's milk is used in place of known appropriate treatments. Discuss it with your vet first.",
+        "sl": "Ne. Veterinarka iz centra Drake opozarja, da je lahko nevarno, če kozje mleko uporabimo namesto znanih ustreznih zdravljenj. Najprej se posvetujte z veterinarjem."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD44",
+      "quote": "goat's milk on an occasional basis can be a nice reward for your dog."
+    },
+    {
+      "id": "KD44",
+      "quote": "Dogs can have varying degrees of lactose intolerance; some might experience only mild symptoms, while other cases may be more severe."
+    },
+    {
+      "id": "KD44",
+      "quote": "The most common symptoms are:"
+    },
+    {
+      "id": "KD44",
+      "quote": "Loose stools"
+    },
+    {
+      "id": "KD44",
+      "quote": "Gas"
+    },
+    {
+      "id": "KD44",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD44",
+      "quote": "Abdominal pain"
+    },
+    {
+      "id": "KD44",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KD237",
+      "quote": "Goat's milk almost has the same amount of lactose as cow's milk."
+    },
+    {
+      "id": "KD237",
+      "quote": "But homogenization also reduces the size of the fat globules in cow's milk."
+    },
+    {
+      "id": "KD237",
+      "quote": "those who consume raw milk are at risk of ingesting germs such as E. Coli, Salmonella, Listeria,"
+    },
+    {
+      "id": "KD237",
+      "quote": "Any time you give your pet an uncooked product, you run the risk of them ingesting a pathogen."
+    },
+    {
+      "id": "KD237",
+      "quote": "I think it can be dangerous if it used in place of known appropriate treatments."
+    },
+    {
+      "id": "KD237",
+      "quote": "we recommend discussing it first with your veterinarian."
+    },
+    {
+      "id": "KD235",
+      "quote": "Lactose-free milk and goat’s milk can still cause gastrointestinal problems"
+    },
+    {
+      "id": "KD235",
+      "quote": "Some dogs can tolerate very small amounts of lactose in milk but they can also develop an allergy to the milk protein"
+    },
+    {
+      "id": "KD235",
+      "quote": "Theoretically, some dogs may tolerate small amounts of these products"
+    },
+    {
+      "id": "KD235",
+      "quote": "but if they are getting a premium-quality, balanced diet these are not necessary."
+    },
+    {
+      "id": "KD239",
+      "quote": "Dogs only need to drink fresh water daily."
+    }
+  ],
+  "related": [
+    "milk",
+    "lactose-free-milk",
+    "kefir",
+    "yogurt",
+    "water"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "98db22b7eba0003ccf1c156a496bd228049fb3d88d4f999d713d58b020ff928f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c6d4666094e5a5e1494ea51fa8e61c5bcb1f1325c23fe8b6e48dd4e51322f72a"
+    }
+  }
+}

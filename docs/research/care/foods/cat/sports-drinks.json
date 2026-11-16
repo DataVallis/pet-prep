@@ -1,0 +1,157 @@
+{
+  "slug": "sports-drinks",
+  "species": "cat",
+  "name": {
+    "en": "Sports drinks",
+    "sl": "Športni napitki"
+  },
+  "question": {
+    "en": "Can cats drink sports drinks?",
+    "sl": "Ali lahko mačke pijejo športne napitke?"
+  },
+  "url_slug": {
+    "en": "sports-drinks",
+    "sl": "sportni-napitki"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No. Energy or sports drinks often contain a lot of caffeine, and cats are more sensitive to caffeine than people. No other drink is a substitute for water – it's the only drink your cat needs.",
+    "sl": "Ne. Energijski in športni napitki pogosto vsebujejo veliko kofeina, mačke pa so nanj bolj občutljive kot ljudje. Nobena pijača ne more nadomestiti vode – to je edina pijača, ki jo muca potrebuje."
+  },
+  "why": {
+    "en": "VCA vets warn that energy or sports drinks in the fridge often contain a lot of caffeine. Dogs and cats are more sensitive to caffeine than humans; it stimulates the heart and nervous system, which can be dangerous, and can upset the stomach. Cats Protection adds that milk, cream or any other liquid is no substitute for water in a cat's diet.",
+    "sl": "Veterinarji VCA opozarjajo, da energijski in športni napitki v hladilniku pogosto vsebujejo veliko kofeina. Psi in mačke so na kofein bolj občutljivi kot ljudje; spodbuja srce in živčevje, kar je lahko nevarno, in lahko razdraži želodec. Cats Protection dodaja, da mleko, smetana ali katera koli druga tekočina v mačji prehrani ne more nadomestiti vode."
+  },
+  "signs": {
+    "en": [
+      "Fast heart rate",
+      "Hyperactivity, restlessness, not wanting to lie still",
+      "Pacing or meowing a lot",
+      "Stomach upset, vomiting or diarrhoea",
+      "Tremors",
+      "Needing to pee more"
+    ],
+    "sl": [
+      "Pospešen srčni utrip",
+      "Prekomerna aktivnost, nemir, muca ne želi mirno ležati",
+      "Hoja sem ter tja ali pretirano mijavkanje",
+      "Težave z želodcem, bruhanje ali driska",
+      "Tresenje",
+      "Pogostejše uriniranje"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat drank a sports drink with caffeine, call your vet or a pet poison helpline as soon as you realise. Signs can start within a few hours.",
+    "sl": "Če je muca pila športni napitek s kofeinom, takoj ko to opazite, pokličite veterinarja ali center za zastrupitve živali. Znaki se lahko pojavijo v nekaj urah."
+  },
+  "serving": null,
+  "child": {
+    "en": "Sports drinks aren't for cats. Fresh, clean water is the best drink to keep your cat healthy!",
+    "sl": "Športni napitki niso za muce. Sveža, čista voda je najboljša pijača za zdravo muco!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can a sports drink help if my cat isn't drinking enough?",
+        "sl": "Ali športni napitek pomaga, če muca premalo pije?"
+      },
+      "a": {
+        "en": "Give fresh water instead – no other liquid is a substitute for it. Signs of dehydration include lethargy, weakness, poor appetite and dry gums. If you are concerned that your cat is dehydrated, contact a vet promptly.",
+        "sl": "Namesto tega ji ponudite svežo vodo – nobena druga tekočina je ne more nadomestiti. Znaki dehidracije so med drugim utrujenost, šibkost, slab apetit in suhe sluznice. Če vas skrbi, da je muca dehidrirana, se čim prej obrnite na veterinarja."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC9",
+      "quote": "And, of course, energy or sports drinks in the fridge often contain a lot of caffeine."
+    },
+    {
+      "id": "KC139",
+      "quote": "It's important to remember that milk, cream or any other liquid is no substitute for water in a cat's diet."
+    },
+    {
+      "id": "KC119",
+      "quote": "Signs of dehydration include lethargy, weakness, poor appetite, dry mucous membranes"
+    },
+    {
+      "id": "KC119",
+      "quote": "If you are concerned that your cat is dehydrated, you should contact a veterinarian promptly."
+    },
+    {
+      "id": "KC9",
+      "quote": "Dogs and cats are more sensitive to caffeine than humans are."
+    },
+    {
+      "id": "KC10",
+      "quote": "Dogs and cats appear to be more sensitive to the effects of caffeine than people."
+    },
+    {
+      "id": "KC9",
+      "quote": "Caffeine causes cardiac and central nervous system stimulation, which can be dangerous."
+    },
+    {
+      "id": "KC9",
+      "quote": "Caffeine also affects the gastrointestinal tract and can cause stomach upset."
+    },
+    {
+      "id": "KC9",
+      "quote": "Pets that consume caffeine may have an increased heart rate and become hyperactive."
+    },
+    {
+      "id": "KC9",
+      "quote": "They can get jittery and restless and do not want to lie still."
+    },
+    {
+      "id": "KC9",
+      "quote": "They may also pace or vocalize excessively."
+    },
+    {
+      "id": "KC9",
+      "quote": "Pets may also need to urinate more."
+    },
+    {
+      "id": "KC10",
+      "quote": "Clinical signs are agitation, aggression, vomiting, diarrhea, drooling, tremors, & respiratory or cardiovascular depression."
+    },
+    {
+      "id": "KC9",
+      "quote": "Symptoms can start within a few hours of ingestion and can last up to several days."
+    },
+    {
+      "id": "KC9",
+      "quote": "Call your veterinarian or Pet Poison Helpline, a 24/7 animal poison center,"
+    },
+    {
+      "id": "KC9",
+      "quote": "as soon as you realize your pet has consumed caffeine."
+    },
+    {
+      "id": "KC15",
+      "quote": "Your cat only needs to drink water."
+    },
+    {
+      "id": "KC132",
+      "quote": "There’s nothing else your cat should be drinking."
+    }
+  ],
+  "related": [
+    "energy-drinks",
+    "soda",
+    "coffee",
+    "water"
+  ],
+  "updated": "2026-11-16",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "65cc172fe4db873e0d76a50cc0090ef23651204c9251e7fa8d4d3091a33d64e8"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "166c92419f2a8bdf8ce933a1ac1d63a8c0317ee398202fe66775157fd3d09620"
+    }
+  }
+}
