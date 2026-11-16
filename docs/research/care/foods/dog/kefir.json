@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Kefir",
-    "sl": "Kefir"
+    "sl": "Kefir",
+    "fr": "Kéfir"
   },
   "question": {
     "en": "Can dogs drink kefir?",
-    "sl": "Ali lahko psi pijejo kefir?"
+    "sl": "Ali lahko psi pijejo kefir?",
+    "fr": "Les chiens peuvent-ils boire du kéfir ?"
   },
   "url_slug": {
     "en": "kefir",
-    "sl": "kefir"
+    "sl": "kefir",
+    "fr": "kefir"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Only a little, and ask your vet first. The AKC lists yogurt or kefir with live cultures among the foods a vet may suggest to boost beneficial bacteria, but many dogs have trouble digesting lactose. Never give kefir with xylitol or other artificial sweeteners.",
-    "sl": "Le malo in najprej vprašajte veterinarja. AKC jogurt ali kefir z živimi kulturami navaja med živili, ki jih lahko veterinar predlaga za krepitev koristnih bakterij, vendar mnogi psi težko prebavljajo laktozo. Nikoli ne dajajte kefirja s ksilitolom ali drugimi umetnimi sladili."
+    "sl": "Le malo in najprej vprašajte veterinarja. AKC jogurt ali kefir z živimi kulturami navaja med živili, ki jih lahko veterinar predlaga za krepitev koristnih bakterij, vendar mnogi psi težko prebavljajo laktozo. Nikoli ne dajajte kefirja s ksilitolom ali drugimi umetnimi sladili.",
+    "fr": "Seulement un peu, et demandez d’abord conseil à votre vétérinaire. L’AKC cite le yaourt ou le kéfir contenant des ferments vivants parmi les aliments qu’un vétérinaire peut suggérer pour favoriser les bonnes bactéries, mais beaucoup de chiens digèrent mal le lactose. Ne donnez jamais de kéfir contenant du xylitol ou d’autres édulcorants artificiels."
   },
   "why": {
     "en": "Many dogs have trouble digesting foods that contain lactose; a dog's body isn't designed to digest lactose after puppyhood, so it can cause gas and other tummy trouble. Some dogs can also develop an allergy to milk protein. Some artificial sweeteners, such as xylitol, are toxic to dogs, so kefir with artificial sweeteners is a risk.",
-    "sl": "Mnogi psi težko prebavljajo živila, ki vsebujejo laktozo; pasje telo po obdobju mladička ni narejeno za prebavo laktoze, zato lahko povzroči vetrove in druge težave s trebuhom. Pri nekaterih psih se lahko razvije tudi alergija na mlečne beljakovine. Nekatera umetna sladila, na primer ksilitol, so za pse strupena, zato je kefir z umetnimi sladili tvegan."
+    "sl": "Mnogi psi težko prebavljajo živila, ki vsebujejo laktozo; pasje telo po obdobju mladička ni narejeno za prebavo laktoze, zato lahko povzroči vetrove in druge težave s trebuhom. Pri nekaterih psih se lahko razvije tudi alergija na mlečne beljakovine. Nekatera umetna sladila, na primer ksilitol, so za pse strupena, zato je kefir z umetnimi sladili tvegan.",
+    "fr": "Beaucoup de chiens digèrent mal les aliments contenant du lactose ; l’organisme du chien n’est pas conçu pour digérer le lactose après le stade de chiot, ce qui peut provoquer des gaz et d’autres maux de ventre. Certains chiens peuvent aussi développer une allergie aux protéines du lait. Certains édulcorants artificiels, comme le xylitol, sont toxiques pour les chiens : un kéfir contenant des édulcorants artificiels représente donc un risque."
   },
   "signs": {
     "en": [
@@ -36,29 +41,41 @@
       "Bruhanje",
       "Bolečine v trebuhu",
       "Driska"
+    ],
+    "fr": [
+      "Selles molles",
+      "Gaz",
+      "Vomissements",
+      "Maux de ventre",
+      "Diarrhée"
     ]
   },
   "what_to_do": {
     "en": "As with yogurt, offer a small amount at first and see how your dog reacts. If your dog gets loose stools, gas, vomiting or diarrhoea, stop the kefir. Ask your vet whether probiotic foods suit your dog.",
-    "sl": "Kot pri jogurtu najprej ponudite majhno količino in opazujte, kako se pes odzove. Če ima pes mehko blato, vetrove, bruha ali ima drisko, kefirja ne dajajte več. Veterinarja vprašajte, ali so probiotična živila primerna za vašega psa."
+    "sl": "Kot pri jogurtu najprej ponudite majhno količino in opazujte, kako se pes odzove. Če ima pes mehko blato, vetrove, bruha ali ima drisko, kefirja ne dajajte več. Veterinarja vprašajte, ali so probiotična živila primerna za vašega psa.",
+    "fr": "Comme pour le yaourt, commencez par une petite quantité et observez la réaction de votre chien. Si votre chien a les selles molles, des gaz, des vomissements ou de la diarrhée, arrêtez le kéfir. Demandez à votre vétérinaire si les aliments probiotiques conviennent à votre chien."
   },
   "serving": {
     "en": "Choose plain kefir and read the label carefully to avoid all artificial sweeteners, especially xylitol. Start with a small amount.",
-    "sl": "Izberite navaden kefir in natančno preberite deklaracijo, da se izognete vsem umetnim sladilom, predvsem ksilitolu. Začnite z majhno količino."
+    "sl": "Izberite navaden kefir in natančno preberite deklaracijo, da se izognete vsem umetnim sladilom, predvsem ksilitolu. Začnite z majhno količino.",
+    "fr": "Choisissez du kéfir nature et lisez attentivement l’étiquette pour éviter tous les édulcorants artificiels, en particulier le xylitol. Commencez par une petite quantité."
   },
   "child": {
     "en": "Some dogs can have a tiny taste of plain kefir, but many get a sore tummy from milk drinks. Fresh water is always best!",
-    "sl": "Nekateri psi lahko poskusijo čisto malo navadnega kefirja, mnoge pa od mlečnih pijač boli trebušček. Sveža voda je vedno najboljša!"
+    "sl": "Nekateri psi lahko poskusijo čisto malo navadnega kefirja, mnoge pa od mlečnih pijač boli trebušček. Sveža voda je vedno najboljša!",
+    "fr": "Certains chiens peuvent goûter un tout petit peu de kéfir nature, mais beaucoup ont mal au ventre avec les boissons lactées. L’eau fraîche reste toujours le mieux !"
   },
   "faq": [
     {
       "q": {
         "en": "Is kefir a good probiotic for dogs?",
-        "sl": "Ali je kefir dober probiotik za pse?"
+        "sl": "Ali je kefir dober probiotik za pse?",
+        "fr": "Le kéfir est-il un bon probiotique pour les chiens ?"
       },
       "a": {
         "en": "The AKC lists yogurt or kefir with live cultures among the options a vet may suggest to boost beneficial bacteria. Ask your vet before adding it to your dog's diet.",
-        "sl": "AKC jogurt ali kefir z živimi kulturami navaja med možnostmi, ki jih lahko veterinar predlaga za krepitev koristnih bakterij. Preden ga dodate v pasji jedilnik, vprašajte veterinarja."
+        "sl": "AKC jogurt ali kefir z živimi kulturami navaja med možnostmi, ki jih lahko veterinar predlaga za krepitev koristnih bakterij. Preden ga dodate v pasji jedilnik, vprašajte veterinarja.",
+        "fr": "L’AKC cite le yaourt ou le kéfir contenant des ferments vivants parmi les options qu’un vétérinaire peut suggérer pour favoriser les bonnes bactéries. Demandez conseil à votre vétérinaire avant d’en ajouter à l’alimentation de votre chien."
       }
     }
   ],
@@ -146,6 +163,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "aee685542b66c13130403c97bd05f582fc3d0e047d7ab3b64f3856ad8bdb4493"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e9943e15047cb8da7e797b0089c0ff294cc7b42217a0b78561d61ac6211991e9"
     }
   }
 }

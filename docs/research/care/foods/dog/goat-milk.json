@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Goat's milk",
-    "sl": "Kozje mleko"
+    "sl": "Kozje mleko",
+    "fr": "Lait de chèvre"
   },
   "question": {
     "en": "Can dogs drink goat's milk?",
-    "sl": "Ali lahko psi pijejo kozje mleko?"
+    "sl": "Ali lahko psi pijejo kozje mleko?",
+    "fr": "Les chiens peuvent-ils boire du lait de chèvre ?"
   },
   "url_slug": {
     "en": "goat-milk",
-    "sl": "kozje-mleko"
+    "sl": "kozje-mleko",
+    "fr": "lait-de-chevre"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Only a little, now and then. Goat's milk can be an occasional reward, but it has almost as much lactose as cow's milk and can still upset a dog's stomach. Dogs on a good, balanced diet don't need it. Don't give raw goat's milk.",
-    "sl": "Le malo in le občasno. Kozje mleko je lahko občasna nagrada, vendar ima skoraj toliko laktoze kot kravje in lahko psu vseeno razdraži želodec. Psi, ki jedo dobro, uravnoteženo hrano, ga ne potrebujejo. Surovega kozjega mleka ne dajajte."
+    "sl": "Le malo in le občasno. Kozje mleko je lahko občasna nagrada, vendar ima skoraj toliko laktoze kot kravje in lahko psu vseeno razdraži želodec. Psi, ki jedo dobro, uravnoteženo hrano, ga ne potrebujejo. Surovega kozjega mleka ne dajajte.",
+    "fr": "Seulement un peu, de temps en temps. Le lait de chèvre peut être une petite récompense occasionnelle, mais il contient presque autant de lactose que le lait de vache et peut quand même déranger l’estomac d’un chien. Un chien qui suit une alimentation équilibrée de qualité n’en a pas besoin. Ne donnez pas de lait de chèvre cru."
   },
   "why": {
     "en": "Goat's milk has almost the same amount of lactose as cow's milk, and dogs can have varying degrees of lactose intolerance. The Australian Veterinary Association notes that goat's milk and lactose-free milk can still cause stomach and gut problems, and that some dogs can develop an allergy to milk protein. Raw milk can also carry germs such as E. coli, Salmonella and Listeria.",
-    "sl": "Kozje mleko ima skoraj enako količino laktoze kot kravje, psi pa laktozo prenašajo različno slabo. Avstralsko veterinarsko združenje opozarja, da lahko kozje mleko in mleko brez laktoze vseeno povzročita težave z želodcem in črevesjem ter da se lahko pri nekaterih psih razvije alergija na mlečne beljakovine. Surovo mleko lahko poleg tega prenaša klice, kot so E. coli, salmonela in listerija."
+    "sl": "Kozje mleko ima skoraj enako količino laktoze kot kravje, psi pa laktozo prenašajo različno slabo. Avstralsko veterinarsko združenje opozarja, da lahko kozje mleko in mleko brez laktoze vseeno povzročita težave z želodcem in črevesjem ter da se lahko pri nekaterih psih razvije alergija na mlečne beljakovine. Surovo mleko lahko poleg tega prenaša klice, kot so E. coli, salmonela in listerija.",
+    "fr": "Le lait de chèvre contient presque autant de lactose que le lait de vache, et l’intolérance au lactose varie d’un chien à l’autre. L’Australian Veterinary Association précise que le lait de chèvre et le lait sans lactose peuvent malgré tout provoquer des troubles de l’estomac et de l’intestin, et que certains chiens peuvent développer une allergie aux protéines du lait. Le lait cru peut en outre contenir des germes comme E. coli, Salmonella et Listeria."
   },
   "signs": {
     "en": [
@@ -36,39 +41,53 @@
       "Bruhanje",
       "Bolečine v trebuhu",
       "Driska"
+    ],
+    "fr": [
+      "Selles molles",
+      "Gaz",
+      "Vomissements",
+      "Maux de ventre",
+      "Diarrhée"
     ]
   },
   "what_to_do": {
     "en": "Stop the goat's milk if your dog gets loose stools, gas, vomiting, tummy pain or diarrhoea, and make sure fresh water is always available. Before adding goat's milk to your dog's diet, discuss it with your vet first.",
-    "sl": "Če ima pes po kozjem mleku mehko blato, vetrove, bruha, ga boli trebuh ali ima drisko, mleka ne dajajte več in poskrbite, da ima vedno na voljo svežo vodo. Preden kozje mleko dodate v pasji jedilnik, se najprej posvetujte z veterinarjem."
+    "sl": "Če ima pes po kozjem mleku mehko blato, vetrove, bruha, ga boli trebuh ali ima drisko, mleka ne dajajte več in poskrbite, da ima vedno na voljo svežo vodo. Preden kozje mleko dodate v pasji jedilnik, se najprej posvetujte z veterinarjem.",
+    "fr": "Arrêtez le lait de chèvre si votre chien a les selles molles, des gaz, des vomissements, mal au ventre ou de la diarrhée, et veillez à ce qu’il ait toujours de l’eau fraîche à disposition. Avant d’ajouter du lait de chèvre à l’alimentation de votre chien, parlez-en d’abord à votre vétérinaire."
   },
   "serving": {
     "en": "Never raw. Offer it only as an occasional reward, never instead of fresh water or a balanced dog food.",
-    "sl": "Nikoli surovo. Ponudite ga le kot občasno nagrado, nikoli namesto sveže vode ali uravnotežene pasje hrane."
+    "sl": "Nikoli surovo. Ponudite ga le kot občasno nagrado, nikoli namesto sveže vode ali uravnotežene pasje hrane.",
+    "fr": "Jamais cru. À donner uniquement comme petite récompense occasionnelle, jamais à la place de l’eau fraîche ni d’une alimentation équilibrée pour chiens."
   },
   "child": {
     "en": "Goat's milk is only a rare little treat for dogs. Fresh water is the best drink for them every day!",
-    "sl": "Kozje mleko je za pse le redka majhna posladica. Najboljša pijača zanje je vsak dan sveža voda!"
+    "sl": "Kozje mleko je za pse le redka majhna posladica. Najboljša pijača zanje je vsak dan sveža voda!",
+    "fr": "Le lait de chèvre n’est qu’une petite friandise très rare pour les chiens. L’eau fraîche reste la meilleure boisson pour eux, tous les jours !"
   },
   "faq": [
     {
       "q": {
         "en": "Is goat's milk easier for dogs to digest than cow's milk?",
-        "sl": "Ali psi kozje mleko prebavijo lažje kot kravje?"
+        "sl": "Ali psi kozje mleko prebavijo lažje kot kravje?",
+        "fr": "Le lait de chèvre est-il plus facile à digérer pour un chien que le lait de vache ?"
       },
       "a": {
         "en": "Not really. Goat's milk has almost the same amount of lactose as cow's milk. Its smaller fat globules are often mentioned, but homogenisation also makes the fat globules in cow's milk smaller.",
-        "sl": "Pravzaprav ne. Kozje mleko ima skoraj enako količino laktoze kot kravje. Pogosto se omenjajo njegove manjše maščobne kroglice, vendar homogenizacija zmanjša tudi maščobne kroglice v kravjem mleku."
+        "sl": "Pravzaprav ne. Kozje mleko ima skoraj enako količino laktoze kot kravje. Pogosto se omenjajo njegove manjše maščobne kroglice, vendar homogenizacija zmanjša tudi maščobne kroglice v kravjem mleku.",
+        "fr": "Pas vraiment. Le lait de chèvre contient presque autant de lactose que le lait de vache. On cite souvent ses globules gras plus petits, mais l’homogénéisation rend aussi plus petits ceux du lait de vache."
       }
     },
     {
       "q": {
         "en": "Can goat's milk replace my dog's treatment?",
-        "sl": "Ali lahko kozje mleko nadomesti zdravljenje mojega psa?"
+        "sl": "Ali lahko kozje mleko nadomesti zdravljenje mojega psa?",
+        "fr": "Le lait de chèvre peut-il remplacer le traitement de mon chien ?"
       },
       "a": {
         "en": "No. A vet at the Drake Center warns that it can be dangerous if goat's milk is used in place of known appropriate treatments. Discuss it with your vet first.",
-        "sl": "Ne. Veterinarka iz centra Drake opozarja, da je lahko nevarno, če kozje mleko uporabimo namesto znanih ustreznih zdravljenj. Najprej se posvetujte z veterinarjem."
+        "sl": "Ne. Veterinarka iz centra Drake opozarja, da je lahko nevarno, če kozje mleko uporabimo namesto znanih ustreznih zdravljenj. Najprej se posvetujte z veterinarjem.",
+        "fr": "Non. Un vétérinaire du Drake Center avertit que cela peut être dangereux si le lait de chèvre est utilisé à la place de traitements reconnus. Parlez-en d’abord à votre vétérinaire."
       }
     }
   ],
@@ -168,6 +187,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c6d4666094e5a5e1494ea51fa8e61c5bcb1f1325c23fe8b6e48dd4e51322f72a"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "262b2f95a54b13258250727127f6ea877562365fcc3a51380268cc7212751cc3"
     }
   }
 }

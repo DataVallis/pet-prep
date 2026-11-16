@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Fruit juice",
-    "sl": "Sadni sok"
+    "sl": "Sadni sok",
+    "fr": "Jus de fruits"
   },
   "question": {
     "en": "Can dogs drink fruit juice?",
-    "sl": "Ali lahko psi pijejo sadni sok?"
+    "sl": "Ali lahko psi pijejo sadni sok?",
+    "fr": "Les chiens peuvent-ils boire du jus de fruits ?"
   },
   "url_slug": {
     "en": "juice",
-    "sl": "sadni-sok"
+    "sl": "sadni-sok",
+    "fr": "jus-de-fruits"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Whole fruit is a better snack than juice. Orange juice, for example, isn't toxic but has concentrated sugars and none of the fruit's fibre. Lemon juice is high in citric acid, which is toxic to dogs, and sugar-free drinks may contain xylitol.",
-    "sl": "Raje ne. Celo sadje je boljši prigrizek kot sok. Pomarančni sok na primer ni strupen, vendar ima zgoščen sladkor in nič vlaknin iz sadja. Limonin sok vsebuje veliko citronske kisline, ki je za pse strupena, pijače brez sladkorja pa lahko vsebujejo ksilitol."
+    "sl": "Raje ne. Celo sadje je boljši prigrizek kot sok. Pomarančni sok na primer ni strupen, vendar ima zgoščen sladkor in nič vlaknin iz sadja. Limonin sok vsebuje veliko citronske kisline, ki je za pse strupena, pijače brez sladkorja pa lahko vsebujejo ksilitol.",
+    "fr": "Mieux vaut s’en abstenir. Un fruit entier est un meilleur en-cas qu’un jus. Le jus d’orange, par exemple, n’est pas toxique, mais il contient des sucres concentrés et ne contient pas les fibres du fruit. Le jus de citron contient beaucoup d’acide citrique, toxique pour les chiens, et les boissons sans sucre peuvent contenir du xylitol."
   },
   "why": {
     "en": "Juice contains concentrated natural sugars and lacks the fibre of whole fruit; because it is higher in sugar and easy to drink in large amounts, it may increase the risk of digestive upset. Fruit juice concentrates are high in fructose, which may increase the risk of obesity. Lemon juice is a concentrated form of the fruit with high amounts of citric acid, which is toxic to dogs. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
-    "sl": "Sok vsebuje zgoščen naravni sladkor in nima vlaknin celega sadja; ker ima več sladkorja in ga pes zlahka popije veliko, lahko poveča tveganje za prebavne težave. Sadni koncentrati imajo veliko fruktoze, ki lahko poveča tveganje za debelost. Limonin sok je zgoščena oblika sadeža z veliko citronske kisline, ki je za pse strupena. Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen."
+    "sl": "Sok vsebuje zgoščen naravni sladkor in nima vlaknin celega sadja; ker ima več sladkorja in ga pes zlahka popije veliko, lahko poveča tveganje za prebavne težave. Sadni koncentrati imajo veliko fruktoze, ki lahko poveča tveganje za debelost. Limonin sok je zgoščena oblika sadeža z veliko citronske kisline, ki je za pse strupena. Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen.",
+    "fr": "Le jus contient des sucres naturels concentrés et n’a pas les fibres du fruit entier ; comme il est plus riche en sucre et facile à boire en grande quantité, il peut augmenter le risque de troubles digestifs. Les jus de fruits concentrés sont riches en fructose, ce qui peut augmenter le risque d’obésité. Le jus de citron est une forme concentrée du fruit, avec beaucoup d’acide citrique, toxique pour les chiens. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens."
   },
   "signs": {
     "en": [
@@ -28,36 +33,45 @@
     ],
     "sl": [
       "Prebavne težave"
+    ],
+    "fr": [
+      "Troubles digestifs"
     ]
   },
   "what_to_do": {
     "en": "Offer fresh water instead and watch your dog for any signs of digestive upset. If the drink was sugar-free or may contain xylitol, see our xylitol page straight away. If your dog had grape juice, see our grapes page.",
-    "sl": "Namesto soka ponudite svežo vodo in psa opazujte, ali se pojavijo prebavne težave. Če je bila pijača brez sladkorja ali morda vsebuje ksilitol, takoj poglejte našo stran o ksilitolu. Če je pes popil grozdni sok, poglejte našo stran o grozdju."
+    "sl": "Namesto soka ponudite svežo vodo in psa opazujte, ali se pojavijo prebavne težave. Če je bila pijača brez sladkorja ali morda vsebuje ksilitol, takoj poglejte našo stran o ksilitolu. Če je pes popil grozdni sok, poglejte našo stran o grozdju.",
+    "fr": "Proposez plutôt de l’eau fraîche et surveillez votre chien pour repérer d’éventuels signes de troubles digestifs. Si la boisson était sans sucre ou pouvait contenir du xylitol, consultez tout de suite notre page sur le xylitol. Si votre chien a bu du jus de raisin, consultez notre page sur le raisin."
   },
   "serving": null,
   "child": {
     "en": "Juice is too sugary for dogs. A small piece of dog-safe fresh fruit or a bowl of fresh water is a much better treat!",
-    "sl": "Sok je za pse preveč sladek. Majhen košček sadja, ki je za pse varno, ali skleda sveže vode je veliko boljša izbira!"
+    "sl": "Sok je za pse preveč sladek. Majhen košček sadja, ki je za pse varno, ali skleda sveže vode je veliko boljša izbira!",
+    "fr": "Le jus est trop sucré pour les chiens. Un petit morceau de fruit frais qu’il peut manger ou une gamelle d’eau fraîche, c’est une bien meilleure friandise !"
   },
   "faq": [
     {
       "q": {
         "en": "Is orange juice toxic to dogs?",
-        "sl": "Ali je pomarančni sok za pse strupen?"
+        "sl": "Ali je pomarančni sok za pse strupen?",
+        "fr": "Le jus d’orange est-il toxique pour les chiens ?"
       },
       "a": {
         "en": "No, but it is not recommended because it contains concentrated sugars and lacks the fibre found in whole fruit. If you want to share the taste of oranges, offer small pieces of fresh fruit instead.",
-        "sl": "Ne, vendar ga ne priporočamo, ker vsebuje zgoščen sladkor in nima vlaknin celega sadja. Če želite psu ponuditi okus pomaranče, mu raje dajte majhne koščke svežega sadja."
+        "sl": "Ne, vendar ga ne priporočamo, ker vsebuje zgoščen sladkor in nima vlaknin celega sadja. Če želite psu ponuditi okus pomaranče, mu raje dajte majhne koščke svežega sadja.",
+        "fr": "Non, mais il n’est pas recommandé, car il contient des sucres concentrés et n’a pas les fibres du fruit entier. Si vous voulez partager le goût des oranges, proposez plutôt de petits morceaux de fruit frais."
       }
     },
     {
       "q": {
         "en": "What about grape juice?",
-        "sl": "Kaj pa grozdni sok?"
+        "sl": "Kaj pa grozdni sok?",
+        "fr": "Et le jus de raisin ?"
       },
       "a": {
         "en": "Sources disagree. VCA says grape juice does not appear to cause the poisoning seen with grapes and raisins, while FirstVet says grape juice should never be given to dogs. We follow the stricter advice: don't give it.",
-        "sl": "Viri se ne strinjajo. VCA navaja, da grozdni sok očitno ne povzroča zastrupitve, kakršno povzročata grozdje in rozine, FirstVet pa pravi, da psom grozdnega soka nikoli ne smemo dati. Upoštevamo strožji nasvet: ne dajajte ga."
+        "sl": "Viri se ne strinjajo. VCA navaja, da grozdni sok očitno ne povzroča zastrupitve, kakršno povzročata grozdje in rozine, FirstVet pa pravi, da psom grozdnega soka nikoli ne smemo dati. Upoštevamo strožji nasvet: ne dajajte ga.",
+        "fr": "Les sources ne sont pas d’accord. VCA indique que le jus de raisin ne semble pas provoquer l’intoxication observée avec le raisin et les raisins secs, alors que FirstVet affirme qu’il ne faut jamais en donner aux chiens. Nous suivons l’avis le plus strict : n’en donnez pas."
       }
     }
   ],
@@ -148,6 +162,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e0fabfe3ee39360e7bd4be8680d7dadc4701a8c0d0af42904819bc94d74ee67d"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dfe647845fc6fca7be0ecb5bc7af1b633bc71d4ea4033ddb571197338bb4eaf7"
     }
   }
 }

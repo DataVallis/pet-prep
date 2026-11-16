@@ -3,67 +3,81 @@
   "species": "dog",
   "name": {
     "en": "Bone broth",
-    "sl": "Kostna juha"
+    "sl": "Kostna juha",
+    "fr": "Bouillon d’os"
   },
   "question": {
     "en": "Can dogs have bone broth?",
-    "sl": "Ali lahko psi jedo kostno juho?"
+    "sl": "Ali lahko psi jedo kostno juho?",
+    "fr": "Les chiens peuvent-ils avoir du bouillon d’os ?"
   },
   "url_slug": {
     "en": "bone-broth",
-    "sl": "kostna-juha"
+    "sl": "kostna-juha",
+    "fr": "bouillon-d-os"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain bone broth made with dog-safe ingredients is fine. It is mild and easy on sensitive stomachs. Strain out every bone before serving, remove the fat layer, and skip broths with onions, garlic or salt.",
-    "sl": "Da, navadna kostna juha iz sestavin, ki so za pse varne, je v redu. Je blaga in nežna do občutljivih želodcev. Pred serviranjem precedite vse kosti, odstranite plast maščobe in se izognite juham s čebulo, česnom ali soljo."
+    "sl": "Da, navadna kostna juha iz sestavin, ki so za pse varne, je v redu. Je blaga in nežna do občutljivih želodcev. Pred serviranjem precedite vse kosti, odstranite plast maščobe in se izognite juham s čebulo, česnom ali soljo.",
+    "fr": "Oui, un bouillon d’os nature préparé avec des ingrédients sans danger pour les chiens convient. Il est doux et est bien toléré par les estomacs sensibles. Retirez tous les os avant de le servir, enlevez la couche de graisse et évitez les bouillons contenant de l’oignon, de l’ail ou du sel."
   },
   "why": {
     "en": "Bone broth is a stock made by slowly cooking animal bones at low heat for a long time. It is mild, flavourful and easy on sensitive stomachs, and it can make food more appealing to dogs with a reduced appetite. The risks come from what goes into it: some broths contain additives such as onions, garlic or salt, and cooked bones can splinter and injure your dog or get lodged in the throat.",
-    "sl": "Kostna juha je osnova, ki nastane s počasnim kuhanjem živalskih kosti pri nizki temperaturi dalj časa. Je blaga, okusna in nežna do občutljivih želodcev, psom s slabšim apetitom pa lahko naredi hrano bolj privlačno. Tveganja izvirajo iz sestavin: nekatere juhe vsebujejo dodatke, kot so čebula, česen ali sol, kuhane kosti pa se lahko razcepijo in psa poškodujejo ali se mu zataknejo v grlu."
+    "sl": "Kostna juha je osnova, ki nastane s počasnim kuhanjem živalskih kosti pri nizki temperaturi dalj časa. Je blaga, okusna in nežna do občutljivih želodcev, psom s slabšim apetitom pa lahko naredi hrano bolj privlačno. Tveganja izvirajo iz sestavin: nekatere juhe vsebujejo dodatke, kot so čebula, česen ali sol, kuhane kosti pa se lahko razcepijo in psa poškodujejo ali se mu zataknejo v grlu.",
+    "fr": "Le bouillon d’os est un fond obtenu en faisant cuire longuement des os d’animaux à feu doux. Il est doux, savoureux et est bien toléré par les estomacs sensibles, et il peut rendre la nourriture plus appétissante pour les chiens qui mangent peu. Les risques viennent de ce qu’on y met : certains bouillons contiennent des additifs comme de l’oignon, de l’ail ou du sel, et les os cuits peuvent éclater, blesser votre chien ou rester coincés dans sa gorge."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog had broth that contains onions, garlic or a lot of salt, see our onion, garlic and salt pages. If your dog swallowed a cooked bone, see our cooked bones page. Bone broth won't fix joint problems on its own, so talk to your vet about them.",
-    "sl": "Če je pes pojedel juho s čebulo, česnom ali veliko soli, poglejte naše strani o čebuli, česnu in soli. Če je pes pogoltnil kuhano kost, poglejte našo stran o kuhanih kosteh. Kostna juha sama ne odpravi težav s sklepi, zato se o njih pogovorite z veterinarjem."
+    "sl": "Če je pes pojedel juho s čebulo, česnom ali veliko soli, poglejte naše strani o čebuli, česnu in soli. Če je pes pogoltnil kuhano kost, poglejte našo stran o kuhanih kosteh. Kostna juha sama ne odpravi težav s sklepi, zato se o njih pogovorite z veterinarjem.",
+    "fr": "Si votre chien a bu un bouillon contenant de l’oignon, de l’ail ou beaucoup de sel, consultez nos pages sur l’oignon, l’ail et le sel. Si votre chien a avalé un os cuit, consultez notre page sur les os cuits. Le bouillon d’os ne suffit pas à soigner des problèmes articulaires : parlez-en à votre vétérinaire."
   },
   "serving": {
     "en": "Use only natural, dog-safe ingredients, with no onions, garlic or salt. After cooking, refrigerate the broth, remove the hardened layer of fat from the top and strain out every bone. Serve it on its own or mixed into dry food.",
-    "sl": "Uporabite le naravne sestavine, ki so za pse varne, brez čebule, česna in soli. Po kuhanju juho ohladite v hladilniku, odstranite strjeno plast maščobe z vrha in precedite vse kosti. Ponudite jo samo ali primešano suhi hrani."
+    "sl": "Uporabite le naravne sestavine, ki so za pse varne, brez čebule, česna in soli. Po kuhanju juho ohladite v hladilniku, odstranite strjeno plast maščobe z vrha in precedite vse kosti. Ponudite jo samo ali primešano suhi hrani.",
+    "fr": "N’utilisez que des ingrédients naturels et sans danger pour les chiens, sans oignon, ail ni sel. Après la cuisson, mettez le bouillon au réfrigérateur, retirez la couche de graisse figée à la surface et enlevez tous les os. Servez-le seul ou mélangé aux croquettes."
   },
   "child": {
     "en": "Bone broth can be a tasty treat for dogs. A grown-up makes it and takes out every bone first, because bones aren't safe for dogs.",
-    "sl": "Kostna juha je lahko okusna posladica za pse. Pripravi jo odrasla oseba, ki prej odstrani vse kosti, saj kosti za pse niso varne."
+    "sl": "Kostna juha je lahko okusna posladica za pse. Pripravi jo odrasla oseba, ki prej odstrani vse kosti, saj kosti za pse niso varne.",
+    "fr": "Le bouillon d’os peut être une friandise savoureuse pour les chiens. Un adulte le prépare et retire d’abord tous les os, car ils sont dangereux pour les chiens."
   },
   "faq": [
     {
       "q": {
         "en": "How is bone broth different from regular broth?",
-        "sl": "V čem se kostna juha razlikuje od navadne juhe?"
+        "sl": "V čem se kostna juha razlikuje od navadne juhe?",
+        "fr": "En quoi le bouillon d’os diffère-t-il d’un bouillon ordinaire ?"
       },
       "a": {
         "en": "Bone broth is a stock liquid made by slowly cooking animal bones at low heat for an extended period. For everyday broth and stock cubes, see our broth page.",
-        "sl": "Kostna juha je tekoča osnova, ki nastane s počasnim kuhanjem živalskih kosti pri nizki temperaturi dalj časa. O navadni juhi in jušnih kockah si preberite našo stran o juhi."
+        "sl": "Kostna juha je tekoča osnova, ki nastane s počasnim kuhanjem živalskih kosti pri nizki temperaturi dalj časa. O navadni juhi in jušnih kockah si preberite našo stran o juhi.",
+        "fr": "Le bouillon d’os est un fond obtenu en faisant cuire longuement des os d’animaux à feu doux. Pour les bouillons du quotidien et les cubes de bouillon, consultez notre page sur le bouillon."
       }
     },
     {
       "q": {
         "en": "Can I use store-bought bone broth?",
-        "sl": "Ali lahko uporabim kupljeno kostno juho?"
+        "sl": "Ali lahko uporabim kupljeno kostno juho?",
+        "fr": "Puis-je utiliser du bouillon d’os du commerce ?"
       },
       "a": {
         "en": "Look for one with natural, dog-safe ingredients, because some contain additives for preservation and taste, such as onions, garlic or salt.",
-        "sl": "Izberite takšno z naravnimi sestavinami, ki so za pse varne, saj nekatere vsebujejo dodatke za obstojnost in okus, kot so čebula, česen ali sol."
+        "sl": "Izberite takšno z naravnimi sestavinami, ki so za pse varne, saj nekatere vsebujejo dodatke za obstojnost in okus, kot so čebula, česen ali sol.",
+        "fr": "Choisissez-en un avec des ingrédients naturels et sans danger pour les chiens, car certains contiennent des additifs de conservation ou de goût, comme de l’oignon, de l’ail ou du sel."
       }
     },
     {
       "q": {
         "en": "Does bone broth help my dog's joints?",
-        "sl": "Ali kostna juha pomaga pasjim sklepom?"
+        "sl": "Ali kostna juha pomaga pasjim sklepom?",
+        "fr": "Le bouillon d’os est-il bon pour les articulations de mon chien ?"
       },
       "a": {
         "en": "The AKC says the collagen in bone broth contributes to joint health, but bone broth won't cure joint problems without other treatments, so contact your vet.",
-        "sl": "AKC navaja, da kolagen v kostni juhi prispeva k zdravju sklepov, vendar kostna juha brez drugih zdravljenj težav s sklepi ne odpravi, zato se obrnite na veterinarja."
+        "sl": "AKC navaja, da kolagen v kostni juhi prispeva k zdravju sklepov, vendar kostna juha brez drugih zdravljenj težav s sklepi ne odpravi, zato se obrnite na veterinarja.",
+        "fr": "Selon l’AKC, le collagène du bouillon d’os contribue à la santé des articulations, mais le bouillon d’os ne guérit pas les problèmes articulaires sans autres traitements : contactez donc votre vétérinaire."
       }
     }
   ],
@@ -136,6 +150,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d27a3c4f067c327a375e198227c83ea378531afbd0dbd2e82cd68bf2da2eca9b"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "486ab3044c318ab438a4a4df639ca2781983bdc1ed6273a1adadb9a9cab28ef3"
     }
   }
 }

@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Goat's milk",
-    "sl": "Kozje mleko"
+    "sl": "Kozje mleko",
+    "fr": "Lait de chèvre"
   },
   "question": {
     "en": "Can cats drink goat's milk?",
-    "sl": "Ali lahko mačke pijejo kozje mleko?"
+    "sl": "Ali lahko mačke pijejo kozje mleko?",
+    "fr": "Les chats peuvent-ils boire du lait de chèvre ?"
   },
   "url_slug": {
     "en": "goat-milk",
-    "sl": "kozje-mleko"
+    "sl": "kozje-mleko",
+    "fr": "lait-de-chevre"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Vets list goat's milk, like cow's milk, among the drinks that cause tummy trouble in lactose-intolerant cats, and most cats are lactose intolerant. Cat charities advise avoiding any type of milk – your cat only needs water.",
-    "sl": "Bolje ne. Veterinarji kozje mleko, tako kot kravje, navajajo med pijačami, ki mačkam z laktozno intoleranco povzročijo prebavne težave, večina mačk pa laktoze ne prenaša. Dobrodelne organizacije za mačke svetujejo, naj se mleku izognemo – muca potrebuje le vodo."
+    "sl": "Bolje ne. Veterinarji kozje mleko, tako kot kravje, navajajo med pijačami, ki mačkam z laktozno intoleranco povzročijo prebavne težave, večina mačk pa laktoze ne prenaša. Dobrodelne organizacije za mačke svetujejo, naj se mleku izognemo – muca potrebuje le vodo.",
+    "fr": "Mieux vaut s’en abstenir. Les vétérinaires rangent le lait de chèvre, comme le lait de vache, parmi les boissons qui causent des maux de ventre chez les chats intolérants au lactose, et la plupart des chats le sont. Les associations de protection des chats conseillent d’éviter tout type de lait : votre chat n’a besoin que d’eau."
   },
   "why": {
     "en": "Lactose intolerance is a common food reaction in cats, and VCA vets list diarrhoea, vomiting, bloating and tummy discomfort after cow's or goat's milk as its signs. There are no benefits to a cat having milk. For kittens the sources differ: VCA says goat's milk is not recommended for kittens because it is far too low in protein and fat, and allows pasteurised goat's milk only in an emergency until kitten milk replacer is available, while Cats Protection says never to give it, as kittens find it difficult to digest. We follow the stricter advice.",
-    "sl": "Laktozna intoleranca je pri mačkah pogost odziv na hrano; veterinarji VCA kot njene znake navajajo drisko, bruhanje, napihnjenost in bolečine v trebuhu po kravjem ali kozjem mleku. Mleko mački ne prinaša nobenih koristi. Pri mladičkih se viri razlikujejo: VCA pravi, da kozje mleko za mladičke ni priporočljivo, ker ima občutno premalo beljakovin in maščob, pasterizirano kozje mleko pa dopušča le v sili, dokler ni na voljo nadomestno mleko za mladičke; Cats Protection pa svetuje, naj ga mladičkom nikoli ne dajemo, ker ga težko prebavijo. Upoštevamo strožji nasvet."
+    "sl": "Laktozna intoleranca je pri mačkah pogost odziv na hrano; veterinarji VCA kot njene znake navajajo drisko, bruhanje, napihnjenost in bolečine v trebuhu po kravjem ali kozjem mleku. Mleko mački ne prinaša nobenih koristi. Pri mladičkih se viri razlikujejo: VCA pravi, da kozje mleko za mladičke ni priporočljivo, ker ima občutno premalo beljakovin in maščob, pasterizirano kozje mleko pa dopušča le v sili, dokler ni na voljo nadomestno mleko za mladičke; Cats Protection pa svetuje, naj ga mladičkom nikoli ne dajemo, ker ga težko prebavijo. Upoštevamo strožji nasvet.",
+    "fr": "L’intolérance au lactose est une réaction alimentaire courante chez les chats, et les vétérinaires de VCA citent parmi ses signes la diarrhée, les vomissements, les ballonnements et la gêne au ventre après du lait de vache ou de chèvre. Le lait n’apporte aucun bénéfice à un chat. Pour les chatons, les sources divergent : VCA indique que le lait de chèvre n’est pas recommandé pour les chatons, car il est bien trop pauvre en protéines et en graisses, et n’autorise le lait de chèvre pasteurisé qu’en cas d’urgence, en attendant de disposer d’un lait de remplacement pour chatons, tandis que Cats Protection recommande de ne jamais en donner, car les chatons le digèrent difficilement. Nous suivons l’avis le plus strict."
   },
   "signs": {
     "en": [
@@ -38,36 +43,50 @@
       "Bolečine ali nelagodje v trebuhu",
       "Kruljenje v trebuhu",
       "Pomanjkanje energije"
+    ],
+    "fr": [
+      "Diarrhée",
+      "Vomissements",
+      "Ventre ballonné",
+      "Douleurs ou gêne au ventre",
+      "Gargouillis dans le ventre",
+      "Manque d’énergie"
     ]
   },
   "what_to_do": {
     "en": "Stop the goat's milk and offer fresh water. If your cat gets diarrhoea after dairy, feed small, bland, frequent meals, and speak to your vet if your cat refuses to eat – severe cases may need veterinary attention.",
-    "sl": "Prenehajte s kozjim mlekom in ponudite svežo vodo. Če ima muca po mlečnih izdelkih drisko, ji dajte majhne, lahke, pogoste obroke; če noče jesti, se posvetujte z veterinarjem – v hujših primerih potrebuje veterinarsko pomoč."
+    "sl": "Prenehajte s kozjim mlekom in ponudite svežo vodo. Če ima muca po mlečnih izdelkih drisko, ji dajte majhne, lahke, pogoste obroke; če noče jesti, se posvetujte z veterinarjem – v hujših primerih potrebuje veterinarsko pomoč.",
+    "fr": "Arrêtez le lait de chèvre et proposez de l’eau fraîche. Si votre chat a de la diarrhée après des produits laitiers, donnez-lui de petits repas fréquents et faciles à digérer, et parlez-en à votre vétérinaire s’il refuse de manger : les cas graves peuvent nécessiter des soins vétérinaires."
   },
   "serving": null,
   "child": {
     "en": "Cats don't need goat's milk or any other milk. A bowl of fresh water is the best drink for your cat!",
-    "sl": "Muce ne potrebujejo kozjega ali drugega mleka. Skledica sveže vode je zanje najboljša pijača!"
+    "sl": "Muce ne potrebujejo kozjega ali drugega mleka. Skledica sveže vode je zanje najboljša pijača!",
+    "fr": "Les chats n’ont pas besoin de lait de chèvre ni d’aucun autre lait. Une gamelle d’eau fraîche est la meilleure boisson pour ton chat !"
   },
   "faq": [
     {
       "q": {
         "en": "Can kittens drink goat's milk?",
-        "sl": "Ali lahko mačji mladički pijejo kozje mleko?"
+        "sl": "Ali lahko mačji mladički pijejo kozje mleko?",
+        "fr": "Les chatons peuvent-ils boire du lait de chèvre ?"
       },
       "a": {
         "en": "No. Cats Protection says never give cow's or goat's milk to kittens, as they find it difficult to digest – use substitute kitten milk made specifically for kittens. VCA vets add that goat's milk is far too low in protein and fat for kittens.",
-        "sl": "Ne. Cats Protection svetuje, naj mladičkom nikoli ne dajemo kravjega ali kozjega mleka, ker ga težko prebavijo – uporabite nadomestno mleko, narejeno posebej za mladičke. Veterinarji VCA dodajajo, da ima kozje mleko za mladičke občutno premalo beljakovin in maščob."
+        "sl": "Ne. Cats Protection svetuje, naj mladičkom nikoli ne dajemo kravjega ali kozjega mleka, ker ga težko prebavijo – uporabite nadomestno mleko, narejeno posebej za mladičke. Veterinarji VCA dodajajo, da ima kozje mleko za mladičke občutno premalo beljakovin in maščob.",
+        "fr": "Non. Cats Protection recommande de ne jamais donner de lait de vache ni de chèvre aux chatons, car ils le digèrent difficilement : utilisez un lait de remplacement conçu spécialement pour les chatons. Les vétérinaires de VCA ajoutent que le lait de chèvre est bien trop pauvre en protéines et en graisses pour les chatons."
       }
     },
     {
       "q": {
         "en": "Is goat's milk better for cats than cow's milk?",
-        "sl": "Je kozje mleko za mačke boljše od kravjega?"
+        "sl": "Je kozje mleko za mačke boljše od kravjega?",
+        "fr": "Le lait de chèvre est-il meilleur pour les chats que le lait de vache ?"
       },
       "a": {
         "en": "Not according to vets: signs of lactose intolerance can appear after either cow's or goat's milk. It is best to avoid giving your cat any type of milk.",
-        "sl": "Po mnenju veterinarjev ne: znaki laktozne intolerance se lahko pojavijo po kravjem ali po kozjem mleku. Najbolje je, da mački ne dajemo nobene vrste mleka."
+        "sl": "Po mnenju veterinarjev ne: znaki laktozne intolerance se lahko pojavijo po kravjem ali po kozjem mleku. Najbolje je, da mački ne dajemo nobene vrste mleka.",
+        "fr": "Pas selon les vétérinaires : des signes d’intolérance au lactose peuvent apparaître après du lait de vache comme après du lait de chèvre. Mieux vaut ne donner aucun type de lait à votre chat."
       }
     }
   ],
@@ -159,6 +178,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9066bc736d9d191437e407161ee3230c016b82948146158fbf854110774edf52"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a47d0c5f33f24016b25b021f6c412986a5dc3474e1cd8f746257e510bb633114"
     }
   }
 }
