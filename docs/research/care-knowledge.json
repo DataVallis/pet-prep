@@ -192010,6 +192010,21 @@
       "checked": "2026-11-10"
     },
     {
+      "country": "ZM",
+      "kind": "clinic",
+      "name": "UNZA Veterinary Clinic (University of Zambia, School of Veterinary Medicine)",
+      "city": "Lusaka",
+      "region": "Lusaka Province",
+      "address": "University of Zambia, Plot 64 Great East Road, Lusaka",
+      "phone": "+260976333208",
+      "emergency_24h": false,
+      "duty": "Open Mon-Fri 08:00-17:00, Sat 09:00-12:30, Sun and public holidays 10:00-12:00. Large and small animals; teaching clinic.",
+      "duty_i18n": null,
+      "url": "https://www.unza.zm/node/1630",
+      "source_url": "https://www.unza.zm/node/1630",
+      "checked": "2026-11-16"
+    },
+    {
       "country": "ZW",
       "kind": "clinic",
       "name": "University of Zimbabwe Veterinary Teaching Hospital (Faculty of Veterinary Science)",

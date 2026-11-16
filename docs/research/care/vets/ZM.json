@@ -1,0 +1,26 @@
+{
+  "country": "ZM",
+  "checked": "2026-11-16",
+  "sources": [
+    { "name": "University of Zambia - Veterinary Medicine clinic (Products and Services offered)", "url": "https://www.unza.zm/node/1630", "note": "Official university page: address, phone, opening hours. No 24 h claim." },
+    { "name": "University of Zambia - School of Veterinary Medicine, Contact", "url": "https://unza.zm/veterinary-medicine/contacts", "note": "School address and switchboard; lists no clinic." }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "UNZA Veterinary Clinic (University of Zambia, School of Veterinary Medicine)",
+      "city": "Lusaka",
+      "region": "Lusaka Province",
+      "address": "University of Zambia, Plot 64 Great East Road, Lusaka",
+      "phone": "+260976333208",
+      "emergency_24h": false,
+      "duty": "Open Mon-Fri 08:00-17:00, Sat 09:00-12:30, Sun and public holidays 10:00-12:00. Large and small animals; teaching clinic.",
+      "small_animals": true,
+      "url": "https://www.unza.zm/node/1630",
+      "source_url": "https://www.unza.zm/node/1630",
+      "checked": "2026-11-16",
+      "note": "Phone and hours opened on the unza.zm page. Email on that page: unzavetclinic@unza.zm (page has a stray space). WikiVet (secondary, not used as source) mentions an emergency number 097 8822000 and reception 01 291515, but no unza.zm page confirmed them, so not published and no 24 h claim. unza.zm/veterinary-medicine/services returned a fetch error."
+    }
+  ],
+  "notes": "Only one clinic confirmed on an official/own page. The Zambia Veterinary Association and Veterinary Council of Zambia sites were not found/reachable by search (no member or practice list opened). Private clinics (Petvet Lilayi, Loving Hand Vet Clinic, KAWS Kitwe, House Call Vet etc.) appear only in aggregator directories (vetshopzambia.com, bizbwana.com), which are not accepted as sole source, so they are left out. No duty rota or poison line found. Left: find own sites/Facebook pages of Lusaka, Kitwe, Ndola, Livingstone, Kabwe, Chipata clinics; ZVA / VCZ / MFL registers."
+}
