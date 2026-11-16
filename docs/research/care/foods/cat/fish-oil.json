@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Fish oil",
-    "sl": "Ribje olje"
+    "sl": "Ribje olje",
+    "fr": "Huile de poisson"
   },
   "question": {
     "en": "Can cats have fish oil?",
-    "sl": "Ali lahko mačke dobijo ribje olje?"
+    "sl": "Ali lahko mačke dobijo ribje olje?",
+    "fr": "Les chats peuvent-ils prendre de l’huile de poisson ?"
   },
   "url_slug": {
     "en": "fish-oil",
-    "sl": "ribje-olje"
+    "sl": "ribje-olje",
+    "fr": "huile-de-poisson"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Only if your vet recommends it. Fish oil is a supplement used widely in cats, but it may not be appropriate for every pet and can have side effects. Always talk to your vet before giving fish oil or any other supplement.",
-    "sl": "Le če ga priporoči veterinar. Ribje olje je prehransko dopolnilo, ki se pri mačkah pogosto uporablja, vendar morda ni primerno za vsako žival in ima lahko stranske učinke. Preden muci daste ribje olje ali katero koli drugo dopolnilo, se vedno posvetujte z veterinarjem."
+    "sl": "Le če ga priporoči veterinar. Ribje olje je prehransko dopolnilo, ki se pri mačkah pogosto uporablja, vendar morda ni primerno za vsako žival in ima lahko stranske učinke. Preden muci daste ribje olje ali katero koli drugo dopolnilo, se vedno posvetujte z veterinarjem.",
+    "fr": "Seulement si votre vétérinaire la recommande. L’huile de poisson est un complément très utilisé chez les chats, mais elle ne convient pas forcément à tous les animaux et peut avoir des effets indésirables. Demandez toujours conseil à votre vétérinaire avant de donner de l’huile de poisson ou tout autre complément."
   },
   "why": {
     "en": "Fish oil is used widely in cats, but omega-3 supplements may not be appropriate for every pet, and less is known about supplementing cats that have kidney disease. Possible side effects include mild stomach upset, a fishy odour, an oily coat and itchy, flaky skin; serious reactions include abnormal bruising or bleeding, especially in cats. Fish oil should not be given if a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity.",
-    "sl": "Ribje olje se pri mačkah pogosto uporablja, vendar dopolnila z omega-3 morda niso primerna za vsako žival, o dodajanju pri mačkah z boleznijo ledvic pa je znanega manj. Možni stranski učinki so blage prebavne težave, ribji vonj, masten kožuh ter srbeča, luskasta koža; resnejši odzivi so nenavadne modrice ali krvavitve, zlasti pri mačkah. Ribjega olja ne dajemo, če ni na voljo iz zanesljivega vira, saj nekateri viri nosijo veliko tveganje za zastrupitev s težkimi kovinami."
+    "sl": "Ribje olje se pri mačkah pogosto uporablja, vendar dopolnila z omega-3 morda niso primerna za vsako žival, o dodajanju pri mačkah z boleznijo ledvic pa je znanega manj. Možni stranski učinki so blage prebavne težave, ribji vonj, masten kožuh ter srbeča, luskasta koža; resnejši odzivi so nenavadne modrice ali krvavitve, zlasti pri mačkah. Ribjega olja ne dajemo, če ni na voljo iz zanesljivega vira, saj nekateri viri nosijo veliko tveganje za zastrupitev s težkimi kovinami.",
+    "fr": "L’huile de poisson est très utilisée chez les chats, mais les compléments d’oméga-3 ne conviennent pas forcément à tous les animaux, et on sait moins de choses sur leur utilisation chez les chats atteints d’une maladie rénale. Parmi les effets indésirables possibles : de légers maux d’estomac, une odeur de poisson, un pelage gras et une peau qui démange ou qui desquame ; parmi les réactions graves figurent des bleus ou des saignements anormaux, surtout chez les chats. Il ne faut pas donner d’huile de poisson si l’on ne peut pas se procurer une source fiable, car certaines sources présentent un risque élevé de toxicité par les métaux lourds."
   },
   "signs": {
     "en": [
@@ -44,26 +49,41 @@
       "Alergijski odziv: nepravilno dihanje, izpuščaj, vročina, otekanje okrog obraza",
       "Izguba apetita",
       "Nekoordinirano gibanje ali krči"
+    ],
+    "fr": [
+      "Légers maux d’estomac",
+      "Odeur de poisson",
+      "Pelage gras",
+      "Démangeaisons ou peau qui desquame",
+      "Cicatrisation lente",
+      "Bleus ou saignements anormaux",
+      "Réaction allergique : respiration irrégulière, éruption cutanée, fièvre, gonflement autour du visage",
+      "Perte d’appétit",
+      "Démarche chancelante ou convulsions"
     ]
   },
   "what_to_do": {
     "en": "Talk to your vet before giving fish oil, and tell them about any vitamins or supplements your cat already gets. If serious signs appear, stop the fish oil and contact your vet immediately.",
-    "sl": "Pred dajanjem ribjega olja se posvetujte z veterinarjem in mu povejte za vse vitamine ali dopolnila, ki jih muca že dobiva. Če se pojavijo resni znaki, prenehajte z ribjim oljem in takoj pokličite veterinarja."
+    "sl": "Pred dajanjem ribjega olja se posvetujte z veterinarjem in mu povejte za vse vitamine ali dopolnila, ki jih muca že dobiva. Če se pojavijo resni znaki, prenehajte z ribjim oljem in takoj pokličite veterinarja.",
+    "fr": "Parlez-en à votre vétérinaire avant de donner de l’huile de poisson, et signalez-lui les vitamines ou compléments que votre chat reçoit déjà. Si des signes graves apparaissent, arrêtez l’huile de poisson et contactez immédiatement votre vétérinaire."
   },
   "serving": null,
   "child": {
     "en": "Only the vet can decide if a cat needs fish oil. Ask a grown-up to talk to the vet first!",
-    "sl": "Ali muca potrebuje ribje olje, lahko odloči le veterinar. Prosi odraslega, naj se najprej pogovori z njim!"
+    "sl": "Ali muca potrebuje ribje olje, lahko odloči le veterinar. Prosi odraslega, naj se najprej pogovori z njim!",
+    "fr": "Seul le vétérinaire peut décider si un chat a besoin d’huile de poisson. Demande à un adulte d’en parler d’abord au vétérinaire !"
   },
   "faq": [
     {
       "q": {
         "en": "Does the brand of fish oil matter?",
-        "sl": "Ali je pomembno, katero ribje olje izberem?"
+        "sl": "Ali je pomembno, katero ribje olje izberem?",
+        "fr": "La marque d’huile de poisson a-t-elle de l’importance ?"
       },
       "a": {
         "en": "Yes. VCA advises against fish oil when a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity, and Tufts vets recommend a brand with good quality control. Your vet can advise.",
-        "sl": "Da. VCA odsvetuje ribje olje, če ni na voljo iz zanesljivega vira, saj nekateri viri nosijo veliko tveganje za zastrupitev s težkimi kovinami, veterinarji Tufts pa priporočajo znamko z dobrim nadzorom kakovosti. Svetuje vam lahko veterinar."
+        "sl": "Da. VCA odsvetuje ribje olje, če ni na voljo iz zanesljivega vira, saj nekateri viri nosijo veliko tveganje za zastrupitev s težkimi kovinami, veterinarji Tufts pa priporočajo znamko z dobrim nadzorom kakovosti. Svetuje vam lahko veterinar.",
+        "fr": "Oui. VCA déconseille l’huile de poisson lorsqu’on ne peut pas se procurer une source fiable, car certaines sources présentent un risque élevé de toxicité par les métaux lourds, et les vétérinaires de Tufts recommandent une marque dont la qualité est bien contrôlée. Votre vétérinaire peut vous conseiller."
       }
     }
   ],
@@ -158,6 +178,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6ef49b080d71429f22a342482fd6c66d990cc1c6a74d3f5cf573b27c27a78508"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dfb764950ff4921c9d06abe23ed9e5f496c10f4914125d4edad46ab90557ae43"
     }
   }
 }
