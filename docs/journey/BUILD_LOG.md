@@ -8,11 +8,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-16 — Šola: kuža se spet vidi
+
+**Kaj:** David je na telefonu poslal posnetek šole: »Moti me tukaj, da je vse čez glavo.« Zgoraj so bili trije sloji — vrstica s pikami, dvovrstično pravilo in velik ukaz »Lulat zunaj! 👂« — ravno čez glavo in ušesa mladička. Zdaj je zgoraj samo tanka vrstica s pikami in ×; ukaz je tik nad priboljškom, pravilo (krajše: »Uboga → priboljšek · Ne uboga → počakaj«) pa pod njim, spodaj čez tla.
+**Zakaj je pomembno:** v šoli otrok pohvali samo, ko kuža uboga. Če ne vidi kužkove glave, ne vidi, ali je ubogal — igra izgubi smisel. Pravilo velja odslej za vse igre: nič čez glavo ljubljenčka.
+- 🧒 Otrokom: »Ukaz in priboljšek sta spodaj skupaj — kuža je v sredini, da vidiš, kdaj te uboga.«
+- 👩 Staršem: majhna sprememba, ki jo opazi vsak otrok; posodobitev pride sama (OTA), brez nove gradnje v trgovini.
+- 🛠 Tehnično: samo razpored (časi in točkovanje strežnika nespremenjeni); test preverja, da sta ukaz in pravilo v spodnjem delu in × zgoraj.
+
+---
+
 ## 2026-11-16 — Vsaka pasma v vseh svojih barvah: na spletni strani in v aplikaciji
 
 **Kaj:** border collie je bil od 26. 10. edina pasma, ki jo je na petprep.si mogoče pogledati v vseh standardnih barvah — šlo je za test. Zdaj nočno opravilo vsako noč naredi barvne fotografije za ~10 pasem (skupaj ~347 slik za 102 pasmi, ≈ 52 $ AI), Claude vsako sliko pregleda, na stran gredo samo dobre. Vsaka nova pasma dobi barve že v svojem nočnem zagonu. V aplikaciji starš pri izbiri barve zdaj vidi fotografijo pasme v tej barvi.
 **Zakaj je pomembno:** »rdeče-bel« ali »modri merle« staršu in otroku ne pove veliko — fotografija pove. Registar pasem s fotografijami v vseh barvah je hkrati SEO vrednost (ljudje iščejo pasme po barvi).
 **Kako povedati:** 👩 »Preden izberete barvo, jo vidite.« · 📣 kolaž ene pasme v vseh barvah · 💼 AI-cevovod, ki sam ustvari in pregleda stotine slik za ~0,15 $ na sliko · 🛠 en vir slik (spletna stran) za stran in aplikacijo.
+
+---
+
 ## 2026-11-16 — Igra se konča, otrok pa ne more ven: × je zdaj vedno nad kartico
 
 **Kaj:** David je na iPhonu igral palico s peresom z muco. Po lovu se je vrnila uvodna kartica z »Muca po zadnji igri počiva. Igrata se lahko spet ob 21:13.« in onemogočenim »Začni lov« — nič ni reagiralo, aplikacijo je moral ubiti. Vzrok: polprosojno ozadje kartice je bilo narisano čez zgornjo vrstico, zato je × izgledal tam, a dotika ni dobil; iOS pa nima sistemskega »nazaj«. Zdaj je × v vseh igrah vedno nad kartico (uvod, rezultat, napaka), uvodna kartica palice ima še gumb »Zapri«.
