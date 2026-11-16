@@ -234,7 +234,7 @@
   },
   "quietHours": {
     "title": "Tihe ure",
-    "hint": "V tihih urah ljubljenčki skoraj ne postanejo lačni, ni neredov in ni obvestil. Ure veljajo po času družine.",
+    "hint": "V tihih urah ljubljenčki skoraj ne postanejo lačni, ni neredov in ni obvestil. Vsak ljubljenček sledi tem uram, razen če ima svoje (kartica ljubljenčka zgoraj). Ure veljajo po uri vsakega ljubljenčka.",
     "defaultsApply": "Veljajo privzeti časi — tapnite Shrani, da jih potrdite ali spremenite.",
     "active": "Vklopljeno",
     "school": "Šola",
@@ -247,7 +247,24 @@
     "loadError": "Tihih ur ni bilo mogoče naložiti.",
     "retry": "Poskusi znova",
     "saveError": "Shranjevanje ni uspelo. Preverite čase in poskusite znova.",
-    "offline": "Ni povezave s strežnikom. Poskusite znova."
+    "offline": "Ni povezave s strežnikom. Poskusite znova.",
+    "pet": {
+      "title": "Tihe ure",
+      "family": "Kot družina",
+      "own": "Lastne ure",
+      "choice": "Tihe ure tega ljubljenčka",
+      "followHint": "Sledi tihim uram družine: {{summary}}",
+      "ownHint": "Samo za tega ljubljenčka. Sprememba tihih ur družine jih ne premakne.",
+      "saved": "Shranjeno.",
+      "saveError": "Shranjevanje ni uspelo. Poskusite znova.",
+      "offline": "Ni povezave s strežnikom. Poskusite znova.",
+      "off": "izklopljene"
+    },
+    "summarySchool": "Šola {{range}}",
+    "summaryBedtime": "Spanje {{range}}",
+    "summaryNone": "brez časov",
+    "groupOn": "{{group}}: vklopljeno",
+    "groupOff": "{{group}}: izklopljeno"
   },
   "familyZone": {
     "title": "Časovni pas družine",

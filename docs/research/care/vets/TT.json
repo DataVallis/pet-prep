@@ -45,7 +45,8 @@
       "note": "Hours page says Wed 15:00-19:00, hospital page says 16:00-19:00 (conflict); Sat 9:00-13:00. Only emergency line listed (756-9427) is farm animals only. Address from hours page; hospital page has no street address. Phone corrected 2026-11-13: hours page lists small animal as 225-4673 ext 4303 and 4302 (also 663-5160, 766-1122); 645-3232 is the School of Veterinary Medicine main line.",
       "duty_i18n": {
         "pt": "Hospital universitário, sob marcação: segunda a sexta 8h00–15h00, quarta com horário alargado ao fim do dia, sábado 9h00–13h00. Sem serviço de urgências para animais de pequeno porte.",
-        "nl": "Opleidingskliniek, op afspraak: ma–vr 8.00–15.00 uur, woensdag verlengde avondopening, za 9.00–13.00 uur. Geen spoedeisende hulp voor kleine huisdieren vermeld."
+        "nl": "Opleidingskliniek, op afspraak: ma–vr 8.00–15.00 uur, woensdag verlengde avondopening, za 9.00–13.00 uur. Geen spoedeisende hulp voor kleine huisdieren vermeld.",
+        "pl": "Szpital dydaktyczny, po wcześniejszym umówieniu: pon.–pt. 8:00–15:00, w środy wydłużone godziny wieczorne, sob. 9:00–13:00. Nie podano pogotowia dla małych zwierząt."
       }
     },
     {
@@ -63,7 +64,8 @@
       "note": "After-hours line listed; no 24 h wording. Only vet clinic found for Tobago; no own website found.",
       "duty_i18n": {
         "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–14h00. Fora de horas e urgências: +1 868 688 8281.",
-        "nl": "Ma–vr 8.00–18.00 uur, za 9.00–14.00 uur. Buiten kantooruren en bij spoed: +1 868 688 8281."
+        "nl": "Ma–vr 8.00–18.00 uur, za 9.00–14.00 uur. Buiten kantooruren en bij spoed: +1 868 688 8281.",
+        "pl": "pon.–pt. 8:00–18:00, sob. 9:00–14:00. Po godzinach i w nagłych przypadkach: +1 868 688 8281."
       }
     },
     {
@@ -94,7 +96,8 @@
       "note": "No 24 h wording.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências: +1 868 725 2548.",
-        "nl": "Buiten kantooruren en bij spoed: +1 868 725 2548."
+        "nl": "Buiten kantooruren en bij spoed: +1 868 725 2548.",
+        "pl": "Po godzinach i w nagłych przypadkach: +1 868 725 2548."
       }
     },
     {
@@ -112,7 +115,8 @@
       "note": "No 24 h wording.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências: +1 868 759 3161.",
-        "nl": "Buiten kantooruren en bij spoed: +1 868 759 3161."
+        "nl": "Buiten kantooruren en bij spoed: +1 868 759 3161.",
+        "pl": "Po godzinach i w nagłych przypadkach: +1 868 759 3161."
       }
     },
     {
@@ -130,7 +134,8 @@
       "note": "Not stated whether the after-hours line is staffed 24 h.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências: +1 868 310 1227.",
-        "nl": "Buiten kantooruren en bij spoed: +1 868 310 1227."
+        "nl": "Buiten kantooruren en bij spoed: +1 868 310 1227.",
+        "pl": "Po godzinach i w nagłych przypadkach: +1 868 310 1227."
       }
     },
     {
@@ -148,7 +153,8 @@
       "note": "No emergency wording.",
       "duty_i18n": {
         "pt": "Segunda a sexta 8h00–16h45, sábado 9h00–12h45, domingo e feriados 9h00–10h45. WhatsApp +1 868 376 3427.",
-        "nl": "Ma–vr 8.00–16.45 uur, za 9.00–12.45 uur, zo en feestdagen 9.00–10.45 uur. WhatsApp +1 868 376 3427."
+        "nl": "Ma–vr 8.00–16.45 uur, za 9.00–12.45 uur, zo en feestdagen 9.00–10.45 uur. WhatsApp +1 868 376 3427.",
+        "pl": "pon.–pt. 8:00–16:45, sob. 9:00–12:45, niedz. i święta 9:00–10:45. WhatsApp +1 868 376 3427."
       }
     },
     {
@@ -166,7 +172,8 @@
       "note": "TTVA page: after hours for clients only; no 24 h wording.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências apenas para clientes já registados.",
-        "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten."
+        "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten.",
+        "pl": "Po godzinach i w nagłych przypadkach tylko dla stałych klientów."
       }
     },
     {
@@ -184,7 +191,8 @@
       "note": "No 24 h wording.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências apenas para clientes já registados: +1 868 715 3555.",
-        "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten: +1 868 715 3555."
+        "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten: +1 868 715 3555.",
+        "pl": "Po godzinach i w nagłych przypadkach tylko dla stałych klientów: +1 868 715 3555."
       }
     },
     {
@@ -202,7 +210,8 @@
       "note": "Same number as main line; no 24 h wording.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências: +1 868 353 3412.",
-        "nl": "Buiten kantooruren en bij spoed: +1 868 353 3412."
+        "nl": "Buiten kantooruren en bij spoed: +1 868 353 3412.",
+        "pl": "Po godzinach i w nagłych przypadkach: +1 868 353 3412."
       }
     },
     {
@@ -220,7 +229,8 @@
       "note": "No 24 h wording.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências apenas para clientes já registados: +1 868 701 4288.",
-        "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten: +1 868 701 4288."
+        "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten: +1 868 701 4288.",
+        "pl": "Po godzinach i w nagłych przypadkach tylko dla stałych klientów: +1 868 701 4288."
       }
     },
     {
@@ -238,7 +248,8 @@
       "note": "No 24 h wording.",
       "duty_i18n": {
         "pt": "Urgências: +1 868 360 4802.",
-        "nl": "Spoed: +1 868 360 4802."
+        "nl": "Spoed: +1 868 360 4802.",
+        "pl": "Nagłe przypadki: +1 868 360 4802."
       }
     },
     {
@@ -269,7 +280,8 @@
       "note": "Not stated whether staffed 24 h. WhatsApp 338 8387.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências: +1 868 333 1010.",
-        "nl": "Buiten kantooruren en bij spoed: +1 868 333 1010."
+        "nl": "Buiten kantooruren en bij spoed: +1 868 333 1010.",
+        "pl": "Po godzinach i w nagłych przypadkach: +1 868 333 1010."
       }
     },
     {
@@ -287,7 +299,8 @@
       "note": "No 24 h wording.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências: +1 868 342 5928.",
-        "nl": "Buiten kantooruren en bij spoed: +1 868 342 5928."
+        "nl": "Buiten kantooruren en bij spoed: +1 868 342 5928.",
+        "pl": "Po godzinach i w nagłych przypadkach: +1 868 342 5928."
       }
     },
     {
@@ -318,7 +331,8 @@
       "note": "City not on page; Orange Field Road used from address.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências apenas para clientes já registados.",
-        "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten."
+        "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten.",
+        "pl": "Po godzinach i w nagłych przypadkach tylko dla stałych klientów."
       }
     },
     {
@@ -336,7 +350,8 @@
       "note": "Practice name not on page.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências apenas para clientes já registados.",
-        "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten."
+        "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten.",
+        "pl": "Po godzinach i w nagłych przypadkach tylko dla stałych klientów."
       }
     },
     {
@@ -354,7 +369,8 @@
       "note": "Same number as main line; no 24 h wording.",
       "duty_i18n": {
         "pt": "Fora de horas e urgências: +1 868 276 1706.",
-        "nl": "Buiten kantooruren en bij spoed: +1 868 276 1706."
+        "nl": "Buiten kantooruren en bij spoed: +1 868 276 1706.",
+        "pl": "Po godzinach i w nagłych przypadkach: +1 868 276 1706."
       }
     }
   ],

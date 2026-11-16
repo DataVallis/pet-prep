@@ -1,0 +1,75 @@
+{
+  "country": "BG",
+  "checked": "2026-11-15",
+  "sources": [
+    {
+      "name": "Blue Cross Veterinary Clinics (Sofia, Blagoevgrad) — own website",
+      "url": "https://bluecrossbg.com/en/",
+      "note": "Clinic pages opened: Sofia (Pancharevo) 08:00-22:00 daily, no new patients after 22:00, 24-hour inpatient ward; Blagoevgrad Tue-Sat 09:30-19:00. The site does not claim 24 h admission (third-party listings do — conflict noted)."
+    },
+    {
+      "name": "Blue Cross Sofia — clinic page",
+      "url": "https://bluecrossbg.com/en/clinic-sofia/",
+      "note": "States 'Emergencies: Sofia clinic, every day from 8:00 to 22:00'; no out-of-hours emergency service described."
+    },
+    {
+      "name": "BUSINESS.bg — Central Veterinary Clinic listing",
+      "url": "https://www.business.bg/en/f-13688/centralna-veterinarna-klinika-.html",
+      "note": "Directory (aggregator): patient admission 08:00-21:00 and '24/7 veterinary care' with an emergency unit. Used only together with the other pages; clinic's own site could not be opened."
+    },
+    {
+      "name": "In Your Pocket Sofia — Central Vet Clinic",
+      "url": "https://www.inyourpocket.com/sofia/Central-Vet-Clinic_95389v",
+      "note": "Travel guide listing: 'Open 00:00-24:00'. Conflicts with the 08:00-21:00 admission on the BUSINESS.bg listing."
+    },
+    {
+      "name": "University of Forestry Sofia, Faculty of Veterinary Medicine",
+      "url": "https://ltu.bg/en/about-the-university/faculties/faculty-of-veterinary-medicine/service/",
+      "note": "Official faculty pages opened: no clinic hours, no emergency or duty information published."
+    },
+    {
+      "name": "Bulgarian veterinary bodies (BVS / BFSA / Trakia University)",
+      "url": "https://www.ebvs.eu/countries/Bulgaria",
+      "note": "bvs.bg, babh.government.bg and trakia-uni.bg could not be fetched (not reachable by the research tool); no official duty rota or clinic register was opened."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Blue Cross Veterinary Clinic (Sofia)",
+      "city": "Sofia",
+      "region": "Sofia City",
+      "address": "1 Sinya Svetlina St., Pancharevo, 1137 Sofia",
+      "phone": "+359 898 361 903",
+      "emergency_24h": false,
+      "duty": "Open daily 08:00-22:00; emergencies accepted in these hours, no new patients after 22:00. 24-hour inpatient ward for hospitalised animals.",
+      "small_animals": true,
+      "url": "https://bluecrossbg.com/en/",
+      "source_url": "https://bluecrossbg.com/en/clinic-sofia/",
+      "checked": "2026-11-15",
+      "note": "Own site gives 08:00-22:00 only; In Your Pocket, expatassistant.bg and hotelswithpets.com call it '24 hours / 24/7' (aggregators, contradicted by the clinic's page) so emergency_24h=false. Second phone 02 979 09 35. Street name differs by source (Sinya Svetlina vs Chereshova gradina).",
+      "duty_i18n": {
+        "pl": "Otwarte codziennie 8:00–22:00; nagłe przypadki przyjmowane w tych godzinach, nowi pacjenci nie są przyjmowani po 22:00. Całodobowy oddział dla hospitalizowanych zwierząt."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Blue Cross Veterinary Clinic (Blagoevgrad)",
+      "city": "Blagoevgrad",
+      "region": "Blagoevgrad",
+      "address": "2 Peyo K. Yavorov Blvd., 2704 Blagoevgrad",
+      "phone": "+359 899 711 722",
+      "emergency_24h": false,
+      "duty": "Open Tuesday-Saturday 09:30-19:00; closed Sunday and Monday.",
+      "small_animals": true,
+      "url": "https://bluecrossbg.com/en/",
+      "source_url": "https://bluecrossbg.com/en/",
+      "checked": "2026-11-15",
+      "note": "Second phone 073 592 117. Nearest listed clinic for Bansko/Razlog area; no vet in Bansko itself could be verified.",
+      "duty_i18n": {
+        "pl": "Otwarte wt.–sob. 9:30–19:00; w niedzielę i poniedziałek zamknięte."
+      }
+    }
+  ],
+  "notes": "Research was severely limited: the fetch tool could only open URLs that surfaced in search results, the search engine returned almost no Bulgarian pages, and bvs.bg, BFSA (babh.government.bg), Trakia University, bluecrossbg.com/sos, and clinics' own sites other than Blue Cross were not reachable. No official duty rota (dezhurstvo) and no animal poison line was found for Bulgaria (none expected). LEFT: Sofia - Bars Vet (0888 779 923, barsvet.com), Orion (0878 662 179, veterinarnaklinika.net), MEJ (02 953 32 99, vetmei.com), JulyVet (julyvet.com), Saint Antim Vet Clinic (said 24/7 on hotelswithpets.com only); Burgas - Izgrev (056 86 00 23, burgosvet.com); Stara Zagora - Vita Veri (042 65 41 22, vita-very.com); Karlovo - Triovet (triovet.bg); Pomorie - Algi (pomorievetclinic.com); Gabrovo, Petrich (BUSINESS.bg listings only). These were seen only on the BUSINESS.bg directory and not added, because an aggregator may not be the only source. Not covered at all: Plovdiv, Varna, Ruse, Pleven, Veliko Tarnovo, Sunny Beach/Nessebar, Golden Sands, Bansko, and the University of Forestry / Trakia University veterinary hospitals (University of Forestry faculty pages list no clinic hours; general line 02 9625997). A follow-up run with a working fetch path to clinic sites is needed. Central Vet Clinic Sofia removed from entries: only an aggregator page (business.bg) could be opened, its own site was not reachable."
+}

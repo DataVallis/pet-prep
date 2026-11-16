@@ -4,28 +4,88 @@
   "name": {
     "en": "Ginger",
     "sl": "Ingver",
-    "cs": "Zázvor"
+    "cs": "Zázvor",
+    "hr": "Đumbir",
+    "sv": "Ingefära",
+    "da": "Ingefær",
+    "fi": "Inkivääri",
+    "nb": "Ingefær",
+    "it": "Zenzero",
+    "de": "Ingwer",
+    "fr": "Gingembre",
+    "es": "Jengibre",
+    "pt": "Gengibre",
+    "nl": "Gember",
+    "pl": "Imbir"
   },
   "question": {
     "en": "Can cats eat ginger?",
     "sl": "Ali lahko mačke jedo ingver?",
-    "cs": "Mohou kočky jíst zázvor?"
+    "cs": "Mohou kočky jíst zázvor?",
+    "hr": "Smiju li mačke jesti đumbir?",
+    "sv": "Får katter äta ingefära?",
+    "da": "Må katte spise ingefær?",
+    "fi": "Saako kissa syödä inkivääriä?",
+    "nb": "Kan katter spise ingefær?",
+    "it": "I gatti possono mangiare lo zenzero?",
+    "de": "Dürfen Katzen Ingwer fressen?",
+    "fr": "Les chats peuvent-ils manger du gingembre ?",
+    "es": "¿Pueden los gatos comer jengibre?",
+    "pt": "Os gatos podem comer gengibre?",
+    "nl": "Mogen katten gember eten?",
+    "pl": "Czy koty mogą jeść imbir?"
   },
   "url_slug": {
     "en": "ginger",
     "sl": "ingver",
-    "cs": "zazvor"
+    "cs": "zazvor",
+    "hr": "dumbir",
+    "sv": "ingefara",
+    "da": "ingefaer",
+    "fi": "inkivaari",
+    "nb": "ingefaer",
+    "it": "zenzero",
+    "de": "ingwer",
+    "fr": "gingembre",
+    "es": "jengibre",
+    "pt": "gengibre",
+    "nl": "gember",
+    "pl": "imbir"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to give your cat ginger unless your vet suggests it. Ginger root is used as an herbal supplement in cats, mainly against nausea and vomiting, but natural does not mean safe: it can cause a mild stomach upset.",
     "sl": "Mački ingverja raje ne dajajte, razen če vam to svetuje veterinar. Ingverjeva korenina se pri mačkah uporablja kot zeliščni dodatek, predvsem proti slabosti in bruhanju, vendar naravno ne pomeni varno: lahko povzroči blage prebavne težave.",
-    "cs": "Zázvor kočce raději nedávejte, pokud to nedoporučí veterinář. Zázvorový kořen se u koček používá jako bylinný doplněk, hlavně proti nevolnosti a zvracení, ale přírodní neznamená bezpečné: může způsobit mírné podráždění žaludku."
+    "cs": "Zázvor kočce raději nedávejte, pokud to nedoporučí veterinář. Zázvorový kořen se u koček používá jako bylinný doplněk, hlavně proti nevolnosti a zvracení, ale přírodní neznamená bezpečné: může způsobit mírné podráždění žaludku.",
+    "hr": "Bolje je mački ne davati đumbir osim ako to ne predloži veterinar. Korijen đumbira koristi se kao biljni dodatak prehrani kod mačaka, ponajprije protiv mučnine i povraćanja, ali prirodno ne znači sigurno: može izazvati blage želučane tegobe.",
+    "sv": "Det är bäst att inte ge din katt ingefära om inte din veterinär föreslår det. Ingefärsrot används som växtbaserat tillskott till katter, främst mot illamående och kräkningar, men naturligt betyder inte säkert: det kan orsaka lätt orolig mage.",
+    "da": "Det er bedst ikke at give din kat ingefær, medmindre din dyrlæge anbefaler det. Ingefærrod bruges som urtetilskud til katte, hovedsageligt mod kvalme og opkast, men naturligt betyder ikke ufarligt: det kan give lidt mavebesvær.",
+    "fi": "Ei suositella. Inkivääriä ei kannata antaa kissalle, ellei eläinlääkäri sitä ehdota. Inkiväärin juurta käytetään kissoilla rohdosvalmisteena lähinnä pahoinvoinnin ja oksentelun lievittämiseen, mutta luonnollinen ei tarkoita turvallista: se voi aiheuttaa lievän vatsavaivan.",
+    "nb": "Det er best å ikke gi katten ingefær med mindre dyrlegen foreslår det. Ingefærrot brukes som urtetilskudd til katter, hovedsakelig mot kvalme og oppkast, men naturlig betyr ikke trygt: den kan gi litt urolig mage.",
+    "it": "Meglio non dare lo zenzero al gatto, a meno che non lo suggerisca il veterinario. La radice di zenzero viene usata come integratore erboristico nei gatti, soprattutto contro nausea e vomito, ma naturale non significa sicuro: può causare un lieve mal di stomaco.",
+    "de": "Geben Sie Ihrer Katze besser keinen Ingwer, es sei denn, Ihr Tierarzt empfiehlt es. Ingwerwurzel wird bei Katzen als pflanzliches Ergänzungsmittel eingesetzt, vor allem gegen Übelkeit und Erbrechen. „Natürlich“ heißt aber nicht „sicher“: Ingwer kann leichte Magenbeschwerden auslösen.",
+    "fr": "Mieux vaut ne pas donner de gingembre à votre chat, sauf si votre vétérinaire le conseille. La racine de gingembre est utilisée comme complément à base de plantes chez les chats, surtout contre les nausées et les vomissements, mais naturel ne veut pas dire sans danger : le gingembre peut provoquer de légers troubles digestifs.",
+    "es": "Es mejor no darle jengibre a tu gato, salvo que te lo sugiera tu veterinario. La raíz de jengibre se usa como suplemento herbal en gatos, sobre todo contra las náuseas y los vómitos, pero natural no significa seguro: puede causar un malestar de estómago leve.",
+    "pt": "É melhor não dar gengibre ao teu gato, a não ser que o veterinário o sugira. A raiz de gengibre é usada como suplemento à base de plantas nos gatos, sobretudo contra náuseas e vómitos, mas natural não quer dizer seguro: pode causar uma ligeira indisposição de estômago.",
+    "nl": "Geef je kat liever geen gember, tenzij je dierenarts het voorstelt. Gemberwortel wordt bij katten gebruikt als kruidensupplement, vooral tegen misselijkheid en braken, maar “natuurlijk” is niet hetzelfde als “veilig”: het kan lichte maagklachten veroorzaken.",
+    "pl": "Lepiej nie dawać kotu imbiru, chyba że zaleci to weterynarz. Korzeń imbiru stosuje się u kotów jako suplement ziołowy, głównie przeciw nudnościom i wymiotom, ale to, że coś jest naturalne, nie znaczy, że jest bezpieczne: imbir może wywołać lekki rozstrój żołądka."
   },
   "why": {
     "en": "VCA Animal Hospitals says ginger root is used in Traditional Chinese Medicine and Western herbal medicine in cats, dogs and other animals, most often as an anti-nausea and anti-vomiting supplement. The same page warns that just because a product is natural does not mean it is safe, that all medicinal plants are potentially toxic if used inappropriately or at high doses, and that pets with known bleeding disorders should not be given ginger. Your vet is the best source of information on such products. Cats don't need anything other than a complete diet.",
     "sl": "VCA Animal Hospitals navaja, da se ingverjeva korenina v tradicionalni kitajski in zahodni zeliščni medicini uporablja pri mačkah, psih in drugih živalih, najpogosteje kot dodatek proti slabosti in bruhanju. Ista stran opozarja, da izdelek ni varen samo zato, ker je naraven, da so vse zdravilne rastline lahko strupene, če jih uporabljamo nepravilno ali v velikih odmerkih, in da ingverja ne smemo dajati živalim z znanimi motnjami strjevanja krvi. Najboljši vir informacij o takih izdelkih je veterinar. Mačke poleg popolne hrane ne potrebujejo ničesar drugega.",
-    "cs": "VCA Animal Hospitals uvádějí, že zázvorový kořen se v tradiční čínské medicíně i v západní bylinné medicíně používá u koček, psů a dalších zvířat, nejčastěji jako doplněk proti nevolnosti a zvracení. Na téže stránce varují, že přírodní původ výrobku ještě neznamená, že je bezpečný, že všechny léčivé rostliny mohou být při nesprávném použití nebo ve vysokých dávkách potenciálně toxické a že zvířatům se známými poruchami krevní srážlivosti by se zázvor podávat neměl. Nejlepším zdrojem informací o takových přípravcích je váš veterinář. Kočky nepotřebují nic jiného než kompletní stravu."
+    "cs": "VCA Animal Hospitals uvádějí, že zázvorový kořen se v tradiční čínské medicíně i v západní bylinné medicíně používá u koček, psů a dalších zvířat, nejčastěji jako doplněk proti nevolnosti a zvracení. Na téže stránce varují, že přírodní původ výrobku ještě neznamená, že je bezpečný, že všechny léčivé rostliny mohou být při nesprávném použití nebo ve vysokých dávkách potenciálně toxické a že zvířatům se známými poruchami krevní srážlivosti by se zázvor podávat neměl. Nejlepším zdrojem informací o takových přípravcích je váš veterinář. Kočky nepotřebují nic jiného než kompletní stravu.",
+    "hr": "VCA Animal Hospitals navodi da se korijen đumbira u tradicionalnoj kineskoj i zapadnoj biljnoj medicini koristi kod mačaka, pasa i drugih životinja, najčešće kao dodatak protiv mučnine i povraćanja. Ista stranica upozorava da proizvod koji je prirodan nije nužno siguran, da su sve ljekovite biljke potencijalno otrovne ako se koriste nepravilno ili u visokim dozama te da kućnim ljubimcima s poznatim poremećajima krvarenja ne treba davati đumbir. Najbolji izvor informacija o takvim proizvodima je veterinar. Mačkama ne treba ništa osim potpune hrane.",
+    "sv": "VCA Animal Hospitals säger att ingefärsrot används inom traditionell kinesisk medicin och västerländsk växtmedicin för katter, hundar och andra djur, oftast som tillskott mot illamående och kräkningar. Samma sida varnar för att en produkt inte är säker bara för att den är naturlig, att alla medicinalväxter potentiellt är giftiga om de används fel eller i höga doser, och att husdjur med kända blödarsjukdomar inte ska få ingefära. Din veterinär är den bästa källan till information om sådana produkter. Katter behöver inget annat än en komplett kost.",
+    "da": "VCA Animal Hospitals skriver at ingefærrod bruges i traditionel kinesisk medicin og i vestlig urtemedicin til katte, hunde og andre dyr, oftest som tilskud mod kvalme og opkast. Samme side advarer om at et produkt ikke er ufarligt, bare fordi det er naturligt, at alle lægeplanter potentielt er giftige, hvis de bruges forkert eller i høje doser, og at kæledyr med kendte blødningssygdomme ikke bør have ingefær. Din dyrlæge er den bedste kilde til oplysninger om den slags produkter. Katte har ikke brug for andet end en komplet kost.",
+    "fi": "VCA Animal Hospitalsin mukaan inkiväärin juurta käytetään perinteisessä kiinalaisessa lääketieteessä ja länsimaisessa rohdoslääketieteessä kissoilla, koirilla ja muilla eläimillä, useimmiten pahoinvointia ja oksentelua lievittävänä valmisteena. Samalla sivulla varoitetaan, ettei tuote ole turvallinen vain siksi, että se on luonnollinen, että kaikki lääkekasvit voivat olla myrkyllisiä, jos niitä käytetään väärin tai suurina annoksina, ja että inkivääriä ei pidä antaa lemmikeille, joilla on todettu verenvuotohäiriö. Eläinlääkäri on paras tietolähde tällaisista tuotteista. Kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion.",
+    "nb": "VCA Animal Hospitals sier at ingefærrot brukes i tradisjonell kinesisk medisin og i vestlig urtemedisin hos katter, hunder og andre dyr, oftest som kosttilskudd mot kvalme og oppkast. Samme side advarer om at et produkt ikke er trygt bare fordi det er naturlig, at alle medisinplanter potensielt er giftige hvis de brukes feil eller i store mengder, og at kjæledyr med kjente blødningsforstyrrelser ikke bør få ingefær. Dyrlegen er den beste kilden til informasjon om slike produkter. Katter trenger ikke noe annet enn et fullverdig kosthold.",
+    "it": "VCA Animal Hospitals afferma che la radice di zenzero viene usata nella medicina tradizionale cinese e nella fitoterapia occidentale in gatti, cani e altri animali, soprattutto come integratore contro nausea e vomito. La stessa pagina avverte che il fatto che un prodotto sia naturale non significa che sia sicuro, che tutte le piante medicinali sono potenzialmente tossiche se usate in modo inappropriato o a dosi elevate, e che agli animali con disturbi emorragici noti non va dato zenzero. Il veterinario è la migliore fonte di informazioni su questi prodotti. Ai gatti non serve altro che un’alimentazione completa.",
+    "de": "VCA Animal Hospitals schreibt, dass Ingwerwurzel in der Traditionellen Chinesischen Medizin und in der westlichen Pflanzenheilkunde bei Katzen, Hunden und anderen Tieren eingesetzt wird, am häufigsten als Mittel gegen Übelkeit und Erbrechen. Dieselbe Seite warnt, dass ein natürliches Produkt nicht automatisch sicher ist, dass alle Heilpflanzen bei unsachgemäßer Anwendung oder in hoher Dosis giftig sein können und dass Tiere mit bekannten Blutgerinnungsstörungen keinen Ingwer bekommen sollten. Ihr Tierarzt ist die beste Informationsquelle zu solchen Produkten. Katzen brauchen außer einer vollwertigen Ernährung nichts.",
+    "fr": "VCA Animal Hospitals indique que la racine de gingembre est utilisée en médecine traditionnelle chinoise et en phytothérapie occidentale chez les chats, les chiens et d’autres animaux, le plus souvent comme complément contre les nausées et les vomissements. La même page avertit que ce n’est pas parce qu’un produit est naturel qu’il est sans danger, que toutes les plantes médicinales sont potentiellement toxiques si elles sont mal utilisées ou données à forte dose, et qu’il ne faut pas donner de gingembre aux animaux ayant des troubles de la coagulation connus. Votre vétérinaire est la meilleure source d’information sur ces produits. Les chats n’ont besoin de rien d’autre qu’une alimentation complète.",
+    "es": "VCA Animal Hospitals dice que la raíz de jengibre se usa en la medicina tradicional china y en la fitoterapia occidental en gatos, perros y otros animales, sobre todo como suplemento contra las náuseas y los vómitos. La misma página advierte de que el hecho de que un producto sea natural no significa que sea seguro, de que todas las plantas medicinales son potencialmente tóxicas si se usan de forma inadecuada o en dosis altas, y de que no se debe dar jengibre a mascotas con trastornos hemorrágicos conocidos. Tu veterinario es la mejor fuente de información sobre estos productos. Los gatos no necesitan nada más que una alimentación completa.",
+    "pt": "A VCA Animal Hospitals diz que a raiz de gengibre é usada na medicina tradicional chinesa e na fitoterapia ocidental em gatos, cães e outros animais, na maioria das vezes como suplemento contra náuseas e vómitos. A mesma página avisa que um produto ser natural não quer dizer que seja seguro, que todas as plantas medicinais são potencialmente tóxicas se usadas de forma inadequada ou em doses altas, e que os animais com perturbações hemorrágicas conhecidas não devem tomar gengibre. O teu veterinário é a melhor fonte de informação sobre estes produtos. Os gatos não precisam de mais nada além de uma alimentação completa.",
+    "nl": "VCA Animal Hospitals zegt dat gemberwortel in de Traditionele Chinese Geneeskunde en in de westerse kruidengeneeskunde wordt gebruikt bij katten, honden en andere dieren, meestal als supplement tegen misselijkheid en braken. Op dezelfde pagina staat de waarschuwing dat een natuurlijk product niet automatisch veilig is, dat alle geneeskrachtige planten giftig kunnen zijn bij verkeerd gebruik of in hoge doses, en dat dieren met een bekende bloedingsstoornis geen gember mogen krijgen. Je dierenarts is de beste informatiebron over zulke producten. Katten hebben niets anders nodig dan een volwaardige voeding.",
+    "pl": "VCA Animal Hospitals podaje, że korzeń imbiru stosuje się w tradycyjnej medycynie chińskiej i w zachodnim ziołolecznictwie u kotów, psów i innych zwierząt, najczęściej jako suplement przeciw nudnościom i wymiotom. Ta sama strona ostrzega, że naturalny produkt nie musi być bezpieczny, że wszystkie rośliny lecznicze mogą być toksyczne, gdy stosuje się je niewłaściwie lub w dużych dawkach, oraz że zwierzętom ze zdiagnozowanymi zaburzeniami krzepnięcia krwi nie należy podawać imbiru. Najlepszym źródłem informacji o takich produktach jest weterynarz. Koty nie potrzebują niczego poza pełnowartościową dietą."
   },
   "signs": {
     "en": [
@@ -45,30 +105,150 @@
       "Zvracení",
       "Mírné podráždění kůže",
       "Příznaky alergické reakce: nepravidelné dýchání, vyrážka, horečka nebo otok v obličeji"
+    ],
+    "hr": [
+      "Blage želučane tegobe",
+      "Povraćanje",
+      "Blaga nadraženost kože",
+      "Znakovi alergijske reakcije: nepravilno disanje, osip, vrućica ili oticanje oko lica"
+    ],
+    "sv": [
+      "Lätt orolig mage",
+      "Kräkningar",
+      "Lätt hudirritation",
+      "Tecken på allergisk reaktion: oregelbunden andning, utslag, feber eller svullnad kring ansiktet"
+    ],
+    "da": [
+      "Let mavebesvær",
+      "Opkast",
+      "Let hudirritation",
+      "Tegn på allergisk reaktion: uregelmæssig vejrtrækning, udslæt, feber eller hævelse omkring ansigtet"
+    ],
+    "fi": [
+      "Lievä vatsavaiva",
+      "Oksentelu",
+      "Lievä ihon ärsytys",
+      "Allergisen reaktion merkit: epäsäännöllinen hengitys, ihottuma, kuume tai kasvojen turvotus"
+    ],
+    "nb": [
+      "Litt urolig mage",
+      "Oppkast",
+      "Lett hudirritasjon",
+      "Tegn på allergisk reaksjon: uregelmessig pust, utslett, feber eller hevelse rundt ansiktet"
+    ],
+    "it": [
+      "Lieve mal di stomaco",
+      "Vomito",
+      "Lieve irritazione della pelle",
+      "Segni di reazione allergica: respiro irregolare, eruzione cutanea, febbre o gonfiore intorno al viso"
+    ],
+    "de": [
+      "Leichte Magenbeschwerden",
+      "Erbrechen",
+      "Leichte Hautreizung",
+      "Anzeichen einer allergischen Reaktion: unregelmäßige Atmung, Hautausschlag, Fieber oder Schwellung im Gesicht"
+    ],
+    "fr": [
+      "Légers troubles digestifs",
+      "Vomissements",
+      "Légère irritation de la peau",
+      "Signes d’une réaction allergique : respiration irrégulière, éruption cutanée, fièvre ou gonflement autour du visage"
+    ],
+    "es": [
+      "Malestar de estómago leve",
+      "Vómitos",
+      "Irritación leve de la piel",
+      "Síntomas de reacción alérgica: respiración irregular, sarpullido, fiebre o hinchazón alrededor de la cara"
+    ],
+    "pt": [
+      "Ligeira indisposição de estômago",
+      "Vómitos",
+      "Ligeira irritação da pele",
+      "Sinais de reação alérgica: respiração irregular, erupção cutânea, febre ou inchaço à volta da cara"
+    ],
+    "nl": [
+      "Lichte maagklachten",
+      "Braken",
+      "Lichte huidirritatie",
+      "Verschijnselen van een allergische reactie: onregelmatige ademhaling, huiduitslag, koorts of zwelling rond het gezicht"
+    ],
+    "pl": [
+      "Lekki rozstrój żołądka",
+      "Wymioty",
+      "Lekkie podrażnienie skóry",
+      "Objawy reakcji alergicznej: nieregularny oddech, wysypka, gorączka lub obrzęk wokół pyska"
     ]
   },
   "what_to_do": {
     "en": "If your cat nibbled a little ginger, watch for vomiting or an upset stomach. If you see signs of an allergic reaction, such as irregular breathing, a rash or a swollen face, contact your vet immediately. Don't give ginger as a remedy without asking your vet first.",
     "sl": "Če je mačka pogrizla malo ingverja, bodite pozorni na bruhanje ali prebavne težave. Če opazite znake alergijske reakcije, na primer nepravilno dihanje, izpuščaj ali otekel obraz, takoj pokličite veterinarja. Ingverja ne dajajte kot zdravilo, ne da bi se prej posvetovali z veterinarjem.",
-    "cs": "Pokud kočka ochutnala trochu zázvoru, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud zaznamenáte příznaky alergické reakce, například nepravidelné dýchání, vyrážku nebo oteklý obličej, okamžitě se obraťte na veterináře. Zázvor jako lék nepodávejte, aniž byste se předem zeptali veterináře."
+    "cs": "Pokud kočka ochutnala trochu zázvoru, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud zaznamenáte příznaky alergické reakce, například nepravidelné dýchání, vyrážku nebo oteklý obličej, okamžitě se obraťte na veterináře. Zázvor jako lék nepodávejte, aniž byste se předem zeptali veterináře.",
+    "hr": "Ako je mačka zagrizla malo đumbira, pazi na povraćanje ili želučane tegobe. Ako primijetiš znakove alergijske reakcije, poput nepravilnog disanja, osipa ili otečenog lica, odmah se obrati veterinaru. Ne daj đumbir kao lijek bez prethodnog pitanja veterinara.",
+    "sv": "Om din katt har nafsat i sig lite ingefära: håll ett öga på om hon kräks eller får orolig mage. Om du ser tecken på allergisk reaktion, som onormal andning, utslag eller svullet ansikte, ska du kontakta din veterinär omedelbart. Ge inte ingefära som medicin utan att fråga din veterinär först.",
+    "da": "Hvis din kat har nippet til lidt ingefær, skal du holde øje med opkast eller mavebesvær. Hvis du ser tegn på en allergisk reaktion, som uregelmæssig vejrtrækning, udslæt eller et hævet ansigt, skal du kontakte din dyrlæge med det samme. Giv ikke ingefær som middel uden først at spørge din dyrlæge.",
+    "fi": "Jos kissasi nappasi vähän inkivääriä, seuraa, tuleeko oksentelua tai vatsavaivoja. Jos huomaat allergisen reaktion merkkejä, kuten epäsäännöllistä hengitystä, ihottumaa tai kasvojen turvotusta, ota heti yhteyttä eläinlääkäriin. Älä anna inkivääriä lääkkeeksi kysymättä ensin eläinlääkäriltä.",
+    "nb": "Hvis katten har smakt litt ingefær, følg med på oppkast eller urolig mage. Hvis du ser tegn på allergisk reaksjon, som uregelmessig pust, utslett eller hovent ansikt, kontakt dyrlegen med en gang. Ikke gi ingefær som middel uten å spørre dyrlegen først.",
+    "it": "Se il tuo gatto ha assaggiato un po’ di zenzero, controlla se compaiono vomito o mal di stomaco. Se noti segni di reazione allergica, come respiro irregolare, eruzione cutanea o viso gonfio, contatta subito il veterinario. Non dare lo zenzero come rimedio senza prima chiedere al veterinario.",
+    "de": "Hat Ihre Katze ein wenig Ingwer genascht, achten Sie auf Erbrechen oder Magenbeschwerden. Sehen Sie Anzeichen einer allergischen Reaktion wie unregelmäßige Atmung, Hautausschlag oder ein geschwollenes Gesicht, wenden Sie sich sofort an Ihren Tierarzt. Geben Sie Ingwer nicht als Hausmittel, ohne vorher Ihren Tierarzt zu fragen.",
+    "fr": "Si votre chat a grignoté un peu de gingembre, surveillez l’apparition de vomissements ou de troubles digestifs. Si vous observez des signes de réaction allergique, comme une respiration irrégulière, une éruption cutanée ou un visage gonflé, contactez immédiatement votre vétérinaire. Ne donnez pas de gingembre comme remède sans l’avis de votre vétérinaire.",
+    "es": "Si tu gato ha mordisqueado un poco de jengibre, observa si tiene vómitos o malestar de estómago. Si ves síntomas de reacción alérgica, como respiración irregular, sarpullido o la cara hinchada, ponte en contacto con tu veterinario inmediatamente. No le des jengibre como remedio sin preguntar antes a tu veterinario.",
+    "pt": "Se o teu gato mordiscou um pouco de gengibre, vigia se aparecem vómitos ou indisposição de estômago. Se vires sinais de reação alérgica, como respiração irregular, erupção cutânea ou a cara inchada, contacta imediatamente o teu veterinário. Não dês gengibre como remédio sem perguntares primeiro ao teu veterinário.",
+    "nl": "Heeft je kat een beetje gember gegeten, let dan op braken of maagklachten. Zie je verschijnselen van een allergische reactie, zoals een onregelmatige ademhaling, huiduitslag of een gezwollen gezicht, neem dan meteen contact op met je dierenarts. Geef gember niet als huismiddeltje zonder het eerst met je dierenarts te overleggen.",
+    "pl": "Jeśli twój kot skubnął odrobinę imbiru, obserwuj, czy nie pojawią się wymioty lub rozstrój żołądka. Jeśli zauważysz objawy reakcji alergicznej, takie jak nieregularny oddech, wysypka lub obrzęk pyska, natychmiast skontaktuj się z weterynarzem. Nie podawaj imbiru jako środka leczniczego bez konsultacji z weterynarzem."
   },
   "serving": null,
   "child": {
     "en": "Ginger is a root for people's cooking. Cats don't need it, so leave it for the grown-ups and the vet to decide.",
     "sl": "Ingver je korenina, s katero kuhajo ljudje. Muce ga ne potrebujejo, zato naj o njem odločajo odrasli in veterinar.",
-    "cs": "Zázvor je kořen do jídel pro lidi. Kočky ho nepotřebují, takže ať o něm rozhodnou dospělí a veterinář."
+    "cs": "Zázvor je kořen do jídel pro lidi. Kočky ho nepotřebují, takže ať o něm rozhodnou dospělí a veterinář.",
+    "hr": "Đumbir je korijen za kuhanje. Mačkama nije potreban, zato neka o njemu odlučuju odrasli i veterinar.",
+    "sv": "Ingefära är en rot för människors matlagning. Katter behöver den inte, så låt de vuxna och veterinären avgöra.",
+    "da": "Ingefær er en rod, man bruger i madlavning til mennesker. Katte har ikke brug for den, så lad de voksne og dyrlægen bestemme.",
+    "fi": "Inkivääri on juuri, jota käytetään ihmisten ruoanlaitossa. Kissat eivät tarvitse sitä, joten jätä asia aikuisten ja eläinlääkärin päätettäväksi.",
+    "nb": "Ingefær er en rot som voksne bruker i matlaging. Katter trenger det ikke, så la de voksne og dyrlegen avgjøre.",
+    "it": "Lo zenzero è una radice che le persone usano in cucina. I gatti non ne hanno bisogno: lascia decidere agli adulti e al veterinario.",
+    "de": "Ingwer ist eine Wurzel, die Menschen zum Kochen benutzen. Katzen brauchen ihn nicht, also überlass es den Erwachsenen und dem Tierarzt, darüber zu entscheiden.",
+    "fr": "Le gingembre est une racine pour la cuisine des humains. Les chats n’en ont pas besoin : laisse les adultes et le vétérinaire décider.",
+    "es": "El jengibre es una raíz para cocinar para las personas. Los gatos no lo necesitan, así que deja que decidan los adultos y el veterinario.",
+    "pt": "O gengibre é uma raiz para a cozinha das pessoas. Os gatos não precisam dele, por isso deixa que sejam os adultos e o veterinário a decidir.",
+    "nl": "Gember is een wortel die mensen in de keuken gebruiken. Katten hebben het niet nodig, dus laat de volwassenen en de dierenarts maar beslissen.",
+    "pl": "Imbir to korzeń, którego ludzie używają w kuchni. Koty go nie potrzebują, a decyzję o nim zostaw dorosłym i weterynarzowi."
   },
   "faq": [
     {
       "q": {
         "en": "Can ginger help my cat with nausea?",
         "sl": "Ali lahko ingver mački pomaga pri slabosti?",
-        "cs": "Může zázvor kočce pomoci při nevolnosti?"
+        "cs": "Může zázvor kočce pomoci při nevolnosti?",
+        "hr": "Može li đumbir pomoći mojoj mački kod mučnine?",
+        "sv": "Kan ingefära hjälpa min katt mot illamående?",
+        "da": "Kan ingefær hjælpe min kat mod kvalme?",
+        "fi": "Voiko inkivääri auttaa kissaani pahoinvointiin?",
+        "nb": "Kan ingefær hjelpe katten min mot kvalme?",
+        "it": "Lo zenzero può aiutare il mio gatto contro la nausea?",
+        "de": "Kann Ingwer meiner Katze bei Übelkeit helfen?",
+        "fr": "Le gingembre peut-il aider mon chat contre les nausées ?",
+        "es": "¿Puede el jengibre ayudar a mi gato con las náuseas?",
+        "pt": "O gengibre pode ajudar o meu gato com as náuseas?",
+        "nl": "Kan gember mijn kat helpen bij misselijkheid?",
+        "pl": "Czy imbir pomoże mojemu kotu przy nudnościach?"
       },
       "a": {
         "en": "Ginger is used as an anti-nausea and anti-vomiting supplement in animals, but only your vet can tell you whether it is safe for your cat. Medicinal plants can be toxic if used inappropriately.",
         "sl": "Ingver se pri živalih uporablja kot dodatek proti slabosti in bruhanju, vendar vam le veterinar lahko pove, ali je varen za vašo mačko. Zdravilne rastline so lahko strupene, če jih uporabljamo nepravilno.",
-        "cs": "Zázvor se u zvířat používá jako doplněk proti nevolnosti a zvracení, ale jen veterinář vám řekne, zda je pro vaši kočku bezpečný. Léčivé rostliny mohou být při nesprávném použití toxické."
+        "cs": "Zázvor se u zvířat používá jako doplněk proti nevolnosti a zvracení, ale jen veterinář vám řekne, zda je pro vaši kočku bezpečný. Léčivé rostliny mohou být při nesprávném použití toxické.",
+        "hr": "Đumbir se kod životinja koristi kao dodatak protiv mučnine i povraćanja, ali samo ti veterinar može reći je li siguran za tvoju mačku. Ljekovite biljke mogu biti otrovne ako se koriste nepravilno.",
+        "sv": "Ingefära används som tillskott mot illamående och kräkningar hos djur, men bara din veterinär kan säga om det är säkert för just din katt. Medicinalväxter kan vara giftiga om de används fel.",
+        "da": "Ingefær bruges som tilskud mod kvalme og opkast hos dyr, men kun din dyrlæge kan sige, om det er ufarligt for din kat. Lægeplanter kan være giftige, hvis de bruges forkert.",
+        "fi": "Inkivääriä käytetään eläimillä pahoinvointia ja oksentelua lievittävänä valmisteena, mutta vain eläinlääkäri voi kertoa, onko se turvallista juuri sinun kissallesi. Lääkekasvit voivat olla myrkyllisiä, jos niitä käytetään väärin.",
+        "nb": "Ingefær brukes som tilskudd mot kvalme og oppkast hos dyr, men bare dyrlegen kan si om det er trygt for katten din. Medisinplanter kan være giftige hvis de brukes feil.",
+        "it": "Lo zenzero viene usato come integratore contro nausea e vomito negli animali, ma solo il veterinario può dirti se è sicuro per il tuo gatto. Le piante medicinali possono essere tossiche se usate in modo inappropriato.",
+        "de": "Ingwer wird bei Tieren als Mittel gegen Übelkeit und Erbrechen eingesetzt, aber nur Ihr Tierarzt kann sagen, ob er für Ihre Katze unbedenklich ist. Heilpflanzen können bei unsachgemäßer Anwendung giftig sein.",
+        "fr": "Le gingembre est utilisé comme complément contre les nausées et les vomissements chez les animaux, mais seul votre vétérinaire peut vous dire s’il est sans danger pour votre chat. Les plantes médicinales peuvent être toxiques si elles sont mal utilisées.",
+        "es": "El jengibre se usa como suplemento contra las náuseas y los vómitos en animales, pero solo tu veterinario puede decirte si es seguro para tu gato. Las plantas medicinales pueden ser tóxicas si se usan de forma inadecuada.",
+        "pt": "O gengibre é usado como suplemento contra náuseas e vómitos nos animais, mas só o teu veterinário pode dizer se é seguro para o teu gato. As plantas medicinais podem ser tóxicas se usadas de forma inadequada.",
+        "nl": "Gember wordt bij dieren gebruikt als supplement tegen misselijkheid en braken, maar alleen je dierenarts kan zeggen of het veilig is voor je kat. Geneeskrachtige planten kunnen giftig zijn als ze verkeerd worden gebruikt.",
+        "pl": "Imbir stosuje się u zwierząt jako suplement przeciw nudnościom i wymiotom, ale tylko weterynarz może ocenić, czy jest bezpieczny dla twojego kota. Rośliny lecznicze mogą być toksyczne, jeśli stosuje się je niewłaściwie."
       }
     }
   ],
@@ -144,6 +324,66 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3272f33f489bb803916b99556cf8c39742748145e8f05c4a07a4205497d1629d"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5228e64921db33e0d6093725fdf7270b17aa5ab950ce18214ffae3beec1db525"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2da2f5bde65a62d3fbf3e9008ca9cef601db273401b87c2f224989d79431027b"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4386157a6459c3a0e35cff60df5aceb051538115b96d84a20996896ec46e28a8"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d11169423d04a7098edd62801c15865e6ec2dc86b1aa80388fb348de598b7f88"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "738e1bd354ed6e7fb44959df094ab59293c33bd934dee58162f201789941e595"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "30da17f0453443fd36cd2de1a7073ca0b11b9d94e8529d84111241e21f7b531d"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1c3b34978031ed9e68698abac89e16ca987303af87fa74781f4ebfe22d87aedd"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "89148723db71bb42757e5d19924ad4f69bebe6c67f87b4ddc3736ce567f6879a"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "edd2ac622a74ec5d7f04cb18e46ff2e31fb829c6b74ecdd40d985e62410a7505"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f49340599377ef232d1bdc982032b6ea8941b7f4fbb225680a191cf1757361ba"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6d7de308954d45ac09eaa958b4af7b530f0367e6e07bfbab86dc576e5958773d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "e037fb897320402c06c91b724cdd216317793c5bea94c6a210a5426570cd5791"
     }
   }
 }

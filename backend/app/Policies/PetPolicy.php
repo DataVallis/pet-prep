@@ -74,6 +74,16 @@ class PetPolicy
     }
 
     /**
+     * Give the pet its own quiet hours or make it follow the family's again
+     * (David 2026-11-16, PUT /api/parent/pets/{pet}/quiet-hours): any parent
+     * of the pet's family. Children never.
+     */
+    public function changeQuietHours(User $user, Pet $pet): bool
+    {
+        return $this->manage($user, $pet);
+    }
+
+    /**
      * Buy / assign the 12-week challenge for this pet (M3-11 activation, M6-U01
      * purchase intent and free-pet upgrade): a parent of the pet's family only —
      * never a child (purchases live only in the parent app, PAYMENTS_SPEC).

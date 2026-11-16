@@ -4,28 +4,88 @@
   "name": {
     "en": "Marshmallows",
     "sl": "Penasti bonboni (marshmallow)",
-    "cs": "Marshmallow"
+    "cs": "Marshmallow",
+    "hr": "Marshmallowi",
+    "sv": "Marshmallows",
+    "da": "Skumfiduser",
+    "fi": "Vaahtokarkit",
+    "nb": "Marshmallows",
+    "it": "Marshmallow",
+    "de": "Marshmallows",
+    "fr": "Guimauves",
+    "es": "Nubes de azúcar",
+    "pt": "Marshmallows",
+    "nl": "Marshmallows",
+    "pl": "Pianki marshmallow"
   },
   "question": {
     "en": "Can cats eat marshmallows?",
     "sl": "Ali lahko mačke jedo penaste bonbone (marshmallow)?",
-    "cs": "Mohou kočky jíst marshmallow?"
+    "cs": "Mohou kočky jíst marshmallow?",
+    "hr": "Smiju li mačke jesti marshmallowe?",
+    "sv": "Får katter äta marshmallows?",
+    "da": "Må katte spise skumfiduser?",
+    "fi": "Saako kissa syödä vaahtokarkkeja?",
+    "nb": "Kan katter spise marshmallows?",
+    "it": "I gatti possono mangiare i marshmallow?",
+    "de": "Dürfen Katzen Marshmallows fressen?",
+    "fr": "Les chats peuvent-ils manger des guimauves ?",
+    "es": "¿Pueden los gatos comer nubes de azúcar?",
+    "pt": "Os gatos podem comer marshmallows?",
+    "nl": "Mogen katten marshmallows eten?",
+    "pl": "Czy koty mogą jeść pianki marshmallow?"
   },
   "url_slug": {
     "en": "marshmallows",
     "sl": "penasti-bonboni",
-    "cs": "marshmallow"
+    "cs": "marshmallow",
+    "hr": "marshmallow",
+    "sv": "marshmallows",
+    "da": "skumfiduser",
+    "fi": "vaahtokarkit",
+    "nb": "marshmallows",
+    "it": "marshmallow",
+    "de": "marshmallows",
+    "fr": "guimauves",
+    "es": "nubes-de-azucar",
+    "pt": "marshmallows",
+    "nl": "marshmallows",
+    "pl": "pianki-marshmallow"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, cats shouldn't eat marshmallows. They offer cats no nutritional benefit, excess sugar can be a concern for cats, and marshmallow treats may contain chocolate, which is toxic to cats.",
     "sl": "Ne, mačke ne smejo jesti penastih bonbonov. Mačkam ne koristijo, preveč sladkorja je zanje lahko težava, penasti priboljški pa lahko vsebujejo čokolado, ki je za mačke strupena.",
-    "cs": "Ne, kočky by marshmallow jíst neměly. Nemá pro ně žádný nutriční přínos, nadbytek cukru může být pro kočky problém a pamlsky s marshmallow mohou obsahovat čokoládu, která je pro kočky toxická."
+    "cs": "Ne, kočky by marshmallow jíst neměly. Nemá pro ně žádný nutriční přínos, nadbytek cukru může být pro kočky problém a pamlsky s marshmallow mohou obsahovat čokoládu, která je pro kočky toxická.",
+    "hr": "Ne, mačke ne bi smjele jesti marshmallowe. Ne donose im nikakvu hranjivu korist, višak šećera može im biti problem, a poslastice s marshmallowom mogu sadržavati čokoladu, koja je otrovna za mačke.",
+    "sv": "Nej, katter bör inte äta marshmallows. De ger katter ingen näring, för mycket socker kan vara ett problem för katter, och marshmallowgodis kan innehålla choklad, som är giftigt för katter.",
+    "da": "Nej, katte bør ikke spise skumfiduser. De giver katte ingen næringsværdi, for meget sukker kan være et problem for katte, og skumfidusslik kan indeholde chokolade, som er giftigt for katte.",
+    "fi": "Ei suositella. Kissojen ei pitäisi syödä vaahtokarkkeja. Niistä ei ole kissoille ravitsemuksellista hyötyä, liiallinen sokeri voi olla kissoille ongelma, ja vaahtokarkkiherkuissa voi olla suklaata, joka on kissoille myrkyllistä.",
+    "nb": "Nei, katter bør ikke spise marshmallows. De gir katter ingen næringsverdi, for mye sukker kan være et problem for katter, og godteri med marshmallow kan inneholde sjokolade, som er giftig for katter.",
+    "it": "No, i gatti non devono mangiare marshmallow. Non apportano ai gatti alcun beneficio nutrizionale, l’eccesso di zucchero può essere un problema e i dolcetti a base di marshmallow possono contenere cioccolato, tossico per i gatti.",
+    "de": "Nein, Katzen sollten keine Marshmallows fressen. Sie haben für Katzen keinen Nährwert, zu viel Zucker kann bei Katzen ein Problem sein, und Marshmallow-Süßigkeiten können Schokolade enthalten, die für Katzen giftig ist.",
+    "fr": "Non, les chats ne doivent pas manger de guimauves. Elles n’ont aucun intérêt nutritionnel pour eux, l’excès de sucre peut leur poser problème, et les friandises à base de guimauve peuvent contenir du chocolat, toxique pour les chats.",
+    "es": "No, los gatos no deben comer nubes de azúcar. No les aportan ningún beneficio nutricional, el exceso de azúcar puede ser un problema para los gatos y las golosinas de nubes pueden llevar chocolate, que es tóxico para los gatos.",
+    "pt": "Não, os gatos não devem comer marshmallows. Não trazem qualquer benefício nutricional aos gatos, o excesso de açúcar pode ser um problema e as guloseimas de marshmallow podem conter chocolate, que é tóxico para os gatos.",
+    "nl": "Nee, katten horen geen marshmallows te eten. Ze hebben geen enkele voedingswaarde voor katten, te veel suiker kan een probleem zijn voor katten, en snoep met marshmallow kan chocolade bevatten, wat giftig is voor katten.",
+    "pl": "Nie, koty nie powinny jeść pianek marshmallow. Nie dają kotom żadnej wartości odżywczej, nadmiar cukru może być dla nich problemem, a w słodyczach z piankami może być czekolada, która jest toksyczna dla kotów."
   },
   "why": {
     "en": "Pet Poison Helpline says marshmallows aren't a good choice for cats: cats have a decreased ability to taste sweetness, marshmallows offer them no nutritional benefit, and excess sugar can be a concern. Cats Protection explains that sugar isn't toxic to cats but is still unhealthy, adding unnecessary calories that can lead to weight gain. Marshmallow treats may also contain chocolate, which is toxic to cats.",
     "sl": "Pet Poison Helpline navaja, da penasti bonboni za mačke niso dobra izbira: mačke slabše zaznajo sladek okus, penasti bonboni jim ne koristijo, preveč sladkorja pa je lahko težava. Cats Protection pojasnjuje, da sladkor za mačke ni strupen, je pa vseeno nezdrav, saj prinaša nepotrebne kalorije, ki lahko vodijo v pridobivanje teže. Penasti priboljški lahko vsebujejo tudi čokolado, ki je za mačke strupena.",
-    "cs": "Pet Poison Helpline uvádí, že marshmallow není pro kočky dobrá volba: kočky mají sníženou schopnost vnímat sladkou chuť, marshmallow pro ně nemá žádný nutriční přínos a nadbytek cukru může být problém. Cats Protection vysvětluje, že cukr pro kočky není toxický, ale přesto je nezdravý, protože přidává zbytečné kalorie, které mohou vést k nárůstu hmotnosti. Pamlsky s marshmallow mohou navíc obsahovat čokoládu, která je pro kočky toxická."
+    "cs": "Pet Poison Helpline uvádí, že marshmallow není pro kočky dobrá volba: kočky mají sníženou schopnost vnímat sladkou chuť, marshmallow pro ně nemá žádný nutriční přínos a nadbytek cukru může být problém. Cats Protection vysvětluje, že cukr pro kočky není toxický, ale přesto je nezdravý, protože přidává zbytečné kalorie, které mohou vést k nárůstu hmotnosti. Pamlsky s marshmallow mohou navíc obsahovat čokoládu, která je pro kočky toxická.",
+    "hr": "Pet Poison Helpline navodi da marshmallowi nisu dobar izbor za mačke: mačke slabije osjete slatkoću, marshmallowi im ne donose nikakvu hranjivu korist, a višak šećera može biti problem. Cats Protection objašnjava da šećer nije otrovan za mačke, ali je ipak nezdrav, jer dodaje nepotrebne kalorije koje mogu dovesti do debljanja. Poslastice s marshmallowom mogu sadržavati i čokoladu, koja je otrovna za mačke.",
+    "sv": "Pet Poison Helpline säger att marshmallows inte är ett bra val för katter: katter har sämre förmåga att känna sötma, marshmallows ger dem ingen näring och för mycket socker kan vara ett problem. Cats Protection förklarar att socker inte är giftigt för katter men ändå onyttigt, eftersom det ger onödiga kalorier som kan leda till viktuppgång. Marshmallowgodis kan dessutom innehålla choklad, som är giftigt för katter.",
+    "da": "Pet Poison Helpline skriver at skumfiduser ikke er et godt valg til katte: katte har en nedsat evne til at smage sødt, skumfiduser giver dem ingen næringsværdi, og for meget sukker kan være et problem. Cats Protection forklarer at sukker ikke er giftigt for katte, men stadig er usundt, og at det giver unødvendige kalorier, som kan føre til vægtstigning. Skumfidusslik kan også indeholde chokolade, som er giftigt for katte.",
+    "fi": "Pet Poison Helplinen mukaan vaahtokarkit eivät ole hyvä valinta kissoille: kissojen kyky maistaa makeaa on heikentynyt, vaahtokarkeista ei ole niille ravitsemuksellista hyötyä, ja liiallinen sokeri voi olla kissoille ongelma. Cats Protection kertoo, että sokeri ei ole kissoille myrkyllistä mutta silti epäterveellistä, sillä se lisää turhia kaloreita, jotka voivat johtaa painonnousuun. Vaahtokarkkiherkuissa voi myös olla suklaata, joka on kissoille myrkyllistä.",
+    "nb": "Pet Poison Helpline sier at marshmallows ikke er et godt valg for katter: katter kjenner søtt dårlig, marshmallows gir dem ingen næringsmessig fordel, og for mye sukker kan være et problem. Cats Protection forklarer at sukker ikke er giftig for katter, men likevel usunt, og at det gir unødvendige kalorier som kan føre til vektøkning. Godteri med marshmallow kan også inneholde sjokolade, som er giftig for katter.",
+    "it": "Pet Poison Helpline afferma che i marshmallow non sono una buona scelta per i gatti: i gatti hanno una ridotta capacità di percepire il dolce, i marshmallow non offrono loro alcun beneficio nutrizionale e l’eccesso di zucchero può essere un problema. Cats Protection spiega che lo zucchero non è tossico per i gatti ma fa comunque male, perché aggiunge calorie inutili che possono portare a un aumento di peso. I dolcetti a base di marshmallow possono inoltre contenere cioccolato, tossico per i gatti.",
+    "de": "Pet Poison Helpline sagt, dass Marshmallows keine gute Wahl für Katzen sind: Katzen können Süßes schlechter schmecken, Marshmallows haben für sie keinen Nährwert, und zu viel Zucker kann ein Problem sein. Cats Protection erklärt, dass Zucker für Katzen nicht giftig, aber trotzdem ungesund ist, weil er unnötige Kalorien liefert, die zu Gewichtszunahme führen können. Marshmallow-Süßigkeiten können außerdem Schokolade enthalten, die für Katzen giftig ist.",
+    "fr": "Le Pet Poison Helpline indique que les guimauves ne sont pas un bon choix pour les chats : leur capacité à percevoir le goût sucré est réduite, les guimauves n’ont aucun intérêt nutritionnel pour eux et l’excès de sucre peut poser problème. Cats Protection explique que le sucre n’est pas toxique pour les chats mais n’est pas bon pour eux : il ajoute des calories inutiles qui peuvent mener à une prise de poids. Les friandises à base de guimauve peuvent aussi contenir du chocolat, toxique pour les chats.",
+    "es": "Pet Poison Helpline dice que las nubes de azúcar no son una buena opción para los gatos: los gatos perciben menos el sabor dulce, las nubes no les aportan ningún beneficio nutricional y el exceso de azúcar puede ser un problema. Cats Protection explica que el azúcar no es tóxico para los gatos, pero sigue sin ser sano, y añade calorías innecesarias que pueden llevar a engordar. Las golosinas de nubes también pueden llevar chocolate, que es tóxico para los gatos.",
+    "pt": "A Pet Poison Helpline diz que os marshmallows não são uma boa escolha para os gatos: os gatos têm menor capacidade de sentir o sabor doce, os marshmallows não lhes trazem benefício nutricional e o excesso de açúcar pode ser um problema. A Cats Protection explica que o açúcar não é tóxico para os gatos mas continua a não lhes fazer bem, porque acrescenta calorias desnecessárias que podem levar ao aumento de peso. As guloseimas de marshmallow podem ainda conter chocolate, que é tóxico para os gatos.",
+    "nl": "Pet Poison Helpline zegt dat marshmallows geen goede keuze zijn voor katten: katten kunnen minder goed zoet proeven, marshmallows hebben voor hen geen voedingswaarde en te veel suiker kan een probleem zijn. Cats Protection legt uit dat suiker niet giftig is voor katten maar wel ongezond, doordat het onnodige calorieën toevoegt die tot gewichtstoename kunnen leiden. Snoep met marshmallow kan ook chocolade bevatten, wat giftig is voor katten.",
+    "pl": "Pet Poison Helpline podaje, że pianki marshmallow nie są dobrym wyborem dla kotów: koty słabiej odczuwają smak słodki, pianki nie mają dla nich żadnej wartości odżywczej, a nadmiar cukru może być problemem. Cats Protection wyjaśnia, że cukier nie jest toksyczny dla kotów, ale nadal jest niezdrowy, bo dodaje niepotrzebnych kalorii, które mogą prowadzić do przybierania na wadze. W słodyczach z piankami może też być czekolada, która jest toksyczna dla kotów."
   },
   "signs": {
     "en": [
@@ -39,30 +99,126 @@
     "cs": [
       "Průjem",
       "Podrážděný žaludek"
+    ],
+    "hr": [
+      "Proljev",
+      "Želučane tegobe"
+    ],
+    "sv": [
+      "Diarré",
+      "Orolig mage"
+    ],
+    "da": [
+      "Diarré",
+      "Mavebesvær"
+    ],
+    "fi": [
+      "Ripuli",
+      "Vatsavaivat"
+    ],
+    "nb": [
+      "Diaré",
+      "Urolig mage"
+    ],
+    "it": [
+      "Diarrea",
+      "Mal di stomaco"
+    ],
+    "de": [
+      "Durchfall",
+      "Magenbeschwerden"
+    ],
+    "fr": [
+      "Diarrhée",
+      "Troubles digestifs"
+    ],
+    "es": [
+      "Diarrea",
+      "Malestar de estómago"
+    ],
+    "pt": [
+      "Diarreia",
+      "Indisposição de estômago"
+    ],
+    "nl": [
+      "Diarree",
+      "Maagklachten"
+    ],
+    "pl": [
+      "Biegunka",
+      "Rozstrój żołądka"
     ]
   },
   "what_to_do": {
     "en": "If your cat got into marshmallows or a marshmallow treat, contact your vet or a pet poison helpline for guidance. If the treat contained chocolate, contact your vet straight away.",
     "sl": "Če je mačka prišla do penastih bonbonov ali penastega priboljška, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Če je bila v priboljšku čokolada, takoj pokličite veterinarja.",
-    "cs": "Pokud se kočka dostala k marshmallow nebo k pamlsku s marshmallow, obraťte se pro radu na veterináře nebo na toxikologickou linku pro zvířata. Pokud pamlsek obsahoval čokoládu, okamžitě se obraťte na veterináře."
+    "cs": "Pokud se kočka dostala k marshmallow nebo k pamlsku s marshmallow, obraťte se pro radu na veterináře nebo na toxikologickou linku pro zvířata. Pokud pamlsek obsahoval čokoládu, okamžitě se obraťte na veterináře.",
+    "hr": "Ako je mačka pojela marshmallowe ili poslasticu s marshmallowom, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja za savjet. Ako je poslastica sadržavala čokoladu, odmah se obrati veterinaru.",
+    "sv": "Om din katt har kommit åt marshmallows eller marshmallowgodis ska du kontakta din veterinär eller giftrådgivningen för djur och be om råd. Om godiset innehöll choklad ska du kontakta din veterinär direkt.",
+    "da": "Hvis din kat har fået fat i skumfiduser eller skumfidusslik, skal du kontakte din dyrlæge eller en giftrådgivning for dyr for at få vejledning. Hvis slikket indeholdt chokolade, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Jos kissasi pääsi vaahtokarkkeihin tai vaahtokarkkiherkkuun, ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan ohjeita varten. Jos herkussa oli suklaata, ota heti yhteyttä eläinlääkäriin.",
+    "nb": "Hvis katten har fått i seg marshmallows eller godteri med marshmallow, kontakt dyrlegen eller giftinformasjon for dyr for råd. Hvis godteriet inneholdt sjokolade, kontakt dyrlegen med en gang.",
+    "it": "Se il tuo gatto ha mangiato marshmallow o un dolcetto a base di marshmallow, contatta il veterinario o un centro antiveleni veterinario per un consiglio. Se il dolcetto conteneva cioccolato, contatta subito il veterinario.",
+    "de": "Ist Ihre Katze an Marshmallows oder einer Marshmallow-Süßigkeit gekommen, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere und lassen Sie sich beraten. Enthielt die Süßigkeit Schokolade, wenden Sie sich sofort an Ihren Tierarzt.",
+    "fr": "Si votre chat a mangé des guimauves ou une friandise à base de guimauve, contactez votre vétérinaire ou un centre antipoison vétérinaire pour demander conseil. Si la friandise contenait du chocolat, contactez immédiatement votre vétérinaire.",
+    "es": "Si tu gato ha comido nubes de azúcar o una golosina de nubes, ponte en contacto con tu veterinario o con una línea de información toxicológica para animales para que te orienten. Si la golosina llevaba chocolate, ponte en contacto con tu veterinario enseguida.",
+    "pt": "Se o teu gato comeu marshmallows ou uma guloseima com marshmallow, contacta o teu veterinário ou uma linha de apoio toxicológico para animais para pedir orientação. Se a guloseima tinha chocolate, contacta imediatamente o teu veterinário.",
+    "nl": "Is je kat aan marshmallows of aan snoep met marshmallow gekomen, neem dan contact op met je dierenarts of een vergiftigingenlijn voor dieren voor advies. Zat er chocolade in het snoep, neem dan meteen contact op met je dierenarts.",
+    "pl": "Jeśli twój kot dobrał się do pianek lub słodyczy z piankami, skontaktuj się z weterynarzem albo zadzwoń na telefon informacji toksykologicznej dla zwierząt, żeby uzyskać wskazówki. Jeśli w słodyczach była czekolada, od razu skontaktuj się z weterynarzem."
   },
   "serving": null,
   "child": {
     "en": "Marshmallows are a sweet treat for people. Cats can hardly taste sweet things, so they're not for kitty.",
     "sl": "Penasti bonboni so sladek priboljšek za ljudi. Muce sladkega skoraj ne okusijo, zato niso za muco.",
-    "cs": "Marshmallow je sladký pamlsek pro lidi. Kočky sladkou chuť sotva vnímají, takže kočičku vůbec nepotěší."
+    "cs": "Marshmallow je sladký pamlsek pro lidi. Kočky sladkou chuť sotva vnímají, takže kočičku vůbec nepotěší.",
+    "hr": "Marshmallowi su slatka poslastica za ljude. Mačke slatko jedva osjete, zato nisu za macu.",
+    "sv": "Marshmallows är en söt godbit för människor. Katter känner knappt sötma, så de är inget för katten.",
+    "da": "Skumfiduser er en sød godbid til mennesker. Katte kan næsten ikke smage sødt, så de er ikke noget for din kat.",
+    "fi": "Vaahtokarkit ovat makea herkku ihmisille. Kissat tuskin maistavat makeaa, joten ne eivät ole kisulle.",
+    "nb": "Marshmallows er søtsaker for mennesker. Katter kjenner nesten ikke søtt, så de er ikke for pusen.",
+    "it": "I marshmallow sono un dolcetto per le persone. I gatti sentono pochissimo il sapore dolce, quindi non sono per il micio.",
+    "de": "Marshmallows sind eine süße Leckerei für Menschen. Katzen schmecken Süßes kaum, deshalb sind sie nichts für deine Katze.",
+    "fr": "Les guimauves sont une friandise sucrée pour les humains. Les chats perçoivent à peine le goût sucré : ce n’est pas pour ton chat.",
+    "es": "Las nubes de azúcar son una golosina dulce para las personas. Los gatos casi no notan el sabor dulce, así que no son para el gatito.",
+    "pt": "Os marshmallows são uma guloseima doce para pessoas. Os gatos quase não sentem o sabor doce, por isso não são para o gatinho.",
+    "nl": "Marshmallows zijn een zoet snoepje voor mensen. Katten kunnen zoete dingen bijna niet proeven, dus ze zijn niets voor je kat.",
+    "pl": "Pianki marshmallow to słodka przekąska dla ludzi. Koty prawie nie czują smaku słodkiego, więc nie są dla kotka."
   },
   "faq": [
     {
       "q": {
         "en": "Are sugar-free marshmallows dangerous for cats?",
         "sl": "Ali so penasti bonboni brez sladkorja nevarni za mačke?",
-        "cs": "Jsou marshmallow bez cukru pro kočky nebezpečné?"
+        "cs": "Jsou marshmallow bez cukru pro kočky nebezpečné?",
+        "hr": "Jesu li marshmallowi bez šećera opasni za mačke?",
+        "sv": "Är sockerfria marshmallows farliga för katter?",
+        "da": "Er sukkerfri skumfiduser farlige for katte?",
+        "fi": "Ovatko sokerittomat vaahtokarkit vaarallisia kissoille?",
+        "nb": "Er sukkerfrie marshmallows farlige for katter?",
+        "it": "I marshmallow senza zucchero sono pericolosi per i gatti?",
+        "de": "Sind zuckerfreie Marshmallows für Katzen gefährlich?",
+        "fr": "Les guimauves sans sucre sont-elles dangereuses pour les chats ?",
+        "es": "¿Son peligrosas para los gatos las nubes de azúcar sin azúcar?",
+        "pt": "Os marshmallows sem açúcar são perigosos para os gatos?",
+        "nl": "Zijn suikervrije marshmallows gevaarlijk voor katten?",
+        "pl": "Czy pianki bez cukru są niebezpieczne dla kotów?"
       },
       "a": {
         "en": "Some sugar-free marshmallows contain xylitol, which is toxic to dogs. Pet Poison Helpline says cats don't appear to be affected by xylitol the way dogs are, but marshmallows still aren't a good choice for cats.",
         "sl": "Nekateri penasti bonboni brez sladkorja vsebujejo ksilitol, ki je strupen za pse. Pet Poison Helpline navaja, da ksilitol na mačke očitno ne vpliva tako kot na pse, a penasti bonboni za mačke še vedno niso dobra izbira.",
-        "cs": "Některé marshmallow bez cukru obsahují xylitol, který je pro psy toxický. Pet Poison Helpline uvádí, že na kočky xylitol zřejmě nepůsobí tak jako na psy, ale marshmallow přesto pro kočky není dobrá volba."
+        "cs": "Některé marshmallow bez cukru obsahují xylitol, který je pro psy toxický. Pet Poison Helpline uvádí, že na kočky xylitol zřejmě nepůsobí tak jako na psy, ale marshmallow přesto pro kočky není dobrá volba.",
+        "hr": "Neki marshmallowi bez šećera sadrže ksilitol, koji je otrovan za pse. Pet Poison Helpline navodi da ksilitol na mačke, čini se, ne djeluje kao na pse, ali marshmallowi ipak nisu dobar izbor za mačke.",
+        "sv": "Vissa sockerfria marshmallows innehåller xylitol, som är giftigt för hundar. Pet Poison Helpline säger att katter inte verkar påverkas av xylitol på samma sätt som hundar, men marshmallows är ändå inget bra val för katter.",
+        "da": "Nogle sukkerfri skumfiduser indeholder xylitol, som er giftigt for hunde. Pet Poison Helpline skriver at katte ikke ser ud til at blive påvirket af xylitol på samme måde som hunde, men skumfiduser er stadig ikke et godt valg til katte.",
+        "fi": "Joissakin sokerittomissa vaahtokarkeissa on ksylitolia, joka on koirille myrkyllistä. Pet Poison Helplinen mukaan ksylitoli ei näytä vaikuttavan kissoihin samalla tavalla kuin koiriin, mutta vaahtokarkit eivät silti ole hyvä valinta kissoille.",
+        "nb": "Noen sukkerfrie marshmallows inneholder xylitol, som er giftig for hunder. Pet Poison Helpline sier at katter ikke ser ut til å bli påvirket av xylitol på samme måte som hunder, men marshmallows er likevel ikke et godt valg for katter.",
+        "it": "Alcuni marshmallow senza zucchero contengono xilitolo, tossico per i cani. Pet Poison Helpline afferma che i gatti non sembrano risentire dello xilitolo come i cani, ma i marshmallow restano comunque una scelta poco adatta ai gatti.",
+        "de": "Manche zuckerfreien Marshmallows enthalten Xylit, das für Hunde giftig ist. Pet Poison Helpline sagt, dass Katzen von Xylit offenbar nicht so betroffen sind wie Hunde, aber Marshmallows sind trotzdem keine gute Wahl für Katzen.",
+        "fr": "Certaines guimauves sans sucre contiennent du xylitol, toxique pour les chiens. Le Pet Poison Helpline indique que les chats ne semblent pas réagir au xylitol comme les chiens, mais les guimauves ne sont quand même pas un bon choix pour eux.",
+        "es": "Algunas nubes sin azúcar llevan xilitol, que es tóxico para los perros. Pet Poison Helpline dice que los gatos no parecen verse afectados por el xilitol como los perros, pero las nubes de azúcar siguen sin ser una buena opción para los gatos.",
+        "pt": "Alguns marshmallows sem açúcar contêm xilitol, que é tóxico para os cães. A Pet Poison Helpline diz que os gatos não parecem ser afetados pelo xilitol como os cães, mas os marshmallows continuam a não ser uma boa escolha para os gatos.",
+        "nl": "Sommige suikervrije marshmallows bevatten xylitol, wat giftig is voor honden. Pet Poison Helpline zegt dat xylitol katten niet lijkt te treffen zoals honden, maar marshmallows blijven geen goede keuze voor katten.",
+        "pl": "Niektóre pianki bez cukru zawierają ksylitol, który jest toksyczny dla psów. Pet Poison Helpline podaje, że ksylitol nie wydaje się działać na koty tak jak na psy, ale pianki nadal nie są dla kotów dobrym wyborem."
       }
     }
   ],
@@ -142,6 +298,66 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8345621449a57f25c13494da50581318617115cf30b39ca098608f3dedd17ed2"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "80ab214f7bc8de50765d51e6ea207e1afa975dbc28c74685bd87c7a72ff02ccd"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2159a223334db99af8080ef331750c1065f07598d2914777616231f2ece19c15"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bf774e785cd70b4a7ae538d1f065d19f28268593ebf0d73d31c37a1bbaa07f1b"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6aea275970a00eb54e2403f0fd961e040fe5617708c8b6f7c4b3e638ddc6186c"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5c1a059e537d5fe903642389226651b640bd09e19e1196f97cb1cd5512334d2b"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "25719fc3b12714d508de58d0311079ab02718ca1675cc686e9dce64148033cff"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9f7b2fc0b685ae4c1c086f9a8e9e27120f4fbe66242cb373c53735b50ab96a7a"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "70dee5d3e97f3a1a364216dae436c11d0732dfd8e94bd4801af255165b7314fe"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "354cb5dc170009466726e5aa30a96dc7190735f89e923244bcb6d31368fef53f"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9e036269798229e192938bf974122c4bd9d2b9a809c111da2126e249adccac05"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "42d01ecc4b8d800f073fb1b80873f15b2acaea9bca3b4a445f29dea545cd0f77"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "46fcdbd35caec600ff795406e94f321855e9eac94fa5f61156797822c79e71fa"
     }
   }
 }

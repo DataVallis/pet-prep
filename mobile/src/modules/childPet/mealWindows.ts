@@ -15,6 +15,7 @@
  */
 
 import { localParts } from '@/modules/childPet/familyTime';
+import { shortClockText, windowLabel } from '@/modules/time/clock';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { strings } from '@/i18n/strings';
 
@@ -35,9 +36,8 @@ export interface MealWindowItem {
 
 /** "07:00" → "7", "07:30" → "7:30". */
 export function shortClock(hhmm: string): string {
-  const [h, m] = hhmm.split(':');
-  const hour = String(Number(h));
-  return m === '00' ? hour : `${hour}:${m}`;
+  // David 2026-11-16: "7 AM" in the 12 h format (`modules/time/clock.ts`).
+  return shortClockText(hhmm);
 }
 
 export function buildMealWindows(view: ChildPetView): MealWindowItem[] {
@@ -55,7 +55,7 @@ export function buildMealWindows(view: ChildPetView): MealWindowItem[] {
     const past = !current && !done && now !== null && w.end > w.start && now.time >= w.end;
     return {
       key: `${w.start}-${w.end}`,
-      label: `${shortClock(w.start)}–${shortClock(w.end)}`,
+      label: windowLabel(w.start, w.end),
       done,
       current,
       past,

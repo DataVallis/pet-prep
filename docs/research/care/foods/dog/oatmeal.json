@@ -4,68 +4,212 @@
   "name": {
     "en": "Oatmeal",
     "sl": "Ovseni kosmiči",
-    "cs": "Ovesná kaše"
+    "es": "Avena",
+    "cs": "Ovesná kaše",
+    "hr": "Zobena kaša",
+    "sv": "Havregrynsgröt",
+    "da": "Havregryn",
+    "fi": "Kaurahiutaleet",
+    "nb": "Havregrøt",
+    "it": "Fiocchi d’avena",
+    "de": "Haferbrei",
+    "fr": "Flocons d’avoine",
+    "pt": "Aveia",
+    "nl": "Havermout",
+    "pl": "Owsianka"
   },
   "question": {
     "en": "Can dogs eat oatmeal?",
     "sl": "Ali lahko psi jedo ovsene kosmiče?",
-    "cs": "Mohou psi jíst ovesnou kaši?"
+    "es": "¿Pueden los perros comer avena?",
+    "cs": "Mohou psi jíst ovesnou kaši?",
+    "hr": "Smiju li psi jesti zobenu kašu?",
+    "sv": "Får hundar äta havregrynsgröt?",
+    "da": "Må hunde spise havregryn?",
+    "fi": "Saako koira syödä kaurahiutaleita?",
+    "nb": "Kan hunder spise havregrøt?",
+    "it": "I cani possono mangiare i fiocchi d’avena?",
+    "de": "Dürfen Hunde Haferbrei fressen?",
+    "fr": "Les chiens peuvent-ils manger des flocons d’avoine ?",
+    "pt": "Os cães podem comer aveia?",
+    "nl": "Mogen honden havermout eten?",
+    "pl": "Czy psy mogą jeść owsiankę?"
   },
   "url_slug": {
     "en": "oatmeal",
     "sl": "ovseni-kosmici",
-    "cs": "ovesna-kase"
+    "es": "avena",
+    "cs": "ovesna-kase",
+    "hr": "zobena-kasa",
+    "sv": "havregrynsgrot",
+    "da": "havregryn",
+    "fi": "kaurahiutaleet",
+    "nb": "havregrot",
+    "it": "fiocchi-di-avena",
+    "de": "haferbrei",
+    "fr": "flocons-d-avoine",
+    "pt": "aveia",
+    "nl": "havermout",
+    "pl": "owsianka"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. Plain oatmeal, cooked with water rather than milk, is fine for dogs. Never give flavoured or instant oatmeal, and leave out salt, butter, chocolate and raisins.",
     "sl": "Da, v majhnih količinah. Navadna ovsena kaša, kuhana z vodo namesto z mlekom, je za pse v redu. Nikoli ne dajajte aromatizirane ali instant kaše in ne dodajajte soli, masla, čokolade ali rozin.",
-    "cs": "Ano, v malém množství. Obyčejná ovesná kaše uvařená na vodě, ne na mléce, je pro psy v pořádku. Nikdy nedávejte ochucenou ani instantní kaši a vynechte sůl, máslo, čokoládu a rozinky."
+    "es": "Sí, en pequeñas cantidades. La avena sencilla, cocinada con agua y no con leche, está bien para los perros. No des nunca avena con sabores ni instantánea, y evita la sal, la mantequilla, el chocolate y las pasas.",
+    "cs": "Ano, v malém množství. Obyčejná ovesná kaše uvařená na vodě, ne na mléce, je pro psy v pořádku. Nikdy nedávejte ochucenou ani instantní kaši a vynechte sůl, máslo, čokoládu a rozinky.",
+    "hr": "Da, u malim količinama. Obična zobena kaša, kuhana u vodi, a ne u mlijeku, u redu je za pse. Nikad ne daj kašu s okusima ni instant kašu, a izostavi sol, maslac, čokoladu i grožđice.",
+    "sv": "Ja, i små mängder. Okryddad havregrynsgröt kokt på vatten i stället för mjölk går bra för hundar. Ge aldrig smaksatt gröt eller snabbgröt, och undvik salt, smör, choklad och russin.",
+    "da": "Ja, i små mængder. Almindelig havregrød kogt på vand i stedet for mælk er fint til hunde. Giv aldrig havregryn med smag eller instant-havregryn, og lad være med salt, smør, chokolade og rosiner.",
+    "fi": "Saa, pieninä määrinä. Maustamattomat, maidon sijaan vedellä keitetyt kaurahiutaleet sopivat koirille. Älä koskaan anna maustettuja tai pikakaurahiutaleita, ja jätä pois suola, voi, suklaa ja rusinat.",
+    "nb": "Ja, i små mengder. Naturell havregrøt kokt på vann, ikke melk, er greit for hunder. Gi aldri smaksatt eller hurtigkokt havregrøt, og ikke tilsett salt, smør, sjokolade eller rosiner.",
+    "it": "Sì, in piccole quantità. I fiocchi d’avena al naturale, cotti in acqua e non nel latte, vanno bene per i cani. Non dare mai fiocchi aromatizzati o istantanei, ed evita sale, burro, cioccolato e uvetta.",
+    "de": "Ja, in kleinen Mengen. Einfacher Haferbrei, mit Wasser statt Milch gekocht, ist für Hunde in Ordnung. Geben Sie niemals Haferbrei mit Geschmack oder Instant-Haferbrei und lassen Sie Salz, Butter, Schokolade und Rosinen weg.",
+    "fr": "Oui, en petites quantités. Des flocons d’avoine nature, cuits à l’eau plutôt qu’au lait, conviennent aux chiens. Ne donnez jamais de flocons aromatisés ou instantanés, et évitez le sel, le beurre, le chocolat et les raisins secs.",
+    "pt": "Sim, em pequenas quantidades. As papas de aveia simples, cozinhadas com água em vez de leite, não fazem mal aos cães. Nunca dês papas com sabores ou instantâneas, e deixa de fora sal, manteiga, chocolate e passas.",
+    "nl": "Ja, in kleine hoeveelheden. Gewone havermout, gekookt met water in plaats van melk, is prima voor honden. Geef nooit havermout met smaakjes of instant havermout, en laat zout, boter, chocolade en rozijnen weg.",
+    "pl": "Tak, w małych ilościach. Owsianka bez dodatków, ugotowana na wodzie, a nie na mleku, jest dla psów w porządku. Nigdy nie dawaj owsianki smakowej ani błyskawicznej i nie dodawaj soli, masła, czekolady ani rodzynek."
   },
   "why": {
     "en": "Oatmeal is high in fibre, including soluble fibre that can help dogs with irregular bowel movements. But dogs digest dairy poorly, raw oats are harder to digest, and a lot of fibre can cause stomach upset, diarrhoea and vomiting; a large amount can even lead to bloat. It is also fairly high in carbs and calories. Flavoured oatmeal often has more sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
     "sl": "Ovseni kosmiči imajo veliko vlaknin, tudi topnih, ki lahko pomagajo psom z neredno prebavo. Toda psi slabo prebavljajo mlečne izdelke, surovi kosmiči so težje prebavljivi, veliko vlaknin pa lahko povzroči prebavne težave, drisko in bruhanje; velika količina lahko celo povzroči napihnjenost želodca. Imajo tudi precej ogljikovih hidratov in kalorij. Aromatizirana kaša ima pogosto več sladkorja in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana.",
-    "cs": "Ovesné vločky jsou bohaté na vlákninu, včetně rozpustné vlákniny, která může pomoci psům s nepravidelným vyprazdňováním. Psi ale špatně tráví mléčné výrobky, syrové ovesné vločky se tráví hůř a hodně vlákniny může způsobit podráždění žaludku, průjem a zvracení; velké množství může dokonce vést k nadmutí žaludku. Kaše má také poměrně hodně sacharidů a kalorií. Ochucená kaše často obsahuje víc cukru a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná."
+    "es": "La avena tiene mucha fibra, incluida fibra soluble que puede ayudar a los perros con un tránsito intestinal irregular. Pero los perros digieren mal los lácteos, la avena cruda es más difícil de digerir y mucha fibra puede causar malestar de estómago, diarrea y vómitos; una cantidad grande puede llevar incluso a la hinchazón de estómago (dilatación gástrica). También tiene bastantes hidratos de carbono y calorías. La avena con sabores suele llevar más azúcar y puede contener xilitol, que es tóxico para los perros, y la avena instantánea está muy procesada.",
+    "cs": "Ovesné vločky jsou bohaté na vlákninu, včetně rozpustné vlákniny, která může pomoci psům s nepravidelným vyprazdňováním. Psi ale špatně tráví mléčné výrobky, syrové ovesné vločky se tráví hůř a hodně vlákniny může způsobit podráždění žaludku, průjem a zvracení; velké množství může dokonce vést k nadmutí žaludku. Kaše má také poměrně hodně sacharidů a kalorií. Ochucená kaše často obsahuje víc cukru a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná.",
+    "hr": "Zobena kaša bogata je vlaknima, uključujući topiva vlakna koja mogu pomoći psima s nepravilnom stolicom. No psi slabo probavljaju mliječne proizvode, sirova zob teže se probavlja, a puno vlakana može izazvati želučane tegobe, proljev i povraćanje; velika količina može čak izazvati nadutost želuca. Prilično je bogata i ugljikohidratima i kalorijama. Kaša s okusima često ima više šećera i može sadržavati ksilitol, koji je otrovan za pse, a instant kaša jako je prerađena.",
+    "sv": "Havregryn är rika på fibrer, bland annat lösliga fibrer som kan hjälpa hundar med oregelbunden avföring. Men hundar smälter mjölkprodukter dåligt, råa havregryn är svårare att smälta, och mycket fibrer kan orsaka magbesvär, diarré och kräkningar; en stor mängd kan till och med leda till uppblåsthet. Havregryn innehåller också ganska mycket kolhydrater och kalorier. Smaksatt gröt innehåller ofta mer socker och kan innehålla xylitol, som är giftigt för hundar, och snabbgröt är starkt bearbetad.",
+    "da": "Havregryn indeholder meget fiber, herunder opløselige fibre, som kan hjælpe hunde med uregelmæssig mave. Men hunde fordøjer mejeriprodukter dårligt, rå havregryn er sværere at fordøje, og mange fibre kan give mavebesvær, diarré og opkast; en stor mængde kan endda føre til oppustethed. Havregryn indeholder også en del kulhydrater og kalorier. Havregryn med smag indeholder ofte mere sukker og kan indeholde xylitol, som er giftigt for hunde, og instant-havregryn er stærkt forarbejdet.",
+    "fi": "Kaurahiutaleissa on paljon kuitua, myös liukoista kuitua, joka voi auttaa koiria, joiden suolen toiminta on epäsäännöllistä. Koirat kuitenkin sulattavat maitotuotteita huonosti, raaka kaura on vaikeampi sulattaa, ja runsas kuitu voi aiheuttaa vatsavaivoja, ripulia ja oksentelua; suuri määrä voi johtaa jopa mahalaukun laajenemiseen. Kaurahiutaleissa on myös melko paljon hiilihydraatteja ja kaloreita. Maustetuissa kaurahiutaleissa on usein enemmän sokeria ja niissä voi olla ksylitolia, joka on koirille myrkyllistä, ja pikakaurahiutaleet ovat pitkälle jalostettuja.",
+    "nb": "Havregryn har mye fiber, blant annet løselige fibre som kan hjelpe hunder med uregelmessig avføring. Men hunder fordøyer melkeprodukter dårlig, rå havregryn er tyngre å fordøye, og mye fiber kan gi urolig mage, diaré og oppkast; en stor mengde kan til og med føre til oppblåst mage. Havregrøt har også ganske mye karbohydrater og kalorier. Smaksatt havregrøt inneholder ofte mer sukker og kan inneholde xylitol, som er giftig for hunder, og hurtigkokt havregrøt er sterkt bearbeidet.",
+    "it": "I fiocchi d’avena sono ricchi di fibre, comprese quelle solubili che possono aiutare i cani con un intestino irregolare. Ma i cani digeriscono male i latticini, l’avena cruda è più difficile da digerire e molte fibre possono causare mal di stomaco, diarrea e vomito; una grande quantità può perfino portare a una dilatazione gastrica. Sono anche abbastanza ricchi di carboidrati e calorie. I fiocchi aromatizzati hanno spesso più zucchero e possono contenere xilitolo, tossico per i cani, e quelli istantanei sono molto lavorati.",
+    "de": "Haferflocken sind reich an Ballaststoffen, auch an löslichen, die Hunden mit unregelmäßigem Stuhlgang helfen können. Aber Hunde vertragen Milchprodukte schlecht, rohe Haferflocken sind schwerer verdaulich, und viele Ballaststoffe können Magenbeschwerden, Durchfall und Erbrechen verursachen. Eine große Menge kann sogar zu einem aufgegasten Magen (Bloat) führen. Haferbrei hat außerdem recht viele Kohlenhydrate und Kalorien. Haferbrei mit Geschmack enthält oft mehr Zucker und womöglich Xylit, das für Hunde giftig ist, und Instant-Haferbrei ist stark verarbeitet.",
+    "fr": "Les flocons d’avoine sont riches en fibres, dont des fibres solubles qui peuvent aider les chiens dont le transit est irrégulier. Mais les chiens digèrent mal les produits laitiers, les flocons crus sont plus difficiles à digérer, et beaucoup de fibres peuvent provoquer des troubles digestifs, de la diarrhée et des vomissements ; une grande quantité peut même entraîner une dilatation de l’estomac (« bloat »). Ils sont aussi assez riches en glucides et en calories. Les flocons aromatisés contiennent souvent plus de sucre et peuvent contenir du xylitol, toxique pour les chiens, et les flocons instantanés sont très transformés.",
+    "pt": "A aveia tem muita fibra, incluindo fibra solúvel que pode ajudar os cães com trânsito intestinal irregular. Mas os cães digerem mal os lacticínios, a aveia crua é mais difícil de digerir, e muita fibra pode causar indisposição de estômago, diarreia e vómitos; uma grande quantidade pode até levar a dilatação gástrica. Também tem bastantes hidratos de carbono e calorias. As papas com sabores têm muitas vezes mais açúcar e podem conter xilitol, que é tóxico para os cães, e a aveia instantânea é muito processada.",
+    "nl": "Havermout bevat veel vezels, waaronder oplosbare vezels die honden met een onregelmatige stoelgang kunnen helpen. Maar honden verteren zuivel slecht, rauwe haver is moeilijker te verteren en veel vezels kunnen maagklachten, diarree en braken veroorzaken; een grote hoeveelheid kan zelfs leiden tot een opgezette maag. Het bevat ook vrij veel koolhydraten en calorieën. Havermout met smaakjes bevat vaak meer suiker en kan xylitol bevatten, dat giftig is voor honden, en instant havermout is sterk bewerkt.",
+    "pl": "Owsianka ma dużo błonnika, w tym błonnika rozpuszczalnego, który może pomóc psom z nieregularnymi wypróżnieniami. Ale psy słabo trawią nabiał, surowe płatki owsiane są trudniejsze do strawienia, a dużo błonnika może powodować rozstrój żołądka, biegunkę i wymioty; duża ilość może nawet doprowadzić do rozdęcia żołądka. Zawiera też dość dużo węglowodanów i kalorii. Owsianka smakowa często ma więcej cukru i może zawierać ksylitol, który jest toksyczny dla psów, a owsianka błyskawiczna jest wysoko przetworzona."
   },
   "signs": null,
   "what_to_do": {
     "en": "Introduce it gradually and watch how your dog handles it. If your dog seems to react badly, contact your vet straight away.",
     "sl": "Ovseno kašo uvajajte postopoma in opazujte, kako jo pes prenaša. Če se zdi, da se nanjo slabo odziva, takoj pokličite veterinarja.",
-    "cs": "Zavádějte ji postupně a sledujte, jak ji pes snáší. Pokud se zdá, že na ni pes reaguje špatně, ihned se obraťte na veterináře."
+    "es": "Introdúcela poco a poco y observa cómo la tolera tu perro. Si parece que le sienta mal, ponte en contacto con tu veterinario enseguida.",
+    "cs": "Zavádějte ji postupně a sledujte, jak ji pes snáší. Pokud se zdá, že na ni pes reaguje špatně, ihned se obraťte na veterináře.",
+    "hr": "Uvodi je postupno i promatraj kako je pas podnosi. Ako pas loše reagira, odmah se obrati veterinaru.",
+    "sv": "Börja gradvis och se hur din hund tål det. Om din hund verkar må dåligt av det ska du kontakta din veterinär direkt.",
+    "da": "Indfør det gradvist, og se, hvordan din hund tåler det. Hvis din hund ser ud til at reagere dårligt, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Aloita vähitellen ja seuraa, miten koirasi sen sietää. Jos koirasi vaikuttaa reagoivan huonosti, ota heti yhteyttä eläinlääkäriin.",
+    "nb": "Introduser den gradvis, og følg med på hvordan hunden tåler den. Hvis hunden ser ut til å reagere dårlig, kontakt dyrlegen med en gang.",
+    "it": "Introducili gradualmente e osserva come li tollera il tuo cane. Se sembra reagire male, contatta subito il veterinario.",
+    "de": "Gewöhnen Sie Ihren Hund schrittweise daran und beobachten Sie, wie er es verträgt. Reagiert Ihr Hund schlecht darauf, wenden Sie sich sofort an Ihren Tierarzt.",
+    "fr": "Introduisez-les progressivement et observez comment votre chien les supporte. Si votre chien semble mal réagir, contactez immédiatement votre vétérinaire.",
+    "pt": "Introduz aos poucos e observa como o teu cão reage. Se o teu cão parecer reagir mal, liga imediatamente ao teu veterinário.",
+    "nl": "Laat je hond er geleidelijk aan wennen en kijk hoe hij het verdraagt. Lijkt je hond er slecht op te reageren, neem dan meteen contact op met je dierenarts.",
+    "pl": "Wprowadzaj ją stopniowo i obserwuj, jak pies ją znosi. Jeśli wygląda na to, że pies źle ją toleruje, od razu skontaktuj się z weterynarzem."
   },
   "serving": {
     "en": "Plain, cooked oatmeal made with water, not milk, and not too much at once. Not raw, not instant, and no sugar, salt, butter, chocolate, raisins or flavourings.",
     "sl": "Navadna kuhana ovsena kaša, pripravljena z vodo, ne z mlekom, in ne preveč naenkrat. Ne surova, ne instant, brez sladkorja, soli, masla, čokolade, rozin in arom.",
-    "cs": "Obyčejná kaše uvařená na vodě, ne na mléce, a ne příliš mnoho najednou. Ne syrová, ne instantní a bez cukru, soli, másla, čokolády, rozinek a ochucovadel."
+    "es": "Avena sencilla, cocinada con agua y no con leche, y no demasiada de una vez. Ni cruda ni instantánea, y sin azúcar, sal, mantequilla, chocolate, pasas ni aromas.",
+    "cs": "Obyčejná kaše uvařená na vodě, ne na mléce, a ne příliš mnoho najednou. Ne syrová, ne instantní a bez cukru, soli, másla, čokolády, rozinek a ochucovadel.",
+    "hr": "Obična kuhana kaša od zobi u vodi, ne u mlijeku, i ne previše odjednom. Ne sirova, ne instant i bez šećera, soli, maslaca, čokolade, grožđica ni aroma.",
+    "sv": "Okryddad, kokt havregrynsgröt gjord på vatten, inte mjölk, och inte för mycket åt gången. Inte rå, inte snabbgröt, och inget socker, salt, smör, choklad, russin eller smaktillsatser.",
+    "da": "Almindelig kogt havregrød lavet på vand, ikke mælk, og ikke for meget ad gangen. Ikke rå, ikke instant og uden sukker, salt, smør, chokolade, rosiner eller smagsstoffer.",
+    "fi": "Maustamattomia, vedellä (ei maidolla) keitettyjä kaurahiutaleita, ei liikaa kerralla. Ei raakoina, ei pikahiutaleina, eikä sokeria, suolaa, voita, suklaata, rusinoita tai makuaineita.",
+    "nb": "Naturell havregrøt kokt på vann, ikke melk, og ikke for mye om gangen. Ikke rå, ikke hurtigkokt, og uten sukker, salt, smør, sjokolade, rosiner eller smakstilsetninger.",
+    "it": "Fiocchi d’avena al naturale, cotti in acqua e non nel latte, senza esagerare con la quantità. Non crudi, non istantanei e senza zucchero, sale, burro, cioccolato, uvetta o aromi.",
+    "de": "Einfacher, gekochter Haferbrei mit Wasser statt Milch, nicht zu viel auf einmal. Nicht roh, nicht als Instant-Variante und ohne Zucker, Salz, Butter, Schokolade, Rosinen oder Aromen.",
+    "fr": "Flocons d’avoine nature cuits à l’eau, et non au lait, sans en donner trop d’un coup. Ni crus, ni instantanés, et sans sucre, sel, beurre, chocolat, raisins secs ni arômes.",
+    "pt": "Papas de aveia simples, cozinhadas com água e não com leite, e sem exagerar na quantidade de cada vez. Nem crua, nem instantânea, e sem açúcar, sal, manteiga, chocolate, passas nem aromas.",
+    "nl": "Gewone havermout, gekookt met water in plaats van melk, en niet te veel ineens. Niet rauw, niet instant en zonder suiker, zout, boter, chocolade, rozijnen of smaakmakers.",
+    "pl": "Owsianka bez dodatków, ugotowana na wodzie, a nie na mleku, i niezbyt dużo naraz. Nie surowa, nie błyskawiczna, bez cukru, soli, masła, czekolady, rodzynek ani aromatów."
   },
   "child": {
     "en": "Dogs can have a little plain oatmeal made with water. Sweet or flavoured porridge is not for dogs.",
     "sl": "Psi lahko dobijo malo navadne ovsene kaše, kuhane z vodo. Sladka ali aromatizirana kaša ni za pse.",
-    "cs": "Psi mohou dostat trochu obyčejné ovesné kaše uvařené na vodě. Sladká nebo ochucená kaše pro psy není."
+    "es": "Los perros pueden tomar un poco de avena sencilla hecha con agua. Las gachas dulces o con sabores no son para los perros.",
+    "cs": "Psi mohou dostat trochu obyčejné ovesné kaše uvařené na vodě. Sladká nebo ochucená kaše pro psy není.",
+    "hr": "Psi smiju dobiti malo obične zobene kaše kuhane u vodi. Slatka kaša ili kaša s okusima nije za pse.",
+    "sv": "Hundar kan få lite okryddad havregrynsgröt kokt på vatten. Söt eller smaksatt gröt är inte för hundar.",
+    "da": "Hunde kan få lidt almindelig havregrød lavet på vand. Sød havregrød eller havregrød med smag er ikke til hunde.",
+    "fi": "Koira saa vähän maustamatonta, vedellä keitettyä kaurapuuroa. Makea tai maustettu puuro ei ole koirille.",
+    "nb": "Hunder kan få litt naturell havregrøt kokt på vann. Søt eller smaksatt grøt er ikke for hunder.",
+    "it": "I cani possono mangiare un po’ di fiocchi d’avena al naturale, cotti in acqua. Il porridge dolce o aromatizzato non è per i cani.",
+    "de": "Hunde dürfen ein wenig ungesüßten Haferbrei haben, der mit Wasser gekocht wurde. Süßer oder aromatisierter Haferbrei ist nichts für Hunde.",
+    "fr": "Les chiens peuvent manger un peu de porridge nature préparé à l’eau. Le porridge sucré ou aromatisé n’est pas pour les chiens.",
+    "pt": "Os cães podem comer um pouco de papas de aveia simples feitas com água. As papas doces ou com sabores não são para cães.",
+    "nl": "Honden mogen een beetje gewone havermout, gekookt met water. Zoete havermoutpap of havermout met smaakjes is niets voor honden.",
+    "pl": "Pies może dostać odrobinę owsianki ugotowanej na wodzie, bez dodatków. Słodka lub smakowa owsianka nie jest dla psów."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat raw oats?",
         "sl": "Ali lahko psi jedo surove ovsene kosmiče?",
-        "cs": "Mohou psi jíst syrové ovesné vločky?"
+        "es": "¿Pueden los perros comer avena cruda?",
+        "cs": "Mohou psi jíst syrové ovesné vločky?",
+        "hr": "Smiju li psi jesti sirovu zob?",
+        "sv": "Får hundar äta råa havregryn?",
+        "da": "Må hunde spise rå havregryn?",
+        "fi": "Saako koira syödä raakaa kauraa?",
+        "nb": "Kan hunder spise rå havregryn?",
+        "it": "I cani possono mangiare l’avena cruda?",
+        "de": "Dürfen Hunde rohe Haferflocken fressen?",
+        "fr": "Les chiens peuvent-ils manger des flocons d’avoine crus ?",
+        "pt": "Os cães podem comer aveia crua?",
+        "nl": "Mogen honden rauwe haver eten?",
+        "pl": "Czy psy mogą jeść surowe płatki owsiane?"
       },
       "a": {
         "en": "It's better to cook them. Raw oats sprinkled over food are only harder for your dog to digest.",
         "sl": "Bolje jih je skuhati. Surovi kosmiči, posuti po hrani, so za psa le težje prebavljivi.",
-        "cs": "Je lepší je uvařit. Syrové vločky posypané na krmivo se psovi jen hůř tráví."
+        "es": "Es mejor cocinarla. La avena cruda espolvoreada sobre la comida solo resulta más difícil de digerir para tu perro.",
+        "cs": "Je lepší je uvařit. Syrové vločky posypané na krmivo se psovi jen hůř tráví.",
+        "hr": "Bolje je skuhati je. Sirova zob posuta po hrani psu je samo teže probavljiva.",
+        "sv": "Det är bättre att koka dem. Råa havregryn som strös över maten är bara svårare för din hund att smälta.",
+        "da": "Det er bedre at koge dem. Rå havregryn drysset over maden er bare sværere for din hund at fordøje.",
+        "fi": "Ne on parempi keittää. Ruoan päälle ripoteltuna raaka kaura on koirallesi vain vaikeampaa sulattaa.",
+        "nb": "Det er bedre å koke dem. Rå havregryn strødd over maten er bare vanskeligere for hunden å fordøye.",
+        "it": "Meglio cuocerla. L’avena cruda sparsa sul cibo è solo più difficile da digerire per il tuo cane.",
+        "de": "Gekocht ist besser. Rohe Haferflocken, über das Futter gestreut, kann Ihr Hund nur schwerer verdauen.",
+        "fr": "Mieux vaut les cuire. Des flocons crus saupoudrés sur la nourriture sont simplement plus difficiles à digérer pour votre chien.",
+        "pt": "É melhor cozê-la. Os flocos de aveia crus polvilhados sobre a comida só ficam mais difíceis de digerir para o teu cão.",
+        "nl": "Het is beter om haver te koken. Rauwe haver over het eten strooien maakt het voer alleen maar moeilijker verteerbaar voor je hond.",
+        "pl": "Lepiej je ugotować. Surowe płatki owsiane posypane na karmę są dla psa po prostu trudniejsze do strawienia."
       }
     },
     {
       "q": {
         "en": "Is flavoured instant oatmeal safe for dogs?",
         "sl": "Je aromatizirana instant kaša za pse varna?",
-        "cs": "Je ochucená instantní ovesná kaše pro psy bezpečná?"
+        "es": "¿Es segura para los perros la avena instantánea con sabores?",
+        "cs": "Je ochucená instantní ovesná kaše pro psy bezpečná?",
+        "hr": "Je li instant kaša s okusima sigurna za pse?",
+        "sv": "Är smaksatt snabbgröt säker för hundar?",
+        "da": "Er instant-havregryn med smag ufarlige for hunde?",
+        "fi": "Ovatko maustetut pikakaurahiutaleet turvallisia koirille?",
+        "nb": "Er smaksatt hurtiggrøt trygg for hunder?",
+        "it": "I fiocchi d’avena istantanei aromatizzati sono sicuri per i cani?",
+        "de": "Ist aromatisierter Instant-Haferbrei für Hunde unbedenklich?",
+        "fr": "Les flocons d’avoine instantanés aromatisés sont-ils sans danger pour les chiens ?",
+        "pt": "As papas de aveia instantâneas com sabores são seguras para os cães?",
+        "nl": "Is instant havermout met smaakjes veilig voor honden?",
+        "pl": "Czy smakowa owsianka błyskawiczna jest bezpieczna dla psów?"
       },
       "a": {
         "en": "No. Flavoured oatmeal often has extra sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
         "sl": "Ne. Aromatizirana kaša ima pogosto dodan sladkor in lahko vsebuje ksilitol, ki je za pse strupen, instant kaša pa je močno predelana.",
-        "cs": "Ne. Ochucená kaše často obsahuje další cukr a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná."
+        "es": "No. La avena con sabores suele llevar azúcar extra y puede contener xilitol, que es tóxico para los perros, y la avena instantánea está muy procesada.",
+        "cs": "Ne. Ochucená kaše často obsahuje další cukr a může obsahovat xylitol, který je pro psy jedovatý, a instantní kaše je silně zpracovaná.",
+        "hr": "Ne. Kaša s okusima često ima dodatni šećer i može sadržavati ksilitol, koji je otrovan za pse, a instant kaša jako je prerađena.",
+        "sv": "Nej. Smaksatt gröt innehåller ofta extra socker och kan innehålla xylitol, som är giftigt för hundar, och snabbgröt är starkt bearbetad.",
+        "da": "Nej. Havregryn med smag indeholder ofte ekstra sukker og kan indeholde xylitol, som er giftigt for hunde, og instant-havregryn er stærkt forarbejdet.",
+        "fi": "Eivät. Maustetuissa kaurahiutaleissa on usein ylimääräistä sokeria ja niissä voi olla ksylitolia, joka on koirille myrkyllistä, ja pikakaurahiutaleet ovat voimakkaasti prosessoituja.",
+        "nb": "Nei. Smaksatt havregrøt inneholder ofte ekstra sukker og kan inneholde xylitol, som er giftig for hunder, og hurtigkokt havregrøt er sterkt bearbeidet.",
+        "it": "No. I fiocchi aromatizzati hanno spesso zucchero in più e possono contenere xilitolo, tossico per i cani, e quelli istantanei sono molto lavorati.",
+        "de": "Nein. Haferbrei mit Geschmack enthält oft zusätzlichen Zucker und womöglich Xylit, das für Hunde giftig ist, und Instant-Haferbrei ist stark verarbeitet.",
+        "fr": "Non. Les flocons aromatisés contiennent souvent du sucre en plus et peuvent contenir du xylitol, toxique pour les chiens, et les flocons instantanés sont très transformés.",
+        "pt": "Não. As papas com sabores têm muitas vezes açúcar extra e podem conter xilitol, que é tóxico para os cães, e a aveia instantânea é muito processada.",
+        "nl": "Nee. Havermout met smaakjes bevat vaak extra suiker en kan xylitol bevatten, dat giftig is voor honden, en instant havermout is sterk bewerkt.",
+        "pl": "Nie. Owsianka smakowa często ma dodatkowy cukier i może zawierać ksylitol, który jest toksyczny dla psów, a owsianka błyskawiczna jest wysoko przetworzona."
       }
     }
   ],
@@ -175,10 +319,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "036f99655217204298a4211d1ec5a4ad3389db77899bdeecfb190cb4517a064c"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc2658688f1b4e698635f495508cbbaf52495449a10a6986dc82e3c16c9f378c"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6fde4f2b640312f1b72030d6249f08f5865168bca44574e010559c9a69026238"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2b21bb7837ea224a70a9c28a0e5fafc88add26007f9ddc218ced0582df836c90"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7d3e2b85020b9258d134b6301935a9571c1860474a38660445807b3ecfd8e15f"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "385cf39a6a2521c1b74c0086b2a2902d30af4fed10a1fdebd92cf1f5c7ecc6e2"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1929f81c0c7c8125522c1881a8f5195a0daad03f1edfce719a2dac94f21719fd"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "794a084c6d5eef87115fe2341564d8a092ec048b1d7c8445a72a952a835b3dd3"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "93101e848f116ca33f6ca04ac09f6331236d111c42a8af42d0b872cd8cc1d445"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f49dfd8ee2593eceabba92009ba222fdc866b535139d10cd8454ffdb8c920187"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d28d7b9a7901c42e872e6f558812c4a0c52129399c6ac17090e9ab48d955dfc0"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0bc76d237239c28c06fcf14aeea1b03e276b983a880cd3e8cf0154773f64ee61"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "25fb622ba3231ce4e90fb5c46c8a12b13f389e8abacb6c205ac511ae48d48ff9"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "1efb3bcda2b859433318e7b79ec44b89831a34422b04425e1957bcee8bdc5a4d"
     }
   }
 }

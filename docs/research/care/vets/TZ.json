@@ -61,7 +61,8 @@
       "duty_i18n": {
         "it": "Aperto dal lunedì al venerdì 08:30–16:00 (il giovedì visite a domicilio). Per le urgenze chiamare la clinica.",
         "pt": "Aberto de segunda a sexta 8h30–16h00 (às quintas-feiras, consultas ao domicílio). Para urgências, liga para a clínica.",
-        "nl": "Open van maandag tot en met vrijdag 8.30–16.00 uur (donderdag huisbezoeken). Bel de praktijk bij spoed."
+        "nl": "Open van maandag tot en met vrijdag 8.30–16.00 uur (donderdag huisbezoeken). Bel de praktijk bij spoed.",
+        "pl": "Czynne od poniedziałku do piątku 08:30–16:00 (w czwartki wizyty domowe). W nagłych przypadkach zadzwoń do przychodni."
       }
     },
     {
@@ -80,7 +81,8 @@
       "duty_i18n": {
         "it": "Linea fuori orario: +255 753 520 244.",
         "pt": "Linha fora de horas: +255 753 520 244.",
-        "nl": "Telefoonnummer buiten kantooruren: +255 753 520 244."
+        "nl": "Telefoonnummer buiten kantooruren: +255 753 520 244.",
+        "pl": "Linia po godzinach pracy: +255 753 520 244."
       }
     },
     {
@@ -99,7 +101,8 @@
       "duty_i18n": {
         "it": "Chiamare la clinica per orari e appuntamenti.",
         "pt": "Liga para a clínica para saberes o horário e marcares consulta.",
-        "nl": "Bel de praktijk voor openingstijden en afspraken."
+        "nl": "Bel de praktijk voor openingstijden en afspraken.",
+        "pl": "Zadzwoń do przychodni w sprawie godzin i umówienia wizyty."
       }
     }
   ],

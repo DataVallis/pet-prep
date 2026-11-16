@@ -4,28 +4,88 @@
   "name": {
     "en": "Sugar",
     "sl": "Sladkor",
-    "cs": "Cukr"
+    "es": "Azúcar",
+    "cs": "Cukr",
+    "hr": "Šećer",
+    "sv": "Socker",
+    "da": "Sukker",
+    "fi": "Sokeri",
+    "nb": "Sukker",
+    "it": "Zucchero",
+    "de": "Zucker",
+    "fr": "Sucre",
+    "pt": "Açúcar",
+    "nl": "Suiker",
+    "pl": "Cukier"
   },
   "question": {
     "en": "Can dogs eat sugar?",
     "sl": "Ali lahko psi jedo sladkor?",
-    "cs": "Mohou psi jíst cukr?"
+    "es": "¿Pueden los perros comer azúcar?",
+    "cs": "Mohou psi jíst cukr?",
+    "hr": "Smiju li psi jesti šećer?",
+    "sv": "Får hundar äta socker?",
+    "da": "Må hunde spise sukker?",
+    "fi": "Saako koira syödä sokeria?",
+    "nb": "Kan hunder spise sukker?",
+    "it": "I cani possono mangiare lo zucchero?",
+    "de": "Dürfen Hunde Zucker fressen?",
+    "fr": "Les chiens peuvent-ils manger du sucre ?",
+    "pt": "Os cães podem comer açúcar?",
+    "nl": "Mogen honden suiker eten?",
+    "pl": "Czy psy mogą jeść cukier?"
   },
   "url_slug": {
     "en": "sugar",
     "sl": "sladkor",
-    "cs": "cukr"
+    "es": "azucar",
+    "cs": "cukr",
+    "hr": "secer",
+    "sv": "socker",
+    "da": "sukker",
+    "fi": "sokeri",
+    "nb": "sukker",
+    "it": "zucchero",
+    "de": "zucker",
+    "fr": "sucre",
+    "pt": "acucar",
+    "nl": "suiker",
+    "pl": "cukier"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to give your dog sugar. A little sugar isn't toxic to dogs, but it offers no nutritional benefit and can cause stomach upset. Sugar-free products are no safer: they may contain xylitol, which is toxic to dogs.",
     "sl": "Ne, psu sladkorja raje ne dajajte. Malo sladkorja za pse ni strupeno, vendar psu ne koristi in lahko povzroči prebavne težave. Izdelki brez sladkorja niso nič varnejši, saj lahko vsebujejo ksilitol, ki je za pse strupen.",
-    "cs": "Ne, psovi cukr raději nedávejte. Trocha cukru pro psy není jedovatá, ale nemá žádnou výživovou hodnotu a může způsobit podráždění žaludku. Výrobky bez cukru nejsou o nic bezpečnější: mohou obsahovat xylitol, který je pro psy jedovatý."
+    "es": "No, es mejor no darle azúcar a tu perro. Un poco de azúcar no es tóxico para los perros, pero no aporta ningún beneficio nutricional y puede sentar mal al estómago. Los productos sin azúcar no son más seguros: pueden llevar xilitol, que es tóxico para los perros.",
+    "cs": "Ne, psovi cukr raději nedávejte. Trocha cukru pro psy není jedovatá, ale nemá žádnou výživovou hodnotu a může způsobit podráždění žaludku. Výrobky bez cukru nejsou o nic bezpečnější: mohou obsahovat xylitol, který je pro psy jedovatý.",
+    "hr": "Ne, psu je bolje ne davati šećer. Malo šećera nije otrovno za pse, ali ne donosi nikakvu hranjivu korist i može izazvati želučane tegobe. Proizvodi bez šećera nisu sigurniji: mogu sadržavati ksilitol, koji je otrovan za pse.",
+    "sv": "Nej, det är bäst att inte ge din hund socker. Lite socker är inte giftigt för hundar, men det ger inget näringsvärde och kan orsaka magbesvär. Sockerfria produkter är inte säkrare: de kan innehålla xylitol, som är giftigt för hundar.",
+    "da": "Nej, det er bedst ikke at give din hund sukker. Lidt sukker er ikke giftigt for hunde, men det giver ingen næringsmæssig fordel og kan give mavebesvær. Sukkerfri produkter er ikke mere sikre: de kan indeholde xylitol, som er giftigt for hunde.",
+    "fi": "Ei suositella, koiralle ei kannata antaa sokeria. Vähän sokeria ei ole koirille myrkyllistä, mutta siitä ei ole ravitsemuksellista hyötyä ja se voi aiheuttaa vatsavaivoja. Sokerittomat tuotteet eivät ole sen turvallisempia: niissä voi olla ksylitolia, joka on koirille myrkyllistä.",
+    "nb": "Nei, det er best å ikke gi hunden sukker. Litt sukker er ikke giftig for hunder, men det gir ingen næringsmessig nytte og kan gi urolig mage. Sukkerfrie produkter er ikke tryggere: de kan inneholde xylitol, som er giftig for hunder.",
+    "it": "No, è meglio non dare lo zucchero al tuo cane. Un po’ di zucchero non è tossico per i cani, ma non ha alcun beneficio nutrizionale e può causare mal di stomaco. I prodotti senza zucchero non sono più sicuri: possono contenere xilitolo, che è tossico per i cani.",
+    "de": "Nein, geben Sie Ihrem Hund besser keinen Zucker. Ein wenig Zucker ist für Hunde nicht giftig, hat aber keinen Nährwert und kann Magenbeschwerden verursachen. Zuckerfreie Produkte sind nicht sicherer: Sie können Xylit enthalten, das für Hunde giftig ist.",
+    "fr": "Non, mieux vaut ne pas donner de sucre à votre chien. Un peu de sucre n’est pas toxique pour les chiens, mais il n’a aucun intérêt nutritionnel et peut provoquer des troubles digestifs. Les produits sans sucre ne sont pas plus sûrs : ils peuvent contenir du xylitol, toxique pour les chiens.",
+    "pt": "Não, o melhor é não dar açúcar ao teu cão. Um pouco de açúcar não é tóxico para os cães, mas não traz benefício nutricional e pode causar indisposição de estômago. Os produtos sem açúcar não são mais seguros: podem conter xilitol, que é tóxico para os cães.",
+    "nl": "Nee, geef je hond liever geen suiker. Een beetje suiker is niet giftig voor honden, maar het heeft geen voedingswaarde en kan maagklachten veroorzaken. Suikervrije producten zijn niet veiliger: ze kunnen xylitol bevatten, dat giftig is voor honden.",
+    "pl": "Nie, lepiej nie dawać psu cukru. Odrobina cukru nie jest toksyczna dla psów, ale nie daje żadnych korzyści odżywczych i może rozstroić żołądek. Produkty bez cukru nie są bezpieczniejsze: mogą zawierać ksylitol, który jest toksyczny dla psów."
   },
   "why": {
     "en": "Sugar can cause stomach upset, including vomiting and diarrhoea. Sugary, high-fat foods can also lead to pancreatitis, a painful inflammation of the pancreas. Over time, sugary treats can contribute to obesity, and sugars can cause tooth decay.",
     "sl": "Sladkor lahko povzroči prebavne težave, tudi bruhanje in drisko. Sladka in mastna hrana lahko povzroči tudi pankreatitis, boleče vnetje trebušne slinavke. Sladki priboljški lahko sčasoma prispevajo k debelosti, sladkorji pa lahko povzročijo zobno gnilobo.",
-    "cs": "Cukr může způsobit podráždění žaludku, včetně zvracení a průjmu. Sladká a tučná jídla mohou také vést k zánětu slinivky břišní, bolestivému zánětu této žlázy. Sladké pamlsky časem přispívají k obezitě a cukry mohou způsobit zubní kaz."
+    "es": "El azúcar puede causar malestar de estómago, con vómitos y diarrea. Los alimentos azucarados y ricos en grasa también pueden provocar pancreatitis, una inflamación dolorosa del páncreas. Con el tiempo, los premios azucarados pueden contribuir a la obesidad, y los azúcares pueden causar caries.",
+    "cs": "Cukr může způsobit podráždění žaludku, včetně zvracení a průjmu. Sladká a tučná jídla mohou také vést k zánětu slinivky břišní, bolestivému zánětu této žlázy. Sladké pamlsky časem přispívají k obezitě a cukry mohou způsobit zubní kaz.",
+    "hr": "Šećer može izazvati želučane tegobe, uključujući povraćanje i proljev. Slatka hrana bogata mašću može dovesti i do upale gušterače, bolne upale te žlijezde. S vremenom slatke poslastice mogu pridonijeti pretilosti, a šećeri mogu uzrokovati karijes.",
+    "sv": "Socker kan orsaka magbesvär, bland annat kräkningar och diarré. Söt och fet mat kan också leda till bukspottkörtelinflammation (pankreatit), en smärtsam inflammation i bukspottkörteln. Med tiden kan söta godsaker bidra till fetma, och socker kan ge karies.",
+    "da": "Sukker kan give mavebesvær, herunder opkast og diarré. Sukkerholdig, fed mad kan også give betændelse i bugspytkirtlen, som er en smertefuld betændelse. Med tiden kan sukkerholdige godbidder bidrage til fedme, og sukker kan give huller i tænderne.",
+    "fi": "Sokeri voi aiheuttaa vatsavaivoja, myös oksentelua ja ripulia. Sokeriset, runsasrasvaiset ruoat voivat johtaa myös haimatulehdukseen, haiman kivuliaaseen tulehdukseen. Ajan myötä sokeriset herkut voivat edistää lihavuutta, ja sokerit voivat aiheuttaa hampaiden reikiintymistä.",
+    "nb": "Sukker kan gi urolig mage, blant annet oppkast og diaré. Sukkerholdig og fet mat kan også føre til betennelse i bukspyttkjertelen, som er smertefull. Over tid kan sukkerholdig godbit bidra til fedme, og sukker kan gi hull i tennene.",
+    "it": "Lo zucchero può causare mal di stomaco, compresi vomito e diarrea. I cibi zuccherati e ricchi di grassi possono anche portare alla pancreatite, una dolorosa infiammazione del pancreas. Con il tempo i dolcetti zuccherati possono contribuire all’obesità, e gli zuccheri possono causare carie.",
+    "de": "Zucker kann Magenbeschwerden mit Erbrechen und Durchfall verursachen. Zucker- und fettreiche Lebensmittel können außerdem zu einer Bauchspeicheldrüsenentzündung führen, einer schmerzhaften Entzündung der Bauchspeicheldrüse. Mit der Zeit können zuckerhaltige Leckereien zu Übergewicht beitragen, und Zucker kann Karies verursachen.",
+    "fr": "Le sucre peut provoquer des troubles digestifs, dont des vomissements et de la diarrhée. Les aliments sucrés et riches en graisses peuvent aussi entraîner une pancréatite, une inflammation douloureuse du pancréas. À la longue, les friandises sucrées peuvent favoriser l’obésité, et les sucres peuvent provoquer des caries.",
+    "pt": "O açúcar pode causar indisposição de estômago, incluindo vómitos e diarreia. Os alimentos açucarados e muito gordos também podem levar a pancreatite, uma inflamação dolorosa do pâncreas. Com o tempo, as guloseimas açucaradas podem contribuir para a obesidade, e os açúcares podem causar cáries.",
+    "nl": "Suiker kan maagklachten veroorzaken, waaronder braken en diarree. Suikerrijk, vet voedsel kan ook leiden tot alvleesklierontsteking, een pijnlijke ontsteking van de alvleesklier. Na verloop van tijd kunnen suikerrijke snoepjes bijdragen aan overgewicht, en suikers kunnen tandbederf veroorzaken.",
+    "pl": "Cukier może powodować rozstrój żołądka, w tym wymioty i biegunkę. Słodkie, tłuste jedzenie może też prowadzić do zapalenia trzustki, czyli bolesnego stanu zapalnego tego narządu. Z czasem słodkie smakołyki mogą przyczyniać się do otyłości, a cukry mogą powodować próchnicę."
   },
   "signs": {
     "en": [
@@ -38,46 +98,178 @@
       "Driska",
       "Slabši apetit, utrujenost ali bolečine v trebuhu (možen pankreatitis; znaki se lahko pokažejo šele po nekaj dneh)"
     ],
+    "es": [
+      "Vómitos",
+      "Diarrea",
+      "Poco apetito, falta de energía o dolor de barriga (posible pancreatitis; los síntomas pueden tardar unos días en aparecer)"
+    ],
     "cs": [
       "Zvracení",
       "Průjem",
       "Snížená chuť k jídlu, nízká energie nebo bolest břicha (možný zánět slinivky břišní; příznaky se mohou objevit až za několik dní)"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Slab apetit, bezvoljnost ili bol u trbuhu (moguća upala gušterače; znakovi se mogu pojaviti tek nakon nekoliko dana)"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Dålig aptit, låg energi eller ont i magen (möjlig bukspottkörtelinflammation; tecknen kan ta några dagar att visa sig)"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Dårlig appetit, lav energi eller mavesmerter (mulig betændelse i bugspytkirtlen; tegnene kan tage nogle dage om at vise sig)"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Ripuli",
+      "Heikko ruokahalu, väsymys tai vatsakipu (mahdollinen haimatulehdus; oireet voivat tulla näkyviin vasta muutaman päivän kuluttua)"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Dårlig matlyst, lite energi eller magesmerter (mulig betennelse i bukspyttkjertelen; symptomene kan komme først etter noen dager)"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Scarso appetito, poca energia o mal di pancia (possibile pancreatite; i sintomi possono impiegare qualche giorno a comparire)"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Appetitlosigkeit, wenig Energie oder Bauchschmerzen (mögliche Bauchspeicheldrüsenentzündung; die Anzeichen können sich erst nach einigen Tagen zeigen)"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Perte d’appétit, manque d’énergie ou douleurs au ventre (pancréatite possible ; les signes peuvent mettre quelques jours à apparaître)"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Falta de apetite, pouca energia ou dor de barriga (possível pancreatite; os sinais podem demorar alguns dias a aparecer)"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Weinig eetlust, weinig energie of buikpijn (mogelijk alvleesklierontsteking; de verschijnselen kunnen pas na een paar dagen komen)"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Brak apetytu, spadek energii lub ból brzucha (możliwe zapalenie trzustki; objawy mogą pojawić się dopiero po kilku dniach)"
     ]
   },
   "what_to_do": {
     "en": "Plain sugary sweets often cause mild stomach upset or no signs at all. If your dog ate a lot of sugary food, call your vet or a pet poison helpline right away, even if your dog seems fine. If it ate something sugar-free that may contain xylitol, call your vet immediately.",
     "sl": "Navadne sladkarije s sladkorjem pogosto povzročijo blage prebavne težave ali pa sploh nobenih znakov. Če je pes pojedel veliko sladke hrane, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se zdi, da je pes v redu. Če je pojedel kaj brez sladkorja, kar bi lahko vsebovalo ksilitol, nemudoma pokličite veterinarja.",
-    "cs": "Obyčejné sladkosti často způsobí jen mírné podráždění žaludku, nebo žádné příznaky. Pokud pes snědl hodně sladkého jídla, ihned zavolejte veterináři nebo na toxikologickou linku pro zvířata, i když se zdá být v pořádku. Pokud snědl něco bez cukru, co může obsahovat xylitol, okamžitě zavolejte veterináři."
+    "es": "Los dulces azucarados sencillos suelen causar solo un ligero malestar de estómago, o ningún síntoma. Si tu perro ha comido mucha comida azucarada, llama enseguida a tu veterinario o a una línea de información toxicológica para animales, aunque tu perro parezca estar bien. Si ha comido algo sin azúcar que pueda llevar xilitol, llama inmediatamente a tu veterinario.",
+    "cs": "Obyčejné sladkosti často způsobí jen mírné podráždění žaludku, nebo žádné příznaky. Pokud pes snědl hodně sladkého jídla, ihned zavolejte veterináři nebo na toxikologickou linku pro zvířata, i když se zdá být v pořádku. Pokud snědl něco bez cukru, co může obsahovat xylitol, okamžitě zavolejte veterináři.",
+    "hr": "Obični slatkiši često izazivaju samo blage želučane tegobe ili nikakve znakove. Ako je pas pojeo puno slatke hrane, odmah nazovi veterinara ili telefonsku liniju za otrovanja životinja, čak i ako izgleda dobro. Ako je pojeo nešto bez šećera što bi moglo sadržavati ksilitol, odmah nazovi veterinara.",
+    "sv": "Vanligt sockrigt godis ger ofta lindriga magbesvär eller inga tecken alls. Om din hund har ätit mycket sockrig mat ska du ringa din veterinär eller giftrådgivningen för djur direkt, även om hunden verkar frisk. Om den har ätit något sockerfritt som kan innehålla xylitol ska du kontakta din veterinär omedelbart.",
+    "da": "Almindeligt sukkerholdigt slik giver ofte kun let mavebesvær eller slet ingen tegn. Hvis din hund har spist meget sukkerholdig mad, skal du ringe til din dyrlæge eller en giftrådgivning for dyr med det samme, også selvom din hund virker upåvirket. Hvis den har spist noget sukkerfrit, som kan indeholde xylitol, skal du ringe til din dyrlæge med det samme.",
+    "fi": "Tavallinen sokerinen makeinen aiheuttaa usein vain lievän vatsavaivan tai ei oireita lainkaan. Jos koirasi söi paljon sokerista ruokaa, soita heti eläinlääkärille tai eläinten myrkytysneuvontaan, vaikka koirasi vaikuttaisi voivan hyvin. Jos se söi jotain sokeritonta, jossa voi olla ksylitolia, soita eläinlääkärille välittömästi.",
+    "nb": "Vanlig sukkerholdig godteri gir ofte lett urolig mage eller ingen symptomer i det hele tatt. Hvis hunden har spist mye sukkerholdig mat, ring dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden virker frisk. Hvis den har spist noe sukkerfritt som kan inneholde xylitol, ring dyrlegen umiddelbart.",
+    "it": "I dolciumi fatti solo di zucchero causano spesso un lieve mal di stomaco o nessun sintomo. Se il tuo cane ha mangiato molto cibo zuccherato, chiama subito il veterinario o un centro antiveleni veterinario, anche se sembra stare bene. Se ha mangiato qualcosa senza zucchero che può contenere xilitolo, chiama subito il veterinario.",
+    "de": "Einfache zuckerhaltige Süßigkeiten verursachen oft nur leichte Magenbeschwerden oder gar keine Anzeichen. Hat Ihr Hund viel Zuckerhaltiges gefressen, rufen Sie sofort Ihren Tierarzt oder einen Giftnotruf für Tiere an, auch wenn Ihr Hund gesund wirkt. Hat er etwas Zuckerfreies gefressen, das Xylit enthalten könnte, rufen Sie sofort Ihren Tierarzt an.",
+    "fr": "Les sucreries nature provoquent souvent de légers troubles digestifs, voire aucun signe. Si votre chien a mangé beaucoup d’aliments sucrés, appelez tout de suite votre vétérinaire ou un centre antipoison vétérinaire, même s’il semble aller bien. S’il a mangé un produit sans sucre pouvant contenir du xylitol, appelez immédiatement votre vétérinaire.",
+    "pt": "Os doces açucarados simples costumam causar uma ligeira indisposição de estômago ou nenhum sinal. Se o teu cão comeu muita comida açucarada, liga logo ao teu veterinário ou a uma linha de apoio toxicológico para animais, mesmo que pareça estar bem. Se comeu algo sem açúcar que possa conter xilitol, liga imediatamente ao teu veterinário.",
+    "nl": "Gewoon suikerrijk snoep veroorzaakt vaak milde maagklachten of helemaal geen verschijnselen. Heeft je hond veel suikerrijk voedsel gegeten, bel dan meteen je dierenarts of een vergiftigingenlijn voor dieren, ook als het goed lijkt te gaan met je hond. Heeft hij iets suikervrijs gegeten dat xylitol kan bevatten, bel dan meteen je dierenarts.",
+    "pl": "Słodycze z samym cukrem często wywołują tylko łagodny rozstrój żołądka albo nie dają żadnych objawów. Jeśli pies zjadł dużo słodkiego jedzenia, od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli wygląda na zdrowego. Jeśli zjadł coś „bez cukru”, co może zawierać ksylitol, natychmiast zadzwoń do weterynarza."
   },
   "serving": null,
   "child": {
     "en": "Sugar is a people treat. It can give dogs a tummy ache, so keep sweets for yourself and give your dog a dog treat.",
     "sl": "Sladkor je priboljšek za ljudi. Psa lahko zaboli trebušček, zato sladkarije obdrži zase, psu pa daj pasji priboljšek.",
-    "cs": "Cukr je pamlsek pro lidi. Psovi může rozbolet bříško, a tak sladkosti nech pro sebe a psovi dej psí pamlsek."
+    "es": "El azúcar es un capricho para las personas. Puede dar dolor de barriga a los perros, así que quédate los dulces y dale a tu perro un premio para perros.",
+    "cs": "Cukr je pamlsek pro lidi. Psovi může rozbolet bříško, a tak sladkosti nech pro sebe a psovi dej psí pamlsek.",
+    "hr": "Šećer je poslastica za ljude. Od njega psa može zaboljeti trbuščić, zato slatkiše zadrži za sebe, a psu daj poslasticu za pse.",
+    "sv": "Socker är en godbit för människor. Det kan ge hundar ont i magen, så behåll godiset själv och ge din hund en godbit för hundar.",
+    "da": "Sukker er en godbid for mennesker. Det kan give hunde ondt i maven, så behold slikket selv, og giv din hund en hundegodbid.",
+    "fi": "Sokeri on ihmisten herkkua. Se voi tehdä koiran vatsan kipeäksi, joten pidä makeiset itselläsi ja anna koirallesi koiranherkku.",
+    "nb": "Sukker er en godbit for mennesker. Det kan gi hunder vondt i magen, så spis godteriet selv og gi hunden en hundegodbit.",
+    "it": "Lo zucchero è per le persone. Può far venire il mal di pancia ai cani, quindi tieni i dolci per te e dai al tuo cane un premietto per cani.",
+    "de": "Zucker ist eine Leckerei für Menschen. Davon kann ein Hund Bauchweh bekommen, also behalte Süßes für dich und gib deinem Hund ein Hundeleckerli.",
+    "fr": "Le sucre est une friandise pour les humains. Il peut donner mal au ventre aux chiens : garde les sucreries pour toi et offre-lui une friandise pour chiens.",
+    "pt": "O açúcar é uma guloseima para as pessoas. Pode dar dor de barriga aos cães, por isso guarda os doces para ti e dá-lhe uma guloseima própria para cães.",
+    "nl": "Suiker is een lekkernij voor mensen. Honden kunnen er buikpijn van krijgen, dus bewaar snoep voor jezelf en geef je hond een hondensnoepje.",
+    "pl": "Cukier to przysmak dla ludzi. Może sprawić, że psu zaboli brzuszek, więc słodycze zostaw dla siebie, a psu daj smakołyk dla psów."
   },
   "faq": [
     {
       "q": {
         "en": "Will a little bit of sugar hurt my dog?",
         "sl": "Ali bo malo sladkorja psu škodilo?",
-        "cs": "Uškodí mému psovi trocha cukru?"
+        "es": "¿Le hará daño a mi perro un poquito de azúcar?",
+        "cs": "Uškodí mému psovi trocha cukru?",
+        "hr": "Hoće li malo šećera naškoditi mom psu?",
+        "sv": "Skadar lite socker min hund?",
+        "da": "Skader lidt sukker min hund?",
+        "fi": "Vahingoittaako vähän sokeria koiraani?",
+        "nb": "Skader litt sukker hunden min?",
+        "it": "Un po’ di zucchero fa male al mio cane?",
+        "de": "Schadet ein bisschen Zucker meinem Hund?",
+        "fr": "Un peu de sucre peut-il faire du mal à mon chien ?",
+        "pt": "Um bocadinho de açúcar faz mal ao meu cão?",
+        "nl": "Is een beetje suiker slecht voor mijn hond?",
+        "pl": "Czy odrobina cukru zaszkodzi mojemu psu?"
       },
       "a": {
         "en": "A little sugar isn't toxic to dogs, but it can cause stomach upset and offers no nutritional benefit.",
         "sl": "Malo sladkorja za pse ni strupeno, vendar lahko povzroči prebavne težave in psu ne koristi.",
-        "cs": "Trocha cukru pro psy není jedovatá, ale může způsobit podráždění žaludku a nemá žádnou výživovou hodnotu."
+        "es": "Un poco de azúcar no es tóxico para los perros, pero puede sentar mal al estómago y no aporta ningún beneficio nutricional.",
+        "cs": "Trocha cukru pro psy není jedovatá, ale může způsobit podráždění žaludku a nemá žádnou výživovou hodnotu.",
+        "hr": "Malo šećera nije otrovno za pse, ali može izazvati želučane tegobe i ne donosi nikakvu hranjivu korist.",
+        "sv": "Lite socker är inte giftigt för hundar, men det kan orsaka magbesvär och ger inget näringsvärde.",
+        "da": "Lidt sukker er ikke giftigt for hunde, men det kan give mavebesvær og giver ingen næringsmæssig fordel.",
+        "fi": "Vähän sokeria ei ole koirille myrkyllistä, mutta se voi aiheuttaa vatsavaivoja eikä siitä ole ravitsemuksellista hyötyä.",
+        "nb": "Litt sukker er ikke giftig for hunder, men det kan gi urolig mage og gir ingen næringsmessig nytte.",
+        "it": "Un po’ di zucchero non è tossico per i cani, ma può causare mal di stomaco e non ha alcun beneficio nutrizionale.",
+        "de": "Ein wenig Zucker ist für Hunde nicht giftig, kann aber Magenbeschwerden verursachen und hat keinen Nährwert.",
+        "fr": "Un peu de sucre n’est pas toxique pour les chiens, mais il peut provoquer des troubles digestifs et n’a aucun intérêt nutritionnel.",
+        "pt": "Um pouco de açúcar não é tóxico para os cães, mas pode causar indisposição de estômago e não traz benefício nutricional.",
+        "nl": "Een beetje suiker is niet giftig voor honden, maar het kan maagklachten veroorzaken en heeft geen voedingswaarde.",
+        "pl": "Odrobina cukru nie jest toksyczna dla psów, ale może rozstroić żołądek i nie daje żadnych korzyści odżywczych."
       }
     },
     {
       "q": {
         "en": "Are sugar-free sweets safer for dogs?",
         "sl": "Ali so sladkarije brez sladkorja za pse varnejše?",
-        "cs": "Jsou sladkosti bez cukru pro psy bezpečnější?"
+        "es": "¿Son más seguros para los perros los dulces sin azúcar?",
+        "cs": "Jsou sladkosti bez cukru pro psy bezpečnější?",
+        "hr": "Jesu li slatkiši bez šećera sigurniji za pse?",
+        "sv": "Är sockerfritt godis säkrare för hundar?",
+        "da": "Er sukkerfrit slik sikrere for hunde?",
+        "fi": "Ovatko sokerittomat makeiset turvallisempia koirille?",
+        "nb": "Er sukkerfritt godteri tryggere for hunder?",
+        "it": "I dolci senza zucchero sono più sicuri per i cani?",
+        "de": "Sind zuckerfreie Süßigkeiten für Hunde sicherer?",
+        "fr": "Les sucreries sans sucre sont-elles plus sûres pour les chiens ?",
+        "pt": "Os doces sem açúcar são mais seguros para os cães?",
+        "nl": "Is suikervrij snoep veiliger voor honden?",
+        "pl": "Czy słodycze bez cukru są dla psów bezpieczniejsze?"
       },
       "a": {
         "en": "No. Sugar-free products often contain xylitol, which is toxic to dogs. Check the label; xylitol may also be listed as birch sugar.",
         "sl": "Ne. Izdelki brez sladkorja pogosto vsebujejo ksilitol, ki je za pse strupen. Preberite deklaracijo; ksilitol je lahko naveden tudi kot brezov sladkor.",
-        "cs": "Ne. Výrobky bez cukru často obsahují xylitol, který je pro psy jedovatý. Zkontrolujte složení; xylitol může být uveden také jako březový cukr."
+        "es": "No. Los productos sin azúcar suelen llevar xilitol, que es tóxico para los perros. Mira la etiqueta; el xilitol también puede aparecer como azúcar de abedul.",
+        "cs": "Ne. Výrobky bez cukru často obsahují xylitol, který je pro psy jedovatý. Zkontrolujte složení; xylitol může být uveden také jako březový cukr.",
+        "hr": "Ne. Proizvodi bez šećera često sadrže ksilitol, koji je otrovan za pse. Provjeri deklaraciju; ksilitol može biti naveden i kao brezov šećer.",
+        "sv": "Nej. Sockerfria produkter innehåller ofta xylitol, som är giftigt för hundar. Kontrollera innehållsförteckningen; xylitol kan också stå som björksocker.",
+        "da": "Nej. Sukkerfri produkter indeholder ofte xylitol, som er giftigt for hunde. Tjek varedeklarationen; xylitol kan også stå som birkesukker.",
+        "fi": "Eivät. Sokerittomissa tuotteissa on usein ksylitolia, joka on koirille myrkyllistä. Tarkista pakkausmerkinnät; ksylitoli voi olla merkitty myös koivusokeriksi.",
+        "nb": "Nei. Sukkerfrie produkter inneholder ofte xylitol, som er giftig for hunder. Sjekk ingredienslisten; xylitol kan også stå oppført som bjørkesukker.",
+        "it": "No. I prodotti senza zucchero contengono spesso xilitolo, tossico per i cani. Controlla l’etichetta; lo xilitolo può comparire anche come zucchero di betulla.",
+        "de": "Nein. Zuckerfreie Produkte enthalten oft Xylit, das für Hunde giftig ist. Prüfen Sie das Etikett. Xylit kann auch als Birkenzucker angegeben sein.",
+        "fr": "Non. Les produits sans sucre contiennent souvent du xylitol, toxique pour les chiens. Vérifiez l’étiquette ; le xylitol peut aussi figurer sous le nom de sucre de bouleau.",
+        "pt": "Não. Os produtos sem açúcar contêm muitas vezes xilitol, que é tóxico para os cães. Verifica o rótulo; o xilitol também pode aparecer como açúcar de bétula.",
+        "nl": "Nee. Suikervrije producten bevatten vaak xylitol, dat giftig is voor honden. Controleer het etiket; xylitol kan ook als berkensuiker worden vermeld.",
+        "pl": "Nie. Produkty bez cukru często zawierają ksylitol, który jest toksyczny dla psów. Sprawdź etykietę; ksylitol może być też podany jako cukier brzozowy."
       }
     }
   ],
@@ -160,10 +352,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "376a349ee76d7ebd0d2c2824d99d9614c95d88122d3b750e81924b992e389b45"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "66d03f53c8a6bf665595766e672505ed5e5aa9424d2559bac3dcb32826e5f953"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e22db65945c40591adc50d8e0d6fa870a16c7feb1193ab071e03b51e0efdbad0"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c728ed5a6691fc00d311e5360aa3de4b316a17b0ba129da9993b837de539d56e"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0ff062d3d6adde11575063e7b0b8ee610d2cbd9f6061fe385ec060af9d9c780f"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2d6f7852a2252ddfaa2bf731e65d5d7e706ea643e160daf506e2cf0cd550c6b2"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "551562ecc8bedb2594f3610ec171434ce45ecd55d08ad68434ce736ce2c08d7f"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2d42b4eb16052c0d4ca48e28722b2472bdbf68ab509c88df9ebd14c18b5fa39a"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b2944eebf4ded801c40fd0eb6513fd24fd1440e9440e01d2849eeda0c71ddc60"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8818a3798464739b017bc3cbb9dc18fde47a4bccff13f4e02b2c5fa50b886e8e"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b5bb309496947b43f766bac22a38fa9b9847e72805b6d0faf521c3338a35b0fc"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f92cc170ce441cca379fbba9b6e4b84a36db743669fac320f21b7495b9d2bfbe"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ffd0d6e5c92b3e7c357752be8901b1dbdbed7a548721d458a3042cd1fb103360"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "2211a51fd8043b2c5c5c7eb65423938c9cce6236f80a44b72d58b588b4260a32"
     }
   }
 }

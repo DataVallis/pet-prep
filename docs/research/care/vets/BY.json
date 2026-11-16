@@ -1,0 +1,219 @@
+{
+  "country": "BY",
+  "checked": "2026-11-15",
+  "sources": [
+    {
+      "name": "Doctor Vet - own website",
+      "url": "https://dv.by/",
+      "note": "Opened (home + both branch contact pages): 24 h at Podshipnikovy 9 and Skripnikova 39."
+    },
+    {
+      "name": "SQ-lap - own website",
+      "url": "https://vetcentr.by/",
+      "note": "Opened: 24 h, Filimonova 25G."
+    },
+    {
+      "name": "Dr. Bazylevsky Veterinary Centre Minsk - own website",
+      "url": "https://minsk.vet-centre.by/",
+      "note": "Opened: three Minsk branches."
+    },
+    {
+      "name": "Alfa-Vet - own website",
+      "url": "https://alfavet.by/",
+      "note": "Opened: three Minsk branches, one 24 h."
+    },
+    {
+      "name": "9 Zhiznei - own website",
+      "url": "https://9vet.by/main/24-7",
+      "note": "Opened: 24/7 clinic, Serova 4a."
+    },
+    {
+      "name": "Zerkalo - Minsk state vet clinics plan",
+      "url": "https://news.zerkalo.io/life/117397.html",
+      "note": "Opened: Minsk City Veterinary Station plans two clinics, one at Pobediteley Ave. 155 with round-the-clock reception, expected end of 2026; not open yet, no entry."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "SQ-lap veterinary clinic (Antistress)",
+      "city": "Minsk",
+      "region": "Minsk",
+      "address": "Filimonova St. 25G, Minsk",
+      "phone": "+375 17 369 67 68",
+      "emergency_24h": true,
+      "duty": "Open round the clock. Also +375 29 392 80 81.",
+      "small_animals": true,
+      "url": "https://vetcentr.by/",
+      "source_url": "https://vetcentr.by/",
+      "checked": "2026-11-15",
+      "note": "Own page opened: 'Режим работы: КРУГЛОСУТОЧНО'. Treats exotics too.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę. Dodatkowy numer: +375 29 392 80 81."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Doctor Vet (Podshipnikovy proezd)",
+      "city": "Minsk",
+      "region": "Minsk",
+      "address": "Podshipnikovy proezd 9, Minsk",
+      "phone": "+375 17 388 28 28",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, every day. Walk-in doctors 09:00-19:00; after 21:00 an on-duty doctor at the night tariff.",
+      "small_animals": true,
+      "url": "https://dv.by/",
+      "source_url": "https://dv.by/clinic-1/contact/",
+      "checked": "2026-11-15",
+      "note": "Own page opened: 'Круглосуточно без выходных'. Other numbers: +375 29 1 602 602, +375 29 8 602 602, +375 25 6 602 602, short 7031.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę, codziennie. Lekarze bez umawiania 09:00–19:00; po 21:00 lekarz dyżurny w taryfie nocnej."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Doctor Vet (Skripnikova)",
+      "city": "Minsk",
+      "region": "Minsk",
+      "address": "Skripnikova St. 39, Minsk",
+      "phone": "+375 17 388 28 28",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, every day. Walk-in doctors 09:00-19:00; after 21:00 an on-duty doctor at the night tariff.",
+      "small_animals": true,
+      "url": "https://dv.by/",
+      "source_url": "https://dv.by/clinic-2/contact/",
+      "checked": "2026-11-15",
+      "note": "Own page opened: open 24 h every day. News item: closed from 21:00 on 28.10-03.11.2026 (past). Same phones as the other branch.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę, codziennie. Lekarze bez umawiania 09:00–19:00; po 21:00 lekarz dyżurny w taryfie nocnej."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Dr. Bazylevsky Veterinary Centre - Zheleznodorozhnaya",
+      "city": "Minsk",
+      "region": "Minsk",
+      "address": "Zheleznodorozhnaya St. 31/1, Minsk",
+      "phone": "+375 29 326 30 00",
+      "emergency_24h": false,
+      "duty": "Contact the clinic for current opening hours.",
+      "small_animals": true,
+      "url": "https://minsk.vet-centre.by/",
+      "source_url": "https://minsk.vet-centre.by/",
+      "checked": "2026-11-15",
+      "note": "Own page opened: one listing says round-the-clock, another 9:00-21:00 for this address, and branch name to address mapping is not explicit; so 24 h not confirmed. Second number +375 33 326 30 00.",
+      "duty_i18n": {
+        "pl": "Skontaktuj się z przychodnią, by poznać aktualne godziny."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Dr. Bazylevsky Veterinary Centre - Melnikayte",
+      "city": "Minsk",
+      "region": "Minsk",
+      "address": "Melnikayte St. 8A, Minsk",
+      "phone": "+375 29 627 40 00",
+      "emergency_24h": false,
+      "duty": "Contact the clinic for current opening hours.",
+      "small_animals": true,
+      "url": "https://minsk.vet-centre.by/",
+      "source_url": "https://minsk.vet-centre.by/",
+      "checked": "2026-11-15",
+      "note": "Own page opened: hours given as 24 h in one place, but news says branch is 'moving to' round-the-clock; ambiguous, so false. Also +375 33 627 40 00.",
+      "duty_i18n": {
+        "pl": "Skontaktuj się z przychodnią, by poznać aktualne godziny."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Dr. Bazylevsky Veterinary Centre - Serebryanka",
+      "city": "Minsk",
+      "region": "Minsk",
+      "address": "Yakubova St. 2/2, Minsk",
+      "phone": "+375 33 696 04 04",
+      "emergency_24h": false,
+      "duty": "Open daily 09:00-21:00.",
+      "small_animals": true,
+      "url": "https://minsk.vet-centre.by/",
+      "source_url": "https://minsk.vet-centre.by/",
+      "checked": "2026-11-15",
+      "note": "Own page opened.",
+      "duty_i18n": {
+        "pl": "Czynne codziennie 09:00–21:00."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Alfa-Vet (Nezavisimosti)",
+      "city": "Minsk",
+      "region": "Minsk",
+      "address": "Nezavisimosti Ave. 177, Minsk",
+      "phone": "+375 17 388 11 99",
+      "emergency_24h": true,
+      "duty": "Open 24 hours; break on Wednesdays 11:00-14:00.",
+      "small_animals": true,
+      "url": "https://alfavet.by/",
+      "source_url": "https://alfavet.by/",
+      "checked": "2026-11-15",
+      "note": "Own page opened: 'Режим работы: круглосуточно'. Mobile +375 29 7 521 521; page is inconsistent on operator names.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę; przerwa w środy 11:00–14:00."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Alfa-Vet (Akademicheskaya)",
+      "city": "Minsk",
+      "region": "Minsk",
+      "address": "Akademicheskaya St. 26, Minsk",
+      "phone": "+375 17 388 11 99",
+      "emergency_24h": false,
+      "duty": "Open daily 09:00-21:00; break on Wednesdays 11:00-14:00.",
+      "small_animals": true,
+      "url": "https://alfavet.by/",
+      "source_url": "https://alfavet.by/",
+      "checked": "2026-11-15",
+      "note": "Own page opened.",
+      "duty_i18n": {
+        "pl": "Czynne codziennie 09:00–21:00; przerwa w środy 11:00–14:00."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Alfa-Vet (Kizhevatova)",
+      "city": "Minsk",
+      "region": "Minsk",
+      "address": "Kizhevatova St. 8, Minsk",
+      "phone": "+375 17 388 11 99",
+      "emergency_24h": false,
+      "duty": "Open daily 09:00-21:00; break on Wednesdays 11:00-14:00.",
+      "small_animals": true,
+      "url": "https://alfavet.by/",
+      "source_url": "https://alfavet.by/",
+      "checked": "2026-11-15",
+      "note": "Own page opened; branch described as new.",
+      "duty_i18n": {
+        "pl": "Czynne codziennie 09:00–21:00; przerwa w środy 11:00–14:00."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "9 Zhiznei (Nine Lives) veterinary clinic",
+      "city": "Minsk",
+      "region": "Minsk",
+      "address": "Serova St. 4a, Minsk",
+      "phone": "+375 29 141 09 09",
+      "emergency_24h": true,
+      "duty": "Open round the clock, every day; not every specialist is on duty at night - call first.",
+      "small_animals": true,
+      "url": "https://9vet.by/",
+      "source_url": "https://9vet.by/main/24-7",
+      "checked": "2026-11-15",
+      "note": "Own page opened: 'круглосуточно, ежедневно'. Night line +375 44 583 73 63.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę, codziennie; nie każdy specjalista jest w nocy na dyżurze, więc zadzwoń wcześniej."
+      }
+    }
+  ],
+  "notes": "Independent check 2026-11-15: removed entries whose only source was an aggregator or directory listing (Minsk City Veterinary Station, Gomel City Veterinary Station, PoliVet Gomel, Grodno City Veterinary Station, Azbukavet Grodno, Mogilev City Veterinary Station); Azbukavet 24 h claim was only on the veterinar.by card and its own site was not opened. Zheleznodorozhnaya branch of Bazylevsky downgraded (contradictory hours on page). No official duty-rota page and no animal poison line page found. Regions outside Minsk have no entries (Brest, Vitebsk, Gomel, Grodno, Mogilev: no own clinic page opened). Planned Minsk City Vet Station 24 h clinic at Pobediteley 155 not yet open."
+}

@@ -45,6 +45,8 @@ return [
         'system' => 'System',
         'partner_inquiries' => 'Partner inquiries',
         'partner_inquiry_model' => 'partner inquiry',
+        'summary_leads' => 'Parent e-mails (website)',
+        'summary_lead_model' => 'parent e-mail',
     ],
 
     'dashboard' => [
@@ -695,6 +697,17 @@ return [
             'title' => 'Still check: :count key image(s) rejected after every automatic retry',
             'body' => 'A state key image failed the AI still check (extra / ghost paws, a second animal, people, text …) also after its automatic regenerations with new seeds. It was not used — the pet keeps what it shows, that state gets no new loop yet. Optional: Pets → AI media → open the candidate → »Approve anyway« or Regenerate. Pose images (activities: simple mode) and item pictures (shown without content) are reported by their own alerts.',
         ],
+    ],
+    'summary_leads' => [
+        'email' => 'E-mail',
+        'breed' => 'Breed',
+        'stage' => 'Dog / puppy',
+        'locale' => 'Language',
+        'visits' => 'Times left',
+        'first_seen' => 'First left',
+        'last_seen' => 'Last left',
+        'consent' => 'Consent version',
+        'retention_note' => 'Parents who left an e-mail with consent to PetPrep news on the page »How much work is a dog«. One row per e-mail. Nothing is deleted automatically: delete a row only when a parent asks (and when they unsubscribe in Klaviyo). No IP address is stored and the server sends nothing. Partners get numbers only, never the addresses.',
     ],
     'partner_inquiries' => [
         'discord' => [

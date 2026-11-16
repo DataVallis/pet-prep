@@ -35,7 +35,20 @@ class RegisterDeviceRequest extends FormRequest
             // M1-18: the app's language for pushes (en | sl, config/locales.php).
             // Never derived from Accept-Language: iOS adds that header on its own.
             'locale' => ['sometimes', 'nullable', 'string', Rule::in(RequestLocale::supported())],
+            // David 2026-11-16: does THIS phone use the 12 h clock (its own system setting)?
+            // What `users.time_format = auto` means for this install's pushes; not sent → kept.
+            'hour12' => ['sometimes', 'nullable', 'boolean'],
         ];
+    }
+
+    /**
+     * The phone's own 12 h setting, or null when not sent (the stored value is kept).
+     */
+    public function deviceHour12(): ?bool
+    {
+        $value = $this->validated('hour12');
+
+        return $value === null ? null : (bool) $value;
     }
 
     /**

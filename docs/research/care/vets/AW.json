@@ -1,0 +1,42 @@
+{
+  "country": "AW",
+  "checked": "2026-11-16",
+  "sources": [
+    {"name": "VSH Veterinary Specialty Hospital Aruba", "url": "https://vsharuba.com/", "note": "Clinic's own site; opened. Contact and urgent-care subpages were refused by WebFetch."},
+    {"name": "Animal Health Veterinary Hospital", "url": "https://www.animalhealtharuba.com/contact", "note": "Clinic's own site; contact page and home page opened."},
+    {"name": "Government of Aruba - DVG Veterinary Services (VET)", "url": "https://gobierno.aw/en/department-of-public-health-dvg-veterinary-services-vet", "note": "Official; government veterinary service (import/export, abattoir). Lists no private vets, no hours, no emergency arrangements."}
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "VSH Veterinary Specialty Hospital Aruba",
+      "city": "Oranjestad",
+      "region": "Aruba",
+      "address": "9 Caya Ernesto Petronia 88, Ponton, Oranjestad, Aruba",
+      "phone": "+297 583 4400",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:00-18:00, Sat 9:00-13:00, Sun closed. Emergency care outside regular hours; call or WhatsApp +297 699 0077.",
+      "small_animals": true,
+      "url": "https://vsharuba.com/",
+      "source_url": "https://vsharuba.com/",
+      "note": "Re-verified 2026-11-16: page shows '24/7 Emergency' in header/feature tags, but the Hours section only says emergencies are 'Available outside regular hours' (ambiguous, not explicit round-the-clock), so emergency_24h set to false; phone confirmation advisable. WhatsApp +297 699 0077.",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Health Veterinary Hospital",
+      "city": "Oranjestad",
+      "region": "Aruba",
+      "address": "Caya J.E.M. Arends 20, Oranjestad, Aruba",
+      "phone": "+297 586 3592",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 8:00-18:00, Sun closed. Emergencies and appointments via WhatsApp +297 562 2710.",
+      "small_animals": true,
+      "url": "https://www.animalhealtharuba.com/",
+      "source_url": "https://www.animalhealtharuba.com/contact",
+      "note": "Contact page meta says 'For Emergency and Appointment Whatsapp: +297 5622710'; no 24-hour claim on opened pages.",
+      "checked": "2026-11-16"
+    }
+  ],
+  "notes": "Only two clinics could be verified on opened pages. Unreachable/refused: vsharuba.com/contact and /service-page/urgent-care (client_error), acc-aruba.com mirror on madurologisticsaruba.com (robots), acc-aruba.com/acc-aruba/ANIMAL_CARE_CLINIC.html (empty content), Facebook pages for Animal Care Clinic (Paradera 177 A) and VSH (robots). Animal Care Clinic Aruba and Veterinaire Kliniek Wayaca (128 Wayaca, Oranjestad, seen only on an aggregator without contact data) exist per search but were not verifiable, so omitted. Government Veterinary Service (DVG VET, Barcadera 1, Oranjestad, +297 585 0400, vetservice@dvg.aw) is a regulatory service, not a clinic, so not an entry. No duty rota or animal poison line found for Aruba."
+}

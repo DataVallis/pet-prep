@@ -3,47 +3,177 @@
   "species": "cat",
   "name": {
     "en": "Broth and stock",
-    "sl": "Mesna juha in osnova"
+    "sl": "Mesna juha in osnova",
+    "hr": "Juha i temeljac",
+    "sv": "Buljong och fond",
+    "da": "Bouillon og fond",
+    "fi": "Liemi",
+    "nb": "Buljong og kraft",
+    "it": "Brodo",
+    "de": "Brühe und Fond",
+    "fr": "Bouillon",
+    "es": "Caldo",
+    "pt": "Caldo",
+    "nl": "Bouillon en fond",
+    "pl": "Bulion i wywar",
+    "cs": "Vývar a bujónové kostky"
   },
   "question": {
     "en": "Can cats have broth?",
-    "sl": "Ali lahko mačke jedo mesno juho?"
+    "sl": "Ali lahko mačke jedo mesno juho?",
+    "hr": "Smiju li mačke jesti juhu?",
+    "sv": "Får katter dricka buljong?",
+    "da": "Må katte få bouillon?",
+    "fi": "Saako kissa juoda lientä?",
+    "nb": "Kan katter få buljong?",
+    "it": "I gatti possono bere il brodo?",
+    "de": "Dürfen Katzen Brühe bekommen?",
+    "fr": "Les chats peuvent-ils avoir du bouillon ?",
+    "es": "¿Pueden los gatos tomar caldo?",
+    "pt": "Os gatos podem tomar caldo?",
+    "nl": "Mogen katten bouillon krijgen?",
+    "pl": "Czy koty mogą pić bulion?",
+    "cs": "Mohou kočky dostat vývar?"
   },
   "url_slug": {
     "en": "broth",
-    "sl": "mesna-juha"
+    "sl": "mesna-juha",
+    "hr": "juha-i-temeljac",
+    "sv": "buljong",
+    "da": "bouillon",
+    "fi": "liemi",
+    "nb": "buljong-og-kraft",
+    "it": "brodo",
+    "de": "bruehe",
+    "fr": "bouillon",
+    "es": "caldo",
+    "pt": "caldo",
+    "nl": "bouillon",
+    "pl": "bulion",
+    "cs": "vyvar"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain broth is fine. Vets suggest a small amount of low-sodium chicken broth with no added spices to flavour a cat's water. Broth or stock cubes made for people can be very salty and may contain onion or garlic, which are toxic to cats.",
-    "sl": "Da, malo navadne mesne juhe je v redu. Veterinarji predlagajo majhno količino piščančje juhe z malo soli in brez dodanih začimb, s katero mački izboljšate okus vode. Juha ali jušne kocke za ljudi so lahko zelo slane in lahko vsebujejo čebulo ali česen, ki sta za mačke strupena."
+    "sl": "Da, malo navadne mesne juhe je v redu. Veterinarji predlagajo majhno količino piščančje juhe z malo soli in brez dodanih začimb, s katero mački izboljšate okus vode. Juha ali jušne kocke za ljudi so lahko zelo slane in lahko vsebujejo čebulo ali česen, ki sta za mačke strupena.",
+    "hr": "Da, malo obične juhe u redu je. Veterinari predlažu malu količinu pileće juhe s malo soli i bez dodanih začina kojom se može dati okus mačjoj vodi. Kocke za juhu i temeljac namijenjene ljudima mogu biti vrlo slane i sadržavati luk ili češnjak, koji su otrovni za mačke.",
+    "sv": "Ja, lite okryddad buljong går bra. Veterinärer föreslår en liten mängd natriumfattig kycklingbuljong utan tillsatta kryddor för att ge kattens vatten smak. Buljong och buljongtärningar för människor kan vara mycket salta och kan innehålla lök eller vitlök, som är giftigt för katter.",
+    "da": "Ja, lidt almindelig bouillon er fint. Dyrlæger foreslår en lille smule natriumfattig hønsebouillon uden tilsatte krydderier, så kattens vand får smag. Bouillon- og fondterninger, der er lavet til mennesker, kan være meget salte og kan indeholde løg eller hvidløg, som er giftige for katte.",
+    "fi": "Saa, vähän maustamatonta lientä sopii. Eläinlääkärit ehdottavat pientä määrää vähäsuolaista, ilman mausteita tehtyä kanalientä kissan juomaveden maustamiseen. Ihmisille tarkoitetut liemet tai liemikuutiot voivat olla hyvin suolaisia, ja niissä voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä.",
+    "nb": "Ja, litt naturell buljong er greit. Dyrleger foreslår en liten mengde natriumfattig kyllingbuljong uten tilsatt krydder for å gi kattens vann litt smak. Buljong- og kraftterninger til mennesker kan være veldig salte og kan inneholde løk eller hvitløk, som er giftig for katter.",
+    "it": "Sì, un po’ di brodo semplice va bene. I veterinari suggeriscono una piccola quantità di brodo di pollo a basso contenuto di sodio, senza spezie aggiunte, per insaporire l’acqua del gatto. Il brodo o i dadi da brodo per le persone possono essere molto salati e contenere cipolla o aglio, che sono tossici per i gatti.",
+    "de": "Ja, ein wenig ungewürzte Brühe ist in Ordnung. Tierärzte empfehlen eine kleine Menge salzarme Hühnerbrühe ohne zugesetzte Gewürze, um Katzen das Wasser schmackhaft zu machen. Brühwürfel und Fertigbrühen für Menschen können sehr salzig sein und Zwiebel oder Knoblauch enthalten, die für Katzen giftig sind.",
+    "fr": "Oui, un peu de bouillon nature ne pose pas de problème. Les vétérinaires suggèrent une petite quantité de bouillon de poulet pauvre en sel, sans épices ajoutées, pour parfumer l’eau du chat. Les bouillons et les cubes de bouillon pour humains peuvent être très salés et contenir de l’oignon ou de l’ail, toxiques pour les chats.",
+    "es": "Sí, un poco de caldo natural está bien. Los veterinarios sugieren una pequeña cantidad de caldo de pollo bajo en sal y sin especias añadidas para dar sabor al agua del gato. Los caldos o las pastillas de caldo para personas pueden ser muy salados y llevar cebolla o ajo, que son tóxicos para los gatos.",
+    "pt": "Sim, um pouco de caldo simples não faz mal. Os veterinários sugerem uma pequena quantidade de caldo de galinha com pouco sal e sem temperos para dar sabor à água do gato. Os caldos e os cubos de caldo feitos para pessoas podem ser muito salgados e conter cebola ou alho, que são tóxicos para os gatos.",
+    "nl": "Ja, een beetje gewone bouillon is prima. Dierenartsen raden aan om het water van je kat wat smaak te geven met een klein beetje zoutarme kippenbouillon zonder toegevoegde kruiden. Bouillon en bouillonblokjes voor mensen kunnen erg zout zijn en bevatten soms ui of knoflook, en die zijn giftig voor katten.",
+    "pl": "Tak, odrobina bulionu bez dodatków nie zaszkodzi. Weterynarze radzą dodać do kociej wody odrobinę bulionu drobiowego o niskiej zawartości sodu, bez żadnych przypraw, żeby nadać jej smak. Bulion albo kostki rosołowe przeznaczone dla ludzi bywają bardzo słone i mogą zawierać cebulę lub czosnek, które są dla kotów toksyczne.",
+    "cs": "Ano, trocha obyčejného vývaru nevadí. Veterináři radí do kočičí vody přidat jen trochu kuřecího vývaru s nízkým obsahem soli a bez koření. Vývary a bujónové kostky pro lidi mohou být hodně slané a mohou obsahovat cibuli nebo česnek, které jsou pro kočky jedovaté."
   },
   "why": {
     "en": "The Cornell Feline Health Center says that flavouring the water with a small amount of low sodium chicken broth can prompt a cat to drink more, and VCA suggests low-sodium chicken broth with no additional spices. Bouillon cubes used for making stocks contain high amounts of sodium. Onion and garlic, found in many pre-made foods, are toxic to cats even when cooked or dried. Tufts vets advise looking closely at the ingredients list of commercial broths.",
-    "sl": "Cornell Feline Health Center navaja, da lahko majhna količina piščančje juhe z malo natrija v vodi mačko spodbudi, da pije več, VCA pa predlaga piščančjo juho z malo natrija in brez dodanih začimb. Jušne kocke, ki se uporabljajo za pripravo osnov, vsebujejo veliko natrija. Čebula in česen, ki ju najdemo v številnih že pripravljenih jedeh, sta za mačke strupena tudi kuhana ali posušena. Veterinarji z univerze Tufts svetujejo, da natančno preberete seznam sestavin kupljenih juh."
+    "sl": "Cornell Feline Health Center navaja, da lahko majhna količina piščančje juhe z malo natrija v vodi mačko spodbudi, da pije več, VCA pa predlaga piščančjo juho z malo natrija in brez dodanih začimb. Jušne kocke, ki se uporabljajo za pripravo osnov, vsebujejo veliko natrija. Čebula in česen, ki ju najdemo v številnih že pripravljenih jedeh, sta za mačke strupena tudi kuhana ali posušena. Veterinarji z univerze Tufts svetujejo, da natančno preberete seznam sestavin kupljenih juh.",
+    "hr": "Cornell Feline Health Center navodi da malo pileće juhe s malo natrija u vodi može potaknuti mačku da pije više, a VCA preporučuje pileću juhu s malo natrija i bez dodatnih začina. Kocke za temeljac sadrže mnogo natrija. Luk i češnjak, koji se nalaze u mnogim gotovim jelima, otrovni su za mačke čak i kad su kuhani ili sušeni. Veterinari sa Sveučilišta Tufts savjetuju da pažljivo pročitaš popis sastojaka gotovih juha.",
+    "sv": "Cornell Feline Health Center säger att en liten mängd natriumfattig kycklingbuljong i vattnet kan få en katt att dricka mer, och VCA föreslår natriumfattig kycklingbuljong utan tillsatta kryddor. Buljongtärningar som används för att göra fond innehåller mycket natrium. Lök och vitlök, som finns i många färdiglagade livsmedel, är giftiga för katter även när de är tillagade eller torkade. Veterinärer vid Tufts råder dig att läsa ingredienslistan noga på köpt buljong.",
+    "da": "Cornell Feline Health Center skriver at lidt natriumfattig hønsebouillon i vandet kan få en kat til at drikke mere, og VCA foreslår natriumfattig hønsebouillon uden ekstra krydderier. Bouillonterninger, som bruges til at lave fond, indeholder meget natrium. Løg og hvidløg, som findes i mange færdiglavede produkter, er giftige for katte, også når de er kogt eller tørret. Dyrlæger fra Tufts anbefaler at læse ingredienslisten på købt bouillon grundigt.",
+    "fi": "Cornell Feline Health Centerin mukaan veden maustaminen pienellä määrällä vähäsuolaista kanalientä voi saada kissan juomaan enemmän, ja VCA ehdottaa vähäsuolaista kanalientä ilman lisättyjä mausteita. Liemikuutiot sisältävät paljon natriumia. Sipuli ja valkosipuli, joita on monissa valmisruoissa, ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina. Tuftsin eläinlääkärit neuvovat tarkistamaan kaupan liemien ainesosaluettelon huolellisesti.",
+    "nb": "Cornell Feline Health Center sier at litt natriumfattig kyllingbuljong i vannet kan få en katt til å drikke mer, og VCA foreslår natriumfattig kyllingbuljong uten tilsatt krydder. Buljongterninger og kraftterninger inneholder mye natrium. Løk og hvitløk, som finnes i mange ferdiglagde matvarer, er giftig for katter selv når de er kokt eller tørket. Dyrleger ved Tufts anbefaler å lese ingredienslisten på kjøpt buljong nøye.",
+    "it": "Il Cornell Feline Health Center afferma che insaporire l’acqua con una piccola quantità di brodo di pollo a basso contenuto di sodio può spingere il gatto a bere di più, e VCA suggerisce un brodo di pollo povero di sodio e senza spezie aggiunte. I dadi da brodo contengono grandi quantità di sodio. Cipolla e aglio, presenti in molti cibi pronti, sono tossici per i gatti anche se cotti o essiccati. I veterinari della Tufts consigliano di leggere con attenzione l’elenco degli ingredienti dei brodi industriali.",
+    "de": "Das Cornell Feline Health Center sagt, dass ein wenig salzarme Hühnerbrühe im Wasser eine Katze zum Trinken anregen kann, und VCA empfiehlt salzarme Hühnerbrühe ohne zusätzliche Gewürze. Brühwürfel zur Herstellung von Fond enthalten sehr viel Natrium. Zwiebel und Knoblauch, die in vielen Fertiggerichten stecken, sind für Katzen giftig, auch gekocht oder getrocknet. Die Tierärzte von Tufts raten, bei fertiger Brühe die Zutatenliste genau zu lesen.",
+    "fr": "Le Cornell Feline Health Center indique que parfumer l’eau avec une petite quantité de bouillon de poulet pauvre en sodium peut inciter un chat à boire davantage, et VCA suggère un bouillon de poulet pauvre en sel, sans épices supplémentaires. Les cubes de bouillon contiennent beaucoup de sodium. L’oignon et l’ail, présents dans de nombreux plats préparés, sont toxiques pour les chats, même cuits ou séchés. Les vétérinaires de Tufts conseillent de lire attentivement la liste des ingrédients des bouillons du commerce.",
+    "es": "El Cornell Feline Health Center dice que dar sabor al agua con una pequeña cantidad de caldo de pollo bajo en sodio puede animar al gato a beber más, y VCA sugiere un caldo de pollo bajo en sodio y sin especias añadidas. Las pastillas de caldo contienen mucho sodio. La cebolla y el ajo, presentes en muchos alimentos preparados, son tóxicos para los gatos aunque estén cocinados o secos. Los veterinarios de Tufts aconsejan mirar con atención la lista de ingredientes de los caldos comerciales.",
+    "pt": "O Cornell Feline Health Center diz que dar sabor à água com uma pequena quantidade de caldo de galinha com pouco sódio pode levar o gato a beber mais, e a VCA sugere caldo de galinha com pouco sódio e sem temperos adicionais. Os cubos de caldo usados para fazer caldos têm muito sódio. A cebola e o alho, presentes em muitos alimentos pré-preparados, são tóxicos para os gatos mesmo cozinhados ou secos. Os veterinários da Tufts aconselham a ler com atenção a lista de ingredientes dos caldos comerciais.",
+    "nl": "Het Cornell Feline Health Center zegt dat een kleine hoeveelheid zoutarme kippenbouillon in het water een kat kan aanzetten om meer te drinken, en VCA adviseert zoutarme kippenbouillon zonder extra kruiden. Bouillonblokjes bevatten veel natrium. Ui en knoflook, die in veel kant-en-klare producten zitten, zijn giftig voor katten, ook als ze gekookt of gedroogd zijn. Dierenartsen van Tufts raden aan om de ingrediëntenlijst van bouillon uit de winkel goed te lezen.",
+    "pl": "Cornell Feline Health Center podaje, że odrobina bulionu drobiowego o niskiej zawartości sodu dodana do wody może zachęcić kota do picia, a VCA zaleca bulion drobiowy o niskiej zawartości sodu, bez dodatkowych przypraw. Kostki rosołowe do przyrządzania wywarów zawierają bardzo dużo sodu. Cebula i czosnek, które występują w wielu gotowych produktach, są toksyczne dla kotów nawet po ugotowaniu lub wysuszeniu. Weterynarze z Tufts radzą dokładnie czytać skład gotowych bulionów.",
+    "cs": "Cornell Feline Health Center uvádí, že kočku může k pití povzbudit voda ochucená malým množstvím kuřecího vývaru s nízkým obsahem sodíku, a VCA doporučuje kuřecí vývar s nízkým obsahem sodíku a bez dalšího koření. Bujónové kostky na přípravu vývarů obsahují velké množství sodíku. Cibule a česnek, které se nacházejí v mnoha hotových jídlech, jsou pro kočky jedovaté, i když jsou tepelně upravené nebo sušené. Veterináři z Tufts radí u kupovaných vývarů pozorně číst složení."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your cat drank broth or stock that contains onion or garlic, contact your vet as soon as possible.",
-    "sl": "Če je mačka popila juho ali osnovo, ki vsebuje čebulo ali česen, čim prej pokličite veterinarja."
+    "sl": "Če je mačka popila juho ali osnovo, ki vsebuje čebulo ali česen, čim prej pokličite veterinarja.",
+    "hr": "Ako je mačka popila juhu ili temeljac s lukom ili češnjakom, što prije se obrati veterinaru.",
+    "sv": "Om din katt har druckit buljong eller fond som innehåller lök eller vitlök ska du kontakta din veterinär så snart som möjligt.",
+    "da": "Hvis din kat har drukket bouillon eller fond med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt.",
+    "fi": "Jos kissasi joi lientä, jossa oli sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian.",
+    "nb": "Hvis katten har drukket buljong eller kraft med løk eller hvitløk, kontakt dyrlegen så fort som mulig.",
+    "it": "Se il tuo gatto ha bevuto brodo che contiene cipolla o aglio, contatta il veterinario il prima possibile.",
+    "de": "Hat Ihre Katze Brühe oder Fond mit Zwiebel oder Knoblauch getrunken, wenden Sie sich so schnell wie möglich an Ihren Tierarzt.",
+    "fr": "Si votre chat a bu du bouillon contenant de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible.",
+    "es": "Si tu gato ha bebido caldo que lleve cebolla o ajo, ponte en contacto con tu veterinario lo antes posible.",
+    "pt": "Se o teu gato bebeu caldo que contém cebola ou alho, contacta o teu veterinário o mais depressa possível.",
+    "nl": "Heeft je kat bouillon of fond gedronken met ui of knoflook erin, neem dan zo snel mogelijk contact op met je dierenarts.",
+    "pl": "Jeśli twój kot wypił bulion lub wywar z cebulą albo czosnkiem, jak najszybciej skontaktuj się z weterynarzem.",
+    "cs": "Pokud kočka vypila vývar s cibulí nebo česnekem, co nejdříve se obraťte na veterináře."
   },
   "serving": {
     "en": "Only plain, low-sodium broth with no onion, garlic or added spices, a little mixed into your cat's water. The safest homemade broth is unseasoned meat boiled in plain water. Skip stock cubes.",
-    "sl": "Le navadna juha z malo soli, brez čebule, česna ali dodanih začimb, malo primešana mački v vodo. Najvarnejša domača juha je nezačinjeno meso, kuhano v navadni vodi. Jušnih kock ne uporabljajte."
+    "sl": "Le navadna juha z malo soli, brez čebule, česna ali dodanih začimb, malo primešana mački v vodo. Najvarnejša domača juha je nezačinjeno meso, kuhano v navadni vodi. Jušnih kock ne uporabljajte.",
+    "hr": "Samo obična juha s malo natrija, bez luka, češnjaka i dodanih začina, malo umiješana u mačju vodu. Najsigurnija je domaća juha od nezačinjenog mesa kuhanog u običnoj vodi. Kocke za juhu nemoj koristiti.",
+    "sv": "Bara okryddad, natriumfattig buljong utan lök, vitlök eller tillsatta kryddor, en liten skvätt blandad i kattens vatten. Den säkraste hemmagjorda buljongen är okryddat kött kokt i vanligt vatten. Hoppa över buljongtärningar.",
+    "da": "Kun almindelig, natriumfattig bouillon uden løg, hvidløg eller krydderier, en lille smule blandet i kattens vand. Den sikreste hjemmelavede bouillon er ukrydret kød kogt i almindeligt vand. Undlad bouillonterninger.",
+    "fi": "Vain maustamatonta, vähäsuolaista lientä, jossa ei ole sipulia, valkosipulia eikä mausteita, vähän kissan veteen sekoitettuna. Turvallisin kotitekoinen liemi on maustamatonta lihaa keitettynä pelkässä vedessä. Jätä liemikuutiot väliin.",
+    "nb": "Bare naturell, natriumfattig buljong uten løk, hvitløk eller tilsatt krydder, litt blandet i kattens vann. Den tryggeste hjemmelagde buljongen er usaltet kjøtt kokt i vanlig vann. La kraftterningene ligge.",
+    "it": "Solo brodo semplice, a basso contenuto di sodio, senza cipolla, aglio né spezie aggiunte, in piccola quantità mescolato all’acqua del gatto. Il brodo fatto in casa più sicuro è fatto bollendo carne non condita in sola acqua. Niente dadi da brodo.",
+    "de": "Nur ungewürzte, salzarme Brühe ohne Zwiebel, Knoblauch oder zugesetzte Gewürze, ein kleiner Schuss davon im Wasser Ihrer Katze. Am sichersten ist selbst gekochte Brühe aus ungewürztem Fleisch in reinem Wasser. Brühwürfel lassen Sie weg.",
+    "fr": "Uniquement du bouillon nature, pauvre en sel, sans oignon, sans ail et sans épices, un peu mélangé à l’eau de votre chat. Le bouillon maison le plus sûr se prépare avec de la viande non assaisonnée cuite dans de l’eau simple. Évitez les cubes de bouillon.",
+    "es": "Solo caldo natural, bajo en sodio y sin cebolla, ajo ni especias añadidas, un poco mezclado con el agua de tu gato. El caldo casero más seguro es carne sin condimentar hervida en agua sola. Evita las pastillas de caldo.",
+    "pt": "Apenas caldo simples, com pouco sódio e sem cebola, alho nem temperos, um pouco misturado na água do teu gato. O caldo caseiro mais seguro é carne sem tempero cozida em água simples. Não uses cubos de caldo.",
+    "nl": "Alleen gewone, zoutarme bouillon zonder ui, knoflook of toegevoegde kruiden, een klein beetje door het water van je kat geroerd. De veiligste zelfgemaakte bouillon is ongekruid vlees dat in gewoon water is gekookt. Gebruik geen bouillonblokjes.",
+    "pl": "Tylko bulion bez dodatków, o niskiej zawartości sodu, bez cebuli, czosnku i przypraw – odrobina dolana do kociej wody. Najbezpieczniejszy jest domowy bulion z nieprzyprawionego mięsa ugotowanego w czystej wodzie. Kostek rosołowych nie używaj.",
+    "cs": "Jen obyčejný vývar s nízkým obsahem soli, bez cibule, česneku a koření, a to jen trochu přidaný do kočičí vody. Nejbezpečnější je domácí vývar z nekořeněného masa uvařeného v čisté vodě. Bujónovým kostkám se vyhněte."
   },
   "child": {
     "en": "A grown-up can add a little plain broth to kitty's water. Soup for people often has onion, so always ask first.",
-    "sl": "Odrasli lahko muci v vodo doda malo navadne juhe. Juha za ljudi ima pogosto čebulo, zato vedno najprej vprašaj."
+    "sl": "Odrasli lahko muci v vodo doda malo navadne juhe. Juha za ljudi ima pogosto čebulo, zato vedno najprej vprašaj.",
+    "hr": "Odrasla osoba može macinoj vodi dodati malo obične juhe. Juha za ljude često ima luk, zato uvijek prvo pitaj.",
+    "sv": "En vuxen kan blanda lite okryddad buljong i kattens vatten. Soppa för människor innehåller ofta lök, så fråga alltid först.",
+    "da": "En voksen kan komme lidt almindelig bouillon i din kats vand. Suppe til mennesker indeholder ofte løg, så spørg altid først.",
+    "fi": "Aikuinen voi lisätä kisun veteen vähän maustamatonta lientä. Ihmisten keitoissa on usein sipulia, joten kysy aina ensin.",
+    "nb": "En voksen kan helle litt naturell buljong i pusens vann. Suppe til mennesker har ofte løk i seg, så spør alltid først.",
+    "it": "Un adulto può aggiungere un po’ di brodo semplice all’acqua del micio. La zuppa per le persone spesso contiene cipolla, quindi chiedi sempre prima a un adulto.",
+    "de": "Ein Erwachsener kann ein bisschen ungewürzte Brühe ins Wasser der Katze geben. Suppe für Menschen enthält oft Zwiebel, also frag immer vorher nach.",
+    "fr": "Un adulte peut ajouter un peu de bouillon nature dans l’eau de ton chat. La soupe pour les humains contient souvent de l’oignon : demande toujours d’abord.",
+    "es": "Un adulto puede añadir un poco de caldo natural al agua del gatito. La sopa para personas suele llevar cebolla, así que pregunta siempre antes.",
+    "pt": "Um adulto pode juntar um pouco de caldo simples à água do gatinho. A sopa das pessoas costuma ter cebola, por isso pergunta sempre primeiro.",
+    "nl": "Een volwassene kan een beetje gewone bouillon door het water van je kat doen. Soep voor mensen bevat vaak ui, dus vraag altijd eerst.",
+    "pl": "Dorosły może dolać odrobinę bulionu bez dodatków do wody kotka. W zupach dla ludzi często jest cebula, więc zawsze najpierw zapytaj dorosłego.",
+    "cs": "Dospělý může do kočičí vody přidat trochu obyčejného vývaru. Polévky pro lidi často obsahují cibuli, proto se vždycky nejdřív zeptej."
   },
   "faq": [
     {
       "q": {
         "en": "Can I use a stock cube?",
-        "sl": "Lahko uporabim jušno kocko?"
+        "sl": "Lahko uporabim jušno kocko?",
+        "hr": "Smijem li upotrijebiti kocku za juhu?",
+        "sv": "Kan jag använda en buljongtärning?",
+        "da": "Må jeg bruge en bouillonterning?",
+        "fi": "Voinko käyttää liemikuutiota?",
+        "nb": "Kan jeg bruke en kraftterning?",
+        "it": "Posso usare un dado da brodo?",
+        "de": "Darf ich einen Brühwürfel verwenden?",
+        "fr": "Puis-je utiliser un cube de bouillon ?",
+        "es": "¿Puedo usar una pastilla de caldo?",
+        "pt": "Posso usar um cubo de caldo?",
+        "nl": "Mag ik een bouillonblokje gebruiken?",
+        "pl": "Czy mogę użyć kostki rosołowej?",
+        "cs": "Mohu použít bujónovou kostku?"
       },
       "a": {
         "en": "Better not. Bouillon cubes used for making stocks contain high amounts of sodium, and pre-made foods may contain onion or garlic, which are toxic to cats.",
-        "sl": "Raje ne. Jušne kocke za pripravo osnov vsebujejo veliko natrija, že pripravljena hrana pa lahko vsebuje čebulo ali česen, ki sta za mačke strupena."
+        "sl": "Raje ne. Jušne kocke za pripravo osnov vsebujejo veliko natrija, že pripravljena hrana pa lahko vsebuje čebulo ali česen, ki sta za mačke strupena.",
+        "hr": "Bolje ne. Kocke za temeljac sadrže mnogo natrija, a gotova jela mogu sadržavati luk ili češnjak, koji su otrovni za mačke.",
+        "sv": "Hellre inte. Buljongtärningar som används för att göra fond innehåller mycket natrium, och färdiglagade livsmedel kan innehålla lök eller vitlök, som är giftigt för katter.",
+        "da": "Helst ikke. Bouillonterninger, som bruges til at lave fond, indeholder meget natrium, og færdiglavede produkter kan indeholde løg eller hvidløg, som er giftige for katte.",
+        "fi": "Parempi olla käyttämättä. Liemikuutiot sisältävät paljon natriumia, ja valmisruoissa voi olla sipulia tai valkosipulia, jotka ovat kissoille myrkyllisiä.",
+        "nb": "Helst ikke. Buljongterninger og kraftterninger inneholder mye natrium, og ferdiglagde matvarer kan inneholde løk eller hvitløk, som er giftig for katter.",
+        "it": "Meglio di no. I dadi da brodo contengono grandi quantità di sodio, e i cibi pronti possono contenere cipolla o aglio, che sono tossici per i gatti.",
+        "de": "Besser nicht. Brühwürfel enthalten sehr viel Natrium, und Fertiggerichte können Zwiebel oder Knoblauch enthalten, die für Katzen giftig sind.",
+        "fr": "Mieux vaut éviter. Les cubes de bouillon contiennent beaucoup de sodium, et les plats préparés peuvent contenir de l’oignon ou de l’ail, toxiques pour les chats.",
+        "es": "Mejor no. Las pastillas de caldo contienen mucho sodio, y los alimentos preparados pueden llevar cebolla o ajo, que son tóxicos para los gatos.",
+        "pt": "É melhor não. Os cubos de caldo têm muito sódio, e os alimentos pré-preparados podem conter cebola ou alho, que são tóxicos para os gatos.",
+        "nl": "Liever niet. Bouillonblokjes bevatten veel natrium, en kant-en-klare producten bevatten soms ui of knoflook, die giftig zijn voor katten.",
+        "pl": "Lepiej nie. Kostki rosołowe do przyrządzania wywarów zawierają bardzo dużo sodu, a w gotowych produktach może być cebula lub czosnek, które są toksyczne dla kotów.",
+        "cs": "Raději ne. Bujónové kostky na přípravu vývarů obsahují velké množství sodíku a hotová jídla mohou obsahovat cibuli nebo česnek, které jsou pro kočky jedovaté."
       }
     }
   ],
@@ -111,6 +241,71 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e6249579dfd53f24be8bf160254b8925044cc4b964a017fbe7fa29a05ec1f4f6"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9939b55f0dfdabe4c5ebd36b8878246d11abefaf600d2aea7fa3ced07c18b0cc"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b35094c858f57e8cf4ab372e9fdd311a1a95b242e946714fc8b33b55809df4f4"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "425a04cd8975524bd2ed79999575b836e73f6ef8fb883199b15b87dce97404b7"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "864ed4880f2964a8be78ae79a429e2eeb5c0619af6f84db2d2f18435e57614c5"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6032a731ba7a061d4992271dcfdcfb989a3fa52370b8bf7f62337c3e2aeb11cc"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4078a1c93cf9376400067f69b723aec1139598b73d97624655a0a9c7d60e2084"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "76976c10495ecc053f721a7190dd87d4bf73ad3737ccd6bd32580bc16e90ec72"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67e501eb62a69a067c5cb80f5e277eef4958168d6ffb0810bea5210648db3f5b"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4ee100bbe84fd351d4e7e2de7a54eeaf4407e7eebb02d6a6e94e35638216aa50"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "99a01d5395f3bd9ed18960cdb083022b70a49a84029fe9e5a99dbcd7017b7ffe"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ea51632cee66d38dc7e27e8e06a993f3e90799d4de17d5ab071b5258eef3f386"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "9fd821207514b62d69cbf47dc52af741b0f3e37bf3de67e6ccd07303fab90675"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "222ed865767413463c1ab347c8beac2edb7be321076c1db8007d81cd1c9f5821"
     }
   }
 }

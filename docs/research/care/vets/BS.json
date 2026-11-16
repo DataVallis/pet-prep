@@ -65,7 +65,8 @@
       "quote": "EMERGENCY 24/7: 242 807 7960",
       "duty_i18n": {
         "pt": "Seg.–sex. 8h30–17h00, sáb. 9h00–14h00, encerrado aos domingos e feriados. Linha de urgências 24 h/24, 7 dias por semana: +1 242 807 7960.",
-        "nl": "ma–vr 8.30–17.00 uur, za 9.00–14.00 uur, zondag en feestdagen gesloten. Spoedlijn de klok rond: +1 242 807 7960."
+        "nl": "ma–vr 8.30–17.00 uur, za 9.00–14.00 uur, zondag en feestdagen gesloten. Spoedlijn de klok rond: +1 242 807 7960.",
+        "pl": "Pon.–pt. 8:30–17:00, sob. 9:00–14:00, niedziele i święta państwowe zamknięte. Linia dla nagłych przypadków całodobowo, 7 dni w tygodniu: +1 242 807 7960."
       }
     },
     {
@@ -84,7 +85,8 @@
       "quote": "After our normal business hours, we do offer 24-hour on-call emergency service.",
       "duty_i18n": {
         "pt": "Seg.–sex. 8h30–17h00, sáb. 8h30–14h00, encerrado aos domingos. Serviço de urgência 24 horas fora do horário: +1 242 557 0911.",
-        "nl": "ma–vr 8.30–17.00 uur, za 8.30–14.00 uur, zondag gesloten. Spoeddienst buiten kantooruren, 24 uur per dag bereikbaar: +1 242 557 0911."
+        "nl": "ma–vr 8.30–17.00 uur, za 8.30–14.00 uur, zondag gesloten. Spoeddienst buiten kantooruren, 24 uur per dag bereikbaar: +1 242 557 0911.",
+        "pl": "Pon.–pt. 8:30–17:00, sob. 8:30–14:00, niedziele zamknięte. Całodobowy dyżur dla nagłych przypadków po godzinach pracy: +1 242 557 0911."
       }
     },
     {
@@ -103,7 +105,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Seg.–sex. 9h00–15h00, sáb. sob marcação, encerrado aos domingos. Linha de urgências fora do horário: +1 242 468 3644.",
-        "nl": "ma–vr 9.00–15.00 uur, za op afspraak, zondag gesloten. Spoedlijn buiten kantooruren: +1 242 468 3644."
+        "nl": "ma–vr 9.00–15.00 uur, za op afspraak, zondag gesloten. Spoedlijn buiten kantooruren: +1 242 468 3644.",
+        "pl": "Pon.–pt. 9:00–15:00, sob. po wcześniejszym umówieniu, niedziele zamknięte. Linia dla nagłych przypadków po godzinach pracy: +1 242 468 3644."
       }
     },
     {
@@ -122,7 +125,8 @@
       "note": "Formerly Nassau Veterinary Clinic. Site is on pages.dev; no emergency wording.",
       "duty_i18n": {
         "pt": "Seg.–sex. 9h00–17h00, sáb. 9h00–13h00, encerrado aos domingos. Consultas ao domicílio em toda a ilha de New Providence.",
-        "nl": "ma–vr 9.00–17.00 uur, za 9.00–13.00 uur, zondag gesloten. Mobiele huisbezoeken in heel New Providence."
+        "nl": "ma–vr 9.00–17.00 uur, za 9.00–13.00 uur, zondag gesloten. Mobiele huisbezoeken in heel New Providence.",
+        "pl": "Pon.–pt. 9:00–17:00, sob. 9:00–13:00, niedziele zamknięte. Mobilne wizyty domowe na terenie całego New Providence."
       }
     },
     {
@@ -141,7 +145,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Clínica à segunda, quinta e sábado, sob marcação. Abrigo de segunda a quinta e sábado 8h30–16h00, sexta 8h30–13h00.",
-        "nl": "Kliniek ma, do en za op afspraak. Asiel ma–do en za 8.30–16.00 uur, vr 8.30–13.00 uur."
+        "nl": "Kliniek ma, do en za op afspraak. Asiel ma–do en za 8.30–16.00 uur, vr 8.30–13.00 uur.",
+        "pl": "Przychodnia w pon., czw. i sob. po wcześniejszym umówieniu. Schronisko pon.–czw. i sob. 8:30–16:00, pt. 8:30–13:00."
       }
     },
     {
@@ -160,7 +165,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Ter.–qui. 9h00–16h00, sáb. 9h00–15h00, encerrado à segunda, sexta, domingo e feriados. Urgências: liga ou envia mensagem para +1 242 470 0109.",
-        "nl": "di–do 9.00–16.00 uur, za 9.00–15.00 uur, gesloten op ma, vr, zo en feestdagen. Spoed: bel of sms +1 242 470 0109."
+        "nl": "di–do 9.00–16.00 uur, za 9.00–15.00 uur, gesloten op ma, vr, zo en feestdagen. Spoed: bel of sms +1 242 470 0109.",
+        "pl": "Wt.–czw. 9:00–16:00, sob. 9:00–15:00, zamknięte w pon., pt., niedz. i święta. Nagłe przypadki: zadzwoń lub napisz SMS pod numer +1 242 470 0109."
       }
     }
   ],

@@ -4,28 +4,88 @@
   "name": {
     "en": "Chewing gum",
     "sl": "Žvečilni gumi",
-    "cs": "Žvýkačky"
+    "es": "Chicle",
+    "cs": "Žvýkačky",
+    "hr": "Žvakaća guma",
+    "sv": "Tuggummi",
+    "da": "Tyggegummi",
+    "fi": "Purukumi",
+    "nb": "Tyggegummi",
+    "it": "Gomma da masticare",
+    "de": "Kaugummi",
+    "fr": "Chewing-gum",
+    "pt": "Pastilha elástica",
+    "nl": "Kauwgom",
+    "pl": "Guma do żucia"
   },
   "question": {
     "en": "Can dogs eat chewing gum?",
     "sl": "Ali lahko psi jedo žvečilni gumi?",
-    "cs": "Mohou psi jíst žvýkačky?"
+    "es": "¿Pueden los perros comer chicle?",
+    "cs": "Mohou psi jíst žvýkačky?",
+    "hr": "Smiju li psi jesti žvakaću gumu?",
+    "sv": "Får hundar äta tuggummi?",
+    "da": "Må hunde spise tyggegummi?",
+    "fi": "Saako koira syödä purukumia?",
+    "nb": "Kan hunder spise tyggegummi?",
+    "it": "I cani possono mangiare la gomma da masticare?",
+    "de": "Dürfen Hunde Kaugummi fressen?",
+    "fr": "Les chiens peuvent-ils manger du chewing-gum ?",
+    "pt": "Os cães podem comer pastilha elástica?",
+    "nl": "Mogen honden kauwgom eten?",
+    "pl": "Czy psy mogą jeść gumę do żucia?"
   },
   "url_slug": {
     "en": "chewing-gum",
     "sl": "zvecilni-gumi",
-    "cs": "zvykacky"
+    "es": "chicle",
+    "cs": "zvykacky",
+    "hr": "zvakaca-guma",
+    "sv": "tuggummi",
+    "da": "tyggegummi",
+    "fi": "purukumi",
+    "nb": "tyggegummi",
+    "it": "gomma-da-masticare",
+    "de": "kaugummi",
+    "fr": "chewing-gum",
+    "pt": "pastilha-elastica",
+    "nl": "kauwgom",
+    "pl": "guma-do-zucia"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Chewing gum is not for dogs. Sugar-free gum almost always contains xylitol, which is as dangerous to dogs as chocolate: it can cause a rapid drop in blood sugar, seizures and liver failure. If your dog eats gum, take it to the vet immediately.",
     "sl": "Ne. Žvečilni gumi ni za pse. Žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ki je za pse enako nevaren kot čokolada: lahko povzroči hiter padec krvnega sladkorja, krče in odpoved jeter. Če pes poje žvečilni gumi, ga takoj odpeljite k veterinarju.",
-    "cs": "Ne. Žvýkačky psům nepatří. Žvýkačky bez cukru téměř vždy obsahují xylitol, který je pro psy stejně nebezpečný jako čokoláda: může způsobit rychlý pokles hladiny cukru v krvi, záchvaty a selhání jater. Pokud pes snědl žvýkačku, jeďte okamžitě k veterináři."
+    "es": "No. El chicle no es para los perros. El chicle sin azúcar casi siempre lleva xilitol, que es tan peligroso para los perros como el chocolate: puede causar una bajada rápida del azúcar en la sangre, convulsiones e insuficiencia hepática. Si tu perro se come un chicle, llévalo al veterinario inmediatamente.",
+    "cs": "Ne. Žvýkačky psům nepatří. Žvýkačky bez cukru téměř vždy obsahují xylitol, který je pro psy stejně nebezpečný jako čokoláda: může způsobit rychlý pokles hladiny cukru v krvi, záchvaty a selhání jater. Pokud pes snědl žvýkačku, jeďte okamžitě k veterináři.",
+    "hr": "Ne. Žvakaća guma nije za pse. Guma bez šećera gotovo uvijek sadrži ksilitol, koji je za pse opasan kao čokolada: može izazvati nagli pad šećera u krvi, napadaje i zatajenje jetre. Ako pas pojede gumu, odmah ga odvedi veterinaru.",
+    "sv": "Nej. Tuggummi är inte till för hundar. Sockerfritt tuggummi innehåller nästan alltid xylitol, som är lika farligt för hundar som choklad: det kan orsaka ett snabbt blodsockerfall, kramper och leversvikt. Om din hund äter tuggummi ska du åka till veterinären omedelbart.",
+    "da": "Nej. Tyggegummi er ikke noget for hunde. Sukkerfrit tyggegummi indeholder næsten altid xylitol, som er lige så farligt for hunde som chokolade: det kan give et hurtigt fald i blodsukkeret, kramper og leversvigt. Hvis din hund spiser tyggegummi, skal du tage den med til dyrlægen med det samme.",
+    "fi": "Ei saa. Purukumi ei ole koirille. Sokeriton purukumi sisältää lähes aina ksylitolia, joka on koirille yhtä vaarallista kuin suklaa: se voi aiheuttaa verensokerin nopean laskun, kouristuskohtauksia ja maksan vajaatoiminnan. Jos koirasi syö purukumia, vie koira heti eläinlääkärille.",
+    "nb": "Nei. Tyggegummi er ikke for hunder. Sukkerfritt tyggegummi inneholder nesten alltid xylitol, som er like farlig for hunder som sjokolade: det kan gi et raskt fall i blodsukkeret, kramper og leversvikt. Hvis hunden spiser tyggegummi, må du til dyrlegen umiddelbart.",
+    "it": "No. La gomma da masticare non è per i cani. Quella senza zucchero contiene quasi sempre xilitolo, pericoloso per i cani quanto il cioccolato: può causare un rapido calo degli zuccheri nel sangue, convulsioni e insufficienza epatica. Se il tuo cane mangia una gomma da masticare, portalo subito dal veterinario.",
+    "de": "Nein. Kaugummi ist nichts für Hunde. Zuckerfreier Kaugummi enthält fast immer Xylit, das für Hunde so gefährlich ist wie Schokolade: Es kann einen raschen Blutzuckerabfall, Krampfanfälle und Leberversagen verursachen. Frisst Ihr Hund Kaugummi, bringen Sie ihn sofort zum Tierarzt.",
+    "fr": "Non. Le chewing-gum n’est pas pour les chiens. Le chewing-gum sans sucre contient presque toujours du xylitol, aussi dangereux pour les chiens que le chocolat : il peut provoquer une chute rapide de la glycémie, des convulsions et une insuffisance hépatique. Si votre chien mange du chewing-gum, emmenez-le immédiatement chez le vétérinaire.",
+    "pt": "Não. A pastilha elástica não é para cães. A pastilha elástica sem açúcar contém quase sempre xilitol, que é tão perigoso para os cães como o chocolate: pode causar uma descida rápida do açúcar no sangue, convulsões e insuficiência hepática. Se o teu cão comer pastilha elástica, leva-o imediatamente ao veterinário.",
+    "nl": "Nee. Kauwgom is niets voor honden. Suikervrije kauwgom bevat bijna altijd xylitol, dat voor honden net zo gevaarlijk is als chocolade: het kan een snelle daling van de bloedsuikerspiegel, toevallen en leverfalen veroorzaken. Eet je hond kauwgom, ga dan meteen naar de dierenarts.",
+    "pl": "Nie. Guma do żucia nie jest dla psów. Guma bez cukru prawie zawsze zawiera ksylitol, który jest dla psów tak samo niebezpieczny jak czekolada: może wywołać gwałtowny spadek poziomu cukru we krwi, drgawki i niewydolność wątroby. Jeśli pies zje gumę, od razu zawieź go do weterynarza."
   },
   "why": {
     "en": "Xylitol is the most common and dangerous ingredient in gum, and some dogs develop severe liver damage after eating it. Gum also often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and large amounts of gum can clump in the stomach and cause a blockage. Because sugar-free gum almost always contains xylitol, we rate gum as toxic.",
     "sl": "Ksilitol je najpogostejša in najnevarnejša sestavina žvečilnih gumijev, pri nekaterih psih pa po zaužitju pride do hude okvare jeter. Žvečilni gumi pogosto vsebuje tudi sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo in povzroči zaporo. Ker žvečilni gumi brez sladkorja skoraj vedno vsebuje ksilitol, ga uvrščamo med strupene.",
-    "cs": "Xylitol je nejčastější a nejnebezpečnější přísada ve žvýkačkách a u některých psů po jeho pozření dojde k těžkému poškození jater. Žvýkačky také často obsahují cukr, umělá sladidla a další přísady, které mohou být pro psy jedovaté, a velké množství žvýkaček se může v žaludku slepit a způsobit ucpání. Protože žvýkačky bez cukru téměř vždy obsahují xylitol, hodnotíme žvýkačky jako jedovaté."
+    "es": "El xilitol es el ingrediente más común y peligroso de los chicles, y algunos perros desarrollan daño hepático grave tras comerlo. Además, el chicle suele llevar azúcar, edulcorantes artificiales y otros ingredientes que pueden ser tóxicos para los perros, y grandes cantidades de chicle pueden formar una masa en el estómago y causar una obstrucción. Como el chicle sin azúcar casi siempre lleva xilitol, lo valoramos como tóxico.",
+    "cs": "Xylitol je nejčastější a nejnebezpečnější přísada ve žvýkačkách a u některých psů po jeho pozření dojde k těžkému poškození jater. Žvýkačky také často obsahují cukr, umělá sladidla a další přísady, které mohou být pro psy jedovaté, a velké množství žvýkaček se může v žaludku slepit a způsobit ucpání. Protože žvýkačky bez cukru téměř vždy obsahují xylitol, hodnotíme žvýkačky jako jedovaté.",
+    "hr": "Ksilitol je najčešći i najopasniji sastojak žvakaćih guma, a kod nekih pasa nakon što ga pojedu nastane teško oštećenje jetre. Žvakaća guma često sadrži i šećer, umjetna sladila i druge sastojke koji mogu biti otrovni za pse, a velike količine gume mogu se zgrudati u želucu i izazvati začepljenje. Budući da guma bez šećera gotovo uvijek sadrži ksilitol, gumu ocjenjujemo kao otrovnu.",
+    "sv": "Xylitol är den vanligaste och farligaste ingrediensen i tuggummi, och vissa hundar får svåra leverskador efter att ha ätit det. Tuggummi innehåller dessutom ofta socker, konstgjorda sötningsmedel och andra ingredienser som kan vara giftiga för hundar, och stora mängder tuggummi kan klumpa ihop sig i magen och orsaka stopp. Eftersom sockerfritt tuggummi nästan alltid innehåller xylitol bedömer vi tuggummi som giftigt.",
+    "da": "Xylitol er den mest almindelige og farligste ingrediens i tyggegummi, og nogle hunde får alvorlig leverskade efter at have spist det. Tyggegummi indeholder også ofte sukker, kunstige sødemidler og andre ingredienser, som kan være giftige for hunde, og store mængder tyggegummi kan klumpe sammen i maven og give en blokering. Fordi sukkerfrit tyggegummi næsten altid indeholder xylitol, vurderer vi tyggegummi som giftigt.",
+    "fi": "Ksylitoli on purukumin yleisin ja vaarallisin ainesosa, ja joillekin koirille on kehittynyt vaikea maksavaurio sen syömisen jälkeen. Purukumissa on usein myös sokeria, keinotekoisia makeutusaineita ja muita koirille myrkyllisiä ainesosia, ja suuret määrät purukumia voivat kasaantua mahalaukkuun ja aiheuttaa tukoksen. Koska sokeriton purukumi sisältää lähes aina ksylitolia, luokittelemme purukumin myrkylliseksi.",
+    "nb": "Xylitol er den vanligste og farligste ingrediensen i tyggegummi, og noen hunder får alvorlig leverskade etter å ha spist det. Tyggegummi inneholder også ofte sukker, kunstige søtstoffer og andre ingredienser som kan være giftige for hunder, og store mengder tyggegummi kan klumpe seg sammen i magen og gi tarmblokkering. Siden sukkerfritt tyggegummi nesten alltid inneholder xylitol, vurderer vi tyggegummi som giftig.",
+    "it": "Lo xilitolo è l’ingrediente più comune e pericoloso delle gomme da masticare, e alcuni cani sviluppano un grave danno al fegato dopo averlo mangiato. Le gomme contengono spesso anche zucchero, dolcificanti artificiali e altri ingredienti che possono essere tossici per i cani, e grandi quantità di gomma possono formare un grumo nello stomaco e causare un’ostruzione. Poiché la gomma senza zucchero contiene quasi sempre xilitolo, la valutiamo come tossica.",
+    "de": "Xylit ist der häufigste und gefährlichste Inhaltsstoff in Kaugummi, und manche Hunde erleiden nach dem Fressen schwere Leberschäden. Kaugummi enthält außerdem oft Zucker, künstliche Süßstoffe und andere Zutaten, die für Hunde giftig sein können, und große Mengen Kaugummi können sich im Magen zusammenballen und einen Darmverschluss verursachen. Weil zuckerfreier Kaugummi fast immer Xylit enthält, stufen wir Kaugummi als giftig ein.",
+    "fr": "Le xylitol est l’ingrédient le plus courant et le plus dangereux des chewing-gums, et certains chiens développent de graves lésions du foie après en avoir mangé. Les chewing-gums contiennent aussi souvent du sucre, des édulcorants artificiels et d’autres ingrédients qui peuvent être toxiques pour les chiens, et de grandes quantités peuvent s’agglomérer dans l’estomac et provoquer une occlusion. Comme le chewing-gum sans sucre contient presque toujours du xylitol, nous le classons comme toxique.",
+    "pt": "O xilitol é o ingrediente mais comum e perigoso nas pastilhas elásticas, e alguns cães desenvolvem lesões graves no fígado depois de o comer. As pastilhas elásticas também contêm muitas vezes açúcar, adoçantes artificiais e outros ingredientes que podem ser tóxicos para os cães, e grandes quantidades podem formar uma massa no estômago e causar uma obstrução. Como a pastilha elástica sem açúcar contém quase sempre xilitol, classificamo-la como tóxica.",
+    "nl": "Xylitol is het meest voorkomende en gevaarlijkste ingrediënt in kauwgom, en sommige honden krijgen na het eten ervan ernstige leverschade. Kauwgom bevat ook vaak suiker, kunstmatige zoetstoffen en andere ingrediënten die giftig kunnen zijn voor honden, en grote hoeveelheden kauwgom kunnen in de maag samenklonteren en een verstopping veroorzaken. Omdat suikervrije kauwgom bijna altijd xylitol bevat, beoordelen we kauwgom als giftig.",
+    "pl": "Ksylitol to najczęstszy i najgroźniejszy składnik gumy do żucia, a u niektórych psów po jego zjedzeniu dochodzi do ciężkiego uszkodzenia wątroby. Guma często zawiera też cukier, sztuczne słodziki i inne składniki, które mogą być toksyczne dla psów, a duże ilości gumy mogą zlepić się w żołądku w zbitą masę i spowodować niedrożność. Ponieważ guma bez cukru prawie zawsze zawiera ksylitol, oceniamy gumę jako toksyczną."
   },
   "signs": {
     "en": [
@@ -44,6 +104,14 @@
       "Utrujenost in brezvoljnost",
       "Znaki se lahko začnejo že v nekaj minutah"
     ],
+    "es": [
+      "Vómitos",
+      "Tambaleo o dificultad para caminar",
+      "Temblores",
+      "Convulsiones",
+      "Falta de energía",
+      "Los síntomas pueden empezar en cuestión de minutos"
+    ],
     "cs": [
       "Zvracení",
       "Vrávorání nebo potíže při chůzi",
@@ -51,42 +119,202 @@
       "Záchvaty",
       "Malátnost",
       "Příznaky se mohou objevit během několika minut"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Teturanje ili otežano hodanje",
+      "Drhtanje",
+      "Napadaji",
+      "Bezvoljnost",
+      "Znakovi se mogu pojaviti unutar nekoliko minuta"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Vinglig eller svår gång",
+      "Darrningar",
+      "Kramper",
+      "Slöhet",
+      "Tecknen kan visa sig inom några minuter"
+    ],
+    "da": [
+      "Opkast",
+      "Vaklen eller besvær med at gå",
+      "Rysten",
+      "Kramper",
+      "Sløvhed",
+      "Tegnene kan begynde i løbet af få minutter"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Horjuminen tai kävelyvaikeudet",
+      "Vapina",
+      "Kouristuskohtaukset",
+      "Väsymys",
+      "Oireet voivat alkaa jo muutamassa minuutissa"
+    ],
+    "nb": [
+      "Oppkast",
+      "Vaklende gange eller problemer med å gå",
+      "Skjelvinger",
+      "Kramper",
+      "Sløvhet",
+      "Tegnene kan komme i løpet av minutter"
+    ],
+    "it": [
+      "Vomito",
+      "Andatura barcollante o difficoltà a camminare",
+      "Tremori",
+      "Convulsioni",
+      "Abbattimento",
+      "I sintomi possono comparire nel giro di pochi minuti"
+    ],
+    "de": [
+      "Erbrechen",
+      "Taumeln oder Gehschwierigkeiten",
+      "Zittern",
+      "Krampfanfälle",
+      "Teilnahmslosigkeit",
+      "Die Anzeichen können schon nach wenigen Minuten beginnen"
+    ],
+    "fr": [
+      "Vomissements",
+      "Démarche chancelante ou difficulté à marcher",
+      "Tremblements",
+      "Convulsions",
+      "Abattement",
+      "Les signes peuvent apparaître en quelques minutes"
+    ],
+    "pt": [
+      "Vómitos",
+      "Andar cambaleante ou dificuldade em andar",
+      "Tremores",
+      "Convulsões",
+      "Apatia",
+      "Os sinais podem começar em poucos minutos"
+    ],
+    "nl": [
+      "Braken",
+      "Wankelen of moeite met lopen",
+      "Trillingen",
+      "Toevallen",
+      "Lusteloosheid",
+      "De verschijnselen kunnen binnen enkele minuten beginnen"
+    ],
+    "pl": [
+      "Wymioty",
+      "Chwiejny chód lub trudności z chodzeniem",
+      "Drżenie",
+      "Drgawki",
+      "Ospałość",
+      "Objawy mogą pojawić się w ciągu kilku minut"
     ]
   },
   "what_to_do": {
     "en": "Take your dog to the vet immediately and call a pet poison helpline for advice. Don't give your dog anything by mouth unless your vet tells you to.",
     "sl": "Psa takoj odpeljite k veterinarju in za nasvet pokličite telefonsko linijo za zastrupitve živali. Psu ne dajajte ničesar v usta, razen če tako naroči veterinar.",
-    "cs": "Jeďte okamžitě k veterináři a pro radu zavolejte na toxikologickou linku pro zvířata. Nepodávejte psovi nic do tlamy, pokud vám to veterinář neporadí."
+    "es": "Lleva a tu perro al veterinario inmediatamente y llama a una línea de información toxicológica para animales para pedir consejo. No le des nada por la boca a tu perro salvo que tu veterinario te lo indique.",
+    "cs": "Jeďte okamžitě k veterináři a pro radu zavolejte na toxikologickou linku pro zvířata. Nepodávejte psovi nic do tlamy, pokud vám to veterinář neporadí.",
+    "hr": "Odmah odvedi psa veterinaru i nazovi telefonsku liniju za otrovanja životinja za savjet. Psu ne daj ništa na usta osim ako ti veterinar to ne kaže.",
+    "sv": "Åk till veterinären omedelbart och ring giftrådgivningen för djur för råd. Ge inte din hund något genom munnen om inte din veterinär säger det.",
+    "da": "Tag din hund med til dyrlægen med det samme, og ring til en giftrådgivning for dyr for at få råd. Giv ikke din hund noget gennem munden, medmindre din dyrlæge siger, at du skal.",
+    "fi": "Vie koirasi heti eläinlääkärille ja soita eläinten myrkytysneuvontaan neuvoja varten. Älä anna koiralle mitään suun kautta, ellei eläinlääkäri neuvo sitä.",
+    "nb": "Ta hunden med til dyrlegen umiddelbart, og ring giftinformasjon for dyr for å få råd. Ikke gi hunden noe i munnen med mindre dyrlegen ber deg om det.",
+    "it": "Porta subito il cane dal veterinario e chiama un centro antiveleni veterinario per un consiglio. Non dare al cane nulla per bocca, a meno che non sia il veterinario a dirtelo.",
+    "de": "Bringen Sie Ihren Hund sofort zum Tierarzt und rufen Sie einen Giftnotruf für Tiere an. Geben Sie Ihrem Hund nichts zu fressen oder zu trinken, es sei denn, Ihr Tierarzt weist Sie dazu an.",
+    "fr": "Emmenez immédiatement votre chien chez le vétérinaire et appelez un centre antipoison vétérinaire pour demander conseil. Ne donnez rien par la bouche à votre chien sans l’accord de votre vétérinaire.",
+    "pt": "Leva o teu cão imediatamente ao veterinário e liga a uma linha de apoio toxicológico para animais para pedires conselho. Não dês nada ao teu cão pela boca, a não ser que o teu veterinário to diga.",
+    "nl": "Ga meteen met je hond naar de dierenarts en bel een vergiftigingenlijn voor dieren voor advies. Geef je hond zelf niets in, tenzij je dierenarts dat zegt.",
+    "pl": "Od razu zawieź psa do weterynarza i zadzwoń po radę na telefon informacji toksykologicznej dla zwierząt. Nie podawaj psu niczego doustnie, chyba że weterynarz tak zaleci."
   },
   "serving": null,
   "child": {
     "en": "Chewing gum is not for dogs. Keep gum away from your dog, and tell a grown-up right away if your dog eats some.",
     "sl": "Žvečilni gumi ni za pse. Gumi pospravi, da ga pes ne doseže, in takoj povej odraslemu, če ga pes poje.",
-    "cs": "Žvýkačky nejsou pro psy. Měj žvýkačky mimo dosah psa a řekni to hned dospělému, když pes nějakou sní."
+    "es": "El chicle no es para los perros. Mantén los chicles lejos de tu perro y avisa enseguida a un adulto si tu perro se come alguno.",
+    "cs": "Žvýkačky nejsou pro psy. Měj žvýkačky mimo dosah psa a řekni to hned dospělému, když pes nějakou sní.",
+    "hr": "Žvakaća guma nije za pse. Gumu drži podalje od psa i odmah reci odrasloj osobi ako je pas pojede.",
+    "sv": "Tuggummi är inte för hundar. Håll tuggummi borta från din hund och berätta direkt för en vuxen om din hund äter något.",
+    "da": "Tyggegummi er ikke til hunde. Hold tyggegummi væk fra din hund, og sig det straks til en voksen, hvis din hund har spist noget.",
+    "fi": "Purukumi ei ole koirille. Pidä purukumi poissa koirasi ulottuvilta ja kerro heti aikuiselle, jos koirasi syö sitä.",
+    "nb": "Tyggegummi er ikke for hunder. Hold tyggegummi unna hunden din, og si fra til en voksen med en gang hvis hunden spiser noe.",
+    "it": "La gomma da masticare non è per i cani. Tienila lontana dal tuo cane e dillo subito a un adulto se ne mangia.",
+    "de": "Kaugummi ist nichts für Hunde. Halte Kaugummi von deinem Hund fern und sag sofort einem Erwachsenen Bescheid, wenn dein Hund welchen frisst.",
+    "fr": "Le chewing-gum n’est pas pour les chiens. Garde le chewing-gum hors de portée de ton chien et préviens tout de suite un adulte s’il en mange.",
+    "pt": "A pastilha elástica não é para cães. Mantém a pastilha longe do teu cão e avisa logo um adulto se ele comer alguma.",
+    "nl": "Kauwgom is niets voor honden. Houd kauwgom uit de buurt van je hond en vertel het meteen aan een volwassene als je hond er wat van eet.",
+    "pl": "Guma do żucia nie jest dla psów. Chowaj gumy przed psem i od razu powiedz dorosłemu, jeśli pies którąś zje."
   },
   "faq": [
     {
       "q": {
         "en": "Is regular gum with sugar safe for dogs?",
         "sl": "Ali je navaden žvečilni gumi s sladkorjem za pse varen?",
-        "cs": "Je běžná žvýkačka s cukrem pro psy bezpečná?"
+        "es": "¿Es seguro para los perros el chicle normal con azúcar?",
+        "cs": "Je běžná žvýkačka s cukrem pro psy bezpečná?",
+        "hr": "Je li obična guma sa šećerom sigurna za pse?",
+        "sv": "Är vanligt tuggummi med socker säkert för hundar?",
+        "da": "Er almindeligt tyggegummi med sukker ufarligt for hunde?",
+        "fi": "Onko tavallinen sokeria sisältävä purukumi turvallista koirille?",
+        "nb": "Er vanlig tyggegummi med sukker trygt for hunder?",
+        "it": "La gomma normale, con zucchero, è sicura per i cani?",
+        "de": "Ist normaler Kaugummi mit Zucker für Hunde unbedenklich?",
+        "fr": "Le chewing-gum classique au sucre est-il sans danger pour les chiens ?",
+        "pt": "A pastilha elástica normal, com açúcar, é segura para os cães?",
+        "nl": "Is gewone kauwgom met suiker veilig voor honden?",
+        "pl": "Czy zwykła guma z cukrem jest bezpieczna dla psów?"
       },
       "a": {
         "en": "Not really. Gum often contains sugar, artificial sweeteners and other ingredients that can be toxic to dogs, and a lot of gum can clump in the stomach. Call your vet if your dog ate some.",
         "sl": "Ne zares. Žvečilni gumi pogosto vsebuje sladkor, umetna sladila in druge sestavine, ki so lahko za pse strupene, večja količina pa se lahko v želodcu zlepi v kepo. Če ga je pes pojedel, pokličite veterinarja.",
-        "cs": "Ne tak úplně. Žvýkačky často obsahují cukr, umělá sladidla a další přísady, které mohou být pro psy jedovaté, a velké množství žvýkaček se může v žaludku slepit. Pokud pes nějakou snědl, zavolejte veterináři."
+        "es": "No del todo. El chicle suele llevar azúcar, edulcorantes artificiales y otros ingredientes que pueden ser tóxicos para los perros, y mucho chicle puede formar una masa en el estómago. Llama a tu veterinario si tu perro se ha comido alguno.",
+        "cs": "Ne tak úplně. Žvýkačky často obsahují cukr, umělá sladidla a další přísady, které mohou být pro psy jedovaté, a velké množství žvýkaček se může v žaludku slepit. Pokud pes nějakou snědl, zavolejte veterináři.",
+        "hr": "Ne baš. Guma često sadrži šećer, umjetna sladila i druge sastojke koji mogu biti otrovni za pse, a mnogo gume može se zgrudati u želucu. Nazovi veterinara ako je pas pojeo gumu.",
+        "sv": "Inte direkt. Tuggummi innehåller ofta socker, konstgjorda sötningsmedel och andra ingredienser som kan vara giftiga för hundar, och mycket tuggummi kan klumpa ihop sig i magen. Kontakta din veterinär om din hund har ätit något.",
+        "da": "Ikke rigtig. Tyggegummi indeholder ofte sukker, kunstige sødemidler og andre ingredienser, som kan være giftige for hunde, og meget tyggegummi kan klumpe sammen i maven. Ring til din dyrlæge, hvis din hund har spist noget.",
+        "fi": "Ei oikeastaan. Purukumissa on usein sokeria, keinotekoisia makeutusaineita ja muita koirille myrkyllisiä ainesosia, ja suuri määrä purukumia voi kasaantua mahalaukkuun. Soita eläinlääkärille, jos koirasi söi sitä.",
+        "nb": "Egentlig ikke. Tyggegummi inneholder ofte sukker, kunstige søtstoffer og andre ingredienser som kan være giftige for hunder, og mye tyggegummi kan klumpe seg sammen i magen. Ring dyrlegen hvis hunden har spist noe.",
+        "it": "Non proprio. La gomma da masticare contiene spesso zucchero, dolcificanti artificiali e altri ingredienti che possono essere tossici per i cani, e molta gomma può formare un grumo nello stomaco. Chiama il veterinario se il tuo cane ne ha mangiata.",
+        "de": "Nicht wirklich. Kaugummi enthält oft Zucker, künstliche Süßstoffe und andere Zutaten, die für Hunde giftig sein können, und viel Kaugummi kann sich im Magen zusammenballen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund welchen gefressen hat.",
+        "fr": "Pas vraiment. Le chewing-gum contient souvent du sucre, des édulcorants artificiels et d’autres ingrédients qui peuvent être toxiques pour les chiens, et une grande quantité peut s’agglomérer dans l’estomac. Appelez votre vétérinaire si votre chien en a mangé.",
+        "pt": "Não propriamente. As pastilhas elásticas contêm muitas vezes açúcar, adoçantes artificiais e outros ingredientes que podem ser tóxicos para os cães, e muita pastilha pode formar uma massa no estômago. Liga ao teu veterinário se o teu cão comeu alguma.",
+        "nl": "Niet echt. Kauwgom bevat vaak suiker, kunstmatige zoetstoffen en andere ingrediënten die giftig kunnen zijn voor honden, en veel kauwgom kan in de maag samenklonteren. Bel je dierenarts als je hond er wat van heeft gegeten.",
+        "pl": "Niezupełnie. Guma często zawiera cukier, sztuczne słodziki i inne składniki, które mogą być toksyczne dla psów, a dużo gumy może zlepić się w żołądku. Jeśli pies jakąś zjadł, zadzwoń do weterynarza."
       }
     },
     {
       "q": {
         "en": "Which other products contain xylitol?",
         "sl": "Kateri drugi izdelki vsebujejo ksilitol?",
-        "cs": "Které další výrobky obsahují xylitol?"
+        "es": "¿Qué otros productos contienen xilitol?",
+        "cs": "Které další výrobky obsahují xylitol?",
+        "hr": "Koji još proizvodi sadrže ksilitol?",
+        "sv": "Vilka andra produkter innehåller xylitol?",
+        "da": "Hvilke andre produkter indeholder xylitol?",
+        "fi": "Missä muissa tuotteissa on ksylitolia?",
+        "nb": "Hvilke andre produkter inneholder xylitol?",
+        "it": "Quali altri prodotti contengono xilitolo?",
+        "de": "Welche anderen Produkte enthalten Xylit?",
+        "fr": "Quels autres produits contiennent du xylitol ?",
+        "pt": "Que outros produtos contêm xilitol?",
+        "nl": "Welke andere producten bevatten xylitol?",
+        "pl": "W jakich innych produktach jest ksylitol?"
       },
       "a": {
         "en": "Some sugar-free candy, toothpaste, baked goods, medicines and drink mixes. On labels it may also appear as birch sugar, wood sugar or birch bark extract.",
         "sl": "Nekatere sladkarije brez sladkorja, zobne paste, pecivo, zdravila in mešanice za napitke. Na deklaraciji je lahko naveden tudi kot brezov sladkor, lesni sladkor ali izvleček brezovega lubja.",
-        "cs": "Některé bonbony bez cukru, zubní pasty, pečivo, léky a práškové nápoje. Na etiketách se může uvádět také jako březový cukr, dřevný cukr nebo extrakt z březové kůry."
+        "es": "Algunas golosinas sin azúcar, la pasta de dientes, productos de panadería, medicamentos y preparados para bebidas. En las etiquetas también puede aparecer como azúcar de abedul, azúcar de madera o extracto de corteza de abedul.",
+        "cs": "Některé bonbony bez cukru, zubní pasty, pečivo, léky a práškové nápoje. Na etiketách se může uvádět také jako březový cukr, dřevný cukr nebo extrakt z březové kůry.",
+        "hr": "Neki bomboni bez šećera, zubne paste, pekarski proizvodi, lijekovi i praškovi za napitke. Na deklaracijama može biti naveden i kao brezov šećer, drvni šećer ili ekstrakt brezove kore.",
+        "sv": "Vissa sockerfria godsaker, tandkrämer, bakverk, läkemedel och drickspulver. På innehållsförteckningar kan det också stå björksocker, vedsocker eller björkbarksextrakt.",
+        "da": "Noget sukkerfrit slik, tandpasta, bagværk, medicin og drikkepulver. På varedeklarationer kan det også stå som birkesukker, træsukker eller birkebarkekstrakt.",
+        "fi": "Joissakin sokerittomissa karkeissa, hammastahnoissa, leivonnaisissa, lääkkeissä ja juomajauheissa. Pakkausmerkinnöissä se voi esiintyä myös nimellä koivusokeri, puusokeri tai koivun kuoren uute.",
+        "nb": "Noe sukkerfritt godteri, tannkrem, bakevarer, medisiner og drikkepulver. På ingredienslisten kan det også stå som bjørkesukker, tresukker eller bjørkebarkekstrakt.",
+        "it": "Alcune caramelle senza zucchero, dentifrici, prodotti da forno, medicinali e preparati per bevande. Sulle etichette può comparire anche come zucchero di betulla, zucchero di legno o estratto di corteccia di betulla.",
+        "de": "Manche zuckerfreien Süßigkeiten, Zahnpasta, Backwaren, Medikamente und Getränkepulver. Auf Etiketten kann es auch als Birkenzucker, Holzzucker oder Birkenrindenextrakt angegeben sein.",
+        "fr": "Certains bonbons sans sucre, dentifrices, pâtisseries, médicaments et préparations pour boissons. Sur les étiquettes, il peut aussi apparaître sous les noms « sucre de bouleau », « sucre de bois » ou « extrait d’écorce de bouleau ».",
+        "pt": "Alguns doces sem açúcar, pasta de dentes, produtos de pastelaria, medicamentos e preparados para bebidas. Nos rótulos também pode aparecer como açúcar de bétula, açúcar de madeira ou extrato de casca de bétula.",
+        "nl": "Sommig suikervrij snoep, tandpasta, bakproducten, medicijnen en drankmixen. Op etiketten kan het ook staan als berkensuiker, houtsuiker of berkenschorsextract.",
+        "pl": "W niektórych cukierkach bez cukru, pastach do zębów, wypiekach, lekach i napojach w proszku. Na etykietach może występować też jako cukier brzozowy, cukier drzewny lub ekstrakt z kory brzozy."
       }
     }
   ],
@@ -191,10 +419,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "5665313aa60313c173e987a842f074cc38a94e7ded62c356b3eb228d3fe15b22"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "53966c8b7a92600d8347671f0a60b27d085a98dbf10a0d90726f38ed0879d2a4"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7d2becc3df48961eec2575c454c2cfda96e437a97b8bb7340fed079492fb2957"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "230a48ba104f806e14beba80ae11368d0ff09e3ec0d652b16e3cb6a8e83fd4ea"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eb25ad27c3fb65b4361d17af630e56742a77b1784e56f7a62a1b9bed449fe317"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8432fa530d902c3cb1440e094449573eeec8060766dcfed2c3bf021c28f8c198"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "93560fec7668fe57d09a49ced0cca94b95cbefaf0c2df2f8ca500c6045b46fa7"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ff90ba52053974e012bdf73e4c8829d7a4a14f878db15902689deabc061bc0d0"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "98af199035d237baa52d2888b0a024c558e838926b3fa1a4e57b052a38493525"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "60f217347d26710d969249848c342d76c84c6d364595003bfee2bb40f4a9219b"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a2442c462c0e43a6b858f396f003009b5beb5583a7202efa2a3aa46cb9fdf4be"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9dcaf4ff69bc2cd16880ccb6a016bc86ea5cc49f148040fdab1a9963522e57e5"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a56d5564bf22825b7998e18b44a0a53c09be9da46f6a37b5249bf53c5e8ea987"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "6605a01d84efba0e649455276d910aaa70483d800b66e8bd42583209ee427ae8"
     }
   }
 }

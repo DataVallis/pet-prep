@@ -428,7 +428,7 @@ flowchart TD
   REC --> F{Frozen?<br/>hard stop · ill · game over}
   F -- yes --> FC["Advance last_decay_at<br/>(no catch-up, neglect clocks paused)<br/>midnight: close day, no walk illness"]
   F -- no --> SEG["Split elapsed time since last_decay_at<br/>into normal / quiet segments<br/>(pet zone = own or family, DST-aware)"]
-  SEG --> D["Decay from breed_configs:<br/>hunger 8|12 %/h · thirst 10|15 %/h<br/>quiet hours ×0.10"]
+  SEG --> D["Decay from breed_configs:<br/>hunger 8|12 %/h · thirst 10|15 %/h<br/>quiet hours ×0.10<br/>hunger floor 25 % (config/feeding.php) while the last<br/>child meal window is fed — until the next one opens"]
   D --> MN{"New pet-local day?<br/>(Pet::effectiveTimezone)"}
   MN -- yes --> RS["Close yesterday: pet_daily_walks row<br/>energy showed 0 % → walk_illness_due_at<br/>= end of the night's quiet hours<br/>Steps → 0, energy → 0 %"]
   MN -- no --> HS
@@ -2618,6 +2618,57 @@ sequenceDiagram
   S->>DB: COMMIT
   S-->>P: PetUpdated pet_timezone_changed (after commit) · 200 {pet_id, timezone, timezone_follows_family}
   Note over S,DB: PUT /api/parent/settings (family zone) moves only pets with pets.timezone null<br/>and never stamps pets.timezone_changed_at
+```
+
+## Quiet hours per pet + 12 / 24 h clock (David 2026-11-16)
+
+Which schedule a rule reads, and how a change takes effect. Every rule (decay ×0.1, sleep, pushes, messes, parent-covered meals, puppy morning rule, routines, care tasks, games / school) goes through `Pet::quietHours()`.
+
+```mermaid
+flowchart TD
+  R[Any rule of pet X] --> Q["Pet::quietHours()"]
+  Q --> O{pets.own_quiet_hours set?}
+  O -- yes --> OWN["QuietHours::forPet (unsaved, save() refuses)"]
+  O -- no --> F{family quiet_hours row?}
+  F -- yes --> FAM[the family row]
+  F -- no --> DEF[QuietHours::DEFAULTS 21:00–07:00]
+  OWN --> RI["readIn(pet.effectiveTimezone())"]
+  FAM --> RI
+  DEF --> RI
+  L["RoutineLedgerService::loadInputs (batch)"] -->|same order| RI
+```
+
+```mermaid
+sequenceDiagram
+  participant P as Parent app (pet settings: »Tihe ure: kot družina / lastne ure«)
+  participant API as PUT /api/parent/pets/{pet}/quiet-hours
+  participant S as PetQuietHoursService
+  participant DB as PostgreSQL
+  P->>API: {quiet_hours: {school_start…, is_active}} or {quiet_hours: null}
+  API->>API: UpdatePetQuietHoursRequest (H:i) · PetPolicy@changeQuietHours (else 403)
+  API->>S: change(parent, pet, values|null)
+  S->>DB: BEGIN · families FOR UPDATE · pets FOR UPDATE
+  alt same value
+    S-->>API: no-op (no broadcast)
+  else changed
+    S->>DB: pets.own_quiet_hours = values|null
+  end
+  S->>DB: COMMIT
+  S-->>P: PetUpdated pet_quiet_hours_changed · 200 {pet_id, quiet_hours, quiet_hours_follow_family}
+  Note over S,DB: Like a family change: no catch-up, no recompute — the next tick reads the new schedule,<br/>closed days stay. PUT /api/parent/quiet-hours never moves a pet with its own hours.
+```
+
+```mermaid
+sequenceDiagram
+  participant N as NotificationService::deliver
+  participant D as device_push_tokens (+ user.time_format)
+  N->>N: actionCopy → replace.time = "17:00" (ClockText::at, pet clock)
+  loop each phone
+    N->>D: users.time_format (24h / 12h) · auto → device.hour12 (null → 24 h)
+    alt 12 h
+      N->>N: ClockText::to12h → "5:00 PM" / "5:00 pop."
+    end
+  end
 ```
 
 

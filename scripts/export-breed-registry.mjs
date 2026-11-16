@@ -499,6 +499,8 @@ const SPECIES = [
       { id: 'afghan_hound', synonyms: { en: ['Afghan', 'Tazi', 'Baluchi Hound'], sl: ['afganec', 'afgan', 'tazi'] } },
       { id: 'australian_silky_terrier', synonyms: { en: ['Silky Terrier', 'Silky'], sl: ['silky terier', 'svilnati terier'] } },
       { id: 'parson_russell_terrier', synonyms: { en: ['Parson Jack Russell Terrier', 'Parson Terrier', 'PRT'], sl: ['parson jack russell terier', 'parson terier'] } },
+      { id: 'wire_fox_terrier', synonyms: { en: ['Fox Terrier (Wire)', 'Wire Hair Fox Terrier', 'Wirehaired Fox Terrier'], sl: ['foksterier', 'ostrodlaki fox terier', 'žimavi foksterier'] } },
+      { id: 'manchester_terrier', synonyms: { en: ['Manchester Terrier (Standard)', 'Black and Tan Terrier'], sl: ['manchester terier', 'manchester'] } },
     ],
   },
   {
@@ -3008,6 +3010,53 @@ const DOG_FACTS = {
       ['dental_disease_tooth_brushing', 'health.dental'],
     ],
   },
+  // M5-R10-117. RKC page (S872): exercise 'Up to 1 hour per day', coat 'Medium', grooming 'More than once a week',
+  // lifespan 'Over 12 years'; FCI N° 169 (S871) height not exceeding 39 cm (females slightly less); AKC standard (S876)
+  // weight dogs 17–19 lb / bitches 15–17 lb (our conversion); PetMD 12–15 years. Coren rank 51 (S35). FCI origin Great
+  // Britain (GB). Shedding: RKC 'Yes' (S872) vs PetMD / WebMD minimal (S874, S875) → no shedding fact (conflict). Not
+  // exported: adult_weight alternatives (FCI males only, PDSA), lifespan.mcmillan_2024 (Wikipedia, tier C) / senior_from
+  // (derived), health.breed_watch (Category 1), health.other (WebMD list, background). No new health key.
+  wire_fox_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['primary_lens_luxation', 'health.primary_lens_luxation'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['cataracts', 'health.cataracts'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['kneecap_luxation', 'health.patellar_luxation'],
+      ['glaucoma', 'health.glaucoma'],
+      ['dental_disease_tooth_brushing', 'health.dental'],
+    ],
+  },  // M5-R10-119. No RKC page reachable → PDSA (S889): exercise 'up to an hour of exercise per day', coat 'Short', brushing
+  // 'once a week', lifespan 'Over 12 years' (Cane Corso pattern); FCI N° 71 (S888) ideal height 41 / 38 cm; CKC standard (S892)
+  // weight 5.5–10 kg; WebMD 15–17 years. Coren rank 32 (S35). FCI origin Great Britain (GB). No shedding fact (no source).
+  // Not exported: adult_weight / height alternatives (PDSA), lifespan.kc_survey_via_wikipedia (tier C) / senior_from
+  // (derived), health.other (alopecia / SLE, background). No new health key.
+  manchester_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.ckc', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.webmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['heart_muscle_disease', 'health.cardiomyopathy'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['primary_lens_luxation', 'health.primary_lens_luxation'],
+    ],
+  },
+
 
 
 
@@ -3084,6 +3133,8 @@ export const DOG_CARE_TASKS = {
   afghan_hound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.afghan_hound.tooth_brushing'], ['bath', 1, 7, 'proposed_game_parameters.afghan_hound.bathing']],
   australian_silky_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.australian_silky_terrier.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.australian_silky_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.australian_silky_terrier.bathing']],
   parson_russell_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.parson_russell_terrier.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.parson_russell_terrier.ear_care'], ['bath', 1, 14, 'proposed_game_parameters.parson_russell_terrier.bathing']],
+  wire_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.wire_fox_terrier.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.wire_fox_terrier.nail_trimming'], ['groomer_visit', 1, 84, 'proposed_game_parameters.wire_fox_terrier.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.wire_fox_terrier.bathing']],
+  manchester_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.manchester_terrier.tooth_brushing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -3978,6 +4029,22 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.parson_russell_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.parson_russell_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.parson_russell_terrier.exercise_minutes_senior',
+  },
+  wire_fox_terrier: {
+    adult_minutes: ['proposed_game_parameters.wire_fox_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.wire_fox_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.wire_fox_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.wire_fox_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.wire_fox_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.wire_fox_terrier.exercise_minutes_senior',
+  },
+  manchester_terrier: {
+    adult_minutes: ['proposed_game_parameters.manchester_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.manchester_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.manchester_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.manchester_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.manchester_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.manchester_terrier.exercise_minutes_senior',
   },
 
 

@@ -25,6 +25,7 @@ import { ApiError } from '@/api/client';
 import { Text } from '@/components/ui/Text';
 import { Card, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { currentLanguageTag, t } from '@/i18n';
+import { dateTimeText } from '@/modules/childPet/familyTime';
 import { useDeclineWish, useParentWishes, useWishProducts } from '@/hooks/queries/useWishes';
 import type { FamilyOverview } from '@/modules/family/family';
 import { petLabel } from '@/modules/petName/petName';
@@ -107,11 +108,8 @@ export function formatWishTime(iso: string | null, timeZone: string): string {
   if (iso === null) return '';
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return '';
-  try {
-    return new Intl.DateTimeFormat(currentLanguageTag(), { weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', timeZone }).format(date);
-  } catch {
-    return date.toISOString();
-  }
+  // 12 / 24 h by the person's choice (David 2026-11-16) — the time through `clockText`.
+  return dateTimeText(iso, timeZone, currentLanguageTag()) ?? date.toISOString();
 }
 
 interface WishesScreenProps {

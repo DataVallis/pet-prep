@@ -4,28 +4,88 @@
   "name": {
     "en": "Candy and sweets",
     "sl": "Bonboni in sladkarije",
-    "cs": "Bonbony a sladkosti"
+    "cs": "Bonbony a sladkosti",
+    "hr": "Bomboni i slatkiši",
+    "sv": "Godis",
+    "da": "Slik",
+    "fi": "Karkit ja makeiset",
+    "nb": "Godteri",
+    "it": "Caramelle e dolciumi",
+    "de": "Süßigkeiten und Bonbons",
+    "fr": "Bonbons",
+    "es": "Caramelos y golosinas",
+    "pt": "Doces e rebuçados",
+    "nl": "Snoep",
+    "pl": "Cukierki i słodycze"
   },
   "question": {
     "en": "Can cats eat candy?",
     "sl": "Ali lahko mačke jedo sladkarije?",
-    "cs": "Mohou kočky jíst bonbony?"
+    "cs": "Mohou kočky jíst bonbony?",
+    "hr": "Smiju li mačke jesti bombone?",
+    "sv": "Får katter äta godis?",
+    "da": "Må katte spise slik?",
+    "fi": "Saako kissa syödä karkkia?",
+    "nb": "Kan katter spise godteri?",
+    "it": "I gatti possono mangiare le caramelle?",
+    "de": "Dürfen Katzen Süßigkeiten fressen?",
+    "fr": "Les chats peuvent-ils manger des bonbons ?",
+    "es": "¿Pueden los gatos comer caramelos?",
+    "pt": "Os gatos podem comer doces?",
+    "nl": "Mogen katten snoep eten?",
+    "pl": "Czy koty mogą jeść cukierki?"
   },
   "url_slug": {
     "en": "candy",
     "sl": "sladkarije",
-    "cs": "bonbony"
+    "cs": "bonbony",
+    "hr": "bomboni-i-slatkisi",
+    "sv": "godis",
+    "da": "slik",
+    "fi": "karkit",
+    "nb": "godteri",
+    "it": "caramelle",
+    "de": "suessigkeiten",
+    "fr": "bonbons",
+    "es": "caramelos-y-golosinas",
+    "pt": "doces-e-rebucados",
+    "nl": "snoep",
+    "pl": "cukierki"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, candy is not for cats and is not safe for them. Many sweets contain chocolate or raisins, which are harmful to cats, and swallowed wrappers can upset or block the gut. Cats can't taste sweetness anyway, so sweets give them nothing good.",
     "sl": "Ne, sladkarije niso za mačke in zanje niso varne. Veliko sladkarij vsebuje čokolado ali rozine, ki mačkam škodijo, pogoltnjeni ovitki pa lahko povzročijo prebavne težave ali zamašijo črevo. Mačke sladkega okusa tako ali tako ne zaznajo, zato jim sladkarije ne prinesejo nič dobrega.",
-    "cs": "Ne, bonbony kočkám nepatří a nejsou pro ně bezpečné. Mnoho sladkostí obsahuje čokoládu nebo rozinky, které kočkám škodí, a spolknuté obaly mohou podráždit střeva nebo je ucpat. Kočky navíc sladkou chuť stejně nevnímají, takže jim sladkosti nic dobrého nepřinesou."
+    "cs": "Ne, bonbony kočkám nepatří a nejsou pro ně bezpečné. Mnoho sladkostí obsahuje čokoládu nebo rozinky, které kočkám škodí, a spolknuté obaly mohou podráždit střeva nebo je ucpat. Kočky navíc sladkou chuť stejně nevnímají, takže jim sladkosti nic dobrého nepřinesou.",
+    "hr": "Ne, bomboni nisu za mačke i nisu sigurni za njih. Mnogi slatkiši sadrže čokoladu ili grožđice, koje su štetne za mačke, a progutani omoti mogu nadražiti ili začepiti crijeva. Mačke ionako ne osjećaju slatki okus, pa im slatkiši ne daju ništa dobro.",
+    "sv": "Nej, godis är inget för katter och är inte säkert för dem. Mycket godis innehåller choklad eller russin, som är skadligt för katter, och uppätna godispapper kan irritera tarmen eller orsaka stopp. Katter kan ändå inte känna sötma, så godis ger dem inget gott.",
+    "da": "Nej, slik er ikke noget for katte og er ikke ufarligt for dem. Mange søde sager indeholder chokolade eller rosiner, som er skadelige for katte, og slikpapir, der bliver slugt, kan give mavebesvær eller blokere tarmen. Katte kan i øvrigt ikke smage sødt, så slik giver dem ikke noget godt.",
+    "fi": "Ei saa, karkit eivät ole kissoille turvallisia. Monissa makeisissa on suklaata tai rusinoita, jotka ovat kissoille haitallisia, ja nielty kääre voi ärsyttää suolistoa tai tukkia sen. Kissat eivät edes maista makeaa, joten makeisista ei ole niille mitään hyötyä.",
+    "nb": "Nei, godteri er ikke trygt for katter. Mye godteri inneholder sjokolade eller rosiner, som er skadelig for katter, og innpakning som svelges, kan gi urolig mage eller tarmblokkering. Katter kjenner ikke søtt, så de har ingen glede av søtsaker.",
+    "it": "No, le caramelle non sono per i gatti e non sono sicure per loro. Molti dolciumi contengono cioccolato o uvetta, dannosi per i gatti, e gli involucri ingeriti possono irritare l’intestino o ostruirlo. Del resto i gatti non sentono il sapore dolce, quindi i dolciumi non danno loro nulla di buono.",
+    "de": "Nein, Süßigkeiten sind für Katzen nicht geeignet und nicht sicher. Viele Süßigkeiten enthalten Schokolade oder Rosinen, die Katzen schaden, und verschluckte Verpackungen können den Darm reizen oder einen Darmverschluss verursachen. Süßes schmecken Katzen ohnehin nicht. Süßigkeiten bringen ihnen also nichts Gutes.",
+    "fr": "Non, les bonbons ne sont pas faits pour les chats et ne sont pas sans danger pour eux. Beaucoup contiennent du chocolat ou des raisins secs, nocifs pour les chats, et un emballage avalé peut irriter ou obstruer l’intestin. Les chats ne perçoivent pas le goût sucré : les bonbons ne leur apportent rien de bon.",
+    "es": "No, los caramelos no son para los gatos y no son seguros para ellos. Muchas golosinas llevan chocolate o pasas, que son dañinos para los gatos, y los envoltorios tragados pueden irritar el intestino o taponarlo. Además, los gatos no perciben el sabor dulce, así que las golosinas no les aportan nada bueno.",
+    "pt": "Não, os doces não são para gatos e não são seguros para eles. Muitos doces contêm chocolate ou passas, que fazem mal aos gatos, e as embalagens engolidas podem irritar ou obstruir o intestino. Os gatos nem sequer distinguem o sabor doce, por isso os doces não lhes trazem nada de bom.",
+    "nl": "Nee, snoep is niets voor katten en niet veilig voor ze. Veel snoep bevat chocolade of rozijnen, die schadelijk zijn voor katten, en ingeslikte snoeppapiertjes kunnen de darmen irriteren of verstoppen. Katten proeven sowieso geen zoet, dus snoep levert ze niets goeds op.",
+    "pl": "Nie, cukierki nie są dla kotów i nie są dla nich bezpieczne. Wiele słodyczy zawiera czekoladę lub rodzynki, które szkodzą kotom, a połknięte papierki mogą podrażnić lub zablokować jelita. Koty i tak nie czują smaku słodkiego, więc słodycze nie dają im nic dobrego."
   },
   "why": {
     "en": "Pet Poison Helpline says cats should not eat candy and that candy is not safe for cats: chocolate is toxic to cats and raisins may cause kidney failure in cats. VCA says candy is not for cats and warns that candy wrappers can cause intestinal upset and gastrointestinal blockage, and Blue Cross says many sweet treats are poisonous to cats. Sugar itself isn't toxic, but it is unhealthy for cats. Because candy so often hides these dangers, we use the stricter level.",
     "sl": "Pet Poison Helpline navaja, da mačke ne smejo jesti sladkarij in da sladkarije zanje niso varne: čokolada je za mačke strupena, rozine pa lahko pri mačkah povzročijo odpoved ledvic. VCA navaja, da sladkarije niso za mačke, in opozarja, da lahko ovitki sladkarij povzročijo črevesne težave in zaporo prebavil, Blue Cross pa, da je veliko sladkih priboljškov za mačke strupenih. Sam sladkor ni strupen, je pa za mačke nezdrav. Ker se v sladkarijah tako pogosto skrivajo te nevarnosti, uporabljamo strožjo raven.",
-    "cs": "Pet Poison Helpline uvádí, že kočky by bonbony jíst neměly a že pro ně nejsou bezpečné: čokoláda je pro kočky toxická a rozinky mohou u koček způsobit selhání ledvin. VCA uvádí, že bonbony kočkám nepatří, a upozorňuje, že obaly od bonbonů mohou způsobit podráždění střev a ucpání trávicího traktu, a Blue Cross, že mnoho sladkých pamlsků je pro kočky jedovatých. Samotný cukr toxický není, ale pro kočky je nezdravý. Protože se tato nebezpečí v bonbonech skrývají tak často, používáme přísnější úroveň."
+    "cs": "Pet Poison Helpline uvádí, že kočky by bonbony jíst neměly a že pro ně nejsou bezpečné: čokoláda je pro kočky toxická a rozinky mohou u koček způsobit selhání ledvin. VCA uvádí, že bonbony kočkám nepatří, a upozorňuje, že obaly od bonbonů mohou způsobit podráždění střev a ucpání trávicího traktu, a Blue Cross, že mnoho sladkých pamlsků je pro kočky jedovatých. Samotný cukr toxický není, ale pro kočky je nezdravý. Protože se tato nebezpečí v bonbonech skrývají tak často, používáme přísnější úroveň.",
+    "hr": "Pet Poison Helpline navodi da mačke ne bi smjele jesti bombone i da bomboni nisu sigurni za mačke: čokolada je otrovna za mačke, a grožđice mogu izazvati zatajenje bubrega. VCA kaže da bomboni nisu za mačke i upozorava da omoti od bombona mogu izazvati probavne tegobe i začepljenje probavnog sustava, a Blue Cross da su mnogi slatkiši otrovni za mačke. Sam šećer nije otrovan, ali je za mačke nezdrav. Budući da bomboni tako često skrivaju te opasnosti, primjenjujemo strožu razinu.",
+    "sv": "Pet Poison Helpline säger att katter inte bör äta godis och att godis inte är säkert för katter: choklad är giftigt för katter och russin kan orsaka njursvikt hos katter. VCA säger att godis inte är något för katter och varnar för att godispapper kan ge magtarmbesvär och stopp i mag-tarmkanalen, och Blue Cross säger att många sötsaker är giftiga för katter. Socker i sig är inte giftigt, men det är onyttigt för katter. Eftersom godis så ofta döljer dessa faror använder vi den strängare nivån.",
+    "da": "Pet Poison Helpline skriver at katte ikke bør spise slik, og at slik ikke er ufarligt for katte: chokolade er giftigt for katte, og rosiner kan give nyresvigt hos katte. VCA skriver at slik ikke er noget for katte, og advarer om at slikpapir kan give mave-tarm-problemer og tarmblokering, og Blue Cross skriver at mange søde sager er giftige for katte. Sukker i sig selv er ikke giftigt, men det er usundt for katte. Fordi slik så ofte skjuler disse farer, bruger vi det strengeste niveau.",
+    "fi": "Pet Poison Helplinen mukaan kissat eivät saa syödä karkkia, eikä karkki ole niille turvallista: suklaa on kissoille myrkyllistä ja rusinat voivat aiheuttaa kissoille munuaisten vajaatoiminnan. VCA toteaa, etteivät karkit sovi kissoille, ja varoittaa, että karkkien kääreet voivat aiheuttaa suolisto-oireita ja suolitukoksen, ja Blue Crossin mukaan monet makeat herkut ovat kissoille myrkyllisiä. Sokeri sinänsä ei ole myrkyllistä, mutta se ei ole kissoille hyväksi. Koska karkeissa on niin usein piilossa näitä vaaroja, käytämme tiukempaa luokitusta.",
+    "nb": "Pet Poison Helpline sier at katter ikke skal spise godteri og at godteri ikke er trygt for katter: sjokolade er giftig for katter, og rosiner kan gi nyresvikt hos katter. VCA sier at godteri ikke er for katter, og advarer om at godteriinnpakning kan gi urolig mage og tarmblokkering, og Blue Cross sier at mange søte godbiter er giftige for katter. Sukker i seg selv er ikke giftig, men det er usunt for katter. Fordi godteri så ofte skjuler slike farer, bruker vi det strengeste nivået.",
+    "it": "Pet Poison Helpline afferma che i gatti non devono mangiare caramelle e che non sono sicure per loro: il cioccolato è tossico per i gatti e l’uvetta può causare insufficienza renale. VCA afferma che le caramelle non sono per i gatti e avverte che gli involucri possono provocare disturbi intestinali e ostruzione gastrointestinale, e Blue Cross sottolinea che molti dolciumi sono velenosi per i gatti. Lo zucchero in sé non è tossico, ma fa male ai gatti. Poiché le caramelle nascondono così spesso questi pericoli, usiamo il livello più prudente.",
+    "de": "Pet Poison Helpline sagt, dass Katzen keine Süßigkeiten fressen sollten und dass Süßigkeiten für Katzen nicht sicher sind: Schokolade ist für Katzen giftig, und Rosinen können bei Katzen zu Nierenversagen führen. VCA sagt, Süßigkeiten seien nichts für Katzen, und warnt, dass Bonbonpapier Darmbeschwerden und einen Darmverschluss verursachen kann. Blue Cross weist darauf hin, dass viele süße Leckereien für Katzen giftig sind. Zucker selbst ist nicht giftig, aber für Katzen ungesund. Weil Süßigkeiten diese Gefahren so oft verbergen, gilt die strengere Stufe.",
+    "fr": "Le Pet Poison Helpline indique que les chats ne doivent pas manger de bonbons et que les bonbons ne sont pas sans danger pour eux : le chocolat est toxique pour les chats et les raisins secs peuvent provoquer une insuffisance rénale chez le chat. VCA précise que les bonbons ne sont pas faits pour les chats et avertit que les emballages de bonbons peuvent provoquer des troubles intestinaux et une obstruction gastro-intestinale, et Blue Cross rappelle que de nombreuses friandises sucrées sont toxiques pour les chats. Le sucre lui-même n’est pas toxique, mais il n’est pas bon pour les chats. Comme les bonbons cachent si souvent ces dangers, nous appliquons le niveau le plus strict.",
+    "es": "Pet Poison Helpline dice que los gatos no deben comer caramelos y que no son seguros para ellos: el chocolate es tóxico para los gatos y las pasas pueden causar insuficiencia renal. VCA dice que los caramelos no son para los gatos y advierte de que los envoltorios pueden causar molestias intestinales y obstrucción del aparato digestivo, y Blue Cross señala que muchas golosinas son venenosas para los gatos. El azúcar en sí no es tóxico, pero no es sano para los gatos. Como los caramelos esconden tan a menudo estos peligros, aplicamos el nivel más estricto.",
+    "pt": "A Pet Poison Helpline diz que os gatos não devem comer doces e que os doces não são seguros para os gatos: o chocolate é tóxico para os gatos e as passas podem causar insuficiência renal. A VCA diz que os doces não são para gatos e avisa que as embalagens podem causar irritação intestinal e obstrução gastrointestinal, e a Blue Cross diz que muitas guloseimas doces são venenosas para os gatos. O açúcar em si não é tóxico, mas não faz bem aos gatos. Como os doces escondem tantas vezes estes perigos, usamos o nível mais rigoroso.",
+    "nl": "Pet Poison Helpline zegt dat katten geen snoep mogen eten en dat snoep niet veilig is voor katten: chocolade is giftig voor katten en rozijnen kunnen bij katten nierfalen veroorzaken. VCA zegt dat snoep niets voor katten is en waarschuwt dat snoeppapiertjes darmklachten en een darmverstopping kunnen veroorzaken, en Blue Cross zegt dat veel zoetigheid giftig is voor katten. Suiker zelf is niet giftig, maar wel ongezond voor katten. Omdat er in snoep zo vaak zulke gevaren schuilgaan, hanteren we het strengere niveau.",
+    "pl": "Pet Poison Helpline podaje, że koty nie powinny jeść cukierków i że nie są one dla nich bezpieczne: czekolada jest toksyczna dla kotów, a rodzynki mogą wywołać u kotów niewydolność nerek. VCA podaje, że cukierki nie są dla kotów, i ostrzega, że papierki po cukierkach mogą wywołać rozstrój jelit i niedrożność przewodu pokarmowego, a Blue Cross – że wiele słodyczy jest dla kotów toksycznych. Sam cukier nie jest toksyczny, ale jest dla kotów niezdrowy. Ponieważ w cukierkach tak często kryją się te zagrożenia, przyjmujemy surowszą ocenę."
   },
   "signs": {
     "en": [
@@ -39,42 +99,162 @@
     "cs": [
       "Průjem nebo podrážděný žaludek",
       "Podráždění střev po spolknutí obalu"
+    ],
+    "hr": [
+      "Proljev ili želučane tegobe",
+      "Nadraženost crijeva nakon gutanja omota"
+    ],
+    "sv": [
+      "Diarré eller orolig mage",
+      "Magtarmbesvär efter att ha svalt en förpackning"
+    ],
+    "da": [
+      "Diarré eller mavebesvær",
+      "Mave-tarm-problemer efter at have slugt slikpapir"
+    ],
+    "fi": [
+      "Ripuli tai vatsavaivat",
+      "Suolisto-oireita nielaistun kääreen jälkeen"
+    ],
+    "nb": [
+      "Diaré eller urolig mage",
+      "Urolig mage etter å ha svelget en innpakning"
+    ],
+    "it": [
+      "Diarrea o mal di stomaco",
+      "Disturbi intestinali dopo aver ingerito un involucro"
+    ],
+    "de": [
+      "Durchfall oder Magenbeschwerden",
+      "Darmbeschwerden nach dem Verschlucken von Bonbonpapier"
+    ],
+    "fr": [
+      "Diarrhée ou troubles digestifs",
+      "Troubles intestinaux après avoir avalé un emballage"
+    ],
+    "es": [
+      "Diarrea o malestar de estómago",
+      "Molestias intestinales tras tragar un envoltorio"
+    ],
+    "pt": [
+      "Diarreia ou indisposição de estômago",
+      "Irritação intestinal depois de engolir uma embalagem"
+    ],
+    "nl": [
+      "Diarree of maagklachten",
+      "Darmklachten na het inslikken van een verpakking"
+    ],
+    "pl": [
+      "Biegunka lub rozstrój żołądka",
+      "Rozstrój jelit po połknięciu papierka"
     ]
   },
   "what_to_do": {
     "en": "If your cat got into candy or a wrapper, contact your vet or a pet poison helpline for guidance. Call about any chocolate, even a little. Don't wait for signs to appear, and don't try to make your cat sick at home.",
     "sl": "Če je mačka prišla do sladkarij ali ovitka, se za nasvet obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Pokličite zaradi vsake čokolade, tudi majhne količine. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
-    "cs": "Pokud se kočka dostala k bonbonům nebo k obalu, obraťte se pro radu na veterináře nebo na toxikologickou linku pro zvířata. Volejte při jakékoli čokoládě, i malé. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Pokud se kočka dostala k bonbonům nebo k obalu, obraťte se pro radu na veterináře nebo na toxikologickou linku pro zvířata. Volejte při jakékoli čokoládě, i malé. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Ako je mačka dohvatila bombone ili omot, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja za savjet. Nazovi zbog svake čokolade, pa i male količine. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Om din katt har kommit åt godis eller ett godispapper ska du kontakta din veterinär eller giftrådgivningen för djur och be om råd. Ring vid all choklad, även små mängder. Vänta inte på att tecken ska dyka upp, och försök inte få katten att kräkas hemma.",
+    "da": "Hvis din kat har fået fat i slik eller slikpapir, skal du kontakte din dyrlæge eller en giftrådgivning for dyr for at få vejledning. Ring ved enhver mængde chokolade, selv en lille smule. Vent ikke på tegn, og prøv ikke selv at få katten til at kaste op.",
+    "fi": "Jos kissasi pääsi karkkeihin tai nieli karkin kääreen, ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan ohjeita varten. Soita kaikesta suklaasta, vaikka sitä olisi vähänkin. Älä odota oireita äläkä yritä oksennuttaa kissaa itse.",
+    "nb": "Hvis katten har fått i seg godteri eller innpakning, kontakt dyrlegen eller giftinformasjon for dyr for råd. Ring om all sjokolade, selv om det bare er litt. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv.",
+    "it": "Se il tuo gatto ha mangiato caramelle o un involucro, contatta il veterinario o un centro antiveleni veterinario per un consiglio. Se si tratta di cioccolato, chiama sempre, anche se ne ha mangiato pochissimo. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
+    "de": "Ist Ihre Katze an Süßigkeiten oder Verpackungen gekommen, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere und lassen Sie sich beraten. Bei Schokolade rufen Sie immer an, auch bei kleinen Mengen. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Si votre chat a mangé des bonbons ou un emballage, contactez votre vétérinaire ou un centre antipoison vétérinaire pour demander conseil. Appelez dès qu’il a mangé du chocolat, même en petite quantité. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat à la maison.",
+    "es": "Si tu gato ha comido caramelos o un envoltorio, ponte en contacto con tu veterinario o con una línea de información toxicológica para animales para que te orienten. Llama por cualquier cantidad de chocolate, aunque sea poca. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
+    "pt": "Se o teu gato comeu doces ou uma embalagem, contacta o teu veterinário ou uma linha de apoio toxicológico para animais para pedir orientação. Liga sempre que houver chocolate, por pouco que seja. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+    "nl": "Is je kat aan snoep of een snoeppapiertje gekomen, neem dan contact op met je dierenarts of een vergiftigingenlijn voor dieren voor advies. Bel bij chocolade altijd, hoe weinig het ook is. Wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Jeśli twój kot dobrał się do cukierków lub papierka, skontaktuj się z weterynarzem albo zadzwoń na telefon informacji toksykologicznej dla zwierząt, żeby uzyskać wskazówki. Dzwoń nawet po niewielkiej ilości czekolady. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
     "en": "Sweets are for people, not cats. Some can make kitty poorly, so keep your sweets and wrappers tidied away.",
     "sl": "Sladkarije so za ljudi, ne za muce. Nekatere muci škodijo, zato sladkarije in ovitke lepo pospravi.",
-    "cs": "Sladkosti jsou pro lidi, ne pro kočky. Po některých může být kočičce špatně, takže bonbony i obaly pěkně schovávej."
+    "cs": "Sladkosti jsou pro lidi, ne pro kočky. Po některých může být kočičce špatně, takže bonbony i obaly pěkně schovávej.",
+    "hr": "Slatkiši su za ljude, a ne za mačke. Neki mogu razboljeti macu, zato slatkiše i omote drži pospremljene.",
+    "sv": "Godis är till för människor, inte för katter. En del kan göra katten sjuk, så håll godis och godispapper utom räckhåll.",
+    "da": "Slik er til mennesker, ikke til katte. Noget af det kan gøre din kat syg, så læg dit slik og dit slikpapir væk.",
+    "fi": "Makeiset ovat ihmisille, eivät kissoille. Jotkin niistä voivat tehdä kisun sairaaksi, joten pidä karkit ja kääreet siististi poissa sen ulottuvilta.",
+    "nb": "Godteri er for mennesker, ikke for katter. Noe av det kan gjøre pusen dårlig, så ha godteri og innpakning godt gjemt unna.",
+    "it": "I dolciumi sono per le persone, non per i gatti. Alcuni possono far stare male il micio, quindi metti sempre via i dolci e i loro involucri.",
+    "de": "Süßigkeiten sind für Menschen da, nicht für Katzen. Manche können die Katze krank machen, also räum deine Süßigkeiten und das Papier immer gut weg.",
+    "fr": "Les bonbons sont pour les humains, pas pour les chats. Certains peuvent rendre ton chat malade : range bien tes bonbons et leurs emballages.",
+    "es": "Las golosinas son para las personas, no para los gatos. Algunas pueden poner malo al gatito, así que guarda bien tus caramelos y sus envoltorios.",
+    "pt": "Os doces são para as pessoas, não para os gatos. Alguns podem pôr o gatinho doente, por isso guarda bem os teus doces e as embalagens.",
+    "nl": "Snoep is voor mensen, niet voor katten. Sommige soorten kunnen je kat ziek maken, dus ruim je snoep en de papiertjes netjes op.",
+    "pl": "Słodycze są dla ludzi, nie dla kotów. Niektóre mogą zaszkodzić kotkowi, więc chowaj swoje cukierki i papierki."
   },
   "faq": [
     {
       "q": {
         "en": "Is a lick of a sweet an emergency?",
         "sl": "Ali je oblizek sladkarije nujen primer?",
-        "cs": "Je pohotovost, když kočka olízne bonbon?"
+        "cs": "Je pohotovost, když kočka olízne bonbon?",
+        "hr": "Je li jedno lizanje slatkiša hitan slučaj?",
+        "sv": "Är en slick av godis en nödsituation?",
+        "da": "Er det en nødsituation, hvis katten slikker på noget sødt?",
+        "fi": "Onko yksi makeisen nuolaisu hätätilanne?",
+        "nb": "Er det en nødsituasjon hvis katten slikker på godteri?",
+        "it": "Se il gatto lecca un dolce, è un’emergenza?",
+        "de": "Ist es ein Notfall, wenn die Katze an einer Süßigkeit geleckt hat?",
+        "fr": "Un coup de langue sur un bonbon est-il une urgence ?",
+        "es": "¿Es una urgencia que mi gato lama una golosina?",
+        "pt": "Uma lambidela num doce é uma emergência?",
+        "nl": "Is een likje snoep een noodgeval?",
+        "pl": "Czy polizanie cukierka to nagły przypadek?"
       },
       "a": {
         "en": "Usually not. Cats Protection says if your cat accidentally licks a sweet treat, there's no need to rush to the vet. Chocolate is different: call about any chocolate your cat eats.",
         "sl": "Običajno ne. Cats Protection navaja, da ni treba hiteti k veterinarju, če mačka po nesreči obliže sladek priboljšek. Čokolada je izjema: pokličite zaradi vsake čokolade, ki jo mačka poje.",
-        "cs": "Obvykle ne. Cats Protection uvádí, že pokud kočka náhodou olízne sladký pamlsek, není třeba spěchat k veterináři. U čokolády je to jiné: volejte při jakékoli čokoládě, kterou kočka snědla."
+        "cs": "Obvykle ne. Cats Protection uvádí, že pokud kočka náhodou olízne sladký pamlsek, není třeba spěchat k veterináři. U čokolády je to jiné: volejte při jakékoli čokoládě, kterou kočka snědla.",
+        "hr": "Obično nije. Cats Protection navodi da, ako mačka slučajno poliže slatku poslasticu, nema potrebe žuriti veterinaru. Čokolada je druga priča: nazovi zbog svake čokolade koju mačka pojede.",
+        "sv": "Oftast inte. Cats Protection säger att om din katt av misstag slickar på en söt godbit behöver du inte rusa till veterinären. Choklad är annorlunda: ring och fråga om all choklad som din katt äter.",
+        "da": "Som regel ikke. Cats Protection skriver at du ikke behøver at skynde dig til dyrlægen, hvis din kat ved en fejl slikker på noget sødt. Chokolade er noget andet: ring, hvis din kat har spist chokolade, uanset hvor lidt.",
+        "fi": "Yleensä ei. Cats Protectionin mukaan jos kissa nuolaisee vahingossa makeaa herkkua, eläinlääkäriin ei tarvitse rynnätä. Suklaa on eri asia: soita kaikesta suklaasta, jota kissasi syö.",
+        "nb": "Vanligvis ikke. Cats Protection sier at hvis katten ved et uhell slikker på en søt godbit, er det ikke nødvendig å haste til dyrlegen. Sjokolade er noe annet: ring om all sjokolade katten spiser.",
+        "it": "Di solito no. Cats Protection afferma che se il gatto lecca per caso un dolce non serve correre dal veterinario. Con il cioccolato è diverso: chiama il veterinario se il tuo gatto ne ha mangiato, in qualsiasi quantità.",
+        "de": "Meistens nicht. Cats Protection sagt, dass Sie nicht sofort zum Tierarzt eilen müssen, wenn Ihre Katze versehentlich an etwas Süßem leckt. Bei Schokolade ist das anders: Rufen Sie an, sobald Ihre Katze davon gefressen hat, auch bei kleinen Mengen.",
+        "fr": "En général, non. Cats Protection indique que si votre chat lèche accidentellement une friandise sucrée, il n’est pas nécessaire de se précipiter chez le vétérinaire. Le chocolat, lui, est différent : appelez dès que votre chat en a mangé, même un peu.",
+        "es": "Normalmente no. Cats Protection dice que si tu gato lame sin querer una golosina dulce, no hace falta correr al veterinario. El chocolate es distinto: llama por cualquier cantidad de chocolate que coma tu gato.",
+        "pt": "Normalmente não. A Cats Protection diz que, se o teu gato lamber sem querer uma guloseima doce, não é preciso correr ao veterinário. O chocolate é diferente: liga por qualquer chocolate que o teu gato coma.",
+        "nl": "Meestal niet. Volgens Cats Protection hoef je niet meteen naar de dierenarts als je kat per ongeluk aan iets zoets likt. Chocolade is anders: bel altijd als je kat chocolade heeft gegeten.",
+        "pl": "Zwykle nie. Cats Protection podaje, że jeśli kot przypadkowo poliże słodki smakołyk, nie trzeba od razu jechać do weterynarza. Czekolada to co innego: zadzwoń, gdy kot zje jakąkolwiek jej ilość."
       }
     },
     {
       "q": {
         "en": "Why is my cat interested in peppermint candy?",
         "sl": "Zakaj mačko zanimajo mentolovi bonboni?",
-        "cs": "Proč kočku zajímají mátové bonbony?"
+        "cs": "Proč kočku zajímají mátové bonbony?",
+        "hr": "Zašto moju mačku zanimaju bomboni od paprene metvice?",
+        "sv": "Varför är min katt intresserad av pepparmyntsgodis?",
+        "da": "Hvorfor er min kat interesseret i pebermyntebolsjer?",
+        "fi": "Miksi kissani kiinnostuu piparminttukarkista?",
+        "nb": "Hvorfor er katten min interessert i peppermintgodteri?",
+        "it": "Perché il mio gatto è attirato dalle caramelle alla menta?",
+        "de": "Warum interessiert sich meine Katze für Pfefferminzbonbons?",
+        "fr": "Pourquoi mon chat s’intéresse-t-il aux bonbons à la menthe ?",
+        "es": "¿Por qué mi gato se interesa por los caramelos de menta?",
+        "pt": "Porque é que o meu gato se interessa por rebuçados de hortelã-pimenta?",
+        "nl": "Waarom is mijn kat zo nieuwsgierig naar pepermuntsnoep?",
+        "pl": "Dlaczego mój kot interesuje się miętowymi cukierkami?"
       },
       "a": {
         "en": "It's not the sugar. The smell of mint contains compounds like those in catnip, which can attract cats. Mint essential oils are toxic to cats, so keep sweets out of your cat's reach.",
         "sl": "Ne zaradi sladkorja. Vonj mete vsebuje snovi, podobne tistim v mačji meti, ki lahko privabijo mačke. Eterična olja mete so za mačke strupena, zato sladkarije hranite zunaj mačjega dosega.",
-        "cs": "Nejde o cukr. Máta obsahuje vonné látky podobné těm v šantě kočičí, které mohou kočky přitahovat. Silice z máty jsou pro kočky toxické, proto sladkosti uchovávejte mimo dosah kočky."
+        "cs": "Nejde o cukr. Máta obsahuje vonné látky podobné těm v šantě kočičí, které mohou kočky přitahovat. Silice z máty jsou pro kočky toxické, proto sladkosti uchovávejte mimo dosah kočky.",
+        "hr": "Ne zbog šećera. Miris metvice sadrži spojeve slične onima u mačjoj metvici, koji mogu privući mačke. Eterična ulja metvice otrovna su za mačke, zato slatkiše drži izvan dosega mačke.",
+        "sv": "Det är inte sockret. Doften av mynta innehåller ämnen som liknar de som finns i kattmynta, som kan locka katter. Eteriska oljor från mynta är giftiga för katter, så håll godis utom räckhåll för din katt.",
+        "da": "Det er ikke sukkeret. Duften af mynte indeholder stoffer, der ligner dem i katteurt, og som kan tiltrække katte. Æteriske olier fra mynte er giftige for katte, så hold slik uden for din kats rækkevidde.",
+        "fi": "Syy ei ole sokeri. Mintun tuoksussa on yhdisteitä, jotka muistuttavat kissanminttua ja voivat houkutella kissoja. Minttuöljyt ovat kissoille myrkyllisiä, joten pidä makeiset kissan ulottumattomissa.",
+        "nb": "Det er ikke sukkeret. Mynte inneholder stoffer som ligner på dem i katteurt, og lukten kan tiltrekke katter. Eteriske mynteoljer er giftige for katter, så hold godteri utenfor kattens rekkevidde.",
+        "it": "Non è lo zucchero. Nell’odore della menta ci sono composti simili a quelli dell’erba gatta, che possono attirare i gatti. Gli oli essenziali di menta sono tossici per i gatti, quindi tieni i dolciumi fuori dalla loro portata.",
+        "de": "Der Zucker ist es nicht. Der Minzgeruch enthält Stoffe, die denen in Katzenminze ähneln und Katzen anziehen können. Ätherische Minzöle sind für Katzen giftig. Halten Sie Süßigkeiten deshalb außer Reichweite Ihrer Katze.",
+        "fr": "Ce n’est pas le sucre. L’odeur de la menthe contient des composés proches de ceux de l’herbe à chat, qui peuvent attirer les chats. Les huiles essentielles de menthe sont toxiques pour les chats : gardez donc les sucreries hors de leur portée.",
+        "es": "No es por el azúcar. El olor de la menta contiene compuestos parecidos a los de la hierba gatera, que pueden atraer a los gatos. Los aceites esenciales de menta son tóxicos para los gatos, así que mantén las golosinas fuera de su alcance.",
+        "pt": "Não é pelo açúcar. O cheiro da hortelã contém compostos semelhantes aos da erva-gateira, que podem atrair os gatos. Os óleos essenciais de hortelã são tóxicos para os gatos, por isso mantém os doces fora do alcance do teu gato.",
+        "nl": "Het ligt niet aan de suiker. De muntgeur bevat stoffen die lijken op die in kattenkruid, en die kunnen katten aantrekken. Etherische muntolie is giftig voor katten, dus houd snoep buiten het bereik van je kat.",
+        "pl": "To nie przez cukier. Zapach mięty zawiera związki podobne do tych w kocimiętce, które mogą przyciągać koty. Olejki eteryczne z mięty są toksyczne dla kotów, więc trzymaj słodycze poza zasięgiem kota."
       }
     }
   ],
@@ -179,6 +359,66 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e6cb0d30b6394ef373b917a4229a7df4bb5d5f70b008cb0ebab952fd65f3d543"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2aafdc0fe2a6f6cf3a9b4ac12a5dc58d9a86b03b39c64fb8aad4cc4b4821132a"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b59c14143afb7c95c997937e5e2626d3b8fac4bc5f4c41128b97b4750c8d6c49"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fe51b5b61ca445640d17b5b56c62a8682cdc9a51cc1003fc45f0e09d2343a4b4"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a519a63c28814ebf3e2c2d1ece90cefffe1aa5d8655a39f4bc4ad83f18e81b7a"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "42ddae566ff3f65f58e8c599f0f3d46e0c17d4e801e5848c8655991b79bb50bd"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "241acba085e2b1c94fecfcdc83c91939ffc5c924335fea84adc8da8acfb83b5e"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "57663ef86896ef03b5bb63d78c5ae83321872d898e1bde480735a02e54fb8467"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "438f838e62ad1a9ac593921a9eb557edfda116f4023496506bff620921ec9279"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ca2c7289bb2f27d902cc0c5d15789d77ad47e977efdfea4cc1c9e23cb7548a82"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "69e9929449f5325c13bbd0c5a0871a2f0b11bb5d03c7b92db51f7d3557c9fed4"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d1f8bf8bdeb0aade842fcd383f7da2d4359798ef6a7895e7c2f69e4ccdb36be7"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "677f26fa02bfe001bcbe500a89586795808dac02caadabfca42c66705380ee0f"
     }
   }
 }

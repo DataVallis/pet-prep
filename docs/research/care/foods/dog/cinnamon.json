@@ -4,28 +4,88 @@
   "name": {
     "en": "Cinnamon",
     "sl": "Cimet",
-    "cs": "Skořice"
+    "es": "Canela",
+    "cs": "Skořice",
+    "hr": "Cimet",
+    "sv": "Kanel",
+    "da": "Kanel",
+    "fi": "Kaneli",
+    "nb": "Kanel",
+    "it": "Cannella",
+    "de": "Zimt",
+    "fr": "Cannelle",
+    "pt": "Canela",
+    "nl": "Kaneel",
+    "pl": "Cynamon"
   },
   "question": {
     "en": "Can dogs eat cinnamon?",
     "sl": "Ali lahko psi jedo cimet?",
-    "cs": "Mohou psi jíst skořici?"
+    "es": "¿Pueden los perros comer canela?",
+    "cs": "Mohou psi jíst skořici?",
+    "hr": "Smiju li psi jesti cimet?",
+    "sv": "Får hundar äta kanel?",
+    "da": "Må hunde spise kanel?",
+    "fi": "Saako koira syödä kanelia?",
+    "nb": "Kan hunder spise kanel?",
+    "it": "I cani possono mangiare la cannella?",
+    "de": "Dürfen Hunde Zimt fressen?",
+    "fr": "Les chiens peuvent-ils manger de la cannelle ?",
+    "pt": "Os cães podem comer canela?",
+    "nl": "Mogen honden kaneel eten?",
+    "pl": "Czy psy mogą jeść cynamon?"
   },
   "url_slug": {
     "en": "cinnamon",
     "sl": "cimet",
-    "cs": "skorice"
+    "es": "canela",
+    "cs": "skorice",
+    "hr": "cimet",
+    "sv": "kanel",
+    "da": "kanel",
+    "fi": "kaneli",
+    "nb": "kanel",
+    "it": "cannella",
+    "de": "zimt",
+    "fr": "cannelle",
+    "pt": "canela",
+    "nl": "kaneel",
+    "pl": "cynamon"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Cinnamon is not toxic to dogs, but it isn't recommended as a regular treat. A little in baked goods won't hurt, but cinnamon sticks, powder and large amounts can irritate the mouth and stomach, and cinnamon essential oil is riskier.",
     "sl": "Cimet za pse ni strupen, vendar ga ne priporočamo kot reden priboljšek. Malo cimeta v pecivu ne škodi, cimetove palčke, cimet v prahu in večje količine pa lahko razdražijo usta in prebavila, eterično olje cimeta pa je še bolj tvegano.",
-    "cs": "Skořice pro psy není jedovatá, ale jako pravidelný pamlsek se nedoporučuje. Trocha v pečivu neuškodí, ale skořicové tyčinky, prášek a velké množství mohou dráždit tlamu a žaludek a skořicový esenciální olej je rizikovější."
+    "es": "La canela no es tóxica para los perros, pero no se recomienda como premio habitual. Un poco en productos de panadería no hará daño, pero las ramas de canela, la canela en polvo y las cantidades grandes pueden irritar la boca y el estómago, y el aceite esencial de canela es más arriesgado.",
+    "cs": "Skořice pro psy není jedovatá, ale jako pravidelný pamlsek se nedoporučuje. Trocha v pečivu neuškodí, ale skořicové tyčinky, prášek a velké množství mohou dráždit tlamu a žaludek a skořicový esenciální olej je rizikovější.",
+    "hr": "Cimet nije otrovan za pse, ali se ne preporučuje kao redovita poslastica. Malo u pekarskim proizvodima neće naškoditi, ali štapići cimeta, cimet u prahu i veće količine mogu nadražiti usta i želudac, a eterično ulje cimeta rizičnije je.",
+    "sv": "Kanel är inte giftig för hundar, men rekommenderas inte som en vanlig godbit. Lite kanel i bakverk skadar inte, men kanelstänger, kanelpulver och stora mängder kan irritera munnen och magen, och eterisk kanelolja är mer riskabel.",
+    "da": "Kanel er ikke giftigt for hunde, men det anbefales ikke som en fast godbid. Lidt i bagværk skader ikke, men kanelstænger, kanelpulver og store mængder kan irritere mund og mave, og æterisk kanelolie er mere risikabel.",
+    "fi": "Kaneli ei ole koirille myrkyllistä, mutta sitä ei suositella säännölliseksi herkuksi. Vähän kanelia leivonnaisissa ei vahingoita, mutta kanelitangot, kanelijauhe ja suuret määrät voivat ärsyttää suuta ja vatsaa, ja eteerinen kanelöljy on riskialttiimpi.",
+    "nb": "Kanel er ikke giftig for hunder, men det er ikke noe du bør gi som fast godbit. Litt i bakevarer gjør ikke noe, men kanelstenger, kanelpulver og store mengder kan irritere munn og mage, og eterisk kanelolje er mer risikabelt.",
+    "it": "La cannella non è tossica per i cani, ma non è consigliata come premio abituale. Un po’ di cannella in un prodotto da forno non fa male, ma le stecche, la cannella in polvere e le grandi quantità possono irritare bocca e stomaco, e l’olio essenziale di cannella è più rischioso.",
+    "de": "Zimt ist für Hunde nicht giftig, wird aber nicht als regelmäßiges Leckerli empfohlen. Ein wenig in Backwaren schadet nicht, doch Zimtstangen, Zimtpulver und große Mengen können Maul und Magen reizen, und ätherisches Zimtöl ist riskanter.",
+    "fr": "La cannelle n’est pas toxique pour les chiens, mais elle n’est pas recommandée comme friandise régulière. Un peu dans une pâtisserie ne fera pas de mal, mais les bâtons de cannelle, la poudre et les grandes quantités peuvent irriter la bouche et l’estomac, et l’huile essentielle de cannelle est plus risquée.",
+    "pt": "A canela não é tóxica para os cães, mas não é recomendada como guloseima habitual. Um pouco em produtos de pastelaria não faz mal, mas os paus de canela, o pó e as grandes quantidades podem irritar a boca e o estômago, e o óleo essencial de canela é mais arriscado.",
+    "nl": "Kaneel is niet giftig voor honden, maar het wordt niet aangeraden als vast snoepje. Een beetje in bakproducten kan geen kwaad, maar kaneelstokjes, kaneelpoeder en grote hoeveelheden kunnen de mond en de maag irriteren, en etherische kaneelolie is riskanter.",
+    "pl": "Cynamon nie jest toksyczny dla psów, ale nie jest zalecany jako regularny smakołyk. Odrobina cynamonu w wypiekach nie zaszkodzi, jednak laski cynamonu, cynamon w proszku i duże ilości mogą podrażniać pysk i żołądek, a olejek cynamonowy jest bardziej ryzykowny."
   },
   "why": {
     "en": "Chewing cinnamon sticks or eating ground cinnamon can irritate a dog's mouth, and breathing in cinnamon powder can make a dog cough, choke and have difficulty breathing. A large overdose can lead to vomiting, diarrhoea, changes in heart rate, low blood sugar and liver disease. Small dogs may react to smaller amounts, and cinnamon essential oil can be toxic for dogs. Baked goods with cinnamon may also contain xylitol.",
     "sl": "Žvečenje cimetovih palčk ali uživanje mletega cimeta lahko psu razdraži usta, vdihavanje cimeta v prahu pa lahko povzroči kašelj, dušenje in težko dihanje. Zaužitje zelo velike količine cimeta lahko povzroči bruhanje, drisko, spremembe srčnega utripa, nizek krvni sladkor in bolezen jeter. Majhni psi so lahko občutljivi že na manjše količine, eterično olje cimeta pa je lahko za pse strupeno. Pecivo s cimetom lahko vsebuje tudi ksilitol.",
-    "cs": "Žvýkání skořicových tyčinek nebo pojídání mleté skořice může psovi dráždit tlamu a vdechnutí skořicového prášku může způsobit kašel, dušení a potíže s dýcháním. Velké předávkování může vést ke zvracení, průjmu, změnám tepové frekvence, nízké hladině cukru v krvi a onemocnění jater. Malí psi mohou reagovat už na menší množství a skořicový esenciální olej může být pro psy jedovatý. Pečivo se skořicí může obsahovat také xylitol."
+    "es": "Masticar ramas de canela o comer canela molida puede irritar la boca del perro, y respirar canela en polvo puede hacer que tosa, se ahogue y tenga dificultad para respirar. Una sobredosis grande puede provocar vómitos, diarrea, cambios en el ritmo cardíaco, azúcar bajo en la sangre y enfermedad del hígado. Los perros pequeños pueden reaccionar a cantidades menores, y el aceite esencial de canela puede ser tóxico para los perros. Además, los productos de panadería con canela pueden llevar xilitol.",
+    "cs": "Žvýkání skořicových tyčinek nebo pojídání mleté skořice může psovi dráždit tlamu a vdechnutí skořicového prášku může způsobit kašel, dušení a potíže s dýcháním. Velké předávkování může vést ke zvracení, průjmu, změnám tepové frekvence, nízké hladině cukru v krvi a onemocnění jater. Malí psi mohou reagovat už na menší množství a skořicový esenciální olej může být pro psy jedovatý. Pečivo se skořicí může obsahovat také xylitol.",
+    "hr": "Žvakanje štapića cimeta ili jedenje mljevenog cimeta može nadražiti usta psa, a udisanje cimeta u prahu može izazvati kašalj, gušenje i otežano disanje. Veliko predoziranje može dovesti do povraćanja, proljeva, promjena u radu srca, niskog šećera u krvi i bolesti jetre. Mali psi mogu reagirati na manje količine, a eterično ulje cimeta može biti otrovno za pse. Pekarski proizvodi s cimetom mogu sadržavati i ksilitol.",
+    "sv": "Om hunden tuggar på kanelstänger eller äter malen kanel kan munnen bli irriterad, och om den andas in kanelpulver kan den hosta, kvävas och få svårt att andas. En stor överdos kan leda till kräkningar, diarré, förändrad hjärtfrekvens, lågt blodsocker och leversjukdom. Små hundar kan reagera på mindre mängder, och eterisk kanelolja kan vara giftig för hundar. Bakverk med kanel kan dessutom innehålla xylitol.",
+    "da": "Hvis en hund tygger på kanelstænger eller spiser stødt kanel, kan det irritere hundens mund, og hvis den indånder kanelpulver, kan den hoste, få noget galt i halsen og få svært ved at trække vejret. En stor overdosis kan give opkast, diarré, ændringer i pulsen, lavt blodsukker og leversygdom. Små hunde kan reagere på mindre mængder, og æterisk kanelolie kan være giftig for hunde. Bagværk med kanel kan også indeholde xylitol.",
+    "fi": "Kanelitankojen pureskelu tai jauhetun kanelin syöminen voi ärsyttää koiran suuta, ja kanelijauheen hengittäminen voi saada koiran yskimään, tukehtumaan ja hengittämään vaikeasti. Suuri yliannos voi johtaa oksenteluun, ripuliin, sydämen sykkeen muutoksiin, matalaan verensokeriin ja maksasairauteen. Pienet koirat voivat reagoida pienempiin määriin, ja eteerinen kanelöljy voi olla koirille myrkyllistä. Kanelia sisältävissä leivonnaisissa voi olla myös ksylitolia.",
+    "nb": "Å tygge på kanelstenger eller spise malt kanel kan irritere munnen til en hund, og å puste inn kanelpulver kan få hunden til å hoste, kveles og få problemer med å puste. En stor mengde kan føre til oppkast, diaré, endringer i hjerterytmen, lavt blodsukker og leversykdom. Små hunder kan reagere på mindre mengder, og eterisk kanelolje kan være giftig for hunder. Bakevarer med kanel kan også inneholde xylitol.",
+    "it": "Masticare stecche di cannella o mangiare cannella in polvere può irritare la bocca del cane, e inalare la polvere di cannella può far tossire il cane, farlo soffocare e dargli difficoltà a respirare. Un forte sovradosaggio può portare a vomito, diarrea, variazioni del battito cardiaco, calo degli zuccheri nel sangue e malattie del fegato. I cani di piccola taglia possono reagire a quantità minori, e l’olio essenziale di cannella può essere tossico per i cani. I prodotti da forno con cannella possono contenere anche xilitolo.",
+    "de": "Das Kauen von Zimtstangen oder das Fressen von gemahlenem Zimt kann das Maul eines Hundes reizen, und wenn ein Hund Zimtpulver einatmet, kann er husten, würgen und schlecht Luft bekommen. Eine große Überdosis kann zu Erbrechen, Durchfall, Veränderungen der Herzfrequenz, niedrigem Blutzucker und Lebererkrankungen führen. Kleine Hunde reagieren möglicherweise schon auf geringere Mengen, und ätherisches Zimtöl kann für Hunde giftig sein. Backwaren mit Zimt können außerdem Xylit enthalten.",
+    "fr": "Mâcher des bâtons de cannelle ou manger de la cannelle moulue peut irriter la bouche d’un chien, et inhaler de la poudre de cannelle peut le faire tousser, s’étouffer et avoir du mal à respirer. Une forte surdose peut entraîner vomissements, diarrhée, modification du rythme cardiaque, baisse du taux de sucre dans le sang et maladie du foie. Les petits chiens peuvent réagir à de plus faibles quantités, et l’huile essentielle de cannelle peut être toxique pour les chiens. Les pâtisseries à la cannelle peuvent aussi contenir du xylitol.",
+    "pt": "Mastigar paus de canela ou comer canela moída pode irritar a boca do cão, e respirar canela em pó pode fazer o cão tossir, engasgar-se e ter dificuldade em respirar. Uma dose muito grande pode causar vómitos, diarreia, alterações do ritmo cardíaco, açúcar baixo no sangue e doença do fígado. Os cães pequenos podem reagir a quantidades menores, e o óleo essencial de canela pode ser tóxico para os cães. Os produtos de pastelaria com canela também podem conter xilitol.",
+    "nl": "Op kaneelstokjes kauwen of gemalen kaneel eten kan de mond van een hond irriteren, en kaneelpoeder inademen kan een hond doen hoesten en zich laten verslikken en benauwdheid veroorzaken. Een grote overdosis kan leiden tot braken, diarree, veranderingen in de hartslag, een lage bloedsuikerspiegel en leverziekte. Kleine honden kunnen al op kleinere hoeveelheden reageren, en etherische kaneelolie kan giftig zijn voor honden. Bakproducten met kaneel kunnen ook xylitol bevatten.",
+    "pl": "Gryzienie lasek cynamonu lub zjedzenie mielonego cynamonu może podrażnić pysk psa, a wdychanie cynamonu w proszku może wywołać kaszel, zakrztuszenie i trudności z oddychaniem. Poważne przedawkowanie może prowadzić do wymiotów, biegunki, zmian tętna, niskiego poziomu cukru we krwi i choroby wątroby. Małe psy mogą reagować już na mniejsze ilości, a olejek cynamonowy może być dla psów toksyczny. Wypieki z cynamonem mogą też zawierać ksylitol."
   },
   "signs": {
     "en": [
@@ -42,52 +102,220 @@
       "Driska",
       "Spremembe srčnega utripa"
     ],
+    "es": [
+      "Irritación de la boca",
+      "Tos, ahogo o dificultad para respirar (polvo inhalado)",
+      "Vómitos",
+      "Diarrea",
+      "Cambios en el ritmo cardíaco"
+    ],
     "cs": [
       "Podráždění tlamy",
       "Kašel, dušení nebo potíže s dýcháním (vdechnutý prášek)",
       "Zvracení",
       "Průjem",
       "Změny tepové frekvence"
+    ],
+    "hr": [
+      "Nadraženost usta",
+      "Kašalj, gušenje ili otežano disanje (udahnuti prah)",
+      "Povraćanje",
+      "Proljev",
+      "Promjene u radu srca"
+    ],
+    "sv": [
+      "Irriterad mun",
+      "Hosta, kvävning eller svårt att andas (inandat pulver)",
+      "Kräkningar",
+      "Diarré",
+      "Förändrad hjärtfrekvens"
+    ],
+    "da": [
+      "Irritation i munden",
+      "Hoste, kvælningstegn eller besvær med at trække vejret (indåndet pulver)",
+      "Opkast",
+      "Diarré",
+      "Ændringer i pulsen"
+    ],
+    "fi": [
+      "Suun ärsytys",
+      "Yskiminen, tukehtumisen tunne tai hengitysvaikeudet (sisään hengitetty jauhe)",
+      "Oksentelu",
+      "Ripuli",
+      "Sydämen sykkeen muutokset"
+    ],
+    "nb": [
+      "Irritasjon i munnen",
+      "Hoste, kvelning eller pustevansker (innpustet pulver)",
+      "Oppkast",
+      "Diaré",
+      "Endringer i hjerterytmen"
+    ],
+    "it": [
+      "Irritazione della bocca",
+      "Tosse, sensazione di soffocamento o difficoltà a respirare (polvere inalata)",
+      "Vomito",
+      "Diarrea",
+      "Variazioni del battito cardiaco"
+    ],
+    "de": [
+      "Reizung im Maul",
+      "Husten, Würgen oder Atembeschwerden (eingeatmetes Pulver)",
+      "Erbrechen",
+      "Durchfall",
+      "Veränderungen der Herzfrequenz"
+    ],
+    "fr": [
+      "Irritation de la bouche",
+      "Toux, étouffement ou difficulté à respirer (poudre inhalée)",
+      "Vomissements",
+      "Diarrhée",
+      "Modification du rythme cardiaque"
+    ],
+    "pt": [
+      "Irritação na boca",
+      "Tosse, engasgo ou dificuldade em respirar (pó inalado)",
+      "Vómitos",
+      "Diarreia",
+      "Alterações do ritmo cardíaco"
+    ],
+    "nl": [
+      "Geïrriteerde mond",
+      "Hoesten, zich verslikken of benauwdheid (ingeademd poeder)",
+      "Braken",
+      "Diarree",
+      "Veranderingen in de hartslag"
+    ],
+    "pl": [
+      "Podrażnienie pyska",
+      "Kaszel, zakrztuszenie lub trudności z oddychaniem (wdychany proszek)",
+      "Wymioty",
+      "Biegunka",
+      "Zmiany tętna"
     ]
   },
   "what_to_do": {
     "en": "If your dog eats a large amount of cinnamon, you don't need to panic, but do call your vet.",
     "sl": "Če pes poje veliko cimeta, ni razloga za paniko, vseeno pa pokličite veterinarja.",
-    "cs": "Pokud pes snědl velké množství skořice, nemusíte panikařit, ale zavolejte veterináři."
+    "es": "Si tu perro come una cantidad grande de canela, no hace falta que entres en pánico, pero llama a tu veterinario.",
+    "cs": "Pokud pes snědl velké množství skořice, nemusíte panikařit, ale zavolejte veterináři.",
+    "hr": "Ako pas pojede veliku količinu cimeta, nema potrebe za panikom, ali nazovi veterinara.",
+    "sv": "Om din hund äter en stor mängd kanel behöver du inte få panik, men kontakta din veterinär.",
+    "da": "Hvis din hund spiser en stor mængde kanel, behøver du ikke gå i panik, men du bør ringe til din dyrlæge.",
+    "fi": "Jos koirasi syö suuren määrän kanelia, ei tarvitse panikoida, mutta soita eläinlääkärille.",
+    "nb": "Hvis hunden spiser en stor mengde kanel, trenger du ikke få panikk, men du bør kontakte dyrlegen.",
+    "it": "Se il tuo cane mangia molta cannella non serve farsi prendere dal panico, ma chiama comunque il veterinario.",
+    "de": "Frisst Ihr Hund eine große Menge Zimt, müssen Sie nicht in Panik verfallen, sollten aber Ihren Tierarzt anrufen.",
+    "fr": "Si votre chien mange une grande quantité de cannelle, inutile de paniquer, mais appelez votre vétérinaire.",
+    "pt": "Se o teu cão comer muita canela, não precisas de entrar em pânico, mas liga ao teu veterinário.",
+    "nl": "Eet je hond een grote hoeveelheid kaneel, dan hoef je niet in paniek te raken, maar bel wel je dierenarts.",
+    "pl": "Jeśli pies zje dużo cynamonu, nie panikuj, ale zadzwoń do weterynarza."
   },
   "serving": {
     "en": "If you share a baked treat with cinnamon: only a small piece, rarely, and never one sweetened with xylitol.",
     "sl": "Če psu daste pecivo s cimetom: le majhen košček, redko in nikoli pecivo, sladkano s ksilitolom.",
-    "cs": "Pokud se se psem podělíte o pečivo se skořicí: jen malý kousek, málokdy a nikdy pečivo oslazené xylitolem."
+    "es": "Si compartes un dulce horneado con canela: solo un trocito pequeño, rara vez, y nunca uno endulzado con xilitol.",
+    "cs": "Pokud se se psem podělíte o pečivo se skořicí: jen malý kousek, málokdy a nikdy pečivo oslazené xylitolem.",
+    "hr": "Ako s psom dijeliš pekarski proizvod s cimetom: samo mali komadić, rijetko, i nikad onaj zasladen ksilitolom.",
+    "sv": "Om du delar ett bakverk med kanel: bara en liten bit, sällan, och aldrig ett som är sötat med xylitol.",
+    "da": "Hvis du deler et bagt stykke med kanel: kun et lille stykke, sjældent, og aldrig et, der er sødet med xylitol.",
+    "fi": "Jos jaat kanelilla maustetun leivonnaisen: vain pieni pala, harvoin, eikä koskaan ksylitolilla makeutettua.",
+    "nb": "Hvis du deler en bakevare med kanel: bare en liten bit, sjelden, og aldri en som er søtet med xylitol.",
+    "it": "Se gli dai un dolcetto da forno alla cannella: solo un pezzettino, raramente, e mai uno dolcificato con xilitolo.",
+    "de": "Wenn Sie ein Gebäck mit Zimt teilen: nur ein kleines Stück, selten, und niemals eines, das mit Xylit gesüßt ist.",
+    "fr": "Si vous partagez une pâtisserie à la cannelle : seulement un petit morceau, rarement, et jamais une pâtisserie sucrée au xylitol.",
+    "pt": "Se partilhares uma guloseima de pastelaria com canela: só um pedacinho, raramente, e nunca uma adoçada com xilitol.",
+    "nl": "Deel je iets uit de oven met kaneel? Geef dan alleen een klein stukje, zelden, en nooit iets met xylitol.",
+    "pl": "Jeśli częstujesz psa wypiekiem z cynamonem: tylko mały kawałek, rzadko i nigdy taki, który jest słodzony ksylitolem."
   },
   "child": {
     "en": "Cinnamon is a spice for people. Don't let your dog lick cinnamon powder or chew cinnamon sticks, because they can make its mouth sore.",
     "sl": "Cimet je začimba za ljudi. Psu ne dovoli lizati cimeta v prahu ali žvečiti cimetovih palčk, ker ga lahko zaboli v gobčku.",
-    "cs": "Skořice je koření pro lidi. Nenech psa olizovat skořicový prášek ani žvýkat skořicové tyčinky, protože by ho mohla bolet tlama."
+    "es": "La canela es una especia para las personas. No dejes que tu perro lama canela en polvo ni mastique ramas de canela, porque le pueden irritar la boca.",
+    "cs": "Skořice je koření pro lidi. Nenech psa olizovat skořicový prášek ani žvýkat skořicové tyčinky, protože by ho mohla bolet tlama.",
+    "hr": "Cimet je začin za ljude. Ne daj psu da liže cimet u prahu ni da žvače štapiće cimeta, jer mu mogu zaboljeti usta.",
+    "sv": "Kanel är en krydda för människor. Låt inte din hund slicka i sig kanelpulver eller tugga på kanelstänger, för då kan munnen bli öm.",
+    "da": "Kanel er et krydderi til mennesker. Lad ikke din hund slikke på kanelpulver eller tygge på kanelstænger, for det kan gøre dens mund øm.",
+    "fi": "Kaneli on mauste ihmisille. Älä anna koiran nuolla kanelijauhetta tai pureskella kanelitankoja, sillä ne voivat tehdä sen suusta kipeän.",
+    "nb": "Kanel er et krydder for mennesker. Ikke la hunden slikke kanelpulver eller tygge på kanelstenger, for det kan gjøre munnen øm.",
+    "it": "La cannella è una spezia per le persone. Non lasciare che il tuo cane lecchi la cannella in polvere o mastichi le stecche: possono fargli male alla bocca.",
+    "de": "Zimt ist ein Gewürz für Menschen. Lass deinen Hund kein Zimtpulver lecken und keine Zimtstangen kauen, denn davon kann sein Maul wehtun.",
+    "fr": "La cannelle est une épice pour les humains. Ne laisse pas ton chien lécher de la poudre de cannelle ni mâcher des bâtons : cela peut lui blesser la bouche.",
+    "pt": "A canela é um tempero para as pessoas. Não deixes o teu cão lamber canela em pó nem mastigar paus de canela, porque lhe podem magoar a boca.",
+    "nl": "Kaneel is een kruid voor mensen. Laat je hond niet aan kaneelpoeder likken of op kaneelstokjes kauwen, want daar kan hij een zere mond van krijgen.",
+    "pl": "Cynamon to przyprawa dla ludzi. Nie pozwalaj psu lizać cynamonu w proszku ani gryźć lasek cynamonu, bo mogą mu podrażnić pysk."
   },
   "faq": [
     {
       "q": {
         "en": "Can my dog have a cinnamon cookie?",
         "sl": "Ali lahko pes poje piškot s cimetom?",
-        "cs": "Může pes dostat skořicovou sušenku?"
+        "es": "¿Puede mi perro comer una galleta de canela?",
+        "cs": "Může pes dostat skořicovou sušenku?",
+        "hr": "Smije li moj pas jesti keks s cimetom?",
+        "sv": "Får min hund äta en kanelkaka?",
+        "da": "Må min hund få en småkage med kanel?",
+        "fi": "Saako koirani kanelikeksin?",
+        "nb": "Kan hunden min få en kanelkjeks?",
+        "it": "Il mio cane può mangiare un biscotto alla cannella?",
+        "de": "Darf mein Hund einen Zimtkeks haben?",
+        "fr": "Mon chien peut-il manger un biscuit à la cannelle ?",
+        "pt": "O meu cão pode comer uma bolacha de canela?",
+        "nl": "Mag mijn hond een kaneelkoekje?",
+        "pl": "Czy mój pies może zjeść ciasteczko z cynamonem?"
       },
       "a": {
         "en": "A little cinnamon, like the amount in most baked goods, won't hurt your dog, but feed baked goods only in small amounts and rarely. Some contain xylitol, which is very toxic.",
         "sl": "Malo cimeta, kot ga je v večini peciva, psu ne bo škodilo, vendar mu pecivo dajte le v majhnih količinah in redko. Nekatero pecivo vsebuje ksilitol, ki je zelo strupen.",
-        "cs": "Trocha skořice, jaká bývá ve většině pečiva, psovi neublíží, ale pečivo dávejte jen v malém množství a málokdy. Některé pečivo obsahuje xylitol, který je velmi jedovatý."
+        "es": "Un poco de canela, como la cantidad que llevan la mayoría de los productos de panadería, no le hará daño a tu perro, pero da productos de panadería solo en cantidades pequeñas y rara vez. Algunos llevan xilitol, que es muy tóxico.",
+        "cs": "Trocha skořice, jaká bývá ve většině pečiva, psovi neublíží, ale pečivo dávejte jen v malém množství a málokdy. Některé pečivo obsahuje xylitol, který je velmi jedovatý.",
+        "hr": "Malo cimeta, poput količine u većini pekarskih proizvoda, neće naškoditi psu, ali pekarske proizvode daj samo u malim količinama i rijetko. Neki sadrže ksilitol, koji je vrlo otrovan.",
+        "sv": "Lite kanel, som mängden i de flesta bakverk, skadar inte din hund, men ge bakverk bara i små mängder och sällan. Vissa innehåller xylitol, som är mycket giftigt.",
+        "da": "Lidt kanel, som i det meste bagværk, skader ikke din hund, men giv kun bagværk i små mængder og sjældent. Noget indeholder xylitol, som er meget giftigt.",
+        "fi": "Vähän kanelia, kuten useimmissa leivonnaisissa, ei vahingoita koiraasi, mutta anna leivonnaisia vain pieniä määriä ja harvoin. Joissakin on ksylitolia, joka on erittäin myrkyllistä.",
+        "nb": "Litt kanel, slik som i de fleste bakevarer, gjør ikke hunden noe, men gi bakevarer bare i små mengder og sjelden. Noen inneholder xylitol, som er veldig giftig.",
+        "it": "Un po’ di cannella, nella quantità presente nella maggior parte dei prodotti da forno, non fa male al tuo cane, ma dai i prodotti da forno solo in piccole quantità e raramente. Alcuni contengono xilitolo, che è molto tossico.",
+        "de": "Ein wenig Zimt, wie er in den meisten Backwaren steckt, schadet Ihrem Hund nicht, aber geben Sie Backwaren nur in kleinen Mengen und selten. Manche enthalten Xylit, das sehr giftig ist.",
+        "fr": "Un peu de cannelle, comme la quantité présente dans la plupart des pâtisseries, ne fera pas de mal à votre chien, mais ne donnez des pâtisseries qu’en petite quantité et rarement. Certaines contiennent du xylitol, très toxique.",
+        "pt": "Um pouco de canela, como a quantidade da maioria dos produtos de pastelaria, não faz mal ao teu cão, mas dá produtos de pastelaria só em pequenas quantidades e raramente. Alguns contêm xilitol, que é muito tóxico.",
+        "nl": "Een beetje kaneel, zoals in de meeste bakproducten, kan je hond geen kwaad, maar geef bakproducten alleen in kleine hoeveelheden en zelden. In sommige zit xylitol, en dat is zeer giftig.",
+        "pl": "Odrobina cynamonu, taka jak w większości wypieków, nie zaszkodzi psu, ale wypieki dawaj tylko w małych ilościach i rzadko. Niektóre zawierają ksylitol, który jest bardzo toksyczny."
       }
     },
     {
       "q": {
         "en": "Is cinnamon essential oil dangerous for dogs?",
         "sl": "Ali je eterično olje cimeta za pse nevarno?",
-        "cs": "Je skořicový esenciální olej pro psy nebezpečný?"
+        "es": "¿Es peligroso el aceite esencial de canela para los perros?",
+        "cs": "Je skořicový esenciální olej pro psy nebezpečný?",
+        "hr": "Je li eterično ulje cimeta opasno za pse?",
+        "sv": "Är eterisk kanelolja farlig för hundar?",
+        "da": "Er æterisk kanelolie farlig for hunde?",
+        "fi": "Onko eteerinen kanelöljy vaarallista koirille?",
+        "nb": "Er eterisk kanelolje farlig for hunder?",
+        "it": "L’olio essenziale di cannella è pericoloso per i cani?",
+        "de": "Ist ätherisches Zimtöl für Hunde gefährlich?",
+        "fr": "L’huile essentielle de cannelle est-elle dangereuse pour les chiens ?",
+        "pt": "O óleo essencial de canela é perigoso para os cães?",
+        "nl": "Is etherische kaneelolie gevaarlijk voor honden?",
+        "pl": "Czy olejek cynamonowy jest niebezpieczny dla psów?"
       },
       "a": {
         "en": "Yes. Cinnamon essential oil can be toxic for dogs and poses a higher risk than ground cinnamon or sticks.",
         "sl": "Da. Eterično olje cimeta je lahko za pse strupeno in je bolj tvegano kot mleti cimet ali palčke.",
-        "cs": "Ano. Skořicový esenciální olej může být pro psy jedovatý a je rizikovější než mletá skořice nebo skořicové tyčinky."
+        "es": "Sí. El aceite esencial de canela puede ser tóxico para los perros y supone un riesgo mayor que la canela molida o en rama.",
+        "cs": "Ano. Skořicový esenciální olej může být pro psy jedovatý a je rizikovější než mletá skořice nebo skořicové tyčinky.",
+        "hr": "Da. Eterično ulje cimeta može biti otrovno za pse i nosi veći rizik od mljevenog cimeta ili štapića.",
+        "sv": "Ja. Eterisk kanelolja kan vara giftig för hundar och innebär en högre risk än malen kanel eller kanelstänger.",
+        "da": "Ja. Æterisk kanelolie kan være giftig for hunde og udgør en højere risiko end stødt kanel eller kanelstænger.",
+        "fi": "On. Eteerinen kanelöljy voi olla koirille myrkyllistä, ja siihen liittyy suurempi riski kuin jauhettuun kaneliin tai kanelitankoihin.",
+        "nb": "Ja. Eterisk kanelolje kan være giftig for hunder og er mer risikabel enn malt kanel eller kanelstenger.",
+        "it": "Sì. L’olio essenziale di cannella può essere tossico per i cani e comporta un rischio maggiore rispetto alla cannella in polvere o in stecche.",
+        "de": "Ja. Ätherisches Zimtöl kann für Hunde giftig sein und birgt ein höheres Risiko als gemahlener Zimt oder Zimtstangen.",
+        "fr": "Oui. L’huile essentielle de cannelle peut être toxique pour les chiens et présente un risque plus élevé que la cannelle moulue ou en bâtons.",
+        "pt": "Sim. O óleo essencial de canela pode ser tóxico para os cães e representa um risco maior do que a canela moída ou em pau.",
+        "nl": "Ja. Etherische kaneelolie kan giftig zijn voor honden en brengt een groter risico met zich mee dan gemalen kaneel of kaneelstokjes.",
+        "pl": "Tak. Olejek cynamonowy może być toksyczny dla psów i stwarza większe ryzyko niż mielony cynamon lub laski cynamonu."
       }
     }
   ],
@@ -171,10 +399,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "b3beaeb32c1f58a4edb27c308d62d26004b080165bff37196442dbfb62b9e88a"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8b0f7350210dbf3bf6e710a8e4d0de2df5504258f24e29b3fa19992ac1c7e95c"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d77361b54df75f894e0aafa4d7046e6588a26366fdf4abf61fc09dc1cd2f658b"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3cf5010d8af390cce7c1f412e09164ab0c28569ea6534f4e5898b04788932e55"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0573bc3ffea1b4f9580340a439bec10a022e71c5f5d49b147fcba6f1faafbc94"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "75b9f68ab5efdfe4db7c23f87fcb7daccd56eae364b5aaaa1733da6507151af4"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf4328c637d4ad39ff6f71a00c0f3568b4451155e1d6d2d366a014d0194d30c5"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a85e0d699f88df1653d58d8301045883aaacdf0da97ab98215767852aa440a6d"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9a45f6f117fa9f4c8a66575bef88c1beddc4043b06b230a016af5048cb0af88d"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bcca6c881ce6e9edf8b8c35f311db0be7b00e2342977c736abbfd523af855559"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c8d6786df46e6cf2268a77678193ca0815d39a4967e9c8262b1bf2deeca23a3f"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6406780db4594fc7d3f03f9b9ee0bd794c6590d5f7ee7aaf6b9197544605fadd"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5f549ea60a0a97d54dfa4268e6c275072376721664935060dc5ec858d2246449"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "50c916078db57467ea2e505c9c585d3b29a37f5bf47bb0c8b7c2e70d645fc18a"
     }
   }
 }

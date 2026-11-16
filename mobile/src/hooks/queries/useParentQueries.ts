@@ -21,6 +21,8 @@ import {
   type PetNameResponse,
   type UpdateFamilySettingsResponse,
   type UpdatePetTimezoneResponse,
+  type UpdatePetQuietHoursRequest,
+  type UpdatePetQuietHoursResponse,
 } from '@/api/client';
 import {
   childReportKey,
@@ -169,6 +171,21 @@ export function useUpdatePetTimezone() {
   const queryClient = useQueryClient();
   return useMutation<UpdatePetTimezoneResponse, unknown, { petId: number; timezone: string | null }>({
     mutationFn: ({ petId, timezone }) => api.updatePetTimezone(petId, timezone),
+    retry: false,
+    onSuccess: () => {
+      void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
+    },
+  });
+}
+
+/**
+ * Quiet hours per pet (David 2026-11-16): the pet's own schedule, or null = »Kot družina«.
+ * Not optimistic; refetches the dashboard (the server broadcasts `pet_quiet_hours_changed`).
+ */
+export function useUpdatePetQuietHours() {
+  const queryClient = useQueryClient();
+  return useMutation<UpdatePetQuietHoursResponse, unknown, { petId: number; quietHours: UpdatePetQuietHoursRequest['quiet_hours'] }>({
+    mutationFn: ({ petId, quietHours }) => api.updatePetQuietHours(petId, quietHours),
     retry: false,
     onSuccess: () => {
       void queryClient.invalidateQueries({ queryKey: parentDashboardKey });

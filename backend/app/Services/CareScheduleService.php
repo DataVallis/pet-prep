@@ -498,7 +498,7 @@ class CareScheduleService
     }
 
     /**
-     * A feed window that lies entirely inside the family's quiet hours
+     * A feed window that lies entirely inside the pet's quiet hours (own or the family's)
      * (school / sleep): the parent feeds the dog (M5-R01, David 2026-10-05).
      */
     public function isParentCovered(?QuietHours $quiet, CarbonInterface $start, CarbonInterface $end): bool
@@ -565,6 +565,92 @@ class CareScheduleService
         }
 
         return $due;
+    }
+
+    /**
+     * Hunger floor until the next meal (David 2026-11-15, PRODUCT_SPEC §5): the
+     * floor in percent — `config('feeding.hunger_floor_percent')`, the same for
+     * every breed and species; 0 switches the rule off.
+     */
+    public static function hungerFloor(): float
+    {
+        return max(0.0, min(100.0, (float) config('feeding.hunger_floor_percent', 25)));
+    }
+
+    /**
+     * The facts the decay tick needs for the hunger floor over ($from, $to]:
+     *  - `governing`: the CHILD window (parent-covered ones are skipped, like
+     *    rule A in feeding()) with the latest start ≤ $from, as
+     *    [start, end, countsFrom] — null when none started in the scanned days;
+     *  - `starts`: the child windows that START in ($from, $to], oldest first;
+     *  - `lastFedAt`: the pet's latest fed_pet / parent_fed_pet row ≤ $from.
+     * See hungerFloorActive() for the rule itself.
+     *
+     * @return array{governing: array{0: CarbonImmutable, 1: CarbonImmutable, 2: CarbonImmutable}|null, starts: list<array{0: CarbonImmutable, 1: CarbonImmutable, 2: CarbonImmutable}>, lastFedAt: CarbonImmutable|null}
+     */
+    public function hungerFloorFacts(Pet $pet, BreedConfig $config, CarbonInterface $from, CarbonInterface $to, ?QuietHours $quiet): array
+    {
+        $tz = $pet->effectiveTimezone();
+        $from = CarbonImmutable::instance($from)->setTimezone($tz);
+        $to = CarbonImmutable::instance($to)->setTimezone($tz);
+
+        // Two local days before $from: the governing window (also one that runs
+        // over midnight) and the previous end its countsFrom needs.
+        $firstDate = CarbonImmutable::parse($from->toDateString(), 'UTC')->subDays(2)->toDateString();
+        $lastDate = $to->toDateString();
+
+        $governing = null;
+        $starts = [];
+        $previousEnd = null;
+        for ($date = $firstDate; $date <= $lastDate; $date = CarbonImmutable::parse($date, 'UTC')->addDay()->toDateString()) {
+            foreach ($this->feedWindowsStartingOn($pet, $config, $date) as [$start, $end]) {
+                $countsFrom = $this->mealCountsFrom($start, $previousEnd);
+                $previousEnd = $previousEnd === null || $end->greaterThan($previousEnd) ? $end : $previousEnd;
+                if ($start->greaterThan($to) || $this->isParentCoveredFor($pet, $quiet, $start, $end)) {
+                    continue;
+                }
+                if ($start->lessThanOrEqualTo($from)) {
+                    $governing = [$start, $end, $countsFrom];
+                } else {
+                    $starts[] = [$start, $end, $countsFrom];
+                }
+            }
+        }
+
+        $lastFed = ActivityLog::where('pet_id', $pet->id)
+            ->whereIn('activity_type', array_map(fn (ActivityType $t) => $t->value, self::FED_TYPES))
+            ->where('created_at', '<=', $from->utc())
+            ->orderByDesc('created_at')
+            ->orderByDesc('id')
+            ->value('created_at');
+
+        return ['governing' => $governing, 'starts' => $starts, 'lastFedAt' => $this->instant($lastFed, $tz)];
+    }
+
+    /**
+     * Hunger floor until the next meal (David 2026-11-15 »Izberem št. 1 in mejo
+     * 25 %«): does the floor hold while $window is the latest child window that
+     * has started? Yes when the pet's meal obligation is met —
+     *  - no child window has started yet, or it started before the birth (the
+     *    first hours of a pet born at 100 %), or
+     *  - something was fed since that window's countsFrom: the child in the
+     *    window, an emergency meal that covers it (David 2026-10-20), an
+     *    emergency meal after it, or a parent meal (`parent_fed_pet`).
+     * No while that window is open and not fed yet, or ended missed — exactly
+     * the two cases in which the child CAN feed (meal window / emergency meal,
+     * rule A in feeding()): the floor holds precisely while feeding is refused
+     * through no fault of the child. The next child window's start makes it the
+     * governing one, so the floor is gone from the moment it opens.
+     *
+     * @param  array{0: CarbonImmutable, 1: CarbonImmutable, 2: CarbonImmutable}|null  $window  [start, end, countsFrom]
+     */
+    public function hungerFloorActive(Pet $pet, ?array $window, ?CarbonInterface $lastFedAt): bool
+    {
+        if ($window === null || $pet->born_at === null || $window[0]->lessThan($pet->born_at)) {
+            return true;
+        }
+
+        return $lastFedAt !== null && $window[2]->lessThanOrEqualTo($lastFedAt);
     }
 
     /**

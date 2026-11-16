@@ -1,0 +1,350 @@
+{
+  "slug": "chickpeas",
+  "species": "dog",
+  "name": {
+    "en": "Chickpeas",
+    "sl": "Čičerika",
+    "de": "Kichererbsen",
+    "es": "Garbanzos",
+    "it": "Ceci",
+    "pt": "Grão-de-bico",
+    "nl": "Kikkererwten",
+    "pl": "Ciecierzyca",
+    "cs": "Cizrna",
+    "hr": "Slanutak",
+    "sv": "Kikärtor",
+    "da": "Kikærter",
+    "fi": "Kikherneet",
+    "fr": "Pois chiches",
+    "nb": "Kikerter"
+  },
+  "question": {
+    "en": "Can dogs eat chickpeas?",
+    "sl": "Ali lahko psi jedo čičeriko?",
+    "de": "Dürfen Hunde Kichererbsen fressen?",
+    "es": "¿Pueden los perros comer garbanzos?",
+    "it": "I cani possono mangiare i ceci?",
+    "pt": "Os cães podem comer grão-de-bico?",
+    "nl": "Mogen honden kikkererwten eten?",
+    "pl": "Czy psy mogą jeść ciecierzycę?",
+    "cs": "Mohou psi jíst cizrnu?",
+    "hr": "Smiju li psi jesti slanutak?",
+    "sv": "Får hundar äta kikärtor?",
+    "da": "Må hunde spise kikærter?",
+    "fi": "Saako koira syödä kikherneitä?",
+    "fr": "Les chiens peuvent-ils manger des pois chiches ?",
+    "nb": "Kan hunder spise kikerter?"
+  },
+  "url_slug": {
+    "en": "chickpeas",
+    "sl": "cicerika",
+    "de": "kichererbsen",
+    "es": "garbanzos",
+    "it": "ceci",
+    "pt": "grao-de-bico",
+    "nl": "kikkererwten",
+    "pl": "ciecierzyca",
+    "cs": "cizrna",
+    "hr": "slanutak",
+    "sv": "kikartor",
+    "da": "kikaerter",
+    "fi": "kikherneet",
+    "fr": "pois-chiches",
+    "nb": "kikerter"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation, if they are thoroughly cooked. Freshly cooked chickpeas (garbanzo beans) can be a treat for dogs. Dry chickpeas are a choking hazard, canned ones are usually salty, and hummus is not safe for dogs.",
+    "sl": "Da, zmerno, če je dobro kuhana. Sveže kuhana čičerika je lahko priboljšek za psa. Suha čičerika lahko povzroči dušenje, konzervirana je običajno slana, humus pa za pse ni varen.",
+    "de": "Ja, in Maßen, wenn sie gründlich gekocht sind. Frisch gekochte Kichererbsen können ein Leckerli für Hunde sein. Getrocknete Kichererbsen bergen Erstickungsgefahr, Kichererbsen aus der Dose sind meist gesalzen, und Hummus ist für Hunde nicht sicher.",
+    "es": "Sí, con moderación y bien cocidos. Los garbanzos recién cocinados pueden ser un premio para los perros. Los garbanzos secos son un peligro de atragantamiento, los de lata suelen llevar mucha sal y el hummus no es seguro para los perros.",
+    "it": "Sì, con moderazione, se sono ben cotti. I ceci appena cotti possono essere un premio per i cani. I ceci secchi sono un rischio di soffocamento, quelli in scatola di solito sono salati e l’hummus non è sicuro per i cani.",
+    "pt": "Sim, com moderação, se estiver bem cozido. O grão-de-bico acabado de cozer pode ser uma guloseima para os cães. O grão-de-bico seco é um risco de engasgo, o de conserva costuma ser salgado e o hummus não é seguro para os cães.",
+    "nl": "Ja, met mate, als ze goed gaar zijn. Vers gekookte kikkererwten kunnen een snoepje zijn voor honden. Droge kikkererwten zijn een verstikkingsgevaar, kikkererwten uit blik zijn meestal zout en hummus is niet veilig voor honden.",
+    "pl": "Tak, z umiarem, jeśli jest dokładnie ugotowana. Świeżo ugotowana ciecierzyca (cieciorka) może być smakołykiem dla psów. Sucha ciecierzyca grozi zadławieniem, ta z puszki jest zwykle słona, a hummus nie jest bezpieczny dla psów.",
+    "cs": "Ano, s mírou, pokud je dobře uvařená. Čerstvě uvařená cizrna může být pro psy pamlskem. Suchá cizrna představuje riziko udušení, ta z konzervy bývá slaná a hummus pro psy bezpečný není.",
+    "hr": "Da, umjereno, ako je temeljito kuhan. Svježe kuhan slanutak može biti poslastica za pse. Suh slanutak može izazvati gušenje, konzervirani je obično slan, a humus nije siguran za pse.",
+    "sv": "Ja, i måttliga mängder, om de är ordentligt kokta. Nykokta kikärtor kan vara en godbit för hundar. Torra kikärtor kan orsaka kvävning, kikärtor på burk är oftast salta och hummus är inte ofarligt för hundar.",
+    "da": "Ja, i moderate mængder, hvis de er grundigt tilberedt. Nytilberedte kikærter kan være en godbid til hunde. Tørre kikærter kan sætte sig fast i halsen, kikærter på dåse er som regel salte, og hummus er ikke sikker for hunde.",
+    "fi": "Saa, kohtuudella, jos ne on keitetty kunnolla. Vastakeitetyt kikherneet voivat olla koiralle herkku. Kuivat kikherneet ovat tukehtumisvaara, säilykekikherneet ovat yleensä suolaisia, eikä humus ole koiralle turvallista.",
+    "fr": "Oui, avec modération, s’ils sont bien cuits. Les pois chiches fraîchement cuits peuvent être une friandise pour les chiens. Les pois chiches secs présentent un risque d’étouffement, ceux en conserve sont généralement salés, et le houmous n’est pas sans danger pour les chiens.",
+    "nb": "Ja, med måte, hvis de er godt kokte. Nykokte kikerter kan være en godbit for hunder. Tørre kikerter er en kvelningsfare, hermetiske er vanligvis salte, og hummus er ikke trygg for hunder."
+  },
+  "why": {
+    "en": "Chickpeas are legumes, a good source of fibre and protein for dogs, but some dogs have trouble digesting them, so they should be cooked well and introduced slowly. Dry chickpeas are much harder to digest. Canned chickpeas usually contain a lot of sodium, which is not healthy for dogs. Like other beans, chickpeas may give your dog some gas.",
+    "sl": "Čičerika je stročnica in za pse dober vir vlaknin in beljakovin, a jo nekateri psi težko prebavijo, zato jo je treba dobro skuhati in uvajati počasi. Suha čičerika je precej težje prebavljiva. Konzervirana čičerika običajno vsebuje veliko natrija, kar za pse ni zdravo. Kot drug fižol lahko tudi čičerika psu povzroči nekaj vetrov.",
+    "de": "Kichererbsen sind Hülsenfrüchte und eine gute Quelle für Ballaststoffe und Eiweiß, aber manche Hunde tun sich schwer damit, sie zu verdauen. Deshalb sollten sie gut gekocht und nur nach und nach gefüttert werden. Getrocknete Kichererbsen sind viel schwerer verdaulich. Kichererbsen aus der Dose enthalten meist viel Natrium, das für Hunde nicht gesund ist. Wie andere Bohnen können Kichererbsen bei Ihrem Hund Blähungen verursachen.",
+    "es": "Los garbanzos son legumbres y una buena fuente de fibra y proteínas para los perros, pero a algunos les cuesta digerirlos, así que hay que cocinarlos bien e introducirlos poco a poco. Los garbanzos secos son mucho más difíciles de digerir. Los de lata suelen llevar mucho sodio, que no es saludable para los perros. Como otras legumbres, los garbanzos pueden provocarle algunos gases a tu perro.",
+    "it": "I ceci sono legumi, una buona fonte di fibre e proteine per i cani, ma alcuni cani li digeriscono con difficoltà, quindi vanno cotti bene e introdotti gradualmente. I ceci secchi sono molto più difficili da digerire. I ceci in scatola di solito contengono molto sodio, che non fa bene ai cani. Come altri legumi, i ceci possono causare un po’ di flatulenza al tuo cane.",
+    "pt": "O grão-de-bico é uma leguminosa, uma boa fonte de fibra e proteína para os cães, mas alguns cães têm dificuldade em digeri-lo, por isso deve estar bem cozido e ser introduzido aos poucos. O grão-de-bico seco é muito mais difícil de digerir. O grão-de-bico de conserva costuma ter muito sódio, que não é saudável para os cães. Tal como outros feijões, o grão-de-bico pode provocar gases no teu cão.",
+    "nl": "Kikkererwten zijn peulvruchten en een goede bron van vezels en eiwit voor honden, maar sommige honden kunnen ze moeilijk verteren. Maak ze daarom goed gaar en laat je hond er langzaam aan wennen. Droge kikkererwten zijn veel moeilijker te verteren. Kikkererwten uit blik bevatten meestal veel natrium, en dat is niet gezond voor honden. Net als andere bonen kunnen kikkererwten je hond wat last van winderigheid geven.",
+    "pl": "Ciecierzyca to roślina strączkowa, dobre źródło błonnika i białka dla psów, ale niektóre psy mają problemy z jej trawieniem, dlatego trzeba ją dobrze ugotować i wprowadzać do diety stopniowo. Sucha ciecierzyca jest znacznie trudniejsza do strawienia. Ciecierzyca z puszki zwykle zawiera dużo sodu, który nie jest zdrowy dla psów. Podobnie jak fasola, ciecierzyca może wywoływać u psa gazy.",
+    "cs": "Cizrna je luštěnina, dobrý zdroj vlákniny a bílkovin pro psy, ale někteří psi ji špatně tráví, proto by měla být dobře uvařená a zařazovat se pomalu. Suchá cizrna se tráví mnohem hůř. Cizrna z konzervy obvykle obsahuje hodně sodíku, který psům nesvědčí. Stejně jako jiné luštěniny může cizrna psovi způsobit plynatost.",
+    "hr": "Slanutak je mahunarka, dobar izvor vlakana i bjelančevina za pse, ali neki ga psi teško probavljaju, pa ga treba dobro skuhati i uvoditi postupno. Suh slanutak mnogo je teže probavljiv. Konzerviran slanutak obično sadrži mnogo natrija, što nije zdravo za pse. Kao i grah, slanutak može izazvati plinove kod psa.",
+    "sv": "Kikärtor är baljväxter och en bra källa till fibrer och protein för hundar, men vissa hundar har svårt att smälta dem, så de ska kokas ordentligt och införas långsamt. Torra kikärtor är mycket svårare att smälta. Kikärtor på burk innehåller oftast mycket natrium, vilket inte är nyttigt för hundar. Precis som andra bönor kan kikärtor ge hunden lite gaser.",
+    "da": "Kikærter er bælgfrugter og en god kilde til fibre og protein for hunde, men nogle hunde har svært ved at fordøje dem, så de skal tilberedes grundigt og indføres langsomt. Tørre kikærter er meget sværere at fordøje. Kikærter på dåse indeholder som regel meget natrium, hvilket ikke er sundt for hunde. Som andre bønner kan kikærter give din hund lidt luft i maven.",
+    "fi": "Kikherneet ovat palkokasveja ja hyvä kuidun ja proteiinin lähde koirille, mutta osan koirien on vaikea sulattaa niitä, joten ne on keitettävä hyvin ja otettava ruokavalioon vähitellen. Kuivat kikherneet ovat paljon vaikeammin sulavia. Säilykekikherneissä on yleensä paljon natriumia, mikä ei ole koirille terveellistä. Kuten muut pavut, kikherneet voivat aiheuttaa koiralle ilmavaivoja.",
+    "fr": "Les pois chiches sont des légumineuses, une bonne source de fibres et de protéines pour les chiens, mais certains les digèrent mal : il faut donc bien les cuire et les introduire progressivement. Les pois chiches secs sont beaucoup plus difficiles à digérer. Ceux en conserve contiennent généralement beaucoup de sodium, ce qui n’est pas bon pour la santé des chiens. Comme les autres légumineuses, les pois chiches peuvent provoquer des gaz chez votre chien.",
+    "nb": "Kikerter er belgvekster og en god kilde til fiber og protein for hunder, men noen hunder har vanskelig for å fordøye dem, så de bør kokes godt og gis gradvis. Tørre kikerter er mye vanskeligere å fordøye. Hermetiske kikerter inneholder vanligvis mye natrium, og det er usunt for hunder. Som andre bønner kan kikerter gi hunden litt luft i magen."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Introduce cooked chickpeas slowly. If you use canned chickpeas, choose a low-sodium kind and rinse them well to remove as much salt as possible.",
+    "sl": "Kuhano čičeriko uvajajte počasi. Če uporabite konzervirano, izberite takšno z malo natrija in jo dobro sperite, da odstranite čim več soli.",
+    "de": "Gewöhnen Sie Ihren Hund langsam an gekochte Kichererbsen. Wenn Sie Kichererbsen aus der Dose verwenden, greifen Sie zu einer natriumarmen Sorte und spülen Sie die Kichererbsen gründlich ab, um möglichst viel Salz zu entfernen.",
+    "es": "Introduce los garbanzos cocidos poco a poco. Si usas garbanzos de lata, elige una variedad baja en sodio y acláralos bien para quitarles la mayor parte de la sal.",
+    "it": "Introduci i ceci cotti gradualmente. Se usi ceci in scatola, scegli quelli a basso contenuto di sodio e sciacquali bene per eliminare più sale possibile.",
+    "pt": "Introduz o grão-de-bico cozido aos poucos. Se usares grão-de-bico de conserva, escolhe um com pouco sal e lava-o bem para tirar o máximo de sal possível.",
+    "nl": "Laat je hond langzaam aan gare kikkererwten wennen. Gebruik je kikkererwten uit blik, kies dan een zoutarme soort en spoel ze goed af om zoveel mogelijk zout te verwijderen.",
+    "pl": "Wprowadzaj ugotowaną ciecierzycę powoli. Jeśli używasz ciecierzycy z puszki, wybierz taką o niskiej zawartości sodu i dobrze ją opłucz, żeby usunąć jak najwięcej soli.",
+    "cs": "Uvařenou cizrnu zařazujte pomalu. Pokud použijete cizrnu z konzervy, vyberte druh s nízkým obsahem soli a dobře ji propláchněte, aby se odstranilo co nejvíc soli.",
+    "hr": "Kuhan slanutak uvodi postupno. Ako koristiš konzerviran slanutak, odaberi onaj s malo natrija i dobro ga isperi kako bi se uklonilo što više soli.",
+    "sv": "Inför kokta kikärtor långsamt. Om du använder kikärtor på burk, välj en natriumsnål sort och skölj dem noga för att få bort så mycket salt som möjligt.",
+    "da": "Indfør tilberedte kikærter langsomt. Hvis du bruger kikærter på dåse, så vælg en variant med lavt natriumindhold, og skyl dem grundigt for at fjerne så meget salt som muligt.",
+    "fi": "Aloita keitetyillä kikherneillä vähitellen. Jos käytät säilykekikherneitä, valitse vähäsuolainen vaihtoehto ja huuhtele kikherneet hyvin, jotta mahdollisimman paljon suolaa lähtee pois.",
+    "fr": "Introduisez progressivement les pois chiches cuits. Si vous utilisez des pois chiches en conserve, choisissez-les à faible teneur en sodium et rincez-les bien pour éliminer le plus de sel possible.",
+    "nb": "Begynn gradvis med kokte kikerter. Hvis du bruker hermetiske, velg en variant med lite natrium og skyll dem godt for å fjerne mest mulig salt."
+  },
+  "serving": {
+    "en": "Soaked and thoroughly cooked until soft, in moderation; canned only low-sodium and well rinsed.",
+    "sl": "Namočena in dobro kuhana, da je mehka, zmerno; konzervirana le z malo natrija in dobro sprana.",
+    "de": "Eingeweicht und gründlich weich gekocht, in Maßen; aus der Dose nur natriumarm und gut abgespült.",
+    "es": "En remojo y bien cocidos hasta que estén blandos, con moderación; los de lata, solo bajos en sodio y bien aclarados.",
+    "it": "Ammollati e cotti a lungo fino a diventare morbidi, con moderazione; in scatola solo a basso contenuto di sodio e ben sciacquati.",
+    "pt": "Demolhado e bem cozido até ficar macio, com moderação; o de conserva só com pouco sal e bem lavado.",
+    "nl": "Geweekt en daarna helemaal zacht gekookt, met mate; uit blik alleen zoutarm en goed afgespoeld.",
+    "pl": "Namoczona i dokładnie ugotowana do miękkości, z umiarem; z puszki tylko o niskiej zawartości sodu i dobrze opłukana.",
+    "cs": "Namočená a důkladně uvařená do měkka, s mírou; z konzervy jen s nízkým obsahem soli a dobře propláchnutá.",
+    "hr": "Namočen i temeljito kuhan do mekoće, u umjerenim količinama; konzerviran samo s malo natrija i dobro ispran.",
+    "sv": "Blötlagda och kokta tills de är mjuka, i måttliga mängder; kikärtor på burk bara om de är natriumsnåla och noga sköljda.",
+    "da": "Udblødte og grundigt tilberedte, til de er bløde, i moderate mængder; kikærter på dåse kun med lavt natriumindhold og grundigt skyllede.",
+    "fi": "Liotettuina ja keitettyinä kunnolla pehmeiksi, kohtuudella; säilykkeinä vain vähäsuolaisia ja hyvin huuhdeltuja.",
+    "fr": "Trempés, puis cuits jusqu’à être tendres, avec modération ; en conserve, uniquement à faible teneur en sodium et bien rincés.",
+    "nb": "Bløtlagt og kokt til de er myke, med måte. Hermetiske bare med lite natrium og godt skylt."
+  },
+  "child": {
+    "en": "Soft, cooked chickpeas can be a little treat for dogs, but they might make your dog a bit windy!",
+    "sl": "Mehka, kuhana čičerika je lahko majhen priboljšek za psa, a ga lahko malo napihne!",
+    "de": "Weich gekochte Kichererbsen können für Hunde ein kleines Leckerli sein, aber dein Hund muss davon vielleicht ein bisschen pupsen!",
+    "es": "Los garbanzos blandos y cocidos pueden ser un pequeño premio para los perros, ¡aunque puede que tu perro tenga algunos gases!",
+    "it": "I ceci cotti e morbidi possono essere un premietto per i cani, ma potrebbero far fare al tuo cane qualche puzzetta!",
+    "pt": "O grão-de-bico cozido e macio pode ser uma pequena guloseima para os cães, mas pode deixar o teu cão cheio de gases!",
+    "nl": "Zachte, gare kikkererwten zijn een klein snoepje voor honden, maar je hond kan er wel een beetje winderig van worden!",
+    "pl": "Miękka, ugotowana ciecierzyca może być małym smakołykiem dla psa, ale po niej pies może mieć trochę gazów!",
+    "cs": "Měkká uvařená cizrna může být pro psy malým pamlskem, ale pejskovi se z ní může trochu nadýmat bříško!",
+    "hr": "Mekan kuhani slanutak može biti mala poslastica za pse, ali psu može izazvati i malo vjetrova!",
+    "sv": "Mjuka, kokta kikärtor kan vara en liten godbit för hundar, men din hund kan bli lite pruttig!",
+    "da": "Bløde, kogte kikærter kan være en lille godbid til hunde, men din hund kan komme til at prutte lidt!",
+    "fi": "Pehmeät keitetyt kikherneet voivat olla koiralle pieni herkku, mutta koirasi voi alkaa niistä hieman pierrellä!",
+    "fr": "Les pois chiches cuits et bien tendres peuvent être une petite friandise pour les chiens, mais ils risquent de leur donner des gaz !",
+    "nb": "Myke, kokte kikerter kan være en liten godbit for hunder, men de kan gi hunden litt luft i magen!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat hummus?",
+        "sl": "Ali lahko psi jedo humus?",
+        "de": "Dürfen Hunde Hummus fressen?",
+        "es": "¿Pueden los perros comer hummus?",
+        "it": "I cani possono mangiare l’hummus?",
+        "pt": "Os cães podem comer hummus?",
+        "nl": "Mogen honden hummus eten?",
+        "pl": "Czy psy mogą jeść hummus?",
+        "cs": "Mohou psi jíst hummus?",
+        "hr": "Smiju li psi jesti humus?",
+        "sv": "Får hundar äta hummus?",
+        "da": "Må hunde spise hummus?",
+        "fi": "Saako koira syödä humusta?",
+        "fr": "Les chiens peuvent-ils manger du houmous ?",
+        "nb": "Kan hunder spise hummus?"
+      },
+      "a": {
+        "en": "No. Hummus contains other ingredients that are not dog-friendly, including garlic, onion and spices.",
+        "sl": "Ne. Humus vsebuje druge sestavine, ki za pse niso primerne, med njimi česen, čebulo in začimbe.",
+        "de": "Nein. Hummus enthält weitere Zutaten, die für Hunde nicht geeignet sind, darunter Knoblauch, Zwiebel und Gewürze.",
+        "es": "No. El hummus lleva otros ingredientes que no son aptos para los perros, como ajo, cebolla y especias.",
+        "it": "No. L’hummus contiene altri ingredienti poco adatti ai cani, tra cui aglio, cipolla e spezie.",
+        "pt": "Não. O hummus contém outros ingredientes que não são adequados para cães, como alho, cebola e temperos.",
+        "nl": "Nee. Hummus bevat andere ingrediënten die niet goed zijn voor honden, zoals knoflook, ui en kruiden.",
+        "pl": "Nie. Hummus zawiera inne składniki nieodpowiednie dla psów, m.in. czosnek, cebulę i przyprawy.",
+        "cs": "Ne. Hummus obsahuje další přísady, které pro psy nejsou vhodné, včetně česneku, cibule a koření.",
+        "hr": "Ne. Humus sadrži druge sastojke koji nisu dobri za pse, uključujući češnjak, luk i začine.",
+        "sv": "Nej. Hummus innehåller andra ingredienser som inte passar hundar, bland annat vitlök, lök och kryddor.",
+        "da": "Nej. Hummus indeholder andre ingredienser, der ikke er hundevenlige, blandt andet hvidløg, løg og krydderier.",
+        "fi": "Ei saa. Humuksessa on muitakin ainesosia, jotka eivät sovi koirille, kuten valkosipulia, sipulia ja mausteita.",
+        "fr": "Non. Le houmous contient d’autres ingrédients que les chiens ne supportent pas, notamment de l’ail, de l’oignon et des épices.",
+        "nb": "Nei. Hummus inneholder andre ingredienser som ikke er bra for hunder, blant annet hvitløk, løk og krydder."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat dry chickpeas?",
+        "sl": "Ali lahko psi jedo suho čičeriko?",
+        "de": "Dürfen Hunde getrocknete Kichererbsen fressen?",
+        "es": "¿Pueden los perros comer garbanzos secos?",
+        "it": "I cani possono mangiare i ceci secchi?",
+        "pt": "Os cães podem comer grão-de-bico seco?",
+        "nl": "Mogen honden droge kikkererwten eten?",
+        "pl": "Czy psy mogą jeść suchą ciecierzycę?",
+        "cs": "Mohou psi jíst suchou cizrnu?",
+        "hr": "Smiju li psi jesti suh slanutak?",
+        "sv": "Får hundar äta torra kikärtor?",
+        "da": "Må hunde spise tørre kikærter?",
+        "fi": "Saako koira syödä kuivia kikherneitä?",
+        "fr": "Les chiens peuvent-ils manger des pois chiches secs ?",
+        "nb": "Kan hunder spise tørre kikerter?"
+      },
+      "a": {
+        "en": "No. Dry chickpeas can be a choking hazard and are much harder for dogs to digest; cook them thoroughly first.",
+        "sl": "Ne. Suha čičerika lahko povzroči dušenje in jo psi veliko težje prebavijo; najprej jo dobro skuhajte.",
+        "de": "Nein. Getrocknete Kichererbsen können eine Erstickungsgefahr sein und sind für Hunde viel schwerer verdaulich; kochen Sie sie vorher gründlich.",
+        "es": "No. Los garbanzos secos pueden suponer un peligro de atragantamiento y son mucho más difíciles de digerir para los perros; cocínalos bien antes.",
+        "it": "No. I ceci secchi possono essere un rischio di soffocamento e sono molto più difficili da digerire per i cani; prima cuocili bene.",
+        "pt": "Não. O grão-de-bico seco pode ser um risco de engasgo e é muito mais difícil de digerir para os cães; cozinha-o bem primeiro.",
+        "nl": "Nee. Droge kikkererwten kunnen een verstikkingsgevaar zijn en zijn veel moeilijker te verteren voor honden; kook ze eerst goed gaar.",
+        "pl": "Nie. Sucha ciecierzyca może grozić zadławieniem i jest dla psów znacznie trudniejsza do strawienia; najpierw dokładnie ją ugotuj.",
+        "cs": "Ne. Suchá cizrna může představovat riziko udušení a psi ji tráví mnohem hůř; nejdřív ji důkladně uvařte.",
+        "hr": "Ne. Suh slanutak može izazvati gušenje, a psi ga mnogo teže probavljaju, zato ga prvo temeljito skuhaj.",
+        "sv": "Nej. Torra kikärtor kan orsaka kvävning och är mycket svårare för hundar att smälta. Koka dem ordentligt först.",
+        "da": "Nej. Tørre kikærter kan sætte sig fast i halsen og er meget sværere for hunde at fordøje; tilbered dem først grundigt.",
+        "fi": "Ei saa. Kuivat kikherneet voivat aiheuttaa tukehtumisvaaran ja ovat koiralle paljon vaikeammin sulavia. Keitä ne ensin kunnolla.",
+        "fr": "Non. Les pois chiches secs présentent un risque d’étouffement et sont beaucoup plus difficiles à digérer pour les chiens ; faites-les d’abord bien cuire.",
+        "nb": "Nei. Tørre kikerter kan være en kvelningsfare og er mye vanskeligere for hunder å fordøye; kok dem godt først."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD220",
+      "quote": "Garbanzo beans"
+    },
+    {
+      "id": "KD220",
+      "quote": "Dogs can have beans or legumes that have been soaked first and then cooked."
+    },
+    {
+      "id": "KD220",
+      "quote": "Dogs can have beans as a treat."
+    },
+    {
+      "id": "KD220",
+      "quote": "(Beans may still give your dog some gas!)"
+    },
+    {
+      "id": "KD223",
+      "quote": "Legumes like beans are a good source of fibre and protein for dogs."
+    },
+    {
+      "id": "KD223",
+      "quote": "some dogs may have trouble digesting them, so they should be cooked well and introduced slowly"
+    },
+    {
+      "id": "KD223",
+      "quote": "Chickpeas (in moderation)"
+    },
+    {
+      "id": "KD224",
+      "quote": "As long as the chickpeas are freshly prepared and thoroughly cooked, they are a safe and nutritious treat for dogs."
+    },
+    {
+      "id": "KD224",
+      "quote": "When dry, chickpeas can present a choking hazard for dogs and are much harder for them to digest."
+    },
+    {
+      "id": "KD224",
+      "quote": "When chickpeas are canned, a large amount of sodium is typically used, and this is not so healthy for our dogs."
+    },
+    {
+      "id": "KD224",
+      "quote": "purchase a low-sodium variety and wash them thoroughly to remove as much salt as possible"
+    },
+    {
+      "id": "KD224",
+      "quote": "This is because hummus contains many other ingredients that are not dog-friendly, including garlic, onion, and spices."
+    }
+  ],
+  "related": [
+    "beans",
+    "lentils",
+    "garlic",
+    "salt"
+  ],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9fae2580a0181a119e123ecb00edf64cb92af1c2515021650724a3b4291bad98"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "26333f56fdcf07ba7673c7ff9702609ad3a17bc30c64d1da8575d9a857bcb99e"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "01d7787524dc822f0b65c2f97abff8eed0b7211c9e44b1c594a53326dd7906f6"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "daa51028fac110211dd97e585a6f0c08dc7896de7a32606fdea1688c953329c0"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-c-it-2026-11-16",
+      "verified_hash": "c317329de41c32b1a6acfe2acb2eeb1edbd315f28b5f80925540195195568c24"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "adaa1e722505c1c7070f4f39daa32b41aa38985b02d40ff78d8c90afe88fea3b"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "164c259b4b3bfcf77ee919bc44bd84a5422d6afde636512f148f5fc1e51e1354"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "cf9c8647500c4074ba44985c42f01c4367406b80142888cf5f33f6edee0ced35"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "822f649184f5898488e7f6386ad44c823ef1f22b04f38a5fd8f0f3341ea99b7f"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "389c01ade6747390bce7ddf7b728fc222d65af997b53d304902971873dcea0b6"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-16",
+      "verified_hash": "34ca43e4720f3fb9641a54cbe081f5a28216e1b759570e481db17d1de29fa8ea"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ed8c87dc66e757d3c94524dc3a583b8f44104e4598aba5306b1f1645b2b830a4"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-c-fi-2026-11-16",
+      "verified_hash": "1844b9e8f324f11540fd9bfb46df4db3b5d732a332f19f28002397361f268ee9"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-c-fr-2026-11-16",
+      "verified_hash": "5d9de45c24b40739162c11f7beda26f39442a3234eb0b122c102f8577010d0ea"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f169635e34fe2308272b03db744005c50f7f4dbf24d30ac73cc8b5f03f22d82a"
+    }
+  }
+}

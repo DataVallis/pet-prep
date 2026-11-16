@@ -4,68 +4,212 @@
   "name": {
     "en": "Honey",
     "sl": "Med",
-    "cs": "Med"
+    "es": "Miel",
+    "cs": "Med",
+    "hr": "Med",
+    "sv": "Honung",
+    "da": "Honning",
+    "fi": "Hunaja",
+    "nb": "Honning",
+    "it": "Miele",
+    "de": "Honig",
+    "fr": "Miel",
+    "pt": "Mel",
+    "nl": "Honing",
+    "pl": "Miód"
   },
   "question": {
     "en": "Can dogs eat honey?",
     "sl": "Ali lahko psi jedo med?",
-    "cs": "Mohou psi jíst med?"
+    "es": "¿Pueden los perros comer miel?",
+    "cs": "Mohou psi jíst med?",
+    "hr": "Smiju li psi jesti med?",
+    "sv": "Får hundar äta honung?",
+    "da": "Må hunde spise honning?",
+    "fi": "Saako koira syödä hunajaa?",
+    "nb": "Kan hunder spise honning?",
+    "it": "I cani possono mangiare il miele?",
+    "de": "Dürfen Hunde Honig fressen?",
+    "fr": "Les chiens peuvent-ils manger du miel ?",
+    "pt": "Os cães podem comer mel?",
+    "nl": "Mogen honden honing eten?",
+    "pl": "Czy psy mogą jeść miód?"
   },
   "url_slug": {
     "en": "honey",
     "sl": "med",
-    "cs": "med"
+    "es": "miel",
+    "cs": "med",
+    "hr": "med",
+    "sv": "honung",
+    "da": "honning",
+    "fi": "hunaja",
+    "nb": "honning",
+    "it": "miele",
+    "de": "honig",
+    "fr": "miel",
+    "pt": "mel",
+    "nl": "honing",
+    "pl": "miod"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. Honey is generally fine for healthy adult dogs in small quantities, but it is mostly sugar, so there is little reason to give it regularly. Don't give raw honey to puppies or dogs with weak immune systems, or any honey to diabetic dogs.",
     "sl": "Da, v majhnih količinah. Med je za zdrave odrasle pse v majhnih količinah na splošno v redu, vendar je večinoma sladkor, zato ga ni smiselno dajati redno. Surovega medu ne dajajte mladičem in psom s šibkim imunskim sistemom, psom s sladkorno boleznijo pa nobenega medu.",
-    "cs": "Ano, v malém množství. Med je pro zdravé dospělé psy v malém množství obvykle v pořádku, ale je to hlavně cukr, takže není důvod ho dávat pravidelně. Nedávejte syrový med štěňatům ani psům se slabou imunitou a žádný med psům s cukrovkou."
+    "es": "Sí, en pequeñas cantidades. La miel suele estar bien para perros adultos sanos en pequeñas cantidades, pero es sobre todo azúcar, así que hay pocos motivos para darla con regularidad. No des miel cruda a cachorros ni a perros con las defensas bajas, ni ninguna miel a perros con diabetes.",
+    "cs": "Ano, v malém množství. Med je pro zdravé dospělé psy v malém množství obvykle v pořádku, ale je to hlavně cukr, takže není důvod ho dávat pravidelně. Nedávejte syrový med štěňatům ani psům se slabou imunitou a žádný med psům s cukrovkou.",
+    "hr": "Da, u malim količinama. Med je općenito u redu za zdrave odrasle pse u malim količinama, ali je uglavnom šećer pa nema puno razloga da ga daješ redovito. Sirov med nemoj davati štenadi ni psima oslabljenog imuniteta, a nikakav med dijabetičnim psima.",
+    "sv": "Ja, i små mängder. Honung är i allmänhet okej för friska, vuxna hundar i små mängder, men den består mest av socker, så det finns lite skäl att ge den regelbundet. Ge inte rå honung till valpar eller hundar med svagt immunförsvar, och ingen honung alls till hundar med diabetes.",
+    "da": "Ja, i små mængder. Honning er som regel fint for raske, voksne hunde i små mængder, men den består mest af sukker, så der er ikke megen grund til at give den jævnligt. Giv ikke rå honning til hvalpe eller hunde med svagt immunforsvar og ingen slags honning til hunde med diabetes.",
+    "fi": "Saa, pieninä määrinä. Hunaja on yleensä sopivaa terveille aikuisille koirille pieninä määrinä, mutta se on enimmäkseen sokeria, joten sen säännölliseen antamiseen ei ole juuri syytä. Älä anna raakaa hunajaa pennuille tai koirille, joiden immuunipuolustus on heikko, äläkä mitään hunajaa diabeetikkokoirille.",
+    "nb": "Ja, i små mengder. Honning er vanligvis greit for friske, voksne hunder i små mengder, men den består mest av sukker, så det er lite grunn til å gi den jevnlig. Ikke gi rå honning til valper eller hunder med svekket immunforsvar, og ingen honning til hunder med diabetes.",
+    "it": "Sì, in piccole quantità. In genere il miele va bene per i cani adulti sani in piccole quantità, ma è fatto soprattutto di zucchero, quindi ci sono pochi motivi per darlo regolarmente. Non dare miele crudo ai cuccioli o ai cani con difese immunitarie deboli, né alcun tipo di miele ai cani diabetici.",
+    "de": "Ja, in kleinen Mengen. Honig ist für gesunde erwachsene Hunde in kleinen Mengen in der Regel in Ordnung, besteht aber hauptsächlich aus Zucker. Es gibt daher kaum einen Grund, ihn regelmäßig zu geben. Geben Sie Welpen und Hunden mit geschwächtem Immunsystem keinen rohen Honig und Hunden mit Diabetes gar keinen Honig.",
+    "fr": "Oui, en petite quantité. Le miel convient généralement aux chiens adultes en bonne santé, en petites quantités, mais il est surtout composé de sucre : il y a donc peu de raisons d’en donner régulièrement. Ne donnez pas de miel cru aux chiots ni aux chiens dont le système immunitaire est affaibli, ni de miel du tout aux chiens diabétiques.",
+    "pt": "Sim, em pequenas quantidades. Em pequenas quantidades, o mel geralmente não faz mal a cães adultos saudáveis, mas é sobretudo açúcar, por isso não há grande motivo para o dar com regularidade. Não dês mel cru a cachorros nem a cães com o sistema imunitário debilitado, nem qualquer mel a cães diabéticos.",
+    "nl": "Ja, in kleine hoeveelheden. Honing is over het algemeen prima voor gezonde volwassen honden in kleine hoeveelheden, maar het bestaat vooral uit suiker, dus er is weinig reden om het regelmatig te geven. Geef geen rauwe honing aan pups of honden met een zwak immuunsysteem, en geef geen enkele honing aan honden met diabetes.",
+    "pl": "Tak, w małych ilościach. Miód jest na ogół w porządku dla zdrowych dorosłych psów w niewielkich ilościach, ale to głównie cukier, więc nie ma powodu, żeby dawać go regularnie. Nie dawaj surowego miodu szczeniakom ani psom z osłabioną odpornością, a psom z cukrzycą nie dawaj żadnego miodu."
   },
   "why": {
     "en": "Honey contains natural sugars and small amounts of vitamins and minerals. Its high sugar content can lead to obesity if a dog gets too much, and sugars can cause tooth decay. Raw honey may contain botulism, so it is not for puppies or dogs with weak immune systems.",
     "sl": "Med vsebuje naravne sladkorje ter majhne količine vitaminov in mineralov. Med ima veliko sladkorja, zato lahko pri prevelikih količinah vodi v debelost, sladkorji pa lahko povzročijo zobno gnilobo. Surov med lahko vsebuje botulizem, zato ni primeren za mladiče in pse s šibkim imunskim sistemom.",
-    "cs": "Med obsahuje přírodní cukry a malé množství vitamínů a minerálů. Vysoký obsah cukru může při příliš velkém množství vést k obezitě a cukry mohou způsobit zubní kaz. Syrový med může obsahovat původce botulismu, proto není pro štěňata ani psy se slabou imunitou."
+    "es": "La miel contiene azúcares naturales y pequeñas cantidades de vitaminas y minerales. Su alto contenido en azúcar puede provocar obesidad si el perro toma demasiada, y los azúcares pueden causar caries. La miel cruda puede contener botulismo, así que no es para cachorros ni para perros con las defensas bajas.",
+    "cs": "Med obsahuje přírodní cukry a malé množství vitamínů a minerálů. Vysoký obsah cukru může při příliš velkém množství vést k obezitě a cukry mohou způsobit zubní kaz. Syrový med může obsahovat původce botulismu, proto není pro štěňata ani psy se slabou imunitou.",
+    "hr": "Med sadrži prirodne šećere i male količine vitamina i minerala. Zbog visokog udjela šećera može dovesti do pretilosti ako pas dobije previše, a šećeri mogu uzrokovati karijes. Sirov med može sadržavati uzročnika botulizma, pa nije za štenad ni pse oslabljenog imuniteta.",
+    "sv": "Honung innehåller naturliga sockerarter och små mängder vitaminer och mineraler. Det höga sockerinnehållet kan leda till fetma om en hund får för mycket, och socker kan ge karies. Rå honung kan innehålla botulismbakterier och är därför inte för valpar eller hundar med svagt immunförsvar.",
+    "da": "Honning indeholder naturlige sukkerarter og små mængder vitaminer og mineraler. Det høje sukkerindhold kan føre til fedme, hvis en hund får for meget, og sukker kan give huller i tænderne. Rå honning kan indeholde botulismebakterier, så den ikke er til hvalpe eller hunde med svagt immunforsvar.",
+    "fi": "Hunajassa on luonnollisia sokereita ja pieniä määriä vitamiineja ja kivennäisaineita. Sen runsas sokeripitoisuus voi johtaa lihavuuteen, jos koira saa liikaa, ja sokerit voivat aiheuttaa hampaiden reikiintymistä. Raakassa hunajassa voi olla botulismia, joten se ei sovi pennuille eikä koirille, joiden immuunipuolustus on heikko.",
+    "nb": "Honning inneholder naturlig sukker og små mengder vitaminer og mineraler. Det høye sukkerinnholdet kan føre til fedme hvis hunden får for mye, og sukker kan gi hull i tennene. Rå honning kan inneholde botulisme, så den er ikke for valper eller hunder med svekket immunforsvar.",
+    "it": "Il miele contiene zuccheri naturali e piccole quantità di vitamine e minerali. L’alto contenuto di zuccheri può portare all’obesità se il cane ne riceve troppo, e gli zuccheri possono causare carie. Il miele crudo può contenere botulino, quindi non è adatto ai cuccioli né ai cani con difese immunitarie deboli.",
+    "de": "Honig enthält natürliche Zucker und kleine Mengen Vitamine und Mineralstoffe. Sein hoher Zuckergehalt kann zu Übergewicht führen, wenn ein Hund zu viel bekommt, und Zucker kann Karies verursachen. Roher Honig kann Botulismus-Erreger enthalten, deshalb ist er nichts für Welpen oder Hunde mit geschwächtem Immunsystem.",
+    "fr": "Le miel contient des sucres naturels et de petites quantités de vitamines et de minéraux. Sa forte teneur en sucre peut mener à l’obésité si un chien en reçoit trop, et les sucres peuvent favoriser les caries. Le miel cru peut présenter un risque de botulisme : il n’est donc pas destiné aux chiots ni aux chiens dont le système immunitaire est affaibli.",
+    "pt": "O mel contém açúcares naturais e pequenas quantidades de vitaminas e minerais. O seu elevado teor de açúcar pode levar à obesidade se o cão comer demasiado, e os açúcares podem causar cáries. O mel cru pode conter esporos do botulismo, por isso não é para cachorros nem para cães com o sistema imunitário debilitado.",
+    "nl": "Honing bevat natuurlijke suikers en kleine hoeveelheden vitamines en mineralen. Door het hoge suikergehalte kan het leiden tot overgewicht als een hond te veel krijgt, en suikers kunnen tandbederf veroorzaken. Rauwe honing kan botulisme bevatten, dus het is niets voor pups of honden met een zwak immuunsysteem.",
+    "pl": "Miód zawiera naturalne cukry oraz niewielkie ilości witamin i składników mineralnych. Duża zawartość cukru może prowadzić do otyłości, gdy pies dostaje go za dużo, a cukry mogą powodować próchnicę. Surowy miód może zawierać bakterie, które mogą wywołać botulizm, więc nie jest dla szczeniąt ani psów z osłabioną odpornością."
   },
   "signs": null,
   "what_to_do": {
     "en": "Small amounts of honey are generally fine for a healthy adult dog. If your dog has a health condition such as diabetes, or you are unsure how much is okay, talk to your vet.",
     "sl": "Majhne količine medu so za zdravega odraslega psa na splošno v redu. Če ima pes kakšno bolezen, na primer sladkorno, ali če niste prepričani, koliko je v redu, se posvetujte z veterinarjem.",
-    "cs": "Malé množství medu je pro zdravého dospělého psa obvykle v pořádku. Pokud má pes zdravotní potíže, například cukrovku, nebo si nejste jistí, kolik je v pořádku, poraďte se s veterinářem."
+    "es": "Las pequeñas cantidades de miel suelen estar bien para un perro adulto sano. Si tu perro tiene una enfermedad como la diabetes, o no estás seguro de cuánta es adecuada, habla con tu veterinario.",
+    "cs": "Malé množství medu je pro zdravého dospělého psa obvykle v pořádku. Pokud má pes zdravotní potíže, například cukrovku, nebo si nejste jistí, kolik je v pořádku, poraďte se s veterinářem.",
+    "hr": "Male količine meda općenito su u redu za zdravog odraslog psa. Ako pas ima zdravstveno stanje poput dijabetesa ili ne znaš koliko je u redu, razgovaraj s veterinarom.",
+    "sv": "Små mängder honung är i allmänhet okej för en frisk, vuxen hund. Om din hund har ett hälsotillstånd som diabetes, eller om du är osäker på hur mycket som är okej, prata med din veterinär.",
+    "da": "Små mængder honning er som regel fint for en rask, voksen hund. Hvis din hund har en sygdom som diabetes, eller du er i tvivl om, hvor meget der er i orden, skal du tale med din dyrlæge.",
+    "fi": "Pienet määrät hunajaa ovat yleensä sopivia terveelle aikuiselle koiralle. Jos koirallasi on jokin terveysongelma, kuten diabetes, tai et ole varma, kuinka paljon sopii, puhu eläinlääkärin kanssa.",
+    "nb": "Små mengder honning er vanligvis greit for en frisk, voksen hund. Hvis hunden har en sykdom som diabetes, eller du er usikker på hvor mye som er greit, bør du snakke med dyrlegen.",
+    "it": "Piccole quantità di miele in genere vanno bene per un cane adulto sano. Se il tuo cane ha un problema di salute come il diabete, o non sei sicuro di quanto ne possa mangiare, parlane con il veterinario.",
+    "de": "Kleine Mengen Honig sind für einen gesunden erwachsenen Hund in der Regel in Ordnung. Hat Ihr Hund eine Erkrankung wie Diabetes oder sind Sie unsicher, welche Menge passt, sprechen Sie mit Ihrem Tierarzt.",
+    "fr": "De petites quantités de miel conviennent généralement à un chien adulte en bonne santé. Si votre chien a un problème de santé comme le diabète, ou si vous ne savez pas quelle quantité est acceptable, parlez-en à votre vétérinaire.",
+    "pt": "Pequenas quantidades de mel geralmente não fazem mal a um cão adulto saudável. Se o teu cão tem um problema de saúde, como diabetes, ou não tens a certeza da quantidade certa, fala com o teu veterinário.",
+    "nl": "Kleine hoeveelheden honing zijn over het algemeen prima voor een gezonde volwassen hond. Heeft je hond een gezondheidsprobleem zoals diabetes, of weet je niet zeker hoeveel er kan, bespreek het dan met je dierenarts.",
+    "pl": "Małe ilości miodu są na ogół w porządku dla zdrowego dorosłego psa. Jeśli pies choruje, np. na cukrzycę, albo nie wiesz, ile miodu można mu dać, porozmawiaj z weterynarzem."
   },
   "serving": {
     "en": "A little now and then, for healthy adult dogs only; less is more, especially for small breeds. Ask your vet how much is okay, and consider brushing your dog's teeth afterwards.",
     "sl": "Le malo in občasno, samo za zdrave odrasle pse; manj je več, zlasti pri majhnih pasmah. Veterinarja vprašajte, koliko je v redu, in psu po medu morda umijte zobe.",
-    "cs": "Trochu a občas, jen pro zdravé dospělé psy; méně je více, zvlášť u malých plemen. Zeptejte se veterináře, kolik je v pořádku, a zvažte, zda psovi po podání nevyčistit zuby."
+    "es": "Un poco de vez en cuando, solo para perros adultos sanos; menos es más, sobre todo en razas pequeñas. Pregunta a tu veterinario cuánta es adecuada y plantéate cepillarle los dientes a tu perro después.",
+    "cs": "Trochu a občas, jen pro zdravé dospělé psy; méně je více, zvlášť u malých plemen. Zeptejte se veterináře, kolik je v pořádku, a zvažte, zda psovi po podání nevyčistit zuby.",
+    "hr": "Malo, povremeno, samo za zdrave odrasle pse; manje je više, osobito kod malih pasmina. Pitaj veterinara koliko je u redu i razmisli da psu nakon toga očetkaš zube.",
+    "sv": "Lite då och då, bara till friska vuxna hundar; mindre är mer, särskilt för små raser. Fråga din veterinär hur mycket som är okej och överväg att borsta hundens tänder efteråt.",
+    "da": "Lidt en gang imellem, kun til raske, voksne hunde; mindre er mere, især til små racer. Spørg din dyrlæge, hvor meget der er i orden, og overvej at børste din hunds tænder bagefter.",
+    "fi": "Vähän silloin tällöin, vain terveille aikuisille koirille; vähemmän on parempi, etenkin pienillä roduilla. Kysy eläinlääkäriltä, kuinka paljon sopii, ja harkitse koirasi hampaiden harjausta sen jälkeen.",
+    "nb": "Litt av og til, bare til friske, voksne hunder; mindre er bedre, særlig for små raser. Spør dyrlegen hvor mye som er greit, og vurder å pusse tennene til hunden etterpå.",
+    "it": "Un pochino ogni tanto, solo per cani adulti sani; meno è meglio, soprattutto per le razze di piccola taglia. Chiedi al veterinario quanto ne puoi dare e valuta di lavare i denti al tuo cane dopo.",
+    "de": "Ab und zu ein wenig, nur für gesunde erwachsene Hunde. Weniger ist mehr, besonders bei kleinen Rassen. Fragen Sie Ihren Tierarzt, wie viel in Ordnung ist, und putzen Sie Ihrem Hund danach am besten die Zähne.",
+    "fr": "Un peu, de temps en temps, uniquement pour les chiens adultes en bonne santé ; mieux vaut en donner peu, surtout aux petites races. Demandez à votre vétérinaire quelle quantité convient et pensez à brosser les dents de votre chien ensuite.",
+    "pt": "Um bocadinho de vez em quando, só para cães adultos saudáveis; menos é mais, sobretudo nas raças pequenas. Pergunta ao teu veterinário que quantidade é aceitável e pensa em escovar os dentes do teu cão depois.",
+    "nl": "Af en toe een beetje, alleen voor gezonde volwassen honden; minder is beter, vooral bij kleine rassen. Vraag je dierenarts hoeveel er kan en overweeg om daarna de tanden van je hond te poetsen.",
+    "pl": "Odrobina od czasu do czasu, tylko dla zdrowych dorosłych psów; lepiej mniej niż więcej, zwłaszcza u małych ras. Zapytaj weterynarza, ile można dać, i pomyśl o umyciu psu zębów po miodzie."
   },
   "child": {
     "en": "Dogs can have a tiny bit of honey sometimes. It is very sweet, so ask a grown-up first.",
     "sl": "Psi lahko včasih dobijo čisto malo medu. Je zelo sladek, zato najprej vprašaj odraslega.",
-    "cs": "Pes může někdy dostat malinkou špetku medu. Je moc sladký, takže se nejdřív zeptej dospělého."
+    "es": "Los perros pueden tomar un poquito de miel de vez en cuando. Es muy dulce, así que pregunta antes a un adulto.",
+    "cs": "Pes může někdy dostat malinkou špetku medu. Je moc sladký, takže se nejdřív zeptej dospělého.",
+    "hr": "Psi povremeno smiju dobiti sitnu količinu meda. Vrlo je sladak, zato prvo pitaj odraslu osobu.",
+    "sv": "Hundar kan få lite honung då och då. Den är väldigt söt, så fråga en vuxen först.",
+    "da": "Hunde kan få en lille smule honning en gang imellem. Den er meget sød, så spørg først en voksen.",
+    "fi": "Koira saa joskus aivan pienen määrän hunajaa. Se on hyvin makeaa, joten kysy ensin aikuiselta.",
+    "nb": "Hunder kan av og til få en bitteliten bit honning. Den er veldig søt, så spør en voksen først.",
+    "it": "Ogni tanto i cani possono mangiare un pochino di miele. È molto dolce, quindi chiedi prima a un adulto.",
+    "de": "Hunde dürfen ab und zu ein ganz kleines bisschen Honig haben. Er ist sehr süß, also frag vorher einen Erwachsenen.",
+    "fr": "Les chiens peuvent parfois manger un tout petit peu de miel. Il est très sucré : demande d’abord à un adulte.",
+    "pt": "Os cães podem comer um bocadinho de mel de vez em quando. É muito doce, por isso pergunta primeiro a um adulto.",
+    "nl": "Honden mogen soms een heel klein beetje honing. Het is erg zoet, dus vraag het eerst aan een volwassene.",
+    "pl": "Pies może czasem dostać odrobinkę miodu. Jest bardzo słodki, więc najpierw zapytaj dorosłego."
   },
   "faq": [
     {
       "q": {
         "en": "Can honey help my dog's allergies?",
         "sl": "Ali med pomaga pri pasjih alergijah?",
-        "cs": "Může med pomoci mému psovi s alergiemi?"
+        "es": "¿Puede la miel ayudar con las alergias de mi perro?",
+        "cs": "Může med pomoci mému psovi s alergiemi?",
+        "hr": "Može li med pomoći mom psu kod alergija?",
+        "sv": "Kan honung hjälpa min hunds allergier?",
+        "da": "Kan honning hjælpe min hunds allergi?",
+        "fi": "Voiko hunaja auttaa koirani allergioihin?",
+        "nb": "Kan honning hjelpe mot allergien til hunden min?",
+        "it": "Il miele può aiutare contro le allergie del mio cane?",
+        "de": "Kann Honig bei den Allergien meines Hundes helfen?",
+        "fr": "Le miel peut-il aider contre les allergies de mon chien ?",
+        "pt": "O mel pode ajudar nas alergias do meu cão?",
+        "nl": "Kan honing helpen bij de allergieën van mijn hond?",
+        "pl": "Czy miód pomoże na alergię mojego psa?"
       },
       "a": {
         "en": "Honey is often said to help with seasonal allergies, but it isn't guaranteed or even likely to help.",
         "sl": "Pogosto slišimo, da med pomaga pri sezonskih alergijah, vendar to ni zagotovljeno in niti ni verjetno.",
-        "cs": "Často se říká, že med pomáhá při sezónních alergiích, ale není zaručeno, ani pravděpodobné, že pomůže."
+        "es": "Suele decirse que la miel ayuda con las alergias estacionales, pero no está garantizado ni es siquiera probable que ayude.",
+        "cs": "Často se říká, že med pomáhá při sezónních alergiích, ale není zaručeno, ani pravděpodobné, že pomůže.",
+        "hr": "Često se kaže da med pomaže kod sezonskih alergija, ali to nije zajamčeno, pa čak ni vjerojatno.",
+        "sv": "Man säger ofta att honung hjälper mot säsongsallergier, men det är varken säkert eller ens troligt att den hjälper.",
+        "da": "Man siger ofte, at honning hjælper mod sæsonallergi, men det er ikke garanteret og ikke engang sandsynligt.",
+        "fi": "Hunajan sanotaan usein auttavan kausiallergioihin, mutta apua ei voi taata, eikä se ole edes todennäköistä.",
+        "nb": "Det sies ofte at honning hjelper mot sesongallergier, men det er verken sikkert eller engang sannsynlig at den hjelper.",
+        "it": "Si dice spesso che il miele aiuti contro le allergie stagionali, ma non è garantito che funzioni, e non è nemmeno probabile.",
+        "de": "Oft heißt es, Honig helfe bei saisonalen Allergien, aber das ist weder sicher noch auch nur wahrscheinlich.",
+        "fr": "On dit souvent que le miel aide contre les allergies saisonnières, mais ce n’est ni garanti ni même probable.",
+        "pt": "Diz-se muitas vezes que o mel ajuda nas alergias sazonais, mas isso não está garantido nem é sequer provável.",
+        "nl": "Er wordt vaak gezegd dat honing helpt bij seizoensallergieën, maar het is niet gegarandeerd en zelfs niet waarschijnlijk dat het helpt.",
+        "pl": "Często mówi się, że miód łagodzi alergie sezonowe, ale nie ma gwarancji, że pomoże, a nawet nie jest to prawdopodobne."
       }
     },
     {
       "q": {
         "en": "Can I give honey to my puppy?",
         "sl": "Ali lahko mladiču dam med?",
-        "cs": "Mohu dát med štěněti?"
+        "es": "¿Puedo darle miel a mi cachorro?",
+        "cs": "Mohu dát med štěněti?",
+        "hr": "Smijem li dati med svojem štenetu?",
+        "sv": "Får jag ge honung till min valp?",
+        "da": "Må jeg give min hvalp honning?",
+        "fi": "Voinko antaa hunajaa pennulleni?",
+        "nb": "Kan jeg gi honning til valpen min?",
+        "it": "Posso dare il miele al mio cucciolo?",
+        "de": "Darf ich meinem Welpen Honig geben?",
+        "fr": "Puis-je donner du miel à mon chiot ?",
+        "pt": "Posso dar mel ao meu cachorro?",
+        "nl": "Mag ik mijn pup honing geven?",
+        "pl": "Czy mogę dać miód szczeniakowi?"
       },
       "a": {
         "en": "Not raw honey. Raw honey shouldn't be given to puppies or dogs with weak immune systems, because it may contain botulism.",
         "sl": "Surovega ne. Surovega medu ne dajajte mladičem in psom s šibkim imunskim sistemom, ker lahko vsebuje botulizem.",
-        "cs": "Syrový ne. Syrový med by se neměl dávat štěňatům ani psům se slabou imunitou, protože může obsahovat původce botulismu."
+        "es": "Miel cruda no. La miel cruda no debe darse a cachorros ni a perros con las defensas bajas, porque puede contener botulismo.",
+        "cs": "Syrový ne. Syrový med by se neměl dávat štěňatům ani psům se slabou imunitou, protože může obsahovat původce botulismu.",
+        "hr": "Ne sirov med. Sirov med ne treba davati štenadi ni psima oslabljenog imuniteta, jer može sadržavati uzročnika botulizma.",
+        "sv": "Inte rå honung. Rå honung ska inte ges till valpar eller hundar med svagt immunförsvar, eftersom den kan innehålla botulismbakterier.",
+        "da": "Ikke rå honning. Rå honning bør ikke gives til hvalpe eller hunde med svagt immunforsvar, fordi den kan indeholde botulismebakterier.",
+        "fi": "Raakaa hunajaa ei. Raakaa hunajaa ei pidä antaa pennuille eikä koirille, joiden immuunipuolustus on heikko, koska siinä voi olla botulismia.",
+        "nb": "Ikke rå honning. Rå honning bør ikke gis til valper eller hunder med svekket immunforsvar, fordi den kan inneholde botulisme.",
+        "it": "Non quello crudo. Il miele crudo non va dato ai cuccioli né ai cani con difese immunitarie deboli, perché può contenere botulino.",
+        "de": "Keinen rohen Honig. Roher Honig sollte nicht an Welpen oder Hunde mit geschwächtem Immunsystem gegeben werden, weil er Botulismus-Erreger enthalten kann.",
+        "fr": "Pas du miel cru. Le miel cru ne doit pas être donné aux chiots ni aux chiens dont le système immunitaire est affaibli, car il peut présenter un risque de botulisme.",
+        "pt": "Mel cru não. O mel cru não deve ser dado a cachorros nem a cães com o sistema imunitário debilitado, porque pode conter esporos do botulismo.",
+        "nl": "Geen rauwe honing. Rauwe honing mag je niet geven aan pups of honden met een zwak immuunsysteem, omdat het botulisme kan bevatten.",
+        "pl": "Surowego nie. Surowego miodu nie należy podawać szczeniętom ani psom z osłabioną odpornością, bo może zawierać bakterie, które mogą wywołać botulizm."
       }
     }
   ],
@@ -148,10 +292,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "9bf59eaa528bbdb753a149cdd9cd50e6e0f385caff5e820426f38c95f00b8254"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "81c543ccae46430eb282c93a27077c33009a4f0f5e9b355ee5f560f07612696c"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b6f7323953e7776e855a2d824c3d29234491c084f14e120f981cd59106534748"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a8dfd9c319e143997bf023cedc76bba0e3375dfa5a5ed4fbdec78e786e8414d4"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eacc8a7a74dc8f879428ba3bf029b5e5962fa2b763793239e281baa8b10c2b74"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "26cfc497d31e974c1816b287e108a88c2f18c99097f001549ea8895c08467f82"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9f76cc0e60e30901b2923f2635a710b47417106a7de4d23ae29db52c20217484"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "100e0fec1fa6b402218b712082bb9db366cd9fe31046088d8925fbeb4499b399"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a69fb32432f3c6b52c80c8ef21188199fca261cdba9ba694e08b03bf09e3b1f2"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "02b5082ae25b72eae087c1121a8468c08d4051fe04820099f168a12bd0f77a78"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d80d5336302c196aa3a13b984a56a1e4341f37e44d0d934db5ba0cb885b175f4"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d6a8ed4d269e7353396f29cf0f64280dd3c59a9a8bba476780b29406c24357f4"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2469898859a53940af10b53fddd94eac6246b386a2254be2dada1a323a9f9d5a"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "e2b04b9533e7fb413cace2fe4cc39b96e43ea412f96c91315486e400512279e3"
     }
   }
 }

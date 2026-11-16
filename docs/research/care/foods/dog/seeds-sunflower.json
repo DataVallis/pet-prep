@@ -1,0 +1,308 @@
+{
+  "slug": "seeds-sunflower",
+  "species": "dog",
+  "name": {
+    "en": "Sunflower seeds",
+    "sl": "Sončnična semena",
+    "de": "Sonnenblumenkerne",
+    "es": "Semillas de girasol",
+    "it": "Semi di girasole",
+    "pt": "Sementes de girassol",
+    "nl": "Zonnebloempitten",
+    "pl": "Nasiona słonecznika",
+    "cs": "Slunečnicová semínka",
+    "hr": "Sjemenke suncokreta",
+    "sv": "Solrosfrön",
+    "da": "Solsikkekerner",
+    "fi": "Auringonkukansiemenet",
+    "fr": "Graines de tournesol",
+    "nb": "Solsikkefrø"
+  },
+  "question": {
+    "en": "Can dogs eat sunflower seeds?",
+    "sl": "Ali lahko psi jedo sončnična semena?",
+    "de": "Dürfen Hunde Sonnenblumenkerne fressen?",
+    "es": "¿Pueden los perros comer semillas de girasol?",
+    "it": "I cani possono mangiare i semi di girasole?",
+    "pt": "Os cães podem comer sementes de girassol?",
+    "nl": "Mogen honden zonnebloempitten eten?",
+    "pl": "Czy psy mogą jeść nasiona słonecznika?",
+    "cs": "Mohou psi jíst slunečnicová semínka?",
+    "hr": "Smiju li psi jesti sjemenke suncokreta?",
+    "sv": "Får hundar äta solrosfrön?",
+    "da": "Må hunde spise solsikkekerner?",
+    "fi": "Saako koira syödä auringonkukansiemeniä?",
+    "fr": "Les chiens peuvent-ils manger des graines de tournesol ?",
+    "nb": "Kan hunder spise solsikkefrø?"
+  },
+  "url_slug": {
+    "en": "sunflower-seeds",
+    "sl": "soncnicna-semena",
+    "de": "sonnenblumenkerne",
+    "es": "semillas-de-girasol",
+    "it": "semi-di-girasole",
+    "pt": "sementes-de-girassol",
+    "nl": "zonnebloempitten",
+    "pl": "nasiona-slonecznika",
+    "cs": "slunecnicova-seminka",
+    "hr": "sjemenke-suncokreta",
+    "sv": "solrosfron",
+    "da": "solsikkekerner",
+    "fi": "auringonkukansiemenet",
+    "fr": "graines-de-tournesol",
+    "nb": "solsikkefro"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, as an occasional snack, if they are shelled and unsalted. Give only plain raw or toasted sunflower seeds, never the shells, which are a choking hazard and can't be digested. Too many seeds can upset your dog's stomach.",
+    "sl": "Da, kot občasen prigrizek, če so oluščena in nesoljena. Dajte le navadna surova ali popražena sončnična semena, nikoli lupin, ki lahko povzročijo dušenje in jih pes ne prebavi. Preveč semen lahko psu razdraži želodec.",
+    "de": "Ja, als gelegentlicher Snack, wenn sie geschält und ungesalzen sind. Geben Sie nur naturbelassene rohe oder geröstete Sonnenblumenkerne, niemals die Schalen, denn sie bergen Erstickungsgefahr und sind unverdaulich. Zu viele Kerne können Ihrem Hund auf den Magen schlagen.",
+    "es": "Sí, como tentempié ocasional, si están peladas y sin sal. Da solo semillas de girasol sencillas, crudas o tostadas, nunca las cáscaras, que son un peligro de atragantamiento y no se pueden digerir. Demasiadas semillas pueden sentar mal al estómago de tu perro.",
+    "it": "Sì, come snack occasionale, se sono sgusciati e non salati. Dai solo semi di girasole naturali, crudi o tostati, mai i gusci, che sono un rischio di soffocamento e non si digeriscono. Troppi semi possono far venire il mal di pancia al tuo cane.",
+    "pt": "Sim, como lanche ocasional, se estiverem sem casca e sem sal. Dá só sementes de girassol simples, cruas ou torradas, nunca as cascas, que são um risco de engasgo e não se digerem. Demasiadas sementes podem irritar o estômago do teu cão.",
+    "nl": "Ja, af en toe als tussendoortje, mits ze gepeld en ongezouten zijn. Geef alleen gewone rauwe of geroosterde zonnebloempitten, nooit de doppen, die een verstikkingsgevaar zijn en niet te verteren zijn. Te veel pitten kunnen de maag van je hond van streek maken.",
+    "pl": "Tak, jako przekąska od czasu do czasu, jeśli są łuskane i niesolone. Dawaj tylko nasiona słonecznika bez dodatków, surowe lub prażone, i nigdy łusek, które grożą zadławieniem i nie nadają się do strawienia. Zbyt dużo nasion może rozstroić psu żołądek.",
+    "cs": "Ano, jako občasná svačinka, pokud jsou loupaná a nesolená. Dávejte jen obyčejná syrová nebo pražená slunečnicová semínka, nikdy ne slupky, které představují riziko udušení a nedají se strávit. Příliš mnoho semínek může psovi podráždit žaludek.",
+    "hr": "Da, kao povremena grickalica, ako su oljuštene i neslane. Daj samo obične sirove ili pržene sjemenke, nikad ljuske, koje mogu izazvati gušenje i ne mogu se probaviti. Previše sjemenki može psu pokvariti želudac.",
+    "sv": "Ja, som ett mellanmål då och då, om de är skalade och osaltade. Ge bara okryddade råa eller rostade solrosfrön, aldrig skalen – de kan orsaka kvävning och går inte att smälta. För många frön kan ge hunden en orolig mage.",
+    "da": "Ja, som en lille snack en gang imellem, hvis de er uden skal og usaltede. Giv kun naturelle rå eller ristede solsikkekerner, aldrig skallerne, som kan sætte sig fast i halsen og ikke kan fordøjes. For mange kerner kan give din hund ondt i maven.",
+    "fi": "Saa, silloin tällöin välipalana, jos ne on kuorittu eikä niissä ole suolaa. Anna vain maustamattomia raakoja tai paahdettuja auringonkukansiemeniä äläkä koskaan kuoria, jotka ovat tukehtumisvaara eivätkä sula. Liian monta siementä voi sotkea koiran vatsan.",
+    "fr": "Oui, de temps en temps, à condition qu’elles soient décortiquées et non salées. Ne donnez que des graines de tournesol nature, crues ou grillées, jamais les coques : elles présentent un risque d’étouffement et ne se digèrent pas. Trop de graines peuvent donner mal au ventre à votre chien.",
+    "nb": "Ja, som en snack av og til, hvis de er skallede og usaltede. Gi bare naturlige, rå eller ristede solsikkefrø, aldri skallene, som er en kvelningsfare og ikke kan fordøyes. For mange frø kan gi hunden urolig mage."
+  },
+  "why": {
+    "en": "The husks are extremely hard, can't be broken down during digestion and can get stuck in the gut, causing a blockage. The salt in packaged seeds is harmful to dogs. Sunflower seeds are also high in fat, and too many can bring on vomiting, lethargy, a decreased appetite or other stomach upset.",
+    "sl": "Lupine so zelo trde, med prebavo se ne razgradijo in se lahko zataknejo v prebavilih ter jih zamašijo. Sol v pakiranih semenih psom škodi. Sončnična semena vsebujejo tudi veliko maščob; preveč jih lahko povzroči bruhanje, utrujenost, slabši apetit ali druge prebavne težave.",
+    "de": "Die Schalen sind extrem hart, können bei der Verdauung nicht abgebaut werden und im Darm stecken bleiben, was zu einem Darmverschluss führen kann. Das Salz in abgepackten Kernen ist für Hunde schädlich. Sonnenblumenkerne sind außerdem fettreich, und zu viele können Erbrechen, Mattigkeit, nachlassenden Appetit oder andere Magenbeschwerden auslösen.",
+    "es": "Las cáscaras son extremadamente duras, no se descomponen durante la digestión y pueden quedarse atascadas en el intestino y causar una obstrucción. La sal de las semillas envasadas es perjudicial para los perros. Las semillas de girasol también tienen mucha grasa, y demasiadas pueden provocar vómitos, falta de energía, menos apetito u otros trastornos de estómago.",
+    "it": "I gusci sono durissimi, non si scompongono durante la digestione e possono incastrarsi nell’intestino, causando un’occlusione. Il sale dei semi confezionati fa male ai cani. I semi di girasole sono anche ricchi di grassi e troppi possono provocare vomito, letargia, calo dell’appetito o altri disturbi di stomaco.",
+    "pt": "As cascas são extremamente duras, não se decompõem na digestão e podem ficar presas no intestino, causando uma obstrução. O sal das sementes embaladas faz mal aos cães. As sementes de girassol também têm muita gordura, e demasiadas podem causar vómitos, apatia, menos apetite ou outra indisposição de estômago.",
+    "nl": "De doppen zijn extreem hard, kunnen tijdens de spijsvertering niet worden afgebroken en kunnen in de darmen blijven steken en een verstopping veroorzaken. Het zout in verpakte pitten is schadelijk voor honden. Zonnebloempitten bevatten ook veel vet, en te veel pitten kunnen braken, lusteloosheid, minder eetlust of andere maagklachten veroorzaken.",
+    "pl": "Łuski są wyjątkowo twarde, nie rozkładają się w trakcie trawienia i mogą utknąć w jelitach, powodując niedrożność. Sól w paczkowanych nasionach szkodzi psom. Nasiona słonecznika mają też dużo tłuszczu, a zbyt duża ich ilość może wywołać wymioty, ospałość, spadek apetytu lub inny rozstrój żołądka.",
+    "cs": "Slupky jsou mimořádně tvrdé, při trávení se nerozloží a mohou uvíznout ve střevě a způsobit jeho ucpání. Sůl v balených semínkách psům škodí. Slunečnicová semínka mají také hodně tuku a příliš mnoho z nich může vyvolat zvracení, malátnost, sníženou chuť k jídlu nebo jiné potíže se žaludkem.",
+    "hr": "Ljuske su iznimno tvrde, ne mogu se razgraditi u probavi i mogu zapeti u crijevima te izazvati začepljenje. Sol u pakiranim sjemenkama štetna je za pse. Sjemenke suncokreta bogate su i mastima, a previše ih može izazvati povraćanje, malaksalost, smanjen apetit ili druge želučane tegobe.",
+    "sv": "Skalen är extremt hårda, bryts inte ned i matsmältningen och kan fastna i tarmen och orsaka tarmstopp. Saltet i förpackade frön är skadligt för hundar. Solrosfrön innehåller också mycket fett, och för många frön kan ge kräkningar, slöhet, minskad aptit eller andra magbesvär.",
+    "da": "Skallerne er ekstremt hårde, nedbrydes ikke under fordøjelsen og kan sætte sig fast i tarmen og give tarmblokering. Saltet i pakkede kerner er skadeligt for hunde. Solsikkekerner indeholder også meget fedt, og for mange kan give opkast, sløvhed, nedsat appetit eller andre maveproblemer.",
+    "fi": "Kuoret ovat erittäin kovia, eivät sula ruoansulatuksessa ja voivat juuttua suolistoon ja aiheuttaa suolitukoksen. Pakattujen siementen suola on koirille haitallista. Auringonkukansiemenissä on myös paljon rasvaa, ja liian suuri määrä voi aiheuttaa oksentelua, väsymystä, ruokahaluttomuutta tai muita vatsavaivoja.",
+    "fr": "Les coques sont extrêmement dures, ne se décomposent pas à la digestion et peuvent se coincer dans l’intestin jusqu’à provoquer une occlusion. Le sel des graines vendues en sachet est nocif pour les chiens. Les graines de tournesol sont en outre très riches en graisses : en excès, elles peuvent entraîner des vomissements, de la léthargie, une baisse d’appétit ou d’autres troubles digestifs.",
+    "nb": "Skallene er ekstremt harde, brytes ikke ned i fordøyelsen og kan sette seg fast i tarmen og gi tarmblokkering. Salt i ferdigpakkede frø er skadelig for hunder. Solsikkefrø er også rike på fett, og hvis hunden får i seg for mange, kan det gi oppkast, sløvhet, nedsatt matlyst eller annen urolig mage."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Give only shelled, unsalted seeds, and talk to your vet before adding sunflower seeds to your dog's diet.",
+    "sl": "Dajte le oluščena, nesoljena semena in se pred dodajanjem sončničnih semen v pasjo prehrano posvetujte z veterinarjem.",
+    "de": "Geben Sie nur geschälte, ungesalzene Kerne und sprechen Sie mit Ihrem Tierarzt, bevor Sie Sonnenblumenkerne in den Speiseplan Ihres Hundes aufnehmen.",
+    "es": "Da solo semillas peladas y sin sal, y habla con tu veterinario antes de añadir semillas de girasol a la dieta de tu perro.",
+    "it": "Dai solo semi sgusciati e non salati, e parla con il veterinario prima di inserire i semi di girasole nella dieta del tuo cane.",
+    "pt": "Dá só sementes sem casca e sem sal, e fala com o teu veterinário antes de juntar sementes de girassol à alimentação do teu cão.",
+    "nl": "Geef alleen gepelde, ongezouten pitten en overleg met je dierenarts voordat je zonnebloempitten aan het voer van je hond toevoegt.",
+    "pl": "Dawaj tylko łuskane, niesolone nasiona i porozmawiaj z weterynarzem, zanim dodasz nasiona słonecznika do diety psa.",
+    "cs": "Dávejte jen loupaná nesolená semínka a než slunečnicová semínka zařadíte do psího jídelníčku, poraďte se s veterinářem.",
+    "hr": "Daj samo oljuštene, neslane sjemenke, a prije nego što ih psu uvedeš u prehranu, porazgovaraj s veterinarom.",
+    "sv": "Ge bara skalade, osaltade frön och prata med veterinären innan du lägger till solrosfrön i hundens kost.",
+    "da": "Giv kun kerner uden skal og uden salt, og tal med din dyrlæge, før du tilføjer solsikkekerner til din hunds kost.",
+    "fi": "Anna vain kuorittuja, suolattomia siemeniä ja puhu eläinlääkärin kanssa, ennen kuin lisäät auringonkukansiemeniä koirasi ruokavalioon.",
+    "fr": "Ne donnez que des graines décortiquées et non salées, et parlez-en à votre vétérinaire avant d’ajouter des graines de tournesol à l’alimentation de votre chien.",
+    "nb": "Gi bare skallede, usaltede frø, og snakk med dyrlegen før du tar solsikkefrø med i hundens kosthold."
+  },
+  "serving": {
+    "en": "Shelled, plain (unsalted) raw or toasted seeds, now and then in moderate amounts.",
+    "sl": "Oluščena, navadna (nesoljena) surova ali popražena semena, občasno in zmerno.",
+    "de": "Geschälte, naturbelassene (ungesalzene) rohe oder geröstete Kerne, ab und zu in mäßiger Menge.",
+    "es": "Semillas peladas, sencillas (sin sal), crudas o tostadas, de vez en cuando y en cantidades moderadas.",
+    "it": "Semi sgusciati, naturali (non salati), crudi o tostati, ogni tanto e in quantità moderate.",
+    "pt": "Sementes simples (sem sal) e sem casca, cruas ou torradas, de vez em quando e em quantidades moderadas.",
+    "nl": "Gepelde, ongezouten rauwe of geroosterde pitten, af en toe in een matige hoeveelheid.",
+    "pl": "Łuskane, bez dodatków (niesolone), surowe lub prażone, od czasu do czasu w umiarkowanej ilości.",
+    "cs": "Loupaná, obyčejná (nesolená) syrová nebo pražená semínka, občas a ve střídmém množství.",
+    "hr": "Oljuštene, obične (neslane) sirove ili pržene sjemenke, povremeno i u umjerenim količinama.",
+    "sv": "Skalade, osaltade och okryddade, råa eller rostade frön, då och då och i måttliga mängder.",
+    "da": "Naturelle rå eller ristede kerner uden skal og uden salt, en gang imellem og i moderate mængder.",
+    "fi": "Kuorittuja, maustamattomia (suolattomia) raakoja tai paahdettuja siemeniä silloin tällöin ja kohtuullisina määrinä.",
+    "fr": "Graines décortiquées, nature (non salées), crues ou grillées, de temps en temps et en quantité modérée.",
+    "nb": "Skallede, naturlige (usaltede) frø, rå eller ristede, nå og da og i moderate mengder."
+  },
+  "child": {
+    "en": "Dogs can nibble a few plain sunflower seeds without shells, but never the salty ones from a snack bag.",
+    "sl": "Psi lahko pojedo nekaj navadnih sončničnih semen brez lupin, nikoli pa slanih iz vrečke za prigrizke.",
+    "de": "Hunde dürfen ein paar naturbelassene Sonnenblumenkerne ohne Schale knabbern, aber niemals die salzigen aus der Snacktüte.",
+    "es": "Los perros pueden mordisquear unas pocas semillas de girasol sencillas y sin cáscara, pero nunca las saladas de una bolsa de aperitivos.",
+    "it": "I cani possono sgranocchiare qualche seme di girasole naturale senza guscio, ma mai quelli salati dei sacchetti di snack.",
+    "pt": "Os cães podem mordiscar algumas sementes de girassol simples e sem casca, mas nunca as salgadas de um pacote de aperitivos.",
+    "nl": "Honden mogen een paar gewone zonnebloempitten zonder dop knabbelen, maar nooit de zoute uit een zakje.",
+    "pl": "Pies może schrupać kilka nasion słonecznika bez dodatków i bez łusek, ale nigdy tych słonych z paczki przekąsek.",
+    "cs": "Psi mohou ochutnat pár obyčejných slunečnicových semínek bez slupek, ale nikdy ne ta slaná ze sáčku s pochutinami.",
+    "hr": "Psi smiju grickati nekoliko običnih sjemenki suncokreta bez ljuske, ali nikad slane iz vrećice s grickalicama.",
+    "sv": "Hundar kan få knapra på några osaltade solrosfrön utan skal, men aldrig de salta från en snackspåse.",
+    "da": "Hunde kan knase et par naturelle solsikkekerner uden skal, men aldrig de salte fra en snackpose.",
+    "fi": "Koira voi nakertaa muutaman maustamattoman kuoritun auringonkukansiemenen, mutta ei koskaan suolaisia siemeniä, joita on välipalapusseissa.",
+    "fr": "Les chiens peuvent grignoter quelques graines de tournesol nature, sans coque, mais jamais celles d’un sachet d’apéritif, qui sont salées.",
+    "nb": "Hunder kan knaske på noen få naturlige solsikkefrø uten skall, men aldri de salte fra en snackpose."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat sunflower seed shells?",
+        "sl": "Ali lahko psi jedo lupine sončničnih semen?",
+        "de": "Dürfen Hunde die Schalen von Sonnenblumenkernen fressen?",
+        "es": "¿Pueden los perros comer las cáscaras de las semillas de girasol?",
+        "it": "I cani possono mangiare i gusci dei semi di girasole?",
+        "pt": "Os cães podem comer cascas de sementes de girassol?",
+        "nl": "Mogen honden de doppen van zonnebloempitten eten?",
+        "pl": "Czy psy mogą jeść łuski nasion słonecznika?",
+        "cs": "Mohou psi jíst slupky ze slunečnicových semínek?",
+        "hr": "Smiju li psi jesti ljuske sjemenki suncokreta?",
+        "sv": "Får hundar äta skalen från solrosfrön?",
+        "da": "Må hunde spise skallerne fra solsikkekerner?",
+        "fi": "Saako koira syödä auringonkukansiementen kuoria?",
+        "fr": "Les chiens peuvent-ils manger les coques de graines de tournesol ?",
+        "nb": "Kan hunder spise skall fra solsikkefrø?"
+      },
+      "a": {
+        "en": "No. The shells are extremely hard, can't be digested, are a serious choking hazard and can cause a blockage in the gut.",
+        "sl": "Ne. Lupine so zelo trde, pes jih ne prebavi, lahko povzročijo dušenje in zamašijo prebavila.",
+        "de": "Nein. Die Schalen sind extrem hart, können nicht verdaut werden, sind eine ernste Erstickungsgefahr und können einen Darmverschluss verursachen.",
+        "es": "No. Las cáscaras son extremadamente duras, no se pueden digerir, son un grave peligro de atragantamiento y pueden causar una obstrucción en el intestino.",
+        "it": "No. I gusci sono durissimi, non si possono digerire, sono un grave rischio di soffocamento e possono causare un’occlusione intestinale.",
+        "pt": "Não. As cascas são extremamente duras, não se digerem, são um sério risco de engasgo e podem causar uma obstrução no intestino.",
+        "nl": "Nee. De doppen zijn extreem hard, kunnen niet worden verteerd, zijn een ernstig verstikkingsgevaar en kunnen een verstopping in de darmen veroorzaken.",
+        "pl": "Nie. Łuski są wyjątkowo twarde, nie nadają się do strawienia, stwarzają poważne ryzyko zadławienia i mogą spowodować niedrożność jelit.",
+        "cs": "Ne. Slupky jsou mimořádně tvrdé, nedají se strávit, představují vážné riziko udušení a mohou způsobit ucpání střeva.",
+        "hr": "Ne. Ljuske su iznimno tvrde, ne mogu se probaviti, predstavljaju ozbiljnu opasnost od gušenja i mogu izazvati začepljenje crijeva.",
+        "sv": "Nej. Skalen är extremt hårda och går inte att smälta. De är en allvarlig kvävningsrisk och kan orsaka tarmstopp.",
+        "da": "Nej. Skallerne er ekstremt hårde og kan ikke fordøjes. Der er alvorlig fare for, at de sætter sig fast i halsen, og de kan give tarmblokering.",
+        "fi": "Ei saa. Kuoret ovat erittäin kovia, eivät sula, ovat vakava tukehtumisvaara ja voivat aiheuttaa suolitukoksen.",
+        "fr": "Non. Les coques sont extrêmement dures, ne se digèrent pas, présentent un sérieux risque d’étouffement et peuvent provoquer une occlusion de l’intestin.",
+        "nb": "Nei. Skallene er ekstremt harde, kan ikke fordøyes, er en alvorlig kvelningsfare og kan gi tarmblokkering."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD227",
+      "quote": "Dogs should be given only natural raw or toasted sunflower seeds (not salted ones)."
+    },
+    {
+      "id": "KD227",
+      "quote": "As human foods go, sunflower seeds are among the healthier options to occasionally share with your dog."
+    },
+    {
+      "id": "KD227",
+      "quote": "Most important, don’t allow your dog to eat sunflower seed shells."
+    },
+    {
+      "id": "KD227",
+      "quote": "These husks are extremely hard and can’t be broken down during digestion."
+    },
+    {
+      "id": "KD227",
+      "quote": "The shells are also a serious choking hazard, so be sure to offer your dog only shelled seeds."
+    },
+    {
+      "id": "KD227",
+      "quote": "Shells can get stuck in the digestive tract, causing blockage or obstruction."
+    },
+    {
+      "id": "KD227",
+      "quote": "The salt in packaged seeds is harmful and can cause salt toxicosis"
+    },
+    {
+      "id": "KD227",
+      "quote": "the high-fat content can bring on vomiting, lethargy, decreased appetite, and other digestive upsets."
+    },
+    {
+      "id": "KD227",
+      "quote": "As a general rule, sunflower seeds should be an occasional snack given in moderate amounts."
+    },
+    {
+      "id": "KD227",
+      "quote": "Eating too many sunflower seeds can result in gastrointestinal upset and irritation."
+    },
+    {
+      "id": "KD227",
+      "quote": "Contact your veterinarian before adding them to your dog’s diet."
+    }
+  ],
+  "related": [
+    "salt",
+    "salty-snacks"
+  ],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67bd87540563d8bc80220044fbcb69ff96123f54ed545a69e94d5476d7d8a3e2"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b29bce862452d7e88a479a533f54772a59d2aba98656e4e63db3eaace91177a5"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "998bf08218744b179a9122243c17be6724065f52a7f37675bbded216ba7b446b"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "49b7131a4794cbd7f538f43cc447fd3b188f1e6b7b26276f35e09a6d20d84eff"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-c-it-2026-11-16",
+      "verified_hash": "55a78df41fd8a884f4d6dcdd9b445d2512ebec92e06d9906c6788806f8ab09bf"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e5735cdca4f58f34e3dbc879ea7726f4b58fb267afa59b13ccafbf476d2c9aaf"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "761a43fb5c05e2ad2c2c5922a06ab757b9bcf4252adacc9c14c2480720091fb2"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "213fde83f02b6b705b0a3e809a81842036ace0f3ea75363fa9c415e382d44a41"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "e173c4a984bdff9ce0142680f6da647b0aaa39df1bad09b98e423abc88f24ad3"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fc36ff8060510c5a2e3eeddcf1b45b4f08f010561744cce689ea43096f4d010d"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-16",
+      "verified_hash": "8e23412c27cc3b2a0bb7fbcf8b380521f8b939558eb76cb6860b6e21246031ae"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "80d583ec1bffb8538e3651810a235639a6e1f7051699162e40cdba7f10b79519"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-c-fi-2026-11-16",
+      "verified_hash": "52727f7e0d623e03d47e130b3628eeb066acf54652958459db1e585c750ae11e"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-c-fr-2026-11-16",
+      "verified_hash": "d943ec827f7fa6a76cb792c0de11fc2f7c0885e8c1df4f387a1aa2c7a9947dd5"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "de28f03f787a89134d2b0475c3f0e780cdcfa3b7749a00fbc021f79378a47769"
+    }
+  }
+}

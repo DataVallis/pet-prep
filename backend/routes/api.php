@@ -26,9 +26,12 @@ use App\Http\Controllers\PartnerInquiryController;
 use App\Http\Controllers\PetGrowthController;
 use App\Http\Controllers\PetMediaController;
 use App\Http\Controllers\PetNameController;
+use App\Http\Controllers\PetQuietHoursController;
 use App\Http\Controllers\PetTimezoneController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
+use App\Http\Controllers\SummaryLeadController;
+use App\Http\Controllers\TimeFormatController;
 use App\Http\Controllers\WebParentSessionController;
 use App\Http\Controllers\WishController;
 use App\Http\Middleware\LimitRequestBody;
@@ -83,6 +86,11 @@ Route::post('gift/redeem', [GiftVoucherController::class, 'redeem'])
 Route::post('partner-inquiries', [PartnerInquiryController::class, 'store'])
     ->middleware('throttle:partner-inquiries');
 
+// M6-S05: optional parent e-mail (with consent) on the petprep.si page »Koliko dela je pes«.
+// Public; per-IP throttle (10 / hour); one row per e-mail, no e-mail is sent.
+Route::post('summary-leads', [SummaryLeadController::class, 'store'])
+    ->middleware('throttle:summary-leads');
+
 // M5-05: crash / render-error reports from the app, with or without a token
 // (a token only gives the role; an invalid one is ignored, never a 401).
 // Throttled per IP (IPv6 /64; tighter when signed out) and per signed-in user;
@@ -99,6 +107,8 @@ Route::post('app-errors', [AppErrorController::class, 'store'])
 // unchanged; a website `gift:redeem` token never does.
 Route::middleware(['auth:sanctum', 'ability:parent,child'])->group(function () {
     Route::get('user', [AuthController::class, 'user']);
+    // David 2026-11-16: own 12 / 24 h clock choice (auto | 24h | 12h).
+    Route::put('user/time-format', [TimeFormatController::class, 'update']);
     Route::post('logout', [AuthController::class, 'logout']);
 
     // M3-02: push devices (parent or child token). Unregister takes the Expo
@@ -245,6 +255,8 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         Route::put('settings', [ParentSettingsController::class, 'update']);
         // Time zone per pet (David 2026-11-09): own zone or back to the family zone.
         Route::put('pets/{pet}/timezone', [PetTimezoneController::class, 'update'])->whereNumber('pet');
+        // Quiet hours per pet (David 2026-11-16): own schedule or back to the family's.
+        Route::put('pets/{pet}/quiet-hours', [PetQuietHoursController::class, 'update'])->whereNumber('pet');
 
         // 12-week challenge billing (M3-11, PAYMENTS_SPEC): unused purchases + pet
         // payment status; assign a purchase (challenge credit) to a pet.

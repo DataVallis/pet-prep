@@ -4159,6 +4159,33 @@
         }
       ],
       "notes": "RKC breed page (dog-data S865, 2026-11-15; the 'at a minimum' list = minimum, 'Best Practice schemes and tests' = best_practice; names as returned): minimum — the genetic-diversity link (inbreeding_coi), DNA LOA, DNA PLL; Best Practice — DNA SCA and the BVA/KC/ISDS eye scheme. Unlike the Jack Russell Terrier (FCI 345, LOA there is Best Practice). No new key."
+    },
+    "wire_fox_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S872",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S872",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S872",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S872, 2026-11-16; names as returned): minimum — the genetic-diversity link (inbreeding_coi); Best Practice — the BVA/KC/ISDS eye scheme. 'We don’t currently offer a breed-specific DNA testing package for this breed' (S872). No new key."
     }
   }
 }

@@ -4,28 +4,88 @@
   "name": {
     "en": "Marshmallows",
     "sl": "Penasti bonboni (marshmallow)",
-    "cs": "Marshmallow (pěnové bonbony)"
+    "es": "Nubes de azúcar",
+    "cs": "Marshmallow (pěnové bonbony)",
+    "hr": "Marshmallowi",
+    "sv": "Marshmallows",
+    "da": "Skumfiduser",
+    "fi": "Vaahtokarkit",
+    "nb": "Marshmallows",
+    "it": "Marshmallow",
+    "de": "Marshmallows",
+    "fr": "Guimauves",
+    "pt": "Marshmallows",
+    "nl": "Marshmallows",
+    "pl": "Pianki marshmallow"
   },
   "question": {
     "en": "Can dogs eat marshmallows?",
     "sl": "Ali lahko psi jedo penaste bonbone (marshmallow)?",
-    "cs": "Mohou psi jíst marshmallow (pěnové bonbony)?"
+    "es": "¿Pueden los perros comer nubes de azúcar?",
+    "cs": "Mohou psi jíst marshmallow (pěnové bonbony)?",
+    "hr": "Smiju li psi jesti marshmallowe?",
+    "sv": "Får hundar äta marshmallows?",
+    "da": "Må hunde spise skumfiduser?",
+    "fi": "Saako koira syödä vaahtokarkkeja?",
+    "nb": "Kan hunder spise marshmallows?",
+    "it": "I cani possono mangiare i marshmallow?",
+    "de": "Dürfen Hunde Marshmallows fressen?",
+    "fr": "Les chiens peuvent-ils manger des guimauves ?",
+    "pt": "Os cães podem comer marshmallows?",
+    "nl": "Mogen honden marshmallows eten?",
+    "pl": "Czy psy mogą jeść pianki marshmallow?"
   },
   "url_slug": {
     "en": "marshmallows",
     "sl": "penasti-bonboni",
-    "cs": "marshmallow"
+    "es": "nubes-de-azucar",
+    "cs": "marshmallow",
+    "hr": "marshmallow",
+    "sv": "marshmallows",
+    "da": "skumfiduser",
+    "fi": "vaahtokarkit",
+    "nb": "marshmallows",
+    "it": "marshmallow",
+    "de": "marshmallows",
+    "fr": "guimauves",
+    "pt": "marshmallows",
+    "nl": "marshmallows",
+    "pl": "pianki-marshmallow"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No. Not all marshmallows are toxic to dogs, but they are not good for them: they are made from sugar, corn syrup and gelatin and have little or no nutritional value. Some contain xylitol, which is toxic to dogs.",
     "sl": "Ne. Penasti bonboni za pse niso vsi strupeni, a jim ne koristijo: narejeni so iz sladkorja, koruznega sirupa in želatine ter nimajo skoraj nobene hranilne vrednosti. Nekateri vsebujejo ksilitol, ki je za pse strupen.",
-    "cs": "Ne. Ne všechny marshmallow jsou pro psy jedovaté, ale prospěšné nejsou: vyrábějí se z cukru, kukuřičného sirupu a želatiny a mají jen malou nebo žádnou výživovou hodnotu. Některé obsahují xylitol, který je pro psy jedovatý."
+    "es": "No. No todas las nubes de azúcar (marshmallows) son tóxicas para los perros, pero no les convienen: están hechas de azúcar, jarabe de maíz y gelatina y tienen poco o ningún valor nutritivo. Algunas llevan xilitol, que es tóxico para los perros.",
+    "cs": "Ne. Ne všechny marshmallow jsou pro psy jedovaté, ale prospěšné nejsou: vyrábějí se z cukru, kukuřičného sirupu a želatiny a mají jen malou nebo žádnou výživovou hodnotu. Některé obsahují xylitol, který je pro psy jedovatý.",
+    "hr": "Ne. Nisu svi marshmallowi otrovni za pse, ali nisu dobri za njih: prave se od šećera, kukuruznog sirupa i želatine te imaju malu ili nikakvu hranjivu vrijednost. Neki sadrže ksilitol, koji je otrovan za pse.",
+    "sv": "Nej. Alla marshmallows är inte giftiga för hundar, men de är inte bra för dem: de görs av socker, glukossirap och gelatin och har litet eller inget näringsvärde. Vissa innehåller xylitol, som är giftigt för hundar.",
+    "da": "Nej. Ikke alle skumfiduser er giftige for hunde, men de er ikke gode for dem: de er lavet af sukker, majssirup og gelatine og har ringe eller ingen næringsværdi. Nogle indeholder xylitol, som er giftigt for hunde.",
+    "fi": "Ei suositella. Kaikki vaahtokarkit eivät ole koirille myrkyllisiä, mutta ne eivät ole niille hyväksi: ne on tehty sokerista, maissisiirapista ja gelatiinista, ja niillä on vain vähän tai ei lainkaan ravintoarvoa. Joissakin on ksylitolia, joka on koirille myrkyllistä.",
+    "nb": "Nei. Ikke alle marshmallows er giftige for hunder, men de er ikke bra for dem. De er laget av sukker, maissirup og gelatin og har liten eller ingen næringsverdi. Noen inneholder xylitol, som er giftig for hunder.",
+    "it": "No. Non tutti i marshmallow sono tossici per i cani, ma non gli fanno bene: sono fatti di zucchero, sciroppo di mais e gelatina e hanno un valore nutritivo scarso o nullo. Alcuni contengono xilitolo, che è tossico per i cani.",
+    "de": "Nein. Nicht alle Marshmallows sind für Hunde giftig, aber gut sind sie nicht: Sie bestehen aus Zucker, Maissirup und Gelatine und haben kaum oder keinen Nährwert. Manche enthalten Xylit, das für Hunde giftig ist.",
+    "fr": "Non. Toutes les guimauves ne sont pas toxiques pour les chiens, mais elles ne sont pas bonnes pour eux : elles sont faites de sucre, de sirop de maïs et de gélatine, et n’ont que peu ou pas de valeur nutritive. Certaines contiennent du xylitol, toxique pour les chiens.",
+    "pt": "Não. Nem todos os marshmallows são tóxicos para os cães, mas não lhes fazem bem: são feitos de açúcar, xarope de milho e gelatina e têm pouco ou nenhum valor nutricional. Alguns contêm xilitol, que é tóxico para os cães.",
+    "nl": "Nee. Niet alle marshmallows zijn giftig voor honden, maar ze zijn niet goed voor ze: ze zijn gemaakt van suiker, maïssiroop en gelatine en hebben weinig tot geen voedingswaarde. Sommige bevatten xylitol, dat giftig is voor honden.",
+    "pl": "Nie. Nie wszystkie pianki marshmallow są dla psów toksyczne, ale na pewno nie są dla nich dobre: robi się je z cukru, syropu kukurydzianego i żelatyny, a ich wartość odżywcza jest znikoma lub zerowa. Niektóre zawierają ksylitol, który jest toksyczny dla psów."
   },
   "why": {
     "en": "Marshmallows contain a very high amount of sugar and calories, so they are especially risky for dogs with diabetes or weight problems, and even in healthy dogs sugary treats can contribute to obesity. Eating too many can cause gastrointestinal upset and puts a dog at risk of pancreatitis. A marshmallow with xylitol is toxic even in small amounts and can cause dangerously low blood sugar.",
     "sl": "Penasti bonboni vsebujejo zelo veliko sladkorja in kalorij, zato so posebej tvegani za pse s sladkorno boleznijo ali s prekomerno težo, pa tudi pri zdravih psih sladki priboljški prispevajo k debelosti. Preveč penastih bonbonov lahko povzroči prebavne težave, pes pa je ogrožen tudi za pankreatitis. Penasti bonbon s ksilitolom je strupen že v majhnih količinah in lahko povzroči nevarno nizek krvni sladkor.",
-    "cs": "Marshmallow obsahují velmi mnoho cukru a kalorií, takže jsou obzvlášť rizikové pro psy s cukrovkou nebo problémy s váhou, a i u zdravých psů mohou sladké pamlsky přispívat k obezitě. Když jich pes sní příliš mnoho, mohou způsobit potíže se zažíváním a hrozí i zánět slinivky břišní. Marshmallow s xylitolem je jedovatý už v malém množství a může způsobit nebezpečně nízkou hladinu cukru v krvi."
+    "es": "Las nubes de azúcar contienen una cantidad muy alta de azúcar y calorías, así que son especialmente arriesgadas para los perros con diabetes o problemas de peso, y hasta en perros sanos los dulces azucarados pueden contribuir a la obesidad. Comer demasiadas puede causar malestar digestivo y expone al perro a un riesgo de pancreatitis. Una nube con xilitol es tóxica incluso en cantidades pequeñas y puede provocar un descenso peligroso del azúcar en la sangre.",
+    "cs": "Marshmallow obsahují velmi mnoho cukru a kalorií, takže jsou obzvlášť rizikové pro psy s cukrovkou nebo problémy s váhou, a i u zdravých psů mohou sladké pamlsky přispívat k obezitě. Když jich pes sní příliš mnoho, mohou způsobit potíže se zažíváním a hrozí i zánět slinivky břišní. Marshmallow s xylitolem je jedovatý už v malém množství a může způsobit nebezpečně nízkou hladinu cukru v krvi.",
+    "hr": "Marshmallowi sadrže vrlo velike količine šećera i kalorija, pa su osobito rizični za pse s dijabetesom ili problemima s tjelesnom težinom, a čak i kod zdravih pasa slatke poslastice mogu pridonijeti pretilosti. Prejedanje može izazvati probavne tegobe i izlaže psa riziku od upale gušterače. Marshmallow s ksilitolom otrovan je čak i u malim količinama i može izazvati opasno nizak šećer u krvi.",
+    "sv": "Marshmallows innehåller mycket socker och många kalorier, så de är särskilt riskabla för hundar med diabetes eller viktproblem, och även hos friska hundar kan söta godsaker bidra till fetma. Om hunden äter för många kan det ge magtarmbesvär och risk för bukspottkörtelinflammation (pankreatit). En marshmallow med xylitol är giftig även i små mängder och kan orsaka farligt lågt blodsocker.",
+    "da": "Skumfiduser indeholder meget sukker og mange kalorier, så de er særligt risikable for hunde med diabetes eller vægtproblemer, og selv hos raske hunde kan sukkerholdige godbidder bidrage til fedme. Hvis hunden spiser for mange, kan det give mave-tarm-besvær og øge risikoen for betændelse i bugspytkirtlen. En skumfidus med xylitol er giftig selv i små mængder og kan give farligt lavt blodsukker.",
+    "fi": "Vaahtokarkeissa on erittäin paljon sokeria ja kaloreita, joten ne ovat erityisen riskialttiita koirille, joilla on diabetes tai painonhallintaongelmia, ja terveelläkin koiralla sokeriset herkut voivat edistää lihavuutta. Liian monen syöminen voi aiheuttaa maha-suolikanavan vaivoja ja altistaa koiran haimatulehdukselle. Ksylitolia sisältävä vaahtokarkki on myrkyllinen jo pieninä määrinä ja voi aiheuttaa vaarallisen matalan verensokerin.",
+    "nb": "Marshmallows inneholder svært mye sukker og mange kalorier, så de er spesielt risikable for hunder med diabetes eller vektproblemer, og selv for friske hunder kan sukkerholdig godbit bidra til fedme. Hvis hunden spiser for mange, kan det gi urolig mage og fare for betennelse i bukspyttkjertelen. En marshmallow med xylitol er giftig selv i små mengder og kan gi farlig lavt blodsukker.",
+    "it": "I marshmallow contengono moltissimo zucchero e molte calorie, quindi sono particolarmente rischiosi per i cani con diabete o problemi di peso, e anche nei cani sani i dolci zuccherati possono contribuire all’obesità. Mangiarne troppi può causare disturbi gastrointestinali e mette il cane a rischio di pancreatite. Un marshmallow con xilitolo è tossico anche in piccole quantità e può provocare un calo pericoloso della glicemia.",
+    "de": "Marshmallows enthalten extrem viel Zucker und Kalorien, deshalb sind sie besonders riskant für Hunde mit Diabetes oder Gewichtsproblemen, und selbst bei gesunden Hunden können zuckerhaltige Leckereien zu Übergewicht beitragen. Zu viele können Magen-Darm-Beschwerden verursachen und bergen das Risiko einer Bauchspeicheldrüsenentzündung. Ein Marshmallow mit Xylit ist schon in kleinen Mengen giftig und kann gefährlich niedrigen Blutzucker verursachen.",
+    "fr": "Les guimauves contiennent énormément de sucre et de calories ; elles sont donc particulièrement risquées pour les chiens diabétiques ou en surpoids, et même chez un chien en bonne santé, les friandises sucrées peuvent favoriser l’obésité. En manger trop peut provoquer des troubles gastro-intestinaux et expose le chien à une pancréatite. Une guimauve contenant du xylitol est toxique même en petite quantité et peut provoquer une chute dangereuse de la glycémie.",
+    "pt": "Os marshmallows têm uma quantidade muito elevada de açúcar e calorias, por isso são especialmente arriscados para cães com diabetes ou problemas de peso, e mesmo em cães saudáveis as guloseimas açucaradas podem contribuir para a obesidade. Comer muitos pode causar problemas gastrointestinais e aumenta o risco de pancreatite no cão. Um marshmallow com xilitol é tóxico mesmo em pequenas quantidades e pode causar uma descida perigosa do açúcar no sangue.",
+    "nl": "Marshmallows bevatten heel veel suiker en calorieën, dus ze zijn vooral riskant voor honden met diabetes of gewichtsproblemen, en zelfs bij gezonde honden kunnen suikerrijke snoepjes bijdragen aan overgewicht. Te veel eten kan maag-darmklachten veroorzaken en vergroot het risico op alvleesklierontsteking. Een marshmallow met xylitol is zelfs in kleine hoeveelheden giftig en kan een gevaarlijk lage bloedsuikerspiegel veroorzaken.",
+    "pl": "Pianki marshmallow zawierają bardzo dużo cukru i kalorii, więc są szczególnie ryzykowne dla psów z cukrzycą lub problemami z wagą, a nawet u zdrowych psów słodkie smakołyki mogą przyczyniać się do otyłości. Zjedzenie zbyt wielu pianek może wywołać rozstrój przewodu pokarmowego i zwiększa ryzyko zapalenia trzustki. Pianka z ksylitolem jest toksyczna nawet w małych ilościach i może wywołać niebezpiecznie niski poziom cukru we krwi."
   },
   "signs": {
     "en": [
@@ -40,39 +100,171 @@
       "Driska",
       "Opotekanje ali krči (ksilitol)"
     ],
+    "es": [
+      "Vómitos",
+      "Poco apetito",
+      "Diarrea",
+      "Andar tambaleante o convulsiones (xilitol)"
+    ],
     "cs": [
       "Zvracení",
       "Snížená chuť k jídlu",
       "Průjem",
       "Vrávorání nebo záchvaty (xylitol)"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Slab apetit",
+      "Proljev",
+      "Teturav hod ili napadaji (ksilitol)"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Dålig aptit",
+      "Diarré",
+      "Ostadig gång eller kramper (xylitol)"
+    ],
+    "da": [
+      "Opkast",
+      "Dårlig appetit",
+      "Diarré",
+      "Usikker gang eller kramper (xylitol)"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Heikko ruokahalu",
+      "Ripuli",
+      "Huojuva kävely tai kouristuskohtaukset (ksylitoli)"
+    ],
+    "nb": [
+      "Oppkast",
+      "Dårlig matlyst",
+      "Diaré",
+      "Ustø gange eller kramper (xylitol)"
+    ],
+    "it": [
+      "Vomito",
+      "Scarso appetito",
+      "Diarrea",
+      "Andatura traballante o convulsioni (xilitolo)"
+    ],
+    "de": [
+      "Erbrechen",
+      "Appetitlosigkeit",
+      "Durchfall",
+      "Wackeliger Gang oder Krampfanfälle (Xylit)"
+    ],
+    "fr": [
+      "Vomissements",
+      "Perte d’appétit",
+      "Diarrhée",
+      "Démarche titubante ou convulsions (xylitol)"
+    ],
+    "pt": [
+      "Vómitos",
+      "Falta de apetite",
+      "Diarreia",
+      "Andar cambaleante ou convulsões (xilitol)"
+    ],
+    "nl": [
+      "Braken",
+      "Weinig eetlust",
+      "Diarree",
+      "Wankelend lopen of toevallen (xylitol)"
+    ],
+    "pl": [
+      "Wymioty",
+      "Brak apetytu",
+      "Biegunka",
+      "Chwiejny chód lub drgawki (ksylitol)"
     ]
   },
   "what_to_do": {
     "en": "Call your vet right away if your dog ate several marshmallows, or any marshmallow that may contain xylitol.",
     "sl": "Takoj pokličite veterinarja, če je pes pojedel več penastih bonbonov ali kateri koli penasti bonbon, ki bi lahko vseboval ksilitol.",
-    "cs": "Okamžitě zavolejte veterináři, pokud pes snědl několik marshmallow nebo jakýkoli marshmallow, který může obsahovat xylitol."
+    "es": "Llama a tu veterinario enseguida si tu perro se ha comido varias nubes de azúcar, o cualquiera que pueda llevar xilitol.",
+    "cs": "Okamžitě zavolejte veterináři, pokud pes snědl několik marshmallow nebo jakýkoli marshmallow, který může obsahovat xylitol.",
+    "hr": "Odmah nazovi veterinara ako je pas pojeo nekoliko marshmallowa ili bilo koji marshmallow koji bi mogao sadržavati ksilitol.",
+    "sv": "Kontakta din veterinär direkt om din hund har ätit flera marshmallows, eller någon marshmallow som kan innehålla xylitol.",
+    "da": "Ring til din dyrlæge med det samme, hvis din hund har spist flere skumfiduser eller en skumfidus, der kan indeholde xylitol.",
+    "fi": "Soita heti eläinlääkärille, jos koirasi söi useita vaahtokarkkeja tai yhdenkin vaahtokarkin, jossa voi olla ksylitolia.",
+    "nb": "Ring dyrlegen med en gang hvis hunden har spist flere marshmallows, eller en marshmallow som kan inneholde xylitol.",
+    "it": "Chiama subito il veterinario se il tuo cane ha mangiato diversi marshmallow, o anche un solo marshmallow che potrebbe contenere xilitolo.",
+    "de": "Rufen Sie sofort Ihren Tierarzt an, wenn Ihr Hund mehrere Marshmallows gefressen hat oder ein Marshmallow, das Xylit enthalten könnte.",
+    "fr": "Appelez immédiatement votre vétérinaire si votre chien a mangé plusieurs guimauves, ou une guimauve pouvant contenir du xylitol.",
+    "pt": "Liga imediatamente ao teu veterinário se o teu cão comeu vários marshmallows, ou algum que possa conter xilitol.",
+    "nl": "Bel meteen je dierenarts als je hond meerdere marshmallows heeft gegeten, of een marshmallow die xylitol kan bevatten.",
+    "pl": "Od razu zadzwoń do weterynarza, jeśli pies zjadł kilka pianek marshmallow albo jakąkolwiek piankę, która może zawierać ksylitol."
   },
   "serving": {
     "en": "Instead of marshmallows: good-quality dog treats or healthier snacks such as carrots, green vegetables or blueberries.",
     "sl": "Namesto penastih bonbonov: kakovostni pasji priboljški ali bolj zdravi prigrizki, kot so korenje, zelena zelenjava ali borovnice.",
-    "cs": "Místo marshmallow: kvalitní psí pamlsky nebo zdravější svačinky, například mrkev, zelená zelenina nebo borůvky."
+    "es": "En lugar de nubes de azúcar: premios de buena calidad para perros o tentempiés más saludables, como zanahorias, verduras de hoja verde o arándanos.",
+    "cs": "Místo marshmallow: kvalitní psí pamlsky nebo zdravější svačinky, například mrkev, zelená zelenina nebo borůvky.",
+    "hr": "Umjesto marshmallowa: kvalitetne poslastice za pse ili zdravije grickalice poput mrkve, zelenog povrća ili borovnica.",
+    "sv": "I stället för marshmallows: hundgodis av god kvalitet eller nyttigare mellanmål som morötter, gröna grönsaker eller blåbär.",
+    "da": "I stedet for skumfiduser: hundegodbidder af god kvalitet eller sundere snacks som gulerødder, grønt eller blåbær.",
+    "fi": "Vaahtokarkkien sijaan: laadukkaita koiranherkkuja tai terveellisempiä välipaloja, kuten porkkanaa, vihreitä kasviksia tai mustikoita.",
+    "nb": "I stedet for marshmallows: godbiter av god kvalitet til hunder, eller sunnere snacks som gulrøtter, grønnsaker eller blåbær.",
+    "it": "Al posto dei marshmallow: premi per cani di buona qualità o spuntini più sani come carote, ortaggi verdi o mirtilli.",
+    "de": "Statt Marshmallows: hochwertige Hundeleckerlis oder gesündere Snacks wie Karotten, grünes Gemüse oder Heidelbeeren.",
+    "fr": "À la place des guimauves : de bonnes friandises pour chiens ou des en-cas plus sains, comme des carottes, des légumes verts ou des myrtilles.",
+    "pt": "Em vez de marshmallows: guloseimas para cães de boa qualidade ou alternativas mais saudáveis, como cenouras, legumes verdes ou mirtilos.",
+    "nl": "In plaats van marshmallows: hondensnoepjes van goede kwaliteit of gezondere tussendoortjes zoals wortels, groene groenten of blauwe bessen.",
+    "pl": "Zamiast pianek marshmallow: dobrej jakości smakołyki dla psów albo zdrowsze przekąski, takie jak marchewka, zielone warzywa lub borówki."
   },
   "child": {
     "en": "Marshmallows are too sugary for dogs. Share a carrot or a few blueberries with your dog instead!",
     "sl": "Penasti bonboni so za pse presladki. Raje deli s psom korenček ali nekaj borovnic!",
-    "cs": "Marshmallow jsou pro psy příliš sladké. Raději se se psem rozděl o mrkev nebo pár borůvek!"
+    "es": "Las nubes de azúcar llevan demasiado azúcar para los perros. ¡Comparte mejor con tu perro una zanahoria o unos pocos arándanos!",
+    "cs": "Marshmallow jsou pro psy příliš sladké. Raději se se psem rozděl o mrkev nebo pár borůvek!",
+    "hr": "Marshmallowi su previše slatki za pse. Umjesto toga s psom podijeli mrkvu ili nekoliko borovnica!",
+    "sv": "Marshmallows är för söta för hundar. Dela hellre en morot eller några blåbär med din hund!",
+    "da": "Skumfiduser er for sukkerholdige til hunde. Del i stedet en gulerod eller nogle få blåbær med din hund!",
+    "fi": "Vaahtokarkit ovat koirille liian sokerisia. Jaa koirasi kanssa mieluummin porkkana tai muutama mustikka!",
+    "nb": "Marshmallows er for søte for hunder. Gi hunden en gulrot eller noen blåbær i stedet!",
+    "it": "I marshmallow sono troppo zuccherati per i cani. Dividi invece con il tuo cane una carota o qualche mirtillo!",
+    "de": "Marshmallows sind für Hunde zu zuckerig. Teile mit deinem Hund lieber eine Karotte oder ein paar Heidelbeeren!",
+    "fr": "Les guimauves sont trop sucrées pour les chiens. Partage plutôt une carotte ou quelques myrtilles avec ton chien !",
+    "pt": "Os marshmallows são doces demais para os cães. Partilha antes uma cenoura ou uns mirtilos com o teu cão!",
+    "nl": "Marshmallows zijn te zoet voor honden. Deel liever een wortel of een paar blauwe bessen met je hond!",
+    "pl": "Pianki marshmallow są dla psów zbyt słodkie. Poczęstuj psa marchewką albo kilkoma borówkami!"
   },
   "faq": [
     {
       "q": {
         "en": "Are sugar-free marshmallows safer?",
         "sl": "Ali so penasti bonboni brez sladkorja varnejši?",
-        "cs": "Jsou marshmallow bez cukru bezpečnější?"
+        "es": "¿Son más seguras las nubes de azúcar sin azúcar?",
+        "cs": "Jsou marshmallow bez cukru bezpečnější?",
+        "hr": "Jesu li marshmallowi bez šećera sigurniji?",
+        "sv": "Är sockerfria marshmallows säkrare?",
+        "da": "Er sukkerfri skumfiduser sikrere?",
+        "fi": "Ovatko sokerittomat vaahtokarkit turvallisempia?",
+        "nb": "Er sukkerfrie marshmallows tryggere?",
+        "it": "I marshmallow senza zucchero sono più sicuri?",
+        "de": "Sind zuckerfreie Marshmallows sicherer?",
+        "fr": "Les guimauves sans sucre sont-elles plus sûres ?",
+        "pt": "Os marshmallows sem açúcar são mais seguros?",
+        "nl": "Zijn suikervrije marshmallows veiliger?",
+        "pl": "Czy pianki marshmallow bez cukru są bezpieczniejsze?"
       },
       "a": {
         "en": "No. Check the label: if a marshmallow contains xylitol, it is toxic to dogs and can be extremely harmful even in small amounts.",
         "sl": "Ne. Preberite deklaracijo: če penasti bonbon vsebuje ksilitol, je za pse strupen in lahko zelo škodi že v majhnih količinah.",
-        "cs": "Ne. Přečtěte si složení: pokud marshmallow obsahuje xylitol, je pro psy jedovatý a může být nesmírně škodlivý i v malém množství."
+        "es": "No. Mira la etiqueta: si una nube lleva xilitol, es tóxica para los perros y puede ser muy perjudicial incluso en cantidades pequeñas.",
+        "cs": "Ne. Přečtěte si složení: pokud marshmallow obsahuje xylitol, je pro psy jedovatý a může být nesmírně škodlivý i v malém množství.",
+        "hr": "Ne. Provjeri deklaraciju: ako marshmallow sadrži ksilitol, otrovan je za pse i može biti iznimno štetan čak i u malim količinama.",
+        "sv": "Nej. Kontrollera innehållsförteckningen: om en marshmallow innehåller xylitol är den giftig för hundar och kan vara extremt skadlig även i små mängder.",
+        "da": "Nej. Tjek varedeklarationen: hvis en skumfidus indeholder xylitol, er den giftig for hunde og kan være ekstremt skadelig, selv i små mængder.",
+        "fi": "Eivät. Tarkista pakkausmerkinnät: jos vaahtokarkissa on ksylitolia, se on koirille myrkyllistä ja voi olla erittäin haitallista jo pieninä määrinä.",
+        "nb": "Nei. Sjekk ingredienslisten. Hvis en marshmallow inneholder xylitol, er den giftig for hunder og kan være ekstremt skadelig selv i små mengder.",
+        "it": "No. Controlla l’etichetta: se un marshmallow contiene xilitolo, è tossico per i cani e può fare molto male anche in piccole quantità.",
+        "de": "Nein. Prüfen Sie das Etikett: Enthält ein Marshmallow Xylit, ist es für Hunde giftig und kann schon in kleinen Mengen extrem schädlich sein.",
+        "fr": "Non. Vérifiez l’étiquette : si une guimauve contient du xylitol, elle est toxique pour les chiens et peut être extrêmement dangereuse, même en petite quantité.",
+        "pt": "Não. Verifica o rótulo: se um marshmallow contém xilitol, é tóxico para os cães e pode ser extremamente nocivo mesmo em pequenas quantidades.",
+        "nl": "Nee. Lees het etiket: als een marshmallow xylitol bevat, is hij giftig voor honden en kan hij zelfs in kleine hoeveelheden uiterst schadelijk zijn.",
+        "pl": "Nie. Sprawdź etykietę: jeśli pianka zawiera ksylitol, jest toksyczna dla psów i może być bardzo szkodliwa nawet w niewielkich ilościach."
       }
     }
   ],
@@ -173,10 +365,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "52cdaf5972c72e4907456a01e062b04165ea21cd4ad197d0b2c9f1398df44383"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e5faa5c9b329057ad940176b1dd19cf0a06b910c1b725f4fc1b61c5d85d820e4"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fc05e982e0cc0259288216f26bc123e9f6ae7cdb523a5a7ee944f95be18d5dbc"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bb80a6b9f78455ea3cd3e1d403a7d7d41cc35c3815354a2f73317979b5e0b1e5"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d513a1b64ffece1a75c7d74fb1006f9f4ed9d7f6b56acb7abf77e664d171c9b6"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b448ffdf60a15f3e395c23806d17db72a4ad384849499d59ab0a963d16c4d242"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "87bde3fe152e492bf91ae341256bf0c2f707113aed327bb8f84e7db522243700"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2f9cb58b7c47bc38c8428dddbef70120b378234f1bf0e73b709994733dd19a08"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "450f623f7ceb588a27a7c79971a2c34d5de4c03b1a6aaaccfe3da38c5219d5c6"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "35980c96dcce2813fa31930e1c2d1829f3e3c5638761c09648668403173ede69"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "09d900e9095e4a6b511be66239b7e734a3227da9eec1ca60c95dec1f7ccd5d11"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "92d2381ab01542bba8933730125277fbada0b3a46449d3de8755082083982e25"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "99f468ad5ca1f6b652b1ec74d43cdca41bd93811ed8278a7b610f522ef888148"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "f1ca1a0b6086d155e1aec0dfe54c9c83e2f4f429c2ee8a4ec97c09b1888b9ba7"
     }
   }
 }

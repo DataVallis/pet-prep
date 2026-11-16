@@ -4,28 +4,88 @@
   "name": {
     "en": "Vanilla extract",
     "sl": "Vanilijev ekstrakt",
-    "cs": "Vanilkový extrakt"
+    "es": "Extracto de vainilla",
+    "cs": "Vanilkový extrakt",
+    "hr": "Ekstrakt vanilije",
+    "sv": "Vaniljextrakt",
+    "da": "Vaniljeekstrakt",
+    "fi": "Vaniljauute",
+    "nb": "Vaniljeekstrakt",
+    "it": "Estratto di vaniglia",
+    "de": "Vanilleextrakt",
+    "fr": "Extrait de vanille",
+    "pt": "Extrato de baunilha",
+    "nl": "Vanille-extract",
+    "pl": "Ekstrakt waniliowy"
   },
   "question": {
     "en": "Can dogs have vanilla extract?",
     "sl": "Ali lahko psi zaužijejo vanilijev ekstrakt?",
-    "cs": "Mohou psi mít vanilkový extrakt?"
+    "es": "¿Pueden los perros tomar extracto de vainilla?",
+    "cs": "Mohou psi mít vanilkový extrakt?",
+    "hr": "Smiju li psi jesti ekstrakt vanilije?",
+    "sv": "Får hundar äta vaniljextrakt?",
+    "da": "Må hunde få vaniljeekstrakt?",
+    "fi": "Saako koira vaniljauutetta?",
+    "nb": "Kan hunder få vaniljeekstrakt?",
+    "it": "I cani possono mangiare l’estratto di vaniglia?",
+    "de": "Dürfen Hunde Vanilleextrakt bekommen?",
+    "fr": "Les chiens peuvent-ils manger de l’extrait de vanille ?",
+    "pt": "Os cães podem comer extrato de baunilha?",
+    "nl": "Mogen honden vanille-extract krijgen?",
+    "pl": "Czy psy mogą dostać ekstrakt waniliowy?"
   },
   "url_slug": {
     "en": "vanilla",
     "sl": "vanilija",
-    "cs": "vanilkovy-extrakt"
+    "es": "extracto-de-vainilla",
+    "cs": "vanilkovy-extrakt",
+    "hr": "ekstrakt-vanilije",
+    "sv": "vaniljextrakt",
+    "da": "vaniljeekstrakt",
+    "fi": "vaniljauute",
+    "nb": "vaniljeekstrakt",
+    "it": "estratto-di-vaniglia",
+    "de": "vanilleextrakt",
+    "fr": "extrait-de-vanille",
+    "pt": "extrato-de-baunilha",
+    "nl": "vanille-extract",
+    "pl": "ekstrakt-waniliowy"
   },
   "level": "toxic",
   "answer": {
     "en": "No, keep vanilla extract away from your dog. Vanilla extract is mostly made from alcohol, and alcohol can easily cause vomiting, diarrhoea and a drunken walk in dogs. If your dog drank some, contact your vet straight away.",
     "sl": "Ne, vanilijev ekstrakt naj bo zunaj pasjega dosega. Vanilijev ekstrakt je večinoma narejen iz alkohola, alkohol pa pri psih zlahka povzroči bruhanje, drisko in opotekanje. Če ga je pes popil, takoj pokličite veterinarja.",
-    "cs": "Ne, vanilkový extrakt psovi nedávejte. Vanilkový extrakt se vyrábí převážně z alkoholu a alkohol může u psů snadno způsobit zvracení, průjem a vrávoravou chůzi jako po opilosti. Pokud pes vanilkový extrakt vypil, ihned se obraťte na veterináře."
+    "es": "No, mantén el extracto de vainilla lejos de tu perro. El extracto de vainilla está hecho sobre todo de alcohol, y el alcohol puede provocar fácilmente vómitos, diarrea y un andar de borracho en los perros. Si tu perro ha bebido un poco, ponte en contacto con tu veterinario enseguida.",
+    "cs": "Ne, vanilkový extrakt psovi nedávejte. Vanilkový extrakt se vyrábí převážně z alkoholu a alkohol může u psů snadno způsobit zvracení, průjem a vrávoravou chůzi jako po opilosti. Pokud pes vanilkový extrakt vypil, ihned se obraťte na veterináře.",
+    "hr": "Ne, ekstrakt vanilije drži podalje od psa. Većim se dijelom sastoji od alkohola, a alkohol kod pasa lako izaziva povraćanje, proljev i teturav hod. Ako je pas popio malo, odmah se obrati veterinaru.",
+    "sv": "Nej, håll vaniljextrakt borta från din hund. Vaniljextrakt består mest av alkohol, och alkohol kan lätt orsaka kräkningar, diarré och vinglig gång hos hundar. Om din hund har fått i sig något ska du kontakta din veterinär direkt.",
+    "da": "Nej, hold vaniljeekstrakt væk fra din hund. Vaniljeekstrakt er for det meste lavet af alkohol, og alkohol kan let give hunde opkast, diarré og vaklende gang som hos en beruset. Hvis din hund har drukket noget, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Ei saa, pidä vaniljauute poissa koirasi ulottuvilta. Vaniljauute koostuu pääosin alkoholista, ja alkoholi voi helposti aiheuttaa koirille oksentelua, ripulia ja humalaista kävelyä. Jos koirasi joi sitä, ota heti yhteyttä eläinlääkäriin.",
+    "nb": "Nei, hold vaniljeekstrakt unna hunden. Vaniljeekstrakt er for det meste laget av alkohol, og alkohol kan lett gi hunder oppkast, diaré og ustø gange som om de var fulle. Hvis hunden har drukket noe, kontakt dyrlegen med en gang.",
+    "it": "No, tieni l’estratto di vaniglia lontano dal tuo cane. L’estratto di vaniglia è fatto per lo più di alcol, e l’alcol può facilmente causare nei cani vomito, diarrea e un’andatura da ubriaco. Se il tuo cane ne ha bevuto un po’, contatta subito il veterinario.",
+    "de": "Nein, halten Sie Vanilleextrakt von Ihrem Hund fern. Vanilleextrakt besteht größtenteils aus Alkohol, und Alkohol kann bei Hunden leicht Erbrechen, Durchfall und einen torkelnden Gang verursachen. Hat Ihr Hund davon getrunken, wenden Sie sich sofort an Ihren Tierarzt.",
+    "fr": "Non, tenez l’extrait de vanille hors de portée de votre chien. L’extrait de vanille est fait en grande partie d’alcool, et l’alcool peut facilement provoquer chez le chien des vomissements, de la diarrhée et une démarche titubante. Si votre chien en a bu, contactez immédiatement votre vétérinaire.",
+    "pt": "Não, mantém o extrato de baunilha longe do teu cão. O extrato de baunilha é feito sobretudo de álcool, e o álcool pode facilmente causar vómitos, diarreia e um andar cambaleante nos cães. Se o teu cão bebeu um pouco, fala imediatamente com o teu veterinário.",
+    "nl": "Nee, houd vanille-extract bij je hond uit de buurt. Vanille-extract bestaat grotendeels uit alcohol, en alcohol kan bij honden gemakkelijk braken, diarree en een dronkemansgang veroorzaken. Heeft je hond er wat van gedronken, neem dan meteen contact op met je dierenarts.",
+    "pl": "Nie, trzymaj ekstrakt waniliowy z dala od psa. Ekstrakt waniliowy składa się głównie z alkoholu, a alkohol może łatwo wywołać u psów wymioty, biegunkę i chwiejny chód jak po pijanemu. Jeśli pies wypił trochę, od razu skontaktuj się z weterynarzem."
   },
   "why": {
     "en": "Vanilla extract is mostly made from alcohol, and dogs are lightweights: alcohol can easily cause vomiting, diarrhoea, a drunken walk and even coma or death. Alcohol is absorbed quickly after it is swallowed, so it's important to get veterinary help promptly. Food products that contain alcohol can cause the same problems as alcoholic drinks.",
     "sl": "Vanilijev ekstrakt je večinoma narejen iz alkohola, psi pa ga prenesejo zelo malo: alkohol zlahka povzroči bruhanje, drisko, opotekanje in celo komo ali smrt. Alkohol se po zaužitju hitro vsrka, zato je pomembno, da hitro poiščete veterinarsko pomoč. Živila, ki vsebujejo alkohol, lahko povzročijo enake težave kot alkoholne pijače.",
-    "cs": "Vanilkový extrakt se vyrábí převážně z alkoholu a psi mají malou tělesnou hmotnost: alkohol u nich snadno způsobí zvracení, průjem, vrávoravou chůzi jako po opilosti a dokonce kóma nebo smrt. Alkohol se po spolknutí rychle vstřebává, a proto je důležité rychle získat veterinární pomoc. Potraviny obsahující alkohol mohou způsobit stejné potíže jako alkoholické nápoje."
+    "es": "El extracto de vainilla está hecho sobre todo de alcohol, y los perros pesan poco: el alcohol puede provocar fácilmente vómitos, diarrea, un andar de borracho e incluso coma o muerte. El alcohol se absorbe rápidamente tras tragarlo, así que es importante buscar atención veterinaria sin demora. Los productos alimenticios que contienen alcohol pueden causar los mismos problemas que las bebidas alcohólicas.",
+    "cs": "Vanilkový extrakt se vyrábí převážně z alkoholu a psi mají malou tělesnou hmotnost: alkohol u nich snadno způsobí zvracení, průjem, vrávoravou chůzi jako po opilosti a dokonce kóma nebo smrt. Alkohol se po spolknutí rychle vstřebává, a proto je důležité rychle získat veterinární pomoc. Potraviny obsahující alkohol mohou způsobit stejné potíže jako alkoholické nápoje.",
+    "hr": "Ekstrakt vanilije većim se dijelom sastoji od alkohola, a psi su na alkohol vrlo osjetljivi, pa lako može izazvati povraćanje, proljev, teturav hod pa čak i komu ili smrt. Alkohol se nakon gutanja brzo upija, zato je važno brzo potražiti veterinarsku pomoć. Prehrambeni proizvodi koji sadrže alkohol mogu izazvati iste probleme kao alkoholna pića.",
+    "sv": "Vaniljextrakt består mest av alkohol, och hundar är lättviktare och tål mycket lite alkohol: den kan lätt orsaka kräkningar, diarré, vinglig gång och till och med koma eller död. Alkohol tas upp snabbt efter att den har svalts, så det är viktigt att få veterinärhjälp utan dröjsmål. Livsmedel som innehåller alkohol kan orsaka samma problem som alkoholhaltiga drycker.",
+    "da": "Vaniljeekstrakt er for det meste lavet af alkohol, og hunde tåler meget lidt: alkohol kan let give opkast, diarré, beruset gang og endda koma eller død. Alkohol optages hurtigt, efter at det er slugt, så det er vigtigt at få dyrlægehjælp hurtigt. Fødevarer, der indeholder alkohol, kan give de samme problemer som alkoholiske drikke.",
+    "fi": "Vaniljauute koostuu pääosin alkoholista, ja koirat ovat pieniä: alkoholi voi helposti aiheuttaa oksentelua, ripulia, humalaista kävelyä ja jopa kooman tai kuoleman. Alkoholi imeytyy nopeasti nielemisen jälkeen, joten on tärkeää hakea eläinlääkärin apua nopeasti. Alkoholia sisältävät ruokatuotteet voivat aiheuttaa samoja ongelmia kuin alkoholijuomat.",
+    "nb": "Vaniljeekstrakt er for det meste laget av alkohol, og hunder tåler lite: alkohol kan lett gi oppkast, diaré, ustø gange som om de var fulle og til og med koma eller død. Alkohol tas raskt opp i kroppen etter at den er svelget, så det er viktig å få dyrlegehjelp raskt. Matvarer som inneholder alkohol, kan gi de samme problemene som alkoholholdige drikker.",
+    "it": "L’estratto di vaniglia è fatto per lo più di alcol, e i cani sono molto sensibili: l’alcol può facilmente causare vomito, diarrea, un’andatura da ubriaco e perfino coma o morte. L’alcol viene assorbito rapidamente dopo l’ingestione, quindi è importante rivolgersi subito al veterinario. I prodotti alimentari che contengono alcol possono causare gli stessi problemi delle bevande alcoliche.",
+    "de": "Vanilleextrakt besteht größtenteils aus Alkohol, und Hunde sind Leichtgewichte: Alkohol kann leicht Erbrechen, Durchfall, einen torkelnden Gang und sogar Koma oder Tod verursachen. Alkohol wird nach dem Schlucken schnell aufgenommen, deshalb ist es wichtig, rasch tierärztliche Hilfe zu holen. Lebensmittel, die Alkohol enthalten, können dieselben Probleme verursachen wie alkoholische Getränke.",
+    "fr": "L’extrait de vanille est fait en grande partie d’alcool, et les chiens sont des poids plume : l’alcool peut facilement provoquer des vomissements, de la diarrhée, une démarche titubante, voire un coma ou la mort. L’alcool est absorbé rapidement après avoir été avalé ; il est donc important d’obtenir rapidement l’aide d’un vétérinaire. Les produits alimentaires contenant de l’alcool peuvent provoquer les mêmes problèmes que les boissons alcoolisées.",
+    "pt": "O extrato de baunilha é feito sobretudo de álcool, e os cães pesam pouco: o álcool pode facilmente causar vómitos, diarreia, um andar cambaleante e até coma ou morte. O álcool é absorvido rapidamente depois de engolido, por isso é importante procurar ajuda veterinária sem demora. Os produtos alimentares com álcool podem causar os mesmos problemas das bebidas alcoólicas.",
+    "nl": "Vanille-extract bestaat grotendeels uit alcohol, en honden zijn veel lichter dan mensen: alcohol kan gemakkelijk braken, diarree, een dronkemansgang en zelfs coma of de dood veroorzaken. Alcohol wordt na het inslikken snel opgenomen, dus het is belangrijk om snel een dierenarts in te schakelen. Voedingsproducten met alcohol kunnen dezelfde problemen veroorzaken als alcoholische dranken.",
+    "pl": "Ekstrakt waniliowy składa się głównie z alkoholu, a psy mają małą masę ciała: alkohol może łatwo wywołać wymioty, biegunkę, chwiejny chód jak po pijanemu, a nawet śpiączkę lub śmierć. Alkohol wchłania się szybko po połknięciu, więc ważne jest, by jak najszybciej zgłosić się do weterynarza. Produkty spożywcze zawierające alkohol mogą powodować te same problemy co napoje alkoholowe."
   },
   "signs": {
     "en": [
@@ -48,6 +108,16 @@
       "Nizek krvni sladkor, nizek krvni tlak, nizka telesna temperatura",
       "Kolaps"
     ],
+    "es": [
+      "Vómitos o arcadas",
+      "Diarrea",
+      "Falta de coordinación, andar de borracho",
+      "Babeo",
+      "Decaimiento o falta de energía, debilidad",
+      "Respiración más lenta",
+      "Azúcar bajo en la sangre, presión arterial baja, temperatura corporal baja",
+      "Colapso"
+    ],
     "cs": [
       "Zvracení nebo dávení",
       "Průjem",
@@ -57,18 +127,152 @@
       "Pomalejší dýchání",
       "Nízká hladina cukru v krvi, nízký krevní tlak, nízká tělesná teplota",
       "Zhroucení"
+    ],
+    "hr": [
+      "Povraćanje ili nagon na povraćanje",
+      "Proljev",
+      "Slaba koordinacija, teturav hod",
+      "Slinjenje",
+      "Potištenost ili bezvoljnost, slabost",
+      "Usporeno disanje",
+      "Nizak šećer u krvi, nizak krvni tlak, niska tjelesna temperatura",
+      "Kolaps"
+    ],
+    "sv": [
+      "Kräkningar eller kväljningar",
+      "Diarré",
+      "Bristande koordination, vinglig gång",
+      "Dregling",
+      "Nedstämdhet eller slöhet, svaghet",
+      "Långsammare andning",
+      "Lågt blodsocker, lågt blodtryck, låg kroppstemperatur",
+      "Kollaps"
+    ],
+    "da": [
+      "Opkast eller brækfornemmelser",
+      "Diarré",
+      "Manglende koordination, beruset gang",
+      "Savlen",
+      "Nedtrykthed eller sløvhed, svaghed",
+      "Langsommere vejrtrækning",
+      "Lavt blodsukker, lavt blodtryk, lav kropstemperatur",
+      "Sammenbrud"
+    ],
+    "fi": [
+      "Oksentelu tai yökkäily",
+      "Ripuli",
+      "Koordinaatiovaikeudet, humalainen kävely",
+      "Kuolaaminen",
+      "Masentuneisuus tai väsymys, voimattomuus",
+      "Hidastunut hengitys",
+      "Matala verensokeri, matala verenpaine, matala ruumiinlämpö",
+      "Lyyhistyminen"
+    ],
+    "nb": [
+      "Oppkast eller brekninger",
+      "Diaré",
+      "Dårlig koordinasjon, ustø gange som om hunden var full",
+      "Sikling",
+      "Nedstemthet eller sløvhet, svakhet",
+      "Langsommere pust",
+      "Lavt blodsukker, lavt blodtrykk, lav kroppstemperatur",
+      "Kollaps"
+    ],
+    "it": [
+      "Vomito o conati",
+      "Diarrea",
+      "Mancanza di coordinazione, andatura da ubriaco",
+      "Salivazione eccessiva",
+      "Abbattimento o letargia, debolezza",
+      "Respiro più lento",
+      "Glicemia bassa, pressione bassa, temperatura corporea bassa",
+      "Collasso"
+    ],
+    "de": [
+      "Erbrechen oder Würgen",
+      "Durchfall",
+      "Koordinationsstörungen, torkelnder Gang",
+      "Sabbern",
+      "Niedergeschlagenheit oder Teilnahmslosigkeit, Schwäche",
+      "Langsamere Atmung",
+      "Niedriger Blutzucker, niedriger Blutdruck, niedrige Körpertemperatur",
+      "Kollaps"
+    ],
+    "fr": [
+      "Vomissements ou haut-le-cœur",
+      "Diarrhée",
+      "Manque de coordination, démarche chancelante, comme ivre",
+      "Salivation excessive",
+      "Abattement ou léthargie, faiblesse",
+      "Respiration ralentie",
+      "Baisse de la glycémie, de la tension artérielle et de la température corporelle",
+      "Effondrement"
+    ],
+    "pt": [
+      "Vómitos ou ânsias de vómito",
+      "Diarreia",
+      "Falta de coordenação, andar cambaleante, como se estivesse embriagado",
+      "Salivação excessiva",
+      "Abatimento ou apatia, fraqueza",
+      "Respiração mais lenta",
+      "Açúcar baixo no sangue, tensão arterial baixa, temperatura corporal baixa",
+      "Colapso"
+    ],
+    "nl": [
+      "Braken of kokhalzen",
+      "Diarree",
+      "Gebrek aan coördinatie, een dronkemansgang",
+      "Kwijlen",
+      "Neerslachtigheid of lusteloosheid, zwakte",
+      "Tragere ademhaling",
+      "Lage bloedsuikerspiegel, lage bloeddruk, lage lichaamstemperatuur",
+      "Instorten"
+    ],
+    "pl": [
+      "Wymioty lub odruchy wymiotne",
+      "Biegunka",
+      "Brak koordynacji, chwiejny chód jak po pijanemu",
+      "Ślinienie się",
+      "Przygnębienie lub ospałość, osłabienie",
+      "Spowolniony oddech",
+      "Niski poziom cukru we krwi, niskie ciśnienie krwi, niska temperatura ciała",
+      "Zapaść"
     ]
   },
   "what_to_do": {
     "en": "If your dog drank vanilla extract, note how much and contact your vet or a pet poison line right away. A dog showing signs should be seen by a vet as soon as possible.",
     "sl": "Če je pes popil vanilijev ekstrakt, si zapišite, koliko ga je bilo, in takoj pokličite veterinarja ali center za zastrupitve živali. Psa z znaki zastrupitve naj čim prej pregleda veterinar.",
-    "cs": "Pokud pes vypil vanilkový extrakt, zjistěte, kolik, a ihned se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Pes s příznaky by měl být co nejdříve vyšetřen veterinářem."
+    "es": "Si tu perro ha bebido extracto de vainilla, anota cuánto y ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Un perro con síntomas debe ser visto por un veterinario cuanto antes.",
+    "cs": "Pokud pes vypil vanilkový extrakt, zjistěte, kolik, a ihned se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Pes s příznaky by měl být co nejdříve vyšetřen veterinářem.",
+    "hr": "Ako je pas popio ekstrakt vanilije, zapiši koliko i odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Psa koji pokazuje znakove treba što prije pregledati veterinar.",
+    "sv": "Om din hund har druckit vaniljextrakt: notera hur mycket och kontakta din veterinär eller giftrådgivningen för djur direkt. En hund som visar tecken ska komma till en veterinär så snart som möjligt.",
+    "da": "Hvis din hund har drukket vaniljeekstrakt, skal du notere, hvor meget, og straks kontakte din dyrlæge eller en giftrådgivning for dyr. En hund, der viser tegn, bør til dyrlæge så hurtigt som muligt.",
+    "fi": "Jos koirasi joi vaniljauutetta, kirjaa ylös määrä ja ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Koira, jolla on oireita, pitää viedä eläinlääkärille mahdollisimman pian.",
+    "nb": "Hvis hunden har drukket vaniljeekstrakt, merk deg hvor mye, og kontakt dyrlegen eller giftinformasjon for dyr med en gang. En hund som viser symptomer, bør til dyrlegen så snart som mulig.",
+    "it": "Se il tuo cane ha bevuto l’estratto di vaniglia, annota quanto ne ha bevuto e contatta subito il veterinario o un centro antiveleni veterinario. Un cane che mostra sintomi deve essere visitato da un veterinario il prima possibile.",
+    "de": "Hat Ihr Hund Vanilleextrakt getrunken, notieren Sie, wie viel, und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Ein Hund mit Anzeichen sollte so schnell wie möglich von einem Tierarzt untersucht werden.",
+    "fr": "Si votre chien a bu de l’extrait de vanille, notez la quantité et contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Un chien qui présente des signes doit être vu par un vétérinaire dès que possible.",
+    "pt": "Se o teu cão bebeu extrato de baunilha, anota a quantidade e liga logo ao teu veterinário ou a uma linha de apoio toxicológico para animais. Um cão com sinais deve ser visto por um veterinário o mais depressa possível.",
+    "nl": "Heeft je hond vanille-extract gedronken, noteer dan hoeveel en neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Een hond die verschijnselen vertoont, moet zo snel mogelijk door een dierenarts worden gezien.",
+    "pl": "Jeśli pies wypił ekstrakt waniliowy, zanotuj, ile go było, i od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Pies z objawami powinien jak najszybciej trafić do weterynarza."
   },
   "serving": null,
   "child": {
     "en": "Vanilla extract is for baking, not for dogs. Keep the little bottle closed and put away, and tell a grown-up if your dog finds it.",
     "sl": "Vanilijev ekstrakt je za peko, ne za pse. Stekleničko imej zaprto in pospravljeno ter povej odraslemu, če jo pes najde.",
-    "cs": "Vanilkový extrakt je na pečení, ne pro psy. Lahvičku drž zavřenou a uklizenou, a když se k ní pes dostane, řekni to dospělému."
+    "es": "El extracto de vainilla es para repostería, no para los perros. Mantén el frasquito cerrado y guardado, y avisa a un adulto si tu perro lo encuentra.",
+    "cs": "Vanilkový extrakt je na pečení, ne pro psy. Lahvičku drž zavřenou a uklizenou, a když se k ní pes dostane, řekni to dospělému.",
+    "hr": "Ekstrakt vanilije služi za pečenje, a ne za pse. Bočicu drži zatvorenu i spremljenu i reci odrasloj osobi ako je pas pronađe.",
+    "sv": "Vaniljextrakt är till för bakning, inte för hundar. Håll den lilla flaskan stängd och undanställd, och berätta för en vuxen om din hund hittar den.",
+    "da": "Vaniljeekstrakt er til bagning, ikke til hunde. Hold den lille flaske lukket og lagt væk, og sig det til en voksen, hvis din hund finder den.",
+    "fi": "Vaniljauute on leivontaan, ei koirille. Pidä pieni pullo suljettuna ja laita se talteen, ja kerro aikuiselle, jos koirasi löytää sen.",
+    "nb": "Vaniljeekstrakt er til baking, ikke til hunder. Hold den lille flasken lukket og lagt bort, og si fra til en voksen hvis hunden finner den.",
+    "it": "L’estratto di vaniglia serve per i dolci, non per i cani. Tieni la boccetta chiusa e al suo posto, e dillo a un adulto se il tuo cane la trova.",
+    "de": "Vanilleextrakt ist zum Backen da, nicht für Hunde. Lass das Fläschchen verschlossen, räum es weg und sag einem Erwachsenen Bescheid, wenn dein Hund es findet.",
+    "fr": "L’extrait de vanille sert à faire des gâteaux, pas à nourrir les chiens. Garde le petit flacon bien fermé et rangé, et préviens un adulte si ton chien le trouve.",
+    "pt": "O extrato de baunilha é para pastelaria, não para os cães. Mantém o frasquinho fechado e guardado, e avisa um adulto se o teu cão o encontrar.",
+    "nl": "Vanille-extract is om mee te bakken, niet voor honden. Houd het flesje dicht en opgeborgen, en vertel het aan een volwassene als je hond erbij komt.",
+    "pl": "Ekstrakt waniliowy jest do pieczenia, nie dla psów. Trzymaj buteleczkę zamkniętą i schowaną, a jeśli pies ją znajdzie, powiedz o tym dorosłemu."
   },
   "faq": [],
   "sources": [
@@ -163,10 +367,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "6da5f3aa197dd0fbb9dfe57ba832d4f1a1c620c7ba450619ffd3b1d67b2979b4"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "75d303d612c56bb202ad22914a2ba45478ae0b93ff034286e891828de67d2435"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a75f9b920b1c31dbace555024527e2d15091891459bd3d5156e2b91c0e18d0d0"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cd68a61fce99d016b4217a359d1affa70278e3ff615d3ef215bbf6155cf0d2b4"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "74eac8be9d94e9ee732ffd5a2a040ac4ded6520a2c5433e891dd746198b3b12a"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "51ae0241ba7951959db24b537023aad0198889a249493bcf057fa6584711d61c"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7ac76b5ef476d0a824dc1bb7e0acb4b37fb4b1dc299a25ba93614737bb57de54"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0bf49a3885a2bc45ffe73e3d3d57a42f6165f78a2504b586bdd1bf1719e09708"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bb4dbd533014bced964115ca91e18b0b729b717b1fc3af3805dabb706452adba"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "daba237d7abad4c779b2b20668655f9b576424426b28069b600df9226b85de39"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "99a51cc7eb4e5850113c9c8e688fda5b7cf03fefafd15cb61fa53885112c4ea6"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fc73de72bbebfa56547dd86d7b0e00e928f11c5a1e93f06c586ca3473b3e1954"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "143ec245aaadfa9b1212f2c40759adabba140f8a13be03141f6a2aceeec7f2e5"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "cca83a673acd65e8eecdb6aa0cde769c96262665c84e6fa061c55c38bc2e7647"
     }
   }
 }

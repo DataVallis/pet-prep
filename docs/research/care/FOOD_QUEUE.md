@@ -182,10 +182,19 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [-] sushi — no source dog 2026-11-14 — no source cat 2026-11-14
 - [d] tofu — no source cat 2026-11-14
 - [d] beans — no source cat 2026-11-14
-- [ ] lentils · chickpeas · hummus · nut-butters · seeds-sunflower · chia-seeds · flaxseed
+- [d] lentils — no source cat 2026-11-15
+- [d] chickpeas — no source cat 2026-11-15
+- [c] hummus — no source dog 2026-11-15 (only a tier C page)
+- [x] nut-butters
+- [d] seeds-sunflower — no source cat 2026-11-15
+- [-] chia-seeds — no source dog 2026-11-15 · no source cat 2026-11-15
+- [-] flaxseed — no source dog 2026-11-15 (only a flaxseed-oil supplement page; verifier rejected) · no source cat 2026-11-15
 
 ## W5 — drinks and other
-- [ ] water · cow-milk-kittens (cat) · lactose-free-milk · goat-milk · kefir · juice · soda · coconut-water
+- [x] water
+- [c] cow-milk-kittens (cat)
+- [x] lactose-free-milk
+- [ ] goat-milk · kefir · juice · soda · coconut-water
 - [ ] bone-broth · sports-drinks · fish-oil · vitamins-human (→ hazards, not food) · pet-treats-for-other-species
   (dog food for cats, cat food for dogs)
 

@@ -10,6 +10,7 @@
  */
 
 import { dockWhen } from '@/modules/childPet/dockHint';
+import { clockText as formatClockText } from '@/modules/time/clock';
 
 export interface LocalParts {
   /** `YYYY-MM-DD` in the family timezone. */
@@ -105,8 +106,8 @@ export function localParts(iso: string, timeZone: string | null): LocalParts | n
  * `LocalParts.time` itself stays "HH:MM" data (compared as strings) — format only for display.
  */
 export function clockText(hhmm: string): string {
-  const match = /^(\d{1,2}):(\d{2})$/.exec(hhmm);
-  return match ? `${Number(match[1])}:${match[2]}` : hhmm;
+  // David 2026-11-16: 12 / 24 h by the person's choice / the phone — `modules/time/clock.ts`.
+  return formatClockText(hhmm);
 }
 
 /** "17:00" / "7:00" in the family timezone (display, `clockText`), or null for a missing / broken instant. */
@@ -114,6 +115,25 @@ export function familyClock(iso: string | null, timeZone: string | null): string
   if (!iso) return null;
   const time = localParts(iso, timeZone)?.time;
   return time ? clockText(time) : null;
+}
+
+/**
+ * "pon., 14. okt., 18:30" / "Mon, 14 Oct, 6:30 PM": the date part by `Intl` in the current
+ * language (no hour in it), the time by `clockText` (12 / 24 h, David 2026-11-16) — on the
+ * wall clock of `timeZone`. Null for a missing / broken instant or an unusable zone.
+ */
+export function dateTimeText(iso: string | null, timeZone: string, languageTag: string): string | null {
+  if (!iso) return null;
+  const ms = Date.parse(iso);
+  if (Number.isNaN(ms)) return null;
+  const time = localParts(iso, timeZone)?.time;
+  if (!time) return null;
+  try {
+    const date = new Intl.DateTimeFormat(languageTag, { weekday: 'short', day: 'numeric', month: 'short', timeZone }).format(new Date(ms));
+    return `${date}, ${clockText(time)}`;
+  } catch {
+    return null;
+  }
 }
 
 /**

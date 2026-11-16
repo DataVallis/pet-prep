@@ -3,47 +3,177 @@
   "species": "dog",
   "name": {
     "en": "Tofu",
-    "sl": "Tofu"
+    "sl": "Tofu",
+    "es": "Tofu",
+    "hr": "Tofu",
+    "sv": "Tofu",
+    "da": "Tofu",
+    "fi": "Tofu",
+    "nb": "Tofu",
+    "it": "Tofu",
+    "de": "Tofu",
+    "fr": "Tofu",
+    "pt": "Tofu",
+    "nl": "Tofu",
+    "pl": "Tofu",
+    "cs": "Tofu"
   },
   "question": {
     "en": "Can dogs eat tofu?",
-    "sl": "Ali lahko psi jedo tofu?"
+    "sl": "Ali lahko psi jedo tofu?",
+    "es": "¿Pueden los perros comer tofu?",
+    "hr": "Smiju li psi jesti tofu?",
+    "sv": "Får hundar äta tofu?",
+    "da": "Må hunde spise tofu?",
+    "fi": "Saako koira syödä tofua?",
+    "nb": "Kan hunder spise tofu?",
+    "it": "I cani possono mangiare il tofu?",
+    "de": "Dürfen Hunde Tofu fressen?",
+    "fr": "Les chiens peuvent-ils manger du tofu ?",
+    "pt": "Os cães podem comer tofu?",
+    "nl": "Mogen honden tofu eten?",
+    "pl": "Czy psy mogą jeść tofu?",
+    "cs": "Mohou psi jíst tofu?"
   },
   "url_slug": {
     "en": "tofu",
-    "sl": "tofu"
+    "sl": "tofu",
+    "es": "tofu",
+    "hr": "tofu",
+    "sv": "tofu",
+    "da": "tofu",
+    "fi": "tofu",
+    "nb": "tofu",
+    "it": "tofu",
+    "de": "tofu",
+    "fr": "tofu",
+    "pt": "tofu",
+    "nl": "tofu",
+    "pl": "tofu",
+    "cs": "tofu"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Tofu is not toxic to dogs and can be an occasional snack, but it shouldn't be a main part of your dog's diet. Give only plain, unsalted, fully cooked tofu, and avoid it if your dog has a soy allergy.",
-    "sl": "Da, zmerno. Tofu za pse ni strupen in je lahko občasen priboljšek, ne sme pa biti glavni del pasje prehrane. Dajte le navaden, nesoljen, povsem kuhan tofu in ga ne dajajte, če je pes alergičen na sojo."
+    "sl": "Da, zmerno. Tofu za pse ni strupen in je lahko občasen priboljšek, ne sme pa biti glavni del pasje prehrane. Dajte le navaden, nesoljen, povsem kuhan tofu in ga ne dajajte, če je pes alergičen na sojo.",
+    "es": "Sí, con moderación. El tofu no es tóxico para los perros y puede ser un tentempié ocasional, pero no debe ser una parte principal de su dieta. Da solo tofu sencillo, sin sal y bien cocinado, y evítalo si tu perro es alérgico a la soja.",
+    "hr": "Da, umjereno. Tofu nije otrovan za pse i može biti povremena grickalica, ali ne bi smio biti glavni dio psećeg jelovnika. Daj samo običan, nesoljen, potpuno termički obrađen tofu, a izbjegavaj ga ako je pas alergičan na soju.",
+    "sv": "Ja, med måtta. Tofu är inte giftigt för hundar och kan vara ett mellanmål då och då, men det ska inte vara en huvuddel av hundens kost. Ge bara okryddad, osaltad, helt tillagad tofu, och undvik den om din hund har sojaallergi.",
+    "da": "Ja, med måde. Tofu er ikke giftigt for hunde og kan være en snack en gang imellem, men det bør ikke udgøre en stor del af hundens kost. Giv kun almindelig, usaltet og helt gennemtilberedt tofu, og undlad det, hvis din hund har sojaallergi.",
+    "fi": "Saa, kohtuudella. Tofu ei ole koirille myrkyllistä ja voi olla satunnainen välipala, mutta sen ei pidä olla koirasi ruokavalion pääosa. Anna vain maustamatonta, suolatonta ja täysin kypsennettyä tofua, ja vältä sitä, jos koirallasi on soija-allergia.",
+    "nb": "Ja, med måte. Tofu er ikke giftig for hunder og kan være en snack av og til, men den bør ikke utgjøre hovedtyngden av hundens kosthold. Gi bare naturell, usaltet og fullstendig tilberedt tofu, og unngå den hvis hunden har soyaallergi.",
+    "it": "Sì, con moderazione. Il tofu non è tossico per i cani e può essere uno spuntino occasionale, ma non dovrebbe essere la base dell’alimentazione del cane. Dai solo tofu semplice, non salato e ben cotto, ed evitalo se il tuo cane è allergico alla soia.",
+    "de": "Ja, in Maßen. Tofu ist für Hunde nicht giftig und kann ein gelegentlicher Snack sein, sollte aber nicht Hauptbestandteil der Ernährung Ihres Hundes sein. Geben Sie nur ungewürzten, ungesalzenen, vollständig durchgegarten Tofu und meiden Sie ihn, wenn Ihr Hund eine Sojaallergie hat.",
+    "fr": "Oui, avec modération. Le tofu n’est pas toxique pour les chiens et peut être un en-cas occasionnel, mais il ne doit pas constituer l’essentiel de l’alimentation de votre chien. Ne donnez que du tofu nature, non salé et bien cuit, et évitez-le si votre chien est allergique au soja.",
+    "pt": "Sim, com moderação. O tofu não é tóxico para os cães e pode ser um lanche ocasional, mas não deve ser uma parte principal da alimentação do teu cão. Dá só tofu simples, sem sal e bem cozinhado, e evita-o se o teu cão tiver alergia à soja.",
+    "nl": "Ja, met mate. Tofu is niet giftig voor honden en kan af en toe een tussendoortje zijn, maar het hoort geen hoofdbestanddeel van het voer van je hond te zijn. Geef alleen gewone, ongezouten, helemaal gare tofu en geef het niet als je hond een sojaallergie heeft.",
+    "pl": "Tak, z umiarem. Tofu nie jest toksyczne dla psów i może być przekąską od czasu do czasu, ale nie powinno stanowić głównej części diety psa. Dawaj tylko tofu bez dodatków, niesolone i w pełni ugotowane, i unikaj go, jeśli pies ma alergię na soję.",
+    "cs": "Ano, s mírou. Tofu není pro psy jedovaté a může být občasnou svačinkou, ale nemělo by tvořit hlavní část psí stravy. Dávejte jen obyčejné, nesolené, důkladně tepelně upravené tofu a vyhněte se mu, pokud má pes alergii na sóju."
   },
   "why": {
     "en": "Tofu is made from soybeans but doesn't contain enough protein to meet a dog's needs, so it shouldn't replace dog food. Many dogs find tofu hard to digest and produce a lot of gas, so dogs with a history of bloat or breeds at higher risk should avoid it. Tofu is high in silicate, which may make kidney stones more likely, and soy contains phytoestrogens, which in large amounts could affect a male dog's hormone balance.",
-    "sl": "Tofu je narejen iz sojinih zrn, a ne vsebuje dovolj beljakovin za potrebe psa, zato ne sme nadomestiti pasje hrane. Mnogi psi tofu težko prebavijo in imajo veliko plinov, zato naj se mu izogibajo psi, ki so že imeli napihnjenost želodca, in pasme z večjim tveganjem zanjo. Tofu vsebuje veliko silikatov, ki lahko povečajo verjetnost ledvičnih kamnov, soja pa vsebuje fitoestrogene, ki bi v velikih količinah lahko vplivali na hormonsko ravnovesje psov samcev."
+    "sl": "Tofu je narejen iz sojinih zrn, a ne vsebuje dovolj beljakovin za potrebe psa, zato ne sme nadomestiti pasje hrane. Mnogi psi tofu težko prebavijo in imajo veliko plinov, zato naj se mu izogibajo psi, ki so že imeli napihnjenost želodca, in pasme z večjim tveganjem zanjo. Tofu vsebuje veliko silikatov, ki lahko povečajo verjetnost ledvičnih kamnov, soja pa vsebuje fitoestrogene, ki bi v velikih količinah lahko vplivali na hormonsko ravnovesje psov samcev.",
+    "es": "El tofu se hace con soja, pero no contiene proteínas suficientes para cubrir las necesidades de un perro, así que no debe sustituir a su comida. A muchos perros les cuesta digerir el tofu y les produce muchos gases, por lo que los perros con antecedentes de hinchazón de estómago (dilatación gástrica) o de razas con mayor riesgo deben evitarlo. El tofu tiene mucho silicato, que puede hacer más probable la formación de cálculos renales, y la soja contiene fitoestrógenos que, en grandes cantidades, podrían afectar al equilibrio hormonal de un perro macho.",
+    "hr": "Tofu se pravi od soje, ali ne sadrži dovoljno bjelančevina da zadovolji potrebe psa, pa ne bi smio zamijeniti hranu za pse. Mnogim je psima tofu teško probavljiv i stvara puno plinova, pa ga trebaju izbjegavati psi s poviješću nadutosti želuca ili pasmine s većim rizikom. Tofu je bogat silikatima, zbog kojih bubrežni kamenci mogu biti vjerojatniji, a soja sadrži fitoestrogene, koji bi u velikim količinama mogli utjecati na hormonsku ravnotežu mužjaka.",
+    "sv": "Tofu görs av sojabönor men innehåller inte tillräckligt med protein för en hunds behov, så det ska inte ersätta hundmat. Många hundar har svårt att smälta tofu och får mycket gaser, så hundar som har haft uppblåsthet eller raser med högre risk bör undvika det. Tofu innehåller mycket silikat, som kan göra njurstenar vanligare, och soja innehåller fytoöstrogener, som i stora mängder kan påverka en hanhunds hormonbalans.",
+    "da": "Tofu er lavet af sojabønner, men indeholder ikke nok protein til at dække en hunds behov, så det bør ikke erstatte hundefoder. Mange hunde har svært ved at fordøje tofu og får meget luft i maven, så hunde, der tidligere har haft oppustethed, eller racer med højere risiko bør undgå det. Tofu indeholder meget silikat, som kan gøre nyresten mere sandsynlige, og soja indeholder fytoøstrogener, som i store mængder kan påvirke en hanhunds hormonbalance.",
+    "fi": "Tofu on tehty soijapavuista, mutta siinä ei ole tarpeeksi proteiinia koiran tarpeisiin, joten se ei saa korvata koiranruokaa. Monen koiran on vaikea sulattaa tofua, ja se aiheuttaa runsaasti ilmavaivoja, joten koirien, joilla on ollut mahalaukun laajeneminen, tai suuremman riskin rotujen pitäisi välttää sitä. Tofussa on paljon silikaattia, joka voi lisätä munuaiskivien todennäköisyyttä, ja soijassa on fytoestrogeeneja, jotka suurina määrinä voisivat vaikuttaa uroskoiran hormonitasapainoon.",
+    "nb": "Tofu er laget av soyabønner, men inneholder ikke nok protein til å dekke en hunds behov, så den bør ikke erstatte hundefôr. Mange hunder synes tofu er vanskelig å fordøye og får mye gass, så hunder som har hatt oppblåst mage, eller raser med høyere risiko, bør unngå den. Tofu har mye silikat, som kan gjøre nyrestein mer sannsynlig, og soya inneholder fytoøstrogener, som i store mengder kan påvirke hormonbalansen hos hannhunder.",
+    "it": "Il tofu è fatto con la soia ma non contiene abbastanza proteine per i bisogni di un cane, quindi non deve sostituire il cibo per cani. Per molti cani il tofu è difficile da digerire e causa molta flatulenza, perciò i cani con precedenti di dilatazione gastrica o le razze più a rischio dovrebbero evitarlo. Il tofu è ricco di silicati, che possono rendere più probabili i calcoli renali, e la soia contiene fitoestrogeni, che in grandi quantità potrebbero influire sull’equilibrio ormonale di un cane maschio.",
+    "de": "Tofu wird aus Sojabohnen hergestellt, enthält aber nicht genug Eiweiß für den Bedarf eines Hundes und sollte deshalb Hundefutter nicht ersetzen. Viele Hunde können Tofu schwer verdauen und bekommen starke Blähungen. Hunde, die schon einmal einen aufgegasten Magen (Bloat) hatten, oder Rassen mit höherem Risiko sollten ihn meiden. Tofu enthält viel Silikat, das Nierensteine wahrscheinlicher machen kann, und Soja enthält Phytoöstrogene, die in großen Mengen den Hormonhaushalt eines Rüden beeinflussen könnten.",
+    "fr": "Le tofu est fait à partir de soja mais ne contient pas assez de protéines pour couvrir les besoins d’un chien ; il ne doit donc pas remplacer sa nourriture. Beaucoup de chiens digèrent mal le tofu et produisent beaucoup de gaz : les chiens ayant des antécédents de dilatation de l’estomac (« bloat ») ou appartenant à des races plus exposées devraient donc l’éviter. Le tofu est riche en silicates, qui peuvent favoriser les calculs rénaux, et le soja contient des phytoestrogènes qui, en grande quantité, pourraient influencer l’équilibre hormonal d’un chien mâle.",
+    "pt": "O tofu é feito de soja, mas não tem proteína suficiente para as necessidades de um cão, por isso não deve substituir a comida de cão. Muitos cães têm dificuldade em digerir o tofu e produzem muitos gases, por isso os cães com historial de dilatação gástrica ou de raças com maior risco devem evitá-lo. O tofu tem muito silicato, que pode tornar os cálculos renais mais prováveis, e a soja contém fitoestrogénios, que em grandes quantidades podem afetar o equilíbrio hormonal de um cão macho.",
+    "nl": "Tofu is gemaakt van sojabonen maar bevat niet genoeg eiwit om aan de behoefte van een hond te voldoen, dus het mag hondenvoer niet vervangen. Veel honden kunnen tofu moeilijk verteren en krijgen veel gasvorming, dus honden die eerder een opgezette maag hebben gehad of rassen met een hoger risico moeten het vermijden. Tofu bevat veel silicaat, waardoor de kans op nierstenen groter kan worden, en soja bevat fyto-oestrogenen, die in grote hoeveelheden de hormoonhuishouding van een reu kunnen beïnvloeden.",
+    "pl": "Tofu robi się z soi, ale nie zawiera tyle białka, by pokryć potrzeby psa, więc nie powinno zastępować karmy. Wiele psów trawi tofu z trudem i wytwarza dużo gazów, więc psy, u których w przeszłości wystąpiło rozdęcie żołądka, oraz rasy o podwyższonym ryzyku jego wystąpienia powinny go unikać. Tofu zawiera dużo krzemianów, które mogą sprzyjać powstawaniu kamieni nerkowych, a soja zawiera fitoestrogeny, które w dużych ilościach mogą wpływać na równowagę hormonalną u samców.",
+    "cs": "Tofu se vyrábí ze sójových bobů, ale neobsahuje dost bílkovin, aby pokrylo potřeby psa, proto by nemělo nahrazovat psí krmivo. Mnoho psů tofu špatně tráví a tvoří se jim hodně plynů, proto by se mu měli vyhnout psi, kteří už někdy měli nadmutí žaludku, i plemena s vyšším rizikem nadmutí žaludku. Tofu obsahuje hodně křemičitanů, které mohou zvyšovat riziko ledvinových kamenů, a sója obsahuje fytoestrogeny, které by ve velkém množství mohly ovlivnit hormonální rovnováhu psích samců."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog has a soy allergy or sensitivity, don't give tofu. Talk to your vet before changing your dog's diet, especially if your dog has had digestive problems.",
-    "sl": "Če je pes alergičen ali občutljiv na sojo, mu tofuja ne dajajte. Preden spremenite pasjo prehrano, se posvetujte z veterinarjem, še posebej, če je imel pes že prebavne težave."
+    "sl": "Če je pes alergičen ali občutljiv na sojo, mu tofuja ne dajajte. Preden spremenite pasjo prehrano, se posvetujte z veterinarjem, še posebej, če je imel pes že prebavne težave.",
+    "es": "Si tu perro tiene alergia o sensibilidad a la soja, no le des tofu. Habla con tu veterinario antes de cambiar la dieta de tu perro, sobre todo si ha tenido problemas digestivos.",
+    "hr": "Ako je pas alergičan na soju ili osjetljiv na nju, ne daj tofu. Razgovaraj s veterinarom prije promjene psećeg jelovnika, osobito ako je pas imao probavnih problema.",
+    "sv": "Om din hund har sojaallergi eller är känslig mot soja ska du inte ge tofu. Prata med din veterinär innan du ändrar hundens kost, särskilt om din hund har haft matsmältningsproblem.",
+    "da": "Hvis din hund har sojaallergi eller er følsom over for soja, skal du ikke give tofu. Tal med din dyrlæge, før du ændrer din hunds kost, især hvis din hund har haft problemer med fordøjelsen.",
+    "fi": "Jos koirallasi on soija-allergia tai -herkkyys, älä anna tofua. Puhu eläinlääkärin kanssa ennen kuin muutat koirasi ruokavaliota, etenkin jos koirallasi on ollut ruoansulatusongelmia.",
+    "nb": "Hvis hunden har soyaallergi eller er følsom for soya, ikke gi tofu. Snakk med dyrlegen før du endrer hundens kosthold, særlig hvis hunden har hatt fordøyelsesproblemer.",
+    "it": "Se il tuo cane è allergico o sensibile alla soia, non dargli il tofu. Parla con il veterinario prima di cambiare l’alimentazione del cane, soprattutto se ha avuto problemi digestivi.",
+    "de": "Hat Ihr Hund eine Sojaallergie oder -empfindlichkeit, geben Sie keinen Tofu. Sprechen Sie mit Ihrem Tierarzt, bevor Sie die Ernährung Ihres Hundes umstellen, besonders wenn Ihr Hund schon Verdauungsprobleme hatte.",
+    "fr": "Si votre chien est allergique ou sensible au soja, ne lui donnez pas de tofu. Parlez-en à votre vétérinaire avant de modifier l’alimentation de votre chien, surtout s’il a déjà eu des problèmes digestifs.",
+    "pt": "Se o teu cão tem alergia ou sensibilidade à soja, não dês tofu. Fala com o teu veterinário antes de mudar a alimentação do teu cão, sobretudo se ele já teve problemas digestivos.",
+    "nl": "Heeft je hond een sojaallergie of is hij overgevoelig voor soja, geef dan geen tofu. Overleg met je dierenarts voordat je het voer van je hond aanpast, vooral als je hond eerder spijsverteringsproblemen heeft gehad.",
+    "pl": "Jeśli pies ma alergię lub nadwrażliwość na soję, nie dawaj tofu. Porozmawiaj z weterynarzem, zanim zmienisz psu dietę, zwłaszcza jeśli pies miał problemy trawienne.",
+    "cs": "Pokud má pes alergii nebo přecitlivělost na sóju, tofu nedávejte. Než psovi změníte jídelníček, promluvte si s veterinářem, zvlášť pokud měl pes potíže s trávením."
   },
   "serving": {
     "en": "Plain and unsalted, not flavoured, with no onion or garlic. Make sure it is fully cooked and has cooled. Give small amounts as an occasional snack.",
-    "sl": "Navaden in nesoljen, brez okusov, brez čebule in česna. Poskrbite, da je povsem kuhan in ohlajen. Dajte ga v majhnih količinah kot občasen priboljšek."
+    "sl": "Navaden in nesoljen, brez okusov, brez čebule in česna. Poskrbite, da je povsem kuhan in ohlajen. Dajte ga v majhnih količinah kot občasen priboljšek.",
+    "es": "Sencillo y sin sal, sin sabores añadidos, sin cebolla ni ajo. Asegúrate de que esté bien cocinado y de que se haya enfriado. Da cantidades pequeñas como tentempié ocasional.",
+    "hr": "Običan i nesoljen, bez okusa, luka i češnjaka. Pazi da je potpuno termički obrađen i ohlađen. Daj male količine kao povremenu grickalicu.",
+    "sv": "Okryddad och osaltad, inte smaksatt, utan lök eller vitlök. Se till att den är helt tillagad och har svalnat. Ge små mängder som ett mellanmål då och då.",
+    "da": "Almindelig og usaltet, uden smagsstoffer og uden løg eller hvidløg. Sørg for, at den er helt gennemtilberedt og afkølet. Giv små mængder som en snack en gang imellem.",
+    "fi": "Maustamatonta ja suolatonta, ilman muita makuaineita, sipulia tai valkosipulia. Varmista, että se on täysin kypsennettyä ja jäähtynyttä. Anna pieniä määriä satunnaisena välipalana.",
+    "nb": "Naturell og usaltet, ikke smaksatt, uten løk eller hvitløk. Pass på at den er fullstendig tilberedt og avkjølt. Gi små mengder som en snack av og til.",
+    "it": "Semplice e non salato, non aromatizzato, senza cipolla né aglio. Assicurati che sia ben cotto e raffreddato. Dai piccole quantità come spuntino occasionale.",
+    "de": "Ungewürzt und ungesalzen, nicht aromatisiert, ohne Zwiebel oder Knoblauch. Achten Sie darauf, dass er vollständig durchgegart und abgekühlt ist. Geben Sie kleine Mengen als gelegentlichen Snack.",
+    "fr": "Nature et non salé, sans arôme, sans oignon ni ail. Assurez-vous qu’il est bien cuit et refroidi. Donnez-en de petites quantités, comme en-cas occasionnel.",
+    "pt": "Simples e sem sal, sem sabores, sem cebola nem alho. Garante que está bem cozinhado e já arrefeceu. Dá pequenas quantidades como lanche ocasional.",
+    "nl": "Gewone, ongezouten tofu zonder smaakmakers, ui of knoflook. Zorg dat het helemaal gaar en afgekoeld is. Geef kleine hoeveelheden, af en toe als tussendoortje.",
+    "pl": "Bez dodatków, niesolone i nieprzyprawione, bez cebuli i czosnku. Upewnij się, że jest w pełni ugotowane i ostygło. Dawaj małe ilości jako przekąskę od czasu do czasu.",
+    "cs": "Jen obyčejné, nesolené a neochucené, bez cibule a česneku. Dbejte na to, aby bylo důkladně tepelně upravené a vychladlé. Dávejte malé množství jako občasnou svačinku."
   },
   "child": {
     "en": "Dogs can try a little plain tofu as a treat now and then, but their main food should still be dog food.",
-    "sl": "Psi lahko kdaj pa kdaj poskusijo malo navadnega tofuja kot priboljšek, njihova glavna hrana pa naj ostane pasja hrana."
+    "sl": "Psi lahko kdaj pa kdaj poskusijo malo navadnega tofuja kot priboljšek, njihova glavna hrana pa naj ostane pasja hrana.",
+    "es": "Los perros pueden probar un poco de tofu sencillo como premio de vez en cuando, pero su comida principal debe seguir siendo la comida para perros.",
+    "hr": "Psi smiju probati malo običnog tofua kao poslasticu s vremena na vrijeme, ali njihova glavna hrana i dalje treba biti hrana za pse.",
+    "sv": "Hundar kan prova lite okryddad tofu som godbit då och då, men deras huvudmat ska fortfarande vara hundmat.",
+    "da": "Hunde kan prøve lidt almindelig tofu som en godbid en gang imellem, men deres vigtigste mad skal stadig være hundefoder.",
+    "fi": "Koira voi maistaa vähän maustamatonta tofua herkuksi silloin tällöin, mutta sen pääruoan pitää silti olla koiranruokaa.",
+    "nb": "Hunder kan få smake litt naturell tofu som godbit nå og da, men hovedmaten bør fortsatt være hundemat.",
+    "it": "I cani possono assaggiare un po’ di tofu semplice come premio ogni tanto, ma il loro cibo principale deve restare il cibo per cani.",
+    "de": "Hunde dürfen ab und zu ein wenig ungewürzten Tofu als Leckerli probieren, aber ihr Hauptfutter sollte weiterhin Hundefutter sein.",
+    "fr": "Les chiens peuvent goûter un peu de tofu nature de temps en temps, mais leur alimentation de base doit rester leur nourriture pour chiens.",
+    "pt": "Os cães podem provar um pouco de tofu simples como guloseima de vez em quando, mas a comida principal deles deve continuar a ser comida de cão.",
+    "nl": "Honden mogen af en toe een beetje gewone tofu als snoepje proberen, maar het meeste van hun eten moet nog steeds hondenvoer zijn.",
+    "pl": "Pies może od czasu do czasu dostać odrobinę tofu bez dodatków jako smakołyk, ale jego podstawą powinna nadal być psia karma.",
+    "cs": "Psi mohou tu a tam ochutnat trochu obyčejného tofu jako pamlsek, ale jejich hlavním jídlem má být pořád psí krmivo."
   },
   "faq": [
     {
       "q": {
         "en": "Can tofu replace meat in my dog's diet?",
-        "sl": "Ali lahko tofu nadomesti meso v pasji prehrani?"
+        "sl": "Ali lahko tofu nadomesti meso v pasji prehrani?",
+        "es": "¿Puede el tofu sustituir a la carne en la dieta de mi perro?",
+        "hr": "Može li tofu zamijeniti meso u prehrani mog psa?",
+        "sv": "Kan tofu ersätta kött i min hunds kost?",
+        "da": "Kan tofu erstatte kød i min hunds kost?",
+        "fi": "Voiko tofu korvata lihan koirani ruokavaliossa?",
+        "nb": "Kan tofu erstatte kjøtt i hundens kosthold?",
+        "it": "Il tofu può sostituire la carne nell’alimentazione del mio cane?",
+        "de": "Kann Tofu das Fleisch in der Ernährung meines Hundes ersetzen?",
+        "fr": "Le tofu peut-il remplacer la viande dans l’alimentation de mon chien ?",
+        "pt": "O tofu pode substituir a carne na alimentação do meu cão?",
+        "nl": "Kan tofu vlees in het voer van mijn hond vervangen?",
+        "pl": "Czy tofu może zastąpić mięso w diecie psa?",
+        "cs": "Může tofu nahradit psovi maso?"
       },
       "a": {
         "en": "No. Tofu doesn't contain enough protein for a dog's needs. For main meals, feed a vet-recommended dog food.",
-        "sl": "Ne. Tofu ne vsebuje dovolj beljakovin za potrebe psa. Za glavne obroke dajajte pasjo hrano, ki jo priporoča veterinar."
+        "sl": "Ne. Tofu ne vsebuje dovolj beljakovin za potrebe psa. Za glavne obroke dajajte pasjo hrano, ki jo priporoča veterinar.",
+        "es": "No. El tofu no contiene proteínas suficientes para las necesidades de un perro. Para las comidas principales, da un alimento para perros recomendado por el veterinario.",
+        "hr": "Ne. Tofu ne sadrži dovoljno bjelančevina za potrebe psa. Za glavne obroke daj hranu za pse koju preporučuje veterinar.",
+        "sv": "Nej. Tofu innehåller inte tillräckligt med protein för en hunds behov. Till huvudmåltiderna ska du ge ett hundfoder som veterinärer rekommenderar.",
+        "da": "Nej. Tofu indeholder ikke nok protein til en hunds behov. Til de vigtigste måltider skal du give et hundefoder, som din dyrlæge anbefaler.",
+        "fi": "Ei. Tofussa ei ole tarpeeksi proteiinia koiran tarpeisiin. Pääaterioille anna eläinlääkärin suosittelemaa koiranruokaa.",
+        "nb": "Nei. Tofu inneholder ikke nok protein til en hunds behov. Til hovedmåltidene bør du gi et hundefôr anbefalt av dyrlege.",
+        "it": "No. Il tofu non contiene abbastanza proteine per i bisogni di un cane. Per i pasti principali, dai un cibo per cani consigliato dal veterinario.",
+        "de": "Nein. Tofu enthält nicht genug Eiweiß für den Bedarf eines Hundes. Für die Hauptmahlzeiten füttern Sie ein vom Tierarzt empfohlenes Hundefutter.",
+        "fr": "Non. Le tofu ne contient pas assez de protéines pour couvrir les besoins d’un chien. Pour les repas principaux, donnez une nourriture pour chiens recommandée par un vétérinaire.",
+        "pt": "Não. O tofu não tem proteína suficiente para as necessidades de um cão. Para as refeições principais, dá uma comida para cães recomendada pelo veterinário.",
+        "nl": "Nee. Tofu bevat niet genoeg eiwit om aan de behoefte van een hond te voldoen. Geef bij de hoofdmaaltijden hondenvoer dat door een dierenarts wordt aanbevolen.",
+        "pl": "Nie. Tofu nie zawiera tyle białka, by pokryć potrzeby psa. Na główne posiłki wybieraj karmę polecaną przez weterynarza.",
+        "cs": "Ne. Tofu neobsahuje dost bílkovin pro potřeby psa. Hlavní jídla by mělo tvořit krmivo pro psy, které doporučuje veterinář."
       }
     }
   ],
@@ -133,6 +263,71 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2b76d47b87761d60242ec159b117a860a14947b51a9de4421571a858592d698a"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d78e61c09a76d83146d6ec9de28a74c81839ab8bc05623bf86adfc2117149821"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "962d55a35c12e077c6010737e0300201e62a1217f6cd962f2a52c0fc7508121d"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b069eee0cfaedf1acb5d97a3c001928ccfd7cb4aeffb762e84ffbfdb5b14a9fa"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dcd5cea1fa19147be58fe1135bd52db13e925600de39919e56879a267fdf2bff"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "82929b705ba91d06620a0aed2184b79b039d48bc93f7d9bef3d1b70c651f9cb8"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ce762300640d013881c2a60217082d8e7935de1410fbd2b7f0fee659d1f46811"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "69960e236a2d93a7567b5c1c74afce2f7ed43d5f637dcf0dfdef164bfb2c9be6"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "413198d5abe4f9e220e34cebbc44b4f9a203dbd0f5998ab66dc637395240e130"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "82ffe8ee66fe51114fda22cf347af6cface67e22630119f7287d4d385b45fcc9"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b0da4b9c1d44602d47ab6006e67ec799dbb9362e46a52992497d1e1a6f1f22e5"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "406ff11ec30ba89f88d4ac4e89cd3f3662cf9cccd45c4c71a65dd199d2a649b3"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "7070c66739628d3714c53459ca73492bc06d99223cd0004d285c2893995b0f0a"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "2e2601562242458e2b7ce3c68348982b2ec2eb30ebc87e2e11934dfec630dca0"
     }
   }
 }

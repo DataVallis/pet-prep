@@ -4,28 +4,88 @@
   "name": {
     "en": "Nutmeg",
     "sl": "Muškatni orešček",
-    "cs": "Muškátový ořech"
+    "cs": "Muškátový ořech",
+    "hr": "Muškatni oraščić",
+    "sv": "Muskotnöt",
+    "da": "Muskatnød",
+    "fi": "Muskottipähkinä",
+    "nb": "Muskatnøtt",
+    "it": "Noce moscata",
+    "de": "Muskatnuss",
+    "fr": "Noix de muscade",
+    "es": "Nuez moscada",
+    "pt": "Noz-moscada",
+    "nl": "Nootmuskaat",
+    "pl": "Gałka muszkatołowa"
   },
   "question": {
     "en": "Can cats eat nutmeg?",
     "sl": "Ali lahko mačke jedo muškatni orešček?",
-    "cs": "Mohou kočky jíst muškátový ořech?"
+    "cs": "Mohou kočky jíst muškátový ořech?",
+    "hr": "Smiju li mačke jesti muškatni oraščić?",
+    "sv": "Får katter äta muskotnöt?",
+    "da": "Må katte spise muskatnød?",
+    "fi": "Saako kissa syödä muskottipähkinää?",
+    "nb": "Kan katter spise muskatnøtt?",
+    "it": "I gatti possono mangiare la noce moscata?",
+    "de": "Dürfen Katzen Muskatnuss fressen?",
+    "fr": "Les chats peuvent-ils manger de la noix de muscade ?",
+    "es": "¿Pueden los gatos comer nuez moscada?",
+    "pt": "Os gatos podem comer noz-moscada?",
+    "nl": "Mogen katten nootmuskaat eten?",
+    "pl": "Czy koty mogą jeść gałkę muszkatołową?"
   },
   "url_slug": {
     "en": "nutmeg",
     "sl": "muskatni-orescek",
-    "cs": "muskatovy-orech"
+    "cs": "muskatovy-orech",
+    "hr": "muskatni-orascic",
+    "sv": "muskotnot",
+    "da": "muskatnoed",
+    "fi": "muskottipahkina",
+    "nb": "muskatnott",
+    "it": "noce-moscata",
+    "de": "muskatnuss",
+    "fr": "noix-de-muscade",
+    "es": "nuez-moscada",
+    "pt": "noz-moscada",
+    "nl": "nootmuskaat",
+    "pl": "galka-muszkatolowa"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to give cats nutmeg. The small amount used in recipes is very unlikely to cause serious harm, though it may cause a mild stomach upset. A very large amount of nutmeg can be toxic.",
     "sl": "Mački muškatnega oreščka raje ne dajajte. Majhna količina, ki jo uporabimo v receptih, zelo verjetno ne bo resno škodovala, lahko pa povzroči blage želodčne težave. Zelo velika količina muškatnega oreščka je lahko strupena.",
-    "cs": "Muškátový ořech kočkám raději nedávejte. Malé množství používané v receptech jen těžko způsobí vážnou újmu, i když může vyvolat mírné podráždění žaludku. Velmi velké množství muškátového ořechu však může být toxické."
+    "cs": "Muškátový ořech kočkám raději nedávejte. Malé množství používané v receptech jen těžko způsobí vážnou újmu, i když může vyvolat mírné podráždění žaludku. Velmi velké množství muškátového ořechu však může být toxické.",
+    "hr": "Bolje je mačkama ne davati muškatni oraščić. Mala količina koja se koristi u receptima vrlo vjerojatno neće izazvati ozbiljnu štetu, ali može izazvati blage želučane tegobe. Vrlo velika količina muškatnog oraščića može biti otrovna.",
+    "sv": "Det är bäst att inte ge katter muskotnöt. Den lilla mängd som används i recept orsakar mycket sannolikt ingen allvarlig skada, men den kan ge lätt orolig mage. En mycket stor mängd muskotnöt kan vara giftig.",
+    "da": "Det er bedst ikke at give katte muskatnød. Den lille mængde, der bruges i opskrifter, vil meget sjældent gøre alvorlig skade, men den kan give lidt mavebesvær. En meget stor mængde muskatnød kan være giftig.",
+    "fi": "Ei suositella. Muskottipähkinää ei kannata antaa kissoille. Reseptissä käytetty pieni määrä aiheuttaa hyvin epätodennäköisesti vakavaa haittaa, vaikka lievä vatsavaiva on mahdollinen. Hyvin suuri määrä muskottipähkinää voi olla myrkyllistä.",
+    "nb": "Det er best å ikke gi katter muskatnøtt. Den lille mengden som brukes i oppskrifter, er svært lite sannsynlig å gi alvorlig skade, men kan gi litt urolig mage. En svært stor mengde muskatnøtt kan være giftig.",
+    "it": "Meglio non dare la noce moscata ai gatti. È molto improbabile che la piccola quantità usata nelle ricette causi danni seri, anche se può provocare un lieve mal di stomaco. Una quantità molto grande di noce moscata può essere tossica.",
+    "de": "Geben Sie Katzen besser keine Muskatnuss. Die kleine Menge, die in Rezepten verwendet wird, richtet sehr wahrscheinlich keinen ernsten Schaden an, kann aber leichte Magenbeschwerden auslösen. Eine sehr große Menge Muskatnuss kann giftig sein.",
+    "fr": "Mieux vaut ne pas donner de noix de muscade aux chats. Il est très peu probable que la petite quantité utilisée dans les recettes cause de problème grave, mais elle peut provoquer de légers troubles digestifs. Une très grande quantité de noix de muscade peut être toxique.",
+    "es": "Es mejor no darles nuez moscada a los gatos. La pequeña cantidad que se usa en las recetas es muy poco probable que cause un daño grave, aunque puede provocar un malestar de estómago leve. Una cantidad muy grande de nuez moscada puede ser tóxica.",
+    "pt": "É melhor não dar noz-moscada aos gatos. A pequena quantidade usada nas receitas dificilmente causa danos graves, mas pode causar uma ligeira indisposição de estômago. Uma quantidade muito grande de noz-moscada pode ser tóxica.",
+    "nl": "Geef katten liever geen nootmuskaat. Het is zeer onwaarschijnlijk dat de kleine hoeveelheid die in recepten wordt gebruikt ernstige schade veroorzaakt, al kan het lichte maagklachten geven. Een zeer grote hoeveelheid nootmuskaat kan giftig zijn.",
+    "pl": "Lepiej nie dawać kotom gałki muszkatołowej. Jest bardzo mało prawdopodobne, by niewielka ilość, jaką dodaje się do potraw, spowodowała poważne szkody, choć może wywołać lekki rozstrój żołądka. Bardzo duża ilość gałki muszkatołowej może być toksyczna."
   },
   "why": {
     "en": "Nutmeg contains a toxin called myristicin. Pet Poison Helpline says the small amount used in recipes is very unlikely to cause serious toxicity, and that a problem is very unlikely if a cat eats food with nutmeg in it. VCA notes that spices in eggnog, such as nutmeg, could have toxic effects in large quantities. Cats don't need anything other than a complete diet.",
     "sl": "Muškatni orešček vsebuje strup miristicin. Pet Poison Helpline navaja, da majhna količina, uporabljena v receptih, zelo verjetno ne povzroči resne zastrupitve in da so težave zelo malo verjetne, če mačka poje hrano z muškatnim oreščkom. VCA navaja, da imajo lahko začimbe v jajčnem likerju, na primer muškatni orešček, v velikih količinah strupene učinke. Mačke poleg popolne hrane ne potrebujejo ničesar drugega.",
-    "cs": "Muškátový ořech obsahuje toxin zvaný myristicin. Pet Poison Helpline uvádí, že malé množství používané v receptech sotva způsobí vážnou otravu a že problém je velmi nepravděpodobný, pokud kočka sní jídlo s muškátovým ořechem. VCA poznamenává, že koření v nápoji eggnog, například muškátový ořech, může mít ve velkém množství toxické účinky. Kočky nepotřebují nic jiného než kompletní stravu."
+    "cs": "Muškátový ořech obsahuje toxin zvaný myristicin. Pet Poison Helpline uvádí, že malé množství používané v receptech sotva způsobí vážnou otravu a že problém je velmi nepravděpodobný, pokud kočka sní jídlo s muškátovým ořechem. VCA poznamenává, že koření v nápoji eggnog, například muškátový ořech, může mít ve velkém množství toxické účinky. Kočky nepotřebují nic jiného než kompletní stravu.",
+    "hr": "Muškatni oraščić sadrži toksin miristicin. Pet Poison Helpline navodi da mala količina koja se koristi u receptima vrlo vjerojatno neće izazvati ozbiljno trovanje te da je problem vrlo malo vjerojatan ako mačka pojede hranu s muškatnim oraščićem. VCA napominje da začini u eggnogu (blagdanskom napitku od jaja), poput muškatnog oraščića, u velikim količinama mogu djelovati otrovno. Mačkama ne treba ništa osim potpune hrane.",
+    "sv": "Muskotnöt innehåller ett gift som heter myristicin. Pet Poison Helpline säger att den lilla mängd som används i recept mycket sällan orsakar allvarlig förgiftning, och att det är mycket osannolikt att det blir problem om en katt äter mat med muskotnöt i. VCA påpekar att kryddor i äggtoddy, som muskotnöt, kan ha giftig effekt i stora mängder. Katter behöver inget annat än en komplett kost.",
+    "da": "Muskatnød indeholder et giftstof, der hedder myristicin. Pet Poison Helpline skriver at den lille mængde, der bruges i opskrifter, meget sjældent giver alvorlig forgiftning, og at et problem er meget usandsynligt, hvis en kat spiser mad med muskatnød i. VCA skriver at krydderier i æggepunch, fx muskatnød, kan virke giftigt i store mængder. Katte har ikke brug for andet end en komplet kost.",
+    "fi": "Muskottipähkinässä on myristisiini-nimistä myrkkyä. Pet Poison Helplinen mukaan reseptissä käytetty pieni määrä aiheuttaa hyvin epätodennäköisesti vakavaa myrkytystä, ja ongelma on hyvin epätodennäköinen, jos kissa syö ruokaa, jossa on muskottipähkinää. VCA huomauttaa, että munatodin mausteet, kuten muskottipähkinä, voivat suurina määrinä olla myrkyllisiä. Kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion.",
+    "nb": "Muskatnøtt inneholder et giftstoff som heter myristicin. Pet Poison Helpline sier at den lille mengden som brukes i oppskrifter, er svært lite sannsynlig å gi alvorlig forgiftning, og at det er svært lite sannsynlig at det oppstår problemer hvis en katt spiser mat med muskatnøtt i. VCA påpeker at krydder i eggnog, som muskatnøtt, kan virke giftig i store mengder. Katter trenger ikke noe annet enn et fullverdig kosthold.",
+    "it": "La noce moscata contiene una tossina chiamata miristicina. Pet Poison Helpline afferma che è molto improbabile che la piccola quantità usata nelle ricette causi un’intossicazione grave, e che un gatto abbia problemi se mangia un cibo che contiene noce moscata. VCA osserva che le spezie dell’eggnog (la bevanda natalizia a base di uova), come la noce moscata, potrebbero avere effetti tossici in grandi quantità. Ai gatti non serve altro che un’alimentazione completa.",
+    "de": "Muskatnuss enthält einen Giftstoff namens Myristicin. Pet Poison Helpline sagt, dass die kleine Menge in Rezepten sehr wahrscheinlich keine ernste Vergiftung verursacht und dass ein Problem sehr unwahrscheinlich ist, wenn eine Katze Speisen mit Muskatnuss frisst. VCA weist darauf hin, dass Gewürze in Eggnog wie Muskatnuss in großen Mengen giftig wirken können. Katzen brauchen außer einer vollwertigen Ernährung nichts.",
+    "fr": "La noix de muscade contient une toxine appelée myristicine. Le Pet Poison Helpline indique qu’il est très peu probable que la petite quantité utilisée dans les recettes provoque une intoxication grave, et qu’un problème est très improbable si un chat mange un aliment contenant de la noix de muscade. VCA note que les épices du lait de poule, comme la noix de muscade, pourraient avoir des effets toxiques en grande quantité. Les chats n’ont besoin de rien d’autre qu’une alimentation complète.",
+    "es": "La nuez moscada contiene una toxina llamada miristicina. Pet Poison Helpline dice que la pequeña cantidad que se usa en las recetas es muy poco probable que cause una toxicidad grave, y que es muy improbable que haya un problema si un gato come un alimento que lleve nuez moscada. VCA señala que las especias del ponche de huevo, como la nuez moscada, podrían tener efectos tóxicos en grandes cantidades. Los gatos no necesitan nada más que una alimentación completa.",
+    "pt": "A noz-moscada contém uma toxina chamada miristicina. A Pet Poison Helpline diz que a pequena quantidade usada nas receitas dificilmente causa toxicidade grave, e que é muito improvável haver problema se um gato comer comida com noz-moscada. A VCA refere que os temperos do eggnog, como a noz-moscada, podem ter efeitos tóxicos em grandes quantidades. Os gatos não precisam de mais nada além de uma alimentação completa.",
+    "nl": "Nootmuskaat bevat een gifstof die myristicine heet. Pet Poison Helpline zegt dat de kleine hoeveelheid die in recepten wordt gebruikt zeer waarschijnlijk geen ernstige vergiftiging veroorzaakt, en dat het zeer onwaarschijnlijk is dat een kat die eten met nootmuskaat eet problemen krijgt. VCA merkt op dat kruiden in eggnog, zoals nootmuskaat, in grote hoeveelheden giftig kunnen zijn. Katten hebben niets anders nodig dan een volwaardige voeding.",
+    "pl": "Gałka muszkatołowa zawiera toksynę zwaną myrystycyną. Pet Poison Helpline podaje, że bardzo mało prawdopodobne jest, by niewielka ilość używana w przepisach spowodowała poważne zatrucie, oraz że problem jest bardzo mało prawdopodobny, jeśli kot zje jedzenie z dodatkiem gałki muszkatołowej. VCA zaznacza, że przyprawy w eggnogu (napoju z jajek i mleka), takie jak gałka muszkatołowa, w dużych ilościach mogą działać toksycznie. Koty nie potrzebują niczego poza pełnowartościową dietą."
   },
   "signs": {
     "en": [
@@ -39,30 +99,126 @@
     "cs": [
       "Mírné podráždění žaludku",
       "Po velmi velkém množství: halucinace, dezorientace, zrychlený tep, sucho v ústech, bolest břicha nebo záchvaty"
+    ],
+    "hr": [
+      "Blage želučane tegobe",
+      "Nakon vrlo velike količine: halucinacije, dezorijentiranost, ubrzan rad srca, suha usta, bol u trbuhu ili napadaji"
+    ],
+    "sv": [
+      "Lätt orolig mage",
+      "Efter en mycket stor mängd: hallucinationer, förvirring, snabb puls, torr mun, magont eller kramper"
+    ],
+    "da": [
+      "Let mavebesvær",
+      "Efter en meget stor mængde: hallucinationer, desorientering, hurtig puls, tør mund, mavesmerter eller kramper"
+    ],
+    "fi": [
+      "Lievä vatsavaiva",
+      "Hyvin suuren määrän jälkeen: aistiharhat, sekavuus, nopea syke, suun kuivuminen, vatsakipu tai kouristukset"
+    ],
+    "nb": [
+      "Litt urolig mage",
+      "Etter en svært stor mengde: hallusinasjoner, forvirring, rask puls, tørr munn, vondt i magen eller kramper"
+    ],
+    "it": [
+      "Lieve mal di stomaco",
+      "Dopo una quantità molto grande: allucinazioni, disorientamento, battito cardiaco accelerato, bocca secca, mal di pancia o convulsioni"
+    ],
+    "de": [
+      "Leichte Magenbeschwerden",
+      "Nach einer sehr großen Menge: Halluzinationen, Orientierungslosigkeit, schneller Herzschlag, trockener Mund, Bauchschmerzen oder Krampfanfälle"
+    ],
+    "fr": [
+      "Légers troubles digestifs",
+      "Après une très grande quantité : hallucinations, désorientation, cœur qui bat vite, bouche sèche, douleurs au ventre ou convulsions"
+    ],
+    "es": [
+      "Malestar de estómago leve",
+      "Tras una cantidad muy grande: alucinaciones, desorientación, corazón acelerado, boca seca, dolor de barriga o convulsiones"
+    ],
+    "pt": [
+      "Ligeira indisposição de estômago",
+      "Depois de uma quantidade muito grande: alucinações, desorientação, coração acelerado, boca seca, dor de barriga ou convulsões"
+    ],
+    "nl": [
+      "Lichte maagklachten",
+      "Na een zeer grote hoeveelheid: hallucinaties, desoriëntatie, snelle hartslag, droge mond, buikpijn of toevallen"
+    ],
+    "pl": [
+      "Lekki rozstrój żołądka",
+      "Po bardzo dużej ilości: omamy, dezorientacja, przyspieszone bicie serca, suchość w pysku, ból brzucha lub drgawki"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate food with a little nutmeg, watch for a mild stomach upset. If she ate a large amount of nutmeg, contact your vet straight away. Don't wait for signs to appear, and don't try to make your cat sick at home.",
     "sl": "Če je mačka pojedla hrano z malo muškatnega oreščka, bodite pozorni na blage želodčne težave. Če je pojedla veliko muškatnega oreščka, takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
-    "cs": "Pokud kočka snědla jídlo s trochou muškátového ořechu, sledujte, zda nemá mírně podrážděný žaludek. Pokud snědla velké množství muškátového ořechu, okamžitě se obraťte na veterináře. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Pokud kočka snědla jídlo s trochou muškátového ořechu, sledujte, zda nemá mírně podrážděný žaludek. Pokud snědla velké množství muškátového ořechu, okamžitě se obraťte na veterináře. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Ako je mačka pojela hranu s malo muškatnog oraščića, pazi na blage želučane tegobe. Ako je pojela veliku količinu muškatnog oraščića, odmah se obrati veterinaru. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Om din katt har ätit mat med lite muskotnöt: håll ett öga på om hon får lätt orolig mage. Om hon har ätit en stor mängd muskotnöt ska du kontakta din veterinär direkt. Vänta inte på att tecken ska dyka upp, och försök inte få katten att kräkas hemma.",
+    "da": "Hvis din kat har spist mad med lidt muskatnød, skal du holde øje med let mavebesvær. Hvis den har spist en stor mængde muskatnød, skal du kontakte din dyrlæge med det samme. Vent ikke på tegn, og prøv ikke selv at få katten til at kaste op.",
+    "fi": "Jos kissasi söi ruokaa, jossa oli vähän muskottipähkinää, seuraa, tuleeko lievää vatsavaivaa. Jos se söi suuren määrän muskottipähkinää, ota heti yhteyttä eläinlääkäriin. Älä odota oireita äläkä yritä oksennuttaa kissaa itse.",
+    "nb": "Hvis katten har spist mat med litt muskatnøtt, følg med på om den får litt urolig mage. Hvis den har spist en stor mengde muskatnøtt, kontakt dyrlegen med en gang. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv.",
+    "it": "Se il tuo gatto ha mangiato un cibo con un po’ di noce moscata, controlla se compare un lieve mal di stomaco. Se ne ha mangiata una grande quantità, contatta subito il veterinario. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
+    "de": "Hat Ihre Katze Speisen mit ein wenig Muskatnuss gefressen, achten Sie auf leichte Magenbeschwerden. Hat sie eine große Menge Muskatnuss gefressen, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Si votre chat a mangé un aliment contenant un peu de noix de muscade, surveillez l’apparition de légers troubles digestifs. S’il en a mangé une grande quantité, contactez immédiatement votre vétérinaire. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat à la maison.",
+    "es": "Si tu gato ha comido un alimento con un poco de nuez moscada, observa si tiene un malestar de estómago leve. Si ha comido una cantidad grande de nuez moscada, ponte en contacto con tu veterinario enseguida. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
+    "pt": "Se o teu gato comeu comida com um pouco de noz-moscada, vigia se há uma ligeira indisposição de estômago. Se ele comeu uma grande quantidade de noz-moscada, contacta imediatamente o teu veterinário. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+    "nl": "Heeft je kat eten met een beetje nootmuskaat gegeten, let dan op lichte maagklachten. Heeft ze een grote hoeveelheid nootmuskaat gegeten, neem dan meteen contact op met je dierenarts. Wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Jeśli twój kot zjadł jedzenie z odrobiną gałki muszkatołowej, obserwuj, czy nie pojawi się lekki rozstrój żołądka. Jeśli zjadł dużą ilość gałki muszkatołowej, od razu skontaktuj się z weterynarzem. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
     "en": "Nutmeg is a spice for people's cooking. Cats don't need spices, so keep the spice jar away from kitty.",
     "sl": "Muškatni orešček je začimba za kuhanje za ljudi. Muce začimb ne potrebujejo, zato naj bo kozarček z začimbo daleč od muce.",
-    "cs": "Muškátový ořech je koření do jídel pro lidi. Kočky koření nepotřebují, takže dózu s kořením drž od kočičky dál."
+    "cs": "Muškátový ořech je koření do jídel pro lidi. Kočky koření nepotřebují, takže dózu s kořením drž od kočičky dál.",
+    "hr": "Muškatni oraščić je začin za kuhanje. Mačkama začini nisu potrebni, zato staklenku s začinima drži podalje od mace.",
+    "sv": "Muskotnöt är en krydda för människors matlagning. Katter behöver inga kryddor, så håll kryddburken borta från katten.",
+    "da": "Muskatnød er et krydderi, man bruger i madlavning til mennesker. Katte har ikke brug for krydderier, så hold krydderiglasset væk fra din kat.",
+    "fi": "Muskottipähkinä on mauste ihmisten ruoanlaittoon. Kissat eivät tarvitse mausteita, joten pidä maustepurkki poissa kisun luota.",
+    "nb": "Muskatnøtt er et krydder til matlaging for mennesker. Katter trenger ikke krydder, så hold krydderglasset unna pusen.",
+    "it": "La noce moscata è una spezia che le persone usano in cucina. I gatti non hanno bisogno di spezie, quindi tieni il barattolo delle spezie lontano dal micio.",
+    "de": "Muskatnuss ist ein Gewürz, das Menschen zum Kochen benutzen. Katzen brauchen keine Gewürze, also halte das Gewürzglas von deiner Katze fern.",
+    "fr": "La noix de muscade est une épice pour la cuisine des humains. Les chats n’ont pas besoin d’épices : garde le pot d’épices loin de ton chat.",
+    "es": "La nuez moscada es una especia para cocinar para las personas. Los gatos no necesitan especias, así que mantén el bote de las especias lejos del gatito.",
+    "pt": "A noz-moscada é um tempero para a cozinha das pessoas. Os gatos não precisam de temperos, por isso mantém o frasco longe do gatinho.",
+    "nl": "Nootmuskaat is een kruid voor in de keuken van mensen. Katten hebben geen kruiden nodig, dus houd het kruidenpotje uit de buurt van je kat.",
+    "pl": "Gałka muszkatołowa to przyprawa do gotowania dla ludzi. Koty nie potrzebują przypraw, więc trzymaj słoiczek z przyprawami z dala od kotka."
   },
   "faq": [
     {
       "q": {
         "en": "Is eggnog with nutmeg safe for cats?",
         "sl": "Ali je jajčni liker z muškatnim oreščkom varen za mačke?",
-        "cs": "Je vaječný nápoj eggnog s muškátovým ořechem pro kočky bezpečný?"
+        "cs": "Je vaječný nápoj eggnog s muškátovým ořechem pro kočky bezpečný?",
+        "hr": "Je li eggnog s muškatnim oraščićem siguran za mačke?",
+        "sv": "Är äggtoddy med muskotnöt säker för katter?",
+        "da": "Er æggepunch med muskatnød ufarlig for katte?",
+        "fi": "Onko muskottipähkinällä maustettu munatoddi turvallista kissoille?",
+        "nb": "Er eggnog med muskatnøtt trygg for katter?",
+        "it": "L’eggnog con noce moscata è sicuro per i gatti?",
+        "de": "Ist Eggnog mit Muskatnuss für Katzen unbedenklich?",
+        "fr": "Le lait de poule à la noix de muscade est-il sans danger pour les chats ?",
+        "es": "¿Es seguro para los gatos el ponche de huevo con nuez moscada?",
+        "pt": "O eggnog com noz-moscada é seguro para gatos?",
+        "nl": "Is eggnog met nootmuskaat veilig voor katten?",
+        "pl": "Czy eggnog z gałką muszkatołową jest bezpieczny dla kotów?"
       },
       "a": {
         "en": "No. VCA says spices in eggnog, such as nutmeg, could have toxic effects in large quantities, and advises contacting your vet if you think your cat drank eggnog.",
         "sl": "Ne. VCA navaja, da imajo lahko začimbe v jajčnem likerju, na primer muškatni orešček, v velikih količinah strupene učinke, in svetuje, da pokličete veterinarja, če mislite, da je mačka pila jajčni liker.",
-        "cs": "Ne. VCA uvádí, že koření v nápoji eggnog, například muškátový ořech, může mít ve velkém množství toxické účinky, a radí obrátit se na veterináře, pokud se domníváte, že kočka eggnog pila."
+        "cs": "Ne. VCA uvádí, že koření v nápoji eggnog, například muškátový ořech, může mít ve velkém množství toxické účinky, a radí obrátit se na veterináře, pokud se domníváte, že kočka eggnog pila.",
+        "hr": "Ne. VCA navodi da začini u eggnogu, poput muškatnog oraščića, u velikim količinama mogu djelovati otrovno, i savjetuje da se obratiš veterinaru ako misliš da je mačka popila eggnog.",
+        "sv": "Nej. VCA säger att kryddor i äggtoddy, som muskotnöt, kan ha giftig effekt i stora mängder, och råder dig att kontakta din veterinär om du tror att din katt har druckit äggtoddy.",
+        "da": "Nej. VCA skriver at krydderier i æggepunch, fx muskatnød, kan virke giftigt i store mængder, og anbefaler at kontakte din dyrlæge, hvis du tror, at din kat har drukket æggepunch.",
+        "fi": "Ei. VCA:n mukaan munatodin mausteet, kuten muskottipähkinä, voivat suurina määrinä olla myrkyllisiä, ja se neuvoo ottamaan yhteyttä eläinlääkäriin, jos epäilet kissan juoneen munatoddia.",
+        "nb": "Nei. VCA sier at krydder i eggnog, som muskatnøtt, kan virke giftig i store mengder, og anbefaler å kontakte dyrlegen hvis du tror katten har drukket eggnog.",
+        "it": "No. VCA afferma che le spezie dell’eggnog, come la noce moscata, potrebbero avere effetti tossici in grandi quantità, e consiglia di contattare il veterinario se pensi che il tuo gatto abbia bevuto eggnog.",
+        "de": "Nein. VCA sagt, dass Gewürze in Eggnog wie Muskatnuss in großen Mengen giftig wirken können, und rät, sich an Ihren Tierarzt zu wenden, wenn Sie vermuten, dass Ihre Katze Eggnog getrunken hat.",
+        "fr": "Non. VCA indique que les épices du lait de poule, comme la noix de muscade, pourraient avoir des effets toxiques en grande quantité, et conseille de contacter votre vétérinaire si vous pensez que votre chat en a bu.",
+        "es": "No. VCA dice que las especias del ponche de huevo, como la nuez moscada, podrían tener efectos tóxicos en grandes cantidades, y aconseja ponerse en contacto con tu veterinario si crees que tu gato ha bebido ponche de huevo.",
+        "pt": "Não. A VCA diz que os temperos do eggnog, como a noz-moscada, podem ter efeitos tóxicos em grandes quantidades, e aconselha a contactar o veterinário se achas que o teu gato bebeu eggnog.",
+        "nl": "Nee. VCA zegt dat kruiden in eggnog, zoals nootmuskaat, in grote hoeveelheden giftig kunnen zijn, en adviseert contact op te nemen met je dierenarts als je denkt dat je kat eggnog heeft gedronken.",
+        "pl": "Nie. VCA podaje, że przyprawy w eggnogu, takie jak gałka muszkatołowa, w dużych ilościach mogą działać toksycznie, i radzi skontaktować się z weterynarzem, jeśli podejrzewasz, że kot wypił eggnog."
       }
     }
   ],
@@ -142,6 +298,66 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d83fe70f75ecbfdf171fb56f383bfa7f04aab9c2165da42062442361d0e10042"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "39e9ca50ad0510a6e4d551f04c77033ac1e5e14684eb808f0bc100f5f067db40"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b598473b3dcca29a1657e2a27608553768d6e0498af42a1aac7d78c592a92380"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "66917c0b3aae354acf3728612a0f29b1e8e851173a90cdc915667600d1e5e2db"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9e51856596b1f452fdc55b726a12e911507c3595d4ea2648cb9ad5e6d8899700"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0d85022b1ecdac14bac48f85eb53b2dafb922c8ebe72c973ff661856fd5d1fbb"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e0eed81b0dd68ec282d361b80010cbe92a8c95d077f843cc1923b884967cc8c9"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e91054f35f73fdee78230b0acdcf11b90e8c9c19de656b8ef6a1c9c25f5129bf"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "08a9cbf628d2349871ce71f1b5d9d1fdfddaaedb2e6281cb95950411e8654972"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fbfb4a900fd4dcfa5278efe86426ae5b5c75676a557077ce5b9372b0bad80b75"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "56261c761739049189b9db1410ed392c79e75d351cc5dfff53442eccb7012c5c"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4ae7843c88f0bb29d3f1e40fdaa2888f874af7c80e7a8dfcc7086d22ee6359e9"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "4b40e6ed9ce057f7d694f6a1696904947e77609a74f6ac8fa4fed9c5e6993a0e"
     }
   }
 }

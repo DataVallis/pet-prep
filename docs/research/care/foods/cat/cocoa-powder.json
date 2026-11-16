@@ -4,28 +4,88 @@
   "name": {
     "en": "Cocoa powder",
     "sl": "Kakav v prahu",
-    "cs": "Kakaový prášek"
+    "cs": "Kakaový prášek",
+    "hr": "Kakao u prahu",
+    "sv": "Kakaopulver",
+    "da": "Kakaopulver",
+    "fi": "Kaakaojauhe",
+    "nb": "Kakaopulver",
+    "it": "Cacao in polvere",
+    "de": "Kakaopulver",
+    "fr": "Cacao en poudre",
+    "es": "Cacao en polvo",
+    "pt": "Cacau em pó",
+    "nl": "Cacaopoeder",
+    "pl": "Kakao w proszku"
   },
   "question": {
     "en": "Can cats eat cocoa powder?",
     "sl": "Ali lahko mačke jedo kakav v prahu?",
-    "cs": "Mohou kočky jíst kakaový prášek?"
+    "cs": "Mohou kočky jíst kakaový prášek?",
+    "hr": "Smiju li mačke jesti kakao u prahu?",
+    "sv": "Får katter äta kakaopulver?",
+    "da": "Må katte spise kakaopulver?",
+    "fi": "Saako kissa syödä kaakaojauhetta?",
+    "nb": "Kan katter spise kakaopulver?",
+    "it": "I gatti possono mangiare il cacao in polvere?",
+    "de": "Dürfen Katzen Kakaopulver fressen?",
+    "fr": "Les chats peuvent-ils manger du cacao en poudre ?",
+    "es": "¿Pueden los gatos comer cacao en polvo?",
+    "pt": "Os gatos podem comer cacau em pó?",
+    "nl": "Mogen katten cacaopoeder eten?",
+    "pl": "Czy koty mogą jeść kakao w proszku?"
   },
   "url_slug": {
     "en": "cocoa-powder",
     "sl": "kakav-v-prahu",
-    "cs": "kakaovy-prasek"
+    "cs": "kakaovy-prasek",
+    "hr": "kakao-u-prahu",
+    "sv": "kakaopulver",
+    "da": "kakaopulver",
+    "fi": "kaakaojauhe",
+    "nb": "kakaopulver",
+    "it": "cacao-in-polvere",
+    "de": "kakaopulver",
+    "fr": "cacao-en-poudre",
+    "es": "cacao-en-polvo",
+    "pt": "cacau-em-po",
+    "nl": "cacaopoeder",
+    "pl": "kakao-w-proszku"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Cocoa powder is especially toxic to cats because it contains an extremely high concentration of cocoa solids, which carry theobromine. If your cat eats any, keep the packaging and call your vet immediately.",
     "sl": "Ne. Kakav v prahu je za mačke še posebej strupen, ker vsebuje izjemno visok delež suhe kakavove snovi, ki vsebuje teobromin. Če ga mačka poje, shranite embalažo in takoj pokličite veterinarja.",
-    "cs": "Ne. Kakaový prášek je pro kočky obzvlášť toxický, protože obsahuje extrémně vysoký podíl kakaové sušiny, která obsahuje theobromin. Pokud kočka snědla byť jen trochu, uschovejte obal a ihned zavolejte veterináři."
+    "cs": "Ne. Kakaový prášek je pro kočky obzvlášť toxický, protože obsahuje extrémně vysoký podíl kakaové sušiny, která obsahuje theobromin. Pokud kočka snědla byť jen trochu, uschovejte obal a ihned zavolejte veterináři.",
+    "hr": "Ne. Kakao u prahu osobito je otrovan za mačke, jer sadrži izuzetno visoku koncentraciju kakaove suhe tvari, u kojoj je teobromin. Ako mačka pojede imalo, sačuvaj ambalažu i odmah nazovi veterinara.",
+    "sv": "Nej. Kakaopulver är särskilt giftigt för katter eftersom det innehåller en extremt hög halt kakaotorrsubstans, som innehåller teobromin. Om din katt äter något ska du spara förpackningen och ringa din veterinär omedelbart.",
+    "da": "Nej. Kakaopulver er særligt giftigt for katte, fordi det indeholder en ekstremt høj koncentration af kakaotørstof, som indeholder theobromin. Hvis din kat får noget, skal du gemme emballagen og ringe til din dyrlæge med det samme.",
+    "fi": "Ei saa. Kaakaojauhe on kissoille erityisen myrkyllistä, koska siinä on erittäin paljon kaakaokuiva-ainetta, joka sisältää teobromiinia. Jos kissasi syö sitä vähänkin, säilytä pakkaus ja soita heti eläinlääkärille.",
+    "nb": "Nei. Kakaopulver er spesielt giftig for katter fordi det inneholder ekstremt mye kakaotørrstoff, og det inneholder teobromin. Hvis katten spiser noe av det, ta vare på emballasjen og ring dyrlegen med en gang.",
+    "it": "No. Il cacao in polvere è particolarmente tossico per i gatti perché contiene una concentrazione altissima di solidi del cacao, che contengono teobromina. Se il tuo gatto ne mangia, conserva la confezione e chiama subito il veterinario.",
+    "de": "Nein. Kakaopulver ist für Katzen besonders giftig, weil es extrem viele Kakaobestandteile enthält, in denen Theobromin steckt. Hat Ihre Katze davon gefressen, heben Sie die Verpackung auf und rufen Sie sofort Ihren Tierarzt an.",
+    "fr": "Non. Le cacao en poudre est particulièrement toxique pour les chats, car il est extrêmement concentré en cacao, source de théobromine. Si votre chat en mange, gardez l’emballage et appelez immédiatement votre vétérinaire.",
+    "es": "No. El cacao en polvo es especialmente tóxico para los gatos porque contiene una concentración extremadamente alta de sólidos de cacao, que llevan teobromina. Si tu gato come algo, guarda el envase y llama a tu veterinario inmediatamente.",
+    "pt": "Não. O cacau em pó é especialmente tóxico para os gatos porque contém uma concentração extremamente alta de sólidos de cacau, que têm teobromina. Se o teu gato comer algum, guarda a embalagem e liga imediatamente ao teu veterinário.",
+    "nl": "Nee. Cacaopoeder is extra giftig voor katten, omdat er extreem veel cacao in zit en cacao theobromine bevat. Eet je kat er iets van, bewaar dan de verpakking en bel meteen je dierenarts.",
+    "pl": "Nie. Kakao w proszku jest dla kotów szczególnie toksyczne, bo zawiera niezwykle dużo kakaowych części stałych, w których znajduje się teobromina. Jeśli twój kot zje choć trochę, zachowaj opakowanie i od razu zadzwoń do weterynarza."
   },
   "why": {
     "en": "PDSA explains that chocolate contains theobromine, which is perfectly safe for humans but toxic for cats. The darker the chocolate, the more cocoa solids and theobromine it contains, and the more toxic it is. Cocoa powder is especially toxic because it contains an extremely high concentration of cocoa solids.",
     "sl": "PDSA pojasnjuje, da čokolada vsebuje teobromin, ki je za ljudi popolnoma varen, za mačke pa strupen. Temnejša kot je čokolada, več suhe kakavove snovi in teobromina vsebuje in bolj je strupena. Kakav v prahu je še posebej strupen, ker vsebuje izjemno visok delež suhe kakavove snovi.",
-    "cs": "PDSA vysvětluje, že čokoláda obsahuje theobromin, který je pro lidi naprosto bezpečný, ale pro kočky toxický. Čím tmavší čokoláda, tím více kakaové sušiny a theobrominu obsahuje a tím je toxičtější. Kakaový prášek je obzvlášť toxický, protože obsahuje extrémně vysoký podíl kakaové sušiny."
+    "cs": "PDSA vysvětluje, že čokoláda obsahuje theobromin, který je pro lidi naprosto bezpečný, ale pro kočky toxický. Čím tmavší čokoláda, tím více kakaové sušiny a theobrominu obsahuje a tím je toxičtější. Kakaový prášek je obzvlášť toxický, protože obsahuje extrémně vysoký podíl kakaové sušiny.",
+    "hr": "PDSA objašnjava da čokolada sadrži teobromin, koji je za ljude potpuno siguran, ali je za mačke otrovan. Što je čokolada tamnija, to ima više kakaove suhe tvari i teobromina te je otrovnija. Kakao u prahu osobito je otrovan, jer sadrži izuzetno visoku koncentraciju kakaove suhe tvari.",
+    "sv": "PDSA förklarar att choklad innehåller teobromin, som är helt ofarligt för människor men giftigt för katter. Ju mörkare choklad, desto mer kakaotorrsubstans och teobromin innehåller den, och desto giftigare är den. Kakaopulver är särskilt giftigt eftersom det innehåller en extremt hög halt kakaotorrsubstans.",
+    "da": "PDSA forklarer at chokolade indeholder theobromin, som er helt ufarligt for mennesker, men giftigt for katte. Jo mørkere chokoladen er, jo mere kakaotørstof og theobromin indeholder den, og jo giftigere er den. Kakaopulver er særligt giftigt, fordi det indeholder en ekstremt høj koncentration af kakaotørstof.",
+    "fi": "PDSA kertoo, että suklaassa on teobromiinia, joka on ihmisille täysin vaaratonta mutta kissoille myrkyllistä. Mitä tummempaa suklaa on, sitä enemmän siinä on kaakaokuiva-ainetta ja teobromiinia ja sitä myrkyllisempää se on. Kaakaojauhe on erityisen myrkyllistä, koska siinä on erittäin suuri pitoisuus kaakaokuiva-ainetta.",
+    "nb": "PDSA forklarer at sjokolade inneholder teobromin, som er ufarlig for mennesker, men giftig for katter. Jo mørkere sjokoladen er, desto mer kakaotørrstoff og teobromin inneholder den, og desto giftigere er den. Kakaopulver er spesielt giftig fordi det inneholder ekstremt mye kakaotørrstoff.",
+    "it": "PDSA spiega che il cioccolato contiene teobromina, una sostanza del tutto sicura per le persone ma tossica per i gatti. Più il cioccolato è fondente, più solidi del cacao e teobromina contiene e più è tossico. Il cacao in polvere è particolarmente tossico perché contiene una concentrazione altissima di solidi del cacao.",
+    "de": "PDSA erklärt, dass Schokolade Theobromin enthält, das für Menschen völlig unbedenklich, für Katzen aber giftig ist. Je dunkler die Schokolade, desto mehr Kakaobestandteile und Theobromin enthält sie und desto giftiger ist sie. Kakaopulver ist besonders giftig, weil es extrem viele Kakaobestandteile enthält.",
+    "fr": "La PDSA explique que le chocolat contient de la théobromine, qui est tout à fait sans danger pour les humains mais toxique pour les chats. Plus le chocolat est noir, plus il contient de cacao et de théobromine, et plus il est toxique. Le cacao en poudre est particulièrement toxique, car il est extrêmement concentré en cacao.",
+    "es": "PDSA explica que el chocolate contiene teobromina, que es perfectamente segura para las personas pero tóxica para los gatos. Cuanto más oscuro es el chocolate, más sólidos de cacao y teobromina contiene y más tóxico es. El cacao en polvo es especialmente tóxico porque contiene una concentración extremadamente alta de sólidos de cacao.",
+    "pt": "A PDSA explica que o chocolate contém teobromina, que é perfeitamente segura para as pessoas mas tóxica para os gatos. Quanto mais escuro é o chocolate, mais sólidos de cacau e teobromina contém e mais tóxico é. O cacau em pó é especialmente tóxico porque contém uma concentração extremamente alta de sólidos de cacau.",
+    "nl": "PDSA legt uit dat chocolade theobromine bevat, wat voor mensen volkomen veilig is maar giftig voor katten. Hoe donkerder de chocolade, hoe meer cacaobestanddelen en theobromine erin zitten en hoe giftiger die is. Cacaopoeder is extra giftig omdat het een extreem hoge concentratie cacaobestanddelen bevat.",
+    "pl": "PDSA wyjaśnia, że czekolada zawiera teobrominę, która jest zupełnie bezpieczna dla ludzi, ale toksyczna dla kotów. Im ciemniejsza czekolada, tym więcej zawiera kakaowych części stałych i teobrominy, a tym samym jest bardziej toksyczna. Kakao w proszku jest szczególnie toksyczne, ponieważ zawiera niezwykle duże stężenie kakaowych części stałych."
   },
   "signs": {
     "en": [
@@ -60,30 +120,210 @@
       "Horečka",
       "Zrychlený tep",
       "Záchvaty"
+    ],
+    "hr": [
+      "Uzbuđenost, nemir ili pretjerana aktivnost",
+      "Povraćanje ili proljev",
+      "Pijenje i mokrenje više nego inače",
+      "Bol u trbuhu",
+      "Ubrzano disanje ili dahtanje",
+      "Drhtanje",
+      "Povišena temperatura",
+      "Ubrzan rad srca",
+      "Napadaji"
+    ],
+    "sv": [
+      "Upphetsning, rastlöshet eller överaktivitet",
+      "Kräkningar eller diarré",
+      "Ökad törst och ökat kissande",
+      "Magont",
+      "Snabb andning eller flåsande",
+      "Skakningar eller darrningar",
+      "Feber",
+      "Snabb puls",
+      "Kramper"
+    ],
+    "da": [
+      "Ophidselse, uro eller hyperaktivitet",
+      "Opkast eller diarré",
+      "Drikker og tisser mere end normalt",
+      "Mavesmerter",
+      "Hurtig vejrtrækning eller pesen",
+      "Rysten eller skælven",
+      "Feber",
+      "Hurtig puls",
+      "Kramper"
+    ],
+    "fi": [
+      "Kiihtyneisyys, levottomuus tai ylivilkkaus",
+      "Oksentelu tai ripuli",
+      "Tavallista runsaampi juominen ja virtsaaminen",
+      "Vatsakipu",
+      "Nopea hengitys tai läähätys",
+      "Vapina tai tärinä",
+      "Kuume",
+      "Nopea syke",
+      "Kouristuskohtaukset"
+    ],
+    "nb": [
+      "Opphisselse, uro eller overaktivitet",
+      "Oppkast eller diaré",
+      "Drikker og tisser mer enn vanlig",
+      "Vondt i magen",
+      "Rask pust eller pesing",
+      "Skjelving eller muskelskjelvinger",
+      "Feber",
+      "Hurtig hjerterytme",
+      "Kramper"
+    ],
+    "it": [
+      "Eccitazione, irrequietezza o iperattività",
+      "Vomito o diarrea",
+      "Più sete e più pipì del solito",
+      "Mal di pancia",
+      "Respiro rapido o affannoso",
+      "Tremori",
+      "Febbre",
+      "Battito cardiaco accelerato",
+      "Convulsioni"
+    ],
+    "de": [
+      "Aufgedrehtheit, Unruhe oder Überaktivität",
+      "Erbrechen oder Durchfall",
+      "Vermehrter Durst und häufigeres Urinieren",
+      "Bauchschmerzen",
+      "Schnelle Atmung oder Hecheln",
+      "Zittern oder Tremor",
+      "Fieber",
+      "Schneller Herzschlag",
+      "Krampfanfälle"
+    ],
+    "fr": [
+      "Excitation, agitation ou hyperactivité",
+      "Vomissements ou diarrhée",
+      "Besoin de boire et d’uriner plus que d’habitude",
+      "Douleurs au ventre",
+      "Respiration rapide ou halètement",
+      "Tremblements ou secousses",
+      "Fièvre",
+      "Cœur qui bat vite",
+      "Convulsions"
+    ],
+    "es": [
+      "Excitación, inquietud o hiperactividad",
+      "Vómitos o diarrea",
+      "Beber y orinar más de lo normal",
+      "Dolor de barriga",
+      "Respiración rápida o jadeo",
+      "Temblores",
+      "Fiebre",
+      "Corazón acelerado",
+      "Convulsiones"
+    ],
+    "pt": [
+      "Excitação, inquietação ou hiperatividade",
+      "Vómitos ou diarreia",
+      "Beber e urinar mais do que o habitual",
+      "Dor de barriga",
+      "Respiração rápida ou ofegante",
+      "Tremores",
+      "Febre",
+      "Coração acelerado",
+      "Convulsões"
+    ],
+    "nl": [
+      "Opwinding, onrust of hyperactiviteit",
+      "Braken of diarree",
+      "Meer drinken en plassen dan normaal",
+      "Buikpijn",
+      "Snelle ademhaling of hijgen",
+      "Beven of trillen",
+      "Koorts",
+      "Een snelle hartslag",
+      "Toevallen"
+    ],
+    "pl": [
+      "Pobudzenie, niepokój lub nadpobudliwość",
+      "Wymioty lub biegunka",
+      "Picie i oddawanie moczu częściej niż zwykle",
+      "Ból brzucha",
+      "Szybki oddech lub ziajanie",
+      "Drżenie",
+      "Gorączka",
+      "Przyspieszone bicie serca",
+      "Drgawki"
     ]
   },
   "what_to_do": {
     "en": "Keep the packaging and call your vet immediately. Don't wait for symptoms to appear, and don't try to make your cat sick at home.",
     "sl": "Shranite embalažo in takoj pokličite veterinarja. Ne čakajte, da se pokažejo znaki, in mačke doma ne poskušajte spraviti v bruhanje.",
-    "cs": "Uschovejte obal a ihned zavolejte veterináři. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Uschovejte obal a ihned zavolejte veterináři. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Sačuvaj ambalažu i odmah nazovi veterinara. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Spara förpackningen och ring din veterinär omedelbart. Vänta inte på att symtom ska dyka upp, och försök inte få katten att kräkas hemma.",
+    "da": "Gem emballagen, og ring til din dyrlæge med det samme. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
+    "fi": "Säilytä pakkaus ja soita heti eläinlääkärille. Älä odota oireita äläkä yritä oksennuttaa kissaa itse.",
+    "nb": "Ta vare på emballasjen og ring dyrlegen med en gang. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv.",
+    "it": "Conserva la confezione e chiama subito il veterinario. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
+    "de": "Heben Sie die Verpackung auf und rufen Sie sofort Ihren Tierarzt an. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Gardez l’emballage et appelez immédiatement votre vétérinaire. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat à la maison.",
+    "es": "Guarda el envase y llama a tu veterinario inmediatamente. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
+    "pt": "Guarda a embalagem e liga imediatamente ao teu veterinário. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+    "nl": "Bewaar de verpakking en bel meteen je dierenarts. Wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Zachowaj opakowanie i od razu zadzwoń do weterynarza. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
     "en": "Cocoa powder is for people's baking, not for cats. If kitty gets into it, tell a grown-up right away so they can call the vet.",
     "sl": "Kakav v prahu je za peko, ne za muce. Če muca seže po njem, takoj povej odraslemu, da lahko pokliče veterinarja.",
-    "cs": "Kakaový prášek je na pečení pro lidi, ne pro kočky. Kdyby se k němu kočička dostala, hned to řekni dospělému, ať zavolá veterináře."
+    "cs": "Kakaový prášek je na pečení pro lidi, ne pro kočky. Kdyby se k němu kočička dostala, hned to řekni dospělému, ať zavolá veterináře.",
+    "hr": "Kakao u prahu služi za pečenje, a ne za mačke. Ako ga maca dohvati, odmah reci odrasloj osobi da nazove veterinara.",
+    "sv": "Kakaopulver är till för människors bakning, inte för katter. Om katten har kommit åt det: säg till en vuxen direkt så att de kan ringa veterinären.",
+    "da": "Kakaopulver er til bagning for mennesker, ikke til katte. Hvis din kat får fat i noget, skal du straks sige det til en voksen, så de kan ringe til dyrlægen.",
+    "fi": "Kaakaojauhe on ihmisten leivontaan, ei kissoille. Jos kisu pääsee siihen käsiksi, kerro heti aikuiselle, jotta hän voi soittaa eläinlääkärille.",
+    "nb": "Kakaopulver er til baking for mennesker, ikke for katter. Hvis pusen kommer borti det, si fra til en voksen med en gang, så de kan ringe dyrlegen.",
+    "it": "Il cacao in polvere serve per i dolci delle persone, non per i gatti. Se il micio lo trova, dillo subito a un adulto, così può chiamare il veterinario.",
+    "de": "Kakaopulver ist zum Backen für Menschen da, nicht für Katzen. Wenn deine Katze etwas davon erwischt hat, sag sofort einem Erwachsenen Bescheid, damit er den Tierarzt anrufen kann.",
+    "fr": "Le cacao en poudre sert aux gâteaux des humains, pas aux chats. Si ton chat y a goûté, préviens tout de suite un adulte pour qu’il appelle le vétérinaire.",
+    "es": "El cacao en polvo es para que las personas hagan repostería, no para los gatos. Si el gatito lo encuentra, avisa enseguida a un adulto para que llame al veterinario.",
+    "pt": "O cacau em pó é para as pessoas fazerem bolos, não para os gatos. Se o gatinho o apanhar, avisa logo um adulto para ligar ao veterinário.",
+    "nl": "Cacaopoeder gebruiken mensen om mee te bakken. Het is niets voor katten. Is je kat eraan geweest? Vertel het dan meteen aan een volwassene, zodat die de dierenarts kan bellen.",
+    "pl": "Kakao w proszku służy ludziom do pieczenia i nie jest dla kotów. Jeśli kotek się do niego dobierze, od razu powiedz dorosłemu, żeby zadzwonił do weterynarza."
   },
   "faq": [
     {
       "q": {
         "en": "Is cocoa shell garden mulch a risk for cats?",
         "sl": "Ali je zastirka iz kakavovih lupin na vrtu nevarna za mačke?",
-        "cs": "Představuje zahradní mulč z kakaových slupek pro kočky riziko?"
+        "cs": "Představuje zahradní mulč z kakaových slupek pro kočky riziko?",
+        "hr": "Je li malč od kakaovih ljuski opasan za mačke?",
+        "sv": "Är kakaoskal som trädgårdsmulch en risk för katter?",
+        "da": "Er mulch af kakaoskaller en risiko for katte?",
+        "fi": "Onko kaakaonkuorikate vaarallinen kissoille?",
+        "nb": "Er kakaoskall som mulch i hagen en risiko for katter?",
+        "it": "Il pacciame di gusci di cacao per il giardino è un rischio per i gatti?",
+        "de": "Sind Kakaoschalen als Gartenmulch ein Risiko für Katzen?",
+        "fr": "Le paillis de coques de cacao au jardin présente-t-il un risque pour les chats ?",
+        "es": "¿Es un riesgo para los gatos el mantillo de cáscara de cacao del jardín?",
+        "pt": "A cobertura de casca de cacau no jardim é um risco para os gatos?",
+        "nl": "Is tuinmulch van cacaodoppen een risico voor katten?",
+        "pl": "Czy ściółka ogrodowa z łusek kakao stanowi zagrożenie dla kotów?"
       },
       "a": {
         "en": "PDSA advises avoiding gardening mulches that contain cocoa shell.",
         "sl": "PDSA svetuje, da se izogibate vrtnim zastirkam, ki vsebujejo kakavove lupine.",
-        "cs": "PDSA radí vyhýbat se zahradnímu mulči, který obsahuje kakaové slupky."
+        "cs": "PDSA radí vyhýbat se zahradnímu mulči, který obsahuje kakaové slupky.",
+        "hr": "PDSA savjetuje izbjegavanje vrtnog malča koji sadrži kakaove ljuske.",
+        "sv": "PDSA råder dig att undvika trädgårdsmulch som innehåller kakaoskal.",
+        "da": "PDSA fraråder at bruge havemulch, der indeholder kakaoskaller.",
+        "fi": "PDSA neuvoo välttämään puutarhan katteita, joissa on kaakaonkuorta.",
+        "nb": "PDSA fraråder å bruke mulch med kakaoskall i hagen.",
+        "it": "PDSA consiglia di evitare i pacciami da giardinaggio che contengono gusci di cacao.",
+        "de": "PDSA rät, keinen Gartenmulch mit Kakaoschalen zu verwenden.",
+        "fr": "La PDSA conseille d’éviter les paillis de jardinage qui contiennent des coques de cacao.",
+        "es": "PDSA aconseja evitar los mantillos de jardinería que contengan cáscara de cacao.",
+        "pt": "A PDSA aconselha a evitar coberturas do solo que contenham casca de cacau.",
+        "nl": "PDSA raadt aan om tuinmulch met cacaodoppen te vermijden.",
+        "pl": "PDSA radzi unikać ściółki ogrodowej zawierającej łuski kakao."
       }
     }
   ],
@@ -179,6 +419,66 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d4a7a67a37b3245cd8d98358f788cbb9f7ec6ecff0d02f7ba808be7bcb3d63b3"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c981a87307592037b207867cc049ab0f4c0f9b00678f5bd28c0d6f2e031e84aa"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "da56e2d0ded306b52a28aa223a0efb5de822e0c25be676b79232cd843529ccea"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "aed3c69cfe6fe23ece81f6e6dbd44d224d0609a86e2c187457941c7a58108367"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b7c2376913593be295a3192b4a0ee5c6a9d690938e632532b4b29b2dc495a367"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ad645b26f6182b72170eea3cae128c1c5c20fa4b16a4d957a62b35e3368333a7"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a9eca81ea3f5cda23578bd46bb8d941f21e13c80cf61014cdb0a123ac1d3c800"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fb96ffb7e94b2bf9a59dfbcf73ba46a64235c2f87a20f10c2e7ef2cf52edc319"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0e99cc1be3b1e9988cc4354d072765b8297e2b5d4a5f0c7156999d03d3883d84"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "39cfc8330504fa76b4c61101cf81d9407cb54d72ef8f28a6524c2e3ed0e2126e"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1e5fa6e6cf17961e977dde41be1844291ad3b445555097249a7536b081dbf488"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "568d662f33c076243d066c40709d5e1b413ee0d43d6849d8ea9daa47425afd47"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "1e4ee241ebbe184a82cb582097ca6a86a3a466c754f7bd25abf6a63d428ef0e0"
     }
   }
 }

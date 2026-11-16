@@ -3,24 +3,89 @@
   "species": "cat",
   "name": {
     "en": "Deli meat",
-    "sl": "Mesni narezek"
+    "sl": "Mesni narezek",
+    "hr": "Mesni narezak",
+    "sv": "Charkuterier och pålägg",
+    "da": "Pålæg",
+    "fi": "Leikkele",
+    "nb": "Kjøttpålegg",
+    "it": "Salumi e affettati",
+    "de": "Aufschnitt",
+    "fr": "Charcuterie",
+    "es": "Fiambre",
+    "pt": "Frios",
+    "nl": "Vleeswaren (broodbeleg)",
+    "pl": "Wędliny",
+    "cs": "Nářezy a lahůdkové maso"
   },
   "question": {
     "en": "Can cats eat deli meat?",
-    "sl": "Ali lahko mačke jedo mesni narezek?"
+    "sl": "Ali lahko mačke jedo mesni narezek?",
+    "hr": "Smiju li mačke jesti mesni narezak?",
+    "sv": "Får katter äta pålägg?",
+    "da": "Må katte spise pålæg?",
+    "fi": "Saako kissa syödä leikkelettä?",
+    "nb": "Kan katter spise kjøttpålegg?",
+    "it": "I gatti possono mangiare i salumi e gli affettati?",
+    "de": "Dürfen Katzen Aufschnitt fressen?",
+    "fr": "Les chats peuvent-ils manger de la charcuterie ?",
+    "es": "¿Pueden los gatos comer fiambre?",
+    "pt": "Os gatos podem comer frios?",
+    "nl": "Mogen katten vleeswaren eten?",
+    "pl": "Czy koty mogą jeść wędliny?",
+    "cs": "Mohou kočky jíst nářezy a lahůdkové maso?"
   },
   "url_slug": {
     "en": "deli-meat",
-    "sl": "mesni-narezek"
+    "sl": "mesni-narezek",
+    "hr": "mesni-narezak",
+    "sv": "palagg",
+    "da": "paalaeg",
+    "fi": "leikkele",
+    "nb": "kjottpalegg",
+    "it": "salumi-e-affettati",
+    "de": "aufschnitt",
+    "fr": "charcuterie",
+    "es": "fiambre",
+    "pt": "frios",
+    "nl": "vleeswaren",
+    "pl": "wedliny",
+    "cs": "uzeniny-a-narezy"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Deli and lunch meat is usually high in salt and may contain seasonings, preservatives or nitrates that can upset a cat's stomach. RSPCA Australia advises avoiding cooked manufactured meats for cats. Plain cooked meat without spices is a better choice.",
-    "sl": "Raje ne. Mesni narezek je običajno zelo slan in lahko vsebuje začimbe, konzervanse ali nitrate, ki mački lahko razdražijo želodec. RSPCA Avstralija svetuje, da mačkam ne dajete kuhanih mesnih izdelkov. Boljša izbira je navadno kuhano meso brez začimb."
+    "sl": "Raje ne. Mesni narezek je običajno zelo slan in lahko vsebuje začimbe, konzervanse ali nitrate, ki mački lahko razdražijo želodec. RSPCA Avstralija svetuje, da mačkam ne dajete kuhanih mesnih izdelkov. Boljša izbira je navadno kuhano meso brez začimb.",
+    "hr": "Bolje ne. Narezak je obično bogat soli i može sadržavati začine, konzervanse ili nitrate koji mogu nadražiti mačji želudac. RSPCA Australia savjetuje da se mačkama ne daju termički obrađeni industrijski mesni proizvodi. Bolji je izbor jednostavno termički obrađeno meso bez začina.",
+    "sv": "Det är bäst att låta bli. Charkuterier och smörgåspålägg är oftast salta och kan innehålla kryddor, konserveringsmedel eller nitrat som kan reta kattens mage. RSPCA Australia avråder från tillagat, industriellt framställt kött åt katter. Okryddat, tillagat kött är ett bättre val.",
+    "da": "Helst ikke. Pålæg af kød er som regel meget salt og kan indeholde krydderier, konserveringsmidler eller nitrater, som kan give kattens mave problemer. RSPCA Australia fraråder at give katte forarbejdede, tilberedte kødprodukter. Almindeligt tilberedt kød uden krydderier er et bedre valg.",
+    "fi": "Ei suositella. Leikkeleet ovat yleensä runsassuolaisia, ja niissä voi olla mausteita, säilöntäaineita tai nitraatteja, jotka voivat ärsyttää kissan vatsaa. RSPCA Australia neuvoo välttämään kypsennettyjä teollisia lihavalmisteita kissoille. Maustamaton kypsennetty liha on parempi valinta.",
+    "nb": "Det er best å la være. Kjøttpålegg er vanligvis salt og kan inneholde krydder, konserveringsmidler eller nitrat som kan gi katten urolig mage. RSPCA Australia anbefaler å unngå ferdiglagde, tilberedte kjøttprodukter til katter. Vanlig tilberedt kjøtt uten krydder er et bedre valg.",
+    "it": "Meglio di no. Salumi e affettati sono di solito molto ricchi di sale e possono contenere aromi, conservanti o nitrati che possono irritare lo stomaco del gatto. L’RSPCA Australia consiglia di evitare le carni cotte industriali per i gatti. Meglio scegliere carne cotta semplice, senza spezie.",
+    "de": "Besser nicht. Aufschnitt enthält meist viel Salz und kann Gewürze, Konservierungsstoffe oder Nitrat enthalten, die einer Katze auf den Magen schlagen. RSPCA Australia rät, Katzen keine industriell hergestellten, gegarten Fleischwaren zu geben. Gegartes Fleisch ohne Gewürze ist die bessere Wahl.",
+    "fr": "Mieux vaut éviter. La charcuterie et les viandes en tranches pour sandwichs sont généralement très salées et peuvent contenir des assaisonnements, des conservateurs ou des nitrates qui risquent d’irriter l’estomac d’un chat. La RSPCA Australia conseille d’éviter les viandes cuites industrielles pour les chats. Mieux vaut leur donner de la viande cuite nature, sans épices.",
+    "es": "Es mejor no dárselo. El fiambre suele tener mucha sal y puede llevar condimentos, conservantes o nitratos que pueden sentar mal al estómago de un gato. RSPCA Australia aconseja evitar las carnes cocinadas de fabricación industrial para los gatos. La carne cocinada sin especias es una opción mejor.",
+    "pt": "É melhor não. Os frios e as carnes fatiadas para sandes costumam ter muito sal e podem conter temperos, conservantes ou nitratos que fazem mal ao estômago do gato. A RSPCA Australia aconselha a evitar carnes cozinhadas processadas para gatos. É melhor escolher carne cozinhada simples, sem temperos.",
+    "nl": "Liever niet. Vleeswaren en broodbeleg bevatten meestal veel zout en kunnen kruiden, conserveermiddelen of nitraten bevatten die de maag van een kat van streek kunnen maken. RSPCA Australia raadt af om katten gekookt, industrieel bereid vlees te geven. Gewoon gaar vlees zonder kruiden is een betere keuze.",
+    "pl": "Lepiej nie. Wędliny, także te do kanapek, zwykle są bardzo słone i mogą zawierać przyprawy, konserwanty lub azotany, które mogą rozstroić kotu żołądek. RSPCA Australia radzi nie podawać kotom gotowanych wyrobów mięsnych. Lepszym wyborem jest ugotowane mięso bez przypraw.",
+    "cs": "Raději ne. Nářezy a lahůdkové maso bývají hodně slané a mohou obsahovat koření, konzervanty nebo dusičnany, které kočce mohou podráždit žaludek. RSPCA Australia radí nedávat kočkám tepelně upravené průmyslově zpracované maso. Lepší volbou je obyčejné tepelně upravené maso bez koření."
   },
   "why": {
     "en": "PetMD vets say cats shouldn't eat turkey lunch meat, because it is usually high in sodium and may contain seasonings, preservatives or nitrates. Purina notes that turkey deli meat and other processed turkey meat is usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency.",
-    "sl": "Veterinarji pri PetMD pravijo, da mačke ne bi smele jesti puranjega narezka, ker je običajno zelo slan in lahko vsebuje začimbe, konzervanse ali nitrate. Purina navaja, da so puranji narezek in drugi predelani puranji izdelki običajno polni dodanega natrija in začimb, nekatere dodane začimbe pa so lahko za mačke strupene. RSPCA Avstralija svetuje, naj se mačke izogibajo kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1)."
+    "sl": "Veterinarji pri PetMD pravijo, da mačke ne bi smele jesti puranjega narezka, ker je običajno zelo slan in lahko vsebuje začimbe, konzervanse ali nitrate. Purina navaja, da so puranji narezek in drugi predelani puranji izdelki običajno polni dodanega natrija in začimb, nekatere dodane začimbe pa so lahko za mačke strupene. RSPCA Avstralija svetuje, naj se mačke izogibajo kuhanim mesnim izdelkom, ker lahko vsebujejo sulfitne konzervanse, ki so jih povezali s pomanjkanjem tiamina (vitamina B1).",
+    "hr": "Veterinari iz PetMD-a kažu da mačke ne bi smjele jesti puretinu iz narezaka, jer je obično bogata natrijem i može sadržavati začine, konzervanse ili nitrate. Purina napominje da su puretina iz narezaka i druga prerađena puretina obično prepune dodatnog natrija i začina, a neki dodani začini mogu biti otrovni za mačke. RSPCA Australia savjetuje izbjegavanje termički obrađenih industrijskih mesnih proizvoda, jer mogu sadržavati sulfitne konzervanse, koji se povezuju s nedostatkom tiamina (vitamina B1).",
+    "sv": "Veterinärer på PetMD säger att katter inte bör äta kalkonpålägg, eftersom det oftast innehåller mycket natrium och kan innehålla kryddor, konserveringsmedel eller nitrat. Purina påpekar att kalkonpålägg och annat bearbetat kalkonkött oftast är fullt av extra natrium och kryddor, och att vissa tillsatta kryddor kan vara giftiga för katter. RSPCA Australia avråder från tillagat, industriellt framställt kött eftersom det kan innehålla sulfitkonserveringsmedel, som har kopplats till brist på tiamin (vitamin B1).",
+    "da": "Dyrlæger fra PetMD skriver at katte ikke bør spise kalkunpålæg, fordi det som regel indeholder meget natrium og kan indeholde krydderier, konserveringsmidler eller nitrater. Purina skriver at kalkunpålæg og andet forarbejdet kalkunkød som regel er fyldt med ekstra natrium og krydderier, og at nogle af de tilsatte krydderier kan være giftige for katte. RSPCA Australia fraråder forarbejdede, tilberedte kødprodukter, fordi de kan indeholde sulfitkonserveringsmidler, som man har sat i forbindelse med mangel på tiamin (vitamin B1).",
+    "fi": "PetMD:n eläinlääkärien mukaan kissat eivät saa syödä kalkkunaleikkelettä, koska se on yleensä runsaasti natriumia sisältävää ja voi sisältää mausteita, säilöntäaineita tai nitraatteja. Purina toteaa, että kalkkunaleikkele ja muut jalostetut kalkkunalihavalmisteet sisältävät yleensä paljon ylimääräistä natriumia ja mausteita, ja jotkin lisätyt mausteet voivat olla kissoille myrkyllisiä. RSPCA Australia neuvoo välttämään kypsennettyjä teollisia lihavalmisteita, koska niissä voi olla sulfiittisäilöntäaineita, joiden on yhdistetty tiamiinin (B1-vitamiinin) puutokseen.",
+    "nb": "Dyrleger hos PetMD sier at katter ikke bør spise kalkunpålegg, fordi det vanligvis har høyt natriuminnhold og kan inneholde krydder, konserveringsmidler eller nitrat. Purina påpeker at kalkunpålegg og annet bearbeidet kalkunkjøtt vanligvis er fullt av ekstra natrium og krydder, og at noen av krydderne kan være giftige for katter. RSPCA Australia anbefaler å unngå ferdiglagde, tilberedte kjøttprodukter fordi de kan inneholde sulfitter som konserveringsmiddel, som er satt i sammenheng med mangel på tiamin (vitamin B1).",
+    "it": "I veterinari di PetMD sconsigliano ai gatti il tacchino affettato, perché di solito è ricco di sodio e può contenere aromi, conservanti o nitrati. Purina osserva che il tacchino affettato e le altre carni di tacchino lavorate sono di solito pieni di sodio e spezie aggiunti, e alcuni aromi potrebbero essere tossici per i gatti. L’RSPCA Australia consiglia di evitare le carni cotte industriali perché possono contenere conservanti a base di solfiti, che sono stati associati a una carenza di tiamina (vitamina B1).",
+    "de": "Die Tierärzte von PetMD sagen, dass Katzen keinen Putenaufschnitt fressen sollten, weil er meist viel Natrium enthält und Gewürze, Konservierungsstoffe oder Nitrat enthalten kann. Purina weist darauf hin, dass Putenaufschnitt und anderes verarbeitetes Putenfleisch meist reichlich zusätzliches Natrium und Gewürze enthält, von denen manche für Katzen sogar giftig sein können. RSPCA Australia rät, industriell hergestellte, gegarte Fleischwaren zu meiden, weil sie Sulfite als Konservierungsstoffe enthalten können, die mit Thiaminmangel (Vitamin B1) in Zusammenhang gebracht werden.",
+    "fr": "Les vétérinaires de PetMD indiquent que les chats ne doivent pas manger de dinde en tranches du commerce, car elle est généralement riche en sodium et peut contenir des assaisonnements, des conservateurs ou des nitrates. Purina précise que la charcuterie de dinde et les autres viandes de dinde transformées sont généralement riches en sodium et en épices ajoutés, et que certains assaisonnements peuvent être toxiques pour les chats. La RSPCA Australia conseille d’éviter les viandes cuites industrielles, car elles peuvent contenir des conservateurs à base de sulfites, associés à une carence en thiamine (vitamine B1).",
+    "es": "Los veterinarios de PetMD dicen que los gatos no deben comer fiambre de pavo, porque suele tener mucho sodio y puede llevar condimentos, conservantes o nitratos. Purina señala que el fiambre de pavo y otras carnes procesadas de pavo suelen llevar sodio y especias en exceso, y algunos condimentos añadidos podrían ser tóxicos para los gatos. RSPCA Australia aconseja evitar las carnes cocinadas de fabricación industrial porque pueden llevar conservantes con sulfitos, que se han relacionado con la deficiencia de tiamina (vitamina B1).",
+    "pt": "Os veterinários da PetMD dizem que os gatos não devem comer carne de peru fatiada para sandes, porque costuma ter muito sódio e pode conter temperos, conservantes ou nitratos. A Purina refere que o fiambre de peru e outras carnes de peru processadas costumam ter sódio e temperos a mais, e que alguns temperos adicionados podem ser tóxicos para os gatos. A RSPCA Australia aconselha a evitar carnes cozinhadas processadas porque podem conter conservantes à base de sulfitos, que têm sido associados a carência de tiamina (vitamina B1).",
+    "nl": "Dierenartsen van PetMD zeggen dat katten geen kalkoenbeleg mogen eten, omdat dat meestal veel natrium bevat en kruiden, conserveermiddelen of nitraten kan bevatten. Purina merkt op dat kalkoenbeleg en ander bewerkt kalkoenvlees meestal vol extra natrium en kruiden zit, en dat sommige toegevoegde kruiden giftig kunnen zijn voor katten. RSPCA Australia raadt af om gekookt, industrieel bereid vlees te geven, omdat het conserveermiddelen met sulfiet kan bevatten, die in verband zijn gebracht met een tekort aan thiamine (vitamine B1).",
+    "pl": "Weterynarze z PetMD podają, że koty nie powinny jeść wędlin z indyka do kanapek, bo zwykle zawierają dużo sodu, a także mogą zawierać przyprawy, konserwanty lub azotany. Purina zaznacza, że wędliny z indyka i inne przetworzone mięso z indyka zwykle mają mnóstwo dodatkowego sodu i przypraw, a niektóre dodane przyprawy mogą być toksyczne dla kotów. RSPCA Australia radzi unikać gotowanych wyrobów mięsnych, ponieważ mogą zawierać konserwanty siarczynowe, które łączono z niedoborem tiaminy (witaminy B1).",
+    "cs": "Veterináři z PetMD uvádějí, že kočky by neměly jíst krůtí nářezy, protože obvykle obsahují hodně sodíku a mohou obsahovat koření, konzervanty nebo dusičnany. Purina upozorňuje, že krůtí lahůdkové maso a další zpracované krůtí maso obsahuje obvykle spoustu sodíku a koření navíc a některé přidané koření může být pro kočky jedovaté. RSPCA Australia radí vyhýbat se tepelně upraveným průmyslově zpracovaným masům, protože mohou obsahovat konzervanty na bázi siřičitanů, které se dávají do souvislosti s nedostatkem thiaminu (vitaminu B1)."
   },
   "signs": {
     "en": [
@@ -28,26 +93,117 @@
     ],
     "sl": [
       "Prebavne težave"
+    ],
+    "hr": [
+      "Želučane tegobe"
+    ],
+    "sv": [
+      "Orolig mage"
+    ],
+    "da": [
+      "Mavebesvær"
+    ],
+    "fi": [
+      "Vatsavaivat"
+    ],
+    "nb": [
+      "Urolig mage"
+    ],
+    "it": [
+      "Mal di stomaco"
+    ],
+    "de": [
+      "Magenbeschwerden"
+    ],
+    "fr": [
+      "Troubles digestifs"
+    ],
+    "es": [
+      "Malestar de estómago"
+    ],
+    "pt": [
+      "Indisposição de estômago"
+    ],
+    "nl": [
+      "Maagklachten"
+    ],
+    "pl": [
+      "Rozstrój żołądka"
+    ],
+    "cs": [
+      "Podrážděný žaludek"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate deli meat seasoned with onion or garlic, contact your vet as soon as possible. If she has a stomach upset afterwards, call your vet for advice.",
-    "sl": "Če je mačka pojedla mesni narezek, začinjen s čebulo ali česnom, čim prej pokličite veterinarja. Če ima nato prebavne težave, se za nasvet obrnite na veterinarja."
+    "sl": "Če je mačka pojedla mesni narezek, začinjen s čebulo ali česnom, čim prej pokličite veterinarja. Če ima nato prebavne težave, se za nasvet obrnite na veterinarja.",
+    "hr": "Ako je mačka pojela narezak začinjen lukom ili češnjakom, što prije se obrati veterinaru. Ako nakon toga ima želučane tegobe, nazovi veterinara za savjet.",
+    "sv": "Om din katt har ätit pålägg som är kryddat med lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om katten får orolig mage efteråt, ring din veterinär och be om råd.",
+    "da": "Hvis din kat har spist pålæg med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis katten får mavebesvær bagefter, skal du ringe til din dyrlæge for at få råd.",
+    "fi": "Jos kissasi söi leikkelettä, joka oli maustettu sipulilla tai valkosipulilla, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos kissalla on sen jälkeen vatsavaivoja, kysy neuvoa eläinlääkäriltä.",
+    "nb": "Hvis katten har spist pålegg med løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis katten får urolig mage etterpå, ring dyrlegen for råd.",
+    "it": "Se il tuo gatto ha mangiato salumi aromatizzati con cipolla o aglio, contatta il veterinario il prima possibile. Se poi ha mal di stomaco, chiama il veterinario per un consiglio.",
+    "de": "Hat Ihre Katze Aufschnitt gefressen, der mit Zwiebel oder Knoblauch gewürzt war, wenden Sie sich so schnell wie möglich an Ihren Tierarzt. Hat sie danach Magenbeschwerden, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten.",
+    "fr": "Si votre chat a mangé de la charcuterie assaisonnée à l’oignon ou à l’ail, contactez votre vétérinaire dès que possible. S’il a ensuite des troubles digestifs, appelez votre vétérinaire pour demander conseil.",
+    "es": "Si tu gato ha comido fiambre condimentado con cebolla o ajo, ponte en contacto con tu veterinario lo antes posible. Si después tiene malestar de estómago, llama a tu veterinario para que te aconseje.",
+    "pt": "Se o teu gato comeu frios temperados com cebola ou alho, contacta o teu veterinário o mais depressa possível. Se depois tiver indisposição de estômago, liga ao teu veterinário para pedir conselho.",
+    "nl": "Heeft je kat vleeswaren gegeten met ui of knoflook, neem dan zo snel mogelijk contact op met je dierenarts. Heeft ze daarna maagklachten, bel dan je dierenarts voor advies.",
+    "pl": "Jeśli twój kot zjadł wędlinę przyprawioną cebulą lub czosnkiem, jak najszybciej skontaktuj się z weterynarzem. Jeśli potem ma rozstrój żołądka, zadzwoń do weterynarza po poradę.",
+    "cs": "Pokud kočka snědla lahůdkové maso ochucené cibulí nebo česnekem, co nejdříve se obraťte na veterináře. Pokud má potom podrážděný žaludek, zavolejte veterináři a požádejte o radu."
   },
   "serving": null,
   "child": {
     "en": "Sandwich meat is too salty for cats. Kitty is happiest with her own cat food.",
-    "sl": "Narezek za sendviče je za muce preslan. Muca je najbolj vesela svoje mačje hrane."
+    "sl": "Narezek za sendviče je za muce preslan. Muca je najbolj vesela svoje mačje hrane.",
+    "hr": "Meso za sendviče previše je slano za mačke. Maca je najsretnija sa svojom mačjom hranom.",
+    "sv": "Smörgåspålägg är för salt för katter. Katten mår bäst av sin egen kattmat.",
+    "da": "Pålæg er for salt til katte. Din kat er gladest for sin egen kattemad.",
+    "fi": "Leivän päälle laitettava leikkele on kissalle liian suolaista. Kisu on onnellisin omalla kissanruoallaan.",
+    "nb": "Pålegg er for salt for katter. Pusen blir gladest for sin egen kattemat.",
+    "it": "L’affettato per i panini è troppo salato per i gatti. Il micio sta meglio con il suo cibo per gatti.",
+    "de": "Aufschnitt fürs Brot ist für Katzen zu salzig. Am glücklichsten ist deine Katze mit ihrem eigenen Katzenfutter.",
+    "fr": "La viande pour sandwichs est trop salée pour les chats. Ton chat sera bien plus heureux avec ses propres croquettes ou sa pâtée.",
+    "es": "El fiambre del bocadillo es demasiado salado para los gatos. El gatito es más feliz con su propia comida para gatos.",
+    "pt": "A carne das sandes é demasiado salgada para os gatos. O gatinho fica mais feliz com a sua comida de gato.",
+    "nl": "Broodbeleg is te zout voor katten. Je kat is het blijst met haar eigen kattenvoer.",
+    "pl": "Wędlina do kanapek jest dla kotów zbyt słona. Kotek będzie najszczęśliwszy ze swoją własną karmą.",
+    "cs": "Nářezy na chleba jsou pro kočky moc slané. Kočičku nejvíc potěší její vlastní kočičí krmivo."
   },
   "faq": [
     {
       "q": {
         "en": "What meat can I share instead?",
-        "sl": "Kakšno meso lahko mački dam namesto tega?"
+        "sl": "Kakšno meso lahko mački dam namesto tega?",
+        "hr": "Koje meso mogu podijeliti s mačkom umjesto toga?",
+        "sv": "Vilket kött kan jag dela med mig av i stället?",
+        "da": "Hvilket kød kan jeg give i stedet?",
+        "fi": "Mitä lihaa voin antaa sen sijaan?",
+        "nb": "Hvilket kjøtt kan jeg dele i stedet?",
+        "it": "Quale carne posso dargli al posto degli affettati?",
+        "de": "Welches Fleisch kann ich stattdessen mit ihr teilen?",
+        "fr": "Quelle viande puis-je lui donner à la place ?",
+        "es": "¿Qué carne puedo compartir en su lugar?",
+        "pt": "Que carne posso partilhar em vez disso?",
+        "nl": "Welk vlees kan ik in plaats daarvan delen?",
+        "pl": "Jakie mięso mogę dać kotu zamiast wędliny?",
+        "cs": "Jaké maso mohu kočce dát místo toho?"
       },
       "a": {
         "en": "Cooked, lean meats such as chicken or turkey without any spices or condiments are okay for cats. Avoid processed and seasoned meats.",
-        "sl": "Kuhano pusto meso, na primer piščanec ali puran, brez začimb in dodatkov je za mačke v redu. Predelanemu in začinjenemu mesu se izogibajte."
+        "sl": "Kuhano pusto meso, na primer piščanec ali puran, brez začimb in dodatkov je za mačke v redu. Predelanemu in začinjenemu mesu se izogibajte.",
+        "hr": "Termički obrađeno nemasno meso, poput piletine ili puretine bez ikakvih začina i dodataka, u redu je za mačke. Izbjegavaj prerađeno i začinjeno meso.",
+        "sv": "Tillagat, magert kött som kyckling eller kalkon utan kryddor eller tillbehör går bra för katter. Undvik bearbetat och kryddat kött.",
+        "da": "Tilberedt, magert kød som kylling eller kalkun uden krydderier eller sovs er fint til katte. Undgå forarbejdet og krydret kød.",
+        "fi": "Kypsennetty vähärasvainen liha, kuten kana tai kalkkuna ilman mausteita tai lisukkeita, sopii kissoille. Vältä jalostettuja ja maustettuja lihavalmisteita.",
+        "nb": "Magert, tilberedt kjøtt som kylling eller kalkun, uten krydder eller tilsetninger, er greit for katter. Unngå bearbeidet og krydret kjøtt.",
+        "it": "Le carni magre cotte, come pollo o tacchino, senza spezie né condimenti, vanno bene per i gatti. Evita le carni lavorate e insaporite.",
+        "de": "Gegartes, mageres Fleisch wie Huhn oder Pute ohne Gewürze oder Soßen ist für Katzen in Ordnung. Meiden Sie verarbeitetes und gewürztes Fleisch.",
+        "fr": "Les viandes maigres cuites, comme le poulet ou la dinde, sans épices ni condiments, conviennent aux chats. Évitez les viandes transformées et assaisonnées.",
+        "es": "Las carnes magras cocinadas, como el pollo o el pavo, sin ninguna especia ni condimento, son aptas para los gatos. Evita las carnes procesadas y condimentadas.",
+        "pt": "Carnes magras cozinhadas, como frango ou peru, sem temperos nem molhos, são aceitáveis para os gatos. Evita as carnes processadas e temperadas.",
+        "nl": "Gaar, mager vlees zoals kip of kalkoen, zonder kruiden of sauzen, is prima voor katten. Geef geen bewerkt of gekruid vlees.",
+        "pl": "Koty mogą jeść ugotowane, chude mięso, takie jak kurczak lub indyk, bez żadnych przypraw i sosów. Unikaj mięsa przetworzonego i przyprawionego.",
+        "cs": "Tepelně upravené libové maso, například kuřecí nebo krůtí, bez koření a dochucovadel je pro kočky v pořádku. Zpracovaným a kořeněným masům se vyhněte."
       }
     }
   ],
@@ -131,6 +287,71 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "df1d35e7b94d8dd22cdef18312a0c64467a7a92497f516dab4d8f3e2ca619d6b"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6ce13fe09a54021ea43dac2724b929c1658806f188f5cd3e6efb248a8b1a6b13"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "43499fff2ef4031de85a2a4503e9e3762a5e10a03c3166487c6aa5d13ae590b2"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0b1f02a19a9448ea5ea5f3ff85ee8cd2bfaaf17bdb94c09092d468cd7a0614b2"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4a3438d1d1fbc42594261cea9ff61a574b287c342edc237b126c9a99d5ad8f96"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d342d649a816fb1122cbce958bc5624097a751c926b25d302bf3c7a058bce2a6"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "11e0075854066571b3f8e614b025f158a437f514073e55eb0299ce700685582a"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "40c8800080787a625f2111876c81dd1f9b330faa4e02497cf308464615dfe703"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f91ae9674ada9ac401ac172b4a741ae32a531cf567df36ff8e7ad83938d2d341"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "33ab5155f7adbee0f529f47e0746c2aa1a7c0ebc9592e06200f2842403f3349b"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a16b7a2bb23d09fc9f832ca991fb51886b67ab4214e0d8afd688e18af0576f65"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6c144d886cdc61266e186869506947b846ad2b96455c9ce7734db26b6ec00352"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "db30ce0da26a76b24312f74046de48d95362541fea549555edc96ae71bc6f379"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "c33ec10eabb9a9ccbf45e9c3bc500eb3210736486bdf6daa7ca641587da72895"
     }
   }
 }

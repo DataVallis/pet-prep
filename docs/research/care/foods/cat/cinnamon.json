@@ -4,28 +4,88 @@
   "name": {
     "en": "Cinnamon",
     "sl": "Cimet",
-    "cs": "Skořice"
+    "cs": "Skořice",
+    "hr": "Cimet",
+    "sv": "Kanel",
+    "da": "Kanel",
+    "fi": "Kaneli",
+    "nb": "Kanel",
+    "it": "Cannella",
+    "de": "Zimt",
+    "fr": "Cannelle",
+    "es": "Canela",
+    "pt": "Canela",
+    "nl": "Kaneel",
+    "pl": "Cynamon"
   },
   "question": {
     "en": "Can cats eat cinnamon?",
     "sl": "Ali lahko mačke jedo cimet?",
-    "cs": "Mohou kočky jíst skořici?"
+    "cs": "Mohou kočky jíst skořici?",
+    "hr": "Smiju li mačke jesti cimet?",
+    "sv": "Får katter äta kanel?",
+    "da": "Må katte spise kanel?",
+    "fi": "Saako kissa syödä kanelia?",
+    "nb": "Kan katter spise kanel?",
+    "it": "I gatti possono mangiare la cannella?",
+    "de": "Dürfen Katzen Zimt fressen?",
+    "fr": "Les chats peuvent-ils manger de la cannelle ?",
+    "es": "¿Pueden los gatos comer canela?",
+    "pt": "Os gatos podem comer canela?",
+    "nl": "Mogen katten kaneel eten?",
+    "pl": "Czy koty mogą jeść cynamon?"
   },
   "url_slug": {
     "en": "cinnamon",
     "sl": "cimet",
-    "cs": "skorice"
+    "cs": "skorice",
+    "hr": "cimet",
+    "sv": "kanel",
+    "da": "kanel",
+    "fi": "kaneli",
+    "nb": "kanel",
+    "it": "cannella",
+    "de": "zimt",
+    "fr": "cannelle",
+    "es": "canela",
+    "pt": "canela",
+    "nl": "kaneel",
+    "pl": "cynamon"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. The ASPCA lists cinnamon as non-toxic to cats, but any plant material may cause vomiting and stomach upset, and cats don't need it. Cinnamon oil is different: it is toxic to cats.",
     "sl": "Raje ne. ASPCA cimet navaja kot nestrupen za mačke, vendar lahko vsaka rastlinska snov povzroči bruhanje in želodčne težave, mačke pa ga ne potrebujejo. Cimetovo olje je nekaj drugega: za mačke je strupeno.",
-    "cs": "Raději ne. Podle ASPCA skořice pro kočky toxická není, ale jakákoli rostlinná hmota může způsobit zvracení a podráždění žaludku a kočky ji nepotřebují. Skořicový olej je něco jiného: pro kočky je toxický."
+    "cs": "Raději ne. Podle ASPCA skořice pro kočky toxická není, ale jakákoli rostlinná hmota může způsobit zvracení a podráždění žaludku a kočky ji nepotřebují. Skořicový olej je něco jiného: pro kočky je toxický.",
+    "hr": "Bolje ne. ASPCA navodi cimet kao neotrovan za mačke, ali svaka biljna tvar može izazvati povraćanje i želučane tegobe, a mačkama cimet nije potreban. Cimetovo ulje je druga priča: otrovno je za mačke.",
+    "sv": "Det är bäst att låta bli. ASPCA anger att kanel inte är giftigt för katter, men allt växtmaterial kan orsaka kräkningar och orolig mage, och katter behöver det inte. Kanelolja är annorlunda: den är giftig för katter.",
+    "da": "Helst ikke. ASPCA klassificerer kanel som ugiftig for katte, men alt plantemateriale kan give opkast og mavebesvær, og katte har ikke brug for det. Kanelolie er noget andet: den er giftig for katte.",
+    "fi": "Ei suositella. ASPCA luokittelee kanelin kissoille myrkyttömäksi, mutta mikä tahansa kasviaines voi aiheuttaa oksentelua ja vatsavaivoja, eikä kissa tarvitse sitä. Kanelöljy on eri asia: se on kissoille myrkyllistä.",
+    "nb": "Det er best å la være. ASPCA oppgir at kanel ikke er giftig for katter, men alt plantemateriale kan gi oppkast og urolig mage, og katter har ikke bruk for kanel. Kanelolje er noe annet: den er giftig for katter.",
+    "it": "Meglio di no. L’ASPCA classifica la cannella come non tossica per i gatti, ma qualsiasi materiale vegetale può causare vomito e mal di stomaco, e i gatti non ne hanno bisogno. L’olio di cannella è diverso: è tossico per i gatti.",
+    "de": "Besser nicht. Die ASPCA führt Zimt als für Katzen ungiftig auf, aber jedes pflanzliche Material kann Erbrechen und Magenbeschwerden auslösen, und Katzen brauchen ihn nicht. Zimtöl ist etwas anderes: Es ist für Katzen giftig.",
+    "fr": "Mieux vaut éviter. L’ASPCA classe la cannelle parmi les produits non toxiques pour les chats, mais toute matière végétale peut provoquer des vomissements et des troubles digestifs, et les chats n’en ont pas besoin. L’huile de cannelle, elle, est différente : elle est toxique pour les chats.",
+    "es": "Es mejor no dársela. La ASPCA incluye la canela entre las plantas no tóxicas para los gatos, pero cualquier material vegetal puede provocar vómitos y malestar de estómago, y los gatos no la necesitan. El aceite de canela es distinto: es tóxico para los gatos.",
+    "pt": "É melhor não. A ASPCA classifica a canela como não tóxica para os gatos, mas qualquer material vegetal pode causar vómitos e indisposição de estômago, e os gatos não precisam dela. O óleo de canela é diferente: é tóxico para os gatos.",
+    "nl": "Liever niet. De ASPCA noemt kaneel niet giftig voor katten, maar elk plantaardig materiaal kan braken en maagklachten veroorzaken, en katten hebben het niet nodig. Kaneelolie is anders: die is giftig voor katten.",
+    "pl": "Lepiej nie. ASPCA uznaje cynamon za nietoksyczny dla kotów, ale zjedzenie czegokolwiek roślinnego może wywołać wymioty i rozstrój żołądka, a koty cynamonu nie potrzebują. Olejek cynamonowy to co innego: jest toksyczny dla kotów."
   },
   "why": {
     "en": "The ASPCA lists cinnamon (Cinnamomum zeylanicum) as non-toxic to cats, and notes that eating any plant material may cause vomiting and gastrointestinal upset in cats. PDSA says cats don't need anything other than a complete diet. Cats Protection lists cinnamon oil among the essential oils that are toxic to cats. Because cinnamon is not a cat food and its oil is harmful, we don't recommend it.",
     "sl": "ASPCA cimet (Cinnamomum zeylanicum) navaja kot nestrupen za mačke in opozarja, da lahko uživanje katere koli rastlinske snovi pri mačkah povzroči bruhanje in prebavne težave. PDSA navaja, da mačke poleg popolne hrane ne potrebujejo ničesar drugega. Cats Protection cimetovo olje navaja med eteričnimi olji, ki so za mačke strupena. Ker cimet ni mačja hrana, njegovo olje pa škodi, ga ne priporočamo.",
-    "cs": "Podle ASPCA není skořice (Cinnamomum zeylanicum) pro kočky toxická, ale pozření jakékoli rostlinné hmoty může u koček způsobit zvracení a podráždění trávicího traktu. PDSA uvádí, že kočky nepotřebují nic jiného než kompletní stravu. Cats Protection řadí skořicový olej mezi silice, které jsou pro kočky toxické. Protože skořice není kočičí potrava a její olej je škodlivý, nedoporučujeme ji."
+    "cs": "Podle ASPCA není skořice (Cinnamomum zeylanicum) pro kočky toxická, ale pozření jakékoli rostlinné hmoty může u koček způsobit zvracení a podráždění trávicího traktu. PDSA uvádí, že kočky nepotřebují nic jiného než kompletní stravu. Cats Protection řadí skořicový olej mezi silice, které jsou pro kočky toxické. Protože skořice není kočičí potrava a její olej je škodlivý, nedoporučujeme ji.",
+    "hr": "ASPCA navodi cimet (Cinnamomum zeylanicum) kao neotrovan za mačke i napominje da jedenje bilo koje biljne tvari kod mačaka može izazvati povraćanje i probavne tegobe. PDSA kaže da mačkama ne treba ništa osim potpune hrane. Cats Protection ubraja cimetovo ulje među eterična ulja koja su otrovna za mačke. Budući da cimet nije mačja hrana, a njegovo je ulje štetno, ne preporučujemo ga.",
+    "sv": "ASPCA anger att kanel (Cinnamomum zeylanicum) inte är giftigt för katter och påpekar att allt växtmaterial kan orsaka kräkningar och magtarmbesvär hos katter. PDSA säger att katter inte behöver något annat än en komplett kost. Cats Protection listar kanelolja bland de eteriska oljor som är giftiga för katter. Eftersom kanel inte är kattmat och oljan är skadlig rekommenderar vi det inte.",
+    "da": "ASPCA klassificerer kanel (Cinnamomum zeylanicum) som ugiftig for katte og skriver at alt plantemateriale kan give opkast og mave-tarm-besvær hos katte. PDSA skriver at katte ikke har brug for andet end en komplet kost. Cats Protection nævner kanelolie blandt de æteriske olier, der er giftige for katte. Fordi kanel ikke er kattemad, og olien er skadelig, anbefaler vi det ikke.",
+    "fi": "ASPCA luokittelee kanelin (Cinnamomum zeylanicum) kissoille myrkyttömäksi ja toteaa, että minkä tahansa kasviaineksen syöminen voi aiheuttaa kissoille oksentelua ja vatsavaivoja. PDSA:n mukaan kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion. Cats Protection mainitsee kanelöljyn kissoille myrkyllisten eteeristen öljyjen joukossa. Koska kaneli ei ole kissanruokaa ja sen öljy on haitallista, emme suosittele sitä.",
+    "nb": "ASPCA oppgir at kanel (Cinnamomum zeylanicum) ikke er giftig for katter, og påpeker at alt plantemateriale kan gi oppkast og urolig mage hos katter. PDSA sier at katter ikke trenger noe annet enn et fullverdig kosthold. Cats Protection nevner kanelolje blant de eteriske oljene som er giftige for katter. Fordi kanel ikke er kattemat og oljen er skadelig, anbefaler vi det ikke.",
+    "it": "L’ASPCA classifica la cannella (Cinnamomum zeylanicum) come non tossica per i gatti e precisa che mangiare qualsiasi materiale vegetale può causare vomito e disturbi gastrointestinali. PDSA ricorda che ai gatti non serve altro che un’alimentazione completa. Cats Protection inserisce l’olio di cannella tra gli oli essenziali tossici per i gatti. Poiché la cannella non è un alimento per gatti e il suo olio è dannoso, non la consigliamo.",
+    "de": "Die ASPCA führt Zimt (Cinnamomum zeylanicum) als für Katzen ungiftig auf und weist darauf hin, dass das Fressen von Pflanzenmaterial bei Katzen Erbrechen und Magen-Darm-Beschwerden auslösen kann. PDSA sagt, dass Katzen außer einer vollwertigen Ernährung nichts brauchen. Cats Protection zählt Zimtöl zu den ätherischen Ölen, die für Katzen giftig sind. Weil Zimt kein Katzenfutter ist und sein Öl schädlich ist, empfehlen wir ihn nicht.",
+    "fr": "L’ASPCA classe la cannelle (Cinnamomum zeylanicum) parmi les produits non toxiques pour les chats, et précise que manger n’importe quelle matière végétale peut provoquer des vomissements et des troubles gastro-intestinaux chez le chat. La PDSA rappelle que les chats n’ont besoin de rien d’autre qu’une alimentation complète. Cats Protection range l’huile de cannelle parmi les huiles essentielles toxiques pour les chats. Comme la cannelle n’est pas un aliment pour chats et que son huile est nocive, nous ne la recommandons pas.",
+    "es": "La ASPCA incluye la canela (Cinnamomum zeylanicum) entre las plantas no tóxicas para los gatos, y señala que comer cualquier material vegetal puede provocar vómitos y molestias gastrointestinales en los gatos. PDSA dice que los gatos no necesitan nada más que una alimentación completa. Cats Protection incluye el aceite de canela entre los aceites esenciales que son tóxicos para los gatos. Como la canela no es comida para gatos y su aceite es dañino, no la recomendamos.",
+    "pt": "A ASPCA classifica a canela (Cinnamomum zeylanicum) como não tóxica para os gatos e refere que comer qualquer material vegetal pode causar vómitos e perturbações gastrointestinais nos gatos. A PDSA diz que os gatos não precisam de mais nada além de uma alimentação completa. A Cats Protection inclui o óleo de canela entre os óleos essenciais que são tóxicos para os gatos. Como a canela não é comida para gatos e o seu óleo faz mal, não a recomendamos.",
+    "nl": "De ASPCA noemt kaneel (Cinnamomum zeylanicum) niet giftig voor katten en merkt op dat het eten van plantaardig materiaal bij katten braken en maag- en darmklachten kan veroorzaken. PDSA zegt dat katten niets anders nodig hebben dan een volwaardige voeding. Cats Protection rekent kaneelolie tot de etherische oliën die giftig zijn voor katten. Omdat kaneel geen kattenvoer is en de olie schadelijk is, raden we het af.",
+    "pl": "ASPCA uznaje cynamon (Cinnamomum zeylanicum) za nietoksyczny dla kotów i zaznacza, że zjedzenie czegokolwiek roślinnego może u kotów wywołać wymioty i rozstrój żołądka i jelit. Według PDSA koty nie potrzebują niczego poza pełnowartościową dietą. Cats Protection wymienia olejek cynamonowy wśród olejków eterycznych toksycznych dla kotów. Ponieważ cynamon nie jest pokarmem dla kotów, a jego olejek szkodzi, nie zalecamy go podawać."
   },
   "signs": {
     "en": [
@@ -39,30 +99,126 @@
     "cs": [
       "Zvracení",
       "Podrážděný žaludek"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Želučane tegobe"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Orolig mage"
+    ],
+    "da": [
+      "Opkast",
+      "Mavebesvær"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Vatsavaivat"
+    ],
+    "nb": [
+      "Oppkast",
+      "Urolig mage"
+    ],
+    "it": [
+      "Vomito",
+      "Mal di stomaco"
+    ],
+    "de": [
+      "Erbrechen",
+      "Magenbeschwerden"
+    ],
+    "fr": [
+      "Vomissements",
+      "Troubles digestifs"
+    ],
+    "es": [
+      "Vómitos",
+      "Malestar de estómago"
+    ],
+    "pt": [
+      "Vómitos",
+      "Indisposição de estômago"
+    ],
+    "nl": [
+      "Braken",
+      "Maagklachten"
+    ],
+    "pl": [
+      "Wymioty",
+      "Rozstrój żołądka"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate a little cinnamon, watch for vomiting or an upset stomach. If your cat licked or ate cinnamon oil, contact your vet straight away; don't wait for signs to appear.",
     "sl": "Če je mačka pojedla malo cimeta, bodite pozorni na bruhanje ali želodčne težave. Če je mačka oblizala ali zaužila cimetovo olje, takoj pokličite veterinarja; ne čakajte, da se pokažejo znaki.",
-    "cs": "Pokud kočka snědla trochu skořice, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud kočka olízla nebo snědla skořicový olej, okamžitě se obraťte na veterináře a nečekejte, až se objeví příznaky."
+    "cs": "Pokud kočka snědla trochu skořice, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud kočka olízla nebo snědla skořicový olej, okamžitě se obraťte na veterináře a nečekejte, až se objeví příznaky.",
+    "hr": "Ako je mačka pojela malo cimeta, pazi na povraćanje ili želučane tegobe. Ako je polizala ili pojela cimetovo ulje, odmah se obrati veterinaru; ne čekaj da se pojave znakovi.",
+    "sv": "Om din katt har ätit lite kanel: håll ett öga på om hon kräks eller får orolig mage. Om din katt har slickat i sig eller ätit kanelolja ska du kontakta din veterinär direkt, utan att vänta på att tecken ska dyka upp.",
+    "da": "Hvis din kat har spist lidt kanel, skal du holde øje med opkast eller mavebesvær. Hvis din kat har slikket på eller spist kanelolie, skal du kontakte din dyrlæge med det samme; vent ikke på tegn.",
+    "fi": "Jos kissasi söi vähän kanelia, seuraa, tuleeko oksentelua tai vatsavaivoja. Jos kissasi nuoli tai söi kanelöljyä, ota heti yhteyttä eläinlääkäriin äläkä odota oireita.",
+    "nb": "Hvis katten har spist litt kanel, følg med på oppkast eller urolig mage. Hvis katten har slikket i seg eller spist kanelolje, kontakt dyrlegen med en gang. Ikke vent på symptomer.",
+    "it": "Se il tuo gatto ha mangiato un po’ di cannella, controlla se compaiono vomito o mal di stomaco. Se ha leccato o mangiato olio di cannella, contatta subito il veterinario; non aspettare che compaiano i sintomi.",
+    "de": "Hat Ihre Katze ein wenig Zimt gefressen, achten Sie auf Erbrechen oder Magenbeschwerden. Hat Ihre Katze Zimtöl abgeleckt oder gefressen, wenden Sie sich sofort an Ihren Tierarzt und warten Sie nicht, bis Anzeichen auftreten.",
+    "fr": "Si votre chat a mangé un peu de cannelle, surveillez l’apparition de vomissements ou de troubles digestifs. S’il a léché ou mangé de l’huile de cannelle, contactez immédiatement votre vétérinaire ; n’attendez pas l’apparition de signes.",
+    "es": "Si tu gato ha comido un poco de canela, observa si tiene vómitos o malestar de estómago. Si tu gato ha lamido o comido aceite de canela, ponte en contacto con tu veterinario enseguida; no esperes a que aparezcan síntomas.",
+    "pt": "Se o teu gato comeu um pouco de canela, vigia se aparecem vómitos ou indisposição de estômago. Se o teu gato lambeu ou comeu óleo de canela, contacta imediatamente o teu veterinário; não esperes que surjam sinais.",
+    "nl": "Heeft je kat een beetje kaneel gegeten, let dan op braken of maagklachten. Heeft je kat kaneelolie gelikt of gegeten, neem dan meteen contact op met je dierenarts; wacht niet af of er verschijnselen optreden.",
+    "pl": "Jeśli twój kot zjadł odrobinę cynamonu, obserwuj, czy nie pojawią się wymioty lub rozstrój żołądka. Jeśli kot zlizał albo połknął olejek cynamonowy, od razu skontaktuj się z weterynarzem; nie czekaj, aż pojawią się objawy."
   },
   "serving": null,
   "child": {
     "en": "Cinnamon is a spice for people's cooking. Cats don't need it, so keep spices and scented oils away from kitty.",
     "sl": "Cimet je začimba za kuhanje za ljudi. Muce ga ne potrebujejo, zato naj bodo začimbe in dišeča olja daleč od muce.",
-    "cs": "Skořice je koření do jídel pro lidi. Kočky ji nepotřebují, takže koření i vonné oleje drž od kočičky dál."
+    "cs": "Skořice je koření do jídel pro lidi. Kočky ji nepotřebují, takže koření i vonné oleje drž od kočičky dál.",
+    "hr": "Cimet je začin za kuhanje. Mačkama nije potreban, zato začine i mirisna ulja drži daleko od mace.",
+    "sv": "Kanel är en krydda för matlagning. Katter behöver det inte, så håll kryddor och doftoljor borta från katten.",
+    "da": "Kanel er et krydderi, man bruger i madlavning til mennesker. Katte har ikke brug for det, så hold krydderier og duftolier væk fra din kat.",
+    "fi": "Kaneli on mauste ihmisten ruoanlaittoon. Kissat eivät tarvitse sitä, joten pidä mausteet ja tuoksuöljyt poissa kisun luota.",
+    "nb": "Kanel er et krydder til matlaging for mennesker. Katter trenger det ikke, så hold krydder og duftoljer unna pusen.",
+    "it": "La cannella è una spezia che le persone usano in cucina. I gatti non ne hanno bisogno, quindi tieni spezie e oli profumati lontani dal micio.",
+    "de": "Zimt ist ein Gewürz, das Menschen zum Kochen benutzen. Katzen brauchen ihn nicht, also halte Gewürze und Duftöle von deiner Katze fern.",
+    "fr": "La cannelle est une épice pour la cuisine des humains. Les chats n’en ont pas besoin : garde les épices et les huiles parfumées loin de ton chat.",
+    "es": "La canela es una especia para cocinar para las personas. Los gatos no la necesitan, así que mantén las especias y los aceites con olor lejos del gatito.",
+    "pt": "A canela é um tempero para a cozinha das pessoas. Os gatos não precisam dela, por isso mantém os temperos e os óleos perfumados longe do gatinho.",
+    "nl": "Kaneel is een kruid dat mensen in de keuken gebruiken. Katten hebben het niet nodig, dus houd kruiden en geurende oliën uit de buurt van je kat.",
+    "pl": "Cynamon to przyprawa do gotowania dla ludzi. Koty go nie potrzebują, więc trzymaj przyprawy i pachnące olejki z dala od kotka."
   },
   "faq": [
     {
       "q": {
         "en": "Is cinnamon oil safe for cats?",
         "sl": "Ali je cimetovo olje varno za mačke?",
-        "cs": "Je skořicový olej pro kočky bezpečný?"
+        "cs": "Je skořicový olej pro kočky bezpečný?",
+        "hr": "Je li cimetovo ulje sigurno za mačke?",
+        "sv": "Är kanelolja säker för katter?",
+        "da": "Er kanelolie ufarlig for katte?",
+        "fi": "Onko kanelöljy turvallista kissoille?",
+        "nb": "Er kanelolje trygg for katter?",
+        "it": "L’olio di cannella è sicuro per i gatti?",
+        "de": "Ist Zimtöl für Katzen unbedenklich?",
+        "fr": "L’huile de cannelle est-elle sans danger pour les chats ?",
+        "es": "¿Es seguro el aceite de canela para los gatos?",
+        "pt": "O óleo de canela é seguro para gatos?",
+        "nl": "Is kaneelolie veilig voor katten?",
+        "pl": "Czy olejek cynamonowy jest bezpieczny dla kotów?"
       },
       "a": {
         "en": "No. Cats Protection says most essential oils are toxic to cats and names cinnamon oil among them. Keep cinnamon oil and other essential oils away from your cat.",
         "sl": "Ne. Cats Protection navaja, da je večina eteričnih olj za mačke strupena, in med njimi navaja tudi cimetovo olje. Cimetovo olje in druga eterična olja hranite zunaj mačjega dosega.",
-        "cs": "Ne. Cats Protection uvádí, že většina silic je pro kočky toxická, a skořicový olej mezi nimi jmenuje. Skořicový olej i další silice uchovávejte mimo dosah kočky."
+        "cs": "Ne. Cats Protection uvádí, že většina silic je pro kočky toxická, a skořicový olej mezi nimi jmenuje. Skořicový olej i další silice uchovávejte mimo dosah kočky.",
+        "hr": "Ne. Cats Protection navodi da je većina eteričnih ulja otrovna za mačke i među njima spominje cimetovo ulje. Cimetovo ulje i druga eterična ulja drži podalje od mačke.",
+        "sv": "Nej. Cats Protection säger att de flesta eteriska oljor är giftiga för katter och nämner kanelolja bland dem. Håll kanelolja och andra eteriska oljor borta från din katt.",
+        "da": "Nej. Cats Protection skriver at de fleste æteriske olier er giftige for katte, og nævner kanelolie blandt dem. Hold kanelolie og andre æteriske olier væk fra din kat.",
+        "fi": "Ei. Cats Protectionin mukaan useimmat eteeriset öljyt ovat kissoille myrkyllisiä, ja se mainitsee kanelöljyn niiden joukossa. Pidä kanelöljy ja muut eteeriset öljyt poissa kissan ulottuvilta.",
+        "nb": "Nei. Cats Protection sier at de fleste eteriske oljer er giftige for katter, og nevner kanelolje blant dem. Hold kanelolje og andre eteriske oljer unna katten.",
+        "it": "No. Cats Protection afferma che la maggior parte degli oli essenziali è tossica per i gatti e cita tra questi l’olio di cannella. Tieni l’olio di cannella e gli altri oli essenziali lontani dal tuo gatto.",
+        "de": "Nein. Cats Protection sagt, dass die meisten ätherischen Öle für Katzen giftig sind, und nennt Zimtöl ausdrücklich. Halten Sie Zimtöl und andere ätherische Öle von Ihrer Katze fern.",
+        "fr": "Non. Cats Protection indique que la plupart des huiles essentielles sont toxiques pour les chats et cite l’huile de cannelle parmi elles. Gardez l’huile de cannelle et les autres huiles essentielles hors de portée de votre chat.",
+        "es": "No. Cats Protection dice que la mayoría de los aceites esenciales son tóxicos para los gatos y cita entre ellos el aceite de canela. Mantén el aceite de canela y otros aceites esenciales lejos de tu gato.",
+        "pt": "Não. A Cats Protection diz que a maioria dos óleos essenciais é tóxica para os gatos e inclui o óleo de canela entre eles. Mantém o óleo de canela e outros óleos essenciais longe do teu gato.",
+        "nl": "Nee. Cats Protection zegt dat de meeste etherische oliën giftig zijn voor katten en noemt kaneelolie daar uitdrukkelijk bij. Houd kaneelolie en andere etherische oliën uit de buurt van je kat.",
+        "pl": "Nie. Cats Protection podaje, że większość olejków eterycznych jest toksyczna dla kotów, i wymienia wśród nich olejek cynamonowy. Trzymaj olejek cynamonowy i inne olejki eteryczne z dala od kota."
       }
     }
   ],
@@ -122,6 +278,66 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "62ca1e2a0e1063345d05375436072e398bc693535f5cb22f774fddcc36076427"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3315bc3508d2356b09422e92e6f7ac07a52e25c7a61a3397fcafeb736e5cc37e"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2691759ac7e5ddbab5e3636de1fa1d2434abaeb39a4ab67b7e9d7aca554d5458"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bfd924229fa29d716701538767445c195926dd0b6cd52193ca9c79d999e82fe5"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "093e0a6b1b9f8f278b88383a3dcee5ae4a843dedefc3b850aecc6eb2792d7961"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "24e64807eec30eb04b5bd96f433262a04eb3bae33da8face5bdec7ac45f4c3db"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "050554ec7b109c3b1f874e884d0601f8ad357b2b1031cdebf5ec5206caf3fe67"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "55f335ffeeefbf2bcb5d75742bca8356ccd3c5a0222df1275afc3f781eec8eec"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e14be5ad12a6f9cdb7a116dbef3cd2760ffde1c6c05bbc195e6397b512d50253"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ffa06d6a74a3da62da5dd30cb3a52b92b2cd07cfc87140e6559ac7dce8d63c9b"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9854a2b2a4c136f0912e4b7cae75b4697be42e68a16f03a2fd431e7c80ec574a"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1a0d1467b4de76bc41aad5878d5113274b2efe33270325928917f3c561e4bfa7"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "b109f3981ad2d0edcad31c026f0ccde576702b958805497957efce3497650ac3"
     }
   }
 }

@@ -1,0 +1,289 @@
+{
+  "slug": "lentils",
+  "species": "dog",
+  "name": {
+    "en": "Lentils",
+    "sl": "Leča",
+    "de": "Linsen",
+    "es": "Lentejas",
+    "it": "Lenticchie",
+    "pt": "Lentilhas",
+    "nl": "Linzen",
+    "pl": "Soczewica",
+    "cs": "Čočka",
+    "hr": "Leća",
+    "sv": "Linser",
+    "da": "Linser",
+    "fi": "Linssit",
+    "fr": "Lentilles",
+    "nb": "Linser"
+  },
+  "question": {
+    "en": "Can dogs eat lentils?",
+    "sl": "Ali lahko psi jedo lečo?",
+    "de": "Dürfen Hunde Linsen fressen?",
+    "es": "¿Pueden los perros comer lentejas?",
+    "it": "I cani possono mangiare le lenticchie?",
+    "pt": "Os cães podem comer lentilhas?",
+    "nl": "Mogen honden linzen eten?",
+    "pl": "Czy psy mogą jeść soczewicę?",
+    "cs": "Mohou psi jíst čočku?",
+    "hr": "Smiju li psi jesti leću?",
+    "sv": "Får hundar äta linser?",
+    "da": "Må hunde spise linser?",
+    "fi": "Saako koira syödä linssejä?",
+    "fr": "Les chiens peuvent-ils manger des lentilles ?",
+    "nb": "Kan hunder spise linser?"
+  },
+  "url_slug": {
+    "en": "lentils",
+    "sl": "leca",
+    "de": "linsen",
+    "es": "lentejas",
+    "it": "lenticchie",
+    "pt": "lentilhas",
+    "nl": "linzen",
+    "pl": "soczewica",
+    "cs": "cocka",
+    "hr": "leca",
+    "sv": "linser",
+    "da": "linser",
+    "fi": "linssit",
+    "fr": "lentilles",
+    "nb": "linser"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, if they are cooked. Lentils are a pulse, like beans, and dogs can have legumes that have been soaked first and then cooked. Some dogs find legumes hard to digest, so introduce cooked lentils slowly.",
+    "sl": "Da, če je kuhana. Leča je stročnica, tako kot fižol, psi pa lahko jedo stročnice, ki so bile najprej namočene in nato kuhane. Nekateri psi stročnice težko prebavijo, zato kuhano lečo uvajajte počasi.",
+    "de": "Ja, wenn sie gekocht sind. Linsen sind wie Bohnen Hülsenfrüchte, und Hunde dürfen Hülsenfrüchte fressen, wenn diese zuerst eingeweicht und dann gekocht wurden. Manche Hunde tun sich schwer damit, Hülsenfrüchte zu verdauen. Führen Sie gekochte Linsen deshalb langsam ein.",
+    "es": "Sí, si están cocinadas. Las lentejas son una legumbre, como las alubias, y los perros pueden comer legumbres que se hayan puesto en remojo y luego se hayan cocinado. A algunos perros les cuesta digerir las legumbres, así que introduce las lentejas cocidas poco a poco.",
+    "it": "Sì, se sono cotte. Le lenticchie sono un legume, come i fagioli, e i cani possono mangiare legumi messi prima in ammollo e poi cotti. Alcuni cani digeriscono con difficoltà i legumi, quindi introduci le lenticchie cotte gradualmente.",
+    "pt": "Sim, se estiverem cozidas. As lentilhas são uma leguminosa, tal como o feijão, e os cães podem comer leguminosas que tenham sido primeiro demolhadas e depois cozidas. Alguns cães têm dificuldade em digerir leguminosas, por isso introduz as lentilhas cozidas aos poucos.",
+    "nl": "Ja, als ze gaar zijn. Linzen zijn een peulvrucht, net als bonen, en honden mogen peulvruchten eten die eerst zijn geweekt en daarna gaar gemaakt. Sommige honden kunnen peulvruchten moeilijk verteren, dus laat je hond langzaam aan wennen aan gare linzen.",
+    "pl": "Tak, jeśli jest ugotowana. Soczewica to roślina strączkowa, podobnie jak fasola, a psom można dawać rośliny strączkowe, jeśli najpierw je namoczono, a potem ugotowano. Niektóre psy mają kłopoty z trawieniem roślin strączkowych, więc ugotowaną soczewicę wprowadzaj stopniowo.",
+    "cs": "Ano, pokud je uvařená. Čočka je luštěnina stejně jako fazole a psi mohou jíst luštěniny, které byly nejdřív namočené a potom uvařené. Někteří psi luštěniny špatně tráví, proto uvařenou čočku zařazujte pomalu.",
+    "hr": "Da, ako je kuhana. Leća je mahunarka, kao i grah, a psi smiju jesti mahunarke koje su prvo namočene, a zatim kuhane. Neki psi teško probavljaju mahunarke, zato kuhanu leću uvodi postupno.",
+    "sv": "Ja, om de är kokta. Linser är baljväxter, precis som bönor, och hundar kan äta baljväxter som först har blötlagts och sedan kokats. Vissa hundar har svårt att smälta baljväxter, så vänj hunden vid kokta linser långsamt.",
+    "da": "Ja, hvis de er tilberedt. Linser er bælgfrugter, ligesom bønner, og hunde kan få bælgfrugter, der først er udblødt og derefter tilberedt. Nogle hunde har svært ved at fordøje bælgfrugter, så væn din hund langsomt til tilberedte linser.",
+    "fi": "Saa, jos ne on keitetty. Linssit ovat palkokasveja, kuten pavutkin, ja koira voi syödä palkokasveja, kun ne on ensin liotettu ja sitten keitetty. Osalle koirista palkokasvit ovat vaikeasti sulavia, joten aloita keitetyillä linsseillä vähitellen.",
+    "fr": "Oui, à condition qu’elles soient cuites. Comme les haricots, les lentilles sont des légumineuses : votre chien peut en manger si elles ont d’abord été trempées, puis bien cuites. Certains chiens digèrent mal les légumineuses ; introduisez donc les lentilles cuites progressivement.",
+    "nb": "Ja, hvis de er godt kokte. Linser er belgvekster, som bønner, og hunder kan få belgvekster som først er bløtlagt og deretter kokt. Noen hunder har vanskelig for å fordøye belgvekster, så gi kokte linser gradvis."
+  },
+  "why": {
+    "en": "Legumes such as lentils are a good source of fibre and protein for dogs. However, some dogs have trouble digesting them, which is why they should be cooked well and added to the diet slowly.",
+    "sl": "Stročnice, kot je leča, so za pse dober vir vlaknin in beljakovin. Nekateri psi pa jih težko prebavijo, zato jih je treba dobro skuhati in jih v prehrano uvajati počasi.",
+    "de": "Hülsenfrüchte wie Linsen liefern Hunden Ballaststoffe und Eiweiß. Manche Hunde tun sich jedoch schwer damit, sie zu verdauen, deshalb sollten sie gut gekocht und nur nach und nach in den Speiseplan aufgenommen werden.",
+    "es": "Las legumbres como las lentejas son una buena fuente de fibra y proteínas para los perros. Sin embargo, a algunos perros les cuesta digerirlas, por eso hay que cocinarlas bien e incorporarlas a la dieta poco a poco.",
+    "it": "I legumi come le lenticchie sono una buona fonte di fibre e proteine per i cani. Tuttavia alcuni cani hanno difficoltà a digerirli, ed è per questo che vanno cotti bene e inseriti nella dieta gradualmente.",
+    "pt": "As leguminosas, como as lentilhas, são uma boa fonte de fibra e proteína para os cães. No entanto, alguns cães têm dificuldade em digeri-las, por isso devem estar bem cozidas e ser introduzidas aos poucos na alimentação.",
+    "nl": "Peulvruchten zoals linzen zijn een goede bron van vezels en eiwit voor honden. Sommige honden kunnen ze echter moeilijk verteren. Maak ze daarom goed gaar en laat je hond er langzaam aan wennen.",
+    "pl": "Rośliny strączkowe, takie jak soczewica, są dobrym źródłem błonnika i białka dla psów. Jednak niektóre psy mają problemy z ich trawieniem, dlatego należy je dobrze ugotować i wprowadzać do diety stopniowo.",
+    "cs": "Luštěniny, například čočka, jsou pro psy dobrým zdrojem vlákniny a bílkovin. Někteří psi je ale špatně tráví, proto by měly být dobře uvařené a do stravy zařazované pomalu.",
+    "hr": "Mahunarke poput leće dobar su izvor vlakana i bjelančevina za pse. Međutim, neki ih psi teško probavljaju, zbog čega ih treba dobro skuhati i u prehranu uvoditi postupno.",
+    "sv": "Baljväxter som linser är en bra källa till fibrer och protein för hundar. Vissa hundar har dock svårt att smälta dem, så linserna ska kokas ordentligt och införas gradvis i kosten.",
+    "da": "Bælgfrugter som linser er en god kilde til fibre og protein for hunde. Nogle hunde har dog svært ved at fordøje dem, og derfor skal de tilberedes grundigt og indføres langsomt i kosten.",
+    "fi": "Palkokasvit, kuten linssit, ovat hyvä kuidun ja proteiinin lähde koirille. Osan koirien on kuitenkin vaikea sulattaa niitä, joten ne on keitettävä hyvin ja lisättävä ruokavalioon vähitellen.",
+    "fr": "Les lentilles, comme les autres légumineuses, apportent aux chiens des fibres et des protéines. Certains les digèrent toutefois difficilement : il faut donc bien les cuire et les introduire peu à peu dans leur alimentation.",
+    "nb": "Belgvekster som linser er en god kilde til fiber og protein for hunder. Noen hunder har imidlertid vanskelig for å fordøye dem, og derfor bør de kokes godt og gis gradvis."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a little well-cooked lentil and introduce it slowly, because some dogs have trouble digesting legumes.",
+    "sl": "Začnite z malo dobro kuhane leče in jo uvajajte počasi, ker nekateri psi stročnice težko prebavijo.",
+    "de": "Beginnen Sie mit wenigen gut gekochten Linsen und steigern Sie die Menge langsam, denn manche Hunde tun sich schwer damit, Hülsenfrüchte zu verdauen.",
+    "es": "Empieza con un poco de lenteja bien cocida e introdúcela poco a poco, porque a algunos perros les cuesta digerir las legumbres.",
+    "it": "Comincia con un po’ di lenticchie ben cotte e introducile gradualmente, perché alcuni cani digeriscono con difficoltà i legumi.",
+    "pt": "Começa com um pouco de lentilhas bem cozidas e introduz aos poucos, porque alguns cães têm dificuldade em digerir leguminosas.",
+    "nl": "Begin met een beetje goed gare linzen en laat je hond er langzaam aan wennen, want sommige honden kunnen peulvruchten moeilijk verteren.",
+    "pl": "Zacznij od odrobiny dobrze ugotowanej soczewicy i wprowadzaj ją stopniowo, bo niektóre psy mają problemy z trawieniem roślin strączkowych.",
+    "cs": "Začněte trochou dobře uvařené čočky a zařazujte ji pomalu, protože někteří psi mají s trávením luštěnin potíže.",
+    "hr": "Počni s malo dobro kuhane leće i uvodi je postupno jer neki psi teško probavljaju mahunarke.",
+    "sv": "Börja med lite välkokta linser och vänj hunden vid dem långsamt, eftersom vissa hundar har svårt att smälta baljväxter.",
+    "da": "Start med lidt grundigt tilberedte linser, og indfør dem langsomt, for nogle hunde har svært ved at fordøje bælgfrugter.",
+    "fi": "Aloita pienellä määrällä hyvin keitettyjä linssejä ja lisää niitä vähitellen, sillä osan koirien on vaikea sulattaa palkokasveja.",
+    "fr": "Commencez par un peu de lentilles bien cuites et introduisez-les progressivement, car certains chiens digèrent mal les légumineuses.",
+    "nb": "Begynn med litt godt kokte linser og øk gradvis, fordi noen hunder har vanskelig for å fordøye belgvekster."
+  },
+  "serving": {
+    "en": "Well cooked (dried lentils soaked first, then cooked), introduced slowly.",
+    "sl": "Dobro kuhana (suha leča najprej namočena, nato kuhana), uvajana počasi.",
+    "de": "Gut gekocht (getrocknete Linsen erst eingeweicht, dann gekocht), langsam eingeführt.",
+    "es": "Bien cocidas (las lentejas secas, primero en remojo y luego cocinadas), introducidas poco a poco.",
+    "it": "Ben cotte (le lenticchie secche prima messe in ammollo, poi cotte), introdotte gradualmente.",
+    "pt": "Bem cozidas (as lentilhas secas demolhadas primeiro e depois cozidas), introduzidas aos poucos.",
+    "nl": "Goed gaar (gedroogde linzen eerst geweekt en daarna gekookt), langzaam opgebouwd.",
+    "pl": "Dobrze ugotowana (suszoną soczewicę najpierw namocz, potem ugotuj), wprowadzana stopniowo.",
+    "cs": "Dobře uvařená (sušenou čočku nejdřív namočit, pak uvařit), do jídelníčku zařazovat pomalu.",
+    "hr": "Dobro kuhana (suha leća prvo se namoči, a zatim kuha), uvedena postupno.",
+    "sv": "Välkokta; torkade linser blötläggs först och kokas sedan. Införs långsamt i kosten.",
+    "da": "Grundigt tilberedte (tørrede linser udblødes først og tilberedes derefter) og indført langsomt.",
+    "fi": "Hyvin keitettyinä (kuivat linssit ensin liotettuina ja sitten keitettyinä); ruokavalioon vähitellen.",
+    "fr": "Bien cuites (lentilles sèches préalablement trempées), introduites progressivement.",
+    "nb": "Godt kokte (tørre linser bløtlegges først og kokes deretter) og gitt gradvis."
+  },
+  "child": {
+    "en": "Cooked lentils can be a little treat for dogs. A grown-up should cook them well first!",
+    "sl": "Kuhana leča je lahko majhen priboljšek za psa. Odrasel jo mora najprej dobro skuhati!",
+    "de": "Gekochte Linsen können für Hunde ein kleines Leckerli sein. Ein Erwachsener sollte sie vorher gut kochen!",
+    "es": "Las lentejas cocidas pueden ser un pequeño premio para los perros. ¡Un adulto debe cocinarlas bien antes!",
+    "it": "Le lenticchie cotte possono essere un premietto per i cani. Prima però un adulto deve cuocerle bene!",
+    "pt": "As lentilhas cozidas podem ser uma pequena guloseima para os cães. Primeiro, um adulto tem de as cozer bem!",
+    "nl": "Gare linzen zijn een klein snoepje voor honden. Een volwassene moet ze eerst goed gaar maken!",
+    "pl": "Ugotowana soczewica może być małym smakołykiem dla psa. Dorosły musi ją najpierw dobrze ugotować!",
+    "cs": "Uvařená čočka může být pro psy malým pamlskem. Dospělý ji musí nejdřív dobře uvařit!",
+    "hr": "Kuhana leća može biti mala poslastica za pse. Odrasla osoba prvo je mora dobro skuhati!",
+    "sv": "Kokta linser kan vara en liten godbit för hundar. En vuxen ska koka dem ordentligt först!",
+    "da": "Kogte linser kan være en lille godbid til hunde. En voksen skal først koge dem grundigt!",
+    "fi": "Keitetyt linssit voivat olla koiralle pieni herkku. Aikuisen pitää ensin keittää ne hyvin!",
+    "fr": "Les lentilles cuites peuvent être une petite friandise pour les chiens. Un adulte doit d’abord bien les faire cuire !",
+    "nb": "Kokte linser kan være en liten godbit for hunder. En voksen må koke dem godt først!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat uncooked lentils?",
+        "sl": "Ali lahko psi jedo nekuhano lečo?",
+        "de": "Dürfen Hunde ungekochte Linsen fressen?",
+        "es": "¿Pueden los perros comer lentejas crudas?",
+        "it": "I cani possono mangiare le lenticchie crude?",
+        "pt": "Os cães podem comer lentilhas cruas?",
+        "nl": "Mogen honden ongekookte linzen eten?",
+        "pl": "Czy psy mogą jeść niegotowaną soczewicę?",
+        "cs": "Mohou psi jíst syrovou čočku?",
+        "hr": "Smiju li psi jesti nekuhanu leću?",
+        "sv": "Får hundar äta okokta linser?",
+        "da": "Må hunde spise ukogte linser?",
+        "fi": "Saako koira syödä keittämättömiä linssejä?",
+        "fr": "Les chiens peuvent-ils manger des lentilles crues ?",
+        "nb": "Kan hunder spise ukokte linser?"
+      },
+      "a": {
+        "en": "No. Dogs can have legumes that have been soaked first and then cooked, and lentils should be cooked well.",
+        "sl": "Ne. Psi lahko jedo stročnice, ki so bile najprej namočene in nato kuhane, lečo pa je treba dobro skuhati.",
+        "de": "Nein. Hülsenfrüchte dürfen Hunde fressen, wenn sie zuerst eingeweicht und dann gekocht wurden; Linsen sollten gut gekocht sein.",
+        "es": "No. Los perros pueden comer legumbres que se hayan puesto en remojo y luego se hayan cocinado, y las lentejas deben estar bien cocidas.",
+        "it": "No. I cani possono mangiare legumi messi prima in ammollo e poi cotti, e le lenticchie vanno cotte bene.",
+        "pt": "Não. Os cães podem comer leguminosas que tenham sido primeiro demolhadas e depois cozidas, e as lentilhas devem estar bem cozidas.",
+        "nl": "Nee. Honden mogen peulvruchten eten die eerst zijn geweekt en daarna gaar gemaakt, en linzen moeten goed gaar zijn.",
+        "pl": "Nie. Psom można dawać rośliny strączkowe, jeśli najpierw je namoczono, a potem ugotowano, a soczewicę trzeba dobrze ugotować.",
+        "cs": "Ne. Psi mohou jíst luštěniny, které byly nejdřív namočené a potom uvařené, a čočka by měla být dobře uvařená.",
+        "hr": "Ne. Psi smiju jesti mahunarke koje su prvo namočene pa kuhane, a leću treba dobro skuhati.",
+        "sv": "Nej. Hundar kan äta baljväxter som först har blötlagts och sedan kokats, och linser ska kokas ordentligt.",
+        "da": "Nej. Hunde kan få bælgfrugter, der først er udblødt og derefter tilberedt, og linser skal tilberedes grundigt.",
+        "fi": "Ei saa. Koira voi syödä palkokasveja vasta, kun ne on liotettu ja keitetty, ja linssit täytyy keittää kunnolla.",
+        "fr": "Non. Les lentilles doivent d’abord être trempées, puis bien cuites avant d’être données à un chien.",
+        "nb": "Nei. Hunder kan få belgvekster som først er bløtlagt og deretter kokt, så linser bør kokes godt."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD223",
+      "quote": "Legumes like beans are a good source of fibre and protein for dogs."
+    },
+    {
+      "id": "KD223",
+      "quote": "some dogs may have trouble digesting them, so they should be cooked well and introduced slowly"
+    },
+    {
+      "id": "KD223",
+      "quote": "Lentils (cooked)"
+    },
+    {
+      "id": "KD138",
+      "quote": "When removed from the pod, a pea is a pulse, just like beans and lentils."
+    },
+    {
+      "id": "KD220",
+      "quote": "Dogs can have beans or legumes that have been soaked first and then cooked."
+    },
+    {
+      "id": "KD220",
+      "quote": "Dogs can have beans as a treat."
+    }
+  ],
+  "related": [
+    "beans",
+    "chickpeas",
+    "peas"
+  ],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c51a17eed7028fb5338f6eb39e8d40668294bcc5ff421e2fe78540b499014b12"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5fe93ed2400629a187883fd8c2a1c4018201c11163786195be9ca1aba634991c"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "74e8197169c2a291b52b191051eee7dd0f2674d28e5481372c111d0c66997c55"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fb9a0e3bada2e43c3e029d1ef8c6b4c9cd9f2c8e92f3542ea40dd2d4fa735da9"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-c-it-2026-11-16",
+      "verified_hash": "22aa79e69e8cba7c30ecbcbfa8d9dda8f41707093d4f244e728efcfee8f48a7f"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "57208cb56847f942530b32760934e3fc7abe85d0e7bdf2b61081363666c838d9"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b1249218d8a49e6d6bf5a95d1b1e0067d2f29fce72dab17d6533f18cdb9d7d0a"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "288cb87298e48042b8da7aacd1a30ca0bb5f2dc7f65090ef6b7d3d6da39f8af3"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "3787c30067da4d0d1c01ab1c733ef36618f80d19716b1a2ec9e091c627266945"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ca7f79fee7409f20a0f049ae765060fb59797a82e192db2bdd5d5862b84ed202"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-16",
+      "verified_hash": "cc0995d649c03028559901685dbff9562c0cb41bebd511762202a45c532712c5"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0096e3eb38a31ee6fe6a5d0474ba6b3f02f0eca56cca7010223b043a55e0770b"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-c-fi-2026-11-16",
+      "verified_hash": "f7d5defe6033fff9b5147b8edeb4f2c5856d362e29e094dcfb8df04c3ce12119"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-c-fr-2026-11-16",
+      "verified_hash": "d7dea09241ad409a4e0f78f813a247e18668bb340607421b34b73bb4c753f40c"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cbc5bfadfcf89f90f8a4bc1c3ca5014ca8d2ad9bd48afb4a0a887fe2a367e064"
+    }
+  }
+}

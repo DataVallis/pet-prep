@@ -74,6 +74,9 @@ class GameDataResetService
         // M6-S03 partner inquiries from petprep.si: business leads, not game data (no
         // user/family FK; pruned after 12 months by its own command).
         'partner_inquiries',
+        // M6-S05 parent e-mails from the petprep.si page »Koliko dela je pes«: website leads
+        // with consent, not game data (no user/family FK; deleted only when the parent asks).
+        'summary_leads',
     ];
 
     /** Tables where only some rows go (see keptQuery()). */

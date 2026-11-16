@@ -1,0 +1,394 @@
+{
+  "slug": "hummus",
+  "species": "cat",
+  "name": {
+    "en": "Hummus",
+    "sl": "Humus",
+    "de": "Hummus",
+    "es": "Hummus",
+    "it": "Hummus",
+    "pt": "Hummus",
+    "nl": "Hummus",
+    "pl": "Hummus",
+    "cs": "Hummus",
+    "hr": "Humus",
+    "sv": "Hummus",
+    "da": "Hummus",
+    "fi": "Humus",
+    "fr": "Houmous",
+    "nb": "Hummus"
+  },
+  "question": {
+    "en": "Can cats eat hummus?",
+    "sl": "Ali lahko mačke jedo humus?",
+    "de": "Dürfen Katzen Hummus fressen?",
+    "es": "¿Pueden los gatos comer hummus?",
+    "it": "I gatti possono mangiare l’hummus?",
+    "pt": "Os gatos podem comer hummus?",
+    "nl": "Mogen katten hummus eten?",
+    "pl": "Czy koty mogą jeść hummus?",
+    "cs": "Mohou kočky jíst hummus?",
+    "hr": "Smiju li mačke jesti humus?",
+    "sv": "Får katter äta hummus?",
+    "da": "Må katte spise hummus?",
+    "fi": "Saako kissa syödä humusta?",
+    "fr": "Les chats peuvent-ils manger du houmous ?",
+    "nb": "Kan katter spise hummus?"
+  },
+  "url_slug": {
+    "en": "hummus",
+    "sl": "humus",
+    "de": "hummus",
+    "es": "hummus",
+    "it": "hummus",
+    "pt": "hummus",
+    "nl": "hummus",
+    "pl": "hummus",
+    "cs": "hummus",
+    "hr": "humus",
+    "sv": "hummus",
+    "da": "hummus",
+    "fi": "humus",
+    "fr": "houmous",
+    "nb": "hummus"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, hummus is not for cats. It is usually made with garlic, and garlic is toxic to cats even when cooked. VCA vets also warn that creamy dips left on plates can cause stomach upset. Keep the dip bowl out of your cat's reach.",
+    "sl": "Ne, humus ni za mačke. Običajno vsebuje česen, ta pa je za mačke strupen, tudi kuhan. Veterinarji VCA opozarjajo tudi, da kremasti namazi, ki ostanejo na krožnikih, lahko povzročijo prebavne težave. Posodo z namazom imejte zunaj mačjega dosega.",
+    "de": "Nein, Hummus ist nichts für Katzen. Er wird meist mit Knoblauch zubereitet, und der ist für Katzen auch gekocht giftig. Die Tierärzte von VCA warnen außerdem, dass cremige Dips, die auf Tellern stehen bleiben, den Magen verstimmen können. Stellen Sie die Dip-Schüssel außer Reichweite Ihrer Katze.",
+    "es": "No, el hummus no es para los gatos. Suele llevar ajo, y el ajo es tóxico para los gatos aunque esté cocinado. Los veterinarios de VCA también advierten de que las salsas cremosas que quedan en los platos pueden causar malestar de estómago. Mantén el bol del hummus fuera del alcance de tu gato.",
+    "it": "No, l’hummus non è adatto ai gatti. Di solito si prepara con l’aglio, che è tossico per i gatti anche se cotto. I veterinari di VCA avvertono inoltre che le salse cremose lasciate nei piatti possono causare mal di pancia. Tieni la ciotola della salsa fuori dalla portata del tuo gatto.",
+    "pt": "Não, o hummus não é para gatos. Costuma levar alho, que é tóxico para os gatos mesmo cozinhado. Os veterinários da VCA avisam também que os cremes e molhos deixados nos pratos podem causar indisposição de estômago. Mantém a taça do hummus fora do alcance do teu gato.",
+    "nl": "Nee, hummus is niets voor katten. Er zit meestal knoflook in, en knoflook is giftig voor katten, ook als het gekookt is. Dierenartsen van VCA waarschuwen ook dat romige dips die op borden achterblijven maagklachten kunnen veroorzaken. Houd het dipbakje buiten het bereik van je kat.",
+    "pl": "Nie, hummus nie jest dla kotów. Zwykle zawiera czosnek, a czosnek jest toksyczny dla kotów nawet po ugotowaniu. Weterynarze z VCA ostrzegają też, że kremowe pasty i sosy do maczania, które zostają na talerzach, mogą wywołać rozstrój żołądka. Miseczkę z hummusem trzymaj poza zasięgiem kota.",
+    "cs": "Ne, hummus není pro kočky. Obvykle se vyrábí s česnekem a česnek je pro kočky jedovatý, i když je tepelně upravený. Veterináři z VCA také varují, že krémové pomazánky zbylé na talířích mohou způsobit podrážděný žaludek. Misku s pomazánkou nechte mimo dosah kočky.",
+    "hr": "Ne, humus nije za mačke. Obično se pravi s češnjakom, a češnjak je otrovan za mačke čak i kad je termički obrađen. Veterinari iz VCA-a upozoravaju i da kremasti namazi ostavljeni na tanjurima mogu izazvati želučane tegobe. Zdjelicu s namazom drži izvan dosega svoje mačke.",
+    "sv": "Nej, hummus är inget för katter. Den innehåller oftast vitlök, och vitlök är giftigt för katter även när det är tillagat. Veterinärerna på VCA varnar också för att krämiga dippar som blir kvar på tallrikar kan ge katten orolig mage. Ställ dippskålen utom räckhåll för katten.",
+    "da": "Nej, hummus er ikke noget for katte. Den er som regel lavet med hvidløg, og hvidløg er giftigt for katte, selv når det er tilberedt. Dyrlægerne fra VCA advarer også om, at cremede dips, der bliver tilbage på tallerkener, kan give ondt i maven. Stil dipskålen uden for din kats rækkevidde.",
+    "fi": "Ei saa. Humus ei sovi kissoille: siihen tulee yleensä valkosipulia, joka on kissoille myrkyllistä myös kypsennettynä. VCA:n eläinlääkärit varoittavat lisäksi, että lautasille jääneet kermaiset dipit voivat aiheuttaa vatsavaivoja. Pidä dippikulho poissa kissan ulottuvilta.",
+    "fr": "Non, le houmous n’est pas fait pour les chats. Il est généralement préparé avec de l’ail, toxique pour eux même cuit. Les vétérinaires de VCA préviennent aussi que les sauces crémeuses restées dans les assiettes peuvent donner mal au ventre. Gardez le bol de sauce hors de portée de votre chat.",
+    "nb": "Nei, hummus er ikke for katter. Den inneholder vanligvis hvitløk, og hvitløk er giftig for katter, selv når den er tilberedt. VCA-dyrleger advarer også om at kremete dipper som blir igjen på tallerkener, kan gi urolig mage. Hold dippskålen utenfor kattens rekkevidde."
+  },
+  "why": {
+    "en": "Hummus is mainly made from chickpeas, tahini, olive oil, lemon juice, garlic and other seasonings. Garlic belongs to the alliums, which are toxic to cats even when cooked or dried, and onion and garlic are found in many pre-made foods. Tufts vets list onion and garlic flavouring in prepared dishes among foods cats should avoid, as it can cause vomiting and diarrhoea, and VCA says these flavour boosters damage red blood cells, especially in cats.",
+    "sl": "Humus je narejen predvsem iz čičerike, tahinija, olivnega olja, limoninega soka, česna in drugih začimb. Česen spada med lukovke, ki so za mačke strupene, tudi kuhane ali posušene, čebula in česen pa sta v mnogih že pripravljenih jedeh. Veterinarji Tufts čebulo in česen kot začimbo v pripravljenih jedeh uvrščajo med živila, ki se jim morajo mačke izogibati, ker lahko povzročita bruhanje in drisko, VCA pa navaja, da ta dodatka za okus poškodujeta rdeče krvničke, še posebej pri mačkah.",
+    "de": "Hummus besteht hauptsächlich aus Kichererbsen, Tahin, Olivenöl, Zitronensaft, Knoblauch und weiteren Gewürzen. Knoblauch gehört zu den Zwiebelgewächsen (Allium), die für Katzen auch gekocht oder getrocknet giftig sind, und Zwiebel und Knoblauch stecken in vielen Fertiggerichten. Die Tierärzte von Tufts zählen die Würze mit Zwiebel und Knoblauch in Fertiggerichten zu den Dingen, die Katzen meiden sollten, denn sie kann Erbrechen und Durchfall auslösen; und laut VCA schädigen diese Würzmittel die roten Blutkörperchen, bei Katzen besonders stark.",
+    "es": "El hummus se hace sobre todo con garbanzos, tahini, aceite de oliva, zumo de limón, ajo y otros condimentos. El ajo pertenece a las aliáceas, que son tóxicas para los gatos aunque estén cocinadas o secas, y la cebolla y el ajo están presentes en muchos alimentos preparados. Los veterinarios de Tufts incluyen la cebolla y el ajo como condimento de platos preparados entre los alimentos que los gatos deben evitar, ya que pueden causar vómitos y diarrea, y VCA dice que estos potenciadores del sabor dañan los glóbulos rojos, sobre todo en los gatos.",
+    "it": "L’hummus è fatto soprattutto di ceci, tahina, olio d’oliva, succo di limone, aglio e altri condimenti. L’aglio fa parte delle alliacee, tossiche per i gatti anche se cotte o essiccate, e cipolla e aglio si trovano in molti cibi già pronti. I veterinari di Tufts includono tra i cibi da evitare per i gatti i piatti pronti aromatizzati con cipolla e aglio, perché possono causare vomito e diarrea, e VCA spiega che questi insaporitori danneggiano i globuli rossi, soprattutto nei gatti.",
+    "pt": "O hummus é feito sobretudo de grão-de-bico, tahini, azeite, sumo de limão, alho e outros temperos. O alho pertence às aliáceas, que são tóxicas para os gatos mesmo cozinhadas ou secas, e a cebola e o alho estão presentes em muitos alimentos pré-preparados. Os veterinários da Tufts incluem o sabor a cebola e alho nos pratos preparados entre os alimentos que os gatos devem evitar, porque pode causar vómitos e diarreia, e a VCA diz que estes intensificadores de sabor danificam os glóbulos vermelhos, sobretudo nos gatos.",
+    "nl": "Hummus wordt vooral gemaakt van kikkererwten, tahin, olijfolie, citroensap, knoflook en andere kruiden. Knoflook behoort tot de alliums (de uienfamilie), die giftig zijn voor katten, ook als ze gekookt of gedroogd zijn, en ui en knoflook zitten in veel kant-en-klare producten. Dierenartsen van Tufts rekenen ui- en knoflookaroma in bereide gerechten tot het eten dat katten moeten vermijden, omdat het braken en diarree kan veroorzaken, en VCA zegt dat deze smaakmakers de rode bloedcellen beschadigen, vooral bij katten.",
+    "pl": "Hummus składa się głównie z ciecierzycy, tahini, oliwy z oliwek, soku z cytryny, czosnku i innych przypraw. Czosnek należy do roślin czosnkowatych, które są toksyczne dla kotów nawet po ugotowaniu lub wysuszeniu, a cebula i czosnek znajdują się w wielu gotowych produktach. Weterynarze z Tufts zaliczają cebulę i czosnek dodawane do gotowych potraw do pokarmów, których koty powinny unikać, bo mogą wywołać wymioty i biegunkę, a według VCA te wzmacniacze smaku uszkadzają czerwone krwinki, zwłaszcza u kotów.",
+    "cs": "Hummus se vyrábí hlavně z cizrny, tahini, olivového oleje, citronové šťávy, česneku a dalšího koření. Česnek patří mezi cibuloviny (rod Allium), které jsou pro kočky jedovaté, i když jsou tepelně upravené nebo sušené, a cibule i česnek jsou v mnoha hotových potravinách. Veterináři z Tufts řadí cibulovou a česnekovou příchuť v hotových pokrmech mezi potraviny, kterým by se kočky měly vyhýbat, protože mohou způsobit zvracení a průjem, a VCA uvádí, že tato dochucovadla poškozují červené krvinky, zejména u koček.",
+    "hr": "Humus se uglavnom pravi od slanutka, tahinija, maslinova ulja, limunova soka, češnjaka i drugih začina. Češnjak pripada biljkama iz roda Allium, koje su otrovne za mačke čak i kad su termički obrađene ili sušene, a luk i češnjak nalaze se u mnogim gotovim jelima. Veterinari s Tuftsa među hranom koju mačke trebaju izbjegavati navode luk i češnjak kao začin u pripremljenim jelima, jer mogu izazvati povraćanje i proljev, a VCA kaže da ti pojačivači okusa oštećuju crvene krvne stanice, osobito kod mačaka.",
+    "sv": "Hummus görs främst av kikärtor, tahini, olivolja, citronsaft, vitlök och andra kryddor. Vitlök tillhör lökväxterna, som är giftiga för katter även när de är tillagade eller torkade, och lök och vitlök finns i många färdigrätter. Veterinärerna på Tufts nämner lök och vitlök som smaksättning i färdiga rätter bland det katter bör undvika, eftersom de kan ge kräkningar och diarré. VCA skriver att dessa smaksättare skadar de röda blodkropparna, särskilt hos katter.",
+    "da": "Hummus er hovedsageligt lavet af kikærter, tahin, olivenolie, citronsaft, hvidløg og andre krydderier. Hvidløg hører til løgplanterne, som er giftige for katte, selv når de er tilberedt eller tørret, og løg og hvidløg findes i mange færdigretter. Dyrlægerne fra Tufts nævner løg- og hvidløgssmag i færdigretter blandt det, katte bør undgå, fordi det kan give opkast og diarré, og VCA skriver, at disse smagsgivere skader de røde blodlegemer, især hos katte.",
+    "fi": "Humus tehdään pääasiassa kikherneistä, tahinista, oliiviöljystä, sitruunamehusta, valkosipulista ja muista mausteista. Valkosipuli kuuluu sipulikasveihin, jotka ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina, ja sipulia ja valkosipulia on monissa valmisruoissa. Tuftsin eläinlääkärit luettelevat valmisruokien sipuli- ja valkosipulimausteen ruoka-aineeksi, jota kissojen tulee välttää, sillä se voi aiheuttaa oksentelua ja ripulia. VCA:n mukaan nämä mausteet vaurioittavat punasoluja, etenkin kissoilla.",
+    "fr": "Le houmous est surtout fait de pois chiches, de tahini, d’huile d’olive, de jus de citron, d’ail et d’autres assaisonnements. L’ail fait partie des alliacées, toxiques pour les chats même cuites ou séchées, et l’oignon comme l’ail se retrouvent dans de nombreux plats préparés. Les vétérinaires de Tufts déconseillent aux chats l’oignon et l’ail utilisés comme arômes dans les plats préparés, car ils peuvent provoquer des vomissements et de la diarrhée, et VCA précise que ces exhausteurs de goût abîment les globules rouges, surtout chez les chats.",
+    "nb": "Hummus lages hovedsakelig av kikerter, tahini, olivenolje, sitronsaft, hvitløk og andre krydder. Hvitløk hører til løkplantene (Allium), som er giftige for katter, selv når de er tilberedt eller tørket, og løk og hvitløk finnes i mange ferdigretter. Dyrleger ved Tufts regner løk og hvitløk som smakstilsetning i ferdige retter blant det katter bør unngå, fordi de kan gi oppkast og diaré. VCA sier at disse smaksgiverne skader de røde blodcellene, særlig hos katter."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Reduced appetite",
+      "Dehydration"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slabši tek",
+      "Dehidracija"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Verminderter Appetit",
+      "Austrocknung"
+    ],
+    "es": [
+      "Vómitos",
+      "Diarrea",
+      "Menos apetito",
+      "Deshidratación"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Calo dell’appetito",
+      "Disidratazione"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Apetite reduzido",
+      "Desidratação"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Minder eetlust",
+      "Uitdroging"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Zmniejszony apetyt",
+      "Odwodnienie"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Snížená chuť k jídlu",
+      "Dehydratace"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Smanjen apetit",
+      "Dehidracija"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Minskad aptit",
+      "Uttorkning"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Nedsat appetit",
+      "Dehydrering"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Ripuli",
+      "Heikentynyt ruokahalu",
+      "Nestehukka"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Baisse d’appétit",
+      "Déshydratation"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Redusert matlyst",
+      "Væskemangel"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat has eaten hummus with garlic, contact your vet as soon as possible, even if your cat seems fine, because signs of anaemia can take a few days to appear.",
+    "sl": "Če je mačka pojedla humus s česnom, se čim prej obrnite na veterinarja, tudi če se zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh.",
+    "de": "Hat Ihre Katze Hummus mit Knoblauch gefressen, wenden Sie sich so bald wie möglich an Ihren Tierarzt, auch wenn es Ihrer Katze gut zu gehen scheint, denn Anzeichen einer Blutarmut können sich erst nach einigen Tagen zeigen.",
+    "es": "Si tu gato ha comido hummus con ajo, ponte en contacto con tu veterinario lo antes posible, aunque tu gato parezca estar bien, porque los síntomas de anemia pueden tardar unos días en aparecer.",
+    "it": "Se il tuo gatto ha mangiato hummus con aglio, contatta il veterinario il prima possibile, anche se il gatto sembra stare bene, perché i sintomi di anemia possono comparire dopo qualche giorno.",
+    "pt": "Se o teu gato comeu hummus com alho, contacta o teu veterinário o mais depressa possível, mesmo que ele pareça estar bem, porque os sinais de anemia podem demorar alguns dias a aparecer.",
+    "nl": "Heeft je kat hummus met knoflook gegeten, neem dan zo snel mogelijk contact op met je dierenarts, ook als het goed lijkt te gaan met je kat, want verschijnselen van bloedarmoede kunnen pas na een paar dagen optreden.",
+    "pl": "Jeśli twój kot zjadł hummus z czosnkiem, jak najszybciej skontaktuj się z weterynarzem, nawet jeśli kot wygląda na zdrowego, bo objawy anemii mogą pojawić się dopiero po kilku dniach.",
+    "cs": "Pokud kočka snědla hummus s česnekem, co nejdříve se obraťte na veterináře, i když se zdá být v pořádku, protože příznaky chudokrevnosti se mohou objevit až za několik dní.",
+    "hr": "Ako je mačka pojela humus s češnjakom, obrati se veterinaru što prije, čak i ako se čini da je dobro, jer se znakovi anemije mogu pojaviti tek nakon nekoliko dana.",
+    "sv": "Om katten har ätit hummus med vitlök, kontakta veterinären så snart som möjligt, även om katten verkar må bra, eftersom tecken på blodbrist kan ta några dagar att visa sig.",
+    "da": "Hvis din kat har spist hummus med hvidløg, så kontakt din dyrlæge hurtigst muligt, også selvom din kat virker rask, for tegn på blodmangel kan tage nogle dage om at vise sig.",
+    "fi": "Jos kissasi on syönyt valkosipulia sisältävää humusta, ota yhteyttä eläinlääkäriin mahdollisimman pian, vaikka kissa vaikuttaisi voivan hyvin: anemian oireet voivat tulla näkyviin vasta muutaman päivän kuluttua.",
+    "fr": "Si votre chat a mangé du houmous contenant de l’ail, contactez votre vétérinaire dès que possible, même si votre chat semble aller bien, car les signes d’anémie peuvent mettre quelques jours à apparaître.",
+    "nb": "Hvis katten har spist hummus med hvitløk, bør du kontakte dyrlegen så snart som mulig, selv om katten virker frisk. Tegn på blodmangel kan ta noen dager å vise seg."
+  },
+  "serving": null,
+  "child": {
+    "en": "Hummus is a dip for people, and it usually has garlic that cats must not eat. Keep your snack plate away from kitty.",
+    "sl": "Humus je namaz za ljudi in običajno vsebuje česen, ki ga mačke ne smejo jesti. Svoj krožnik s prigrizki imej stran od muce.",
+    "de": "Hummus ist ein Dip für Menschen, und meistens steckt Knoblauch drin, den Katzen nicht fressen dürfen. Halte deinen Snackteller von deiner Katze fern.",
+    "es": "El hummus es una salsa para personas y suele llevar ajo, que los gatos no pueden comer. Mantén tu plato de picoteo lejos del gatito.",
+    "it": "L’hummus è una salsa per le persone e di solito contiene aglio, che i gatti non devono mangiare. Tieni il piatto dei tuoi snack lontano dal micio.",
+    "pt": "O hummus é uma pasta para pessoas e costuma ter alho, que os gatos não podem comer. Mantém o teu prato de petiscos longe do gatinho.",
+    "nl": "Hummus is een dip voor mensen. Er zit meestal knoflook in, en dat mogen katten niet eten. Houd je snackbord uit de buurt van je kat.",
+    "pl": "Hummus to pasta dla ludzi, zwykle z czosnkiem, którego koty jeść nie mogą. Trzymaj swój talerz z przekąskami z dala od kotka.",
+    "cs": "Hummus je pomazánka pro lidi a obvykle obsahuje česnek, který kočky jíst nesmějí. Drž svůj talíř se svačinou dál od kočičky.",
+    "hr": "Humus je namaz za ljude i obično sadrži češnjak, koji mačke ne smiju jesti. Tanjur s grickalicama drži podalje od mace.",
+    "sv": "Hummus är en dipp för människor, och den innehåller oftast vitlök, som katter inte får äta. Håll tallriken med ditt mellanmål borta från katten.",
+    "da": "Hummus er en dip til mennesker, og den indeholder som regel hvidløg, som katte ikke må spise. Hold din snacktallerken væk fra katten.",
+    "fi": "Humus on ihmisten dippi, ja siinä on yleensä valkosipulia, jota kissat eivät saa syödä. Pidä välipalalautasesi poissa kisun ulottuvilta.",
+    "fr": "Le houmous, c’est une trempette pour les humains, et il contient souvent de l’ail, que les chats ne doivent pas manger. Garde ton assiette d’apéritif loin de ton chat.",
+    "nb": "Hummus er en dipp for mennesker, og den inneholder vanligvis hvitløk, som katter ikke må spise. Hold tallerkenen med snacks unna pusen."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What if the hummus has no garlic?",
+        "sl": "Kaj pa, če humus nima česna?",
+        "de": "Und wenn der Hummus keinen Knoblauch enthält?",
+        "es": "¿Y si el hummus no lleva ajo?",
+        "it": "E se l’hummus non contiene aglio?",
+        "pt": "E se o hummus não tiver alho?",
+        "nl": "Wat als er geen knoflook in de hummus zit?",
+        "pl": "A jeśli w hummusie nie ma czosnku?",
+        "cs": "A co když hummus česnek neobsahuje?",
+        "hr": "Što ako humus nema češnjaka?",
+        "sv": "Hur är det om hummusen inte innehåller vitlök?",
+        "da": "Hvad hvis hummusen ikke indeholder hvidløg?",
+        "fi": "Entä jos humuksessa ei ole valkosipulia?",
+        "fr": "Et si le houmous ne contient pas d’ail ?",
+        "nb": "Hva om hummusen ikke har hvitløk?"
+      },
+      "a": {
+        "en": "It is still a people food. Cats Protection advises sticking to cat food treats rather than giving your cat any human foods.",
+        "sl": "Še vedno je hrana za ljudi. Cats Protection svetuje, naj mački raje dajemo priboljške za mačke kot katero koli hrano za ljudi.",
+        "de": "Er ist trotzdem ein Lebensmittel für Menschen. Cats Protection rät, bei Katzenleckerlis zu bleiben und Katzen keine Menschennahrung zu geben.",
+        "es": "Sigue siendo comida de personas. Cats Protection aconseja ceñirse a los premios para gatos en lugar de dar a tu gato cualquier comida de personas.",
+        "it": "È comunque un cibo per le persone. Cats Protection consiglia di dare al gatto solo i premi per gatti e non cibi umani.",
+        "pt": "Continua a ser comida de pessoas. A Cats Protection aconselha a dar guloseimas próprias para gatos em vez de comida de pessoas.",
+        "nl": "Het blijft menselijk voedsel. Cats Protection adviseert om bij kattensnoepjes te blijven en je kat geen menselijk voedsel te geven.",
+        "pl": "To nadal jedzenie dla ludzi. Cats Protection radzi dawać kotu smakołyki przeznaczone dla kotów, a nie jakiekolwiek jedzenie dla ludzi.",
+        "cs": "Pořád je to jídlo pro lidi. Cats Protection radí držet se pamlsků pro kočky a nedávat kočkám žádná lidská jídla.",
+        "hr": "I dalje je hrana za ljude. Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke.",
+        "sv": "Det är fortfarande mat för människor. Cats Protection rekommenderar att du håller dig till kattgodis i stället för att ge katten mat från matbordet.",
+        "da": "Det er stadig menneskemad. Cats Protection anbefaler, at du holder dig til kattegodbidder i stedet for at give din kat menneskemad.",
+        "fi": "Se on silti ihmisten ruokaa. Cats Protection neuvoo antamaan kissalle vain kissanherkkuja eikä ihmisten ruokia.",
+        "fr": "Cela reste un aliment pour humains. Cats Protection conseille de s’en tenir aux friandises pour chats plutôt que de donner des aliments pour humains.",
+        "nb": "Det er fortsatt mat for mennesker. Cats Protection anbefaler å holde seg til godbiter laget for katter i stedet for å gi katten menneskemat."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC130",
+      "quote": "Hummus is primarily made from chickpeas, tahini (sesame seed paste), olive oil, lemon juice, garlic, and other seasonings"
+    },
+    {
+      "id": "KC130",
+      "quote": "Garlic is one ingredient in hummus that can pose severe risks to your cat's wellbeing."
+    },
+    {
+      "id": "KC4",
+      "quote": "Cats shouldn’t eat onions because they are part of a group of plants called alliums, which are toxic to cats."
+    },
+    {
+      "id": "KC4",
+      "quote": "garlic, chives and leeks are also toxic, even when cooked or dried."
+    },
+    {
+      "id": "KC4",
+      "quote": "Onion and garlic can be found in many pre-made foods like sauces and baby food."
+    },
+    {
+      "id": "KC4",
+      "quote": "Symptoms include vomiting, diarrhoea, a reduced appetite, and dehydration."
+    },
+    {
+      "id": "KC4",
+      "quote": "Symptoms of anaemia (low red blood cell count) often take a bit longer to appear, usually within one to five days."
+    },
+    {
+      "id": "KC4",
+      "quote": "If your cat has eaten onions, garlic, leeks, or chives contact your vet as soon as possible."
+    },
+    {
+      "id": "KC125",
+      "quote": "Onion/garlic (the flavoring in many prepared dishes can cause vomiting, diarrhea)"
+    },
+    {
+      "id": "KC43",
+      "quote": "These flavor boosters damage the red blood cells of pets, especially in cats."
+    },
+    {
+      "id": "KC44",
+      "quote": "Other leftovers on plates, such as creamy dips, potato chips and pizza, can cause stomach upset."
+    },
+    {
+      "id": "KC5",
+      "quote": "Steer clear of garlic and onion as these can be difficult to digest and can make cats very ill."
+    },
+    {
+      "id": "KC48",
+      "quote": "It’s best to stick to cat food treats rather than giving your cat any human foods."
+    }
+  ],
+  "related": [
+    "garlic",
+    "onion",
+    "lemons",
+    "salt",
+    "pizza"
+  ],
+  "updated": "2026-11-15",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fa7106d7faa387a5c42e0a4437ad1df845626629086ed570ef6c204d69c50758"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fb3721dafd9837676394ea2f114c212106b6bc1b12c89a951707c3b179c4aefa"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "57304f12d08c00587fa883d1ebd89e89a1dd1a0bc75354bb3e773a30559f505e"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f6c46214093978bde5bc315bb5ecbe9a030c5a6d842c3bc569ab5f167d02ef2a"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-c-it-2026-11-16",
+      "verified_hash": "bcb13bd5e4e9f23f723cfd6b04d59ca11bb4c4d1b53f470512d928d3be2b833a"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "178ccdc86d5aafd36d69468d92094f86af5d402d51f7223a2fba39676b4e3125"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "43dd4c10237fdab19f88580e9efc7bdeb7218c64815b2932e3d7668d8acafcf9"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "3c958357bbe2e14841cc203503f74dc3f6ba62de5d0a8769f441d5f06eddefb2"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "e52609c1f27120c912fd20c3ca800fcf14df19ec253a117ad0202ff25a62a359"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f6053ba2e9773bb6bb63e09248d76914c8f1e19bf4549811fbe2ffbfe38e89df"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-16",
+      "verified_hash": "7ea0065d886bf4f782648386e33538e31534ff311143d27561b8e3f89ca25294"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9a11c14884cea0150c63c2c176c4dda38f75b13084dcc4952409eeba59f123a5"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-c-fi-2026-11-16",
+      "verified_hash": "8b3dc0fcb16f1c649e616b22a67d18d538d0a25a16f76ce6b9fe0c7213710a09"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-c-fr-2026-11-16",
+      "verified_hash": "24f8ef002283417fe45583db6805faa523d481d37eae7b617908223de53b1f6c"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cb14c5bde88f36de63a193ef66855d9087e150c0a853b2c0b08915d64ca9cbdf"
+    }
+  }
+}

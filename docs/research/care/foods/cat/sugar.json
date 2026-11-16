@@ -4,28 +4,88 @@
   "name": {
     "en": "Sugar",
     "sl": "Sladkor",
-    "cs": "Cukr"
+    "cs": "Cukr",
+    "hr": "Šećer",
+    "sv": "Socker",
+    "da": "Sukker",
+    "fi": "Sokeri",
+    "nb": "Sukker",
+    "it": "Zucchero",
+    "de": "Zucker",
+    "fr": "Sucre",
+    "es": "Azúcar",
+    "pt": "Açúcar",
+    "nl": "Suiker",
+    "pl": "Cukier"
   },
   "question": {
     "en": "Can cats eat sugar?",
     "sl": "Ali lahko mačke jedo sladkor?",
-    "cs": "Mohou kočky jíst cukr?"
+    "cs": "Mohou kočky jíst cukr?",
+    "hr": "Smiju li mačke jesti šećer?",
+    "sv": "Får katter äta socker?",
+    "da": "Må katte spise sukker?",
+    "fi": "Saako kissa syödä sokeria?",
+    "nb": "Kan katter spise sukker?",
+    "it": "I gatti possono mangiare lo zucchero?",
+    "de": "Dürfen Katzen Zucker fressen?",
+    "fr": "Les chats peuvent-ils manger du sucre ?",
+    "es": "¿Pueden los gatos comer azúcar?",
+    "pt": "Os gatos podem comer açúcar?",
+    "nl": "Mogen katten suiker eten?",
+    "pl": "Czy koty mogą jeść cukier?"
   },
   "url_slug": {
     "en": "sugar",
     "sl": "sladkor",
-    "cs": "cukr"
+    "cs": "cukr",
+    "hr": "secer",
+    "sv": "socker",
+    "da": "sukker",
+    "fi": "sokeri",
+    "nb": "sukker",
+    "it": "zucchero",
+    "de": "zucker",
+    "fr": "sucre",
+    "es": "azucar",
+    "pt": "acucar",
+    "nl": "suiker",
+    "pl": "cukier"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Sugar isn't toxic to cats, but it's unhealthy for them and offers no nutritional value. Cats can't even taste sweetness. A lick of something sweet is no emergency, but regular sugary treats can lead to weight gain, diabetes and dental disease.",
     "sl": "Raje ne. Sladkor za mačke ni strupen, je pa nezdrav in nima nobene hranilne vrednosti. Mačke sladkega okusa sploh ne zaznajo. Oblizek nečesa sladkega ni nujen primer, redni sladki priboljški pa lahko vodijo v debelost, sladkorno bolezen in bolezni zob.",
-    "cs": "Raději ne. Cukr pro kočky není toxický, ale je pro ně nezdravý a nemá žádnou nutriční hodnotu. Kočky sladkou chuť ani nevnímají. Olíznutí něčeho sladkého není pohotovost, ale pravidelné sladké pamlsky mohou vést k nárůstu hmotnosti, cukrovce a zubním potížím."
+    "cs": "Raději ne. Cukr pro kočky není toxický, ale je pro ně nezdravý a nemá žádnou nutriční hodnotu. Kočky sladkou chuť ani nevnímají. Olíznutí něčeho sladkého není pohotovost, ale pravidelné sladké pamlsky mohou vést k nárůstu hmotnosti, cukrovce a zubním potížím.",
+    "hr": "Bolje ne. Šećer nije otrovan za mačke, ali im je nezdrav i ne daje nikakvu hranjivu vrijednost. Mačke slatkoću uopće ne osjećaju. Lizanje nečeg slatkog nije hitan slučaj, ali redovite slatke poslastice mogu dovesti do debljanja, dijabetesa i bolesti zubi.",
+    "sv": "Det är bäst att låta bli. Socker är inte giftigt för katter, men det är onyttigt för dem och ger inget näringsvärde. Katter kan inte ens känna sötma. En slick av något sött är ingen nödsituation, men regelbundna söta godbitar kan leda till viktuppgång, diabetes och tandsjukdom.",
+    "da": "Helst ikke. Sukker er ikke giftigt for katte, men det er usundt for dem og har ingen næringsværdi. Katte kan slet ikke smage sødt. At slikke på noget sødt er ikke en nødsituation, men jævnlige sukkerholdige godbidder kan føre til vægtstigning, diabetes og tandsygdomme.",
+    "fi": "Ei suositella. Sokeri ei ole kissoille myrkyllistä, mutta se on niille epäterveellistä eikä anna ravintoarvoa. Kissat eivät edes maista makeaa. Makean nuolaisu ei ole hätätilanne, mutta säännölliset sokeriset herkut voivat johtaa painonnousuun, diabetekseen ja hammassairauksiin.",
+    "nb": "Det er best å la være. Sukker er ikke giftig for katter, men det er usunt for dem og har ingen næringsverdi. Katter kjenner ikke engang søtt. Å slikke på noe søtt er ingen nødsituasjon, men sukkerholdige godbiter jevnlig kan føre til vektøkning, diabetes og tannsykdom.",
+    "it": "Meglio di no. Lo zucchero non è tossico per i gatti, ma fa male e non ha alcun valore nutritivo. I gatti non sentono nemmeno il sapore dolce. Se lecca qualcosa di dolce non è un’emergenza, ma dare spesso dolcetti zuccherati può portare a un aumento di peso, al diabete e a malattie dei denti.",
+    "de": "Besser nicht. Zucker ist für Katzen nicht giftig, aber ungesund und ohne jeden Nährwert. Katzen können Süßes nicht einmal schmecken. Ein kurzes Lecken an etwas Süßem ist kein Notfall, aber regelmäßig zuckerhaltige Leckereien können zu Gewichtszunahme, Diabetes und Zahnerkrankungen führen.",
+    "fr": "Mieux vaut éviter. Le sucre n’est pas toxique pour les chats, mais il n’est pas bon pour eux et ne leur apporte aucune valeur nutritionnelle. Les chats ne perçoivent même pas le goût sucré. Un coup de langue n’est pas une urgence, mais des friandises sucrées données régulièrement peuvent entraîner une prise de poids, un diabète et des maladies dentaires.",
+    "es": "Es mejor no dárselo. El azúcar no es tóxico para los gatos, pero no es sano para ellos y no les aporta ningún valor nutritivo. Los gatos ni siquiera perciben el sabor dulce. Que lama algo dulce no es una urgencia, pero los premios azucarados con regularidad pueden llevar a engordar, a la diabetes y a enfermedades dentales.",
+    "pt": "É melhor não. O açúcar não é tóxico para os gatos, mas não lhes faz bem e não tem valor nutricional. Os gatos nem sequer distinguem o sabor doce. Uma lambidela de algo doce não é uma emergência, mas guloseimas açucaradas com regularidade podem levar a excesso de peso, diabetes e doenças dentárias.",
+    "nl": "Liever niet. Suiker is niet giftig voor katten, maar het is wel ongezond en heeft geen voedingswaarde. Katten kunnen zelfs geen zoet proeven. Een likje van iets zoets is geen noodgeval, maar regelmatig suikerrijke hapjes kunnen leiden tot gewichtstoename, diabetes en gebitsproblemen.",
+    "pl": "Lepiej nie. Cukier nie jest toksyczny dla kotów, ale jest dla nich niezdrowy i nie ma żadnej wartości odżywczej. Koty nawet nie czują smaku słodkiego. Polizanie czegoś słodkiego to nie nagły przypadek, ale regularne słodkie smakołyki mogą prowadzić do przybierania na wadze, cukrzycy i chorób zębów."
   },
   "why": {
     "en": "Cats are carnivores: their bodies are built to eat meat, not carbohydrates or sugar, and none of their taste buds can detect sweet flavours. Sugar adds unnecessary calories that can quickly lead to weight gain; over time, too much sugar can cause insulin resistance and eventually diabetes, and sugar contributes to cavities and gum disease. Brown sugar is no different. VCA notes that a little sugar isn't bad for most cats, but Cats Protection warns that regularly giving sugary foods could lead to health problems, so we use the stricter level.",
     "sl": "Mačke so mesojedke: njihovo telo je ustvarjeno za meso, ne za ogljikove hidrate ali sladkor, in nobena njihova okušalna brbončica ne zazna sladkega okusa. Sladkor prinaša nepotrebne kalorije, ki hitro vodijo v pridobivanje teže; sčasoma lahko preveč sladkorja povzroči inzulinsko rezistenco in nazadnje sladkorno bolezen, prispeva pa tudi h kariesu in boleznim dlesni. Rjavi sladkor ni nič drugačen. VCA navaja, da malo sladkorja večini mačk ne škodi, Cats Protection pa opozarja, da lahko redno dajanje sladke hrane vodi v zdravstvene težave, zato uporabljamo strožjo raven.",
-    "cs": "Kočky jsou masožravci: jejich tělo je uzpůsobené ke zpracování masa, ne sacharidů nebo cukru, a žádný z jejich chuťových pohárků nedokáže vnímat sladkou chuť. Cukr přidává zbytečné kalorie, které mohou rychle vést k nárůstu hmotnosti. Časem může příliš mnoho cukru způsobit inzulinovou rezistenci a nakonec cukrovku a přispívá také ke vzniku zubního kazu a onemocnění dásní. Hnědý cukr na tom není jinak. VCA poznamenává, že trocha cukru většině koček neškodí, Cats Protection však varuje, že pravidelné podávání sladkých jídel by mohlo vést ke zdravotním problémům, a proto používáme přísnější úroveň."
+    "cs": "Kočky jsou masožravci: jejich tělo je uzpůsobené ke zpracování masa, ne sacharidů nebo cukru, a žádný z jejich chuťových pohárků nedokáže vnímat sladkou chuť. Cukr přidává zbytečné kalorie, které mohou rychle vést k nárůstu hmotnosti. Časem může příliš mnoho cukru způsobit inzulinovou rezistenci a nakonec cukrovku a přispívá také ke vzniku zubního kazu a onemocnění dásní. Hnědý cukr na tom není jinak. VCA poznamenává, že trocha cukru většině koček neškodí, Cats Protection však varuje, že pravidelné podávání sladkých jídel by mohlo vést ke zdravotním problémům, a proto používáme přísnější úroveň.",
+    "hr": "Mačke su mesojedi: njihovo je tijelo građeno za meso, a ne za ugljikohidrate ili šećer, i nijedan njihov okusni pupoljak ne prepoznaje slatke okuse. Šećer dodaje nepotrebne kalorije koje brzo mogu dovesti do debljanja; s vremenom previše šećera može izazvati inzulinsku rezistenciju i naposljetku dijabetes, a šećer pridonosi karijesu i bolestima desni. Smeđi šećer nije drukčiji. VCA napominje da malo šećera većini mačaka ne škodi, ali Cats Protection upozorava da redovito davanje slatke hrane može dovesti do zdravstvenih problema, zato primjenjujemo strožu razinu.",
+    "sv": "Katter är köttätare: deras kroppar är byggda för att äta kött, inte kolhydrater eller socker, och ingen av deras smaklökar kan känna söta smaker. Socker ger onödiga kalorier som snabbt kan leda till viktuppgång; med tiden kan för mycket socker orsaka insulinresistens och till slut diabetes, och socker bidrar till hål i tänderna och tandköttssjukdom. Brunt socker gör ingen skillnad. VCA påpekar att lite socker inte är dåligt för de flesta katter, men Cats Protection varnar för att regelbundet ge sockrad mat kan leda till hälsoproblem, så vi använder den strängare nivån.",
+    "da": "Katte er kødædere: deres krop er bygget til at spise kød, ikke kulhydrater eller sukker, og ingen af deres smagsløg kan registrere sød smag. Sukker giver unødvendige kalorier, som hurtigt kan føre til vægtstigning; med tiden kan for meget sukker give insulinresistens og til sidst diabetes, og sukker bidrager til huller i tænderne og tandkødssygdom. Brun farin er ikke anderledes. VCA skriver at lidt sukker ikke er skadeligt for de fleste katte, men Cats Protection advarer om at det kan give helbredsproblemer, hvis man jævnligt giver sukkerholdig mad, så vi bruger det strengeste niveau.",
+    "fi": "Kissat ovat lihansyöjiä: niiden elimistö on tehty lihan syömiseen, ei hiilihydraateille tai sokerille, eikä yksikään niiden makusilmuista tunnista makeaa. Sokeri lisää turhia kaloreita, jotka voivat nopeasti johtaa painonnousuun. Ajan myötä liiallinen sokeri voi aiheuttaa insuliiniresistenssin ja lopulta diabeteksen, ja sokeri edistää hampaiden reikiintymistä ja ientulehdusta. Ruskea sokeri ei ole sen parempaa. VCA toteaa, ettei pieni määrä sokeria useimmille kissoille haittaa, mutta Cats Protection varoittaa, että sokeristen ruokien säännöllinen antaminen voi johtaa terveysongelmiin, joten käytämme tiukempaa luokitusta.",
+    "nb": "Katter er kjøttetere: kroppen deres er bygd for å spise kjøtt, ikke karbohydrater eller sukker, og ingen av smaksløkene deres kan registrere søt smak. Sukker gir unødvendige kalorier som raskt kan føre til vektøkning; over tid kan for mye sukker gi insulinresistens og til slutt diabetes, og sukker bidrar til hull i tennene og tannkjøttsykdom. Brunt sukker er ikke annerledes. VCA påpeker at litt sukker ikke er skadelig for de fleste katter, men Cats Protection advarer om at det å gi katten sukkerholdig mat jevnlig kan føre til helseproblemer, så vi bruker det strengeste nivået.",
+    "it": "I gatti sono carnivori: il loro corpo è fatto per mangiare carne, non carboidrati o zucchero, e nessuna delle loro papille gustative riconosce i sapori dolci. Lo zucchero aggiunge calorie inutili che possono portare rapidamente a un aumento di peso; col tempo, troppo zucchero può causare insulino-resistenza e, alla fine, diabete, e lo zucchero favorisce carie e malattie delle gengive. Lo zucchero di canna non è diverso. VCA osserva che un po’ di zucchero non fa male alla maggior parte dei gatti, ma Cats Protection avverte che dare con regolarità cibi zuccherati potrebbe causare problemi di salute, perciò usiamo il livello più prudente.",
+    "de": "Katzen sind Fleischfresser: ihr Körper ist darauf ausgelegt, Fleisch zu verdauen, nicht Kohlenhydrate oder Zucker, und keine ihrer Geschmacksknospen kann süße Aromen wahrnehmen. Zucker liefert unnötige Kalorien, die schnell zu Gewichtszunahme führen können. Mit der Zeit kann zu viel Zucker eine Insulinresistenz und schließlich Diabetes verursachen, und Zucker trägt zu Karies und Zahnfleischerkrankungen bei. Brauner Zucker macht da keinen Unterschied. VCA weist darauf hin, dass ein wenig Zucker für die meisten Katzen nicht schlecht ist, doch Cats Protection warnt, dass regelmäßig zuckerhaltiges Futter zu gesundheitlichen Problemen führen kann. Deshalb gilt die strengere Stufe.",
+    "fr": "Les chats sont des carnivores : leur corps est conçu pour manger de la viande, pas des glucides ni du sucre, et aucune de leurs papilles ne peut détecter les saveurs sucrées. Le sucre ajoute des calories inutiles qui peuvent rapidement entraîner une prise de poids ; avec le temps, trop de sucre peut provoquer une résistance à l’insuline et, à terme, du diabète, et le sucre contribue aux caries et aux maladies des gencives. Le sucre roux n’y change rien. VCA note qu’un peu de sucre n’est pas mauvais pour la plupart des chats, mais Cats Protection avertit que donner régulièrement des aliments sucrés pourrait entraîner des problèmes de santé : nous appliquons donc le niveau le plus strict.",
+    "es": "Los gatos son carnívoros: su cuerpo está hecho para comer carne, no carbohidratos ni azúcar, y ninguna de sus papilas gustativas detecta los sabores dulces. El azúcar añade calorías innecesarias que pueden llevar rápidamente a engordar; con el tiempo, demasiado azúcar puede causar resistencia a la insulina y, al final, diabetes, y el azúcar contribuye a las caries y a las enfermedades de las encías. El azúcar moreno no es diferente. VCA señala que un poco de azúcar no es malo para la mayoría de los gatos, pero Cats Protection advierte de que dar alimentos azucarados con regularidad podría llevar a problemas de salud, así que aplicamos el nivel más estricto.",
+    "pt": "Os gatos são carnívoros: o organismo deles está feito para comer carne, não hidratos de carbono nem açúcar, e nenhuma das suas papilas gustativas deteta sabores doces. O açúcar acrescenta calorias desnecessárias que podem levar rapidamente ao aumento de peso; com o tempo, açúcar a mais pode causar resistência à insulina e, por fim, diabetes, e o açúcar contribui para as cáries e para a doença das gengivas. O açúcar amarelo não é diferente. A VCA refere que um pouco de açúcar não faz mal à maioria dos gatos, mas a Cats Protection avisa que dar alimentos açucarados com regularidade pode levar a problemas de saúde, por isso usamos o nível mais rigoroso.",
+    "nl": "Katten zijn carnivoren: hun lichaam is gebouwd om vlees te eten, niet koolhydraten of suiker, en geen van hun smaakpapillen kan zoete smaken waarnemen. Suiker voegt onnodige calorieën toe die snel tot gewichtstoename kunnen leiden; na verloop van tijd kan te veel suiker insulineresistentie en uiteindelijk diabetes veroorzaken, en suiker draagt bij aan tandbederf en tandvleesaandoeningen. Bruine suiker maakt geen verschil. VCA merkt op dat een beetje suiker voor de meeste katten niet slecht is, maar Cats Protection waarschuwt dat regelmatig suikerrijk eten geven tot gezondheidsproblemen kan leiden, dus we hanteren het strengere niveau.",
+    "pl": "Koty są mięsożercami: ich organizm jest przystosowany do jedzenia mięsa, a nie węglowodanów czy cukru, a żaden z ich kubków smakowych nie wykrywa smaku słodkiego. Cukier dodaje niepotrzebnych kalorii, które mogą szybko prowadzić do przybierania na wadze; z czasem zbyt dużo cukru może powodować insulinooporność i w końcu cukrzycę, a cukier przyczynia się do próchnicy i chorób dziąseł. Cukier brązowy nie jest pod tym względem lepszy. VCA zaznacza, że odrobina cukru nie szkodzi większości kotów, ale Cats Protection ostrzega, że regularne podawanie słodkiego jedzenia może prowadzić do problemów zdrowotnych, dlatego przyjmujemy surowszą ocenę."
   },
   "signs": {
     "en": [
@@ -39,42 +99,162 @@
     "cs": [
       "Průjem",
       "Podrážděný žaludek"
+    ],
+    "hr": [
+      "Proljev",
+      "Želučane tegobe"
+    ],
+    "sv": [
+      "Diarré",
+      "Orolig mage"
+    ],
+    "da": [
+      "Diarré",
+      "Mavebesvær"
+    ],
+    "fi": [
+      "Ripuli",
+      "Vatsavaivat"
+    ],
+    "nb": [
+      "Diaré",
+      "Urolig mage"
+    ],
+    "it": [
+      "Diarrea",
+      "Mal di stomaco"
+    ],
+    "de": [
+      "Durchfall",
+      "Magenbeschwerden"
+    ],
+    "fr": [
+      "Diarrhée",
+      "Troubles digestifs"
+    ],
+    "es": [
+      "Diarrea",
+      "Malestar de estómago"
+    ],
+    "pt": [
+      "Diarreia",
+      "Indisposição de estômago"
+    ],
+    "nl": [
+      "Diarree",
+      "Maagklachten"
+    ],
+    "pl": [
+      "Biegunka",
+      "Rozstrój żołądka"
     ]
   },
   "what_to_do": {
     "en": "If your cat just licked something sweet, there's no need to rush to the vet. If she ate a lot of a sugary food, or the food contained chocolate, contact your vet straight away.",
     "sl": "Če je mačka le oblizala nekaj sladkega, ni treba hiteti k veterinarju. Če je pojedla veliko sladke hrane ali je bila v hrani čokolada, takoj pokličite veterinarja.",
-    "cs": "Pokud kočka jen olízla něco sladkého, není třeba spěchat k veterináři. Pokud snědla hodně sladkého jídla nebo jídlo obsahovalo čokoládu, okamžitě se obraťte na veterináře."
+    "cs": "Pokud kočka jen olízla něco sladkého, není třeba spěchat k veterináři. Pokud snědla hodně sladkého jídla nebo jídlo obsahovalo čokoládu, okamžitě se obraťte na veterináře.",
+    "hr": "Ako je mačka samo poliznula nešto slatko, ne treba žuriti veterinaru. Ako je pojela puno slatke hrane ili je hrana sadržavala čokoladu, odmah se obrati veterinaru.",
+    "sv": "Om din katt bara har slickat på något sött behöver du inte rusa till veterinären. Om hon har ätit mycket av en sockrad mat, eller om maten innehöll choklad, ska du kontakta din veterinär direkt.",
+    "da": "Hvis din kat bare har slikket på noget sødt, behøver du ikke at skynde dig til dyrlægen. Hvis den har spist meget sukkerholdig mad, eller maden indeholdt chokolade, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Jos kissasi vain nuolaisi jotain makeaa, eläinlääkäriin ei tarvitse rynnätä. Jos se söi paljon sokerista ruokaa tai ruoassa oli suklaata, ota heti yhteyttä eläinlääkäriin.",
+    "nb": "Hvis katten bare slikket på noe søtt, er det ikke nødvendig å haste til dyrlegen. Hvis den har spist mye sukkerholdig mat, eller maten inneholdt sjokolade, kontakt dyrlegen med en gang.",
+    "it": "Se il tuo gatto ha solo leccato qualcosa di dolce, non serve correre dal veterinario. Se ha mangiato una grande quantità di un cibo zuccherato, o se il cibo conteneva cioccolato, contatta subito il veterinario.",
+    "de": "Hat Ihre Katze nur an etwas Süßem geleckt, müssen Sie nicht sofort zum Tierarzt eilen. Hat sie viel von einem zuckerhaltigen Lebensmittel gefressen oder enthielt es Schokolade, wenden Sie sich sofort an Ihren Tierarzt.",
+    "fr": "Si votre chat vient de lécher quelque chose de sucré, il n’est pas nécessaire de se précipiter chez le vétérinaire. S’il a mangé beaucoup d’un aliment sucré, ou si l’aliment contenait du chocolat, contactez immédiatement votre vétérinaire.",
+    "es": "Si tu gato solo ha lamido algo dulce, no hace falta correr al veterinario. Si ha comido mucho de un alimento azucarado, o el alimento llevaba chocolate, ponte en contacto con tu veterinario enseguida.",
+    "pt": "Se o teu gato só lambeu algo doce, não é preciso correr ao veterinário. Se comeu muito de um alimento açucarado, ou se o alimento tinha chocolate, contacta imediatamente o teu veterinário.",
+    "nl": "Heeft je kat alleen aan iets zoets gelikt, dan hoef je niet meteen naar de dierenarts. Heeft ze veel suikerrijk eten gegeten, of bevatte het eten chocolade, neem dan meteen contact op met je dierenarts.",
+    "pl": "Jeśli twój kot tylko polizał coś słodkiego, nie trzeba od razu jechać do weterynarza. Jeśli zjadł dużo słodkiego jedzenia albo jedzenie zawierało czekoladę, od razu skontaktuj się z weterynarzem."
   },
   "serving": null,
   "child": {
     "en": "Cats can't even taste sweet things, and sugar isn't good for them. Sweets are for people, not for kitty.",
     "sl": "Muce sladkega okusa sploh ne zaznajo, sladkor pa jim ne koristi. Sladkarije so za ljudi, ne za muco.",
-    "cs": "Kočky sladkou chuť ani nevnímají a cukr jim neprospívá. Sladkosti jsou pro lidi, ne pro kočičku."
+    "cs": "Kočky sladkou chuť ani nevnímají a cukr jim neprospívá. Sladkosti jsou pro lidi, ne pro kočičku.",
+    "hr": "Mačke slatko uopće ne osjećaju, a šećer im nije dobar. Slatkiši su za ljude, a ne za macu.",
+    "sv": "Katter kan inte ens känna sötma, och socker är inte bra för dem. Godis är till för människor, inte för katten.",
+    "da": "Katte kan slet ikke smage sødt, og sukker er ikke godt for dem. Slik er til mennesker, ikke til katte.",
+    "fi": "Kissat eivät edes maista makeaa, eikä sokeri ole niille hyväksi. Makeiset ovat ihmisille, eivät kisulle.",
+    "nb": "Katter kjenner ikke engang søtt, og sukker er ikke bra for dem. Søtsaker er for mennesker, ikke for pusen.",
+    "it": "I gatti non sentono nemmeno il sapore dolce e lo zucchero non gli fa bene. I dolci sono per le persone, non per il micio.",
+    "de": "Katzen können Süßes nicht einmal schmecken, und Zucker tut ihnen nicht gut. Süßigkeiten sind für Menschen da, nicht für deine Katze.",
+    "fr": "Les chats ne perçoivent même pas le goût sucré, et le sucre n’est pas bon pour eux. Les sucreries sont pour les humains, pas pour ton chat.",
+    "es": "Los gatos ni siquiera notan el sabor dulce, y el azúcar no les sienta bien. Las golosinas son para las personas, no para el gatito.",
+    "pt": "Os gatos nem sequer distinguem o sabor doce, e o açúcar não lhes faz bem. Os doces são para as pessoas, não para o gatinho.",
+    "nl": "Katten kunnen zelfs geen zoet proeven, en suiker is niet goed voor ze. Snoep is voor mensen, niet voor je kat.",
+    "pl": "Koty nawet nie czują smaku słodkiego, a cukier im nie służy. Słodycze są dla ludzi, nie dla kotka."
   },
   "faq": [
     {
       "q": {
         "en": "Can cats taste sugar?",
         "sl": "Ali mačke okusijo sladkor?",
-        "cs": "Cítí kočky chuť cukru?"
+        "cs": "Cítí kočky chuť cukru?",
+        "hr": "Osjećaju li mačke okus šećera?",
+        "sv": "Kan katter känna smaken av socker?",
+        "da": "Kan katte smage sukker?",
+        "fi": "Maistavatko kissat sokerin?",
+        "nb": "Kan katter kjenne sukker?",
+        "it": "I gatti sentono il sapore dello zucchero?",
+        "de": "Können Katzen Zucker schmecken?",
+        "fr": "Les chats perçoivent-ils le goût du sucre ?",
+        "es": "¿Pueden los gatos percibir el sabor del azúcar?",
+        "pt": "Os gatos sentem o sabor do açúcar?",
+        "nl": "Kunnen katten suiker proeven?",
+        "pl": "Czy koty czują smak cukru?"
       },
       "a": {
         "en": "No. Cats are carnivores and none of their taste buds can detect sweet flavours. If a cat shows interest in a sweet food, she is reacting to other ingredients, such as fat or umami flavours.",
         "sl": "Ne. Mačke so mesojedke in nobena njihova okušalna brbončica ne zazna sladkega okusa. Če mačko zanima sladka hrana, se odziva na druge sestavine, na primer maščobo ali okus umami.",
-        "cs": "Ne. Kočky jsou masožravci a žádný z jejich chuťových pohárků nedokáže vnímat sladkou chuť. Pokud kočka projeví o sladké jídlo zájem, reaguje na jiné složky, například na tuk nebo chuť umami."
+        "cs": "Ne. Kočky jsou masožravci a žádný z jejich chuťových pohárků nedokáže vnímat sladkou chuť. Pokud kočka projeví o sladké jídlo zájem, reaguje na jiné složky, například na tuk nebo chuť umami.",
+        "hr": "Ne. Mačke su mesojedi i nijedan njihov okusni pupoljak ne prepoznaje slatke okuse. Ako mačka pokazuje zanimanje za slatku hranu, reagira na druge sastojke, poput masnoće ili umami okusa.",
+        "sv": "Nej. Katter är köttätare och ingen av deras smaklökar kan känna söta smaker. Om en katt visar intresse för sötsaker reagerar hon på andra ingredienser, som fett eller umami.",
+        "da": "Nej. Katte er kødædere, og ingen af deres smagsløg kan registrere sød smag. Hvis en kat viser interesse for noget sødt, reagerer den på andre ingredienser, fx fedt eller umami-smag.",
+        "fi": "Eivät. Kissat ovat lihansyöjiä, eikä yksikään niiden makusilmuista pysty tunnistamaan makeaa. Jos kissa kiinnostuu makeasta ruoasta, se reagoi muihin ainesosiin, kuten rasvaan tai umamin makuihin.",
+        "nb": "Nei. Katter er kjøttetere, og ingen av smaksløkene deres kan registrere søt smak. Hvis en katt viser interesse for søt mat, reagerer den på andre ingredienser, som fett eller umami-smaker.",
+        "it": "No. I gatti sono carnivori e nessuna delle loro papille gustative riconosce i sapori dolci. Se un gatto si interessa a un cibo dolce, sta reagendo ad altri ingredienti, come i grassi o i sapori umami.",
+        "de": "Nein. Katzen sind Fleischfresser, und keine ihrer Geschmacksknospen kann süße Aromen wahrnehmen. Zeigt eine Katze Interesse an einem süßen Lebensmittel, reagiert sie auf andere Zutaten wie Fett oder Umami-Aromen.",
+        "fr": "Non. Les chats sont des carnivores et aucune de leurs papilles ne peut détecter les saveurs sucrées. Si un chat s’intéresse à un aliment sucré, il réagit à d’autres ingrédients, comme les graisses ou les saveurs umami.",
+        "es": "No. Los gatos son carnívoros y ninguna de sus papilas gustativas detecta los sabores dulces. Si un gato muestra interés por un alimento dulce, está reaccionando a otros ingredientes, como la grasa o los sabores umami.",
+        "pt": "Não. Os gatos são carnívoros e nenhuma das suas papilas gustativas deteta sabores doces. Se um gato mostra interesse por um alimento doce, está a reagir a outros ingredientes, como a gordura ou os sabores umami.",
+        "nl": "Nee. Katten zijn carnivoren en geen van hun smaakpapillen kan zoete smaken waarnemen. Als een kat belangstelling toont voor iets zoets, reageert ze op andere ingrediënten, zoals vet of umami-smaken.",
+        "pl": "Nie. Koty są mięsożercami i żaden z ich kubków smakowych nie wykrywa smaku słodkiego. Jeśli kot interesuje się słodkim jedzeniem, reaguje na inne składniki, takie jak tłuszcz czy smak umami."
       }
     },
     {
       "q": {
         "en": "Is brown sugar better for cats?",
         "sl": "Ali je rjavi sladkor boljši za mačke?",
-        "cs": "Je hnědý cukr pro kočky lepší?"
+        "cs": "Je hnědý cukr pro kočky lepší?",
+        "hr": "Je li smeđi šećer bolji za mačke?",
+        "sv": "Är brunt socker bättre för katter?",
+        "da": "Er brun farin bedre for katte?",
+        "fi": "Onko ruskea sokeri parempaa kissoille?",
+        "nb": "Er brunt sukker bedre for katter?",
+        "it": "Lo zucchero di canna è meglio per i gatti?",
+        "de": "Ist brauner Zucker besser für Katzen?",
+        "fr": "Le sucre roux est-il meilleur pour les chats ?",
+        "es": "¿Es mejor el azúcar moreno para los gatos?",
+        "pt": "O açúcar amarelo é melhor para os gatos?",
+        "nl": "Is bruine suiker beter voor katten?",
+        "pl": "Czy brązowy cukier jest lepszy dla kotów?"
       },
       "a": {
         "en": "No. Brown sugar is still sugar; to a cat's body it's no different from white sugar.",
         "sl": "Ne. Rjavi sladkor je še vedno sladkor; za mačje telo se ne razlikuje od belega.",
-        "cs": "Ne. Hnědý cukr je pořád cukr; pro kočičí tělo se od bílého nijak neliší."
+        "cs": "Ne. Hnědý cukr je pořád cukr; pro kočičí tělo se od bílého nijak neliší.",
+        "hr": "Ne. Smeđi šećer je i dalje šećer; za mačje tijelo nije drukčiji od bijelog.",
+        "sv": "Nej. Brunt socker är fortfarande socker; för en katts kropp är det ingen skillnad mot vitt socker.",
+        "da": "Nej. Brun farin er stadig sukker; for en kats krop er det ikke anderledes end hvidt sukker.",
+        "fi": "Ei. Ruskea sokeri on silti sokeria; kissan elimistölle se ei eroa valkoisesta sokerista.",
+        "nb": "Nei. Brunt sukker er fortsatt sukker; for kattens kropp er det ikke annerledes enn hvitt sukker.",
+        "it": "No. Lo zucchero di canna è sempre zucchero: per il corpo di un gatto non è diverso da quello bianco.",
+        "de": "Nein. Brauner Zucker ist trotzdem Zucker. Für den Körper einer Katze macht er keinen Unterschied zu weißem Zucker.",
+        "fr": "Non. Le sucre roux reste du sucre : pour le corps d’un chat, il n’est pas différent du sucre blanc.",
+        "es": "No. El azúcar moreno sigue siendo azúcar; para el cuerpo de un gato no es diferente del azúcar blanco.",
+        "pt": "Não. O açúcar amarelo continua a ser açúcar; para o corpo de um gato não é diferente do açúcar branco.",
+        "nl": "Nee. Bruine suiker is nog steeds suiker; voor het lichaam van een kat is het niet anders dan witte suiker.",
+        "pl": "Nie. Cukier brązowy to nadal cukier; dla organizmu kota nie ma różnicy między nim a cukrem białym."
       }
     }
   ],
@@ -187,6 +367,66 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5d31ea85e76c66bb1e11cf12084a5513dfa62576bb1307097ea52da726332806"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "48fc7d2e3cc483593a20d932f5dd327746c9aa9a6eb74e0041facc0723c7be51"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f659aef347f6e9fff35a2d7903ae1f76c69da6bb602585cb8b372f063972426d"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3f676c6c8a4252ef519013529a6fdfe96ed711cbb905014689ac56e025a96a9d"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7cf552ef912b0d2d64baa5c527f504165dfa814d08c08df8e6ce7682adf4b578"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2244d953cb865d70c1184cf0fab31ecd081ce4b00fda9a703bf6dd22e7c6f41f"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "242446abf6bead38b895b1d1bea96d1d2d3542768c8f66b304d03862e5652184"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ed10ec95f43ed44560ee26e230f4c90c0a02d4612b14e959909e11e3675952e4"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7ffc07df2ae16172aa8b9c141a75de5f4add6e2c029e6ff387f56a0f9a66f5f8"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "90578e45a362a729bb5cdbd4b134e4d956784443bafa52561b9a97795246fa9b"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "445dea696f65eaa713b13fd072e9f676e8bd745b860d20d68cc89deb9110f369"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "625ec559df92cbe8d60b5adfa5f95b5dc5e4b023da2912e1a175eb16683e20f4"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "3ba1c792fdf275a084c30714b45395521c124084b5834e1a84f3a02d112aff48"
     }
   }
 }

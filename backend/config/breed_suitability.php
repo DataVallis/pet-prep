@@ -2833,5 +2833,41 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S867'], 'refs' => ['parson_russell_terrier.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-117: wire_fox_terrier.* (S872–S875), runbook rules (data.json
+        // proposed_game_parameters.wire_fox_terrier.suitability_tags). RKC Breed Watch Category 1 (S872) → no welfare
+        // chip; in marketing. Shedding: RKC "Yes" vs PetMD / WebMD minimal → neither chip. No new vocabulary key.
+        'wire_fox_terrier' => [
+            'suits' => [
+                // S872 "Exercise: Up to 1 hour per day"; S873 "Fox Terriers need around an hour's exercise daily and will happily play games that are on offer too."
+                ['tag' => 'active_family', 'source_ids' => ['S872', 'S873'], 'refs' => ['wire_fox_terrier.exercise.adult', 'wire_fox_terrier.exercise.daily_text']],
+                // S873 "For this reason, they make excellent family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S873'], 'refs' => ['wire_fox_terrier.behaviour.family']],
+                // S875 "Wire fox terriers are protective and social, making them great companions for children."
+                ['tag' => 'children', 'source_ids' => ['S875'], 'refs' => ['wire_fox_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S874 "They should be closely monitored with young children and small pets because of their high prey drive."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S874'], 'refs' => ['wire_fox_terrier.behaviour.other_pets']],
+            ],
+        ],
+
+        // M5-R10-119: manchester_terrier.* (S889–S891), runbook rules (data.json
+        // proposed_game_parameters.manchester_terrier.suitability_tags). RKC page not reachable (no apartment / sheds key facts);
+        // no veterinary association names the breed → no welfare chip; in marketing. No new vocabulary key.
+        'manchester_terrier' => [
+            'suits' => [
+                // S889 "Manchester Terriers will need up to an hour of exercise per day to keep them physically and mentally fit."
+                ['tag' => 'active_family', 'source_ids' => ['S889'], 'refs' => ['manchester_terrier.exercise.adult', 'manchester_terrier.exercise.daily_text']],
+                // S890 "Manchesters also do well with children, especially when exposed to kids during puppyhood."
+                ['tag' => 'children', 'source_ids' => ['S890'], 'refs' => ['manchester_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S891 "Manchester Terriers are sensitive to the cold."
+                ['tag' => 'cold_sensitive', 'source_ids' => ['S891'], 'refs' => ['manchester_terrier.suitability.webmd_cold']],
+                // S890 "They can also have a high prey drive because of their history as ratters"
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S890'], 'refs' => ['manchester_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

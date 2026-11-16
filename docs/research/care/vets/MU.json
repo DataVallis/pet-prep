@@ -61,7 +61,8 @@
       "duty_i18n": {
         "it": "Dichiarato aperto 24 ore su 24, 7 giorni su 7 nella clinica di Albion. Per le emergenze chiamare prima.",
         "pt": "Anunciado como aberto 24 h/24, 7 dias por semana, na clínica de Albion. Liga antes para urgências.",
-        "nl": "Naar eigen zeggen 24/7 geopend bij de kliniek in Albion. Bel vooraf bij spoed."
+        "nl": "Naar eigen zeggen 24/7 geopend bij de kliniek in Albion. Bel vooraf bij spoed.",
+        "pl": "Reklamowana jako czynna całodobowo, 7 dni w tygodniu, w przychodni Albion. W nagłych przypadkach zadzwoń wcześniej."
       }
     },
     {
@@ -81,7 +82,8 @@
       "duty_i18n": {
         "it": "Telefonare alla clinica per gli orari e le emergenze.",
         "pt": "Liga para a clínica para saber o horário e para urgências.",
-        "nl": "Bel de kliniek voor openingstijden en spoedgevallen."
+        "nl": "Bel de kliniek voor openingstijden en spoedgevallen.",
+        "pl": "W sprawie godzin otwarcia i nagłych przypadków zadzwoń do przychodni."
       }
     },
     {
@@ -99,7 +101,8 @@
       "duty_i18n": {
         "it": "Il titolo del sito indica cliniche veterinarie 24 ore su 24, 7 giorni su 7 a Mauritius, ma nessuna clinica dichiara l'apertura h24; telefonare alla clinica per conferma.",
         "pt": "O título do site refere clínicas veterinárias abertas 24 h/24, 7 dias por semana, nas Maurícias, mas sem indicação de 24 horas por clínica; liga para a clínica para confirmar.",
-        "nl": "Volgens de titel van de website 24/7 dierenklinieken op Mauritius, maar zonder 24-uursvermelding per kliniek; bel de kliniek ter bevestiging."
+        "nl": "Volgens de titel van de website 24/7 dierenklinieken op Mauritius, maar zonder 24-uursvermelding per kliniek; bel de kliniek ter bevestiging.",
+        "pl": "Tytuł strony mówi o całodobowych przychodniach weterynaryjnych na Mauritiusie, ale brak informacji o całodobowej pracy poszczególnych przychodni; zadzwoń do przychodni, aby potwierdzić."
       }
     },
     {
@@ -117,7 +120,8 @@
       "duty_i18n": {
         "it": "Telefonare alla clinica per gli orari.",
         "pt": "Liga para a clínica para saber o horário.",
-        "nl": "Bel de kliniek voor de openingstijden."
+        "nl": "Bel de kliniek voor de openingstijden.",
+        "pl": "W sprawie godzin otwarcia zadzwoń do przychodni."
       }
     },
     {
@@ -137,7 +141,8 @@
       "duty_i18n": {
         "it": "Aperto lun–ven 9:00–21:00, sab 9:00–18:00, dom e festivi 9:00–12:00. Linea di emergenza +230 5947 2244 (sulla pagina: emergenze 9:00–21:00).",
         "pt": "Aberto de segunda a sexta 9h00–21h00, sábado 9h00–18h00, domingo e feriados 9h00–12h00. Linha de urgência +230 5947 2244 (na página: urgências 9h00–21h00).",
-        "nl": "Geopend ma–vr 9.00–21.00 uur, za 9.00–18.00 uur, zon- en feestdagen 9.00–12.00 uur. Spoedlijn +230 5947 2244 (volgens de pagina spoed 9.00–21.00 uur)."
+        "nl": "Geopend ma–vr 9.00–21.00 uur, za 9.00–18.00 uur, zon- en feestdagen 9.00–12.00 uur. Spoedlijn +230 5947 2244 (volgens de pagina spoed 9.00–21.00 uur).",
+        "pl": "Otwarte pon.–pt. 9:00–21:00, sob. 9:00–18:00, w niedziele i święta 9:00–12:00. Linia alarmowa +230 5947 2244 (według strony: nagłe przypadki 9:00–21:00)."
       }
     },
     {
@@ -157,7 +162,8 @@
       "duty_i18n": {
         "it": "Aperto lun–ven 13:00–19:00, sab 9:00–15:00, chiuso la domenica e nei festivi.",
         "pt": "Aberto de segunda a sexta 13h00–19h00, sábado 9h00–15h00, fechado aos domingos e feriados.",
-        "nl": "Geopend ma–vr 13.00–19.00 uur, za 9.00–15.00 uur, zon- en feestdagen gesloten."
+        "nl": "Geopend ma–vr 13.00–19.00 uur, za 9.00–15.00 uur, zon- en feestdagen gesloten.",
+        "pl": "Otwarte pon.–pt. 13:00–19:00, sob. 9:00–15:00, w niedziele i święta zamknięte."
       }
     },
     {
@@ -177,7 +183,8 @@
       "duty_i18n": {
         "it": "Aperto tutti i giorni, circa 8:00–21:00; degenza 24 ore su 24, 7 giorni su 7 e visite a domicilio di emergenza. Chiamare prima.",
         "pt": "Aberto todos os dias, aproximadamente 8h00–21h00; oferece internamento 24 h/24 e consultas de urgência ao domicílio. Liga antes.",
-        "nl": "Dagelijks geopend, ongeveer 8.00–21.00 uur; 24/7 opname en spoedhuisbezoeken mogelijk. Bel vooraf."
+        "nl": "Dagelijks geopend, ongeveer 8.00–21.00 uur; 24/7 opname en spoedhuisbezoeken mogelijk. Bel vooraf.",
+        "pl": "Otwarte codziennie, mniej więcej 8:00–21:00; hospitalizacja całodobowo i wizyty domowe w nagłych przypadkach. Zadzwoń wcześniej."
       }
     },
     {
@@ -196,7 +203,8 @@
       "duty_i18n": {
         "it": "Aperto tutti i giorni, medici disponibili 7:00–21:00. Emergenze: +230 5736 2402.",
         "pt": "Aberto todos os dias, médicos disponíveis 7h00–21h00. Urgências: +230 5736 2402.",
-        "nl": "Elke dag geopend, artsen beschikbaar 7.00–21.00 uur. Spoed: +230 5736 2402."
+        "nl": "Elke dag geopend, artsen beschikbaar 7.00–21.00 uur. Spoed: +230 5736 2402.",
+        "pl": "Otwarte codziennie, lekarze dostępni 7:00–21:00. Nagłe przypadki: +230 5736 2402."
       }
     }
   ],

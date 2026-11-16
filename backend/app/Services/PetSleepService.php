@@ -11,8 +11,8 @@ use Carbon\CarbonInterface;
  * When the pet sleeps (M5-T02, APP_REFINEMENT_SPEC §8, David 2026-10-20) —
  * the ONE definition every rule and the apps use.
  *
- * The pet sleeps while the family's quiet hours are on (night and the
- * optional school window, read on the family wall clock — QuietHours), the
+ * The pet sleeps while its quiet hours are on (own, else the family's — night and the
+ * optional school window, read on the pet's wall clock — Pet::quietHours()), the
  * same moments PetDecayService shows `pet_state = sleeping` (a mess wins
  * there with `sick`, but the pet still sleeps). It wakes at the end of the
  * quiet stretch (adjoining school + night windows are hopped over; DST-safe

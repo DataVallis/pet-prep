@@ -1,3 +1,5 @@
+# (Superseded 2026-11-15 — the page now lives in `pet-prep-website`: `tools/real-cost/`, PR #406. Change it there; this folder is the prototype's history.)
+
 # Prototype — "How much work is a Labrador?" (three.js)
 
 Interactive 3D lead-magnet prototype for petprep.si (David, 2026-11-15). **Not shipped anywhere**: it is not part of
@@ -23,8 +25,14 @@ the app, the backend or `pet-prep-website`. Product context, numbers with their 
 - History: the static PDFs + `summary/build_summary.py` and the free Lemon Squeezy product (id 1528939, T7) were made the
   same day and dropped; the two PDFs stay on Drive (`PetPrep/spletna-prodaja`) as an archive, the script is in git history
   (PR #1146).
-- **E-mail collection is not built.** David wants it (partners with a logo need reach numbers); proposal T9 in
-  `docs/product/THREEJS_OPPORTUNITIES.md`.
+- **Optional e-mail (T9, M6-S05):** under the summary button, the form »Priporočamo: novice PetPrep po e-pošti« (e-mail +
+  consent box, hidden honeypot `website`). It posts to `POST {API_URL}/api/summary-leads` (`API_URL`, `CONSENT_VERSION`,
+  `BREED` at the top of `src/main.js`). The server keeps one row per e-mail; the page also remembers in `localStorage`
+  that the address was left and shows »Hvala. Vaš e-naslov imamo …« with a link »Vpiši drug e-naslov« instead of the
+  form. The summary works without it. **Real rows are written only when the page runs on petprep.si**; anywhere else the
+  form answers »To je prototip …« and sends nothing, unless `?api=<url>` names a test API. A filled honeypot is not sent.
+  Tested against a mocked API (201, 422, 429, network error, return visit, honeypot, no API). The consent sentence is `news_consent` in `src/strings.js`
+  — changing its wording needs a new version in `SummaryLead::CONSENT_VERSIONS` and here.
 
 ## Run
 ```bash
@@ -44,4 +52,4 @@ npm run serve      # http://localhost:8765/index.html
   position to the screen (`placeOverlays`). Info-point copy: `i_*` keys in `src/strings.js`.
 
 ## Not done
-The page collects nothing (no e-mail, see T9). The dog is a toy figure on purpose (the app pet is a realistic AI video).
+The page is a prototype and is not on petprep.si; the privacy policy there does not mention the e-mail form yet. The dog is a toy figure on purpose (the app pet is a realistic AI video).

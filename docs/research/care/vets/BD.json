@@ -1,0 +1,133 @@
+{
+  "country": "BD",
+  "checked": "2026-11-15",
+  "sources": [
+    {
+      "name": "CVASU - Directorate of Veterinary Clinics",
+      "url": "https://cvasu.ac.bd/office/directorate-of-veterinary-clinics",
+      "note": "Opened: SAQ Teaching Veterinary Hospital address, phone, hours, pet unit; Dhaka pet hospital phone. States no 24-hour service currently."
+    },
+    {
+      "name": "BAU Veterinary Teaching Hospital",
+      "url": "https://vth.bau.edu.bd/",
+      "note": "Opened: phones, university address, 'pets and domestic animals'; hours page link not readable."
+    },
+    {
+      "name": "BAU VTH - extension and outreach services",
+      "url": "https://vth.bau.edu.bd/view/extension-and-outreach-services",
+      "note": "Opened: describes mostly farm/livestock services; no hours."
+    },
+    {
+      "name": "The Daily Star - Private Veterinary Clinic Services available in Uttara",
+      "url": "https://online-d11.thedailystar.net/lifestyle/news/private-veterinary-clinic-services-available-uttara-1822900",
+      "note": "Opened (2019): LD Veterinary Hospital address and Facebook page; no phone/hours."
+    },
+    {
+      "name": "The Business Standard - Keeping our pets healthy",
+      "url": "https://www.tbsnews.net/node/11489",
+      "note": "Opened (2019): CVASU Dhaka pet hospital address (Purbachal)."
+    },
+    {
+      "name": "UNB - Precise PetLab anniversary",
+      "url": "https://unb.com.bd/category/Tech/precise-petlab-marks-first-anniversary-by-launching-mobile-app/199145",
+      "note": "Opened: Precise PetLab Diagnostics & Hospital, Gulshan, 'first 24/7 emergency veterinary hospital'; no phone/website, so no entry."
+    },
+    {
+      "name": "VetSheba (MLAF)",
+      "url": "https://vetsheba.com/",
+      "note": "Opened: own site, address, phones, '24/7' heading; pet coverage not confirmed."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "SAQ Teaching Veterinary Hospital (CVASU)",
+      "city": "Chattogram",
+      "region": "Chattogram",
+      "address": "Clinical Building, Chattogram Veterinary and Animal Sciences University, Khulshi, Chattogram 4225",
+      "phone": "01314300655",
+      "emergency_24h": false,
+      "duty": "Sun-Thu 9:00-17:00, Sat 9:00-14:00; closed on public holidays. Treats dogs, cats, birds, rabbits and turtles; emergency calls via the ambulatory service.",
+      "small_animals": true,
+      "url": "https://cvasu.ac.bd/office/directorate-of-veterinary-clinics",
+      "source_url": "https://cvasu.ac.bd/office/directorate-of-veterinary-clinics",
+      "checked": "2026-11-15",
+      "note": "University page; says no 24 h service yet (planned). Lunch break 13:00-14:00.",
+      "duty_i18n": {
+        "pl": "Niedz.–czw. 9:00–17:00, sob. 9:00–14:00; w święta państwowe zamknięte. Leczy psy, koty, ptaki, króliki i żółwie; w nagłych przypadkach wezwanie przez służbę mobilną."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Teaching and Training Pet Hospital and Research Center (CVASU, Dhaka)",
+      "city": "Dhaka",
+      "region": "Dhaka",
+      "address": "Plot 5B, Sector 18, Road 114, Purbachal Newtown",
+      "phone": "01814362649",
+      "emergency_24h": false,
+      "duty": "Small-animal pet hospital run by Chattogram Veterinary and Animal Sciences University; call ahead for hours.",
+      "small_animals": true,
+      "url": "https://cvasu.ac.bd/office/directorate-of-veterinary-clinics",
+      "source_url": "https://cvasu.ac.bd/office/directorate-of-veterinary-clinics",
+      "checked": "2026-11-15",
+      "note": "Phone from CVASU page (no address there); address from 2019 TBS article https://www.tbsnews.net/node/11489 - may be outdated. No hours published.",
+      "duty_i18n": {
+        "pl": "Szpital dla małych zwierząt domowych prowadzony przez Chattogram Veterinary and Animal Sciences University; zadzwoń wcześniej, by poznać godziny."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Teaching Hospital, Bangladesh Agricultural University",
+      "city": "Mymensingh",
+      "region": "Mymensingh",
+      "address": "Bangladesh Agricultural University, Mymensingh 2202",
+      "phone": "+88 02996 666 846",
+      "emergency_24h": false,
+      "duty": "University teaching hospital for pets and domestic animals; call for hours.",
+      "small_animals": true,
+      "url": "https://vth.bau.edu.bd/",
+      "source_url": "https://vth.bau.edu.bd/",
+      "checked": "2026-11-15",
+      "note": "Phones listed on the page: +88 02996 666 846 and +88 02996 666 896 (university contact). Working-hours page not readable. Outreach page mostly livestock.",
+      "duty_i18n": {
+        "pl": "Uniwersytecki szpital kliniczny dla zwierząt domowych i gospodarskich; zadzwoń po godziny otwarcia."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "LD Veterinary Hospital & Day Care Limited",
+      "city": "Dhaka",
+      "region": "Dhaka",
+      "address": "Rabindra Sarani, Sector 7, Uttara Model Town, Dhaka 1230",
+      "emergency_24h": false,
+      "duty": "Private pet hospital and day care in Uttara.",
+      "small_animals": true,
+      "url": "https://www.facebook.com/LD.VeterinaryHospitalBD/",
+      "source_url": "https://online-d11.thedailystar.net/lifestyle/news/private-veterinary-clinic-services-available-uttara-1822900",
+      "checked": "2026-11-15",
+      "note": "Only a 2019 news article (page says 'all kinds of pet care', emergency ward, no hours); no phone or 24 h claim found. Facebook link taken from the article, not opened.",
+      "duty_i18n": {
+        "pl": "Prywatny szpital dla zwierząt domowych z opieką dzienną w Uttara."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "VetSheba (Digital Vet Services of MLAF)",
+      "city": "Dhaka",
+      "region": "Dhaka",
+      "address": "Banasree-Staff Quarter Road, Amulia Model Town, Demra, Dhaka 1360",
+      "phone": "+88027500075",
+      "emergency_24h": true,
+      "duty": "Operates 24/7 with emergency service, house calls and phone or online appointments.",
+      "small_animals": false,
+      "url": "https://vetsheba.com/",
+      "source_url": "https://vetsheba.com/",
+      "checked": "2026-11-15",
+      "note": "Own site heading 'We operate 24/7'. Also +8801533380720. Cats/dogs not mentioned; shop sells livestock-type products, so small_animals set false pending confirmation.",
+      "duty_i18n": {
+        "pl": "Działa całodobowo, z pomocą w nagłych przypadkach, wizytami domowymi oraz wizytami umawianymi telefonicznie lub online."
+      }
+    }
+  ],
+  "notes": "Thin result. Not reachable/unusable: Dhaka Tribune and Daily Sun (WebFetch client error); Central Veterinary Hospital Dhaka and DLS pages (no clinic page found/opened); Sylhet Agricultural University (only dean's office contact, no hospital page); Bangladesh Veterinary Council (not located). Not included for lack of phone/website on opened pages: Precise PetLab Diagnostics & Hospital (Gulshan, claims 24/7 emergency per UNB), Dr. Sagir's Pet Clinic Gulshan, Pawsitive Veterinary Clinic. Skipped as unverifiable template-style sites: Furmillion (pages.dev), Mew Care (webda.in; 24/7 claim contradicted by own hours), Elite Pet Care (no address)."
+}

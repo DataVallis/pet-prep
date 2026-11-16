@@ -4,80 +4,248 @@
   "name": {
     "en": "Bread",
     "sl": "Kruh",
-    "cs": "Chléb"
+    "es": "Pan",
+    "cs": "Chléb",
+    "hr": "Kruh",
+    "sv": "Bröd",
+    "da": "Brød",
+    "fi": "Leipä",
+    "nb": "Brød",
+    "it": "Pane",
+    "de": "Brot",
+    "fr": "Pain",
+    "pt": "Pão",
+    "nl": "Brood",
+    "pl": "Chleb"
   },
   "question": {
     "en": "Can dogs eat bread?",
     "sl": "Ali lahko psi jedo kruh?",
-    "cs": "Mohou psi jíst chléb?"
+    "es": "¿Pueden los perros comer pan?",
+    "cs": "Mohou psi jíst chléb?",
+    "hr": "Smiju li psi jesti kruh?",
+    "sv": "Får hundar äta bröd?",
+    "da": "Må hunde spise brød?",
+    "fi": "Saako koira syödä leipää?",
+    "nb": "Kan hunder spise brød?",
+    "it": "I cani possono mangiare il pane?",
+    "de": "Dürfen Hunde Brot fressen?",
+    "fr": "Les chiens peuvent-ils manger du pain ?",
+    "pt": "Os cães podem comer pão?",
+    "nl": "Mogen honden brood eten?",
+    "pl": "Czy psy mogą jeść chleb?"
   },
   "url_slug": {
     "en": "bread",
     "sl": "kruh",
-    "cs": "chleb"
+    "es": "pan",
+    "cs": "chleb",
+    "hr": "kruh",
+    "sv": "brod",
+    "da": "broed",
+    "fi": "leipa",
+    "nb": "brod",
+    "it": "pane",
+    "de": "brot",
+    "fr": "pain",
+    "pt": "pao",
+    "nl": "brood",
+    "pl": "chleb"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. Plain, fully baked white or wheat bread is generally safe for dogs without a wheat allergy, but it offers no real benefit and is high in calories. Never give raisin bread, garlic bread or raw dough.",
     "sl": "Da, v majhnih količinah. Navaden, dobro pečen bel ali pšenični kruh je za pse brez alergije na pšenico na splošno varen, a nima prave koristi in ima veliko kalorij. Nikoli ne dajajte kruha z rozinami, česnovega kruha ali surovega testa.",
-    "cs": "Ano, v malém množství. Obyčejný, dobře upečený bílý nebo pšeničný chléb je pro psy bez alergie na pšenici obvykle bezpečný, ale nemá pro ně žádný skutečný přínos a je kalorický. Nikdy nedávejte chléb s rozinkami, česnekový chléb ani syrové těsto."
+    "es": "Sí, en pequeñas cantidades. El pan blanco o de trigo sencillo y bien horneado suele ser seguro para los perros sin alergia al trigo, pero no aporta ningún beneficio real y tiene muchas calorías. Nunca des pan con pasas, pan de ajo ni masa cruda.",
+    "cs": "Ano, v malém množství. Obyčejný, dobře upečený bílý nebo pšeničný chléb je pro psy bez alergie na pšenici obvykle bezpečný, ale nemá pro ně žádný skutečný přínos a je kalorický. Nikdy nedávejte chléb s rozinkami, česnekový chléb ani syrové těsto.",
+    "hr": "Da, u malim količinama. Običan, potpuno pečen bijeli ili pšenični kruh općenito je siguran za pse koji nisu alergični na pšenicu, ali ne donosi pravu korist i bogat je kalorijama. Nikad ne daj kruh s grožđicama, kruh s češnjakom ni sirovo tijesto.",
+    "sv": "Ja, i små mängder. Okryddat, helt bakat vitt bröd eller bröd av vete är i allmänhet säkert för hundar utan veteallergi, men det ger ingen verklig nytta och är kaloririkt. Ge aldrig russinbröd, vitlöksbröd eller rå deg.",
+    "da": "Ja, i små mængder. Almindeligt, gennembagt hvidt brød eller hvedebrød er som regel ufarligt for hunde uden hvedeallergi, men det gavner ikke rigtig og indeholder mange kalorier. Giv aldrig rosinbrød, hvidløgsbrød eller rå dej.",
+    "fi": "Saa, pieninä määrinä. Maustamaton, kokonaan kypsäksi leivottu vaalea leipä tai vehnäleipä on yleensä turvallista koirille, joilla ei ole vehnäallergiaa, mutta siitä ei ole todellista hyötyä ja se on runsaskalorista. Älä koskaan anna rusinaleipää, valkosipulileipää tai raakaa taikinaa.",
+    "nb": "Ja, i små mengder. Vanlig, gjennombakt hvitt brød eller hvetebrød er som regel trygt for hunder uten hveteallergi, men det gir ingen reell nytte og inneholder mange kalorier. Gi aldri rosinbrød, hvitløksbrød eller rå deig.",
+    "it": "Sì, in piccole quantità. Il pane bianco o di grano semplice e ben cotto in genere è sicuro per i cani senza allergia al grano, ma non porta benefici reali ed è molto calorico. Non dare mai pane all’uvetta, pane all’aglio o impasto crudo.",
+    "de": "Ja, in kleinen Mengen. Ungewürztes, vollständig durchgebackenes Weiß- oder Weizenbrot ist für Hunde ohne Weizenallergie in der Regel unbedenklich, bringt aber keinen echten Nutzen und ist kalorienreich. Geben Sie niemals Rosinenbrot, Knoblauchbrot oder rohen Teig.",
+    "fr": "Oui, en petite quantité. Le pain blanc ou de blé nature, bien cuit, est généralement sans danger pour les chiens qui n’ont pas d’allergie au blé, mais il n’a pas de réel intérêt nutritionnel et il est riche en calories. Ne donnez jamais de pain aux raisins secs, de pain à l’ail ni de pâte crue.",
+    "pt": "Sim, em pequenas quantidades. O pão branco ou de trigo simples e bem cozido é geralmente seguro para cães sem alergia ao trigo, mas não traz benefício real e tem muitas calorias. Nunca dês pão com passas, pão de alho ou massa crua.",
+    "nl": "Ja, in kleine hoeveelheden. Gewoon wit of tarwebrood dat helemaal gaar is gebakken, is over het algemeen veilig voor honden zonder tarweallergie, maar het heeft geen echte voordelen en bevat veel calorieën. Geef nooit rozijnenbrood, knoflookbrood of rauw deeg.",
+    "pl": "Tak, w małych ilościach. Biały lub pszenny chleb bez dodatków, w pełni upieczony, jest na ogół bezpieczny dla psów, które nie mają alergii na pszenicę, ale nie daje im żadnych realnych korzyści i jest kaloryczny. Nigdy nie dawaj chleba z rodzynkami, pieczywa czosnkowego ani surowego ciasta."
   },
   "why": {
     "en": "Bread is a filler food with no nutrients your dog's food doesn't already supply, and it is full of carbs and calories, so too much can put your dog on the path to obesity. The real dangers are ingredients: raisins are highly toxic and often found in breads, garlic bread can cause abdominal pain, vomiting, diarrhoea, weakness and collapse, and xylitol, a sweetener in some baked goods, is toxic to dogs. Raw yeast dough keeps rising in the stomach and releases alcohol.",
     "sl": "Kruh je polnilo brez hranil, ki jih pasja hrana ne bi že vsebovala, ima pa veliko ogljikovih hidratov in kalorij, zato lahko preveč kruha psa pripelje do debelosti. Prava nevarnost so sestavine: rozine so zelo strupene in jih pogosto najdemo v kruhu, česnov kruh lahko povzroči bolečine v trebuhu, bruhanje, drisko, šibkost in kolaps, ksilitol, sladilo v nekaterem pecivu, pa je za pse strupen. Surovo kvašeno testo v želodcu še naprej vzhaja in sprošča alkohol.",
-    "cs": "Chléb zasytí, ale neobsahuje žádné živiny, které by pes nedostával už z krmiva, a je plný sacharidů a kalorií, takže příliš velké množství může vést k obezitě. Skutečným nebezpečím jsou přísady: rozinky jsou vysoce jedovaté a v pečivu se často vyskytují, česnekový chléb může způsobit bolest břicha, zvracení, průjem, slabost a zhroucení a xylitol, sladidlo v některém pečivu, je pro psy jedovatý. Syrové kvasnicové těsto v žaludku dál kyne a uvolňuje alkohol."
+    "es": "El pan llena, pero no aporta nutrientes que la comida de tu perro no tenga ya, y tiene muchos hidratos de carbono y calorías, así que demasiado puede llevar a tu perro a la obesidad. Los peligros de verdad son los ingredientes: las pasas son muy tóxicas y a menudo van en los panes; el pan de ajo puede causar dolor abdominal, vómitos, diarrea, debilidad y colapso; y el xilitol, un edulcorante presente en algunos productos de panadería, es tóxico para los perros. La masa cruda con levadura sigue creciendo en el estómago y libera alcohol.",
+    "cs": "Chléb zasytí, ale neobsahuje žádné živiny, které by pes nedostával už z krmiva, a je plný sacharidů a kalorií, takže příliš velké množství může vést k obezitě. Skutečným nebezpečím jsou přísady: rozinky jsou vysoce jedovaté a v pečivu se často vyskytují, česnekový chléb může způsobit bolest břicha, zvracení, průjem, slabost a zhroucení a xylitol, sladidlo v některém pečivu, je pro psy jedovatý. Syrové kvasnicové těsto v žaludku dál kyne a uvolňuje alkohol.",
+    "hr": "Kruh je samo punilo: nema hranjivih tvari koje psu već ne pruža njegova hrana, a pun je ugljikohidrata i kalorija, pa previše može dovesti do pretilosti. Prava opasnost leži u sastojcima: grožđice su vrlo otrovne i često se nalaze u kruhu, kruh s češnjakom može izazvati bolove u trbuhu, povraćanje, proljev, slabost i kolaps, a ksilitol, sladilo u nekim pekarskim proizvodima, otrovan je za pse. Sirovo tijesto s kvascem nastavlja rasti u želucu i oslobađa alkohol.",
+    "sv": "Bröd är en utfyllnadsmat utan näringsämnen som hundens mat inte redan ger, och det är fullt av kolhydrater och kalorier, så för mycket kan göra att hunden riskerar fetma. De verkliga farorna är ingredienserna: russin är mycket giftiga och finns ofta i bröd, vitlöksbröd kan orsaka magont, kräkningar, diarré, svaghet och kollaps, och xylitol, ett sötningsmedel i en del bakverk, är giftigt för hundar. Rå jäsdeg fortsätter att jäsa i magen och frigör alkohol.",
+    "da": "Brød er fyldstof uden næringsstoffer, som hundens foder ikke allerede indeholder, og det er fyldt med kulhydrater og kalorier, så for meget kan føre til fedme hos hunden. De virkelige farer er ingredienserne: rosiner er meget giftige og findes ofte i brød, hvidløgsbrød kan give mavesmerter, opkast, diarré, svaghed og sammenbrud, og xylitol, et sødemiddel i nogle bagværk, er giftigt for hunde. Rå gærdej bliver ved med at hæve i maven og frigør alkohol.",
+    "fi": "Leipä on täyteruokaa: siinä ei ole ravintoaineita, joita koirasi ei jo saisi omasta ruoastaan, ja se on täynnä hiilihydraatteja ja kaloreita, joten liika leipä voi johtaa lihavuuteen. Todelliset vaarat ovat ainesosissa: rusinat ovat erittäin myrkyllisiä ja niitä on usein leivissä, valkosipulileipä voi aiheuttaa vatsakipua, oksentelua, ripulia, voimattomuutta ja lyyhistymistä, ja ksylitoli, jota käytetään makeutusaineena joissakin leivonnaisissa, on koirille myrkyllistä. Raaka hiivataikina jatkaa kohoamista mahalaukussa ja vapauttaa alkoholia.",
+    "nb": "Brød er fyllstoff uten næringsstoffer som hundens vanlige mat ikke allerede dekker, og det er fullt av karbohydrater og kalorier, så for mye kan føre til fedme. Det virkelige problemet er ingrediensene: rosiner er svært giftige og finnes ofte i brød, hvitløksbrød kan gi magesmerter, oppkast, diaré, svakhet og kollaps, og xylitol, et søtstoff i enkelte bakevarer, er giftig for hunder. Rå gjærdeig fortsetter å heve i magen og danner alkohol.",
+    "it": "Il pane è un cibo di riempimento, senza nutrienti che il cibo del tuo cane non fornisca già, ed è pieno di carboidrati e calorie: troppo pane può portare il cane verso l’obesità. I veri pericoli sono gli ingredienti: l’uvetta è altamente tossica e si trova spesso in vari tipi di pane, il pane all’aglio può causare dolore addominale, vomito, diarrea, debolezza e collasso, e lo xilitolo, un dolcificante presente in alcuni prodotti da forno, è tossico per i cani. L’impasto crudo lievitato continua a lievitare nello stomaco e libera alcol.",
+    "de": "Brot ist ein Füllmittel: Es enthält keine Nährstoffe, die das Hundefutter nicht ohnehin liefert, dafür aber viele Kohlenhydrate und Kalorien. Zu viel davon kann zu Übergewicht führen. Die eigentlichen Gefahren sind die Zutaten: Rosinen sind stark giftig und stecken oft in Broten, Knoblauchbrot kann Bauchschmerzen, Erbrechen, Durchfall, Schwäche und Kollaps verursachen, und Xylit, ein Zuckeraustauschstoff in manchen Backwaren, ist für Hunde giftig. Roher Hefeteig geht im Magen weiter auf und setzt Alkohol frei.",
+    "fr": "Le pain est un aliment de remplissage qui n’apporte aucun nutriment que l’alimentation de votre chien ne fournit déjà, et il est riche en glucides et en calories : en donner trop peut mener à l’obésité. Les vrais dangers viennent des ingrédients : les raisins secs sont très toxiques et se cachent souvent dans les pains, le pain à l’ail peut provoquer douleurs abdominales, vomissements, diarrhée, faiblesse et effondrement, et le xylitol, un édulcorant présent dans certaines pâtisseries, est toxique pour les chiens. La pâte crue à la levure continue de gonfler dans l’estomac et libère de l’alcool.",
+    "pt": "O pão enche, mas não tem nutrientes que a comida do teu cão ainda não forneça, e tem muitos hidratos de carbono e calorias, por isso, em excesso, pode levar à obesidade. Os verdadeiros perigos são os ingredientes: as passas são muito tóxicas e aparecem muitas vezes em pães, o pão de alho pode causar dor abdominal, vómitos, diarreia, fraqueza e colapso, e o xilitol, um adoçante presente em alguns produtos de pastelaria, é tóxico para os cães. A massa crua com fermento continua a crescer no estômago e liberta álcool.",
+    "nl": "Brood is vooral een vulmiddel: er zit niets in wat het gewone hondenvoer niet al levert. Het zit vol koolhydraten en calorieën, dus te veel brood kan leiden tot overgewicht. Het echte gevaar zit in de ingrediënten: rozijnen zijn zeer giftig en zitten vaak in brood, knoflookbrood kan buikpijn, braken, diarree, zwakte en instorten veroorzaken, en xylitol, een zoetstof in sommige bakproducten, is giftig voor honden. Rauw gistdeeg blijft rijzen in de maag en maakt alcohol vrij.",
+    "pl": "Chleb tylko wypełnia żołądek i nie dostarcza składników, których pies nie miałby już w karmie, za to jest pełen węglowodanów i kalorii, więc zbyt duże ilości mogą prowadzić do otyłości. Prawdziwym zagrożeniem są dodatki: rodzynki są silnie toksyczne, a często dodaje się je do pieczywa, pieczywo czosnkowe może wywołać ból brzucha, wymioty, biegunkę, osłabienie i zapaść, a ksylitol, słodzik dodawany do niektórych wypieków, jest toksyczny dla psów. Surowe ciasto drożdżowe rośnie dalej w żołądku i uwalnia alkohol."
   },
   "signs": null,
   "what_to_do": {
     "en": "Plain bread usually doesn't upset a dog's stomach. If you give bread or baked goods regularly, check the ingredients. If your dog eats raw bread dough, call your vet straight away; the same goes for bread with raisins or garlic.",
     "sl": "Navaden kruh psu običajno ne razdraži želodca. Če psu redno dajete kruh ali pecivo, preverite sestavine. Če pes poje surovo testo za kruh, takoj pokličite veterinarja; enako velja za kruh z rozinami ali česnom.",
-    "cs": "Obyčejný chléb psovi většinou žaludek nerozhodí. Pokud psovi dáváte chléb nebo pečivo pravidelně, kontrolujte složení. Pokud pes snědl syrové chlebové těsto, zavolejte ihned veterináři; stejně postupujte u chleba s rozinkami nebo česnekem."
+    "es": "El pan sencillo no suele sentar mal al estómago del perro. Si le das pan o productos de panadería con regularidad, revisa los ingredientes. Si tu perro se come masa de pan cruda, llama a tu veterinario enseguida; lo mismo si el pan lleva pasas o ajo.",
+    "cs": "Obyčejný chléb psovi většinou žaludek nerozhodí. Pokud psovi dáváte chléb nebo pečivo pravidelně, kontrolujte složení. Pokud pes snědl syrové chlebové těsto, zavolejte ihned veterináři; stejně postupujte u chleba s rozinkami nebo česnekem.",
+    "hr": "Običan kruh obično ne izaziva želučane tegobe kod psa. Ako redovito daješ kruh ili pekarske proizvode, provjeri sastojke. Ako pas pojede sirovo tijesto za kruh, odmah nazovi veterinara; isto vrijedi za kruh s grožđicama ili češnjakom.",
+    "sv": "Okryddat bröd stör vanligtvis inte hundens mage. Om du ger bröd eller bakverk regelbundet ska du kontrollera ingredienserna. Om din hund äter rå bröddeg ska du ringa din veterinär direkt; detsamma gäller bröd med russin eller vitlök.",
+    "da": "Almindeligt brød giver som regel ikke hunde dårlig mave. Hvis du giver brød eller bagværk jævnligt, skal du tjekke ingredienserne. Hvis din hund spiser rå brøddej, skal du ringe til din dyrlæge med det samme; det samme gælder brød med rosiner eller hvidløg.",
+    "fi": "Maustamaton leipä ei yleensä ärsytä koiran vatsaa. Jos annat leipää tai leivonnaisia säännöllisesti, tarkista ainesosat. Jos koirasi syö raakaa leipätaikinaa, soita heti eläinlääkärille; sama koskee rusinoita tai valkosipulia sisältävää leipää.",
+    "nb": "Vanlig brød gir som regel ikke urolig mage hos hunder. Hvis du jevnlig gir brød eller bakevarer, må du sjekke ingredienslisten. Hvis hunden spiser rå brøddeig, må du kontakte dyrlegen med en gang. Det samme gjelder brød med rosiner eller hvitløk.",
+    "it": "Il pane semplice di solito non dà fastidio allo stomaco del cane. Se dai regolarmente pane o prodotti da forno, controlla gli ingredienti. Se il tuo cane mangia impasto di pane crudo, chiama subito il veterinario; lo stesso vale per il pane con uvetta o aglio.",
+    "de": "Ungewürztes Brot verursacht bei Hunden meist keine Magenbeschwerden. Wenn Sie Brot oder Backwaren regelmäßig geben, prüfen Sie die Zutaten. Frisst Ihr Hund rohen Brotteig, rufen Sie sofort Ihren Tierarzt an. Dasselbe gilt für Brot mit Rosinen oder Knoblauch.",
+    "fr": "Le pain nature ne dérange généralement pas l’estomac du chien. Si vous donnez régulièrement du pain ou des pâtisseries, vérifiez la liste des ingrédients. Si votre chien mange de la pâte à pain crue, appelez immédiatement votre vétérinaire ; faites de même s’il a mangé du pain aux raisins secs ou à l’ail.",
+    "pt": "O pão simples costuma não incomodar o estômago do cão. Se deres pão ou produtos de pastelaria com regularidade, confirma os ingredientes. Se o teu cão comer massa de pão crua, liga imediatamente ao teu veterinário; o mesmo se for pão com passas ou alho.",
+    "nl": "Gewoon brood geeft een hond meestal geen maagklachten. Geef je regelmatig brood of andere bakproducten, controleer dan de ingrediënten. Eet je hond rauw brooddeeg, bel dan meteen je dierenarts; dat geldt ook voor brood met rozijnen of knoflook.",
+    "pl": "Chleb bez dodatków zwykle nie rozstraja psu żołądka. Jeśli regularnie dajesz psu chleb lub wypieki, sprawdzaj skład. Jeśli pies zje surowe ciasto chlebowe, od razu zadzwoń do weterynarza; to samo dotyczy chleba z rodzynkami lub czosnkiem."
   },
   "serving": {
     "en": "Only very small pieces of plain, fully baked white or wheat bread, now and then. No raisins, garlic, xylitol or other ingredients toxic to dogs.",
     "sl": "Le zelo majhni koščki navadnega, dobro pečenega belega ali pšeničnega kruha, in to občasno. Brez rozin, česna, ksilitola ali drugih sestavin, strupenih za pse.",
-    "cs": "Jen malinké kousky obyčejného, dobře upečeného bílého nebo pšeničného chleba, jen občas. Bez rozinek, česneku, xylitolu a dalších přísad, které jsou pro psy jedovaté."
+    "es": "Solo trocitos muy pequeños de pan blanco o de trigo sencillo y bien horneado, de vez en cuando. Sin pasas, ajo, xilitol ni otros ingredientes tóxicos para los perros.",
+    "cs": "Jen malinké kousky obyčejného, dobře upečeného bílého nebo pšeničného chleba, jen občas. Bez rozinek, česneku, xylitolu a dalších přísad, které jsou pro psy jedovaté.",
+    "hr": "Samo vrlo mali komadići običnog, potpuno pečenog bijelog ili pšeničnog kruha, povremeno. Bez grožđica, češnjaka, ksilitola ni drugih sastojaka otrovnih za pse.",
+    "sv": "Bara mycket små bitar okryddat, helt bakat vitt bröd eller bröd av vete, då och då. Inga russin, ingen vitlök, inget xylitol eller andra ingredienser som är giftiga för hundar.",
+    "da": "Kun helt små stykker almindeligt, gennembagt hvidt brød eller hvedebrød, en gang imellem. Ingen rosiner, hvidløg, xylitol eller andre ingredienser, der er giftige for hunde.",
+    "fi": "Vain hyvin pieniä paloja maustamatonta, kokonaan kypsäksi leivottua vaaleaa leipää tai vehnäleipää silloin tällöin. Ei rusinoita, valkosipulia, ksylitolia eikä muita koirille myrkyllisiä ainesosia.",
+    "nb": "Bare helt små biter av vanlig, gjennombakt hvitt brød eller hvetebrød, av og til. Ingen rosiner, hvitløk, xylitol eller andre ingredienser som er giftige for hunder.",
+    "it": "Solo pezzetti molto piccoli di pane bianco o di grano semplice e ben cotto, ogni tanto. Niente uvetta, aglio, xilitolo o altri ingredienti tossici per i cani.",
+    "de": "Nur sehr kleine Stücke ungewürztes, vollständig durchgebackenes Weiß- oder Weizenbrot, ab und zu. Keine Rosinen, kein Knoblauch, kein Xylit und keine anderen Zutaten, die für Hunde giftig sind.",
+    "fr": "Seulement de très petits morceaux de pain blanc ou de blé nature, bien cuit, de temps en temps. Sans raisins secs, ail, xylitol ni autre ingrédient toxique pour les chiens.",
+    "pt": "Só pedaços muito pequenos de pão branco ou de trigo simples e bem cozido, de vez em quando. Sem passas, alho, xilitol nem outros ingredientes tóxicos para os cães.",
+    "nl": "Alleen heel kleine stukjes gewoon wit of tarwebrood dat helemaal gaar is gebakken, af en toe. Geen rozijnen, knoflook, xylitol of andere ingrediënten die giftig zijn voor honden.",
+    "pl": "Tylko bardzo małe kawałki białego lub pszennego chleba bez dodatków, w pełni upieczonego, od czasu do czasu. Żadnych rodzynek, czosnku, ksylitolu ani innych składników toksycznych dla psów."
   },
   "child": {
     "en": "Dogs can have a tiny piece of plain bread. Raisin bread and garlic bread are not for dogs, so ask a grown-up first.",
     "sl": "Psi lahko dobijo droben košček navadnega kruha. Kruh z rozinami in česnov kruh nista za pse, zato najprej vprašaj odraslega.",
-    "cs": "Pes může dostat malinký kousek obyčejného chleba. Rozinkový a česnekový chléb pro psy není, takže se nejdřív zeptej dospělého."
+    "es": "Los perros pueden comer un trocito pequeño de pan sencillo. El pan con pasas y el de ajo no son para los perros, así que pregunta antes a un adulto.",
+    "cs": "Pes může dostat malinký kousek obyčejného chleba. Rozinkový a česnekový chléb pro psy není, takže se nejdřív zeptej dospělého.",
+    "hr": "Psi smiju dobiti sitan komadić običnog kruha. Kruh s grožđicama i kruh s češnjakom nisu za pse, zato prvo pitaj odraslu osobu.",
+    "sv": "Hundar kan få en liten bit vanligt bröd. Russinbröd och vitlöksbröd är inget för hundar, så fråga en vuxen först.",
+    "da": "Hunde kan få et lille stykke almindeligt brød. Rosinbrød og hvidløgsbrød er ikke til hunde, så spørg først en voksen.",
+    "fi": "Koira saa pienen palan maustamatonta leipää. Rusinaleipä ja valkosipulileipä eivät ole koirille, joten kysy ensin aikuiselta.",
+    "nb": "Hunder kan få en bitteliten bit vanlig brød. Rosinbrød og hvitløksbrød er ikke for hunder, så spør en voksen først.",
+    "it": "I cani possono mangiare un pezzettino di pane semplice. Il pane all’uvetta e il pane all’aglio non sono per i cani, quindi chiedi prima a un adulto.",
+    "de": "Hunde dürfen ein winziges Stück ungewürztes Brot haben. Rosinenbrot und Knoblauchbrot sind nichts für Hunde, also frag vorher einen Erwachsenen.",
+    "fr": "Un tout petit morceau de pain nature, c’est possible pour un chien. Pain aux raisins secs et pain à l’ail : non, demande d’abord à un adulte.",
+    "pt": "Os cães podem comer um bocadinho de pão simples. O pão com passas e o pão de alho não são para cães, por isso pergunta primeiro a um adulto.",
+    "nl": "Honden mogen een heel klein stukje gewoon brood. Rozijnenbrood en knoflookbrood zijn niets voor honden, dus vraag het eerst aan een volwassene.",
+    "pl": "Pies może dostać maleńki kawałek chleba bez dodatków. Chleb z rodzynkami i pieczywo czosnkowe nie są dla psów, więc najpierw zapytaj dorosłego."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat garlic bread?",
         "sl": "Ali lahko psi jedo česnov kruh?",
-        "cs": "Mohou psi jíst česnekový chléb?"
+        "es": "¿Pueden los perros comer pan de ajo?",
+        "cs": "Mohou psi jíst česnekový chléb?",
+        "hr": "Smiju li psi jesti kruh s češnjakom?",
+        "sv": "Får hundar äta vitlöksbröd?",
+        "da": "Må hunde spise hvidløgsbrød?",
+        "fi": "Saako koira syödä valkosipulileipää?",
+        "nb": "Kan hunder spise hvitløksbrød?",
+        "it": "I cani possono mangiare il pane all’aglio?",
+        "de": "Dürfen Hunde Knoblauchbrot fressen?",
+        "fr": "Les chiens peuvent-ils manger du pain à l’ail ?",
+        "pt": "Os cães podem comer pão de alho?",
+        "nl": "Mogen honden knoflookbrood eten?",
+        "pl": "Czy psy mogą jeść pieczywo czosnkowe?"
       },
       "a": {
         "en": "No. Garlic bread can cause serious side effects such as abdominal pain, vomiting, diarrhoea, weakness and collapse.",
         "sl": "Ne. Česnov kruh lahko povzroči resne težave, kot so bolečine v trebuhu, bruhanje, driska, šibkost in kolaps.",
-        "cs": "Ne. Česnekový chléb může způsobit vážné potíže, jako je bolest břicha, zvracení, průjem, slabost a zhroucení."
+        "es": "No. El pan de ajo puede causar efectos graves, como dolor abdominal, vómitos, diarrea, debilidad y colapso.",
+        "cs": "Ne. Česnekový chléb může způsobit vážné potíže, jako je bolest břicha, zvracení, průjem, slabost a zhroucení.",
+        "hr": "Ne. Kruh s češnjakom može izazvati ozbiljne nuspojave poput bolova u trbuhu, povraćanja, proljeva, slabosti i kolapsa.",
+        "sv": "Nej. Vitlöksbröd kan orsaka allvarliga symtom som magont, kräkningar, diarré, svaghet och kollaps.",
+        "da": "Nej. Hvidløgsbrød kan give alvorlige bivirkninger som mavesmerter, opkast, diarré, svaghed og sammenbrud.",
+        "fi": "Ei. Valkosipulileipä voi aiheuttaa vakavia haittavaikutuksia, kuten vatsakipua, oksentelua, ripulia, voimattomuutta ja lyyhistymisen.",
+        "nb": "Nei. Hvitløksbrød kan gi alvorlige bivirkninger som magesmerter, oppkast, diaré, svakhet og kollaps.",
+        "it": "No. Il pane all’aglio può causare effetti collaterali gravi come dolore addominale, vomito, diarrea, debolezza e collasso.",
+        "de": "Nein. Knoblauchbrot kann ernste Nebenwirkungen wie Bauchschmerzen, Erbrechen, Durchfall, Schwäche und Kollaps verursachen.",
+        "fr": "Non. Le pain à l’ail peut provoquer de graves effets indésirables : douleurs abdominales, vomissements, diarrhée, faiblesse et effondrement.",
+        "pt": "Não. O pão de alho pode causar efeitos graves, como dor abdominal, vómitos, diarreia, fraqueza e colapso.",
+        "nl": "Nee. Knoflookbrood kan ernstige verschijnselen veroorzaken, zoals buikpijn, braken, diarree, zwakte en instorten.",
+        "pl": "Nie. Pieczywo czosnkowe może wywołać poważne skutki, takie jak ból brzucha, wymioty, biegunka, osłabienie i zapaść."
       }
     },
     {
       "q": {
         "en": "Is bread good for a dog's upset stomach?",
         "sl": "Ali kruh pomaga psu pri razdraženem želodcu?",
-        "cs": "Pomůže chléb psovi, když má podrážděný žaludek?"
+        "es": "¿Es bueno el pan para el malestar de estómago de un perro?",
+        "cs": "Pomůže chléb psovi, když má podrážděný žaludek?",
+        "hr": "Je li kruh dobar kad psu pozli u želucu?",
+        "sv": "Är bröd bra för en hund med orolig mage?",
+        "da": "Er brød godt mod en hunds dårlige mave?",
+        "fi": "Onko leipä hyväksi koiran vatsavaivoihin?",
+        "nb": "Er brød bra for en hund med urolig mage?",
+        "it": "Il pane fa bene al cane quando ha mal di pancia?",
+        "de": "Ist Brot gut, wenn der Hund Magenbeschwerden hat?",
+        "fr": "Le pain est-il bon pour un chien qui a mal au ventre ?",
+        "pt": "O pão faz bem a um cão com indisposição de estômago?",
+        "nl": "Is brood goed voor een hond met maagklachten?",
+        "pl": "Czy chleb pomaga na rozstrój żołądka u psa?"
       },
       "a": {
         "en": "A bland diet of rice and boiled chicken is a better option, and better still is calling your vet for advice.",
         "sl": "Boljša izbira je blaga dieta iz riža in kuhanega piščanca, še bolje pa je, da za nasvet pokličete veterinarja.",
-        "cs": "Lepší volbou je šetřící dieta z rýže a vařeného kuřecího masa, a ještě lepší je zavolat veterináři a poradit se."
+        "es": "Una dieta blanda de arroz y pollo hervido es mejor opción, y todavía mejor es llamar al veterinario para pedirle consejo.",
+        "cs": "Lepší volbou je šetřící dieta z rýže a vařeného kuřecího masa, a ještě lepší je zavolat veterináři a poradit se.",
+        "hr": "Bolji je izbor blaga dijeta od riže i kuhane piletine, a još je bolje nazvati veterinara za savjet.",
+        "sv": "En skonsam kost med ris och tillagad kyckling är ett bättre val, och ännu bättre är att ringa din veterinär och be om råd.",
+        "da": "Skånekost af ris og kogt kylling er et bedre valg, og det er endnu bedre at ringe til din dyrlæge for at få råd.",
+        "fi": "Parempi vaihtoehto on kevyt ruokavalio, jossa on riisiä ja keitettyä kanaa, ja vielä parempi on soittaa eläinlääkärille ja kysyä neuvoa.",
+        "nb": "Skånekost med ris og kokt kylling er et bedre valg, og enda bedre er det å ringe dyrlegen og be om råd.",
+        "it": "Una dieta in bianco a base di riso e pollo bollito è un’opzione migliore, e ancora meglio è chiamare il veterinario per un consiglio.",
+        "de": "Besser geeignet ist Schonkost aus Reis und gekochtem Huhn. Noch besser ist es, Ihren Tierarzt um Rat zu fragen.",
+        "fr": "Une alimentation douce à base de riz et de poulet bouilli est préférable, et le mieux est encore d’appeler votre vétérinaire pour demander conseil.",
+        "pt": "Uma dieta suave de arroz e frango cozido é uma opção melhor, e ainda melhor é ligar ao veterinário para pedir conselho.",
+        "nl": "Een licht verteerbaar dieet van rijst en gekookte kip is een betere keuze, en het beste is om je dierenarts om advies te vragen.",
+        "pl": "Lepsza będzie lekkostrawna dieta z ryżu i gotowanego kurczaka, a najlepiej zadzwonić do weterynarza i zapytać o radę."
       }
     },
     {
       "q": {
         "en": "What if my dog eats raw bread dough?",
         "sl": "Kaj, če pes poje surovo testo za kruh?",
-        "cs": "Co když pes snědl syrové chlebové těsto?"
+        "es": "¿Qué pasa si mi perro se come masa de pan cruda?",
+        "cs": "Co když pes snědl syrové chlebové těsto?",
+        "hr": "Što ako moj pas pojede sirovo tijesto za kruh?",
+        "sv": "Vad gör jag om min hund äter rå bröddeg?",
+        "da": "Hvad hvis min hund spiser rå brøddej?",
+        "fi": "Entä jos koirani syö raakaa leipätaikinaa?",
+        "nb": "Hva hvis hunden min spiser rå brøddeig?",
+        "it": "E se il mio cane mangia impasto di pane crudo?",
+        "de": "Was, wenn mein Hund rohen Brotteig frisst?",
+        "fr": "Que faire si mon chien mange de la pâte à pain crue ?",
+        "pt": "E se o meu cão comer massa de pão crua?",
+        "nl": "Wat als mijn hond rauw brooddeeg eet?",
+        "pl": "Co zrobić, jeśli pies zje surowe ciasto chlebowe?"
       },
       "a": {
         "en": "Call your vet immediately. The yeast keeps the dough rising, stretching the stomach and releasing toxic levels of alcohol into the blood.",
         "sl": "Takoj pokličite veterinarja. Kvas testo še naprej dviguje, kar raztegne želodec in v kri sprošča strupene količine alkohola.",
-        "cs": "Zavolejte ihned veterináři. Kvasnice nechávají těsto kynout, takže se žaludek roztahuje a do krve se uvolňuje jedovaté množství alkoholu."
+        "es": "Llama a tu veterinario inmediatamente. La levadura hace que la masa siga creciendo, dilata el estómago y libera niveles tóxicos de alcohol en la sangre.",
+        "cs": "Zavolejte ihned veterináři. Kvasnice nechávají těsto kynout, takže se žaludek roztahuje a do krve se uvolňuje jedovaté množství alkoholu.",
+        "hr": "Odmah nazovi veterinara. Kvasac neprestano diže tijesto, rasteže želudac i u krv oslobađa otrovne količine alkohola.",
+        "sv": "Ring din veterinär omedelbart. Jästen får degen att fortsätta jäsa, vilket sträcker ut magen och frigör giftiga mängder alkohol i blodet.",
+        "da": "Ring til din dyrlæge med det samme. Gæren får dejen til at blive ved med at hæve, så maven bliver udspilet, og der frigives giftige mængder alkohol i blodet.",
+        "fi": "Soita heti eläinlääkärille. Hiiva saa taikinan kohoamaan edelleen, mikä venyttää mahalaukkua ja vapauttaa vereen myrkyllisiä määriä alkoholia.",
+        "nb": "Kontakt dyrlegen med en gang. Gjæren får deigen til å fortsette å heve, noe som strekker ut magesekken og gir giftige mengder alkohol i blodet.",
+        "it": "Chiama subito il veterinario. Il lievito continua a far lievitare l’impasto, che dilata lo stomaco e libera nel sangue alcol a livelli tossici.",
+        "de": "Rufen Sie sofort Ihren Tierarzt an. Die Hefe lässt den Teig weiter aufgehen, dehnt den Magen und setzt giftige Mengen Alkohol ins Blut frei.",
+        "fr": "Appelez immédiatement votre vétérinaire. La levure continue de faire lever la pâte, ce qui distend l’estomac et libère dans le sang des quantités toxiques d’alcool.",
+        "pt": "Liga imediatamente ao teu veterinário. A levedura faz a massa continuar a crescer, esticando o estômago e libertando para o sangue níveis tóxicos de álcool.",
+        "nl": "Bel meteen je dierenarts. De gist laat het deeg blijven rijzen, waardoor de maag wordt opgerekt en er giftige hoeveelheden alcohol in het bloed komen.",
+        "pl": "Od razu zadzwoń do weterynarza. Drożdże sprawiają, że ciasto dalej rośnie, rozciąga żołądek i uwalnia do krwi toksyczne ilości alkoholu."
       }
     }
   ],
@@ -211,10 +379,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "10cd36a76aa0194957d0a7857de5d945afe24bff1bf25978826c6111f94d2d12"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f8c66778f6662d76bf754f2a03512f98479b4cf0006383abb01a47050a75250c"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8423d13db9732ce60b12c4463fcd41eb0ee67b773c1617ce0fde5fa78bd7d001"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "018d54daf88454b1304969fac735f2909bfc93e1da7851aef1ff765228122b34"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e82228975fb778a7d2c7c2a4abc19c3bf77375c995dfa106ab4fd5718a8680ee"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8e1c82d9314ed4a1f1b26f0b0eab1b279a2636d7b2a3b7109961565b6ba649c3"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bccfce7b9d9aea9bff3d61491448fc502f6e9883c17190afc08e8a00b4cf2665"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0fb4e60946df33c74573898054e580b6ac87639a6c1fe7e180ed1b2c13ab9623"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9ab9f249a62a8b36a70f23a9cff78b4ebb11414bcb40be3499abfcab9c46ff6c"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e3de4b31123da388915b69e3ac1fe3b0aae9fd54822f13c2859cbbd93db485be"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bce3f1041418ce1ec2e5f61898acddaccfa46f9f7752596bfa439196b115f3b0"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8dbeedfea1ccb6bd515e3daf8870c9ed4db30138c19158d00fbde6632918032d"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "85e78ccd3b7d508e019608d1344b0e29c0042f38a387e579fff207f3c73ad99e"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "b1b6d6be89c9d1b83772990cdca1454afa92d359ab66ab7e24441406f7f29a7a"
     }
   }
 }

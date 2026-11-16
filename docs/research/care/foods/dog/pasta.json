@@ -4,68 +4,212 @@
   "name": {
     "en": "Pasta",
     "sl": "Testenine",
-    "cs": "Těstoviny"
+    "es": "Pasta",
+    "cs": "Těstoviny",
+    "hr": "Tjestenina",
+    "sv": "Pasta",
+    "da": "Pasta",
+    "fi": "Pasta",
+    "nb": "Pasta",
+    "it": "Pasta",
+    "de": "Pasta",
+    "fr": "Pâtes",
+    "pt": "Massa",
+    "nl": "Pasta",
+    "pl": "Makaron"
   },
   "question": {
     "en": "Can dogs eat pasta?",
     "sl": "Ali lahko psi jedo testenine?",
-    "cs": "Mohou psi jíst těstoviny?"
+    "es": "¿Pueden los perros comer pasta?",
+    "cs": "Mohou psi jíst těstoviny?",
+    "hr": "Smiju li psi jesti tjesteninu?",
+    "sv": "Får hundar äta pasta?",
+    "da": "Må hunde spise pasta?",
+    "fi": "Saako koira syödä pastaa?",
+    "nb": "Kan hunder spise pasta?",
+    "it": "I cani possono mangiare la pasta?",
+    "de": "Dürfen Hunde Pasta fressen?",
+    "fr": "Les chiens peuvent-ils manger des pâtes ?",
+    "pt": "Os cães podem comer massa?",
+    "nl": "Mogen honden pasta eten?",
+    "pl": "Czy psy mogą jeść makaron?"
   },
   "url_slug": {
     "en": "pasta",
     "sl": "testenine",
-    "cs": "testoviny"
+    "es": "pasta",
+    "cs": "testoviny",
+    "hr": "tjestenina",
+    "sv": "pasta",
+    "da": "pasta",
+    "fi": "pasta",
+    "nb": "pasta",
+    "it": "pasta",
+    "de": "pasta",
+    "fr": "pates",
+    "pt": "massa",
+    "nl": "pasta",
+    "pl": "makaron"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain cooked pasta is fine in small amounts, and vets even use it in a bland diet when a dog is sick. Skip the sauce: onion and garlic are common in cooking and are toxic to dogs, even cooked.",
     "sl": "Da, navadne kuhane testenine so v majhnih količinah v redu, veterinarji jih celo uporabljajo v blagi dieti, ko je pes bolan. Brez omake: čebula in česen sta pogosta v kuhinji in sta za pse strupena, tudi kuhana.",
-    "cs": "Ano, obyčejné uvařené těstoviny jsou v malém množství v pořádku a veterináři je dokonce používají v šetřící dietě, když je pes nemocný. Vynechte omáčku: cibule a česnek se při vaření používají často a jsou pro psy jedovaté i po tepelné úpravě."
+    "es": "Sí, la pasta cocida sin nada está bien en pequeñas cantidades, y los veterinarios incluso la usan en una dieta blanda cuando un perro está enfermo. Evita la salsa: la cebolla y el ajo son habituales en la cocina y son tóxicos para los perros, incluso cocinados.",
+    "cs": "Ano, obyčejné uvařené těstoviny jsou v malém množství v pořádku a veterináři je dokonce používají v šetřící dietě, když je pes nemocný. Vynechte omáčku: cibule a česnek se při vaření používají často a jsou pro psy jedovaté i po tepelné úpravě.",
+    "hr": "Da, obična kuhana tjestenina u redu je u malim količinama, a veterinari je čak koriste u blagoj dijeti kad je pas bolestan. Izostavi umak: luk i češnjak česti su u kuhanju i otrovni su za pse, čak i kuhani.",
+    "sv": "Ja, okryddad kokt pasta går bra i små mängder, och veterinärer använder den till och med i en skonkost när en hund är sjuk. Hoppa över såsen: lök och vitlök är vanliga i matlagning och giftiga för hundar, även tillagade.",
+    "da": "Ja, almindelig kogt pasta er fint i små mængder, og dyrlæger bruger den endda i skånekost, når en hund er syg. Undlad sovsen: løg og hvidløg er almindelige i madlavning og er giftige for hunde, også når de er kogt.",
+    "fi": "Saa, maustamaton keitetty pasta sopii pieninä määrinä, ja eläinlääkärit käyttävät sitä jopa kevyessä ruokavaliossa, kun koira on sairas. Jätä kastike pois: sipuli ja valkosipuli ovat yleisiä ruoanlaitossa ja koirille myrkyllisiä, vaikka ne olisi kypsennetty.",
+    "nb": "Ja, naturell kokt pasta går fint i små mengder, og dyrleger bruker den til og med i skånekost når en hund er syk. Hopp over sausen. Løk og hvitløk er vanlig i matlaging og er giftig for hunder, også tilberedt.",
+    "it": "Sì, la pasta cotta in bianco va bene in piccole quantità, e i veterinari la usano perfino in una dieta in bianco quando un cane sta male. Niente sugo: cipolla e aglio sono molto usati in cucina e sono tossici per i cani, anche se cotti.",
+    "de": "Ja, einfache gekochte Pasta ist in kleinen Mengen in Ordnung, und Tierärzte setzen sie sogar in der Schonkost ein, wenn ein Hund krank ist. Verzichten Sie auf Soße: Zwiebel und Knoblauch kommen in vielen Gerichten vor und sind für Hunde auch gekocht giftig.",
+    "fr": "Oui, des pâtes cuites nature conviennent en petites quantités, et les vétérinaires en utilisent même dans une alimentation douce quand un chien est malade. Évitez la sauce : l’oignon et l’ail, très courants en cuisine, sont toxiques pour les chiens, même cuits.",
+    "pt": "Sim, a massa simples cozida não faz mal em pequenas quantidades, e os veterinários até a usam numa dieta suave quando um cão está doente. Dispensa o molho: a cebola e o alho são comuns na cozinha e são tóxicos para os cães, mesmo cozinhados.",
+    "nl": "Ja, gewone gekookte pasta is in kleine hoeveelheden prima, en dierenartsen gebruiken het zelfs in een licht verteerbaar dieet als een hond ziek is. Laat de saus weg: ui en knoflook komen vaak voor in gerechten en zijn giftig voor honden, ook als ze gaar zijn.",
+    "pl": "Tak, ugotowany makaron bez dodatków jest w małych ilościach w porządku, a weterynarze stosują go nawet w lekkostrawnej diecie, gdy pies jest chory. Zrezygnuj z sosu: cebula i czosnek są powszechne w kuchni i toksyczne dla psów, nawet po ugotowaniu."
   },
   "why": {
     "en": "Dogs Trust lists pasta and plain noodles among human foods dogs can usually eat in moderation. Cornell names cooked pasta as an option when a dog needs a bland diet to soothe the gut, though such a diet is not balanced for long-term feeding. Onions, garlic, leeks and chives can cause anaemia in dogs, and even traces in cooked food can be toxic. Intolerance, fat content or portion size can still upset an individual dog.",
     "sl": "Dogs Trust testenine in navadne rezance uvršča med človeško hrano, ki jo psi običajno lahko jedo zmerno. Cornell kuhane testenine navaja kot možnost, ko pes potrebuje blago dieto za pomiritev prebavil, vendar taka dieta za dolgoročno hranjenje ni uravnotežena. Čebula, česen, por in drobnjak lahko pri psih povzročijo slabokrvnost, strupeni pa so lahko že sledovi v kuhani hrani. Posameznega psa lahko kljub temu razdražijo nestrpnost, vsebnost maščob ali velikost porcije.",
-    "cs": "Organizace Dogs Trust řadí těstoviny a obyčejné nudle mezi lidské potraviny, které psi obvykle mohou jíst s mírou. Cornellova univerzita uvádí uvařené těstoviny jako jednu z možností, když pes potřebuje šetřící dietu na zklidnění střev, i když taková dieta není vyvážená pro dlouhodobé krmení. Cibule, česnek, pórek a pažitka mohou u psů způsobit chudokrevnost a jedovaté mohou být i stopy v uvařeném jídle. Nesnášenlivost, obsah tuku nebo velikost porce mohou přesto konkrétnímu psovi způsobit potíže."
+    "es": "Dogs Trust incluye la pasta y los fideos sencillos entre los alimentos humanos que los perros suelen poder comer con moderación. Cornell cita la pasta cocida como una opción cuando un perro necesita una dieta blanda para calmar el intestino, aunque esa dieta no es equilibrada para una alimentación a largo plazo. La cebolla, el ajo, el puerro y el cebollino pueden causar anemia en los perros, e incluso las trazas en la comida cocinada pueden ser tóxicas. La intolerancia, el contenido en grasa o el tamaño de la ración pueden sentarle mal igualmente a un perro concreto.",
+    "cs": "Organizace Dogs Trust řadí těstoviny a obyčejné nudle mezi lidské potraviny, které psi obvykle mohou jíst s mírou. Cornellova univerzita uvádí uvařené těstoviny jako jednu z možností, když pes potřebuje šetřící dietu na zklidnění střev, i když taková dieta není vyvážená pro dlouhodobé krmení. Cibule, česnek, pórek a pažitka mohou u psů způsobit chudokrevnost a jedovaté mohou být i stopy v uvařeném jídle. Nesnášenlivost, obsah tuku nebo velikost porce mohou přesto konkrétnímu psovi způsobit potíže.",
+    "hr": "Dogs Trust navodi tjesteninu i obične rezance među ljudskom hranom koju psi obično smiju jesti umjereno. Cornell navodi kuhanu tjesteninu kao jednu od mogućnosti kad je psu potrebna blaga dijeta za smirivanje crijeva, iako takva dijeta nije uravnotežena za dugotrajno hranjenje. Luk, češnjak, poriluk i vlasac mogu kod pasa izazvati anemiju, a čak i tragovi u kuhanoj hrani mogu biti otrovni. Netolerancija, udio masti ili veličina porcije i dalje mogu naškoditi pojedinom psu.",
+    "sv": "Dogs Trust listar pasta och vanliga nudlar bland den mat från matbordet som hundar oftast kan äta med måtta. Cornell nämner kokt pasta som ett alternativ när en hund behöver en skonkost för att lugna magen, men en sådan kost är inte balanserad för långvarig utfodring. Lökväxter som lök, vitlök, purjolök och gräslök kan orsaka blodbrist (anemi) hos hundar, och även spår i tillagad mat kan vara giftiga. Intolerans, fettinnehåll eller portionsstorlek kan ändå reta magen hos en enskild hund.",
+    "da": "Dogs Trust nævner pasta og almindelige nudler blandt den menneskemad, hunde som regel kan spise med måde. Cornell nævner kogt pasta som en mulighed, når en hund har brug for skånekost for at berolige maven, selvom en sådan kost ikke er afbalanceret til langvarig fodring. Løg, hvidløg, porrer og purløg kan give blodmangel hos hunde, og selv spor i tilberedt mad kan være giftige. Intolerance, fedtindhold eller portionsstørrelse kan stadig give en enkelt hund problemer.",
+    "fi": "Dogs Trust luettelee pastan ja maustamattomat nuudelit ruokien joukkoon, joita koira voi yleensä syödä kohtuudella. Cornell mainitsee keitetyn pastan vaihtoehtona, kun koira tarvitsee kevyttä ruokavaliota suolen rauhoittamiseksi, vaikka sellainen ruokavalio ei ole tasapainoinen pitkäaikaiseen ruokintaan. Sipuli, valkosipuli, purjo ja ruohosipuli voivat aiheuttaa koirille anemiaa, ja jopa pienet jäämät niistä kypsennetyssä ruoassa voivat olla myrkyllisiä. Ruoka-aineyliherkkyys, rasvapitoisuus tai annoskoko voivat silti tehdä yksittäisen koiran olon huonoksi.",
+    "nb": "Dogs Trust regner opp pasta og naturelle nudler blant menneskematen som hunder vanligvis kan spise med måte. Cornell nevner tilberedt pasta som et alternativ når en hund trenger skånekost for å roe magen, selv om en slik kost ikke er balansert nok til langvarig fôring. Løk, hvitløk, purre og gressløk kan gi blodmangel (anemi) hos hunder, og selv rester i tilberedt mat kan være giftige. Intoleranse, fettinnhold eller porsjonsstørrelse kan likevel gi enkelte hunder urolig mage.",
+    "it": "Dogs Trust inserisce la pasta e i noodles semplici tra gli alimenti per le persone che i cani di solito possono mangiare con moderazione. La Cornell indica la pasta cotta come un’opzione quando un cane ha bisogno di una dieta in bianco per calmare l’intestino, anche se questa dieta non è equilibrata per un’alimentazione a lungo termine. Cipolle, aglio, porri ed erba cipollina possono causare anemia nei cani, e anche tracce nel cibo cotto possono essere tossiche. Intolleranze, contenuto di grassi o dimensione della porzione possono comunque dare fastidio a un singolo cane.",
+    "de": "Dogs Trust zählt Pasta und einfache Nudeln zu den Lebensmitteln für Menschen, die Hunde in Maßen meist fressen dürfen. Cornell nennt gekochte Pasta als eine Option, wenn ein Hund eine Schonkost braucht, um den Magen-Darm-Trakt zu beruhigen, auch wenn eine solche Kost für die Dauerfütterung nicht ausgewogen ist. Zwiebeln, Knoblauch, Lauch und Schnittlauch können bei Hunden eine Blutarmut verursachen, und selbst Spuren in gekochtem Essen können giftig sein. Unverträglichkeit, Fettgehalt oder Portionsgröße können einem einzelnen Hund trotzdem auf den Magen schlagen.",
+    "fr": "Dogs Trust classe les pâtes et les nouilles nature parmi les aliments pour humains que les chiens peuvent généralement manger avec modération. L’université Cornell cite les pâtes cuites comme une option quand un chien a besoin d’une alimentation douce pour apaiser son système digestif, même si ce régime n’est pas équilibré pour une alimentation à long terme. L’oignon, l’ail, le poireau et la ciboulette peuvent provoquer une anémie chez le chien, et même des traces dans un plat cuit peuvent être toxiques. L’intolérance, la teneur en graisses ou la taille de la portion peuvent malgré tout déranger l’estomac de certains chiens.",
+    "pt": "A Dogs Trust inclui a massa e os noodles simples entre os alimentos humanos que os cães normalmente podem comer com moderação. A Cornell indica a massa cozida como opção quando um cão precisa de uma dieta suave para acalmar o intestino, embora essa dieta não seja equilibrada para uma alimentação prolongada. A cebola, o alho, o alho-francês e as cebolinhas podem causar anemia nos cães, e até vestígios em comida cozinhada podem ser tóxicos. A intolerância, o teor de gordura ou o tamanho da porção ainda podem fazer mal a um cão em particular.",
+    "nl": "Dogs Trust rekent pasta en gewone noedels tot het menselijk voedsel dat honden doorgaans met mate mogen eten. Cornell noemt gekookte pasta als mogelijkheid wanneer een hond een licht verteerbaar dieet nodig heeft om de darmen te kalmeren, al is zo’n dieet niet uitgebalanceerd genoeg om langdurig te geven. Ui, knoflook, prei en bieslook kunnen bloedarmoede veroorzaken bij honden, en zelfs sporen in gaar voedsel kunnen giftig zijn. Ook dan kan een hond last krijgen van intolerantie, het vetgehalte of de portiegrootte.",
+    "pl": "Dogs Trust wymienia makaron i nudle bez dodatków wśród ludzkich produktów, które psy zazwyczaj mogą jeść z umiarem. Cornell wskazuje ugotowany makaron jako jedną z opcji, gdy pies potrzebuje lekkostrawnej diety, która ma ukoić jelita, choć taka dieta nie jest zbilansowana do długotrwałego karmienia. Cebula, czosnek, por i szczypiorek mogą u psów powodować anemię, a nawet ich ślady w ugotowanym jedzeniu mogą być toksyczne. Nietolerancja, zawartość tłuszczu lub wielkość porcji nadal mogą rozstroić żołądek konkretnemu psu."
   },
   "signs": null,
   "what_to_do": {
     "en": "Plain pasta usually needs nothing more. If your dog ate pasta with a sauce that may contain onion or garlic, don't wait to see — contact your vet. Ask your vet before offering a food your dog hasn't tried.",
     "sl": "Pri navadnih testeninah običajno ni treba storiti ničesar. Če je pes pojedel testenine z omako, ki morda vsebuje čebulo ali česen, ne čakajte – pokličite veterinarja. Preden psu ponudite hrano, ki je še ni jedel, se posvetujte z veterinarjem.",
-    "cs": "Obyčejné těstoviny obvykle žádné další kroky nevyžadují. Pokud pes snědl těstoviny s omáčkou, která může obsahovat cibuli nebo česnek, nečekejte, co se stane, a obraťte se na veterináře. Než psovi nabídnete potravinu, kterou ještě nejedl, poraďte se s veterinářem."
+    "es": "La pasta sencilla normalmente no requiere nada más. Si tu perro ha comido pasta con una salsa que puede llevar cebolla o ajo, no esperes a ver qué pasa: ponte en contacto con tu veterinario. Consulta con tu veterinario antes de ofrecerle un alimento que no haya probado.",
+    "cs": "Obyčejné těstoviny obvykle žádné další kroky nevyžadují. Pokud pes snědl těstoviny s omáčkou, která může obsahovat cibuli nebo česnek, nečekejte, co se stane, a obraťte se na veterináře. Než psovi nabídnete potravinu, kterou ještě nejedl, poraďte se s veterinářem.",
+    "hr": "Obična tjestenina obično ne treba ništa dodatno. Ako je pas pojeo tjesteninu s umakom koji bi mogao sadržavati luk ili češnjak, ne čekaj da vidiš: obrati se veterinaru. Pitaj veterinara prije nego što ponudiš hranu koju pas još nije jeo.",
+    "sv": "Okryddad pasta behöver oftast inget mer. Om din hund har ätit pasta med en sås som kan innehålla lök eller vitlök ska du inte vänta och se: kontakta din veterinär. Fråga din veterinär innan du ger hunden något nytt som den inte har ätit förut.",
+    "da": "Almindelig pasta kræver som regel ikke mere. Hvis din hund har spist pasta med en sovs, der kan indeholde løg eller hvidløg, skal du ikke se tiden an, men kontakte din dyrlæge. Spørg din dyrlæge, før du giver din hund noget mad, den ikke har fået før.",
+    "fi": "Maustamaton pasta ei yleensä vaadi muuta. Jos koirasi söi pastaa kastikkeella, jossa voi olla sipulia tai valkosipulia, älä jää odottamaan vaan ota yhteyttä eläinlääkäriin. Kysy eläinlääkäriltä ennen kuin tarjoat ruokaa, jota koirasi ei ole aiemmin syönyt.",
+    "nb": "Naturell pasta trenger vanligvis ingenting mer. Hvis hunden har spist pasta med en saus som kan inneholde løk eller hvitløk, ikke vent på symptomer. Kontakt dyrlegen. Spør dyrlegen før du gir hunden mat den ikke har fått før.",
+    "it": "Se ha mangiato pasta in bianco, di solito non serve fare altro. Se il tuo cane ha mangiato pasta con un sugo che può contenere cipolla o aglio, non aspettare di vedere come va: contatta il veterinario. Chiedi al veterinario prima di offrire un alimento che il tuo cane non ha mai provato.",
+    "de": "Einfache Pasta braucht meist nichts weiter. Hat Ihr Hund Pasta mit einer Soße gefressen, die Zwiebel oder Knoblauch enthalten könnte, warten Sie nicht ab, sondern wenden Sie sich an Ihren Tierarzt. Fragen Sie Ihren Tierarzt, bevor Sie ein Lebensmittel geben, das Ihr Hund noch nie gefressen hat.",
+    "fr": "Des pâtes nature n’exigent généralement rien de plus. Si votre chien a mangé des pâtes avec une sauce pouvant contenir de l’oignon ou de l’ail, n’attendez pas : contactez votre vétérinaire. Demandez conseil à votre vétérinaire avant de proposer un aliment que votre chien n’a jamais mangé.",
+    "pt": "Normalmente, a massa simples não exige mais nada. Se o teu cão comeu massa com um molho que pode conter cebola ou alho, não esperes para ver – liga ao teu veterinário. Pergunta ao teu veterinário antes de oferecer um alimento que o teu cão nunca provou.",
+    "nl": "Bij gewone pasta hoef je meestal niets te doen. Heeft je hond pasta gegeten met een saus die ui of knoflook kan bevatten, wacht dan niet af maar neem contact op met je dierenarts. Vraag het eerst aan je dierenarts voordat je iets geeft wat je hond nog niet kent.",
+    "pl": "Przy makaronie bez dodatków zwykle nie trzeba nic robić. Jeśli pies zjadł makaron z sosem, który mógł zawierać cebulę lub czosnek, nie czekaj na rozwój wydarzeń, tylko skontaktuj się z weterynarzem. Zanim dasz psu produkt, którego jeszcze nie jadł, zapytaj weterynarza."
   },
   "serving": {
     "en": "Plain cooked pasta or noodles, in moderation, with no sauce, onion, garlic or seasoning.",
     "sl": "Navadne kuhane testenine ali rezanci, zmerno, brez omake, čebule, česna in začimb.",
-    "cs": "Obyčejné uvařené těstoviny nebo nudle, s mírou, bez omáčky, cibule, česneku a koření."
+    "es": "Pasta o fideos cocidos sin nada, con moderación, sin salsa, cebolla, ajo ni condimentos.",
+    "cs": "Obyčejné uvařené těstoviny nebo nudle, s mírou, bez omáčky, cibule, česneku a koření.",
+    "hr": "Obična kuhana tjestenina ili rezanci, umjereno, bez umaka, luka, češnjaka i začina.",
+    "sv": "Okryddad kokt pasta eller nudlar, med måtta, utan sås, lök, vitlök eller kryddor.",
+    "da": "Almindelig kogt pasta eller nudler, med måde, uden sovs, løg, hvidløg eller krydderier.",
+    "fi": "Maustamatonta keitettyä pastaa tai nuudeleita kohtuudella, ilman kastiketta, sipulia, valkosipulia tai mausteita.",
+    "nb": "Naturell tilberedt pasta eller nudler, med måte, uten saus, løk, hvitløk eller krydder.",
+    "it": "Pasta o noodles cotti in bianco, con moderazione, senza sugo, cipolla, aglio o condimenti.",
+    "de": "Einfache gekochte Pasta oder Nudeln, in Maßen, ohne Soße, Zwiebel, Knoblauch oder Gewürze.",
+    "fr": "Pâtes ou nouilles cuites nature, avec modération, sans sauce, oignon, ail ni assaisonnement.",
+    "pt": "Massa ou noodles simples cozidos, com moderação, sem molho, cebola, alho nem temperos.",
+    "nl": "Gewone gekookte pasta of noedels, met mate, zonder saus, ui, knoflook of kruiden.",
+    "pl": "Ugotowany makaron lub nudle bez dodatków, z umiarem, bez sosu, cebuli, czosnku i przypraw."
   },
   "child": {
     "en": "A little plain cooked pasta is fine for dogs. Sauces can hide onion or garlic, so ask a grown-up first.",
     "sl": "Malo navadnih kuhanih testenin je za pse v redu. V omakah se lahko skrivata čebula ali česen, zato najprej vprašaj odraslega.",
-    "cs": "Trocha obyčejných uvařených těstovin je pro psy v pořádku. V omáčkách se může skrývat cibule nebo česnek, proto se nejdřív zeptej dospělého."
+    "es": "Un poco de pasta cocida sin nada está bien para los perros. Las salsas pueden esconder cebolla o ajo, así que pregunta antes a un adulto.",
+    "cs": "Trocha obyčejných uvařených těstovin je pro psy v pořádku. V omáčkách se může skrývat cibule nebo česnek, proto se nejdřív zeptej dospělého.",
+    "hr": "Malo obične kuhane tjestenine u redu je za pse. Umaci mogu skrivati luk ili češnjak, zato prvo pitaj odraslu osobu.",
+    "sv": "Lite okryddad kokt pasta är okej för hundar. Såser kan gömma lök eller vitlök, så fråga en vuxen först.",
+    "da": "Lidt almindelig kogt pasta er fint til hunde. Sovse kan skjule løg eller hvidløg, så spørg først en voksen.",
+    "fi": "Vähän maustamatonta keitettyä pastaa sopii koirille. Kastikkeissa voi olla piilossa sipulia tai valkosipulia, joten kysy ensin aikuiselta.",
+    "nb": "Litt naturell kokt pasta er greit for hunder. Sauser kan skjule løk eller hvitløk, så spør en voksen først.",
+    "it": "Un po’ di pasta cotta in bianco va bene per i cani. I sughi possono nascondere cipolla o aglio, quindi chiedi prima a un adulto.",
+    "de": "Ein bisschen einfache gekochte Pasta ist für Hunde in Ordnung. In Soßen können sich Zwiebel oder Knoblauch verstecken, also frag vorher einen Erwachsenen.",
+    "fr": "Un peu de pâtes cuites nature, ça va pour les chiens. Les sauces peuvent cacher de l’oignon ou de l’ail : demande d’abord à un adulte.",
+    "pt": "Um pouco de massa simples cozida não faz mal aos cães. Os molhos podem esconder cebola ou alho, por isso pergunta primeiro a um adulto.",
+    "nl": "Een beetje gewone gekookte pasta is prima voor honden. In sauzen kunnen ui of knoflook zitten, dus vraag het eerst aan een volwassene.",
+    "pl": "Odrobina ugotowanego makaronu bez dodatków jest dla psa w porządku. W sosach może kryć się cebula lub czosnek, więc najpierw zapytaj dorosłego."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat spaghetti with sauce?",
         "sl": "Ali lahko psi jedo špagete z omako?",
-        "cs": "Mohou psi jíst špagety s omáčkou?"
+        "es": "¿Pueden los perros comer espaguetis con salsa?",
+        "cs": "Mohou psi jíst špagety s omáčkou?",
+        "hr": "Smiju li psi jesti špagete s umakom?",
+        "sv": "Får hundar äta spaghetti med sås?",
+        "da": "Må hunde spise spaghetti med sovs?",
+        "fi": "Saako koira syödä spagettia kastikkeella?",
+        "nb": "Kan hunder spise spaghetti med saus?",
+        "it": "I cani possono mangiare gli spaghetti al sugo?",
+        "de": "Dürfen Hunde Spaghetti mit Soße fressen?",
+        "fr": "Les chiens peuvent-ils manger des spaghettis avec de la sauce ?",
+        "pt": "Os cães podem comer esparguete com molho?",
+        "nl": "Mogen honden spaghetti met saus eten?",
+        "pl": "Czy psy mogą jeść spaghetti z sosem?"
       },
       "a": {
         "en": "It's best not to. Sauces are often made with onion or garlic, and even traces of these in cooked food can be toxic to dogs.",
         "sl": "Bolje ne. Omake pogosto vsebujejo čebulo ali česen, ti pa so za pse lahko strupeni že v sledovih v kuhani hrani.",
-        "cs": "Raději ne. Omáčky se často dělají s cibulí nebo česnekem a pro psy mohou být jedovaté i stopy v uvařeném jídle."
+        "es": "Es mejor que no. Las salsas suelen llevar cebolla o ajo, e incluso las trazas de estos en la comida cocinada pueden ser tóxicas para los perros.",
+        "cs": "Raději ne. Omáčky se často dělají s cibulí nebo česnekem a pro psy mohou být jedovaté i stopy v uvařeném jídle.",
+        "hr": "Bolje ne. Umaci se često prave s lukom ili češnjakom, a čak i tragovi toga u kuhanoj hrani mogu biti otrovni za pse.",
+        "sv": "Det är bäst att låta bli. Såser görs ofta med lök eller vitlök, och även spår av dessa i tillagad mat kan vara giftiga för hundar.",
+        "da": "Helst ikke. Sovse er ofte lavet med løg eller hvidløg, og selv spor af dem i tilberedt mad kan være giftige for hunde.",
+        "fi": "Ei kannata. Kastikkeet tehdään usein sipulista tai valkosipulista, ja jopa jäljet niistä kypsennetyssä ruoassa voivat olla koirille myrkyllisiä.",
+        "nb": "Det er best å la være. Sauser lages ofte med løk eller hvitløk, og selv rester av disse i tilberedt mat kan være giftige for hunder.",
+        "it": "Meglio di no. I sughi sono spesso fatti con cipolla o aglio, e anche tracce di questi ingredienti nel cibo cotto possono essere tossiche per i cani.",
+        "de": "Besser nicht. Soßen werden oft mit Zwiebel oder Knoblauch gemacht, und selbst Spuren davon in gekochtem Essen können für Hunde giftig sein.",
+        "fr": "Mieux vaut éviter. Les sauces sont souvent préparées avec de l’oignon ou de l’ail, et même des traces de ces aliments dans un plat cuit peuvent être toxiques pour les chiens.",
+        "pt": "O melhor é não dar. Os molhos são muitas vezes feitos com cebola ou alho, e até vestígios destes em comida cozinhada podem ser tóxicos para os cães.",
+        "nl": "Liever niet. Sauzen worden vaak met ui of knoflook gemaakt, en zelfs sporen daarvan in gaar voedsel kunnen giftig zijn voor honden.",
+        "pl": "Lepiej nie. Do sosów często dodaje się cebulę lub czosnek, a nawet ich ślady w ugotowanym jedzeniu mogą być toksyczne dla psów."
       }
     },
     {
       "q": {
         "en": "Can pasta help a dog with an upset stomach?",
         "sl": "Ali testenine pomagajo psu pri prebavnih težavah?",
-        "cs": "Mohou těstoviny pomoci psovi s podrážděným žaludkem?"
+        "es": "¿Puede la pasta ayudar a un perro con malestar de estómago?",
+        "cs": "Mohou těstoviny pomoci psovi s podrážděným žaludkem?",
+        "hr": "Može li tjestenina pomoći psu s osjetljivim želucem?",
+        "sv": "Kan pasta hjälpa en hund med orolig mage?",
+        "da": "Kan pasta hjælpe en hund med dårlig mave?",
+        "fi": "Voiko pasta auttaa koiraa, jolla on vatsavaivoja?",
+        "nb": "Kan pasta hjelpe en hund med urolig mage?",
+        "it": "La pasta può aiutare un cane con mal di pancia?",
+        "de": "Kann Pasta einem Hund mit Magenbeschwerden helfen?",
+        "fr": "Les pâtes peuvent-elles aider un chien qui a des troubles digestifs ?",
+        "pt": "A massa pode ajudar um cão com indisposição de estômago?",
+        "nl": "Kan pasta helpen bij een hond met maagklachten?",
+        "pl": "Czy makaron pomoże psu z rozstrojonym żołądkiem?"
       },
       "a": {
         "en": "Cooked pasta is one option when a sick dog needs a bland diet, but such a diet is not balanced and not safe to feed long-term.",
         "sl": "Kuhane testenine so ena od možnosti, ko bolan pes potrebuje blago dieto, vendar taka dieta ni uravnotežena in je ni varno dajati dolgoročno.",
-        "cs": "Uvařené těstoviny jsou jednou z možností, když nemocný pes potřebuje šetřící dietu, ale taková dieta není vyvážená a není bezpečná pro dlouhodobé krmení."
+        "es": "La pasta cocida es una opción cuando un perro enfermo necesita una dieta blanda, pero esa dieta no es equilibrada y no es segura para dar a largo plazo.",
+        "cs": "Uvařené těstoviny jsou jednou z možností, když nemocný pes potřebuje šetřící dietu, ale taková dieta není vyvážená a není bezpečná pro dlouhodobé krmení.",
+        "hr": "Kuhana tjestenina jedna je od mogućnosti kad bolesnom psu treba blaga dijeta, ali takva dijeta nije uravnotežena i nije sigurna za dugotrajno hranjenje.",
+        "sv": "Kokt pasta är ett alternativ när en sjuk hund behöver skonkost, men en sådan kost är inte balanserad och inte säker att ge långvarigt.",
+        "da": "Kogt pasta er en mulighed, når en syg hund har brug for skånekost, men sådan en kost er ikke afbalanceret og ikke sikker at give på længere sigt.",
+        "fi": "Keitetty pasta on yksi vaihtoehto, kun sairas koira tarvitsee kevyttä ruokavaliota, mutta sellainen ruokavalio ei ole tasapainoinen eikä turvallinen pitkäaikaiseen ruokintaan.",
+        "nb": "Tilberedt pasta er et alternativ når en syk hund trenger skånekost, men en slik kost er ikke balansert og ikke trygg å gi over lang tid.",
+        "it": "La pasta cotta è un’opzione quando un cane malato ha bisogno di una dieta in bianco, ma questa dieta non è equilibrata e non è sicura da dare a lungo termine.",
+        "de": "Gekochte Pasta ist eine Möglichkeit, wenn ein kranker Hund eine Schonkost braucht, aber eine solche Kost ist nicht ausgewogen und für die Dauerfütterung nicht geeignet.",
+        "fr": "Les pâtes cuites sont une option quand un chien malade a besoin d’une alimentation douce, mais ce régime n’est pas équilibré et ne convient pas à une alimentation à long terme.",
+        "pt": "A massa cozida é uma opção quando um cão doente precisa de uma dieta suave, mas essa dieta não é equilibrada nem segura para uma alimentação prolongada.",
+        "nl": "Gekookte pasta is een van de mogelijkheden als een zieke hond een licht verteerbaar dieet nodig heeft, maar zo’n dieet is niet uitgebalanceerd en niet geschikt om langdurig te geven.",
+        "pl": "Ugotowany makaron to jedna z opcji, gdy chory pies potrzebuje lekkostrawnej diety, ale taka dieta nie jest zbilansowana i nie jest bezpieczna do długotrwałego karmienia."
       }
     }
   ],
@@ -143,10 +287,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "b0b963350389499f2163af1c23d777873d6e5f9cce929d28005f060f419053b7"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "caec2d549e6aa5dd4f9c83dcf0baa60bae4f7c9cf118c161472752e0c2e6d962"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7f15daf75b23033765d496442f4bba64f6bd652376ee6d59c8a7430ece109159"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5336b69f10aa899219c46d9835e576475515a1a88d002baa18838828df003625"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "48b5032f13008c31c45f9b4a25e4c0bd05103aefbe182de7ba706bc6548d508d"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e32f8cbd49ae065146a31d73fe6e9a9b3fef0f7c96456603f6cb7b57ca723cff"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ea815d7e026b28143d52d857d5bd5172805d0cac708dbd3880a71825cbbed104"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7dc9d9b9e26c49c871fd954c6e228faff7ace826b758f7bfc07d3715fbe83ff4"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67571ac73187c901f604f4d6a3207a36b9dd85091539a0ae1fb6377e48dae6d1"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9ffb6d359213ddcde9b9260ce831d40cfb2d56f5c8f62ed6bae84b722563daf0"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3a2630a74c498e91b1615eac63cbf883291a2ceca693fc5781008a367b05f944"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c84d146a6cf340ee638739d9d1fa8db0989e960a596c2aeefe6062e0f91ff6ad"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "08b832e81efb7d1849938b3712bb1f697f0c9168f83292b1529d92dfd9d63ecc"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "b2ec82a47b699f0d3331deedce801ca4512bae5732296ce4b14f3c31a1a6e598"
     }
   }
 }

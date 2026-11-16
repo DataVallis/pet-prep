@@ -3,57 +3,213 @@
   "species": "dog",
   "name": {
     "en": "Broth and stock",
-    "sl": "Juha in jušna osnova"
+    "sl": "Juha in jušna osnova",
+    "es": "Caldo",
+    "hr": "Juha i temeljac",
+    "sv": "Buljong och fond",
+    "da": "Bouillon og fond",
+    "fi": "Liemi",
+    "nb": "Buljong og kraft",
+    "it": "Brodo",
+    "de": "Brühe und Fond",
+    "fr": "Bouillon et fond",
+    "pt": "Caldo",
+    "nl": "Bouillon",
+    "pl": "Bulion i wywar",
+    "cs": "Vývar a bujónové kostky"
   },
   "question": {
     "en": "Can dogs have broth?",
-    "sl": "Ali lahko psi pijejo juho?"
+    "sl": "Ali lahko psi pijejo juho?",
+    "es": "¿Pueden los perros tomar caldo?",
+    "hr": "Smiju li psi jesti juhu?",
+    "sv": "Får hundar dricka buljong?",
+    "da": "Må hunde få bouillon?",
+    "fi": "Saako koira juoda lientä?",
+    "nb": "Kan hunder få buljong eller kraft?",
+    "it": "I cani possono mangiare il brodo?",
+    "de": "Dürfen Hunde Brühe bekommen?",
+    "fr": "Les chiens peuvent-ils boire du bouillon ?",
+    "pt": "Os cães podem tomar caldo?",
+    "nl": "Mogen honden bouillon krijgen?",
+    "pl": "Czy psy mogą pić bulion?",
+    "cs": "Mohou psi dostat vývar?"
   },
   "url_slug": {
     "en": "broth",
-    "sl": "juha"
+    "sl": "juha",
+    "es": "caldo",
+    "hr": "juha-i-temeljac",
+    "sv": "buljong",
+    "da": "bouillon",
+    "fi": "liemi",
+    "nb": "buljong-og-kraft",
+    "it": "brodo",
+    "de": "bruehe",
+    "fr": "bouillon",
+    "pt": "caldo",
+    "nl": "bouillon",
+    "pl": "bulion",
+    "cs": "vyvar"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little low-sodium broth is fine. Vets sometimes suggest adding a bit of low-sodium chicken, vegetable or beef broth to a dog's food for flavour. Skip stock cubes, which are very salty, and broths made with onions, garlic or added salt.",
-    "sl": "Da, malo juhe z nizko vsebnostjo soli je v redu. Veterinarji včasih svetujejo, da psu v hrano za boljši okus dodate malo piščančje, zelenjavne ali goveje juhe z malo soli. Izogibajte se jušnim kockam, ki so zelo slane, in juham s čebulo, česnom ali dodano soljo."
+    "sl": "Da, malo juhe z nizko vsebnostjo soli je v redu. Veterinarji včasih svetujejo, da psu v hrano za boljši okus dodate malo piščančje, zelenjavne ali goveje juhe z malo soli. Izogibajte se jušnim kockam, ki so zelo slane, in juham s čebulo, česnom ali dodano soljo.",
+    "es": "Sí, un poco de caldo bajo en sodio no hace daño. A veces los veterinarios recomiendan añadir un poco de caldo de pollo, de verduras o de ternera bajo en sodio a la comida del perro para darle sabor. Evita las pastillas de caldo, que son muy saladas, y los caldos hechos con cebolla, ajo o sal añadida.",
+    "hr": "Da, malo juhe s malo natrija u redu je. Veterinari ponekad predlažu da se hrani za psa doda malo pileće, povrtne ili goveđe juhe s malo natrija radi okusa. Ne koristi kocke za juhu, koje su jako slane, ni juhe s lukom, češnjakom ili dodanom soli.",
+    "sv": "Ja, lite natriumfattig buljong går bra. Veterinärer föreslår ibland att man tillsätter lite natriumfattig kyckling-, grönsaks- eller nötbuljong i hundens mat för smakens skull. Hoppa över buljongtärningar, som är mycket salta, och buljonger gjorda med lök, vitlök eller tillsatt salt.",
+    "da": "Ja, lidt natriumfattig bouillon er fint. Dyrlæger foreslår nogle gange at komme lidt natriumfattig hønsebouillon, grøntsagsbouillon eller oksebouillon i hundens foder for at give det smag. Undlad bouillonterninger, som er meget salte, og bouillon lavet med løg, hvidløg eller tilsat salt.",
+    "fi": "Saa, vähän vähäsuolaista lientä sopii. Eläinlääkärit ehdottavat joskus lisäämään koiran ruokaan vähän vähäsuolaista kana-, kasvis- tai naudanlientä maun vuoksi. Jätä väliin liemikuutiot, jotka ovat hyvin suolaisia, sekä liemet, joissa on sipulia, valkosipulia tai lisättyä suolaa.",
+    "nb": "Ja, litt natriumfattig kraft er greit. Dyrleger foreslår noen ganger å tilsette litt natriumfattig kylling-, grønnsaks- eller oksekraft i maten til hunden for å gi smak. Unngå buljongterninger, som er veldig salte, og kraft laget med løk, hvitløk eller tilsatt salt.",
+    "it": "Sì, un po’ di brodo a basso contenuto di sodio va bene. I veterinari a volte consigliano di aggiungere un po’ di brodo di pollo, di verdure o di manzo a basso contenuto di sodio al cibo del cane per renderlo più saporito. Evita i dadi, molto salati, e i brodi preparati con cipolla, aglio o sale aggiunto.",
+    "de": "Ja, ein wenig salzarme Brühe ist in Ordnung. Tierärzte empfehlen manchmal, etwas salzarme Hühner-, Gemüse- oder Rinderbrühe unter das Futter zu geben, damit es besser schmeckt. Verzichten Sie auf Brühwürfel, die sehr salzig sind, und auf Brühen mit Zwiebeln, Knoblauch oder zugesetztem Salz.",
+    "fr": "Oui, un peu de bouillon pauvre en sel convient. Les vétérinaires conseillent parfois d’ajouter un peu de bouillon de poulet, de légumes ou de bœuf pauvre en sel à la nourriture d’un chien pour la rendre plus savoureuse. Évitez les cubes de bouillon, très salés, ainsi que les bouillons préparés avec de l’oignon, de l’ail ou du sel ajouté.",
+    "pt": "Sim, um pouco de caldo com pouco sal não faz mal. Os veterinários sugerem por vezes juntar um pouco de caldo de galinha, de legumes ou de vaca com pouco sal à comida do cão, para dar sabor. Evita os cubos de caldo, que são muito salgados, e os caldos feitos com cebola, alho ou sal adicionado.",
+    "nl": "Ja, een beetje zoutarme bouillon is prima. Dierenartsen raden soms aan om een beetje zoutarme kippen-, groente- of runderbouillon door het voer van een hond te doen voor de smaak. Gebruik geen bouillonblokjes, want die zijn erg zout, en ook geen bouillon met ui, knoflook of toegevoegd zout.",
+    "pl": "Tak, odrobina bulionu o niskiej zawartości sodu jest w porządku. Weterynarze czasem radzą dodać do karmy psa trochę takiego bulionu drobiowego, warzywnego lub wołowego, żeby lepiej smakowała. Nie podawaj kostek bulionowych, bo są bardzo słone, ani bulionów z cebulą, czosnkiem lub dodatkiem soli.",
+    "cs": "Ano, trochu vývaru s nízkým obsahem soli nevadí. Veterináři někdy radí přidat psovi do krmiva trochu kuřecího, zeleninového nebo hovězího vývaru s nízkým obsahem soli, aby chutnalo. Vyhněte se bujónovým kostkám, které jsou velmi slané, a vývarům s cibulí, česnekem nebo přidanou solí."
   },
   "why": {
     "en": "Bouillon (stock) cubes used to make stock and gravy contain a lot of sodium, which can cause stomach and gut problems and even seizures. Some ready-made broths may contain onions, garlic or salt, added for taste and to keep them longer, and onions and garlic can be found in many pre-made foods. That's why only plain, low-sodium broth with dog-safe ingredients is a good choice.",
-    "sl": "Jušne kocke, iz katerih se pripravljata osnova in omaka, vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče. Nekatere kupljene juhe lahko vsebujejo čebulo, česen ali sol, dodane za okus in daljšo obstojnost, čebula in česen pa sta lahko v številnih pripravljenih jedeh. Zato je primerna le navadna juha z malo soli in sestavinami, ki so za pse varne."
+    "sl": "Jušne kocke, iz katerih se pripravljata osnova in omaka, vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče. Nekatere kupljene juhe lahko vsebujejo čebulo, česen ali sol, dodane za okus in daljšo obstojnost, čebula in česen pa sta lahko v številnih pripravljenih jedeh. Zato je primerna le navadna juha z malo soli in sestavinami, ki so za pse varne.",
+    "es": "Las pastillas de caldo que se usan para hacer caldos y salsas llevan mucho sodio, que puede causar problemas de estómago e intestino e incluso convulsiones. Algunos caldos ya preparados pueden llevar cebolla, ajo o sal, añadidos para dar sabor y para que duren más, y la cebolla y el ajo están en muchos alimentos preparados. Por eso solo es buena opción un caldo sencillo, bajo en sodio y con ingredientes seguros para los perros.",
+    "hr": "Kocke za juhu (temeljac) kojima se pripremaju juha i umak sadrže mnogo natrija, što može izazvati probleme sa želucem i crijevima, pa čak i napadaje. Neke gotove juhe mogu sadržavati luk, češnjak ili sol, dodane radi okusa i dulje trajnosti, a luk i češnjak nalaze se u mnogim gotovim jelima. Zato je dobar izbor samo obična juha s malo natrija i sastojcima sigurnima za pse.",
+    "sv": "Buljongtärningar som används för att göra fond och sås innehåller mycket natrium, vilket kan orsaka mag- och tarmproblem och till och med kramper. En del färdiga buljonger kan innehålla lök, vitlök eller salt, som tillsätts för smakens skull och för att hålla längre, och lök och vitlök finns i många färdiglagade livsmedel. Därför är bara okryddad, natriumfattig buljong med hundsäkra ingredienser ett bra val.",
+    "da": "Bouillonterninger (fondterninger), der bruges til at lave fond og sovs, indeholder meget natrium, som kan give problemer med mave og tarm og endda kramper. Nogle færdiglavede bouilloner kan indeholde løg, hvidløg eller salt, tilsat for smagens skyld og for at holde sig længere, og løg og hvidløg findes i mange færdiglavede produkter. Derfor er det kun almindelig, natriumfattig bouillon med ingredienser, der er ufarlige for hunde, der er et godt valg.",
+    "fi": "Liemikuutiot, joita käytetään liemen ja kastikkeen tekoon, sisältävät paljon natriumia, mikä voi aiheuttaa vatsa- ja suolisto-ongelmia ja jopa kouristuksia. Joissakin valmisliemissä voi olla sipulia, valkosipulia tai suolaa, joita on lisätty makua varten ja säilyvyyden parantamiseksi, ja sipulia ja valkosipulia on monissa valmisruoissa. Siksi hyvä valinta on vain maustamaton, vähäsuolainen liemi, jossa on koiralle turvallisia ainesosia.",
+    "nb": "Buljongterninger til kraft og saus inneholder mye natrium, noe som kan gi problemer med mage og tarm og til og med kramper. Noen ferdiglagde kraftprodukter kan inneholde løk, hvitløk eller salt, tilsatt for smakens og holdbarhetens skyld, og løk og hvitløk finnes i mange ferdigretter. Derfor er bare naturell, natriumfattig kraft med ingredienser som er trygge for hunder, et godt valg.",
+    "it": "I dadi da brodo usati per preparare brodi e sughi contengono molto sodio, che può causare problemi a stomaco e intestino e persino convulsioni. Alcuni brodi pronti possono contenere cipolla, aglio o sale, aggiunti per dare sapore e farli durare più a lungo, e cipolla e aglio si trovano in molti cibi già pronti. Per questo va bene solo un brodo semplice, a basso contenuto di sodio e con ingredienti adatti ai cani.",
+    "de": "Brühwürfel für Fond und Soßen enthalten viel Natrium, das Magen-Darm-Probleme und sogar Krampfanfälle verursachen kann. Manche fertige Brühen enthalten Zwiebeln, Knoblauch oder Salz, die für Geschmack und Haltbarkeit zugesetzt werden, und Zwiebeln und Knoblauch stecken in vielen Fertiggerichten. Deshalb ist nur ungewürzte, salzarme Brühe mit für Hunde unbedenklichen Zutaten eine gute Wahl.",
+    "fr": "Les cubes de bouillon ou de fond utilisés pour préparer bouillons et sauces contiennent beaucoup de sodium, qui peut provoquer des problèmes d’estomac et d’intestin, voire des convulsions. Certains bouillons prêts à l’emploi peuvent contenir de l’oignon, de l’ail ou du sel, ajoutés pour le goût et pour une meilleure conservation, et on trouve de l’oignon et de l’ail dans de nombreux produits préparés. C’est pourquoi seul un bouillon nature, pauvre en sel et composé d’ingrédients sans danger pour les chiens, est un bon choix.",
+    "pt": "Os cubos de caldo usados para fazer caldos e molhos têm muito sódio, que pode causar problemas no estômago e nos intestinos e até convulsões. Alguns caldos prontos podem conter cebola, alho ou sal, adicionados para dar sabor e para durarem mais tempo, e a cebola e o alho encontram-se em muitos alimentos já preparados. Por isso, só é boa escolha um caldo simples, com pouco sal e ingredientes seguros para cães.",
+    "nl": "Bouillonblokjes waarmee je bouillon en jus maakt, bevatten veel natrium, wat maag- en darmklachten en zelfs toevallen kan veroorzaken. Sommige kant-en-klare bouillons bevatten ui, knoflook of zout, toegevoegd voor de smaak en om ze langer houdbaar te maken, en ui en knoflook zitten in veel kant-en-klare producten. Daarom is alleen gewone, zoutarme bouillon met ingrediënten die veilig zijn voor honden een goede keuze.",
+    "pl": "Kostki bulionowe, z których robi się wywar i sos, zawierają dużo sodu, który może powodować problemy z żołądkiem i jelitami, a nawet drgawki. Niektóre gotowe buliony mogą zawierać cebulę, czosnek lub sól, dodawane dla smaku i dłuższej trwałości, a cebula i czosnek trafiają się w wielu gotowych produktach. Dlatego dobrym wyborem jest tylko bulion bez dodatków, o niskiej zawartości sodu, ze składników bezpiecznych dla psów.",
+    "cs": "Bujónové kostky na přípravu vývarů a omáček obsahují hodně sodíku, který může způsobit potíže se žaludkem a střevy a dokonce záchvaty. Některé hotové vývary mohou obsahovat cibuli, česnek nebo sůl, přidané kvůli chuti a delší trvanlivosti. Cibule a česnek se přitom nacházejí v mnoha hotových jídlech. Proto je dobrou volbou jen obyčejný vývar s nízkým obsahem soli a složkami bezpečnými pro psy."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog had broth made with onions or garlic, contact your vet as soon as possible.",
-    "sl": "Če je pes dobil juho s čebulo ali česnom, se čim prej obrnite na veterinarja."
+    "sl": "Če je pes dobil juho s čebulo ali česnom, se čim prej obrnite na veterinarja.",
+    "es": "Si tu perro ha tomado caldo hecho con cebolla o ajo, ponte en contacto con tu veterinario cuanto antes.",
+    "hr": "Ako je pas pojeo juhu s lukom ili češnjakom, što prije se obrati veterinaru.",
+    "sv": "Om din hund har fått buljong gjord med lök eller vitlök ska du kontakta din veterinär så snart som möjligt.",
+    "da": "Hvis din hund har fået bouillon lavet med løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt.",
+    "fi": "Jos koirasi sai lientä, jossa oli sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian.",
+    "nb": "Hvis hunden har fått kraft laget med løk eller hvitløk, må du kontakte dyrlegen så snart som mulig.",
+    "it": "Se il tuo cane ha mangiato brodo preparato con cipolla o aglio, contatta il veterinario il prima possibile.",
+    "de": "Hat Ihr Hund Brühe mit Zwiebeln oder Knoblauch bekommen, wenden Sie sich so schnell wie möglich an Ihren Tierarzt.",
+    "fr": "Si votre chien a bu du bouillon préparé avec de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible.",
+    "pt": "Se o teu cão tomou caldo feito com cebola ou alho, fala com o teu veterinário o mais depressa possível.",
+    "nl": "Heeft je hond bouillon met ui of knoflook binnengekregen, neem dan zo snel mogelijk contact op met je dierenarts.",
+    "pl": "Jeśli pies dostał bulion z cebulą lub czosnkiem, jak najszybciej skontaktuj się z weterynarzem.",
+    "cs": "Pokud pes dostal vývar s cibulí nebo česnekem, co nejdříve se obraťte na veterináře."
   },
   "serving": {
     "en": "Choose a plain, low-sodium broth without onion or garlic, and add just a bit to your dog's food for flavour. If you make broth at home, remove the hardened layer of fat once it has cooled, and never give your dog the cooked bones.",
-    "sl": "Izberite navadno juho z malo soli, brez čebule in česna, in je psu dodajte le malo v hrano za okus. Če juho skuhate doma, z ohlajene juhe odstranite strjeno plast maščobe, kuhanih kosti pa psu nikoli ne dajajte."
+    "sl": "Izberite navadno juho z malo soli, brez čebule in česna, in je psu dodajte le malo v hrano za okus. Če juho skuhate doma, z ohlajene juhe odstranite strjeno plast maščobe, kuhanih kosti pa psu nikoli ne dajajte.",
+    "es": "Elige un caldo sencillo, bajo en sodio y sin cebolla ni ajo, y añade solo un poco a la comida de tu perro para darle sabor. Si haces el caldo en casa, retira la capa de grasa endurecida cuando se haya enfriado y no le des nunca a tu perro los huesos cocinados.",
+    "hr": "Odaberi običnu juhu s malo natrija, bez luka i češnjaka, i dodaj samo malo u hranu psa radi okusa. Ako juhu kuhaš kod kuće, kad se ohladi skini stvrdnuti sloj masti i psu nikad ne daj kuhane kosti.",
+    "sv": "Välj en okryddad, natriumfattig buljong utan lök eller vitlök och tillsätt bara lite i hundens mat för smakens skull. Om du gör buljong hemma, ta bort det stelnade fettlagret när den har svalnat, och ge aldrig hunden de tillagade benen.",
+    "da": "Vælg en almindelig, natriumfattig bouillon uden løg og hvidløg, og kom kun lidt i hundens foder for at give smag. Hvis du laver bouillon hjemme, skal du fjerne det størknede lag fedt, når den er kølet af, og aldrig give din hund de kogte knogler.",
+    "fi": "Valitse maustamaton, vähäsuolainen liemi ilman sipulia ja valkosipulia ja lisää koiran ruokaan vain vähän maun vuoksi. Jos teet lientä kotona, poista jähmettynyt rasvakerros sen jäähdyttyä äläkä koskaan anna koiralle kypsennettyjä luita.",
+    "nb": "Velg en naturell, natriumfattig kraft uten løk og hvitløk, og ha bare litt i maten til hunden for å gi smak. Hvis du lager kraft hjemme, fjern det stivnede fettlaget når kraften har kjølt seg ned, og gi aldri hunden de kokte beina.",
+    "it": "Scegli un brodo semplice, a basso contenuto di sodio e senza cipolla né aglio, e aggiungine solo un po’ al cibo del tuo cane per dargli sapore. Se prepari il brodo in casa, togli lo strato di grasso solidificato quando si è raffreddato e non dare mai al cane le ossa cotte.",
+    "de": "Wählen Sie eine ungewürzte, salzarme Brühe ohne Zwiebel und Knoblauch und geben Sie nur einen Schuss davon unter das Futter Ihres Hundes, damit es besser schmeckt. Wenn Sie die Brühe selbst kochen, nehmen Sie nach dem Abkühlen die erstarrte Fettschicht ab und geben Sie Ihrem Hund niemals die gekochten Knochen.",
+    "fr": "Choisissez un bouillon nature, pauvre en sel, sans oignon ni ail, et n’en ajoutez qu’un peu à la nourriture de votre chien pour la rendre plus savoureuse. Si vous préparez le bouillon vous-même, retirez la couche de graisse figée une fois le bouillon refroidi, et ne donnez jamais à votre chien les os cuits.",
+    "pt": "Escolhe um caldo simples, com pouco sal e sem cebola nem alho, e junta só um pouco à comida do teu cão para dar sabor. Se fizeres o caldo em casa, retira a camada de gordura endurecida depois de arrefecer e nunca dês ao teu cão os ossos cozinhados.",
+    "nl": "Kies een gewone, zoutarme bouillon zonder ui of knoflook en doe er maar een klein beetje van door het voer van je hond voor de smaak. Maak je zelf bouillon, haal dan de gestolde vetlaag eraf als hij is afgekoeld en geef je hond nooit de gekookte botten.",
+    "pl": "Wybierz bulion bez dodatków, o niskiej zawartości sodu, bez cebuli i czosnku, i dodaj do karmy psa tylko odrobinę, dla smaku. Jeśli gotujesz bulion w domu, po ostygnięciu zdejmij stwardniałą warstwę tłuszczu i nigdy nie dawaj psu ugotowanych kości.",
+    "cs": "Vyberte obyčejný vývar s nízkým obsahem soli, bez cibule a česneku, a přidejte ho do psího krmiva jen trochu, pro chuť. Pokud vývar vaříte doma, po vychladnutí odstraňte ztuhlou vrstvu tuku a psovi nikdy nedávejte uvařené kosti."
   },
   "child": {
     "en": "A little plain broth can make dog food extra tasty. Ask a grown-up first, because some broths have onion and lots of salt.",
-    "sl": "Malo navadne juhe lahko pasjo hrano naredi še bolj okusno. Najprej vprašaj odraslega, ker imajo nekatere juhe čebulo in veliko soli."
+    "sl": "Malo navadne juhe lahko pasjo hrano naredi še bolj okusno. Najprej vprašaj odraslega, ker imajo nekatere juhe čebulo in veliko soli.",
+    "es": "Un poco de caldo sencillo puede hacer que la comida del perro esté aún más rica. Pregunta antes a un adulto, porque algunos caldos llevan cebolla y mucha sal.",
+    "hr": "Malo obične juhe može hranu za psa učiniti još ukusnijom. Prvo pitaj odraslu osobu, jer neke juhe imaju luk i puno soli.",
+    "sv": "Lite okryddad buljong kan göra hundmaten extra god. Fråga en vuxen först, för en del buljonger innehåller lök och mycket salt.",
+    "da": "Lidt almindelig bouillon kan få hundefoder til at smage ekstra godt. Spørg først en voksen, for nogle bouilloner indeholder løg og meget salt.",
+    "fi": "Vähän maustamatonta lientä voi tehdä koiranruoasta erityisen herkullista. Kysy ensin aikuiselta, sillä joissakin liemissä on sipulia ja paljon suolaa.",
+    "nb": "Litt naturell kraft kan gjøre hundematen ekstra god. Spør en voksen først, for noen kraftprodukter inneholder løk og mye salt.",
+    "it": "Un po’ di brodo semplice può rendere il cibo del cane ancora più buono. Chiedi prima a un adulto, perché alcuni brodi contengono cipolla e molto sale.",
+    "de": "Ein bisschen ungewürzte Brühe macht das Hundefutter extra lecker. Frag vorher einen Erwachsenen, denn manche Brühen enthalten Zwiebel und viel Salz.",
+    "fr": "Un peu de bouillon nature peut rendre la gamelle encore plus appétissante. Demande d’abord à un adulte, car certains bouillons contiennent de l’oignon et beaucoup de sel.",
+    "pt": "Um pouco de caldo simples pode deixar a comida do cão ainda mais saborosa. Pergunta primeiro a um adulto, porque alguns caldos têm cebola e muito sal.",
+    "nl": "Een beetje gewone bouillon maakt hondenvoer extra lekker. Vraag het eerst aan een volwassene, want sommige bouillons bevatten ui en veel zout.",
+    "pl": "Odrobina bulionu bez dodatków może sprawić, że psia karma będzie jeszcze smaczniejsza. Najpierw zapytaj dorosłego, bo niektóre buliony zawierają cebulę i dużo soli.",
+    "cs": "Trocha obyčejného vývaru může psí krmivo báječně ochutit. Nejdřív se zeptej dospělého, protože některé vývary obsahují cibuli a hodně soli."
   },
   "faq": [
     {
       "q": {
         "en": "Can I use a stock cube?",
-        "sl": "Ali lahko uporabim jušno kocko?"
+        "sl": "Ali lahko uporabim jušno kocko?",
+        "es": "¿Puedo usar una pastilla de caldo?",
+        "hr": "Smijem li upotrijebiti kocku za juhu?",
+        "sv": "Kan jag använda en buljongtärning?",
+        "da": "Må jeg bruge en bouillonterning?",
+        "fi": "Voinko käyttää liemikuutiota?",
+        "nb": "Kan jeg bruke en buljongterning?",
+        "it": "Posso usare un dado?",
+        "de": "Darf ich einen Brühwürfel verwenden?",
+        "fr": "Puis-je utiliser un cube de bouillon ?",
+        "pt": "Posso usar um cubo de caldo?",
+        "nl": "Mag ik een bouillonblokje gebruiken?",
+        "pl": "Czy mogę użyć kostki bulionowej?",
+        "cs": "Mohu použít bujónovou kostku?"
       },
       "a": {
         "en": "No. Bouillon cubes used for making stock and gravy contain high amounts of sodium, which can lead to stomach and gut problems and even seizures.",
-        "sl": "Ne. Jušne kocke za pripravo osnove in omake vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče."
+        "sl": "Ne. Jušne kocke za pripravo osnove in omake vsebujejo veliko natrija, ki lahko povzroči težave z želodcem in črevesjem, celo krče.",
+        "es": "No. Las pastillas de caldo que se usan para hacer caldos y salsas llevan mucho sodio, que puede causar problemas de estómago e intestino e incluso convulsiones.",
+        "hr": "Ne. Kocke za temeljac kojima se pripremaju juha i umak sadrže mnogo natrija, što može dovesti do problema sa želucem i crijevima, pa čak i do napadaja.",
+        "sv": "Nej. Buljongtärningar som används för att göra fond och sås innehåller mycket natrium, vilket kan leda till mag- och tarmproblem och till och med kramper.",
+        "da": "Nej. Bouillonterninger, som bruges til at lave fond og sovs, indeholder meget natrium, som kan give problemer med mave og tarm og endda kramper.",
+        "fi": "Ei. Liemen ja kastikkeen tekoon käytettävät liemikuutiot sisältävät paljon natriumia, mikä voi johtaa vatsa- ja suolisto-ongelmiin ja jopa kouristuksiin.",
+        "nb": "Nei. Buljongterninger til kraft og saus inneholder mye natrium, noe som kan gi problemer med mage og tarm og til og med kramper.",
+        "it": "No. I dadi usati per preparare brodi e sughi contengono molto sodio, che può causare problemi a stomaco e intestino e persino convulsioni.",
+        "de": "Nein. Brühwürfel für Fond und Soßen enthalten viel Natrium, das zu Magen-Darm-Problemen und sogar zu Krampfanfällen führen kann.",
+        "fr": "Non. Les cubes de bouillon utilisés pour préparer bouillons et sauces contiennent beaucoup de sodium, qui peut provoquer des problèmes d’estomac et d’intestin, voire des convulsions.",
+        "pt": "Não. Os cubos de caldo usados para fazer caldos e molhos têm muito sódio, que pode causar problemas no estômago e nos intestinos e até convulsões.",
+        "nl": "Nee. Bouillonblokjes waarmee je bouillon en jus maakt, bevatten veel natrium, wat kan leiden tot maag- en darmklachten en zelfs toevallen.",
+        "pl": "Nie. Kostki bulionowe, z których robi się wywar i sos, zawierają dużo sodu, który może powodować problemy z żołądkiem i jelitami, a nawet drgawki.",
+        "cs": "Ne. Bujónové kostky na přípravu vývarů a omáček obsahují velké množství sodíku, který může způsobit potíže se žaludkem a střevy a dokonce záchvaty."
       }
     },
     {
       "q": {
         "en": "Can broth help a dog who won't eat?",
-        "sl": "Ali lahko juha pomaga psu, ki noče jesti?"
+        "sl": "Ali lahko juha pomaga psu, ki noče jesti?",
+        "es": "¿Puede el caldo ayudar a un perro que no quiere comer?",
+        "hr": "Može li juha pomoći psu koji ne želi jesti?",
+        "sv": "Kan buljong hjälpa en hund som inte vill äta?",
+        "da": "Kan bouillon hjælpe en hund, der ikke vil spise?",
+        "fi": "Voiko liemi auttaa koiraa, joka ei syö?",
+        "nb": "Kan kraft hjelpe en hund som ikke vil spise?",
+        "it": "Il brodo può aiutare un cane che non vuole mangiare?",
+        "de": "Kann Brühe einem Hund helfen, der nicht fressen will?",
+        "fr": "Le bouillon peut-il aider un chien qui refuse de manger ?",
+        "pt": "O caldo pode ajudar um cão que não quer comer?",
+        "nl": "Kan bouillon helpen bij een hond die niet wil eten?",
+        "pl": "Czy bulion pomoże psu, który nie chce jeść?",
+        "cs": "Může vývar pomoci psovi, který nechce jíst?"
       },
       "a": {
         "en": "Adding a bit of low-sodium broth is one of the simple steps vets suggest to make food tastier. Your vet can give you specific advice.",
-        "sl": "Dodajanje malo juhe z nizko vsebnostjo soli je eden od preprostih korakov, ki jih veterinarji svetujejo, da bi bila hrana bolj okusna. Veterinar vam lahko svetuje bolj natančno."
+        "sl": "Dodajanje malo juhe z nizko vsebnostjo soli je eden od preprostih korakov, ki jih veterinarji svetujejo, da bi bila hrana bolj okusna. Veterinar vam lahko svetuje bolj natančno.",
+        "es": "Añadir un poco de caldo bajo en sodio es una de las medidas sencillas que recomiendan los veterinarios para que la comida resulte más apetecible. Tu veterinario puede darte un consejo concreto.",
+        "hr": "Dodavanje malo juhe s malo natrija jedan je od jednostavnih koraka koje veterinari predlažu da bi hrana bila ukusnija. Veterinar ti može dati konkretan savjet.",
+        "sv": "Att tillsätta lite natriumfattig buljong är ett av de enkla steg som veterinärer föreslår för att göra maten godare. Din veterinär kan ge dig specifika råd.",
+        "da": "Lidt natriumfattig bouillon i maden er et af de enkle trin, som dyrlæger foreslår for at få maden til at smage bedre. Din dyrlæge kan give dig konkrete råd.",
+        "fi": "Vähän vähäsuolaista lientä on yksi eläinlääkärien ehdottamista yksinkertaisista keinoista tehdä ruoasta maukkaampaa. Eläinlääkäri voi antaa tarkempia neuvoja.",
+        "nb": "Å tilsette litt natriumfattig kraft er et av de enkle grepene dyrleger foreslår for å gjøre maten mer fristende. Dyrlegen din kan gi deg konkrete råd.",
+        "it": "Aggiungere un po’ di brodo a basso contenuto di sodio è uno dei semplici accorgimenti che i veterinari suggeriscono per rendere il cibo più appetitoso. Il tuo veterinario può darti indicazioni specifiche.",
+        "de": "Ein wenig salzarme Brühe ist eine der einfachen Maßnahmen, die Tierärzte empfehlen, damit das Futter besser schmeckt. Ihr Tierarzt kann Sie genauer beraten.",
+        "fr": "Ajouter un peu de bouillon pauvre en sel fait partie des gestes simples que suggèrent les vétérinaires pour rendre la nourriture plus appétissante. Votre vétérinaire peut vous donner des conseils précis.",
+        "pt": "Juntar um pouco de caldo com pouco sal é um dos passos simples que os veterinários sugerem para tornar a comida mais apetitosa. O teu veterinário pode dar-te conselhos concretos.",
+        "nl": "Een beetje zoutarme bouillon is een van de simpele tips van dierenartsen om voer smakelijker te maken. Je dierenarts kan je gericht advies geven.",
+        "pl": "Odrobina bulionu o niskiej zawartości sodu dodana do karmy to jeden z prostych sposobów, które podpowiadają weterynarze, by jedzenie smakowało psu bardziej. Konkretnej porady udzieli ci weterynarz.",
+        "cs": "Trocha vývaru s nízkým obsahem soli je jedním z jednoduchých způsobů, které veterináři doporučují, aby psovi jídlo chutnalo víc. Konkrétní radu vám dá veterinář."
       }
     }
   ],
@@ -125,6 +281,71 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "269d92a8fd5c6f4b21a117ff293ffdc0d809ff61daedd5c93c7df6fd6f10a117"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8aef61623a1df27adb41a728d680aa63f4ffbbd663febf3356c6dbbb3a7a938a"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "826515cfa707671b23b18b28b4f54ad21d51ce840c3bbd58704392ef3789f9c4"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9ac689b218590f3016c1bb54e985401b76909374c8569598524df04b9c9c4316"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "394a8d058a1758292932f8b298eb81067a23560880b5011224688c0de73f1d99"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "021d44e4f78bfb9e22536da1e0ffab7d3d47193b64529bb172a58788614f5e14"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8e8456714a2c6c2b8c75ded8c58c945af7057a75156725f83b48ff5ba0255e17"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7db9588a6e154b50ecfb7fab26e1cf04e49c4c9766ac1e09fb2a1fc3181ebbf1"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "81d8423b5e81a89e9a54b216ade0f776f0351ed7beb1114e491fbc136611a8ae"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "45df6b9a8349bbaa1116f39df495dc6e30d7916322ffe5ad0522e5c8c2ad4dc5"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6f97231b14b2af941201f1fcb6cc9f8f915142294e4dec7e533da2c0cf1dc74c"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "931efd12353307acf330a72aacb39d98935471eb1f63c68f84f5ba3ceaea14df"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "e941de45e6f0414310b570feacb19ba0b7c03a237de4855aef338441e284fa31"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "a687e13dd5ce0c7e3e04269f09019e54200fa7ca13aeda5616521be033b7af39"
     }
   }
 }

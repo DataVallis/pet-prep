@@ -37,7 +37,8 @@
         "es": "Las mascotas hospitalizadas están vigiladas las 24 horas.",
         "it": "Gli animali ricoverati sono monitorati 24 ore su 24.",
         "pt": "Animais internados vigiados 24 horas.",
-        "nl": "Opgenomen huisdieren worden 24 uur per dag bewaakt."
+        "nl": "Opgenomen huisdieren worden 24 uur per dag bewaakt.",
+        "pl": "Hospitalizowane zwierzęta są monitorowane całą dobę."
       }
     },
     {
@@ -58,7 +59,8 @@
         "es": "Lun–vie 7:00–18:00 h, sáb 9:00–15:00 h. Línea telefónica fuera de horario para orientación urgente sobre síntomas.",
         "it": "Lun–ven 7:00–18:00, sab 9:00–15:00. Linea telefonica fuori orario per indicazioni sui sintomi urgenti.",
         "pt": "Segunda a sexta 7h00–18h00, sábado 9h00–15h00. Linha telefónica fora de horas para orientação sobre sintomas urgentes.",
-        "nl": "ma–vr 7.00–18.00 uur, za 9.00–15.00 uur. Buiten openingstijden telefoonlijn voor advies bij dringende klachten."
+        "nl": "ma–vr 7.00–18.00 uur, za 9.00–15.00 uur. Buiten openingstijden telefoonlijn voor advies bij dringende klachten.",
+        "pl": "Pon.–pt. 7:00–18:00, sob. 9:00–15:00. Po godzinach telefoniczna porada przy pilnych objawach."
       }
     },
     {
@@ -79,7 +81,8 @@
         "es": "Lun–vie 7:00–18:00 h, sáb 9:00–15:00 h. Línea telefónica fuera de horario para orientación urgente sobre síntomas.",
         "it": "Lun–ven 7:00–18:00, sab 9:00–15:00. Linea telefonica fuori orario per indicazioni sui sintomi urgenti.",
         "pt": "Segunda a sexta 7h00–18h00, sábado 9h00–15h00. Linha telefónica fora de horas para orientação sobre sintomas urgentes.",
-        "nl": "ma–vr 7.00–18.00 uur, za 9.00–15.00 uur. Buiten openingstijden telefoonlijn voor advies bij dringende klachten."
+        "nl": "ma–vr 7.00–18.00 uur, za 9.00–15.00 uur. Buiten openingstijden telefoonlijn voor advies bij dringende klachten.",
+        "pl": "Pon.–pt. 7:00–18:00, sob. 9:00–15:00. Po godzinach telefoniczna porada przy pilnych objawach."
       }
     },
     {
@@ -100,7 +103,8 @@
         "es": "Lun–vie 8:00–17:00 h. Línea telefónica fuera de horario para orientación urgente sobre síntomas.",
         "it": "Lun–ven 8:00–17:00. Linea telefonica fuori orario per indicazioni sui sintomi urgenti.",
         "pt": "Segunda a sexta 8h00–17h00. Linha telefónica fora de horas para orientação sobre sintomas urgentes.",
-        "nl": "ma–vr 8.00–17.00 uur. Buiten openingstijden telefoonlijn voor advies bij dringende klachten."
+        "nl": "ma–vr 8.00–17.00 uur. Buiten openingstijden telefoonlijn voor advies bij dringende klachten.",
+        "pl": "Pon.–pt. 8:00–17:00. Po godzinach telefoniczna porada przy pilnych objawach."
       }
     },
     {
@@ -121,7 +125,8 @@
         "es": "Lun–vie 9:00–18:00 h, sáb 9:00–14:00 h, dom y festivos cerrado. Línea telefónica de urgencias las 24 horas, todos los días, solo para pacientes registrados.",
         "it": "Lun–ven 9:00–18:00, sab 9:00–14:00, chiuso la domenica e nei festivi. Linea telefonica di emergenza 24 ore su 24, 7 giorni su 7, solo per pazienti registrati.",
         "pt": "Segunda a sexta 9h00–18h00, sábado 9h00–14h00, encerrado aos domingos e feriados. Linha de urgência telefónica 24 h/24, 7 dias por semana, apenas para pacientes registados.",
-        "nl": "ma–vr 9.00–18.00 uur, za 9.00–14.00 uur, gesloten op zondagen en feestdagen. 24/7 telefonische spoedlijn alleen voor geregistreerde patiënten."
+        "nl": "ma–vr 9.00–18.00 uur, za 9.00–14.00 uur, gesloten op zondagen en feestdagen. 24/7 telefonische spoedlijn alleen voor geregistreerde patiënten.",
+        "pl": "Pon.–pt. 9:00–18:00, sob. 9:00–14:00, niedz. i święta nieczynne. Całodobowa telefoniczna linia alarmowa tylko dla zarejestrowanych pacjentów."
       }
     }
   ],

@@ -1429,6 +1429,32 @@
             "prompt_hash": "sha256:c18fe29a9a2cf5d279ae192389b23d15c894895138196504d8e0c4b61f233163",
             "generated_at": "2026-11-15T07:08:35+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "wire_fox_terrier",
+            "species": "dog",
+            "colour": "tricolour",
+            "file": "dog/wire-fox-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:da6998b4be6d0ab21611d760327d854a990ed5f6af1cc2fe899b8a551c593fc6",
+            "generated_at": "2026-11-16T00:54:07+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "manchester_terrier",
+            "species": "dog",
+            "colour": "black-tan",
+            "file": "dog/manchester-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:ae1557919a6b02125466bcf3bb5c33d3e3f47bfae150df52c9b14ee9ba88d52d",
+            "generated_at": "2026-11-16T07:04:46+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [

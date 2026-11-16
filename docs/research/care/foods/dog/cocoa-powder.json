@@ -4,28 +4,88 @@
   "name": {
     "en": "Cocoa powder",
     "sl": "Kakav v prahu",
-    "cs": "Kakaový prášek"
+    "es": "Cacao en polvo",
+    "cs": "Kakaový prášek",
+    "hr": "Kakao u prahu",
+    "sv": "Kakaopulver",
+    "da": "Kakaopulver",
+    "fi": "Kaakaojauhe",
+    "nb": "Kakaopulver",
+    "it": "Cacao in polvere",
+    "de": "Kakaopulver",
+    "fr": "Cacao en poudre",
+    "pt": "Cacau em pó",
+    "nl": "Cacaopoeder",
+    "pl": "Kakao w proszku"
   },
   "question": {
     "en": "Can dogs eat cocoa powder?",
     "sl": "Ali lahko psi jedo kakav v prahu?",
-    "cs": "Mohou psi jíst kakaový prášek?"
+    "es": "¿Pueden los perros comer cacao en polvo?",
+    "cs": "Mohou psi jíst kakaový prášek?",
+    "hr": "Smiju li psi jesti kakao u prahu?",
+    "sv": "Får hundar äta kakaopulver?",
+    "da": "Må hunde spise kakaopulver?",
+    "fi": "Saako koira syödä kaakaojauhetta?",
+    "nb": "Kan hunder spise kakaopulver?",
+    "it": "I cani possono mangiare il cacao in polvere?",
+    "de": "Dürfen Hunde Kakaopulver fressen?",
+    "fr": "Les chiens peuvent-ils manger du cacao en poudre ?",
+    "pt": "Os cães podem comer cacau em pó?",
+    "nl": "Mogen honden cacaopoeder eten?",
+    "pl": "Czy psy mogą jeść kakao w proszku?"
   },
   "url_slug": {
     "en": "cocoa-powder",
     "sl": "kakav-v-prahu",
-    "cs": "kakaovy-prasek"
+    "es": "cacao-en-polvo",
+    "cs": "kakaovy-prasek",
+    "hr": "kakao-u-prahu",
+    "sv": "kakaopulver",
+    "da": "kakaopulver",
+    "fi": "kaakaojauhe",
+    "nb": "kakaopulver",
+    "it": "cacao-in-polvere",
+    "de": "kakaopulver",
+    "fr": "cacao-en-poudre",
+    "pt": "cacau-em-po",
+    "nl": "cacaopoeder",
+    "pl": "kakao-w-proszku"
   },
   "level": "toxic",
   "answer": {
     "en": "No, cocoa powder is toxic to dogs. It is even more dangerous than dark chocolate, because baking chocolate and cocoa powder have the highest amounts of the harmful substances. If your dog ate cocoa powder, speak to your vet straight away.",
     "sl": "Ne, kakav v prahu je za pse strupen. Je še nevarnejši od temne čokolade, saj imata čokolada za peko in kakav v prahu največ škodljivih snovi. Če je pes pojedel kakav v prahu, takoj pokličite veterinarja.",
-    "cs": "Ne, kakaový prášek je pro psy jedovatý. Je ještě nebezpečnější než hořká čokoláda, protože čokoláda na vaření a kakaový prášek obsahují nejvíce škodlivých látek. Pokud pes snědl kakaový prášek, obraťte se ihned na veterináře."
+    "es": "No, el cacao en polvo es tóxico para los perros. Es aún más peligroso que el chocolate negro, porque el chocolate para repostería y el cacao en polvo tienen las mayores cantidades de las sustancias dañinas. Si tu perro ha comido cacao en polvo, habla con tu veterinario enseguida.",
+    "cs": "Ne, kakaový prášek je pro psy jedovatý. Je ještě nebezpečnější než hořká čokoláda, protože čokoláda na vaření a kakaový prášek obsahují nejvíce škodlivých látek. Pokud pes snědl kakaový prášek, obraťte se ihned na veterináře.",
+    "hr": "Ne, kakao u prahu otrovan je za pse. Čak je opasniji od tamne čokolade, jer čokolada za kuhanje i kakao u prahu imaju najviše štetnih tvari. Ako je pas pojeo kakao u prahu, odmah se obrati veterinaru.",
+    "sv": "Nej, kakaopulver är giftigt för hundar. Det är till och med farligare än mörk choklad, eftersom bakchoklad och kakaopulver innehåller störst mängd av de skadliga ämnena. Har din hund ätit kakaopulver ska du kontakta din veterinär direkt.",
+    "da": "Nej, kakaopulver er giftigt for hunde. Det er endnu farligere end mørk chokolade, fordi bagechokolade og kakaopulver indeholder de højeste mængder af de skadelige stoffer. Hvis din hund har spist kakaopulver, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Ei saa, kaakaojauhe on koirille myrkyllistä. Se on vaarallisempaa kuin tumma suklaa, koska leivontasuklaassa ja kaakaojauheessa on eniten haitallisia aineita. Jos koirasi söi kaakaojauhetta, ota heti yhteyttä eläinlääkäriin.",
+    "nb": "Nei, kakaopulver er giftig for hunder. Det er enda farligere enn mørk sjokolade, for kokesjokolade og kakaopulver har mest av de skadelige stoffene. Hvis hunden har spist kakaopulver, må du kontakte dyrlegen med en gang.",
+    "it": "No, il cacao in polvere è tossico per i cani. È ancora più pericoloso del cioccolato fondente, perché il cioccolato da cucina e il cacao in polvere contengono le quantità più alte di sostanze dannose. Se il tuo cane ha mangiato cacao in polvere, chiama subito il veterinario.",
+    "de": "Nein, Kakaopulver ist für Hunde giftig. Es ist sogar gefährlicher als dunkle Schokolade, denn Backschokolade und Kakaopulver enthalten die größten Mengen der schädlichen Stoffe. Hat Ihr Hund Kakaopulver gefressen, wenden Sie sich sofort an Ihren Tierarzt.",
+    "fr": "Non, le cacao en poudre est toxique pour les chiens. Il est encore plus dangereux que le chocolat noir, car le chocolat de cuisine et le cacao en poudre contiennent les plus fortes quantités de substances nocives. Si votre chien a mangé du cacao en poudre, parlez-en immédiatement à votre vétérinaire.",
+    "pt": "Não, o cacau em pó é tóxico para os cães. É ainda mais perigoso do que o chocolate negro, porque o chocolate de culinária e o cacau em pó têm as maiores quantidades das substâncias nocivas. Se o teu cão comeu cacau em pó, fala imediatamente com o teu veterinário.",
+    "nl": "Nee, cacaopoeder is giftig voor honden. Het is zelfs gevaarlijker dan pure chocolade, omdat bakchocolade en cacaopoeder de hoogste gehaltes van de schadelijke stoffen bevatten. Heeft je hond cacaopoeder gegeten, neem dan meteen contact op met je dierenarts.",
+    "pl": "Nie, kakao w proszku jest toksyczne dla psów. Jest jeszcze groźniejsze niż gorzka czekolada, bo czekolada do pieczenia i kakao zawierają najwięcej szkodliwych substancji. Jeśli pies zjadł kakao w proszku, od razu skontaktuj się z weterynarzem."
   },
   "why": {
     "en": "Chocolate contains theobromine, which is toxic to dogs. The more cocoa, the more theobromine: white chocolate has the least, while baking chocolate and cocoa powder have the highest amounts, so cocoa powder is even more dangerous than dark chocolate. Dogs are most often affected because they eat almost anything and can easily reach chocolate.",
     "sl": "Čokolada vsebuje teobromin, ki je za pse strupen. Več kot je kakava, več je teobromina: bela čokolada ga ima najmanj, čokolada za peko in kakav v prahu pa največ, zato je kakav v prahu še nevarnejši od temne čokolade. Psi so najpogosteje prizadeti, ker pojedo skoraj vse in čokolado zlahka dosežejo.",
-    "cs": "Čokoláda obsahuje theobromin, který je pro psy jedovatý. Čím více kakaa, tím více theobrominu: bílá čokoláda ho má nejméně, zatímco čokoláda na vaření a kakaový prášek ho obsahují nejvíce, takže kakaový prášek je ještě nebezpečnější než hořká čokoláda. Psi bývají otráveni nejčastěji proto, že sní skoro cokoli a k čokoládě se snadno dostanou."
+    "es": "El chocolate contiene teobromina, que es tóxica para los perros. Cuanto más cacao, más teobromina: el chocolate blanco tiene la menor cantidad, mientras que el chocolate para repostería y el cacao en polvo tienen las mayores, así que el cacao en polvo es aún más peligroso que el chocolate negro. Los perros son los más afectados porque comen casi de todo y pueden llegar fácilmente al chocolate.",
+    "cs": "Čokoláda obsahuje theobromin, který je pro psy jedovatý. Čím více kakaa, tím více theobrominu: bílá čokoláda ho má nejméně, zatímco čokoláda na vaření a kakaový prášek ho obsahují nejvíce, takže kakaový prášek je ještě nebezpečnější než hořká čokoláda. Psi bývají otráveni nejčastěji proto, že sní skoro cokoli a k čokoládě se snadno dostanou.",
+    "hr": "Čokolada sadrži teobromin, koji je otrovan za pse. Što je više kakaa, to je više teobromina: bijela čokolada ga ima najmanje, dok čokolada za kuhanje i kakao u prahu imaju najveće količine, pa je kakao u prahu čak opasniji od tamne čokolade. Najčešće su pogođeni psi, jer jedu gotovo sve i lako dođu do čokolade.",
+    "sv": "Choklad innehåller teobromin, som är giftigt för hundar. Ju mer kakao, desto mer teobromin: vit choklad har minst, medan bakchoklad och kakaopulver har störst mängd, så kakaopulver är ännu farligare än mörk choklad. Hundar drabbas oftast eftersom de äter nästan vad som helst och lätt kommer åt choklad.",
+    "da": "Chokolade indeholder theobromin, som er giftigt for hunde. Jo mere kakao, jo mere theobromin: hvid chokolade indeholder mindst, mens bagechokolade og kakaopulver indeholder mest, så kakaopulver er endnu farligere end mørk chokolade. Hunde bliver oftest ramt, fordi de spiser næsten alt og let kan komme til chokolade.",
+    "fi": "Suklaassa on teobromiinia, joka on koirille myrkyllistä. Mitä enemmän kaakaota, sitä enemmän teobromiinia: valkoisessa suklaassa sitä on vähiten, kun taas leivontasuklaassa ja kaakaojauheessa sitä on eniten, joten kaakaojauhe on vielä vaarallisempaa kuin tumma suklaa. Koirat kärsivät siitä useimmin, koska ne syövät lähes mitä tahansa ja pääsevät helposti suklaan luo.",
+    "nb": "Sjokolade inneholder teobromin, som er giftig for hunder. Jo mer kakao, desto mer teobromin: hvit sjokolade har minst, mens kokesjokolade og kakaopulver har mest, så kakaopulver er enda farligere enn mørk sjokolade. Hunder rammes oftest fordi de spiser nesten alt og lett får tak i sjokolade.",
+    "it": "Il cioccolato contiene teobromina, tossica per i cani. Più cacao c’è, più teobromina c’è: il cioccolato bianco ne ha meno, mentre il cioccolato da cucina e il cacao in polvere ne hanno di più, quindi il cacao in polvere è ancora più pericoloso del cioccolato fondente. A essere colpiti sono più spesso i cani, perché mangiano quasi tutto e raggiungono facilmente il cioccolato.",
+    "de": "Schokolade enthält Theobromin, das für Hunde giftig ist. Je mehr Kakao, desto mehr Theobromin: Weiße Schokolade enthält am wenigsten, Backschokolade und Kakaopulver dagegen die größten Mengen. Deshalb ist Kakaopulver sogar gefährlicher als dunkle Schokolade. Hunde sind am häufigsten betroffen, weil sie fast alles fressen und leicht an Schokolade herankommen.",
+    "fr": "Le chocolat contient de la théobromine, toxique pour les chiens. Plus il y a de cacao, plus il y a de théobromine : le chocolat blanc en contient le moins, tandis que le chocolat de cuisine et le cacao en poudre en contiennent le plus, si bien que le cacao en poudre est encore plus dangereux que le chocolat noir. Les chiens sont le plus souvent touchés parce qu’ils mangent presque n’importe quoi et ont facilement accès au chocolat.",
+    "pt": "O chocolate contém teobromina, que é tóxica para os cães. Quanto mais cacau, mais teobromina: o chocolate branco tem menos, enquanto o chocolate de culinária e o cacau em pó têm as maiores quantidades, por isso o cacau em pó é ainda mais perigoso do que o chocolate negro. Os cães são os mais afetados porque comem quase tudo e chegam facilmente ao chocolate.",
+    "nl": "Chocolade bevat theobromine, en dat is giftig voor honden. Hoe meer cacao, hoe meer theobromine: witte chocolade bevat het minst, terwijl bakchocolade en cacaopoeder de hoogste gehaltes hebben, dus cacaopoeder is zelfs gevaarlijker dan pure chocolade. Honden krijgen er het vaakst last van omdat ze bijna alles eten en gemakkelijk bij chocolade kunnen komen.",
+    "pl": "Czekolada zawiera teobrominę, która jest toksyczna dla psów. Im więcej kakao, tym więcej teobrominy: biała czekolada ma jej najmniej, a czekolada do pieczenia i kakao w proszku najwięcej, więc kakao w proszku jest jeszcze groźniejsze niż gorzka czekolada. Zatrucia dotyczą najczęściej psów, bo zjadają niemal wszystko i łatwo mogą dostać się do czekolady."
   },
   "signs": {
     "en": [
@@ -46,6 +106,15 @@
       "Tresenje in v hudih primerih krči",
       "Znaki se običajno pojavijo v 6–12 urah"
     ],
+    "es": [
+      "Vómitos y diarrea",
+      "Jadeo, más sed y más ganas de orinar",
+      "Inquietud, agitación, hiperactividad",
+      "Temperatura corporal elevada",
+      "Latidos rápidos o anormales",
+      "Temblores y, en casos graves, convulsiones",
+      "Los síntomas suelen empezar en un plazo de 6–12 horas"
+    ],
     "cs": [
       "Zvracení a průjem",
       "Funění, větší žízeň a častější močení",
@@ -54,30 +123,177 @@
       "Rychlý nebo nepravidelný tep",
       "Třes a v těžkých případech záchvaty",
       "Příznaky se obvykle objeví do 6–12 hodin"
+    ],
+    "hr": [
+      "Povraćanje i proljev",
+      "Dahtanje, pojačana žeđ i mokrenje",
+      "Nemir, uznemirenost, pretjerana aktivnost",
+      "Povišena tjelesna temperatura",
+      "Ubrzan ili nepravilan rad srca",
+      "Drhtanje i, u teškim slučajevima, napadaji",
+      "Znakovi se obično pojavljuju unutar 6–12 sati"
+    ],
+    "sv": [
+      "Kräkningar och diarré",
+      "Flåsande, ökad törst och ökat kissande",
+      "Rastlöshet, oro, överaktivitet",
+      "Förhöjd kroppstemperatur",
+      "Snabb eller onormal hjärtrytm",
+      "Darrningar och, i svåra fall, kramper",
+      "Tecknen visar sig vanligtvis inom 6–12 timmar"
+    ],
+    "da": [
+      "Opkast og diarré",
+      "Pesen, ekstra tørst og hyppig vandladning",
+      "Uro, ophidselse, hyperaktivitet",
+      "Forhøjet kropstemperatur",
+      "Hurtig eller unormal puls",
+      "Rysten og i svære tilfælde kramper",
+      "Tegnene begynder som regel inden for 6–12 timer"
+    ],
+    "fi": [
+      "Oksentelu ja ripuli",
+      "Läähätys, lisääntynyt jano ja virtsaaminen",
+      "Levottomuus, kiihtyneisyys, ylivilkkaus",
+      "Kohonnut ruumiinlämpö",
+      "Nopea tai poikkeava sydämenlyönti",
+      "Vapina ja vakavissa tapauksissa kouristuskohtaukset",
+      "Oireet alkavat yleensä 6–12 tunnin kuluessa"
+    ],
+    "nb": [
+      "Oppkast og diaré",
+      "Pesing, sterk tørst og mer tissing",
+      "Uro, rastløshet og hyperaktivitet",
+      "Forhøyet kroppstemperatur",
+      "Rask eller unormal hjerterytme",
+      "Skjelvinger og, i alvorlige tilfeller, kramper",
+      "Tegnene viser seg vanligvis innen 6–12 timer"
+    ],
+    "it": [
+      "Vomito e diarrea",
+      "Ansimare, più sete e più pipì",
+      "Irrequietezza, agitazione, iperattività",
+      "Temperatura corporea elevata",
+      "Battito cardiaco accelerato o anomalo",
+      "Tremori e, nei casi gravi, convulsioni",
+      "I sintomi di solito iniziano entro 6–12 ore"
+    ],
+    "de": [
+      "Erbrechen und Durchfall",
+      "Hecheln, vermehrter Durst und häufigeres Urinieren",
+      "Unruhe, Aufgeregtheit, Überaktivität",
+      "Erhöhte Körpertemperatur",
+      "Schneller oder unregelmäßiger Herzschlag",
+      "Zittern und in schweren Fällen Krampfanfälle",
+      "Die Anzeichen beginnen meist innerhalb von 6–12 Stunden"
+    ],
+    "fr": [
+      "Vomissements et diarrhée",
+      "Halètement, soif accrue et urines plus fréquentes",
+      "Agitation, nervosité, hyperactivité",
+      "Température corporelle élevée",
+      "Rythme cardiaque rapide ou anormal",
+      "Tremblements et, dans les cas graves, convulsions",
+      "Les signes apparaissent généralement en 6 à 12 heures"
+    ],
+    "pt": [
+      "Vómitos e diarreia",
+      "Respiração ofegante, mais sede e mais vontade de urinar",
+      "Agitação, hiperatividade",
+      "Temperatura corporal elevada",
+      "Batimento cardíaco rápido ou anormal",
+      "Tremores e, em casos graves, convulsões",
+      "Os sinais costumam começar em 6–12 horas"
+    ],
+    "nl": [
+      "Braken en diarree",
+      "Hijgen, meer dorst en vaker plassen",
+      "Onrust, opwinding, hyperactiviteit",
+      "Verhoogde lichaamstemperatuur",
+      "Snelle of afwijkende hartslag",
+      "Trillingen en in ernstige gevallen toevallen",
+      "De verschijnselen beginnen meestal binnen 6–12 uur"
+    ],
+    "pl": [
+      "Wymioty i biegunka",
+      "Ziajanie, wzmożone pragnienie i częstsze oddawanie moczu",
+      "Niepokój, pobudzenie, nadpobudliwość",
+      "Podwyższona temperatura ciała",
+      "Szybkie lub nieprawidłowe bicie serca",
+      "Drżenie mięśni, a w ciężkich przypadkach drgawki",
+      "Objawy zwykle pojawiają się w ciągu 6–12 godzin"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate cocoa powder, note how much and speak to your vet or a pet poison line straight away.",
     "sl": "Če je pes pojedel kakav v prahu, si zapišite, koliko ga je bilo, in takoj pokličite veterinarja ali center za zastrupitve živali.",
-    "cs": "Pokud pes snědl kakaový prášek, poznamenejte si, kolik, a obraťte se ihned na veterináře nebo na toxikologickou linku pro zvířata."
+    "es": "Si tu perro ha comido cacao en polvo, anota cuánto y habla enseguida con tu veterinario o con una línea de información toxicológica para animales.",
+    "cs": "Pokud pes snědl kakaový prášek, poznamenejte si, kolik, a obraťte se ihned na veterináře nebo na toxikologickou linku pro zvířata.",
+    "hr": "Ako je pas pojeo kakao u prahu, zapiši koliko i odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
+    "sv": "Om din hund har ätit kakaopulver: notera hur mycket och kontakta din veterinär eller giftrådgivningen för djur direkt.",
+    "da": "Hvis din hund har spist kakaopulver, skal du notere, hvor meget, og straks kontakte din dyrlæge eller en giftrådgivning for dyr.",
+    "fi": "Jos koirasi söi kaakaojauhetta, kirjaa ylös määrä ja ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan.",
+    "nb": "Hvis hunden har spist kakaopulver, må du notere hvor mye og kontakte dyrlegen eller giftinformasjon for dyr med en gang.",
+    "it": "Se il tuo cane ha mangiato cacao in polvere, annota quanto ne ha mangiato e parla subito con il veterinario o con un centro antiveleni veterinario.",
+    "de": "Hat Ihr Hund Kakaopulver gefressen, notieren Sie, wie viel, und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere.",
+    "fr": "Si votre chien a mangé du cacao en poudre, notez la quantité et parlez-en immédiatement à votre vétérinaire ou à un centre antipoison vétérinaire.",
+    "pt": "Se o teu cão comeu cacau em pó, anota a quantidade e fala imediatamente com o teu veterinário ou com uma linha de apoio toxicológico para animais.",
+    "nl": "Heeft je hond cacaopoeder gegeten, noteer dan hoeveel en neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren.",
+    "pl": "Jeśli pies zjadł kakao w proszku, zanotuj, ile go było, i od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt."
   },
   "serving": null,
   "child": {
     "en": "Cocoa powder is for people's baking, not for dogs. Keep the tin closed and tell a grown-up right away if your dog gets into it.",
     "sl": "Kakav v prahu je za peko, ne za pse. Škatlo imej zaprto in takoj povej odraslemu, če pes pride do nje.",
-    "cs": "Kakaový prášek je na pečení pro lidi, ne pro psy. Měj dózu zavřenou a řekni to hned dospělému, když se do ní pes dostane."
+    "es": "El cacao en polvo es para que las personas hagan repostería, no para los perros. Mantén el bote cerrado y avisa enseguida a un adulto si tu perro lo alcanza.",
+    "cs": "Kakaový prášek je na pečení pro lidi, ne pro psy. Měj dózu zavřenou a řekni to hned dospělému, když se do ní pes dostane.",
+    "hr": "Kakao u prahu služi za pečenje, a ne za pse. Drži limenku zatvorenu i odmah reci odrasloj osobi ako je pas dohvati.",
+    "sv": "Kakaopulver är till för människors bakning, inte för hundar. Håll burken stängd och berätta direkt för en vuxen om din hund kommer åt den.",
+    "da": "Kakaopulver er til bagning for mennesker, ikke til hunde. Hold dåsen lukket, og sig det straks til en voksen, hvis din hund får fat i det.",
+    "fi": "Kaakaojauhe on ihmisten leivontaan, ei koirille. Pidä purkki kiinni ja kerro heti aikuiselle, jos koirasi pääsee siihen käsiksi.",
+    "nb": "Kakaopulver er til baking for mennesker, ikke for hunder. Hold boksen lukket, og si fra til en voksen med en gang hvis hunden kommer over den.",
+    "it": "Il cacao in polvere serve per i dolci delle persone, non per i cani. Tieni il barattolo chiuso e dillo subito a un adulto se il tuo cane lo trova.",
+    "de": "Kakaopulver ist zum Backen für Menschen da, nicht für Hunde. Halte die Dose geschlossen und sag sofort einem Erwachsenen Bescheid, wenn dein Hund etwas davon erwischt hat.",
+    "fr": "Le cacao en poudre sert aux pâtisseries des humains, pas aux chiens. Garde la boîte fermée et préviens tout de suite un adulte si ton chien en mange.",
+    "pt": "O cacau em pó é para as receitas das pessoas, não para os cães. Mantém a lata fechada e avisa logo um adulto se o teu cão chegar até ele.",
+    "nl": "Cacaopoeder is voor mensen om mee te bakken, niet voor honden. Houd het blik dicht en vertel het meteen aan een volwassene als je hond erbij is gekomen.",
+    "pl": "Kakao w proszku jest do pieczenia dla ludzi, nie dla psów. Trzymaj puszkę zamkniętą i od razu powiedz dorosłemu, jeśli pies się do niej dobierze."
   },
   "faq": [
     {
       "q": {
         "en": "Is cocoa powder worse than a chocolate bar?",
         "sl": "Ali je kakav v prahu slabši od čokoladne tablice?",
-        "cs": "Je kakaový prášek horší než tabulka čokolády?"
+        "es": "¿Es peor el cacao en polvo que una tableta de chocolate?",
+        "cs": "Je kakaový prášek horší než tabulka čokolády?",
+        "hr": "Je li kakao u prahu gori od pločice čokolade?",
+        "sv": "Är kakaopulver värre än en chokladkaka?",
+        "da": "Er kakaopulver værre end en chokoladebar?",
+        "fi": "Onko kaakaojauhe pahempaa kuin suklaalevy?",
+        "nb": "Er kakaopulver verre enn en sjokoladeplate?",
+        "it": "Il cacao in polvere è peggio di una tavoletta di cioccolato?",
+        "de": "Ist Kakaopulver schlimmer als eine Tafel Schokolade?",
+        "fr": "Le cacao en poudre est-il pire qu’une tablette de chocolat ?",
+        "pt": "O cacau em pó é pior do que uma barra de chocolate?",
+        "nl": "Is cacaopoeder erger dan een reep chocolade?",
+        "pl": "Czy kakao w proszku jest gorsze niż tabliczka czekolady?"
       },
       "a": {
         "en": "Yes. Cocoa powder is even more dangerous than dark chocolate, and white chocolate has the lowest amount of the harmful substances.",
         "sl": "Da. Kakav v prahu je še nevarnejši od temne čokolade, bela čokolada pa ima škodljivih snovi najmanj.",
-        "cs": "Ano. Kakaový prášek je ještě nebezpečnější než hořká čokoláda a bílá čokoláda obsahuje škodlivých látek nejméně."
+        "es": "Sí. El cacao en polvo es aún más peligroso que el chocolate negro, y el chocolate blanco tiene la menor cantidad de las sustancias dañinas.",
+        "cs": "Ano. Kakaový prášek je ještě nebezpečnější než hořká čokoláda a bílá čokoláda obsahuje škodlivých látek nejméně.",
+        "hr": "Da. Kakao u prahu čak je opasniji od tamne čokolade, a bijela čokolada ima najmanje štetnih tvari.",
+        "sv": "Ja. Kakaopulver är ännu farligare än mörk choklad, och vit choklad har lägst mängd av de skadliga ämnena.",
+        "da": "Ja. Kakaopulver er endnu farligere end mørk chokolade, og hvid chokolade indeholder mindst af de skadelige stoffer.",
+        "fi": "On. Kaakaojauhe on vielä vaarallisempaa kuin tumma suklaa, ja valkoisessa suklaassa on vähiten haitallisia aineita.",
+        "nb": "Ja. Kakaopulver er enda farligere enn mørk sjokolade, og hvit sjokolade har minst av de skadelige stoffene.",
+        "it": "Sì. Il cacao in polvere è ancora più pericoloso del cioccolato fondente, e il cioccolato bianco è quello che contiene meno sostanze dannose.",
+        "de": "Ja. Kakaopulver ist sogar gefährlicher als dunkle Schokolade, und weiße Schokolade enthält die geringste Menge der schädlichen Stoffe.",
+        "fr": "Oui. Le cacao en poudre est encore plus dangereux que le chocolat noir, et le chocolat blanc contient la plus faible quantité de substances nocives.",
+        "pt": "Sim. O cacau em pó é ainda mais perigoso do que o chocolate negro, e o chocolate branco tem a menor quantidade das substâncias nocivas.",
+        "nl": "Ja. Cacaopoeder is zelfs gevaarlijker dan pure chocolade, en witte chocolade bevat het laagste gehalte aan de schadelijke stoffen.",
+        "pl": "Tak. Kakao w proszku jest jeszcze groźniejsze niż gorzka czekolada, a biała czekolada zawiera najmniej szkodliwych substancji."
       }
     }
   ],
@@ -153,10 +369,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "cf87c67acbfb89422f62c408f4dbe75656f9b496aea28d2b8ec9bea8b8ecda5d"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d8fc4ccd5070f273b7ff1fba41ba1250f241abb8255c4ad6044f3255942d1756"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0a31accba1348ce4e04df8e9102ed858aa96acb7036bc1d0dff62337dcc50308"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3267db36f40ba7552cd94136910862541f0ae3c32f997c657da6ec30a31c1b7b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9740c509d3e180db30a4309d0a5319025571820d733d84b202d16bdf35975d04"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3ed39c459ae1d3e5c9a46ebcc8fd2dcdb21f8ccc046a21b7954b7ee72c32d732"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b20c3b4eda10f9537b410e66e5194642b768e1e56b29b310100387ea22627e24"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1fb7d434a1b1fce2456ed5a7d448da3094efd8af98114ff0528685db26e12984"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "be76a3c7b87d465c2b19e0fb999089642ebd9e7cc918eb0580e6caa7c59fbc67"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0014ec01e01bbb1871500f9ff1a1955c885f41bd2e4396203d803a8a99ebf005"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "58d4a1c6c66aaed7d5797508f81e52d2a00852ec2c03eb69a4acadd5b1079747"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d8111371c3a2edc65ede0176df970217ca82e34cd2ed803a8b7a225abc533ed7"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9abbbdbfca50ba1343d33071651896e40325f119078c20100a925da6597524d8"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "dfca6bd8ad96fc0fa85f7450ea2f1354f30ba951ee85cf132e2a3e2df43a66f1"
     }
   }
 }

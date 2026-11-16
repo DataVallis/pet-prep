@@ -4,28 +4,88 @@
   "name": {
     "en": "Baking soda",
     "sl": "Soda bikarbona",
-    "cs": "Jedlá soda"
+    "es": "Bicarbonato de sodio",
+    "cs": "Jedlá soda",
+    "hr": "Soda bikarbona",
+    "sv": "Bikarbonat",
+    "da": "Natron",
+    "fi": "Ruokasooda",
+    "nb": "Natron",
+    "it": "Bicarbonato di sodio",
+    "de": "Natron",
+    "fr": "Bicarbonate de soude",
+    "pt": "Bicarbonato de sódio",
+    "nl": "Zuiveringszout",
+    "pl": "Soda oczyszczona"
   },
   "question": {
     "en": "Can dogs eat baking soda?",
     "sl": "Ali lahko psi jedo sodo bikarbono?",
-    "cs": "Mohou psi jíst jedlou sodu?"
+    "es": "¿Pueden los perros comer bicarbonato de sodio?",
+    "cs": "Mohou psi jíst jedlou sodu?",
+    "hr": "Smiju li psi jesti sodu bikarbonu?",
+    "sv": "Får hundar äta bikarbonat?",
+    "da": "Må hunde spise natron?",
+    "fi": "Saako koira syödä ruokasoodaa?",
+    "nb": "Kan hunder spise natron?",
+    "it": "I cani possono mangiare il bicarbonato di sodio?",
+    "de": "Dürfen Hunde Natron fressen?",
+    "fr": "Les chiens peuvent-ils manger du bicarbonate de soude ?",
+    "pt": "Os cães podem comer bicarbonato de sódio?",
+    "nl": "Mogen honden zuiveringszout eten?",
+    "pl": "Czy psy mogą jeść sodę oczyszczoną?"
   },
   "url_slug": {
     "en": "baking-soda",
     "sl": "soda-bikarbona",
-    "cs": "jedla-soda"
+    "es": "bicarbonato-de-sodio",
+    "cs": "jedla-soda",
+    "hr": "soda-bikarbona",
+    "sv": "bikarbonat",
+    "da": "natron",
+    "fi": "ruokasooda",
+    "nb": "natron",
+    "it": "bicarbonato-di-sodio",
+    "de": "natron",
+    "fr": "bicarbonate-de-soude",
+    "pt": "bicarbonato-de-sodio",
+    "nl": "zuiveringszout",
+    "pl": "soda-oczyszczona"
   },
   "level": "toxic",
   "answer": {
     "en": "No, baking soda is bad for dogs because of its high sodium content. Even small amounts can be harmful, especially to smaller dogs. If your dog ate baking soda, call a vet right away, even if the signs seem mild.",
     "sl": "Ne, soda bikarbona je za pse škodljiva zaradi visoke vsebnosti natrija. Škodijo lahko že majhne količine, še posebej manjšim psom. Če je pes pojedel sodo bikarbono, takoj pokličite veterinarja, tudi če se zdijo znaki blagi.",
-    "cs": "Ne, jedlá soda je pro psy škodlivá kvůli vysokému obsahu sodíku. Ublížit může už malé množství, zvlášť menším psům. Pokud pes snědl jedlou sodu, zavolejte ihned veterináři, i když se příznaky zdají mírné."
+    "es": "No, el bicarbonato de sodio es malo para los perros por su alto contenido en sodio. Incluso las cantidades pequeñas pueden ser perjudiciales, sobre todo para los perros pequeños. Si tu perro ha comido bicarbonato, llama al veterinario enseguida, aunque los síntomas parezcan leves.",
+    "cs": "Ne, jedlá soda je pro psy škodlivá kvůli vysokému obsahu sodíku. Ublížit může už malé množství, zvlášť menším psům. Pokud pes snědl jedlou sodu, zavolejte ihned veterináři, i když se příznaky zdají mírné.",
+    "hr": "Ne, soda bikarbona loša je za pse zbog visokog udjela natrija. Čak i male količine mogu biti štetne, osobito za manje pse. Ako je pas pojeo sodu bikarbonu, odmah nazovi veterinara, čak i ako se znakovi čine blagima.",
+    "sv": "Nej, bikarbonat är dåligt för hundar på grund av det höga natriuminnehållet. Redan små mängder kan vara skadliga, särskilt för mindre hundar. Om din hund har ätit bikarbonat ska du ringa en veterinär direkt, även om tecknen verkar milda.",
+    "da": "Nej, natron er skadeligt for hunde på grund af det høje natriumindhold. Selv små mængder kan være skadelige, især for mindre hunde. Hvis din hund har spist natron, skal du ringe til en dyrlæge med det samme, selvom tegnene virker milde.",
+    "fi": "Ei saa, ruokasooda on koiralle haitallista suuren natriumpitoisuutensa vuoksi. Jo pienet määrät voivat olla haitallisia, etenkin pienemmille koirille. Jos koirasi söi ruokasoodaa, soita heti eläinlääkärille, vaikka oireet vaikuttaisivat lieviltä.",
+    "nb": "Nei, natron er skadelig for hunder på grunn av det høye natriuminnholdet. Selv små mengder kan være farlige, særlig for små hunder. Hvis hunden har spist natron, må du kontakte dyrlegen med en gang, selv om tegnene virker milde.",
+    "it": "No, il bicarbonato di sodio fa male ai cani per l’alto contenuto di sodio. Anche piccole quantità possono essere dannose, soprattutto per i cani di piccola taglia. Se il tuo cane ha mangiato del bicarbonato, chiama subito il veterinario, anche se i sintomi sembrano lievi.",
+    "de": "Nein, Natron ist wegen seines hohen Natriumgehalts schlecht für Hunde. Schon kleine Mengen können schaden, besonders bei kleineren Hunden. Hat Ihr Hund Natron gefressen, rufen Sie sofort einen Tierarzt an, auch wenn die Anzeichen harmlos wirken.",
+    "fr": "Non, le bicarbonate de soude est mauvais pour les chiens à cause de sa forte teneur en sodium. Même de petites quantités peuvent être nocives, surtout pour les petits chiens. Si votre chien en a mangé, appelez immédiatement un vétérinaire, même si les signes semblent légers.",
+    "pt": "Não, o bicarbonato de sódio faz mal aos cães por ter muito sódio. Mesmo pequenas quantidades podem ser nocivas, sobretudo para cães pequenos. Se o teu cão comeu bicarbonato de sódio, liga imediatamente a um veterinário, mesmo que os sinais pareçam ligeiros.",
+    "nl": "Nee, zuiveringszout is slecht voor honden door het hoge natriumgehalte. Al kleine hoeveelheden kunnen schadelijk zijn, vooral voor kleinere honden. Heeft je hond zuiveringszout gegeten, bel dan meteen een dierenarts, ook als de verschijnselen mild lijken.",
+    "pl": "Nie, soda oczyszczona szkodzi psom, bo zawiera dużo sodu. Nawet niewielkie ilości mogą zaszkodzić, zwłaszcza małym psom. Jeśli pies zjadł sodę oczyszczoną, od razu zadzwoń do weterynarza, nawet jeśli objawy wydają się łagodne."
   },
   "why": {
     "en": "Baking soda (sodium bicarbonate) disrupts a dog's salt balance and can lead to sodium toxicity. As sodium levels in the blood rise, water is drawn out of cells, including brain cells. Baking soda is also found in household items such as toothpaste and deodorisers.",
     "sl": "Soda bikarbona (natrijev hidrogenkarbonat) poruši ravnovesje soli v pasjem telesu in lahko povzroči zastrupitev z natrijem. Ko se raven natrija v krvi zvišuje, telo vleče vodo iz celic, tudi iz možganskih. Soda bikarbona je tudi v gospodinjskih izdelkih, kot sta zobna pasta in sredstva proti neprijetnim vonjavam.",
-    "cs": "Jedlá soda (hydrogenuhličitan sodný) narušuje rovnováhu solí v těle psa a může způsobit otravu sodíkem. Jakmile hladina sodíku v krvi stoupne, odčerpává se voda z buněk, včetně buněk mozku. Jedlou sodu najdete i v běžných domácích výrobcích, například v zubní pastě a pohlcovačích pachů."
+    "es": "El bicarbonato de sodio altera el equilibrio de sal del cuerpo del perro y puede provocar una intoxicación por sodio. Cuando sube el sodio en la sangre, el agua sale de las células, también de las del cerebro. El bicarbonato también está presente en productos de casa como la pasta de dientes y los desodorizantes.",
+    "cs": "Jedlá soda (hydrogenuhličitan sodný) narušuje rovnováhu solí v těle psa a může způsobit otravu sodíkem. Jakmile hladina sodíku v krvi stoupne, odčerpává se voda z buněk, včetně buněk mozku. Jedlou sodu najdete i v běžných domácích výrobcích, například v zubní pastě a pohlcovačích pachů.",
+    "hr": "Soda bikarbona (natrijev bikarbonat) remeti ravnotežu soli u tijelu psa i može dovesti do trovanja natrijem. Kad se razina natrija u krvi povisi, voda se izvlači iz stanica, uključujući stanice mozga. Soda bikarbona nalazi se i u kućanskim proizvodima poput zubne paste i sredstava za neutralizaciju mirisa.",
+    "sv": "Bikarbonat (natriumbikarbonat) rubbar hundens saltbalans och kan leda till natriumförgiftning. När natriumhalten i blodet stiger dras vatten ut ur cellerna, även hjärnceller. Bikarbonat finns också i hushållsprodukter som tandkräm och luktborttagare.",
+    "da": "Natron (natriumbicarbonat) forstyrrer hundens saltbalance og kan føre til natriumforgiftning. Når natriumniveauet i blodet stiger, trækkes vand ud af cellerne, også hjerneceller. Natron findes også i husholdningsprodukter som tandpasta og lugtfjernere.",
+    "fi": "Ruokasooda (natriumbikarbonaatti) sekoittaa koiran suolatasapainon ja voi johtaa natriummyrkytykseen. Kun veren natriumpitoisuus nousee, vettä siirtyy pois soluista, myös aivosoluista. Ruokasoodaa on myös kodin tuotteissa, kuten hammastahnassa ja hajunpoistoaineissa.",
+    "nb": "Natron (natriumbikarbonat) forstyrrer saltbalansen hos hunder og kan føre til natriumforgiftning. Når natriumnivået i blodet stiger, trekkes vann ut av cellene, også hjerneceller. Natron finnes også i husholdningsprodukter som tannkrem og luktfjernere.",
+    "it": "Il bicarbonato di sodio altera l’equilibrio salino del cane e può portare a un’intossicazione da sodio. Quando i livelli di sodio nel sangue salgono, l’acqua viene richiamata fuori dalle cellule, comprese quelle del cervello. Il bicarbonato si trova anche in prodotti di casa come il dentifricio e i deodoranti per ambienti.",
+    "de": "Natron (Natriumhydrogencarbonat) bringt den Salzhaushalt eines Hundes durcheinander und kann zu einer Natriumvergiftung führen. Steigt der Natriumspiegel im Blut, wird den Zellen Wasser entzogen, auch den Gehirnzellen. Natron steckt außerdem in Haushaltsprodukten wie Zahnpasta und Geruchsneutralisierern.",
+    "fr": "Le bicarbonate de soude (bicarbonate de sodium) perturbe l’équilibre en sel de l’organisme du chien et peut provoquer une intoxication au sodium. Quand le taux de sodium dans le sang augmente, l’eau est aspirée hors des cellules, y compris celles du cerveau. On trouve aussi du bicarbonate de soude dans des produits ménagers comme le dentifrice et les désodorisants.",
+    "pt": "O bicarbonato de sódio desequilibra o sal no organismo do cão e pode levar a uma intoxicação por sódio. À medida que o sódio no sangue sobe, a água é retirada das células, incluindo as do cérebro. O bicarbonato de sódio também existe em produtos de casa, como a pasta de dentes e os desodorizantes de ambiente.",
+    "nl": "Zuiveringszout (natriumbicarbonaat) verstoort de zoutbalans van een hond en kan leiden tot natriumvergiftiging. Als het natriumgehalte in het bloed stijgt, wordt er water uit de cellen getrokken, ook uit de hersencellen. Zuiveringszout zit ook in huishoudelijke producten zoals tandpasta en geurverwijderaars.",
+    "pl": "Soda oczyszczona (wodorowęglan sodu) zaburza u psa gospodarkę solną i może doprowadzić do zatrucia sodem. Gdy poziom sodu we krwi rośnie, woda wypływa z komórek, także z komórek mózgu. Sodę oczyszczoną zawierają też produkty domowe, takie jak pasta do zębów i pochłaniacze zapachów."
   },
   "signs": {
     "en": [
@@ -44,6 +104,14 @@
       "Hitro ali naporno dihanje",
       "V hudih primerih krči ali kolaps"
     ],
+    "es": [
+      "Malestar de estómago con vómitos o diarrea ocasionales",
+      "Más sed de lo normal, poca energía",
+      "Vómitos persistentes, mucha falta de energía",
+      "Temblores musculares o dificultad para caminar",
+      "Respiración rápida o con esfuerzo",
+      "Convulsiones o colapso en casos graves"
+    ],
     "cs": [
       "Potíže se žaludkem, občasné zvracení nebo průjem",
       "Větší žízeň, menší energie",
@@ -51,30 +119,166 @@
       "Třes svalů nebo potíže při chůzi",
       "Rychlé nebo namáhavé dýchání",
       "V těžkých případech záchvaty nebo zhroucení"
+    ],
+    "hr": [
+      "Želučane tegobe s povremenim povraćanjem ili proljevom",
+      "Pojačano pijenje vode, bezvoljnost",
+      "Uporno povraćanje, izrazita bezvoljnost",
+      "Drhtanje mišića ili otežano hodanje",
+      "Ubrzano ili otežano disanje",
+      "U teškim slučajevima napadaji ili kolaps"
+    ],
+    "sv": [
+      "Orolig mage med enstaka kräkningar eller diarré",
+      "Dricker mer vatten, orkeslöshet",
+      "Ihållande kräkningar, svår orkeslöshet",
+      "Muskelskakningar eller svårt att gå",
+      "Snabb eller ansträngd andning",
+      "Kramper eller kollaps i svåra fall"
+    ],
+    "da": [
+      "Mavebesvær med opkast eller diarré en gang imellem",
+      "Drikker mere vand og har lav energi",
+      "Vedvarende opkast og meget lav energi",
+      "Muskelrystelser eller besvær med at gå",
+      "Hurtig eller anstrengt vejrtrækning",
+      "Kramper eller sammenbrud i svære tilfælde"
+    ],
+    "fi": [
+      "Vatsavaivat ja ajoittainen oksentelu tai ripuli",
+      "Tavallista runsaampi juominen, velttous",
+      "Jatkuva oksentelu, voimakas velttous",
+      "Lihasvapina tai kävelyvaikeudet",
+      "Nopea tai raskas hengitys",
+      "Vakavissa tapauksissa kouristuskohtauksia tai lyyhistymistä"
+    ],
+    "nb": [
+      "Urolig mage med av og til oppkast eller diaré",
+      "Drikker mer vann, lite energi",
+      "Vedvarende oppkast, svært lite energi",
+      "Muskelskjelvinger eller problemer med å gå",
+      "Rask eller anstrengt pust",
+      "Kramper eller kollaps i alvorlige tilfeller"
+    ],
+    "it": [
+      "Disturbi di stomaco con vomito o diarrea occasionali",
+      "Più sete del solito, poca energia",
+      "Vomito persistente, forte mancanza di energia",
+      "Tremori muscolari o difficoltà a camminare",
+      "Respiro veloce o affannoso",
+      "Convulsioni o collasso nei casi gravi"
+    ],
+    "de": [
+      "Magenbeschwerden mit gelegentlichem Erbrechen oder Durchfall",
+      "Vermehrtes Trinken, wenig Energie",
+      "Anhaltendes Erbrechen, starke Mattigkeit",
+      "Muskelzittern oder Gehschwierigkeiten",
+      "Schnelle oder angestrengte Atmung",
+      "In schweren Fällen Krampfanfälle oder Kollaps"
+    ],
+    "fr": [
+      "Troubles digestifs avec vomissements ou diarrhée occasionnels",
+      "Soif accrue, manque d’énergie",
+      "Vomissements persistants, manque d’énergie marqué",
+      "Tremblements musculaires ou difficulté à marcher",
+      "Respiration rapide ou difficile",
+      "Convulsions ou effondrement dans les cas graves"
+    ],
+    "pt": [
+      "Indisposição de estômago, com vómitos ou diarreia ocasionais",
+      "Beber mais água, pouca energia",
+      "Vómitos persistentes, muito pouca energia",
+      "Tremores musculares ou dificuldade em andar",
+      "Respiração rápida ou com esforço",
+      "Convulsões ou colapso em casos graves"
+    ],
+    "nl": [
+      "Maagklachten met af en toe braken of diarree",
+      "Meer drinken, weinig energie",
+      "Aanhoudend braken, heel weinig energie",
+      "Spiertrillingen of moeite met lopen",
+      "Snelle of moeizame ademhaling",
+      "Toevallen of instorten in ernstige gevallen"
+    ],
+    "pl": [
+      "Rozstrój żołądka, czasem z wymiotami lub biegunką",
+      "Zwiększone pragnienie, spadek energii",
+      "Uporczywe wymioty, bardzo duży spadek energii",
+      "Drżenie mięśni lub trudności z chodzeniem",
+      "Szybki lub utrudniony oddech",
+      "W ciężkich przypadkach drgawki lub zapaść"
     ]
   },
   "what_to_do": {
     "en": "Call a vet right away, even if the signs seem mild. Don't give your dog any medicine unless your vet tells you to.",
     "sl": "Takoj pokličite veterinarja, tudi če se zdijo znaki blagi. Psu brez navodila veterinarja ne dajajte nobenih zdravil.",
-    "cs": "Zavolejte ihned veterináři, i když se příznaky zdají mírné. Psovi nepodávejte žádné léky, pokud vám to neporadí veterinář."
+    "es": "Llama al veterinario enseguida, aunque los síntomas parezcan leves. No le des ningún medicamento a tu perro salvo que el veterinario te lo indique.",
+    "cs": "Zavolejte ihned veterináři, i když se příznaky zdají mírné. Psovi nepodávejte žádné léky, pokud vám to neporadí veterinář.",
+    "hr": "Odmah nazovi veterinara, čak i ako se znakovi čine blagima. Psu ne daj nikakve lijekove osim ako ti veterinar to ne kaže.",
+    "sv": "Ring en veterinär direkt, även om tecknen verkar milda. Ge inte din hund någon medicin om inte din veterinär säger det.",
+    "da": "Ring til en dyrlæge med det samme, selvom tegnene virker milde. Giv ikke din hund medicin, medmindre din dyrlæge siger, at du skal.",
+    "fi": "Soita heti eläinlääkärille, vaikka oireet vaikuttaisivat lieviltä. Älä anna koiralle mitään lääkettä, ellei eläinlääkäri neuvo sitä.",
+    "nb": "Kontakt dyrlegen med en gang, selv om tegnene virker milde. Ikke gi hunden medisin med mindre dyrlegen sier det.",
+    "it": "Chiama subito il veterinario, anche se i sintomi sembrano lievi. Non dare al tuo cane nessun medicinale, a meno che non sia il veterinario a dirtelo.",
+    "de": "Rufen Sie sofort einen Tierarzt an, auch wenn die Anzeichen harmlos wirken. Geben Sie Ihrem Hund keine Medikamente, es sei denn, Ihr Tierarzt rät dazu.",
+    "fr": "Appelez immédiatement un vétérinaire, même si les signes semblent légers. Ne donnez aucun médicament à votre chien sans l’avis de votre vétérinaire.",
+    "pt": "Liga imediatamente a um veterinário, mesmo que os sinais pareçam ligeiros. Não dês qualquer medicamento ao teu cão, a não ser que o veterinário to diga.",
+    "nl": "Bel meteen een dierenarts, ook als de verschijnselen mild lijken. Geef je hond geen medicijnen, tenzij de dierenarts dat zegt.",
+    "pl": "Od razu zadzwoń do weterynarza, nawet jeśli objawy wydają się łagodne. Nie podawaj psu żadnych leków, chyba że zaleci to weterynarz."
   },
   "serving": null,
   "child": {
     "en": "Baking soda is for cooking and cleaning, not for dogs. Keep the box in a cupboard and tell a grown-up if your dog finds it.",
     "sl": "Soda bikarbona je za peko in čiščenje, ne za pse. Škatlico imej v omari in povej odraslemu, če jo pes najde.",
-    "cs": "Jedlá soda je na pečení a úklid, ne pro psy. Krabičku měj ve skříňce a když ji pes najde, řekni to dospělému."
+    "es": "El bicarbonato es para cocinar y limpiar, no para los perros. Guarda la caja en un armario y avisa a un adulto si tu perro la encuentra.",
+    "cs": "Jedlá soda je na pečení a úklid, ne pro psy. Krabičku měj ve skříňce a když ji pes najde, řekni to dospělému.",
+    "hr": "Soda bikarbona služi za kuhanje i čišćenje, a ne za pse. Kutiju drži u ormariću i reci odrasloj osobi ako je pas pronađe.",
+    "sv": "Bikarbonat är till för matlagning och städning, inte för hundar. Förvara asken i ett skåp och säg till en vuxen om hunden hittar den.",
+    "da": "Natron er til madlavning og rengøring, ikke til hunde. Opbevar æsken i et skab, og sig det til en voksen, hvis din hund finder den.",
+    "fi": "Ruokasooda on ruoanlaittoon ja siivoukseen, ei koirille. Pidä pakkaus kaapissa ja kerro aikuiselle, jos koirasi löytää sen.",
+    "nb": "Natron er til baking og rengjøring, ikke til hunder. Ha esken i et skap, og si fra til en voksen hvis hunden finner den.",
+    "it": "Il bicarbonato serve per cucinare e per pulire, non per i cani. Tieni la scatola in un armadietto e dillo a un adulto se il tuo cane la trova.",
+    "de": "Natron ist zum Kochen und Putzen da, nicht für Hunde. Stell die Packung in den Schrank und sag einem Erwachsenen Bescheid, wenn dein Hund sie findet.",
+    "fr": "Le bicarbonate de soude sert à cuisiner et à nettoyer, pas aux chiens. Range la boîte dans un placard et préviens un adulte si ton chien met la patte dessus.",
+    "pt": "O bicarbonato de sódio é para cozinhar e limpar, não para os cães. Guarda a caixa num armário e avisa um adulto se o teu cão a encontrar.",
+    "nl": "Zuiveringszout is voor koken en schoonmaken, niet voor honden. Bewaar het pakje in een kastje en vertel het aan een volwassene als je hond het te pakken krijgt.",
+    "pl": "Soda oczyszczona nie jest dla psów, tylko do gotowania i sprzątania. Trzymaj pudełko w szafce i powiedz dorosłemu, jeśli pies się do niego dobierze."
   },
   "faq": [
     {
       "q": {
         "en": "Where else can my dog find baking soda?",
         "sl": "Kje še lahko pes najde sodo bikarbono?",
-        "cs": "Kde jinde může pes jedlou sodu najít?"
+        "es": "¿Dónde más puede encontrar mi perro bicarbonato de sodio?",
+        "cs": "Kde jinde může pes jedlou sodu najít?",
+        "hr": "Gdje još moj pas može naći sodu bikarbonu?",
+        "sv": "Var kan min hund annars hitta bikarbonat?",
+        "da": "Hvor kan min hund ellers finde natron?",
+        "fi": "Mistä muualta koirani voi löytää ruokasoodaa?",
+        "nb": "Hvor ellers kan hunden finne natron?",
+        "it": "Dove altro può trovare il bicarbonato il mio cane?",
+        "de": "Wo könnte mein Hund sonst noch Natron finden?",
+        "fr": "Où mon chien peut-il encore trouver du bicarbonate de soude ?",
+        "pt": "Onde mais pode o meu cão encontrar bicarbonato de sódio?",
+        "nl": "Waar kan mijn hond nog meer zuiveringszout vinden?",
+        "pl": "Gdzie jeszcze pies może znaleźć sodę oczyszczoną?"
       },
       "a": {
         "en": "Baking soda is found in many household items, including toothpaste and deodorisers. Store it and cleaning products in latched cupboards or places your dog can't reach.",
         "sl": "Soda bikarbona je v številnih gospodinjskih izdelkih, tudi v zobni pasti in sredstvih proti neprijetnim vonjavam. Hranite jo skupaj s čistili v zaprtih omaricah ali tam, kamor pes ne more.",
-        "cs": "Jedlou sodu obsahuje mnoho domácích výrobků, třeba zubní pasty a pohlcovače pachů. Uchovávejte ji spolu s čisticími prostředky v uzavíratelných skříňkách nebo tam, kam se pes nedostane."
+        "es": "El bicarbonato de sodio está en muchos productos de casa, como la pasta de dientes y los desodorizantes. Guárdalo, junto con los productos de limpieza, en armarios con cierre o en sitios a los que tu perro no llegue.",
+        "cs": "Jedlou sodu obsahuje mnoho domácích výrobků, třeba zubní pasty a pohlcovače pachů. Uchovávejte ji spolu s čisticími prostředky v uzavíratelných skříňkách nebo tam, kam se pes nedostane.",
+        "hr": "Soda bikarbona nalazi se u mnogim kućanskim proizvodima, među ostalim u zubnoj pasti i sredstvima za neutralizaciju mirisa. Spremi je i sredstva za čišćenje u ormariće koji se čvrsto zatvaraju ili na mjesta koja pas ne može dosegnuti.",
+        "sv": "Bikarbonat finns i många hushållsprodukter, bland annat tandkräm och luktborttagare. Förvara det och rengöringsprodukter i skåp med lås eller på platser som hunden inte kommer åt.",
+        "da": "Natron findes i mange husholdningsprodukter, blandt andet tandpasta og lugtfjernere. Opbevar det og rengøringsmidler i skabe med lås eller steder, som din hund ikke kan nå.",
+        "fi": "Ruokasoodaa on monissa kotitalouden tuotteissa, myös hammastahnassa ja hajunpoistoaineissa. Säilytä sitä ja siivousaineita kaapeissa, joissa on salpa, tai paikoissa, joihin koira ei ylety.",
+        "nb": "Natron finnes i mange husholdningsprodukter, blant annet tannkrem og luktfjernere. Oppbevar det og rengjøringsmidler i skap med lås eller på steder hunden ikke når.",
+        "it": "Il bicarbonato si trova in molti prodotti di casa, tra cui dentifricio e deodoranti per ambienti. Conservalo, insieme ai detersivi, in armadietti con chiusura o in posti che il tuo cane non può raggiungere.",
+        "de": "Natron steckt in vielen Haushaltsprodukten, darunter Zahnpasta und Geruchsneutralisierer. Bewahren Sie Natron und Reinigungsmittel in verschließbaren Schränken oder an Orten auf, die für Ihren Hund unerreichbar sind.",
+        "fr": "On en trouve dans de nombreux produits ménagers, dont le dentifrice et les désodorisants. Rangez-le, ainsi que les produits d’entretien, dans des placards fermés ou hors de portée de votre chien.",
+        "pt": "O bicarbonato de sódio existe em muitos produtos de casa, incluindo a pasta de dentes e os desodorizantes de ambiente. Guarda-o, tal como os produtos de limpeza, em armários com trinco ou em sítios onde o teu cão não chegue.",
+        "nl": "Zuiveringszout zit in veel producten in huis, zoals tandpasta en geurverwijderaars. Bewaar het, net als schoonmaakmiddelen, in kastjes met een slotje of op een plek waar je hond er niet bij kan.",
+        "pl": "Sodę oczyszczoną zawiera wiele produktów domowych, m.in. pasta do zębów i pochłaniacze zapachów. Chowaj ją i środki czystości do szafek z zatrzaskiem albo tam, gdzie pies nie sięgnie."
       }
     }
   ],
@@ -149,10 +353,70 @@
       "verified_by": "claude-verifier",
       "verified_hash": "ade61b38db0bca85a0552d480699355f514e4349292c68013e9c7ca4c53186c6"
     },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0d41f6fc70fae561703da886e8515902ee01a735259ab01bc7755a39dfc5a6d2"
+    },
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0f080cd8f4ee2158e7ee96deb0df9cc367f642c8e56db202c5d4353a7cd1a301"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "52cf010173f757c555000e13013810db2748fdc63f3361ecbdd7af1b69e41b52"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d2f4475facda5e2d47100e31afb36fe0f20873b7c65a73dc444f00adfd4685dd"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1e9e40e5faea028b785049cd4a42a8982b878e01b6fff60b1246209a74d4baa3"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "53f4caec5457e25601cfcdea6549b983e3cff1da7058bd9cb05e7182a0ec5bfe"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8ba65d414fc35373c00dfd7b737eb941eaa8878717328ea2bba72fb02449cadb"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9410b1141ae09c2ceffb92cba090830678b5aab515548635df729a1326bc9b1b"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ef91995b43f6bf17e7e170f959eff75c7b516a6e6342f877d4334bee6528b4f4"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4832ce7652468cd47e1ca504e28b8126f1a1dc68b120100d35e0b8db0aff1ebd"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "26b813021c668c0e4ff6baeb3a3384824f66efc9beef3d899f37c5a8ba091cef"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a58425d4edc96089a81fafc74253587ae7359ff879620f0204eae7b6d3a8aa8d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "94e2b5de2c1efb8e3609e9be28a986d93ca831e3ebaee9f3391bd7c9c224688e"
     }
   }
 }

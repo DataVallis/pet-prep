@@ -1,0 +1,150 @@
+{
+  "country": "PY",
+  "checked": "2026-11-15",
+  "sources": [
+    {
+      "name": "InfoNegocios - Nantes Hospital Veterinario (Villa Morra)",
+      "url": "https://infonegocios.com.py/y-ademas/atencion-de-lujo-nantes-hospital-veterinario-prepara-una-moderna-nueva-sede-para-2025",
+      "note": "Opened: address, two phones, explicit 24-hour statement. Business press, not own site."
+    },
+    {
+      "name": "InfoNegocios - Nantes opens 24/7 hospital",
+      "url": "https://infonegocios.com.py/y-ademas/con-atencion-24-7-y-tecnologia-de-punta-nantes-abre-un-hospital-veterinario-modelo-en-villa-morra",
+      "note": "Opened: 'primer hospital veterinario del país con atención 24/7'; no address/phone."
+    },
+    {
+      "name": "ABC Color - Veterinarias para atender a tus mascotas (2020)",
+      "url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
+      "note": "Opened: list of Asunción-area clinics with addresses, phones, some hours; dated 2020."
+    },
+    {
+      "name": "InfoNegocios - Asispet",
+      "url": "https://infonegocios.com.py/default/atencion-peluda-asispet-innova-con-medicina-prepaga-para-mascotas-y-proyecta-franquicias",
+      "note": "Opened: says Luque and Lambaré branches both open 24 h, 24 h ambulance; no address/phone, so no entry."
+    },
+    {
+      "name": "InfoNegocios - public vet hospital Luque",
+      "url": "https://infonegocios.com.py/amp/infopet/salud-animal-tras-el-primer-hospital-veterinario-publico-de-luque-analizan-replicar-modelo-en-mariano-roque-alonso-y-villa-hayes",
+      "note": "Opened: not built yet (planned), no contacts; no entry."
+    },
+    {
+      "name": "Hoy - tips article",
+      "url": "https://www.hoy.com.py/nacionales/que-tener-en-cuenta-a-la-hora-de-llevar-a-las-mascotas-a-una-veterinaria",
+      "note": "Opened: no clinics; says clinics need SENACSA licence, points to AMVEPA Paraguay Facebook."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Nantes Hospital Veterinario",
+      "city": "Asunción",
+      "region": "Asunción",
+      "address": "Salaskin y Andrade, Villa Morra",
+      "phone": "(021) 661-953 / (0971) 280-025",
+      "emergency_24h": true,
+      "duty": "Open 24 hours in all services; no need to call ahead.",
+      "small_animals": true,
+      "source_url": "https://infonegocios.com.py/y-ademas/atencion-de-lujo-nantes-hospital-veterinario-prepara-una-moderna-nueva-sede-para-2025",
+      "checked": "2026-11-15",
+      "note": "InfoNegocios article (business press, not the clinic's own page): 'trabaja las 24 horas en todos sus servicios', quote 'abierto las 24 horas'. Address/phones from the same article; address and phone (021) 661-953 also in ABC 2020 list. Own site not found/opened; Instagram not openable (PROVENANCE_REQUIRED). Article (2022) announces a new building for 2025; address may have changed.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę we wszystkich usługach; nie trzeba dzwonić przed wizytą."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Clínica Veterinaria Panda",
+      "city": "Asunción",
+      "region": "Asunción",
+      "address": "Bruno Guggiari 122 c/ Eusebio Ayala",
+      "phone": "(021) 554-957",
+      "emergency_24h": false,
+      "duty": "For care or emergencies, call the clinic.",
+      "small_animals": true,
+      "source_url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
+      "checked": "2026-11-15",
+      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published. 'Para atención o urgencias llamar al (021) 554 957.' No 24 h statement.",
+      "duty_i18n": {
+        "pl": "W sprawie opieki lub nagłych przypadków zadzwoń do przychodni."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Clínica Veterinaria Tacuary",
+      "city": "Asunción",
+      "region": "Asunción",
+      "address": "Tacuary 1501",
+      "phone": "(021) 449-554",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
+      "checked": "2026-11-15",
+      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published. Mentions urgencias contact but no 24 h statement."
+    },
+    {
+      "kind": "clinic",
+      "name": "Mascota's Veterinaria",
+      "city": "Asunción",
+      "region": "Asunción",
+      "address": "Av. España 2573",
+      "phone": "0971 553-880 / 0971 520-080 / (021) 602-124 / (021) 624-149",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:00-19:00, Sat 8:00-17:30.",
+      "small_animals": true,
+      "source_url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
+      "checked": "2026-11-15",
+      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published.",
+      "duty_i18n": {
+        "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–17:30."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Rogavet Veterinaria",
+      "city": "Asunción",
+      "region": "Asunción",
+      "address": "Capitán Nudelman 227",
+      "phone": "0984 801-199",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 8:00-17:00.",
+      "small_animals": true,
+      "source_url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
+      "checked": "2026-11-15",
+      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published.",
+      "duty_i18n": {
+        "pl": "Pon.–sob. 8:00–17:00."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinaria Sweet Dog",
+      "city": "Asunción",
+      "region": "Asunción",
+      "address": "Perú 235, between Río de Janeiro and José Berges",
+      "phone": "(021) 204-422",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
+      "checked": "2026-11-15",
+      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published. No hours published."
+    },
+    {
+      "kind": "clinic",
+      "name": "Clínica Veterinaria Vida de Perros",
+      "city": "Lambaré",
+      "region": "Central",
+      "address": "Bruno Guggiari between San Rafael and Antillas",
+      "phone": "0985 909-055 / (021) 338-6034 / 0981 768-848",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 8:00-12:00 and 13:00-17:00.",
+      "small_animals": true,
+      "source_url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
+      "checked": "2026-11-15",
+      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published.",
+      "duty_i18n": {
+        "pl": "Pon.–sob. 8:00–12:00 i 13:00–17:00."
+      }
+    }
+  ],
+  "notes": "Only 7 entries, 1 with 24 h (Nantes), from press articles - no clinic's own site could be opened. WebFetch only allows URLs surfaced by search; search engine returned almost no Paraguayan clinic sites. Blocked (PROVENANCE_REQUIRED): fcv.una.py, nantes.com.py guess, Nantes Instagram, gvetweb.com/asispetpy (Asispet: Luque + Lambaré, 24 h per article, needs phone/address). ip.gov.py article fetch errored. Not found: Colegio de Medicos Veterinarios del Paraguay site, SENACSA clinic list, duty rota, animal poison line. Nothing for Ciudad del Este, Encarnación, San Lorenzo, Villa Rica, Pedro Juan Caballero. ABC 2020 entries should be re-verified against own pages."
+}

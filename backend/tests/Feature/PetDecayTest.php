@@ -127,6 +127,11 @@ function expectedHygieneAt(Pet $pet, Carbon $start, int $minute): int
 
 beforeEach(function () {
     Carbon::setTestNow(DECAY_SIM_START);
+    // This file checks the raw decay rates / clamping on freshly born factory
+    // pets (no meal window missed yet). The hunger floor until the next meal
+    // (David 2026-11-15) would hold them at 25 % — it has its own tests
+    // (HungerFloorTest), so it is switched off here.
+    config(['feeding.hunger_floor_percent' => 0]);
 });
 
 describe('PetDecayService - 24 h simulation against the spec', function () {

@@ -8,6 +8,33 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-16 — Trije psi in mačka, štirje urniki: tihe ure za vsakega ljubljenčka in ura 12 / 24 h
+
+**Kaj:** David: »Mi imamo 3 pse in mačko. Hčerka mačko, sin psa. Jaz psa in žena psa. Zdaj pa ko nastavim school hours mi avtomatsko za vse živali velja. To ni ok.« Tihe ure so bile ena nastavitev za celo družino. Zdaj vsak ljubljenček sledi družinskim uram, starš pa mu lahko nastavi lastne (šola, spanje). Hkrati: ure v aplikaciji in obvestilih po telefonu (24-urni ali 12-urni zapis) z ročno izbiro, ure pa se ne tipkajo več, ampak nastavijo z vrtljivimi kolesi kot na budilki (minute po 15).
+**Zakaj je pomembno:** družina z več živalmi in več otroki nima enega urnika; če velja ena ura za vse, en ljubljenček spi, ko bi moral jesti, drugi pa je lačen med poukom. In ker gremo v tujino: v ZDA nihče ne bere »17:00«.
+- 👩 Staršem: »Vsak ljubljenček ima lahko svoje tihe ure. Sprememba družinskih ur ne premakne tistih, ki imajo svoje.«
+- 🧒 Otrokom: »Tvoj kuža spi takrat, ko imaš ti šolo — ne takrat, ko jo ima sestra.«
+- 💼 Investitorjem: pripravljeno za trge z 12-urnim zapisom (ZDA, Kanada, Avstralija) brez nove gradnje v trgovini — vse prek posodobitve OTA.
+- 🛠 Tehnično: en dostop `Pet::quietHours()` (lastne ure ljubljenčka → družinske → privzete, po uri ljubljenčka), sprememba velja kot pri družini (brez preračuna zaključenih dni); ura v obvestilu se oblikuje za vsak telefon posebej (izbira osebe, »samodejno« = nastavitev telefona); kolesa brez nove nativne knjižnice. 18 novih testov na strežniku, 18 v aplikaciji.
+
+---
+
+## 2026-11-15 — »Koliko dela je z labradorcem?«: povzetek brez datotek in e-naslovi brez podvajanja
+
+**Kaj:** Povzetek za starše smo isti dan naredili dvakrat. Najprej kot PDF v Lemon Squeezy, potem je David rekel, da to pri 300 pasmah in veliko jezikih ne gre: nihče ne bo nalagal tisočih datotek. Zdaj stran povzetek sestavi sama iz izbir obiskovalca (pes ali mladiček, jezik, valuta, njegove ocene stroškov), starš ga natisne ali shrani kot PDF. E-naslov je neobvezen: starš ga pusti s privolitvijo za novice, strežnik ga shrani enkrat, tudi če ga vpiše večkrat. IP-ja in imena ne shranjujemo, strežnik ne pošilja e-pošte.
+**Zakaj je pomembno:** partner, ki bo imel logotip na strani, hoče vedeti, koliko družin jo je videlo in katere pasme jih zanimajo. Dobi številke, ne naslovov.
+- 🛠 Ena stran namesto 4.500 datotek (300 pasem × 15 jezikov): podatki ostanejo na enem mestu.
+- 🤝 Partnerjem: »povemo vam, koliko družin je razmišljalo o labradorcu; njihovih naslovov ne delimo«.
+- 👩 Staršem: povzetek dobite brez e-naslova; če ga pustite, ga shranimo samo z vašo privolitvijo.
+- 📣 Isti dan je stran prenesena na petprep.si (»Koliko dela je z labradorcem?«, slovensko in angleško; `pet-prep-website` PR #406).
+## 2026-11-15 — Sit kuža ne ostane brez hrane: lakota ne pade pod 25 % do naslednjega obroka
+
+**Kaj:** David je v nedeljo ob 15:32 poslal posnetek zaslona: francoski buldog, mladiček 6 mesecev, jutranji obrok opravljen (6–10 ✓), naslednji ob 17:00 — lakota pa 0 %. Vzrok je računski: lakota pade 12 % na uro, polna skleda zdrži 8 ur in 20 minut, okni pa se začneta 11 ur narazen. Med tednom šola (tihe ure, upadanje ×0,1) to skrije, ob vikendu ne. Otrok ni mogel storiti ničesar (nujni obrok je samo po zamujenem obroku), starš pa je uro kasneje dobil alarm »Nujno« — za popolnoma oskrbovanega kužka. David je izbral rešitev št. 1 z mejo 25 %: dokler je zadnji obrok opravljen, lakota obstane pri 25 % in počaka na naslednje okno; ko se okno odpre, pada naprej. Po zamujenem obroku ostane vse po starem (0 %, nujni obrok, alarm). Velja za pse in mačke, tudi za obstoječe ljubljenčke; samo strežnik, brez nove različice aplikacije.
+**Zakaj je pomembno:** igra mora kaznovati zanemarjanje, ne pridnosti. Alarm staršu, ki ga sproži naša matematika in ne otrok, uniči zaupanje v vsa ostala obvestila.
+**Kako povedati:** 🧒 »Če kužka nahraniš ob pravem času, do naslednjega obroka ne ostane brez hrane.« 👩 »Alarm zaradi lakote dobite samo, če je obrok res zamujen — tudi ob vikendih.« 💼 »Pravila igre preverjamo na resničnih dnevih; vsako pravilo ima test, ki simulira dan minuto za minuto.« 🛠 »Upadanje ostane čista funkcija: stanje, čas, tihe ure in zdaj še urnik obrokov; zamujen tik se razreže na odseke ob odprtju okna.«
+
+---
+
 ## 2026-11-15 — Three.js: prototip »Koliko dela je labradorec?«
 
 **Kaj:** David je vprašal, kje lahko three.js naredi korak naprej, tudi poslovno. Odgovor: na spletni strani, ne v aplikaciji — pes v aplikaciji ostane realističen video. Narejen je prototip za petprep.si: en dan z labradorcem v 3D, vsako opravilo pade kot žeton na kup, kup se pomnoži na teden, leto in 13 let (odrasel labradorec: 7.177 ur sprehodov in 9.570 obrokov), nato stroški z izbiro valute in poziv partnerjem. V prizoru so info točke z dejstvi in viri. Samo prototip (`docs/prototypes/real-cost/`), *ni objavljen*.

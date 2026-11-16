@@ -3,24 +3,89 @@
   "species": "dog",
   "name": {
     "en": "Hot dogs",
-    "sl": "Hrenovke"
+    "sl": "Hrenovke",
+    "es": "Perritos calientes",
+    "hr": "Hrenovke (hot dog)",
+    "sv": "Varmkorv",
+    "da": "Hotdogs",
+    "fi": "Hot dogit",
+    "nb": "Hotdoger",
+    "it": "Hot dog",
+    "de": "Hot Dogs",
+    "fr": "Hot-dogs",
+    "pt": "Cachorros-quentes",
+    "nl": "Hotdogs",
+    "pl": "Hot dogi",
+    "cs": "Hot dogy (párky v rohlíku)"
   },
   "question": {
     "en": "Can dogs eat hot dogs?",
-    "sl": "Ali lahko psi jedo hrenovke?"
+    "sl": "Ali lahko psi jedo hrenovke?",
+    "es": "¿Pueden los perros comer perritos calientes?",
+    "hr": "Smiju li psi jesti hrenovke?",
+    "sv": "Får hundar äta varmkorv?",
+    "da": "Må hunde spise hotdogs?",
+    "fi": "Saako koira syödä hot dogeja?",
+    "nb": "Kan hunder spise hotdoger?",
+    "it": "I cani possono mangiare gli hot dog?",
+    "de": "Dürfen Hunde Hot Dogs fressen?",
+    "fr": "Les chiens peuvent-ils manger des hot-dogs ?",
+    "pt": "Os cães podem comer cachorros-quentes?",
+    "nl": "Mogen honden hotdogs eten?",
+    "pl": "Czy psy mogą jeść hot dogi?",
+    "cs": "Mohou psi jíst hot dogy?"
   },
   "url_slug": {
     "en": "hot-dogs",
-    "sl": "hrenovke"
+    "sl": "hrenovke",
+    "es": "perritos-calientes",
+    "hr": "hot-dog",
+    "sv": "varmkorv",
+    "da": "hotdogs",
+    "fi": "hot-dogit",
+    "nb": "hotdoger",
+    "it": "hot-dog",
+    "de": "hot-dogs",
+    "fr": "hot-dogs",
+    "pt": "cachorros-quentes",
+    "nl": "hotdogs",
+    "pl": "hot-dogi",
+    "cs": "hot-dogy"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, hot dogs aren't a good choice for dogs. They are very salty and often contain sodium nitrate and seasonings such as garlic and onion powder, which can be toxic to dogs. Hot dogs can also be a choking hazard.",
-    "sl": "Ne, hrenovke za pse niso dobra izbira. So zelo slane in pogosto vsebujejo natrijev nitrat ter začimbe, kot sta česen in čebula v prahu, ki sta lahko za pse strupena. Pes se lahko s hrenovko tudi zaduši."
+    "sl": "Ne, hrenovke za pse niso dobra izbira. So zelo slane in pogosto vsebujejo natrijev nitrat ter začimbe, kot sta česen in čebula v prahu, ki sta lahko za pse strupena. Pes se lahko s hrenovko tudi zaduši.",
+    "es": "No, los perritos calientes no son una buena opción para los perros. Son muy salados y suelen llevar nitrato de sodio y condimentos como ajo y cebolla en polvo, que pueden ser tóxicos para los perros. Además, pueden suponer un peligro de atragantamiento.",
+    "hr": "Ne, hrenovke nisu dobar izbor za pse. Vrlo su slane i često sadrže natrijev nitrat i začine poput češnjaka i luka u prahu, koji mogu biti otrovni za pse. Hrenovke mogu izazvati i gušenje.",
+    "sv": "Nej, varmkorv är inget bra val för hundar. Den är mycket salt och innehåller ofta natriumnitrat och kryddor som vitlökspulver och lökpulver, som kan vara giftiga för hundar. Varmkorv kan också innebära en kvävningsrisk.",
+    "da": "Nej, hotdogs er ikke et godt valg til hunde. Hotdogpølser er meget salte og indeholder ofte natriumnitrat og krydderier som hvidløgs- og løgpulver, som kan være giftige for hunde. De kan også give risiko for kvælning.",
+    "fi": "Ei suositella, hot dogit eivät ole hyvä valinta koirille. Ne ovat hyvin suolaisia ja sisältävät usein natriumnitraattia ja mausteita, kuten valkosipuli- ja sipulijauhetta, jotka voivat olla koirille myrkyllisiä. Hot dogit voivat myös aiheuttaa tukehtumisvaaran.",
+    "nb": "Nei, hotdoger er ikke et godt valg for hunder. De er veldig salte og inneholder ofte natriumnitrat og krydder som hvitløks- og løkpulver, som kan være giftige for hunder. Hotdoger kan også gi kvelningsfare.",
+    "it": "No, gli hot dog non sono una buona scelta per i cani. Sono molto salati e spesso contengono nitrato di sodio e condimenti come aglio e cipolla in polvere, che possono essere tossici per i cani. Inoltre possono comportare un rischio di soffocamento.",
+    "de": "Nein, Hot Dogs sind für Hunde keine gute Wahl. Sie sind sehr salzig und enthalten oft Natriumnitrat und Gewürze wie Knoblauch- und Zwiebelpulver, die für Hunde giftig sein können. Hot Dogs können außerdem ein Erstickungsrisiko sein.",
+    "fr": "Non, les hot-dogs ne sont pas un bon choix pour les chiens. Ils sont très salés et contiennent souvent du nitrate de sodium et des assaisonnements comme la poudre d’ail et d’oignon, qui peuvent être toxiques pour les chiens. Les hot-dogs peuvent aussi présenter un risque d’étouffement.",
+    "pt": "Não, os cachorros-quentes não são boa escolha para os cães. São muito salgados e contêm muitas vezes nitrato de sódio e temperos como alho e cebola em pó, que podem ser tóxicos para os cães. Os cachorros-quentes também podem ser um risco de engasgo.",
+    "nl": "Nee, hotdogs zijn geen goede keuze voor honden. Ze zijn erg zout en bevatten vaak natriumnitraat en kruiden zoals knoflook- en uipoeder, die giftig kunnen zijn voor honden. Hotdogs kunnen ook een verstikkingsgevaar zijn.",
+    "pl": "Nie, hot dogi (parówki w bułce) nie są dobrym wyborem dla psów. Są bardzo słone i często zawierają azotan sodu oraz przyprawy, takie jak czosnek i cebula w proszku, które mogą być toksyczne dla psów. Hot dogi mogą też grozić zadławieniem.",
+    "cs": "Ne, hot dogy pro psy nejsou dobrou volbou. Jsou velmi slané a často obsahují dusičnan sodný a koření, například česnekový a cibulový prášek, které mohou být pro psy jedovaté. Hot dog může psa také udusit."
   },
   "why": {
     "en": "The biggest problem with hot dogs is salt: even half of one would probably put a dog way over its daily sodium limit, and too much sodium can lead to dehydration and high blood pressure. Hot dogs often contain sodium nitrate, which has been linked to cancer, MSG, and sugars or artificial sweeteners, as well as garlic and onion powder. Big dogs may try to swallow them without chewing.",
-    "sl": "Največja težava hrenovk je sol: že polovica hrenovke bi psu verjetno močno presegla dnevno mejo natrija, preveč natrija pa lahko vodi v dehidracijo in visok krvni tlak. Hrenovke pogosto vsebujejo natrijev nitrat, ki so ga povezali z rakom, glutaminat (MSG) in sladkorje ali umetna sladila ter česen in čebulo v prahu. Veliki psi jih lahko poskušajo pogoltniti, ne da bi jih prežvečili."
+    "sl": "Največja težava hrenovk je sol: že polovica hrenovke bi psu verjetno močno presegla dnevno mejo natrija, preveč natrija pa lahko vodi v dehidracijo in visok krvni tlak. Hrenovke pogosto vsebujejo natrijev nitrat, ki so ga povezali z rakom, glutaminat (MSG) in sladkorje ali umetna sladila ter česen in čebulo v prahu. Veliki psi jih lahko poskušajo pogoltniti, ne da bi jih prežvečili.",
+    "es": "El mayor problema de los perritos calientes es la sal: incluso medio perrito probablemente haría que un perro se pasara con creces de su límite diario de sodio, y demasiado sodio puede provocar deshidratación y presión arterial alta. Los perritos calientes suelen llevar nitrato de sodio, que se ha relacionado con el cáncer, glutamato monosódico, azúcares o edulcorantes artificiales, además de ajo y cebolla en polvo. Los perros grandes pueden intentar tragárselos sin masticar.",
+    "hr": "Najveći je problem hrenovki sol: čak bi i pola jedne hrenovke vjerojatno psa daleko odvelo preko dnevne granice natrija, a previše natrija može dovesti do dehidracije i visokog krvnog tlaka. Hrenovke često sadrže natrijev nitrat, koji se povezuje s rakom, zatim MSG, šećere ili umjetna sladila, kao i češnjak i luk u prahu. Veliki psi ih mogu pokušati progutati bez žvakanja.",
+    "sv": "Det största problemet med varmkorv är saltet: redan en halv korv skulle förmodligen göra att en hund får i sig långt mer natrium än den klarar per dag, och för mycket natrium kan leda till uttorkning och högt blodtryck. Varmkorv innehåller ofta natriumnitrat, som har kopplats till cancer, MSG samt socker eller konstgjorda sötningsmedel, och dessutom vitlökspulver och lökpulver. Stora hundar kan försöka svälja dem utan att tugga.",
+    "da": "Det største problem ved hotdogs er saltet: selv en halv hotdogpølse ville nok få en hund langt over dens daglige grænse for natrium, og for meget natrium kan føre til dehydrering og forhøjet blodtryk. Hotdogpølser indeholder ofte natriumnitrat, som man har sat i forbindelse med kræft, MSG og sukker eller kunstige sødemidler samt hvidløgs- og løgpulver. Store hunde kan prøve at sluge dem uden at tygge.",
+    "fi": "Hot dogien suurin ongelma on suola: jo puolikas hot dog ylittäisi todennäköisesti koiran päivittäisen natriumrajan reilusti, ja liika natrium voi johtaa nestehukkaan ja korkeaan verenpaineeseen. Hot dogeissa on usein natriumnitraattia, jonka on yhdistetty syöpään, glutamaattia (MSG) sekä sokereita tai keinotekoisia makeutusaineita, samoin valkosipuli- ja sipulijauhetta. Isot koirat saattavat yrittää niellä ne pureskelematta.",
+    "nb": "Det største problemet med hotdoger er saltet: selv en halv hotdog vil trolig gi en hund langt mer natrium enn den tåler per dag, og for mye natrium kan gi dehydrering og høyt blodtrykk. Hotdoger inneholder ofte natriumnitrat, som er knyttet til kreft, og dessuten MSG, sukker eller kunstige søtstoffer, i tillegg til hvitløks- og løkpulver. Store hunder kan prøve å svelge dem uten å tygge.",
+    "it": "Il problema più grande degli hot dog è il sale: anche solo mezzo hot dog porterebbe probabilmente il cane ben oltre il suo limite giornaliero di sodio, e troppo sodio può portare a disidratazione e pressione alta. Gli hot dog contengono spesso nitrato di sodio, collegato al cancro, glutammato monosodico e zuccheri o dolcificanti artificiali, oltre ad aglio e cipolla in polvere. I cani di taglia grande possono provare a ingoiarli senza masticare.",
+    "de": "Das größte Problem bei Hot Dogs ist das Salz: Schon ein halber Hot Dog würde einen Hund wahrscheinlich weit über seine tägliche Natriumgrenze bringen, und zu viel Natrium kann zu Austrocknung und Bluthochdruck führen. Hot Dogs enthalten oft Natriumnitrat, das mit Krebs in Verbindung gebracht wird, Glutamat sowie Zucker oder Süßstoffe, außerdem Knoblauch- und Zwiebelpulver. Große Hunde schlingen sie womöglich ungekaut hinunter.",
+    "fr": "Le plus gros problème des hot-dogs, c’est le sel : même un demi-hot-dog ferait probablement dépasser largement la limite quotidienne de sodium d’un chien, et trop de sodium peut entraîner une déshydratation et une hypertension. Les hot-dogs contiennent souvent du nitrate de sodium, associé au cancer, du glutamate monosodique, des sucres ou des édulcorants artificiels, ainsi que de la poudre d’ail et d’oignon. Les gros chiens peuvent essayer de les avaler sans mâcher.",
+    "pt": "O maior problema dos cachorros-quentes é o sal: bastaria meio cachorro-quente para um cão ultrapassar em muito o limite diário de sódio, e demasiado sódio pode levar a desidratação e tensão arterial alta. Os cachorros-quentes contêm muitas vezes nitrato de sódio, que tem sido associado ao cancro, glutamato monossódico (MSG), e açúcares ou adoçantes artificiais, bem como alho e cebola em pó. Os cães grandes podem tentar engoli-los sem mastigar.",
+    "nl": "Het grootste probleem van hotdogs is zout: zelfs een halve hotdog zou een hond waarschijnlijk ruim boven zijn dagelijkse natriumgrens brengen, en te veel natrium kan leiden tot uitdroging en hoge bloeddruk. Hotdogs bevatten vaak natriumnitraat (dat met kanker in verband wordt gebracht), MSG, suikers of kunstmatige zoetstoffen, en knoflook- en uipoeder. Grote honden slikken ze soms zo door zonder te kauwen.",
+    "pl": "Największym problemem hot dogów jest sól: nawet połowa hot doga mogłaby prawdopodobnie znacznie przekroczyć dzienny limit sodu u psa, a zbyt dużo sodu może prowadzić do odwodnienia i nadciśnienia. Hot dogi często zawierają azotan sodu, który wiązano z rakiem, glutaminian sodu oraz cukry lub sztuczne słodziki, a także czosnek i cebulę w proszku. Duże psy mogą próbować połknąć je w całości.",
+    "cs": "Největším problémem hot dogů je sůl: už půl hot dogu by psa pravděpodobně dostalo výrazně nad jeho denní limit sodíku a příliš mnoho sodíku může vést k dehydrataci a vysokému krevnímu tlaku. Hot dogy často obsahují dusičnan sodný, který se dává do souvislosti s rakovinou, glutamát sodný a cukry nebo umělá sladidla a také česnekový a cibulový prášek. Velcí psi se je mohou pokusit spolknout bez rozkousání."
   },
   "signs": {
     "en": [
@@ -32,26 +97,143 @@
       "Bolečine v trebuhu",
       "Driska",
       "Bruhanje skupaj z drisko"
+    ],
+    "es": [
+      "Dolor de barriga",
+      "Diarrea",
+      "Vómitos junto con diarrea"
+    ],
+    "hr": [
+      "Bol u trbuhu",
+      "Proljev",
+      "Povraćanje uz proljev"
+    ],
+    "sv": [
+      "Ont i magen",
+      "Diarré",
+      "Kräkningar tillsammans med diarré"
+    ],
+    "da": [
+      "Ondt i maven",
+      "Diarré",
+      "Opkast sammen med diarré"
+    ],
+    "fi": [
+      "Vatsakipu",
+      "Ripuli",
+      "Oksentelu ja ripuli yhtä aikaa"
+    ],
+    "nb": [
+      "Vondt i magen",
+      "Diaré",
+      "Oppkast sammen med diaré"
+    ],
+    "it": [
+      "Mal di pancia",
+      "Diarrea",
+      "Vomito e diarrea insieme"
+    ],
+    "de": [
+      "Bauchschmerzen",
+      "Durchfall",
+      "Erbrechen zusammen mit Durchfall"
+    ],
+    "fr": [
+      "Mal au ventre",
+      "Diarrhée",
+      "Vomissements en plus de la diarrhée"
+    ],
+    "pt": [
+      "Dor de barriga",
+      "Diarreia",
+      "Vómitos e diarreia ao mesmo tempo"
+    ],
+    "nl": [
+      "Buikpijn",
+      "Diarree",
+      "Braken samen met diarree"
+    ],
+    "pl": [
+      "Ból brzucha",
+      "Biegunka",
+      "Wymioty razem z biegunką"
+    ],
+    "cs": [
+      "Bolest břicha",
+      "Průjem",
+      "Zvracení spolu s průjmem"
     ]
   },
   "what_to_do": {
     "en": "After eating a hot dog, your dog may get a tummy ache or diarrhoea, which should pass within a day. Call your vet if the diarrhoea doesn't stop or your dog is vomiting as well, as this can lead to serious dehydration.",
-    "sl": "Po hrenovki ima pes lahko bolečine v trebuhu ali drisko, ki naj bi minila v enem dnevu. Če driska ne preneha ali pes poleg tega bruha, pokličite veterinarja, saj lahko to vodi v hudo dehidracijo."
+    "sl": "Po hrenovki ima pes lahko bolečine v trebuhu ali drisko, ki naj bi minila v enem dnevu. Če driska ne preneha ali pes poleg tega bruha, pokličite veterinarja, saj lahko to vodi v hudo dehidracijo.",
+    "es": "Después de comer un perrito caliente, tu perro puede tener dolor de barriga o diarrea, que debería pasar en un día. Llama a tu veterinario si la diarrea no cesa o si tu perro también vomita, porque puede provocar una deshidratación grave.",
+    "hr": "Nakon hrenovke pas može dobiti bolove u trbuhu ili proljev, što bi trebalo proći unutar jednog dana. Nazovi veterinara ako proljev ne prestane ili pas povraća, jer to može dovesti do ozbiljne dehidracije.",
+    "sv": "Efter en varmkorv kan din hund få ont i magen eller diarré, vilket borde gå över inom ett dygn. Kontakta din veterinär om diarrén inte upphör eller om hunden också kräks, eftersom det kan leda till allvarlig uttorkning.",
+    "da": "Efter at have spist en hotdog kan din hund få ondt i maven eller diarré, der som regel går over inden for et døgn. Ring til din dyrlæge, hvis diarréen ikke stopper, eller hunden også kaster op, for det kan føre til alvorlig dehydrering.",
+    "fi": "Hot dogin syömisen jälkeen koirallasi voi olla vatsakipua tai ripulia, jonka pitäisi mennä ohi vuorokaudessa. Soita eläinlääkärille, jos ripuli ei lopu tai koira myös oksentelee, sillä se voi johtaa vakavaan nestehukkaan.",
+    "nb": "Etter å ha spist en hotdog kan hunden få vondt i magen eller diaré, som vanligvis går over i løpet av et døgn. Kontakt dyrlegen hvis diaréen ikke stopper eller hunden også kaster opp, for det kan føre til alvorlig dehydrering.",
+    "it": "Dopo aver mangiato un hot dog, il cane può avere mal di pancia o diarrea, che dovrebbero passare entro un giorno. Chiama il veterinario se la diarrea non si ferma o se il cane vomita anche, perché questo può portare a una grave disidratazione.",
+    "de": "Nach einem Hot Dog bekommt Ihr Hund vielleicht Bauchschmerzen oder Durchfall, was meist innerhalb eines Tages abklingt. Rufen Sie Ihren Tierarzt an, wenn der Durchfall nicht aufhört oder Ihr Hund auch erbricht, denn das kann zu schwerer Austrocknung führen.",
+    "fr": "Après avoir mangé un hot-dog, votre chien peut avoir mal au ventre ou la diarrhée, qui devrait disparaître en un jour. Appelez votre vétérinaire si la diarrhée ne s’arrête pas ou si votre chien vomit en plus, car cela peut entraîner une déshydratation grave.",
+    "pt": "Depois de comer um cachorro-quente, o teu cão pode ter dor de barriga ou diarreia, que deve passar num dia. Liga ao teu veterinário se a diarreia não parar ou se o teu cão também estiver a vomitar, porque isso pode levar a uma desidratação grave.",
+    "nl": "Na het eten van een hotdog kan je hond buikpijn of diarree krijgen, wat binnen een dag zou moeten overgaan. Bel je dierenarts als de diarree niet ophoudt of je hond ook moet braken, want dat kan leiden tot ernstige uitdroging.",
+    "pl": "Po zjedzeniu hot doga pies może mieć ból brzucha lub biegunkę, które powinny minąć w ciągu doby. Zadzwoń do weterynarza, jeśli biegunka nie ustępuje albo pies ma też wymioty, bo może to prowadzić do poważnego odwodnienia.",
+    "cs": "Po hot dogu může mít pes bolest břicha nebo průjem, které by měly do jednoho dne odeznít. Zavolejte veterináři, pokud průjem neustává nebo pes navíc zvrací, protože to může vést k vážné dehydrataci."
   },
   "serving": null,
   "child": {
     "en": "Hot dogs are too salty for dogs. At a barbecue, ask a grown-up for a little plain meat for your dog instead.",
-    "sl": "Hrenovke so za pse preslane. Na pikniku raje prosi odraslega za košček navadnega mesa za psa."
+    "sl": "Hrenovke so za pse preslane. Na pikniku raje prosi odraslega za košček navadnega mesa za psa.",
+    "es": "Los perritos calientes son demasiado salados para los perros. En una barbacoa, pide a un adulto un poco de carne sin condimentar para tu perro.",
+    "hr": "Hrenovke su previše slane za pse. Na roštilju zamoli odraslu osobu da umjesto toga psu da malo običnog mesa.",
+    "sv": "Varmkorv är för salt för hundar. Be en vuxen om lite okryddat kött till din hund i stället när ni grillar.",
+    "da": "Hotdogs er for salte til hunde. Når der bliver grillet, kan du bede en voksen om lidt almindeligt kød til din hund i stedet.",
+    "fi": "Hot dogit ovat koirille liian suolaisia. Pyydä grillijuhlissa aikuiselta koirallesi vähän maustamatonta lihaa sen sijaan.",
+    "nb": "Hotdoger er for salte for hunder. Når dere griller, kan du be en voksen om litt naturelt kjøtt til hunden i stedet.",
+    "it": "Gli hot dog sono troppo salati per i cani. Al barbecue, chiedi a un adulto un po’ di carne senza condimenti per il tuo cane.",
+    "de": "Hot Dogs sind für Hunde zu salzig. Frag beim Grillen einen Erwachsenen lieber nach ein wenig ungewürztem Fleisch für deinen Hund.",
+    "fr": "Les hot-dogs sont trop salés pour les chiens. Au barbecue, demande plutôt à un adulte un peu de viande nature pour ton chien.",
+    "pt": "Os cachorros-quentes são salgados demais para os cães. Num churrasco, pede a um adulto um bocadinho de carne simples para o teu cão.",
+    "nl": "Hotdogs zijn te zout voor honden. Vraag bij een barbecue liever een volwassene om een beetje ongekruid vlees voor je hond.",
+    "pl": "Hot dogi są dla psów zbyt słone. Na grillu poproś dorosłego o kawałek mięsa bez dodatków dla psa.",
+    "cs": "Hot dogy jsou pro psy moc slané. Na grilování raději požádej dospělého o kousek obyčejného masa pro psa."
   },
   "faq": [
     {
       "q": {
         "en": "What can I give my dog at a barbecue instead?",
-        "sl": "Kaj lahko psu na pikniku dam namesto hrenovke?"
+        "sl": "Kaj lahko psu na pikniku dam namesto hrenovke?",
+        "es": "¿Qué puedo darle a mi perro en una barbacoa en su lugar?",
+        "hr": "Što mogu dati psu na roštilju umjesto toga?",
+        "sv": "Vad kan jag ge min hund i stället när vi grillar?",
+        "da": "Hvad kan jeg give min hund ved grillen i stedet?",
+        "fi": "Mitä voin antaa koirallesi grillijuhlissa sen sijaan?",
+        "nb": "Hva kan jeg gi hunden i stedet når vi griller?",
+        "it": "Che cosa posso dare al mio cane al barbecue al posto dell’hot dog?",
+        "de": "Was kann ich meinem Hund stattdessen beim Grillen geben?",
+        "fr": "Que puis-je donner à mon chien au barbecue à la place ?",
+        "pt": "O que posso dar ao meu cão num churrasco em vez disso?",
+        "nl": "Wat kan ik mijn hond dan wel geven bij een barbecue?",
+        "pl": "Co mogę dać psu zamiast tego na grillu?",
+        "cs": "Co můžu psovi dát místo toho na grilování?"
       },
       "a": {
         "en": "Some plain beef, pork or chicken with no salt or other seasoning, cut into bite-sized pieces.",
-        "sl": "Malo navadne govedine, svinjine ali piščanca brez soli in drugih začimb, narezanega na majhne koščke."
+        "sl": "Malo navadne govedine, svinjine ali piščanca brez soli in drugih začimb, narezanega na majhne koščke.",
+        "es": "Un poco de ternera, cerdo o pollo sin sal ni otros condimentos, cortado en trozos del tamaño de un bocado.",
+        "hr": "Malo običnog goveđeg, svinjskog ili pilećeg mesa bez soli i drugih začina, narezanog na komadiće za jedan zalogaj.",
+        "sv": "Lite okryddat nötkött, fläsk eller kyckling utan salt eller andra kryddor, skuret i munsbitar.",
+        "da": "Noget almindeligt oksekød, svinekød eller kylling uden salt eller andre krydderier, skåret i mundrette stykker.",
+        "fi": "Vähän maustamatonta naudan-, sian- tai kananlihaa ilman suolaa tai muita mausteita, suupalan kokoisiksi paloiksi leikattuna.",
+        "nb": "Litt naturell biff, svinekjøtt eller kylling uten salt eller annet krydder, skåret i passe store biter.",
+        "it": "Un po’ di manzo, maiale o pollo al naturale, senza sale né altri condimenti, tagliato a bocconcini.",
+        "de": "Etwas ungewürztes Rind-, Schweine- oder Hühnerfleisch ohne Salz oder andere Gewürze, in mundgerechte Stücke geschnitten.",
+        "fr": "Un peu de bœuf, de porc ou de poulet nature, sans sel ni autre assaisonnement, coupé en petits morceaux.",
+        "pt": "Um pouco de carne de vaca, de porco ou de frango simples, sem sal nem outros temperos, cortada em pedaços pequenos.",
+        "nl": "Wat rundvlees, varkensvlees of kip zonder zout of andere kruiden, in hapklare stukjes gesneden.",
+        "pl": "Trochę wołowiny, wieprzowiny lub kurczaka bez soli i innych przypraw, pokrojonych w małe kęsy.",
+        "cs": "Trochu obyčejného hovězího, vepřového nebo kuřecího masa bez soli a jiného koření, nakrájeného na malé kousky."
       }
     }
   ],
@@ -132,6 +314,71 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "09b9744787d97985ed2d6d9791337a1da30c78f94476ae1a6e2827552e7913dd"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f68446344bb51aa7d0b067d5c2af56146ccd114b3b2f67a3fb60acecc4e7349a"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "50eb81cb664f3568b1f808365da52d301f909067f3b6ed2afabddc67ab222d92"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1173388a01cc6bcf13408e2b9014a674861856771abf5adccb46988349ab92d8"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "002a257ceb04aba0bf1a2154c8cf157348b8f83058830a1b61cae41490c2433f"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "afcd3c780c98086ff0fe950904f242e1f5b486582ddc1bee3bfcd3f76a41744c"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4ca318c86574e4509ab319b49912753476fc8a2f5e47459c5e837e66102747ee"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ab62df247db1f83f3129f23003cdac5856ea2cf4d207a4d477f1200531b70c20"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "249fcad4b30e756bf9e9f8d15a2d8b16b7e322fa783cf22d1a197b89918fc57a"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "929b8287434e376c39d427c260db35f04f9b10f39ed3a68e16b760b96045985f"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "366294ca16cfbec54c40ae310587cbd1078f2fa211c27e275edc7e7a204d5c6b"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9f6d6637b04ba9bbac9875ce2694aa8095eadf3a3e18b782c2e4481b36bf64ac"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "5ca62fd925ba8d4df0a316de8b7e4a9f08b5572fbfabf127002297f836e9cfce"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "f853781369d403cd3be33c936928bc05e075d49d1448a4a2f9ca7d2c761debda"
     }
   }
 }

@@ -3,57 +3,213 @@
   "species": "dog",
   "name": {
     "en": "Beans",
-    "sl": "Fižol"
+    "sl": "Fižol",
+    "es": "Alubias",
+    "hr": "Grah",
+    "sv": "Bönor",
+    "da": "Bønner",
+    "fi": "Pavut",
+    "nb": "Bønner",
+    "it": "Fagioli",
+    "de": "Bohnen",
+    "fr": "Haricots",
+    "pt": "Feijão",
+    "nl": "Bonen",
+    "pl": "Fasola",
+    "cs": "Fazole"
   },
   "question": {
     "en": "Can dogs eat beans?",
-    "sl": "Ali lahko psi jedo fižol?"
+    "sl": "Ali lahko psi jedo fižol?",
+    "es": "¿Pueden los perros comer alubias?",
+    "hr": "Smiju li psi jesti grah?",
+    "sv": "Får hundar äta bönor?",
+    "da": "Må hunde spise bønner?",
+    "fi": "Saako koira syödä papuja?",
+    "nb": "Kan hunder spise bønner?",
+    "it": "I cani possono mangiare i fagioli?",
+    "de": "Dürfen Hunde Bohnen fressen?",
+    "fr": "Les chiens peuvent-ils manger des haricots ?",
+    "pt": "Os cães podem comer feijão?",
+    "nl": "Mogen honden bonen eten?",
+    "pl": "Czy psy mogą jeść fasolę?",
+    "cs": "Mohou psi jíst fazole?"
   },
   "url_slug": {
     "en": "beans",
-    "sl": "fizol"
+    "sl": "fizol",
+    "es": "alubias",
+    "hr": "grah",
+    "sv": "bonor",
+    "da": "boenner",
+    "fi": "pavut",
+    "nb": "bonner",
+    "it": "fagioli",
+    "de": "bohnen",
+    "fr": "haricots",
+    "pt": "feijao",
+    "nl": "bonen",
+    "pl": "fasola",
+    "cs": "fazole"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as a treat. Dogs can eat many kinds of beans, such as black, kidney, pinto, lima and navy beans, if they have been soaked and then cooked. Beans may give your dog some gas. Baked beans in sauce are not a good idea.",
-    "sl": "Da, kot priboljšek. Psi lahko jedo številne vrste fižola, na primer črni, rdeči (ledvičasti), pinto, lima in beli fižol, če je bil prej namočen in nato kuhan. Fižol lahko psu povzroči nekaj vetrov. Pečen fižol v omaki (baked beans) ni dobra izbira."
+    "sl": "Da, kot priboljšek. Psi lahko jedo številne vrste fižola, na primer črni, rdeči (ledvičasti), pinto, lima in beli fižol, če je bil prej namočen in nato kuhan. Fižol lahko psu povzroči nekaj vetrov. Pečen fižol v omaki (baked beans) ni dobra izbira.",
+    "es": "Sí, como premio. Los perros pueden comer muchos tipos de alubias, como las negras, las rojas, las pintas, las de Lima y las blancas, siempre que se hayan puesto en remojo y luego se hayan cocinado. Las alubias pueden provocarle algunos gases. Las alubias cocidas en salsa no son buena idea.",
+    "hr": "Da, kao poslastica. Psi mogu jesti mnoge vrste graha, poput crnog, crvenog (kidney), pinto, lima i bijelog graha, ako je namočen pa kuhan. Grah može kod psa izazvati nadutost. Grah u umaku (baked beans) nije dobra ideja.",
+    "sv": "Ja, som godbit. Hundar kan äta många sorters bönor, som svarta bönor, kidneybönor, pintobönor, limabönor och vita bönor, om de har blötlagts och sedan kokats. Bönor kan ge din hund lite gaser. Bakade bönor i sås är ingen bra idé.",
+    "da": "Ja, som en godbid. Hunde kan spise mange slags bønner, fx sorte bønner, kidneybønner, pintobønner, limabønner og hvide bønner, hvis de er udblødt og derefter kogt. Bønner kan give din hund luft i maven. Bagte bønner i sovs er ikke en god idé.",
+    "fi": "Saa, herkuksi. Koira voi syödä monenlaisia papuja, kuten mustia papuja, kidneypapuja, pintopapuja, limapapuja ja valkoisia papuja, jos ne on liotettu ja sitten keitetty. Pavut voivat aiheuttaa koiralle ilmavaivoja. Kastikkeessa tarjottavat valmispavut (baked beans) eivät sovi koiralle.",
+    "nb": "Ja, som godbit. Hunder kan spise mange slags bønner, for eksempel svarte bønner, kidneybønner, pintobønner, limabønner og hvite bønner, hvis de er bløtlagt og deretter kokt. Bønner kan gi hunden litt gass. Bakte bønner i saus er ikke en god idé.",
+    "it": "Sì, come premio. I cani possono mangiare molti tipi di fagioli, come i fagioli neri, rossi, pinto, di Lima e bianchi, purché siano stati messi in ammollo e poi cotti. I fagioli possono causare al cane un po’ di flatulenza. I fagioli in salsa, tipo baked beans, non sono una buona idea.",
+    "de": "Ja, als Leckerli. Hunde dürfen viele Bohnensorten fressen, etwa schwarze Bohnen, Kidneybohnen, Pintobohnen, Limabohnen und weiße Bohnen, wenn sie eingeweicht und danach gekocht wurden. Bohnen können bei Ihrem Hund Blähungen verursachen. Baked Beans in Soße sind keine gute Idee.",
+    "fr": "Oui, en friandise. Les chiens peuvent manger de nombreuses sortes de haricots, comme les haricots noirs, rouges, pinto, de Lima et blancs (navy), à condition qu’ils aient été trempés puis cuits. Les haricots peuvent provoquer des gaz chez votre chien. Les haricots cuits en sauce (baked beans) ne sont pas une bonne idée.",
+    "pt": "Sim, como guloseima. Os cães podem comer muitos tipos de feijão, como feijão-preto, feijão-encarnado, feijão-pinto, feijão-de-lima e feijão-branco, desde que tenha sido demolhado e depois cozido. O feijão pode provocar gases no teu cão. O feijão em molho (baked beans) não é boa ideia.",
+    "nl": "Ja, als snoepje. Honden mogen veel soorten bonen eten, zoals zwarte bonen, kidneybonen, pintobonen, limabonen en witte bonen, als ze zijn geweekt en daarna gaar gemaakt. Bonen kunnen je hond wat last van winderigheid geven. Baked beans in saus zijn geen goed idee.",
+    "pl": "Tak, jako smakołyk. Psy mogą jeść wiele rodzajów fasoli, np. czarną, czerwoną, pinto, limeńską czy białą, pod warunkiem że została namoczona, a potem ugotowana. Po fasoli psu mogą dokuczać gazy. Fasoli w sosie (baked beans) lepiej nie podawać.",
+    "cs": "Ano, jako pamlsek. Psi mohou jíst mnoho druhů fazolí, například černé, červené (kidney), pinto, lima a bílé fazole, pokud byly namočené a pak uvařené. Fazole mohou psovi způsobit plynatost. Fazole v omáčce z konzervy (baked beans) nejsou dobrý nápad."
   },
   "why": {
     "en": "Beans contain a lot of fibre, and uncooked they are almost indigestible. Soaking and cooking them helps dogs digest them and may reduce wind. Beans should not replace meat in a dog's diet. Baked beans themselves aren't toxic, but they are high in salt and sugar and their sauce can irritate a dog's stomach; eaten regularly, they could increase the risk of pancreatitis.",
-    "sl": "Fižol vsebuje veliko vlaknin, nekuhan pa je skoraj neprebavljiv. Namakanje in kuhanje psu pomagata, da ga prebavi, in lahko zmanjšata vetrove. Fižol ne sme nadomestiti mesa v pasji prehrani. Pečen fižol sam po sebi ni strupen, a vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec; če ga pes je redno, se lahko poveča tveganje za vnetje trebušne slinavke."
+    "sl": "Fižol vsebuje veliko vlaknin, nekuhan pa je skoraj neprebavljiv. Namakanje in kuhanje psu pomagata, da ga prebavi, in lahko zmanjšata vetrove. Fižol ne sme nadomestiti mesa v pasji prehrani. Pečen fižol sam po sebi ni strupen, a vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec; če ga pes je redno, se lahko poveča tveganje za vnetje trebušne slinavke.",
+    "es": "Las alubias tienen mucha fibra y, crudas, son casi indigeribles. Ponerlas en remojo y cocinarlas ayuda a que el perro las digiera y puede reducir los gases. Las alubias no deben sustituir a la carne en la dieta de un perro. Las alubias en salsa no son tóxicas en sí, pero llevan mucha sal y azúcar y su salsa puede irritar el estómago; si se comen con regularidad, podrían aumentar el riesgo de pancreatitis.",
+    "hr": "Grah sadrži mnogo vlakana, a sirov je gotovo neprobavljiv. Namakanje i kuhanje pomažu psima da ga probave i mogu smanjiti nadutost. Grah ne bi smio zamijeniti meso u prehrani psa. Grah u umaku (baked beans) sam po sebi nije otrovan, ali je bogat solju i šećerom, a njegov umak može nadražiti želudac psa; ako se jede redovito, mogao bi povećati rizik od upale gušterače.",
+    "sv": "Bönor innehåller mycket fibrer, och okokta är de nästan osmältbara. Att blötlägga och koka dem hjälper hundar att smälta dem och kan minska gaser. Bönor ska inte ersätta kött i hundens kost. Bakade bönor är i sig inte giftiga, men de innehåller mycket salt och socker och såsen kan reta hundens mage; om de äts regelbundet kan de öka risken för bukspottkörtelinflammation (pankreatit).",
+    "da": "Bønner indeholder meget fiber, og når de er rå, er de næsten ufordøjelige. Udblødning og kogning hjælper hunde med at fordøje dem og kan mindske luft i maven. Bønner bør ikke erstatte kød i en hunds kost. Bagte bønner er ikke giftige i sig selv, men de indeholder meget salt og sukker, og sovsen kan irritere hundens mave; hvis hunden får dem jævnligt, kan det øge risikoen for betændelse i bugspytkirtlen.",
+    "fi": "Pavuissa on paljon kuitua, ja raakoina ne ovat lähes sulamattomia. Liottaminen ja keittäminen auttavat koiraa sulattamaan ne ja voi vähentää ilmavaivoja. Pavut eivät saa korvata lihaa koiran ruokavaliossa. Kastikkeessa tarjottavat valmispavut eivät sinänsä ole myrkyllisiä, mutta niissä on paljon suolaa ja sokeria ja niiden kastike voi ärsyttää koiran vatsaa; säännöllisesti syötynä ne voivat lisätä haimatulehduksen riskiä.",
+    "nb": "Bønner inneholder mye fiber, og rå er de nesten umulige å fordøye. Bløtlegging og koking gjør dem lettere for hunder å fordøye og kan redusere gassplager. Bønner bør ikke erstatte kjøtt i kosten til en hund. Bakte bønner er ikke giftige i seg selv, men de inneholder mye salt og sukker, og sausen kan irritere magen til en hund. Hvis hunden får dem jevnlig, kan det øke risikoen for betennelse i bukspyttkjertelen (pankreatitt).",
+    "it": "I fagioli contengono molte fibre e, crudi, sono quasi indigeribili. Metterli in ammollo e cuocerli aiuta i cani a digerirli e può ridurre la flatulenza. I fagioli non devono sostituire la carne nell’alimentazione del cane. I fagioli in salsa non sono tossici in sé, ma contengono molto sale e zucchero e la salsa può irritare lo stomaco del cane; mangiati con regolarità, potrebbero aumentare il rischio di pancreatite.",
+    "de": "Bohnen enthalten viele Ballaststoffe, und roh sind sie fast unverdaulich. Werden sie eingeweicht und gekocht, können Hunde sie besser verdauen, und es kann Blähungen verringern. Bohnen sollten Fleisch in der Ernährung eines Hundes nicht ersetzen. Baked Beans sind an sich nicht giftig, enthalten aber viel Salz und Zucker, und ihre Soße kann den Magen eines Hundes reizen. Regelmäßig gefressen, könnten sie das Risiko einer Bauchspeicheldrüsenentzündung erhöhen.",
+    "fr": "Les haricots contiennent beaucoup de fibres et, crus, ils sont presque indigestes. Les faire tremper puis cuire aide les chiens à les digérer et peut réduire les gaz. Les haricots ne doivent pas remplacer la viande dans l’alimentation d’un chien. Les baked beans ne sont pas toxiques en eux-mêmes, mais ils sont riches en sel et en sucre et leur sauce peut irriter l’estomac du chien ; consommés régulièrement, ils pourraient augmenter le risque de pancréatite.",
+    "pt": "O feijão tem muita fibra e, cru, é quase indigerível. Demolhá-lo e cozê-lo ajuda os cães a digeri-lo e pode reduzir os gases. O feijão não deve substituir a carne na alimentação do cão. O feijão em molho (baked beans) não é tóxico em si, mas tem muito sal e açúcar e o molho pode irritar o estômago do cão; se for comido com regularidade, pode aumentar o risco de pancreatite.",
+    "nl": "Bonen bevatten veel vezels en zijn rauw bijna onverteerbaar. Weken en gaar maken helpt honden om ze te verteren en kan winderigheid verminderen. Bonen mogen vlees in het voer van een hond niet vervangen. Baked beans zelf zijn niet giftig, maar ze bevatten veel zout en suiker en de saus kan de maag van een hond irriteren; regelmatig gegeten kunnen ze het risico op alvleesklierontsteking vergroten.",
+    "pl": "Fasola zawiera dużo błonnika, a surowa jest prawie niestrawna. Namoczenie i ugotowanie ułatwia psom jej trawienie i może zmniejszyć ilość gazów. Fasola nie powinna zastępować psu mięsa w diecie. Sama fasola w sosie (baked beans) nie jest toksyczna, ale ma dużo soli i cukru, a sos może podrażnić psi żołądek; podawana regularnie, może zwiększać ryzyko zapalenia trzustki.",
+    "cs": "Fazole obsahují hodně vlákniny a syrové jsou téměř nestravitelné. Namočení a uvaření psům pomáhá je strávit a může omezit nadýmání. Fazole by neměly nahrazovat maso ve stravě psa. Fazole v omáčce samy o sobě nejsou jedovaté, ale mají hodně soli a cukru a jejich omáčka může psovi podráždit žaludek; pokud se podávají pravidelně, mohou zvýšit riziko zánětu slinivky břišní."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate some baked beans, a small amount is unlikely to cause much harm. Watch your dog for 24 hours and contact your vet for advice if you notice concerning signs such as an upset stomach or diarrhoea.",
-    "sl": "Če je pes pojedel nekaj pečenega fižola, majhna količina verjetno ne bo škodila. Psa 24 ur opazujte in se za nasvet obrnite na veterinarja, če opazite zaskrbljujoče znake, kot so prebavne težave ali driska."
+    "sl": "Če je pes pojedel nekaj pečenega fižola, majhna količina verjetno ne bo škodila. Psa 24 ur opazujte in se za nasvet obrnite na veterinarja, če opazite zaskrbljujoče znake, kot so prebavne težave ali driska.",
+    "es": "Si tu perro ha comido alubias en salsa, es poco probable que una cantidad pequeña le haga mucho daño. Obsérvalo durante 24 horas y consulta con tu veterinario si notas síntomas preocupantes, como malestar de estómago o diarrea.",
+    "hr": "Ako je pas pojeo malo graha u umaku, mala količina vjerojatno neće mnogo naškoditi. Promatraj psa 24 sata i obrati se veterinaru za savjet ako primijetiš zabrinjavajuće znakove poput želučanih tegoba ili proljeva.",
+    "sv": "Om din hund har ätit lite bakade bönor är det osannolikt att det orsakar större skada. Håll ett öga på hunden i 24 timmar och kontakta din veterinär för råd om du ser oroande tecken som orolig mage eller diarré.",
+    "da": "Hvis din hund har spist nogle få bagte bønner, er en lille mængde næppe skadelig. Hold øje med din hund i 24 timer, og kontakt din dyrlæge for at få råd, hvis du ser bekymrende tegn som dårlig mave eller diarré.",
+    "fi": "Jos koirasi söi vähän kastikkeessa tarjottavia valmispapuja, pieni määrä tuskin aiheuttaa suurta haittaa. Seuraa koiraa vuorokauden ajan ja kysy neuvoa eläinlääkäriltä, jos huomaat huolestuttavia oireita, kuten vatsavaivoja tai ripulia.",
+    "nb": "Hvis hunden har spist noen bakte bønner, er en liten mengde lite sannsynlig å gjøre stor skade. Følg med på hunden i 24 timer, og kontakt dyrlegen for råd hvis du ser bekymringsfulle tegn, som urolig mage eller diaré.",
+    "it": "Se il tuo cane ha mangiato dei fagioli in salsa, è improbabile che una piccola quantità faccia grossi danni. Tienilo d’occhio per 24 ore e chiedi consiglio al veterinario se noti segnali preoccupanti, come disturbi di stomaco o diarrea.",
+    "de": "Hat Ihr Hund ein paar Baked Beans gefressen, richtet eine kleine Menge wahrscheinlich kaum Schaden an. Beobachten Sie Ihren Hund 24 Stunden lang und wenden Sie sich an Ihren Tierarzt, wenn Sie besorgniserregende Anzeichen wie Magenbeschwerden oder Durchfall bemerken.",
+    "fr": "Si votre chien a mangé quelques baked beans, il est peu probable qu’une petite quantité fasse beaucoup de mal. Surveillez-le pendant 24 heures et contactez votre vétérinaire pour demander conseil si vous remarquez des signes inquiétants, comme un mal de ventre ou de la diarrhée.",
+    "pt": "Se o teu cão comeu um pouco de feijão em molho, é pouco provável que faça muito mal. Observa o teu cão durante 24 horas e liga ao teu veterinário para pedir conselho se notares sinais preocupantes, como indisposição de estômago ou diarreia.",
+    "nl": "Heeft je hond wat baked beans gegeten, dan is een kleine hoeveelheid waarschijnlijk niet erg schadelijk. Houd je hond 24 uur in de gaten en neem contact op met je dierenarts als je verontrustende verschijnselen ziet, zoals maagklachten of diarree.",
+    "pl": "Jeśli pies zjadł trochę fasoli w sosie, niewielka ilość raczej nie zaszkodzi. Obserwuj psa przez 24 godziny i skontaktuj się z weterynarzem, jeśli zauważysz niepokojące objawy, np. rozstrój żołądka lub biegunkę.",
+    "cs": "Pokud pes snědl trochu fazolí v omáčce, malé množství pravděpodobně mnoho škody nenadělá. Sledujte psa 24 hodin a pokud zaznamenáte znepokojivé příznaky, například podrážděný žaludek nebo průjem, poraďte se s veterinářem."
   },
   "serving": {
     "en": "Soaked first and then cooked, without sauce, as an occasional treat.",
-    "sl": "Najprej namočen in nato kuhan, brez omake, kot občasen priboljšek."
+    "sl": "Najprej namočen in nato kuhan, brez omake, kot občasen priboljšek.",
+    "es": "Primero en remojo y luego cocidas, sin salsa, como premio ocasional.",
+    "hr": "Prvo namočen, zatim kuhan, bez umaka, kao povremena poslastica.",
+    "sv": "Först blötlagda och sedan kokta, utan sås, som godbit då och då.",
+    "da": "Udblødt først og derefter kogt, uden sovs, som en godbid en gang imellem.",
+    "fi": "Ensin liotettuna ja sitten keitettynä, ilman kastiketta, satunnaisena herkkuna.",
+    "nb": "Bløtlagt først og deretter kokt, uten saus, som en godbit av og til.",
+    "it": "Prima in ammollo e poi cotti, senza salsa, come premio occasionale.",
+    "de": "Erst eingeweicht und dann gekocht, ohne Soße, als gelegentliches Leckerli.",
+    "fr": "D’abord trempés puis cuits, sans sauce, en friandise occasionnelle.",
+    "pt": "Demolhado primeiro e depois cozido, sem molho, como guloseima ocasional.",
+    "nl": "Eerst geweekt en daarna gaar gemaakt, zonder saus, af en toe als snoepje.",
+    "pl": "Najpierw namoczona, potem ugotowana, bez sosu, jako smakołyk od czasu do czasu.",
+    "cs": "Nejdřív namočené a potom uvařené, bez omáčky, jako občasný pamlsek."
   },
   "child": {
     "en": "Cooked beans can be a little treat for dogs, but they might make your dog a bit windy!",
-    "sl": "Kuhan fižol je lahko majhen priboljšek za psa, a ga lahko malo napihne!"
+    "sl": "Kuhan fižol je lahko majhen priboljšek za psa, a ga lahko malo napihne!",
+    "es": "Las alubias cocidas pueden ser un pequeño premio para los perros, ¡aunque puede que tu perro tenga algunos gases!",
+    "hr": "Kuhani grah može biti mala poslastica za pse, ali kod psa može izazvati i malo nadutosti!",
+    "sv": "Kokta bönor kan vara en liten godbit för hundar, men din hund kan bli lite pruttig!",
+    "da": "Kogte bønner kan være en lille godbid til hunde, men de kan give din hund lidt luft i maven!",
+    "fi": "Keitetyt pavut voivat olla koiralle pieni herkku, mutta ne voivat saada koirasi pierrelemään!",
+    "nb": "Kokte bønner kan være en liten godbit for hunder, men de kan gi litt gass!",
+    "it": "I fagioli cotti possono essere un piccolo premio per i cani, ma potrebbero far fare al tuo cane qualche puzzetta!",
+    "de": "Gekochte Bohnen können für Hunde ein kleines Leckerli sein, aber dein Hund muss davon vielleicht ein bisschen pupsen!",
+    "fr": "Les haricots cuits peuvent être une petite friandise pour les chiens, mais ton chien risque de faire quelques pets !",
+    "pt": "O feijão cozido pode ser uma pequena guloseima para os cães, mas pode deixar o teu cão cheio de gases!",
+    "nl": "Gare bonen zijn een klein snoepje voor honden, maar je hond kan er wel een beetje winderig van worden!",
+    "pl": "Ugotowana fasola może być małym smakołykiem dla psa, ale po niej pies może mieć trochę gazów!",
+    "cs": "Uvařené fazole mohou být pro psy malým pamlskem, ale pejskovi se z nich může trochu nadýmat bříško!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat baked beans?",
-        "sl": "Ali lahko psi jedo pečen fižol v omaki?"
+        "sl": "Ali lahko psi jedo pečen fižol v omaki?",
+        "es": "¿Pueden los perros comer alubias en salsa?",
+        "hr": "Smiju li psi jesti grah u umaku (baked beans)?",
+        "sv": "Får hundar äta bakade bönor?",
+        "da": "Må hunde spise bagte bønner?",
+        "fi": "Saako koira syödä kastikkeessa tarjottavia valmispapuja (baked beans)?",
+        "nb": "Kan hunder spise bakte bønner?",
+        "it": "I cani possono mangiare i fagioli in salsa?",
+        "de": "Dürfen Hunde Baked Beans fressen?",
+        "fr": "Les chiens peuvent-ils manger des baked beans ?",
+        "pt": "Os cães podem comer feijão em molho (baked beans)?",
+        "nl": "Mogen honden baked beans eten?",
+        "pl": "Czy psy mogą jeść fasolę w sosie (baked beans)?",
+        "cs": "Mohou psi jíst fazole v omáčce z konzervy?"
       },
       "a": {
         "en": "It's best not to. The beans themselves aren't toxic, but baked beans are high in salt and sugar and the sauce can irritate a dog's stomach. If your dog ate a little you spilt on the floor, it's probably not a cause for concern.",
-        "sl": "Raje ne. Fižol sam ni strupen, a pečen fižol vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec. Če je pes pojedel malo fižola, ki vam je padel na tla, to verjetno ni razlog za skrb."
+        "sl": "Raje ne. Fižol sam ni strupen, a pečen fižol vsebuje veliko soli in sladkorja, omaka pa lahko psu draži želodec. Če je pes pojedel malo fižola, ki vam je padel na tla, to verjetno ni razlog za skrb.",
+        "es": "Es mejor que no. Las alubias en sí no son tóxicas, pero las cocidas en salsa llevan mucha sal y azúcar y la salsa puede irritar el estómago del perro. Si tu perro se comió un poco que se te cayó al suelo, probablemente no hay motivo de preocupación.",
+        "hr": "Bolje ne. Sam grah nije otrovan, ali je grah u umaku bogat solju i šećerom, a umak može nadražiti želudac psa. Ako je pas pojeo malo onoga što ti je palo na pod, vjerojatno nema razloga za zabrinutost.",
+        "sv": "Det är bäst att låta bli. Bönorna i sig är inte giftiga, men bakade bönor innehåller mycket salt och socker och såsen kan reta hundens mage. Om din hund åt lite som du råkade spilla på golvet är det förmodligen inget att oroa sig för.",
+        "da": "Helst ikke. Bønnerne er ikke giftige i sig selv, men bagte bønner indeholder meget salt og sukker, og sovsen kan irritere hundens mave. Hvis din hund har spist en smule, du har spildt på gulvet, er det sandsynligvis ikke noget at bekymre sig om.",
+        "fi": "Ei kannata. Pavut eivät sinänsä ole myrkyllisiä, mutta valmispavuissa on paljon suolaa ja sokeria, ja kastike voi ärsyttää koiran vatsaa. Jos koirasi söi vähän lattialle läikkyneitä papuja, se tuskin on huolen aihe.",
+        "nb": "Det er best å la være. Bønnene i seg selv er ikke giftige, men bakte bønner inneholder mye salt og sukker, og sausen kan irritere magen til en hund. Hvis hunden spiste litt som du sølte på gulvet, er det trolig ingen grunn til bekymring.",
+        "it": "Meglio di no. I fagioli in sé non sono tossici, ma quelli in salsa contengono molto sale e zucchero e la salsa può irritare lo stomaco del cane. Se il tuo cane ha mangiato un po’ di quelli che ti sono caduti sul pavimento, probabilmente non c’è da preoccuparsi.",
+        "de": "Besser nicht. Die Bohnen selbst sind nicht giftig, aber Baked Beans enthalten viel Salz und Zucker, und die Soße kann den Magen eines Hundes reizen. Hat Ihr Hund nur ein wenig aufgeleckt, das Ihnen auf den Boden gefallen ist, ist das wahrscheinlich kein Grund zur Sorge.",
+        "fr": "Mieux vaut éviter. Les haricots eux-mêmes ne sont pas toxiques, mais les baked beans sont riches en sel et en sucre et la sauce peut irriter l’estomac du chien. Si votre chien en a mangé un peu que vous aviez renversé par terre, ce n’est probablement pas inquiétant.",
+        "pt": "O melhor é não dar. O feijão em si não é tóxico, mas o feijão em molho tem muito sal e açúcar e o molho pode irritar o estômago do cão. Se o teu cão comeu um pouco que caiu no chão, provavelmente não há motivo para preocupação.",
+        "nl": "Liever niet. De bonen zelf zijn niet giftig, maar baked beans bevatten veel zout en suiker en de saus kan de maag van een hond irriteren. Heeft je hond een klein beetje opgegeten dat op de grond was gemorst, dan is dat waarschijnlijk geen reden tot zorg.",
+        "pl": "Lepiej nie. Sama fasola nie jest toksyczna, ale fasola w sosie ma dużo soli i cukru, a sos może podrażnić psi żołądek. Jeśli pies zlizał odrobinę, która spadła na podłogę, zapewne nie ma powodu do niepokoju.",
+        "cs": "Raději ne. Samotné fazole nejsou jedovaté, ale fazole v omáčce mají hodně soli a cukru a omáčka může psovi podráždit žaludek. Pokud pes sebral trochu fazolí, které vám spadly na podlahu, nejspíš není důvod k obavám."
       }
     },
     {
       "q": {
         "en": "Can beans replace meat in my dog's diet?",
-        "sl": "Ali lahko fižol nadomesti meso v pasji prehrani?"
+        "sl": "Ali lahko fižol nadomesti meso v pasji prehrani?",
+        "es": "¿Pueden las alubias sustituir a la carne en la dieta de mi perro?",
+        "hr": "Može li grah zamijeniti meso u prehrani mog psa?",
+        "sv": "Kan bönor ersätta kött i min hunds kost?",
+        "da": "Kan bønner erstatte kød i min hunds kost?",
+        "fi": "Voivatko pavut korvata lihan koirani ruokavaliossa?",
+        "nb": "Kan bønner erstatte kjøtt i kosten til hunden min?",
+        "it": "I fagioli possono sostituire la carne nell’alimentazione del mio cane?",
+        "de": "Können Bohnen das Fleisch in der Ernährung meines Hundes ersetzen?",
+        "fr": "Les haricots peuvent-ils remplacer la viande dans l’alimentation de mon chien ?",
+        "pt": "O feijão pode substituir a carne na alimentação do meu cão?",
+        "nl": "Kunnen bonen vlees in het voer van mijn hond vervangen?",
+        "pl": "Czy fasola może zastąpić psu mięso w diecie?",
+        "cs": "Mohou fazole nahradit psovi maso?"
       },
       "a": {
         "en": "No. Feeding just beans is bad for dogs if it replaces meat in their diet.",
-        "sl": "Ne. Če fižol v pasji prehrani nadomesti meso, je to za psa slabo."
+        "sl": "Ne. Če fižol v pasji prehrani nadomesti meso, je to za psa slabo.",
+        "es": "No. Dar solo alubias es malo para los perros si sustituyen a la carne en su dieta.",
+        "hr": "Ne. Hranjenje samo grahom loše je za pse ako zamjenjuje meso u njihovoj prehrani.",
+        "sv": "Nej. Att bara ge bönor är dåligt för hundar om det ersätter kött i kosten.",
+        "da": "Nej. Det er dårligt for hunde kun at få bønner, hvis de erstatter kød i kosten.",
+        "fi": "Eivät. Pelkkien papujen syöttäminen on koirille haitallista, jos ne korvaavat lihan koiran ruokavaliossa.",
+        "nb": "Nei. Det er ikke bra for hunder å få bare bønner i stedet for kjøtt.",
+        "it": "No. Dare solo fagioli fa male ai cani se prendono il posto della carne nella loro alimentazione.",
+        "de": "Nein. Wenn Bohnen das Fleisch im Futter ersetzen, ist das schlecht für Hunde.",
+        "fr": "Non. Nourrir un chien uniquement de haricots est mauvais pour lui s’ils remplacent la viande dans son alimentation.",
+        "pt": "Não. Dar só feijão faz mal aos cães se substituir a carne na alimentação deles.",
+        "nl": "Nee. Alleen bonen geven is niet goed voor honden als daardoor het vlees uit hun voer verdwijnt.",
+        "pl": "Nie. Jeśli fasola zastępuje psu mięso w diecie, karmienie samą fasolą mu szkodzi.",
+        "cs": "Ne. Krmit psa jen fazolemi mu škodí, pokud tím nahradíte maso v jeho stravě."
       }
     }
   ],
@@ -175,6 +331,71 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "90d083c9179da00cc565f27ab6432e07d06d000da146487967a2837c560e6052"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "476eff421f73f362068d6ee1fa12e4a0c6c3aaf6330120f2e1e30738c754bd47"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "59de08530181225684a30626a62dedd578eb8b6fdcfdd9467db8f29004cbddd7"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "acbd05b2993a872b2dc7391441bb39accb016f5366c58eba3f89f54fba049ca3"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f2c03414ae9b4162be1921526c5b3a219bbe51957e4ec93bc1da4896fe3ca17e"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "23d2dcf15badbbfeb6d87891df4e83d7c1356c758499521f4a30ed3dbf469caf"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fbb5aa87455f91d661f3bcdeac974e8c4a9b4ed20ca5e3cbd9060fbf86bc3cd8"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "25b9dcf3521606b0cd1a8cf54899cb45de3c0787da9d3336daf9f3cbbcd0f27d"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6c0f67dd147ecdfa7fc76522ba08abb49dda4f88d3ab044ed92eb6f1bb81679a"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dc083c8ffb17d657d38df21b45aa8ada77dc0d4f21d2cb8f85483fb62b51ab70"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf7e16cf03b43692a1baf96a01b1ab9998bbe6c15bc339afa931a7e99f1d2cb6"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5aada0e90944f23f6b56eceab95fd339a349883d1b610b6e81ae74d439c8322d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "4230a5a7bf4ced40326324b9406a68f41ab5cb0215ce76d7c24871616609c144"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "d8c64d2a1d00c2bdd2e5c6bd76de6a58d99221533ce822f381b64355dcb5e814"
     }
   }
 }

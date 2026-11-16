@@ -41,7 +41,8 @@
       "quote": "24 Hour Emergency",
       "duty_i18n": {
         "pt": "Linha de urgência 24 horas por dia: +1 246 429 9355. Urgências veterinárias em toda a ilha.",
-        "nl": "Spoedlijn 24 uur per dag: +1 246 429 9355. Spoed voor dieren op het hele eiland."
+        "nl": "Spoedlijn 24 uur per dag: +1 246 429 9355. Spoed voor dieren op het hele eiland.",
+        "pl": "Całodobowa linia dla nagłych przypadków: +1 246 429 9355. Pomoc weterynaryjna w nagłych przypadkach na całej wyspie."
       }
     },
     {
@@ -57,7 +58,8 @@
       "note": "Contact page lists general (246) 420-7894 and an emergency number (246) 231-0450 (labelled 'Emerency Call'); no hours and no 24 h wording. Street address not published. Town/parish not on the opened page, so removed after the independent check.",
       "duty_i18n": {
         "pt": "Linha de urgência: +1 246 231 0450.",
-        "nl": "Spoedlijn: +1 246 231 0450."
+        "nl": "Spoedlijn: +1 246 231 0450.",
+        "pl": "Linia dla nagłych przypadków: +1 246 231 0450."
       }
     },
     {
@@ -76,7 +78,8 @@
       "note": "No emergency or 24 h wording on the page.",
       "duty_i18n": {
         "pt": "Sob marcação. Segunda a sexta, 8h30–17h00; sábado e domingo, 9h00–11h00.",
-        "nl": "Op afspraak. Ma–vr 8.30–17.00 uur, za–zo 9.00–11.00 uur."
+        "nl": "Op afspraak. Ma–vr 8.30–17.00 uur, za–zo 9.00–11.00 uur.",
+        "pl": "Po umówieniu. Pon.–pt. 8:30–17:00, sob.–niedz. 9:00–11:00."
       }
     },
     {
@@ -95,7 +98,8 @@
       "note": "No emergency or 24 h wording on the page.",
       "duty_i18n": {
         "pt": "Sob marcação. Segunda a sexta, 9h00–18h00; sábado e domingo, 9h00–11h00.",
-        "nl": "Op afspraak. Ma–vr 9.00–18.00 uur, za–zo 9.00–11.00 uur."
+        "nl": "Op afspraak. Ma–vr 9.00–18.00 uur, za–zo 9.00–11.00 uur.",
+        "pl": "Po umówieniu. Pon.–pt. 9:00–18:00, sob.–niedz. 9:00–11:00."
       }
     }
   ],

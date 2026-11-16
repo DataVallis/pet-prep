@@ -3,24 +3,89 @@
   "species": "dog",
   "name": {
     "en": "Mustard",
-    "sl": "Gorčica"
+    "sl": "Gorčica",
+    "es": "Mostaza",
+    "hr": "Senf",
+    "sv": "Senap",
+    "da": "Sennep",
+    "fi": "Sinappi",
+    "nb": "Sennep",
+    "it": "Senape",
+    "de": "Senf",
+    "fr": "Moutarde",
+    "pt": "Mostarda",
+    "nl": "Mosterd",
+    "pl": "Musztarda",
+    "cs": "Hořčice"
   },
   "question": {
     "en": "Can dogs eat mustard?",
-    "sl": "Ali lahko psi jedo gorčico?"
+    "sl": "Ali lahko psi jedo gorčico?",
+    "es": "¿Pueden los perros comer mostaza?",
+    "hr": "Smiju li psi jesti senf?",
+    "sv": "Får hundar äta senap?",
+    "da": "Må hunde spise sennep?",
+    "fi": "Saako koira syödä sinappia?",
+    "nb": "Kan hunder spise sennep?",
+    "it": "I cani possono mangiare la senape?",
+    "de": "Dürfen Hunde Senf fressen?",
+    "fr": "Les chiens peuvent-ils manger de la moutarde ?",
+    "pt": "Os cães podem comer mostarda?",
+    "nl": "Mogen honden mosterd eten?",
+    "pl": "Czy psy mogą jeść musztardę?",
+    "cs": "Mohou psi jíst hořčici?"
   },
   "url_slug": {
     "en": "mustard",
-    "sl": "gorcica"
+    "sl": "gorcica",
+    "es": "mostaza",
+    "hr": "senf",
+    "sv": "senap",
+    "da": "sennep",
+    "fi": "sinappi",
+    "nb": "sennep",
+    "it": "senape",
+    "de": "senf",
+    "fr": "moutarde",
+    "pt": "mostarda",
+    "nl": "mosterd",
+    "pl": "musztarda",
+    "cs": "horcice"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, you should never give your dog mustard. Mustard seeds contain compounds that can inflame a dog's stomach and intestines, and mustard can cause vomiting. A small lick off your plate is unlikely to cause a problem, but a large amount could be serious.",
-    "sl": "Ne, psu nikoli ne dajajte gorčice. Gorčična semena vsebujejo snovi, ki lahko pri psu povzročijo vnetje želodca in črevesja, gorčica pa lahko povzroči tudi bruhanje. Če pes s krožnika poliže le malo, to verjetno ne bo škodilo, večja količina pa je lahko resna težava."
+    "sl": "Ne, psu nikoli ne dajajte gorčice. Gorčična semena vsebujejo snovi, ki lahko pri psu povzročijo vnetje želodca in črevesja, gorčica pa lahko povzroči tudi bruhanje. Če pes s krožnika poliže le malo, to verjetno ne bo škodilo, večja količina pa je lahko resna težava.",
+    "es": "No, nunca le des mostaza a tu perro. Las semillas de mostaza contienen compuestos que pueden inflamar el estómago y los intestinos del perro, y la mostaza puede provocar vómitos. Es poco probable que un pequeño lametón de tu plato cause un problema, pero una cantidad grande podría ser grave.",
+    "hr": "Ne, psu nikad ne treba davati senf. Sjemenke gorušice sadrže spojeve koji mogu upaliti želudac i crijeva psa, a senf može izazvati povraćanje. Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi biti ozbiljna.",
+    "sv": "Nej, du ska aldrig ge din hund senap. Senapsfrön innehåller ämnen som kan ge inflammation i hundens mage och tarmar, och senap kan orsaka kräkningar. En liten slick från din tallrik orsakar sällan problem, men en stor mängd kan vara allvarlig.",
+    "da": "Nej, du bør aldrig give din hund sennep. Sennepsfrø indeholder stoffer, som kan give betændelse i hundens mave og tarme, og sennep kan give opkast. Hvis hunden bare slikker lidt af din tallerken, giver det næppe problemer, men en stor mængde kan være alvorligt.",
+    "fi": "Ei saa, älä koskaan anna koirallesi sinappia. Sinapinsiemenet sisältävät yhdisteitä, jotka voivat tulehduttaa koiran mahalaukkua ja suolistoa, ja sinappi voi aiheuttaa oksentelua. Pieni nuolaisu lautasestasi tuskin aiheuttaa ongelmaa, mutta suuri määrä voi olla vakava.",
+    "nb": "Nei, du bør aldri gi hunden sennep. Sennepsfrø inneholder stoffer som kan gi betennelse i magen og tarmene hos hunder, og sennep kan gi oppkast. En liten slikk fra tallerkenen er neppe noe problem, men en stor mengde kan være alvorlig.",
+    "it": "No, non dare mai la senape al tuo cane. I semi di senape contengono composti che possono infiammare lo stomaco e l’intestino del cane, e la senape può provocare vomito. Una piccola leccata dal tuo piatto difficilmente crea problemi, ma una grande quantità potrebbe causare problemi seri.",
+    "de": "Nein, geben Sie Ihrem Hund niemals Senf. Senfkörner enthalten Stoffe, die Magen und Darm eines Hundes entzünden können, und Senf kann Erbrechen verursachen. Kurzes Ablecken von Ihrem Teller verursacht wahrscheinlich kein Problem, eine große Menge kann aber ernst werden.",
+    "fr": "Non, ne donnez jamais de moutarde à votre chien. Les graines de moutarde contiennent des composés qui peuvent irriter l’estomac et l’intestin d’un chien, et la moutarde peut provoquer des vomissements. Il est peu probable qu’un petit coup de langue dans votre assiette pose problème, mais une grande quantité pourrait être grave.",
+    "pt": "Não, nunca dês mostarda ao teu cão. As sementes de mostarda contêm compostos que podem inflamar o estômago e os intestinos do cão, e a mostarda pode causar vómitos. É pouco provável que uma pequena lambidela do teu prato cause problemas, mas uma grande quantidade pode ser grave.",
+    "nl": "Nee, geef je hond nooit mosterd. Mosterdzaad bevat stoffen die de maag en darmen van een hond kunnen ontsteken, en mosterd kan braken veroorzaken. Een klein likje van je bord geeft waarschijnlijk geen problemen, maar een grote hoeveelheid kan ernstig zijn.",
+    "pl": "Nie, nigdy nie dawaj psu musztardy. Ziarna gorczycy zawierają związki, które mogą wywołać stan zapalny żołądka i jelit psa, a musztarda może powodować wymioty. Jedno małe liźnięcie z talerza raczej nie zaszkodzi, ale duża ilość mogłaby być groźna.",
+    "cs": "Ne, psovi nikdy nedávejte hořčici. Hořčičná semínka obsahují látky, které mohou psovi způsobit zánět žaludku a střev, a hořčice může vyvolat zvracení. Malé olíznutí z talíře pravděpodobně potíže nezpůsobí, ale větší množství může být vážné."
   },
   "why": {
     "en": "Mustard contains mustard seeds, and these contain toxic compounds that can lead to gastroenteritis, an inflammation of the stomach and intestines. Shop-bought mustard may also contain other ingredients that could harm your dog. Smaller dogs need to eat less than larger dogs to react. One source simply says mustard can upset a dog's stomach, another calls it toxic, so we follow the stricter advice.",
-    "sl": "Gorčica vsebuje gorčična semena, ta pa vsebujejo strupene snovi, ki lahko povzročijo gastroenteritis, vnetje želodca in črevesja. Kupljena gorčica lahko vsebuje tudi druge sestavine, ki bi psu lahko škodile. Manjši psi se odzovejo že na manjšo količino kot večji. En vir pravi le, da gorčica lahko psu povzroči prebavne težave, drugi jo označuje kot strupeno, zato upoštevamo strožji nasvet."
+    "sl": "Gorčica vsebuje gorčična semena, ta pa vsebujejo strupene snovi, ki lahko povzročijo gastroenteritis, vnetje želodca in črevesja. Kupljena gorčica lahko vsebuje tudi druge sestavine, ki bi psu lahko škodile. Manjši psi se odzovejo že na manjšo količino kot večji. En vir pravi le, da gorčica lahko psu povzroči prebavne težave, drugi jo označuje kot strupeno, zato upoštevamo strožji nasvet.",
+    "es": "La mostaza contiene semillas de mostaza, y estas llevan compuestos tóxicos que pueden provocar gastroenteritis, una inflamación del estómago y los intestinos. La mostaza del supermercado también puede llevar otros ingredientes que podrían perjudicar a tu perro. Los perros más pequeños reaccionan con menos cantidad que los grandes. Una fuente dice simplemente que la mostaza puede sentar mal al estómago del perro y otra la califica de tóxica, así que seguimos el consejo más estricto.",
+    "hr": "Senf sadrži sjemenke gorušice, a one sadrže otrovne spojeve koji mogu dovesti do gastroenteritisa, upale želuca i crijeva. Kupovni senf može sadržavati i druge sastojke koji bi mogli naškoditi psu. Manjim je psima dovoljno pojesti manje nego većima da bi reagirali. Jedan izvor jednostavno kaže da senf može nadražiti želudac psa, drugi ga naziva otrovnim, zato slijedimo strožu preporuku.",
+    "sv": "Senap innehåller senapsfrön, och de innehåller giftiga ämnen som kan leda till gastroenterit, en inflammation i mage och tarmar. Senap från affären kan också innehålla andra ingredienser som kan skada din hund. Mindre hundar behöver äta mindre än större hundar för att reagera. En källa säger bara att senap kan reta hundens mage, en annan kallar den giftig, så vi följer det strängare rådet.",
+    "da": "Sennep indeholder sennepsfrø, og de indeholder giftige stoffer, som kan give mave-tarm-betændelse, en betændelse i mave og tarme. Sennep fra butikken kan også indeholde andre ingredienser, som kan skade din hund. Mindre hunde skal spise mindre end større hunde for at reagere. En kilde skriver blot at sennep kan give hunden dårlig mave, en anden kalder det giftigt, så vi følger det strengeste råd.",
+    "fi": "Sinappi sisältää sinapinsiemeniä, ja niissä on myrkyllisiä yhdisteitä, jotka voivat johtaa maha-suolitulehdukseen, mahalaukun ja suoliston tulehdukseen. Kaupan sinapissa voi olla myös muita koiralle haitallisia ainesosia. Pienemmät koirat reagoivat pienempiin määriin kuin suuremmat. Yksi lähde sanoo yksinkertaisesti, että sinappi voi ärsyttää koiran vatsaa, toinen kutsuu sitä myrkylliseksi, joten noudatamme tiukempaa neuvoa.",
+    "nb": "Sennep er laget av sennepsfrø, og de inneholder giftige stoffer som kan gi mage-tarmbetennelse, altså betennelse i magen og tarmene. Sennep fra butikken kan dessuten inneholde andre ingredienser som kan skade hunden. Små hunder reagerer på mindre enn store hunder. En kilde sier bare at sennep kan gi urolig mage, en annen kaller den giftig, så vi følger det strengeste rådet.",
+    "it": "La senape è fatta con semi di senape, che contengono composti tossici che possono causare una gastroenterite, un’infiammazione di stomaco e intestino. La senape che si compra al supermercato può contenere anche altri ingredienti dannosi per il cane. I cani di taglia piccola reagiscono a quantità minori rispetto a quelli più grandi. Una fonte dice semplicemente che la senape può far venire mal di stomaco al cane, un’altra la definisce tossica, quindi seguiamo il consiglio più severo.",
+    "de": "Senf enthält Senfkörner mit giftigen Stoffen, die zu einer Magen-Darm-Entzündung führen können. Senf aus dem Laden kann außerdem andere Zutaten enthalten, die Ihrem Hund schaden könnten. Kleinere Hunde reagieren schon auf geringere Mengen als größere. Eine Quelle sagt schlicht, Senf könne einem Hund auf den Magen schlagen, eine andere nennt ihn giftig, deshalb folgen wir dem strengeren Rat.",
+    "fr": "La moutarde contient des graines de moutarde, qui renferment des composés toxiques pouvant provoquer une gastro-entérite, c’est-à-dire une inflammation de l’estomac et de l’intestin. La moutarde du commerce peut aussi contenir d’autres ingrédients nocifs pour votre chien. Les petits chiens réagissent à de plus petites quantités que les grands. Une source dit simplement que la moutarde peut déranger l’estomac d’un chien, une autre la juge toxique ; nous suivons donc l’avis le plus strict.",
+    "pt": "A mostarda contém sementes de mostarda, e estas têm compostos tóxicos que podem levar a gastroenterite, uma inflamação do estômago e dos intestinos. A mostarda comercial também pode ter outros ingredientes que podem fazer mal ao teu cão. Os cães mais pequenos podem reagir a quantidades menores do que os maiores. Uma fonte diz simplesmente que a mostarda pode irritar o estômago do cão, outra diz que é tóxica, por isso seguimos o conselho mais rigoroso.",
+    "nl": "Mosterd bevat mosterdzaad, en dat bevat giftige stoffen die kunnen leiden tot een maag-darmontsteking, een ontsteking van de maag en darmen. Mosterd uit de winkel kan ook andere ingrediënten bevatten die je hond kunnen schaden. Kleinere honden hoeven minder te eten dan grotere honden om te reageren. De ene bron zegt alleen dat mosterd de maag van een hond van streek kan maken, een andere noemt het giftig, dus we volgen het strengere advies.",
+    "pl": "Musztarda zawiera ziarna gorczycy, które mają w sobie toksyczne związki mogące prowadzić do zapalenia żołądka i jelit. Musztarda ze sklepu może też zawierać inne składniki, które mogłyby zaszkodzić psu. Małe psy reagują po zjedzeniu mniejszej ilości niż duże. Jedno ze źródeł pisze po prostu, że musztarda może rozstroić psu żołądek, a inne nazywa ją toksyczną, więc przyjmujemy surowsze stanowisko.",
+    "cs": "Hořčice obsahuje hořčičná semínka a ta obsahují jedovaté látky, které mohou vést ke gastroenteritidě, tedy zánětu žaludku a střev. Hořčice z obchodu může obsahovat i další přísady, které by mohly psovi uškodit. Menší psi reagují už na menší množství než větší psi. Jeden zdroj uvádí jen to, že hořčice může psovi podráždit žaludek, jiný ji označuje za jedovatou, proto se řídíme přísnější radou."
   },
   "signs": {
     "en": [
@@ -36,36 +101,205 @@
       "Bruhanje",
       "Driska",
       "Bolečine v trebuhu"
+    ],
+    "es": [
+      "No querer comer",
+      "Babeo",
+      "Vómitos",
+      "Diarrea",
+      "Dolor de barriga"
+    ],
+    "hr": [
+      "Odbijanje hrane",
+      "Slinjenje",
+      "Povraćanje",
+      "Proljev",
+      "Bol u trbuhu"
+    ],
+    "sv": [
+      "Vill inte äta",
+      "Dregling",
+      "Kräkningar",
+      "Diarré",
+      "Ont i magen"
+    ],
+    "da": [
+      "Vil ikke spise",
+      "Savlen",
+      "Opkast",
+      "Diarré",
+      "Mavesmerter"
+    ],
+    "fi": [
+      "Ruokahaluttomuus",
+      "Kuolaaminen",
+      "Oksentelu",
+      "Ripuli",
+      "Vatsakipu"
+    ],
+    "nb": [
+      "Mister matlysten",
+      "Sikling",
+      "Oppkast",
+      "Diaré",
+      "Magesmerter"
+    ],
+    "it": [
+      "Rifiuto del cibo",
+      "Salivazione eccessiva",
+      "Vomito",
+      "Diarrea",
+      "Mal di pancia"
+    ],
+    "de": [
+      "Appetitlosigkeit",
+      "Sabbern",
+      "Erbrechen",
+      "Durchfall",
+      "Bauchschmerzen"
+    ],
+    "fr": [
+      "Refus de manger",
+      "Salivation excessive",
+      "Vomissements",
+      "Diarrhée",
+      "Douleurs au ventre"
+    ],
+    "pt": [
+      "Falta de vontade de comer",
+      "Salivação excessiva",
+      "Vómitos",
+      "Diarreia",
+      "Dor de barriga"
+    ],
+    "nl": [
+      "Niet willen eten",
+      "Kwijlen",
+      "Braken",
+      "Diarree",
+      "Buikpijn"
+    ],
+    "pl": [
+      "Niechęć do jedzenia",
+      "Ślinienie się",
+      "Wymioty",
+      "Biegunka",
+      "Ból brzucha"
+    ],
+    "cs": [
+      "Nechuť k jídlu",
+      "Slinění",
+      "Zvracení",
+      "Průjem",
+      "Bolest břicha"
     ]
   },
   "what_to_do": {
     "en": "A small lick is unlikely to cause a problem. If your dog ate a lot of mustard, or you notice signs such as vomiting, drooling or tummy pain, contact your vet as soon as possible.",
-    "sl": "Če pes poliže le malo, to verjetno ne bo povzročilo težav. Če je pes pojedel veliko gorčice ali opazite znake, kot so bruhanje, slinjenje ali bolečine v trebuhu, se čim prej obrnite na veterinarja."
+    "sl": "Če pes poliže le malo, to verjetno ne bo povzročilo težav. Če je pes pojedel veliko gorčice ali opazite znake, kot so bruhanje, slinjenje ali bolečine v trebuhu, se čim prej obrnite na veterinarja.",
+    "es": "Es poco probable que un pequeño lametón cause un problema. Si tu perro ha comido mucha mostaza, o notas síntomas como vómitos, babeo o dolor de barriga, ponte en contacto con tu veterinario cuanto antes.",
+    "hr": "Malo lizanje vjerojatno neće izazvati probleme. Ako je pas pojeo puno senfa ili primijetiš znakove poput povraćanja, slinjenja ili bolova u trbuhu, što prije se obrati veterinaru.",
+    "sv": "En liten slick orsakar sällan problem. Om din hund har ätit mycket senap, eller om du märker tecken som kräkningar, dregling eller ont i magen, kontakta din veterinär så snart som möjligt.",
+    "da": "Hvis hunden bare har slikket lidt, giver det næppe problemer. Hvis din hund har spist meget sennep, eller du ser tegn som opkast, savlen eller mavesmerter, skal du kontakte din dyrlæge hurtigst muligt.",
+    "fi": "Pieni nuolaisu tuskin aiheuttaa ongelmaa. Jos koirasi söi paljon sinappia tai huomaat oireita, kuten oksentelua, kuolaamista tai vatsakipua, ota yhteyttä eläinlääkäriin mahdollisimman pian.",
+    "nb": "En liten slikk er neppe noe problem. Hvis hunden har spist mye sennep, eller du ser symptomer som oppkast, sikling eller magesmerter, kontakt dyrlegen så snart som mulig.",
+    "it": "Una piccola leccata difficilmente crea problemi. Se il tuo cane ha mangiato molta senape, o noti sintomi come vomito, salivazione eccessiva o mal di pancia, contatta il veterinario il prima possibile.",
+    "de": "Kurzes Ablecken verursacht wahrscheinlich kein Problem. Hat Ihr Hund viel Senf gefressen oder bemerken Sie Anzeichen wie Erbrechen, Sabbern oder Bauchschmerzen, wenden Sie sich so schnell wie möglich an Ihren Tierarzt.",
+    "fr": "Il est peu probable qu’un petit coup de langue pose problème. Si votre chien a mangé beaucoup de moutarde, ou si vous remarquez des signes comme des vomissements, une salivation excessive ou des douleurs au ventre, contactez votre vétérinaire dès que possible.",
+    "pt": "É pouco provável que uma pequena lambidela cause problemas. Se o teu cão comeu muita mostarda, ou notares sinais como vómitos, salivação excessiva ou dor de barriga, fala com o teu veterinário o mais depressa possível.",
+    "nl": "Een klein likje geeft waarschijnlijk geen problemen. Heeft je hond veel mosterd gegeten, of zie je verschijnselen zoals braken, kwijlen of buikpijn, neem dan zo snel mogelijk contact op met je dierenarts.",
+    "pl": "Jedno małe liźnięcie raczej nie zaszkodzi. Jeśli pies zjadł dużo musztardy albo zauważysz u niego objawy, takie jak wymioty, ślinienie się lub ból brzucha, jak najszybciej skontaktuj się z weterynarzem.",
+    "cs": "Malé olíznutí pravděpodobně potíže nezpůsobí. Pokud pes snědl hodně hořčice nebo si všimnete příznaků, například zvracení, slinění nebo bolesti břicha, co nejdříve se obraťte na veterináře."
   },
   "serving": null,
   "child": {
     "en": "Mustard can give dogs a sore tummy. Keep it on your own plate, away from your dog.",
-    "sl": "Zaradi gorčice lahko psa boli trebušček. Naj ostane na tvojem krožniku, stran od psa."
+    "sl": "Zaradi gorčice lahko psa boli trebušček. Naj ostane na tvojem krožniku, stran od psa.",
+    "es": "La mostaza puede dar dolor de barriga a los perros. Déjala en tu plato, lejos de tu perro.",
+    "hr": "Od senfa psa može zaboljeti trbuščić. Zadrži ga na svom tanjuru, daleko od psa.",
+    "sv": "Senap kan ge hundar ont i magen. Behåll den på din egen tallrik, långt från din hund.",
+    "da": "Sennep kan give hunde ondt i maven. Behold den på din egen tallerken, væk fra din hund.",
+    "fi": "Sinappi voi tehdä koiran vatsan kipeäksi. Pidä se omalla lautasellasi, poissa koirasi ulottuvilta.",
+    "nb": "Sennep kan gi hunder vondt i magen. La den bli på din egen tallerken, langt unna hunden.",
+    "it": "La senape può far venire il mal di pancia ai cani. Tienila nel tuo piatto, lontano dal tuo cane.",
+    "de": "Von Senf können Hunde Bauchweh bekommen. Lass ihn auf deinem eigenen Teller, weit weg von deinem Hund.",
+    "fr": "La moutarde peut donner mal au ventre aux chiens. Garde-la dans ton assiette, loin de ton chien.",
+    "pt": "A mostarda pode dar dor de barriga aos cães. Deixa-a no teu prato, longe do teu cão.",
+    "nl": "Mosterd kan honden buikpijn geven. Houd hem op je eigen bord, uit de buurt van je hond.",
+    "pl": "Od musztardy psu może rozboleć brzuszek. Zostaw ją na swoim talerzu, z dala od psa.",
+    "cs": "Po hořčici může psa bolet bříško. Nech si ji na svém talíři, daleko od pejska."
   },
   "faq": [
     {
       "q": {
         "en": "My dog licked a little mustard. Is that a problem?",
-        "sl": "Pes je polizal malo gorčice. Je to težava?"
+        "sl": "Pes je polizal malo gorčice. Je to težava?",
+        "es": "Mi perro ha lamido un poco de mostaza. ¿Es un problema?",
+        "hr": "Moj je pas poližao malo senfa. Je li to problem?",
+        "sv": "Min hund slickade i sig lite senap. Är det ett problem?",
+        "da": "Min hund har slikket lidt sennep. Er det et problem?",
+        "fi": "Koirani nuolaisi vähän sinappia. Onko se ongelma?",
+        "nb": "Hunden min slikket litt sennep. Er det et problem?",
+        "it": "Il mio cane ha leccato un po’ di senape. È un problema?",
+        "de": "Mein Hund hat ein bisschen Senf geleckt. Ist das ein Problem?",
+        "fr": "Mon chien a léché un peu de moutarde. Est-ce un problème ?",
+        "pt": "O meu cão lambeu um pouco de mostarda. É um problema?",
+        "nl": "Mijn hond heeft een beetje mosterd opgelikt. Is dat een probleem?",
+        "pl": "Mój pies polizał odrobinę musztardy. Czy to problem?",
+        "cs": "Můj pes olízl trochu hořčice. Je to problém?"
       },
       "a": {
         "en": "A small lick off your plate is unlikely to cause a problem, but a large amount could cause a serious issue. Smaller dogs react to less than larger dogs.",
-        "sl": "Če pes s krožnika poliže le malo, to verjetno ne bo povzročilo težav, večja količina pa lahko povzroči resno težavo. Manjši psi se odzovejo že na manjšo količino kot večji."
+        "sl": "Če pes s krožnika poliže le malo, to verjetno ne bo povzročilo težav, večja količina pa lahko povzroči resno težavo. Manjši psi se odzovejo že na manjšo količino kot večji.",
+        "es": "Es poco probable que un pequeño lametón de tu plato cause un problema, pero una cantidad grande podría causar un problema grave. Los perros pequeños reaccionan con menos cantidad que los grandes.",
+        "hr": "Malo lizanje s tvog tanjura vjerojatno neće izazvati probleme, ali velika količina mogla bi izazvati ozbiljne tegobe. Manji psi reagiraju na manje od većih.",
+        "sv": "En liten slick från din tallrik orsakar sällan problem, men en stor mängd kan ge ett allvarligt problem. Mindre hundar reagerar på mindre än större hundar.",
+        "da": "Hvis hunden bare har slikket lidt fra din tallerken, giver det næppe problemer, men en stor mængde kan give et alvorligt problem. Mindre hunde reagerer på mindre end større hunde.",
+        "fi": "Pieni nuolaisu lautasestasi tuskin aiheuttaa ongelmaa, mutta suuri määrä voi aiheuttaa vakavan ongelman. Pienemmät koirat reagoivat pienempiin määriin kuin suuremmat.",
+        "nb": "En liten slikk fra tallerkenen er neppe noe problem, men en stor mengde kan gi et alvorlig problem. Små hunder reagerer på mindre enn store hunder.",
+        "it": "Una piccola leccata dal tuo piatto difficilmente crea problemi, ma una grande quantità potrebbe causare problemi seri. I cani di taglia piccola reagiscono a quantità minori rispetto a quelli più grandi.",
+        "de": "Kurzes Ablecken von Ihrem Teller verursacht wahrscheinlich kein Problem, eine große Menge könnte aber ernste Probleme verursachen. Kleinere Hunde reagieren auf weniger als größere.",
+        "fr": "Il est peu probable qu’un petit coup de langue dans votre assiette pose problème, mais une grande quantité pourrait être grave. Les petits chiens réagissent à de plus petites quantités que les grands.",
+        "pt": "É pouco provável que uma pequena lambidela do teu prato cause problemas, mas uma grande quantidade pode causar um problema grave. Os cães mais pequenos podem reagir a quantidades menores do que os maiores.",
+        "nl": "Een klein likje van je bord geeft waarschijnlijk geen problemen, maar een grote hoeveelheid kan een ernstig probleem veroorzaken. Kleinere honden reageren op minder dan grotere honden.",
+        "pl": "Jedno małe liźnięcie z talerza raczej nie zaszkodzi, ale duża ilość mogłaby wywołać poważne dolegliwości. Małe psy reagują na mniejszą ilość niż duże.",
+        "cs": "Malé olíznutí z vašeho talíře pravděpodobně potíže nezpůsobí, ale velké množství by mohlo způsobit vážné potíže. Menší psi reagují na menší množství než větší psi."
       }
     },
     {
       "q": {
         "en": "Is any kind of mustard safe?",
-        "sl": "Je katera vrsta gorčice varna?"
+        "sl": "Je katera vrsta gorčice varna?",
+        "es": "¿Es segura alguna clase de mostaza?",
+        "hr": "Je li neka vrsta senfa sigurna?",
+        "sv": "Finns det någon sorts senap som är säker?",
+        "da": "Findes der en slags sennep, som er ufarlig?",
+        "fi": "Onko jokin sinappi turvallista?",
+        "nb": "Finnes det en type sennep som er trygg?",
+        "it": "Esiste una senape sicura?",
+        "de": "Ist irgendeine Senfsorte unbedenklich?",
+        "fr": "Existe-t-il une moutarde sans danger ?",
+        "pt": "Há algum tipo de mostarda seguro?",
+        "nl": "Is er een soort mosterd die wel veilig is?",
+        "pl": "Czy jakaś musztarda jest bezpieczna dla psa?",
+        "cs": "Je nějaký druh hořčice bezpečný?"
       },
       "a": {
         "en": "No. All types of mustard should be avoided, including homemade, wild, English and Dijon mustard.",
-        "sl": "Ne. Izogibajte se vsem vrstam gorčice, tudi domači, divji, angleški in dijonski."
+        "sl": "Ne. Izogibajte se vsem vrstam gorčice, tudi domači, divji, angleški in dijonski.",
+        "es": "No. Hay que evitar todos los tipos de mostaza, incluidas la casera, la silvestre, la inglesa y la de Dijon.",
+        "hr": "Ne. Treba izbjegavati sve vrste senfa, uključujući domaći, divlji, engleski i dijonski senf.",
+        "sv": "Nej. Alla sorters senap bör undvikas, även hemgjord, vild, engelsk och dijonsenap.",
+        "da": "Nej. Alle slags sennep bør undgås, også hjemmelavet, vild, engelsk og Dijon-sennep.",
+        "fi": "Ei. Kaikkia sinappilajeja pitää välttää, myös kotitekoista, luonnonvaraista, englantilaista ja dijoninsinappia.",
+        "nb": "Nei. Alle typer sennep bør unngås, også hjemmelaget sennep, villsennep, engelsk sennep og dijonsennep.",
+        "it": "No. Tutti i tipi di senape vanno evitati, compresa quella fatta in casa, quella selvatica, quella inglese e quella di Digione.",
+        "de": "Nein. Verzichten Sie auf jede Senfsorte, auch auf selbst gemachten, Wild-, englischen und Dijon-Senf.",
+        "fr": "Non. Il faut éviter tous les types de moutarde, y compris la moutarde maison, la moutarde sauvage, la moutarde anglaise et la moutarde de Dijon.",
+        "pt": "Não. Todos os tipos de mostarda devem ser evitados, incluindo a caseira, a selvagem, a inglesa e a de Dijon.",
+        "nl": "Nee. Alle soorten mosterd moet je vermijden, ook zelfgemaakte, wilde, Engelse en Dijonmosterd.",
+        "pl": "Nie. Należy unikać wszystkich rodzajów musztardy, także domowej, dzikiej, angielskiej i dijońskiej.",
+        "cs": "Ne. Vyhněte se všem druhům hořčice, včetně domácí, divoké, anglické i dijonské."
       }
     }
   ],
@@ -151,6 +385,71 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "75d5dfdfcae20d8996f425f74e2ccc7179069253977a1d9f71d7d45599606f13"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "40c06d80726e664ff4cdadd63adaacc5e379201c9a17e8a771cb61ff2b62e1e5"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2c46cb6906bbe4683bbbc9843696ff3c53f00005479dad4a9247ca62c9a42769"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2b6af10ae39054f92112dd10eb38c7b88e6cbea4a81a74453d9b92cd08d489f7"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "94e918e9fedbc81ec4dc758ef68a379c6336182abe097993885f70a363d987b7"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "87f1b9fcc89c286ad4c73865d98c6e228bfe79c70ea48ba260c07ce565cbd702"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9d3a82483b1c5e2a2f64a179a9f8a0d21aece3f45516e23e729ab6a77ebd5006"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "191902535dd284864f6b8fc0223a85ce9c32540e9cc97a7ec13a9241738ff3b5"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "85ccafd2fcaed098a1a3b24b56d54b3987430358ca8212ee24916d1bf5de779c"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f7ea1695b13d22861b5f8d778abaada884ccc2754a028ad8d7a0937ff1fb4932"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "81106614b9a9ed2ddc5fdd1c486f8a0f23719f4dbca8e1c09d091caddc539b75"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ca52616051e655bf7841002c0550e50c2db2c10e0c28322cbf2f6d1b47bcea92"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "2736aba8924d945d608186407859462a9e485902bd40357802e794232b015e36"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "be72a812db5156f85070276d0e44cf53474c2d97c9f888dcb712e97631670983"
     }
   }
 }

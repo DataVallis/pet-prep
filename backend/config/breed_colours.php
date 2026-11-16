@@ -764,6 +764,16 @@ return [
         ['key' => 'white-lemon', 'value' => 'white with lemon markings', 'en' => 'White and lemon', 'sl' => 'Bel z limonastimi lisami'],
         ['key' => 'white-black', 'value' => 'white with black markings', 'en' => 'White and black', 'sl' => 'Bel s črnimi lisami'],
     ],
+    // M5-R10-117: FCI-Standard N° 169 (S871) white predominates with black, black and tan or tan markings — same values as breed_appearance.php.
+    'wire_fox_terrier' => [
+        ['key' => 'tricolour', 'value' => 'white with black and tan markings', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
+        ['key' => 'white-tan', 'value' => 'white with tan markings', 'en' => 'White and tan', 'sl' => 'Bel z rjavimi lisami'],
+        ['key' => 'white-black', 'value' => 'white with black markings', 'en' => 'White and black', 'sl' => 'Bel s črnimi lisami'],
+    ],
+    // M5-R10-119: FCI-Standard N° 71 (S888) jet black and rich mahogany tan — the only standard colour; same value as breed_appearance.php.
+    'manchester_terrier' => [
+        ['key' => 'black-tan', 'value' => 'jet black and rich mahogany tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

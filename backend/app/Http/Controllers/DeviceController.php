@@ -39,6 +39,7 @@ class DeviceController extends Controller
             $request->validated('app_version'),
             $accessToken instanceof PersonalAccessToken ? $accessToken : null,
             $request->pushLocale(),
+            $request->deviceHour12(),
         );
 
         return response()->json([
@@ -48,6 +49,12 @@ class DeviceController extends Controller
                 'app_version' => $device->app_version,
                 /** Language of this install's pushes (M1-18): the `locale` field; new installs without it get 'sl'. */
                 'locale' => $device->locale,
+                /**
+                 * The phone's own 12 h clock setting as last sent (`hour12`); null = never sent (24 h).
+                 *
+                 * @var bool|null
+                 */
+                'hour12' => $device->hour12,
                 'enabled' => $device->disabled_at === null,
                 'last_seen_at' => $device->last_seen_at?->toIso8601String(),
             ],

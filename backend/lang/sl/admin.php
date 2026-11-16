@@ -44,6 +44,8 @@ return [
         'system' => 'Sistem',
         'partner_inquiries' => 'Povpraševanja partnerjev',
         'partner_inquiry_model' => 'povpraševanje partnerja',
+        'summary_leads' => 'E-naslovi staršev (spletna stran)',
+        'summary_lead_model' => 'e-naslov starša',
     ],
 
     'dashboard' => [
@@ -694,6 +696,17 @@ return [
             'title' => 'Preverjanje slik: :count ključnih slik zavrnjenih po vseh samodejnih poskusih',
             'body' => 'Ključna slika stanja ni prestala AI preverjanja (odvečne / prosojne tačke, druga žival, ljudje, besedilo …) niti po samodejnih ponovitvah z novimi semeni. Ni bila uporabljena — ljubljenček obdrži, kar prikazuje, to stanje še nima nove zanke. Po želji: Ljubljenčki → AI media → odpri kandidata → »Approve anyway« ali Regenerate. Slike poz (aktivnosti: preprost način) in slike stvari (prikazane brez vsebine) javljajo svoja opozorila.',
         ],
+    ],
+    'summary_leads' => [
+        'email' => 'E-naslov',
+        'breed' => 'Pasma',
+        'stage' => 'Pes / mladiček',
+        'locale' => 'Jezik',
+        'visits' => 'Kolikokrat',
+        'first_seen' => 'Prvič',
+        'last_seen' => 'Nazadnje',
+        'consent' => 'Različica privolitve',
+        'retention_note' => 'Starši, ki so na strani »Koliko dela je pes« pustili e-naslov s privolitvijo za novice PetPrep. En e-naslov je ena vrstica. Nič se ne izbriše samodejno: vrstico izbrišite samo, ko starš to zahteva (in ko se odjavi v Klaviyu). IP-naslov se ne shranjuje in strežnik ne pošlje ničesar. Partnerji dobijo samo številke, nikoli naslovov.',
     ],
     'partner_inquiries' => [
         'discord' => [

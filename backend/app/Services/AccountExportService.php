@@ -132,6 +132,8 @@ class AccountExportService
                 'easy_gestures' => (bool) $u->easy_gestures,
                 // GAMES_SPEC phase 1: »Zvoki in vibracija v igrah« (presentation preference).
                 'game_feedback' => (bool) $u->game_feedback,
+                // David 2026-11-16: 12 / 24 h clock choice (auto = follow the phone).
+                'time_format' => $u->timeFormat()->value,
                 // PIN-only profile (M2-02) vs. a legacy child account with e-mail.
                 'login' => $u->password === null ? 'pin' : 'email',
                 'email' => $u->email,
@@ -203,6 +205,8 @@ class AccountExportService
             'name' => $u->name,
             'email' => $u->email,
             'timezone' => $u->timezone,
+            // David 2026-11-16: 12 / 24 h clock choice (auto = follow the phone).
+            'time_format' => $u->timeFormat()->value,
             'terms_accepted_at' => $this->iso($u->terms_accepted_at),
             // M2-10c: how this parent signs in — e-mail + password and / or the
             // linked Google / Apple identities (provider, e-mail the provider
@@ -234,6 +238,8 @@ class AccountExportService
                 'platform' => $d->platform->value,
                 'app_version' => $d->app_version,
                 'locale' => $d->locale,
+                // David 2026-11-16: the phone's own 12 h clock setting (null = never sent).
+                'hour12' => $d->hour12,
                 'enabled' => $d->disabled_at === null,
                 'last_seen_at' => $this->iso($d->last_seen_at),
                 'created_at' => $this->iso($d->created_at),
@@ -370,6 +376,9 @@ class AccountExportService
                 'timezone' => $pet->effectiveTimezone(),
                 // True = the pet follows the family zone (no own zone set).
                 'timezone_follows_family' => ! $pet->hasOwnTimezone(),
+                // David 2026-11-16: the pet's own quiet hours (null = it follows the family's `quiet_hours`).
+                'own_quiet_hours' => $pet->ownQuietHoursValues(),
+                'quiet_hours_follow_family' => ! $pet->hasOwnQuietHours(),
                 'created_at' => $this->iso($pet->created_at),
                 'born_at' => $this->iso($pet->born_at),
                 'is_active' => (bool) $pet->is_active,

@@ -4,28 +4,88 @@
   "name": {
     "en": "Turmeric",
     "sl": "Kurkuma",
-    "cs": "Kurkuma"
+    "cs": "Kurkuma",
+    "hr": "Kurkuma",
+    "sv": "Gurkmeja",
+    "da": "Gurkemeje",
+    "fi": "Kurkuma",
+    "nb": "Gurkemeie",
+    "it": "Curcuma",
+    "de": "Kurkuma",
+    "fr": "Curcuma",
+    "es": "Cúrcuma",
+    "pt": "Cúrcuma",
+    "nl": "Kurkuma",
+    "pl": "Kurkuma"
   },
   "question": {
     "en": "Can cats eat turmeric?",
     "sl": "Ali lahko mačke jedo kurkumo?",
-    "cs": "Mohou kočky jíst kurkumu?"
+    "cs": "Mohou kočky jíst kurkumu?",
+    "hr": "Smiju li mačke jesti kurkumu?",
+    "sv": "Får katter äta gurkmeja?",
+    "da": "Må katte spise gurkemeje?",
+    "fi": "Saako kissa syödä kurkumaa?",
+    "nb": "Kan katter spise gurkemeie?",
+    "it": "I gatti possono mangiare la curcuma?",
+    "de": "Dürfen Katzen Kurkuma fressen?",
+    "fr": "Les chats peuvent-ils manger du curcuma ?",
+    "es": "¿Pueden los gatos comer cúrcuma?",
+    "pt": "Os gatos podem comer cúrcuma?",
+    "nl": "Mogen katten kurkuma eten?",
+    "pl": "Czy koty mogą jeść kurkumę?"
   },
   "url_slug": {
     "en": "turmeric",
     "sl": "kurkuma",
-    "cs": "kurkuma"
+    "cs": "kurkuma",
+    "hr": "kurkuma",
+    "sv": "gurkmeja",
+    "da": "gurkemeje",
+    "fi": "kurkuma",
+    "nb": "gurkemeie",
+    "it": "curcuma",
+    "de": "kurkuma",
+    "fr": "curcuma",
+    "es": "curcuma",
+    "pt": "curcuma",
+    "nl": "kurkuma",
+    "pl": "kurkuma"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to give your cat turmeric. Studies on feeding turmeric to cats are scarce, and cats have an unusually low capacity for glucuronidation, which researchers say increases the risk of turmeric toxicity in cats.",
     "sl": "Mački kurkume raje ne dajajte. Raziskav o krmljenju mačk s kurkumo je malo, mačke pa imajo nenavadno nizko sposobnost glukuronidacije, kar po navedbah raziskovalcev povečuje tveganje za zastrupitev s kurkumo pri mačkah.",
-    "cs": "Kurkumu kočce raději nedávejte. Studií o krmení koček kurkumou je málo a kočky mají neobvykle nízkou schopnost glukuronidace, což podle výzkumníků zvyšuje riziko toxicity kurkumy u koček."
+    "cs": "Kurkumu kočce raději nedávejte. Studií o krmení koček kurkumou je málo a kočky mají neobvykle nízkou schopnost glukuronidace, což podle výzkumníků zvyšuje riziko toxicity kurkumy u koček.",
+    "hr": "Bolje je mački ne davati kurkumu. Istraživanja o hranjenju mačaka kurkumom su rijetka, a mačke imaju neobično slab kapacitet glukuronidacije, što prema istraživačima povećava rizik od otrovanja kurkumom kod mačaka.",
+    "sv": "Det är bäst att inte ge din katt gurkmeja. Det finns få studier av gurkmeja till katter, och katter har ovanligt låg förmåga till glukuronidering, vilket enligt forskare ökar risken för gurkmejaförgiftning hos katter.",
+    "da": "Det er bedst ikke at give din kat gurkemeje. Der findes kun få undersøgelser af, hvad der sker, når katte får gurkemeje, og katte har en usædvanligt lav evne til glukuronidering, som ifølge forskerne øger risikoen for gurkemejeforgiftning hos katte.",
+    "fi": "Ei suositella. Kurkumaa ei kannata antaa kissalle. Tutkimuksia kurkuman syöttämisestä kissoille on niukasti, ja kissojen kyky glukuronidoida on poikkeuksellisen heikko, minkä tutkijat sanovat lisäävän kurkuman aiheuttaman myrkytyksen riskiä kissoilla.",
+    "nb": "Det er best å ikke gi katten gurkemeie. Det finnes få studier på gurkemeie til katter, og katter har uvanlig lav evne til glukuronidering, noe forskere sier øker risikoen for giftvirkning.",
+    "it": "Meglio non dare la curcuma al gatto. Gli studi sulla curcuma data ai gatti sono pochi, e i gatti hanno una capacità insolitamente bassa di glucuronidazione, che secondo i ricercatori aumenta il rischio di tossicità da curcuma.",
+    "de": "Geben Sie Ihrer Katze besser keine Kurkuma. Studien, in denen Katzen Kurkuma erhielten, sind selten, und Katzen können Stoffe ungewöhnlich schlecht glucuronidieren, was laut Forschenden das Risiko einer Kurkuma-Vergiftung bei Katzen erhöht.",
+    "fr": "Mieux vaut ne pas donner de curcuma à votre chat. Les études sur l’alimentation des chats avec du curcuma sont rares, et les chats ont une capacité de glucuroconjugaison anormalement faible, ce qui, selon les chercheurs, augmente le risque de toxicité du curcuma chez le chat.",
+    "es": "Es mejor no darle cúrcuma a tu gato. Los estudios sobre dar cúrcuma a los gatos son escasos, y los gatos tienen una capacidad inusualmente baja de glucuronidación, lo que, según los investigadores, aumenta el riesgo de toxicidad de la cúrcuma en los gatos.",
+    "pt": "É melhor não dar cúrcuma ao teu gato. Há poucos estudos sobre dar cúrcuma a gatos, e os gatos têm uma capacidade invulgarmente baixa de glucuronidação, o que, segundo os investigadores, aumenta o risco de toxicidade da cúrcuma nos gatos.",
+    "nl": "Geef je kat liever geen kurkuma. Er is weinig onderzoek gedaan naar het voeren van kurkuma aan katten, en katten hebben een ongewoon laag vermogen tot glucuronidering, wat volgens onderzoekers het risico op kurkumavergiftiging bij katten vergroot.",
+    "pl": "Lepiej nie dawać kotu kurkumy. Badań nad podawaniem kurkumy kotom jest niewiele, a koty mają wyjątkowo niską zdolność do glukuronidacji, co według badaczy zwiększa u nich ryzyko zatrucia kurkumą."
   },
   "why": {
     "en": "Turmeric is a bright yellow spice. A 2026 study in the journal Animals notes that cats have an unusually low capacity for glucuronidation, an important step in breaking down and excreting turmeric's curcuminoids, and that this increases the risk of turmeric toxicity in cats. The authors add that there are few data on its safety in cats. In their study, a turmeric extract added to a complete and balanced cat food was well tolerated by healthy adult cats. Cats don't need anything other than a complete diet.",
     "sl": "Kurkuma je živo rumena začimba. Raziskava iz leta 2026 v reviji Animals navaja, da imajo mačke nenavadno nizko sposobnost glukuronidacije, pomembnega koraka pri presnovi in izločanju kurkuminoidov iz kurkume, kar povečuje tveganje za zastrupitev s kurkumo pri mačkah. Avtorji dodajajo, da je podatkov o njeni varnosti pri mačkah malo. V njihovi raziskavi so zdrave odrasle mačke dobro prenašale izvleček kurkume, dodan popolni in uravnoteženi mačji hrani. Mačke poleg popolne hrane ne potrebujejo ničesar drugega.",
-    "cs": "Kurkuma je výrazně žluté koření. Studie z roku 2026 v časopise Animals uvádí, že kočky mají neobvykle nízkou schopnost glukuronidace, důležitého kroku při odbourávání a vylučování kurkuminoidů z kurkumy, a že to zvyšuje riziko toxicity kurkumy u koček. Autoři dodávají, že údajů o její bezpečnosti u koček je málo. V jejich studii zdravé dospělé kočky dobře snášely extrakt z kurkumy přidaný do kompletního vyváženého krmiva pro kočky. Kočky nepotřebují nic jiného než kompletní stravu."
+    "cs": "Kurkuma je výrazně žluté koření. Studie z roku 2026 v časopise Animals uvádí, že kočky mají neobvykle nízkou schopnost glukuronidace, důležitého kroku při odbourávání a vylučování kurkuminoidů z kurkumy, a že to zvyšuje riziko toxicity kurkumy u koček. Autoři dodávají, že údajů o její bezpečnosti u koček je málo. V jejich studii zdravé dospělé kočky dobře snášely extrakt z kurkumy přidaný do kompletního vyváženého krmiva pro kočky. Kočky nepotřebují nic jiného než kompletní stravu.",
+    "hr": "Kurkuma je jarkožuti začin. Studija iz 2026. u časopisu Animals napominje da mačke imaju neobično slab kapacitet glukuronidacije, važnog koraka u razgradnji i izlučivanju kurkuminoida iz kurkume, te da to povećava rizik od otrovanja kurkumom kod mačaka. Autori dodaju da o njezinoj sigurnosti za mačke ima malo podataka. U njihovoj su studiji zdrave odrasle mačke dobro podnijele ekstrakt kurkume dodan potpunoj i uravnoteženoj mačjoj hrani. Mačkama ne treba ništa osim potpune hrane.",
+    "sv": "Gurkmeja är en klargul krydda. En studie från 2026 i tidskriften Animals påpekar att katter har ovanligt låg förmåga till glukuronidering, ett viktigt steg i nedbrytningen och utsöndringen av gurkmejans kurkuminoider, och att detta ökar risken för gurkmejaförgiftning hos katter. Författarna tillägger att det finns få data om dess säkerhet hos katter. I deras studie tolererades ett gurkmejaextrakt som tillsatts i en komplett och balanserad kattmat väl av friska vuxna katter. Katter behöver inget annat än en komplett kost.",
+    "da": "Gurkemeje er et stærkt gult krydderi. En undersøgelse fra 2026 i tidsskriftet Animals skriver at katte har en usædvanligt lav evne til glukuronidering, som er et vigtigt trin i nedbrydningen og udskillelsen af gurkemejens curcuminoider, og at det øger risikoen for gurkemejeforgiftning hos katte. Forfatterne tilføjer at der er få data om, hvor sikkert det er for katte. I deres undersøgelse blev et gurkemejeekstrakt, der var tilsat et komplet og afbalanceret kattefoder, tålt godt af raske, voksne katte. Katte har ikke brug for andet end en komplet kost.",
+    "fi": "Kurkuma on kirkkaankeltainen mauste. Animals-lehdessä julkaistun vuoden 2026 tutkimuksen mukaan kissojen kyky glukuronidoida on poikkeuksellisen heikko. Glukuronidaatio on tärkeä vaihe kurkuman kurkuminoidien hajottamisessa ja poistamisessa elimistöstä, ja tämä lisää kurkuman aiheuttaman myrkytyksen riskiä kissoilla. Tekijät lisäävät, että sen turvallisuudesta kissoilla on vähän tietoa. Heidän tutkimuksessaan täysipainoiseen kissanruokaan lisätty kurkumauute oli terveiden aikuisten kissojen hyvin sietämää. Kissat eivät tarvitse muuta kuin täysipainoisen ruokavalion.",
+    "nb": "Gurkemeie er et knallgult krydder. En studie fra 2026 i tidsskriftet Animals peker på at katter har uvanlig lav evne til glukuronidering, et viktig trinn i nedbrytningen og utskillelsen av gurkemeiens curcuminoider, og at dette øker risikoen for giftvirkning av gurkemeie hos katter. Forfatterne legger til at det finnes lite data om sikkerheten hos katter. I studien tålte friske, voksne katter godt et gurkemeieekstrakt tilsatt komplett og balansert kattemat. Katter trenger ikke noe annet enn et fullverdig kosthold.",
+    "it": "La curcuma è una spezia di un giallo intenso. Uno studio del 2026 pubblicato sulla rivista Animals osserva che i gatti hanno una capacità insolitamente bassa di glucuronidazione, un passaggio importante per demolire ed eliminare i curcuminoidi della curcuma, e che questo aumenta il rischio di tossicità da curcuma nei gatti. Gli autori aggiungono che i dati sulla sua sicurezza nei gatti sono scarsi. Nel loro studio un estratto di curcuma aggiunto a un alimento completo e bilanciato per gatti è stato ben tollerato da gatti adulti sani. I gatti non hanno bisogno di altro che di un’alimentazione completa.",
+    "de": "Kurkuma ist ein leuchtend gelbes Gewürz. Eine Studie aus dem Jahr 2026 in der Fachzeitschrift Animals weist darauf hin, dass Katzen eine ungewöhnlich geringe Fähigkeit zur Glucuronidierung haben, einem wichtigen Schritt beim Abbau und der Ausscheidung der Curcuminoide aus Kurkuma, und dass dies das Risiko einer Kurkuma-Vergiftung bei Katzen erhöht. Die Autoren ergänzen, dass es nur wenige Daten zur Sicherheit bei Katzen gibt. In ihrer Studie wurde ein Kurkuma-Extrakt in einem vollwertigen Alleinfutter von gesunden erwachsenen Katzen gut vertragen. Katzen brauchen außer einer vollwertigen Ernährung nichts.",
+    "fr": "Le curcuma est une épice jaune vif. Une étude de 2026 publiée dans la revue Animals note que les chats ont une capacité de glucuroconjugaison anormalement faible, une étape importante de la dégradation et de l’élimination des curcuminoïdes du curcuma, et que cela augmente le risque de toxicité du curcuma chez le chat. Les auteurs ajoutent qu’il existe peu de données sur son innocuité chez le chat. Dans leur étude, un extrait de curcuma ajouté à un aliment complet et équilibré pour chats a été bien toléré par des chats adultes en bonne santé. Les chats n’ont besoin de rien d’autre qu’une alimentation complète.",
+    "es": "La cúrcuma es una especia de un color amarillo intenso. Un estudio de 2026 publicado en la revista Animals señala que los gatos tienen una capacidad inusualmente baja de glucuronidación, un paso importante para descomponer y eliminar los curcuminoides de la cúrcuma, y que esto aumenta el riesgo de toxicidad de la cúrcuma en los gatos. Los autores añaden que hay pocos datos sobre su seguridad en los gatos. En su estudio, un extracto de cúrcuma añadido a una comida para gatos completa y equilibrada fue bien tolerado por gatos adultos sanos. Los gatos no necesitan nada más que una alimentación completa.",
+    "pt": "A cúrcuma é um tempero amarelo-vivo. Um estudo de 2026 na revista Animals refere que os gatos têm uma capacidade invulgarmente baixa de glucuronidação, um passo importante para decompor e eliminar os curcuminoides da cúrcuma, e que isso aumenta o risco de toxicidade nos gatos. Os autores acrescentam que há poucos dados sobre a segurança nos gatos. No estudo deles, um extrato de cúrcuma acrescentado a uma comida para gatos completa e equilibrada foi bem tolerado por gatos adultos saudáveis. Os gatos não precisam de mais nada além de uma alimentação completa.",
+    "nl": "Kurkuma is een felgeel kruid. Een studie uit 2026 in het tijdschrift Animals merkt op dat katten een ongewoon laag vermogen hebben tot glucuronidering, een belangrijke stap bij het afbreken en uitscheiden van de curcuminoïden in kurkuma, en dat dit het risico op kurkumavergiftiging bij katten vergroot. De auteurs voegen toe dat er weinig gegevens zijn over de veiligheid bij katten. In hun onderzoek werd een kurkumaextract, toegevoegd aan een volwaardig en uitgebalanceerd kattenvoer, goed verdragen door gezonde volwassen katten. Katten hebben niets anders nodig dan een volwaardige voeding.",
+    "pl": "Kurkuma to jaskrawożółta przyprawa. Badanie z 2026 roku w czasopiśmie Animals zaznacza, że koty mają wyjątkowo niską zdolność do glukuronidacji, ważnego etapu rozkładu i wydalania kurkuminoidów z kurkumy, i że zwiększa to u nich ryzyko zatrucia kurkumą. Autorzy dodają, że danych o jej bezpieczeństwie u kotów jest niewiele. W ich badaniu ekstrakt z kurkumy dodany do pełnowartościowej, zbilansowanej karmy dla kotów był dobrze tolerowany przez zdrowe dorosłe koty. Koty nie potrzebują niczego poza pełnowartościową dietą."
   },
   "signs": {
     "en": [
@@ -39,30 +99,126 @@
     "cs": [
       "Zvracení",
       "Podrážděný žaludek"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Želučane tegobe"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Orolig mage"
+    ],
+    "da": [
+      "Opkast",
+      "Mavebesvær"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Vatsavaivat"
+    ],
+    "nb": [
+      "Oppkast",
+      "Urolig mage"
+    ],
+    "it": [
+      "Vomito",
+      "Disturbi di stomaco"
+    ],
+    "de": [
+      "Erbrechen",
+      "Magenbeschwerden"
+    ],
+    "fr": [
+      "Vomissements",
+      "Troubles digestifs"
+    ],
+    "es": [
+      "Vómitos",
+      "Malestar de estómago"
+    ],
+    "pt": [
+      "Vómitos",
+      "Indisposição de estômago"
+    ],
+    "nl": [
+      "Braken",
+      "Maagklachten"
+    ],
+    "pl": [
+      "Wymioty",
+      "Rozstrój żołądka"
     ]
   },
   "what_to_do": {
     "en": "If your cat licked a little turmeric, watch for vomiting or an upset stomach. If your cat has eaten something she shouldn't have, contact your vet straight away; don't wait for signs, and don't try to make her sick at home.",
     "sl": "Če je mačka polizala malo kurkume, bodite pozorni na bruhanje ali prebavne težave. Če je mačka pojedla nekaj, česar ne bi smela, takoj pokličite veterinarja; ne čakajte na znake in je doma ne poskušajte spraviti v bruhanje.",
-    "cs": "Pokud kočka olízla trochu kurkumy, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud kočka snědla něco, co neměla, okamžitě se obraťte na veterináře; nečekejte na příznaky a nesnažte se ji doma přimět ke zvracení."
+    "cs": "Pokud kočka olízla trochu kurkumy, sledujte, zda nezvrací nebo nemá podrážděný žaludek. Pokud kočka snědla něco, co neměla, okamžitě se obraťte na veterináře; nečekejte na příznaky a nesnažte se ji doma přimět ke zvracení.",
+    "hr": "Ako je mačka poliznula malo kurkume, pazi na povraćanje ili želučane tegobe. Ako je pojela nešto što nije smjela, odmah se obrati veterinaru; ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Om din katt har slickat i sig lite gurkmeja: håll ett öga på om hon kräks eller får orolig mage. Om din katt har ätit något hon inte borde ska du kontakta din veterinär direkt; vänta inte på tecken, och försök inte få katten att kräkas hemma.",
+    "da": "Hvis din kat har slikket på lidt gurkemeje, skal du holde øje med opkast eller mavebesvær. Hvis din kat har spist noget, den ikke burde, skal du kontakte din dyrlæge med det samme; vent ikke på tegn, og prøv ikke selv at få katten til at kaste op.",
+    "fi": "Jos kissasi nuolaisi vähän kurkumaa, seuraa, tuleeko oksentelua tai vatsavaivoja. Jos kissasi on syönyt jotain, mitä sen ei pitäisi, ota heti yhteyttä eläinlääkäriin; älä odota oireita äläkä yritä oksennuttaa kissaa itse.",
+    "nb": "Hvis katten har slikket i seg litt gurkemeie, følg med på oppkast eller urolig mage. Hvis katten har spist noe den ikke skal, kontakt dyrlegen med en gang; ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv.",
+    "it": "Se il tuo gatto ha leccato un po’ di curcuma, controlla se compaiono vomito o disturbi di stomaco. Se il tuo gatto ha mangiato qualcosa che non doveva, contatta subito il veterinario; non aspettare i sintomi e non cercare di farlo vomitare a casa.",
+    "de": "Hat Ihre Katze ein wenig Kurkuma abgeleckt, achten Sie auf Erbrechen oder Magenbeschwerden. Hat Ihre Katze etwas gefressen, das sie nicht fressen sollte, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht auf Anzeichen und versuchen Sie nicht, sie zu Hause zum Erbrechen zu bringen.",
+    "fr": "Si votre chat a léché un peu de curcuma, surveillez l’apparition de vomissements ou de troubles digestifs. Si votre chat a mangé quelque chose qu’il n’aurait pas dû, contactez immédiatement votre vétérinaire ; n’attendez pas l’apparition de signes et n’essayez pas de le faire vomir à la maison.",
+    "es": "Si tu gato ha lamido un poco de cúrcuma, observa si tiene vómitos o malestar de estómago. Si tu gato ha comido algo que no debía, ponte en contacto con tu veterinario enseguida; no esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
+    "pt": "Se o teu gato lambeu um pouco de cúrcuma, vigia se aparecem vómitos ou indisposição de estômago. Se o teu gato comeu algo que não devia, contacta imediatamente o teu veterinário; não esperes que surjam sinais e não tentes provocar-lhe o vómito em casa.",
+    "nl": "Heeft je kat een beetje kurkuma gelikt, let dan op braken of maagklachten. Heeft je kat iets gegeten wat ze niet had mogen eten, neem dan meteen contact op met je dierenarts; wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Jeśli twój kot polizał odrobinę kurkumy, obserwuj, czy nie pojawią się wymioty lub rozstrój żołądka. Jeśli kot zjadł coś, czego nie powinien, od razu skontaktuj się z weterynarzem; nie czekaj na objawy i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
     "en": "Turmeric is a yellow spice for people's food. Cats don't need spices, so keep the jar away from kitty.",
     "sl": "Kurkuma je rumena začimba za hrano ljudi. Muce začimb ne potrebujejo, zato naj bo kozarček daleč od muce.",
-    "cs": "Kurkuma je žluté koření do jídel pro lidi. Kočky koření nepotřebují, takže dózu drž od kočičky dál."
+    "cs": "Kurkuma je žluté koření do jídel pro lidi. Kočky koření nepotřebují, takže dózu drž od kočičky dál.",
+    "hr": "Kurkuma je žuti začin za ljudsku hranu. Mačkama začini nisu potrebni, zato staklenku drži daleko od mace.",
+    "sv": "Gurkmeja är en gul krydda för människors mat. Katter behöver inga kryddor, så håll burken borta från katten.",
+    "da": "Gurkemeje er et gult krydderi til mennesker. Katte har ikke brug for krydderier, så hold glasset væk fra din kat.",
+    "fi": "Kurkuma on keltainen mauste ihmisten ruokaan. Kissat eivät tarvitse mausteita, joten pidä purkki poissa kisun luota.",
+    "nb": "Gurkemeie er et gult krydder til mat for mennesker. Katter trenger ikke krydder, så hold glasset unna pusen.",
+    "it": "La curcuma è una spezia gialla che le persone usano in cucina. I gatti non hanno bisogno di spezie, quindi tieni il barattolo lontano dal micio.",
+    "de": "Kurkuma ist ein gelbes Gewürz, das Menschen zum Kochen benutzen. Katzen brauchen keine Gewürze, also halte das Glas von deiner Katze fern.",
+    "fr": "Le curcuma est une épice jaune pour la cuisine des humains. Les chats n’ont pas besoin d’épices : garde le pot loin de ton chat.",
+    "es": "La cúrcuma es una especia amarilla para la comida de las personas. Los gatos no necesitan especias, así que mantén el bote lejos del gatito.",
+    "pt": "A cúrcuma é um tempero amarelo para a comida das pessoas. Os gatos não precisam de temperos, por isso mantém o frasco longe do gatinho.",
+    "nl": "Kurkuma is een geel kruid dat mensen in hun eten doen. Katten hebben geen kruiden nodig, dus houd het potje uit de buurt van je kat.",
+    "pl": "Kurkuma to żółta przyprawa do jedzenia dla ludzi. Koty nie potrzebują przypraw, więc trzymaj słoiczek z dala od kotka."
   },
   "faq": [
     {
       "q": {
         "en": "Is turmeric in cat food safe?",
         "sl": "Ali je kurkuma v mačji hrani varna?",
-        "cs": "Je kurkuma v kočičím krmivu bezpečná?"
+        "cs": "Je kurkuma v kočičím krmivu bezpečná?",
+        "hr": "Je li kurkuma u mačjoj hrani sigurna?",
+        "sv": "Är gurkmeja i kattmat säker?",
+        "da": "Er gurkemeje i kattefoder ufarligt?",
+        "fi": "Onko kissanruoassa oleva kurkuma turvallista?",
+        "nb": "Er gurkemeie i kattemat trygg?",
+        "it": "La curcuma nel cibo per gatti è sicura?",
+        "de": "Ist Kurkuma im Katzenfutter unbedenklich?",
+        "fr": "Le curcuma dans la nourriture pour chats est-il sans danger ?",
+        "es": "¿Es segura la cúrcuma en la comida para gatos?",
+        "pt": "A cúrcuma na comida para gatos é segura?",
+        "nl": "Is kurkuma in kattenvoer veilig?",
+        "pl": "Czy kurkuma w karmie dla kotów jest bezpieczna?"
       },
       "a": {
         "en": "One study fed healthy adult cats a complete diet with added turmeric extract for four months and found it well tolerated. The authors note that other studies on feeding turmeric to cats are scarce.",
         "sl": "V eni raziskavi so zdrave odrasle mačke štiri mesece jedle popolno hrano z dodanim izvlečkom kurkume in so jo dobro prenašale. Avtorji opozarjajo, da je drugih raziskav o krmljenju mačk s kurkumo malo.",
-        "cs": "V jedné studii dostávaly zdravé dospělé kočky čtyři měsíce kompletní krmivo s přidaným extraktem z kurkumy a snášely ho dobře. Autoři poznamenávají, že jiných studií o krmení koček kurkumou je málo."
+        "cs": "V jedné studii dostávaly zdravé dospělé kočky čtyři měsíce kompletní krmivo s přidaným extraktem z kurkumy a snášely ho dobře. Autoři poznamenávají, že jiných studií o krmení koček kurkumou je málo.",
+        "hr": "U jednoj su studiji zdrave odrasle mačke četiri mjeseca dobivale potpunu hranu s dodanim ekstraktom kurkume i dobro su je podnijele. Autori napominju da su druga istraživanja o hranjenju mačaka kurkumom rijetka.",
+        "sv": "I en studie fick friska vuxna katter en komplett kost med tillsatt gurkmejaextrakt i fyra månader, och den tolererades väl. Författarna påpekar att det finns få andra studier av gurkmeja till katter.",
+        "da": "I en undersøgelse fik raske, voksne katte en komplet kost med tilsat gurkemejeekstrakt i fire måneder, og den blev tålt godt. Forfatterne skriver at der kun findes få andre undersøgelser af, hvad der sker, når katte får gurkemeje.",
+        "fi": "Yhdessä tutkimuksessa terveille aikuisille kissoille syötettiin neljän kuukauden ajan täysipainoista ruokaa, johon oli lisätty kurkumauutetta, ja sen todettiin olevan hyvin siedettyä. Tekijät huomauttavat, että muita tutkimuksia kurkuman syöttämisestä kissoille on niukasti.",
+        "nb": "I én studie fikk friske, voksne katter en komplett kost med tilsatt gurkemeieekstrakt i fire måneder, og de tålte det godt. Forfatterne påpeker at det finnes få andre studier på katter som får gurkemeie.",
+        "it": "In uno studio, gatti adulti sani hanno mangiato per quattro mesi un alimento completo con aggiunta di estratto di curcuma e lo hanno tollerato bene. Gli autori fanno notare che gli altri studi sulla curcuma data ai gatti sono pochi.",
+        "de": "In einer Studie bekamen gesunde erwachsene Katzen vier Monate lang ein vollwertiges Futter mit zugesetztem Kurkuma-Extrakt und vertrugen es gut. Die Autoren weisen darauf hin, dass es kaum andere Studien gibt, in denen Katzen Kurkuma erhielten.",
+        "fr": "Une étude a donné à des chats adultes en bonne santé une alimentation complète additionnée d’extrait de curcuma pendant quatre mois et l’a trouvée bien tolérée. Les auteurs notent que les autres études sur l’alimentation des chats avec du curcuma sont rares.",
+        "es": "Un estudio dio a gatos adultos sanos una comida completa con extracto de cúrcuma añadido durante cuatro meses y comprobó que la toleraron bien. Los autores señalan que otros estudios sobre dar cúrcuma a los gatos son escasos.",
+        "pt": "Um estudo deu a gatos adultos saudáveis, durante quatro meses, uma alimentação completa com extrato de cúrcuma e concluiu que foi bem tolerado. Os autores referem que há poucos outros estudos sobre dar cúrcuma a gatos.",
+        "nl": "In één onderzoek kregen gezonde volwassen katten vier maanden lang een volwaardig voer met toegevoegd kurkumaextract, en dat werd goed verdragen. De auteurs merken op dat er weinig ander onderzoek is naar het voeren van kurkuma aan katten.",
+        "pl": "W jednym badaniu zdrowym dorosłym kotom podawano przez cztery miesiące pełnowartościową karmę z dodatkiem ekstraktu z kurkumy i okazało się, że koty dobrze ją tolerowały. Autorzy zaznaczają, że innych badań nad podawaniem kurkumy kotom jest niewiele."
       }
     }
   ],
@@ -145,6 +301,66 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2d44d42f0c2dc26950f202fb6bbe9f0222f5eacf1da03f0cc91756ab8ab7d221"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "66b4de1c4c8835fc0fcfd2a59ca8b9ad6446176a2112de84334f1358556e97ef"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bf65043d8be4f2a6b0960c91cc3b5a77cdc0f02c7a30d27bd2def835e43e9ef5"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6c9df916aec83c8296f8d007812e8f724cede1aa283f89e108965a19e08e3ce2"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "18f425f2aa6ac31dc9e109ff26023e7cf6058c243ab40966a437142c2385fa32"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2a3012600eb023918d99e3127c09d0e0f8c4e38f55164d1e8e1ae58d665bb641"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "931cd20b37abb9355a38994941e7466606e4e47c336db3899e584310f0ffd2b9"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "87fd59b54f464620f3c543096432a17a0dd44b3e17d2aa05403858c9c709f8c9"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ca4a8f1959ea107aa079d503cb828998411497f1f12250acbf05fb51d9bf404c"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d83ad64c017b954263615782b2a319c74c1657042f2c8955f560ad50dd5877fb"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ff94a42ce5f2cc490cb57ab0845f23e5bf957cf5285908d0ca1c19cb5aee3163"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "73e029452bee6dbffa3a2c3fbe3df4e85437d131f86c91c818c71875d750b7b8"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "737889a47ab1aef522f7cc4dff863e8a56b6351ab69007fb87e48fb1c20bb77a"
     }
   }
 }

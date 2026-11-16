@@ -3,24 +3,89 @@
   "species": "cat",
   "name": {
     "en": "Gravy",
-    "sl": "Mesna omaka"
+    "sl": "Mesna omaka",
+    "hr": "Umak od mesa",
+    "sv": "Sås (brunsås)",
+    "da": "Sovs",
+    "fi": "Kastike",
+    "nb": "Brun saus",
+    "it": "Sugo di carne",
+    "de": "Bratensoße",
+    "fr": "Sauce au jus",
+    "es": "Salsa de carne",
+    "pt": "Molho de carne",
+    "nl": "Jus",
+    "pl": "Sos pieczeniowy",
+    "cs": "Omáčka z pečeně (gravy)"
   },
   "question": {
     "en": "Can cats eat gravy?",
-    "sl": "Ali lahko mačke jedo mesno omako?"
+    "sl": "Ali lahko mačke jedo mesno omako?",
+    "hr": "Smiju li mačke jesti umak od mesa?",
+    "sv": "Får katter äta sås?",
+    "da": "Må katte spise sovs?",
+    "fi": "Saako kissa syödä kastiketta?",
+    "nb": "Kan katter spise brun saus?",
+    "it": "I gatti possono mangiare il sugo di carne?",
+    "de": "Dürfen Katzen Bratensoße fressen?",
+    "fr": "Les chats peuvent-ils manger de la sauce au jus ?",
+    "es": "¿Pueden los gatos comer salsa de carne?",
+    "pt": "Os gatos podem comer molho de carne?",
+    "nl": "Mogen katten jus eten?",
+    "pl": "Czy koty mogą jeść sos pieczeniowy?",
+    "cs": "Mohou kočky jíst omáčku z pečeně?"
   },
   "url_slug": {
     "en": "gravy",
-    "sl": "mesna-omaka"
+    "sl": "mesna-omaka",
+    "hr": "umak-od-mesa",
+    "sv": "sas",
+    "da": "sovs",
+    "fi": "kastike",
+    "nb": "brun-saus",
+    "it": "sugo-di-carne",
+    "de": "bratensosse",
+    "fr": "sauce-au-jus",
+    "es": "salsa-de-carne",
+    "pt": "molho-de-carne",
+    "nl": "jus",
+    "pl": "sos-pieczeniowy",
+    "cs": "omacka-k-masu"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, gravy made for people is not for cats. It is usually salty and often contains onion, garlic and seasoning, and onion and garlic are toxic to cats. Gravy can also be high in fat. Keep it off your cat's plate.",
-    "sl": "Ne, omaka, pripravljena za ljudi, ni za mačke. Običajno je slana in pogosto vsebuje čebulo, česen in začimbe, čebula in česen pa sta za mačke strupena. Omaka ima lahko tudi veliko maščobe. Mački je ne dajajte."
+    "sl": "Ne, omaka, pripravljena za ljudi, ni za mačke. Običajno je slana in pogosto vsebuje čebulo, česen in začimbe, čebula in česen pa sta za mačke strupena. Omaka ima lahko tudi veliko maščobe. Mački je ne dajajte.",
+    "hr": "Ne, umak od mesa za ljude nije za mačke. Obično je slan i često sadrži luk, češnjak i začine, a luk i češnjak otrovni su za mačke. Umak može biti i bogat mašću. Drži ga podalje od mačjeg tanjura.",
+    "sv": "Nej, sås som är gjord för människor är inget för katter. Den är oftast salt och innehåller ofta lök, vitlök och krydda, och lök och vitlök är giftigt för katter. Sås kan också innehålla mycket fett. Låt den inte hamna på kattens tallrik.",
+    "da": "Nej, sovs lavet til mennesker er ikke noget for katte. Den er som regel salt og indeholder ofte løg, hvidløg og krydderier, og løg og hvidløg er giftige for katte. Sovs kan også være fed. Hold den væk fra kattens tallerken.",
+    "fi": "Ei saa, ihmisille tarkoitettu kastike ei sovi kissoille. Se on yleensä suolaista ja sisältää usein sipulia, valkosipulia ja mausteita, ja sipuli ja valkosipuli ovat kissoille myrkyllisiä. Kastikkeessa voi olla myös paljon rasvaa. Pidä se poissa kissan lautaselta.",
+    "nb": "Nei, brun saus laget for mennesker er ikke for katter. Den er vanligvis salt og inneholder ofte løk, hvitløk og krydder, og løk og hvitløk er giftig for katter. Saus kan også ha mye fett. Hold den unna kattens tallerken.",
+    "it": "No, il sugo di carne fatto per le persone non è per i gatti. Di solito è salato e spesso contiene cipolla, aglio e condimenti, e cipolla e aglio sono tossici per i gatti. Può anche essere ricco di grassi. Non metterlo nella ciotola del tuo gatto.",
+    "de": "Nein, Bratensoße für Menschen ist nichts für Katzen. Sie ist meist salzig und enthält oft Zwiebel, Knoblauch und Gewürze, und Zwiebel und Knoblauch sind für Katzen giftig. Außerdem kann Soße viel Fett enthalten. Halten Sie sie vom Napf Ihrer Katze fern.",
+    "fr": "Non, la sauce au jus préparée pour les humains n’est pas faite pour les chats. Elle est généralement salée et contient souvent de l’oignon, de l’ail et des assaisonnements, or l’oignon et l’ail sont toxiques pour les chats. Elle peut aussi être très grasse. Ne la mettez pas dans l’assiette de votre chat.",
+    "es": "No, la salsa de carne hecha para personas no es para los gatos. Suele ser salada y a menudo lleva cebolla, ajo y condimentos, y la cebolla y el ajo son tóxicos para los gatos. Además, la salsa de carne puede tener mucha grasa. No la pongas en el plato de tu gato.",
+    "pt": "Não, o molho feito para pessoas não é para gatos. Costuma ser salgado e leva muitas vezes cebola, alho e temperos, e a cebola e o alho são tóxicos para os gatos. O molho pode ainda ter muita gordura. Não o ponhas no prato do teu gato.",
+    "nl": "Nee, jus voor mensen is niets voor katten. Het is meestal zout en bevat vaak ui, knoflook en kruiden, en ui en knoflook zijn giftig voor katten. Jus kan ook veel vet bevatten. Laat jus dus niet in het bakje van je kat belanden.",
+    "pl": "Nie, sos pieczeniowy przygotowany dla ludzi nie jest dla kotów. Zwykle jest słony i często zawiera cebulę, czosnek i przyprawy, a cebula i czosnek są toksyczne dla kotów. Sos może też zawierać dużo tłuszczu. Nie dawaj go kotu.",
+    "cs": "Ne, omáčka pro lidi není pro kočky. Bývá slaná a často obsahuje cibuli, česnek a koření, přitom cibule a česnek jsou pro kočky jedovaté. Může být také hodně tučná. Kočce ji do misky nedávejte."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The ASPCA suggests a drizzle of gravy on a pet's holiday dinner, but Cats Protection warns that gravy made for humans is usually salty and contains garlic and seasoning, and PDSA says stuffing and gravy often contain onion, leeks and garlic, which can be deadly to cats and dogs. Onion, garlic, chives and leeks are toxic to cats even when cooked or dried. The RSPCA adds that gravy can contain high levels of salt and fat, and the ASPCA notes that bouillon cubes used for making gravy contain high amounts of sodium.",
-    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. ASPCA predlaga, da hišnemu ljubljenčku praznično večerjo prelijete s kančkom omake, Cats Protection pa opozarja, da je omaka, pripravljena za ljudi, običajno slana ter vsebuje česen in začimbe, PDSA pa pravi, da nadev in omaka pogosto vsebujeta čebulo, por in česen, ki so lahko za mačke in pse smrtno nevarni. Čebula, česen, drobnjak in por so za mačke strupeni tudi kuhani ali posušeni. RSPCA dodaja, da omaka lahko vsebuje veliko soli in maščob, ASPCA pa opozarja, da jušne kocke, ki se uporabljajo za pripravo omake, vsebujejo veliko natrija."
+    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. ASPCA predlaga, da hišnemu ljubljenčku praznično večerjo prelijete s kančkom omake, Cats Protection pa opozarja, da je omaka, pripravljena za ljudi, običajno slana ter vsebuje česen in začimbe, PDSA pa pravi, da nadev in omaka pogosto vsebujeta čebulo, por in česen, ki so lahko za mačke in pse smrtno nevarni. Čebula, česen, drobnjak in por so za mačke strupeni tudi kuhani ali posušeni. RSPCA dodaja, da omaka lahko vsebuje veliko soli in maščob, ASPCA pa opozarja, da jušne kocke, ki se uporabljajo za pripravo omake, vsebujejo veliko natrija.",
+    "hr": "Izvori se razilaze, pa primjenjujemo strožu razinu. ASPCA predlaže malo umaka preko blagdanske večere za kućnog ljubimca, ali Cats Protection upozorava da je umak za ljude obično slan i sadrži češnjak i začine, a PDSA kaže da nadjev i umak često sadrže luk, poriluk i češnjak, koji mogu biti smrtonosni za mačke i pse. Luk, češnjak, vlasac i poriluk otrovni su za mačke čak i kad su kuhani ili sušeni. RSPCA dodaje da umak može sadržavati mnogo soli i masti, a ASPCA napominje da kocke za juhu kojima se pravi umak sadrže mnogo natrija.",
+    "sv": "Källorna är oense, så vi använder den strängare nivån. ASPCA föreslår en skvätt sås över husdjurets högtidsmiddag, men Cats Protection varnar för att sås som är gjord för människor oftast är salt och innehåller vitlök och krydda, och PDSA säger att fyllning och sås ofta innehåller lök, purjolök och vitlök, vilket kan vara dödligt för katter och hundar. Lök, vitlök, gräslök och purjolök är giftiga för katter även när de är tillagade eller torkade. RSPCA tillägger att sås kan innehålla höga halter salt och fett, och ASPCA påpekar att buljongtärningar som används för sås innehåller mycket natrium.",
+    "da": "Kilderne er uenige, så vi bruger det strengeste niveau. ASPCA foreslår en smule sovs over kæledyrets festmiddag, men Cats Protection advarer om at sovs lavet til mennesker som regel er salt og indeholder hvidløg og krydderier, og PDSA skriver at fyld og sovs ofte indeholder løg, porrer og hvidløg, som kan være dødelige for katte og hunde. Løg, hvidløg, purløg og porrer er giftige for katte, også når de er kogt eller tørret. RSPCA tilføjer at sovs kan indeholde meget salt og fedt, og ASPCA nævner at bouillonterninger, der bruges til at lave sovs, indeholder meget natrium.",
+    "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. ASPCA ehdottaa vähän kastiketta lemmikin joulupäivälliselle, mutta Cats Protection varoittaa, että ihmisille tarkoitettu kastike on yleensä suolaista ja sisältää valkosipulia ja mausteita, ja PDSA toteaa, että täytteissä ja kastikkeissa on usein sipulia, purjoa ja valkosipulia, jotka voivat olla kissoille ja koirille tappavia. Sipuli, valkosipuli, ruohosipuli ja purjo ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina. RSPCA lisää, että kastike voi sisältää runsaasti suolaa ja rasvaa, ja ASPCA huomauttaa, että kastikkeen tekoon käytettävät liemikuutiot sisältävät paljon natriumia.",
+    "nb": "Kildene er uenige, så vi bruker det strengeste nivået. ASPCA foreslår en skvett saus over kjæledyrets høytidsmiddag, men Cats Protection advarer om at saus laget for mennesker vanligvis er salt og inneholder hvitløk og krydder, og PDSA sier at fyll og saus ofte inneholder løk, purre og hvitløk, som kan være dødelig for både katter og hunder. Løk, hvitløk, gressløk og purre er giftig for katter selv når de er kokt eller tørket. RSPCA legger til at saus kan inneholde mye salt og fett, og ASPCA påpeker at buljongterninger til saus inneholder mye natrium.",
+    "it": "Le fonti non concordano, quindi usiamo il livello più prudente. L’ASPCA suggerisce di aggiungere un filo di sugo al pasto delle feste dell’animale, ma Cats Protection avverte che il sugo fatto per le persone è di solito salato e contiene aglio e condimenti, e PDSA afferma che ripieni e sughi contengono spesso cipolla, porri e aglio, che possono essere letali per gatti e cani. Cipolla, aglio, erba cipollina e porri sono tossici per i gatti anche se cotti o essiccati. L’RSPCA aggiunge che il sugo può contenere livelli elevati di sale e grassi, e l’ASPCA osserva che i dadi da brodo usati per preparare il sugo contengono grandi quantità di sodio.",
+    "de": "Die Quellen sind sich nicht einig, deshalb gilt die strengere Stufe. Die ASPCA schlägt vor, das Festtagsessen eines Haustiers mit einem Spritzer Bratensoße abzurunden, doch Cats Protection warnt, dass Bratensoße für Menschen meist salzig ist und Knoblauch und Gewürze enthält, und PDSA sagt, dass Füllung und Bratensoße oft Zwiebel, Lauch und Knoblauch enthalten, die für Katzen und Hunde tödlich sein können. Zwiebel, Knoblauch, Schnittlauch und Lauch sind für Katzen auch gekocht oder getrocknet giftig. Die RSPCA ergänzt, dass Bratensoße viel Salz und Fett enthalten kann, und die ASPCA weist darauf hin, dass Brühwürfel zum Anrühren von Soße sehr viel Natrium enthalten.",
+    "fr": "Les sources divergent : nous appliquons donc le niveau le plus strict. L’ASPCA suggère d’ajouter un filet de sauce au jus au repas de fête d’un animal, mais Cats Protection avertit que la sauce préparée pour les humains est généralement salée et contient de l’ail et des assaisonnements, et la PDSA indique que la farce et la sauce au jus contiennent souvent de l’oignon, du poireau et de l’ail, qui peuvent être mortels pour les chats et les chiens. L’oignon, l’ail, la ciboulette et le poireau sont toxiques pour les chats, même cuits ou séchés. La RSPCA ajoute que la sauce au jus peut contenir beaucoup de sel et de graisses, et l’ASPCA note que les cubes de bouillon utilisés pour préparer la sauce contiennent beaucoup de sodium.",
+    "es": "Las fuentes no coinciden, así que aplicamos el nivel más estricto. La ASPCA sugiere un chorrito de salsa de carne en la cena festiva de una mascota, pero Cats Protection advierte de que la salsa hecha para personas suele ser salada y llevar ajo y condimentos, y PDSA dice que el relleno y la salsa de carne suelen llevar cebolla, puerro y ajo, que pueden ser mortales para gatos y perros. La cebolla, el ajo, el cebollino y el puerro son tóxicos para los gatos aunque estén cocinados o secos. La RSPCA añade que la salsa de carne puede llevar mucha sal y grasa, y la ASPCA señala que las pastillas de caldo que se usan para hacer salsas contienen mucho sodio.",
+    "pt": "As fontes não estão de acordo, por isso usamos o nível mais rigoroso. A ASPCA sugere um fio de molho no jantar de festa do animal, mas a Cats Protection avisa que o molho feito para pessoas costuma ser salgado e conter alho e temperos, e a PDSA diz que o recheio e o molho levam muitas vezes cebola, alho-francês e alho, que podem ser mortais para gatos e cães. A cebola, o alho, o cebolinho e o alho-francês são tóxicos para os gatos mesmo cozinhados ou secos. A RSPCA acrescenta que o molho pode ter muito sal e gordura, e a ASPCA refere que os cubos de caldo usados para fazer molho têm muito sódio.",
+    "nl": "De bronnen zijn het niet met elkaar eens, dus we hanteren het strengere niveau. De ASPCA stelt voor om wat jus over het feestdiner van je huisdier te sprenkelen, maar Cats Protection waarschuwt dat jus voor mensen meestal zout is en knoflook en kruiden bevat, en PDSA zegt dat vulling en jus vaak ui, prei en knoflook bevatten, en dat kan dodelijk zijn voor katten en honden. Ui, knoflook, bieslook en prei zijn giftig voor katten, ook als ze gekookt of gedroogd zijn. De RSPCA voegt toe dat jus veel zout en vet kan bevatten, en de ASPCA merkt op dat bouillonblokjes voor het maken van jus veel natrium bevatten.",
+    "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. ASPCA proponuje dodać odrobinę sosu pieczeniowego do świątecznego obiadu dla zwierzęcia domowego, ale Cats Protection ostrzega, że sos pieczeniowy przygotowany dla ludzi jest zwykle słony i zawiera czosnek oraz przyprawy, a PDSA podaje, że farsz i sos pieczeniowy często zawierają cebulę, por i czosnek, które mogą być śmiertelnie niebezpieczne dla kotów i psów. Cebula, czosnek, szczypiorek i por są toksyczne dla kotów nawet po ugotowaniu lub wysuszeniu. RSPCA dodaje, że sos może zawierać dużo soli i tłuszczu, a ASPCA zaznacza, że kostki rosołowe używane do robienia sosu zawierają bardzo dużo sodu.",
+    "cs": "Zdroje se různí, proto jsme zvolili přísnější úroveň. ASPCA navrhuje pokapat sváteční večeři pro domácí zvíře trochou omáčky, ale Cats Protection varuje, že omáčka určená pro lidi bývá slaná a obsahuje česnek a koření, a PDSA uvádí, že nádivka a omáčka často obsahují cibuli, pórek a česnek, které mohou být pro kočky i psy smrtelně nebezpečné. Cibule, česnek, pažitka a pórek jsou pro kočky jedovaté, i když jsou tepelně upravené nebo sušené. RSPCA dodává, že omáčka může obsahovat hodně soli a tuku, a ASPCA upozorňuje, že bujónové kostky na přípravu omáček obsahují velké množství sodíku."
   },
   "signs": {
     "en": [
@@ -32,26 +97,143 @@
       "Bruhanje",
       "Driska",
       "Prebavne težave"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Želučane tegobe"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Orolig mage"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Mavebesvær"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Ripuli",
+      "Vatsavaivat"
+    ],
+    "nb": [
+      "Oppkast",
+      "Diaré",
+      "Urolig mage"
+    ],
+    "it": [
+      "Vomito",
+      "Diarrea",
+      "Mal di pancia"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Magenbeschwerden"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Troubles digestifs"
+    ],
+    "es": [
+      "Vómitos",
+      "Diarrea",
+      "Malestar de estómago"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Indisposição de estômago"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Buikklachten"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Rozstrój żołądka"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Podrážděný žaludek"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate gravy that may contain onion or garlic, contact your vet as soon as possible. If you think she ate other leftovers too, tell your vet what she ate.",
-    "sl": "Če je mačka pojedla omako, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če mislite, da je pojedla tudi druge ostanke hrane, veterinarju povejte, kaj je pojedla."
+    "sl": "Če je mačka pojedla omako, ki morda vsebuje čebulo ali česen, čim prej pokličite veterinarja. Če mislite, da je pojedla tudi druge ostanke hrane, veterinarju povejte, kaj je pojedla.",
+    "hr": "Ako je mačka pojela umak koji bi mogao sadržavati luk ili češnjak, što prije se obrati veterinaru. Ako misliš da je pojela i druge ostatke hrane, reci veterinaru što je sve pojela.",
+    "sv": "Om din katt har ätit sås som kan innehålla lök eller vitlök ska du kontakta din veterinär så snart som möjligt. Om du tror att hon har ätit andra rester också, berätta för veterinären vad hon fått i sig.",
+    "da": "Hvis din kat har spist sovs, der kan indeholde løg eller hvidløg, skal du kontakte din dyrlæge hurtigst muligt. Hvis du tror, at katten også har spist andre rester, skal du fortælle dyrlægen, hvad den har spist.",
+    "fi": "Jos kissasi söi kastiketta, jossa voi olla sipulia tai valkosipulia, ota yhteyttä eläinlääkäriin mahdollisimman pian. Jos arvelet kissan syöneen myös muita ruoantähteitä, kerro eläinlääkärille, mitä se söi.",
+    "nb": "Hvis katten har spist saus som kan inneholde løk eller hvitløk, kontakt dyrlegen så fort som mulig. Hvis du tror katten har spist andre rester også, fortell dyrlegen hva den har fått i seg.",
+    "it": "Se il tuo gatto ha mangiato sugo che può contenere cipolla o aglio, contatta il veterinario il prima possibile. Se pensi che abbia mangiato anche altri avanzi, di’ al veterinario che cosa ha mangiato.",
+    "de": "Hat Ihre Katze Bratensoße gefressen, die Zwiebel oder Knoblauch enthalten könnte, wenden Sie sich so schnell wie möglich an Ihren Tierarzt. Vermuten Sie, dass sie auch andere Reste gefressen hat, sagen Sie Ihrem Tierarzt, was es genau war.",
+    "fr": "Si votre chat a mangé de la sauce au jus pouvant contenir de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible. Si vous pensez qu’il a aussi mangé d’autres restes, dites à votre vétérinaire ce qu’il a mangé.",
+    "es": "Si tu gato ha comido salsa de carne que pueda llevar cebolla o ajo, ponte en contacto con tu veterinario lo antes posible. Si crees que también ha comido otras sobras, dile a tu veterinario qué ha comido.",
+    "pt": "Se o teu gato comeu molho que possa conter cebola ou alho, contacta o teu veterinário o mais depressa possível. Se achas que ele comeu também outras sobras, diz ao veterinário o que foi.",
+    "nl": "Heeft je kat jus gegeten waar mogelijk ui of knoflook in zat, neem dan zo snel mogelijk contact op met je dierenarts. Denk je dat ze ook andere restjes heeft gegeten, vertel je dierenarts dan wat ze heeft gegeten.",
+    "pl": "Jeśli twój kot zjadł sos pieczeniowy, który mógł zawierać cebulę lub czosnek, jak najszybciej skontaktuj się z weterynarzem. Jeśli sądzisz, że zjadł też inne resztki, powiedz weterynarzowi, co to było.",
+    "cs": "Pokud kočka snědla omáčku, která mohla obsahovat cibuli nebo česnek, co nejdříve se obraťte na veterináře. Pokud si myslíte, že snědla i další zbytky, řekněte veterináři, co všechno snědla."
   },
   "serving": null,
   "child": {
     "en": "Gravy is a people food with salt and onion in it. Kitty's own cat food is the best choice for her.",
-    "sl": "Omaka je hrana za ljudi, v njej sta sol in čebula. Za muco je najboljša njena mačja hrana."
+    "sl": "Omaka je hrana za ljudi, v njej sta sol in čebula. Za muco je najboljša njena mačja hrana.",
+    "hr": "Umak od mesa hrana je za ljude, sa solju i lukom. Za macu je najbolja njezina mačja hrana.",
+    "sv": "Sås är mat för människor med salt och lök i. Kattens egen kattmat är bäst för henne.",
+    "da": "Sovs er menneskemad med salt og løg i. Din kats egen kattemad er det bedste for den.",
+    "fi": "Kastike on ihmisten ruokaa, jossa on suolaa ja sipulia. Kisulle paras valinta on sen oma kissanruoka.",
+    "nb": "Saus er menneskemat med salt og løk i. Pusens egen kattemat er best.",
+    "it": "Il sugo di carne è un cibo per le persone, con sale e cipolla. Per il micio la scelta migliore è il suo cibo per gatti.",
+    "de": "Bratensoße ist Essen für Menschen und enthält Salz und Zwiebel. Für deine Katze ist ihr eigenes Katzenfutter das Beste.",
+    "fr": "La sauce au jus, c’est pour les humains, avec du sel et de l’oignon. Ce qu’il y a de mieux pour ton chat, c’est sa propre nourriture pour chats.",
+    "es": "La salsa de carne es comida de personas y lleva sal y cebolla. La comida para gatos es la mejor opción para el gatito.",
+    "pt": "O molho é comida de pessoas, com sal e cebola. A comida própria do gatinho é a melhor escolha para ele.",
+    "nl": "Jus is voor mensen en zit vol zout en ui. Het beste voor je kat is haar eigen kattenvoer.",
+    "pl": "Sos pieczeniowy to jedzenie dla ludzi, z solą i cebulą. Najlepszym wyborem dla kotka jest jego własna karma.",
+    "cs": "Omáčka je jídlo pro lidi a bývá v ní sůl a cibule. Nejlepší volbou pro kočičku je její vlastní kočičí krmivo."
   },
   "faq": [
     {
       "q": {
         "en": "What can my cat have from the holiday dinner instead?",
-        "sl": "Kaj lahko mačka namesto tega dobi s praznične večerje?"
+        "sl": "Kaj lahko mačka namesto tega dobi s praznične večerje?",
+        "hr": "Što moja mačka umjesto toga može dobiti s blagdanske večere?",
+        "sv": "Vad kan min katt få från högtidsmiddagen i stället?",
+        "da": "Hvad kan min kat få af festmaden i stedet?",
+        "fi": "Mitä kissa voi syödä joulupöydästä sen sijaan?",
+        "nb": "Hva kan katten få av høytidsmiddagen i stedet?",
+        "it": "Che cosa può mangiare invece il mio gatto del pranzo delle feste?",
+        "de": "Was darf meine Katze stattdessen vom Festtagsessen haben?",
+        "fr": "Que peut manger mon chat du repas de fête à la place ?",
+        "es": "¿Qué puede comer mi gato de la cena festiva en su lugar?",
+        "pt": "O que posso dar ao meu gato do jantar de festa?",
+        "nl": "Wat kan mijn kat in plaats daarvan krijgen van het feestdiner?",
+        "pl": "Co mój kot może dostać ze świątecznego obiadu zamiast sosu?",
+        "cs": "Co může kočka ze sváteční večeře dostat místo toho?"
       },
       "a": {
         "en": "PDSA says a small slice of skin- and bone-free turkey and boiled vegetables without any sauces shouldn't cause problems. Leave the gravy off.",
-        "sl": "PDSA pravi, da majhna rezina purana brez kože in kosti ter kuhana zelenjava brez omak ne bi smeli povzročiti težav. Omako izpustite."
+        "sl": "PDSA pravi, da majhna rezina purana brez kože in kosti ter kuhana zelenjava brez omak ne bi smeli povzročiti težav. Omako izpustite.",
+        "hr": "PDSA kaže da mala kriška puretine bez kože i kostiju te kuhano povrće bez ikakvih umaka ne bi trebali stvarati probleme. Umak izostavi.",
+        "sv": "PDSA säger att en liten skiva kalkon utan skinn och ben och kokta grönsaker utan såser inte borde orsaka problem. Lämna såsen därhän.",
+        "da": "PDSA skriver at en lille skive kalkun uden skind og ben og kogte grøntsager uden sovs ikke bør give problemer. Undlad sovsen.",
+        "fi": "PDSA:n mukaan pieni pala kalkkunaa ilman nahkaa ja luita sekä keitetyt kasvikset ilman kastikkeita eivät pitäisi aiheuttaa ongelmia. Jätä kastike pois.",
+        "nb": "PDSA sier at en liten skive kalkun uten skinn og bein og kokte grønnsaker uten saus ikke skal gi problemer. La sausen være.",
+        "it": "PDSA afferma che una piccola fetta di tacchino senza pelle né ossa e verdure bollite senza salse non dovrebbero causare problemi. Lascia da parte il sugo.",
+        "de": "PDSA sagt, eine kleine Scheibe Pute ohne Haut und Knochen und gekochtes Gemüse ohne Soßen sollten keine Probleme machen. Lassen Sie die Bratensoße weg.",
+        "fr": "La PDSA indique qu’une petite tranche de dinde sans peau ni os et des légumes bouillis sans aucune sauce ne devraient pas poser de problème. Laissez la sauce de côté.",
+        "es": "PDSA dice que un trocito pequeño de pavo sin piel ni huesos y verduras hervidas sin ninguna salsa no deberían causar problemas. No le pongas salsa de carne.",
+        "pt": "A PDSA diz que uma fatia pequena de peru sem pele nem ossos e legumes cozidos sem molhos não deve causar problemas. Deixa o molho de fora.",
+        "nl": "PDSA zegt dat een klein plakje kalkoen zonder vel en botjes en gekookte groente zonder saus geen problemen zou moeten opleveren. Laat de jus weg.",
+        "pl": "PDSA podaje, że mały plasterek indyka bez skóry i kości oraz gotowane warzywa bez żadnych sosów nie powinny sprawić problemów. Pomiń sos pieczeniowy.",
+        "cs": "PDSA uvádí, že malý plátek krůtího masa bez kůže a kostí a vařená zelenina bez jakýchkoli omáček by neměly způsobit potíže. Omáčku vynechte."
       }
     }
   ],
@@ -131,6 +313,71 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ef70f4fbe2d852eae9a446a774f130a485c260f133a818b96807d86978950fe1"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f97a61ada3b22c70c0e3a5541565e984d00a8754ae551b1498d79c61881f4b9b"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d7669a2b308d680a1d5b128940e2c3c0218cd35e51ff1974c55efcf837bfc0d3"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f66344d10cbef73e7e7a397f633decb89c48941f40f147457305f5726b61c9e1"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "143f41c65c70e6329bf473a94cc912d41b8cd0bd92b3486af2017db98a8681aa"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f9c9c92989fd354a13e93e64e813b2d280c26d00e11e6b9461a31ea2e191676d"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5bf3bb0d8fe16a6e95eb65df32682d5865b370f28137ec6dbae2d8bf5e66e7d2"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "30a1fefdbe7e3ceb538c4550a2c3ff4bc787312e9de766c8734528f479b773ac"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5631c42ba54797816e534931ed80007a52e3405b4aea4494fe269c26f3f85297"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "39ff89a98f46789cf5f15660d7e4379e9890530694f76ccc6a16460b34298e93"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "54a5315d01941f1411c020eb4562286c899252975e36572490c29d7cf998d03c"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dd3a142d9fbeae6420a20102ddf2571e86fbfe5197b7d5ec99962b7e31b37653"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "fd51e5fb5a622b3dbfc1407745ef404aa54a0e933ccbbe128301eedb8c9a45af"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-16",
+      "verified_hash": "b00f18c18105b21ba683fdd6ddd0fe7c0d79a36aa64661b6dea38296c31ed4a0"
     }
   }
 }

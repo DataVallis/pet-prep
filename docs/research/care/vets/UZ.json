@@ -1,0 +1,111 @@
+{
+  "country": "UZ",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "MyVet (own site)",
+      "url": "https://myvet.uz/en",
+      "note": "Opened: 'Open 24/7 - no lunch break, days off or holidays'; 32A Chigil Street, Tashkent; main +998 99 442 50 80, emergency +998 99 067 07 90."
+    },
+    {
+      "name": "Puls veterinary clinic (own site)",
+      "url": "https://puls-vet.uz/",
+      "note": "Opened: 'Режим работы: круглосуточно, без выходных'; Tashkent, Kiyot massif 68A; +998 97 344 08 46 / 08 47 / +998 88 100 32 82."
+    },
+    {
+      "name": "ZooDoctor (own site)",
+      "url": "https://zoodoctor.uz/",
+      "note": "Opened: Mirabad street 33, Tashkent; +998 97 754-54-50, +998 71 256-54-50; 9:00-18:00, Sunday off; no 24 h statement."
+    },
+    {
+      "name": "VetCity (own site)",
+      "url": "https://vetcity.uz/",
+      "note": "Opened: Chilanzar massif, 11th quarter 43, Tashkent; +998 97 758 84 09; Mon-Fri 9-18, Sat-Sun 10-18; accepts emergencies, no 24 h statement."
+    },
+    {
+      "name": "gov.uz - Committee for Veterinary Medicine and Livestock Development",
+      "url": "https://gov.uz/oz/vetgov/departments/subordinate",
+      "note": "Opened: only metadata returned, no list of clinics/contacts; not usable."
+    },
+    {
+      "name": "UzDaily - Andijan IFAD vet clinic",
+      "url": "https://www.uzdaily.uz/ru/v-andizhanskoi-oblasti-otkryli-vetkliniku-pri-podderzhke-mfsr/",
+      "note": "Opened: unnamed clinic in Andijan region, no address, phone or hours; no entry."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "MyVet",
+      "city": "Tashkent",
+      "region": "Tashkent",
+      "address": "32A Chigil Street, Tashkent",
+      "phone": "+998 99 442 50 80",
+      "emergency_24h": true,
+      "duty": "Open 24/7, no lunch break, days off or holidays. Emergency line +998 99 067 07 90.",
+      "small_animals": true,
+      "url": "https://myvet.uz/en",
+      "source_url": "https://myvet.uz/en",
+      "checked": "2026-11-16",
+      "note": "Own page: 'Open 24/7 · no lunch break, days off or holidays'. Legal entity MOY VETVRACH LLC.",
+      "duty_i18n": {
+        "pl": "Czynne 24/7, bez przerwy obiadowej, dni wolnych i świąt. Linia dla nagłych przypadków +998 99 067 07 90."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "Puls (ПУЛЬС) veterinary clinic",
+      "city": "Tashkent",
+      "region": "Tashkent",
+      "address": "Kiyot massif 68A, Tashkent",
+      "phone": "+998 97 344 08 46",
+      "emergency_24h": true,
+      "duty": "Open around the clock, no days off. Other numbers: +998 97 344 08 47, +998 88 100 32 82.",
+      "small_animals": true,
+      "url": "https://puls-vet.uz/",
+      "source_url": "https://puls-vet.uz/",
+      "checked": "2026-11-16",
+      "note": "Own page: 'Режим работы: круглосуточно, без выходных'.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę, bez dni wolnych. Inne numery: +998 97 344 08 47, +998 88 100 32 82."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "ZooDoctor",
+      "city": "Tashkent",
+      "region": "Tashkent",
+      "address": "Mirabad street 33, Tashkent",
+      "phone": "+998 97 754 54 50",
+      "emergency_24h": false,
+      "duty": "Daily 9:00-18:00, closed Sunday. Landline +998 71 256 54 50.",
+      "small_animals": true,
+      "url": "https://zoodoctor.uz/",
+      "source_url": "https://zoodoctor.uz/",
+      "checked": "2026-11-16",
+      "note": "Own page; no 24 h statement.",
+      "duty_i18n": {
+        "pl": "Codziennie 9:00–18:00, w niedziele nieczynne. Telefon stacjonarny +998 71 256 54 50."
+      }
+    },
+    {
+      "kind": "clinic",
+      "name": "VetCity",
+      "city": "Tashkent",
+      "region": "Tashkent",
+      "address": "Chilanzar massif, 11th quarter 43, Uchtepa district, Tashkent",
+      "phone": "+998 97 758 84 09",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9:00-18:00, Sat-Sun 10:00-18:00, lunch 13:00-14:00; accepts emergency cases during opening hours.",
+      "small_animals": true,
+      "url": "https://vetcity.uz/",
+      "source_url": "https://vetcity.uz/",
+      "checked": "2026-11-16",
+      "note": "Own page: 'Да, принимаем экстренные случаи'; no 24 h statement.",
+      "duty_i18n": {
+        "pl": "pon.–pt. 9:00–18:00, sob.–niedz. 10:00–18:00, przerwa obiadowa 13:00–14:00; w godzinach otwarcia przyjmuje nagłe przypadki."
+      }
+    }
+  ],
+  "notes": "4 entries (Tashkent only), 2 with 24 h (MyVet, Puls). No duty rota or animal poison line found. Not openable (robots_disallowed): starvet.uz, doctor-vet.uz, samvet.uz (Samarkand regional veterinary office); vetalliance.tilda.ws (redirect loop). gov.uz vetgov subordinate page returned no list. Aggregators (goldenpages, yellowpages, top.uz, 2gis, yandex, vetclinics.uz, repost.uz, magg.uz) were seen in search only and not used. Left: clinics in Samarkand, Bukhara, Khiva, Fergana valley (Andijan clinic article had no contact data), Samarkand Institute of Veterinary Medicine clinic (no clinic page found), more Tashkent clinics (Star Vet, Doctor Vet, Vet Alliance, Elvet, Zoopolis, Vet Lider)."
+}

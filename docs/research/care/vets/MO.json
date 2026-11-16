@@ -1,0 +1,49 @@
+{
+  "country": "MO",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "Royal Veterinary Center Macau (own site)",
+      "url": "https://royalveterinarycenter.com/en/24-hour-vet-macau",
+      "note": "Clinic's own site; 24-hour page, contact-us page and home page opened."
+    },
+    {
+      "name": "IAM (Municipal Affairs Bureau) - news on licensing of veterinary clinics",
+      "url": "https://www.gov.mo/en/news/356065/",
+      "note": "Official; says IAM publishes the list of licensed clinics at https://www.iam.gov.mo/canil/e, but the list itself is not on the page. WebFetch refused iam.gov.mo/canil/e (PROVENANCE_REQUIRED), so the official list could not be opened."
+    },
+    {
+      "name": "IAM - Macao Municipal Kennel veterinary service (gov.mo)",
+      "url": "https://www.gov.mo/en/?p=32080",
+      "note": "Official; municipal kennel service for dogs and cats, no private clinics listed."
+    },
+    {
+      "name": "Macau Lifestyle - Pet Parent Guide",
+      "url": "https://macaulifestyle.com/culture/pet-parent-guide-macau/",
+      "note": "Magazine; Green Cross details."
+    },
+    {
+      "name": "Macau Local Business Directory (mlocal.biz)",
+      "url": "https://www.mlocal.biz/eng/biz/4e7673884634f25a47002da8",
+      "note": "Business directory (aggregator); used only for contact data of clinics without a reachable own site; listings not independently confirmed."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Royal Veterinary Center (RVC Macau)",
+      "city": "Macau",
+      "region": "Macau Peninsula",
+      "address": "Rua de Paris 182, R/C, Edif. Jardim Nam Ngon, Macau",
+      "phone": "+853 2850 1099",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, every day. Emergency line +853 6677 6611 (also WhatsApp); call before travelling.",
+      "small_animals": true,
+      "url": "https://royalveterinarycenter.com/en",
+      "source_url": "https://royalveterinarycenter.com/en/24-hour-vet-macau",
+      "note": "Own site 24-hour page confirmed 2026-11-16: title \"24-Hour Emergency Vet Macau\", \"Open now · 24 hours, every day\", \"Open 24/7 — 365 Days a Year\"; address Rua de Paris 182, R/C; +853 2850 1099 (hospital) and +853 6677 6611 (24/7 emergency line, WhatsApp). Site claims IAM licence 021-LCV-P.",
+      "checked": "2026-11-16"
+    }
+  ],
+  "notes": "Independent check 2026-11-16: only Royal Veterinary Center confirmed on its own page. Removed 8 entries that rested only on aggregator/magazine pages (mlocal.biz directory, Macau Lifestyle magazine) with no confirmation on the clinics own or an official page: Green Cross Taipa, Green Cross Sidonio Pais (own site greencrossvetclinic.com refused by WebFetch; magazine claims 24 h for Taipa but lists Mon-Sat hours), A+ Dream Animal Hospital (directory says 24 hours), Charming Pet Hospital, Our Pets Vet Clinic, Life Animal Clinic, An Kin Animal Medical Centre, Macau Animal Hospital Company Ltd. Follow-up candidates once own/official pages are reachable: those clinics plus the official IAM list of licensed clinics (https://www.iam.gov.mo/canil/e, refused by WebFetch). IAM reported 25 provisional clinic licences, so many licensed clinics are missing. No duty rota or animal poison line found. Government Macao Municipal Kennel is a municipal service, not an entry."
+}

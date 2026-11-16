@@ -319,7 +319,8 @@ describe('POST /api/child/pin-login', function () {
         $response = plLogin($pin, 'Maja iPad')
             ->assertOk()
             ->assertJsonPath('abilities', ['child'])
-            ->assertJsonPath('user', ['id' => $child->id, 'name' => 'Maja', 'role' => 'child'])
+            // No e-mail; `time_format` = a setting (David 2026-11-16), not personal data.
+            ->assertJsonPath('user', ['id' => $child->id, 'name' => 'Maja', 'role' => 'child', 'time_format' => 'auto'])
             ->assertJsonPath('mode', 'new_pet')
             ->assertJsonPath('joined_existing', false)
             ->assertJsonPath('family_id', $parent->family->id)

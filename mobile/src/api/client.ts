@@ -155,6 +155,13 @@ export type UpdateFamilySettingsResponse =
 /** PUT /api/parent/pets/{pet}/timezone (time zone per pet, David 2026-11-09). */
 export type UpdatePetTimezoneResponse =
   operations['petTimezone.update']['responses'][200]['content']['application/json'];
+/** PUT /api/parent/pets/{pet}/quiet-hours (quiet hours per pet, David 2026-11-16). */
+export type UpdatePetQuietHoursResponse =
+  operations['petQuietHours.update']['responses'][200]['content']['application/json'];
+/** Body of PUT /api/parent/pets/{pet}/quiet-hours: own schedule, or null = follow the family. */
+export type UpdatePetQuietHoursRequest = components['schemas']['UpdatePetQuietHoursRequest'];
+/** PUT /api/user/time-format (12 / 24 h, David 2026-11-16). */
+export type UpdateTimeFormatResponse = operations['timeFormat.update']['responses'][200]['content']['application/json'];
 /**
  * 422 body of PUT /api/parent/settings / PUT /api/parent/pets/{pet}/timezone when the family /
  * pet zone changed less than 24 h ago (FamilySettingsService / PetTimezoneService). Hand-typed:
@@ -958,6 +965,8 @@ export const api = {
         platform: body.platform,
         app_version: body.app_version ?? null,
         ...(body.locale !== undefined ? { locale: body.locale } : {}),
+        // David 2026-11-16: the phone's own 12 h setting (what `auto` means for this install's pushes).
+        ...(body.hour12 !== undefined ? { hour12: body.hour12 } : {}),
       },
     }),
 
@@ -1371,6 +1380,23 @@ export const api = {
     apiRequest<UpdatePetTimezoneResponse>(`/api/parent/pets/${petId}/timezone`, {
       method: 'PUT',
       body: { timezone },
+    }),
+
+  /**
+   * PUT /api/parent/pets/{pet}/quiet-hours {quiet_hours} — the pet's own schedule, or null =
+   * follow the family's quiet hours again (David 2026-11-16). Same value = no-op.
+   */
+  updatePetQuietHours: (petId: number, quietHours: UpdatePetQuietHoursRequest['quiet_hours']) =>
+    apiRequest<UpdatePetQuietHoursResponse>(`/api/parent/pets/${petId}/quiet-hours`, {
+      method: 'PUT',
+      body: { quiet_hours: quietHours } satisfies UpdatePetQuietHoursRequest,
+    }),
+
+  /** PUT /api/user/time-format {time_format} — the signed-in person's 12 / 24 h choice (David 2026-11-16). */
+  updateTimeFormat: (timeFormat: components['schemas']['TimeFormat']) =>
+    apiRequest<UpdateTimeFormatResponse>('/api/user/time-format', {
+      method: 'PUT',
+      body: { time_format: timeFormat },
     }),
 
   /** PUT /api/parent/quiet-hours — Update quiet hours config. */

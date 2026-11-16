@@ -45,6 +45,7 @@ class PushDeviceService
         ?string $appVersion,
         ?PersonalAccessToken $accessToken,
         ?string $locale = null,
+        ?bool $hour12 = null,
     ): DevicePushToken {
         $now = now();
         $locale = RequestLocale::isSupported($locale) ? $locale : null;
@@ -85,6 +86,8 @@ class PushDeviceService
             'platform' => $platform->value,
             'app_version' => $appVersion,
             'locale' => $insertLocale,
+            // David 2026-11-16: the phone's own 12 h setting (null = unknown → 24 h); kept when not sent.
+            'hour12' => $hour12,
             'last_seen_at' => $now,
             'followed_at' => $followed,
             'disabled_at' => null,
@@ -93,6 +96,7 @@ class PushDeviceService
             'user_id', 'personal_access_token_id', 'platform', 'app_version',
             'last_seen_at', 'disabled_at', 'disabled_reason', 'updated_at',
             ...($locale !== null ? ['locale'] : []),
+            ...($hour12 !== null ? ['hour12'] : []),
             ...($followed !== null ? ['followed_at'] : []),
         ]);
 
