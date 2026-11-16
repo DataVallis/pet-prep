@@ -130,6 +130,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   afghan_hound: 'dog',
   australian_silky_terrier: 'dog',
   parson_russell_terrier: 'dog',
+  wire_fox_terrier: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -264,6 +265,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'afghan_hound',
   'australian_silky_terrier',
   'parson_russell_terrier',
+  'wire_fox_terrier',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
