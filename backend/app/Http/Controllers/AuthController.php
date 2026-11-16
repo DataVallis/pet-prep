@@ -76,6 +76,12 @@ class AuthController extends Controller
                 // M2-10c: how this account signs in (parents; a child: false / []).
                 'has_password' => $user->hasPassword(),
                 'linked_providers' => $user->linkedProviders(),
+                /**
+                 * 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                 *
+                 * @var 'auto'|'24h'|'12h'
+                 */
+                'time_format' => $user->timeFormat()->value,
             ],
             // A new family has no pet yet; the parent adds a child next.
             'pet' => null,
@@ -138,6 +144,12 @@ class AuthController extends Controller
                 // M2-10c: how this account signs in (parents; a child: false / []).
                 'has_password' => $user->hasPassword(),
                 'linked_providers' => $user->linkedProviders(),
+                /**
+                 * 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                 *
+                 * @var 'auto'|'24h'|'12h'
+                 */
+                'time_format' => $user->timeFormat()->value,
             ],
             'pet' => $this->petPayload($activePet, null),
             // Parents never sign a contract.
@@ -208,6 +220,12 @@ class AuthController extends Controller
                 // M2-10c: how this account signs in (parents; a child: false / []).
                 'has_password' => $user->hasPassword(),
                 'linked_providers' => $user->linkedProviders(),
+                /**
+                 * 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                 *
+                 * @var 'auto'|'24h'|'12h'
+                 */
+                'time_format' => $user->timeFormat()->value,
             ],
             'pet' => $this->petPayload($activePet, $awaiting),
             // Per child (M2-02): this child must sign before acting. null for a parent.

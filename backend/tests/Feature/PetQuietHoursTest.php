@@ -10,6 +10,8 @@ use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\AccountExportService;
 use App\Services\CareScheduleService;
+use App\Services\ChildPinLoginService;
+use App\Services\ChildProfileService;
 use App\Services\FamilyService;
 use App\Services\NotificationService;
 use App\Services\PetDecayService;
@@ -200,6 +202,45 @@ it('authorizes: another family\'s parent and children 403, unknown pet 404, bad 
     putJson("/api/parent/pets/{$f['own']->id}/quiet-hours", [])->assertUnprocessable();
 
     expect(Pet::find($f['own']->id)->own_quiet_hours)->toBeNull();
+});
+
+it('refuses an empty or partial schedule (422) — nothing is wiped (QA #1259 M5)', function () {
+    $f = pqhFamily();
+    pqhPut($f['parent'], $f['own'], PQH_SCHOOL)->assertOk();
+
+    pqhPut($f['parent'], $f['own'], [])->assertUnprocessable()
+        ->assertJsonValidationErrors(['quiet_hours.school_start', 'quiet_hours.school_end', 'quiet_hours.bedtime_start', 'quiet_hours.bedtime_end', 'quiet_hours.is_active']);
+    pqhPut($f['parent'], $f['own'], ['school_start' => '09:00', 'school_end' => '12:00'])->assertUnprocessable()
+        ->assertJsonValidationErrors(['quiet_hours.bedtime_start', 'quiet_hours.bedtime_end', 'quiet_hours.is_active'])
+        ->assertJsonMissingValidationErrors(['quiet_hours.school_start']);
+    pqhPut($f['parent'], $f['own'], ['is_active' => 'yes'] + PQH_SCHOOL)->assertUnprocessable()
+        ->assertJsonValidationErrors('quiet_hours.is_active');
+
+    expect(Pet::find($f['own']->id)->ownQuietHoursValues())->toBe(PQH_SCHOOL);
+
+    // Every key present, windows null = a pet with no quiet windows (allowed, like the family editor).
+    $none = ['school_start' => null, 'school_end' => null, 'bedtime_start' => null, 'bedtime_end' => null, 'is_active' => true];
+    pqhPut($f['parent'], $f['own'], $none)->assertOk()->assertJsonPath('quiet_hours.bedtime_start', null);
+});
+
+it('every sign-in payload carries `time_format` like GET /api/user (QA #1259 m7)', function () {
+    $parent = User::factory()->parent()->create(['email' => 'qh-tf@example.com', 'password' => 'secret-pass-1', 'time_format' => '12h']);
+
+    postJson('/api/login', ['email' => 'qh-tf@example.com', 'password' => 'secret-pass-1', 'device_name' => 'test'])
+        ->assertOk()->assertJsonPath('user.time_format', '12h');
+    postJson('/api/register', [
+        'name' => 'Nova', 'email' => 'qh-new@example.com', 'password' => 'Varno1Geslo', 'password_confirmation' => 'Varno1Geslo',
+        'timezone' => 'Europe/Ljubljana', 'accept_terms' => true, 'device_name' => 'test',
+    ])->assertCreated()->assertJsonPath('user.time_format', 'auto');
+
+    // A child's PIN login (ChildAuthController::session) too — a new pet from a fresh PIN.
+    $kid = app(ChildProfileService::class)->createChild($parent, 'Maja', null);
+    $kid->forceFill(['time_format' => '24h'])->save();
+    $pin = app(ChildPinLoginService::class)->generatePin($parent, $kid->id, null)['pin'];
+    app('auth')->forgetGuards();
+    test()->withHeaders(['Authorization' => '']);
+    postJson('/api/child/pin-login', ['pin' => $pin, 'device_name' => 'test'])
+        ->assertOk()->assertJsonPath('user.time_format', '24h');
 });
 
 // ── Rules read the pet's schedule ───────────────────────────────────────────

@@ -74,12 +74,15 @@ class PetQuietHoursService
      * The `quiet_hours` object the apps get for a pet: the effective
      * schedule ("HH:MM" | null) + whether it is the family's.
      *
+     * `$family` = the family's schedule already loaded by the caller (one query for a
+     * whole family list — QA #1259 m6); null → loaded here when needed.
+     *
      * @return array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool, follows_family: bool}
      */
-    public static function payloadFor(Pet $pet): array
+    public static function payloadFor(Pet $pet, ?QuietHours $family = null): array
     {
         $own = $pet->ownQuietHoursValues();
-        $values = $own ?? QuietHours::normaliseValues($pet->familyQuietHours()->only(QuietHours::SCHEDULE_KEYS));
+        $values = $own ?? QuietHours::normaliseValues(($family ?? $pet->familyQuietHours())->only(QuietHours::SCHEDULE_KEYS));
 
         return $values + ['follows_family' => $own === null];
     }

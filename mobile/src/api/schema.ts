@@ -3627,11 +3627,11 @@ export interface components {
         UpdatePetQuietHoursRequest: {
             /** @description The pet's own schedule; null = follow the family's quiet hours. */
             quiet_hours: {
-                school_start?: string | null;
-                school_end?: string | null;
-                bedtime_start?: string | null;
-                bedtime_end?: string | null;
-                is_active?: boolean;
+                school_start: string | null;
+                school_end: string | null;
+                bedtime_start: string | null;
+                bedtime_end: string | null;
+                is_active: boolean;
             } | null;
         };
         /**
@@ -3891,6 +3891,11 @@ export interface operations {
                             /** @description M2-10c: how this account signs in (parents; a child: false / []). */
                             has_password: boolean;
                             linked_providers: ("google" | "apple")[];
+                            /**
+                             * @description 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                             * @enum {string}
+                             */
+                            time_format: "auto" | "24h" | "12h";
                         };
                         pet: components["schemas"]["Pet"] | null;
                         /** @description Per child (M2-02): this child must sign before acting. null for a parent. */
@@ -3956,6 +3961,11 @@ export interface operations {
                             /** @description M2-10c: how this account signs in (parents; a child: false / []). */
                             has_password: boolean;
                             linked_providers: ("google" | "apple")[];
+                            /**
+                             * @description 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                             * @enum {string}
+                             */
+                            time_format: "auto" | "24h" | "12h";
                         };
                         /** @description A new family has no pet yet; the parent adds a child next. */
                         pet: null;
@@ -3998,6 +4008,11 @@ export interface operations {
                             /** @description M2-10c: how this account signs in (parents; a child: false / []). */
                             has_password: boolean;
                             linked_providers: ("google" | "apple")[];
+                            /**
+                             * @description 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                             * @enum {string}
+                             */
+                            time_format: "auto" | "24h" | "12h";
                         };
                         pet: components["schemas"]["Pet"] | null;
                         /** @description Parents never sign a contract. */
@@ -4791,6 +4806,11 @@ export interface operations {
                             name: string;
                             /** @enum {string} */
                             role: "parent" | "child";
+                            /**
+                             * @description 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                             * @enum {string}
+                             */
+                            time_format: "auto" | "24h" | "12h";
                         };
                         /** @enum {string} */
                         mode: "join_pet" | "new_pet" | "relogin";
@@ -4835,6 +4855,11 @@ export interface operations {
                             name: string;
                             /** @enum {string} */
                             role: "parent" | "child";
+                            /**
+                             * @description 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                             * @enum {string}
+                             */
+                            time_format: "auto" | "24h" | "12h";
                         };
                         /** @constant */
                         mode: "relogin";
@@ -5307,9 +5332,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -5879,7 +5904,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -6362,9 +6387,9 @@ export interface operations {
                          *     wakes — play and school are off while asleep ({@see SleepPayload}).
                          */
                         sleep: {
-                            /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                            /** @description The pet sleeps now (its quiet hours): play and school are off. */
                             asleep: boolean;
-                            /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                            /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                             until: string | null;
                         };
                         feeding: {
@@ -6934,7 +6959,7 @@ export interface operations {
                                 per_week: number;
                             } | null;
                             /**
-                             * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                             * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                              *     window is null when not set or quiet hours are off.
                              */
                             sleep: {
@@ -7438,9 +7463,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -8010,7 +8035,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -8512,9 +8537,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -9084,7 +9109,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -9586,9 +9611,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -10158,7 +10183,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -10660,9 +10685,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -11232,7 +11257,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -11734,9 +11759,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -12306,7 +12331,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -12812,9 +12837,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -13384,7 +13409,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -13890,9 +13915,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -14462,7 +14487,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -14968,9 +14993,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -15540,7 +15565,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -16046,9 +16071,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -16618,7 +16643,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -17124,9 +17149,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -17696,7 +17721,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -18198,9 +18223,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -18770,7 +18795,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -19272,9 +19297,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -19844,7 +19869,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -20350,9 +20375,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -20922,7 +20947,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -21424,9 +21449,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -21996,7 +22021,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -22502,9 +22527,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -23074,7 +23099,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -23576,9 +23601,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -24148,7 +24173,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -24654,9 +24679,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -25226,7 +25251,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -25732,9 +25757,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -26304,7 +26329,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -26810,9 +26835,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -27382,7 +27407,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -27888,9 +27913,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -28460,7 +28485,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -28966,9 +28991,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -29538,7 +29563,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -31100,7 +31125,7 @@ export interface operations {
                                         per_week: number;
                                     } | null;
                                     /**
-                                     * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                     * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                      *     window is null when not set or quiet hours are off.
                                      */
                                     sleep: {
@@ -31720,7 +31745,7 @@ export interface operations {
                                         per_week: number;
                                     } | null;
                                     /**
-                                     * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                     * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                      *     window is null when not set or quiet hours are off.
                                      */
                                     sleep: {
@@ -33393,9 +33418,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -33965,7 +33990,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -34449,9 +34474,9 @@ export interface operations {
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -35021,7 +35046,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {

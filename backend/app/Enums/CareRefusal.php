@@ -82,7 +82,7 @@ enum CareRefusal: string
 
     /**
      * M5-T02 (David 2026-10-20, APP_REFINEMENT_SPEC §8): the pet sleeps
-     * (family quiet hours, PetSleepService) — no school while it sleeps.
+     * (its quiet hours, PetSleepService) — no school while it sleeps.
      * next_allowed_at = when it wakes.
      */
     case TrainingPetSleeping = 'training_pet_sleeping';
@@ -101,7 +101,7 @@ enum CareRefusal: string
 
     /**
      * M5-T02b (David 2026-10-21, »spečo žival ne motimo«): the pet sleeps
-     * (PetSleepService — family quiet hours) — no ball game and no cuddle.
+     * (PetSleepService — its quiet hours) — no ball game and no cuddle.
      * next_allowed_at = when it wakes. Older apps read any 422 of the play
      * endpoint by its next_allowed_at, so they keep »Kuža spi do …«.
      */
@@ -179,7 +179,7 @@ enum CareRefusal: string
     case GroomingWeekDone = 'grooming_week_done';
 
     /**
-     * The pet sleeps (PetSleepService — family quiet hours, M5-T02b: checked
+     * The pet sleeps (PetSleepService — its quiet hours, M5-T02b: checked
      * before every other grooming block) or a session would run into quiet
      * hours — no grooming (»spečo žival ne motimo«); next_allowed_at = when
      * it wakes.

@@ -26,8 +26,10 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('time_format', 4)->default('auto');
         });
-        // App\Enums\TimeFormat
-        DB::statement("ALTER TABLE users ADD CONSTRAINT users_time_format_check CHECK (time_format IN ('auto', '24h', '12h'))");
+        // App\Enums\TimeFormat. NOT VALID + VALIDATE (QA #1259): the ADD takes only a brief
+        // lock; the scan of existing rows runs under SHARE UPDATE EXCLUSIVE (writes go on).
+        DB::statement("ALTER TABLE users ADD CONSTRAINT users_time_format_check CHECK (time_format IN ('auto', '24h', '12h')) NOT VALID");
+        DB::statement('ALTER TABLE users VALIDATE CONSTRAINT users_time_format_check');
 
         Schema::table('device_push_tokens', function (Blueprint $table) {
             $table->boolean('hour12')->nullable();

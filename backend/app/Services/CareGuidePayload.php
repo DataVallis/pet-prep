@@ -21,7 +21,7 @@ use Carbon\CarbonInterface;
  * - take-out: the puppy's hold hours today (BehaviourEventService::holdHoursOn);
  * - water: the breed's refill threshold + gap (CareScheduleService / breed_configs);
  * - grooming: groomings per program week (CatChoreService::groomingGoalOn);
- * - sleep: the family's quiet hours (= when the pet sleeps, PetSleepService);
+ * - sleep: the pet's quiet hours, own or the family's (= when the pet sleeps, PetSleepService);
  * - cat: wand sessions + gap (WandPlayService), litter scoop deadline and
  *   change days (LitterService), scratching after a missed play day
  *   (ScratchingService);
@@ -212,7 +212,7 @@ final class CareGuidePayload
              */
             'grooming' => $this->grooming,
             /**
-             * The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+             * The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
              * window is null when not set or quiet hours are off.
              *
              * @var array{night: array{start: string, end: string}|null, school: array{start: string, end: string}|null}

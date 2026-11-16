@@ -498,7 +498,7 @@ class CareScheduleService
     }
 
     /**
-     * A feed window that lies entirely inside the family's quiet hours
+     * A feed window that lies entirely inside the pet's quiet hours (own or the family's)
      * (school / sleep): the parent feeds the dog (M5-R01, David 2026-10-05).
      */
     public function isParentCovered(?QuietHours $quiet, CarbonInterface $start, CarbonInterface $end): bool

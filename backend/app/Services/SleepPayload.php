@@ -40,9 +40,9 @@ final class SleepPayload
     public function toArray(): array
     {
         return [
-            // The pet sleeps now (family quiet hours): play and school are off.
+            // The pet sleeps now (its quiet hours): play and school are off.
             'asleep' => $this->asleep,
-            // When it wakes (end of the quiet stretch, family offset); null while awake.
+            // When it wakes (end of the quiet stretch, the pet's offset); null while awake.
             'until' => $this->until,
         ];
     }
