@@ -38,10 +38,9 @@
  * and »Kuža se usede.« (announcement + live region).
  */
 
-import { useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { AccessibilityInfo, Platform, Pressable, StyleSheet, View, type GestureResponderEvent } from 'react-native';
 import Animated, { Easing, cancelAnimation, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withTiming } from 'react-native-reanimated';
-import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { ActivityIndicator } from 'react-native';
 import { Bone, Ear, Heart } from 'lucide-react-native';
 
@@ -221,7 +220,6 @@ export default function SchoolGameV2({
   onMediaExpired,
   testID = 'school-v2',
 }: SchoolGameV2Props) {
-  const insets = useContext(SafeAreaInsetsContext) ?? { top: 0, bottom: 0, left: 0, right: 0 };
   const media = view.pet.media;
   const command = session.command;
   const token = praiseToken(view.training);
@@ -365,7 +363,30 @@ export default function SchoolGameV2({
   const noPicture = plan.clips.every((c) => c.url === null && c.picture === null);
 
   const tokenLabel = token === 'treat' ? S.treat : S.praise;
-  const dock = finishing ? (
+  // HUD off the pet's head (David 2026-11-16, »vse je čez glavo«): only the slim top bar stays at
+  // the top; the command / »don't praise, wait« / »Zdaj!« chip sits right above the token and the
+  // rule strip under it — the bottom third, over the floor, where the child already looks.
+  const cueSlot = (
+    <>
+      {frame.chip && clockRunning && (
+        <View style={styles.chip} testID={`${testID}-cue`} accessibilityLiveRegion="polite">
+          <Text style={styles.chipText}>{T.commands[command].cue}</Text>
+          {frame.icon === 'ear' && <Ear color={palette.graphite} size={28} testID={`${testID}-ear`} accessibilityLabel={S.listeningA11y} />}
+        </View>
+      )}
+      {frame.icon === 'ignore' && clockRunning && (
+        <View style={styles.ignoreChip} testID={`${testID}-ignoring`} accessibilityLiveRegion="polite">
+          <Text style={styles.ignoreText} testID={`${testID}-ignoring-text`}>
+            {S.ignores}
+          </Text>
+          <Text style={styles.ignoreCaption} testID={`${testID}-ignoring-caption`}>
+            {S.ignoring[command]}
+          </Text>
+        </View>
+      )}
+    </>
+  );
+  const dockMain = finishing ? (
     <View style={styles.saving} testID={`${testID}-finishing`}>
       <ActivityIndicator color={palette.mint} />
       <Text style={styles.savingText}>{T.finishing}</Text>
@@ -469,6 +490,14 @@ export default function SchoolGameV2({
       </TokenDrag>
     </>
   );
+  const dock = (
+    <>
+      {!finishing && !inBreak && cueSlot}
+      {dockMain}
+      {/* The rule, the whole session (David 2026-10-31) — at the bottom since 2026-11-16. */}
+      <SchoolRuleStrip token={token} testID={`${testID}-rule`} />
+    </>
+  );
 
   const field = (
     <View pointerEvents="none" style={StyleSheet.absoluteFill}>
@@ -477,24 +506,6 @@ export default function SchoolGameV2({
           <Text style={styles.fallbackEmoji}>🐕</Text>
         </View>
       )}
-      <View style={[styles.chipRow, { top: insets.top + CHIP_TOP }]}>
-        {frame.chip && clockRunning && (
-          <View style={styles.chip} testID={`${testID}-cue`} accessibilityLiveRegion="polite">
-            <Text style={styles.chipText}>{T.commands[command].cue}</Text>
-            {frame.icon === 'ear' && <Ear color={palette.graphite} size={28} testID={`${testID}-ear`} accessibilityLabel={S.listeningA11y} />}
-          </View>
-        )}
-        {frame.icon === 'ignore' && clockRunning && (
-          <View style={styles.ignoreChip} testID={`${testID}-ignoring`} accessibilityLiveRegion="polite">
-            <Text style={styles.ignoreText} testID={`${testID}-ignoring-text`}>
-              {S.ignores}
-            </Text>
-            <Text style={styles.ignoreCaption} testID={`${testID}-ignoring-caption`}>
-              {S.ignoring[command]}
-            </Text>
-          </View>
-        )}
-      </View>
       <TreatFlight shot={shot} token={token} reduceMotion={reduceMotion} />
       {!reduceMotion && confetti > 0 && <Confetti burst={confetti} />}
       {/* Android reads live regions; iOS gets announceForAccessibility above. */}
@@ -513,36 +524,28 @@ export default function SchoolGameV2({
       field={field}
       feedback={<FeedbackLayer ref={feedback} reduceMotion={reduceMotion} onMaskChange={queue.masked} testID={`${testID}-feedback`} />}
       topBar={
-        <View style={styles.topStack}>
-          <GameTopBar
-            dots={decided}
-            stars={stars}
-            line={line.text}
-            closeLabel={T.close}
-            progressLabel={S.progressA11y(Math.min(session.trials.length, doneCount + (frame.trial !== null && !decided[frame.trial] ? 1 : 0)), session.trials.length, stars)}
-            testID={`${testID}-top`}
-          />
-          {/* The rule, the whole session (David 2026-10-31) — never replaced by the line above. */}
-          <SchoolRuleStrip token={token} testID={`${testID}-rule`} />
-        </View>
+        <GameTopBar
+          dots={decided}
+          stars={stars}
+          line={line.text}
+          closeLabel={T.close}
+          progressLabel={S.progressA11y(Math.min(session.trials.length, doneCount + (frame.trial !== null && !decided[frame.trial] ? 1 : 0)), session.trials.length, stars)}
+          testID={`${testID}-top`}
+        />
       }
       dock={dock}
     />
   );
 }
 
-/** The command chip sits under the top bar + the (up to two-line) rule strip. */
-const CHIP_TOP = 136;
-
 const styles = StyleSheet.create({
-  topStack: { gap: 8 },
-  chipRow: { position: 'absolute', left: 16, right: 16, alignItems: 'center', gap: 10 },
   chip: {
+    maxWidth: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
-    paddingHorizontal: 28,
-    paddingVertical: 12,
+    gap: 10,
+    paddingHorizontal: 22,
+    paddingVertical: 10,
     borderRadius: radius.button,
     backgroundColor: palette.mint,
     shadowColor: palette.graphite,
@@ -550,9 +553,9 @@ const styles = StyleSheet.create({
     shadowRadius: 12,
     shadowOffset: { width: 0, height: 4 },
   },
-  chipText: { color: palette.graphite, fontSize: 34, letterSpacing: tightTracking(34), fontFamily: fonts.display },
+  chipText: { flexShrink: 1, color: palette.graphite, fontSize: 30, letterSpacing: tightTracking(30), fontFamily: fonts.display },
   ignoreChip: {
-    maxWidth: 340,
+    maxWidth: '100%',
     alignItems: 'center',
     gap: 4,
     paddingHorizontal: 20,
@@ -564,7 +567,7 @@ const styles = StyleSheet.create({
   },
   ignoreText: { color: palette.white, fontSize: 20, lineHeight: 25, fontFamily: fonts.displayBold, letterSpacing: tightTracking(20), textAlign: 'center' },
   ignoreCaption: { color: palette.n200, fontSize: 15, fontWeight: '600', textAlign: 'center' },
-  flightArea: { alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 150 },
+  flightArea: { alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 190 },
   flashArea: { alignItems: 'center', justifyContent: 'center' },
   piece: { position: 'absolute', top: -20, borderRadius: 3 },
   fallback: { alignItems: 'center', justifyContent: 'center' },

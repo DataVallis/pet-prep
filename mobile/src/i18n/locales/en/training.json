@@ -130,8 +130,8 @@
     "knowsProgress": "{{name}} {{value}}%"
   },
   "school": {
-    "rule": "When your pup obeys → tap ♥. If not → wait.",
-    "ruleTreat": "When your pup obeys → tap the treat. If not → wait.",
+    "rule": "Obeys → ♥ · Doesn’t obey → wait",
+    "ruleTreat": "Obeys → treat · Doesn’t obey → wait",
     "ruleA11y": "Rule: when your pup obeys, praise it. If it doesn’t obey, wait.",
     "now": "Now!",
     "hintA11y": "Your pup obeyed — praise now",

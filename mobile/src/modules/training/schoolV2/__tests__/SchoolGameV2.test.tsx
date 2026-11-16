@@ -10,7 +10,7 @@
  * praise hint »Zdaj!« in every session (any progress, David 31. 10.), the dimmed »wait« token while the dog ignores (still counts),
  * »Nadaljuj« + countdown in the break with »Končaj« as a small secondary, and the positive result.
  */
-import { act, fireEvent, render as rtlRender, screen } from '@testing-library/react-native';
+import { act, fireEvent, render as rtlRender, screen, within } from '@testing-library/react-native';
 import { StyleSheet } from 'react-native';
 import * as Haptics from 'expo-haptics';
 
@@ -240,7 +240,7 @@ describe('school v2 on the game layer', () => {
     expect(screen.getByTestId('training-result-trial-1-label').props.children).toBe(SCHOOL_V2_STRINGS.result.outcome.waited);
   });
 
-  it('the rule strip stays the whole session and is never truncated (no numberOfLines anywhere at the top)', async () => {
+  it('the rule strip stays the whole session and is never truncated (no numberOfLines on it or the top line)', async () => {
     setGameLayerAvailableForTests(true);
     startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
     render(schoolView());
@@ -258,6 +258,52 @@ describe('school v2 on the game layer', () => {
       await advanceTo(ms);
       check();
     }
+  });
+
+  it('nothing over the pet\'s head (David 2026-11-16): only the top bar + × at the top; cue, »wait« chip and rule sit in the dock around the token', async () => {
+    setGameLayerAvailableForTests(true);
+    startTraining.mockResolvedValueOnce(startBody(makeSchoolV2SessionPayload()));
+    render(schoolView({ treat: true }));
+    await pressStart();
+    const top = () => within(screen.getByTestId(`${ID}-top-layer`));
+    const dock = () => within(screen.getByTestId(`${ID}-dock-layer`));
+    const field = () => within(screen.getByTestId(`${ID}-field-layer`));
+    // Preparing: the rule is already at the bottom; the top layer holds only the bar (× included).
+    expect(dock().getByTestId(`${ID}-rule`)).toBeTruthy();
+    expect(top().queryByTestId(`${ID}-rule`)).toBeNull();
+    expect(top().getByTestId(`${ID}-top-close`)).toBeTruthy();
+    await deckReady();
+    // The cue: the command chip is in the dock, ABOVE the token, the rule UNDER it.
+    await advanceTo(2_000);
+    expect(dock().getByTestId(`${ID}-cue`)).toBeTruthy();
+    expect(top().queryByTestId(`${ID}-cue`)).toBeNull();
+    expect(field().queryByTestId(`${ID}-cue`, { includeHiddenElements: true })).toBeNull();
+    const order = (ids: string[]) => {
+      // Document order of the host views inside the dock (a column: earlier = higher on screen).
+      const all = screen
+        .getByTestId(`${ID}-dock-layer`)
+        .findAll((n) => typeof n.type === 'string' && typeof n.props.testID === 'string' && ids.includes(n.props.testID))
+        .map((n) => n.props.testID as string);
+      return ids.map((id) => all.indexOf(id));
+    };
+    const [cue, token, rule] = order([`${ID}-cue`, `${ID}-token`, `${ID}-rule`]);
+    expect(cue).toBeGreaterThanOrEqual(0);
+    expect(cue).toBeLessThan(token);
+    expect(token).toBeLessThan(rule);
+    // The chip is compact: never a fixed offset from the top, shrinks on narrow phones.
+    const chipStyle = StyleSheet.flatten(screen.getByTestId(`${ID}-cue`).props.style);
+    expect(chipStyle.position).toBeUndefined();
+    expect(chipStyle.top).toBeUndefined();
+    expect(chipStyle.maxWidth).toBe('100%');
+    // The ignored cue's »don't praise, wait« chip sits in the same place.
+    await advanceTo(10_600);
+    expect(dock().getByTestId(`${ID}-ignoring`)).toBeTruthy();
+    expect(top().queryByTestId(`${ID}-ignoring`)).toBeNull();
+    // The break keeps the rule at the bottom (under »Nadaljuj«) and the × at the top.
+    await advanceTo(20_400);
+    expect(dock().getByTestId(`${ID}-continue`)).toBeTruthy();
+    expect(dock().getByTestId(`${ID}-rule`)).toBeTruthy();
+    expect(top().getByTestId(`${ID}-top-close`)).toBeTruthy();
   });
 
   it('praise hint: the token glows + »Zdaj!« in the praise window only, and the screen reader hears it', async () => {

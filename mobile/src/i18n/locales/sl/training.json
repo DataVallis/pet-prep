@@ -132,8 +132,8 @@
     "knowsProgress": "{{name}} {{value}} %"
   },
   "school": {
-    "rule": "Ko kuža uboga → pritisni ♥. Če ne uboga → počakaj.",
-    "ruleTreat": "Ko kuža uboga → pritisni priboljšek. Če ne uboga → počakaj.",
+    "rule": "Uboga → ♥ · Ne uboga → počakaj",
+    "ruleTreat": "Uboga → priboljšek · Ne uboga → počakaj",
     "ruleA11y": "Pravilo: ko kuža uboga, ga pohvali. Če ne uboga, počakaj.",
     "now": "Zdaj!",
     "hintA11y": "Kuža je ubogal — pohvali zdaj",

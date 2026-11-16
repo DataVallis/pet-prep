@@ -8,7 +8,7 @@ import { GAME_LINE_MAX_CHARS } from '@/modules/gameLayer/gameLine';
 import { i18n } from '@/i18n';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { schoolDeck, performingMs } from '@/modules/training/schoolV2/schoolDeck';
-import { ruleText } from '@/modules/training/schoolV2/SchoolRuleStrip';
+import { RULE_MAX_CHARS, ruleText } from '@/modules/training/schoolV2/SchoolRuleStrip';
 import {
   BREAK_COUNTDOWN_MS,
   EARLY_END_RESUME_AHEAD_MS,
@@ -344,17 +344,20 @@ describe('clarity layer (David\'s device test 2026-10-31)', () => {
 });
 
 describe('texts', () => {
-  it.each(['sl', 'en'])('the rule strip says ♥ / treat and fits two short lines (%s)', async (lang) => {
+  it.each(['sl', 'en'])('the rule strip says ♥ / treat and is short — one line on most phones (%s)', async (lang) => {
     await i18n.changeLanguage(lang);
     expect(ruleText('heart')).toContain('♥');
     expect(ruleText('treat')).not.toContain('♥');
-    for (const rule of [ruleText('heart'), ruleText('treat')]) expect(Array.from(rule).length).toBeLessThanOrEqual(2 * GAME_LINE_MAX_CHARS);
+    for (const rule of [ruleText('heart'), ruleText('treat')]) expect(Array.from(rule).length).toBeLessThanOrEqual(RULE_MAX_CHARS);
     await i18n.changeLanguage('sl');
   });
 
   it('sl wording as David asked', async () => {
     await i18n.changeLanguage('sl');
-    expect(ruleText('heart')).toBe('Ko kuža uboga → pritisni ♥. Če ne uboga → počakaj.');
+    // Short since David 2026-11-16 (»vse je čez glavo«) — the strip sits under the token now.
+    expect(ruleText('heart')).toBe('Uboga → ♥ · Ne uboga → počakaj');
+    expect(ruleText('treat')).toBe('Uboga → priboljšek · Ne uboga → počakaj');
+    expect(SCHOOL_V2_STRINGS.ruleA11y).toBe('Pravilo: ko kuža uboga, ga pohvali. Če ne uboga, počakaj.');
     expect(SCHOOL_V2_STRINGS.ignores).toBe('Ne uboga — ne pohvali, počakaj.');
     expect(SCHOOL_V2_STRINGS.result.tryAgainLeft(4)).toBe('Poskusi še enkrat — danes imaš še 4 vaje.');
     expect(SCHOOL_V2_STRINGS.result.tryAgainLeft(1)).toBe('Poskusi še enkrat — danes imaš še 1 vajo.');
