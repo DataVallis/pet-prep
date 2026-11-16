@@ -61,7 +61,8 @@
       "duty_i18n": {
         "it": "Orario di lavoro 10:00–17:00, da domenica a venerdì. Chiamare prima; 9801912476 è anche la linea di soccorso KAT per animali in difficoltà.",
         "pt": "Horário 10h00–17h00, de domingo a sexta. Liga antes; 9801912476 é também a linha de resgate KAT para animais em sofrimento.",
-        "nl": "Werktijden 10.00–17.00 uur, zondag tot en met vrijdag. Bel vooraf; 9801912476 is ook de reddingslijn van KAT voor dieren in nood."
+        "nl": "Werktijden 10.00–17.00 uur, zondag tot en met vrijdag. Bel vooraf; 9801912476 is ook de reddingslijn van KAT voor dieren in nood.",
+        "pl": "Godziny pracy 10:00–17:00, od niedzieli do piątku. Zadzwoń przed wizytą; 9801912476 to także linia ratunkowa KAT dla zwierząt w niebezpieczeństwie."
       }
     },
     {
@@ -80,7 +81,8 @@
       "duty_i18n": {
         "it": "Aperto tutti i giorni 8:30–18:30; pronto soccorso disponibile 24 ore su 24. Chiamare prima.",
         "pt": "Aberto todos os dias 8h30–18h30; urgências disponíveis 24 horas por dia. Liga antes.",
-        "nl": "Dagelijks geopend 8.30–18.30 uur; spoedzorg 24 uur per dag beschikbaar. Bel vooraf."
+        "nl": "Dagelijks geopend 8.30–18.30 uur; spoedzorg 24 uur per dag beschikbaar. Bel vooraf.",
+        "pl": "Czynne codziennie 8:30–18:30; pomoc w nagłych przypadkach dostępna całodobowo. Zadzwoń przed wizytą."
       }
     },
     {
@@ -99,7 +101,8 @@
       "duty_i18n": {
         "it": "Aperto 24 ore su 24, 365 giorni all'anno, con pronto soccorso. Solo cani e gatti.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano, com urgências. Apenas cães e gatos.",
-        "nl": "Het hele jaar (365 dagen) 24 uur per dag geopend, met spoedzorg. Alleen honden en katten."
+        "nl": "Het hele jaar (365 dagen) 24 uur per dag geopend, met spoedzorg. Alleen honden en katten.",
+        "pl": "Czynne całodobowo, 365 dni w roku, z pomocą w nagłych przypadkach. Tylko psy i koty."
       }
     },
     {
@@ -118,7 +121,8 @@
       "duty_i18n": {
         "it": "Aperto 24 ore su 24, 7 giorni su 7.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana.",
-        "nl": "24 uur per dag, 7 dagen per week geopend."
+        "nl": "24 uur per dag, 7 dagen per week geopend.",
+        "pl": "Otwarte całą dobę, 7 dni w tygodniu."
       }
     },
     {
@@ -137,7 +141,8 @@
       "duty_i18n": {
         "it": "Pronto soccorso e servizi ordinari. Telefonare in anticipo per gli orari.",
         "pt": "Urgências e consultas normais. Liga antes para saber o horário.",
-        "nl": "Spoedzorg en reguliere zorg. Bel vooraf voor de openingstijden."
+        "nl": "Spoedzorg en reguliere zorg. Bel vooraf voor de openingstijden.",
+        "pl": "Nagłe przypadki i wizyty zwykłe. Zadzwoń przed wizytą, aby poznać godziny."
       }
     },
     {
@@ -156,7 +161,8 @@
       "duty_i18n": {
         "it": "Aperto solo alcune ore al giorno; chiamare prima.",
         "pt": "Aberto apenas algumas horas por dia; liga antes.",
-        "nl": "Slechts enkele uren per dag geopend; bel vooraf."
+        "nl": "Slechts enkele uren per dag geopend; bel vooraf.",
+        "pl": "Czynne tylko kilka godzin dziennie; zadzwoń przed wizytą."
       }
     },
     {
@@ -175,7 +181,8 @@
       "duty_i18n": {
         "it": "Ospedale pubblico di riferimento; servizio dalle 10:00. Nessun pronto soccorso secondo le ultime informazioni pubblicate.",
         "pt": "Hospital público de referência; atendimento a partir das 10h00. Sem serviço de urgências, segundo as últimas informações publicadas.",
-        "nl": "Verwijsziekenhuis van de overheid; dienstverlening vanaf 10.00 uur. Volgens de laatst gepubliceerde informatie geen spoedzorg."
+        "nl": "Verwijsziekenhuis van de overheid; dienstverlening vanaf 10.00 uur. Volgens de laatst gepubliceerde informatie geen spoedzorg.",
+        "pl": "Państwowy szpital referencyjny; przyjęcia od 10:00. Według ostatnich dostępnych informacji nie ma pomocy w nagłych przypadkach."
       }
     }
   ],

@@ -178,7 +178,8 @@
         "es": "Centro de urgencias abierto las 24 horas; se atienden urgencias sin cita ni derivación. Horario habitual de 9:00 a 18:00 h con cita previa. Recargo del 30 % en urgencias fuera del horario habitual. Llama antes de ir.",
         "it": "Centro di pronto soccorso aperto 24 ore su 24; urgenze accettate senza appuntamento e senza invio. Orario ordinario 9:00–18:00 su appuntamento. Supplemento del 30% per il pronto soccorso fuori orario ordinario. Telefonare prima di venire.",
         "pt": "Centro de urgência aberto 24 horas por dia; aceita urgências sem marcação nem referenciação. Horário normal 9h00–18h00, sob marcação. Aplica-se um suplemento de 30 % às urgências fora do horário normal. Liga antes de vires.",
-        "nl": "Spoedcentrum 24 uur per dag open; spoedpatiënten zonder verwijzing worden direct geholpen. Reguliere openingstijden 9.00–18.00 uur op afspraak. Voor spoedzorg buiten reguliere openingstijden geldt een toeslag van 30%. Bel vooraf."
+        "nl": "Spoedcentrum 24 uur per dag open; spoedpatiënten zonder verwijzing worden direct geholpen. Reguliere openingstijden 9.00–18.00 uur op afspraak. Voor spoedzorg buiten reguliere openingstijden geldt een toeslag van 30%. Bel vooraf.",
+        "pl": "Centrum pogotowia otwarte całodobowo; pacjenci w nagłych przypadkach przyjmowani bez skierowania. Zwykłe godziny 9:00–18:00 po wcześniejszym umówieniu. Za pomoc w nagłych przypadkach poza zwykłymi godzinami obowiązuje dopłata 30%. Zadzwoń przed wizytą."
       },
       "small_animals": true,
       "url": "https://vmth.snu.ac.kr/",
@@ -200,7 +201,8 @@
         "es": "Horario habitual en días laborables de 9:00 a 17:30 h con cita previa; urgencias y atención nocturna en el departamento de Urgencias y Cuidados Críticos. Llama antes de ir.",
         "it": "Orario ordinario giorni feriali 9:00–17:30 su appuntamento; pronto soccorso e cure notturne presso il reparto di emergenza e terapia intensiva. Telefonare prima di venire.",
         "pt": "Horário normal em dias úteis 9h00–17h30, sob marcação; urgências e cuidados noturnos disponíveis no departamento de urgências e cuidados intensivos. Liga antes de vires.",
-        "nl": "Reguliere openingstijden op werkdagen 9.00–17.30 uur op afspraak; spoed- en nachtzorg bij de afdeling spoed en intensieve zorg. Bel vooraf."
+        "nl": "Reguliere openingstijden op werkdagen 9.00–17.30 uur op afspraak; spoed- en nachtzorg bij de afdeling spoed en intensieve zorg. Bel vooraf.",
+        "pl": "Zwykłe godziny w dni powszednie 9:00–17:30 po wcześniejszym umówieniu; pogotowie i opieka nocna dostępne w oddziale pogotowia i intensywnej terapii. Zadzwoń przed wizytą."
       },
       "small_animals": true,
       "url": "https://vmth.konkuk.ac.kr/vmth/index.do",
@@ -222,7 +224,8 @@
         "es": "Urgencias abiertas las 24 horas: días laborables de 18:00 a 9:00 h de la mañana siguiente, fines de semana y festivos todo el día. Horario habitual en días laborables de 9:00 a 12:00 y de 13:00 a 18:00 h.",
         "it": "Pronto soccorso aperto 24 ore su 24: giorni feriali 18:00–09:00 del mattino seguente, weekend e festivi senza interruzione. Orario ordinario giorni feriali 9:00–12:00 e 13:00–18:00.",
         "pt": "Urgências abertas 24 horas por dia: em dias úteis 18h00–9h00 da manhã seguinte, fins de semana e feriados 24 horas por dia. Horário normal em dias úteis 9h00–12h00 e 13h00–18h00.",
-        "nl": "Spoedafdeling 24 uur per dag open: op werkdagen 18.00–09.00 uur de volgende ochtend, in weekenden en op feestdagen de klok rond. Reguliere openingstijden op werkdagen 9.00–12.00 en 13.00–18.00 uur."
+        "nl": "Spoedafdeling 24 uur per dag open: op werkdagen 18.00–09.00 uur de volgende ochtend, in weekenden en op feestdagen de klok rond. Reguliere openingstijden op werkdagen 9.00–12.00 en 13.00–18.00 uur.",
+        "pl": "Izba przyjęć pogotowia otwarta całodobowo: w dni powszednie 18:00–09:00 następnego dnia, w weekendy i święta przez całą dobę. Zwykłe godziny w dni powszednie 9:00–12:00 i 13:00–18:00."
       },
       "small_animals": true,
       "url": "https://cnuvmth.jnu.ac.kr/",
@@ -244,7 +247,8 @@
         "es": "Horario habitual en días laborables de 9:00 a 12:00 y de 13:30 a 18:00 h. Urgencias en días laborables de 18:00 a 9:00 h y todo el día en fines de semana y festivos.",
         "it": "Orario ordinario giorni feriali 9:00–12:00 e 13:30–18:00. Pronto soccorso giorni feriali 18:00–09:00 e senza interruzione nei weekend e nei festivi.",
         "pt": "Horário normal em dias úteis 9h00–12h00 e 13h30–18h00. Urgências em dias úteis 18h00–9h00 e 24 horas por dia aos fins de semana e feriados.",
-        "nl": "Reguliere openingstijden op werkdagen 9.00–12.00 en 13.30–18.00 uur. Spoedzorg op werkdagen 18.00–09.00 uur en in weekenden en op feestdagen de klok rond."
+        "nl": "Reguliere openingstijden op werkdagen 9.00–12.00 en 13.30–18.00 uur. Spoedzorg op werkdagen 18.00–09.00 uur en in weekenden en op feestdagen de klok rond.",
+        "pl": "Zwykłe godziny w dni powszednie 9:00–12:00 i 13:30–18:00. Pogotowie w dni powszednie 18:00–09:00 oraz całą dobę w weekendy i święta."
       },
       "small_animals": true,
       "url": "https://jamc.jbnu.ac.kr/jamc/index.do",
@@ -270,7 +274,8 @@
         "es": "Abierto en días laborables de 9:00 a 18:00 h; cerrado los fines de semana y festivos.",
         "it": "Aperto nei giorni feriali 9:00–18:00; chiuso nei weekend e nei festivi.",
         "pt": "Aberto em dias úteis, 9h00–18h00; encerrado aos fins de semana e feriados.",
-        "nl": "Op werkdagen open 9.00–18.00 uur; in weekenden en op feestdagen gesloten."
+        "nl": "Op werkdagen open 9.00–18.00 uur; in weekenden en op feestdagen gesloten.",
+        "pl": "Otwarte w dni powszednie 9:00–18:00; w weekendy i święta zamknięte."
       }
     },
     {
@@ -287,7 +292,8 @@
         "es": "Abierto las 24 horas, 365 días al año, con veterinarios presentes. Atención habitual de 9:30 a 21:00 h, atención nocturna de 21:00 a 9:30 h.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno, con veterinari in sede. Cure ordinarie 9:30–21:00, cure notturne 21:00–9:30.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano, com veterinários no local. Consultas normais 9h30–21h00, cuidados noturnos 21h00–9h30.",
-        "nl": "24 uur per dag, 365 dagen per jaar open, met dierenartsen ter plaatse. Reguliere zorg 9.30–21.00 uur, nachtzorg 21.00–9.30 uur."
+        "nl": "24 uur per dag, 365 dagen per jaar open, met dierenartsen ter plaatse. Reguliere zorg 9.30–21.00 uur, nachtzorg 21.00–9.30 uur.",
+        "pl": "Otwarte całodobowo, 365 dni w roku, z weterynarzami na miejscu. Zwykła opieka 9:30–21:00, opieka nocna 21:00–9:30."
       },
       "small_animals": true,
       "url": "https://youramc.co.kr/",
@@ -309,7 +315,8 @@
         "es": "Centro de traumatología y cirugía de urgencia abierto las 24 horas, 365 días al año. Llama antes de ir.",
         "it": "Centro di traumatologia e chirurgia d'urgenza aperto 24 ore su 24, 365 giorni all'anno. Telefonare prima di venire.",
         "pt": "Centro de traumatologia e cirurgia de urgência aberto 24 horas por dia, 365 dias por ano. Liga antes de vires.",
-        "nl": "Trauma- en spoedchirurgiecentrum, 24 uur per dag, 365 dagen per jaar open. Bel vooraf."
+        "nl": "Trauma- en spoedchirurgiecentrum, 24 uur per dag, 365 dagen per jaar open. Bel vooraf.",
+        "pl": "Centrum urazowe i chirurgii pogotowia otwarte całodobowo, 365 dni w roku. Zadzwoń przed wizytą."
       },
       "small_animals": true,
       "url": "https://www.sncamc.co.kr/",
@@ -331,7 +338,8 @@
         "es": "Urgencias las 24 horas, 365 días al año (línea de urgencias 24 horas, personal de guardia de noche, madrugada y festivos). Día de 9:30 a 19:00 h, tarde 19:00 a 22:00 h, urgencias de 22:00 a 8:00 h. Llama antes de ir.",
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno (linea urgenze attiva 24 ore su 24, personale in attesa di notte, all'alba e nei festivi). Giorno 9:30–19:00, sera 19:00–22:00, urgenze 22:00–8:00. Telefonare prima di venire.",
         "pt": "Urgências 24 horas por dia, 365 dias por ano (linha de urgência 24 horas por dia, equipa de piquete à noite, de madrugada e em feriados). Dia 9h30–19h00, início da noite 19h00–22h00, urgência 22h00–8h00. Liga antes de vires.",
-        "nl": "Spoedzorg 24 uur per dag, 365 dagen per jaar (24-uurs spoedlijn, personeel stand-by 's nachts, in de vroege ochtend en op feestdagen). Dag 9.30–19.00 uur, avond 19.00–22.00 uur, spoed 22.00–8.00 uur. Bel vooraf."
+        "nl": "Spoedzorg 24 uur per dag, 365 dagen per jaar (24-uurs spoedlijn, personeel stand-by 's nachts, in de vroege ochtend en op feestdagen). Dag 9.30–19.00 uur, avond 19.00–22.00 uur, spoed 22.00–8.00 uur. Bel vooraf.",
+        "pl": "Pogotowie całodobowo, 365 dni w roku (całodobowa gorąca linia alarmowa, personel w gotowości w nocy, o świcie i w święta). Dzień 9:30–19:00, wieczór 19:00–22:00, pogotowie 22:00–8:00. Zadzwoń przed wizytą."
       },
       "small_animals": true,
       "url": "https://www.thecare24.com/",
@@ -353,7 +361,8 @@
         "es": "Abierto las 24 horas del día, 365 días al año.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano.",
-        "nl": "24 uur per dag, 365 dagen per jaar open."
+        "nl": "24 uur per dag, 365 dagen per jaar open.",
+        "pl": "Otwarte całodobowo, 365 dni w roku."
       },
       "small_animals": true,
       "url": "https://24ftma.com/",
@@ -375,7 +384,8 @@
         "es": "Abierto las 24 horas, 365 días al año, con personal presente. Atención habitual de 9:00 a 20:00 h, tarde 20:00 a 24:00 h, madrugada de 24:00 a 9:00 h.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno, con personale in sede. Cure ordinarie 9:00–20:00, sera 20:00–24:00, notte fonda 24:00–9:00.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano, com pessoal no local. Consultas normais 9h00–20h00, início da noite 20h00–24h00, madrugada 0h00–9h00.",
-        "nl": "24 uur per dag, 365 dagen per jaar open, met personeel ter plaatse. Reguliere zorg 9.00–20.00 uur, avond 20.00–24.00 uur, late nacht 24.00–9.00 uur."
+        "nl": "24 uur per dag, 365 dagen per jaar open, met personeel ter plaatse. Reguliere zorg 9.00–20.00 uur, avond 20.00–24.00 uur, late nacht 24.00–9.00 uur.",
+        "pl": "Otwarte całodobowo, 365 dni w roku, z personelem na miejscu. Zwykła opieka 9:00–20:00, wieczór 20:00–24:00, późna noc 24:00–9:00."
       },
       "small_animals": true,
       "url": "https://bamc365.kr/",
@@ -397,7 +407,8 @@
         "es": "Abierto las 24 horas, 365 días al año. Día de 9:00 a 20:00 h, tarde 20:00 a 24:00 h, urgencias de 0:00 a 9:00 h.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Giorno 9:00–20:00, sera 20:00–24:00, pronto soccorso 0:00–9:00.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Dia 9h00–20h00, início da noite 20h00–24h00, urgências 0h00–9h00.",
-        "nl": "24 uur per dag, 365 dagen per jaar open. Dag 9.00–20.00 uur, avond 20.00–24.00 uur, spoedzorg 0.00–9.00 uur."
+        "nl": "24 uur per dag, 365 dagen per jaar open. Dag 9.00–20.00 uur, avond 20.00–24.00 uur, spoedzorg 0.00–9.00 uur.",
+        "pl": "Otwarte całodobowo, 365 dni w roku. Dzień 9:00–20:00, wieczór 20:00–24:00, pogotowie 0:00–9:00."
       },
       "small_animals": true,
       "url": "https://www.24leadamc.com/",
@@ -419,7 +430,8 @@
         "es": "Abierto las 24 horas, 365 días al año. Día de 10:00 a 19:00 h, tarde 21:00 a 24:00 h, urgencias de 24:00 a 8:00 h; pausa del mediodía de 12:30 a 14:00 h (las urgencias se atienden igualmente). Consejo telefónico 24 horas.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Giorno 10:00–19:00, sera 21:00–24:00, urgenze 24:00–8:00; pausa pranzo 12:30–14:00 (urgenze comunque gestite). Consulenza telefonica 24 ore su 24.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Dia 10h00–19h00, início da noite 21h00–24h00, urgência 0h00–8h00; pausa de almoço 12h30–14h00 (as urgências continuam a ser atendidas). Aconselhamento telefónico 24 horas por dia.",
-        "nl": "24 uur per dag, 365 dagen per jaar open. Dag 10.00–19.00 uur, avond 21.00–24.00 uur, spoed 24.00–8.00 uur; lunchpauze 12.30–14.00 uur (spoedgevallen worden wel behandeld). Telefonisch advies 24 uur per dag."
+        "nl": "24 uur per dag, 365 dagen per jaar open. Dag 10.00–19.00 uur, avond 21.00–24.00 uur, spoed 24.00–8.00 uur; lunchpauze 12.30–14.00 uur (spoedgevallen worden wel behandeld). Telefonisch advies 24 uur per dag.",
+        "pl": "Otwarte całodobowo, 365 dni w roku. Dzień 10:00–19:00, wieczór 21:00–24:00, pogotowie 24:00–8:00; przerwa obiadowa 12:30–14:00 (nagłe przypadki nadal obsługiwane). Porady telefoniczne całodobowo."
       },
       "small_animals": true,
       "url": "https://unamc24.com/",
@@ -441,7 +453,8 @@
         "es": "Abierto las 24 horas, todos los días del año. Día de 10:00 a 21:30 h, noche de 21:30 a 10:00 h con tarifas adicionales por urgencias y visitas nocturnas.",
         "it": "Aperto 24 ore su 24, tutti i giorni dell'anno. Giorno 10:00–21:30, notte 21:30–10:00 con supplementi per le visite d'urgenza e notturne.",
         "pt": "Aberto 24 horas por dia, todos os dias do ano. Dia 10h00–21h30, noite 21h30–10h00, com taxas adicionais para urgências e consultas noturnas.",
-        "nl": "24 uur per dag open, elke dag van het jaar. Dag 10.00–21.30 uur, nacht 21.30–10.00 uur, met extra kosten voor spoed- en nachtbezoeken."
+        "nl": "24 uur per dag open, elke dag van het jaar. Dag 10.00–21.30 uur, nacht 21.30–10.00 uur, met extra kosten voor spoed- en nachtbezoeken.",
+        "pl": "Otwarte całodobowo, codziennie przez cały rok. Dzień 10:00–21:30, noc 21:30–10:00 z dodatkowymi opłatami za pogotowie i wizyty nocne."
       },
       "small_animals": true,
       "url": "http://ysamc24.co.kr/",
@@ -463,7 +476,8 @@
         "es": "Abierto las 24 horas, 365 días al año. Día de 9:00 a 22:00 h, noche de 22:00 a 9:00 h.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Giorno 9:00–22:00, notte 22:00–9:00.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Dia 9h00–22h00, noite 22h00–9h00.",
-        "nl": "24 uur per dag, 365 dagen per jaar open. Dag 9.00–22.00 uur, nacht 22.00–9.00 uur."
+        "nl": "24 uur per dag, 365 dagen per jaar open. Dag 9.00–22.00 uur, nacht 22.00–9.00 uur.",
+        "pl": "Otwarte całodobowo, 365 dni w roku. Dzień 9:00–22:00, noc 22:00–9:00."
       },
       "small_animals": true,
       "url": "https://amc24in.com/",
@@ -485,7 +499,8 @@
         "es": "Atención general 9:00–22:00 h; urgencias nocturnas 22:00–9:00 h. Llama antes de ir.",
         "it": "Cure generali 9:00–22:00; pronto soccorso notturno 22:00–9:00. Telefonare prima di venire.",
         "pt": "Consultas gerais 9h00–22h00; urgências noturnas 22h00–9h00. Liga antes de vires.",
-        "nl": "Algemene zorg 9.00–22.00 uur; nachtspoed 22.00–9.00 uur. Bel vooraf."
+        "nl": "Algemene zorg 9.00–22.00 uur; nachtspoed 22.00–9.00 uur. Bel vooraf.",
+        "pl": "Zwykła opieka 9:00–22:00; nocne pogotowie 22:00–9:00. Zadzwoń przed wizytą."
       },
       "small_animals": true,
       "url": "https://www.sooamc.com/",
@@ -507,7 +522,8 @@
         "es": "Abierto las 24 horas, 365 días al año; llama a cualquier hora en caso de urgencia.",
         "it": "Aperto 24 ore su 24, 365 giorni all'anno; per le urgenze telefonare a qualsiasi ora.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano; liga a qualquer hora em caso de urgência.",
-        "nl": "24 uur per dag, 365 dagen per jaar open; bel bij spoed op elk moment."
+        "nl": "24 uur per dag, 365 dagen per jaar open; bel bij spoed op elk moment.",
+        "pl": "Otwarte całodobowo, 365 dni w roku; w nagłych przypadkach dzwoń o każdej porze."
       },
       "small_animals": true,
       "url": "https://lieumamc.co.kr/",
@@ -529,7 +545,8 @@
         "es": "Abierto las 24 horas todos los días, incluidos fines de semana y festivos. Día 9:00–21:00 h, noche 21:00–9:00 h con recargo.",
         "it": "Aperto 24 ore su 24 tutti i giorni, weekend e festivi inclusi. Giorno 9:00–21:00, notte 21:00–9:00 con tariffa aggiuntiva.",
         "pt": "Aberto 24 horas por dia, todos os dias, incluindo fins de semana e feriados. Dia 9h00–21h00, noite 21h00–9h00 com taxa adicional.",
-        "nl": "Elke dag 24 uur open, ook in weekenden en op feestdagen. Dag 9.00–21.00 uur, nacht 21.00–9.00 uur met toeslag."
+        "nl": "Elke dag 24 uur open, ook in weekenden en op feestdagen. Dag 9.00–21.00 uur, nacht 21.00–9.00 uur met toeslag.",
+        "pl": "Otwarte całodobowo, codziennie, także w weekendy i święta. Dzień 9:00–21:00, noc 21:00–9:00 z dodatkową opłatą."
       },
       "small_animals": true,
       "url": "https://hueanimal.com/",
@@ -551,7 +568,8 @@
         "es": "Atención diurna 10:00–22:00 h; atención nocturna y cirugía de urgencia 22:00–10:00 h; consultas las 24 horas.",
         "it": "Cure diurne 10:00–22:00; cure notturne e chirurgia d'urgenza 22:00–10:00; consulenza 24 ore su 24.",
         "pt": "Consultas de dia 10h00–22h00; cuidados noturnos e cirurgia de urgência 22h00–10h00; aconselhamento 24 horas por dia.",
-        "nl": "Dagzorg 10.00–22.00 uur; nachtzorg en spoedchirurgie 22.00–10.00 uur; consult 24 uur per dag."
+        "nl": "Dagzorg 10.00–22.00 uur; nachtzorg en spoedchirurgie 22.00–10.00 uur; consult 24 uur per dag.",
+        "pl": "Opieka dzienna 10:00–22:00; opieka nocna i operacje w nagłych przypadkach 22:00–10:00; konsultacje całodobowo."
       },
       "small_animals": true,
       "url": "https://dogsclub24.wixsite.com/24dogsclub",
@@ -572,7 +590,8 @@
         "es": "Abierto 365 días, hospitalización las 24 horas. Sede de Cheongdam: día 10:00–19:00 h, tarde 19:00–22:00 h, madrugada 22:00–10:00 h (con recargo). Algunas sedes no atienden de madrugada. Llama antes a la sede.",
         "it": "Aperto 365 giorni, ricovero 24 ore su 24. Sede di Cheongdam: giorno 10:00–19:00, sera 19:00–22:00, notte fonda 22:00–10:00 (supplemento). Alcune sedi non hanno il servizio di notte fonda. Telefonare prima alla sede.",
         "pt": "Aberto 365 dias por ano, internamento 24 horas por dia. Unidade de Cheongdam: dia 10h00–19h00, início da noite 19h00–22h00, noite tardia 22h00–10h00 (taxa adicional). Algumas unidades não têm serviço de noite tardia. Liga primeiro para a unidade.",
-        "nl": "365 dagen per jaar open, opname de klok rond. Vestiging Cheongdam: dag 10.00–19.00 uur, avond 19.00–22.00 uur, late nacht 22.00–10.00 uur (toeslag). Sommige vestigingen hebben geen late nachtdienst. Bel eerst de vestiging."
+        "nl": "365 dagen per jaar open, opname de klok rond. Vestiging Cheongdam: dag 10.00–19.00 uur, avond 19.00–22.00 uur, late nacht 22.00–10.00 uur (toeslag). Sommige vestigingen hebben geen late nachtdienst. Bel eerst de vestiging.",
+        "pl": "Otwarte 365 dni, hospitalizacja całodobowo. Placówka Cheongdam: dzień 10:00–19:00, wieczór 19:00–22:00, późna noc 22:00–10:00 (dodatkowa opłata). Niektóre placówki nie mają obsługi w późnych godzinach nocnych. Najpierw zadzwoń do placówki."
       },
       "small_animals": true,
       "url": "https://www.vipah.co.kr/",
@@ -594,7 +613,8 @@
         "es": "Abierto todos los días, las 24 horas. Día 10:00–21:00 h (descanso para comer 13:00–14:30 h), urgencias 21:00–10:00 h.",
         "it": "Aperto tutti i giorni, 24 ore su 24. Giorno 10:00–21:00 (pausa pranzo 13:00–14:30), pronto soccorso 21:00–10:00.",
         "pt": "Aberto todos os dias, 24 horas por dia. Dia 10h00–21h00 (almoço 13h00–14h30), urgências 21h00–10h00.",
-        "nl": "Elke dag 24 uur open. Dag 10.00–21.00 uur (lunch 13.00–14.00 uur), spoedzorg 21.00–10.00 uur."
+        "nl": "Elke dag 24 uur open. Dag 10.00–21.00 uur (lunch 13.00–14.00 uur), spoedzorg 21.00–10.00 uur.",
+        "pl": "Otwarte codziennie, całodobowo. Dzień 10:00–21:00 (przerwa obiadowa 13:00–14:30), pogotowie 21:00–10:00."
       },
       "small_animals": true,
       "url": "https://jejusamc.com/",
@@ -614,7 +634,8 @@
         "es": "Abierto 365 días al año, las 24 horas. Día 10:30–19:00 h, noche 19:00–22:00 h (con tarifa nocturna), madrugada 22:00–10:00 h.",
         "it": "Aperto 365 giorni all'anno, 24 ore su 24. Giorno 10:30–19:00, notte 19:00–22:00 (supplemento notturno), notte fonda 22:00–10:00.",
         "pt": "Aberto 365 dias por ano, 24 horas por dia. Dia 10h30–19h00, noite 19h00–22h00 (taxa noturna), noite tardia 22h00–10h00.",
-        "nl": "365 dagen per jaar, 24 uur per dag open. Dag 10.30–19.00 uur, nacht 19.00–22.00 uur (nachttarief), late nacht 22.00–10.00 uur."
+        "nl": "365 dagen per jaar, 24 uur per dag open. Dag 10.30–19.00 uur, nacht 19.00–22.00 uur (nachttarief), late nacht 22.00–10.00 uur.",
+        "pl": "Otwarte 365 dni w roku, całodobowo. Dzień 10:30–19:00, noc 19:00–22:00 (opłata nocna), późna noc 22:00–10:00."
       },
       "small_animals": true,
       "url": "https://blog.24samc.co.kr/",
@@ -635,7 +656,8 @@
         "es": "Llama para consultar el horario.",
         "it": "Telefonare per confermare gli orari di apertura.",
         "pt": "Liga para confirmar o horário.",
-        "nl": "Bel voor de openingstijden."
+        "nl": "Bel voor de openingstijden.",
+        "pl": "Zadzwoń, aby potwierdzić godziny otwarcia."
       },
       "small_animals": true,
       "url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
@@ -656,7 +678,8 @@
         "es": "Llama para consultar el horario.",
         "it": "Telefonare per confermare gli orari di apertura.",
         "pt": "Liga para confirmar o horário.",
-        "nl": "Bel voor de openingstijden."
+        "nl": "Bel voor de openingstijden.",
+        "pl": "Zadzwoń, aby potwierdzić godziny otwarcia."
       },
       "small_animals": true,
       "url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
@@ -677,7 +700,8 @@
         "es": "Abierto las 24 horas, 365 días. Consultas 9:30–18:30 h, urgencias 18:30–9:30 h (con recargo de urgencias).",
         "it": "Aperto 24 ore su 24, 365 giorni. Ambulatorio 09:30–18:30, pronto soccorso 18:30–09:30 (con supplemento d'urgenza).",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Consultas externas 9h30–18h30, urgências 18h30–9h30 (aplica-se suplemento de urgência).",
-        "nl": "24 uur per dag, 365 dagen open. Polikliniek 09.30–18.30 uur, spoedzorg 18.30–09.30 uur (spoedtoeslag van toepassing)."
+        "nl": "24 uur per dag, 365 dagen open. Polikliniek 09.30–18.30 uur, spoedzorg 18.30–09.30 uur (spoedtoeslag van toepassing).",
+        "pl": "Otwarte całodobowo, 365 dni. Ambulatorium 09:30–18:30, pogotowie 18:30–09:30 (obowiązuje dopłata za pogotowie)."
       },
       "small_animals": true,
       "url": "https://noahamc.co.kr/",
@@ -699,7 +723,8 @@
         "es": "Abierto las 24 horas, 365 días. Atención general 10:00–20:00 h, urgencias 20:00–10:00 h.",
         "it": "Aperto 24 ore su 24, 365 giorni. Cure generali 10:00–20:00, pronto soccorso 20:00–10:00.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Consultas gerais 10h00–20h00, urgências 20h00–10h00.",
-        "nl": "24 uur per dag, 365 dagen open. Algemene zorg 10.00–20.00 uur, spoedzorg 20.00–10.00 uur."
+        "nl": "24 uur per dag, 365 dagen open. Algemene zorg 10.00–20.00 uur, spoedzorg 20.00–10.00 uur.",
+        "pl": "Otwarte całodobowo, 365 dni. Zwykła opieka 10:00–20:00, pogotowie 20:00–10:00."
       },
       "small_animals": true,
       "url": "https://www.namc.co.kr/",
@@ -725,7 +750,8 @@
         "es": "Día 10:00–19:00 h, tarde 19:00–22:00 h, madrugada 22:00–10:00 h. No abre los domingos (sin confirmar). Llama antes.",
         "it": "Giorno 10:00–19:00, sera 19:00–22:00, notte fonda 22:00–10:00. Non operativo la domenica (ambito non chiaro). Telefonare prima.",
         "pt": "Dia 10h00–19h00, início da noite 19h00–22h00, noite tardia 22h00–10h00. Não funciona aos domingos (âmbito pouco claro). Liga primeiro.",
-        "nl": "Dag 10.00–19.00 uur, avond 19.00–22.00 uur, late nacht 22.00–10.00 uur. Op zondag niet in bedrijf (onduidelijk voor welke diensten). Bel eerst."
+        "nl": "Dag 10.00–19.00 uur, avond 19.00–22.00 uur, late nacht 22.00–10.00 uur. Op zondag niet in bedrijf (onduidelijk voor welke diensten). Bel eerst.",
+        "pl": "Dzień 10:00–19:00, wieczór 19:00–22:00, późna noc 22:00–10:00. Nieczynne w niedziele (zakres niejasny). Najpierw zadzwoń."
       }
     },
     {
@@ -742,7 +768,8 @@
         "es": "Día 10:00–19:00 h, tarde 19:00–22:00 h, madrugada 22:00–10:00 h. Llama antes para confirmar.",
         "it": "Giorno 10:00–19:00, sera 19:00–22:00, notte fonda 22:00–10:00. Telefonare prima per conferma.",
         "pt": "Dia 10h00–19h00, início da noite 19h00–22h00, noite tardia 22h00–10h00. Liga primeiro para confirmar.",
-        "nl": "Dag 10.00–19.00 uur, avond 19.00–22.00 uur, late nacht 22.00–10.00 uur. Bel eerst ter bevestiging."
+        "nl": "Dag 10.00–19.00 uur, avond 19.00–22.00 uur, late nacht 22.00–10.00 uur. Bel eerst ter bevestiging.",
+        "pl": "Dzień 10:00–19:00, wieczór 19:00–22:00, późna noc 22:00–10:00. Najpierw zadzwoń, aby potwierdzić."
       },
       "small_animals": true,
       "url": "https://www.vipah.co.kr/kr/medical/branches/cheongdam",
@@ -764,7 +791,8 @@
         "es": "Día 10:00–19:00 h, tarde 19:00–22:00 h, madrugada 22:00–10:00 h. Llama antes para confirmar.",
         "it": "Giorno 10:00–19:00, sera 19:00–22:00, notte fonda 22:00–10:00. Telefonare prima per conferma.",
         "pt": "Dia 10h00–19h00, início da noite 19h00–22h00, noite tardia 22h00–10h00. Liga primeiro para confirmar.",
-        "nl": "Dag 10.00–19.00 uur, avond 19.00–22.00 uur, late nacht 22.00–10.00 uur. Bel eerst ter bevestiging."
+        "nl": "Dag 10.00–19.00 uur, avond 19.00–22.00 uur, late nacht 22.00–10.00 uur. Bel eerst ter bevestiging.",
+        "pl": "Dzień 10:00–19:00, wieczór 19:00–22:00, późna noc 22:00–10:00. Najpierw zadzwoń, aby potwierdzić."
       },
       "small_animals": true,
       "url": "https://www.vipah.co.kr/kr/medical/branches/nowon",
@@ -790,7 +818,8 @@
         "es": "Día 10:00–18:00 h, tarde 18:00–22:00 h, madrugada 22:00–10:00 h. No abre los domingos (sin confirmar). Llama antes.",
         "it": "Giorno 10:00–18:00, sera 18:00–22:00, notte fonda 22:00–10:00. Non operativo la domenica (ambito non chiaro). Telefonare prima.",
         "pt": "Dia 10h00–18h00, início da noite 18h00–22h00, noite tardia 22h00–10h00. Não funciona aos domingos (âmbito pouco claro). Liga primeiro.",
-        "nl": "Dag 10.00–18.00 uur, avond 18.00–22.00 uur, late nacht 22.00–10.00 uur. Op zondag niet in bedrijf (onduidelijk voor welke diensten). Bel eerst."
+        "nl": "Dag 10.00–18.00 uur, avond 18.00–22.00 uur, late nacht 22.00–10.00 uur. Op zondag niet in bedrijf (onduidelijk voor welke diensten). Bel eerst.",
+        "pl": "Dzień 10:00–18:00, wieczór 18:00–22:00, późna noc 22:00–10:00. Nieczynne w niedziele (zakres niejasny). Najpierw zadzwoń."
       }
     },
     {
@@ -811,7 +840,8 @@
         "es": "Día 10:00–18:30 h, tarde 18:30–22:00 h, madrugada 22:00–10:00 h. No abre los domingos (sin confirmar). Llama antes.",
         "it": "Giorno 10:00–18:30, sera 18:30–22:00, notte fonda 22:00–10:00. Non operativo la domenica (ambito non chiaro). Telefonare prima.",
         "pt": "Dia 10h00–18h30, início da noite 18h30–22h00, noite tardia 22h00–10h00. Não funciona aos domingos (âmbito pouco claro). Liga primeiro.",
-        "nl": "Dag 10.00–18.30 uur, avond 18.30–22.00 uur, late nacht 22.00–10.00 uur. Op zondag niet in bedrijf (onduidelijk voor welke diensten). Bel eerst."
+        "nl": "Dag 10.00–18.30 uur, avond 18.30–22.00 uur, late nacht 22.00–10.00 uur. Op zondag niet in bedrijf (onduidelijk voor welke diensten). Bel eerst.",
+        "pl": "Dzień 10:00–18:30, wieczór 18:30–22:00, późna noc 22:00–10:00. Nieczynne w niedziele (zakres niejasny). Najpierw zadzwoń."
       }
     },
     {
@@ -828,7 +858,8 @@
         "es": "Abierto las 24 horas, todos los días. Urgencias nocturnas 21:00–10:00 h.",
         "it": "Aperto 24 ore su 24, tutti i giorni. Pronto soccorso notturno 21:00–10:00.",
         "pt": "Aberto 24 horas por dia, todos os dias. Urgências noturnas 21h00–10h00.",
-        "nl": "24 uur per dag open, elke dag. Nachtspoed 21.00–10.00 uur."
+        "nl": "24 uur per dag open, elke dag. Nachtspoed 21.00–10.00 uur.",
+        "pl": "Otwarte całodobowo, codziennie. Nocne pogotowie 21:00–10:00."
       },
       "small_animals": true,
       "url": "https://24worldpet.com/",
@@ -850,7 +881,8 @@
         "es": "Abierto las 24 horas, todo el año. Citas 9:30–21:30 h, urgencias nocturnas 21:30–9:30 h.",
         "it": "Aperto 24 ore su 24, tutto l'anno. Appuntamenti 09:30–21:30, pronto soccorso notturno 21:30–09:30.",
         "pt": "Aberto 24 horas por dia, todo o ano. Consultas 9h30–21h30, urgências noturnas 21h30–9h30.",
-        "nl": "24 uur per dag open, het hele jaar. Afspraken 09.30–21.30 uur, nachtspoed 21.30–09.30 uur."
+        "nl": "24 uur per dag open, het hele jaar. Afspraken 09.30–21.30 uur, nachtspoed 21.30–09.30 uur.",
+        "pl": "Otwarte całodobowo, przez cały rok. Wizyty 09:30–21:30, nocne pogotowie 21:30–09:30."
       },
       "small_animals": true,
       "url": "https://www.seoulyes24.com/28",
@@ -872,7 +904,8 @@
         "es": "Abierto las 24 horas, todo el año. Día 10:00–19:00 h, tarde 19:00–22:00 h, urgencias 22:00–10:00 h (con tarifa nocturna).",
         "it": "Aperto 24 ore su 24, tutto l'anno. Giorno 10:00–19:00, sera 19:00–22:00, urgenze 22:00–10:00 (tariffe notturne).",
         "pt": "Aberto 24 horas por dia, todo o ano. Dia 10h00–19h00, início da noite 19h00–22h00, urgência 22h00–10h00 (aplicam-se taxas noturnas).",
-        "nl": "24 uur per dag open, het hele jaar. Dag 10.00–19.00 uur, avond 19.00–22.00 uur, spoed 22.00–10.00 uur (nachttarieven van toepassing)."
+        "nl": "24 uur per dag open, het hele jaar. Dag 10.00–19.00 uur, avond 19.00–22.00 uur, spoed 22.00–10.00 uur (nachttarieven van toepassing).",
+        "pl": "Otwarte całodobowo, przez cały rok. Dzień 10:00–19:00, wieczór 19:00–22:00, pogotowie 22:00–10:00 (obowiązują opłaty nocne)."
       },
       "small_animals": true,
       "url": "https://24myamc.com/",
@@ -894,7 +927,8 @@
         "es": "Urgencias las 24 horas. Atención diurna 9:30–21:30 h, nocturna 21:30–9:30 h.",
         "it": "Pronto soccorso 24 ore su 24. Cure diurne 9:30–21:30, cure notturne 21:30–9:30.",
         "pt": "Urgências 24 horas por dia. Consultas de dia 9h30–21h30, cuidados noturnos 21h30–9h30.",
-        "nl": "Spoedzorg 24 uur per dag. Dagzorg 9.30–21.30 uur, nachtzorg 21.30–9.30 uur."
+        "nl": "Spoedzorg 24 uur per dag. Dagzorg 9.30–21.30 uur, nachtzorg 21.30–9.30 uur.",
+        "pl": "Pogotowie całodobowo. Opieka dzienna 9:30–21:30, opieka nocna 21:30–9:30."
       },
       "small_animals": true,
       "url": "https://okayamc.com/",
@@ -916,7 +950,8 @@
         "es": "Abierto las 24 horas, 365 días. Atención diurna 9:30–22:00 h, nocturna 22:00–9:00 h con un 30 % de recargo. Clínica felina solo con cita previa.",
         "it": "Aperto 24 ore su 24, 365 giorni. Cure diurne 9:30–22:00, cure notturne 22:00–9:00 con supplemento del 30%. Clinica per gatti solo su appuntamento.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Atendimento diurno 9h30–22h00, atendimento noturno 22h00–9h00 com suplemento de 30 %. Clínica de gatos só sob marcação.",
-        "nl": "24 uur per dag, 365 dagen open. Dagzorg 9.30–22.00 uur, nachtzorg 22.00–9.00 uur met een toeslag van 30%. Kattenkliniek alleen op afspraak."
+        "nl": "24 uur per dag, 365 dagen open. Dagzorg 9.30–22.00 uur, nachtzorg 22.00–9.00 uur met een toeslag van 30%. Kattenkliniek alleen op afspraak.",
+        "pl": "Otwarte całodobowo, 365 dni. Opieka dzienna 9:30–22:00, opieka nocna 22:00–9:00 z dopłatą 30%. Przychodnia dla kotów tylko po wcześniejszym umówieniu."
       },
       "small_animals": true,
       "url": "https://ysamc.co.kr/",
@@ -938,7 +973,8 @@
         "es": "Abierto todos los días 10:00–20:00 h, descanso 13:00–14:00 h.",
         "it": "Aperto tutti i giorni 10:00–20:00, pausa pranzo 13:00–14:00.",
         "pt": "Aberto todos os dias 10h00–20h00, pausa para almoço 13h00–14h00.",
-        "nl": "Elke dag open 10.00–20.00 uur, lunchpauze 13.00–14.00 uur."
+        "nl": "Elke dag open 10.00–20.00 uur, lunchpauze 13.00–14.00 uur.",
+        "pl": "Otwarte codziennie 10:00–20:00, przerwa obiadowa 13:00–14:00."
       },
       "small_animals": true,
       "url": "https://www.dodamamc.com/",
@@ -960,7 +996,8 @@
         "es": "Laborables 9:30–21:00 h, fines de semana y festivos 9:30–20:00 h, descanso 13:00–14:30 h. Vigilancia hospitalaria 24 horas solo para pacientes ingresados.",
         "it": "Giorni feriali 9:30–21:00, weekend e festivi 9:30–20:00, pausa pranzo 13:00–14:30. Monitoraggio dei ricoverati 24 ore su 24, solo per i pazienti ricoverati.",
         "pt": "Segunda a sexta 9h30–21h00, fins de semana e feriados 9h30–20h00, pausa para almoço 13h00–14h30. Vigilância 24 horas por dia apenas para animais internados.",
-        "nl": "Werkdagen 9.30–21.00 uur, weekenden en feestdagen 9.30–20.00 uur, lunchpauze 13.00–14.30 uur. Bewaking de klok rond alleen voor opgenomen patiënten."
+        "nl": "Werkdagen 9.30–21.00 uur, weekenden en feestdagen 9.30–20.00 uur, lunchpauze 13.00–14.30 uur. Bewaking de klok rond alleen voor opgenomen patiënten.",
+        "pl": "W dni powszednie 9:30–21:00, w weekendy i święta 9:30–20:00, przerwa obiadowa 13:00–14:30. Całodobowy nadzór wyłącznie dla pacjentów hospitalizowanych."
       },
       "small_animals": true,
       "url": "https://africaamc.com/",
@@ -982,7 +1019,8 @@
         "es": "Abierto todos los días, 365 días, 10:00–20:00 h; atención de tarde centrada en urgencias.",
         "it": "Aperto tutti i giorni 10:00–20:00, 365 giorni; cure serali orientate alle urgenze.",
         "pt": "Aberto todos os dias 10h00–20h00, 365 dias por ano; atendimento de urgência ao fim do dia.",
-        "nl": "Elke dag open 10.00–20.00 uur, 365 dagen per jaar; avondzorg gericht op spoed."
+        "nl": "Elke dag open 10.00–20.00 uur, 365 dagen per jaar; avondzorg gericht op spoed.",
+        "pl": "Otwarte codziennie 10:00–20:00, 365 dni; wieczorna opieka nastawiona na nagłe przypadki."
       },
       "small_animals": true,
       "url": "https://juohospital.imweb.me/",
@@ -1004,7 +1042,8 @@
         "es": "Laborables 10:00–19:00 h (miércoles desde las 14:00), sáb 10:00–18:00 h, cerrado dom y festivos. Descanso 12:00–14:00 h.",
         "it": "Giorni feriali 10:00–19:00 (mercoledì dalle 14:00), sabato 10:00–18:00, chiuso domenica e festivi. Pausa pranzo 12:00–14:00.",
         "pt": "Segunda a sexta 10h00–19h00 (quarta-feira a partir das 14h00), sábado 10h00–18h00, fechado aos domingos e feriados. Pausa para almoço 12h00–14h00.",
-        "nl": "Werkdagen 10.00–19.00 uur (woensdag vanaf 14.00 uur), zaterdag 10.00–18.00 uur, zondag en feestdagen gesloten. Lunchpauze 12.00–14.00 uur."
+        "nl": "Werkdagen 10.00–19.00 uur (woensdag vanaf 14.00 uur), zaterdag 10.00–18.00 uur, zondag en feestdagen gesloten. Lunchpauze 12.00–14.00 uur.",
+        "pl": "W dni powszednie 10:00–19:00 (w środy od 14:00), w soboty 10:00–18:00, w niedziele i święta zamknięte. Przerwa obiadowa 12:00–14:00."
       },
       "small_animals": true,
       "url": "https://imvet96.wixsite.com/joeunac",
@@ -1026,7 +1065,8 @@
         "es": "Abierto todos los días, 365 días, 9:30–23:00 h (descanso 13:00–14:00 h).",
         "it": "Aperto tutti i giorni, 365 giorni, 9:30–23:00 (pausa pranzo 13:00–14:00).",
         "pt": "Aberto todos os dias, 365 dias por ano, 9h30–23h00 (pausa para almoço 13h00–14h00).",
-        "nl": "Elke dag open, 365 dagen per jaar, 9.30–23.00 uur (lunchpauze 13.00–14.00 uur)."
+        "nl": "Elke dag open, 365 dagen per jaar, 9.30–23.00 uur (lunchpauze 13.00–14.00 uur).",
+        "pl": "Otwarte codziennie, 365 dni, 9:30–23:00 (przerwa obiadowa 13:00–14:00)."
       },
       "small_animals": true,
       "url": "https://laonamc.com/",
@@ -1048,7 +1088,8 @@
         "es": "Laborables 9:30–19:00 h, sáb y festivos 9:30–17:00 h, cerrado dom. Descanso 13:00–14:00 h. Llama antes en festivos y para urgencias (con recargo).",
         "it": "Giorni feriali 9:30–19:00, sabato e festivi 9:30–17:00, chiuso la domenica. Pausa pranzo 13:00–14:00. Telefonare prima per i festivi e le urgenze (supplemento).",
         "pt": "Segunda a sexta 9h30–19h00, sábados e feriados 9h30–17h00, fechado aos domingos. Pausa para almoço 13h00–14h00. Liga antes para feriados e urgências (taxa adicional).",
-        "nl": "Werkdagen 9.30–19.00 uur, zaterdag en feestdagen 9.30–17.00 uur, zondag gesloten. Lunchpauze 13.00–14.00 uur. Bel vooraf voor feestdagen en spoed (extra kosten)."
+        "nl": "Werkdagen 9.30–19.00 uur, zaterdag en feestdagen 9.30–17.00 uur, zondag gesloten. Lunchpauze 13.00–14.00 uur. Bel vooraf voor feestdagen en spoed (extra kosten).",
+        "pl": "W dni powszednie 9:30–19:00, w soboty i święta 9:30–17:00, w niedziele zamknięte. Przerwa obiadowa 13:00–14:00. W sprawie świąt i nagłych przypadków (dodatkowa opłata) zadzwoń wcześniej."
       },
       "small_animals": true,
       "url": "https://sonagikr.wixsite.com/smallpethospital/blank-82",
@@ -1070,7 +1111,8 @@
         "es": "Atención diurna 10:00–19:00 h (descanso 12:30–14:00 h). Urgencias nocturnas 19:00–10:00 h, 365 días al año, con recargo nocturno. Llama antes.",
         "it": "Cure diurne 10:00–19:00 (pranzo 12:30–14:00). Pronto soccorso notturno 19:00–10:00, 365 giorni all'anno, con supplementi notturni. Telefonare prima.",
         "pt": "Atendimento diurno 10h00–19h00 (almoço 12h30–14h00). Urgências noturnas 19h00–10h00, 365 dias por ano, com taxa noturna. Liga antes.",
-        "nl": "Dagzorg 10.00–19.00 uur (lunch 12.30–14.00 uur). Spoedzorg 's nachts 19.00–10.00 uur, 365 dagen per jaar, met nachttoeslag. Bel vooraf."
+        "nl": "Dagzorg 10.00–19.00 uur (lunch 12.30–14.00 uur). Spoedzorg 's nachts 19.00–10.00 uur, 365 dagen per jaar, met nachttoeslag. Bel vooraf.",
+        "pl": "Opieka dzienna 10:00–19:00 (obiad 12:30–14:00). Nocne pogotowie 19:00–10:00, 365 dni w roku, z dopłatami nocnymi. Zadzwoń wcześniej."
       },
       "small_animals": true,
       "url": "https://vamc.co.kr/",
@@ -1092,7 +1134,8 @@
         "es": "Abierto mié–dom 10:00–19:00 h, descanso 12:00–13:00 h. Cerrado lunes y martes.",
         "it": "Aperto da mercoledì a domenica 10:00–19:00, pranzo 12:00–13:00. Chiuso lunedì e martedì.",
         "pt": "Aberto de quarta a domingo 10h00–19h00, almoço 12h00–13h00. Fechado à segunda-feira e à terça-feira.",
-        "nl": "Open woensdag tot en met zondag 10.00–19.00 uur, lunch 12.00–13.00 uur. Maandag en dinsdag gesloten."
+        "nl": "Open woensdag tot en met zondag 10.00–19.00 uur, lunch 12.00–13.00 uur. Maandag en dinsdag gesloten.",
+        "pl": "Otwarte od środy do niedzieli 10:00–19:00, obiad 12:00–13:00. W poniedziałki i wtorki zamknięte."
       },
       "small_animals": true,
       "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012742",
@@ -1114,7 +1157,8 @@
         "es": "Cerrado domingos y durante las fiestas de Seollal y Chuseok. Descanso 13:00–14:00 h. Llama para consultar el horario.",
         "it": "Chiuso la domenica e durante le festività di Seollal e Chuseok. Pausa pranzo 13:00–14:00. Telefonare per gli orari.",
         "pt": "Fechado aos domingos e durante os feriados de Seollal e Chuseok. Pausa para almoço 13h00–14h00. Liga para saber o horário.",
-        "nl": "Zondag en tijdens Seollal en Chuseok gesloten. Lunchpauze 13.00–14.00 uur. Bel voor de openingstijden."
+        "nl": "Zondag en tijdens Seollal en Chuseok gesloten. Lunchpauze 13.00–14.00 uur. Bel voor de openingstijden.",
+        "pl": "Zamknięte w niedziele oraz w czasie świąt Seollal i Chuseok. Przerwa obiadowa 13:00–14:00. W sprawie godzin otwarcia zadzwoń."
       },
       "small_animals": true,
       "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012747",
@@ -1136,7 +1180,8 @@
         "es": "Miércoles 9:30–13:00 h, cerrado dom, descanso 13:00–14:30 h. Sin atención nocturna ni de urgencias.",
         "it": "Mercoledì 9:30–13:00, chiuso la domenica, pausa 13:00–14:30. Nessun servizio notturno né di pronto soccorso.",
         "pt": "Quarta-feira 9h30–13h00, fechado aos domingos, pausa 13h00–14h30. Sem atendimento noturno nem urgências.",
-        "nl": "Woensdag 9.30–13.00 uur, zondag gesloten, pauze 13.00–14.30 uur. Geen nacht- of spoedzorg."
+        "nl": "Woensdag 9.30–13.00 uur, zondag gesloten, pauze 13.00–14.30 uur. Geen nacht- of spoedzorg.",
+        "pl": "W środy 9:30–13:00, w niedziele zamknięte, przerwa 13:00–14:30. Brak opieki nocnej i pogotowia."
       },
       "small_animals": true,
       "url": "https://m.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012748",
@@ -1158,7 +1203,8 @@
         "es": "Cerrado domingos. Descanso 12:00–13:30 h. Sin atención nocturna ni de urgencias.",
         "it": "Chiuso la domenica. Pausa pranzo 12:00–13:30. Nessun servizio notturno né di pronto soccorso.",
         "pt": "Fechado aos domingos. Pausa para almoço 12h00–13h30. Sem atendimento noturno nem urgências.",
-        "nl": "Zondag gesloten. Lunchpauze 12.00–13.30 uur. Geen nacht- of spoedzorg."
+        "nl": "Zondag gesloten. Lunchpauze 12.00–13.30 uur. Geen nacht- of spoedzorg.",
+        "pl": "Zamknięte w niedziele. Przerwa obiadowa 12:00–13:30. Brak opieki nocnej i pogotowia."
       },
       "small_animals": true,
       "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012749",

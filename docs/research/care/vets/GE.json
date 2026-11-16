@@ -66,7 +66,8 @@
         "es": "Urgencias anunciadas 24/7 (web en georgiano). Llama antes.",
         "it": "Pronto soccorso indicato come disponibile 24 ore su 24, 7 giorni su 7 (sito in lingua georgiana). Telefonare in anticipo.",
         "pt": "Apoio de urgência anunciado como disponível 24 h/24, 7 dias por semana (site em georgiano). Liga antes.",
-        "nl": "Spoedhulp wordt aangeprezen als 24/7 beschikbaar (Georgischtalige website). Bel vooraf."
+        "nl": "Spoedhulp wordt aangeprezen als 24/7 beschikbaar (Georgischtalige website). Bel vooraf.",
+        "pl": "Pomoc w nagłych przypadkach reklamowana jako dostępna całodobowo (strona w języku gruzińskim). Zadzwoń przed wizytą."
       }
     },
     {
@@ -87,7 +88,8 @@
         "es": "Abierto todos los días de 10:00 a 20:00 h; llama antes en caso de urgencia. Hospital para perros y gatos con departamento de gatos.",
         "it": "Aperto tutti i giorni 10:00–20:00; per le urgenze telefonare in anticipo. Ospedale per cani e gatti con reparto dedicato ai gatti.",
         "pt": "Aberto todos os dias 10h00–20h00; liga antes em caso de urgência. Hospital para cães e gatos com secção de gatos.",
-        "nl": "Dagelijks open 10.00–20.00 uur; bel vooraf bij spoed. Dierenziekenhuis voor honden en katten met een kattenafdeling."
+        "nl": "Dagelijks open 10.00–20.00 uur; bel vooraf bij spoed. Dierenziekenhuis voor honden en katten met een kattenafdeling.",
+        "pl": "Otwarte codziennie 10:00–20:00; w nagłych przypadkach zadzwoń wcześniej. Lecznica dla psów i kotów z oddziałem kotów."
       }
     },
     {
@@ -108,7 +110,8 @@
         "es": "Abierto todos los días de 10:00 a 19:00 h.",
         "it": "Aperto tutti i giorni 10:00–19:00.",
         "pt": "Aberto todos os dias 10h00–19h00.",
-        "nl": "Dagelijks open 10.00–19.00 uur."
+        "nl": "Dagelijks open 10.00–19.00 uur.",
+        "pl": "Otwarte codziennie 10:00–19:00."
       }
     },
     {
@@ -129,7 +132,8 @@
         "es": "Abierto todos los días de 11:00 a 20:00 h. Perros y gatos.",
         "it": "Aperto tutti i giorni 11:00–20:00. Cani e gatti.",
         "pt": "Aberto todos os dias 11h00–20h00. Cães e gatos.",
-        "nl": "Dagelijks open 11.00–20.00 uur. Honden en katten."
+        "nl": "Dagelijks open 11.00–20.00 uur. Honden en katten.",
+        "pl": "Otwarte codziennie 11:00–20:00. Psy i koty."
       }
     },
     {
@@ -150,7 +154,8 @@
         "es": "Según se indica, clínica 24 horas; confirma por teléfono antes de ir.",
         "it": "Risulta una clinica aperta 24 ore su 24; confermare per telefono prima di mettersi in viaggio.",
         "pt": "Segundo consta, é uma clínica 24 horas; confirma por telefone antes de te deslocares.",
-        "nl": "Naar verluidt een kliniek die 24 uur per dag open is; bevestig dit telefonisch voordat je erheen gaat."
+        "nl": "Naar verluidt een kliniek die 24 uur per dag open is; bevestig dit telefonisch voordat je erheen gaat.",
+        "pl": "Podobno przychodnia całodobowa; przed przyjazdem potwierdź telefonicznie."
       }
     },
     {
@@ -171,7 +176,8 @@
         "es": "Según se indica, abierto las 24 horas todos los días; confirma por teléfono antes de ir.",
         "it": "Risulta aperta 24 ore su 24 tutti i giorni; confermare per telefono prima di mettersi in viaggio.",
         "pt": "Segundo consta, está aberto 24 horas por dia; confirma por telefone antes de te deslocares.",
-        "nl": "Naar verluidt elke dag 24 uur open; bevestig dit telefonisch voordat je erheen gaat."
+        "nl": "Naar verluidt elke dag 24 uur open; bevestig dit telefonisch voordat je erheen gaat.",
+        "pl": "Podobno otwarte całodobowo, codziennie; przed przyjazdem potwierdź telefonicznie."
       }
     },
     {
@@ -192,7 +198,8 @@
         "es": "Con cita previa: de lunes a viernes de 10:00 a 18:00 h, domingo de 11:00 a 16:00 h, sábado cerrado. Visitas a domicilio. Perros, gatos, conejos, cobayas, roedores.",
         "it": "Su appuntamento: lun–ven 10:00–18:00, dom 11:00–16:00, sab chiuso. Visite a domicilio. Cani, gatti, conigli, porcellini d'India, roditori.",
         "pt": "Sob marcação: seg–sex 10h00–18h00, dom 11h00–16h00, sáb fechado. Visitas ao domicílio. Cães, gatos, coelhos, porquinhos-da-índia, roedores.",
-        "nl": "Op afspraak: ma–vr 10.00–18.00 uur, zo 11.00–16.00 uur, za gesloten. Huisbezoeken. Honden, katten, konijnen, cavia's, knaagdieren."
+        "nl": "Op afspraak: ma–vr 10.00–18.00 uur, zo 11.00–16.00 uur, za gesloten. Huisbezoeken. Honden, katten, konijnen, cavia's, knaagdieren.",
+        "pl": "Po wcześniejszym umówieniu: pon.–pt. 10:00–18:00, niedz. 11:00–16:00, sob. zamknięte. Wizyty domowe. Psy, koty, króliki, świnki morskie, gryzonie."
       }
     }
   ],

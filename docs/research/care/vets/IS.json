@@ -52,7 +52,10 @@
       "note": "Own page opened. Page does not say 24 h, so false. Call-out fee ~35,000 ISK (~48,000 ISK nights/holidays) per page. Hundaheimar list gives weekdays 08:30-17:00 (conflict, clinic page used).",
       "kind": "clinic",
       "emergency_24h": false,
-      "checked": "2026-11-15"
+      "checked": "2026-11-15",
+      "duty_i18n": {
+        "pl": "Otwarte w dni robocze 8:00–17:00 i w weekendy 10:00–13:00. Poza godzinami otwarcia weterynarz dyżurny (poważnie chore lub ranne zwierzęta) jest pod numerem +354 530 4888 (opłata za dojazd, wyższa w nocy i w święta)."
+      }
     },
     {
       "name": "Gæludýraklíníkin",
@@ -67,7 +70,10 @@
       "note": "Own page opened. Footer also lists capital-area duty line 530 48 88 (not explained on page). Email mottaka@gdk.is.",
       "kind": "clinic",
       "emergency_24h": false,
-      "checked": "2026-11-15"
+      "checked": "2026-11-15",
+      "duty_i18n": {
+        "pl": "Otwarte od poniedziałku do piątku 8:00–17:00, w weekendy nieczynne. Poza godzinami otwarcia czynna przychodnia pogotowia w rejonie stolicy Animalía: +354 555 0112."
+      }
     },
     {
       "name": "Dýralæknastofa Reykjavíkur",
@@ -82,7 +88,10 @@
       "note": "Own pages opened (home + contact). Home page says patients needing help outside hours are received 'around the clock' but does not say 24 h/nonstop and the contact page does not repeat it, so false. Email dyri@dyri.is.",
       "kind": "clinic",
       "emergency_24h": false,
-      "checked": "2026-11-15"
+      "checked": "2026-11-15",
+      "duty_i18n": {
+        "pl": "Otwarte od poniedziałku do czwartku 8:00–17:00, w piątek 8:00–15:00, w sobotę 10:00–12:00. Uczestniczy we współpracy pogotowia w rejonie stolicy; w pilnych przypadkach można też zadzwonić do Animalía pod +354 555 0112."
+      }
     },
     {
       "name": "Animalía (emergency clinic)",
@@ -94,7 +103,10 @@
       "source_url": "https://www.gdk.is/",
       "note": "CLAIM FROM A THIRD-PARTY CLINIC PAGE: gdk.is says 'Animalía sólarhringsopin bráðamóttaka: s. 555 0112'; dyri.is also refers to Animalía for emergencies. Animalía's own site (animalia.is) could not be opened (not retrievable by the research tool), so address/town unknown and the 24 h claim needs the independent check. Independent check: gdk.is opened and says Animalía is a sólarhringsopin (24 h) bráðamóttaka, tel 555 0112; own site not opened.",
       "kind": "clinic",
-      "checked": "2026-11-15"
+      "checked": "2026-11-15",
+      "duty_i18n": {
+        "pl": "Całodobowa rejestracja nagłych przypadków zwierząt domowych w rejonie stolicy; zadzwoń pod +354 555 0112."
+      }
     },
     {
       "name": "Dýraspítalinn Kirkjulundi",

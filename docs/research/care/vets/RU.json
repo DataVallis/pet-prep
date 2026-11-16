@@ -41,7 +41,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto todos os dias 24 horas por dia (clínica pública). Liga primeiro para o centro de contacto veterinário da cidade +7 495 612 12 12.",
-        "nl": "Dagelijks de klok rond open (staatskliniek). Bel eerst het stedelijke contactcentrum voor dierenartsen +7 495 612 12 12."
+        "nl": "Dagelijks de klok rond open (staatskliniek). Bel eerst het stedelijke contactcentrum voor dierenartsen +7 495 612 12 12.",
+        "pl": "Czynne codziennie całą dobę (przychodnia państwowa). Najpierw zadzwoń do miejskiego centrum kontaktowego weterynarii +7 495 612 12 12."
       }
     },
     {
@@ -60,7 +61,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Todos os dias, 9h00–21h00; unidade de internamento 24 horas por dia para animais gravemente doentes.",
-        "nl": "Dagelijks 9.00–21.00 uur; 24-uurs opnameafdeling voor ernstig zieke dieren."
+        "nl": "Dagelijks 9.00–21.00 uur; 24-uurs opnameafdeling voor ernstig zieke dieren.",
+        "pl": "Codziennie 9:00–21:00; całodobowy oddział stacjonarny dla ciężko chorych zwierząt."
       }
     },
     {
@@ -79,7 +81,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Centro de contacto municipal 24 horas por dia do serviço veterinário público: indica que clínicas públicas estão a aceitar animais e envia um veterinário a casa, também à noite e aos fins de semana.",
-        "nl": "Stedelijk contactcentrum van de staatsdierenartsendienst, de klok rond: geeft aan welke staatsklinieken dieren aannemen en stuurt een dierenarts aan huis, ook 's nachts en in het weekend."
+        "nl": "Stedelijk contactcentrum van de staatsdierenartsendienst, de klok rond: geeft aan welke staatsklinieken dieren aannemen en stuurt een dierenarts aan huis, ook 's nachts en in het weekend.",
+        "pl": "Całodobowe miejskie centrum kontaktowe państwowej służby weterynaryjnej: podpowie, które przychodnie państwowe przyjmują zwierzęta, i wyśle weterynarza do domu, także w nocy i w weekendy."
       }
     },
     {
@@ -99,7 +102,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia, sem dias de encerramento. Estacionamento vigiado gratuito.",
-        "nl": "De klok rond open, elke dag. Gratis bewaakte parkeerplaats."
+        "nl": "De klok rond open, elke dag. Gratis bewaakte parkeerplaats.",
+        "pl": "Czynne całą dobę, bez dni wolnych. Bezpłatny strzeżony parking."
       }
     },
     {
@@ -119,7 +123,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia, sem dias de encerramento, com cuidados intensivos e unidade de internamento.",
-        "nl": "De klok rond open, elke dag, met intensive care en opnameafdeling."
+        "nl": "De klok rond open, elke dag, met intensive care en opnameafdeling.",
+        "pl": "Czynne całą dobę, bez dni wolnych, z intensywną terapią i oddziałem stacjonarnym."
       }
     },
     {
@@ -139,7 +144,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Rede de clínicas 24 horas por dia; abertas 24 horas por dia, visitas ao domicílio 24 horas por dia.",
-        "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag."
+        "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag.",
+        "pl": "Sieć całodobowych przychodni; czynne całą dobę, wizyty domowe 24 godziny na dobę."
       }
     },
     {
@@ -159,7 +165,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Rede de clínicas 24 horas por dia; abertas 24 horas por dia, visitas ao domicílio 24 horas por dia.",
-        "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag."
+        "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag.",
+        "pl": "Sieć całodobowych przychodni; czynne całą dobę, wizyty domowe 24 godziny na dobę."
       }
     },
     {
@@ -179,7 +186,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Rede de clínicas 24 horas por dia; abertas 24 horas por dia, visitas ao domicílio 24 horas por dia.",
-        "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag."
+        "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag.",
+        "pl": "Sieć całodobowych przychodni; czynne całą dobę, wizyty domowe 24 godziny na dobę."
       }
     },
     {
@@ -199,7 +207,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Rede de clínicas 24 horas por dia; abertas 24 horas por dia, visitas ao domicílio 24 horas por dia.",
-        "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag."
+        "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag.",
+        "pl": "Sieć całodobowych przychodni; czynne całą dobę, wizyty domowe 24 godziny na dobę."
       }
     },
     {
@@ -219,7 +228,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Unidade hospitalar aberta 24 horas por dia; as restantes unidades, 9h00–21h00.",
-        "nl": "Ziekenhuisvestiging de klok rond open; overige vestigingen 9.00–21.00 uur."
+        "nl": "Ziekenhuisvestiging de klok rond open; overige vestigingen 9.00–21.00 uur.",
+        "pl": "Oddział szpitalny czynny całą dobę; pozostałe oddziały 9:00–21:00."
       }
     },
     {
@@ -239,7 +249,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia, 7 dias por semana, sem dias de encerramento, com unidade de internamento 24 horas por dia.",
-        "nl": "24/7 open, elke dag, met 24-uurs opnameafdeling."
+        "nl": "24/7 open, elke dag, met 24-uurs opnameafdeling.",
+        "pl": "Czynne 24/7, bez dni wolnych, z całodobowym oddziałem stacjonarnym."
       }
     },
     {
@@ -259,7 +270,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia, 7 dias por semana, sem dias de encerramento, com unidade de internamento 24 horas por dia.",
-        "nl": "24/7 open, elke dag, met 24-uurs opnameafdeling."
+        "nl": "24/7 open, elke dag, met 24-uurs opnameafdeling.",
+        "pl": "Czynne 24/7, bez dni wolnych, z całodobowym oddziałem stacjonarnym."
       }
     },
     {
@@ -279,7 +291,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia. A segunda unidade (Bukharestskaya 146 k.1) está aberta todos os dias, 10h00–20h00. À noite (20h00–10h00) trabalham apenas o médico de serviço e um assistente, com serviços reduzidos.",
-        "nl": "24 uur per dag open. Tweede vestiging (Bukharestskaya 146 k.1) dagelijks 10.00–20.00 uur geopend. 's Nachts (20.00–10.00 uur) werken alleen de dienstdoende arts en een assistent, met een beperkter aanbod aan diensten."
+        "nl": "24 uur per dag open. Tweede vestiging (Bukharestskaya 146 k.1) dagelijks 10.00–20.00 uur geopend. 's Nachts (20.00–10.00 uur) werken alleen de dienstdoende arts en een assistent, met een beperkter aanbod aan diensten.",
+        "pl": "Czynne całodobowo. Drugi oddział (Bukharestskaya 146 k.1) czynny codziennie 10:00–20:00. W nocy (20:00–10:00) pracują tylko lekarz dyżurny i asystent, z ograniczonym zakresem usług."
       }
     },
     {
@@ -299,7 +312,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia; sem suplemento noturno, segundo a clínica.",
-        "nl": "De klok rond open; volgens de kliniek geen nachttoeslag."
+        "nl": "De klok rond open; volgens de kliniek geen nachttoeslag.",
+        "pl": "Czynne całą dobę; według przychodni bez nocnej dopłaty."
       }
     },
     {
@@ -318,7 +332,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia, sem dias de encerramento.",
-        "nl": "De klok rond open, elke dag."
+        "nl": "De klok rond open, elke dag.",
+        "pl": "Czynne całą dobę, bez dni wolnych."
       }
     },
     {
@@ -337,7 +352,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Receção todos os dias, 9h00–21h00; internamento e cuidados intensivos 24 horas por dia, 7 dias por semana.",
-        "nl": "Balie dagelijks 9.00–21.00 uur; opnameafdeling en intensive care 24/7."
+        "nl": "Balie dagelijks 9.00–21.00 uur; opnameafdeling en intensive care 24/7.",
+        "pl": "Rejestracja codziennie 9:00–21:00; oddział stacjonarny i intensywna terapia 24/7."
       }
     },
     {
@@ -356,7 +372,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Receção todos os dias, 8h00–22h00; internamento 24 horas por dia.",
-        "nl": "Balie dagelijks 8.00–22.00 uur; opnameafdeling de klok rond."
+        "nl": "Balie dagelijks 8.00–22.00 uur; opnameafdeling de klok rond.",
+        "pl": "Rejestracja codziennie 8:00–22:00; całodobowy oddział stacjonarny."
       }
     },
     {
@@ -376,7 +393,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia.",
-        "nl": "24 uur per dag open."
+        "nl": "24 uur per dag open.",
+        "pl": "Czynne całą dobę."
       }
     },
     {
@@ -396,7 +414,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia.",
-        "nl": "24 uur per dag open."
+        "nl": "24 uur per dag open.",
+        "pl": "Czynne całą dobę."
       }
     },
     {
@@ -416,7 +435,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia nesta unidade.",
-        "nl": "Deze vestiging is de klok rond open."
+        "nl": "Deze vestiging is de klok rond open.",
+        "pl": "Ten oddział jest czynny całą dobę."
       }
     },
     {
@@ -435,7 +455,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Todos os dias, 8h00–23h00.",
-        "nl": "Dagelijks 8.00–23.00 uur."
+        "nl": "Dagelijks 8.00–23.00 uur.",
+        "pl": "Codziennie 8:00–23:00."
       }
     },
     {
@@ -455,7 +476,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia; tarifa noturna 21h00–9h00.",
-        "nl": "De klok rond open; nachttarief 21.00–9.00 uur."
+        "nl": "De klok rond open; nachttarief 21.00–9.00 uur.",
+        "pl": "Czynne całą dobę; taryfa nocna 21:00–9:00."
       }
     },
     {
@@ -475,7 +497,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia, sem dias de encerramento; tarifa noturna 21h00–9h00.",
-        "nl": "De klok rond open, elke dag; nachttarief 21.00–9.00 uur."
+        "nl": "De klok rond open, elke dag; nachttarief 21.00–9.00 uur.",
+        "pl": "Czynne całą dobę, bez dni wolnych; taryfa nocna 21:00–9:00."
       }
     },
     {
@@ -495,7 +518,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia, 7 dias por semana, sem dias de encerramento. Liga antes de ires em caso de urgência.",
-        "nl": "24/7 open elke dag. Bel voordat je komt bij spoed."
+        "nl": "24/7 open elke dag. Bel voordat je komt bij spoed.",
+        "pl": "Czynne 24/7 bez dni wolnych. W nagłych przypadkach zadzwoń przed przyjazdem."
       }
     },
     {
@@ -515,7 +539,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Afirma funcionar 24 horas por dia; cirurgia, cuidados intensivos e radiografia 24 horas por dia, outros serviços durante o dia.",
-        "nl": "Zegt de klok rond te werken; chirurgie, intensive care en röntgen 24 uur per dag, overige diensten overdag."
+        "nl": "Zegt de klok rond te werken; chirurgie, intensive care en röntgen 24 uur per dag, overige diensten overdag.",
+        "pl": "Deklaruje pracę całodobową; chirurgia, intensywna terapia i RTG całą dobę, pozostałe usługi w ciągu dnia."
       }
     },
     {
@@ -535,7 +560,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia, 7 dias por semana, 365 dias por ano, com urgências 24 horas por dia. A segunda unidade, em ul. Uralskaya 184/2, está aberta 9h00–21h00.",
-        "nl": "24/7/365 open, spoedzorg de klok rond. Tweede vestiging aan ul. Uralskaya 184/2 is open 9.00–21.00 uur."
+        "nl": "24/7/365 open, spoedzorg de klok rond. Tweede vestiging aan ul. Uralskaya 184/2 is open 9.00–21.00 uur.",
+        "pl": "Czynne 24/7/365, pomoc w nagłych przypadkach całą dobę. Drugi oddział przy ul. Uralskaya 184/2 czynny 9:00–21:00."
       }
     },
     {
@@ -555,7 +581,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto 24 horas por dia, 7 dias por semana.",
-        "nl": "24/7 open."
+        "nl": "24/7 open.",
+        "pl": "Czynne całą dobę, 7 dni w tygodniu."
       }
     },
     {
@@ -574,7 +601,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Todos os dias, 8h00–20h00; os animais são aceites até uma hora antes do fecho.",
-        "nl": "Dagelijks 8.00–20.00 uur; tot een uur voor sluitingstijd kun je met je dier terecht."
+        "nl": "Dagelijks 8.00–20.00 uur; tot een uur voor sluitingstijd kun je met je dier terecht.",
+        "pl": "Codziennie 8:00–20:00; zwierzęta przyjmowane do godziny przed zamknięciem."
       }
     },
     {
@@ -593,7 +621,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Todos os dias, 8h00–20h00; os animais são aceites até uma hora antes do fecho.",
-        "nl": "Dagelijks 8.00–20.00 uur; tot een uur voor sluitingstijd kun je met je dier terecht."
+        "nl": "Dagelijks 8.00–20.00 uur; tot een uur voor sluitingstijd kun je met je dier terecht.",
+        "pl": "Codziennie 8:00–20:00; zwierzęta przyjmowane do godziny przed zamknięciem."
       }
     },
     {
@@ -612,7 +641,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Segunda a sexta, 9h00–17h00; fechado ao sábado e domingo.",
-        "nl": "Ma–vr 9.00–17.00 uur; za–zo gesloten."
+        "nl": "Ma–vr 9.00–17.00 uur; za–zo gesloten.",
+        "pl": "Pon.–pt. 9:00–17:00; sob.–niedz. zamknięte."
       }
     },
     {
@@ -631,7 +661,8 @@
       "checked": "2026-11-13",
       "duty_i18n": {
         "pt": "Aberto todos os dias, incluindo feriados; liga para saberes o horário exato.",
-        "nl": "Elke dag open, ook op feestdagen; bel voor de exacte openingstijden."
+        "nl": "Elke dag open, ook op feestdagen; bel voor de exacte openingstijden.",
+        "pl": "Czynne codziennie, także w święta; zadzwoń i zapytaj o dokładne godziny."
       }
     }
   ],

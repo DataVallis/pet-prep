@@ -77,7 +77,8 @@
         "es": "Abierto todos los días 9:00–24:00 h; línea telefónica disponible las 24 horas. Llama antes por la noche.",
         "it": "Aperto 9:00–24:00 tutti i giorni; linea telefonica indicata come attiva 24 ore su 24. Di notte telefonare in anticipo.",
         "pt": "Aberto todos os dias, 9h00–24h00; linha telefónica anunciada como 24 h/24. Liga antes à noite.",
-        "nl": "Dagelijks open 9.00–24.00 uur; telefoonlijn naar eigen zeggen 24/7 bereikbaar. Bel 's nachts vooraf."
+        "nl": "Dagelijks open 9.00–24.00 uur; telefoonlijn naar eigen zeggen 24/7 bereikbaar. Bel 's nachts vooraf.",
+        "pl": "Otwarte codziennie 9:00–24:00; telefon reklamowany jako czynny całą dobę. W nocy zadzwoń wcześniej."
       }
     },
     {
@@ -97,7 +98,8 @@
         "es": "Veterinario a domicilio en Yerevan y hasta 30 km a la redonda; anuncia atención las 24 horas con veterinario de urgencias.",
         "it": "Veterinario mobile con visite a domicilio a Yerevan e fino a 30 km intorno; indicato come aperto 24 ore su 24, 7 giorni su 7, con veterinario di guardia per le urgenze.",
         "pt": "Veterinário ao domicílio em Yerevan e até 30 km à volta; anunciado como aberto 24 h/24, com veterinário de urgência disponível.",
-        "nl": "Mobiele dierenarts met huisbezoeken in Yerevan en tot 30 km eromheen; naar eigen zeggen 24/7 open, met een dierenarts voor spoedgevallen."
+        "nl": "Mobiele dierenarts met huisbezoeken in Yerevan en tot 30 km eromheen; naar eigen zeggen 24/7 open, met een dierenarts voor spoedgevallen.",
+        "pl": "Mobilny weterynarz z wizytami domowymi w Erywaniu i w promieniu do 30 km; reklamowany jako dostępny całodobowo, z weterynarzem do nagłych przypadków."
       }
     },
     {
@@ -118,7 +120,8 @@
         "es": "Anuncia atención veterinaria las 24 horas y ambulancia para mascotas en el +374 99 404070. Llama antes.",
         "it": "Indica assistenza veterinaria 24 ore su 24, 7 giorni su 7 e ambulanza per animali al +374 99 404070. Telefonare in anticipo.",
         "pt": "Anuncia assistência veterinária 24 h/24 e ambulância para animais no +374 99 404070. Liga antes.",
-        "nl": "Biedt naar eigen zeggen 24/7 dierenartshulp en een dierenambulance via +374 99 404070. Bel vooraf."
+        "nl": "Biedt naar eigen zeggen 24/7 dierenartshulp en een dierenambulance via +374 99 404070. Bel vooraf.",
+        "pl": "Reklamuje całodobową pomoc weterynaryjną i karetkę dla zwierząt pod numerem +374 99 404070. Zadzwoń przed wizytą."
       }
     },
     {
@@ -139,7 +142,8 @@
         "es": "Abierto todos los días 10:00–22:00 h.",
         "it": "Aperto tutti i giorni 10:00–22:00.",
         "pt": "Aberto todos os dias, 10h00–22h00.",
-        "nl": "Dagelijks open 10.00–22.00 uur."
+        "nl": "Dagelijks open 10.00–22.00 uur.",
+        "pl": "Otwarte codziennie 10:00–22:00."
       }
     },
     {
@@ -160,7 +164,8 @@
         "es": "Lun–sáb 10:00–20:00 h, dom 9:00–12:00 h.",
         "it": "Lun–sab 10:00–20:00, dom 9:00–12:00.",
         "pt": "Segunda a sábado 10h00–20h00, domingo 9h00–12h00.",
-        "nl": "ma–za 10.00–20.00 uur, zo 9.00–12.00 uur."
+        "nl": "ma–za 10.00–20.00 uur, zo 9.00–12.00 uur.",
+        "pl": "Pon.–sob. 10:00–20:00, niedz. 9:00–12:00."
       }
     },
     {
@@ -193,7 +198,8 @@
       "duty_i18n": {
         "it": "Mar–sab 11:00–19:00; chiuso la domenica e il lunedì.",
         "pt": "Terça a sábado 11h00–19h00; fechado ao domingo e à segunda-feira.",
-        "nl": "di–za 11.00–19.00 uur; zondag en maandag gesloten."
+        "nl": "di–za 11.00–19.00 uur; zondag en maandag gesloten.",
+        "pl": "Wt.–sob. 11:00–19:00; w niedzielę i poniedziałek zamknięte."
       }
     }
   ],

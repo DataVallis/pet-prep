@@ -91,7 +91,8 @@
         "es": "Clínica de guardia +386 30 716 190 (gratuito); recepción +386 1 4779 277. Guardia lun–vie 19:30–8:00 h, sáb 14:00–24:00 h, dom y festivos 0:00–24:00 h.",
         "it": "Ambulatorio di guardia +386 30 716 190 (gratuito); accettazione +386 1 4779 277. Di guardia lun–ven 19:30–8:00, sab 14:00–24:00, dom e festivi 0–24.",
         "pt": "Clínica de serviço +386 30 716 190 (gratuito); receção +386 1 4779 277. De serviço seg–sex 19h30–8h00, sáb 14h00–24h00, dom e feriados 0h00–24h00.",
-        "nl": "Spoedkliniek +386 30 716 190 (gratis); receptie +386 1 4779 277. Dienst ma–vr 19.30–8.00, za 14.00–24.00, zo en feestdagen 0.00–24.00 uur."
+        "nl": "Spoedkliniek +386 30 716 190 (gratis); receptie +386 1 4779 277. Dienst ma–vr 19.30–8.00, za 14.00–24.00, zo en feestdagen 0.00–24.00 uur.",
+        "pl": "Przychodnia dyżurna +386 30 716 190 (bezpłatnie); rejestracja +386 1 4779 277. Dyżur pon.–pt. 19:30–8:00, sob. 14:00–24:00, niedz. i święta 0–24."
       },
       "small_animals": true,
       "url": "https://www.vf.uni-lj.si/en/area/small-animal-clinic",
@@ -116,7 +117,8 @@
         "es": "Llama antes de ir. La guardia rota cada semana entre Prva-K, Moj Vet, Pet Vet, Zajc & Co. y Veterinarska postaja Ljubljana.",
         "it": "Telefonare prima di venire. La guardia ruota settimanalmente tra Prva-K, Moj Vet, Pet Vet, Zajc & Co. e Veterinarska postaja Ljubljana.",
         "pt": "Liga antes de ires. O serviço roda semanalmente entre Prva-K, Moj Vet, Pet Vet, Zajc & Co. e Veterinarska postaja Ljubljana.",
-        "nl": "Bel vooraf. De spoeddienst wisselt wekelijks tussen Prva-K, Moj Vet, Pet Vet, Zajc & Co. en Veterinarska postaja Ljubljana."
+        "nl": "Bel vooraf. De spoeddienst wisselt wekelijks tussen Prva-K, Moj Vet, Pet Vet, Zajc & Co. en Veterinarska postaja Ljubljana.",
+        "pl": "Zadzwoń przed przyjazdem. Dyżur co tydzień przechodzi między Prva-K, Moj Vet, Pet Vet, Zajc & Co. i Veterinarska postaja Ljubljana."
       },
       "small_animals": true,
       "url": "https://dezurni-veterinar-ljubljana.si/",
@@ -142,7 +144,8 @@
         "es": "Lun–jue 8:00–20:00 h, vie 8:00–14:00 y 15:00–20:00 h, sáb 8:00–15:00 h (con cita previa). Fuera de horario: Dežurni veterinar Ljubljana 041 241 241.",
         "it": "Lun–gio 8–20, ven 8–14 e 15–20, sab 8–15 (su appuntamento). Fuori orario: Dežurni veterinar Ljubljana 041 241 241.",
         "pt": "Seg–qui 8h00–20h00, sex 8h00–14h00 e 15h00–20h00, sáb 8h00–15h00 (sob marcação). Fora de horas: Dežurni veterinar Ljubljana 041 241 241.",
-        "nl": "Ma–do 8.00–20.00, vr 8.00–14.00 en 15.00–20.00, za 8.00–15.00 uur (op afspraak). Buiten kantooruren: Dežurni veterinar Ljubljana 041 241 241."
+        "nl": "Ma–do 8.00–20.00, vr 8.00–14.00 en 15.00–20.00, za 8.00–15.00 uur (op afspraak). Buiten kantooruren: Dežurni veterinar Ljubljana 041 241 241.",
+        "pl": "Pon.–czw. 8–20, pt. 8–14 i 15–20, sob. 8–15 (po wcześniejszym umówieniu). Po godzinach pracy: Dežurni veterinar Ljubljana 041 241 241."
       },
       "small_animals": true,
       "url": "https://www.klinika-zajc.si/",
@@ -166,7 +169,8 @@
         "es": "Lun–vie 8:00–19:30 h, sáb 8:00–13:00 h. Fuera de horario: 041 241 241.",
         "it": "Lun–ven 8:00–19:30, sab 8:00–13:00. Fuori orario: 041 241 241.",
         "pt": "Seg–sex 8h00–19h30, sáb 8h00–13h00. Fora de horas: 041 241 241.",
-        "nl": "Ma–vr 8.00–19.30, za 8.00–13.00 uur. Buiten kantooruren: 041 241 241."
+        "nl": "Ma–vr 8.00–19.30, za 8.00–13.00 uur. Buiten kantooruren: 041 241 241.",
+        "pl": "Pon.–pt. 8:00–19:30, sob. 8:00–13:00. Po godzinach pracy: 041 241 241."
       },
       "small_animals": true,
       "url": "https://www.prva-klinika.si/en/contact/",
@@ -190,7 +194,8 @@
         "es": "Lun–vie 8:00–20:00 h, sáb 8:00–13:00 h. Fuera de horario, guardia en colaboración con otras clínicas: 041 241 241.",
         "it": "Lun–ven 8–20, sab 8–13. Fuori orario, guardia in collaborazione con altre cliniche: 041 241 241.",
         "pt": "Seg–sex 8h00–20h00, sáb 8h00–13h00. Fora de horas, serviço em colaboração com outras clínicas: 041 241 241.",
-        "nl": "Ma–vr 8.00–20.00, za 8.00–13.00 uur. Buiten kantooruren spoeddienst in samenwerking met andere klinieken: 041 241 241."
+        "nl": "Ma–vr 8.00–20.00, za 8.00–13.00 uur. Buiten kantooruren spoeddienst in samenwerking met andere klinieken: 041 241 241.",
+        "pl": "Pon.–pt. 8–20, sob. 8–13. Po godzinach pracy dyżur we współpracy z innymi przychodniami: 041 241 241."
       },
       "small_animals": true,
       "url": "https://www.klinika-petvet.si/",
@@ -214,7 +219,8 @@
         "es": "Lun–vie 8:00–19:00 h, sáb 9:00–13:00 h, cerrado dom y festivos. Fuera de horario: Dežurni veterinar Ljubljana 041 241 241.",
         "it": "Lun–ven 8–19, sab 9–13, dom e festivi chiuso. Fuori orario: Dežurni veterinar Ljubljana 041 241 241.",
         "pt": "Seg–sex 8h00–19h00, sáb 9h00–13h00, dom e feriados fechado. Fora de horas: Dežurni veterinar Ljubljana 041 241 241.",
-        "nl": "Ma–vr 8.00–19.00, za 9.00–13.00 uur, zo en feestdagen gesloten. Buiten kantooruren: Dežurni veterinar Ljubljana 041 241 241."
+        "nl": "Ma–vr 8.00–19.00, za 9.00–13.00 uur, zo en feestdagen gesloten. Buiten kantooruren: Dežurni veterinar Ljubljana 041 241 241.",
+        "pl": "Pon.–pt. 8–19, sob. 9–13, niedz. i święta zamknięte. Po godzinach pracy: Dežurni veterinar Ljubljana 041 241 241."
       },
       "small_animals": true,
       "url": "https://www.mojvet.si/",
@@ -239,7 +245,8 @@
         "es": "Forma parte del turno de guardia de Dežurni veterinar Ljubljana (041 241 241).",
         "it": "Aderisce al turno di guardia Dežurni veterinar Ljubljana (041 241 241).",
         "pt": "Integra a escala do Dežurni veterinar Ljubljana (041 241 241).",
-        "nl": "Deelnemer aan het dienstrooster van Dežurni veterinar Ljubljana (041 241 241)."
+        "nl": "Deelnemer aan het dienstrooster van Dežurni veterinar Ljubljana (041 241 241).",
+        "pl": "Uczestnik dyżurów Dežurni veterinar Ljubljana (041 241 241)."
       },
       "small_animals": true,
       "url": "http://www.veterinarska-postaja.si/",
@@ -264,7 +271,8 @@
         "es": "Veterinario de guardia las 24 horas, los 7 días: +386 31 333 707; clínica +386 1 544 10 12, lun–vie 9:00–18:00 h, sáb 9:00–13:00 h.",
         "it": "Veterinario di guardia 24 ore su 24, 7 giorni su 7: +386 31 333 707; ambulatorio +386 1 544 10 12, lun–ven 9–18, sab 9–13.",
         "pt": "Veterinário de serviço 24 h/24, 7 dias por semana: +386 31 333 707; clínica +386 1 544 10 12, seg–sex 9h00–18h00, sáb 9h00–13h00.",
-        "nl": "Dienstdoende dierenarts 24/7: +386 31 333 707; kliniek +386 1 544 10 12, ma–vr 9.00–18.00, za 9.00–13.00 uur."
+        "nl": "Dienstdoende dierenarts 24/7: +386 31 333 707; kliniek +386 1 544 10 12, ma–vr 9.00–18.00, za 9.00–13.00 uur.",
+        "pl": "Dyżurny weterynarz 24/7: +386 31 333 707; przychodnia +386 1 544 10 12, pon.–pt. 9–18, sob. 9–13."
       },
       "small_animals": true,
       "url": "https://veterinabtc.si/",
@@ -289,7 +297,8 @@
         "es": "Veterinario de guardia +386 31 297 147; clínica +386 1 528 42 92, lun–vie 7:00–19:00 h, sáb 7:00–12:00 h, dom 7:00–8:30 h.",
         "it": "Veterinario di guardia +386 31 297 147; ambulatorio +386 1 528 42 92, lun–ven 7–19, sab 7–12, dom 7:00–8:30.",
         "pt": "Veterinário de serviço +386 31 297 147; clínica +386 1 528 42 92, seg–sex 7h00–19h00, sáb 7h00–12h00, dom 7h00–8h30.",
-        "nl": "Dienstdoende dierenarts +386 31 297 147; kliniek +386 1 528 42 92, ma–vr 7.00–19.00, za 7.00–12.00, zo 7.00–8.30 uur."
+        "nl": "Dienstdoende dierenarts +386 31 297 147; kliniek +386 1 528 42 92, ma–vr 7.00–19.00, za 7.00–12.00, zo 7.00–8.30 uur.",
+        "pl": "Dyżurny weterynarz +386 31 297 147; przychodnia +386 1 528 42 92, pon.–pt. 7–19, sob. 7–12, niedz. 7:00–8:30."
       },
       "small_animals": true,
       "url": "https://www.vetamblj.si/",
@@ -315,7 +324,8 @@
         "es": "Lun–vie 8:00–13:00 y 14:00–19:00 h, sáb 8:00–13:00 h, cerrado dom y festivos.",
         "it": "Lun–ven 8–13 e 14–19, sab 8–13, dom e festivi chiuso.",
         "pt": "Seg–sex 8h00–13h00 e 14h00–19h00, sáb 8h00–13h00, dom e feriados fechado.",
-        "nl": "Ma–vr 8.00–13.00 en 14.00–19.00, za 8.00–13.00 uur, zo en feestdagen gesloten."
+        "nl": "Ma–vr 8.00–13.00 en 14.00–19.00, za 8.00–13.00 uur, zo en feestdagen gesloten.",
+        "pl": "Pon.–pt. 8–13 i 14–19, sob. 8–13, niedz. i święta zamknięte."
       },
       "small_animals": true,
       "url": "https://www.macjahisa-vet.si/",
@@ -337,7 +347,8 @@
         "es": "Lun–vie 8:30–19:00 h, sáb 8:00–12:00 h, cerrado dom y festivos. Tiene número de guardia.",
         "it": "Lun–ven 8:30–19:00, sab 8–12, dom e festivi chiuso. Dispone di un numero di guardia.",
         "pt": "Seg–sex 8h30–19h00, sáb 8h00–12h00, dom e feriados fechado. Tem número de serviço.",
-        "nl": "Ma–vr 8.30–19.00, za 8.00–12.00 uur, zo en feestdagen gesloten. Heeft een spoednummer."
+        "nl": "Ma–vr 8.30–19.00, za 8.00–12.00 uur, zo en feestdagen gesloten. Heeft een spoednummer.",
+        "pl": "Pon.–pt. 8:30–19:00, sob. 8–12, niedz. i święta zamknięte. Ma numer dyżurny."
       },
       "small_animals": true,
       "url": "https://veterinarska-ambulanta.net/",
@@ -362,7 +373,8 @@
         "es": "Lun, mar, mié y vie 8:00–15:00 h, jue 8:00–19:00 h, cerrado sáb.",
         "it": "Lun, mar, mer, ven 8–15, gio 8–19, sab chiuso.",
         "pt": "Seg, ter, qua, sex 8h00–15h00, qui 8h00–19h00, sáb fechado.",
-        "nl": "Ma, di, wo, vr 8.00–15.00, do 8.00–19.00 uur, za gesloten."
+        "nl": "Ma, di, wo, vr 8.00–15.00, do 8.00–19.00 uur, za gesloten.",
+        "pl": "Pon., wt., śr., pt. 8–15, czw. 8–19, sob. zamknięte."
       },
       "small_animals": true,
       "url": "https://www.tristokosmatih.si/",
@@ -413,7 +425,8 @@
         "es": "Lun–vie 8:00–19:00 h, sáb 8:00–13:00 h, cerrado dom y festivos. Casos urgentes fuera de horario: 064 156 163.",
         "it": "Lun–ven 8–19, sab 8–13, dom e festivi chiuso. Casi urgenti fuori orario: 064 156 163.",
         "pt": "Seg–sex 8h00–19h00, sáb 8h00–13h00, dom e feriados fechado. Urgências fora de horas: 064 156 163.",
-        "nl": "Ma–vr 8.00–19.00, za 8.00–13.00 uur, zo en feestdagen gesloten. Spoedgevallen buiten kantooruren: 064 156 163."
+        "nl": "Ma–vr 8.00–19.00, za 8.00–13.00 uur, zo en feestdagen gesloten. Spoedgevallen buiten kantooruren: 064 156 163.",
+        "pl": "Pon.–pt. 8–19, sob. 8–13, niedz. i święta zamknięte. Pilne przypadki po godzinach pracy: 064 156 163."
       },
       "small_animals": true,
       "url": "https://www.vet-barje.si/kontakt/",
@@ -437,7 +450,8 @@
         "es": "Lun–vie 8:00–19:00 h, sáb 8:00–12:00 h. Veterinario de guardia fuera de horario: 040 724 677.",
         "it": "Lun–ven 8–19, sab 8–12. Veterinario di guardia fuori orario: 040 724 677.",
         "pt": "Seg–sex 8h00–19h00, sáb 8h00–12h00. Fora de horas, veterinário de serviço: 040 724 677.",
-        "nl": "Ma–vr 8.00–19.00, za 8.00–12.00 uur. Dienstdoende dierenarts buiten kantooruren: 040 724 677."
+        "nl": "Ma–vr 8.00–19.00, za 8.00–12.00 uur. Dienstdoende dierenarts buiten kantooruren: 040 724 677.",
+        "pl": "Pon.–pt. 8–19, sob. 8–12. Dyżurny weterynarz po godzinach pracy: 040 724 677."
       },
       "small_animals": true,
       "url": "https://www.veterina-max.si/en/",
@@ -461,7 +475,8 @@
         "es": "Lun 13:00–19:00 h, mar 8:00–14:00 h, mié–vie 13:00–19:00 h, sáb 8:00–12:00 h. Veterinario de guardia fuera de horario: 040 724 677.",
         "it": "Lun 13–19, mar 8–14, mer–ven 13–19, sab 8–12. Veterinario di guardia fuori orario: 040 724 677.",
         "pt": "Seg 13h00–19h00, ter 8h00–14h00, qua–sex 13h00–19h00, sáb 8h00–12h00. Fora de horas, veterinário de serviço: 040 724 677.",
-        "nl": "Ma 13.00–19.00, di 8.00–14.00, wo–vr 13.00–19.00, za 8.00–12.00 uur. Dienstdoende dierenarts buiten kantooruren: 040 724 677."
+        "nl": "Ma 13.00–19.00, di 8.00–14.00, wo–vr 13.00–19.00, za 8.00–12.00 uur. Dienstdoende dierenarts buiten kantooruren: 040 724 677.",
+        "pl": "Pon. 13–19, wt. 8–14, śr.–pt. 13–19, sob. 8–12. Dyżurny weterynarz po godzinach pracy: 040 724 677."
       },
       "small_animals": true,
       "url": "https://www.veterina-max.si/en/",
@@ -485,7 +500,8 @@
         "es": "Lun–vie 7:00–18:00 h, sáb 7:00–11:00 h.",
         "it": "Lun–ven 7–18, sab 7–11.",
         "pt": "Seg–sex 7h00–18h00, sáb 7h00–11h00.",
-        "nl": "Ma–vr 7.00–18.00, za 7.00–11.00 uur."
+        "nl": "Ma–vr 7.00–18.00, za 7.00–11.00 uur.",
+        "pl": "Pon.–pt. 7–18, sob. 7–11."
       },
       "small_animals": true,
       "url": "http://www.veterina-kamnik.si/",
@@ -510,7 +526,8 @@
         "es": "Animales pequeños: días laborables 7:00–19:00 h, sáb 7:00–12:00 h, dom y festivos 8:00–9:00 h. Veterinario de guardia (solo casos urgentes): 051 233 104.",
         "it": "Piccoli animali: giorni feriali 7–19, sab 7–12, dom e festivi 8–9. Veterinario di guardia (solo casi urgenti): 051 233 104.",
         "pt": "Pequenos animais: dias úteis 7h00–19h00, sáb 7h00–12h00, dom e feriados 8h00–9h00. Veterinário de serviço (só urgências): 051 233 104.",
-        "nl": "Kleine dieren: werkdagen 7.00–19.00, za 7.00–12.00, zo en feestdagen 8.00–9.00 uur. Dienstdoende dierenarts (alleen spoedgevallen): 051 233 104."
+        "nl": "Kleine dieren: werkdagen 7.00–19.00, za 7.00–12.00, zo en feestdagen 8.00–9.00 uur. Dienstdoende dierenarts (alleen spoedgevallen): 051 233 104.",
+        "pl": "Małe zwierzęta: w dni robocze 7–19, sob. 7–12, niedz. i święta 8–9. Dyżurny weterynarz (tylko pilne przypadki): 051 233 104."
       },
       "small_animals": true,
       "url": "https://veterinarski-dom.si/ambulanta-za-male-zivali.html",
@@ -534,7 +551,8 @@
         "es": "Lun–vie 8:00–20:00 h, sáb 8:00–12:00 h, cerrado dom y festivos.",
         "it": "Lun–ven 8–20, sab 8–12, dom e festivi chiuso.",
         "pt": "Seg–sex 8h00–20h00, sáb 8h00–12h00, dom e feriados fechado.",
-        "nl": "Ma–vr 8.00–20.00, za 8.00–12.00 uur, zo en feestdagen gesloten."
+        "nl": "Ma–vr 8.00–20.00, za 8.00–12.00 uur, zo en feestdagen gesloten.",
+        "pl": "Pon.–pt. 8–20, sob. 8–12, niedz. i święta zamknięte."
       },
       "small_animals": true,
       "url": "https://www.vet4pet.si/",
@@ -558,7 +576,8 @@
         "es": "Lun–vie 8:00–13:00 y 16:00–19:00 h, sáb 8:00–12:00 h. Guardia: +386 51 363 997.",
         "it": "Lun–ven 8–13 e 16–19, sab 8–12. Guardia: +386 51 363 997.",
         "pt": "Seg–sex 8h00–13h00 e 16h00–19h00, sáb 8h00–12h00. Serviço: +386 51 363 997.",
-        "nl": "Ma–vr 8.00–13.00 en 16.00–19.00, za 8.00–12.00 uur. Spoeddienst: +386 51 363 997."
+        "nl": "Ma–vr 8.00–13.00 en 16.00–19.00, za 8.00–12.00 uur. Spoeddienst: +386 51 363 997.",
+        "pl": "Pon.–pt. 8–13 i 16–19, sob. 8–12. Dyżur: +386 51 363 997."
       },
       "small_animals": true,
       "url": "https://www.veterinabuba.si/kontakt",
@@ -582,7 +601,8 @@
         "es": "Clínica de animales pequeños lun–vie 7:00–13:00 y 16:00–18:00 h, sáb 7:00–10:00 h; guardia las 24 horas en el mismo número.",
         "it": "Ambulatorio per piccoli animali lun–ven 7–13 e 16–18, sab 7–10; guardia 24 ore su 24 allo stesso numero.",
         "pt": "Consultório seg–sex 7h00–13h00 e 16h00–18h00, sáb 7h00–10h00; serviço 24 h no mesmo número.",
-        "nl": "Kleindierenpraktijk ma–vr 7.00–13.00 en 16.00–18.00, za 7.00–10.00 uur; 24 uur per dag spoeddienst op hetzelfde nummer."
+        "nl": "Kleindierenpraktijk ma–vr 7.00–13.00 en 16.00–18.00, za 7.00–10.00 uur; 24 uur per dag spoeddienst op hetzelfde nummer.",
+        "pl": "Przychodnia dla małych zwierząt pon.–pt. 7–13 i 16–18, sob. 7–10; dyżur 24 h pod tym samym numerem."
       },
       "small_animals": true,
       "url": "https://vpv.si/",
@@ -608,7 +628,8 @@
         "es": "Días laborables 8:00–19:00 h, sáb 8:00–12:00 h. Casos urgentes también fuera de horario (animales pequeños): +386 40 235 206.",
         "it": "Giorni feriali 8–19, sab 8–12. Casi urgenti anche fuori orario (piccoli animali): +386 40 235 206.",
         "pt": "Dias úteis 8h00–19h00, sáb 8h00–12h00. Urgências também fora de horas (pequenos animais): +386 40 235 206.",
-        "nl": "Werkdagen 8.00–19.00, za 8.00–12.00 uur. Spoedgevallen ook buiten kantooruren (kleine dieren): +386 40 235 206."
+        "nl": "Werkdagen 8.00–19.00, za 8.00–12.00 uur. Spoedgevallen ook buiten kantooruren (kleine dieren): +386 40 235 206.",
+        "pl": "W dni robocze 8–19, sob. 8–12. Pilne przypadki także po godzinach pracy (małe zwierzęta): +386 40 235 206."
       },
       "small_animals": true,
       "url": "https://vet-center.si/o-nas/",
@@ -631,7 +652,8 @@
         "es": "Noches, domingos y festivos; por turnos entre Vet klinika Lesce, Medicovet Kranj y compañeros de Škofja Loka y Ljubljana.",
         "it": "Notti, domeniche e festivi; a rotazione tra Vet klinika Lesce, Medicovet Kranj e colleghi di Škofja Loka e Ljubljana.",
         "pt": "Noites, domingos e feriados; rotativo entre Vet klinika Lesce, Medicovet Kranj e colegas de Škofja Loka e Ljubljana.",
-        "nl": "Nachtdienst, op zondag en feestdagen; wisselend tussen Vet klinika Lesce, Medicovet Kranj en collega's uit Škofja Loka en Ljubljana."
+        "nl": "Nachtdienst, op zondag en feestdagen; wisselend tussen Vet klinika Lesce, Medicovet Kranj en collega's uit Škofja Loka en Ljubljana.",
+        "pl": "Noce, niedziele i święta; dyżur na zmianę między Vet klinika Lesce, Medicovet Kranj oraz kolegami ze Škofja Loka i Lublany."
       },
       "small_animals": true,
       "url": "https://www.vet-lesce.si/kontakt",
@@ -656,7 +678,8 @@
         "es": "Lun–vie 8:00–19:00 h, sáb 8:00–12:00 h. Número de guardia: 051 645 409.",
         "it": "Lun–ven 8–19, sab 8–12. Numero di guardia: 051 645 409.",
         "pt": "Seg–sex 8h00–19h00, sáb 8h00–12h00. Número de serviço: 051 645 409.",
-        "nl": "Ma–vr 8.00–19.00, za 8.00–12.00 uur. Spoednummer: 051 645 409."
+        "nl": "Ma–vr 8.00–19.00, za 8.00–12.00 uur. Spoednummer: 051 645 409.",
+        "pl": "Pon.–pt. 8–19, sob. 8–12. Numer dyżurny: 051 645 409."
       },
       "small_animals": true,
       "url": "https://www.vet-lesce.si/",
@@ -680,7 +703,8 @@
         "es": "Lun–vie 8:00–20:00 h, sáb 8:00–12:00 h. Domingos, festivos y fuera de horario: 051 645 409.",
         "it": "Lun–ven 8–20, sab 8–12. Domeniche, festivi e fuori orario: 051 645 409.",
         "pt": "Seg–sex 8h00–20h00, sáb 8h00–12h00. Domingos, feriados e fora de horas: 051 645 409.",
-        "nl": "Ma–vr 8.00–20.00, za 8.00–12.00 uur. Op zondag, feestdagen en buiten kantooruren: 051 645 409."
+        "nl": "Ma–vr 8.00–20.00, za 8.00–12.00 uur. Op zondag, feestdagen en buiten kantooruren: 051 645 409.",
+        "pl": "Pon.–pt. 8–20, sob. 8–12. Niedziele, święta i po godzinach pracy: 051 645 409."
       },
       "small_animals": true,
       "url": "https://www.medicovet.si/",
@@ -705,7 +729,8 @@
         "es": "Días laborables 8:00–19:00 h, sáb 8:00–12:00 h. Fuera de horario, el veterinario atiende en el mismo número (clínica de animales de compañía).",
         "it": "Giorni feriali 8–19, sab 8–12. Fuori orario il veterinario è raggiungibile allo stesso numero (clinica per animali da compagnia).",
         "pt": "Dias úteis 8h00–19h00, sáb 8h00–12h00. Fora de horas, o veterinário atende no mesmo número (clínica de animais de companhia).",
-        "nl": "Werkdagen 8.00–19.00, za 8.00–12.00 uur. Buiten kantooruren is de dierenarts op hetzelfde nummer bereikbaar (kliniek voor gezelschapsdieren)."
+        "nl": "Werkdagen 8.00–19.00, za 8.00–12.00 uur. Buiten kantooruren is de dierenarts op hetzelfde nummer bereikbaar (kliniek voor gezelschapsdieren).",
+        "pl": "W dni robocze 8–19, sob. 8–12. Po godzinach pracy weterynarz jest dostępny pod tym samym numerem (przychodnia dla zwierząt domowych)."
       },
       "small_animals": true,
       "url": "https://www.kvc.si/",
@@ -743,7 +768,8 @@
         "es": "Días laborables 8:00–20:00 h, sáb 8:00–13:00 h; admisión con cita previa.",
         "it": "Giorni feriali 8–20, sab 8–13; accesso su appuntamento.",
         "pt": "Dias úteis 8h00–20h00, sáb 8h00–13h00; admissão sob marcação.",
-        "nl": "Werkdagen 8.00–20.00, za 8.00–13.00 uur; opname op afspraak."
+        "nl": "Werkdagen 8.00–20.00, za 8.00–13.00 uur; opname op afspraak.",
+        "pl": "W dni robocze 8–20, sob. 8–13; przyjęcia po wcześniejszym umówieniu."
       },
       "small_animals": true,
       "url": "https://www.klinikaloka.com/en/",
@@ -767,7 +793,8 @@
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–14:00 h. Guardia de animales pequeños y grandes las 24 horas.",
         "it": "Lun–ven 8–18, sab 8–14. Guardia per piccoli e grandi animali 24 ore su 24.",
         "pt": "Seg–sex 8h00–18h00, sáb 8h00–14h00. Serviço de urgência para pequenos e grandes animais 24 horas por dia.",
-        "nl": "Ma–vr 8.00–18.00, za 8.00–14.00 uur. Spoeddienst voor klein- en grootdierenpraktijk 24 uur per dag."
+        "nl": "Ma–vr 8.00–18.00, za 8.00–14.00 uur. Spoeddienst voor klein- en grootdierenpraktijk 24 uur per dag.",
+        "pl": "Pon.–pt. 8–18, sob. 8–14. Dyżur dla małej i dużej praktyki całą dobę."
       },
       "small_animals": true,
       "url": "https://tacka-veterina.si/veterinarska-postaja-jesenice/",
@@ -793,7 +820,8 @@
         "es": "Teléfono de guardia 041 691 243; clínica 05 911 28 92, lun y jue 11:00–18:00 h, mar y vie 8:00–15:00 h, mié 8:00–17:00 h, sáb 8:00–12:00 h.",
         "it": "Telefono di guardia 041 691 243; ambulatorio 05 911 28 92, lun e gio 11–18, mar e ven 8–15, mer 8–17, sab 8–12.",
         "pt": "Telefone de serviço 041 691 243; clínica 05 911 28 92, seg e qui 11h00–18h00, ter e sex 8h00–15h00, qua 8h00–17h00, sáb 8h00–12h00.",
-        "nl": "Spoedtelefoon 041 691 243; kliniek 05 911 28 92, ma en do 11.00–18.00, di en vr 8.00–15.00, wo 8.00–17.00, za 8.00–12.00 uur."
+        "nl": "Spoedtelefoon 041 691 243; kliniek 05 911 28 92, ma en do 11.00–18.00, di en vr 8.00–15.00, wo 8.00–17.00, za 8.00–12.00 uur.",
+        "pl": "Telefon dyżurny 041 691 243; przychodnia 05 911 28 92, pon. i czw. 11–18, wt. i pt. 8–15, śr. 8–17, sob. 8–12."
       },
       "small_animals": true,
       "url": "https://www.veterinapristov.si/",
@@ -833,7 +861,8 @@
         "es": "Lun–vie 9:00–13:00 y 14:30–19:00 h, sáb 9:00–13:00 h.",
         "it": "Lun–ven 9–13 e 14:30–19, sab 9–13.",
         "pt": "Seg–sex 9h00–13h00 e 14h30–19h00, sáb 9h00–13h00.",
-        "nl": "Ma–vr 9.00–13.00 en 14.30–19.00, za 9.00–13.00 uur."
+        "nl": "Ma–vr 9.00–13.00 en 14.30–19.00, za 9.00–13.00 uur.",
+        "pl": "Pon.–pt. 9–13 i 14:30–19, sob. 9–13."
       },
       "small_animals": true,
       "url": "https://ahp.si/en/kontakt/",
@@ -857,7 +886,8 @@
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h. Veterinario de guardia en el mismo número.",
         "it": "Lun–ven 8–18, sab 8–12. Veterinario di guardia allo stesso numero.",
         "pt": "Seg–sex 8h00–18h00, sáb 8h00–12h00. Veterinário de serviço no mesmo número.",
-        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur. Dienstdoende dierenarts op hetzelfde nummer."
+        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur. Dienstdoende dierenarts op hetzelfde nummer.",
+        "pl": "Pon.–pt. 8–18, sob. 8–12. Dyżurny weterynarz pod tym samym numerem."
       },
       "small_animals": true,
       "url": "https://primaveterina.si/",
@@ -922,7 +952,8 @@
         "es": "Horario habitual lun–vie 7:30–17:00 h, sáb 9:00–13:00 h. Clínica de guardia lun–vie 17:00–7:30 h, sáb desde las 13:00, dom 24 h; por turnos con otras clínicas; recargo del 50 % fuera del horario habitual.",
         "it": "Orario regolare lun–ven 7:30–17, sab 9–13. Ambulatorio di guardia lun–ven 17:00–7:30, sab dalle 13:00, dom 24 ore su 24; a turno con altre cliniche; supplemento del 50% fuori dall'orario regolare.",
         "pt": "Horário normal seg–sex 7h30–17h00, sáb 9h00–13h00. Clínica de serviço seg–sex 17h00–7h30, sáb a partir das 13h00, dom 24 h; em escala com outras clínicas; suplemento de +50 % fora do horário normal.",
-        "nl": "Reguliere uren ma–vr 7.30–17.00, za 9.00–13.00 uur. Spoedkliniek ma–vr 17.00–7.30, za vanaf 13.00 uur, zo 24 uur; bij toerbeurt met andere klinieken; 50% toeslag buiten reguliere uren."
+        "nl": "Reguliere uren ma–vr 7.30–17.00, za 9.00–13.00 uur. Spoedkliniek ma–vr 17.00–7.30, za vanaf 13.00 uur, zo 24 uur; bij toerbeurt met andere klinieken; 50% toeslag buiten reguliere uren.",
+        "pl": "Zwykłe godziny pon.–pt. 7:30–17, sob. 9–13. Przychodnia dyżurna pon.–pt. 17:00–7:30, sob. od 13:00, niedz. całą dobę; w systemie rotacyjnym z innymi przychodniami; dopłata +50% poza zwykłymi godzinami pracy."
       },
       "small_animals": true,
       "url": "https://vetambulanta-kp.com/",
@@ -948,7 +979,8 @@
         "es": "Lun, mié y vie 17:00–19:00 h. Guardia: Veterinarska ambulanta Koper, 05 663 44 00.",
         "it": "Lun, mer, ven 17–19. Guardia: Veterinarska ambulanta Koper, 05 663 44 00.",
         "pt": "Seg, qua, sex 17h00–19h00. Serviço: Veterinarska ambulanta Koper, 05 663 44 00.",
-        "nl": "Ma, wo, vr 17.00–19.00 uur. Spoeddienst: Veterinarska ambulanta Koper, 05 663 44 00."
+        "nl": "Ma, wo, vr 17.00–19.00 uur. Spoeddienst: Veterinarska ambulanta Koper, 05 663 44 00.",
+        "pl": "Pon., śr., pt. 17–19. Dyżur: Veterinarska ambulanta Koper, 05 663 44 00."
       },
       "small_animals": true,
       "url": "https://vetambulanta-kp.com/ambulante/",
@@ -972,7 +1004,8 @@
         "es": "Guardia las 24 horas, los 7 días: 041 355 351; clínica 08 202 0160, lun–vie 8:00–19:00 h, sáb 8:00–13:00 h.",
         "it": "Guardia 24 ore su 24, 7 giorni su 7: 041 355 351; ambulatorio 08 202 0160, lun–ven 8–19, sab 8–13.",
         "pt": "Serviço 24 h/24, 7 dias por semana: 041 355 351; clínica 08 202 0160, seg–sex 8h00–19h00, sáb 8h00–13h00.",
-        "nl": "Spoeddienst 24/7: 041 355 351; kliniek 08 202 0160, ma–vr 8.00–19.00, za 8.00–13.00 uur."
+        "nl": "Spoeddienst 24/7: 041 355 351; kliniek 08 202 0160, ma–vr 8.00–19.00, za 8.00–13.00 uur.",
+        "pl": "Dyżur 24/7: 041 355 351; przychodnia 08 202 0160, pon.–pt. 8–19, sob. 8–13."
       },
       "small_animals": true,
       "url": "https://tacka-veterina.si/veterinarska-koper/",
@@ -997,7 +1030,8 @@
         "es": "Lun, mar, jue y vie 8:00–16:00 h, mié 10:00–18:00 h; cerrado sáb, dom y festivos.",
         "it": "Lun, mar, gio, ven 8–16, mer 10–18; sab, dom e festivi chiuso.",
         "pt": "Seg, ter, qui, sex 8h00–16h00, qua 10h00–18h00; sáb, dom e feriados fechado.",
-        "nl": "Ma, di, do, vr 8.00–16.00, wo 10.00–18.00 uur; za, zo en feestdagen gesloten."
+        "nl": "Ma, di, do, vr 8.00–16.00, wo 10.00–18.00 uur; za, zo en feestdagen gesloten.",
+        "pl": "Pon., wt., czw., pt. 8–16, śr. 10–18; sob., niedz. i święta zamknięte."
       },
       "small_animals": true,
       "url": "https://www.macjahisa-vet.si/",
@@ -1034,7 +1068,8 @@
         "es": "Lun–vie 8:00–19:00 h, sáb 9:00–12:00 h, cerrado dom y festivos.",
         "it": "Lun–ven 8–19, sab 9–12, dom e festivi chiuso.",
         "pt": "Seg–sex 8h00–19h00, sáb 9h00–12h00, dom e feriados fechado.",
-        "nl": "Ma–vr 8.00–19.00, za 9.00–12.00 uur, zo en feestdagen gesloten."
+        "nl": "Ma–vr 8.00–19.00, za 9.00–12.00 uur, zo en feestdagen gesloten.",
+        "pl": "Pon.–pt. 8–19, sob. 9–12, niedz. i święta zamknięte."
       },
       "small_animals": true,
       "url": "https://veterina-izola.si/",
@@ -1058,7 +1093,8 @@
         "es": "Lun–vie 9:00–17:00 h, sáb 9:00–13:00 h.",
         "it": "Lun–ven 9–17, sab 9–13.",
         "pt": "Seg–sex 9h00–17h00, sáb 9h00–13h00.",
-        "nl": "Ma–vr 9.00–17.00, za 9.00–13.00 uur."
+        "nl": "Ma–vr 9.00–17.00, za 9.00–13.00 uur.",
+        "pl": "Pon.–pt. 9–17, sob. 9–13."
       },
       "small_animals": true,
       "source_url": "https://www.portoroz.si/en/plan-your-stay/pet-friendly-holidays/veterinary-hospitals",
@@ -1109,7 +1145,8 @@
         "es": "Lun–vie 9:00–13:00 y 15:00–19:00 h, sáb 9:00–13:00 h. Servicio de guardia en el mismo número.",
         "it": "Lun–ven 9–13 e 15–19, sab 9–13. Servizio di guardia allo stesso numero.",
         "pt": "Seg–sex 9h00–13h00 e 15h00–19h00, sáb 9h00–13h00. Serviço de urgência no mesmo número.",
-        "nl": "Ma–vr 9.00–13.00 en 15.00–19.00, za 9.00–13.00 uur. Spoeddienst op hetzelfde nummer."
+        "nl": "Ma–vr 9.00–13.00 en 15.00–19.00, za 9.00–13.00 uur. Spoeddienst op hetzelfde nummer.",
+        "pl": "Pon.–pt. 9–13 i 15–19, sob. 9–13. Dyżur pod tym samym numerem."
       },
       "small_animals": true,
       "url": "https://www.vethrpelje.si/kontakt",
@@ -1133,7 +1170,8 @@
         "es": "Lun–vie 8:00–20:00 h, sáb 8:00–13:00 h. Guardia las 24 horas (clínica 05 364 43 90; campo 05 364 43 96).",
         "it": "Lun–ven 8–20, sab 8–13. Guardia 24 ore su 24 (ambulatorio 05 364 43 90; visite in campo 05 364 43 96).",
         "pt": "Seg–sex 8h00–20h00, sáb 8h00–13h00. Serviço 24 h por dia (clínica 05 364 43 90; terreno 05 364 43 96).",
-        "nl": "Ma–vr 8.00–20.00, za 8.00–13.00 uur. Spoeddienst 24 uur per dag (kliniek 05 364 43 90; veldpraktijk 05 364 43 96)."
+        "nl": "Ma–vr 8.00–20.00, za 8.00–13.00 uur. Spoeddienst 24 uur per dag (kliniek 05 364 43 90; veldpraktijk 05 364 43 96).",
+        "pl": "Pon.–pt. 8–20, sob. 8–13. Dyżur całą dobę (przychodnia 05 364 43 90; wizyty terenowe 05 364 43 96)."
       },
       "small_animals": true,
       "url": "https://veterina-vipava.si/",
@@ -1159,7 +1197,8 @@
         "es": "Lun–vie 7:00–19:00 h, sáb 7:00–12:00 h, cerrado dom y festivos. Urgencias de guardia (Vipava): +386 5 364 43 90.",
         "it": "Lun–ven 7–19, sab 7–12, dom e festivi chiuso. Guardia di emergenza (Vipava): +386 5 364 43 90.",
         "pt": "Seg–sex 7h00–19h00, sáb 7h00–12h00, dom e feriados fechado. Urgências de serviço (Vipava): +386 5 364 43 90.",
-        "nl": "Ma–vr 7.00–19.00, za 7.00–12.00 uur, zo en feestdagen gesloten. Spoeddienst (Vipava): +386 5 364 43 90."
+        "nl": "Ma–vr 7.00–19.00, za 7.00–12.00 uur, zo en feestdagen gesloten. Spoeddienst (Vipava): +386 5 364 43 90.",
+        "pl": "Pon.–pt. 7–19, sob. 7–12, niedz. i święta zamknięte. Dyżur w nagłych przypadkach (Vipava): +386 5 364 43 90."
       },
       "small_animals": true,
       "url": "https://veterina-gorica.si/",
@@ -1183,7 +1222,8 @@
         "es": "Lun–vie 7:00–20:00 h, sáb 8:00–13:00 h, cerrado dom y festivos. Teléfono de guardia: 064 11 22 77.",
         "it": "Lun–ven 7–20, sab 8–13, dom e festivi chiuso. Telefono di guardia: 064 11 22 77.",
         "pt": "Seg–sex 7h00–20h00, sáb 8h00–13h00, dom e feriados fechado. Telefone de serviço: 064 11 22 77.",
-        "nl": "Ma–vr 7.00–20.00, za 8.00–13.00 uur, zo en feestdagen gesloten. Spoedtelefoon: 064 11 22 77."
+        "nl": "Ma–vr 7.00–20.00, za 8.00–13.00 uur, zo en feestdagen gesloten. Spoedtelefoon: 064 11 22 77.",
+        "pl": "Pon.–pt. 7–20, sob. 8–13, niedz. i święta zamknięte. Telefon dyżurny: 064 11 22 77."
       },
       "small_animals": true,
       "url": "https://www.leonvet.si/",
@@ -1300,7 +1340,8 @@
         "es": "Lun, mié y vie 8:00–16:00 h (admisión hasta las 15 h), mar y jue 12:00–20:00 h (admisión hasta las 19 h); cerrado sáb, dom y festivos. Solo pacientes con cita previa.",
         "it": "Lun, mer, ven 8–16 (accettazione fino alle 15), mar e gio 12–20 (accettazione fino alle 19); sab, dom e festivi chiuso. Solo pazienti con appuntamento.",
         "pt": "Seg, qua, sex 8h00–16h00 (admissão até às 15h00), ter e qui 12h00–20h00 (admissão até às 19h00); sáb, dom e feriados fechado. Só pacientes com marcação.",
-        "nl": "Ma, wo, vr 8.00–16.00 (toelating tot 15.00 uur), di en do 12.00–20.00 uur (toelating tot 19.00 uur); za, zo en feestdagen gesloten. Alleen patiënten met afspraak."
+        "nl": "Ma, wo, vr 8.00–16.00 (toelating tot 15.00 uur), di en do 12.00–20.00 uur (toelating tot 19.00 uur); za, zo en feestdagen gesloten. Alleen patiënten met afspraak.",
+        "pl": "Pon., śr., pt. 8–16 (przyjęcia do 15), wt. i czw. 12–20 (przyjęcia do 19); sob., niedz. i święta zamknięte. Tylko dla pacjentów po wcześniejszym umówieniu."
       },
       "small_animals": true,
       "url": "https://www.emirkirurgija.si/",
@@ -1339,7 +1380,8 @@
         "es": "Lun 8:00–19:00 h, mar 13:00–19:00 h, mié 8:00–15:00 h, jue 13:00–19:00 h, vie 8:00–19:00 h, sáb 8:00–13:00 h; cerrado dom y festivos.",
         "it": "Lun 8–19, mar 13–19, mer 8–15, gio 13–19, ven 8–19, sab 8–13; dom e festivi chiuso.",
         "pt": "Seg 8h00–19h00, ter 13h00–19h00, qua 8h00–15h00, qui 13h00–19h00, sex 8h00–19h00, sáb 8h00–13h00; dom e feriados fechado.",
-        "nl": "Ma 8.00–19.00, di 13.00–19.00, wo 8.00–15.00, do 13.00–19.00, vr 8.00–19.00, za 8.00–13.00 uur; zo en feestdagen gesloten."
+        "nl": "Ma 8.00–19.00, di 13.00–19.00, wo 8.00–15.00, do 13.00–19.00, vr 8.00–19.00, za 8.00–13.00 uur; zo en feestdagen gesloten.",
+        "pl": "Pon. 8–19, wt. 13–19, śr. 8–15, czw. 13–19, pt. 8–19, sob. 8–13; niedz. i święta zamknięte."
       },
       "small_animals": true,
       "url": "https://vetnoe.eu/",
@@ -1406,7 +1448,8 @@
         "es": "Lun–vie 7:00–18:00 h, sáb 8:00–11:00 h. Número de guardia: 041 327 716.",
         "it": "Lun–ven 7–18, sab 8–11. Numero di guardia: 041 327 716.",
         "pt": "Seg–sex 7h00–18h00, sáb 8h00–11h00. Número de serviço: 041 327 716.",
-        "nl": "Ma–vr 7.00–18.00, za 8.00–11.00 uur. Spoednummer: 041 327 716."
+        "nl": "Ma–vr 7.00–18.00, za 8.00–11.00 uur. Spoednummer: 041 327 716.",
+        "pl": "Pon.–pt. 7–18, sob. 8–11. Numer dyżurny: 041 327 716."
       },
       "small_animals": true,
       "url": "https://www.veterina-dobro.si/",
@@ -1431,7 +1474,8 @@
         "es": "Lun–vie 7:00–12:00 y 15:00–18:00 h, sáb 8:00–11:00 h. Número de guardia: 041 327 716.",
         "it": "Lun–ven 7–12 e 15–18, sab 8–11. Numero di guardia: 041 327 716.",
         "pt": "Seg–sex 7h00–12h00 e 15h00–18h00, sáb 8h00–11h00. Número de serviço: 041 327 716.",
-        "nl": "Ma–vr 7.00–12.00 en 15.00–18.00, za 8.00–11.00 uur. Spoednummer: 041 327 716."
+        "nl": "Ma–vr 7.00–12.00 en 15.00–18.00, za 8.00–11.00 uur. Spoednummer: 041 327 716.",
+        "pl": "Pon.–pt. 7–12 i 15–18, sob. 8–11. Numer dyżurny: 041 327 716."
       },
       "small_animals": true,
       "url": "https://www.veterina-dobro.si/",
@@ -1456,7 +1500,8 @@
         "es": "Lun 8:00–15:00 h, mar 12:00–19:00 h, jue 12:00–19:00 h, vie 8:00–15:00 h, sáb 8:00–12:00 h; cerrado dom y festivos. Visitas de campo y ayuda urgente: «¡Llámanos!»",
         "it": "Lun 8–15, mar 12–19, gio 12–19, ven 8–15, sab 8–12; dom e festivi chiuso. Visite in campo e aiuto urgente: «Chiamateci!»",
         "pt": "Seg 8h00–15h00, ter 12h00–19h00, qui 12h00–19h00, sex 8h00–15h00, sáb 8h00–12h00; dom e feriados fechado. Visitas ao exterior e ajuda urgente: «Liga-nos!»",
-        "nl": "Ma 8.00–15.00, di 12.00–19.00, do 12.00–19.00, vr 8.00–15.00, za 8.00–12.00 uur; zo en feestdagen gesloten. Veldbezoeken en spoedhulp: \"Bel ons!\""
+        "nl": "Ma 8.00–15.00, di 12.00–19.00, do 12.00–19.00, vr 8.00–15.00, za 8.00–12.00 uur; zo en feestdagen gesloten. Veldbezoeken en spoedhulp: \"Bel ons!\"",
+        "pl": "Pon. 8–15, wt. 12–19, czw. 12–19, pt. 8–15, sob. 8–12; niedz. i święta zamknięte. Wizyty terenowe i pilna pomoc: „Zadzwoń do nas!”"
       },
       "small_animals": true,
       "url": "https://veterina-gaber.si/",
@@ -1481,7 +1526,8 @@
         "es": "Servicio de guardia: 041 648 034.",
         "it": "Servizio di guardia: 041 648 034.",
         "pt": "Serviço de urgência: 041 648 034.",
-        "nl": "Spoeddienst: 041 648 034."
+        "nl": "Spoeddienst: 041 648 034.",
+        "pl": "Dyżur: 041 648 034."
       },
       "small_animals": true,
       "source_url": "https://itis.siol.net/veterinarska-postaja-litija?4611718=",
@@ -1531,7 +1577,8 @@
         "es": "Lun, mié y vie 8:00–19:00 h; mar y jue 11:00–19:00 h; cerrado sáb, dom y festivos. Número de guardia: 070 149 143.",
         "it": "Lun, mer, ven 8–19; mar, gio 11–19; sab, dom e festivi chiuso. Numero di guardia: 070 149 143.",
         "pt": "Seg, qua, sex 8h00–19h00; ter, qui 11h00–19h00; sáb, dom e feriados fechado. Número de serviço: 070 149 143.",
-        "nl": "Ma, wo, vr 8.00–19.00 uur; di, do 11.00–19.00 uur; za, zo en feestdagen gesloten. Spoednummer: 070 149 143."
+        "nl": "Ma, wo, vr 8.00–19.00 uur; di, do 11.00–19.00 uur; za, zo en feestdagen gesloten. Spoednummer: 070 149 143.",
+        "pl": "Pon., śr., pt. 8–19; wt., czw. 11–19; sob., niedz. i święta zamknięte. Numer dyżurny: 070 149 143."
       },
       "small_animals": true,
       "url": "https://drvet.si/en/",
@@ -1556,7 +1603,8 @@
         "es": "Lun–vie 7:00–20:00 h, sáb 8:00–17:00 h; cerrado dom y festivos. Atención de urgencias y servicio urgente (en horario de apertura).",
         "it": "Lun–ven 7–20, sab 8–17; dom e festivi chiuso. Pronto soccorso e servizio urgente (durante gli orari di apertura).",
         "pt": "Seg–sex 7h00–20h00, sáb 8h00–17h00; dom e feriados fechado. Cuidados de urgência e serviço urgente (durante o horário de funcionamento).",
-        "nl": "Ma–vr 7.00–20.00, za 8.00–17.00 uur; zo en feestdagen gesloten. Spoedzorg en dringende hulp (tijdens openingstijden)."
+        "nl": "Ma–vr 7.00–20.00, za 8.00–17.00 uur; zo en feestdagen gesloten. Spoedzorg en dringende hulp (tijdens openingstijden).",
+        "pl": "Pon.–pt. 7–20, sob. 8–17; niedz. i święta zamknięte. Pomoc w nagłych przypadkach i pilna obsługa (w godzinach pracy)."
       },
       "small_animals": true,
       "url": "https://www.dora.vet/",
@@ -1609,7 +1657,8 @@
         "es": "Lun–jue 8:00–18:00 h, vie 8:00–17:00 h, sáb 8:00–12:00 h; con cita previa. Fuera del horario habitual, disponibilidad permanente junto con otras cinco clínicas.",
         "it": "Lun–gio 8–18, ven 8–17, sab 8–12; su appuntamento. Fuori dall'orario regolare la reperibilità continua è garantita insieme ad altre cinque cliniche.",
         "pt": "Seg–qui 8h00–18h00, sex 8h00–17h00, sáb 8h00–12h00; sob marcação. Fora do horário normal, a prontidão permanente é assegurada em conjunto com outras cinco clínicas.",
-        "nl": "Ma–do 8.00–18.00, vr 8.00–17.00, za 8.00–12.00 uur; op afspraak. Buiten reguliere uren is permanente bereikbaarheid geregeld samen met vijf andere klinieken."
+        "nl": "Ma–do 8.00–18.00, vr 8.00–17.00, za 8.00–12.00 uur; op afspraak. Buiten reguliere uren is permanente bereikbaarheid geregeld samen met vijf andere klinieken.",
+        "pl": "Pon.–czw. 8–18, pt. 8–17, sob. 8–12; wymagane umówienie wizyty. Poza zwykłymi godzinami pracy stała gotowość zapewniana jest razem z pięcioma innymi przychodniami."
       },
       "small_animals": true,
       "url": "https://veterinazapuze.si/",
@@ -1647,7 +1696,8 @@
         "es": "Lun–vie 8:00–19:00 h, sáb 8:00–12:00 h. Casos urgentes: guardia en colaboración con clínicas de Ljubljana, teléfono de guardia 041 241 241.",
         "it": "Lun–ven 8–19, sab 8–12. Casi urgenti: guardia in collaborazione con le cliniche di Ljubljana, telefono di guardia 041 241 241.",
         "pt": "Seg–sex 8h00–19h00, sáb 8h00–12h00. Urgências: serviço em colaboração com as clínicas de Ljubljana, telefone de serviço 041 241 241.",
-        "nl": "Ma–vr 8.00–19.00, za 8.00–12.00 uur. Spoedgevallen: spoeddienst in samenwerking met klinieken in Ljubljana, spoedtelefoon 041 241 241."
+        "nl": "Ma–vr 8.00–19.00, za 8.00–12.00 uur. Spoedgevallen: spoeddienst in samenwerking met klinieken in Ljubljana, spoedtelefoon 041 241 241.",
+        "pl": "Pon.–pt. 8–19, sob. 8–12. Pilne przypadki: dyżur we współpracy z przychodniami z Lublany, telefon dyżurny 041 241 241."
       },
       "small_animals": true,
       "url": "https://etvetera.com/",
@@ -1713,7 +1763,8 @@
         "es": "Veterinario de guardia para mascotas: 04 256 61 61; servicio de guardia permanente: 04 256 51 01.",
         "it": "Veterinario di guardia per animali da compagnia: 04 256 61 61; servizio di guardia permanente: 04 256 51 01.",
         "pt": "Veterinário de serviço para animais de estimação: 04 256 61 61; serviço permanente: 04 256 51 01.",
-        "nl": "Dienstdoende dierenarts voor huisdieren: 04 256 61 61; permanente spoeddienst: 04 256 51 01."
+        "nl": "Dienstdoende dierenarts voor huisdieren: 04 256 61 61; permanente spoeddienst: 04 256 51 01.",
+        "pl": "Dyżurny weterynarz dla zwierząt domowych: 04 256 61 61; stały dyżur: 04 256 51 01."
       },
       "small_animals": true,
       "url": "http://www.vpt.si",
@@ -1740,7 +1791,8 @@
         "es": "Lun–vie 8:00–19:00 h, cerrado sáb–dom; guardia telefónica las 24 horas.",
         "it": "Lun–ven 8–19, sab e dom chiuso; guardia telefonica 24 ore su 24.",
         "pt": "Seg–sex 8h00–19h00, sáb e dom fechado; serviço por telefone 24 h.",
-        "nl": "Ma–vr 8.00–19.00 uur, za en zo gesloten; spoeddienst telefonisch 24 uur per dag."
+        "nl": "Ma–vr 8.00–19.00 uur, za en zo gesloten; spoeddienst telefonisch 24 uur per dag.",
+        "pl": "Pon.–pt. 8–19, sob. i niedz. zamknięte; dyżur telefoniczny całą dobę."
       },
       "small_animals": true,
       "url": "https://a-vet.si/",
@@ -1792,7 +1844,8 @@
         "es": "Lun 12:00–14:30 h, mar 8:00–10:00 h, mié 12:00–14:30 h, jue 12:00–14:30 h, vie 8:00–11:00 h; cerrado sáb–dom.",
         "it": "Lun 12–14:30, mar 8–10, mer 12–14:30, gio 12–14:30, ven 8–11; sab e dom chiuso.",
         "pt": "Seg 12h00–14h30, ter 8h00–10h00, qua 12h00–14h30, qui 12h00–14h30, sex 8h00–11h00; sáb e dom fechado.",
-        "nl": "Ma 12.00–14.30, di 8.00–10.00, wo 12.00–14.30, do 12.00–14.30, vr 8.00–11.00 uur; za en zo gesloten."
+        "nl": "Ma 12.00–14.30, di 8.00–10.00, wo 12.00–14.30, do 12.00–14.30, vr 8.00–11.00 uur; za en zo gesloten.",
+        "pl": "Pon. 12–14:30, wt. 8–10, śr. 12–14:30, czw. 12–14:30, pt. 8–11; sob. i niedz. zamknięte."
       },
       "small_animals": true,
       "url": "http://veterina-idrija.si/",
@@ -1818,7 +1871,8 @@
         "es": "Guardia fuera de horario para animales pequeños: 031 606 627; animales grandes: 02 654 91 30. Lun–vie 8:00–12:00 y 14:00–19:00 h, sáb 8:00–13:00 h.",
         "it": "Guardia fuori orario per piccoli animali: 031 606 627; grandi animali: 02 654 91 30. Lun–ven 8–12 e 14–19, sab 8–13.",
         "pt": "Serviço fora de horas para pequenos animais: 031 606 627; grandes animais: 02 654 91 30. Seg–sex 8h00–12h00 e 14h00–19h00, sáb 8h00–13h00.",
-        "nl": "Spoeddienst buiten kantooruren voor kleine dieren: 031 606 627; grote dieren: 02 654 91 30. Ma–vr 8.00–12.00 en 14.00–19.00, za 8.00–13.00 uur."
+        "nl": "Spoeddienst buiten kantooruren voor kleine dieren: 031 606 627; grote dieren: 02 654 91 30. Ma–vr 8.00–12.00 en 14.00–19.00, za 8.00–13.00 uur.",
+        "pl": "Dyżur po godzinach pracy dla małych zwierząt: 031 606 627; dla dużych zwierząt: 02 654 91 30. Pon.–pt. 8–12 i 14–19, sob. 8–13."
       },
       "small_animals": true,
       "url": "https://www.mzvet.si/",
@@ -1844,7 +1898,8 @@
         "es": "Veterinario de guardia fuera de horario para animales pequeños: 02 805 00 36. Clínica de animales pequeños lun–vie 7:00–19:00 h, sáb 7:00–12:00 h.",
         "it": "Veterinario di guardia fuori orario per piccoli animali: 02 805 00 36. Ambulatorio per piccoli animali lun–ven 7–19, sab 7–12.",
         "pt": "Veterinário de serviço fora de horas para pequenos animais: 02 805 00 36. Clínica de pequenos animais seg–sex 7h00–19h00, sáb 7h00–12h00.",
-        "nl": "Dienstdoende dierenarts buiten kantooruren voor kleine dieren: 02 805 00 36. Kliniek voor kleine dieren ma–vr 7.00–19.00, za 7.00–12.00 uur."
+        "nl": "Dienstdoende dierenarts buiten kantooruren voor kleine dieren: 02 805 00 36. Kliniek voor kleine dieren ma–vr 7.00–19.00, za 7.00–12.00 uur.",
+        "pl": "Dyżurny weterynarz po godzinach pracy dla małych zwierząt: 02 805 00 36. Przychodnia dla małych zwierząt pon.–pt. 7–19, sob. 7–12."
       },
       "small_animals": true,
       "url": "https://www.vbsb.si/",
@@ -1869,7 +1924,8 @@
         "es": "Móvil de guardia para casos urgentes: 041 630 743. Clínica de animales pequeños (02) 749 36 56: lun–vie 8:00–13:00 y 15:00–19:00 h, sáb 8:00–12:00 h, dom y festivos 8:00–9:00 h.",
         "it": "Cellulare di guardia per casi urgenti: 041 630 743. Ambulatorio per piccoli animali (02) 749 36 56: lun–ven 8–13 e 15–19, sab 8–12, dom e festivi 8–9.",
         "pt": "Telemóvel de serviço para urgências: 041 630 743. Clínica de pequenos animais (02) 749 36 56: seg–sex 8h00–13h00 e 15h00–19h00, sáb 8h00–12h00, dom e feriados 8h00–9h00.",
-        "nl": "Spoedtelefoon (mobiel) voor dringende gevallen: 041 630 743. Kliniek voor kleine dieren (02) 749 36 56: ma–vr 8.00–13.00 en 15.00–19.00, za 8.00–12.00, zo en feestdagen 8.00–9.00 uur."
+        "nl": "Spoedtelefoon (mobiel) voor dringende gevallen: 041 630 743. Kliniek voor kleine dieren (02) 749 36 56: ma–vr 8.00–13.00 en 15.00–19.00, za 8.00–12.00, zo en feestdagen 8.00–9.00 uur.",
+        "pl": "Telefon komórkowy dyżurny w pilnych przypadkach: 041 630 743. Przychodnia dla małych zwierząt (02) 749 36 56: pon.–pt. 8–13 i 15–19, sob. 8–12, niedz. i święta 8–9."
       },
       "small_animals": true,
       "url": "https://vbptuj.si/",
@@ -1895,7 +1951,8 @@
         "es": "Clínica de animales pequeños: días laborables 8:00–13:00 y 16:00–19:00 h, sáb 8:00–13:00 h.",
         "it": "Ambulatorio per piccoli animali: giorni feriali 8–13 e 16–19, sab 8–13.",
         "pt": "Clínica de pequenos animais: dias úteis 8h00–13h00 e 16h00–19h00, sáb 8h00–13h00.",
-        "nl": "Kliniek voor kleine dieren: werkdagen 8.00–13.00 en 16.00–19.00, za 8.00–13.00 uur."
+        "nl": "Kliniek voor kleine dieren: werkdagen 8.00–13.00 en 16.00–19.00, za 8.00–13.00 uur.",
+        "pl": "Przychodnia dla małych zwierząt: w dni robocze 8–13 i 16–19, sob. 8–13."
       },
       "small_animals": true,
       "url": "http://www.veterinarius.si/",
@@ -1921,7 +1978,8 @@
         "es": "Disponibilidad: 02 795 00 60. Lun–jue 8:00–18:00 h, vie 8:00–15:00 h, sáb 8:00–12:00 h.",
         "it": "Reperibilità: 02 795 00 60. Lun–gio 8–18, ven 8–15, sab 8–12.",
         "pt": "Prontidão: 02 795 00 60. Seg–qui 8h00–18h00, sex 8h00–15h00, sáb 8h00–12h00.",
-        "nl": "Achterwacht: 02 795 00 60. Ma–do 8.00–18.00, vr 8.00–15.00, za 8.00–12.00 uur."
+        "nl": "Achterwacht: 02 795 00 60. Ma–do 8.00–18.00, vr 8.00–15.00, za 8.00–12.00 uur.",
+        "pl": "Gotowość: 02 795 00 60. Pon.–czw. 8–18, pt. 8–15, sob. 8–12."
       },
       "small_animals": true,
       "url": "https://www.veterina-majsperk.si/",
@@ -1947,7 +2005,8 @@
         "es": "Número de guardia para casos urgentes: 041 634 956. Lun–vie 7:00–18:00 h, sáb 7:00–12:00 h; domingos y festivos solo funciona el servicio de guardia.",
         "it": "Numero di guardia per casi urgenti: 041 634 956. Lun–ven 7–18, sab 7–12; domeniche e festivi opera solo il servizio di guardia.",
         "pt": "Número de serviço para urgências: 041 634 956. Seg–sex 7h00–18h00, sáb 7h00–12h00; aos domingos e feriados funciona apenas o serviço de urgência.",
-        "nl": "Spoednummer voor dringende gevallen: 041 634 956. Ma–vr 7.00–18.00, za 7.00–12.00 uur; op zondag en feestdagen is alleen de spoeddienst actief."
+        "nl": "Spoednummer voor dringende gevallen: 041 634 956. Ma–vr 7.00–18.00, za 7.00–12.00 uur; op zondag en feestdagen is alleen de spoeddienst actief.",
+        "pl": "Numer dyżurny w pilnych przypadkach: 041 634 956. Pon.–pt. 7–18, sob. 7–12; w niedziele i święta działa tylko dyżur."
       },
       "small_animals": true,
       "url": "https://www.vetlenart.si/",
@@ -1972,7 +2031,8 @@
         "es": "Lun–vie 9:00–19:00 h, sáb 9:00–12:00 h, cerrado dom y festivos. Móvil: 041 767 451.",
         "it": "Lun–ven 9–19, sab 9–12, dom e festivi chiuso. Cellulare: 041 767 451.",
         "pt": "Seg–sex 9h00–19h00, sáb 9h00–12h00, dom e feriados fechado. Telemóvel: 041 767 451.",
-        "nl": "Ma–vr 9.00–19.00, za 9.00–12.00 uur, zo en feestdagen gesloten. Mobiel: 041 767 451."
+        "nl": "Ma–vr 9.00–19.00, za 9.00–12.00 uur, zo en feestdagen gesloten. Mobiel: 041 767 451.",
+        "pl": "Pon.–pt. 9–19, sob. 9–12, niedz. i święta zamknięte. Telefon komórkowy: 041 767 451."
       },
       "small_animals": true,
       "url": "https://www.vet-pobrezje.si/",
@@ -1996,7 +2056,8 @@
         "es": "Días laborables 8:00–19:00 h, sáb 8:00–13:00 h.",
         "it": "Giorni feriali 8–19, sab 8–13.",
         "pt": "Dias úteis 8h00–19h00, sáb 8h00–13h00.",
-        "nl": "Werkdagen 8.00–19.00, za 8.00–13.00 uur."
+        "nl": "Werkdagen 8.00–19.00, za 8.00–13.00 uur.",
+        "pl": "W dni robocze 8–19, sob. 8–13."
       },
       "small_animals": true,
       "url": "https://www.pikavet.si/",
@@ -2021,7 +2082,8 @@
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h, cerrado dom.",
         "it": "Lun–ven 8–18, sab 8–12, dom chiuso.",
         "pt": "Seg–sex 8h00–18h00, sáb 8h00–12h00, dom fechado.",
-        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur, zo gesloten."
+        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur, zo gesloten.",
+        "pl": "Pon.–pt. 8–18, sob. 8–12, niedz. zamknięte."
       },
       "small_animals": true,
       "url": "https://veterina-studenci.si/",
@@ -2046,7 +2108,8 @@
         "es": "Casos urgentes: 051 489 416. Citas: 041 543 193. Lun–vie 8:00–13:00 y 15:00–19:00 h, sáb 8:00–13:00 h.",
         "it": "Casi urgenti: 051 489 416. Appuntamenti: 041 543 193. Lun–ven 8–13 e 15–19, sab 8–13.",
         "pt": "Urgências: 051 489 416. Marcações: 041 543 193. Seg–sex 8h00–13h00 e 15h00–19h00, sáb 8h00–13h00.",
-        "nl": "Spoedgevallen: 051 489 416. Afspraken: 041 543 193. Ma–vr 8.00–13.00 en 15.00–19.00, za 8.00–13.00 uur."
+        "nl": "Spoedgevallen: 051 489 416. Afspraken: 041 543 193. Ma–vr 8.00–13.00 en 15.00–19.00, za 8.00–13.00 uur.",
+        "pl": "Pilne przypadki: 051 489 416. Wizyty: 041 543 193. Pon.–pt. 8–13 i 15–19, sob. 8–13."
       },
       "small_animals": true,
       "url": "https://www.veterinarstvo-eisner.si/",
@@ -2099,7 +2162,8 @@
         "es": "Abierto todos los días 8:00–19:00 h; guardia nocturna 19:00–8:00 h.",
         "it": "Aperto tutti i giorni 8–19; guardia notturna 19:00–8:00.",
         "pt": "Aberto todos os dias 8h00–19h00; serviço noturno 19h00–8h00.",
-        "nl": "Dagelijks open 8.00–19.00 uur; nachtdienst 19.00–8.00 uur."
+        "nl": "Dagelijks open 8.00–19.00 uur; nachtdienst 19.00–8.00 uur.",
+        "pl": "Czynne codziennie 8–19; dyżur nocny 19:00–8:00."
       },
       "small_animals": true,
       "url": "https://vetcentermlakar.si/",
@@ -2124,7 +2188,8 @@
         "es": "Guardia: 041 342 323. Lun–vie 9:00–12:00 y 15:00–18:00 h, sáb 9:00–12:00 h.",
         "it": "Guardia: 041 342 323. Lun–ven 9–12 e 15–18, sab 9–12.",
         "pt": "Serviço: 041 342 323. Seg–sex 9h00–12h00 e 15h00–18h00, sáb 9h00–12h00.",
-        "nl": "Spoeddienst: 041 342 323. Ma–vr 9.00–12.00 en 15.00–18.00, za 9.00–12.00 uur."
+        "nl": "Spoeddienst: 041 342 323. Ma–vr 9.00–12.00 en 15.00–18.00, za 9.00–12.00 uur.",
+        "pl": "Dyżur: 041 342 323. Pon.–pt. 9–12 i 15–18, sob. 9–12."
       },
       "small_animals": true,
       "url": "https://www.primavet.si/",
@@ -2148,7 +2213,8 @@
         "es": "Lun–vie 8:00–12:00 y 15:00–18:00 h, sáb 8:00–12:00 h, cerrado dom y festivos.",
         "it": "Lun–ven 8–12 e 15–18, sab 8–12, dom e festivi chiuso.",
         "pt": "Seg–sex 8h00–12h00 e 15h00–18h00, sáb 8h00–12h00, dom e feriados fechado.",
-        "nl": "Ma–vr 8.00–12.00 en 15.00–18.00, za 8.00–12.00 uur, zo en feestdagen gesloten."
+        "nl": "Ma–vr 8.00–12.00 en 15.00–18.00, za 8.00–12.00 uur, zo en feestdagen gesloten.",
+        "pl": "Pon.–pt. 8–12 i 15–18, sob. 8–12, niedz. i święta zamknięte."
       },
       "small_animals": true,
       "url": "https://www.vau.vet/",
@@ -2200,7 +2266,8 @@
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h. Durante la guardia, las llamadas al 02 740 43 00 se desvían al veterinario de guardia.",
         "it": "Lun–ven 8–18, sab 8–12. Durante la guardia, le chiamate al 02 740 43 00 sono inoltrate al veterinario di guardia.",
         "pt": "Seg–sex 8h00–18h00, sáb 8h00–12h00. Durante o serviço, as chamadas para 02 740 43 00 são reencaminhadas para o veterinário de serviço.",
-        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur. Tijdens de dienst worden oproepen naar 02 740 43 00 doorgeschakeld naar de dienstdoende dierenarts."
+        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur. Tijdens de dienst worden oproepen naar 02 740 43 00 doorgeschakeld naar de dienstdoende dierenarts.",
+        "pl": "Pon.–pt. 8–18, sob. 8–12. W czasie dyżuru połączenia pod numer 02 740 43 00 są przekierowywane do dyżurnego weterynarza."
       },
       "small_animals": true,
       "url": "https://tacka-veterina.si/veterinarska-postaja-ormoz/",
@@ -2225,7 +2292,8 @@
         "es": "Clínica lun–vie 8:00–18:00 h, sáb 7:00–12:00 h. Campo: 02 537 18 90.",
         "it": "Ambulatorio lun–ven 8–18, sab 7–12. Visite in campo: 02 537 18 90.",
         "pt": "Clínica seg–sex 8h00–18h00, sáb 7h00–12h00. Campo: 02 537 18 90.",
-        "nl": "Kliniek ma–vr 8.00–18.00, za 7.00–12.00 uur. Veldpraktijk: 02 537 18 90."
+        "nl": "Kliniek ma–vr 8.00–18.00, za 7.00–12.00 uur. Veldpraktijk: 02 537 18 90.",
+        "pl": "Przychodnia pon.–pt. 8–18, sob. 7–12. Wizyty terenowe: 02 537 18 90."
       },
       "small_animals": true,
       "url": "http://www.veterinaria.si/",
@@ -2250,7 +2318,8 @@
         "es": "Urgencias: 031 377 400. Lun–vie 7:00–16:00 h, sáb 7:00–11:00 h, cerrado dom.",
         "it": "Emergenze: 031 377 400. Lun–ven 7–16, sab 7–11, dom chiuso.",
         "pt": "Urgências: 031 377 400. Seg–sex 7h00–16h00, sáb 7h00–11h00, dom fechado.",
-        "nl": "Spoed: 031 377 400. Ma–vr 7.00–16.00, za 7.00–11.00 uur, zo gesloten."
+        "nl": "Spoed: 031 377 400. Ma–vr 7.00–16.00, za 7.00–11.00 uur, zo gesloten.",
+        "pl": "Nagłe przypadki: 031 377 400. Pon.–pt. 7–16, sob. 7–11, niedz. zamknięte."
       },
       "small_animals": true,
       "url": "https://www.veterinaljutomer.si/",
@@ -2275,7 +2344,8 @@
         "es": "Servicio de guardia: 02 564 85 90. Clínica de animales pequeños lun–vie 8:00–16:00 h, sáb 8:00–12:00 h.",
         "it": "Servizio di guardia: 02 564 85 90. Ambulatorio per piccoli animali lun–ven 8–16, sab 8–12.",
         "pt": "Serviço de urgência: 02 564 85 90. Clínica de pequenos animais seg–sex 8h00–16h00, sáb 8h00–12h00.",
-        "nl": "Spoeddienst: 02 564 85 90. Kliniek voor kleine dieren ma–vr 8.00–16.00, za 8.00–12.00 uur."
+        "nl": "Spoeddienst: 02 564 85 90. Kliniek voor kleine dieren ma–vr 8.00–16.00, za 8.00–12.00 uur.",
+        "pl": "Dyżur: 02 564 85 90. Przychodnia dla małych zwierząt pon.–pt. 8–16, sob. 8–12."
       },
       "small_animals": true,
       "url": "https://www.veterina-radgona.si/sl/",
@@ -2300,7 +2370,8 @@
         "es": "Urgencias de animales pequeños fuera de horario (18:00–8:00 h): 041 611 273. Lun, mar, jue y vie 8:00–16:00 h, mié 8:00–18:00 h, sáb 9:00–12:00 h.",
         "it": "Emergenze per piccoli animali fuori orario (18:00–8:00): 041 611 273. Lun, mar, gio, ven 8–16, mer 8–18, sab 9–12.",
         "pt": "Urgências de pequenos animais fora de horas (18h00–8h00): 041 611 273. Seg, ter, qui, sex 8h00–16h00, qua 8h00–18h00, sáb 9h00–12h00.",
-        "nl": "Spoed voor kleine dieren buiten kantooruren (18.00–8.00 uur): 041 611 273. Ma, di, do, vr 8.00–16.00, wo 8.00–18.00, za 9.00–12.00 uur."
+        "nl": "Spoed voor kleine dieren buiten kantooruren (18.00–8.00 uur): 041 611 273. Ma, di, do, vr 8.00–16.00, wo 8.00–18.00, za 9.00–12.00 uur.",
+        "pl": "Nagłe przypadki u małych zwierząt po godzinach pracy (18:00–8:00): 041 611 273. Pon., wt., czw., pt. 8–16, śr. 8–18, sob. 9–12."
       },
       "small_animals": true,
       "url": "https://veterinalendava.si/",
@@ -2326,7 +2397,8 @@
         "es": "Veterinario de guardia (urgencias): 051 311 310. Lun–vie 7:00–17:00 h, sáb 7:00–12:00 h.",
         "it": "Veterinario di guardia (urgenze): 051 311 310. Lun–ven 7–17, sab 7–12.",
         "pt": "Veterinário de serviço (urgências): 051 311 310. Seg–sex 7h00–17h00, sáb 7h00–12h00.",
-        "nl": "Dienstdoende dierenarts (spoed): 051 311 310. Ma–vr 7.00–17.00, za 7.00–12.00 uur."
+        "nl": "Dienstdoende dierenarts (spoed): 051 311 310. Ma–vr 7.00–17.00, za 7.00–12.00 uur.",
+        "pl": "Dyżurny weterynarz (pilne przypadki): 051 311 310. Pon.–pt. 7–17, sob. 7–12."
       },
       "small_animals": true,
       "url": "https://veterina-santl.si/",
@@ -2365,7 +2437,8 @@
         "es": "Veterinario de guardia: 02 88 12 300.",
         "it": "Veterinario di guardia: 02 88 12 300.",
         "pt": "Veterinário de serviço: 02 88 12 300.",
-        "nl": "Dienstdoende dierenarts: 02 88 12 300."
+        "nl": "Dienstdoende dierenarts: 02 88 12 300.",
+        "pl": "Dyżurny weterynarz: 02 88 12 300."
       },
       "small_animals": true,
       "url": "https://vpsg.si/",
@@ -2390,7 +2463,8 @@
         "es": "Ayuda urgente: 02 82 40 746; clínica de animales pequeños: 02 82 40 747.",
         "it": "Aiuto di emergenza: 02 82 40 746; ambulatorio per piccoli animali: 02 82 40 747.",
         "pt": "Ajuda de urgência: 02 82 40 746; clínica de pequenos animais: 02 82 40 747.",
-        "nl": "Spoedhulp: 02 82 40 746; kliniek voor kleine dieren: 02 82 40 747."
+        "nl": "Spoedhulp: 02 82 40 746; kliniek voor kleine dieren: 02 82 40 747.",
+        "pl": "Pomoc w nagłych przypadkach: 02 82 40 746; przychodnia dla małych zwierząt: 02 82 40 747."
       },
       "small_animals": true,
       "url": "https://veterina-prevalje.si/",
@@ -2415,7 +2489,8 @@
         "es": "Casos urgentes por teléfono lun–vie 7:00–19:00 h; fuera de ese horario, VP Slovenj Gradec 02 88 12 300. Lun–vie 8:00–12:00 y 13:00–18:00 h, sáb 9:00–12:00 h, cerrado dom y festivos. Con cita previa.",
         "it": "Casi urgenti per telefono lun–ven 7–19; altrimenti VP Slovenj Gradec 02 88 12 300. Lun–ven 8–12 e 13–18, sab 9–12, dom e festivi chiuso. Necessario l'appuntamento.",
         "pt": "Urgências por telefone seg–sex 7h00–19h00; fora deste horário, VP Slovenj Gradec 02 88 12 300. Seg–sex 8h00–12h00 e 13h00–18h00, sáb 9h00–12h00, dom e feriados fechado. Sob marcação.",
-        "nl": "Dringende gevallen telefonisch ma–vr 7.00–19.00 uur; daarbuiten VP Slovenj Gradec 02 88 12 300. Ma–vr 8.00–12.00 en 13.00–18.00, za 9.00–12.00 uur, zo en feestdagen gesloten. Op afspraak."
+        "nl": "Dringende gevallen telefonisch ma–vr 7.00–19.00 uur; daarbuiten VP Slovenj Gradec 02 88 12 300. Ma–vr 8.00–12.00 en 13.00–18.00, za 9.00–12.00 uur, zo en feestdagen gesloten. Op afspraak.",
+        "pl": "Pilne przypadki telefonicznie pon.–pt. 7–19; poza tym VP Slovenj Gradec 02 88 12 300. Pon.–pt. 8–12 i 13–18, sob. 9–12, niedz. i święta zamknięte. Wymagane umówienie wizyty."
       },
       "small_animals": true,
       "url": "https://www.evievet.si/",
@@ -2439,7 +2514,8 @@
         "es": "Ayuda veterinaria urgente: 041 518 939 (fuera de horario, primeros auxilios para animales pequeños, salvajes y exóticos). Lun–vie 8:00–16:00 h, sáb 8:00–12:00 h.",
         "it": "Pronto soccorso veterinario: 041 518 939 (fuori orario, primo soccorso per animali piccoli, selvatici ed esotici). Lun–ven 8–16, sab 8–12.",
         "pt": "Ajuda veterinária de urgência: 041 518 939 (fora de horas, primeiros socorros para pequenos animais, animais selvagens e exóticos). Seg–sex 8h00–16h00, sáb 8h00–12h00.",
-        "nl": "Spoedhulp van de dierenarts: 041 518 939 (buiten kantooruren, eerste hulp voor kleine, wilde en exotische dieren). Ma–vr 8.00–16.00, za 8.00–12.00 uur."
+        "nl": "Spoedhulp van de dierenarts: 041 518 939 (buiten kantooruren, eerste hulp voor kleine, wilde en exotische dieren). Ma–vr 8.00–16.00, za 8.00–12.00 uur.",
+        "pl": "Weterynaryjna pomoc w nagłych przypadkach: 041 518 939 (po godzinach pracy, pierwsza pomoc dla małych, dzikich i egzotycznych zwierząt). Pon.–pt. 8–16, sob. 8–12."
       },
       "small_animals": true,
       "url": "https://veterina-golob.si/",
@@ -2462,7 +2538,8 @@
         "es": "Guardia las 24 horas: animales pequeños 041 613 301, animales grandes 03 818 2770 (Obsotelje, Štajerska, Savinjska)",
         "it": "Guardia 24 ore su 24: piccoli animali 041 613 301, grandi animali 03 818 2770 (Obsotelje, Štajerska, Savinjska)",
         "pt": "Serviço 24 h: pequenos animais 041 613 301, grandes animais 03 818 2770 (Obsotelje, Štajerska, Savinjska)",
-        "nl": "Spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770 (Obsotelje, Štajerska, Savinjska)"
+        "nl": "Spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770 (Obsotelje, Štajerska, Savinjska)",
+        "pl": "Dyżur całodobowy: małe zwierzęta 041 613 301, duże zwierzęta 03 818 2770 (Obsotelje, Štajerska, Savinjska)"
       },
       "url": "https://tacka-veterina.si/dezurstvo_za_zivali_slovenija/",
       "source_url": "https://tacka-veterina.si/veterinarska-postaja-celje/",
@@ -2487,7 +2564,8 @@
         "es": "Lun–vie 7:00–18:00 h, sáb 7:00–11:00 h; guardia las 24 horas: animales pequeños 041 613 301, animales grandes 03 818 2770",
         "it": "Lun–ven 7–18, sab 7–11; di guardia 24 ore su 24: piccoli animali 041 613 301, grandi animali 03 818 2770",
         "pt": "Seg–sex 7h00–18h00, sáb 7h00–11h00; serviço 24 h: pequenos animais 041 613 301, grandes animais 03 818 2770",
-        "nl": "Ma–vr 7.00–18.00, za 7.00–11.00 uur; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770"
+        "nl": "Ma–vr 7.00–18.00, za 7.00–11.00 uur; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770",
+        "pl": "Pon.–pt. 7–18, sob. 7–11; dyżur całodobowy: małe zwierzęta 041 613 301, duże zwierzęta 03 818 2770"
       },
       "url": "https://tacka-veterina.si/veterinarska-postaja-celje/",
       "source_url": "https://tacka-veterina.si/veterinarska-postaja-celje/",
@@ -2512,7 +2590,8 @@
         "es": "Veterinario: lun y vie 10:00–18:00 h, mar–jue 8:00–16:00 h, sáb 9:00–13:00 h; guardia las 24 horas: animales pequeños 041 613 301, animales grandes 03 818 2770",
         "it": "Veterinario: lun e ven 10–18, mar–gio 8–16, sab 9–13; di guardia 24 ore su 24: piccoli animali 041 613 301, grandi animali 03 818 2770",
         "pt": "Veterinário: seg e sex 10h00–18h00, ter–qui 8h00–16h00, sáb 9h00–13h00; serviço 24 h: pequenos animais 041 613 301, grandes animais 03 818 2770",
-        "nl": "Dierenarts: ma en vr 10.00–18.00, di–do 8.00–16.00, za 9.00–13.00 uur; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770"
+        "nl": "Dierenarts: ma en vr 10.00–18.00, di–do 8.00–16.00, za 9.00–13.00 uur; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770",
+        "pl": "Weterynarz: pon. i pt. 10–18, wt.–czw. 8–16, sob. 9–13; dyżur całodobowy: małe zwierzęta 041 613 301, duże zwierzęta 03 818 2770"
       },
       "url": "https://tacka-veterina.si/veterinarska-postaja-celje/",
       "source_url": "https://tacka-veterina.si/veterinarska-postaja-celje/",
@@ -2536,7 +2615,8 @@
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h, cerrado dom y festivos; con cita previa",
         "it": "Lun–ven 8–18, sab 8–12, dom e festivi chiuso; su appuntamento",
         "pt": "Seg–sex 8h00–18h00, sáb 8h00–12h00, dom e feriados fechado; sob marcação",
-        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur, zo en feestdagen gesloten; op afspraak"
+        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur, zo en feestdagen gesloten; op afspraak",
+        "pl": "Pon.–pt. 8–18, sob. 8–12, niedz. i święta zamknięte; wymagane umówienie wizyty"
       },
       "url": "https://zvitorepka.si/",
       "source_url": "https://zvitorepka.si/",
@@ -2576,7 +2656,8 @@
         "es": "Lun–vie 7:00–19:00 h, sáb 8:00–13:00 h; guardia las 24 horas: animales pequeños 041 613 301, animales grandes 03 818 2770",
         "it": "Lun–ven 7–19, sab 8–13; di guardia 24 ore su 24: piccoli animali 041 613 301, grandi animali 03 818 2770",
         "pt": "Seg–sex 7h00–19h00, sáb 8h00–13h00; serviço 24 h: pequenos animais 041 613 301, grandes animais 03 818 2770",
-        "nl": "Ma–vr 7.00–19.00, za 8.00–13.00 uur; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770"
+        "nl": "Ma–vr 7.00–19.00, za 8.00–13.00 uur; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770",
+        "pl": "Pon.–pt. 7–19, sob. 8–13; dyżur całodobowy: małe zwierzęta 041 613 301, duże zwierzęta 03 818 2770"
       },
       "url": "https://tacka-veterina.si/veterinarska-postaja-sentjur/",
       "source_url": "https://tacka-veterina.si/veterinarska-postaja-sentjur/",
@@ -2615,7 +2696,8 @@
         "es": "Lun–vie 7:00–16:00 h, sáb 8:00–12:00 h; guardia las 24 horas: animales pequeños 041 613 301, animales grandes 03 818 2770",
         "it": "Lun–ven 7–16, sab 8–12; di guardia 24 ore su 24: piccoli animali 041 613 301, grandi animali 03 818 2770",
         "pt": "Seg–sex 7h00–16h00, sáb 8h00–12h00; serviço 24 h: pequenos animais 041 613 301, grandes animais 03 818 2770",
-        "nl": "Ma–vr 7.00–16.00, za 8.00–12.00 uur; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770"
+        "nl": "Ma–vr 7.00–16.00, za 8.00–12.00 uur; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770",
+        "pl": "pon.–pt. 7–16, sob. 8–12; dyżur całodobowy: małe zwierzęta 041 613 301, duże zwierzęta 03 818 2770"
       },
       "url": "https://tacka-veterina.si/veterinarska-postaja-smarje/",
       "source_url": "https://tacka-veterina.si/veterinarska-postaja-smarje/",
@@ -2640,7 +2722,8 @@
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h, cerrado dom y festivos; guardia las 24 horas: animales pequeños 041 613 301, animales grandes 03 818 2770",
         "it": "Lun–ven 8–18, sab 8–12, dom e festivi chiuso; di guardia 24 ore su 24: piccoli animali 041 613 301, grandi animali 03 818 2770",
         "pt": "Seg–sex 8h00–18h00, sáb 8h00–12h00, dom e feriados fechado; serviço 24 h: pequenos animais 041 613 301, grandes animais 03 818 2770",
-        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur, zo en feestdagen gesloten; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770"
+        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur, zo en feestdagen gesloten; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770",
+        "pl": "pon.–pt. 8–18, sob. 8–12, niedz. i święta nieczynne; dyżur całodobowy: małe zwierzęta 041 613 301, duże zwierzęta 03 818 2770"
       },
       "url": "https://tacka-veterina.si/veterinarska-postaja-rogaska-slatina/",
       "source_url": "https://tacka-veterina.si/veterinarska-postaja-rogaska-slatina/",
@@ -2666,7 +2749,8 @@
         "es": "Lun–vie 7:00–18:00 h, sáb 8:00–12:00 h (solo tienda); guardia las 24 horas: animales pequeños 041 613 301, animales grandes 03 818 2770",
         "it": "Lun–ven 7–18, sab 8–12 (solo negozio); di guardia 24 ore su 24: piccoli animali 041 613 301, grandi animali 03 818 2770",
         "pt": "Seg–sex 7h00–18h00, sáb 8h00–12h00 (apenas loja); serviço 24 h: pequenos animais 041 613 301, grandes animais 03 818 2770",
-        "nl": "Ma–vr 7.00–18.00, za 8.00–12.00 uur (alleen winkel); spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770"
+        "nl": "Ma–vr 7.00–18.00, za 8.00–12.00 uur (alleen winkel); spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770",
+        "pl": "pon.–pt. 7–18, sob. 8–12 (tylko sklep); dyżur całodobowy: małe zwierzęta 041 613 301, duże zwierzęta 03 818 2770"
       },
       "url": "https://tacka-veterina.si/veterinarska-postaja-podcetrtek/",
       "source_url": "https://tacka-veterina.si/veterinarska-postaja-podcetrtek/",
@@ -2704,7 +2788,8 @@
         "es": "Lun–vie 7:30–18:00 h, sáb 8:00–13:00 h, cerrado dom (solo guardia); servicio de guardia para animales pequeños +386 51 200 040, animales grandes +386 31 688 600",
         "it": "Lun–ven 7:30–18, sab 8–13, dom chiuso (solo guardia); servizio di guardia per piccoli animali +386 51 200 040, grandi animali +386 31 688 600",
         "pt": "Seg–sex 7h30–18h00, sáb 8h00–13h00, dom fechado (só serviço de urgência); serviço de urgência para pequenos animais +386 51 200 040, grandes animais +386 31 688 600",
-        "nl": "Ma–vr 7.30–18.00, za 8.00–13.00 uur, zo gesloten (alleen spoeddienst); spoeddienst voor kleine dieren +386 51 200 040, grote dieren +386 31 688 600"
+        "nl": "Ma–vr 7.30–18.00, za 8.00–13.00 uur, zo gesloten (alleen spoeddienst); spoeddienst voor kleine dieren +386 51 200 040, grote dieren +386 31 688 600",
+        "pl": "pon.–pt. 7:30–18, sob. 8–13, niedz. nieczynne (tylko dyżur); dyżur dla małych zwierząt +386 51 200 040, dla dużych zwierząt +386 31 688 600"
       },
       "url": "https://www.saleskaveterina.si/",
       "source_url": "https://www.saleskaveterina.si/kontakt",
@@ -2744,7 +2829,8 @@
         "es": "Clínica de animales pequeños lun–vie 7:30–18:00 h, sáb 8:00–12:00 h; ayuda urgente las 24 horas en el 03 759 30 50",
         "it": "Ambulatorio per piccoli animali lun–ven 7:30–18, sab 8–12; pronto soccorso 24 ore su 24 al 03 759 30 50",
         "pt": "Clínica de pequenos animais seg–sex 7h30–18h00, sáb 8h00–12h00; ajuda de urgência 24 h por dia no 03 759 30 50",
-        "nl": "Kliniek voor kleine dieren ma–vr 7.30–18.00, za 8.00–12.00 uur; spoedhulp 24 uur per dag op 03 759 30 50"
+        "nl": "Kliniek voor kleine dieren ma–vr 7.30–18.00, za 8.00–12.00 uur; spoedhulp 24 uur per dag op 03 759 30 50",
+        "pl": "Przychodnia dla małych zwierząt pon.–pt. 7:30–18, sob. 8–12; pomoc w nagłych przypadkach całodobowo pod numerem 03 759 30 50"
       },
       "url": "https://veterina-konjice.si/",
       "source_url": "https://veterina-konjice.si/",
@@ -2768,7 +2854,8 @@
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–12:00 h, cerrado dom y festivos",
         "it": "Lun–ven 8–18, sab 8–12, dom e festivi chiuso",
         "pt": "Seg–sex 8h00–18h00, sáb 8h00–12h00, dom e feriados fechado",
-        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur, zo en feestdagen gesloten"
+        "nl": "Ma–vr 8.00–18.00, za 8.00–12.00 uur, zo en feestdagen gesloten",
+        "pl": "pon.–pt. 8–18, sob. 8–12, niedz. i święta nieczynne"
       },
       "url": "https://zvitorepka.si/",
       "source_url": "https://zvitorepka.si/",
@@ -2822,7 +2909,8 @@
         "es": "Lun–sáb 8:00–20:00 h, domingos y festivos solo guardia; guardia las 24 horas: animales pequeños 041 613 301, animales grandes 03 818 2770",
         "it": "Lun–sab 8–20, dom e festivi solo guardia; di guardia 24 ore su 24: piccoli animali 041 613 301, grandi animali 03 818 2770",
         "pt": "Seg–sáb 8h00–20h00, dom e feriados só serviço de urgência; serviço 24 h: pequenos animais 041 613 301, grandes animais 03 818 2770",
-        "nl": "Ma–za 8.00–20.00 uur, zo en feestdagen alleen spoeddienst; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770"
+        "nl": "Ma–za 8.00–20.00 uur, zo en feestdagen alleen spoeddienst; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770",
+        "pl": "pon.–sob. 8–20, niedz. i święta tylko dyżur; dyżur całodobowy: małe zwierzęta 041 613 301, duże zwierzęta 03 818 2770"
       },
       "url": "https://tacka-veterina.si/veterinarska-postaja-trbovlje/",
       "source_url": "https://tacka-veterina.si/veterinarska-postaja-trbovlje/",
@@ -2875,7 +2963,8 @@
         "es": "Lun–vie 8:00–19:00 h, sáb 8:00–14:00 h, cerrado dom y festivos; guardia las 24 horas: animales pequeños 041 613 301, animales grandes 03 818 2770",
         "it": "Lun–ven 8–19, sab 8–14, dom e festivi chiuso; di guardia 24 ore su 24: piccoli animali 041 613 301, grandi animali 03 818 2770",
         "pt": "Seg–sex 8h00–19h00, sáb 8h00–14h00, dom e feriados fechado; serviço 24 h: pequenos animais 041 613 301, grandes animais 03 818 2770",
-        "nl": "Ma–vr 8.00–19.00, za 8.00–14.00 uur, zo en feestdagen gesloten; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770"
+        "nl": "Ma–vr 8.00–19.00, za 8.00–14.00 uur, zo en feestdagen gesloten; spoeddienst 24 uur per dag: kleine dieren 041 613 301, grote dieren 03 818 2770",
+        "pl": "pon.–pt. 8–19, sob. 8–14, niedz. i święta nieczynne; dyżur całodobowy: małe zwierzęta 041 613 301, duże zwierzęta 03 818 2770"
       },
       "url": "https://tacka-veterina.si/veterinarska-postaja-zagorje-ob-savi/",
       "source_url": "https://tacka-veterina.si/veterinarska-postaja-zagorje-ob-savi/",
@@ -2927,7 +3016,8 @@
         "es": "Lun–vie 7:00–19:00 h, sáb 7:00–11:00 h; ayuda veterinaria urgente las 24 horas, todos los días del año",
         "it": "Lun–ven 7–19, sab 7–11; pronto soccorso veterinario 24 ore su 24, tutti i giorni dell'anno",
         "pt": "Seg–sex 7h00–19h00, sáb 7h00–11h00; ajuda veterinária de urgência 24 horas por dia, todos os dias do ano",
-        "nl": "Ma–vr 7.00–19.00, za 7.00–11.00 uur; spoedhulp van de dierenarts 24 uur per dag, het hele jaar door"
+        "nl": "Ma–vr 7.00–19.00, za 7.00–11.00 uur; spoedhulp van de dierenarts 24 uur per dag, het hele jaar door",
+        "pl": "pon.–pt. 7–19, sob. 7–11; pogotowie weterynaryjne całodobowo, codziennie przez cały rok"
       },
       "url": "https://www.zvc.si/",
       "source_url": "https://www.zvc.si/kontakti.html",
@@ -2953,7 +3043,8 @@
         "es": "Animales pequeños lun–vie 7:00–19:00 h, sáb, dom y festivos 7:00–9:00 h; guardia de urgencias 0:00–24:00 h todos los días del año",
         "it": "Piccoli animali lun–ven 7–19, sab/dom/festivi 7–9; guardia di emergenza 0:00–24:00 tutti i giorni dell'anno",
         "pt": "Pequenos animais seg–sex 7h00–19h00, sáb/dom/feriados 7h00–9h00; serviço de urgência 0h00–24h00 todos os dias do ano",
-        "nl": "Kleine dieren ma–vr 7.00–19.00, za/zo/feestdagen 7.00–9.00 uur; spoeddienst 24 uur per dag, elke dag van het jaar"
+        "nl": "Kleine dieren ma–vr 7.00–19.00, za/zo/feestdagen 7.00–9.00 uur; spoeddienst 24 uur per dag, elke dag van het jaar",
+        "pl": "Małe zwierzęta pon.–pt. 7–19, sob., niedz. i święta 7–9; dyżur w nagłych przypadkach 0:00–24:00 codziennie przez cały rok"
       },
       "url": "https://www.veterinarskabolnica.si/",
       "source_url": "https://www.veterinarskabolnica.si/",
@@ -2977,7 +3068,8 @@
         "es": "Lun–vie 7:00–18:00 h, sáb 7:00–10:00 h, cerrado dom; ayuda urgente para animales pequeños y grandes en el 07 81 60 210",
         "it": "Lun–ven 7–18, sab 7–10, dom chiuso; pronto soccorso per piccoli e grandi animali al 07 81 60 210",
         "pt": "Seg–sex 7h00–18h00, sáb 7h00–10h00, dom fechado; ajuda de urgência para pequenos e grandes animais no 07 81 60 210",
-        "nl": "Ma–vr 7.00–18.00, za 7.00–10.00 uur, zo gesloten; spoedhulp voor kleine en grote dieren op 07 81 60 210"
+        "nl": "Ma–vr 7.00–18.00, za 7.00–10.00 uur, zo gesloten; spoedhulp voor kleine en grote dieren op 07 81 60 210",
+        "pl": "pon.–pt. 7–18, sob. 7–10, niedz. nieczynne; pomoc w nagłych przypadkach dla małych i dużych zwierząt pod numerem 07 81 60 210"
       },
       "url": "https://veterina-sevnica.si/",
       "source_url": "https://veterina-sevnica.si/male-zivali/",
@@ -3017,7 +3109,8 @@
         "es": "Lun–vie 7:00–18:00 h, sáb 7:00–11:00 h; urgencias / guardia las 24 horas, los 7 días: animales pequeños 051 608 070, animales grandes 08 20 57 155",
         "it": "Lun–ven 7–18, sab 7–11; emergenze / guardia 24 ore su 24, 7 giorni su 7: piccoli animali 051 608 070, grandi animali 08 20 57 155",
         "pt": "Seg–sex 7h00–18h00, sáb 7h00–11h00; urgências / serviço 24 h/24, 7 dias por semana: pequenos animais 051 608 070, grandes animais 08 20 57 155",
-        "nl": "Ma–vr 7.00–18.00, za 7.00–11.00 uur; spoed / spoeddienst 24/7: kleine dieren 051 608 070, grote dieren 08 20 57 155"
+        "nl": "Ma–vr 7.00–18.00, za 7.00–11.00 uur; spoed / spoeddienst 24/7: kleine dieren 051 608 070, grote dieren 08 20 57 155",
+        "pl": "pon.–pt. 7–18, sob. 7–11; nagłe przypadki / dyżur 24/7: małe zwierzęta 051 608 070, duże zwierzęta 08 20 57 155"
       },
       "url": "https://aplusvet.si/",
       "source_url": "https://aplusvet.si/kontakt/",
@@ -3042,7 +3135,8 @@
         "es": "Guardia: 051 363 997",
         "it": "Guardia: 051 363 997",
         "pt": "Serviço: 051 363 997",
-        "nl": "Spoeddienst: 051 363 997"
+        "nl": "Spoeddienst: 051 363 997",
+        "pl": "Dyżur: 051 363 997"
       },
       "url": "https://www.veterinabuba.si/",
       "source_url": "https://www.veterinabuba.si/kontakt",
@@ -3122,7 +3216,8 @@
         "es": "Lun–vie 9:00–18:00 h, cerrado sáb–dom",
         "it": "Lun–ven 9–18, sab e dom chiuso",
         "pt": "Seg–sex 9h00–18h00, sáb e dom fechado",
-        "nl": "Ma–vr 9.00–18.00 uur, za en zo gesloten"
+        "nl": "Ma–vr 9.00–18.00 uur, za en zo gesloten",
+        "pl": "pon.–pt. 9–18, sob. i niedz. nieczynne"
       },
       "url": "https://lesdog-vet.si/",
       "source_url": "https://lesdog-vet.si/",
@@ -3160,7 +3255,8 @@
         "es": "Lun y vie 8:00–16:00 h, mar–jue 8:00–18:00 h, cerrado fines de semana y festivos",
         "it": "Lun e ven 8–16, mar–gio 8–18, fine settimana e festivi chiuso",
         "pt": "Seg e sex 8h00–16h00, ter–qui 8h00–18h00, fins de semana e feriados fechado",
-        "nl": "Ma en vr 8.00–16.00, di–do 8.00–18.00 uur, weekend en feestdagen gesloten"
+        "nl": "Ma en vr 8.00–16.00, di–do 8.00–18.00 uur, weekend en feestdagen gesloten",
+        "pl": "pon. i pt. 8–16, wt.–czw. 8–18, weekendy i święta nieczynne"
       },
       "url": "https://tacka-veterina.si/veterina_ribnica/",
       "source_url": "https://tacka-veterina.si/veterina_ribnica/",
