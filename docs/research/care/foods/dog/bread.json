@@ -15,7 +15,8 @@
     "de": "Brot",
     "fr": "Pain",
     "pt": "Pão",
-    "nl": "Brood"
+    "nl": "Brood",
+    "pl": "Chleb"
   },
   "question": {
     "en": "Can dogs eat bread?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Brot fressen?",
     "fr": "Les chiens peuvent-ils manger du pain ?",
     "pt": "Os cães podem comer pão?",
-    "nl": "Mogen honden brood eten?"
+    "nl": "Mogen honden brood eten?",
+    "pl": "Czy psy mogą jeść chleb?"
   },
   "url_slug": {
     "en": "bread",
@@ -47,7 +49,8 @@
     "de": "brot",
     "fr": "pain",
     "pt": "pao",
-    "nl": "brood"
+    "nl": "brood",
+    "pl": "chleb"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, in kleinen Mengen. Ungewürztes, vollständig durchgebackenes Weiß- oder Weizenbrot ist für Hunde ohne Weizenallergie in der Regel unbedenklich, bringt aber keinen echten Nutzen und ist kalorienreich. Geben Sie niemals Rosinenbrot, Knoblauchbrot oder rohen Teig.",
     "fr": "Oui, en petite quantité. Le pain blanc ou de blé nature, bien cuit, est généralement sans danger pour les chiens qui n’ont pas d’allergie au blé, mais il n’a pas de réel intérêt nutritionnel et il est riche en calories. Ne donnez jamais de pain aux raisins secs, de pain à l’ail ni de pâte crue.",
     "pt": "Sim, em pequenas quantidades. O pão branco ou de trigo simples e bem cozido é geralmente seguro para cães sem alergia ao trigo, mas não traz benefício real e tem muitas calorias. Nunca dês pão com passas, pão de alho ou massa crua.",
-    "nl": "Ja, in kleine hoeveelheden. Gewoon wit of tarwebrood dat helemaal gaar is gebakken, is over het algemeen veilig voor honden zonder tarweallergie, maar het heeft geen echte voordelen en bevat veel calorieën. Geef nooit rozijnenbrood, knoflookbrood of rauw deeg."
+    "nl": "Ja, in kleine hoeveelheden. Gewoon wit of tarwebrood dat helemaal gaar is gebakken, is over het algemeen veilig voor honden zonder tarweallergie, maar het heeft geen echte voordelen en bevat veel calorieën. Geef nooit rozijnenbrood, knoflookbrood of rauw deeg.",
+    "pl": "Tak, w małych ilościach. Biały lub pszenny chleb bez dodatków, w pełni upieczony, jest na ogół bezpieczny dla psów, które nie mają alergii na pszenicę, ale nie daje im żadnych realnych korzyści i jest kaloryczny. Nigdy nie dawaj chleba z rodzynkami, pieczywa czosnkowego ani surowego ciasta."
   },
   "why": {
     "en": "Bread is a filler food with no nutrients your dog's food doesn't already supply, and it is full of carbs and calories, so too much can put your dog on the path to obesity. The real dangers are ingredients: raisins are highly toxic and often found in breads, garlic bread can cause abdominal pain, vomiting, diarrhoea, weakness and collapse, and xylitol, a sweetener in some baked goods, is toxic to dogs. Raw yeast dough keeps rising in the stomach and releases alcohol.",
@@ -80,7 +84,8 @@
     "de": "Brot ist ein Füllmittel: Es enthält keine Nährstoffe, die das Hundefutter nicht ohnehin liefert, dafür aber viele Kohlenhydrate und Kalorien. Zu viel davon kann zu Übergewicht führen. Die eigentlichen Gefahren sind die Zutaten: Rosinen sind stark giftig und stecken oft in Broten, Knoblauchbrot kann Bauchschmerzen, Erbrechen, Durchfall, Schwäche und Kollaps verursachen, und Xylit, ein Zuckeraustauschstoff in manchen Backwaren, ist für Hunde giftig. Roher Hefeteig geht im Magen weiter auf und setzt Alkohol frei.",
     "fr": "Le pain est un aliment de remplissage qui n’apporte aucun nutriment que l’alimentation de votre chien ne fournit déjà, et il est riche en glucides et en calories : en donner trop peut mener à l’obésité. Les vrais dangers viennent des ingrédients : les raisins secs sont très toxiques et se cachent souvent dans les pains, le pain à l’ail peut provoquer douleurs abdominales, vomissements, diarrhée, faiblesse et effondrement, et le xylitol, un édulcorant présent dans certaines pâtisseries, est toxique pour les chiens. La pâte crue à la levure continue de gonfler dans l’estomac et libère de l’alcool.",
     "pt": "O pão enche, mas não tem nutrientes que a comida do teu cão ainda não forneça, e tem muitos hidratos de carbono e calorias, por isso, em excesso, pode levar à obesidade. Os verdadeiros perigos são os ingredientes: as passas são muito tóxicas e aparecem muitas vezes em pães, o pão de alho pode causar dor abdominal, vómitos, diarreia, fraqueza e colapso, e o xilitol, um adoçante presente em alguns produtos de pastelaria, é tóxico para os cães. A massa crua com fermento continua a crescer no estômago e liberta álcool.",
-    "nl": "Brood is vooral een vulmiddel: er zit niets in wat het gewone hondenvoer niet al levert. Het zit vol koolhydraten en calorieën, dus te veel brood kan leiden tot overgewicht. Het echte gevaar zit in de ingrediënten: rozijnen zijn zeer giftig en zitten vaak in brood, knoflookbrood kan buikpijn, braken, diarree, zwakte en instorten veroorzaken, en xylitol, een zoetstof in sommige bakproducten, is giftig voor honden. Rauw gistdeeg blijft rijzen in de maag en maakt alcohol vrij."
+    "nl": "Brood is vooral een vulmiddel: er zit niets in wat het gewone hondenvoer niet al levert. Het zit vol koolhydraten en calorieën, dus te veel brood kan leiden tot overgewicht. Het echte gevaar zit in de ingrediënten: rozijnen zijn zeer giftig en zitten vaak in brood, knoflookbrood kan buikpijn, braken, diarree, zwakte en instorten veroorzaken, en xylitol, een zoetstof in sommige bakproducten, is giftig voor honden. Rauw gistdeeg blijft rijzen in de maag en maakt alcohol vrij.",
+    "pl": "Chleb tylko wypełnia żołądek i nie dostarcza składników, których pies nie miałby już w karmie, za to jest pełen węglowodanów i kalorii, więc zbyt duże ilości mogą prowadzić do otyłości. Prawdziwym zagrożeniem są dodatki: rodzynki są silnie toksyczne, a często dodaje się je do pieczywa, pieczywo czosnkowe może wywołać ból brzucha, wymioty, biegunkę, osłabienie i zapaść, a ksylitol, słodzik dodawany do niektórych wypieków, jest toksyczny dla psów. Surowe ciasto drożdżowe rośnie dalej w żołądku i uwalnia alkohol."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Ungewürztes Brot verursacht bei Hunden meist keine Magenbeschwerden. Wenn Sie Brot oder Backwaren regelmäßig geben, prüfen Sie die Zutaten. Frisst Ihr Hund rohen Brotteig, rufen Sie sofort Ihren Tierarzt an. Dasselbe gilt für Brot mit Rosinen oder Knoblauch.",
     "fr": "Le pain nature ne dérange généralement pas l’estomac du chien. Si vous donnez régulièrement du pain ou des pâtisseries, vérifiez la liste des ingrédients. Si votre chien mange de la pâte à pain crue, appelez immédiatement votre vétérinaire ; faites de même s’il a mangé du pain aux raisins secs ou à l’ail.",
     "pt": "O pão simples costuma não incomodar o estômago do cão. Se deres pão ou produtos de pastelaria com regularidade, confirma os ingredientes. Se o teu cão comer massa de pão crua, liga imediatamente ao teu veterinário; o mesmo se for pão com passas ou alho.",
-    "nl": "Gewoon brood geeft een hond meestal geen maagklachten. Geef je regelmatig brood of andere bakproducten, controleer dan de ingrediënten. Eet je hond rauw brooddeeg, bel dan meteen je dierenarts; dat geldt ook voor brood met rozijnen of knoflook."
+    "nl": "Gewoon brood geeft een hond meestal geen maagklachten. Geef je regelmatig brood of andere bakproducten, controleer dan de ingrediënten. Eet je hond rauw brooddeeg, bel dan meteen je dierenarts; dat geldt ook voor brood met rozijnen of knoflook.",
+    "pl": "Chleb bez dodatków zwykle nie rozstraja psu żołądka. Jeśli regularnie dajesz psu chleb lub wypieki, sprawdzaj skład. Jeśli pies zje surowe ciasto chlebowe, od razu zadzwoń do weterynarza; to samo dotyczy chleba z rodzynkami lub czosnkiem."
   },
   "serving": {
     "en": "Only very small pieces of plain, fully baked white or wheat bread, now and then. No raisins, garlic, xylitol or other ingredients toxic to dogs.",
@@ -113,7 +119,8 @@
     "de": "Nur sehr kleine Stücke ungewürztes, vollständig durchgebackenes Weiß- oder Weizenbrot, ab und zu. Keine Rosinen, kein Knoblauch, kein Xylit und keine anderen Zutaten, die für Hunde giftig sind.",
     "fr": "Seulement de très petits morceaux de pain blanc ou de blé nature, bien cuit, de temps en temps. Sans raisins secs, ail, xylitol ni autre ingrédient toxique pour les chiens.",
     "pt": "Só pedaços muito pequenos de pão branco ou de trigo simples e bem cozido, de vez em quando. Sem passas, alho, xilitol nem outros ingredientes tóxicos para os cães.",
-    "nl": "Alleen heel kleine stukjes gewoon wit of tarwebrood dat helemaal gaar is gebakken, af en toe. Geen rozijnen, knoflook, xylitol of andere ingrediënten die giftig zijn voor honden."
+    "nl": "Alleen heel kleine stukjes gewoon wit of tarwebrood dat helemaal gaar is gebakken, af en toe. Geen rozijnen, knoflook, xylitol of andere ingrediënten die giftig zijn voor honden.",
+    "pl": "Tylko bardzo małe kawałki białego lub pszennego chleba bez dodatków, w pełni upieczonego, od czasu do czasu. Żadnych rodzynek, czosnku, ksylitolu ani innych składników toksycznych dla psów."
   },
   "child": {
     "en": "Dogs can have a tiny piece of plain bread. Raisin bread and garlic bread are not for dogs, so ask a grown-up first.",
@@ -129,7 +136,8 @@
     "de": "Hunde dürfen ein winziges Stück ungewürztes Brot haben. Rosinenbrot und Knoblauchbrot sind nichts für Hunde, also frag vorher einen Erwachsenen.",
     "fr": "Un tout petit morceau de pain nature, c’est possible pour un chien. Pain aux raisins secs et pain à l’ail : non, demande d’abord à un adulte.",
     "pt": "Os cães podem comer um bocadinho de pão simples. O pão com passas e o pão de alho não são para cães, por isso pergunta primeiro a um adulto.",
-    "nl": "Honden mogen een heel klein stukje gewoon brood. Rozijnenbrood en knoflookbrood zijn niets voor honden, dus vraag het eerst aan een volwassene."
+    "nl": "Honden mogen een heel klein stukje gewoon brood. Rozijnenbrood en knoflookbrood zijn niets voor honden, dus vraag het eerst aan een volwassene.",
+    "pl": "Pies może dostać maleńki kawałek chleba bez dodatków. Chleb z rodzynkami i pieczywo czosnkowe nie są dla psów, więc najpierw zapytaj dorosłego."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Dürfen Hunde Knoblauchbrot fressen?",
         "fr": "Les chiens peuvent-ils manger du pain à l’ail ?",
         "pt": "Os cães podem comer pão de alho?",
-        "nl": "Mogen honden knoflookbrood eten?"
+        "nl": "Mogen honden knoflookbrood eten?",
+        "pl": "Czy psy mogą jeść pieczywo czosnkowe?"
       },
       "a": {
         "en": "No. Garlic bread can cause serious side effects such as abdominal pain, vomiting, diarrhoea, weakness and collapse.",
@@ -163,7 +172,8 @@
         "de": "Nein. Knoblauchbrot kann ernste Nebenwirkungen wie Bauchschmerzen, Erbrechen, Durchfall, Schwäche und Kollaps verursachen.",
         "fr": "Non. Le pain à l’ail peut provoquer de graves effets indésirables : douleurs abdominales, vomissements, diarrhée, faiblesse et effondrement.",
         "pt": "Não. O pão de alho pode causar efeitos graves, como dor abdominal, vómitos, diarreia, fraqueza e colapso.",
-        "nl": "Nee. Knoflookbrood kan ernstige verschijnselen veroorzaken, zoals buikpijn, braken, diarree, zwakte en instorten."
+        "nl": "Nee. Knoflookbrood kan ernstige verschijnselen veroorzaken, zoals buikpijn, braken, diarree, zwakte en instorten.",
+        "pl": "Nie. Pieczywo czosnkowe może wywołać poważne skutki, takie jak ból brzucha, wymioty, biegunka, osłabienie i zapaść."
       }
     },
     {
@@ -181,7 +191,8 @@
         "de": "Ist Brot gut, wenn der Hund Magenbeschwerden hat?",
         "fr": "Le pain est-il bon pour un chien qui a mal au ventre ?",
         "pt": "O pão faz bem a um cão com indisposição de estômago?",
-        "nl": "Is brood goed voor een hond met maagklachten?"
+        "nl": "Is brood goed voor een hond met maagklachten?",
+        "pl": "Czy chleb pomaga na rozstrój żołądka u psa?"
       },
       "a": {
         "en": "A bland diet of rice and boiled chicken is a better option, and better still is calling your vet for advice.",
@@ -197,7 +208,8 @@
         "de": "Besser geeignet ist Schonkost aus Reis und gekochtem Huhn. Noch besser ist es, Ihren Tierarzt um Rat zu fragen.",
         "fr": "Une alimentation douce à base de riz et de poulet bouilli est préférable, et le mieux est encore d’appeler votre vétérinaire pour demander conseil.",
         "pt": "Uma dieta suave de arroz e frango cozido é uma opção melhor, e ainda melhor é ligar ao veterinário para pedir conselho.",
-        "nl": "Een licht verteerbaar dieet van rijst en gekookte kip is een betere keuze, en het beste is om je dierenarts om advies te vragen."
+        "nl": "Een licht verteerbaar dieet van rijst en gekookte kip is een betere keuze, en het beste is om je dierenarts om advies te vragen.",
+        "pl": "Lepsza będzie lekkostrawna dieta z ryżu i gotowanego kurczaka, a najlepiej zadzwonić do weterynarza i zapytać o radę."
       }
     },
     {
@@ -215,7 +227,8 @@
         "de": "Was, wenn mein Hund rohen Brotteig frisst?",
         "fr": "Que faire si mon chien mange de la pâte à pain crue ?",
         "pt": "E se o meu cão comer massa de pão crua?",
-        "nl": "Wat als mijn hond rauw brooddeeg eet?"
+        "nl": "Wat als mijn hond rauw brooddeeg eet?",
+        "pl": "Co zrobić, jeśli pies zje surowe ciasto chlebowe?"
       },
       "a": {
         "en": "Call your vet immediately. The yeast keeps the dough rising, stretching the stomach and releasing toxic levels of alcohol into the blood.",
@@ -231,7 +244,8 @@
         "de": "Rufen Sie sofort Ihren Tierarzt an. Die Hefe lässt den Teig weiter aufgehen, dehnt den Magen und setzt giftige Mengen Alkohol ins Blut frei.",
         "fr": "Appelez immédiatement votre vétérinaire. La levure continue de faire lever la pâte, ce qui distend l’estomac et libère dans le sang des quantités toxiques d’alcool.",
         "pt": "Liga imediatamente ao teu veterinário. A levedura faz a massa continuar a crescer, esticando o estômago e libertando para o sangue níveis tóxicos de álcool.",
-        "nl": "Bel meteen je dierenarts. De gist laat het deeg blijven rijzen, waardoor de maag wordt opgerekt en er giftige hoeveelheden alcohol in het bloed komen."
+        "nl": "Bel meteen je dierenarts. De gist laat het deeg blijven rijzen, waardoor de maag wordt opgerekt en er giftige hoeveelheden alcohol in het bloed komen.",
+        "pl": "Od razu zadzwoń do weterynarza. Drożdże sprawiają, że ciasto dalej rośnie, rozciąga żołądek i uwalnia do krwi toksyczne ilości alkoholu."
       }
     }
   ],
@@ -424,6 +438,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "85e78ccd3b7d508e019608d1344b0e29c0042f38a387e579fff207f3c73ad99e"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "b1b6d6be89c9d1b83772990cdca1454afa92d359ab66ab7e24441406f7f29a7a"
     }
   }
 }

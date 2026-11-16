@@ -15,7 +15,8 @@
     "fr": "Cannelle",
     "es": "Canela",
     "pt": "Canela",
-    "nl": "Kaneel"
+    "nl": "Kaneel",
+    "pl": "Cynamon"
   },
   "question": {
     "en": "Can cats eat cinnamon?",
@@ -31,7 +32,8 @@
     "fr": "Les chats peuvent-ils manger de la cannelle ?",
     "es": "¿Pueden los gatos comer canela?",
     "pt": "Os gatos podem comer canela?",
-    "nl": "Mogen katten kaneel eten?"
+    "nl": "Mogen katten kaneel eten?",
+    "pl": "Czy koty mogą jeść cynamon?"
   },
   "url_slug": {
     "en": "cinnamon",
@@ -47,7 +49,8 @@
     "fr": "cannelle",
     "es": "canela",
     "pt": "canela",
-    "nl": "kaneel"
+    "nl": "kaneel",
+    "pl": "cynamon"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Mieux vaut éviter. L’ASPCA classe la cannelle parmi les produits non toxiques pour les chats, mais toute matière végétale peut provoquer des vomissements et des troubles digestifs, et les chats n’en ont pas besoin. L’huile de cannelle, elle, est différente : elle est toxique pour les chats.",
     "es": "Es mejor no dársela. La ASPCA incluye la canela entre las plantas no tóxicas para los gatos, pero cualquier material vegetal puede provocar vómitos y malestar de estómago, y los gatos no la necesitan. El aceite de canela es distinto: es tóxico para los gatos.",
     "pt": "É melhor não. A ASPCA classifica a canela como não tóxica para os gatos, mas qualquer material vegetal pode causar vómitos e indisposição de estômago, e os gatos não precisam dela. O óleo de canela é diferente: é tóxico para os gatos.",
-    "nl": "Liever niet. De ASPCA noemt kaneel niet giftig voor katten, maar elk plantaardig materiaal kan braken en maagklachten veroorzaken, en katten hebben het niet nodig. Kaneelolie is anders: die is giftig voor katten."
+    "nl": "Liever niet. De ASPCA noemt kaneel niet giftig voor katten, maar elk plantaardig materiaal kan braken en maagklachten veroorzaken, en katten hebben het niet nodig. Kaneelolie is anders: die is giftig voor katten.",
+    "pl": "Lepiej nie. ASPCA uznaje cynamon za nietoksyczny dla kotów, ale zjedzenie czegokolwiek roślinnego może wywołać wymioty i rozstrój żołądka, a koty cynamonu nie potrzebują. Olejek cynamonowy to co innego: jest toksyczny dla kotów."
   },
   "why": {
     "en": "The ASPCA lists cinnamon (Cinnamomum zeylanicum) as non-toxic to cats, and notes that eating any plant material may cause vomiting and gastrointestinal upset in cats. PDSA says cats don't need anything other than a complete diet. Cats Protection lists cinnamon oil among the essential oils that are toxic to cats. Because cinnamon is not a cat food and its oil is harmful, we don't recommend it.",
@@ -80,7 +84,8 @@
     "fr": "L’ASPCA classe la cannelle (Cinnamomum zeylanicum) parmi les produits non toxiques pour les chats, et précise que manger n’importe quelle matière végétale peut provoquer des vomissements et des troubles gastro-intestinaux chez le chat. La PDSA rappelle que les chats n’ont besoin de rien d’autre qu’une alimentation complète. Cats Protection range l’huile de cannelle parmi les huiles essentielles toxiques pour les chats. Comme la cannelle n’est pas un aliment pour chats et que son huile est nocive, nous ne la recommandons pas.",
     "es": "La ASPCA incluye la canela (Cinnamomum zeylanicum) entre las plantas no tóxicas para los gatos, y señala que comer cualquier material vegetal puede provocar vómitos y molestias gastrointestinales en los gatos. PDSA dice que los gatos no necesitan nada más que una alimentación completa. Cats Protection incluye el aceite de canela entre los aceites esenciales que son tóxicos para los gatos. Como la canela no es comida para gatos y su aceite es dañino, no la recomendamos.",
     "pt": "A ASPCA classifica a canela (Cinnamomum zeylanicum) como não tóxica para os gatos e refere que comer qualquer material vegetal pode causar vómitos e perturbações gastrointestinais nos gatos. A PDSA diz que os gatos não precisam de mais nada além de uma alimentação completa. A Cats Protection inclui o óleo de canela entre os óleos essenciais que são tóxicos para os gatos. Como a canela não é comida para gatos e o seu óleo faz mal, não a recomendamos.",
-    "nl": "De ASPCA noemt kaneel (Cinnamomum zeylanicum) niet giftig voor katten en merkt op dat het eten van plantaardig materiaal bij katten braken en maag- en darmklachten kan veroorzaken. PDSA zegt dat katten niets anders nodig hebben dan een volwaardige voeding. Cats Protection rekent kaneelolie tot de etherische oliën die giftig zijn voor katten. Omdat kaneel geen kattenvoer is en de olie schadelijk is, raden we het af."
+    "nl": "De ASPCA noemt kaneel (Cinnamomum zeylanicum) niet giftig voor katten en merkt op dat het eten van plantaardig materiaal bij katten braken en maag- en darmklachten kan veroorzaken. PDSA zegt dat katten niets anders nodig hebben dan een volwaardige voeding. Cats Protection rekent kaneelolie tot de etherische oliën die giftig zijn voor katten. Omdat kaneel geen kattenvoer is en de olie schadelijk is, raden we het af.",
+    "pl": "ASPCA uznaje cynamon (Cinnamomum zeylanicum) za nietoksyczny dla kotów i zaznacza, że zjedzenie czegokolwiek roślinnego może u kotów wywołać wymioty i rozstrój żołądka i jelit. Według PDSA koty nie potrzebują niczego poza pełnowartościową dietą. Cats Protection wymienia olejek cynamonowy wśród olejków eterycznych toksycznych dla kotów. Ponieważ cynamon nie jest pokarmem dla kotów, a jego olejek szkodzi, nie zalecamy go podawać."
   },
   "signs": {
     "en": [
@@ -138,6 +143,10 @@
     "nl": [
       "Braken",
       "Maagklachten"
+    ],
+    "pl": [
+      "Wymioty",
+      "Rozstrój żołądka"
     ]
   },
   "what_to_do": {
@@ -154,7 +163,8 @@
     "fr": "Si votre chat a mangé un peu de cannelle, surveillez l’apparition de vomissements ou de troubles digestifs. S’il a léché ou mangé de l’huile de cannelle, contactez immédiatement votre vétérinaire ; n’attendez pas l’apparition de signes.",
     "es": "Si tu gato ha comido un poco de canela, observa si tiene vómitos o malestar de estómago. Si tu gato ha lamido o comido aceite de canela, ponte en contacto con tu veterinario enseguida; no esperes a que aparezcan síntomas.",
     "pt": "Se o teu gato comeu um pouco de canela, vigia se aparecem vómitos ou indisposição de estômago. Se o teu gato lambeu ou comeu óleo de canela, contacta imediatamente o teu veterinário; não esperes que surjam sinais.",
-    "nl": "Heeft je kat een beetje kaneel gegeten, let dan op braken of maagklachten. Heeft je kat kaneelolie gelikt of gegeten, neem dan meteen contact op met je dierenarts; wacht niet af of er verschijnselen optreden."
+    "nl": "Heeft je kat een beetje kaneel gegeten, let dan op braken of maagklachten. Heeft je kat kaneelolie gelikt of gegeten, neem dan meteen contact op met je dierenarts; wacht niet af of er verschijnselen optreden.",
+    "pl": "Jeśli twój kot zjadł odrobinę cynamonu, obserwuj, czy nie pojawią się wymioty lub rozstrój żołądka. Jeśli kot zlizał albo połknął olejek cynamonowy, od razu skontaktuj się z weterynarzem; nie czekaj, aż pojawią się objawy."
   },
   "serving": null,
   "child": {
@@ -171,7 +181,8 @@
     "fr": "La cannelle est une épice pour la cuisine des humains. Les chats n’en ont pas besoin : garde les épices et les huiles parfumées loin de ton chat.",
     "es": "La canela es una especia para cocinar para las personas. Los gatos no la necesitan, así que mantén las especias y los aceites con olor lejos del gatito.",
     "pt": "A canela é um tempero para a cozinha das pessoas. Os gatos não precisam dela, por isso mantém os temperos e os óleos perfumados longe do gatinho.",
-    "nl": "Kaneel is een kruid dat mensen in de keuken gebruiken. Katten hebben het niet nodig, dus houd kruiden en geurende oliën uit de buurt van je kat."
+    "nl": "Kaneel is een kruid dat mensen in de keuken gebruiken. Katten hebben het niet nodig, dus houd kruiden en geurende oliën uit de buurt van je kat.",
+    "pl": "Cynamon to przyprawa do gotowania dla ludzi. Koty go nie potrzebują, więc trzymaj przyprawy i pachnące olejki z dala od kotka."
   },
   "faq": [
     {
@@ -189,7 +200,8 @@
         "fr": "L’huile de cannelle est-elle sans danger pour les chats ?",
         "es": "¿Es seguro el aceite de canela para los gatos?",
         "pt": "O óleo de canela é seguro para gatos?",
-        "nl": "Is kaneelolie veilig voor katten?"
+        "nl": "Is kaneelolie veilig voor katten?",
+        "pl": "Czy olejek cynamonowy jest bezpieczny dla kotów?"
       },
       "a": {
         "en": "No. Cats Protection says most essential oils are toxic to cats and names cinnamon oil among them. Keep cinnamon oil and other essential oils away from your cat.",
@@ -205,7 +217,8 @@
         "fr": "Non. Cats Protection indique que la plupart des huiles essentielles sont toxiques pour les chats et cite l’huile de cannelle parmi elles. Gardez l’huile de cannelle et les autres huiles essentielles hors de portée de votre chat.",
         "es": "No. Cats Protection dice que la mayoría de los aceites esenciales son tóxicos para los gatos y cita entre ellos el aceite de canela. Mantén el aceite de canela y otros aceites esenciales lejos de tu gato.",
         "pt": "Não. A Cats Protection diz que a maioria dos óleos essenciais é tóxica para os gatos e inclui o óleo de canela entre eles. Mantém o óleo de canela e outros óleos essenciais longe do teu gato.",
-        "nl": "Nee. Cats Protection zegt dat de meeste etherische oliën giftig zijn voor katten en noemt kaneelolie daar uitdrukkelijk bij. Houd kaneelolie en andere etherische oliën uit de buurt van je kat."
+        "nl": "Nee. Cats Protection zegt dat de meeste etherische oliën giftig zijn voor katten en noemt kaneelolie daar uitdrukkelijk bij. Houd kaneelolie en andere etherische oliën uit de buurt van je kat.",
+        "pl": "Nie. Cats Protection podaje, że większość olejków eterycznych jest toksyczna dla kotów, i wymienia wśród nich olejek cynamonowy. Trzymaj olejek cynamonowy i inne olejki eteryczne z dala od kota."
       }
     }
   ],
@@ -320,6 +333,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1a0d1467b4de76bc41aad5878d5113274b2efe33270325928917f3c561e4bfa7"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "b109f3981ad2d0edcad31c026f0ccde576702b958805497957efce3497650ac3"
     }
   }
 }

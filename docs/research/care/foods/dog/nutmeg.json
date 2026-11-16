@@ -15,7 +15,8 @@
     "de": "Muskatnuss",
     "fr": "Noix de muscade",
     "pt": "Noz-moscada",
-    "nl": "Nootmuskaat"
+    "nl": "Nootmuskaat",
+    "pl": "Gałka muszkatołowa"
   },
   "question": {
     "en": "Can dogs eat nutmeg?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Muskatnuss fressen?",
     "fr": "Les chiens peuvent-ils manger de la noix de muscade ?",
     "pt": "Os cães podem comer noz-moscada?",
-    "nl": "Mogen honden nootmuskaat eten?"
+    "nl": "Mogen honden nootmuskaat eten?",
+    "pl": "Czy psy mogą jeść gałkę muszkatołową?"
   },
   "url_slug": {
     "en": "nutmeg",
@@ -47,7 +49,8 @@
     "de": "muskatnuss",
     "fr": "noix-de-muscade",
     "pt": "noz-moscada",
-    "nl": "nootmuskaat"
+    "nl": "nootmuskaat",
+    "pl": "galka-muszkatolowa"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Nein, halten Sie Muskatnuss von Ihrem Hund fern. Sie enthält einen Giftstoff namens Myristicin. Die kleine Menge in Backwaren ist in der Regel unbedenklich, aber eine große Menge Muskatnuss kann Halluzinationen, Orientierungslosigkeit und schnellen Herzschlag verursachen.",
     "fr": "Non, tenez la noix de muscade hors de portée de votre chien. Elle contient une toxine appelée myristicine. La petite quantité utilisée dans les pâtisseries est généralement sans danger, mais une grande quantité de noix de muscade peut provoquer des hallucinations, une désorientation et une accélération du rythme cardiaque.",
     "pt": "Não, mantém a noz-moscada longe do teu cão. Contém uma toxina chamada miristicina. A pequena quantidade usada em produtos de pastelaria é geralmente segura, mas uma grande quantidade de noz-moscada pode causar alucinações, desorientação e batimento cardíaco acelerado.",
-    "nl": "Nee, houd nootmuskaat bij je hond uit de buurt. Het bevat een gifstof, myristicine. De kleine hoeveelheid in bakproducten is over het algemeen veilig, maar een grote hoeveelheid nootmuskaat kan hallucinaties, desoriëntatie en een snelle hartslag veroorzaken."
+    "nl": "Nee, houd nootmuskaat bij je hond uit de buurt. Het bevat een gifstof, myristicine. De kleine hoeveelheid in bakproducten is over het algemeen veilig, maar een grote hoeveelheid nootmuskaat kan hallucinaties, desoriëntatie en een snelle hartslag veroorzaken.",
+    "pl": "Nie, trzymaj gałkę muszkatołową z dala od psa. Zawiera toksynę zwaną myristicyną. Niewielka ilość używana w wypiekach jest na ogół bezpieczna, ale duża ilość gałki muszkatołowej może powodować halucynacje, dezorientację i przyspieszone tętno."
   },
   "why": {
     "en": "In large amounts, myristicin can cause hallucinations, disorientation, a faster heart rate, high blood pressure, dry mouth, belly pain and possibly seizures, and the signs can last up to 48 hours. A dog would need to eat a very large amount for this; the small amount used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Because the spice itself contains a toxin, we rate it dangerous.",
@@ -80,7 +84,8 @@
     "de": "In großen Mengen kann Myristicin Halluzinationen, Orientierungslosigkeit, schnelleren Herzschlag, Bluthochdruck, trockenen Mund, Bauchschmerzen und möglicherweise Krampfanfälle verursachen, und die Anzeichen können bis zu 48 Stunden anhalten. Dafür müsste ein Hund eine sehr große Menge fressen. Die kleine Menge in Rezepten verursacht sehr wahrscheinlich keine ernsten Probleme, auch wenn leichte Magenbeschwerden auftreten können. Weil das Gewürz selbst einen Giftstoff enthält, stufen wir es als gefährlich ein.",
     "fr": "En grande quantité, la myristicine peut provoquer des hallucinations, une désorientation, une accélération du rythme cardiaque, une hypertension, une bouche sèche, des douleurs au ventre et éventuellement des convulsions, et les signes peuvent durer jusqu’à 48 heures. Il faudrait qu’un chien en mange une très grande quantité ; il est très peu probable que la petite quantité utilisée dans les recettes cause de graves problèmes, même si de légers troubles digestifs sont possibles. Comme l’épice elle-même contient une toxine, nous la classons comme dangereuse.",
     "pt": "Em grandes quantidades, a miristicina pode causar alucinações, desorientação, batimento cardíaco mais rápido, tensão arterial alta, boca seca, dor de barriga e possivelmente convulsões, e os sinais podem durar até 48 horas. Um cão teria de comer uma quantidade muito grande para isto acontecer; a pequena quantidade usada nas receitas dificilmente causa problemas graves, embora possa haver uma ligeira indisposição de estômago. Como o próprio tempero contém uma toxina, classificamo-lo como perigoso.",
-    "nl": "In grote hoeveelheden kan myristicine hallucinaties, desoriëntatie, een snellere hartslag, hoge bloeddruk, een droge mond, buikpijn en mogelijk toevallen veroorzaken, en de verschijnselen kunnen tot 48 uur duren. Een hond zou hiervoor een heel grote hoeveelheid moeten eten; de kleine hoeveelheid in recepten veroorzaakt zeer waarschijnlijk geen ernstige problemen, al zijn milde maagklachten mogelijk. Omdat het kruid zelf een gifstof bevat, beoordelen we het als gevaarlijk."
+    "nl": "In grote hoeveelheden kan myristicine hallucinaties, desoriëntatie, een snellere hartslag, hoge bloeddruk, een droge mond, buikpijn en mogelijk toevallen veroorzaken, en de verschijnselen kunnen tot 48 uur duren. Een hond zou hiervoor een heel grote hoeveelheid moeten eten; de kleine hoeveelheid in recepten veroorzaakt zeer waarschijnlijk geen ernstige problemen, al zijn milde maagklachten mogelijk. Omdat het kruid zelf een gifstof bevat, beoordelen we het als gevaarlijk.",
+    "pl": "W dużych ilościach myristicyna może powodować halucynacje, dezorientację, przyspieszone tętno, wysokie ciśnienie krwi, suchość w pysku, ból brzucha, a być może także drgawki, a objawy mogą trwać nawet 48 godzin. Pies musiałby zjeść bardzo dużą ilość; bardzo mało prawdopodobne, by niewielka ilość używana w przepisach wywołała poważne problemy, choć może pojawić się łagodny rozstrój żołądka. Ponieważ sama przyprawa zawiera toksynę, oceniamy ją jako niebezpieczną."
   },
   "signs": {
     "en": [
@@ -208,6 +213,15 @@
       "Buikpijn",
       "Mogelijk toevallen",
       "De verschijnselen kunnen tot 48 uur duren"
+    ],
+    "pl": [
+      "Łagodny rozstrój żołądka (małe ilości)",
+      "Halucynacje i dezorientacja",
+      "Przyspieszone bicie serca",
+      "Wysokie ciśnienie krwi i suchość w pysku",
+      "Ból brzucha",
+      "Możliwe drgawki",
+      "Objawy mogą trwać nawet 48 godzin"
     ]
   },
   "what_to_do": {
@@ -224,7 +238,8 @@
     "de": "Ein wenig Muskatnuss in einem Gebäck verursacht sehr wahrscheinlich keine ernsten Probleme. Hat Ihr Hund versehentlich eine große Menge Muskatnuss gefressen, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten.",
     "fr": "Il est très peu probable qu’un peu de noix de muscade dans une friandise cuite au four cause de graves problèmes. Si votre chien a mangé accidentellement une grande quantité de noix de muscade, appelez votre vétérinaire pour demander conseil.",
     "pt": "Um pouco de noz-moscada numa guloseima de pastelaria dificilmente causa problemas graves. Se o teu cão comeu por acidente uma grande quantidade de noz-moscada, liga ao teu veterinário para pedires conselho.",
-    "nl": "Een beetje nootmuskaat in iets lekkers uit de oven veroorzaakt zeer waarschijnlijk geen ernstige problemen. Heeft je hond per ongeluk een grote hoeveelheid nootmuskaat gegeten, bel dan je dierenarts voor advies."
+    "nl": "Een beetje nootmuskaat in iets lekkers uit de oven veroorzaakt zeer waarschijnlijk geen ernstige problemen. Heeft je hond per ongeluk een grote hoeveelheid nootmuskaat gegeten, bel dan je dierenarts voor advies.",
+    "pl": "Bardzo mało prawdopodobne, by odrobina gałki muszkatołowej w wypieku spowodowała poważne problemy. Jeśli pies przypadkiem zjadł dużą ilość gałki muszkatołowej, zadzwoń do weterynarza po radę."
   },
   "serving": null,
   "child": {
@@ -241,7 +256,8 @@
     "de": "Muskatnuss ist ein Gewürz, das Menschen zum Kochen benutzen. Sie ist nichts für Hunde, also stell Gewürzgläser dorthin, wo dein Hund nicht herankommt.",
     "fr": "La noix de muscade est une épice pour la cuisine des humains. Elle n’est pas faite pour les chiens : range les pots d’épices hors de portée de ton chien.",
     "pt": "A noz-moscada é um tempero para a cozinha das pessoas. Não é para cães, por isso guarda os frascos de temperos onde o teu cão não chegue.",
-    "nl": "Nootmuskaat is een kruid voor mensen om mee te koken. Het is niets voor honden, dus zet kruidenpotjes waar je hond er niet bij kan."
+    "nl": "Nootmuskaat is een kruid voor mensen om mee te koken. Het is niets voor honden, dus zet kruidenpotjes waar je hond er niet bij kan.",
+    "pl": "Gałka muszkatołowa to przyprawa kuchenna dla ludzi. Nie jest dla psów, więc trzymaj słoiczki z przyprawami poza zasięgiem psa."
   },
   "faq": [
     {
@@ -259,7 +275,8 @@
         "de": "Mein Hund hat einen Keks mit ein wenig Muskatnuss gefressen. Ist das gefährlich?",
         "fr": "Mon chien a mangé un biscuit contenant un peu de noix de muscade. Est-ce dangereux ?",
         "pt": "O meu cão comeu uma bolacha com um pouco de noz-moscada. É perigoso?",
-        "nl": "Mijn hond heeft een koekje met een beetje nootmuskaat gegeten. Is dat gevaarlijk?"
+        "nl": "Mijn hond heeft een koekje met een beetje nootmuskaat gegeten. Is dat gevaarlijk?",
+        "pl": "Mój pies zjadł ciasteczko z odrobiną gałki muszkatołowej. Czy to niebezpieczne?"
       },
       "a": {
         "en": "The small amount of nutmeg used in recipes is very unlikely to cause serious problems, though mild stomach upset could occur. Also check the cookie for xylitol, which some baked goods contain and which is very toxic.",
@@ -275,7 +292,8 @@
         "de": "Die kleine Menge Muskatnuss in Rezepten verursacht sehr wahrscheinlich keine ernsten Probleme, auch wenn leichte Magenbeschwerden auftreten können. Prüfen Sie den Keks außerdem auf Xylit, das manche Backwaren enthalten und das sehr giftig ist.",
         "fr": "Il est très peu probable que la petite quantité de noix de muscade utilisée dans les recettes cause de graves problèmes, même si de légers troubles digestifs sont possibles. Vérifiez aussi que le biscuit ne contient pas de xylitol, présent dans certaines pâtisseries et très toxique.",
         "pt": "A pequena quantidade de noz-moscada usada nas receitas dificilmente causa problemas graves, embora possa haver uma ligeira indisposição de estômago. Verifica também se a bolacha tem xilitol, que alguns produtos de pastelaria contêm e que é muito tóxico.",
-        "nl": "De kleine hoeveelheid nootmuskaat in recepten veroorzaakt zeer waarschijnlijk geen ernstige problemen, al zijn milde maagklachten mogelijk. Controleer het koekje ook op xylitol, dat in sommige bakproducten zit en zeer giftig is."
+        "nl": "De kleine hoeveelheid nootmuskaat in recepten veroorzaakt zeer waarschijnlijk geen ernstige problemen, al zijn milde maagklachten mogelijk. Controleer het koekje ook op xylitol, dat in sommige bakproducten zit en zeer giftig is.",
+        "pl": "Bardzo mało prawdopodobne, by niewielka ilość gałki muszkatołowej używana w przepisach wywołała poważne problemy, choć może pojawić się łagodny rozstrój żołądka. Sprawdź też, czy ciasteczko nie zawiera ksylitolu, który występuje w niektórych wypiekach i jest bardzo toksyczny."
       }
     }
   ],
@@ -410,6 +428,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "30869e38a07f1c382402af799987c228b2c05ee88614d392903a1dd6bb690c56"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "138ae9b08075b559b6720f41c70b3dcc4883644cc650f7739ae236dce6d6eef5"
     }
   }
 }

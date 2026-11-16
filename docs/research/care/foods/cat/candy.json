@@ -15,7 +15,8 @@
     "fr": "Bonbons",
     "es": "Caramelos y golosinas",
     "pt": "Doces e rebuçados",
-    "nl": "Snoep"
+    "nl": "Snoep",
+    "pl": "Cukierki i słodycze"
   },
   "question": {
     "en": "Can cats eat candy?",
@@ -31,7 +32,8 @@
     "fr": "Les chats peuvent-ils manger des bonbons ?",
     "es": "¿Pueden los gatos comer caramelos?",
     "pt": "Os gatos podem comer doces?",
-    "nl": "Mogen katten snoep eten?"
+    "nl": "Mogen katten snoep eten?",
+    "pl": "Czy koty mogą jeść cukierki?"
   },
   "url_slug": {
     "en": "candy",
@@ -47,7 +49,8 @@
     "fr": "bonbons",
     "es": "caramelos-y-golosinas",
     "pt": "doces-e-rebucados",
-    "nl": "snoep"
+    "nl": "snoep",
+    "pl": "cukierki"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Non, les bonbons ne sont pas faits pour les chats et ne sont pas sans danger pour eux. Beaucoup contiennent du chocolat ou des raisins secs, nocifs pour les chats, et un emballage avalé peut irriter ou obstruer l’intestin. Les chats ne perçoivent pas le goût sucré : les bonbons ne leur apportent rien de bon.",
     "es": "No, los caramelos no son para los gatos y no son seguros para ellos. Muchas golosinas llevan chocolate o pasas, que son dañinos para los gatos, y los envoltorios tragados pueden irritar el intestino o taponarlo. Además, los gatos no perciben el sabor dulce, así que las golosinas no les aportan nada bueno.",
     "pt": "Não, os doces não são para gatos e não são seguros para eles. Muitos doces contêm chocolate ou passas, que fazem mal aos gatos, e as embalagens engolidas podem irritar ou obstruir o intestino. Os gatos nem sequer distinguem o sabor doce, por isso os doces não lhes trazem nada de bom.",
-    "nl": "Nee, snoep is niets voor katten en niet veilig voor ze. Veel snoep bevat chocolade of rozijnen, die schadelijk zijn voor katten, en ingeslikte snoeppapiertjes kunnen de darmen irriteren of verstoppen. Katten proeven sowieso geen zoet, dus snoep levert ze niets goeds op."
+    "nl": "Nee, snoep is niets voor katten en niet veilig voor ze. Veel snoep bevat chocolade of rozijnen, die schadelijk zijn voor katten, en ingeslikte snoeppapiertjes kunnen de darmen irriteren of verstoppen. Katten proeven sowieso geen zoet, dus snoep levert ze niets goeds op.",
+    "pl": "Nie, cukierki nie są dla kotów i nie są dla nich bezpieczne. Wiele słodyczy zawiera czekoladę lub rodzynki, które szkodzą kotom, a połknięte papierki mogą podrażnić lub zablokować jelita. Koty i tak nie czują smaku słodkiego, więc słodycze nie dają im nic dobrego."
   },
   "why": {
     "en": "Pet Poison Helpline says cats should not eat candy and that candy is not safe for cats: chocolate is toxic to cats and raisins may cause kidney failure in cats. VCA says candy is not for cats and warns that candy wrappers can cause intestinal upset and gastrointestinal blockage, and Blue Cross says many sweet treats are poisonous to cats. Sugar itself isn't toxic, but it is unhealthy for cats. Because candy so often hides these dangers, we use the stricter level.",
@@ -80,7 +84,8 @@
     "fr": "Le Pet Poison Helpline indique que les chats ne doivent pas manger de bonbons et que les bonbons ne sont pas sans danger pour eux : le chocolat est toxique pour les chats et les raisins secs peuvent provoquer une insuffisance rénale chez le chat. VCA précise que les bonbons ne sont pas faits pour les chats et avertit que les emballages de bonbons peuvent provoquer des troubles intestinaux et une obstruction gastro-intestinale, et Blue Cross rappelle que de nombreuses friandises sucrées sont toxiques pour les chats. Le sucre lui-même n’est pas toxique, mais il n’est pas bon pour les chats. Comme les bonbons cachent si souvent ces dangers, nous appliquons le niveau le plus strict.",
     "es": "Pet Poison Helpline dice que los gatos no deben comer caramelos y que no son seguros para ellos: el chocolate es tóxico para los gatos y las pasas pueden causar insuficiencia renal. VCA dice que los caramelos no son para los gatos y advierte de que los envoltorios pueden causar molestias intestinales y obstrucción del aparato digestivo, y Blue Cross señala que muchas golosinas son venenosas para los gatos. El azúcar en sí no es tóxico, pero no es sano para los gatos. Como los caramelos esconden tan a menudo estos peligros, aplicamos el nivel más estricto.",
     "pt": "A Pet Poison Helpline diz que os gatos não devem comer doces e que os doces não são seguros para os gatos: o chocolate é tóxico para os gatos e as passas podem causar insuficiência renal. A VCA diz que os doces não são para gatos e avisa que as embalagens podem causar irritação intestinal e obstrução gastrointestinal, e a Blue Cross diz que muitas guloseimas doces são venenosas para os gatos. O açúcar em si não é tóxico, mas não faz bem aos gatos. Como os doces escondem tantas vezes estes perigos, usamos o nível mais rigoroso.",
-    "nl": "Pet Poison Helpline zegt dat katten geen snoep mogen eten en dat snoep niet veilig is voor katten: chocolade is giftig voor katten en rozijnen kunnen bij katten nierfalen veroorzaken. VCA zegt dat snoep niets voor katten is en waarschuwt dat snoeppapiertjes darmklachten en een darmverstopping kunnen veroorzaken, en Blue Cross zegt dat veel zoetigheid giftig is voor katten. Suiker zelf is niet giftig, maar wel ongezond voor katten. Omdat er in snoep zo vaak zulke gevaren schuilgaan, hanteren we het strengere niveau."
+    "nl": "Pet Poison Helpline zegt dat katten geen snoep mogen eten en dat snoep niet veilig is voor katten: chocolade is giftig voor katten en rozijnen kunnen bij katten nierfalen veroorzaken. VCA zegt dat snoep niets voor katten is en waarschuwt dat snoeppapiertjes darmklachten en een darmverstopping kunnen veroorzaken, en Blue Cross zegt dat veel zoetigheid giftig is voor katten. Suiker zelf is niet giftig, maar wel ongezond voor katten. Omdat er in snoep zo vaak zulke gevaren schuilgaan, hanteren we het strengere niveau.",
+    "pl": "Pet Poison Helpline podaje, że koty nie powinny jeść cukierków i że nie są one dla nich bezpieczne: czekolada jest toksyczna dla kotów, a rodzynki mogą wywołać u kotów niewydolność nerek. VCA podaje, że cukierki nie są dla kotów, i ostrzega, że papierki po cukierkach mogą wywołać rozstrój jelit i niedrożność przewodu pokarmowego, a Blue Cross – że wiele słodyczy jest dla kotów toksycznych. Sam cukier nie jest toksyczny, ale jest dla kotów niezdrowy. Ponieważ w cukierkach tak często kryją się te zagrożenia, przyjmujemy surowszą ocenę."
   },
   "signs": {
     "en": [
@@ -138,6 +143,10 @@
     "nl": [
       "Diarree of maagklachten",
       "Darmklachten na het inslikken van een verpakking"
+    ],
+    "pl": [
+      "Biegunka lub rozstrój żołądka",
+      "Rozstrój jelit po połknięciu papierka"
     ]
   },
   "what_to_do": {
@@ -154,7 +163,8 @@
     "fr": "Si votre chat a mangé des bonbons ou un emballage, contactez votre vétérinaire ou un centre antipoison vétérinaire pour demander conseil. Appelez dès qu’il a mangé du chocolat, même en petite quantité. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat à la maison.",
     "es": "Si tu gato ha comido caramelos o un envoltorio, ponte en contacto con tu veterinario o con una línea de información toxicológica para animales para que te orienten. Llama por cualquier cantidad de chocolate, aunque sea poca. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "pt": "Se o teu gato comeu doces ou uma embalagem, contacta o teu veterinário ou uma linha de apoio toxicológico para animais para pedir orientação. Liga sempre que houver chocolate, por pouco que seja. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Is je kat aan snoep of een snoeppapiertje gekomen, neem dan contact op met je dierenarts of een vergiftigingenlijn voor dieren voor advies. Bel bij chocolade altijd, hoe weinig het ook is. Wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
+    "nl": "Is je kat aan snoep of een snoeppapiertje gekomen, neem dan contact op met je dierenarts of een vergiftigingenlijn voor dieren voor advies. Bel bij chocolade altijd, hoe weinig het ook is. Wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Jeśli twój kot dobrał się do cukierków lub papierka, skontaktuj się z weterynarzem albo zadzwoń na telefon informacji toksykologicznej dla zwierząt, żeby uzyskać wskazówki. Dzwoń nawet po niewielkiej ilości czekolady. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -171,7 +181,8 @@
     "fr": "Les bonbons sont pour les humains, pas pour les chats. Certains peuvent rendre ton chat malade : range bien tes bonbons et leurs emballages.",
     "es": "Las golosinas son para las personas, no para los gatos. Algunas pueden poner malo al gatito, así que guarda bien tus caramelos y sus envoltorios.",
     "pt": "Os doces são para as pessoas, não para os gatos. Alguns podem pôr o gatinho doente, por isso guarda bem os teus doces e as embalagens.",
-    "nl": "Snoep is voor mensen, niet voor katten. Sommige soorten kunnen je kat ziek maken, dus ruim je snoep en de papiertjes netjes op."
+    "nl": "Snoep is voor mensen, niet voor katten. Sommige soorten kunnen je kat ziek maken, dus ruim je snoep en de papiertjes netjes op.",
+    "pl": "Słodycze są dla ludzi, nie dla kotów. Niektóre mogą zaszkodzić kotkowi, więc chowaj swoje cukierki i papierki."
   },
   "faq": [
     {
@@ -189,7 +200,8 @@
         "fr": "Un coup de langue sur un bonbon est-il une urgence ?",
         "es": "¿Es una urgencia que mi gato lama una golosina?",
         "pt": "Uma lambidela num doce é uma emergência?",
-        "nl": "Is een likje snoep een noodgeval?"
+        "nl": "Is een likje snoep een noodgeval?",
+        "pl": "Czy polizanie cukierka to nagły przypadek?"
       },
       "a": {
         "en": "Usually not. Cats Protection says if your cat accidentally licks a sweet treat, there's no need to rush to the vet. Chocolate is different: call about any chocolate your cat eats.",
@@ -205,7 +217,8 @@
         "fr": "En général, non. Cats Protection indique que si votre chat lèche accidentellement une friandise sucrée, il n’est pas nécessaire de se précipiter chez le vétérinaire. Le chocolat, lui, est différent : appelez dès que votre chat en a mangé, même un peu.",
         "es": "Normalmente no. Cats Protection dice que si tu gato lame sin querer una golosina dulce, no hace falta correr al veterinario. El chocolate es distinto: llama por cualquier cantidad de chocolate que coma tu gato.",
         "pt": "Normalmente não. A Cats Protection diz que, se o teu gato lamber sem querer uma guloseima doce, não é preciso correr ao veterinário. O chocolate é diferente: liga por qualquer chocolate que o teu gato coma.",
-        "nl": "Meestal niet. Volgens Cats Protection hoef je niet meteen naar de dierenarts als je kat per ongeluk aan iets zoets likt. Chocolade is anders: bel altijd als je kat chocolade heeft gegeten."
+        "nl": "Meestal niet. Volgens Cats Protection hoef je niet meteen naar de dierenarts als je kat per ongeluk aan iets zoets likt. Chocolade is anders: bel altijd als je kat chocolade heeft gegeten.",
+        "pl": "Zwykle nie. Cats Protection podaje, że jeśli kot przypadkowo poliże słodki smakołyk, nie trzeba od razu jechać do weterynarza. Czekolada to co innego: zadzwoń, gdy kot zje jakąkolwiek jej ilość."
       }
     },
     {
@@ -223,7 +236,8 @@
         "fr": "Pourquoi mon chat s’intéresse-t-il aux bonbons à la menthe ?",
         "es": "¿Por qué mi gato se interesa por los caramelos de menta?",
         "pt": "Porque é que o meu gato se interessa por rebuçados de hortelã-pimenta?",
-        "nl": "Waarom is mijn kat zo nieuwsgierig naar pepermuntsnoep?"
+        "nl": "Waarom is mijn kat zo nieuwsgierig naar pepermuntsnoep?",
+        "pl": "Dlaczego mój kot interesuje się miętowymi cukierkami?"
       },
       "a": {
         "en": "It's not the sugar. The smell of mint contains compounds like those in catnip, which can attract cats. Mint essential oils are toxic to cats, so keep sweets out of your cat's reach.",
@@ -239,7 +253,8 @@
         "fr": "Ce n’est pas le sucre. L’odeur de la menthe contient des composés proches de ceux de l’herbe à chat, qui peuvent attirer les chats. Les huiles essentielles de menthe sont toxiques pour les chats : gardez donc les sucreries hors de leur portée.",
         "es": "No es por el azúcar. El olor de la menta contiene compuestos parecidos a los de la hierba gatera, que pueden atraer a los gatos. Los aceites esenciales de menta son tóxicos para los gatos, así que mantén las golosinas fuera de su alcance.",
         "pt": "Não é pelo açúcar. O cheiro da hortelã contém compostos semelhantes aos da erva-gateira, que podem atrair os gatos. Os óleos essenciais de hortelã são tóxicos para os gatos, por isso mantém os doces fora do alcance do teu gato.",
-        "nl": "Het ligt niet aan de suiker. De muntgeur bevat stoffen die lijken op die in kattenkruid, en die kunnen katten aantrekken. Etherische muntolie is giftig voor katten, dus houd snoep buiten het bereik van je kat."
+        "nl": "Het ligt niet aan de suiker. De muntgeur bevat stoffen die lijken op die in kattenkruid, en die kunnen katten aantrekken. Etherische muntolie is giftig voor katten, dus houd snoep buiten het bereik van je kat.",
+        "pl": "To nie przez cukier. Zapach mięty zawiera związki podobne do tych w kocimiętce, które mogą przyciągać koty. Olejki eteryczne z mięty są toksyczne dla kotów, więc trzymaj słodycze poza zasięgiem kota."
       }
     }
   ],
@@ -399,6 +414,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d1f8bf8bdeb0aade842fcd383f7da2d4359798ef6a7895e7c2f69e4ccdb36be7"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "677f26fa02bfe001bcbe500a89586795808dac02caadabfca42c66705380ee0f"
     }
   }
 }

@@ -15,7 +15,8 @@
     "fr": "Riz (cuit)",
     "es": "Arroz (cocido)",
     "pt": "Arroz (cozido)",
-    "nl": "Rijst (gekookt)"
+    "nl": "Rijst (gekookt)",
+    "pl": "Ryż (ugotowany)"
   },
   "question": {
     "en": "Can cats eat rice?",
@@ -31,7 +32,8 @@
     "fr": "Les chats peuvent-ils manger du riz ?",
     "es": "¿Pueden los gatos comer arroz?",
     "pt": "Os gatos podem comer arroz?",
-    "nl": "Mogen katten rijst eten?"
+    "nl": "Mogen katten rijst eten?",
+    "pl": "Czy koty mogą jeść ryż?"
   },
   "url_slug": {
     "en": "rice",
@@ -47,7 +49,8 @@
     "fr": "riz",
     "es": "arroz",
     "pt": "arroz",
-    "nl": "rijst"
+    "nl": "rijst",
+    "pl": "ryz"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Oui, un peu de riz cuit nature ne pose pas de problème de temps en temps. Blue Cross suggère même d’allonger une petite réserve de nourriture pour chats avec du riz cuit. Mais le riz ne peut pas remplacer la nourriture pour chats : les chats ont besoin de viande chaque jour.",
     "es": "Sí, un poco de arroz cocido natural está bien para los gatos de vez en cuando. Blue Cross incluso sugiere completar una pequeña reserva de comida para gatos con arroz cocido. Pero el arroz no puede sustituir a la comida para gatos: los gatos necesitan carne todos los días.",
     "pt": "Sim, um pouco de arroz simples cozido não faz mal aos gatos de vez em quando. A Blue Cross sugere até esticar com arroz cozido a comida de gato que está a acabar. Mas o arroz não pode substituir a comida de gato: os gatos precisam de carne todos os dias.",
-    "nl": "Ja, een beetje gewone gekookte rijst is af en toe prima voor katten. Blue Cross raadt zelfs aan om een krappe voorraad kattenvoer aan te vullen met gekookte rijst. Maar rijst kan kattenvoer niet vervangen: katten hebben elke dag vlees nodig."
+    "nl": "Ja, een beetje gewone gekookte rijst is af en toe prima voor katten. Blue Cross raadt zelfs aan om een krappe voorraad kattenvoer aan te vullen met gekookte rijst. Maar rijst kan kattenvoer niet vervangen: katten hebben elke dag vlees nodig.",
+    "pl": "Tak, odrobina ugotowanego ryżu bez dodatków od czasu do czasu kotu nie zaszkodzi. Blue Cross podpowiada nawet, że gdy karmy zostało niewiele, można ją uzupełnić ugotowanym ryżem. Ale ryż nie zastąpi karmy dla kota: koty potrzebują mięsa każdego dnia."
   },
   "why": {
     "en": "Blue Cross says that if cat food has to last a few days, you can bulk it out with cooked veg or rice, but cats still need animal protein such as cooked meat or fish every day. VCA vets note that in pet food, grains like rice give dogs and cats an easily digestible source of energy, while International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates. Blue Cross adds that cats don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for dogs and cats.",
@@ -80,7 +84,8 @@
     "fr": "Blue Cross indique que si la nourriture pour chats doit durer quelques jours, on peut l’allonger avec des légumes cuits ou du riz, mais que les chats ont quand même besoin chaque jour de protéines animales, comme de la viande ou du poisson cuits. Les vétérinaires de VCA notent que, dans les aliments pour animaux, les céréales comme le riz offrent aux chiens et aux chats une source d’énergie facile à digérer, tandis qu’International Cat Care précise que les chats, carnivores stricts, digèrent et utilisent moins bien les glucides. Blue Cross ajoute que les chats n’ont pas besoin de glucides dans une alimentation légère, et VCA indique que le blanc de poulet cuit avec du riz blanc est carencé en de nombreux nutriments essentiels pour les chiens et les chats.",
     "es": "Blue Cross dice que, si la comida para gatos tiene que durar unos días, puedes completarla con verduras cocidas o arroz, pero los gatos siguen necesitando proteína animal, como carne o pescado cocinados, todos los días. Los veterinarios de VCA señalan que, en la comida para mascotas, los cereales como el arroz aportan a perros y gatos una fuente de energía fácil de digerir, mientras que International Cat Care señala que los gatos, al ser carnívoros estrictos, digieren y aprovechan peor los carbohidratos. Blue Cross añade que los gatos no necesitan carbohidratos en una dieta blanda, y VCA dice que la pechuga de pollo cocida con arroz blanco carece de muchos nutrientes esenciales para perros y gatos.",
     "pt": "A Blue Cross diz que, se a comida de gato tiver de durar alguns dias, podes juntar-lhe legumes cozidos ou arroz para render mais, mas os gatos continuam a precisar todos os dias de proteína animal, como carne ou peixe cozinhados. Os veterinários da VCA referem que, na comida para animais, cereais como o arroz dão aos cães e aos gatos uma fonte de energia fácil de digerir, enquanto a International Cat Care diz que os gatos, por serem carnívoros estritos, têm mais dificuldade em digerir e aproveitar os hidratos de carbono. A Blue Cross acrescenta que os gatos não precisam de hidratos de carbono numa dieta suave, e a VCA diz que o peito de frango cozinhado com arroz branco carece de muitos nutrientes essenciais para cães e gatos.",
-    "nl": "Blue Cross zegt dat je kattenvoer, als het een paar dagen moet meegaan, kunt aanvullen met gekookte groente of rijst, maar dat katten nog steeds elke dag dierlijk eiwit nodig hebben, zoals gaar vlees of vis. Dierenartsen van VCA merken op dat granen zoals rijst in dierenvoer honden en katten een gemakkelijk verteerbare energiebron geven, terwijl International Cat Care zegt dat katten, als echte vleeseters, koolhydraten minder goed kunnen verteren en benutten. Blue Cross voegt toe dat katten geen koolhydraten nodig hebben in een licht verteerbaar dieet, en VCA zegt dat gekookte kipfilet met witte rijst veel essentiële voedingsstoffen voor honden en katten mist."
+    "nl": "Blue Cross zegt dat je kattenvoer, als het een paar dagen moet meegaan, kunt aanvullen met gekookte groente of rijst, maar dat katten nog steeds elke dag dierlijk eiwit nodig hebben, zoals gaar vlees of vis. Dierenartsen van VCA merken op dat granen zoals rijst in dierenvoer honden en katten een gemakkelijk verteerbare energiebron geven, terwijl International Cat Care zegt dat katten, als echte vleeseters, koolhydraten minder goed kunnen verteren en benutten. Blue Cross voegt toe dat katten geen koolhydraten nodig hebben in een licht verteerbaar dieet, en VCA zegt dat gekookte kipfilet met witte rijst veel essentiële voedingsstoffen voor honden en katten mist.",
+    "pl": "Blue Cross podaje, że jeśli karma dla kota ma wystarczyć na kilka dni, można ją uzupełnić ugotowanymi warzywami lub ryżem, ale koty nadal codziennie potrzebują białka zwierzęcego, takiego jak ugotowane mięso lub ryba. Weterynarze z VCA zaznaczają, że w karmie dla zwierząt zboża, takie jak ryż, dają psom i kotom łatwo przyswajalne źródło energii, natomiast International Cat Care podaje, że koty jako bezwzględne mięsożercy gorzej trawią i wykorzystują węglowodany. Blue Cross dodaje, że koty nie potrzebują węglowodanów w diecie lekkostrawnej, a według VCA w gotowanej piersi kurczaka z białym ryżem brakuje wielu niezbędnych składników odżywczych dla psów i kotów."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "fr": "Le riz doit rester un petit complément à côté de la nourriture pour chats. Demandez conseil à votre vétérinaire avant de donner du riz à un chat qui a des troubles digestifs, car les chats n’ont pas besoin de glucides dans une alimentation légère.",
     "es": "Dale el arroz solo como un pequeño extra junto a la comida para gatos. Pregunta a tu veterinario antes de darle arroz a un gato con malestar de estómago, ya que los gatos no necesitan carbohidratos en una dieta blanda.",
     "pt": "Mantém o arroz como um pequeno extra ao lado da comida de gato. Pergunta ao teu veterinário antes de dares arroz a um gato com indisposição de estômago, pois os gatos não precisam de hidratos de carbono numa dieta suave.",
-    "nl": "Zie rijst als een klein extraatje naast het kattenvoer. Vraag je dierenarts om advies voordat je rijst geeft aan een kat met maagklachten, want katten hebben geen koolhydraten nodig in een licht verteerbaar dieet."
+    "nl": "Zie rijst als een klein extraatje naast het kattenvoer. Vraag je dierenarts om advies voordat je rijst geeft aan een kat met maagklachten, want katten hebben geen koolhydraten nodig in een licht verteerbaar dieet.",
+    "pl": "Traktuj ryż jako niewielki dodatek obok karmy dla kota. Zapytaj weterynarza, zanim dasz ryż kotu z rozstrojonym żołądkiem, ponieważ koty nie potrzebują węglowodanów w diecie lekkostrawnej."
   },
   "serving": {
     "en": "A little plain cooked rice with no added salt, as a small extra next to cat food.",
@@ -113,7 +119,8 @@
     "fr": "Un peu de riz cuit nature, sans sel ajouté, comme petit complément à côté de la nourriture pour chats.",
     "es": "Un poco de arroz cocido natural, sin sal añadida, como pequeño extra junto a la comida para gatos.",
     "pt": "Um pouco de arroz simples cozido, sem sal, como pequeno extra ao lado da comida de gato.",
-    "nl": "Een beetje gewone gekookte rijst zonder toegevoegd zout, als klein extraatje naast het kattenvoer."
+    "nl": "Een beetje gewone gekookte rijst zonder toegevoegd zout, als klein extraatje naast het kattenvoer.",
+    "pl": "Odrobina ugotowanego ryżu bez dodatku soli, jako niewielki dodatek obok karmy dla kota."
   },
   "child": {
     "en": "A little plain cooked rice is okay for a cat sometimes. But cats need their meaty cat food most of all.",
@@ -129,7 +136,8 @@
     "fr": "Un peu de riz cuit nature, c’est permis pour un chat de temps en temps. Mais ton chat a avant tout besoin de sa nourriture à base de viande.",
     "es": "Un poco de arroz cocido natural está bien a veces para un gato. Pero lo que más necesitan los gatos es su comida con carne.",
     "pt": "Um pouco de arroz simples cozido não faz mal ao gato de vez em quando. Mas o que os gatos mais precisam é da sua comida de gato com carne.",
-    "nl": "Een beetje gewone gekookte rijst is soms oké voor je kat. Maar katten hebben vooral hun vleesrijke kattenvoer nodig."
+    "nl": "Een beetje gewone gekookte rijst is soms oké voor je kat. Maar katten hebben vooral hun vleesrijke kattenvoer nodig.",
+    "pl": "Odrobina ugotowanego ryżu bez dodatków jest czasem w porządku dla kota. Ale przede wszystkim koty potrzebują swojej mięsnej karmy."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "fr": "Le poulet au riz convient-il à un chat qui a mal au ventre ?",
         "es": "¿Es bueno el pollo con arroz para un gato con malestar de estómago?",
         "pt": "Frango com arroz é bom para um gato com dor de barriga?",
-        "nl": "Is kip met rijst goed voor een kat met maagklachten?"
+        "nl": "Is kip met rijst goed voor een kat met maagklachten?",
+        "pl": "Czy kurczak z ryżem jest dobry dla kota z rozstrojonym brzuszkiem?"
       },
       "a": {
         "en": "Ask your vet first. Blue Cross says cats need a meat-based diet and don't need carbohydrate in a bland diet, and VCA says cooked chicken breast and white rice lacks many essential nutrients for cats.",
@@ -163,7 +172,8 @@
         "fr": "Demandez d’abord conseil à votre vétérinaire. Blue Cross indique que les chats ont besoin d’une alimentation à base de viande et n’ont pas besoin de glucides dans une alimentation légère, et VCA indique que le blanc de poulet cuit avec du riz blanc est carencé en de nombreux nutriments essentiels pour les chats.",
         "es": "Consulta primero con tu veterinario. Blue Cross dice que los gatos necesitan una alimentación a base de carne y que no necesitan carbohidratos en una dieta blanda, y VCA dice que la pechuga de pollo cocida con arroz blanco carece de muchos nutrientes esenciales para los gatos.",
         "pt": "Pergunta primeiro ao teu veterinário. A Blue Cross diz que os gatos precisam de uma alimentação à base de carne e não precisam de hidratos de carbono numa dieta suave, e a VCA diz que o peito de frango cozinhado com arroz branco carece de muitos nutrientes essenciais para os gatos.",
-        "nl": "Vraag het eerst aan je dierenarts. Blue Cross zegt dat katten een voeding op basis van vlees nodig hebben en in een licht verteerbaar dieet geen koolhydraten nodig hebben, en VCA zegt dat gekookte kipfilet met witte rijst veel essentiële voedingsstoffen voor katten mist."
+        "nl": "Vraag het eerst aan je dierenarts. Blue Cross zegt dat katten een voeding op basis van vlees nodig hebben en in een licht verteerbaar dieet geen koolhydraten nodig hebben, en VCA zegt dat gekookte kipfilet met witte rijst veel essentiële voedingsstoffen voor katten mist.",
+        "pl": "Najpierw zapytaj weterynarza. Blue Cross podaje, że koty potrzebują diety opartej na mięsie i nie potrzebują węglowodanów w diecie lekkostrawnej, a według VCA w gotowanej piersi kurczaka z białym ryżem brakuje wielu niezbędnych składników odżywczych dla kotów."
       }
     }
   ],
@@ -286,6 +296,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "82e2d6a83709f2b9801b6edc7f91bc6a1b74526685b7efa678599f99c70054c6"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "c3bb3b8b9cec43d6d7988d1ae1ba73852fb71ae1a3d5abd3df3c8af3f5be048d"
     }
   }
 }

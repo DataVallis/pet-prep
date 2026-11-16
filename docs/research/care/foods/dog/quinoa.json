@@ -15,7 +15,8 @@
     "de": "Quinoa",
     "fr": "Quinoa",
     "pt": "Quinoa",
-    "nl": "Quinoa"
+    "nl": "Quinoa",
+    "pl": "Komosa ryżowa (quinoa)"
   },
   "question": {
     "en": "Can dogs eat quinoa?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Quinoa fressen?",
     "fr": "Les chiens peuvent-ils manger du quinoa ?",
     "pt": "Os cães podem comer quinoa?",
-    "nl": "Mogen honden quinoa eten?"
+    "nl": "Mogen honden quinoa eten?",
+    "pl": "Czy psy mogą jeść komosę ryżową (quinoa)?"
   },
   "url_slug": {
     "en": "quinoa",
@@ -47,7 +49,8 @@
     "de": "quinoa",
     "fr": "quinoa",
     "pt": "quinoa",
-    "nl": "quinoa"
+    "nl": "quinoa",
+    "pl": "quinoa"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Grundsätzlich ja. Ungewürzt gekochte Quinoa ist für Hunde in kleinen Mengen unbedenklich. Geben Sie keine Quinoa von Ihrem eigenen Teller, denn sie wird oft mit Salz, Knoblauch oder Zwiebel gekocht, die für Hunde schädlich sein können.",
     "fr": "En général, oui. Le quinoa cuit nature est sans danger pour les chiens en petites quantités. Ne partagez pas le quinoa de votre assiette, car il est souvent cuisiné avec du sel, de l’ail ou de l’oignon, qui peuvent être nocifs pour les chiens.",
     "pt": "Geralmente sim. A quinoa simples cozida é segura para os cães em pequenas quantidades. Não partilhes a quinoa do teu prato, porque costuma ser cozinhada com sal, alho ou cebola, que podem fazer mal aos cães.",
-    "nl": "Over het algemeen wel. Gewoon gekookte quinoa is in kleine hoeveelheden veilig voor honden. Deel geen quinoa van je eigen bord, want die wordt vaak gekookt met zout, knoflook of ui, en die kunnen schadelijk zijn voor honden."
+    "nl": "Over het algemeen wel. Gewoon gekookte quinoa is in kleine hoeveelheden veilig voor honden. Deel geen quinoa van je eigen bord, want die wordt vaak gekookt met zout, knoflook of ui, en die kunnen schadelijk zijn voor honden.",
+    "pl": "Na ogół tak. Ugotowana komosa ryżowa bez dodatków jest dla psów bezpieczna w małych ilościach. Nie częstuj psa komosą ze swojego talerza, bo często gotuje się ją z solą, czosnkiem lub cebulą, które mogą szkodzić psom."
   },
   "why": {
     "en": "Quinoa makes saponin to protect itself from insects. The amount is usually too small to cause problems, but dogs may be more sensitive to saponin than people, and it may irritate the intestines. Rinsing quinoa before cooking helps, and cooking makes it easier to digest. Quinoa recipes often add salt, garlic and onions, which could be toxic to dogs.",
@@ -80,7 +84,8 @@
     "de": "Quinoa bildet Saponin, um sich vor Insekten zu schützen. Die Menge ist meist zu gering, um Probleme zu machen, aber Hunde reagieren möglicherweise empfindlicher auf Saponin als Menschen, und es kann den Darm reizen. Hilfreich ist es, Quinoa vor dem Kochen abzuspülen, und durch das Kochen wird sie leichter verdaulich. Quinoa-Rezepte enthalten oft Salz, Knoblauch und Zwiebeln, die für Hunde giftig sein können.",
     "fr": "Le quinoa produit de la saponine pour se protéger des insectes. La quantité est généralement trop faible pour poser problème, mais les chiens peuvent être plus sensibles à la saponine que les humains, et elle peut irriter l’intestin. Rincer le quinoa avant de le cuire aide, et la cuisson le rend plus digeste. Les recettes à base de quinoa ajoutent souvent du sel, de l’ail et de l’oignon, qui peuvent être toxiques pour les chiens.",
     "pt": "A quinoa produz saponina para se proteger dos insetos. A quantidade costuma ser demasiado pequena para causar problemas, mas os cães podem ser mais sensíveis à saponina do que as pessoas, e esta pode irritar os intestinos. Lavar a quinoa antes de cozinhar ajuda, e cozinhar torna-a mais fácil de digerir. As receitas de quinoa levam muitas vezes sal, alho e cebola, que podem ser tóxicos para os cães.",
-    "nl": "Quinoa maakt saponine aan om zichzelf tegen insecten te beschermen. De hoeveelheid is meestal te klein om problemen te veroorzaken, maar honden kunnen gevoeliger zijn voor saponine dan mensen en het kan de darmen irriteren. Het helpt om quinoa voor het koken te spoelen, en door het koken is hij makkelijker te verteren. Bij quinoagerechten worden vaak zout, knoflook en ui toegevoegd, en die kunnen giftig zijn voor honden."
+    "nl": "Quinoa maakt saponine aan om zichzelf tegen insecten te beschermen. De hoeveelheid is meestal te klein om problemen te veroorzaken, maar honden kunnen gevoeliger zijn voor saponine dan mensen en het kan de darmen irriteren. Het helpt om quinoa voor het koken te spoelen, en door het koken is hij makkelijker te verteren. Bij quinoagerechten worden vaak zout, knoflook en ui toegevoegd, en die kunnen giftig zijn voor honden.",
+    "pl": "Komosa ryżowa wytwarza saponiny, żeby chronić się przed owadami. Zwykle jest ich zbyt mało, by powodować problemy, ale psy mogą być wrażliwsze na saponiny niż ludzie i mogą one podrażniać jelita. Opłukanie komosy przed gotowaniem pomaga, a gotowanie ułatwia jej trawienie. W przepisach na dania z komosy często dodaje się sól, czosnek i cebulę, które mogą być toksyczne dla psów."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Hat Ihr Hund noch nie Quinoa gefressen, beginnen Sie mit einer kleinen Menge. Löst sie Erbrechen, Durchfall oder Verstopfung aus, geben Sie sie nicht noch einmal. Fragen Sie Ihren Tierarzt, bevor Sie ein neues Lebensmittel füttern.",
     "fr": "Si votre chien n’a jamais mangé de quinoa, commencez par une petite quantité. S’il provoque des vomissements, de la diarrhée ou de la constipation, n’en redonnez pas. Demandez l’avis de votre vétérinaire avant d’ajouter un nouvel aliment.",
     "pt": "Se o teu cão nunca comeu quinoa, começa com uma pequena quantidade. Se causar vómitos, diarreia ou prisão de ventre, não a voltes a dar. Confirma com o teu veterinário antes de juntar qualquer alimento novo.",
-    "nl": "Heeft je hond nog nooit quinoa gehad, begin dan met een kleine hoeveelheid. Moet je hond ervan braken of krijgt hij diarree of verstopping, geef het dan niet nog een keer. Overleg met je dierenarts voordat je iets nieuws aan het voer toevoegt."
+    "nl": "Heeft je hond nog nooit quinoa gehad, begin dan met een kleine hoeveelheid. Moet je hond ervan braken of krijgt hij diarree of verstopping, geef het dan niet nog een keer. Overleg met je dierenarts voordat je iets nieuws aan het voer toevoegt.",
+    "pl": "Jeśli pies nigdy nie jadł komosy ryżowej, zacznij od małej ilości. Jeśli wywoła wymioty, biegunkę lub zaparcie, nie dawaj jej więcej. Zanim dodasz jakikolwiek nowy produkt, zapytaj weterynarza."
   },
   "serving": {
     "en": "Rinsed, then cooked plain, without salt, garlic, onion or other seasoning; a small amount at first.",
@@ -113,7 +119,8 @@
     "de": "Abgespült und dann ohne Salz, Knoblauch, Zwiebel oder andere Gewürze gekocht. Anfangs nur eine kleine Menge.",
     "fr": "Rincé, puis cuit nature, sans sel, ail, oignon ni autre assaisonnement ; une petite quantité au début.",
     "pt": "Lavada e depois cozida sem mais nada, sem sal, alho, cebola nem outros temperos; no início, uma pequena quantidade.",
-    "nl": "Gespoeld en daarna gewoon gekookt, zonder zout, knoflook, ui of andere kruiden; eerst een kleine hoeveelheid."
+    "nl": "Gespoeld en daarna gewoon gekookt, zonder zout, knoflook, ui of andere kruiden; eerst een kleine hoeveelheid.",
+    "pl": "Opłukana, potem ugotowana bez dodatków, bez soli, czosnku, cebuli i innych przypraw; na początku mała ilość."
   },
   "child": {
     "en": "Dogs can try a little plain quinoa cooked just for them. Quinoa from our plates often has onion or garlic.",
@@ -129,7 +136,8 @@
     "de": "Hunde dürfen ein wenig ungewürzte Quinoa probieren, die extra für sie gekocht wurde. Quinoa von unseren Tellern enthält oft Zwiebel oder Knoblauch.",
     "fr": "Les chiens peuvent goûter un peu de quinoa nature cuit rien que pour eux. Le quinoa de nos assiettes contient souvent de l’oignon ou de l’ail.",
     "pt": "Os cães podem provar um pouco de quinoa simples cozinhada só para eles. A quinoa dos nossos pratos costuma ter cebola ou alho.",
-    "nl": "Honden mogen een beetje gewone quinoa proeven, speciaal voor hen gekookt. Quinoa die wij eten bevat vaak ui of knoflook."
+    "nl": "Honden mogen een beetje gewone quinoa proeven, speciaal voor hen gekookt. Quinoa die wij eten bevat vaak ui of knoflook.",
+    "pl": "Pies może spróbować odrobiny komosy ryżowej bez dodatków, ugotowanej tylko dla niego. Komosa z naszych talerzy często zawiera cebulę lub czosnek."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Sollte ich Quinoa für meinen Hund abspülen?",
         "fr": "Faut-il rincer le quinoa de mon chien ?",
         "pt": "Devo lavar a quinoa para o meu cão?",
-        "nl": "Moet ik quinoa voor mijn hond spoelen?"
+        "nl": "Moet ik quinoa voor mijn hond spoelen?",
+        "pl": "Czy komosę ryżową dla psa trzeba opłukać?"
       },
       "a": {
         "en": "Yes, if you're concerned about saponin, wash the quinoa before cooking it.",
@@ -163,7 +172,8 @@
         "de": "Ja, wenn Sie wegen des Saponins besorgt sind, spülen Sie die Quinoa vor dem Kochen ab.",
         "fr": "Oui, si la saponine vous inquiète, lavez le quinoa avant de le cuire.",
         "pt": "Sim, se te preocupa a saponina, lava a quinoa antes de a cozinhar.",
-        "nl": "Ja, maak je je zorgen over saponine, spoel de quinoa dan voor het koken."
+        "nl": "Ja, maak je je zorgen over saponine, spoel de quinoa dan voor het koken.",
+        "pl": "Tak, jeśli obawiasz się saponin, przepłucz komosę przed ugotowaniem."
       }
     },
     {
@@ -181,7 +191,8 @@
         "de": "Dürfen Hunde Quinoa-Salat fressen?",
         "fr": "Les chiens peuvent-ils manger de la salade de quinoa ?",
         "pt": "Os cães podem comer salada de quinoa?",
-        "nl": "Mogen honden quinoasalade eten?"
+        "nl": "Mogen honden quinoasalade eten?",
+        "pl": "Czy psy mogą jeść sałatkę z komosą ryżową?"
       },
       "a": {
         "en": "It's best not to. Never give your dog quinoa straight from your plate, as dishes often contain salt, garlic or onions.",
@@ -197,7 +208,8 @@
         "de": "Besser nicht. Geben Sie Ihrem Hund niemals Quinoa direkt von Ihrem Teller, denn solche Gerichte enthalten oft Salz, Knoblauch oder Zwiebeln.",
         "fr": "Mieux vaut éviter. Ne donnez jamais à votre chien du quinoa pris directement dans votre assiette, car les plats contiennent souvent du sel, de l’ail ou de l’oignon.",
         "pt": "O melhor é não dar. Nunca dês ao teu cão quinoa diretamente do teu prato, porque os pratos costumam ter sal, alho ou cebola.",
-        "nl": "Liever niet. Geef je hond nooit quinoa rechtstreeks van je bord, want gerechten bevatten vaak zout, knoflook of ui."
+        "nl": "Liever niet. Geef je hond nooit quinoa rechtstreeks van je bord, want gerechten bevatten vaak zout, knoflook of ui.",
+        "pl": "Lepiej nie. Nigdy nie dawaj psu komosy prosto z własnego talerza, bo w takich potrawach często są sól, czosnek lub cebula."
       }
     }
   ],
@@ -341,6 +353,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c8e9be7eafa0ded2c8f273ff6133efafd6f8b78068f3501436879d0702db7026"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "12d82c55899f9bb06c5685509b1f749866ca82f4bdd502ffe2098259d52a7025"
     }
   }
 }

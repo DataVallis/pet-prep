@@ -15,7 +15,8 @@
     "de": "Ingwer",
     "fr": "Gingembre",
     "pt": "Gengibre",
-    "nl": "Gember"
+    "nl": "Gember",
+    "pl": "Imbir"
   },
   "question": {
     "en": "Can dogs eat ginger?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Ingwer fressen?",
     "fr": "Les chiens peuvent-ils manger du gingembre ?",
     "pt": "Os cães podem comer gengibre?",
-    "nl": "Mogen honden gember eten?"
+    "nl": "Mogen honden gember eten?",
+    "pl": "Czy psy mogą jeść imbir?"
   },
   "url_slug": {
     "en": "ginger",
@@ -47,7 +49,8 @@
     "de": "ingwer",
     "fr": "gingembre",
     "pt": "gengibre",
-    "nl": "gember"
+    "nl": "gember",
+    "pl": "imbir"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, in kleinen Mengen ist Ingwer für Hunde unbedenklich. Geben Sie ihn nur in Maßen, denn große Mengen können Blähungen und Übelkeit verursachen. Verzichten Sie auf Ingwerkekse und eingelegten Ingwer.",
     "fr": "Oui, en petite quantité, le gingembre est sans danger pour les chiens. Ne leur en donnez qu’avec modération, car de grandes quantités peuvent provoquer des gaz et des nausées. Évitez les biscuits au gingembre et le gingembre mariné.",
     "pt": "Sim, em pequenas quantidades o gengibre é seguro para os cães. Dá-o só com moderação, porque grandes quantidades podem causar gases e náuseas. Evita as bolachas de gengibre e o gengibre em conserva.",
-    "nl": "Ja, in kleine hoeveelheden is gember veilig voor honden. Geef het wel met mate, want grote hoeveelheden kunnen gasvorming en misselijkheid veroorzaken. Laat gemberkoekjes en ingelegde gember staan."
+    "nl": "Ja, in kleine hoeveelheden is gember veilig voor honden. Geef het wel met mate, want grote hoeveelheden kunnen gasvorming en misselijkheid veroorzaken. Laat gemberkoekjes en ingelegde gember staan.",
+    "pl": "Tak, w małych ilościach imbir jest bezpieczny dla psów. Dawaj go tylko z umiarem, bo duże ilości mogą powodować gazy i nudności. Nie podawaj pierniczków imbirowych ani marynowanego imbiru."
   },
   "why": {
     "en": "Ginger in large amounts can cause gas and nausea, and like any food not offered in moderation it can lead to stomach problems. Ginger acts as a blood thinner and can lower blood pressure and blood sugar, so avoid it in dogs with bleeding disorders or that are having surgery soon, and ask your vet first if your dog has diabetes or heart disease. Some vets also advise avoiding it in pregnant and nursing dogs. Dogs can also be allergic to ginger.",
@@ -80,7 +84,8 @@
     "de": "Ingwer in großen Mengen kann Blähungen und Übelkeit verursachen, und wie jedes Lebensmittel, das nicht in Maßen gegeben wird, kann er zu Magenbeschwerden führen. Ingwer wirkt blutverdünnend und kann Blutdruck und Blutzucker senken. Meiden Sie ihn deshalb bei Hunden mit Blutgerinnungsstörungen oder vor einer bevorstehenden Operation und fragen Sie vorher Ihren Tierarzt, wenn Ihr Hund Diabetes oder eine Herzerkrankung hat. Manche Tierärzte raten auch bei trächtigen und säugenden Hündinnen davon ab. Hunde können außerdem allergisch auf Ingwer reagieren.",
     "fr": "Le gingembre en grande quantité peut provoquer des gaz et des nausées et, comme tout aliment non donné avec modération, il peut entraîner des problèmes d’estomac. Le gingembre agit comme un fluidifiant du sang et peut faire baisser la tension artérielle et la glycémie : évitez-en donc chez les chiens atteints de troubles de la coagulation ou qui doivent bientôt être opérés, et demandez d’abord conseil à votre vétérinaire si votre chien est diabétique ou a une maladie cardiaque. Certains vétérinaires conseillent aussi d’en éviter chez les chiennes gestantes et allaitantes. Les chiens peuvent également être allergiques au gingembre.",
     "pt": "O gengibre em grandes quantidades pode causar gases e náuseas, e, como qualquer alimento que não seja dado com moderação, pode provocar problemas de estômago. O gengibre tem efeito anticoagulante e pode baixar a tensão arterial e o açúcar no sangue, por isso evita-o em cães com perturbações hemorrágicas ou que vão ser operados em breve, e pergunta primeiro ao teu veterinário se o teu cão tem diabetes ou doença cardíaca. Alguns veterinários também aconselham evitá-lo em cadelas grávidas e a amamentar. Os cães também podem ser alérgicos ao gengibre.",
-    "nl": "Gember kan in grote hoeveelheden gasvorming en misselijkheid veroorzaken, en zoals bij elk voedsel dat je niet met mate geeft, kan het tot maagklachten leiden. Gember werkt als bloedverdunner en kan de bloeddruk en de bloedsuikerspiegel verlagen. Vermijd het dus bij honden met bloedingsstoornissen of die binnenkort worden geopereerd, en vraag eerst je dierenarts als je hond diabetes of een hartziekte heeft. Sommige dierenartsen raden het ook af bij drachtige en zogende honden. Honden kunnen ook allergisch zijn voor gember."
+    "nl": "Gember kan in grote hoeveelheden gasvorming en misselijkheid veroorzaken, en zoals bij elk voedsel dat je niet met mate geeft, kan het tot maagklachten leiden. Gember werkt als bloedverdunner en kan de bloeddruk en de bloedsuikerspiegel verlagen. Vermijd het dus bij honden met bloedingsstoornissen of die binnenkort worden geopereerd, en vraag eerst je dierenarts als je hond diabetes of een hartziekte heeft. Sommige dierenartsen raden het ook af bij drachtige en zogende honden. Honden kunnen ook allergisch zijn voor gember.",
+    "pl": "Imbir w dużych ilościach może powodować gazy i nudności, a podobnie jak każdy produkt podawany bez umiaru, może wywołać problemy z żołądkiem. Imbir działa rozrzedzająco na krew i może obniżać ciśnienie oraz poziom cukru we krwi, więc unikaj go u psów z zaburzeniami krzepnięcia albo takich, które wkrótce czeka operacja, a jeśli pies ma cukrzycę lub chorobę serca, najpierw zapytaj weterynarza. Niektórzy weterynarze radzą też unikać go u ciężarnych i karmiących suk. Psy mogą być także uczulone na imbir."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Möchten Sie Ingwer als gesundheitsfördernde Maßnahme in die Ernährung Ihres Hundes aufnehmen, sprechen Sie zuerst mit Ihrem Tierarzt, besonders wenn Ihr Hund Medikamente nimmt.",
     "fr": "Si vous souhaitez ajouter du gingembre à l’alimentation de votre chien pour sa santé, parlez-en d’abord à votre vétérinaire, surtout si votre chien prend des médicaments.",
     "pt": "Se queres juntar gengibre à alimentação do teu cão como medida de saúde, fala primeiro com o teu veterinário, sobretudo se o teu cão toma medicação.",
-    "nl": "Wil je gember aan het voer van je hond toevoegen om de gezondheid te ondersteunen, bespreek dat dan eerst met je dierenarts, vooral als je hond medicijnen gebruikt."
+    "nl": "Wil je gember aan het voer van je hond toevoegen om de gezondheid te ondersteunen, bespreek dat dan eerst met je dierenarts, vooral als je hond medicijnen gebruikt.",
+    "pl": "Jeśli chcesz dodać imbir do diety psa w celach zdrowotnych, najpierw porozmawiaj z weterynarzem, zwłaszcza jeśli pies przyjmuje leki."
   },
   "serving": {
     "en": "Fresh, powdered ginger and ginger juice are all fine in small amounts. Peel fresh ginger thoroughly and mince it finely. Don't give ginger biscuits (high in sugar, sometimes macadamia nuts) or pickled ginger (salt, sometimes xylitol).",
@@ -113,7 +119,8 @@
     "de": "Frischer Ingwer, Ingwerpulver und Ingwersaft sind in kleinen Mengen alle in Ordnung. Schälen Sie frischen Ingwer gründlich und hacken Sie ihn fein. Geben Sie keine Ingwerkekse (viel Zucker, manchmal Macadamianüsse) und keinen eingelegten Ingwer (Salz, manchmal Xylit).",
     "fr": "Le gingembre frais, le gingembre en poudre et le jus de gingembre conviennent tous en petite quantité. Épluchez soigneusement le gingembre frais et hachez-le très finement. Ne donnez pas de biscuits au gingembre (riches en sucre, parfois avec des noix de macadamia) ni de gingembre mariné (sel, parfois xylitol).",
     "pt": "O gengibre fresco, o gengibre em pó e o sumo de gengibre não fazem mal em pequenas quantidades. Descasca bem o gengibre fresco e pica-o muito fino. Não dês bolachas de gengibre (muito açúcar, por vezes nozes de macadâmia) nem gengibre em conserva (sal, por vezes xilitol).",
-    "nl": "Verse gember, gemberpoeder en gembersap zijn allemaal prima in kleine hoeveelheden. Schil verse gember goed en hak hem fijn. Geef geen gemberkoekjes (veel suiker, soms macadamianoten) of ingelegde gember (zout, soms xylitol)."
+    "nl": "Verse gember, gemberpoeder en gembersap zijn allemaal prima in kleine hoeveelheden. Schil verse gember goed en hak hem fijn. Geef geen gemberkoekjes (veel suiker, soms macadamianoten) of ingelegde gember (zout, soms xylitol).",
+    "pl": "W małych ilościach można podawać świeży imbir, imbir w proszku i sok z imbiru. Świeży imbir dokładnie obierz i drobno posiekaj. Nie podawaj pierniczków imbirowych (dużo cukru, czasem orzechy makadamia) ani marynowanego imbiru (sól, czasem ksylitol)."
   },
   "child": {
     "en": "A tiny bit of ginger is okay for dogs. Grown-ups decide how much, and ginger cookies are not dog treats.",
@@ -129,7 +136,8 @@
     "de": "Ein ganz kleines bisschen Ingwer ist für Hunde in Ordnung. Wie viel, entscheiden die Erwachsenen, und Ingwerkekse sind keine Hundeleckerlis.",
     "fr": "Un tout petit peu de gingembre, c’est possible pour les chiens. Les adultes décident de la quantité, et les biscuits au gingembre ne sont pas des friandises pour chiens.",
     "pt": "Um bocadinho de gengibre não faz mal aos cães. Quem decide a quantidade são os adultos, e as bolachas de gengibre não são guloseimas para cães.",
-    "nl": "Een klein beetje gember is oké voor honden. Een volwassene bepaalt hoeveel, en gemberkoekjes zijn geen hondensnoepjes."
+    "nl": "Een klein beetje gember is oké voor honden. Een volwassene bepaalt hoeveel, en gemberkoekjes zijn geen hondensnoepjes.",
+    "pl": "Odrobina imbiru jest dla psa w porządku. O ilości decydują dorośli, a ciasteczka imbirowe to nie smakołyki dla psów."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Darf mein Hund einen Ingwerkeks haben?",
         "fr": "Mon chien peut-il manger un biscuit au gingembre ?",
         "pt": "O meu cão pode comer uma bolacha de gengibre?",
-        "nl": "Mag mijn hond een gemberkoekje?"
+        "nl": "Mag mijn hond een gemberkoekje?",
+        "pl": "Czy mój pies może zjeść pierniczek imbirowy?"
       },
       "a": {
         "en": "It's best to avoid ginger biscuits. Like most sweet treats they are high in sugar and might contain ingredients that are harmful to dogs, such as macadamia nuts.",
@@ -163,7 +172,8 @@
         "de": "Verzichten Sie am besten auf Ingwerkekse. Wie die meisten Naschereien enthalten sie viel Zucker und womöglich Zutaten, die für Hunde schädlich sind, etwa Macadamianüsse.",
         "fr": "Mieux vaut éviter les biscuits au gingembre. Comme la plupart des douceurs, ils sont riches en sucre et peuvent contenir des ingrédients nocifs pour les chiens, comme les noix de macadamia.",
         "pt": "O melhor é evitar as bolachas de gengibre. Como a maior parte dos doces, têm muito açúcar e podem conter ingredientes nocivos para os cães, como as nozes de macadâmia.",
-        "nl": "Geef liever geen gemberkoekjes. Zoals de meeste zoete snacks bevatten ze veel suiker en kunnen ze ingrediënten bevatten die schadelijk zijn voor honden, zoals macadamianoten."
+        "nl": "Geef liever geen gemberkoekjes. Zoals de meeste zoete snacks bevatten ze veel suiker en kunnen ze ingrediënten bevatten die schadelijk zijn voor honden, zoals macadamianoten.",
+        "pl": "Lepiej unikać pierniczków imbirowych. Podobnie jak większość słodyczy mają dużo cukru i mogą zawierać składniki szkodliwe dla psów, takie jak orzechy makadamia."
       }
     },
     {
@@ -181,7 +191,8 @@
         "de": "Ist eingelegter Ingwer für Hunde unbedenklich?",
         "fr": "Le gingembre mariné est-il sans danger pour les chiens ?",
         "pt": "O gengibre em conserva é seguro para os cães?",
-        "nl": "Is ingelegde gember veilig voor honden?"
+        "nl": "Is ingelegde gember veilig voor honden?",
+        "pl": "Czy marynowany imbir jest bezpieczny dla psów?"
       },
       "a": {
         "en": "It's best to keep pickled ginger to yourself. Most dogs don't like the vinegar taste, it contains salt your dog doesn't need, and it may contain xylitol, which is toxic to dogs.",
@@ -197,7 +208,8 @@
         "de": "Eingelegten Ingwer behalten Sie am besten für sich. Die meisten Hunde mögen den Essiggeschmack nicht. Außerdem enthält er Salz, das Ihr Hund nicht braucht, und kann Xylit enthalten, das für Hunde giftig ist.",
         "fr": "Mieux vaut le garder pour vous. La plupart des chiens n’aiment pas le goût du vinaigre, il contient du sel dont votre chien n’a pas besoin, et il peut contenir du xylitol, toxique pour les chiens.",
         "pt": "O melhor é guardar o gengibre em conserva para ti. A maioria dos cães não gosta do sabor a vinagre, tem sal de que o teu cão não precisa e pode conter xilitol, que é tóxico para os cães.",
-        "nl": "Bewaar ingelegde gember liever voor jezelf. De meeste honden houden niet van de azijnsmaak, er zit zout in dat je hond niet nodig heeft en er kan xylitol in zitten, wat giftig is voor honden."
+        "nl": "Bewaar ingelegde gember liever voor jezelf. De meeste honden houden niet van de azijnsmaak, er zit zout in dat je hond niet nodig heeft en er kan xylitol in zitten, wat giftig is voor honden.",
+        "pl": "Marynowany imbir lepiej zostawić dla siebie. Większość psów nie lubi octowego smaku, zawiera sól, której pies nie potrzebuje, i może zawierać ksylitol, który jest toksyczny dla psów."
       }
     }
   ],
@@ -365,6 +377,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0793d4d0afb1bc6821a31754136dbd046ed79b1afcbe25b9093bc452c49a865d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "538fef697b354ddcbadbcb3a8f0b27de22dac3c3bfe3d19836a222358713ff10"
     }
   }
 }

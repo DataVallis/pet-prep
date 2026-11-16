@@ -15,7 +15,8 @@
     "de": "Natron",
     "fr": "Bicarbonate de soude",
     "pt": "Bicarbonato de sódio",
-    "nl": "Zuiveringszout"
+    "nl": "Zuiveringszout",
+    "pl": "Soda oczyszczona"
   },
   "question": {
     "en": "Can dogs eat baking soda?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Natron fressen?",
     "fr": "Les chiens peuvent-ils manger du bicarbonate de soude ?",
     "pt": "Os cães podem comer bicarbonato de sódio?",
-    "nl": "Mogen honden zuiveringszout eten?"
+    "nl": "Mogen honden zuiveringszout eten?",
+    "pl": "Czy psy mogą jeść sodę oczyszczoną?"
   },
   "url_slug": {
     "en": "baking-soda",
@@ -47,7 +49,8 @@
     "de": "natron",
     "fr": "bicarbonate-de-soude",
     "pt": "bicarbonato-de-sodio",
-    "nl": "zuiveringszout"
+    "nl": "zuiveringszout",
+    "pl": "soda-oczyszczona"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Nein, Natron ist wegen seines hohen Natriumgehalts schlecht für Hunde. Schon kleine Mengen können schaden, besonders bei kleineren Hunden. Hat Ihr Hund Natron gefressen, rufen Sie sofort einen Tierarzt an, auch wenn die Anzeichen harmlos wirken.",
     "fr": "Non, le bicarbonate de soude est mauvais pour les chiens à cause de sa forte teneur en sodium. Même de petites quantités peuvent être nocives, surtout pour les petits chiens. Si votre chien en a mangé, appelez immédiatement un vétérinaire, même si les signes semblent légers.",
     "pt": "Não, o bicarbonato de sódio faz mal aos cães por ter muito sódio. Mesmo pequenas quantidades podem ser nocivas, sobretudo para cães pequenos. Se o teu cão comeu bicarbonato de sódio, liga imediatamente a um veterinário, mesmo que os sinais pareçam ligeiros.",
-    "nl": "Nee, zuiveringszout is slecht voor honden door het hoge natriumgehalte. Al kleine hoeveelheden kunnen schadelijk zijn, vooral voor kleinere honden. Heeft je hond zuiveringszout gegeten, bel dan meteen een dierenarts, ook als de verschijnselen mild lijken."
+    "nl": "Nee, zuiveringszout is slecht voor honden door het hoge natriumgehalte. Al kleine hoeveelheden kunnen schadelijk zijn, vooral voor kleinere honden. Heeft je hond zuiveringszout gegeten, bel dan meteen een dierenarts, ook als de verschijnselen mild lijken.",
+    "pl": "Nie, soda oczyszczona szkodzi psom, bo zawiera dużo sodu. Nawet niewielkie ilości mogą zaszkodzić, zwłaszcza małym psom. Jeśli pies zjadł sodę oczyszczoną, od razu zadzwoń do weterynarza, nawet jeśli objawy wydają się łagodne."
   },
   "why": {
     "en": "Baking soda (sodium bicarbonate) disrupts a dog's salt balance and can lead to sodium toxicity. As sodium levels in the blood rise, water is drawn out of cells, including brain cells. Baking soda is also found in household items such as toothpaste and deodorisers.",
@@ -80,7 +84,8 @@
     "de": "Natron (Natriumhydrogencarbonat) bringt den Salzhaushalt eines Hundes durcheinander und kann zu einer Natriumvergiftung führen. Steigt der Natriumspiegel im Blut, wird den Zellen Wasser entzogen, auch den Gehirnzellen. Natron steckt außerdem in Haushaltsprodukten wie Zahnpasta und Geruchsneutralisierern.",
     "fr": "Le bicarbonate de soude (bicarbonate de sodium) perturbe l’équilibre en sel de l’organisme du chien et peut provoquer une intoxication au sodium. Quand le taux de sodium dans le sang augmente, l’eau est aspirée hors des cellules, y compris celles du cerveau. On trouve aussi du bicarbonate de soude dans des produits ménagers comme le dentifrice et les désodorisants.",
     "pt": "O bicarbonato de sódio desequilibra o sal no organismo do cão e pode levar a uma intoxicação por sódio. À medida que o sódio no sangue sobe, a água é retirada das células, incluindo as do cérebro. O bicarbonato de sódio também existe em produtos de casa, como a pasta de dentes e os desodorizantes de ambiente.",
-    "nl": "Zuiveringszout (natriumbicarbonaat) verstoort de zoutbalans van een hond en kan leiden tot natriumvergiftiging. Als het natriumgehalte in het bloed stijgt, wordt er water uit de cellen getrokken, ook uit de hersencellen. Zuiveringszout zit ook in huishoudelijke producten zoals tandpasta en geurverwijderaars."
+    "nl": "Zuiveringszout (natriumbicarbonaat) verstoort de zoutbalans van een hond en kan leiden tot natriumvergiftiging. Als het natriumgehalte in het bloed stijgt, wordt er water uit de cellen getrokken, ook uit de hersencellen. Zuiveringszout zit ook in huishoudelijke producten zoals tandpasta en geurverwijderaars.",
+    "pl": "Soda oczyszczona (wodorowęglan sodu) zaburza u psa gospodarkę solną i może doprowadzić do zatrucia sodem. Gdy poziom sodu we krwi rośnie, woda wypływa z komórek, także z komórek mózgu. Sodę oczyszczoną zawierają też produkty domowe, takie jak pasta do zębów i pochłaniacze zapachów."
   },
   "signs": {
     "en": [
@@ -194,6 +199,14 @@
       "Spiertrillingen of moeite met lopen",
       "Snelle of moeizame ademhaling",
       "Toevallen of instorten in ernstige gevallen"
+    ],
+    "pl": [
+      "Rozstrój żołądka, czasem z wymiotami lub biegunką",
+      "Zwiększone pragnienie, spadek energii",
+      "Uporczywe wymioty, bardzo duży spadek energii",
+      "Drżenie mięśni lub trudności z chodzeniem",
+      "Szybki lub utrudniony oddech",
+      "W ciężkich przypadkach drgawki lub zapaść"
     ]
   },
   "what_to_do": {
@@ -210,7 +223,8 @@
     "de": "Rufen Sie sofort einen Tierarzt an, auch wenn die Anzeichen harmlos wirken. Geben Sie Ihrem Hund keine Medikamente, es sei denn, Ihr Tierarzt rät dazu.",
     "fr": "Appelez immédiatement un vétérinaire, même si les signes semblent légers. Ne donnez aucun médicament à votre chien sans l’avis de votre vétérinaire.",
     "pt": "Liga imediatamente a um veterinário, mesmo que os sinais pareçam ligeiros. Não dês qualquer medicamento ao teu cão, a não ser que o veterinário to diga.",
-    "nl": "Bel meteen een dierenarts, ook als de verschijnselen mild lijken. Geef je hond geen medicijnen, tenzij de dierenarts dat zegt."
+    "nl": "Bel meteen een dierenarts, ook als de verschijnselen mild lijken. Geef je hond geen medicijnen, tenzij de dierenarts dat zegt.",
+    "pl": "Od razu zadzwoń do weterynarza, nawet jeśli objawy wydają się łagodne. Nie podawaj psu żadnych leków, chyba że zaleci to weterynarz."
   },
   "serving": null,
   "child": {
@@ -227,7 +241,8 @@
     "de": "Natron ist zum Kochen und Putzen da, nicht für Hunde. Stell die Packung in den Schrank und sag einem Erwachsenen Bescheid, wenn dein Hund sie findet.",
     "fr": "Le bicarbonate de soude sert à cuisiner et à nettoyer, pas aux chiens. Range la boîte dans un placard et préviens un adulte si ton chien met la patte dessus.",
     "pt": "O bicarbonato de sódio é para cozinhar e limpar, não para os cães. Guarda a caixa num armário e avisa um adulto se o teu cão a encontrar.",
-    "nl": "Zuiveringszout is voor koken en schoonmaken, niet voor honden. Bewaar het pakje in een kastje en vertel het aan een volwassene als je hond het te pakken krijgt."
+    "nl": "Zuiveringszout is voor koken en schoonmaken, niet voor honden. Bewaar het pakje in een kastje en vertel het aan een volwassene als je hond het te pakken krijgt.",
+    "pl": "Soda oczyszczona nie jest dla psów, tylko do gotowania i sprzątania. Trzymaj pudełko w szafce i powiedz dorosłemu, jeśli pies się do niego dobierze."
   },
   "faq": [
     {
@@ -245,7 +260,8 @@
         "de": "Wo könnte mein Hund sonst noch Natron finden?",
         "fr": "Où mon chien peut-il encore trouver du bicarbonate de soude ?",
         "pt": "Onde mais pode o meu cão encontrar bicarbonato de sódio?",
-        "nl": "Waar kan mijn hond nog meer zuiveringszout vinden?"
+        "nl": "Waar kan mijn hond nog meer zuiveringszout vinden?",
+        "pl": "Gdzie jeszcze pies może znaleźć sodę oczyszczoną?"
       },
       "a": {
         "en": "Baking soda is found in many household items, including toothpaste and deodorisers. Store it and cleaning products in latched cupboards or places your dog can't reach.",
@@ -261,7 +277,8 @@
         "de": "Natron steckt in vielen Haushaltsprodukten, darunter Zahnpasta und Geruchsneutralisierer. Bewahren Sie Natron und Reinigungsmittel in verschließbaren Schränken oder an Orten auf, die für Ihren Hund unerreichbar sind.",
         "fr": "On en trouve dans de nombreux produits ménagers, dont le dentifrice et les désodorisants. Rangez-le, ainsi que les produits d’entretien, dans des placards fermés ou hors de portée de votre chien.",
         "pt": "O bicarbonato de sódio existe em muitos produtos de casa, incluindo a pasta de dentes e os desodorizantes de ambiente. Guarda-o, tal como os produtos de limpeza, em armários com trinco ou em sítios onde o teu cão não chegue.",
-        "nl": "Zuiveringszout zit in veel producten in huis, zoals tandpasta en geurverwijderaars. Bewaar het, net als schoonmaakmiddelen, in kastjes met een slotje of op een plek waar je hond er niet bij kan."
+        "nl": "Zuiveringszout zit in veel producten in huis, zoals tandpasta en geurverwijderaars. Bewaar het, net als schoonmaakmiddelen, in kastjes met een slotje of op een plek waar je hond er niet bij kan.",
+        "pl": "Sodę oczyszczoną zawiera wiele produktów domowych, m.in. pasta do zębów i pochłaniacze zapachów. Chowaj ją i środki czystości do szafek z zatrzaskiem albo tam, gdzie pies nie sięgnie."
       }
     }
   ],
@@ -395,6 +412,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a58425d4edc96089a81fafc74253587ae7359ff879620f0204eae7b6d3a8aa8d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "94e2b5de2c1efb8e3609e9be28a986d93ca831e3ebaee9f3391bd7c9c224688e"
     }
   }
 }

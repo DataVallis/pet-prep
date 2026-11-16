@@ -15,7 +15,8 @@
     "fr": "Gâteau",
     "es": "Tarta",
     "pt": "Bolo",
-    "nl": "Cake"
+    "nl": "Cake",
+    "pl": "Ciasto i tort"
   },
   "question": {
     "en": "Can cats eat cake?",
@@ -31,7 +32,8 @@
     "fr": "Les chats peuvent-ils manger du gâteau ?",
     "es": "¿Pueden los gatos comer tarta?",
     "pt": "Os gatos podem comer bolo?",
-    "nl": "Mogen katten cake eten?"
+    "nl": "Mogen katten cake eten?",
+    "pl": "Czy koty mogą jeść ciasto albo tort?"
   },
   "url_slug": {
     "en": "cake",
@@ -47,7 +49,8 @@
     "fr": "gateau",
     "es": "tarta",
     "pt": "bolo",
-    "nl": "cake"
+    "nl": "cake",
+    "pl": "ciasto"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Non, le gâteau n’est pas fait pour les chats. Il est sucré, ce qui n’est pas bon pour eux, et beaucoup de gâteaux, surtout les gâteaux de Noël et les cakes aux fruits, contiennent des fruits secs ou du chocolat, nocifs pour les chats. La RSPCA avertit que les gâteaux de Noël sont dangereux pour les chats.",
     "es": "No, la tarta no es para los gatos. Lleva azúcar, que no es sana para ellos, y muchas tartas y pasteles, sobre todo los de Navidad y los de frutas, contienen fruta deshidratada o chocolate, que son dañinos para los gatos. La RSPCA advierte de que los pasteles de Navidad son peligrosos para los gatos.",
     "pt": "Não, o bolo não é para gatos. Tem açúcar, que não faz bem aos gatos, e muitos bolos, sobretudo os de Natal e os de frutas, levam fruta desidratada ou chocolate, que fazem mal aos gatos. A RSPCA avisa que os bolos de Natal são perigosos para os gatos.",
-    "nl": "Nee, cake is niets voor katten. Er zit veel suiker in, wat niet gezond is voor katten, en veel cakes, vooral kerst- en vruchtencakes, bevatten gedroogd fruit of chocolade, en dat is schadelijk voor katten. De RSPCA waarschuwt dat kerstcake gevaarlijk is voor katten."
+    "nl": "Nee, cake is niets voor katten. Er zit veel suiker in, wat niet gezond is voor katten, en veel cakes, vooral kerst- en vruchtencakes, bevatten gedroogd fruit of chocolade, en dat is schadelijk voor katten. De RSPCA waarschuwt dat kerstcake gevaarlijk is voor katten.",
+    "pl": "Nie, ciasto nie jest dla kotów. Zawiera dużo cukru, który jest dla kotów niezdrowy, a wiele ciast, zwłaszcza świąteczne ciasta owocowe, zawiera suszone owoce lub czekoladę, które szkodzą kotom. RSPCA ostrzega, że świąteczne ciasta owocowe są dla kotów niebezpieczne."
   },
   "why": {
     "en": "The RSPCA says Christmas cakes are dangerous for cats. Such cakes often contain sultanas, raisins and currants, which the RSPCA calls toxic, and it says not to let cats eat any grapes. Chocolate is a complete no-no for cats. A plain sponge has none of these, but its sugar is unhealthy for cats and offers them no nutritional value, so we use the stricter level for all cake.",
@@ -80,7 +84,8 @@
     "fr": "La RSPCA indique que les gâteaux de Noël sont dangereux pour les chats. Ces gâteaux contiennent souvent des sultanines, des raisins secs et des raisins de Corinthe, que la RSPCA qualifie de toxiques, et elle précise qu’il ne faut laisser les chats manger aucun raisin. Le chocolat est absolument à proscrire pour les chats. Un simple gâteau nature n’en contient pas, mais son sucre n’est pas bon pour les chats et ne leur apporte aucune valeur nutritionnelle : nous appliquons donc le niveau le plus strict à tous les gâteaux.",
     "es": "La RSPCA dice que los pasteles de Navidad son peligrosos para los gatos. Suelen llevar sultanas, pasas y pasas de Corinto, que la RSPCA califica de tóxicas, y dice que no se debe dejar que los gatos coman uvas. El chocolate está totalmente prohibido para los gatos. Un bizcocho normal no lleva nada de esto, pero su azúcar no es sana para los gatos y no les aporta ningún valor nutritivo, por eso aplicamos el nivel más estricto a todas las tartas y pasteles.",
     "pt": "A RSPCA diz que os bolos de Natal são perigosos para os gatos. Estes bolos levam muitas vezes passas, sultanas e passas de Corinto, que a RSPCA considera tóxicas, e diz que não se deve deixar os gatos comer uvas. O chocolate é totalmente proibido para os gatos. Um pão de ló simples não tem nada disto, mas o açúcar não faz bem aos gatos e não lhes dá valor nutricional, por isso usamos o nível mais rigoroso para todos os bolos.",
-    "nl": "De RSPCA zegt dat kerstcake gevaarlijk is voor katten. Zulke cakes bevatten vaak sultanarozijnen, rozijnen en krenten, die volgens de RSPCA giftig zijn, en katten mogen helemaal geen druiven eten. Chocolade is absoluut verboden voor katten. Een gewone cake zonder fruit of chocolade bevat niets hiervan, maar de suiker is niet gezond voor katten en levert niets voedzaams op, dus voor alle cake hanteren we het strengere niveau."
+    "nl": "De RSPCA zegt dat kerstcake gevaarlijk is voor katten. Zulke cakes bevatten vaak sultanarozijnen, rozijnen en krenten, die volgens de RSPCA giftig zijn, en katten mogen helemaal geen druiven eten. Chocolade is absoluut verboden voor katten. Een gewone cake zonder fruit of chocolade bevat niets hiervan, maar de suiker is niet gezond voor katten en levert niets voedzaams op, dus voor alle cake hanteren we het strengere niveau.",
+    "pl": "RSPCA podaje, że świąteczne ciasta owocowe są niebezpieczne dla kotów. Takie ciasta często zawierają sułtanki, rodzynki i korynki, które RSPCA uznaje za toksyczne, i radzi nie pozwalać kotom jeść żadnych winogron. Czekolada jest dla kotów absolutnie wykluczona. Biszkopt bez dodatków nie zawiera żadnej z tych rzeczy, ale jego cukier jest dla kotów niezdrowy i nie ma dla nich wartości odżywczej, dlatego dla wszystkich ciast przyjmujemy surowszą ocenę."
   },
   "signs": {
     "en": [
@@ -138,6 +143,10 @@
     "nl": [
       "Braken",
       "Diarree of maagklachten"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka lub rozstrój żołądka"
     ]
   },
   "what_to_do": {
@@ -154,7 +163,8 @@
     "fr": "Si votre chat a mangé du gâteau contenant des fruits secs ou du chocolat, contactez immédiatement votre vétérinaire. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat à la maison. Après un coup de langue sur un gâteau nature, surveillez l’apparition de troubles digestifs.",
     "es": "Si tu gato ha comido tarta o pastel con fruta deshidratada o chocolate, ponte en contacto con tu veterinario enseguida. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa. Si solo ha lamido un poco de bizcocho normal, observa si tiene malestar de estómago.",
     "pt": "Se o teu gato comeu bolo com fruta desidratada ou chocolate, contacta imediatamente o teu veterinário. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa. Depois de uma lambidela de pão de ló simples, vigia se há indisposição de estômago.",
-    "nl": "Heeft je kat cake gegeten met gedroogd fruit of chocolade erin, neem dan meteen contact op met je dierenarts. Wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken. Heeft je kat alleen een likje gewone cake gehad, let dan op maagklachten."
+    "nl": "Heeft je kat cake gegeten met gedroogd fruit of chocolade erin, neem dan meteen contact op met je dierenarts. Wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken. Heeft je kat alleen een likje gewone cake gehad, let dan op maagklachten.",
+    "pl": "Jeśli twój kot zjadł ciasto z suszonymi owocami lub czekoladą, od razu skontaktuj się z weterynarzem. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu. Po zlizaniu odrobiny biszkoptu bez dodatków obserwuj, czy nie pojawi się rozstrój żołądka."
   },
   "serving": null,
   "child": {
@@ -171,7 +181,8 @@
     "fr": "Le gâteau est une friandise pour les humains. Certains gâteaux contiennent des raisins secs ou du chocolat qui peuvent rendre les chats malades : garde ta part pour toi.",
     "es": "La tarta es una golosina para personas. Algunas llevan pasas o chocolate, que pueden poner malo a un gato, así que tu trozo es para ti.",
     "pt": "O bolo é uma guloseima para pessoas. Alguns bolos têm passas ou chocolate que podem pôr os gatos doentes, por isso guarda a tua fatia para ti.",
-    "nl": "Cake is een lekkernij voor mensen. In sommige cakes zitten rozijnen of chocolade waar katten ziek van kunnen worden, dus houd je stukje zelf."
+    "nl": "Cake is een lekkernij voor mensen. In sommige cakes zitten rozijnen of chocolade waar katten ziek van kunnen worden, dus houd je stukje zelf.",
+    "pl": "Ciasto to smakołyk dla ludzi. W niektórych ciastach są rodzynki albo czekolada, po których koty mogą zachorować, więc swój kawałek zjedz sam."
   },
   "faq": [
     {
@@ -189,7 +200,8 @@
         "fr": "Le gâteau de Noël est-il dangereux pour les chats ?",
         "es": "¿Es peligroso el pastel de Navidad para los gatos?",
         "pt": "O bolo de Natal é perigoso para gatos?",
-        "nl": "Is kerstcake gevaarlijk voor katten?"
+        "nl": "Is kerstcake gevaarlijk voor katten?",
+        "pl": "Czy świąteczne ciasto owocowe jest niebezpieczne dla kotów?"
       },
       "a": {
         "en": "Yes. The RSPCA warns that Christmas cakes are dangerous for cats, as they often contain dried fruit. Blue Cross tells of a cat who was sick after eating a rich Christmas cake and was kept at the vet overnight on a drip.",
@@ -205,7 +217,8 @@
         "fr": "Oui. La RSPCA avertit que les gâteaux de Noël sont dangereux pour les chats, car ils contiennent souvent des fruits secs. Blue Cross raconte l’histoire d’un chat qui a vomi après avoir mangé un gâteau de Noël très riche et qui a dû passer la nuit chez le vétérinaire sous perfusion.",
         "es": "Sí. La RSPCA advierte de que los pasteles de Navidad son peligrosos para los gatos, porque suelen llevar fruta deshidratada. Blue Cross cuenta el caso de un gato que vomitó tras comer un trozo de pastel de Navidad muy rico y tuvo que quedarse una noche en el veterinario con suero.",
         "pt": "Sim. A RSPCA avisa que os bolos de Natal são perigosos para os gatos, porque muitas vezes levam fruta desidratada. A Blue Cross conta o caso de um gato que ficou doente depois de comer um bolo de Natal muito rico e teve de passar a noite no veterinário, ligado a um soro.",
-        "nl": "Ja. De RSPCA waarschuwt dat kerstcake gevaarlijk is voor katten, omdat die vaak gedroogd fruit bevat. Blue Cross beschrijft een kat die ziek werd van een zware kerstcake en een nacht met een infuus bij de dierenarts moest blijven."
+        "nl": "Ja. De RSPCA waarschuwt dat kerstcake gevaarlijk is voor katten, omdat die vaak gedroogd fruit bevat. Blue Cross beschrijft een kat die ziek werd van een zware kerstcake en een nacht met een infuus bij de dierenarts moest blijven.",
+        "pl": "Tak. RSPCA ostrzega, że świąteczne ciasta owocowe są dla kotów niebezpieczne, bo często zawierają suszone owoce. Blue Cross opisuje kota, który po zjedzeniu bogatego ciasta świątecznego dostał wymiotów i musiał zostać na noc u weterynarza pod kroplówką."
       }
     }
   ],
@@ -361,6 +374,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5968bb1b127f0f25d601ce0e5e2be92d0e4f664c412641a492094da1a247dd3a"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "a3a21e1348deb32b05aadef48299a7a219d59119e8468e73ad38b0a6c340bace"
     }
   }
 }

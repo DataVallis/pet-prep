@@ -15,7 +15,8 @@
     "de": "Kakaopulver",
     "fr": "Cacao en poudre",
     "pt": "Cacau em pó",
-    "nl": "Cacaopoeder"
+    "nl": "Cacaopoeder",
+    "pl": "Kakao w proszku"
   },
   "question": {
     "en": "Can dogs eat cocoa powder?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Kakaopulver fressen?",
     "fr": "Les chiens peuvent-ils manger du cacao en poudre ?",
     "pt": "Os cães podem comer cacau em pó?",
-    "nl": "Mogen honden cacaopoeder eten?"
+    "nl": "Mogen honden cacaopoeder eten?",
+    "pl": "Czy psy mogą jeść kakao w proszku?"
   },
   "url_slug": {
     "en": "cocoa-powder",
@@ -47,7 +49,8 @@
     "de": "kakaopulver",
     "fr": "cacao-en-poudre",
     "pt": "cacau-em-po",
-    "nl": "cacaopoeder"
+    "nl": "cacaopoeder",
+    "pl": "kakao-w-proszku"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Nein, Kakaopulver ist für Hunde giftig. Es ist sogar gefährlicher als dunkle Schokolade, denn Backschokolade und Kakaopulver enthalten die größten Mengen der schädlichen Stoffe. Hat Ihr Hund Kakaopulver gefressen, wenden Sie sich sofort an Ihren Tierarzt.",
     "fr": "Non, le cacao en poudre est toxique pour les chiens. Il est encore plus dangereux que le chocolat noir, car le chocolat de cuisine et le cacao en poudre contiennent les plus fortes quantités de substances nocives. Si votre chien a mangé du cacao en poudre, parlez-en immédiatement à votre vétérinaire.",
     "pt": "Não, o cacau em pó é tóxico para os cães. É ainda mais perigoso do que o chocolate negro, porque o chocolate de culinária e o cacau em pó têm as maiores quantidades das substâncias nocivas. Se o teu cão comeu cacau em pó, fala imediatamente com o teu veterinário.",
-    "nl": "Nee, cacaopoeder is giftig voor honden. Het is zelfs gevaarlijker dan pure chocolade, omdat bakchocolade en cacaopoeder de hoogste gehaltes van de schadelijke stoffen bevatten. Heeft je hond cacaopoeder gegeten, neem dan meteen contact op met je dierenarts."
+    "nl": "Nee, cacaopoeder is giftig voor honden. Het is zelfs gevaarlijker dan pure chocolade, omdat bakchocolade en cacaopoeder de hoogste gehaltes van de schadelijke stoffen bevatten. Heeft je hond cacaopoeder gegeten, neem dan meteen contact op met je dierenarts.",
+    "pl": "Nie, kakao w proszku jest toksyczne dla psów. Jest jeszcze groźniejsze niż gorzka czekolada, bo czekolada do pieczenia i kakao zawierają najwięcej szkodliwych substancji. Jeśli pies zjadł kakao w proszku, od razu skontaktuj się z weterynarzem."
   },
   "why": {
     "en": "Chocolate contains theobromine, which is toxic to dogs. The more cocoa, the more theobromine: white chocolate has the least, while baking chocolate and cocoa powder have the highest amounts, so cocoa powder is even more dangerous than dark chocolate. Dogs are most often affected because they eat almost anything and can easily reach chocolate.",
@@ -80,7 +84,8 @@
     "de": "Schokolade enthält Theobromin, das für Hunde giftig ist. Je mehr Kakao, desto mehr Theobromin: Weiße Schokolade enthält am wenigsten, Backschokolade und Kakaopulver dagegen die größten Mengen. Deshalb ist Kakaopulver sogar gefährlicher als dunkle Schokolade. Hunde sind am häufigsten betroffen, weil sie fast alles fressen und leicht an Schokolade herankommen.",
     "fr": "Le chocolat contient de la théobromine, toxique pour les chiens. Plus il y a de cacao, plus il y a de théobromine : le chocolat blanc en contient le moins, tandis que le chocolat de cuisine et le cacao en poudre en contiennent le plus, si bien que le cacao en poudre est encore plus dangereux que le chocolat noir. Les chiens sont le plus souvent touchés parce qu’ils mangent presque n’importe quoi et ont facilement accès au chocolat.",
     "pt": "O chocolate contém teobromina, que é tóxica para os cães. Quanto mais cacau, mais teobromina: o chocolate branco tem menos, enquanto o chocolate de culinária e o cacau em pó têm as maiores quantidades, por isso o cacau em pó é ainda mais perigoso do que o chocolate negro. Os cães são os mais afetados porque comem quase tudo e chegam facilmente ao chocolate.",
-    "nl": "Chocolade bevat theobromine, en dat is giftig voor honden. Hoe meer cacao, hoe meer theobromine: witte chocolade bevat het minst, terwijl bakchocolade en cacaopoeder de hoogste gehaltes hebben, dus cacaopoeder is zelfs gevaarlijker dan pure chocolade. Honden krijgen er het vaakst last van omdat ze bijna alles eten en gemakkelijk bij chocolade kunnen komen."
+    "nl": "Chocolade bevat theobromine, en dat is giftig voor honden. Hoe meer cacao, hoe meer theobromine: witte chocolade bevat het minst, terwijl bakchocolade en cacaopoeder de hoogste gehaltes hebben, dus cacaopoeder is zelfs gevaarlijker dan pure chocolade. Honden krijgen er het vaakst last van omdat ze bijna alles eten en gemakkelijk bij chocolade kunnen komen.",
+    "pl": "Czekolada zawiera teobrominę, która jest toksyczna dla psów. Im więcej kakao, tym więcej teobrominy: biała czekolada ma jej najmniej, a czekolada do pieczenia i kakao w proszku najwięcej, więc kakao w proszku jest jeszcze groźniejsze niż gorzka czekolada. Zatrucia dotyczą najczęściej psów, bo zjadają niemal wszystko i łatwo mogą dostać się do czekolady."
   },
   "signs": {
     "en": [
@@ -208,6 +213,15 @@
       "Snelle of afwijkende hartslag",
       "Trillingen en in ernstige gevallen toevallen",
       "De verschijnselen beginnen meestal binnen 6–12 uur"
+    ],
+    "pl": [
+      "Wymioty i biegunka",
+      "Ziajanie, wzmożone pragnienie i częstsze oddawanie moczu",
+      "Niepokój, pobudzenie, nadpobudliwość",
+      "Podwyższona temperatura ciała",
+      "Szybkie lub nieprawidłowe bicie serca",
+      "Drżenie mięśni, a w ciężkich przypadkach drgawki",
+      "Objawy zwykle pojawiają się w ciągu 6–12 godzin"
     ]
   },
   "what_to_do": {
@@ -224,7 +238,8 @@
     "de": "Hat Ihr Hund Kakaopulver gefressen, notieren Sie, wie viel, und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere.",
     "fr": "Si votre chien a mangé du cacao en poudre, notez la quantité et parlez-en immédiatement à votre vétérinaire ou à un centre antipoison vétérinaire.",
     "pt": "Se o teu cão comeu cacau em pó, anota a quantidade e fala imediatamente com o teu veterinário ou com uma linha de apoio toxicológico para animais.",
-    "nl": "Heeft je hond cacaopoeder gegeten, noteer dan hoeveel en neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren."
+    "nl": "Heeft je hond cacaopoeder gegeten, noteer dan hoeveel en neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren.",
+    "pl": "Jeśli pies zjadł kakao w proszku, zanotuj, ile go było, i od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt."
   },
   "serving": null,
   "child": {
@@ -241,7 +256,8 @@
     "de": "Kakaopulver ist zum Backen für Menschen da, nicht für Hunde. Halte die Dose geschlossen und sag sofort einem Erwachsenen Bescheid, wenn dein Hund etwas davon erwischt hat.",
     "fr": "Le cacao en poudre sert aux pâtisseries des humains, pas aux chiens. Garde la boîte fermée et préviens tout de suite un adulte si ton chien en mange.",
     "pt": "O cacau em pó é para as receitas das pessoas, não para os cães. Mantém a lata fechada e avisa logo um adulto se o teu cão chegar até ele.",
-    "nl": "Cacaopoeder is voor mensen om mee te bakken, niet voor honden. Houd het blik dicht en vertel het meteen aan een volwassene als je hond erbij is gekomen."
+    "nl": "Cacaopoeder is voor mensen om mee te bakken, niet voor honden. Houd het blik dicht en vertel het meteen aan een volwassene als je hond erbij is gekomen.",
+    "pl": "Kakao w proszku jest do pieczenia dla ludzi, nie dla psów. Trzymaj puszkę zamkniętą i od razu powiedz dorosłemu, jeśli pies się do niej dobierze."
   },
   "faq": [
     {
@@ -259,7 +275,8 @@
         "de": "Ist Kakaopulver schlimmer als eine Tafel Schokolade?",
         "fr": "Le cacao en poudre est-il pire qu’une tablette de chocolat ?",
         "pt": "O cacau em pó é pior do que uma barra de chocolate?",
-        "nl": "Is cacaopoeder erger dan een reep chocolade?"
+        "nl": "Is cacaopoeder erger dan een reep chocolade?",
+        "pl": "Czy kakao w proszku jest gorsze niż tabliczka czekolady?"
       },
       "a": {
         "en": "Yes. Cocoa powder is even more dangerous than dark chocolate, and white chocolate has the lowest amount of the harmful substances.",
@@ -275,7 +292,8 @@
         "de": "Ja. Kakaopulver ist sogar gefährlicher als dunkle Schokolade, und weiße Schokolade enthält die geringste Menge der schädlichen Stoffe.",
         "fr": "Oui. Le cacao en poudre est encore plus dangereux que le chocolat noir, et le chocolat blanc contient la plus faible quantité de substances nocives.",
         "pt": "Sim. O cacau em pó é ainda mais perigoso do que o chocolate negro, e o chocolate branco tem a menor quantidade das substâncias nocivas.",
-        "nl": "Ja. Cacaopoeder is zelfs gevaarlijker dan pure chocolade, en witte chocolade bevat het laagste gehalte aan de schadelijke stoffen."
+        "nl": "Ja. Cacaopoeder is zelfs gevaarlijker dan pure chocolade, en witte chocolade bevat het laagste gehalte aan de schadelijke stoffen.",
+        "pl": "Tak. Kakao w proszku jest jeszcze groźniejsze niż gorzka czekolada, a biała czekolada zawiera najmniej szkodliwych substancji."
       }
     }
   ],
@@ -410,6 +428,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9abbbdbfca50ba1343d33071651896e40325f119078c20100a925da6597524d8"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "dfca6bd8ad96fc0fa85f7450ea2f1354f30ba951ee85cf132e2a3e2df43a66f1"
     }
   }
 }
