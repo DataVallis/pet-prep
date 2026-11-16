@@ -1,0 +1,138 @@
+{
+  "country": "FJ",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "SPCA Fiji Islands - Our Services",
+      "url": "https://www.spcafiji.com/our-services",
+      "note": "Opened; clinic at 155 Foster Road, Walu Bay, Suva; Mon-Sat 8-4:30; phone 8926200; after-hours emergency text line 5-10pm only. No 24 h wording."
+    },
+    {
+      "name": "GoVet Clinic",
+      "url": "https://www.govetclinic.com/",
+      "note": "Opened; mobile pet clinic, Makoi, Suva; site states 24/7 and 'Fiji's first 24 hours mobile pet clinic'. Own claims."
+    },
+    {
+      "name": "Animals Fiji - Locations & Clinic Times",
+      "url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
+      "note": "Opened; four clinics (Nadi, Lautoka, Labasa, Savusavu) with addresses, phones, hours; page says no 24-hour service, emergency line offered on best-effort basis."
+    },
+    {
+      "name": "PASH Fiji",
+      "url": "https://www.pashfiji.com/",
+      "note": "Opened; rescue shelter and veterinary clinic; phone and hours, no address or city, no 24 h wording."
+    },
+    {
+      "name": "Biosecurity Authority of Fiji - Quarantine Facilities",
+      "url": "https://www.baf.com.fj/quarantine-facilities-2/",
+      "note": "Opened; import quarantine authority (Koronivia, Nausori, +679 331 2512), no clinic list; not an entry."
+    },
+    {
+      "name": "Viti Mobile Vet",
+      "url": "https://www.vitimobilevet.com/",
+      "note": "Fetch refused (robots disallowed); not used."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "GoVet Clinic",
+      "city": "Suva",
+      "region": "Central Division",
+      "address": "Makoi, Suva",
+      "phone": "+679 939 7319",
+      "emergency_24h": true,
+      "duty": "Mobile pet clinic with home visits and emergency care, stated as available 24/7 across Suva, Nausori, Navua and Pacific Harbour.",
+      "small_animals": true,
+      "url": "https://www.govetclinic.com/",
+      "source_url": "https://www.govetclinic.com/",
+      "checked": "2026-11-16",
+      "note": "Second phone +679 788 7319. 24/7 is the clinic's own claim on its site."
+    },
+    {
+      "kind": "clinic",
+      "name": "SPCA Fiji Islands",
+      "city": "Suva",
+      "region": "Central Division",
+      "address": "155 Foster Road, Walu Bay, Suva",
+      "phone": "+679 892 6200",
+      "emergency_24h": false,
+      "duty": "Open Monday to Saturday 8:00-16:30. After-hours emergencies only, 17:00-22:00, by text message to 992 2634.",
+      "small_animals": true,
+      "url": "https://www.spcafiji.com/our-services",
+      "source_url": "https://www.spcafiji.com/our-services",
+      "checked": "2026-11-16",
+      "note": "Phone given as 8926200 on page; formatted with +679."
+    },
+    {
+      "kind": "clinic",
+      "name": "Animals Fiji - Nadi Clinic",
+      "city": "Nadi",
+      "region": "Western Division",
+      "address": "Lot 1 Koroniqava Road, Nasoso, Nadi",
+      "phone": "+679 993 6647",
+      "emergency_24h": false,
+      "duty": "Open Monday to Saturday 8:30-17:00, closed Sunday. Emergency and after-hours line on the same number, answered on a best-effort basis (not a 24-hour service).",
+      "small_animals": true,
+      "url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
+      "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "clinic",
+      "name": "Animals Fiji - Lautoka Clinic",
+      "city": "Lautoka",
+      "region": "Western Division",
+      "address": "Bouwalu Street, Namoli Industrial Area, Lautoka",
+      "phone": "+679 998 2026",
+      "emergency_24h": false,
+      "duty": "Open Tuesday to Saturday 8:30-17:00; closed Sunday and Monday.",
+      "small_animals": true,
+      "url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
+      "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "clinic",
+      "name": "Animals Fiji - Labasa Clinic",
+      "city": "Labasa",
+      "region": "Northern Division",
+      "address": "Mudliar Road (off Nadawa Street), Labasa",
+      "phone": "+679 998 6250",
+      "emergency_24h": false,
+      "duty": "Open Tuesday to Friday 8:00-17:00 and Saturday 8:00-13:00; closed Sunday and Monday.",
+      "small_animals": true,
+      "url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
+      "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "clinic",
+      "name": "Animals Fiji - Savusavu Clinic",
+      "city": "Savusavu",
+      "region": "Northern Division",
+      "address": "Nakama, Savusavu (next to Savusavu Medical Centre)",
+      "phone": "+679 998 6253",
+      "emergency_24h": false,
+      "duty": "Open Tuesday to Friday 8:30-17:00 and Saturday 8:00-13:00; closed Sunday and Monday.",
+      "small_animals": true,
+      "url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
+      "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "clinic",
+      "name": "PASH Fiji",
+      "region": "Fiji",
+      "phone": "+679 999 9944",
+      "emergency_24h": false,
+      "duty": "Rescue shelter and veterinary clinic, open Tuesday to Saturday 8:00-17:00. Phone to book.",
+      "small_animals": true,
+      "url": "https://www.pashfiji.com/",
+      "source_url": "https://www.pashfiji.com/",
+      "checked": "2026-11-16",
+      "note": "Page gives no address or city; locate before publishing."
+    }
+  ],
+  "notes": "Research 2026-11-16; all source_urls opened with WebFetch (official sites first were not reachable by provenance: spcafiji.org, baf.com.fj root, agriculture.gov.fj were blocked and not opened; BAF quarantine page opened). No Fiji Veterinary Association site, duty rota or animal poison line found. Viti Mobile Vet refused by robots. Not added: Pacific Vetcare / Coastal Veterinary Hospital (not confirmed as Fiji, no page opened), Denarau/Coral Coast have no clinic found beyond GoVet mobile coverage of Pacific Harbour. FNU vet programme and BAF quarantine (Koronivia, +679 331 2512) are not clinics."
+}
