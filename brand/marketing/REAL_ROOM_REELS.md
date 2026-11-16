@@ -41,3 +41,14 @@
 - *Odločeno 2026-11-06:* če pride v aplikacijo, **prostor slika samo starš**, otrok samo pogleda klip.
 - Ideja: starš slika sobo → Nano Banana Pro Edit vstavi družinskega psa (isti look) → StillQualityCheck (brez oseb/obrazov) → Kling 5 s klip. Cena ok. 0,15 $ + 0,5 $; kandidat za plačljive žetone ali nagrado.
 - Odprto pred gradnjo: soglasje, brisanje izvorne fotografije, kam gre slika (fal.ai), App Store Kids pravila. Polni video-to-video (pes reagira na roko) šele, ko modeli zanesljivo dajo »premium« kakovost.
+
+## Izvedba: reel »Meet Suki« (David, 2026-11-06) — objavljeno
+
+Prvi reel iz tega načrta ni šel po Labradorcu, ampak z Davidovim **mladim dobermanom Suki** (isti pes kot v aplikaciji). Posnetek: David je v sobi snemal božanje, v Higgsfieldu (Genjutsu → Objects swap) je bila žival zamenjana s Suki, nato je Claude sestavil reel (17,8 s, 9:16, brez zvoka): intro s Curiem → Suki v sobi (z oznako »AI-generated«) → Suki v aplikaciji (posnetek zaslona, obrezana statusna vrstica) → »Next up in PetPrep: Suki in YOUR home. COMING SOON« → outro »Get early access« + petprep.si + Follow @petprep.si.
+
+- **Sporočilo:** funkcija »pes v tvojem domu« je javno napovedana kot **coming soon** (David: gradimo jo kot naslednjo funkcijo). Do izida ni v aplikaciji; reel ne sme reči, da že obstaja.
+- **YouTube (Short):** https://youtube.com/shorts/WF-T_c9ogh4 · seznam »PetPrep Reels«: https://www.youtube.com/watch?v=WF-T_c9ogh4&list=PLdqHvNSCSYT0 (David potrdil 2026-11-15, da je povezava pravilna).
+- **Nastavitve objave:** Not made for kids, Altered content = Yes, zaključek opisa kot v `MEDIA_DRIVE.md`.
+- **LinkedIn (Davidov osebni profil):** reel naložen nativno, povezava na YouTube v prvem komentarju (ne v besedilu objave).
+- **Drive:** `CGP/videji/promo/2026-11-06_suki-real-room-reel_v1.mp4` (+ `.md` z napisi in opisom).
+- **Naučeno:** plišasti pes v pravi velikosti in mirna kamera; za zamenjavo je dober pes, ki sedi pokonci; pred zamenjavo odstrani/obreži klip na 5–8 s; ločljivost 480×832 je za reel prenizka, poženi upscale.
