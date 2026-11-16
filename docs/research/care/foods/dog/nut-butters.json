@@ -8,7 +8,8 @@
     "pt": "Manteigas de frutos secos",
     "nl": "Notenpasta’s",
     "pl": "Masła z orzechów",
-    "cs": "Ořechová másla"
+    "cs": "Ořechová másla",
+    "hr": "Maslaci od orašastih plodova"
   },
   "question": {
     "en": "Can dogs eat almond butter and other nut butters?",
@@ -17,7 +18,8 @@
     "pt": "Os cães podem comer manteiga de amêndoa e outras manteigas de frutos secos?",
     "nl": "Mogen honden amandelpasta en andere notenpasta’s eten?",
     "pl": "Czy psy mogą jeść masło migdałowe i inne masła z orzechów?",
-    "cs": "Mohou psi jíst mandlové máslo a další ořechová másla?"
+    "cs": "Mohou psi jíst mandlové máslo a další ořechová másla?",
+    "hr": "Smiju li psi jesti maslac od badema i druge maslace od orašastih plodova?"
   },
   "url_slug": {
     "en": "nut-butters",
@@ -26,7 +28,8 @@
     "pt": "manteigas-de-frutos-secos",
     "nl": "notenpasta",
     "pl": "masla-orzechowe",
-    "cs": "orechova-masla"
+    "cs": "orechova-masla",
+    "hr": "maslaci-od-orasastih-plodova"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "pt": "Manteiga de amêndoa, sim, em pequenas quantidades, se não tiver xilitol. Muitas manteigas de amêndoa têm sal e adoçantes como o xilitol, que é tóxico para os cães, por isso verifica sempre o rótulo. Nem todos os frutos secos são seguros: as nozes de macadâmia são muito tóxicas para os cães.",
     "nl": "Amandelpasta mag, in kleine hoeveelheden, als er geen xylitol in zit. Veel amandelpasta’s bevatten zout en zoetstoffen zoals xylitol, dat giftig is voor honden, dus lees altijd het etiket. Niet alle noten zijn veilig: macadamianoten zijn zeer giftig voor honden.",
     "pl": "Masło migdałowe – tak, w małych ilościach, o ile nie zawiera ksylitolu. Wiele maseł migdałowych zawiera sól i słodziki, takie jak ksylitol, który jest toksyczny dla psów, więc zawsze sprawdzaj etykietę. Nie wszystkie orzechy są bezpieczne: orzechy makadamia są bardzo toksyczne dla psów.",
-    "cs": "Mandlové máslo ano, v malém množství, pokud neobsahuje xylitol. Mnohá mandlová másla obsahují sůl a sladidla, například xylitol, který je pro psy jedovatý, proto vždy zkontrolujte etiketu. Ne všechny ořechy jsou bezpečné: makadamové ořechy jsou pro psy velmi jedovaté."
+    "cs": "Mandlové máslo ano, v malém množství, pokud neobsahuje xylitol. Mnohá mandlová másla obsahují sůl a sladidla, například xylitol, který je pro psy jedovatý, proto vždy zkontrolujte etiketu. Ne všechny ořechy jsou bezpečné: makadamové ořechy jsou pro psy velmi jedovaté.",
+    "hr": "Maslac od badema smije, u malim količinama, ako ne sadrži ksilitol. Mnogi maslaci od badema sadrže sol i sladila poput ksilitola, koji je otrovan za pse, zato uvijek provjeri deklaraciju. Nisu svi orašasti plodovi sigurni za pse: makadamija je vrlo otrovna za pse."
   },
   "why": {
     "en": "Almonds themselves are not recommended for dogs, but a little almond butter can be a safe alternative. Nuts are high in fat, and too much almond butter can lead to pancreatitis. Some peanut and other nut butters contain xylitol, a sweetener that is toxic to dogs.",
@@ -45,7 +49,8 @@
     "pt": "As amêndoas em si não são recomendadas para os cães, mas um pouco de manteiga de amêndoa pode ser uma alternativa segura. Os frutos secos têm muita gordura, e demasiada manteiga de amêndoa pode levar a pancreatite. Algumas manteigas de amendoim e de outros frutos secos contêm xilitol, um adoçante tóxico para os cães.",
     "nl": "Amandelen zelf worden niet aanbevolen voor honden, maar een beetje amandelpasta kan een veilig alternatief zijn. Noten bevatten veel vet, en te veel amandelpasta kan leiden tot alvleesklierontsteking. Sommige pindakaas en andere notenpasta’s bevatten xylitol, een zoetstof die giftig is voor honden.",
     "pl": "Same migdały nie są zalecane dla psów, ale odrobina masła migdałowego może być bezpieczną alternatywą. Orzechy mają dużo tłuszczu, a zbyt dużo masła migdałowego może prowadzić do zapalenia trzustki. Niektóre masła z orzeszków ziemnych i innych orzechów zawierają ksylitol, słodzik toksyczny dla psów.",
-    "cs": "Samotné mandle se psům nedoporučují, ale trocha mandlového másla může být bezpečnou alternativou. Ořechy mají hodně tuku a příliš mnoho mandlového másla může vést k zánětu slinivky břišní. Některá arašídová a další ořechová másla obsahují xylitol, sladidlo, které je pro psy jedovaté."
+    "cs": "Samotné mandle se psům nedoporučují, ale trocha mandlového másla může být bezpečnou alternativou. Ořechy mají hodně tuku a příliš mnoho mandlového másla může vést k zánětu slinivky břišní. Některá arašídová a další ořechová másla obsahují xylitol, sladidlo, které je pro psy jedovaté.",
+    "hr": "Sami se bademi psima ne preporučuju, ali malo maslaca od badema može biti sigurna zamjena. Orašasti plodovi bogati su mastima, a previše maslaca od badema može dovesti do upale gušterače. Neki maslaci od kikirikija i drugih orašastih plodova sadrže ksilitol, sladilo koje je otrovno za pse."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "pt": "Se achas que o teu cão comeu uma manteiga de frutos secos com xilitol, liga logo ao teu veterinário, a uma clínica de urgência ou a uma linha de apoio toxicológico para animais.",
     "nl": "Denk je dat je hond notenpasta met xylitol heeft gegeten, bel dan meteen je dierenarts, een spoedkliniek voor dieren of een vergiftigingenlijn voor dieren.",
     "pl": "Jeśli podejrzewasz, że pies zjadł masło z orzechów z ksylitolem, od razu zadzwoń do weterynarza, do całodobowej przychodni weterynaryjnej lub na telefon informacji toksykologicznej dla zwierząt.",
-    "cs": "Pokud si myslíte, že pes snědl ořechové máslo s xylitolem, ihned zavolejte veterináři, na pohotovost nebo na toxikologickou linku pro zvířata."
+    "cs": "Pokud si myslíte, že pes snědl ořechové máslo s xylitolem, ihned zavolejte veterináři, na pohotovost nebo na toxikologickou linku pro zvířata.",
+    "hr": "Ako misliš da je tvoj pas pojeo maslac od orašastih plodova s ksilitolom, odmah nazovi veterinara, dežurnu veterinarsku ambulantu ili telefonsku liniju za otrovanja životinja."
   },
   "serving": {
     "en": "A small amount of almond butter whose label lists no xylitol; as an occasional treat.",
@@ -64,7 +70,8 @@
     "pt": "Uma pequena quantidade de manteiga de amêndoa cujo rótulo não indique xilitol; como guloseima ocasional.",
     "nl": "Een kleine hoeveelheid amandelpasta waarvan op het etiket geen xylitol staat; af en toe als snoepje.",
     "pl": "Odrobina masła migdałowego, w którego składzie na etykiecie nie ma ksylitolu; jako smakołyk od czasu do czasu.",
-    "cs": "Malé množství mandlového másla, na jehož etiketě xylitol není uveden; jako občasný pamlsek."
+    "cs": "Malé množství mandlového másla, na jehož etiketě xylitol není uveden; jako občasný pamlsek.",
+    "hr": "Malo maslaca od badema bez ksilitola na deklaraciji, kao povremena poslastica."
   },
   "child": {
     "en": "A little almond butter can be a treat, but a grown-up must check the jar first. Some kinds are not safe for dogs.",
@@ -73,7 +80,8 @@
     "pt": "Um pouco de manteiga de amêndoa pode ser uma guloseima, mas um adulto tem de verificar primeiro o frasco. Alguns tipos não são seguros para os cães.",
     "nl": "Een beetje amandelpasta kan een snoepje zijn, maar een volwassene moet eerst de pot controleren. Sommige soorten zijn niet veilig voor honden.",
     "pl": "Odrobina masła migdałowego może być smakołykiem, ale dorosły musi najpierw sprawdzić słoik. Niektóre rodzaje nie są bezpieczne dla psów.",
-    "cs": "Trocha mandlového másla může být pamlsek, ale dospělý musí nejdřív zkontrolovat složení na sklenici. Některé druhy pro psy bezpečné nejsou."
+    "cs": "Trocha mandlového másla může být pamlsek, ale dospělý musí nejdřív zkontrolovat složení na sklenici. Některé druhy pro psy bezpečné nejsou.",
+    "hr": "Malo maslaca od badema može biti poslastica, ali odrasla osoba prvo mora provjeriti staklenku. Neke vrste nisu sigurne za pse."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "pt": "Como sei se uma manteiga de frutos secos tem xilitol?",
         "nl": "Hoe weet ik of een notenpasta xylitol bevat?",
         "pl": "Jak sprawdzić, czy masło z orzechów zawiera ksylitol?",
-        "cs": "Jak poznám, že ořechové máslo obsahuje xylitol?"
+        "cs": "Jak poznám, že ořechové máslo obsahuje xylitol?",
+        "hr": "Kako znati ima li maslac od orašastih plodova ksilitol?"
       },
       "a": {
         "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
@@ -93,7 +102,8 @@
         "pt": "Lê os ingredientes no rótulo, sobretudo nos produtos indicados como sem açúcar ou com pouco açúcar.",
         "nl": "Lees de ingrediënten op het etiket, vooral bij producten die als suikervrij of suikerarm zijn aangeduid.",
         "pl": "Przeczytaj skład na etykiecie, zwłaszcza na produktach oznaczonych jako „bez cukru” lub „o obniżonej zawartości cukru”.",
-        "cs": "Přečtěte si složení na etiketě, zejména u výrobků označených jako bez cukru nebo se sníženým obsahem cukru."
+        "cs": "Přečtěte si složení na etiketě, zejména u výrobků označených jako bez cukru nebo se sníženým obsahem cukru.",
+        "hr": "Pročitaj sastojke na deklaraciji, osobito na proizvodima označenima kao „bez šećera“ ili „sa smanjenim udjelom šećera“."
       }
     }
   ],
@@ -182,6 +192,11 @@
       "status": "verified",
       "verified_by": "claude-c-cs-2026-11-16",
       "verified_hash": "bcc2e3b6c3a81817017cd33472883e07f37d406168f842c13bb10c508af401c7"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7aeaf7ba233424c80ce5cceb41390af51903d7e719778ba7153397296c1b1a04"
     }
   }
 }
