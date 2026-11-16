@@ -25,7 +25,7 @@ Three.js se pri PetPrepu splača **na petprep.si**, ne v aplikaciji in ne za sam
 | # | Kaj | Poslovni učinek | Kdaj |
 |---|---|---|---|
 | 1 | **»Koliko dela in denarja je pes« v 3D** na petprep.si | Lead magnet, ki je v poslovnem modelu, a ni zgrajen. Vodi v »Obljubo o ljubljenčku«, darilni bon in izziv. Ima sponzorsko mesto za zavarovalnico (fiksno sponzorstvo, R3). | **prototip narejen 15. 11. 2026** (§4) |
-| 2 | **Primerjalnik velikosti v registru pasem** (pasma v merilu ob otroku, kavču, vratih) | Višine in teže z viri so že v registru. Edinstvena vsebina za SEO in deljenje na vsaki strani pasme. | predlog |
+| 2 | **Primerjalnik velikosti v registru pasem** (tudi razkritje rezultata kviza, `BREED_QUIZ_SPEC.md` §6) (pasma v merilu ob otroku, kavču, vratih) | Višine in teže z viri so že v registru. Edinstvena vsebina za SEO in deljenje na vsaki strani pasme. | predlog |
 | 3 | **Demo v brskalniku »2 minuti s kužkom«** (obstoječi AI posnetki + interaktivni sloj) | Aplikacija je »coming soon«; demo zbira čakalni seznam že zdaj (oglasi, Product Hunt). Novih AI stroškov ni. | predlog |
 | 4 | **Ljubljenček z globino** (ključna slika + globinska karta, odziv na nagib in dotik) | Davidova ideja 2,5D (ROADMAP M5-R07); pes ostane identičen. Prototip v Skii, brez three.js. | po validaciji |
 | 5 | **3D kotiček ljubljenčka** (stvari iz »Želja«, medalje) | Dvigne vrednost »Želja« brez AI stroška na dizajn. Tveganje: nasprotuje pozicioniranju »otrok ni ves dan na telefonu« in meša realističen videz z risanim. | po validaciji, če sploh |
@@ -80,7 +80,7 @@ Izračun za 13 let uporabi številke odraslega psa za vsa leta (poenostavitev, n
 1. **Cene za Slovenijo.** Številke so britanski minimum PDSA, samo preračunan. Ali poiščemo slovenski vir ali ostane PDSA z opombo »cene v vaši državi so lahko drugačne«.
 2. **Pravi partner:** kdo in pod kakšnimi pogoji (REVENUE_MODELS §4).
 3. ~~Ali gre to na petprep.si pred koncem validacije~~ — David 15. 11. 2026: da, stran je prenesena (SL + EN). Odprto: ostalih 13 jezikov.
-4. Ali naj se pasma izbira (podatki za vse pasme so v registru) ali ostane ena stran na pasmo.
+4. ~~Ali naj se pasma izbira ali ostane ena stran na pasmo~~ — David 16. 11. 2026: kalkulator za **vse pasme**, dinamično iz registra, vsaka nova pasma samodejno (ROADMAP M6-S07).
 
 ### Naslednji koraki, če David potrdi
 1. ~~Prenos v `pet-prep-website`~~ — narejeno 15. 11. 2026 (PR #406; three.js se naloži samo na tej strani). Odprto: podatki iz `registry.json` namesto vpisanih v kodo.
