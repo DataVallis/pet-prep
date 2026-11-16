@@ -30,8 +30,8 @@
  * (`dog-picker*`) so existing flows stay stable.
  */
 
-import { useContext, useState } from 'react';
-import { ActivityIndicator, Animated, FlatList, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { useContext, useEffect, useState } from 'react';
+import { ActivityIndicator, Animated, FlatList, Image, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { Text, TextInput } from '@/components/ui/Text';
 import { FieldLabel, RequiredLegend } from '@/components/ui/RequiredLabel';
@@ -341,7 +341,12 @@ function PickerBody({
       )}
 
       {colours.length > 0 && (
-        <ColourChoice colours={colours} selected={choice.colour ?? null} onPick={(colour) => update((c) => ({ ...c, colour }))} />
+        <ColourChoice
+          colours={colours}
+          selected={choice.colour ?? null}
+          breedLabel={choice.breed !== null && choice.species !== null ? breedName(choice.breed, choice.species) : ''}
+          onPick={(colour) => update((c) => ({ ...c, colour }))}
+        />
       )}
 
       <FieldLabel required style={styles.sectionTitleText} containerStyle={styles.sectionTitleRow} accessibilityRole="header" testID="origin-title">
@@ -705,22 +710,30 @@ function SuitabilityTags({ breed, suitability }: { breed: PetBreed; suitability:
 /**
  * Several colours → a radio group of chips (brand light theme, 44 pt touch targets); a single
  * colour → one line, nothing to choose. Labels come from the server in the app language.
+ * Above the chips: the AI photo of the breed in the selected colour (David 2026-11-16 — the
+ * website register's photos, `image_url`), labelled as a preview. No photo for that colour
+ * (or it fails to load) → no photo, never a photo of another colour.
  */
 function ColourChoice({
   colours,
   selected,
+  breedLabel,
   onPick,
 }: {
   colours: readonly BreedColour[];
   selected: string | null;
+  breedLabel: string;
   onPick: (colour: string) => void;
 }) {
+  const shown = colours.find((c) => c.key === selected) ?? colours[0];
+  const photo = shown ? <ColourPhoto colour={shown} breedLabel={breedLabel} all={colours} /> : null;
   if (colours.length === 1) {
     return (
       <View style={styles.colourSection}>
         <Text style={styles.sectionTitle} accessibilityRole="header">
           {S.colourTitle}
         </Text>
+        {photo}
         <Text style={styles.optionHint} testID="colour-only">
           {S.colourOnly(colours[0].label)}
         </Text>
@@ -732,6 +745,7 @@ function ColourChoice({
       <FieldLabel required style={styles.sectionTitleText} containerStyle={styles.sectionTitleRow} accessibilityRole="header" testID="colour-title">
         {S.colourTitle}
       </FieldLabel>
+      {photo}
       <Text style={styles.note}>{S.colourHint}</Text>
       <View style={styles.colourChips} accessibilityRole="radiogroup" accessibilityLabel={S.colourTitle} testID="colour-choice">
         {colours.map((colour) => {
@@ -752,6 +766,39 @@ function ColourChoice({
           );
         })}
       </View>
+    </View>
+  );
+}
+
+/**
+ * The colour photo: square, the website's fog-grey backdrop while it loads; every colour's
+ * photo is prefetched once so switching chips is instant; a URL that fails is hidden for good.
+ */
+function ColourPhoto({ colour, breedLabel, all }: { colour: BreedColour; breedLabel: string; all: readonly BreedColour[] }) {
+  const [failed, setFailed] = useState<ReadonlySet<string>>(() => new Set());
+  const urls = all.map((c) => c.image_url).filter((u): u is string => typeof u === 'string');
+  const urlsKey = urls.join('|');
+  useEffect(() => {
+    for (const u of urlsKey === '' ? [] : urlsKey.split('|')) {
+      Image.prefetch(u).catch(() => undefined);
+    }
+  }, [urlsKey]);
+  const url = colour.image_url;
+  if (typeof url !== 'string' || failed.has(url)) return null;
+  return (
+    <View style={styles.colourPhotoWrap} testID="colour-photo">
+      <Image
+        key={url}
+        source={{ uri: url }}
+        style={styles.colourPhoto}
+        resizeMode="cover"
+        accessible
+        accessibilityRole="image"
+        accessibilityLabel={S.colourPhotoA11y(breedLabel, colour.label)}
+        onError={() => setFailed((prev) => new Set(prev).add(url))}
+        testID={`colour-photo-${colour.key}`}
+      />
+      <Text style={styles.colourPhotoCaption}>{S.colourPhotoCaption}</Text>
     </View>
   );
 }
@@ -918,6 +965,9 @@ const styles = StyleSheet.create({
   chipText: { fontSize: 12, lineHeight: 16, fontWeight: '600', color: C.text },
   chipConsiderText: { color: C.muted },
   colourSection: { gap: 8 },
+  colourPhotoWrap: { gap: 6, alignItems: 'center' },
+  colourPhoto: { width: '100%', maxWidth: 360, aspectRatio: 1, borderRadius: radius.card, backgroundColor: palette.fog },
+  colourPhotoCaption: { fontSize: 12, lineHeight: 16, color: C.muted, textAlign: 'center' },
   colourChips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   colourChip: {
     flexDirection: 'row',

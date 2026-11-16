@@ -2393,11 +2393,14 @@ export interface components {
              *     paid breed — only colours the breed standard allows. Send `key` as
              *     `colour` to POST /api/parent/generate-pin; `label` is in the
              *     request language (en | sl). One entry = nothing to choose (show it,
-             *     no picker); [] = free breed (no colour choice).
+             *     no picker); [] = free breed (no colour choice). `image_url` (David
+             *     2026-11-16): AI photo of the breed in that colour on petprep.si,
+             *     shown above the picker as an illustration; null = no photo yet.
              */
             colours: {
                 key: string;
                 label: string;
+                image_url: string | null;
             }[];
         };
         /**

@@ -139,7 +139,7 @@ class BreedCatalogService
      * izziv«); old builds keep `challenge_allowed = premium`.
      *
      * @param  list<Species>  $availableSpecies
-     * @return list<array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}, colours: list<array{key: string, label: string}>}>
+     * @return list<array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}, colours: list<array{key: string, label: string, image_url: string|null}>}>
      */
     public function catalogue(array $availableSpecies, ?Species $species = null, bool $freeBreedChallenge = false): array
     {

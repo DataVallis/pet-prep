@@ -57,6 +57,7 @@ export const PICKER_STRINGS = strings('pet', 'picker', {
   /** M5-R21: a breed with a single colour — shown as fact, nothing to choose. */
   colourOnly: (colour: string) => t('pet:picker.colourOnly', { colour }),
   colourA11y: (colour: string) => t('pet:picker.colourA11y', { colour }),
+  colourPhotoA11y: (breed: string, colour: string) => t('pet:picker.colourPhotoA11y', { breed, colour }),
   cat: {
     title: (name: string) => t('pet:picker.cat.title', { name }),
   },
@@ -205,6 +206,7 @@ export const NO_COLOURS: readonly BreedColour[] = [];
 /**
  * Loose `colours` → typed: entries without a non-empty string `key` and `label` are dropped,
  * a repeated key keeps its first entry; anything else (missing on an older server) → none.
+ * `image_url` (the colour photo, David 2026-11-16) is kept only as an https URL, else null.
  */
 export function readColours(raw: unknown): readonly BreedColour[] {
   if (!Array.isArray(raw)) return NO_COLOURS;
@@ -212,13 +214,13 @@ export function readColours(raw: unknown): readonly BreedColour[] {
   const colours: BreedColour[] = [];
   for (const item of raw) {
     if (typeof item !== 'object' || item === null) continue;
-    const { key, label } = item as Record<string, unknown>;
+    const { key, label, image_url: imageUrl } = item as Record<string, unknown>;
     if (typeof key !== 'string' || typeof label !== 'string') continue;
     const k = key.trim();
     const l = label.trim();
     if (k === '' || l === '' || seen.has(k)) continue;
     seen.add(k);
-    colours.push({ key: k, label: l });
+    colours.push({ key: k, label: l, image_url: typeof imageUrl === 'string' && imageUrl.startsWith('https://') ? imageUrl : null });
   }
   return colours;
 }
