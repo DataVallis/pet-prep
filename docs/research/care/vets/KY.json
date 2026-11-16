@@ -1,0 +1,207 @@
+{
+  "country": "KY",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "Cayman Islands Department of Agriculture - contact details",
+      "url": "https://doa.gov.ky/?p=73",
+      "note": "Opened: Grand Cayman office 181 Lottery Road, Lower Valley, +1 345 947 3090, Mon-Fri 8:30-17:00; livestock emergency 345-916-2218; Cayman Brac office Spot Bay Road +1 345 948 0522/1411, emergency vet 345-925-5765; Little Cayman none listed."
+    },
+    {
+      "name": "Department of Agriculture FAQ",
+      "url": "https://doa.gov.ky/faqs/",
+      "note": "Opened: 345-916-2218 after-hours emergency vet service; no private clinics named."
+    },
+    {
+      "name": "Department of Agriculture - Little Cayman tag",
+      "url": "https://doa.gov.ky/tag/little-cayman/",
+      "note": "Opened: no vet clinic or contacts for Little Cayman."
+    },
+    {
+      "name": "Radio Cayman - Brac animal health assistant unavailable",
+      "url": "https://www.radiocayman.gov.ky/community-events/cayman-brac-animal-health-assistant-unavailable",
+      "note": "Opened: Aug 2025 notice, emergencies to 345-916-2218."
+    },
+    {
+      "name": "Cayman Resident - veterinarians",
+      "url": "https://caymanresident.com/live/pets/veterinarians",
+      "note": "Opened: directory of 5 providers (aggregator, used with per-profile pages)."
+    },
+    {
+      "name": "Cayman Resident - clinic profiles",
+      "url": "https://caymanresident.com/profile/cayman-animal-hospital",
+      "note": "Opened profiles of Cayman Animal Hospital (24 h emergency, registered clients), Kman Vets, IVS, Seven Mile Animal Centre, Veterinary Clinic and Specialty Pet Boarding."
+    },
+    {
+      "name": "Cayman Compass - Humane Society Brac vet clinic",
+      "url": "https://www.caymancompass.com/2020/12/17/humane-society-seeks-support-for-brac-vet-clinic/",
+      "note": "Opened (2020): Cayman Brac has no permanent veterinary services; planned clinic, no phone; no entry."
+    },
+    {
+      "name": "CbVMA",
+      "url": "https://www.cbvma.org/",
+      "note": "Opened: only lists CIVMA email civma.board@gmail.com; no clinic list."
+    },
+    {
+      "name": "Cayman Animal Hospital - contact and emergency pages",
+      "url": "https://caymananimalhospital.ky/contact-us/",
+      "note": "Opened (own site): 394 Crewe Road, office 946-8387, emergency (clients only) 916-7387; services page: emergency line after hours on weekdays and 24/7 weekends and public holidays; meta description 'Get 24/7 emergency service'."
+    },
+    {
+      "name": "Kman Vets own site",
+      "url": "https://www.kmanvets.com/",
+      "note": "Opened: Units 1 & 2 Midtown Plaza, 273 Elgin Ave; 640-5838; after-hours emergency line 525-5838; lists Emergency Care 24/7 (after-hours line described as advice and assistance)."
+    },
+    {
+      "name": "Island Veterinary Services own site",
+      "url": "https://islandveterinaryservices.com/contact/",
+      "note": "Opened: 95 Printer Way, 949-0787, emergency 916-2459, hours Mon-Wed/Fri 8-18, Thu 8-17, Sat 8-13."
+    },
+    {
+      "name": "Mobile Vet Company own site",
+      "url": "https://mobilevets.ky/contact-us/",
+      "note": "Opened: 327-3313, Mon-Fri 9-17, no address, no emergency wording."
+    },
+    {
+      "name": "Visit Cayman Islands - Mobile Vet Company",
+      "url": "https://www.visitcaymanislands.com/es-ar/things-to-do/local-business/the-mobile-vet-company-15185",
+      "note": "Opened: 327-3313, PO Box 31623 George Town, mobilevets.ky."
+    },
+    {
+      "name": "BringFido - Seven Mile Animal Center / Veterinary Clinic and Specialty Boarding",
+      "url": "https://www.bringfido.ca/resource/45594",
+      "note": "Opened both listings (45594, 45592): phones 326-3450 and 945-1242 only; Seven Mile no street address; Savannah clinic at Countryside Shopping Village; no hours."
+    },
+    {
+      "name": "Cayman Compass 2011 - Veterinary Clinic and Specialty Pet Boarding",
+      "url": "https://www.caymancompass.com/2011/10/19/the-veterinary-clinic-and-specialty-pet-boarding/",
+      "note": "Opened (old): Country Side Shopping Village Savannah, emergency services offered, no phone."
+    },
+    {
+      "name": "ECayOnline - Cayman Animal Hospital",
+      "url": "https://www.ecayonline.com/cayman-animal-hospital-grand-cayman-islands_company897.html",
+      "note": "Opened: 394 Crewe Rd, 946-8387."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "duty_rota",
+      "name": "Department of Agriculture - Veterinary Services after-hours emergency line (Grand Cayman)",
+      "city": "Bodden Town",
+      "region": "Grand Cayman",
+      "address": "181 Lottery Road, Lower Valley, Bodden Town",
+      "phone": "+1 345 916 2218",
+      "emergency_24h": false,
+      "duty": "After-hours emergency veterinary line (listed as livestock emergency). Office Mon-Fri 8:30-17:00 on +1 345 947 3090.",
+      "small_animals": true,
+      "url": "https://doa.gov.ky/",
+      "source_url": "https://doa.gov.ky/?p=73",
+      "note": "doa.gov.ky contact page labels 345-916-2218 'Livestock Emergency'; doa.gov.ky/faqs/ lists the same number as the after-hours emergency veterinary service number. No explicit '24 h' wording, so emergency_24h=false.",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "duty_rota",
+      "name": "Department of Agriculture - Cayman Brac emergency vet (Animal Health Assistant)",
+      "city": "Spot Bay",
+      "region": "Cayman Brac",
+      "address": "Spot Bay Road, Spot Bay, Cayman Brac",
+      "phone": "+1 345 925 5765",
+      "emergency_24h": false,
+      "duty": "Emergency vet contact on Cayman Brac (after hours). Office Mon-Fri 8:30-16:30 on +1 345 948 0522 / 948 1411.",
+      "small_animals": true,
+      "url": "https://doa.gov.ky/",
+      "source_url": "https://doa.gov.ky/?p=73",
+      "note": "Contact page: 'Emergency Vet 345-925-5765'; FAQ marks it after-hours emergency. Aug 2025 notice said that during the assistant's absence emergencies went to 345-916-2218 (radiocayman.gov.ky/community-events/cayman-brac-animal-health-assistant-unavailable). Island has no permanent private vet per Cayman Compass 2020.",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "clinic",
+      "name": "Cayman Animal Hospital",
+      "city": "George Town",
+      "region": "Grand Cayman",
+      "address": "394 Crewe Road, George Town",
+      "phone": "+1 345 946 8387",
+      "emergency_24h": true,
+      "duty": "Mon-Fri 8:00-17:00, last Saturday of the month 8:00-13:00, closed Sunday. Emergency line +1 345 916 7387 (clients only): after hours on weekdays and 24/7 on weekends and public holidays.",
+      "small_animals": true,
+      "url": "https://caymananimalhospital.ky/",
+      "source_url": "https://caymananimalhospital.ky/contact-us/",
+      "note": "Confirmed on the clinic's own site (name, address, phone, hours). 24-h claim: meta description says 'Get 24/7 emergency service'; services page says the emergency line runs after hours on weekdays and 24/7 weekends/holidays, clients only (non-clients pay a surcharge). Kept emergency_24h=true on that basis.",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "clinic",
+      "name": "Kman Vets",
+      "city": "George Town",
+      "region": "Grand Cayman",
+      "address": "Units 1 & 2, Midtown Plaza, 273 Elgin Avenue, George Town",
+      "phone": "+1 345 640 5838",
+      "emergency_24h": true,
+      "duty": "Mon-Fri 8:00-18:00, Sat 8:30-13:30, appointments only, closed Sunday and public holidays. After-hours emergency line +1 345 525 5838. Mobile visits Tue and Sat mornings.",
+      "small_animals": true,
+      "url": "https://www.kmanvets.com/",
+      "source_url": "https://www.kmanvets.com/",
+      "note": "Confirmed on own site. Site lists 'Emergency Care' 24/7 but describes the after-hours line as advice and assistance; it does not say whether in-person treatment is available at night - phone first. Emergency number 525-5838 (Radio Cayman 2020) confirmed current.",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "clinic",
+      "name": "Island Veterinary Services (IVS)",
+      "city": "George Town",
+      "region": "Grand Cayman",
+      "address": "95 Printer Way, George Town",
+      "phone": "+1 345 949 0787",
+      "emergency_24h": false,
+      "duty": "Mon-Wed and Fri 8:00-18:00, Thu 8:00-17:00, Sat 8:00-13:00, closed Sunday. Emergency line +1 345 916 2459.",
+      "small_animals": true,
+      "source_url": "https://islandveterinaryservices.com/contact/",
+      "note": "Confirmed on own site (address, phone, hours, emergency number); no 24 h wording.",
+      "checked": "2026-11-16",
+      "url": "https://islandveterinaryservices.com/"
+    },
+    {
+      "kind": "clinic",
+      "name": "Seven Mile Animal Centre (36 345 Vets)",
+      "city": "Seven Mile Beach",
+      "region": "Grand Cayman",
+      "address": "Seven Mile Beach, Grand Cayman",
+      "phone": "+1 345 326 3450",
+      "emergency_24h": false,
+      "duty": "Small-animal clinic. Call for hours.",
+      "small_animals": true,
+      "source_url": "https://www.bringfido.ca/resource/45594",
+      "note": "Name and phone 326-3450 confirmed on a second (non-Cayman Resident) page; street address 'Lawrence Bl 36' and hours Mon-Fri 8-17 appear only on the caymanresident.com profile, so were removed. Own site (345vets.com) not found/opened.",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "clinic",
+      "name": "The Veterinary Clinic and Specialty Pet Boarding",
+      "city": "Savannah",
+      "region": "Grand Cayman",
+      "address": "Countryside Shopping Village, Savannah",
+      "phone": "+1 345 945 1242",
+      "emergency_24h": false,
+      "duty": "Clinic with specialty pet boarding. Call for hours and emergencies.",
+      "small_animals": true,
+      "source_url": "https://www.caymancompass.com/2011/10/19/the-veterinary-clinic-and-specialty-pet-boarding/",
+      "note": "Phone 945-1242 (BringFido) and location Countryside Shopping Village, Savannah (Cayman Compass 2011, old) confirmed; street '33 Hirst Road' and emergency line 926 1242 only on caymanresident.com profile, so removed. Compass 2011 says emergency services offered, no number.",
+      "checked": "2026-11-16"
+    },
+    {
+      "kind": "clinic",
+      "name": "The Mobile Vet Company",
+      "city": "George Town",
+      "region": "Grand Cayman",
+      "address": "House-call service, Grand Cayman (PO Box 31623, George Town)",
+      "phone": "+1 345 327 3313",
+      "emergency_24h": false,
+      "duty": "Mobile house-call service, Mon-Fri 9:00-17:00.",
+      "small_animals": true,
+      "url": "https://mobilevets.ky/",
+      "source_url": "https://mobilevets.ky/contact-us/",
+      "note": "Confirmed on own site (phone, hours) and visitcaymanislands.com. No emergency or 24 h wording.",
+      "checked": "2026-11-16"
+    }
+  ],
+  "notes": "Independent check 2026-11-16: all 8 entries opened. DoA lines confirmed on doa.gov.ky (no explicit 24 h wording, so false). Own sites opened for Cayman Animal Hospital, Kman Vets, IVS and Mobile Vet Company. Seven Mile Animal Centre and The Veterinary Clinic only have name+phone confirmed outside caymanresident.com; unverified address/hours/emergency line were removed. Cayman Brac and Little Cayman have no private clinics (Brac DoA Animal Health Assistant only). No CIVMA or government clinic register found. Not covered: other Grand Cayman clinics (West Bay, Bodden Town, East End, North Side), Camana Bay clinics, Petopia/Cayman Pet Paradise (boarding, not vets)."
+}
