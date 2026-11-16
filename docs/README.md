@@ -8,6 +8,7 @@
 | `business/WEBSITE_SALES_SPEC.md` | Prodaja prek petprep.si: darilni bon za izziv, natisljivi komplet »Obljuba o ljubljenčku«, stran za partnerje (M6-S01 … S03, *načrt*, David 11. 11. 2026) | SL |
 | `business/VALIDATION_PLAN.md` | 8-tedenski načrt validacije: 100 plačljivih družin, hipoteze s pragovi, kaj je zamrznjeno, odločitve V1–V4 (David 10. 11. 2026) | SL |
 | `product/THREEJS_OPPORTUNITIES.md` | Three.js: kje se splača (petprep.si) in kje ne (aplikacija, ljubljenček); prototip »Koliko dela je z labradorcem?« v `prototypes/real-cost/` (David 15. 11. 2026) | SL |
+| `product/BREED_QUIZ_SPEC.md` | Kviz »Katera pasma je za vas?« in podstran »Pred nakupom psa« s karticami mini orodij (M6-S06, načrt; David 16. 11. 2026) | SL |
 | `engineering/ARCHITECTURE.md` | Arhitektura *kot je zgrajena* (tabele, API, game loop, real-time) | EN |
 | `engineering/AUDIT-2026-10-02.md` | Analiza stanja ob prevzemu: kaj dela, kaj ne, kaj manjka | SL |
 | `engineering/ROADMAP.md` | Milestoni M0–M5 s taski (ID-ji za veje in commite) | SL |
