@@ -4,28 +4,33 @@
   "name": {
     "en": "Soda (soft drinks)",
     "sl": "Gazirane pijače",
-    "fr": "Soda (boissons gazeuses)"
+    "fr": "Soda (boissons gazeuses)",
+    "fi": "Limsa (virvoitusjuomat)"
   },
   "question": {
     "en": "Can cats drink soda?",
     "sl": "Ali lahko mačke pijejo gazirane pijače?",
-    "fr": "Les chats peuvent-ils boire du soda ?"
+    "fr": "Les chats peuvent-ils boire du soda ?",
+    "fi": "Saako kissa juoda limsaa?"
   },
   "url_slug": {
     "en": "soda",
     "sl": "gazirane-pijace",
-    "fr": "soda"
+    "fr": "soda",
+    "fi": "limsa"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Many sodas contain caffeine, and cats are more sensitive to caffeine than people. One or two licks is unlikely to cause poisoning, but if your cat drank more, call your vet. Your cat only needs to drink water.",
     "sl": "Ne. Veliko gaziranih pijač vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Lizanje ali dve verjetno ne bo povzročilo zastrupitve, če pa je muca popila več, pokličite veterinarja. Muca potrebuje le vodo.",
-    "fr": "Non. De nombreux sodas contiennent de la caféine, et les chats y sont plus sensibles que les humains. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais si votre chat en a bu davantage, appelez votre vétérinaire. Votre chat n’a besoin que d’eau."
+    "fr": "Non. De nombreux sodas contiennent de la caféine, et les chats y sont plus sensibles que les humains. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais si votre chat en a bu davantage, appelez votre vétérinaire. Votre chat n’a besoin que d’eau.",
+    "fi": "Ei saa. Monissa limsoissa on kofeiinia, ja kissat ovat kofeiinille herkempiä kuin ihmiset. Yksi tai kaksi nuolaisua tuskin aiheuttaa myrkytystä, mutta jos kissasi joi enemmän, soita eläinlääkärille. Kissasi tarvitsee juomaksi vain vettä."
   },
   "why": {
     "en": "Many teas and sodas contain caffeine, and dogs and cats are more sensitive to caffeine than humans. Caffeine stimulates the heart and nervous system, which can be dangerous, and it can also upset the stomach. Signs can start within a few hours and last up to several days.",
     "sl": "Veliko čajev in gaziranih pijač vsebuje kofein, psi in mačke pa so nanj bolj občutljivi kot ljudje. Kofein spodbuja srce in živčevje, kar je lahko nevarno, poleg tega lahko razdraži želodec. Znaki se lahko pojavijo v nekaj urah in trajajo tudi več dni.",
-    "fr": "De nombreux thés et sodas contiennent de la caféine, et les chiens comme les chats y sont plus sensibles que les humains. La caféine stimule le cœur et le système nerveux, ce qui peut être dangereux, et elle peut aussi irriter l’estomac. Les signes peuvent apparaître en quelques heures et durer plusieurs jours."
+    "fr": "De nombreux thés et sodas contiennent de la caféine, et les chiens comme les chats y sont plus sensibles que les humains. La caféine stimule le cœur et le système nerveux, ce qui peut être dangereux, et elle peut aussi irriter l’estomac. Les signes peuvent apparaître en quelques heures et durer plusieurs jours.",
+    "fi": "Monissa teissä ja limsoissa on kofeiinia, ja koirat ja kissat ovat kofeiinille herkempiä kuin ihmiset. Kofeiini kiihdyttää sydämen ja hermoston toimintaa, mikä voi olla vaarallista, ja se voi myös sotkea vatsan. Oireet voivat alkaa muutaman tunnin kuluessa ja kestää jopa useita päiviä."
   },
   "signs": {
     "en": [
@@ -51,30 +56,42 @@
       "Maux d’estomac, vomissements ou diarrhée",
       "Tremblements",
       "Besoin d’uriner plus souvent"
+    ],
+    "fi": [
+      "Nopea syke",
+      "Ylivilkkaus, levottomuus, haluttomuus pysyä aloillaan",
+      "Edestakaisin kulkeminen tai runsas naukuminen",
+      "Vatsavaivat, oksentelu tai ripuli",
+      "Vapina",
+      "Tihentynyt virtsaaminen"
     ]
   },
   "what_to_do": {
     "en": "If your cat drank soda, call your vet or a pet poison helpline as soon as you realise. One or two licks is unlikely to cause poisoning in most pets.",
     "sl": "Če je muca pila gazirano pijačo, takoj ko to opazite, pokličite veterinarja ali center za zastrupitve živali. Lizanje ali dve pri večini živali verjetno ne bo povzročilo zastrupitve.",
-    "fr": "Si votre chat a bu du soda, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte. Un ou deux coups de langue ont peu de chances d’intoxiquer la plupart des animaux."
+    "fr": "Si votre chat a bu du soda, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte. Un ou deux coups de langue ont peu de chances d’intoxiquer la plupart des animaux.",
+    "fi": "Jos kissasi joi limsaa, soita eläinlääkärille tai eläinten myrkytysneuvontaan heti, kun huomaat sen. Yksi tai kaksi nuolaisua tuskin aiheuttaa myrkytystä useimmille lemmikeille."
   },
   "serving": null,
   "child": {
     "en": "Fizzy drinks aren't for cats. A bowl of fresh water is all your cat needs!",
     "sl": "Gazirane pijače niso za muce. Skledica sveže vode je vse, kar muca potrebuje!",
-    "fr": "Les boissons gazeuses ne sont pas pour les chats. Une gamelle d’eau fraîche, c’est tout ce dont ton chat a besoin !"
+    "fr": "Les boissons gazeuses ne sont pas pour les chats. Une gamelle d’eau fraîche, c’est tout ce dont ton chat a besoin !",
+    "fi": "Kuplivat juomat eivät ole kissoille. Kupillinen raikasta vettä on kaikki, mitä kissasi tarvitsee!"
   },
   "faq": [
     {
       "q": {
         "en": "My cat licked my soda – what should I do?",
         "sl": "Muca je polizala mojo gazirano pijačo – kaj naj naredim?",
-        "fr": "Mon chat a léché mon soda : que faire ?"
+        "fr": "Mon chat a léché mon soda : que faire ?",
+        "fi": "Kissani nuolaisi limsaani – mitä teen?"
       },
       "a": {
         "en": "One or two licks of soda is unlikely to cause poisoning in most pets. If your cat drank more, call your vet or a pet poison helpline as soon as you realise, because cats are more sensitive to caffeine than people.",
         "sl": "Lizanje ali dve gazirane pijače pri večini živali verjetno ne bo povzročilo zastrupitve. Če je muca popila več, takoj pokličite veterinarja ali center za zastrupitve živali, saj so mačke na kofein bolj občutljive kot ljudje.",
-        "fr": "Un ou deux coups de langue de soda ont peu de chances d’intoxiquer la plupart des animaux. Si votre chat en a bu davantage, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte, car les chats sont plus sensibles à la caféine que les humains."
+        "fr": "Un ou deux coups de langue de soda ont peu de chances d’intoxiquer la plupart des animaux. Si votre chat en a bu davantage, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte, car les chats sont plus sensibles à la caféine que les humains.",
+        "fi": "Yksi tai kaksi nuolaisua limsasta tuskin aiheuttaa myrkytystä useimmille lemmikeille. Jos kissasi joi enemmän, soita eläinlääkärille tai eläinten myrkytysneuvontaan heti, kun huomaat sen, sillä kissat ovat kofeiinille herkempiä kuin ihmiset."
       }
     }
   ],
@@ -171,6 +188,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2081724e01841f41312ce0a22cffd1184dea6852dfdef92e2cfdc4f3e0056684"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "699293ddb250ac68101028592ebb086847e5e512ab212a95212daf07506f0138"
     }
   }
 }
