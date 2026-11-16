@@ -77,6 +77,15 @@ describe('POST /api/partner-inquiries', function () {
             ->and($row->locale)->toBe('sl');
     });
 
+    it('accepts every website locale (all 15 site languages, 2026-11-17)', function () {
+        foreach (\App\Support\WebsiteLocale::ALL as $i => $locale) {
+            $this->withServerVariables(['REMOTE_ADDR' => '10.2.0.'.($i + 1)])
+                ->postJson('/api/partner-inquiries', piBody(['email' => "p{$i}@example.test", 'locale' => $locale]))->assertCreated();
+        }
+
+        expect(PartnerInquiry::whereIn('locale', \App\Support\WebsiteLocale::ALL)->count())->toBe(count(\App\Support\WebsiteLocale::ALL));
+    });
+
     it('accepts every type, an absent locale and an absent honeypot', function () {
         foreach (['series', 'sponsored_content', 'insurer', 'directory', 'shelter', 'other'] as $i => $type) {
             $body = piBody(['type' => $type, 'email' => "p{$i}@example.test"]);
@@ -114,7 +123,7 @@ describe('POST /api/partner-inquiries', function () {
         'no type' => [['type' => null], 'type'],
         'no message' => [['message' => ''], 'message'],
         'message too long' => [['message' => str_repeat('a', 4001)], 'message'],
-        'unknown locale' => [['locale' => 'de'], 'locale'],
+        'unknown locale' => [['locale' => 'xx'], 'locale'],
     ]);
 
     it('accepts values exactly at the limits', function () {

@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Enums\PartnerInquiryType;
+use App\Support\WebsiteLocale;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
@@ -42,7 +43,7 @@ class StorePartnerInquiryRequest extends FormRequest
             'type' => ['required', 'string', Rule::enum(PartnerInquiryType::class)],
             'message' => ['required', 'string', 'max:4000'],
             'website' => ['nullable'],
-            'locale' => ['nullable', 'string', Rule::in(['sl', 'en'])],
+            'locale' => ['nullable', 'string', Rule::in(WebsiteLocale::ALL)],
         ];
     }
 }

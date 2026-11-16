@@ -282,6 +282,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 6. **M6-W »Želje«** — merged 2026-10-27: server W01 + W02 server part (#417), app W04 / W05 (#416), one QA round done (#417 / #416 fixes on the same PRs). Reaches users with the next daily deploy + OTA. **Next:** David creates the six store products (§1b.9); M6-W03 item media + designs: app #652 + server #655 merged 2026-11-03 (one QA round, fixes on the PR) — reaches users with the next production deploy (David's bed gets its content ~10–20 min after it, automatically); device check of the child catalogue (designs), treat chip, parent list, push, redeem after reopening »Želje«, and of a bought bed's content.
 
 ## 6. Session log
+### 2026-11-17 (cloud, backend) — partner inquiries accept all 15 website locales (`fix/partner-inquiry-all-locales`)
+- FormRequest `Rule::in(WebsiteLocale::ALL)`, CHECK widened by migration; website follow-up: `apiLocale` in pet-prep-website `src/lib/partnerInquiry.ts` sends the real locale once this is deployed.
+
 ### 2026-11-16 (cloud, backend) — breed quiz API (M6-S06 backend, `feat/M6-S06-quiz-stats-api`, David »Da, anonimno«)
 - `POST /api/summary-leads` also accepts `source: breed_quiz` (CHECK widened by migration). New anonymous counter `POST /api/breed-quiz/events` (public, 60 / hour per IP, honeypot `website` → 204, `204` on success) → table `breed_quiz_stats` (UTC day · event · breed · rank NULL for clicks · locale · count; UNIQUE NULLS NOT DISTINCT, atomic upsert); read-only superadmin page `/admin/breed-quiz-stats`. No IP / cookie stored. Contract for the website agent: ARCHITECTURE §3 + BREED_QUIZ_SPEC §8. **Next:** website part of M6-S06 (quiz + hub page) codes against that contract; no David steps. Reaches production with the next daily deploy (migration runs then).
 ### 2026-11-16 (cloud, docs) — all-languages rule, quiz decisions, M6-S07 merged
