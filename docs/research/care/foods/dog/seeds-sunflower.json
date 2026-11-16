@@ -9,7 +9,8 @@
     "nl": "Zonnebloempitten",
     "pl": "Nasiona słonecznika",
     "cs": "Slunečnicová semínka",
-    "hr": "Sjemenke suncokreta"
+    "hr": "Sjemenke suncokreta",
+    "sv": "Solrosfrön"
   },
   "question": {
     "en": "Can dogs eat sunflower seeds?",
@@ -19,7 +20,8 @@
     "nl": "Mogen honden zonnebloempitten eten?",
     "pl": "Czy psy mogą jeść nasiona słonecznika?",
     "cs": "Mohou psi jíst slunečnicová semínka?",
-    "hr": "Smiju li psi jesti sjemenke suncokreta?"
+    "hr": "Smiju li psi jesti sjemenke suncokreta?",
+    "sv": "Får hundar äta solrosfrön?"
   },
   "url_slug": {
     "en": "sunflower-seeds",
@@ -29,7 +31,8 @@
     "nl": "zonnebloempitten",
     "pl": "nasiona-slonecznika",
     "cs": "slunecnicova-seminka",
-    "hr": "sjemenke-suncokreta"
+    "hr": "sjemenke-suncokreta",
+    "sv": "solrosfron"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "nl": "Ja, af en toe als tussendoortje, mits ze gepeld en ongezouten zijn. Geef alleen gewone rauwe of geroosterde zonnebloempitten, nooit de doppen, die een verstikkingsgevaar zijn en niet te verteren zijn. Te veel pitten kunnen de maag van je hond van streek maken.",
     "pl": "Tak, jako przekąska od czasu do czasu, jeśli są łuskane i niesolone. Dawaj tylko nasiona słonecznika bez dodatków, surowe lub prażone, i nigdy łusek, które grożą zadławieniem i nie nadają się do strawienia. Zbyt dużo nasion może rozstroić psu żołądek.",
     "cs": "Ano, jako občasná svačinka, pokud jsou loupaná a nesolená. Dávejte jen obyčejná syrová nebo pražená slunečnicová semínka, nikdy ne slupky, které představují riziko udušení a nedají se strávit. Příliš mnoho semínek může psovi podráždit žaludek.",
-    "hr": "Da, kao povremena grickalica, ako su oljuštene i neslane. Daj samo obične sirove ili pržene sjemenke, nikad ljuske, koje mogu izazvati gušenje i ne mogu se probaviti. Previše sjemenki može psu pokvariti želudac."
+    "hr": "Da, kao povremena grickalica, ako su oljuštene i neslane. Daj samo obične sirove ili pržene sjemenke, nikad ljuske, koje mogu izazvati gušenje i ne mogu se probaviti. Previše sjemenki može psu pokvariti želudac.",
+    "sv": "Ja, som ett mellanmål då och då, om de är skalade och osaltade. Ge bara okryddade råa eller rostade solrosfrön, aldrig skalen – de kan orsaka kvävning och går inte att smälta. För många frön kan ge hunden en orolig mage."
   },
   "why": {
     "en": "The husks are extremely hard, can't be broken down during digestion and can get stuck in the gut, causing a blockage. The salt in packaged seeds is harmful to dogs. Sunflower seeds are also high in fat, and too many can bring on vomiting, lethargy, a decreased appetite or other stomach upset.",
@@ -50,7 +54,8 @@
     "nl": "De doppen zijn extreem hard, kunnen tijdens de spijsvertering niet worden afgebroken en kunnen in de darmen blijven steken en een verstopping veroorzaken. Het zout in verpakte pitten is schadelijk voor honden. Zonnebloempitten bevatten ook veel vet, en te veel pitten kunnen braken, lusteloosheid, minder eetlust of andere maagklachten veroorzaken.",
     "pl": "Łuski są wyjątkowo twarde, nie rozkładają się w trakcie trawienia i mogą utknąć w jelitach, powodując niedrożność. Sól w paczkowanych nasionach szkodzi psom. Nasiona słonecznika mają też dużo tłuszczu, a zbyt duża ich ilość może wywołać wymioty, ospałość, spadek apetytu lub inny rozstrój żołądka.",
     "cs": "Slupky jsou mimořádně tvrdé, při trávení se nerozloží a mohou uvíznout ve střevě a způsobit jeho ucpání. Sůl v balených semínkách psům škodí. Slunečnicová semínka mají také hodně tuku a příliš mnoho z nich může vyvolat zvracení, malátnost, sníženou chuť k jídlu nebo jiné potíže se žaludkem.",
-    "hr": "Ljuske su iznimno tvrde, ne mogu se razgraditi u probavi i mogu zapeti u crijevima te izazvati začepljenje. Sol u pakiranim sjemenkama štetna je za pse. Sjemenke suncokreta bogate su i mastima, a previše ih može izazvati povraćanje, malaksalost, smanjen apetit ili druge želučane tegobe."
+    "hr": "Ljuske su iznimno tvrde, ne mogu se razgraditi u probavi i mogu zapeti u crijevima te izazvati začepljenje. Sol u pakiranim sjemenkama štetna je za pse. Sjemenke suncokreta bogate su i mastima, a previše ih može izazvati povraćanje, malaksalost, smanjen apetit ili druge želučane tegobe.",
+    "sv": "Skalen är extremt hårda, bryts inte ned i matsmältningen och kan fastna i tarmen och orsaka tarmstopp. Saltet i förpackade frön är skadligt för hundar. Solrosfrön innehåller också mycket fett, och för många frön kan ge kräkningar, slöhet, minskad aptit eller andra magbesvär."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "nl": "Geef alleen gepelde, ongezouten pitten en overleg met je dierenarts voordat je zonnebloempitten aan het voer van je hond toevoegt.",
     "pl": "Dawaj tylko łuskane, niesolone nasiona i porozmawiaj z weterynarzem, zanim dodasz nasiona słonecznika do diety psa.",
     "cs": "Dávejte jen loupaná nesolená semínka a než slunečnicová semínka zařadíte do psího jídelníčku, poraďte se s veterinářem.",
-    "hr": "Daj samo oljuštene, neslane sjemenke, a prije nego što ih psu uvedeš u prehranu, porazgovaraj s veterinarom."
+    "hr": "Daj samo oljuštene, neslane sjemenke, a prije nego što ih psu uvedeš u prehranu, porazgovaraj s veterinarom.",
+    "sv": "Ge bara skalade, osaltade frön och prata med veterinären innan du lägger till solrosfrön i hundens kost."
   },
   "serving": {
     "en": "Shelled, plain (unsalted) raw or toasted seeds, now and then in moderate amounts.",
@@ -71,7 +77,8 @@
     "nl": "Gepelde, ongezouten rauwe of geroosterde pitten, af en toe in een matige hoeveelheid.",
     "pl": "Łuskane, bez dodatków (niesolone), surowe lub prażone, od czasu do czasu w umiarkowanej ilości.",
     "cs": "Loupaná, obyčejná (nesolená) syrová nebo pražená semínka, občas a ve střídmém množství.",
-    "hr": "Oljuštene, obične (neslane) sirove ili pržene sjemenke, povremeno i u umjerenim količinama."
+    "hr": "Oljuštene, obične (neslane) sirove ili pržene sjemenke, povremeno i u umjerenim količinama.",
+    "sv": "Skalade, osaltade och okryddade, råa eller rostade frön, då och då och i måttliga mängder."
   },
   "child": {
     "en": "Dogs can nibble a few plain sunflower seeds without shells, but never the salty ones from a snack bag.",
@@ -81,7 +88,8 @@
     "nl": "Honden mogen een paar gewone zonnebloempitten zonder dop knabbelen, maar nooit de zoute uit een zakje.",
     "pl": "Pies może schrupać kilka nasion słonecznika bez dodatków i bez łusek, ale nigdy tych słonych z paczki przekąsek.",
     "cs": "Psi mohou ochutnat pár obyčejných slunečnicových semínek bez slupek, ale nikdy ne ta slaná ze sáčku s pochutinami.",
-    "hr": "Psi smiju grickati nekoliko običnih sjemenki suncokreta bez ljuske, ali nikad slane iz vrećice s grickalicama."
+    "hr": "Psi smiju grickati nekoliko običnih sjemenki suncokreta bez ljuske, ali nikad slane iz vrećice s grickalicama.",
+    "sv": "Hundar kan få knapra på några osaltade solrosfrön utan skal, men aldrig de salta från en snackspåse."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "nl": "Mogen honden de doppen van zonnebloempitten eten?",
         "pl": "Czy psy mogą jeść łuski nasion słonecznika?",
         "cs": "Mohou psi jíst slupky ze slunečnicových semínek?",
-        "hr": "Smiju li psi jesti ljuske sjemenki suncokreta?"
+        "hr": "Smiju li psi jesti ljuske sjemenki suncokreta?",
+        "sv": "Får hundar äta skalen från solrosfrön?"
       },
       "a": {
         "en": "No. The shells are extremely hard, can't be digested, are a serious choking hazard and can cause a blockage in the gut.",
@@ -103,7 +112,8 @@
         "nl": "Nee. De doppen zijn extreem hard, kunnen niet worden verteerd, zijn een ernstig verstikkingsgevaar en kunnen een verstopping in de darmen veroorzaken.",
         "pl": "Nie. Łuski są wyjątkowo twarde, nie nadają się do strawienia, stwarzają poważne ryzyko zadławienia i mogą spowodować niedrożność jelit.",
         "cs": "Ne. Slupky jsou mimořádně tvrdé, nedají se strávit, představují vážné riziko udušení a mohou způsobit ucpání střeva.",
-        "hr": "Ne. Ljuske su iznimno tvrde, ne mogu se probaviti, predstavljaju ozbiljnu opasnost od gušenja i mogu izazvati začepljenje crijeva."
+        "hr": "Ne. Ljuske su iznimno tvrde, ne mogu se probaviti, predstavljaju ozbiljnu opasnost od gušenja i mogu izazvati začepljenje crijeva.",
+        "sv": "Nej. Skalen är extremt hårda och går inte att smälta. De är en allvarlig kvävningsrisk och kan orsaka tarmstopp."
       }
     }
   ],
@@ -198,6 +208,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fc36ff8060510c5a2e3eeddcf1b45b4f08f010561744cce689ea43096f4d010d"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-16",
+      "verified_hash": "8e23412c27cc3b2a0bb7fbcf8b380521f8b939558eb76cb6860b6e21246031ae"
     }
   }
 }
