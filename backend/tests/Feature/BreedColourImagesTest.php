@@ -45,6 +45,7 @@ it('generated colour-image config matches the committed breed registry export', 
 });
 
 it('GET /api/breeds sends image_url for colours with a photo and null otherwise', function () {
+    seedBreedConfigs();
     config([
         'media.breed_portraits.public_base_url' => 'https://example.test/animals',
         'breed_colour_images.french_bulldog' => ['brindle' => 'dogs/french-bulldog--brindle.webp'],
