@@ -101808,6 +101808,21 @@
       "checked": "2026-11-11"
     },
     {
+      "country": "CW",
+      "kind": "clinic",
+      "name": "VetDoest (Veterinary Practice Doest)",
+      "city": "Julianadorp",
+      "region": "Curaçao",
+      "address": "St. Michielsweg 41, Julianadorp",
+      "phone": "+599 9 515 1776",
+      "emergency_24h": false,
+      "duty": "Front desk Mon-Fri 9:00-14:00, Sat 9:00-13:00, closed Sunday. By appointment only; house visits Tuesdays and Fridays. Emergency number +599 9 565 1776.",
+      "duty_i18n": null,
+      "url": "https://www.vetdoest.com/",
+      "source_url": "https://www.vetdoest.com/hours",
+      "checked": "2026-11-16"
+    },
+    {
       "country": "CY",
       "kind": "clinic",
       "name": "D&N Vets (Dimitriou)",
