@@ -53,6 +53,7 @@ class DevicePushToken extends Model
         'platform',
         'app_version',
         'locale',
+        'hour12',
         'last_seen_at',
         'followed_at',
         'disabled_at',
@@ -66,6 +67,8 @@ class DevicePushToken extends Model
             'last_seen_at' => 'datetime',
             'followed_at' => 'datetime',
             'disabled_at' => 'datetime',
+            // David 2026-11-16: the phone's own 12 h clock (null = unknown → 24 h).
+            'hour12' => 'boolean',
         ];
     }
 

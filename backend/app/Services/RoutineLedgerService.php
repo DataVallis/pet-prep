@@ -1008,9 +1008,12 @@ class RoutineLedgerService
 
         $inputs = [];
         foreach ($pets as $pet) {
-            // Same rule as Pet::quietHours(): no row → QuietHours::DEFAULTS; the
-            // family's windows read on this pet's clock (David 2026-11-09).
-            $q = $quiet->get($pet->family_id);
+            // Same rule as Pet::quietHours(): the pet's own schedule (David
+            // 2026-11-16), else the family row, else QuietHours::DEFAULTS —
+            // read on this pet's clock (David 2026-11-09). Batch-loaded family
+            // rows; a pet's own hours come with the pet row.
+            $own = $pet->ownQuietHoursValues();
+            $q = $own !== null ? QuietHours::forPet($pet, $own) : $quiet->get($pet->family_id);
             if ($q === null) {
                 $q = QuietHours::defaultFor($pet->family);
             } elseif ($pet->family !== null) {

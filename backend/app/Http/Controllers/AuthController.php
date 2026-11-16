@@ -244,6 +244,13 @@ class AuthController extends Controller
             'awaiting_contract' => $awaiting,
             // M5-05 (QA #375 B1): may the app queue / send error reports (superadmin switch, default off).
             'app_error_reports' => $appErrorReports,
+            /**
+             * 12 / 24 h clock choice (David 2026-11-16): `auto` = follow the phone (default),
+             * `24h` / `12h` = the person's override. PUT /api/user/time-format.
+             *
+             * @var 'auto'|'24h'|'12h'
+             */
+            'time_format' => $user->timeFormat()->value,
         ], 200);
     }
 

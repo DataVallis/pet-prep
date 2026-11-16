@@ -21,6 +21,7 @@ use App\Services\Media\PetMediaService;
 use App\Services\Media\PreparationPayload;
 use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
+use App\Services\PetQuietHoursService;
 use App\Services\PetSleepService;
 use App\Services\PlayPayload;
 use App\Services\Results\WaterStatus;
@@ -226,7 +227,11 @@ class ChildPetStateResource extends JsonResource
             ],
             'timezone' => $tz,
             'server_time' => $iso($now),
-            // M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+            // David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+            // on the pet's clock, and whether they are the family's (`follows_family`).
+            'quiet_hours' => PetQuietHoursService::payloadFor($pet),
+            'quiet_hours_follow_family' => ! $pet->hasOwnQuietHours(),
+            // M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
             // wakes — play and school are off while asleep ({@see SleepPayload}).
             'sleep' => SleepPayload::for($pet, $now)->toArray(),
             'feeding' => [

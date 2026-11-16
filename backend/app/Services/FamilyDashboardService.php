@@ -276,6 +276,19 @@ class FamilyDashboardService
                      * @var bool
                      */
                     'timezone_follows_family' => ! $pet->hasOwnTimezone(),
+                    /**
+                     * The pet's effective quiet hours (David 2026-11-16): its own schedule, else the
+                     * family's — "HH:MM" | null, read on the pet's clock (`timezone`).
+                     *
+                     * @var array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool, follows_family: bool}
+                     */
+                    'quiet_hours' => PetQuietHoursService::payloadFor($pet),
+                    /**
+                     * True when the pet follows the family's quiet hours (»kot družina«).
+                     *
+                     * @var bool
+                     */
+                    'quiet_hours_follow_family' => ! $pet->hasOwnQuietHours(),
                     'breed_type' => $pet->breed_type->value,
                     // M5-R06-01: dog | cat.
                     'species' => $pet->speciesValue()->value,
