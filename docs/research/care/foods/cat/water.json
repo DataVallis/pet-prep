@@ -9,7 +9,8 @@
     "nl": "Water",
     "pl": "Woda",
     "cs": "Voda",
-    "hr": "Voda"
+    "hr": "Voda",
+    "sv": "Vatten"
   },
   "question": {
     "en": "What should cats drink?",
@@ -19,7 +20,8 @@
     "nl": "Wat moeten katten drinken?",
     "pl": "Co powinny pić koty?",
     "cs": "Co by měly kočky pít?",
-    "hr": "Što bi mačke trebale piti?"
+    "hr": "Što bi mačke trebale piti?",
+    "sv": "Vad ska katter dricka?"
   },
   "url_slug": {
     "en": "water",
@@ -29,7 +31,8 @@
     "nl": "water",
     "pl": "woda",
     "cs": "voda",
-    "hr": "voda"
+    "hr": "voda",
+    "sv": "vatten"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "nl": "Water. Gewoon vers water is de beste drank voor volwassen katten, en je kat moet de hele dag bij vers water kunnen en zoveel kunnen drinken als ze wil. Katten hebben niets anders te drinken nodig.",
     "pl": "Wodę. Czysta, świeża woda to najlepszy napój dla dorosłych kotów; twój kot powinien mieć do niej dostęp przez cały czas i móc pić tyle, ile chce. Koty nie potrzebują do picia niczego innego.",
     "cs": "Vodu. Obyčejná čerstvá voda je pro dospělé kočky nejlepším nápojem. Má být stále k dispozici a kočka by se z ní měla moct napít, kolik chce. Kočky k pití nepotřebují nic jiného.",
-    "hr": "Voda. Obična svježa voda najbolje je piće za odrasle mačke; mačka bi uvijek trebala imati pristup vodi i moći piti koliko želi. Mačkama ne treba nikakvo drugo piće."
+    "hr": "Voda. Obična svježa voda najbolje je piće za odrasle mačke; mačka bi uvijek trebala imati pristup vodi i moći piti koliko želi. Mačkama ne treba nikakvo drugo piće.",
+    "sv": "Vatten. Rent, färskt vatten är den bästa drycken för vuxna katter, och katten ska alltid ha tillgång till det och kunna dricka så mycket den vill. Något annat behöver katter inte dricka."
   },
   "why": {
     "en": "Water helps keep a cat's kidneys working and its organs in good order, and helping cats avoid becoming dehydrated is a very important part of keeping them healthy. Cats Protection and PDSA both say water is the only drink a cat needs.",
@@ -50,7 +54,8 @@
     "nl": "Water helpt de nieren van een kat goed te blijven werken en houdt de organen gezond. Voorkomen dat een kat uitdroogt is een heel belangrijk onderdeel van haar gezond houden. Cats Protection en PDSA zeggen allebei dat water de enige drank is die een kat nodig heeft.",
     "pl": "Woda pomaga nerkom kota prawidłowo pracować, a pozostałym narządom funkcjonować, a zapobieganie odwodnieniu to bardzo ważna część dbania o zdrowie kota. Cats Protection i PDSA podają, że woda to jedyny napój, którego kot potrzebuje.",
     "cs": "Voda pomáhá ledvinám i dalším orgánům kočky dobře fungovat a předcházet dehydrataci je velmi důležitou součástí péče o její zdraví. Cats Protection i PDSA uvádějí, že voda je jediný nápoj, který kočka potřebuje.",
-    "hr": "Voda pomaže bubrezima mačke da rade i održava njezine organe zdravima, a sprječavanje dehidracije vrlo je važan dio brige za mačje zdravlje. I Cats Protection i PDSA kažu da je voda jedino piće koje mački treba."
+    "hr": "Voda pomaže bubrezima mačke da rade i održava njezine organe zdravima, a sprječavanje dehidracije vrlo je važan dio brige za mačje zdravlje. I Cats Protection i PDSA kažu da je voda jedino piće koje mački treba.",
+    "sv": "Vatten hjälper njurarna att fungera och håller kattens organ i gott skick. Att förebygga uttorkning är en mycket viktig del av att hålla katter friska. Cats Protection och PDSA skriver båda att vatten är den enda dryck en katt behöver."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "nl": "Maak je je zorgen dat je kat uitgedroogd is, bijvoorbeeld omdat ze loom of zwak lijkt, weinig eetlust heeft of droog tandvlees heeft, neem dan snel contact op met je dierenarts.",
     "pl": "Jeśli martwisz się, że twój kot jest odwodniony, na przykład wydaje się ospały lub osłabiony, ma słaby apetyt albo suche dziąsła, skontaktuj się z weterynarzem bez zwłoki.",
     "cs": "Pokud se obáváte, že je vaše kočka dehydratovaná, například působí malátně nebo slabě, má sníženou chuť k jídlu nebo suché dásně, neprodleně se obraťte na veterináře.",
-    "hr": "Ako sumnjaš da je mačka dehidrirana, na primjer djeluje bezvoljno ili malaksalo, slabo jede ili ima suhe desni, bez odlaganja se obrati veterinaru."
+    "hr": "Ako sumnjaš da je mačka dehidrirana, na primjer djeluje bezvoljno ili malaksalo, slabo jede ili ima suhe desni, bez odlaganja se obrati veterinaru.",
+    "sv": "Om du är orolig för att katten är uttorkad, till exempel om den verkar slö eller svag, har dålig aptit eller torrt tandkött, kontakta veterinären snabbt."
   },
   "serving": {
     "en": "Keep fresh water where your cat can easily reach it and replace it at least once a day. Several bowls around the home, cleaned regularly and placed away from the food bowl, help, and some cats drink more from a water fountain.",
@@ -71,7 +77,8 @@
     "nl": "Zorg dat er vers water staat waar je kat er makkelijk bij kan komen, en ververs het minstens één keer per dag. Meerdere bakjes door het huis, regelmatig schoongemaakt en op afstand van het voerbakje, helpen, en sommige katten drinken meer uit een drinkfontein.",
     "pl": "Trzymaj świeżą wodę w miejscu, do którego kot łatwo sięgnie, i wymieniaj ją co najmniej raz dziennie. Pomaga rozstawienie po domu kilku misek, regularnie myte i ustawione z dala od miski z jedzeniem, a niektóre koty chętniej piją z fontanny na wodę.",
     "cs": "Čerstvou vodu mějte na místě, kam kočka snadno dosáhne, a vyměňujte ji alespoň jednou denně. Pomáhá i několik misek rozmístěných po domácnosti, které se pravidelně myjí a stojí dál od misky s krmivem. Některé kočky pijí víc z pítka s fontánkou.",
-    "hr": "Svježu vodu drži na mjestu do kojeg mačka lako dolazi i mijenjaj je barem jednom dnevno. Pomaže ako je po kući postavljeno više redovito opranih zdjelica, podalje od zdjelice s hranom, a neke mačke više piju s fontane."
+    "hr": "Svježu vodu drži na mjestu do kojeg mačka lako dolazi i mijenjaj je barem jednom dnevno. Pomaže ako je po kući postavljeno više redovito opranih zdjelica, podalje od zdjelice s hranom, a neke mačke više piju s fontane.",
+    "sv": "Ha färskt vatten där katten lätt kommer åt det och byt det minst en gång om dagen. Flera vattenskålar runt om i hemmet hjälper, om de rengörs regelbundet och står en bit från matskålen. Vissa katter dricker också mer ur en vattenfontän."
   },
   "child": {
     "en": "Fresh water is the best drink for a cat! You can help by checking that kitty's water bowl is clean and full.",
@@ -81,7 +88,8 @@
     "nl": "Vers water is de beste drank voor een kat! Jij kunt helpen door te kijken of het waterbakje van je kat schoon en vol is.",
     "pl": "Świeża woda to najlepszy napój dla kota! Możesz pomóc, sprawdzając, czy miska kotka jest czysta i pełna.",
     "cs": "Čerstvá voda je pro kočku nejlepší nápoj! Můžeš pomoct tím, že zkontroluješ, jestli je kočičí miska s vodou čistá a plná.",
-    "hr": "Svježa voda najbolje je piće za mačku! Možeš pomoći tako da provjeriš je li mačja zdjelica s vodom čista i puna."
+    "hr": "Svježa voda najbolje je piće za mačku! Možeš pomoći tako da provjeriš je li mačja zdjelica s vodom čista i puna.",
+    "sv": "Färskt vatten är den bästa drycken för en katt! Du kan hjälpa till genom att kolla att kattens vattenskål är ren och full."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "nl": "Hoe kan ik mijn kat helpen meer te drinken?",
         "pl": "Jak mogę zachęcić kota do picia większej ilości wody?",
         "cs": "Jak pomoci kočce, aby pila víc?",
-        "hr": "Kako mogu pomoći mački da pije više?"
+        "hr": "Kako mogu pomoći mački da pije više?",
+        "sv": "Hur kan jag få min katt att dricka mer?"
       },
       "a": {
         "en": "Put several clean water bowls around the home, away from the food bowl. Some cats drink more from a fountain, and wet food or water added to food also increases how much water they take in.",
@@ -103,7 +112,8 @@
         "nl": "Zet meerdere schone waterbakjes door het huis, uit de buurt van het voerbakje. Sommige katten drinken meer uit een drinkfontein, en ook natvoer, of water door het voer, zorgt dat ze meer vocht binnenkrijgen.",
         "pl": "Postaw kilka czystych misek z wodą w różnych miejscach domu, z dala od miski z jedzeniem. Niektóre koty piją więcej z fontanny na wodę, a kot przyjmuje więcej wody także z mokrą karmą albo gdy dodasz wodę do jedzenia.",
         "cs": "Rozmístěte po domácnosti několik čistých misek s vodou, dál od misky s krmivem. Některé kočky pijí víc z pítka s fontánkou a příjem vody zvyšuje také vlhké krmivo nebo voda přidaná ke krmivu.",
-        "hr": "Postavi nekoliko čistih zdjelica s vodom po kući, podalje od zdjelice s hranom. Neke mačke više piju s fontane, a mokra hrana ili voda dodana hrani također povećavaju unos vode."
+        "hr": "Postavi nekoliko čistih zdjelica s vodom po kući, podalje od zdjelice s hranom. Neke mačke više piju s fontane, a mokra hrana ili voda dodana hrani također povećavaju unos vode.",
+        "sv": "Sätt ut flera rena vattenskålar runt om i hemmet, en bit från matskålen. Vissa katter dricker mer ur en vattenfontän, och blötmat eller vatten i maten ökar också hur mycket vatten de får i sig."
       }
     },
     {
@@ -115,7 +125,8 @@
         "nl": "Hebben katten ook melk nodig?",
         "pl": "Czy koty potrzebują też mleka?",
         "cs": "Potřebují kočky i mléko?",
-        "hr": "Treba li mačkama i mlijeko?"
+        "hr": "Treba li mačkama i mlijeko?",
+        "sv": "Behöver katter mjölk också?"
       },
       "a": {
         "en": "No. Cats Protection says the best thing for adult cats to drink is water and that they don't need anything else to stay healthy.",
@@ -125,7 +136,8 @@
         "nl": "Nee. Cats Protection zegt dat water het beste is wat volwassen katten kunnen drinken en dat ze niets anders nodig hebben om gezond te blijven.",
         "pl": "Nie. Cats Protection podaje, że najlepszym napojem dla dorosłych kotów jest woda i że nie potrzebują niczego innego, by zachować zdrowie.",
         "cs": "Ne. Cats Protection uvádí, že nejlepším nápojem pro dospělé kočky je voda a že k udržení zdraví nepotřebují nic jiného.",
-        "hr": "Ne. Cats Protection kaže da je za odrasle mačke najbolje piće voda i da im ne treba ništa drugo da bi ostale zdrave."
+        "hr": "Ne. Cats Protection kaže da je za odrasle mačke najbolje piće voda i da im ne treba ništa drugo da bi ostale zdrave.",
+        "sv": "Nej. Cats Protection skriver att det bästa för vuxna katter att dricka är vatten och att de inte behöver något annat för att hålla sig friska."
       }
     }
   ],
@@ -240,6 +252,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "123fdf3bc8480c430e13ae2c6d98e040574c52d9e1f77adc29cfb4a294ee8d22"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-16",
+      "verified_hash": "1c1e6664cae9b287907e5955652692707d3e309c6a36974952c3b66a55004ae2"
     }
   }
 }

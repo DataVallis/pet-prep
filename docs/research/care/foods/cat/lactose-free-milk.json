@@ -9,7 +9,8 @@
     "nl": "Lactosevrije melk en kattenmelk",
     "pl": "Mleko bez laktozy i mleko dla kotów",
     "cs": "Bezlaktózové mléko a mléko pro kočky",
-    "hr": "Mlijeko bez laktoze i mlijeko za mačke"
+    "hr": "Mlijeko bez laktoze i mlijeko za mačke",
+    "sv": "Laktosfri mjölk och kattmjölk"
   },
   "question": {
     "en": "Can cats drink lactose-free milk?",
@@ -19,7 +20,8 @@
     "nl": "Mogen katten lactosevrije melk drinken?",
     "pl": "Czy koty mogą pić mleko bez laktozy?",
     "cs": "Mohou kočky pít bezlaktózové mléko?",
-    "hr": "Smiju li mačke piti mlijeko bez laktoze?"
+    "hr": "Smiju li mačke piti mlijeko bez laktoze?",
+    "sv": "Får katter dricka laktosfri mjölk?"
   },
   "url_slug": {
     "en": "lactose-free-milk",
@@ -29,7 +31,8 @@
     "nl": "lactosevrije-melk",
     "pl": "mleko-bez-laktozy",
     "cs": "bezlaktozove-mleko",
-    "hr": "mlijeko-bez-laktoze"
+    "hr": "mlijeko-bez-laktoze",
+    "sv": "laktosfri-mjolk"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "nl": "Liever niet. Lactosevrije melk en speciale kattenmelk belasten de maag van een kat minder snel, maar ze bevatten veel calorieën en missen de voedingsstoffen die een kat nodig heeft. Cats Protection adviseert om geen enkele soort melk te geven; water is het enige wat katten nodig hebben.",
     "pl": "Lepiej nie. Mleko bez laktozy i specjalne mleko dla kotów rzadziej rozstrajają kotu żołądek, ale są bardzo kaloryczne i nie dostarczają składników odżywczych, których kot potrzebuje. Cats Protection radzi nie dawać kotom żadnego mleka – wystarczy im woda.",
     "cs": "Raději ne. Bezlaktózové mléko a speciální mléko pro kočky způsobují žaludeční potíže méně často, ale obsahují hodně kalorií a chybí v nich živiny, které kočka potřebuje. Cats Protection radí vyhýbat se jakémukoli mléku; kočky potřebují jen vodu.",
-    "hr": "Bolje ne. Mlijeko bez laktoze i posebno mlijeko za mačke rjeđe će mački pokvariti želudac, ali sadrže mnogo kalorija i ne sadrže hranjive tvari koje mački trebaju. Cats Protection savjetuje da se izbjegava svaka vrsta mlijeka; mačkama treba samo voda."
+    "hr": "Bolje ne. Mlijeko bez laktoze i posebno mlijeko za mačke rjeđe će mački pokvariti želudac, ali sadrže mnogo kalorija i ne sadrže hranjive tvari koje mački trebaju. Cats Protection savjetuje da se izbjegava svaka vrsta mlijeka; mačkama treba samo voda.",
+    "sv": "Helst inte. Laktosfri mjölk och särskild kattmjölk ger mer sällan orolig mage hos katter, men de innehåller många kalorier och saknar de näringsämnen som en katt behöver. Cats Protection rekommenderar att du undviker alla sorters mjölk. Vatten är allt katter behöver."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. Cats Protection says lactose-free milk and cat milk don't contain lactose, but they have a lot of calories that could make a cat put on weight, and it is best to avoid giving cats any type of milk. PDSA says cat milk could be an occasional treat, but its fat is often as high as other milk and its calories must be counted in the daily food allowance.",
@@ -50,7 +54,8 @@
     "nl": "De bronnen zijn het niet met elkaar eens, dus we hanteren het strengere niveau. Cats Protection zegt dat lactosevrije melk en kattenmelk geen lactose bevatten, maar wel veel calorieën, waardoor een kat kan aankomen, en dat je een kat het best helemaal geen melk geeft. PDSA zegt dat kattenmelk af en toe een traktatie kan zijn, maar dat het vetgehalte vaak net zo hoog is als bij andere melk en dat de calorieën moeten meetellen bij de dagelijkse hoeveelheid voer.",
     "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. Cats Protection podaje, że mleko bez laktozy i mleko dla kotów nie zawierają laktozy, ale mają dużo kalorii, które mogą sprawić, że kot przytyje, i że najlepiej nie dawać kotom żadnego mleka. PDSA podaje, że mleko dla kotów może być smakołykiem od czasu do czasu, ale zawartość tłuszczu jest w nim często równie wysoka jak w innych mlekach, a jego kalorie trzeba wliczać do dziennej porcji jedzenia.",
     "cs": "Zdroje se různí, proto jsme zvolili přísnější úroveň. Cats Protection uvádí, že bezlaktózové mléko a mléko pro kočky laktózu neobsahují, ale mají hodně kalorií, po kterých může kočka přibrat, a nejlepší je nedávat kočkám žádný druh mléka. PDSA říká, že mléko pro kočky může být občasným pamlskem, ale tuku v něm bývá stejně jako v jiných mlécích a jeho kalorie je třeba započítat do denní dávky krmiva.",
-    "hr": "Izvori se ne slažu, pa se držimo strožeg stajališta. Cats Protection kaže da mlijeko bez laktoze i mlijeko za mačke ne sadrže laktozu, ali imaju mnogo kalorija, zbog kojih bi mačka mogla dobiti na težini, pa je najbolje mačkama ne davati nikakvu vrstu mlijeka. PDSA kaže da bi mlijeko za mačke moglo biti povremena poslastica, ali da je udio masti u njemu često jednako visok kao u drugom mlijeku i da se njegove kalorije moraju uračunati u dnevni obrok."
+    "hr": "Izvori se ne slažu, pa se držimo strožeg stajališta. Cats Protection kaže da mlijeko bez laktoze i mlijeko za mačke ne sadrže laktozu, ali imaju mnogo kalorija, zbog kojih bi mačka mogla dobiti na težini, pa je najbolje mačkama ne davati nikakvu vrstu mlijeka. PDSA kaže da bi mlijeko za mačke moglo biti povremena poslastica, ali da je udio masti u njemu često jednako visok kao u drugom mlijeku i da se njegove kalorije moraju uračunati u dnevni obrok.",
+    "sv": "Källorna är oeniga, så vi använder den strängare nivån. Cats Protection skriver att laktosfri mjölk och kattmjölk inte innehåller laktos, men att de har många kalorier, som kan få katten att gå upp i vikt, och att det är bäst att inte ge katter någon sorts mjölk. PDSA skriver att kattmjölk kan vara en godbit ibland, men att fetthalten ofta är lika hög som i annan mjölk och att kalorierna måste räknas in i den dagliga matransonen."
   },
   "signs": {
     "en": [
@@ -76,6 +81,9 @@
     ],
     "hr": [
       "Debljanje tijekom vremena"
+    ],
+    "sv": [
+      "Viktuppgång över tid"
     ]
   },
   "what_to_do": {
@@ -86,7 +94,8 @@
     "nl": "Geef in plaats daarvan vers water. Geef je een enkele keer kattenmelk als traktatie, houd dan rekening met de extra calorieën, maar geef je kat er niet minder volwaardig voer voor, want dan krijgt je kat misschien te weinig van de belangrijke vitamines en voedingsstoffen binnen.",
     "pl": "Podaj zamiast tego świeżą wodę. Jeśli kiedyś dasz kotu mleko dla kotów jako rzadki smakołyk, pamiętaj o dodatkowych kaloriach, ale nie zmniejszaj przez to porcji pełnowartościowej karmy, bo kot mógłby dostać za mało ważnych witamin i składników odżywczych.",
     "cs": "Nabídněte místo toho čerstvou vodu. Pokud někdy dáte mléko pro kočky jako vzácný pamlsek, pamatujte na kalorie navíc, ale neubírejte kvůli němu z kompletního krmiva, jinak by kočka mohla dostávat méně důležitých vitaminů a živin.",
-    "hr": "Umjesto toga ponudi svježu vodu. Ako ikada daš mlijeko za mačke kao rijetku poslasticu, uračunaj njegove dodatne kalorije, ali zbog njega ne smanjuj količinu potpune hrane koju mačka dobiva, jer bi mačka tada mogla dobiti manje vitalnih vitamina i hranjivih tvari."
+    "hr": "Umjesto toga ponudi svježu vodu. Ako ikada daš mlijeko za mačke kao rijetku poslasticu, uračunaj njegove dodatne kalorije, ali zbog njega ne smanjuj količinu potpune hrane koju mačka dobiva, jer bi mačka tada mogla dobiti manje vitalnih vitamina i hranjivih tvari.",
+    "sv": "Erbjud färskt vatten i stället. Om du någon gång ger kattmjölk som en sällsynt godbit, tänk på de extra kalorierna, men minska inte kattens kompletta mat för den, eftersom katten då kan få i sig mindre av de livsviktiga vitaminerna och näringsämnena."
   },
   "serving": null,
   "child": {
@@ -97,7 +106,8 @@
     "nl": "Zelfs speciale kattenmelk is maar een traktatie. De drank die je kat elke dag gezond houdt, is vers water.",
     "pl": "Nawet specjalne mleko dla kotów to tylko smakołyk. Na co dzień o zdrowie kotka dba świeża woda.",
     "cs": "I speciální mléko pro kočky je jen pamlsek. Čerstvá voda je nápoj, který kočičku udrží každý den zdravou.",
-    "hr": "Čak je i posebno mlijeko za mačke samo poslastica. Piće koje mačku svaki dan održava zdravom jest svježa voda."
+    "hr": "Čak je i posebno mlijeko za mačke samo poslastica. Piće koje mačku svaki dan održava zdravom jest svježa voda.",
+    "sv": "Även särskild kattmjölk är bara en godbit. Drycken som håller katten frisk varje dag är färskt vatten."
   },
   "faq": [
     {
@@ -109,7 +119,8 @@
         "nl": "Is kattenmelk uit de dierenwinkel beter dan koemelk?",
         "pl": "Czy mleko dla kotów ze sklepu zoologicznego jest lepsze niż mleko krowie?",
         "cs": "Je mléko pro kočky z obchodu lepší než kravské?",
-        "hr": "Je li mlijeko za mačke iz trgovine za kućne ljubimce bolje od kravljeg?"
+        "hr": "Je li mlijeko za mačke iz trgovine za kućne ljubimce bolje od kravljeg?",
+        "sv": "Är kattmjölk från djuraffären bättre än komjölk?"
       },
       "a": {
         "en": "It usually has a lot less lactose or none, so it is less likely to make your cat poorly. But its fat content is often just as high as any other milk, and it is not a complete meal.",
@@ -119,7 +130,8 @@
         "nl": "Er zit meestal veel minder lactose in, of helemaal geen, dus de kans is kleiner dat je kat er ziek van wordt. Maar het vetgehalte is vaak net zo hoog als bij andere melk, en het is geen complete voeding.",
         "pl": "Zwykle zawiera dużo mniej laktozy albo wcale jej nie ma, więc jest mniejsze ryzyko, że kot się po nim rozchoruje. Ale zawartość tłuszczu jest często równie wysoka jak w każdym innym mleku, a to nie jest pełnowartościowy posiłek.",
         "cs": "Obvykle obsahuje mnohem méně laktózy nebo žádnou, takže se po něm kočce méně často udělá špatně. Tuku v něm ale bývá často stejně jako v jakémkoli jiném mléce a není to kompletní jídlo.",
-        "hr": "Obično ima mnogo manje laktoze ili je uopće nema, pa je manje vjerojatno da će mački biti loše. No udio masti u njemu često je jednako visok kao u svakom drugom mlijeku, a ono nije potpun obrok."
+        "hr": "Obično ima mnogo manje laktoze ili je uopće nema, pa je manje vjerojatno da će mački biti loše. No udio masti u njemu često je jednako visok kao u svakom drugom mlijeku, a ono nije potpun obrok.",
+        "sv": "Den innehåller oftast mycket mindre laktos eller ingen alls, så den ger mer sällan magbesvär hos katten. Men fetthalten är ofta lika hög som i annan mjölk, och den är ingen komplett måltid."
       }
     }
   ],
@@ -225,6 +237,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0dbd9fd4a3fa06f9fd2c53ec7ef28e8b711ecadaabdeedf1d5c0bebb4cda3a19"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-16",
+      "verified_hash": "1c0bf274326afc0f84ed7ce9ec8196f047ea355dcd2381a28532e156be5f5693"
     }
   }
 }
