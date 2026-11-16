@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `wire_fox_terrier` (viri S871–S878; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S872) |
 | Izvor | FCI št. 169, skupina 3, sekcija 1 (veliki in srednji terierji), Velika Britanija (S871) — ni toy fox terier (`toy_fox_terrier`) in ni kratkodlaki foksterier (FCI 12, ni v aplikaciji) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 113. mesto »Wire Fox Terrier« (S174, zapisano 2026-11-15 v vrstici 116 čakalne vrste) |
-| PR-ji | pet-prep #1203 (pasma, združen `f525649`) · portret pet-prep #PORTRAIT (zagon `breed-portraits.yml` 43783016612, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-wire-fox-terrier` |
+| PR-ji | pet-prep #1203 (pasma, združen `f525649`) · portret pet-prep #1207 (zagon `breed-portraits.yml` 43783016612, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-wire-fox-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
