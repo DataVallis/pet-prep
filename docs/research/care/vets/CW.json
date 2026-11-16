@@ -1,0 +1,49 @@
+{
+  "country": "CW",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "VetDoest - own website",
+      "url": "https://www.vetdoest.com/",
+      "note": "Opened: St. Michielsweg 41, Julianadorp; phone/text +599 9 515 1776; emergency number +599 9 565 1776; info@vetdoest.com; house visits Tue and Fri."
+    },
+    {
+      "name": "VetDoest - opening hours page",
+      "url": "https://www.vetdoest.com/hours",
+      "note": "Opened: front desk Mon-Fri 9:00-14:00, Sat 9:00-13:00, closed Sunday; appointment only; emergency number given, no 24 h wording."
+    },
+    {
+      "name": "CuracaoTodo - Veterinary Practice Doest",
+      "url": "https://curacaotodo.com/en/company/veterinary-practice-doest",
+      "note": "Opened (aggregator, no contact data): confirms house visits, clinic by appointment since 2003, same-day urgent cases, ICU/kennels for animals up to 5 kg."
+    },
+    {
+      "name": "naarcuracao.com - emergency numbers",
+      "url": "https://naarcuracao.com/en/telephone-numbers-and-addresses-curacao",
+      "note": "Opened (aggregator): animal ambulance +599 9 465 1616 (link number differs), Animal Control Abattoirweg 7 Parera +599 9 465 4300. Not vets, no entry."
+    },
+    {
+      "name": "Noonsite - Veterinarian Spanish Water",
+      "url": "https://www.noonsite.com/?p=68214",
+      "note": "Opened: Pieter de Geus, Marinierweg 11a, Spanish Water, +599 9 522 2091, boat visits. Cruising-site listing only; not used."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "VetDoest (Veterinary Practice Doest)",
+      "city": "Julianadorp",
+      "region": "Curaçao",
+      "address": "St. Michielsweg 41, Julianadorp",
+      "phone": "+599 9 515 1776",
+      "emergency_24h": false,
+      "duty": "Front desk Mon-Fri 9:00-14:00, Sat 9:00-13:00, closed Sunday. By appointment only; house visits Tuesdays and Fridays. Emergency number +599 9 565 1776.",
+      "small_animals": true,
+      "url": "https://www.vetdoest.com/",
+      "source_url": "https://www.vetdoest.com/hours",
+      "note": "Own site. Emergency number published but no 24 h wording, so emergency_24h=false.",
+      "checked": "2026-11-16"
+    }
+  ],
+  "notes": "Only one clinic confirmed from an acceptable source. No Curacao veterinary association, Veterinary Service (LVV) contact page or duty rota found. Unreachable/blocked: facebook.com pages (Claus Clinic, Vlimmen/De Geus, VetDoest; robots), animalscaribbean.com (robots), cybo.com (error), licg.nl PDF (error), curacao.com pet page (provenance), vetdrvinck.com (Bluehost account suspended). Not covered: Centro Veterinario Dr. E.G. Vinck, Klinika Veterinaria Parera, Claus Clinic, Vlimmen Veterinary Services (only seen via search results/Facebook). No 24-h clinics and no animal poison line found."
+}
