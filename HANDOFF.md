@@ -281,6 +281,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-16 (cloud, mobile) — collapsible child cards in »Nadzor in družina« (`feat/controls-child-cards-collapsible`, David »preveč informacij … daj gumb čisto na vrh«; JS only → OTA)
+- `FamilyChildrenCard`: »Dodaj otroka« at the top; each child collapsed (basics, non-default settings summary, PIN + sign-out); »Več nastavitev« (`components/parent/Disclosure#ExpandRow`, LayoutAnimation, reduce motion respected) reveals the four settings rows (short line + »Več o tem« `MoreInfo`, adapted-mode consent always visible) and »Izbriši profil«. Layout only, same API calls. Not verified on a device. Debt: none new.
+
 ### 2026-11-16 (cloud, mobile) — wheel time picker, per-pet quiet hours editor, 12 / 24 h setting (`feat/time-format-wheel-picker`, stacked on `feat/per-pet-quiet-hours`; JS only → OTA; merge only after the backend PR)
 - `modules/time/clock.ts` = the one clock formatter (12 / 24 h, `auto` = phone); `familyTime#clockText`, meal chips (`windowLabel`), Challenge trial end / Wishes dates rerouted. `TimeFormatCard` (Nadzor), device + server copy, push registration `hour12`. `TimeWheelPicker` / `WheelColumn` (no native dep) in `QuietHoursForm` (family card, no more text inputs) and `PetQuietHoursRow` (»Kot družina« / »Lastne ure«). Not verified on a device.
 

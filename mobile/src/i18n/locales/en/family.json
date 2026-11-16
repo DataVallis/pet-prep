@@ -250,12 +250,23 @@
   "children": {
     "title": "Children",
     "addChild": "Add a child",
+    "moreSettings": "More settings",
+    "moreSettingsFor": "More settings for {{name}}",
+    "moreInfo": "More about this",
+    "moreInfoFor": "More about: {{setting}}",
+    "summary": {
+      "adapted": "Adapted mode",
+      "easyGestures": "Easier gestures",
+      "noGameFeedback": "Game sounds off",
+      "picture": "Display: picture"
+    },
     "noPet": "No pet yet",
     "awaitingContract": "waiting for the contract to be signed",
     "gameOver": "game over",
     "legacyEmail": "old e-mail account",
     "adapted": {
       "label": "Adapted mode",
+      "short": "Wheelchair pushes count instead of steps.",
       "hint": "Wheelchair pushes count instead of steps (1 push = 1 step). Goals and the Care Score stay the same. We don't ask or store why.",
       "on": "Adapted mode is on: the walk counts wheelchair pushes.",
       "off": "Adapted mode is off: the walk counts steps.",
@@ -276,17 +287,20 @@
     },
     "easyGestures": {
       "label": "Easier gestures",
+      "short": "In games your child holds or taps a button instead of swiping.",
       "hint": "Your child holds a finger or taps a button instead of swiping. For children who find swiping hard.",
       "screenReader": "When VoiceOver or TalkBack is on on your child's phone, easier gestures are always on.",
       "error": "The setting wasn't saved. Please try again."
     },
     "gameFeedback": {
       "label": "Game sounds and vibration",
+      "short": "A short sound and gentle vibration for successes in games.",
       "hint": "Short sounds and a gentle vibration for successes in games (never for a miss). Sounds follow the phone's silent mode.",
       "error": "The setting wasn't saved. Please try again."
     },
     "display": {
       "label": "Display",
+      "short": "Picture uses less mobile data.",
       "video": "Video",
       "picture": "Picture",
       "hint": "Picture shows a still of what the pet is doing right now instead of video — the app downloads no videos, so it uses less mobile data. Your child can change this too.",

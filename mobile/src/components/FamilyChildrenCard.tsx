@@ -6,6 +6,13 @@
  * deleting ask for confirmation inline (no native alert). "Dodaj otroka" is
  * always offered (several children per family; backend limit 10).
  * Light parent theme (ADR-007).
+ *
+ * Layout (David 2026-11-16, »preveč informacij«): »Dodaj otroka« sits at the TOP of the
+ * section, above the list and outside every child. Each child is collapsed by default —
+ * avatar, nickname, pet, devices, a one-line summary of non-default settings and the two
+ * sign-in actions; »Več nastavitev« (per child, local UI state, collapsed on every visit)
+ * reveals adapted mode, easier gestures, game sounds, display and, separated at the bottom,
+ * »Izbriši profil«.
  */
 
 import { useState } from 'react';
@@ -19,6 +26,8 @@ import EasyGesturesRow from '@/components/parent/EasyGesturesRow';
 import GameFeedbackRow from '@/components/parent/GameFeedbackRow';
 import MediaDisplayRow from '@/components/parent/MediaDisplayRow';
 import DeletionConfirmForm from '@/components/parent/DeletionConfirmForm';
+import { animateDisclosure, ExpandRow } from '@/components/parent/Disclosure';
+import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { useDeleteChild, useRevokeChildDevices } from '@/hooks/queries/useFamilyMutations';
 import {
   childDeletionImpact,
@@ -30,6 +39,7 @@ import {
 } from '@/modules/account/account';
 import { useBilling } from '@/modules/purchases';
 import {
+  childSettingChanges,
   classifyRevokeError,
   devicesLabel,
   type FamilyChild,
@@ -53,6 +63,7 @@ export const FAMILY_STRINGS = strings('family', 'children', {
     ...(keptPets > 0 ? [t('family:children.keptPets', { count: keptPets })] : []),
   ],
   deleted: (name: string) => t('family:children.deleted', { name }),
+  moreSettingsFor: (name: string) => t('family:children.moreSettingsFor', { name }),
 });
 
 const S = FAMILY_STRINGS;
@@ -79,6 +90,19 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin, onL
   // `paid_challenge_ack_required` forces the warning too (stale billing).
   const billing = useBilling();
   const [paidRequired, setPaidRequired] = useState<number | null>(null);
+  // David 2026-11-16: settings per child behind »Več nastavitev« (UI-only, collapsed on each visit).
+  const [expandedIds, setExpandedIds] = useState<ReadonlySet<number>>(() => new Set());
+  const reduceMotion = useReduceMotion();
+
+  const toggleExpanded = (childId: number) => {
+    animateDisclosure(reduceMotion);
+    setExpandedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(childId)) next.delete(childId);
+      else next.add(childId);
+      return next;
+    });
+  };
 
   const openDelete = (child: FamilyChild) => {
     setResult(null);
@@ -139,6 +163,18 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin, onL
         <Text style={styles.title}>{S.title}</Text>
       </View>
 
+      {/* David 2026-11-16: above the list, never inside a child's card. */}
+      <Pressable
+        style={({ pressed }) => [styles.addButton, pressed && styles.pressed]}
+        onPress={onAddChild}
+        accessibilityRole="button"
+        accessibilityLabel={S.addChild}
+        testID="family-add-child"
+      >
+        <UserPlus color={palette.graphite} size={18} />
+        <Text style={styles.addText}>{S.addChild}</Text>
+      </Pressable>
+
       {deletedNotice && (
         <Text style={styles.result} testID="child-deleted-notice" accessibilityLiveRegion="polite">
           {deletedNotice.text()}
@@ -150,6 +186,8 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin, onL
         const isDeleting = deletingId === child.id;
         const impact = isDeleting ? childDeletionImpact(child, family) : null;
         const isRevoking = revoke.isPending && revoke.variables === child.id;
+        const isExpanded = expandedIds.has(child.id) || isDeleting;
+        const changes = childSettingChanges(child);
         return (
           <View key={child.id} style={styles.childRow} testID={`family-child-${child.id}`}>
             <View style={styles.childHeader}>
@@ -166,25 +204,15 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin, onL
                     {child.login === 'email' ? ` · ${S.legacyEmail}` : ''}
                   </Text>
                 </View>
+                {changes.length > 0 && (
+                  <Text style={styles.summary} numberOfLines={2} testID={`family-child-summary-${child.id}`}>
+                    {changes.map((c) => S.summary[c]).join(' · ')}
+                  </Text>
+                )}
               </View>
             </View>
 
-            {isDeleting && impact ? (
-              <DeletionConfirmForm
-                consequences={S.deleteConsequences(child.name, impact.deletedPets, impact.keptPets)}
-                submitLabel={S.deleteSubmit}
-                pending={removeChild.isPending}
-                error={deleteError?.text() ?? null}
-                onCancel={() => {
-                  setDeletingId(null);
-                  setDeleteError(null);
-                }}
-                paidChallenge={paidRequired === child.id || deletionLosesPurchase(petsDeletedWithChild(child, family), billing.data)}
-                paidPetGroup={paidDeletionGroup(petsDeletedWithChild(child, family), family, billing.data)}
-                onSubmit={(proof, ack) => confirmDelete(child, proof, ack)}
-                testID={`child-delete-form-${child.id}`}
-              />
-            ) : isConfirming ? (
+            {isConfirming ? (
               <View style={styles.confirmBox} testID={`revoke-confirm-${child.id}`}>
                 <Text style={styles.confirmText}>{S.confirmRevoke(child.name)}</Text>
                 <View style={styles.actionsRow}>
@@ -237,51 +265,79 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin, onL
                   <LogOut color={palette.danger} size={15} />
                   <Text style={[styles.actionText, styles.revokeText]}>{S.revokeAll}</Text>
                 </Pressable>
-                <Pressable
-                  style={({ pressed }) => [styles.actionButton, pressed && styles.pressed]}
-                  onPress={() => openDelete(child)}
-                  accessibilityRole="button"
-                  testID={`child-delete-${child.id}`}
-                >
-                  <Trash2 color={palette.danger} size={15} />
-                  <Text style={[styles.actionText, styles.revokeText]}>{S.deleteProfile}</Text>
-                </Pressable>
               </View>
             )}
-
-            {/* M5-T12: parent-only accessibility switch (pushes instead of steps). */}
-            <AdaptedModeRow
-              childId={child.id}
-              childName={child.name}
-              enabled={child.adapted_mode}
-              onLogWalk={onLogWalk && canLogWalk(child, family) ? () => onLogWalk(child) : undefined}
-            />
-            {/* M5-T17: »Lažje kretnje« — hold / button instead of swipes in the child's games. */}
-            <EasyGesturesRow childId={child.id} childName={child.name} enabled={child.easy_gestures} />
-            {/* GAMES_SPEC §7.6: »Zvoki in vibracija v igrah« — sounds + haptics in the child's games (default on). */}
-            <GameFeedbackRow childId={child.id} childName={child.name} enabled={child.game_feedback} />
-            {/* M5-T11: »Prikaz: Video / Slika« of the child's app. */}
-            <MediaDisplayRow childId={child.id} childName={child.name} value={child.media_display} />
 
             {result?.childId === child.id && (
               <Text style={[styles.result, result.isError && styles.resultError]} testID={`revoke-result-${child.id}`}>
                 {result.text()}
               </Text>
             )}
+
+            <ExpandRow
+              label={S.moreSettings}
+              accessibilityLabel={S.moreSettingsFor(child.name)}
+              expanded={isExpanded}
+              onToggle={() => {
+                if (isDeleting) {
+                  setDeletingId(null);
+                  setDeleteError(null);
+                }
+                toggleExpanded(child.id);
+              }}
+              testID={`child-settings-toggle-${child.id}`}
+            />
+
+            {isExpanded && (
+              <View style={styles.settings} testID={`child-settings-${child.id}`}>
+                {/* M5-T12: parent-only accessibility switch (pushes instead of steps). */}
+                <AdaptedModeRow
+                  childId={child.id}
+                  childName={child.name}
+                  enabled={child.adapted_mode}
+                  onLogWalk={onLogWalk && canLogWalk(child, family) ? () => onLogWalk(child) : undefined}
+                />
+                {/* M5-T17: »Lažje kretnje« — hold / button instead of swipes in the child's games. */}
+                <EasyGesturesRow childId={child.id} childName={child.name} enabled={child.easy_gestures} />
+                {/* GAMES_SPEC §7.6: »Zvoki in vibracija v igrah« — sounds + haptics in the child's games (default on). */}
+                <GameFeedbackRow childId={child.id} childName={child.name} enabled={child.game_feedback} />
+                {/* M5-T11: »Prikaz: Video / Slika« of the child's app. */}
+                <MediaDisplayRow childId={child.id} childName={child.name} value={child.media_display} />
+
+                {/* Destructive action last, separated from the settings. */}
+                <View style={styles.dangerZone}>
+                  {isDeleting && impact ? (
+                    <DeletionConfirmForm
+                      consequences={S.deleteConsequences(child.name, impact.deletedPets, impact.keptPets)}
+                      submitLabel={S.deleteSubmit}
+                      pending={removeChild.isPending}
+                      error={deleteError?.text() ?? null}
+                      onCancel={() => {
+                        setDeletingId(null);
+                        setDeleteError(null);
+                      }}
+                      paidChallenge={paidRequired === child.id || deletionLosesPurchase(petsDeletedWithChild(child, family), billing.data)}
+                      paidPetGroup={paidDeletionGroup(petsDeletedWithChild(child, family), family, billing.data)}
+                      onSubmit={(proof, ack) => confirmDelete(child, proof, ack)}
+                      testID={`child-delete-form-${child.id}`}
+                    />
+                  ) : (
+                    <Pressable
+                      style={({ pressed }) => [styles.actionButton, styles.deleteButton, pressed && styles.pressed]}
+                      onPress={() => openDelete(child)}
+                      accessibilityRole="button"
+                      testID={`child-delete-${child.id}`}
+                    >
+                      <Trash2 color={palette.danger} size={15} />
+                      <Text style={[styles.actionText, styles.revokeText]}>{S.deleteProfile}</Text>
+                    </Pressable>
+                  )}
+                </View>
+              </View>
+            )}
           </View>
         );
       })}
-
-      <Pressable
-        style={({ pressed }) => [styles.addButton, pressed && styles.pressed]}
-        onPress={onAddChild}
-        accessibilityRole="button"
-        accessibilityLabel={S.addChild}
-        testID="family-add-child"
-      >
-        <UserPlus color={palette.graphite} size={18} />
-        <Text style={styles.addText}>{S.addChild}</Text>
-      </Pressable>
     </View>
   );
 }
@@ -311,6 +367,10 @@ const styles = StyleSheet.create({
   avatarText: { fontSize: 17, letterSpacing: tightTracking(17), fontFamily: fonts.displayBold, color: palette.mintDeep },
   childName: { fontSize: 16, fontWeight: '700', color: palette.graphite },
   childMeta: { fontSize: 13, color: palette.n600 },
+  summary: { fontSize: 12, fontWeight: '700', color: palette.mintDeep, marginTop: 2 },
+  settings: { gap: 14 },
+  dangerZone: { paddingTop: 12, borderTopWidth: 1, borderTopColor: palette.n100 },
+  deleteButton: { alignSelf: 'flex-start' },
   devicesRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 2 },
   actionsRow: { flexDirection: 'row', gap: 8, flexWrap: 'wrap' },
   actionButton: {

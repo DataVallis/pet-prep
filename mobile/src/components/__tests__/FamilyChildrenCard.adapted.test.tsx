@@ -9,6 +9,7 @@ import FamilyChildrenCard from '@/components/FamilyChildrenCard';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { openChildSettings } from '@/test-utils/childSettings';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -38,10 +39,15 @@ describe('FamilyChildrenCard — adapted mode', () => {
   it('shows the switch off with the "we don\'t ask why" hint, turns it on with only the boolean', async () => {
     updateChildSettings.mockResolvedValue({ child_id: 2, adapted_mode: true });
     renderWithQuery(<FamilyChildrenCard family={family(false)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
 
     const sw = screen.getByTestId('adapted-mode-switch-2');
     expect(sw.props.value).toBe(false);
     expect(screen.getByText('Prilagojen način')).toBeTruthy();
+    // David 2026-11-16: one short line; the long explanation behind »Več o tem«.
+    expect(screen.getByTestId('adapted-mode-short-2').props.children).toBe('Namesto korakov štejejo potiski vozička.');
+    expect(screen.queryByText(/Ne sprašujemo in ne shranjujemo, zakaj/)).toBeNull();
+    fireEvent.press(screen.getByTestId('adapted-mode-info-2'));
     expect(screen.getByText(/Ne sprašujemo in ne shranjujemo, zakaj/)).toBeTruthy();
     expect(screen.queryByTestId('adapted-mode-native-2')).toBeNull();
     expect(screen.queryByTestId('adapted-mode-sources-2')).toBeNull();
@@ -58,6 +64,7 @@ describe('FamilyChildrenCard — adapted mode', () => {
 
   it('on: says that pushes need the new app version', () => {
     renderWithQuery(<FamilyChildrenCard family={family(true)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     expect(screen.getByTestId('adapted-mode-switch-2').props.value).toBe(true);
     expect(screen.getByTestId('adapted-mode-native-2')).toBeTruthy();
   });
@@ -66,6 +73,7 @@ describe('FamilyChildrenCard — adapted mode', () => {
     const onLogWalk = jest.fn();
     const fam = family(true);
     renderWithQuery(<FamilyChildrenCard family={fam} onAddChild={jest.fn()} onChildPin={jest.fn()} onLogWalk={onLogWalk} />);
+    openChildSettings(2);
     expect(screen.getByTestId('adapted-mode-sources-2')).toBeTruthy();
     expect(screen.getByText('Kdo šteje potiske')).toBeTruthy();
     expect(screen.getByText(/^Na iPhonu potiske šteje samo Apple Watch \(v aplikaciji Zdravje: Podatki o zdravju → Invalidski voziček = Da\)/)).toBeTruthy();
@@ -78,6 +86,7 @@ describe('FamilyChildrenCard — adapted mode', () => {
   it('right after turning it on the note appears (switch shows the requested value)', async () => {
     updateChildSettings.mockReturnValue(new Promise(() => undefined));
     renderWithQuery(<FamilyChildrenCard family={family(false)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     fireEvent(screen.getByTestId('adapted-mode-switch-2'), 'valueChange', true);
     await flush();
     expect(screen.getByTestId('adapted-mode-sources-2')).toBeTruthy();
@@ -88,6 +97,7 @@ describe('FamilyChildrenCard — adapted mode', () => {
   it('a failure shows an error and keeps the server value', async () => {
     updateChildSettings.mockRejectedValue(new ApiError('Server Error', 500, {}));
     renderWithQuery(<FamilyChildrenCard family={family(false)} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    openChildSettings(2);
     fireEvent(screen.getByTestId('adapted-mode-switch-2'), 'valueChange', true);
     await flush();
     expect(screen.getByTestId('adapted-mode-error-2')).toBeTruthy();
