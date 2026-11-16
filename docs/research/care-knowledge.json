@@ -86798,6 +86798,36 @@
       "checked": "2026-11-09"
     },
     {
+      "country": "AW",
+      "kind": "clinic",
+      "name": "VSH Veterinary Specialty Hospital Aruba",
+      "city": "Oranjestad",
+      "region": "Aruba",
+      "address": "9 Caya Ernesto Petronia 88, Ponton, Oranjestad, Aruba",
+      "phone": "+297 583 4400",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:00-18:00, Sat 9:00-13:00, Sun closed. Emergency care outside regular hours; call or WhatsApp +297 699 0077.",
+      "duty_i18n": null,
+      "url": "https://vsharuba.com/",
+      "source_url": "https://vsharuba.com/",
+      "checked": "2026-11-16"
+    },
+    {
+      "country": "AW",
+      "kind": "clinic",
+      "name": "Animal Health Veterinary Hospital",
+      "city": "Oranjestad",
+      "region": "Aruba",
+      "address": "Caya J.E.M. Arends 20, Oranjestad, Aruba",
+      "phone": "+297 586 3592",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 8:00-18:00, Sun closed. Emergencies and appointments via WhatsApp +297 562 2710.",
+      "duty_i18n": null,
+      "url": "https://www.animalhealtharuba.com/",
+      "source_url": "https://www.animalhealtharuba.com/contact",
+      "checked": "2026-11-16"
+    },
+    {
       "country": "AZ",
       "kind": "clinic",
       "name": "VetLife Hospital",
