@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-16 — Vsaka pasma v vseh svojih barvah: na spletni strani in v aplikaciji
+
+**Kaj:** border collie je bil od 26. 10. edina pasma, ki jo je na petprep.si mogoče pogledati v vseh standardnih barvah — šlo je za test. Zdaj nočno opravilo vsako noč naredi barvne fotografije za ~10 pasem (skupaj ~347 slik za 102 pasmi, ≈ 52 $ AI), Claude vsako sliko pregleda, na stran gredo samo dobre. Vsaka nova pasma dobi barve že v svojem nočnem zagonu. V aplikaciji starš pri izbiri barve zdaj vidi fotografijo pasme v tej barvi.
+**Zakaj je pomembno:** »rdeče-bel« ali »modri merle« staršu in otroku ne pove veliko — fotografija pove. Registar pasem s fotografijami v vseh barvah je hkrati SEO vrednost (ljudje iščejo pasme po barvi).
+**Kako povedati:** 👩 »Preden izberete barvo, jo vidite.« · 📣 kolaž ene pasme v vseh barvah · 💼 AI-cevovod, ki sam ustvari in pregleda stotine slik za ~0,15 $ na sliko · 🛠 en vir slik (spletna stran) za stran in aplikacijo.
+
 ## 2026-11-16 — Trije psi in mačka, štirje urniki: tihe ure za vsakega ljubljenčka in ura 12 / 24 h
 
 **Kaj:** David: »Mi imamo 3 pse in mačko. Hčerka mačko, sin psa. Jaz psa in žena psa. Zdaj pa ko nastavim school hours mi avtomatsko za vse živali velja. To ni ok.« Tihe ure so bile ena nastavitev za celo družino. Zdaj vsak ljubljenček sledi družinskim uram, starš pa mu lahko nastavi lastne (šola, spanje). Hkrati: ure v aplikaciji in obvestilih po telefonu (24-urni ali 12-urni zapis) z ročno izbiro, ure pa se ne tipkajo več, ampak nastavijo z vrtljivimi kolesi kot na budilki (minute po 15).

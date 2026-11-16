@@ -9,7 +9,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * One breed of the picker catalogue (GET /api/breeds, M5-R06-01). Breed
  * names are not sent as text: the app translates `label_key` (i18n).
  *
- * @property array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}, colours: list<array{key: string, label: string}>} $resource
+ * @property array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}, colours: list<array{key: string, label: string, image_url: string|null}>} $resource
  */
 class BreedCatalogResource extends JsonResource
 {
@@ -87,9 +87,11 @@ class BreedCatalogResource extends JsonResource
              * paid breed — only colours the breed standard allows. Send `key` as
              * `colour` to POST /api/parent/generate-pin; `label` is in the
              * request language (en | sl). One entry = nothing to choose (show it,
-             * no picker); [] = free breed (no colour choice).
+             * no picker); [] = free breed (no colour choice). `image_url` (David
+             * 2026-11-16): AI photo of the breed in that colour on petprep.si,
+             * shown above the picker as an illustration; null = no photo yet.
              *
-             * @var list<array{key: string, label: string}>
+             * @var list<array{key: string, label: string, image_url: string|null}>
              */
             'colours' => $entry['colours'] ?? [],
         ];

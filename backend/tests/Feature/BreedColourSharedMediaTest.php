@@ -177,7 +177,9 @@ describe('colour catalogue', function () {
     it('GET /api/breeds sends the colours of paid breeds in the request language; free breeds get none', function () {
         actingAsRole(User::factory()->parent()->create());
 
-        $en = collect(getJson('/api/breeds', ['Accept-Language' => 'en'])->assertOk()->json('breeds'))->keyBy('breed');
+        // image_url: BreedColourImagesTest (it grows as colour variants are committed).
+        $withoutImage = fn (array $breed) => [...$breed, 'colours' => array_map(fn (array $c) => ['key' => $c['key'], 'label' => $c['label']], $breed['colours'])];
+        $en = collect(getJson('/api/breeds', ['Accept-Language' => 'en'])->assertOk()->json('breeds'))->keyBy('breed')->map($withoutImage);
         expect($en['mutt']['colours'])->toBe([])
             ->and($en['french_bulldog']['colours'])->toBe([
                 ['key' => 'fawn', 'label' => 'Fawn'],
@@ -186,7 +188,7 @@ describe('colour catalogue', function () {
             ])
             ->and($en['west_highland_white_terrier']['colours'])->toBe([['key' => 'white', 'label' => 'White']]);
 
-        $sl = collect(getJson('/api/breeds', ['Accept-Language' => 'sl'])->assertOk()->json('breeds'))->keyBy('breed');
+        $sl = collect(getJson('/api/breeds', ['Accept-Language' => 'sl'])->assertOk()->json('breeds'))->keyBy('breed')->map($withoutImage);
         expect($sl['french_bulldog']['colours'][1])->toBe(['key' => 'brindle', 'label' => 'Tigrast']);
     });
 });

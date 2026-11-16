@@ -229,6 +229,8 @@
     "colourHint": "Samo barve, ki jih dovoljuje standard pasme.",
     "colourOnly": "Ta pasma je samo ene barve: {{colour}}",
     "colourA11y": "Barva: {{colour}}",
+    "colourPhotoCaption": "Ponazoritev barve · AI-fotografija — vaš ljubljenček bo podoben, ne enak.",
+    "colourPhotoA11y": "{{breed}}, barva {{colour}}, AI-fotografija",
     "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
     "lockedFreeOnlyA11y": "{{breed}}, ni na voljo — samo v brezplačnem načrtu",
     "freeBreedChallengeHint": "Začnite brezplačno, izziv lahko dodate kadarkoli.",

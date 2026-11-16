@@ -221,6 +221,8 @@
     "colourHint": "Only colours the breed standard allows.",
     "colourOnly": "This breed comes in one colour: {{colour}}",
     "colourA11y": "Colour: {{colour}}",
+    "colourPhotoCaption": "Colour preview · AI-generated photo — your pet will look similar, not identical.",
+    "colourPhotoA11y": "{{breed}} in {{colour}}, AI-generated photo",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
     "lockedFreeOnlyA11y": "{{breed}}, not available — only on the free plan",
     "freeBreedChallengeHint": "Start for free — you can add the challenge at any time.",

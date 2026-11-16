@@ -23,7 +23,8 @@ PetPrep unattended breed run. Repos: DataVallis/pet-prep (and DataVallis/pet-pre
    Otherwise take the lock at once: branch + queue row in-progress + DRAFT PR before any research.
 3. Take the FIRST row with status "todo" in docs/research/BREED_QUEUE.md (one breed per run).
 4. Research, build, test, review, PR, merge on green CI (deploys nothing), portrait right after the merge
-   (§8, no deploy needed), website only with the portrait — per the runbook. Never dispatch a production deploy.
+   (§8, no deploy needed), colour variants after the portrait (§8b, you review them), website only with the
+   portrait — per the runbook. Never dispatch a production deploy.
    Wait for every CI in this same run: poll "CI OK" in a foreground loop (sleep 30 s, up to 45 min) and carry on
    right after it — never end the turn or wait for a notification while CI runs (2026-11-06 a run stalled 3 days).
    Write only the breed's own files (runbook header "Own files only"): document in docs/breeds/<en-slug>.md,
@@ -31,7 +32,7 @@ PetPrep unattended breed run. Repos: DataVallis/pet-prep (and DataVallis/pet-pre
 5. Apply only the runbook's standing decision rules; never ask questions. On a stop condition mark the
    queue row (blocked / needs-david) with the reason and stop.
 6. Never force-push, never merge red CI, never touch production data, app.json identity or CLAUDE.md.
-Report: breed, PR numbers + merge SHAs, deploy result, test counts, review findings, portrait verdict,
+Report: breed, PR numbers + merge SHAs, deploy result, test counts, review findings, portrait verdict, colour verdicts,
 website URLs, time per phase.
 ```
 
@@ -254,7 +255,32 @@ git commit -am "chore(research): register the <Breed> portrait in the breed regi
 ```
 Same commit: the breed doc (`docs/breeds/<en-slug>.md`: portrait row + PR number; `node scripts/breeds-index.mjs`) and the queue row → `done` (with PR numbers). No FEATURES / HANDOFF edit. PR, `CI OK`, merge (docs-only merges do not deploy). Delete nothing on the review branch.
 
-**Optional — colour variants (David 2026-10-26, first a test on `border_collie`; not part of an unattended breed run yet):**
+## 8b. Colour variants (MANDATORY since David 2026-11-16 — every breed with ≥ 2 colours)
+
+**David 2026-11-16:** every breed shows all its standard coat colours on the website breed page AND in the app's
+colour picker (`GET /api/breeds` `colours[].image_url` → photo above the chips). So in every breed run, right after
+the §8 portrait PR is merged and **before** the website PR (§9), make the colour variants of the new breed:
+
+1. Skip only when `config/breed_colours.php` lists exactly one colour for the breed (its portrait is the photo).
+2. Dispatch `breed-portraits.yml` with `inputs[breeds]=<key>`, `inputs[colours]=true`, `inputs[ref]=<portrait merge sha>`
+   (its `docs/research/breed-portraits` holds the reference portrait). Cost = (colours − 1) × $0.15, AI Lab budget.
+   A run that stops at the Lab cap (`BudgetLab`) → keep what was made, note `colours: partial` in
+   `docs/breeds/<en-slug>.md`; the nightly backfill task (below) finishes it — never raise a budget yourself.
+3. **Review every variant yourself (David 2026-11-16: Claude approves, not David)** — Read each `.webp` from the
+   review branch: same animal, pose, framing and fog-grey backdrop as the portrait; only the coat colour / pattern
+   changed; the colour matches the breed standard and its label (dilute blue = slate grey, visibly lighter than
+   black; merle = mottled patches; sable = banded tips, not black-and-tan); realistic photo, one animal, no extra
+   limbs / text / props. Wrong → redo once (`inputs[colour_keys]=<key>`, `inputs[force]=true`); still wrong →
+   **do not commit that colour** (no photo is better than a wrong one — the picker then shows none for it) and list
+   it under `colours needing David:` in the breed doc and the report.
+4. Branch `feat/M5-R10-NN-<slug>-colours` from `origin/main`: `git checkout origin/portraits/run-<id> --
+   docs/research/breed-portraits/<species>/<slug>--<key>.webp` for the approved files only, add ONLY their
+   `colour_variants` entries to `main`'s manifest (keep `main`'s `portraits` list), then
+   `node scripts/export-breed-registry.mjs` (rewrites `docs/research/breed-registry.json` AND the generated
+   `backend/config/breed_colour_images.php`). Commit `chore(research): AI colour variants of the <Breed> from run <id> [M5-R10]`,
+   PR, `CI OK`, merge. Then §9 — `--copy-portraits` copies the variants to the website too.
+
+Mechanics (David 2026-10-26, first tested on `border_collie`):
 the website breed page will later show the breed in every standard coat colour. Once the default portrait is on
 `main`, `breed-portraits.yml` with `inputs[colours]=true` runs `breeds:portraits --colours`: for every colour of
 `config/breed_colours.php` except the one the default portrait shows (manifest `colour`; older entries: the coat
@@ -286,6 +312,26 @@ gh api -X POST repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/d
 # redo one colour (blue-white came out almost black, David 2026-10-26):
 gh api -X POST repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/dispatches -f ref=main -f 'inputs[breeds]=border_collie' -F 'inputs[colours]=true' -f 'inputs[colour_keys]=blue-white' -F 'inputs[force]=true'
 ```
+
+### 8c. Colour backfill of existing breeds (scheduled task, David 2026-11-16)
+
+The scheduled task **»PetPrep — barvne slike pasem (nočno)«** makes the colour variants of breeds that already
+have a portrait but miss colours — ~10 breeds per night, until none is left. One run:
+1. Lock: any OPEN pet-prep PR whose head starts with `feat/M5-R10-` or `chore/colour-backfill-` → exit doing nothing.
+2. Todo list = register breeds in `manifest.json` `portraits` whose `config/breed_colours.php` list has ≥ 2 colours
+   and some colour (other than the portrait's) without a `colour_variants` entry, in `BREED_QUEUE.md` / register
+   order. The first run also redoes `border_collie` `blue-white` if it still looks almost black (David 2026-10-26).
+   Breeds listed in `docs/research/breed-portraits/COLOUR_REVIEW.md` as `needs-david` are skipped.
+3. Take the first ~10 breeds (stop adding when the planned images exceed ~35 ≈ $5.25 or the AI Lab budget left
+   today — `dry_run` first shows it). Dispatch ONE `breed-portraits.yml` run with all those keys, `colours=true`, `ref=main`.
+4. Review every image exactly as §8b step 3 (redo once in one more dispatch with `colour_keys` + `force`).
+5. One pet-prep PR `chore/colour-backfill-<date>`: approved files + their `colour_variants` entries, export
+   regenerated (registry JSON + `backend/config/breed_colour_images.php`), `COLOUR_REVIEW.md` rows for rejected
+   colours (`needs-david`, reason). CI OK → merge. Then one website PR `chore/register-colours-<date>`
+   (`export-breed-registry.mjs --out … --copy-portraits public`, lint / types / build, »Website CI OK«, merge).
+6. Report: breeds done, images approved / rejected, cost, PR numbers, how many breeds are left. When nothing is
+   left the task reports »done« — David can then disable it.
+Never dispatch a production deploy (the app sees new photos after the next daily deploys: API 03:17, website 03:47).
 
 ## 9. Website (DataVallis/pet-prep-website, from its `main`)
 

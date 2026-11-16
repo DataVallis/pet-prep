@@ -332,6 +332,9 @@ describe('GET /api/breeds', function () {
 
         $i = expectListedAfter($breeds, 'labrador_retriever', 'border_collie');
 
+        // image_url (the colour photo, David 2026-11-16) is covered by BreedColourImagesTest —
+        // it appears as colour variants are committed, so it is not pinned here.
+        $breeds[$i]['colours'] = array_map(fn (array $c) => ['key' => $c['key'], 'label' => $c['label']], $breeds[$i]['colours']);
         expect($breeds[$i])->toBe([
             'breed' => 'labrador_retriever', 'slug' => 'labrador-retriever', 'species' => 'dog', 'premium' => true,
             'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.labrador_retriever',

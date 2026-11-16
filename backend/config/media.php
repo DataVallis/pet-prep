@@ -468,6 +468,10 @@ return [
         // `breeds:portraits --colours` (David 2026-10-26): image-EDIT profile that recolours the
         // default portrait into every other standard coat colour (config/breed_colours.php).
         'colour_profile' => env('AI_BREED_PORTRAIT_COLOUR_PROFILE', 'nano_banana_pro_edit'),
+        // Where the website serves the portraits (public/animals/<species>/…): the app's colour
+        // picker shows them (GET /api/breeds colours[].image_url, David 2026-11-16), paths from
+        // the generated config/breed_colour_images.php. No trailing slash.
+        'public_base_url' => rtrim((string) env('BREED_PORTRAIT_PUBLIC_URL', 'https://petprep.si/animals'), '/'),
         'traits' => [
             'labrador_retriever' => ['coat_color' => 'yellow'],
         ],
