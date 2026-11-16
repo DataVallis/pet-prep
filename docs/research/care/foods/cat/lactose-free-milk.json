@@ -4,6 +4,7 @@
   "name": {
     "en": "Lactose-free milk and cat milk",
     "sl": "Mleko brez laktoze in mleko za mačke",
+    "de": "Laktosefreie Milch und Katzenmilch",
     "es": "Leche sin lactosa y leche para gatos",
     "pt": "Leite sem lactose e leite para gatos",
     "nl": "Lactosevrije melk en kattenmelk",
@@ -17,6 +18,7 @@
   "question": {
     "en": "Can cats drink lactose-free milk?",
     "sl": "Ali lahko mačke pijejo mleko brez laktoze?",
+    "de": "Dürfen Katzen laktosefreie Milch trinken?",
     "es": "¿Pueden los gatos beber leche sin lactosa?",
     "pt": "Os gatos podem beber leite sem lactose?",
     "nl": "Mogen katten lactosevrije melk drinken?",
@@ -30,6 +32,7 @@
   "url_slug": {
     "en": "lactose-free-milk",
     "sl": "mleko-brez-laktoze",
+    "de": "laktosefreie-milch",
     "es": "leche-sin-lactosa",
     "pt": "leite-sem-lactose",
     "nl": "lactosevrije-melk",
@@ -44,6 +47,7 @@
   "answer": {
     "en": "It's best not to. Lactose-free milk and special cat milk are less likely to upset a cat's stomach, but they contain a lot of calories and lack the nutrients a cat needs. Cats Protection advises avoiding any type of milk; water is all cats need.",
     "sl": "Raje ne. Mleko brez laktoze in posebno mleko za mačke manj verjetno povzročita prebavne težave, vendar vsebujeta veliko kalorij in nimata hranil, ki jih mačka potrebuje. Cats Protection svetuje, naj se izogibamo vsem vrstam mleka; mačke potrebujejo le vodo.",
+    "de": "Besser nicht. Laktosefreie Milch und spezielle Katzenmilch verstimmen den Magen einer Katze zwar seltener, sind aber sehr kalorienreich, und ihnen fehlen die Nährstoffe, die eine Katze braucht. Cats Protection rät, auf jede Art von Milch zu verzichten; Katzen brauchen nur Wasser.",
     "es": "Es mejor no dársela. La leche sin lactosa y la leche especial para gatos tienen menos probabilidades de sentar mal al estómago de un gato, pero tienen muchas calorías y les faltan los nutrientes que un gato necesita. Cats Protection aconseja evitar cualquier tipo de leche; el agua es lo único que necesitan los gatos.",
     "pt": "É melhor não. O leite sem lactose e o leite especial para gatos são menos suscetíveis de fazer mal ao estômago do gato, mas têm muitas calorias e não têm os nutrientes de que um gato precisa. A Cats Protection aconselha a evitar qualquer tipo de leite; os gatos só precisam de água.",
     "nl": "Liever niet. Lactosevrije melk en speciale kattenmelk belasten de maag van een kat minder snel, maar ze bevatten veel calorieën en missen de voedingsstoffen die een kat nodig heeft. Cats Protection adviseert om geen enkele soort melk te geven; water is het enige wat katten nodig hebben.",
@@ -57,6 +61,7 @@
   "why": {
     "en": "Sources disagree, so we use the stricter level. Cats Protection says lactose-free milk and cat milk don't contain lactose, but they have a lot of calories that could make a cat put on weight, and it is best to avoid giving cats any type of milk. PDSA says cat milk could be an occasional treat, but its fat is often as high as other milk and its calories must be counted in the daily food allowance.",
     "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Cats Protection navaja, da mleko brez laktoze in mleko za mačke ne vsebujeta laktoze, imata pa veliko kalorij, zaradi katerih se mačka lahko zredi, in da se je najbolje izogibati vsem vrstam mleka. PDSA pravi, da je mleko za mačke lahko občasen priboljšek, vendar ima pogosto prav toliko maščob kot drugo mleko, njegove kalorije pa je treba všteti v dnevno količino hrane.",
+    "de": "Die Quellen sind sich nicht einig, deshalb gilt hier die strengere Einstufung. Cats Protection sagt, dass laktosefreie Milch und Katzenmilch keine Laktose enthalten, aber viele Kalorien, durch die eine Katze zunehmen kann, und dass man am besten gar keine Milch gibt. PDSA sagt, Katzenmilch könne ein gelegentliches Leckerli sein, ihr Fettgehalt sei aber oft so hoch wie bei anderer Milch, und ihre Kalorien müssten auf die tägliche Futtermenge angerechnet werden.",
     "es": "Las fuentes no coinciden, así que aplicamos el nivel más estricto. Cats Protection dice que la leche sin lactosa y la leche para gatos no contienen lactosa, pero tienen muchas calorías que podrían hacer que un gato engorde, y lo mejor es evitar darles cualquier tipo de leche. PDSA dice que la leche para gatos podría ser un premio ocasional, pero su contenido de grasa suele ser tan alto como el de otras leches y sus calorías hay que contarlas dentro de la ración diaria de comida.",
     "pt": "As fontes não estão de acordo, por isso usamos o nível mais rigoroso. A Cats Protection diz que o leite sem lactose e o leite para gatos não têm lactose, mas têm muitas calorias que podem fazer o gato engordar, e que é melhor evitar dar aos gatos qualquer tipo de leite. A PDSA diz que o leite para gatos pode ser uma guloseima ocasional, mas a gordura é muitas vezes tanta como a de outros leites e as calorias têm de ser contadas na quantidade diária de comida.",
     "nl": "De bronnen zijn het niet met elkaar eens, dus we hanteren het strengere niveau. Cats Protection zegt dat lactosevrije melk en kattenmelk geen lactose bevatten, maar wel veel calorieën, waardoor een kat kan aankomen, en dat je een kat het best helemaal geen melk geeft. PDSA zegt dat kattenmelk af en toe een traktatie kan zijn, maar dat het vetgehalte vaak net zo hoog is als bij andere melk en dat de calorieën moeten meetellen bij de dagelijkse hoeveelheid voer.",
@@ -73,6 +78,9 @@
     ],
     "sl": [
       "Postopno pridobivanje teže"
+    ],
+    "de": [
+      "Allmähliche Gewichtszunahme"
     ],
     "es": [
       "Aumento de peso con el tiempo"
@@ -105,6 +113,7 @@
   "what_to_do": {
     "en": "Offer fresh water instead. If you ever give cat milk as a rare treat, keep its extra calories in mind, but don't cut back your cat's complete food for it, as your cat could then get fewer vital vitamins and nutrients.",
     "sl": "Namesto mleka ponudite svežo vodo. Če mački kdaj redko daste mleko za mačke kot priboljšek, upoštevajte njegove dodatne kalorije, vendar zaradi njega ne zmanjšajte popolne mačje hrane, saj bi mačka tako lahko dobila manj nujnih vitaminov in hranil.",
+    "de": "Bieten Sie stattdessen frisches Wasser an. Wenn Sie Ihrer Katze ausnahmsweise Katzenmilch als seltenes Leckerli geben, bedenken Sie die zusätzlichen Kalorien, kürzen Sie dafür aber nicht ihr Alleinfutter, sonst bekommt sie womöglich zu wenig lebenswichtige Vitamine und Nährstoffe.",
     "es": "Ofrécele agua fresca en su lugar. Si alguna vez le das leche para gatos como premio poco frecuente, ten en cuenta sus calorías extra, pero no reduzcas la comida completa de tu gato por ello, porque podría recibir menos vitaminas y nutrientes esenciales.",
     "pt": "Oferece água fresca em vez disso. Se alguma vez deres leite para gatos como guloseima rara, tem em conta as calorias extra, mas não reduzas a comida completa do teu gato por causa disso, porque o teu gato poderia receber menos vitaminas e nutrientes essenciais.",
     "nl": "Geef in plaats daarvan vers water. Geef je een enkele keer kattenmelk als traktatie, houd dan rekening met de extra calorieën, maar geef je kat er niet minder volwaardig voer voor, want dan krijgt je kat misschien te weinig van de belangrijke vitamines en voedingsstoffen binnen.",
@@ -119,6 +128,7 @@
   "child": {
     "en": "Even special cat milk is just a treat. The drink that keeps kitty healthy every day is fresh water.",
     "sl": "Tudi posebno mleko za mačke je le priboljšek. Pijača, ki muco vsak dan ohranja zdravo, je sveža voda.",
+    "de": "Auch spezielle Katzenmilch ist nur ein Leckerli. Das Getränk, das deine Katze jeden Tag gesund hält, ist frisches Wasser.",
     "es": "Incluso la leche especial para gatos es solo un premio. La bebida que mantiene sano al gatito todos los días es el agua fresca.",
     "pt": "Até o leite especial para gatos é só uma guloseima. A bebida que mantém o gatinho saudável todos os dias é água fresca.",
     "nl": "Zelfs speciale kattenmelk is maar een traktatie. De drank die je kat elke dag gezond houdt, is vers water.",
@@ -134,6 +144,7 @@
       "q": {
         "en": "Is cat milk from the pet shop better than cow's milk?",
         "sl": "Ali je mleko za mačke iz trgovine boljše od kravjega?",
+        "de": "Ist Katzenmilch aus dem Zoofachhandel besser als Kuhmilch?",
         "es": "¿Es mejor la leche para gatos de la tienda de mascotas que la leche de vaca?",
         "pt": "O leite para gatos da loja de animais é melhor do que o leite de vaca?",
         "nl": "Is kattenmelk uit de dierenwinkel beter dan koemelk?",
@@ -147,6 +158,7 @@
       "a": {
         "en": "It usually has a lot less lactose or none, so it is less likely to make your cat poorly. But its fat content is often just as high as any other milk, and it is not a complete meal.",
         "sl": "Običajno ima veliko manj laktoze ali je sploh nima, zato mački manj verjetno škodi. Vendar ima pogosto prav toliko maščob kot katero koli drugo mleko in ni popoln obrok.",
+        "de": "Sie enthält meist deutlich weniger Laktose oder gar keine, deshalb wird Ihrer Katze davon seltener schlecht. Ihr Fettgehalt ist aber oft genauso hoch wie bei jeder anderen Milch, und sie ist keine vollständige Mahlzeit.",
         "es": "Suele tener mucha menos lactosa o ninguna, así que es menos probable que ponga malo a tu gato. Pero su contenido de grasa suele ser tan alto como el de cualquier otra leche, y no es una comida completa.",
         "pt": "Normalmente tem muito menos lactose ou nenhuma, por isso é menos provável que ponha o teu gato doente. Mas tem muitas vezes tanta gordura como qualquer outro leite, e não é uma refeição completa.",
         "nl": "Er zit meestal veel minder lactose in, of helemaal geen, dus de kans is kleiner dat je kat er ziek van wordt. Maar het vetgehalte is vaak net zo hoog als bij andere melk, en het is geen complete voeding.",
@@ -231,6 +243,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0b3d98e7bee971f99d1d84b4063602896451747ef8d182935d90caeac8658933"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f12ad7b2dce6e0c689ac1a931d15a74e98ab2299ebf76160f9bc8983ce71a680"
     },
     "es": {
       "status": "verified",
