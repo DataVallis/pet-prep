@@ -1,0 +1,99 @@
+{
+  "country": "HN",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "Hospital Veterinario Rivera - Home",
+      "url": "https://hospitalveterinarioriverahn.com/home/",
+      "note": "Opened; two branches in San Pedro Sula with addresses, phones, hours; says 'EMERGENCIAS 24/7' for Barrio Rio de Piedras only."
+    },
+    {
+      "name": "Hospital Veterinario Rivera - Contacto",
+      "url": "https://hospitalveterinarioriverahn.com/contacto/",
+      "note": "Opened; per-branch address and hours; 24/7 emergency wording only at Rio de Piedras (+504 9757-6797). Phone-to-branch assignment for Barandillas is by footer order."
+    },
+    {
+      "name": "Animal Health - Clinica Veterinaria de Honduras",
+      "url": "https://www.animalhealth.hn/",
+      "note": "Opened; single clinic in La Granja, Tegucigalpa; hours and phones; no 24 h wording."
+    },
+    {
+      "name": "Hospital Veterinario Bueno",
+      "url": "https://veterinariabueno.jimdofree.com/",
+      "note": "Opened; La Ceiba clinic with hours and phones; mentions urgencia / intensive care but no 24 h wording."
+    },
+    {
+      "name": "Colegio de Medicos Veterinarios de Honduras",
+      "url": "https://www.cmvhn.com/directorio/",
+      "note": "Opened; the official clinic directory page shows 0 registered establishments (empty / not loading). Contact page opened (Tegucigalpa, +504 2238-7357); no clinic list, no duty rota, no poison line."
+    },
+    {
+      "name": "Bay Islands Tourism Bureau - Medical Services in Roatan",
+      "url": "http://www.go2roatan.com/medical-services-roatan/",
+      "note": "Opened; names Animal Kingdom as the only permanent vet facility on Roatan plus visiting mainland vets; no phones or hours; not used as an entry."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Hospital Veterinario Rivera - Rio de Piedras",
+      "city": "San Pedro Sula",
+      "region": "Cortes",
+      "address": "Barrio Rio de Piedras, 5 calle, 20 avenida, San Pedro Sula",
+      "phone": "+504 9757-6797",
+      "emergency_24h": true,
+      "duty": "Emergencies 24/7 at this branch on +504 9757-6797. Regular hours Mon-Fri 8:30-18:00, Sat 8:30-16:00, Sun 9:00-15:00.",
+      "small_animals": true,
+      "url": "https://hospitalveterinarioriverahn.com/",
+      "source_url": "https://hospitalveterinarioriverahn.com/contacto/",
+      "checked": "2026-11-16",
+      "note": "Other numbers on the site: +504 9446-7901, +504 2552-2826/7. Page wording: 'EMERGENCIAS 24/7 SOLO EN BARRIO RIO DE PIEDRAS'."
+    },
+    {
+      "kind": "clinic",
+      "name": "Hospital Veterinario Rivera - Barandillas",
+      "city": "San Pedro Sula",
+      "region": "Cortes",
+      "address": "Barrio Barandillas, 2 calle, 3 avenida, San Pedro Sula",
+      "phone": "+504 2553-4971",
+      "emergency_24h": false,
+      "duty": "Open Mon-Fri 8:00-17:30, Sat 8:00-16:00, closed Sunday. 24/7 emergencies are handled at the Rio de Piedras branch.",
+      "small_animals": true,
+      "url": "https://hospitalveterinarioriverahn.com/",
+      "source_url": "https://hospitalveterinarioriverahn.com/contacto/",
+      "checked": "2026-11-16",
+      "note": "Also +504 9430-4116. Phone-to-branch assignment inferred from footer order on the page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Health - Clinica Veterinaria",
+      "city": "Tegucigalpa",
+      "region": "Francisco Morazan",
+      "address": "La Granja, 5ta calle, calzada a Valentin Flores, opposite the first entrance of Col. Maradiaga, Tegucigalpa",
+      "phone": "+504 9905-4693",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9:00-17:00 by appointment; Sunday 9:00-13:00 first come, first served; closed Saturday.",
+      "small_animals": true,
+      "url": "https://www.animalhealth.hn/",
+      "source_url": "https://www.animalhealth.hn/",
+      "checked": "2026-11-16",
+      "note": "Also +504 8767-3284 and +504 2225-6215. 9905-4693 is also WhatsApp."
+    },
+    {
+      "kind": "clinic",
+      "name": "Hospital Veterinario Bueno",
+      "city": "La Ceiba",
+      "region": "Atlantida",
+      "address": "Barrio Potreritos, half a block north of the Puma El Estadio petrol station, La Ceiba",
+      "phone": "+504 2443-0571",
+      "emergency_24h": false,
+      "duty": "Open Mon-Fri 7:30-17:00 and Sat 7:30-15:00. Emergency and intensive care offered; call ahead.",
+      "small_animals": true,
+      "url": "https://veterinariabueno.jimdofree.com/",
+      "source_url": "https://veterinariabueno.jimdofree.com/",
+      "checked": "2026-11-16",
+      "note": "Also +504 2443-1521 and 2443-1525 (PBX). Page also covers large animals. 'Urgencia y Cuidados Intensivos' without 24 h wording."
+    }
+  ],
+  "notes": "Research 2026-11-16; only pages opened with WebFetch are used. Refused by robots / not opened: veterinariasoto.hn, veterinariadogsandcats.com, hospitalveterinariodelsur.co, Facebook pages (Pet Plaza Hospivet, Vida Animal, Animal Kingdom Roatan etc.), hospihuellas.com, radiohouse.hn, tiempo.hn. CMVH clinic directory is empty on its own site; no duty rota and no animal poison line found for Honduras. Not added: Servicio de Mascotas Hertuno (San Pedro Sula, page does not say it is a vet clinic); Tegucigalpa municipal free vet clinic (Barrio Guadalupe, Mon-Fri 9-17, Sat 9-14, opened July 2023) only found in a news article with no phone or own page. Still missing: Roatan / Bay Islands (Animal Kingdom, French Harbour - no own page found), Copan Ruinas, Comayagua (K-nine, CeMeVet, Medical Vet - Facebook only), Choluteca (Servellon, Castillo, Hospital Veterinario del Sur - Facebook / refused), Tela (Veterinaria del Norte, SAV - not reachable), Zamorano / UNAH / SENASA vet pages (no clinic info found)."
+}
