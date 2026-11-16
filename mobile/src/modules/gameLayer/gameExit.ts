@@ -10,7 +10,9 @@
  *   them by zIndex, so a zIndex inside the stage (the video players) must never be able to climb
  *   over the HUD (`test-utils/fabricPaintOrder.ts` mirrors the native rule in Jest).
  * - Exit: every game screen always has a way out — the × in `GameTopBar` (its own `onClose`, else
- *   the screen's exit), Android back, and the escape card. A game may lock the × for a while
+ *   the screen's exit), Android back, and the escape card. The top bar is painted ABOVE the
+ *   `overlay` card (`GAME_Z.top` > `GAME_Z.overlay`), so the × works on every intro / result /
+ *   refusal card too (iOS has no back — wand cooldown dead end, David 2026-11-16). A game may lock the × for a while
  *   (`closeLocked`: a mess that must be cleaned, a request in flight); after `GAME_ESCAPE_MS` the
  *   × comes back anyway. A video stage that is not ready after `GAME_STAGE_WATCHDOG_MS`, or a
  *   layer that crashed while rendering, opens the escape card (× + »Nazaj«).
@@ -29,9 +31,15 @@ export const GAME_Z = {
   shade: 1,
   field: 2,
   feedback: 3,
-  top: 10,
   dock: 10,
   overlay: 20,
+  /**
+   * ABOVE the overlay (David's iPhone 2026-11-16): an intro / result / refusal card's backdrop
+   * covered the whole screen, the × under it got no touch, and with »Začni lov« disabled (the cat
+   * resting) the child had to kill the app — iOS has no back. The bar is a thin strip at the top;
+   * the cards are centred under it.
+   */
+  top: 30,
   escape: 100,
 } as const;
 
