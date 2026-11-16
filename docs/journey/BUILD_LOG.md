@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-17 — Pred nakupom psa: kviz pasem in kalkulator za vsako pasmo, v 15 jezikih
+
+**Kaj:** V eni noči je spletna stran dobila podstran »Pred nakupom psa« (v glavi strani) s kvizom »Katera pasma je za vas?« in kalkulator »Koliko je dela s psom?« za vseh 111 psov iz registra — vse v 15 jezikih. Kviz ima 9 vprašanj in priporoči 3 pasme samo na podlagi oznak z viri (velikost, gibanje, »primerno za« / »razmislite o«); vedno doda tudi kartico o posvojitvi. Vsaka nova pasma v registru dobi stran kalkulatorja sama. Stran Partnerji in medijski komplet sta zdaj tudi v 15 jezikih.
+**Zakaj je pomembno:** David je postavil pravilo »vse v vseh jezikih«. Starš, ki še ne ve, katerega psa bi, zdaj na eni strani dobi predlog pasem, realne številke dela in stroškov ter pot do preizkusa v PetPrepu. Partnerji dobijo anonimne številke (koliko družin je razmišljalo o kateri pasmi), ne naslovov.
+**Kako povedati:** 👩 »Ne veste, kateri pes bi bil za vas? 9 vprašanj, 3 pasme, z viri — in za vsako, koliko dela in denarja pomeni.« 🧒 »Poglej, kateri kuža bi se ujel z našo družino.« 🤝 »Na strani ›Pred nakupom psa‹ je mesto za vas — tudi kartica ›Je vaš dom pripravljen?‹ za opremo doma.« 💼 »111 pasem × 15 jezikov = 1.665 strani kalkulatorja iz enega registra, brez ročnega dela za nove pasme.« 🛠 »Next.js statične strani iz registry.json, točkovanje kot čista funkcija, preverjena na ~55.000 kombinacijah odgovorov; števci na našem API-ju, brez piškotkov.«
+
 ## 2026-11-16 — Šola: kuža se spet vidi
 
 **Kaj:** David je na telefonu poslal posnetek šole: »Moti me tukaj, da je vse čez glavo.« Zgoraj so bili trije sloji — vrstica s pikami, dvovrstično pravilo in velik ukaz »Lulat zunaj! 👂« — ravno čez glavo in ušesa mladička. Zdaj je zgoraj samo tanka vrstica s pikami in ×; ukaz je tik nad priboljškom, pravilo (krajše: »Uboga → priboljšek · Ne uboga → počakaj«) pa pod njim, spodaj čez tla.

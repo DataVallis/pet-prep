@@ -4,7 +4,7 @@
 > najprimernejše pasme za način življenja družine, nato upsell na PetPrep s to pasmo. David je izbral: **ločena
 > podstran s karticami mini orodij + najprej specifikacija** (anketa, 16. 11. 2026). Ostalo je Claudov predlog;
 > Davidove odločitve so označene **(David)**.
-> **Stanje:** 🗓 odobreno za gradnjo (David 16. 11. 2026, §10). Nič ni zgrajeno.
+> **Stanje:** ✅ zgrajeno 17. 11. 2026 — spletna stran pet-prep-website #447 (+ #449 glava strani), strežnik pet-prep #1274. Na petprep.si z dnevno objavo. Odstopanje od §4: register ima drugačen nabor oznak kot tabela v §4 (npr. `needs_company`, `not_for_small_children`, `experienced_owner`, `chases_small_pets`); točkovanje uporablja dejanske oznake (`pet-prep-website/src/lib/breedQuiz.ts`).
 > **Davidove odločitve 16. 11. 2026 (21:46):** (1) **brez PDF-jev in brez Lemon Squeezy za povzetke** — povzetek je dinamična stran
 > za tisk (enako kot T8); (2) **e-naslove zbiramo** (prek našega API-ja, T9); (3) **kalkulator »Koliko dela je pes« se
 > razširi na vse pasme in samodejno dobi vsako novo pasmo**, ko jo dodamo v register; (4) kartica »Je vaš dom

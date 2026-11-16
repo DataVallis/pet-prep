@@ -282,6 +282,10 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 6. **M6-W »Želje«** — merged 2026-10-27: server W01 + W02 server part (#417), app W04 / W05 (#416), one QA round done (#417 / #416 fixes on the same PRs). Reaches users with the next daily deploy + OTA. **Next:** David creates the six store products (§1b.9); M6-W03 item media + designs: app #652 + server #655 merged 2026-11-03 (one QA round, fixes on the PR) — reaches users with the next production deploy (David's bed gets its content ~10–20 min after it, automatically); device check of the child catalogue (designs), treat chip, parent list, push, redeem after reopening »Želje«, and of a bought bed's content.
 
 ## 6. Session log
+### 2026-11-17 (cloud, orchestrator, overnight) — M6-S06 quiz + hub, M6-S08 all languages done
+- Website merged: #443 real-cost 15 languages, #444 partners + media kit 15 languages, #446 partner form sends real locale, #447 hub »Pred nakupom psa« + breed quiz (15 languages, header), #449 header overflow fix (desktop nav from 1280 px). Backend merged: #1274 quiz counter + `source: breed_quiz`, #1279 partner inquiries accept 15 locales. All reach production with the daily deploys (API 03:17, website 03:47).
+- Open: translations of 13 languages not reviewed by native speakers; nothing verified on a real phone; »Try <breed> in PetPrep« CTA does not pass the breed to early access; hub cards »Kako velik bo zares?« / »Je vaš dom pripravljen?« are »Kmalu«.
+
 ### 2026-11-17 (cloud, backend) — partner inquiries accept all 15 website locales (`fix/partner-inquiry-all-locales`)
 - FormRequest `Rule::in(WebsiteLocale::ALL)`, CHECK widened by migration; website follow-up: `apiLocale` in pet-prep-website `src/lib/partnerInquiry.ts` sends the real locale once this is deployed.
 
