@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "a2b24899b55e3c78fcf8a48098c1d5a22d4844a700d44593bf15fe6e88e2f457"
+      "sha256": "39b365ac88a0bd6136dfddfb1ff161022e7b2cc49e15e4e59b577c52c12cc627"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "3ce4dcf56968efe68a79953e8c85a9aedade4bee50ce7abfcb988dc8cf192594"
+      "sha256": "52237c56fb972b2d27fb7dd0deb893a1c323debd6423464f762aaafcf2a839b8"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "4fffe55353e40bd0fa4be5cdedaa9b16a34ce8419dccb204f6a7b4d6d95d89d0"
+      "sha256": "a7796430daf11ddff0080b3c7687d2861d7cc96a048cf6863c60b6eb5da5854b"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "6c7f709f882a9f843511d49904bdc377d026557cc528fc9e57526f36fd491c68"
+      "sha256": "bbd5aa615d3f63cf3e9e4c9324959317365d3d3a09183e8ec216fcae58c631cb"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "6499c22dfeb4b64bb8e98dae6e448f0f068f8bf4af3d98a42243cf2ede25b005"
+      "sha256": "1c52b71805a2f3312e597348c6c4a90a18f75ec011282e906f4edf7dd932df1e"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "560edbebfeee05634a5cbe8cb6a357524600b3d9589470dc00b7da1be3f0ebd2"
+      "sha256": "1e325973e887b97bd81d6d4f30216a2498b63996c8679c36276befeaee79512f"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,11 +61,11 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "245d7b1ba1b485054643333b9b42e5c445ee4f2c3d59454f3593fba427c31edd"
+      "sha256": "5fa2b1dff66ee209c0c5d2008e14f7a804aa4de385d6b23ff5b4c4861445fcbe"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "acf0eb018ae6aa392c42653bdd643185858ebdc87e4e9016b40e702033d71ea2"
+      "sha256": "ae54a20c5062ce26e0bba9cc1cc6ffac220dc9f85b2fcd85639ecafd1c93a369"
     }
   },
   "suitability_vocabulary": {
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 109,
+      "breed_count": 110,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -65967,6 +65967,627 @@
       ]
     },
     {
+      "id": "wire_fox_terrier",
+      "species": "dog",
+      "order": 109,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Wire Fox Terrier",
+        "sl": "Ostrodlaki foksterier"
+      },
+      "slug": {
+        "en": "wire-fox-terrier",
+        "sl": "ostrodlaki-foksterier"
+      },
+      "synonyms": {
+        "en": [
+          "Fox Terrier (Wire)",
+          "Wire Hair Fox Terrier",
+          "Wirehaired Fox Terrier"
+        ],
+        "sl": [
+          "foksterier",
+          "ostrodlaki fox terier",
+          "žimavi foksterier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S872"
+          ],
+          "ref": "wire_fox_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              39,
+              39
+            ],
+            "female": [
+              39,
+              39
+            ]
+          },
+          "source_ids": [
+            "S871"
+          ],
+          "ref": "wire_fox_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              7.7,
+              8.6
+            ],
+            "female": [
+              6.8,
+              7.7
+            ]
+          },
+          "source_ids": [
+            "S876"
+          ],
+          "ref": "wire_fox_terrier.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "wire_fox_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S872"
+          ],
+          "ref": "wire_fox_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S874"
+          ],
+          "ref": "wire_fox_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S872"
+          ],
+          "ref": "wire_fox_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S872"
+          ],
+          "ref": "wire_fox_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S872"
+          ],
+          "ref": "wire_fox_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 51,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "wire_fox_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 169,
+            "group": 3,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S871"
+          ],
+          "ref": "wire_fox_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "primary_lens_luxation",
+          "source_ids": [
+            "S873"
+          ],
+          "ref": "wire_fox_terrier.health.primary_lens_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S873"
+          ],
+          "ref": "wire_fox_terrier.health.legg_perthes",
+          "confidence": "high"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S873"
+          ],
+          "ref": "wire_fox_terrier.health.cataracts",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S873"
+          ],
+          "ref": "wire_fox_terrier.health.atopy",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S873"
+          ],
+          "ref": "wire_fox_terrier.health.patellar_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "glaucoma",
+          "source_ids": [
+            "S873"
+          ],
+          "ref": "wire_fox_terrier.health.glaucoma",
+          "confidence": "high"
+        },
+        {
+          "key": "dental_disease_tooth_brushing",
+          "source_ids": [
+            "S874"
+          ],
+          "ref": "wire_fox_terrier.health.dental",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S872",
+              "S873"
+            ],
+            "refs": [
+              "wire_fox_terrier.exercise.adult",
+              "wire_fox_terrier.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S873"
+            ],
+            "refs": [
+              "wire_fox_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S875"
+            ],
+            "refs": [
+              "wire_fox_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S874"
+            ],
+            "refs": [
+              "wire_fox_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 84
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.wire_fox_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S872"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S872 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.wire_fox_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.wire_fox_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S872"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × RKC lower bound 'Over 12 years', S872)"
+          },
+          {
+            "ref": "proposed_game_parameters.wire_fox_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren 51, Average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.wire_fox_terrier.grooming",
+            "basis_source_ids": [
+              "S873"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): dvakrat na teden (RKC »More than once a week« brez števila → PDSA »once or twice a week« → 2); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.wire_fox_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S874"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily tooth brushing« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.wire_fox_terrier.nail_trimming",
+            "basis_source_ids": [
+              "S875"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): striženje krempljev vsake 4 tedne (WebMD »about once a month«)"
+          },
+          {
+            "ref": "proposed_game_parameters.wire_fox_terrier.professional_grooming",
+            "basis_source_ids": [
+              "S874"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): obisk frizerja / ročno trimanje vsakih 12 tednov (PetMD »three to four times a year«)"
+          },
+          {
+            "ref": "proposed_game_parameters.wire_fox_terrier.bathing",
+            "basis_source_ids": [
+              "S874"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): kopanje vsake 4 tedne (PetMD »about once a month«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S872",
+          "S873",
+          "S874",
+          "S875"
+        ]
+      },
+      "portrait": {
+        "file": "wire-fox-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S872"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S872"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S872"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S871",
+        "S872",
+        "S873",
+        "S874",
+        "S875",
+        "S876",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -72286,6 +72907,48 @@
       "publisher": "WebMD Pets — Susan Adcox, medically reviewed by Zilpah Sheikh, MD (2026-05-07)",
       "title": "What to Know About Parson Russell Terriers",
       "url": "https://www.webmd.com/pets/dogs/what-to-know-about-parson-russell-terriers"
+    },
+    {
+      "id": "S871",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 169 — Fox Terrier (Wire) (English PDF, header 06.10.2026/ EN)",
+      "url": "https://www.fci.be/Nomenclature/Standards/169g03-en.pdf"
+    },
+    {
+      "id": "S872",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Fox Terrier (Wire)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/fox-terrier-wire/"
+    },
+    {
+      "id": "S873",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Fox Terrier — breed information (one page for both coats)",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/fox-terrier"
+    },
+    {
+      "id": "S874",
+      "tier": "B",
+      "publisher": "PetMD — Jamie Lovejoy, DVM (updated Nov. 24, 2025)",
+      "title": "Wire Fox Terrier",
+      "url": "https://www.petmd.com/dog/breeds/wire-fox-terrier"
+    },
+    {
+      "id": "S875",
+      "tier": "B",
+      "publisher": "WebMD Pets — Logan Smith, medically reviewed by Shruthi N, MD (2026-09-14)",
+      "title": "What to Know About Wire Fox Terriers",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-wire-fox-terriers"
+    },
+    {
+      "id": "S876",
+      "tier": "A",
+      "publisher": "American Kennel Club",
+      "title": "Official Standard of the Wire Fox Terrier (PDF, approved February 9, 1991, effective March 27, 1991)",
+      "url": "https://a.storyblok.com/f/92981/x/2c2707caac/akc-wire-fox-terrier.pdf"
     },
     {
       "id": "C1",

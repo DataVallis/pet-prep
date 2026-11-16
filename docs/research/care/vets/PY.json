@@ -46,7 +46,10 @@
       "small_animals": true,
       "source_url": "https://infonegocios.com.py/y-ademas/atencion-de-lujo-nantes-hospital-veterinario-prepara-una-moderna-nueva-sede-para-2025",
       "checked": "2026-11-15",
-      "note": "InfoNegocios article (business press, not the clinic's own page): 'trabaja las 24 horas en todos sus servicios', quote 'abierto las 24 horas'. Address/phones from the same article; address and phone (021) 661-953 also in ABC 2020 list. Own site not found/opened; Instagram not openable (PROVENANCE_REQUIRED). Article (2022) announces a new building for 2025; address may have changed."
+      "note": "InfoNegocios article (business press, not the clinic's own page): 'trabaja las 24 horas en todos sus servicios', quote 'abierto las 24 horas'. Address/phones from the same article; address and phone (021) 661-953 also in ABC 2020 list. Own site not found/opened; Instagram not openable (PROVENANCE_REQUIRED). Article (2022) announces a new building for 2025; address may have changed.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę we wszystkich usługach; nie trzeba dzwonić przed wizytą."
+      }
     },
     {
       "kind": "clinic",
@@ -60,7 +63,10 @@
       "small_animals": true,
       "source_url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
       "checked": "2026-11-15",
-      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published. 'Para atención o urgencias llamar al (021) 554 957.' No 24 h statement."
+      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published. 'Para atención o urgencias llamar al (021) 554 957.' No 24 h statement.",
+      "duty_i18n": {
+        "pl": "W sprawie opieki lub nagłych przypadków zadzwoń do przychodni."
+      }
     },
     {
       "kind": "clinic",
@@ -87,7 +93,10 @@
       "small_animals": true,
       "source_url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
       "checked": "2026-11-15",
-      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published."
+      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published.",
+      "duty_i18n": {
+        "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–17:30."
+      }
     },
     {
       "kind": "clinic",
@@ -101,7 +110,10 @@
       "small_animals": true,
       "source_url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
       "checked": "2026-11-15",
-      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published."
+      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published.",
+      "duty_i18n": {
+        "pl": "Pon.–sob. 8:00–17:00."
+      }
     },
     {
       "kind": "clinic",
@@ -128,7 +140,10 @@
       "small_animals": true,
       "source_url": "https://www.abc.com.py/nacionales/2020/09/13/veterinarias-para-atender-a-tus-mascotas/",
       "checked": "2026-11-15",
-      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published."
+      "note": "From ABC Color article of 2020-09-13 (newspaper, not the clinic's own page); contact data may be outdated; no website published.",
+      "duty_i18n": {
+        "pl": "Pon.–sob. 8:00–12:00 i 13:00–17:00."
+      }
     }
   ],
   "notes": "Only 7 entries, 1 with 24 h (Nantes), from press articles - no clinic's own site could be opened. WebFetch only allows URLs surfaced by search; search engine returned almost no Paraguayan clinic sites. Blocked (PROVENANCE_REQUIRED): fcv.una.py, nantes.com.py guess, Nantes Instagram, gvetweb.com/asispetpy (Asispet: Luque + Lambaré, 24 h per article, needs phone/address). ip.gov.py article fetch errored. Not found: Colegio de Medicos Veterinarios del Paraguay site, SENACSA clinic list, duty rota, animal poison line. Nothing for Ciudad del Este, Encarnación, San Lorenzo, Villa Rica, Pedro Juan Caballero. ABC 2020 entries should be re-verified against own pages."

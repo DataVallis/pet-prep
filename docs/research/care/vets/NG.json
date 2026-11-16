@@ -36,12 +36,15 @@
       "region": "Lagos",
       "phone": "+234 902 851 1038",
       "emergency_24h": true,
-      "duty": "Mobile home-visit vet for dogs and cats; open 24 hours, 7 days a week, including emergencies. Listed areas: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
+      "duty": "Mobile home-visit vet for dogs and cats; open 24 hours, 7 days a week, including emergencies. Areas served: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
       "small_animals": true,
       "url": "https://doorstep-vet-lagos.lovable.app/",
       "source_url": "https://doorstep-vet-lagos.lovable.app/ambulatory",
       "checked": "2026-11-15",
-      "note": "Page quote: 'Open 24 hours, 7 days a week, including emergencies.' Phone 09028511038, WhatsApp 08153312813. No street address; site is a builder-hosted page (lovable.app), coverage 'anywhere in Lagos' vs five listed areas is unclear. Independent check 2026-11-15: all details and the 24 h claim re-confirmed on /ambulatory."
+      "note": "Page quote: 'Open 24 hours, 7 days a week, including emergencies.' Phone 09028511038, WhatsApp 08153312813. No street address; site is a builder-hosted page (lovable.app), coverage 'anywhere in Lagos' vs five listed areas is unclear. Independent check 2026-11-15: all details and the 24 h claim re-confirmed on /ambulatory.",
+      "duty_i18n": {
+        "pl": "Mobilny weterynarz z wizytami domowymi dla psów i kotów; czynny całodobowo, 7 dni w tygodniu, także w nagłych przypadkach. Obsługiwane okolice: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun."
+      }
     },
     {
       "kind": "clinic",
@@ -56,7 +59,10 @@
       "url": "https://doctorvettreatanimalclinic.netlify.app/",
       "source_url": "https://doctorvettreatanimalclinic.netlify.app/",
       "checked": "2026-11-15",
-      "note": "WhatsApp 08084379459. Page mentions emergency care but no 24 h claim. Builder-hosted site (netlify.app)."
+      "note": "WhatsApp 08084379459. Page mentions emergency care but no 24 h claim. Builder-hosted site (netlify.app).",
+      "duty_i18n": {
+        "pl": "Pon.–sob. 08:00–18:00; w niedzielę na życzenie. W nagłych przypadkach zadzwoń przed wizytą."
+      }
     },
     {
       "kind": "clinic",
@@ -70,7 +76,10 @@
       "url": "https://vth.abu.edu.ng/",
       "source_url": "https://vth.abu.edu.ng/history",
       "checked": "2026-11-15",
-      "note": "Page gives phone and vth@abu.edu.ng only; no address, hours, small-animal or emergency statement (small_animals inferred from 'primary and tertiary animal healthcare')."
+      "note": "Page gives phone and vth@abu.edu.ng only; no address, hours, small-animal or emergency statement (small_animals inferred from 'primary and tertiary animal healthcare').",
+      "duty_i18n": {
+        "pl": "Uniwersytecki szpital dydaktyczny i referencyjny dla zwierząt; zadzwoń przed wizytą, aby poznać godziny."
+      }
     },
     {
       "kind": "clinic",
@@ -83,7 +92,10 @@
       "url": "https://vet.ui.edu.ng/node/72",
       "source_url": "https://vet.ui.edu.ng/node/72",
       "checked": "2026-11-15",
-      "note": "Page says services for pets, food animals and wild animals; contact section empty (contact page vet.ui.edu.ng/contactvettea blocked by provenance); no phone, hours or emergency statement."
+      "note": "Page says services for pets, food animals and wild animals; contact section empty (contact page vet.ui.edu.ng/contactvettea blocked by provenance); no phone, hours or emergency statement.",
+      "duty_i18n": {
+        "pl": "Uniwersytecki szpital dydaktyczny dla zwierząt domowych, gospodarskich i dzikich; zadzwoń przed wizytą, aby poznać godziny."
+      }
     },
     {
       "kind": "clinic",
@@ -97,7 +109,10 @@
       "url": "https://unilorin.edu.ng/?p=10935",
       "source_url": "https://unilorin.edu.ng/?p=10935",
       "checked": "2026-11-15",
-      "note": "No phone, hours or emergency statement on the opened page."
+      "note": "No phone, hours or emergency statement on the opened page.",
+      "duty_i18n": {
+        "pl": "Przychodnia dla małych zwierząt z oddziałem intensywnej terapii i oddziałem chorób zakaźnych; zadzwoń przed wizytą, aby poznać godziny."
+      }
     }
   ],
   "notes": "Run 2026-11-15. Very limited usable sources. WebFetch PROVENANCE_REQUIRED blocked vcnngr.gov.ng (Veterinary Council of Nigeria) and vet.ui.edu.ng/contactvettea; not retried. NVMA, UNN, UNAAB, Kano/Enugu/Port Harcourt/Benin/Jos/Calabar clinics: searches returned only aggregators (finelib, connectciti, businesslist, goafricaonline, jiji, starofservice, myguidenigeria), deliberately not used as sources. Leads not opened: Crimson Veterinary Centre Ibadan (insideoyo.com news article), Zoba Veterinary Hospital (myguidenigeria listing), Pets-Choice, Damos, Supervet Clinic and Surgery, Innova Veterinary Hospital, May Veterinary Clinic, Ritab Vet Clinics (Lagos), Vet Planet, Rapkin, Crystal Veterinary Services, Marshall Veterinary Clinic (Port Harcourt). FurryPaws Veterinary Healthcare (Kabusa, Abuja; austineasika.github.io/FurryPawsVetHealthcare/) opened but dropped: no phone listed (only WhatsApp link, +234 811 016 3833 implied), no hours, no 24 h claim, looks like a demo page. No duty rota and no animal poison line found."

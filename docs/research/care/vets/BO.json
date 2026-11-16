@@ -42,12 +42,15 @@
       "address": "Avenida El Trompillo # 300",
       "phone": "3-536325 760-09980",
       "emergency_24h": true,
-      "duty": "Says it provides 24-hour care for all emergencies; call ahead.",
+      "duty": "24-hour care for all emergencies; call ahead.",
       "small_animals": true,
       "url": "https://veterinarialassie.com/",
       "source_url": "https://veterinarialassie.com/",
       "checked": "2026-11-13",
-      "note": "Own home page: 'Brindamos atencion 24hrs para todas las emergencias.' Phone string 'Telf: 3-536325 760-09980' copied as published (landline + mobile). No opening hours listed."
+      "note": "Own home page: 'Brindamos atencion 24hrs para todas las emergencias.' Phone string 'Telf: 3-536325 760-09980' copied as published (landline + mobile). No opening hours listed.",
+      "duty_i18n": {
+        "pl": "Całodobowa opieka we wszystkich nagłych przypadkach; zadzwoń wcześniej."
+      }
     },
     {
       "kind": "clinic",
@@ -62,7 +65,10 @@
       "url": "https://veterinariabuddy.com/",
       "source_url": "https://veterinariabuddy.com/",
       "checked": "2026-11-13",
-      "note": "Own home page: 'Emergencias 24 horas' and 'Atencion de urgencias disponible las 24 horas'. Landline 57715717, WhatsApp +591 57715717 as published."
+      "note": "Own home page: 'Emergencias 24 horas' and 'Atencion de urgencias disponible las 24 horas'. Landline 57715717, WhatsApp +591 57715717 as published.",
+      "duty_i18n": {
+        "pl": "Otwarte pon.–pt. 8:00–19:00 i sob. 8:00–15:00; pilna pomoc całodobowo."
+      }
     },
     {
       "kind": "clinic",
@@ -72,12 +78,15 @@
       "address": "Av. Japon esq. Paragua #3045, Barrio Cumavi",
       "phone": "+591 3-346-1466",
       "emergency_24h": false,
-      "duty": "Open daily 8:00-19:00; no 24-hour service listed.",
+      "duty": "Open daily 8:00-19:00.",
       "small_animals": true,
       "url": "https://veterinariauniverso.com/en",
       "source_url": "https://veterinariauniverso.com/en",
       "checked": "2026-11-13",
-      "note": "Own page; WhatsApp +591 721-96500. Neighbourhood spelled Cumavi/Cunavi on the page."
+      "note": "Own page; WhatsApp +591 721-96500. Neighbourhood spelled Cumavi/Cunavi on the page.",
+      "duty_i18n": {
+        "pl": "Otwarte codziennie 8:00–19:00."
+      }
     },
     {
       "kind": "clinic",
@@ -92,7 +101,10 @@
       "url": "https://vetrod.com/",
       "source_url": "https://vetrod.com/",
       "checked": "2026-11-13",
-      "note": "Own page; WhatsApp 71460528. No 24 h claim."
+      "note": "Own page; WhatsApp 71460528. No 24 h claim.",
+      "duty_i18n": {
+        "pl": "Otwarte pon.–sob. 8:00–20:00, niedz. i święta państwowe 8:00–13:00."
+      }
     }
   ],
   "notes": "Thin run: Bolivian clinics mostly publish on Facebook only. Refused: bagheeravet.com (robots_disallowed), facebook.com/EmervetBo (robots_disallowed), crovethospitalveterinario.com (client_error), vetshunter.com (bot wall). WebFetch also refused (provenance) www.uagrm.edu.bo, veterinariasudamericana.com and the NaturalVet negocio.site page, which were not circumvented. Not found: Colegio de Medicos Veterinarios Zootecnistas directory (no official site surfaced), SENASAG list, university clinic pages (UAGRM, UMSA, UMSS), duty rota (veterinario de turno), animal poison line (none found). Not added for lack of phone/url on an opened page: Clinica Veterinaria Municipal Cochabamba (La Chimba, Mon-Fri 8-16). Leads left to verify: Emervet (Santa Cruz), EVET Emergencias Veterinarias and Umevet (Cochabamba), Urgencias Veterinarias (La Paz), Veterinaria La Quinta, Animalia, San Roque, Vet-Salud, Animal House (Santa Cruz), Clinica Veterinaria Sudamericana (veterinariasudamericana.com), Bagheera (Cochabamba). Sucre, Tarija, Oruro, Uyuni: nothing found."

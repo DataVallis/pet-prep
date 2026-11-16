@@ -116,7 +116,8 @@
         "es": "Horario habitual lun–vie 8:00–18:00 h; servicio de urgencias entre semana 18:00–8:00 h y todo el día en fines de semana y festivos.",
         "it": "Orari ordinari lun–ven 08:00–18:00; pronto soccorso nei giorni feriali 18:00–08:00 e tutto il giorno nei weekend e nei festivi.",
         "pt": "Horário normal de segunda a sexta 8h00–18h00; urgências em dias úteis 18h00–8h00 e todo o dia aos fins de semana e feriados.",
-        "nl": "Reguliere uren ma–vr 8.00–18.00 uur; spoeddienst op werkdagen 18.00–8.00 uur en de hele dag in het weekend en op feestdagen."
+        "nl": "Reguliere uren ma–vr 8.00–18.00 uur; spoeddienst op werkdagen 18.00–8.00 uur en de hele dag in het weekend en op feestdagen.",
+        "pl": "Zwykłe godziny pon.–pt. 08:00–18:00; pogotowie w dni robocze 18:00–08:00 oraz przez całą dobę w weekendy i święta."
       },
       "small_animals": true,
       "url": "https://vet-klin-erika.cz/",
@@ -142,7 +143,8 @@
         "es": "Abierto sin interrupción, también atención ambulatoria; horario habitual lun–vie 8:00–20:00 h, urgencias fuera de horario y en fines de semana con recargo.",
         "it": "Aperto senza interruzione, ambulatorio incluso; orari ordinari lun–ven 08:00–20:00, pronto soccorso fuori orario e nei weekend con supplemento.",
         "pt": "Aberto sem interrupção, incluindo consultas; horário normal de segunda a sexta 8h00–20h00, urgências fora do horário e aos fins de semana com suplemento.",
-        "nl": "Non-stop open, ook voor poliklinische zorg; reguliere uren ma–vr 8.00–20.00 uur, spoed buiten die uren en in het weekend met toeslag."
+        "nl": "Non-stop open, ook voor poliklinische zorg; reguliere uren ma–vr 8.00–20.00 uur, spoed buiten die uren en in het weekend met toeslag.",
+        "pl": "Czynne bez przerwy, także ambulatorium; zwykłe godziny pon.–pt. 08:00–20:00, poza nimi i w weekendy pogotowie z dopłatą."
       },
       "small_animals": true,
       "url": "https://www.veterinarni-klinika.net/",
@@ -168,7 +170,8 @@
         "es": "Servicio de urgencias nocturno y de fin de semana, las 24 horas, los 365 días del año.",
         "it": "Pronto soccorso notturno e nei weekend, 24 ore su 24, 365 giorni all'anno.",
         "pt": "Urgências noturnas e de fim de semana, 24 h/24, 365 dias por ano.",
-        "nl": "Spoeddienst 's nachts en in het weekend, 24 uur per dag, 365 dagen per jaar."
+        "nl": "Spoeddienst 's nachts en in het weekend, 24 uur per dag, 365 dagen per jaar.",
+        "pl": "Nocne i weekendowe pogotowie, 24 godziny na dobę, 365 dni w roku."
       },
       "small_animals": true,
       "url": "https://www.aavet.cz/",
@@ -194,7 +197,8 @@
         "es": "Funcionamiento ininterrumpido; lun–vie 8:00–22:00 h, sáb–dom 8:00–20:00 h; el resto del tiempo, servicio de urgencias con recargo, normalmente con un solo veterinario por la noche: llama antes.",
         "it": "Attivo senza interruzione; lun–ven 08:00–22:00, sab–dom 08:00–20:00, negli altri orari pronto soccorso con supplemento, di solito un solo veterinario di notte: telefonare in anticipo.",
         "pt": "Funcionamento ininterrupto; segunda a sexta 8h00–22h00, sábado e domingo 8h00–20h00, nas restantes horas serviço de urgência com suplemento, normalmente com um veterinário à noite – liga antes.",
-        "nl": "Non-stop open; ma–vr 8.00–22.00 uur, za–zo 8.00–20.00 uur, op andere tijden spoeddienst met toeslag, meestal één dierenarts 's nachts - bel vooraf."
+        "nl": "Non-stop open; ma–vr 8.00–22.00 uur, za–zo 8.00–20.00 uur, op andere tijden spoeddienst met toeslag, meestal één dierenarts 's nachts - bel vooraf.",
+        "pl": "Czynne bez przerwy; pon.–pt. 08:00–22:00, sob.–niedz. 08:00–20:00, w pozostałych godzinach pogotowie z dopłatą, w nocy zwykle jeden weterynarz – zadzwoń przed wizytą."
       },
       "small_animals": true,
       "url": "https://www.vetnemo.cz/",
@@ -220,7 +224,8 @@
         "es": "Urgencias entre semana 20:00–8:30 h y en fines de semana y festivos; entre las 23:30 y las 8:30 h solo se atiende a pacientes previo acuerdo telefónico (ver también Pet-Medic 724 184 840).",
         "it": "Pronto soccorso nei giorni feriali 20:00–08:30 e nei weekend/festivi; tra le 23:30 e le 08:30 pazienti solo previo accordo telefonico (vedi anche Pet-Medic 724 184 840).",
         "pt": "Urgências em dias úteis 20h00–8h30 e aos fins de semana/feriados; entre as 23h30 e as 8h30 só se atendem animais após acordo telefónico (ver também Pet-Medic 724 184 840).",
-        "nl": "Spoed op werkdagen 20.00–8.30 uur en in het weekend en op feestdagen; tussen 23.30 en 8.30 uur patiënten alleen na telefonische afspraak (zie ook Pet-Medic 724 184 840)."
+        "nl": "Spoed op werkdagen 20.00–8.30 uur en in het weekend en op feestdagen; tussen 23.30 en 8.30 uur patiënten alleen na telefonische afspraak (zie ook Pet-Medic 724 184 840).",
+        "pl": "Pogotowie w dni robocze 20:00–08:30 oraz w weekendy i święta; między 23:30 a 08:30 pacjenci tylko po telefonicznym uzgodnieniu (zobacz też Pet-Medic 724 184 840)."
       },
       "small_animals": true,
       "url": "https://www.medicanima.cz/",
@@ -246,7 +251,8 @@
         "es": "Servicio móvil de urgencias veterinarias (a domicilio), sin interrupción; solicítalo por teléfono.",
         "it": "Pronto soccorso veterinario mobile (interventi a domicilio), senza interruzione; da richiedere per telefono.",
         "pt": "Serviço móvel de urgência veterinária (deslocações), ininterrupto; pedido por telefone.",
-        "nl": "Mobiele dierenspoeddienst (uitrukdienst), non-stop; telefonisch aan te vragen."
+        "nl": "Mobiele dierenspoeddienst (uitrukdienst), non-stop; telefonisch aan te vragen.",
+        "pl": "Mobilne pogotowie weterynaryjne (wyjazdy do pacjentów), bez przerwy; zamówienie telefonicznie."
       },
       "small_animals": true,
       "url": "https://pet-medic.cz/",
@@ -272,7 +278,8 @@
         "es": "Lun–vie 9:00–21:00 h, fines de semana 14:00–20:00 h; fuera de horario, previo acuerdo telefónico; disponible las 24 horas.",
         "it": "Lun–ven 09:00–21:00, weekend 14:00–20:00; fuori orario previo accordo telefonico; disponibile 24 ore su 24.",
         "pt": "Segunda a sexta 9h00–21h00, fins de semana 14h00–20h00; fora do horário por acordo telefónico; disponível 24 h/24.",
-        "nl": "ma–vr 9.00–21.00 uur, weekend 14.00–20.00 uur; buiten deze uren na telefonische afspraak; 24 uur per dag bereikbaar."
+        "nl": "ma–vr 9.00–21.00 uur, weekend 14.00–20.00 uur; buiten deze uren na telefonische afspraak; 24 uur per dag bereikbaar.",
+        "pl": "Pon.–pt. 09:00–21:00, weekendy 14:00–20:00; poza godzinami po telefonicznym uzgodnieniu; dostępne całą dobę."
       },
       "small_animals": true,
       "source_url": "https://www.praha11.cz/cs/mestska-cast/socialni-sluzby-a-zdravotnictvi/zdravotnictvi/veterinarni-pece.html",
@@ -297,7 +304,8 @@
         "es": "Urgencias todos los días 8:00–24:00 h, también fines de semana y festivos; de noche, de 24:00 a 8:00 h, solo a través de Pet-Medic (+420 724 184 840), sin atención a pacientes sin cita por la noche.",
         "it": "Pronto soccorso tutti i giorni 08:00–24:00, weekend e festivi inclusi; di notte 24:00–08:00 solo tramite Pet-Medic (+420 724 184 840), senza accesso diretto di notte.",
         "pt": "Urgências todos os dias 8h00–24h00, incluindo fins de semana e feriados; 24h00–8h00 apenas através do Pet-Medic (+420 724 184 840), sem receção de animais sem aviso prévio.",
-        "nl": "Spoed dagelijks 8.00–24.00 uur, ook in het weekend en op feestdagen; 's nachts 24.00–8.00 uur alleen via Pet-Medic (+420 724 184 840), 's nachts geen patiënten zonder afspraak."
+        "nl": "Spoed dagelijks 8.00–24.00 uur, ook in het weekend en op feestdagen; 's nachts 24.00–8.00 uur alleen via Pet-Medic (+420 724 184 840), 's nachts geen patiënten zonder afspraak.",
+        "pl": "Pogotowie codziennie 08:00–24:00, także w weekendy i święta; w nocy 24:00–08:00 tylko przez Pet-Medic (+420 724 184 840), pacjentów bez zapowiedzi się nie przyjmuje."
       },
       "small_animals": true,
       "url": "https://www.vetcentrum.cz/",
@@ -322,7 +330,8 @@
         "es": "Urgencias entre semana 17:00–9:00 h; en fines de semana y festivos, urgencias sin interrupción.",
         "it": "Pronto soccorso nei giorni feriali 17:00–09:00; nei weekend e nei festivi pronto soccorso senza interruzione.",
         "pt": "Urgências em dias úteis 17h00–9h00; aos fins de semana e feriados urgências sem interrupção.",
-        "nl": "Spoed op werkdagen 17.00–9.00 uur; in het weekend en op feestdagen non-stop spoed."
+        "nl": "Spoed op werkdagen 17.00–9.00 uur; in het weekend en op feestdagen non-stop spoed.",
+        "pl": "Pogotowie w dni robocze 17:00–09:00; w weekendy i święta pogotowie całodobowe."
       },
       "small_animals": true,
       "url": "https://jaggypraha.cz/",
@@ -346,7 +355,8 @@
         "es": "Urgencias entre semana 19:00–8:00 h; fines de semana y festivos 9:00–12:00 y 13:00–8:59 h.",
         "it": "Pronto soccorso nei giorni feriali 19:00–08:00; weekend/festivi 09:00–12:00 e 13:00–08:59.",
         "pt": "Urgências em dias úteis 19h00–8h00; fins de semana/feriados 9h00–12h00 e 13h00–8h59.",
-        "nl": "Spoed op werkdagen 19.00–8.00 uur; weekend/feestdagen 9.00–12.00 en 13.00–8.59 uur."
+        "nl": "Spoed op werkdagen 19.00–8.00 uur; weekend/feestdagen 9.00–12.00 en 13.00–8.59 uur.",
+        "pl": "Pogotowie w dni robocze 19:00–08:00; w weekendy i święta 09:00–12:00 oraz 13:00–08:59."
       },
       "small_animals": true,
       "url": "https://vetnem.cz/",
@@ -372,7 +382,8 @@
         "es": "Urgencias solo en horario ordinario; el servicio de urgencias fuera de horario se ha suspendido (la apertura por la tarde lo sustituye en parte).",
         "it": "Pronto soccorso solo durante il normale orario; il servizio di urgenza fuori orario è stato sospeso (l'apertura serale lo sostituisce in parte).",
         "pt": "Urgências apenas durante o horário normal; o serviço de urgência fora de horas foi descontinuado (o horário alargado ao fim do dia substitui-o em parte).",
-        "nl": "Spoed alleen tijdens reguliere uren; spoeddienst buiten kantooruren stopgezet (avondopenstelling vervangt deze deels)."
+        "nl": "Spoed alleen tijdens reguliere uren; spoeddienst buiten kantooruren stopgezet (avondopenstelling vervangt deze deels).",
+        "pl": "Nagłe przypadki tylko w zwykłych godzinach pracy; pogotowie poza godzinami zlikwidowano (częściowo zastępuje je wieczorne otwarcie)."
       },
       "small_animals": true,
       "url": "https://www.weilovna.cz/",
@@ -397,7 +408,8 @@
         "es": "Urgencias de perros y gatos sin interrupción; llama a la línea de coordinación.",
         "it": "Pronto soccorso per cani e gatti senza interruzione; chiamare la linea di smistamento.",
         "pt": "Urgências ininterruptas para cães e gatos; liga para a linha de despacho.",
-        "nl": "Non-stop spoed voor honden en katten; bel de meldkamer."
+        "nl": "Non-stop spoed voor honden en katten; bel de meldkamer.",
+        "pl": "Całodobowe pogotowie dla psów i kotów; zadzwoń na linię dyspozytorską."
       },
       "small_animals": true,
       "url": "https://www.zvireplus.cz/",
@@ -422,7 +434,8 @@
         "es": "Servicio de urgencias para Brno y alrededores, los 365 días del año.",
         "it": "Pronto soccorso per Brno e dintorni, 365 giorni all'anno.",
         "pt": "Serviço de urgência para Brno e arredores, 365 dias por ano.",
-        "nl": "Spoeddienst voor Brno en omgeving, 365 dagen per jaar."
+        "nl": "Spoeddienst voor Brno en omgeving, 365 dagen per jaar.",
+        "pl": "Pogotowie dla Brna i okolic, 365 dni w roku."
       },
       "small_animals": true,
       "url": "https://www.veterina-seman.cz/",
@@ -448,7 +461,8 @@
         "es": "Urgencias las 24 horas con veterinario en el centro; llama antes de ir.",
         "it": "Pronto soccorso 24 ore su 24 con veterinario in sede; telefonare prima di arrivare.",
         "pt": "Urgências 24 horas por dia com veterinário no local; telefona antes de chegar.",
-        "nl": "Spoed de klok rond met een dierenarts ter plaatse; bel voordat je komt."
+        "nl": "Spoed de klok rond met een dierenarts ter plaatse; bel voordat je komt.",
+        "pl": "Całodobowe pogotowie z weterynarzem na miejscu; zadzwoń przed przyjazdem."
       },
       "small_animals": true,
       "url": "http://hosek-vet.cz/",
@@ -474,7 +488,8 @@
         "es": "Clínicas entre semana 8:00–15:00/15:30 h; urgencias entre semana de 15:00/15:30 a 8:00 h y todo el día en fines de semana y festivos. Coordinación +420 541 562 392 (8:00–20:00 h), UCI +420 607 055 474 (20:00–8:00 h), urgencias de medicina interna +420 724 706 366, urgencias de cirugía +420 724 706 320.",
         "it": "Cliniche nei giorni feriali 08:00–15:00/15:30; pronto soccorso nei giorni feriali 15:00/15:30–08:00 e tutto il giorno nei weekend/festivi. Smistamento +420 541 562 392 (08–20), terapia intensiva +420 607 055 474 (20–08), urgenze di medicina interna +420 724 706 366, urgenze chirurgiche +420 724 706 320.",
         "pt": "Clínicas em dias úteis 8h00–15h00/15h30; urgências em dias úteis 15h00/15h30–8h00 e todo o dia aos fins de semana/feriados. Despacho +420 541 562 392 (8h00–20h00), cuidados intensivos +420 607 055 474 (20h00–8h00), urgências de medicina interna +420 724 706 366, urgências de cirurgia +420 724 706 320.",
-        "nl": "Klinieken op werkdagen 8.00–15.00/15.30 uur; spoed op werkdagen 15.00/15.30–8.00 uur en de hele dag in het weekend en op feestdagen. Meldkamer +420 541 562 392 (08–20), IC +420 607 055 474 (20–08), spoed interne geneeskunde +420 724 706 366, spoed chirurgie +420 724 706 320."
+        "nl": "Klinieken op werkdagen 8.00–15.00/15.30 uur; spoed op werkdagen 15.00/15.30–8.00 uur en de hele dag in het weekend en op feestdagen. Meldkamer +420 541 562 392 (08–20), IC +420 607 055 474 (20–08), spoed interne geneeskunde +420 724 706 366, spoed chirurgie +420 724 706 320.",
+        "pl": "Przychodnie w dni robocze 08:00–15:00/15:30; pogotowie w dni robocze 15:00/15:30–08:00 oraz przez całą dobę w weekendy i święta. Dyspozytornia +420 541 562 392 (08–20), OIOM +420 607 055 474 (20–08), pogotowie internistyczne +420 724 706 366, pogotowie chirurgiczne +420 724 706 320."
       },
       "small_animals": true,
       "url": "https://fvl.vetuni.cz/",
@@ -500,7 +515,8 @@
         "es": "Urgencias entre semana 17:00–9:00 h; en fines de semana y festivos, urgencias sin interrupción; recargo de 3300 Kč.",
         "it": "Pronto soccorso nei giorni feriali 17:00–09:00; nei weekend e nei festivi pronto soccorso senza interruzione; supplemento 3300 Kč.",
         "pt": "Urgências em dias úteis 17h00–9h00; aos fins de semana e feriados urgências sem interrupção; suplemento de 3300 Kč.",
-        "nl": "Spoed op werkdagen 17.00–9.00 uur; in het weekend en op feestdagen non-stop spoed; toeslag 3300 Kč."
+        "nl": "Spoed op werkdagen 17.00–9.00 uur; in het weekend en op feestdagen non-stop spoed; toeslag 3300 Kč.",
+        "pl": "Pogotowie w dni robocze 17:00–09:00; w weekendy i święta pogotowie całodobowe; dopłata 3300 Kč."
       },
       "small_animals": true,
       "url": "https://jaggy.cz/",
@@ -525,7 +541,8 @@
         "es": "Socio de urgencias nocturnas de las clínicas de la región de Zlín; móvil de urgencias +420 602 835 564.",
         "it": "Partner per le urgenze notturne delle cliniche della regione di Zlín; cellulare urgenze +420 602 835 564.",
         "pt": "Parceiro de urgências noturnas das clínicas da região de Zlín; telemóvel de urgência +420 602 835 564.",
-        "nl": "Partner voor nachtspoed van klinieken in de regio Zlín; spoednummer (mobiel) +420 602 835 564."
+        "nl": "Partner voor nachtspoed van klinieken in de regio Zlín; spoednummer (mobiel) +420 602 835 564.",
+        "pl": "Nocny partner pogotowia przychodni z regionu zlińskiego; telefon alarmowy +420 602 835 564."
       },
       "small_animals": true,
       "url": "https://www.veterinar-vyskov.cz/",
@@ -550,7 +567,8 @@
         "es": "Urgencias entre semana 18:00–20:00 h, sáb 11:00–20:00 h, dom y festivos 8:00–20:00 h; sin urgencias nocturnas (deriva a VyVet Vyškov).",
         "it": "Pronto soccorso nei giorni feriali 18:00–20:00, sab 11:00–20:00, dom/festivi 08:00–20:00; nessun pronto soccorso notturno (indirizza a VyVet Vyškov).",
         "pt": "Urgências em dias úteis 18h00–20h00, sábado 11h00–20h00, domingo/feriados 8h00–20h00; sem urgências noturnas (encaminha para VyVet Vyškov).",
-        "nl": "Spoed op werkdagen 18.00–20.00 uur, za 11.00–20.00 uur, zo/feestdagen 8.00–20.00 uur; geen nachtspoed (verwijst naar VyVet Vyškov)."
+        "nl": "Spoed op werkdagen 18.00–20.00 uur, za 11.00–20.00 uur, zo/feestdagen 8.00–20.00 uur; geen nachtspoed (verwijst naar VyVet Vyškov).",
+        "pl": "Pogotowie w dni robocze 18:00–20:00, sob. 11:00–20:00, niedz. i święta 08:00–20:00; brak nocnego pogotowia (kieruje do VyVet Vyškov)."
       },
       "small_animals": true,
       "url": "https://www.veterina-slusovice.cz/",
@@ -576,7 +594,8 @@
         "es": "Lun–vie 8:00–20:00 h, sáb 8:00–14:00 h; fuera de horario: clínica asociada VyVet Vyškov.",
         "it": "Lun–ven 08:00–20:00, sab 08:00–14:00; fuori orario: partner VyVet Vyškov.",
         "pt": "Segunda a sexta 8h00–20h00, sábado 8h00–14h00; fora do horário: clínica parceira VyVet Vyškov.",
-        "nl": "ma–vr 8.00–20.00 uur, za 8.00–14.00 uur; buiten deze uren: partner VyVet Vyškov."
+        "nl": "ma–vr 8.00–20.00 uur, za 8.00–14.00 uur; buiten deze uren: partner VyVet Vyškov.",
+        "pl": "Pon.–pt. 08:00–20:00, sob. 08:00–14:00; poza godzinami: partner VyVet Vyškov."
       },
       "small_animals": true,
       "url": "https://www.medipet.cz/",
@@ -601,7 +620,8 @@
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–12:00 h, dom 16:00–18:00 h; festivos cerrado, con línea de urgencias +420 724 922 955.",
         "it": "Lun–ven 08:00–18:00, sab 09:00–12:00, dom 16:00–18:00; chiuso nei festivi, con linea urgenze +420 724 922 955.",
         "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–12h00, domingo 16h00–18h00; encerrado nos feriados, com linha de urgência +420 724 922 955.",
-        "nl": "ma–vr 8.00–18.00 uur, za 9.00–12.00 uur, zo 16.00–18.00 uur; op feestdagen gesloten met spoedlijn +420 724 922 955."
+        "nl": "ma–vr 8.00–18.00 uur, za 9.00–12.00 uur, zo 16.00–18.00 uur; op feestdagen gesloten met spoedlijn +420 724 922 955.",
+        "pl": "Pon.–pt. 08:00–18:00, sob. 09:00–12:00, niedz. 16:00–18:00; w święta nieczynne, linia alarmowa +420 724 922 955."
       },
       "small_animals": true,
       "url": "https://www.veterina-lazy.cz/",
@@ -625,7 +645,8 @@
         "es": "Urgencias todos los días 6:00–24:00 h, también fines de semana y festivos; de 24:00 a 6:00 h solo previo acuerdo telefónico.",
         "it": "Pronto soccorso tutti i giorni 06:00–24:00, weekend e festivi inclusi; 24:00–06:00 solo previo accordo telefonico.",
         "pt": "Urgências todos os dias 6h00–24h00, incluindo fins de semana/feriados; 24h00–6h00 apenas após acordo telefónico.",
-        "nl": "Spoed dagelijks 6.00–24.00 uur, ook in het weekend en op feestdagen; 24.00–6.00 uur alleen na telefonische afspraak."
+        "nl": "Spoed dagelijks 6.00–24.00 uur, ook in het weekend en op feestdagen; 24.00–6.00 uur alleen na telefonische afspraak.",
+        "pl": "Pogotowie codziennie 06:00–24:00, także w weekendy i święta; 24:00–06:00 tylko po telefonicznym uzgodnieniu."
       },
       "small_animals": true,
       "url": "https://www.veterina-olomouc.cz/",
@@ -651,7 +672,8 @@
         "es": "Urgencias para casos agudos fuera de horario hasta las 23:00 h, previo acuerdo telefónico.",
         "it": "Pronto soccorso per casi acuti fuori orario fino alle 23:00, previo accordo telefonico.",
         "pt": "Urgências para casos agudos fora do horário até às 23h00, após acordo telefónico.",
-        "nl": "Spoed voor acute gevallen buiten kantooruren tot 23.00 uur, na telefonische afspraak."
+        "nl": "Spoed voor acute gevallen buiten kantooruren tot 23.00 uur, na telefonische afspraak.",
+        "pl": "Pogotowie w ostrych przypadkach poza godzinami pracy do 23:00, po telefonicznym uzgodnieniu."
       },
       "small_animals": true,
       "url": "https://www.veterinatesar.cz/",
@@ -676,7 +698,8 @@
         "es": "Funcionamiento continuo las 24 horas, los 7 días de la semana.",
         "it": "Attivo senza interruzione, 24 ore su 24, 7 giorni su 7.",
         "pt": "Funcionamento contínuo, 24 horas por dia, 7 dias por semana.",
-        "nl": "Continu open, 24 uur per dag, 7 dagen per week."
+        "nl": "Continu open, 24 uur per dag, 7 dagen per week.",
+        "pl": "Praca ciągła 24 godziny na dobę, 7 dni w tygodniu."
       },
       "small_animals": true,
       "source_url": "https://www.veterinagottwaldova.cz/pohotovost",
@@ -701,7 +724,8 @@
         "es": "Teléfono de urgencias +420 603 485 093; lun–vie 8:00–18:00 h, sáb/dom/festivos 9:00–12:00 h.",
         "it": "Telefono urgenze +420 603 485 093; lun–ven 08:00–18:00, sab/dom/festivi 09:00–12:00.",
         "pt": "Telefone de urgência +420 603 485 093; segunda a sexta 8h00–18h00, sábado/domingo/feriados 9h00–12h00.",
-        "nl": "Spoednummer +420 603 485 093; ma–vr 8.00–18.00 uur, za/zo/feestdagen 9.00–12.00 uur."
+        "nl": "Spoednummer +420 603 485 093; ma–vr 8.00–18.00 uur, za/zo/feestdagen 9.00–12.00 uur.",
+        "pl": "Telefon alarmowy +420 603 485 093; pon.–pt. 08:00–18:00, sob., niedz. i święta 09:00–12:00."
       },
       "small_animals": true,
       "url": "https://www.vetcentrum.net/",
@@ -726,7 +750,8 @@
         "es": "Línea telefónica de urgencias sin interrupción; clínica +420 482 770 371.",
         "it": "Linea telefonica di pronto soccorso senza interruzione; clinica +420 482 770 371.",
         "pt": "Linha telefónica de urgência ininterrupta; clínica +420 482 770 371.",
-        "nl": "Non-stop telefonische spoedlijn; kliniek +420 482 770 371."
+        "nl": "Non-stop telefonische spoedlijn; kliniek +420 482 770 371.",
+        "pl": "Całodobowa telefoniczna linia alarmowa; przychodnia +420 482 770 371."
       },
       "small_animals": true,
       "url": "https://veterina-liberec.cz/",
@@ -749,7 +774,8 @@
         "es": "Llama para confirmar el horario y el servicio de urgencias.",
         "it": "Telefonare per confermare orari e pronto soccorso.",
         "pt": "Liga para confirmar o horário e o serviço de urgência.",
-        "nl": "Bel om de openingstijden en de spoeddienst te bevestigen."
+        "nl": "Bel om de openingstijden en de spoeddienst te bevestigen.",
+        "pl": "Zadzwoń, by potwierdzić godziny i dostępność pogotowia."
       },
       "small_animals": true,
       "url": "https://veterinaruzodol.cz/",
@@ -776,7 +802,8 @@
         "es": "Urgencias entre semana 20:00–8:00 h; fines de semana y festivos SIN INTERRUPCIÓN. Llama antes de ir.",
         "it": "Pronto soccorso nei giorni feriali 20:00–08:00; weekend e festivi SENZA INTERRUZIONE. Telefonare prima di venire.",
         "pt": "Urgências em dias úteis 20h00–8h00; fins de semana e feriados SEM INTERRUPÇÃO. Liga antes de vires.",
-        "nl": "Spoed op werkdagen 20.00–8.00 uur; in het weekend en op feestdagen NON-STOP. Bel voordat je komt."
+        "nl": "Spoed op werkdagen 20.00–8.00 uur; in het weekend en op feestdagen NON-STOP. Bel voordat je komt.",
+        "pl": "Pogotowie w dni robocze 20:00–08:00; w weekendy i święta CAŁODOBOWO. Zadzwoń przed przyjazdem."
       },
       "small_animals": true,
       "url": "https://www.veterinahk.cz/",
@@ -802,7 +829,8 @@
         "es": "Fuera del horario de apertura la clínica funciona en modo urgencias con veterinario en el centro; entre semana 18:00–8:00 h, fines de semana y festivos.",
         "it": "Fuori dall'orario di apertura la clinica è in modalità urgenza con veterinario in sede; giorni feriali 18:00–08:00, weekend/festivi.",
         "pt": "Fora do horário de atendimento, a clínica funciona em modo de urgência, com veterinário no local; em dias úteis 18h00–8h00, fins de semana/feriados.",
-        "nl": "Buiten openingstijden werkt de kliniek als spoeddienst met een dierenarts ter plaatse; op werkdagen 18.00–8.00 uur, weekend en feestdagen."
+        "nl": "Buiten openingstijden werkt de kliniek als spoeddienst met een dierenarts ter plaatse; op werkdagen 18.00–8.00 uur, weekend en feestdagen.",
+        "pl": "Poza godzinami pracy przychodnia działa w trybie pogotowia z weterynarzem na miejscu; w dni robocze 18:00–08:00, w weekendy i święta."
       },
       "small_animals": true,
       "url": "https://hkvet.cz/",
@@ -828,7 +856,8 @@
         "es": "Urgencias las 24 horas por teléfono; el veterinario (y la enfermera) acude a la clínica en casos urgentes, sin presencia continua en el centro. Horario lun–vie 8:00–17:00 h, sáb 8:00–12:00 h, dom 16:00–19:00 h.",
         "it": "Pronto soccorso telefonico 24 ore su 24; per i casi urgenti il veterinario (e l'infermiere) raggiunge la clinica: nessuna presenza continua in sede. Orari lun–ven 08–17, sab 08–12, dom 16–19.",
         "pt": "Urgências por telefone 24 h/24; o veterinário (e o enfermeiro) desloca-se à clínica nos casos urgentes – sem funcionamento contínuo no local. Horário: segunda a sexta 8h00–17h00, sábado 8h00–12h00, domingo 16h00–19h00.",
-        "nl": "Telefonische spoed 24 uur per dag; de dierenarts (en assistent) komt bij dringende gevallen naar de kliniek - geen continue bezetting ter plaatse. Openingstijden ma–vr 08–17, za 08–12, zo 16–19 uur."
+        "nl": "Telefonische spoed 24 uur per dag; de dierenarts (en assistent) komt bij dringende gevallen naar de kliniek - geen continue bezetting ter plaatse. Openingstijden ma–vr 08–17, za 08–12, zo 16–19 uur.",
+        "pl": "Całodobowe pogotowie telefoniczne; weterynarz (i pielęgniarka) przyjeżdża do przychodni w pilnych przypadkach – brak ciągłego dyżuru na miejscu. Godziny pon.–pt. 08–17, sob. 08–12, niedz. 16–19."
       },
       "small_animals": true,
       "url": "https://www.veterinatrutnov.cz/",
@@ -854,7 +883,8 @@
         "es": "Urgencias sin interrupción en la línea móvil; lun–vie 7:00–19:00 h, fines de semana y festivos 7:00–8:00 y 13:00–15:00 h.",
         "it": "Pronto soccorso senza interruzione sulla linea mobile; lun–ven 07:00–19:00, weekend/festivi 07:00–08:00 e 13:00–15:00.",
         "pt": "Urgências ininterruptas no telemóvel; segunda a sexta 7h00–19h00, fins de semana/feriados 7h00–8h00 e 13h00–15h00.",
-        "nl": "Spoeddienst de klok rond via de mobiele lijn; ma–vr 07.00–19.00 uur, weekenden/feestdagen 07.00–08.00 en 13.00–15.00 uur."
+        "nl": "Spoeddienst de klok rond via de mobiele lijn; ma–vr 07.00–19.00 uur, weekenden/feestdagen 07.00–08.00 en 13.00–15.00 uur.",
+        "pl": "Całodobowe pogotowie pod numerem komórkowym; pon.–pt. 07:00–19:00, weekendy i święta 07:00–08:00 oraz 13:00–15:00."
       },
       "small_animals": true,
       "url": "https://www.veterinarsro.cz/",
@@ -880,7 +910,8 @@
         "es": "Sin servicio propio de urgencias; fuera de horario, Horská veterinární klinika +420 777 305 410.",
         "it": "Nessun pronto soccorso proprio; fuori orario Horská veterinární klinika +420 777 305 410.",
         "pt": "Sem urgências próprias; fora do horário: Horská veterinární klinika +420 777 305 410.",
-        "nl": "Geen eigen spoeddienst; buiten kantooruren Horská veterinární klinika +420 777 305 410."
+        "nl": "Geen eigen spoeddienst; buiten kantooruren Horská veterinární klinika +420 777 305 410.",
+        "pl": "Brak własnego pogotowia; poza godzinami Horská veterinární klinika +420 777 305 410."
       },
       "small_animals": true,
       "url": "https://trutnov-vet.cz/",
@@ -903,7 +934,8 @@
         "es": "Sin servicio de urgencias; previo acuerdo, deriva a Horská veterinární klinika Trutnov (+420 777 305 410) o HKvet Hradec Králové (+420 603 554 962).",
         "it": "Nessun pronto soccorso; previo accordo indirizza a Horská veterinární klinika Trutnov (+420 777 305 410) o HKvet Hradec Králové (+420 603 554 962).",
         "pt": "Sem serviço de urgência; mediante acordo encaminha para Horská veterinární klinika Trutnov (+420 777 305 410) ou HKvet Hradec Králové (+420 603 554 962).",
-        "nl": "Geen spoeddienst; verwijst op afspraak naar Horská veterinární klinika Trutnov (+420 777 305 410) of HKvet Hradec Králové (+420 603 554 962)."
+        "nl": "Geen spoeddienst; verwijst op afspraak naar Horská veterinární klinika Trutnov (+420 777 305 410) of HKvet Hradec Králové (+420 603 554 962).",
+        "pl": "Brak pogotowia; po uzgodnieniu kieruje do Horská veterinární klinika Trutnov (+420 777 305 410) lub HKvet Hradec Králové (+420 603 554 962)."
       },
       "small_animals": true,
       "url": "https://www.ambuvet.cz/",
@@ -929,7 +961,8 @@
         "es": "Lun–vie 7:30–9:00 y 15:00–19:00 h, dom 18:00–19:00 h.",
         "it": "Lun–ven 07:30–09:00 e 15:00–19:00, dom 18:00–19:00.",
         "pt": "Segunda a sexta 7h30–9h00 e 15h00–19h00, domingo 18h00–19h00.",
-        "nl": "ma–vr 07.30–09.00 en 15.00–19.00 uur, zo 18.00–19.00 uur."
+        "nl": "ma–vr 07.30–09.00 en 15.00–19.00 uur, zo 18.00–19.00 uur.",
+        "pl": "Pon.–pt. 07:30–09:00 i 15:00–19:00, niedz. 18:00–19:00."
       },
       "small_animals": true,
       "url": "https://www.veterina-vrchlabi.cz/",
@@ -954,7 +987,8 @@
         "es": "Lun–vie 8:00–20:00 h, urgencias lun–vie 20:00–8:00 h; fines de semana cerrado.",
         "it": "Lun–ven 08:00–20:00, pronto soccorso lun–ven 20:00–08:00; chiuso nei weekend.",
         "pt": "Segunda a sexta 8h00–20h00, urgências de segunda a sexta 20h00–8h00; fins de semana encerrado.",
-        "nl": "ma–vr 08.00–20.00 uur, spoed ma–vr 20.00–08.00 uur; in het weekend gesloten."
+        "nl": "ma–vr 08.00–20.00 uur, spoed ma–vr 20.00–08.00 uur; in het weekend gesloten.",
+        "pl": "Pon.–pt. 08:00–20:00, pogotowie pon.–pt. 20:00–08:00; weekendy nieczynne."
       },
       "small_animals": true,
       "url": "https://veterina-aesculap.cz/",
@@ -979,7 +1013,8 @@
         "es": "Lun–vie 8:00–18:00 h; posible tratamiento fuera de horario con recargo de 1000 Kč.",
         "it": "Lun–ven 08:00–18:00; cure fuori orario possibili con supplemento di 1000 Kč.",
         "pt": "Segunda a sexta 8h00–18h00; tratamento fora do horário possível com suplemento de 1000 Kč.",
-        "nl": "ma–vr 08.00–18.00 uur; behandeling buiten openingstijden mogelijk met een toeslag van 1000 Kč."
+        "nl": "ma–vr 08.00–18.00 uur; behandeling buiten openingstijden mogelijk met een toeslag van 1000 Kč.",
+        "pl": "Pon.–pt. 08:00–18:00; leczenie poza godzinami możliwe za dopłatą 1000 Kč."
       },
       "small_animals": true,
       "url": "https://www.vetopet.cz/",
@@ -1003,7 +1038,8 @@
         "es": "Lun–vie 8:00–18:00 h; fines de semana cerrado.",
         "it": "Lun–ven 08:00–18:00; chiuso nei weekend.",
         "pt": "Segunda a sexta 8h00–18h00; fins de semana encerrado.",
-        "nl": "ma–vr 08.00–18.00 uur; in het weekend gesloten."
+        "nl": "ma–vr 08.00–18.00 uur; in het weekend gesloten.",
+        "pl": "Pon.–pt. 08:00–18:00; weekendy nieczynne."
       },
       "small_animals": true,
       "url": "https://cb-vet.cz/",
@@ -1028,7 +1064,8 @@
         "es": "Lun–vie 8:00–20:00 h, sáb–dom 9:00–13:00 y 17:00–19:00 h; urgencias +420 605 866 733 previo acuerdo telefónico, solo casos agudos con riesgo vital.",
         "it": "Lun–ven 08:00–20:00, sab–dom 09:00–13:00 e 17:00–19:00; pronto soccorso +420 605 866 733 previo accordo telefonico, solo casi acuti con pericolo di vita.",
         "pt": "Segunda a sexta 8h00–20h00, sábado e domingo 9h00–13h00 e 17h00–19h00; urgências +420 605 866 733 por acordo telefónico, apenas casos agudos com risco de vida.",
-        "nl": "ma–vr 08.00–20.00 uur, za–zo 09.00–13.00 en 17.00–19.00 uur; spoed +420 605 866 733 na telefonische afspraak, alleen acute levensbedreigende gevallen."
+        "nl": "ma–vr 08.00–20.00 uur, za–zo 09.00–13.00 en 17.00–19.00 uur; spoed +420 605 866 733 na telefonische afspraak, alleen acute levensbedreigende gevallen.",
+        "pl": "Pon.–pt. 08:00–20:00, sob.–niedz. 09:00–13:00 i 17:00–19:00; pogotowie +420 605 866 733 po telefonicznym uzgodnieniu, tylko ostre przypadki zagrażające życiu."
       },
       "small_animals": true,
       "url": "https://lapacek.cz/",
@@ -1052,7 +1089,8 @@
         "es": "Lun–vie 8:00–18:00 h, sáb 8:00–10:00 h; recargos de urgencias indicados para tardes, noches de 20:00 a 8:00 h, domingos y festivos.",
         "it": "Lun–ven 08:00–18:00, sab 08:00–10:00; supplementi di urgenza indicati per sera, notte 20:00–08:00, domeniche e festivi.",
         "pt": "Segunda a sexta 8h00–18h00, sábado 8h00–10h00; suplementos de urgência indicados para o fim do dia, noites 20h00–8h00, domingos e feriados.",
-        "nl": "ma–vr 08.00–18.00 uur, za 08.00–10.00 uur; spoedtoeslagen vermeld voor avonden, nachten 20.00–08.00 uur, zondagen en feestdagen."
+        "nl": "ma–vr 08.00–18.00 uur, za 08.00–10.00 uur; spoedtoeslagen vermeld voor avonden, nachten 20.00–08.00 uur, zondagen en feestdagen.",
+        "pl": "Pon.–pt. 08:00–18:00, sob. 08:00–10:00; dopłaty za pogotowie obowiązują wieczorem, w nocy 20:00–08:00, w niedziele i święta."
       },
       "small_animals": true,
       "url": "https://www.budvet.cz/",
@@ -1077,7 +1115,8 @@
         "es": "Horario de 6:00 a 22:00 h; ayuda en casos urgentes fuera de horario: llama primero.",
         "it": "Orari 06:00–22:00; aiuta nei casi urgenti fuori orario: telefonare prima.",
         "pt": "Horário 6h00–22h00; ajuda em casos urgentes fora do horário – liga primeiro.",
-        "nl": "Open 06.00–22.00 uur; helpt ook buiten openingstijden bij spoedgevallen - bel eerst."
+        "nl": "Open 06.00–22.00 uur; helpt ook buiten openingstijden bij spoedgevallen - bel eerst.",
+        "pl": "Godziny 06:00–22:00; pomaga w pilnych przypadkach poza godzinami – najpierw zadzwoń."
       },
       "small_animals": true,
       "url": "https://uberanku.cz/",
@@ -1102,7 +1141,8 @@
         "es": "Teléfono de urgencias sin interrupción, salvo durante las vacaciones del veterinario.",
         "it": "Telefono di pronto soccorso senza interruzione, tranne durante le ferie del veterinario.",
         "pt": "Telefone de urgência ininterrupto, exceto durante as férias do veterinário.",
-        "nl": "Spoedtelefoon de klok rond, behalve tijdens de vakantie van de dierenarts."
+        "nl": "Spoedtelefoon de klok rond, behalve tijdens de vakantie van de dierenarts.",
+        "pl": "Całodobowy telefon alarmowy, z wyjątkiem urlopu weterynarza."
       },
       "small_animals": true,
       "url": "https://www.veterinaokrina.cz/",
@@ -1128,7 +1168,8 @@
         "es": "Teléfono de urgencias entre semana 8:00–20:00 h, fines de semana y festivos 8:00–14:00 h.",
         "it": "Telefono urgenze nei giorni feriali 08:00–20:00, weekend/festivi 08:00–14:00.",
         "pt": "Telefone de urgência em dias úteis 8h00–20h00, fins de semana/feriados 8h00–14h00.",
-        "nl": "Spoedtelefoon op werkdagen 08.00–20.00 uur, weekenden/feestdagen 08.00–14.00 uur."
+        "nl": "Spoedtelefoon op werkdagen 08.00–20.00 uur, weekenden/feestdagen 08.00–14.00 uur.",
+        "pl": "Telefon alarmowy w dni robocze 08:00–20:00, w weekendy i święta 08:00–14:00."
       },
       "small_animals": true,
       "url": "https://www.veterinanaslunci.cz/",
@@ -1152,7 +1193,8 @@
         "es": "Urgencias lun–vie 19:00–8:00 h y fines de semana y festivos sin interrupción, previo acuerdo en el +420 602 120 555; recargo de 2000 Kč.",
         "it": "Pronto soccorso lun–ven 19:00–08:00 e weekend/festivi senza interruzione, previo accordo al +420 602 120 555; supplemento 2000 Kč.",
         "pt": "Urgências de segunda a sexta 19h00–8h00 e fins de semana/feriados sem interrupção, mediante acordo prévio pelo +420 602 120 555; suplemento de 2000 Kč.",
-        "nl": "Spoed ma–vr 19.00–08.00 uur en in weekenden/op feestdagen de klok rond, op afspraak via +420 602 120 555; toeslag 2000 Kč."
+        "nl": "Spoed ma–vr 19.00–08.00 uur en in weekenden/op feestdagen de klok rond, op afspraak via +420 602 120 555; toeslag 2000 Kč.",
+        "pl": "Pogotowie pon.–pt. 19:00–08:00 oraz w weekendy i święta całodobowo, po wcześniejszym uzgodnieniu pod +420 602 120 555; dopłata 2000 Kč."
       },
       "small_animals": true,
       "url": "https://www.mi-vet.cz/",
@@ -1177,7 +1219,8 @@
         "es": "Lun–vie 8:00–20:00 h; urgencias entre semana 20:00–22:00 h y fines de semana y festivos 14:00–22:00 h en el +420 606 511 357 (reanudadas el 1 de octubre de 2026).",
         "it": "Lun–ven 08:00–20:00; pronto soccorso nei giorni feriali 20:00–22:00 e nei weekend/festivi 14:00–22:00 al +420 606 511 357 (ripreso dal 1° ottobre 2026).",
         "pt": "Segunda a sexta 8h00–20h00; urgências em dias úteis 20h00–22h00 e fins de semana/feriados 14h00–22h00 pelo +420 606 511 357 (retomado em 1/10/2026).",
-        "nl": "ma–vr 08.00–20.00 uur; spoed op werkdagen 20.00–22.00 uur en in weekenden/op feestdagen 14.00–22.00 uur via +420 606 511 357 (hervat per 1.10.2026)."
+        "nl": "ma–vr 08.00–20.00 uur; spoed op werkdagen 20.00–22.00 uur en in weekenden/op feestdagen 14.00–22.00 uur via +420 606 511 357 (hervat per 1.10.2026).",
+        "pl": "Pon.–pt. 08:00–20:00; pogotowie w dni robocze 20:00–22:00 oraz w weekendy i święta 14:00–22:00 pod +420 606 511 357 (wznowione 1.10.2026)."
       },
       "small_animals": true,
       "url": "https://www.veterinahelion.cz/",
@@ -1202,7 +1245,8 @@
         "es": "Urgencias de fin de semana: sáb 11:00–22:00 h, dom 8:00–22:00 h, por teléfono con al menos 30 min de antelación; urgencias de tarde entre semana suspendidas desde el 1 de noviembre de 2025.",
         "it": "Pronto soccorso nel weekend sab 11:00–22:00, dom 08:00–22:00 per telefono con almeno 30 min di anticipo; pronto soccorso serale nei giorni feriali sospeso dal 1° novembre 2025.",
         "pt": "Urgências ao fim de semana: sábado 11h00–22h00, domingo 8h00–22h00, por telefone com pelo menos 30 min de antecedência; urgências ao fim do dia em dias úteis suspensas desde 1/11/2025.",
-        "nl": "Weekendspoed za 11.00–22.00 uur, zo 08.00–22.00 uur; bel minstens 30 min vooraf. Avondspoed op werkdagen opgeschort sinds 1.11.2025."
+        "nl": "Weekendspoed za 11.00–22.00 uur, zo 08.00–22.00 uur; bel minstens 30 min vooraf. Avondspoed op werkdagen opgeschort sinds 1.11.2025.",
+        "pl": "Weekendowe pogotowie sob. 11:00–22:00, niedz. 08:00–22:00, telefonicznie z co najmniej 30-minutowym wyprzedzeniem; wieczorne pogotowie w dni robocze zawieszone od 1.11.2025."
       },
       "small_animals": true,
       "url": "https://www.veterina-plzen.cz/",
@@ -1228,7 +1272,8 @@
         "es": "Lun–vie 9:00–19:00 h (sin urgencias fuera de ese horario); urgencias sáb–dom 9:00–21:00 h previo acuerdo telefónico.",
         "it": "Lun–ven 09:00–19:00 (nessun pronto soccorso fuori orario); sab–dom pronto soccorso 09:00–21:00 previo accordo telefonico.",
         "pt": "Segunda a sexta 9h00–19h00 (sem urgências fora deste horário); urgências ao sábado e domingo 9h00–21h00 por acordo telefónico.",
-        "nl": "ma–vr 09.00–19.00 uur (buiten die tijden geen spoed); za–zo spoed 09.00–21.00 uur na telefonische afspraak."
+        "nl": "ma–vr 09.00–19.00 uur (buiten die tijden geen spoed); za–zo spoed 09.00–21.00 uur na telefonische afspraak.",
+        "pl": "Pon.–pt. 09:00–19:00 (poza tym brak pogotowia); sob.–niedz. pogotowie 09:00–21:00 po telefonicznym uzgodnieniu."
       },
       "small_animals": true,
       "url": "https://rpvet.cz/",
@@ -1266,7 +1311,8 @@
         "es": "Lun–vie solo en horario diurno.",
         "it": "Lun–ven solo orario diurno.",
         "pt": "Segunda a sexta, apenas durante o dia.",
-        "nl": "Alleen overdag op werkdagen (ma–vr)."
+        "nl": "Alleen overdag op werkdagen (ma–vr).",
+        "pl": "Pon.–pt. tylko w ciągu dnia."
       },
       "small_animals": true,
       "url": "https://klatovyveterina.cz/",
@@ -1289,7 +1335,8 @@
         "es": "Turno de primeros auxilios de fin de semana y festivos financiado por la región: sáb, dom y festivos 14:00–17:00 h en una clínica rotativa (Cheb, Sokolov, Ostrov, Františkovy Lázně, Chodov, Karlovy Vary); calendario mensual con teléfonos en la página; llama primero.",
         "it": "Turno di primo soccorso nei weekend/festivi finanziato dalla regione: sab, dom e festivi 14:00–17:00 presso uno studio a rotazione (Cheb, Sokolov, Ostrov, Františkovy Lázně, Chodov, Karlovy Vary); calendario mensile con numeri di telefono sulla pagina; telefonare prima.",
         "pt": "Escala de primeiros socorros ao fim de semana/feriados financiada pela região: sábado, domingo e feriados 14h00–17h00 numa clínica rotativa (Cheb, Sokolov, Ostrov, Františkovy Lázně, Chodov, Karlovy Vary); escala mensal com números de telefone na página; liga primeiro.",
-        "nl": "Door de regio gefinancierde eerstehulpdienst in weekenden/op feestdagen: za, zo en feestdagen 14.00–17.00 uur bij een wisselende praktijk (Cheb, Sokolov, Ostrov, Františkovy Lázně, Chodov, Karlovy Vary); maandrooster met telefoonnummers op de pagina; bel eerst."
+        "nl": "Door de regio gefinancierde eerstehulpdienst in weekenden/op feestdagen: za, zo en feestdagen 14.00–17.00 uur bij een wisselende praktijk (Cheb, Sokolov, Ostrov, Františkovy Lázně, Chodov, Karlovy Vary); maandrooster met telefoonnummers op de pagina; bel eerst.",
+        "pl": "Regionalny, finansowany przez region dyżur pierwszej pomocy w weekendy i święta: sob., niedz. i święta 14:00–17:00 w rotacyjnie wyznaczonym gabinecie (Cheb, Sokolov, Ostrov, Františkovy Lázně, Chodov, Karlovy Vary); miesięczny grafik z numerami telefonów na stronie; najpierw zadzwoń."
       },
       "small_animals": true,
       "url": "https://www.kr-karlovarsky.cz/temata/zdravotnictvi/lekarska-lekarenska-pohotovostni-sluzba/veterinarni-sluzba-prvni-pomoci",
@@ -1315,7 +1362,8 @@
         "es": "Horario entre semana; atención urgente fuera de horario solo para clientes habituales previo acuerdo. Participa en el turno regional de fin de semana.",
         "it": "Orari dei giorni feriali; cure urgenti fuori orario solo per clienti già seguiti, previo accordo. Partecipa al turno regionale dei weekend.",
         "pt": "Horário de dias úteis; atendimento urgente fora do horário só para clientes existentes, por acordo. Participa na escala regional de fim de semana.",
-        "nl": "Op werkdagen open; spoedzorg buiten openingstijden alleen voor vaste klanten op afspraak. Doet mee aan de regionale weekenddienst."
+        "nl": "Op werkdagen open; spoedzorg buiten openingstijden alleen voor vaste klanten op afspraak. Doet mee aan de regionale weekenddienst.",
+        "pl": "Godziny w dni robocze; pilna pomoc poza godzinami tylko dla dotychczasowych klientów po uzgodnieniu. Uczestniczy w regionalnym dyżurze weekendowym."
       },
       "small_animals": true,
       "url": "https://www.pet-vet.cz/",
@@ -1341,7 +1389,8 @@
         "es": "Lun–vie 8:00–11:00 y 13:00–17:00 h.",
         "it": "Lun–ven 08:00–11:00 e 13:00–17:00.",
         "pt": "Segunda a sexta 8h00–11h00 e 13h00–17h00.",
-        "nl": "ma–vr 08.00–11.00 en 13.00–17.00 uur."
+        "nl": "ma–vr 08.00–11.00 en 13.00–17.00 uur.",
+        "pl": "Pon.–pt. 08:00–11:00 i 13:00–17:00."
       },
       "small_animals": true,
       "url": "https://www.elisvet.cz/",
@@ -1380,7 +1429,8 @@
         "es": "Consultas por intoxicación aguda las 24 horas para personas y animales; segunda línea +420 224 915 402.",
         "it": "Consulenza per avvelenamenti acuti 24 ore su 24 per persone e animali; seconda linea +420 224 915 402.",
         "pt": "Linha de apoio para intoxicações agudas, 24 horas por dia, para pessoas e animais; segunda linha +420 224 915 402.",
-        "nl": "Vragen over acute vergiftiging 24 uur per dag, voor mens en dier; tweede lijn +420 224 915 402."
+        "nl": "Vragen over acute vergiftiging 24 uur per dag, voor mens en dier; tweede lijn +420 224 915 402.",
+        "pl": "Konsultacje w przypadkach ostrych zatruć całodobowo, dla ludzi i zwierząt; druga linia +420 224 915 402."
       },
       "small_animals": true,
       "url": "https://www.tis-cz.cz/",
@@ -1405,7 +1455,8 @@
         "es": "Horario habitual lun–vie 9:00–18:30 h, fines de semana y festivos 9:00–11:30 h; urgencias lun–vie 7:00–9:00 y 18:30–21:00 h, fines de semana y festivos 7:00–9:00 y 11:30–21:00 h por teléfono; recargo de 2420 Kč.",
         "it": "Orari ordinari lun–ven 09:00–18:30, weekend/festivi 09:00–11:30; pronto soccorso lun–ven 07:00–09:00 e 18:30–21:00, weekend/festivi 07:00–09:00 e 11:30–21:00 per telefono; supplemento 2420 Kc.",
         "pt": "Horário normal de segunda a sexta 9h00–18h30, fins de semana/feriados 9h00–11h30; urgências de segunda a sexta 7h00–9h00 e 18h30–21h00, fins de semana/feriados 7h00–9h00 e 11h30–21h00 por telefone; suplemento de 2420 Kc.",
-        "nl": "Reguliere tijden ma–vr 09.00–18.30 uur, weekenden/feestdagen 09.00–11.30 uur; spoed ma–vr 07.00–09.00 en 18.30–21.00 uur, weekenden/feestdagen 07.00–09.00 en 11.30–21.00 uur telefonisch; toeslag 2420 Kc."
+        "nl": "Reguliere tijden ma–vr 09.00–18.30 uur, weekenden/feestdagen 09.00–11.30 uur; spoed ma–vr 07.00–09.00 en 18.30–21.00 uur, weekenden/feestdagen 07.00–09.00 en 11.30–21.00 uur telefonisch; toeslag 2420 Kc.",
+        "pl": "Zwykłe godziny pon.–pt. 09:00–18:30, weekendy i święta 09:00–11:30; pogotowie pon.–pt. 07:00–09:00 i 18:30–21:00, weekendy i święta 07:00–09:00 oraz 11:30–21:00 telefonicznie; dopłata 2420 Kc."
       },
       "small_animals": true,
       "url": "https://veterinarnipoliklinika.cz/",
@@ -1430,7 +1481,8 @@
         "es": "Lun–vie 8:00–18:00 h, cerrado en festivos; las urgencias fuera de horario las cubre Veterinární poliklinika Hynar (+420 553 662 467).",
         "it": "Lun–ven 08:00–18:00, chiuso nei festivi; pronto soccorso fuori orario garantito da Veterinární poliklinika Hynar (+420 553 662 467).",
         "pt": "Segunda a sexta 8h00–18h00, encerrado nos feriados; urgências fora do horário asseguradas pela Veterinární poliklinika Hynar (+420 553 662 467).",
-        "nl": "ma–vr 08.00–18.00 uur, gesloten op feestdagen; spoed buiten kantooruren wordt opgevangen door Veterinární poliklinika Hynar (+420 553 662 467)."
+        "nl": "ma–vr 08.00–18.00 uur, gesloten op feestdagen; spoed buiten kantooruren wordt opgevangen door Veterinární poliklinika Hynar (+420 553 662 467).",
+        "pl": "Pon.–pt. 08:00–18:00, w święta nieczynne; pogotowie poza godzinami zapewnia Veterinární poliklinika Hynar (+420 553 662 467)."
       },
       "small_animals": true,
       "url": "https://veterinarniklinika.net/",
@@ -1456,7 +1508,8 @@
         "es": "Lun–vie 8:00–12:00 y 14:00–18:00 h, sáb 9:00–12:00 h, dom 9:00–11:00 h; fuera de horario, teléfono de urgencias +420 734 232 575 para casos que no pueden esperar (recargo).",
         "it": "Lun–ven 08:00–12:00 e 14:00–18:00, sab 09:00–12:00, dom 09:00–11:00; fuori orario telefono urgenze +420 734 232 575 per i casi che non possono attendere (supplemento).",
         "pt": "Segunda a sexta 8h00–12h00 e 14h00–18h00, sábado 9h00–12h00, domingo 9h00–11h00; fora do horário, telefone de urgência +420 734 232 575 para casos que não podem esperar (suplemento).",
-        "nl": "ma–vr 08.00–12.00 en 14.00–18.00 uur, za 09.00–12.00 uur, zo 09.00–11.00 uur; buiten kantooruren spoedtelefoon +420 734 232 575 voor gevallen die niet kunnen wachten (toeslag)."
+        "nl": "ma–vr 08.00–12.00 en 14.00–18.00 uur, za 09.00–12.00 uur, zo 09.00–11.00 uur; buiten kantooruren spoedtelefoon +420 734 232 575 voor gevallen die niet kunnen wachten (toeslag).",
+        "pl": "Pon.–pt. 08:00–12:00 i 14:00–18:00, sob. 09:00–12:00, niedz. 09:00–11:00; poza godzinami telefon alarmowy +420 734 232 575 w przypadkach niecierpiących zwłoki (z dopłatą)."
       },
       "small_animals": true,
       "url": "https://ctvet.cz/",
@@ -1482,7 +1535,8 @@
         "es": "Lun–vie 8:00–11:00 y 13:00–18:00 h, sáb 8:00–12:00 h, dom 9:00–11:00 h; urgencias hasta las 22:00 h previo acuerdo telefónico en el +420 776 015 533.",
         "it": "Lun–ven 08:00–11:00 e 13:00–18:00, sab 08:00–12:00, dom 09:00–11:00; pronto soccorso fino alle 22:00 previo accordo telefonico al +420 776 015 533.",
         "pt": "Segunda a sexta 8h00–11h00 e 13h00–18h00, sábado 8h00–12h00, domingo 9h00–11h00; urgências até às 22h00 mediante acordo telefónico prévio pelo +420 776 015 533.",
-        "nl": "ma–vr 08.00–11.00 en 13.00–18.00 uur, za 08.00–12.00 uur, zo 09.00–11.00 uur; spoed tot 22.00 uur na telefonische afspraak via +420 776 015 533."
+        "nl": "ma–vr 08.00–11.00 en 13.00–18.00 uur, za 08.00–12.00 uur, zo 09.00–11.00 uur; spoed tot 22.00 uur na telefonische afspraak via +420 776 015 533.",
+        "pl": "Pon.–pt. 08:00–11:00 i 13:00–18:00, sob. 08:00–12:00, niedz. 09:00–11:00; pogotowie do 22:00 po wcześniejszym telefonicznym uzgodnieniu pod +420 776 015 533."
       },
       "small_animals": true,
       "url": "https://www.veticea.cz/",
@@ -1506,7 +1560,8 @@
         "es": "Lun–vie 7:00–18:00 h, sáb–dom 14:00–17:00 h; veterinario de guardia en el centro lun–vie 18:00–23:00 h, sáb–dom 17:00–23:00 h, festivos 16:00–23:00 h (recargo); sin servicio nocturno.",
         "it": "Lun–ven 07:00–18:00, sab–dom 14:00–17:00; veterinario di guardia in sede lun–ven 18:00–23:00, sab–dom 17:00–23:00, festivi 16:00–23:00 (supplemento); nessun servizio notturno.",
         "pt": "Segunda a sexta 7h00–18h00, sábado e domingo 14h00–17h00; veterinário de serviço no local de segunda a sexta 18h00–23h00, sábado e domingo 17h00–23h00, feriados 16h00–23h00 (suplemento); sem serviço noturno.",
-        "nl": "ma–vr 07.00–18.00 uur, za–zo 14.00–17.00 uur; dienstdoende dierenarts ter plaatse ma–vr 18.00–23.00 uur, za–zo 17.00–23.00 uur, feestdagen 16.00–23.00 uur (toeslag); geen nachtdienst."
+        "nl": "ma–vr 07.00–18.00 uur, za–zo 14.00–17.00 uur; dienstdoende dierenarts ter plaatse ma–vr 18.00–23.00 uur, za–zo 17.00–23.00 uur, feestdagen 16.00–23.00 uur (toeslag); geen nachtdienst.",
+        "pl": "Pon.–pt. 07:00–18:00, sob.–niedz. 14:00–17:00; dyżurny weterynarz na miejscu pon.–pt. 18:00–23:00, sob.–niedz. 17:00–23:00, w święta 16:00–23:00 (dopłata); brak nocnego dyżuru."
       },
       "small_animals": true,
       "url": "https://www.alfavet.cz/",
@@ -1531,7 +1586,8 @@
         "es": "Línea privada para casos agudos +420 739 314 307.",
         "it": "Linea privata per casi acuti +420 739 314 307.",
         "pt": "Linha privada para casos agudos +420 739 314 307.",
-        "nl": "Eigen lijn voor acute gevallen +420 739 314 307."
+        "nl": "Eigen lijn voor acute gevallen +420 739 314 307.",
+        "pl": "Prywatna linia w ostrych przypadkach +420 739 314 307."
       },
       "small_animals": true,
       "url": "https://www.veterinakladno.cz/",
@@ -1556,7 +1612,8 @@
         "es": "Lun–vie 9:00–21:00 h, fines de semana cerrado; pide cita por teléfono.",
         "it": "Lun–ven 09:00–21:00, chiuso nei weekend; prenotare per telefono.",
         "pt": "Segunda a sexta 9h00–21h00, fins de semana encerrado; marcação por telefone.",
-        "nl": "ma–vr 09.00–21.00 uur, in het weekend gesloten; telefonisch afspraak maken."
+        "nl": "ma–vr 09.00–21.00 uur, in het weekend gesloten; telefonisch afspraak maken.",
+        "pl": "Pon.–pt. 09:00–21:00, weekendy nieczynne; wizyty umawiaj telefonicznie."
       },
       "small_animals": true,
       "url": "https://www.vetlife.cz/",
@@ -1580,7 +1637,8 @@
         "es": "Llama para confirmar el horario y el servicio de urgencias.",
         "it": "Telefonare per confermare orari e pronto soccorso.",
         "pt": "Liga para confirmar o horário e o serviço de urgência.",
-        "nl": "Bel om openingstijden en spoeddienst te bevestigen."
+        "nl": "Bel om openingstijden en spoeddienst te bevestigen.",
+        "pl": "Zadzwoń, by potwierdzić godziny i dostępność pogotowia."
       },
       "small_animals": true,
       "url": "https://www.veterinakolin.cz/",
@@ -1605,7 +1663,8 @@
         "es": "Lun 8:00–17:00 h, mar 8:00–15:00 h, mié 8:00–14:00 h, jue 12:00–18:00 h, vie 8:00–11:00 h; fines de semana y festivos cerrado; llama antes de cada visita. Sin servicio de urgencias.",
         "it": "Lun 08–17, mar 08–15, mer 08–14, gio 12–18, ven 08–11; chiuso nei weekend e nei festivi; telefonare prima di ogni visita. Nessun pronto soccorso.",
         "pt": "Segunda 8h00–17h00, terça 8h00–15h00, quarta 8h00–14h00, quinta 12h00–18h00, sexta 8h00–11h00; encerrado aos fins de semana e feriados; liga antes de cada visita. Sem serviço de urgência.",
-        "nl": "ma 08–17, di 08–15, wo 08–14, do 12–18, vr 08–11 uur; gesloten in weekenden en op feestdagen; bel vóór elk bezoek. Geen spoeddienst."
+        "nl": "ma 08–17, di 08–15, wo 08–14, do 12–18, vr 08–11 uur; gesloten in weekenden en op feestdagen; bel vóór elk bezoek. Geen spoeddienst.",
+        "pl": "Pon. 08–17, wt. 08–15, śr. 08–14, czw. 12–18, pt. 08–11; weekendy i święta nieczynne; przed każdą wizytą zadzwoń. Brak pogotowia."
       },
       "small_animals": true,
       "url": "https://mbvet.cz/",
@@ -1643,7 +1702,8 @@
         "es": "Llama para confirmar el horario y el servicio de urgencias. También tiene una consulta en Litvínov (sin citas).",
         "it": "Telefonare per confermare orari e pronto soccorso. Ha anche uno studio a Litvínov (senza appuntamenti).",
         "pt": "Liga para confirmar o horário e o serviço de urgência. Tem também uma clínica em Litvínov (sem marcações).",
-        "nl": "Bel om openingstijden en spoeddienst te bevestigen. Heeft ook een praktijk in Litvínov (zonder afspraken)."
+        "nl": "Bel om openingstijden en spoeddienst te bevestigen. Heeft ook een praktijk in Litvínov (zonder afspraken).",
+        "pl": "Zadzwoń, by potwierdzić godziny i dostępność pogotowia. Ma też gabinet w Litvínovie (bez wizyt)."
       },
       "small_animals": true,
       "url": "https://www.veterinamost.cz/",
@@ -1668,7 +1728,8 @@
         "es": "Lun–vie 8:00–20:00 h; urgencias entre semana 20:00–24:00 h previo acuerdo telefónico; sin urgencias en fin de semana.",
         "it": "Lun–ven 08:00–20:00; pronto soccorso nei giorni feriali 20:00–24:00 previo accordo telefonico; nessun pronto soccorso nel weekend.",
         "pt": "Segunda a sexta 8h00–20h00; urgências em dias úteis 20h00–24h00 por acordo telefónico; sem urgências ao fim de semana.",
-        "nl": "ma–vr 08.00–20.00 uur; spoed op werkdagen 20.00–24.00 uur na telefonische afspraak; geen weekendspoed."
+        "nl": "ma–vr 08.00–20.00 uur; spoed op werkdagen 20.00–24.00 uur na telefonische afspraak; geen weekendspoed.",
+        "pl": "Pon.–pt. 08:00–20:00; pogotowie w dni robocze 20:00–24:00 po telefonicznym uzgodnieniu; brak pogotowia w weekendy."
       },
       "small_animals": true,
       "url": "https://www.zoovet.cz/",
@@ -1693,7 +1754,8 @@
         "es": "Urgencias fuera de horario solo para pacientes agudos, llama antes al +420 776 280 984; horario habitual lun–vie 8:00–19:00 h, sáb–dom 8:00–12:00 h.",
         "it": "Pronto soccorso fuori orario solo per pazienti acuti, telefonare prima al +420 776 280 984; orari ordinari lun–ven 08:00–19:00, sab–dom 08:00–12:00.",
         "pt": "Urgências fora do horário apenas para pacientes agudos, liga primeiro para +420 776 280 984; horário normal de segunda a sexta 8h00–19h00, sábado e domingo 8h00–12h00.",
-        "nl": "Spoed buiten kantooruren alleen voor acute patiënten, bel eerst +420 776 280 984; reguliere tijden ma–vr 08.00–19.00 uur, za–zo 08.00–12.00 uur."
+        "nl": "Spoed buiten kantooruren alleen voor acute patiënten, bel eerst +420 776 280 984; reguliere tijden ma–vr 08.00–19.00 uur, za–zo 08.00–12.00 uur.",
+        "pl": "Pogotowie poza godzinami tylko dla pacjentów w ostrym stanie, najpierw zadzwoń pod +420 776 280 984; zwykłe godziny pon.–pt. 08:00–19:00, sob.–niedz. 08:00–12:00."
       },
       "small_animals": true,
       "url": "https://veterinahavirov.cz/",
@@ -1733,7 +1795,8 @@
         "es": "Lun 9:00–20:00 h, mar 9:00–14:00 h, mié/jue 9:00–14:00 y 18:00–20:00 h, vie 9:00–14:00 h (16:00–18:00 h con cita previa); sáb/dom previo acuerdo telefónico.",
         "it": "Lun 9–20, mar 9–14, mer/gio 9–14 e 18–20, ven 9–14 (16–18 su appuntamento); sab/dom previo accordo telefonico.",
         "pt": "Segunda 9h00–20h00, terça 9h00–14h00, quarta/quinta 9h00–14h00 e 18h00–20h00, sexta 9h00–14h00 (16h00–18h00 sob marcação); sábado/domingo por acordo telefónico.",
-        "nl": "ma 9–20, di 9–14, wo/do 9–14 en 18–20, vr 9–14 uur (16–18 uur op afspraak); za/zo na telefonische afspraak."
+        "nl": "ma 9–20, di 9–14, wo/do 9–14 en 18–20, vr 9–14 uur (16–18 uur op afspraak); za/zo na telefonische afspraak.",
+        "pl": "Pon. 9–20, wt. 9–14, śr./czw. 9–14 i 18–20, pt. 9–14 (16–18 po umówieniu); sob./niedz. po telefonicznym uzgodnieniu."
       },
       "small_animals": true,
       "url": "https://veterinanavozovne.cz/",
@@ -1758,7 +1821,8 @@
         "es": "Lun–vie 8:00–18:00 h, fines de semana y festivos cerrado.",
         "it": "Lun–ven 8–18, chiuso nei weekend e nei festivi.",
         "pt": "Segunda a sexta 8h00–18h00, encerrado aos fins de semana e feriados.",
-        "nl": "ma–vr 8–18 uur, gesloten in weekenden en op feestdagen."
+        "nl": "ma–vr 8–18 uur, gesloten in weekenden en op feestdagen.",
+        "pl": "Pon.–pt. 8–18, weekendy i święta nieczynne."
       },
       "small_animals": true,
       "url": "https://www.klinikanisa.cz/",
@@ -1783,7 +1847,8 @@
         "es": "Lun–vie 9:00–22:00 h, fines de semana cerrado.",
         "it": "Lun–ven 09:00–22:00, chiuso nei weekend.",
         "pt": "Segunda a sexta 9h00–22h00, fins de semana encerrado.",
-        "nl": "ma–vr 09.00–22.00 uur, in het weekend gesloten."
+        "nl": "ma–vr 09.00–22.00 uur, in het weekend gesloten.",
+        "pl": "Pon.–pt. 09:00–22:00, weekendy nieczynne."
       },
       "small_animals": true,
       "url": "https://www.alta-vet.cz/",
@@ -1808,7 +1873,8 @@
         "es": "Lun–vie 8:00–18:00 h, sáb 9:00–12:00 h, dom 9:00–11:00 h; urgencias sáb, dom y festivos hasta las 18:00 h.",
         "it": "Lun–ven 8–18, sab 9–12, dom 9–11; pronto soccorso sab, dom e festivi fino alle 18:00.",
         "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–12h00, domingo 9h00–11h00; urgências ao sábado, domingo e feriados até às 18h00.",
-        "nl": "ma–vr 8–18, za 9–12, zo 9–11 uur; spoed za, zo en feestdagen tot 18.00 uur."
+        "nl": "ma–vr 8–18, za 9–12, zo 9–11 uur; spoed za, zo en feestdagen tot 18.00 uur.",
+        "pl": "Pon.–pt. 8–18, sob. 9–12, niedz. 9–11; pogotowie w soboty, niedziele i święta do 18:00."
       },
       "small_animals": true,
       "url": "https://www.abvet.cz/",
@@ -1833,7 +1899,8 @@
         "es": "Lun–vie 8:30–17:00 h, sáb 9:00–11:30 h; teléfono de urgencias (Pohotovost) +420 602 743 813; línea de consultas +420 775 935 080.",
         "it": "Lun–ven 8:30–17:00, sab 9:00–11:30; telefono Pohotovost +420 602 743 813; linea informazioni +420 775 935 080.",
         "pt": "Segunda a sexta 8h30–17h00, sábado 9h00–11h30; telefone de urgência (Pohotovost) +420 602 743 813; linha de dúvidas +420 775 935 080.",
-        "nl": "ma–vr 8.30–17.00 uur, za 9.00–11.30 uur; spoedtelefoon (Pohotovost) +420 602 743 813; lijn voor vragen +420 775 935 080."
+        "nl": "ma–vr 8.30–17.00 uur, za 9.00–11.30 uur; spoedtelefoon (Pohotovost) +420 602 743 813; lijn voor vragen +420 775 935 080.",
+        "pl": "Pon.–pt. 8:30–17:00, sob. 9:00–11:30; telefon pogotowia +420 602 743 813; linia dla pytań +420 775 935 080."
       },
       "small_animals": true,
       "url": "https://herriovet.cz/",

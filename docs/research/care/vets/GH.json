@@ -42,7 +42,10 @@
       "url": "https://svm.ug.edu.gh/sath",
       "source_url": "https://svm.ug.edu.gh/sath",
       "checked": "2026-11-15",
-      "note": "Page lists 0263291354 / 059 643 9832; school line +233 302 500381. No emergency or 24 h statement. Page title labels it VTH."
+      "note": "Page lists 0263291354 / 059 643 9832; school line +233 302 500381. No emergency or 24 h statement. Page title labels it VTH.",
+      "duty_i18n": {
+        "pl": "pon.–pt. 8:00–17:00, sob. 8:00–13:00, w niedzielę zamknięte. Psy i koty: konsultacje, szczepienia, laboratorium, USG, chirurgia, mikroczipowanie, apteka."
+      }
     },
     {
       "kind": "clinic",
@@ -56,7 +59,10 @@
       "url": "https://gentlepawsgh.vercel.app/",
       "source_url": "https://gentlepawsgh.vercel.app/contact",
       "checked": "2026-11-15",
-      "note": "Second number 0502470223 on /contact and /emergency. No street address. Builder-hosted site (vercel.app). Emergency page quote: 'We respond as fast as we can and refer you to a clinic if we can't attend.' No 24 h claim."
+      "note": "Second number 0502470223 on /contact and /emergency. No street address. Builder-hosted site (vercel.app). Emergency page quote: 'We respond as fast as we can and refer you to a clinic if we can't attend.' No 24 h claim.",
+      "duty_i18n": {
+        "pl": "Mobilny weterynarz obsługujący Accrę, Tema i Kasoa. pon.–sob. 8:00–18:00; w nagłych przypadkach zadzwoń lub napisz na WhatsAppie, a jeśli nie może przyjechać, skieruje do przychodni."
+      }
     },
     {
       "kind": "clinic",
@@ -71,7 +77,10 @@
       "url": "https://uds.edu.gh/academics/departments/svs/vm",
       "source_url": "https://uds.edu.gh/academics/departments/svs/vm",
       "checked": "2026-11-15",
-      "note": "Phone is the general university line, not a clinic line; no hours or emergency statement on the page."
+      "note": "Phone is the general university line, not a clinic line; no hours or emergency statement on the page.",
+      "duty_i18n": {
+        "pl": "Uniwersytecka przychodnia weterynaryjna dla małych zwierząt; zadzwoń na numer uczelni, aby potwierdzić godziny."
+      }
     },
     {
       "kind": "clinic",
@@ -85,7 +94,10 @@
       "url": "https://svm.knust.edu.gh/node/46",
       "source_url": "https://www.myjoyonline.com/pet-lovers-access-ghanas-biggest-first-ever-pet-hotel-in-kumasi/",
       "checked": "2026-11-15",
-      "note": "No clinic phone or hours found on any opened page (KNUST news pages carry only the university relations line +233 5000 99299). ICU and overnight wards per the MyJoyOnline article; no 24 h claim. url is the KNUST SVM page that mentions the hospital."
+      "note": "No clinic phone or hours found on any opened page (KNUST news pages carry only the university relations line +233 5000 99299). ICU and overnight wards per the MyJoyOnline article; no 24 h claim. url is the KNUST SVM page that mentions the hospital.",
+      "duty_i18n": {
+        "pl": "Uniwersytecka lecznica kliniczna z oddziałem intensywnej terapii, salami nocnymi i hotelem dla zwierząt; zadzwoń wcześniej w sprawie godzin."
+      }
     },
     {
       "kind": "clinic",
@@ -99,7 +111,10 @@
       "url": "https://www.af.mil.gh/social-board/news/ultra-modern-veterinary-clinic-commissioned-in-takoradi",
       "source_url": "https://www.af.mil.gh/social-board/news/ultra-modern-veterinary-clinic-commissioned-in-takoradi",
       "checked": "2026-11-15",
-      "note": "Commissioned 22 Sep 2023; page says 'all kinds of animals' (pets not named separately); a GNA article says pets and food animals of personnel and civilians. No phone, hours or 24 h statement."
+      "note": "Commissioned 22 Sep 2023; page says 'all kinds of animals' (pets not named separately); a GNA article says pets and food animals of personnel and civilians. No phone, hours or 24 h statement.",
+      "duty_i18n": {
+        "pl": "Przychodnia weterynaryjna z apteką, laboratorium i salą operacyjną, przeznaczona dla personelu Sił Powietrznych i mieszkańców Regionu Zachodniego; godziny podaje Ghana Air Force."
+      }
     }
   ],
   "notes": "Only 5 entries, 0 x 24 h, 0 duty rotas, 0 poison lines: no 24 h claim, duty rota or animal poison line was found on any opened page. WebFetch only accepts URLs that appeared in search results, so the official sites (vetcouncilgh.org, ghanavma.org, MoFA Veterinary Services) and clinic sites (Marivet, Lemla, The Vet's Place, Koney's, Animalito, The Ark, Mishvet) could not be opened and are NOT included. Leads for a next run (names/phones seen only on aggregator or article pages, unverified): Marivet, Lemla Veterinary Services, Animalito Veterinary Centre, The Vet's Place (says 24/7 advice, unverified), LA Veterinary Hospital Dansoman, The Ark Veterinary (Tema/Lashibi), Koney's Veterinary Hospital, Mishvet home calls, Central Veterinary Hospital Accra, Accra Metropolitan Veterinary Unit, Mainstream Animal Hospital, Paws & Hooves Animal Hospital. Missing: Cape Coast (UCC), Kumasi private clinics, Takoradi private clinics."

@@ -639,6 +639,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         // M5-R10-113: PetMD S844 "Recall training is especially important for Gordon Setters due to their high prey drive."
         BreedType::GordonSetter->value => 'gordon_setter.behaviour.other_pets',
         BreedType::ParsonRussellTerrier->value => 'parson_russell_terrier.behaviour.other_pets',
+        // M5-R10-117: PetMD S874 "They should be closely monitored with young children and small pets because of their high prey drive."
+        BreedType::WireFoxTerrier->value => 'wire_fox_terrier.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {

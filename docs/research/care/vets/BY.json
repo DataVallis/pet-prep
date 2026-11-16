@@ -47,7 +47,10 @@
       "url": "https://vetcentr.by/",
       "source_url": "https://vetcentr.by/",
       "checked": "2026-11-15",
-      "note": "Own page opened: 'Режим работы: КРУГЛОСУТОЧНО'. Treats exotics too."
+      "note": "Own page opened: 'Режим работы: КРУГЛОСУТОЧНО'. Treats exotics too.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę. Dodatkowy numer: +375 29 392 80 81."
+      }
     },
     {
       "kind": "clinic",
@@ -62,7 +65,10 @@
       "url": "https://dv.by/",
       "source_url": "https://dv.by/clinic-1/contact/",
       "checked": "2026-11-15",
-      "note": "Own page opened: 'Круглосуточно без выходных'. Other numbers: +375 29 1 602 602, +375 29 8 602 602, +375 25 6 602 602, short 7031."
+      "note": "Own page opened: 'Круглосуточно без выходных'. Other numbers: +375 29 1 602 602, +375 29 8 602 602, +375 25 6 602 602, short 7031.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę, codziennie. Lekarze bez umawiania 09:00–19:00; po 21:00 lekarz dyżurny w taryfie nocnej."
+      }
     },
     {
       "kind": "clinic",
@@ -77,7 +83,10 @@
       "url": "https://dv.by/",
       "source_url": "https://dv.by/clinic-2/contact/",
       "checked": "2026-11-15",
-      "note": "Own page opened: open 24 h every day. News item: closed from 21:00 on 28.10-03.11.2026 (past). Same phones as the other branch."
+      "note": "Own page opened: open 24 h every day. News item: closed from 21:00 on 28.10-03.11.2026 (past). Same phones as the other branch.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę, codziennie. Lekarze bez umawiania 09:00–19:00; po 21:00 lekarz dyżurny w taryfie nocnej."
+      }
     },
     {
       "kind": "clinic",
@@ -92,7 +101,10 @@
       "url": "https://minsk.vet-centre.by/",
       "source_url": "https://minsk.vet-centre.by/",
       "checked": "2026-11-15",
-      "note": "Own page opened: one listing says round-the-clock, another 9:00-21:00 for this address, and branch name to address mapping is not explicit; so 24 h not confirmed. Second number +375 33 326 30 00."
+      "note": "Own page opened: one listing says round-the-clock, another 9:00-21:00 for this address, and branch name to address mapping is not explicit; so 24 h not confirmed. Second number +375 33 326 30 00.",
+      "duty_i18n": {
+        "pl": "Skontaktuj się z przychodnią, by poznać aktualne godziny."
+      }
     },
     {
       "kind": "clinic",
@@ -107,7 +119,10 @@
       "url": "https://minsk.vet-centre.by/",
       "source_url": "https://minsk.vet-centre.by/",
       "checked": "2026-11-15",
-      "note": "Own page opened: hours given as 24 h in one place, but news says branch is 'moving to' round-the-clock; ambiguous, so false. Also +375 33 627 40 00."
+      "note": "Own page opened: hours given as 24 h in one place, but news says branch is 'moving to' round-the-clock; ambiguous, so false. Also +375 33 627 40 00.",
+      "duty_i18n": {
+        "pl": "Skontaktuj się z przychodnią, by poznać aktualne godziny."
+      }
     },
     {
       "kind": "clinic",
@@ -122,7 +137,10 @@
       "url": "https://minsk.vet-centre.by/",
       "source_url": "https://minsk.vet-centre.by/",
       "checked": "2026-11-15",
-      "note": "Own page opened."
+      "note": "Own page opened.",
+      "duty_i18n": {
+        "pl": "Czynne codziennie 09:00–21:00."
+      }
     },
     {
       "kind": "clinic",
@@ -132,12 +150,15 @@
       "address": "Nezavisimosti Ave. 177, Minsk",
       "phone": "+375 17 388 11 99",
       "emergency_24h": true,
-      "duty": "Open 24 hours; a break is listed on Wednesdays 11:00-14:00.",
+      "duty": "Open 24 hours; break on Wednesdays 11:00-14:00.",
       "small_animals": true,
       "url": "https://alfavet.by/",
       "source_url": "https://alfavet.by/",
       "checked": "2026-11-15",
-      "note": "Own page opened: 'Режим работы: круглосуточно'. Mobile +375 29 7 521 521; page is inconsistent on operator names."
+      "note": "Own page opened: 'Режим работы: круглосуточно'. Mobile +375 29 7 521 521; page is inconsistent on operator names.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę; przerwa w środy 11:00–14:00."
+      }
     },
     {
       "kind": "clinic",
@@ -152,7 +173,10 @@
       "url": "https://alfavet.by/",
       "source_url": "https://alfavet.by/",
       "checked": "2026-11-15",
-      "note": "Own page opened."
+      "note": "Own page opened.",
+      "duty_i18n": {
+        "pl": "Czynne codziennie 09:00–21:00; przerwa w środy 11:00–14:00."
+      }
     },
     {
       "kind": "clinic",
@@ -167,7 +191,10 @@
       "url": "https://alfavet.by/",
       "source_url": "https://alfavet.by/",
       "checked": "2026-11-15",
-      "note": "Own page opened; branch described as new."
+      "note": "Own page opened; branch described as new.",
+      "duty_i18n": {
+        "pl": "Czynne codziennie 09:00–21:00; przerwa w środy 11:00–14:00."
+      }
     },
     {
       "kind": "clinic",
@@ -182,7 +209,10 @@
       "url": "https://9vet.by/",
       "source_url": "https://9vet.by/main/24-7",
       "checked": "2026-11-15",
-      "note": "Own page opened: 'круглосуточно, ежедневно'. Night line +375 44 583 73 63."
+      "note": "Own page opened: 'круглосуточно, ежедневно'. Night line +375 44 583 73 63.",
+      "duty_i18n": {
+        "pl": "Czynne całą dobę, codziennie; nie każdy specjalista jest w nocy na dyżurze, więc zadzwoń wcześniej."
+      }
     }
   ],
   "notes": "Independent check 2026-11-15: removed entries whose only source was an aggregator or directory listing (Minsk City Veterinary Station, Gomel City Veterinary Station, PoliVet Gomel, Grodno City Veterinary Station, Azbukavet Grodno, Mogilev City Veterinary Station); Azbukavet 24 h claim was only on the veterinar.by card and its own site was not opened. Zheleznodorozhnaya branch of Bazylevsky downgraded (contradictory hours on page). No official duty-rota page and no animal poison line page found. Regions outside Minsk have no entries (Brest, Vitebsk, Gomel, Grodno, Mogilev: no own clinic page opened). Planned Minsk City Vet Station 24 h clinic at Pobediteley 155 not yet open."

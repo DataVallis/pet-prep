@@ -117,6 +117,7 @@ return [
     'afghan_hound' => 'Afghan Hound',
     'australian_silky_terrier' => 'Australian Silky Terrier',
     'parson_russell_terrier' => 'Parson Russell Terrier',
+    'wire_fox_terrier' => 'Wire Fox Terrier',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
