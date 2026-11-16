@@ -42,7 +42,10 @@
       "url": "https://www.vetlife-hospital.com/",
       "source_url": "https://www.vetlife-hospital.com/",
       "checked": "2026-11-15",
-      "note": "Own page says '7/24 veterinar dəstək', 'Daim açıq', '24/7 təcili yardım xidməti mövcuddur'. No street address on the page, only district/postcode/coordinates (40.380000, 49.837889). Page images point to vetlifehospital.az, which could not be opened."
+      "note": "Own page says '7/24 veterinar dəstək', 'Daim açıq', '24/7 təcili yardım xidməti mövcuddur'. No street address on the page, only district/postcode/coordinates (40.380000, 49.837889). Page images point to vetlifehospital.az, which could not be opened.",
+      "duty_i18n": {
+        "pl": "Całodobowo z pomocą w nagłych przypadkach; dostępne także przez WhatsApp."
+      }
     },
     {
       "kind": "clinic",
@@ -57,7 +60,10 @@
       "url": "https://aarc.az/en/",
       "source_url": "https://aarc.az/en/",
       "checked": "2026-11-15",
-      "note": "Own page; same number is the emergency hotline; no 24 h statement ('overnight care' mentioned without hours)."
+      "note": "Own page; same number is the emergency hotline; no 24 h statement ('overnight care' mentioned without hours).",
+      "duty_i18n": {
+        "pl": "Pon.–sob. 10:00–18:00, w niedzielę zamknięte; lekarz do nagłych przypadków na dyżurze w godzinach pracy; wizyty domowe w promieniu 50 km od Baku."
+      }
     }
   ],
   "notes": "2 entries, 1 with 24 h (VetLife Hospital Baku). No duty rota or animal poison line found. Search returned very few Azerbaijani vet sites. AFSA (afsa.gov.az) only surfaced legal PDFs, no clinic list; no Azerbaijan Veterinary Association site found. Not openable: vetlifehospital.az (PROVENANCE_REQUIRED). Not usable (no contact data): Azerbaijan State Agrarian University (Ganja; page only has a \"Veterinary clinic\" menu link, no clinic contact data - removed at independent check 2026-11-15), Royal Vet (oneclick.az), Research Institute of Veterinary Medicine clinic (Baku, Nizami district). Nothing found for Sumqayit, Lankaran, Gabala."

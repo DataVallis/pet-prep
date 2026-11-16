@@ -67,7 +67,8 @@
       "duty_i18n": {
         "it": "Ospedale didattico universitario per animali da compagnia, selvatici e da zoo. Pronto soccorso e terapia intensiva 24 ore su 24; ambulatorio lun–sab 8:00–20:00, dom e festivi 8:00–12:00. Clinici residenti reperibili per le urgenze 19:30–08:00. Ricovero su appuntamento, prenotato dal veterinario che segnala il caso.",
         "pt": "Hospital universitário para animais de companhia, selvagens e de jardim zoológico. Urgências e cuidados intensivos 24 horas por dia; consultas externas de segunda a sábado 8h00–20h00, domingo e feriados 8h00–12h00. Clínicos residentes de piquete para urgências 19h30–8h00. Admissão sob marcação, feita por um veterinário que encaminha o animal.",
-        "nl": "Universitair opleidingsziekenhuis voor gezelschapsdieren, wilde dieren en dierentuindieren. Spoed- en intensieve zorg 24 uur per dag; polikliniek ma–za 8.00–20.00 uur, zo en feestdagen 8.00–12.00 uur. Artsen in opleiding zijn bij spoed in achterwacht van 19.30 tot 08.00 uur. Opname op afspraak, te boeken door een verwijzende dierenarts."
+        "nl": "Universitair opleidingsziekenhuis voor gezelschapsdieren, wilde dieren en dierentuindieren. Spoed- en intensieve zorg 24 uur per dag; polikliniek ma–za 8.00–20.00 uur, zo en feestdagen 8.00–12.00 uur. Artsen in opleiding zijn bij spoed in achterwacht van 19.30 tot 08.00 uur. Opname op afspraak, te boeken door een verwijzende dierenarts.",
+        "pl": "Uniwersytecki szpital kliniczny dla zwierząt domowych, dzikich i z ogrodów zoologicznych. Pogotowie i intensywna terapia całodobowo; ambulatorium pon.–sob. 8:00–20:00, niedz. i święta 8:00–12:00. Lekarze dyżurujący na miejscu w nagłych przypadkach 19:30–08:00. Przyjęcie po umówieniu, rezerwacji dokonuje weterynarz kierujący."
       }
     },
     {
@@ -88,7 +89,8 @@
       "duty_i18n": {
         "it": "Ambulatorio 6:00–22:00 su appuntamento; pronto soccorso e terapia intensiva aperti 24 ore su 24, 7 giorni su 7.",
         "pt": "Consultas externas 6h00–22h00 sob marcação; urgências e cuidados intensivos abertos 24 horas por dia, 7 dias por semana.",
-        "nl": "Polikliniek 6.00–22.00 uur op afspraak; spoed- en intensieve zorg 24 uur per dag, zeven dagen per week open."
+        "nl": "Polikliniek 6.00–22.00 uur op afspraak; spoed- en intensieve zorg 24 uur per dag, zeven dagen per week open.",
+        "pl": "Ambulatorium 6:00–22:00 po wcześniejszym umówieniu; pogotowie i intensywna terapia otwarte całodobowo, siedem dni w tygodniu."
       }
     },
     {
@@ -107,7 +109,8 @@
       "duty_i18n": {
         "it": "Ospedale per piccoli animali gestito dall'Aeronautica militare dello Sri Lanka a Borella. Telefonare prima per gli orari e le urgenze.",
         "pt": "Hospital de animais de pequeno porte gerido pela Força Aérea do Sri Lanka, em Borella. Liga antes para saber o horário e para urgências.",
-        "nl": "Dierenziekenhuis voor kleine dieren van de Sri Lankaanse luchtmacht in Borella. Bel vooraf voor openingstijden en spoed."
+        "nl": "Dierenziekenhuis voor kleine dieren van de Sri Lankaanse luchtmacht in Borella. Bel vooraf voor openingstijden en spoed.",
+        "pl": "Szpital małych zwierząt prowadzony przez Siły Powietrzne Sri Lanki w Borelli. W sprawie godzin otwarcia i nagłych przypadków zadzwoń wcześniej."
       }
     }
   ],

@@ -51,7 +51,8 @@
       "duty_i18n": {
         "it": "Aperto 24 ore su 24, tutti i giorni.",
         "pt": "Aberto 24 horas por dia, todos os dias.",
-        "nl": "Elke dag 24 uur geopend."
+        "nl": "Elke dag 24 uur geopend.",
+        "pl": "Czynne całą dobę, codziennie."
       }
     },
     {
@@ -71,7 +72,8 @@
       "duty_i18n": {
         "it": "Aperto 24 ore su 24, tutti i giorni.",
         "pt": "Aberto 24 horas por dia, todos os dias.",
-        "nl": "Elke dag 24 uur geopend."
+        "nl": "Elke dag 24 uur geopend.",
+        "pl": "Czynne całą dobę, codziennie."
       }
     },
     {
@@ -89,7 +91,8 @@
       "duty_i18n": {
         "it": "Aperto 24 ore su 24 da sabato a giovedì; venerdì 4:00–16:00, solo emergenze.",
         "pt": "Aberto 24 horas por dia de sábado a quinta-feira; sexta-feira, 4h00–16h00, apenas urgências.",
-        "nl": "24 uur per dag open van za tot en met do; vr 4.00–16.00 uur, alleen spoedgevallen."
+        "nl": "24 uur per dag open van za tot en met do; vr 4.00–16.00 uur, alleen spoedgevallen.",
+        "pl": "Czynne całodobowo od soboty do czwartku; w piątek 4:00–16:00, tylko nagłe przypadki."
       }
     },
     {
@@ -109,7 +112,8 @@
       "duty_i18n": {
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; telefonare in anticipo.",
         "pt": "Urgências 24 horas por dia, 7 dias por semana; liga antes.",
-        "nl": "Spoeddienst 24/7; bel vooraf."
+        "nl": "Spoeddienst 24/7; bel vooraf.",
+        "pl": "Pomoc w nagłych przypadkach 24/7; zadzwoń przed wizytą."
       }
     },
     {
@@ -129,7 +133,8 @@
       "duty_i18n": {
         "it": "Sab–mer 8:00–22:00; gio–ven 16:00–22:00. Linea di emergenza 24 ore su 24, 7 giorni su 7: +966 50 229 6655.",
         "pt": "Sábado a quarta-feira, 8h00–22h00; quinta e sexta-feira, 16h00–22h00. Linha de urgências 24 horas por dia, 7 dias por semana: +966 50 229 6655.",
-        "nl": "Za–wo 8.00–22.00 uur; do–vr 16.00–22.00 uur. Spoedlijn 24/7: +966 50 229 6655."
+        "nl": "Za–wo 8.00–22.00 uur; do–vr 16.00–22.00 uur. Spoedlijn 24/7: +966 50 229 6655.",
+        "pl": "Sob.–śr. 8:00–22:00; czw.–pt. 16:00–22:00. Całodobowa linia dla nagłych przypadków 24/7: +966 50 229 6655."
       }
     },
     {
@@ -149,7 +154,8 @@
       "duty_i18n": {
         "it": "Dom–gio e sab 10:00–23:00; ven 15:00–23:00. Visite a domicilio disponibili.",
         "pt": "Domingo a quinta-feira e sábado, 10h00–23h00; sexta-feira, 15h00–23h00. Visitas ao domicílio disponíveis.",
-        "nl": "Zo–do en za 10.00–23.00 uur; vr 15.00–23.00 uur. Huisbezoeken mogelijk."
+        "nl": "Zo–do en za 10.00–23.00 uur; vr 15.00–23.00 uur. Huisbezoeken mogelijk.",
+        "pl": "Niedz.–czw. i sob. 10:00–23:00; pt. 15:00–23:00. Dostępne wizyty domowe."
       }
     },
     {
@@ -168,7 +174,8 @@
       "duty_i18n": {
         "it": "Sab–gio 9:00–24:00; ven 16:00–24:00. Nessun pronto soccorso dopo mezzanotte; telefonare prima di venire.",
         "pt": "Sábado a quinta-feira, 9h00–0h00; sexta-feira, 16h00–0h00. Sem urgências após a meia-noite; liga antes de ires.",
-        "nl": "Za–do 9.00–24.00 uur; vr 16.00–24.00 uur. Geen spoedzorg na middernacht; bel voordat je komt."
+        "nl": "Za–do 9.00–24.00 uur; vr 16.00–24.00 uur. Geen spoedzorg na middernacht; bel voordat je komt.",
+        "pl": "Sob.–czw. 9:00–24:00; pt. 16:00–24:00. Brak pomocy w nagłych przypadkach po północy; zadzwoń przed wizytą."
       }
     },
     {
@@ -187,7 +194,8 @@
       "duty_i18n": {
         "it": "Aperto tutti i giorni 15:30–23:30.",
         "pt": "Aberto todos os dias, 15h30–23h30.",
-        "nl": "Dagelijks open 15.30–23.30 uur."
+        "nl": "Dagelijks open 15.30–23.30 uur.",
+        "pl": "Codziennie 15:30–23:30."
       }
     },
     {
@@ -234,7 +242,8 @@
       "duty_i18n": {
         "it": "Lun–gio e sab 14:00–22:00; ven 16:00–22:00; chiuso la domenica.",
         "pt": "Segunda a quinta-feira e sábado, 14h00–22h00; sexta-feira, 16h00–22h00; fechado ao domingo.",
-        "nl": "Ma–do en za 14.00–22.00 uur; vr 16.00–22.00 uur; zo gesloten."
+        "nl": "Ma–do en za 14.00–22.00 uur; vr 16.00–22.00 uur; zo gesloten.",
+        "pl": "Pon.–czw. i sob. 14:00–22:00; pt. 16:00–22:00; niedz. zamknięte."
       }
     },
     {
@@ -254,7 +263,8 @@
       "duty_i18n": {
         "it": "Sab–gio 9:00–23:00; ven 14:00–23:00.",
         "pt": "Sábado a quinta-feira, 9h00–23h00; sexta-feira, 14h00–23h00.",
-        "nl": "Za–do 9.00–23.00 uur; vr 14.00–23.00 uur."
+        "nl": "Za–do 9.00–23.00 uur; vr 14.00–23.00 uur.",
+        "pl": "Sob.–czw. 9:00–23:00; pt. 14:00–23:00."
       }
     },
     {
@@ -273,7 +283,8 @@
       "duty_i18n": {
         "it": "Sab–gio 9:00–22:00; pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7; telefonare in anticipo.",
         "pt": "Sábado a quinta-feira, 9h00–22h00; serviço de urgências anunciado 24 horas por dia, 7 dias por semana, liga antes.",
-        "nl": "Za–do 9.00–22.00 uur; spoeddienst volgens de kliniek 24/7, bel vooraf."
+        "nl": "Za–do 9.00–22.00 uur; spoeddienst volgens de kliniek 24/7, bel vooraf.",
+        "pl": "Sob.–czw. 9:00–22:00; pomoc w nagłych przypadkach reklamowana jako 24/7, zadzwoń przed wizytą."
       }
     },
     {
@@ -293,7 +304,8 @@
       "duty_i18n": {
         "it": "Sab–gio 8:30–22:00; ven 16:00–22:00. Linea di emergenza: 0500521717.",
         "pt": "Sábado a quinta-feira, 8h30–22h00; sexta-feira, 16h00–22h00. Linha de urgências: 0500521717.",
-        "nl": "Za–do 8.30–22.00 uur; vr 16.00–22.00 uur. Spoedlijn: 0500521717."
+        "nl": "Za–do 8.30–22.00 uur; vr 16.00–22.00 uur. Spoedlijn: 0500521717.",
+        "pl": "Sob.–czw. 8:30–22:00; pt. 16:00–22:00. Linia dla nagłych przypadków: 0500521717."
       }
     },
     {
@@ -313,7 +325,8 @@
       "duty_i18n": {
         "it": "Dom–gio e sab 8:30–23:00; ven 16:00–21:00. Linea di emergenza: 0559171818.",
         "pt": "Domingo a quinta-feira e sábado, 8h30–23h00; sexta-feira, 16h00–21h00. Linha de urgências: 0559171818.",
-        "nl": "Zo–do en za 8.30–23.00 uur; vr 16.00–21.00 uur. Spoedlijn: 0559171818."
+        "nl": "Zo–do en za 8.30–23.00 uur; vr 16.00–21.00 uur. Spoedlijn: 0559171818.",
+        "pl": "Niedz.–czw. i sob. 8:30–23:00; pt. 16:00–21:00. Linia dla nagłych przypadków: 0559171818."
       }
     },
     {
@@ -333,7 +346,8 @@
       "duty_i18n": {
         "it": "Sab–gio 8:30–22:00; ven 16:00–22:00. Linea di emergenza: 0559825550.",
         "pt": "Sábado a quinta-feira, 8h30–22h00; sexta-feira, 16h00–22h00. Linha de urgências: 0559825550.",
-        "nl": "Za–do 8.30–22.00 uur; vr 16.00–22.00 uur. Spoedlijn: 0559825550."
+        "nl": "Za–do 8.30–22.00 uur; vr 16.00–22.00 uur. Spoedlijn: 0559825550.",
+        "pl": "Sob.–czw. 8:30–22:00; pt. 16:00–22:00. Linia dla nagłych przypadków: 0559825550."
       }
     },
     {
@@ -353,7 +367,8 @@
       "duty_i18n": {
         "it": "Sab–gio 9:00–22:00; ven 14:00–22:00.",
         "pt": "Sábado a quinta-feira, 9h00–22h00; sexta-feira, 14h00–22h00.",
-        "nl": "Za–do 9.00–22.00 uur; vr 14.00–22.00 uur."
+        "nl": "Za–do 9.00–22.00 uur; vr 14.00–22.00 uur.",
+        "pl": "Sob.–czw. 9:00–22:00; pt. 14:00–22:00."
       }
     },
     {

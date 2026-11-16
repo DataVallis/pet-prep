@@ -41,7 +41,8 @@
         "es": "Urgencias atendidas dentro y fuera del horario de la clínica; para urgencias fuera de horario, llama antes de las 22:00 para localizar al médico de guardia.",
         "it": "Urgenze gestite durante e fuori dall'orario della clinica; per le urgenze fuori orario chiamare prima delle 22:00 per raggiungere il veterinario di guardia.",
         "pt": "Urgências atendidas durante e depois do horário da clínica; para urgências fora de horas, liga antes das 22h00 para falar com o médico de serviço.",
-        "nl": "Spoedgevallen worden tijdens en buiten de openingstijden behandeld; bel voor spoed buiten kantooruren vóór 22.00 uur om de dienstdoende arts te bereiken."
+        "nl": "Spoedgevallen worden tijdens en buiten de openingstijden behandeld; bel voor spoed buiten kantooruren vóór 22.00 uur om de dienstdoende arts te bereiken.",
+        "pl": "Nagłe przypadki przyjmowane w godzinach pracy i po nich; w nagłych przypadkach po godzinach zadzwoń przed 22:00, aby połączyć się z lekarzem dyżurnym."
       }
     },
     {
@@ -61,7 +62,8 @@
         "es": "Atiende urgencias; móvil de urgencias +1 876-469-1260.",
         "it": "Pronto soccorso disponibile; cellulare per le urgenze +1 876-469-1260.",
         "pt": "Serviço de urgência disponível; telemóvel de urgência +1 876-469-1260.",
-        "nl": "Spoedzorg beschikbaar; mobiel spoednummer +1 876-469-1260."
+        "nl": "Spoedzorg beschikbaar; mobiel spoednummer +1 876-469-1260.",
+        "pl": "Pomoc w nagłych przypadkach; alarmowy numer komórkowy +1 876-469-1260."
       }
     },
     {
@@ -81,7 +83,8 @@
         "es": "Abierto de lunes a sábado.",
         "it": "Aperto dal lunedì al sabato.",
         "pt": "Aberto de segunda a sábado.",
-        "nl": "Open ma–za."
+        "nl": "Open ma–za.",
+        "pl": "Otwarte od poniedziałku do soboty."
       }
     },
     {
@@ -101,7 +104,8 @@
         "es": "De lunes a viernes de 8:00 a 19:00 h, sábado de 9:00 a 16:00 h, domingo de 10:00 a 15:00 h.",
         "it": "Lun–ven 8:00–19:00, sab 9:00–16:00, dom 10:00–15:00.",
         "pt": "Segunda a sexta, 8h00–19h00, sábado 9h00–16h00, domingo 10h00–15h00.",
-        "nl": "Ma–vr 8.00–19.00 uur, za 9.00–16.00 uur, zo 10.00–15.00 uur."
+        "nl": "Ma–vr 8.00–19.00 uur, za 9.00–16.00 uur, zo 10.00–15.00 uur.",
+        "pl": "Od poniedziałku do piątku 8:00–19:00, w sobotę 9:00–16:00, w niedzielę 10:00–15:00."
       }
     },
     {
@@ -121,7 +125,8 @@
         "es": "Clínica abierta al público.",
         "it": "Clinica aperta al pubblico.",
         "pt": "Clínica aberta ao público.",
-        "nl": "Praktijk open voor publiek."
+        "nl": "Praktijk open voor publiek.",
+        "pl": "Przychodnia otwarta dla pacjentów."
       }
     }
   ],

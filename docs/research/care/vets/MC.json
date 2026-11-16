@@ -37,11 +37,14 @@
       "address": "22 quai Jean-Charles Rey, 98000 Monaco",
       "phone": "+377 92 05 74 77",
       "emergency_24h": false,
-      "duty": "By appointment. Daily 9:00-19:00, Thursday 9:00-16:00, Saturday 9:00-12:00 (as published in 2024); call ahead.",
+      "duty": "By appointment. Daily 9:00-19:00, Thursday 9:00-16:00, Saturday 9:00-12:00; call ahead.",
       "small_animals": true,
       "source_url": "https://www.monaco-tribune.com/2024/02/quelles-sont-les-meilleurs-cliniques-veterinaires-autour-de-monaco/",
       "checked": "2026-11-15",
-      "note": "Source is a 2024 news article (opened); clinic's own site (vetmonaco.com, named by hellomonaco.com) blocked by WebFetch provenance rule, not fetched. Name confirmed also by expatfocus.com. No 24h claim."
+      "note": "Source is a 2024 news article (opened); clinic's own site (vetmonaco.com, named by hellomonaco.com) blocked by WebFetch provenance rule, not fetched. Name confirmed also by expatfocus.com. No 24h claim.",
+      "duty_i18n": {
+        "pl": "Po wcześniejszym umówieniu. Codziennie 9:00–19:00, w czwartki 9:00–16:00, w soboty 9:00–12:00; zadzwoń wcześniej."
+      }
     },
     {
       "kind": "clinic",
@@ -51,11 +54,14 @@
       "address": "22 Boulevard Princesse Charlotte, 98000 Monaco",
       "phone": "+377 93 25 62 62",
       "emergency_24h": false,
-      "duty": "Monday to Saturday 9:00-19:00 (as published in 2024); call ahead.",
+      "duty": "Monday to Saturday 9:00-19:00; call ahead.",
       "small_animals": true,
       "source_url": "https://www.monaco-tribune.com/2024/02/quelles-sont-les-meilleurs-cliniques-veterinaires-autour-de-monaco/",
       "checked": "2026-11-15",
-      "note": "Only source is the 2024 Monaco Tribune article (opened); clinic's own site not found/reachable. No 24h claim."
+      "note": "Only source is the 2024 Monaco Tribune article (opened); clinic's own site not found/reachable. No 24h claim.",
+      "duty_i18n": {
+        "pl": "Od poniedziałku do soboty 9:00–19:00; zadzwoń wcześniej."
+      }
     },
     {
       "kind": "clinic",
@@ -65,11 +71,14 @@
       "address": "19 Avenue Crovetto Frères, 98000 Monaco",
       "phone": "+377 93 25 05 04",
       "emergency_24h": false,
-      "duty": "Monday to Friday 10:00-19:00 (as published in 2024); call ahead.",
+      "duty": "Monday to Friday 10:00-19:00; call ahead.",
       "small_animals": true,
       "source_url": "https://www.monaco-tribune.com/2024/02/quelles-sont-les-meilleurs-cliniques-veterinaires-autour-de-monaco/",
       "checked": "2026-11-15",
-      "note": "Only source is the 2024 Monaco Tribune article (opened), which is internally inconsistent about the street (also mentions Boulevard Rainier III). Own site not found. No 24h claim."
+      "note": "Only source is the 2024 Monaco Tribune article (opened), which is internally inconsistent about the street (also mentions Boulevard Rainier III). Own site not found. No 24h claim.",
+      "duty_i18n": {
+        "pl": "Od poniedziałku do piątku 10:00–19:00; zadzwoń wcześniej."
+      }
     },
     {
       "kind": "clinic",
@@ -83,7 +92,10 @@
       "small_animals": true,
       "source_url": "https://www.monaco-tribune.com/2024/02/quelles-sont-les-meilleurs-cliniques-veterinaires-autour-de-monaco/",
       "checked": "2026-11-15",
-      "note": "In France, directly bordering Monaco. 2024 Monaco Tribune article (opened) describes an on-call ('service d'astreinte') night/weekend service; not described as 24h. Own site not found."
+      "note": "In France, directly bordering Monaco. 2024 Monaco Tribune article (opened) describes an on-call ('service d'astreinte') night/weekend service; not described as 24h. Own site not found.",
+      "duty_i18n": {
+        "pl": "Dyżur po godzinach w nocy i w weekendy: +33 6 60 61 36 24. Nie jest to przychodnia całodobowa; zadzwoń wcześniej."
+      }
     }
   ],
   "notes": "Monaco has no public register or duty rota reachable: journaldemonaco.gouv.mc PDF (draft law 1556 annex) blocked by robots (robots_disallowed); the AMPEID copy of the draft law contains no vet list; no gouv.mc / Direction de l'Action Sanitaire / Ordre des Vétérinaires de Monaco list or garde page was found or opened. Clinic's own sites (vetmonaco.com, veterinairesoleil.fr) were refused by WebFetch (PROVENANCE_REQUIRED) and not fetched otherwise. All clinic data therefore rests on one 2024 news article (Monaco Tribune), not an official or clinic source - verify before publishing. No clinic page says 24h, so none is marked 24h. No duty rota and no poison line found (French CNITV pages not opened/covering Monaco). Ordre des Vétérinaires de la Principauté de Monaco contact (per expatfocus.com): 7 Rue Suffren Reymond, +377 93 50 70 10 - not added as an entry (not a clinic/rota). Left out (in France, not Monaco): Clinique vétérinaire canadienne and du Soleil (Cap d'Ail), Vetazur (Cap Martin), Vet Riviera 24/24 Nice (24/24 stated on cotedazurfrance.fr listing; ~15 km away; candidate for FR file)."
