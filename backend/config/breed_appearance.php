@@ -820,6 +820,13 @@
 | (S841; natural). RKC Breed Watch Category 2 without returned points (S842) — no welfare trait. One standard colour;
 | weight unsourced → `verified => false`.
 |
+| Wire Fox Terrier (M5-R10-117, docs/research/dog-data wire_fox_terrier.appearance): "Active and lively, bone and strength
+| in small compass, never cloddy or coarse." (FCI-Standard N° 169, S871); colour "White predominates with black, black and tan
+| or tan markings." — brindle, red, liver or slate-blue markings undesirable, any other colour unacceptable (S871); coat dense,
+| very wiry with a softer undercoat; small V-shaped ears folded forward; tail undocked (natural). RKC Breed Watch Category 1
+| (S872) — no welfare trait. White with black and tan markings first with the highest weight (the portrait default); weights
+| unsourced → `verified => false`. Not the Toy Fox Terrier (`toy_fox_terrier`).
+|
 | Parson Russell Terrier (M5-R10-116, docs/research/dog-data parson_russell_terrier.appearance): "Workmanlike, active and
 | agile, without exaggeration." (FCI-Standard N° 339, S864); colour "White or predominantly white with tan, lemon or black
 | markings, or any combination of these colours." — preferably on the head and / or root of the tail (S864); coat rough,
@@ -5045,6 +5052,39 @@ return [
             'tail' => ['natural undocked tail of moderate length, carried well up'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-117 (docs/research/dog-data/data.json wire_fox_terrier.appearance; runbook rules 2026-10-10: the standard
+    // colours of FCI-Standard N° 169 (S871) — white with black and tan markings first = the portrait default; natural tail).
+    'wire_fox_terrier' => [
+        'display_name' => 'Wire Fox Terrier',
+        // Colour frequencies are in no source (wire_fox_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 169 (S871, https://www.fci.be/Nomenclature/Standards/169g03-en.pdf), RKC breed page (S872), AKC standard (S876) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S872 "Size: Small"; S871 "Height at the withers not exceeding 39 cm in dogs, females slightly less."; S876 "should scale 18 pounds in show condition"',
+            'build' => 'S871 "Active and lively, bone and strength in small compass, never cloddy or coarse."',
+            'coat_length' => 'S871 "Dense, very wiry texture, 2 cm on shoulder to 4 cm on withers, back, ribs and quarters with undercoat of short, softer hair."; S872 "Coat length: Medium"',
+            'coat_color' => 'S871 "White predominates with black, black and tan or tan markings." (weights unsourced)',
+            'ear_carriage' => 'S871 "Small, V-shaped, of moderate thickness, flaps neatly folded over and dropping forward close the cheeks."',
+            'eye_color' => 'S871 "Dark, full of fire and intelligence, moderately small, not prominent."',
+            'tail' => 'S871 "Undocked: Set high. Carried erect, not over back or curled." "Of good strength and fair length to maintain a balanced appearance." (natural)',
+        ],
+        'traits' => [
+            'size' => ['small, short-backed terrier'],
+            'build' => [['value' => 'active and lively terrier with bone and strength in small compass, never cloddy or coarse', 'weight' => 3], 'well-balanced, alert terrier standing like a cleverly made hunter'],
+            'coat_length' => [['value' => 'dense, very wiry broken coat with a short, softer undercoat', 'weight' => 3], 'dense, wiry coat, hand-stripped tidy with the typical furnishings on the muzzle and legs'],
+            // FCI standard (S871); white with black and tan weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'white with black and tan markings', 'weight' => 4],
+                ['value' => 'white with tan markings', 'weight' => 2],
+                'white with black markings',
+            ],
+            'ear_carriage' => ['small V-shaped ears folded forward close to the cheeks'],
+            'eye_color' => ['dark, moderately small eyes full of fire and intelligence'],
+            'tail' => ['natural undocked tail of good strength, set high and carried erect'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

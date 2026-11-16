@@ -914,6 +914,13 @@ class FalAiService
                 .'a wedge-shaped head with a flat skull and a black nose, dark almond-shaped eyes with a keen expression, '
                 .'small V-shaped ears dropping forward, a natural undocked tail carried well up, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-117: FCI-Standard N° 169 (S871) — active and lively, bone and strength in small compass, never cloddy or coarse;
+            // white predominates with black, black and tan or tan markings; dense, very wiry coat; natural (undocked) tail.
+            BreedType::WireFoxTerrier => 'A small, active and lively Wire Fox Terrier, bone and strength in small compass, short-backed and never cloddy or coarse, '
+                .'white with black and tan markings: a dense, very wiry broken coat with a short, softer undercoat, '
+                .'a long flat skull, a strong muzzle with a black nose and the typical furnishings, dark moderately small eyes full of fire, '
+                .'small V-shaped ears folded forward close to the cheeks, a natural undocked tail set high and carried erect, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2163,6 +2170,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'harsh, dense, close smooth or broken coat with a good undercoat',
                 'markings' => 'tan markings on the head and at the root of the tail, small V-shaped drop ears, natural undocked tail',
+            ],
+            // M5-R10-117: FCI S871 "White predominates with black, black and tan or tan markings."
+            BreedType::WireFoxTerrier => [
+                'color_scheme' => 'white with black and tan markings',
+                'eye_color' => 'dark',
+                'fur_texture' => 'dense, very wiry broken coat with a short, softer undercoat',
+                'markings' => 'black saddle and tan head markings on a white body, small V-shaped ears folded forward, natural tail carried erect',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
