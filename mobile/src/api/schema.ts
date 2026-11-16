@@ -3505,7 +3505,7 @@ export interface components {
             message: string;
             website?: string | null;
             /** @enum {string|null} */
-            locale?: "sl" | "en" | null;
+            locale?: "en" | "sl" | "de" | "fr" | "es" | "it" | "pt" | "nl" | "pl" | "cs" | "hr" | "sv" | "da" | "fi" | "nb" | null;
         };
         /**
          * StoreSummaryLeadRequest
