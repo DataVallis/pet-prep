@@ -1,0 +1,38 @@
+{
+  "country": "ZW",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "University of Zimbabwe - Department of Clinical Veterinary Sciences (Faculty of Veterinary Science teaching hospital)",
+      "url": "https://www.uz.ac.zw/index.php/clinical-vet",
+      "note": "Opened: address P.O. Box MP167, Mount Pleasant, Harare; department +263-4-303211 ext 19100, veterinary hospital +263-4-303574, mobile +263 774 449783; hospital services for clients directly or via referring vets incl. small-animal radiology/ultrasound and clinical pathology. No hours, no 24 h statement."
+    },
+    {
+      "name": "Zimplaza - Bulawayo SPCA (directory, not used for an entry)",
+      "url": "https://www.zimplaza.co.zw/?p=34689",
+      "note": "Opened: SPCA Bulawayo, Khami Rd, Bulawayo, 0778547331; low-cost clinic (1 vet, 2 nurses). Third-party directory only, no own site found; not published."
+    },
+    {
+      "name": "Pindula - Harare SPCA (wiki-type aggregator, not used for an entry)",
+      "url": "https://pindula.co.zw/Harare_SPCA",
+      "note": "Opened: SPCA Harare clinic, 2 Airport Road (cnr Cranborne Ave), Hatfield; 0712 211 900, (0242) 576 356/7, (0242) 581 347; website spca.org.zw. No hours, no 24 h. Own site spca.org.zw refused by WebFetch (PROVENANCE_REQUIRED), not opened."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "University of Zimbabwe Veterinary Teaching Hospital (Faculty of Veterinary Science)",
+      "city": "Harare",
+      "region": "Harare",
+      "address": "Department of Clinical Veterinary Sciences, University of Zimbabwe, P.O. Box MP167, Mount Pleasant, Harare",
+      "phone": "+263 4 303574",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.uz.ac.zw/index.php/clinical-vet",
+      "source_url": "https://www.uz.ac.zw/index.php/clinical-vet",
+      "checked": "2026-11-16",
+      "note": "University page lists hospital services for clients directly or via referring vets (small-animal imaging, clinical pathology). No hours or 24 h statement published. Other numbers on page: department +263-4-303211 ext 19100, mobile +263 774 449783."
+    }
+  ],
+  "notes": "Very thin run: web search surfaced almost no clinic own-sites for Zimbabwe. Only the University of Zimbabwe page was an official/own source and usable. Not published (aggregator/directory only): Bulawayo SPCA clinic (Khami Rd, 0778547331, zimplaza.co.zw); Harare SPCA clinic (2 Airport Rd, Hatfield, 0712 211 900, (0242) 576 356/7; own site spca.org.zw refused PROVENANCE_REQUIRED). Candidate names seen only in search results as directory listings, not opened/verified: Borrowdale Vet Surgery (VetClick), Avondale Veterinary Surgery and Harare Central Vet (thedirectory.co.zw - fetch rate-limited), medpages.info vet listing. Zimbabwe Veterinary Association / Veterinary Council of Zimbabwe / Dept of Veterinary Services: no directory page found via search. Nothing found for Bulawayo, Victoria Falls, Mutare, Gweru private clinics. No 24 h clinics verified, no duty rotas, no animal poison line found. Needs own-site verification in a later run."
+}
