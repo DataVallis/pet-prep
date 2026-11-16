@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `wire_fox_terrier` (viri S871–S878; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S872) |
 | Izvor | FCI št. 169, skupina 3, sekcija 1 (veliki in srednji terierji), Velika Britanija (S871) — ni toy fox terier (`toy_fox_terrier`) in ni kratkodlaki foksterier (FCI 12, ni v aplikaciji) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 113. mesto »Wire Fox Terrier« (S174, zapisano 2026-11-15 v vrstici 116 čakalne vrste) |
-| PR-ji | pet-prep #1203 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #1203 (pasma, združen `f525649`) · portret pet-prep #PORTRAIT (zagon `breed-portraits.yml` 43783016612, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-wire-fox-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Česanje 2× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-16 |
 | Ščetkanje zob vsak dan, kremplji vsake 4 tedne (otrok), opomnika staršem: kopanje vsake 4 tedne, frizer vsakih 12 tednov | 🛠 | 💶 izziv | M5-R14 / M5-R15 / M5-R19 / M5-R20 | 2026-11-16 |
 | Barva (izbirnik: tribarven, bel z rjavimi lisami, bel s črnimi lisami) | 🛠 | 💶 izziv | M5-R21 | 2026-11-16 |
-| AI portret v registru | sledi (portret se naredi takoj po združitvi) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/wire-fox-terrier`, `/sl/zivali/psi/ostrodlaki-foksterier`) | 🗓 šele s portretom; nato »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), tribarven, naprej zavihana V-ušesa, naraven pokončen rep | — | M5-R11-04 | 2026-11-16 |
+| Stran na petprep.si (`/animals/dogs/wire-fox-terrier`, `/sl/zivali/psi/ostrodlaki-foksterier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
