@@ -10,7 +10,8 @@
     "pl": "Soczewica",
     "cs": "Čočka",
     "hr": "Leća",
-    "sv": "Linser"
+    "sv": "Linser",
+    "da": "Linser"
   },
   "question": {
     "en": "Can dogs eat lentils?",
@@ -21,7 +22,8 @@
     "pl": "Czy psy mogą jeść soczewicę?",
     "cs": "Mohou psi jíst čočku?",
     "hr": "Smiju li psi jesti leću?",
-    "sv": "Får hundar äta linser?"
+    "sv": "Får hundar äta linser?",
+    "da": "Må hunde spise linser?"
   },
   "url_slug": {
     "en": "lentils",
@@ -32,7 +34,8 @@
     "pl": "soczewica",
     "cs": "cocka",
     "hr": "leca",
-    "sv": "linser"
+    "sv": "linser",
+    "da": "linser"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "pl": "Tak, jeśli jest ugotowana. Soczewica to roślina strączkowa, podobnie jak fasola, a psom można dawać rośliny strączkowe, jeśli najpierw je namoczono, a potem ugotowano. Niektóre psy mają kłopoty z trawieniem roślin strączkowych, więc ugotowaną soczewicę wprowadzaj stopniowo.",
     "cs": "Ano, pokud je uvařená. Čočka je luštěnina stejně jako fazole a psi mohou jíst luštěniny, které byly nejdřív namočené a potom uvařené. Někteří psi luštěniny špatně tráví, proto uvařenou čočku zařazujte pomalu.",
     "hr": "Da, ako je kuhana. Leća je mahunarka, kao i grah, a psi smiju jesti mahunarke koje su prvo namočene, a zatim kuhane. Neki psi teško probavljaju mahunarke, zato kuhanu leću uvodi postupno.",
-    "sv": "Ja, om de är kokta. Linser är baljväxter, precis som bönor, och hundar kan äta baljväxter som först har blötlagts och sedan kokats. Vissa hundar har svårt att smälta baljväxter, så vänj hunden vid kokta linser långsamt."
+    "sv": "Ja, om de är kokta. Linser är baljväxter, precis som bönor, och hundar kan äta baljväxter som först har blötlagts och sedan kokats. Vissa hundar har svårt att smälta baljväxter, så vänj hunden vid kokta linser långsamt.",
+    "da": "Ja, hvis de er tilberedt. Linser er bælgfrugter, ligesom bønner, og hunde kan få bælgfrugter, der først er udblødt og derefter tilberedt. Nogle hunde har svært ved at fordøje bælgfrugter, så væn din hund langsomt til tilberedte linser."
   },
   "why": {
     "en": "Legumes such as lentils are a good source of fibre and protein for dogs. However, some dogs have trouble digesting them, which is why they should be cooked well and added to the diet slowly.",
@@ -55,7 +59,8 @@
     "pl": "Rośliny strączkowe, takie jak soczewica, są dobrym źródłem błonnika i białka dla psów. Jednak niektóre psy mają problemy z ich trawieniem, dlatego należy je dobrze ugotować i wprowadzać do diety stopniowo.",
     "cs": "Luštěniny, například čočka, jsou pro psy dobrým zdrojem vlákniny a bílkovin. Někteří psi je ale špatně tráví, proto by měly být dobře uvařené a do stravy zařazované pomalu.",
     "hr": "Mahunarke poput leće dobar su izvor vlakana i bjelančevina za pse. Međutim, neki ih psi teško probavljaju, zbog čega ih treba dobro skuhati i u prehranu uvoditi postupno.",
-    "sv": "Baljväxter som linser är en bra källa till fibrer och protein för hundar. Vissa hundar har dock svårt att smälta dem, så linserna ska kokas ordentligt och införas gradvis i kosten."
+    "sv": "Baljväxter som linser är en bra källa till fibrer och protein för hundar. Vissa hundar har dock svårt att smälta dem, så linserna ska kokas ordentligt och införas gradvis i kosten.",
+    "da": "Bælgfrugter som linser er en god kilde til fibre og protein for hunde. Nogle hunde har dog svært ved at fordøje dem, og derfor skal de tilberedes grundigt og indføres langsomt i kosten."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "pl": "Zacznij od odrobiny dobrze ugotowanej soczewicy i wprowadzaj ją stopniowo, bo niektóre psy mają problemy z trawieniem roślin strączkowych.",
     "cs": "Začněte trochou dobře uvařené čočky a zařazujte ji pomalu, protože někteří psi mají s trávením luštěnin potíže.",
     "hr": "Počni s malo dobro kuhane leće i uvodi je postupno jer neki psi teško probavljaju mahunarke.",
-    "sv": "Börja med lite välkokta linser och vänj hunden vid dem långsamt, eftersom vissa hundar har svårt att smälta baljväxter."
+    "sv": "Börja med lite välkokta linser och vänj hunden vid dem långsamt, eftersom vissa hundar har svårt att smälta baljväxter.",
+    "da": "Start med lidt grundigt tilberedte linser, og indfør dem langsomt, for nogle hunde har svært ved at fordøje bælgfrugter."
   },
   "serving": {
     "en": "Well cooked (dried lentils soaked first, then cooked), introduced slowly.",
@@ -78,7 +84,8 @@
     "pl": "Dobrze ugotowana (suszoną soczewicę najpierw namocz, potem ugotuj), wprowadzana stopniowo.",
     "cs": "Dobře uvařená (sušenou čočku nejdřív namočit, pak uvařit), do jídelníčku zařazovat pomalu.",
     "hr": "Dobro kuhana (suha leća prvo se namoči, a zatim kuha), uvedena postupno.",
-    "sv": "Välkokta; torkade linser blötläggs först och kokas sedan. Införs långsamt i kosten."
+    "sv": "Välkokta; torkade linser blötläggs först och kokas sedan. Införs långsamt i kosten.",
+    "da": "Grundigt tilberedte (tørrede linser udblødes først og tilberedes derefter) og indført langsomt."
   },
   "child": {
     "en": "Cooked lentils can be a little treat for dogs. A grown-up should cook them well first!",
@@ -89,7 +96,8 @@
     "pl": "Ugotowana soczewica może być małym smakołykiem dla psa. Dorosły musi ją najpierw dobrze ugotować!",
     "cs": "Uvařená čočka může být pro psy malým pamlskem. Dospělý ji musí nejdřív dobře uvařit!",
     "hr": "Kuhana leća može biti mala poslastica za pse. Odrasla osoba prvo je mora dobro skuhati!",
-    "sv": "Kokta linser kan vara en liten godbit för hundar. En vuxen ska koka dem ordentligt först!"
+    "sv": "Kokta linser kan vara en liten godbit för hundar. En vuxen ska koka dem ordentligt först!",
+    "da": "Kogte linser kan være en lille godbid til hunde. En voksen skal først koge dem grundigt!"
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "pl": "Czy psy mogą jeść niegotowaną soczewicę?",
         "cs": "Mohou psi jíst syrovou čočku?",
         "hr": "Smiju li psi jesti nekuhanu leću?",
-        "sv": "Får hundar äta okokta linser?"
+        "sv": "Får hundar äta okokta linser?",
+        "da": "Må hunde spise ukogte linser?"
       },
       "a": {
         "en": "No. Dogs can have legumes that have been soaked first and then cooked, and lentils should be cooked well.",
@@ -113,7 +122,8 @@
         "pl": "Nie. Psom można dawać rośliny strączkowe, jeśli najpierw je namoczono, a potem ugotowano, a soczewicę trzeba dobrze ugotować.",
         "cs": "Ne. Psi mohou jíst luštěniny, které byly nejdřív namočené a potom uvařené, a čočka by měla být dobře uvařená.",
         "hr": "Ne. Psi smiju jesti mahunarke koje su prvo namočene pa kuhane, a leću treba dobro skuhati.",
-        "sv": "Nej. Hundar kan äta baljväxter som först har blötlagts och sedan kokats, och linser ska kokas ordentligt."
+        "sv": "Nej. Hundar kan äta baljväxter som först har blötlagts och sedan kokats, och linser ska kokas ordentligt.",
+        "da": "Nej. Hunde kan få bælgfrugter, der først er udblødt og derefter tilberedt, og linser skal tilberedes grundigt."
       }
     }
   ],
@@ -194,6 +204,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-16",
       "verified_hash": "cc0995d649c03028559901685dbff9562c0cb41bebd511762202a45c532712c5"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0096e3eb38a31ee6fe6a5d0474ba6b3f02f0eca56cca7010223b043a55e0770b"
     }
   }
 }

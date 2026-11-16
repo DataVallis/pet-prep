@@ -10,7 +10,8 @@
     "pl": "Masła z orzechów (migdałowe, z orzechów włoskich …)",
     "cs": "Ořechová másla (mandlové, z vlašských ořechů …)",
     "hr": "Maslaci od orašastih plodova (badem, orah …)",
-    "sv": "Nötsmör (mandel, valnöt …)"
+    "sv": "Nötsmör (mandel, valnöt …)",
+    "da": "Nøddesmør (mandel, valnød …)"
   },
   "question": {
     "en": "Can cats eat nut butters?",
@@ -21,7 +22,8 @@
     "pl": "Czy koty mogą jeść masła z orzechów?",
     "cs": "Mohou kočky jíst ořechová másla?",
     "hr": "Smiju li mačke jesti maslace od orašastih plodova?",
-    "sv": "Får katter äta nötsmör?"
+    "sv": "Får katter äta nötsmör?",
+    "da": "Må katte spise nøddesmør?"
   },
   "url_slug": {
     "en": "nut-butters",
@@ -32,7 +34,8 @@
     "pl": "masla-z-orzechow",
     "cs": "orechova-masla",
     "hr": "maslaci-od-orasastih-plodova",
-    "sv": "notsmor"
+    "sv": "notsmor",
+    "da": "noddesmor"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "pl": "Lepiej nie. Masła z orzechów powstają z orzechów, a te zawierają duże ilości olejów i tłuszczów, które mogą zaszkodzić kotu i wywołać wymioty lub biegunkę. Nigdy nie dawaj masła z orzechów makadamia: orzechy makadamia są toksyczne dla kotów.",
     "cs": "Raději ne. Ořechová másla se vyrábějí z ořechů a ořechy obsahují velké množství olejů a tuků, které mohou kočce způsobit zvracení nebo průjem. Makadamové máslo nedávejte nikdy: makadamové ořechy jsou pro kočky jedovaté.",
     "hr": "Bolje ne. Maslaci od orašastih plodova prave se od orašastih plodova, a oni sadrže velike količine ulja i masti zbog kojih mački može pozliti, a mogu izazvati i povraćanje ili proljev. Nikad ne daj maslac od makadamije: makadamija je otrovna za mačke.",
-    "sv": "Helst inte. Nötsmör görs av nötter, och nötter innehåller mycket olja och fett, som kan göra katten dålig, med kräkningar eller diarré. Ge aldrig macadamianötsmör: macadamianötter är giftiga för katter."
+    "sv": "Helst inte. Nötsmör görs av nötter, och nötter innehåller mycket olja och fett, som kan göra katten dålig, med kräkningar eller diarré. Ge aldrig macadamianötsmör: macadamianötter är giftiga för katter.",
+    "da": "Helst ikke. Nøddesmør er lavet af nødder, og nødder indeholder meget olie og fedt, som kan gøre en kat syg med opkast eller diarré. Giv aldrig macadamianøddesmør: macadamianødder er giftige for katte."
   },
   "why": {
     "en": "Cats Protection says nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which can make a cat unwell. VCA vets say most nuts are very fatty and can cause vomiting and diarrhoea, and that macadamia nuts are very fatty, can cause pancreatitis and are also toxic to cats. Cats Protection advises sticking to cat food treats rather than human foods.",
@@ -55,7 +59,8 @@
     "pl": "Cats Protection podaje, że orzechy, takie jak makadamia, migdały i orzechy włoskie, zawierają duże ilości olejów i tłuszczów, które mogą zaszkodzić kotu. Weterynarze z VCA podają, że większość orzechów jest bardzo tłusta i może wywołać wymioty i biegunkę oraz że orzechy makadamia są bardzo tłuste, mogą wywołać zapalenie trzustki i są też toksyczne dla kotów. Cats Protection radzi dawać kotom smakołyki przeznaczone dla kotów, a nie jedzenie dla ludzi.",
     "cs": "Cats Protection uvádí, že ořechy, jako jsou makadamové ořechy, mandle a vlašské ořechy, obsahují velké množství olejů a tuků, po kterých může být kočce špatně. Veterináři z VCA uvádějí, že většina ořechů je velmi tučná a může způsobit zvracení a průjem a že makadamové ořechy jsou velmi tučné, mohou způsobit zánět slinivky břišní a jsou pro kočky navíc jedovaté. Cats Protection radí držet se pamlsků pro kočky a nedávat jim lidské jídlo.",
     "hr": "Cats Protection kaže da orašasti plodovi poput makadamije, badema i oraha sadrže velike količine ulja i masti zbog kojih mački može pozliti. Veterinari iz VCA-a kažu da je većina orašastih plodova vrlo masna i može izazvati povraćanje i proljev te da je makadamija vrlo masna, može izazvati upalu gušterače i otrovna je za mačke. Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke.",
-    "sv": "Cats Protection skriver att nötter som macadamia, mandel och valnöt innehåller mycket olja och fett, som kan göra katten dålig. Veterinärerna på VCA skriver att de flesta nötter är mycket feta och kan ge kräkningar och diarré, och att macadamianötter är mycket feta, kan orsaka bukspottkörtelinflammation och dessutom är giftiga för katter. Cats Protection rekommenderar att du håller dig till kattgodis i stället för mat från matbordet."
+    "sv": "Cats Protection skriver att nötter som macadamia, mandel och valnöt innehåller mycket olja och fett, som kan göra katten dålig. Veterinärerna på VCA skriver att de flesta nötter är mycket feta och kan ge kräkningar och diarré, och att macadamianötter är mycket feta, kan orsaka bukspottkörtelinflammation och dessutom är giftiga för katter. Cats Protection rekommenderar att du håller dig till kattgodis i stället för mat från matbordet.",
+    "da": "Cats Protection skriver, at nødder som macadamia, mandler og valnødder indeholder meget olie og fedt, som kan gøre en kat utilpas. Dyrlægerne fra VCA skriver, at de fleste nødder er meget fede og kan give opkast og diarré, og at macadamianødder er meget fede, kan give betændelse i bugspytkirtlen og desuden er giftige for katte. Cats Protection anbefaler, at du holder dig til kattegodbidder i stedet for menneskemad."
   },
   "signs": {
     "en": [
@@ -93,6 +98,10 @@
     "sv": [
       "Kräkningar",
       "Diarré"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré"
     ]
   },
   "what_to_do": {
@@ -104,7 +113,8 @@
     "pl": "Jeśli twój kot zjadł masło z orzechów makadamia albo źle się czuje po zjedzeniu jakiegokolwiek masła z orzechów, jak najszybciej umów wizytę u weterynarza.",
     "cs": "Pokud kočka snědla makadamové máslo nebo se jí po jakémkoli ořechovém másle udělalo zle, neodkladně se objednejte k veterináři.",
     "hr": "Ako je mačka pojela maslac od makadamije ili joj se nakon bilo kojeg maslaca od orašastih plodova čini da nije dobro, hitno zakaži pregled kod veterinara.",
-    "sv": "Om katten åt macadamianötsmör, eller verkar må dåligt efter att ha ätit nötsmör, boka akut tid hos veterinären."
+    "sv": "Om katten åt macadamianötsmör, eller verkar må dåligt efter att ha ätit nötsmör, boka akut tid hos veterinären.",
+    "da": "Hvis din kat har spist macadamianøddesmør eller virker utilpas efter at have spist nøddesmør, så bestil en akut tid hos din dyrlæge."
   },
   "serving": null,
   "child": {
@@ -116,7 +126,8 @@
     "pl": "Masła z orzechów to jedzenie dla ludzi, a dla kociego brzuszka są zbyt tłuste. Daj kotu lepiej jego własne kocie smakołyki.",
     "cs": "Ořechová másla jsou jídlo pro lidi a pro kočičí bříško jsou příliš mastná. Dej kočičce raději její vlastní kočičí pamlsky.",
     "hr": "Maslaci od orašastih plodova hrana su za ljude i previše su masni za mačji trbuščić. Maci radije daj njezine poslastice za mačke.",
-    "sv": "Nötsmör är mat för människor och för oljigt för en katts mage. Ge katten sitt eget kattgodis i stället."
+    "sv": "Nötsmör är mat för människor och för oljigt för en katts mage. Ge katten sitt eget kattgodis i stället.",
+    "da": "Nøddesmør er menneskemad og for fedtet til en kats mave. Giv hellere din kat dens egne kattegodbidder."
   },
   "faq": [
     {
@@ -129,7 +140,8 @@
         "pl": "A co z masłem orzechowym?",
         "cs": "A co arašídové máslo?",
         "hr": "A maslac od kikirikija?",
-        "sv": "Hur är det med jordnötssmör?"
+        "sv": "Hur är det med jordnötssmör?",
+        "da": "Hvad med peanutbutter?"
       },
       "a": {
         "en": "Peanut butter has its own page. VCA vets say any peanut butter must be free of preservatives and life-threatening additives such as xylitol.",
@@ -140,7 +152,8 @@
         "pl": "Masło orzechowe ma własną stronę. Weterynarze z VCA podają, że masło orzechowe nie może zawierać konserwantów ani zagrażających życiu dodatków, takich jak ksylitol.",
         "cs": "Arašídové máslo má vlastní stránku. Veterináři z VCA uvádějí, že každé arašídové máslo musí být bez konzervantů a životu nebezpečných přísad, jako je xylitol.",
         "hr": "Maslac od kikirikija ima vlastitu stranicu. Veterinari iz VCA-a kažu da svaki maslac od kikirikija mora biti bez konzervansa i dodataka opasnih po život, kao što je ksilitol.",
-        "sv": "Jordnötssmör har en egen sida. Veterinärerna på VCA skriver att allt jordnötssmör måste vara fritt från konserveringsmedel och livsfarliga tillsatser som xylitol."
+        "sv": "Jordnötssmör har en egen sida. Veterinärerna på VCA skriver att allt jordnötssmör måste vara fritt från konserveringsmedel och livsfarliga tillsatser som xylitol.",
+        "da": "Peanutbutter har sin egen side. Dyrlægerne fra VCA skriver, at al peanutbutter skal være fri for konserveringsmidler og livsfarlige tilsætningsstoffer som xylitol."
       }
     }
   ],
@@ -227,6 +240,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-16",
       "verified_hash": "4c4cdc1871774ee00b5333f889ec1c15538dc2978003c411ba4f03b346ad017d"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6cdbe6bdba12f2a4ed0065995bcf6a8c3e9461b65426565ec998d201a078d476"
     }
   }
 }
