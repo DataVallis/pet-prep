@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "acf0eb018ae6aa392c42653bdd643185858ebdc87e4e9016b40e702033d71ea2"
+      "sha256": "ae54a20c5062ce26e0bba9cc1cc6ffac220dc9f85b2fcd85639ecafd1c93a369"
     }
   },
   "suitability_vocabulary": {
@@ -66530,7 +66530,12 @@
           "S875"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "wire-fox-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
