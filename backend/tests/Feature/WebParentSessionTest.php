@@ -82,7 +82,7 @@ function wsToken(string $provider = 'google', array $claims = []): string
 }
 
 /** @param  array<string, mixed>  $body */
-function wsPost(array $body, string $ip = '198.51.100.210'): TestResponse
+function wpsPost(array $body, string $ip = '198.51.100.210'): TestResponse
 {
     app('auth')->forgetGuards();
 
@@ -92,13 +92,13 @@ function wsPost(array $body, string $ip = '198.51.100.210'): TestResponse
 
 function wsPassword(string $email = 'parent@example.com', string $password = WS_PASSWORD, string $ip = '198.51.100.210'): TestResponse
 {
-    return wsPost(['method' => 'password', 'email' => $email, 'password' => $password, 'locale' => 'en'], $ip);
+    return wpsPost(['method' => 'password', 'email' => $email, 'password' => $password, 'locale' => 'en'], $ip);
 }
 
 /** @param  array<string, mixed>  $claims */
 function wsSocial(string $provider = 'google', array $claims = [], ?string $nonce = WS_NONCE, string $ip = '198.51.100.211'): TestResponse
 {
-    return wsPost(array_filter(['method' => $provider, 'id_token' => wsToken($provider, $claims), 'nonce' => $nonce, 'locale' => 'en'], fn ($v) => $v !== null), $ip);
+    return wpsPost(array_filter(['method' => $provider, 'id_token' => wsToken($provider, $claims), 'nonce' => $nonce, 'locale' => 'en'], fn ($v) => $v !== null), $ip);
 }
 
 /** A parent with a family and a password. */
@@ -311,8 +311,8 @@ describe('google and apple', function () {
         wsLink(wsParent(), 'google', 'g-sub-parent');
         $idToken = wsToken('google');
 
-        wsPost(['method' => 'google', 'id_token' => $idToken, 'nonce' => WS_NONCE])->assertOk();
-        wsPost(['method' => 'google', 'id_token' => $idToken, 'nonce' => WS_NONCE], '198.51.100.40')->assertStatus(401)->assertJsonPath('error', 'invalid_token');
+        wpsPost(['method' => 'google', 'id_token' => $idToken, 'nonce' => WS_NONCE])->assertOk();
+        wpsPost(['method' => 'google', 'id_token' => $idToken, 'nonce' => WS_NONCE], '198.51.100.40')->assertStatus(401)->assertJsonPath('error', 'invalid_token');
     });
 
     it('WS11: no website id configured → 503 provider_disabled and no HTTP at all (the app ids do not count)', function () {
@@ -354,13 +354,13 @@ describe('switch, limits, tokens', function () {
 
     it('WS13: the 11th request in a minute from one IP is 429 + Retry-After; another IP is unaffected; DELETE shares the bucket', function () {
         for ($i = 0; $i < 9; $i++) {
-            wsPost(['method' => 'nope'], '203.0.113.77')->assertStatus(422);
+            wpsPost(['method' => 'nope'], '203.0.113.77')->assertStatus(422);
         }
         app('auth')->forgetGuards();
         test()->withServerVariables(['REMOTE_ADDR' => '203.0.113.77'])->deleteJson('/api/web/parent-session')->assertNoContent();
-        wsPost(['method' => 'nope'], '203.0.113.77')->assertStatus(429)
+        wpsPost(['method' => 'nope'], '203.0.113.77')->assertStatus(429)
             ->assertJsonPath('error', 'rate_limited')->assertHeader('Retry-After');
-        wsPost(['method' => 'nope'], '203.0.113.78')->assertStatus(422);
+        wpsPost(['method' => 'nope'], '203.0.113.78')->assertStatus(422);
     });
 
     it('WS14: a 4th web sign-in deletes the oldest web token; app tokens are untouched', function () {
@@ -405,7 +405,7 @@ describe('switch, limits, tokens', function () {
 
     it('WS16: extra body fields never shape the token', function () {
         wsParent();
-        $res = wsPost(['method' => 'password', 'email' => 'parent@example.com', 'password' => WS_PASSWORD,
+        $res = wpsPost(['method' => 'password', 'email' => 'parent@example.com', 'password' => WS_PASSWORD,
             'abilities' => ['*'], 'ability' => 'parent', 'device_name' => 'evil', 'name' => 'x', 'terms_accepted' => true,
             'timezone' => 'Europe/Paris'])->assertOk();
 
@@ -415,12 +415,12 @@ describe('switch, limits, tokens', function () {
 
     it('WS18: locale de → 200 and an English message on errors; xx → 422', function () {
         wsParent();
-        wsPost(['method' => 'password', 'email' => 'parent@example.com', 'password' => WS_PASSWORD, 'locale' => 'de'])->assertOk();
-        wsPost(['method' => 'password', 'email' => 'parent@example.com', 'password' => 'Wrong-1', 'locale' => 'fi'], '198.51.100.80')
+        wpsPost(['method' => 'password', 'email' => 'parent@example.com', 'password' => WS_PASSWORD, 'locale' => 'de'])->assertOk();
+        wpsPost(['method' => 'password', 'email' => 'parent@example.com', 'password' => 'Wrong-1', 'locale' => 'fi'], '198.51.100.80')
             ->assertStatus(401)->assertJsonPath('message', 'The e-mail or password is not correct.');
-        wsPost(['method' => 'password', 'email' => 'parent@example.com', 'password' => 'Wrong-2', 'locale' => 'sl'], '198.51.100.81')
+        wpsPost(['method' => 'password', 'email' => 'parent@example.com', 'password' => 'Wrong-2', 'locale' => 'sl'], '198.51.100.81')
             ->assertStatus(401)->assertJsonPath('message', 'E-naslov ali geslo ni pravilno.');
-        $bad = wsPost(['method' => 'password', 'email' => 'parent@example.com', 'password' => WS_PASSWORD, 'locale' => 'xx'], '198.51.100.82')
+        $bad = wpsPost(['method' => 'password', 'email' => 'parent@example.com', 'password' => WS_PASSWORD, 'locale' => 'xx'], '198.51.100.82')
             ->assertStatus(422)->json();
         expect(array_keys($bad))->toBe(['error', 'message'])->and($bad['error'])->toBe('invalid_request');
     });

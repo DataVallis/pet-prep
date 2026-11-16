@@ -186,7 +186,7 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'training' => TrainingPayload::summaryFor($pet)->summary(),
             // M5-R05: play / cuddle possible now (pet level), the dog's invitation, the happy scene; null without play.
             'play' => PlayPayload::for($pet)?->toArray(),
-            // M5-T02: the pet sleeps now (family quiet hours) and when it wakes (family offset).
+            // M5-T02: the pet sleeps now (its quiet hours — own, else the family's) and when it wakes (the pet's offset).
             'sleep' => SleepPayload::for($pet)->toArray(),
             // M5-R06-04: the cat's wand play (goal, sessions today, gap, running game); null for a dog.
             'wand' => WandPayload::for($pet)?->toArray(),

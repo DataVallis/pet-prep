@@ -51,7 +51,7 @@ erDiagram
 - **pet_daily_steps** — each child's own steps per family-local day per pet.
 - **pet_contracts** unique `(pet_id, user_id)` (was `pet_id`) — one contract per caretaker child.
 - **family_invites** — second-parent invite codes.
-- **quiet_hours.family_id** (unique) — one quiet-hours configuration per family, any parent edits it.
+- **quiet_hours.family_id** (unique) — one quiet-hours configuration per family, any parent edits it. *Amended 2026-11-16 (David, quiet hours per pet):* it is the family's DEFAULT; a parent can give a single pet its own schedule (`pets.own_quiet_hours`, null = follow the family), which a family change never moves. Rules read `Pet::quietHours()`.
 - **users.pairing_pet_id** — the child PIN's target pet (null = new pet).
 
 ### Invariants

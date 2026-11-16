@@ -1991,6 +1991,33 @@ export interface paths {
         patch: operations["petName.update"];
         trace?: never;
     };
+    "/parent/pets/{pet}/quiet-hours": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /**
+         * Give the pet its own quiet hours (`{"quiet_hours": {…}}`) or make it
+         *     follow the family's again (`{"quiet_hours": null}`)
+         * @description PUT /api/parent/pets/{pet}/quiet-hours — decay ×0.1, sleep, no pushes,
+         *     no messes and parent-covered meals of THIS pet follow the new schedule
+         *     from now on (like a family change: the next tick, closed days never
+         *     recomputed); the family's quiet hours and the other pets stay. A later
+         *     change of the family's quiet hours never moves a pet with its own.
+         *     One `pet_quiet_hours_changed` broadcast when the value changed. Child
+         *     token or another family's pet → 403; unknown pet → 404.
+         */
+        put: operations["petQuietHours.update"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/parent/pets/{pet}/timezone": {
         parameters: {
             query?: never;
@@ -2093,6 +2120,28 @@ export interface paths {
          *     POST /api/summary-leads
          */
         post: operations["summaryLead.store"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/user/time-format": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /**
+         * Save the signed-in person's clock choice. Used by the app for every
+         *     clock time it shows and by push copy for `:time` on this person's
+         *     phones (`auto` = each phone's own setting, sent with POST /api/devices)
+         * @description PUT /api/user/time-format
+         */
+        put: operations["timeFormat.update"];
+        post?: never;
         delete?: never;
         options?: never;
         head?: never;
@@ -3070,6 +3119,7 @@ export interface components {
             /** Format: date-time */
             challenge_started_at: string | null;
             challenge_score_kept: boolean;
+            own_quiet_hours: unknown[] | null;
         };
         /**
          * PetOrigin
@@ -3192,6 +3242,11 @@ export interface components {
              * @enum {string|null}
              */
             locale?: "en" | "sl" | null;
+            /**
+             * @description David 2026-11-16: does THIS phone use the 12 h clock (its own system setting)?
+             *     What `users.time_format = auto` means for this install's pushes; not sent → kept.
+             */
+            hour12?: boolean | null;
         };
         /**
          * RegisterParentRequest
@@ -3467,6 +3522,12 @@ export interface components {
             recorded_at: string;
         };
         /**
+         * TimeFormat
+         * @description How clock times are shown to a person (David 2026-11-16: »da se lahko nastavi 24-urni ali pa 12-urni format, ker gremo globalno«). `users.time_format` (CHECK constraint). `auto` = follow the phone — for push copy that is `device_push_tokens.hour12` of the receiving phone (null = an older app → 24 h, as before).
+         * @enum {string}
+         */
+        TimeFormat: "auto" | "24h" | "12h";
+        /**
          * TrainingCommand
          * @description The commands a child can train (M5-R03, David 2026-10-06; REALISM_SPEC §4). AKC (S36) lists come, sit, down/stay, loose-leash walking as first commands; v1 is David's choice. Mirrored by the pet_training_skills_command_check / pet_training_sessions_command_check constraints.
          *     | |
@@ -3554,6 +3615,26 @@ export interface components {
             name: string | null;
         };
         /**
+         * UpdatePetQuietHoursRequest
+         * @description PUT /api/parent/pets/{pet}/quiet-hours (David 2026-11-16, quiet hours per
+         *     pet). Body `{"quiet_hours": {"school_start": "08:00", "school_end":
+         *     "13:00", "bedtime_start": "20:00", "bedtime_end": "07:00", "is_active":
+         *     true}}` = the pet's own schedule (times "HH:MM" or null, the same rules as
+         *     the family's PUT /api/parent/quiet-hours); `{"quiet_hours": null}` = follow
+         *     the family's quiet hours again. Authorized by PetPolicy::changeQuietHours
+         *     (a parent of the pet's family; another family's pet or a child → 403).
+         */
+        UpdatePetQuietHoursRequest: {
+            /** @description The pet's own schedule; null = follow the family's quiet hours. */
+            quiet_hours: {
+                school_start: string | null;
+                school_end: string | null;
+                bedtime_start: string | null;
+                bedtime_end: string | null;
+                is_active: boolean;
+            } | null;
+        };
+        /**
          * UpdatePetTimezoneRequest
          * @description PUT /api/parent/pets/{pet}/timezone (David 2026-11-09, time zone per pet).
          *     Body `{"timezone": "Europe/Lisbon"}` = the pet's own zone; `{"timezone":
@@ -3574,6 +3655,15 @@ export interface components {
             is_active?: boolean;
             /** @description Optional family timezone (IANA), saved on the parent (M1-03). */
             timezone?: string;
+        };
+        /**
+         * UpdateTimeFormatRequest
+         * @description PUT /api/user/time-format (David 2026-11-16): the signed-in person's own
+         *     12 / 24 h choice — `auto` (follow the phone) | `24h` | `12h`. Any app
+         *     token (parent or child) sets only its own user; nothing else changes.
+         */
+        UpdateTimeFormatRequest: {
+            time_format: components["schemas"]["TimeFormat"];
         };
         /**
          * WebParentSessionRequest
@@ -3801,6 +3891,11 @@ export interface operations {
                             /** @description M2-10c: how this account signs in (parents; a child: false / []). */
                             has_password: boolean;
                             linked_providers: ("google" | "apple")[];
+                            /**
+                             * @description 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                             * @enum {string}
+                             */
+                            time_format: "auto" | "24h" | "12h";
                         };
                         pet: components["schemas"]["Pet"] | null;
                         /** @description Per child (M2-02): this child must sign before acting. null for a parent. */
@@ -3866,6 +3961,11 @@ export interface operations {
                             /** @description M2-10c: how this account signs in (parents; a child: false / []). */
                             has_password: boolean;
                             linked_providers: ("google" | "apple")[];
+                            /**
+                             * @description 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                             * @enum {string}
+                             */
+                            time_format: "auto" | "24h" | "12h";
                         };
                         /** @description A new family has no pet yet; the parent adds a child next. */
                         pet: null;
@@ -3908,6 +4008,11 @@ export interface operations {
                             /** @description M2-10c: how this account signs in (parents; a child: false / []). */
                             has_password: boolean;
                             linked_providers: ("google" | "apple")[];
+                            /**
+                             * @description 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                             * @enum {string}
+                             */
+                            time_format: "auto" | "24h" | "12h";
                         };
                         pet: components["schemas"]["Pet"] | null;
                         /** @description Parents never sign a contract. */
@@ -3947,6 +4052,12 @@ export interface operations {
                         awaiting_contract: boolean | null;
                         /** @description M5-05 (QA #375 B1): may the app queue / send error reports (superadmin switch, default off). */
                         app_error_reports: boolean;
+                        /**
+                         * @description 12 / 24 h clock choice (David 2026-11-16): `auto` = follow the phone (default),
+                         *     `24h` / `12h` = the person's override. PUT /api/user/time-format.
+                         * @enum {string}
+                         */
+                        time_format: "auto" | "24h" | "12h";
                     };
                 };
             };
@@ -4695,6 +4806,11 @@ export interface operations {
                             name: string;
                             /** @enum {string} */
                             role: "parent" | "child";
+                            /**
+                             * @description 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                             * @enum {string}
+                             */
+                            time_format: "auto" | "24h" | "12h";
                         };
                         /** @enum {string} */
                         mode: "join_pet" | "new_pet" | "relogin";
@@ -4739,6 +4855,11 @@ export interface operations {
                             name: string;
                             /** @enum {string} */
                             role: "parent" | "child";
+                            /**
+                             * @description 12 / 24 h clock choice (David 2026-11-16), same as GET /api/user.
+                             * @enum {string}
+                             */
+                            time_format: "auto" | "24h" | "12h";
                         };
                         /** @constant */
                         mode: "relogin";
@@ -5194,13 +5315,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -5770,7 +5904,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -6236,13 +6370,26 @@ export interface operations {
                         timezone: string;
                         server_time: string | null;
                         /**
-                         * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                         * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                         *     on the pet's clock, and whether they are the family's (`follows_family`).
+                         */
+                        quiet_hours: {
+                            school_start: string | null;
+                            school_end: string | null;
+                            bedtime_start: string | null;
+                            bedtime_end: string | null;
+                            is_active: boolean;
+                            follows_family: boolean;
+                        };
+                        quiet_hours_follow_family: boolean;
+                        /**
+                         * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                          *     wakes — play and school are off while asleep ({@see SleepPayload}).
                          */
                         sleep: {
-                            /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                            /** @description The pet sleeps now (its quiet hours): play and school are off. */
                             asleep: boolean;
-                            /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                            /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                             until: string | null;
                         };
                         feeding: {
@@ -6812,7 +6959,7 @@ export interface operations {
                                 per_week: number;
                             } | null;
                             /**
-                             * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                             * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                              *     window is null when not set or quiet hours are off.
                              */
                             sleep: {
@@ -7299,13 +7446,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -7875,7 +8035,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -8360,13 +8520,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -8936,7 +9109,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -9421,13 +9594,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -9997,7 +10183,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -10482,13 +10668,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -11058,7 +11257,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -11543,13 +11742,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -12119,7 +12331,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -12608,13 +12820,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -13184,7 +13409,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -13673,13 +13898,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -14249,7 +14487,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -14738,13 +14976,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -15314,7 +15565,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -15803,13 +16054,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -16379,7 +16643,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -16868,13 +17132,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -17444,7 +17721,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -17929,13 +18206,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -18505,7 +18795,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -18990,13 +19280,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -19566,7 +19869,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -20055,13 +20358,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -20631,7 +20947,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -21116,13 +21432,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -21692,7 +22021,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -22181,13 +22510,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -22757,7 +23099,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -23242,13 +23584,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -23818,7 +24173,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -24307,13 +24662,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -24883,7 +25251,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -25372,13 +25740,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -25948,7 +26329,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -26437,13 +26818,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -27013,7 +27407,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -27502,13 +27896,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -28078,7 +28485,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -28567,13 +28974,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -29143,7 +29563,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -29630,6 +30050,8 @@ export interface operations {
                             app_version: string | null;
                             /** @description Language of this install's pushes (M1-18): the `locale` field; new installs without it get 'sl'. */
                             locale: string | null;
+                            /** @description The phone's own 12 h clock setting as last sent (`hour12`); null = never sent (24 h). */
+                            hour12: boolean | null;
                             enabled: boolean;
                             last_seen_at: string | null;
                         };
@@ -30299,6 +30721,20 @@ export interface operations {
                                  *     the app shows »po družini«.
                                  */
                                 timezone_follows_family: boolean;
+                                /**
+                                 * @description The pet's effective quiet hours (David 2026-11-16): its own schedule, else the
+                                 *     family's — "HH:MM" | null, read on the pet's clock (`timezone`).
+                                 */
+                                quiet_hours: {
+                                    school_start: string | null;
+                                    school_end: string | null;
+                                    bedtime_start: string | null;
+                                    bedtime_end: string | null;
+                                    is_active: boolean;
+                                    follows_family: boolean;
+                                };
+                                /** @description True when the pet follows the family's quiet hours (»kot družina«). */
+                                quiet_hours_follow_family: boolean;
                                 /** @enum {string} */
                                 breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "wire_fox_terrier" | "manchester_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
                                 /**
@@ -30689,7 +31125,7 @@ export interface operations {
                                         per_week: number;
                                     } | null;
                                     /**
-                                     * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                     * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                      *     window is null when not set or quiet hours are off.
                                      */
                                     sleep: {
@@ -30905,6 +31341,20 @@ export interface operations {
                                  *     the app shows »po družini«.
                                  */
                                 timezone_follows_family: boolean;
+                                /**
+                                 * @description The pet's effective quiet hours (David 2026-11-16): its own schedule, else the
+                                 *     family's — "HH:MM" | null, read on the pet's clock (`timezone`).
+                                 */
+                                quiet_hours: {
+                                    school_start: string | null;
+                                    school_end: string | null;
+                                    bedtime_start: string | null;
+                                    bedtime_end: string | null;
+                                    is_active: boolean;
+                                    follows_family: boolean;
+                                };
+                                /** @description True when the pet follows the family's quiet hours (»kot družina«). */
+                                quiet_hours_follow_family: boolean;
                                 /** @enum {string} */
                                 breed_type: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "english_cocker_spaniel" | "maltese" | "pug" | "rough_collie" | "mastiff" | "shiba_inu" | "rhodesian_ridgeback" | "papillon" | "portuguese_water_dog" | "bichon_frise" | "newfoundland" | "dalmatian" | "australian_cattle_dog" | "whippet" | "wirehaired_pointing_griffon" | "chesapeake_bay_retriever" | "samoyed" | "scottish_terrier" | "weimaraner" | "italian_greyhound" | "giant_schnauzer" | "bloodhound" | "akita" | "cardigan_welsh_corgi" | "german_wirehaired_pointer" | "saint_bernard" | "staffordshire_bull_terrier" | "airedale_terrier" | "russell_terrier" | "bullmastiff" | "chinese_crested" | "nova_scotia_duck_tolling_retriever" | "cairn_terrier" | "bull_terrier" | "miniature_pinscher" | "pyrenean_mountain_dog" | "soft_coated_wheaten_terrier" | "irish_wolfhound" | "american_staffordshire_terrier" | "lagotto_romagnolo" | "alaskan_malamute" | "basenji" | "rat_terrier" | "greater_swiss_mountain_dog" | "shar_pei" | "brussels_griffon" | "irish_setter" | "anatolian_shepherd_dog" | "pekingese" | "chow_chow" | "old_english_sheepdog" | "keeshond" | "standard_schnauzer" | "coton_de_tulear" | "english_setter" | "lhasa_apso" | "dogue_de_bordeaux" | "flat_coated_retriever" | "border_terrier" | "leonberger" | "beauceron" | "bouvier_des_flandres" | "borzoi" | "japanese_chin" | "norwich_terrier" | "miniature_bull_terrier" | "schipperke" | "belgian_tervuren" | "toy_fox_terrier" | "gordon_setter" | "afghan_hound" | "australian_silky_terrier" | "parson_russell_terrier" | "wire_fox_terrier" | "manchester_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
                                 /**
@@ -31295,7 +31745,7 @@ export interface operations {
                                         per_week: number;
                                     } | null;
                                     /**
-                                     * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                     * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                      *     window is null when not set or quiet hours are off.
                                      */
                                     sleep: {
@@ -31963,6 +32413,52 @@ export interface operations {
             422: components["responses"]["ValidationException"];
         };
     };
+    "petQuietHours.update": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description The pet ID */
+                pet: number;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["UpdatePetQuietHoursRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        pet_id: number;
+                        /**
+                         * @description The pet's effective quiet hours (own, else the family's), "HH:MM" | null,
+                         *     read on the pet's own clock (`timezone`).
+                         */
+                        quiet_hours: {
+                            school_start: string | null;
+                            school_end: string | null;
+                            bedtime_start: string | null;
+                            bedtime_end: string | null;
+                            is_active: boolean;
+                            follows_family: boolean;
+                        };
+                        /** @description True = the pet follows the family's quiet hours (`pets.own_quiet_hours` null). */
+                        quiet_hours_follow_family: boolean;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: components["responses"]["ModelNotFoundException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
     "petTimezone.update": {
         parameters: {
             query?: never;
@@ -32146,6 +32642,35 @@ export interface operations {
                     };
                 };
             };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "timeFormat.update": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["UpdateTimeFormatRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @enum {string} */
+                        time_format: "auto" | "24h" | "12h";
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
             422: components["responses"]["ValidationException"];
         };
     };
@@ -32876,13 +33401,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -33452,7 +33990,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {
@@ -33919,13 +34457,26 @@ export interface operations {
                             timezone: string;
                             server_time: string | null;
                             /**
-                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             * @description David 2026-11-16: this pet's effective quiet hours (own, else the family's), "HH:MM" | null
+                             *     on the pet's clock, and whether they are the family's (`follows_family`).
+                             */
+                            quiet_hours: {
+                                school_start: string | null;
+                                school_end: string | null;
+                                bedtime_start: string | null;
+                                bedtime_end: string | null;
+                                is_active: boolean;
+                                follows_family: boolean;
+                            };
+                            quiet_hours_follow_family: boolean;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (its quiet hours) and when it
                              *     wakes — play and school are off while asleep ({@see SleepPayload}).
                              */
                             sleep: {
-                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                /** @description The pet sleeps now (its quiet hours): play and school are off. */
                                 asleep: boolean;
-                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                /** @description When it wakes (end of the quiet stretch, the pet's offset); null while awake. */
                                 until: string | null;
                             };
                             feeding: {
@@ -34495,7 +35046,7 @@ export interface operations {
                                     per_week: number;
                                 } | null;
                                 /**
-                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 * @description The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
                                  *     window is null when not set or quiet hours are off.
                                  */
                                 sleep: {

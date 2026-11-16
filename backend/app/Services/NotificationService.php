@@ -8,6 +8,7 @@ use App\Enums\HygieneEventKind;
 use App\Enums\PetPlan;
 use App\Enums\PushType;
 use App\Enums\Species;
+use App\Enums\TimeFormat;
 use App\Enums\WishStatus;
 use App\Jobs\SendPushNotification;
 use App\Models\DevicePushToken;
@@ -595,6 +596,8 @@ class NotificationService
             ->orderBy('id')
             ->get();
         $devices = $this->onlyFollowedChildRows($devices, $audience);
+        // David 2026-11-16: each person's 12 / 24 h choice for `:time` (message()).
+        $devices->load('user:id,time_format');
 
         if ($devices->isEmpty()) {
             $this->markSuppressed($notification, 'no_devices');
@@ -896,6 +899,10 @@ class NotificationService
      * `metric` (optional) overrides the notification's metric for the text (QA B1: the
      * mess text when food / water are not possible again today but a mess is open).
      *
+     * Clock times (`:time`) are the pet-local 24 h text (ClockText::at); each
+     * phone gets them in its person's 12 / 24 h format in message() (David
+     * 2026-11-16).
+     *
      * @return array{variant: string|null, replace: array<string, string>, metric?: string}|null
      */
     private function actionCopy(PushNotification $notification, Pet $pet): ?array
@@ -1115,6 +1122,11 @@ class NotificationService
     /**
      * One Expo message. data = {type, pet_id} only (third parties).
      *
+     * Clock times are rendered per phone (David 2026-11-16): the receiving
+     * person's `users.time_format`, `auto` = this phone's own setting
+     * (`device_push_tokens.hour12`; null = an older app → 24 h, as before) —
+     * the same text that person's app shows.
+     *
      * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string}  $copy
      * @return array<string, mixed>
      */
@@ -1122,6 +1134,13 @@ class NotificationService
     {
         $type = $notification->type;
         $variant = $copy['variant'];
+        if (($device->user?->timeFormat() ?? TimeFormat::Auto)->hour12On($device->hour12)) {
+            foreach (PushCopy::CLOCK_PLACEHOLDERS as $key) {
+                if (isset($copy['replace'][$key])) {
+                    $copy['replace'][$key] = ClockText::to12h($copy['replace'][$key], PushCopy::locale($device->locale));
+                }
+            }
+        }
 
         return [
             'to' => $device->expo_push_token,

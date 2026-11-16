@@ -725,7 +725,7 @@ class RoutineLedgerService
                 $value = $this->lifeStages->stageValueOn($pet, $pet->localDate($opens), StageParamKey::GroomingSessionsPerWeek)['value'] ?? 0;
                 $goal = is_int($value) ? $value : 0;
                 // M5-T02b (David 2026-10-21): no grooming while the pet sleeps, one per
-                // day — a slot the family's quiet hours leave no day for is not expected
+                // day — a slot the pet's quiet hours leave no day for is not expected
                 // (never missed only because of sleep; like the wand's feasibleSessions).
                 if ($goal > 0) {
                     $need = max(1, (int) config('cat_care.grooming.session_seconds', 30)) + CatChoreService::graceSeconds(CareSessionKind::Grooming);
@@ -1008,9 +1008,12 @@ class RoutineLedgerService
 
         $inputs = [];
         foreach ($pets as $pet) {
-            // Same rule as Pet::quietHours(): no row → QuietHours::DEFAULTS; the
-            // family's windows read on this pet's clock (David 2026-11-09).
-            $q = $quiet->get($pet->family_id);
+            // Same rule as Pet::quietHours(): the pet's own schedule (David
+            // 2026-11-16), else the family row, else QuietHours::DEFAULTS —
+            // read on this pet's clock (David 2026-11-09). Batch-loaded family
+            // rows; a pet's own hours come with the pet row.
+            $own = $pet->ownQuietHoursValues();
+            $q = $own !== null ? QuietHours::forPet($pet, $own) : $quiet->get($pet->family_id);
             if ($q === null) {
                 $q = QuietHours::defaultFor($pet->family);
             } elseif ($pet->family !== null) {

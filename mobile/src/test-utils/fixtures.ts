@@ -167,6 +167,15 @@ export function makePet(overrides: Partial<Pet> = {}): Pet {
   };
 }
 
+/** The server's default quiet hours (`QuietHours::DEFAULTS`), as the pet payloads carry them. */
+export const FIXTURE_QUIET_HOURS = {
+  school_start: null,
+  school_end: null,
+  bedtime_start: '21:00',
+  bedtime_end: '07:00',
+  is_active: true,
+};
+
 /** Child pet state as returned by `GET /api/child/pet` and in action responses (M1-07). */
 export function makeChildState(
   petOverrides: Partial<ChildPetState['pet']> = {},
@@ -216,6 +225,9 @@ export function makeChildState(
     lock: { is_locked: false, reason: null, until: null },
     timezone: 'Europe/Ljubljana',
     server_time: '2026-10-04T09:00:00+00:00',
+    // David 2026-11-16: this pet's effective quiet hours (family default).
+    quiet_hours: { ...FIXTURE_QUIET_HOURS, follows_family: true },
+    quiet_hours_follow_family: true,
     // M5-T02 (additive): awake.
     sleep: { asleep: false, until: null },
     feeding: {
@@ -631,6 +643,9 @@ export function makeFamilyPet(overrides: Partial<FamilyPetFixture> = {}): Family
     // David 2026-11-09: the pet's effective zone; follows the family by default.
     timezone: 'Europe/Ljubljana',
     timezone_follows_family: true,
+    // David 2026-11-16: the pet's effective quiet hours (family default 21:00–07:00).
+    quiet_hours: { ...FIXTURE_QUIET_HOURS, follows_family: true },
+    quiet_hours_follow_family: true,
     breed_type: 'mutt',
     species: 'dog',
     // M5-R08: no name (the pre-M5-R08 label).

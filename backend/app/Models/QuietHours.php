@@ -45,6 +45,79 @@ class QuietHours extends Model
     }
 
     /**
+     * The keys of one schedule (family row or a pet's own, `pets.own_quiet_hours`).
+     */
+    public const SCHEDULE_KEYS = ['school_start', 'school_end', 'bedtime_start', 'bedtime_end', 'is_active'];
+
+    /**
+     * A schedule as stored / sent: times "HH:MM" (seconds stripped) or null,
+     * is_active bool (missing = true). The one normalisation for pet rows.
+     *
+     * @param  array<string, mixed>  $values
+     * @return array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool}
+     */
+    public static function normaliseValues(array $values): array
+    {
+        $time = fn (mixed $v): ?string => is_string($v) && $v !== '' ? substr($v, 0, 5) : null;
+
+        return [
+            'school_start' => $time($values['school_start'] ?? null),
+            'school_end' => $time($values['school_end'] ?? null),
+            'bedtime_start' => $time($values['bedtime_start'] ?? null),
+            'bedtime_end' => $time($values['bedtime_end'] ?? null),
+            'is_active' => array_key_exists('is_active', $values) ? (bool) $values['is_active'] : true,
+        ];
+    }
+
+    /**
+     * The pet whose OWN schedule this unsaved instance is (David 2026-11-16,
+     * quiet hours per pet); null for the family row / defaults. Never persisted.
+     */
+    private ?int $ownerPetId = null;
+
+    /**
+     * A pet's own quiet hours as a QuietHours (unsaved — the values live in
+     * `pets.own_quiet_hours`; save() refuses). Same windows API, so every
+     * rule works unchanged. Built only by Pet::quietHours().
+     *
+     * @param  array<string, mixed>  $values
+     */
+    public static function forPet(Pet $pet, array $values): self
+    {
+        $quietHours = new self(self::normaliseValues($values));
+        $quietHours->family_id = $pet->family_id;
+        if ($pet->family !== null) {
+            $quietHours->setRelation('family', $pet->family);
+        }
+        $quietHours->ownerPetId = (int) $pet->getKey();
+
+        return $quietHours;
+    }
+
+    /**
+     * True when this is a pet's own schedule (not the family's).
+     */
+    public function isPetOwn(): bool
+    {
+        return $this->ownerPetId !== null;
+    }
+
+    /**
+     * A pet's own schedule is never a `quiet_hours` row — write it through
+     * PetQuietHoursService (would otherwise insert a second family row).
+     *
+     * @param  array<string, mixed>  $options
+     */
+    public function save(array $options = []): bool
+    {
+        if ($this->ownerPetId !== null) {
+            throw new \LogicException('A pet\'s own quiet hours live in pets.own_quiet_hours — use PetQuietHoursService.');
+        }
+
+        return parent::save($options);
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
@@ -122,10 +195,11 @@ class QuietHours extends Model
 
     /**
      * A copy of these quiet hours read on another wall clock (David
-     * 2026-11-09, time zone per pet): the windows stay the family's, the
-     * clock is the pet's — 21–07 in Lisbon for a Lisbon pet. Pet::quietHours()
-     * returns its row through this; code that loads rows itself
-     * (RoutineLedgerService::loadInputs) calls it per pet.
+     * 2026-11-09, time zone per pet): the windows stay the same (the family's
+     * or the pet's own, David 2026-11-16), the clock is the pet's — 21–07 in
+     * Lisbon for a Lisbon pet. Pet::quietHours() returns its schedule through
+     * this; code that loads rows itself (RoutineLedgerService::loadInputs)
+     * calls it per pet.
      */
     public function readIn(?string $timezone): static
     {

@@ -81,6 +81,13 @@ final class PushCopy
      */
     public const WAIT_SUFFIX = '_wait';
 
+    /**
+     * Placeholders that hold a clock time (24 h text from ClockText::at).
+     * NotificationService::message() turns them into the receiving person's
+     * 12 h format when their choice / phone says so (David 2026-11-16).
+     */
+    public const CLOCK_PLACEHOLDERS = ['time'];
+
     public const VARIANT_CLEAN_FIRST_WAIT = 'clean_first_wait';
 
     public const VARIANT_SCRATCHER_FIRST_WAIT = 'scratcher_first_wait';

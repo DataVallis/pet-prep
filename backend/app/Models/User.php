@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\ClientFeature;
 use App\Enums\MediaDisplay;
+use App\Enums\TimeFormat;
 use App\Enums\UserRole;
 use App\Services\FamilyService;
 use Database\Factories\UserFactory;
@@ -300,6 +301,18 @@ class User extends Authenticatable implements FilamentUser
             ->whereRaw('lower(email) = ?', [$normalized])
             ->when($exceptId !== null, fn ($q) => $q->whereKeyNot($exceptId))
             ->exists();
+    }
+
+    /**
+     * This person's 12 / 24 h clock choice (David 2026-11-16, `users.time_format`):
+     * `auto` (follow the phone, default) | `24h` | `12h`. A model loaded
+     * without the column (or an unknown value) is `auto`.
+     */
+    public function timeFormat(): TimeFormat
+    {
+        $raw = $this->getAttribute('time_format');
+
+        return is_string($raw) ? (TimeFormat::tryFrom($raw) ?? TimeFormat::Auto) : TimeFormat::Auto;
     }
 
     /**

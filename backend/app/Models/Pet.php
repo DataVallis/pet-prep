@@ -333,6 +333,8 @@ class Pet extends Model
             'born_at' => 'datetime',
             // David 2026-11-09: last change of the pet's own zone (PetTimezoneService, once per 24 h).
             'timezone_changed_at' => 'datetime',
+            // David 2026-11-16: the pet's own quiet hours (null = follow the family; PetQuietHoursService).
+            'own_quiet_hours' => 'array',
             'illness_until' => 'datetime',
             'walk_illness_due_at' => 'datetime',
             'last_step_reset_at' => 'datetime',
@@ -1533,27 +1535,80 @@ class Pet extends Model
     }
 
     /**
-     * The family's quiet hours (M2-01: one configuration per family, any
-     * parent edits it). Never null: a family without a row (no parent to
-     * own one, or a row lost to old code) gets QuietHours::DEFAULTS, so no
-     * pet is ever without night quiet (fix/quiet-hours-default, 2026-10-08).
-     * A parent who switched them off has a row with is_active = false.
+     * THE quiet hours of this pet — every rule reads them here (decay ×0.1,
+     * hygiene / behaviour events, pushes, sleep, parent-covered meals, the
+     * puppy morning rule, routines, care tasks, games / school refusals …).
+     *
+     * Quiet hours per pet (David 2026-11-16, same pattern as the time zone
+     * per pet #891): the pet's own schedule (`pets.own_quiet_hours`, written
+     * only by PetQuietHoursService) when a parent switched on »lastne ure«,
+     * else the family's (M2-01: one `quiet_hours` row per family). Never
+     * null: a family without a row gets QuietHours::DEFAULTS, so no pet is
+     * ever without night quiet (fix/quiet-hours-default, 2026-10-08). A
+     * parent who switched them off has is_active = false.
+     *
+     * Either way the windows are read on this pet's wall clock
+     * (effectiveTimezone(), David 2026-11-09). A pet's own schedule comes
+     * back as an UNSAVED QuietHours (QuietHours::forPet) that refuses save().
+     * A model loaded without the column (partial select) re-reads it — never
+     * silently the family's.
      */
     public function quietHours(): QuietHours
     {
-        $quietHours = QuietHours::where('family_id', $this->family_id)->first();
-        if ($quietHours === null) {
-            return QuietHours::defaultFor($this->family)->readIn($this->effectiveTimezone());
+        $own = $this->ownQuietHoursValues();
+        if ($own !== null) {
+            return QuietHours::forPet($this, $own)->readIn($this->effectiveTimezone());
         }
 
-        // QuietHours keeps its windows per family, but they are read on this
-        // pet's wall clock (David 2026-11-09: 21–07 in Lisbon for a Lisbon
-        // pet); hand it the family we already have.
+        return $this->familyQuietHours()->readIn($this->effectiveTimezone());
+    }
+
+    /**
+     * The family's quiet hours this pet would follow (the stored row, else
+     * the defaults), NOT read on the pet's clock. Rules use quietHours();
+     * this is for showing »kot družina« next to the pet's own hours.
+     */
+    public function familyQuietHours(): QuietHours
+    {
+        $quietHours = QuietHours::where('family_id', $this->family_id)->first();
+        if ($quietHours === null) {
+            return QuietHours::defaultFor($this->family);
+        }
         if ($this->family !== null) {
             $quietHours->setRelation('family', $this->family);
         }
 
-        return $quietHours->readIn($this->effectiveTimezone());
+        return $quietHours;
+    }
+
+    /**
+     * True when the pet has its own quiet hours instead of following the
+     * family's (`pets.own_quiet_hours` set).
+     */
+    public function hasOwnQuietHours(): bool
+    {
+        return $this->ownQuietHoursValues() !== null;
+    }
+
+    /**
+     * The pet's own schedule (normalised) or null = follow the family. Reads
+     * the column from the database when this model was loaded without it
+     * (partial select), so a rule never silently gets the family's hours.
+     *
+     * @return array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool}|null
+     */
+    public function ownQuietHoursValues(): ?array
+    {
+        if (array_key_exists('own_quiet_hours', $this->getAttributes())) {
+            $raw = $this->getAttribute('own_quiet_hours');
+        } elseif ($this->exists) {
+            $stored = static::query()->whereKey($this->getKey())->value('own_quiet_hours');
+            $raw = is_string($stored) ? json_decode($stored, true) : $stored;
+        } else {
+            $raw = null;
+        }
+
+        return is_array($raw) ? QuietHours::normaliseValues($raw) : null;
     }
 
     /**

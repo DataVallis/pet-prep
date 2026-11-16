@@ -14,6 +14,7 @@ use App\Models\PetCaretaker;
 use App\Models\PetContract;
 use App\Models\PetDailyStep;
 use App\Models\PetStatusPeriod;
+use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\PreparationPayload;
@@ -169,6 +170,9 @@ class FamilyDashboardService
             ->get()
             ->keyBy('user_id');
 
+        // David 2026-11-16: the family's quiet hours once for all pets that follow them (QA #1259 m6).
+        $familyQuiet = QuietHours::where('family_id', $family->id)->first() ?? QuietHours::defaultFor($family);
+
         return [
             'id' => $family->id,
             'timezone' => $tz,
@@ -249,7 +253,7 @@ class FamilyDashboardService
                     'certificate' => $certificate !== null ? $this->certificates->payload($certificate, $current->effectiveTimezone())->toArray() : null,
                 ];
             })->values()->all(),
-            'pets' => $pets->map(function (Pet $pet) use ($playToday, $caretakers, $contracts, $timelines, $board) {
+            'pets' => $pets->map(function (Pet $pet) use ($playToday, $caretakers, $contracts, $timelines, $board, $familyQuiet) {
                 // M5-R01 profile, shared with the care guide (one computation per pet).
                 $profile = PetProfilePayload::for($pet);
 
@@ -276,6 +280,19 @@ class FamilyDashboardService
                      * @var bool
                      */
                     'timezone_follows_family' => ! $pet->hasOwnTimezone(),
+                    /**
+                     * The pet's effective quiet hours (David 2026-11-16): its own schedule, else the
+                     * family's — "HH:MM" | null, read on the pet's clock (`timezone`).
+                     *
+                     * @var array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool, follows_family: bool}
+                     */
+                    'quiet_hours' => PetQuietHoursService::payloadFor($pet, $familyQuiet),
+                    /**
+                     * True when the pet follows the family's quiet hours (»kot družina«).
+                     *
+                     * @var bool
+                     */
+                    'quiet_hours_follow_family' => ! $pet->hasOwnQuietHours(),
                     'breed_type' => $pet->breed_type->value,
                     // M5-R06-01: dog | cat.
                     'species' => $pet->speciesValue()->value,
