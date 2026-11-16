@@ -61142,6 +61142,510 @@
       }
     }
   },
+  "manchester_terrier": {
+    "_note": "Added 2026-11-16 (M5-R10-119, unattended run — appended after the Boerboel (blocked): AKC 2024 No. 115 'Manchester Terrier', S174 full-list table fetched 2026-11-16 '114 Boerboel', '115 Manchester Terrier', '116 American Eskimo Dog'). Quotes as returned by the web-fetch tool on 2026-11-16 (non-preapproved pages: short fragments only); paraphrase only in notes, marked '(paraphrase)'. Sources S888–S894 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Standard: FCI-Standard N° 71 Manchester Terrier (S888, header '06.10.2026/ EN'; FCI nomenclature page: Group 3, 'Large and medium sized Terriers', Great Britain). The RKC Breeds A–Z page and the RKC breed standard were refused by the fetch tool this run (redirect to royalkennelclub.com outside the provenance set) → no RKC key facts, no Breed Watch category and no RKC health tests: the runbook's 'else PDSA' path — PDSA (S889) for size, height, weight band, lifespan ('Over 12 years'), exercise ('up to an hour of exercise per day'), coat and brushing ('once a week'), as for the Cane Corso. PetMD (S890, reviewed by Barri J. Morrison, DVM, updated Feb. 26, 2024) and WebMD (S891, medically reviewed 2025-03-06) for care frequencies and behaviour. Weight from the CKC standard (S892, '5.5 to 10 kg (12 to 22 lb)', Standard variety); UKC (S893) the same band in pounds. Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused again; the 2024 paper's text (doi 10.1038/s41598-023-50458-w) names only the Toy Manchester Terrier in a figure → senior boundary from the PDSA lower bound 12 y = 108 (runbook rule, Cane Corso / Wire Fox Terrier precedent). Coren rank 32 'Manchester Terrier' (S35, Above Average) → 1.2. Never hypoallergenic. Only the Standard variety (FCI 71, AKC 'Manchester Terrier (Standard)'); the Toy (English Toy Terrier, FCI 13) is not this breed. Slovenian »manchesterski terier« (no KZS page reached — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 71, Group 3 Section 1 (Large and medium-sized Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S888",
+      "quote": "Section 1 Large and medium sized Terriers",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 71 (S888): 'ORIGIN: Great Britain.', 'UTILIZATION: Terrier.', 'Group 3 Terriers', 'Section 1 Large and medium sized Terriers', 'Without working trial.'; header '06.10.2026/ EN', 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 08.09.2026.'. FCI nomenclature page (S888 note): Group n°3 – Terriers, section Large and medium sized Terriers, country GREAT BRITAIN, accepted on a definitive basis 15.10.1954. Not the English Toy Terrier (FCI 13, the KC 'Toy Manchester' line)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S889",
+      "quote": "Medium",
+      "confidence": "medium",
+      "notes": "PDSA key fact 'Size' (S889) 'Medium' — no RKC key fact reachable this run (runbook: else PDSA). PetMD / WebMD 'medium-small' (S891 'Standard Manchester terriers are medium-small dogs'). Weight 12–22 lb (S892) → the 'Small (12–24 pounds)' class of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            41,
+            41
+          ],
+          "female": [
+            38,
+            38
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S888",
+        "quote": "Ideal Height at the withers: Males: 41 cm. Females: 38 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 71 (S888): ideal heights (one value each, the register shows them as 'ideal'). PDSA (S889) 'Average height | 38-41 cm'; PetMD (S890) 'The standard Manchester Terrier size is 15–16 inches tall and 12–22 pounds.'; WebMD (S891) 15 to 16 inches.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                38,
+                41
+              ],
+              "female": [
+                38,
+                41
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S889",
+            "quote": "38-41 cm",
+            "notes": "PDSA key fact 'Average height' (S889)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "ckc": {
+        "value": {
+          "male": [
+            5.5,
+            10
+          ],
+          "female": [
+            5.5,
+            10
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S892",
+        "quote": "Weight: 5.5 to 10 kg (12 to 22 lb)",
+        "confidence": "high",
+        "notes": "Canadian Kennel Club standard (S892, effective January 2004, Group IV Terriers) — one band for both sexes; the game / register value (the FCI standard S888 has no weight). UKC standard (S893): 'Weight in the Standard variety includes dogs weighing more than, but not including, twelve (12) pounds' up to and including 22 lb (paraphrase of the continuation); PDSA (S889) 'Average weight | 6-10 kg'; PetMD (S890) and WebMD (S891) 12 to 22 pounds.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                6,
+                10
+              ],
+              "female": [
+                6,
+                10
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S889",
+            "quote": "6-10 kg",
+            "notes": "PDSA key fact 'Average weight' (S889)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. CKC 12–22 lb (S892) → the 'Small (12–24 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Manchester Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S889",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S889). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable; the RKC page was refused this run → the same PDSA band, Cane Corso precedent). Not shorter_lifespan."
+      },
+      "webmd": {
+        "value": "15–17",
+        "unit": "years",
+        "source_id": "S891",
+        "quote": "The average Manchester Terrier lifespan is 15 to 17 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S891). Background; the PDSA lower bound is used."
+      },
+      "kc_survey_via_wikipedia": {
+        "value": 12.8,
+        "unit": "years",
+        "source_id": "S894",
+        "quote": "The Manchester terrier has a median lifespan of around 12.8 years and the toy variety 12.0 years.",
+        "confidence": "low",
+        "notes": "Wikipedia (S894, tier C — an IPFS mirror of the 2016 article) citing an older Kennel Club survey — background only, never alone. McMillan 2024: the Dogs Trust table (S123) was refused and the paper text has no Manchester Terrier row → not used; 0.75 × 12.8 × 12 = 115.2 → 115 would be the senior boundary — open for David."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (PDSA lower bound 'Over 12 years', S889) → 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S889"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S889",
+        "quote": "Manchester Terriers will need up to an hour of exercise per day to keep them physically and mentally fit.",
+        "confidence": "high",
+        "notes": "PDSA (S889) → 60 min ('up to N' → N); key fact 'Minimum exercise (per day) | 1 hour' agrees. No RKC key fact reachable (runbook: RKC, else PDSA). PetMD (S890) 'at least 30 minutes a day' and WebMD (S891) 'an hour of outside playtime' as alternatives.",
+        "alternatives": [
+          {
+            "value": "≥ 30",
+            "unit": "minutes/day",
+            "source_id": "S890",
+            "quote": "at least 30 minutes a day",
+            "notes": "PetMD (S890, fragment of 'Prioritize exercise (at least 30 minutes a day) and mental stimulation …'); it cites the breed club with '30–60 minutes of daily exercise for this breed.' — lower than PDSA, not used."
+          },
+          {
+            "value": "≈ 60",
+            "unit": "minutes/day",
+            "source_id": "S891",
+            "quote": "A few brisk walks or an hour of outside playtime is enough for most Manchesters.",
+            "notes": "WebMD (S891) — the same 60."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "keen and sporting; needs up to an hour of exercise a day for body and mind",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": "Manchester Terriers will need up to an hour of exercise per day to keep them physically and mentally fit.",
+        "confidence": "high",
+        "notes": "PDSA (S889). FCI (S888): 'Keen, alert, gay and sporting; discerning and devoted.'"
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PDSA / PetMD / WebMD name no bloat) → no meal gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "keen, alert, gay and sporting; discerning and devoted",
+        "unit": "—",
+        "source_id": "S888",
+        "quote": "Keen, alert, gay and sporting; discerning and devoted.",
+        "confidence": "high",
+        "notes": "FCI standard (S888). PDSA (S889): 'Manchester Terriers are independent, sensitive dogs that are known to be devoted to their owners.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No 'family pet' statement in an A/B source (PDSA S889 covers devotion to owners, not families) → no family_pet chip."
+      },
+      "children": {
+        "value": "do well with children, especially when they meet kids as puppies; never leave small children unsupervised",
+        "unit": "—",
+        "source_id": "S890",
+        "quote": "Manchesters also do well with children, especially when exposed to kids during puppyhood.",
+        "confidence": "high",
+        "notes": "PetMD (S890) — the basis of the children chip. WebMD (S891): 'Manchester Terriers do well with children.', 'small children should never be left with dogs unsupervised' (supervision caveat kept). No small_children chip (supervision caveat)."
+      },
+      "other_pets": {
+        "value": "high prey drive (ratters) — not the best dog for homes with pocket pets such as hamsters or gerbils",
+        "unit": "—",
+        "source_id": "S890",
+        "quote": "They can also have a high prey drive because of their history as ratters",
+        "confidence": "high",
+        "notes": "PetMD (S890) → chases_small_pets chip; 'they might not be the best dog for homes with pocket pets, such as hamsters or gerbils.' WebMD (S891): 'Manchester terriers have a high prey drive.', 'Manchester Terriers aren't a good fit for houses with small pets like rabbits or hamsters.' PDSA (S889): 'They will also need early socialisation with other household pets.'"
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on being left alone (PDSA / PetMD / WebMD do not cover it) → no needs_company chip."
+      },
+      "socialisation": {
+        "value": "socialise the puppy from the day it comes home",
+        "unit": "—",
+        "source_id": "S890",
+        "quote": "socialize your Manchester Terrier puppy from the moment you bring them home.",
+        "confidence": "high",
+        "notes": "PetMD (S890, a need; fragment as returned) → breed DOG_SOCIALISATION entry (M5-R17). WebMD (S891): 'Early socialization with a wide variety of people and experiences is essential for raising a friendly, well-rounded pet.'; PDSA (S889) 'They will also need early socialisation with other household pets.'"
+      },
+      "training": {
+        "value": "independent; recall training will not always be easy",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S889): training, 'especially recall', 'will not always be easy' (fragments; paraphrase). Background."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found. PetMD (S890): 'Feed your Manchester Terrier twice a day' (background)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. The RKC Breed Watch category was not reachable this run (RKC page refused); no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: not checked (RKC health-testing section not reachable).",
+      "von_willebrand": {
+        "value": "von Willebrand's disease — a bleeding disorder",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": "Von Willebrand's disease",
+        "confidence": "high",
+        "notes": "PDSA (S889) list item; PetMD (S890) 'Von Willebrand Disease'; WebMD (S891) 'Canine von Willebrand Disease'. Register health key bleeding_disorder_vwd."
+      },
+      "cardiomyopathy": {
+        "value": "cardiomyopathy — enlarged heart (heart muscle disease)",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": "Cardiomyopathy",
+        "confidence": "high",
+        "notes": "PDSA (S889) list item ('enlarged heart due to degeneration of the heart muscle.'). Register health key heart_muscle_disease."
+      },
+      "legg_perthes": {
+        "value": "Legg-Calvé-Perthes disease — a hip problem of young small dogs",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": "Legg-Perthes disease (Legg-Calvé-Perthes)",
+        "confidence": "high",
+        "notes": "PDSA (S889) list item. Register health key legg_perthes."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism / autoimmune thyroiditis",
+        "unit": "—",
+        "source_id": "S890",
+        "quote": "Hypothyroidism",
+        "confidence": "high",
+        "notes": "PetMD (S890); WebMD (S891) 'Autoimmune Thyroiditis'. Register health key hypothyroidism."
+      },
+      "primary_lens_luxation": {
+        "value": "primary lens luxation — dislocation of the lens of the eye",
+        "unit": "—",
+        "source_id": "S890",
+        "quote": "Primary Lens Luxation",
+        "confidence": "high",
+        "notes": "PetMD (S890). Register health key primary_lens_luxation."
+      },
+      "other": {
+        "value": "alopecia (seasonal); SLE as a possible test (WebMD)",
+        "unit": "—",
+        "source_id": "S890",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S890) 'Alopecia', 'seasonal alopecia'; WebMD (S891) systemic lupus erythematosus (paraphrase). Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 32,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Manchester Terrier",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read through the Kiwix mirror kaweah.freedombox.rocks wikipedia_en_all_maxi_2023-10, 2026-11-16): row '| 32 | Manchester Terrier |' (not shared; next row 33 Samoyed) in the group headed 'Above Average Working Dogs' (ranks 27–39)."
+      },
+      "coren_tier": {
+        "value": "Above Average Working Dogs",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Above Average Working Dogs",
+        "confidence": "medium",
+        "notes": "S35 heading for ranks 27–39."
+      },
+      "training_notes": {
+        "value": "independent and sensitive; recall needs work",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S889) (paraphrase). The game uses Coren's rank only (32 → 1.2)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.manchester_terrier.learning_multiplier (1.2, runbook rule: Above average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "compact, elegant and sound terrier with substance",
+        "unit": "—",
+        "source_id": "S888",
+        "quote": "Compact, elegant and sound with substance.",
+        "confidence": "high",
+        "notes": "FCI standard (S888)."
+      },
+      "colours": {
+        "value": [
+          "jet black and rich mahogany tan"
+        ],
+        "unit": "list",
+        "source_id": "S888",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "FCI standard (S888): jet black and rich mahogany tan with a set placement of the tan (muzzle tanned to the nose, nose and nasal bone jet black, a tan spot on each cheek and above each eye, tan V on the under-jaw and throat, legs tan from the knee down with black toes and a black thumbmark above the feet, tan under the tail, a slight tan mark on each side of the chest) (paraphrase); 'In all cases black should not run into tan or vice versa, but division between colours clearly defined.' UKC (S893): 'Any color other than black and tan.' is a disqualification; CKC (S892) 'Black and tan, as distinctive as possible; the tan should be a rich mahogany colour.' One standard colour; never white, never another colour."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). One standard colour: black and tan."
+      },
+      "coat": {
+        "value": "close, smooth, short and glossy, of firm texture",
+        "unit": "—",
+        "source_id": "S888",
+        "quote": "Close, smooth, short and glossy, of firm texture.",
+        "confidence": "high",
+        "notes": "FCI standard (S888). PDSA (S889) 'Coat length | Short'; PetMD (S890) 'Manchester Terriers have a smooth, short coat that requires minimal upkeep.'"
+      },
+      "eyes": {
+        "value": "relatively small, dark and sparkling, almond-shaped, not prominent",
+        "unit": "—",
+        "source_id": "S888",
+        "quote": "Relatively small, dark and sparkling. Almond-shaped, not prominent.",
+        "confidence": "high",
+        "notes": "FCI standard (S888)."
+      },
+      "ears": {
+        "value": "small V-shaped ears carried well above the top line of the head, hanging close to the head above the eyes",
+        "unit": "—",
+        "source_id": "S888",
+        "quote": "Small and V-shaped, carried well above top line of head and hanging close to head above eyes.",
+        "confidence": "high",
+        "notes": "FCI standard (S888) — natural button / drop ears; never cropped (the AKC allows cropped ears — not shown in the app)."
+      },
+      "tail": {
+        "value": "short, thick at the root, tapering to a point, carried not higher than the back",
+        "unit": "—",
+        "source_id": "S888",
+        "quote": "Short and set on where arch of back ends, thick where it joins body",
+        "confidence": "high",
+        "notes": "FCI standard (S888); tapers to a point and is carried no higher than the level of the back (paraphrase of the continuation). Natural tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S889), PetMD (S890), WebMD (S891). The RKC breed page was not reachable on 2026-11-16 → no rkc_* key facts.",
+      "pdsa_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Size' (S889) → size class."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S889) → 60 min. Not long_daily_exercise."
+      },
+      "pdsa_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Coat length' (S889)."
+      },
+      "pdsa_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": "Grooming is minimal, and brushing once a week is generally all that’s needed to keep the coat in good condition.",
+        "confidence": "high",
+        "notes": "PDSA (S889) → brushing 1× a week (dog-grooming rule: 'Once a week' → 1, M5-R13). PetMD (S890) 'Brushing them once a week with a' (rubber curry or bristle brush) and WebMD (S891) 'You can brush your Manchester Terrier weekly with a hound glove, which can help control shedding.' agree. Not frequent_grooming."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S889) — see lifespan.pdsa."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth daily",
+        "unit": "—",
+        "source_id": "S891",
+        "quote": "You should brush your Manchester's teeth daily with dog-friendly toothpaste",
+        "confidence": "high",
+        "notes": "WebMD (S891, fragment) → tooth brushing every day (M5-R15)."
+      },
+      "webmd_nails": {
+        "value": "regular nail trims — no frequency",
+        "unit": "—",
+        "source_id": "S891",
+        "quote": "trim their nails before they're clicking when walking.",
+        "confidence": "high",
+        "notes": "WebMD (S891): 'Manchester Terriers, like all dogs, need regular nail trims and dental care.' — no frequency → no nail task."
+      },
+      "webmd_bath": {
+        "value": "an occasional bath — no frequency",
+        "unit": "—",
+        "source_id": "S891",
+        "quote": "They only require an occasional bath with a dog-friendly shampoo",
+        "confidence": "high",
+        "notes": "WebMD (S891) — no frequency → no bath reminder."
+      },
+      "petmd_ears": {
+        "value": "no frequency — ask the vet",
+        "unit": "—",
+        "source_id": "S890",
+        "quote": "Talk to your veterinarian about how and how often you should",
+        "confidence": "high",
+        "notes": "PetMD (S890, fragment; continues 'clean your dog's ears'): no frequency → no ear-cleaning task."
+      },
+      "webmd_cold": {
+        "value": "sensitive to the cold; a coat or sweater may be needed",
+        "unit": "—",
+        "source_id": "S891",
+        "quote": "Manchester Terriers are sensitive to the cold.",
+        "confidence": "high",
+        "notes": "WebMD (S891); 'A coat or sweater may be necessary to help keep your Manchester Terrier comfortable' (fragment) → cold_sensitive chip (Italian Greyhound precedent)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -91620,6 +92124,240 @@
         "confidence": "medium",
         "notes": "FCI standard (S871) as in wire_fox_terrier.appearance. Weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with black and tan markings is the portrait default (FCI S871 'White predominates with black, black and tan or tan markings'); never brindle / red / liver / slate-blue markings, natural tail"
+      }
+    },
+    "manchester_terrier": {
+      "_note": "Unattended run M5-R10-119 (2026-11-16): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PDSA (S889 'up to an hour of exercise per day' → 60; the RKC page was not reachable → runbook 'else PDSA'). Senior boundary 108 from the PDSA lower bound 'Over 12 years' (S889; the older KC survey median 12.8 y only via Wikipedia S894 → 115, open for David). Learning 1.2 (Coren 32, Above average, S35). Built: brushing once a week (PDSA 'once a week', M5-R13), tooth brushing every day (WebMD S891, M5-R15), puppy socialisation with the PetMD quote (M5-R17). No nail / ear / bath / groomer task (no frequency), no meal gap, no heat warning. No new vocabulary key. In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S889",
+        "quote": "Manchester Terriers will need up to an hour of exercise per day to keep them physically and mentally fit.",
+        "confidence": "high",
+        "notes": "PDSA (S889) → rule 'up to N' → 60 (no RKC key fact reachable → PDSA). PDSA key fact '1 hour' agrees; PetMD (S890) 'at least 30 minutes a day' lower (alternative).",
+        "alternatives": [
+          {
+            "value": 30,
+            "source_id": "S890",
+            "quote": "at least 30 minutes a day"
+          },
+          {
+            "value": 60,
+            "source_id": "S891",
+            "quote": "A few brisk walks or an hour of outside playtime is enough for most Manchesters."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S889 'up to an hour of exercise per day'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S889",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + the PDSA lower bound 'Over 12 years', S889 — no McMillan 2024 / VetCompass row reachable, no RKC page).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S889"
+        ],
+        "alternatives": {
+          "senior_kc_survey_via_wikipedia_12_8_y": 115,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × PDSA lower bound 'Over 12 years', S889)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 32 'Manchester Terrier' (S35) → Above average tier (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren 32, Above average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S889",
+        "quote": "Grooming is minimal, and brushing once a week is generally all that’s needed to keep the coat in good condition.",
+        "confidence": "high",
+        "notes": "manchester_terrier.suitability.pdsa_grooming. PDSA 'once a week' → 1 (PetMD S890 and WebMD S891 weekly agree). Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (PDSA »brushing once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S891",
+        "quote": "You should brush your Manchester's teeth daily with dog-friendly toothpaste",
+        "confidence": "high",
+        "notes": "manchester_terrier.suitability.webmd_teeth → every day. Built: DOG_CARE_TASKS tooth_brushing [7, day], M5-R15.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brush your Manchester's teeth daily« → vsak dan"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S890",
+        "quote": "socialize your Manchester Terrier puppy from the moment you bring them home.",
+        "confidence": "high",
+        "notes": "manchester_terrier.behaviour.socialisation (PetMD S890, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S890)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-119); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S889"
+            ],
+            "refs": [
+              "manchester_terrier.exercise.adult",
+              "manchester_terrier.exercise.daily_text"
+            ],
+            "quote": "S889 'Manchester Terriers will need up to an hour of exercise per day to keep them physically and mentally fit.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S890"
+            ],
+            "refs": [
+              "manchester_terrier.behaviour.children"
+            ],
+            "quote": "S890 'Manchesters also do well with children, especially when exposed to kids during puppyhood.' (supervision caveat of WebMD kept in notes)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S891"
+            ],
+            "refs": [
+              "manchester_terrier.suitability.webmd_cold"
+            ],
+            "quote": "S891 'Manchester Terriers are sensitive to the cold.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S890"
+            ],
+            "refs": [
+              "manchester_terrier.behaviour.other_pets"
+            ],
+            "quote": "S890 'They can also have a high prey drive because of their history as ratters'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "Supervision caveat (WebMD S891 'small children should never be left with dogs unsupervised').",
+          "family_pet": "No 'family pet' statement in an A/B source.",
+          "apartment": "No RKC key fact 'Size of home' reachable (the chip needs RKC 'Flat/ Apartment').",
+          "long_daily_exercise": "60 minutes a day (PDSA S889) — the chip is for 2 hours or more.",
+          "frequent_grooming": "Once a week (PDSA S889), not daily.",
+          "sheds": "No shedding statement (WebMD 'help control shedding' is about the glove, no RKC 'Sheds' key fact).",
+          "low_shedding": "No source.",
+          "needs_company": "No source on time alone.",
+          "other_pets": "High prey drive (S890).",
+          "first_time_owner": "No source.",
+          "shorter_lifespan": "PDSA 'Over 12 years' (S889).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "RKC Breed Watch category not reachable this run; no veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, children; consider cold_sensitive, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S889",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows the Manchester Terrier with small pets, cropped ears or as hypoallergenic (S888, S890, S891).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Manchester Terrier, jet black and rich mahogany tan: compact, elegant and sound with substance; close, smooth, short and glossy coat; small dark almond-shaped eyes; small V-shaped ears hanging close to the head; short tapering natural tail",
+        "unit": "—",
+        "source_id": "S888",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S888) as in manchester_terrier.appearance. One colour; weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan is the portrait default (FCI S888 — the only standard colour); natural (uncropped) ears, natural tail"
       }
     }
   }

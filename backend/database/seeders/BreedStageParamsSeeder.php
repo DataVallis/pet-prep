@@ -1399,6 +1399,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_WIRE_FOX_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-117)';
 
     /**
+     * M5-R10-119 Manchester Terrier (unattended run 2026-11-16, data.json
+     * proposed_game_parameters.manchester_terrier.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 60 min (PDSA S889 "up to an
+     * hour of exercise per day"; the RKC page was not reachable), senior 45 min, puppy 10 min × age capped at 60, stages
+     * young 9 / adult 36 / senior 108 (0.75 × PDSA lower bound "Over 12 years", S889 — no McMillan 2024 value reachable),
+     * arrival 2 / 9 / 36 / 108, learning multiplier 1.2 (Coren 32, Above average, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_MANCHESTER_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-119)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1782,6 +1792,9 @@ class BreedStageParamsSeeder extends Seeder
             'groomer_visit' => [1, 'three_months', 'S874', 'is recommended three to four times a year.', 'proposed_game_parameters.wire_fox_terrier.professional_grooming', '"three to four times a year" (hand-stripping) = every 3–4 months → the lower bound, 3 months (12 program weeks; WebMD "trimmed monthly" open for David)'],
             'bath' => [1, 'month', 'S874', 'about once a month, or as needed', 'proposed_game_parameters.wire_fox_terrier.bathing', '"about once a month" → every 4 weeks (ears: no frequency → no task)'],
         ],
+        'manchester_terrier' => [
+            'tooth_brushing' => [7, 'day', 'S891', "You should brush your Manchester's teeth daily with dog-friendly toothpaste", 'proposed_game_parameters.manchester_terrier.tooth_brushing', '"teeth daily" → every day (nails / ears / bath / groomer: no frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1919,6 +1932,7 @@ class BreedStageParamsSeeder extends Seeder
         'australian_silky_terrier' => [7, 'S856', 'Every day', 'high', false],
         'parson_russell_terrier' => [1, 'S865', 'Once a week', 'high', false],
         'wire_fox_terrier' => [2, 'S873', 'Fox Terriers will need grooming once or twice a week to keep their coat in tip-top condition.', 'medium', false],
+        'manchester_terrier' => [1, 'S889', 'Grooming is minimal, and brushing once a week is generally all that’s needed to keep the coat in good condition.', 'high', false],
     ];
 
     /**
@@ -2102,13 +2116,14 @@ class BreedStageParamsSeeder extends Seeder
         'australian_silky_terrier' => ['S857', 'Enrolling Silky puppies in socialization classes before 16 weeks of age can help them become comfortable around children, other dogs, and new people.'],
         'parson_russell_terrier' => ['S866', 'They will need to be socialised at a young age with any other family pets'],
         'wire_fox_terrier' => ['S874', 'Socialize your Wire Fox Terrier puppy well when they are young'],
+        'manchester_terrier' => ['S890', 'socialize your Manchester Terrier puppy from the moment you bring them home.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2944,6 +2959,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::AustralianSilkyTerrier => self::australianSilkyTerrierProfile(),
             BreedType::ParsonRussellTerrier => self::parsonRussellTerrierProfile(),
             BreedType::WireFoxTerrier => self::wireFoxTerrierProfile(),
+            BreedType::ManchesterTerrier => self::manchesterTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -11213,6 +11229,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'wire_fox_terrier.lifespan.rkc',
                 'quote' => 'Over 12 years',
                 'notes' => 'RKC Breeds A–Z lower bound (S872); PDSA "Over 12 years" (S873); PetMD / WebMD 12–15 years (S874, S875). No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Manchester Terrier (M5-R10-119). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_MANCHESTER_TERRIER); weight, growth, Coren rank and lifespan
+     * are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function manchesterTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_MANCHESTER_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S889', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.manchester_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog reaches adult weight at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × PDSA lower bound "Over 12 years" (S889) = 9 y = 108 months. No McMillan 2024 / VetCompass median reachable and no RKC page (older KC survey 12.8 y only via Wikipedia, S894 → 115, open for David).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.manchester_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S889', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.manchester_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Manchester Terriers will need up to an hour of exercise per day to keep them physically and mentally fit.',
+                'notes' => 'PDSA (S889) → 60 min = 6,000 steps (runbook rule: "up to N" → N; no RKC key fact reachable → PDSA). PDSA key fact "1 hour" and WebMD (S891) "an hour of outside playtime" agree; PetMD (S890) "at least 30 minutes a day" lower.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.manchester_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[5.5, 10], [
+                'unit' => 'kg', 'source_id' => 'S892', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'manchester_terrier.adult_weight.ckc',
+                'quote' => 'Weight: 5.5 to 10 kg (12 to 22 lb)',
+                'notes' => 'CKC standard (S892), one band for both sexes (Standard variety). FCI (S888) gives no weight; UKC (S893) more than 12 up to 22 lb; PDSA (S889) 6–10 kg.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'manchester_terrier.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (12–22 lb, S892 → the Small class of S10).',
+            ]],
+            'coren_rank' => [32, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'manchester_terrier.trainability.coren_rank',
+                'notes' => 'Rank 32 "Manchester Terrier" (not shared) in the Wikipedia table of Coren\'s ranking (S35, checked 2026-11-16 through the Kiwix mirror), tier "Above Average Working Dogs" (27–39).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.manchester_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 32, Above average tier (S35) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12, [
+                'unit' => 'years', 'source_id' => 'S889', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'manchester_terrier.lifespan.pdsa',
+                'quote' => 'Over 12 years',
+                'notes' => 'PDSA lower bound (S889; the RKC page was not reachable); WebMD 15–17 years (S891). No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

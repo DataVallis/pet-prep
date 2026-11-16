@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "39b365ac88a0bd6136dfddfb1ff161022e7b2cc49e15e4e59b577c52c12cc627"
+      "sha256": "efc91d220581ed4af926892a0672a5818bf23910d13e2a43e9224aa8bb73718f"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "7c6e9fe8882b826c21cf3fa709c262e7bfb817a16d74a1310b6739fe49c5a0fb"
+      "sha256": "e6a421e5181afaf5b4e704a6d5a5b32b3eb7a7aca6d8284deb85a718eb035b2d"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "a7796430daf11ddff0080b3c7687d2861d7cc96a048cf6863c60b6eb5da5854b"
+      "sha256": "8c70951fce88f9c876780273a9d5bb86e4139f6cc82f22fdd4b74e6909d12e91"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,12 +40,12 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "bbd5aa615d3f63cf3e9e4c9324959317365d3d3a09183e8ec216fcae58c631cb"
+      "sha256": "26fca04f8219718d67ca6e6813647c9f7fcee87168772f2e79181c070729c644"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "1c52b71805a2f3312e597348c6c4a90a18f75ec011282e906f4edf7dd932df1e"
+      "sha256": "1f3f5ee11420f49eca70fe2dba973854c88c6a6897eb61d147ccc2523e264b43"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "5fa2b1dff66ee209c0c5d2008e14f7a804aa4de385d6b23ff5b4c4861445fcbe"
+      "sha256": "3c0d331683822769b9be892594e595c0ab9f7305bb54cb048d5cbba02f59562c"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 110,
+      "breed_count": 111,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -66588,6 +66588,535 @@
       ]
     },
     {
+      "id": "manchester_terrier",
+      "species": "dog",
+      "order": 110,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Manchester Terrier",
+        "sl": "Manchesterski terier"
+      },
+      "slug": {
+        "en": "manchester-terrier",
+        "sl": "manchesterski-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Manchester Terrier (Standard)",
+          "Black and Tan Terrier"
+        ],
+        "sl": [
+          "manchester terier",
+          "manchester"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S889"
+          ],
+          "ref": "manchester_terrier.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              41,
+              41
+            ],
+            "female": [
+              38,
+              38
+            ]
+          },
+          "source_ids": [
+            "S888"
+          ],
+          "ref": "manchester_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              5.5,
+              10
+            ],
+            "female": [
+              5.5,
+              10
+            ]
+          },
+          "source_ids": [
+            "S892"
+          ],
+          "ref": "manchester_terrier.adult_weight.ckc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "manchester_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S889"
+          ],
+          "ref": "manchester_terrier.lifespan.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            15,
+            17
+          ],
+          "source_ids": [
+            "S891"
+          ],
+          "ref": "manchester_terrier.lifespan.webmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S889"
+          ],
+          "ref": "manchester_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S889"
+          ],
+          "ref": "manchester_terrier.suitability.pdsa_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S889"
+          ],
+          "ref": "manchester_terrier.suitability.pdsa_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 32,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "manchester_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 71,
+            "group": 3,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S888"
+          ],
+          "ref": "manchester_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S889"
+          ],
+          "ref": "manchester_terrier.health.von_willebrand",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S889"
+          ],
+          "ref": "manchester_terrier.health.cardiomyopathy",
+          "confidence": "high"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S889"
+          ],
+          "ref": "manchester_terrier.health.legg_perthes",
+          "confidence": "high"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S890"
+          ],
+          "ref": "manchester_terrier.health.hypothyroidism",
+          "confidence": "high"
+        },
+        {
+          "key": "primary_lens_luxation",
+          "source_ids": [
+            "S890"
+          ],
+          "ref": "manchester_terrier.health.primary_lens_luxation",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S889"
+            ],
+            "refs": [
+              "manchester_terrier.exercise.adult",
+              "manchester_terrier.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S890"
+            ],
+            "refs": [
+              "manchester_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S891"
+            ],
+            "refs": [
+              "manchester_terrier.suitability.webmd_cold"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S890"
+            ],
+            "refs": [
+              "manchester_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.manchester_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S889"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S889 'up to an hour of exercise per day'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.manchester_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.manchester_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S889"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × PDSA lower bound 'Over 12 years', S889)"
+          },
+          {
+            "ref": "proposed_game_parameters.manchester_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren 32, Above average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.manchester_terrier.grooming",
+            "basis_source_ids": [
+              "S889"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (PDSA »brushing once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.manchester_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S891"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brush your Manchester's teeth daily« → vsak dan"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S889",
+          "S891"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_checked",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S888",
+        "S889",
+        "S890",
+        "S891",
+        "S892",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -72949,6 +73478,41 @@
       "publisher": "American Kennel Club",
       "title": "Official Standard of the Wire Fox Terrier (PDF, approved February 9, 1991, effective March 27, 1991)",
       "url": "https://a.storyblok.com/f/92981/x/2c2707caac/akc-wire-fox-terrier.pdf"
+    },
+    {
+      "id": "S888",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 71 — Manchester Terrier (English PDF, header 06.10.2026/ EN) + FCI nomenclature page",
+      "url": "https://www.fci.be/Nomenclature/Standards/071g03-en.pdf"
+    },
+    {
+      "id": "S889",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Manchester Terrier breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/manchester-terrier"
+    },
+    {
+      "id": "S890",
+      "tier": "B",
+      "publisher": "PetMD — Zack Newman, reviewed by Barri J. Morrison, DVM (updated Feb. 26, 2024)",
+      "title": "Manchester Terrier",
+      "url": "https://www.petmd.com/dog/breeds/manchester-terrier"
+    },
+    {
+      "id": "S891",
+      "tier": "B",
+      "publisher": "WebMD Pets — Ariel Grucza, medically reviewed by Shruthi N, MD (2025-03-06)",
+      "title": "What to Know About Manchester Terriers",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-manchester-terriers"
+    },
+    {
+      "id": "S892",
+      "tier": "A",
+      "publisher": "Canadian Kennel Club",
+      "title": "Manchester Terrier — breed standard (Group IV Terriers, effective January 2004) (PDF)",
+      "url": "https://www.ckc.ca/CanadianKennelClub/media/Breed-Standards/Group%204/Manchester-Terrier.pdf?ext=.pdf"
     },
     {
       "id": "C1",
