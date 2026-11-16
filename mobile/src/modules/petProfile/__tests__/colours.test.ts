@@ -37,9 +37,9 @@ function entry(breed: string, premium: boolean, sort_order: number, colours?: un
 }
 
 const LAB_COLOURS = [
-  { key: 'black', label: 'Črn' },
-  { key: 'yellow', label: 'Rumen' },
-  { key: 'chocolate', label: 'Čokoladno rjav' },
+  { key: 'black', label: 'Črn', image_url: null },
+  { key: 'yellow', label: 'Rumen', image_url: null },
+  { key: 'chocolate', label: 'Čokoladno rjav', image_url: null },
 ];
 
 const CATALOGUE = readBreedCatalogue({
@@ -47,7 +47,7 @@ const CATALOGUE = readBreedCatalogue({
   breeds: [
     entry('mutt', false, 0, []),
     entry('labrador_retriever', true, 20, LAB_COLOURS),
-    entry('west_highland_white_terrier', true, 120, [{ key: 'white', label: 'Bel' }]),
+    entry('west_highland_white_terrier', true, 120, [{ key: 'white', label: 'Bel', image_url: null }]),
     // An older server: no `colours` key at all.
     entry('border_collie', true, 10),
   ],
@@ -66,8 +66,8 @@ describe('readColours', () => {
     expect(
       readColours([{ key: 'black', label: 'Črn' }, { key: '', label: 'x' }, { key: 'blue' }, 7, null, { key: 'black', label: 'Again' }, { key: ' yellow ', label: ' Rumen ' }]),
     ).toEqual([
-      { key: 'black', label: 'Črn' },
-      { key: 'yellow', label: 'Rumen' },
+      { key: 'black', label: 'Črn', image_url: null },
+      { key: 'yellow', label: 'Rumen', image_url: null },
     ]);
     expect(readColours(undefined)).toEqual([]);
     expect(readColours({ key: 'black' })).toEqual([]);

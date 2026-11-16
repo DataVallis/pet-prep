@@ -35,6 +35,8 @@
 
 ## 1b. Čaka Davida (konkretni koraki)
 
+- **Barvne slike pasem (16. 11.):** v `/admin` → AI budget dvigni **AI Lab** proračun za čas zaostanka (~2 tedna) na **8 $ / dan** in **80 $ / mesec** (nočno opravilo ~5 $ / noč + nočno dodajanje pasem); potem ga lahko vrneš. Ko opravilo javi »done«, ga lahko izklopiš.
+
 *David 25. 10. 2026: vsak korak, ki ga mora narediti David, je tukaj z natančnimi kliki / vrsticami — ne samo »glej DEPLOYMENT.md«. Ko je korak narejen, ga Claude označi ✅ z datumom (in dokazom). Brez skrivnosti: `<…>` so vrednosti iz upravitelja gesel.*
 
 **Že narejeno:** ✅ Discord opozorila — `DISCORD_ALERTS_WEBHOOK_URL` nastavljen, testno sporočilo prispelo (24. 10.). ✅ `FAL_AI_BILLING_KEY` dodan v `/opt/petprep/.env` (22. 10.). ✅ Stavek o poročilih o napakah v politiki zasebnosti na petprep.si (pet-prep-website #98, združeno 24. 10.). ✅ `EXPO_TOKEN` (OTA teče po vsakem produkcijskem deployu).
@@ -282,6 +284,11 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 ## 6. Session log
 ### 2026-11-16 (cloud, mobile) — game HUD off the pet's head (`fix/game-hud-off-pet-head`, David »Moti me tukaj, da je vse čez glavo«, JS only → OTA)
 - School v2: only `GameTopBar` (dots, ★, ×) stays at the top; the command chip (30 pt), the »Ne uboga — ne pohvali, počakaj.« chip and `SchoolRuleStrip` moved into the dock (chip → token → rule); rule shortened to ≤ 40 chars (»Uboga → priboljšek · Ne uboga → počakaj«, a11y keeps the full sentence). Timings / scoring untouched. Other games checked: ball v2, messes, care shell already top-bar-only; wand 👀 cue at 70 %; cuddle v2 keeps its small hearts row under the bar. General rule in GAMES_SPEC §7.1 + mobile/CLAUDE.md. Not yet verified on a phone (layout mock PNGs only).
+
+### 2026-11-16 (cloud, backend + mobile + docs) — colour photos for every breed + in the app picker (`feat/M5-R11-09-colour-photos`)
+- **Why only the Border Collie had colours:** M5-R11-08 (26. 10.) was a test on one breed and never part of the unattended breed run. David chose: nightly backfill ~10 breeds (scheduled task »PetPrep — barvne slike pasem (nočno)«, ADD_BREED_RUNBOOK §8c), Claude reviews every image, new breeds make their colours in their own run (§8b, now mandatory), app shows the photo above the colour chips, photos loaded from petprep.si.
+- Backend: `GET /api/breeds` `colours[].image_url` (`BreedColourCatalogue::imageUrl()`, `media.breed_portraits.public_base_url` / env `BREED_PORTRAIT_PUBLIC_URL`), generated `backend/config/breed_colour_images.php` (export script writes + `--check`s it). Mobile: `ColourPhoto` in `PetPickerStep` (prefetch, hidden on error / null), strings `colourPhotoCaption` / `colourPhotoA11y`. Tests `BreedColourImagesTest`, `PetPickerStep.colourPhoto.test.tsx`, export node test.
+- Backlog: 102 breeds, ~347 images (≈ 52 $ AI Lab). **Next:** first nightly run; David raises the AI Lab budget (§1b). Debt: none new.
 
 ### 2026-11-16 (cloud, mobile) — no dead end after a game (`fix/game-stuck-after-end`, JS only → OTA)
 - David's iPhone: wand intro card after a hunt (cat resting, »Začni lov« disabled) — the card's backdrop (overlay 20) covered the top bar (10), × got no touch, no iOS back. `GAME_Z.top` → 30 (all games), wand intro »Zapri« + failed-retry »Zapri«; Jest `expectCloseAboveCard`. Debt: RNTL `fireEvent.press` ignores what covers a node — use `expectCloseAboveCard` for every card.

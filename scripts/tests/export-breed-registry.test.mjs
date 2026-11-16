@@ -24,6 +24,9 @@ import {
   readPortraitManifest,
   renderRegistry,
   slugify,
+  COLOUR_IMAGES_OUT,
+  colourImages,
+  renderColourImages,
 } from '../export-breed-registry.mjs';
 import { APP_RELEASE, breedsFromSpeciesTs, releasedBreeds } from '../record-app-release.mjs';
 
@@ -60,6 +63,23 @@ test('export is deterministic and the committed file is up to date', () => {
   assert.equal(a, renderRegistry());
   assert.doesNotMatch(a, /generated_at|"timestamp"/);
   assert.equal(readFileSync(resolve(ROOT, DEFAULT_OUT), 'utf8'), a, `${DEFAULT_OUT} is stale — run: node scripts/export-breed-registry.mjs`);
+});
+
+test('the app colour-picker photo config is generated and up to date (David 2026-11-16)', () => {
+  assert.equal(readFileSync(resolve(ROOT, COLOUR_IMAGES_OUT), 'utf8'), renderColourImages(), `${COLOUR_IMAGES_OUT} is stale — run: node scripts/export-breed-registry.mjs`);
+  const reg = {
+    species: [{ id: 'dog', slug: { en: 'dogs' } }],
+    breeds: [
+      { id: 'a', species: 'dog', portrait: { file: 'a.webp', colours: [{ key: 'x', file: 'dog/a.webp', default: true }, { key: 'y', file: 'dog/a--y.webp' }] } },
+      { id: 'b', species: 'dog', portrait: { file: 'b.webp' } },
+      { id: 'c', species: 'dog', portrait: { file: 'c.webp' } },
+      { id: 'd', species: 'dog', portrait: null },
+    ],
+  };
+  assert.deepEqual(colourImages(reg, { b: [{ key: 'white' }], c: [{ key: 'p' }, { key: 'q' }], d: [{ key: 'z' }] }), {
+    a: { x: 'dogs/a.webp', y: 'dogs/a--y.webp' },
+    b: { white: 'dogs/b.webp' },
+  });
 });
 
 test('i18n inputs: only the strings the export reads are hashed (an unrelated app string never makes the register stale)', () => {
