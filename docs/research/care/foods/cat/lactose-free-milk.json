@@ -11,7 +11,8 @@
     "cs": "Bezlaktózové mléko a mléko pro kočky",
     "hr": "Mlijeko bez laktoze i mlijeko za mačke",
     "sv": "Laktosfri mjölk och kattmjölk",
-    "da": "Laktosefri mælk og kattemælk"
+    "da": "Laktosefri mælk og kattemælk",
+    "fi": "Laktoositon maito ja kissanmaito"
   },
   "question": {
     "en": "Can cats drink lactose-free milk?",
@@ -23,7 +24,8 @@
     "cs": "Mohou kočky pít bezlaktózové mléko?",
     "hr": "Smiju li mačke piti mlijeko bez laktoze?",
     "sv": "Får katter dricka laktosfri mjölk?",
-    "da": "Må katte drikke laktosefri mælk?"
+    "da": "Må katte drikke laktosefri mælk?",
+    "fi": "Saako kissa juoda laktoositonta maitoa?"
   },
   "url_slug": {
     "en": "lactose-free-milk",
@@ -35,7 +37,8 @@
     "cs": "bezlaktozove-mleko",
     "hr": "mlijeko-bez-laktoze",
     "sv": "laktosfri-mjolk",
-    "da": "laktosefri-maelk"
+    "da": "laktosefri-maelk",
+    "fi": "laktoositon-maito"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "cs": "Raději ne. Bezlaktózové mléko a speciální mléko pro kočky způsobují žaludeční potíže méně často, ale obsahují hodně kalorií a chybí v nich živiny, které kočka potřebuje. Cats Protection radí vyhýbat se jakémukoli mléku; kočky potřebují jen vodu.",
     "hr": "Bolje ne. Mlijeko bez laktoze i posebno mlijeko za mačke rjeđe će mački pokvariti želudac, ali sadrže mnogo kalorija i ne sadrže hranjive tvari koje mački trebaju. Cats Protection savjetuje da se izbjegava svaka vrsta mlijeka; mačkama treba samo voda.",
     "sv": "Helst inte. Laktosfri mjölk och särskild kattmjölk ger mer sällan orolig mage hos katter, men de innehåller många kalorier och saknar de näringsämnen som en katt behöver. Cats Protection rekommenderar att du undviker alla sorters mjölk. Vatten är allt katter behöver.",
-    "da": "Helst ikke. Laktosefri mælk og særlig kattemælk er mindre tilbøjelige til at give ondt i maven hos katte, men de indeholder mange kalorier og mangler de næringsstoffer, en kat har brug for. Cats Protection anbefaler, at man undgår alle slags mælk; vand er alt, hvad katte har brug for."
+    "da": "Helst ikke. Laktosefri mælk og særlig kattemælk er mindre tilbøjelige til at give ondt i maven hos katte, men de indeholder mange kalorier og mangler de næringsstoffer, en kat har brug for. Cats Protection anbefaler, at man undgår alle slags mælk; vand er alt, hvad katte har brug for.",
+    "fi": "Parempi olla antamatta. Laktoositon maito ja erityinen kissanmaito sotkevat kissan vatsan epätodennäköisemmin, mutta niissä on paljon kaloreita, ja niistä puuttuvat kissan tarvitsemat ravintoaineet. Cats Protection kehottaa välttämään kaikkea maitoa: kissa tarvitsee juomaksi vain vettä."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. Cats Protection says lactose-free milk and cat milk don't contain lactose, but they have a lot of calories that could make a cat put on weight, and it is best to avoid giving cats any type of milk. PDSA says cat milk could be an occasional treat, but its fat is often as high as other milk and its calories must be counted in the daily food allowance.",
@@ -60,7 +64,8 @@
     "cs": "Zdroje se různí, proto jsme zvolili přísnější úroveň. Cats Protection uvádí, že bezlaktózové mléko a mléko pro kočky laktózu neobsahují, ale mají hodně kalorií, po kterých může kočka přibrat, a nejlepší je nedávat kočkám žádný druh mléka. PDSA říká, že mléko pro kočky může být občasným pamlskem, ale tuku v něm bývá stejně jako v jiných mlécích a jeho kalorie je třeba započítat do denní dávky krmiva.",
     "hr": "Izvori se ne slažu, pa se držimo strožeg stajališta. Cats Protection kaže da mlijeko bez laktoze i mlijeko za mačke ne sadrže laktozu, ali imaju mnogo kalorija, zbog kojih bi mačka mogla dobiti na težini, pa je najbolje mačkama ne davati nikakvu vrstu mlijeka. PDSA kaže da bi mlijeko za mačke moglo biti povremena poslastica, ali da je udio masti u njemu često jednako visok kao u drugom mlijeku i da se njegove kalorije moraju uračunati u dnevni obrok.",
     "sv": "Källorna är oeniga, så vi använder den strängare nivån. Cats Protection skriver att laktosfri mjölk och kattmjölk inte innehåller laktos, men att de har många kalorier, som kan få katten att gå upp i vikt, och att det är bäst att inte ge katter någon sorts mjölk. PDSA skriver att kattmjölk kan vara en godbit ibland, men att fetthalten ofta är lika hög som i annan mjölk och att kalorierna måste räknas in i den dagliga matransonen.",
-    "da": "Kilderne er uenige, så vi bruger den strengere vurdering. Cats Protection skriver, at laktosefri mælk og kattemælk ikke indeholder laktose, men at de har mange kalorier, som kan få en kat til at tage på, og at det er bedst ikke at give katte nogen slags mælk. PDSA skriver, at kattemælk kan være en godbid en gang imellem, men at fedtindholdet ofte er lige så højt som i anden mælk, og at kalorierne skal tælles med i den daglige foderration."
+    "da": "Kilderne er uenige, så vi bruger den strengere vurdering. Cats Protection skriver, at laktosefri mælk og kattemælk ikke indeholder laktose, men at de har mange kalorier, som kan få en kat til at tage på, og at det er bedst ikke at give katte nogen slags mælk. PDSA skriver, at kattemælk kan være en godbid en gang imellem, men at fedtindholdet ofte er lige så højt som i anden mælk, og at kalorierne skal tælles med i den daglige foderration.",
+    "fi": "Lähteet ovat eri mieltä, joten noudatamme tiukempaa tasoa. Cats Protectionin mukaan laktoositon maito ja kissanmaito eivät sisällä laktoosia, mutta niissä on paljon kaloreita, jotka voivat lihottaa kissaa, ja kissalle on parasta olla antamatta minkäänlaista maitoa. PDSA:n mukaan kissanmaito voi olla satunnainen herkku, mutta sen rasvapitoisuus on usein yhtä suuri kuin muiden maitojen, ja sen kalorit on laskettava mukaan kissan päivittäiseen ruokamäärään."
   },
   "signs": {
     "en": [
@@ -92,6 +97,9 @@
     ],
     "da": [
       "Vægtøgning over tid"
+    ],
+    "fi": [
+      "Lihominen ajan myötä"
     ]
   },
   "what_to_do": {
@@ -104,7 +112,8 @@
     "cs": "Nabídněte místo toho čerstvou vodu. Pokud někdy dáte mléko pro kočky jako vzácný pamlsek, pamatujte na kalorie navíc, ale neubírejte kvůli němu z kompletního krmiva, jinak by kočka mohla dostávat méně důležitých vitaminů a živin.",
     "hr": "Umjesto toga ponudi svježu vodu. Ako ikada daš mlijeko za mačke kao rijetku poslasticu, uračunaj njegove dodatne kalorije, ali zbog njega ne smanjuj količinu potpune hrane koju mačka dobiva, jer bi mačka tada mogla dobiti manje vitalnih vitamina i hranjivih tvari.",
     "sv": "Erbjud färskt vatten i stället. Om du någon gång ger kattmjölk som en sällsynt godbit, tänk på de extra kalorierna, men minska inte kattens kompletta mat för den, eftersom katten då kan få i sig mindre av de livsviktiga vitaminerna och näringsämnena.",
-    "da": "Tilbyd friskt vand i stedet. Hvis du en gang imellem giver kattemælk som en sjælden godbid, så husk de ekstra kalorier, men skær ikke ned på kattens komplette foder for den, for så kan katten få færre livsvigtige vitaminer og næringsstoffer."
+    "da": "Tilbyd friskt vand i stedet. Hvis du en gang imellem giver kattemælk som en sjælden godbid, så husk de ekstra kalorier, men skær ikke ned på kattens komplette foder for den, for så kan katten få færre livsvigtige vitaminer og næringsstoffer.",
+    "fi": "Tarjoa sen sijaan raikasta vettä. Jos annat joskus kissanmaitoa harvinaisena herkkuna, muista sen lisäkalorit, mutta älä vähennä kissan täysravinnon määrää sen takia, sillä kissa voisi silloin saada liian vähän tärkeitä vitamiineja ja ravintoaineita."
   },
   "serving": null,
   "child": {
@@ -117,7 +126,8 @@
     "cs": "I speciální mléko pro kočky je jen pamlsek. Čerstvá voda je nápoj, který kočičku udrží každý den zdravou.",
     "hr": "Čak je i posebno mlijeko za mačke samo poslastica. Piće koje mačku svaki dan održava zdravom jest svježa voda.",
     "sv": "Även särskild kattmjölk är bara en godbit. Drycken som håller katten frisk varje dag är färskt vatten.",
-    "da": "Selv særlig kattemælk er kun en godbid. Den drik, der holder katten sund hver dag, er friskt vand."
+    "da": "Selv særlig kattemælk er kun en godbid. Den drik, der holder katten sund hver dag, er friskt vand.",
+    "fi": "Erikoiskissanmaitokin on vain herkku. Kisun terveenä pitää joka päivä raikas vesi."
   },
   "faq": [
     {
@@ -131,7 +141,8 @@
         "cs": "Je mléko pro kočky z obchodu lepší než kravské?",
         "hr": "Je li mlijeko za mačke iz trgovine za kućne ljubimce bolje od kravljeg?",
         "sv": "Är kattmjölk från djuraffären bättre än komjölk?",
-        "da": "Er kattemælk fra dyrebutikken bedre end komælk?"
+        "da": "Er kattemælk fra dyrebutikken bedre end komælk?",
+        "fi": "Onko lemmikkikaupan kissanmaito parempaa kuin lehmänmaito?"
       },
       "a": {
         "en": "It usually has a lot less lactose or none, so it is less likely to make your cat poorly. But its fat content is often just as high as any other milk, and it is not a complete meal.",
@@ -143,7 +154,8 @@
         "cs": "Obvykle obsahuje mnohem méně laktózy nebo žádnou, takže se po něm kočce méně často udělá špatně. Tuku v něm ale bývá často stejně jako v jakémkoli jiném mléce a není to kompletní jídlo.",
         "hr": "Obično ima mnogo manje laktoze ili je uopće nema, pa je manje vjerojatno da će mački biti loše. No udio masti u njemu često je jednako visok kao u svakom drugom mlijeku, a ono nije potpun obrok.",
         "sv": "Den innehåller oftast mycket mindre laktos eller ingen alls, så den ger mer sällan magbesvär hos katten. Men fetthalten är ofta lika hög som i annan mjölk, och den är ingen komplett måltid.",
-        "da": "Den indeholder som regel meget mindre laktose eller slet ingen, så der er mindre risiko for, at din kat bliver dårlig af den. Men fedtindholdet er ofte lige så højt som i anden mælk, og den er ikke et komplet måltid."
+        "da": "Den indeholder som regel meget mindre laktose eller slet ingen, så der er mindre risiko for, at din kat bliver dårlig af den. Men fedtindholdet er ofte lige så højt som i anden mælk, og den er ikke et komplet måltid.",
+        "fi": "Siinä on yleensä paljon vähemmän laktoosia tai ei lainkaan, joten se sotkee kissan vatsan epätodennäköisemmin. Sen rasvapitoisuus on kuitenkin usein yhtä suuri kuin muissa maidoissa, eikä se ole täysipainoinen ateria."
       }
     }
   ],
@@ -259,6 +271,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "36f7323bc8fbb4edc94a59a90f676259f4cc543bdec7bde80463c2e42b3d65a2"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-c-fi-2026-11-16",
+      "verified_hash": "4cd29ddd9e2f1d1e3356070ee79daa22b27d51b70b13b04ad4b9364c9676ab61"
     }
   }
 }

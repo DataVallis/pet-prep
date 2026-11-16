@@ -11,7 +11,8 @@
     "cs": "Voda",
     "hr": "Voda",
     "sv": "Vatten",
-    "da": "Vand"
+    "da": "Vand",
+    "fi": "Vesi"
   },
   "question": {
     "en": "Do dogs need fresh water all the time?",
@@ -23,7 +24,8 @@
     "cs": "Potřebují psi stále čerstvou vodu?",
     "hr": "Trebaju li psi stalno imati svježu vodu?",
     "sv": "Behöver hundar färskt vatten hela tiden?",
-    "da": "Har hunde brug for frisk vand hele tiden?"
+    "da": "Har hunde brug for frisk vand hele tiden?",
+    "fi": "Tarvitseeko koira raikasta vettä koko ajan?"
   },
   "url_slug": {
     "en": "water",
@@ -35,7 +37,8 @@
     "cs": "voda",
     "hr": "voda",
     "sv": "vatten",
-    "da": "vand"
+    "da": "vand",
+    "fi": "vesi"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "cs": "Ano. Psi potřebují mít stále k dispozici čerstvou, čistou pitnou vodu. Misku na vodu často myjte a pamatujte, že v horkém počasí nebo při větší námaze mohou potřebovat vody víc. Psovi nikdy vodu neomezujte.",
     "hr": "Da. Psima treba svježa, čista pitka voda koja im je dostupna cijelo vrijeme. Zdjelicu za vodu često peri i imaj na umu da će psima možda trebati više vode po vrućem vremenu ili kad se više kreću. Nikad psu ne ograničavaj vodu.",
     "sv": "Ja. Hundar ska ha tillgång till färskt, rent dricksvatten hela tiden. Diska vattenskålen ofta och kom ihåg att hundar kan behöva mer vatten när det är varmt eller när de får mer motion. Begränsa aldrig hundens vatten.",
-    "da": "Ja. Hunde skal have friskt, rent drikkevand til rådighed hele tiden. Vask vandskålen ofte, og husk, at hunde kan have brug for mere vand i varmt vejr, eller når de motionerer mere. Begræns aldrig din hunds adgang til vand."
+    "da": "Ja. Hunde skal have friskt, rent drikkevand til rådighed hele tiden. Vask vandskålen ofte, og husk, at hunde kan have brug for mere vand i varmt vejr, eller når de motionerer mere. Begræns aldrig din hunds adgang til vand.",
+    "fi": "Kyllä. Koiralla pitää olla koko ajan saatavilla raikasta, puhdasta juomavettä. Pese vesikuppi usein ja muista, että koira voi tarvita enemmän vettä helteellä tai kun se liikkuu tavallista enemmän. Älä koskaan rajoita koiran veden saantia."
   },
   "why": {
     "en": "Water is essential for all life. How much a dog drinks can change with the weather, temperature and exercise. A sudden increase in drinking can mean something is wrong. Salt water is different: when dogs drink salt water, it can be dangerous for them.",
@@ -60,7 +64,8 @@
     "cs": "Voda je nezbytná pro všechny živé tvory. Kolik pes vypije, závisí na počasí, teplotě a pohybu. Náhlé zvýšení pití může znamenat, že něco není v pořádku. Slaná voda je ale jiný případ: pokud ji pes pije, může být pro něj nebezpečná.",
     "hr": "Voda je bitna za sav život. Koliko pas pije može se mijenjati ovisno o vremenu, temperaturi i tjelesnoj aktivnosti. Ako pas naglo počne piti mnogo više, to može značiti da nešto nije u redu. Slana voda je druga priča: ako je psi piju, može im biti opasna.",
     "sv": "Vatten är livsnödvändigt för alla levande varelser. Hur mycket en hund dricker kan variera med väder, temperatur och motion. Om hunden plötsligt dricker mer kan det tyda på att något är fel. Saltvatten är en annan sak: det kan vara farligt för hundar att dricka.",
-    "da": "Vand er livsnødvendigt for alt levende. Hvor meget en hund drikker, kan ændre sig med vejret, temperaturen og motion. Hvis din hund pludselig drikker meget mere, kan det være tegn på, at der er noget galt. Saltvand er noget andet: når hunde drikker saltvand, kan det være farligt for dem."
+    "da": "Vand er livsnødvendigt for alt levende. Hvor meget en hund drikker, kan ændre sig med vejret, temperaturen og motion. Hvis din hund pludselig drikker meget mere, kan det være tegn på, at der er noget galt. Saltvand er noget andet: når hunde drikker saltvand, kan det være farligt for dem.",
+    "fi": "Vesi on välttämätöntä kaikelle elämälle. Koiran juoman veden määrä vaihtelee sään, lämpötilan ja liikunnan mukaan. Äkillinen juomisen lisääntyminen voi kieliä siitä, että jokin on vialla. Suolavesi on asia erikseen: jos koira juo suolavettä, se voi olla sille vaarallista."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "cs": "Pokud se domníváte, že pes pije nebo močí víc než obvykle, obraťte se na veterináře. Pokud má pes známky dehydratace, ihned ho vezměte k veterináři.",
     "hr": "Ako misliš da tvoj pas pije ili mokri više nego inače, obrati se veterinaru. Ako pas pokazuje znakove dehidracije, odmah ga odvedi veterinaru.",
     "sv": "Om du tror att hunden dricker eller kissar mer än vanligt, kontakta veterinären. Om hunden visar tecken på uttorkning, åk till veterinären direkt.",
-    "da": "Hvis du tror, at din hund drikker eller tisser mere end normalt, så kontakt din dyrlæge. Hvis din hund viser tegn på dehydrering, skal du straks tage den med til dyrlægen."
+    "da": "Hvis du tror, at din hund drikker eller tisser mere end normalt, så kontakt din dyrlæge. Hvis din hund viser tegn på dehydrering, skal du straks tage den med til dyrlægen.",
+    "fi": "Jos koirasi juo tai pissaa mielestäsi tavallista enemmän, ota yhteyttä eläinlääkäriin. Jos koirallasi on nestehukan merkkejä, vie se heti eläinlääkäriin."
   },
   "serving": {
     "en": "Fresh, clean water in a frequently washed bowl, available all the time, including outdoors, in hot weather and at the beach.",
@@ -85,7 +91,8 @@
     "cs": "Čerstvá čistá voda v často myté misce, stále k dispozici, i venku, v horku a u moře.",
     "hr": "Svježa, čista voda u često opranoj zdjelici, uvijek dostupna, i na otvorenom, po vrućem vremenu i na plaži.",
     "sv": "Färskt, rent vatten i en skål som diskas ofta, alltid tillgängligt – även utomhus, när det är varmt och på stranden.",
-    "da": "Friskt, rent vand i en ofte vasket skål, tilgængeligt hele tiden, også udendørs, i varmt vejr og på stranden."
+    "da": "Friskt, rent vand i en ofte vasket skål, tilgængeligt hele tiden, også udendørs, i varmt vejr og på stranden.",
+    "fi": "Raikasta, puhdasta vettä usein pestyssä kupissa, koko ajan saatavilla – myös ulkona, helteellä ja rannalla."
   },
   "child": {
     "en": "Dogs need fresh water all day long. Checking that the water bowl is full and clean is a great way to help!",
@@ -97,7 +104,8 @@
     "cs": "Psi potřebují čerstvou vodu celý den. Zkontrolovat, jestli je miska s vodou plná a čistá, je skvělý způsob, jak pomoct!",
     "hr": "Psima je svježa voda potrebna cijeli dan. Provjeravati je li zdjelica s vodom puna i čista odličan je način da pomogneš!",
     "sv": "Hundar behöver färskt vatten hela dagen. Att kolla att vattenskålen är full och ren är ett bra sätt att hjälpa till!",
-    "da": "Hunde har brug for friskt vand hele dagen. At tjekke, at vandskålen er fuld og ren, er en god måde at hjælpe på!"
+    "da": "Hunde har brug for friskt vand hele dagen. At tjekke, at vandskålen er fuld og ren, er en god måde at hjælpe på!",
+    "fi": "Koirat tarvitsevat raikasta vettä koko päivän. Autat paljon, kun tarkistat, että vesikuppi on täynnä ja puhdas!"
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "cs": "Jak poznám, že je pes dehydratovaný?",
         "hr": "Kako mogu prepoznati da je moj pas dehidriran?",
         "sv": "Hur ser jag om min hund är uttorkad?",
-        "da": "Hvordan kan jeg se, om min hund er dehydreret?"
+        "da": "Hvordan kan jeg se, om min hund er dehydreret?",
+        "fi": "Mistä tiedän, onko koirani kuivunut?"
       },
       "a": {
         "en": "Signs include loss of skin elasticity, loss of appetite, low energy, panting, sunken dry-looking eyes, a dry nose, dry sticky gums and thick saliva. Take your dog to the vet immediately if you see them.",
@@ -123,7 +132,8 @@
         "cs": "Mezi příznaky patří snížená pružnost kůže, nechuť k jídlu, nedostatek energie, zrychlené dýchání s funěním, propadlé, suché oči, suchý nos, suché lepkavé dásně a hustá slina. Pokud tyto příznaky u psa zaznamenáte, ihned s ním jeďte k veterináři.",
         "hr": "Znakovi su gubitak elastičnosti kože, gubitak apetita, malaksalost, dahtanje, upale i suhe oči, suh nos, suhe ljepljive desni i gusta slina. Ako ih primijetiš, odmah odvedi psa veterinaru.",
         "sv": "Tecken på uttorkning är sämre hudelasticitet, minskad aptit, orkeslöshet, flåsande, insjunkna och torra ögon, torr nos, torrt och kladdigt tandkött och seg saliv. Åk till veterinären direkt om du ser några av tecknen.",
-        "da": "Tegn kan være nedsat hudelasticitet, nedsat appetit, mangel på energi, pesen, indsunkne og tørre øjne, tør snude, tørt og klistret tandkød og sejt spyt. Tag straks din hund med til dyrlægen, hvis du ser nogle af tegnene."
+        "da": "Tegn kan være nedsat hudelasticitet, nedsat appetit, mangel på energi, pesen, indsunkne og tørre øjne, tør snude, tørt og klistret tandkød og sejt spyt. Tag straks din hund med til dyrlægen, hvis du ser nogle af tegnene.",
+        "fi": "Merkkejä ovat ihon joustavuuden heikkeneminen, ruokahaluttomuus, vähäinen tarmo, läähätys, painuneet ja kuivan näköiset silmät, kuiva nenä, kuivat ja tahmeat ikenet sekä sitkeä sylki. Jos huomaat näitä merkkejä, vie koirasi heti eläinlääkäriin."
       }
     },
     {
@@ -137,7 +147,8 @@
         "cs": "Mám psovi omezit vodu, když hodně pije?",
         "hr": "Smijem li ograničiti vodu psu koji mnogo pije?",
         "sv": "Ska jag begränsa hundens vatten om den dricker mycket?",
-        "da": "Skal jeg begrænse, hvor meget vand min hund får, hvis den drikker meget?"
+        "da": "Skal jeg begrænse, hvor meget vand min hund får, hvis den drikker meget?",
+        "fi": "Pitäisikö koiran veden saantia rajoittaa, jos se juo paljon?"
       },
       "a": {
         "en": "No. Never restrict your dog's water; always let them have fresh drinking water, and contact your vet if they drink more than normal.",
@@ -149,7 +160,8 @@
         "cs": "Ne. Psovi nikdy vodu neomezujte; nechte ho napít se čerstvé vody, kdykoli chce, a pokud pije víc než obvykle, obraťte se na veterináře.",
         "hr": "Ne. Nikad ne ograničavaj psu vodu; uvijek mu daj svježu pitku vodu i obrati se veterinaru ako pije više nego inače.",
         "sv": "Nej. Begränsa aldrig hundens vatten. Låt den alltid ha färskt dricksvatten och kontakta veterinären om den dricker mer än vanligt.",
-        "da": "Nej. Begræns aldrig din hunds adgang til vand; lad den altid have friskt drikkevand, og kontakt din dyrlæge, hvis den drikker mere end normalt."
+        "da": "Nej. Begræns aldrig din hunds adgang til vand; lad den altid have friskt drikkevand, og kontakt din dyrlæge, hvis den drikker mere end normalt.",
+        "fi": "Ei. Älä koskaan rajoita koiran veden saantia. Anna sen aina juoda raikasta vettä ja ota yhteyttä eläinlääkäriin, jos se juo tavallista enemmän."
       }
     },
     {
@@ -163,7 +175,8 @@
         "cs": "Mohou psi pít mořskou vodu?",
         "hr": "Smiju li psi piti morsku vodu?",
         "sv": "Får hundar dricka havsvatten?",
-        "da": "Må hunde drikke havvand?"
+        "da": "Må hunde drikke havvand?",
+        "fi": "Saako koira juoda merivettä?"
       },
       "a": {
         "en": "It's best not to: salt water can be dangerous for dogs. At the beach, make sure your dog always has access to fresh water.",
@@ -175,7 +188,8 @@
         "cs": "Raději ne: slaná voda může být pro psy nebezpečná. U moře dbejte na to, aby měl pes vždy přístup k čerstvé vodě.",
         "hr": "Bolje ne: slana voda može biti opasna za pse. Na plaži se pobrini da pas uvijek ima pristup svježoj vodi.",
         "sv": "Helst inte. Saltvatten kan vara farligt för hundar. Se till att hunden alltid har tillgång till färskt vatten på stranden.",
-        "da": "Helst ikke: saltvand kan være farligt for hunde. På stranden skal du sørge for, at din hund altid har adgang til friskt vand."
+        "da": "Helst ikke: saltvand kan være farligt for hunde. På stranden skal du sørge for, at din hund altid har adgang til friskt vand.",
+        "fi": "Parempi ei, sillä suolavesi voi olla koiralle vaarallista. Huolehdi rannalla siitä, että koirallasi on aina saatavilla raikasta vettä."
       }
     }
   ],
@@ -325,6 +339,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1bc859e65ede7d3494894d13b08e2fa853bf21ec608eb9ade1fa24f9dd64f948"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-c-fi-2026-11-16",
+      "verified_hash": "48c60f03a64944405814e6d439e74efacf8cb8df9dcf347edd8c526515154024"
     }
   }
 }

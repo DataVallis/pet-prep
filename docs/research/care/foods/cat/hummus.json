@@ -11,7 +11,8 @@
     "cs": "Hummus",
     "hr": "Humus",
     "sv": "Hummus",
-    "da": "Hummus"
+    "da": "Hummus",
+    "fi": "Humus"
   },
   "question": {
     "en": "Can cats eat hummus?",
@@ -23,7 +24,8 @@
     "cs": "Mohou kočky jíst hummus?",
     "hr": "Smiju li mačke jesti humus?",
     "sv": "Får katter äta hummus?",
-    "da": "Må katte spise hummus?"
+    "da": "Må katte spise hummus?",
+    "fi": "Saako kissa syödä humusta?"
   },
   "url_slug": {
     "en": "hummus",
@@ -35,7 +37,8 @@
     "cs": "hummus",
     "hr": "humus",
     "sv": "hummus",
-    "da": "hummus"
+    "da": "hummus",
+    "fi": "humus"
   },
   "level": "dangerous",
   "answer": {
@@ -48,7 +51,8 @@
     "cs": "Ne, hummus není pro kočky. Obvykle se vyrábí s česnekem a česnek je pro kočky jedovatý, i když je tepelně upravený. Veterináři z VCA také varují, že krémové pomazánky zbylé na talířích mohou způsobit podrážděný žaludek. Misku s pomazánkou nechte mimo dosah kočky.",
     "hr": "Ne, humus nije za mačke. Obično se pravi s češnjakom, a češnjak je otrovan za mačke čak i kad je termički obrađen. Veterinari iz VCA-a upozoravaju i da kremasti namazi ostavljeni na tanjurima mogu izazvati želučane tegobe. Zdjelicu s namazom drži izvan dosega svoje mačke.",
     "sv": "Nej, hummus är inget för katter. Den innehåller oftast vitlök, och vitlök är giftigt för katter även när det är tillagat. Veterinärerna på VCA varnar också för att krämiga dippar som blir kvar på tallrikar kan ge katten orolig mage. Ställ dippskålen utom räckhåll för katten.",
-    "da": "Nej, hummus er ikke noget for katte. Den er som regel lavet med hvidløg, og hvidløg er giftigt for katte, selv når det er tilberedt. Dyrlægerne fra VCA advarer også om, at cremede dips, der bliver tilbage på tallerkener, kan give ondt i maven. Stil dipskålen uden for din kats rækkevidde."
+    "da": "Nej, hummus er ikke noget for katte. Den er som regel lavet med hvidløg, og hvidløg er giftigt for katte, selv når det er tilberedt. Dyrlægerne fra VCA advarer også om, at cremede dips, der bliver tilbage på tallerkener, kan give ondt i maven. Stil dipskålen uden for din kats rækkevidde.",
+    "fi": "Ei saa. Humus ei sovi kissoille: siihen tulee yleensä valkosipulia, joka on kissoille myrkyllistä myös kypsennettynä. VCA:n eläinlääkärit varoittavat lisäksi, että lautasille jääneet kermaiset dipit voivat aiheuttaa vatsavaivoja. Pidä dippikulho poissa kissan ulottuvilta."
   },
   "why": {
     "en": "Hummus is mainly made from chickpeas, tahini, olive oil, lemon juice, garlic and other seasonings. Garlic belongs to the alliums, which are toxic to cats even when cooked or dried, and onion and garlic are found in many pre-made foods. Tufts vets list onion and garlic flavouring in prepared dishes among foods cats should avoid, as it can cause vomiting and diarrhoea, and VCA says these flavour boosters damage red blood cells, especially in cats.",
@@ -60,7 +64,8 @@
     "cs": "Hummus se vyrábí hlavně z cizrny, tahini, olivového oleje, citronové šťávy, česneku a dalšího koření. Česnek patří mezi cibuloviny (rod Allium), které jsou pro kočky jedovaté, i když jsou tepelně upravené nebo sušené, a cibule i česnek jsou v mnoha hotových potravinách. Veterináři z Tufts řadí cibulovou a česnekovou příchuť v hotových pokrmech mezi potraviny, kterým by se kočky měly vyhýbat, protože mohou způsobit zvracení a průjem, a VCA uvádí, že tato dochucovadla poškozují červené krvinky, zejména u koček.",
     "hr": "Humus se uglavnom pravi od slanutka, tahinija, maslinova ulja, limunova soka, češnjaka i drugih začina. Češnjak pripada biljkama iz roda Allium, koje su otrovne za mačke čak i kad su termički obrađene ili sušene, a luk i češnjak nalaze se u mnogim gotovim jelima. Veterinari s Tuftsa među hranom koju mačke trebaju izbjegavati navode luk i češnjak kao začin u pripremljenim jelima, jer mogu izazvati povraćanje i proljev, a VCA kaže da ti pojačivači okusa oštećuju crvene krvne stanice, osobito kod mačaka.",
     "sv": "Hummus görs främst av kikärtor, tahini, olivolja, citronsaft, vitlök och andra kryddor. Vitlök tillhör lökväxterna, som är giftiga för katter även när de är tillagade eller torkade, och lök och vitlök finns i många färdigrätter. Veterinärerna på Tufts nämner lök och vitlök som smaksättning i färdiga rätter bland det katter bör undvika, eftersom de kan ge kräkningar och diarré. VCA skriver att dessa smaksättare skadar de röda blodkropparna, särskilt hos katter.",
-    "da": "Hummus er hovedsageligt lavet af kikærter, tahin, olivenolie, citronsaft, hvidløg og andre krydderier. Hvidløg hører til løgplanterne, som er giftige for katte, selv når de er tilberedt eller tørret, og løg og hvidløg findes i mange færdigretter. Dyrlægerne fra Tufts nævner løg- og hvidløgssmag i færdigretter blandt det, katte bør undgå, fordi det kan give opkast og diarré, og VCA skriver, at disse smagsgivere skader de røde blodlegemer, især hos katte."
+    "da": "Hummus er hovedsageligt lavet af kikærter, tahin, olivenolie, citronsaft, hvidløg og andre krydderier. Hvidløg hører til løgplanterne, som er giftige for katte, selv når de er tilberedt eller tørret, og løg og hvidløg findes i mange færdigretter. Dyrlægerne fra Tufts nævner løg- og hvidløgssmag i færdigretter blandt det, katte bør undgå, fordi det kan give opkast og diarré, og VCA skriver, at disse smagsgivere skader de røde blodlegemer, især hos katte.",
+    "fi": "Humus tehdään pääasiassa kikherneistä, tahinista, oliiviöljystä, sitruunamehusta, valkosipulista ja muista mausteista. Valkosipuli kuuluu sipulikasveihin, jotka ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina, ja sipulia ja valkosipulia on monissa valmisruoissa. Tuftsin eläinlääkärit luettelevat valmisruokien sipuli- ja valkosipulimausteen ruoka-aineeksi, jota kissojen tulee välttää, sillä se voi aiheuttaa oksentelua ja ripulia. VCA:n mukaan nämä mausteet vaurioittavat punasoluja, etenkin kissoilla."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Diarré",
       "Nedsat appetit",
       "Dehydrering"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Ripuli",
+      "Heikentynyt ruokahalu",
+      "Nestehukka"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "cs": "Pokud kočka snědla hummus s česnekem, co nejdříve se obraťte na veterináře, i když se zdá být v pořádku, protože příznaky chudokrevnosti se mohou objevit až za několik dní.",
     "hr": "Ako je mačka pojela humus s češnjakom, obrati se veterinaru što prije, čak i ako se čini da je dobro, jer se znakovi anemije mogu pojaviti tek nakon nekoliko dana.",
     "sv": "Om katten har ätit hummus med vitlök, kontakta veterinären så snart som möjligt, även om katten verkar må bra, eftersom tecken på blodbrist kan ta några dagar att visa sig.",
-    "da": "Hvis din kat har spist hummus med hvidløg, så kontakt din dyrlæge hurtigst muligt, også selvom din kat virker rask, for tegn på blodmangel kan tage nogle dage om at vise sig."
+    "da": "Hvis din kat har spist hummus med hvidløg, så kontakt din dyrlæge hurtigst muligt, også selvom din kat virker rask, for tegn på blodmangel kan tage nogle dage om at vise sig.",
+    "fi": "Jos kissasi on syönyt valkosipulia sisältävää humusta, ota yhteyttä eläinlääkäriin mahdollisimman pian, vaikka kissa vaikuttaisi voivan hyvin: anemian oireet voivat tulla näkyviin vasta muutaman päivän kuluttua."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "cs": "Hummus je pomazánka pro lidi a obvykle obsahuje česnek, který kočky jíst nesmějí. Drž svůj talíř se svačinou dál od kočičky.",
     "hr": "Humus je namaz za ljude i obično sadrži češnjak, koji mačke ne smiju jesti. Tanjur s grickalicama drži podalje od mace.",
     "sv": "Hummus är en dipp för människor, och den innehåller oftast vitlök, som katter inte får äta. Håll tallriken med ditt mellanmål borta från katten.",
-    "da": "Hummus er en dip til mennesker, og den indeholder som regel hvidløg, som katte ikke må spise. Hold din snacktallerken væk fra katten."
+    "da": "Hummus er en dip til mennesker, og den indeholder som regel hvidløg, som katte ikke må spise. Hold din snacktallerken væk fra katten.",
+    "fi": "Humus on ihmisten dippi, ja siinä on yleensä valkosipulia, jota kissat eivät saa syödä. Pidä välipalalautasesi poissa kisun ulottuvilta."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "cs": "A co když hummus česnek neobsahuje?",
         "hr": "Što ako humus nema češnjaka?",
         "sv": "Hur är det om hummusen inte innehåller vitlök?",
-        "da": "Hvad hvis hummusen ikke indeholder hvidløg?"
+        "da": "Hvad hvis hummusen ikke indeholder hvidløg?",
+        "fi": "Entä jos humuksessa ei ole valkosipulia?"
       },
       "a": {
         "en": "It is still a people food. Cats Protection advises sticking to cat food treats rather than giving your cat any human foods.",
@@ -173,7 +187,8 @@
         "cs": "Pořád je to jídlo pro lidi. Cats Protection radí držet se pamlsků pro kočky a nedávat kočkám žádná lidská jídla.",
         "hr": "I dalje je hrana za ljude. Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke.",
         "sv": "Det är fortfarande mat för människor. Cats Protection rekommenderar att du håller dig till kattgodis i stället för att ge katten mat från matbordet.",
-        "da": "Det er stadig menneskemad. Cats Protection anbefaler, at du holder dig til kattegodbidder i stedet for at give din kat menneskemad."
+        "da": "Det er stadig menneskemad. Cats Protection anbefaler, at du holder dig til kattegodbidder i stedet for at give din kat menneskemad.",
+        "fi": "Se on silti ihmisten ruokaa. Cats Protection neuvoo antamaan kissalle vain kissanherkkuja eikä ihmisten ruokia."
       }
     }
   ],
@@ -289,6 +304,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9a11c14884cea0150c63c2c176c4dda38f75b13084dcc4952409eeba59f123a5"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-c-fi-2026-11-16",
+      "verified_hash": "8b3dc0fcb16f1c649e616b22a67d18d538d0a25a16f76ce6b9fe0c7213710a09"
     }
   }
 }
