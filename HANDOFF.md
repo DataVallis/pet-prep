@@ -282,6 +282,10 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 6. **M6-W »Želje«** — merged 2026-10-27: server W01 + W02 server part (#417), app W04 / W05 (#416), one QA round done (#417 / #416 fixes on the same PRs). Reaches users with the next daily deploy + OTA. **Next:** David creates the six store products (§1b.9); M6-W03 item media + designs: app #652 + server #655 merged 2026-11-03 (one QA round, fixes on the PR) — reaches users with the next production deploy (David's bed gets its content ~10–20 min after it, automatically); device check of the child catalogue (designs), treat chip, parent list, push, redeem after reopening »Želje«, and of a bought bed's content.
 
 ## 6. Session log
+### 2026-11-16 (cloud, docs + website) — breed quiz spec (M6-S06) and »How much work is a dog?« for every breed (M6-S07)
+- Spec `docs/product/BREED_QUIZ_SPEC.md` + DECISIONS / ROADMAP lines: PR #1269 (docs only, CI green). Website: `pet-prep-website` PR #442 — one page per dog breed from `registry.json`, old Labrador URLs 308, `THREEJS_OPPORTUNITIES.md` »M6-S07«.
+- **Not merged:** the session's merge call (`PUT /pulls/{n}/merge`) was refused by the permission classifier and auto-merge is off for the repo. David merges #1269, #442 and this PR (or allows Claude to merge). After #442: FEATURES row M6-S07 🗓 → ✅, tick ROADMAP M6-S07, sync `petprep/*.md`.
+
 ### 2026-11-16 (cloud, mobile) — game HUD off the pet's head (`fix/game-hud-off-pet-head`, David »Moti me tukaj, da je vse čez glavo«, JS only → OTA)
 - School v2: only `GameTopBar` (dots, ★, ×) stays at the top; the command chip (30 pt), the »Ne uboga — ne pohvali, počakaj.« chip and `SchoolRuleStrip` moved into the dock (chip → token → rule); rule shortened to ≤ 40 chars (»Uboga → priboljšek · Ne uboga → počakaj«, a11y keeps the full sentence). Timings / scoring untouched. Other games checked: ball v2, messes, care shell already top-bar-only; wand 👀 cue at 70 %; cuddle v2 keeps its small hearts row under the bar. General rule in GAMES_SPEC §7.1 + mobile/CLAUDE.md. Not yet verified on a phone (layout mock PNGs only).
 

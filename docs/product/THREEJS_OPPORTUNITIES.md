@@ -46,6 +46,14 @@ Three.js se pri PetPrepu splača **na petprep.si**, ne v aplikaciji in ne za sam
 - **Znana omejitev:** na telefonu je prizor majhen in info točke so tesno skupaj.
 - **Figura psa je namenoma igrača** iz osnovnih oblik, z napisom »V aplikaciji PetPrep je ljubljenček realističen.«
 
+### M6-S07 — vse pasme (David 16. 11. 2026, `pet-prep-website` PR #442, **čaka združitev**)
+- David: »Kalkulator razširi na vse pasme, pa da bo dinamično dodajalo tudi vse bodoče pasme« in »brez sklanjanja … koliko-je-dela-s-psom je pravilno«.
+- **URL-ji:** `/how-much-work-is-a-dog/<breed>` · `/sl/koliko-je-dela-s-psom/<pasma>` za vseh 111 psov registra; nova pasma v registru dobi stran, vnos v zemljevidu strani in kartico na strani pasme ob naslednji gradnji. Stara labradorčeva URL-ja trajno preusmerita (308).
+- **Naslovi brez sklanjanja:** »Labradorec: koliko je dela s tem psom?« · »How much work is a Labrador Retriever?«. Sredi stavka je ime pasme z malo začetnico (»s psom pasme labradorec«).
+- **Številke iz registra** (`pet-prep-website/src/lib/realCostProfile.ts`): gibanje — najprej dejstvo `at_least` (parameter igre v aplikaciji), sicer prvo drugo dejstvo v minutah na dan, prikazano s kvalifikatorjem (»več kot 120 minut«, »do 60 minut«); življenjska doba — mediana, sicer sredina razpona, sicer »več kot« / »manj kot« / »približno« (pri »manj kot 10 let« račun vzame 10 let); krtačenje — enkrat na teden = 1, večkrat na teden = 2 (spodnja meja), vsak dan = 7, brez podatka ni vrstice; stroški — minimum PDSA po velikosti: majhen 69 £ + 415 £, srednji 83 £ + 531 £, velik 116 £ + 560 £ (PDSA nima orjaških psov, zato zanje velja velik kot spodnja meja; prebrano 16. 11. 2026). Labradorec ostane 90 min, 13,1 leta, enkrat na teden, velik pes.
+- Za vse pasme enako: mladiček (4 obroki, 20 min sprehoda, 7× ven), 2 obroka odraslega psa, 5 min vaje, 100 korakov na minuto, 2 vrečki na dan. Figura psa je ista igrača za vse pasme.
+- Interaktivni del dobi pasmo v naslovu okvirja in vsako vrednost preveri (meje števil, stalni seznami, ime brez znakov HTML).
+
 ### Številke v prototipu in njihov izvor
 | Številka | Izvor |
 |---|---|
