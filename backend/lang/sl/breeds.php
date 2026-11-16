@@ -118,6 +118,7 @@ return [
     'australian_silky_terrier' => 'Avstralski svilnati terier',
     'parson_russell_terrier' => 'Parson russell terier',
     'wire_fox_terrier' => 'Ostrodlaki foksterier',
+    'manchester_terrier' => 'Manchesterski terier',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

@@ -820,6 +820,12 @@
 | (S841; natural). RKC Breed Watch Category 2 without returned points (S842) — no welfare trait. One standard colour;
 | weight unsourced → `verified => false`.
 |
+| Manchester Terrier (M5-R10-119, docs/research/dog-data manchester_terrier.appearance): "Compact, elegant and sound with
+| substance." (FCI-Standard N° 71, S888); colour jet black and rich mahogany tan with clearly divided markings — "Any other
+| colour or combination of colours unacceptable." (S888); coat close, smooth, short and glossy; small V-shaped ears hanging
+| close to the head (natural, never cropped); short tapering natural tail. No welfare trait. One standard colour; weight
+| unsourced → `verified => false`. Not the English Toy Terrier.
+|
 | Wire Fox Terrier (M5-R10-117, docs/research/dog-data wire_fox_terrier.appearance): "Active and lively, bone and strength
 | in small compass, never cloddy or coarse." (FCI-Standard N° 169, S871); colour "White predominates with black, black and tan
 | or tan markings." — brindle, red, liver or slate-blue markings undesirable, any other colour unacceptable (S871); coat dense,
@@ -5083,6 +5089,37 @@ return [
             'ear_carriage' => ['small V-shaped ears folded forward close to the cheeks'],
             'eye_color' => ['dark, moderately small eyes full of fire and intelligence'],
             'tail' => ['natural undocked tail of good strength, set high and carried erect'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-119 (docs/research/dog-data/data.json manchester_terrier.appearance; runbook rules 2026-10-10: the one standard
+    // colour of FCI-Standard N° 71 (S888) — jet black and rich mahogany tan = the portrait default; natural ears and tail).
+    'manchester_terrier' => [
+        'display_name' => 'Manchester Terrier',
+        // Colour frequencies are in no source (manchester_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 71 (S888, https://www.fci.be/Nomenclature/Standards/071g03-en.pdf), PDSA (S889), CKC standard (S892) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S889 "Size: Medium"; S888 "Ideal Height at the withers: Males: 41 cm. Females: 38 cm."; S892 "Weight: 5.5 to 10 kg (12 to 22 lb)"',
+            'build' => 'S888 "Compact, elegant and sound with substance."',
+            'coat_length' => 'S888 "Close, smooth, short and glossy, of firm texture."',
+            'coat_color' => 'S888 jet black and rich mahogany tan, "Any other colour or combination of colours unacceptable." (one standard colour)',
+            'ear_carriage' => 'S888 "Small and V-shaped, carried well above top line of head and hanging close to head above eyes."',
+            'eye_color' => 'S888 "Relatively small, dark and sparkling. Almond-shaped, not prominent."',
+            'tail' => 'S888 "Short and set on where arch of back ends, thick where it joins body" (tapering to a point, carried not higher than the back)',
+        ],
+        'traits' => [
+            'size' => ['small to medium, sleek terrier'],
+            'build' => [['value' => 'compact, elegant and sound terrier with substance', 'weight' => 3], 'sleek, slightly arched-backed terrier with a long, wedge-shaped head'],
+            'coat_length' => ['close, smooth, short and glossy coat of firm texture'],
+            // FCI standard (S888): the only standard colour.
+            'coat_color' => [
+                ['value' => 'jet black and rich mahogany tan', 'weight' => 4],
+            ],
+            'ear_carriage' => ['small V-shaped ears hanging close to the head above the eyes'],
+            'eye_color' => ['small, dark, sparkling almond-shaped eyes'],
+            'tail' => ['short natural tail, thick at the root and tapering to a point, carried not higher than the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

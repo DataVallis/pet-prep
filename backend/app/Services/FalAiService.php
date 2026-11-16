@@ -921,6 +921,13 @@ class FalAiService
                 .'a long flat skull, a strong muzzle with a black nose and the typical furnishings, dark moderately small eyes full of fire, '
                 .'small V-shaped ears folded forward close to the cheeks, a natural undocked tail set high and carried erect, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-119: FCI-Standard N° 71 (S888) — compact, elegant and sound with substance; jet black and rich mahogany tan
+            // with clearly divided markings; close, smooth, short and glossy coat; natural V-shaped ears, natural tapering tail.
+            BreedType::ManchesterTerrier => 'A compact, elegant and sound Manchester Terrier with substance, a sleek terrier with a slightly arched back, '
+                .'jet black and rich mahogany tan with clearly divided markings: tan muzzle, tan spots on the cheeks and above the eyes, tan legs with black toes, '
+                .'a close, smooth, short and glossy coat, a long wedge-shaped head with a black nose, small dark sparkling almond-shaped eyes, '
+                .'small natural V-shaped ears hanging close to the head, a short natural tail tapering to a point, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2177,6 +2184,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'dense, very wiry broken coat with a short, softer undercoat',
                 'markings' => 'black saddle and tan head markings on a white body, small V-shaped ears folded forward, natural tail carried erect',
+            ],
+            // M5-R10-119: FCI S888 jet black and rich mahogany tan — the only standard colour.
+            BreedType::ManchesterTerrier => [
+                'color_scheme' => 'jet black and rich mahogany tan',
+                'eye_color' => 'dark',
+                'fur_texture' => 'close, smooth, short and glossy coat of firm texture',
+                'markings' => 'tan muzzle, cheek and eyebrow spots, tan legs with black toes and thumbmarks, small natural V-shaped ears, short tapering tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
