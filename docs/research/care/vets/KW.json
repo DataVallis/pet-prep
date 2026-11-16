@@ -1,0 +1,42 @@
+{
+  "country": "KW",
+  "checked": "2026-11-16",
+  "sources": [
+    {
+      "name": "IPATA member directory - International Veterinary Hospital",
+      "url": "https://www.ipata.org/member/188",
+      "note": "Opened: International Veterinary Hospital, Ahmadi, Kuwait; +965 2 207-0484; website http://www.ivhq8.com; no hours, no 24 h statement."
+    },
+    {
+      "name": "PawApp directory (aggregator, not used for an entry)",
+      "url": "https://www.pawapp.net/",
+      "note": "Opened: lists Safari vet clinic, Shuwaikh Industrial, +965 66617444, 'Open 24/7'; aggregator only, no own site reachable, so not published. Also lists a generic emergency hotline that is not a clinic or poison line."
+    },
+    {
+      "name": "Expat Focus - Kuwait veterinary care (aggregator, not used)",
+      "url": "https://www.expatfocus.com/kuwait/guide/kuwait-veterinary-care",
+      "note": "Opened: names Kuwait Animal Hospital (claims 'open 24 hours a day'), Animal Care Center, IVH; no phone/address/website; not usable."
+    },
+    {
+      "name": "ExpatWoman - Vets in Kuwait (aggregator, not used)",
+      "url": "https://www.expatwoman.com/kuwait/home-car/vets-in-kuwait",
+      "note": "Opened: names and phones only (Dohamma, Fahaheel, Royal Animal Hospital, Al Rai); no own sites, no hours; not used."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "International Veterinary Hospital",
+      "city": "Ahmadi",
+      "region": "Ahmadi",
+      "phone": "+965 2 207-0484",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "http://www.ivhq8.com",
+      "source_url": "https://www.ipata.org/member/188",
+      "checked": "2026-11-16",
+      "note": "IPATA member page gives phone and website only. Own website ivhq8.com was refused by WebFetch (PROVENANCE_REQUIRED), not opened; hours and 24 h status unverified."
+    }
+  ],
+  "notes": "Very thin run. No official body page (PAAAFR, Kuwait Veterinary Association/Society, Kuwait University) was reachable or usable: paaafr.gov.kw was refused by WebFetch (PROVENANCE_REQUIRED) and searches surfaced no vet directory or duty rota there. Royal Animal Hospital site (rahkwt.com) redirect-looped and could not be opened. ivhq8.com refused. No duty rotas and no animal poison lines found for Kuwait. Candidate 24 h clinics seen only on aggregators and therefore not published: Safari Vet Clinic (Shuwaikh Industrial, +965 66617444, PawApp 'Open 24/7') and Kuwait Animal Hospital (Expat Focus 'open 24 hours a day'); other named clinics: Royal Animal Hospital (+965 24750966), Dohamma/Al Dohama Vet Hospital (+965 2472-2002), Fahaheel Veterinary Clinic, Al Rai Veterinary Clinic. Needs own-site verification in a later run."
+}
