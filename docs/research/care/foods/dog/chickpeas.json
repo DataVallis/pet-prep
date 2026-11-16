@@ -6,21 +6,24 @@
     "sl": "Čičerika",
     "es": "Garbanzos",
     "pt": "Grão-de-bico",
-    "nl": "Kikkererwten"
+    "nl": "Kikkererwten",
+    "pl": "Ciecierzyca"
   },
   "question": {
     "en": "Can dogs eat chickpeas?",
     "sl": "Ali lahko psi jedo čičeriko?",
     "es": "¿Pueden los perros comer garbanzos?",
     "pt": "Os cães podem comer grão-de-bico?",
-    "nl": "Mogen honden kikkererwten eten?"
+    "nl": "Mogen honden kikkererwten eten?",
+    "pl": "Czy psy mogą jeść ciecierzycę?"
   },
   "url_slug": {
     "en": "chickpeas",
     "sl": "cicerika",
     "es": "garbanzos",
     "pt": "grao-de-bico",
-    "nl": "kikkererwten"
+    "nl": "kikkererwten",
+    "pl": "ciecierzyca"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, zmerno, če je dobro kuhana. Sveže kuhana čičerika je lahko priboljšek za psa. Suha čičerika lahko povzroči dušenje, konzervirana je običajno slana, humus pa za pse ni varen.",
     "es": "Sí, con moderación y bien cocidos. Los garbanzos recién cocinados pueden ser un premio para los perros. Los garbanzos secos son un peligro de atragantamiento, los de lata suelen llevar mucha sal y el hummus no es seguro para los perros.",
     "pt": "Sim, com moderação, se estiver bem cozido. O grão-de-bico acabado de cozer pode ser uma guloseima para os cães. O grão-de-bico seco é um risco de engasgo, o de conserva costuma ser salgado e o hummus não é seguro para os cães.",
-    "nl": "Ja, met mate, als ze goed gaar zijn. Vers gekookte kikkererwten kunnen een snoepje zijn voor honden. Droge kikkererwten zijn een verstikkingsgevaar, kikkererwten uit blik zijn meestal zout en hummus is niet veilig voor honden."
+    "nl": "Ja, met mate, als ze goed gaar zijn. Vers gekookte kikkererwten kunnen een snoepje zijn voor honden. Droge kikkererwten zijn een verstikkingsgevaar, kikkererwten uit blik zijn meestal zout en hummus is niet veilig voor honden.",
+    "pl": "Tak, z umiarem, jeśli jest dokładnie ugotowana. Świeżo ugotowana ciecierzyca (cieciorka) może być smakołykiem dla psów. Sucha ciecierzyca grozi zadławieniem, ta z puszki jest zwykle słona, a hummus nie jest bezpieczny dla psów."
   },
   "why": {
     "en": "Chickpeas are legumes, a good source of fibre and protein for dogs, but some dogs have trouble digesting them, so they should be cooked well and introduced slowly. Dry chickpeas are much harder to digest. Canned chickpeas usually contain a lot of sodium, which is not healthy for dogs. Like other beans, chickpeas may give your dog some gas.",
     "sl": "Čičerika je stročnica in za pse dober vir vlaknin in beljakovin, a jo nekateri psi težko prebavijo, zato jo je treba dobro skuhati in uvajati počasi. Suha čičerika je precej težje prebavljiva. Konzervirana čičerika običajno vsebuje veliko natrija, kar za pse ni zdravo. Kot drug fižol lahko tudi čičerika psu povzroči nekaj vetrov.",
     "es": "Los garbanzos son legumbres y una buena fuente de fibra y proteínas para los perros, pero a algunos les cuesta digerirlos, así que hay que cocinarlos bien e introducirlos poco a poco. Los garbanzos secos son mucho más difíciles de digerir. Los de lata suelen llevar mucho sodio, que no es saludable para los perros. Como otras legumbres, los garbanzos pueden provocarle algunos gases a tu perro.",
     "pt": "O grão-de-bico é uma leguminosa, uma boa fonte de fibra e proteína para os cães, mas alguns cães têm dificuldade em digeri-lo, por isso deve estar bem cozido e ser introduzido aos poucos. O grão-de-bico seco é muito mais difícil de digerir. O grão-de-bico de conserva costuma ter muito sódio, que não é saudável para os cães. Tal como outros feijões, o grão-de-bico pode provocar gases no teu cão.",
-    "nl": "Kikkererwten zijn peulvruchten en een goede bron van vezels en eiwit voor honden, maar sommige honden kunnen ze moeilijk verteren. Maak ze daarom goed gaar en laat je hond er langzaam aan wennen. Droge kikkererwten zijn veel moeilijker te verteren. Kikkererwten uit blik bevatten meestal veel natrium, en dat is niet gezond voor honden. Net als andere bonen kunnen kikkererwten je hond wat last van winderigheid geven."
+    "nl": "Kikkererwten zijn peulvruchten en een goede bron van vezels en eiwit voor honden, maar sommige honden kunnen ze moeilijk verteren. Maak ze daarom goed gaar en laat je hond er langzaam aan wennen. Droge kikkererwten zijn veel moeilijker te verteren. Kikkererwten uit blik bevatten meestal veel natrium, en dat is niet gezond voor honden. Net als andere bonen kunnen kikkererwten je hond wat last van winderigheid geven.",
+    "pl": "Ciecierzyca to roślina strączkowa, dobre źródło błonnika i białka dla psów, ale niektóre psy mają problemy z jej trawieniem, dlatego trzeba ją dobrze ugotować i wprowadzać do diety stopniowo. Sucha ciecierzyca jest znacznie trudniejsza do strawienia. Ciecierzyca z puszki zwykle zawiera dużo sodu, który nie jest zdrowy dla psów. Podobnie jak fasola, ciecierzyca może wywoływać u psa gazy."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Kuhano čičeriko uvajajte počasi. Če uporabite konzervirano, izberite takšno z malo natrija in jo dobro sperite, da odstranite čim več soli.",
     "es": "Introduce los garbanzos cocidos poco a poco. Si usas garbanzos de lata, elige una variedad baja en sodio y acláralos bien para quitarles la mayor parte de la sal.",
     "pt": "Introduz o grão-de-bico cozido aos poucos. Se usares grão-de-bico de conserva, escolhe um com pouco sal e lava-o bem para tirar o máximo de sal possível.",
-    "nl": "Laat je hond langzaam aan gare kikkererwten wennen. Gebruik je kikkererwten uit blik, kies dan een zoutarme soort en spoel ze goed af om zoveel mogelijk zout te verwijderen."
+    "nl": "Laat je hond langzaam aan gare kikkererwten wennen. Gebruik je kikkererwten uit blik, kies dan een zoutarme soort en spoel ze goed af om zoveel mogelijk zout te verwijderen.",
+    "pl": "Wprowadzaj ugotowaną ciecierzycę powoli. Jeśli używasz ciecierzycy z puszki, wybierz taką o niskiej zawartości sodu i dobrze ją opłucz, żeby usunąć jak najwięcej soli."
   },
   "serving": {
     "en": "Soaked and thoroughly cooked until soft, in moderation; canned only low-sodium and well rinsed.",
     "sl": "Namočena in dobro kuhana, da je mehka, zmerno; konzervirana le z malo natrija in dobro sprana.",
     "es": "En remojo y bien cocidos hasta que estén blandos, con moderación; los de lata, solo bajos en sodio y bien aclarados.",
     "pt": "Demolhado e bem cozido até ficar macio, com moderação; o de conserva só com pouco sal e bem lavado.",
-    "nl": "Geweekt en daarna helemaal zacht gekookt, met mate; uit blik alleen zoutarm en goed afgespoeld."
+    "nl": "Geweekt en daarna helemaal zacht gekookt, met mate; uit blik alleen zoutarm en goed afgespoeld.",
+    "pl": "Namoczona i dokładnie ugotowana do miękkości, z umiarem; z puszki tylko o niskiej zawartości sodu i dobrze opłukana."
   },
   "child": {
     "en": "Soft, cooked chickpeas can be a little treat for dogs, but they might make your dog a bit windy!",
     "sl": "Mehka, kuhana čičerika je lahko majhen priboljšek za psa, a ga lahko malo napihne!",
     "es": "Los garbanzos blandos y cocidos pueden ser un pequeño premio para los perros, ¡aunque puede que tu perro tenga algunos gases!",
     "pt": "O grão-de-bico cozido e macio pode ser uma pequena guloseima para os cães, mas pode deixar o teu cão cheio de gases!",
-    "nl": "Zachte, gare kikkererwten zijn een klein snoepje voor honden, maar je hond kan er wel een beetje winderig van worden!"
+    "nl": "Zachte, gare kikkererwten zijn een klein snoepje voor honden, maar je hond kan er wel een beetje winderig van worden!",
+    "pl": "Miękka, ugotowana ciecierzyca może być małym smakołykiem dla psa, ale po niej pies może mieć trochę gazów!"
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo humus?",
         "es": "¿Pueden los perros comer hummus?",
         "pt": "Os cães podem comer hummus?",
-        "nl": "Mogen honden hummus eten?"
+        "nl": "Mogen honden hummus eten?",
+        "pl": "Czy psy mogą jeść hummus?"
       },
       "a": {
         "en": "No. Hummus contains other ingredients that are not dog-friendly, including garlic, onion and spices.",
         "sl": "Ne. Humus vsebuje druge sestavine, ki za pse niso primerne, med njimi česen, čebulo in začimbe.",
         "es": "No. El hummus lleva otros ingredientes que no son aptos para los perros, como ajo, cebolla y especias.",
         "pt": "Não. O hummus contém outros ingredientes que não são adequados para cães, como alho, cebola e temperos.",
-        "nl": "Nee. Hummus bevat andere ingrediënten die niet goed zijn voor honden, zoals knoflook, ui en kruiden."
+        "nl": "Nee. Hummus bevat andere ingrediënten die niet goed zijn voor honden, zoals knoflook, ui en kruiden.",
+        "pl": "Nie. Hummus zawiera inne składniki nieodpowiednie dla psów, m.in. czosnek, cebulę i przyprawy."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali lahko psi jedo suho čičeriko?",
         "es": "¿Pueden los perros comer garbanzos secos?",
         "pt": "Os cães podem comer grão-de-bico seco?",
-        "nl": "Mogen honden droge kikkererwten eten?"
+        "nl": "Mogen honden droge kikkererwten eten?",
+        "pl": "Czy psy mogą jeść suchą ciecierzycę?"
       },
       "a": {
         "en": "No. Dry chickpeas can be a choking hazard and are much harder for dogs to digest; cook them thoroughly first.",
         "sl": "Ne. Suha čičerika lahko povzroči dušenje in jo psi veliko težje prebavijo; najprej jo dobro skuhajte.",
         "es": "No. Los garbanzos secos pueden suponer un peligro de atragantamiento y son mucho más difíciles de digerir para los perros; cocínalos bien antes.",
         "pt": "Não. O grão-de-bico seco pode ser um risco de engasgo e é muito mais difícil de digerir para os cães; cozinha-o bem primeiro.",
-        "nl": "Nee. Droge kikkererwten kunnen een verstikkingsgevaar zijn en zijn veel moeilijker te verteren voor honden; kook ze eerst goed gaar."
+        "nl": "Nee. Droge kikkererwten kunnen een verstikkingsgevaar zijn en zijn veel moeilijker te verteren voor honden; kook ze eerst goed gaar.",
+        "pl": "Nie. Sucha ciecierzyca może grozić zadławieniem i jest dla psów znacznie trudniejsza do strawienia; najpierw dokładnie ją ugotuj."
       }
     }
   ],
@@ -175,6 +187,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "164c259b4b3bfcf77ee919bc44bd84a5422d6afde636512f148f5fc1e51e1354"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "cf9c8647500c4074ba44985c42f01c4367406b80142888cf5f33f6edee0ced35"
     }
   }
 }

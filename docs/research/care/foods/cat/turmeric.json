@@ -15,7 +15,8 @@
     "fr": "Curcuma",
     "es": "Cúrcuma",
     "pt": "Cúrcuma",
-    "nl": "Kurkuma"
+    "nl": "Kurkuma",
+    "pl": "Kurkuma"
   },
   "question": {
     "en": "Can cats eat turmeric?",
@@ -31,7 +32,8 @@
     "fr": "Les chats peuvent-ils manger du curcuma ?",
     "es": "¿Pueden los gatos comer cúrcuma?",
     "pt": "Os gatos podem comer cúrcuma?",
-    "nl": "Mogen katten kurkuma eten?"
+    "nl": "Mogen katten kurkuma eten?",
+    "pl": "Czy koty mogą jeść kurkumę?"
   },
   "url_slug": {
     "en": "turmeric",
@@ -47,7 +49,8 @@
     "fr": "curcuma",
     "es": "curcuma",
     "pt": "curcuma",
-    "nl": "kurkuma"
+    "nl": "kurkuma",
+    "pl": "kurkuma"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Mieux vaut ne pas donner de curcuma à votre chat. Les études sur l’alimentation des chats avec du curcuma sont rares, et les chats ont une capacité de glucuroconjugaison anormalement faible, ce qui, selon les chercheurs, augmente le risque de toxicité du curcuma chez le chat.",
     "es": "Es mejor no darle cúrcuma a tu gato. Los estudios sobre dar cúrcuma a los gatos son escasos, y los gatos tienen una capacidad inusualmente baja de glucuronidación, lo que, según los investigadores, aumenta el riesgo de toxicidad de la cúrcuma en los gatos.",
     "pt": "É melhor não dar cúrcuma ao teu gato. Há poucos estudos sobre dar cúrcuma a gatos, e os gatos têm uma capacidade invulgarmente baixa de glucuronidação, o que, segundo os investigadores, aumenta o risco de toxicidade da cúrcuma nos gatos.",
-    "nl": "Geef je kat liever geen kurkuma. Er is weinig onderzoek gedaan naar het voeren van kurkuma aan katten, en katten hebben een ongewoon laag vermogen tot glucuronidering, wat volgens onderzoekers het risico op kurkumavergiftiging bij katten vergroot."
+    "nl": "Geef je kat liever geen kurkuma. Er is weinig onderzoek gedaan naar het voeren van kurkuma aan katten, en katten hebben een ongewoon laag vermogen tot glucuronidering, wat volgens onderzoekers het risico op kurkumavergiftiging bij katten vergroot.",
+    "pl": "Lepiej nie dawać kotu kurkumy. Badań nad podawaniem kurkumy kotom jest niewiele, a koty mają wyjątkowo niską zdolność do glukuronidacji, co według badaczy zwiększa u nich ryzyko zatrucia kurkumą."
   },
   "why": {
     "en": "Turmeric is a bright yellow spice. A 2026 study in the journal Animals notes that cats have an unusually low capacity for glucuronidation, an important step in breaking down and excreting turmeric's curcuminoids, and that this increases the risk of turmeric toxicity in cats. The authors add that there are few data on its safety in cats. In their study, a turmeric extract added to a complete and balanced cat food was well tolerated by healthy adult cats. Cats don't need anything other than a complete diet.",
@@ -80,7 +84,8 @@
     "fr": "Le curcuma est une épice jaune vif. Une étude de 2026 publiée dans la revue Animals note que les chats ont une capacité de glucuroconjugaison anormalement faible, une étape importante de la dégradation et de l’élimination des curcuminoïdes du curcuma, et que cela augmente le risque de toxicité du curcuma chez le chat. Les auteurs ajoutent qu’il existe peu de données sur son innocuité chez le chat. Dans leur étude, un extrait de curcuma ajouté à un aliment complet et équilibré pour chats a été bien toléré par des chats adultes en bonne santé. Les chats n’ont besoin de rien d’autre qu’une alimentation complète.",
     "es": "La cúrcuma es una especia de un color amarillo intenso. Un estudio de 2026 publicado en la revista Animals señala que los gatos tienen una capacidad inusualmente baja de glucuronidación, un paso importante para descomponer y eliminar los curcuminoides de la cúrcuma, y que esto aumenta el riesgo de toxicidad de la cúrcuma en los gatos. Los autores añaden que hay pocos datos sobre su seguridad en los gatos. En su estudio, un extracto de cúrcuma añadido a una comida para gatos completa y equilibrada fue bien tolerado por gatos adultos sanos. Los gatos no necesitan nada más que una alimentación completa.",
     "pt": "A cúrcuma é um tempero amarelo-vivo. Um estudo de 2026 na revista Animals refere que os gatos têm uma capacidade invulgarmente baixa de glucuronidação, um passo importante para decompor e eliminar os curcuminoides da cúrcuma, e que isso aumenta o risco de toxicidade nos gatos. Os autores acrescentam que há poucos dados sobre a segurança nos gatos. No estudo deles, um extrato de cúrcuma acrescentado a uma comida para gatos completa e equilibrada foi bem tolerado por gatos adultos saudáveis. Os gatos não precisam de mais nada além de uma alimentação completa.",
-    "nl": "Kurkuma is een felgeel kruid. Een studie uit 2026 in het tijdschrift Animals merkt op dat katten een ongewoon laag vermogen hebben tot glucuronidering, een belangrijke stap bij het afbreken en uitscheiden van de curcuminoïden in kurkuma, en dat dit het risico op kurkumavergiftiging bij katten vergroot. De auteurs voegen toe dat er weinig gegevens zijn over de veiligheid bij katten. In hun onderzoek werd een kurkumaextract, toegevoegd aan een volwaardig en uitgebalanceerd kattenvoer, goed verdragen door gezonde volwassen katten. Katten hebben niets anders nodig dan een volwaardige voeding."
+    "nl": "Kurkuma is een felgeel kruid. Een studie uit 2026 in het tijdschrift Animals merkt op dat katten een ongewoon laag vermogen hebben tot glucuronidering, een belangrijke stap bij het afbreken en uitscheiden van de curcuminoïden in kurkuma, en dat dit het risico op kurkumavergiftiging bij katten vergroot. De auteurs voegen toe dat er weinig gegevens zijn over de veiligheid bij katten. In hun onderzoek werd een kurkumaextract, toegevoegd aan een volwaardig en uitgebalanceerd kattenvoer, goed verdragen door gezonde volwassen katten. Katten hebben niets anders nodig dan een volwaardige voeding.",
+    "pl": "Kurkuma to jaskrawożółta przyprawa. Badanie z 2026 roku w czasopiśmie Animals zaznacza, że koty mają wyjątkowo niską zdolność do glukuronidacji, ważnego etapu rozkładu i wydalania kurkuminoidów z kurkumy, i że zwiększa to u nich ryzyko zatrucia kurkumą. Autorzy dodają, że danych o jej bezpieczeństwie u kotów jest niewiele. W ich badaniu ekstrakt z kurkumy dodany do pełnowartościowej, zbilansowanej karmy dla kotów był dobrze tolerowany przez zdrowe dorosłe koty. Koty nie potrzebują niczego poza pełnowartościową dietą."
   },
   "signs": {
     "en": [
@@ -138,6 +143,10 @@
     "nl": [
       "Braken",
       "Maagklachten"
+    ],
+    "pl": [
+      "Wymioty",
+      "Rozstrój żołądka"
     ]
   },
   "what_to_do": {
@@ -154,7 +163,8 @@
     "fr": "Si votre chat a léché un peu de curcuma, surveillez l’apparition de vomissements ou de troubles digestifs. Si votre chat a mangé quelque chose qu’il n’aurait pas dû, contactez immédiatement votre vétérinaire ; n’attendez pas l’apparition de signes et n’essayez pas de le faire vomir à la maison.",
     "es": "Si tu gato ha lamido un poco de cúrcuma, observa si tiene vómitos o malestar de estómago. Si tu gato ha comido algo que no debía, ponte en contacto con tu veterinario enseguida; no esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "pt": "Se o teu gato lambeu um pouco de cúrcuma, vigia se aparecem vómitos ou indisposição de estômago. Se o teu gato comeu algo que não devia, contacta imediatamente o teu veterinário; não esperes que surjam sinais e não tentes provocar-lhe o vómito em casa.",
-    "nl": "Heeft je kat een beetje kurkuma gelikt, let dan op braken of maagklachten. Heeft je kat iets gegeten wat ze niet had mogen eten, neem dan meteen contact op met je dierenarts; wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
+    "nl": "Heeft je kat een beetje kurkuma gelikt, let dan op braken of maagklachten. Heeft je kat iets gegeten wat ze niet had mogen eten, neem dan meteen contact op met je dierenarts; wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Jeśli twój kot polizał odrobinę kurkumy, obserwuj, czy nie pojawią się wymioty lub rozstrój żołądka. Jeśli kot zjadł coś, czego nie powinien, od razu skontaktuj się z weterynarzem; nie czekaj na objawy i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -171,7 +181,8 @@
     "fr": "Le curcuma est une épice jaune pour la cuisine des humains. Les chats n’ont pas besoin d’épices : garde le pot loin de ton chat.",
     "es": "La cúrcuma es una especia amarilla para la comida de las personas. Los gatos no necesitan especias, así que mantén el bote lejos del gatito.",
     "pt": "A cúrcuma é um tempero amarelo para a comida das pessoas. Os gatos não precisam de temperos, por isso mantém o frasco longe do gatinho.",
-    "nl": "Kurkuma is een geel kruid dat mensen in hun eten doen. Katten hebben geen kruiden nodig, dus houd het potje uit de buurt van je kat."
+    "nl": "Kurkuma is een geel kruid dat mensen in hun eten doen. Katten hebben geen kruiden nodig, dus houd het potje uit de buurt van je kat.",
+    "pl": "Kurkuma to żółta przyprawa do jedzenia dla ludzi. Koty nie potrzebują przypraw, więc trzymaj słoiczek z dala od kotka."
   },
   "faq": [
     {
@@ -189,7 +200,8 @@
         "fr": "Le curcuma dans la nourriture pour chats est-il sans danger ?",
         "es": "¿Es segura la cúrcuma en la comida para gatos?",
         "pt": "A cúrcuma na comida para gatos é segura?",
-        "nl": "Is kurkuma in kattenvoer veilig?"
+        "nl": "Is kurkuma in kattenvoer veilig?",
+        "pl": "Czy kurkuma w karmie dla kotów jest bezpieczna?"
       },
       "a": {
         "en": "One study fed healthy adult cats a complete diet with added turmeric extract for four months and found it well tolerated. The authors note that other studies on feeding turmeric to cats are scarce.",
@@ -205,7 +217,8 @@
         "fr": "Une étude a donné à des chats adultes en bonne santé une alimentation complète additionnée d’extrait de curcuma pendant quatre mois et l’a trouvée bien tolérée. Les auteurs notent que les autres études sur l’alimentation des chats avec du curcuma sont rares.",
         "es": "Un estudio dio a gatos adultos sanos una comida completa con extracto de cúrcuma añadido durante cuatro meses y comprobó que la toleraron bien. Los autores señalan que otros estudios sobre dar cúrcuma a los gatos son escasos.",
         "pt": "Um estudo deu a gatos adultos saudáveis, durante quatro meses, uma alimentação completa com extrato de cúrcuma e concluiu que foi bem tolerado. Os autores referem que há poucos outros estudos sobre dar cúrcuma a gatos.",
-        "nl": "In één onderzoek kregen gezonde volwassen katten vier maanden lang een volwaardig voer met toegevoegd kurkumaextract, en dat werd goed verdragen. De auteurs merken op dat er weinig ander onderzoek is naar het voeren van kurkuma aan katten."
+        "nl": "In één onderzoek kregen gezonde volwassen katten vier maanden lang een volwaardig voer met toegevoegd kurkumaextract, en dat werd goed verdragen. De auteurs merken op dat er weinig ander onderzoek is naar het voeren van kurkuma aan katten.",
+        "pl": "W jednym badaniu zdrowym dorosłym kotom podawano przez cztery miesiące pełnowartościową karmę z dodatkiem ekstraktu z kurkumy i okazało się, że koty dobrze ją tolerowały. Autorzy zaznaczają, że innych badań nad podawaniem kurkumy kotom jest niewiele."
       }
     }
   ],
@@ -343,6 +356,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "73e029452bee6dbffa3a2c3fbe3df4e85437d131f86c91c818c71875d750b7b8"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "737889a47ab1aef522f7cc4dff863e8a56b6351ab69007fb87e48fb1c20bb77a"
     }
   }
 }

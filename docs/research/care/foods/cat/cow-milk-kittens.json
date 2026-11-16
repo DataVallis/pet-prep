@@ -6,21 +6,24 @@
     "sl": "Kravje mleko za mladičke",
     "es": "Leche de vaca para gatitos",
     "pt": "Leite de vaca para gatinhos",
-    "nl": "Koemelk voor kittens"
+    "nl": "Koemelk voor kittens",
+    "pl": "Mleko krowie dla kociąt"
   },
   "question": {
     "en": "Can kittens drink cow's milk?",
     "sl": "Ali lahko mačji mladički pijejo kravje mleko?",
     "es": "¿Pueden los gatitos beber leche de vaca?",
     "pt": "Os gatinhos podem beber leite de vaca?",
-    "nl": "Mogen kittens koemelk drinken?"
+    "nl": "Mogen kittens koemelk drinken?",
+    "pl": "Czy kocięta mogą pić mleko krowie?"
   },
   "url_slug": {
     "en": "cow-milk-kittens",
     "sl": "kravje-mleko-za-mladicke",
     "es": "leche-de-vaca-gatitos",
     "pt": "leite-de-vaca-para-gatinhos",
-    "nl": "koemelk-kittens"
+    "nl": "koemelk-kittens",
+    "pl": "mleko-krowie-dla-kociat"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne. Mladički naj pijejo materino mleko, mladiček, ki ga je treba hraniti po steklenički, pa naj dobi le nadomestno mleko za mladičke. Cats Protection svetuje, naj jim nikoli ne dajemo kravjega mleka, ker ga težko prebavijo. Ko so odstavljeni, potrebujejo le vodo.",
     "es": "No. Los gatitos deben beber la leche de su madre, y un gatito al que hay que dar biberón solo debe tomar leche especial para gatitos. Cats Protection dice que nunca se debe dar leche de vaca, porque a los gatitos les cuesta digerirla. Una vez destetados, los gatitos solo necesitan agua.",
     "pt": "Não. Os gatinhos devem beber o leite da mãe, e um gatinho que precise de biberão só deve tomar leite de substituição próprio para gatinhos. A Cats Protection diz que nunca se deve dar leite de vaca, porque os gatinhos têm dificuldade em digeri-lo. Depois do desmame, os gatinhos só precisam de água.",
-    "nl": "Nee. Kittens horen de melk van hun moeder te drinken, en een kitten dat met de fles gevoed moet worden, mag alleen een kittenmelkvervanger krijgen. Cats Protection zegt dat je kittens nooit koemelk moet geven, omdat ze die moeilijk verteren. Zodra ze gespeend zijn, hebben kittens alleen water nodig."
+    "nl": "Nee. Kittens horen de melk van hun moeder te drinken, en een kitten dat met de fles gevoed moet worden, mag alleen een kittenmelkvervanger krijgen. Cats Protection zegt dat je kittens nooit koemelk moet geven, omdat ze die moeilijk verteren. Zodra ze gespeend zijn, hebben kittens alleen water nodig.",
+    "pl": "Nie. Kocięta powinny pić mleko matki, a kocię karmione butelką powinno dostawać wyłącznie mleko zastępcze dla kociąt. Cats Protection podaje, że nigdy nie należy dawać mleka krowiego, bo kocięta trawią je z trudem. Po odstawieniu od mleka matki kocięta do picia potrzebują już tylko wody."
   },
   "why": {
     "en": "Cats Protection advises never giving cow's or goat's milk to kittens because they find it difficult to digest, and PDSA calls cow's milk unsuitable. Compared with cow's milk, a mother cat's milk contains much more protein, while cow's milk has fewer calories, less fat and taurine and more lactose. Substitute kitten milk is made for kittens and contains all the nutrients they need; other milks don't have the right balance.",
     "sl": "Cats Protection svetuje, naj mladičkom nikoli ne dajemo kravjega ali kozjega mleka, ker ga težko prebavijo, PDSA pa kravje mleko označuje kot neprimerno. Materino mačje mleko vsebuje veliko več beljakovin kot kravje, kravje mleko pa ima manj kalorij, maščob in tavrina ter več laktoze. Nadomestno mleko za mladičke je narejeno zanje in vsebuje vsa hranila, ki jih potrebujejo; druga mleka nimajo pravega razmerja hranil.",
     "es": "Cats Protection aconseja no dar nunca leche de vaca ni de cabra a los gatitos porque les cuesta digerirlas, y PDSA califica la leche de vaca de inadecuada. En comparación con la leche de vaca, la leche de una gata contiene mucha más proteína, mientras que la de vaca tiene menos calorías, menos grasa y menos taurina, y más lactosa. La leche especial para gatitos está hecha para ellos y contiene todos los nutrientes que necesitan; las demás leches no tienen el equilibrio adecuado.",
     "pt": "A Cats Protection aconselha a nunca dar leite de vaca ou de cabra aos gatinhos, porque têm dificuldade em digeri-lo, e a PDSA considera o leite de vaca inadequado. Em comparação com o leite de vaca, o leite da gata tem muito mais proteína, enquanto o leite de vaca tem menos calorias, menos gordura, menos taurina e mais lactose. O leite de substituição para gatinhos é feito para eles e contém todos os nutrientes de que precisam; os outros leites não têm o equilíbrio certo.",
-    "nl": "Cats Protection raadt aan om kittens nooit koe- of geitenmelk te geven, omdat ze die moeilijk verteren, en PDSA noemt koemelk ongeschikt. Vergeleken met koemelk bevat de melk van een moederkat veel meer eiwit, terwijl koemelk minder calorieën, vet en taurine bevat en meer lactose. Speciale kittenmelk is gemaakt voor kittens en bevat alle voedingsstoffen die ze nodig hebben; andere melk heeft niet de juiste samenstelling."
+    "nl": "Cats Protection raadt aan om kittens nooit koe- of geitenmelk te geven, omdat ze die moeilijk verteren, en PDSA noemt koemelk ongeschikt. Vergeleken met koemelk bevat de melk van een moederkat veel meer eiwit, terwijl koemelk minder calorieën, vet en taurine bevat en meer lactose. Speciale kittenmelk is gemaakt voor kittens en bevat alle voedingsstoffen die ze nodig hebben; andere melk heeft niet de juiste samenstelling.",
+    "pl": "Cats Protection radzi, by nigdy nie dawać kociętom mleka krowiego ani koziego, ponieważ trawią je z trudem, a PDSA uznaje mleko krowie za nieodpowiednie. W porównaniu z mlekiem krowim mleko kotki-matki zawiera znacznie więcej białka, natomiast mleko krowie ma mniej kalorii, tłuszczu i tauryny oraz więcej laktozy. Mleko zastępcze dla kociąt jest przeznaczone dla kociąt i zawiera wszystkie potrzebne im składniki odżywcze; inne rodzaje mleka nie mają właściwych proporcji."
   },
   "signs": {
     "en": [
@@ -62,6 +67,11 @@
       "Diarree",
       "Zwakte",
       "Afvallen of niet goed groeien"
+    ],
+    "pl": [
+      "Biegunka",
+      "Osłabienie",
+      "Chudnięcie lub brak prawidłowego rozwoju"
     ]
   },
   "what_to_do": {
@@ -69,7 +79,8 @@
     "sl": "Prenehajte s kravjim mlekom in veterinarja vprašajte, katero mleko za mladičke uporabiti. Če ima mlad mladiček drisko, je šibek, izgublja težo ali slabo napreduje, takoj pokličite veterinarja, saj se lahko mladičkovo stanje hitro poslabša.",
     "es": "Deja de darle la leche de vaca y pregunta a tu veterinario qué leche para gatitos usar. Ponte en contacto con tu veterinario enseguida si un gatito pequeño tiene diarrea, parece débil, pierde peso o no se desarrolla bien, porque el estado de un gatito puede empeorar muy rápido.",
     "pt": "Para de dar leite de vaca e pergunta ao teu veterinário que leite para gatinhos deves usar. Contacta imediatamente o teu veterinário se um gatinho pequeno tiver diarreia, parecer fraco, perder peso ou não se desenvolver bem, porque o estado de um gatinho pode agravar-se depressa.",
-    "nl": "Stop met de koemelk en vraag je dierenarts welke kittenmelk je het best kunt geven. Neem meteen contact op met je dierenarts als een jong kitten diarree heeft, zwak lijkt, afvalt of niet goed groeit, want de toestand van een kitten kan snel verslechteren."
+    "nl": "Stop met de koemelk en vraag je dierenarts welke kittenmelk je het best kunt geven. Neem meteen contact op met je dierenarts als een jong kitten diarree heeft, zwak lijkt, afvalt of niet goed groeit, want de toestand van een kitten kan snel verslechteren.",
+    "pl": "Przestań podawać mleko krowie i zapytaj weterynarza, jakiego mleka dla kociąt użyć. Jeśli małe kocię ma biegunkę, wydaje się osłabione, traci na wadze lub nie rozwija się prawidłowo, od razu skontaktuj się z weterynarzem, ponieważ stan kocięcia może szybko się pogorszyć."
   },
   "serving": null,
   "child": {
@@ -77,7 +88,8 @@
     "sl": "Mačji mladički pijejo mamino mleko ali posebno mleko za mladičke, ne mleka iz hladilnika. Večji mladički potrebujejo le svežo vodo!",
     "es": "Los gatitos recién nacidos beben la leche de su madre o una leche especial para gatitos, no la leche de la nevera. Cuando crecen, solo necesitan agua fresca.",
     "pt": "Os gatinhos bebés bebem o leite da mãe ou um leite especial para gatinhos, não o leite do frigorífico. Os gatinhos crescidos só precisam de água fresca!",
-    "nl": "Kleine katjes drinken de melk van hun moeder of speciale kittenmelk, geen melk uit de koelkast. Kittens die al wat groter zijn, hebben alleen vers water nodig!"
+    "nl": "Kleine katjes drinken de melk van hun moeder of speciale kittenmelk, geen melk uit de koelkast. Kittens die al wat groter zijn, hebben alleen vers water nodig!",
+    "pl": "Kocięta piją mleko swojej mamy albo specjalne mleko dla kociąt, a nie mleko z lodówki. Starsze kocięta potrzebują tylko świeżej wody!"
   },
   "faq": [
     {
@@ -86,14 +98,16 @@
         "sl": "S čim naj hranim osirotelega mladička?",
         "es": "¿Qué debo dar de comer a un gatito huérfano?",
         "pt": "O que devo dar a um gatinho órfão?",
-        "nl": "Wat moet ik een weeskitten te eten geven?"
+        "nl": "Wat moet ik een weeskitten te eten geven?",
+        "pl": "Czym karmić osierocone kocię?"
       },
       "a": {
         "en": "Ask your vet first. Use a substitute kitten milk made specifically for kittens, available from vets and some pet shops, and follow the instructions on the label. Supermarket kitten or puppy milk is not suitable.",
         "sl": "Najprej vprašajte veterinarja. Uporabite nadomestno mleko, narejeno posebej za mladičke, ki ga dobite pri veterinarju in v nekaterih trgovinah za živali, ter upoštevajte navodila na embalaži. Mleko za mladičke ali kužke iz supermarketa ni primerno.",
         "es": "Consulta primero con tu veterinario. Usa una leche especial hecha específicamente para gatitos, que se vende en clínicas veterinarias y en algunas tiendas de mascotas, y sigue las instrucciones de la etiqueta. La leche para gatitos o cachorros del supermercado no es adecuada.",
         "pt": "Pergunta primeiro ao teu veterinário. Usa um leite de substituição feito especificamente para gatinhos, que se encontra em veterinários e em algumas lojas de animais, e segue as instruções do rótulo. O leite para gatinhos ou cachorros vendido no supermercado não é adequado.",
-        "nl": "Vraag het eerst aan je dierenarts. Gebruik speciale kittenmelk die voor kittens is gemaakt, verkrijgbaar bij de dierenarts en in sommige dierenwinkels, en volg de aanwijzingen op het etiket. Kitten- of puppymelk uit de supermarkt is niet geschikt."
+        "nl": "Vraag het eerst aan je dierenarts. Gebruik speciale kittenmelk die voor kittens is gemaakt, verkrijgbaar bij de dierenarts en in sommige dierenwinkels, en volg de aanwijzingen op het etiket. Kitten- of puppymelk uit de supermarkt is niet geschikt.",
+        "pl": "Najpierw zapytaj weterynarza. Użyj mleka zastępczego przeznaczonego specjalnie dla kociąt, dostępnego u weterynarzy i w niektórych sklepach zoologicznych, i stosuj się do instrukcji na etykiecie. Mleko dla kociąt lub szczeniąt z supermarketu się nie nadaje."
       }
     },
     {
@@ -102,14 +116,16 @@
         "sl": "Kdaj mladički nehajo piti mleko?",
         "es": "¿Cuándo dejan los gatitos de beber leche?",
         "pt": "Quando é que os gatinhos deixam de beber leite?",
-        "nl": "Wanneer stoppen kittens met melk drinken?"
+        "nl": "Wanneer stoppen kittens met melk drinken?",
+        "pl": "Kiedy kocięta przestają pić mleko?"
       },
       "a": {
         "en": "By six to eight weeks old, kittens should be fully weaned onto solid food. From then on they only need to drink water, not milk, and their body may start making less lactase.",
         "sl": "Do starosti šest do osem tednov naj bodo mladički popolnoma odstavljeni na trdno hrano. Od takrat naprej potrebujejo le vodo, ne mleka, njihovo telo pa lahko začne izdelovati manj laktaze.",
         "es": "A las seis u ocho semanas de edad, los gatitos deben estar completamente destetados y comer alimento sólido. A partir de entonces solo necesitan beber agua, no leche, y su cuerpo puede empezar a producir menos lactasa.",
         "pt": "Aos seis a oito semanas de idade, os gatinhos devem estar totalmente desmamados e a comer alimentos sólidos. A partir daí só precisam de beber água, não leite, e o organismo pode começar a produzir menos lactase.",
-        "nl": "Rond zes tot acht weken moeten kittens volledig zijn overgestapt op vast voer. Vanaf dan hebben ze alleen water nodig, geen melk, en hun lichaam kan minder lactase gaan aanmaken."
+        "nl": "Rond zes tot acht weken moeten kittens volledig zijn overgestapt op vast voer. Vanaf dan hebben ze alleen water nodig, geen melk, en hun lichaam kan minder lactase gaan aanmaken.",
+        "pl": "W wieku sześciu do ośmiu tygodni kocięta powinny być już całkowicie przestawione na stały pokarm. Od tej pory potrzebują do picia tylko wody, nie mleka, a ich organizm może zacząć produkować mniej laktazy."
       }
     },
     {
@@ -118,14 +134,16 @@
         "sl": "Kaj pa odrasle mačke?",
         "es": "¿Y los gatos adultos?",
         "pt": "E os gatos adultos?",
-        "nl": "En volwassen katten?"
+        "nl": "En volwassen katten?",
+        "pl": "A dorosłe koty?"
       },
       "a": {
         "en": "Most cats are lactose intolerant, and once weaned they only need to drink water, not milk. See our page on milk for cats.",
         "sl": "Večina mačk ne prenaša laktoze, po odstavitvi pa potrebujejo le vodo, ne mleka. Oglejte si našo stran o mleku za mačke.",
         "es": "La mayoría de los gatos son intolerantes a la lactosa y, una vez destetados, solo necesitan beber agua, no leche. Consulta nuestra página sobre la leche para gatos.",
         "pt": "A maioria dos gatos é intolerante à lactose e, depois do desmame, só precisa de beber água, não leite. Vê a nossa página sobre o leite para gatos.",
-        "nl": "De meeste katten zijn lactose-intolerant en hebben na het spenen alleen water nodig, geen melk. Lees ook onze pagina over melk voor katten."
+        "nl": "De meeste katten zijn lactose-intolerant en hebben na het spenen alleen water nodig, geen melk. Lees ook onze pagina over melk voor katten.",
+        "pl": "Większość kotów nie toleruje laktozy, a po odstawieniu od mleka matki potrzebują do picia tylko wody, nie mleka. Zobacz naszą stronę o mleku dla kotów."
       }
     }
   ],
@@ -258,6 +276,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "41b4bd888254fc6812eb0538f9aa2d4f9e62cadcf257b242dfcabc27257f60e0"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "d7070062745620ef4f6b609c5fc713ce39650cce2e22ad9658260f7d2e5c0b9b"
     }
   }
 }

@@ -15,7 +15,8 @@
     "de": "Pommes frites",
     "fr": "Frites",
     "pt": "Batatas fritas",
-    "nl": "Friet"
+    "nl": "Friet",
+    "pl": "Frytki"
   },
   "question": {
     "en": "Can dogs eat french fries?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Pommes frites fressen?",
     "fr": "Les chiens peuvent-ils manger des frites ?",
     "pt": "Os cães podem comer batatas fritas?",
-    "nl": "Mogen honden friet eten?"
+    "nl": "Mogen honden friet eten?",
+    "pl": "Czy psy mogą jeść frytki?"
   },
   "url_slug": {
     "en": "french-fries",
@@ -47,7 +49,8 @@
     "de": "pommes-frites",
     "fr": "frites",
     "pt": "batatas-fritas",
-    "nl": "friet"
+    "nl": "friet",
+    "pl": "frytki"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Nicht empfohlen. Pommes frites haben für Hunde viel zu viele Kalorien und können zu Übergewicht führen, und zu viel Salziges ist nicht gut für sie. Eine heruntergefallene Pommes verursacht wahrscheinlich keine Salzvergiftung. Stattdessen sind kleine Mengen einfache gekochte Kartoffeln in Ordnung.",
     "fr": "Déconseillé. Les frites sont bien trop caloriques pour les chiens et peuvent mener à l’obésité, et trop d’aliments salés ne leur conviennent pas. Il est peu probable qu’une frite tombée par terre provoque une intoxication au sel ; mieux vaut proposer, en petite quantité, une pomme de terre cuite nature.",
     "pt": "Não é recomendado. As batatas fritas têm calorias a mais para os cães e podem levar à obesidade, e comida salgada em excesso não lhes faz bem. É pouco provável que uma batata frita caída no chão cause intoxicação por sal, e a batata simples cozida, em pequenas quantidades, é uma boa alternativa.",
-    "nl": "Niet aanbevolen. Friet bevat veel te veel calorieën voor honden en kan leiden tot overgewicht, en te veel zout eten is niet goed voor ze. Een gevallen frietje geeft waarschijnlijk geen zoutvergiftiging; gewone gekookte aardappel is in kleine hoeveelheden een prima alternatief."
+    "nl": "Niet aanbevolen. Friet bevat veel te veel calorieën voor honden en kan leiden tot overgewicht, en te veel zout eten is niet goed voor ze. Een gevallen frietje geeft waarschijnlijk geen zoutvergiftiging; gewone gekookte aardappel is in kleine hoeveelheden een prima alternatief.",
+    "pl": "Lepiej nie. Frytki mają dla psów zdecydowanie za dużo kalorii i mogą prowadzić do otyłości, a zbyt dużo słonego jedzenia też im nie służy. Jedna frytka, która spadła na podłogę, raczej nie spowoduje zatrucia solą, a zamiast frytek lepszy jest ugotowany ziemniak bez dodatków, w małych ilościach."
   },
   "why": {
     "en": "AKC notes it's possible to have too much of a good thing with foods like French fries, and a Cornell vet nutritionist says fries are way too high in calories and can lead to obesity and poor nutrient intake. Salty food in moderation should not cause salt poisoning, but excessive salty food is not good for dogs, especially those with heart disease, because it can cause fluid retention.",
@@ -80,7 +84,8 @@
     "de": "Der AKC weist darauf hin, dass man es bei Lebensmitteln wie Pommes frites leicht mit dem Guten übertreiben kann, und ein auf Ernährung spezialisierter Tierarzt von Cornell sagt, dass Pommes viel zu kalorienreich sind und zu Übergewicht und einer schlechten Nährstoffversorgung führen können. Salziges Essen in Maßen sollte keine Salzvergiftung verursachen, aber übermäßig salziges Essen ist für Hunde nicht gut, besonders für Hunde mit Herzerkrankungen, weil es Wassereinlagerungen verursachen kann.",
     "fr": "L’AKC souligne qu’on peut abuser même des bonnes choses avec des aliments comme les frites, et un vétérinaire nutritionniste de Cornell indique que les frites sont bien trop caloriques et peuvent mener à l’obésité et à des apports en nutriments insuffisants. Les aliments salés, avec modération, ne devraient pas provoquer d’intoxication au sel, mais un excès d’aliments salés n’est pas bon pour les chiens, surtout ceux atteints d’une maladie cardiaque, car il peut provoquer une rétention d’eau.",
     "pt": "A AKC refere que, com alimentos como as batatas fritas, até uma coisa boa pode ser demais, e um especialista em nutrição veterinária da Cornell diz que as batatas fritas têm calorias a mais e podem levar à obesidade e a uma má ingestão de nutrientes. A comida salgada com moderação não deve causar intoxicação por sal, mas comida salgada em excesso não faz bem aos cães, sobretudo aos que têm doenças do coração, porque pode causar retenção de líquidos.",
-    "nl": "AKC merkt op dat je een hond met voedsel als friet al snel te veel van het goede geeft, en een voedingsdeskundige van de diergeneeskundige faculteit van Cornell zegt dat friet veel te veel calorieën bevat en kan leiden tot overgewicht en een tekort aan voedingsstoffen. Met mate zout voedsel zou geen zoutvergiftiging moeten veroorzaken, maar te veel zout voedsel is niet goed voor honden, vooral niet voor honden met een hartziekte, omdat het vochtophoping kan veroorzaken."
+    "nl": "AKC merkt op dat je een hond met voedsel als friet al snel te veel van het goede geeft, en een voedingsdeskundige van de diergeneeskundige faculteit van Cornell zegt dat friet veel te veel calorieën bevat en kan leiden tot overgewicht en een tekort aan voedingsstoffen. Met mate zout voedsel zou geen zoutvergiftiging moeten veroorzaken, maar te veel zout voedsel is niet goed voor honden, vooral niet voor honden met een hartziekte, omdat het vochtophoping kan veroorzaken.",
+    "pl": "AKC zwraca uwagę, że przy jedzeniu takim jak frytki łatwo przesadzić, a weterynaryjny specjalista ds. żywienia z Cornell mówi, że frytki mają zdecydowanie za dużo kalorii i mogą prowadzić do otyłości oraz niedoborów składników odżywczych. Słone jedzenie w umiarkowanej ilości nie powinno powodować zatrucia solą, ale nadmiar słonego jedzenia nie jest dobry dla psów, zwłaszcza tych z chorobami serca, bo może powodować zatrzymanie płynów w organizmie."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Braken of diarree",
       "Weinig eetlust of lusteloosheid",
       "Wankelen, trillingen of toevallen (te veel zout)"
+    ],
+    "pl": [
+      "Silne pragnienie i częste oddawanie moczu",
+      "Wymioty lub biegunka",
+      "Brak apetytu lub ospałość",
+      "Chwiejny chód, drżenie lub drgawki (zbyt dużo soli)"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "de": "Nach einer oder zwei Pommes braucht es meist nur frisches Trinkwasser. Vermuten Sie, dass Ihr Hund zu viel Salziges gefressen hat, wenden Sie sich sofort an Ihren Tierarzt.",
     "fr": "Une frite ou deux ne demandent généralement rien de plus que de l’eau fraîche à volonté. Si vous pensez que votre chien a mangé trop d’aliments salés, contactez immédiatement votre vétérinaire.",
     "pt": "Para uma ou duas batatas fritas, costuma bastar água fresca para beber. Se achas que o teu cão comeu demasiada comida salgada, liga imediatamente ao teu veterinário.",
-    "nl": "Bij een frietje of twee is vers drinkwater meestal genoeg. Denk je dat je hond te veel zout voedsel heeft gegeten, neem dan meteen contact op met je dierenarts."
+    "nl": "Bij een frietje of twee is vers drinkwater meestal genoeg. Denk je dat je hond te veel zout voedsel heeft gegeten, neem dan meteen contact op met je dierenarts.",
+    "pl": "Po jednej czy dwóch frytkach zwykle wystarczy świeża woda do picia. Jeśli podejrzewasz, że pies zjadł za dużo słonego jedzenia, od razu skontaktuj się z weterynarzem."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "de": "Pommes sind ein salziger Snack für Menschen. Hunden geht es mit ihren eigenen Leckerlis besser, also lass die Pommes den Menschen.",
     "fr": "Les frites sont un en-cas salé pour les humains. Les chiens se portent mieux avec leurs propres friandises : garde les frites pour les humains.",
     "pt": "As batatas fritas são um lanche salgado para as pessoas. Os cães ficam melhor com as guloseimas deles, por isso deixa as batatas fritas para as pessoas.",
-    "nl": "Friet is een zoute snack voor mensen. Honden zijn beter af met hun eigen snoepjes, dus bewaar de friet voor mensen."
+    "nl": "Friet is een zoute snack voor mensen. Honden zijn beter af met hun eigen snoepjes, dus bewaar de friet voor mensen.",
+    "pl": "Frytki to słona przekąska dla ludzi. Psom lepiej służą ich własne smakołyki, więc frytki zostaw dla ludzi."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "de": "Sind einfache Kartoffeln besser als Pommes?",
         "fr": "Une pomme de terre nature est-elle préférable aux frites ?",
         "pt": "A batata simples é melhor do que as batatas fritas?",
-        "nl": "Is gewone aardappel beter dan friet?"
+        "nl": "Is gewone aardappel beter dan friet?",
+        "pl": "Czy ziemniak bez dodatków jest lepszy niż frytki?"
       },
       "a": {
         "en": "Yes. Plain mashed or soft cooked potatoes are fine in small amounts, without butter or spices.",
@@ -233,7 +247,8 @@
         "de": "Ja. Einfacher Kartoffelbrei oder weich gekochte Kartoffeln sind in kleinen Mengen in Ordnung, ohne Butter und Gewürze.",
         "fr": "Oui. La pomme de terre cuite tendre ou en purée nature convient en petite quantité, sans beurre ni épices.",
         "pt": "Sim. A batata simples, cozida, em puré ou macia, não faz mal em pequenas quantidades, sem manteiga nem temperos.",
-        "nl": "Ja. Gewone aardappelpuree of zacht gekookte aardappelen zijn in kleine hoeveelheden prima, zonder boter of kruiden."
+        "nl": "Ja. Gewone aardappelpuree of zacht gekookte aardappelen zijn in kleine hoeveelheden prima, zonder boter of kruiden.",
+        "pl": "Tak. Puree lub miękko ugotowane ziemniaki bez masła i przypraw są w małych ilościach w porządku."
       }
     }
   ],
@@ -385,6 +400,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "22c74836eef6c0dd02bb7acf9745623be9924c18a839c16bee1f434ec9c11426"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "7368db78fb861166f4705fbb1e98479f6b135b37b4ea3c45030d11cb1653e234"
     }
   }
 }

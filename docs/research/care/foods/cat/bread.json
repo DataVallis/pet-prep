@@ -15,7 +15,8 @@
     "fr": "Pain (cuit)",
     "es": "Pan (horneado)",
     "pt": "Pão (cozido)",
-    "nl": "Brood (gebakken)"
+    "nl": "Brood (gebakken)",
+    "pl": "Chleb (pieczony)"
   },
   "question": {
     "en": "Can cats eat bread?",
@@ -31,7 +32,8 @@
     "fr": "Les chats peuvent-ils manger du pain ?",
     "es": "¿Pueden los gatos comer pan?",
     "pt": "Os gatos podem comer pão?",
-    "nl": "Mogen katten brood eten?"
+    "nl": "Mogen katten brood eten?",
+    "pl": "Czy koty mogą jeść chleb?"
   },
   "url_slug": {
     "en": "bread",
@@ -47,7 +49,8 @@
     "fr": "pain",
     "es": "pan",
     "pt": "pao",
-    "nl": "brood"
+    "nl": "brood",
+    "pl": "chleb"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Oui, un petit morceau de pain nature, bien cuit, ne pose pas de problème comme friandise occasionnelle. L’ASPCA indique que le pain cuit est sans danger de temps en temps, tant qu’il ne s’agit pas de pain aux raisins secs. La pâte crue qui lève, en revanche, est dangereuse : elle doit rester hors de portée des chats.",
     "es": "Sí, un trocito de pan normal y bien horneado está bien como premio ocasional. La ASPCA dice que el pan horneado es seguro como premio ocasional, siempre que no sea pan con pasas. La masa cruda que está fermentando es otra cosa y debe quedar fuera del alcance de los gatos.",
     "pt": "Sim, um pedaço pequeno de pão simples e bem cozido não faz mal como guloseima ocasional. A ASPCA diz que o pão cozido é seguro como guloseima ocasional, desde que não seja pão com passas. A massa crua, que ainda está a levedar, é diferente e tem de ficar longe dos gatos.",
-    "nl": "Ja, een klein stukje gewoon, helemaal gebakken brood is af en toe prima als traktatie. Volgens de ASPCA is gebakken brood veilig als af en toe een traktatie, mits het geen rozijnenbrood is. Rauw, rijzend deeg is iets heel anders en moet bij katten uit de buurt blijven."
+    "nl": "Ja, een klein stukje gewoon, helemaal gebakken brood is af en toe prima als traktatie. Volgens de ASPCA is gebakken brood veilig als af en toe een traktatie, mits het geen rozijnenbrood is. Rauw, rijzend deeg is iets heel anders en moet bij katten uit de buurt blijven.",
+    "pl": "Tak, mały kawałek chleba bez dodatków, dobrze upieczonego, od czasu do czasu nie zaszkodzi. ASPCA uznaje upieczony chleb za bezpieczny jako smakołyk podawany od czasu do czasu, o ile nie jest to chleb z rodzynkami. Surowe, wyrastające ciasto to zupełnie coś innego i kot nie może się do niego dostać."
   },
   "why": {
     "en": "On a page about dogs and cats, the ASPCA says fully baked bread is safe for pets as an occasional treat, so long as it is not raisin bread. Agriculture Victoria explains that the risk from yeast dough diminishes once the dough is cooked and the yeast has fully risen. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Blue Cross says cats need a meat-based diet. Cats Protection advises sticking to cat treats rather than human foods.",
@@ -80,7 +84,8 @@
     "fr": "Sur une page consacrée aux chiens et aux chats, l’ASPCA indique que le pain bien cuit est sans danger pour les animaux de compagnie comme friandise occasionnelle, à condition qu’il ne s’agisse pas de pain aux raisins secs. Agriculture Victoria explique que le risque lié à la pâte levée diminue une fois la pâte cuite et la levée terminée. International Cat Care précise que les chats, carnivores stricts, digèrent et utilisent moins bien les glucides, et Blue Cross rappelle qu’ils ont besoin d’une alimentation à base de viande. Cats Protection conseille de s’en tenir aux friandises pour chats plutôt qu’aux aliments pour humains.",
     "es": "En una página sobre perros y gatos, la ASPCA dice que el pan bien horneado es seguro para las mascotas como premio ocasional, siempre que no sea pan con pasas. Agriculture Victoria explica que el riesgo de la masa con levadura disminuye una vez que la masa se ha cocinado y la levadura ha terminado de fermentar. International Cat Care señala que los gatos, al ser carnívoros estrictos, digieren y aprovechan peor los carbohidratos, y Blue Cross dice que los gatos necesitan una alimentación a base de carne. Cats Protection aconseja ceñirse a los premios para gatos en lugar de darles comida de personas.",
     "pt": "Numa página sobre cães e gatos, a ASPCA diz que o pão totalmente cozido é seguro para os animais de estimação como guloseima ocasional, desde que não seja pão com passas. A Agriculture Victoria explica que o risco da massa com fermento diminui depois de a massa estar cozida e de o fermento ter levedado por completo. A International Cat Care diz que os gatos, por serem carnívoros estritos, têm mais dificuldade em digerir e aproveitar os hidratos de carbono, e a Blue Cross diz que os gatos precisam de uma alimentação à base de carne. A Cats Protection aconselha a dar guloseimas próprias para gatos em vez de comida de pessoas.",
-    "nl": "Op een pagina over honden en katten zegt de ASPCA dat volledig gebakken brood veilig is voor huisdieren als af en toe een traktatie, mits het geen rozijnenbrood is. Agriculture Victoria legt uit dat het risico van gistdeeg afneemt zodra het deeg is gebakken en de gist helemaal is gerezen. International Cat Care zegt dat katten, als echte vleeseters, koolhydraten minder goed kunnen verteren en benutten, en Blue Cross zegt dat katten een voeding op basis van vlees nodig hebben. Cats Protection adviseert om bij kattensnoepjes te blijven in plaats van menselijk voedsel te geven."
+    "nl": "Op een pagina over honden en katten zegt de ASPCA dat volledig gebakken brood veilig is voor huisdieren als af en toe een traktatie, mits het geen rozijnenbrood is. Agriculture Victoria legt uit dat het risico van gistdeeg afneemt zodra het deeg is gebakken en de gist helemaal is gerezen. International Cat Care zegt dat katten, als echte vleeseters, koolhydraten minder goed kunnen verteren en benutten, en Blue Cross zegt dat katten een voeding op basis van vlees nodig hebben. Cats Protection adviseert om bij kattensnoepjes te blijven in plaats van menselijk voedsel te geven.",
+    "pl": "Na stronie poświęconej psom i kotom ASPCA podaje, że w pełni upieczony chleb jest dla zwierząt domowych bezpieczny jako smakołyk od czasu do czasu, o ile nie jest to chleb z rodzynkami. Agriculture Victoria wyjaśnia, że ryzyko związane z ciastem drożdżowym maleje po jego upieczeniu, gdy drożdże już w pełni wyrosły. International Cat Care podaje, że koty jako bezwzględne mięsożercy gorzej trawią i wykorzystują węglowodany, a Blue Cross – że koty potrzebują diety opartej na mięsie. Cats Protection radzi dawać kotom smakołyki przeznaczone dla kotów, a nie jedzenie dla ludzi."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "fr": "Ne proposez qu’un petit morceau, de temps en temps. Si votre chat a mangé de la pâte crue ou en train de lever plutôt que du pain cuit, contactez immédiatement votre vétérinaire sans attendre l’apparition de signes.",
     "es": "Ofrécele solo un trocito de vez en cuando. Si tu gato ha comido masa cruda, o masa que estaba fermentando, en lugar de pan horneado, ponte en contacto con tu veterinario enseguida y no esperes a que aparezcan síntomas.",
     "pt": "Oferece apenas um pedaço pequeno de vez em quando. Se o teu gato comeu massa crua ou a levedar, e não pão cozido, contacta imediatamente o teu veterinário e não esperes que surjam sinais.",
-    "nl": "Geef maar een klein stukje, af en toe. Heeft je kat rauw of rijzend deeg gegeten in plaats van gebakken brood, neem dan meteen contact op met je dierenarts en wacht niet af of er verschijnselen optreden."
+    "nl": "Geef maar een klein stukje, af en toe. Heeft je kat rauw of rijzend deeg gegeten in plaats van gebakken brood, neem dan meteen contact op met je dierenarts en wacht niet af of er verschijnselen optreden.",
+    "pl": "Dawaj tylko mały kawałek i rzadko. Jeśli twój kot zjadł surowe, wyrastające ciasto, a nie upieczony chleb, od razu skontaktuj się z weterynarzem – nie czekaj, aż pojawią się objawy."
   },
   "serving": {
     "en": "A small piece of plain, fully baked bread. Never raisin bread and never raw dough.",
@@ -113,7 +119,8 @@
     "fr": "Un petit morceau de pain nature, bien cuit. Jamais de pain aux raisins secs, jamais de pâte crue.",
     "es": "Un trocito de pan normal y bien horneado. Nunca pan con pasas ni masa cruda.",
     "pt": "Um pedaço pequeno de pão simples e bem cozido. Nunca pão com passas nem massa crua.",
-    "nl": "Een klein stukje gewoon, helemaal gebakken brood. Nooit rozijnenbrood en nooit rauw deeg."
+    "nl": "Een klein stukje gewoon, helemaal gebakken brood. Nooit rozijnenbrood en nooit rauw deeg.",
+    "pl": "Mały kawałek chleba bez dodatków, w pełni upieczonego. Nigdy chleba z rodzynkami ani surowego ciasta."
   },
   "child": {
     "en": "A tiny bit of plain bread is an okay treat now and then. Cats mostly need meat, and raw dough is only for baking.",
@@ -129,7 +136,8 @@
     "fr": "Un tout petit bout de pain nature, c’est permis de temps en temps. Les chats ont surtout besoin de viande, et la pâte crue ne se mange pas.",
     "es": "Un poquito de pan normal es un premio aceptable de vez en cuando. Los gatos necesitan sobre todo carne, y la masa cruda es solo para hornear, no para comer.",
     "pt": "Um bocadinho de pão simples é uma guloseima aceitável de vez em quando. Os gatos precisam sobretudo de carne, e a massa crua serve só para fazer pão.",
-    "nl": "Een klein stukje gewoon brood is af en toe een prima traktatie. Katten hebben vooral vlees nodig, en rauw deeg is alleen om te bakken."
+    "nl": "Een klein stukje gewoon brood is af en toe een prima traktatie. Katten hebben vooral vlees nodig, en rauw deeg is alleen om te bakken.",
+    "pl": "Maleńki kawałek chleba bez dodatków raz na jakiś czas nie zaszkodzi. Koty potrzebują przede wszystkim mięsa, a surowe ciasto trzeba najpierw upiec."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "fr": "La pâte à pain crue est-elle dangereuse pour les chats ?",
         "es": "¿Es seguro dar masa de pan cruda a los gatos?",
         "pt": "A massa de pão crua é segura para gatos?",
-        "nl": "Is rauw brooddeeg veilig voor katten?"
+        "nl": "Is rauw brooddeeg veilig voor katten?",
+        "pl": "Czy surowe ciasto chlebowe jest bezpieczne dla kotów?"
       },
       "a": {
         "en": "No. The ASPCA says dogs and cats should never be allowed to eat uncooked, yeasted bread dough, and Agriculture Victoria says yeast dough can rise and cause gas to build up in a cat's digestive system.",
@@ -163,7 +172,8 @@
         "fr": "Non. L’ASPCA indique qu’il ne faut jamais laisser les chiens et les chats manger de la pâte à pain crue contenant de la levure, et Agriculture Victoria précise que la pâte levée peut gonfler et provoquer une accumulation de gaz dans le système digestif du chat.",
         "es": "No. La ASPCA dice que nunca se debe permitir que perros y gatos coman masa de pan cruda con levadura, y Agriculture Victoria explica que la masa con levadura puede fermentar y acumular gases en el aparato digestivo del gato.",
         "pt": "Não. A ASPCA diz que nunca se deve deixar cães e gatos comer massa de pão crua com fermento, e a Agriculture Victoria diz que a massa com fermento pode crescer e fazer acumular gases no sistema digestivo do gato.",
-        "nl": "Nee. Volgens de ASPCA mogen honden en katten nooit ongebakken brooddeeg met gist eten, en volgens Agriculture Victoria kan gistdeeg gaan rijzen, waardoor zich gas ophoopt in het spijsverteringsstelsel van een kat."
+        "nl": "Nee. Volgens de ASPCA mogen honden en katten nooit ongebakken brooddeeg met gist eten, en volgens Agriculture Victoria kan gistdeeg gaan rijzen, waardoor zich gas ophoopt in het spijsverteringsstelsel van een kat.",
+        "pl": "Nie. ASPCA podaje, że psy i koty nigdy nie mogą zjeść surowego ciasta chlebowego na drożdżach, a Agriculture Victoria – że ciasto drożdżowe może wyrastać i powodować gromadzenie się gazów w przewodzie pokarmowym kota."
       }
     },
     {
@@ -181,7 +191,8 @@
         "fr": "Les chats peuvent-ils manger du pain aux raisins secs ?",
         "es": "¿Pueden los gatos comer pan con pasas?",
         "pt": "Os gatos podem comer pão com passas?",
-        "nl": "Mogen katten rozijnenbrood eten?"
+        "nl": "Mogen katten rozijnenbrood eten?",
+        "pl": "Czy koty mogą jeść chleb z rodzynkami?"
       },
       "a": {
         "en": "No. The ASPCA's advice that baked bread is fine as an occasional treat leaves out raisin bread.",
@@ -197,7 +208,8 @@
         "fr": "Non. Quand l’ASPCA dit que le pain cuit convient comme friandise occasionnelle, elle exclut le pain aux raisins secs.",
         "es": "No. El consejo de la ASPCA de que el pan horneado está bien como premio ocasional no incluye el pan con pasas.",
         "pt": "Não. O conselho da ASPCA de que o pão cozido é aceitável como guloseima ocasional não inclui o pão com passas.",
-        "nl": "Nee. Het advies van de ASPCA dat gebakken brood af en toe prima is, geldt niet voor rozijnenbrood."
+        "nl": "Nee. Het advies van de ASPCA dat gebakken brood af en toe prima is, geldt niet voor rozijnenbrood.",
+        "pl": "Nie. Zgoda ASPCA na upieczony chleb jako smakołyk od czasu do czasu nie dotyczy chleba z rodzynkami."
       }
     }
   ],
@@ -319,6 +331,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e6c78184a2479b17dbdf939ff951de826420c57bc24a436990235e192a66e64d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "fa11997f8ecc39f512cdb36511561ef83fb396e5ff97868ed340090c8e75cb44"
     }
   }
 }

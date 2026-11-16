@@ -14,7 +14,8 @@
     "de": "Brühe und Fond",
     "fr": "Bouillon et fond",
     "pt": "Caldo",
-    "nl": "Bouillon"
+    "nl": "Bouillon",
+    "pl": "Bulion i wywar"
   },
   "question": {
     "en": "Can dogs have broth?",
@@ -29,7 +30,8 @@
     "de": "Dürfen Hunde Brühe bekommen?",
     "fr": "Les chiens peuvent-ils boire du bouillon ?",
     "pt": "Os cães podem tomar caldo?",
-    "nl": "Mogen honden bouillon krijgen?"
+    "nl": "Mogen honden bouillon krijgen?",
+    "pl": "Czy psy mogą pić bulion?"
   },
   "url_slug": {
     "en": "broth",
@@ -44,7 +46,8 @@
     "de": "bruehe",
     "fr": "bouillon",
     "pt": "caldo",
-    "nl": "bouillon"
+    "nl": "bouillon",
+    "pl": "bulion"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "de": "Ja, ein wenig salzarme Brühe ist in Ordnung. Tierärzte empfehlen manchmal, etwas salzarme Hühner-, Gemüse- oder Rinderbrühe unter das Futter zu geben, damit es besser schmeckt. Verzichten Sie auf Brühwürfel, die sehr salzig sind, und auf Brühen mit Zwiebeln, Knoblauch oder zugesetztem Salz.",
     "fr": "Oui, un peu de bouillon pauvre en sel convient. Les vétérinaires conseillent parfois d’ajouter un peu de bouillon de poulet, de légumes ou de bœuf pauvre en sel à la nourriture d’un chien pour la rendre plus savoureuse. Évitez les cubes de bouillon, très salés, ainsi que les bouillons préparés avec de l’oignon, de l’ail ou du sel ajouté.",
     "pt": "Sim, um pouco de caldo com pouco sal não faz mal. Os veterinários sugerem por vezes juntar um pouco de caldo de galinha, de legumes ou de vaca com pouco sal à comida do cão, para dar sabor. Evita os cubos de caldo, que são muito salgados, e os caldos feitos com cebola, alho ou sal adicionado.",
-    "nl": "Ja, een beetje zoutarme bouillon is prima. Dierenartsen raden soms aan om een beetje zoutarme kippen-, groente- of runderbouillon door het voer van een hond te doen voor de smaak. Gebruik geen bouillonblokjes, want die zijn erg zout, en ook geen bouillon met ui, knoflook of toegevoegd zout."
+    "nl": "Ja, een beetje zoutarme bouillon is prima. Dierenartsen raden soms aan om een beetje zoutarme kippen-, groente- of runderbouillon door het voer van een hond te doen voor de smaak. Gebruik geen bouillonblokjes, want die zijn erg zout, en ook geen bouillon met ui, knoflook of toegevoegd zout.",
+    "pl": "Tak, odrobina bulionu o niskiej zawartości sodu jest w porządku. Weterynarze czasem radzą dodać do karmy psa trochę takiego bulionu drobiowego, warzywnego lub wołowego, żeby lepiej smakowała. Nie podawaj kostek bulionowych, bo są bardzo słone, ani bulionów z cebulą, czosnkiem lub dodatkiem soli."
   },
   "why": {
     "en": "Bouillon (stock) cubes used to make stock and gravy contain a lot of sodium, which can cause stomach and gut problems and even seizures. Some ready-made broths may contain onions, garlic or salt, added for taste and to keep them longer, and onions and garlic can be found in many pre-made foods. That's why only plain, low-sodium broth with dog-safe ingredients is a good choice.",
@@ -75,7 +79,8 @@
     "de": "Brühwürfel für Fond und Soßen enthalten viel Natrium, das Magen-Darm-Probleme und sogar Krampfanfälle verursachen kann. Manche fertige Brühen enthalten Zwiebeln, Knoblauch oder Salz, die für Geschmack und Haltbarkeit zugesetzt werden, und Zwiebeln und Knoblauch stecken in vielen Fertiggerichten. Deshalb ist nur ungewürzte, salzarme Brühe mit für Hunde unbedenklichen Zutaten eine gute Wahl.",
     "fr": "Les cubes de bouillon ou de fond utilisés pour préparer bouillons et sauces contiennent beaucoup de sodium, qui peut provoquer des problèmes d’estomac et d’intestin, voire des convulsions. Certains bouillons prêts à l’emploi peuvent contenir de l’oignon, de l’ail ou du sel, ajoutés pour le goût et pour une meilleure conservation, et on trouve de l’oignon et de l’ail dans de nombreux produits préparés. C’est pourquoi seul un bouillon nature, pauvre en sel et composé d’ingrédients sans danger pour les chiens, est un bon choix.",
     "pt": "Os cubos de caldo usados para fazer caldos e molhos têm muito sódio, que pode causar problemas no estômago e nos intestinos e até convulsões. Alguns caldos prontos podem conter cebola, alho ou sal, adicionados para dar sabor e para durarem mais tempo, e a cebola e o alho encontram-se em muitos alimentos já preparados. Por isso, só é boa escolha um caldo simples, com pouco sal e ingredientes seguros para cães.",
-    "nl": "Bouillonblokjes waarmee je bouillon en jus maakt, bevatten veel natrium, wat maag- en darmklachten en zelfs toevallen kan veroorzaken. Sommige kant-en-klare bouillons bevatten ui, knoflook of zout, toegevoegd voor de smaak en om ze langer houdbaar te maken, en ui en knoflook zitten in veel kant-en-klare producten. Daarom is alleen gewone, zoutarme bouillon met ingrediënten die veilig zijn voor honden een goede keuze."
+    "nl": "Bouillonblokjes waarmee je bouillon en jus maakt, bevatten veel natrium, wat maag- en darmklachten en zelfs toevallen kan veroorzaken. Sommige kant-en-klare bouillons bevatten ui, knoflook of zout, toegevoegd voor de smaak en om ze langer houdbaar te maken, en ui en knoflook zitten in veel kant-en-klare producten. Daarom is alleen gewone, zoutarme bouillon met ingrediënten die veilig zijn voor honden een goede keuze.",
+    "pl": "Kostki bulionowe, z których robi się wywar i sos, zawierają dużo sodu, który może powodować problemy z żołądkiem i jelitami, a nawet drgawki. Niektóre gotowe buliony mogą zawierać cebulę, czosnek lub sól, dodawane dla smaku i dłuższej trwałości, a cebula i czosnek trafiają się w wielu gotowych produktach. Dlatego dobrym wyborem jest tylko bulion bez dodatków, o niskiej zawartości sodu, ze składników bezpiecznych dla psów."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "de": "Hat Ihr Hund Brühe mit Zwiebeln oder Knoblauch bekommen, wenden Sie sich so schnell wie möglich an Ihren Tierarzt.",
     "fr": "Si votre chien a bu du bouillon préparé avec de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible.",
     "pt": "Se o teu cão tomou caldo feito com cebola ou alho, fala com o teu veterinário o mais depressa possível.",
-    "nl": "Heeft je hond bouillon met ui of knoflook binnengekregen, neem dan zo snel mogelijk contact op met je dierenarts."
+    "nl": "Heeft je hond bouillon met ui of knoflook binnengekregen, neem dan zo snel mogelijk contact op met je dierenarts.",
+    "pl": "Jeśli pies dostał bulion z cebulą lub czosnkiem, jak najszybciej skontaktuj się z weterynarzem."
   },
   "serving": {
     "en": "Choose a plain, low-sodium broth without onion or garlic, and add just a bit to your dog's food for flavour. If you make broth at home, remove the hardened layer of fat once it has cooled, and never give your dog the cooked bones.",
@@ -106,7 +112,8 @@
     "de": "Wählen Sie eine ungewürzte, salzarme Brühe ohne Zwiebel und Knoblauch und geben Sie nur einen Schuss davon unter das Futter Ihres Hundes, damit es besser schmeckt. Wenn Sie die Brühe selbst kochen, nehmen Sie nach dem Abkühlen die erstarrte Fettschicht ab und geben Sie Ihrem Hund niemals die gekochten Knochen.",
     "fr": "Choisissez un bouillon nature, pauvre en sel, sans oignon ni ail, et n’en ajoutez qu’un peu à la nourriture de votre chien pour la rendre plus savoureuse. Si vous préparez le bouillon vous-même, retirez la couche de graisse figée une fois le bouillon refroidi, et ne donnez jamais à votre chien les os cuits.",
     "pt": "Escolhe um caldo simples, com pouco sal e sem cebola nem alho, e junta só um pouco à comida do teu cão para dar sabor. Se fizeres o caldo em casa, retira a camada de gordura endurecida depois de arrefecer e nunca dês ao teu cão os ossos cozinhados.",
-    "nl": "Kies een gewone, zoutarme bouillon zonder ui of knoflook en doe er maar een klein beetje van door het voer van je hond voor de smaak. Maak je zelf bouillon, haal dan de gestolde vetlaag eraf als hij is afgekoeld en geef je hond nooit de gekookte botten."
+    "nl": "Kies een gewone, zoutarme bouillon zonder ui of knoflook en doe er maar een klein beetje van door het voer van je hond voor de smaak. Maak je zelf bouillon, haal dan de gestolde vetlaag eraf als hij is afgekoeld en geef je hond nooit de gekookte botten.",
+    "pl": "Wybierz bulion bez dodatków, o niskiej zawartości sodu, bez cebuli i czosnku, i dodaj do karmy psa tylko odrobinę, dla smaku. Jeśli gotujesz bulion w domu, po ostygnięciu zdejmij stwardniałą warstwę tłuszczu i nigdy nie dawaj psu ugotowanych kości."
   },
   "child": {
     "en": "A little plain broth can make dog food extra tasty. Ask a grown-up first, because some broths have onion and lots of salt.",
@@ -121,7 +128,8 @@
     "de": "Ein bisschen ungewürzte Brühe macht das Hundefutter extra lecker. Frag vorher einen Erwachsenen, denn manche Brühen enthalten Zwiebel und viel Salz.",
     "fr": "Un peu de bouillon nature peut rendre la gamelle encore plus appétissante. Demande d’abord à un adulte, car certains bouillons contiennent de l’oignon et beaucoup de sel.",
     "pt": "Um pouco de caldo simples pode deixar a comida do cão ainda mais saborosa. Pergunta primeiro a um adulto, porque alguns caldos têm cebola e muito sal.",
-    "nl": "Een beetje gewone bouillon maakt hondenvoer extra lekker. Vraag het eerst aan een volwassene, want sommige bouillons bevatten ui en veel zout."
+    "nl": "Een beetje gewone bouillon maakt hondenvoer extra lekker. Vraag het eerst aan een volwassene, want sommige bouillons bevatten ui en veel zout.",
+    "pl": "Odrobina bulionu bez dodatków może sprawić, że psia karma będzie jeszcze smaczniejsza. Najpierw zapytaj dorosłego, bo niektóre buliony zawierają cebulę i dużo soli."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "de": "Darf ich einen Brühwürfel verwenden?",
         "fr": "Puis-je utiliser un cube de bouillon ?",
         "pt": "Posso usar um cubo de caldo?",
-        "nl": "Mag ik een bouillonblokje gebruiken?"
+        "nl": "Mag ik een bouillonblokje gebruiken?",
+        "pl": "Czy mogę użyć kostki bulionowej?"
       },
       "a": {
         "en": "No. Bouillon cubes used for making stock and gravy contain high amounts of sodium, which can lead to stomach and gut problems and even seizures.",
@@ -153,7 +162,8 @@
         "de": "Nein. Brühwürfel für Fond und Soßen enthalten viel Natrium, das zu Magen-Darm-Problemen und sogar zu Krampfanfällen führen kann.",
         "fr": "Non. Les cubes de bouillon utilisés pour préparer bouillons et sauces contiennent beaucoup de sodium, qui peut provoquer des problèmes d’estomac et d’intestin, voire des convulsions.",
         "pt": "Não. Os cubos de caldo usados para fazer caldos e molhos têm muito sódio, que pode causar problemas no estômago e nos intestinos e até convulsões.",
-        "nl": "Nee. Bouillonblokjes waarmee je bouillon en jus maakt, bevatten veel natrium, wat kan leiden tot maag- en darmklachten en zelfs toevallen."
+        "nl": "Nee. Bouillonblokjes waarmee je bouillon en jus maakt, bevatten veel natrium, wat kan leiden tot maag- en darmklachten en zelfs toevallen.",
+        "pl": "Nie. Kostki bulionowe, z których robi się wywar i sos, zawierają dużo sodu, który może powodować problemy z żołądkiem i jelitami, a nawet drgawki."
       }
     },
     {
@@ -170,7 +180,8 @@
         "de": "Kann Brühe einem Hund helfen, der nicht fressen will?",
         "fr": "Le bouillon peut-il aider un chien qui refuse de manger ?",
         "pt": "O caldo pode ajudar um cão que não quer comer?",
-        "nl": "Kan bouillon helpen bij een hond die niet wil eten?"
+        "nl": "Kan bouillon helpen bij een hond die niet wil eten?",
+        "pl": "Czy bulion pomoże psu, który nie chce jeść?"
       },
       "a": {
         "en": "Adding a bit of low-sodium broth is one of the simple steps vets suggest to make food tastier. Your vet can give you specific advice.",
@@ -185,7 +196,8 @@
         "de": "Ein wenig salzarme Brühe ist eine der einfachen Maßnahmen, die Tierärzte empfehlen, damit das Futter besser schmeckt. Ihr Tierarzt kann Sie genauer beraten.",
         "fr": "Ajouter un peu de bouillon pauvre en sel fait partie des gestes simples que suggèrent les vétérinaires pour rendre la nourriture plus appétissante. Votre vétérinaire peut vous donner des conseils précis.",
         "pt": "Juntar um pouco de caldo com pouco sal é um dos passos simples que os veterinários sugerem para tornar a comida mais apetitosa. O teu veterinário pode dar-te conselhos concretos.",
-        "nl": "Een beetje zoutarme bouillon is een van de simpele tips van dierenartsen om voer smakelijker te maken. Je dierenarts kan je gericht advies geven."
+        "nl": "Een beetje zoutarme bouillon is een van de simpele tips van dierenartsen om voer smakelijker te maken. Je dierenarts kan je gericht advies geven.",
+        "pl": "Odrobina bulionu o niskiej zawartości sodu dodana do karmy to jeden z prostych sposobów, które podpowiadają weterynarze, by jedzenie smakowało psu bardziej. Konkretnej porady udzieli ci weterynarz."
       }
     }
   ],
@@ -312,6 +324,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "931efd12353307acf330a72aacb39d98935471eb1f63c68f84f5ba3ceaea14df"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "e941de45e6f0414310b570feacb19ba0b7c03a237de4855aef338441e284fa31"
     }
   }
 }

@@ -14,7 +14,8 @@
     "fr": "Hot-dogs",
     "es": "Perritos calientes",
     "pt": "Cachorros-quentes",
-    "nl": "Hotdogs"
+    "nl": "Hotdogs",
+    "pl": "Hot dogi"
   },
   "question": {
     "en": "Can cats eat hot dogs?",
@@ -29,7 +30,8 @@
     "fr": "Les chats peuvent-ils manger des hot-dogs ?",
     "es": "¿Pueden los gatos comer perritos calientes?",
     "pt": "Os gatos podem comer cachorros-quentes?",
-    "nl": "Mogen katten hotdogs eten?"
+    "nl": "Mogen katten hotdogs eten?",
+    "pl": "Czy koty mogą jeść hot dogi?"
   },
   "url_slug": {
     "en": "hot-dogs",
@@ -44,7 +46,8 @@
     "fr": "hot-dogs",
     "es": "perritos-calientes",
     "pt": "cachorros-quentes",
-    "nl": "hotdogs"
+    "nl": "hotdogs",
+    "pl": "hot-dogi"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "fr": "Mieux vaut éviter. Les hot-dogs sont une viande transformée, généralement riche en sel et en épices ajoutés, et certains assaisonnements peuvent même être toxiques pour les chats. La RSPCA Australia conseille d’éviter les saucisses et les viandes cuites industrielles pour les chats.",
     "es": "Es mejor no dárselos. Los perritos calientes son una carne procesada, que suele llevar sal y especias en exceso, y algunos condimentos añadidos pueden incluso ser tóxicos para los gatos. RSPCA Australia aconseja evitar las salchichas y las carnes cocinadas de fabricación industrial para los gatos.",
     "pt": "É melhor não. Os cachorros-quentes são uma carne processada, normalmente com sal e temperos a mais, e alguns temperos adicionados podem até ser tóxicos para os gatos. A RSPCA Australia aconselha a evitar salsichas e carnes cozinhadas industriais para gatos.",
-    "nl": "Liever niet. Hotdogs zijn bewerkt vlees, meestal vol extra zout en kruiden, en sommige toegevoegde kruiden kunnen zelfs giftig zijn voor katten. RSPCA Australia raadt af om katten worst en gekookt, industrieel bereid vlees te geven."
+    "nl": "Liever niet. Hotdogs zijn bewerkt vlees, meestal vol extra zout en kruiden, en sommige toegevoegde kruiden kunnen zelfs giftig zijn voor katten. RSPCA Australia raadt af om katten worst en gekookt, industrieel bereid vlees te geven.",
+    "pl": "Lepiej nie. Hot dogi to przetworzone mięso, zwykle z dużą ilością dodatkowej soli i przypraw, a niektóre dodane przyprawy mogą być nawet toksyczne dla kotów. RSPCA Australia radzi nie podawać kotom kiełbas ani gotowanych wyrobów mięsnych."
   },
   "why": {
     "en": "Purina notes that turkey hot dogs, turkey sausage, deli meat and other processed meats are usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding sausages and cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency. The RSPCA warns that processed meats like pigs in blankets are incredibly high in salt, and onion and garlic, found in many pre-made foods, are toxic to cats.",
@@ -75,7 +79,8 @@
     "fr": "Purina indique que les hot-dogs de dinde, les saucisses de dinde, la charcuterie et les autres viandes transformées sont généralement riches en sodium et en épices ajoutés, et que certains assaisonnements peuvent être toxiques pour les chats. La RSPCA Australia conseille d’éviter les saucisses et les viandes cuites industrielles, car elles peuvent contenir des conservateurs à base de sulfites, associés à une carence en thiamine (vitamine B1). La RSPCA avertit que les viandes transformées, comme les petites saucisses enveloppées de bacon, sont extrêmement salées, et l’oignon et l’ail, présents dans de nombreux plats préparés, sont toxiques pour les chats.",
     "es": "Purina señala que los perritos calientes de pavo, las salchichas de pavo, el fiambre y otras carnes procesadas suelen llevar sodio y especias en exceso, y algunos condimentos añadidos podrían ser tóxicos para los gatos. RSPCA Australia aconseja evitar las salchichas y las carnes cocinadas de fabricación industrial porque pueden llevar conservantes con sulfitos, que se han relacionado con la deficiencia de tiamina (vitamina B1). La RSPCA advierte de que las carnes procesadas, como los « pigs in blankets » (salchichas envueltas en beicon), tienen muchísima sal, y la cebolla y el ajo, presentes en muchos alimentos preparados, son tóxicos para los gatos.",
     "pt": "A Purina refere que os cachorros-quentes de peru, as salsichas de peru, os frios e outras carnes processadas costumam ter sódio e temperos a mais, e que alguns temperos adicionados podem ser tóxicos para os gatos. A RSPCA Australia aconselha a evitar salsichas e carnes cozinhadas industriais porque podem conter conservantes à base de sulfitos, que têm sido associados a carência de tiamina (vitamina B1). A RSPCA avisa que as carnes processadas, como as salsichas embrulhadas em bacon, têm um teor de sal altíssimo, e a cebola e o alho, presentes em muitos alimentos pré-preparados, são tóxicos para os gatos.",
-    "nl": "Purina merkt op dat kalkoenhotdogs, kalkoenworst, vleeswaren en ander bewerkt vlees meestal vol extra natrium en kruiden zitten, en dat sommige toegevoegde kruiden giftig kunnen zijn voor katten. RSPCA Australia raadt af om worst, worstvlees en gekookt, industrieel bereid vlees te geven, omdat die conserveermiddelen met sulfiet kunnen bevatten, die in verband zijn gebracht met een tekort aan thiamine (vitamine B1). De RSPCA waarschuwt dat bewerkt vlees zoals worstjes in spek ontzettend veel zout bevat. Ui en knoflook, die in veel kant-en-klare producten zitten, zijn giftig voor katten."
+    "nl": "Purina merkt op dat kalkoenhotdogs, kalkoenworst, vleeswaren en ander bewerkt vlees meestal vol extra natrium en kruiden zitten, en dat sommige toegevoegde kruiden giftig kunnen zijn voor katten. RSPCA Australia raadt af om worst, worstvlees en gekookt, industrieel bereid vlees te geven, omdat die conserveermiddelen met sulfiet kunnen bevatten, die in verband zijn gebracht met een tekort aan thiamine (vitamine B1). De RSPCA waarschuwt dat bewerkt vlees zoals worstjes in spek ontzettend veel zout bevat. Ui en knoflook, die in veel kant-en-klare producten zitten, zijn giftig voor katten.",
+    "pl": "Purina zaznacza, że hot dogi z indyka, kiełbasa z indyka, wędliny i inne przetworzone mięsa zwykle zawierają mnóstwo dodatkowego sodu i przypraw, a niektóre dodane przyprawy mogą być toksyczne dla kotów. RSPCA Australia radzi unikać kiełbas i gotowanych wyrobów mięsnych, ponieważ mogą zawierać konserwanty siarczynowe, które łączono z niedoborem tiaminy (witaminy B1). RSPCA ostrzega, że przetworzone mięso, takie jak kiełbaski zawijane w boczek, zawiera niewiarygodnie dużo soli, a cebula i czosnek, obecne w wielu gotowych produktach, są toksyczne dla kotów."
   },
   "signs": {
     "en": [
@@ -129,6 +134,10 @@
     "nl": [
       "Maagklachten",
       "Diarree"
+    ],
+    "pl": [
+      "Rozstrój żołądka",
+      "Biegunka"
     ]
   },
   "what_to_do": {
@@ -144,7 +153,8 @@
     "fr": "Si votre chat a mangé un hot-dog pouvant contenir de l’oignon ou de l’ail, contactez votre vétérinaire dès que possible. S’il a ensuite des troubles digestifs ou de la diarrhée, appelez votre vétérinaire pour demander conseil.",
     "es": "Si tu gato ha comido un perrito caliente que pueda llevar cebolla o ajo, ponte en contacto con tu veterinario lo antes posible. Si después tiene malestar de estómago o diarrea, llama a tu veterinario para que te aconseje.",
     "pt": "Se o teu gato comeu um cachorro-quente que possa conter cebola ou alho, contacta o teu veterinário o mais depressa possível. Se depois tiver indisposição de estômago ou diarreia, liga ao teu veterinário para pedir conselho.",
-    "nl": "Heeft je kat een hotdog gegeten waar mogelijk ui of knoflook in zat, neem dan zo snel mogelijk contact op met je dierenarts. Heeft ze daarna maagklachten of diarree, bel dan je dierenarts voor advies."
+    "nl": "Heeft je kat een hotdog gegeten waar mogelijk ui of knoflook in zat, neem dan zo snel mogelijk contact op met je dierenarts. Heeft ze daarna maagklachten of diarree, bel dan je dierenarts voor advies.",
+    "pl": "Jeśli twój kot zjadł hot doga, który mógł zawierać cebulę lub czosnek, jak najszybciej skontaktuj się z weterynarzem. Jeśli potem ma rozstrój żołądka lub biegunkę, zadzwoń do weterynarza po poradę."
   },
   "serving": null,
   "child": {
@@ -160,7 +170,8 @@
     "fr": "Les hot-dogs sont un en-cas salé pour les humains. Ton chat sera plus heureux avec ses propres friandises pour chats.",
     "es": "Los perritos calientes son un tentempié salado para personas. El gatito es más feliz con sus propios premios para gatos.",
     "pt": "Os cachorros-quentes são um lanche salgado para pessoas. O gatinho fica mais feliz com as suas próprias guloseimas para gatos.",
-    "nl": "Hotdogs zijn een zout hapje voor mensen. Je kat is blijer met haar eigen kattensnoepjes."
+    "nl": "Hotdogs zijn een zout hapje voor mensen. Je kat is blijer met haar eigen kattensnoepjes.",
+    "pl": "Hot dogi to słona przekąska dla ludzi. Kotek jest szczęśliwszy ze swoimi kocimi smakołykami."
   },
   "faq": [
     {
@@ -177,7 +188,8 @@
         "fr": "Une toute petite bouchée est-elle nocive ?",
         "es": "¿Hace daño un bocado muy pequeño?",
         "pt": "Uma dentadinha pequena faz mal?",
-        "nl": "Is één klein hapje schadelijk?"
+        "nl": "Is één klein hapje schadelijk?",
+        "pl": "Czy jeden maleńki kęs szkodzi?"
       },
       "a": {
         "en": "A tiny piece of unseasoned processed turkey meat, such as a turkey hot dog, might not do a lot of harm, but it is best not to feed it regularly, and seasoned hot dogs may contain onion or garlic, which are toxic to cats.",
@@ -192,7 +204,8 @@
         "fr": "Un tout petit morceau de viande de dinde transformée non assaisonnée, comme un hot-dog de dinde, ne fera peut-être pas beaucoup de mal, mais mieux vaut ne pas en donner régulièrement, et les hot-dogs assaisonnés peuvent contenir de l’oignon ou de l’ail, toxiques pour les chats.",
         "es": "Un trocito muy pequeño de carne de pavo procesada sin condimentar, como un perrito caliente de pavo, puede que no haga mucho daño, pero lo mejor es no dárselo con regularidad, y los perritos calientes condimentados pueden llevar cebolla o ajo, que son tóxicos para los gatos.",
         "pt": "Um pedaço minúsculo de carne de peru processada sem temperos, como um cachorro-quente de peru, pode não fazer muito mal, mas é melhor não dar com regularidade, e os cachorros-quentes temperados podem conter cebola ou alho, que são tóxicos para os gatos.",
-        "nl": "Een heel klein stukje ongekruid, bewerkt kalkoenvlees, zoals een kalkoenhotdog, doet misschien niet veel kwaad. Geef het toch liever niet regelmatig. Gekruide hotdogs kunnen bovendien ui of knoflook bevatten, en die zijn giftig voor katten."
+        "nl": "Een heel klein stukje ongekruid, bewerkt kalkoenvlees, zoals een kalkoenhotdog, doet misschien niet veel kwaad. Geef het toch liever niet regelmatig. Gekruide hotdogs kunnen bovendien ui of knoflook bevatten, en die zijn giftig voor katten.",
+        "pl": "Maleńki kawałek nieprzyprawionego, przetworzonego mięsa z indyka, na przykład hot doga z indyka, może nie wyrządzić większej szkody, ale lepiej nie podawać takiego mięsa regularnie. Przyprawione hot dogi mogą zawierać cebulę lub czosnek, które są toksyczne dla kotów."
       }
     }
   ],
@@ -327,6 +340,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "750597bb5642ba1ca40f9d0eeccffe83375d63d52894ab80e8504c1c42893897"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "b6bd5d7597fb60d22d5c43ccd998360b8e440c83a9b5066e6a1d9af3e9f4315c"
     }
   }
 }

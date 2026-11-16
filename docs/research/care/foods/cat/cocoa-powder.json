@@ -15,7 +15,8 @@
     "fr": "Cacao en poudre",
     "es": "Cacao en polvo",
     "pt": "Cacau em pó",
-    "nl": "Cacaopoeder"
+    "nl": "Cacaopoeder",
+    "pl": "Kakao w proszku"
   },
   "question": {
     "en": "Can cats eat cocoa powder?",
@@ -31,7 +32,8 @@
     "fr": "Les chats peuvent-ils manger du cacao en poudre ?",
     "es": "¿Pueden los gatos comer cacao en polvo?",
     "pt": "Os gatos podem comer cacau em pó?",
-    "nl": "Mogen katten cacaopoeder eten?"
+    "nl": "Mogen katten cacaopoeder eten?",
+    "pl": "Czy koty mogą jeść kakao w proszku?"
   },
   "url_slug": {
     "en": "cocoa-powder",
@@ -47,7 +49,8 @@
     "fr": "cacao-en-poudre",
     "es": "cacao-en-polvo",
     "pt": "cacau-em-po",
-    "nl": "cacaopoeder"
+    "nl": "cacaopoeder",
+    "pl": "kakao-w-proszku"
   },
   "level": "toxic",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Non. Le cacao en poudre est particulièrement toxique pour les chats, car il est extrêmement concentré en cacao, source de théobromine. Si votre chat en mange, gardez l’emballage et appelez immédiatement votre vétérinaire.",
     "es": "No. El cacao en polvo es especialmente tóxico para los gatos porque contiene una concentración extremadamente alta de sólidos de cacao, que llevan teobromina. Si tu gato come algo, guarda el envase y llama a tu veterinario inmediatamente.",
     "pt": "Não. O cacau em pó é especialmente tóxico para os gatos porque contém uma concentração extremamente alta de sólidos de cacau, que têm teobromina. Se o teu gato comer algum, guarda a embalagem e liga imediatamente ao teu veterinário.",
-    "nl": "Nee. Cacaopoeder is extra giftig voor katten, omdat er extreem veel cacao in zit en cacao theobromine bevat. Eet je kat er iets van, bewaar dan de verpakking en bel meteen je dierenarts."
+    "nl": "Nee. Cacaopoeder is extra giftig voor katten, omdat er extreem veel cacao in zit en cacao theobromine bevat. Eet je kat er iets van, bewaar dan de verpakking en bel meteen je dierenarts.",
+    "pl": "Nie. Kakao w proszku jest dla kotów szczególnie toksyczne, bo zawiera niezwykle dużo kakaowych części stałych, w których znajduje się teobromina. Jeśli twój kot zje choć trochę, zachowaj opakowanie i od razu zadzwoń do weterynarza."
   },
   "why": {
     "en": "PDSA explains that chocolate contains theobromine, which is perfectly safe for humans but toxic for cats. The darker the chocolate, the more cocoa solids and theobromine it contains, and the more toxic it is. Cocoa powder is especially toxic because it contains an extremely high concentration of cocoa solids.",
@@ -80,7 +84,8 @@
     "fr": "La PDSA explique que le chocolat contient de la théobromine, qui est tout à fait sans danger pour les humains mais toxique pour les chats. Plus le chocolat est noir, plus il contient de cacao et de théobromine, et plus il est toxique. Le cacao en poudre est particulièrement toxique, car il est extrêmement concentré en cacao.",
     "es": "PDSA explica que el chocolate contiene teobromina, que es perfectamente segura para las personas pero tóxica para los gatos. Cuanto más oscuro es el chocolate, más sólidos de cacao y teobromina contiene y más tóxico es. El cacao en polvo es especialmente tóxico porque contiene una concentración extremadamente alta de sólidos de cacao.",
     "pt": "A PDSA explica que o chocolate contém teobromina, que é perfeitamente segura para as pessoas mas tóxica para os gatos. Quanto mais escuro é o chocolate, mais sólidos de cacau e teobromina contém e mais tóxico é. O cacau em pó é especialmente tóxico porque contém uma concentração extremamente alta de sólidos de cacau.",
-    "nl": "PDSA legt uit dat chocolade theobromine bevat, wat voor mensen volkomen veilig is maar giftig voor katten. Hoe donkerder de chocolade, hoe meer cacaobestanddelen en theobromine erin zitten en hoe giftiger die is. Cacaopoeder is extra giftig omdat het een extreem hoge concentratie cacaobestanddelen bevat."
+    "nl": "PDSA legt uit dat chocolade theobromine bevat, wat voor mensen volkomen veilig is maar giftig voor katten. Hoe donkerder de chocolade, hoe meer cacaobestanddelen en theobromine erin zitten en hoe giftiger die is. Cacaopoeder is extra giftig omdat het een extreem hoge concentratie cacaobestanddelen bevat.",
+    "pl": "PDSA wyjaśnia, że czekolada zawiera teobrominę, która jest zupełnie bezpieczna dla ludzi, ale toksyczna dla kotów. Im ciemniejsza czekolada, tym więcej zawiera kakaowych części stałych i teobrominy, a tym samym jest bardziej toksyczna. Kakao w proszku jest szczególnie toksyczne, ponieważ zawiera niezwykle duże stężenie kakaowych części stałych."
   },
   "signs": {
     "en": [
@@ -236,6 +241,17 @@
       "Koorts",
       "Een snelle hartslag",
       "Toevallen"
+    ],
+    "pl": [
+      "Pobudzenie, niepokój lub nadpobudliwość",
+      "Wymioty lub biegunka",
+      "Picie i oddawanie moczu częściej niż zwykle",
+      "Ból brzucha",
+      "Szybki oddech lub ziajanie",
+      "Drżenie",
+      "Gorączka",
+      "Przyspieszone bicie serca",
+      "Drgawki"
     ]
   },
   "what_to_do": {
@@ -252,7 +268,8 @@
     "fr": "Gardez l’emballage et appelez immédiatement votre vétérinaire. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat à la maison.",
     "es": "Guarda el envase y llama a tu veterinario inmediatamente. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "pt": "Guarda a embalagem e liga imediatamente ao teu veterinário. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Bewaar de verpakking en bel meteen je dierenarts. Wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
+    "nl": "Bewaar de verpakking en bel meteen je dierenarts. Wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "pl": "Zachowaj opakowanie i od razu zadzwoń do weterynarza. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -269,7 +286,8 @@
     "fr": "Le cacao en poudre sert aux gâteaux des humains, pas aux chats. Si ton chat y a goûté, préviens tout de suite un adulte pour qu’il appelle le vétérinaire.",
     "es": "El cacao en polvo es para que las personas hagan repostería, no para los gatos. Si el gatito lo encuentra, avisa enseguida a un adulto para que llame al veterinario.",
     "pt": "O cacau em pó é para as pessoas fazerem bolos, não para os gatos. Se o gatinho o apanhar, avisa logo um adulto para ligar ao veterinário.",
-    "nl": "Cacaopoeder gebruiken mensen om mee te bakken. Het is niets voor katten. Is je kat eraan geweest? Vertel het dan meteen aan een volwassene, zodat die de dierenarts kan bellen."
+    "nl": "Cacaopoeder gebruiken mensen om mee te bakken. Het is niets voor katten. Is je kat eraan geweest? Vertel het dan meteen aan een volwassene, zodat die de dierenarts kan bellen.",
+    "pl": "Kakao w proszku służy ludziom do pieczenia i nie jest dla kotów. Jeśli kotek się do niego dobierze, od razu powiedz dorosłemu, żeby zadzwonił do weterynarza."
   },
   "faq": [
     {
@@ -287,7 +305,8 @@
         "fr": "Le paillis de coques de cacao au jardin présente-t-il un risque pour les chats ?",
         "es": "¿Es un riesgo para los gatos el mantillo de cáscara de cacao del jardín?",
         "pt": "A cobertura de casca de cacau no jardim é um risco para os gatos?",
-        "nl": "Is tuinmulch van cacaodoppen een risico voor katten?"
+        "nl": "Is tuinmulch van cacaodoppen een risico voor katten?",
+        "pl": "Czy ściółka ogrodowa z łusek kakao stanowi zagrożenie dla kotów?"
       },
       "a": {
         "en": "PDSA advises avoiding gardening mulches that contain cocoa shell.",
@@ -303,7 +322,8 @@
         "fr": "La PDSA conseille d’éviter les paillis de jardinage qui contiennent des coques de cacao.",
         "es": "PDSA aconseja evitar los mantillos de jardinería que contengan cáscara de cacao.",
         "pt": "A PDSA aconselha a evitar coberturas do solo que contenham casca de cacau.",
-        "nl": "PDSA raadt aan om tuinmulch met cacaodoppen te vermijden."
+        "nl": "PDSA raadt aan om tuinmulch met cacaodoppen te vermijden.",
+        "pl": "PDSA radzi unikać ściółki ogrodowej zawierającej łuski kakao."
       }
     }
   ],
@@ -454,6 +474,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "568d662f33c076243d066c40709d5e1b413ee0d43d6849d8ea9daa47425afd47"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "1e4ee241ebbe184a82cb582097ca6a86a3a466c754f7bd25abf6a63d428ef0e0"
     }
   }
 }

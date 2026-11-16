@@ -15,7 +15,8 @@
     "fr": "Pop-corn (nature)",
     "es": "Palomitas (naturales)",
     "pt": "Pipocas (simples)",
-    "nl": "Popcorn (naturel)"
+    "nl": "Popcorn (naturel)",
+    "pl": "Popcorn (bez dodatków)"
   },
   "question": {
     "en": "Can cats eat popcorn?",
@@ -31,7 +32,8 @@
     "fr": "Les chats peuvent-ils manger du pop-corn ?",
     "es": "¿Pueden los gatos comer palomitas?",
     "pt": "Os gatos podem comer pipocas?",
-    "nl": "Mogen katten popcorn eten?"
+    "nl": "Mogen katten popcorn eten?",
+    "pl": "Czy koty mogą jeść popcorn?"
   },
   "url_slug": {
     "en": "popcorn",
@@ -47,7 +49,8 @@
     "fr": "pop-corn",
     "es": "palomitas",
     "pt": "pipocas",
-    "nl": "popcorn"
+    "nl": "popcorn",
+    "pl": "popcorn"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "fr": "Oui, quelques grains de pop-corn nature ne posent pas de problème comme friandise occasionnelle. Le Pet Poison Helpline range le pop-corn parmi les aliments sans danger pour les chats et les chiens, à condition de se passer de beurre et de sel. Le pop-corn au beurre ou salé n’est pas fait pour les chats.",
     "es": "Sí, unas pocas palomitas naturales están bien como premio ocasional. Pet Poison Helpline incluye las palomitas entre los alimentos seguros para gatos y perros, siempre que no lleven mantequilla ni sal. Las palomitas con mantequilla o con sal no son para los gatos.",
     "pt": "Sim, algumas pipocas simples não fazem mal como guloseima ocasional. A Pet Poison Helpline inclui as pipocas entre os alimentos seguros para gatos e cães, desde que não levem manteiga nem sal. As pipocas com manteiga ou sal não são para gatos.",
-    "nl": "Ja, een paar stukjes naturel popcorn zijn af en toe een prima traktatie. Pet Poison Helpline rekent popcorn tot het eten dat veilig is voor katten en honden, zolang er geen boter en zout op zit. Popcorn met boter of zout is niets voor katten."
+    "nl": "Ja, een paar stukjes naturel popcorn zijn af en toe een prima traktatie. Pet Poison Helpline rekent popcorn tot het eten dat veilig is voor katten en honden, zolang er geen boter en zout op zit. Popcorn met boter of zout is niets voor katten.",
+    "pl": "Tak, kilka kawałków popcornu bez dodatków nie zaszkodzi jako smakołyk od czasu do czasu. Pet Poison Helpline wymienia popcorn wśród pokarmów bezpiecznych dla kotów i psów, pod warunkiem że jest bez masła i soli. Popcorn z masłem lub solą nie jest dla kotów."
   },
   "why": {
     "en": "Pet Poison Helpline lists popcorn, without butter and salt, among foods that are safe for cats and dogs, and the ASPCA includes popcorn among easy treats in its snack ideas for cats and dogs. Salt is the catch: Pet Poison Helpline says excessive salt should not be in a cat's diet. International Cat Care says cats, as obligate carnivores, are less able to digest and use carbohydrates, and Cats Protection says it's best to stick to cat food treats rather than human foods.",
@@ -80,7 +84,8 @@
     "fr": "Le Pet Poison Helpline range le pop-corn, sans beurre ni sel, parmi les aliments sans danger pour les chats et les chiens, et l’ASPCA inclut le pop-corn parmi les friandises faciles à préparer dans ses idées d’en-cas pour chats et chiens. Le piège, c’est le sel : le Pet Poison Helpline indique qu’un excès de sel n’a pas sa place dans l’alimentation d’un chat. International Cat Care précise que les chats, carnivores stricts, digèrent et utilisent moins bien les glucides, et Cats Protection recommande de s’en tenir aux friandises pour chats plutôt qu’aux aliments pour humains.",
     "es": "Pet Poison Helpline incluye las palomitas, sin mantequilla ni sal, entre los alimentos que son seguros para gatos y perros, y la ASPCA las incluye entre los premios sencillos de su lista de ideas de tentempiés para gatos y perros. La trampa es la sal: Pet Poison Helpline dice que el exceso de sal no debe formar parte de la alimentación de un gato. International Cat Care señala que los gatos, al ser carnívoros estrictos, digieren y aprovechan peor los carbohidratos, y Cats Protection dice que lo mejor es ceñirse a los premios para gatos en lugar de dar comida de personas.",
     "pt": "A Pet Poison Helpline inclui as pipocas, sem manteiga nem sal, entre os alimentos seguros para gatos e cães, e a ASPCA inclui as pipocas entre as guloseimas fáceis nas suas ideias de lanches para gatos e cães. O sal é o problema: a Pet Poison Helpline diz que o excesso de sal não deve fazer parte da alimentação de um gato. A International Cat Care diz que os gatos, por serem carnívoros estritos, têm mais dificuldade em digerir e aproveitar os hidratos de carbono, e a Cats Protection diz que é melhor dar guloseimas próprias para gatos em vez de comida de pessoas.",
-    "nl": "Pet Poison Helpline noemt popcorn zonder boter en zout bij het eten dat veilig is voor katten en honden, en de ASPCA rekent popcorn tot de makkelijke traktaties in de snackideeën voor katten en honden. Het addertje is het zout: Pet Poison Helpline zegt dat overmatig zout niet in het dieet van een kat thuishoort. International Cat Care zegt dat katten, als echte vleeseters, koolhydraten minder goed kunnen verteren en benutten, en Cats Protection adviseert om bij kattensnoepjes te blijven in plaats van menselijk voedsel te geven."
+    "nl": "Pet Poison Helpline noemt popcorn zonder boter en zout bij het eten dat veilig is voor katten en honden, en de ASPCA rekent popcorn tot de makkelijke traktaties in de snackideeën voor katten en honden. Het addertje is het zout: Pet Poison Helpline zegt dat overmatig zout niet in het dieet van een kat thuishoort. International Cat Care zegt dat katten, als echte vleeseters, koolhydraten minder goed kunnen verteren en benutten, en Cats Protection adviseert om bij kattensnoepjes te blijven in plaats van menselijk voedsel te geven.",
+    "pl": "Pet Poison Helpline wymienia popcorn bez masła i soli wśród pokarmów bezpiecznych dla kotów i psów, a ASPCA wymienia popcorn wśród prostych smakołyków w swoich pomysłach na przekąski dla kotów i psów. Jest jednak haczyk: sól. Pet Poison Helpline podaje, że nadmiar soli nie powinien znaleźć się w diecie kota. International Cat Care podaje, że koty jako bezwzględne mięsożercy gorzej trawią i wykorzystują węglowodany, a Cats Protection – że najlepiej dawać kotom smakołyki przeznaczone dla kotów, a nie jedzenie dla ludzi."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "fr": "Ne proposez que quelques grains nature. Si votre chat a mangé beaucoup de pop-corn salé et qu’il vomit, a de la diarrhée, semble avoir très soif ou paraît anormalement fatigué, contactez votre vétérinaire.",
     "es": "Ofrécele solo unas pocas palomitas naturales. Si tu gato ha comido muchas palomitas saladas y tiene vómitos, diarrea, mucha sed o está inusualmente cansado, ponte en contacto con tu veterinario.",
     "pt": "Oferece só algumas pipocas simples. Se o teu gato comeu muitas pipocas salgadas e tem vómitos ou diarreia, parece ter muita sede ou está invulgarmente cansado, contacta o teu veterinário.",
-    "nl": "Geef maar een paar stukjes naturel popcorn. Heeft je kat veel zoute popcorn gegeten en braakt ze, heeft ze diarree of lijkt ze erg dorstig of ongewoon moe, neem dan contact op met je dierenarts."
+    "nl": "Geef maar een paar stukjes naturel popcorn. Heeft je kat veel zoute popcorn gegeten en braakt ze, heeft ze diarree of lijkt ze erg dorstig of ongewoon moe, neem dan contact op met je dierenarts.",
+    "pl": "Dawaj tylko kilka kawałków bez dodatków. Jeśli twój kot zjadł dużo słonego popcornu i wymiotuje, ma biegunkę, jest bardzo spragniony lub nietypowo zmęczony, skontaktuj się z weterynarzem."
   },
   "serving": {
     "en": "A few pieces of plain popcorn with no butter or salt.",
@@ -113,7 +119,8 @@
     "fr": "Quelques grains de pop-corn nature, sans beurre ni sel.",
     "es": "Unas pocas palomitas naturales, sin mantequilla ni sal.",
     "pt": "Algumas pipocas simples, sem manteiga nem sal.",
-    "nl": "Een paar stukjes naturel popcorn zonder boter of zout."
+    "nl": "Een paar stukjes naturel popcorn zonder boter of zout.",
+    "pl": "Kilka kawałków popcornu bez masła i soli."
   },
   "child": {
     "en": "A piece of plain popcorn can be a cat treat sometimes. Buttery, salty popcorn is just for people.",
@@ -129,7 +136,8 @@
     "fr": "Un grain de pop-corn nature peut être une friandise pour un chat de temps en temps. Le pop-corn au beurre et salé, c’est seulement pour les humains.",
     "es": "Una palomita natural puede ser a veces un premio para el gato. Las palomitas con mantequilla y sal son solo para las personas.",
     "pt": "Uma pipoca simples pode ser uma guloseima para o gato de vez em quando. As pipocas com manteiga e sal são só para pessoas.",
-    "nl": "Een stukje naturel popcorn kan soms een traktatie voor je kat zijn. Popcorn met boter en zout is alleen voor mensen."
+    "nl": "Een stukje naturel popcorn kan soms een traktatie voor je kat zijn. Popcorn met boter en zout is alleen voor mensen.",
+    "pl": "Kawałek popcornu bez dodatków może być od czasu do czasu kocim smakołykiem. Popcorn z masłem i solą jest tylko dla ludzi."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "fr": "Les chats peuvent-ils manger du pop-corn salé ou au beurre ?",
         "es": "¿Pueden los gatos comer palomitas saladas o con mantequilla?",
         "pt": "Os gatos podem comer pipocas salgadas ou com manteiga?",
-        "nl": "Mogen katten gezouten of beboterde popcorn eten?"
+        "nl": "Mogen katten gezouten of beboterde popcorn eten?",
+        "pl": "Czy koty mogą jeść popcorn solony lub z masłem?"
       },
       "a": {
         "en": "No. Pet Poison Helpline says to hold the butter and salt, and that excessive salt should not be in a cat's diet. Agriculture Victoria says large amounts of salt can cause excessive thirst and urination.",
@@ -163,7 +172,8 @@
         "fr": "Non. Le Pet Poison Helpline recommande de se passer de beurre et de sel, et précise qu’un excès de sel n’a pas sa place dans l’alimentation d’un chat. Agriculture Victoria indique que de grandes quantités de sel peuvent provoquer une soif et une envie d’uriner excessives.",
         "es": "No. Pet Poison Helpline dice que hay que quitar la mantequilla y la sal, y que el exceso de sal no debe formar parte de la alimentación de un gato. Agriculture Victoria dice que grandes cantidades de sal pueden causar sed y micción excesivas.",
         "pt": "Não. A Pet Poison Helpline diz que não deve levar manteiga nem sal, e que o excesso de sal não deve fazer parte da alimentação de um gato. A Agriculture Victoria diz que grandes quantidades de sal podem causar sede e vontade de urinar excessivas.",
-        "nl": "Nee. Pet Poison Helpline zegt dat je boter en zout moet weglaten en dat overmatig zout niet in het dieet van een kat thuishoort. Agriculture Victoria zegt dat grote hoeveelheden zout kunnen leiden tot overmatige dorst en overmatig plassen."
+        "nl": "Nee. Pet Poison Helpline zegt dat je boter en zout moet weglaten en dat overmatig zout niet in het dieet van een kat thuishoort. Agriculture Victoria zegt dat grote hoeveelheden zout kunnen leiden tot overmatige dorst en overmatig plassen.",
+        "pl": "Nie. Pet Poison Helpline radzi zrezygnować z masła i soli oraz podaje, że nadmiar soli nie powinien znaleźć się w diecie kota. Agriculture Victoria podaje, że duże ilości soli mogą wywołać nadmierne pragnienie i oddawanie moczu."
       }
     }
   ],
@@ -301,6 +311,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dbac0e4ec2861cd350c70beb4336c60a246348e1359052e973a75c2be1f8e82b"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "bf4a332d5f622cd073826eff5b5d5f369374c905744ddd8d165cb71f482257ab"
     }
   }
 }

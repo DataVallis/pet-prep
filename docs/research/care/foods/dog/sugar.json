@@ -15,7 +15,8 @@
     "de": "Zucker",
     "fr": "Sucre",
     "pt": "Açúcar",
-    "nl": "Suiker"
+    "nl": "Suiker",
+    "pl": "Cukier"
   },
   "question": {
     "en": "Can dogs eat sugar?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Zucker fressen?",
     "fr": "Les chiens peuvent-ils manger du sucre ?",
     "pt": "Os cães podem comer açúcar?",
-    "nl": "Mogen honden suiker eten?"
+    "nl": "Mogen honden suiker eten?",
+    "pl": "Czy psy mogą jeść cukier?"
   },
   "url_slug": {
     "en": "sugar",
@@ -47,7 +49,8 @@
     "de": "zucker",
     "fr": "sucre",
     "pt": "acucar",
-    "nl": "suiker"
+    "nl": "suiker",
+    "pl": "cukier"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Nein, geben Sie Ihrem Hund besser keinen Zucker. Ein wenig Zucker ist für Hunde nicht giftig, hat aber keinen Nährwert und kann Magenbeschwerden verursachen. Zuckerfreie Produkte sind nicht sicherer: Sie können Xylit enthalten, das für Hunde giftig ist.",
     "fr": "Non, mieux vaut ne pas donner de sucre à votre chien. Un peu de sucre n’est pas toxique pour les chiens, mais il n’a aucun intérêt nutritionnel et peut provoquer des troubles digestifs. Les produits sans sucre ne sont pas plus sûrs : ils peuvent contenir du xylitol, toxique pour les chiens.",
     "pt": "Não, o melhor é não dar açúcar ao teu cão. Um pouco de açúcar não é tóxico para os cães, mas não traz benefício nutricional e pode causar indisposição de estômago. Os produtos sem açúcar não são mais seguros: podem conter xilitol, que é tóxico para os cães.",
-    "nl": "Nee, geef je hond liever geen suiker. Een beetje suiker is niet giftig voor honden, maar het heeft geen voedingswaarde en kan maagklachten veroorzaken. Suikervrije producten zijn niet veiliger: ze kunnen xylitol bevatten, dat giftig is voor honden."
+    "nl": "Nee, geef je hond liever geen suiker. Een beetje suiker is niet giftig voor honden, maar het heeft geen voedingswaarde en kan maagklachten veroorzaken. Suikervrije producten zijn niet veiliger: ze kunnen xylitol bevatten, dat giftig is voor honden.",
+    "pl": "Nie, lepiej nie dawać psu cukru. Odrobina cukru nie jest toksyczna dla psów, ale nie daje żadnych korzyści odżywczych i może rozstroić żołądek. Produkty bez cukru nie są bezpieczniejsze: mogą zawierać ksylitol, który jest toksyczny dla psów."
   },
   "why": {
     "en": "Sugar can cause stomach upset, including vomiting and diarrhoea. Sugary, high-fat foods can also lead to pancreatitis, a painful inflammation of the pancreas. Over time, sugary treats can contribute to obesity, and sugars can cause tooth decay.",
@@ -80,7 +84,8 @@
     "de": "Zucker kann Magenbeschwerden mit Erbrechen und Durchfall verursachen. Zucker- und fettreiche Lebensmittel können außerdem zu einer Bauchspeicheldrüsenentzündung führen, einer schmerzhaften Entzündung der Bauchspeicheldrüse. Mit der Zeit können zuckerhaltige Leckereien zu Übergewicht beitragen, und Zucker kann Karies verursachen.",
     "fr": "Le sucre peut provoquer des troubles digestifs, dont des vomissements et de la diarrhée. Les aliments sucrés et riches en graisses peuvent aussi entraîner une pancréatite, une inflammation douloureuse du pancréas. À la longue, les friandises sucrées peuvent favoriser l’obésité, et les sucres peuvent provoquer des caries.",
     "pt": "O açúcar pode causar indisposição de estômago, incluindo vómitos e diarreia. Os alimentos açucarados e muito gordos também podem levar a pancreatite, uma inflamação dolorosa do pâncreas. Com o tempo, as guloseimas açucaradas podem contribuir para a obesidade, e os açúcares podem causar cáries.",
-    "nl": "Suiker kan maagklachten veroorzaken, waaronder braken en diarree. Suikerrijk, vet voedsel kan ook leiden tot alvleesklierontsteking, een pijnlijke ontsteking van de alvleesklier. Na verloop van tijd kunnen suikerrijke snoepjes bijdragen aan overgewicht, en suikers kunnen tandbederf veroorzaken."
+    "nl": "Suiker kan maagklachten veroorzaken, waaronder braken en diarree. Suikerrijk, vet voedsel kan ook leiden tot alvleesklierontsteking, een pijnlijke ontsteking van de alvleesklier. Na verloop van tijd kunnen suikerrijke snoepjes bijdragen aan overgewicht, en suikers kunnen tandbederf veroorzaken.",
+    "pl": "Cukier może powodować rozstrój żołądka, w tym wymioty i biegunkę. Słodkie, tłuste jedzenie może też prowadzić do zapalenia trzustki, czyli bolesnego stanu zapalnego tego narządu. Z czasem słodkie smakołyki mogą przyczyniać się do otyłości, a cukry mogą powodować próchnicę."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Braken",
       "Diarree",
       "Weinig eetlust, weinig energie of buikpijn (mogelijk alvleesklierontsteking; de verschijnselen kunnen pas na een paar dagen komen)"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Brak apetytu, spadek energii lub ból brzucha (możliwe zapalenie trzustki; objawy mogą pojawić się dopiero po kilku dniach)"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "de": "Einfache zuckerhaltige Süßigkeiten verursachen oft nur leichte Magenbeschwerden oder gar keine Anzeichen. Hat Ihr Hund viel Zuckerhaltiges gefressen, rufen Sie sofort Ihren Tierarzt oder einen Giftnotruf für Tiere an, auch wenn Ihr Hund gesund wirkt. Hat er etwas Zuckerfreies gefressen, das Xylit enthalten könnte, rufen Sie sofort Ihren Tierarzt an.",
     "fr": "Les sucreries nature provoquent souvent de légers troubles digestifs, voire aucun signe. Si votre chien a mangé beaucoup d’aliments sucrés, appelez tout de suite votre vétérinaire ou un centre antipoison vétérinaire, même s’il semble aller bien. S’il a mangé un produit sans sucre pouvant contenir du xylitol, appelez immédiatement votre vétérinaire.",
     "pt": "Os doces açucarados simples costumam causar uma ligeira indisposição de estômago ou nenhum sinal. Se o teu cão comeu muita comida açucarada, liga logo ao teu veterinário ou a uma linha de apoio toxicológico para animais, mesmo que pareça estar bem. Se comeu algo sem açúcar que possa conter xilitol, liga imediatamente ao teu veterinário.",
-    "nl": "Gewoon suikerrijk snoep veroorzaakt vaak milde maagklachten of helemaal geen verschijnselen. Heeft je hond veel suikerrijk voedsel gegeten, bel dan meteen je dierenarts of een vergiftigingenlijn voor dieren, ook als het goed lijkt te gaan met je hond. Heeft hij iets suikervrijs gegeten dat xylitol kan bevatten, bel dan meteen je dierenarts."
+    "nl": "Gewoon suikerrijk snoep veroorzaakt vaak milde maagklachten of helemaal geen verschijnselen. Heeft je hond veel suikerrijk voedsel gegeten, bel dan meteen je dierenarts of een vergiftigingenlijn voor dieren, ook als het goed lijkt te gaan met je hond. Heeft hij iets suikervrijs gegeten dat xylitol kan bevatten, bel dan meteen je dierenarts.",
+    "pl": "Słodycze z samym cukrem często wywołują tylko łagodny rozstrój żołądka albo nie dają żadnych objawów. Jeśli pies zjadł dużo słodkiego jedzenia, od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli wygląda na zdrowego. Jeśli zjadł coś „bez cukru”, co może zawierać ksylitol, natychmiast zadzwoń do weterynarza."
   },
   "serving": null,
   "child": {
@@ -185,7 +196,8 @@
     "de": "Zucker ist eine Leckerei für Menschen. Davon kann ein Hund Bauchweh bekommen, also behalte Süßes für dich und gib deinem Hund ein Hundeleckerli.",
     "fr": "Le sucre est une friandise pour les humains. Il peut donner mal au ventre aux chiens : garde les sucreries pour toi et offre-lui une friandise pour chiens.",
     "pt": "O açúcar é uma guloseima para as pessoas. Pode dar dor de barriga aos cães, por isso guarda os doces para ti e dá-lhe uma guloseima própria para cães.",
-    "nl": "Suiker is een lekkernij voor mensen. Honden kunnen er buikpijn van krijgen, dus bewaar snoep voor jezelf en geef je hond een hondensnoepje."
+    "nl": "Suiker is een lekkernij voor mensen. Honden kunnen er buikpijn van krijgen, dus bewaar snoep voor jezelf en geef je hond een hondensnoepje.",
+    "pl": "Cukier to przysmak dla ludzi. Może sprawić, że psu zaboli brzuszek, więc słodycze zostaw dla siebie, a psu daj smakołyk dla psów."
   },
   "faq": [
     {
@@ -203,7 +215,8 @@
         "de": "Schadet ein bisschen Zucker meinem Hund?",
         "fr": "Un peu de sucre peut-il faire du mal à mon chien ?",
         "pt": "Um bocadinho de açúcar faz mal ao meu cão?",
-        "nl": "Is een beetje suiker slecht voor mijn hond?"
+        "nl": "Is een beetje suiker slecht voor mijn hond?",
+        "pl": "Czy odrobina cukru zaszkodzi mojemu psu?"
       },
       "a": {
         "en": "A little sugar isn't toxic to dogs, but it can cause stomach upset and offers no nutritional benefit.",
@@ -219,7 +232,8 @@
         "de": "Ein wenig Zucker ist für Hunde nicht giftig, kann aber Magenbeschwerden verursachen und hat keinen Nährwert.",
         "fr": "Un peu de sucre n’est pas toxique pour les chiens, mais il peut provoquer des troubles digestifs et n’a aucun intérêt nutritionnel.",
         "pt": "Um pouco de açúcar não é tóxico para os cães, mas pode causar indisposição de estômago e não traz benefício nutricional.",
-        "nl": "Een beetje suiker is niet giftig voor honden, maar het kan maagklachten veroorzaken en heeft geen voedingswaarde."
+        "nl": "Een beetje suiker is niet giftig voor honden, maar het kan maagklachten veroorzaken en heeft geen voedingswaarde.",
+        "pl": "Odrobina cukru nie jest toksyczna dla psów, ale może rozstroić żołądek i nie daje żadnych korzyści odżywczych."
       }
     },
     {
@@ -237,7 +251,8 @@
         "de": "Sind zuckerfreie Süßigkeiten für Hunde sicherer?",
         "fr": "Les sucreries sans sucre sont-elles plus sûres pour les chiens ?",
         "pt": "Os doces sem açúcar são mais seguros para os cães?",
-        "nl": "Is suikervrij snoep veiliger voor honden?"
+        "nl": "Is suikervrij snoep veiliger voor honden?",
+        "pl": "Czy słodycze bez cukru są dla psów bezpieczniejsze?"
       },
       "a": {
         "en": "No. Sugar-free products often contain xylitol, which is toxic to dogs. Check the label; xylitol may also be listed as birch sugar.",
@@ -253,7 +268,8 @@
         "de": "Nein. Zuckerfreie Produkte enthalten oft Xylit, das für Hunde giftig ist. Prüfen Sie das Etikett. Xylit kann auch als Birkenzucker angegeben sein.",
         "fr": "Non. Les produits sans sucre contiennent souvent du xylitol, toxique pour les chiens. Vérifiez l’étiquette ; le xylitol peut aussi figurer sous le nom de sucre de bouleau.",
         "pt": "Não. Os produtos sem açúcar contêm muitas vezes xilitol, que é tóxico para os cães. Verifica o rótulo; o xilitol também pode aparecer como açúcar de bétula.",
-        "nl": "Nee. Suikervrije producten bevatten vaak xylitol, dat giftig is voor honden. Controleer het etiket; xylitol kan ook als berkensuiker worden vermeld."
+        "nl": "Nee. Suikervrije producten bevatten vaak xylitol, dat giftig is voor honden. Controleer het etiket; xylitol kan ook als berkensuiker worden vermeld.",
+        "pl": "Nie. Produkty bez cukru często zawierają ksylitol, który jest toksyczny dla psów. Sprawdź etykietę; ksylitol może być też podany jako cukier brzozowy."
       }
     }
   ],
@@ -395,6 +411,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ffd0d6e5c92b3e7c357752be8901b1dbdbed7a548721d458a3042cd1fb103360"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "2211a51fd8043b2c5c5c7eb65423938c9cce6236f80a44b72d58b588b4260a32"
     }
   }
 }

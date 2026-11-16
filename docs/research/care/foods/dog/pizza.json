@@ -15,7 +15,8 @@
     "de": "Pizza",
     "fr": "Pizza",
     "pt": "Pizza",
-    "nl": "Pizza"
+    "nl": "Pizza",
+    "pl": "Pizza"
   },
   "question": {
     "en": "Can dogs eat pizza?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Pizza fressen?",
     "fr": "Les chiens peuvent-ils manger de la pizza ?",
     "pt": "Os cães podem comer pizza?",
-    "nl": "Mogen honden pizza eten?"
+    "nl": "Mogen honden pizza eten?",
+    "pl": "Czy psy mogą jeść pizzę?"
   },
   "url_slug": {
     "en": "pizza",
@@ -47,7 +49,8 @@
     "de": "pizza",
     "fr": "pizza",
     "pt": "pizza",
-    "nl": "pizza"
+    "nl": "pizza",
+    "pl": "pizza"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Nein, teilen Sie Pizza besser nicht. Sie kann einem Hund auf den Magen schlagen und sogar zu einer Bauchspeicheldrüsenentzündung führen. Der Belag kann Knoblauch oder Zwiebeln enthalten, die rote Blutkörperchen schädigen, und der Rand hat viel zu viele Kalorien. Auch roher Pizzateig ist riskant.",
     "fr": "Non, mieux vaut ne pas partager de pizza. Elle peut déranger l’estomac d’un chien et même provoquer une pancréatite ; les garnitures peuvent contenir de l’ail ou de l’oignon, qui abîment les globules rouges, et la croûte est beaucoup trop calorique. La pâte à pizza crue présente aussi un risque.",
     "pt": "Não, o melhor é não partilhar pizza. Pode irritar o estômago do cão e até causar pancreatite, as coberturas podem conter alho ou cebola, que danificam os glóbulos vermelhos, e a base tem calorias a mais. A massa de pizza crua também é arriscada.",
-    "nl": "Nee, deel pizza liever niet. Pizza kan de maag van een hond van streek maken en zelfs tot alvleesklierontsteking leiden, het beleg kan knoflook of ui bevatten, die rode bloedcellen beschadigen, en de bodem zit veel te vol calorieën. Ook rauw pizzadeeg is riskant."
+    "nl": "Nee, deel pizza liever niet. Pizza kan de maag van een hond van streek maken en zelfs tot alvleesklierontsteking leiden, het beleg kan knoflook of ui bevatten, die rode bloedcellen beschadigen, en de bodem zit veel te vol calorieën. Ook rauw pizzadeeg is riskant.",
+    "pl": "Nie, lepiej nie dawać psu pizzy. Może rozstroić psu żołądek, a nawet wywołać zapalenie trzustki, w dodatkach mogą być czosnek lub cebula, które uszkadzają czerwone krwinki, a brzegi pizzy mają zdecydowanie za dużo kalorii. Surowe ciasto na pizzę też jest ryzykowne."
   },
   "why": {
     "en": "AKC lists pizza among party foods to keep away from dogs, and VCA and the ASPCA say leftovers and party food like pizza can cause stomach upset and even pancreatitis. Cheese is high in fat, and pepperoni is too fatty and spicy and risks salt poisoning. Garlic and onion, which can be in toppings and seasonings, damage red blood cells and kidneys. Pizza crust is way too high in calories and can lead to obesity. Uncooked pizza dough produces ethanol inside a dog's body.",
@@ -80,7 +84,8 @@
     "de": "Der AKC nennt Pizza unter den Partyessen, die Hunde nicht bekommen sollten, und VCA und die ASPCA sagen, dass Reste und Partyessen wie Pizza Magenbeschwerden und sogar eine Bauchspeicheldrüsenentzündung auslösen können. Käse ist fettreich, und Pepperoni-Salami ist zu fettig und zu scharf und birgt das Risiko einer Salzvergiftung. Knoblauch und Zwiebeln, die in Belägen und Gewürzen stecken können, schädigen rote Blutkörperchen und Nieren. Der Pizzarand hat viel zu viele Kalorien und kann zu Übergewicht führen. Ungebackener Pizzateig bildet im Körper eines Hundes Ethanol.",
     "fr": "L’AKC range la pizza parmi les aliments de fête à tenir éloignés des chiens, et VCA et l’ASPCA indiquent que les restes et les aliments de fête comme la pizza peuvent provoquer des troubles digestifs et même une pancréatite. Le fromage est riche en graisses, et le pepperoni est trop gras et trop épicé et fait courir un risque d’intoxication au sel. L’ail et l’oignon, qui peuvent se trouver dans les garnitures et les assaisonnements, abîment les globules rouges et les reins. La croûte de pizza est beaucoup trop calorique et peut mener à l’obésité. La pâte à pizza crue produit de l’éthanol dans l’organisme du chien.",
     "pt": "A AKC inclui a pizza entre os alimentos de festa a manter longe dos cães, e a VCA e a ASPCA dizem que as sobras e a comida de festa, como a pizza, podem causar indisposição de estômago e até pancreatite. O queijo tem muita gordura, e o pepperoni é demasiado gordo e picante, com risco de intoxicação por sal. O alho e a cebola, que podem estar nas coberturas e nos temperos, danificam os glóbulos vermelhos e os rins. A base da pizza tem calorias a mais e pode levar à obesidade. A massa de pizza crua produz etanol dentro do corpo do cão.",
-    "nl": "AKC noemt pizza bij het feestvoer dat je bij honden uit de buurt moet houden, en VCA en de ASPCA zeggen dat restjes en feesthapjes zoals pizza maagklachten en zelfs alvleesklierontsteking kunnen veroorzaken. Kaas bevat veel vet, en pepperoni is te vet en te pittig en geeft risico op zoutvergiftiging. Knoflook en ui, die in beleg en kruiden kunnen zitten, beschadigen rode bloedcellen en nieren. Een pizzabodem bevat veel te veel calorieën en kan leiden tot overgewicht. Ongebakken pizzadeeg maakt ethanol aan in het lichaam van een hond."
+    "nl": "AKC noemt pizza bij het feestvoer dat je bij honden uit de buurt moet houden, en VCA en de ASPCA zeggen dat restjes en feesthapjes zoals pizza maagklachten en zelfs alvleesklierontsteking kunnen veroorzaken. Kaas bevat veel vet, en pepperoni is te vet en te pittig en geeft risico op zoutvergiftiging. Knoflook en ui, die in beleg en kruiden kunnen zitten, beschadigen rode bloedcellen en nieren. Een pizzabodem bevat veel te veel calorieën en kan leiden tot overgewicht. Ongebakken pizzadeeg maakt ethanol aan in het lichaam van een hond.",
+    "pl": "AKC wymienia pizzę wśród potraw z przyjęć, których nie należy dawać psom, a VCA i ASPCA twierdzą, że resztki i jedzenie z przyjęć, takie jak pizza, mogą powodować rozstrój żołądka, a nawet zapalenie trzustki. Ser ma dużo tłuszczu, a pepperoni jest zbyt tłuste i ostre oraz grozi zatruciem solą. Czosnek i cebula, które mogą być w dodatkach i przyprawach, uszkadzają czerwone krwinki i nerki. Brzegi pizzy mają zdecydowanie za dużo kalorii i mogą prowadzić do otyłości. Surowe ciasto na pizzę wytwarza w organizmie psa etanol."
   },
   "signs": {
     "en": [
@@ -152,6 +157,11 @@
       "Maagklachten, braken of diarree",
       "Buikpijn, misselijkheid, koorts, weinig energie of weinig eetlust (mogelijk alvleesklierontsteking)",
       "Verlies van eetlust of een sombere stemming na toppings met ui of knoflook"
+    ],
+    "pl": [
+      "Rozstrój żołądka, wymioty lub biegunka",
+      "Ból brzucha, nudności, gorączka, spadek energii lub brak apetytu (możliwe zapalenie trzustki)",
+      "Brak apetytu lub gorszy nastrój po dodatkach z cebulą lub czosnkiem"
     ]
   },
   "what_to_do": {
@@ -168,7 +178,8 @@
     "de": "Ist Ihr Hund an Pizza gekommen, wenden Sie sich an Ihren Tierarzt. Könnte der Belag Knoblauch oder Zwiebeln enthalten haben, warten Sie nicht ab. Hat Ihr Hund rohen Pizzateig gefressen, wenden Sie sich ebenfalls an Ihren Tierarzt.",
     "fr": "Si votre chien a mangé de la pizza, contactez votre vétérinaire. Si les garnitures contenaient peut-être de l’ail ou de l’oignon, n’attendez pas. Si votre chien a mangé de la pâte à pizza crue, contactez aussi votre vétérinaire.",
     "pt": "Se o teu cão comeu pizza, fala com o teu veterinário. Se as coberturas podiam ter alho ou cebola, não esperes para ver. Se o teu cão comeu massa de pizza crua, fala também com o teu veterinário.",
-    "nl": "Heeft je hond pizza gegeten, neem dan contact op met je dierenarts. Kan het beleg knoflook of ui bevatten, wacht dan niet af. Heeft je hond rauw pizzadeeg gegeten, neem dan ook contact op met je dierenarts."
+    "nl": "Heeft je hond pizza gegeten, neem dan contact op met je dierenarts. Kan het beleg knoflook of ui bevatten, wacht dan niet af. Heeft je hond rauw pizzadeeg gegeten, neem dan ook contact op met je dierenarts.",
+    "pl": "Jeśli pies dobrał się do pizzy, skontaktuj się z weterynarzem. Jeśli dodatki mogły zawierać czosnek lub cebulę, nie czekaj na rozwój wydarzeń. Jeśli pies zjadł surowe ciasto na pizzę, również skontaktuj się z weterynarzem."
   },
   "serving": null,
   "child": {
@@ -185,7 +196,8 @@
     "de": "Pizza ist Essen für Menschen. Käse und Belag können deinem Hund Bauchweh machen, also gib ihm stattdessen sein eigenes Leckerli.",
     "fr": "La pizza est un aliment pour humains. Son fromage et ses garnitures peuvent donner mal au ventre à un chien : offre-lui plutôt sa propre friandise.",
     "pt": "A pizza é comida de pessoas. O queijo e as coberturas podem dar dor de barriga ao cão, por isso dá-lhe antes uma guloseima só dele.",
-    "nl": "Pizza is eten voor mensen. Van de kaas en het beleg kan een hond buikpijn krijgen, dus geef je hond liever een eigen snoepje."
+    "nl": "Pizza is eten voor mensen. Van de kaas en het beleg kan een hond buikpijn krijgen, dus geef je hond liever een eigen snoepje.",
+    "pl": "Pizza to jedzenie dla ludzi. Jej ser i dodatki mogą sprawić, że psu zaboli brzuszek, więc daj psu jego własny smakołyk."
   },
   "faq": [
     {
@@ -203,7 +215,8 @@
         "de": "Dürfen Hunde Pizzarand fressen?",
         "fr": "Les chiens peuvent-ils manger la croûte de pizza ?",
         "pt": "Os cães podem comer a base da pizza?",
-        "nl": "Mogen honden pizzabodem eten?"
+        "nl": "Mogen honden pizzabodem eten?",
+        "pl": "Czy psy mogą jeść brzegi pizzy?"
       },
       "a": {
         "en": "It's best not to. A vet nutritionist at Cornell says pizza crust is way too high in calories and can lead to obesity.",
@@ -219,7 +232,8 @@
         "de": "Besser nicht. Ein auf Ernährung spezialisierter Tierarzt von Cornell sagt, dass der Pizzarand viel zu viele Kalorien hat und zu Übergewicht führen kann.",
         "fr": "Mieux vaut éviter. Un vétérinaire nutritionniste de Cornell indique que la croûte de pizza est beaucoup trop calorique et peut mener à l’obésité.",
         "pt": "O melhor é não dar. Um especialista em nutrição veterinária da Cornell diz que a base da pizza tem calorias a mais e pode levar à obesidade.",
-        "nl": "Liever niet. Een voedingsdeskundige voor dieren van Cornell zegt dat een pizzabodem veel te veel calorieën bevat en kan leiden tot overgewicht."
+        "nl": "Liever niet. Een voedingsdeskundige voor dieren van Cornell zegt dat een pizzabodem veel te veel calorieën bevat en kan leiden tot overgewicht.",
+        "pl": "Lepiej nie. Weterynaryjny specjalista ds. żywienia z Cornell mówi, że brzegi pizzy mają zdecydowanie za dużo kalorii i mogą prowadzić do otyłości."
       }
     },
     {
@@ -237,7 +251,8 @@
         "de": "Ist roher Pizzateig gefährlich?",
         "fr": "La pâte à pizza crue est-elle dangereuse ?",
         "pt": "A massa de pizza crua é perigosa?",
-        "nl": "Is rauw pizzadeeg gevaarlijk?"
+        "nl": "Is rauw pizzadeeg gevaarlijk?",
+        "pl": "Czy surowe ciasto na pizzę jest niebezpieczne?"
       },
       "a": {
         "en": "Yes. Uncooked bread and pizza dough produce ethanol inside a dog's body, and raw yeast dough can expand in the stomach. Contact your vet.",
@@ -253,7 +268,8 @@
         "de": "Ja. Ungebackener Brot- und Pizzateig bildet im Körper eines Hundes Ethanol, und roher Hefeteig kann im Magen aufgehen. Wenden Sie sich an Ihren Tierarzt.",
         "fr": "Oui. Le pain et la pâte à pizza non cuits produisent de l’éthanol dans l’organisme du chien, et la pâte levée crue peut gonfler dans l’estomac. Contactez votre vétérinaire.",
         "pt": "Sim. A massa de pão e de pizza crua produz etanol dentro do corpo do cão, e a massa crua com fermento pode expandir-se no estômago. Fala com o teu veterinário.",
-        "nl": "Ja. Ongebakken brood- en pizzadeeg maakt ethanol aan in het lichaam van een hond, en rauw gistdeeg kan in de maag uitzetten. Neem contact op met je dierenarts."
+        "nl": "Ja. Ongebakken brood- en pizzadeeg maakt ethanol aan in het lichaam van een hond, en rauw gistdeeg kan in de maag uitzetten. Neem contact op met je dierenarts.",
+        "pl": "Tak. Surowy chleb i ciasto na pizzę wytwarzają w organizmie psa etanol, a surowe ciasto drożdżowe może rosnąć w żołądku. Skontaktuj się z weterynarzem."
       }
     }
   ],
@@ -443,6 +459,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8714b1a8d1330d3ec85cf52d02accb4c0ef6b87f23330e49a2d48205be8aab2d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "65e3f7950d97c3cc6b187ad50fbedf7933209cdf3d5fd47a0a8e0e140309d4e7"
     }
   }
 }

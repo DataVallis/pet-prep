@@ -15,7 +15,8 @@
     "de": "Pasta",
     "fr": "Pâtes",
     "pt": "Massa",
-    "nl": "Pasta"
+    "nl": "Pasta",
+    "pl": "Makaron"
   },
   "question": {
     "en": "Can dogs eat pasta?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Pasta fressen?",
     "fr": "Les chiens peuvent-ils manger des pâtes ?",
     "pt": "Os cães podem comer massa?",
-    "nl": "Mogen honden pasta eten?"
+    "nl": "Mogen honden pasta eten?",
+    "pl": "Czy psy mogą jeść makaron?"
   },
   "url_slug": {
     "en": "pasta",
@@ -47,7 +49,8 @@
     "de": "pasta",
     "fr": "pates",
     "pt": "massa",
-    "nl": "pasta"
+    "nl": "pasta",
+    "pl": "makaron"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, einfache gekochte Pasta ist in kleinen Mengen in Ordnung, und Tierärzte setzen sie sogar in der Schonkost ein, wenn ein Hund krank ist. Verzichten Sie auf Soße: Zwiebel und Knoblauch kommen in vielen Gerichten vor und sind für Hunde auch gekocht giftig.",
     "fr": "Oui, des pâtes cuites nature conviennent en petites quantités, et les vétérinaires en utilisent même dans une alimentation douce quand un chien est malade. Évitez la sauce : l’oignon et l’ail, très courants en cuisine, sont toxiques pour les chiens, même cuits.",
     "pt": "Sim, a massa simples cozida não faz mal em pequenas quantidades, e os veterinários até a usam numa dieta suave quando um cão está doente. Dispensa o molho: a cebola e o alho são comuns na cozinha e são tóxicos para os cães, mesmo cozinhados.",
-    "nl": "Ja, gewone gekookte pasta is in kleine hoeveelheden prima, en dierenartsen gebruiken het zelfs in een licht verteerbaar dieet als een hond ziek is. Laat de saus weg: ui en knoflook komen vaak voor in gerechten en zijn giftig voor honden, ook als ze gaar zijn."
+    "nl": "Ja, gewone gekookte pasta is in kleine hoeveelheden prima, en dierenartsen gebruiken het zelfs in een licht verteerbaar dieet als een hond ziek is. Laat de saus weg: ui en knoflook komen vaak voor in gerechten en zijn giftig voor honden, ook als ze gaar zijn.",
+    "pl": "Tak, ugotowany makaron bez dodatków jest w małych ilościach w porządku, a weterynarze stosują go nawet w lekkostrawnej diecie, gdy pies jest chory. Zrezygnuj z sosu: cebula i czosnek są powszechne w kuchni i toksyczne dla psów, nawet po ugotowaniu."
   },
   "why": {
     "en": "Dogs Trust lists pasta and plain noodles among human foods dogs can usually eat in moderation. Cornell names cooked pasta as an option when a dog needs a bland diet to soothe the gut, though such a diet is not balanced for long-term feeding. Onions, garlic, leeks and chives can cause anaemia in dogs, and even traces in cooked food can be toxic. Intolerance, fat content or portion size can still upset an individual dog.",
@@ -80,7 +84,8 @@
     "de": "Dogs Trust zählt Pasta und einfache Nudeln zu den Lebensmitteln für Menschen, die Hunde in Maßen meist fressen dürfen. Cornell nennt gekochte Pasta als eine Option, wenn ein Hund eine Schonkost braucht, um den Magen-Darm-Trakt zu beruhigen, auch wenn eine solche Kost für die Dauerfütterung nicht ausgewogen ist. Zwiebeln, Knoblauch, Lauch und Schnittlauch können bei Hunden eine Blutarmut verursachen, und selbst Spuren in gekochtem Essen können giftig sein. Unverträglichkeit, Fettgehalt oder Portionsgröße können einem einzelnen Hund trotzdem auf den Magen schlagen.",
     "fr": "Dogs Trust classe les pâtes et les nouilles nature parmi les aliments pour humains que les chiens peuvent généralement manger avec modération. L’université Cornell cite les pâtes cuites comme une option quand un chien a besoin d’une alimentation douce pour apaiser son système digestif, même si ce régime n’est pas équilibré pour une alimentation à long terme. L’oignon, l’ail, le poireau et la ciboulette peuvent provoquer une anémie chez le chien, et même des traces dans un plat cuit peuvent être toxiques. L’intolérance, la teneur en graisses ou la taille de la portion peuvent malgré tout déranger l’estomac de certains chiens.",
     "pt": "A Dogs Trust inclui a massa e os noodles simples entre os alimentos humanos que os cães normalmente podem comer com moderação. A Cornell indica a massa cozida como opção quando um cão precisa de uma dieta suave para acalmar o intestino, embora essa dieta não seja equilibrada para uma alimentação prolongada. A cebola, o alho, o alho-francês e as cebolinhas podem causar anemia nos cães, e até vestígios em comida cozinhada podem ser tóxicos. A intolerância, o teor de gordura ou o tamanho da porção ainda podem fazer mal a um cão em particular.",
-    "nl": "Dogs Trust rekent pasta en gewone noedels tot het menselijk voedsel dat honden doorgaans met mate mogen eten. Cornell noemt gekookte pasta als mogelijkheid wanneer een hond een licht verteerbaar dieet nodig heeft om de darmen te kalmeren, al is zo’n dieet niet uitgebalanceerd genoeg om langdurig te geven. Ui, knoflook, prei en bieslook kunnen bloedarmoede veroorzaken bij honden, en zelfs sporen in gaar voedsel kunnen giftig zijn. Ook dan kan een hond last krijgen van intolerantie, het vetgehalte of de portiegrootte."
+    "nl": "Dogs Trust rekent pasta en gewone noedels tot het menselijk voedsel dat honden doorgaans met mate mogen eten. Cornell noemt gekookte pasta als mogelijkheid wanneer een hond een licht verteerbaar dieet nodig heeft om de darmen te kalmeren, al is zo’n dieet niet uitgebalanceerd genoeg om langdurig te geven. Ui, knoflook, prei en bieslook kunnen bloedarmoede veroorzaken bij honden, en zelfs sporen in gaar voedsel kunnen giftig zijn. Ook dan kan een hond last krijgen van intolerantie, het vetgehalte of de portiegrootte.",
+    "pl": "Dogs Trust wymienia makaron i nudle bez dodatków wśród ludzkich produktów, które psy zazwyczaj mogą jeść z umiarem. Cornell wskazuje ugotowany makaron jako jedną z opcji, gdy pies potrzebuje lekkostrawnej diety, która ma ukoić jelita, choć taka dieta nie jest zbilansowana do długotrwałego karmienia. Cebula, czosnek, por i szczypiorek mogą u psów powodować anemię, a nawet ich ślady w ugotowanym jedzeniu mogą być toksyczne. Nietolerancja, zawartość tłuszczu lub wielkość porcji nadal mogą rozstroić żołądek konkretnemu psu."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Einfache Pasta braucht meist nichts weiter. Hat Ihr Hund Pasta mit einer Soße gefressen, die Zwiebel oder Knoblauch enthalten könnte, warten Sie nicht ab, sondern wenden Sie sich an Ihren Tierarzt. Fragen Sie Ihren Tierarzt, bevor Sie ein Lebensmittel geben, das Ihr Hund noch nie gefressen hat.",
     "fr": "Des pâtes nature n’exigent généralement rien de plus. Si votre chien a mangé des pâtes avec une sauce pouvant contenir de l’oignon ou de l’ail, n’attendez pas : contactez votre vétérinaire. Demandez conseil à votre vétérinaire avant de proposer un aliment que votre chien n’a jamais mangé.",
     "pt": "Normalmente, a massa simples não exige mais nada. Se o teu cão comeu massa com um molho que pode conter cebola ou alho, não esperes para ver – liga ao teu veterinário. Pergunta ao teu veterinário antes de oferecer um alimento que o teu cão nunca provou.",
-    "nl": "Bij gewone pasta hoef je meestal niets te doen. Heeft je hond pasta gegeten met een saus die ui of knoflook kan bevatten, wacht dan niet af maar neem contact op met je dierenarts. Vraag het eerst aan je dierenarts voordat je iets geeft wat je hond nog niet kent."
+    "nl": "Bij gewone pasta hoef je meestal niets te doen. Heeft je hond pasta gegeten met een saus die ui of knoflook kan bevatten, wacht dan niet af maar neem contact op met je dierenarts. Vraag het eerst aan je dierenarts voordat je iets geeft wat je hond nog niet kent.",
+    "pl": "Przy makaronie bez dodatków zwykle nie trzeba nic robić. Jeśli pies zjadł makaron z sosem, który mógł zawierać cebulę lub czosnek, nie czekaj na rozwój wydarzeń, tylko skontaktuj się z weterynarzem. Zanim dasz psu produkt, którego jeszcze nie jadł, zapytaj weterynarza."
   },
   "serving": {
     "en": "Plain cooked pasta or noodles, in moderation, with no sauce, onion, garlic or seasoning.",
@@ -113,7 +119,8 @@
     "de": "Einfache gekochte Pasta oder Nudeln, in Maßen, ohne Soße, Zwiebel, Knoblauch oder Gewürze.",
     "fr": "Pâtes ou nouilles cuites nature, avec modération, sans sauce, oignon, ail ni assaisonnement.",
     "pt": "Massa ou noodles simples cozidos, com moderação, sem molho, cebola, alho nem temperos.",
-    "nl": "Gewone gekookte pasta of noedels, met mate, zonder saus, ui, knoflook of kruiden."
+    "nl": "Gewone gekookte pasta of noedels, met mate, zonder saus, ui, knoflook of kruiden.",
+    "pl": "Ugotowany makaron lub nudle bez dodatków, z umiarem, bez sosu, cebuli, czosnku i przypraw."
   },
   "child": {
     "en": "A little plain cooked pasta is fine for dogs. Sauces can hide onion or garlic, so ask a grown-up first.",
@@ -129,7 +136,8 @@
     "de": "Ein bisschen einfache gekochte Pasta ist für Hunde in Ordnung. In Soßen können sich Zwiebel oder Knoblauch verstecken, also frag vorher einen Erwachsenen.",
     "fr": "Un peu de pâtes cuites nature, ça va pour les chiens. Les sauces peuvent cacher de l’oignon ou de l’ail : demande d’abord à un adulte.",
     "pt": "Um pouco de massa simples cozida não faz mal aos cães. Os molhos podem esconder cebola ou alho, por isso pergunta primeiro a um adulto.",
-    "nl": "Een beetje gewone gekookte pasta is prima voor honden. In sauzen kunnen ui of knoflook zitten, dus vraag het eerst aan een volwassene."
+    "nl": "Een beetje gewone gekookte pasta is prima voor honden. In sauzen kunnen ui of knoflook zitten, dus vraag het eerst aan een volwassene.",
+    "pl": "Odrobina ugotowanego makaronu bez dodatków jest dla psa w porządku. W sosach może kryć się cebula lub czosnek, więc najpierw zapytaj dorosłego."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Dürfen Hunde Spaghetti mit Soße fressen?",
         "fr": "Les chiens peuvent-ils manger des spaghettis avec de la sauce ?",
         "pt": "Os cães podem comer esparguete com molho?",
-        "nl": "Mogen honden spaghetti met saus eten?"
+        "nl": "Mogen honden spaghetti met saus eten?",
+        "pl": "Czy psy mogą jeść spaghetti z sosem?"
       },
       "a": {
         "en": "It's best not to. Sauces are often made with onion or garlic, and even traces of these in cooked food can be toxic to dogs.",
@@ -163,7 +172,8 @@
         "de": "Besser nicht. Soßen werden oft mit Zwiebel oder Knoblauch gemacht, und selbst Spuren davon in gekochtem Essen können für Hunde giftig sein.",
         "fr": "Mieux vaut éviter. Les sauces sont souvent préparées avec de l’oignon ou de l’ail, et même des traces de ces aliments dans un plat cuit peuvent être toxiques pour les chiens.",
         "pt": "O melhor é não dar. Os molhos são muitas vezes feitos com cebola ou alho, e até vestígios destes em comida cozinhada podem ser tóxicos para os cães.",
-        "nl": "Liever niet. Sauzen worden vaak met ui of knoflook gemaakt, en zelfs sporen daarvan in gaar voedsel kunnen giftig zijn voor honden."
+        "nl": "Liever niet. Sauzen worden vaak met ui of knoflook gemaakt, en zelfs sporen daarvan in gaar voedsel kunnen giftig zijn voor honden.",
+        "pl": "Lepiej nie. Do sosów często dodaje się cebulę lub czosnek, a nawet ich ślady w ugotowanym jedzeniu mogą być toksyczne dla psów."
       }
     },
     {
@@ -181,7 +191,8 @@
         "de": "Kann Pasta einem Hund mit Magenbeschwerden helfen?",
         "fr": "Les pâtes peuvent-elles aider un chien qui a des troubles digestifs ?",
         "pt": "A massa pode ajudar um cão com indisposição de estômago?",
-        "nl": "Kan pasta helpen bij een hond met maagklachten?"
+        "nl": "Kan pasta helpen bij een hond met maagklachten?",
+        "pl": "Czy makaron pomoże psu z rozstrojonym żołądkiem?"
       },
       "a": {
         "en": "Cooked pasta is one option when a sick dog needs a bland diet, but such a diet is not balanced and not safe to feed long-term.",
@@ -197,7 +208,8 @@
         "de": "Gekochte Pasta ist eine Möglichkeit, wenn ein kranker Hund eine Schonkost braucht, aber eine solche Kost ist nicht ausgewogen und für die Dauerfütterung nicht geeignet.",
         "fr": "Les pâtes cuites sont une option quand un chien malade a besoin d’une alimentation douce, mais ce régime n’est pas équilibré et ne convient pas à une alimentation à long terme.",
         "pt": "A massa cozida é uma opção quando um cão doente precisa de uma dieta suave, mas essa dieta não é equilibrada nem segura para uma alimentação prolongada.",
-        "nl": "Gekookte pasta is een van de mogelijkheden als een zieke hond een licht verteerbaar dieet nodig heeft, maar zo’n dieet is niet uitgebalanceerd en niet geschikt om langdurig te geven."
+        "nl": "Gekookte pasta is een van de mogelijkheden als een zieke hond een licht verteerbaar dieet nodig heeft, maar zo’n dieet is niet uitgebalanceerd en niet geschikt om langdurig te geven.",
+        "pl": "Ugotowany makaron to jedna z opcji, gdy chory pies potrzebuje lekkostrawnej diety, ale taka dieta nie jest zbilansowana i nie jest bezpieczna do długotrwałego karmienia."
       }
     }
   ],
@@ -334,6 +346,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "08b832e81efb7d1849938b3712bb1f697f0c9168f83292b1529d92dfd9d63ecc"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "b2ec82a47b699f0d3331deedce801ca4512bae5732296ce4b14f3c31a1a6e598"
     }
   }
 }

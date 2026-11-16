@@ -15,7 +15,8 @@
     "de": "Haferbrei",
     "fr": "Flocons d’avoine",
     "pt": "Aveia",
-    "nl": "Havermout"
+    "nl": "Havermout",
+    "pl": "Owsianka"
   },
   "question": {
     "en": "Can dogs eat oatmeal?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Haferbrei fressen?",
     "fr": "Les chiens peuvent-ils manger des flocons d’avoine ?",
     "pt": "Os cães podem comer aveia?",
-    "nl": "Mogen honden havermout eten?"
+    "nl": "Mogen honden havermout eten?",
+    "pl": "Czy psy mogą jeść owsiankę?"
   },
   "url_slug": {
     "en": "oatmeal",
@@ -47,7 +49,8 @@
     "de": "haferbrei",
     "fr": "flocons-d-avoine",
     "pt": "aveia",
-    "nl": "havermout"
+    "nl": "havermout",
+    "pl": "owsianka"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, in kleinen Mengen. Einfacher Haferbrei, mit Wasser statt Milch gekocht, ist für Hunde in Ordnung. Geben Sie niemals Haferbrei mit Geschmack oder Instant-Haferbrei und lassen Sie Salz, Butter, Schokolade und Rosinen weg.",
     "fr": "Oui, en petites quantités. Des flocons d’avoine nature, cuits à l’eau plutôt qu’au lait, conviennent aux chiens. Ne donnez jamais de flocons aromatisés ou instantanés, et évitez le sel, le beurre, le chocolat et les raisins secs.",
     "pt": "Sim, em pequenas quantidades. As papas de aveia simples, cozinhadas com água em vez de leite, não fazem mal aos cães. Nunca dês papas com sabores ou instantâneas, e deixa de fora sal, manteiga, chocolate e passas.",
-    "nl": "Ja, in kleine hoeveelheden. Gewone havermout, gekookt met water in plaats van melk, is prima voor honden. Geef nooit havermout met smaakjes of instant havermout, en laat zout, boter, chocolade en rozijnen weg."
+    "nl": "Ja, in kleine hoeveelheden. Gewone havermout, gekookt met water in plaats van melk, is prima voor honden. Geef nooit havermout met smaakjes of instant havermout, en laat zout, boter, chocolade en rozijnen weg.",
+    "pl": "Tak, w małych ilościach. Owsianka bez dodatków, ugotowana na wodzie, a nie na mleku, jest dla psów w porządku. Nigdy nie dawaj owsianki smakowej ani błyskawicznej i nie dodawaj soli, masła, czekolady ani rodzynek."
   },
   "why": {
     "en": "Oatmeal is high in fibre, including soluble fibre that can help dogs with irregular bowel movements. But dogs digest dairy poorly, raw oats are harder to digest, and a lot of fibre can cause stomach upset, diarrhoea and vomiting; a large amount can even lead to bloat. It is also fairly high in carbs and calories. Flavoured oatmeal often has more sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
@@ -80,7 +84,8 @@
     "de": "Haferflocken sind reich an Ballaststoffen, auch an löslichen, die Hunden mit unregelmäßigem Stuhlgang helfen können. Aber Hunde vertragen Milchprodukte schlecht, rohe Haferflocken sind schwerer verdaulich, und viele Ballaststoffe können Magenbeschwerden, Durchfall und Erbrechen verursachen. Eine große Menge kann sogar zu einem aufgegasten Magen (Bloat) führen. Haferbrei hat außerdem recht viele Kohlenhydrate und Kalorien. Haferbrei mit Geschmack enthält oft mehr Zucker und womöglich Xylit, das für Hunde giftig ist, und Instant-Haferbrei ist stark verarbeitet.",
     "fr": "Les flocons d’avoine sont riches en fibres, dont des fibres solubles qui peuvent aider les chiens dont le transit est irrégulier. Mais les chiens digèrent mal les produits laitiers, les flocons crus sont plus difficiles à digérer, et beaucoup de fibres peuvent provoquer des troubles digestifs, de la diarrhée et des vomissements ; une grande quantité peut même entraîner une dilatation de l’estomac (« bloat »). Ils sont aussi assez riches en glucides et en calories. Les flocons aromatisés contiennent souvent plus de sucre et peuvent contenir du xylitol, toxique pour les chiens, et les flocons instantanés sont très transformés.",
     "pt": "A aveia tem muita fibra, incluindo fibra solúvel que pode ajudar os cães com trânsito intestinal irregular. Mas os cães digerem mal os lacticínios, a aveia crua é mais difícil de digerir, e muita fibra pode causar indisposição de estômago, diarreia e vómitos; uma grande quantidade pode até levar a dilatação gástrica. Também tem bastantes hidratos de carbono e calorias. As papas com sabores têm muitas vezes mais açúcar e podem conter xilitol, que é tóxico para os cães, e a aveia instantânea é muito processada.",
-    "nl": "Havermout bevat veel vezels, waaronder oplosbare vezels die honden met een onregelmatige stoelgang kunnen helpen. Maar honden verteren zuivel slecht, rauwe haver is moeilijker te verteren en veel vezels kunnen maagklachten, diarree en braken veroorzaken; een grote hoeveelheid kan zelfs leiden tot een opgezette maag. Het bevat ook vrij veel koolhydraten en calorieën. Havermout met smaakjes bevat vaak meer suiker en kan xylitol bevatten, dat giftig is voor honden, en instant havermout is sterk bewerkt."
+    "nl": "Havermout bevat veel vezels, waaronder oplosbare vezels die honden met een onregelmatige stoelgang kunnen helpen. Maar honden verteren zuivel slecht, rauwe haver is moeilijker te verteren en veel vezels kunnen maagklachten, diarree en braken veroorzaken; een grote hoeveelheid kan zelfs leiden tot een opgezette maag. Het bevat ook vrij veel koolhydraten en calorieën. Havermout met smaakjes bevat vaak meer suiker en kan xylitol bevatten, dat giftig is voor honden, en instant havermout is sterk bewerkt.",
+    "pl": "Owsianka ma dużo błonnika, w tym błonnika rozpuszczalnego, który może pomóc psom z nieregularnymi wypróżnieniami. Ale psy słabo trawią nabiał, surowe płatki owsiane są trudniejsze do strawienia, a dużo błonnika może powodować rozstrój żołądka, biegunkę i wymioty; duża ilość może nawet doprowadzić do rozdęcia żołądka. Zawiera też dość dużo węglowodanów i kalorii. Owsianka smakowa często ma więcej cukru i może zawierać ksylitol, który jest toksyczny dla psów, a owsianka błyskawiczna jest wysoko przetworzona."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Gewöhnen Sie Ihren Hund schrittweise daran und beobachten Sie, wie er es verträgt. Reagiert Ihr Hund schlecht darauf, wenden Sie sich sofort an Ihren Tierarzt.",
     "fr": "Introduisez-les progressivement et observez comment votre chien les supporte. Si votre chien semble mal réagir, contactez immédiatement votre vétérinaire.",
     "pt": "Introduz aos poucos e observa como o teu cão reage. Se o teu cão parecer reagir mal, liga imediatamente ao teu veterinário.",
-    "nl": "Laat je hond er geleidelijk aan wennen en kijk hoe hij het verdraagt. Lijkt je hond er slecht op te reageren, neem dan meteen contact op met je dierenarts."
+    "nl": "Laat je hond er geleidelijk aan wennen en kijk hoe hij het verdraagt. Lijkt je hond er slecht op te reageren, neem dan meteen contact op met je dierenarts.",
+    "pl": "Wprowadzaj ją stopniowo i obserwuj, jak pies ją znosi. Jeśli wygląda na to, że pies źle ją toleruje, od razu skontaktuj się z weterynarzem."
   },
   "serving": {
     "en": "Plain, cooked oatmeal made with water, not milk, and not too much at once. Not raw, not instant, and no sugar, salt, butter, chocolate, raisins or flavourings.",
@@ -113,7 +119,8 @@
     "de": "Einfacher, gekochter Haferbrei mit Wasser statt Milch, nicht zu viel auf einmal. Nicht roh, nicht als Instant-Variante und ohne Zucker, Salz, Butter, Schokolade, Rosinen oder Aromen.",
     "fr": "Flocons d’avoine nature cuits à l’eau, et non au lait, sans en donner trop d’un coup. Ni crus, ni instantanés, et sans sucre, sel, beurre, chocolat, raisins secs ni arômes.",
     "pt": "Papas de aveia simples, cozinhadas com água e não com leite, e sem exagerar na quantidade de cada vez. Nem crua, nem instantânea, e sem açúcar, sal, manteiga, chocolate, passas nem aromas.",
-    "nl": "Gewone havermout, gekookt met water in plaats van melk, en niet te veel ineens. Niet rauw, niet instant en zonder suiker, zout, boter, chocolade, rozijnen of smaakmakers."
+    "nl": "Gewone havermout, gekookt met water in plaats van melk, en niet te veel ineens. Niet rauw, niet instant en zonder suiker, zout, boter, chocolade, rozijnen of smaakmakers.",
+    "pl": "Owsianka bez dodatków, ugotowana na wodzie, a nie na mleku, i niezbyt dużo naraz. Nie surowa, nie błyskawiczna, bez cukru, soli, masła, czekolady, rodzynek ani aromatów."
   },
   "child": {
     "en": "Dogs can have a little plain oatmeal made with water. Sweet or flavoured porridge is not for dogs.",
@@ -129,7 +136,8 @@
     "de": "Hunde dürfen ein wenig ungesüßten Haferbrei haben, der mit Wasser gekocht wurde. Süßer oder aromatisierter Haferbrei ist nichts für Hunde.",
     "fr": "Les chiens peuvent manger un peu de porridge nature préparé à l’eau. Le porridge sucré ou aromatisé n’est pas pour les chiens.",
     "pt": "Os cães podem comer um pouco de papas de aveia simples feitas com água. As papas doces ou com sabores não são para cães.",
-    "nl": "Honden mogen een beetje gewone havermout, gekookt met water. Zoete havermoutpap of havermout met smaakjes is niets voor honden."
+    "nl": "Honden mogen een beetje gewone havermout, gekookt met water. Zoete havermoutpap of havermout met smaakjes is niets voor honden.",
+    "pl": "Pies może dostać odrobinę owsianki ugotowanej na wodzie, bez dodatków. Słodka lub smakowa owsianka nie jest dla psów."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Dürfen Hunde rohe Haferflocken fressen?",
         "fr": "Les chiens peuvent-ils manger des flocons d’avoine crus ?",
         "pt": "Os cães podem comer aveia crua?",
-        "nl": "Mogen honden rauwe haver eten?"
+        "nl": "Mogen honden rauwe haver eten?",
+        "pl": "Czy psy mogą jeść surowe płatki owsiane?"
       },
       "a": {
         "en": "It's better to cook them. Raw oats sprinkled over food are only harder for your dog to digest.",
@@ -163,7 +172,8 @@
         "de": "Gekocht ist besser. Rohe Haferflocken, über das Futter gestreut, kann Ihr Hund nur schwerer verdauen.",
         "fr": "Mieux vaut les cuire. Des flocons crus saupoudrés sur la nourriture sont simplement plus difficiles à digérer pour votre chien.",
         "pt": "É melhor cozê-la. Os flocos de aveia crus polvilhados sobre a comida só ficam mais difíceis de digerir para o teu cão.",
-        "nl": "Het is beter om haver te koken. Rauwe haver over het eten strooien maakt het voer alleen maar moeilijker verteerbaar voor je hond."
+        "nl": "Het is beter om haver te koken. Rauwe haver over het eten strooien maakt het voer alleen maar moeilijker verteerbaar voor je hond.",
+        "pl": "Lepiej je ugotować. Surowe płatki owsiane posypane na karmę są dla psa po prostu trudniejsze do strawienia."
       }
     },
     {
@@ -181,7 +191,8 @@
         "de": "Ist aromatisierter Instant-Haferbrei für Hunde unbedenklich?",
         "fr": "Les flocons d’avoine instantanés aromatisés sont-ils sans danger pour les chiens ?",
         "pt": "As papas de aveia instantâneas com sabores são seguras para os cães?",
-        "nl": "Is instant havermout met smaakjes veilig voor honden?"
+        "nl": "Is instant havermout met smaakjes veilig voor honden?",
+        "pl": "Czy smakowa owsianka błyskawiczna jest bezpieczna dla psów?"
       },
       "a": {
         "en": "No. Flavoured oatmeal often has extra sugar and may contain xylitol, which is toxic to dogs, and instant oatmeal is highly processed.",
@@ -197,7 +208,8 @@
         "de": "Nein. Haferbrei mit Geschmack enthält oft zusätzlichen Zucker und womöglich Xylit, das für Hunde giftig ist, und Instant-Haferbrei ist stark verarbeitet.",
         "fr": "Non. Les flocons aromatisés contiennent souvent du sucre en plus et peuvent contenir du xylitol, toxique pour les chiens, et les flocons instantanés sont très transformés.",
         "pt": "Não. As papas com sabores têm muitas vezes açúcar extra e podem conter xilitol, que é tóxico para os cães, e a aveia instantânea é muito processada.",
-        "nl": "Nee. Havermout met smaakjes bevat vaak extra suiker en kan xylitol bevatten, dat giftig is voor honden, en instant havermout is sterk bewerkt."
+        "nl": "Nee. Havermout met smaakjes bevat vaak extra suiker en kan xylitol bevatten, dat giftig is voor honden, en instant havermout is sterk bewerkt.",
+        "pl": "Nie. Owsianka smakowa często ma dodatkowy cukier i może zawierać ksylitol, który jest toksyczny dla psów, a owsianka błyskawiczna jest wysoko przetworzona."
       }
     }
   ],
@@ -366,6 +378,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "25fb622ba3231ce4e90fb5c46c8a12b13f389e8abacb6c205ac511ae48d48ff9"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "1efb3bcda2b859433318e7b79ec44b89831a34422b04425e1957bcee8bdc5a4d"
     }
   }
 }

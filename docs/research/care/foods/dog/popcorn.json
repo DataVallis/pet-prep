@@ -15,7 +15,8 @@
     "de": "Popcorn",
     "fr": "Pop-corn",
     "pt": "Pipocas",
-    "nl": "Popcorn"
+    "nl": "Popcorn",
+    "pl": "Popcorn"
   },
   "question": {
     "en": "Can dogs eat popcorn?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Popcorn fressen?",
     "fr": "Les chiens peuvent-ils manger du pop-corn ?",
     "pt": "Os cães podem comer pipocas?",
-    "nl": "Mogen honden popcorn eten?"
+    "nl": "Mogen honden popcorn eten?",
+    "pl": "Czy psy mogą jeść popcorn?"
   },
   "url_slug": {
     "en": "popcorn",
@@ -47,7 +49,8 @@
     "de": "popcorn",
     "fr": "pop-corn",
     "pt": "pipocas",
-    "nl": "popcorn"
+    "nl": "popcorn",
+    "pl": "popcorn"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, ungewürztes, mit Heißluft gepopptes Popcorn ist für Hunde in kleinen Mengen als gelegentliches Leckerli in der Regel unbedenklich. Verzichten Sie auf Butter, Salz, Öl und Aromen und halten Sie ungepoppte Körner von Ihrem Hund fern.",
     "fr": "Oui, le pop-corn nature soufflé à l’air chaud est généralement sans danger pour les chiens en petites quantités, comme friandise occasionnelle. Évitez le beurre, le sel, l’huile et les arômes, et tenez les grains non éclatés hors de portée de votre chien.",
     "pt": "Sim, as pipocas simples feitas em ar quente são geralmente seguras para os cães em pequenas quantidades, como guloseima ocasional. Dispensa a manteiga, o sal, o óleo e os aromas, e mantém os grãos por rebentar longe do teu cão.",
-    "nl": "Ja, gewone popcorn zonder toevoegingen, met hete lucht gepoft, is voor honden over het algemeen veilig in kleine hoeveelheden, af en toe als snoepje. Laat boter, zout, olie en smaakmakers weg en houd ongepofte maïskorrels uit de buurt van je hond."
+    "nl": "Ja, gewone popcorn zonder toevoegingen, met hete lucht gepoft, is voor honden over het algemeen veilig in kleine hoeveelheden, af en toe als snoepje. Laat boter, zout, olie en smaakmakers weg en houd ongepofte maïskorrels uit de buurt van je hond.",
+    "pl": "Tak, popcorn bez dodatków, prażony na gorące powietrze, jest na ogół bezpieczny dla psów w małych ilościach jako smakołyk od czasu do czasu. Zrezygnuj z masła, soli, oleju i aromatów, a niewyprażone ziarna trzymaj z dala od psa."
   },
   "why": {
     "en": "Popcorn itself isn't bad for dogs, though it isn't a nutritional necessity. Many kinds are loaded with butter, oil, salt and flavourings, which can upset some dogs' digestion, and the fats can add to obesity over time. Unpopped and partly popped kernels can get stuck between teeth, damage teeth and pose a choking hazard, especially for smaller dogs.",
@@ -80,7 +84,8 @@
     "de": "Popcorn an sich ist für Hunde nicht schlecht, auch wenn Hunde es ernährungsphysiologisch nicht brauchen. Viele Sorten sind voller Butter, Öl, Salz und Aromen, die manchen Hunden auf die Verdauung schlagen können, und die Fette können mit der Zeit zu Übergewicht beitragen. Ungepoppte und halb gepoppte Körner können zwischen den Zähnen stecken bleiben, die Zähne schädigen und besonders bei kleineren Hunden eine Erstickungsgefahr darstellen.",
     "fr": "Le pop-corn lui-même n’est pas mauvais pour les chiens, même s’il n’est pas indispensable sur le plan nutritionnel. Beaucoup de pop-corn regorgent de beurre, d’huile, de sel et d’arômes, qui peuvent déranger la digestion de certains chiens, et les graisses peuvent favoriser l’obésité à la longue. Les grains non éclatés ou partiellement éclatés peuvent se coincer entre les dents, les abîmer et présenter un risque d’étouffement, surtout pour les petits chiens.",
     "pt": "As pipocas em si não fazem mal aos cães, embora não sejam uma necessidade nutricional. Muitas variedades levam manteiga, óleo, sal e aromas, que podem afetar a digestão de alguns cães, e as gorduras podem contribuir para a obesidade com o tempo. Os grãos por rebentar e os parcialmente rebentados podem ficar presos entre os dentes, danificá-los e ser um risco de engasgo, sobretudo para os cães mais pequenos.",
-    "nl": "Popcorn zelf is niet slecht voor honden, al is het niet nodig voor hun voeding. Veel soorten zitten vol boter, olie, zout en smaakmakers, die bij sommige honden de spijsvertering van streek kunnen maken, en de vetten kunnen na verloop van tijd bijdragen aan overgewicht. Ongepofte en half gepofte korrels kunnen tussen de tanden blijven zitten, de tanden beschadigen en een verstikkingsgevaar vormen, vooral voor kleinere honden."
+    "nl": "Popcorn zelf is niet slecht voor honden, al is het niet nodig voor hun voeding. Veel soorten zitten vol boter, olie, zout en smaakmakers, die bij sommige honden de spijsvertering van streek kunnen maken, en de vetten kunnen na verloop van tijd bijdragen aan overgewicht. Ongepofte en half gepofte korrels kunnen tussen de tanden blijven zitten, de tanden beschadigen en een verstikkingsgevaar vormen, vooral voor kleinere honden.",
+    "pl": "Sam popcorn nie szkodzi psom, choć nie jest dla nich niezbędny w żywieniu. Wiele rodzajów jest przesyconych masłem, olejem, solą i aromatami, które mogą rozstroić trawienie niektórych psów, a tłuszcze z czasem mogą sprzyjać otyłości. Niewyprażone i częściowo wyprażone ziarna mogą utknąć między zębami, uszkodzić zęby i grozić zadławieniem, zwłaszcza u mniejszych psów."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Ein paar heruntergefallene Stücke Popcorn mit Butter schaden wahrscheinlich nicht. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund eine große Menge frisst oder danach Erbrechen, Durchfall oder Teilnahmslosigkeit zeigt.",
     "fr": "Quelques morceaux de pop-corn au beurre tombés par terre ne feront probablement pas de mal. Appelez votre vétérinaire si votre chien en mange une grande quantité ou présente ensuite des vomissements, de la diarrhée ou de la léthargie.",
     "pt": "Algumas pipocas com manteiga que tenham caído provavelmente não fazem mal. Liga ao teu veterinário se o teu cão comer uma grande quantidade ou tiver vómitos, diarreia ou apatia depois.",
-    "nl": "Een paar gevallen stukjes popcorn met boter doen waarschijnlijk geen kwaad. Bel je dierenarts als je hond een grote hoeveelheid eet of daarna moet braken, diarree krijgt of lusteloos wordt."
+    "nl": "Een paar gevallen stukjes popcorn met boter doen waarschijnlijk geen kwaad. Bel je dierenarts als je hond een grote hoeveelheid eet of daarna moet braken, diarree krijgt of lusteloos wordt.",
+    "pl": "Kilka kawałków popcornu z masłem, które spadły na podłogę, prawdopodobnie nie zaszkodzi. Zadzwoń do weterynarza, jeśli pies zjadł dużą ilość albo potem ma wymioty, biegunkę lub jest ospały."
   },
   "serving": {
     "en": "Plain, air-popped pieces only, now and then. No butter, salt, oil, caramel or candy coating, cheese or seasoning, and no unpopped kernels.",
@@ -113,7 +119,8 @@
     "de": "Nur ungewürzte, mit Heißluft gepoppte Stücke, ab und zu. Keine Butter, kein Salz, kein Öl, keine Karamell- oder Zuckerglasur, kein Käse, keine Gewürze und keine ungepoppten Körner.",
     "fr": "Uniquement des morceaux nature soufflés à l’air chaud, de temps en temps. Sans beurre, sel, huile, caramel ni enrobage sucré, sans fromage ni assaisonnement, et sans grains non éclatés.",
     "pt": "Só pipocas simples, feitas em ar quente, de vez em quando. Sem manteiga, sal, óleo, caramelo nem cobertura de açúcar, queijo nem temperos, e sem grãos por rebentar.",
-    "nl": "Alleen gewone popcorn die met hete lucht is gepoft, af en toe. Geen boter, zout, olie, karamel of suikerlaagje, kaas of kruiden, en geen ongepofte korrels."
+    "nl": "Alleen gewone popcorn die met hete lucht is gepoft, af en toe. Geen boter, zout, olie, karamel of suikerlaagje, kaas of kruiden, en geen ongepofte korrels.",
+    "pl": "Tylko popcorn bez dodatków, prażony na gorące powietrze, od czasu do czasu. Bez masła, soli, oleju, karmelu ani polewy cukierkowej, sera i przypraw oraz bez niewyprażonych ziaren."
   },
   "child": {
     "en": "Dogs can have a few pieces of plain popcorn. Buttery or salty popcorn and hard kernels are not for dogs.",
@@ -129,7 +136,8 @@
     "de": "Hunde dürfen ein paar Stücke ungewürztes Popcorn haben. Popcorn mit Butter oder Salz und harte Körner sind nichts für Hunde.",
     "fr": "Les chiens peuvent manger quelques morceaux de pop-corn nature. Le pop-corn au beurre ou salé et les grains durs ne sont pas pour les chiens.",
     "pt": "Os cães podem comer algumas pipocas simples. As pipocas com manteiga ou salgadas e os grãos duros não são para cães.",
-    "nl": "Honden mogen een paar stukjes gewone popcorn. Popcorn met boter of zout en harde korrels zijn niets voor honden."
+    "nl": "Honden mogen een paar stukjes gewone popcorn. Popcorn met boter of zout en harde korrels zijn niets voor honden.",
+    "pl": "Pies może dostać kilka kawałków popcornu bez dodatków. Popcorn z masłem lub słony oraz twarde ziarna nie są dla psów."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Mein Hund hat ein wenig Popcorn mit Butter gefressen. Ist das ein Problem?",
         "fr": "Mon chien a mangé du pop-corn au beurre. Est-ce un problème ?",
         "pt": "O meu cão comeu algumas pipocas com manteiga. É um problema?",
-        "nl": "Mijn hond heeft wat popcorn met boter gegeten. Is dat een probleem?"
+        "nl": "Mijn hond heeft wat popcorn met boter gegeten. Is dat een probleem?",
+        "pl": "Mój pies zjadł trochę popcornu z masłem. Czy to problem?"
       },
       "a": {
         "en": "A few pieces probably won't cause harm. Call your vet if your dog ate a lot or develops vomiting, diarrhoea or lethargy.",
@@ -163,7 +172,8 @@
         "de": "Ein paar Stücke schaden wahrscheinlich nicht. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund viel gefressen hat oder Erbrechen, Durchfall oder Teilnahmslosigkeit zeigt.",
         "fr": "Quelques morceaux ne feront probablement pas de mal. Appelez votre vétérinaire si votre chien en a beaucoup mangé ou s’il présente des vomissements, de la diarrhée ou de la léthargie.",
         "pt": "Algumas pipocas provavelmente não fazem mal. Liga ao teu veterinário se o teu cão comeu muitas ou se tiver vómitos, diarreia ou apatia.",
-        "nl": "Een paar stukjes doen waarschijnlijk geen kwaad. Bel je dierenarts als je hond er veel van heeft gegeten of gaat braken, diarree krijgt of lusteloos wordt."
+        "nl": "Een paar stukjes doen waarschijnlijk geen kwaad. Bel je dierenarts als je hond er veel van heeft gegeten of gaat braken, diarree krijgt of lusteloos wordt.",
+        "pl": "Kilka kawałków prawdopodobnie nie zaszkodzi. Zadzwoń do weterynarza, jeśli pies zjadł dużo albo pojawią się wymioty, biegunka lub ospałość."
       }
     },
     {
@@ -181,7 +191,8 @@
         "de": "Dürfen Hunde Karamell- oder Käsepopcorn fressen?",
         "fr": "Les chiens peuvent-ils manger du pop-corn au caramel ou au fromage ?",
         "pt": "Os cães podem comer pipocas de caramelo ou de queijo?",
-        "nl": "Mogen honden karamelpopcorn of popcorn met kaas eten?"
+        "nl": "Mogen honden karamelpopcorn of popcorn met kaas eten?",
+        "pl": "Czy psy mogą jeść popcorn karmelowy albo serowy?"
       },
       "a": {
         "en": "No. Skip popcorn with candy or caramel coatings, cheese or seasoning.",
@@ -197,7 +208,8 @@
         "de": "Nein. Verzichten Sie auf Popcorn mit Zucker- oder Karamellglasur, Käse oder Gewürzen.",
         "fr": "Non. Évitez le pop-corn enrobé de sucre ou de caramel, au fromage ou assaisonné.",
         "pt": "Não. Evita as pipocas com cobertura de açúcar ou caramelo, queijo ou temperos.",
-        "nl": "Nee. Geef geen popcorn met een laagje snoep of karamel, kaas of kruiden."
+        "nl": "Nee. Geef geen popcorn met een laagje snoep of karamel, kaas of kruiden.",
+        "pl": "Nie. Nie dawaj popcornu w polewie cukierkowej lub karmelowej, z serem ani z przyprawami."
       }
     }
   ],
@@ -350,6 +362,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1b1b16c8b3b86c8b61b894a2a07b4b1e72444173d62682ce11aa71e59929e259"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "8f4eb23797f1fd09f7ac55674e4f7582ae63ca9d3c18e323e9bd94c9e1be76dc"
     }
   }
 }

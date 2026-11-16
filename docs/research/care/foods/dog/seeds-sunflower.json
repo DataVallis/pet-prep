@@ -6,21 +6,24 @@
     "sl": "Sončnična semena",
     "es": "Semillas de girasol",
     "pt": "Sementes de girassol",
-    "nl": "Zonnebloempitten"
+    "nl": "Zonnebloempitten",
+    "pl": "Nasiona słonecznika"
   },
   "question": {
     "en": "Can dogs eat sunflower seeds?",
     "sl": "Ali lahko psi jedo sončnična semena?",
     "es": "¿Pueden los perros comer semillas de girasol?",
     "pt": "Os cães podem comer sementes de girassol?",
-    "nl": "Mogen honden zonnebloempitten eten?"
+    "nl": "Mogen honden zonnebloempitten eten?",
+    "pl": "Czy psy mogą jeść nasiona słonecznika?"
   },
   "url_slug": {
     "en": "sunflower-seeds",
     "sl": "soncnicna-semena",
     "es": "semillas-de-girasol",
     "pt": "sementes-de-girassol",
-    "nl": "zonnebloempitten"
+    "nl": "zonnebloempitten",
+    "pl": "nasiona-slonecznika"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, kot občasen prigrizek, če so oluščena in nesoljena. Dajte le navadna surova ali popražena sončnična semena, nikoli lupin, ki lahko povzročijo dušenje in jih pes ne prebavi. Preveč semen lahko psu razdraži želodec.",
     "es": "Sí, como tentempié ocasional, si están peladas y sin sal. Da solo semillas de girasol sencillas, crudas o tostadas, nunca las cáscaras, que son un peligro de atragantamiento y no se pueden digerir. Demasiadas semillas pueden sentar mal al estómago de tu perro.",
     "pt": "Sim, como lanche ocasional, se estiverem sem casca e sem sal. Dá só sementes de girassol simples, cruas ou torradas, nunca as cascas, que são um risco de engasgo e não se digerem. Demasiadas sementes podem irritar o estômago do teu cão.",
-    "nl": "Ja, af en toe als tussendoortje, mits ze gepeld en ongezouten zijn. Geef alleen gewone rauwe of geroosterde zonnebloempitten, nooit de doppen, die een verstikkingsgevaar zijn en niet te verteren zijn. Te veel pitten kunnen de maag van je hond van streek maken."
+    "nl": "Ja, af en toe als tussendoortje, mits ze gepeld en ongezouten zijn. Geef alleen gewone rauwe of geroosterde zonnebloempitten, nooit de doppen, die een verstikkingsgevaar zijn en niet te verteren zijn. Te veel pitten kunnen de maag van je hond van streek maken.",
+    "pl": "Tak, jako przekąska od czasu do czasu, jeśli są łuskane i niesolone. Dawaj tylko nasiona słonecznika bez dodatków, surowe lub prażone, i nigdy łusek, które grożą zadławieniem i nie nadają się do strawienia. Zbyt dużo nasion może rozstroić psu żołądek."
   },
   "why": {
     "en": "The husks are extremely hard, can't be broken down during digestion and can get stuck in the gut, causing a blockage. The salt in packaged seeds is harmful to dogs. Sunflower seeds are also high in fat, and too many can bring on vomiting, lethargy, a decreased appetite or other stomach upset.",
     "sl": "Lupine so zelo trde, med prebavo se ne razgradijo in se lahko zataknejo v prebavilih ter jih zamašijo. Sol v pakiranih semenih psom škodi. Sončnična semena vsebujejo tudi veliko maščob; preveč jih lahko povzroči bruhanje, utrujenost, slabši apetit ali druge prebavne težave.",
     "es": "Las cáscaras son extremadamente duras, no se descomponen durante la digestión y pueden quedarse atascadas en el intestino y causar una obstrucción. La sal de las semillas envasadas es perjudicial para los perros. Las semillas de girasol también tienen mucha grasa, y demasiadas pueden provocar vómitos, falta de energía, menos apetito u otros trastornos de estómago.",
     "pt": "As cascas são extremamente duras, não se decompõem na digestão e podem ficar presas no intestino, causando uma obstrução. O sal das sementes embaladas faz mal aos cães. As sementes de girassol também têm muita gordura, e demasiadas podem causar vómitos, apatia, menos apetite ou outra indisposição de estômago.",
-    "nl": "De doppen zijn extreem hard, kunnen tijdens de spijsvertering niet worden afgebroken en kunnen in de darmen blijven steken en een verstopping veroorzaken. Het zout in verpakte pitten is schadelijk voor honden. Zonnebloempitten bevatten ook veel vet, en te veel pitten kunnen braken, lusteloosheid, minder eetlust of andere maagklachten veroorzaken."
+    "nl": "De doppen zijn extreem hard, kunnen tijdens de spijsvertering niet worden afgebroken en kunnen in de darmen blijven steken en een verstopping veroorzaken. Het zout in verpakte pitten is schadelijk voor honden. Zonnebloempitten bevatten ook veel vet, en te veel pitten kunnen braken, lusteloosheid, minder eetlust of andere maagklachten veroorzaken.",
+    "pl": "Łuski są wyjątkowo twarde, nie rozkładają się w trakcie trawienia i mogą utknąć w jelitach, powodując niedrożność. Sól w paczkowanych nasionach szkodzi psom. Nasiona słonecznika mają też dużo tłuszczu, a zbyt duża ich ilość może wywołać wymioty, ospałość, spadek apetytu lub inny rozstrój żołądka."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Dajte le oluščena, nesoljena semena in se pred dodajanjem sončničnih semen v pasjo prehrano posvetujte z veterinarjem.",
     "es": "Da solo semillas peladas y sin sal, y habla con tu veterinario antes de añadir semillas de girasol a la dieta de tu perro.",
     "pt": "Dá só sementes sem casca e sem sal, e fala com o teu veterinário antes de juntar sementes de girassol à alimentação do teu cão.",
-    "nl": "Geef alleen gepelde, ongezouten pitten en overleg met je dierenarts voordat je zonnebloempitten aan het voer van je hond toevoegt."
+    "nl": "Geef alleen gepelde, ongezouten pitten en overleg met je dierenarts voordat je zonnebloempitten aan het voer van je hond toevoegt.",
+    "pl": "Dawaj tylko łuskane, niesolone nasiona i porozmawiaj z weterynarzem, zanim dodasz nasiona słonecznika do diety psa."
   },
   "serving": {
     "en": "Shelled, plain (unsalted) raw or toasted seeds, now and then in moderate amounts.",
     "sl": "Oluščena, navadna (nesoljena) surova ali popražena semena, občasno in zmerno.",
     "es": "Semillas peladas, sencillas (sin sal), crudas o tostadas, de vez en cuando y en cantidades moderadas.",
     "pt": "Sementes simples (sem sal) e sem casca, cruas ou torradas, de vez em quando e em quantidades moderadas.",
-    "nl": "Gepelde, ongezouten rauwe of geroosterde pitten, af en toe in een matige hoeveelheid."
+    "nl": "Gepelde, ongezouten rauwe of geroosterde pitten, af en toe in een matige hoeveelheid.",
+    "pl": "Łuskane, bez dodatków (niesolone), surowe lub prażone, od czasu do czasu w umiarkowanej ilości."
   },
   "child": {
     "en": "Dogs can nibble a few plain sunflower seeds without shells, but never the salty ones from a snack bag.",
     "sl": "Psi lahko pojedo nekaj navadnih sončničnih semen brez lupin, nikoli pa slanih iz vrečke za prigrizke.",
     "es": "Los perros pueden mordisquear unas pocas semillas de girasol sencillas y sin cáscara, pero nunca las saladas de una bolsa de aperitivos.",
     "pt": "Os cães podem mordiscar algumas sementes de girassol simples e sem casca, mas nunca as salgadas de um pacote de aperitivos.",
-    "nl": "Honden mogen een paar gewone zonnebloempitten zonder dop knabbelen, maar nooit de zoute uit een zakje."
+    "nl": "Honden mogen een paar gewone zonnebloempitten zonder dop knabbelen, maar nooit de zoute uit een zakje.",
+    "pl": "Pies może schrupać kilka nasion słonecznika bez dodatków i bez łusek, ale nigdy tych słonych z paczki przekąsek."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo lupine sončničnih semen?",
         "es": "¿Pueden los perros comer las cáscaras de las semillas de girasol?",
         "pt": "Os cães podem comer cascas de sementes de girassol?",
-        "nl": "Mogen honden de doppen van zonnebloempitten eten?"
+        "nl": "Mogen honden de doppen van zonnebloempitten eten?",
+        "pl": "Czy psy mogą jeść łuski nasion słonecznika?"
       },
       "a": {
         "en": "No. The shells are extremely hard, can't be digested, are a serious choking hazard and can cause a blockage in the gut.",
         "sl": "Ne. Lupine so zelo trde, pes jih ne prebavi, lahko povzročijo dušenje in zamašijo prebavila.",
         "es": "No. Las cáscaras son extremadamente duras, no se pueden digerir, son un grave peligro de atragantamiento y pueden causar una obstrucción en el intestino.",
         "pt": "Não. As cascas são extremamente duras, não se digerem, são um sério risco de engasgo e podem causar uma obstrução no intestino.",
-        "nl": "Nee. De doppen zijn extreem hard, kunnen niet worden verteerd, zijn een ernstig verstikkingsgevaar en kunnen een verstopping in de darmen veroorzaken."
+        "nl": "Nee. De doppen zijn extreem hard, kunnen niet worden verteerd, zijn een ernstig verstikkingsgevaar en kunnen een verstopping in de darmen veroorzaken.",
+        "pl": "Nie. Łuski są wyjątkowo twarde, nie nadają się do strawienia, stwarzają poważne ryzyko zadławienia i mogą spowodować niedrożność jelit."
       }
     }
   ],
@@ -153,6 +163,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "761a43fb5c05e2ad2c2c5922a06ab757b9bcf4252adacc9c14c2480720091fb2"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-16",
+      "verified_hash": "213fde83f02b6b705b0a3e809a81842036ace0f3ea75363fa9c415e382d44a41"
     }
   }
 }
