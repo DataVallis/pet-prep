@@ -14,7 +14,8 @@
     "de": "Muskatnuss",
     "fr": "Noix de muscade",
     "es": "Nuez moscada",
-    "pt": "Noz-moscada"
+    "pt": "Noz-moscada",
+    "nl": "Nootmuskaat"
   },
   "question": {
     "en": "Can cats eat nutmeg?",
@@ -29,7 +30,8 @@
     "de": "Dürfen Katzen Muskatnuss fressen?",
     "fr": "Les chats peuvent-ils manger de la noix de muscade ?",
     "es": "¿Pueden los gatos comer nuez moscada?",
-    "pt": "Os gatos podem comer noz-moscada?"
+    "pt": "Os gatos podem comer noz-moscada?",
+    "nl": "Mogen katten nootmuskaat eten?"
   },
   "url_slug": {
     "en": "nutmeg",
@@ -44,7 +46,8 @@
     "de": "muskatnuss",
     "fr": "noix-de-muscade",
     "es": "nuez-moscada",
-    "pt": "noz-moscada"
+    "pt": "noz-moscada",
+    "nl": "nootmuskaat"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "de": "Geben Sie Katzen besser keine Muskatnuss. Die kleine Menge, die in Rezepten verwendet wird, richtet sehr wahrscheinlich keinen ernsten Schaden an, kann aber leichte Magenbeschwerden auslösen. Eine sehr große Menge Muskatnuss kann giftig sein.",
     "fr": "Mieux vaut ne pas donner de noix de muscade aux chats. Il est très peu probable que la petite quantité utilisée dans les recettes cause de problème grave, mais elle peut provoquer de légers troubles digestifs. Une très grande quantité de noix de muscade peut être toxique.",
     "es": "Es mejor no darles nuez moscada a los gatos. La pequeña cantidad que se usa en las recetas es muy poco probable que cause un daño grave, aunque puede provocar un malestar de estómago leve. Una cantidad muy grande de nuez moscada puede ser tóxica.",
-    "pt": "É melhor não dar noz-moscada aos gatos. A pequena quantidade usada nas receitas dificilmente causa danos graves, mas pode causar uma ligeira indisposição de estômago. Uma quantidade muito grande de noz-moscada pode ser tóxica."
+    "pt": "É melhor não dar noz-moscada aos gatos. A pequena quantidade usada nas receitas dificilmente causa danos graves, mas pode causar uma ligeira indisposição de estômago. Uma quantidade muito grande de noz-moscada pode ser tóxica.",
+    "nl": "Geef katten liever geen nootmuskaat. Het is zeer onwaarschijnlijk dat de kleine hoeveelheid die in recepten wordt gebruikt ernstige schade veroorzaakt, al kan het lichte maagklachten geven. Een zeer grote hoeveelheid nootmuskaat kan giftig zijn."
   },
   "why": {
     "en": "Nutmeg contains a toxin called myristicin. Pet Poison Helpline says the small amount used in recipes is very unlikely to cause serious toxicity, and that a problem is very unlikely if a cat eats food with nutmeg in it. VCA notes that spices in eggnog, such as nutmeg, could have toxic effects in large quantities. Cats don't need anything other than a complete diet.",
@@ -75,7 +79,8 @@
     "de": "Muskatnuss enthält einen Giftstoff namens Myristicin. Pet Poison Helpline sagt, dass die kleine Menge in Rezepten sehr wahrscheinlich keine ernste Vergiftung verursacht und dass ein Problem sehr unwahrscheinlich ist, wenn eine Katze Speisen mit Muskatnuss frisst. VCA weist darauf hin, dass Gewürze in Eggnog wie Muskatnuss in großen Mengen giftig wirken können. Katzen brauchen außer einer vollwertigen Ernährung nichts.",
     "fr": "La noix de muscade contient une toxine appelée myristicine. Le Pet Poison Helpline indique qu’il est très peu probable que la petite quantité utilisée dans les recettes provoque une intoxication grave, et qu’un problème est très improbable si un chat mange un aliment contenant de la noix de muscade. VCA note que les épices du lait de poule, comme la noix de muscade, pourraient avoir des effets toxiques en grande quantité. Les chats n’ont besoin de rien d’autre qu’une alimentation complète.",
     "es": "La nuez moscada contiene una toxina llamada miristicina. Pet Poison Helpline dice que la pequeña cantidad que se usa en las recetas es muy poco probable que cause una toxicidad grave, y que es muy improbable que haya un problema si un gato come un alimento que lleve nuez moscada. VCA señala que las especias del ponche de huevo, como la nuez moscada, podrían tener efectos tóxicos en grandes cantidades. Los gatos no necesitan nada más que una alimentación completa.",
-    "pt": "A noz-moscada contém uma toxina chamada miristicina. A Pet Poison Helpline diz que a pequena quantidade usada nas receitas dificilmente causa toxicidade grave, e que é muito improvável haver problema se um gato comer comida com noz-moscada. A VCA refere que os temperos do eggnog, como a noz-moscada, podem ter efeitos tóxicos em grandes quantidades. Os gatos não precisam de mais nada além de uma alimentação completa."
+    "pt": "A noz-moscada contém uma toxina chamada miristicina. A Pet Poison Helpline diz que a pequena quantidade usada nas receitas dificilmente causa toxicidade grave, e que é muito improvável haver problema se um gato comer comida com noz-moscada. A VCA refere que os temperos do eggnog, como a noz-moscada, podem ter efeitos tóxicos em grandes quantidades. Os gatos não precisam de mais nada além de uma alimentação completa.",
+    "nl": "Nootmuskaat bevat een gifstof die myristicine heet. Pet Poison Helpline zegt dat de kleine hoeveelheid die in recepten wordt gebruikt zeer waarschijnlijk geen ernstige vergiftiging veroorzaakt, en dat het zeer onwaarschijnlijk is dat een kat die eten met nootmuskaat eet problemen krijgt. VCA merkt op dat kruiden in eggnog, zoals nootmuskaat, in grote hoeveelheden giftig kunnen zijn. Katten hebben niets anders nodig dan een volwaardige voeding."
   },
   "signs": {
     "en": [
@@ -129,6 +134,10 @@
     "pt": [
       "Ligeira indisposição de estômago",
       "Depois de uma quantidade muito grande: alucinações, desorientação, coração acelerado, boca seca, dor de barriga ou convulsões"
+    ],
+    "nl": [
+      "Lichte maagklachten",
+      "Na een zeer grote hoeveelheid: hallucinaties, desoriëntatie, snelle hartslag, droge mond, buikpijn of toevallen"
     ]
   },
   "what_to_do": {
@@ -144,7 +153,8 @@
     "de": "Hat Ihre Katze Speisen mit ein wenig Muskatnuss gefressen, achten Sie auf leichte Magenbeschwerden. Hat sie eine große Menge Muskatnuss gefressen, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Si votre chat a mangé un aliment contenant un peu de noix de muscade, surveillez l’apparition de légers troubles digestifs. S’il en a mangé une grande quantité, contactez immédiatement votre vétérinaire. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat à la maison.",
     "es": "Si tu gato ha comido un alimento con un poco de nuez moscada, observa si tiene un malestar de estómago leve. Si ha comido una cantidad grande de nuez moscada, ponte en contacto con tu veterinario enseguida. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
-    "pt": "Se o teu gato comeu comida com um pouco de noz-moscada, vigia se há uma ligeira indisposição de estômago. Se ele comeu uma grande quantidade de noz-moscada, contacta imediatamente o teu veterinário. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
+    "pt": "Se o teu gato comeu comida com um pouco de noz-moscada, vigia se há uma ligeira indisposição de estômago. Se ele comeu uma grande quantidade de noz-moscada, contacta imediatamente o teu veterinário. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+    "nl": "Heeft je kat eten met een beetje nootmuskaat gegeten, let dan op lichte maagklachten. Heeft ze een grote hoeveelheid nootmuskaat gegeten, neem dan meteen contact op met je dierenarts. Wacht niet af of er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken."
   },
   "serving": null,
   "child": {
@@ -160,7 +170,8 @@
     "de": "Muskatnuss ist ein Gewürz, das Menschen zum Kochen benutzen. Katzen brauchen keine Gewürze, also halte das Gewürzglas von deiner Katze fern.",
     "fr": "La noix de muscade est une épice pour la cuisine des humains. Les chats n’ont pas besoin d’épices : garde le pot d’épices loin de ton chat.",
     "es": "La nuez moscada es una especia para cocinar para las personas. Los gatos no necesitan especias, así que mantén el bote de las especias lejos del gatito.",
-    "pt": "A noz-moscada é um tempero para a cozinha das pessoas. Os gatos não precisam de temperos, por isso mantém o frasco longe do gatinho."
+    "pt": "A noz-moscada é um tempero para a cozinha das pessoas. Os gatos não precisam de temperos, por isso mantém o frasco longe do gatinho.",
+    "nl": "Nootmuskaat is een kruid voor in de keuken van mensen. Katten hebben geen kruiden nodig, dus houd het kruidenpotje uit de buurt van je kat."
   },
   "faq": [
     {
@@ -177,7 +188,8 @@
         "de": "Ist Eggnog mit Muskatnuss für Katzen unbedenklich?",
         "fr": "Le lait de poule à la noix de muscade est-il sans danger pour les chats ?",
         "es": "¿Es seguro para los gatos el ponche de huevo con nuez moscada?",
-        "pt": "O eggnog com noz-moscada é seguro para gatos?"
+        "pt": "O eggnog com noz-moscada é seguro para gatos?",
+        "nl": "Is eggnog met nootmuskaat veilig voor katten?"
       },
       "a": {
         "en": "No. VCA says spices in eggnog, such as nutmeg, could have toxic effects in large quantities, and advises contacting your vet if you think your cat drank eggnog.",
@@ -192,7 +204,8 @@
         "de": "Nein. VCA sagt, dass Gewürze in Eggnog wie Muskatnuss in großen Mengen giftig wirken können, und rät, sich an Ihren Tierarzt zu wenden, wenn Sie vermuten, dass Ihre Katze Eggnog getrunken hat.",
         "fr": "Non. VCA indique que les épices du lait de poule, comme la noix de muscade, pourraient avoir des effets toxiques en grande quantité, et conseille de contacter votre vétérinaire si vous pensez que votre chat en a bu.",
         "es": "No. VCA dice que las especias del ponche de huevo, como la nuez moscada, podrían tener efectos tóxicos en grandes cantidades, y aconseja ponerse en contacto con tu veterinario si crees que tu gato ha bebido ponche de huevo.",
-        "pt": "Não. A VCA diz que os temperos do eggnog, como a noz-moscada, podem ter efeitos tóxicos em grandes quantidades, e aconselha a contactar o veterinário se achas que o teu gato bebeu eggnog."
+        "pt": "Não. A VCA diz que os temperos do eggnog, como a noz-moscada, podem ter efeitos tóxicos em grandes quantidades, e aconselha a contactar o veterinário se achas que o teu gato bebeu eggnog.",
+        "nl": "Nee. VCA zegt dat kruiden in eggnog, zoals nootmuskaat, in grote hoeveelheden giftig kunnen zijn, en adviseert contact op te nemen met je dierenarts als je denkt dat je kat eggnog heeft gedronken."
       }
     }
   ],
@@ -322,6 +335,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "56261c761739049189b9db1410ed392c79e75d351cc5dfff53442eccb7012c5c"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4ae7843c88f0bb29d3f1e40fdaa2888f874af7c80e7a8dfcc7086d22ee6359e9"
     }
   }
 }

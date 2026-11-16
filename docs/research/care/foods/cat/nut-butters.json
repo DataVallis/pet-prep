@@ -5,32 +5,37 @@
     "en": "Nut butters (almond, walnut …)",
     "sl": "Maslo iz oreščkov (mandljevo, orehovo …)",
     "es": "Cremas de frutos secos (de almendra, de nuez …)",
-    "pt": "Manteigas de frutos secos (amêndoa, noz …)"
+    "pt": "Manteigas de frutos secos (amêndoa, noz …)",
+    "nl": "Notenpasta (amandel, walnoot …)"
   },
   "question": {
     "en": "Can cats eat nut butters?",
     "sl": "Ali lahko mačke jedo maslo iz oreščkov?",
     "es": "¿Pueden los gatos comer cremas de frutos secos?",
-    "pt": "Os gatos podem comer manteigas de frutos secos?"
+    "pt": "Os gatos podem comer manteigas de frutos secos?",
+    "nl": "Mogen katten notenpasta eten?"
   },
   "url_slug": {
     "en": "nut-butters",
     "sl": "maslo-iz-oresckov",
     "es": "cremas-de-frutos-secos",
-    "pt": "manteigas-de-frutos-secos"
+    "pt": "manteigas-de-frutos-secos",
+    "nl": "notenpasta"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to. Nut butters are made from nuts, and nuts contain high amounts of oils and fats that can make a cat unwell, with vomiting or diarrhoea. Never give macadamia nut butter: macadamia nuts are toxic to cats.",
     "sl": "Raje ne. Maslo iz oreščkov je narejeno iz oreščkov, ti pa vsebujejo veliko olj in maščob, zaradi katerih je mački lahko slabo, bruha ali ima drisko. Nikoli ji ne dajte masla iz makadamij: makadamije so za mačke strupene.",
     "es": "Es mejor no dárselas. Las cremas de frutos secos se hacen con frutos secos, que contienen grandes cantidades de aceites y grasas que pueden poner malo a un gato, con vómitos o diarrea. No le des nunca crema de nueces de macadamia: las nueces de macadamia son tóxicas para los gatos.",
-    "pt": "É melhor não. As manteigas de frutos secos são feitas de frutos secos, que têm muito óleo e gordura e podem pôr o gato doente, com vómitos ou diarreia. Nunca dês manteiga de nozes de macadâmia: as nozes de macadâmia são tóxicas para os gatos."
+    "pt": "É melhor não. As manteigas de frutos secos são feitas de frutos secos, que têm muito óleo e gordura e podem pôr o gato doente, com vómitos ou diarreia. Nunca dês manteiga de nozes de macadâmia: as nozes de macadâmia são tóxicas para os gatos.",
+    "nl": "Liever niet. Notenpasta is gemaakt van noten, en noten bevatten veel oliën en vetten die een kat ziek kunnen maken, met braken of diarree. Geef nooit macadamiapasta: macadamianoten zijn giftig voor katten."
   },
   "why": {
     "en": "Cats Protection says nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which can make a cat unwell. VCA vets say most nuts are very fatty and can cause vomiting and diarrhoea, and that macadamia nuts are very fatty, can cause pancreatitis and are also toxic to cats. Cats Protection advises sticking to cat food treats rather than human foods.",
     "sl": "Cats Protection navaja, da oreščki, kot so makadamije, mandlji in orehi, vsebujejo veliko olj in maščob, zaradi katerih je mački lahko slabo. Veterinarji VCA pravijo, da je večina oreščkov zelo mastnih in lahko povzroči bruhanje in drisko ter da so makadamije zelo mastne, lahko povzročijo vnetje trebušne slinavke in so za mačke tudi strupene. Cats Protection svetuje, naj mački raje dajemo priboljške za mačke kot hrano za ljudi.",
     "es": "Cats Protection dice que los frutos secos como las nueces de macadamia, las almendras y las nueces contienen grandes cantidades de aceites y grasas que pueden poner malo a un gato. Los veterinarios de VCA dicen que la mayoría de los frutos secos son muy grasos y pueden causar vómitos y diarrea, y que las nueces de macadamia son muy grasas, pueden causar pancreatitis y además son tóxicas para los gatos. Cats Protection aconseja ceñirse a los premios para gatos en lugar de dar comida de personas.",
-    "pt": "A Cats Protection diz que frutos secos como as nozes de macadâmia, as amêndoas e as nozes têm muito óleo e gordura, o que pode pôr o gato doente. Os veterinários da VCA dizem que a maioria dos frutos secos tem muita gordura e pode causar vómitos e diarreia, e que as nozes de macadâmia têm muita gordura, podem causar pancreatite e são também tóxicas para os gatos. A Cats Protection aconselha a dar guloseimas próprias para gatos em vez de comida de pessoas."
+    "pt": "A Cats Protection diz que frutos secos como as nozes de macadâmia, as amêndoas e as nozes têm muito óleo e gordura, o que pode pôr o gato doente. Os veterinários da VCA dizem que a maioria dos frutos secos tem muita gordura e pode causar vómitos e diarreia, e que as nozes de macadâmia têm muita gordura, podem causar pancreatite e são também tóxicas para os gatos. A Cats Protection aconselha a dar guloseimas próprias para gatos em vez de comida de pessoas.",
+    "nl": "Cats Protection zegt dat noten zoals macadamia, amandelen en walnoten veel oliën en vetten bevatten die een kat ziek kunnen maken. Dierenartsen van VCA zeggen dat de meeste noten erg vet zijn en braken en diarree kunnen veroorzaken, en dat macadamianoten erg vet zijn, alvleesklierontsteking kunnen veroorzaken en bovendien giftig zijn voor katten. Cats Protection adviseert om bij kattensnoepjes te blijven in plaats van menselijk voedsel te geven."
   },
   "signs": {
     "en": [
@@ -48,20 +53,26 @@
     "pt": [
       "Vómitos",
       "Diarreia"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate macadamia nut butter, or seems unwell after eating any nut butter, book an urgent appointment with your vet.",
     "sl": "Če je mačka pojedla maslo iz makadamij ali se po kateremkoli maslu iz oreščkov ne počuti dobro, se nujno naročite pri veterinarju.",
     "es": "Si tu gato ha comido crema de nueces de macadamia, o parece encontrarse mal después de comer cualquier crema de frutos secos, pide una cita urgente con tu veterinario.",
-    "pt": "Se o teu gato comeu manteiga de nozes de macadâmia, ou parece doente depois de comer qualquer manteiga de frutos secos, marca uma consulta urgente com o teu veterinário."
+    "pt": "Se o teu gato comeu manteiga de nozes de macadâmia, ou parece doente depois de comer qualquer manteiga de frutos secos, marca uma consulta urgente com o teu veterinário.",
+    "nl": "Heeft je kat macadamiapasta gegeten, of lijkt je kat na het eten van een andere notenpasta ziek, maak dan met spoed een afspraak met je dierenarts."
   },
   "serving": null,
   "child": {
     "en": "Nut butters are a people food and too oily for a cat's tummy. Give your cat its own cat treats instead.",
     "sl": "Maslo iz oreščkov je hrana za ljudi in je preveč mastno za mačji trebušček. Muci raje daj njene priboljške za mačke.",
     "es": "Las cremas de frutos secos son comida de personas y tienen demasiado aceite para la barriga de un gato. Dale mejor sus propios premios para gatos.",
-    "pt": "As manteigas de frutos secos são comida de pessoas e demasiado gordurosas para a barriga do gato. Dá antes ao teu gato as guloseimas próprias para gatos."
+    "pt": "As manteigas de frutos secos são comida de pessoas e demasiado gordurosas para a barriga do gato. Dá antes ao teu gato as guloseimas próprias para gatos.",
+    "nl": "Notenpasta is voor mensen en te vet voor het buikje van een kat. Geef je kat liever haar eigen kattensnoepjes."
   },
   "faq": [
     {
@@ -69,13 +80,15 @@
         "en": "What about peanut butter?",
         "sl": "Kaj pa arašidovo maslo?",
         "es": "¿Y la crema de cacahuete?",
-        "pt": "E a manteiga de amendoim?"
+        "pt": "E a manteiga de amendoim?",
+        "nl": "En pindakaas?"
       },
       "a": {
         "en": "Peanut butter has its own page. VCA vets say any peanut butter must be free of preservatives and life-threatening additives such as xylitol.",
         "sl": "Arašidovo maslo ima svojo stran. Veterinarji VCA pravijo, da arašidovo maslo ne sme vsebovati konzervansov in življenjsko nevarnih dodatkov, kot je ksilitol.",
         "es": "La crema de cacahuete tiene su propia página. Los veterinarios de VCA dicen que cualquier crema de cacahuete debe estar libre de conservantes y de aditivos que pongan en peligro la vida, como el xilitol.",
-        "pt": "A manteiga de amendoim tem a sua própria página. Os veterinários da VCA dizem que qualquer manteiga de amendoim tem de estar livre de conservantes e de aditivos que põem a vida em risco, como o xilitol."
+        "pt": "A manteiga de amendoim tem a sua própria página. Os veterinários da VCA dizem que qualquer manteiga de amendoim tem de estar livre de conservantes e de aditivos que põem a vida em risco, como o xilitol.",
+        "nl": "Pindakaas heeft een eigen pagina. Dierenartsen van VCA zeggen dat pindakaas vrij moet zijn van conserveermiddelen en levensgevaarlijke toevoegingen zoals xylitol."
       }
     }
   ],
@@ -137,6 +150,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9da43da370dd1722a871143178db7e1000960660c1765f9742ebbbf0e63b147b"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "adade57ce7f9b76b142c1629b590f5cc8587a4a31f81a3021307c0d3f5fc9bf3"
     }
   }
 }

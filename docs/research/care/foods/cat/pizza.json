@@ -14,7 +14,8 @@
     "de": "Pizza",
     "fr": "Pizza",
     "es": "Pizza",
-    "pt": "Pizza"
+    "pt": "Pizza",
+    "nl": "Pizza"
   },
   "question": {
     "en": "Can cats eat pizza?",
@@ -29,7 +30,8 @@
     "de": "Dürfen Katzen Pizza fressen?",
     "fr": "Les chats peuvent-ils manger de la pizza ?",
     "es": "¿Pueden los gatos comer pizza?",
-    "pt": "Os gatos podem comer pizza?"
+    "pt": "Os gatos podem comer pizza?",
+    "nl": "Mogen katten pizza eten?"
   },
   "url_slug": {
     "en": "pizza",
@@ -44,7 +46,8 @@
     "de": "pizza",
     "fr": "pizza",
     "es": "pizza",
-    "pt": "pizza"
+    "pt": "pizza",
+    "nl": "pizza"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "de": "Nein, Pizza ist für Katzen keine gute Idee. Die Tierärzte von VCA warnen, dass Reste wie Pizza bei Katzen Magenbeschwerden verursachen können, und raten davon ab, fettiges Essen mit der Katze zu teilen. Geben Sie stattdessen ein Katzenleckerli.",
     "fr": "Non, la pizza n’est pas une bonne idée pour les chats. Les vétérinaires de VCA avertissent que les restes comme la pizza peuvent provoquer des troubles digestifs chez les chats et déconseillent de partager des aliments gras avec votre chat. Proposez-lui plutôt une friandise pour chats.",
     "es": "No, la pizza no es una buena idea para los gatos. Los veterinarios de VCA advierten de que las sobras, como la pizza, pueden causar malestar de estómago en los gatos y aconsejan no compartir con ellos alimentos grasos. Ofrécele mejor un premio para gatos.",
-    "pt": "Não, a pizza não é boa ideia para gatos. Os veterinários da VCA avisam que sobras como a pizza podem causar indisposição de estômago nos gatos e aconselham a não partilhar alimentos gordurosos com o teu gato. Oferece antes uma guloseima para gatos."
+    "pt": "Não, a pizza não é boa ideia para gatos. Os veterinários da VCA avisam que sobras como a pizza podem causar indisposição de estômago nos gatos e aconselham a não partilhar alimentos gordurosos com o teu gato. Oferece antes uma guloseima para gatos.",
+    "nl": "Nee, pizza is geen goed idee voor katten. Dierenartsen van VCA waarschuwen dat restjes zoals pizza maagklachten kunnen veroorzaken bij katten en raden af om vet eten met je kat te delen. Geef liever een kattensnoepje."
   },
   "why": {
     "en": "VCA Animal Hospitals' advice for cats lists pizza among plate leftovers that can cause stomach upset, says not to share spicy or fatty foods with your cat, and notes that many fan-favourite snacks can cause stomach upset and even pancreatitis in cats. Cats Protection says it generally wouldn't recommend feeding your cat food meant for humans unless your vet has advised it.",
@@ -75,7 +79,8 @@
     "de": "Im Ratgeber von VCA Animal Hospitals für Katzen steht Pizza unter den Tellerresten, die Magenbeschwerden verursachen können. Dort heißt es auch, dass Sie scharfes oder fettiges Essen nicht mit Ihrer Katze teilen sollen und dass viele beliebte Snacks bei Katzen Magenbeschwerden und sogar eine Bauchspeicheldrüsenentzündung auslösen können. Cats Protection empfiehlt grundsätzlich nicht, Katzen Essen für Menschen zu geben, es sei denn, der Tierarzt hat dazu geraten.",
     "fr": "Dans ses conseils pour les chats, VCA Animal Hospitals range la pizza parmi les restes d’assiette qui peuvent provoquer des troubles digestifs, recommande de ne pas partager d’aliments épicés ou gras avec votre chat, et note que de nombreux en-cas très populaires peuvent provoquer des troubles digestifs, voire une pancréatite, chez les chats. Cats Protection indique qu’elle ne recommande généralement pas de donner à votre chat des aliments pour humains, sauf si votre vétérinaire l’a conseillé.",
     "es": "El consejo de VCA Animal Hospitals para gatos incluye la pizza entre las sobras de los platos que pueden causar malestar de estómago, dice que no hay que compartir con tu gato alimentos picantes o grasos, y señala que muchos tentempiés favoritos pueden causar malestar de estómago e incluso pancreatitis en los gatos. Cats Protection dice que, en general, no recomienda dar a tu gato comida hecha para personas, salvo que tu veterinario lo haya aconsejado.",
-    "pt": "O conselho da VCA Animal Hospitals para gatos inclui a pizza entre as sobras do prato que podem causar indisposição de estômago, diz para não partilhar com o teu gato alimentos picantes ou gordurosos, e refere que muitos aperitivos populares podem causar indisposição de estômago e até pancreatite nos gatos. A Cats Protection diz que, em geral, não recomenda dar aos gatos comida feita para pessoas, a não ser que o veterinário o tenha aconselhado."
+    "pt": "O conselho da VCA Animal Hospitals para gatos inclui a pizza entre as sobras do prato que podem causar indisposição de estômago, diz para não partilhar com o teu gato alimentos picantes ou gordurosos, e refere que muitos aperitivos populares podem causar indisposição de estômago e até pancreatite nos gatos. A Cats Protection diz que, em geral, não recomenda dar aos gatos comida feita para pessoas, a não ser que o veterinário o tenha aconselhado.",
+    "nl": "VCA Animal Hospitals noemt in het advies voor katten pizza bij de restjes van je bord die maagklachten kunnen veroorzaken, raadt af om pittig of vet eten met je kat te delen en merkt op dat veel populaire snacks bij katten maagklachten en zelfs alvleesklierontsteking kunnen veroorzaken. Cats Protection zegt dat ze het over het algemeen niet aanraadt om je kat menselijk voedsel te geven, tenzij je dierenarts dat heeft geadviseerd."
   },
   "signs": {
     "en": [
@@ -116,6 +121,9 @@
     ],
     "pt": [
       "Indisposição de estômago"
+    ],
+    "nl": [
+      "Maagklachten"
     ]
   },
   "what_to_do": {
@@ -131,7 +139,8 @@
     "de": "Hat Ihre Katze Pizza gefressen, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten. Warten Sie nicht, bis Anzeichen auftreten.",
     "fr": "Si votre chat a mangé de la pizza, contactez votre vétérinaire pour demander conseil. N’attendez pas l’apparition de signes.",
     "es": "Si tu gato ha comido pizza, ponte en contacto con tu veterinario para que te aconseje. No esperes a que aparezcan síntomas.",
-    "pt": "Se o teu gato comeu pizza, contacta o teu veterinário para pedir conselho. Não esperes que surjam sinais."
+    "pt": "Se o teu gato comeu pizza, contacta o teu veterinário para pedir conselho. Não esperes que surjam sinais.",
+    "nl": "Heeft je kat pizza gegeten, neem dan contact op met je dierenarts voor advies. Wacht niet af of er verschijnselen optreden."
   },
   "serving": null,
   "child": {
@@ -147,7 +156,8 @@
     "de": "Pizza ist Essen für Menschen. Davon kann eine Katze Bauchweh bekommen, also gib deiner Katze lieber ihr eigenes Katzenleckerli.",
     "fr": "La pizza est un aliment pour les humains. Elle peut donner mal au ventre à un chat : offre-lui plutôt une friandise pour chats.",
     "es": "La pizza es comida de personas. Puede darle dolor de barriga a un gato, así que ofrécele mejor su propio premio para gatos.",
-    "pt": "A pizza é comida de pessoas. Pode dar dor de barriga aos gatos, por isso oferece antes ao gatinho uma guloseima própria para gatos."
+    "pt": "A pizza é comida de pessoas. Pode dar dor de barriga aos gatos, por isso oferece antes ao gatinho uma guloseima própria para gatos.",
+    "nl": "Pizza is voor mensen. Je kat kan er buikpijn van krijgen, dus geef haar liever een eigen kattensnoepje."
   },
   "faq": [
     {
@@ -164,7 +174,8 @@
         "de": "Warum sollten Katzen keine Snacks vom Partybuffet naschen?",
         "fr": "Pourquoi les chats ne doivent-ils pas partager les en-cas de la table de fête ?",
         "es": "¿Por qué no deben los gatos compartir los tentempiés de la mesa de la fiesta?",
-        "pt": "Porque é que os gatos não devem partilhar os aperitivos da mesa de festa?"
+        "pt": "Porque é que os gatos não devem partilhar os aperitivos da mesa de festa?",
+        "nl": "Waarom mogen katten geen hapjes van de feesttafel eten?"
       },
       "a": {
         "en": "VCA vets say many fan-favourite snacks can cause stomach upset and even pancreatitis in cats, and that leftovers such as creamy dips, potato chips and pizza can cause stomach upset.",
@@ -179,7 +190,8 @@
         "de": "Die Tierärzte von VCA sagen, dass viele beliebte Snacks bei Katzen Magenbeschwerden und sogar eine Bauchspeicheldrüsenentzündung auslösen können und dass Reste wie cremige Dips, Kartoffelchips und Pizza Magenbeschwerden verursachen können.",
         "fr": "Les vétérinaires de VCA indiquent que de nombreux en-cas très populaires peuvent provoquer des troubles digestifs, voire une pancréatite, chez les chats, et que des restes comme les sauces crémeuses, les chips et la pizza peuvent provoquer des troubles digestifs.",
         "es": "Los veterinarios de VCA dicen que muchos tentempiés favoritos pueden causar malestar de estómago e incluso pancreatitis en los gatos, y que las sobras, como las salsas cremosas, las patatas fritas de bolsa y la pizza, pueden causar malestar de estómago.",
-        "pt": "Os veterinários da VCA dizem que muitos aperitivos populares podem causar indisposição de estômago e até pancreatite nos gatos, e que sobras como cremes e molhos, batatas fritas de pacote e pizza podem causar indisposição de estômago."
+        "pt": "Os veterinários da VCA dizem que muitos aperitivos populares podem causar indisposição de estômago e até pancreatite nos gatos, e que sobras como cremes e molhos, batatas fritas de pacote e pizza podem causar indisposição de estômago.",
+        "nl": "Dierenartsen van VCA zeggen dat veel populaire snacks maagklachten en zelfs alvleesklierontsteking kunnen veroorzaken bij katten, en dat restjes zoals romige dips, chips en pizza maagklachten kunnen geven."
       }
     }
   ],
@@ -283,6 +295,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "98c65cdc3177977ee3ed5ba17fc024b5300951c39237a479a70c221da53dec6e"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "68d3c44b747d47ad68848d88d8d3bc6d5e61a6cdab102d52eb9d32127f2149ce"
     }
   }
 }

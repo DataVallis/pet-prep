@@ -13,7 +13,8 @@
     "it": "Hot dog",
     "de": "Hot Dogs",
     "fr": "Hot-dogs",
-    "pt": "Cachorros-quentes"
+    "pt": "Cachorros-quentes",
+    "nl": "Hotdogs"
   },
   "question": {
     "en": "Can dogs eat hot dogs?",
@@ -27,7 +28,8 @@
     "it": "I cani possono mangiare gli hot dog?",
     "de": "Dürfen Hunde Hot Dogs fressen?",
     "fr": "Les chiens peuvent-ils manger des hot-dogs ?",
-    "pt": "Os cães podem comer cachorros-quentes?"
+    "pt": "Os cães podem comer cachorros-quentes?",
+    "nl": "Mogen honden hotdogs eten?"
   },
   "url_slug": {
     "en": "hot-dogs",
@@ -41,7 +43,8 @@
     "it": "hot-dog",
     "de": "hot-dogs",
     "fr": "hot-dogs",
-    "pt": "cachorros-quentes"
+    "pt": "cachorros-quentes",
+    "nl": "hotdogs"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "it": "No, gli hot dog non sono una buona scelta per i cani. Sono molto salati e spesso contengono nitrato di sodio e condimenti come aglio e cipolla in polvere, che possono essere tossici per i cani. Inoltre possono comportare un rischio di soffocamento.",
     "de": "Nein, Hot Dogs sind für Hunde keine gute Wahl. Sie sind sehr salzig und enthalten oft Natriumnitrat und Gewürze wie Knoblauch- und Zwiebelpulver, die für Hunde giftig sein können. Hot Dogs können außerdem ein Erstickungsrisiko sein.",
     "fr": "Non, les hot-dogs ne sont pas un bon choix pour les chiens. Ils sont très salés et contiennent souvent du nitrate de sodium et des assaisonnements comme la poudre d’ail et d’oignon, qui peuvent être toxiques pour les chiens. Les hot-dogs peuvent aussi présenter un risque d’étouffement.",
-    "pt": "Não, os cachorros-quentes não são boa escolha para os cães. São muito salgados e contêm muitas vezes nitrato de sódio e temperos como alho e cebola em pó, que podem ser tóxicos para os cães. Os cachorros-quentes também podem ser um risco de engasgo."
+    "pt": "Não, os cachorros-quentes não são boa escolha para os cães. São muito salgados e contêm muitas vezes nitrato de sódio e temperos como alho e cebola em pó, que podem ser tóxicos para os cães. Os cachorros-quentes também podem ser um risco de engasgo.",
+    "nl": "Nee, hotdogs zijn geen goede keuze voor honden. Ze zijn erg zout en bevatten vaak natriumnitraat en kruiden zoals knoflook- en uipoeder, die giftig kunnen zijn voor honden. Hotdogs kunnen ook een verstikkingsgevaar zijn."
   },
   "why": {
     "en": "The biggest problem with hot dogs is salt: even half of one would probably put a dog way over its daily sodium limit, and too much sodium can lead to dehydration and high blood pressure. Hot dogs often contain sodium nitrate, which has been linked to cancer, MSG, and sugars or artificial sweeteners, as well as garlic and onion powder. Big dogs may try to swallow them without chewing.",
@@ -70,7 +74,8 @@
     "it": "Il problema più grande degli hot dog è il sale: anche solo mezzo hot dog porterebbe probabilmente il cane ben oltre il suo limite giornaliero di sodio, e troppo sodio può portare a disidratazione e pressione alta. Gli hot dog contengono spesso nitrato di sodio, collegato al cancro, glutammato monosodico e zuccheri o dolcificanti artificiali, oltre ad aglio e cipolla in polvere. I cani di taglia grande possono provare a ingoiarli senza masticare.",
     "de": "Das größte Problem bei Hot Dogs ist das Salz: Schon ein halber Hot Dog würde einen Hund wahrscheinlich weit über seine tägliche Natriumgrenze bringen, und zu viel Natrium kann zu Austrocknung und Bluthochdruck führen. Hot Dogs enthalten oft Natriumnitrat, das mit Krebs in Verbindung gebracht wird, Glutamat sowie Zucker oder Süßstoffe, außerdem Knoblauch- und Zwiebelpulver. Große Hunde schlingen sie womöglich ungekaut hinunter.",
     "fr": "Le plus gros problème des hot-dogs, c’est le sel : même un demi-hot-dog ferait probablement dépasser largement la limite quotidienne de sodium d’un chien, et trop de sodium peut entraîner une déshydratation et une hypertension. Les hot-dogs contiennent souvent du nitrate de sodium, associé au cancer, du glutamate monosodique, des sucres ou des édulcorants artificiels, ainsi que de la poudre d’ail et d’oignon. Les gros chiens peuvent essayer de les avaler sans mâcher.",
-    "pt": "O maior problema dos cachorros-quentes é o sal: bastaria meio cachorro-quente para um cão ultrapassar em muito o limite diário de sódio, e demasiado sódio pode levar a desidratação e tensão arterial alta. Os cachorros-quentes contêm muitas vezes nitrato de sódio, que tem sido associado ao cancro, glutamato monossódico (MSG), e açúcares ou adoçantes artificiais, bem como alho e cebola em pó. Os cães grandes podem tentar engoli-los sem mastigar."
+    "pt": "O maior problema dos cachorros-quentes é o sal: bastaria meio cachorro-quente para um cão ultrapassar em muito o limite diário de sódio, e demasiado sódio pode levar a desidratação e tensão arterial alta. Os cachorros-quentes contêm muitas vezes nitrato de sódio, que tem sido associado ao cancro, glutamato monossódico (MSG), e açúcares ou adoçantes artificiais, bem como alho e cebola em pó. Os cães grandes podem tentar engoli-los sem mastigar.",
+    "nl": "Het grootste probleem van hotdogs is zout: zelfs een halve hotdog zou een hond waarschijnlijk ruim boven zijn dagelijkse natriumgrens brengen, en te veel natrium kan leiden tot uitdroging en hoge bloeddruk. Hotdogs bevatten vaak natriumnitraat (dat met kanker in verband wordt gebracht), MSG, suikers of kunstmatige zoetstoffen, en knoflook- en uipoeder. Grote honden slikken ze soms zo door zonder te kauwen."
   },
   "signs": {
     "en": [
@@ -132,6 +137,11 @@
       "Dor de barriga",
       "Diarreia",
       "Vómitos e diarreia ao mesmo tempo"
+    ],
+    "nl": [
+      "Buikpijn",
+      "Diarree",
+      "Braken samen met diarree"
     ]
   },
   "what_to_do": {
@@ -146,7 +156,8 @@
     "it": "Dopo aver mangiato un hot dog, il cane può avere mal di pancia o diarrea, che dovrebbero passare entro un giorno. Chiama il veterinario se la diarrea non si ferma o se il cane vomita anche, perché questo può portare a una grave disidratazione.",
     "de": "Nach einem Hot Dog bekommt Ihr Hund vielleicht Bauchschmerzen oder Durchfall, was meist innerhalb eines Tages abklingt. Rufen Sie Ihren Tierarzt an, wenn der Durchfall nicht aufhört oder Ihr Hund auch erbricht, denn das kann zu schwerer Austrocknung führen.",
     "fr": "Après avoir mangé un hot-dog, votre chien peut avoir mal au ventre ou la diarrhée, qui devrait disparaître en un jour. Appelez votre vétérinaire si la diarrhée ne s’arrête pas ou si votre chien vomit en plus, car cela peut entraîner une déshydratation grave.",
-    "pt": "Depois de comer um cachorro-quente, o teu cão pode ter dor de barriga ou diarreia, que deve passar num dia. Liga ao teu veterinário se a diarreia não parar ou se o teu cão também estiver a vomitar, porque isso pode levar a uma desidratação grave."
+    "pt": "Depois de comer um cachorro-quente, o teu cão pode ter dor de barriga ou diarreia, que deve passar num dia. Liga ao teu veterinário se a diarreia não parar ou se o teu cão também estiver a vomitar, porque isso pode levar a uma desidratação grave.",
+    "nl": "Na het eten van een hotdog kan je hond buikpijn of diarree krijgen, wat binnen een dag zou moeten overgaan. Bel je dierenarts als de diarree niet ophoudt of je hond ook moet braken, want dat kan leiden tot ernstige uitdroging."
   },
   "serving": null,
   "child": {
@@ -161,7 +172,8 @@
     "it": "Gli hot dog sono troppo salati per i cani. Al barbecue, chiedi a un adulto un po’ di carne senza condimenti per il tuo cane.",
     "de": "Hot Dogs sind für Hunde zu salzig. Frag beim Grillen einen Erwachsenen lieber nach ein wenig ungewürztem Fleisch für deinen Hund.",
     "fr": "Les hot-dogs sont trop salés pour les chiens. Au barbecue, demande plutôt à un adulte un peu de viande nature pour ton chien.",
-    "pt": "Os cachorros-quentes são salgados demais para os cães. Num churrasco, pede a um adulto um bocadinho de carne simples para o teu cão."
+    "pt": "Os cachorros-quentes são salgados demais para os cães. Num churrasco, pede a um adulto um bocadinho de carne simples para o teu cão.",
+    "nl": "Hotdogs zijn te zout voor honden. Vraag bij een barbecue liever een volwassene om een beetje ongekruid vlees voor je hond."
   },
   "faq": [
     {
@@ -177,7 +189,8 @@
         "it": "Che cosa posso dare al mio cane al barbecue al posto dell’hot dog?",
         "de": "Was kann ich meinem Hund stattdessen beim Grillen geben?",
         "fr": "Que puis-je donner à mon chien au barbecue à la place ?",
-        "pt": "O que posso dar ao meu cão num churrasco em vez disso?"
+        "pt": "O que posso dar ao meu cão num churrasco em vez disso?",
+        "nl": "Wat kan ik mijn hond dan wel geven bij een barbecue?"
       },
       "a": {
         "en": "Some plain beef, pork or chicken with no salt or other seasoning, cut into bite-sized pieces.",
@@ -191,7 +204,8 @@
         "it": "Un po’ di manzo, maiale o pollo al naturale, senza sale né altri condimenti, tagliato a bocconcini.",
         "de": "Etwas ungewürztes Rind-, Schweine- oder Hühnerfleisch ohne Salz oder andere Gewürze, in mundgerechte Stücke geschnitten.",
         "fr": "Un peu de bœuf, de porc ou de poulet nature, sans sel ni autre assaisonnement, coupé en petits morceaux.",
-        "pt": "Um pouco de carne de vaca, de porco ou de frango simples, sem sal nem outros temperos, cortada em pedaços pequenos."
+        "pt": "Um pouco de carne de vaca, de porco ou de frango simples, sem sal nem outros temperos, cortada em pedaços pequenos.",
+        "nl": "Wat rundvlees, varkensvlees of kip zonder zout of andere kruiden, in hapklare stukjes gesneden."
       }
     }
   ],
@@ -322,6 +336,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "366294ca16cfbec54c40ae310587cbd1078f2fa211c27e275edc7e7a204d5c6b"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9f6d6637b04ba9bbac9875ce2694aa8095eadf3a3e18b782c2e4481b36bf64ac"
     }
   }
 }

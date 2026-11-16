@@ -14,7 +14,8 @@
     "it": "Ketchup",
     "de": "Ketchup",
     "fr": "Ketchup",
-    "pt": "Ketchup"
+    "pt": "Ketchup",
+    "nl": "Ketchup"
   },
   "question": {
     "en": "Can dogs eat ketchup?",
@@ -29,7 +30,8 @@
     "it": "I cani possono mangiare il ketchup?",
     "de": "Dürfen Hunde Ketchup fressen?",
     "fr": "Les chiens peuvent-ils manger du ketchup ?",
-    "pt": "Os cães podem comer ketchup?"
+    "pt": "Os cães podem comer ketchup?",
+    "nl": "Mogen honden ketchup eten?"
   },
   "url_slug": {
     "en": "ketchup",
@@ -44,7 +46,8 @@
     "it": "ketchup",
     "de": "ketchup",
     "fr": "ketchup",
-    "pt": "ketchup"
+    "pt": "ketchup",
+    "nl": "ketchup"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "it": "No, è meglio non dare il ketchup al tuo cane. Il ketchup in sé non è tossico, ma di solito contiene aglio e cipolla, zucchero e sale, e a volte xilitolo, che è tossico per i cani.",
     "de": "Nein, teilen Sie Ketchup besser nicht mit Ihrem Hund. Ketchup selbst ist nicht giftig, enthält aber meist Knoblauch und Zwiebeln, Zucker und Salz und manchmal Xylit, das für Hunde giftig ist.",
     "fr": "Non, mieux vaut ne pas partager le ketchup avec votre chien. Le ketchup n’est pas toxique en soi, mais il contient généralement de l’ail et de l’oignon, du sucre et du sel, et parfois du xylitol, qui est toxique pour les chiens.",
-    "pt": "Não, o melhor é não partilhar ketchup com o teu cão. O ketchup em si não é tóxico, mas costuma conter alho e cebola, açúcar e sal, e por vezes xilitol, que é tóxico para os cães."
+    "pt": "Não, o melhor é não partilhar ketchup com o teu cão. O ketchup em si não é tóxico, mas costuma conter alho e cebola, açúcar e sal, e por vezes xilitol, que é tóxico para os cães.",
+    "nl": "Nee, deel ketchup liever niet met je hond. Ketchup zelf is niet giftig, maar bevat meestal knoflook en ui, suiker en zout, en soms xylitol, dat giftig is voor honden."
   },
   "why": {
     "en": "Commercial ketchup typically contains garlic and onions, cinnamon, sugar and salt, preservatives and chemicals, and many of these can harm dogs. Garlic and onions can upset a dog's stomach and sometimes have more serious effects. Some ketchup also contains xylitol, which is toxic to dogs. Sources differ on how strict to be (one calls ketchup not toxic, another simply says no), so we advise not giving it.",
@@ -75,7 +79,8 @@
     "it": "Il ketchup industriale contiene in genere aglio e cipolla, cannella, zucchero e sale, conservanti e additivi, e molti di questi ingredienti possono far male ai cani. Aglio e cipolla possono irritare lo stomaco del cane e a volte avere effetti più seri. Alcuni ketchup contengono anche xilitolo, tossico per i cani. Le fonti non sono d’accordo su quanto essere severi (una dice che il ketchup non è tossico, un’altra dice semplicemente no), quindi ti consigliamo di non darlo.",
     "de": "Handelsüblicher Ketchup enthält typischerweise Knoblauch und Zwiebeln, Zimt, Zucker und Salz, Konservierungsstoffe und Zusatzstoffe, und viele davon können Hunden schaden. Knoblauch und Zwiebeln können einem Hund auf den Magen schlagen und haben manchmal noch ernstere Folgen. Manche Ketchups enthalten außerdem Xylit, das für Hunde giftig ist. Die Quellen sind sich uneinig, wie streng man sein sollte (eine Quelle nennt Ketchup nicht giftig, eine andere sagt schlicht Nein), deshalb raten wir davon ab.",
     "fr": "Le ketchup du commerce contient généralement de l’ail et de l’oignon, de la cannelle, du sucre et du sel, des conservateurs et des produits chimiques, et beaucoup de ces ingrédients peuvent nuire aux chiens. L’ail et l’oignon peuvent déranger l’estomac d’un chien et ont parfois des effets plus graves. Certains ketchups contiennent aussi du xylitol, toxique pour les chiens. Les sources divergent sur le degré de sévérité à adopter (l’une dit que le ketchup n’est pas toxique, une autre répond simplement non) ; nous déconseillons donc d’en donner.",
-    "pt": "O ketchup comercial costuma conter alho e cebola, canela, açúcar e sal, conservantes e produtos químicos, e muitos destes podem fazer mal aos cães. O alho e a cebola podem irritar o estômago do cão e por vezes ter efeitos mais graves. Alguns ketchups também contêm xilitol, que é tóxico para os cães. As fontes divergem quanto ao rigor (uma diz que o ketchup não é tóxico, outra diz simplesmente que não), por isso aconselhamos a não o dar."
+    "pt": "O ketchup comercial costuma conter alho e cebola, canela, açúcar e sal, conservantes e produtos químicos, e muitos destes podem fazer mal aos cães. O alho e a cebola podem irritar o estômago do cão e por vezes ter efeitos mais graves. Alguns ketchups também contêm xilitol, que é tóxico para os cães. As fontes divergem quanto ao rigor (uma diz que o ketchup não é tóxico, outra diz simplesmente que não), por isso aconselhamos a não o dar.",
+    "nl": "Ketchup uit de winkel bevat meestal knoflook en ui, kaneel, suiker en zout, conserveermiddelen en chemische stoffen, en veel daarvan kunnen schadelijk zijn voor honden. Knoflook en ui kunnen de maag van een hond van streek maken en hebben soms ernstigere gevolgen. In sommige ketchup zit ook xylitol, dat giftig is voor honden. Bronnen verschillen in hoe streng ze zijn (de ene noemt ketchup niet giftig, een andere zegt gewoon nee), dus we raden aan om het niet te geven."
   },
   "signs": {
     "en": [
@@ -116,6 +121,9 @@
     ],
     "pt": [
       "Indisposição de estômago"
+    ],
+    "nl": [
+      "Maagklachten"
     ]
   },
   "what_to_do": {
@@ -131,7 +139,8 @@
     "it": "Alcuni ketchup contengono xilitolo, che è tossico per i cani. Se il tuo cane ha mangiato ketchup con xilitolo, segui i consigli della nostra pagina sullo xilitolo.",
     "de": "Manche Ketchups enthalten Xylit, das für Hunde giftig ist. Hat Ihr Hund Ketchup mit Xylit gefressen, befolgen Sie den Rat auf unserer Xylit-Seite.",
     "fr": "Certains ketchups contiennent du xylitol, toxique pour les chiens. Si votre chien a mangé du ketchup contenant du xylitol, suivez les conseils de notre page sur le xylitol.",
-    "pt": "Alguns ketchups contêm xilitol, que é tóxico para os cães. Se o teu cão comeu ketchup com xilitol, segue os conselhos da nossa página sobre xilitol."
+    "pt": "Alguns ketchups contêm xilitol, que é tóxico para os cães. Se o teu cão comeu ketchup com xilitol, segue os conselhos da nossa página sobre xilitol.",
+    "nl": "In sommige ketchup zit xylitol, dat giftig is voor honden. Heeft je hond ketchup met xylitol gegeten, volg dan het advies op onze xylitolpagina."
   },
   "serving": null,
   "child": {
@@ -147,7 +156,8 @@
     "it": "Il ketchup è una salsa per le persone. Dentro ci sono cose che non fanno bene ai cani, quindi tienilo nel tuo piatto.",
     "de": "Ketchup ist eine Soße für Menschen. Es steckt einiges drin, das für Hunde nicht gut ist, also lass ihn auf deinem eigenen Teller.",
     "fr": "Le ketchup est une sauce pour les humains. Il contient des ingrédients qui ne sont pas bons pour les chiens, alors garde-le dans ton assiette.",
-    "pt": "O ketchup é um molho para pessoas. Tem ingredientes que não fazem bem aos cães, por isso deixa-o no teu prato."
+    "pt": "O ketchup é um molho para pessoas. Tem ingredientes que não fazem bem aos cães, por isso deixa-o no teu prato.",
+    "nl": "Ketchup is een saus voor mensen. Er zit van alles in wat niet goed is voor honden, dus houd hem op je eigen bord."
   },
   "faq": [
     {
@@ -164,7 +174,8 @@
         "it": "E la salsa di pomodoro?",
         "de": "Und Tomatensoße?",
         "fr": "Et la sauce tomate ?",
-        "pt": "E o molho de tomate?"
+        "pt": "E o molho de tomate?",
+        "nl": "En tomatensaus?"
       },
       "a": {
         "en": "No. Tomato sauce often contains harmful ingredients such as garlic, onion or unsafe herbs.",
@@ -179,7 +190,8 @@
         "it": "No. La salsa di pomodoro contiene spesso ingredienti dannosi come aglio, cipolla o erbe aromatiche non sicure.",
         "de": "Nein. Tomatensoße enthält oft schädliche Zutaten wie Knoblauch, Zwiebel oder ungeeignete Kräuter.",
         "fr": "Non. La sauce tomate contient souvent des ingrédients nocifs comme l’ail, l’oignon ou des herbes aromatiques dangereuses.",
-        "pt": "Não. O molho de tomate contém muitas vezes ingredientes nocivos, como alho, cebola ou ervas aromáticas que não são seguras."
+        "pt": "Não. O molho de tomate contém muitas vezes ingredientes nocivos, como alho, cebola ou ervas aromáticas que não são seguras.",
+        "nl": "Nee. Tomatensaus bevat vaak schadelijke ingrediënten, zoals knoflook, ui of kruiden die niet veilig zijn voor honden."
       }
     }
   ],
@@ -282,6 +294,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "57aa201a56441c8e0396f2dd431dce572d73f81631012d0c60642c9d8d42fafc"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ca4bf22b92f23b59517cf1cb12985598baf053e784f1ac0bfe3c72533dde7191"
     }
   }
 }

@@ -14,7 +14,8 @@
     "it": "Cannella",
     "de": "Zimt",
     "fr": "Cannelle",
-    "pt": "Canela"
+    "pt": "Canela",
+    "nl": "Kaneel"
   },
   "question": {
     "en": "Can dogs eat cinnamon?",
@@ -29,7 +30,8 @@
     "it": "I cani possono mangiare la cannella?",
     "de": "Dürfen Hunde Zimt fressen?",
     "fr": "Les chiens peuvent-ils manger de la cannelle ?",
-    "pt": "Os cães podem comer canela?"
+    "pt": "Os cães podem comer canela?",
+    "nl": "Mogen honden kaneel eten?"
   },
   "url_slug": {
     "en": "cinnamon",
@@ -44,7 +46,8 @@
     "it": "cannella",
     "de": "zimt",
     "fr": "cannelle",
-    "pt": "canela"
+    "pt": "canela",
+    "nl": "kaneel"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "it": "La cannella non è tossica per i cani, ma non è consigliata come premio abituale. Un po’ di cannella in un prodotto da forno non fa male, ma le stecche, la cannella in polvere e le grandi quantità possono irritare bocca e stomaco, e l’olio essenziale di cannella è più rischioso.",
     "de": "Zimt ist für Hunde nicht giftig, wird aber nicht als regelmäßiges Leckerli empfohlen. Ein wenig in Backwaren schadet nicht, doch Zimtstangen, Zimtpulver und große Mengen können Maul und Magen reizen, und ätherisches Zimtöl ist riskanter.",
     "fr": "La cannelle n’est pas toxique pour les chiens, mais elle n’est pas recommandée comme friandise régulière. Un peu dans une pâtisserie ne fera pas de mal, mais les bâtons de cannelle, la poudre et les grandes quantités peuvent irriter la bouche et l’estomac, et l’huile essentielle de cannelle est plus risquée.",
-    "pt": "A canela não é tóxica para os cães, mas não é recomendada como guloseima habitual. Um pouco em produtos de pastelaria não faz mal, mas os paus de canela, o pó e as grandes quantidades podem irritar a boca e o estômago, e o óleo essencial de canela é mais arriscado."
+    "pt": "A canela não é tóxica para os cães, mas não é recomendada como guloseima habitual. Um pouco em produtos de pastelaria não faz mal, mas os paus de canela, o pó e as grandes quantidades podem irritar a boca e o estômago, e o óleo essencial de canela é mais arriscado.",
+    "nl": "Kaneel is niet giftig voor honden, maar het wordt niet aangeraden als vast snoepje. Een beetje in bakproducten kan geen kwaad, maar kaneelstokjes, kaneelpoeder en grote hoeveelheden kunnen de mond en de maag irriteren, en etherische kaneelolie is riskanter."
   },
   "why": {
     "en": "Chewing cinnamon sticks or eating ground cinnamon can irritate a dog's mouth, and breathing in cinnamon powder can make a dog cough, choke and have difficulty breathing. A large overdose can lead to vomiting, diarrhoea, changes in heart rate, low blood sugar and liver disease. Small dogs may react to smaller amounts, and cinnamon essential oil can be toxic for dogs. Baked goods with cinnamon may also contain xylitol.",
@@ -75,7 +79,8 @@
     "it": "Masticare stecche di cannella o mangiare cannella in polvere può irritare la bocca del cane, e inalare la polvere di cannella può far tossire il cane, farlo soffocare e dargli difficoltà a respirare. Un forte sovradosaggio può portare a vomito, diarrea, variazioni del battito cardiaco, calo degli zuccheri nel sangue e malattie del fegato. I cani di piccola taglia possono reagire a quantità minori, e l’olio essenziale di cannella può essere tossico per i cani. I prodotti da forno con cannella possono contenere anche xilitolo.",
     "de": "Das Kauen von Zimtstangen oder das Fressen von gemahlenem Zimt kann das Maul eines Hundes reizen, und wenn ein Hund Zimtpulver einatmet, kann er husten, würgen und schlecht Luft bekommen. Eine große Überdosis kann zu Erbrechen, Durchfall, Veränderungen der Herzfrequenz, niedrigem Blutzucker und Lebererkrankungen führen. Kleine Hunde reagieren möglicherweise schon auf geringere Mengen, und ätherisches Zimtöl kann für Hunde giftig sein. Backwaren mit Zimt können außerdem Xylit enthalten.",
     "fr": "Mâcher des bâtons de cannelle ou manger de la cannelle moulue peut irriter la bouche d’un chien, et inhaler de la poudre de cannelle peut le faire tousser, s’étouffer et avoir du mal à respirer. Une forte surdose peut entraîner vomissements, diarrhée, modification du rythme cardiaque, baisse du taux de sucre dans le sang et maladie du foie. Les petits chiens peuvent réagir à de plus faibles quantités, et l’huile essentielle de cannelle peut être toxique pour les chiens. Les pâtisseries à la cannelle peuvent aussi contenir du xylitol.",
-    "pt": "Mastigar paus de canela ou comer canela moída pode irritar a boca do cão, e respirar canela em pó pode fazer o cão tossir, engasgar-se e ter dificuldade em respirar. Uma dose muito grande pode causar vómitos, diarreia, alterações do ritmo cardíaco, açúcar baixo no sangue e doença do fígado. Os cães pequenos podem reagir a quantidades menores, e o óleo essencial de canela pode ser tóxico para os cães. Os produtos de pastelaria com canela também podem conter xilitol."
+    "pt": "Mastigar paus de canela ou comer canela moída pode irritar a boca do cão, e respirar canela em pó pode fazer o cão tossir, engasgar-se e ter dificuldade em respirar. Uma dose muito grande pode causar vómitos, diarreia, alterações do ritmo cardíaco, açúcar baixo no sangue e doença do fígado. Os cães pequenos podem reagir a quantidades menores, e o óleo essencial de canela pode ser tóxico para os cães. Os produtos de pastelaria com canela também podem conter xilitol.",
+    "nl": "Op kaneelstokjes kauwen of gemalen kaneel eten kan de mond van een hond irriteren, en kaneelpoeder inademen kan een hond doen hoesten en zich laten verslikken en benauwdheid veroorzaken. Een grote overdosis kan leiden tot braken, diarree, veranderingen in de hartslag, een lage bloedsuikerspiegel en leverziekte. Kleine honden kunnen al op kleinere hoeveelheden reageren, en etherische kaneelolie kan giftig zijn voor honden. Bakproducten met kaneel kunnen ook xylitol bevatten."
   },
   "signs": {
     "en": [
@@ -168,6 +173,13 @@
       "Vómitos",
       "Diarreia",
       "Alterações do ritmo cardíaco"
+    ],
+    "nl": [
+      "Geïrriteerde mond",
+      "Hoesten, zich verslikken of benauwdheid (ingeademd poeder)",
+      "Braken",
+      "Diarree",
+      "Veranderingen in de hartslag"
     ]
   },
   "what_to_do": {
@@ -183,7 +195,8 @@
     "it": "Se il tuo cane mangia molta cannella non serve farsi prendere dal panico, ma chiama comunque il veterinario.",
     "de": "Frisst Ihr Hund eine große Menge Zimt, müssen Sie nicht in Panik verfallen, sollten aber Ihren Tierarzt anrufen.",
     "fr": "Si votre chien mange une grande quantité de cannelle, inutile de paniquer, mais appelez votre vétérinaire.",
-    "pt": "Se o teu cão comer muita canela, não precisas de entrar em pânico, mas liga ao teu veterinário."
+    "pt": "Se o teu cão comer muita canela, não precisas de entrar em pânico, mas liga ao teu veterinário.",
+    "nl": "Eet je hond een grote hoeveelheid kaneel, dan hoef je niet in paniek te raken, maar bel wel je dierenarts."
   },
   "serving": {
     "en": "If you share a baked treat with cinnamon: only a small piece, rarely, and never one sweetened with xylitol.",
@@ -198,7 +211,8 @@
     "it": "Se gli dai un dolcetto da forno alla cannella: solo un pezzettino, raramente, e mai uno dolcificato con xilitolo.",
     "de": "Wenn Sie ein Gebäck mit Zimt teilen: nur ein kleines Stück, selten, und niemals eines, das mit Xylit gesüßt ist.",
     "fr": "Si vous partagez une pâtisserie à la cannelle : seulement un petit morceau, rarement, et jamais une pâtisserie sucrée au xylitol.",
-    "pt": "Se partilhares uma guloseima de pastelaria com canela: só um pedacinho, raramente, e nunca uma adoçada com xilitol."
+    "pt": "Se partilhares uma guloseima de pastelaria com canela: só um pedacinho, raramente, e nunca uma adoçada com xilitol.",
+    "nl": "Deel je iets uit de oven met kaneel? Geef dan alleen een klein stukje, zelden, en nooit iets met xylitol."
   },
   "child": {
     "en": "Cinnamon is a spice for people. Don't let your dog lick cinnamon powder or chew cinnamon sticks, because they can make its mouth sore.",
@@ -213,7 +227,8 @@
     "it": "La cannella è una spezia per le persone. Non lasciare che il tuo cane lecchi la cannella in polvere o mastichi le stecche: possono fargli male alla bocca.",
     "de": "Zimt ist ein Gewürz für Menschen. Lass deinen Hund kein Zimtpulver lecken und keine Zimtstangen kauen, denn davon kann sein Maul wehtun.",
     "fr": "La cannelle est une épice pour les humains. Ne laisse pas ton chien lécher de la poudre de cannelle ni mâcher des bâtons : cela peut lui blesser la bouche.",
-    "pt": "A canela é um tempero para as pessoas. Não deixes o teu cão lamber canela em pó nem mastigar paus de canela, porque lhe podem magoar a boca."
+    "pt": "A canela é um tempero para as pessoas. Não deixes o teu cão lamber canela em pó nem mastigar paus de canela, porque lhe podem magoar a boca.",
+    "nl": "Kaneel is een kruid voor mensen. Laat je hond niet aan kaneelpoeder likken of op kaneelstokjes kauwen, want daar kan hij een zere mond van krijgen."
   },
   "faq": [
     {
@@ -230,7 +245,8 @@
         "it": "Il mio cane può mangiare un biscotto alla cannella?",
         "de": "Darf mein Hund einen Zimtkeks haben?",
         "fr": "Mon chien peut-il manger un biscuit à la cannelle ?",
-        "pt": "O meu cão pode comer uma bolacha de canela?"
+        "pt": "O meu cão pode comer uma bolacha de canela?",
+        "nl": "Mag mijn hond een kaneelkoekje?"
       },
       "a": {
         "en": "A little cinnamon, like the amount in most baked goods, won't hurt your dog, but feed baked goods only in small amounts and rarely. Some contain xylitol, which is very toxic.",
@@ -245,7 +261,8 @@
         "it": "Un po’ di cannella, nella quantità presente nella maggior parte dei prodotti da forno, non fa male al tuo cane, ma dai i prodotti da forno solo in piccole quantità e raramente. Alcuni contengono xilitolo, che è molto tossico.",
         "de": "Ein wenig Zimt, wie er in den meisten Backwaren steckt, schadet Ihrem Hund nicht, aber geben Sie Backwaren nur in kleinen Mengen und selten. Manche enthalten Xylit, das sehr giftig ist.",
         "fr": "Un peu de cannelle, comme la quantité présente dans la plupart des pâtisseries, ne fera pas de mal à votre chien, mais ne donnez des pâtisseries qu’en petite quantité et rarement. Certaines contiennent du xylitol, très toxique.",
-        "pt": "Um pouco de canela, como a quantidade da maioria dos produtos de pastelaria, não faz mal ao teu cão, mas dá produtos de pastelaria só em pequenas quantidades e raramente. Alguns contêm xilitol, que é muito tóxico."
+        "pt": "Um pouco de canela, como a quantidade da maioria dos produtos de pastelaria, não faz mal ao teu cão, mas dá produtos de pastelaria só em pequenas quantidades e raramente. Alguns contêm xilitol, que é muito tóxico.",
+        "nl": "Een beetje kaneel, zoals in de meeste bakproducten, kan je hond geen kwaad, maar geef bakproducten alleen in kleine hoeveelheden en zelden. In sommige zit xylitol, en dat is zeer giftig."
       }
     },
     {
@@ -262,7 +279,8 @@
         "it": "L’olio essenziale di cannella è pericoloso per i cani?",
         "de": "Ist ätherisches Zimtöl für Hunde gefährlich?",
         "fr": "L’huile essentielle de cannelle est-elle dangereuse pour les chiens ?",
-        "pt": "O óleo essencial de canela é perigoso para os cães?"
+        "pt": "O óleo essencial de canela é perigoso para os cães?",
+        "nl": "Is etherische kaneelolie gevaarlijk voor honden?"
       },
       "a": {
         "en": "Yes. Cinnamon essential oil can be toxic for dogs and poses a higher risk than ground cinnamon or sticks.",
@@ -277,7 +295,8 @@
         "it": "Sì. L’olio essenziale di cannella può essere tossico per i cani e comporta un rischio maggiore rispetto alla cannella in polvere o in stecche.",
         "de": "Ja. Ätherisches Zimtöl kann für Hunde giftig sein und birgt ein höheres Risiko als gemahlener Zimt oder Zimtstangen.",
         "fr": "Oui. L’huile essentielle de cannelle peut être toxique pour les chiens et présente un risque plus élevé que la cannelle moulue ou en bâtons.",
-        "pt": "Sim. O óleo essencial de canela pode ser tóxico para os cães e representa um risco maior do que a canela moída ou em pau."
+        "pt": "Sim. O óleo essencial de canela pode ser tóxico para os cães e representa um risco maior do que a canela moída ou em pau.",
+        "nl": "Ja. Etherische kaneelolie kan giftig zijn voor honden en brengt een groter risico met zich mee dan gemalen kaneel of kaneelstokjes."
       }
     }
   ],
@@ -415,6 +434,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6406780db4594fc7d3f03f9b9ee0bd794c6590d5f7ee7aaf6b9197544605fadd"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5f549ea60a0a97d54dfa4268e6c275072376721664935060dc5ec858d2246449"
     }
   }
 }

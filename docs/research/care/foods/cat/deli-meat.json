@@ -13,7 +13,8 @@
     "de": "Aufschnitt",
     "fr": "Charcuterie",
     "es": "Fiambre",
-    "pt": "Frios"
+    "pt": "Frios",
+    "nl": "Vleeswaren (broodbeleg)"
   },
   "question": {
     "en": "Can cats eat deli meat?",
@@ -27,7 +28,8 @@
     "de": "Dürfen Katzen Aufschnitt fressen?",
     "fr": "Les chats peuvent-ils manger de la charcuterie ?",
     "es": "¿Pueden los gatos comer fiambre?",
-    "pt": "Os gatos podem comer frios?"
+    "pt": "Os gatos podem comer frios?",
+    "nl": "Mogen katten vleeswaren eten?"
   },
   "url_slug": {
     "en": "deli-meat",
@@ -41,7 +43,8 @@
     "de": "aufschnitt",
     "fr": "charcuterie",
     "es": "fiambre",
-    "pt": "frios"
+    "pt": "frios",
+    "nl": "vleeswaren"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "de": "Besser nicht. Aufschnitt enthält meist viel Salz und kann Gewürze, Konservierungsstoffe oder Nitrat enthalten, die einer Katze auf den Magen schlagen. RSPCA Australia rät, Katzen keine industriell hergestellten, gegarten Fleischwaren zu geben. Gegartes Fleisch ohne Gewürze ist die bessere Wahl.",
     "fr": "Mieux vaut éviter. La charcuterie et les viandes en tranches pour sandwichs sont généralement très salées et peuvent contenir des assaisonnements, des conservateurs ou des nitrates qui risquent d’irriter l’estomac d’un chat. La RSPCA Australia conseille d’éviter les viandes cuites industrielles pour les chats. Mieux vaut leur donner de la viande cuite nature, sans épices.",
     "es": "Es mejor no dárselo. El fiambre suele tener mucha sal y puede llevar condimentos, conservantes o nitratos que pueden sentar mal al estómago de un gato. RSPCA Australia aconseja evitar las carnes cocinadas de fabricación industrial para los gatos. La carne cocinada sin especias es una opción mejor.",
-    "pt": "É melhor não. Os frios e as carnes fatiadas para sandes costumam ter muito sal e podem conter temperos, conservantes ou nitratos que fazem mal ao estômago do gato. A RSPCA Australia aconselha a evitar carnes cozinhadas processadas para gatos. É melhor escolher carne cozinhada simples, sem temperos."
+    "pt": "É melhor não. Os frios e as carnes fatiadas para sandes costumam ter muito sal e podem conter temperos, conservantes ou nitratos que fazem mal ao estômago do gato. A RSPCA Australia aconselha a evitar carnes cozinhadas processadas para gatos. É melhor escolher carne cozinhada simples, sem temperos.",
+    "nl": "Liever niet. Vleeswaren en broodbeleg bevatten meestal veel zout en kunnen kruiden, conserveermiddelen of nitraten bevatten die de maag van een kat van streek kunnen maken. RSPCA Australia raadt af om katten gekookt, industrieel bereid vlees te geven. Gewoon gaar vlees zonder kruiden is een betere keuze."
   },
   "why": {
     "en": "PetMD vets say cats shouldn't eat turkey lunch meat, because it is usually high in sodium and may contain seasonings, preservatives or nitrates. Purina notes that turkey deli meat and other processed turkey meat is usually packed with extra sodium and spices, and some added seasonings might be toxic for cats. RSPCA Australia advises avoiding cooked manufactured meats because they can contain sulphite preservatives, which have been linked to thiamine (vitamin B1) deficiency.",
@@ -70,7 +74,8 @@
     "de": "Die Tierärzte von PetMD sagen, dass Katzen keinen Putenaufschnitt fressen sollten, weil er meist viel Natrium enthält und Gewürze, Konservierungsstoffe oder Nitrat enthalten kann. Purina weist darauf hin, dass Putenaufschnitt und anderes verarbeitetes Putenfleisch meist reichlich zusätzliches Natrium und Gewürze enthält, von denen manche für Katzen sogar giftig sein können. RSPCA Australia rät, industriell hergestellte, gegarte Fleischwaren zu meiden, weil sie Sulfite als Konservierungsstoffe enthalten können, die mit Thiaminmangel (Vitamin B1) in Zusammenhang gebracht werden.",
     "fr": "Les vétérinaires de PetMD indiquent que les chats ne doivent pas manger de dinde en tranches du commerce, car elle est généralement riche en sodium et peut contenir des assaisonnements, des conservateurs ou des nitrates. Purina précise que la charcuterie de dinde et les autres viandes de dinde transformées sont généralement riches en sodium et en épices ajoutés, et que certains assaisonnements peuvent être toxiques pour les chats. La RSPCA Australia conseille d’éviter les viandes cuites industrielles, car elles peuvent contenir des conservateurs à base de sulfites, associés à une carence en thiamine (vitamine B1).",
     "es": "Los veterinarios de PetMD dicen que los gatos no deben comer fiambre de pavo, porque suele tener mucho sodio y puede llevar condimentos, conservantes o nitratos. Purina señala que el fiambre de pavo y otras carnes procesadas de pavo suelen llevar sodio y especias en exceso, y algunos condimentos añadidos podrían ser tóxicos para los gatos. RSPCA Australia aconseja evitar las carnes cocinadas de fabricación industrial porque pueden llevar conservantes con sulfitos, que se han relacionado con la deficiencia de tiamina (vitamina B1).",
-    "pt": "Os veterinários da PetMD dizem que os gatos não devem comer carne de peru fatiada para sandes, porque costuma ter muito sódio e pode conter temperos, conservantes ou nitratos. A Purina refere que o fiambre de peru e outras carnes de peru processadas costumam ter sódio e temperos a mais, e que alguns temperos adicionados podem ser tóxicos para os gatos. A RSPCA Australia aconselha a evitar carnes cozinhadas processadas porque podem conter conservantes à base de sulfitos, que têm sido associados a carência de tiamina (vitamina B1)."
+    "pt": "Os veterinários da PetMD dizem que os gatos não devem comer carne de peru fatiada para sandes, porque costuma ter muito sódio e pode conter temperos, conservantes ou nitratos. A Purina refere que o fiambre de peru e outras carnes de peru processadas costumam ter sódio e temperos a mais, e que alguns temperos adicionados podem ser tóxicos para os gatos. A RSPCA Australia aconselha a evitar carnes cozinhadas processadas porque podem conter conservantes à base de sulfitos, que têm sido associados a carência de tiamina (vitamina B1).",
+    "nl": "Dierenartsen van PetMD zeggen dat katten geen kalkoenbeleg mogen eten, omdat dat meestal veel natrium bevat en kruiden, conserveermiddelen of nitraten kan bevatten. Purina merkt op dat kalkoenbeleg en ander bewerkt kalkoenvlees meestal vol extra natrium en kruiden zit, en dat sommige toegevoegde kruiden giftig kunnen zijn voor katten. RSPCA Australia raadt af om gekookt, industrieel bereid vlees te geven, omdat het conserveermiddelen met sulfiet kan bevatten, die in verband zijn gebracht met een tekort aan thiamine (vitamine B1)."
   },
   "signs": {
     "en": [
@@ -108,6 +113,9 @@
     ],
     "pt": [
       "Indisposição de estômago"
+    ],
+    "nl": [
+      "Maagklachten"
     ]
   },
   "what_to_do": {
@@ -122,7 +130,8 @@
     "de": "Hat Ihre Katze Aufschnitt gefressen, der mit Zwiebel oder Knoblauch gewürzt war, wenden Sie sich so schnell wie möglich an Ihren Tierarzt. Hat sie danach Magenbeschwerden, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten.",
     "fr": "Si votre chat a mangé de la charcuterie assaisonnée à l’oignon ou à l’ail, contactez votre vétérinaire dès que possible. S’il a ensuite des troubles digestifs, appelez votre vétérinaire pour demander conseil.",
     "es": "Si tu gato ha comido fiambre condimentado con cebolla o ajo, ponte en contacto con tu veterinario lo antes posible. Si después tiene malestar de estómago, llama a tu veterinario para que te aconseje.",
-    "pt": "Se o teu gato comeu frios temperados com cebola ou alho, contacta o teu veterinário o mais depressa possível. Se depois tiver indisposição de estômago, liga ao teu veterinário para pedir conselho."
+    "pt": "Se o teu gato comeu frios temperados com cebola ou alho, contacta o teu veterinário o mais depressa possível. Se depois tiver indisposição de estômago, liga ao teu veterinário para pedir conselho.",
+    "nl": "Heeft je kat vleeswaren gegeten met ui of knoflook, neem dan zo snel mogelijk contact op met je dierenarts. Heeft ze daarna maagklachten, bel dan je dierenarts voor advies."
   },
   "serving": null,
   "child": {
@@ -137,7 +146,8 @@
     "de": "Aufschnitt fürs Brot ist für Katzen zu salzig. Am glücklichsten ist deine Katze mit ihrem eigenen Katzenfutter.",
     "fr": "La viande pour sandwichs est trop salée pour les chats. Ton chat sera bien plus heureux avec ses propres croquettes ou sa pâtée.",
     "es": "El fiambre del bocadillo es demasiado salado para los gatos. El gatito es más feliz con su propia comida para gatos.",
-    "pt": "A carne das sandes é demasiado salgada para os gatos. O gatinho fica mais feliz com a sua comida de gato."
+    "pt": "A carne das sandes é demasiado salgada para os gatos. O gatinho fica mais feliz com a sua comida de gato.",
+    "nl": "Broodbeleg is te zout voor katten. Je kat is het blijst met haar eigen kattenvoer."
   },
   "faq": [
     {
@@ -153,7 +163,8 @@
         "de": "Welches Fleisch kann ich stattdessen mit ihr teilen?",
         "fr": "Quelle viande puis-je lui donner à la place ?",
         "es": "¿Qué carne puedo compartir en su lugar?",
-        "pt": "Que carne posso partilhar em vez disso?"
+        "pt": "Que carne posso partilhar em vez disso?",
+        "nl": "Welk vlees kan ik in plaats daarvan delen?"
       },
       "a": {
         "en": "Cooked, lean meats such as chicken or turkey without any spices or condiments are okay for cats. Avoid processed and seasoned meats.",
@@ -167,7 +178,8 @@
         "de": "Gegartes, mageres Fleisch wie Huhn oder Pute ohne Gewürze oder Soßen ist für Katzen in Ordnung. Meiden Sie verarbeitetes und gewürztes Fleisch.",
         "fr": "Les viandes maigres cuites, comme le poulet ou la dinde, sans épices ni condiments, conviennent aux chats. Évitez les viandes transformées et assaisonnées.",
         "es": "Las carnes magras cocinadas, como el pollo o el pavo, sin ninguna especia ni condimento, son aptas para los gatos. Evita las carnes procesadas y condimentadas.",
-        "pt": "Carnes magras cozinhadas, como frango ou peru, sem temperos nem molhos, são aceitáveis para os gatos. Evita as carnes processadas e temperadas."
+        "pt": "Carnes magras cozinhadas, como frango ou peru, sem temperos nem molhos, são aceitáveis para os gatos. Evita as carnes processadas e temperadas.",
+        "nl": "Gaar, mager vlees zoals kip of kalkoen, zonder kruiden of sauzen, is prima voor katten. Geef geen bewerkt of gekruid vlees."
       }
     }
   ],
@@ -301,6 +313,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a16b7a2bb23d09fc9f832ca991fb51886b67ab4214e0d8afd688e18af0576f65"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6c144d886cdc61266e186869506947b846ad2b96455c9ce7734db26b6ec00352"
     }
   }
 }

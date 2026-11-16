@@ -14,7 +14,8 @@
     "it": "Biscotti",
     "de": "Kekse",
     "fr": "Biscuits",
-    "pt": "Bolachas"
+    "pt": "Bolachas",
+    "nl": "Koekjes"
   },
   "question": {
     "en": "Can dogs eat cookies?",
@@ -29,7 +30,8 @@
     "it": "I cani possono mangiare i biscotti?",
     "de": "Dürfen Hunde Kekse fressen?",
     "fr": "Les chiens peuvent-ils manger des biscuits ?",
-    "pt": "Os cães podem comer bolachas?"
+    "pt": "Os cães podem comer bolachas?",
+    "nl": "Mogen honden koekjes eten?"
   },
   "url_slug": {
     "en": "cookies",
@@ -44,7 +46,8 @@
     "it": "biscotti",
     "de": "kekse",
     "fr": "biscuits",
-    "pt": "bolachas"
+    "pt": "bolachas",
+    "nl": "koekjes"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "it": "No, meglio di no. I biscotti possono contenere molto zucchero, che può far venire mal di pancia al cane, e alcuni contengono cioccolato, uvetta o xilitolo, tossici per i cani. Dai invece premi pensati per i cani.",
     "de": "Nein, besser nicht. Kekse können viel Zucker enthalten, der einem Hund auf den Magen schlagen kann, und manche enthalten Schokolade, Rosinen oder Xylit, die für Hunde giftig sind. Geben Sie stattdessen Leckerlis für Hunde.",
     "fr": "Non, mieux vaut s’en abstenir. Les biscuits peuvent contenir beaucoup de sucre, qui peut irriter l’estomac d’un chien, et certains contiennent du chocolat, des raisins secs ou du xylitol, toxiques pour les chiens. Donnez plutôt des friandises conçues pour les chiens.",
-    "pt": "Não, o melhor é não dar. As bolachas podem ter muito açúcar, que pode irritar o estômago do cão, e algumas contêm chocolate, passas ou xilitol, que são tóxicos para os cães. Dá antes guloseimas feitas para cães."
+    "pt": "Não, o melhor é não dar. As bolachas podem ter muito açúcar, que pode irritar o estômago do cão, e algumas contêm chocolate, passas ou xilitol, que são tóxicos para os cães. Dá antes guloseimas feitas para cães.",
+    "nl": "Nee, liever niet. Koekjes kunnen veel suiker bevatten, wat de maag van een hond van streek kan maken, en sommige bevatten chocolade, rozijnen of xylitol, die giftig zijn voor honden. Geef liever een snoepje dat speciaal voor honden is gemaakt."
   },
   "why": {
     "en": "A sugar-free cookie is no safer: sugar-free cookies commonly contain xylitol, which causes a dangerous drop in blood sugar. All types of chocolate contain theobromine and caffeine, which are toxic to dogs, and raisins can be hidden in cookies. Cookies without these ingredients mainly cause stomach upset from sugar, so we rate cookies not recommended; cookies with chocolate, raisins or xylitol need a vet right away.",
@@ -75,7 +79,8 @@
     "it": "Un biscotto senza zucchero non è più sicuro: i biscotti senza zucchero contengono spesso xilitolo, che provoca un pericoloso calo degli zuccheri nel sangue. Tutti i tipi di cioccolato contengono teobromina e caffeina, tossiche per i cani, e l’uvetta può nascondersi nei biscotti. I biscotti senza questi ingredienti causano soprattutto mal di pancia per lo zucchero, quindi li valutiamo come sconsigliati; i biscotti con cioccolato, uvetta o xilitolo richiedono subito il veterinario.",
     "de": "Ein zuckerfreier Keks ist nicht sicherer: Zuckerfreie Kekse enthalten häufig Xylit, das einen gefährlichen Blutzuckerabfall verursacht. Alle Schokoladensorten enthalten Theobromin und Koffein, die für Hunde giftig sind, und Rosinen können sich in Keksen verstecken. Kekse ohne diese Zutaten verursachen vor allem Magenbeschwerden durch den Zucker. Deshalb stufen wir Kekse als „nicht empfohlen“ ein. Bei Keksen mit Schokolade, Rosinen oder Xylit brauchen Sie sofort einen Tierarzt.",
     "fr": "Un biscuit sans sucre n’est pas plus sûr : les biscuits sans sucre contiennent couramment du xylitol, qui provoque une chute dangereuse de la glycémie. Tous les types de chocolat contiennent de la théobromine et de la caféine, toxiques pour les chiens, et des raisins secs peuvent se cacher dans les biscuits. Les biscuits sans ces ingrédients provoquent surtout des troubles digestifs dus au sucre ; nous les classons donc comme non recommandés, et avec du chocolat, des raisins secs ou du xylitol, il faut consulter un vétérinaire sans attendre.",
-    "pt": "Uma bolacha sem açúcar não é mais segura: as bolachas sem açúcar costumam conter xilitol, que provoca uma descida perigosa do açúcar no sangue. Todos os tipos de chocolate contêm teobromina e cafeína, que são tóxicas para os cães, e as passas podem esconder-se nas bolachas. As bolachas sem estes ingredientes causam sobretudo indisposição de estômago por causa do açúcar, por isso classificamos as bolachas como não recomendadas; as bolachas com chocolate, passas ou xilitol precisam de um veterinário de imediato."
+    "pt": "Uma bolacha sem açúcar não é mais segura: as bolachas sem açúcar costumam conter xilitol, que provoca uma descida perigosa do açúcar no sangue. Todos os tipos de chocolate contêm teobromina e cafeína, que são tóxicas para os cães, e as passas podem esconder-se nas bolachas. As bolachas sem estes ingredientes causam sobretudo indisposição de estômago por causa do açúcar, por isso classificamos as bolachas como não recomendadas; as bolachas com chocolate, passas ou xilitol precisam de um veterinário de imediato.",
+    "nl": "Een suikervrij koekje is niet veiliger: suikervrije koekjes bevatten vaak xylitol, dat een gevaarlijke daling van de bloedsuikerspiegel veroorzaakt. Alle soorten chocolade bevatten theobromine en cafeïne, die giftig zijn voor honden, en in koekjes kunnen rozijnen verborgen zitten. Koekjes zonder deze ingrediënten geven vooral maagklachten door de suiker, dus we beoordelen koekjes als niet aanbevolen; koekjes met chocolade, rozijnen of xylitol hebben meteen een dierenarts nodig."
   },
   "signs": {
     "en": [
@@ -142,6 +147,11 @@
       "Indisposição de estômago",
       "Vómitos, andar cambaleante, fraqueza, tremores ou convulsões (xilitol)",
       "Agitação, tremores, batimento cardíaco rápido ou irregular ou convulsões (chocolate)"
+    ],
+    "nl": [
+      "Maagklachten",
+      "Braken, wankelen, zwakte, trillingen of toevallen (xylitol)",
+      "Onrust, trillingen, een snelle of onregelmatige hartslag of toevallen (chocolade)"
     ]
   },
   "what_to_do": {
@@ -157,7 +167,8 @@
     "it": "Se il biscotto conteneva cioccolato, uvetta o xilitolo, o se il tuo cane mostra segni di avvelenamento, cerca subito aiuto e portalo dal veterinario, che potrà valutare il caso e curarlo.",
     "de": "Enthielt der Keks Schokolade, Rosinen oder Xylit oder zeigt Ihr Hund Anzeichen einer Vergiftung, suchen Sie sofort Hilfe und bringen Sie Ihren Hund zu einem Tierarzt, der ihn untersuchen und behandeln kann.",
     "fr": "Si le biscuit contenait du chocolat, des raisins secs ou du xylitol, ou si votre chien montre des signes d’empoisonnement, demandez de l’aide immédiatement et emmenez votre chien chez un vétérinaire afin qu’il l’examine et le soigne.",
-    "pt": "Se a bolacha tinha chocolate, passas ou xilitol, ou se o teu cão mostra sinais de intoxicação, procura ajuda imediatamente e leva o teu cão a um veterinário, para que o avalie e trate."
+    "pt": "Se a bolacha tinha chocolate, passas ou xilitol, ou se o teu cão mostra sinais de intoxicação, procura ajuda imediatamente e leva o teu cão a um veterinário, para que o avalie e trate.",
+    "nl": "Bevatte het koekje chocolade, rozijnen of xylitol, of vertoont je hond verschijnselen van vergiftiging, zoek dan meteen hulp en ga met je hond naar een dierenarts, zodat die je hond kan onderzoeken en behandelen."
   },
   "serving": {
     "en": "Instead of people cookies: treats and cookies made especially for dogs, after checking with your vet.",
@@ -172,7 +183,8 @@
     "it": "Al posto dei biscotti per le persone: premi e biscotti fatti apposta per i cani, dopo averne parlato con il veterinario.",
     "de": "Statt Keksen für Menschen: Leckerlis und Kekse, die speziell für Hunde gemacht sind, nach Rücksprache mit Ihrem Tierarzt.",
     "fr": "À la place des biscuits pour humains : des friandises et des biscuits conçus spécialement pour les chiens, après avoir demandé l’avis de votre vétérinaire.",
-    "pt": "Em vez de bolachas de pessoas: guloseimas e bolachas feitas especialmente para cães, depois de falares com o teu veterinário."
+    "pt": "Em vez de bolachas de pessoas: guloseimas e bolachas feitas especialmente para cães, depois de falares com o teu veterinário.",
+    "nl": "Geef in plaats van koekjes voor mensen snoepjes of koekjes die speciaal voor honden zijn gemaakt, na overleg met je dierenarts."
   },
   "child": {
     "en": "Cookies are a people treat. Some have chocolate or raisins that are bad for dogs, so give your dog a dog treat instead.",
@@ -187,7 +199,8 @@
     "it": "I biscotti sono un dolcetto per le persone. Alcuni contengono cioccolato o uvetta, che fanno male ai cani, quindi dai al tuo cane un premio per cani.",
     "de": "Kekse sind eine Leckerei für Menschen. In manchen stecken Schokolade oder Rosinen, die für Hunde schlecht sind, also gib deinem Hund lieber ein Hundeleckerli.",
     "fr": "Les biscuits sont une friandise pour les humains. Certains contiennent du chocolat ou des raisins secs, mauvais pour les chiens : donne plutôt à ton chien une friandise pour chiens.",
-    "pt": "As bolachas são uma guloseima para as pessoas. Algumas têm chocolate ou passas, que fazem mal aos cães, por isso dá ao teu cão uma guloseima própria para cães."
+    "pt": "As bolachas são uma guloseima para as pessoas. Algumas têm chocolate ou passas, que fazem mal aos cães, por isso dá ao teu cão uma guloseima própria para cães.",
+    "nl": "Koekjes zijn een lekkernij voor mensen. Sommige bevatten chocolade of rozijnen, en die zijn slecht voor honden, dus geef je hond liever een hondensnoepje."
   },
   "faq": [
     {
@@ -204,7 +217,8 @@
         "it": "Un biscotto senza zucchero è più sicuro per il mio cane?",
         "de": "Ist ein zuckerfreier Keks sicherer für meinen Hund?",
         "fr": "Un biscuit sans sucre est-il plus sûr pour mon chien ?",
-        "pt": "Uma bolacha sem açúcar é mais segura para o meu cão?"
+        "pt": "Uma bolacha sem açúcar é mais segura para o meu cão?",
+        "nl": "Is een suikervrij koekje veiliger voor mijn hond?"
       },
       "a": {
         "en": "No. Sugar-free cookies commonly contain xylitol, a sugar alternative that is poisonous to dogs.",
@@ -219,7 +233,8 @@
         "it": "No. I biscotti senza zucchero contengono spesso xilitolo, un sostituto dello zucchero velenoso per i cani.",
         "de": "Nein. Zuckerfreie Kekse enthalten häufig Xylit, einen Zuckeraustauschstoff, der für Hunde giftig ist.",
         "fr": "Non. Les biscuits sans sucre contiennent couramment du xylitol, un substitut du sucre toxique pour les chiens.",
-        "pt": "Não. As bolachas sem açúcar costumam conter xilitol, um substituto do açúcar que é venenoso para os cães."
+        "pt": "Não. As bolachas sem açúcar costumam conter xilitol, um substituto do açúcar que é venenoso para os cães.",
+        "nl": "Nee. Suikervrije koekjes bevatten vaak xylitol, een suikervervanger die giftig is voor honden."
       }
     },
     {
@@ -236,7 +251,8 @@
         "it": "E i biscotti con avena e uvetta?",
         "de": "Und Haferflocken-Rosinen-Kekse?",
         "fr": "Et les cookies à l’avoine et aux raisins secs ?",
-        "pt": "E as bolachas de aveia com passas?"
+        "pt": "E as bolachas de aveia com passas?",
+        "nl": "En havermoutkoekjes met rozijnen?"
       },
       "a": {
         "en": "They are not safe. Raisins can be hidden in cookies, and just a small number of raisins can cause kidney failure in dogs.",
@@ -251,7 +267,8 @@
         "it": "Non sono sicuri. L’uvetta può nascondersi nei biscotti, e anche pochissima uvetta può causare insufficienza renale nei cani.",
         "de": "Sie sind nicht sicher. Rosinen können sich in Keksen verstecken, und schon wenige Rosinen können bei Hunden Nierenversagen verursachen.",
         "fr": "Ils ne sont pas sûrs. Des raisins secs peuvent se cacher dans les biscuits, et un tout petit nombre de raisins secs peut provoquer une insuffisance rénale chez le chien.",
-        "pt": "Não são seguras. As passas podem esconder-se nas bolachas, e apenas algumas passas podem causar insuficiência renal nos cães."
+        "pt": "Não são seguras. As passas podem esconder-se nas bolachas, e apenas algumas passas podem causar insuficiência renal nos cães.",
+        "nl": "Die zijn niet veilig. In koekjes kunnen rozijnen verborgen zitten, en een klein aantal rozijnen kan al nierfalen veroorzaken bij honden."
       }
     }
   ],
@@ -423,6 +440,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a56cf9ed524f58c16de69552135466d76b8263a4ea42b226144bdf787428ad2f"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "51d111f380b672b350cab4cc6cf10482ffa670bae1b81de6b93ff9a728b67a16"
     }
   }
 }

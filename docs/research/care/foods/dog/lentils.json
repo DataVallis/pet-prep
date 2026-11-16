@@ -5,51 +5,59 @@
     "en": "Lentils",
     "sl": "Leča",
     "es": "Lentejas",
-    "pt": "Lentilhas"
+    "pt": "Lentilhas",
+    "nl": "Linzen"
   },
   "question": {
     "en": "Can dogs eat lentils?",
     "sl": "Ali lahko psi jedo lečo?",
     "es": "¿Pueden los perros comer lentejas?",
-    "pt": "Os cães podem comer lentilhas?"
+    "pt": "Os cães podem comer lentilhas?",
+    "nl": "Mogen honden linzen eten?"
   },
   "url_slug": {
     "en": "lentils",
     "sl": "leca",
     "es": "lentejas",
-    "pt": "lentilhas"
+    "pt": "lentilhas",
+    "nl": "linzen"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, if they are cooked. Lentils are a pulse, like beans, and dogs can have legumes that have been soaked first and then cooked. Some dogs find legumes hard to digest, so introduce cooked lentils slowly.",
     "sl": "Da, če je kuhana. Leča je stročnica, tako kot fižol, psi pa lahko jedo stročnice, ki so bile najprej namočene in nato kuhane. Nekateri psi stročnice težko prebavijo, zato kuhano lečo uvajajte počasi.",
     "es": "Sí, si están cocinadas. Las lentejas son una legumbre, como las alubias, y los perros pueden comer legumbres que se hayan puesto en remojo y luego se hayan cocinado. A algunos perros les cuesta digerir las legumbres, así que introduce las lentejas cocidas poco a poco.",
-    "pt": "Sim, se estiverem cozidas. As lentilhas são uma leguminosa, tal como o feijão, e os cães podem comer leguminosas que tenham sido primeiro demolhadas e depois cozidas. Alguns cães têm dificuldade em digerir leguminosas, por isso introduz as lentilhas cozidas aos poucos."
+    "pt": "Sim, se estiverem cozidas. As lentilhas são uma leguminosa, tal como o feijão, e os cães podem comer leguminosas que tenham sido primeiro demolhadas e depois cozidas. Alguns cães têm dificuldade em digerir leguminosas, por isso introduz as lentilhas cozidas aos poucos.",
+    "nl": "Ja, als ze gaar zijn. Linzen zijn een peulvrucht, net als bonen, en honden mogen peulvruchten eten die eerst zijn geweekt en daarna gaar gemaakt. Sommige honden kunnen peulvruchten moeilijk verteren, dus laat je hond langzaam aan wennen aan gare linzen."
   },
   "why": {
     "en": "Legumes such as lentils are a good source of fibre and protein for dogs. However, some dogs have trouble digesting them, which is why they should be cooked well and added to the diet slowly.",
     "sl": "Stročnice, kot je leča, so za pse dober vir vlaknin in beljakovin. Nekateri psi pa jih težko prebavijo, zato jih je treba dobro skuhati in jih v prehrano uvajati počasi.",
     "es": "Las legumbres como las lentejas son una buena fuente de fibra y proteínas para los perros. Sin embargo, a algunos perros les cuesta digerirlas, por eso hay que cocinarlas bien e incorporarlas a la dieta poco a poco.",
-    "pt": "As leguminosas, como as lentilhas, são uma boa fonte de fibra e proteína para os cães. No entanto, alguns cães têm dificuldade em digeri-las, por isso devem estar bem cozidas e ser introduzidas aos poucos na alimentação."
+    "pt": "As leguminosas, como as lentilhas, são uma boa fonte de fibra e proteína para os cães. No entanto, alguns cães têm dificuldade em digeri-las, por isso devem estar bem cozidas e ser introduzidas aos poucos na alimentação.",
+    "nl": "Peulvruchten zoals linzen zijn een goede bron van vezels en eiwit voor honden. Sommige honden kunnen ze echter moeilijk verteren. Maak ze daarom goed gaar en laat je hond er langzaam aan wennen."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a little well-cooked lentil and introduce it slowly, because some dogs have trouble digesting legumes.",
     "sl": "Začnite z malo dobro kuhane leče in jo uvajajte počasi, ker nekateri psi stročnice težko prebavijo.",
     "es": "Empieza con un poco de lenteja bien cocida e introdúcela poco a poco, porque a algunos perros les cuesta digerir las legumbres.",
-    "pt": "Começa com um pouco de lentilhas bem cozidas e introduz aos poucos, porque alguns cães têm dificuldade em digerir leguminosas."
+    "pt": "Começa com um pouco de lentilhas bem cozidas e introduz aos poucos, porque alguns cães têm dificuldade em digerir leguminosas.",
+    "nl": "Begin met een beetje goed gare linzen en laat je hond er langzaam aan wennen, want sommige honden kunnen peulvruchten moeilijk verteren."
   },
   "serving": {
     "en": "Well cooked (dried lentils soaked first, then cooked), introduced slowly.",
     "sl": "Dobro kuhana (suha leča najprej namočena, nato kuhana), uvajana počasi.",
     "es": "Bien cocidas (las lentejas secas, primero en remojo y luego cocinadas), introducidas poco a poco.",
-    "pt": "Bem cozidas (as lentilhas secas demolhadas primeiro e depois cozidas), introduzidas aos poucos."
+    "pt": "Bem cozidas (as lentilhas secas demolhadas primeiro e depois cozidas), introduzidas aos poucos.",
+    "nl": "Goed gaar (gedroogde linzen eerst geweekt en daarna gekookt), langzaam opgebouwd."
   },
   "child": {
     "en": "Cooked lentils can be a little treat for dogs. A grown-up should cook them well first!",
     "sl": "Kuhana leča je lahko majhen priboljšek za psa. Odrasel jo mora najprej dobro skuhati!",
     "es": "Las lentejas cocidas pueden ser un pequeño premio para los perros. ¡Un adulto debe cocinarlas bien antes!",
-    "pt": "As lentilhas cozidas podem ser uma pequena guloseima para os cães. Primeiro, um adulto tem de as cozer bem!"
+    "pt": "As lentilhas cozidas podem ser uma pequena guloseima para os cães. Primeiro, um adulto tem de as cozer bem!",
+    "nl": "Gare linzen zijn een klein snoepje voor honden. Een volwassene moet ze eerst goed gaar maken!"
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can dogs eat uncooked lentils?",
         "sl": "Ali lahko psi jedo nekuhano lečo?",
         "es": "¿Pueden los perros comer lentejas crudas?",
-        "pt": "Os cães podem comer lentilhas cruas?"
+        "pt": "Os cães podem comer lentilhas cruas?",
+        "nl": "Mogen honden ongekookte linzen eten?"
       },
       "a": {
         "en": "No. Dogs can have legumes that have been soaked first and then cooked, and lentils should be cooked well.",
         "sl": "Ne. Psi lahko jedo stročnice, ki so bile najprej namočene in nato kuhane, lečo pa je treba dobro skuhati.",
         "es": "No. Los perros pueden comer legumbres que se hayan puesto en remojo y luego se hayan cocinado, y las lentejas deben estar bien cocidas.",
-        "pt": "Não. Os cães podem comer leguminosas que tenham sido primeiro demolhadas e depois cozidas, e as lentilhas devem estar bem cozidas."
+        "pt": "Não. Os cães podem comer leguminosas que tenham sido primeiro demolhadas e depois cozidas, e as lentilhas devem estar bem cozidas.",
+        "nl": "Nee. Honden mogen peulvruchten eten die eerst zijn geweekt en daarna gaar gemaakt, en linzen moeten goed gaar zijn."
       }
     }
   ],
@@ -119,6 +129,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "57208cb56847f942530b32760934e3fc7abe85d0e7bdf2b61081363666c838d9"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b1249218d8a49e6d6bf5a95d1b1e0067d2f29fce72dab17d6533f18cdb9d7d0a"
     }
   }
 }
