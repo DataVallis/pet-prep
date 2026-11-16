@@ -8,6 +8,7 @@ import { queryClient } from './src/api/queryClient';
 import AppNavigator from './src/navigation/AppNavigator';
 import { setBrandFontsReady, useBrandFonts } from './src/theme/typography';
 import { loadSavedLanguage } from './src/i18n';
+import { loadSavedTimeFormat } from './src/modules/time/clock';
 
 // Keep the native splash (CGP v2 face on fog) up until the brand fonts are ready, so the
 // first frame is already in Instrument Sans / Bricolage. A failed or hanging load renders
@@ -27,7 +28,8 @@ export default function App() {
   setBrandFontsReady(fontsLoaded && fontError === null);
 
   useEffect(() => {
-    void loadSavedLanguage().finally(() => setLanguageLoaded(true));
+    // David 2026-11-16: this device's 12 / 24 h choice too (the server's wins at sign-in).
+    void Promise.all([loadSavedLanguage(), loadSavedTimeFormat()]).finally(() => setLanguageLoaded(true));
   }, []);
 
   useEffect(() => {

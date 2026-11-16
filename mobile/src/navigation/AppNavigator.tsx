@@ -25,6 +25,7 @@ import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 import { palette } from '@/theme';
 import { useDarkStatusBar } from '@/components/ui/useDarkStatusBar';
 import { useTranslation } from 'react-i18next';
+import { useTimeFormat } from '@/modules/time/clock';
 import { setTextSpecies, t } from '@/i18n';
 
 const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'payment_required', 'illness', 'inactive'];
@@ -112,6 +113,8 @@ export default function AppNavigator() {
   // M1-18: re-render the whole tree when the language changes (screens read their
   // strings at render time through `strings()` / `t()`).
   useTranslation();
+  // David 2026-11-16: …and when the 12 / 24 h choice changes (clock texts read it at render).
+  useTimeFormat();
   const { retry } = useSessionBootstrap();
   // Launch splash "Odjava" (offline / long outage): always behind the parental gate.
   const splashSignOut = useParentalGate({

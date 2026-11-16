@@ -23,6 +23,7 @@ import { parentDashboardKey } from '@/modules/family/live';
 import { Card, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import PetNameRow from '@/components/parent/PetNameRow';
 import { PetTimezoneRow } from '@/components/parent/FamilyTimezoneCard';
+import PetQuietHoursRow from '@/components/parent/PetQuietHoursRow';
 import { petLabel } from '@/modules/petName/petName';
 import {
   caretakerNames,
@@ -140,6 +141,8 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
 
       {/* David 2026-11-09: each pet's own clock (default = the family zone). */}
       <PetTimezoneRow pet={pet} familyZone={family.timezone} />
+      {/* David 2026-11-16: quiet hours per pet (»Kot družina« / »Lastne ure«). */}
+      <PetQuietHoursRow pet={pet} />
 
       {canControl &&
         (intent !== null ? (

@@ -4,6 +4,22 @@
     "label": "App language",
     "hint": "Applies to this device."
   },
+  "clock": {
+    "am": "AM",
+    "pm": "PM",
+    "title": "Time format",
+    "label": "How times are shown",
+    "auto": "Automatic",
+    "h24": "24-hour",
+    "h12": "12-hour",
+    "hint": "Automatic follows your phone's setting. Also used for times in notifications.",
+    "saveError": "Couldn't save the time format. It applies on this phone; try again later.",
+    "hour": "Hour",
+    "minute": "Minute",
+    "period": "AM or PM",
+    "none": "Off",
+    "change": "Change"
+  },
   "errors": {
     "crashTitle": "Something went wrong"
   },

@@ -4,6 +4,22 @@
     "label": "Jezik aplikacije",
     "hint": "Velja za to napravo."
   },
+  "clock": {
+    "am": "dop.",
+    "pm": "pop.",
+    "title": "Zapis ure",
+    "label": "Kako so prikazane ure",
+    "auto": "Samodejno",
+    "h24": "24-urni",
+    "h12": "12-urni",
+    "hint": "Samodejno sledi nastavitvi telefona. Velja tudi za ure v obvestilih.",
+    "saveError": "Zapisa ure ni bilo mogoče shraniti. Na tem telefonu velja; poskusite znova kasneje.",
+    "hour": "Ura",
+    "minute": "Minute",
+    "period": "Dopoldne ali popoldne",
+    "none": "Izklopljeno",
+    "change": "Spremeni"
+  },
   "errors": {
     "crashTitle": "Nekaj je šlo narobe"
   },

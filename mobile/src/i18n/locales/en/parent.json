@@ -230,7 +230,7 @@
   },
   "quietHours": {
     "title": "Quiet hours",
-    "hint": "During quiet hours the pets hardly get hungry or make a mess, and no notifications are sent. Times follow the family's time zone.",
+    "hint": "During quiet hours the pets hardly get hungry or make a mess, and no notifications are sent. Every pet follows these hours unless it has its own (pet card above). Times follow each pet's clock.",
     "defaultsApply": "Default times apply — tap Save to confirm or change them.",
     "active": "On",
     "school": "School",
@@ -243,7 +243,24 @@
     "loadError": "Quiet hours couldn't be loaded.",
     "retry": "Try again",
     "saveError": "Saving didn't work. Check the times and try again.",
-    "offline": "Can't reach the server. Please try again."
+    "offline": "Can't reach the server. Please try again.",
+    "pet": {
+      "title": "Quiet hours",
+      "family": "Like the family",
+      "own": "Own hours",
+      "choice": "Quiet hours of this pet",
+      "followHint": "Follows the family's quiet hours: {{summary}}",
+      "ownHint": "Only for this pet. Changing the family's quiet hours doesn't move them.",
+      "saved": "Saved.",
+      "saveError": "Saving didn't work. Please try again.",
+      "offline": "Can't reach the server. Please try again.",
+      "off": "off"
+    },
+    "summarySchool": "School {{range}}",
+    "summaryBedtime": "Bedtime {{range}}",
+    "summaryNone": "no times set",
+    "groupOn": "{{group}}: on",
+    "groupOff": "{{group}}: off"
   },
   "familyZone": {
     "title": "Family time zone",

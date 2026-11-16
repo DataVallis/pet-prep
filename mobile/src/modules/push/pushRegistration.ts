@@ -33,6 +33,7 @@ import { Platform } from 'react-native';
 import { api, getAuthToken } from '@/api/client';
 import { getBuildInfo } from '@/config/buildInfo';
 import { currentLanguage } from '@/i18n';
+import { deviceUses12h } from '@/modules/time/clock';
 import { createFetchGate, errorStatus, retryAfterMs, type FetchGate } from '@/modules/childPet/refetchGovernor';
 import { ALARM_VIBRATION, PUSH_CHANNELS, PUSH_STORAGE_KEYS, PUSH_STRINGS } from '@/modules/push/pushConfig';
 import { useAppStore } from '@/store/appStore';
@@ -280,7 +281,10 @@ async function registerOnce(generation: number): Promise<PushRegistrationResult>
   // The server stores the push language per device, only from the explicit `locale`
   // field (M1-18): a language switch re-registers.
   const locale = currentLanguage();
-  const key = `${session ?? ''}|${token}|${locale}`;
+  // David 2026-11-16: the phone's own 12 / 24 h setting — a change (seen at the next start /
+  // foreground registration) re-registers, so `auto` push times keep matching this phone.
+  const hour12 = deviceUses12h();
+  const key = `${session ?? ''}|${token}|${locale}|${hour12 ? '12' : '24'}`;
   if (state.registeredKey === key) return { status: 'registered', token };
 
   const wait = devicesGate.waitMs(Date.now());
@@ -290,7 +294,7 @@ async function registerOnce(generation: number): Promise<PushRegistrationResult>
   }
   devicesGate.take(Date.now());
   try {
-    await api.registerDevice({ expo_push_token: token, platform, app_version: appVersion(), locale });
+    await api.registerDevice({ expo_push_token: token, platform, app_version: appVersion(), locale, hour12 });
   } catch (error) {
     if (stale()) return STALE;
     state.failedAttempts += 1;
