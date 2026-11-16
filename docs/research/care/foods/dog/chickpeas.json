@@ -10,7 +10,8 @@
     "pl": "Ciecierzyca",
     "cs": "Cizrna",
     "hr": "Slanutak",
-    "sv": "Kikärtor"
+    "sv": "Kikärtor",
+    "da": "Kikærter"
   },
   "question": {
     "en": "Can dogs eat chickpeas?",
@@ -21,7 +22,8 @@
     "pl": "Czy psy mogą jeść ciecierzycę?",
     "cs": "Mohou psi jíst cizrnu?",
     "hr": "Smiju li psi jesti slanutak?",
-    "sv": "Får hundar äta kikärtor?"
+    "sv": "Får hundar äta kikärtor?",
+    "da": "Må hunde spise kikærter?"
   },
   "url_slug": {
     "en": "chickpeas",
@@ -32,7 +34,8 @@
     "pl": "ciecierzyca",
     "cs": "cizrna",
     "hr": "slanutak",
-    "sv": "kikartor"
+    "sv": "kikartor",
+    "da": "kikaerter"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "pl": "Tak, z umiarem, jeśli jest dokładnie ugotowana. Świeżo ugotowana ciecierzyca (cieciorka) może być smakołykiem dla psów. Sucha ciecierzyca grozi zadławieniem, ta z puszki jest zwykle słona, a hummus nie jest bezpieczny dla psów.",
     "cs": "Ano, s mírou, pokud je dobře uvařená. Čerstvě uvařená cizrna může být pro psy pamlskem. Suchá cizrna představuje riziko udušení, ta z konzervy bývá slaná a hummus pro psy bezpečný není.",
     "hr": "Da, umjereno, ako je temeljito kuhan. Svježe kuhan slanutak može biti poslastica za pse. Suh slanutak može izazvati gušenje, konzervirani je obično slan, a humus nije siguran za pse.",
-    "sv": "Ja, i måttliga mängder, om de är ordentligt kokta. Nykokta kikärtor kan vara en godbit för hundar. Torra kikärtor kan orsaka kvävning, kikärtor på burk är oftast salta och hummus är inte ofarligt för hundar."
+    "sv": "Ja, i måttliga mängder, om de är ordentligt kokta. Nykokta kikärtor kan vara en godbit för hundar. Torra kikärtor kan orsaka kvävning, kikärtor på burk är oftast salta och hummus är inte ofarligt för hundar.",
+    "da": "Ja, i moderate mængder, hvis de er grundigt tilberedt. Nytilberedte kikærter kan være en godbid til hunde. Tørre kikærter kan sætte sig fast i halsen, kikærter på dåse er som regel salte, og hummus er ikke sikker for hunde."
   },
   "why": {
     "en": "Chickpeas are legumes, a good source of fibre and protein for dogs, but some dogs have trouble digesting them, so they should be cooked well and introduced slowly. Dry chickpeas are much harder to digest. Canned chickpeas usually contain a lot of sodium, which is not healthy for dogs. Like other beans, chickpeas may give your dog some gas.",
@@ -55,7 +59,8 @@
     "pl": "Ciecierzyca to roślina strączkowa, dobre źródło błonnika i białka dla psów, ale niektóre psy mają problemy z jej trawieniem, dlatego trzeba ją dobrze ugotować i wprowadzać do diety stopniowo. Sucha ciecierzyca jest znacznie trudniejsza do strawienia. Ciecierzyca z puszki zwykle zawiera dużo sodu, który nie jest zdrowy dla psów. Podobnie jak fasola, ciecierzyca może wywoływać u psa gazy.",
     "cs": "Cizrna je luštěnina, dobrý zdroj vlákniny a bílkovin pro psy, ale někteří psi ji špatně tráví, proto by měla být dobře uvařená a zařazovat se pomalu. Suchá cizrna se tráví mnohem hůř. Cizrna z konzervy obvykle obsahuje hodně sodíku, který psům nesvědčí. Stejně jako jiné luštěniny může cizrna psovi způsobit plynatost.",
     "hr": "Slanutak je mahunarka, dobar izvor vlakana i bjelančevina za pse, ali neki ga psi teško probavljaju, pa ga treba dobro skuhati i uvoditi postupno. Suh slanutak mnogo je teže probavljiv. Konzerviran slanutak obično sadrži mnogo natrija, što nije zdravo za pse. Kao i grah, slanutak može izazvati plinove kod psa.",
-    "sv": "Kikärtor är baljväxter och en bra källa till fibrer och protein för hundar, men vissa hundar har svårt att smälta dem, så de ska kokas ordentligt och införas långsamt. Torra kikärtor är mycket svårare att smälta. Kikärtor på burk innehåller oftast mycket natrium, vilket inte är nyttigt för hundar. Precis som andra bönor kan kikärtor ge hunden lite gaser."
+    "sv": "Kikärtor är baljväxter och en bra källa till fibrer och protein för hundar, men vissa hundar har svårt att smälta dem, så de ska kokas ordentligt och införas långsamt. Torra kikärtor är mycket svårare att smälta. Kikärtor på burk innehåller oftast mycket natrium, vilket inte är nyttigt för hundar. Precis som andra bönor kan kikärtor ge hunden lite gaser.",
+    "da": "Kikærter er bælgfrugter og en god kilde til fibre og protein for hunde, men nogle hunde har svært ved at fordøje dem, så de skal tilberedes grundigt og indføres langsomt. Tørre kikærter er meget sværere at fordøje. Kikærter på dåse indeholder som regel meget natrium, hvilket ikke er sundt for hunde. Som andre bønner kan kikærter give din hund lidt luft i maven."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "pl": "Wprowadzaj ugotowaną ciecierzycę powoli. Jeśli używasz ciecierzycy z puszki, wybierz taką o niskiej zawartości sodu i dobrze ją opłucz, żeby usunąć jak najwięcej soli.",
     "cs": "Uvařenou cizrnu zařazujte pomalu. Pokud použijete cizrnu z konzervy, vyberte druh s nízkým obsahem soli a dobře ji propláchněte, aby se odstranilo co nejvíc soli.",
     "hr": "Kuhan slanutak uvodi postupno. Ako koristiš konzerviran slanutak, odaberi onaj s malo natrija i dobro ga isperi kako bi se uklonilo što više soli.",
-    "sv": "Inför kokta kikärtor långsamt. Om du använder kikärtor på burk, välj en natriumsnål sort och skölj dem noga för att få bort så mycket salt som möjligt."
+    "sv": "Inför kokta kikärtor långsamt. Om du använder kikärtor på burk, välj en natriumsnål sort och skölj dem noga för att få bort så mycket salt som möjligt.",
+    "da": "Indfør tilberedte kikærter langsomt. Hvis du bruger kikærter på dåse, så vælg en variant med lavt natriumindhold, og skyl dem grundigt for at fjerne så meget salt som muligt."
   },
   "serving": {
     "en": "Soaked and thoroughly cooked until soft, in moderation; canned only low-sodium and well rinsed.",
@@ -78,7 +84,8 @@
     "pl": "Namoczona i dokładnie ugotowana do miękkości, z umiarem; z puszki tylko o niskiej zawartości sodu i dobrze opłukana.",
     "cs": "Namočená a důkladně uvařená do měkka, s mírou; z konzervy jen s nízkým obsahem soli a dobře propláchnutá.",
     "hr": "Namočen i temeljito kuhan do mekoće, u umjerenim količinama; konzerviran samo s malo natrija i dobro ispran.",
-    "sv": "Blötlagda och kokta tills de är mjuka, i måttliga mängder; kikärtor på burk bara om de är natriumsnåla och noga sköljda."
+    "sv": "Blötlagda och kokta tills de är mjuka, i måttliga mängder; kikärtor på burk bara om de är natriumsnåla och noga sköljda.",
+    "da": "Udblødte og grundigt tilberedte, til de er bløde, i moderate mængder; kikærter på dåse kun med lavt natriumindhold og grundigt skyllede."
   },
   "child": {
     "en": "Soft, cooked chickpeas can be a little treat for dogs, but they might make your dog a bit windy!",
@@ -89,7 +96,8 @@
     "pl": "Miękka, ugotowana ciecierzyca może być małym smakołykiem dla psa, ale po niej pies może mieć trochę gazów!",
     "cs": "Měkká uvařená cizrna může být pro psy malým pamlskem, ale pejskovi se z ní může trochu nadýmat bříško!",
     "hr": "Mekan kuhani slanutak može biti mala poslastica za pse, ali psu može izazvati i malo vjetrova!",
-    "sv": "Mjuka, kokta kikärtor kan vara en liten godbit för hundar, men din hund kan bli lite pruttig!"
+    "sv": "Mjuka, kokta kikärtor kan vara en liten godbit för hundar, men din hund kan bli lite pruttig!",
+    "da": "Bløde, kogte kikærter kan være en lille godbid til hunde, men din hund kan komme til at prutte lidt!"
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "pl": "Czy psy mogą jeść hummus?",
         "cs": "Mohou psi jíst hummus?",
         "hr": "Smiju li psi jesti humus?",
-        "sv": "Får hundar äta hummus?"
+        "sv": "Får hundar äta hummus?",
+        "da": "Må hunde spise hummus?"
       },
       "a": {
         "en": "No. Hummus contains other ingredients that are not dog-friendly, including garlic, onion and spices.",
@@ -113,7 +122,8 @@
         "pl": "Nie. Hummus zawiera inne składniki nieodpowiednie dla psów, m.in. czosnek, cebulę i przyprawy.",
         "cs": "Ne. Hummus obsahuje další přísady, které pro psy nejsou vhodné, včetně česneku, cibule a koření.",
         "hr": "Ne. Humus sadrži druge sastojke koji nisu dobri za pse, uključujući češnjak, luk i začine.",
-        "sv": "Nej. Hummus innehåller andra ingredienser som inte passar hundar, bland annat vitlök, lök och kryddor."
+        "sv": "Nej. Hummus innehåller andra ingredienser som inte passar hundar, bland annat vitlök, lök och kryddor.",
+        "da": "Nej. Hummus indeholder andre ingredienser, der ikke er hundevenlige, blandt andet hvidløg, løg og krydderier."
       }
     },
     {
@@ -126,7 +136,8 @@
         "pl": "Czy psy mogą jeść suchą ciecierzycę?",
         "cs": "Mohou psi jíst suchou cizrnu?",
         "hr": "Smiju li psi jesti suh slanutak?",
-        "sv": "Får hundar äta torra kikärtor?"
+        "sv": "Får hundar äta torra kikärtor?",
+        "da": "Må hunde spise tørre kikærter?"
       },
       "a": {
         "en": "No. Dry chickpeas can be a choking hazard and are much harder for dogs to digest; cook them thoroughly first.",
@@ -137,7 +148,8 @@
         "pl": "Nie. Sucha ciecierzyca może grozić zadławieniem i jest dla psów znacznie trudniejsza do strawienia; najpierw dokładnie ją ugotuj.",
         "cs": "Ne. Suchá cizrna může představovat riziko udušení a psi ji tráví mnohem hůř; nejdřív ji důkladně uvařte.",
         "hr": "Ne. Suh slanutak može izazvati gušenje, a psi ga mnogo teže probavljaju, zato ga prvo temeljito skuhaj.",
-        "sv": "Nej. Torra kikärtor kan orsaka kvävning och är mycket svårare för hundar att smälta. Koka dem ordentligt först."
+        "sv": "Nej. Torra kikärtor kan orsaka kvävning och är mycket svårare för hundar att smälta. Koka dem ordentligt först.",
+        "da": "Nej. Tørre kikærter kan sætte sig fast i halsen og er meget sværere for hunde at fordøje; tilbered dem først grundigt."
       }
     }
   ],
@@ -243,6 +255,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-16",
       "verified_hash": "34ca43e4720f3fb9641a54cbe081f5a28216e1b759570e481db17d1de29fa8ea"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ed8c87dc66e757d3c94524dc3a583b8f44104e4598aba5306b1f1645b2b830a4"
     }
   }
 }

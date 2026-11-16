@@ -10,7 +10,8 @@
     "pl": "Mleko krowie dla kociąt",
     "cs": "Kravské mléko pro koťata",
     "hr": "Kravlje mlijeko za mačiće",
-    "sv": "Komjölk till kattungar"
+    "sv": "Komjölk till kattungar",
+    "da": "Komælk til killinger"
   },
   "question": {
     "en": "Can kittens drink cow's milk?",
@@ -21,7 +22,8 @@
     "pl": "Czy kocięta mogą pić mleko krowie?",
     "cs": "Mohou koťata pít kravské mléko?",
     "hr": "Smiju li mačići piti kravlje mlijeko?",
-    "sv": "Får kattungar dricka komjölk?"
+    "sv": "Får kattungar dricka komjölk?",
+    "da": "Må killinger drikke komælk?"
   },
   "url_slug": {
     "en": "cow-milk-kittens",
@@ -32,7 +34,8 @@
     "pl": "mleko-krowie-dla-kociat",
     "cs": "kravske-mleko-pro-kotata",
     "hr": "kravlje-mlijeko-za-macice",
-    "sv": "komjolk-kattungar"
+    "sv": "komjolk-kattungar",
+    "da": "komaelk-killinger"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "pl": "Nie. Kocięta powinny pić mleko matki, a kocię karmione butelką powinno dostawać wyłącznie mleko zastępcze dla kociąt. Cats Protection podaje, że nigdy nie należy dawać mleka krowiego, bo kocięta trawią je z trudem. Po odstawieniu od mleka matki kocięta do picia potrzebują już tylko wody.",
     "cs": "Ne. Koťata mají pít mléko své matky a kotě, které je třeba krmit z lahvičky, má dostávat jen speciální náhradní mléko pro koťata. Organizace Cats Protection radí kravské mléko nikdy nedávat, protože ho koťata špatně tráví. Jakmile jsou odstavená, potřebují k pití jen vodu.",
     "hr": "Ne. Mačići trebaju piti majčino mlijeko, a mačić kojeg treba hraniti na bočicu smije dobiti samo zamjensko mlijeko za mačiće. Cats Protection upozorava da se kravlje mlijeko ne smije davati nikada, jer ga mačići teško probavljaju. Kad prestanu sisati, mačićima treba samo voda.",
-    "sv": "Nej. Kattungar ska dricka sin mammas mjölk, och en kattunge som måste flaskmatas ska bara få särskild kattungemjölk. Cats Protection skriver att man aldrig ska ge komjölk, eftersom kattungar har svårt att smälta den. När de är avvanda behöver kattungar bara vatten."
+    "sv": "Nej. Kattungar ska dricka sin mammas mjölk, och en kattunge som måste flaskmatas ska bara få särskild kattungemjölk. Cats Protection skriver att man aldrig ska ge komjölk, eftersom kattungar har svårt att smälta den. När de är avvanda behöver kattungar bara vatten.",
+    "da": "Nej. Killinger skal drikke deres mors mælk, og en killing, der skal have flaske, må kun få erstatningsmælk til killinger. Cats Protection skriver, at man aldrig skal give komælk, fordi killinger har svært ved at fordøje den. Når killinger er fravænnet, har de kun brug for vand."
   },
   "why": {
     "en": "Cats Protection advises never giving cow's or goat's milk to kittens because they find it difficult to digest, and PDSA calls cow's milk unsuitable. Compared with cow's milk, a mother cat's milk contains much more protein, while cow's milk has fewer calories, less fat and taurine and more lactose. Substitute kitten milk is made for kittens and contains all the nutrients they need; other milks don't have the right balance.",
@@ -55,7 +59,8 @@
     "pl": "Cats Protection radzi, by nigdy nie dawać kociętom mleka krowiego ani koziego, ponieważ trawią je z trudem, a PDSA uznaje mleko krowie za nieodpowiednie. W porównaniu z mlekiem krowim mleko kotki-matki zawiera znacznie więcej białka, natomiast mleko krowie ma mniej kalorii, tłuszczu i tauryny oraz więcej laktozy. Mleko zastępcze dla kociąt jest przeznaczone dla kociąt i zawiera wszystkie potrzebne im składniki odżywcze; inne rodzaje mleka nie mają właściwych proporcji.",
     "cs": "Cats Protection radí nikdy nedávat koťatům kravské ani kozí mléko, protože ho špatně tráví, a PDSA označuje kravské mléko za nevhodné. Mléko kočičí matky obsahuje mnohem víc bílkovin než kravské, zatímco kravské mléko má méně kalorií, tuku a taurinu a víc laktózy. Náhradní mléko pro koťata je vyrobené přímo pro ně a obsahuje všechny živiny, které potřebují; jiná mléka nemají správné složení.",
     "hr": "Cats Protection savjetuje da se mačićima nikad ne daje kravlje ni kozje mlijeko, jer ga teško probavljaju, a PDSA kravlje mlijeko smatra neprikladnim. U usporedbi s kravljim mlijekom, mlijeko mačke majke sadrži mnogo više bjelančevina, dok kravlje ima manje kalorija, masti i taurina te više laktoze. Zamjensko mlijeko za mačiće proizvedeno je upravo za njih i sadrži sve hranjive tvari koje trebaju; druge vrste mlijeka nemaju pravi omjer hranjivih tvari.",
-    "sv": "Cats Protection rekommenderar att man aldrig ger ko- eller getmjölk till kattungar, eftersom de har svårt att smälta den, och PDSA kallar komjölk olämplig. Jämfört med komjölk innehåller kattmammans mjölk mycket mer protein, medan komjölk har färre kalorier, mindre fett och taurin och mer laktos. Särskild kattungemjölk är gjord för kattungar och innehåller alla näringsämnen de behöver, medan andra sorters mjölk inte har rätt balans."
+    "sv": "Cats Protection rekommenderar att man aldrig ger ko- eller getmjölk till kattungar, eftersom de har svårt att smälta den, och PDSA kallar komjölk olämplig. Jämfört med komjölk innehåller kattmammans mjölk mycket mer protein, medan komjölk har färre kalorier, mindre fett och taurin och mer laktos. Särskild kattungemjölk är gjord för kattungar och innehåller alla näringsämnen de behöver, medan andra sorters mjölk inte har rätt balans.",
+    "da": "Cats Protection anbefaler, at man aldrig giver ko- eller gedemælk til killinger, fordi de har svært ved at fordøje den, og PDSA kalder komælk uegnet. Sammenlignet med komælk indeholder en kattemors mælk meget mere protein, mens komælk har færre kalorier, mindre fedt og taurin og mere laktose. Erstatningsmælk til killinger er lavet til killinger og indeholder alle de næringsstoffer, de har brug for; andre slags mælk har ikke den rette balance."
   },
   "signs": {
     "en": [
@@ -102,6 +107,11 @@
       "Diarré",
       "Svaghet",
       "Viktnedgång eller dålig tillväxt"
+    ],
+    "da": [
+      "Diarré",
+      "Svaghed",
+      "Vægttab eller dårlig trivsel"
     ]
   },
   "what_to_do": {
@@ -113,7 +123,8 @@
     "pl": "Przestań podawać mleko krowie i zapytaj weterynarza, jakiego mleka dla kociąt użyć. Jeśli małe kocię ma biegunkę, wydaje się osłabione, traci na wadze lub nie rozwija się prawidłowo, od razu skontaktuj się z weterynarzem, ponieważ stan kocięcia może szybko się pogorszyć.",
     "cs": "Přestaňte kravské mléko podávat a zeptejte se veterináře, jaké mléko pro koťata použít. Pokud má malé kotě průjem, působí slabě, hubne nebo neprospívá, ihned se obraťte na veterináře, protože se stav koťat může rychle zhoršit.",
     "hr": "Prestani davati kravlje mlijeko i pitaj veterinara koje mlijeko za mačiće odabrati. Odmah se obrati veterinaru ako mlad mačić ima proljev, djeluje malaksalo, gubi na težini ili slabo napreduje, jer se njegovo stanje može brzo pogoršati.",
-    "sv": "Sluta ge komjölk och fråga veterinären vilken kattungemjölk du ska använda. Kontakta veterinären direkt om en liten kattunge får diarré, verkar svag, går ned i vikt eller inte växer som den ska, eftersom kattungens tillstånd kan försämras snabbt."
+    "sv": "Sluta ge komjölk och fråga veterinären vilken kattungemjölk du ska använda. Kontakta veterinären direkt om en liten kattunge får diarré, verkar svag, går ned i vikt eller inte växer som den ska, eftersom kattungens tillstånd kan försämras snabbt.",
+    "da": "Stop med komælken, og spørg din dyrlæge, hvilken killingemælk du skal bruge. Kontakt straks din dyrlæge, hvis en lille killing får diarré, virker svag, taber sig eller ikke trives, for en killings tilstand kan forværres hurtigt."
   },
   "serving": null,
   "child": {
@@ -125,7 +136,8 @@
     "pl": "Kocięta piją mleko swojej mamy albo specjalne mleko dla kociąt, a nie mleko z lodówki. Starsze kocięta potrzebują tylko świeżej wody!",
     "cs": "Malá koťátka pijí mléko od své maminky nebo speciální mléko pro koťata, ne mléko z lednice. Odrostlejší koťata potřebují jen čerstvou vodu!",
     "hr": "Mačići piju mamino mlijeko ili posebno mlijeko za mačiće, a ne mlijeko iz hladnjaka. Veći mačići trebaju samo svježu vodu!",
-    "sv": "Kattbebisar dricker sin mammas mjölk eller särskild kattungemjölk, inte mjölk från kylskåpet. Större kattungar behöver bara färskt vatten!"
+    "sv": "Kattbebisar dricker sin mammas mjölk eller särskild kattungemjölk, inte mjölk från kylskåpet. Större kattungar behöver bara färskt vatten!",
+    "da": "Helt små killinger drikker deres mors mælk eller særlig killingemælk, ikke mælk fra køleskabet. Når killinger er blevet større, har de kun brug for friskt vand!"
   },
   "faq": [
     {
@@ -138,7 +150,8 @@
         "pl": "Czym karmić osierocone kocię?",
         "cs": "Čím krmit osiřelé kotě?",
         "hr": "Čime hraniti mačića bez majke?",
-        "sv": "Vad ska jag ge en moderlös kattunge?"
+        "sv": "Vad ska jag ge en moderlös kattunge?",
+        "da": "Hvad skal jeg give en moderløs killing?"
       },
       "a": {
         "en": "Ask your vet first. Use a substitute kitten milk made specifically for kittens, available from vets and some pet shops, and follow the instructions on the label. Supermarket kitten or puppy milk is not suitable.",
@@ -149,7 +162,8 @@
         "pl": "Najpierw zapytaj weterynarza. Użyj mleka zastępczego przeznaczonego specjalnie dla kociąt, dostępnego u weterynarzy i w niektórych sklepach zoologicznych, i stosuj się do instrukcji na etykiecie. Mleko dla kociąt lub szczeniąt z supermarketu się nie nadaje.",
         "cs": "Nejdřív se poraďte s veterinářem. Použijte náhradní mléko vyrobené speciálně pro koťata, které dostanete u veterináře a v některých zverimexech, a řiďte se návodem na obalu. Mléko pro koťata nebo štěňata ze supermarketu se nehodí.",
         "hr": "Prvo pitaj veterinara. Daj zamjensko mlijeko napravljeno posebno za mačiće, koje se može kupiti kod veterinara i u nekim trgovinama za kućne ljubimce, i slijedi upute na pakiranju. Mlijeko za mačiće ili štenad iz supermarketa nije prikladno.",
-        "sv": "Fråga veterinären först. Använd särskild kattungemjölk som är gjord för kattungar. Den finns hos veterinärer och i vissa djuraffärer. Följ instruktionerna på förpackningen. Kattungemjölk eller valpmjölk från mataffären passar inte."
+        "sv": "Fråga veterinären först. Använd särskild kattungemjölk som är gjord för kattungar. Den finns hos veterinärer och i vissa djuraffärer. Följ instruktionerna på förpackningen. Kattungemjölk eller valpmjölk från mataffären passar inte.",
+        "da": "Spørg først din dyrlæge. Brug erstatningsmælk lavet specielt til killinger, som fås hos dyrlæger og i nogle dyrebutikker, og følg anvisningerne på etiketten. Killinge- eller hvalpemælk fra supermarkedet er ikke egnet."
       }
     },
     {
@@ -162,7 +176,8 @@
         "pl": "Kiedy kocięta przestają pić mleko?",
         "cs": "Kdy koťata přestanou pít mléko?",
         "hr": "Kada mačići prestaju piti mlijeko?",
-        "sv": "När slutar kattungar dricka mjölk?"
+        "sv": "När slutar kattungar dricka mjölk?",
+        "da": "Hvornår holder killinger op med at drikke mælk?"
       },
       "a": {
         "en": "By six to eight weeks old, kittens should be fully weaned onto solid food. From then on they only need to drink water, not milk, and their body may start making less lactase.",
@@ -173,7 +188,8 @@
         "pl": "W wieku sześciu do ośmiu tygodni kocięta powinny być już całkowicie przestawione na stały pokarm. Od tej pory potrzebują do picia tylko wody, nie mleka, a ich organizm może zacząć produkować mniej laktazy.",
         "cs": "Do šesti až osmi týdnů věku by koťata měla být zcela odstavená a krmená pevnou stravou. Od té doby potřebují k pití jen vodu, ne mléko, a jejich tělo může začít tvořit méně laktázy.",
         "hr": "Do šestog do osmog tjedna života mačići bi trebali potpuno prijeći na krutu hranu. Od tada za piće trebaju samo vodu, a ne mlijeko, a tijelo im može početi stvarati manje laktaze.",
-        "sv": "Vid sex till åtta veckors ålder ska kattungar vara helt avvanda och äta fast föda. Därefter behöver de bara dricka vatten, inte mjölk, och kroppen kan börja bilda mindre laktas."
+        "sv": "Vid sex till åtta veckors ålder ska kattungar vara helt avvanda och äta fast föda. Därefter behöver de bara dricka vatten, inte mjölk, och kroppen kan börja bilda mindre laktas.",
+        "da": "Når killinger er seks til otte uger gamle, skal de være helt fravænnet og spise fast føde. Derefter har de kun brug for at drikke vand, ikke mælk, og deres krop begynder måske at danne mindre laktase."
       }
     },
     {
@@ -186,7 +202,8 @@
         "pl": "A dorosłe koty?",
         "cs": "A dospělé kočky?",
         "hr": "A odrasle mačke?",
-        "sv": "Och vuxna katter?"
+        "sv": "Och vuxna katter?",
+        "da": "Og voksne katte?"
       },
       "a": {
         "en": "Most cats are lactose intolerant, and once weaned they only need to drink water, not milk. See our page on milk for cats.",
@@ -197,7 +214,8 @@
         "pl": "Większość kotów nie toleruje laktozy, a po odstawieniu od mleka matki potrzebują do picia tylko wody, nie mleka. Zobacz naszą stronę o mleku dla kotów.",
         "cs": "Většina koček nesnáší laktózu a po odstavení potřebují k pití jen vodu, ne mléko. Více najdete na naší stránce o mléku pro kočky.",
         "hr": "Većina mačaka ne podnosi laktozu, a nakon prestanka sisanja za piće im treba samo voda, ne mlijeko. Pogledaj našu stranicu o mlijeku za mačke.",
-        "sv": "De flesta katter är laktosintoleranta, och när de är avvanda behöver de bara dricka vatten, inte mjölk. Se vår sida om mjölk till katter."
+        "sv": "De flesta katter är laktosintoleranta, och när de är avvanda behöver de bara dricka vatten, inte mjölk. Se vår sida om mjölk till katter.",
+        "da": "De fleste katte er laktoseintolerante, og når de er fravænnet, har de kun brug for at drikke vand, ikke mælk. Se vores side om mælk til katte."
       }
     }
   ],
@@ -350,6 +368,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-16",
       "verified_hash": "a80aae706cbba7cc5a74b5ca7736a9d0a0361137c2a5a83ac042aa5f43b7e471"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "de4fa87c61433e7cb01ca7cfedc782d0b1607bca0fd2a316922534e109679d4d"
     }
   }
 }

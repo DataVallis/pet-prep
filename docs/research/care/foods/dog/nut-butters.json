@@ -10,7 +10,8 @@
     "pl": "Masła z orzechów",
     "cs": "Ořechová másla",
     "hr": "Maslaci od orašastih plodova",
-    "sv": "Nötsmör"
+    "sv": "Nötsmör",
+    "da": "Nøddesmør"
   },
   "question": {
     "en": "Can dogs eat almond butter and other nut butters?",
@@ -21,7 +22,8 @@
     "pl": "Czy psy mogą jeść masło migdałowe i inne masła z orzechów?",
     "cs": "Mohou psi jíst mandlové máslo a další ořechová másla?",
     "hr": "Smiju li psi jesti maslac od badema i druge maslace od orašastih plodova?",
-    "sv": "Får hundar äta mandelsmör och andra nötsmör?"
+    "sv": "Får hundar äta mandelsmör och andra nötsmör?",
+    "da": "Må hunde spise mandelsmør og andre slags nøddesmør?"
   },
   "url_slug": {
     "en": "nut-butters",
@@ -32,7 +34,8 @@
     "pl": "masla-orzechowe",
     "cs": "orechova-masla",
     "hr": "maslaci-od-orasastih-plodova",
-    "sv": "notsmor"
+    "sv": "notsmor",
+    "da": "noddesmor"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "pl": "Masło migdałowe – tak, w małych ilościach, o ile nie zawiera ksylitolu. Wiele maseł migdałowych zawiera sól i słodziki, takie jak ksylitol, który jest toksyczny dla psów, więc zawsze sprawdzaj etykietę. Nie wszystkie orzechy są bezpieczne: orzechy makadamia są bardzo toksyczne dla psów.",
     "cs": "Mandlové máslo ano, v malém množství, pokud neobsahuje xylitol. Mnohá mandlová másla obsahují sůl a sladidla, například xylitol, který je pro psy jedovatý, proto vždy zkontrolujte etiketu. Ne všechny ořechy jsou bezpečné: makadamové ořechy jsou pro psy velmi jedovaté.",
     "hr": "Maslac od badema smije, u malim količinama, ako ne sadrži ksilitol. Mnogi maslaci od badema sadrže sol i sladila poput ksilitola, koji je otrovan za pse, zato uvijek provjeri deklaraciju. Nisu svi orašasti plodovi sigurni za pse: makadamija je vrlo otrovna za pse.",
-    "sv": "Mandelsmör går bra i små mängder, så länge det inte innehåller xylitol. Många sorter mandelsmör innehåller salt och sötningsmedel som xylitol, som är giftigt för hundar. Kontrollera därför alltid innehållsförteckningen. Alla nötter är inte ofarliga: macadamianötter är mycket giftiga för hundar."
+    "sv": "Mandelsmör går bra i små mängder, så länge det inte innehåller xylitol. Många sorter mandelsmör innehåller salt och sötningsmedel som xylitol, som är giftigt för hundar. Kontrollera därför alltid innehållsförteckningen. Alla nötter är inte ofarliga: macadamianötter är mycket giftiga för hundar.",
+    "da": "Mandelsmør: ja, i små mængder, hvis det ikke indeholder xylitol. Mange slags mandelsmør indeholder salt og sødemidler som xylitol, der er giftigt for hunde, så tjek altid varedeklarationen. Ikke alle nødder er sikre: macadamianødder er meget giftige for hunde."
   },
   "why": {
     "en": "Almonds themselves are not recommended for dogs, but a little almond butter can be a safe alternative. Nuts are high in fat, and too much almond butter can lead to pancreatitis. Some peanut and other nut butters contain xylitol, a sweetener that is toxic to dogs.",
@@ -55,7 +59,8 @@
     "pl": "Same migdały nie są zalecane dla psów, ale odrobina masła migdałowego może być bezpieczną alternatywą. Orzechy mają dużo tłuszczu, a zbyt dużo masła migdałowego może prowadzić do zapalenia trzustki. Niektóre masła z orzeszków ziemnych i innych orzechów zawierają ksylitol, słodzik toksyczny dla psów.",
     "cs": "Samotné mandle se psům nedoporučují, ale trocha mandlového másla může být bezpečnou alternativou. Ořechy mají hodně tuku a příliš mnoho mandlového másla může vést k zánětu slinivky břišní. Některá arašídová a další ořechová másla obsahují xylitol, sladidlo, které je pro psy jedovaté.",
     "hr": "Sami se bademi psima ne preporučuju, ali malo maslaca od badema može biti sigurna zamjena. Orašasti plodovi bogati su mastima, a previše maslaca od badema može dovesti do upale gušterače. Neki maslaci od kikirikija i drugih orašastih plodova sadrže ksilitol, sladilo koje je otrovno za pse.",
-    "sv": "Själva mandlarna rekommenderas inte till hundar, men lite mandelsmör kan vara ett ofarligt alternativ. Nötter innehåller mycket fett, och för mycket mandelsmör kan leda till bukspottkörtelinflammation. Vissa sorters jordnötssmör och andra nötsmör innehåller xylitol, ett sötningsmedel som är giftigt för hundar."
+    "sv": "Själva mandlarna rekommenderas inte till hundar, men lite mandelsmör kan vara ett ofarligt alternativ. Nötter innehåller mycket fett, och för mycket mandelsmör kan leda till bukspottkörtelinflammation. Vissa sorters jordnötssmör och andra nötsmör innehåller xylitol, ett sötningsmedel som är giftigt för hundar.",
+    "da": "Selve mandlerne anbefales ikke til hunde, men lidt mandelsmør kan være et sikkert alternativ. Nødder indeholder meget fedt, og for meget mandelsmør kan give betændelse i bugspytkirtlen. Noget peanutbutter og andet nøddesmør indeholder xylitol, et sødemiddel der er giftigt for hunde."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "pl": "Jeśli podejrzewasz, że pies zjadł masło z orzechów z ksylitolem, od razu zadzwoń do weterynarza, do całodobowej przychodni weterynaryjnej lub na telefon informacji toksykologicznej dla zwierząt.",
     "cs": "Pokud si myslíte, že pes snědl ořechové máslo s xylitolem, ihned zavolejte veterináři, na pohotovost nebo na toxikologickou linku pro zvířata.",
     "hr": "Ako misliš da je tvoj pas pojeo maslac od orašastih plodova s ksilitolom, odmah nazovi veterinara, dežurnu veterinarsku ambulantu ili telefonsku liniju za otrovanja životinja.",
-    "sv": "Om du tror att hunden har ätit ett nötsmör som innehåller xylitol, ring direkt till veterinären, ett djursjukhus med akutjour eller giftrådgivning för djur."
+    "sv": "Om du tror att hunden har ätit ett nötsmör som innehåller xylitol, ring direkt till veterinären, ett djursjukhus med akutjour eller giftrådgivning för djur.",
+    "da": "Hvis du tror, at din hund har spist nøddesmør med xylitol, skal du straks kontakte din dyrlæge, en akut dyreklinik eller en giftrådgivning for dyr."
   },
   "serving": {
     "en": "A small amount of almond butter whose label lists no xylitol; as an occasional treat.",
@@ -78,7 +84,8 @@
     "pl": "Odrobina masła migdałowego, w którego składzie na etykiecie nie ma ksylitolu; jako smakołyk od czasu do czasu.",
     "cs": "Malé množství mandlového másla, na jehož etiketě xylitol není uveden; jako občasný pamlsek.",
     "hr": "Malo maslaca od badema bez ksilitola na deklaraciji, kao povremena poslastica.",
-    "sv": "Lite mandelsmör utan xylitol i innehållsförteckningen, som en godbit då och då."
+    "sv": "Lite mandelsmör utan xylitol i innehållsförteckningen, som en godbit då och då.",
+    "da": "En lille mængde mandelsmør uden xylitol i ingredienslisten; som godbid en gang imellem."
   },
   "child": {
     "en": "A little almond butter can be a treat, but a grown-up must check the jar first. Some kinds are not safe for dogs.",
@@ -89,7 +96,8 @@
     "pl": "Odrobina masła migdałowego może być smakołykiem, ale dorosły musi najpierw sprawdzić słoik. Niektóre rodzaje nie są bezpieczne dla psów.",
     "cs": "Trocha mandlového másla může být pamlsek, ale dospělý musí nejdřív zkontrolovat složení na sklenici. Některé druhy pro psy bezpečné nejsou.",
     "hr": "Malo maslaca od badema može biti poslastica, ali odrasla osoba prvo mora provjeriti staklenku. Neke vrste nisu sigurne za pse.",
-    "sv": "Lite mandelsmör kan vara en godbit, men en vuxen måste kolla burken först. Vissa sorter är inte säkra för hundar."
+    "sv": "Lite mandelsmör kan vara en godbit, men en vuxen måste kolla burken först. Vissa sorter är inte säkra för hundar.",
+    "da": "Lidt mandelsmør kan være en godbid, men en voksen skal tjekke glasset først. Nogle slags er ikke sikre for hunde."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "pl": "Jak sprawdzić, czy masło z orzechów zawiera ksylitol?",
         "cs": "Jak poznám, že ořechové máslo obsahuje xylitol?",
         "hr": "Kako znati ima li maslac od orašastih plodova ksilitol?",
-        "sv": "Hur vet jag om ett nötsmör innehåller xylitol?"
+        "sv": "Hur vet jag om ett nötsmör innehåller xylitol?",
+        "da": "Hvordan kan jeg se, om et nøddesmør indeholder xylitol?"
       },
       "a": {
         "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
@@ -113,7 +122,8 @@
         "pl": "Przeczytaj skład na etykiecie, zwłaszcza na produktach oznaczonych jako „bez cukru” lub „o obniżonej zawartości cukru”.",
         "cs": "Přečtěte si složení na etiketě, zejména u výrobků označených jako bez cukru nebo se sníženým obsahem cukru.",
         "hr": "Pročitaj sastojke na deklaraciji, osobito na proizvodima označenima kao „bez šećera“ ili „sa smanjenim udjelom šećera“.",
-        "sv": "Läs innehållsförteckningen, särskilt på produkter som är märkta sockerfria eller med lågt sockerinnehåll."
+        "sv": "Läs innehållsförteckningen, särskilt på produkter som är märkta sockerfria eller med lågt sockerinnehåll.",
+        "da": "Læs varedeklarationen, især på produkter, der er mærket sukkerfri eller med lavt sukkerindhold."
       }
     }
   ],
@@ -212,6 +222,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-16",
       "verified_hash": "0820b63920424d6d1badf35dc0830fe3e4d0cc25654c21fb0b39877ad25f6532"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fff49907c4543a015a1ea77efb74d2455fb0ff3d62a788b352b64d308d42b736"
     }
   }
 }

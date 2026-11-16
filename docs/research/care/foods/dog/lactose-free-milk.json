@@ -10,7 +10,8 @@
     "pl": "Mleko bez laktozy",
     "cs": "Bezlaktózové mléko",
     "hr": "Mlijeko bez laktoze",
-    "sv": "Laktosfri mjölk"
+    "sv": "Laktosfri mjölk",
+    "da": "Laktosefri mælk"
   },
   "question": {
     "en": "Can dogs drink lactose-free milk?",
@@ -21,7 +22,8 @@
     "pl": "Czy psy mogą pić mleko bez laktozy?",
     "cs": "Mohou psi pít bezlaktózové mléko?",
     "hr": "Smiju li psi piti mlijeko bez laktoze?",
-    "sv": "Får hundar dricka laktosfri mjölk?"
+    "sv": "Får hundar dricka laktosfri mjölk?",
+    "da": "Må hunde drikke laktosefri mælk?"
   },
   "url_slug": {
     "en": "lactose-free-milk",
@@ -32,7 +34,8 @@
     "pl": "mleko-bez-laktozy",
     "cs": "bezlaktozove-mleko",
     "hr": "mlijeko-bez-laktoze",
-    "sv": "laktosfri-mjolk"
+    "sv": "laktosfri-mjolk",
+    "da": "laktosefri-maelk"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "pl": "Tylko odrobinę, i to wcale niekonieczne. Niektóre psy mogą tolerować małe ilości mleka bez laktozy, ale psy na dobrej, zbilansowanej diecie go nie potrzebują, a mleko bez laktozy nadal może rozstroić żołądek psom uczulonym na białko mleka.",
     "cs": "Jen trochu, a ani to není potřeba. Někteří psi mohou malé množství bezlaktózového mléka snášet, ale psi s dobrou vyváženou stravou ho nepotřebují a psům s alergií na mléčnou bílkovinu může i tak podráždit žaludek.",
     "hr": "Samo malo, a nije ni potrebno. Neki psi možda podnose male količine mlijeka bez laktoze, ali psima na dobroj, uravnoteženoj prehrani ono ne treba, a kod pasa alergičnih na mliječne bjelančevine i dalje može izazvati probavne tegobe.",
-    "sv": "Bara lite, och den behövs inte. Vissa hundar tål små mängder laktosfri mjölk, men hundar som får en bra och balanserad kost behöver den inte. Hos hundar som är allergiska mot mjölkprotein kan den dessutom ge orolig mage."
+    "sv": "Bara lite, och den behövs inte. Vissa hundar tål små mängder laktosfri mjölk, men hundar som får en bra och balanserad kost behöver den inte. Hos hundar som är allergiska mot mjölkprotein kan den dessutom ge orolig mage.",
+    "da": "Kun lidt, og det er ikke nødvendigt. Nogle hunde kan tåle små mængder laktosefri mælk, men hunde, der får en god og afbalanceret kost, har ikke brug for den, og den kan stadig give ondt i maven hos hunde, der er allergiske over for mælkeprotein."
   },
   "why": {
     "en": "Lactose-free milk has the same nutrients as regular milk but without the lactose that can cause digestive problems, and a vet hospital calls it a suitable alternative for lactose-intolerant dogs. The Australian Veterinary Association is stricter: it is not necessary for dogs on a balanced diet and can still cause stomach problems linked to milk-protein allergy, so we follow the stricter view: only a little.",
@@ -55,7 +59,8 @@
     "pl": "Mleko bez laktozy ma te same składniki odżywcze co zwykłe mleko, ale bez laktozy, która może powodować problemy trawienne, a szpital weterynaryjny nazywa je odpowiednim zamiennikiem dla psów z nietolerancją laktozy. Australian Veterinary Association (AVA) ma bardziej restrykcyjne stanowisko: uważa, że mleko bez laktozy nie jest konieczne dla psów na zbilansowanej diecie i nadal może powodować problemy żołądkowe związane z alergią na białko mleka, dlatego kierujemy się surowszą oceną: tylko odrobina.",
     "cs": "Bezlaktózové mléko má stejné živiny jako běžné mléko, ale bez laktózy, která může způsobovat potíže s trávením, a jedna veterinární nemocnice ho označuje za vhodnou alternativu pro psy, kteří nesnášejí laktózu. Australian Veterinary Association je přísnější: pro psy s vyváženou stravou není potřeba a může i tak způsobit žaludeční potíže spojené s alergií na mléčnou bílkovinu. Řídíme se proto přísnějším názorem: jen trochu.",
     "hr": "Mlijeko bez laktoze ima iste hranjive tvari kao obično mlijeko, ali bez laktoze, koja može izazvati probavne tegobe, a jedna ga veterinarska bolnica smatra prikladnom zamjenom za pse koji ne podnose laktozu. Australsko veterinarsko udruženje strože je: kaže da psima na uravnoteženoj prehrani nije potrebno te da i dalje može izazvati želučane tegobe povezane s alergijom na mliječne bjelančevine, pa se držimo strožeg stajališta: samo malo.",
-    "sv": "Laktosfri mjölk innehåller samma näringsämnen som vanlig mjölk, men utan den laktos som kan ge matsmältningsproblem, och ett djursjukhus beskriver den som ett lämpligt alternativ för laktosintoleranta hundar. Den australiska veterinärföreningen Australian Veterinary Association är striktare: enligt den behövs mjölken inte för hundar som får en balanserad kost, och den kan ändå ge magproblem som hänger ihop med allergi mot mjölkprotein. Vi följer den strängare bedömningen: bara lite."
+    "sv": "Laktosfri mjölk innehåller samma näringsämnen som vanlig mjölk, men utan den laktos som kan ge matsmältningsproblem, och ett djursjukhus beskriver den som ett lämpligt alternativ för laktosintoleranta hundar. Den australiska veterinärföreningen Australian Veterinary Association är striktare: enligt den behövs mjölken inte för hundar som får en balanserad kost, och den kan ändå ge magproblem som hänger ihop med allergi mot mjölkprotein. Vi följer den strängare bedömningen: bara lite.",
+    "da": "Laktosefri mælk indeholder de samme næringsstoffer som almindelig mælk, men uden den laktose, der kan give fordøjelsesproblemer, og et dyrehospital kalder den et passende alternativ til hunde med laktoseintolerans. Den australske dyrlægeforening (Australian Veterinary Association) er strengere: den er ikke nødvendig for hunde på en afbalanceret kost og kan stadig give maveproblemer, der hænger sammen med allergi over for mælkeprotein. Vi følger den strengere vurdering: kun lidt."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "pl": "Jeśli po mleku pies ma biegunkę, wymioty, gazy lub wzdęcia, które nie mijają, skontaktuj się z weterynarzem.",
     "cs": "Pokud pes po mléce dostane průjem, zvrací nebo má plynatost či nafouknuté břicho a potíže nepřejdou, obraťte se na veterináře.",
     "hr": "Ako pas nakon mlijeka dobije proljev, povraćanje, plinove ili nadutost koji ne prolaze, obrati se veterinaru.",
-    "sv": "Om hunden får diarré, kräkningar, gaser eller uppblåst mage av mjölk och det inte går över, kontakta veterinären."
+    "sv": "Om hunden får diarré, kräkningar, gaser eller uppblåst mage av mjölk och det inte går över, kontakta veterinären.",
+    "da": "Hvis din hund får diarré, opkast, luft i maven eller oppustethed efter at have fået mælk, og det ikke går over, så kontakt din dyrlæge."
   },
   "serving": {
     "en": "Start with a small amount, ideally a lactose-free milk made for dogs, and watch for tummy upset.",
@@ -78,7 +84,8 @@
     "pl": "Zacznij od małej ilości, najlepiej mleka bez laktozy przeznaczonego dla psów, i obserwuj, czy nie dochodzi do rozstroju żołądka.",
     "cs": "Začněte malým množstvím, nejlépe bezlaktózovým mlékem vyrobeným pro psy, a sledujte, zda se psovi nepodráždí žaludek.",
     "hr": "Počni s malom količinom, najbolje mlijekom bez laktoze namijenjenim psima, i pazi pojavljuju li se probavne tegobe.",
-    "sv": "Börja med en liten mängd, helst laktosfri mjölk som är gjord för hundar, och håll utkik efter magbesvär."
+    "sv": "Börja med en liten mängd, helst laktosfri mjölk som är gjord för hundar, och håll utkik efter magbesvär.",
+    "da": "Start med en lille mængde, helst laktosefri mælk lavet til hunde, og hold øje med, om maven reagerer."
   },
   "child": {
     "en": "Dogs don't need milk to stay healthy, so ask a grown-up before sharing any with your dog.",
@@ -89,7 +96,8 @@
     "pl": "Psy nie potrzebują mleka, żeby być zdrowe, więc zanim dasz psu odrobinę, zapytaj dorosłego.",
     "cs": "Psi mléko ke zdraví nepotřebují, proto se nejdřív zeptej dospělého, než se o ně se psem podělíš.",
     "hr": "Psima mlijeko ne treba da bi ostali zdravi, zato prije nego što ga podijeliš sa psom pitaj odraslu osobu.",
-    "sv": "Hundar behöver inte mjölk för att hålla sig friska, så fråga en vuxen innan du ger din hund mjölk."
+    "sv": "Hundar behöver inte mjölk för att hålla sig friska, så fråga en vuxen innan du ger din hund mjölk.",
+    "da": "Hunde har ikke brug for mælk for at holde sig sunde, så spørg en voksen, før du deler mælk med din hund."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "pl": "Czy mleko bez laktozy jest dla psów lepsze niż zwykłe?",
         "cs": "Je bezlaktózové mléko pro psy lepší než běžné mléko?",
         "hr": "Je li mlijeko bez laktoze bolje za pse od običnog?",
-        "sv": "Är laktosfri mjölk bättre för hundar än vanlig mjölk?"
+        "sv": "Är laktosfri mjölk bättre för hundar än vanlig mjölk?",
+        "da": "Er laktosefri mælk bedre for hunde end almindelig mælk?"
       },
       "a": {
         "en": "It has no lactose, which can cause digestive problems, but it can still upset dogs that are allergic to milk protein.",
@@ -113,7 +122,8 @@
         "pl": "Nie zawiera laktozy, która może powodować problemy trawienne, ale nadal może rozstroić psy uczulone na białko mleka.",
         "cs": "Neobsahuje laktózu, která může způsobovat potíže s trávením, ale psům s alergií na mléčnou bílkovinu může i tak podráždit žaludek.",
         "hr": "Ne sadrži laktozu, koja može izazvati probavne tegobe, ali i dalje može izazvati tegobe kod pasa alergičnih na mliječne bjelančevine.",
-        "sv": "Den innehåller ingen laktos, som kan orsaka matsmältningsproblem, men den kan ändå ge orolig mage hos hundar som är allergiska mot mjölkprotein."
+        "sv": "Den innehåller ingen laktos, som kan orsaka matsmältningsproblem, men den kan ändå ge orolig mage hos hundar som är allergiska mot mjölkprotein.",
+        "da": "Den indeholder ikke laktose, som kan give fordøjelsesproblemer, men den kan stadig give ondt i maven hos hunde, der er allergiske over for mælkeprotein."
       }
     }
   ],
@@ -215,6 +225,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-16",
       "verified_hash": "656a1aca48ef4d23469bd8b47d44d4addc3dd6fbb5a8039bfd412b2c655b9aa9"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4d81843a85f4f9513500e67ad4a70aeb8abcc333c07751c59dbfa9c868c675b5"
     }
   }
 }
