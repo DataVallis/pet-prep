@@ -14,7 +14,8 @@
     "sv": "Laktosfri mjölk och kattmjölk",
     "da": "Laktosefri mælk og kattemælk",
     "fi": "Laktoositon maito ja kissanmaito",
-    "fr": "Lait sans lactose et lait pour chats"
+    "fr": "Lait sans lactose et lait pour chats",
+    "nb": "Laktosefri melk og kattemelk"
   },
   "question": {
     "en": "Can cats drink lactose-free milk?",
@@ -29,7 +30,8 @@
     "sv": "Får katter dricka laktosfri mjölk?",
     "da": "Må katte drikke laktosefri mælk?",
     "fi": "Saako kissa juoda laktoositonta maitoa?",
-    "fr": "Les chats peuvent-ils boire du lait sans lactose ?"
+    "fr": "Les chats peuvent-ils boire du lait sans lactose ?",
+    "nb": "Kan katter drikke laktosefri melk?"
   },
   "url_slug": {
     "en": "lactose-free-milk",
@@ -44,7 +46,8 @@
     "sv": "laktosfri-mjolk",
     "da": "laktosefri-maelk",
     "fi": "laktoositon-maito",
-    "fr": "lait-sans-lactose"
+    "fr": "lait-sans-lactose",
+    "nb": "laktosefri-melk"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "sv": "Helst inte. Laktosfri mjölk och särskild kattmjölk ger mer sällan orolig mage hos katter, men de innehåller många kalorier och saknar de näringsämnen som en katt behöver. Cats Protection rekommenderar att du undviker alla sorters mjölk. Vatten är allt katter behöver.",
     "da": "Helst ikke. Laktosefri mælk og særlig kattemælk er mindre tilbøjelige til at give ondt i maven hos katte, men de indeholder mange kalorier og mangler de næringsstoffer, en kat har brug for. Cats Protection anbefaler, at man undgår alle slags mælk; vand er alt, hvad katte har brug for.",
     "fi": "Parempi olla antamatta. Laktoositon maito ja erityinen kissanmaito sotkevat kissan vatsan epätodennäköisemmin, mutta niissä on paljon kaloreita, ja niistä puuttuvat kissan tarvitsemat ravintoaineet. Cats Protection kehottaa välttämään kaikkea maitoa: kissa tarvitsee juomaksi vain vettä.",
-    "fr": "Mieux vaut s’en abstenir. Le lait sans lactose et le lait spécial pour chats risquent moins de donner mal au ventre à un chat, mais ils sont très caloriques et ne contiennent pas les nutriments dont un chat a besoin. Cats Protection conseille d’éviter tout type de lait ; l’eau suffit aux chats."
+    "fr": "Mieux vaut s’en abstenir. Le lait sans lactose et le lait spécial pour chats risquent moins de donner mal au ventre à un chat, mais ils sont très caloriques et ne contiennent pas les nutriments dont un chat a besoin. Cats Protection conseille d’éviter tout type de lait ; l’eau suffit aux chats.",
+    "nb": "Helst ikke. Laktosefri melk og spesiell kattemelk gir sjeldnere vondt i magen hos katter, men de er rike på kalorier og mangler næringsstoffene en katt trenger. Cats Protection anbefaler å unngå alle typer melk; vann er alt katter trenger."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. Cats Protection says lactose-free milk and cat milk don't contain lactose, but they have a lot of calories that could make a cat put on weight, and it is best to avoid giving cats any type of milk. PDSA says cat milk could be an occasional treat, but its fat is often as high as other milk and its calories must be counted in the daily food allowance.",
@@ -75,7 +79,8 @@
     "sv": "Källorna är oeniga, så vi använder den strängare nivån. Cats Protection skriver att laktosfri mjölk och kattmjölk inte innehåller laktos, men att de har många kalorier, som kan få katten att gå upp i vikt, och att det är bäst att inte ge katter någon sorts mjölk. PDSA skriver att kattmjölk kan vara en godbit ibland, men att fetthalten ofta är lika hög som i annan mjölk och att kalorierna måste räknas in i den dagliga matransonen.",
     "da": "Kilderne er uenige, så vi bruger den strengere vurdering. Cats Protection skriver, at laktosefri mælk og kattemælk ikke indeholder laktose, men at de har mange kalorier, som kan få en kat til at tage på, og at det er bedst ikke at give katte nogen slags mælk. PDSA skriver, at kattemælk kan være en godbid en gang imellem, men at fedtindholdet ofte er lige så højt som i anden mælk, og at kalorierne skal tælles med i den daglige foderration.",
     "fi": "Lähteet ovat eri mieltä, joten noudatamme tiukempaa tasoa. Cats Protectionin mukaan laktoositon maito ja kissanmaito eivät sisällä laktoosia, mutta niissä on paljon kaloreita, jotka voivat lihottaa kissaa, ja kissalle on parasta olla antamatta minkäänlaista maitoa. PDSA:n mukaan kissanmaito voi olla satunnainen herkku, mutta sen rasvapitoisuus on usein yhtä suuri kuin muiden maitojen, ja sen kalorit on laskettava mukaan kissan päivittäiseen ruokamäärään.",
-    "fr": "Les sources divergent ; nous retenons donc le niveau le plus strict. Cats Protection indique que le lait sans lactose et le lait pour chats ne contiennent pas de lactose, mais qu’ils sont très caloriques, ce qui pourrait faire grossir un chat, et qu’il vaut mieux ne donner aucun type de lait aux chats. PDSA explique que le lait pour chats peut être une friandise occasionnelle, mais que sa teneur en graisses est souvent aussi élevée que celle des autres laits et que ses calories doivent être comptées dans la ration quotidienne."
+    "fr": "Les sources divergent ; nous retenons donc le niveau le plus strict. Cats Protection indique que le lait sans lactose et le lait pour chats ne contiennent pas de lactose, mais qu’ils sont très caloriques, ce qui pourrait faire grossir un chat, et qu’il vaut mieux ne donner aucun type de lait aux chats. PDSA explique que le lait pour chats peut être une friandise occasionnelle, mais que sa teneur en graisses est souvent aussi élevée que celle des autres laits et que ses calories doivent être comptées dans la ration quotidienne.",
+    "nb": "Kildene er uenige, så vi bruker det strengeste nivået. Cats Protection sier at laktosefri melk og kattemelk ikke inneholder laktose, men at de er kaloririke og kan få katten til å legge på seg, og at det er best å ikke gi katter noen type melk. PDSA sier at kattemelk kan være en godbit av og til, men at fettinnholdet ofte er like høyt som i annen melk, og at kaloriene må telles med i kattens daglige fôrmengde."
   },
   "signs": {
     "en": [
@@ -116,6 +121,9 @@
     ],
     "fr": [
       "Prise de poids avec le temps"
+    ],
+    "nb": [
+      "Vektøkning over tid"
     ]
   },
   "what_to_do": {
@@ -131,7 +139,8 @@
     "sv": "Erbjud färskt vatten i stället. Om du någon gång ger kattmjölk som en sällsynt godbit, tänk på de extra kalorierna, men minska inte kattens kompletta mat för den, eftersom katten då kan få i sig mindre av de livsviktiga vitaminerna och näringsämnena.",
     "da": "Tilbyd friskt vand i stedet. Hvis du en gang imellem giver kattemælk som en sjælden godbid, så husk de ekstra kalorier, men skær ikke ned på kattens komplette foder for den, for så kan katten få færre livsvigtige vitaminer og næringsstoffer.",
     "fi": "Tarjoa sen sijaan raikasta vettä. Jos annat joskus kissanmaitoa harvinaisena herkkuna, muista sen lisäkalorit, mutta älä vähennä kissan täysravinnon määrää sen takia, sillä kissa voisi silloin saada liian vähän tärkeitä vitamiineja ja ravintoaineita.",
-    "fr": "Proposez plutôt de l’eau fraîche. Si vous donnez éventuellement du lait pour chats en friandise rare, tenez compte de ses calories, mais ne réduisez pas pour autant la ration d’aliment complet de votre chat : il risquerait de manquer de vitamines et de nutriments essentiels."
+    "fr": "Proposez plutôt de l’eau fraîche. Si vous donnez éventuellement du lait pour chats en friandise rare, tenez compte de ses calories, mais ne réduisez pas pour autant la ration d’aliment complet de votre chat : il risquerait de manquer de vitamines et de nutriments essentiels.",
+    "nb": "Gi friskt vann i stedet. Hvis du av og til gir kattemelk som en sjelden godbit, må du huske at den gir ekstra kalorier. Ikke kutt ned på kattens fullfôr for å gjøre plass til den, for da kan katten få i seg færre av de livsviktige vitaminene og næringsstoffene."
   },
   "serving": null,
   "child": {
@@ -147,7 +156,8 @@
     "sv": "Även särskild kattmjölk är bara en godbit. Drycken som håller katten frisk varje dag är färskt vatten.",
     "da": "Selv særlig kattemælk er kun en godbid. Den drik, der holder katten sund hver dag, er friskt vand.",
     "fi": "Erikoiskissanmaitokin on vain herkku. Kisun terveenä pitää joka päivä raikas vesi.",
-    "fr": "Même le lait spécial pour chats n’est qu’une friandise. La boisson qui garde ton chat en bonne santé tous les jours, c’est l’eau fraîche."
+    "fr": "Même le lait spécial pour chats n’est qu’une friandise. La boisson qui garde ton chat en bonne santé tous les jours, c’est l’eau fraîche.",
+    "nb": "Selv spesiell kattemelk er bare en godbit. Det som holder pusen frisk hver dag, er friskt vann."
   },
   "faq": [
     {
@@ -164,7 +174,8 @@
         "sv": "Är kattmjölk från djuraffären bättre än komjölk?",
         "da": "Er kattemælk fra dyrebutikken bedre end komælk?",
         "fi": "Onko lemmikkikaupan kissanmaito parempaa kuin lehmänmaito?",
-        "fr": "Le lait pour chats vendu en animalerie est-il meilleur que le lait de vache ?"
+        "fr": "Le lait pour chats vendu en animalerie est-il meilleur que le lait de vache ?",
+        "nb": "Er kattemelk fra dyrebutikken bedre enn kumelk?"
       },
       "a": {
         "en": "It usually has a lot less lactose or none, so it is less likely to make your cat poorly. But its fat content is often just as high as any other milk, and it is not a complete meal.",
@@ -179,7 +190,8 @@
         "sv": "Den innehåller oftast mycket mindre laktos eller ingen alls, så den ger mer sällan magbesvär hos katten. Men fetthalten är ofta lika hög som i annan mjölk, och den är ingen komplett måltid.",
         "da": "Den indeholder som regel meget mindre laktose eller slet ingen, så der er mindre risiko for, at din kat bliver dårlig af den. Men fedtindholdet er ofte lige så højt som i anden mælk, og den er ikke et komplet måltid.",
         "fi": "Siinä on yleensä paljon vähemmän laktoosia tai ei lainkaan, joten se sotkee kissan vatsan epätodennäköisemmin. Sen rasvapitoisuus on kuitenkin usein yhtä suuri kuin muissa maidoissa, eikä se ole täysipainoinen ateria.",
-        "fr": "Il contient généralement beaucoup moins de lactose, voire pas du tout, et risque donc moins de rendre votre chat malade. Mais sa teneur en graisses est souvent aussi élevée que celle de n’importe quel autre lait, et ce n’est pas un repas complet."
+        "fr": "Il contient généralement beaucoup moins de lactose, voire pas du tout, et risque donc moins de rendre votre chat malade. Mais sa teneur en graisses est souvent aussi élevée que celle de n’importe quel autre lait, et ce n’est pas un repas complet.",
+        "nb": "Den har vanligvis mye mindre laktose eller ingen, så katten får sjeldnere vondt i magen av den. Men fettinnholdet er ofte like høyt som i annen melk, og den er ikke et komplett måltid."
       }
     }
   ],
@@ -310,6 +322,11 @@
       "status": "verified",
       "verified_by": "claude-c-fr-2026-11-16",
       "verified_hash": "cc3a4587d03cc1ff9b5a8d5351bb106b24d7544964a5ff34c445efd67b6d6932"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dd93d953c38855c6c697bb307035229b6ca932d2fa9f86842ca886522062aebb"
     }
   }
 }

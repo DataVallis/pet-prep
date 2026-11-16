@@ -14,7 +14,8 @@
     "sv": "Solrosfrön",
     "da": "Solsikkekerner",
     "fi": "Auringonkukansiemenet",
-    "fr": "Graines de tournesol"
+    "fr": "Graines de tournesol",
+    "nb": "Solsikkefrø"
   },
   "question": {
     "en": "Can dogs eat sunflower seeds?",
@@ -29,7 +30,8 @@
     "sv": "Får hundar äta solrosfrön?",
     "da": "Må hunde spise solsikkekerner?",
     "fi": "Saako koira syödä auringonkukansiemeniä?",
-    "fr": "Les chiens peuvent-ils manger des graines de tournesol ?"
+    "fr": "Les chiens peuvent-ils manger des graines de tournesol ?",
+    "nb": "Kan hunder spise solsikkefrø?"
   },
   "url_slug": {
     "en": "sunflower-seeds",
@@ -44,7 +46,8 @@
     "sv": "solrosfron",
     "da": "solsikkekerner",
     "fi": "auringonkukansiemenet",
-    "fr": "graines-de-tournesol"
+    "fr": "graines-de-tournesol",
+    "nb": "solsikkefro"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "sv": "Ja, som ett mellanmål då och då, om de är skalade och osaltade. Ge bara okryddade råa eller rostade solrosfrön, aldrig skalen – de kan orsaka kvävning och går inte att smälta. För många frön kan ge hunden en orolig mage.",
     "da": "Ja, som en lille snack en gang imellem, hvis de er uden skal og usaltede. Giv kun naturelle rå eller ristede solsikkekerner, aldrig skallerne, som kan sætte sig fast i halsen og ikke kan fordøjes. For mange kerner kan give din hund ondt i maven.",
     "fi": "Saa, silloin tällöin välipalana, jos ne on kuorittu eikä niissä ole suolaa. Anna vain maustamattomia raakoja tai paahdettuja auringonkukansiemeniä äläkä koskaan kuoria, jotka ovat tukehtumisvaara eivätkä sula. Liian monta siementä voi sotkea koiran vatsan.",
-    "fr": "Oui, de temps en temps, à condition qu’elles soient décortiquées et non salées. Ne donnez que des graines de tournesol nature, crues ou grillées, jamais les coques : elles présentent un risque d’étouffement et ne se digèrent pas. Trop de graines peuvent donner mal au ventre à votre chien."
+    "fr": "Oui, de temps en temps, à condition qu’elles soient décortiquées et non salées. Ne donnez que des graines de tournesol nature, crues ou grillées, jamais les coques : elles présentent un risque d’étouffement et ne se digèrent pas. Trop de graines peuvent donner mal au ventre à votre chien.",
+    "nb": "Ja, som en snack av og til, hvis de er skallede og usaltede. Gi bare naturlige, rå eller ristede solsikkefrø, aldri skallene, som er en kvelningsfare og ikke kan fordøyes. For mange frø kan gi hunden urolig mage."
   },
   "why": {
     "en": "The husks are extremely hard, can't be broken down during digestion and can get stuck in the gut, causing a blockage. The salt in packaged seeds is harmful to dogs. Sunflower seeds are also high in fat, and too many can bring on vomiting, lethargy, a decreased appetite or other stomach upset.",
@@ -75,7 +79,8 @@
     "sv": "Skalen är extremt hårda, bryts inte ned i matsmältningen och kan fastna i tarmen och orsaka tarmstopp. Saltet i förpackade frön är skadligt för hundar. Solrosfrön innehåller också mycket fett, och för många frön kan ge kräkningar, slöhet, minskad aptit eller andra magbesvär.",
     "da": "Skallerne er ekstremt hårde, nedbrydes ikke under fordøjelsen og kan sætte sig fast i tarmen og give tarmblokering. Saltet i pakkede kerner er skadeligt for hunde. Solsikkekerner indeholder også meget fedt, og for mange kan give opkast, sløvhed, nedsat appetit eller andre maveproblemer.",
     "fi": "Kuoret ovat erittäin kovia, eivät sula ruoansulatuksessa ja voivat juuttua suolistoon ja aiheuttaa suolitukoksen. Pakattujen siementen suola on koirille haitallista. Auringonkukansiemenissä on myös paljon rasvaa, ja liian suuri määrä voi aiheuttaa oksentelua, väsymystä, ruokahaluttomuutta tai muita vatsavaivoja.",
-    "fr": "Les coques sont extrêmement dures, ne se décomposent pas à la digestion et peuvent se coincer dans l’intestin jusqu’à provoquer une occlusion. Le sel des graines vendues en sachet est nocif pour les chiens. Les graines de tournesol sont en outre très riches en graisses : en excès, elles peuvent entraîner des vomissements, de la léthargie, une baisse d’appétit ou d’autres troubles digestifs."
+    "fr": "Les coques sont extrêmement dures, ne se décomposent pas à la digestion et peuvent se coincer dans l’intestin jusqu’à provoquer une occlusion. Le sel des graines vendues en sachet est nocif pour les chiens. Les graines de tournesol sont en outre très riches en graisses : en excès, elles peuvent entraîner des vomissements, de la léthargie, une baisse d’appétit ou d’autres troubles digestifs.",
+    "nb": "Skallene er ekstremt harde, brytes ikke ned i fordøyelsen og kan sette seg fast i tarmen og gi tarmblokkering. Salt i ferdigpakkede frø er skadelig for hunder. Solsikkefrø er også rike på fett, og hvis hunden får i seg for mange, kan det gi oppkast, sløvhet, nedsatt matlyst eller annen urolig mage."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "sv": "Ge bara skalade, osaltade frön och prata med veterinären innan du lägger till solrosfrön i hundens kost.",
     "da": "Giv kun kerner uden skal og uden salt, og tal med din dyrlæge, før du tilføjer solsikkekerner til din hunds kost.",
     "fi": "Anna vain kuorittuja, suolattomia siemeniä ja puhu eläinlääkärin kanssa, ennen kuin lisäät auringonkukansiemeniä koirasi ruokavalioon.",
-    "fr": "Ne donnez que des graines décortiquées et non salées, et parlez-en à votre vétérinaire avant d’ajouter des graines de tournesol à l’alimentation de votre chien."
+    "fr": "Ne donnez que des graines décortiquées et non salées, et parlez-en à votre vétérinaire avant d’ajouter des graines de tournesol à l’alimentation de votre chien.",
+    "nb": "Gi bare skallede, usaltede frø, og snakk med dyrlegen før du tar solsikkefrø med i hundens kosthold."
   },
   "serving": {
     "en": "Shelled, plain (unsalted) raw or toasted seeds, now and then in moderate amounts.",
@@ -106,7 +112,8 @@
     "sv": "Skalade, osaltade och okryddade, råa eller rostade frön, då och då och i måttliga mängder.",
     "da": "Naturelle rå eller ristede kerner uden skal og uden salt, en gang imellem og i moderate mængder.",
     "fi": "Kuorittuja, maustamattomia (suolattomia) raakoja tai paahdettuja siemeniä silloin tällöin ja kohtuullisina määrinä.",
-    "fr": "Graines décortiquées, nature (non salées), crues ou grillées, de temps en temps et en quantité modérée."
+    "fr": "Graines décortiquées, nature (non salées), crues ou grillées, de temps en temps et en quantité modérée.",
+    "nb": "Skallede, naturlige (usaltede) frø, rå eller ristede, nå og da og i moderate mengder."
   },
   "child": {
     "en": "Dogs can nibble a few plain sunflower seeds without shells, but never the salty ones from a snack bag.",
@@ -121,7 +128,8 @@
     "sv": "Hundar kan få knapra på några osaltade solrosfrön utan skal, men aldrig de salta från en snackspåse.",
     "da": "Hunde kan knase et par naturelle solsikkekerner uden skal, men aldrig de salte fra en snackpose.",
     "fi": "Koira voi nakertaa muutaman maustamattoman kuoritun auringonkukansiemenen, mutta ei koskaan suolaisia siemeniä, joita on välipalapusseissa.",
-    "fr": "Les chiens peuvent grignoter quelques graines de tournesol nature, sans coque, mais jamais celles d’un sachet d’apéritif, qui sont salées."
+    "fr": "Les chiens peuvent grignoter quelques graines de tournesol nature, sans coque, mais jamais celles d’un sachet d’apéritif, qui sont salées.",
+    "nb": "Hunder kan knaske på noen få naturlige solsikkefrø uten skall, men aldri de salte fra en snackpose."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "sv": "Får hundar äta skalen från solrosfrön?",
         "da": "Må hunde spise skallerne fra solsikkekerner?",
         "fi": "Saako koira syödä auringonkukansiementen kuoria?",
-        "fr": "Les chiens peuvent-ils manger les coques de graines de tournesol ?"
+        "fr": "Les chiens peuvent-ils manger les coques de graines de tournesol ?",
+        "nb": "Kan hunder spise skall fra solsikkefrø?"
       },
       "a": {
         "en": "No. The shells are extremely hard, can't be digested, are a serious choking hazard and can cause a blockage in the gut.",
@@ -153,7 +162,8 @@
         "sv": "Nej. Skalen är extremt hårda och går inte att smälta. De är en allvarlig kvävningsrisk och kan orsaka tarmstopp.",
         "da": "Nej. Skallerne er ekstremt hårde og kan ikke fordøjes. Der er alvorlig fare for, at de sætter sig fast i halsen, og de kan give tarmblokering.",
         "fi": "Ei saa. Kuoret ovat erittäin kovia, eivät sula, ovat vakava tukehtumisvaara ja voivat aiheuttaa suolitukoksen.",
-        "fr": "Non. Les coques sont extrêmement dures, ne se digèrent pas, présentent un sérieux risque d’étouffement et peuvent provoquer une occlusion de l’intestin."
+        "fr": "Non. Les coques sont extrêmement dures, ne se digèrent pas, présentent un sérieux risque d’étouffement et peuvent provoquer une occlusion de l’intestin.",
+        "nb": "Nei. Skallene er ekstremt harde, kan ikke fordøyes, er en alvorlig kvelningsfare og kan gi tarmblokkering."
       }
     }
   ],
@@ -273,6 +283,11 @@
       "status": "verified",
       "verified_by": "claude-c-fr-2026-11-16",
       "verified_hash": "d943ec827f7fa6a76cb792c0de11fc2f7c0885e8c1df4f387a1aa2c7a9947dd5"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "de28f03f787a89134d2b0475c3f0e780cdcfa3b7749a00fbc021f79378a47769"
     }
   }
 }

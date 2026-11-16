@@ -14,7 +14,8 @@
     "sv": "Vatten",
     "da": "Vand",
     "fi": "Vesi",
-    "fr": "Eau"
+    "fr": "Eau",
+    "nb": "Vann"
   },
   "question": {
     "en": "Do dogs need fresh water all the time?",
@@ -29,7 +30,8 @@
     "sv": "Behöver hundar färskt vatten hela tiden?",
     "da": "Har hunde brug for frisk vand hele tiden?",
     "fi": "Tarvitseeko koira raikasta vettä koko ajan?",
-    "fr": "Les chiens ont-ils besoin d’eau fraîche en permanence ?"
+    "fr": "Les chiens ont-ils besoin d’eau fraîche en permanence ?",
+    "nb": "Trenger hunder friskt vann hele tiden?"
   },
   "url_slug": {
     "en": "water",
@@ -44,7 +46,8 @@
     "sv": "vatten",
     "da": "vand",
     "fi": "vesi",
-    "fr": "eau"
+    "fr": "eau",
+    "nb": "vann"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "sv": "Ja. Hundar ska ha tillgång till färskt, rent dricksvatten hela tiden. Diska vattenskålen ofta och kom ihåg att hundar kan behöva mer vatten när det är varmt eller när de får mer motion. Begränsa aldrig hundens vatten.",
     "da": "Ja. Hunde skal have friskt, rent drikkevand til rådighed hele tiden. Vask vandskålen ofte, og husk, at hunde kan have brug for mere vand i varmt vejr, eller når de motionerer mere. Begræns aldrig din hunds adgang til vand.",
     "fi": "Kyllä. Koiralla pitää olla koko ajan saatavilla raikasta, puhdasta juomavettä. Pese vesikuppi usein ja muista, että koira voi tarvita enemmän vettä helteellä tai kun se liikkuu tavallista enemmän. Älä koskaan rajoita koiran veden saantia.",
-    "fr": "Oui. Un chien doit avoir de l’eau potable, fraîche et propre, à sa disposition à tout moment. Lavez souvent la gamelle d’eau et gardez à l’esprit que votre chien peut avoir besoin de boire davantage par temps chaud ou lorsqu’il se dépense plus. Ne limitez jamais l’eau de votre chien."
+    "fr": "Oui. Un chien doit avoir de l’eau potable, fraîche et propre, à sa disposition à tout moment. Lavez souvent la gamelle d’eau et gardez à l’esprit que votre chien peut avoir besoin de boire davantage par temps chaud ou lorsqu’il se dépense plus. Ne limitez jamais l’eau de votre chien.",
+    "nb": "Ja. Hunder skal alltid ha tilgang til friskt, rent drikkevann. Vask vannskålen ofte, og husk at hunder kan trenge mer vann i varmt vær eller når de er mer aktive. Begrens aldri hundens tilgang til vann."
   },
   "why": {
     "en": "Water is essential for all life. How much a dog drinks can change with the weather, temperature and exercise. A sudden increase in drinking can mean something is wrong. Salt water is different: when dogs drink salt water, it can be dangerous for them.",
@@ -75,7 +79,8 @@
     "sv": "Vatten är livsnödvändigt för alla levande varelser. Hur mycket en hund dricker kan variera med väder, temperatur och motion. Om hunden plötsligt dricker mer kan det tyda på att något är fel. Saltvatten är en annan sak: det kan vara farligt för hundar att dricka.",
     "da": "Vand er livsnødvendigt for alt levende. Hvor meget en hund drikker, kan ændre sig med vejret, temperaturen og motion. Hvis din hund pludselig drikker meget mere, kan det være tegn på, at der er noget galt. Saltvand er noget andet: når hunde drikker saltvand, kan det være farligt for dem.",
     "fi": "Vesi on välttämätöntä kaikelle elämälle. Koiran juoman veden määrä vaihtelee sään, lämpötilan ja liikunnan mukaan. Äkillinen juomisen lisääntyminen voi kieliä siitä, että jokin on vialla. Suolavesi on asia erikseen: jos koira juo suolavettä, se voi olla sille vaarallista.",
-    "fr": "L’eau est essentielle à toute forme de vie. La quantité que boit un chien peut varier selon la météo, la température et l’effort physique. Une augmentation soudaine de la soif peut indiquer un problème. L’eau salée, en revanche, peut être dangereuse pour un chien qui en boit."
+    "fr": "L’eau est essentielle à toute forme de vie. La quantité que boit un chien peut varier selon la météo, la température et l’effort physique. Une augmentation soudaine de la soif peut indiquer un problème. L’eau salée, en revanche, peut être dangereuse pour un chien qui en boit.",
+    "nb": "Alt liv trenger vann. Hvor mye en hund drikker, kan variere med været, temperaturen og aktivitetsnivået. Hvis hunden plutselig drikker mer enn vanlig, kan det bety at noe er galt. Saltvann er noe helt annet: Det kan være farlig for hunder å drikke."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "sv": "Om du tror att hunden dricker eller kissar mer än vanligt, kontakta veterinären. Om hunden visar tecken på uttorkning, åk till veterinären direkt.",
     "da": "Hvis du tror, at din hund drikker eller tisser mere end normalt, så kontakt din dyrlæge. Hvis din hund viser tegn på dehydrering, skal du straks tage den med til dyrlægen.",
     "fi": "Jos koirasi juo tai pissaa mielestäsi tavallista enemmän, ota yhteyttä eläinlääkäriin. Jos koirallasi on nestehukan merkkejä, vie se heti eläinlääkäriin.",
-    "fr": "Si vous pensez que votre chien boit ou urine plus que d’habitude, contactez votre vétérinaire. Si votre chien présente des signes de déshydratation, emmenez-le immédiatement chez le vétérinaire."
+    "fr": "Si vous pensez que votre chien boit ou urine plus que d’habitude, contactez votre vétérinaire. Si votre chien présente des signes de déshydratation, emmenez-le immédiatement chez le vétérinaire.",
+    "nb": "Hvis du tror at hunden drikker eller tisser mer enn vanlig, bør du kontakte dyrlegen. Hvis hunden viser tegn på dehydrering, må du ta den med til dyrlegen med en gang."
   },
   "serving": {
     "en": "Fresh, clean water in a frequently washed bowl, available all the time, including outdoors, in hot weather and at the beach.",
@@ -106,7 +112,8 @@
     "sv": "Färskt, rent vatten i en skål som diskas ofta, alltid tillgängligt – även utomhus, när det är varmt och på stranden.",
     "da": "Friskt, rent vand i en ofte vasket skål, tilgængeligt hele tiden, også udendørs, i varmt vejr og på stranden.",
     "fi": "Raikasta, puhdasta vettä usein pestyssä kupissa, koko ajan saatavilla – myös ulkona, helteellä ja rannalla.",
-    "fr": "De l’eau fraîche et propre dans une gamelle lavée fréquemment, à disposition en permanence, y compris à l’extérieur, par temps chaud et à la plage."
+    "fr": "De l’eau fraîche et propre dans une gamelle lavée fréquemment, à disposition en permanence, y compris à l’extérieur, par temps chaud et à la plage.",
+    "nb": "Friskt, rent vann i en skål som vaskes ofte og alltid er tilgjengelig, også ute, i varmt vær og på stranden."
   },
   "child": {
     "en": "Dogs need fresh water all day long. Checking that the water bowl is full and clean is a great way to help!",
@@ -121,7 +128,8 @@
     "sv": "Hundar behöver färskt vatten hela dagen. Att kolla att vattenskålen är full och ren är ett bra sätt att hjälpa till!",
     "da": "Hunde har brug for friskt vand hele dagen. At tjekke, at vandskålen er fuld og ren, er en god måde at hjælpe på!",
     "fi": "Koirat tarvitsevat raikasta vettä koko päivän. Autat paljon, kun tarkistat, että vesikuppi on täynnä ja puhdas!",
-    "fr": "Les chiens ont besoin d’eau fraîche toute la journée. Tu peux aider en vérifiant que la gamelle d’eau est pleine et propre !"
+    "fr": "Les chiens ont besoin d’eau fraîche toute la journée. Tu peux aider en vérifiant que la gamelle d’eau est pleine et propre !",
+    "nb": "Hunder trenger friskt vann hele dagen. Å sjekke at vannskålen er full og ren, er en fin måte å hjelpe til på!"
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "sv": "Hur ser jag om min hund är uttorkad?",
         "da": "Hvordan kan jeg se, om min hund er dehydreret?",
         "fi": "Mistä tiedän, onko koirani kuivunut?",
-        "fr": "Comment savoir si mon chien est déshydraté ?"
+        "fr": "Comment savoir si mon chien est déshydraté ?",
+        "nb": "Hvordan ser jeg om hunden er dehydrert?"
       },
       "a": {
         "en": "Signs include loss of skin elasticity, loss of appetite, low energy, panting, sunken dry-looking eyes, a dry nose, dry sticky gums and thick saliva. Take your dog to the vet immediately if you see them.",
@@ -153,7 +162,8 @@
         "sv": "Tecken på uttorkning är sämre hudelasticitet, minskad aptit, orkeslöshet, flåsande, insjunkna och torra ögon, torr nos, torrt och kladdigt tandkött och seg saliv. Åk till veterinären direkt om du ser några av tecknen.",
         "da": "Tegn kan være nedsat hudelasticitet, nedsat appetit, mangel på energi, pesen, indsunkne og tørre øjne, tør snude, tørt og klistret tandkød og sejt spyt. Tag straks din hund med til dyrlægen, hvis du ser nogle af tegnene.",
         "fi": "Merkkejä ovat ihon joustavuuden heikkeneminen, ruokahaluttomuus, vähäinen tarmo, läähätys, painuneet ja kuivan näköiset silmät, kuiva nenä, kuivat ja tahmeat ikenet sekä sitkeä sylki. Jos huomaat näitä merkkejä, vie koirasi heti eläinlääkäriin.",
-        "fr": "Parmi les signes : une peau qui perd de son élasticité, une perte d’appétit, un manque d’énergie, des halètements, des yeux creusés et ternes, une truffe sèche, des gencives sèches et collantes et une salive épaisse. Emmenez votre chien immédiatement chez le vétérinaire si vous les remarquez."
+        "fr": "Parmi les signes : une peau qui perd de son élasticité, une perte d’appétit, un manque d’énergie, des halètements, des yeux creusés et ternes, une truffe sèche, des gencives sèches et collantes et une salive épaisse. Emmenez votre chien immédiatement chez le vétérinaire si vous les remarquez.",
+        "nb": "Tegn kan være at huden mister spenst, at hunden har nedsatt matlyst og lite energi, peser, har innsunkne og tørre øyne, tørr nese, tørt og klebrig tannkjøtt og tykt spytt. Ta med hunden til dyrlegen med en gang hvis du ser dem."
       }
     },
     {
@@ -170,7 +180,8 @@
         "sv": "Ska jag begränsa hundens vatten om den dricker mycket?",
         "da": "Skal jeg begrænse, hvor meget vand min hund får, hvis den drikker meget?",
         "fi": "Pitäisikö koiran veden saantia rajoittaa, jos se juo paljon?",
-        "fr": "Dois-je limiter l’eau de mon chien s’il boit beaucoup ?"
+        "fr": "Dois-je limiter l’eau de mon chien s’il boit beaucoup ?",
+        "nb": "Bør jeg begrense vannet til hunden min hvis den drikker mye?"
       },
       "a": {
         "en": "No. Never restrict your dog's water; always let them have fresh drinking water, and contact your vet if they drink more than normal.",
@@ -185,7 +196,8 @@
         "sv": "Nej. Begränsa aldrig hundens vatten. Låt den alltid ha färskt dricksvatten och kontakta veterinären om den dricker mer än vanligt.",
         "da": "Nej. Begræns aldrig din hunds adgang til vand; lad den altid have friskt drikkevand, og kontakt din dyrlæge, hvis den drikker mere end normalt.",
         "fi": "Ei. Älä koskaan rajoita koiran veden saantia. Anna sen aina juoda raikasta vettä ja ota yhteyttä eläinlääkäriin, jos se juo tavallista enemmän.",
-        "fr": "Non. Ne limitez jamais l’eau de votre chien : donnez-lui toujours de l’eau potable fraîche, et contactez votre vétérinaire s’il boit plus que d’habitude."
+        "fr": "Non. Ne limitez jamais l’eau de votre chien : donnez-lui toujours de l’eau potable fraîche, et contactez votre vétérinaire s’il boit plus que d’habitude.",
+        "nb": "Nei. Begrens aldri hundens vann; la den alltid ha friskt drikkevann, og kontakt dyrlegen hvis den drikker mer enn vanlig."
       }
     },
     {
@@ -202,7 +214,8 @@
         "sv": "Får hundar dricka havsvatten?",
         "da": "Må hunde drikke havvand?",
         "fi": "Saako koira juoda merivettä?",
-        "fr": "Les chiens peuvent-ils boire de l’eau de mer ?"
+        "fr": "Les chiens peuvent-ils boire de l’eau de mer ?",
+        "nb": "Kan hunder drikke sjøvann?"
       },
       "a": {
         "en": "It's best not to: salt water can be dangerous for dogs. At the beach, make sure your dog always has access to fresh water.",
@@ -217,7 +230,8 @@
         "sv": "Helst inte. Saltvatten kan vara farligt för hundar. Se till att hunden alltid har tillgång till färskt vatten på stranden.",
         "da": "Helst ikke: saltvand kan være farligt for hunde. På stranden skal du sørge for, at din hund altid har adgang til friskt vand.",
         "fi": "Parempi ei, sillä suolavesi voi olla koiralle vaarallista. Huolehdi rannalla siitä, että koirallasi on aina saatavilla raikasta vettä.",
-        "fr": "Mieux vaut l’éviter : l’eau salée peut être dangereuse pour les chiens. À la plage, veillez à ce que votre chien ait toujours accès à de l’eau fraîche."
+        "fr": "Mieux vaut l’éviter : l’eau salée peut être dangereuse pour les chiens. À la plage, veillez à ce que votre chien ait toujours accès à de l’eau fraîche.",
+        "nb": "Helst ikke: Saltvann kan være farlig for hunder. Sørg for at hunden alltid har tilgang til ferskvann når dere er på stranden."
       }
     }
   ],
@@ -382,6 +396,11 @@
       "status": "verified",
       "verified_by": "claude-c-fr-2026-11-16",
       "verified_hash": "d8b1c6799dc0c78e1143fd46fb41f9263d22a456f64a08094c263a1e6a7d31e7"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "de55b39152ba3593b50bddec2a3f521d2c7fcf3f1d1aad6e81b1fc8669791429"
     }
   }
 }
