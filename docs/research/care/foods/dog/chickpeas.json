@@ -13,7 +13,8 @@
     "hr": "Slanutak",
     "sv": "Kikärtor",
     "da": "Kikærter",
-    "fi": "Kikherneet"
+    "fi": "Kikherneet",
+    "fr": "Pois chiches"
   },
   "question": {
     "en": "Can dogs eat chickpeas?",
@@ -27,7 +28,8 @@
     "hr": "Smiju li psi jesti slanutak?",
     "sv": "Får hundar äta kikärtor?",
     "da": "Må hunde spise kikærter?",
-    "fi": "Saako koira syödä kikherneitä?"
+    "fi": "Saako koira syödä kikherneitä?",
+    "fr": "Les chiens peuvent-ils manger des pois chiches ?"
   },
   "url_slug": {
     "en": "chickpeas",
@@ -41,7 +43,8 @@
     "hr": "slanutak",
     "sv": "kikartor",
     "da": "kikaerter",
-    "fi": "kikherneet"
+    "fi": "kikherneet",
+    "fr": "pois-chiches"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "hr": "Da, umjereno, ako je temeljito kuhan. Svježe kuhan slanutak može biti poslastica za pse. Suh slanutak može izazvati gušenje, konzervirani je obično slan, a humus nije siguran za pse.",
     "sv": "Ja, i måttliga mängder, om de är ordentligt kokta. Nykokta kikärtor kan vara en godbit för hundar. Torra kikärtor kan orsaka kvävning, kikärtor på burk är oftast salta och hummus är inte ofarligt för hundar.",
     "da": "Ja, i moderate mængder, hvis de er grundigt tilberedt. Nytilberedte kikærter kan være en godbid til hunde. Tørre kikærter kan sætte sig fast i halsen, kikærter på dåse er som regel salte, og hummus er ikke sikker for hunde.",
-    "fi": "Saa, kohtuudella, jos ne on keitetty kunnolla. Vastakeitetyt kikherneet voivat olla koiralle herkku. Kuivat kikherneet ovat tukehtumisvaara, säilykekikherneet ovat yleensä suolaisia, eikä humus ole koiralle turvallista."
+    "fi": "Saa, kohtuudella, jos ne on keitetty kunnolla. Vastakeitetyt kikherneet voivat olla koiralle herkku. Kuivat kikherneet ovat tukehtumisvaara, säilykekikherneet ovat yleensä suolaisia, eikä humus ole koiralle turvallista.",
+    "fr": "Oui, avec modération, s’ils sont bien cuits. Les pois chiches fraîchement cuits peuvent être une friandise pour les chiens. Les pois chiches secs présentent un risque d’étouffement, ceux en conserve sont généralement salés, et le houmous n’est pas sans danger pour les chiens."
   },
   "why": {
     "en": "Chickpeas are legumes, a good source of fibre and protein for dogs, but some dogs have trouble digesting them, so they should be cooked well and introduced slowly. Dry chickpeas are much harder to digest. Canned chickpeas usually contain a lot of sodium, which is not healthy for dogs. Like other beans, chickpeas may give your dog some gas.",
@@ -70,7 +74,8 @@
     "hr": "Slanutak je mahunarka, dobar izvor vlakana i bjelančevina za pse, ali neki ga psi teško probavljaju, pa ga treba dobro skuhati i uvoditi postupno. Suh slanutak mnogo je teže probavljiv. Konzerviran slanutak obično sadrži mnogo natrija, što nije zdravo za pse. Kao i grah, slanutak može izazvati plinove kod psa.",
     "sv": "Kikärtor är baljväxter och en bra källa till fibrer och protein för hundar, men vissa hundar har svårt att smälta dem, så de ska kokas ordentligt och införas långsamt. Torra kikärtor är mycket svårare att smälta. Kikärtor på burk innehåller oftast mycket natrium, vilket inte är nyttigt för hundar. Precis som andra bönor kan kikärtor ge hunden lite gaser.",
     "da": "Kikærter er bælgfrugter og en god kilde til fibre og protein for hunde, men nogle hunde har svært ved at fordøje dem, så de skal tilberedes grundigt og indføres langsomt. Tørre kikærter er meget sværere at fordøje. Kikærter på dåse indeholder som regel meget natrium, hvilket ikke er sundt for hunde. Som andre bønner kan kikærter give din hund lidt luft i maven.",
-    "fi": "Kikherneet ovat palkokasveja ja hyvä kuidun ja proteiinin lähde koirille, mutta osan koirien on vaikea sulattaa niitä, joten ne on keitettävä hyvin ja otettava ruokavalioon vähitellen. Kuivat kikherneet ovat paljon vaikeammin sulavia. Säilykekikherneissä on yleensä paljon natriumia, mikä ei ole koirille terveellistä. Kuten muut pavut, kikherneet voivat aiheuttaa koiralle ilmavaivoja."
+    "fi": "Kikherneet ovat palkokasveja ja hyvä kuidun ja proteiinin lähde koirille, mutta osan koirien on vaikea sulattaa niitä, joten ne on keitettävä hyvin ja otettava ruokavalioon vähitellen. Kuivat kikherneet ovat paljon vaikeammin sulavia. Säilykekikherneissä on yleensä paljon natriumia, mikä ei ole koirille terveellistä. Kuten muut pavut, kikherneet voivat aiheuttaa koiralle ilmavaivoja.",
+    "fr": "Les pois chiches sont des légumineuses, une bonne source de fibres et de protéines pour les chiens, mais certains les digèrent mal : il faut donc bien les cuire et les introduire progressivement. Les pois chiches secs sont beaucoup plus difficiles à digérer. Ceux en conserve contiennent généralement beaucoup de sodium, ce qui n’est pas bon pour la santé des chiens. Comme les autres légumineuses, les pois chiches peuvent provoquer des gaz chez votre chien."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "hr": "Kuhan slanutak uvodi postupno. Ako koristiš konzerviran slanutak, odaberi onaj s malo natrija i dobro ga isperi kako bi se uklonilo što više soli.",
     "sv": "Inför kokta kikärtor långsamt. Om du använder kikärtor på burk, välj en natriumsnål sort och skölj dem noga för att få bort så mycket salt som möjligt.",
     "da": "Indfør tilberedte kikærter langsomt. Hvis du bruger kikærter på dåse, så vælg en variant med lavt natriumindhold, og skyl dem grundigt for at fjerne så meget salt som muligt.",
-    "fi": "Aloita keitetyillä kikherneillä vähitellen. Jos käytät säilykekikherneitä, valitse vähäsuolainen vaihtoehto ja huuhtele kikherneet hyvin, jotta mahdollisimman paljon suolaa lähtee pois."
+    "fi": "Aloita keitetyillä kikherneillä vähitellen. Jos käytät säilykekikherneitä, valitse vähäsuolainen vaihtoehto ja huuhtele kikherneet hyvin, jotta mahdollisimman paljon suolaa lähtee pois.",
+    "fr": "Introduisez progressivement les pois chiches cuits. Si vous utilisez des pois chiches en conserve, choisissez-les à faible teneur en sodium et rincez-les bien pour éliminer le plus de sel possible."
   },
   "serving": {
     "en": "Soaked and thoroughly cooked until soft, in moderation; canned only low-sodium and well rinsed.",
@@ -99,7 +105,8 @@
     "hr": "Namočen i temeljito kuhan do mekoće, u umjerenim količinama; konzerviran samo s malo natrija i dobro ispran.",
     "sv": "Blötlagda och kokta tills de är mjuka, i måttliga mängder; kikärtor på burk bara om de är natriumsnåla och noga sköljda.",
     "da": "Udblødte og grundigt tilberedte, til de er bløde, i moderate mængder; kikærter på dåse kun med lavt natriumindhold og grundigt skyllede.",
-    "fi": "Liotettuina ja keitettyinä kunnolla pehmeiksi, kohtuudella; säilykkeinä vain vähäsuolaisia ja hyvin huuhdeltuja."
+    "fi": "Liotettuina ja keitettyinä kunnolla pehmeiksi, kohtuudella; säilykkeinä vain vähäsuolaisia ja hyvin huuhdeltuja.",
+    "fr": "Trempés, puis cuits jusqu’à être tendres, avec modération ; en conserve, uniquement à faible teneur en sodium et bien rincés."
   },
   "child": {
     "en": "Soft, cooked chickpeas can be a little treat for dogs, but they might make your dog a bit windy!",
@@ -113,7 +120,8 @@
     "hr": "Mekan kuhani slanutak može biti mala poslastica za pse, ali psu može izazvati i malo vjetrova!",
     "sv": "Mjuka, kokta kikärtor kan vara en liten godbit för hundar, men din hund kan bli lite pruttig!",
     "da": "Bløde, kogte kikærter kan være en lille godbid til hunde, men din hund kan komme til at prutte lidt!",
-    "fi": "Pehmeät keitetyt kikherneet voivat olla koiralle pieni herkku, mutta koirasi voi alkaa niistä hieman pierrellä!"
+    "fi": "Pehmeät keitetyt kikherneet voivat olla koiralle pieni herkku, mutta koirasi voi alkaa niistä hieman pierrellä!",
+    "fr": "Les pois chiches cuits et bien tendres peuvent être une petite friandise pour les chiens, mais ils risquent de leur donner des gaz !"
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "hr": "Smiju li psi jesti humus?",
         "sv": "Får hundar äta hummus?",
         "da": "Må hunde spise hummus?",
-        "fi": "Saako koira syödä humusta?"
+        "fi": "Saako koira syödä humusta?",
+        "fr": "Les chiens peuvent-ils manger du houmous ?"
       },
       "a": {
         "en": "No. Hummus contains other ingredients that are not dog-friendly, including garlic, onion and spices.",
@@ -143,7 +152,8 @@
         "hr": "Ne. Humus sadrži druge sastojke koji nisu dobri za pse, uključujući češnjak, luk i začine.",
         "sv": "Nej. Hummus innehåller andra ingredienser som inte passar hundar, bland annat vitlök, lök och kryddor.",
         "da": "Nej. Hummus indeholder andre ingredienser, der ikke er hundevenlige, blandt andet hvidløg, løg og krydderier.",
-        "fi": "Ei saa. Humuksessa on muitakin ainesosia, jotka eivät sovi koirille, kuten valkosipulia, sipulia ja mausteita."
+        "fi": "Ei saa. Humuksessa on muitakin ainesosia, jotka eivät sovi koirille, kuten valkosipulia, sipulia ja mausteita.",
+        "fr": "Non. Le houmous contient d’autres ingrédients que les chiens ne supportent pas, notamment de l’ail, de l’oignon et des épices."
       }
     },
     {
@@ -159,7 +169,8 @@
         "hr": "Smiju li psi jesti suh slanutak?",
         "sv": "Får hundar äta torra kikärtor?",
         "da": "Må hunde spise tørre kikærter?",
-        "fi": "Saako koira syödä kuivia kikherneitä?"
+        "fi": "Saako koira syödä kuivia kikherneitä?",
+        "fr": "Les chiens peuvent-ils manger des pois chiches secs ?"
       },
       "a": {
         "en": "No. Dry chickpeas can be a choking hazard and are much harder for dogs to digest; cook them thoroughly first.",
@@ -173,7 +184,8 @@
         "hr": "Ne. Suh slanutak može izazvati gušenje, a psi ga mnogo teže probavljaju, zato ga prvo temeljito skuhaj.",
         "sv": "Nej. Torra kikärtor kan orsaka kvävning och är mycket svårare för hundar att smälta. Koka dem ordentligt först.",
         "da": "Nej. Tørre kikærter kan sætte sig fast i halsen og er meget sværere for hunde at fordøje; tilbered dem først grundigt.",
-        "fi": "Ei saa. Kuivat kikherneet voivat aiheuttaa tukehtumisvaaran ja ovat koiralle paljon vaikeammin sulavia. Keitä ne ensin kunnolla."
+        "fi": "Ei saa. Kuivat kikherneet voivat aiheuttaa tukehtumisvaaran ja ovat koiralle paljon vaikeammin sulavia. Keitä ne ensin kunnolla.",
+        "fr": "Non. Les pois chiches secs présentent un risque d’étouffement et sont beaucoup plus difficiles à digérer pour les chiens ; faites-les d’abord bien cuire."
       }
     }
   ],
@@ -294,6 +306,11 @@
       "status": "verified",
       "verified_by": "claude-c-fi-2026-11-16",
       "verified_hash": "1844b9e8f324f11540fd9bfb46df4db3b5d732a332f19f28002397361f268ee9"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-c-fr-2026-11-16",
+      "verified_hash": "5d9de45c24b40739162c11f7beda26f39442a3234eb0b122c102f8577010d0ea"
     }
   }
 }

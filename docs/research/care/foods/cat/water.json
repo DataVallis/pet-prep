@@ -13,7 +13,8 @@
     "hr": "Voda",
     "sv": "Vatten",
     "da": "Vand",
-    "fi": "Vesi"
+    "fi": "Vesi",
+    "fr": "Eau"
   },
   "question": {
     "en": "What should cats drink?",
@@ -27,7 +28,8 @@
     "hr": "Što bi mačke trebale piti?",
     "sv": "Vad ska katter dricka?",
     "da": "Hvad skal katte drikke?",
-    "fi": "Mitä kissan pitäisi juoda?"
+    "fi": "Mitä kissan pitäisi juoda?",
+    "fr": "Que doivent boire les chats ?"
   },
   "url_slug": {
     "en": "water",
@@ -41,7 +43,8 @@
     "hr": "voda",
     "sv": "vatten",
     "da": "vand",
-    "fi": "vesi"
+    "fi": "vesi",
+    "fr": "eau"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "hr": "Voda. Obična svježa voda najbolje je piće za odrasle mačke; mačka bi uvijek trebala imati pristup vodi i moći piti koliko želi. Mačkama ne treba nikakvo drugo piće.",
     "sv": "Vatten. Rent, färskt vatten är den bästa drycken för vuxna katter, och katten ska alltid ha tillgång till det och kunna dricka så mycket den vill. Något annat behöver katter inte dricka.",
     "da": "Vand. Almindeligt, friskt vand er den bedste drik til voksne katte, og din kat skal have det til rådighed hele tiden og kunne drikke så meget, den vil. Katte har ikke brug for andet at drikke.",
-    "fi": "Vettä. Tavallinen raikas vesi on aikuiselle kissalle paras juoma, ja sitä pitää olla koko ajan tarjolla niin paljon kuin kissa haluaa. Muuta juotavaa kissa ei tarvitse."
+    "fi": "Vettä. Tavallinen raikas vesi on aikuiselle kissalle paras juoma, ja sitä pitää olla koko ajan tarjolla niin paljon kuin kissa haluaa. Muuta juotavaa kissa ei tarvitse.",
+    "fr": "De l’eau. L’eau nature et fraîche est la meilleure boisson pour un chat adulte : il doit pouvoir en disposer à tout moment et boire autant qu’il le souhaite. Les chats n’ont besoin d’aucune autre boisson."
   },
   "why": {
     "en": "Water helps keep a cat's kidneys working and its organs in good order, and helping cats avoid becoming dehydrated is a very important part of keeping them healthy. Cats Protection and PDSA both say water is the only drink a cat needs.",
@@ -70,7 +74,8 @@
     "hr": "Voda pomaže bubrezima mačke da rade i održava njezine organe zdravima, a sprječavanje dehidracije vrlo je važan dio brige za mačje zdravlje. I Cats Protection i PDSA kažu da je voda jedino piće koje mački treba.",
     "sv": "Vatten hjälper njurarna att fungera och håller kattens organ i gott skick. Att förebygga uttorkning är en mycket viktig del av att hålla katter friska. Cats Protection och PDSA skriver båda att vatten är den enda dryck en katt behöver.",
     "da": "Vand hjælper nyrerne med at fungere og holder kattens organer i god stand. At hjælpe katte med at undgå dehydrering er en meget vigtig del af at holde dem sunde. Cats Protection og PDSA skriver begge, at vand er den eneste drik, en kat har brug for.",
-    "fi": "Vesi auttaa pitämään kissan munuaiset ja muut elimet kunnossa, ja nestehukan ehkäiseminen on tärkeä osa kissan terveydenhoitoa. Cats Protection ja PDSA toteavat molemmat, että vesi on ainoa juoma, jota kissa tarvitsee."
+    "fi": "Vesi auttaa pitämään kissan munuaiset ja muut elimet kunnossa, ja nestehukan ehkäiseminen on tärkeä osa kissan terveydenhoitoa. Cats Protection ja PDSA toteavat molemmat, että vesi on ainoa juoma, jota kissa tarvitsee.",
+    "fr": "L’eau aide les reins du chat et ses autres organes à bien fonctionner ; veiller à ce que le chat ne se déshydrate pas est essentiel pour le garder en bonne santé. Cats Protection et PDSA affirment tous deux que l’eau est la seule boisson dont un chat a besoin."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "hr": "Ako sumnjaš da je mačka dehidrirana, na primjer djeluje bezvoljno ili malaksalo, slabo jede ili ima suhe desni, bez odlaganja se obrati veterinaru.",
     "sv": "Om du är orolig för att katten är uttorkad, till exempel om den verkar slö eller svag, har dålig aptit eller torrt tandkött, kontakta veterinären snabbt.",
     "da": "Hvis du er bekymret for, at din kat er dehydreret, for eksempel fordi den virker sløv eller svag, har dårlig appetit eller tørt tandkød, så kontakt en dyrlæge hurtigst muligt.",
-    "fi": "Jos olet huolissasi kissasi nestehukasta, esimerkiksi jos kissa on veltto tai heikko, ruoka ei maistu tai ikenet ovat kuivat, ota pian yhteyttä eläinlääkäriin."
+    "fi": "Jos olet huolissasi kissasi nestehukasta, esimerkiksi jos kissa on veltto tai heikko, ruoka ei maistu tai ikenet ovat kuivat, ota pian yhteyttä eläinlääkäriin.",
+    "fr": "Si vous craignez que votre chat soit déshydraté, par exemple s’il semble apathique ou faible, mange peu ou a les gencives sèches, contactez rapidement votre vétérinaire."
   },
   "serving": {
     "en": "Keep fresh water where your cat can easily reach it and replace it at least once a day. Several bowls around the home, cleaned regularly and placed away from the food bowl, help, and some cats drink more from a water fountain.",
@@ -99,7 +105,8 @@
     "hr": "Svježu vodu drži na mjestu do kojeg mačka lako dolazi i mijenjaj je barem jednom dnevno. Pomaže ako je po kući postavljeno više redovito opranih zdjelica, podalje od zdjelice s hranom, a neke mačke više piju s fontane.",
     "sv": "Ha färskt vatten där katten lätt kommer åt det och byt det minst en gång om dagen. Flera vattenskålar runt om i hemmet hjälper, om de rengörs regelbundet och står en bit från matskålen. Vissa katter dricker också mer ur en vattenfontän.",
     "da": "Sørg for, at der er friskt vand, hvor din kat let kan nå det, og skift det mindst én gang om dagen. Flere skåle rundt omkring i hjemmet, som rengøres jævnligt og står et stykke fra madskålen, hjælper, og nogle katte drikker mere af en drikkefontæne.",
-    "fi": "Pidä raikasta vettä paikassa, johon kissa pääsee helposti, ja vaihda se vähintään kerran päivässä. Auttaa, jos kotona on useita vesikuppeja, jotka puhdistetaan säännöllisesti ja sijoitetaan kauas ruokakupista. Osa kissoista juo enemmän juomalähteestä."
+    "fi": "Pidä raikasta vettä paikassa, johon kissa pääsee helposti, ja vaihda se vähintään kerran päivässä. Auttaa, jos kotona on useita vesikuppeja, jotka puhdistetaan säännöllisesti ja sijoitetaan kauas ruokakupista. Osa kissoista juo enemmän juomalähteestä.",
+    "fr": "Placez de l’eau fraîche à un endroit facile d’accès pour votre chat et changez-la au moins une fois par jour. Plusieurs bols répartis dans la maison, nettoyés régulièrement et éloignés de la gamelle de nourriture, sont utiles, et certains chats boivent davantage à une fontaine à eau."
   },
   "child": {
     "en": "Fresh water is the best drink for a cat! You can help by checking that kitty's water bowl is clean and full.",
@@ -113,7 +120,8 @@
     "hr": "Svježa voda najbolje je piće za mačku! Možeš pomoći tako da provjeriš je li mačja zdjelica s vodom čista i puna.",
     "sv": "Färskt vatten är den bästa drycken för en katt! Du kan hjälpa till genom att kolla att kattens vattenskål är ren och full.",
     "da": "Friskt vand er den bedste drik til en kat! Du kan hjælpe ved at tjekke, at kattens vandskål er ren og fuld.",
-    "fi": "Raikas vesi on kissan paras juoma! Voit auttaa tarkistamalla, että kisun vesikuppi on puhdas ja täynnä."
+    "fi": "Raikas vesi on kissan paras juoma! Voit auttaa tarkistamalla, että kisun vesikuppi on puhdas ja täynnä.",
+    "fr": "L’eau fraîche est la meilleure boisson pour un chat ! Tu peux aider en vérifiant que son bol d’eau est propre et plein."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "hr": "Kako mogu pomoći mački da pije više?",
         "sv": "Hur kan jag få min katt att dricka mer?",
         "da": "Hvordan kan jeg få min kat til at drikke mere?",
-        "fi": "Miten saan kissani juomaan enemmän?"
+        "fi": "Miten saan kissani juomaan enemmän?",
+        "fr": "Comment inciter mon chat à boire davantage ?"
       },
       "a": {
         "en": "Put several clean water bowls around the home, away from the food bowl. Some cats drink more from a fountain, and wet food or water added to food also increases how much water they take in.",
@@ -143,7 +152,8 @@
         "hr": "Postavi nekoliko čistih zdjelica s vodom po kući, podalje od zdjelice s hranom. Neke mačke više piju s fontane, a mokra hrana ili voda dodana hrani također povećavaju unos vode.",
         "sv": "Sätt ut flera rena vattenskålar runt om i hemmet, en bit från matskålen. Vissa katter dricker mer ur en vattenfontän, och blötmat eller vatten i maten ökar också hur mycket vatten de får i sig.",
         "da": "Sæt flere rene vandskåle rundt omkring i hjemmet, et stykke fra madskålen. Nogle katte drikker mere af en drikkefontæne, og vådfoder eller vand i maden øger også, hvor meget vand de får i sig.",
-        "fi": "Laita kodin eri puolille useita puhtaita vesikuppeja, kauas ruokakupista. Osa kissoista juo enemmän juomalähteestä, ja myös märkäruoka tai ruokaan lisätty vesi lisää nesteen saantia."
+        "fi": "Laita kodin eri puolille useita puhtaita vesikuppeja, kauas ruokakupista. Osa kissoista juo enemmän juomalähteestä, ja myös märkäruoka tai ruokaan lisätty vesi lisää nesteen saantia.",
+        "fr": "Placez plusieurs bols d’eau propres dans la maison, à l’écart de la gamelle de nourriture. Certains chats boivent davantage à une fontaine, et les aliments humides ou l’eau ajoutée à la nourriture augmentent aussi l’apport en eau."
       }
     },
     {
@@ -159,7 +169,8 @@
         "hr": "Treba li mačkama i mlijeko?",
         "sv": "Behöver katter mjölk också?",
         "da": "Har katte også brug for mælk?",
-        "fi": "Tarvitsevatko kissat myös maitoa?"
+        "fi": "Tarvitsevatko kissat myös maitoa?",
+        "fr": "Les chats ont-ils aussi besoin de lait ?"
       },
       "a": {
         "en": "No. Cats Protection says the best thing for adult cats to drink is water and that they don't need anything else to stay healthy.",
@@ -173,7 +184,8 @@
         "hr": "Ne. Cats Protection kaže da je za odrasle mačke najbolje piće voda i da im ne treba ništa drugo da bi ostale zdrave.",
         "sv": "Nej. Cats Protection skriver att det bästa för vuxna katter att dricka är vatten och att de inte behöver något annat för att hålla sig friska.",
         "da": "Nej. Cats Protection skriver, at det bedste, voksne katte kan drikke, er vand, og at de ikke har brug for andet for at holde sig sunde.",
-        "fi": "Eivät. Cats Protectionin mukaan aikuiselle kissalle paras juoma on vesi, eivätkä kissat tarvitse terveenä pysyäkseen mitään muuta."
+        "fi": "Eivät. Cats Protectionin mukaan aikuiselle kissalle paras juoma on vesi, eivätkä kissat tarvitse terveenä pysyäkseen mitään muuta.",
+        "fr": "Non. Cats Protection indique que la meilleure boisson pour les chats adultes est l’eau et qu’ils n’ont besoin de rien d’autre pour rester en bonne santé."
       }
     }
   ],
@@ -308,6 +320,11 @@
       "status": "verified",
       "verified_by": "claude-c-fi-2026-11-16",
       "verified_hash": "500713924b12039f3d7de620bd12f2a1a9905205d6c26804bcc384794551efe0"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-c-fr-2026-11-16",
+      "verified_hash": "7947fa3a4bc50f11bd76139dfac2a294a62afb5fd5a470e743e2dd1eca36d389"
     }
   }
 }

@@ -13,7 +13,8 @@
     "hr": "Maslaci od orašastih plodova (badem, orah …)",
     "sv": "Nötsmör (mandel, valnöt …)",
     "da": "Nøddesmør (mandel, valnød …)",
-    "fi": "Pähkinävoit (manteli, saksanpähkinä …)"
+    "fi": "Pähkinävoit (manteli, saksanpähkinä …)",
+    "fr": "Purées de fruits à coque (amande, noix…)"
   },
   "question": {
     "en": "Can cats eat nut butters?",
@@ -27,7 +28,8 @@
     "hr": "Smiju li mačke jesti maslace od orašastih plodova?",
     "sv": "Får katter äta nötsmör?",
     "da": "Må katte spise nøddesmør?",
-    "fi": "Saako kissa syödä pähkinävoita?"
+    "fi": "Saako kissa syödä pähkinävoita?",
+    "fr": "Les chats peuvent-ils manger de la purée de fruits à coque ?"
   },
   "url_slug": {
     "en": "nut-butters",
@@ -41,7 +43,8 @@
     "hr": "maslaci-od-orasastih-plodova",
     "sv": "notsmor",
     "da": "noddesmor",
-    "fi": "pahkinavoit"
+    "fi": "pahkinavoit",
+    "fr": "puree-de-fruits-a-coque"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "hr": "Bolje ne. Maslaci od orašastih plodova prave se od orašastih plodova, a oni sadrže velike količine ulja i masti zbog kojih mački može pozliti, a mogu izazvati i povraćanje ili proljev. Nikad ne daj maslac od makadamije: makadamija je otrovna za mačke.",
     "sv": "Helst inte. Nötsmör görs av nötter, och nötter innehåller mycket olja och fett, som kan göra katten dålig, med kräkningar eller diarré. Ge aldrig macadamianötsmör: macadamianötter är giftiga för katter.",
     "da": "Helst ikke. Nøddesmør er lavet af nødder, og nødder indeholder meget olie og fedt, som kan gøre en kat syg med opkast eller diarré. Giv aldrig macadamianøddesmør: macadamianødder er giftige for katte.",
-    "fi": "Parempi olla antamatta. Pähkinävoit on tehty pähkinöistä, joissa on paljon öljyjä ja rasvoja. Ne voivat tehdä kissan olon huonoksi ja aiheuttaa oksentelua tai ripulia. Älä koskaan anna makadamiapähkinävoita, sillä makadamiapähkinät ovat kissoille myrkyllisiä."
+    "fi": "Parempi olla antamatta. Pähkinävoit on tehty pähkinöistä, joissa on paljon öljyjä ja rasvoja. Ne voivat tehdä kissan olon huonoksi ja aiheuttaa oksentelua tai ripulia. Älä koskaan anna makadamiapähkinävoita, sillä makadamiapähkinät ovat kissoille myrkyllisiä.",
+    "fr": "Mieux vaut s’en abstenir. Les fruits à coque, et donc leurs purées, contiennent beaucoup d’huiles et de graisses, qui peuvent rendre un chat malade (vomissements, diarrhée). Ne donnez jamais de purée de noix de macadamia : les noix de macadamia sont toxiques pour les chats."
   },
   "why": {
     "en": "Cats Protection says nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which can make a cat unwell. VCA vets say most nuts are very fatty and can cause vomiting and diarrhoea, and that macadamia nuts are very fatty, can cause pancreatitis and are also toxic to cats. Cats Protection advises sticking to cat food treats rather than human foods.",
@@ -70,7 +74,8 @@
     "hr": "Cats Protection kaže da orašasti plodovi poput makadamije, badema i oraha sadrže velike količine ulja i masti zbog kojih mački može pozliti. Veterinari iz VCA-a kažu da je većina orašastih plodova vrlo masna i može izazvati povraćanje i proljev te da je makadamija vrlo masna, može izazvati upalu gušterače i otrovna je za mačke. Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke.",
     "sv": "Cats Protection skriver att nötter som macadamia, mandel och valnöt innehåller mycket olja och fett, som kan göra katten dålig. Veterinärerna på VCA skriver att de flesta nötter är mycket feta och kan ge kräkningar och diarré, och att macadamianötter är mycket feta, kan orsaka bukspottkörtelinflammation och dessutom är giftiga för katter. Cats Protection rekommenderar att du håller dig till kattgodis i stället för mat från matbordet.",
     "da": "Cats Protection skriver, at nødder som macadamia, mandler og valnødder indeholder meget olie og fedt, som kan gøre en kat utilpas. Dyrlægerne fra VCA skriver, at de fleste nødder er meget fede og kan give opkast og diarré, og at macadamianødder er meget fede, kan give betændelse i bugspytkirtlen og desuden er giftige for katte. Cats Protection anbefaler, at du holder dig til kattegodbidder i stedet for menneskemad.",
-    "fi": "Cats Protectionin mukaan pähkinät, kuten makadamiapähkinät, mantelit ja saksanpähkinät, sisältävät paljon öljyjä ja rasvoja, jotka voivat tehdä kissan olon huonoksi. VCA:n eläinlääkärit toteavat, että useimmat pähkinät ovat hyvin rasvaisia ja voivat aiheuttaa oksentelua ja ripulia ja että makadamiapähkinät ovat hyvin rasvaisia, voivat aiheuttaa haimatulehduksen ja ovat lisäksi kissoille myrkyllisiä. Cats Protection neuvoo antamaan kissalle vain kissanherkkuja eikä ihmisten ruokia."
+    "fi": "Cats Protectionin mukaan pähkinät, kuten makadamiapähkinät, mantelit ja saksanpähkinät, sisältävät paljon öljyjä ja rasvoja, jotka voivat tehdä kissan olon huonoksi. VCA:n eläinlääkärit toteavat, että useimmat pähkinät ovat hyvin rasvaisia ja voivat aiheuttaa oksentelua ja ripulia ja että makadamiapähkinät ovat hyvin rasvaisia, voivat aiheuttaa haimatulehduksen ja ovat lisäksi kissoille myrkyllisiä. Cats Protection neuvoo antamaan kissalle vain kissanherkkuja eikä ihmisten ruokia.",
+    "fr": "Cats Protection indique que les fruits à coque comme les noix de macadamia, les amandes et les noix contiennent beaucoup d’huiles et de graisses, qui peuvent rendre un chat malade. Les vétérinaires de VCA précisent que la plupart des fruits à coque sont très gras et peuvent provoquer des vomissements et de la diarrhée, et que les noix de macadamia sont très grasses, peuvent causer une pancréatite et sont aussi toxiques pour les chats. Cats Protection conseille de s’en tenir aux friandises pour chats plutôt qu’aux aliments pour humains."
   },
   "signs": {
     "en": [
@@ -120,6 +125,10 @@
     "fi": [
       "Oksentelu",
       "Ripuli"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée"
     ]
   },
   "what_to_do": {
@@ -134,7 +143,8 @@
     "hr": "Ako je mačka pojela maslac od makadamije ili joj se nakon bilo kojeg maslaca od orašastih plodova čini da nije dobro, hitno zakaži pregled kod veterinara.",
     "sv": "Om katten åt macadamianötsmör, eller verkar må dåligt efter att ha ätit nötsmör, boka akut tid hos veterinären.",
     "da": "Hvis din kat har spist macadamianøddesmør eller virker utilpas efter at have spist nøddesmør, så bestil en akut tid hos din dyrlæge.",
-    "fi": "Jos kissasi on syönyt makadamiapähkinävoita tai vaikuttaa huonovointiselta minkä tahansa pähkinävoin jälkeen, varaa kiireellinen aika eläinlääkärille."
+    "fi": "Jos kissasi on syönyt makadamiapähkinävoita tai vaikuttaa huonovointiselta minkä tahansa pähkinävoin jälkeen, varaa kiireellinen aika eläinlääkärille.",
+    "fr": "Si votre chat a mangé de la purée de noix de macadamia, ou s’il semble malade après avoir mangé une purée de fruits à coque, consultez votre vétérinaire en urgence."
   },
   "serving": null,
   "child": {
@@ -149,7 +159,8 @@
     "hr": "Maslaci od orašastih plodova hrana su za ljude i previše su masni za mačji trbuščić. Maci radije daj njezine poslastice za mačke.",
     "sv": "Nötsmör är mat för människor och för oljigt för en katts mage. Ge katten sitt eget kattgodis i stället.",
     "da": "Nøddesmør er menneskemad og for fedtet til en kats mave. Giv hellere din kat dens egne kattegodbidder.",
-    "fi": "Pähkinävoi on ihmisten ruokaa ja liian öljyistä kissan masulle. Anna kissallesi mieluummin sen omia herkkuja."
+    "fi": "Pähkinävoi on ihmisten ruokaa ja liian öljyistä kissan masulle. Anna kissallesi mieluummin sen omia herkkuja.",
+    "fr": "Les purées de fruits à coque sont pour les humains et trop grasses pour le ventre d’un chat. Donne-lui plutôt ses propres friandises pour chats."
   },
   "faq": [
     {
@@ -165,7 +176,8 @@
         "hr": "A maslac od kikirikija?",
         "sv": "Hur är det med jordnötssmör?",
         "da": "Hvad med peanutbutter?",
-        "fi": "Entä maapähkinävoi?"
+        "fi": "Entä maapähkinävoi?",
+        "fr": "Et le beurre de cacahuète ?"
       },
       "a": {
         "en": "Peanut butter has its own page. VCA vets say any peanut butter must be free of preservatives and life-threatening additives such as xylitol.",
@@ -179,7 +191,8 @@
         "hr": "Maslac od kikirikija ima vlastitu stranicu. Veterinari iz VCA-a kažu da svaki maslac od kikirikija mora biti bez konzervansa i dodataka opasnih po život, kao što je ksilitol.",
         "sv": "Jordnötssmör har en egen sida. Veterinärerna på VCA skriver att allt jordnötssmör måste vara fritt från konserveringsmedel och livsfarliga tillsatser som xylitol.",
         "da": "Peanutbutter har sin egen side. Dyrlægerne fra VCA skriver, at al peanutbutter skal være fri for konserveringsmidler og livsfarlige tilsætningsstoffer som xylitol.",
-        "fi": "Maapähkinävoista meillä on oma sivu. VCA:n eläinlääkärien mukaan maapähkinävoissa ei saa olla säilöntäaineita eikä hengenvaarallisia lisäaineita, kuten ksylitolia."
+        "fi": "Maapähkinävoista meillä on oma sivu. VCA:n eläinlääkärien mukaan maapähkinävoissa ei saa olla säilöntäaineita eikä hengenvaarallisia lisäaineita, kuten ksylitolia.",
+        "fr": "Le beurre de cacahuète a sa propre page. Les vétérinaires de VCA précisent que tout beurre de cacahuète doit être exempt de conservateurs et d’additifs pouvant mettre la vie en danger, comme le xylitol."
       }
     }
   ],
@@ -281,6 +294,11 @@
       "status": "verified",
       "verified_by": "claude-c-fi-2026-11-16",
       "verified_hash": "273413ea1aab7393ee1bf8936c6e23efad6d0981ee168cd2e300503fefaff110"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-c-fr-2026-11-16",
+      "verified_hash": "b8f9d19616dbb0775d36b05da339b7dc1f7d2f4923d4c7ad2672bff73a75dae4"
     }
   }
 }

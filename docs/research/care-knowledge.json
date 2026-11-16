@@ -9699,7 +9699,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Cow's milk for kittens",
@@ -9713,7 +9714,8 @@
         "hr": "Kravlje mlijeko za mačiće",
         "sv": "Komjölk till kattungar",
         "da": "Komælk til killinger",
-        "fi": "Lehmänmaito kissanpennuille"
+        "fi": "Lehmänmaito kissanpennuille",
+        "fr": "Lait de vache pour les chatons"
       },
       "question": {
         "en": "Can kittens drink cow's milk?",
@@ -9727,7 +9729,8 @@
         "hr": "Smiju li mačići piti kravlje mlijeko?",
         "sv": "Får kattungar dricka komjölk?",
         "da": "Må killinger drikke komælk?",
-        "fi": "Saako kissanpentu juoda lehmänmaitoa?"
+        "fi": "Saako kissanpentu juoda lehmänmaitoa?",
+        "fr": "Les chatons peuvent-ils boire du lait de vache ?"
       },
       "url_slug": {
         "en": "cow-milk-kittens",
@@ -9741,7 +9744,8 @@
         "hr": "kravlje-mlijeko-za-macice",
         "sv": "komjolk-kattungar",
         "da": "komaelk-killinger",
-        "fi": "lehmanmaito-kissanpennuille"
+        "fi": "lehmanmaito-kissanpennuille",
+        "fr": "lait-de-vache-chatons"
       },
       "answer": {
         "en": "No. Kittens should drink their mother's milk, and a kitten that needs bottle-feeding should only get substitute kitten milk. Cats Protection says never to give cow's milk, as kittens find it difficult to digest. Once weaned, kittens only need water.",
@@ -9755,7 +9759,8 @@
         "hr": "Ne. Mačići trebaju piti majčino mlijeko, a mačić kojeg treba hraniti na bočicu smije dobiti samo zamjensko mlijeko za mačiće. Cats Protection upozorava da se kravlje mlijeko ne smije davati nikada, jer ga mačići teško probavljaju. Kad prestanu sisati, mačićima treba samo voda.",
         "sv": "Nej. Kattungar ska dricka sin mammas mjölk, och en kattunge som måste flaskmatas ska bara få särskild kattungemjölk. Cats Protection skriver att man aldrig ska ge komjölk, eftersom kattungar har svårt att smälta den. När de är avvanda behöver kattungar bara vatten.",
         "da": "Nej. Killinger skal drikke deres mors mælk, og en killing, der skal have flaske, må kun få erstatningsmælk til killinger. Cats Protection skriver, at man aldrig skal give komælk, fordi killinger har svært ved at fordøje den. Når killinger er fravænnet, har de kun brug for vand.",
-        "fi": "Ei suositella. Kissanpentu juo emonsa maitoa, ja pulloruokittavalle kissanpennulle sopii vain kissanpennuille tarkoitettu korvikemaito. Cats Protection kehottaa olemaan antamatta lehmänmaitoa lainkaan, koska kissanpentujen on vaikea sulattaa sitä. Vieroituksen jälkeen kissanpentu tarvitsee juomaksi vain vettä."
+        "fi": "Ei suositella. Kissanpentu juo emonsa maitoa, ja pulloruokittavalle kissanpennulle sopii vain kissanpennuille tarkoitettu korvikemaito. Cats Protection kehottaa olemaan antamatta lehmänmaitoa lainkaan, koska kissanpentujen on vaikea sulattaa sitä. Vieroituksen jälkeen kissanpentu tarvitsee juomaksi vain vettä.",
+        "fr": "Non. Les chatons doivent boire le lait de leur mère, et un chaton nourri au biberon ne doit recevoir qu’un lait de substitution pour chatons. Cats Protection recommande de ne jamais donner de lait de vache, car les chatons le digèrent difficilement. Une fois sevrés, les chatons n’ont besoin que d’eau."
       },
       "why": {
         "en": "Cats Protection advises never giving cow's or goat's milk to kittens because they find it difficult to digest, and PDSA calls cow's milk unsuitable. Compared with cow's milk, a mother cat's milk contains much more protein, while cow's milk has fewer calories, less fat and taurine and more lactose. Substitute kitten milk is made for kittens and contains all the nutrients they need; other milks don't have the right balance.",
@@ -9769,7 +9774,8 @@
         "hr": "Cats Protection savjetuje da se mačićima nikad ne daje kravlje ni kozje mlijeko, jer ga teško probavljaju, a PDSA kravlje mlijeko smatra neprikladnim. U usporedbi s kravljim mlijekom, mlijeko mačke majke sadrži mnogo više bjelančevina, dok kravlje ima manje kalorija, masti i taurina te više laktoze. Zamjensko mlijeko za mačiće proizvedeno je upravo za njih i sadrži sve hranjive tvari koje trebaju; druge vrste mlijeka nemaju pravi omjer hranjivih tvari.",
         "sv": "Cats Protection rekommenderar att man aldrig ger ko- eller getmjölk till kattungar, eftersom de har svårt att smälta den, och PDSA kallar komjölk olämplig. Jämfört med komjölk innehåller kattmammans mjölk mycket mer protein, medan komjölk har färre kalorier, mindre fett och taurin och mer laktos. Särskild kattungemjölk är gjord för kattungar och innehåller alla näringsämnen de behöver, medan andra sorters mjölk inte har rätt balans.",
         "da": "Cats Protection anbefaler, at man aldrig giver ko- eller gedemælk til killinger, fordi de har svært ved at fordøje den, og PDSA kalder komælk uegnet. Sammenlignet med komælk indeholder en kattemors mælk meget mere protein, mens komælk har færre kalorier, mindre fedt og taurin og mere laktose. Erstatningsmælk til killinger er lavet til killinger og indeholder alle de næringsstoffer, de har brug for; andre slags mælk har ikke den rette balance.",
-        "fi": "Cats Protectionin ohjeen mukaan kissanpennuille ei pidä antaa lehmän- eikä vuohenmaitoa lainkaan, koska ne sulattavat sitä huonosti, ja PDSA pitää lehmänmaitoa sopimattomana. Kissaemon maidossa on lehmänmaitoon verrattuna paljon enemmän proteiinia, kun taas lehmänmaidossa on vähemmän kaloreita, rasvaa ja tauriinia ja enemmän laktoosia. Kissanpennun korvikemaito on valmistettu kissanpennuille ja sisältää kaikki niiden tarvitsemat ravintoaineet, kun taas muiden maitojen ravintoaineet ovat väärissä suhteissa."
+        "fi": "Cats Protectionin ohjeen mukaan kissanpennuille ei pidä antaa lehmän- eikä vuohenmaitoa lainkaan, koska ne sulattavat sitä huonosti, ja PDSA pitää lehmänmaitoa sopimattomana. Kissaemon maidossa on lehmänmaitoon verrattuna paljon enemmän proteiinia, kun taas lehmänmaidossa on vähemmän kaloreita, rasvaa ja tauriinia ja enemmän laktoosia. Kissanpennun korvikemaito on valmistettu kissanpennuille ja sisältää kaikki niiden tarvitsemat ravintoaineet, kun taas muiden maitojen ravintoaineet ovat väärissä suhteissa.",
+        "fr": "Cats Protection conseille de ne jamais donner de lait de vache ou de chèvre aux chatons, car ils le digèrent difficilement, et PDSA juge le lait de vache inadapté. Comparé au lait de vache, le lait de la mère contient beaucoup plus de protéines ; le lait de vache, lui, est moins calorique, moins gras, plus pauvre en taurine et plus riche en lactose. Le lait de substitution pour chatons est conçu pour eux et contient tous les nutriments dont ils ont besoin ; les autres laits n’ont pas le bon équilibre."
       },
       "signs": {
         "en": [
@@ -9831,6 +9837,11 @@
           "Ripuli",
           "Heikkous",
           "Laihtuminen tai kehityksen viivästyminen"
+        ],
+        "fr": [
+          "Diarrhée",
+          "Faiblesse",
+          "Perte de poids ou mauvaise croissance"
         ]
       },
       "what_to_do": {
@@ -9845,7 +9856,8 @@
         "hr": "Prestani davati kravlje mlijeko i pitaj veterinara koje mlijeko za mačiće odabrati. Odmah se obrati veterinaru ako mlad mačić ima proljev, djeluje malaksalo, gubi na težini ili slabo napreduje, jer se njegovo stanje može brzo pogoršati.",
         "sv": "Sluta ge komjölk och fråga veterinären vilken kattungemjölk du ska använda. Kontakta veterinären direkt om en liten kattunge får diarré, verkar svag, går ned i vikt eller inte växer som den ska, eftersom kattungens tillstånd kan försämras snabbt.",
         "da": "Stop med komælken, og spørg din dyrlæge, hvilken killingemælk du skal bruge. Kontakt straks din dyrlæge, hvis en lille killing får diarré, virker svag, taber sig eller ikke trives, for en killings tilstand kan forværres hurtigt.",
-        "fi": "Lopeta lehmänmaidon antaminen ja kysy eläinlääkäriltä, mikä korvikemaito sopii kissanpennulle. Ota heti yhteyttä eläinlääkäriin, jos nuorella kissanpennulla on ripulia, se on veltto, laihtuu tai ei kehity kunnolla: kissanpennun vointi voi huonontua nopeasti."
+        "fi": "Lopeta lehmänmaidon antaminen ja kysy eläinlääkäriltä, mikä korvikemaito sopii kissanpennulle. Ota heti yhteyttä eläinlääkäriin, jos nuorella kissanpennulla on ripulia, se on veltto, laihtuu tai ei kehity kunnolla: kissanpennun vointi voi huonontua nopeasti.",
+        "fr": "Cessez de donner du lait de vache et demandez à votre vétérinaire quel lait pour chatons utiliser. Contactez votre vétérinaire sans attendre si un jeune chaton a de la diarrhée, semble faible, perd du poids ou ne se développe pas bien, car l’état d’un chaton peut s’aggraver rapidement."
       },
       "serving": null,
       "child": {
@@ -9860,7 +9872,8 @@
         "hr": "Mačići piju mamino mlijeko ili posebno mlijeko za mačiće, a ne mlijeko iz hladnjaka. Veći mačići trebaju samo svježu vodu!",
         "sv": "Kattbebisar dricker sin mammas mjölk eller särskild kattungemjölk, inte mjölk från kylskåpet. Större kattungar behöver bara färskt vatten!",
         "da": "Helt små killinger drikker deres mors mælk eller særlig killingemælk, ikke mælk fra køleskabet. Når killinger er blevet større, har de kun brug for friskt vand!",
-        "fi": "Kissanpennut juovat emonsa maitoa tai erityistä kissanpennun korvikemaitoa, eivät jääkaapin maitoa. Isommat kissanpennut tarvitsevat vain raikasta vettä!"
+        "fi": "Kissanpennut juovat emonsa maitoa tai erityistä kissanpennun korvikemaitoa, eivät jääkaapin maitoa. Isommat kissanpennut tarvitsevat vain raikasta vettä!",
+        "fr": "Les bébés chats boivent le lait de leur maman ou un lait spécial pour chatons, pas celui du frigo. Une fois grands, ils n’ont besoin que d’eau fraîche !"
       },
       "faq": [
         {
@@ -9876,7 +9889,8 @@
             "hr": "Čime hraniti mačića bez majke?",
             "sv": "Vad ska jag ge en moderlös kattunge?",
             "da": "Hvad skal jeg give en moderløs killing?",
-            "fi": "Millä orpoa kissanpentua ruokitaan?"
+            "fi": "Millä orpoa kissanpentua ruokitaan?",
+            "fr": "Que donner à un chaton orphelin ?"
           },
           "a": {
             "en": "Ask your vet first. Use a substitute kitten milk made specifically for kittens, available from vets and some pet shops, and follow the instructions on the label. Supermarket kitten or puppy milk is not suitable.",
@@ -9890,7 +9904,8 @@
             "hr": "Prvo pitaj veterinara. Daj zamjensko mlijeko napravljeno posebno za mačiće, koje se može kupiti kod veterinara i u nekim trgovinama za kućne ljubimce, i slijedi upute na pakiranju. Mlijeko za mačiće ili štenad iz supermarketa nije prikladno.",
             "sv": "Fråga veterinären först. Använd särskild kattungemjölk som är gjord för kattungar. Den finns hos veterinärer och i vissa djuraffärer. Följ instruktionerna på förpackningen. Kattungemjölk eller valpmjölk från mataffären passar inte.",
             "da": "Spørg først din dyrlæge. Brug erstatningsmælk lavet specielt til killinger, som fås hos dyrlæger og i nogle dyrebutikker, og følg anvisningerne på etiketten. Killinge- eller hvalpemælk fra supermarkedet er ikke egnet.",
-            "fi": "Kysy ensin neuvoa eläinlääkäriltä. Käytä nimenomaan kissanpennuille tarkoitettua korvikemaitoa, jota myyvät eläinlääkärit ja jotkin lemmikkikaupat, ja noudata pakkauksen ohjeita. Ruokakaupan kissanpentu- tai koiranpennunmaito ei sovi."
+            "fi": "Kysy ensin neuvoa eläinlääkäriltä. Käytä nimenomaan kissanpennuille tarkoitettua korvikemaitoa, jota myyvät eläinlääkärit ja jotkin lemmikkikaupat, ja noudata pakkauksen ohjeita. Ruokakaupan kissanpentu- tai koiranpennunmaito ei sovi.",
+            "fr": "Demandez d’abord conseil à votre vétérinaire. Utilisez un lait de substitution conçu spécialement pour les chatons, en vente chez les vétérinaires et dans certaines animaleries, et suivez le mode d’emploi de l’étiquette. Le lait pour chatons ou pour chiots vendu en supermarché ne convient pas."
           }
         },
         {
@@ -9906,7 +9921,8 @@
             "hr": "Kada mačići prestaju piti mlijeko?",
             "sv": "När slutar kattungar dricka mjölk?",
             "da": "Hvornår holder killinger op med at drikke mælk?",
-            "fi": "Milloin kissanpentu lopettaa maidon juomisen?"
+            "fi": "Milloin kissanpentu lopettaa maidon juomisen?",
+            "fr": "À quel âge les chatons arrêtent-ils de boire du lait ?"
           },
           "a": {
             "en": "By six to eight weeks old, kittens should be fully weaned onto solid food. From then on they only need to drink water, not milk, and their body may start making less lactase.",
@@ -9920,7 +9936,8 @@
             "hr": "Do šestog do osmog tjedna života mačići bi trebali potpuno prijeći na krutu hranu. Od tada za piće trebaju samo vodu, a ne mlijeko, a tijelo im može početi stvarati manje laktaze.",
             "sv": "Vid sex till åtta veckors ålder ska kattungar vara helt avvanda och äta fast föda. Därefter behöver de bara dricka vatten, inte mjölk, och kroppen kan börja bilda mindre laktas.",
             "da": "Når killinger er seks til otte uger gamle, skal de være helt fravænnet og spise fast føde. Derefter har de kun brug for at drikke vand, ikke mælk, og deres krop begynder måske at danne mindre laktase.",
-            "fi": "Kuuden–kahdeksan viikon iässä kissanpentujen pitäisi olla vieroitettu kokonaan kiinteään ruokaan. Siitä lähtien ne tarvitsevat juomaksi vain vettä, ei maitoa, ja niiden elimistö voi alkaa tuottaa vähemmän laktaasia."
+            "fi": "Kuuden–kahdeksan viikon iässä kissanpentujen pitäisi olla vieroitettu kokonaan kiinteään ruokaan. Siitä lähtien ne tarvitsevat juomaksi vain vettä, ei maitoa, ja niiden elimistö voi alkaa tuottaa vähemmän laktaasia.",
+            "fr": "Vers six à huit semaines, les chatons doivent être complètement sevrés et manger de la nourriture solide. À partir de là, ils n’ont besoin que d’eau, pas de lait, et leur organisme peut commencer à produire moins de lactase."
           }
         },
         {
@@ -9936,7 +9953,8 @@
             "hr": "A odrasle mačke?",
             "sv": "Och vuxna katter?",
             "da": "Og voksne katte?",
-            "fi": "Entä aikuiset kissat?"
+            "fi": "Entä aikuiset kissat?",
+            "fr": "Et les chats adultes ?"
           },
           "a": {
             "en": "Most cats are lactose intolerant, and once weaned they only need to drink water, not milk. See our page on milk for cats.",
@@ -9950,7 +9968,8 @@
             "hr": "Većina mačaka ne podnosi laktozu, a nakon prestanka sisanja za piće im treba samo voda, ne mlijeko. Pogledaj našu stranicu o mlijeku za mačke.",
             "sv": "De flesta katter är laktosintoleranta, och när de är avvanda behöver de bara dricka vatten, inte mjölk. Se vår sida om mjölk till katter.",
             "da": "De fleste katte er laktoseintolerante, og når de er fravænnet, har de kun brug for at drikke vand, ikke mælk. Se vores side om mælk til katte.",
-            "fi": "Useimmat kissat ovat laktoosi-intolerantteja, ja vieroituksen jälkeen ne tarvitsevat juomaksi vain vettä, ei maitoa. Lue lisää sivultamme kissojen maidonjuonnista."
+            "fi": "Useimmat kissat ovat laktoosi-intolerantteja, ja vieroituksen jälkeen ne tarvitsevat juomaksi vain vettä, ei maitoa. Lue lisää sivultamme kissojen maidonjuonnista.",
+            "fr": "La plupart des chats sont intolérants au lactose et, une fois sevrés, ils n’ont besoin que d’eau, pas de lait. Consultez notre page sur le lait pour les chats."
           }
         }
       ],
@@ -14717,7 +14736,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Hummus",
@@ -14731,7 +14751,8 @@
         "hr": "Humus",
         "sv": "Hummus",
         "da": "Hummus",
-        "fi": "Humus"
+        "fi": "Humus",
+        "fr": "Houmous"
       },
       "question": {
         "en": "Can cats eat hummus?",
@@ -14745,7 +14766,8 @@
         "hr": "Smiju li mačke jesti humus?",
         "sv": "Får katter äta hummus?",
         "da": "Må katte spise hummus?",
-        "fi": "Saako kissa syödä humusta?"
+        "fi": "Saako kissa syödä humusta?",
+        "fr": "Les chats peuvent-ils manger du houmous ?"
       },
       "url_slug": {
         "en": "hummus",
@@ -14759,7 +14781,8 @@
         "hr": "humus",
         "sv": "hummus",
         "da": "hummus",
-        "fi": "humus"
+        "fi": "humus",
+        "fr": "houmous"
       },
       "answer": {
         "en": "No, hummus is not for cats. It is usually made with garlic, and garlic is toxic to cats even when cooked. VCA vets also warn that creamy dips left on plates can cause stomach upset. Keep the dip bowl out of your cat's reach.",
@@ -14773,7 +14796,8 @@
         "hr": "Ne, humus nije za mačke. Obično se pravi s češnjakom, a češnjak je otrovan za mačke čak i kad je termički obrađen. Veterinari iz VCA-a upozoravaju i da kremasti namazi ostavljeni na tanjurima mogu izazvati želučane tegobe. Zdjelicu s namazom drži izvan dosega svoje mačke.",
         "sv": "Nej, hummus är inget för katter. Den innehåller oftast vitlök, och vitlök är giftigt för katter även när det är tillagat. Veterinärerna på VCA varnar också för att krämiga dippar som blir kvar på tallrikar kan ge katten orolig mage. Ställ dippskålen utom räckhåll för katten.",
         "da": "Nej, hummus er ikke noget for katte. Den er som regel lavet med hvidløg, og hvidløg er giftigt for katte, selv når det er tilberedt. Dyrlægerne fra VCA advarer også om, at cremede dips, der bliver tilbage på tallerkener, kan give ondt i maven. Stil dipskålen uden for din kats rækkevidde.",
-        "fi": "Ei saa. Humus ei sovi kissoille: siihen tulee yleensä valkosipulia, joka on kissoille myrkyllistä myös kypsennettynä. VCA:n eläinlääkärit varoittavat lisäksi, että lautasille jääneet kermaiset dipit voivat aiheuttaa vatsavaivoja. Pidä dippikulho poissa kissan ulottuvilta."
+        "fi": "Ei saa. Humus ei sovi kissoille: siihen tulee yleensä valkosipulia, joka on kissoille myrkyllistä myös kypsennettynä. VCA:n eläinlääkärit varoittavat lisäksi, että lautasille jääneet kermaiset dipit voivat aiheuttaa vatsavaivoja. Pidä dippikulho poissa kissan ulottuvilta.",
+        "fr": "Non, le houmous n’est pas fait pour les chats. Il est généralement préparé avec de l’ail, toxique pour eux même cuit. Les vétérinaires de VCA préviennent aussi que les sauces crémeuses restées dans les assiettes peuvent donner mal au ventre. Gardez le bol de sauce hors de portée de votre chat."
       },
       "why": {
         "en": "Hummus is mainly made from chickpeas, tahini, olive oil, lemon juice, garlic and other seasonings. Garlic belongs to the alliums, which are toxic to cats even when cooked or dried, and onion and garlic are found in many pre-made foods. Tufts vets list onion and garlic flavouring in prepared dishes among foods cats should avoid, as it can cause vomiting and diarrhoea, and VCA says these flavour boosters damage red blood cells, especially in cats.",
@@ -14787,7 +14811,8 @@
         "hr": "Humus se uglavnom pravi od slanutka, tahinija, maslinova ulja, limunova soka, češnjaka i drugih začina. Češnjak pripada biljkama iz roda Allium, koje su otrovne za mačke čak i kad su termički obrađene ili sušene, a luk i češnjak nalaze se u mnogim gotovim jelima. Veterinari s Tuftsa među hranom koju mačke trebaju izbjegavati navode luk i češnjak kao začin u pripremljenim jelima, jer mogu izazvati povraćanje i proljev, a VCA kaže da ti pojačivači okusa oštećuju crvene krvne stanice, osobito kod mačaka.",
         "sv": "Hummus görs främst av kikärtor, tahini, olivolja, citronsaft, vitlök och andra kryddor. Vitlök tillhör lökväxterna, som är giftiga för katter även när de är tillagade eller torkade, och lök och vitlök finns i många färdigrätter. Veterinärerna på Tufts nämner lök och vitlök som smaksättning i färdiga rätter bland det katter bör undvika, eftersom de kan ge kräkningar och diarré. VCA skriver att dessa smaksättare skadar de röda blodkropparna, särskilt hos katter.",
         "da": "Hummus er hovedsageligt lavet af kikærter, tahin, olivenolie, citronsaft, hvidløg og andre krydderier. Hvidløg hører til løgplanterne, som er giftige for katte, selv når de er tilberedt eller tørret, og løg og hvidløg findes i mange færdigretter. Dyrlægerne fra Tufts nævner løg- og hvidløgssmag i færdigretter blandt det, katte bør undgå, fordi det kan give opkast og diarré, og VCA skriver, at disse smagsgivere skader de røde blodlegemer, især hos katte.",
-        "fi": "Humus tehdään pääasiassa kikherneistä, tahinista, oliiviöljystä, sitruunamehusta, valkosipulista ja muista mausteista. Valkosipuli kuuluu sipulikasveihin, jotka ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina, ja sipulia ja valkosipulia on monissa valmisruoissa. Tuftsin eläinlääkärit luettelevat valmisruokien sipuli- ja valkosipulimausteen ruoka-aineeksi, jota kissojen tulee välttää, sillä se voi aiheuttaa oksentelua ja ripulia. VCA:n mukaan nämä mausteet vaurioittavat punasoluja, etenkin kissoilla."
+        "fi": "Humus tehdään pääasiassa kikherneistä, tahinista, oliiviöljystä, sitruunamehusta, valkosipulista ja muista mausteista. Valkosipuli kuuluu sipulikasveihin, jotka ovat kissoille myrkyllisiä myös kypsennettyinä tai kuivattuina, ja sipulia ja valkosipulia on monissa valmisruoissa. Tuftsin eläinlääkärit luettelevat valmisruokien sipuli- ja valkosipulimausteen ruoka-aineeksi, jota kissojen tulee välttää, sillä se voi aiheuttaa oksentelua ja ripulia. VCA:n mukaan nämä mausteet vaurioittavat punasoluja, etenkin kissoilla.",
+        "fr": "Le houmous est surtout fait de pois chiches, de tahini, d’huile d’olive, de jus de citron, d’ail et d’autres assaisonnements. L’ail fait partie des alliacées, toxiques pour les chats même cuites ou séchées, et l’oignon comme l’ail se retrouvent dans de nombreux plats préparés. Les vétérinaires de Tufts déconseillent aux chats l’oignon et l’ail utilisés comme arômes dans les plats préparés, car ils peuvent provoquer des vomissements et de la diarrhée, et VCA précise que ces exhausteurs de goût abîment les globules rouges, surtout chez les chats."
       },
       "signs": {
         "en": [
@@ -14861,6 +14886,12 @@
           "Ripuli",
           "Heikentynyt ruokahalu",
           "Nestehukka"
+        ],
+        "fr": [
+          "Vomissements",
+          "Diarrhée",
+          "Baisse d’appétit",
+          "Déshydratation"
         ]
       },
       "what_to_do": {
@@ -14875,7 +14906,8 @@
         "hr": "Ako je mačka pojela humus s češnjakom, obrati se veterinaru što prije, čak i ako se čini da je dobro, jer se znakovi anemije mogu pojaviti tek nakon nekoliko dana.",
         "sv": "Om katten har ätit hummus med vitlök, kontakta veterinären så snart som möjligt, även om katten verkar må bra, eftersom tecken på blodbrist kan ta några dagar att visa sig.",
         "da": "Hvis din kat har spist hummus med hvidløg, så kontakt din dyrlæge hurtigst muligt, også selvom din kat virker rask, for tegn på blodmangel kan tage nogle dage om at vise sig.",
-        "fi": "Jos kissasi on syönyt valkosipulia sisältävää humusta, ota yhteyttä eläinlääkäriin mahdollisimman pian, vaikka kissa vaikuttaisi voivan hyvin: anemian oireet voivat tulla näkyviin vasta muutaman päivän kuluttua."
+        "fi": "Jos kissasi on syönyt valkosipulia sisältävää humusta, ota yhteyttä eläinlääkäriin mahdollisimman pian, vaikka kissa vaikuttaisi voivan hyvin: anemian oireet voivat tulla näkyviin vasta muutaman päivän kuluttua.",
+        "fr": "Si votre chat a mangé du houmous contenant de l’ail, contactez votre vétérinaire dès que possible, même si votre chat semble aller bien, car les signes d’anémie peuvent mettre quelques jours à apparaître."
       },
       "serving": null,
       "child": {
@@ -14890,7 +14922,8 @@
         "hr": "Humus je namaz za ljude i obično sadrži češnjak, koji mačke ne smiju jesti. Tanjur s grickalicama drži podalje od mace.",
         "sv": "Hummus är en dipp för människor, och den innehåller oftast vitlök, som katter inte får äta. Håll tallriken med ditt mellanmål borta från katten.",
         "da": "Hummus er en dip til mennesker, og den indeholder som regel hvidløg, som katte ikke må spise. Hold din snacktallerken væk fra katten.",
-        "fi": "Humus on ihmisten dippi, ja siinä on yleensä valkosipulia, jota kissat eivät saa syödä. Pidä välipalalautasesi poissa kisun ulottuvilta."
+        "fi": "Humus on ihmisten dippi, ja siinä on yleensä valkosipulia, jota kissat eivät saa syödä. Pidä välipalalautasesi poissa kisun ulottuvilta.",
+        "fr": "Le houmous, c’est une trempette pour les humains, et il contient souvent de l’ail, que les chats ne doivent pas manger. Garde ton assiette d’apéritif loin de ton chat."
       },
       "faq": [
         {
@@ -14906,7 +14939,8 @@
             "hr": "Što ako humus nema češnjaka?",
             "sv": "Hur är det om hummusen inte innehåller vitlök?",
             "da": "Hvad hvis hummusen ikke indeholder hvidløg?",
-            "fi": "Entä jos humuksessa ei ole valkosipulia?"
+            "fi": "Entä jos humuksessa ei ole valkosipulia?",
+            "fr": "Et si le houmous ne contient pas d’ail ?"
           },
           "a": {
             "en": "It is still a people food. Cats Protection advises sticking to cat food treats rather than giving your cat any human foods.",
@@ -14920,7 +14954,8 @@
             "hr": "I dalje je hrana za ljude. Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke.",
             "sv": "Det är fortfarande mat för människor. Cats Protection rekommenderar att du håller dig till kattgodis i stället för att ge katten mat från matbordet.",
             "da": "Det er stadig menneskemad. Cats Protection anbefaler, at du holder dig til kattegodbidder i stedet for at give din kat menneskemad.",
-            "fi": "Se on silti ihmisten ruokaa. Cats Protection neuvoo antamaan kissalle vain kissanherkkuja eikä ihmisten ruokia."
+            "fi": "Se on silti ihmisten ruokaa. Cats Protection neuvoo antamaan kissalle vain kissanherkkuja eikä ihmisten ruokia.",
+            "fr": "Cela reste un aliment pour humains. Cats Protection conseille de s’en tenir aux friandises pour chats plutôt que de donner des aliments pour humains."
           }
         }
       ],
@@ -15239,7 +15274,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Lactose-free milk and cat milk",
@@ -15253,7 +15289,8 @@
         "hr": "Mlijeko bez laktoze i mlijeko za mačke",
         "sv": "Laktosfri mjölk och kattmjölk",
         "da": "Laktosefri mælk og kattemælk",
-        "fi": "Laktoositon maito ja kissanmaito"
+        "fi": "Laktoositon maito ja kissanmaito",
+        "fr": "Lait sans lactose et lait pour chats"
       },
       "question": {
         "en": "Can cats drink lactose-free milk?",
@@ -15267,7 +15304,8 @@
         "hr": "Smiju li mačke piti mlijeko bez laktoze?",
         "sv": "Får katter dricka laktosfri mjölk?",
         "da": "Må katte drikke laktosefri mælk?",
-        "fi": "Saako kissa juoda laktoositonta maitoa?"
+        "fi": "Saako kissa juoda laktoositonta maitoa?",
+        "fr": "Les chats peuvent-ils boire du lait sans lactose ?"
       },
       "url_slug": {
         "en": "lactose-free-milk",
@@ -15281,7 +15319,8 @@
         "hr": "mlijeko-bez-laktoze",
         "sv": "laktosfri-mjolk",
         "da": "laktosefri-maelk",
-        "fi": "laktoositon-maito"
+        "fi": "laktoositon-maito",
+        "fr": "lait-sans-lactose"
       },
       "answer": {
         "en": "It's best not to. Lactose-free milk and special cat milk are less likely to upset a cat's stomach, but they contain a lot of calories and lack the nutrients a cat needs. Cats Protection advises avoiding any type of milk; water is all cats need.",
@@ -15295,7 +15334,8 @@
         "hr": "Bolje ne. Mlijeko bez laktoze i posebno mlijeko za mačke rjeđe će mački pokvariti želudac, ali sadrže mnogo kalorija i ne sadrže hranjive tvari koje mački trebaju. Cats Protection savjetuje da se izbjegava svaka vrsta mlijeka; mačkama treba samo voda.",
         "sv": "Helst inte. Laktosfri mjölk och särskild kattmjölk ger mer sällan orolig mage hos katter, men de innehåller många kalorier och saknar de näringsämnen som en katt behöver. Cats Protection rekommenderar att du undviker alla sorters mjölk. Vatten är allt katter behöver.",
         "da": "Helst ikke. Laktosefri mælk og særlig kattemælk er mindre tilbøjelige til at give ondt i maven hos katte, men de indeholder mange kalorier og mangler de næringsstoffer, en kat har brug for. Cats Protection anbefaler, at man undgår alle slags mælk; vand er alt, hvad katte har brug for.",
-        "fi": "Parempi olla antamatta. Laktoositon maito ja erityinen kissanmaito sotkevat kissan vatsan epätodennäköisemmin, mutta niissä on paljon kaloreita, ja niistä puuttuvat kissan tarvitsemat ravintoaineet. Cats Protection kehottaa välttämään kaikkea maitoa: kissa tarvitsee juomaksi vain vettä."
+        "fi": "Parempi olla antamatta. Laktoositon maito ja erityinen kissanmaito sotkevat kissan vatsan epätodennäköisemmin, mutta niissä on paljon kaloreita, ja niistä puuttuvat kissan tarvitsemat ravintoaineet. Cats Protection kehottaa välttämään kaikkea maitoa: kissa tarvitsee juomaksi vain vettä.",
+        "fr": "Mieux vaut s’en abstenir. Le lait sans lactose et le lait spécial pour chats risquent moins de donner mal au ventre à un chat, mais ils sont très caloriques et ne contiennent pas les nutriments dont un chat a besoin. Cats Protection conseille d’éviter tout type de lait ; l’eau suffit aux chats."
       },
       "why": {
         "en": "Sources disagree, so we use the stricter level. Cats Protection says lactose-free milk and cat milk don't contain lactose, but they have a lot of calories that could make a cat put on weight, and it is best to avoid giving cats any type of milk. PDSA says cat milk could be an occasional treat, but its fat is often as high as other milk and its calories must be counted in the daily food allowance.",
@@ -15309,7 +15349,8 @@
         "hr": "Izvori se ne slažu, pa se držimo strožeg stajališta. Cats Protection kaže da mlijeko bez laktoze i mlijeko za mačke ne sadrže laktozu, ali imaju mnogo kalorija, zbog kojih bi mačka mogla dobiti na težini, pa je najbolje mačkama ne davati nikakvu vrstu mlijeka. PDSA kaže da bi mlijeko za mačke moglo biti povremena poslastica, ali da je udio masti u njemu često jednako visok kao u drugom mlijeku i da se njegove kalorije moraju uračunati u dnevni obrok.",
         "sv": "Källorna är oeniga, så vi använder den strängare nivån. Cats Protection skriver att laktosfri mjölk och kattmjölk inte innehåller laktos, men att de har många kalorier, som kan få katten att gå upp i vikt, och att det är bäst att inte ge katter någon sorts mjölk. PDSA skriver att kattmjölk kan vara en godbit ibland, men att fetthalten ofta är lika hög som i annan mjölk och att kalorierna måste räknas in i den dagliga matransonen.",
         "da": "Kilderne er uenige, så vi bruger den strengere vurdering. Cats Protection skriver, at laktosefri mælk og kattemælk ikke indeholder laktose, men at de har mange kalorier, som kan få en kat til at tage på, og at det er bedst ikke at give katte nogen slags mælk. PDSA skriver, at kattemælk kan være en godbid en gang imellem, men at fedtindholdet ofte er lige så højt som i anden mælk, og at kalorierne skal tælles med i den daglige foderration.",
-        "fi": "Lähteet ovat eri mieltä, joten noudatamme tiukempaa tasoa. Cats Protectionin mukaan laktoositon maito ja kissanmaito eivät sisällä laktoosia, mutta niissä on paljon kaloreita, jotka voivat lihottaa kissaa, ja kissalle on parasta olla antamatta minkäänlaista maitoa. PDSA:n mukaan kissanmaito voi olla satunnainen herkku, mutta sen rasvapitoisuus on usein yhtä suuri kuin muiden maitojen, ja sen kalorit on laskettava mukaan kissan päivittäiseen ruokamäärään."
+        "fi": "Lähteet ovat eri mieltä, joten noudatamme tiukempaa tasoa. Cats Protectionin mukaan laktoositon maito ja kissanmaito eivät sisällä laktoosia, mutta niissä on paljon kaloreita, jotka voivat lihottaa kissaa, ja kissalle on parasta olla antamatta minkäänlaista maitoa. PDSA:n mukaan kissanmaito voi olla satunnainen herkku, mutta sen rasvapitoisuus on usein yhtä suuri kuin muiden maitojen, ja sen kalorit on laskettava mukaan kissan päivittäiseen ruokamäärään.",
+        "fr": "Les sources divergent ; nous retenons donc le niveau le plus strict. Cats Protection indique que le lait sans lactose et le lait pour chats ne contiennent pas de lactose, mais qu’ils sont très caloriques, ce qui pourrait faire grossir un chat, et qu’il vaut mieux ne donner aucun type de lait aux chats. PDSA explique que le lait pour chats peut être une friandise occasionnelle, mais que sa teneur en graisses est souvent aussi élevée que celle des autres laits et que ses calories doivent être comptées dans la ration quotidienne."
       },
       "signs": {
         "en": [
@@ -15347,6 +15388,9 @@
         ],
         "fi": [
           "Lihominen ajan myötä"
+        ],
+        "fr": [
+          "Prise de poids avec le temps"
         ]
       },
       "what_to_do": {
@@ -15361,7 +15405,8 @@
         "hr": "Umjesto toga ponudi svježu vodu. Ako ikada daš mlijeko za mačke kao rijetku poslasticu, uračunaj njegove dodatne kalorije, ali zbog njega ne smanjuj količinu potpune hrane koju mačka dobiva, jer bi mačka tada mogla dobiti manje vitalnih vitamina i hranjivih tvari.",
         "sv": "Erbjud färskt vatten i stället. Om du någon gång ger kattmjölk som en sällsynt godbit, tänk på de extra kalorierna, men minska inte kattens kompletta mat för den, eftersom katten då kan få i sig mindre av de livsviktiga vitaminerna och näringsämnena.",
         "da": "Tilbyd friskt vand i stedet. Hvis du en gang imellem giver kattemælk som en sjælden godbid, så husk de ekstra kalorier, men skær ikke ned på kattens komplette foder for den, for så kan katten få færre livsvigtige vitaminer og næringsstoffer.",
-        "fi": "Tarjoa sen sijaan raikasta vettä. Jos annat joskus kissanmaitoa harvinaisena herkkuna, muista sen lisäkalorit, mutta älä vähennä kissan täysravinnon määrää sen takia, sillä kissa voisi silloin saada liian vähän tärkeitä vitamiineja ja ravintoaineita."
+        "fi": "Tarjoa sen sijaan raikasta vettä. Jos annat joskus kissanmaitoa harvinaisena herkkuna, muista sen lisäkalorit, mutta älä vähennä kissan täysravinnon määrää sen takia, sillä kissa voisi silloin saada liian vähän tärkeitä vitamiineja ja ravintoaineita.",
+        "fr": "Proposez plutôt de l’eau fraîche. Si vous donnez éventuellement du lait pour chats en friandise rare, tenez compte de ses calories, mais ne réduisez pas pour autant la ration d’aliment complet de votre chat : il risquerait de manquer de vitamines et de nutriments essentiels."
       },
       "serving": null,
       "child": {
@@ -15376,7 +15421,8 @@
         "hr": "Čak je i posebno mlijeko za mačke samo poslastica. Piće koje mačku svaki dan održava zdravom jest svježa voda.",
         "sv": "Även särskild kattmjölk är bara en godbit. Drycken som håller katten frisk varje dag är färskt vatten.",
         "da": "Selv særlig kattemælk er kun en godbid. Den drik, der holder katten sund hver dag, er friskt vand.",
-        "fi": "Erikoiskissanmaitokin on vain herkku. Kisun terveenä pitää joka päivä raikas vesi."
+        "fi": "Erikoiskissanmaitokin on vain herkku. Kisun terveenä pitää joka päivä raikas vesi.",
+        "fr": "Même le lait spécial pour chats n’est qu’une friandise. La boisson qui garde ton chat en bonne santé tous les jours, c’est l’eau fraîche."
       },
       "faq": [
         {
@@ -15392,7 +15438,8 @@
             "hr": "Je li mlijeko za mačke iz trgovine za kućne ljubimce bolje od kravljeg?",
             "sv": "Är kattmjölk från djuraffären bättre än komjölk?",
             "da": "Er kattemælk fra dyrebutikken bedre end komælk?",
-            "fi": "Onko lemmikkikaupan kissanmaito parempaa kuin lehmänmaito?"
+            "fi": "Onko lemmikkikaupan kissanmaito parempaa kuin lehmänmaito?",
+            "fr": "Le lait pour chats vendu en animalerie est-il meilleur que le lait de vache ?"
           },
           "a": {
             "en": "It usually has a lot less lactose or none, so it is less likely to make your cat poorly. But its fat content is often just as high as any other milk, and it is not a complete meal.",
@@ -15406,7 +15453,8 @@
             "hr": "Obično ima mnogo manje laktoze ili je uopće nema, pa je manje vjerojatno da će mački biti loše. No udio masti u njemu često je jednako visok kao u svakom drugom mlijeku, a ono nije potpun obrok.",
             "sv": "Den innehåller oftast mycket mindre laktos eller ingen alls, så den ger mer sällan magbesvär hos katten. Men fetthalten är ofta lika hög som i annan mjölk, och den är ingen komplett måltid.",
             "da": "Den indeholder som regel meget mindre laktose eller slet ingen, så der er mindre risiko for, at din kat bliver dårlig af den. Men fedtindholdet er ofte lige så højt som i anden mælk, og den er ikke et komplet måltid.",
-            "fi": "Siinä on yleensä paljon vähemmän laktoosia tai ei lainkaan, joten se sotkee kissan vatsan epätodennäköisemmin. Sen rasvapitoisuus on kuitenkin usein yhtä suuri kuin muissa maidoissa, eikä se ole täysipainoinen ateria."
+            "fi": "Siinä on yleensä paljon vähemmän laktoosia tai ei lainkaan, joten se sotkee kissan vatsan epätodennäköisemmin. Sen rasvapitoisuus on kuitenkin usein yhtä suuri kuin muissa maidoissa, eikä se ole täysipainoinen ateria.",
+            "fr": "Il contient généralement beaucoup moins de lactose, voire pas du tout, et risque donc moins de rendre votre chat malade. Mais sa teneur en graisses est souvent aussi élevée que celle de n’importe quel autre lait, et ce n’est pas un repas complet."
           }
         }
       ],
@@ -18857,7 +18905,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Nut butters (almond, walnut …)",
@@ -18871,7 +18920,8 @@
         "hr": "Maslaci od orašastih plodova (badem, orah …)",
         "sv": "Nötsmör (mandel, valnöt …)",
         "da": "Nøddesmør (mandel, valnød …)",
-        "fi": "Pähkinävoit (manteli, saksanpähkinä …)"
+        "fi": "Pähkinävoit (manteli, saksanpähkinä …)",
+        "fr": "Purées de fruits à coque (amande, noix…)"
       },
       "question": {
         "en": "Can cats eat nut butters?",
@@ -18885,7 +18935,8 @@
         "hr": "Smiju li mačke jesti maslace od orašastih plodova?",
         "sv": "Får katter äta nötsmör?",
         "da": "Må katte spise nøddesmør?",
-        "fi": "Saako kissa syödä pähkinävoita?"
+        "fi": "Saako kissa syödä pähkinävoita?",
+        "fr": "Les chats peuvent-ils manger de la purée de fruits à coque ?"
       },
       "url_slug": {
         "en": "nut-butters",
@@ -18899,7 +18950,8 @@
         "hr": "maslaci-od-orasastih-plodova",
         "sv": "notsmor",
         "da": "noddesmor",
-        "fi": "pahkinavoit"
+        "fi": "pahkinavoit",
+        "fr": "puree-de-fruits-a-coque"
       },
       "answer": {
         "en": "It's best not to. Nut butters are made from nuts, and nuts contain high amounts of oils and fats that can make a cat unwell, with vomiting or diarrhoea. Never give macadamia nut butter: macadamia nuts are toxic to cats.",
@@ -18913,7 +18965,8 @@
         "hr": "Bolje ne. Maslaci od orašastih plodova prave se od orašastih plodova, a oni sadrže velike količine ulja i masti zbog kojih mački može pozliti, a mogu izazvati i povraćanje ili proljev. Nikad ne daj maslac od makadamije: makadamija je otrovna za mačke.",
         "sv": "Helst inte. Nötsmör görs av nötter, och nötter innehåller mycket olja och fett, som kan göra katten dålig, med kräkningar eller diarré. Ge aldrig macadamianötsmör: macadamianötter är giftiga för katter.",
         "da": "Helst ikke. Nøddesmør er lavet af nødder, og nødder indeholder meget olie og fedt, som kan gøre en kat syg med opkast eller diarré. Giv aldrig macadamianøddesmør: macadamianødder er giftige for katte.",
-        "fi": "Parempi olla antamatta. Pähkinävoit on tehty pähkinöistä, joissa on paljon öljyjä ja rasvoja. Ne voivat tehdä kissan olon huonoksi ja aiheuttaa oksentelua tai ripulia. Älä koskaan anna makadamiapähkinävoita, sillä makadamiapähkinät ovat kissoille myrkyllisiä."
+        "fi": "Parempi olla antamatta. Pähkinävoit on tehty pähkinöistä, joissa on paljon öljyjä ja rasvoja. Ne voivat tehdä kissan olon huonoksi ja aiheuttaa oksentelua tai ripulia. Älä koskaan anna makadamiapähkinävoita, sillä makadamiapähkinät ovat kissoille myrkyllisiä.",
+        "fr": "Mieux vaut s’en abstenir. Les fruits à coque, et donc leurs purées, contiennent beaucoup d’huiles et de graisses, qui peuvent rendre un chat malade (vomissements, diarrhée). Ne donnez jamais de purée de noix de macadamia : les noix de macadamia sont toxiques pour les chats."
       },
       "why": {
         "en": "Cats Protection says nuts such as macadamia, almonds and walnuts contain high amounts of oils and fats which can make a cat unwell. VCA vets say most nuts are very fatty and can cause vomiting and diarrhoea, and that macadamia nuts are very fatty, can cause pancreatitis and are also toxic to cats. Cats Protection advises sticking to cat food treats rather than human foods.",
@@ -18927,7 +18980,8 @@
         "hr": "Cats Protection kaže da orašasti plodovi poput makadamije, badema i oraha sadrže velike količine ulja i masti zbog kojih mački može pozliti. Veterinari iz VCA-a kažu da je većina orašastih plodova vrlo masna i može izazvati povraćanje i proljev te da je makadamija vrlo masna, može izazvati upalu gušterače i otrovna je za mačke. Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke.",
         "sv": "Cats Protection skriver att nötter som macadamia, mandel och valnöt innehåller mycket olja och fett, som kan göra katten dålig. Veterinärerna på VCA skriver att de flesta nötter är mycket feta och kan ge kräkningar och diarré, och att macadamianötter är mycket feta, kan orsaka bukspottkörtelinflammation och dessutom är giftiga för katter. Cats Protection rekommenderar att du håller dig till kattgodis i stället för mat från matbordet.",
         "da": "Cats Protection skriver, at nødder som macadamia, mandler og valnødder indeholder meget olie og fedt, som kan gøre en kat utilpas. Dyrlægerne fra VCA skriver, at de fleste nødder er meget fede og kan give opkast og diarré, og at macadamianødder er meget fede, kan give betændelse i bugspytkirtlen og desuden er giftige for katte. Cats Protection anbefaler, at du holder dig til kattegodbidder i stedet for menneskemad.",
-        "fi": "Cats Protectionin mukaan pähkinät, kuten makadamiapähkinät, mantelit ja saksanpähkinät, sisältävät paljon öljyjä ja rasvoja, jotka voivat tehdä kissan olon huonoksi. VCA:n eläinlääkärit toteavat, että useimmat pähkinät ovat hyvin rasvaisia ja voivat aiheuttaa oksentelua ja ripulia ja että makadamiapähkinät ovat hyvin rasvaisia, voivat aiheuttaa haimatulehduksen ja ovat lisäksi kissoille myrkyllisiä. Cats Protection neuvoo antamaan kissalle vain kissanherkkuja eikä ihmisten ruokia."
+        "fi": "Cats Protectionin mukaan pähkinät, kuten makadamiapähkinät, mantelit ja saksanpähkinät, sisältävät paljon öljyjä ja rasvoja, jotka voivat tehdä kissan olon huonoksi. VCA:n eläinlääkärit toteavat, että useimmat pähkinät ovat hyvin rasvaisia ja voivat aiheuttaa oksentelua ja ripulia ja että makadamiapähkinät ovat hyvin rasvaisia, voivat aiheuttaa haimatulehduksen ja ovat lisäksi kissoille myrkyllisiä. Cats Protection neuvoo antamaan kissalle vain kissanherkkuja eikä ihmisten ruokia.",
+        "fr": "Cats Protection indique que les fruits à coque comme les noix de macadamia, les amandes et les noix contiennent beaucoup d’huiles et de graisses, qui peuvent rendre un chat malade. Les vétérinaires de VCA précisent que la plupart des fruits à coque sont très gras et peuvent provoquer des vomissements et de la diarrhée, et que les noix de macadamia sont très grasses, peuvent causer une pancréatite et sont aussi toxiques pour les chats. Cats Protection conseille de s’en tenir aux friandises pour chats plutôt qu’aux aliments pour humains."
       },
       "signs": {
         "en": [
@@ -18977,6 +19031,10 @@
         "fi": [
           "Oksentelu",
           "Ripuli"
+        ],
+        "fr": [
+          "Vomissements",
+          "Diarrhée"
         ]
       },
       "what_to_do": {
@@ -18991,7 +19049,8 @@
         "hr": "Ako je mačka pojela maslac od makadamije ili joj se nakon bilo kojeg maslaca od orašastih plodova čini da nije dobro, hitno zakaži pregled kod veterinara.",
         "sv": "Om katten åt macadamianötsmör, eller verkar må dåligt efter att ha ätit nötsmör, boka akut tid hos veterinären.",
         "da": "Hvis din kat har spist macadamianøddesmør eller virker utilpas efter at have spist nøddesmør, så bestil en akut tid hos din dyrlæge.",
-        "fi": "Jos kissasi on syönyt makadamiapähkinävoita tai vaikuttaa huonovointiselta minkä tahansa pähkinävoin jälkeen, varaa kiireellinen aika eläinlääkärille."
+        "fi": "Jos kissasi on syönyt makadamiapähkinävoita tai vaikuttaa huonovointiselta minkä tahansa pähkinävoin jälkeen, varaa kiireellinen aika eläinlääkärille.",
+        "fr": "Si votre chat a mangé de la purée de noix de macadamia, ou s’il semble malade après avoir mangé une purée de fruits à coque, consultez votre vétérinaire en urgence."
       },
       "serving": null,
       "child": {
@@ -19006,7 +19065,8 @@
         "hr": "Maslaci od orašastih plodova hrana su za ljude i previše su masni za mačji trbuščić. Maci radije daj njezine poslastice za mačke.",
         "sv": "Nötsmör är mat för människor och för oljigt för en katts mage. Ge katten sitt eget kattgodis i stället.",
         "da": "Nøddesmør er menneskemad og for fedtet til en kats mave. Giv hellere din kat dens egne kattegodbidder.",
-        "fi": "Pähkinävoi on ihmisten ruokaa ja liian öljyistä kissan masulle. Anna kissallesi mieluummin sen omia herkkuja."
+        "fi": "Pähkinävoi on ihmisten ruokaa ja liian öljyistä kissan masulle. Anna kissallesi mieluummin sen omia herkkuja.",
+        "fr": "Les purées de fruits à coque sont pour les humains et trop grasses pour le ventre d’un chat. Donne-lui plutôt ses propres friandises pour chats."
       },
       "faq": [
         {
@@ -19022,7 +19082,8 @@
             "hr": "A maslac od kikirikija?",
             "sv": "Hur är det med jordnötssmör?",
             "da": "Hvad med peanutbutter?",
-            "fi": "Entä maapähkinävoi?"
+            "fi": "Entä maapähkinävoi?",
+            "fr": "Et le beurre de cacahuète ?"
           },
           "a": {
             "en": "Peanut butter has its own page. VCA vets say any peanut butter must be free of preservatives and life-threatening additives such as xylitol.",
@@ -19036,7 +19097,8 @@
             "hr": "Maslac od kikirikija ima vlastitu stranicu. Veterinari iz VCA-a kažu da svaki maslac od kikirikija mora biti bez konzervansa i dodataka opasnih po život, kao što je ksilitol.",
             "sv": "Jordnötssmör har en egen sida. Veterinärerna på VCA skriver att allt jordnötssmör måste vara fritt från konserveringsmedel och livsfarliga tillsatser som xylitol.",
             "da": "Peanutbutter har sin egen side. Dyrlægerne fra VCA skriver, at al peanutbutter skal være fri for konserveringsmidler og livsfarlige tilsætningsstoffer som xylitol.",
-            "fi": "Maapähkinävoista meillä on oma sivu. VCA:n eläinlääkärien mukaan maapähkinävoissa ei saa olla säilöntäaineita eikä hengenvaarallisia lisäaineita, kuten ksylitolia."
+            "fi": "Maapähkinävoista meillä on oma sivu. VCA:n eläinlääkärien mukaan maapähkinävoissa ei saa olla säilöntäaineita eikä hengenvaarallisia lisäaineita, kuten ksylitolia.",
+            "fr": "Le beurre de cacahuète a sa propre page. Les vétérinaires de VCA précisent que tout beurre de cacahuète doit être exempt de conservateurs et d’additifs pouvant mettre la vie en danger, comme le xylitol."
           }
         }
       ],
@@ -29129,7 +29191,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Water",
@@ -29143,7 +29206,8 @@
         "hr": "Voda",
         "sv": "Vatten",
         "da": "Vand",
-        "fi": "Vesi"
+        "fi": "Vesi",
+        "fr": "Eau"
       },
       "question": {
         "en": "What should cats drink?",
@@ -29157,7 +29221,8 @@
         "hr": "Što bi mačke trebale piti?",
         "sv": "Vad ska katter dricka?",
         "da": "Hvad skal katte drikke?",
-        "fi": "Mitä kissan pitäisi juoda?"
+        "fi": "Mitä kissan pitäisi juoda?",
+        "fr": "Que doivent boire les chats ?"
       },
       "url_slug": {
         "en": "water",
@@ -29171,7 +29236,8 @@
         "hr": "voda",
         "sv": "vatten",
         "da": "vand",
-        "fi": "vesi"
+        "fi": "vesi",
+        "fr": "eau"
       },
       "answer": {
         "en": "Water. Plain, fresh water is the best drink for adult cats, and your cat should have it available at all times and be able to drink as much as it wants. Cats don't need anything else to drink.",
@@ -29185,7 +29251,8 @@
         "hr": "Voda. Obična svježa voda najbolje je piće za odrasle mačke; mačka bi uvijek trebala imati pristup vodi i moći piti koliko želi. Mačkama ne treba nikakvo drugo piće.",
         "sv": "Vatten. Rent, färskt vatten är den bästa drycken för vuxna katter, och katten ska alltid ha tillgång till det och kunna dricka så mycket den vill. Något annat behöver katter inte dricka.",
         "da": "Vand. Almindeligt, friskt vand er den bedste drik til voksne katte, og din kat skal have det til rådighed hele tiden og kunne drikke så meget, den vil. Katte har ikke brug for andet at drikke.",
-        "fi": "Vettä. Tavallinen raikas vesi on aikuiselle kissalle paras juoma, ja sitä pitää olla koko ajan tarjolla niin paljon kuin kissa haluaa. Muuta juotavaa kissa ei tarvitse."
+        "fi": "Vettä. Tavallinen raikas vesi on aikuiselle kissalle paras juoma, ja sitä pitää olla koko ajan tarjolla niin paljon kuin kissa haluaa. Muuta juotavaa kissa ei tarvitse.",
+        "fr": "De l’eau. L’eau nature et fraîche est la meilleure boisson pour un chat adulte : il doit pouvoir en disposer à tout moment et boire autant qu’il le souhaite. Les chats n’ont besoin d’aucune autre boisson."
       },
       "why": {
         "en": "Water helps keep a cat's kidneys working and its organs in good order, and helping cats avoid becoming dehydrated is a very important part of keeping them healthy. Cats Protection and PDSA both say water is the only drink a cat needs.",
@@ -29199,7 +29266,8 @@
         "hr": "Voda pomaže bubrezima mačke da rade i održava njezine organe zdravima, a sprječavanje dehidracije vrlo je važan dio brige za mačje zdravlje. I Cats Protection i PDSA kažu da je voda jedino piće koje mački treba.",
         "sv": "Vatten hjälper njurarna att fungera och håller kattens organ i gott skick. Att förebygga uttorkning är en mycket viktig del av att hålla katter friska. Cats Protection och PDSA skriver båda att vatten är den enda dryck en katt behöver.",
         "da": "Vand hjælper nyrerne med at fungere og holder kattens organer i god stand. At hjælpe katte med at undgå dehydrering er en meget vigtig del af at holde dem sunde. Cats Protection og PDSA skriver begge, at vand er den eneste drik, en kat har brug for.",
-        "fi": "Vesi auttaa pitämään kissan munuaiset ja muut elimet kunnossa, ja nestehukan ehkäiseminen on tärkeä osa kissan terveydenhoitoa. Cats Protection ja PDSA toteavat molemmat, että vesi on ainoa juoma, jota kissa tarvitsee."
+        "fi": "Vesi auttaa pitämään kissan munuaiset ja muut elimet kunnossa, ja nestehukan ehkäiseminen on tärkeä osa kissan terveydenhoitoa. Cats Protection ja PDSA toteavat molemmat, että vesi on ainoa juoma, jota kissa tarvitsee.",
+        "fr": "L’eau aide les reins du chat et ses autres organes à bien fonctionner ; veiller à ce que le chat ne se déshydrate pas est essentiel pour le garder en bonne santé. Cats Protection et PDSA affirment tous deux que l’eau est la seule boisson dont un chat a besoin."
       },
       "signs": null,
       "what_to_do": {
@@ -29214,7 +29282,8 @@
         "hr": "Ako sumnjaš da je mačka dehidrirana, na primjer djeluje bezvoljno ili malaksalo, slabo jede ili ima suhe desni, bez odlaganja se obrati veterinaru.",
         "sv": "Om du är orolig för att katten är uttorkad, till exempel om den verkar slö eller svag, har dålig aptit eller torrt tandkött, kontakta veterinären snabbt.",
         "da": "Hvis du er bekymret for, at din kat er dehydreret, for eksempel fordi den virker sløv eller svag, har dårlig appetit eller tørt tandkød, så kontakt en dyrlæge hurtigst muligt.",
-        "fi": "Jos olet huolissasi kissasi nestehukasta, esimerkiksi jos kissa on veltto tai heikko, ruoka ei maistu tai ikenet ovat kuivat, ota pian yhteyttä eläinlääkäriin."
+        "fi": "Jos olet huolissasi kissasi nestehukasta, esimerkiksi jos kissa on veltto tai heikko, ruoka ei maistu tai ikenet ovat kuivat, ota pian yhteyttä eläinlääkäriin.",
+        "fr": "Si vous craignez que votre chat soit déshydraté, par exemple s’il semble apathique ou faible, mange peu ou a les gencives sèches, contactez rapidement votre vétérinaire."
       },
       "serving": {
         "en": "Keep fresh water where your cat can easily reach it and replace it at least once a day. Several bowls around the home, cleaned regularly and placed away from the food bowl, help, and some cats drink more from a water fountain.",
@@ -29228,7 +29297,8 @@
         "hr": "Svježu vodu drži na mjestu do kojeg mačka lako dolazi i mijenjaj je barem jednom dnevno. Pomaže ako je po kući postavljeno više redovito opranih zdjelica, podalje od zdjelice s hranom, a neke mačke više piju s fontane.",
         "sv": "Ha färskt vatten där katten lätt kommer åt det och byt det minst en gång om dagen. Flera vattenskålar runt om i hemmet hjälper, om de rengörs regelbundet och står en bit från matskålen. Vissa katter dricker också mer ur en vattenfontän.",
         "da": "Sørg for, at der er friskt vand, hvor din kat let kan nå det, og skift det mindst én gang om dagen. Flere skåle rundt omkring i hjemmet, som rengøres jævnligt og står et stykke fra madskålen, hjælper, og nogle katte drikker mere af en drikkefontæne.",
-        "fi": "Pidä raikasta vettä paikassa, johon kissa pääsee helposti, ja vaihda se vähintään kerran päivässä. Auttaa, jos kotona on useita vesikuppeja, jotka puhdistetaan säännöllisesti ja sijoitetaan kauas ruokakupista. Osa kissoista juo enemmän juomalähteestä."
+        "fi": "Pidä raikasta vettä paikassa, johon kissa pääsee helposti, ja vaihda se vähintään kerran päivässä. Auttaa, jos kotona on useita vesikuppeja, jotka puhdistetaan säännöllisesti ja sijoitetaan kauas ruokakupista. Osa kissoista juo enemmän juomalähteestä.",
+        "fr": "Placez de l’eau fraîche à un endroit facile d’accès pour votre chat et changez-la au moins une fois par jour. Plusieurs bols répartis dans la maison, nettoyés régulièrement et éloignés de la gamelle de nourriture, sont utiles, et certains chats boivent davantage à une fontaine à eau."
       },
       "child": {
         "en": "Fresh water is the best drink for a cat! You can help by checking that kitty's water bowl is clean and full.",
@@ -29242,7 +29312,8 @@
         "hr": "Svježa voda najbolje je piće za mačku! Možeš pomoći tako da provjeriš je li mačja zdjelica s vodom čista i puna.",
         "sv": "Färskt vatten är den bästa drycken för en katt! Du kan hjälpa till genom att kolla att kattens vattenskål är ren och full.",
         "da": "Friskt vand er den bedste drik til en kat! Du kan hjælpe ved at tjekke, at kattens vandskål er ren og fuld.",
-        "fi": "Raikas vesi on kissan paras juoma! Voit auttaa tarkistamalla, että kisun vesikuppi on puhdas ja täynnä."
+        "fi": "Raikas vesi on kissan paras juoma! Voit auttaa tarkistamalla, että kisun vesikuppi on puhdas ja täynnä.",
+        "fr": "L’eau fraîche est la meilleure boisson pour un chat ! Tu peux aider en vérifiant que son bol d’eau est propre et plein."
       },
       "faq": [
         {
@@ -29258,7 +29329,8 @@
             "hr": "Kako mogu pomoći mački da pije više?",
             "sv": "Hur kan jag få min katt att dricka mer?",
             "da": "Hvordan kan jeg få min kat til at drikke mere?",
-            "fi": "Miten saan kissani juomaan enemmän?"
+            "fi": "Miten saan kissani juomaan enemmän?",
+            "fr": "Comment inciter mon chat à boire davantage ?"
           },
           "a": {
             "en": "Put several clean water bowls around the home, away from the food bowl. Some cats drink more from a fountain, and wet food or water added to food also increases how much water they take in.",
@@ -29272,7 +29344,8 @@
             "hr": "Postavi nekoliko čistih zdjelica s vodom po kući, podalje od zdjelice s hranom. Neke mačke više piju s fontane, a mokra hrana ili voda dodana hrani također povećavaju unos vode.",
             "sv": "Sätt ut flera rena vattenskålar runt om i hemmet, en bit från matskålen. Vissa katter dricker mer ur en vattenfontän, och blötmat eller vatten i maten ökar också hur mycket vatten de får i sig.",
             "da": "Sæt flere rene vandskåle rundt omkring i hjemmet, et stykke fra madskålen. Nogle katte drikker mere af en drikkefontæne, og vådfoder eller vand i maden øger også, hvor meget vand de får i sig.",
-            "fi": "Laita kodin eri puolille useita puhtaita vesikuppeja, kauas ruokakupista. Osa kissoista juo enemmän juomalähteestä, ja myös märkäruoka tai ruokaan lisätty vesi lisää nesteen saantia."
+            "fi": "Laita kodin eri puolille useita puhtaita vesikuppeja, kauas ruokakupista. Osa kissoista juo enemmän juomalähteestä, ja myös märkäruoka tai ruokaan lisätty vesi lisää nesteen saantia.",
+            "fr": "Placez plusieurs bols d’eau propres dans la maison, à l’écart de la gamelle de nourriture. Certains chats boivent davantage à une fontaine, et les aliments humides ou l’eau ajoutée à la nourriture augmentent aussi l’apport en eau."
           }
         },
         {
@@ -29288,7 +29361,8 @@
             "hr": "Treba li mačkama i mlijeko?",
             "sv": "Behöver katter mjölk också?",
             "da": "Har katte også brug for mælk?",
-            "fi": "Tarvitsevatko kissat myös maitoa?"
+            "fi": "Tarvitsevatko kissat myös maitoa?",
+            "fr": "Les chats ont-ils aussi besoin de lait ?"
           },
           "a": {
             "en": "No. Cats Protection says the best thing for adult cats to drink is water and that they don't need anything else to stay healthy.",
@@ -29302,7 +29376,8 @@
             "hr": "Ne. Cats Protection kaže da je za odrasle mačke najbolje piće voda i da im ne treba ništa drugo da bi ostale zdrave.",
             "sv": "Nej. Cats Protection skriver att det bästa för vuxna katter att dricka är vatten och att de inte behöver något annat för att hålla sig friska.",
             "da": "Nej. Cats Protection skriver, at det bedste, voksne katte kan drikke, er vand, og at de ikke har brug for andet for at holde sig sunde.",
-            "fi": "Eivät. Cats Protectionin mukaan aikuiselle kissalle paras juoma on vesi, eivätkä kissat tarvitse terveenä pysyäkseen mitään muuta."
+            "fi": "Eivät. Cats Protectionin mukaan aikuiselle kissalle paras juoma on vesi, eivätkä kissat tarvitse terveenä pysyäkseen mitään muuta.",
+            "fr": "Non. Cats Protection indique que la meilleure boisson pour les chats adultes est l’eau et qu’ils n’ont besoin de rien d’autre pour rester en bonne santé."
           }
         }
       ],
@@ -39018,7 +39093,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Chickpeas",
@@ -39032,7 +39108,8 @@
         "hr": "Slanutak",
         "sv": "Kikärtor",
         "da": "Kikærter",
-        "fi": "Kikherneet"
+        "fi": "Kikherneet",
+        "fr": "Pois chiches"
       },
       "question": {
         "en": "Can dogs eat chickpeas?",
@@ -39046,7 +39123,8 @@
         "hr": "Smiju li psi jesti slanutak?",
         "sv": "Får hundar äta kikärtor?",
         "da": "Må hunde spise kikærter?",
-        "fi": "Saako koira syödä kikherneitä?"
+        "fi": "Saako koira syödä kikherneitä?",
+        "fr": "Les chiens peuvent-ils manger des pois chiches ?"
       },
       "url_slug": {
         "en": "chickpeas",
@@ -39060,7 +39138,8 @@
         "hr": "slanutak",
         "sv": "kikartor",
         "da": "kikaerter",
-        "fi": "kikherneet"
+        "fi": "kikherneet",
+        "fr": "pois-chiches"
       },
       "answer": {
         "en": "Yes, in moderation, if they are thoroughly cooked. Freshly cooked chickpeas (garbanzo beans) can be a treat for dogs. Dry chickpeas are a choking hazard, canned ones are usually salty, and hummus is not safe for dogs.",
@@ -39074,7 +39153,8 @@
         "hr": "Da, umjereno, ako je temeljito kuhan. Svježe kuhan slanutak može biti poslastica za pse. Suh slanutak može izazvati gušenje, konzervirani je obično slan, a humus nije siguran za pse.",
         "sv": "Ja, i måttliga mängder, om de är ordentligt kokta. Nykokta kikärtor kan vara en godbit för hundar. Torra kikärtor kan orsaka kvävning, kikärtor på burk är oftast salta och hummus är inte ofarligt för hundar.",
         "da": "Ja, i moderate mængder, hvis de er grundigt tilberedt. Nytilberedte kikærter kan være en godbid til hunde. Tørre kikærter kan sætte sig fast i halsen, kikærter på dåse er som regel salte, og hummus er ikke sikker for hunde.",
-        "fi": "Saa, kohtuudella, jos ne on keitetty kunnolla. Vastakeitetyt kikherneet voivat olla koiralle herkku. Kuivat kikherneet ovat tukehtumisvaara, säilykekikherneet ovat yleensä suolaisia, eikä humus ole koiralle turvallista."
+        "fi": "Saa, kohtuudella, jos ne on keitetty kunnolla. Vastakeitetyt kikherneet voivat olla koiralle herkku. Kuivat kikherneet ovat tukehtumisvaara, säilykekikherneet ovat yleensä suolaisia, eikä humus ole koiralle turvallista.",
+        "fr": "Oui, avec modération, s’ils sont bien cuits. Les pois chiches fraîchement cuits peuvent être une friandise pour les chiens. Les pois chiches secs présentent un risque d’étouffement, ceux en conserve sont généralement salés, et le houmous n’est pas sans danger pour les chiens."
       },
       "why": {
         "en": "Chickpeas are legumes, a good source of fibre and protein for dogs, but some dogs have trouble digesting them, so they should be cooked well and introduced slowly. Dry chickpeas are much harder to digest. Canned chickpeas usually contain a lot of sodium, which is not healthy for dogs. Like other beans, chickpeas may give your dog some gas.",
@@ -39088,7 +39168,8 @@
         "hr": "Slanutak je mahunarka, dobar izvor vlakana i bjelančevina za pse, ali neki ga psi teško probavljaju, pa ga treba dobro skuhati i uvoditi postupno. Suh slanutak mnogo je teže probavljiv. Konzerviran slanutak obično sadrži mnogo natrija, što nije zdravo za pse. Kao i grah, slanutak može izazvati plinove kod psa.",
         "sv": "Kikärtor är baljväxter och en bra källa till fibrer och protein för hundar, men vissa hundar har svårt att smälta dem, så de ska kokas ordentligt och införas långsamt. Torra kikärtor är mycket svårare att smälta. Kikärtor på burk innehåller oftast mycket natrium, vilket inte är nyttigt för hundar. Precis som andra bönor kan kikärtor ge hunden lite gaser.",
         "da": "Kikærter er bælgfrugter og en god kilde til fibre og protein for hunde, men nogle hunde har svært ved at fordøje dem, så de skal tilberedes grundigt og indføres langsomt. Tørre kikærter er meget sværere at fordøje. Kikærter på dåse indeholder som regel meget natrium, hvilket ikke er sundt for hunde. Som andre bønner kan kikærter give din hund lidt luft i maven.",
-        "fi": "Kikherneet ovat palkokasveja ja hyvä kuidun ja proteiinin lähde koirille, mutta osan koirien on vaikea sulattaa niitä, joten ne on keitettävä hyvin ja otettava ruokavalioon vähitellen. Kuivat kikherneet ovat paljon vaikeammin sulavia. Säilykekikherneissä on yleensä paljon natriumia, mikä ei ole koirille terveellistä. Kuten muut pavut, kikherneet voivat aiheuttaa koiralle ilmavaivoja."
+        "fi": "Kikherneet ovat palkokasveja ja hyvä kuidun ja proteiinin lähde koirille, mutta osan koirien on vaikea sulattaa niitä, joten ne on keitettävä hyvin ja otettava ruokavalioon vähitellen. Kuivat kikherneet ovat paljon vaikeammin sulavia. Säilykekikherneissä on yleensä paljon natriumia, mikä ei ole koirille terveellistä. Kuten muut pavut, kikherneet voivat aiheuttaa koiralle ilmavaivoja.",
+        "fr": "Les pois chiches sont des légumineuses, une bonne source de fibres et de protéines pour les chiens, mais certains les digèrent mal : il faut donc bien les cuire et les introduire progressivement. Les pois chiches secs sont beaucoup plus difficiles à digérer. Ceux en conserve contiennent généralement beaucoup de sodium, ce qui n’est pas bon pour la santé des chiens. Comme les autres légumineuses, les pois chiches peuvent provoquer des gaz chez votre chien."
       },
       "signs": null,
       "what_to_do": {
@@ -39103,7 +39184,8 @@
         "hr": "Kuhan slanutak uvodi postupno. Ako koristiš konzerviran slanutak, odaberi onaj s malo natrija i dobro ga isperi kako bi se uklonilo što više soli.",
         "sv": "Inför kokta kikärtor långsamt. Om du använder kikärtor på burk, välj en natriumsnål sort och skölj dem noga för att få bort så mycket salt som möjligt.",
         "da": "Indfør tilberedte kikærter langsomt. Hvis du bruger kikærter på dåse, så vælg en variant med lavt natriumindhold, og skyl dem grundigt for at fjerne så meget salt som muligt.",
-        "fi": "Aloita keitetyillä kikherneillä vähitellen. Jos käytät säilykekikherneitä, valitse vähäsuolainen vaihtoehto ja huuhtele kikherneet hyvin, jotta mahdollisimman paljon suolaa lähtee pois."
+        "fi": "Aloita keitetyillä kikherneillä vähitellen. Jos käytät säilykekikherneitä, valitse vähäsuolainen vaihtoehto ja huuhtele kikherneet hyvin, jotta mahdollisimman paljon suolaa lähtee pois.",
+        "fr": "Introduisez progressivement les pois chiches cuits. Si vous utilisez des pois chiches en conserve, choisissez-les à faible teneur en sodium et rincez-les bien pour éliminer le plus de sel possible."
       },
       "serving": {
         "en": "Soaked and thoroughly cooked until soft, in moderation; canned only low-sodium and well rinsed.",
@@ -39117,7 +39199,8 @@
         "hr": "Namočen i temeljito kuhan do mekoće, u umjerenim količinama; konzerviran samo s malo natrija i dobro ispran.",
         "sv": "Blötlagda och kokta tills de är mjuka, i måttliga mängder; kikärtor på burk bara om de är natriumsnåla och noga sköljda.",
         "da": "Udblødte og grundigt tilberedte, til de er bløde, i moderate mængder; kikærter på dåse kun med lavt natriumindhold og grundigt skyllede.",
-        "fi": "Liotettuina ja keitettyinä kunnolla pehmeiksi, kohtuudella; säilykkeinä vain vähäsuolaisia ja hyvin huuhdeltuja."
+        "fi": "Liotettuina ja keitettyinä kunnolla pehmeiksi, kohtuudella; säilykkeinä vain vähäsuolaisia ja hyvin huuhdeltuja.",
+        "fr": "Trempés, puis cuits jusqu’à être tendres, avec modération ; en conserve, uniquement à faible teneur en sodium et bien rincés."
       },
       "child": {
         "en": "Soft, cooked chickpeas can be a little treat for dogs, but they might make your dog a bit windy!",
@@ -39131,7 +39214,8 @@
         "hr": "Mekan kuhani slanutak može biti mala poslastica za pse, ali psu može izazvati i malo vjetrova!",
         "sv": "Mjuka, kokta kikärtor kan vara en liten godbit för hundar, men din hund kan bli lite pruttig!",
         "da": "Bløde, kogte kikærter kan være en lille godbid til hunde, men din hund kan komme til at prutte lidt!",
-        "fi": "Pehmeät keitetyt kikherneet voivat olla koiralle pieni herkku, mutta koirasi voi alkaa niistä hieman pierrellä!"
+        "fi": "Pehmeät keitetyt kikherneet voivat olla koiralle pieni herkku, mutta koirasi voi alkaa niistä hieman pierrellä!",
+        "fr": "Les pois chiches cuits et bien tendres peuvent être une petite friandise pour les chiens, mais ils risquent de leur donner des gaz !"
       },
       "faq": [
         {
@@ -39147,7 +39231,8 @@
             "hr": "Smiju li psi jesti humus?",
             "sv": "Får hundar äta hummus?",
             "da": "Må hunde spise hummus?",
-            "fi": "Saako koira syödä humusta?"
+            "fi": "Saako koira syödä humusta?",
+            "fr": "Les chiens peuvent-ils manger du houmous ?"
           },
           "a": {
             "en": "No. Hummus contains other ingredients that are not dog-friendly, including garlic, onion and spices.",
@@ -39161,7 +39246,8 @@
             "hr": "Ne. Humus sadrži druge sastojke koji nisu dobri za pse, uključujući češnjak, luk i začine.",
             "sv": "Nej. Hummus innehåller andra ingredienser som inte passar hundar, bland annat vitlök, lök och kryddor.",
             "da": "Nej. Hummus indeholder andre ingredienser, der ikke er hundevenlige, blandt andet hvidløg, løg og krydderier.",
-            "fi": "Ei saa. Humuksessa on muitakin ainesosia, jotka eivät sovi koirille, kuten valkosipulia, sipulia ja mausteita."
+            "fi": "Ei saa. Humuksessa on muitakin ainesosia, jotka eivät sovi koirille, kuten valkosipulia, sipulia ja mausteita.",
+            "fr": "Non. Le houmous contient d’autres ingrédients que les chiens ne supportent pas, notamment de l’ail, de l’oignon et des épices."
           }
         },
         {
@@ -39177,7 +39263,8 @@
             "hr": "Smiju li psi jesti suh slanutak?",
             "sv": "Får hundar äta torra kikärtor?",
             "da": "Må hunde spise tørre kikærter?",
-            "fi": "Saako koira syödä kuivia kikherneitä?"
+            "fi": "Saako koira syödä kuivia kikherneitä?",
+            "fr": "Les chiens peuvent-ils manger des pois chiches secs ?"
           },
           "a": {
             "en": "No. Dry chickpeas can be a choking hazard and are much harder for dogs to digest; cook them thoroughly first.",
@@ -39191,7 +39278,8 @@
             "hr": "Ne. Suh slanutak može izazvati gušenje, a psi ga mnogo teže probavljaju, zato ga prvo temeljito skuhaj.",
             "sv": "Nej. Torra kikärtor kan orsaka kvävning och är mycket svårare för hundar att smälta. Koka dem ordentligt först.",
             "da": "Nej. Tørre kikærter kan sætte sig fast i halsen og er meget sværere for hunde at fordøje; tilbered dem først grundigt.",
-            "fi": "Ei saa. Kuivat kikherneet voivat aiheuttaa tukehtumisvaaran ja ovat koiralle paljon vaikeammin sulavia. Keitä ne ensin kunnolla."
+            "fi": "Ei saa. Kuivat kikherneet voivat aiheuttaa tukehtumisvaaran ja ovat koiralle paljon vaikeammin sulavia. Keitä ne ensin kunnolla.",
+            "fr": "Non. Les pois chiches secs présentent un risque d’étouffement et sont beaucoup plus difficiles à digérer pour les chiens ; faites-les d’abord bien cuire."
           }
         }
       ],
@@ -52208,7 +52296,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Lactose-free milk",
@@ -52222,7 +52311,8 @@
         "hr": "Mlijeko bez laktoze",
         "sv": "Laktosfri mjölk",
         "da": "Laktosefri mælk",
-        "fi": "Laktoositon maito"
+        "fi": "Laktoositon maito",
+        "fr": "Lait sans lactose"
       },
       "question": {
         "en": "Can dogs drink lactose-free milk?",
@@ -52236,7 +52326,8 @@
         "hr": "Smiju li psi piti mlijeko bez laktoze?",
         "sv": "Får hundar dricka laktosfri mjölk?",
         "da": "Må hunde drikke laktosefri mælk?",
-        "fi": "Saako koira juoda laktoositonta maitoa?"
+        "fi": "Saako koira juoda laktoositonta maitoa?",
+        "fr": "Les chiens peuvent-ils boire du lait sans lactose ?"
       },
       "url_slug": {
         "en": "lactose-free-milk",
@@ -52250,7 +52341,8 @@
         "hr": "mlijeko-bez-laktoze",
         "sv": "laktosfri-mjolk",
         "da": "laktosefri-maelk",
-        "fi": "laktoositon-maito"
+        "fi": "laktoositon-maito",
+        "fr": "lait-sans-lactose"
       },
       "answer": {
         "en": "Only a little, and it isn't needed. Some dogs may tolerate small amounts of lactose-free milk, but dogs on a good, balanced diet don't need it, and it can still upset the stomach of dogs allergic to milk protein.",
@@ -52264,7 +52356,8 @@
         "hr": "Samo malo, a nije ni potrebno. Neki psi možda podnose male količine mlijeka bez laktoze, ali psima na dobroj, uravnoteženoj prehrani ono ne treba, a kod pasa alergičnih na mliječne bjelančevine i dalje može izazvati probavne tegobe.",
         "sv": "Bara lite, och den behövs inte. Vissa hundar tål små mängder laktosfri mjölk, men hundar som får en bra och balanserad kost behöver den inte. Hos hundar som är allergiska mot mjölkprotein kan den dessutom ge orolig mage.",
         "da": "Kun lidt, og det er ikke nødvendigt. Nogle hunde kan tåle små mængder laktosefri mælk, men hunde, der får en god og afbalanceret kost, har ikke brug for den, og den kan stadig give ondt i maven hos hunde, der er allergiske over for mælkeprotein.",
-        "fi": "Saa, mutta vain vähän, eikä koira sitä tarvitse. Osa koirista sietää pieniä määriä laktoositonta maitoa, mutta hyvin ja monipuolisesti ruokitut koirat eivät sitä tarvitse, ja maitoproteiinille allergisen koiran vatsa voi silti mennä siitä sekaisin."
+        "fi": "Saa, mutta vain vähän, eikä koira sitä tarvitse. Osa koirista sietää pieniä määriä laktoositonta maitoa, mutta hyvin ja monipuolisesti ruokitut koirat eivät sitä tarvitse, ja maitoproteiinille allergisen koiran vatsa voi silti mennä siitä sekaisin.",
+        "fr": "Seulement un peu, et ce n’est pas nécessaire. Certains chiens tolèrent de petites quantités de lait sans lactose, mais un chien qui a une alimentation équilibrée de qualité n’en a pas besoin, et ce lait peut malgré tout donner mal au ventre aux chiens allergiques aux protéines du lait."
       },
       "why": {
         "en": "Lactose-free milk has the same nutrients as regular milk but without the lactose that can cause digestive problems, and a vet hospital calls it a suitable alternative for lactose-intolerant dogs. The Australian Veterinary Association is stricter: it is not necessary for dogs on a balanced diet and can still cause stomach problems linked to milk-protein allergy, so we follow the stricter view: only a little.",
@@ -52278,7 +52371,8 @@
         "hr": "Mlijeko bez laktoze ima iste hranjive tvari kao obično mlijeko, ali bez laktoze, koja može izazvati probavne tegobe, a jedna ga veterinarska bolnica smatra prikladnom zamjenom za pse koji ne podnose laktozu. Australsko veterinarsko udruženje strože je: kaže da psima na uravnoteženoj prehrani nije potrebno te da i dalje može izazvati želučane tegobe povezane s alergijom na mliječne bjelančevine, pa se držimo strožeg stajališta: samo malo.",
         "sv": "Laktosfri mjölk innehåller samma näringsämnen som vanlig mjölk, men utan den laktos som kan ge matsmältningsproblem, och ett djursjukhus beskriver den som ett lämpligt alternativ för laktosintoleranta hundar. Den australiska veterinärföreningen Australian Veterinary Association är striktare: enligt den behövs mjölken inte för hundar som får en balanserad kost, och den kan ändå ge magproblem som hänger ihop med allergi mot mjölkprotein. Vi följer den strängare bedömningen: bara lite.",
         "da": "Laktosefri mælk indeholder de samme næringsstoffer som almindelig mælk, men uden den laktose, der kan give fordøjelsesproblemer, og et dyrehospital kalder den et passende alternativ til hunde med laktoseintolerans. Den australske dyrlægeforening (Australian Veterinary Association) er strengere: den er ikke nødvendig for hunde på en afbalanceret kost og kan stadig give maveproblemer, der hænger sammen med allergi over for mælkeprotein. Vi følger den strengere vurdering: kun lidt.",
-        "fi": "Laktoosittomassa maidossa on samat ravintoaineet kuin tavallisessa maidossa, mutta siinä ei ole ruoansulatusongelmia aiheuttavaa laktoosia, ja yksi eläinsairaala pitää sitä sopivana vaihtoehtona laktoosi-intoleranteille koirille. Australian eläinlääkäriliitto suhtautuu tiukemmin: sen mukaan maito ei ole tarpeen tasapainoisella ruokavaliolla olevalle koiralle, ja se voi silti aiheuttaa vatsaongelmia maitoproteiinille allergiselle koiralle. Noudatamme tiukempaa kantaa: vain vähän."
+        "fi": "Laktoosittomassa maidossa on samat ravintoaineet kuin tavallisessa maidossa, mutta siinä ei ole ruoansulatusongelmia aiheuttavaa laktoosia, ja yksi eläinsairaala pitää sitä sopivana vaihtoehtona laktoosi-intoleranteille koirille. Australian eläinlääkäriliitto suhtautuu tiukemmin: sen mukaan maito ei ole tarpeen tasapainoisella ruokavaliolla olevalle koiralle, ja se voi silti aiheuttaa vatsaongelmia maitoproteiinille allergiselle koiralle. Noudatamme tiukempaa kantaa: vain vähän.",
+        "fr": "Le lait sans lactose contient les mêmes nutriments que le lait ordinaire, mais pas le lactose, qui peut causer des troubles digestifs, et une clinique vétérinaire le juge adapté aux chiens intolérants au lactose. L’Australian Veterinary Association est plus stricte : il n’est pas nécessaire pour les chiens qui ont une alimentation équilibrée et peut encore provoquer des troubles digestifs liés à l’allergie aux protéines du lait. Nous retenons donc l’avis le plus strict : seulement un peu."
       },
       "signs": null,
       "what_to_do": {
@@ -52293,7 +52387,8 @@
         "hr": "Ako pas nakon mlijeka dobije proljev, povraćanje, plinove ili nadutost koji ne prolaze, obrati se veterinaru.",
         "sv": "Om hunden får diarré, kräkningar, gaser eller uppblåst mage av mjölk och det inte går över, kontakta veterinären.",
         "da": "Hvis din hund får diarré, opkast, luft i maven eller oppustethed efter at have fået mælk, og det ikke går over, så kontakt din dyrlæge.",
-        "fi": "Jos koirasi saa maidosta ripulin, oksentelua, ilmavaivoja tai turvotusta, eivätkä oireet mene ohi, ota yhteyttä eläinlääkäriin."
+        "fi": "Jos koirasi saa maidosta ripulin, oksentelua, ilmavaivoja tai turvotusta, eivätkä oireet mene ohi, ota yhteyttä eläinlääkäriin.",
+        "fr": "Si, après avoir bu du lait, votre chien a de la diarrhée, des vomissements, des gaz ou le ventre gonflé et que cela ne passe pas, contactez votre vétérinaire."
       },
       "serving": {
         "en": "Start with a small amount, ideally a lactose-free milk made for dogs, and watch for tummy upset.",
@@ -52307,7 +52402,8 @@
         "hr": "Počni s malom količinom, najbolje mlijekom bez laktoze namijenjenim psima, i pazi pojavljuju li se probavne tegobe.",
         "sv": "Börja med en liten mängd, helst laktosfri mjölk som är gjord för hundar, och håll utkik efter magbesvär.",
         "da": "Start med en lille mængde, helst laktosefri mælk lavet til hunde, og hold øje med, om maven reagerer.",
-        "fi": "Aloita pienellä määrällä, mieluiten koirille tarkoitetulla laktoosittomalla maidolla, ja tarkkaile, tuleeko vatsavaivoja."
+        "fi": "Aloita pienellä määrällä, mieluiten koirille tarkoitetulla laktoosittomalla maidolla, ja tarkkaile, tuleeko vatsavaivoja.",
+        "fr": "Commencez par une petite quantité, de préférence d’un lait sans lactose conçu pour les chiens, et surveillez l’apparition de maux de ventre."
       },
       "child": {
         "en": "Dogs don't need milk to stay healthy, so ask a grown-up before sharing any with your dog.",
@@ -52321,7 +52417,8 @@
         "hr": "Psima mlijeko ne treba da bi ostali zdravi, zato prije nego što ga podijeliš sa psom pitaj odraslu osobu.",
         "sv": "Hundar behöver inte mjölk för att hålla sig friska, så fråga en vuxen innan du ger din hund mjölk.",
         "da": "Hunde har ikke brug for mælk for at holde sig sunde, så spørg en voksen, før du deler mælk med din hund.",
-        "fi": "Koirat eivät tarvitse maitoa pysyäkseen terveinä, joten kysy ensin aikuiselta, saako koiralle antaa sitä."
+        "fi": "Koirat eivät tarvitse maitoa pysyäkseen terveinä, joten kysy ensin aikuiselta, saako koiralle antaa sitä.",
+        "fr": "Les chiens n’ont pas besoin de lait pour rester en bonne santé : demande donc à un adulte avant d’en partager avec ton chien."
       },
       "faq": [
         {
@@ -52337,7 +52434,8 @@
             "hr": "Je li mlijeko bez laktoze bolje za pse od običnog?",
             "sv": "Är laktosfri mjölk bättre för hundar än vanlig mjölk?",
             "da": "Er laktosefri mælk bedre for hunde end almindelig mælk?",
-            "fi": "Onko laktoositon maito koirille parempaa kuin tavallinen maito?"
+            "fi": "Onko laktoositon maito koirille parempaa kuin tavallinen maito?",
+            "fr": "Le lait sans lactose est-il meilleur pour les chiens que le lait ordinaire ?"
           },
           "a": {
             "en": "It has no lactose, which can cause digestive problems, but it can still upset dogs that are allergic to milk protein.",
@@ -52351,7 +52449,8 @@
             "hr": "Ne sadrži laktozu, koja može izazvati probavne tegobe, ali i dalje može izazvati tegobe kod pasa alergičnih na mliječne bjelančevine.",
             "sv": "Den innehåller ingen laktos, som kan orsaka matsmältningsproblem, men den kan ändå ge orolig mage hos hundar som är allergiska mot mjölkprotein.",
             "da": "Den indeholder ikke laktose, som kan give fordøjelsesproblemer, men den kan stadig give ondt i maven hos hunde, der er allergiske over for mælkeprotein.",
-            "fi": "Siinä ei ole laktoosia, joka voi aiheuttaa ruoansulatusongelmia, mutta maitoproteiinille allergisen koiran vatsa voi silti mennä siitä sekaisin."
+            "fi": "Siinä ei ole laktoosia, joka voi aiheuttaa ruoansulatusongelmia, mutta maitoproteiinille allergisen koiran vatsa voi silti mennä siitä sekaisin.",
+            "fr": "Il ne contient pas de lactose, qui peut causer des troubles digestifs, mais il peut malgré tout donner mal au ventre aux chiens allergiques aux protéines du lait."
           }
         }
       ],
@@ -53235,7 +53334,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Lentils",
@@ -53249,7 +53349,8 @@
         "hr": "Leća",
         "sv": "Linser",
         "da": "Linser",
-        "fi": "Linssit"
+        "fi": "Linssit",
+        "fr": "Lentilles"
       },
       "question": {
         "en": "Can dogs eat lentils?",
@@ -53263,7 +53364,8 @@
         "hr": "Smiju li psi jesti leću?",
         "sv": "Får hundar äta linser?",
         "da": "Må hunde spise linser?",
-        "fi": "Saako koira syödä linssejä?"
+        "fi": "Saako koira syödä linssejä?",
+        "fr": "Les chiens peuvent-ils manger des lentilles ?"
       },
       "url_slug": {
         "en": "lentils",
@@ -53277,7 +53379,8 @@
         "hr": "leca",
         "sv": "linser",
         "da": "linser",
-        "fi": "linssit"
+        "fi": "linssit",
+        "fr": "lentilles"
       },
       "answer": {
         "en": "Yes, if they are cooked. Lentils are a pulse, like beans, and dogs can have legumes that have been soaked first and then cooked. Some dogs find legumes hard to digest, so introduce cooked lentils slowly.",
@@ -53291,7 +53394,8 @@
         "hr": "Da, ako je kuhana. Leća je mahunarka, kao i grah, a psi smiju jesti mahunarke koje su prvo namočene, a zatim kuhane. Neki psi teško probavljaju mahunarke, zato kuhanu leću uvodi postupno.",
         "sv": "Ja, om de är kokta. Linser är baljväxter, precis som bönor, och hundar kan äta baljväxter som först har blötlagts och sedan kokats. Vissa hundar har svårt att smälta baljväxter, så vänj hunden vid kokta linser långsamt.",
         "da": "Ja, hvis de er tilberedt. Linser er bælgfrugter, ligesom bønner, og hunde kan få bælgfrugter, der først er udblødt og derefter tilberedt. Nogle hunde har svært ved at fordøje bælgfrugter, så væn din hund langsomt til tilberedte linser.",
-        "fi": "Saa, jos ne on keitetty. Linssit ovat palkokasveja, kuten pavutkin, ja koira voi syödä palkokasveja, kun ne on ensin liotettu ja sitten keitetty. Osalle koirista palkokasvit ovat vaikeasti sulavia, joten aloita keitetyillä linsseillä vähitellen."
+        "fi": "Saa, jos ne on keitetty. Linssit ovat palkokasveja, kuten pavutkin, ja koira voi syödä palkokasveja, kun ne on ensin liotettu ja sitten keitetty. Osalle koirista palkokasvit ovat vaikeasti sulavia, joten aloita keitetyillä linsseillä vähitellen.",
+        "fr": "Oui, à condition qu’elles soient cuites. Comme les haricots, les lentilles sont des légumineuses : votre chien peut en manger si elles ont d’abord été trempées, puis bien cuites. Certains chiens digèrent mal les légumineuses ; introduisez donc les lentilles cuites progressivement."
       },
       "why": {
         "en": "Legumes such as lentils are a good source of fibre and protein for dogs. However, some dogs have trouble digesting them, which is why they should be cooked well and added to the diet slowly.",
@@ -53305,7 +53409,8 @@
         "hr": "Mahunarke poput leće dobar su izvor vlakana i bjelančevina za pse. Međutim, neki ih psi teško probavljaju, zbog čega ih treba dobro skuhati i u prehranu uvoditi postupno.",
         "sv": "Baljväxter som linser är en bra källa till fibrer och protein för hundar. Vissa hundar har dock svårt att smälta dem, så linserna ska kokas ordentligt och införas gradvis i kosten.",
         "da": "Bælgfrugter som linser er en god kilde til fibre og protein for hunde. Nogle hunde har dog svært ved at fordøje dem, og derfor skal de tilberedes grundigt og indføres langsomt i kosten.",
-        "fi": "Palkokasvit, kuten linssit, ovat hyvä kuidun ja proteiinin lähde koirille. Osan koirien on kuitenkin vaikea sulattaa niitä, joten ne on keitettävä hyvin ja lisättävä ruokavalioon vähitellen."
+        "fi": "Palkokasvit, kuten linssit, ovat hyvä kuidun ja proteiinin lähde koirille. Osan koirien on kuitenkin vaikea sulattaa niitä, joten ne on keitettävä hyvin ja lisättävä ruokavalioon vähitellen.",
+        "fr": "Les lentilles, comme les autres légumineuses, apportent aux chiens des fibres et des protéines. Certains les digèrent toutefois difficilement : il faut donc bien les cuire et les introduire peu à peu dans leur alimentation."
       },
       "signs": null,
       "what_to_do": {
@@ -53320,7 +53425,8 @@
         "hr": "Počni s malo dobro kuhane leće i uvodi je postupno jer neki psi teško probavljaju mahunarke.",
         "sv": "Börja med lite välkokta linser och vänj hunden vid dem långsamt, eftersom vissa hundar har svårt att smälta baljväxter.",
         "da": "Start med lidt grundigt tilberedte linser, og indfør dem langsomt, for nogle hunde har svært ved at fordøje bælgfrugter.",
-        "fi": "Aloita pienellä määrällä hyvin keitettyjä linssejä ja lisää niitä vähitellen, sillä osan koirien on vaikea sulattaa palkokasveja."
+        "fi": "Aloita pienellä määrällä hyvin keitettyjä linssejä ja lisää niitä vähitellen, sillä osan koirien on vaikea sulattaa palkokasveja.",
+        "fr": "Commencez par un peu de lentilles bien cuites et introduisez-les progressivement, car certains chiens digèrent mal les légumineuses."
       },
       "serving": {
         "en": "Well cooked (dried lentils soaked first, then cooked), introduced slowly.",
@@ -53334,7 +53440,8 @@
         "hr": "Dobro kuhana (suha leća prvo se namoči, a zatim kuha), uvedena postupno.",
         "sv": "Välkokta; torkade linser blötläggs först och kokas sedan. Införs långsamt i kosten.",
         "da": "Grundigt tilberedte (tørrede linser udblødes først og tilberedes derefter) og indført langsomt.",
-        "fi": "Hyvin keitettyinä (kuivat linssit ensin liotettuina ja sitten keitettyinä); ruokavalioon vähitellen."
+        "fi": "Hyvin keitettyinä (kuivat linssit ensin liotettuina ja sitten keitettyinä); ruokavalioon vähitellen.",
+        "fr": "Bien cuites (lentilles sèches préalablement trempées), introduites progressivement."
       },
       "child": {
         "en": "Cooked lentils can be a little treat for dogs. A grown-up should cook them well first!",
@@ -53348,7 +53455,8 @@
         "hr": "Kuhana leća može biti mala poslastica za pse. Odrasla osoba prvo je mora dobro skuhati!",
         "sv": "Kokta linser kan vara en liten godbit för hundar. En vuxen ska koka dem ordentligt först!",
         "da": "Kogte linser kan være en lille godbid til hunde. En voksen skal først koge dem grundigt!",
-        "fi": "Keitetyt linssit voivat olla koiralle pieni herkku. Aikuisen pitää ensin keittää ne hyvin!"
+        "fi": "Keitetyt linssit voivat olla koiralle pieni herkku. Aikuisen pitää ensin keittää ne hyvin!",
+        "fr": "Les lentilles cuites peuvent être une petite friandise pour les chiens. Un adulte doit d’abord bien les faire cuire !"
       },
       "faq": [
         {
@@ -53364,7 +53472,8 @@
             "hr": "Smiju li psi jesti nekuhanu leću?",
             "sv": "Får hundar äta okokta linser?",
             "da": "Må hunde spise ukogte linser?",
-            "fi": "Saako koira syödä keittämättömiä linssejä?"
+            "fi": "Saako koira syödä keittämättömiä linssejä?",
+            "fr": "Les chiens peuvent-ils manger des lentilles crues ?"
           },
           "a": {
             "en": "No. Dogs can have legumes that have been soaked first and then cooked, and lentils should be cooked well.",
@@ -53378,7 +53487,8 @@
             "hr": "Ne. Psi smiju jesti mahunarke koje su prvo namočene pa kuhane, a leću treba dobro skuhati.",
             "sv": "Nej. Hundar kan äta baljväxter som först har blötlagts och sedan kokats, och linser ska kokas ordentligt.",
             "da": "Nej. Hunde kan få bælgfrugter, der først er udblødt og derefter tilberedt, og linser skal tilberedes grundigt.",
-            "fi": "Ei saa. Koira voi syödä palkokasveja vasta, kun ne on liotettu ja keitetty, ja linssit täytyy keittää kunnolla."
+            "fi": "Ei saa. Koira voi syödä palkokasveja vasta, kun ne on liotettu ja keitetty, ja linssit täytyy keittää kunnolla.",
+            "fr": "Non. Les lentilles doivent d’abord être trempées, puis bien cuites avant d’être données à un chien."
           }
         }
       ],
@@ -56454,7 +56564,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Nut butters",
@@ -56468,7 +56579,8 @@
         "hr": "Maslaci od orašastih plodova",
         "sv": "Nötsmör",
         "da": "Nøddesmør",
-        "fi": "Pähkinävoit"
+        "fi": "Pähkinävoit",
+        "fr": "Purées de fruits à coque"
       },
       "question": {
         "en": "Can dogs eat almond butter and other nut butters?",
@@ -56482,7 +56594,8 @@
         "hr": "Smiju li psi jesti maslac od badema i druge maslace od orašastih plodova?",
         "sv": "Får hundar äta mandelsmör och andra nötsmör?",
         "da": "Må hunde spise mandelsmør og andre slags nøddesmør?",
-        "fi": "Saako koira syödä mantelivoita ja muita pähkinävoita?"
+        "fi": "Saako koira syödä mantelivoita ja muita pähkinävoita?",
+        "fr": "Les chiens peuvent-ils manger de la purée d’amande et d’autres purées de fruits à coque ?"
       },
       "url_slug": {
         "en": "nut-butters",
@@ -56496,7 +56609,8 @@
         "hr": "maslaci-od-orasastih-plodova",
         "sv": "notsmor",
         "da": "noddesmor",
-        "fi": "pahkinavoit"
+        "fi": "pahkinavoit",
+        "fr": "puree-de-fruits-a-coque"
       },
       "answer": {
         "en": "Almond butter, yes, in small amounts, if it contains no xylitol. Many almond butters contain salt and sweeteners like xylitol, which is toxic to dogs, so always check the label. Not all nuts are safe: macadamia nuts are very toxic to dogs.",
@@ -56510,7 +56624,8 @@
         "hr": "Maslac od badema smije, u malim količinama, ako ne sadrži ksilitol. Mnogi maslaci od badema sadrže sol i sladila poput ksilitola, koji je otrovan za pse, zato uvijek provjeri deklaraciju. Nisu svi orašasti plodovi sigurni za pse: makadamija je vrlo otrovna za pse.",
         "sv": "Mandelsmör går bra i små mängder, så länge det inte innehåller xylitol. Många sorter mandelsmör innehåller salt och sötningsmedel som xylitol, som är giftigt för hundar. Kontrollera därför alltid innehållsförteckningen. Alla nötter är inte ofarliga: macadamianötter är mycket giftiga för hundar.",
         "da": "Mandelsmør: ja, i små mængder, hvis det ikke indeholder xylitol. Mange slags mandelsmør indeholder salt og sødemidler som xylitol, der er giftigt for hunde, så tjek altid varedeklarationen. Ikke alle nødder er sikre: macadamianødder er meget giftige for hunde.",
-        "fi": "Mantelivoita saa pieninä määrinä, jos siinä ei ole ksylitolia. Monissa mantelivoissa on suolaa ja makeutusaineita, esimerkiksi koirille myrkyllistä ksylitolia, joten tarkista aina tuoteseloste. Kaikki pähkinät eivät ole turvallisia: makadamiapähkinät ovat koirille erittäin myrkyllisiä."
+        "fi": "Mantelivoita saa pieninä määrinä, jos siinä ei ole ksylitolia. Monissa mantelivoissa on suolaa ja makeutusaineita, esimerkiksi koirille myrkyllistä ksylitolia, joten tarkista aina tuoteseloste. Kaikki pähkinät eivät ole turvallisia: makadamiapähkinät ovat koirille erittäin myrkyllisiä.",
+        "fr": "Oui pour la purée d’amande, en petite quantité et à condition qu’elle ne contienne pas de xylitol. Beaucoup de purées d’amande contiennent du sel et des édulcorants comme le xylitol, toxique pour les chiens : vérifiez donc toujours l’étiquette. Tous les fruits à coque ne sont pas inoffensifs : les noix de macadamia sont très toxiques pour les chiens."
       },
       "why": {
         "en": "Almonds themselves are not recommended for dogs, but a little almond butter can be a safe alternative. Nuts are high in fat, and too much almond butter can lead to pancreatitis. Some peanut and other nut butters contain xylitol, a sweetener that is toxic to dogs.",
@@ -56524,7 +56639,8 @@
         "hr": "Sami se bademi psima ne preporučuju, ali malo maslaca od badema može biti sigurna zamjena. Orašasti plodovi bogati su mastima, a previše maslaca od badema može dovesti do upale gušterače. Neki maslaci od kikirikija i drugih orašastih plodova sadrže ksilitol, sladilo koje je otrovno za pse.",
         "sv": "Själva mandlarna rekommenderas inte till hundar, men lite mandelsmör kan vara ett ofarligt alternativ. Nötter innehåller mycket fett, och för mycket mandelsmör kan leda till bukspottkörtelinflammation. Vissa sorters jordnötssmör och andra nötsmör innehåller xylitol, ett sötningsmedel som är giftigt för hundar.",
         "da": "Selve mandlerne anbefales ikke til hunde, men lidt mandelsmør kan være et sikkert alternativ. Nødder indeholder meget fedt, og for meget mandelsmør kan give betændelse i bugspytkirtlen. Noget peanutbutter og andet nøddesmør indeholder xylitol, et sødemiddel der er giftigt for hunde.",
-        "fi": "Mantelit sellaisenaan eivät ole koirille suositeltavia, mutta pieni määrä mantelivoita voi olla turvallinen vaihtoehto. Pähkinät ovat rasvaisia, ja liian suuri määrä mantelivoita voi johtaa haimatulehdukseen. Joissakin maapähkinävoissa ja muissa pähkinävoissa on ksylitolia, makeutusainetta, joka on koirille myrkyllistä."
+        "fi": "Mantelit sellaisenaan eivät ole koirille suositeltavia, mutta pieni määrä mantelivoita voi olla turvallinen vaihtoehto. Pähkinät ovat rasvaisia, ja liian suuri määrä mantelivoita voi johtaa haimatulehdukseen. Joissakin maapähkinävoissa ja muissa pähkinävoissa on ksylitolia, makeutusainetta, joka on koirille myrkyllistä.",
+        "fr": "Les amandes ne sont pas recommandées pour les chiens, mais un peu de purée d’amande peut en être une alternative sans danger. Les fruits à coque sont riches en graisses, et trop de purée d’amande peut provoquer une pancréatite. Certains beurres de cacahuète et d’autres purées de fruits à coque contiennent du xylitol, un édulcorant toxique pour les chiens."
       },
       "signs": null,
       "what_to_do": {
@@ -56539,7 +56655,8 @@
         "hr": "Ako misliš da je tvoj pas pojeo maslac od orašastih plodova s ksilitolom, odmah nazovi veterinara, dežurnu veterinarsku ambulantu ili telefonsku liniju za otrovanja životinja.",
         "sv": "Om du tror att hunden har ätit ett nötsmör som innehåller xylitol, ring direkt till veterinären, ett djursjukhus med akutjour eller giftrådgivning för djur.",
         "da": "Hvis du tror, at din hund har spist nøddesmør med xylitol, skal du straks kontakte din dyrlæge, en akut dyreklinik eller en giftrådgivning for dyr.",
-        "fi": "Jos epäilet koirasi syöneen ksylitolia sisältävää pähkinävoita, soita heti omalle eläinlääkärillesi, päivystävälle eläinlääkärille tai eläinten myrkytysneuvontaan."
+        "fi": "Jos epäilet koirasi syöneen ksylitolia sisältävää pähkinävoita, soita heti omalle eläinlääkärillesi, päivystävälle eläinlääkärille tai eläinten myrkytysneuvontaan.",
+        "fr": "Si vous pensez que votre chien a mangé une purée de fruits à coque contenant du xylitol, appelez tout de suite votre vétérinaire, une clinique d’urgence ou un centre antipoison vétérinaire."
       },
       "serving": {
         "en": "A small amount of almond butter whose label lists no xylitol; as an occasional treat.",
@@ -56553,7 +56670,8 @@
         "hr": "Malo maslaca od badema bez ksilitola na deklaraciji, kao povremena poslastica.",
         "sv": "Lite mandelsmör utan xylitol i innehållsförteckningen, som en godbit då och då.",
         "da": "En lille mængde mandelsmør uden xylitol i ingredienslisten; som godbid en gang imellem.",
-        "fi": "Pieni määrä mantelivoita, jonka tuoteselosteessa ei ole ksylitolia; satunnaisena herkkuna."
+        "fi": "Pieni määrä mantelivoita, jonka tuoteselosteessa ei ole ksylitolia; satunnaisena herkkuna.",
+        "fr": "Une petite quantité de purée d’amande dont l’étiquette ne mentionne pas de xylitol, en friandise occasionnelle."
       },
       "child": {
         "en": "A little almond butter can be a treat, but a grown-up must check the jar first. Some kinds are not safe for dogs.",
@@ -56567,7 +56685,8 @@
         "hr": "Malo maslaca od badema može biti poslastica, ali odrasla osoba prvo mora provjeriti staklenku. Neke vrste nisu sigurne za pse.",
         "sv": "Lite mandelsmör kan vara en godbit, men en vuxen måste kolla burken först. Vissa sorter är inte säkra för hundar.",
         "da": "Lidt mandelsmør kan være en godbid, men en voksen skal tjekke glasset først. Nogle slags er ikke sikre for hunde.",
-        "fi": "Vähän mantelivoita voi olla herkku, mutta aikuisen pitää ensin tarkistaa purkki. Osa tuotteista ei ole koirille turvallisia."
+        "fi": "Vähän mantelivoita voi olla herkku, mutta aikuisen pitää ensin tarkistaa purkki. Osa tuotteista ei ole koirille turvallisia.",
+        "fr": "Un peu de purée d’amande peut être une friandise, mais un adulte doit d’abord vérifier le pot. Certaines sortes sont dangereuses pour les chiens."
       },
       "faq": [
         {
@@ -56583,7 +56702,8 @@
             "hr": "Kako znati ima li maslac od orašastih plodova ksilitol?",
             "sv": "Hur vet jag om ett nötsmör innehåller xylitol?",
             "da": "Hvordan kan jeg se, om et nøddesmør indeholder xylitol?",
-            "fi": "Mistä tiedän, onko pähkinävoissa ksylitolia?"
+            "fi": "Mistä tiedän, onko pähkinävoissa ksylitolia?",
+            "fr": "Comment savoir si une purée de fruits à coque contient du xylitol ?"
           },
           "a": {
             "en": "Read the ingredients on the label, especially on products marked sugar-free or low sugar.",
@@ -56597,7 +56717,8 @@
             "hr": "Pročitaj sastojke na deklaraciji, osobito na proizvodima označenima kao „bez šećera“ ili „sa smanjenim udjelom šećera“.",
             "sv": "Läs innehållsförteckningen, särskilt på produkter som är märkta sockerfria eller med lågt sockerinnehåll.",
             "da": "Læs varedeklarationen, især på produkter, der er mærket sukkerfri eller med lavt sukkerindhold.",
-            "fi": "Lue tuoteselosteen ainesosaluettelo, varsinkin jos tuotteessa lukee ”sokeriton” tai ”vähäsokerinen”."
+            "fi": "Lue tuoteselosteen ainesosaluettelo, varsinkin jos tuotteessa lukee ”sokeriton” tai ”vähäsokerinen”.",
+            "fr": "Lisez la liste des ingrédients sur l’étiquette, surtout pour les produits « sans sucre » ou « allégés en sucre »."
           }
         }
       ],
@@ -68686,7 +68807,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Sunflower seeds",
@@ -68700,7 +68822,8 @@
         "hr": "Sjemenke suncokreta",
         "sv": "Solrosfrön",
         "da": "Solsikkekerner",
-        "fi": "Auringonkukansiemenet"
+        "fi": "Auringonkukansiemenet",
+        "fr": "Graines de tournesol"
       },
       "question": {
         "en": "Can dogs eat sunflower seeds?",
@@ -68714,7 +68837,8 @@
         "hr": "Smiju li psi jesti sjemenke suncokreta?",
         "sv": "Får hundar äta solrosfrön?",
         "da": "Må hunde spise solsikkekerner?",
-        "fi": "Saako koira syödä auringonkukansiemeniä?"
+        "fi": "Saako koira syödä auringonkukansiemeniä?",
+        "fr": "Les chiens peuvent-ils manger des graines de tournesol ?"
       },
       "url_slug": {
         "en": "sunflower-seeds",
@@ -68728,7 +68852,8 @@
         "hr": "sjemenke-suncokreta",
         "sv": "solrosfron",
         "da": "solsikkekerner",
-        "fi": "auringonkukansiemenet"
+        "fi": "auringonkukansiemenet",
+        "fr": "graines-de-tournesol"
       },
       "answer": {
         "en": "Yes, as an occasional snack, if they are shelled and unsalted. Give only plain raw or toasted sunflower seeds, never the shells, which are a choking hazard and can't be digested. Too many seeds can upset your dog's stomach.",
@@ -68742,7 +68867,8 @@
         "hr": "Da, kao povremena grickalica, ako su oljuštene i neslane. Daj samo obične sirove ili pržene sjemenke, nikad ljuske, koje mogu izazvati gušenje i ne mogu se probaviti. Previše sjemenki može psu pokvariti želudac.",
         "sv": "Ja, som ett mellanmål då och då, om de är skalade och osaltade. Ge bara okryddade råa eller rostade solrosfrön, aldrig skalen – de kan orsaka kvävning och går inte att smälta. För många frön kan ge hunden en orolig mage.",
         "da": "Ja, som en lille snack en gang imellem, hvis de er uden skal og usaltede. Giv kun naturelle rå eller ristede solsikkekerner, aldrig skallerne, som kan sætte sig fast i halsen og ikke kan fordøjes. For mange kerner kan give din hund ondt i maven.",
-        "fi": "Saa, silloin tällöin välipalana, jos ne on kuorittu eikä niissä ole suolaa. Anna vain maustamattomia raakoja tai paahdettuja auringonkukansiemeniä äläkä koskaan kuoria, jotka ovat tukehtumisvaara eivätkä sula. Liian monta siementä voi sotkea koiran vatsan."
+        "fi": "Saa, silloin tällöin välipalana, jos ne on kuorittu eikä niissä ole suolaa. Anna vain maustamattomia raakoja tai paahdettuja auringonkukansiemeniä äläkä koskaan kuoria, jotka ovat tukehtumisvaara eivätkä sula. Liian monta siementä voi sotkea koiran vatsan.",
+        "fr": "Oui, de temps en temps, à condition qu’elles soient décortiquées et non salées. Ne donnez que des graines de tournesol nature, crues ou grillées, jamais les coques : elles présentent un risque d’étouffement et ne se digèrent pas. Trop de graines peuvent donner mal au ventre à votre chien."
       },
       "why": {
         "en": "The husks are extremely hard, can't be broken down during digestion and can get stuck in the gut, causing a blockage. The salt in packaged seeds is harmful to dogs. Sunflower seeds are also high in fat, and too many can bring on vomiting, lethargy, a decreased appetite or other stomach upset.",
@@ -68756,7 +68882,8 @@
         "hr": "Ljuske su iznimno tvrde, ne mogu se razgraditi u probavi i mogu zapeti u crijevima te izazvati začepljenje. Sol u pakiranim sjemenkama štetna je za pse. Sjemenke suncokreta bogate su i mastima, a previše ih može izazvati povraćanje, malaksalost, smanjen apetit ili druge želučane tegobe.",
         "sv": "Skalen är extremt hårda, bryts inte ned i matsmältningen och kan fastna i tarmen och orsaka tarmstopp. Saltet i förpackade frön är skadligt för hundar. Solrosfrön innehåller också mycket fett, och för många frön kan ge kräkningar, slöhet, minskad aptit eller andra magbesvär.",
         "da": "Skallerne er ekstremt hårde, nedbrydes ikke under fordøjelsen og kan sætte sig fast i tarmen og give tarmblokering. Saltet i pakkede kerner er skadeligt for hunde. Solsikkekerner indeholder også meget fedt, og for mange kan give opkast, sløvhed, nedsat appetit eller andre maveproblemer.",
-        "fi": "Kuoret ovat erittäin kovia, eivät sula ruoansulatuksessa ja voivat juuttua suolistoon ja aiheuttaa suolitukoksen. Pakattujen siementen suola on koirille haitallista. Auringonkukansiemenissä on myös paljon rasvaa, ja liian suuri määrä voi aiheuttaa oksentelua, väsymystä, ruokahaluttomuutta tai muita vatsavaivoja."
+        "fi": "Kuoret ovat erittäin kovia, eivät sula ruoansulatuksessa ja voivat juuttua suolistoon ja aiheuttaa suolitukoksen. Pakattujen siementen suola on koirille haitallista. Auringonkukansiemenissä on myös paljon rasvaa, ja liian suuri määrä voi aiheuttaa oksentelua, väsymystä, ruokahaluttomuutta tai muita vatsavaivoja.",
+        "fr": "Les coques sont extrêmement dures, ne se décomposent pas à la digestion et peuvent se coincer dans l’intestin jusqu’à provoquer une occlusion. Le sel des graines vendues en sachet est nocif pour les chiens. Les graines de tournesol sont en outre très riches en graisses : en excès, elles peuvent entraîner des vomissements, de la léthargie, une baisse d’appétit ou d’autres troubles digestifs."
       },
       "signs": null,
       "what_to_do": {
@@ -68771,7 +68898,8 @@
         "hr": "Daj samo oljuštene, neslane sjemenke, a prije nego što ih psu uvedeš u prehranu, porazgovaraj s veterinarom.",
         "sv": "Ge bara skalade, osaltade frön och prata med veterinären innan du lägger till solrosfrön i hundens kost.",
         "da": "Giv kun kerner uden skal og uden salt, og tal med din dyrlæge, før du tilføjer solsikkekerner til din hunds kost.",
-        "fi": "Anna vain kuorittuja, suolattomia siemeniä ja puhu eläinlääkärin kanssa, ennen kuin lisäät auringonkukansiemeniä koirasi ruokavalioon."
+        "fi": "Anna vain kuorittuja, suolattomia siemeniä ja puhu eläinlääkärin kanssa, ennen kuin lisäät auringonkukansiemeniä koirasi ruokavalioon.",
+        "fr": "Ne donnez que des graines décortiquées et non salées, et parlez-en à votre vétérinaire avant d’ajouter des graines de tournesol à l’alimentation de votre chien."
       },
       "serving": {
         "en": "Shelled, plain (unsalted) raw or toasted seeds, now and then in moderate amounts.",
@@ -68785,7 +68913,8 @@
         "hr": "Oljuštene, obične (neslane) sirove ili pržene sjemenke, povremeno i u umjerenim količinama.",
         "sv": "Skalade, osaltade och okryddade, råa eller rostade frön, då och då och i måttliga mängder.",
         "da": "Naturelle rå eller ristede kerner uden skal og uden salt, en gang imellem og i moderate mængder.",
-        "fi": "Kuorittuja, maustamattomia (suolattomia) raakoja tai paahdettuja siemeniä silloin tällöin ja kohtuullisina määrinä."
+        "fi": "Kuorittuja, maustamattomia (suolattomia) raakoja tai paahdettuja siemeniä silloin tällöin ja kohtuullisina määrinä.",
+        "fr": "Graines décortiquées, nature (non salées), crues ou grillées, de temps en temps et en quantité modérée."
       },
       "child": {
         "en": "Dogs can nibble a few plain sunflower seeds without shells, but never the salty ones from a snack bag.",
@@ -68799,7 +68928,8 @@
         "hr": "Psi smiju grickati nekoliko običnih sjemenki suncokreta bez ljuske, ali nikad slane iz vrećice s grickalicama.",
         "sv": "Hundar kan få knapra på några osaltade solrosfrön utan skal, men aldrig de salta från en snackspåse.",
         "da": "Hunde kan knase et par naturelle solsikkekerner uden skal, men aldrig de salte fra en snackpose.",
-        "fi": "Koira voi nakertaa muutaman maustamattoman kuoritun auringonkukansiemenen, mutta ei koskaan suolaisia siemeniä, joita on välipalapusseissa."
+        "fi": "Koira voi nakertaa muutaman maustamattoman kuoritun auringonkukansiemenen, mutta ei koskaan suolaisia siemeniä, joita on välipalapusseissa.",
+        "fr": "Les chiens peuvent grignoter quelques graines de tournesol nature, sans coque, mais jamais celles d’un sachet d’apéritif, qui sont salées."
       },
       "faq": [
         {
@@ -68815,7 +68945,8 @@
             "hr": "Smiju li psi jesti ljuske sjemenki suncokreta?",
             "sv": "Får hundar äta skalen från solrosfrön?",
             "da": "Må hunde spise skallerne fra solsikkekerner?",
-            "fi": "Saako koira syödä auringonkukansiementen kuoria?"
+            "fi": "Saako koira syödä auringonkukansiementen kuoria?",
+            "fr": "Les chiens peuvent-ils manger les coques de graines de tournesol ?"
           },
           "a": {
             "en": "No. The shells are extremely hard, can't be digested, are a serious choking hazard and can cause a blockage in the gut.",
@@ -68829,7 +68960,8 @@
             "hr": "Ne. Ljuske su iznimno tvrde, ne mogu se probaviti, predstavljaju ozbiljnu opasnost od gušenja i mogu izazvati začepljenje crijeva.",
             "sv": "Nej. Skalen är extremt hårda och går inte att smälta. De är en allvarlig kvävningsrisk och kan orsaka tarmstopp.",
             "da": "Nej. Skallerne er ekstremt hårde og kan ikke fordøjes. Der er alvorlig fare for, at de sætter sig fast i halsen, og de kan give tarmblokering.",
-            "fi": "Ei saa. Kuoret ovat erittäin kovia, eivät sula, ovat vakava tukehtumisvaara ja voivat aiheuttaa suolitukoksen."
+            "fi": "Ei saa. Kuoret ovat erittäin kovia, eivät sula, ovat vakava tukehtumisvaara ja voivat aiheuttaa suolitukoksen.",
+            "fr": "Non. Les coques sont extrêmement dures, ne se digèrent pas, présentent un sérieux risque d’étouffement et peuvent provoquer une occlusion de l’intestin."
           }
         }
       ],
@@ -73549,7 +73681,8 @@
         "hr",
         "sv",
         "da",
-        "fi"
+        "fi",
+        "fr"
       ],
       "name": {
         "en": "Water",
@@ -73563,7 +73696,8 @@
         "hr": "Voda",
         "sv": "Vatten",
         "da": "Vand",
-        "fi": "Vesi"
+        "fi": "Vesi",
+        "fr": "Eau"
       },
       "question": {
         "en": "Do dogs need fresh water all the time?",
@@ -73577,7 +73711,8 @@
         "hr": "Trebaju li psi stalno imati svježu vodu?",
         "sv": "Behöver hundar färskt vatten hela tiden?",
         "da": "Har hunde brug for frisk vand hele tiden?",
-        "fi": "Tarvitseeko koira raikasta vettä koko ajan?"
+        "fi": "Tarvitseeko koira raikasta vettä koko ajan?",
+        "fr": "Les chiens ont-ils besoin d’eau fraîche en permanence ?"
       },
       "url_slug": {
         "en": "water",
@@ -73591,7 +73726,8 @@
         "hr": "voda",
         "sv": "vatten",
         "da": "vand",
-        "fi": "vesi"
+        "fi": "vesi",
+        "fr": "eau"
       },
       "answer": {
         "en": "Yes. Dogs need fresh, clean drinking water available at all times. Wash the water bowl often, and remember that dogs may need more water in hot weather or when they exercise more. Never restrict your dog's water.",
@@ -73605,7 +73741,8 @@
         "hr": "Da. Psima treba svježa, čista pitka voda koja im je dostupna cijelo vrijeme. Zdjelicu za vodu često peri i imaj na umu da će psima možda trebati više vode po vrućem vremenu ili kad se više kreću. Nikad psu ne ograničavaj vodu.",
         "sv": "Ja. Hundar ska ha tillgång till färskt, rent dricksvatten hela tiden. Diska vattenskålen ofta och kom ihåg att hundar kan behöva mer vatten när det är varmt eller när de får mer motion. Begränsa aldrig hundens vatten.",
         "da": "Ja. Hunde skal have friskt, rent drikkevand til rådighed hele tiden. Vask vandskålen ofte, og husk, at hunde kan have brug for mere vand i varmt vejr, eller når de motionerer mere. Begræns aldrig din hunds adgang til vand.",
-        "fi": "Kyllä. Koiralla pitää olla koko ajan saatavilla raikasta, puhdasta juomavettä. Pese vesikuppi usein ja muista, että koira voi tarvita enemmän vettä helteellä tai kun se liikkuu tavallista enemmän. Älä koskaan rajoita koiran veden saantia."
+        "fi": "Kyllä. Koiralla pitää olla koko ajan saatavilla raikasta, puhdasta juomavettä. Pese vesikuppi usein ja muista, että koira voi tarvita enemmän vettä helteellä tai kun se liikkuu tavallista enemmän. Älä koskaan rajoita koiran veden saantia.",
+        "fr": "Oui. Un chien doit avoir de l’eau potable, fraîche et propre, à sa disposition à tout moment. Lavez souvent la gamelle d’eau et gardez à l’esprit que votre chien peut avoir besoin de boire davantage par temps chaud ou lorsqu’il se dépense plus. Ne limitez jamais l’eau de votre chien."
       },
       "why": {
         "en": "Water is essential for all life. How much a dog drinks can change with the weather, temperature and exercise. A sudden increase in drinking can mean something is wrong. Salt water is different: when dogs drink salt water, it can be dangerous for them.",
@@ -73619,7 +73756,8 @@
         "hr": "Voda je bitna za sav život. Koliko pas pije može se mijenjati ovisno o vremenu, temperaturi i tjelesnoj aktivnosti. Ako pas naglo počne piti mnogo više, to može značiti da nešto nije u redu. Slana voda je druga priča: ako je psi piju, može im biti opasna.",
         "sv": "Vatten är livsnödvändigt för alla levande varelser. Hur mycket en hund dricker kan variera med väder, temperatur och motion. Om hunden plötsligt dricker mer kan det tyda på att något är fel. Saltvatten är en annan sak: det kan vara farligt för hundar att dricka.",
         "da": "Vand er livsnødvendigt for alt levende. Hvor meget en hund drikker, kan ændre sig med vejret, temperaturen og motion. Hvis din hund pludselig drikker meget mere, kan det være tegn på, at der er noget galt. Saltvand er noget andet: når hunde drikker saltvand, kan det være farligt for dem.",
-        "fi": "Vesi on välttämätöntä kaikelle elämälle. Koiran juoman veden määrä vaihtelee sään, lämpötilan ja liikunnan mukaan. Äkillinen juomisen lisääntyminen voi kieliä siitä, että jokin on vialla. Suolavesi on asia erikseen: jos koira juo suolavettä, se voi olla sille vaarallista."
+        "fi": "Vesi on välttämätöntä kaikelle elämälle. Koiran juoman veden määrä vaihtelee sään, lämpötilan ja liikunnan mukaan. Äkillinen juomisen lisääntyminen voi kieliä siitä, että jokin on vialla. Suolavesi on asia erikseen: jos koira juo suolavettä, se voi olla sille vaarallista.",
+        "fr": "L’eau est essentielle à toute forme de vie. La quantité que boit un chien peut varier selon la météo, la température et l’effort physique. Une augmentation soudaine de la soif peut indiquer un problème. L’eau salée, en revanche, peut être dangereuse pour un chien qui en boit."
       },
       "signs": null,
       "what_to_do": {
@@ -73634,7 +73772,8 @@
         "hr": "Ako misliš da tvoj pas pije ili mokri više nego inače, obrati se veterinaru. Ako pas pokazuje znakove dehidracije, odmah ga odvedi veterinaru.",
         "sv": "Om du tror att hunden dricker eller kissar mer än vanligt, kontakta veterinären. Om hunden visar tecken på uttorkning, åk till veterinären direkt.",
         "da": "Hvis du tror, at din hund drikker eller tisser mere end normalt, så kontakt din dyrlæge. Hvis din hund viser tegn på dehydrering, skal du straks tage den med til dyrlægen.",
-        "fi": "Jos koirasi juo tai pissaa mielestäsi tavallista enemmän, ota yhteyttä eläinlääkäriin. Jos koirallasi on nestehukan merkkejä, vie se heti eläinlääkäriin."
+        "fi": "Jos koirasi juo tai pissaa mielestäsi tavallista enemmän, ota yhteyttä eläinlääkäriin. Jos koirallasi on nestehukan merkkejä, vie se heti eläinlääkäriin.",
+        "fr": "Si vous pensez que votre chien boit ou urine plus que d’habitude, contactez votre vétérinaire. Si votre chien présente des signes de déshydratation, emmenez-le immédiatement chez le vétérinaire."
       },
       "serving": {
         "en": "Fresh, clean water in a frequently washed bowl, available all the time, including outdoors, in hot weather and at the beach.",
@@ -73648,7 +73787,8 @@
         "hr": "Svježa, čista voda u često opranoj zdjelici, uvijek dostupna, i na otvorenom, po vrućem vremenu i na plaži.",
         "sv": "Färskt, rent vatten i en skål som diskas ofta, alltid tillgängligt – även utomhus, när det är varmt och på stranden.",
         "da": "Friskt, rent vand i en ofte vasket skål, tilgængeligt hele tiden, også udendørs, i varmt vejr og på stranden.",
-        "fi": "Raikasta, puhdasta vettä usein pestyssä kupissa, koko ajan saatavilla – myös ulkona, helteellä ja rannalla."
+        "fi": "Raikasta, puhdasta vettä usein pestyssä kupissa, koko ajan saatavilla – myös ulkona, helteellä ja rannalla.",
+        "fr": "De l’eau fraîche et propre dans une gamelle lavée fréquemment, à disposition en permanence, y compris à l’extérieur, par temps chaud et à la plage."
       },
       "child": {
         "en": "Dogs need fresh water all day long. Checking that the water bowl is full and clean is a great way to help!",
@@ -73662,7 +73802,8 @@
         "hr": "Psima je svježa voda potrebna cijeli dan. Provjeravati je li zdjelica s vodom puna i čista odličan je način da pomogneš!",
         "sv": "Hundar behöver färskt vatten hela dagen. Att kolla att vattenskålen är full och ren är ett bra sätt att hjälpa till!",
         "da": "Hunde har brug for friskt vand hele dagen. At tjekke, at vandskålen er fuld og ren, er en god måde at hjælpe på!",
-        "fi": "Koirat tarvitsevat raikasta vettä koko päivän. Autat paljon, kun tarkistat, että vesikuppi on täynnä ja puhdas!"
+        "fi": "Koirat tarvitsevat raikasta vettä koko päivän. Autat paljon, kun tarkistat, että vesikuppi on täynnä ja puhdas!",
+        "fr": "Les chiens ont besoin d’eau fraîche toute la journée. Tu peux aider en vérifiant que la gamelle d’eau est pleine et propre !"
       },
       "faq": [
         {
@@ -73678,7 +73819,8 @@
             "hr": "Kako mogu prepoznati da je moj pas dehidriran?",
             "sv": "Hur ser jag om min hund är uttorkad?",
             "da": "Hvordan kan jeg se, om min hund er dehydreret?",
-            "fi": "Mistä tiedän, onko koirani kuivunut?"
+            "fi": "Mistä tiedän, onko koirani kuivunut?",
+            "fr": "Comment savoir si mon chien est déshydraté ?"
           },
           "a": {
             "en": "Signs include loss of skin elasticity, loss of appetite, low energy, panting, sunken dry-looking eyes, a dry nose, dry sticky gums and thick saliva. Take your dog to the vet immediately if you see them.",
@@ -73692,7 +73834,8 @@
             "hr": "Znakovi su gubitak elastičnosti kože, gubitak apetita, malaksalost, dahtanje, upale i suhe oči, suh nos, suhe ljepljive desni i gusta slina. Ako ih primijetiš, odmah odvedi psa veterinaru.",
             "sv": "Tecken på uttorkning är sämre hudelasticitet, minskad aptit, orkeslöshet, flåsande, insjunkna och torra ögon, torr nos, torrt och kladdigt tandkött och seg saliv. Åk till veterinären direkt om du ser några av tecknen.",
             "da": "Tegn kan være nedsat hudelasticitet, nedsat appetit, mangel på energi, pesen, indsunkne og tørre øjne, tør snude, tørt og klistret tandkød og sejt spyt. Tag straks din hund med til dyrlægen, hvis du ser nogle af tegnene.",
-            "fi": "Merkkejä ovat ihon joustavuuden heikkeneminen, ruokahaluttomuus, vähäinen tarmo, läähätys, painuneet ja kuivan näköiset silmät, kuiva nenä, kuivat ja tahmeat ikenet sekä sitkeä sylki. Jos huomaat näitä merkkejä, vie koirasi heti eläinlääkäriin."
+            "fi": "Merkkejä ovat ihon joustavuuden heikkeneminen, ruokahaluttomuus, vähäinen tarmo, läähätys, painuneet ja kuivan näköiset silmät, kuiva nenä, kuivat ja tahmeat ikenet sekä sitkeä sylki. Jos huomaat näitä merkkejä, vie koirasi heti eläinlääkäriin.",
+            "fr": "Parmi les signes : une peau qui perd de son élasticité, une perte d’appétit, un manque d’énergie, des halètements, des yeux creusés et ternes, une truffe sèche, des gencives sèches et collantes et une salive épaisse. Emmenez votre chien immédiatement chez le vétérinaire si vous les remarquez."
           }
         },
         {
@@ -73708,7 +73851,8 @@
             "hr": "Smijem li ograničiti vodu psu koji mnogo pije?",
             "sv": "Ska jag begränsa hundens vatten om den dricker mycket?",
             "da": "Skal jeg begrænse, hvor meget vand min hund får, hvis den drikker meget?",
-            "fi": "Pitäisikö koiran veden saantia rajoittaa, jos se juo paljon?"
+            "fi": "Pitäisikö koiran veden saantia rajoittaa, jos se juo paljon?",
+            "fr": "Dois-je limiter l’eau de mon chien s’il boit beaucoup ?"
           },
           "a": {
             "en": "No. Never restrict your dog's water; always let them have fresh drinking water, and contact your vet if they drink more than normal.",
@@ -73722,7 +73866,8 @@
             "hr": "Ne. Nikad ne ograničavaj psu vodu; uvijek mu daj svježu pitku vodu i obrati se veterinaru ako pije više nego inače.",
             "sv": "Nej. Begränsa aldrig hundens vatten. Låt den alltid ha färskt dricksvatten och kontakta veterinären om den dricker mer än vanligt.",
             "da": "Nej. Begræns aldrig din hunds adgang til vand; lad den altid have friskt drikkevand, og kontakt din dyrlæge, hvis den drikker mere end normalt.",
-            "fi": "Ei. Älä koskaan rajoita koiran veden saantia. Anna sen aina juoda raikasta vettä ja ota yhteyttä eläinlääkäriin, jos se juo tavallista enemmän."
+            "fi": "Ei. Älä koskaan rajoita koiran veden saantia. Anna sen aina juoda raikasta vettä ja ota yhteyttä eläinlääkäriin, jos se juo tavallista enemmän.",
+            "fr": "Non. Ne limitez jamais l’eau de votre chien : donnez-lui toujours de l’eau potable fraîche, et contactez votre vétérinaire s’il boit plus que d’habitude."
           }
         },
         {
@@ -73738,7 +73883,8 @@
             "hr": "Smiju li psi piti morsku vodu?",
             "sv": "Får hundar dricka havsvatten?",
             "da": "Må hunde drikke havvand?",
-            "fi": "Saako koira juoda merivettä?"
+            "fi": "Saako koira juoda merivettä?",
+            "fr": "Les chiens peuvent-ils boire de l’eau de mer ?"
           },
           "a": {
             "en": "It's best not to: salt water can be dangerous for dogs. At the beach, make sure your dog always has access to fresh water.",
@@ -73752,7 +73898,8 @@
             "hr": "Bolje ne: slana voda može biti opasna za pse. Na plaži se pobrini da pas uvijek ima pristup svježoj vodi.",
             "sv": "Helst inte. Saltvatten kan vara farligt för hundar. Se till att hunden alltid har tillgång till färskt vatten på stranden.",
             "da": "Helst ikke: saltvand kan være farligt for hunde. På stranden skal du sørge for, at din hund altid har adgang til friskt vand.",
-            "fi": "Parempi ei, sillä suolavesi voi olla koiralle vaarallista. Huolehdi rannalla siitä, että koirallasi on aina saatavilla raikasta vettä."
+            "fi": "Parempi ei, sillä suolavesi voi olla koiralle vaarallista. Huolehdi rannalla siitä, että koirallasi on aina saatavilla raikasta vettä.",
+            "fr": "Mieux vaut l’éviter : l’eau salée peut être dangereuse pour les chiens. À la plage, veillez à ce que votre chien ait toujours accès à de l’eau fraîche."
           }
         }
       ],
