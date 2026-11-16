@@ -150835,6 +150835,21 @@
       "checked": "2026-11-10"
     },
     {
+      "country": "KW",
+      "kind": "clinic",
+      "name": "International Veterinary Hospital",
+      "city": "Ahmadi",
+      "region": "Ahmadi",
+      "address": null,
+      "phone": "+965 2 207-0484",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": "http://www.ivhq8.com",
+      "source_url": "https://www.ipata.org/member/188",
+      "checked": "2026-11-16"
+    },
+    {
       "country": "KZ",
       "kind": "clinic",
       "name": "Bioritm",
