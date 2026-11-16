@@ -191255,6 +191255,21 @@
       "url": null,
       "source_url": "https://www.sava.co.za/elective-friendly-practices/",
       "checked": "2026-11-10"
+    },
+    {
+      "country": "ZW",
+      "kind": "clinic",
+      "name": "University of Zimbabwe Veterinary Teaching Hospital (Faculty of Veterinary Science)",
+      "city": "Harare",
+      "region": "Harare",
+      "address": "Department of Clinical Veterinary Sciences, University of Zimbabwe, P.O. Box MP167, Mount Pleasant, Harare",
+      "phone": "+263 4 303574",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": "https://www.uz.ac.zw/index.php/clinical-vet",
+      "source_url": "https://www.uz.ac.zw/index.php/clinical-vet",
+      "checked": "2026-11-16"
     }
   ]
 }
