@@ -8,6 +8,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-16 — Šola: kuža se spet vidi
+
+**Kaj:** David je na telefonu poslal posnetek šole: »Moti me tukaj, da je vse čez glavo.« Zgoraj so bili trije sloji — vrstica s pikami, dvovrstično pravilo in velik ukaz »Lulat zunaj! 👂« — ravno čez glavo in ušesa mladička. Zdaj je zgoraj samo tanka vrstica s pikami in ×; ukaz je tik nad priboljškom, pravilo (krajše: »Uboga → priboljšek · Ne uboga → počakaj«) pa pod njim, spodaj čez tla.
+**Zakaj je pomembno:** v šoli otrok pohvali samo, ko kuža uboga. Če ne vidi kužkove glave, ne vidi, ali je ubogal — igra izgubi smisel. Pravilo velja odslej za vse igre: nič čez glavo ljubljenčka.
+- 🧒 Otrokom: »Ukaz in priboljšek sta spodaj skupaj — kuža je v sredini, da vidiš, kdaj te uboga.«
+- 👩 Staršem: majhna sprememba, ki jo opazi vsak otrok; posodobitev pride sama (OTA), brez nove gradnje v trgovini.
+- 🛠 Tehnično: samo razpored (časi in točkovanje strežnika nespremenjeni); test preverja, da sta ukaz in pravilo v spodnjem delu in × zgoraj.
+
+---
+
 ## 2026-11-16 — Trije psi in mačka, štirje urniki: tihe ure za vsakega ljubljenčka in ura 12 / 24 h
 
 **Kaj:** David: »Mi imamo 3 pse in mačko. Hčerka mačko, sin psa. Jaz psa in žena psa. Zdaj pa ko nastavim school hours mi avtomatsko za vse živali velja. To ni ok.« Tihe ure so bile ena nastavitev za celo družino. Zdaj vsak ljubljenček sledi družinskim uram, starš pa mu lahko nastavi lastne (šola, spanje). Hkrati: ure v aplikaciji in obvestilih po telefonu (24-urni ali 12-urni zapis) z ročno izbiro, ure pa se ne tipkajo več, ampak nastavijo z vrtljivimi kolesi kot na budilki (minute po 15).

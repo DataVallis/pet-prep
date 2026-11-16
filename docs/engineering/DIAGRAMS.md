@@ -1880,7 +1880,7 @@ flowchart TD
   F -->|yes: new store build| S2["POST /training/start {command, rules: 2}"]
   S2 --> R{readTrainingSession → withRulesV2<br/>rounds + mask consistent?}
   R -->|no| V1
-  R -->|yes| P["preparing: ClipDeck mounts attention · performing · success<br/>(never release) — rule strip up (whole session)"]
+  R -->|yes| P["preparing: ClipDeck mounts attention · performing · success<br/>(never release) — rule strip up (whole session, bottom under the token)"]
   P -->|first frames / picture at once / 12 s → picture| RUN[running: SessionClock starts]
   RUN --> TL["schoolFrameAt (server times only)<br/>lead → listening (chip + 👂) → performing (no text) →<br/>window (chip gone; every session → glow + »Zdaj!«) → mask → calm<br/>ignored: chip 1.5 s → »Ne uboga — ne pohvali, počakaj.« + dimmed »Počakaj« token"]
   TL -->|role per step| Q["ClipQueue: attention ⇢ performing (crossfade, same pose)<br/>performing → success at its end (instant)<br/>success → attention = CUT only while masked"]
