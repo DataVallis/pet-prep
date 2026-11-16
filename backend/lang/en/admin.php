@@ -47,6 +47,8 @@ return [
         'partner_inquiry_model' => 'partner inquiry',
         'summary_leads' => 'Parent e-mails (website)',
         'summary_lead_model' => 'parent e-mail',
+        'breed_quiz_stats' => 'Breed quiz (statistics)',
+        'breed_quiz_stat_model' => 'breed quiz counter',
     ],
 
     'dashboard' => [
@@ -697,6 +699,18 @@ return [
             'title' => 'Still check: :count key image(s) rejected after every automatic retry',
             'body' => 'A state key image failed the AI still check (extra / ghost paws, a second animal, people, text …) also after its automatic regenerations with new seeds. It was not used — the pet keeps what it shows, that state gets no new loop yet. Optional: Pets → AI media → open the candidate → »Approve anyway« or Regenerate. Pose images (activities: simple mode) and item pictures (shown without content) are reported by their own alerts.',
         ],
+    ],
+    'breed_quiz_stats' => [
+        'note' => 'Anonymous counters of the petprep.si breed quiz: completed quizzes (top 3 breeds with rank) and clicks on the calculator / app buttons, per day (UTC), language and breed. Read-only. No IP address, cookie or visitor identity is stored.',
+        'day' => 'Day (UTC)',
+        'event' => 'Event',
+        'breed' => 'Breed',
+        'rank' => 'Rank',
+        'locale' => 'Language',
+        'count' => 'Count',
+        'total' => 'Total',
+        'from' => 'From',
+        'until' => 'Until',
     ],
     'summary_leads' => [
         'email' => 'E-mail',

@@ -222,6 +222,12 @@ class AppServiceProvider extends ServiceProvider
             return Limit::perHour(10)->by('summary-leads:'.ClientIp::rateLimitKey($request->ip()));
         });
 
+        // M6-S06 breed quiz counters (petprep.si): unauthenticated, upserts counters →
+        // 60 per hour per IP (IPv6 /64). The address is only the key. Live in testing too.
+        RateLimiter::for('breed-quiz-events', function (Request $request) {
+            return Limit::perHour(60)->by('breed-quiz-events:'.ClientIp::rateLimitKey($request->ip()));
+        });
+
         // Parent self-registration (M2-10a): unauthenticated, creates rows →
         // 5 per minute and 20 per hour per IP (IPv6 /64). Live in testing too
         // (like pin-login); tests that register more often vary the IP.

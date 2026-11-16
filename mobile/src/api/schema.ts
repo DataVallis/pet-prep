@@ -487,6 +487,33 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/breed-quiz/events": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Count one quiz event. Public, no token, no cookie; throttled per IP
+         *     (60 / hour, IPv6 /64) — the address is only the throttle key, never stored
+         *     or logged. `event` completed | calculator_click | app_click, `locale` one
+         *     of the 15 website languages, `breeds` = the top 3 in rank order for
+         *     `completed`, exactly one id for a click. A filled hidden `website` field
+         *     = bot: 204 and nothing stored
+         * @description 204 no content; 422 invalid body; 429 throttled.
+         *
+         *     POST /api/breed-quiz/events
+         */
+        post: operations["breedQuizEvent.store"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/broadcasting/auth": {
         parameters: {
             query?: never;
@@ -3453,6 +3480,19 @@ export interface components {
             rules?: number;
         };
         /**
+         * StoreBreedQuizEventRequest
+         * @description POST /api/breed-quiz/events (M6-S06, BREED_QUIZ_SPEC §8). Public, anonymous.
+         */
+        StoreBreedQuizEventRequest: {
+            /** @enum {string} */
+            event: "completed" | "calculator_click" | "app_click";
+            /** @enum {string} */
+            locale: "en" | "sl" | "de" | "fr" | "es" | "it" | "pt" | "nl" | "pl" | "cs" | "hr" | "sv" | "da" | "fi" | "nb";
+            /** @description completed: the result's top 3 in rank order (1–3); clicks: the one card clicked. */
+            breeds: string[];
+            website?: string | null;
+        };
+        /**
          * StorePartnerInquiryRequest
          * @description POST /api/partner-inquiries (M6-S03, WEBSITE_SALES_SPEC §5.2). Public.
          */
@@ -3487,7 +3527,7 @@ export interface components {
             /** @enum {string} */
             consent_version: "2026-11";
             /** @enum {string} */
-            source: "real_cost";
+            source: "real_cost" | "breed_quiz";
             /** @description Website language (two letters) and the breed slug of the website's breed register. */
             locale?: string | null;
             breed?: string | null;
@@ -4564,6 +4604,29 @@ export interface operations {
                     };
                 };
             };
+        };
+    };
+    "breedQuizEvent.store": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["StoreBreedQuizEventRequest"];
+            };
+        };
+        responses: {
+            /** @description No content */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            422: components["responses"]["ValidationException"];
         };
     };
     "broadcast.authenticate": {

@@ -121,6 +121,7 @@ pokritimi pasmami in to pove: »Izbiramo med X pasmami, za katere imamo preverje
 - Brez analitičnih orodij brez Davidovega OK (pravilo repozitorija). Če David odobri, šteti samo anonimno
   (zaključeni kvizi, kateri top 3, kliki na CTA) — to je tudi vrednost za sponzorja (»koliko družin je razmišljalo o X«),
   enako kot pri kalkulatorju: partner dobi številke, ne naslovov.
+- **Strežniški del zgrajen 16. 11. 2026 (M6-S06, backend):** `POST /api/breed-quiz/events` — javno, brez piškotkov, 60 na uro na IP (IP je samo ključ omejitve, ne shranjuje se in ne beleži), skrito polje `website` mora biti prazno (sicer 204 in nič shranjeno). Telo `{ "event": "completed" | "calculator_click" | "app_click", "locale": ena od 15 jezikov strani, "breeds": [id pasme] }`; `completed` → `breeds` = top 3 po vrstnem redu (1–3 id-ji), klika → natanko 1 id (kartica); id `^[a-z0-9_]{1,64}$`, brez iskanja v bazi. Odgovor `204`, pri neveljavnem vnosu `422`, ob preseženi omejitvi `429`. Shramba: tabela `breed_quiz_stats` (dan UTC · dogodek · pasma · mesto · jezik · števec, atomarni upsert, rang NULL pri klikih, `NULLS NOT DISTINCT`); pregled v administraciji (superadmin). E-naslov iz kviza: `POST /api/summary-leads` z `source: breed_quiz`, `breed` = prva pasma rezultata. Podrobnosti: ARCHITECTURE §3 + tabela `breed_quiz_stats`.
 - Kartica rezultata ima prostor za partnerja (enako kot kalkulator, poziv »Želite postati naš partner?«).
 
 ## 9. Tehnika (predlog)
