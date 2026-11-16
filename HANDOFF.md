@@ -281,6 +281,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-16 (cloud, mobile) — no dead end after a game (`fix/game-stuck-after-end`, JS only → OTA)
+- David's iPhone: wand intro card after a hunt (cat resting, »Začni lov« disabled) — the card's backdrop (overlay 20) covered the top bar (10), × got no touch, no iOS back. `GAME_Z.top` → 30 (all games), wand intro »Zapri« + failed-retry »Zapri«; Jest `expectCloseAboveCard`. Debt: RNTL `fireEvent.press` ignores what covers a node — use `expectCloseAboveCard` for every card.
+
 ### 2026-11-16 (cloud, mobile) — wheel time picker, per-pet quiet hours editor, 12 / 24 h setting (`feat/time-format-wheel-picker`, stacked on `feat/per-pet-quiet-hours`; JS only → OTA; merge only after the backend PR)
 - `modules/time/clock.ts` = the one clock formatter (12 / 24 h, `auto` = phone); `familyTime#clockText`, meal chips (`windowLabel`), Challenge trial end / Wishes dates rerouted. `TimeFormatCard` (Nadzor), device + server copy, push registration `hour12`. `TimeWheelPicker` / `WheelColumn` (no native dep) in `QuietHoursForm` (family card, no more text inputs) and `PetQuietHoursRow` (»Kot družina« / »Lastne ure«). Not verified on a device.
 

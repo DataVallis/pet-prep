@@ -8,6 +8,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-16 — Igra se konča, otrok pa ne more ven: × je zdaj vedno nad kartico
+
+**Kaj:** David je na iPhonu igral palico s peresom z muco. Po lovu se je vrnila uvodna kartica z »Muca po zadnji igri počiva. Igrata se lahko spet ob 21:13.« in onemogočenim »Začni lov« — nič ni reagiralo, aplikacijo je moral ubiti. Vzrok: polprosojno ozadje kartice je bilo narisano čez zgornjo vrstico, zato je × izgledal tam, a dotika ni dobil; iOS pa nima sistemskega »nazaj«. Zdaj je × v vseh igrah vedno nad kartico (uvod, rezultat, napaka), uvodna kartica palice ima še gumb »Zapri«.
+**Zakaj je pomembno:** otrok, ki obtiči v igri, ne ve, kako naprej — in starš dobi vtis pokvarjene aplikacije. Izhod mora biti vedno viden in delujoč.
+- 👩 Staršem: »Iz vsake igre je vedno izhod — × zgoraj desno, tudi ko mora muca počivati.«
+- 🛠 Tehnično: plasti igralnega zaslona imajo jasen vrstni red (`GAME_Z`); zgornja vrstica je zdaj nad kartico. Test v Jestu po pravilih risanja Fabric preveri, da je × nad kartico — prejšnji testi so × »pritisnili« ne glede na to, kaj ga prekriva. Posodobitev prek OTA.
+
+---
+
 ## 2026-11-16 — Trije psi in mačka, štirje urniki: tihe ure za vsakega ljubljenčka in ura 12 / 24 h
 
 **Kaj:** David: »Mi imamo 3 pse in mačko. Hčerka mačko, sin psa. Jaz psa in žena psa. Zdaj pa ko nastavim school hours mi avtomatsko za vse živali velja. To ni ok.« Tihe ure so bile ena nastavitev za celo družino. Zdaj vsak ljubljenček sledi družinskim uram, starš pa mu lahko nastavi lastne (šola, spanje). Hkrati: ure v aplikaciji in obvestilih po telefonu (24-urni ali 12-urni zapis) z ročno izbiro, ure pa se ne tipkajo več, ampak nastavijo z vrtljivimi kolesi kot na budilki (minute po 15).
