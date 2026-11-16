@@ -157776,6 +157776,21 @@
       "checked": "2026-11-04"
     },
     {
+      "country": "MO",
+      "kind": "clinic",
+      "name": "Royal Veterinary Center (RVC Macau)",
+      "city": "Macau",
+      "region": "Macau Peninsula",
+      "address": "Rua de Paris 182, R/C, Edif. Jardim Nam Ngon, Macau",
+      "phone": "+853 2850 1099",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, every day. Emergency line +853 6677 6611 (also WhatsApp); call before travelling.",
+      "duty_i18n": null,
+      "url": "https://royalveterinarycenter.com/en",
+      "source_url": "https://royalveterinarycenter.com/en/24-hour-vet-macau",
+      "checked": "2026-11-16"
+    },
+    {
       "country": "MT",
       "kind": "duty_rota",
       "name": "National Veterinary Emergency Service helpline (Servizz.gov, freephone 153 ext. 22)",
