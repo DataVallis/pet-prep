@@ -2,13 +2,15 @@
 
 namespace App\Http\Requests;
 
-use App\Models\SummaryLead;
+use App\Models\EmailContact;
+use App\Models\EmailSignup;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
 
 /**
- * POST /api/summary-leads (M6-S05, THREEJS_OPPORTUNITIES T9). Public.
+ * POST /api/summary-leads (M6-S05, THREEJS_OPPORTUNITIES T9). Public. Kept for old cached pages since M6-S09
+ * (stored in the unified `email_contacts` / `email_signups`); new pages use StoreEmailSignupRequest.
  */
 class StoreSummaryLeadRequest extends FormRequest
 {
@@ -42,12 +44,12 @@ class StoreSummaryLeadRequest extends FormRequest
             'email' => ['required', 'string', 'max:190', 'regex:/^[\x21-\x7E]+$/', 'email'],
             // The parent ticked the consent box; without it nothing is stored.
             'consent' => ['required', 'accepted'],
-            'consent_version' => ['required', 'string', Rule::in(SummaryLead::CONSENT_VERSIONS)],
-            'source' => ['required', 'string', Rule::in(SummaryLead::SOURCES)],
+            'consent_version' => ['required', 'string', Rule::in(EmailContact::CONSENT_VERSIONS)],
+            'source' => ['required', 'string', Rule::in(EmailSignup::LEGACY_SOURCES)],
             // Website language (two letters) and the breed slug of the website's breed register.
             'locale' => ['nullable', 'string', 'regex:/^[a-z]{2}$/'],
             'breed' => ['nullable', 'string', 'max:64', 'regex:/^[a-z0-9]+(?:[_-][a-z0-9]+)*$/'],
-            'stage' => ['nullable', 'string', Rule::in(SummaryLead::STAGES)],
+            'stage' => ['nullable', 'string', Rule::in(EmailSignup::STAGES)],
             'website' => ['nullable'],
         ];
     }

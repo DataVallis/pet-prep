@@ -16,6 +16,7 @@ use App\Http\Controllers\ChildProfileController;
 use App\Http\Controllers\ChildReportController;
 use App\Http\Controllers\ChildSettingsController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\EmailSignupController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\GiftVoucherController;
@@ -101,8 +102,15 @@ Route::get('shop/sample/{locale}', [ShopController::class, 'sample'])
 Route::post('partner-inquiries', [PartnerInquiryController::class, 'store'])
     ->middleware('throttle:partner-inquiries');
 
-// M6-S05: optional parent e-mail (with consent) on the petprep.si page »Koliko dela je pes«.
-// Public; per-IP throttle (10 / hour); one row per e-mail, no e-mail is sent.
+// M6-S09: EVERY e-mail left on petprep.si (newsletter / early access; calculator, quiz, forms) with
+// consent, source, page and targeting context → email_contacts + email_signups. Public; per-IP
+// throttle (20 / hour); 204; no e-mail is sent, no IP stored.
+Route::post('email-signups', [EmailSignupController::class, 'store'])
+    ->middleware('throttle:email-signups');
+
+// M6-S05: optional parent e-mail (with consent) on the petprep.si page »Koliko dela je pes«. KEPT for
+// old cached pages (M6-S09): writes into email_contacts / email_signups like email-signups.
+// Public; per-IP throttle (10 / hour); no e-mail is sent.
 Route::post('summary-leads', [SummaryLeadController::class, 'store'])
     ->middleware('throttle:summary-leads');
 

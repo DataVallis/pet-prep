@@ -26,13 +26,13 @@ the app, the backend or `pet-prep-website`. Product context, numbers with their 
   same day and dropped; the two PDFs stay on Drive (`PetPrep/spletna-prodaja`) as an archive, the script is in git history
   (PR #1146).
 - **Optional e-mail (T9, M6-S05):** under the summary button, the form »Priporočamo: novice PetPrep po e-pošti« (e-mail +
-  consent box, hidden honeypot `website`). It posts to `POST {API_URL}/api/summary-leads` (`API_URL`, `CONSENT_VERSION`,
-  `BREED` at the top of `src/main.js`). The server keeps one row per e-mail; the page also remembers in `localStorage`
+  consent box, hidden honeypot `website`). It posts to `POST {API_URL}/api/summary-leads` (kept for old pages since M6-S09: the server writes it into the unified `email_contacts` / `email_signups`; new pages use `POST /api/email-signups`) (`API_URL`, `CONSENT_VERSION`,
+  `BREED` at the top of `src/main.js`). The server keeps one contact per e-mail; the page also remembers in `localStorage`
   that the address was left and shows »Hvala. Vaš e-naslov imamo …« with a link »Vpiši drug e-naslov« instead of the
   form. The summary works without it. **Real rows are written only when the page runs on petprep.si**; anywhere else the
   form answers »To je prototip …« and sends nothing, unless `?api=<url>` names a test API. A filled honeypot is not sent.
   Tested against a mocked API (201, 422, 429, network error, return visit, honeypot, no API). The consent sentence is `news_consent` in `src/strings.js`
-  — changing its wording needs a new version in `SummaryLead::CONSENT_VERSIONS` and here.
+  — changing its wording needs a new version in `EmailContact::CONSENT_VERSIONS` and here.
 
 ## Run
 ```bash
