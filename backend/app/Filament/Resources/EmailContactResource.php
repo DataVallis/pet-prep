@@ -143,7 +143,7 @@ class EmailContactResource extends Resource
                 Tables\Columns\TextColumn::make('first_seen_at')->label(__('admin.email_signups.first_seen'))->dateTime('Y-m-d H:i', 'Europe/Ljubljana')->sortable(),
                 Tables\Columns\TextColumn::make('last_seen_at')->label(__('admin.email_signups.last_seen'))->dateTime('Y-m-d H:i', 'Europe/Ljubljana')->sortable(),
                 Tables\Columns\TextColumn::make('signups_count')->label(__('admin.email_signups.count'))->numeric()->sortable(),
-                Tables\Columns\TextColumn::make('consent_version')->label(__('admin.email_signups.consent'))->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('consent_version')->label(__('admin.email_signups.consent'))->toggleable(),
             ])
             ->defaultSort('last_seen_at', 'desc')
             ->filters([

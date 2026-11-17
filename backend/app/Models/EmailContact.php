@@ -37,13 +37,14 @@ class EmailContact extends Model
     use HasFactory;
 
     /**
-     * Versions of the consent sentence the website may show (text in THREEJS_OPPORTUNITIES T9),
-     * OLDEST FIRST. A new wording is appended here; a stored consent is only ever replaced by a
-     * later entry.
+     * Versions of the consent sentence the website may show, OLDEST FIRST: `2026-11` = the newsletter
+     * sentence (THREEJS_OPPORTUNITIES T9), `ea-2026-11` = the early-access form's own sentence (website
+     * PR #463). A new wording is appended here; the contact's stored consent is only ever replaced by
+     * a later entry (every signup row keeps the exact version it was given under).
      *
      * @var list<string>
      */
-    public const CONSENT_VERSIONS = ['2026-11'];
+    public const CONSENT_VERSIONS = ['2026-11', 'ea-2026-11'];
 
     /** @var list<string> */
     protected $fillable = [

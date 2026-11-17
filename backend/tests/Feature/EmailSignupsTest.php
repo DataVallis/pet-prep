@@ -153,6 +153,24 @@ describe('POST /api/email-signups', function () {
         expect($old->consent_version)->toBe('2026-11')->and($old->consented_at->toDateTimeString())->toBe('2026-11-17 10:00:00');
     });
 
+    it('accepts the early-access consent version ea-2026-11 and keeps it per signup', function () {
+        $this->postJson('/api/email-signups', esBody(['consent_version' => 'ea-2026-11', 'purpose' => 'early_access', 'source' => 'early_access_form', 'section' => 'home_cta']))->assertNoContent();
+
+        expect(EmailContact::sole()->consent_version)->toBe('ea-2026-11')
+            ->and(EmailSignup::sole()->consent_version)->toBe('ea-2026-11')->and(EmailSignup::sole()->section)->toBe('home_cta');
+
+        // a later newsletter signup keeps its own version on the row; the contact keeps the highest-ranked one
+        $this->postJson('/api/email-signups', esBody(['consent_version' => '2026-11']))->assertNoContent();
+        expect(EmailSignup::orderBy('id')->pluck('consent_version')->all())->toBe(['ea-2026-11', '2026-11']);
+    });
+
+    it('accepts every section value the website sends', function () {
+        foreach (['step5', 'result', 'hero', 'home_cta', 'breed_cta', 'care_cta', 'page_cta'] as $i => $section) {
+            $this->postJson('/api/email-signups', esBody(['section' => $section, 'email' => "s{$i}@example.test"]))->assertNoContent();
+        }
+        expect(EmailSignup::count())->toBe(7);
+    });
+
     it('cuts a query string and fragment off page_path (only the path is stored)', function () {
         $this->postJson('/api/email-signups', esBody(['page_path' => '/sl/kviz?email=x@y.si&utm_source=a#form']))->assertNoContent();
 
