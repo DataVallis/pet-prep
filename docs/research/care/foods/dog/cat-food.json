@@ -10,7 +10,8 @@
     "nb": "Kattefôr",
     "de": "Katzenfutter",
     "es": "Comida para gatos",
-    "pt": "Comida para gatos"
+    "pt": "Comida para gatos",
+    "nl": "Kattenvoer"
   },
   "question": {
     "en": "Can dogs eat cat food?",
@@ -21,7 +22,8 @@
     "nb": "Kan hunder spise kattefôr?",
     "de": "Dürfen Hunde Katzenfutter fressen?",
     "es": "¿Pueden los perros comer comida para gatos?",
-    "pt": "Os cães podem comer comida para gatos?"
+    "pt": "Os cães podem comer comida para gatos?",
+    "nl": "Mogen honden kattenvoer eten?"
   },
   "url_slug": {
     "en": "cat-food",
@@ -32,7 +34,8 @@
     "nb": "kattefor",
     "de": "katzenfutter",
     "es": "comida-para-gatos",
-    "pt": "comida-para-gatos"
+    "pt": "comida-para-gatos",
+    "nl": "kattenvoer"
   },
   "level": "not_recommended",
   "answer": {
@@ -44,7 +47,8 @@
     "nb": "Ikke jevnlig. En hund som stjeler litt av kattens fôr nå og da, tar sannsynligvis ikke skade, men det bør ikke bli en vane. Kattefôr inneholder mye mer kjøttbasert protein, og næringsstoffene er ikke i riktig balanse for hunder.",
     "de": "Nicht regelmäßig. Ein Hund, der ab und zu etwas vom Futter der Katze stibitzt, nimmt wahrscheinlich keinen Schaden, aber es sollte nicht zur Gewohnheit werden. Katzenfutter enthält deutlich mehr Eiweiß aus Fleisch und hat nicht die richtige Nährstoffzusammensetzung für Hunde.",
     "es": "No de forma habitual. A un perro que se cuela de vez en cuando en la comida del gato probablemente no le pase nada, pero no debe convertirse en costumbre. La comida para gatos tiene mucha más proteína de origen animal y no tiene el equilibrio de nutrientes que necesitan los perros.",
-    "pt": "Não como hábito. Se um cão rouba de vez em quando um pouco da comida do gato, provavelmente não terá problemas, mas isso não deve tornar-se um hábito. A comida para gatos tem muito mais proteína animal e não tem o equilíbrio certo de nutrientes para os cães."
+    "pt": "Não como hábito. Se um cão rouba de vez em quando um pouco da comida do gato, provavelmente não terá problemas, mas isso não deve tornar-se um hábito. A comida para gatos tem muito mais proteína animal e não tem o equilíbrio certo de nutrientes para os cães.",
+    "nl": "Niet regelmatig. Een hond die af en toe wat van het kattenvoer steelt, krijgt daar waarschijnlijk geen last van, maar het mag geen gewoonte worden. Kattenvoer bevat veel meer vleeseiwit en de voedingsstoffen zitten er niet in de juiste verhouding in voor honden."
   },
   "why": {
     "en": "Cats are obligate carnivores, so cat food is much higher in meat-based protein than dog food and doesn't have the correct balance of protein, fibre and nutrients dogs need. Over time the imbalance can lead to stomach and gut upset, obesity and pancreatitis, and the high protein levels can be hard on a dog's liver and kidneys.",
@@ -55,7 +59,8 @@
     "nb": "Katter er obligate kjøttetere, så kattefôr har mye mer kjøttbasert protein enn hundefôr, og balansen mellom protein, fiber og næringsstoffer er ikke riktig for hunder. Over tid kan ubalansen føre til mage- og tarmproblemer, overvekt og betennelse i bukspyttkjertelen, og det høye proteininnholdet kan belaste hundens lever og nyrer.",
     "de": "Katzen sind obligate Fleischfresser, deshalb enthält Katzenfutter viel mehr Eiweiß aus Fleisch als Hundefutter und liefert Eiweiß, Ballaststoffe und andere Nährstoffe nicht im richtigen Verhältnis für Hunde. Auf Dauer kann dieses Ungleichgewicht zu Magen-Darm-Beschwerden, Übergewicht und einer Bauchspeicheldrüsenentzündung führen, und der hohe Eiweißgehalt kann Leber und Nieren eines Hundes belasten.",
     "es": "Los gatos son carnívoros estrictos, así que su comida tiene mucha más proteína de origen animal que la de los perros y no aporta el equilibrio de proteínas, fibra y nutrientes que necesitan los perros. Con el tiempo, el desequilibrio puede provocar molestias de estómago e intestino, obesidad y pancreatitis, y el alto contenido en proteína puede suponer una carga para el hígado y los riñones del perro.",
-    "pt": "Os gatos são carnívoros estritos, por isso a comida para gatos tem muito mais proteína animal do que a comida para cães e não tem o equilíbrio certo de proteínas, fibra e nutrientes de que os cães precisam. Com o tempo, o desequilíbrio pode causar problemas de estômago e intestinos, obesidade e pancreatite, e o excesso de proteína pode sobrecarregar o fígado e os rins do cão."
+    "pt": "Os gatos são carnívoros estritos, por isso a comida para gatos tem muito mais proteína animal do que a comida para cães e não tem o equilíbrio certo de proteínas, fibra e nutrientes de que os cães precisam. Com o tempo, o desequilíbrio pode causar problemas de estômago e intestinos, obesidade e pancreatite, e o excesso de proteína pode sobrecarregar o fígado e os rins do cão.",
+    "nl": "Katten zijn strikte vleeseters, dus kattenvoer bevat veel meer vleeseiwit dan hondenvoer, en de verhouding tussen eiwit, vezels en andere voedingsstoffen is niet de juiste voor honden. Op den duur kan die scheve verhouding leiden tot maag- en darmklachten, obesitas en alvleesklierontsteking, en het hoge eiwitgehalte kan de lever en nieren van een hond zwaar belasten."
   },
   "signs": {
     "en": [
@@ -138,6 +143,15 @@
       "Diarreia",
       "Barriga inchada",
       "Febre"
+    ],
+    "nl": [
+      "Buikpijn en een gekromde rug",
+      "Moeheid en zwakte",
+      "Niet willen eten",
+      "Braken",
+      "Diarree",
+      "Opgezwollen buik",
+      "Koorts"
     ]
   },
   "what_to_do": {
@@ -149,7 +163,8 @@
     "nb": "Hvis hunden viser tegn på ubehag i magen etter å ha spist kattefôr, bør du ringe dyrlegen. Tegn på betennelse i bukspyttkjertelen, som krumrygg med vondt i magen, oppkast, svakhet eller feber, krever øyeblikkelig dyrlegehjelp.",
     "de": "Zeigt Ihr Hund nach dem Fressen von Katzenfutter Anzeichen von Bauchbeschwerden, rufen Sie Ihren Tierarzt an. Anzeichen einer Bauchspeicheldrüsenentzündung wie ein krummer Rücken mit Bauchschmerzen, Erbrechen, Schwäche oder Fieber erfordern sofortige tierärztliche Hilfe.",
     "es": "Si tu perro tiene molestias de barriga después de comer comida para gatos, llama a tu veterinario. Los signos de pancreatitis, como espalda encorvada con dolor de barriga, vómitos, debilidad o fiebre, requieren atención veterinaria inmediata.",
-    "pt": "Se o teu cão mostrar sinais de desconforto na barriga depois de comer comida para gatos, liga ao teu veterinário. Os sinais de pancreatite, como costas arqueadas com dor de barriga, vómitos, fraqueza ou febre, exigem cuidados veterinários imediatos."
+    "pt": "Se o teu cão mostrar sinais de desconforto na barriga depois de comer comida para gatos, liga ao teu veterinário. Os sinais de pancreatite, como costas arqueadas com dor de barriga, vómitos, fraqueza ou febre, exigem cuidados veterinários imediatos.",
+    "nl": "Heeft je hond na het eten van kattenvoer buikklachten, bel dan je dierenarts. Bij verschijnselen van alvleesklierontsteking, zoals een gebogen rug met buikpijn, braken, zwakte of koorts, moet je meteen naar de dierenarts."
   },
   "serving": null,
   "child": {
@@ -161,7 +176,8 @@
     "nb": "Kattefôr er laget for katter. Hunder holder seg friskest med sitt eget hundefôr, så hjelp til med å holde kattens skål høyt oppe!",
     "de": "Katzenfutter ist für Katzen gemacht. Hunde bleiben mit ihrem eigenen Hundefutter am gesündesten – hilf also mit und stell den Napf der Katze weit oben ab!",
     "es": "La comida para gatos es para gatos. Los perros están más sanos con su propia comida. ¡Ayuda a poner el comedero del gato en un sitio alto!",
-    "pt": "A comida para gatos é feita para gatos. Os cães ficam mais saudáveis com a comida deles, por isso ajuda a pôr a tigela do gato num sítio alto!"
+    "pt": "A comida para gatos é feita para gatos. Os cães ficam mais saudáveis com a comida deles, por isso ajuda a pôr a tigela do gato num sítio alto!",
+    "nl": "Kattenvoer is gemaakt voor katten. Honden blijven het gezondst met hun eigen hondenvoer, dus help mee en zet het bakje van de kat hoog neer!"
   },
   "faq": [
     {
@@ -174,7 +190,8 @@
         "nb": "Hvordan hindrer jeg at hunden spiser kattens mat?",
         "de": "Wie halte ich meinen Hund vom Futter der Katze fern?",
         "es": "¿Cómo evito que mi perro se coma la comida del gato?",
-        "pt": "Como posso impedir que o meu cão chegue à comida do gato?"
+        "pt": "Como posso impedir que o meu cão chegue à comida do gato?",
+        "nl": "Hoe zorg ik dat mijn hond niet aan het kattenvoer komt?"
       },
       "a": {
         "en": "Place the cat's food out of your dog's reach. If your dog regularly gets into it, change where you keep the cat's food or where and how you feed your cat.",
@@ -185,7 +202,8 @@
         "nb": "Sett kattens mat utenfor hundens rekkevidde. Hvis hunden jevnlig kommer til den, kan du endre hvor du oppbevarer kattefôret, eller hvor og hvordan du gir katten mat.",
         "de": "Stellen Sie das Futter der Katze außerhalb der Reichweite Ihres Hundes ab. Kommt Ihr Hund regelmäßig daran, ändern Sie, wo Sie das Katzenfutter aufbewahren oder wo und wie Sie Ihre Katze füttern.",
         "es": "Coloca la comida del gato fuera del alcance de tu perro. Si se cuela a menudo, cambia el sitio donde guardas la comida del gato o dónde y cómo se la das.",
-        "pt": "Põe a comida do gato fora do alcance do cão. Se ele a apanhar com frequência, muda o sítio onde a guardas ou o local e a forma como alimentas o gato."
+        "pt": "Põe a comida do gato fora do alcance do cão. Se ele a apanhar com frequência, muda o sítio onde a guardas ou o local e a forma como alimentas o gato.",
+        "nl": "Zet het kattenvoer buiten het bereik van je hond. Komt je hond er toch regelmatig aan, verander dan waar je het kattenvoer bewaart of waar en hoe je je kat voert."
       }
     },
     {
@@ -198,7 +216,8 @@
         "nb": "Kan hunden spise kattefôr i en nødssituasjon?",
         "de": "Darf mein Hund im Notfall Katzenfutter fressen?",
         "es": "¿Puede mi perro comer comida para gatos en una emergencia?",
-        "pt": "O meu cão pode comer comida para gatos numa emergência?"
+        "pt": "O meu cão pode comer comida para gatos numa emergência?",
+        "nl": "Mag mijn hond in een noodgeval kattenvoer eten?"
       },
       "a": {
         "en": "Dogs can survive on cat food in a tough spot, but unless your vet recommends otherwise, the best food for your dog is dog food.",
@@ -209,7 +228,8 @@
         "nb": "Hunder kan klare seg på kattefôr i en knipe, men med mindre dyrlegen anbefaler noe annet, er hundefôr det beste fôret til hunden din.",
         "de": "Hunde können sich zur Not von Katzenfutter ernähren, aber sofern Ihr Tierarzt nichts anderes empfiehlt, ist Hundefutter die beste Wahl für Ihren Hund.",
         "es": "En un apuro, un perro puede salir adelante con comida para gatos, pero, salvo que tu veterinario te diga otra cosa, lo mejor para él es la comida para perros.",
-        "pt": "Um cão consegue sobreviver com comida para gatos se for preciso, mas, a não ser que o teu veterinário diga outra coisa, a melhor comida para ele é comida para cães."
+        "pt": "Um cão consegue sobreviver com comida para gatos se for preciso, mas, a não ser que o teu veterinário diga outra coisa, a melhor comida para ele é comida para cães.",
+        "nl": "Een hond kan in noodgevallen op kattenvoer overleven, maar tenzij je dierenarts anders adviseert, is hondenvoer het beste voor je hond."
       }
     }
   ],
@@ -330,6 +350,11 @@
       "status": "verified",
       "verified_by": "claude-c-pt-2026-11-17",
       "verified_hash": "f1f17732a16cdf0a4dd318af01cbd3c4e0f69a45ddcd493964c11b26691cad22"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-c-nl-2026-11-17",
+      "verified_hash": "e0df77f05f8239d39adafec4347426d162bcbf3b515f73cb1b04c1dc60269cbf"
     }
   }
 }

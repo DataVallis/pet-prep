@@ -10779,7 +10779,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Dog food",
@@ -10790,7 +10791,8 @@
         "nb": "Hundefôr",
         "de": "Hundefutter",
         "es": "Comida para perros",
-        "pt": "Comida para cães"
+        "pt": "Comida para cães",
+        "nl": "Hondenvoer"
       },
       "question": {
         "en": "Can cats eat dog food?",
@@ -10801,7 +10803,8 @@
         "nb": "Kan katter spise hundefôr?",
         "de": "Dürfen Katzen Hundefutter fressen?",
         "es": "¿Pueden los gatos comer comida para perros?",
-        "pt": "Os gatos podem comer comida para cães?"
+        "pt": "Os gatos podem comer comida para cães?",
+        "nl": "Mogen katten hondenvoer eten?"
       },
       "url_slug": {
         "en": "dog-food",
@@ -10812,7 +10815,8 @@
         "nb": "hundefor",
         "de": "hundefutter",
         "es": "comida-para-perros",
-        "pt": "comida-para-caes"
+        "pt": "comida-para-caes",
+        "nl": "hondenvoer"
       },
       "answer": {
         "en": "Not as their food. A morsel or two of dog food won't hurt most healthy cats, but you should not feed your dog's food to your cat. Dog food doesn't meet a cat's nutritional needs – for example, it doesn't contain enough taurine for a cat.",
@@ -10823,7 +10827,8 @@
         "nb": "Nei, ikke som mat til katten. En liten bit eller to hundefôr skader ikke de fleste friske katter, men la være å gi katten fôret til hunden din. Hundefôr dekker ikke kattens næringsbehov – det inneholder for eksempel for lite taurin.",
         "de": "Nicht als Futter. Ein oder zwei Bröckchen Hundefutter schaden den meisten gesunden Katzen nicht, aber Hundefutter sollte nicht das Futter Ihrer Katze sein. Es deckt ihren Nährstoffbedarf nicht – zum Beispiel enthält es nicht genug Taurin.",
         "es": "No, no como alimento. A un gato sano un bocado o dos de comida para perros no suele hacerle daño, pero no conviene darle la comida de tu perro. No cubre las necesidades nutricionales de un gato; por ejemplo, no tiene suficiente taurina para él.",
-        "pt": "Não como refeição habitual. Uma ou duas migalhas de comida para cães não fazem mal à maioria dos gatos saudáveis, mas não deves dar ao teu gato a comida do teu cão. A comida para cães não satisfaz as necessidades nutricionais de um gato – por exemplo, não tem taurina suficiente."
+        "pt": "Não como refeição habitual. Uma ou duas migalhas de comida para cães não fazem mal à maioria dos gatos saudáveis, mas não deves dar ao teu gato a comida do teu cão. A comida para cães não satisfaz as necessidades nutricionais de um gato – por exemplo, não tem taurina suficiente.",
+        "nl": "Niet als hun voer. Een hapje of twee hondenvoer deert de meeste gezonde katten niet, maar je kat hoort het voer van je hond niet te krijgen. Hondenvoer voldoet niet aan de voedingsbehoeften van een kat – er zit bijvoorbeeld te weinig taurine in voor een kat."
       },
       "why": {
         "en": "Dogs and cats need different nutrients. Cats require taurine, an essential amino acid for them, while dogs do not, and dog food does not contain enough of it for a cat. The Merck Veterinary Manual adds that some dog foods are lower in protein and may lack nutrients cats need but dogs don't, such as preformed vitamin A and arachidonic acid. Too little taurine can weaken the heart muscle and damage the eyes, impairing vision.",
@@ -10834,7 +10839,8 @@
         "nb": "Hunder og katter trenger ulike næringsstoffer. Katter må få i seg taurin, en aminosyre som er livsnødvendig for dem, mens hunder ikke trenger den, og hundefôr inneholder ikke nok taurin til en katt. Merck Veterinary Manual legger til at noe hundefôr har lavere proteininnhold og kan mangle næringsstoffer som katter trenger, men hunder ikke, for eksempel ferdigdannet vitamin A og arakidonsyre. For lite taurin kan svekke hjertemuskelen og skade øynene, slik at synet blir dårligere.",
         "de": "Hunde und Katzen brauchen unterschiedliche Nährstoffe. Katzen müssen Taurin aufnehmen, eine für sie essenzielle Aminosäure, Hunde dagegen nicht – und Hundefutter enthält davon nicht genug für eine Katze. Laut Merck Veterinary Manual enthalten manche Hundefutter außerdem weniger Eiweiß, und es können ihnen Nährstoffe fehlen, die Katzen brauchen, Hunde aber nicht, etwa präformiertes Vitamin A und Arachidonsäure. Zu wenig Taurin kann den Herzmuskel schwächen und den Augen schaden, sodass das Sehvermögen nachlässt.",
         "es": "Los perros y los gatos necesitan nutrientes distintos. Los gatos necesitan taurina, un aminoácido esencial para ellos, y los perros no, así que la comida para perros no contiene la suficiente para un gato. El Manual Merck de Veterinaria añade que algunas comidas para perros llevan menos proteína y pueden carecer de nutrientes que los gatos necesitan y los perros no, como la vitamina A preformada y el ácido araquidónico. Con poca taurina, el músculo del corazón puede debilitarse y los ojos sufrir daños que afectan a la vista.",
-        "pt": "Os cães e os gatos precisam de nutrientes diferentes. Os gatos precisam de taurina, um aminoácido essencial para eles, de que os cães não precisam, e a comida para cães não tem o suficiente para um gato. O Merck Veterinary Manual acrescenta que algumas comidas para cães têm menos proteína e podem não ter nutrientes de que os gatos precisam mas os cães não, como a vitamina A pré-formada e o ácido araquidónico. A falta de taurina pode enfraquecer o músculo do coração e lesionar os olhos, prejudicando a visão."
+        "pt": "Os cães e os gatos precisam de nutrientes diferentes. Os gatos precisam de taurina, um aminoácido essencial para eles, de que os cães não precisam, e a comida para cães não tem o suficiente para um gato. O Merck Veterinary Manual acrescenta que algumas comidas para cães têm menos proteína e podem não ter nutrientes de que os gatos precisam mas os cães não, como a vitamina A pré-formada e o ácido araquidónico. A falta de taurina pode enfraquecer o músculo do coração e lesionar os olhos, prejudicando a visão.",
+        "nl": "Honden en katten hebben andere voedingsstoffen nodig. Katten moeten taurine binnenkrijgen, een aminozuur dat voor hen essentieel is, honden niet, en er zit te weinig taurine in hondenvoer voor een kat. Volgens de Merck Veterinary Manual bevat sommig hondenvoer bovendien minder eiwit en kunnen er voedingsstoffen in ontbreken die katten wél nodig hebben en honden niet, zoals kant-en-klare vitamine A en arachidonzuur. Bij te weinig taurine kan de hartspier verzwakken en kunnen de ogen beschadigd raken, waardoor het zicht achteruitgaat."
       },
       "signs": {
         "en": [
@@ -10890,6 +10896,12 @@
           "Vómitos",
           "Perda de peso",
           "Convulsões"
+        ],
+        "nl": [
+          "Misselijkheid",
+          "Braken",
+          "Gewichtsverlies",
+          "Stuipen"
         ]
       },
       "what_to_do": {
@@ -10901,7 +10913,8 @@
         "nb": "En liten smak fra hundens skål er vanligvis greit for en frisk katt. La hvert dyr spise av sin egen skål, på hvert sitt sted i hjemmet. En katt som bare får hundefôr, kan bli syk i løpet av timer, dager eller uker – kontakt dyrlegen hvis du er bekymret.",
         "de": "Ein Happen aus dem Napf des Hundes ist für eine gesunde Katze meist unbedenklich. Füttern Sie jedes Tier aus seinem eigenen Napf, in getrennten Bereichen der Wohnung. Eine Katze, die nur Hundefutter frisst, kann innerhalb von Stunden, Tagen oder Wochen krank werden – wenden Sie sich an Ihren Tierarzt, wenn Sie sich Sorgen machen.",
         "es": "Un bocado del plato del perro no suele ser un problema para un gato sano. Alimenta a cada mascota en su propio comedero y en zonas distintas de la casa. Un gato que come solo comida para perros puede enfermar en cuestión de horas, días o semanas; si te preocupa, contacta con tu veterinario.",
-        "pt": "Uma dentada da tigela do cão costuma ser aceitável para um gato saudável. Dá a cada animal a comida da sua própria tigela, em zonas separadas da casa. Um gato que coma só comida para cães pode adoecer em horas, dias ou semanas – contacta o teu veterinário se tiveres dúvidas."
+        "pt": "Uma dentada da tigela do cão costuma ser aceitável para um gato saudável. Dá a cada animal a comida da sua própria tigela, em zonas separadas da casa. Um gato que coma só comida para cães pode adoecer em horas, dias ou semanas – contacta o teu veterinário se tiveres dúvidas.",
+        "nl": "Een hapje uit de bak van de hond is voor een gezonde kat meestal geen probleem. Geef elk huisdier eten uit een eigen bakje, op aparte plekken in huis. Een kat die alleen hondenvoer eet, kan binnen uren, dagen of weken ziek worden – neem contact op met je dierenarts als je je zorgen maakt."
       },
       "serving": null,
       "child": {
@@ -10913,7 +10926,8 @@
         "nb": "Hundefôr er laget for hunder. Katter trenger sitt eget kattefôr for å holde seg friske!",
         "de": "Hundefutter ist für Hunde gemacht. Katzen brauchen ihr eigenes Katzenfutter, damit sie gesund bleiben!",
         "es": "La comida para perros es para los perros. ¡Los gatos necesitan su propia comida para estar sanos!",
-        "pt": "A comida para cães é feita para cães. Os gatos precisam da sua própria comida para gatos para se manterem saudáveis!"
+        "pt": "A comida para cães é feita para cães. Os gatos precisam da sua própria comida para gatos para se manterem saudáveis!",
+        "nl": "Hondenvoer is gemaakt voor honden. Katten hebben hun eigen kattenvoer nodig om gezond te blijven!"
       },
       "faq": [
         {
@@ -10926,7 +10940,8 @@
             "nb": "Hva er taurin, og hvorfor trenger katter det?",
             "de": "Was ist Taurin und warum brauchen Katzen es?",
             "es": "¿Qué es la taurina y por qué la necesitan los gatos?",
-            "pt": "O que é a taurina e porque é que os gatos precisam dela?"
+            "pt": "O que é a taurina e porque é que os gatos precisam dela?",
+            "nl": "Wat is taurine en waarom hebben katten het nodig?"
           },
           "a": {
             "en": "Taurine is an essential amino acid for cats, and cats have only a limited ability to make it themselves. Without enough of it, the heart muscle weakens and the cells of the retina eventually degenerate, impairing vision.",
@@ -10937,7 +10952,8 @@
             "nb": "Taurin er en aminosyre som er livsnødvendig for katter, og katter kan bare lage litt av den selv. Får de ikke nok, svekkes hjertemuskelen, og cellene i netthinnen brytes til slutt ned, slik at synet blir dårligere.",
             "de": "Taurin ist für Katzen eine essenzielle Aminosäure, die sie nur begrenzt selbst bilden können. Fehlt Taurin, wird der Herzmuskel schwächer, und die Zellen der Netzhaut degenerieren mit der Zeit, sodass das Sehvermögen nachlässt.",
             "es": "La taurina es un aminoácido esencial para los gatos, que solo pueden fabricar una cantidad limitada. Si les falta, el músculo del corazón se debilita y las células de la retina acaban degenerando, lo que afecta a la vista.",
-            "pt": "A taurina é um aminoácido essencial para os gatos, que só conseguem produzi-la em pequena quantidade. Sem a quantidade suficiente, o músculo do coração enfraquece e as células da retina acabam por degenerar, prejudicando a visão."
+            "pt": "A taurina é um aminoácido essencial para os gatos, que só conseguem produzi-la em pequena quantidade. Sem a quantidade suficiente, o músculo do coração enfraquece e as células da retina acabam por degenerar, prejudicando a visão.",
+            "nl": "Taurine is een essentieel aminozuur voor katten, en ze kunnen het zelf maar beperkt aanmaken. Zonder genoeg taurine verzwakt de hartspier en degenereren de cellen van het netvlies uiteindelijk, waardoor het zicht achteruitgaat."
           }
         }
       ],
@@ -11808,7 +11824,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Fish oil",
@@ -11819,7 +11836,8 @@
         "nb": "Fiskeolje",
         "de": "Fischöl",
         "es": "Aceite de pescado",
-        "pt": "Óleo de peixe"
+        "pt": "Óleo de peixe",
+        "nl": "Visolie"
       },
       "question": {
         "en": "Can cats have fish oil?",
@@ -11830,7 +11848,8 @@
         "nb": "Kan katter få fiskeolje?",
         "de": "Dürfen Katzen Fischöl bekommen?",
         "es": "¿Pueden los gatos tomar aceite de pescado?",
-        "pt": "Os gatos podem tomar óleo de peixe?"
+        "pt": "Os gatos podem tomar óleo de peixe?",
+        "nl": "Mogen katten visolie krijgen?"
       },
       "url_slug": {
         "en": "fish-oil",
@@ -11841,7 +11860,8 @@
         "nb": "fiskeolje",
         "de": "fischoel",
         "es": "aceite-de-pescado",
-        "pt": "oleo-de-peixe"
+        "pt": "oleo-de-peixe",
+        "nl": "visolie"
       },
       "answer": {
         "en": "Only if your vet recommends it. Fish oil is a supplement used widely in cats, but it may not be appropriate for every pet and can have side effects. Always talk to your vet before giving fish oil or any other supplement.",
@@ -11852,7 +11872,8 @@
         "nb": "Bare hvis dyrlegen anbefaler det. Fiskeolje er et kosttilskudd som brukes mye til katter, men det passer kanskje ikke for alle dyr og kan gi bivirkninger. Snakk alltid med dyrlegen før du gir fiskeolje eller andre kosttilskudd.",
         "de": "Nur, wenn Ihr Tierarzt es empfiehlt. Fischöl ist ein Nahrungsergänzungsmittel, das bei Katzen häufig verwendet wird, aber nicht für jedes Tier geeignet ist und Nebenwirkungen haben kann. Sprechen Sie immer mit Ihrem Tierarzt, bevor Sie Fischöl oder ein anderes Nahrungsergänzungsmittel geben.",
         "es": "Solo si tu veterinario te lo recomienda. El aceite de pescado es un suplemento que se usa mucho en gatos, pero puede no ser adecuado para todas las mascotas y provocar efectos secundarios. Habla siempre con tu veterinario antes de darle aceite de pescado o cualquier otro suplemento.",
-        "pt": "Só se o veterinário o recomendar. O óleo de peixe é um suplemento muito usado em gatos, mas pode não ser adequado para todos e tem possíveis efeitos secundários. Fala sempre com o teu veterinário antes de dar óleo de peixe ou qualquer outro suplemento."
+        "pt": "Só se o veterinário o recomendar. O óleo de peixe é um suplemento muito usado em gatos, mas pode não ser adequado para todos e tem possíveis efeitos secundários. Fala sempre com o teu veterinário antes de dar óleo de peixe ou qualquer outro suplemento.",
+        "nl": "Alleen als je dierenarts het adviseert. Veel katten krijgen visolie als supplement, maar het is niet voor elk huisdier geschikt en het kan bijwerkingen hebben. Overleg altijd met je dierenarts voordat je visolie of een ander supplement geeft."
       },
       "why": {
         "en": "Fish oil is used widely in cats, but omega-3 supplements may not be appropriate for every pet, and less is known about supplementing cats that have kidney disease. Possible side effects include mild stomach upset, a fishy odour, an oily coat and itchy, flaky skin; serious reactions include abnormal bruising or bleeding, especially in cats. Fish oil should not be given if a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity.",
@@ -11863,7 +11884,8 @@
         "nb": "Fiskeolje brukes mye til katter, men tilskudd med omega-3 passer kanskje ikke for alle dyr, og man vet mindre om tilskudd til katter med nyresykdom. Mulige bivirkninger er lett urolig mage, fiskelukt, fet pels og kløende, flassende hud. Alvorlige reaksjoner er unormale blåmerker eller blødninger, særlig hos katter. Gi bare fiskeolje fra en pålitelig kilde, for noen kilder har høy risiko for tungmetallforgiftning.",
         "de": "Fischöl wird bei Katzen häufig verwendet, doch Omega-3-Präparate sind nicht für jedes Tier geeignet, und über die Gabe bei Katzen mit Nierenerkrankung ist weniger bekannt. Mögliche Nebenwirkungen sind eine leichte Magenverstimmung, Fischgeruch, ein öliges Fell sowie juckende, schuppige Haut. Schwerwiegende Reaktionen sind ungewöhnliche Blutergüsse oder Blutungen, besonders bei Katzen. Lässt sich keine seriöse Bezugsquelle finden, sollte man auf Fischöl verzichten, denn manche Quellen bergen ein hohes Risiko für Schwermetallvergiftungen.",
         "es": "El aceite de pescado se usa mucho en gatos, pero los suplementos de omega-3 pueden no ser adecuados para todas las mascotas, y se sabe menos sobre su uso en gatos con enfermedad renal. Entre los posibles efectos secundarios están molestias leves de estómago, olor a pescado, pelo graso y picor con descamación de la piel; entre las reacciones graves, hematomas o sangrados anormales, sobre todo en gatos. No se debe dar aceite de pescado si no procede de una fuente fiable, porque algunas fuentes suponen un alto riesgo de toxicidad por metales pesados.",
-        "pt": "O óleo de peixe é muito usado em gatos, mas os suplementos de ómega-3 podem não ser adequados para todos, e sabe-se menos sobre a suplementação em gatos com doença renal. Os possíveis efeitos secundários incluem mal-estar de estômago ligeiro, cheiro a peixe, pelo oleoso e pele com comichão e descamação; entre as reações graves estão nódoas negras ou hemorragias anormais, sobretudo nos gatos. Não se deve dar óleo de peixe se não for possível garantir uma fonte de confiança, porque algumas fontes têm um risco elevado de toxicidade por metais pesados."
+        "pt": "O óleo de peixe é muito usado em gatos, mas os suplementos de ómega-3 podem não ser adequados para todos, e sabe-se menos sobre a suplementação em gatos com doença renal. Os possíveis efeitos secundários incluem mal-estar de estômago ligeiro, cheiro a peixe, pelo oleoso e pele com comichão e descamação; entre as reações graves estão nódoas negras ou hemorragias anormais, sobretudo nos gatos. Não se deve dar óleo de peixe se não for possível garantir uma fonte de confiança, porque algumas fontes têm um risco elevado de toxicidade por metais pesados.",
+        "nl": "Veel katten krijgen visolie, maar omega-3-supplementen zijn niet voor elk huisdier geschikt, en over het geven van supplementen aan katten met nierziekte is minder bekend. Mogelijke bijwerkingen zijn lichte maagklachten, een visgeur, een vettige vacht en jeukende, schilferige huid. Ernstige reacties zijn onder meer ongewone blauwe plekken of bloedingen, vooral bij katten. Geef geen visolie als je geen betrouwbare bron hebt, want bij sommige bronnen is het risico op vergiftiging met zware metalen groot."
       },
       "signs": {
         "en": [
@@ -11964,6 +11986,17 @@
           "Reação alérgica: respiração irregular, erupção na pele, febre, inchaço na cara",
           "Perda de apetite",
           "Andar a cambalear ou convulsões"
+        ],
+        "nl": [
+          "Lichte maagklachten",
+          "Visgeur",
+          "Vettige vacht",
+          "Jeuk of schilferige huid",
+          "Trage wondgenezing",
+          "Abnormale blauwe plekken of bloedingen",
+          "Allergische reactie: onregelmatige ademhaling, huiduitslag, koorts, zwelling rond het gezicht",
+          "Verlies van eetlust",
+          "Wankelen of stuipen"
         ]
       },
       "what_to_do": {
@@ -11975,7 +12008,8 @@
         "nb": "Snakk med dyrlegen før du gir fiskeolje, og fortell om alle vitaminer og kosttilskudd katten din allerede får. Hvis det dukker opp alvorlige tegn, slutter du å gi fiskeolje og kontakter dyrlegen med en gang.",
         "de": "Besprechen Sie die Gabe von Fischöl vorab mit Ihrem Tierarzt und nennen Sie ihm alle Vitamine und Nahrungsergänzungsmittel, die Ihre Katze schon bekommt. Treten ernste Anzeichen auf, setzen Sie das Fischöl ab und wenden Sie sich sofort an Ihren Tierarzt.",
         "es": "Habla con tu veterinario antes de darle aceite de pescado y cuéntale qué vitaminas o suplementos toma ya tu gato. Si aparecen signos graves, deja de darle el aceite de pescado y contacta enseguida con tu veterinario.",
-        "pt": "Fala com o teu veterinário antes de dar óleo de peixe e diz-lhe que vitaminas ou suplementos o teu gato já toma. Se surgirem sinais graves, deixa de dar o óleo de peixe e contacta imediatamente o teu veterinário."
+        "pt": "Fala com o teu veterinário antes de dar óleo de peixe e diz-lhe que vitaminas ou suplementos o teu gato já toma. Se surgirem sinais graves, deixa de dar o óleo de peixe e contacta imediatamente o teu veterinário.",
+        "nl": "Overleg met je dierenarts voordat je visolie geeft, en vertel ook welke vitamines of supplementen je kat al krijgt. Zie je ernstige verschijnselen, stop dan met de visolie en neem meteen contact op met je dierenarts."
       },
       "serving": null,
       "child": {
@@ -11987,7 +12021,8 @@
         "nb": "Bare dyrlegen kan avgjøre om en katt trenger fiskeolje. Be en voksen snakke med dyrlegen først!",
         "de": "Ob eine Katze Fischöl braucht, entscheidet allein der Tierarzt. Bitte einen Erwachsenen, vorher mit dem Tierarzt zu sprechen!",
         "es": "Solo el veterinario puede decidir si un gato necesita aceite de pescado. ¡Pide a un adulto que hable antes con el veterinario!",
-        "pt": "Só o veterinário pode decidir se um gato precisa de óleo de peixe. Pede a um adulto para falar primeiro com o veterinário!"
+        "pt": "Só o veterinário pode decidir se um gato precisa de óleo de peixe. Pede a um adulto para falar primeiro com o veterinário!",
+        "nl": "Alleen de dierenarts kan bepalen of een kat visolie nodig heeft. Vraag een volwassene om eerst met de dierenarts te praten!"
       },
       "faq": [
         {
@@ -12000,7 +12035,8 @@
             "nb": "Spiller merket på fiskeoljen noen rolle?",
             "de": "Spielt die Marke des Fischöls eine Rolle?",
             "es": "¿Importa la marca del aceite de pescado?",
-            "pt": "A marca do óleo de peixe é importante?"
+            "pt": "A marca do óleo de peixe é importante?",
+            "nl": "Maakt het merk visolie uit?"
           },
           "a": {
             "en": "Yes. VCA advises against fish oil when a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity, and Tufts vets recommend a brand with good quality control. Your vet can advise.",
@@ -12011,7 +12047,8 @@
             "nb": "Ja. VCA fraråder fiskeolje når man ikke får tak i en pålitelig kilde, fordi noen kilder har høy risiko for tungmetallforgiftning, og dyrleger ved Tufts anbefaler et merke med god kvalitetskontroll. Dyrlegen kan gi deg råd.",
             "de": "Ja. VCA rät von Fischöl ab, wenn sich keine seriöse Bezugsquelle finden lässt, da manche Quellen ein hohes Risiko für Schwermetallvergiftungen bergen. Die Tierärzte von Tufts empfehlen eine Marke mit guter Qualitätskontrolle. Ihr Tierarzt kann Sie beraten.",
             "es": "Sí. VCA desaconseja el aceite de pescado que no procede de una fuente fiable, porque algunas fuentes suponen un alto riesgo de toxicidad por metales pesados, y los veterinarios de Tufts recomiendan una marca con buen control de calidad. Tu veterinario te puede aconsejar.",
-            "pt": "Sim. A VCA desaconselha o óleo de peixe quando não se consegue garantir uma fonte de confiança, porque algumas fontes têm um risco elevado de toxicidade por metais pesados, e os veterinários da Tufts recomendam uma marca com bom controlo de qualidade. O teu veterinário pode aconselhar-te."
+            "pt": "Sim. A VCA desaconselha o óleo de peixe quando não se consegue garantir uma fonte de confiança, porque algumas fontes têm um risco elevado de toxicidade por metais pesados, e os veterinários da Tufts recomendam uma marca com bom controlo de qualidade. O teu veterinário pode aconselhar-te.",
+            "nl": "Ja. VCA raadt visolie af als je geen betrouwbare bron hebt, omdat bij sommige bronnen het risico op vergiftiging met zware metalen groot is, en dierenartsen van Tufts adviseren een merk met goede kwaliteitscontrole. Je dierenarts kan je daarover adviseren."
           }
         }
       ],
@@ -13041,7 +13078,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Goat's milk",
@@ -13052,7 +13090,8 @@
         "nb": "Geitemelk",
         "de": "Ziegenmilch",
         "es": "Leche de cabra",
-        "pt": "Leite de cabra"
+        "pt": "Leite de cabra",
+        "nl": "Geitenmelk"
       },
       "question": {
         "en": "Can cats drink goat's milk?",
@@ -13063,7 +13102,8 @@
         "nb": "Kan katter drikke geitemelk?",
         "de": "Dürfen Katzen Ziegenmilch trinken?",
         "es": "¿Pueden los gatos beber leche de cabra?",
-        "pt": "Os gatos podem beber leite de cabra?"
+        "pt": "Os gatos podem beber leite de cabra?",
+        "nl": "Mogen katten geitenmelk drinken?"
       },
       "url_slug": {
         "en": "goat-milk",
@@ -13074,7 +13114,8 @@
         "nb": "geitemelk",
         "de": "ziegenmilch",
         "es": "leche-de-cabra",
-        "pt": "leite-de-cabra"
+        "pt": "leite-de-cabra",
+        "nl": "geitenmelk"
       },
       "answer": {
         "en": "It's best not to. Vets list goat's milk, like cow's milk, among the drinks that cause tummy trouble in lactose-intolerant cats, and most cats are lactose intolerant. Cat charities advise avoiding any type of milk – your cat only needs water.",
@@ -13085,7 +13126,8 @@
         "nb": "Helst ikke. Dyrleger nevner geitemelk, i likhet med kumelk, blant drikkene som gir magebesvær hos katter som ikke tåler laktose, og det gjelder de fleste katter. Katteorganisasjoner fraråder alle typer melk – katten trenger bare vann.",
         "de": "Besser nicht. Tierärzte zählen Ziegenmilch – wie Kuhmilch – zu den Getränken, die bei laktoseintoleranten Katzen Bauchbeschwerden auslösen, und die meisten Katzen sind laktoseintolerant. Katzenschutzorganisationen raten, auf jede Art von Milch zu verzichten – Ihre Katze braucht nur Wasser.",
         "es": "Es mejor no dársela. Los veterinarios incluyen la leche de cabra, igual que la de vaca, entre las bebidas que provocan molestias de barriga en los gatos intolerantes a la lactosa, y la mayoría de los gatos lo son. Las protectoras de gatos aconsejan evitar cualquier tipo de leche: tu gato solo necesita agua.",
-        "pt": "É melhor não. Segundo os veterinários, o leite de cabra, tal como o de vaca, causa problemas de barriga nos gatos intolerantes à lactose, e a maioria dos gatos é intolerante. As associações de proteção dos gatos aconselham a evitar qualquer tipo de leite – o teu gato só precisa de água."
+        "pt": "É melhor não. Segundo os veterinários, o leite de cabra, tal como o de vaca, causa problemas de barriga nos gatos intolerantes à lactose, e a maioria dos gatos é intolerante. As associações de proteção dos gatos aconselham a evitar qualquer tipo de leite – o teu gato só precisa de água.",
+        "nl": "Liever niet. Dierenartsen noemen geitenmelk, net als koemelk, een van de dranken die buikklachten geven bij katten die lactose niet verdragen, en de meeste katten verdragen lactose niet. Kattenorganisaties raden af om welke soort melk dan ook te geven – je kat heeft alleen water nodig."
       },
       "why": {
         "en": "Lactose intolerance is a common food reaction in cats, and VCA vets list diarrhoea, vomiting, bloating and tummy discomfort after cow's or goat's milk as its signs. There are no benefits to a cat having milk. For kittens the sources differ: VCA says goat's milk is not recommended for kittens because it is far too low in protein and fat, and allows pasteurised goat's milk only in an emergency until kitten milk replacer is available, while Cats Protection says never to give it, as kittens find it difficult to digest. We follow the stricter advice.",
@@ -13096,7 +13138,8 @@
         "nb": "Laktoseintoleranse er en vanlig matreaksjon hos katter, og dyrleger ved VCA nevner diaré, oppkast, oppblåst mage og vondt i magen etter kumelk eller geitemelk som tegn på den. En katt har ingen nytte av å drikke melk. For kattunger er kildene uenige. VCA sier at geitemelk ikke anbefales til kattunger, fordi den har altfor lite protein og fett, og at pasteurisert geitemelk bare kan brukes i nødsfall, til man får tak i melkeerstatning for kattunger. Cats Protection sier at kattunger aldri skal få den, fordi de har problemer med å fordøye den. Vi følger det strengeste rådet.",
         "de": "Laktoseintoleranz ist bei Katzen eine häufige Unverträglichkeit, und VCA-Tierärzte nennen Durchfall, Erbrechen, Blähungen und Bauchbeschwerden nach Kuh- oder Ziegenmilch als Anzeichen. Für eine Katze hat Milch keinen Nutzen. Bei Kätzchen gehen die Quellen auseinander: Laut VCA wird Ziegenmilch für Kätzchen nicht empfohlen, weil sie viel zu wenig Eiweiß und Fett enthält; nur im Notfall sei pasteurisierte Ziegenmilch erlaubt, bis Aufzuchtmilch für Kätzchen zur Verfügung steht. Cats Protection rät, sie niemals zu geben, weil Kätzchen sie nur schwer verdauen. Wir folgen dem strengeren Rat.",
         "es": "La intolerancia a la lactosa es una reacción alimentaria frecuente en los gatos, y los veterinarios de VCA citan como signos la diarrea, los vómitos, la hinchazón y las molestias de barriga tras tomar leche de vaca o de cabra. A un gato la leche no le aporta ningún beneficio. En el caso de los gatitos, las fuentes no coinciden: VCA dice que no se recomienda la leche de cabra para gatitos porque es demasiado pobre en proteína y grasa, y solo admite leche de cabra pasteurizada en una emergencia hasta conseguir leche maternizada para gatitos, mientras que Cats Protection dice que nunca se les dé, porque les cuesta digerirla. Seguimos el consejo más estricto.",
-        "pt": "A intolerância à lactose é uma reação alimentar comum nos gatos, e os veterinários da VCA apontam como sinais diarreia, vómitos, inchaço e desconforto na barriga depois de leite de vaca ou de cabra. Os gatos não ganham nada em beber leite. Quanto aos gatinhos, as fontes divergem: a VCA diz que o leite de cabra não é recomendado para gatinhos porque tem muito pouca proteína e gordura, e só o admite, pasteurizado, numa emergência, até haver leite de substituição para gatinhos, enquanto a Cats Protection diz que nunca se deve dar, porque os gatinhos têm dificuldade em digeri-lo. Seguimos o conselho mais prudente."
+        "pt": "A intolerância à lactose é uma reação alimentar comum nos gatos, e os veterinários da VCA apontam como sinais diarreia, vómitos, inchaço e desconforto na barriga depois de leite de vaca ou de cabra. Os gatos não ganham nada em beber leite. Quanto aos gatinhos, as fontes divergem: a VCA diz que o leite de cabra não é recomendado para gatinhos porque tem muito pouca proteína e gordura, e só o admite, pasteurizado, numa emergência, até haver leite de substituição para gatinhos, enquanto a Cats Protection diz que nunca se deve dar, porque os gatinhos têm dificuldade em digeri-lo. Seguimos o conselho mais prudente.",
+        "nl": "Lactose-intolerantie komt bij katten vaak voor als voedselreactie, en dierenartsen van VCA noemen diarree, braken, een opgeblazen buik en buikpijn na koemelk of geitenmelk als de verschijnselen daarvan. Melk heeft voor een kat geen enkel voordeel. Voor kittens verschillen de bronnen: VCA zegt dat geitenmelk niet wordt aanbevolen voor kittens, omdat er veel te weinig eiwit en vet in zit, en staat gepasteuriseerde geitenmelk alleen toe in een noodgeval, totdat er kittenmelk te krijgen is. Cats Protection zegt daarentegen dat je het nooit moet geven, omdat kittens het moeilijk verteren. Wij volgen het strengere advies."
       },
       "signs": {
         "en": [
@@ -13170,6 +13213,14 @@
           "Dor ou desconforto na barriga",
           "Gorgolejos na barriga",
           "Falta de energia"
+        ],
+        "nl": [
+          "Diarree",
+          "Braken",
+          "Opgeblazen buik",
+          "Buikpijn of een onprettig gevoel in de buik",
+          "Borrelende maaggeluiden",
+          "Weinig energie"
         ]
       },
       "what_to_do": {
@@ -13181,7 +13232,8 @@
         "nb": "Slutt å gi geitemelk og tilby friskt vann. Hvis katten får diaré etter meieriprodukter, gir du hyppige, små og milde måltider. Snakk med dyrlegen hvis katten nekter å spise – i alvorlige tilfeller kan den trenge dyrlegehjelp.",
         "de": "Geben Sie keine Ziegenmilch mehr und bieten Sie stattdessen frisches Wasser an. Bekommt Ihre Katze nach Milchprodukten Durchfall, füttern Sie kleine, schonende Mahlzeiten in kurzen Abständen und sprechen Sie mit Ihrem Tierarzt, wenn Ihre Katze nicht frisst – schwere Fälle können tierärztliche Behandlung erfordern.",
         "es": "Deja de darle leche de cabra y ofrécele agua fresca. Si tu gato tiene diarrea después de tomar lácteos, dale comidas pequeñas, suaves y frecuentes, y habla con tu veterinario si se niega a comer; los casos graves pueden necesitar atención veterinaria.",
-        "pt": "Deixa de dar leite de cabra e oferece água fresca. Se o teu gato tiver diarreia depois de laticínios, dá-lhe refeições pequenas, suaves e frequentes e fala com o teu veterinário se ele recusar comida – os casos graves podem precisar de atenção veterinária."
+        "pt": "Deixa de dar leite de cabra e oferece água fresca. Se o teu gato tiver diarreia depois de laticínios, dá-lhe refeições pequenas, suaves e frequentes e fala com o teu veterinário se ele recusar comida – os casos graves podem precisar de atenção veterinária.",
+        "nl": "Stop met de geitenmelk en geef vers water. Krijgt je kat na zuivel diarree, geef dan kleine, lichtverteerbare maaltijden, meerdere keren per dag, en neem contact op met je dierenarts als je kat weigert te eten – ernstige gevallen hebben soms dierenartszorg nodig."
       },
       "serving": null,
       "child": {
@@ -13193,7 +13245,8 @@
         "nb": "Katter trenger ikke geitemelk eller annen melk. En skål med friskt vann er den beste drikken for katten din!",
         "de": "Katzen brauchen weder Ziegenmilch noch eine andere Milch. Ein Napf mit frischem Wasser ist das beste Getränk für deine Katze!",
         "es": "Los gatos no necesitan leche de cabra ni ninguna otra leche. ¡Un cuenco de agua fresca es la mejor bebida para tu gato!",
-        "pt": "Os gatos não precisam de leite de cabra nem de qualquer outro leite. Uma tigela de água fresca é a melhor bebida para o teu gatinho!"
+        "pt": "Os gatos não precisam de leite de cabra nem de qualquer outro leite. Uma tigela de água fresca é a melhor bebida para o teu gatinho!",
+        "nl": "Katten hebben geen geitenmelk of andere melk nodig. Een bakje vers water is het beste drankje voor je kat!"
       },
       "faq": [
         {
@@ -13206,7 +13259,8 @@
             "nb": "Kan kattunger drikke geitemelk?",
             "de": "Dürfen Kätzchen Ziegenmilch trinken?",
             "es": "¿Pueden los gatitos beber leche de cabra?",
-            "pt": "Os gatinhos podem beber leite de cabra?"
+            "pt": "Os gatinhos podem beber leite de cabra?",
+            "nl": "Mogen kittens geitenmelk drinken?"
           },
           "a": {
             "en": "No. Cats Protection says never give cow's or goat's milk to kittens, as they find it difficult to digest – use substitute kitten milk made specifically for kittens. VCA vets add that goat's milk is far too low in protein and fat for kittens.",
@@ -13217,7 +13271,8 @@
             "nb": "Nei. Cats Protection sier at kattunger aldri skal få kumelk eller geitemelk, fordi de har problemer med å fordøye den – bruk melkeerstatning laget spesielt for kattunger. Dyrleger ved VCA legger til at geitemelk har altfor lite protein og fett for kattunger.",
             "de": "Nein. Laut Cats Protection sollte man Kätzchen niemals Kuh- oder Ziegenmilch geben, weil sie sie nur schwer verdauen – verwenden Sie stattdessen spezielle Aufzuchtmilch für Kätzchen. VCA-Tierärzte ergänzen, dass Ziegenmilch für Kätzchen viel zu wenig Eiweiß und Fett enthält.",
             "es": "No. Cats Protection dice que nunca se dé leche de vaca ni de cabra a los gatitos, porque les cuesta digerirlas; hay que usar leche maternizada específica para gatitos. Los veterinarios de VCA añaden que la leche de cabra es demasiado pobre en proteína y grasa para los gatitos.",
-            "pt": "Não. A Cats Protection diz que nunca se deve dar leite de vaca ou de cabra a gatinhos, porque têm dificuldade em digeri-lo – usa leite de substituição feito especificamente para gatinhos. Os veterinários da VCA acrescentam que o leite de cabra tem muito pouca proteína e gordura para os gatinhos."
+            "pt": "Não. A Cats Protection diz que nunca se deve dar leite de vaca ou de cabra a gatinhos, porque têm dificuldade em digeri-lo – usa leite de substituição feito especificamente para gatinhos. Os veterinários da VCA acrescentam que o leite de cabra tem muito pouca proteína e gordura para os gatinhos.",
+            "nl": "Nee. Cats Protection zegt dat je kittens nooit koemelk of geitenmelk moet geven, omdat ze dat moeilijk verteren. Gebruik in plaats daarvan speciale kittenmelk. Dierenartsen van VCA voegen eraan toe dat er in geitenmelk veel te weinig eiwit en vet zit voor kittens."
           }
         },
         {
@@ -13230,7 +13285,8 @@
             "nb": "Er geitemelk bedre for katter enn kumelk?",
             "de": "Ist Ziegenmilch für Katzen besser verträglich als Kuhmilch?",
             "es": "¿Es mejor la leche de cabra que la de vaca para los gatos?",
-            "pt": "O leite de cabra é melhor para os gatos do que o de vaca?"
+            "pt": "O leite de cabra é melhor para os gatos do que o de vaca?",
+            "nl": "Is geitenmelk beter voor katten dan koemelk?"
           },
           "a": {
             "en": "Not according to vets: signs of lactose intolerance can appear after either cow's or goat's milk. It is best to avoid giving your cat any type of milk.",
@@ -13241,7 +13297,8 @@
             "nb": "Ikke ifølge dyrleger: Tegn på laktoseintoleranse kan komme både etter kumelk og geitemelk. Det er best å unngå å gi katten melk av noe slag.",
             "de": "Laut Tierärzten nicht: Anzeichen einer Laktoseintoleranz können sowohl nach Kuh- als auch nach Ziegenmilch auftreten. Am besten geben Sie Ihrer Katze gar keine Milch.",
             "es": "No, según los veterinarios: pueden aparecer signos de intolerancia a la lactosa tanto con leche de vaca como con leche de cabra. Lo mejor es no darle a tu gato ningún tipo de leche.",
-            "pt": "Segundo os veterinários, não: depois de leite de vaca ou de cabra podem surgir sinais de intolerância à lactose. O melhor é não dar qualquer tipo de leite ao teu gato."
+            "pt": "Segundo os veterinários, não: depois de leite de vaca ou de cabra podem surgir sinais de intolerância à lactose. O melhor é não dar qualquer tipo de leite ao teu gato.",
+            "nl": "Volgens dierenartsen niet: verschijnselen van lactose-intolerantie kunnen na koemelk én na geitenmelk optreden. Je kunt je kat het best geen enkele soort melk geven."
           }
         }
       ],
@@ -26775,7 +26832,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Soda (soft drinks)",
@@ -26786,7 +26844,8 @@
         "nb": "Brus (leskedrikker)",
         "de": "Softdrinks",
         "es": "Refrescos",
-        "pt": "Refrigerantes"
+        "pt": "Refrigerantes",
+        "nl": "Frisdrank"
       },
       "question": {
         "en": "Can cats drink soda?",
@@ -26797,7 +26856,8 @@
         "nb": "Kan katter drikke brus?",
         "de": "Dürfen Katzen Softdrinks trinken?",
         "es": "¿Pueden los gatos beber refrescos?",
-        "pt": "Os gatos podem beber refrigerantes?"
+        "pt": "Os gatos podem beber refrigerantes?",
+        "nl": "Mogen katten frisdrank drinken?"
       },
       "url_slug": {
         "en": "soda",
@@ -26808,7 +26868,8 @@
         "nb": "brus",
         "de": "softdrinks",
         "es": "refrescos",
-        "pt": "refrigerantes"
+        "pt": "refrigerantes",
+        "nl": "frisdrank"
       },
       "answer": {
         "en": "No. Many sodas contain caffeine, and cats are more sensitive to caffeine than people. One or two licks is unlikely to cause poisoning, but if your cat drank more, call your vet. Your cat only needs to drink water.",
@@ -26819,7 +26880,8 @@
         "nb": "Nei. Mange typer brus inneholder koffein, og katter er mer følsomme for koffein enn mennesker. En slikk eller to gir neppe forgiftning, men hvis katten har drukket mer, må du ringe dyrlegen. Katten trenger bare vann.",
         "de": "Nein. Viele Softdrinks enthalten Koffein, und Katzen reagieren darauf empfindlicher als Menschen. Ein- oder zweimal daran zu lecken führt wahrscheinlich nicht zu einer Vergiftung; hat Ihre Katze aber mehr getrunken, rufen Sie Ihren Tierarzt an. Ihre Katze braucht zum Trinken nur Wasser.",
         "es": "No. Muchos refrescos contienen cafeína, y los gatos son más sensibles a ella que las personas. Es poco probable que uno o dos lametones causen una intoxicación, pero si tu gato ha bebido más, llama a tu veterinario. Lo único que tu gato necesita beber es agua.",
-        "pt": "Não. Muitos refrigerantes contêm cafeína, e os gatos são mais sensíveis a ela do que as pessoas. Uma ou duas lambidelas dificilmente intoxicam, mas se o teu gato bebeu mais, liga ao teu veterinário. O teu gato só precisa de água."
+        "pt": "Não. Muitos refrigerantes contêm cafeína, e os gatos são mais sensíveis a ela do que as pessoas. Uma ou duas lambidelas dificilmente intoxicam, mas se o teu gato bebeu mais, liga ao teu veterinário. O teu gato só precisa de água.",
+        "nl": "Nee. Veel frisdranken bevatten cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Een of twee likjes veroorzaken waarschijnlijk geen vergiftiging, maar als je kat meer heeft gedronken, bel dan je dierenarts. Je kat heeft alleen water nodig."
       },
       "why": {
         "en": "Many teas and sodas contain caffeine, and dogs and cats are more sensitive to caffeine than humans. Caffeine stimulates the heart and nervous system, which can be dangerous, and it can also upset the stomach. Signs can start within a few hours and last up to several days.",
@@ -26830,7 +26892,8 @@
         "nb": "Mange typer te og brus inneholder koffein, og hunder og katter er mer følsomme for koffein enn mennesker. Koffein stimulerer hjertet og nervesystemet, noe som kan være farlig, og det kan også gi urolig mage. Tegnene kan komme i løpet av noen timer og vare i flere dager.",
         "de": "Viele Tees und Softdrinks enthalten Koffein, und Hunde und Katzen reagieren darauf empfindlicher als Menschen. Koffein regt Herz und Nervensystem an, was gefährlich werden kann, und es kann auch auf den Magen schlagen. Die Anzeichen können innerhalb weniger Stunden beginnen und bis zu mehreren Tagen anhalten.",
         "es": "Muchos tés y refrescos contienen cafeína, y los perros y los gatos son más sensibles a ella que las personas. La cafeína estimula el corazón y el sistema nervioso, lo que puede ser peligroso, y además puede sentar mal al estómago. Los signos pueden empezar a las pocas horas y durar hasta varios días.",
-        "pt": "Muitos chás e refrigerantes contêm cafeína, e os cães e os gatos são mais sensíveis a ela do que as pessoas. A cafeína estimula o coração e o sistema nervoso, o que pode ser perigoso, e também pode irritar o estômago. Os sinais podem começar em poucas horas e durar vários dias."
+        "pt": "Muitos chás e refrigerantes contêm cafeína, e os cães e os gatos são mais sensíveis a ela do que as pessoas. A cafeína estimula o coração e o sistema nervoso, o que pode ser perigoso, e também pode irritar o estômago. Os sinais podem começar em poucas horas e durar vários dias.",
+        "nl": "Veel thee en frisdranken bevatten cafeïne, en honden en katten zijn gevoeliger voor cafeïne dan mensen. Cafeïne prikkelt het hart en het zenuwstelsel, wat gevaarlijk kan zijn, en kan ook de maag van streek maken. De verschijnselen kunnen binnen een paar uur beginnen en tot enkele dagen duren."
       },
       "signs": {
         "en": [
@@ -26904,6 +26967,14 @@
           "Mal-estar de estômago, vómitos ou diarreia",
           "Tremores",
           "Precisar de fazer xixi mais vezes"
+        ],
+        "nl": [
+          "Snelle hartslag",
+          "Hyperactiviteit, onrust, niet stil willen liggen",
+          "Ijsberen of veel miauwen",
+          "Maagklachten, braken of diarree",
+          "Trillen",
+          "Vaker moeten plassen"
         ]
       },
       "what_to_do": {
@@ -26915,7 +26986,8 @@
         "nb": "Hvis katten har drukket brus, ringer du dyrlegen eller giftinformasjon for dyr så snart du oppdager det. En slikk eller to gir neppe forgiftning hos de fleste dyr.",
         "de": "Hat Ihre Katze etwas Softdrink getrunken, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an, sobald Sie es bemerken. Ein- oder zweimal daran zu lecken führt bei den meisten Tieren wahrscheinlich nicht zu einer Vergiftung.",
         "es": "Si tu gato ha bebido refresco, llama a tu veterinario o a una línea de información toxicológica para animales en cuanto te des cuenta. Es poco probable que uno o dos lametones causen una intoxicación en la mayoría de las mascotas.",
-        "pt": "Se o teu gato bebeu refrigerante, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes. Uma ou duas lambidelas dificilmente intoxicam a maioria dos animais."
+        "pt": "Se o teu gato bebeu refrigerante, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes. Uma ou duas lambidelas dificilmente intoxicam a maioria dos animais.",
+        "nl": "Heeft je kat frisdrank gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt. Een of twee likjes veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging."
       },
       "serving": null,
       "child": {
@@ -26927,7 +26999,8 @@
         "nb": "Brus er ikke noe for katter. En skål med friskt vann er alt katten din trenger!",
         "de": "Sprudelgetränke sind nichts für Katzen. Deine Katze braucht nur einen Napf mit frischem Wasser!",
         "es": "Las bebidas con burbujas no son para gatos. ¡Un cuenco de agua fresca es todo lo que tu gato necesita!",
-        "pt": "As bebidas com gás não são para gatos. Uma tigela de água fresca é tudo o que o teu gatinho precisa!"
+        "pt": "As bebidas com gás não são para gatos. Uma tigela de água fresca é tudo o que o teu gatinho precisa!",
+        "nl": "Drankjes met prik zijn niets voor katten. Een bakje vers water is alles wat je kat nodig heeft!"
       },
       "faq": [
         {
@@ -26940,7 +27013,8 @@
             "nb": "Katten min har slikket på brusen min – hva gjør jeg?",
             "de": "Meine Katze hat an meinem Softdrink geleckt – was soll ich tun?",
             "es": "Mi gato ha lamido mi refresco, ¿qué hago?",
-            "pt": "O meu gato lambeu o meu refrigerante – o que devo fazer?"
+            "pt": "O meu gato lambeu o meu refrigerante – o que devo fazer?",
+            "nl": "Mijn kat likte aan mijn frisdrank – wat moet ik doen?"
           },
           "a": {
             "en": "One or two licks of soda is unlikely to cause poisoning in most pets. If your cat drank more, call your vet or a pet poison helpline as soon as you realise, because cats are more sensitive to caffeine than people.",
@@ -26951,7 +27025,8 @@
             "nb": "En slikk eller to av brusen gir neppe forgiftning hos de fleste dyr. Hvis katten har drukket mer, ringer du dyrlegen eller giftinformasjon for dyr så snart du oppdager det, for katter er mer følsomme for koffein enn mennesker.",
             "de": "Ein- oder zweimal daran zu lecken führt bei den meisten Tieren wahrscheinlich nicht zu einer Vergiftung. Hat Ihre Katze mehr getrunken, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an, sobald Sie es bemerken, denn Katzen reagieren auf Koffein empfindlicher als Menschen.",
             "es": "Es poco probable que uno o dos lametones de refresco causen una intoxicación en la mayoría de las mascotas. Si tu gato ha bebido más, llama a tu veterinario o a una línea de información toxicológica para animales en cuanto te des cuenta, porque los gatos son más sensibles a la cafeína que las personas.",
-            "pt": "Uma ou duas lambidelas de refrigerante dificilmente intoxicam a maioria dos animais. Se o teu gato bebeu mais, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes, porque os gatos são mais sensíveis à cafeína do que as pessoas."
+            "pt": "Uma ou duas lambidelas de refrigerante dificilmente intoxicam a maioria dos animais. Se o teu gato bebeu mais, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes, porque os gatos são mais sensíveis à cafeína do que as pessoas.",
+            "nl": "Een of twee likjes frisdrank veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging. Heeft je kat meer gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt, want katten zijn gevoeliger voor cafeïne dan mensen."
           }
         }
       ],
@@ -27211,7 +27286,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Sports drinks",
@@ -27222,7 +27298,8 @@
         "nb": "Sportsdrikker",
         "de": "Sportgetränke",
         "es": "Bebidas deportivas",
-        "pt": "Bebidas desportivas"
+        "pt": "Bebidas desportivas",
+        "nl": "Sportdranken"
       },
       "question": {
         "en": "Can cats drink sports drinks?",
@@ -27233,7 +27310,8 @@
         "nb": "Kan katter drikke sportsdrikker?",
         "de": "Dürfen Katzen Sportgetränke trinken?",
         "es": "¿Pueden los gatos beber bebidas deportivas?",
-        "pt": "Os gatos podem beber bebidas desportivas?"
+        "pt": "Os gatos podem beber bebidas desportivas?",
+        "nl": "Mogen katten sportdranken drinken?"
       },
       "url_slug": {
         "en": "sports-drinks",
@@ -27244,7 +27322,8 @@
         "nb": "sportsdrikker",
         "de": "sportgetraenke",
         "es": "bebidas-deportivas",
-        "pt": "bebidas-desportivas"
+        "pt": "bebidas-desportivas",
+        "nl": "sportdranken"
       },
       "answer": {
         "en": "No. Energy or sports drinks often contain a lot of caffeine, and cats are more sensitive to caffeine than people. No other drink is a substitute for water – it's the only drink your cat needs.",
@@ -27255,7 +27334,8 @@
         "nb": "Nei. Energidrikker og sportsdrikker inneholder ofte mye koffein, og katter er mer følsomme for koffein enn mennesker. Ingen annen drikke kan erstatte vann – det er det eneste katten din trenger å drikke.",
         "de": "Nein. Energy- oder Sportgetränke enthalten oft viel Koffein, und Katzen reagieren darauf empfindlicher als Menschen. Kein anderes Getränk ersetzt Wasser – es ist das Einzige, was Ihre Katze zum Trinken braucht.",
         "es": "No. Las bebidas energéticas o deportivas suelen contener mucha cafeína, y los gatos son más sensibles a ella que las personas. Ninguna otra bebida sustituye al agua: es lo único que tu gato necesita beber.",
-        "pt": "Não. As bebidas energéticas ou desportivas costumam ter muita cafeína, e os gatos são mais sensíveis a ela do que as pessoas. Nenhuma outra bebida substitui a água – é a única de que o teu gato precisa."
+        "pt": "Não. As bebidas energéticas ou desportivas costumam ter muita cafeína, e os gatos são mais sensíveis a ela do que as pessoas. Nenhuma outra bebida substitui a água – é a única de que o teu gato precisa.",
+        "nl": "Nee. Energiedrankjes en sportdranken bevatten vaak veel cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Geen enkel ander drankje kan water vervangen – het is het enige wat je kat hoeft te drinken."
       },
       "why": {
         "en": "VCA vets warn that energy or sports drinks in the fridge often contain a lot of caffeine. Dogs and cats are more sensitive to caffeine than humans; it stimulates the heart and nervous system, which can be dangerous, and can upset the stomach. Cats Protection adds that milk, cream or any other liquid is no substitute for water in a cat's diet.",
@@ -27266,7 +27346,8 @@
         "nb": "Dyrleger ved VCA advarer om at energidrikker og sportsdrikker i kjøleskapet ofte inneholder mye koffein. Hunder og katter er mer følsomme for koffein enn mennesker. Koffein stimulerer hjertet og nervesystemet, noe som kan være farlig, og det kan også gi urolig mage. Cats Protection legger til at melk, fløte eller annen væske ikke kan erstatte vann i kattens kosthold.",
         "de": "VCA-Tierärzte warnen: Energy- und Sportgetränke aus dem Kühlschrank enthalten oft viel Koffein. Hunde und Katzen reagieren darauf empfindlicher als Menschen; Koffein regt Herz und Nervensystem an, was gefährlich werden kann, und kann auf den Magen schlagen. Laut Cats Protection ist weder Milch noch Sahne noch irgendeine andere Flüssigkeit ein Ersatz für Wasser in der Ernährung einer Katze.",
         "es": "Los veterinarios de VCA advierten de que las bebidas energéticas o deportivas que se guardan en la nevera suelen contener mucha cafeína. Los perros y los gatos son más sensibles a la cafeína que las personas: estimula el corazón y el sistema nervioso, lo que puede ser peligroso, y puede sentar mal al estómago. Cats Protection añade que la leche, la nata o cualquier otro líquido no sustituyen al agua en la dieta de un gato.",
-        "pt": "Os veterinários da VCA avisam que as bebidas energéticas ou desportivas que guardamos no frigorífico costumam ter muita cafeína. Os cães e os gatos são mais sensíveis à cafeína do que as pessoas; ela estimula o coração e o sistema nervoso, o que pode ser perigoso, e pode irritar o estômago. A Cats Protection acrescenta que o leite, as natas ou qualquer outro líquido não substituem a água na alimentação de um gato."
+        "pt": "Os veterinários da VCA avisam que as bebidas energéticas ou desportivas que guardamos no frigorífico costumam ter muita cafeína. Os cães e os gatos são mais sensíveis à cafeína do que as pessoas; ela estimula o coração e o sistema nervoso, o que pode ser perigoso, e pode irritar o estômago. A Cats Protection acrescenta que o leite, as natas ou qualquer outro líquido não substituem a água na alimentação de um gato.",
+        "nl": "Dierenartsen van VCA waarschuwen dat energiedrankjes en sportdranken in de koelkast vaak veel cafeïne bevatten. Honden en katten zijn gevoeliger voor cafeïne dan mensen: het prikkelt het hart en het zenuwstelsel, wat gevaarlijk kan zijn, en kan de maag van streek maken. Cats Protection voegt eraan toe dat melk, room of een andere vloeistof water in de voeding van een kat niet kan vervangen."
       },
       "signs": {
         "en": [
@@ -27340,6 +27421,14 @@
           "Mal-estar de estômago, vómitos ou diarreia",
           "Tremores",
           "Precisar de fazer xixi mais vezes"
+        ],
+        "nl": [
+          "Snelle hartslag",
+          "Hyperactiviteit, onrust, niet stil willen liggen",
+          "Ijsberen of veel miauwen",
+          "Maagklachten, braken of diarree",
+          "Trillen",
+          "Vaker moeten plassen"
         ]
       },
       "what_to_do": {
@@ -27351,7 +27440,8 @@
         "nb": "Hvis katten har drukket en sportsdrikk med koffein, ringer du dyrlegen eller giftinformasjon for dyr så snart du oppdager det. Tegnene kan komme i løpet av noen timer.",
         "de": "Hat Ihre Katze ein koffeinhaltiges Sportgetränk getrunken, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an, sobald Sie es bemerken. Die Anzeichen können innerhalb weniger Stunden beginnen.",
         "es": "Si tu gato ha bebido una bebida deportiva con cafeína, llama a tu veterinario o a una línea de información toxicológica para animales en cuanto te des cuenta. Los signos pueden empezar a las pocas horas.",
-        "pt": "Se o teu gato bebeu uma bebida desportiva com cafeína, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes. Os sinais podem começar em poucas horas."
+        "pt": "Se o teu gato bebeu uma bebida desportiva com cafeína, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes. Os sinais podem começar em poucas horas.",
+        "nl": "Heeft je kat een sportdrank met cafeïne gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt. De verschijnselen kunnen binnen een paar uur beginnen."
       },
       "serving": null,
       "child": {
@@ -27363,7 +27453,8 @@
         "nb": "Sportsdrikker er ikke noe for katter. Friskt, rent vann er best for å holde katten din frisk!",
         "de": "Sportgetränke sind nichts für Katzen. Frisches, sauberes Wasser ist das beste Getränk, damit deine Katze gesund bleibt!",
         "es": "Las bebidas deportivas no son para gatos. ¡El agua fresca y limpia es la mejor bebida para que tu gato esté sano!",
-        "pt": "As bebidas desportivas não são para gatos. A melhor bebida para manter o teu gatinho saudável é água fresca e limpa!"
+        "pt": "As bebidas desportivas não são para gatos. A melhor bebida para manter o teu gatinho saudável é água fresca e limpa!",
+        "nl": "Sportdranken zijn niets voor katten. Vers, schoon water is het beste drankje om je kat gezond te houden!"
       },
       "faq": [
         {
@@ -27376,7 +27467,8 @@
             "nb": "Kan en sportsdrikk hjelpe hvis katten ikke drikker nok?",
             "de": "Kann ein Sportgetränk helfen, wenn meine Katze nicht genug trinkt?",
             "es": "¿Puede ayudar una bebida deportiva si mi gato no bebe lo suficiente?",
-            "pt": "Uma bebida desportiva pode ajudar se o meu gato não beber o suficiente?"
+            "pt": "Uma bebida desportiva pode ajudar se o meu gato não beber o suficiente?",
+            "nl": "Kan een sportdrank helpen als mijn kat te weinig drinkt?"
           },
           "a": {
             "en": "Give fresh water instead – no other liquid is a substitute for it. Signs of dehydration include lethargy, weakness, poor appetite and dry gums. If you are concerned that your cat is dehydrated, contact a vet promptly.",
@@ -27387,7 +27479,8 @@
             "nb": "Gi friskt vann i stedet – ingen annen væske kan erstatte det. Tegn på dehydrering er sløvhet, svakhet, nedsatt matlyst og tørt tannkjøtt. Hvis du er bekymret for at katten er dehydrert, bør du kontakte dyrlegen raskt.",
             "de": "Geben Sie stattdessen frisches Wasser – keine andere Flüssigkeit ist ein Ersatz dafür. Anzeichen von Austrocknung sind Mattigkeit, Schwäche, schlechter Appetit und trockenes Zahnfleisch. Befürchten Sie, dass Ihre Katze ausgetrocknet ist, wenden Sie sich umgehend an Ihren Tierarzt.",
             "es": "Dale agua fresca: ningún otro líquido la sustituye. Entre los signos de deshidratación están el decaimiento, la debilidad, la falta de apetito y las encías secas. Si te preocupa que tu gato esté deshidratado, contacta cuanto antes con un veterinario.",
-            "pt": "Dá-lhe antes água fresca – nenhum outro líquido a substitui. Os sinais de desidratação incluem apatia, fraqueza, pouco apetite e gengivas secas. Se receares que o teu gato esteja desidratado, contacta rapidamente um veterinário."
+            "pt": "Dá-lhe antes água fresca – nenhum outro líquido a substitui. Os sinais de desidratação incluem apatia, fraqueza, pouco apetite e gengivas secas. Se receares que o teu gato esteja desidratado, contacta rapidamente um veterinário.",
+            "nl": "Geef in plaats daarvan vers water – geen enkele andere vloeistof kan water vervangen. Verschijnselen van uitdroging zijn lusteloosheid, zwakte, weinig eetlust en droog tandvlees. Denk je dat je kat uitgedroogd is, neem dan snel contact op met een dierenarts."
           }
         }
       ],
@@ -36167,7 +36260,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Bone broth",
@@ -36178,7 +36272,8 @@
         "nb": "Beinkraft",
         "de": "Knochenbrühe",
         "es": "Caldo de huesos",
-        "pt": "Caldo de ossos"
+        "pt": "Caldo de ossos",
+        "nl": "Bottenbouillon"
       },
       "question": {
         "en": "Can dogs have bone broth?",
@@ -36189,7 +36284,8 @@
         "nb": "Kan hunder få beinkraft?",
         "de": "Dürfen Hunde Knochenbrühe bekommen?",
         "es": "¿Pueden los perros tomar caldo de huesos?",
-        "pt": "Os cães podem tomar caldo de ossos?"
+        "pt": "Os cães podem tomar caldo de ossos?",
+        "nl": "Mogen honden bottenbouillon krijgen?"
       },
       "url_slug": {
         "en": "bone-broth",
@@ -36200,7 +36296,8 @@
         "nb": "beinkraft",
         "de": "knochenbruehe",
         "es": "caldo-de-huesos",
-        "pt": "caldo-de-ossos"
+        "pt": "caldo-de-ossos",
+        "nl": "bottenbouillon"
       },
       "answer": {
         "en": "Yes, plain bone broth made with dog-safe ingredients is fine. It is mild and easy on sensitive stomachs. Strain out every bone before serving, remove the fat layer, and skip broths with onions, garlic or salt.",
@@ -36211,7 +36308,8 @@
         "nb": "Ja, naturell beinkraft laget med ingredienser som er trygge for hunder, er greit. Den er mild og skånsom for en følsom mage. Sil bort alle bein før servering, fjern fettlaget, og dropp kraft med løk, hvitløk eller salt.",
         "de": "Ja, einfache Knochenbrühe aus hundeverträglichen Zutaten ist in Ordnung. Sie ist mild und schonend für empfindliche Mägen. Seihen Sie die Brühe vor dem Servieren durch ein Sieb, damit kein Knochen darin bleibt, nehmen Sie die Fettschicht ab und verzichten Sie auf Brühen mit Zwiebeln, Knoblauch oder Salz.",
         "es": "Sí: un caldo de huesos sencillo, hecho solo con ingredientes seguros para perros, no les hace daño. Es suave y sienta bien a los estómagos sensibles. Retira todos los huesos antes de servirlo, quita la capa de grasa y evita los caldos con cebolla, ajo o sal.",
-        "pt": "Sim. O caldo de ossos simples, feito só com ingredientes seguros para cães, não faz mal. É suave e fácil para estômagos sensíveis. Tira todos os ossos antes de servir, retira a camada de gordura e evita caldos com cebola, alho ou sal."
+        "pt": "Sim. O caldo de ossos simples, feito só com ingredientes seguros para cães, não faz mal. É suave e fácil para estômagos sensíveis. Tira todos os ossos antes de servir, retira a camada de gordura e evita caldos com cebola, alho ou sal.",
+        "nl": "Ja, een simpele bottenbouillon van ingrediënten die veilig zijn voor honden is prima. Het is mild en goed te verdragen voor een gevoelige maag. Zeef alle botten eruit voordat je de bouillon geeft, haal de vetlaag eraf en laat bouillon met ui, knoflook of zout staan."
       },
       "why": {
         "en": "Bone broth is a stock made by slowly cooking animal bones at low heat for a long time. It is mild, flavourful and easy on sensitive stomachs, and it can make food more appealing to dogs with a reduced appetite. The risks come from what goes into it: some broths contain additives such as onions, garlic or salt, and cooked bones can splinter and injure your dog or get lodged in the throat.",
@@ -36222,7 +36320,8 @@
         "nb": "Beinkraft er en kraft som lages ved å la bein fra dyr småkoke på lav varme i lang tid. Den er mild, smakfull og skånsom for en følsom mage, og den kan gjøre maten mer fristende for hunder med nedsatt matlyst. Risikoen ligger i det som puttes oppi: Noen kraftsorter inneholder tilsetninger som løk, hvitløk eller salt, og kokte bein kan splintres og skade hunden eller sette seg fast i halsen.",
         "de": "Knochenbrühe ist ein Fond aus Tierknochen, die lange bei niedriger Hitze köcheln. Sie ist mild, aromatisch und schonend für empfindliche Mägen und kann Hunden mit wenig Appetit das Futter schmackhafter machen. Die Risiken stecken in den Zutaten: Manche Brühen enthalten Zusätze wie Zwiebeln, Knoblauch oder Salz, und gekochte Knochen können splittern und Ihren Hund verletzen oder im Hals stecken bleiben.",
         "es": "El caldo de huesos es el líquido que resulta de cocer huesos de animales a fuego lento durante mucho tiempo. Es suave, sabroso y sienta bien a los estómagos sensibles, y puede hacer que la comida resulte más apetecible para los perros con poco apetito. Los riesgos están en lo que se le añade: algunos caldos llevan aditivos como cebolla, ajo o sal, y los huesos cocinados pueden astillarse y herir a tu perro o quedarse atascados en la garganta.",
-        "pt": "O caldo de ossos faz-se cozendo ossos de animais em lume brando durante muito tempo. É suave, saboroso e fácil para estômagos sensíveis, e pode tornar a comida mais apetitosa para cães com pouco apetite. Os riscos vêm do que se lhe acrescenta: alguns caldos levam aditivos como cebola, alho ou sal, e os ossos cozinhados podem lascar e ferir o teu cão ou ficar presos na garganta."
+        "pt": "O caldo de ossos faz-se cozendo ossos de animais em lume brando durante muito tempo. É suave, saboroso e fácil para estômagos sensíveis, e pode tornar a comida mais apetitosa para cães com pouco apetite. Os riscos vêm do que se lhe acrescenta: alguns caldos levam aditivos como cebola, alho ou sal, e os ossos cozinhados podem lascar e ferir o teu cão ou ficar presos na garganta.",
+        "nl": "Bottenbouillon is een bouillon die je maakt door dierlijke botten lang op laag vuur te laten sudderen. Het is mild, smaakvol en goed te verdragen voor een gevoelige maag, en het kan eten aantrekkelijker maken voor honden met weinig eetlust. De risico’s zitten in wat erin gaat: sommige bouillons bevatten toevoegingen zoals ui, knoflook of zout, en gekookte botten kunnen versplinteren en je hond verwonden of in zijn keel blijven steken."
       },
       "signs": null,
       "what_to_do": {
@@ -36234,7 +36333,8 @@
         "nb": "Hvis hunden har fått kraft som inneholder løk, hvitløk eller mye salt, kan du lese sidene våre om løk, hvitløk og salt. Hvis hunden har svelget et kokt bein, kan du lese siden vår om kokte bein. Beinkraft løser ikke leddproblemer på egen hånd, så snakk med dyrlegen om dem.",
         "de": "Hat Ihr Hund Brühe mit Zwiebeln, Knoblauch oder viel Salz bekommen, lesen Sie unsere Seiten zu Zwiebeln, Knoblauch und Salz. Hat Ihr Hund einen gekochten Knochen verschluckt, lesen Sie unsere Seite zu gekochten Knochen. Knochenbrühe allein löst keine Gelenkprobleme – besprechen Sie diese deshalb mit Ihrem Tierarzt.",
         "es": "Si tu perro ha tomado un caldo con cebolla, ajo o mucha sal, consulta nuestras páginas sobre la cebolla, el ajo y la sal. Si tu perro se ha tragado un hueso cocinado, consulta nuestra página sobre los huesos cocinados. El caldo de huesos no soluciona por sí solo los problemas de articulaciones, así que habla con tu veterinario.",
-        "pt": "Se o teu cão tomou caldo com cebola, alho ou muito sal, vai às nossas páginas da cebola, do alho e do sal. Se engoliu um osso cozinhado, vai à nossa página dos ossos cozinhados. O caldo de ossos não resolve sozinho problemas nas articulações, por isso fala com o teu veterinário."
+        "pt": "Se o teu cão tomou caldo com cebola, alho ou muito sal, vai às nossas páginas da cebola, do alho e do sal. Se engoliu um osso cozinhado, vai à nossa página dos ossos cozinhados. O caldo de ossos não resolve sozinho problemas nas articulações, por isso fala com o teu veterinário.",
+        "nl": "Heeft je hond bouillon met ui, knoflook of veel zout gehad, bekijk dan onze pagina’s over ui, knoflook en zout. Heeft je hond een gekookt bot ingeslikt, bekijk dan onze pagina over gekookte botten. Bottenbouillon lost gewrichtsproblemen niet op, dus bespreek die met je dierenarts."
       },
       "serving": {
         "en": "Use only natural, dog-safe ingredients, with no onions, garlic or salt. After cooking, refrigerate the broth, remove the hardened layer of fat from the top and strain out every bone. Serve it on its own or mixed into dry food.",
@@ -36245,7 +36345,8 @@
         "nb": "Bruk bare naturlige ingredienser som er trygge for hunder, uten løk, hvitløk eller salt. Etter koking setter du kraften i kjøleskapet, fjerner det stivnede fettlaget på toppen og siler bort alle bein. Server den ren, eller bland den i tørrfôret.",
         "de": "Verwenden Sie nur natürliche, für Hunde unbedenkliche Zutaten, ohne Zwiebeln, Knoblauch oder Salz. Stellen Sie die Brühe nach dem Kochen in den Kühlschrank, nehmen Sie die erstarrte Fettschicht oben ab und seihen Sie alle Knochen heraus. Geben Sie sie pur oder unter das Trockenfutter gemischt.",
         "es": "Usa solo ingredientes naturales y seguros para perros, sin cebolla, ajo ni sal. Después de cocinarlo, guarda el caldo en la nevera, quita la capa de grasa endurecida de la superficie y retira todos los huesos. Puedes dárselo solo o mezclado con pienso.",
-        "pt": "Usa só ingredientes naturais e seguros para cães, sem cebola, alho nem sal. Depois de cozinhar, deixa o caldo arrefecer no frigorífico, retira a camada de gordura endurecida à superfície e tira todos os ossos. Serve-o sozinho ou misturado com a ração."
+        "pt": "Usa só ingredientes naturais e seguros para cães, sem cebola, alho nem sal. Depois de cozinhar, deixa o caldo arrefecer no frigorífico, retira a camada de gordura endurecida à superfície e tira todos os ossos. Serve-o sozinho ou misturado com a ração.",
+        "nl": "Gebruik alleen natuurlijke ingrediënten die veilig zijn voor honden, zonder ui, knoflook of zout. Zet de bouillon na het koken in de koelkast, schep de verharde vetlaag er van boven af en zeef alle botten eruit. Geef de bouillon puur of meng hem door het droge voer."
       },
       "child": {
         "en": "Bone broth can be a tasty treat for dogs. A grown-up makes it and takes out every bone first, because bones aren't safe for dogs.",
@@ -36256,7 +36357,8 @@
         "nb": "Beinkraft kan være en god godbit for hunder. En voksen lager den og tar ut alle beinene først, for bein er ikke trygt for hunder.",
         "de": "Knochenbrühe kann für Hunde ein leckeres Extra sein. Ein Erwachsener kocht sie und nimmt vorher alle Knochen heraus, denn Knochen sind für Hunde nicht sicher.",
         "es": "El caldo de huesos puede ser un premio rico para los perros. Un adulto lo prepara y le quita antes todos los huesos, porque no son seguros para los perros.",
-        "pt": "O caldo de ossos pode ser um petisco saboroso para os cães. Um adulto prepara-o e tira primeiro todos os ossos, porque os ossos não são seguros para os cães."
+        "pt": "O caldo de ossos pode ser um petisco saboroso para os cães. Um adulto prepara-o e tira primeiro todos os ossos, porque os ossos não são seguros para os cães.",
+        "nl": "Bottenbouillon kan een lekker snoepje zijn voor honden. Een volwassene maakt de bouillon en haalt er eerst alle botten uit, want botten zijn niet veilig voor honden."
       },
       "faq": [
         {
@@ -36269,7 +36371,8 @@
             "nb": "Hva er forskjellen på beinkraft og vanlig kraft?",
             "de": "Was unterscheidet Knochenbrühe von normaler Brühe?",
             "es": "¿En qué se diferencia el caldo de huesos del caldo normal?",
-            "pt": "Qual é a diferença entre o caldo de ossos e o caldo normal?"
+            "pt": "Qual é a diferença entre o caldo de ossos e o caldo normal?",
+            "nl": "Wat is het verschil tussen bottenbouillon en gewone bouillon?"
           },
           "a": {
             "en": "Bone broth is a stock liquid made by slowly cooking animal bones at low heat for an extended period. For everyday broth and stock cubes, see our broth page.",
@@ -36280,7 +36383,8 @@
             "nb": "Beinkraft er en kraft som lages ved å la bein fra dyr småkoke på lav varme i lang tid. Vanlig kraft og buljongterninger finner du på siden vår om buljong og kraft.",
             "de": "Knochenbrühe ist ein Fond, für den Tierknochen lange bei niedriger Hitze köcheln. Mehr zu normaler Brühe und Brühwürfeln finden Sie auf unserer Seite zu Brühe und Fond.",
             "es": "El caldo de huesos es el líquido que resulta de cocer huesos de animales a fuego lento durante mucho tiempo. Para el caldo de uso diario y las pastillas de caldo, consulta nuestra página sobre el caldo.",
-            "pt": "O caldo de ossos faz-se cozendo ossos de animais em lume brando durante muito tempo. Para o caldo do dia a dia e os cubos de caldo, vai à nossa página do caldo."
+            "pt": "O caldo de ossos faz-se cozendo ossos de animais em lume brando durante muito tempo. Para o caldo do dia a dia e os cubos de caldo, vai à nossa página do caldo.",
+            "nl": "Bottenbouillon is een bouillon die je maakt door dierlijke botten lange tijd op laag vuur te laten sudderen. Voor gewone bouillon en bouillonblokjes kun je terecht op onze bouillonpagina."
           }
         },
         {
@@ -36293,7 +36397,8 @@
             "nb": "Kan jeg bruke ferdiglaget beinkraft fra butikken?",
             "de": "Kann ich fertige Knochenbrühe aus dem Laden verwenden?",
             "es": "¿Puedo usar caldo de huesos comprado?",
-            "pt": "Posso usar caldo de ossos comprado?"
+            "pt": "Posso usar caldo de ossos comprado?",
+            "nl": "Mag ik bottenbouillon uit de winkel gebruiken?"
           },
           "a": {
             "en": "Look for one with natural, dog-safe ingredients, because some contain additives for preservation and taste, such as onions, garlic or salt.",
@@ -36304,7 +36409,8 @@
             "nb": "Se etter en med naturlige ingredienser som er trygge for hunder, for noen inneholder tilsetninger for holdbarhet og smak, som løk, hvitløk eller salt.",
             "de": "Achten Sie auf natürliche, für Hunde unbedenkliche Zutaten, denn manche Produkte enthalten Zusätze zur Haltbarkeit und für den Geschmack, etwa Zwiebeln, Knoblauch oder Salz.",
             "es": "Busca uno con ingredientes naturales y seguros para perros, porque algunos llevan aditivos para conservarlo y darle sabor, como cebolla, ajo o sal.",
-            "pt": "Procura um feito com ingredientes naturais e seguros para cães, porque alguns levam conservantes e aromatizantes, como cebola, alho ou sal."
+            "pt": "Procura um feito com ingredientes naturais e seguros para cães, porque alguns levam conservantes e aromatizantes, como cebola, alho ou sal.",
+            "nl": "Kies een bouillon met natuurlijke ingrediënten die veilig zijn voor honden, want sommige bevatten toevoegingen als ui, knoflook of zout om ze langer houdbaar en smakelijker te maken."
           }
         },
         {
@@ -36317,7 +36423,8 @@
             "nb": "Hjelper beinkraft på hundens ledd?",
             "de": "Hilft Knochenbrühe den Gelenken meines Hundes?",
             "es": "¿El caldo de huesos ayuda a las articulaciones de mi perro?",
-            "pt": "O caldo de ossos ajuda as articulações do meu cão?"
+            "pt": "O caldo de ossos ajuda as articulações do meu cão?",
+            "nl": "Helpt bottenbouillon bij de gewrichten van mijn hond?"
           },
           "a": {
             "en": "The AKC says the collagen in bone broth contributes to joint health, but bone broth won't cure joint problems without other treatments, so contact your vet.",
@@ -36328,7 +36435,8 @@
             "nb": "AKC sier at kollagenet i beinkraft bidrar til sunne ledd, men beinkraft kurerer ikke leddproblemer uten annen behandling, så kontakt dyrlegen.",
             "de": "Laut AKC trägt das Kollagen in Knochenbrühe zur Gesundheit der Gelenke bei. Ohne weitere Behandlung heilt Knochenbrühe Gelenkprobleme aber nicht – wenden Sie sich deshalb an Ihren Tierarzt.",
             "es": "Según el AKC, el colágeno del caldo de huesos contribuye a la salud de las articulaciones, pero el caldo de huesos no cura los problemas articulares sin otros tratamientos, así que consulta con tu veterinario.",
-            "pt": "A AKC diz que o colagénio do caldo de ossos ajuda a manter as articulações saudáveis, mas o caldo de ossos não cura problemas articulares sem outros tratamentos, por isso fala com o teu veterinário."
+            "pt": "A AKC diz que o colagénio do caldo de ossos ajuda a manter as articulações saudáveis, mas o caldo de ossos não cura problemas articulares sem outros tratamentos, por isso fala com o teu veterinário.",
+            "nl": "Volgens de AKC draagt het collageen in bottenbouillon bij aan gezonde gewrichten, maar zonder andere behandelingen lost bottenbouillon gewrichtsproblemen niet op. Neem daarom contact op met je dierenarts."
           }
         }
       ],
@@ -39184,7 +39292,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Cat food",
@@ -39195,7 +39304,8 @@
         "nb": "Kattefôr",
         "de": "Katzenfutter",
         "es": "Comida para gatos",
-        "pt": "Comida para gatos"
+        "pt": "Comida para gatos",
+        "nl": "Kattenvoer"
       },
       "question": {
         "en": "Can dogs eat cat food?",
@@ -39206,7 +39316,8 @@
         "nb": "Kan hunder spise kattefôr?",
         "de": "Dürfen Hunde Katzenfutter fressen?",
         "es": "¿Pueden los perros comer comida para gatos?",
-        "pt": "Os cães podem comer comida para gatos?"
+        "pt": "Os cães podem comer comida para gatos?",
+        "nl": "Mogen honden kattenvoer eten?"
       },
       "url_slug": {
         "en": "cat-food",
@@ -39217,7 +39328,8 @@
         "nb": "kattefor",
         "de": "katzenfutter",
         "es": "comida-para-gatos",
-        "pt": "comida-para-gatos"
+        "pt": "comida-para-gatos",
+        "nl": "kattenvoer"
       },
       "answer": {
         "en": "Not regularly. A dog that sneaks some of the cat's food now and then probably won't be harmed, but it shouldn't become a habit. Cat food is much higher in meat-based protein and doesn't have the right balance of nutrients for dogs.",
@@ -39228,7 +39340,8 @@
         "nb": "Ikke jevnlig. En hund som stjeler litt av kattens fôr nå og da, tar sannsynligvis ikke skade, men det bør ikke bli en vane. Kattefôr inneholder mye mer kjøttbasert protein, og næringsstoffene er ikke i riktig balanse for hunder.",
         "de": "Nicht regelmäßig. Ein Hund, der ab und zu etwas vom Futter der Katze stibitzt, nimmt wahrscheinlich keinen Schaden, aber es sollte nicht zur Gewohnheit werden. Katzenfutter enthält deutlich mehr Eiweiß aus Fleisch und hat nicht die richtige Nährstoffzusammensetzung für Hunde.",
         "es": "No de forma habitual. A un perro que se cuela de vez en cuando en la comida del gato probablemente no le pase nada, pero no debe convertirse en costumbre. La comida para gatos tiene mucha más proteína de origen animal y no tiene el equilibrio de nutrientes que necesitan los perros.",
-        "pt": "Não como hábito. Se um cão rouba de vez em quando um pouco da comida do gato, provavelmente não terá problemas, mas isso não deve tornar-se um hábito. A comida para gatos tem muito mais proteína animal e não tem o equilíbrio certo de nutrientes para os cães."
+        "pt": "Não como hábito. Se um cão rouba de vez em quando um pouco da comida do gato, provavelmente não terá problemas, mas isso não deve tornar-se um hábito. A comida para gatos tem muito mais proteína animal e não tem o equilíbrio certo de nutrientes para os cães.",
+        "nl": "Niet regelmatig. Een hond die af en toe wat van het kattenvoer steelt, krijgt daar waarschijnlijk geen last van, maar het mag geen gewoonte worden. Kattenvoer bevat veel meer vleeseiwit en de voedingsstoffen zitten er niet in de juiste verhouding in voor honden."
       },
       "why": {
         "en": "Cats are obligate carnivores, so cat food is much higher in meat-based protein than dog food and doesn't have the correct balance of protein, fibre and nutrients dogs need. Over time the imbalance can lead to stomach and gut upset, obesity and pancreatitis, and the high protein levels can be hard on a dog's liver and kidneys.",
@@ -39239,7 +39352,8 @@
         "nb": "Katter er obligate kjøttetere, så kattefôr har mye mer kjøttbasert protein enn hundefôr, og balansen mellom protein, fiber og næringsstoffer er ikke riktig for hunder. Over tid kan ubalansen føre til mage- og tarmproblemer, overvekt og betennelse i bukspyttkjertelen, og det høye proteininnholdet kan belaste hundens lever og nyrer.",
         "de": "Katzen sind obligate Fleischfresser, deshalb enthält Katzenfutter viel mehr Eiweiß aus Fleisch als Hundefutter und liefert Eiweiß, Ballaststoffe und andere Nährstoffe nicht im richtigen Verhältnis für Hunde. Auf Dauer kann dieses Ungleichgewicht zu Magen-Darm-Beschwerden, Übergewicht und einer Bauchspeicheldrüsenentzündung führen, und der hohe Eiweißgehalt kann Leber und Nieren eines Hundes belasten.",
         "es": "Los gatos son carnívoros estrictos, así que su comida tiene mucha más proteína de origen animal que la de los perros y no aporta el equilibrio de proteínas, fibra y nutrientes que necesitan los perros. Con el tiempo, el desequilibrio puede provocar molestias de estómago e intestino, obesidad y pancreatitis, y el alto contenido en proteína puede suponer una carga para el hígado y los riñones del perro.",
-        "pt": "Os gatos são carnívoros estritos, por isso a comida para gatos tem muito mais proteína animal do que a comida para cães e não tem o equilíbrio certo de proteínas, fibra e nutrientes de que os cães precisam. Com o tempo, o desequilíbrio pode causar problemas de estômago e intestinos, obesidade e pancreatite, e o excesso de proteína pode sobrecarregar o fígado e os rins do cão."
+        "pt": "Os gatos são carnívoros estritos, por isso a comida para gatos tem muito mais proteína animal do que a comida para cães e não tem o equilíbrio certo de proteínas, fibra e nutrientes de que os cães precisam. Com o tempo, o desequilíbrio pode causar problemas de estômago e intestinos, obesidade e pancreatite, e o excesso de proteína pode sobrecarregar o fígado e os rins do cão.",
+        "nl": "Katten zijn strikte vleeseters, dus kattenvoer bevat veel meer vleeseiwit dan hondenvoer, en de verhouding tussen eiwit, vezels en andere voedingsstoffen is niet de juiste voor honden. Op den duur kan die scheve verhouding leiden tot maag- en darmklachten, obesitas en alvleesklierontsteking, en het hoge eiwitgehalte kan de lever en nieren van een hond zwaar belasten."
       },
       "signs": {
         "en": [
@@ -39322,6 +39436,15 @@
           "Diarreia",
           "Barriga inchada",
           "Febre"
+        ],
+        "nl": [
+          "Buikpijn en een gekromde rug",
+          "Moeheid en zwakte",
+          "Niet willen eten",
+          "Braken",
+          "Diarree",
+          "Opgezwollen buik",
+          "Koorts"
         ]
       },
       "what_to_do": {
@@ -39333,7 +39456,8 @@
         "nb": "Hvis hunden viser tegn på ubehag i magen etter å ha spist kattefôr, bør du ringe dyrlegen. Tegn på betennelse i bukspyttkjertelen, som krumrygg med vondt i magen, oppkast, svakhet eller feber, krever øyeblikkelig dyrlegehjelp.",
         "de": "Zeigt Ihr Hund nach dem Fressen von Katzenfutter Anzeichen von Bauchbeschwerden, rufen Sie Ihren Tierarzt an. Anzeichen einer Bauchspeicheldrüsenentzündung wie ein krummer Rücken mit Bauchschmerzen, Erbrechen, Schwäche oder Fieber erfordern sofortige tierärztliche Hilfe.",
         "es": "Si tu perro tiene molestias de barriga después de comer comida para gatos, llama a tu veterinario. Los signos de pancreatitis, como espalda encorvada con dolor de barriga, vómitos, debilidad o fiebre, requieren atención veterinaria inmediata.",
-        "pt": "Se o teu cão mostrar sinais de desconforto na barriga depois de comer comida para gatos, liga ao teu veterinário. Os sinais de pancreatite, como costas arqueadas com dor de barriga, vómitos, fraqueza ou febre, exigem cuidados veterinários imediatos."
+        "pt": "Se o teu cão mostrar sinais de desconforto na barriga depois de comer comida para gatos, liga ao teu veterinário. Os sinais de pancreatite, como costas arqueadas com dor de barriga, vómitos, fraqueza ou febre, exigem cuidados veterinários imediatos.",
+        "nl": "Heeft je hond na het eten van kattenvoer buikklachten, bel dan je dierenarts. Bij verschijnselen van alvleesklierontsteking, zoals een gebogen rug met buikpijn, braken, zwakte of koorts, moet je meteen naar de dierenarts."
       },
       "serving": null,
       "child": {
@@ -39345,7 +39469,8 @@
         "nb": "Kattefôr er laget for katter. Hunder holder seg friskest med sitt eget hundefôr, så hjelp til med å holde kattens skål høyt oppe!",
         "de": "Katzenfutter ist für Katzen gemacht. Hunde bleiben mit ihrem eigenen Hundefutter am gesündesten – hilf also mit und stell den Napf der Katze weit oben ab!",
         "es": "La comida para gatos es para gatos. Los perros están más sanos con su propia comida. ¡Ayuda a poner el comedero del gato en un sitio alto!",
-        "pt": "A comida para gatos é feita para gatos. Os cães ficam mais saudáveis com a comida deles, por isso ajuda a pôr a tigela do gato num sítio alto!"
+        "pt": "A comida para gatos é feita para gatos. Os cães ficam mais saudáveis com a comida deles, por isso ajuda a pôr a tigela do gato num sítio alto!",
+        "nl": "Kattenvoer is gemaakt voor katten. Honden blijven het gezondst met hun eigen hondenvoer, dus help mee en zet het bakje van de kat hoog neer!"
       },
       "faq": [
         {
@@ -39358,7 +39483,8 @@
             "nb": "Hvordan hindrer jeg at hunden spiser kattens mat?",
             "de": "Wie halte ich meinen Hund vom Futter der Katze fern?",
             "es": "¿Cómo evito que mi perro se coma la comida del gato?",
-            "pt": "Como posso impedir que o meu cão chegue à comida do gato?"
+            "pt": "Como posso impedir que o meu cão chegue à comida do gato?",
+            "nl": "Hoe zorg ik dat mijn hond niet aan het kattenvoer komt?"
           },
           "a": {
             "en": "Place the cat's food out of your dog's reach. If your dog regularly gets into it, change where you keep the cat's food or where and how you feed your cat.",
@@ -39369,7 +39495,8 @@
             "nb": "Sett kattens mat utenfor hundens rekkevidde. Hvis hunden jevnlig kommer til den, kan du endre hvor du oppbevarer kattefôret, eller hvor og hvordan du gir katten mat.",
             "de": "Stellen Sie das Futter der Katze außerhalb der Reichweite Ihres Hundes ab. Kommt Ihr Hund regelmäßig daran, ändern Sie, wo Sie das Katzenfutter aufbewahren oder wo und wie Sie Ihre Katze füttern.",
             "es": "Coloca la comida del gato fuera del alcance de tu perro. Si se cuela a menudo, cambia el sitio donde guardas la comida del gato o dónde y cómo se la das.",
-            "pt": "Põe a comida do gato fora do alcance do cão. Se ele a apanhar com frequência, muda o sítio onde a guardas ou o local e a forma como alimentas o gato."
+            "pt": "Põe a comida do gato fora do alcance do cão. Se ele a apanhar com frequência, muda o sítio onde a guardas ou o local e a forma como alimentas o gato.",
+            "nl": "Zet het kattenvoer buiten het bereik van je hond. Komt je hond er toch regelmatig aan, verander dan waar je het kattenvoer bewaart of waar en hoe je je kat voert."
           }
         },
         {
@@ -39382,7 +39509,8 @@
             "nb": "Kan hunden spise kattefôr i en nødssituasjon?",
             "de": "Darf mein Hund im Notfall Katzenfutter fressen?",
             "es": "¿Puede mi perro comer comida para gatos en una emergencia?",
-            "pt": "O meu cão pode comer comida para gatos numa emergência?"
+            "pt": "O meu cão pode comer comida para gatos numa emergência?",
+            "nl": "Mag mijn hond in een noodgeval kattenvoer eten?"
           },
           "a": {
             "en": "Dogs can survive on cat food in a tough spot, but unless your vet recommends otherwise, the best food for your dog is dog food.",
@@ -39393,7 +39521,8 @@
             "nb": "Hunder kan klare seg på kattefôr i en knipe, men med mindre dyrlegen anbefaler noe annet, er hundefôr det beste fôret til hunden din.",
             "de": "Hunde können sich zur Not von Katzenfutter ernähren, aber sofern Ihr Tierarzt nichts anderes empfiehlt, ist Hundefutter die beste Wahl für Ihren Hund.",
             "es": "En un apuro, un perro puede salir adelante con comida para gatos, pero, salvo que tu veterinario te diga otra cosa, lo mejor para él es la comida para perros.",
-            "pt": "Um cão consegue sobreviver com comida para gatos se for preciso, mas, a não ser que o teu veterinário diga outra coisa, a melhor comida para ele é comida para cães."
+            "pt": "Um cão consegue sobreviver com comida para gatos se for preciso, mas, a não ser que o teu veterinário diga outra coisa, a melhor comida para ele é comida para cães.",
+            "nl": "Een hond kan in noodgevallen op kattenvoer overleven, maar tenzij je dierenarts anders adviseert, is hondenvoer het beste voor je hond."
           }
         }
       ],
@@ -43432,7 +43561,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Coconut water",
@@ -43443,7 +43573,8 @@
         "nb": "Kokosvann",
         "de": "Kokoswasser",
         "es": "Agua de coco",
-        "pt": "Água de coco"
+        "pt": "Água de coco",
+        "nl": "Kokoswater"
       },
       "question": {
         "en": "Can dogs drink coconut water?",
@@ -43454,7 +43585,8 @@
         "nb": "Kan hunder drikke kokosvann?",
         "de": "Dürfen Hunde Kokoswasser trinken?",
         "es": "¿Pueden los perros beber agua de coco?",
-        "pt": "Os cães podem beber água de coco?"
+        "pt": "Os cães podem beber água de coco?",
+        "nl": "Mogen honden kokoswater drinken?"
       },
       "url_slug": {
         "en": "coconut-water",
@@ -43465,7 +43597,8 @@
         "nb": "kokosvann",
         "de": "kokoswasser",
         "es": "agua-de-coco",
-        "pt": "agua-de-coco"
+        "pt": "agua-de-coco",
+        "nl": "kokoswater"
       },
       "answer": {
         "en": "Yes, as an occasional treat. A vet quoted by the AKC says coconut water is safe for dogs but should be a treat, not a substitute for regular water. Choose pure coconut water with no added sugars or preservatives, and offer it in moderation.",
@@ -43476,7 +43609,8 @@
         "nb": "Ja, som en godbit av og til. En dyrlege som AKC siterer, sier at kokosvann er trygt for hunder, men bør være en godbit, ikke en erstatning for vanlig vann. Velg rent kokosvann uten tilsatt sukker eller konserveringsmidler, og gi det med måte.",
         "de": "Ja, als gelegentliches Leckerli. Die vom AKC zitierte tierärztliche Einschätzung lautet: Kokoswasser ist für Hunde unbedenklich, sollte aber ein Leckerli bleiben und kein Ersatz für normales Wasser sein. Wählen Sie reines Kokoswasser ohne zugesetzten Zucker oder Konservierungsstoffe und geben Sie es in Maßen.",
         "es": "Sí, como premio ocasional. Una veterinaria citada por el AKC dice que el agua de coco es segura para los perros, pero debe ser un premio, no un sustituto del agua normal. Elige agua de coco pura, sin azúcares añadidos ni conservantes, y ofrécela con moderación.",
-        "pt": "Sim, como guloseima ocasional. Segundo um veterinário citado pela AKC, a água de coco é segura para os cães, mas deve ser uma guloseima e não substituir a água normal. Escolhe água de coco pura, sem açúcares adicionados nem conservantes, e dá-a com moderação."
+        "pt": "Sim, como guloseima ocasional. Segundo um veterinário citado pela AKC, a água de coco é segura para os cães, mas deve ser uma guloseima e não substituir a água normal. Escolhe água de coco pura, sem açúcares adicionados nem conservantes, e dá-a com moderação.",
+        "nl": "Ja, maar alleen af en toe, als snoepje. Een dierenarts die de AKC citeert, zegt dat kokoswater veilig is voor honden, maar dat het een snoepje moet blijven en geen vervanging is voor gewoon water. Kies puur kokoswater zonder toegevoegde suikers of conserveermiddelen en geef het met mate."
       },
       "why": {
         "en": "Coconut is high in potassium, so caution is needed for dogs with kidney disease or other electrolyte disturbances. Too much coconut can make a dog sick, mainly with stomach upset such as diarrhoea. Anything you offer must be free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -43487,7 +43621,8 @@
         "nb": "Kokos inneholder mye kalium, så du må være forsiktig med hunder som har nyresykdom eller andre elektrolyttforstyrrelser. For mye kokos kan gjøre hunden syk, først og fremst med urolig mage, for eksempel diaré. Alt du gir, må være fritt for kunstige søtstoffer som xylitol, som er giftig for hunder.",
         "de": "Kokos enthält viel Kalium, deshalb ist bei Hunden mit Nierenerkrankung oder anderen Störungen des Elektrolythaushalts Vorsicht geboten. Zu viel Kokos kann einem Hund Magenbeschwerden wie Durchfall bereiten. Alles, was Sie anbieten, muss frei von künstlichen Süßstoffen wie Xylit sein, das für Hunde giftig ist.",
         "es": "El coco es rico en potasio, así que hay que tener cuidado si el perro tiene enfermedad renal u otra alteración de los electrolitos. Demasiado coco puede sentar mal a un perro, sobre todo con molestias de estómago, como diarrea. Lo que le ofrezcas no debe llevar edulcorantes artificiales, como el xilitol, que es tóxico para los perros.",
-        "pt": "O coco é rico em potássio, por isso é preciso cuidado com os cães com doença renal ou outros desequilíbrios de eletrólitos. Coco em excesso pode deixar o cão doente, sobretudo com problemas de barriga, como diarreia. Tudo o que deres tem de estar livre de adoçantes artificiais, como o xilitol, que é tóxico para os cães."
+        "pt": "O coco é rico em potássio, por isso é preciso cuidado com os cães com doença renal ou outros desequilíbrios de eletrólitos. Coco em excesso pode deixar o cão doente, sobretudo com problemas de barriga, como diarreia. Tudo o que deres tem de estar livre de adoçantes artificiais, como o xilitol, que é tóxico para os cães.",
+        "nl": "Kokos bevat veel kalium, dus wees voorzichtig bij honden met nierziekte of andere verstoringen van de elektrolytenbalans. Te veel kokos kan een hond ziek maken, vooral met maagklachten zoals diarree. Alles wat je geeft, moet vrij zijn van kunstmatige zoetstoffen zoals xylitol, dat giftig is voor honden."
       },
       "signs": null,
       "what_to_do": {
@@ -43499,7 +43634,8 @@
         "nb": "Slutt å gi kokosvann hvis hunden får urolig mage eller diaré. Kokos inneholder mye kalium, så vær forsiktig hvis hunden har nyresykdom eller elektrolyttproblemer.",
         "de": "Setzen Sie das Kokoswasser ab, wenn Ihr Hund eine Magenverstimmung oder Durchfall bekommt. Kokos enthält viel Kalium – seien Sie deshalb vorsichtig, wenn Ihr Hund eine Nierenerkrankung oder ein Elektrolytproblem hat.",
         "es": "Deja de darle agua de coco si tu perro tiene el estómago revuelto o diarrea. El coco es rico en potasio, así que ten cuidado si tu perro tiene enfermedad renal o algún problema de electrolitos.",
-        "pt": "Se o teu cão ficar com problemas de barriga ou diarreia, deixa de lhe dar água de coco. O coco é rico em potássio, por isso tem cuidado se o teu cão tiver doença renal ou um problema de eletrólitos."
+        "pt": "Se o teu cão ficar com problemas de barriga ou diarreia, deixa de lhe dar água de coco. O coco é rico em potássio, por isso tem cuidado se o teu cão tiver doença renal ou um problema de eletrólitos.",
+        "nl": "Stop met het kokoswater als je hond maagklachten of diarree krijgt. Kokos bevat veel kalium, dus wees er voorzichtig mee als je hond nierziekte heeft of een probleem met de elektrolytenbalans."
       },
       "serving": {
         "en": "Pure, unsweetened coconut water only, with no added sugar, preservatives or xylitol, offered in moderation as a treat and never instead of fresh water.",
@@ -43510,7 +43646,8 @@
         "nb": "Bare rent, usøtet kokosvann uten tilsatt sukker, konserveringsmidler eller xylitol. Gi det med måte som en godbit, aldri i stedet for friskt vann.",
         "de": "Nur reines, ungesüßtes Kokoswasser ohne zugesetzten Zucker, Konservierungsstoffe oder Xylit, in Maßen als Leckerli und niemals anstelle von frischem Wasser.",
         "es": "Solo agua de coco pura y sin endulzar, sin azúcar añadido, sin conservantes y sin xilitol, ofrecida con moderación como premio y nunca en lugar de agua fresca.",
-        "pt": "Só água de coco pura, sem açúcar adicionado, conservantes nem xilitol, dada com moderação, como guloseima, e nunca em vez de água fresca."
+        "pt": "Só água de coco pura, sem açúcar adicionado, conservantes nem xilitol, dada com moderação, como guloseima, e nunca em vez de água fresca.",
+        "nl": "Alleen puur, ongezoet kokoswater, zonder toegevoegde suiker, conserveermiddelen of xylitol. Geef het met mate als snoepje en nooit in plaats van vers water."
       },
       "child": {
         "en": "Coconut water is an occasional treat for dogs. Fresh water is still what they need to drink every day!",
@@ -43521,7 +43658,8 @@
         "nb": "Kokosvann er en godbit hunder kan få av og til. Hver dag er det friskt vann de trenger å drikke!",
         "de": "Kokoswasser ist für Hunde ein gelegentliches Leckerli. Trotzdem brauchen sie jeden Tag frisches Wasser zum Trinken!",
         "es": "El agua de coco es un premio ocasional para los perros. ¡Lo que necesitan beber cada día sigue siendo agua fresca!",
-        "pt": "A água de coco é um petisco para dar de vez em quando. O que os cães precisam de beber todos os dias é água fresca!"
+        "pt": "A água de coco é um petisco para dar de vez em quando. O que os cães precisam de beber todos os dias é água fresca!",
+        "nl": "Kokoswater is voor honden een snoepje voor af en toe. Vers water blijft wat ze elke dag moeten drinken!"
       },
       "faq": [
         {
@@ -43534,7 +43672,8 @@
             "nb": "Kan kokosvann hjelpe hunden min etter trening?",
             "de": "Kann Kokoswasser meinem Hund nach dem Sport helfen?",
             "es": "¿Puede ayudar el agua de coco a mi perro después del ejercicio?",
-            "pt": "A água de coco pode ajudar o meu cão depois do exercício?"
+            "pt": "A água de coco pode ajudar o meu cão depois do exercício?",
+            "nl": "Kan kokoswater mijn hond helpen na het sporten?"
           },
           "a": {
             "en": "One vet quoted by the AKC offers her dogs coconut water for extra electrolytes after dog sport events. For the average house dog, though, a fresh bowl of water is perfectly sufficient.",
@@ -43545,7 +43684,8 @@
             "nb": "En dyrlege som AKC siterer, gir hundene sine kokosvann for å få litt ekstra elektrolytter etter hundesport. For en vanlig familiehund er det likevel helt nok med en skål friskt vann.",
             "de": "Eine vom AKC zitierte Tierärztin gibt ihren Hunden nach Hundesportveranstaltungen Kokoswasser für zusätzliche Elektrolyte. Für einen durchschnittlichen Haushund reicht aber ein frischer Napf Wasser völlig aus.",
             "es": "Una veterinaria citada por el AKC da agua de coco a sus perros después de competiciones de deporte canino, para aportarles electrolitos extra. Para un perro de casa corriente, en cambio, un cuenco de agua fresca es más que suficiente.",
-            "pt": "Uma veterinária citada pela AKC dá aos seus cães água de coco para repor eletrólitos depois de competições de desporto canino. Para um cão de família normal, porém, uma tigela de água fresca chega perfeitamente."
+            "pt": "Uma veterinária citada pela AKC dá aos seus cães água de coco para repor eletrólitos depois de competições de desporto canino. Para um cão de família normal, porém, uma tigela de água fresca chega perfeitamente.",
+            "nl": "Een dierenarts die de AKC citeert, geeft haar honden na wedstrijden in de hondensport kokoswater voor extra elektrolyten. Voor de gemiddelde huishond is een verse bak water echter ruim voldoende."
           }
         }
       ],
@@ -48576,7 +48716,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Fish oil",
@@ -48587,7 +48728,8 @@
         "nb": "Fiskeolje",
         "de": "Fischöl",
         "es": "Aceite de pescado",
-        "pt": "Óleo de peixe"
+        "pt": "Óleo de peixe",
+        "nl": "Visolie"
       },
       "question": {
         "en": "Can dogs have fish oil?",
@@ -48598,7 +48740,8 @@
         "nb": "Kan hunder få fiskeolje?",
         "de": "Dürfen Hunde Fischöl bekommen?",
         "es": "¿Pueden los perros tomar aceite de pescado?",
-        "pt": "Os cães podem tomar óleo de peixe?"
+        "pt": "Os cães podem tomar óleo de peixe?",
+        "nl": "Mogen honden visolie krijgen?"
       },
       "url_slug": {
         "en": "fish-oil",
@@ -48609,7 +48752,8 @@
         "nb": "fiskeolje",
         "de": "fischoel",
         "es": "aceite-de-pescado",
-        "pt": "oleo-de-peixe"
+        "pt": "oleo-de-peixe",
+        "nl": "visolie"
       },
       "answer": {
         "en": "Only if your vet recommends it. Fish oil is a supplement, not a snack, and vets advise always talking to your veterinarian before giving your dog any supplements. It can cause side effects such as diarrhoea, vomiting, gas and fishy breath.",
@@ -48620,7 +48764,8 @@
         "nb": "Bare hvis dyrlegen anbefaler det. Fiskeolje er et kosttilskudd, ikke en godbit, og dyrleger anbefaler alltid å snakke med din egen dyrlege før du gir hunden kosttilskudd. Det kan gi bivirkninger som diaré, oppkast, luft i magen og fiskeånde.",
         "de": "Nur, wenn Ihr Tierarzt es empfiehlt. Fischöl ist ein Nahrungsergänzungsmittel und kein Leckerli – Tierärzte raten, jedes Nahrungsergänzungsmittel vorher mit dem Tierarzt abzusprechen. Es kann Nebenwirkungen wie Durchfall, Erbrechen, Blähungen und Mundgeruch nach Fisch haben.",
         "es": "Solo si tu veterinario te lo recomienda. El aceite de pescado es un suplemento, no un premio, y conviene consultar siempre con el veterinario antes de darle cualquier suplemento a tu perro. Puede causar efectos secundarios como diarrea, vómitos, gases y aliento con olor a pescado.",
-        "pt": "Só se o veterinário o recomendar. O óleo de peixe é um suplemento, não uma guloseima, e convém falar sempre com o veterinário antes de dar qualquer suplemento ao cão. Pode causar efeitos secundários, como diarreia, vómitos, gases e hálito a peixe."
+        "pt": "Só se o veterinário o recomendar. O óleo de peixe é um suplemento, não uma guloseima, e convém falar sempre com o veterinário antes de dar qualquer suplemento ao cão. Pode causar efeitos secundários, como diarreia, vómitos, gases e hálito a peixe.",
+        "nl": "Alleen als je dierenarts het adviseert. Visolie is een supplement, geen snoepje, en dierenartsen raden aan om altijd eerst te overleggen voordat je je hond supplementen geeft. Het kan bijwerkingen hebben, zoals diarree, braken, winderigheid en een vissige adem."
       },
       "why": {
         "en": "Fish oil comes from oily fish such as salmon, mackerel and sardines, and its omega-3 fatty acids have been used to support a dog's skin, coat, joints and heart. But it is a health product: possible side effects include diarrhoea, vomiting, gas, fishy-smelling breath or skin and, in rare cases, a higher bleeding risk. VCA advises caution in dogs taking blood thinners, dogs with a clotting disorder, diabetes or a history of pancreatitis. Just because a product is natural does not mean it is safe.",
@@ -48631,7 +48776,8 @@
         "nb": "Fiskeolje kommer fra fet fisk som laks, makrell og sardiner, og omega-3-fettsyrene har vært brukt til å støtte hundens hud, pels, ledd og hjerte. Men det er et helseprodukt: Mulige bivirkninger er diaré, oppkast, luft i magen, fiskelukt i pusten eller på huden og, i sjeldne tilfeller, økt blødningsrisiko. VCA råder til forsiktighet hos hunder som får blodfortynnende medisin, hunder med blodstørkningsforstyrrelse, diabetes eller tidligere betennelse i bukspyttkjertelen. At et produkt er naturlig, betyr ikke at det er trygt.",
         "de": "Fischöl wird aus fettreichen Fischen wie Lachs, Makrele und Sardinen gewonnen, und seine Omega-3-Fettsäuren werden eingesetzt, um Haut, Fell, Gelenke und Herz eines Hundes zu unterstützen. Es ist aber ein Gesundheitsprodukt: Mögliche Nebenwirkungen sind Durchfall, Erbrechen, Blähungen, Fischgeruch von Atem oder Haut und in seltenen Fällen ein höheres Blutungsrisiko. VCA rät zur Vorsicht bei Hunden, die Blutverdünner bekommen, bei Hunden mit Gerinnungsstörung oder Diabetes sowie bei Hunden, die schon einmal eine Bauchspeicheldrüsenentzündung hatten. Dass ein Produkt natürlich ist, heißt nicht, dass es sicher ist.",
         "es": "El aceite de pescado procede de pescados azules como el salmón, la caballa y las sardinas, y sus ácidos grasos omega-3 se usan para cuidar la piel, el pelo, las articulaciones y el corazón del perro. Pero es un producto de salud: entre los posibles efectos secundarios están la diarrea, los vómitos, los gases, el aliento o la piel con olor a pescado y, en casos raros, un mayor riesgo de sangrado. VCA recomienda precaución en perros que toman anticoagulantes o que tienen un trastorno de la coagulación, diabetes o antecedentes de pancreatitis. Que un producto sea natural no significa que sea seguro.",
-        "pt": "O óleo de peixe vem de peixes gordos, como o salmão, a cavala e as sardinhas, e os seus ácidos gordos ómega-3 usam-se para apoiar a pele, o pelo, as articulações e o coração do cão. Mas é um produto de saúde: os possíveis efeitos secundários incluem diarreia, vómitos, gases, hálito ou pele com cheiro a peixe e, em casos raros, maior risco de hemorragia. A VCA aconselha cautela em cães que tomam anticoagulantes, com problemas de coagulação, diabetes ou historial de pancreatite. Ser natural não quer dizer que seja seguro."
+        "pt": "O óleo de peixe vem de peixes gordos, como o salmão, a cavala e as sardinhas, e os seus ácidos gordos ómega-3 usam-se para apoiar a pele, o pelo, as articulações e o coração do cão. Mas é um produto de saúde: os possíveis efeitos secundários incluem diarreia, vómitos, gases, hálito ou pele com cheiro a peixe e, em casos raros, maior risco de hemorragia. A VCA aconselha cautela em cães que tomam anticoagulantes, com problemas de coagulação, diabetes ou historial de pancreatite. Ser natural não quer dizer que seja seguro.",
+        "nl": "Visolie wordt gewonnen uit vette vis zoals zalm, makreel en sardines, en de omega-3-vetzuren erin worden gebruikt om de huid, vacht, gewrichten en het hart van een hond te ondersteunen. Maar het is een gezondheidsproduct: mogelijke bijwerkingen zijn diarree, braken, winderigheid, een vissige adem of huidgeur en in zeldzame gevallen een groter risico op bloedingen. VCA adviseert voorzichtigheid bij honden die bloedverdunners gebruiken, bij honden met een stollingsstoornis of diabetes en bij honden die eerder alvleesklierontsteking hebben gehad. Dat een product natuurlijk is, betekent niet dat het veilig is."
       },
       "signs": {
         "en": [
@@ -48696,6 +48842,13 @@
           "Gases",
           "Hálito ou pele com cheiro a peixe",
           "Sangrar com mais facilidade (raro)"
+        ],
+        "nl": [
+          "Diarree",
+          "Braken",
+          "Winderigheid",
+          "Adem of huid die naar vis ruikt",
+          "Sneller bloeden (zeldzaam)"
         ]
       },
       "what_to_do": {
@@ -48707,7 +48860,8 @@
         "nb": "Snakk med dyrlegen før du begynner med fiskeolje eller andre kosttilskudd. Hvis hunden får en alvorlig reaksjon, slutter du å gi fiskeolje og kontakter dyrlegen med en gang. Oppbevar beholderen utenfor barns og dyrs rekkevidde.",
         "de": "Sprechen Sie mit Ihrem Tierarzt, bevor Sie mit Fischöl oder einem anderen Nahrungsergänzungsmittel beginnen. Hat Ihr Hund eine schwere Reaktion, setzen Sie das Fischöl ab und wenden Sie sich sofort an Ihren Tierarzt. Bewahren Sie den Behälter außerhalb der Reichweite von Kindern und Haustieren auf.",
         "es": "Habla con tu veterinario antes de darle aceite de pescado o cualquier otro suplemento. Si tu perro tiene una reacción grave, deja de darle aceite de pescado y contacta enseguida con tu veterinario. Guarda el envase fuera del alcance de niños y mascotas.",
-        "pt": "Fala com o teu veterinário antes de começares a dar óleo de peixe ou qualquer outro suplemento. Se o teu cão tiver uma reação grave, deixa de lhe dar óleo de peixe e contacta imediatamente o teu veterinário. Guarda a embalagem fora do alcance das crianças e dos animais de estimação."
+        "pt": "Fala com o teu veterinário antes de começares a dar óleo de peixe ou qualquer outro suplemento. Se o teu cão tiver uma reação grave, deixa de lhe dar óleo de peixe e contacta imediatamente o teu veterinário. Guarda a embalagem fora do alcance das crianças e dos animais de estimação.",
+        "nl": "Overleg met je dierenarts voordat je met visolie of een ander supplement begint. Reageert je hond ernstig, stop dan met de visolie en neem meteen contact op met je dierenarts. Houd de verpakking buiten het bereik van kinderen en huisdieren."
       },
       "serving": null,
       "child": {
@@ -48719,7 +48873,8 @@
         "nb": "Fiskeolje er et spesielt kosttilskudd. Bare dyrlegen og de voksne avgjør om en hund trenger det!",
         "de": "Fischöl ist ein besonderes Nahrungsergänzungsmittel. Ob ein Hund es braucht, entscheiden nur der Tierarzt und die Erwachsenen!",
         "es": "El aceite de pescado es un suplemento especial. ¡Solo el veterinario y los adultos deciden si un perro lo necesita!",
-        "pt": "O óleo de peixe é um suplemento especial. Só o veterinário e os adultos decidem se um cão precisa dele!"
+        "pt": "O óleo de peixe é um suplemento especial. Só o veterinário e os adultos decidem se um cão precisa dele!",
+        "nl": "Visolie is een speciaal supplement. Alleen de dierenarts en volwassenen beslissen of een hond het nodig heeft!"
       },
       "faq": [
         {
@@ -48732,7 +48887,8 @@
             "nb": "Kan gammel eller harsk fiskeolje gi hunden magebesvær?",
             "de": "Kann altes oder ranziges Fischöl meinem Hund schaden?",
             "es": "¿Puede sentarle mal a mi perro un aceite de pescado viejo o rancio?",
-            "pt": "O óleo de peixe velho ou rançoso pode fazer mal ao meu cão?"
+            "pt": "O óleo de peixe velho ou rançoso pode fazer mal ao meu cão?",
+            "nl": "Kan oude of ranzige visolie mijn hond van streek maken?"
           },
           "a": {
             "en": "Yes. Consuming rancid fish oil may lead to stomach and gut upset, including vomiting or diarrhoea.",
@@ -48743,7 +48899,8 @@
             "nb": "Ja. Harsk fiskeolje kan gi mage- og tarmproblemer, blant annet oppkast eller diaré.",
             "de": "Ja. Ranziges Fischöl kann zu Magen-Darm-Beschwerden führen, darunter Erbrechen oder Durchfall.",
             "es": "Sí. El aceite de pescado rancio puede causar molestias de estómago e intestino, como vómitos o diarrea.",
-            "pt": "Sim. O óleo de peixe rançoso pode causar problemas de estômago e intestinos, incluindo vómitos ou diarreia."
+            "pt": "Sim. O óleo de peixe rançoso pode causar problemas de estômago e intestinos, incluindo vómitos ou diarreia.",
+            "nl": "Ja. Ranzige visolie kan maag- en darmklachten veroorzaken, zoals braken of diarree."
           }
         },
         {
@@ -48756,7 +48913,8 @@
             "nb": "Er fiskeolje trygg fordi den er naturlig?",
             "de": "Ist Fischöl sicher, weil es natürlich ist?",
             "es": "¿Es seguro el aceite de pescado por ser natural?",
-            "pt": "O óleo de peixe é seguro por ser natural?"
+            "pt": "O óleo de peixe é seguro por ser natural?",
+            "nl": "Is visolie veilig omdat het natuurlijk is?"
           },
           "a": {
             "en": "Not automatically. Just because a product is natural does not mean it is safe. Your vet is the best source of information about the safety of non-drug health products for your dog.",
@@ -48767,7 +48925,8 @@
             "nb": "Ikke automatisk. At et produkt er naturlig, betyr ikke at det er trygt. Dyrlegen er den beste kilden når du lurer på om helseprodukter som ikke er medisin, er trygge for hunden din.",
             "de": "Nicht automatisch. Dass ein Produkt natürlich ist, heißt nicht, dass es sicher ist. Ihr Tierarzt kann Ihnen am besten sagen, wie sicher Gesundheitsprodukte sind, die keine Arzneimittel sind.",
             "es": "No necesariamente. Que un producto sea natural no significa que sea seguro. Tu veterinario es quien mejor puede informarte sobre la seguridad para tu perro de los productos de salud que no son medicamentos.",
-            "pt": "Não necessariamente. Ser natural não quer dizer que seja seguro. O teu veterinário é a melhor fonte de informação sobre a segurança dos produtos de saúde que não são medicamentos para o teu cão."
+            "pt": "Não necessariamente. Ser natural não quer dizer que seja seguro. O teu veterinário é a melhor fonte de informação sobre a segurança dos produtos de saúde que não são medicamentos para o teu cão.",
+            "nl": "Niet automatisch. Dat een product natuurlijk is, betekent niet dat het veilig is. Je dierenarts weet het best of gezondheidsproducten die geen medicijn zijn, veilig zijn voor je hond."
           }
         }
       ],
@@ -50105,7 +50264,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Goat's milk",
@@ -50116,7 +50276,8 @@
         "nb": "Geitemelk",
         "de": "Ziegenmilch",
         "es": "Leche de cabra",
-        "pt": "Leite de cabra"
+        "pt": "Leite de cabra",
+        "nl": "Geitenmelk"
       },
       "question": {
         "en": "Can dogs drink goat's milk?",
@@ -50127,7 +50288,8 @@
         "nb": "Kan hunder drikke geitemelk?",
         "de": "Dürfen Hunde Ziegenmilch trinken?",
         "es": "¿Pueden los perros beber leche de cabra?",
-        "pt": "Os cães podem beber leite de cabra?"
+        "pt": "Os cães podem beber leite de cabra?",
+        "nl": "Mogen honden geitenmelk drinken?"
       },
       "url_slug": {
         "en": "goat-milk",
@@ -50138,7 +50300,8 @@
         "nb": "geitemelk",
         "de": "ziegenmilch",
         "es": "leche-de-cabra",
-        "pt": "leite-de-cabra"
+        "pt": "leite-de-cabra",
+        "nl": "geitenmelk"
       },
       "answer": {
         "en": "Only a little, now and then. Goat's milk can be an occasional reward, but it has almost as much lactose as cow's milk and can still upset a dog's stomach. Dogs on a good, balanced diet don't need it. Don't give raw goat's milk.",
@@ -50149,7 +50312,8 @@
         "nb": "Bare litt, av og til. Geitemelk kan være en belønning nå og da, men den har nesten like mye laktose som kumelk og kan fortsatt gi hunden urolig mage. Hunder som får et godt, balansert kosthold, trenger den ikke. Gi aldri rå geitemelk.",
         "de": "Nur ein wenig und ab und zu. Ziegenmilch kann eine gelegentliche Belohnung sein, enthält aber fast so viel Laktose wie Kuhmilch und kann Hunden trotzdem auf den Magen schlagen. Hunde mit guter, ausgewogener Ernährung brauchen sie nicht. Geben Sie keine rohe Ziegenmilch.",
         "es": "Solo un poco, de vez en cuando. La leche de cabra puede ser un premio ocasional, pero tiene casi tanta lactosa como la de vaca y también puede sentar mal al estómago de un perro. Los perros con una dieta equilibrada no la necesitan. No le des leche de cabra cruda.",
-        "pt": "Só um pouco, de vez em quando. O leite de cabra pode ser uma guloseima ocasional, mas tem quase tanta lactose como o de vaca e, mesmo assim, pode irritar o estômago do cão. Um cão com uma alimentação boa e equilibrada não precisa dele. Não dês leite de cabra cru."
+        "pt": "Só um pouco, de vez em quando. O leite de cabra pode ser uma guloseima ocasional, mas tem quase tanta lactose como o de vaca e, mesmo assim, pode irritar o estômago do cão. Um cão com uma alimentação boa e equilibrada não precisa dele. Não dês leite de cabra cru.",
+        "nl": "Alleen een klein beetje, en niet vaak. Geitenmelk kan af en toe als beloning dienen, maar bevat bijna net zoveel lactose als koemelk en kan de maag van een hond nog steeds van streek maken. Honden die goed en evenwichtig eten, hebben het niet nodig. Geef geen rauwe geitenmelk."
       },
       "why": {
         "en": "Goat's milk has almost the same amount of lactose as cow's milk, and dogs can have varying degrees of lactose intolerance. The Australian Veterinary Association notes that goat's milk and lactose-free milk can still cause stomach and gut problems, and that some dogs can develop an allergy to milk protein. Raw milk can also carry germs such as E. coli, Salmonella and Listeria.",
@@ -50160,7 +50324,8 @@
         "nb": "Geitemelk har nesten like mye laktose som kumelk, og hunder kan ha ulik grad av laktoseintoleranse. Den australske dyrlegeforeningen (Australian Veterinary Association) påpeker at geitemelk og laktosefri melk fortsatt kan gi mage- og tarmproblemer, og at noen hunder kan utvikle allergi mot melkeprotein. Rå melk kan dessuten inneholde bakterier som E. coli, salmonella og listeria.",
         "de": "Ziegenmilch enthält fast genauso viel Laktose wie Kuhmilch, und Hunde können unterschiedlich stark laktoseintolerant sein. Die Australian Veterinary Association weist darauf hin, dass Ziegenmilch und laktosefreie Milch trotzdem Magen-Darm-Probleme verursachen können und manche Hunde eine Allergie gegen Milcheiweiß entwickeln. Rohmilch kann außerdem Keime wie E. coli, Salmonellen und Listerien enthalten.",
         "es": "La leche de cabra tiene casi la misma cantidad de lactosa que la de vaca, y los perros pueden tener distintos grados de intolerancia a la lactosa. La Asociación Veterinaria Australiana señala que la leche de cabra y la leche sin lactosa también pueden causar problemas de estómago e intestino, y que algunos perros pueden desarrollar alergia a la proteína de la leche. La leche cruda, además, puede contener gérmenes como E. coli, Salmonella y Listeria.",
-        "pt": "O leite de cabra tem quase tanta lactose como o leite de vaca, e os cães têm graus diferentes de intolerância à lactose. A Associação Veterinária Australiana refere que o leite de cabra e o leite sem lactose podem, ainda assim, causar problemas de estômago e intestinos, e que alguns cães podem desenvolver alergia à proteína do leite. O leite cru também pode conter bactérias como a E. coli, a Salmonella e a Listeria."
+        "pt": "O leite de cabra tem quase tanta lactose como o leite de vaca, e os cães têm graus diferentes de intolerância à lactose. A Associação Veterinária Australiana refere que o leite de cabra e o leite sem lactose podem, ainda assim, causar problemas de estômago e intestinos, e que alguns cães podem desenvolver alergia à proteína do leite. O leite cru também pode conter bactérias como a E. coli, a Salmonella e a Listeria.",
+        "nl": "Geitenmelk bevat bijna evenveel lactose als koemelk, en honden kunnen in verschillende mate lactose-intolerant zijn. Volgens de Australian Veterinary Association kunnen geitenmelk en lactosevrije melk nog steeds maag- en darmproblemen veroorzaken, en kunnen sommige honden een allergie voor melkeiwit ontwikkelen. Rauwe melk kan ook ziektekiemen bevatten, zoals E. coli, Salmonella en Listeria."
       },
       "signs": {
         "en": [
@@ -50225,6 +50390,13 @@
           "Vómitos",
           "Dor de barriga",
           "Diarreia"
+        ],
+        "nl": [
+          "Zachte ontlasting",
+          "Winderigheid",
+          "Braken",
+          "Buikpijn",
+          "Diarree"
         ]
       },
       "what_to_do": {
@@ -50236,7 +50408,8 @@
         "nb": "Slutt å gi geitemelk hvis hunden får løs avføring, luft i magen, oppkast, vondt i magen eller diaré, og sørg for at den alltid har friskt vann. Før du legger geitemelk til hundens kosthold, bør du snakke med dyrlegen.",
         "de": "Setzen Sie die Ziegenmilch ab, wenn Ihr Hund weichen Kot, Blähungen, Erbrechen, Bauchschmerzen oder Durchfall bekommt, und sorgen Sie dafür, dass immer frisches Wasser da ist. Bevor Sie Ziegenmilch in den Speiseplan Ihres Hundes aufnehmen, sprechen Sie zuerst mit Ihrem Tierarzt darüber.",
         "es": "Deja de darle leche de cabra si tu perro tiene heces blandas, gases, vómitos, dolor de barriga o diarrea, y asegúrate de que siempre tenga agua fresca a su disposición. Antes de añadir leche de cabra a la dieta de tu perro, habla primero con tu veterinario.",
-        "pt": "Se o teu cão tiver fezes moles, gases, vómitos, dor de barriga ou diarreia, deixa de lhe dar leite de cabra e deixa sempre água fresca à disposição. Antes de o incluíres na alimentação do teu cão, fala com o teu veterinário."
+        "pt": "Se o teu cão tiver fezes moles, gases, vómitos, dor de barriga ou diarreia, deixa de lhe dar leite de cabra e deixa sempre água fresca à disposição. Antes de o incluíres na alimentação do teu cão, fala com o teu veterinário.",
+        "nl": "Stop met de geitenmelk als je hond zachte ontlasting, winderigheid, braken, buikpijn of diarree krijgt, en zorg dat er altijd vers water beschikbaar is. Overleg eerst met je dierenarts voordat je geitenmelk aan de voeding van je hond toevoegt."
       },
       "serving": {
         "en": "Never raw. Offer it only as an occasional reward, never instead of fresh water or a balanced dog food.",
@@ -50247,7 +50420,8 @@
         "nb": "Aldri rå. Gi den bare som en belønning av og til, aldri i stedet for friskt vann eller et balansert hundefôr.",
         "de": "Niemals roh. Geben Sie sie nur als gelegentliche Belohnung, niemals anstelle von frischem Wasser oder ausgewogenem Hundefutter.",
         "es": "Nunca cruda. Ofrécela solo como premio ocasional, nunca en lugar de agua fresca ni de una comida equilibrada para perros.",
-        "pt": "Nunca cru. Dá-o só de vez em quando, como guloseima, e nunca em vez de água fresca ou de uma alimentação equilibrada para cães."
+        "pt": "Nunca cru. Dá-o só de vez em quando, como guloseima, e nunca em vez de água fresca ou de uma alimentação equilibrada para cães.",
+        "nl": "Nooit rauw. Geef het alleen af en toe als beloning, nooit in plaats van vers water of een uitgebalanceerd hondenvoer."
       },
       "child": {
         "en": "Goat's milk is only a rare little treat for dogs. Fresh water is the best drink for them every day!",
@@ -50258,7 +50432,8 @@
         "nb": "Geitemelk er bare en sjelden liten godbit for hunder. Friskt vann er den beste drikken for dem hver dag!",
         "de": "Ziegenmilch ist für Hunde nur ein seltenes kleines Leckerli. Frisches Wasser ist jeden Tag das beste Getränk für sie!",
         "es": "La leche de cabra es solo un premio pequeño y poco frecuente para los perros. ¡El agua fresca es la mejor bebida para ellos cada día!",
-        "pt": "O leite de cabra é um petisco que só se dá muito de vez em quando. Para os cães, a melhor bebida de todos os dias é água fresca!"
+        "pt": "O leite de cabra é um petisco que só se dá muito de vez em quando. Para os cães, a melhor bebida de todos os dias é água fresca!",
+        "nl": "Geitenmelk is voor honden maar een klein snoepje voor een keertje. Vers water is elke dag het beste drankje voor ze!"
       },
       "faq": [
         {
@@ -50271,7 +50446,8 @@
             "nb": "Er geitemelk lettere for hunder å fordøye enn kumelk?",
             "de": "Verträgt ein Hund Ziegenmilch leichter als Kuhmilch?",
             "es": "¿Es la leche de cabra más fácil de digerir para los perros que la de vaca?",
-            "pt": "O leite de cabra é mais fácil de digerir pelos cães do que o de vaca?"
+            "pt": "O leite de cabra é mais fácil de digerir pelos cães do que o de vaca?",
+            "nl": "Is geitenmelk voor honden beter verteerbaar dan koemelk?"
           },
           "a": {
             "en": "Not really. Goat's milk has almost the same amount of lactose as cow's milk. Its smaller fat globules are often mentioned, but homogenisation also makes the fat globules in cow's milk smaller.",
@@ -50282,7 +50458,8 @@
             "nb": "Ikke egentlig. Geitemelk har nesten like mye laktose som kumelk. De mindre fettkulene nevnes ofte, men homogenisering gjør også fettkulene i kumelk mindre.",
             "de": "Nicht wirklich. Ziegenmilch enthält fast genauso viel Laktose wie Kuhmilch. Oft heißt es, ihre Fettkügelchen seien kleiner, doch auch die Homogenisierung macht die Fettkügelchen der Kuhmilch kleiner.",
             "es": "No mucho. La leche de cabra tiene casi la misma cantidad de lactosa que la de vaca. Se suele decir que sus glóbulos de grasa son más pequeños, pero la homogeneización también reduce el tamaño de los de la leche de vaca.",
-            "pt": "Não propriamente. O leite de cabra tem quase tanta lactose como o de vaca. Diz-se muitas vezes que tem glóbulos de gordura mais pequenos, mas a homogeneização também torna mais pequenos os do leite de vaca."
+            "pt": "Não propriamente. O leite de cabra tem quase tanta lactose como o de vaca. Diz-se muitas vezes que tem glóbulos de gordura mais pequenos, mas a homogeneização também torna mais pequenos os do leite de vaca.",
+            "nl": "Niet echt. Geitenmelk bevat bijna evenveel lactose als koemelk. Vaak worden de kleinere vetbolletjes genoemd, maar ook door homogenisatie worden de vetbolletjes in koemelk kleiner."
           }
         },
         {
@@ -50295,7 +50472,8 @@
             "nb": "Kan geitemelk erstatte hundens behandling?",
             "de": "Kann Ziegenmilch die Behandlung meines Hundes ersetzen?",
             "es": "¿Puede la leche de cabra sustituir el tratamiento de mi perro?",
-            "pt": "O leite de cabra pode substituir o tratamento do meu cão?"
+            "pt": "O leite de cabra pode substituir o tratamento do meu cão?",
+            "nl": "Kan geitenmelk de behandeling van mijn hond vervangen?"
           },
           "a": {
             "en": "No. A vet at the Drake Center warns that it can be dangerous if goat's milk is used in place of known appropriate treatments. Discuss it with your vet first.",
@@ -50306,7 +50484,8 @@
             "nb": "Nei. En dyrlege ved Drake Center advarer om at det kan være farlig hvis geitemelk brukes i stedet for anerkjent, egnet behandling. Snakk med dyrlegen først.",
             "de": "Nein. Eine Tierärztin oder ein Tierarzt des Drake Center warnt, es könne gefährlich sein, wenn Ziegenmilch anstelle anerkannter, geeigneter Behandlungen eingesetzt wird. Besprechen Sie es zuerst mit Ihrem Tierarzt.",
             "es": "No. Una veterinaria del Drake Center advierte de que puede ser peligroso usar leche de cabra en lugar de tratamientos adecuados y reconocidos. Habla primero con tu veterinario.",
-            "pt": "Não. Um veterinário do Drake Center avisa que usar leite de cabra em vez dos tratamentos adequados já conhecidos pode ser perigoso. Fala primeiro com o teu veterinário."
+            "pt": "Não. Um veterinário do Drake Center avisa que usar leite de cabra em vez dos tratamentos adequados já conhecidos pode ser perigoso. Fala primeiro com o teu veterinário.",
+            "nl": "Nee. Een dierenarts van het Drake Center waarschuwt dat het gevaarlijk kan zijn om geitenmelk te gebruiken in plaats van bekende, geschikte behandelingen. Bespreek het eerst met je dierenarts."
           }
         }
       ],
@@ -53901,7 +54080,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Fruit juice",
@@ -53912,7 +54092,8 @@
         "nb": "Fruktjuice",
         "de": "Fruchtsaft",
         "es": "Zumo de fruta",
-        "pt": "Sumo de fruta"
+        "pt": "Sumo de fruta",
+        "nl": "Vruchtensap"
       },
       "question": {
         "en": "Can dogs drink fruit juice?",
@@ -53923,7 +54104,8 @@
         "nb": "Kan hunder drikke fruktjuice?",
         "de": "Dürfen Hunde Fruchtsaft trinken?",
         "es": "¿Pueden los perros beber zumo de fruta?",
-        "pt": "Os cães podem beber sumo de fruta?"
+        "pt": "Os cães podem beber sumo de fruta?",
+        "nl": "Mogen honden vruchtensap drinken?"
       },
       "url_slug": {
         "en": "juice",
@@ -53934,7 +54116,8 @@
         "nb": "fruktjuice",
         "de": "fruchtsaft",
         "es": "zumo-de-fruta",
-        "pt": "sumo-de-fruta"
+        "pt": "sumo-de-fruta",
+        "nl": "vruchtensap"
       },
       "answer": {
         "en": "It's best not to. Whole fruit is a better snack than juice. Orange juice, for example, isn't toxic but has concentrated sugars and none of the fruit's fibre. Lemon juice is high in citric acid, which is toxic to dogs, and sugar-free drinks may contain xylitol.",
@@ -53945,7 +54128,8 @@
         "nb": "Helst ikke. Hel frukt er en bedre godbit enn juice. Appelsinjuice er for eksempel ikke giftig, men inneholder konsentrert sukker og mangler fiberen i frukten. Sitronjuice inneholder mye sitronsyre, som er giftig for hunder, og sukkerfrie drikker kan inneholde xylitol.",
         "de": "Besser nicht. Als Snack ist frisches Obst besser geeignet als Saft. Orangensaft zum Beispiel ist nicht giftig, enthält aber konzentrierten Zucker und nicht die Ballaststoffe der Frucht. Zitronensaft enthält viel Zitronensäure, die für Hunde giftig ist, und zuckerfreie Getränke können Xylit enthalten.",
         "es": "Es mejor no dárselo. La fruta entera es mejor premio que el zumo. El zumo de naranja, por ejemplo, no es tóxico, pero tiene azúcares concentrados y no aporta la fibra de la fruta. El zumo de limón tiene mucho ácido cítrico, que es tóxico para los perros, y las bebidas sin azúcar pueden contener xilitol.",
-        "pt": "É melhor não. A fruta inteira é mais indicada do que o sumo. O sumo de laranja, por exemplo, não é tóxico, mas tem açúcares concentrados e perde a fibra da fruta. O sumo de limão tem muito ácido cítrico, que é tóxico para os cães, e as bebidas sem açúcar podem conter xilitol."
+        "pt": "É melhor não. A fruta inteira é mais indicada do que o sumo. O sumo de laranja, por exemplo, não é tóxico, mas tem açúcares concentrados e perde a fibra da fruta. O sumo de limão tem muito ácido cítrico, que é tóxico para os cães, e as bebidas sem açúcar podem conter xilitol.",
+        "nl": "Liever niet. Heel fruit is een beter tussendoortje dan sap. Sinaasappelsap is bijvoorbeeld niet giftig, maar bevat geconcentreerde suikers en niet de vezels van het fruit. Citroensap bevat veel citroenzuur, dat giftig is voor honden, en suikervrije dranken kunnen xylitol bevatten."
       },
       "why": {
         "en": "Juice contains concentrated natural sugars and lacks the fibre of whole fruit; because it is higher in sugar and easy to drink in large amounts, it may increase the risk of digestive upset. Fruit juice concentrates are high in fructose, which may increase the risk of obesity. Lemon juice is a concentrated form of the fruit with high amounts of citric acid, which is toxic to dogs. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -53956,7 +54140,8 @@
         "nb": "Juice inneholder konsentrert naturlig sukker og mangler fiberen i hel frukt; fordi den har mer sukker og er lett å drikke mye av, kan den øke risikoen for fordøyelsesplager. Fruktjuicekonsentrater har mye fruktose, noe som kan øke risikoen for overvekt. Sitronjuice er en konsentrert form av frukten med mye sitronsyre, som er giftig for hunder. Mange sukkerfrie drikker inneholder xylitol, som er svært giftig for hunder.",
         "de": "Saft enthält konzentrierten natürlichen Zucker, und ihm fehlen die Ballaststoffe der ganzen Frucht. Weil er so zuckerreich ist und sich leicht in großen Mengen trinken lässt, kann er das Risiko für Verdauungsbeschwerden erhöhen. Fruchtsaftkonzentrate enthalten viel Fruktose, die das Risiko für Übergewicht erhöhen kann. Zitronensaft ist die konzentrierte Form der Frucht und enthält viel Zitronensäure, die für Hunde giftig ist. Viele zuckerfreie Getränke enthalten Xylit, das für Hunde hochgiftig ist.",
         "es": "El zumo contiene azúcares naturales concentrados y no tiene la fibra de la fruta entera; como lleva más azúcar y es fácil beber mucho, puede aumentar el riesgo de molestias digestivas. Los zumos concentrados de fruta son ricos en fructosa, lo que puede aumentar el riesgo de obesidad. El zumo de limón es una versión concentrada de la fruta, con mucho ácido cítrico, que es tóxico para los perros. Muchas bebidas sin azúcar contienen xilitol, que es muy tóxico para los perros.",
-        "pt": "O sumo tem açúcares naturais concentrados e perde a fibra da fruta inteira; como tem mais açúcar e se bebe com facilidade em grandes quantidades, pode aumentar o risco de mal-estar digestivo. Os concentrados de sumo de fruta são ricos em frutose, o que pode aumentar o risco de obesidade. O sumo de limão é a fruta em forma concentrada, com muito ácido cítrico, que é tóxico para os cães. Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães."
+        "pt": "O sumo tem açúcares naturais concentrados e perde a fibra da fruta inteira; como tem mais açúcar e se bebe com facilidade em grandes quantidades, pode aumentar o risco de mal-estar digestivo. Os concentrados de sumo de fruta são ricos em frutose, o que pode aumentar o risco de obesidade. O sumo de limão é a fruta em forma concentrada, com muito ácido cítrico, que é tóxico para os cães. Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães.",
+        "nl": "Sap bevat geconcentreerde natuurlijke suikers en mist de vezels van heel fruit. Omdat er meer suiker in zit en je het makkelijk in grote hoeveelheden drinkt, kan het de kans op darmklachten vergroten. Geconcentreerd vruchtensap bevat veel fructose, wat de kans op obesitas kan vergroten. Citroensap is een geconcentreerde vorm van de vrucht met veel citroenzuur, dat giftig is voor honden. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden."
       },
       "signs": {
         "en": [
@@ -53985,6 +54170,9 @@
         ],
         "pt": [
           "Mal-estar digestivo"
+        ],
+        "nl": [
+          "Darmklachten"
         ]
       },
       "what_to_do": {
@@ -53996,7 +54184,8 @@
         "nb": "Gi friskt vann i stedet, og følg med på om hunden får tegn på fordøyelsesplager. Hvis drikken var sukkerfri eller kan inneholde xylitol, kan du lese siden vår om xylitol med en gang. Hvis hunden fikk druejuice, kan du lese siden vår om druer.",
         "de": "Bieten Sie stattdessen frisches Wasser an und achten Sie darauf, ob Ihr Hund Verdauungsbeschwerden bekommt. War das Getränk zuckerfrei oder könnte es Xylit enthalten, lesen Sie sofort unsere Seite zu Xylit. Hat Ihr Hund Traubensaft getrunken, lesen Sie unsere Seite zu Trauben.",
         "es": "Ofrécele agua fresca y vigila si aparecen signos de molestias digestivas. Si la bebida era sin azúcar o puede contener xilitol, consulta enseguida nuestra página sobre el xilitol. Si tu perro ha tomado zumo de uva, consulta nuestra página sobre las uvas.",
-        "pt": "Dá-lhe antes água fresca e observa se aparecem sinais de mal-estar digestivo. Se a bebida era sem açúcar ou pode conter xilitol, vai imediatamente à nossa página do xilitol. Se o teu cão bebeu sumo de uva, vai à nossa página das uvas."
+        "pt": "Dá-lhe antes água fresca e observa se aparecem sinais de mal-estar digestivo. Se a bebida era sem açúcar ou pode conter xilitol, vai imediatamente à nossa página do xilitol. Se o teu cão bebeu sumo de uva, vai à nossa página das uvas.",
+        "nl": "Geef in plaats daarvan vers water en let op verschijnselen van darmklachten bij je hond. Was de drank suikervrij of bevat die mogelijk xylitol, bekijk dan meteen onze pagina over xylitol. Heeft je hond druivensap gehad, bekijk dan onze pagina over druiven."
       },
       "serving": null,
       "child": {
@@ -54008,7 +54197,8 @@
         "nb": "Juice er for søtt for hunder. En liten bit frisk frukt som hunder tåler, eller en skål friskt vann er en mye bedre godbit!",
         "de": "Saft ist für Hunde viel zu süß. Ein kleines Stück frisches Obst, das Hunde vertragen, oder ein Napf mit frischem Wasser ist ein viel besseres Leckerli!",
         "es": "El zumo tiene demasiado azúcar para los perros. ¡Es mucho mejor un trocito de fruta fresca apta para perros o un cuenco de agua fresca!",
-        "pt": "O sumo tem açúcar a mais para os cães. Um pedacinho de fruta fresca que seja segura para cães ou uma tigela de água fresca é um petisco bem melhor!"
+        "pt": "O sumo tem açúcar a mais para os cães. Um pedacinho de fruta fresca que seja segura para cães ou uma tigela de água fresca é um petisco bem melhor!",
+        "nl": "Sap is te zoet voor honden. Een klein stukje vers fruit dat veilig is voor honden of een bak vers water is veel beter!"
       },
       "faq": [
         {
@@ -54021,7 +54211,8 @@
             "nb": "Er appelsinjuice giftig for hunder?",
             "de": "Ist Orangensaft für Hunde giftig?",
             "es": "¿Es tóxico el zumo de naranja para los perros?",
-            "pt": "O sumo de laranja é tóxico para os cães?"
+            "pt": "O sumo de laranja é tóxico para os cães?",
+            "nl": "Is sinaasappelsap giftig voor honden?"
           },
           "a": {
             "en": "No, but it is not recommended because it contains concentrated sugars and lacks the fibre found in whole fruit. If you want to share the taste of oranges, offer small pieces of fresh fruit instead.",
@@ -54032,7 +54223,8 @@
             "nb": "Nei, men det anbefales ikke, fordi den inneholder konsentrert sukker og mangler fiberen i hel frukt. Hvis du vil la hunden smake på appelsin, kan du gi små biter frisk frukt i stedet.",
             "de": "Nein, empfehlenswert ist er aber nicht, weil er konzentrierten Zucker enthält und ihm die Ballaststoffe der ganzen Frucht fehlen. Wenn Ihr Hund den Geschmack von Orangen probieren soll, geben Sie ihm lieber ein paar kleine Stücke frisches Obst.",
             "es": "No, pero no se recomienda: tiene azúcares concentrados y no aporta la fibra de la fruta entera. Si quieres que pruebe el sabor de la naranja, ofrécele mejor trocitos de fruta fresca.",
-            "pt": "Não, mas não é recomendado, porque tem açúcares concentrados e perde a fibra da fruta inteira. Se quiseres que o teu cão experimente o sabor da laranja, dá-lhe antes uns pedacinhos de fruta fresca."
+            "pt": "Não, mas não é recomendado, porque tem açúcares concentrados e perde a fibra da fruta inteira. Se quiseres que o teu cão experimente o sabor da laranja, dá-lhe antes uns pedacinhos de fruta fresca.",
+            "nl": "Nee, maar het wordt niet aanbevolen omdat het geconcentreerde suikers bevat en de vezels van heel fruit mist. Wil je je hond laten proeven van sinaasappel, geef dan kleine stukjes vers fruit."
           }
         },
         {
@@ -54045,7 +54237,8 @@
             "nb": "Hva med druejuice?",
             "de": "Und Traubensaft?",
             "es": "¿Y el zumo de uva?",
-            "pt": "E o sumo de uva?"
+            "pt": "E o sumo de uva?",
+            "nl": "Hoe zit het met druivensap?"
           },
           "a": {
             "en": "Sources disagree. VCA says grape juice does not appear to cause the poisoning seen with grapes and raisins, while FirstVet says grape juice should never be given to dogs. We follow the stricter advice: don't give it.",
@@ -54056,7 +54249,8 @@
             "nb": "Kildene er uenige. VCA sier at druejuice ikke ser ut til å gi den forgiftningen man ser ved druer og rosiner, mens FirstVet sier at druejuice aldri bør gis til hunder. Vi følger det strengeste rådet: Ikke gi den.",
             "de": "Die Quellen sind sich nicht einig. Laut VCA scheint Traubensaft nicht die Vergiftung auszulösen, die man von Trauben und Rosinen kennt; FirstVet dagegen sagt, Hunde dürften niemals Traubensaft bekommen. Wir folgen dem strengeren Rat: Geben Sie ihn nicht.",
             "es": "Las fuentes no coinciden. VCA dice que el zumo de uva no parece causar la intoxicación que provocan las uvas y las pasas, mientras que FirstVet dice que nunca se debe dar zumo de uva a los perros. Seguimos el consejo más estricto: no se lo des.",
-            "pt": "As fontes não concordam. A VCA diz que o sumo de uva não parece causar a intoxicação que se vê com as uvas e as passas, enquanto a FirstVet diz que nunca se deve dar sumo de uva aos cães. Seguimos o conselho mais prudente: não dês."
+            "pt": "As fontes não concordam. A VCA diz que o sumo de uva não parece causar a intoxicação que se vê com as uvas e as passas, enquanto a FirstVet diz que nunca se deve dar sumo de uva aos cães. Seguimos o conselho mais prudente: não dês.",
+            "nl": "De bronnen spreken elkaar tegen. VCA zegt dat druivensap niet lijkt te leiden tot de vergiftiging die je bij druiven en rozijnen ziet, terwijl FirstVet zegt dat je honden nooit druivensap moet geven. Wij volgen het strengere advies: geef het niet."
           }
         }
       ],
@@ -54431,7 +54625,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Kefir",
@@ -54442,7 +54637,8 @@
         "nb": "Kefir",
         "de": "Kefir",
         "es": "Kéfir",
-        "pt": "Quefir"
+        "pt": "Quefir",
+        "nl": "Kefir"
       },
       "question": {
         "en": "Can dogs drink kefir?",
@@ -54453,7 +54649,8 @@
         "nb": "Kan hunder drikke kefir?",
         "de": "Dürfen Hunde Kefir trinken?",
         "es": "¿Pueden los perros beber kéfir?",
-        "pt": "Os cães podem beber quefir?"
+        "pt": "Os cães podem beber quefir?",
+        "nl": "Mogen honden kefir drinken?"
       },
       "url_slug": {
         "en": "kefir",
@@ -54464,7 +54661,8 @@
         "nb": "kefir",
         "de": "kefir",
         "es": "kefir",
-        "pt": "quefir"
+        "pt": "quefir",
+        "nl": "kefir"
       },
       "answer": {
         "en": "Only a little, and ask your vet first. The AKC lists yogurt or kefir with live cultures among the foods a vet may suggest to boost beneficial bacteria, but many dogs have trouble digesting lactose. Never give kefir with xylitol or other artificial sweeteners.",
@@ -54475,7 +54673,8 @@
         "nb": "Bare litt, og spør dyrlegen først. AKC nevner yoghurt eller kefir med levende kulturer blant matvarene en dyrlege kan foreslå for å styrke de gode bakteriene, men mange hunder har problemer med å fordøye laktose. Gi aldri kefir med xylitol eller andre kunstige søtstoffer.",
         "de": "Nur ein wenig, und fragen Sie vorher Ihren Tierarzt. Laut AKC zählen Joghurt oder Kefir mit lebenden Kulturen zu den Lebensmitteln, die ein Tierarzt empfehlen kann, um nützliche Bakterien zu fördern, aber viele Hunde vertragen Laktose schlecht. Geben Sie niemals Kefir mit Xylit oder anderen künstlichen Süßstoffen.",
         "es": "Solo un poco, y pregunta antes a tu veterinario. El AKC incluye el yogur o el kéfir con cultivos vivos entre los alimentos que un veterinario puede sugerir para reforzar las bacterias beneficiosas, pero a muchos perros les cuesta digerir la lactosa. No le des nunca kéfir con xilitol u otros edulcorantes artificiales.",
-        "pt": "Só um pouco, e pergunta primeiro ao teu veterinário. A AKC inclui o iogurte ou o quefir com culturas vivas entre os alimentos que o veterinário pode sugerir para aumentar as bactérias benéficas, mas muitos cães digerem mal a lactose. Nunca dês quefir com xilitol nem com outros adoçantes artificiais."
+        "pt": "Só um pouco, e pergunta primeiro ao teu veterinário. A AKC inclui o iogurte ou o quefir com culturas vivas entre os alimentos que o veterinário pode sugerir para aumentar as bactérias benéficas, mas muitos cães digerem mal a lactose. Nunca dês quefir com xilitol nem com outros adoçantes artificiais.",
+        "nl": "Alleen een klein beetje, en vraag het eerst aan je dierenarts. De AKC noemt yoghurt of kefir met levende culturen als voeding die een dierenarts kan voorstellen om de nuttige bacteriën te ondersteunen, maar veel honden kunnen lactose slecht verteren. Geef nooit kefir met xylitol of andere kunstmatige zoetstoffen."
       },
       "why": {
         "en": "Many dogs have trouble digesting foods that contain lactose; a dog's body isn't designed to digest lactose after puppyhood, so it can cause gas and other tummy trouble. Some dogs can also develop an allergy to milk protein. Some artificial sweeteners, such as xylitol, are toxic to dogs, so kefir with artificial sweeteners is a risk.",
@@ -54486,7 +54685,8 @@
         "nb": "Mange hunder har problemer med å fordøye mat som inneholder laktose; hundens kropp er ikke laget for å fordøye laktose etter valpetiden, så det kan gi luft i magen og andre magebesvær. Noen hunder kan også utvikle allergi mot melkeprotein. Noen kunstige søtstoffer, som xylitol, er giftige for hunder, så kefir med kunstige søtstoffer innebærer en risiko.",
         "de": "Viele Hunde vertragen Lebensmittel mit Laktose schlecht: Nach der Welpenzeit ist der Körper eines Hundes nicht darauf ausgelegt, Laktose zu verdauen, deshalb kann sie Blähungen und andere Bauchbeschwerden verursachen. Manche Hunde können außerdem eine Allergie gegen Milcheiweiß entwickeln. Einige künstliche Süßstoffe wie Xylit sind für Hunde giftig – Kefir mit künstlichen Süßstoffen ist daher ein Risiko.",
         "es": "A muchos perros les cuesta digerir la lactosa: después de la etapa de cachorro, su cuerpo ya no está preparado para ello, y los lácteos pueden causar gases y otras molestias de barriga. Algunos perros también pueden desarrollar alergia a la proteína de la leche. Algunos edulcorantes artificiales, como el xilitol, son tóxicos para los perros, así que el kéfir con edulcorantes artificiales supone un riesgo.",
-        "pt": "Muitos cães digerem mal os alimentos com lactose: depois da fase de cachorro, o organismo do cão deixa de estar preparado para a digerir, por isso pode causar gases e outros problemas de barriga. Alguns cães também podem desenvolver alergia à proteína do leite. Alguns adoçantes artificiais, como o xilitol, são tóxicos para os cães, por isso o quefir com adoçantes artificiais é um risco."
+        "pt": "Muitos cães digerem mal os alimentos com lactose: depois da fase de cachorro, o organismo do cão deixa de estar preparado para a digerir, por isso pode causar gases e outros problemas de barriga. Alguns cães também podem desenvolver alergia à proteína do leite. Alguns adoçantes artificiais, como o xilitol, são tóxicos para os cães, por isso o quefir com adoçantes artificiais é um risco.",
+        "nl": "Veel honden kunnen voeding met lactose slecht verteren. Na de pupperiode is het lichaam van een hond er niet op ingericht om lactose te verteren, dus het kan winderigheid en andere buikklachten veroorzaken. Sommige honden kunnen ook een allergie voor melkeiwit ontwikkelen. Sommige kunstmatige zoetstoffen, zoals xylitol, zijn giftig voor honden, dus kefir met kunstmatige zoetstoffen is een risico."
       },
       "signs": {
         "en": [
@@ -54551,6 +54751,13 @@
           "Vómitos",
           "Dor de barriga",
           "Diarreia"
+        ],
+        "nl": [
+          "Zachte ontlasting",
+          "Winderigheid",
+          "Braken",
+          "Buikpijn",
+          "Diarree"
         ]
       },
       "what_to_do": {
@@ -54562,7 +54769,8 @@
         "nb": "Som med yoghurt gir du først en liten mengde og ser hvordan hunden reagerer. Hvis hunden får løs avføring, luft i magen, oppkast eller diaré, slutter du å gi kefir. Spør dyrlegen om probiotisk mat passer for hunden din.",
         "de": "Wie bei Joghurt gilt: Geben Sie zuerst eine kleine Menge und beobachten Sie, wie Ihr Hund reagiert. Bekommt Ihr Hund weichen Kot, Blähungen, Erbrechen oder Durchfall, setzen Sie den Kefir ab. Fragen Sie Ihren Tierarzt, ob probiotische Lebensmittel für Ihren Hund geeignet sind.",
         "es": "Como con el yogur, ofrece primero una cantidad pequeña y mira cómo reacciona tu perro. Si tiene heces blandas, gases, vómitos o diarrea, deja de darle kéfir. Pregunta a tu veterinario si los alimentos probióticos son adecuados para tu perro.",
-        "pt": "Tal como com o iogurte, dá primeiro uma pequena quantidade e observa como o teu cão reage. Se ficar com fezes moles, gases, vómitos ou diarreia, deixa de lhe dar quefir. Pergunta ao teu veterinário se os alimentos probióticos são adequados para o teu cão."
+        "pt": "Tal como com o iogurte, dá primeiro uma pequena quantidade e observa como o teu cão reage. Se ficar com fezes moles, gases, vómitos ou diarreia, deixa de lhe dar quefir. Pergunta ao teu veterinário se os alimentos probióticos são adequados para o teu cão.",
+        "nl": "Geef net als bij yoghurt eerst een kleine hoeveelheid en kijk hoe je hond reageert. Krijgt je hond zachte ontlasting, winderigheid, braken of diarree, stop dan met de kefir. Vraag je dierenarts of probiotische voeding geschikt is voor je hond."
       },
       "serving": {
         "en": "Choose plain kefir and read the label carefully to avoid all artificial sweeteners, especially xylitol. Start with a small amount.",
@@ -54573,7 +54781,8 @@
         "nb": "Velg naturell kefir og les etiketten nøye for å unngå alle kunstige søtstoffer, særlig xylitol. Begynn med en liten mengde.",
         "de": "Wählen Sie Naturkefir und lesen Sie das Etikett genau, damit kein künstlicher Süßstoff darin ist, besonders kein Xylit. Beginnen Sie mit einer kleinen Menge.",
         "es": "Elige kéfir natural y lee bien la etiqueta para evitar todos los edulcorantes artificiales, sobre todo el xilitol. Empieza con una cantidad pequeña.",
-        "pt": "Escolhe quefir natural e lê bem o rótulo para evitar todos os adoçantes artificiais, sobretudo o xilitol. Começa com uma pequena quantidade."
+        "pt": "Escolhe quefir natural e lê bem o rótulo para evitar todos os adoçantes artificiais, sobretudo o xilitol. Começa com uma pequena quantidade.",
+        "nl": "Kies naturel kefir en lees het etiket goed, zodat er geen enkele kunstmatige zoetstof in zit, vooral geen xylitol. Begin met een kleine hoeveelheid."
       },
       "child": {
         "en": "Some dogs can have a tiny taste of plain kefir, but many get a sore tummy from milk drinks. Fresh water is always best!",
@@ -54584,7 +54793,8 @@
         "nb": "Noen hunder kan få en bitteliten smak av naturell kefir, men mange får vondt i magen av melkedrikker. Friskt vann er alltid best!",
         "de": "Manche Hunde dürfen ein winziges bisschen Naturkefir probieren, aber viele bekommen von Milchgetränken Bauchweh. Frisches Wasser ist immer am besten!",
         "es": "Algunos perros pueden probar un poquito de kéfir natural, pero a muchos les duele la barriga con las bebidas lácteas. ¡El agua fresca siempre es lo mejor!",
-        "pt": "Alguns cães podem provar um bocadinho de quefir natural, mas muitos ficam com dor de barriga com bebidas à base de leite. A água fresca é sempre a melhor escolha!"
+        "pt": "Alguns cães podem provar um bocadinho de quefir natural, mas muitos ficam com dor de barriga com bebidas à base de leite. A água fresca é sempre a melhor escolha!",
+        "nl": "Sommige honden mogen een klein beetje naturel kefir proeven, maar veel honden krijgen buikpijn van melkdranken. Vers water is altijd het beste!"
       },
       "faq": [
         {
@@ -54597,7 +54807,8 @@
             "nb": "Er kefir et godt probiotikum for hunder?",
             "de": "Ist Kefir ein gutes Probiotikum für Hunde?",
             "es": "¿Es el kéfir un buen probiótico para los perros?",
-            "pt": "O quefir é um bom probiótico para os cães?"
+            "pt": "O quefir é um bom probiótico para os cães?",
+            "nl": "Is kefir een goed probioticum voor honden?"
           },
           "a": {
             "en": "The AKC lists yogurt or kefir with live cultures among the options a vet may suggest to boost beneficial bacteria. Ask your vet before adding it to your dog's diet.",
@@ -54608,7 +54819,8 @@
             "nb": "AKC nevner yoghurt eller kefir med levende kulturer blant alternativene en dyrlege kan foreslå for å styrke de gode bakteriene. Spør dyrlegen før du legger det til hundens kosthold.",
             "de": "Laut AKC zählen Joghurt oder Kefir mit lebenden Kulturen zu den Möglichkeiten, die ein Tierarzt vorschlagen kann, um nützliche Bakterien zu fördern. Fragen Sie Ihren Tierarzt, bevor Sie Kefir in den Speiseplan Ihres Hundes aufnehmen.",
             "es": "El AKC incluye el yogur o el kéfir con cultivos vivos entre las opciones que un veterinario puede sugerir para reforzar las bacterias beneficiosas. Pregunta a tu veterinario antes de añadirlo a la dieta de tu perro.",
-            "pt": "A AKC inclui o iogurte ou o quefir com culturas vivas entre as opções que um veterinário pode sugerir para aumentar as bactérias benéficas. Pergunta ao teu veterinário antes de o incluíres na alimentação do teu cão."
+            "pt": "A AKC inclui o iogurte ou o quefir com culturas vivas entre as opções que um veterinário pode sugerir para aumentar as bactérias benéficas. Pergunta ao teu veterinário antes de o incluíres na alimentação do teu cão.",
+            "nl": "De AKC noemt yoghurt of kefir met levende culturen als een van de opties die een dierenarts kan voorstellen om nuttige bacteriën te ondersteunen. Vraag het eerst aan je dierenarts voordat je het aan de voeding van je hond toevoegt."
           }
         }
       ],
@@ -72116,7 +72328,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Soda (soft drinks)",
@@ -72127,7 +72340,8 @@
         "nb": "Brus (leskedrikker)",
         "de": "Softdrinks",
         "es": "Refrescos",
-        "pt": "Refrigerantes"
+        "pt": "Refrigerantes",
+        "nl": "Frisdrank"
       },
       "question": {
         "en": "Can dogs drink soda?",
@@ -72138,7 +72352,8 @@
         "nb": "Kan hunder drikke brus?",
         "de": "Dürfen Hunde Softdrinks trinken?",
         "es": "¿Pueden los perros beber refrescos?",
-        "pt": "Os cães podem beber refrigerantes?"
+        "pt": "Os cães podem beber refrigerantes?",
+        "nl": "Mogen honden frisdrank drinken?"
       },
       "url_slug": {
         "en": "soda",
@@ -72149,7 +72364,8 @@
         "nb": "brus",
         "de": "softdrinks",
         "es": "refrescos",
-        "pt": "refrigerantes"
+        "pt": "refrigerantes",
+        "nl": "frisdrank"
       },
       "answer": {
         "en": "No. Dogs should not drink soda. It is high in sugar and caffeine, has no nutritional value for dogs, and the caffeine can cause signs of poisoning. One or two licks are unlikely to cause poisoning, but keep soda out of your dog's reach.",
@@ -72160,7 +72376,8 @@
         "nb": "Nei. Hunder bør ikke drikke brus. Den inneholder mye sukker og koffein, har ingen næringsverdi for hunder, og koffeinet kan gi tegn på forgiftning. En slikk eller to gir neppe forgiftning, men hold brus utenfor hundens rekkevidde.",
         "de": "Nein. Hunde sollten keine Softdrinks trinken. Sie enthalten viel Zucker und Koffein und haben für Hunde keinen Nährwert; das Koffein kann außerdem Vergiftungsanzeichen auslösen. Ein- oder zweimal daran zu lecken verursacht wahrscheinlich keine Vergiftung, trotzdem sollten Softdrinks für Ihren Hund unerreichbar bleiben.",
         "es": "No. Los perros no deben beber refrescos: tienen mucho azúcar y cafeína, no les aportan ningún valor nutricional y la cafeína puede causar signos de intoxicación. Es poco probable que uno o dos lametones causen una intoxicación, pero mantén los refrescos fuera del alcance de tu perro.",
-        "pt": "Não. Os cães não devem beber refrigerantes: têm muito açúcar e cafeína, não trazem nenhum valor nutricional e a cafeína pode causar sinais de intoxicação. Uma ou duas lambidelas dificilmente intoxicam, mas mantém os refrigerantes fora do alcance do teu cão."
+        "pt": "Não. Os cães não devem beber refrigerantes: têm muito açúcar e cafeína, não trazem nenhum valor nutricional e a cafeína pode causar sinais de intoxicação. Uma ou duas lambidelas dificilmente intoxicam, mas mantém os refrigerantes fora do alcance do teu cão.",
+        "nl": "Nee. Honden mogen geen frisdrank drinken. Er zit veel suiker en cafeïne in, het heeft geen voedingswaarde voor honden en de cafeïne kan verschijnselen van vergiftiging veroorzaken. Een of twee likjes veroorzaken waarschijnlijk geen vergiftiging, maar houd frisdrank buiten het bereik van je hond."
       },
       "why": {
         "en": "Pet Poison Helpline explains that soda has high levels of sugar, caffeine and other ingredients that can harm dogs, and there is no reason for dogs to drink it. The caffeine in soda can lead to signs of toxicity, and how much a dog drinks determines how severe they are. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -72171,7 +72388,8 @@
         "nb": "Pet Poison Helpline forklarer at brus inneholder mye sukker, koffein og andre ingredienser som kan skade hunder, og at det ikke er noen grunn til at hunder skal drikke den. Koffeinet i brus kan gi tegn på giftvirkning, og hvor alvorlige de blir, avhenger av hvor mye hunden drikker. Mange sukkerfrie drikker inneholder xylitol, som er svært giftig for hunder.",
         "de": "Laut Pet Poison Helpline enthalten Softdrinks viel Zucker, Koffein und andere Inhaltsstoffe, die Hunden schaden können, und es gibt keinen Grund, sie Hunden zu geben. Das Koffein kann zu Vergiftungsanzeichen führen, und wie schwer diese ausfallen, hängt davon ab, wie viel der Hund getrunken hat. Viele zuckerfreie Getränke enthalten Xylit, das für Hunde hochgiftig ist.",
         "es": "Pet Poison Helpline explica que los refrescos llevan mucho azúcar, cafeína y otros ingredientes que pueden dañar a los perros, y no hay ningún motivo para que los beban. La cafeína de los refrescos puede provocar signos de toxicidad, y su gravedad depende de la cantidad que beba el perro. Muchas bebidas sin azúcar contienen xilitol, que es muy tóxico para los perros.",
-        "pt": "A Pet Poison Helpline explica que os refrigerantes têm muito açúcar, cafeína e outros ingredientes que podem fazer mal aos cães, e que não há qualquer razão para os cães os beberem. A cafeína dos refrigerantes pode causar sinais de toxicidade, e a gravidade depende da quantidade que o cão bebe. Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães."
+        "pt": "A Pet Poison Helpline explica que os refrigerantes têm muito açúcar, cafeína e outros ingredientes que podem fazer mal aos cães, e que não há qualquer razão para os cães os beberem. A cafeína dos refrigerantes pode causar sinais de toxicidade, e a gravidade depende da quantidade que o cão bebe. Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães.",
+        "nl": "Pet Poison Helpline legt uit dat frisdrank veel suiker, cafeïne en andere ingrediënten bevat die schadelijk kunnen zijn voor honden, en dat er geen enkele reden is om ze het te laten drinken. De cafeïne in frisdrank kan leiden tot verschijnselen van vergiftiging; hoe ernstig die zijn, hangt af van hoeveel de hond drinkt. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden."
       },
       "signs": {
         "en": [
@@ -72281,6 +72499,18 @@
           "Tremores",
           "Convulsões",
           "Colapso"
+        ],
+        "nl": [
+          "Hyperactiviteit",
+          "Onrust",
+          "Braken",
+          "Snelle hartslag",
+          "Hoge bloeddruk",
+          "Verhoogde lichaamstemperatuur",
+          "Onregelmatige hartslag",
+          "Trillen",
+          "Stuipen",
+          "Ineenzakken"
         ]
       },
       "what_to_do": {
@@ -72292,7 +72522,8 @@
         "nb": "Hvis hunden har drukket brus, må du følge med på om den får symptomer. Hvis den har drukket mye, kontakter du dyrlegen eller giftinformasjon for dyr med en gang, slik at hunden får riktig behandling. Hvis brusen var sukkerfri, kan du lese siden vår om xylitol.",
         "de": "Hat Ihr Hund etwas Softdrink getrunken, beobachten Sie, ob Symptome auftreten. Hat er eine große Menge getrunken, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, damit er die richtige Behandlung bekommt. War der Softdrink zuckerfrei, lesen Sie unsere Seite zu Xylit.",
         "es": "Si tu perro ha bebido refresco, vigila si aparecen síntomas. Si ha bebido mucho, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales para que tu perro reciba el tratamiento adecuado. Si el refresco era sin azúcar, consulta nuestra página sobre el xilitol.",
-        "pt": "Se o teu cão bebeu refrigerante, observa-o para ver se aparecem sinais. Se bebeu muito, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, para que o teu cão receba o tratamento certo. Se o refrigerante era sem açúcar, vai à nossa página do xilitol."
+        "pt": "Se o teu cão bebeu refrigerante, observa-o para ver se aparecem sinais. Se bebeu muito, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, para que o teu cão receba o tratamento certo. Se o refrigerante era sem açúcar, vai à nossa página do xilitol.",
+        "nl": "Heeft je hond frisdrank gedronken, let dan op verschijnselen. Heeft je hond veel gedronken, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, zodat je hond de juiste behandeling krijgt. Was de frisdrank suikervrij, bekijk dan onze pagina over xylitol."
       },
       "serving": null,
       "child": {
@@ -72304,7 +72535,8 @@
         "nb": "Brus er for mennesker, ikke for hunder. Hunder trenger bare friskt vann, så la bokser og kopper stå høyt oppe!",
         "de": "Sprudelgetränke sind für Menschen, nicht für Hunde. Hunde brauchen nur frisches Wasser – stell Dosen und Becher also ganz weit oben ab!",
         "es": "Las bebidas con burbujas son para las personas, no para los perros. ¡Los perros solo necesitan agua fresca, así que guarda las latas y los vasos en un sitio alto!",
-        "pt": "As bebidas com gás são para as pessoas, não para os cães. Os cães só precisam de água fresca, por isso guarda as latas e os copos num sítio alto!"
+        "pt": "As bebidas com gás são para as pessoas, não para os cães. Os cães só precisam de água fresca, por isso guarda as latas e os copos num sítio alto!",
+        "nl": "Drankjes met prik zijn voor mensen, niet voor honden. Honden hebben alleen vers water nodig, dus zet blikjes en bekers hoog neer!"
       },
       "faq": [
         {
@@ -72317,7 +72549,8 @@
             "nb": "Hunden min slikket i seg litt sølt brus. Er det et problem?",
             "de": "Mein Hund hat ein bisschen verschütteten Softdrink aufgeleckt. Ist das ein Problem?",
             "es": "Mi perro ha lamido un poco de refresco derramado. ¿Es un problema?",
-            "pt": "O meu cão lambeu um pouco de refrigerante entornado. É um problema?"
+            "pt": "O meu cão lambeu um pouco de refrigerante entornado. É um problema?",
+            "nl": "Mijn hond likte wat gemorste frisdrank op. Is dat een probleem?"
           },
           "a": {
             "en": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets. Keep an eye on your dog and keep soda stored away so it can't happen again.",
@@ -72328,7 +72561,8 @@
             "nb": "En slikk eller to kaffe, te eller brus gir neppe forgiftning hos de fleste dyr. Følg med på hunden, og oppbevar brusen utilgjengelig, så det ikke skjer igjen.",
             "de": "Ein- oder zweimal an Kaffee, Tee oder Softdrink zu lecken verursacht bei den meisten Tieren wahrscheinlich keine Vergiftung. Behalten Sie Ihren Hund im Auge und bewahren Sie Softdrinks künftig so auf, dass er nicht herankommt.",
             "es": "Es poco probable que uno o dos lametones de café, té o refresco causen una intoxicación en la mayoría de las mascotas. Vigila a tu perro y guarda los refrescos bien lejos para que no vuelva a pasar.",
-            "pt": "Uma ou duas lambidelas de café, chá ou refrigerante dificilmente intoxicam a maioria dos animais. Fica atento ao teu cão e guarda os refrigerantes onde ele não chegue, para que não volte a acontecer."
+            "pt": "Uma ou duas lambidelas de café, chá ou refrigerante dificilmente intoxicam a maioria dos animais. Fica atento ao teu cão e guarda os refrigerantes onde ele não chegue, para que não volte a acontecer.",
+            "nl": "Een of twee likjes koffie, thee of frisdrank veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging. Houd je hond in de gaten en berg frisdrank op, zodat het niet nog een keer kan gebeuren."
           }
         },
         {
@@ -72341,7 +72575,8 @@
             "nb": "Hva med lettbrus eller sukkerfri brus?",
             "de": "Und was ist mit Diät- oder zuckerfreien Softdrinks?",
             "es": "¿Y los refrescos light o sin azúcar?",
-            "pt": "E os refrigerantes light ou sem açúcar?"
+            "pt": "E os refrigerantes light ou sem açúcar?",
+            "nl": "Hoe zit het met light of suikervrije frisdrank?"
           },
           "a": {
             "en": "Many zero-sugar drinks contain xylitol, which is highly toxic to dogs, so keep diet drinks away from your dog too.",
@@ -72352,7 +72587,8 @@
             "nb": "Mange sukkerfrie drikker inneholder xylitol, som er svært giftig for hunder, så hold lettbrus unna hunden også.",
             "de": "Viele zuckerfreie Getränke enthalten Xylit, das für Hunde hochgiftig ist. Halten Sie deshalb auch Diätgetränke von Ihrem Hund fern.",
             "es": "Muchas bebidas sin azúcar contienen xilitol, que es muy tóxico para los perros, así que mantén también las bebidas light lejos de tu perro.",
-            "pt": "Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães, por isso mantém também as bebidas light longe do teu cão."
+            "pt": "Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães, por isso mantém também as bebidas light longe do teu cão.",
+            "nl": "Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden, dus houd ook light-dranken uit de buurt van je hond."
           }
         }
       ],
@@ -73031,7 +73267,8 @@
         "nb",
         "de",
         "es",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Sports drinks",
@@ -73042,7 +73279,8 @@
         "nb": "Sportsdrikker",
         "de": "Sportgetränke",
         "es": "Bebidas deportivas",
-        "pt": "Bebidas desportivas"
+        "pt": "Bebidas desportivas",
+        "nl": "Sportdranken"
       },
       "question": {
         "en": "Can dogs drink sports drinks?",
@@ -73053,7 +73291,8 @@
         "nb": "Kan hunder drikke sportsdrikker?",
         "de": "Dürfen Hunde Sportgetränke trinken?",
         "es": "¿Pueden los perros beber bebidas deportivas?",
-        "pt": "Os cães podem beber bebidas desportivas?"
+        "pt": "Os cães podem beber bebidas desportivas?",
+        "nl": "Mogen honden sportdranken drinken?"
       },
       "url_slug": {
         "en": "sports-drinks",
@@ -73064,7 +73303,8 @@
         "nb": "sportsdrikker",
         "de": "sportgetraenke",
         "es": "bebidas-deportivas",
-        "pt": "bebidas-desportivas"
+        "pt": "bebidas-desportivas",
+        "nl": "sportdranken"
       },
       "answer": {
         "en": "No, dogs should not drink sports drinks like Gatorade. A tiny sip isn't strictly toxic, but they contain too much sodium and sugar, which can upset a dog's stomach and worsen dehydration. Sugar-free versions may contain xylitol, which is highly toxic.",
@@ -73075,7 +73315,8 @@
         "nb": "Nei, hunder bør ikke drikke sportsdrikker som Gatorade. En liten slurk er ikke strengt tatt giftig, men de inneholder for mye natrium og sukker, som kan gi hunden urolig mage og forverre dehydrering. Sukkerfrie varianter kan inneholde xylitol, som er svært giftig.",
         "de": "Nein, Hunde sollten keine Sportgetränke wie Gatorade trinken. Ein winziger Schluck ist nicht unbedingt giftig, aber Sportgetränke enthalten zu viel Natrium und Zucker, was den Magen eines Hundes reizen und die Austrocknung verschlimmern kann. Zuckerfreie Varianten können Xylit enthalten, das hochgiftig ist.",
         "es": "No, los perros no deben beber bebidas deportivas como Gatorade. Un sorbito diminuto no es estrictamente tóxico, pero llevan demasiado sodio y azúcar, lo que puede sentar mal al estómago del perro y empeorar la deshidratación. Las versiones sin azúcar pueden contener xilitol, que es muy tóxico.",
-        "pt": "Não, os cães não devem beber bebidas desportivas como o Gatorade. Um golinho não é propriamente tóxico, mas têm demasiado sódio e açúcar, o que pode irritar o estômago do cão e agravar a desidratação. As versões sem açúcar podem conter xilitol, que é muito tóxico."
+        "pt": "Não, os cães não devem beber bebidas desportivas como o Gatorade. Um golinho não é propriamente tóxico, mas têm demasiado sódio e açúcar, o que pode irritar o estômago do cão e agravar a desidratação. As versões sem açúcar podem conter xilitol, que é muito tóxico.",
+        "nl": "Nee, honden mogen geen sportdranken zoals Gatorade drinken. Een klein slokje is niet per se giftig, maar sportdranken bevatten te veel natrium en suiker, en dat kan de maag van een hond van streek maken en uitdroging erger maken. Suikervrije varianten kunnen xylitol bevatten, dat zeer giftig is."
       },
       "why": {
         "en": "Human sports drinks contain excessive amounts of sodium and sugar, as well as artificial ingredients that aren't appropriate for dogs. CityVet says a tiny sip isn't strictly toxic but is highly discouraged, while PetMD says dogs should not drink Gatorade at all, so we follow the stricter advice. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -73086,7 +73327,8 @@
         "nb": "Sportsdrikker for mennesker inneholder altfor mye natrium og sukker, og kunstige ingredienser som ikke passer for hunder. CityVet sier at en liten slurk ikke er strengt tatt giftig, men sterkt frarådet, mens PetMD sier at hunder ikke bør drikke Gatorade i det hele tatt, så vi følger det strengeste rådet. Mange sukkerfrie drikker inneholder xylitol, som er svært giftig for hunder.",
         "de": "Sportgetränke für Menschen enthalten übermäßig viel Natrium und Zucker sowie künstliche Zusatzstoffe, die für Hunde nicht geeignet sind. Laut CityVet ist ein winziger Schluck nicht unbedingt giftig, aber dringend abzuraten; PetMD sagt, Hunde sollten Gatorade gar nicht trinken – wir folgen dem strengeren Rat. Viele zuckerfreie Getränke enthalten Xylit, das für Hunde hochgiftig ist.",
         "es": "Las bebidas deportivas para personas llevan demasiado sodio y azúcar, además de ingredientes artificiales poco adecuados para los perros. CityVet dice que un sorbito diminuto no es estrictamente tóxico pero se desaconseja firmemente, mientras que PetMD dice que los perros no deben beber Gatorade en absoluto, así que seguimos el consejo más estricto. Muchas bebidas sin azúcar contienen xilitol, que es muy tóxico para los perros.",
-        "pt": "As bebidas desportivas para pessoas têm demasiado sódio e açúcar, além de ingredientes artificiais que não são adequados para os cães. A CityVet diz que um golinho não é propriamente tóxico, mas é muito desaconselhado, enquanto a PetMD diz que os cães não devem beber Gatorade de todo, por isso seguimos o conselho mais prudente. Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães."
+        "pt": "As bebidas desportivas para pessoas têm demasiado sódio e açúcar, além de ingredientes artificiais que não são adequados para os cães. A CityVet diz que um golinho não é propriamente tóxico, mas é muito desaconselhado, enquanto a PetMD diz que os cães não devem beber Gatorade de todo, por isso seguimos o conselho mais prudente. Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães.",
+        "nl": "Sportdranken voor mensen bevatten te veel natrium en suiker, en kunstmatige ingrediënten die niet geschikt zijn voor honden. Volgens CityVet is een klein slokje niet per se giftig, maar wordt het sterk afgeraden, terwijl PetMD zegt dat honden helemaal geen Gatorade mogen drinken. Wij volgen daarom het strengere advies. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden."
       },
       "signs": {
         "en": [
@@ -73124,6 +73366,10 @@
         "pt": [
           "Mal-estar de estômago",
           "Desidratação agravada"
+        ],
+        "nl": [
+          "Maagklachten",
+          "Verergerde uitdroging"
         ]
       },
       "what_to_do": {
@@ -73135,7 +73381,8 @@
         "nb": "Gi friskt vann i stedet. Hvis du ser tegn på dehydrering, gir du litt kjølig vann om gangen, så hunden ikke drikker for fort og kaster opp. Hvis hunden er dehydrert, kaster opp eller har diaré, må du ringe dyrlegen. Hvis drikken var sukkerfri, kan du lese siden vår om xylitol.",
         "de": "Geben Sie stattdessen frisches Wasser. Zeigt Ihr Hund Anzeichen von Austrocknung, bieten Sie ihm kühles Wasser in kleinen Mengen an, nicht alles auf einmal, damit er nicht zu hastig trinkt und erbricht. Ist Ihr Hund ausgetrocknet, erbricht er oder hat er Durchfall, rufen Sie Ihren Tierarzt an. War das Getränk zuckerfrei, lesen Sie unsere Seite zu Xylit.",
         "es": "Dale agua fresca en su lugar. Si notas signos de deshidratación, ofrécele un poco de agua fresca, no toda de golpe, para que no beba demasiado deprisa y vomite. Si tu perro está deshidratado, vomita o tiene diarrea, llama a tu veterinario. Si la bebida era sin azúcar, consulta nuestra página sobre el xilitol.",
-        "pt": "Dá-lhe antes água fresca. Se notares sinais de desidratação, dá-lhe água fresca em pequenas quantidades, e não de uma vez, para que o teu cão não beba depressa demais e vomite. Se o teu cão estiver desidratado, a vomitar ou com diarreia, liga ao teu veterinário. Se a bebida era sem açúcar, vai à nossa página do xilitol."
+        "pt": "Dá-lhe antes água fresca. Se notares sinais de desidratação, dá-lhe água fresca em pequenas quantidades, e não de uma vez, para que o teu cão não beba depressa demais e vomite. Se o teu cão estiver desidratado, a vomitar ou com diarreia, liga ao teu veterinário. Se a bebida era sem açúcar, vai à nossa página do xilitol.",
+        "nl": "Geef in plaats daarvan vers water. Zie je verschijnselen van uitdroging, geef dan een kleine hoeveelheid koel water, niet alles in één keer, zodat je hond niet te snel drinkt en moet braken. Is je hond uitgedroogd, moet hij braken of heeft hij diarree, bel dan je dierenarts. Was de drank suikervrij, bekijk dan onze pagina over xylitol."
       },
       "serving": null,
       "child": {
@@ -73147,7 +73394,8 @@
         "nb": "Sportsdrikker er for mennesker. Etter løping og lek trenger hunder bare en skål med friskt vann!",
         "de": "Sportgetränke sind für Menschen. Nach dem Rennen und Spielen brauchen Hunde nur einen Napf mit frischem Wasser!",
         "es": "Las bebidas deportivas son para las personas. ¡Después de correr y jugar, los perros solo necesitan un cuenco de agua fresca!",
-        "pt": "As bebidas desportivas são para as pessoas. Depois de correr e brincar, os cães só precisam de uma tigela de água fresca!"
+        "pt": "As bebidas desportivas são para as pessoas. Depois de correr e brincar, os cães só precisam de uma tigela de água fresca!",
+        "nl": "Sportdranken zijn voor mensen. Na het rennen en spelen heeft een hond gewoon een bak vers water nodig!"
       },
       "faq": [
         {
@@ -73160,7 +73408,8 @@
             "nb": "Hva kan jeg gi den aktive hunden min i stedet?",
             "de": "Was kann ich meinem aktiven Hund stattdessen geben?",
             "es": "¿Qué puedo darle a mi perro activo en su lugar?",
-            "pt": "O que posso dar ao meu cão ativo em vez disso?"
+            "pt": "O que posso dar ao meu cão ativo em vez disso?",
+            "nl": "Wat kan ik mijn actieve hond in plaats daarvan geven?"
           },
           "a": {
             "en": "For the average house dog, a fresh bowl of water is perfectly sufficient. Instead of sharing your gym drink, choose an electrolyte solution made for dogs, and if you think your dog may be dehydrated, contact your vet about next steps.",
@@ -73171,7 +73420,8 @@
             "nb": "For en vanlig familiehund er det helt nok med en skål friskt vann. I stedet for å dele treningsdrikken din kan du velge en elektrolyttløsning laget for hunder, og hvis du tror at hunden er dehydrert, bør du kontakte dyrlegen for å høre hva du skal gjøre videre.",
             "de": "Für einen durchschnittlichen Haushund reicht ein frischer Napf Wasser völlig aus. Statt ihm von Ihrem Sportgetränk abzugeben, greifen Sie zu einer Elektrolytlösung, die für Hunde gemacht ist. Und wenn Sie vermuten, dass Ihr Hund ausgetrocknet sein könnte, fragen Sie Ihren Tierarzt, wie es weitergeht.",
             "es": "Para un perro de casa corriente, un cuenco de agua fresca es más que suficiente. En vez de compartir tu bebida del gimnasio, elige una solución de electrolitos para perros, y si crees que tu perro puede estar deshidratado, consulta con tu veterinario qué hacer.",
-            "pt": "Para um cão de família normal, uma tigela de água fresca chega perfeitamente. Em vez de lhe dares a bebida que levas para o ginásio, escolhe uma solução de eletrólitos feita para cães e, se achares que o teu cão pode estar desidratado, pergunta ao teu veterinário o que fazer a seguir."
+            "pt": "Para um cão de família normal, uma tigela de água fresca chega perfeitamente. Em vez de lhe dares a bebida que levas para o ginásio, escolhe uma solução de eletrólitos feita para cães e, se achares que o teu cão pode estar desidratado, pergunta ao teu veterinário o que fazer a seguir.",
+            "nl": "Voor de gemiddelde huishond is een verse bak water ruim voldoende. Deel je sportdrank dus niet met je hond. Kies liever een elektrolytenoplossing die speciaal voor honden is gemaakt, en vermoed je uitdroging, neem dan contact op met je dierenarts om te bespreken wat je het beste kunt doen."
           }
         }
       ],
