@@ -54,6 +54,9 @@ class EmailSignup extends Model
     /** Sources the OLD POST /api/summary-leads still accepts (old cached pages). */
     public const LEGACY_SOURCES = ['real_cost', 'breed_quiz'];
 
+    /** The only consent version the OLD POST /api/summary-leads form ever sent. */
+    public const LEGACY_CONSENT_VERSIONS = ['2026-11'];
+
     /** @var list<string> */
     public const UTM_KEYS = ['source', 'medium', 'campaign', 'content', 'term'];
 

@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Models\EmailContact;
 use App\Models\EmailSignup;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
@@ -44,7 +43,7 @@ class StoreSummaryLeadRequest extends FormRequest
             'email' => ['required', 'string', 'max:190', 'regex:/^[\x21-\x7E]+$/', 'email'],
             // The parent ticked the consent box; without it nothing is stored.
             'consent' => ['required', 'accepted'],
-            'consent_version' => ['required', 'string', Rule::in(EmailContact::CONSENT_VERSIONS)],
+            'consent_version' => ['required', 'string', Rule::in(EmailSignup::LEGACY_CONSENT_VERSIONS)],
             'source' => ['required', 'string', Rule::in(EmailSignup::LEGACY_SOURCES)],
             // Website language (two letters) and the breed slug of the website's breed register.
             'locale' => ['nullable', 'string', 'regex:/^[a-z]{2}$/'],
