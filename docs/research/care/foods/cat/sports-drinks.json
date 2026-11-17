@@ -15,7 +15,8 @@
     "pl": "Napoje sportowe",
     "cs": "Sportovní nápoje",
     "hr": "Sportska pića",
-    "sv": "Sportdrycker"
+    "sv": "Sportdrycker",
+    "da": "Sportsdrikke"
   },
   "question": {
     "en": "Can cats drink sports drinks?",
@@ -31,7 +32,8 @@
     "pl": "Czy koty mogą pić napoje sportowe?",
     "cs": "Mohou kočky pít sportovní nápoje?",
     "hr": "Smiju li mačke piti sportska pića?",
-    "sv": "Får katter dricka sportdrycker?"
+    "sv": "Får katter dricka sportdrycker?",
+    "da": "Må katte drikke sportsdrikke?"
   },
   "url_slug": {
     "en": "sports-drinks",
@@ -47,7 +49,8 @@
     "pl": "napoje-sportowe",
     "cs": "sportovni-napoje",
     "hr": "sportska-pica",
-    "sv": "sportdrycker"
+    "sv": "sportdrycker",
+    "da": "sportsdrikke"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Nie. Napoje energetyczne i sportowe często zawierają dużo kofeiny, a koty są na nią bardziej wrażliwe niż ludzie. Żaden inny napój nie zastąpi wody – to jedyny napój, którego kot potrzebuje.",
     "cs": "Ne. Energetické nebo sportovní nápoje často obsahují hodně kofeinu a kočky jsou na kofein citlivější než lidé. Žádný jiný nápoj vodu nenahradí – kočka potřebuje pít jen ji.",
     "hr": "Ne. Energetska ili sportska pića često sadrže mnogo kofeina, a mačke su na kofein osjetljivije od ljudi. Nijedno drugo piće ne zamjenjuje vodu – ona je jedino piće koje tvojoj mački treba.",
-    "sv": "Nej. Energi- och sportdrycker innehåller ofta mycket koffein, och katter är känsligare för koffein än människor. Ingen annan dryck kan ersätta vatten – det är den enda drycken din katt behöver."
+    "sv": "Nej. Energi- och sportdrycker innehåller ofta mycket koffein, och katter är känsligare för koffein än människor. Ingen annan dryck kan ersätta vatten – det är den enda drycken din katt behöver.",
+    "da": "Nej. Energi- og sportsdrikke indeholder ofte meget koffein, og katte er mere følsomme over for koffein end mennesker. Ingen anden drik kan erstatte vand – det er den eneste drik, din kat har brug for."
   },
   "why": {
     "en": "VCA vets warn that energy or sports drinks in the fridge often contain a lot of caffeine. Dogs and cats are more sensitive to caffeine than humans; it stimulates the heart and nervous system, which can be dangerous, and can upset the stomach. Cats Protection adds that milk, cream or any other liquid is no substitute for water in a cat's diet.",
@@ -80,7 +84,8 @@
     "pl": "Weterynarze z VCA ostrzegają, że napoje energetyczne i sportowe z lodówki często zawierają dużo kofeiny. Psy i koty są na kofeinę bardziej wrażliwe niż ludzie; pobudza ona serce i układ nerwowy, co może być niebezpieczne, a także może podrażnić żołądek. Cats Protection dodaje, że mleko, śmietanka ani żaden inny płyn nie zastąpią kotu wody w diecie.",
     "cs": "Veterináři z VCA upozorňují, že energetické nebo sportovní nápoje v lednici často obsahují hodně kofeinu. Psi i kočky jsou na kofein citlivější než lidé; kofein stimuluje srdce a nervovou soustavu, což může být nebezpečné, a může také podráždit žaludek. Cats Protection dodává, že mléko, smetana ani žádná jiná tekutina kočce vodu nenahradí.",
     "hr": "Veterinari iz VCA upozoravaju da energetska ili sportska pića u hladnjaku često sadrže mnogo kofeina. Psi i mačke osjetljiviji su na kofein od ljudi; on potiče srce i živčani sustav, što može biti opasno, a može izazvati i probleme sa želucem. Cats Protection dodaje da mlijeko, vrhnje ili bilo koja druga tekućina ne zamjenjuju vodu u prehrani mačke.",
-    "sv": "Veterinärerna på VCA varnar för att energi- och sportdrycker i kylskåpet ofta innehåller mycket koffein. Hundar och katter är känsligare för koffein än människor. Koffein stimulerar hjärtat och nervsystemet, vilket kan vara farligt, och kan ge orolig mage. Cats Protection tillägger att mjölk, grädde eller någon annan vätska inte kan ersätta vatten i kattens kost."
+    "sv": "Veterinärerna på VCA varnar för att energi- och sportdrycker i kylskåpet ofta innehåller mycket koffein. Hundar och katter är känsligare för koffein än människor. Koffein stimulerar hjärtat och nervsystemet, vilket kan vara farligt, och kan ge orolig mage. Cats Protection tillägger att mjölk, grädde eller någon annan vätska inte kan ersätta vatten i kattens kost.",
+    "da": "VCA-dyrlæger advarer om, at energi- og sportsdrikke i køleskabet ofte indeholder meget koffein. Hunde og katte er mere følsomme over for koffein end mennesker. Koffein stimulerer hjertet og nervesystemet, hvilket kan være farligt, og det kan give dårlig mave. Cats Protection tilføjer, at mælk, fløde eller andre væsker ikke kan erstatte vand i en kats kost."
   },
   "signs": {
     "en": [
@@ -194,6 +199,14 @@
       "Orolig mage, kräkningar eller diarré",
       "Darrningar",
       "Ökat kissande"
+    ],
+    "da": [
+      "Hurtig hjerterytme",
+      "Hyperaktivitet, uro, vil ikke ligge stille",
+      "Går frem og tilbage eller mjaver meget",
+      "Dårlig mave, opkast eller diarré",
+      "Rysten",
+      "Hyppigere vandladning"
     ]
   },
   "what_to_do": {
@@ -210,7 +223,8 @@
     "pl": "Jeśli kot wypił napój sportowy z kofeiną, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, gdy tylko się zorientujesz. Objawy mogą pojawić się w ciągu kilku godzin.",
     "cs": "Pokud kočka vypila sportovní nápoj s kofeinem, zavolejte veterináři nebo na toxikologickou linku pro zvířata, jakmile si toho všimnete. Příznaky se mohou objevit během několika hodin.",
     "hr": "Ako je mačka popila sportsko piće s kofeinom, čim to shvatiš nazovi veterinara ili telefonsku liniju za otrovanja životinja. Znakovi se mogu pojaviti već nakon nekoliko sati.",
-    "sv": "Om din katt har druckit en sportdryck med koffein, ring veterinären eller en giftrådgivning för djur så fort du upptäcker det. Symtomen kan börja inom några timmar."
+    "sv": "Om din katt har druckit en sportdryck med koffein, ring veterinären eller en giftrådgivning för djur så fort du upptäcker det. Symtomen kan börja inom några timmar.",
+    "da": "Hvis din kat har drukket en sportsdrik med koffein, skal du ringe til din dyrlæge eller en giftrådgivning for dyr, så snart du opdager det. Symptomerne kan begynde inden for få timer."
   },
   "serving": null,
   "child": {
@@ -227,7 +241,8 @@
     "pl": "Napoje sportowe nie są dla kotów. Świeża, czysta woda to najlepszy napój dla zdrowia kota!",
     "cs": "Sportovní nápoje nejsou pro kočky. Nejlepším nápojem pro zdravou kočku je čerstvá čistá voda!",
     "hr": "Sportska pića nisu za mačke. Svježa, čista voda najbolje je piće za zdravlje tvoje mačke!",
-    "sv": "Sportdrycker är inget för katter. Friskt, rent vatten är bäst för att din katt ska hålla sig frisk!"
+    "sv": "Sportdrycker är inget för katter. Friskt, rent vatten är bäst för att din katt ska hålla sig frisk!",
+    "da": "Sportsdrikke er ikke til katte. Friskt, rent vand er det bedste at drikke, hvis din kat skal holde sig sund!"
   },
   "faq": [
     {
@@ -245,7 +260,8 @@
         "pl": "Czy napój sportowy pomoże, jeśli kot za mało pije?",
         "cs": "Může sportovní nápoj pomoci, když moje kočka málo pije?",
         "hr": "Može li sportsko piće pomoći ako moja mačka ne pije dovoljno?",
-        "sv": "Kan en sportdryck hjälpa om min katt inte dricker tillräckligt?"
+        "sv": "Kan en sportdryck hjälpa om min katt inte dricker tillräckligt?",
+        "da": "Kan en sportsdrik hjælpe, hvis min kat ikke drikker nok?"
       },
       "a": {
         "en": "Give fresh water instead – no other liquid is a substitute for it. Signs of dehydration include lethargy, weakness, poor appetite and dry gums. If you are concerned that your cat is dehydrated, contact a vet promptly.",
@@ -261,7 +277,8 @@
         "pl": "Daj kotu zamiast tego świeżą wodę – żaden inny płyn jej nie zastąpi. Objawy odwodnienia to ospałość, osłabienie, słaby apetyt i suche dziąsła. Jeśli martwisz się, że kot jest odwodniony, szybko skontaktuj się z weterynarzem.",
         "cs": "Dejte kočce raději čerstvou vodu – žádná jiná tekutina ji nenahradí. Mezi příznaky dehydratace patří malátnost, slabost, snížená chuť k jídlu a suché dásně. Pokud se obáváte, že je kočka dehydrovaná, neprodleně se obraťte na veterináře.",
         "hr": "Umjesto toga daj svježu vodu – nijedna druga tekućina ne zamjenjuje je. Znakovi dehidracije jesu bezvoljnost, slabost, slabiji apetit i suhe desni. Ako sumnjaš da je mačka dehidrirana, obrati se veterinaru što prije.",
-        "sv": "Ge friskt vatten i stället – ingen annan vätska kan ersätta det. Tecken på uttorkning är orkeslöshet, svaghet, dålig aptit och torrt tandkött. Om du är orolig för att katten är uttorkad, kontakta veterinären snabbt."
+        "sv": "Ge friskt vatten i stället – ingen annan vätska kan ersätta det. Tecken på uttorkning är orkeslöshet, svaghet, dålig aptit och torrt tandkött. Om du är orolig för att katten är uttorkad, kontakta veterinären snabbt.",
+        "da": "Giv friskt vand i stedet – ingen anden væske kan erstatte det. Tegn på dehydrering er sløvhed, svaghed, dårlig appetit og tørt tandkød. Hvis du er bekymret for, at din kat er dehydreret, skal du hurtigt kontakte en dyrlæge."
       }
     }
   ],
@@ -416,6 +433,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-17",
       "verified_hash": "17263bcd781a691e9a3df91a961b013be2c8d0ad0439f01685d187b524387e5e"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-c-da-2026-11-17",
+      "verified_hash": "d6146fb9d2c56f3ca4946c466b8d572553cec7bd5ca253e4a30151859f416e87"
     }
   }
 }

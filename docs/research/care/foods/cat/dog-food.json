@@ -15,7 +15,8 @@
     "pl": "Karma dla psów",
     "cs": "Psí krmivo",
     "hr": "Hrana za pse",
-    "sv": "Hundmat"
+    "sv": "Hundmat",
+    "da": "Hundefoder"
   },
   "question": {
     "en": "Can cats eat dog food?",
@@ -31,7 +32,8 @@
     "pl": "Czy koty mogą jeść karmę dla psów?",
     "cs": "Mohou kočky jíst psí krmivo?",
     "hr": "Smiju li mačke jesti hranu za pse?",
-    "sv": "Får katter äta hundmat?"
+    "sv": "Får katter äta hundmat?",
+    "da": "Må katte spise hundefoder?"
   },
   "url_slug": {
     "en": "dog-food",
@@ -47,7 +49,8 @@
     "pl": "karma-dla-psow",
     "cs": "psi-krmivo",
     "hr": "hrana-za-pse",
-    "sv": "hundmat"
+    "sv": "hundmat",
+    "da": "hundefoder"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Nie jako pokarm dla kota. Kęs czy dwa psiej karmy nie zaszkodzą większości zdrowych kotów, ale nie karm kota jedzeniem swojego psa. Karma dla psów nie pokrywa potrzeb pokarmowych kota – na przykład zawiera dla niego za mało tauryny.",
     "cs": "Ne jako krmivo pro kočku. Kousek nebo dva psího krmiva většině zdravých koček neublíží, ale kočku psím krmivem krmit nemáte. Psí krmivo nepokrývá nutriční potřeby kočky – například v něm není dost taurinu.",
     "hr": "Ne kao svoju hranu. Zalogaj-dva hrane za pse neće naškoditi većini zdravih mačaka, ali pseću hranu ne treba davati mački. Hrana za pse ne pokriva prehrambene potrebe mačke – primjerice, ne sadrži dovoljno taurina za mačku.",
-    "sv": "Inte som kattens mat. Ett par tuggor hundmat gör de flesta friska katter ingen skada, men du ska inte ge katten hundens mat. Hundmat täcker inte kattens näringsbehov – den innehåller till exempel för lite taurin för en katt."
+    "sv": "Inte som kattens mat. Ett par tuggor hundmat gör de flesta friska katter ingen skada, men du ska inte ge katten hundens mat. Hundmat täcker inte kattens näringsbehov – den innehåller till exempel för lite taurin för en katt.",
+    "da": "Ikke som foder til katte. En mundfuld eller to hundefoder skader ikke de fleste raske katte, men du bør ikke give din kat hundens foder. Hundefoder dækker ikke en kats behov for næringsstoffer – der er for eksempel ikke nok taurin i det til en kat."
   },
   "why": {
     "en": "Dogs and cats need different nutrients. Cats require taurine, an essential amino acid for them, while dogs do not, and dog food does not contain enough of it for a cat. The Merck Veterinary Manual adds that some dog foods are lower in protein and may lack nutrients cats need but dogs don't, such as preformed vitamin A and arachidonic acid. Too little taurine can weaken the heart muscle and damage the eyes, impairing vision.",
@@ -80,7 +84,8 @@
     "pl": "Psy i koty potrzebują innych składników odżywczych. Kot musi dostawać taurynę, bo to dla niego niezbędny aminokwas, a pies jej nie potrzebuje, więc karma dla psów zawiera jej dla kota za mało. Podręcznik weterynaryjny Merck dodaje, że niektóre karmy dla psów mają mniej białka i mogą nie zawierać składników potrzebnych kotom, a niepotrzebnych psom, takich jak witamina A w gotowej postaci i kwas arachidonowy. Zbyt mało tauryny może osłabić mięsień sercowy i uszkodzić oczy, pogarszając wzrok.",
     "cs": "Psi a kočky mají různé nároky na živiny. Kočka potřebuje taurin, který je pro ni esenciální aminokyselinou, kdežto pes ne, a psí krmivo ho pro kočku obsahuje málo. Merck Veterinary Manual dále uvádí, že některá psí krmiva mají méně bílkovin a mohou postrádat živiny, které potřebují kočky, ale psi ne – například vitamin A v hotové (preformované) podobě a kyselinu arachidonovou. Nedostatek taurinu může oslabit srdeční sval a poškodit oči i zrak.",
     "hr": "Psima i mačkama trebaju različite hranjive tvari. Mačkama je potreban taurin, za njih esencijalna aminokiselina, dok psima nije, a hrana za pse ne sadrži ga dovoljno za mačku. Merck Veterinary Manual dodaje da neka hrana za pse ima manje bjelančevina i možda nema hranjivih tvari koje trebaju mačkama, a psima ne, poput preformiranog vitamina A i arahidonske kiseline. Premalo taurina može oslabiti srčani mišić i oštetiti oči, što narušava vid.",
-    "sv": "Hundar och katter behöver olika näringsämnen. Katter måste få i sig taurin, en aminosyra som är livsnödvändig för dem men inte för hundar, och hundmat innehåller inte tillräckligt av den för en katt. Enligt Merck Veterinary Manual har dessutom en del hundmat lägre proteinhalt och kan sakna näringsämnen som katter behöver men hundar inte, till exempel färdigbildat vitamin A och arakidonsyra. För lite taurin kan försvaga hjärtmuskeln och skada ögonen så att synen försämras."
+    "sv": "Hundar och katter behöver olika näringsämnen. Katter måste få i sig taurin, en aminosyra som är livsnödvändig för dem men inte för hundar, och hundmat innehåller inte tillräckligt av den för en katt. Enligt Merck Veterinary Manual har dessutom en del hundmat lägre proteinhalt och kan sakna näringsämnen som katter behöver men hundar inte, till exempel färdigbildat vitamin A och arakidonsyra. För lite taurin kan försvaga hjärtmuskeln och skada ögonen så att synen försämras.",
+    "da": "Hunde og katte har brug for forskellige næringsstoffer. Katte skal have taurin, en aminosyre, som er livsnødvendig for dem, mens hunde ikke har brug for den. Hundefoder indeholder ikke nok taurin til en kat. Merck Veterinary Manual tilføjer, at nogle hundefoder har et lavere proteinindhold og kan mangle næringsstoffer, som katte har brug for, men hunde ikke, for eksempel færdigdannet A-vitamin og arakidonsyre. Får en kat for lidt taurin, kan hjertemusklen blive svagere, og øjnene kan tage skade, så synet bliver dårligere."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Kräkningar",
       "Viktnedgång",
       "Kramper"
+    ],
+    "da": [
+      "Kvalme",
+      "Opkast",
+      "Vægttab",
+      "Kramper"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "pl": "Kęs z miski psa zwykle nie szkodzi zdrowemu kotu. Karm każde zwierzę z osobnej miski i w osobnym miejscu. Kot, który je tylko psią karmę, może zachorować w ciągu kilku godzin, dni lub tygodni – jeśli się martwisz, skontaktuj się z weterynarzem.",
     "cs": "Ochutnat z psí misky zdravé kočce obvykle neuškodí. Každé zvíře krmte z jeho vlastní misky a na jiném místě doma. Kočka, která jí jen psí krmivo, může onemocnět během hodin, dnů i týdnů – máte-li obavy, obraťte se na veterináře.",
     "hr": "Zalogaj iz pseće zdjelice obično je u redu za zdravu mačku. Svakog ljubimca hrani iz njegove zdjelice i na odvojenim mjestima u kući. Mačka koja jede samo hranu za pse može se razboljeti za nekoliko sati, dana ili tjedana – obrati se veterinaru ako te nešto brine.",
-    "sv": "Ett smakprov ur hundens skål är oftast ingen fara för en frisk katt. Låt varje djur äta ur sin egen skål, på skilda platser i hemmet. En katt som bara äter hundmat kan bli sjuk inom timmar, dagar eller veckor – kontakta veterinären om du är orolig."
+    "sv": "Ett smakprov ur hundens skål är oftast ingen fara för en frisk katt. Låt varje djur äta ur sin egen skål, på skilda platser i hemmet. En katt som bara äter hundmat kan bli sjuk inom timmar, dagar eller veckor – kontakta veterinären om du är orolig.",
+    "da": "En lille smagsprøve fra hundens skål er som regel ikke noget problem for en rask kat. Lad hvert dyr spise af sin egen skål, og giv dem mad i hvert sit område af hjemmet. En kat, der kun får hundefoder, kan blive syg i løbet af timer, dage eller uger – kontakt din dyrlæge, hvis du er bekymret."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "pl": "Karma dla psów jest przeznaczona dla psów. Koty potrzebują własnej karmy dla kotów, żeby być zdrowe!",
     "cs": "Psí krmivo je určené psům. Kočky potřebují své vlastní kočičí krmivo, aby zůstaly zdravé!",
     "hr": "Hrana za pse napravljena je za pse. Da bi ostale zdrave, mačkama treba njihova vlastita hrana za mačke!",
-    "sv": "Hundmat är gjord för hundar. Katter behöver sin alldeles egna kattmat för att hålla sig friska!"
+    "sv": "Hundmat är gjord för hundar. Katter behöver sin alldeles egna kattmat för att hålla sig friska!",
+    "da": "Hundemad er lavet til hunde. Katte har brug for deres helt egen kattemad for at holde sig sunde!"
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "pl": "Czym jest tauryna i dlaczego koty jej potrzebują?",
         "cs": "Co je taurin a proč ho kočky potřebují?",
         "hr": "Što je taurin i zašto je mačkama potreban?",
-        "sv": "Vad är taurin och varför behöver katter det?"
+        "sv": "Vad är taurin och varför behöver katter det?",
+        "da": "Hvad er taurin, og hvorfor har katte brug for det?"
       },
       "a": {
         "en": "Taurine is an essential amino acid for cats, and cats have only a limited ability to make it themselves. Without enough of it, the heart muscle weakens and the cells of the retina eventually degenerate, impairing vision.",
@@ -233,7 +247,8 @@
         "pl": "Tauryna to niezbędny dla kotów aminokwas, a koty potrafią wytwarzać ją same tylko w ograniczonym stopniu. Gdy jej brakuje, mięsień sercowy słabnie, a komórki siatkówki z czasem ulegają zwyrodnieniu, co pogarsza wzrok.",
         "cs": "Taurin je pro kočky esenciální aminokyselina a kočky si ho dokážou vytvořit jen v omezené míře. Bez dostatečného množství slábne srdeční sval a buňky sítnice postupně degenerují, což zhoršuje zrak.",
         "hr": "Taurin je za mačke esencijalna aminokiselina, a mačke ga same mogu stvarati samo u ograničenoj mjeri. Bez dovoljno taurina srčani mišić slabi, a stanice mrežnice s vremenom propadaju, što narušava vid.",
-        "sv": "Taurin är en livsnödvändig aminosyra för katter, och katter har bara begränsad förmåga att bilda det själva. Utan tillräckligt med taurin försvagas hjärtmuskeln och näthinnans celler bryts så småningom ned, så att synen försämras."
+        "sv": "Taurin är en livsnödvändig aminosyra för katter, och katter har bara begränsad förmåga att bilda det själva. Utan tillräckligt med taurin försvagas hjärtmuskeln och näthinnans celler bryts så småningom ned, så att synen försämras.",
+        "da": "Taurin er en aminosyre, som er livsnødvendig for katte, og katte kan kun selv danne en lille mængde af den. Mangler katten taurin, bliver hjertemusklen svagere, og cellerne i nethinden nedbrydes til sidst, så synet bliver dårligere."
       }
     }
   ],
@@ -379,6 +394,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-17",
       "verified_hash": "46a3cba010ad867fa154f82f24f0625c2796634b86ce829c9ed34286dc55e61e"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-c-da-2026-11-17",
+      "verified_hash": "4922b2f1da1fc81f98272c35e664c641624d3fe3f5d29d263c151e0d714f3e2b"
     }
   }
 }

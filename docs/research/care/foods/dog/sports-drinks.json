@@ -15,7 +15,8 @@
     "pl": "Napoje sportowe",
     "cs": "Sportovní nápoje",
     "hr": "Sportska pića",
-    "sv": "Sportdrycker"
+    "sv": "Sportdrycker",
+    "da": "Sportsdrikke"
   },
   "question": {
     "en": "Can dogs drink sports drinks?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą pić napoje sportowe?",
     "cs": "Mohou psi pít sportovní nápoje?",
     "hr": "Smiju li psi piti sportska pića?",
-    "sv": "Får hundar dricka sportdrycker?"
+    "sv": "Får hundar dricka sportdrycker?",
+    "da": "Må hunde drikke sportsdrikke?"
   },
   "url_slug": {
     "en": "sports-drinks",
@@ -47,7 +49,8 @@
     "pl": "napoje-sportowe",
     "cs": "sportovni-napoje",
     "hr": "sportska-pica",
-    "sv": "sportdrycker"
+    "sv": "sportdrycker",
+    "da": "sportsdrikke"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Nie, psy nie powinny pić napojów sportowych, takich jak Gatorade. Maleńki łyk formalnie nie jest toksyczny, ale napoje te zawierają zbyt dużo sodu i cukru, co może rozstroić żołądek psa i pogłębić odwodnienie. Wersje bez cukru mogą zawierać ksylitol, który jest bardzo toksyczny.",
     "cs": "Ne, psi by sportovní nápoje, jako je Gatorade, pít neměli. Malý doušek sice není přímo jedovatý, ale tyto nápoje obsahují příliš mnoho sodíku a cukru, což může psovi podráždit žaludek a zhoršit dehydrataci. Varianty bez cukru mohou obsahovat xylitol, který je vysoce toxický.",
     "hr": "Ne, psi ne bi smjeli piti sportska pića poput Gatoradea. Mali gutljaj nije strogo otrovan, ali ta pića sadrže previše natrija i šećera, što može izazvati probleme sa želucem i pogoršati dehidraciju. Pića bez šećera mogu sadržavati ksilitol, koji je vrlo otrovan.",
-    "sv": "Nej, hundar ska inte dricka sportdrycker som Gatorade. En liten klunk är inte direkt giftig, men sportdrycker innehåller för mycket natrium och socker, vilket kan ge hunden orolig mage och förvärra uttorkning. Sockerfria varianter kan innehålla xylitol, som är mycket giftigt."
+    "sv": "Nej, hundar ska inte dricka sportdrycker som Gatorade. En liten klunk är inte direkt giftig, men sportdrycker innehåller för mycket natrium och socker, vilket kan ge hunden orolig mage och förvärra uttorkning. Sockerfria varianter kan innehålla xylitol, som är mycket giftigt.",
+    "da": "Nej, hunde skal ikke drikke sportsdrikke som Gatorade. En lille slurk er ikke direkte giftig, men sportsdrikke indeholder for meget natrium og sukker, hvilket kan give ondt i maven hos en hund og forværre dehydrering. Sukkerfri udgaver kan indeholde xylitol, som er meget giftigt."
   },
   "why": {
     "en": "Human sports drinks contain excessive amounts of sodium and sugar, as well as artificial ingredients that aren't appropriate for dogs. CityVet says a tiny sip isn't strictly toxic but is highly discouraged, while PetMD says dogs should not drink Gatorade at all, so we follow the stricter advice. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -80,7 +84,8 @@
     "pl": "Napoje sportowe dla ludzi zawierają nadmierne ilości sodu i cukru, a także sztuczne składniki, które nie są odpowiednie dla psów. CityVet mówi, że maleńki łyk formalnie nie jest toksyczny, ale zdecydowanie odradza podawanie go, a PetMD – że psy w ogóle nie powinny pić Gatorade, więc stosujemy surowszą radę. Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów.",
     "cs": "Sportovní nápoje pro lidi obsahují nadměrné množství sodíku a cukru a také umělé přísady, které pro psy nejsou vhodné. CityVet uvádí, že malý doušek není přímo jedovatý, ale důrazně se nedoporučuje, zatímco PetMD říká, že psi by Gatorade neměli pít vůbec, a proto se řídíme přísnější radou. Mnoho nápojů bez cukru obsahuje xylitol, který je pro psy vysoce toxický.",
     "hr": "Sportska pića za ljude sadrže prevelike količine natrija i šećera te umjetne sastojke koji nisu prikladni za pse. CityVet kaže da mali gutljaj nije strogo otrovan, ali da se to izrazito ne preporučuje, dok PetMD kaže da psi uopće ne bi smjeli piti Gatorade, pa slijedimo strožu preporuku. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan.",
-    "sv": "Sportdrycker för människor innehåller för mycket natrium och socker och konstgjorda ingredienser som inte är lämpliga för hundar. CityVet säger att en liten klunk inte är direkt giftig men att man starkt avråder från det, medan PetMD säger att hundar inte alls ska dricka Gatorade, så vi följer det strängare rådet. Många drycker utan socker innehåller xylitol, som är mycket giftigt för hundar."
+    "sv": "Sportdrycker för människor innehåller för mycket natrium och socker och konstgjorda ingredienser som inte är lämpliga för hundar. CityVet säger att en liten klunk inte är direkt giftig men att man starkt avråder från det, medan PetMD säger att hundar inte alls ska dricka Gatorade, så vi följer det strängare rådet. Många drycker utan socker innehåller xylitol, som är mycket giftigt för hundar.",
+    "da": "Sportsdrikke til mennesker indeholder alt for meget natrium og sukker samt kunstige ingredienser, som ikke er egnede til hunde. CityVet skriver, at en lille slurk ikke er direkte giftig, men kraftigt frarådes, mens PetMD skriver, at hunde slet ikke skal drikke Gatorade, så vi følger den strengeste anbefaling. Mange drikke uden sukker indeholder xylitol, som er meget giftigt for hunde."
   },
   "signs": {
     "en": [
@@ -138,6 +143,10 @@
     "sv": [
       "Orolig mage",
       "Förvärrad uttorkning"
+    ],
+    "da": [
+      "Ondt i maven",
+      "Forværret dehydrering"
     ]
   },
   "what_to_do": {
@@ -154,7 +163,8 @@
     "pl": "Daj zamiast tego świeżą wodę. Jeśli zauważysz objawy odwodnienia, podawaj chłodną wodę po trochu, a nie naraz, żeby pies nie pił zbyt szybko i nie zwymiotował. Jeśli pies jest odwodniony, ma wymioty lub biegunkę, zadzwoń do weterynarza. Jeśli napój był bez cukru, zajrzyj na naszą stronę o ksylitolu.",
     "cs": "Dejte psovi raději čerstvou vodu. Pokud si všimnete známek dehydratace, nabídněte malé množství chladné vody, ne všechnu najednou, aby pes nepil příliš rychle a nezvracel. Pokud je pes dehydrovaný, zvrací nebo má průjem, zavolejte veterináři. Pokud byl nápoj bez cukru, podívejte se na naši stránku o xylitolu.",
     "hr": "Umjesto toga daj svježu vodu. Ako primijetiš znakove dehidracije, ponudi manje količine prohladne vode, ne sve odjednom, da pas ne bi prebrzo pio i povraćao. Ako je pas dehidriran, povraća ili ima proljev, nazovi veterinara. Ako je piće bilo bez šećera, pogledaj našu stranicu o ksilitolu.",
-    "sv": "Ge friskt vatten i stället. Om du ser tecken på uttorkning, erbjud lite svalt vatten, inte allt på en gång, så att hunden inte dricker för snabbt och kräks. Om hunden är uttorkad, kräks eller har diarré, ring veterinären. Om drycken var sockerfri, se vår sida om xylitol."
+    "sv": "Ge friskt vatten i stället. Om du ser tecken på uttorkning, erbjud lite svalt vatten, inte allt på en gång, så att hunden inte dricker för snabbt och kräks. Om hunden är uttorkad, kräks eller har diarré, ring veterinären. Om drycken var sockerfri, se vår sida om xylitol.",
+    "da": "Giv friskt vand i stedet. Hvis du ser tegn på dehydrering, så giv lidt køligt vand ad gangen, ikke det hele på én gang, så din hund ikke drikker for hurtigt og kaster op. Hvis din hund er dehydreret, kaster op eller har diarré, skal du ringe til din dyrlæge. Hvis drikken var sukkerfri, kan du læse vores side om xylitol."
   },
   "serving": null,
   "child": {
@@ -171,7 +181,8 @@
     "pl": "Napoje sportowe są dla ludzi. Po bieganiu i zabawie psy potrzebują tylko miski świeżej wody!",
     "cs": "Sportovní nápoje jsou pro lidi. Po běhání a hraní potřebují psi jen misku čerstvé vody!",
     "hr": "Sportska pića su za ljude. Nakon trčanja i igre psima treba samo zdjelica svježe vode!",
-    "sv": "Sportdrycker är för människor. Efter spring och lek behöver hundar bara en skål friskt vatten!"
+    "sv": "Sportdrycker är för människor. Efter spring och lek behöver hundar bara en skål friskt vatten!",
+    "da": "Sportsdrikke er til mennesker. Efter løb og leg har hunde bare brug for en skål friskt vand!"
   },
   "faq": [
     {
@@ -189,7 +200,8 @@
         "pl": "Co mogę dać zamiast tego aktywnemu psu?",
         "cs": "Co dát aktivnímu psovi místo sportovního nápoje?",
         "hr": "Što mogu dati svom aktivnom psu umjesto toga?",
-        "sv": "Vad kan jag ge min aktiva hund i stället?"
+        "sv": "Vad kan jag ge min aktiva hund i stället?",
+        "da": "Hvad kan jeg give min aktive hund i stedet?"
       },
       "a": {
         "en": "For the average house dog, a fresh bowl of water is perfectly sufficient. Instead of sharing your gym drink, choose an electrolyte solution made for dogs, and if you think your dog may be dehydrated, contact your vet about next steps.",
@@ -205,7 +217,8 @@
         "pl": "Dla przeciętnego psa domowego w zupełności wystarczy miska świeżej wody. Zamiast częstować psa swoim napojem z siłowni, wybierz roztwór elektrolitów przeznaczony dla psów, a jeśli podejrzewasz, że pies może być odwodniony, zapytaj weterynarza, co dalej.",
         "cs": "Pro běžného domácího psa stačí miska čerstvé vody. Místo svého nápoje z posilovny vyberte elektrolytový roztok určený pro psy, a pokud máte podezření, že je pes dehydrovaný, obraťte se na veterináře ohledně dalšího postupu.",
         "hr": "Prosječnom kućnom psu sasvim je dovoljna zdjelica svježe vode. Umjesto da s njim dijeliš svoje piće iz teretane, odaberi otopinu elektrolita namijenjenu psima, a ako misliš da bi pas mogao biti dehidriran, obrati se veterinaru da te uputi što dalje.",
-        "sv": "För en vanlig familjehund räcker det gott med en skål friskt vatten. Välj hellre en elektrolytlösning som är gjord för hundar än att dela din träningsdryck, och om du tror att hunden kan vara uttorkad, kontakta veterinären för råd om nästa steg."
+        "sv": "För en vanlig familjehund räcker det gott med en skål friskt vatten. Välj hellre en elektrolytlösning som är gjord för hundar än att dela din träningsdryck, och om du tror att hunden kan vara uttorkad, kontakta veterinären för råd om nästa steg.",
+        "da": "Til en almindelig familiehund er en frisk skål vand helt nok. I stedet for at dele din sportsdrik kan du vælge en elektrolytopløsning, der er lavet til hunde. Og hvis du tror, at din hund er dehydreret, så kontakt din dyrlæge for at høre, hvordan du kommer videre."
       }
     }
   ],
@@ -331,6 +344,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-17",
       "verified_hash": "04bb1390aea1b3eb169a6fc984b9401e85d6fc837435d3f8b7727bf781a08a1e"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-c-da-2026-11-17",
+      "verified_hash": "8e69005377adbf09bd48b5ef101ed22d3c28c0d08684840258e1555b2858fe22"
     }
   }
 }

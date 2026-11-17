@@ -15,7 +15,8 @@
     "pl": "Karma dla kotów",
     "cs": "Kočičí krmivo",
     "hr": "Hrana za mačke",
-    "sv": "Kattmat"
+    "sv": "Kattmat",
+    "da": "Kattefoder"
   },
   "question": {
     "en": "Can dogs eat cat food?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą jeść karmę dla kotów?",
     "cs": "Mohou psi jíst kočičí krmivo?",
     "hr": "Smiju li psi jesti hranu za mačke?",
-    "sv": "Får hundar äta kattmat?"
+    "sv": "Får hundar äta kattmat?",
+    "da": "Må hunde spise kattefoder?"
   },
   "url_slug": {
     "en": "cat-food",
@@ -47,7 +49,8 @@
     "pl": "karma-dla-kotow",
     "cs": "kocici-krmivo",
     "hr": "hrana-za-macke",
-    "sv": "kattmat"
+    "sv": "kattmat",
+    "da": "kattefoder"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Nie na co dzień. Pies, który od czasu do czasu podkrada karmę kota, prawdopodobnie nic sobie nie zrobi, ale nie powinno to stać się nawykiem. Karma dla kotów zawiera znacznie więcej białka pochodzenia mięsnego i nie ma właściwej dla psów proporcji składników odżywczych.",
     "cs": "Pravidelně ne. Pokud si pes občas ukradne trochu kočičího krmiva, pravděpodobně se mu nic nestane, ale nemělo by se to stát zvykem. Kočičí krmivo obsahuje mnohem víc masových bílkovin a nemá pro psy správně vyvážené složení živin.",
     "hr": "Ne redovito. Pas koji povremeno ukrade malo mačje hrane vjerojatno od toga neće imati štete, ali to ne smije postati navika. Hrana za mačke ima mnogo više bjelančevina iz mesa i ne sadrži hranjive tvari u omjeru koji odgovara psima.",
-    "sv": "Inte regelbundet. En hund som smygäter lite av kattens mat då och då tar sannolikt ingen skada, men det ska inte bli en vana. Kattmat innehåller mycket mer köttbaserat protein och har inte rätt näringsbalans för hundar."
+    "sv": "Inte regelbundet. En hund som smygäter lite av kattens mat då och då tar sannolikt ingen skada, men det ska inte bli en vana. Kattmat innehåller mycket mer köttbaserat protein och har inte rätt näringsbalans för hundar.",
+    "da": "Ikke regelmæssigt. Hvis din hund en gang imellem snupper lidt af kattens foder, sker der sandsynligvis ikke noget, men det bør ikke blive en vane. Kattefoder indeholder meget mere kødbaseret protein og har ikke den rigtige balance mellem næringsstoffer til hunde."
   },
   "why": {
     "en": "Cats are obligate carnivores, so cat food is much higher in meat-based protein than dog food and doesn't have the correct balance of protein, fibre and nutrients dogs need. Over time the imbalance can lead to stomach and gut upset, obesity and pancreatitis, and the high protein levels can be hard on a dog's liver and kidneys.",
@@ -80,7 +84,8 @@
     "pl": "Koty są bezwzględnymi mięsożercami, dlatego karma dla kotów zawiera znacznie więcej białka pochodzenia mięsnego niż karma dla psów i nie ma właściwej proporcji białka, błonnika i składników odżywczych, których potrzebują psy. Z czasem taka nierównowaga może prowadzić do rozstroju żołądka i jelit, otyłości i zapalenia trzustki, a duża ilość białka może obciążać wątrobę i nerki psa.",
     "cs": "Kočky jsou obligátní masožravci, proto kočičí krmivo obsahuje mnohem víc masových bílkovin než psí a nemá správný poměr bílkovin, vlákniny a živin, které psi potřebují. Časem může tato nerovnováha vést k potížím se žaludkem a střevy, obezitě a zánětu slinivky břišní, a vysoký obsah bílkovin může zatěžovat psí játra a ledviny.",
     "hr": "Mačke su strogi mesojedi, pa hrana za mačke sadrži mnogo više bjelančevina iz mesa od hrane za pse i ne sadrži bjelančevine, vlakna i hranjive tvari u omjeru koji je potreban psima. S vremenom ta neuravnoteženost može dovesti do probavnih tegoba, pretilosti i upale gušterače, a visoka razina bjelančevina može opteretiti jetru i bubrege psa.",
-    "sv": "Katter är obligata köttätare, så kattmat innehåller mycket mer köttbaserat protein än hundmat och har inte rätt balans av protein, fibrer och näringsämnen som hundar behöver. Med tiden kan obalansen leda till mag- och tarmproblem, fetma och bukspottkörtelinflammation, och den höga proteinhalten kan belasta hundens lever och njurar."
+    "sv": "Katter är obligata köttätare, så kattmat innehåller mycket mer köttbaserat protein än hundmat och har inte rätt balans av protein, fibrer och näringsämnen som hundar behöver. Med tiden kan obalansen leda till mag- och tarmproblem, fetma och bukspottkörtelinflammation, och den höga proteinhalten kan belasta hundens lever och njurar.",
+    "da": "Katte er rene kødædere, så kattefoder indeholder meget mere kødbaseret protein end hundefoder og har ikke den rigtige balance mellem protein, fibre og de næringsstoffer, som hunde har brug for. Med tiden kan den skæve balance give mave-tarm-problemer, fedme og betændelse i bugspytkirtlen, og det høje proteinindhold kan belaste hundens lever og nyrer."
   },
   "signs": {
     "en": [
@@ -208,6 +213,15 @@
       "Diarré",
       "Svullen mage",
       "Feber"
+    ],
+    "da": [
+      "Mavesmerter og krum ryg",
+      "Træthed og svaghed",
+      "Manglende appetit",
+      "Opkast",
+      "Diarré",
+      "Oppustet mave",
+      "Feber"
     ]
   },
   "what_to_do": {
@@ -224,7 +238,8 @@
     "pl": "Jeśli po zjedzeniu karmy dla kotów pies ma dolegliwości brzuszne, zadzwoń do weterynarza. Objawy zapalenia trzustki, takie jak zgarbiony grzbiet z bólem brzucha, wymioty, osłabienie lub gorączka, wymagają natychmiastowej opieki weterynaryjnej.",
     "cs": "Pokud má pes po kočičím krmivu potíže s břichem, zavolejte veterináři. Příznaky zánětu slinivky břišní, například shrbená záda s bolestí břicha, zvracení, slabost nebo horečka, vyžadují okamžitou veterinární péči.",
     "hr": "Ako pas nakon što pojede mačju hranu pokazuje znakove nelagode u trbuhu, nazovi veterinara. Znakovi upale gušterače, poput pogrbljenih leđa uz bol u trbuhu, povraćanja, slabosti ili vrućice, zahtijevaju hitnu veterinarsku pomoć.",
-    "sv": "Om din hund visar tecken på magbesvär efter att ha ätit kattmat, ring veterinären. Symtom på bukspottkörtelinflammation, som kutig rygg med ont i magen, kräkningar, svaghet eller feber, kräver omedelbar veterinärvård."
+    "sv": "Om din hund visar tecken på magbesvär efter att ha ätit kattmat, ring veterinären. Symtom på bukspottkörtelinflammation, som kutig rygg med ont i magen, kräkningar, svaghet eller feber, kräver omedelbar veterinärvård.",
+    "da": "Hvis din hund ser ud til at have ondt i maven efter at have spist kattefoder, skal du ringe til din dyrlæge. Tegn på betændelse i bugspytkirtlen, såsom krum ryg med mavesmerter, opkast, svaghed eller feber, kræver omgående dyrlægehjælp."
   },
   "serving": null,
   "child": {
@@ -241,7 +256,8 @@
     "pl": "Karma dla kotów jest przeznaczona dla kotów. Psy są najzdrowsze, gdy jedzą własną karmę, więc pomóż postawić miskę kota tam, gdzie pies jej nie dosięgnie!",
     "cs": "Kočičí krmivo je určené kočkám. Psům nejvíc svědčí jejich vlastní psí krmivo, a tak pomoz hlídat, aby kočičí miska stála vysoko!",
     "hr": "Hrana za mačke napravljena je za mačke. Psi su najzdraviji kad jedu svoju hranu za pse, zato pomozi da mačja zdjelica ostane na visokom mjestu!",
-    "sv": "Kattmat är gjord för katter. Hundar håller sig friskast med sin egen hundmat, så hjälp till att ställa kattens skål högt upp!"
+    "sv": "Kattmat är gjord för katter. Hundar håller sig friskast med sin egen hundmat, så hjälp till att ställa kattens skål högt upp!",
+    "da": "Kattemad er lavet til katte. Hunde holder sig sundest med deres egen hundemad, så hjælp med at stille kattens skål højt op!"
   },
   "faq": [
     {
@@ -259,7 +275,8 @@
         "pl": "Jak odgonić psa od karmy kota?",
         "cs": "Jak psovi zabránit, aby se dostal ke kočičímu krmivu?",
         "hr": "Kako spriječiti psa da jede mačju hranu?",
-        "sv": "Hur hindrar jag hunden från att äta kattens mat?"
+        "sv": "Hur hindrar jag hunden från att äta kattens mat?",
+        "da": "Hvordan holder jeg min hund væk fra kattens foder?"
       },
       "a": {
         "en": "Place the cat's food out of your dog's reach. If your dog regularly gets into it, change where you keep the cat's food or where and how you feed your cat.",
@@ -275,7 +292,8 @@
         "pl": "Postaw jedzenie kota poza zasięgiem psa. Jeśli pies regularnie się do niego dobiera, zmień miejsce, w którym trzymasz karmę kota, albo miejsce i sposób karmienia kota.",
         "cs": "Kočičí krmivo uchovávejte mimo dosah psa. Pokud se k němu pes dostává pravidelně, změňte místo, kde ho uchováváte, nebo to, kde a jak kočku krmíte.",
         "hr": "Mačju hranu stavi izvan dosega psa. Ako pas redovito dolazi do nje, promijeni mjesto na kojem je čuvaš ili gdje i kako hraniš mačku.",
-        "sv": "Ställ kattens mat utom räckhåll för hunden. Om hunden ofta kommer åt den, ändra var du förvarar kattens mat eller var och hur du matar katten."
+        "sv": "Ställ kattens mat utom räckhåll för hunden. Om hunden ofta kommer åt den, ändra var du förvarar kattens mat eller var och hur du matar katten.",
+        "da": "Stil kattens foder uden for hundens rækkevidde. Hvis din hund jævnligt får fat i det, så ændr, hvor du opbevarer kattens foder, eller hvor og hvordan du fodrer katten."
       }
     },
     {
@@ -293,7 +311,8 @@
         "pl": "Czy w sytuacji awaryjnej pies może zjeść karmę dla kotów?",
         "cs": "Může pes v nouzi jíst kočičí krmivo?",
         "hr": "Smije li moj pas jesti hranu za mačke u slučaju nužde?",
-        "sv": "Kan min hund äta kattmat i en nödsituation?"
+        "sv": "Kan min hund äta kattmat i en nödsituation?",
+        "da": "Må min hund spise kattefoder i en nødsituation?"
       },
       "a": {
         "en": "Dogs can survive on cat food in a tough spot, but unless your vet recommends otherwise, the best food for your dog is dog food.",
@@ -309,7 +328,8 @@
         "pl": "W razie potrzeby pies może przeżyć na karmie dla kotów, ale jeśli weterynarz nie zaleci inaczej, najlepszym jedzeniem dla psa jest karma dla psów.",
         "cs": "Psi dokážou v nouzi na kočičím krmivu přežít, ale pokud veterinář nedoporučí jinak, je pro psa nejlepší psí krmivo.",
         "hr": "U nuždi psi mogu preživjeti na mačjoj hrani, ali ako veterinar ne preporuči drukčije, najbolja hrana za tvog psa jest hrana za pse.",
-        "sv": "Hundar kan överleva på kattmat i en knipa, men om inte veterinären säger något annat är hundmat den bästa maten för din hund."
+        "sv": "Hundar kan överleva på kattmat i en knipa, men om inte veterinären säger något annat är hundmat den bästa maten för din hund.",
+        "da": "Hunde kan klare sig på kattefoder, hvis det er nødvendigt, men medmindre din dyrlæge anbefaler andet, er hundefoder det bedste for din hund."
       }
     }
   ],
@@ -455,6 +475,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-17",
       "verified_hash": "83f8ce9b1c482595046c9095e5bcee318f7648a5f9b74a8f74c5557f01ddd5e6"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-c-da-2026-11-17",
+      "verified_hash": "7b688bbc60add166689a19ff3d3f26c95250e60b765e21ab97b6b70ac40da55f"
     }
   }
 }

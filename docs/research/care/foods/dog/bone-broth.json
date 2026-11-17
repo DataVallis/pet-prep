@@ -15,7 +15,8 @@
     "pl": "Bulion kostny",
     "cs": "Kostní vývar",
     "hr": "Juha od kostiju",
-    "sv": "Benbuljong"
+    "sv": "Benbuljong",
+    "da": "Benbouillon"
   },
   "question": {
     "en": "Can dogs have bone broth?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą pić bulion kostny?",
     "cs": "Mohou psi dostat kostní vývar?",
     "hr": "Smiju li psi jesti juhu od kostiju?",
-    "sv": "Får hundar dricka benbuljong?"
+    "sv": "Får hundar dricka benbuljong?",
+    "da": "Må hunde få benbouillon?"
   },
   "url_slug": {
     "en": "bone-broth",
@@ -47,7 +49,8 @@
     "pl": "bulion-kostny",
     "cs": "kostni-vyvar",
     "hr": "juha-od-kostiju",
-    "sv": "benbuljong"
+    "sv": "benbuljong",
+    "da": "benbouillon"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Tak, bulion kostny bez dodatków, przygotowany ze składników bezpiecznych dla psów, jest w porządku. Jest łagodny i lekkostrawny dla wrażliwych żołądków. Przed podaniem odcedź wszystkie kości, zdejmij warstwę tłuszczu i unikaj bulionów z cebulą, czosnkiem lub solą.",
     "cs": "Ano, obyčejný kostní vývar z přísad bezpečných pro psy je v pořádku. Je jemný a citlivým žaludkům nevadí. Před podáním z něj vyberte všechny kosti, seberte vrstvu tuku a nepodávejte vývary s cibulí, česnekem nebo solí.",
     "hr": "Da, obična juha od kostiju, pripremljena samo od sastojaka sigurnih za pse, u redu je. Blaga je i ne opterećuje osjetljive želuce. Prije posluživanja izvadi sve kosti, skini sloj masti i izbjegavaj juhe s dodatkom luka, češnjaka ili soli.",
-    "sv": "Ja, vanlig benbuljong som kokats på ingredienser som är säkra för hundar går bra. Den är mild och skonsam för känsliga magar. Sila bort alla ben innan du serverar, ta bort fettlagret och undvik buljonger med lök, vitlök eller salt."
+    "sv": "Ja, vanlig benbuljong som kokats på ingredienser som är säkra för hundar går bra. Den är mild och skonsam för känsliga magar. Sila bort alla ben innan du serverar, ta bort fettlagret och undvik buljonger med lök, vitlök eller salt.",
+    "da": "Ja, naturel benbouillon lavet af ingredienser, der er ufarlige for hunde, er i orden. Den er mild og skånsom over for en sart mave. Si alle knogler fra, før du serverer den, fjern fedtlaget, og undgå bouillon med løg, hvidløg eller salt."
   },
   "why": {
     "en": "Bone broth is a stock made by slowly cooking animal bones at low heat for a long time. It is mild, flavourful and easy on sensitive stomachs, and it can make food more appealing to dogs with a reduced appetite. The risks come from what goes into it: some broths contain additives such as onions, garlic or salt, and cooked bones can splinter and injure your dog or get lodged in the throat.",
@@ -80,7 +84,8 @@
     "pl": "Bulion kostny to wywar powstający przez długie, powolne gotowanie kości zwierzęcych na małym ogniu. Jest łagodny, aromatyczny i lekkostrawny dla wrażliwych żołądków, a psom ze słabszym apetytem może uatrakcyjnić jedzenie. Ryzyko wynika z tego, co się do niego dodaje: niektóre buliony zawierają dodatki, takie jak cebula, czosnek czy sól, a ugotowane kości mogą pękać na ostre odłamki, zranić psa lub utknąć mu w gardle.",
     "cs": "Kostní vývar vzniká dlouhým a pomalým vařením zvířecích kostí na mírném ohni. Je jemný, chutný a citlivým žaludkům nevadí a psům se sníženou chutí k jídlu může udělat krmivo lákavější. Rizika spočívají v tom, co se do vývaru přidává: některé obsahují přísady, jako je cibule, česnek nebo sůl, a tepelně upravené kosti se mohou rozštípnout a psa zranit nebo mu uvíznout v krku.",
     "hr": "Juha od kostiju je temeljac koji se dobiva dugim, laganim kuhanjem životinjskih kostiju na niskoj temperaturi. Blaga je, aromatična i ne opterećuje osjetljive želuce, a može hranu učiniti privlačnijom psima slabijeg apetita. Rizik je u onome što se u nju stavlja: neke juhe sadrže dodatke poput luka, češnjaka ili soli, a termički obrađene kosti mogu se rascijepati i ozlijediti psa ili zapeti u grlu.",
-    "sv": "Benbuljong är en fond som kokas på djurben vid låg värme under lång tid. Den är mild, smakrik och skonsam för känsliga magar, och kan göra maten mer lockande för hundar med nedsatt aptit. Riskerna ligger i det som tillsätts: vissa buljonger innehåller tillsatser som lök, vitlök eller salt, och tillagade ben kan splittras och skada hunden eller fastna i halsen."
+    "sv": "Benbuljong är en fond som kokas på djurben vid låg värme under lång tid. Den är mild, smakrik och skonsam för känsliga magar, och kan göra maten mer lockande för hundar med nedsatt aptit. Riskerna ligger i det som tillsätts: vissa buljonger innehåller tillsatser som lök, vitlök eller salt, och tillagade ben kan splittras och skada hunden eller fastna i halsen.",
+    "da": "Benbouillon er en fond, der laves ved at lade dyreknogler simre ved lav varme i lang tid. Den er mild, smagfuld og skånsom over for en sart mave, og den kan få maden til at virke mere indbydende for hunde med nedsat appetit. Risikoen ligger i det, der kommer i den: nogle bouilloner indeholder tilsætninger som løg, hvidløg eller salt, og tilberedte knogler kan splintres og skade hunden eller sætte sig fast i halsen."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "pl": "Jeśli pies dostał bulion z cebulą, czosnkiem lub dużą ilością soli, zajrzyj na nasze strony o cebuli, czosnku i soli. Jeśli połknął ugotowaną kość, zajrzyj na stronę o gotowanych kościach. Bulion kostny sam nie rozwiąże problemów ze stawami, więc porozmawiaj o nich z weterynarzem.",
     "cs": "Pokud pes dostal vývar s cibulí, česnekem nebo velkým množstvím soli, podívejte se na naše stránky o cibuli, česneku a soli. Pokud pes spolkl tepelně upravenou kost, podívejte se na naši stránku o tepelně upravených kostech. Kostní vývar sám o sobě problémy s klouby nevyřeší, proto je řešte s veterinářem.",
     "hr": "Ako je pas pojeo juhu s lukom, češnjakom ili mnogo soli, pogledaj naše stranice o luku, češnjaku i soli. Ako je pas progutao kuhanu kost, pogledaj našu stranicu o kuhanim kostima. Juha od kostiju sama neće riješiti probleme sa zglobovima, zato o njima porazgovaraj s veterinarom.",
-    "sv": "Om din hund har fått buljong som innehåller lök, vitlök eller mycket salt, se våra sidor om lök, vitlök och salt. Om din hund har svalt ett tillagat ben, se vår sida om kokta ben. Benbuljong löser inte ledproblem på egen hand, så prata med veterinären om dem."
+    "sv": "Om din hund har fått buljong som innehåller lök, vitlök eller mycket salt, se våra sidor om lök, vitlök och salt. Om din hund har svalt ett tillagat ben, se vår sida om kokta ben. Benbuljong löser inte ledproblem på egen hand, så prata med veterinären om dem.",
+    "da": "Hvis din hund har fået bouillon med løg, hvidløg eller meget salt, kan du læse vores sider om løg, hvidløg og salt. Hvis din hund har synket en tilberedt knogle, kan du læse vores side om kogte knogler. Benbouillon kan ikke alene løse ledproblemer, så tal med din dyrlæge om dem."
   },
   "serving": {
     "en": "Use only natural, dog-safe ingredients, with no onions, garlic or salt. After cooking, refrigerate the broth, remove the hardened layer of fat from the top and strain out every bone. Serve it on its own or mixed into dry food.",
@@ -113,7 +119,8 @@
     "pl": "Używaj tylko naturalnych składników bezpiecznych dla psów, bez cebuli, czosnku i soli. Po ugotowaniu schłódź bulion w lodówce, zdejmij z wierzchu stwardniałą warstwę tłuszczu i odcedź wszystkie kości. Podaj go samego lub wymieszany z suchą karmą.",
     "cs": "Používejte jen přírodní přísady bezpečné pro psy, bez cibule, česneku a soli. Po uvaření vývar uložte do lednice, seberte z hladiny ztuhlou vrstvu tuku a vyberte všechny kosti. Podávejte ho samotný nebo smíchaný se suchým krmivem.",
     "hr": "Koristi samo prirodne sastojke koji su sigurni za pse, bez luka, češnjaka i soli. Nakon kuhanja juhu ostavi da se ohladi u hladnjaku, skini stvrdnuti sloj masti s površine i izvadi sve kosti. Poslužuj je samu ili pomiješanu sa suhom hranom.",
-    "sv": "Använd bara naturliga ingredienser som är säkra för hundar, utan lök, vitlök eller salt. Låt buljongen svalna i kylen efter tillagningen, ta bort det stelnade fettlagret överst och sila bort alla ben. Servera den som den är eller blanda ut den i torrfoder."
+    "sv": "Använd bara naturliga ingredienser som är säkra för hundar, utan lök, vitlök eller salt. Låt buljongen svalna i kylen efter tillagningen, ta bort det stelnade fettlagret överst och sila bort alla ben. Servera den som den är eller blanda ut den i torrfoder.",
+    "da": "Brug kun naturlige ingredienser, der er ufarlige for hunde, og ingen løg, hvidløg eller salt. Sæt bouillonen i køleskabet, når den er færdig, tag det størknede lag fedt af toppen, og si alle knogler fra. Du kan give den alene eller blande den i tørfoder."
   },
   "child": {
     "en": "Bone broth can be a tasty treat for dogs. A grown-up makes it and takes out every bone first, because bones aren't safe for dogs.",
@@ -129,7 +136,8 @@
     "pl": "Bulion kostny może być dla psa pysznym smakołykiem. Dorosły go przygotowuje i najpierw wyjmuje wszystkie kości, bo kości nie są dla psów bezpieczne.",
     "cs": "Kostní vývar může být pro psy chutný pamlsek. Dospělý ho uvaří a nejdřív z něj vyndá všechny kosti, protože kosti pro psy nejsou bezpečné.",
     "hr": "Juha od kostiju može biti ukusna poslastica za pse. Odrasla osoba je skuha i najprije izvadi sve kosti, jer kosti nisu sigurne za pse.",
-    "sv": "Benbuljong kan vara en läcker godbit för hundar. En vuxen kokar den och tar bort alla ben först, eftersom ben inte är säkra för hundar."
+    "sv": "Benbuljong kan vara en läcker godbit för hundar. En vuxen kokar den och tar bort alla ben först, eftersom ben inte är säkra för hundar.",
+    "da": "Benbouillon kan være en lækker godbid til hunde. En voksen laver den og tager alle knoglerne op først, for knogler er ikke ufarlige for hunde."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "pl": "Czym bulion kostny różni się od zwykłego bulionu?",
         "cs": "Čím se kostní vývar liší od obyčejného vývaru?",
         "hr": "Po čemu se juha od kostiju razlikuje od obične juhe?",
-        "sv": "Hur skiljer sig benbuljong från vanlig buljong?"
+        "sv": "Hur skiljer sig benbuljong från vanlig buljong?",
+        "da": "Hvad er forskellen på benbouillon og almindelig bouillon?"
       },
       "a": {
         "en": "Bone broth is a stock liquid made by slowly cooking animal bones at low heat for an extended period. For everyday broth and stock cubes, see our broth page.",
@@ -163,7 +172,8 @@
         "pl": "Bulion kostny to wywar powstający przez długie, powolne gotowanie kości zwierzęcych na małym ogniu. O codziennym bulionie i kostkach bulionowych przeczytasz na naszej stronie o bulionie.",
         "cs": "Kostní vývar vzniká dlouhým pomalým vařením zvířecích kostí na mírném ohni. O běžném vývaru a bujónových kostkách se dočtete na naší stránce o vývaru.",
         "hr": "Juha od kostiju je temeljac koji se dobiva dugim, laganim kuhanjem životinjskih kostiju na niskoj temperaturi. Za svakodnevnu juhu i kocke za juhu pogledaj našu stranicu o juhi i temeljcu.",
-        "sv": "Benbuljong är en fond som kokas på djurben vid låg värme under lång tid. För vardagsbuljong och buljongtärningar, se vår sida om buljong och fond."
+        "sv": "Benbuljong är en fond som kokas på djurben vid låg värme under lång tid. För vardagsbuljong och buljongtärningar, se vår sida om buljong och fond.",
+        "da": "Benbouillon er en fond, der laves ved at lade dyreknogler simre ved lav varme i lang tid. Om almindelig bouillon og bouillonterninger kan du læse på vores side om bouillon."
       }
     },
     {
@@ -181,7 +191,8 @@
         "pl": "Czy mogę dać psu bulion kostny ze sklepu?",
         "cs": "Mohu použít kostní vývar z obchodu?",
         "hr": "Smijem li psu dati gotovu juhu od kostiju iz trgovine?",
-        "sv": "Kan jag använda köpt benbuljong?"
+        "sv": "Kan jag använda köpt benbuljong?",
+        "da": "Kan jeg bruge benbouillon fra butikken?"
       },
       "a": {
         "en": "Look for one with natural, dog-safe ingredients, because some contain additives for preservation and taste, such as onions, garlic or salt.",
@@ -197,7 +208,8 @@
         "pl": "Szukaj bulionu z naturalnych składników bezpiecznych dla psów, bo niektóre zawierają dodatki konserwujące i poprawiające smak, takie jak cebula, czosnek lub sól.",
         "cs": "Hledejte takový, který obsahuje přírodní přísady bezpečné pro psy, protože některé obsahují přísady pro konzervaci a chuť, například cibuli, česnek nebo sůl.",
         "hr": "Traži juhu s prirodnim sastojcima sigurnima za pse, jer neke sadrže dodatke za dulju trajnost i bolji okus, poput luka, češnjaka ili soli.",
-        "sv": "Välj en med naturliga ingredienser som är säkra för hundar, eftersom vissa innehåller tillsatser för hållbarhet och smak, som lök, vitlök eller salt."
+        "sv": "Välj en med naturliga ingredienser som är säkra för hundar, eftersom vissa innehåller tillsatser för hållbarhet och smak, som lök, vitlök eller salt.",
+        "da": "Vælg en med naturlige ingredienser, der er ufarlige for hunde, for nogle indeholder tilsætninger, der skal holde den frisk og give smag, for eksempel løg, hvidløg eller salt."
       }
     },
     {
@@ -215,7 +227,8 @@
         "pl": "Czy bulion kostny pomaga na stawy psa?",
         "cs": "Pomáhá kostní vývar psím kloubům?",
         "hr": "Pomaže li juha od kostiju zglobovima mog psa?",
-        "sv": "Hjälper benbuljong hundens leder?"
+        "sv": "Hjälper benbuljong hundens leder?",
+        "da": "Er benbouillon godt for min hunds led?"
       },
       "a": {
         "en": "The AKC says the collagen in bone broth contributes to joint health, but bone broth won't cure joint problems without other treatments, so contact your vet.",
@@ -231,7 +244,8 @@
         "pl": "AKC podaje, że kolagen w bulionie kostnym wspiera zdrowie stawów, ale bulion kostny nie wyleczy problemów ze stawami bez innego leczenia, więc skontaktuj się z weterynarzem.",
         "cs": "AKC uvádí, že kolagen v kostním vývaru přispívá ke zdraví kloubů, ale kostní vývar bez další léčby problémy s klouby nevyléčí, proto se obraťte na veterináře.",
         "hr": "AKC navodi da kolagen u juhi od kostiju pridonosi zdravlju zglobova, ali sama juha od kostiju neće izliječiti probleme sa zglobovima bez drugog liječenja, pa se obrati veterinaru.",
-        "sv": "AKC säger att kollagenet i benbuljong bidrar till ledhälsan, men benbuljong botar inte ledproblem utan andra behandlingar, så kontakta veterinären."
+        "sv": "AKC säger att kollagenet i benbuljong bidrar till ledhälsan, men benbuljong botar inte ledproblem utan andra behandlingar, så kontakta veterinären.",
+        "da": "Ifølge AKC bidrager kollagenet i benbouillon til sunde led, men benbouillon kan ikke kurere ledproblemer uden anden behandling, så kontakt din dyrlæge."
       }
     }
   ],
@@ -364,6 +378,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-17",
       "verified_hash": "db980179eb5bb2f55ddf7752d3e07121c57aa0f67cba76289f0cfea56020d6e1"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-c-da-2026-11-17",
+      "verified_hash": "b2cb8fb5c06968d9173c5fefca4fa6e2e1c017adfe6480e0aedd6452c5fc7cb9"
     }
   }
 }
