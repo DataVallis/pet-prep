@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "4dc5049a207648131592d5cefb4914413dad4ef38577cf4b9f377ca25f05e8b8"
+      "sha256": "557c65facae541680d322bb3718ef65cc596de0d913936ded846b0b4bee4d0a9"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -68099,7 +68099,7 @@
       "id": "greyhound",
       "species": "dog",
       "order": 112,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Greyhound",
         "sl": "Angleški hrt"
