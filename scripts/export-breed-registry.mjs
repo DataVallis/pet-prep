@@ -502,6 +502,7 @@ const SPECIES = [
       { id: 'wire_fox_terrier', synonyms: { en: ['Fox Terrier (Wire)', 'Wire Hair Fox Terrier', 'Wirehaired Fox Terrier'], sl: ['foksterier', 'ostrodlaki fox terier', 'žimavi foksterier'] } },
       { id: 'manchester_terrier', synonyms: { en: ['Manchester Terrier (Standard)', 'Black and Tan Terrier'], sl: ['manchester terier', 'manchester'] } },
       { id: 'tibetan_terrier', synonyms: { en: ['Tibet Terrier'], sl: ['tibetan terier', 'tibet terier'] } },
+      { id: 'greyhound', synonyms: { en: ['English Greyhound'], sl: ['greyhound', 'grejhaund'] } },
     ],
   },
   {
@@ -3082,6 +3083,28 @@ const DOG_FACTS = {
       ['diabetes_mellitus', 'health.diabetes'],
     ],
   },
+  // M5-R10-122. No RKC page reachable → PDSA (S914): exercise 'about an hour of exercise daily' (about 60), coat 'Short',
+  // grooming 'weekly grooming' (Once a week), lifespan 'Over 10 years'; height = FCI ideal height (KUSA copy S913); AKC
+  // standard (S918) weight dogs 65–70 lb / bitches 60–65 lb; VetCompass median 11.4 y (S920); WebMD 10–13 years. Coren rank
+  // 46 (S35). FCI origin Great Britain. No shedding fact (WebMD 'shed infrequently' vs Dogs Trust 'moderate shedding').
+  // Not exported: adult_weight alternatives (PDSA), lifespan.senior_from (derived), health.osteosarcoma / health.other
+  // (background). No new health key.
+  greyhound: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.pdsa', 'more_than'], ['lifespan.webmd', 'span']],
+    exercise: [['exercise.adult', 'about']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['bloat_gdv', 'health.gdv'],
+      ['periodontal_disease', 'health.periodontal'],
+      ['pra_eye_disease', 'health.pra'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+    ],
+  },
 
 
 
@@ -3162,6 +3185,7 @@ export const DOG_CARE_TASKS = {
   wire_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.wire_fox_terrier.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.wire_fox_terrier.nail_trimming'], ['groomer_visit', 1, 84, 'proposed_game_parameters.wire_fox_terrier.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.wire_fox_terrier.bathing']],
   manchester_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.manchester_terrier.tooth_brushing']],
   tibetan_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.tibetan_terrier.tooth_brushing']],
+  greyhound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.greyhound.tooth_brushing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4080,6 +4104,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.tibetan_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.tibetan_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.tibetan_terrier.exercise_minutes_senior',
+  },
+  greyhound: {
+    adult_minutes: ['proposed_game_parameters.greyhound.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.greyhound.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.greyhound.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.greyhound.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.greyhound.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.greyhound.exercise_minutes_senior',
   },
 
 
