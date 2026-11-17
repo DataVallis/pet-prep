@@ -102,11 +102,16 @@ it('E3: a permanent 5xx refusal (no such mailbox) fails at once; »Send again« 
     expect($email->fresh()->status)->toBe('pending')->and($email->fresh()->attempts)->toBe(0);
 });
 
-it('E4: a row stuck in `sending` (crashed run) is picked up again after 15 minutes', function () {
+it('E4: a row stuck in `sending` (crashed run) counts as a failed attempt and is sent on the retry ladder', function () {
     $stripe = shStripe();
     shPaidOrder($stripe);
     OutboundEmail::query()->update(['status' => 'sending', 'updated_at' => now()->subMinutes(16)]);
 
+    expect(app(OutboundEmailSender::class)->run()['sent'])->toBe(0);
+    $email = OutboundEmail::sole();
+    expect($email->status)->toBe('pending')->and($email->attempts)->toBe(1)->and($email->last_error)->toContain('Stale');
+
+    Carbon::setTestNow(now()->addMinutes(5));
     expect(app(OutboundEmailSender::class)->run()['sent'])->toBe(1);
 });
 
@@ -115,8 +120,37 @@ it('E5: emails:send runs every minute with an explicit overlap expiry', function
     expect($event)->not->toBeNull()->and($event->expression)->toBe('* * * * *')->and($event->expiresAt)->toBe(10);
 });
 
-it('E6: isPermanent tells 5xx from 4xx', function () {
+it('E6: only a refusal of the recipient is permanent; a server-level 5xx (auth 535, relay) is not', function () {
     expect(OutboundEmailSender::isPermanent(new TransportException('got code "550"')))->toBeTrue()
+        ->and(OutboundEmailSender::isPermanent(new TransportException('Expected response code "250" but got code "553", with message "553 5.1.3 Bad address".', 553)))->toBeTrue()
         ->and(OutboundEmailSender::isPermanent(new TransportException('got code "421"')))->toBeFalse()
+        ->and(OutboundEmailSender::isPermanent(new TransportException('Expected response code "235" but got code "535", with message "535 5.7.8 Authentication failed".', 535)))->toBeFalse()
+        ->and(OutboundEmailSender::isServerDown(new TransportException('Expected response code "235" but got code "535".', 535)))->toBeTrue()
         ->and(OutboundEmailSender::isPermanent(new RuntimeException('Connection could not be established')))->toBeFalse();
+});
+
+it('E7: a wrong SMTP password (535) retries the first e-mail, puts the rest of the batch back untouched and alerts once', function () {
+    Queue::fake([SendShopAlert::class]);
+    $stripe = shStripe();
+    shPaidOrder($stripe);
+    shPaidOrder($stripe);
+    Mail::shouldReceive('html')->once()->andThrow(new TransportException('Expected response code "235" but got code "535", with message "535 5.7.8 Authentication failed".', 535));
+
+    expect(app(OutboundEmailSender::class)->run())->toBe(['sent' => 0, 'retry' => 1, 'failed' => 0]);
+    [$first, $second] = OutboundEmail::orderBy('id')->get()->all();
+    expect($first->status)->toBe('pending')->and($first->attempts)->toBe(1)
+        ->and($second->status)->toBe('pending')->and($second->attempts)->toBe(0)
+        ->and($second->next_attempt_at->toDateTimeString())->toBe('2026-11-17 10:05:00');
+    Queue::assertPushed(SendShopAlert::class, 1);
+    Queue::assertPushed(SendShopAlert::class, fn (SendShopAlert $j) => $j->reason === 'smtp_down');
+});
+
+it('E8: an e-mail of an order refunded before it went out is cancelled, not sent', function () {
+    $stripe = shStripe();
+    [$order] = shPaidOrder($stripe);
+    $order->forceFill(['status' => 'refunded'])->save();
+
+    expect(app(OutboundEmailSender::class)->run()['sent'])->toBe(0)
+        ->and(OutboundEmail::sole()->status)->toBe('cancelled')
+        ->and(oeSent())->toBe([]);
 });

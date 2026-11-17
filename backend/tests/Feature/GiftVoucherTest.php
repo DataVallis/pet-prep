@@ -65,7 +65,7 @@ describe('webhook → order + voucher', function () {
             ->and($email->status)->toBe('pending')
             ->and($email->locale)->toBe('sl')
             ->and($email->subject)->toBe('Vaš darilni bon PetPrep')
-            ->and($email->html)->toContain($code)->toContain('petprep.si/sl/unovci')
+            ->and($email->html)->not->toContain($code)->toContain('[[petprep-voucher-code]]')->toContain('petprep.si/sl/unovci')
             ->and($email->attachments)->toBe([['type' => 'voucher_pdf', 'voucher_id' => $voucher->id]]);
     });
 
@@ -77,6 +77,9 @@ describe('webhook → order + voucher', function () {
         expect($flat)->not->toContain($code)
             ->and($flat)->not->toContain(GiftVoucher::canonical($code))
             ->and($row['key_hash'])->toBe(hash('sha256', GiftVoucher::canonical($code)));
+        // Nor in the e-mail queue (QA M2): the stored e-mail holds a token, the code is put in at send time.
+        $mail = json_encode((array) DB::table('outbound_emails')->first());
+        expect($mail)->not->toContain($code)->and($mail)->toContain('[[petprep-voucher-code]]');
     });
 
     it('G3: the same event twice and the thank-you page at once never make a second voucher or e-mail', function () {
@@ -115,7 +118,8 @@ describe('webhook → order + voucher', function () {
         expect(ShopOrder::where('stripe_checkout_session_id', $other)->sole()->status)->toBe('failed');
     });
 
-    it('G5: not ours — another sale of the account, a foreign price, a quantity of 2 — creates nothing', function () {
+    it('G5: another sale of the account is not ours; a PAID PetPrep session with a foreign price or a quantity of 2 is rejected with one alert each — nothing is delivered', function () {
+        Queue::fake([SendShopAlert::class]);
         $stripe = shStripe();
         shWebhook(shEvent('checkout.session.completed', ['id' => 'cs_test_other_site', 'metadata' => []]))
             ->assertOk()->assertJsonPath('outcome', 'not_ours');
@@ -123,14 +127,17 @@ describe('webhook → order + voucher', function () {
         $id = 'cs_test_'.str_repeat('e', 24);
         $stripe->sessions[$id] = shSession($id, price: 'price_someone_else');
         shWebhook(shEvent('checkout.session.completed', ['id' => $id, 'metadata' => ['petprep_product' => 'gift_voucher']]))
-            ->assertOk()->assertJsonPath('outcome', 'not_ours');
+            ->assertOk()->assertJsonPath('outcome', 'rejected');
+        test()->getJson('/api/shop/orders/'.$id)->assertNotFound(); // the thank-you page does not alert a second time
 
         $two = 'cs_test_'.str_repeat('f', 24);
         $stripe->sessions[$two] = array_replace_recursive(shSession($two), ['line_items' => ['data' => [['price' => ['id' => SH_PRICE_GIFT], 'quantity' => 2]]]]);
         shWebhook(shEvent('checkout.session.completed', ['id' => $two, 'metadata' => ['petprep_product' => 'gift_voucher']]))
-            ->assertOk()->assertJsonPath('outcome', 'not_ours');
+            ->assertOk()->assertJsonPath('outcome', 'rejected');
 
         expect(ShopOrder::count())->toBe(0)->and(GiftVoucher::count())->toBe(0);
+        Queue::assertPushed(SendShopAlert::class, 2);
+        Queue::assertPushed(SendShopAlert::class, fn (SendShopAlert $j) => $j->reason === 'rejected_payment' && $j->ref === $id);
     });
 
     it('G6: test-mode events and sessions are ignored unless STRIPE_ACCEPT_TEST_MODE; then the voucher is SANDBOX', function () {

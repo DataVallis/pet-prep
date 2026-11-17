@@ -100,7 +100,8 @@ class StripeClient
         try {
             return $call();
         } catch (ConnectionException $e) {
-            throw new StripeException('Stripe unreachable: '.$e->getMessage());
+            // The message of a connection error contains the request URL (with the session id): redact it.
+            throw new StripeException('Stripe unreachable: '.(string) preg_replace('/\\b(cs|pi)_[A-Za-z0-9_]+/', '$1_…', $e->getMessage()));
         }
     }
 

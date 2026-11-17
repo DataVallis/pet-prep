@@ -6,9 +6,11 @@ use App\Filament\Resources\Concerns\SuperadminReadOnly;
 use App\Filament\Resources\OutboundEmailResource\Pages;
 use App\Models\OutboundEmail;
 use App\Models\ShopAuditLog;
+use App\Models\ShopOrder;
 use App\Models\User;
 use App\Services\Mail\OutboundEmailSender;
 use App\Services\Shop\ShopAdminService;
+use App\Services\Shop\ShopEmailComposer;
 use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -104,10 +106,12 @@ class OutboundEmailResource extends Resource
                 Tables\Actions\Action::make('preview')->label($t('preview'))->icon('heroicon-o-eye')
                     ->modalSubmitAction(false)->modalWidth('3xl')
                     ->modalContent(fn (OutboundEmail $r): HtmlString => new HtmlString(
-                        '<iframe sandbox="" style="width:100%;height:70vh;border:0;background:#fff" srcdoc="'.e($r->html).'"></iframe>'
+                        '<iframe sandbox="" style="width:100%;height:70vh;border:0;background:#fff" srcdoc="'.e(str_replace(ShopEmailComposer::CODE_TOKEN, 'PP-••••-••••-••••', (string) $r->html)).'"></iframe>'
                     )),
                 Tables\Actions\Action::make('requeue')->label($t('requeue'))->icon('heroicon-o-arrow-path')->requiresConfirmation()
-                    ->visible(fn (OutboundEmail $r): bool => in_array($r->status, [OutboundEmail::STATUS_FAILED, OutboundEmail::STATUS_CANCELLED, OutboundEmail::STATUS_SENT], true))
+                    // Never for a refunded order (QA m3): its code and links no longer work.
+                    ->visible(fn (OutboundEmail $r): bool => in_array($r->status, [OutboundEmail::STATUS_FAILED, OutboundEmail::STATUS_CANCELLED, OutboundEmail::STATUS_SENT], true)
+                        && ($r->shop_order_id === null || ShopOrder::find($r->shop_order_id)?->delivers() === true))
                     ->action(function (OutboundEmail $r) use ($t, $admin): void {
                         app(OutboundEmailSender::class)->requeue($r);
                         ShopAuditLog::record($admin(), 'resend_email', 'outbound_email', $r->id);

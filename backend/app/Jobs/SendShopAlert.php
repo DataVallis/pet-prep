@@ -28,12 +28,18 @@ class SendShopAlert implements ShouldQueue
 
     public const REASON_EMAIL_FAILED = 'email_failed';
 
+    public const REASON_REJECTED_PAYMENT = 'rejected_payment';
+
+    public const REASON_SMTP_DOWN = 'smtp_down';
+
     public int $tries = 1;
 
     public function __construct(
         public readonly string $reason,
         public readonly ?int $orderId,
         public readonly ?int $emailId = null,
+        /** A Stripe session id (rejected payment) or a short error class (SMTP down); never personal data. */
+        public readonly ?string $ref = null,
     ) {
         $this->onQueue((string) config('system_health.app_errors.alert_queue', 'alerts'));
     }
@@ -52,6 +58,7 @@ class SendShopAlert implements ShouldQueue
                 array_filter([
                     __($key.'.order') => $this->orderId === null ? '—' : (string) $this->orderId,
                     __($key.'.email') => $this->emailId === null ? null : (string) $this->emailId,
+                    __($key.'.ref') => $this->ref,
                 ]),
             ));
         } catch (Throwable $e) {
