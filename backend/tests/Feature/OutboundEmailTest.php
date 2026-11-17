@@ -49,7 +49,7 @@ it('E1: a paid gift order\'s e-mail goes out from Curio with reply-to hello@, HT
         ->and($message->getFrom()[0]->getName())->toBe('Curio iz PetPrep') // sender name in the buyer's language
         ->and($message->getReplyTo()[0]->getAddress())->toBe('hello@petprep.si')
         ->and($message->getTo()[0]->getAddress())->toBe('buyer@example.com')
-        ->and($message->getSubject())->toBe('Vaš darilni bon PetPrep')
+        ->and($message->getSubject())->toMatch('/^Vaš darilni bon PetPrep · PP-\d{4}-\d{6}$/') // order number keeps orders in separate threads
         ->and($message->getHtmlBody())->toContain($code)
         ->and($message->getTextBody())->toContain($code);
     // The logo is embedded (cid), not a remote image.
