@@ -704,7 +704,16 @@ return [
                 'title' => 'E-pošte ni bilo mogoče poslati',
                 'body' => 'E-pošta kupcu po vseh ponovnih poskusih ni bila poslana (verjetno napačen naslov). Odprite /admin → E-pošta, popravite naslov na naročilu in jo pošljite znova.',
             ],
+            'rejected_payment' => [
+                'title' => 'Plačano naročilo NI bilo dostavljeno',
+                'body' => 'Kupec je plačal blagajno PetPrep, vendar se cena, količina ali način ne ujema z nastavitvami (npr. cena je bila spremenjena, medtem ko je bila blagajna odprta, ali STRIPE_ACCEPT_TEST_MODE). Koda ali datoteka ni bila poslana. Preverite sejo v Stripe in popravite nastavitve ali vrnite denar.',
+            ],
+            'smtp_down' => [
+                'title' => 'Poštni strežnik ni dosegljiv ali zavrača prijavo',
+                'body' => 'Pošiljanje e-pošte trgovine ni uspelo na samem poštnem strežniku (povezava ali prijava). E-pošta ostane v vrsti in se pošlje znova. Preverite MAIL_* v /opt/petprep/.env in mail.datavallis.com.',
+            ],
             'order' => 'ID naročila',
+            'ref' => 'Sklic',
             'email' => 'ID e-pošte',
         ],
     ],

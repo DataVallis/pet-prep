@@ -2,10 +2,12 @@
 
 namespace App\Services\Shop;
 
+use App\Jobs\SendShopAlert;
 use App\Models\GiftVoucher;
 use App\Models\ShopOrder;
 use App\Support\WebsiteLocale;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -27,6 +29,9 @@ use Illuminate\Support\Facades\Log;
  */
 class ShopFulfillment
 {
+    /** The last fulfill() refused a paid session of ours (webhook outcome `rejected`). */
+    public bool $lastRejected = false;
+
     public function __construct(
         private readonly StripeClient $stripe,
         private readonly ShopEmailComposer $emails,
@@ -41,9 +46,20 @@ class ShopFulfillment
         if ($session === null) {
             return null;
         }
+        $this->lastRejected = false;
         $product = $this->productOf($session);
         if ($product === null) {
-            Log::warning('ShopFulfillment: session is not a PetPrep shop session', ['session_id' => $sessionId]);
+            if ($this->claimsOurs($session) && ($session['payment_status'] ?? null) === 'paid') {
+                // Paid, marked as ours, but price / quantity / mode do not match the config (e.g. the price was
+                // changed while a checkout was open): the buyer paid and gets nothing — a person must look.
+                $this->lastRejected = true;
+                Log::error('ShopFulfillment: paid PetPrep session rejected (price, quantity or mode does not match)', ['session_id' => $sessionId]);
+                if (Cache::add('shop:rejected:'.$sessionId, 1, now()->addDay())) {
+                    SendShopAlert::dispatch(SendShopAlert::REASON_REJECTED_PAYMENT, null, null, $sessionId);
+                }
+            } else {
+                Log::warning('ShopFulfillment: session is not a PetPrep shop session', ['session_id' => $sessionId]);
+            }
 
             return null;
         }
@@ -71,7 +87,7 @@ class ShopFulfillment
             $this->fill($order, $session);
 
             $paymentStatus = (string) ($session['payment_status'] ?? '');
-            if (in_array($paymentStatus, ['paid', 'no_payment_required'], true)
+            if ($paymentStatus === 'paid'
                 && in_array($order->status, [ShopOrder::STATUS_PENDING, ShopOrder::STATUS_FAILED], true)) {
                 $paidAt = now()->startOfSecond();
                 $order->forceFill([
@@ -111,6 +127,16 @@ class ShopFulfillment
     /**
      * Which product the session sells, or null when it is not ours.
      *
+     * @param  array<string, mixed>  $session
+     */
+    public function claimsOurs(array $session): bool
+    {
+        $product = data_get($session, 'metadata.petprep_product');
+
+        return is_string($product) && is_array(config('shop.products.'.$product));
+    }
+
+    /**
      * @param  array<string, mixed>  $session
      */
     public function productOf(array $session): ?string

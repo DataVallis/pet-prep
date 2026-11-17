@@ -705,7 +705,16 @@ return [
                 'title' => 'E-mail could not be sent',
                 'body' => 'An e-mail to a buyer failed after every retry (probably a wrong address). Open /admin → E-mails, correct the address on the order and send it again.',
             ],
+            'rejected_payment' => [
+                'title' => 'Paid shop order was NOT delivered',
+                'body' => 'A buyer paid for a PetPrep checkout, but its price, quantity or mode does not match the configuration (e.g. the price was changed while the checkout was open, or STRIPE_ACCEPT_TEST_MODE). No code or file was sent. Check the session in Stripe and fix the configuration or refund.',
+            ],
+            'smtp_down' => [
+                'title' => 'Mail server unreachable or refuses login',
+                'body' => 'Sending shop e-mails failed at the mail server itself (connection or login). The e-mails stay in the queue and are retried. Check MAIL_* in /opt/petprep/.env and mail.datavallis.com.',
+            ],
             'order' => 'Order id',
+            'ref' => 'Reference',
             'email' => 'E-mail id',
         ],
     ],

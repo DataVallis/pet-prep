@@ -2738,14 +2738,17 @@ sequenceDiagram
     API-->>B: code · valid until · signed PDF links · masked e-mail
   end
   Q->>DB: claim due rows (FOR UPDATE SKIP LOCKED)
-  Q->>M: SMTP (smtps 465) · voucher PDF built now
-  alt 5xx (no such mailbox)
+  Q->>DB: order refunded meanwhile? → cancelled, not sent
+  Q->>M: SMTP (smtps 465) · code token → real code · voucher PDF built now
+  alt recipient refused (550 / 551 / 553, 5.1.x)
     Q->>DB: failed → Discord alert (ids only)
+  else mail server down / login refused (connection, 421, 530 / 535)
+    Q->>DB: this row retried · rest of batch back to queue untouched · 1 alert / hour
   else temporary error
     Q->>DB: retry after 5 / 30 / 120 / 360 / 1440 min, then failed + alert
   end
   opt refund / dispute (David in Stripe, or Link ≤ 60 days)
     S->>API: charge.refunded / charge.dispute.*
-    API->>DB: order → voucher → family → credit → pet: refunded / disabled, credit revoked
+    API->>DB: order → voucher → family → credit → pet: refunded / disabled, credit revoked · pending e-mails cancelled
   end
 ```

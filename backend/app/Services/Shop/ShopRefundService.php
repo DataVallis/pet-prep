@@ -4,6 +4,7 @@ namespace App\Services\Shop;
 
 use App\Jobs\SendShopAlert;
 use App\Models\GiftVoucher;
+use App\Models\OutboundEmail;
 use App\Models\ShopOrder;
 use App\Services\ChallengeCreditService;
 use Illuminate\Support\Carbon;
@@ -40,7 +41,8 @@ class ShopRefundService
             if ($order === null) {
                 return [self::RESULT_UNKNOWN, null, null];
             }
-            $order->forceFill(['amount_refunded' => $amountRefunded]);
+            // Events can arrive out of order: an older partial refund never lowers the amount.
+            $order->forceFill(['amount_refunded' => max((int) $order->amount_refunded, $amountRefunded)]);
             if (! $full && $amountRefunded < $amount) {
                 if ($order->status === ShopOrder::STATUS_PAID) {
                     $order->status = ShopOrder::STATUS_PARTIALLY_REFUNDED;
@@ -97,6 +99,9 @@ class ShopRefundService
     /** Caller holds the order lock. */
     private function takeBack(ShopOrder $order, string $to, string $eventId): void
     {
+        // Nothing more goes out for a refunded order (the code / links would no longer work anyway).
+        OutboundEmail::where('shop_order_id', $order->id)->where('status', OutboundEmail::STATUS_PENDING)
+            ->update(['status' => OutboundEmail::STATUS_CANCELLED, 'next_attempt_at' => null, 'updated_at' => now()]);
         $voucher = GiftVoucher::where('shop_order_id', $order->id)->lockForUpdate()->first();
         if ($voucher === null || in_array($voucher->status, [GiftVoucher::STATUS_REFUNDED, GiftVoucher::STATUS_DISABLED], true)) {
             return;

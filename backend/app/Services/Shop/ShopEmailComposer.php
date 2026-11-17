@@ -38,6 +38,9 @@ class ShopEmailComposer
     /**
      * @return array{subject: string, html: string, text: string, attachments: list<array<string, mixed>>}
      */
+    /** Stands in for the voucher code in the stored HTML / text; replaced by OutboundEmailSender just before sending. */
+    public const CODE_TOKEN = '[[petprep-voucher-code]]';
+
     public function compose(ShopOrder $order): array
     {
         $locale = ShopCheckoutService::locale($order->locale);
@@ -55,7 +58,8 @@ class ShopEmailComposer
             'subject' => $t($gift ? 'gift_subject' : 'kit_subject'),
             'preheader' => $t($gift ? 'gift_preheader' : 'kit_preheader'),
             'intro' => $t($gift ? 'gift_intro' : 'kit_intro'),
-            'code' => $voucher?->code(),
+            // The code is never stored in outbound_emails: a token here, the real code at send time (OutboundEmailSender).
+            'code' => $voucher !== null ? self::CODE_TOKEN : null,
             'validUntil' => $voucher !== null ? ShopLinks::date($voucher->expires_at, $locale) : null,
             'redeemUrl' => ShopLinks::redeemUrl($locale),
             'redeemDisplay' => ShopLinks::redeemDisplay($locale),

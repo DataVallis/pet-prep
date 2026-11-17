@@ -40,6 +40,9 @@ class StripeEvent extends Model
 
     public const OUTCOME_NOT_OURS = 'not_ours';
 
+    /** Paid and marked as ours, but price / quantity / mode did not match: alert sent, nothing delivered. */
+    public const OUTCOME_REJECTED = 'rejected';
+
     public const OUTCOME_TEST_MODE_IGNORED = 'test_mode_ignored';
 
     public const OUTCOME_IGNORED = 'ignored';

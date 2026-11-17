@@ -99,7 +99,7 @@ class StripeWebhookService
             }
             $order = $this->fulfillment->fulfill($sessionId);
             if ($order === null) {
-                return [StripeEvent::OUTCOME_NOT_OURS, null];
+                return [$this->fulfillment->lastRejected ? StripeEvent::OUTCOME_REJECTED : StripeEvent::OUTCOME_NOT_OURS, null];
             }
 
             return [$order->fulfilled_at !== null ? StripeEvent::OUTCOME_FULFILLED : StripeEvent::OUTCOME_PENDING, $order->id];
