@@ -12,7 +12,8 @@
     "es": "Leche de cabra",
     "pt": "Leite de cabra",
     "nl": "Geitenmelk",
-    "pl": "Mleko kozie"
+    "pl": "Mleko kozie",
+    "cs": "Kozí mléko"
   },
   "question": {
     "en": "Can cats drink goat's milk?",
@@ -25,7 +26,8 @@
     "es": "¿Pueden los gatos beber leche de cabra?",
     "pt": "Os gatos podem beber leite de cabra?",
     "nl": "Mogen katten geitenmelk drinken?",
-    "pl": "Czy koty mogą pić mleko kozie?"
+    "pl": "Czy koty mogą pić mleko kozie?",
+    "cs": "Mohou kočky pít kozí mléko?"
   },
   "url_slug": {
     "en": "goat-milk",
@@ -38,7 +40,8 @@
     "es": "leche-de-cabra",
     "pt": "leite-de-cabra",
     "nl": "geitenmelk",
-    "pl": "mleko-kozie"
+    "pl": "mleko-kozie",
+    "cs": "kozi-mleko"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "es": "Es mejor no dársela. Los veterinarios incluyen la leche de cabra, igual que la de vaca, entre las bebidas que provocan molestias de barriga en los gatos intolerantes a la lactosa, y la mayoría de los gatos lo son. Las protectoras de gatos aconsejan evitar cualquier tipo de leche: tu gato solo necesita agua.",
     "pt": "É melhor não. Segundo os veterinários, o leite de cabra, tal como o de vaca, causa problemas de barriga nos gatos intolerantes à lactose, e a maioria dos gatos é intolerante. As associações de proteção dos gatos aconselham a evitar qualquer tipo de leite – o teu gato só precisa de água.",
     "nl": "Liever niet. Dierenartsen noemen geitenmelk, net als koemelk, een van de dranken die buikklachten geven bij katten die lactose niet verdragen, en de meeste katten verdragen lactose niet. Kattenorganisaties raden af om welke soort melk dan ook te geven – je kat heeft alleen water nodig.",
-    "pl": "Lepiej nie. Weterynarze zaliczają mleko kozie, podobnie jak krowie, do napojów, po których koty z nietolerancją laktozy mają dolegliwości żołądkowe, a większość kotów nie toleruje laktozy. Organizacje opiekujące się kotami radzą unikać każdego rodzaju mleka – kot potrzebuje tylko wody."
+    "pl": "Lepiej nie. Weterynarze zaliczają mleko kozie, podobnie jak krowie, do napojów, po których koty z nietolerancją laktozy mają dolegliwości żołądkowe, a większość kotów nie toleruje laktozy. Organizacje opiekujące się kotami radzą unikać każdego rodzaju mleka – kot potrzebuje tylko wody.",
+    "cs": "Raději ne. Podle veterinářů způsobuje kozí mléko stejně jako kravské potíže s bříškem u koček s intolerancí laktózy, kterou má většina koček. Charitativní organizace zaměřené na kočky radí vyhýbat se jakémukoli mléku – kočka potřebuje jen vodu."
   },
   "why": {
     "en": "Lactose intolerance is a common food reaction in cats, and VCA vets list diarrhoea, vomiting, bloating and tummy discomfort after cow's or goat's milk as its signs. There are no benefits to a cat having milk. For kittens the sources differ: VCA says goat's milk is not recommended for kittens because it is far too low in protein and fat, and allows pasteurised goat's milk only in an emergency until kitten milk replacer is available, while Cats Protection says never to give it, as kittens find it difficult to digest. We follow the stricter advice.",
@@ -65,7 +69,8 @@
     "es": "La intolerancia a la lactosa es una reacción alimentaria frecuente en los gatos, y los veterinarios de VCA citan como signos la diarrea, los vómitos, la hinchazón y las molestias de barriga tras tomar leche de vaca o de cabra. A un gato la leche no le aporta ningún beneficio. En el caso de los gatitos, las fuentes no coinciden: VCA dice que no se recomienda la leche de cabra para gatitos porque es demasiado pobre en proteína y grasa, y solo admite leche de cabra pasteurizada en una emergencia hasta conseguir leche maternizada para gatitos, mientras que Cats Protection dice que nunca se les dé, porque les cuesta digerirla. Seguimos el consejo más estricto.",
     "pt": "A intolerância à lactose é uma reação alimentar comum nos gatos, e os veterinários da VCA apontam como sinais diarreia, vómitos, inchaço e desconforto na barriga depois de leite de vaca ou de cabra. Os gatos não ganham nada em beber leite. Quanto aos gatinhos, as fontes divergem: a VCA diz que o leite de cabra não é recomendado para gatinhos porque tem muito pouca proteína e gordura, e só o admite, pasteurizado, numa emergência, até haver leite de substituição para gatinhos, enquanto a Cats Protection diz que nunca se deve dar, porque os gatinhos têm dificuldade em digeri-lo. Seguimos o conselho mais prudente.",
     "nl": "Lactose-intolerantie komt bij katten vaak voor als voedselreactie, en dierenartsen van VCA noemen diarree, braken, een opgeblazen buik en buikpijn na koemelk of geitenmelk als de verschijnselen daarvan. Melk heeft voor een kat geen enkel voordeel. Voor kittens verschillen de bronnen: VCA zegt dat geitenmelk niet wordt aanbevolen voor kittens, omdat er veel te weinig eiwit en vet in zit, en staat gepasteuriseerde geitenmelk alleen toe in een noodgeval, totdat er kittenmelk te krijgen is. Cats Protection zegt daarentegen dat je het nooit moet geven, omdat kittens het moeilijk verteren. Wij volgen het strengere advies.",
-    "pl": "Nietolerancja laktozy to częsta reakcja pokarmowa u kotów, a weterynarze z VCA jako objawy po wypiciu mleka krowiego lub koziego wymieniają biegunkę, wymioty, wzdęcia i dyskomfort w brzuchu. Mleko nie daje kotu żadnych korzyści. W przypadku kociąt źródła się różnią: VCA twierdzi, że mleka koziego nie zaleca się kociętom, bo zawiera zdecydowanie za mało białka i tłuszczu, i dopuszcza pasteryzowane mleko kozie tylko awaryjnie, do czasu zdobycia mleka zastępczego dla kociąt, a Cats Protection mówi, żeby nigdy go nie podawać, bo kociętom trudno je strawić. Stosujemy surowszą radę."
+    "pl": "Nietolerancja laktozy to częsta reakcja pokarmowa u kotów, a weterynarze z VCA jako objawy po wypiciu mleka krowiego lub koziego wymieniają biegunkę, wymioty, wzdęcia i dyskomfort w brzuchu. Mleko nie daje kotu żadnych korzyści. W przypadku kociąt źródła się różnią: VCA twierdzi, że mleka koziego nie zaleca się kociętom, bo zawiera zdecydowanie za mało białka i tłuszczu, i dopuszcza pasteryzowane mleko kozie tylko awaryjnie, do czasu zdobycia mleka zastępczego dla kociąt, a Cats Protection mówi, żeby nigdy go nie podawać, bo kociętom trudno je strawić. Stosujemy surowszą radę.",
+    "cs": "Intolerance laktózy je u koček častá reakce na potravu a podle veterinářů z VCA se projevuje průjmem, zvracením, nadýmáním a nepříjemnými pocity v bříšku po kravském nebo kozím mléce. Mléko kočce nepřináší žádný prospěch. U koťat se zdroje liší: podle VCA se kozí mléko koťatům nedoporučuje, protože má příliš málo bílkovin a tuku, a pasterizované kozí mléko připouští jen v nouzi, než seženete náhradu mléka pro koťata; Cats Protection naopak říká, že se nesmí dávat nikdy, protože ho koťata obtížně tráví. Řídíme se přísnější radou."
   },
   "signs": {
     "en": [
@@ -155,6 +160,14 @@
       "Ból lub dyskomfort w brzuchu",
       "Burczenie w brzuchu",
       "Brak energii"
+    ],
+    "cs": [
+      "Průjem",
+      "Zvracení",
+      "Nafouklé bříško",
+      "Bolest nebo nepohodlí v bříšku",
+      "Kručení v břiše",
+      "Malátnost"
     ]
   },
   "what_to_do": {
@@ -168,7 +181,8 @@
     "es": "Deja de darle leche de cabra y ofrécele agua fresca. Si tu gato tiene diarrea después de tomar lácteos, dale comidas pequeñas, suaves y frecuentes, y habla con tu veterinario si se niega a comer; los casos graves pueden necesitar atención veterinaria.",
     "pt": "Deixa de dar leite de cabra e oferece água fresca. Se o teu gato tiver diarreia depois de laticínios, dá-lhe refeições pequenas, suaves e frequentes e fala com o teu veterinário se ele recusar comida – os casos graves podem precisar de atenção veterinária.",
     "nl": "Stop met de geitenmelk en geef vers water. Krijgt je kat na zuivel diarree, geef dan kleine, lichtverteerbare maaltijden, meerdere keren per dag, en neem contact op met je dierenarts als je kat weigert te eten – ernstige gevallen hebben soms dierenartszorg nodig.",
-    "pl": "Przestań podawać mleko kozie i daj świeżą wodę. Jeśli kot ma biegunkę po nabiale, karm go często, małymi, lekkostrawnymi porcjami, a jeśli odmawia jedzenia, porozmawiaj z weterynarzem – ciężkie przypadki mogą wymagać pomocy weterynaryjnej."
+    "pl": "Przestań podawać mleko kozie i daj świeżą wodę. Jeśli kot ma biegunkę po nabiale, karm go często, małymi, lekkostrawnymi porcjami, a jeśli odmawia jedzenia, porozmawiaj z weterynarzem – ciężkie przypadki mogą wymagać pomocy weterynaryjnej.",
+    "cs": "Kozí mléko přestaňte dávat a nabídněte čerstvou vodu. Má-li kočka po mléčných výrobcích průjem, krmte ji častěji a po malých porcích lehce stravitelnými, nedráždivými pokrmy. Pokud kočka odmítá jíst, poraďte se s veterinářem – závažné případy mohou vyžadovat veterinární péči."
   },
   "serving": null,
   "child": {
@@ -182,7 +196,8 @@
     "es": "Los gatos no necesitan leche de cabra ni ninguna otra leche. ¡Un cuenco de agua fresca es la mejor bebida para tu gato!",
     "pt": "Os gatos não precisam de leite de cabra nem de qualquer outro leite. Uma tigela de água fresca é a melhor bebida para o teu gatinho!",
     "nl": "Katten hebben geen geitenmelk of andere melk nodig. Een bakje vers water is het beste drankje voor je kat!",
-    "pl": "Koty nie potrzebują mleka koziego ani żadnego innego mleka. Miska świeżej wody to dla kota najlepszy napój!"
+    "pl": "Koty nie potrzebują mleka koziego ani żadnego innego mleka. Miska świeżej wody to dla kota najlepszy napój!",
+    "cs": "Kočky kozí mléko ani žádné jiné mléko nepotřebují. Miska čerstvé vody je pro tvoji kočku nejlepší nápoj!"
   },
   "faq": [
     {
@@ -197,7 +212,8 @@
         "es": "¿Pueden los gatitos beber leche de cabra?",
         "pt": "Os gatinhos podem beber leite de cabra?",
         "nl": "Mogen kittens geitenmelk drinken?",
-        "pl": "Czy kocięta mogą pić mleko kozie?"
+        "pl": "Czy kocięta mogą pić mleko kozie?",
+        "cs": "Mohou koťata pít kozí mléko?"
       },
       "a": {
         "en": "No. Cats Protection says never give cow's or goat's milk to kittens, as they find it difficult to digest – use substitute kitten milk made specifically for kittens. VCA vets add that goat's milk is far too low in protein and fat for kittens.",
@@ -210,7 +226,8 @@
         "es": "No. Cats Protection dice que nunca se dé leche de vaca ni de cabra a los gatitos, porque les cuesta digerirlas; hay que usar leche maternizada específica para gatitos. Los veterinarios de VCA añaden que la leche de cabra es demasiado pobre en proteína y grasa para los gatitos.",
         "pt": "Não. A Cats Protection diz que nunca se deve dar leite de vaca ou de cabra a gatinhos, porque têm dificuldade em digeri-lo – usa leite de substituição feito especificamente para gatinhos. Os veterinários da VCA acrescentam que o leite de cabra tem muito pouca proteína e gordura para os gatinhos.",
         "nl": "Nee. Cats Protection zegt dat je kittens nooit koemelk of geitenmelk moet geven, omdat ze dat moeilijk verteren. Gebruik in plaats daarvan speciale kittenmelk. Dierenartsen van VCA voegen eraan toe dat er in geitenmelk veel te weinig eiwit en vet zit voor kittens.",
-        "pl": "Nie. Cats Protection mówi, żeby nigdy nie dawać kociętom mleka krowiego ani koziego, bo trudno je strawić – należy podawać zastępcze mleko przeznaczone specjalnie dla kociąt. Weterynarze z VCA dodają, że mleko kozie zawiera zdecydowanie za mało białka i tłuszczu jak na potrzeby kociąt."
+        "pl": "Nie. Cats Protection mówi, żeby nigdy nie dawać kociętom mleka krowiego ani koziego, bo trudno je strawić – należy podawać zastępcze mleko przeznaczone specjalnie dla kociąt. Weterynarze z VCA dodają, że mleko kozie zawiera zdecydowanie za mało białka i tłuszczu jak na potrzeby kociąt.",
+        "cs": "Ne. Cats Protection uvádí, že koťatům se nesmí dávat kravské ani kozí mléko, protože ho obtížně tráví – používejte speciální náhradu mléka určenou pro koťata. Veterináři z VCA dodávají, že kozí mléko má pro koťata příliš málo bílkovin a tuku."
       }
     },
     {
@@ -225,7 +242,8 @@
         "es": "¿Es mejor la leche de cabra que la de vaca para los gatos?",
         "pt": "O leite de cabra é melhor para os gatos do que o de vaca?",
         "nl": "Is geitenmelk beter voor katten dan koemelk?",
-        "pl": "Czy mleko kozie jest dla kotów lepsze niż krowie?"
+        "pl": "Czy mleko kozie jest dla kotów lepsze niż krowie?",
+        "cs": "Je kozí mléko pro kočky lepší než kravské?"
       },
       "a": {
         "en": "Not according to vets: signs of lactose intolerance can appear after either cow's or goat's milk. It is best to avoid giving your cat any type of milk.",
@@ -238,7 +256,8 @@
         "es": "No, según los veterinarios: pueden aparecer signos de intolerancia a la lactosa tanto con leche de vaca como con leche de cabra. Lo mejor es no darle a tu gato ningún tipo de leche.",
         "pt": "Segundo os veterinários, não: depois de leite de vaca ou de cabra podem surgir sinais de intolerância à lactose. O melhor é não dar qualquer tipo de leite ao teu gato.",
         "nl": "Volgens dierenartsen niet: verschijnselen van lactose-intolerantie kunnen na koemelk én na geitenmelk optreden. Je kunt je kat het best geen enkele soort melk geven.",
-        "pl": "Według weterynarzy nie: objawy nietolerancji laktozy mogą pojawić się zarówno po mleku krowim, jak i kozim. Najlepiej nie podawać kotu żadnego rodzaju mleka."
+        "pl": "Według weterynarzy nie: objawy nietolerancji laktozy mogą pojawić się zarówno po mleku krowim, jak i kozim. Najlepiej nie podawać kotu żadnego rodzaju mleka.",
+        "cs": "Podle veterinářů ne: příznaky intolerance laktózy se mohou objevit po kravském i po kozím mléce. Nejlepší je kočce nedávat žádný druh mléka."
       }
     }
   ],
@@ -375,6 +394,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-17",
       "verified_hash": "8c5f6040e9ee3850df00d4f02cc832c3b73093e50de936134a35aa960e841990"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-17",
+      "verified_hash": "7d15d9bae4acc95714452bc0f4a9ba0e8dc8fc3649f3ba99933208c89af1646f"
     }
   }
 }

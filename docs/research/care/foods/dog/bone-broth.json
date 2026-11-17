@@ -12,7 +12,8 @@
     "es": "Caldo de huesos",
     "pt": "Caldo de ossos",
     "nl": "Bottenbouillon",
-    "pl": "Bulion kostny"
+    "pl": "Bulion kostny",
+    "cs": "Kostní vývar"
   },
   "question": {
     "en": "Can dogs have bone broth?",
@@ -25,7 +26,8 @@
     "es": "¿Pueden los perros tomar caldo de huesos?",
     "pt": "Os cães podem tomar caldo de ossos?",
     "nl": "Mogen honden bottenbouillon krijgen?",
-    "pl": "Czy psy mogą pić bulion kostny?"
+    "pl": "Czy psy mogą pić bulion kostny?",
+    "cs": "Mohou psi dostat kostní vývar?"
   },
   "url_slug": {
     "en": "bone-broth",
@@ -38,7 +40,8 @@
     "es": "caldo-de-huesos",
     "pt": "caldo-de-ossos",
     "nl": "bottenbouillon",
-    "pl": "bulion-kostny"
+    "pl": "bulion-kostny",
+    "cs": "kostni-vyvar"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "es": "Sí: un caldo de huesos sencillo, hecho solo con ingredientes seguros para perros, no les hace daño. Es suave y sienta bien a los estómagos sensibles. Retira todos los huesos antes de servirlo, quita la capa de grasa y evita los caldos con cebolla, ajo o sal.",
     "pt": "Sim. O caldo de ossos simples, feito só com ingredientes seguros para cães, não faz mal. É suave e fácil para estômagos sensíveis. Tira todos os ossos antes de servir, retira a camada de gordura e evita caldos com cebola, alho ou sal.",
     "nl": "Ja, een simpele bottenbouillon van ingrediënten die veilig zijn voor honden is prima. Het is mild en goed te verdragen voor een gevoelige maag. Zeef alle botten eruit voordat je de bouillon geeft, haal de vetlaag eraf en laat bouillon met ui, knoflook of zout staan.",
-    "pl": "Tak, bulion kostny bez dodatków, przygotowany ze składników bezpiecznych dla psów, jest w porządku. Jest łagodny i lekkostrawny dla wrażliwych żołądków. Przed podaniem odcedź wszystkie kości, zdejmij warstwę tłuszczu i unikaj bulionów z cebulą, czosnkiem lub solą."
+    "pl": "Tak, bulion kostny bez dodatków, przygotowany ze składników bezpiecznych dla psów, jest w porządku. Jest łagodny i lekkostrawny dla wrażliwych żołądków. Przed podaniem odcedź wszystkie kości, zdejmij warstwę tłuszczu i unikaj bulionów z cebulą, czosnkiem lub solą.",
+    "cs": "Ano, obyčejný kostní vývar z přísad bezpečných pro psy je v pořádku. Je jemný a citlivým žaludkům nevadí. Před podáním z něj vyberte všechny kosti, seberte vrstvu tuku a nepodávejte vývary s cibulí, česnekem nebo solí."
   },
   "why": {
     "en": "Bone broth is a stock made by slowly cooking animal bones at low heat for a long time. It is mild, flavourful and easy on sensitive stomachs, and it can make food more appealing to dogs with a reduced appetite. The risks come from what goes into it: some broths contain additives such as onions, garlic or salt, and cooked bones can splinter and injure your dog or get lodged in the throat.",
@@ -65,7 +69,8 @@
     "es": "El caldo de huesos es el líquido que resulta de cocer huesos de animales a fuego lento durante mucho tiempo. Es suave, sabroso y sienta bien a los estómagos sensibles, y puede hacer que la comida resulte más apetecible para los perros con poco apetito. Los riesgos están en lo que se le añade: algunos caldos llevan aditivos como cebolla, ajo o sal, y los huesos cocinados pueden astillarse y herir a tu perro o quedarse atascados en la garganta.",
     "pt": "O caldo de ossos faz-se cozendo ossos de animais em lume brando durante muito tempo. É suave, saboroso e fácil para estômagos sensíveis, e pode tornar a comida mais apetitosa para cães com pouco apetite. Os riscos vêm do que se lhe acrescenta: alguns caldos levam aditivos como cebola, alho ou sal, e os ossos cozinhados podem lascar e ferir o teu cão ou ficar presos na garganta.",
     "nl": "Bottenbouillon is een bouillon die je maakt door dierlijke botten lang op laag vuur te laten sudderen. Het is mild, smaakvol en goed te verdragen voor een gevoelige maag, en het kan eten aantrekkelijker maken voor honden met weinig eetlust. De risico’s zitten in wat erin gaat: sommige bouillons bevatten toevoegingen zoals ui, knoflook of zout, en gekookte botten kunnen versplinteren en je hond verwonden of in zijn keel blijven steken.",
-    "pl": "Bulion kostny to wywar powstający przez długie, powolne gotowanie kości zwierzęcych na małym ogniu. Jest łagodny, aromatyczny i lekkostrawny dla wrażliwych żołądków, a psom ze słabszym apetytem może uatrakcyjnić jedzenie. Ryzyko wynika z tego, co się do niego dodaje: niektóre buliony zawierają dodatki, takie jak cebula, czosnek czy sól, a ugotowane kości mogą pękać na ostre odłamki, zranić psa lub utknąć mu w gardle."
+    "pl": "Bulion kostny to wywar powstający przez długie, powolne gotowanie kości zwierzęcych na małym ogniu. Jest łagodny, aromatyczny i lekkostrawny dla wrażliwych żołądków, a psom ze słabszym apetytem może uatrakcyjnić jedzenie. Ryzyko wynika z tego, co się do niego dodaje: niektóre buliony zawierają dodatki, takie jak cebula, czosnek czy sól, a ugotowane kości mogą pękać na ostre odłamki, zranić psa lub utknąć mu w gardle.",
+    "cs": "Kostní vývar vzniká dlouhým a pomalým vařením zvířecích kostí na mírném ohni. Je jemný, chutný a citlivým žaludkům nevadí a psům se sníženou chutí k jídlu může udělat krmivo lákavější. Rizika spočívají v tom, co se do vývaru přidává: některé obsahují přísady, jako je cibule, česnek nebo sůl, a tepelně upravené kosti se mohou rozštípnout a psa zranit nebo mu uvíznout v krku."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "es": "Si tu perro ha tomado un caldo con cebolla, ajo o mucha sal, consulta nuestras páginas sobre la cebolla, el ajo y la sal. Si tu perro se ha tragado un hueso cocinado, consulta nuestra página sobre los huesos cocinados. El caldo de huesos no soluciona por sí solo los problemas de articulaciones, así que habla con tu veterinario.",
     "pt": "Se o teu cão tomou caldo com cebola, alho ou muito sal, vai às nossas páginas da cebola, do alho e do sal. Se engoliu um osso cozinhado, vai à nossa página dos ossos cozinhados. O caldo de ossos não resolve sozinho problemas nas articulações, por isso fala com o teu veterinário.",
     "nl": "Heeft je hond bouillon met ui, knoflook of veel zout gehad, bekijk dan onze pagina’s over ui, knoflook en zout. Heeft je hond een gekookt bot ingeslikt, bekijk dan onze pagina over gekookte botten. Bottenbouillon lost gewrichtsproblemen niet op, dus bespreek die met je dierenarts.",
-    "pl": "Jeśli pies dostał bulion z cebulą, czosnkiem lub dużą ilością soli, zajrzyj na nasze strony o cebuli, czosnku i soli. Jeśli połknął ugotowaną kość, zajrzyj na stronę o gotowanych kościach. Bulion kostny sam nie rozwiąże problemów ze stawami, więc porozmawiaj o nich z weterynarzem."
+    "pl": "Jeśli pies dostał bulion z cebulą, czosnkiem lub dużą ilością soli, zajrzyj na nasze strony o cebuli, czosnku i soli. Jeśli połknął ugotowaną kość, zajrzyj na stronę o gotowanych kościach. Bulion kostny sam nie rozwiąże problemów ze stawami, więc porozmawiaj o nich z weterynarzem.",
+    "cs": "Pokud pes dostal vývar s cibulí, česnekem nebo velkým množstvím soli, podívejte se na naše stránky o cibuli, česneku a soli. Pokud pes spolkl tepelně upravenou kost, podívejte se na naši stránku o tepelně upravených kostech. Kostní vývar sám o sobě problémy s klouby nevyřeší, proto je řešte s veterinářem."
   },
   "serving": {
     "en": "Use only natural, dog-safe ingredients, with no onions, garlic or salt. After cooking, refrigerate the broth, remove the hardened layer of fat from the top and strain out every bone. Serve it on its own or mixed into dry food.",
@@ -92,7 +98,8 @@
     "es": "Usa solo ingredientes naturales y seguros para perros, sin cebolla, ajo ni sal. Después de cocinarlo, guarda el caldo en la nevera, quita la capa de grasa endurecida de la superficie y retira todos los huesos. Puedes dárselo solo o mezclado con pienso.",
     "pt": "Usa só ingredientes naturais e seguros para cães, sem cebola, alho nem sal. Depois de cozinhar, deixa o caldo arrefecer no frigorífico, retira a camada de gordura endurecida à superfície e tira todos os ossos. Serve-o sozinho ou misturado com a ração.",
     "nl": "Gebruik alleen natuurlijke ingrediënten die veilig zijn voor honden, zonder ui, knoflook of zout. Zet de bouillon na het koken in de koelkast, schep de verharde vetlaag er van boven af en zeef alle botten eruit. Geef de bouillon puur of meng hem door het droge voer.",
-    "pl": "Używaj tylko naturalnych składników bezpiecznych dla psów, bez cebuli, czosnku i soli. Po ugotowaniu schłódź bulion w lodówce, zdejmij z wierzchu stwardniałą warstwę tłuszczu i odcedź wszystkie kości. Podaj go samego lub wymieszany z suchą karmą."
+    "pl": "Używaj tylko naturalnych składników bezpiecznych dla psów, bez cebuli, czosnku i soli. Po ugotowaniu schłódź bulion w lodówce, zdejmij z wierzchu stwardniałą warstwę tłuszczu i odcedź wszystkie kości. Podaj go samego lub wymieszany z suchą karmą.",
+    "cs": "Používejte jen přírodní přísady bezpečné pro psy, bez cibule, česneku a soli. Po uvaření vývar uložte do lednice, seberte z hladiny ztuhlou vrstvu tuku a vyberte všechny kosti. Podávejte ho samotný nebo smíchaný se suchým krmivem."
   },
   "child": {
     "en": "Bone broth can be a tasty treat for dogs. A grown-up makes it and takes out every bone first, because bones aren't safe for dogs.",
@@ -105,7 +112,8 @@
     "es": "El caldo de huesos puede ser un premio rico para los perros. Un adulto lo prepara y le quita antes todos los huesos, porque no son seguros para los perros.",
     "pt": "O caldo de ossos pode ser um petisco saboroso para os cães. Um adulto prepara-o e tira primeiro todos os ossos, porque os ossos não são seguros para os cães.",
     "nl": "Bottenbouillon kan een lekker snoepje zijn voor honden. Een volwassene maakt de bouillon en haalt er eerst alle botten uit, want botten zijn niet veilig voor honden.",
-    "pl": "Bulion kostny może być dla psa pysznym smakołykiem. Dorosły go przygotowuje i najpierw wyjmuje wszystkie kości, bo kości nie są dla psów bezpieczne."
+    "pl": "Bulion kostny może być dla psa pysznym smakołykiem. Dorosły go przygotowuje i najpierw wyjmuje wszystkie kości, bo kości nie są dla psów bezpieczne.",
+    "cs": "Kostní vývar může být pro psy chutný pamlsek. Dospělý ho uvaří a nejdřív z něj vyndá všechny kosti, protože kosti pro psy nejsou bezpečné."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "es": "¿En qué se diferencia el caldo de huesos del caldo normal?",
         "pt": "Qual é a diferença entre o caldo de ossos e o caldo normal?",
         "nl": "Wat is het verschil tussen bottenbouillon en gewone bouillon?",
-        "pl": "Czym bulion kostny różni się od zwykłego bulionu?"
+        "pl": "Czym bulion kostny różni się od zwykłego bulionu?",
+        "cs": "Čím se kostní vývar liší od obyčejného vývaru?"
       },
       "a": {
         "en": "Bone broth is a stock liquid made by slowly cooking animal bones at low heat for an extended period. For everyday broth and stock cubes, see our broth page.",
@@ -133,7 +142,8 @@
         "es": "El caldo de huesos es el líquido que resulta de cocer huesos de animales a fuego lento durante mucho tiempo. Para el caldo de uso diario y las pastillas de caldo, consulta nuestra página sobre el caldo.",
         "pt": "O caldo de ossos faz-se cozendo ossos de animais em lume brando durante muito tempo. Para o caldo do dia a dia e os cubos de caldo, vai à nossa página do caldo.",
         "nl": "Bottenbouillon is een bouillon die je maakt door dierlijke botten lange tijd op laag vuur te laten sudderen. Voor gewone bouillon en bouillonblokjes kun je terecht op onze bouillonpagina.",
-        "pl": "Bulion kostny to wywar powstający przez długie, powolne gotowanie kości zwierzęcych na małym ogniu. O codziennym bulionie i kostkach bulionowych przeczytasz na naszej stronie o bulionie."
+        "pl": "Bulion kostny to wywar powstający przez długie, powolne gotowanie kości zwierzęcych na małym ogniu. O codziennym bulionie i kostkach bulionowych przeczytasz na naszej stronie o bulionie.",
+        "cs": "Kostní vývar vzniká dlouhým pomalým vařením zvířecích kostí na mírném ohni. O běžném vývaru a bujónových kostkách se dočtete na naší stránce o vývaru."
       }
     },
     {
@@ -148,7 +158,8 @@
         "es": "¿Puedo usar caldo de huesos comprado?",
         "pt": "Posso usar caldo de ossos comprado?",
         "nl": "Mag ik bottenbouillon uit de winkel gebruiken?",
-        "pl": "Czy mogę dać psu bulion kostny ze sklepu?"
+        "pl": "Czy mogę dać psu bulion kostny ze sklepu?",
+        "cs": "Mohu použít kostní vývar z obchodu?"
       },
       "a": {
         "en": "Look for one with natural, dog-safe ingredients, because some contain additives for preservation and taste, such as onions, garlic or salt.",
@@ -161,7 +172,8 @@
         "es": "Busca uno con ingredientes naturales y seguros para perros, porque algunos llevan aditivos para conservarlo y darle sabor, como cebolla, ajo o sal.",
         "pt": "Procura um feito com ingredientes naturais e seguros para cães, porque alguns levam conservantes e aromatizantes, como cebola, alho ou sal.",
         "nl": "Kies een bouillon met natuurlijke ingrediënten die veilig zijn voor honden, want sommige bevatten toevoegingen als ui, knoflook of zout om ze langer houdbaar en smakelijker te maken.",
-        "pl": "Szukaj bulionu z naturalnych składników bezpiecznych dla psów, bo niektóre zawierają dodatki konserwujące i poprawiające smak, takie jak cebula, czosnek lub sól."
+        "pl": "Szukaj bulionu z naturalnych składników bezpiecznych dla psów, bo niektóre zawierają dodatki konserwujące i poprawiające smak, takie jak cebula, czosnek lub sól.",
+        "cs": "Hledejte takový, který obsahuje přírodní přísady bezpečné pro psy, protože některé obsahují přísady pro konzervaci a chuť, například cibuli, česnek nebo sůl."
       }
     },
     {
@@ -176,7 +188,8 @@
         "es": "¿El caldo de huesos ayuda a las articulaciones de mi perro?",
         "pt": "O caldo de ossos ajuda as articulações do meu cão?",
         "nl": "Helpt bottenbouillon bij de gewrichten van mijn hond?",
-        "pl": "Czy bulion kostny pomaga na stawy psa?"
+        "pl": "Czy bulion kostny pomaga na stawy psa?",
+        "cs": "Pomáhá kostní vývar psím kloubům?"
       },
       "a": {
         "en": "The AKC says the collagen in bone broth contributes to joint health, but bone broth won't cure joint problems without other treatments, so contact your vet.",
@@ -189,7 +202,8 @@
         "es": "Según el AKC, el colágeno del caldo de huesos contribuye a la salud de las articulaciones, pero el caldo de huesos no cura los problemas articulares sin otros tratamientos, así que consulta con tu veterinario.",
         "pt": "A AKC diz que o colagénio do caldo de ossos ajuda a manter as articulações saudáveis, mas o caldo de ossos não cura problemas articulares sem outros tratamentos, por isso fala com o teu veterinário.",
         "nl": "Volgens de AKC draagt het collageen in bottenbouillon bij aan gezonde gewrichten, maar zonder andere behandelingen lost bottenbouillon gewrichtsproblemen niet op. Neem daarom contact op met je dierenarts.",
-        "pl": "AKC podaje, że kolagen w bulionie kostnym wspiera zdrowie stawów, ale bulion kostny nie wyleczy problemów ze stawami bez innego leczenia, więc skontaktuj się z weterynarzem."
+        "pl": "AKC podaje, że kolagen w bulionie kostnym wspiera zdrowie stawów, ale bulion kostny nie wyleczy problemów ze stawami bez innego leczenia, więc skontaktuj się z weterynarzem.",
+        "cs": "AKC uvádí, že kolagen v kostním vývaru přispívá ke zdraví kloubů, ale kostní vývar bez další léčby problémy s klouby nevyléčí, proto se obraťte na veterináře."
       }
     }
   ],
@@ -307,6 +321,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-17",
       "verified_hash": "7a91b31f40090ad18cd76ad9257c25f3b0d056e2dcd7340036610dffae396f72"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-17",
+      "verified_hash": "dcf423e427447b9dd9d332c77a4b5d551f9e271024380e4a5eba7a3a54089a55"
     }
   }
 }

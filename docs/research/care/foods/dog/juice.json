@@ -12,7 +12,8 @@
     "es": "Zumo de fruta",
     "pt": "Sumo de fruta",
     "nl": "Vruchtensap",
-    "pl": "Sok owocowy"
+    "pl": "Sok owocowy",
+    "cs": "Ovocný džus"
   },
   "question": {
     "en": "Can dogs drink fruit juice?",
@@ -25,7 +26,8 @@
     "es": "¿Pueden los perros beber zumo de fruta?",
     "pt": "Os cães podem beber sumo de fruta?",
     "nl": "Mogen honden vruchtensap drinken?",
-    "pl": "Czy psy mogą pić sok owocowy?"
+    "pl": "Czy psy mogą pić sok owocowy?",
+    "cs": "Mohou psi pít ovocný džus?"
   },
   "url_slug": {
     "en": "juice",
@@ -38,7 +40,8 @@
     "es": "zumo-de-fruta",
     "pt": "sumo-de-fruta",
     "nl": "vruchtensap",
-    "pl": "sok-owocowy"
+    "pl": "sok-owocowy",
+    "cs": "ovocny-dzus"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "es": "Es mejor no dárselo. La fruta entera es mejor premio que el zumo. El zumo de naranja, por ejemplo, no es tóxico, pero tiene azúcares concentrados y no aporta la fibra de la fruta. El zumo de limón tiene mucho ácido cítrico, que es tóxico para los perros, y las bebidas sin azúcar pueden contener xilitol.",
     "pt": "É melhor não. A fruta inteira é mais indicada do que o sumo. O sumo de laranja, por exemplo, não é tóxico, mas tem açúcares concentrados e perde a fibra da fruta. O sumo de limão tem muito ácido cítrico, que é tóxico para os cães, e as bebidas sem açúcar podem conter xilitol.",
     "nl": "Liever niet. Heel fruit is een beter tussendoortje dan sap. Sinaasappelsap is bijvoorbeeld niet giftig, maar bevat geconcentreerde suikers en niet de vezels van het fruit. Citroensap bevat veel citroenzuur, dat giftig is voor honden, en suikervrije dranken kunnen xylitol bevatten.",
-    "pl": "Lepiej nie. Cały owoc to lepsza przekąska niż sok. Sok pomarańczowy na przykład nie jest toksyczny, ale zawiera skoncentrowane cukry i nie ma błonnika, który jest w całym owocu. Sok z cytryny zawiera dużo kwasu cytrynowego, który jest toksyczny dla psów, a napoje bez cukru mogą zawierać ksylitol."
+    "pl": "Lepiej nie. Cały owoc to lepsza przekąska niż sok. Sok pomarańczowy na przykład nie jest toksyczny, ale zawiera skoncentrowane cukry i nie ma błonnika, który jest w całym owocu. Sok z cytryny zawiera dużo kwasu cytrynowego, który jest toksyczny dla psów, a napoje bez cukru mogą zawierać ksylitol.",
+    "cs": "Raději ne. Celé ovoce je pro psa lepším pamlskem než džus. Pomerančový džus například není jedovatý, ale obsahuje koncentrované cukry a žádnou vlákninu z ovoce. Citronová šťáva je bohatá na kyselinu citronovou, která je pro psy toxická, a nápoje bez cukru mohou obsahovat xylitol."
   },
   "why": {
     "en": "Juice contains concentrated natural sugars and lacks the fibre of whole fruit; because it is higher in sugar and easy to drink in large amounts, it may increase the risk of digestive upset. Fruit juice concentrates are high in fructose, which may increase the risk of obesity. Lemon juice is a concentrated form of the fruit with high amounts of citric acid, which is toxic to dogs. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -65,7 +69,8 @@
     "es": "El zumo contiene azúcares naturales concentrados y no tiene la fibra de la fruta entera; como lleva más azúcar y es fácil beber mucho, puede aumentar el riesgo de molestias digestivas. Los zumos concentrados de fruta son ricos en fructosa, lo que puede aumentar el riesgo de obesidad. El zumo de limón es una versión concentrada de la fruta, con mucho ácido cítrico, que es tóxico para los perros. Muchas bebidas sin azúcar contienen xilitol, que es muy tóxico para los perros.",
     "pt": "O sumo tem açúcares naturais concentrados e perde a fibra da fruta inteira; como tem mais açúcar e se bebe com facilidade em grandes quantidades, pode aumentar o risco de mal-estar digestivo. Os concentrados de sumo de fruta são ricos em frutose, o que pode aumentar o risco de obesidade. O sumo de limão é a fruta em forma concentrada, com muito ácido cítrico, que é tóxico para os cães. Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães.",
     "nl": "Sap bevat geconcentreerde natuurlijke suikers en mist de vezels van heel fruit. Omdat er meer suiker in zit en je het makkelijk in grote hoeveelheden drinkt, kan het de kans op darmklachten vergroten. Geconcentreerd vruchtensap bevat veel fructose, wat de kans op obesitas kan vergroten. Citroensap is een geconcentreerde vorm van de vrucht met veel citroenzuur, dat giftig is voor honden. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden.",
-    "pl": "Sok zawiera skoncentrowane cukry naturalne i nie ma błonnika całego owocu; ponieważ ma więcej cukru i łatwo wypić go dużo, może zwiększać ryzyko rozstroju żołądka i jelit. Soki z koncentratu mają dużo fruktozy, co może zwiększać ryzyko otyłości. Sok z cytryny to skoncentrowana postać owocu z dużą ilością kwasu cytrynowego, który jest toksyczny dla psów. Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów."
+    "pl": "Sok zawiera skoncentrowane cukry naturalne i nie ma błonnika całego owocu; ponieważ ma więcej cukru i łatwo wypić go dużo, może zwiększać ryzyko rozstroju żołądka i jelit. Soki z koncentratu mają dużo fruktozy, co może zwiększać ryzyko otyłości. Sok z cytryny to skoncentrowana postać owocu z dużą ilością kwasu cytrynowego, który jest toksyczny dla psów. Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów.",
+    "cs": "Džus obsahuje koncentrované přírodní cukry a chybí mu vláknina z celého ovoce; protože má víc cukru a snadno se vypije ve velkém množství, může zvyšovat riziko zažívacích potíží. Koncentráty ovocných šťáv mají vysoký obsah fruktózy, která může zvyšovat riziko obezity. Citronová šťáva je koncentrovaná podoba ovoce s vysokým obsahem kyseliny citronové, která je pro psy toxická. Mnoho nápojů bez cukru obsahuje xylitol, který je pro psy vysoce toxický."
   },
   "signs": {
     "en": [
@@ -100,6 +105,9 @@
     ],
     "pl": [
       "Rozstrój żołądka i jelit"
+    ],
+    "cs": [
+      "Zažívací potíže"
     ]
   },
   "what_to_do": {
@@ -113,7 +121,8 @@
     "es": "Ofrécele agua fresca y vigila si aparecen signos de molestias digestivas. Si la bebida era sin azúcar o puede contener xilitol, consulta enseguida nuestra página sobre el xilitol. Si tu perro ha tomado zumo de uva, consulta nuestra página sobre las uvas.",
     "pt": "Dá-lhe antes água fresca e observa se aparecem sinais de mal-estar digestivo. Se a bebida era sem açúcar ou pode conter xilitol, vai imediatamente à nossa página do xilitol. Se o teu cão bebeu sumo de uva, vai à nossa página das uvas.",
     "nl": "Geef in plaats daarvan vers water en let op verschijnselen van darmklachten bij je hond. Was de drank suikervrij of bevat die mogelijk xylitol, bekijk dan meteen onze pagina over xylitol. Heeft je hond druivensap gehad, bekijk dan onze pagina over druiven.",
-    "pl": "Daj zamiast tego świeżą wodę i obserwuj, czy pies nie ma objawów rozstroju żołądka i jelit. Jeśli napój był bez cukru lub mógł zawierać ksylitol, od razu zajrzyj na naszą stronę o ksylitolu. Jeśli pies wypił sok z winogron, zajrzyj na naszą stronę o winogronach."
+    "pl": "Daj zamiast tego świeżą wodę i obserwuj, czy pies nie ma objawów rozstroju żołądka i jelit. Jeśli napój był bez cukru lub mógł zawierać ksylitol, od razu zajrzyj na naszą stronę o ksylitolu. Jeśli pies wypił sok z winogron, zajrzyj na naszą stronę o winogronach.",
+    "cs": "Nabídněte místo toho čerstvou vodu a sledujte, zda se u psa neprojeví příznaky zažívacích potíží. Pokud byl nápoj bez cukru nebo v něm může být xylitol, ihned se podívejte na naši stránku o xylitolu. Pokud pes vypil hroznový džus, podívejte se na naši stránku o hroznech."
   },
   "serving": null,
   "child": {
@@ -127,7 +136,8 @@
     "es": "El zumo tiene demasiado azúcar para los perros. ¡Es mucho mejor un trocito de fruta fresca apta para perros o un cuenco de agua fresca!",
     "pt": "O sumo tem açúcar a mais para os cães. Um pedacinho de fruta fresca que seja segura para cães ou uma tigela de água fresca é um petisco bem melhor!",
     "nl": "Sap is te zoet voor honden. Een klein stukje vers fruit dat veilig is voor honden of een bak vers water is veel beter!",
-    "pl": "Sok jest dla psów zbyt słodki. Mały kawałek świeżego owocu bezpiecznego dla psów albo miska świeżej wody to dużo lepszy smakołyk!"
+    "pl": "Sok jest dla psów zbyt słodki. Mały kawałek świeżego owocu bezpiecznego dla psów albo miska świeżej wody to dużo lepszy smakołyk!",
+    "cs": "Džus je pro psy příliš sladký. Malý kousek čerstvého ovoce, které psi smějí jíst, nebo miska čerstvé vody je mnohem lepší pamlsek!"
   },
   "faq": [
     {
@@ -142,7 +152,8 @@
         "es": "¿Es tóxico el zumo de naranja para los perros?",
         "pt": "O sumo de laranja é tóxico para os cães?",
         "nl": "Is sinaasappelsap giftig voor honden?",
-        "pl": "Czy sok pomarańczowy jest toksyczny dla psów?"
+        "pl": "Czy sok pomarańczowy jest toksyczny dla psów?",
+        "cs": "Je pomerančový džus pro psy jedovatý?"
       },
       "a": {
         "en": "No, but it is not recommended because it contains concentrated sugars and lacks the fibre found in whole fruit. If you want to share the taste of oranges, offer small pieces of fresh fruit instead.",
@@ -155,7 +166,8 @@
         "es": "No, pero no se recomienda: tiene azúcares concentrados y no aporta la fibra de la fruta entera. Si quieres que pruebe el sabor de la naranja, ofrécele mejor trocitos de fruta fresca.",
         "pt": "Não, mas não é recomendado, porque tem açúcares concentrados e perde a fibra da fruta inteira. Se quiseres que o teu cão experimente o sabor da laranja, dá-lhe antes uns pedacinhos de fruta fresca.",
         "nl": "Nee, maar het wordt niet aanbevolen omdat het geconcentreerde suikers bevat en de vezels van heel fruit mist. Wil je je hond laten proeven van sinaasappel, geef dan kleine stukjes vers fruit.",
-        "pl": "Nie, ale nie jest zalecany, bo zawiera skoncentrowane cukry i nie ma błonnika, który jest w całym owocu. Jeśli chcesz, żeby pies poznał smak pomarańczy, daj mu małe kawałki świeżego owocu."
+        "pl": "Nie, ale nie jest zalecany, bo zawiera skoncentrowane cukry i nie ma błonnika, który jest w całym owocu. Jeśli chcesz, żeby pies poznał smak pomarańczy, daj mu małe kawałki świeżego owocu.",
+        "cs": "Ne, ale nedoporučuje se, protože obsahuje koncentrované cukry a chybí mu vláknina, kterou má celé ovoce. Pokud se chcete se psem podělit o chuť pomerančů, nabídněte mu raději malé kousky čerstvého ovoce."
       }
     },
     {
@@ -170,7 +182,8 @@
         "es": "¿Y el zumo de uva?",
         "pt": "E o sumo de uva?",
         "nl": "Hoe zit het met druivensap?",
-        "pl": "A sok z winogron?"
+        "pl": "A sok z winogron?",
+        "cs": "A co hroznový džus?"
       },
       "a": {
         "en": "Sources disagree. VCA says grape juice does not appear to cause the poisoning seen with grapes and raisins, while FirstVet says grape juice should never be given to dogs. We follow the stricter advice: don't give it.",
@@ -183,7 +196,8 @@
         "es": "Las fuentes no coinciden. VCA dice que el zumo de uva no parece causar la intoxicación que provocan las uvas y las pasas, mientras que FirstVet dice que nunca se debe dar zumo de uva a los perros. Seguimos el consejo más estricto: no se lo des.",
         "pt": "As fontes não concordam. A VCA diz que o sumo de uva não parece causar a intoxicação que se vê com as uvas e as passas, enquanto a FirstVet diz que nunca se deve dar sumo de uva aos cães. Seguimos o conselho mais prudente: não dês.",
         "nl": "De bronnen spreken elkaar tegen. VCA zegt dat druivensap niet lijkt te leiden tot de vergiftiging die je bij druiven en rozijnen ziet, terwijl FirstVet zegt dat je honden nooit druivensap moet geven. Wij volgen het strengere advies: geef het niet.",
-        "pl": "Źródła się nie zgadzają. VCA twierdzi, że sok z winogron nie wydaje się wywoływać zatrucia, jakie powodują winogrona i rodzynki, a FirstVet – że soku z winogron nigdy nie należy podawać psom. Stosujemy surowszą radę: nie dawaj go."
+        "pl": "Źródła się nie zgadzają. VCA twierdzi, że sok z winogron nie wydaje się wywoływać zatrucia, jakie powodują winogrona i rodzynki, a FirstVet – że soku z winogron nigdy nie należy podawać psom. Stosujemy surowszą radę: nie dawaj go.",
+        "cs": "Zdroje se neshodují. VCA uvádí, že hroznový džus podle všeho nezpůsobuje otravu, jakou známe po hroznech a rozinkách, zatímco FirstVet říká, že hroznový džus se psům nesmí dávat nikdy. Řídíme se přísnější radou: nedávejte ho."
       }
     }
   ],
@@ -319,6 +333,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-17",
       "verified_hash": "325478c78af04873e6423e35fb96e795923e449707489f65eb0e57e6f786027b"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-17",
+      "verified_hash": "d146ceec919e1bb9257245950529ce528a8e50d8ffaae6395892d8bb00b645e1"
     }
   }
 }
