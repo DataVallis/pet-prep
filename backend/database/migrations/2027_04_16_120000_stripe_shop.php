@@ -18,15 +18,24 @@ use Illuminate\Support\Facades\Schema;
  *  - gift_vouchers: Lemon Squeezy columns replaced — the code is ours now (hash + encrypted code).
  *  - lemonsqueezy_events: dropped (Lemon Squeezy never sold anything for PetPrep).
  *
- * Refuses to run when a Lemon Squeezy voucher row exists (none should: the LS store was never
- * approved) — a real voucher must never be rewritten silently.
+ * Deletes the Lemon Squeezy test (SANDBOX) vouchers and their unassigned credits; refuses to run when a
+ * real voucher exists or a test credit is used by a pet — a real voucher is never rewritten silently.
  */
 return new class extends Migration
 {
     public function up(): void
     {
-        if (Schema::hasTable('gift_vouchers') && DB::table('gift_vouchers')->exists()) {
-            throw new RuntimeException('Refusing M6-S09: gift_vouchers has Lemon Squeezy rows. Decide with David first.');
+        if (Schema::hasTable('gift_vouchers')) {
+            // Test (SANDBOX) vouchers of the Lemon Squeezy era go, with their credit when no pet uses it
+            // (David 2026-11-17: production held one — voucher #1 / credit #8 of a redeem test).
+            $sandbox = DB::table('gift_vouchers')->where('environment', 'SANDBOX')->pluck('id');
+            $usedCredit = DB::table('challenge_credits')->whereIn('gift_voucher_id', $sandbox)->whereNotNull('pet_id')->exists();
+            if ($usedCredit || DB::table('gift_vouchers')->where('environment', '!=', 'SANDBOX')->exists()) {
+                // A real voucher, or a test credit a pet uses, is never rewritten silently.
+                throw new RuntimeException('Refusing M6-S09: gift_vouchers has a real Lemon Squeezy row or a test credit in use. Decide with David first.');
+            }
+            DB::table('challenge_credits')->whereIn('gift_voucher_id', $sandbox)->delete();
+            DB::table('gift_vouchers')->whereIn('id', $sandbox)->delete();
         }
 
         Schema::create('shop_products', function (Blueprint $table) {
