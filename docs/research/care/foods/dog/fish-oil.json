@@ -15,7 +15,8 @@
     "pl": "Olej rybi",
     "cs": "Rybí olej",
     "hr": "Riblje ulje",
-    "sv": "Fiskolja"
+    "sv": "Fiskolja",
+    "da": "Fiskeolie"
   },
   "question": {
     "en": "Can dogs have fish oil?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą dostać olej rybi?",
     "cs": "Mohou psi dostat rybí olej?",
     "hr": "Smiju li psi dobivati riblje ulje?",
-    "sv": "Får hundar äta fiskolja?"
+    "sv": "Får hundar äta fiskolja?",
+    "da": "Må hunde få fiskeolie?"
   },
   "url_slug": {
     "en": "fish-oil",
@@ -47,7 +49,8 @@
     "pl": "olej-rybi",
     "cs": "rybi-olej",
     "hr": "riblje-ulje",
-    "sv": "fiskolja"
+    "sv": "fiskolja",
+    "da": "fiskeolie"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Tylko jeśli zaleci to weterynarz. Olej rybi to suplement, a nie przekąska, i weterynarze radzą, zawsze skonsultować się z lekarzem weterynarii, zanim podasz psu jakikolwiek suplement. Może powodować skutki uboczne, takie jak biegunka, wymioty, gazy i rybi zapach z pyska.",
     "cs": "Jen pokud ho doporučí veterinář. Rybí olej je doplněk stravy, ne pamlsek, a veterináři radí vždy se před podáním jakéhokoli doplňku poradit s veterinářem. Může způsobit vedlejší účinky, například průjem, zvracení, plynatost a rybí zápach z tlamy.",
     "hr": "Samo ako to preporuči veterinar. Riblje ulje je dodatak prehrani, a ne grickalica, a veterinari savjetuju da se prije davanja bilo kakvog dodatka psu uvijek posavjetuješ s veterinarom. Može izazvati nuspojave poput proljeva, povraćanja, plinova i zadaha po ribi.",
-    "sv": "Bara om din veterinär rekommenderar det. Fiskolja är ett kosttillskott, ingen godbit, och veterinärer rekommenderar att du alltid frågar veterinären innan du ger hunden något tillskott. Det kan ge biverkningar som diarré, kräkningar, gaser och andedräkt som luktar fisk."
+    "sv": "Bara om din veterinär rekommenderar det. Fiskolja är ett kosttillskott, ingen godbit, och veterinärer rekommenderar att du alltid frågar veterinären innan du ger hunden något tillskott. Det kan ge biverkningar som diarré, kräkningar, gaser och andedräkt som luktar fisk.",
+    "da": "Kun hvis din dyrlæge anbefaler det. Fiskeolie er et tilskud og ikke en godbid, og dyrlæger anbefaler altid at tale med dyrlægen, før man giver sin hund kosttilskud. Den kan give bivirkninger som diarré, opkast, luft i maven og fiskeånde."
   },
   "why": {
     "en": "Fish oil comes from oily fish such as salmon, mackerel and sardines, and its omega-3 fatty acids have been used to support a dog's skin, coat, joints and heart. But it is a health product: possible side effects include diarrhoea, vomiting, gas, fishy-smelling breath or skin and, in rare cases, a higher bleeding risk. VCA advises caution in dogs taking blood thinners, dogs with a clotting disorder, diabetes or a history of pancreatitis. Just because a product is natural does not mean it is safe.",
@@ -80,7 +84,8 @@
     "pl": "Olej rybi pochodzi z tłustych ryb, takich jak łosoś, makrela i sardynki, a zawarte w nim kwasy tłuszczowe omega-3 stosuje się, by wspierać skórę, sierść, stawy i serce psa. To jednak produkt zdrowotny: możliwe skutki uboczne to biegunka, wymioty, gazy, rybi zapach z pyska lub skóry, a w rzadkich przypadkach większe ryzyko krwawień. VCA zaleca ostrożność u psów przyjmujących leki rozrzedzające krew, z zaburzeniami krzepnięcia, cukrzycą lub przebytym zapaleniem trzustki. To, że produkt jest naturalny, nie znaczy, że jest bezpieczny.",
     "cs": "Rybí olej se získává z tučných ryb, jako je losos, makrela a sardinky, a jeho omega-3 mastné kyseliny se používají na podporu psí kůže, srsti, kloubů a srdce. Je to ale zdravotní přípravek: mezi možné vedlejší účinky patří průjem, zvracení, plynatost, rybí zápach z tlamy nebo z kůže a ve vzácných případech vyšší riziko krvácení. VCA radí k opatrnosti u psů, kteří užívají léky na ředění krve, mají poruchu srážlivosti, cukrovku nebo prodělali zánět slinivky břišní. To, že je přípravek přírodní, neznamená, že je bezpečný.",
     "hr": "Riblje ulje dobiva se iz masnih riba poput lososa, skuše i sardina, a njegove se omega-3 masne kiseline koriste kao potpora zdravlju kože, dlake, zglobova i srca psa. No to je zdravstveni proizvod: moguće nuspojave su proljev, povraćanje, plinovi, dah ili koža koji mirišu po ribi te, u rijetkim slučajevima, povećan rizik od krvarenja. VCA savjetuje oprez kod pasa koji uzimaju razrjeđivače krvi, imaju poremećaj zgrušavanja krvi ili dijabetes ili su već imali upalu gušterače. To što je neki proizvod prirodan ne znači da je siguran.",
-    "sv": "Fiskolja utvinns ur fet fisk som lax, makrill och sardiner, och dess omega-3-fettsyror har använts för att stödja hundens hud, päls, leder och hjärta. Men det är en hälsoprodukt: möjliga biverkningar är diarré, kräkningar, gaser, andedräkt eller hud som luktar fisk och, i sällsynta fall, ökad blödningsrisk. VCA råder till försiktighet för hundar som får blodförtunnande läkemedel och hundar med koagulationsrubbning, diabetes eller tidigare bukspottkörtelinflammation. Att en produkt är naturlig betyder inte att den är säker."
+    "sv": "Fiskolja utvinns ur fet fisk som lax, makrill och sardiner, och dess omega-3-fettsyror har använts för att stödja hundens hud, päls, leder och hjärta. Men det är en hälsoprodukt: möjliga biverkningar är diarré, kräkningar, gaser, andedräkt eller hud som luktar fisk och, i sällsynta fall, ökad blödningsrisk. VCA råder till försiktighet för hundar som får blodförtunnande läkemedel och hundar med koagulationsrubbning, diabetes eller tidigare bukspottkörtelinflammation. Att en produkt är naturlig betyder inte att den är säker.",
+    "da": "Fiskeolie udvindes af fede fisk som laks, makrel og sardiner, og dens omega-3-fedtsyrer bruges til at støtte hundes hud, pels, led og hjerte. Men det er et sundhedsprodukt: mulige bivirkninger er diarré, opkast, luft i maven, ånde eller hud, der lugter af fisk, og i sjældne tilfælde større risiko for blødninger. VCA anbefaler forsigtighed hos hunde, der får blodfortyndende medicin, hunde med en blodstørkningsforstyrrelse, diabetes eller tidligere betændelse i bugspytkirtlen. At et produkt er naturligt, betyder ikke, at det er sikkert."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Gaser",
       "Andedräkt eller hud som luktar fisk",
       "Blöder lättare (sällsynt)"
+    ],
+    "da": [
+      "Diarré",
+      "Opkast",
+      "Luft i maven",
+      "Ånde eller hud, der lugter af fisk",
+      "Bløder lettere (sjældent)"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "pl": "Porozmawiaj z weterynarzem, zanim zaczniesz podawać olej rybi lub jakikolwiek inny suplement. Jeśli pies ma poważną reakcję, przestań podawać olej rybi i natychmiast skontaktuj się z weterynarzem. Trzymaj opakowanie poza zasięgiem dzieci i zwierząt.",
     "cs": "Než rybí olej nebo jiný doplněk začnete podávat, poraďte se s veterinářem. Pokud se u psa objeví vážná reakce, rybí olej přestaňte podávat a ihned se obraťte na veterináře. Obal uchovávejte mimo dosah dětí i domácích zvířat.",
     "hr": "Prije nego što počneš s ribljim uljem ili bilo kojim drugim dodatkom prehrani, porazgovaraj s veterinarom. Ako pas ima ozbiljnu reakciju, prestani davati riblje ulje i odmah se obrati veterinaru. Posudu drži izvan dosega djece i kućnih ljubimaca.",
-    "sv": "Prata med veterinären innan du börjar med fiskolja eller något annat tillskott. Om hunden får en allvarlig reaktion, sluta ge fiskolja och kontakta veterinären direkt. Förvara förpackningen utom räckhåll för barn och djur."
+    "sv": "Prata med veterinären innan du börjar med fiskolja eller något annat tillskott. Om hunden får en allvarlig reaktion, sluta ge fiskolja och kontakta veterinären direkt. Förvara förpackningen utom räckhåll för barn och djur.",
+    "da": "Tal med din dyrlæge, før du begynder med fiskeolie eller andre kosttilskud. Hvis din hund får en alvorlig reaktion, skal du stoppe med fiskeolien og straks kontakte din dyrlæge. Opbevar beholderen uden for børns og kæledyrs rækkevidde."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "pl": "Olej rybi to specjalny suplement. Tylko weterynarz i dorośli decydują, czy pies go potrzebuje!",
     "cs": "Rybí olej je zvláštní doplněk. Jestli ho pes potřebuje, rozhodují jen veterinář a dospělí!",
     "hr": "Riblje ulje je poseban dodatak prehrani. Samo veterinar i odrasli odlučuju treba li ga pas dobivati!",
-    "sv": "Fiskolja är ett särskilt tillskott. Bara veterinären och de vuxna avgör om en hund behöver det!"
+    "sv": "Fiskolja är ett särskilt tillskott. Bara veterinären och de vuxna avgör om en hund behöver det!",
+    "da": "Fiskeolie er et særligt tilskud. Det er kun dyrlægen og de voksne, der bestemmer, om en hund har brug for det!"
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "pl": "Czy stary lub zjełczały olej rybi może rozstroić psa?",
         "cs": "Může starý nebo žluklý rybí olej psovi uškodit?",
         "hr": "Može li staro ili užeglo riblje ulje naškoditi mom psu?",
-        "sv": "Kan gammal eller härsken fiskolja ge hunden orolig mage?"
+        "sv": "Kan gammal eller härsken fiskolja ge hunden orolig mage?",
+        "da": "Kan gammel eller harsk fiskeolie give min hund ondt i maven?"
       },
       "a": {
         "en": "Yes. Consuming rancid fish oil may lead to stomach and gut upset, including vomiting or diarrhoea.",
@@ -247,7 +262,8 @@
         "pl": "Tak. Zjełczały olej rybi może wywołać rozstrój żołądka i jelit, w tym wymioty lub biegunkę.",
         "cs": "Ano. Žluklý rybí olej může způsobit potíže se žaludkem a střevy, včetně zvracení nebo průjmu.",
         "hr": "Da. Ako pas pojede užeglo riblje ulje, mogu se pojaviti probavne tegobe, uključujući povraćanje ili proljev.",
-        "sv": "Ja. Härsken fiskolja kan ge mag- och tarmbesvär, bland annat kräkningar eller diarré."
+        "sv": "Ja. Härsken fiskolja kan ge mag- och tarmbesvär, bland annat kräkningar eller diarré.",
+        "da": "Ja. Harsk fiskeolie kan give mave-tarm-problemer, herunder opkast eller diarré."
       }
     },
     {
@@ -265,7 +281,8 @@
         "pl": "Czy olej rybi jest bezpieczny, skoro jest naturalny?",
         "cs": "Je rybí olej bezpečný, protože je přírodní?",
         "hr": "Je li riblje ulje sigurno jer je prirodno?",
-        "sv": "Är fiskolja säker eftersom den är naturlig?"
+        "sv": "Är fiskolja säker eftersom den är naturlig?",
+        "da": "Er fiskeolie sikker, fordi den er naturlig?"
       },
       "a": {
         "en": "Not automatically. Just because a product is natural does not mean it is safe. Your vet is the best source of information about the safety of non-drug health products for your dog.",
@@ -281,7 +298,8 @@
         "pl": "Niekoniecznie. To, że produkt jest naturalny, nie znaczy, że jest bezpieczny. Najlepszym źródłem informacji o bezpieczeństwie produktów zdrowotnych, które nie są lekami, jest weterynarz.",
         "cs": "Ne automaticky. To, že je přípravek přírodní, neznamená, že je bezpečný. O bezpečnosti zdravotních přípravků, které nejsou léky, vám nejlépe poradí veterinář vašeho psa.",
         "hr": "Ne nužno. To što je neki proizvod prirodan ne znači da je siguran. Veterinar je najbolji izvor informacija o sigurnosti proizvoda za zdravlje psa koji nisu lijekovi.",
-        "sv": "Inte automatiskt. Att en produkt är naturlig betyder inte att den är säker. Veterinären vet bäst hur säkra hälsoprodukter som inte är läkemedel är för din hund."
+        "sv": "Inte automatiskt. Att en produkt är naturlig betyder inte att den är säker. Veterinären vet bäst hur säkra hälsoprodukter som inte är läkemedel är för din hund.",
+        "da": "Ikke nødvendigvis. At et produkt er naturligt, betyder ikke, at det er sikkert. Din dyrlæge kan bedst fortælle, hvor sikre sundhedsprodukter uden medicin er for din hund."
       }
     }
   ],
@@ -420,6 +438,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-17",
       "verified_hash": "08e931d3a974d5ba7ad246c852f249fcebca3a5d32fba280dca6ebea7fecdca8"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-c-da-2026-11-17",
+      "verified_hash": "7ae8f953ea60820abe9985f6987457ee539f3c19062f987aa8a3101606905a7b"
     }
   }
 }

@@ -15,7 +15,8 @@
     "pl": "Mleko kozie",
     "cs": "Kozí mléko",
     "hr": "Kozje mlijeko",
-    "sv": "Getmjölk"
+    "sv": "Getmjölk",
+    "da": "Gedemælk"
   },
   "question": {
     "en": "Can cats drink goat's milk?",
@@ -31,7 +32,8 @@
     "pl": "Czy koty mogą pić mleko kozie?",
     "cs": "Mohou kočky pít kozí mléko?",
     "hr": "Smiju li mačke piti kozje mlijeko?",
-    "sv": "Får katter dricka getmjölk?"
+    "sv": "Får katter dricka getmjölk?",
+    "da": "Må katte drikke gedemælk?"
   },
   "url_slug": {
     "en": "goat-milk",
@@ -47,7 +49,8 @@
     "pl": "mleko-kozie",
     "cs": "kozi-mleko",
     "hr": "kozje-mlijeko",
-    "sv": "getmjolk"
+    "sv": "getmjolk",
+    "da": "gedemaelk"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Lepiej nie. Weterynarze zaliczają mleko kozie, podobnie jak krowie, do napojów, po których koty z nietolerancją laktozy mają dolegliwości żołądkowe, a większość kotów nie toleruje laktozy. Organizacje opiekujące się kotami radzą unikać każdego rodzaju mleka – kot potrzebuje tylko wody.",
     "cs": "Raději ne. Podle veterinářů způsobuje kozí mléko stejně jako kravské potíže s bříškem u koček s intolerancí laktózy, kterou má většina koček. Charitativní organizace zaměřené na kočky radí vyhýbat se jakémukoli mléku – kočka potřebuje jen vodu.",
     "hr": "Bolje da ne. Veterinari kozje mlijeko, kao i kravlje, ubrajaju među pića koja mačkama koje ne podnose laktozu izazivaju probleme s trbuhom, a većina mačaka ne podnosi laktozu. Udruge za zaštitu mačaka savjetuju da se izbjegava svaka vrsta mlijeka – tvojoj mački treba samo voda.",
-    "sv": "Helst inte. Veterinärer räknar getmjölk, liksom komjölk, till de drycker som ger magbesvär hos laktosintoleranta katter, och de flesta katter är laktosintoleranta. Kattorganisationer avråder från mjölk av alla slag – katten behöver bara vatten."
+    "sv": "Helst inte. Veterinärer räknar getmjölk, liksom komjölk, till de drycker som ger magbesvär hos laktosintoleranta katter, och de flesta katter är laktosintoleranta. Kattorganisationer avråder från mjölk av alla slag – katten behöver bara vatten.",
+    "da": "Helst ikke. Dyrlæger regner gedemælk på linje med komælk blandt de drikke, der kan give dårlig mave hos katte med laktoseintolerance, og de fleste katte er laktoseintolerante. Katteorganisationer fraråder alle slags mælk – din kat har kun brug for vand."
   },
   "why": {
     "en": "Lactose intolerance is a common food reaction in cats, and VCA vets list diarrhoea, vomiting, bloating and tummy discomfort after cow's or goat's milk as its signs. There are no benefits to a cat having milk. For kittens the sources differ: VCA says goat's milk is not recommended for kittens because it is far too low in protein and fat, and allows pasteurised goat's milk only in an emergency until kitten milk replacer is available, while Cats Protection says never to give it, as kittens find it difficult to digest. We follow the stricter advice.",
@@ -80,7 +84,8 @@
     "pl": "Nietolerancja laktozy to częsta reakcja pokarmowa u kotów, a weterynarze z VCA jako objawy po wypiciu mleka krowiego lub koziego wymieniają biegunkę, wymioty, wzdęcia i dyskomfort w brzuchu. Mleko nie daje kotu żadnych korzyści. W przypadku kociąt źródła się różnią: VCA twierdzi, że mleka koziego nie zaleca się kociętom, bo zawiera zdecydowanie za mało białka i tłuszczu, i dopuszcza pasteryzowane mleko kozie tylko awaryjnie, do czasu zdobycia mleka zastępczego dla kociąt, a Cats Protection mówi, żeby nigdy go nie podawać, bo kociętom trudno je strawić. Stosujemy surowszą radę.",
     "cs": "Intolerance laktózy je u koček častá reakce na potravu a podle veterinářů z VCA se projevuje průjmem, zvracením, nadýmáním a nepříjemnými pocity v bříšku po kravském nebo kozím mléce. Mléko kočce nepřináší žádný prospěch. U koťat se zdroje liší: podle VCA se kozí mléko koťatům nedoporučuje, protože má příliš málo bílkovin a tuku, a pasterizované kozí mléko připouští jen v nouzi, než seženete náhradu mléka pro koťata; Cats Protection naopak říká, že se nesmí dávat nikdy, protože ho koťata obtížně tráví. Řídíme se přísnější radou.",
     "hr": "Nepodnošenje laktoze česta je reakcija mačaka na hranu, a veterinari iz VCA kao njegove znakove navode proljev, povraćanje, nadutost i nelagodu u trbuhu nakon kravljeg ili kozjeg mlijeka. Mlijeko mački ne donosi nikakvu korist. Za mačiće se izvori razlikuju: VCA ne preporučuje kozje mlijeko za mačiće jer sadrži daleko premalo bjelančevina i masti, a pasterizirano kozje mlijeko dopušta samo u nuždi, dok se ne nabavi zamjensko mlijeko za mačiće. Cats Protection pak kaže da ga ne treba davati nikada jer ga mačići teško probavljaju. Slijedimo strožu preporuku.",
-    "sv": "Laktosintolerans är en vanlig födoämnesreaktion hos katter, och veterinärerna på VCA nämner diarré, kräkningar, uppblåsthet och magont efter komjölk eller getmjölk som symtom. Katter har ingen nytta av mjölk. När det gäller kattungar skiljer sig källorna åt: VCA säger att getmjölk inte rekommenderas till kattungar eftersom den innehåller alldeles för lite protein och fett, och tillåter pastöriserad getmjölk bara i nödfall tills ersättningsmjölk för kattungar finns att tillgå, medan Cats Protection säger att man aldrig ska ge den eftersom kattungar har svårt att smälta den. Vi följer det strängare rådet."
+    "sv": "Laktosintolerans är en vanlig födoämnesreaktion hos katter, och veterinärerna på VCA nämner diarré, kräkningar, uppblåsthet och magont efter komjölk eller getmjölk som symtom. Katter har ingen nytta av mjölk. När det gäller kattungar skiljer sig källorna åt: VCA säger att getmjölk inte rekommenderas till kattungar eftersom den innehåller alldeles för lite protein och fett, och tillåter pastöriserad getmjölk bara i nödfall tills ersättningsmjölk för kattungar finns att tillgå, medan Cats Protection säger att man aldrig ska ge den eftersom kattungar har svårt att smälta den. Vi följer det strängare rådet.",
+    "da": "Laktoseintolerance er en almindelig fødevarereaktion hos katte, og VCA-dyrlæger nævner diarré, opkast, oppustethed og ubehag i maven efter komælk eller gedemælk som tegn på den. Katte har ingen gavn af mælk. Hvad angår killinger, er kilderne uenige: VCA skriver, at gedemælk ikke anbefales til killinger, fordi den indeholder alt for lidt protein og fedt, og at pasteuriseret gedemælk kun må gives i en nødsituation, indtil man kan få erstatningsmælk til killinger. Cats Protection skriver, at man aldrig skal give den, fordi killinger har svært ved at fordøje den. Vi følger den strengeste anbefaling."
   },
   "signs": {
     "en": [
@@ -194,6 +199,14 @@
       "Magont eller obehag i magen",
       "Kurrande mage",
       "Orkeslöshet"
+    ],
+    "da": [
+      "Diarré",
+      "Opkast",
+      "Oppustet mave",
+      "Mavesmerter eller ubehag i maven",
+      "Gurglende lyde fra maven",
+      "Manglende energi"
     ]
   },
   "what_to_do": {
@@ -210,7 +223,8 @@
     "pl": "Przestań podawać mleko kozie i daj świeżą wodę. Jeśli kot ma biegunkę po nabiale, karm go często, małymi, lekkostrawnymi porcjami, a jeśli odmawia jedzenia, porozmawiaj z weterynarzem – ciężkie przypadki mogą wymagać pomocy weterynaryjnej.",
     "cs": "Kozí mléko přestaňte dávat a nabídněte čerstvou vodu. Má-li kočka po mléčných výrobcích průjem, krmte ji častěji a po malých porcích lehce stravitelnými, nedráždivými pokrmy. Pokud kočka odmítá jíst, poraďte se s veterinářem – závažné případy mohou vyžadovat veterinární péči.",
     "hr": "Prestani davati kozje mlijeko i ponudi svježu vodu. Ako mačka nakon mliječnih proizvoda dobije proljev, hrani je malim, blagim obrocima, češće nego inače, a obrati se veterinaru ako mačka odbija jesti – teži slučajevi mogu zahtijevati veterinarsku pomoć.",
-    "sv": "Sluta ge getmjölken och erbjud friskt vatten. Om katten får diarré av mejeriprodukter, ge ofta små, milda måltider, och prata med veterinären om katten vägrar äta – svåra fall kan behöva veterinärvård."
+    "sv": "Sluta ge getmjölken och erbjud friskt vatten. Om katten får diarré av mejeriprodukter, ge ofta små, milda måltider, och prata med veterinären om katten vägrar äta – svåra fall kan behöva veterinärvård.",
+    "da": "Stop med gedemælken, og giv din kat friskt vand. Hvis katten får diarré af mejeriprodukter, så giv den små, hyppige måltider med skånekost, og kontakt din dyrlæge, hvis den nægter at spise – i svære tilfælde kan den have brug for behandling hos dyrlægen."
   },
   "serving": null,
   "child": {
@@ -227,7 +241,8 @@
     "pl": "Koty nie potrzebują mleka koziego ani żadnego innego mleka. Miska świeżej wody to dla kota najlepszy napój!",
     "cs": "Kočky kozí mléko ani žádné jiné mléko nepotřebují. Miska čerstvé vody je pro tvoji kočku nejlepší nápoj!",
     "hr": "Mačkama ne treba kozje mlijeko ni bilo koje drugo mlijeko. Zdjelica svježe vode najbolje je piće za tvoju mačku!",
-    "sv": "Katter behöver varken getmjölk eller någon annan mjölk. En skål friskt vatten är den bästa drycken för din katt!"
+    "sv": "Katter behöver varken getmjölk eller någon annan mjölk. En skål friskt vatten är den bästa drycken för din katt!",
+    "da": "Katte har ikke brug for gedemælk eller anden mælk. En skål friskt vand er den bedste drik til din kat!"
   },
   "faq": [
     {
@@ -245,7 +260,8 @@
         "pl": "Czy kocięta mogą pić mleko kozie?",
         "cs": "Mohou koťata pít kozí mléko?",
         "hr": "Smiju li mačići piti kozje mlijeko?",
-        "sv": "Får kattungar dricka getmjölk?"
+        "sv": "Får kattungar dricka getmjölk?",
+        "da": "Må killinger drikke gedemælk?"
       },
       "a": {
         "en": "No. Cats Protection says never give cow's or goat's milk to kittens, as they find it difficult to digest – use substitute kitten milk made specifically for kittens. VCA vets add that goat's milk is far too low in protein and fat for kittens.",
@@ -261,7 +277,8 @@
         "pl": "Nie. Cats Protection mówi, żeby nigdy nie dawać kociętom mleka krowiego ani koziego, bo trudno je strawić – należy podawać zastępcze mleko przeznaczone specjalnie dla kociąt. Weterynarze z VCA dodają, że mleko kozie zawiera zdecydowanie za mało białka i tłuszczu jak na potrzeby kociąt.",
         "cs": "Ne. Cats Protection uvádí, že koťatům se nesmí dávat kravské ani kozí mléko, protože ho obtížně tráví – používejte speciální náhradu mléka určenou pro koťata. Veterináři z VCA dodávají, že kozí mléko má pro koťata příliš málo bílkovin a tuku.",
         "hr": "Ne. Cats Protection kaže da se mačićima nikada ne daje kravlje ni kozje mlijeko jer ga teško probavljaju – daj im zamjensko mlijeko napravljeno posebno za mačiće. Veterinari iz VCA dodaju da kozje mlijeko ima daleko premalo bjelančevina i masti za mačiće.",
-        "sv": "Nej. Cats Protection säger att man aldrig ska ge kattungar komjölk eller getmjölk, eftersom de har svårt att smälta den – använd ersättningsmjölk som är gjord särskilt för kattungar. Veterinärerna på VCA påpekar dessutom att getmjölk innehåller alldeles för lite protein och fett för kattungar."
+        "sv": "Nej. Cats Protection säger att man aldrig ska ge kattungar komjölk eller getmjölk, eftersom de har svårt att smälta den – använd ersättningsmjölk som är gjord särskilt för kattungar. Veterinärerna på VCA påpekar dessutom att getmjölk innehåller alldeles för lite protein och fett för kattungar.",
+        "da": "Nej. Cats Protection skriver, at man aldrig skal give killinger ko- eller gedemælk, fordi de har svært ved at fordøje den – brug erstatningsmælk, der er lavet specielt til killinger. VCA-dyrlæger tilføjer, at gedemælk indeholder alt for lidt protein og fedt til killinger."
       }
     },
     {
@@ -279,7 +296,8 @@
         "pl": "Czy mleko kozie jest dla kotów lepsze niż krowie?",
         "cs": "Je kozí mléko pro kočky lepší než kravské?",
         "hr": "Je li kozje mlijeko za mačke bolje od kravljeg?",
-        "sv": "Är getmjölk bättre för katter än komjölk?"
+        "sv": "Är getmjölk bättre för katter än komjölk?",
+        "da": "Er gedemælk bedre for katte end komælk?"
       },
       "a": {
         "en": "Not according to vets: signs of lactose intolerance can appear after either cow's or goat's milk. It is best to avoid giving your cat any type of milk.",
@@ -295,7 +313,8 @@
         "pl": "Według weterynarzy nie: objawy nietolerancji laktozy mogą pojawić się zarówno po mleku krowim, jak i kozim. Najlepiej nie podawać kotu żadnego rodzaju mleka.",
         "cs": "Podle veterinářů ne: příznaky intolerance laktózy se mohou objevit po kravském i po kozím mléce. Nejlepší je kočce nedávat žádný druh mléka.",
         "hr": "Prema veterinarima nije: znakovi nepodnošenja laktoze mogu se pojaviti nakon kravljeg i nakon kozjeg mlijeka. Najbolje je mački ne davati nikakvo mlijeko.",
-        "sv": "Inte enligt veterinärer: symtom på laktosintolerans kan visa sig efter både komjölk och getmjölk. Det bästa är att inte ge katten någon form av mjölk."
+        "sv": "Inte enligt veterinärer: symtom på laktosintolerans kan visa sig efter både komjölk och getmjölk. Det bästa är att inte ge katten någon form av mjölk.",
+        "da": "Ikke ifølge dyrlæger: tegn på laktoseintolerance kan opstå både efter komælk og efter gedemælk. Det er bedst at undgå at give din kat nogen form for mælk."
       }
     }
   ],
@@ -447,6 +466,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-17",
       "verified_hash": "491203d7624be13a2e716e64f328a660f0543db0ca340769d303988df0533105"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-c-da-2026-11-17",
+      "verified_hash": "23d6c32c75ab60b70e11425f0bc0f6e60a7fff50db9a793a1783674fd2894ff2"
     }
   }
 }

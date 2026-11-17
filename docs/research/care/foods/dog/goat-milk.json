@@ -15,7 +15,8 @@
     "pl": "Mleko kozie",
     "cs": "Kozí mléko",
     "hr": "Kozje mlijeko",
-    "sv": "Getmjölk"
+    "sv": "Getmjölk",
+    "da": "Gedemælk"
   },
   "question": {
     "en": "Can dogs drink goat's milk?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą pić mleko kozie?",
     "cs": "Mohou psi pít kozí mléko?",
     "hr": "Smiju li psi piti kozje mlijeko?",
-    "sv": "Får hundar dricka getmjölk?"
+    "sv": "Får hundar dricka getmjölk?",
+    "da": "Må hunde drikke gedemælk?"
   },
   "url_slug": {
     "en": "goat-milk",
@@ -47,7 +49,8 @@
     "pl": "mleko-kozie",
     "cs": "kozi-mleko",
     "hr": "kozje-mlijeko",
-    "sv": "getmjolk"
+    "sv": "getmjolk",
+    "da": "gedemaelk"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Tylko trochę i od czasu do czasu. Mleko kozie może być czasem nagrodą, ale zawiera niemal tyle samo laktozy co mleko krowie i nadal może rozstroić żołądek psa. Psy na dobrej, zbilansowanej diecie go nie potrzebują. Nie podawaj surowego mleka koziego.",
     "cs": "Jen trochu a jen občas. Kozí mléko může být příležitostná odměna, ale obsahuje téměř tolik laktózy jako kravské a psovi může stejně podráždit žaludek. Psi na kvalitní vyvážené stravě ho nepotřebují. Syrové kozí mléko nedávejte.",
     "hr": "Samo malo i samo povremeno. Kozje mlijeko može poslužiti kao rijetka nagrada, ali ima gotovo jednako mnogo laktoze kao kravlje i psu ipak može izazvati probleme sa želucem. Psima koji se hrane dobrom, uravnoteženom hranom ono ne treba. Nikada ne daj sirovo kozje mlijeko.",
-    "sv": "Bara lite, då och då. Getmjölk kan vara en belöning ibland, men den innehåller nästan lika mycket laktos som komjölk och kan ändå ge hunden orolig mage. Hundar som får en bra och balanserad kost behöver den inte. Ge inte rå getmjölk."
+    "sv": "Bara lite, då och då. Getmjölk kan vara en belöning ibland, men den innehåller nästan lika mycket laktos som komjölk och kan ändå ge hunden orolig mage. Hundar som får en bra och balanserad kost behöver den inte. Ge inte rå getmjölk.",
+    "da": "Kun lidt og en gang imellem. Gedemælk kan være en godbid af og til, men den indeholder næsten lige så meget laktose som komælk og kan stadig give ondt i maven hos en hund. Hunde, der får en god og afbalanceret kost, har ikke brug for den. Giv aldrig rå gedemælk."
   },
   "why": {
     "en": "Goat's milk has almost the same amount of lactose as cow's milk, and dogs can have varying degrees of lactose intolerance. The Australian Veterinary Association notes that goat's milk and lactose-free milk can still cause stomach and gut problems, and that some dogs can develop an allergy to milk protein. Raw milk can also carry germs such as E. coli, Salmonella and Listeria.",
@@ -80,7 +84,8 @@
     "pl": "Mleko kozie zawiera prawie tyle samo laktozy co mleko krowie, a psy mogą mieć nietolerancję laktozy w różnym stopniu. Australijskie Stowarzyszenie Lekarzy Weterynarii zaznacza, że mleko kozie i mleko bez laktozy nadal mogą powodować problemy żołądkowo-jelitowe, a u niektórych psów może rozwinąć się alergia na białko mleka. Surowe mleko może też zawierać drobnoustroje, takie jak E. coli, Salmonella i Listeria.",
     "cs": "Kozí mléko obsahuje téměř stejné množství laktózy jako kravské a psi mohou laktózu snášet v různé míře. Australská veterinární asociace (Australian Veterinary Association) upozorňuje, že i kozí mléko a mléko bez laktózy mohou způsobit potíže se žaludkem a střevy a že u některých psů se může vyvinout alergie na mléčné bílkoviny. Syrové mléko navíc může obsahovat choroboplodné zárodky, například E. coli, salmonelu a listerii.",
     "hr": "Kozje mlijeko sadrži gotovo jednaku količinu laktoze kao kravlje, a psi laktozu podnose u različitoj mjeri. Australska veterinarska udruga (Australian Veterinary Association) upozorava da kozje mlijeko i mlijeko bez laktoze i dalje mogu izazvati probavne tegobe te da se kod nekih pasa može razviti alergija na mliječne bjelančevine. Uz to, sirovo mlijeko može prenositi uzročnike bolesti poput bakterija E. coli, salmonele i listerije.",
-    "sv": "Getmjölk innehåller nästan lika mycket laktos som komjölk, och hundar kan vara laktosintoleranta i varierande grad. Den australiska veterinärföreningen Australian Veterinary Association påpekar att getmjölk och laktosfri mjölk ändå kan ge mag- och tarmproblem, och att vissa hundar kan utveckla allergi mot mjölkprotein. Rå mjölk kan dessutom innehålla bakterier som E. coli, salmonella och listeria."
+    "sv": "Getmjölk innehåller nästan lika mycket laktos som komjölk, och hundar kan vara laktosintoleranta i varierande grad. Den australiska veterinärföreningen Australian Veterinary Association påpekar att getmjölk och laktosfri mjölk ändå kan ge mag- och tarmproblem, och att vissa hundar kan utveckla allergi mot mjölkprotein. Rå mjölk kan dessutom innehålla bakterier som E. coli, salmonella och listeria.",
+    "da": "Gedemælk indeholder næsten lige så meget laktose som komælk, og hunde kan være laktoseintolerante i forskellig grad. Ifølge den australske dyrlægeforening (Australian Veterinary Association) kan gedemælk og laktosefri mælk stadig give mave-tarm-problemer, og nogle hunde kan udvikle allergi over for mælkeprotein. Rå mælk kan desuden indeholde bakterier som E. coli, salmonella og listeria."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Kräkningar",
       "Ont i magen",
       "Diarré"
+    ],
+    "da": [
+      "Tynd mave",
+      "Luft i maven",
+      "Opkast",
+      "Mavesmerter",
+      "Diarré"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "pl": "Przestań podawać mleko kozie, jeśli pies ma luźne stolce, gazy, wymioty, ból brzucha lub biegunkę, i dopilnuj, by zawsze miał dostęp do świeżej wody. Zanim dodasz mleko kozie do diety psa, omów to najpierw z weterynarzem.",
     "cs": "Pokud se u psa po kozím mléce objeví řídká stolice, plynatost, zvracení, bolest břicha nebo průjem, kozí mléko přestaňte dávat a zajistěte, aby měl pes vždy čerstvou vodu. Než kozí mléko zařadíte do jídelníčku psa, poraďte se nejprve s veterinářem.",
     "hr": "Prestani davati kozje mlijeko ako pas dobije rijetku stolicu, plinove, povraćanje, bol u trbuhu ili proljev i pobrini se da uvijek ima svježu vodu. Prije nego što kozje mlijeko uvedeš u prehranu svog psa, porazgovaraj o tome s veterinarom.",
-    "sv": "Sluta ge getmjölken om hunden får lös avföring, gaser, kräkningar, ont i magen eller diarré, och se till att den alltid har tillgång till friskt vatten. Prata med veterinären innan du lägger till getmjölk i hundens kost."
+    "sv": "Sluta ge getmjölken om hunden får lös avföring, gaser, kräkningar, ont i magen eller diarré, och se till att den alltid har tillgång till friskt vatten. Prata med veterinären innan du lägger till getmjölk i hundens kost.",
+    "da": "Stop med gedemælken, hvis din hund får tynd mave, luft i maven, opkast, mavesmerter eller diarré, og sørg for, at der altid er friskt vand. Tal med din dyrlæge, før du tilføjer gedemælk til hundens kost."
   },
   "serving": {
     "en": "Never raw. Offer it only as an occasional reward, never instead of fresh water or a balanced dog food.",
@@ -212,7 +225,8 @@
     "pl": "Nigdy surowe. Podawaj je tylko od czasu do czasu jako nagrodę, nigdy zamiast świeżej wody ani zbilansowanej karmy dla psów.",
     "cs": "Nikdy syrové. Nabízejte ho jen jako občasnou odměnu, nikdy místo čerstvé vody ani vyváženého krmiva pro psy.",
     "hr": "Nikada sirovo. Nudi ga samo kao povremenu nagradu, nikad umjesto svježe vode ili uravnotežene hrane za pse.",
-    "sv": "Aldrig rå. Ge den bara som en belöning då och då, aldrig i stället för friskt vatten eller balanserad hundmat."
+    "sv": "Aldrig rå. Ge den bara som en belöning då och då, aldrig i stället för friskt vatten eller balanserad hundmat.",
+    "da": "Aldrig rå. Giv den kun som en godbid en gang imellem, aldrig i stedet for friskt vand eller afbalanceret hundefoder."
   },
   "child": {
     "en": "Goat's milk is only a rare little treat for dogs. Fresh water is the best drink for them every day!",
@@ -228,7 +242,8 @@
     "pl": "Mleko kozie to tylko mały smakołyk na rzadkie okazje. Świeża woda to dla psa najlepszy napój na co dzień!",
     "cs": "Kozí mléko je pro psy jen vzácná malá dobrota. Nejlepším nápojem je pro ně každý den čerstvá voda!",
     "hr": "Kozje mlijeko je za pse samo rijetka mala poslastica. Svježa voda najbolje im je piće svaki dan!",
-    "sv": "Getmjölk är bara en liten godbit för hundar, och bara ibland. Friskt vatten är deras bästa dryck varje dag!"
+    "sv": "Getmjölk är bara en liten godbit för hundar, och bara ibland. Friskt vatten är deras bästa dryck varje dag!",
+    "da": "Gedemælk er kun en sjælden lille godbid til hunde. Friskt vand er den bedste drik for dem hver dag!"
   },
   "faq": [
     {
@@ -246,7 +261,8 @@
         "pl": "Czy mleko kozie jest dla psów łatwiejsze do strawienia niż krowie?",
         "cs": "Tráví psi kozí mléko snadněji než kravské?",
         "hr": "Probavljaju li psi kozje mlijeko lakše od kravljeg?",
-        "sv": "Är getmjölk lättare för hundar att smälta än komjölk?"
+        "sv": "Är getmjölk lättare för hundar att smälta än komjölk?",
+        "da": "Er gedemælk lettere for hunde at fordøje end komælk?"
       },
       "a": {
         "en": "Not really. Goat's milk has almost the same amount of lactose as cow's milk. Its smaller fat globules are often mentioned, but homogenisation also makes the fat globules in cow's milk smaller.",
@@ -262,7 +278,8 @@
         "pl": "Niezupełnie. Mleko kozie zawiera prawie tyle samo laktozy co mleko krowie. Często wspomina się o jego mniejszych kuleczkach tłuszczu, ale homogenizacja zmniejsza kuleczki tłuszczu także w mleku krowim.",
         "cs": "Ne tak docela. Kozí mléko obsahuje téměř stejné množství laktózy jako kravské. Často se zmiňují jeho menší tukové kuličky, ale homogenizace zmenšuje tukové kuličky i v kravském mléce.",
         "hr": "Ne baš. Kozje mlijeko sadrži gotovo jednaku količinu laktoze kao kravlje. Često se spominju manje masne kuglice u kozjem mlijeku, ali homogenizacija smanjuje masne kuglice i u kravljem.",
-        "sv": "Nej, inte egentligen. Getmjölk innehåller nästan lika mycket laktos som komjölk. De mindre fettkulorna nämns ofta, men även komjölkens fettkulor blir mindre vid homogenisering."
+        "sv": "Nej, inte egentligen. Getmjölk innehåller nästan lika mycket laktos som komjölk. De mindre fettkulorna nämns ofta, men även komjölkens fettkulor blir mindre vid homogenisering.",
+        "da": "Ikke rigtig. Gedemælk indeholder næsten lige så meget laktose som komælk. Det nævnes ofte, at fedtkuglerne er mindre, men homogenisering gør også fedtkuglerne i komælk mindre."
       }
     },
     {
@@ -280,7 +297,8 @@
         "pl": "Czy mleko kozie może zastąpić leczenie psa?",
         "cs": "Může kozí mléko nahradit léčbu mého psa?",
         "hr": "Može li kozje mlijeko zamijeniti liječenje mojeg psa?",
-        "sv": "Kan getmjölk ersätta min hunds behandling?"
+        "sv": "Kan getmjölk ersätta min hunds behandling?",
+        "da": "Kan gedemælk erstatte min hunds behandling?"
       },
       "a": {
         "en": "No. A vet at the Drake Center warns that it can be dangerous if goat's milk is used in place of known appropriate treatments. Discuss it with your vet first.",
@@ -296,7 +314,8 @@
         "pl": "Nie. Weterynarz z Drake Center ostrzega, że zastępowanie sprawdzonego, odpowiedniego leczenia mlekiem koziem może być niebezpieczne. Omów to najpierw z weterynarzem.",
         "cs": "Ne. Podle veterináře z Drake Center může být nebezpečné používat kozí mléko místo osvědčené vhodné léčby. Nejprve se poraďte s veterinářem.",
         "hr": "Ne. Veterinar iz ustanove Drake Center upozorava da može biti opasno davati kozje mlijeko umjesto provjerenih, odgovarajućih terapija. Najprije porazgovaraj s veterinarom.",
-        "sv": "Nej. En veterinär vid Drake Center varnar för att det kan vara farligt om getmjölk används i stället för etablerade, lämpliga behandlingar. Prata med veterinären först."
+        "sv": "Nej. En veterinär vid Drake Center varnar för att det kan vara farligt om getmjölk används i stället för etablerade, lämpliga behandlingar. Prata med veterinären först.",
+        "da": "Nej. En dyrlæge fra Drake Center advarer om, at det kan være farligt, hvis gedemælk bruges i stedet for kendte, passende behandlinger. Tal med din dyrlæge først."
       }
     }
   ],
@@ -456,6 +475,11 @@
       "status": "verified",
       "verified_by": "claude-c-sv-2026-11-17",
       "verified_hash": "32dc2a8bcb9662def043b336f670547e805cf4ebe669ba45971a9f2f2905c1ec"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-c-da-2026-11-17",
+      "verified_hash": "fed2624c7f6a7b832fc3b26705b525051ed91c25d6dcd904a062ca811514aadb"
     }
   }
 }
