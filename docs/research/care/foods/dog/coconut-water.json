@@ -11,7 +11,8 @@
     "de": "Kokoswasser",
     "es": "Agua de coco",
     "pt": "Água de coco",
-    "nl": "Kokoswater"
+    "nl": "Kokoswater",
+    "pl": "Woda kokosowa"
   },
   "question": {
     "en": "Can dogs drink coconut water?",
@@ -23,7 +24,8 @@
     "de": "Dürfen Hunde Kokoswasser trinken?",
     "es": "¿Pueden los perros beber agua de coco?",
     "pt": "Os cães podem beber água de coco?",
-    "nl": "Mogen honden kokoswater drinken?"
+    "nl": "Mogen honden kokoswater drinken?",
+    "pl": "Czy psy mogą pić wodę kokosową?"
   },
   "url_slug": {
     "en": "coconut-water",
@@ -35,7 +37,8 @@
     "de": "kokoswasser",
     "es": "agua-de-coco",
     "pt": "agua-de-coco",
-    "nl": "kokoswater"
+    "nl": "kokoswater",
+    "pl": "woda-kokosowa"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "de": "Ja, als gelegentliches Leckerli. Die vom AKC zitierte tierärztliche Einschätzung lautet: Kokoswasser ist für Hunde unbedenklich, sollte aber ein Leckerli bleiben und kein Ersatz für normales Wasser sein. Wählen Sie reines Kokoswasser ohne zugesetzten Zucker oder Konservierungsstoffe und geben Sie es in Maßen.",
     "es": "Sí, como premio ocasional. Una veterinaria citada por el AKC dice que el agua de coco es segura para los perros, pero debe ser un premio, no un sustituto del agua normal. Elige agua de coco pura, sin azúcares añadidos ni conservantes, y ofrécela con moderación.",
     "pt": "Sim, como guloseima ocasional. Segundo um veterinário citado pela AKC, a água de coco é segura para os cães, mas deve ser uma guloseima e não substituir a água normal. Escolhe água de coco pura, sem açúcares adicionados nem conservantes, e dá-a com moderação.",
-    "nl": "Ja, maar alleen af en toe, als snoepje. Een dierenarts die de AKC citeert, zegt dat kokoswater veilig is voor honden, maar dat het een snoepje moet blijven en geen vervanging is voor gewoon water. Kies puur kokoswater zonder toegevoegde suikers of conserveermiddelen en geef het met mate."
+    "nl": "Ja, maar alleen af en toe, als snoepje. Een dierenarts die de AKC citeert, zegt dat kokoswater veilig is voor honden, maar dat het een snoepje moet blijven en geen vervanging is voor gewoon water. Kies puur kokoswater zonder toegevoegde suikers of conserveermiddelen en geef het met mate.",
+    "pl": "Tak, od czasu do czasu, jako smakołyk. Weterynarz cytowany przez AKC mówi, że woda kokosowa jest dla psów bezpieczna, ale powinna być smakołykiem, a nie zamiennikiem zwykłej wody. Wybierz czystą wodę kokosową bez dodatku cukru i konserwantów i podawaj ją z umiarem."
   },
   "why": {
     "en": "Coconut is high in potassium, so caution is needed for dogs with kidney disease or other electrolyte disturbances. Too much coconut can make a dog sick, mainly with stomach upset such as diarrhoea. Anything you offer must be free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -60,7 +64,8 @@
     "de": "Kokos enthält viel Kalium, deshalb ist bei Hunden mit Nierenerkrankung oder anderen Störungen des Elektrolythaushalts Vorsicht geboten. Zu viel Kokos kann einem Hund Magenbeschwerden wie Durchfall bereiten. Alles, was Sie anbieten, muss frei von künstlichen Süßstoffen wie Xylit sein, das für Hunde giftig ist.",
     "es": "El coco es rico en potasio, así que hay que tener cuidado si el perro tiene enfermedad renal u otra alteración de los electrolitos. Demasiado coco puede sentar mal a un perro, sobre todo con molestias de estómago, como diarrea. Lo que le ofrezcas no debe llevar edulcorantes artificiales, como el xilitol, que es tóxico para los perros.",
     "pt": "O coco é rico em potássio, por isso é preciso cuidado com os cães com doença renal ou outros desequilíbrios de eletrólitos. Coco em excesso pode deixar o cão doente, sobretudo com problemas de barriga, como diarreia. Tudo o que deres tem de estar livre de adoçantes artificiais, como o xilitol, que é tóxico para os cães.",
-    "nl": "Kokos bevat veel kalium, dus wees voorzichtig bij honden met nierziekte of andere verstoringen van de elektrolytenbalans. Te veel kokos kan een hond ziek maken, vooral met maagklachten zoals diarree. Alles wat je geeft, moet vrij zijn van kunstmatige zoetstoffen zoals xylitol, dat giftig is voor honden."
+    "nl": "Kokos bevat veel kalium, dus wees voorzichtig bij honden met nierziekte of andere verstoringen van de elektrolytenbalans. Te veel kokos kan een hond ziek maken, vooral met maagklachten zoals diarree. Alles wat je geeft, moet vrij zijn van kunstmatige zoetstoffen zoals xylitol, dat giftig is voor honden.",
+    "pl": "Kokos zawiera dużo potasu, więc u psów z chorobą nerek lub innymi zaburzeniami elektrolitowymi trzeba zachować ostrożność. Zbyt dużo kokosu może rozstroić psa, głównie wywołując problemy żołądkowe, takie jak biegunka. Wszystko, co podajesz, musi być wolne od sztucznych słodzików, takich jak ksylitol, który jest toksyczny dla psów."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "de": "Setzen Sie das Kokoswasser ab, wenn Ihr Hund eine Magenverstimmung oder Durchfall bekommt. Kokos enthält viel Kalium – seien Sie deshalb vorsichtig, wenn Ihr Hund eine Nierenerkrankung oder ein Elektrolytproblem hat.",
     "es": "Deja de darle agua de coco si tu perro tiene el estómago revuelto o diarrea. El coco es rico en potasio, así que ten cuidado si tu perro tiene enfermedad renal o algún problema de electrolitos.",
     "pt": "Se o teu cão ficar com problemas de barriga ou diarreia, deixa de lhe dar água de coco. O coco é rico em potássio, por isso tem cuidado se o teu cão tiver doença renal ou um problema de eletrólitos.",
-    "nl": "Stop met het kokoswater als je hond maagklachten of diarree krijgt. Kokos bevat veel kalium, dus wees er voorzichtig mee als je hond nierziekte heeft of een probleem met de elektrolytenbalans."
+    "nl": "Stop met het kokoswater als je hond maagklachten of diarree krijgt. Kokos bevat veel kalium, dus wees er voorzichtig mee als je hond nierziekte heeft of een probleem met de elektrolytenbalans.",
+    "pl": "Przestań podawać wodę kokosową, jeśli pies ma rozstrój żołądka lub biegunkę. Kokos zawiera dużo potasu, więc jeśli pies ma chorobę nerek lub zaburzenia elektrolitowe, zachowaj ostrożność."
   },
   "serving": {
     "en": "Pure, unsweetened coconut water only, with no added sugar, preservatives or xylitol, offered in moderation as a treat and never instead of fresh water.",
@@ -85,7 +91,8 @@
     "de": "Nur reines, ungesüßtes Kokoswasser ohne zugesetzten Zucker, Konservierungsstoffe oder Xylit, in Maßen als Leckerli und niemals anstelle von frischem Wasser.",
     "es": "Solo agua de coco pura y sin endulzar, sin azúcar añadido, sin conservantes y sin xilitol, ofrecida con moderación como premio y nunca en lugar de agua fresca.",
     "pt": "Só água de coco pura, sem açúcar adicionado, conservantes nem xilitol, dada com moderação, como guloseima, e nunca em vez de água fresca.",
-    "nl": "Alleen puur, ongezoet kokoswater, zonder toegevoegde suiker, conserveermiddelen of xylitol. Geef het met mate als snoepje en nooit in plaats van vers water."
+    "nl": "Alleen puur, ongezoet kokoswater, zonder toegevoegde suiker, conserveermiddelen of xylitol. Geef het met mate als snoepje en nooit in plaats van vers water.",
+    "pl": "Tylko czysta, niesłodzona woda kokosowa, bez dodatku cukru, konserwantów i ksylitolu, podawana z umiarem jako smakołyk i nigdy zamiast świeżej wody."
   },
   "child": {
     "en": "Coconut water is an occasional treat for dogs. Fresh water is still what they need to drink every day!",
@@ -97,7 +104,8 @@
     "de": "Kokoswasser ist für Hunde ein gelegentliches Leckerli. Trotzdem brauchen sie jeden Tag frisches Wasser zum Trinken!",
     "es": "El agua de coco es un premio ocasional para los perros. ¡Lo que necesitan beber cada día sigue siendo agua fresca!",
     "pt": "A água de coco é um petisco para dar de vez em quando. O que os cães precisam de beber todos os dias é água fresca!",
-    "nl": "Kokoswater is voor honden een snoepje voor af en toe. Vers water blijft wat ze elke dag moeten drinken!"
+    "nl": "Kokoswater is voor honden een snoepje voor af en toe. Vers water blijft wat ze elke dag moeten drinken!",
+    "pl": "Woda kokosowa to smakołyk, który pies może dostać od czasu do czasu. Do codziennego picia nadal potrzebuje świeżej wody!"
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "de": "Kann Kokoswasser meinem Hund nach dem Sport helfen?",
         "es": "¿Puede ayudar el agua de coco a mi perro después del ejercicio?",
         "pt": "A água de coco pode ajudar o meu cão depois do exercício?",
-        "nl": "Kan kokoswater mijn hond helpen na het sporten?"
+        "nl": "Kan kokoswater mijn hond helpen na het sporten?",
+        "pl": "Czy woda kokosowa pomoże psu po wysiłku?"
       },
       "a": {
         "en": "One vet quoted by the AKC offers her dogs coconut water for extra electrolytes after dog sport events. For the average house dog, though, a fresh bowl of water is perfectly sufficient.",
@@ -123,7 +132,8 @@
         "de": "Eine vom AKC zitierte Tierärztin gibt ihren Hunden nach Hundesportveranstaltungen Kokoswasser für zusätzliche Elektrolyte. Für einen durchschnittlichen Haushund reicht aber ein frischer Napf Wasser völlig aus.",
         "es": "Una veterinaria citada por el AKC da agua de coco a sus perros después de competiciones de deporte canino, para aportarles electrolitos extra. Para un perro de casa corriente, en cambio, un cuenco de agua fresca es más que suficiente.",
         "pt": "Uma veterinária citada pela AKC dá aos seus cães água de coco para repor eletrólitos depois de competições de desporto canino. Para um cão de família normal, porém, uma tigela de água fresca chega perfeitamente.",
-        "nl": "Een dierenarts die de AKC citeert, geeft haar honden na wedstrijden in de hondensport kokoswater voor extra elektrolyten. Voor de gemiddelde huishond is een verse bak water echter ruim voldoende."
+        "nl": "Een dierenarts die de AKC citeert, geeft haar honden na wedstrijden in de hondensport kokoswater voor extra elektrolyten. Voor de gemiddelde huishond is een verse bak water echter ruim voldoende.",
+        "pl": "Jedna z weterynarek cytowanych przez AKC podaje swoim psom wodę kokosową, żeby uzupełnić elektrolity po zawodach sportowych z udziałem psów. Dla przeciętnego psa domowego w zupełności wystarczy jednak miska świeżej wody."
       }
     }
   ],
@@ -227,6 +237,11 @@
       "status": "verified",
       "verified_by": "claude-c-nl-2026-11-17",
       "verified_hash": "055fd514a94ae018547db9f03736f21bf6e6213d78d4d5a74ac3a63529f7e28e"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-17",
+      "verified_hash": "75c19c7ea2a72e83a1950b6ddaf590daad4f3224219b1455a95d70afcc9ec3bd"
     }
   }
 }

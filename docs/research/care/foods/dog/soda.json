@@ -11,7 +11,8 @@
     "de": "Softdrinks",
     "es": "Refrescos",
     "pt": "Refrigerantes",
-    "nl": "Frisdrank"
+    "nl": "Frisdrank",
+    "pl": "Napoje gazowane"
   },
   "question": {
     "en": "Can dogs drink soda?",
@@ -23,7 +24,8 @@
     "de": "Dürfen Hunde Softdrinks trinken?",
     "es": "¿Pueden los perros beber refrescos?",
     "pt": "Os cães podem beber refrigerantes?",
-    "nl": "Mogen honden frisdrank drinken?"
+    "nl": "Mogen honden frisdrank drinken?",
+    "pl": "Czy psy mogą pić napoje gazowane?"
   },
   "url_slug": {
     "en": "soda",
@@ -35,7 +37,8 @@
     "de": "softdrinks",
     "es": "refrescos",
     "pt": "refrigerantes",
-    "nl": "frisdrank"
+    "nl": "frisdrank",
+    "pl": "napoje-gazowane"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "de": "Nein. Hunde sollten keine Softdrinks trinken. Sie enthalten viel Zucker und Koffein und haben für Hunde keinen Nährwert; das Koffein kann außerdem Vergiftungsanzeichen auslösen. Ein- oder zweimal daran zu lecken verursacht wahrscheinlich keine Vergiftung, trotzdem sollten Softdrinks für Ihren Hund unerreichbar bleiben.",
     "es": "No. Los perros no deben beber refrescos: tienen mucho azúcar y cafeína, no les aportan ningún valor nutricional y la cafeína puede causar signos de intoxicación. Es poco probable que uno o dos lametones causen una intoxicación, pero mantén los refrescos fuera del alcance de tu perro.",
     "pt": "Não. Os cães não devem beber refrigerantes: têm muito açúcar e cafeína, não trazem nenhum valor nutricional e a cafeína pode causar sinais de intoxicação. Uma ou duas lambidelas dificilmente intoxicam, mas mantém os refrigerantes fora do alcance do teu cão.",
-    "nl": "Nee. Honden mogen geen frisdrank drinken. Er zit veel suiker en cafeïne in, het heeft geen voedingswaarde voor honden en de cafeïne kan verschijnselen van vergiftiging veroorzaken. Een of twee likjes veroorzaken waarschijnlijk geen vergiftiging, maar houd frisdrank buiten het bereik van je hond."
+    "nl": "Nee. Honden mogen geen frisdrank drinken. Er zit veel suiker en cafeïne in, het heeft geen voedingswaarde voor honden en de cafeïne kan verschijnselen van vergiftiging veroorzaken. Een of twee likjes veroorzaken waarschijnlijk geen vergiftiging, maar houd frisdrank buiten het bereik van je hond.",
+    "pl": "Nie. Psy nie powinny pić napojów gazowanych. Zawierają dużo cukru i kofeiny, nie mają dla psów wartości odżywczej, a kofeina może wywołać objawy zatrucia. Jedno czy dwa liźnięcia raczej nie spowodują zatrucia, ale trzymaj napoje gazowane poza zasięgiem psa."
   },
   "why": {
     "en": "Pet Poison Helpline explains that soda has high levels of sugar, caffeine and other ingredients that can harm dogs, and there is no reason for dogs to drink it. The caffeine in soda can lead to signs of toxicity, and how much a dog drinks determines how severe they are. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -60,7 +64,8 @@
     "de": "Laut Pet Poison Helpline enthalten Softdrinks viel Zucker, Koffein und andere Inhaltsstoffe, die Hunden schaden können, und es gibt keinen Grund, sie Hunden zu geben. Das Koffein kann zu Vergiftungsanzeichen führen, und wie schwer diese ausfallen, hängt davon ab, wie viel der Hund getrunken hat. Viele zuckerfreie Getränke enthalten Xylit, das für Hunde hochgiftig ist.",
     "es": "Pet Poison Helpline explica que los refrescos llevan mucho azúcar, cafeína y otros ingredientes que pueden dañar a los perros, y no hay ningún motivo para que los beban. La cafeína de los refrescos puede provocar signos de toxicidad, y su gravedad depende de la cantidad que beba el perro. Muchas bebidas sin azúcar contienen xilitol, que es muy tóxico para los perros.",
     "pt": "A Pet Poison Helpline explica que os refrigerantes têm muito açúcar, cafeína e outros ingredientes que podem fazer mal aos cães, e que não há qualquer razão para os cães os beberem. A cafeína dos refrigerantes pode causar sinais de toxicidade, e a gravidade depende da quantidade que o cão bebe. Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães.",
-    "nl": "Pet Poison Helpline legt uit dat frisdrank veel suiker, cafeïne en andere ingrediënten bevat die schadelijk kunnen zijn voor honden, en dat er geen enkele reden is om ze het te laten drinken. De cafeïne in frisdrank kan leiden tot verschijnselen van vergiftiging; hoe ernstig die zijn, hangt af van hoeveel de hond drinkt. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden."
+    "nl": "Pet Poison Helpline legt uit dat frisdrank veel suiker, cafeïne en andere ingrediënten bevat die schadelijk kunnen zijn voor honden, en dat er geen enkele reden is om ze het te laten drinken. De cafeïne in frisdrank kan leiden tot verschijnselen van vergiftiging; hoe ernstig die zijn, hangt af van hoeveel de hond drinkt. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden.",
+    "pl": "Pet Poison Helpline wyjaśnia, że napoje gazowane zawierają dużo cukru, kofeiny i innych składników, które mogą szkodzić psom, i nie ma powodu, by psy je piły. Kofeina w napojach gazowanych może prowadzić do objawów zatrucia, a ich nasilenie zależy od tego, ile pies wypije. Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów."
   },
   "signs": {
     "en": [
@@ -182,6 +187,18 @@
       "Trillen",
       "Stuipen",
       "Ineenzakken"
+    ],
+    "pl": [
+      "Nadpobudliwość",
+      "Niepokój",
+      "Wymioty",
+      "Szybkie bicie serca",
+      "Podwyższone ciśnienie krwi",
+      "Podwyższona temperatura ciała",
+      "Zaburzenia rytmu serca",
+      "Drżenie mięśni",
+      "Drgawki",
+      "Zapaść"
     ]
   },
   "what_to_do": {
@@ -194,7 +211,8 @@
     "de": "Hat Ihr Hund etwas Softdrink getrunken, beobachten Sie, ob Symptome auftreten. Hat er eine große Menge getrunken, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, damit er die richtige Behandlung bekommt. War der Softdrink zuckerfrei, lesen Sie unsere Seite zu Xylit.",
     "es": "Si tu perro ha bebido refresco, vigila si aparecen síntomas. Si ha bebido mucho, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales para que tu perro reciba el tratamiento adecuado. Si el refresco era sin azúcar, consulta nuestra página sobre el xilitol.",
     "pt": "Se o teu cão bebeu refrigerante, observa-o para ver se aparecem sinais. Se bebeu muito, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, para que o teu cão receba o tratamento certo. Se o refrigerante era sem açúcar, vai à nossa página do xilitol.",
-    "nl": "Heeft je hond frisdrank gedronken, let dan op verschijnselen. Heeft je hond veel gedronken, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, zodat je hond de juiste behandeling krijgt. Was de frisdrank suikervrij, bekijk dan onze pagina over xylitol."
+    "nl": "Heeft je hond frisdrank gedronken, let dan op verschijnselen. Heeft je hond veel gedronken, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, zodat je hond de juiste behandeling krijgt. Was de frisdrank suikervrij, bekijk dan onze pagina over xylitol.",
+    "pl": "Jeśli pies wypił napój gazowany, obserwuj, czy nie pojawiają się objawy. Jeśli wypił dużo, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, żeby pies dostał właściwe leczenie. Jeśli napój był bez cukru, zajrzyj na naszą stronę o ksylitolu."
   },
   "serving": null,
   "child": {
@@ -207,7 +225,8 @@
     "de": "Sprudelgetränke sind für Menschen, nicht für Hunde. Hunde brauchen nur frisches Wasser – stell Dosen und Becher also ganz weit oben ab!",
     "es": "Las bebidas con burbujas son para las personas, no para los perros. ¡Los perros solo necesitan agua fresca, así que guarda las latas y los vasos en un sitio alto!",
     "pt": "As bebidas com gás são para as pessoas, não para os cães. Os cães só precisam de água fresca, por isso guarda as latas e os copos num sítio alto!",
-    "nl": "Drankjes met prik zijn voor mensen, niet voor honden. Honden hebben alleen vers water nodig, dus zet blikjes en bekers hoog neer!"
+    "nl": "Drankjes met prik zijn voor mensen, niet voor honden. Honden hebben alleen vers water nodig, dus zet blikjes en bekers hoog neer!",
+    "pl": "Napoje gazowane są dla ludzi, nie dla psów. Psy potrzebują tylko świeżej wody, więc trzymaj puszki i kubki wysoko!"
   },
   "faq": [
     {
@@ -221,7 +240,8 @@
         "de": "Mein Hund hat ein bisschen verschütteten Softdrink aufgeleckt. Ist das ein Problem?",
         "es": "Mi perro ha lamido un poco de refresco derramado. ¿Es un problema?",
         "pt": "O meu cão lambeu um pouco de refrigerante entornado. É um problema?",
-        "nl": "Mijn hond likte wat gemorste frisdrank op. Is dat een probleem?"
+        "nl": "Mijn hond likte wat gemorste frisdrank op. Is dat een probleem?",
+        "pl": "Mój pies polizał rozlany napój gazowany. Czy to problem?"
       },
       "a": {
         "en": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets. Keep an eye on your dog and keep soda stored away so it can't happen again.",
@@ -233,7 +253,8 @@
         "de": "Ein- oder zweimal an Kaffee, Tee oder Softdrink zu lecken verursacht bei den meisten Tieren wahrscheinlich keine Vergiftung. Behalten Sie Ihren Hund im Auge und bewahren Sie Softdrinks künftig so auf, dass er nicht herankommt.",
         "es": "Es poco probable que uno o dos lametones de café, té o refresco causen una intoxicación en la mayoría de las mascotas. Vigila a tu perro y guarda los refrescos bien lejos para que no vuelva a pasar.",
         "pt": "Uma ou duas lambidelas de café, chá ou refrigerante dificilmente intoxicam a maioria dos animais. Fica atento ao teu cão e guarda os refrigerantes onde ele não chegue, para que não volte a acontecer.",
-        "nl": "Een of twee likjes koffie, thee of frisdrank veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging. Houd je hond in de gaten en berg frisdrank op, zodat het niet nog een keer kan gebeuren."
+        "nl": "Een of twee likjes koffie, thee of frisdrank veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging. Houd je hond in de gaten en berg frisdrank op, zodat het niet nog een keer kan gebeuren.",
+        "pl": "Jedno czy dwa liźnięcia kawy, herbaty lub napoju gazowanego raczej nie spowodują zatrucia u większości zwierząt. Miej psa na oku i chowaj napoje gazowane, żeby to się nie powtórzyło."
       }
     },
     {
@@ -247,7 +268,8 @@
         "de": "Und was ist mit Diät- oder zuckerfreien Softdrinks?",
         "es": "¿Y los refrescos light o sin azúcar?",
         "pt": "E os refrigerantes light ou sem açúcar?",
-        "nl": "Hoe zit het met light of suikervrije frisdrank?"
+        "nl": "Hoe zit het met light of suikervrije frisdrank?",
+        "pl": "A napoje dietetyczne lub bez cukru?"
       },
       "a": {
         "en": "Many zero-sugar drinks contain xylitol, which is highly toxic to dogs, so keep diet drinks away from your dog too.",
@@ -259,7 +281,8 @@
         "de": "Viele zuckerfreie Getränke enthalten Xylit, das für Hunde hochgiftig ist. Halten Sie deshalb auch Diätgetränke von Ihrem Hund fern.",
         "es": "Muchas bebidas sin azúcar contienen xilitol, que es muy tóxico para los perros, así que mantén también las bebidas light lejos de tu perro.",
         "pt": "Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães, por isso mantém também as bebidas light longe do teu cão.",
-        "nl": "Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden, dus houd ook light-dranken uit de buurt van je hond."
+        "nl": "Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden, dus houd ook light-dranken uit de buurt van je hond.",
+        "pl": "Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów, więc trzymaj napoje dietetyczne również z dala od psa."
       }
     }
   ],
@@ -421,6 +444,11 @@
       "status": "verified",
       "verified_by": "claude-c-nl-2026-11-17",
       "verified_hash": "48e32201f8e6e3717ea265f1ec1b8065e06f4dda923ec05dc3b2098a76bdcbce"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-17",
+      "verified_hash": "ec8dc2a228ff08911e313aa6d45b039d2788594e7d6b23e13c58ab6b309a0097"
     }
   }
 }

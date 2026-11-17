@@ -11,7 +11,8 @@
     "de": "Hundefutter",
     "es": "Comida para perros",
     "pt": "Comida para cães",
-    "nl": "Hondenvoer"
+    "nl": "Hondenvoer",
+    "pl": "Karma dla psów"
   },
   "question": {
     "en": "Can cats eat dog food?",
@@ -23,7 +24,8 @@
     "de": "Dürfen Katzen Hundefutter fressen?",
     "es": "¿Pueden los gatos comer comida para perros?",
     "pt": "Os gatos podem comer comida para cães?",
-    "nl": "Mogen katten hondenvoer eten?"
+    "nl": "Mogen katten hondenvoer eten?",
+    "pl": "Czy koty mogą jeść karmę dla psów?"
   },
   "url_slug": {
     "en": "dog-food",
@@ -35,7 +37,8 @@
     "de": "hundefutter",
     "es": "comida-para-perros",
     "pt": "comida-para-caes",
-    "nl": "hondenvoer"
+    "nl": "hondenvoer",
+    "pl": "karma-dla-psow"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "de": "Nicht als Futter. Ein oder zwei Bröckchen Hundefutter schaden den meisten gesunden Katzen nicht, aber Hundefutter sollte nicht das Futter Ihrer Katze sein. Es deckt ihren Nährstoffbedarf nicht – zum Beispiel enthält es nicht genug Taurin.",
     "es": "No, no como alimento. A un gato sano un bocado o dos de comida para perros no suele hacerle daño, pero no conviene darle la comida de tu perro. No cubre las necesidades nutricionales de un gato; por ejemplo, no tiene suficiente taurina para él.",
     "pt": "Não como refeição habitual. Uma ou duas migalhas de comida para cães não fazem mal à maioria dos gatos saudáveis, mas não deves dar ao teu gato a comida do teu cão. A comida para cães não satisfaz as necessidades nutricionais de um gato – por exemplo, não tem taurina suficiente.",
-    "nl": "Niet als hun voer. Een hapje of twee hondenvoer deert de meeste gezonde katten niet, maar je kat hoort het voer van je hond niet te krijgen. Hondenvoer voldoet niet aan de voedingsbehoeften van een kat – er zit bijvoorbeeld te weinig taurine in voor een kat."
+    "nl": "Niet als hun voer. Een hapje of twee hondenvoer deert de meeste gezonde katten niet, maar je kat hoort het voer van je hond niet te krijgen. Hondenvoer voldoet niet aan de voedingsbehoeften van een kat – er zit bijvoorbeeld te weinig taurine in voor een kat.",
+    "pl": "Nie jako pokarm dla kota. Kęs czy dwa psiej karmy nie zaszkodzą większości zdrowych kotów, ale nie karm kota jedzeniem swojego psa. Karma dla psów nie pokrywa potrzeb pokarmowych kota – na przykład zawiera dla niego za mało tauryny."
   },
   "why": {
     "en": "Dogs and cats need different nutrients. Cats require taurine, an essential amino acid for them, while dogs do not, and dog food does not contain enough of it for a cat. The Merck Veterinary Manual adds that some dog foods are lower in protein and may lack nutrients cats need but dogs don't, such as preformed vitamin A and arachidonic acid. Too little taurine can weaken the heart muscle and damage the eyes, impairing vision.",
@@ -60,7 +64,8 @@
     "de": "Hunde und Katzen brauchen unterschiedliche Nährstoffe. Katzen müssen Taurin aufnehmen, eine für sie essenzielle Aminosäure, Hunde dagegen nicht – und Hundefutter enthält davon nicht genug für eine Katze. Laut Merck Veterinary Manual enthalten manche Hundefutter außerdem weniger Eiweiß, und es können ihnen Nährstoffe fehlen, die Katzen brauchen, Hunde aber nicht, etwa präformiertes Vitamin A und Arachidonsäure. Zu wenig Taurin kann den Herzmuskel schwächen und den Augen schaden, sodass das Sehvermögen nachlässt.",
     "es": "Los perros y los gatos necesitan nutrientes distintos. Los gatos necesitan taurina, un aminoácido esencial para ellos, y los perros no, así que la comida para perros no contiene la suficiente para un gato. El Manual Merck de Veterinaria añade que algunas comidas para perros llevan menos proteína y pueden carecer de nutrientes que los gatos necesitan y los perros no, como la vitamina A preformada y el ácido araquidónico. Con poca taurina, el músculo del corazón puede debilitarse y los ojos sufrir daños que afectan a la vista.",
     "pt": "Os cães e os gatos precisam de nutrientes diferentes. Os gatos precisam de taurina, um aminoácido essencial para eles, de que os cães não precisam, e a comida para cães não tem o suficiente para um gato. O Merck Veterinary Manual acrescenta que algumas comidas para cães têm menos proteína e podem não ter nutrientes de que os gatos precisam mas os cães não, como a vitamina A pré-formada e o ácido araquidónico. A falta de taurina pode enfraquecer o músculo do coração e lesionar os olhos, prejudicando a visão.",
-    "nl": "Honden en katten hebben andere voedingsstoffen nodig. Katten moeten taurine binnenkrijgen, een aminozuur dat voor hen essentieel is, honden niet, en er zit te weinig taurine in hondenvoer voor een kat. Volgens de Merck Veterinary Manual bevat sommig hondenvoer bovendien minder eiwit en kunnen er voedingsstoffen in ontbreken die katten wél nodig hebben en honden niet, zoals kant-en-klare vitamine A en arachidonzuur. Bij te weinig taurine kan de hartspier verzwakken en kunnen de ogen beschadigd raken, waardoor het zicht achteruitgaat."
+    "nl": "Honden en katten hebben andere voedingsstoffen nodig. Katten moeten taurine binnenkrijgen, een aminozuur dat voor hen essentieel is, honden niet, en er zit te weinig taurine in hondenvoer voor een kat. Volgens de Merck Veterinary Manual bevat sommig hondenvoer bovendien minder eiwit en kunnen er voedingsstoffen in ontbreken die katten wél nodig hebben en honden niet, zoals kant-en-klare vitamine A en arachidonzuur. Bij te weinig taurine kan de hartspier verzwakken en kunnen de ogen beschadigd raken, waardoor het zicht achteruitgaat.",
+    "pl": "Psy i koty potrzebują innych składników odżywczych. Kot musi dostawać taurynę, bo to dla niego niezbędny aminokwas, a pies jej nie potrzebuje, więc karma dla psów zawiera jej dla kota za mało. Podręcznik weterynaryjny Merck dodaje, że niektóre karmy dla psów mają mniej białka i mogą nie zawierać składników potrzebnych kotom, a niepotrzebnych psom, takich jak witamina A w gotowej postaci i kwas arachidonowy. Zbyt mało tauryny może osłabić mięsień sercowy i uszkodzić oczy, pogarszając wzrok."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Braken",
       "Gewichtsverlies",
       "Stuipen"
+    ],
+    "pl": [
+      "Nudności",
+      "Wymioty",
+      "Utrata masy ciała",
+      "Drgawki"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "de": "Ein Happen aus dem Napf des Hundes ist für eine gesunde Katze meist unbedenklich. Füttern Sie jedes Tier aus seinem eigenen Napf, in getrennten Bereichen der Wohnung. Eine Katze, die nur Hundefutter frisst, kann innerhalb von Stunden, Tagen oder Wochen krank werden – wenden Sie sich an Ihren Tierarzt, wenn Sie sich Sorgen machen.",
     "es": "Un bocado del plato del perro no suele ser un problema para un gato sano. Alimenta a cada mascota en su propio comedero y en zonas distintas de la casa. Un gato que come solo comida para perros puede enfermar en cuestión de horas, días o semanas; si te preocupa, contacta con tu veterinario.",
     "pt": "Uma dentada da tigela do cão costuma ser aceitável para um gato saudável. Dá a cada animal a comida da sua própria tigela, em zonas separadas da casa. Um gato que coma só comida para cães pode adoecer em horas, dias ou semanas – contacta o teu veterinário se tiveres dúvidas.",
-    "nl": "Een hapje uit de bak van de hond is voor een gezonde kat meestal geen probleem. Geef elk huisdier eten uit een eigen bakje, op aparte plekken in huis. Een kat die alleen hondenvoer eet, kan binnen uren, dagen of weken ziek worden – neem contact op met je dierenarts als je je zorgen maakt."
+    "nl": "Een hapje uit de bak van de hond is voor een gezonde kat meestal geen probleem. Geef elk huisdier eten uit een eigen bakje, op aparte plekken in huis. Een kat die alleen hondenvoer eet, kan binnen uren, dagen of weken ziek worden – neem contact op met je dierenarts als je je zorgen maakt.",
+    "pl": "Kęs z miski psa zwykle nie szkodzi zdrowemu kotu. Karm każde zwierzę z osobnej miski i w osobnym miejscu. Kot, który je tylko psią karmę, może zachorować w ciągu kilku godzin, dni lub tygodni – jeśli się martwisz, skontaktuj się z weterynarzem."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "de": "Hundefutter ist für Hunde gemacht. Katzen brauchen ihr eigenes Katzenfutter, damit sie gesund bleiben!",
     "es": "La comida para perros es para los perros. ¡Los gatos necesitan su propia comida para estar sanos!",
     "pt": "A comida para cães é feita para cães. Os gatos precisam da sua própria comida para gatos para se manterem saudáveis!",
-    "nl": "Hondenvoer is gemaakt voor honden. Katten hebben hun eigen kattenvoer nodig om gezond te blijven!"
+    "nl": "Hondenvoer is gemaakt voor honden. Katten hebben hun eigen kattenvoer nodig om gezond te blijven!",
+    "pl": "Karma dla psów jest przeznaczona dla psów. Koty potrzebują własnej karmy dla kotów, żeby być zdrowe!"
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "de": "Was ist Taurin und warum brauchen Katzen es?",
         "es": "¿Qué es la taurina y por qué la necesitan los gatos?",
         "pt": "O que é a taurina e porque é que os gatos precisam dela?",
-        "nl": "Wat is taurine en waarom hebben katten het nodig?"
+        "nl": "Wat is taurine en waarom hebben katten het nodig?",
+        "pl": "Czym jest tauryna i dlaczego koty jej potrzebują?"
       },
       "a": {
         "en": "Taurine is an essential amino acid for cats, and cats have only a limited ability to make it themselves. Without enough of it, the heart muscle weakens and the cells of the retina eventually degenerate, impairing vision.",
@@ -173,7 +187,8 @@
         "de": "Taurin ist für Katzen eine essenzielle Aminosäure, die sie nur begrenzt selbst bilden können. Fehlt Taurin, wird der Herzmuskel schwächer, und die Zellen der Netzhaut degenerieren mit der Zeit, sodass das Sehvermögen nachlässt.",
         "es": "La taurina es un aminoácido esencial para los gatos, que solo pueden fabricar una cantidad limitada. Si les falta, el músculo del corazón se debilita y las células de la retina acaban degenerando, lo que afecta a la vista.",
         "pt": "A taurina é um aminoácido essencial para os gatos, que só conseguem produzi-la em pequena quantidade. Sem a quantidade suficiente, o músculo do coração enfraquece e as células da retina acabam por degenerar, prejudicando a visão.",
-        "nl": "Taurine is een essentieel aminozuur voor katten, en ze kunnen het zelf maar beperkt aanmaken. Zonder genoeg taurine verzwakt de hartspier en degenereren de cellen van het netvlies uiteindelijk, waardoor het zicht achteruitgaat."
+        "nl": "Taurine is een essentieel aminozuur voor katten, en ze kunnen het zelf maar beperkt aanmaken. Zonder genoeg taurine verzwakt de hartspier en degenereren de cellen van het netvlies uiteindelijk, waardoor het zicht achteruitgaat.",
+        "pl": "Tauryna to niezbędny dla kotów aminokwas, a koty potrafią wytwarzać ją same tylko w ograniczonym stopniu. Gdy jej brakuje, mięsień sercowy słabnie, a komórki siatkówki z czasem ulegają zwyrodnieniu, co pogarsza wzrok."
       }
     }
   ],
@@ -299,6 +314,11 @@
       "status": "verified",
       "verified_by": "claude-c-nl-2026-11-17",
       "verified_hash": "52d9fb0a41223b4c6a5f874523f4212959bbb2c533e1b9858bc88267ac8df932"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-17",
+      "verified_hash": "bd8482e328c577dc8d601f75800ef6da34783c60e2540306f4c90d5d12028ffe"
     }
   }
 }
