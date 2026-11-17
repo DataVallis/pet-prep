@@ -120,6 +120,7 @@ return [
     'wire_fox_terrier' => 'Ostrodlaki foksterier',
     'manchester_terrier' => 'Manchesterski terier',
     'tibetan_terrier' => 'Tibetanski terier',
+    'greyhound' => 'Angleški hrt',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

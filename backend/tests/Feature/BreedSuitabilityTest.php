@@ -643,6 +643,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::WireFoxTerrier->value => 'wire_fox_terrier.behaviour.other_pets',
         // M5-R10-119: PetMD S890 "They can also have a high prey drive because of their history as ratters".
         BreedType::ManchesterTerrier->value => 'manchester_terrier.behaviour.other_pets',
+        // M5-R10-122: PetMD S916 "Greyhounds have a very strong prey drive".
+        BreedType::Greyhound->value => 'greyhound.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {

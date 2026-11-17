@@ -832,6 +832,12 @@
 | or waved; pendant V-shaped feathered ears; tail curled over the back (natural). No welfare trait. Seven named standard
 | colours, golden first (portrait default); weights unsourced → `verified => false`.
 |
+| Greyhound (M5-R10-122, docs/research/dog-data greyhound.appearance): "Strongly built, upstanding, of generous proportions,
+| muscular power and symmetrical formation," (FCI-Standard N° 158, S912); colours "Black, white, red, blue, fawn, fallow,
+| brindle or any of these colours broken with white." (KUSA copy S913); coat fine and close; small rose-shaped ears; long,
+| low-carried, slightly curved natural tail. No welfare trait. Six named standard colours, brindle first (portrait
+| default); weights unsourced → `verified => false`.
+|
 | Wire Fox Terrier (M5-R10-117, docs/research/dog-data wire_fox_terrier.appearance): "Active and lively, bone and strength
 | in small compass, never cloddy or coarse." (FCI-Standard N° 169, S871); colour "White predominates with black, black and tan
 | or tan markings." — brindle, red, liver or slate-blue markings undesirable, any other colour unacceptable (S871); coat dense,
@@ -5163,6 +5169,42 @@ return [
             'ear_carriage' => ['pendant V-shaped ears, heavily feathered'],
             'eye_color' => ['large, round, dark brown eyes with black eye rims'],
             'tail' => ['natural tail of medium length, well feathered, carried in a curl over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-122 (docs/research/dog-data/data.json greyhound.appearance; runbook rules 2026-10-10: six of the named standard
+    // colours of FCI-Standard N° 158 (S912 / S913), brindle first = the portrait default; natural tail, healthy lean condition).
+    'greyhound' => [
+        'display_name' => 'Greyhound',
+        // Colour frequencies are in no source (greyhound.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 158 (S912, https://fci.be/Nomenclature/Standards/158g10-en.pdf; KUSA copy S913), PDSA (S914), AKC standard (S918) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S914 "Large"; S913 "Males: 71cm – 76cm (approx. 28" – 30")." (females 68–71 cm); S918 "Dogs, 65 to 70 pounds"',
+            'build' => 'S912 "Strongly built, upstanding, of generous proportions, muscular power and symmetrical formation,"',
+            'coat_length' => 'S912 "Fine and close."',
+            'coat_color' => 'S913 "Black, white, red, blue, fawn, fallow, brindle or any of these colours broken with white." (weights unsourced)',
+            'ear_carriage' => 'S912 "Small, rose-shape, of fine texture."',
+            'eye_color' => 'S912 "Bright, intelligent, oval and obliquely set. Preferably dark."',
+            'tail' => 'S912 "Long, set on rather low, strong at root, tapering to point, carried low, slightly curved."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'strongly built, upstanding sighthound of generous proportions with a long neck, deep chest, arched loin and tucked-up belly, in healthy lean condition', 'weight' => 3], 'tall, athletic and muscular sighthound, lean but well-muscled, standing calmly'],
+            'coat_length' => ['fine, close, short coat'],
+            // FCI standard (S912 / S913): six of the named colours; brindle first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'brindle', 'weight' => 30],
+                ['value' => 'black', 'weight' => 25],
+                ['value' => 'fawn', 'weight' => 15],
+                ['value' => 'blue (grey)', 'weight' => 10],
+                ['value' => 'red', 'weight' => 10],
+                ['value' => 'white with black patches', 'weight' => 10],
+            ],
+            'ear_carriage' => ['small, fine, rose-shaped ears folded back'],
+            'eye_color' => ['bright, oval, dark eyes, obliquely set'],
+            'tail' => ['long natural tail set rather low, tapering, carried low and slightly curved'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

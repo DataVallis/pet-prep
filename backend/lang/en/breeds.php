@@ -120,6 +120,7 @@ return [
     'wire_fox_terrier' => 'Wire Fox Terrier',
     'manchester_terrier' => 'Manchester Terrier',
     'tibetan_terrier' => 'Tibetan Terrier',
+    'greyhound' => 'Greyhound',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

@@ -784,6 +784,15 @@ return [
         ['key' => 'parti-colour', 'value' => 'parti-colour (white with coloured patches)', 'en' => 'Parti-colour', 'sl' => 'Dvobarven'],
         ['key' => 'tricolour', 'value' => 'tricolour (black, white and tan)', 'en' => 'Tricolour (black, white, tan)', 'sl' => 'Trobarven (črn, bel, rjavkast)'],
     ],
+    // M5-R10-122: FCI-Standard N° 158 (S912 / S913) — six of the named standard colours, same order and values as breed_appearance.php.
+    'greyhound' => [
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'blue', 'value' => 'blue (grey)', 'en' => 'Blue', 'sl' => 'Moder (siv)'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'black-white', 'value' => 'white with black patches', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

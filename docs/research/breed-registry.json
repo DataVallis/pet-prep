@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "174262ed9c6d6166057d0113e3e65469e5154fb32a51b8b117a8ca3269a46f92"
+      "sha256": "c8f02e25dd8faa7c4acda685029db74ab1c85df74190bcf116ccbcd3a30aabdd"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "2fcbb99a0ba710c36da6bf5997b3e48484300203493fd732bc2cc6a031d44def"
+      "sha256": "4400e8ade0bb010b7a2a0105b483ef29f67da44192a7201917dcef823a2b7585"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "b01709e4b5b4ea9f2a48951d1d555ce7c62139a5da93c3331779a1b094c9bbc6"
+      "sha256": "ae920a681f847d4b975a259f5ed77885734c3655e90fae01244fe581fd394e48"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,12 +40,12 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "bcf37c49a1ddd6c07f15014ee0a128c9ae131b957e2c64afba24b7027a2d71f1"
+      "sha256": "f7126c17d9aec7927c5d23f3bb4cc7f79f205a2d18f0d37a44d147d9a9543dfc"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "38991449e33306754fc102f408af1b786d40b3fd6775112fb442d7a7333552eb"
+      "sha256": "2170156c10a637d4249fa60fbee3ee74f55a9b8d311a9670a3dd2d5d592b3d0b"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "771239d0271ada77a490bc27d4f588c1575b19ccdfc0e1fcc468b41a55c55f84"
+      "sha256": "dd7a36264707f7f7530dd0f370e98580e0be533ebabcff8f42a060e320f7bf1c"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 112,
+      "breed_count": 113,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -68096,6 +68096,523 @@
       ]
     },
     {
+      "id": "greyhound",
+      "species": "dog",
+      "order": 112,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Greyhound",
+        "sl": "Angleški hrt"
+      },
+      "slug": {
+        "en": "greyhound",
+        "sl": "angleski-hrt"
+      },
+      "synonyms": {
+        "en": [
+          "English Greyhound"
+        ],
+        "sl": [
+          "greyhound",
+          "grejhaund"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "h1_2",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S914"
+          ],
+          "ref": "greyhound.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              71,
+              76
+            ],
+            "female": [
+              68,
+              71
+            ]
+          },
+          "source_ids": [
+            "S913"
+          ],
+          "ref": "greyhound.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              29.5,
+              31.8
+            ],
+            "female": [
+              27.2,
+              29.5
+            ]
+          },
+          "source_ids": [
+            "S918"
+          ],
+          "ref": "greyhound.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "greyhound.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 11.4,
+          "source_ids": [
+            "S920"
+          ],
+          "ref": "greyhound.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S914"
+          ],
+          "ref": "greyhound.lifespan.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            10,
+            13
+          ],
+          "source_ids": [
+            "S917"
+          ],
+          "ref": "greyhound.lifespan.webmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "about",
+          "value": 60,
+          "source_ids": [
+            "S914"
+          ],
+          "ref": "greyhound.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S914"
+          ],
+          "ref": "greyhound.suitability.pdsa_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S914"
+          ],
+          "ref": "greyhound.suitability.pdsa_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 46,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "greyhound.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 158,
+            "group": 10,
+            "section": 3,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S912"
+          ],
+          "ref": "greyhound.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 7,
+        "grooming_frequency": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S914"
+          ],
+          "ref": "greyhound.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "periodontal_disease",
+          "source_ids": [
+            "S914"
+          ],
+          "ref": "greyhound.health.periodontal",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S914"
+          ],
+          "ref": "greyhound.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S914"
+          ],
+          "ref": "greyhound.health.von_willebrand",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S914"
+            ],
+            "refs": [
+              "greyhound.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S916"
+            ],
+            "refs": [
+              "greyhound.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 103
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 103
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.greyhound.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S914"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S914 'about an hour of exercise daily'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.greyhound.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.greyhound.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S920"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 103 (0.75 × VetCompass median 11.4 y, S920)"
+          },
+          {
+            "ref": "proposed_game_parameters.greyhound.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 46, Average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.greyhound.grooming",
+            "basis_source_ids": [
+              "S914"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »requires weekly grooming«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.greyhound.tooth_brushing",
+            "basis_source_ids": [
+              "S917"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »Brush your dog's teeth on a daily basis« → vsak dan"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S914",
+          "S917",
+          "S920"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_checked",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S912",
+        "S913",
+        "S914",
+        "S916",
+        "S917",
+        "S918",
+        "S920",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -74527,6 +75044,55 @@
       "publisher": "Canadian Kennel Club",
       "title": "Tibetan Terrier — breed standard (Group VI Non-Sporting, effective January 2018) (PDF)",
       "url": "https://www.ckc.ca/CanadianKennelClub/media/Breed-Standards/Group%206/Tibetan-Terrier.pdf"
+    },
+    {
+      "id": "S912",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 158 — Greyhound (English PDF, '06.10.2026/ EN') + FCI nomenclature page",
+      "url": "https://fci.be/Nomenclature/Standards/158g10-en.pdf"
+    },
+    {
+      "id": "S913",
+      "tier": "A",
+      "publisher": "FCI (KUSA copy)",
+      "title": "FCI-Standard N° 158 — Greyhound (PDF, KUSA copy 'FCI [01-2026]')",
+      "url": "https://www.kusa.co.za/images/DJAKI/Greyhound%20-%20FCI%20[01-2026].pdf"
+    },
+    {
+      "id": "S914",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Greyhound breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/greyhound"
+    },
+    {
+      "id": "S916",
+      "tier": "B",
+      "publisher": "PetMD — Teresa Kho-Pelfrey, DVM (published Aug. 25, 2022)",
+      "title": "Greyhound",
+      "url": "https://petmd.com/dog/breeds/greyhound"
+    },
+    {
+      "id": "S917",
+      "tier": "B",
+      "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Zilpah Sheikh, MD (2026-04-23)",
+      "title": "What to Know About Greyhounds",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-greyhounds"
+    },
+    {
+      "id": "S918",
+      "tier": "A",
+      "publisher": "American Kennel Club breed standard (Greyhound Club of America copy)",
+      "title": "Greyhound — AKC breed standard",
+      "url": "https://greyhoundclubofamericainc.org/akc-standard"
+    },
+    {
+      "id": "S920",
+      "tier": "A",
+      "publisher": "Canine Genetics and Epidemiology 6:4 (2019) (RVC repository copy)",
+      "title": "O'Neill D. G., Rooney N. J., Brock C., Church D. B., Brodbelt D. C., Pegram C. Greyhounds under general veterinary care in the UK during 2016: demography and common disorders (PDF)",
+      "url": "https://rvc-repository.worktribe.com/OutputFile/1382561"
     },
     {
       "id": "C1",

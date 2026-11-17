@@ -935,6 +935,12 @@ class FalAiService
                 .'a strong muzzle with a black nose, large round dark brown eyes, pendant V-shaped ears heavily feathered, '
                 .'a natural well-feathered tail carried in a curl over the back, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-122: FCI-Standard N° 158 (S912 / S913) — strongly built, upstanding sighthound of generous proportions; brindle
+            // (one of the named standard colours); fine, close coat; small rose ears; long, low-carried, slightly curved tail.
+            BreedType::Greyhound => 'A strongly built, upstanding Greyhound of generous proportions, a tall sighthound in healthy lean condition, '
+                .'brindle coat, a fine, close, short coat, a long lean head with a dark nose, bright oval dark eyes, '
+                .'small rose-shaped ears folded back, a deep chest and arched loin, a long natural tail carried low and slightly curved, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2205,6 +2211,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'profuse, fine, long double coat, straight or slightly waved',
                 'markings' => 'long hair falling over the eyes, pendant V-shaped feathered ears, tail curled over the back',
+            ],
+            // M5-R10-122: FCI S912 / S913 brindle (the portrait default of the named standard colours).
+            BreedType::Greyhound => [
+                'color_scheme' => 'brindle',
+                'eye_color' => 'dark',
+                'fur_texture' => 'fine, close, short coat',
+                'markings' => 'brindle striping over the body, small rose-shaped ears folded back, long low-carried tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
