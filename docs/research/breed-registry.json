@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "51a31bb2af2843d3f3da27f75078593773e2d9df984022478e301f4955341db3"
+      "sha256": "2ab666866d49d522675b19f69f051b70fa7e8c3cd4ff220e921ac97086c8d9fb"
     }
   },
   "suitability_vocabulary": {
@@ -68576,7 +68576,12 @@
           "S920"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "greyhound.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_checked",
         "tests": [],
