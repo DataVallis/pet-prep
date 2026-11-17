@@ -5,51 +5,59 @@
     "en": "Coconut water",
     "sl": "Kokosova voda",
     "fr": "Eau de coco",
-    "fi": "Kookosvesi"
+    "fi": "Kookosvesi",
+    "nb": "Kokosvann"
   },
   "question": {
     "en": "Can dogs drink coconut water?",
     "sl": "Ali lahko psi pijejo kokosovo vodo?",
     "fr": "Les chiens peuvent-ils boire de l’eau de coco ?",
-    "fi": "Saako koira juoda kookosvettä?"
+    "fi": "Saako koira juoda kookosvettä?",
+    "nb": "Kan hunder drikke kokosvann?"
   },
   "url_slug": {
     "en": "coconut-water",
     "sl": "kokosova-voda",
     "fr": "eau-de-coco",
-    "fi": "kookosvesi"
+    "fi": "kookosvesi",
+    "nb": "kokosvann"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as an occasional treat. A vet quoted by the AKC says coconut water is safe for dogs but should be a treat, not a substitute for regular water. Choose pure coconut water with no added sugars or preservatives, and offer it in moderation.",
     "sl": "Da, kot občasno posladico. Veterinarka, ki jo navaja AKC, pravi, da je kokosova voda za pse varna, vendar naj bo posladica in ne nadomestek za navadno vodo. Izberite čisto kokosovo vodo brez dodanega sladkorja ali konzervansov in jo ponudite zmerno.",
     "fr": "Oui, en friandise occasionnelle. Un vétérinaire cité par l’AKC explique que l’eau de coco est sans danger pour les chiens, mais qu’elle doit rester une friandise et ne pas remplacer l’eau habituelle. Choisissez de l’eau de coco pure, sans sucre ajouté ni conservateurs, et donnez-en avec modération.",
-    "fi": "Saa, satunnaisena herkkuna. AKC:n lainaaman eläinlääkärin mukaan kookosvesi on koiralle turvallista, mutta sen pitää olla herkku eikä tavallisen veden korvike. Valitse puhdas kookosvesi ilman lisättyä sokeria tai säilöntäaineita ja tarjoa sitä kohtuudella."
+    "fi": "Saa, satunnaisena herkkuna. AKC:n lainaaman eläinlääkärin mukaan kookosvesi on koiralle turvallista, mutta sen pitää olla herkku eikä tavallisen veden korvike. Valitse puhdas kookosvesi ilman lisättyä sokeria tai säilöntäaineita ja tarjoa sitä kohtuudella.",
+    "nb": "Ja, som en godbit av og til. En dyrlege som AKC siterer, sier at kokosvann er trygt for hunder, men bør være en godbit, ikke en erstatning for vanlig vann. Velg rent kokosvann uten tilsatt sukker eller konserveringsmidler, og gi det med måte."
   },
   "why": {
     "en": "Coconut is high in potassium, so caution is needed for dogs with kidney disease or other electrolyte disturbances. Too much coconut can make a dog sick, mainly with stomach upset such as diarrhoea. Anything you offer must be free of artificial sweeteners like xylitol, which is toxic for dogs.",
     "sl": "Kokos vsebuje veliko kalija, zato je potrebna previdnost pri psih z boleznijo ledvic ali drugimi motnjami elektrolitov. Preveč kokosa lahko psu škoduje, predvsem s prebavnimi težavami, kot je driska. Karkoli ponudite, ne sme vsebovati umetnih sladil, kot je ksilitol, ki je za pse strupen.",
     "fr": "La noix de coco est riche en potassium : la prudence s’impose donc pour les chiens atteints d’une maladie rénale ou d’autres déséquilibres électrolytiques. Trop de noix de coco peut rendre un chien malade, surtout avec des troubles digestifs comme la diarrhée. Tout ce que vous proposez doit être exempt d’édulcorants artificiels comme le xylitol, toxique pour les chiens.",
-    "fi": "Kookoksessa on paljon kaliumia, joten munuaissairaiden tai muista elektrolyyttihäiriöistä kärsivien koirien kohdalla on oltava varovainen. Liian suuri määrä kookosta voi tehdä koiran sairaaksi, yleensä vatsaoireina, kuten ripulina. Kaiken, mitä tarjoat, pitää olla ilman keinotekoisia makeutusaineita, kuten ksylitolia, joka on koirille myrkyllistä."
+    "fi": "Kookoksessa on paljon kaliumia, joten munuaissairaiden tai muista elektrolyyttihäiriöistä kärsivien koirien kohdalla on oltava varovainen. Liian suuri määrä kookosta voi tehdä koiran sairaaksi, yleensä vatsaoireina, kuten ripulina. Kaiken, mitä tarjoat, pitää olla ilman keinotekoisia makeutusaineita, kuten ksylitolia, joka on koirille myrkyllistä.",
+    "nb": "Kokos inneholder mye kalium, så du må være forsiktig med hunder som har nyresykdom eller andre elektrolyttforstyrrelser. For mye kokos kan gjøre hunden syk, først og fremst med urolig mage, for eksempel diaré. Alt du gir, må være fritt for kunstige søtstoffer som xylitol, som er giftig for hunder."
   },
   "signs": null,
   "what_to_do": {
     "en": "Stop the coconut water if your dog gets an upset stomach or diarrhoea. Coconut is high in potassium, so be cautious with it if your dog has kidney disease or an electrolyte problem.",
     "sl": "Če ima pes po kokosovi vodi prebavne težave ali drisko, je ne dajajte več. Kokos vsebuje veliko kalija, zato bodite pri psu z boleznijo ledvic ali motnjo elektrolitov z njo previdni.",
     "fr": "Arrêtez l’eau de coco si votre chien a mal à l’estomac ou de la diarrhée. La noix de coco est riche en potassium : soyez prudent si votre chien a une maladie rénale ou un déséquilibre électrolytique.",
-    "fi": "Lopeta kookosveden antaminen, jos koiran vatsa menee sekaisin tai sille tulee ripuli. Kookoksessa on paljon kaliumia, joten ole varovainen, jos koirallasi on munuaissairaus tai elektrolyyttiongelma."
+    "fi": "Lopeta kookosveden antaminen, jos koiran vatsa menee sekaisin tai sille tulee ripuli. Kookoksessa on paljon kaliumia, joten ole varovainen, jos koirallasi on munuaissairaus tai elektrolyyttiongelma.",
+    "nb": "Slutt å gi kokosvann hvis hunden får urolig mage eller diaré. Kokos inneholder mye kalium, så vær forsiktig hvis hunden har nyresykdom eller elektrolyttproblemer."
   },
   "serving": {
     "en": "Pure, unsweetened coconut water only, with no added sugar, preservatives or xylitol, offered in moderation as a treat and never instead of fresh water.",
     "sl": "Le čista, nesladkana kokosova voda brez dodanega sladkorja, konzervansov ali ksilitola, ponujena zmerno kot posladica in nikoli namesto sveže vode.",
     "fr": "Uniquement de l’eau de coco pure et non sucrée, sans sucre ajouté, sans conservateurs et sans xylitol, donnée avec modération en friandise, jamais à la place de l’eau fraîche.",
-    "fi": "Vain puhdasta, makeuttamatonta kookosvettä ilman lisättyä sokeria, säilöntäaineita tai ksylitolia, kohtuudella herkkuna eikä koskaan raikkaan veden tilalla."
+    "fi": "Vain puhdasta, makeuttamatonta kookosvettä ilman lisättyä sokeria, säilöntäaineita tai ksylitolia, kohtuudella herkkuna eikä koskaan raikkaan veden tilalla.",
+    "nb": "Bare rent, usøtet kokosvann uten tilsatt sukker, konserveringsmidler eller xylitol. Gi det med måte som en godbit, aldri i stedet for friskt vann."
   },
   "child": {
     "en": "Coconut water is an occasional treat for dogs. Fresh water is still what they need to drink every day!",
     "sl": "Kokosova voda je za pse občasna posladica. Vsak dan pa morajo piti svežo vodo!",
     "fr": "L’eau de coco est une friandise occasionnelle pour les chiens. Ce qu’ils doivent boire tous les jours, c’est de l’eau fraîche !",
-    "fi": "Kookosvesi on koiralle satunnainen herkku. Raikas vesi on silti se, mitä koira tarvitsee juodakseen joka päivä!"
+    "fi": "Kookosvesi on koiralle satunnainen herkku. Raikas vesi on silti se, mitä koira tarvitsee juodakseen joka päivä!",
+    "nb": "Kokosvann er en godbit hunder kan få av og til. Hver dag er det friskt vann de trenger å drikke!"
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can coconut water help my dog after exercise?",
         "sl": "Ali kokosova voda psu pomaga po gibanju?",
         "fr": "L’eau de coco peut-elle aider mon chien après l’effort ?",
-        "fi": "Voiko kookosvesi auttaa koiraani liikunnan jälkeen?"
+        "fi": "Voiko kookosvesi auttaa koiraani liikunnan jälkeen?",
+        "nb": "Kan kokosvann hjelpe hunden min etter trening?"
       },
       "a": {
         "en": "One vet quoted by the AKC offers her dogs coconut water for extra electrolytes after dog sport events. For the average house dog, though, a fresh bowl of water is perfectly sufficient.",
         "sl": "Veterinarka, ki jo navaja AKC, svojim psom po pasjih športnih tekmovanjih ponudi kokosovo vodo za dodatne elektrolite. Za povprečnega hišnega psa pa je skleda sveže vode povsem dovolj.",
         "fr": "Une vétérinaire citée par l’AKC donne de l’eau de coco à ses chiens pour un apport supplémentaire en électrolytes après des épreuves de sport canin. Pour un chien de maison ordinaire, une gamelle d’eau fraîche suffit tout à fait.",
-        "fi": "Yksi AKC:n lainaama eläinlääkäri antaa koirilleen kookosvettä lisäelektrolyyttien vuoksi koiraurheilutapahtumien jälkeen. Tavalliselle kotikoiralle riittää kuitenkin hyvin kuppi raikasta vettä."
+        "fi": "Yksi AKC:n lainaama eläinlääkäri antaa koirilleen kookosvettä lisäelektrolyyttien vuoksi koiraurheilutapahtumien jälkeen. Tavalliselle kotikoiralle riittää kuitenkin hyvin kuppi raikasta vettä.",
+        "nb": "En dyrlege som AKC siterer, gir hundene sine kokosvann for å få litt ekstra elektrolytter etter hundesport. For en vanlig familiehund er det likevel helt nok med en skål friskt vann."
       }
     }
   ],
@@ -137,6 +147,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c1a80a828fee125a616bafca00e5bbf803a6563869922dc5e786c0eb9219a3f1"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-c-nb-2026-11-17",
+      "verified_hash": "29b2d34310f01c12559eb9e5d737fc8be10db067bb799a224f65fe4031d29eea"
     }
   }
 }

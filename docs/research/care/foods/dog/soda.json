@@ -5,32 +5,37 @@
     "en": "Soda (soft drinks)",
     "sl": "Gazirane pijače",
     "fr": "Soda (boissons gazeuses)",
-    "fi": "Limsa (virvoitusjuomat)"
+    "fi": "Limsa (virvoitusjuomat)",
+    "nb": "Brus (leskedrikker)"
   },
   "question": {
     "en": "Can dogs drink soda?",
     "sl": "Ali lahko psi pijejo gazirane pijače?",
     "fr": "Les chiens peuvent-ils boire du soda ?",
-    "fi": "Saako koira juoda limsaa?"
+    "fi": "Saako koira juoda limsaa?",
+    "nb": "Kan hunder drikke brus?"
   },
   "url_slug": {
     "en": "soda",
     "sl": "gazirane-pijace",
     "fr": "soda",
-    "fi": "limsa"
+    "fi": "limsa",
+    "nb": "brus"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Dogs should not drink soda. It is high in sugar and caffeine, has no nutritional value for dogs, and the caffeine can cause signs of poisoning. One or two licks are unlikely to cause poisoning, but keep soda out of your dog's reach.",
     "sl": "Ne. Psi ne smejo piti gaziranih pijač. Vsebujejo veliko sladkorja in kofeina, za pse nimajo nobene hranilne vrednosti, kofein pa lahko povzroči znake zastrupitve. Lizanje ali dve verjetno ne bosta povzročila zastrupitve, vendar pijače hranite izven pasjega dosega.",
     "fr": "Non. Les chiens ne doivent pas boire de soda. Il est riche en sucre et en caféine, n’a aucune valeur nutritive pour les chiens, et la caféine peut provoquer des signes d’intoxication. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais gardez le soda hors de portée de votre chien.",
-    "fi": "Ei saa. Koiran ei pidä juoda limsaa. Siinä on paljon sokeria ja kofeiinia, siitä ei ole koiralle ravitsemuksellista hyötyä, ja kofeiini voi aiheuttaa myrkytysoireita. Yksi tai kaksi nuolaisua tuskin aiheuttaa myrkytystä, mutta pidä limsa koirasi ulottumattomissa."
+    "fi": "Ei saa. Koiran ei pidä juoda limsaa. Siinä on paljon sokeria ja kofeiinia, siitä ei ole koiralle ravitsemuksellista hyötyä, ja kofeiini voi aiheuttaa myrkytysoireita. Yksi tai kaksi nuolaisua tuskin aiheuttaa myrkytystä, mutta pidä limsa koirasi ulottumattomissa.",
+    "nb": "Nei. Hunder bør ikke drikke brus. Den inneholder mye sukker og koffein, har ingen næringsverdi for hunder, og koffeinet kan gi tegn på forgiftning. En slikk eller to gir neppe forgiftning, men hold brus utenfor hundens rekkevidde."
   },
   "why": {
     "en": "Pet Poison Helpline explains that soda has high levels of sugar, caffeine and other ingredients that can harm dogs, and there is no reason for dogs to drink it. The caffeine in soda can lead to signs of toxicity, and how much a dog drinks determines how severe they are. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
     "sl": "Pet Poison Helpline pojasnjuje, da gazirane pijače vsebujejo veliko sladkorja, kofeina in drugih sestavin, ki lahko psom škodijo, in da ni nobenega razloga, da bi jih psi pili. Kofein v teh pijačah lahko povzroči znake zastrupitve, njihova resnost pa je odvisna od tega, koliko je pes popil. Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen.",
     "fr": "Le Pet Poison Helpline explique que le soda contient beaucoup de sucre, de caféine et d’autres ingrédients qui peuvent nuire aux chiens, et qu’il n’y a aucune raison d’en donner. La caféine du soda peut entraîner des signes de toxicité, dont la gravité dépend de la quantité bue. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens.",
-    "fi": "Pet Poison Helpline kertoo, että limsassa on paljon sokeria, kofeiinia ja muita aineita, jotka voivat vahingoittaa koiria, eikä koiralla ole mitään syytä juoda sitä. Limsan kofeiini voi aiheuttaa myrkytysoireita, ja oireiden vakavuus riippuu siitä, kuinka paljon koira joi. Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä."
+    "fi": "Pet Poison Helpline kertoo, että limsassa on paljon sokeria, kofeiinia ja muita aineita, jotka voivat vahingoittaa koiria, eikä koiralla ole mitään syytä juoda sitä. Limsan kofeiini voi aiheuttaa myrkytysoireita, ja oireiden vakavuus riippuu siitä, kuinka paljon koira joi. Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä.",
+    "nb": "Pet Poison Helpline forklarer at brus inneholder mye sukker, koffein og andre ingredienser som kan skade hunder, og at det ikke er noen grunn til at hunder skal drikke den. Koffeinet i brus kan gi tegn på giftvirkning, og hvor alvorlige de blir, avhenger av hvor mye hunden drikker. Mange sukkerfrie drikker inneholder xylitol, som er svært giftig for hunder."
   },
   "signs": {
     "en": [
@@ -80,20 +85,34 @@
       "Vapina",
       "Kouristukset",
       "Lyyhistyminen"
+    ],
+    "nb": [
+      "Hyperaktivitet",
+      "Uro",
+      "Oppkast",
+      "Rask puls",
+      "Høyt blodtrykk",
+      "Forhøyet kroppstemperatur",
+      "Uregelmessig puls",
+      "Skjelvinger",
+      "Kramper",
+      "Kollaps"
     ]
   },
   "what_to_do": {
     "en": "If your dog drank soda, watch for symptoms. If they drank a large amount, contact your vet or a pet poison helpline straight away so your dog can get the right treatment. If the soda was sugar-free, see our xylitol page.",
     "sl": "Če je pes popil gazirano pijačo, ga opazujte, ali se pojavijo znaki. Če je popil veliko, takoj pokličite veterinarja ali center za zastrupitve živali, da bo pes dobil pravo zdravljenje. Če je bila pijača brez sladkorja, poglejte našo stran o ksilitolu.",
     "fr": "Si votre chien a bu du soda, surveillez l’apparition de signes. S’il en a bu une grande quantité, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire afin qu’il reçoive le traitement adapté. Si le soda était sans sucre, consultez notre page sur le xylitol.",
-    "fi": "Jos koirasi joi limsaa, tarkkaile oireita. Jos se joi paljon, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, jotta koira saa oikean hoidon. Jos limsa oli sokeritonta, lue ksylitolisivumme."
+    "fi": "Jos koirasi joi limsaa, tarkkaile oireita. Jos se joi paljon, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, jotta koira saa oikean hoidon. Jos limsa oli sokeritonta, lue ksylitolisivumme.",
+    "nb": "Hvis hunden har drukket brus, må du følge med på om den får symptomer. Hvis den har drukket mye, kontakter du dyrlegen eller giftinformasjon for dyr med en gang, slik at hunden får riktig behandling. Hvis brusen var sukkerfri, kan du lese siden vår om xylitol."
   },
   "serving": null,
   "child": {
     "en": "Fizzy drinks are for people, not dogs. Dogs only need fresh water, so keep cans and cups up high!",
     "sl": "Gazirane pijače so za ljudi, ne za pse. Psi potrebujejo le svežo vodo, zato pločevinke in kozarce pospravi visoko!",
     "fr": "Les boissons gazeuses sont faites pour les humains, pas pour les chiens. Les chiens n’ont besoin que d’eau fraîche : range bien les canettes et les gobelets en hauteur !",
-    "fi": "Kuplivat juomat ovat ihmisille, eivät koirille. Koira tarvitsee vain raikasta vettä, joten pidä tölkit ja mukit korkealla!"
+    "fi": "Kuplivat juomat ovat ihmisille, eivät koirille. Koira tarvitsee vain raikasta vettä, joten pidä tölkit ja mukit korkealla!",
+    "nb": "Brus er for mennesker, ikke for hunder. Hunder trenger bare friskt vann, så la bokser og kopper stå høyt oppe!"
   },
   "faq": [
     {
@@ -101,13 +120,15 @@
         "en": "My dog licked a bit of spilled soda. Is that a problem?",
         "sl": "Pes je polizal malo razlite gazirane pijače. Je to težava?",
         "fr": "Mon chien a léché un peu de soda renversé. Est-ce un problème ?",
-        "fi": "Koirani nuolaisi läikkynyttä limsaa. Onko se ongelma?"
+        "fi": "Koirani nuolaisi läikkynyttä limsaa. Onko se ongelma?",
+        "nb": "Hunden min slikket i seg litt sølt brus. Er det et problem?"
       },
       "a": {
         "en": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets. Keep an eye on your dog and keep soda stored away so it can't happen again.",
         "sl": "Lizanje ali dve kave, čaja ali gazirane pijače pri večini živali verjetno ne bo povzročilo zastrupitve. Psa opazujte in pijače shranjujte tako, da do njih ne more.",
         "fr": "Un ou deux coups de langue de café, de thé ou de soda ont peu de chances d’intoxiquer la plupart des animaux. Gardez un œil sur votre chien et rangez le soda pour que cela ne se reproduise pas.",
-        "fi": "Yksi tai kaksi nuolaisua kahvia, teetä tai limsaa tuskin aiheuttaa myrkytystä useimmille lemmikeille. Tarkkaile koiraasi ja säilytä limsa poissa ulottuvilta, jottei näin enää tapahdu."
+        "fi": "Yksi tai kaksi nuolaisua kahvia, teetä tai limsaa tuskin aiheuttaa myrkytystä useimmille lemmikeille. Tarkkaile koiraasi ja säilytä limsa poissa ulottuvilta, jottei näin enää tapahdu.",
+        "nb": "En slikk eller to kaffe, te eller brus gir neppe forgiftning hos de fleste dyr. Følg med på hunden, og oppbevar brusen utilgjengelig, så det ikke skjer igjen."
       }
     },
     {
@@ -115,13 +136,15 @@
         "en": "What about diet or sugar-free soda?",
         "sl": "Kaj pa dietne pijače ali pijače brez sladkorja?",
         "fr": "Et les sodas light ou sans sucre ?",
-        "fi": "Entä kevyt- tai sokeriton limsa?"
+        "fi": "Entä kevyt- tai sokeriton limsa?",
+        "nb": "Hva med lettbrus eller sukkerfri brus?"
       },
       "a": {
         "en": "Many zero-sugar drinks contain xylitol, which is highly toxic to dogs, so keep diet drinks away from your dog too.",
         "sl": "Številne pijače brez sladkorja vsebujejo ksilitol, ki je za pse zelo strupen, zato tudi dietne pijače hranite izven pasjega dosega.",
         "fr": "De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens : gardez donc aussi les boissons light hors de portée de votre chien.",
-        "fi": "Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä, joten pidä myös kevytjuomat poissa koirasi ulottuvilta."
+        "fi": "Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä, joten pidä myös kevytjuomat poissa koirasi ulottuvilta.",
+        "nb": "Mange sukkerfrie drikker inneholder xylitol, som er svært giftig for hunder, så hold lettbrus unna hunden også."
       }
     }
   ],
@@ -253,6 +276,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "89e356fd51789c8c42cabd0f54e8b0b2a31ddc5777f04a0b04c36cde344183bf"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-c-nb-2026-11-17",
+      "verified_hash": "98102d0194cf8e40c85bd7686775d96b0ffb6dc301a832ccd0fa2ae811dfddba"
     }
   }
 }

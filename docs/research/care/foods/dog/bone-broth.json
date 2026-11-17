@@ -5,51 +5,59 @@
     "en": "Bone broth",
     "sl": "Kostna juha",
     "fr": "Bouillon d’os",
-    "fi": "Luuliemi"
+    "fi": "Luuliemi",
+    "nb": "Beinkraft"
   },
   "question": {
     "en": "Can dogs have bone broth?",
     "sl": "Ali lahko psi jedo kostno juho?",
     "fr": "Les chiens peuvent-ils avoir du bouillon d’os ?",
-    "fi": "Saako koira juoda luulientä?"
+    "fi": "Saako koira juoda luulientä?",
+    "nb": "Kan hunder få beinkraft?"
   },
   "url_slug": {
     "en": "bone-broth",
     "sl": "kostna-juha",
     "fr": "bouillon-d-os",
-    "fi": "luuliemi"
+    "fi": "luuliemi",
+    "nb": "beinkraft"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain bone broth made with dog-safe ingredients is fine. It is mild and easy on sensitive stomachs. Strain out every bone before serving, remove the fat layer, and skip broths with onions, garlic or salt.",
     "sl": "Da, navadna kostna juha iz sestavin, ki so za pse varne, je v redu. Je blaga in nežna do občutljivih želodcev. Pred serviranjem precedite vse kosti, odstranite plast maščobe in se izognite juham s čebulo, česnom ali soljo.",
     "fr": "Oui, un bouillon d’os nature préparé avec des ingrédients sans danger pour les chiens convient. Il est doux et est bien toléré par les estomacs sensibles. Retirez tous les os avant de le servir, enlevez la couche de graisse et évitez les bouillons contenant de l’oignon, de l’ail ou du sel.",
-    "fi": "Saa, kunhan luuliemi on maustamatonta ja tehty koiralle turvallisista aineksista. Se on mietoa ja hellää herkälle vatsalle. Siivilöi kaikki luut pois ennen tarjoamista, poista rasvakerros ja vältä liemiä, joissa on sipulia, valkosipulia tai suolaa."
+    "fi": "Saa, kunhan luuliemi on maustamatonta ja tehty koiralle turvallisista aineksista. Se on mietoa ja hellää herkälle vatsalle. Siivilöi kaikki luut pois ennen tarjoamista, poista rasvakerros ja vältä liemiä, joissa on sipulia, valkosipulia tai suolaa.",
+    "nb": "Ja, naturell beinkraft laget med ingredienser som er trygge for hunder, er greit. Den er mild og skånsom for en følsom mage. Sil bort alle bein før servering, fjern fettlaget, og dropp kraft med løk, hvitløk eller salt."
   },
   "why": {
     "en": "Bone broth is a stock made by slowly cooking animal bones at low heat for a long time. It is mild, flavourful and easy on sensitive stomachs, and it can make food more appealing to dogs with a reduced appetite. The risks come from what goes into it: some broths contain additives such as onions, garlic or salt, and cooked bones can splinter and injure your dog or get lodged in the throat.",
     "sl": "Kostna juha je osnova, ki nastane s počasnim kuhanjem živalskih kosti pri nizki temperaturi dalj časa. Je blaga, okusna in nežna do občutljivih želodcev, psom s slabšim apetitom pa lahko naredi hrano bolj privlačno. Tveganja izvirajo iz sestavin: nekatere juhe vsebujejo dodatke, kot so čebula, česen ali sol, kuhane kosti pa se lahko razcepijo in psa poškodujejo ali se mu zataknejo v grlu.",
     "fr": "Le bouillon d’os est un fond obtenu en faisant cuire longuement des os d’animaux à feu doux. Il est doux, savoureux et est bien toléré par les estomacs sensibles, et il peut rendre la nourriture plus appétissante pour les chiens qui mangent peu. Les risques viennent de ce qu’on y met : certains bouillons contiennent des additifs comme de l’oignon, de l’ail ou du sel, et les os cuits peuvent éclater, blesser votre chien ou rester coincés dans sa gorge.",
-    "fi": "Luuliemi syntyy, kun eläinten luita haudutetaan hitaasti matalalla lämmöllä pitkään. Se on mietoa, maukasta ja hellää herkälle vatsalle, ja se voi tehdä ruoasta houkuttelevampaa koiralle, jonka ruokahalu on heikko. Riskit liittyvät liemen aineksiin: joissakin liemissä on lisäaineina sipulia, valkosipulia tai suolaa, ja kypsennetyt luut voivat sirpaloitua ja vahingoittaa koiraa tai juuttua sen kurkkuun."
+    "fi": "Luuliemi syntyy, kun eläinten luita haudutetaan hitaasti matalalla lämmöllä pitkään. Se on mietoa, maukasta ja hellää herkälle vatsalle, ja se voi tehdä ruoasta houkuttelevampaa koiralle, jonka ruokahalu on heikko. Riskit liittyvät liemen aineksiin: joissakin liemissä on lisäaineina sipulia, valkosipulia tai suolaa, ja kypsennetyt luut voivat sirpaloitua ja vahingoittaa koiraa tai juuttua sen kurkkuun.",
+    "nb": "Beinkraft er en kraft som lages ved å la bein fra dyr småkoke på lav varme i lang tid. Den er mild, smakfull og skånsom for en følsom mage, og den kan gjøre maten mer fristende for hunder med nedsatt matlyst. Risikoen ligger i det som puttes oppi: Noen kraftsorter inneholder tilsetninger som løk, hvitløk eller salt, og kokte bein kan splintres og skade hunden eller sette seg fast i halsen."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog had broth that contains onions, garlic or a lot of salt, see our onion, garlic and salt pages. If your dog swallowed a cooked bone, see our cooked bones page. Bone broth won't fix joint problems on its own, so talk to your vet about them.",
     "sl": "Če je pes pojedel juho s čebulo, česnom ali veliko soli, poglejte naše strani o čebuli, česnu in soli. Če je pes pogoltnil kuhano kost, poglejte našo stran o kuhanih kosteh. Kostna juha sama ne odpravi težav s sklepi, zato se o njih pogovorite z veterinarjem.",
     "fr": "Si votre chien a bu un bouillon contenant de l’oignon, de l’ail ou beaucoup de sel, consultez nos pages sur l’oignon, l’ail et le sel. Si votre chien a avalé un os cuit, consultez notre page sur les os cuits. Le bouillon d’os ne suffit pas à soigner des problèmes articulaires : parlez-en à votre vétérinaire.",
-    "fi": "Jos koirasi sai lientä, jossa oli sipulia, valkosipulia tai paljon suolaa, lue sivumme sipulista, valkosipulista ja suolasta. Jos koirasi nieli kypsennetyn luun, lue sivumme kypsennetyistä luista. Luuliemi ei yksinään korjaa nivelongelmia, joten keskustele niistä eläinlääkärin kanssa."
+    "fi": "Jos koirasi sai lientä, jossa oli sipulia, valkosipulia tai paljon suolaa, lue sivumme sipulista, valkosipulista ja suolasta. Jos koirasi nieli kypsennetyn luun, lue sivumme kypsennetyistä luista. Luuliemi ei yksinään korjaa nivelongelmia, joten keskustele niistä eläinlääkärin kanssa.",
+    "nb": "Hvis hunden har fått kraft som inneholder løk, hvitløk eller mye salt, kan du lese sidene våre om løk, hvitløk og salt. Hvis hunden har svelget et kokt bein, kan du lese siden vår om kokte bein. Beinkraft løser ikke leddproblemer på egen hånd, så snakk med dyrlegen om dem."
   },
   "serving": {
     "en": "Use only natural, dog-safe ingredients, with no onions, garlic or salt. After cooking, refrigerate the broth, remove the hardened layer of fat from the top and strain out every bone. Serve it on its own or mixed into dry food.",
     "sl": "Uporabite le naravne sestavine, ki so za pse varne, brez čebule, česna in soli. Po kuhanju juho ohladite v hladilniku, odstranite strjeno plast maščobe z vrha in precedite vse kosti. Ponudite jo samo ali primešano suhi hrani.",
     "fr": "N’utilisez que des ingrédients naturels et sans danger pour les chiens, sans oignon, ail ni sel. Après la cuisson, mettez le bouillon au réfrigérateur, retirez la couche de graisse figée à la surface et enlevez tous les os. Servez-le seul ou mélangé aux croquettes.",
-    "fi": "Käytä vain luonnollisia, koiralle turvallisia aineksia ilman sipulia, valkosipulia ja suolaa. Laita liemi keittämisen jälkeen jääkaappiin, poista pinnalle jähmettynyt rasvakerros ja siivilöi kaikki luut pois. Tarjoa se sellaisenaan tai sekoitettuna kuivaruokaan."
+    "fi": "Käytä vain luonnollisia, koiralle turvallisia aineksia ilman sipulia, valkosipulia ja suolaa. Laita liemi keittämisen jälkeen jääkaappiin, poista pinnalle jähmettynyt rasvakerros ja siivilöi kaikki luut pois. Tarjoa se sellaisenaan tai sekoitettuna kuivaruokaan.",
+    "nb": "Bruk bare naturlige ingredienser som er trygge for hunder, uten løk, hvitløk eller salt. Etter koking setter du kraften i kjøleskapet, fjerner det stivnede fettlaget på toppen og siler bort alle bein. Server den ren, eller bland den i tørrfôret."
   },
   "child": {
     "en": "Bone broth can be a tasty treat for dogs. A grown-up makes it and takes out every bone first, because bones aren't safe for dogs.",
     "sl": "Kostna juha je lahko okusna posladica za pse. Pripravi jo odrasla oseba, ki prej odstrani vse kosti, saj kosti za pse niso varne.",
     "fr": "Le bouillon d’os peut être une friandise savoureuse pour les chiens. Un adulte le prépare et retire d’abord tous les os, car ils sont dangereux pour les chiens.",
-    "fi": "Luuliemi voi olla koiralle maukas herkku. Aikuinen tekee sen ja ottaa ensin kaikki luut pois, sillä luut eivät ole koirille turvallisia."
+    "fi": "Luuliemi voi olla koiralle maukas herkku. Aikuinen tekee sen ja ottaa ensin kaikki luut pois, sillä luut eivät ole koirille turvallisia.",
+    "nb": "Beinkraft kan være en god godbit for hunder. En voksen lager den og tar ut alle beinene først, for bein er ikke trygt for hunder."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "How is bone broth different from regular broth?",
         "sl": "V čem se kostna juha razlikuje od navadne juhe?",
         "fr": "En quoi le bouillon d’os diffère-t-il d’un bouillon ordinaire ?",
-        "fi": "Miten luuliemi eroaa tavallisesta liemestä?"
+        "fi": "Miten luuliemi eroaa tavallisesta liemestä?",
+        "nb": "Hva er forskjellen på beinkraft og vanlig kraft?"
       },
       "a": {
         "en": "Bone broth is a stock liquid made by slowly cooking animal bones at low heat for an extended period. For everyday broth and stock cubes, see our broth page.",
         "sl": "Kostna juha je tekoča osnova, ki nastane s počasnim kuhanjem živalskih kosti pri nizki temperaturi dalj časa. O navadni juhi in jušnih kockah si preberite našo stran o juhi.",
         "fr": "Le bouillon d’os est un fond obtenu en faisant cuire longuement des os d’animaux à feu doux. Pour les bouillons du quotidien et les cubes de bouillon, consultez notre page sur le bouillon.",
-        "fi": "Luuliemi syntyy, kun eläinten luita haudutetaan hitaasti matalalla lämmöllä pitkään. Tavallisesta liemestä ja liemikuutioista kerromme liemisivullamme."
+        "fi": "Luuliemi syntyy, kun eläinten luita haudutetaan hitaasti matalalla lämmöllä pitkään. Tavallisesta liemestä ja liemikuutioista kerromme liemisivullamme.",
+        "nb": "Beinkraft er en kraft som lages ved å la bein fra dyr småkoke på lav varme i lang tid. Vanlig kraft og buljongterninger finner du på siden vår om buljong og kraft."
       }
     },
     {
@@ -71,13 +81,15 @@
         "en": "Can I use store-bought bone broth?",
         "sl": "Ali lahko uporabim kupljeno kostno juho?",
         "fr": "Puis-je utiliser du bouillon d’os du commerce ?",
-        "fi": "Voinko käyttää kaupan luulientä?"
+        "fi": "Voinko käyttää kaupan luulientä?",
+        "nb": "Kan jeg bruke ferdiglaget beinkraft fra butikken?"
       },
       "a": {
         "en": "Look for one with natural, dog-safe ingredients, because some contain additives for preservation and taste, such as onions, garlic or salt.",
         "sl": "Izberite takšno z naravnimi sestavinami, ki so za pse varne, saj nekatere vsebujejo dodatke za obstojnost in okus, kot so čebula, česen ali sol.",
         "fr": "Choisissez-en un avec des ingrédients naturels et sans danger pour les chiens, car certains contiennent des additifs de conservation ou de goût, comme de l’oignon, de l’ail ou du sel.",
-        "fi": "Valitse sellainen, jossa on luonnollisia, koiralle turvallisia aineksia, sillä joissakin on säilyvyyden ja maun vuoksi lisäaineita, kuten sipulia, valkosipulia tai suolaa."
+        "fi": "Valitse sellainen, jossa on luonnollisia, koiralle turvallisia aineksia, sillä joissakin on säilyvyyden ja maun vuoksi lisäaineita, kuten sipulia, valkosipulia tai suolaa.",
+        "nb": "Se etter en med naturlige ingredienser som er trygge for hunder, for noen inneholder tilsetninger for holdbarhet og smak, som løk, hvitløk eller salt."
       }
     },
     {
@@ -85,13 +97,15 @@
         "en": "Does bone broth help my dog's joints?",
         "sl": "Ali kostna juha pomaga pasjim sklepom?",
         "fr": "Le bouillon d’os est-il bon pour les articulations de mon chien ?",
-        "fi": "Auttaako luuliemi koiran niveliä?"
+        "fi": "Auttaako luuliemi koiran niveliä?",
+        "nb": "Hjelper beinkraft på hundens ledd?"
       },
       "a": {
         "en": "The AKC says the collagen in bone broth contributes to joint health, but bone broth won't cure joint problems without other treatments, so contact your vet.",
         "sl": "AKC navaja, da kolagen v kostni juhi prispeva k zdravju sklepov, vendar kostna juha brez drugih zdravljenj težav s sklepi ne odpravi, zato se obrnite na veterinarja.",
         "fr": "Selon l’AKC, le collagène du bouillon d’os contribue à la santé des articulations, mais le bouillon d’os ne guérit pas les problèmes articulaires sans autres traitements : contactez donc votre vétérinaire.",
-        "fi": "AKC:n mukaan luuliemen kollageeni edistää nivelten terveyttä, mutta luuliemi ei yksinään paranna nivelongelmia, joten ota yhteyttä eläinlääkäriin."
+        "fi": "AKC:n mukaan luuliemen kollageeni edistää nivelten terveyttä, mutta luuliemi ei yksinään paranna nivelongelmia, joten ota yhteyttä eläinlääkäriin.",
+        "nb": "AKC sier at kollagenet i beinkraft bidrar til sunne ledd, men beinkraft kurerer ikke leddproblemer uten annen behandling, så kontakt dyrlegen."
       }
     }
   ],
@@ -174,6 +188,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4ae90d85ebd4300b33a4a4afbb0d567deaa6c1ac4186eae97e212fbd7cb314b3"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-c-nb-2026-11-17",
+      "verified_hash": "f32149a8fd0ae25aa7ccd5d59d340779dc64678b61e14049ddfa0faf9372a309"
     }
   }
 }
