@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `greyhound` (viri S912–S922; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: ni preverjen (stran RKC ni bila dosegljiva) |
 | Izvor | FCI št. 158, skupina 10 (hrti), sekcija 3 (kratkodlaki hrti), Velika Britanija (S912) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 118. mesto »Greyhound« (S174, zapisano 2026-11-17 v vrstici 121) |
-| PR-ji | pet-prep #1303 (pasma, združen `0fe447a`) · portret pet-prep (zagon `breed-portraits.yml` 44035672011, sprejet v prvem poskusu) · barvne različice (sledi) · spletna stran: pet-prep-website `feat/register-greyhound` |
+| PR-ji | pet-prep #1303 (pasma, združen `0fe447a`) · portret pet-prep (zagon `breed-portraits.yml` 44035672011, sprejet v prvem poskusu) · barvne različice pet-prep (zagon `breed-portraits.yml` 44036953174, vse sprejete v prvem poskusu) · spletna stran: pet-prep-website `feat/register-greyhound` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,7 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 103. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-122 | 2026-11-17 |
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-17 |
 | Ščetkanje zob vsak dan (otrok) | 🛠 | 💶 izziv | M5-R15 | 2026-11-17 |
-| Barve (izbirnik: 6 barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-17 |
+| Barve (izbirnik: 6 barv; fotografije za vse — tigrast (portret), črn, plavo rjav, moder (siv), rdeč, črno-bel) | 🛠 | 💶 izziv | M5-R21 | 2026-11-17 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), tigrast, vitek atletski hrt, naravni rep | — | M5-R11-04 | 2026-11-17 |
 | Stran na petprep.si (`/animals/dogs/greyhound`, `/sl/zivali/psi/angleski-hrt`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -52,6 +52,7 @@
 
 ## Odprto za Davida
 
+- **Barvne različice:** odobril Claude 2026-11-17 — črn, plavo rjav, moder (siv; vidno svetlejši od črnega), rdeč, črno-bel; isti pes, poza in ozadje kot portret. Nobena barva ne čaka Davida.
 - **Potreba brez mehanike (potrebna nova naloga v ROADMAP):** nekaj dobrih tekov namesto dolgih sprehodov (PDSA S914 »They prefer the opportunity for a good couple of runs rather than miles of walking«) — igra šteje le korake (kot tek brez povodca pri malem angleškem hrtu).
 - **Potreba brez mehanike (potrebna nova naloga v ROADMAP):** pozornost ob skrajnih temperaturah in velikih spremembah vremena (WebMD S917 »… they can be susceptible to extreme temperatures.«) — igra nima vremena; čipa `cold_sensitive` nisem dodal, ker vir ne govori izrecno o mrazu.
 - **Življenjska doba / starejše obdobje:** uporabljena je mediana VetCompass 11,4 leta (2019, S920) → starejši od 103. meseca. McMillan 2024 (11,5 leta, le prek Wikipedije) bi dal 104 — preverite vrstico »Greyhound« v tabeli Dogs Trust (S123).
