@@ -49,7 +49,8 @@
       "checked": "2026-11-13",
       "note": "Own home page: 'Brindamos atencion 24hrs para todas las emergencias.' Phone string 'Telf: 3-536325 760-09980' copied as published (landline + mobile). No opening hours listed.",
       "duty_i18n": {
-        "pl": "Całodobowa opieka we wszystkich nagłych przypadkach; zadzwoń wcześniej."
+        "pl": "Całodobowa opieka we wszystkich nagłych przypadkach; zadzwoń wcześniej.",
+        "cs": "Péče nonstop pro všechny naléhavé případy; před cestou zavolejte."
       }
     },
     {
@@ -67,7 +68,8 @@
       "checked": "2026-11-13",
       "note": "Own home page: 'Emergencias 24 horas' and 'Atencion de urgencias disponible las 24 horas'. Landline 57715717, WhatsApp +591 57715717 as published.",
       "duty_i18n": {
-        "pl": "Otwarte pon.–pt. 8:00–19:00 i sob. 8:00–15:00; pilna pomoc całodobowo."
+        "pl": "Otwarte pon.–pt. 8:00–19:00 i sob. 8:00–15:00; pilna pomoc całodobowo.",
+        "cs": "Po–Pá 8:00–19:00 a so 8:00–15:00; naléhavá péče nonstop."
       }
     },
     {
@@ -85,7 +87,8 @@
       "checked": "2026-11-13",
       "note": "Own page; WhatsApp +591 721-96500. Neighbourhood spelled Cumavi/Cunavi on the page.",
       "duty_i18n": {
-        "pl": "Otwarte codziennie 8:00–19:00."
+        "pl": "Otwarte codziennie 8:00–19:00.",
+        "cs": "Denně 8:00–19:00."
       }
     },
     {
@@ -103,7 +106,8 @@
       "checked": "2026-11-13",
       "note": "Own page; WhatsApp 71460528. No 24 h claim.",
       "duty_i18n": {
-        "pl": "Otwarte pon.–sob. 8:00–20:00, niedz. i święta państwowe 8:00–13:00."
+        "pl": "Otwarte pon.–sob. 8:00–20:00, niedz. i święta państwowe 8:00–13:00.",
+        "cs": "Po–So 8:00–20:00, ne a o svátcích 8:00–13:00."
       }
     }
   ],

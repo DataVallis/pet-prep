@@ -63,7 +63,8 @@
         "it": "OPD (ambulatorio) 8:00–13:00 nei giorni lavorativi (8:00–11:30 nei festivi). Unità di pronto soccorso e terapia intensiva per animali grandi e piccoli attiva 24 ore su 24.",
         "pt": "Consulta externa (OPD) 8h00–13h00 em dias úteis (8h00–11h30 em feriados). Unidade de urgência e cuidados intensivos para grandes e pequenos animais aberta 24 horas por dia.",
         "nl": "Poli (OPD) 8.00–13.00 uur op werkdagen (8.00–11.30 uur op feestdagen). De afdeling spoed en intensieve zorg voor grote en kleine dieren is de klok rond open.",
-        "pl": "Poradnia (OPD) 8:00–13:00 w dni robocze (8:00–11:30 w święta). Oddział nagłych przypadków i intensywnej opieki dla dużych i małych zwierząt działa całą dobę."
+        "pl": "Poradnia (OPD) 8:00–13:00 w dni robocze (8:00–11:30 w święta). Oddział nagłych przypadków i intensywnej opieki dla dużych i małych zwierząt działa całą dobę.",
+        "cs": "Ambulance 8:00–13:00 v pracovní dny (o svátcích 8:00–11:30). Pohotovostní a intenzivní oddělení pro velká i malá zvířata funguje nonstop."
       },
       "small_animals": true,
       "url": "https://tanuvas.ac.in/",
@@ -86,7 +87,8 @@
         "it": "OPD (ambulatorio) lun–ven 8:00–13:00; sabato, domenica e festivi statali 8:00–11:30.",
         "pt": "Consulta externa (OPD) segunda a sexta 8h00–13h00; sábado, domingo e feriados oficiais 8h00–11h30.",
         "nl": "Poli (OPD) ma–vr 8.00–13.00 uur; za, zo en nationale feestdagen 8.00–11.30 uur.",
-        "pl": "Poradnia (OPD) pon.–pt. 8:00–13:00; sobota, niedziela i święta państwowe 8:00–11:30."
+        "pl": "Poradnia (OPD) pon.–pt. 8:00–13:00; sobota, niedziela i święta państwowe 8:00–11:30.",
+        "cs": "Ambulance Po–Pá 8:00–13:00; so, ne a státní svátky 8:00–11:30."
       },
       "small_animals": true,
       "url": "https://tanuvas.ac.in/dc_vuph_mmc.php",
@@ -108,7 +110,8 @@
         "it": "OPD (ambulatorio) 9:00–12:00 e 14:00–16:00; ambulatorio serale 16:00–22:00 nei giorni lavorativi (13:00–21:00 nei festivi), telefono +91 94470 30801.",
         "pt": "Consulta externa (OPD) 9h00–12h00 e 14h00–16h00; consulta da tarde 16h00–22h00 em dias úteis (13h00–21h00 em feriados), telefone +91 94470 30801.",
         "nl": "Poli (OPD) 9.00–12.00 en 14.00–16.00 uur; avondspreekuur op werkdagen 16.00–22.00 uur (op feestdagen 13.00–21.00 uur), telefoon +91 94470 30801.",
-        "pl": "Poradnia (OPD) 9:00–12:00 i 14:00–16:00; przychodnia wieczorna 16:00–22:00 w dni robocze (13:00–21:00 w święta), telefon +91 94470 30801."
+        "pl": "Poradnia (OPD) 9:00–12:00 i 14:00–16:00; przychodnia wieczorna 16:00–22:00 w dni robocze (13:00–21:00 w święta), telefon +91 94470 30801.",
+        "cs": "Ambulance 9:00–12:00 a 14:00–16:00; večerní ordinace 16:00–22:00 v pracovní dny (o svátcích 13:00–21:00), telefon +91 94470 30801."
       },
       "small_animals": true,
       "url": "https://www.kvasu.ac.in/uvh-tvcc-mannuthy",
@@ -131,7 +134,8 @@
         "it": "Ambulatorio per piccoli animali (OPD) 9:30–12:30 tutti i giorni, festivi compresi.",
         "pt": "Clínica de pequenos animais, consulta externa (OPD) 9h30–12h30 todos os dias, incluindo feriados.",
         "nl": "Poli (OPD) voor kleine dieren 9.30–12.30 uur, alle dagen, ook op feestdagen.",
-        "pl": "Poradnia (OPD) dla małych zwierząt 9:30–12:30 codziennie, także w święta."
+        "pl": "Poradnia (OPD) dla małych zwierząt 9:30–12:30 codziennie, także w święta.",
+        "cs": "Ambulance pro malá zvířata 9:30–12:30 každý den včetně svátků."
       },
       "small_animals": true,
       "url": "https://new.gadvasu.in/en/department/401023321/teaching-veterinary-clinical-complex",
@@ -153,7 +157,8 @@
         "it": "Ambulatorio 9:00–12:00; pronto soccorso disponibile fino alle 16:00.",
         "pt": "Consulta externa 9h00–12h00; tratamento de urgência disponível até às 16h00.",
         "nl": "Poli 9.00–12.00 uur; spoedbehandeling mogelijk tot 16.00 uur.",
-        "pl": "Poradnia 9:00–12:00; pomoc w nagłych przypadkach do 16:00."
+        "pl": "Poradnia 9:00–12:00; pomoc w nagłych przypadkach do 16:00.",
+        "cs": "Ambulance 9:00–12:00; pohotovostní ošetření do 16:00."
       },
       "small_animals": true,
       "url": "https://pvnrtvu.ac.in/?p=2124",
@@ -174,7 +179,8 @@
         "it": "Offre pronto soccorso veterinario 24 ore su 24, 7 giorni su 7; il Policlinico veterinario di riferimento ha un pronto soccorso 24 ore su 24, 7 giorni su 7 per i pazienti in condizioni critiche.",
         "pt": "Serviço de urgência para animais 24 horas por dia, 7 dias por semana; a Policlínica Veterinária de Referência tem urgências 24 horas por dia, 7 dias por semana, para doentes críticos.",
         "nl": "Biedt 24/7 spoedzorg voor dieren; de verwijspolikliniek (Referral Veterinary Polyclinic) heeft 24/7 spoeddienst voor ernstig zieke patiënten.",
-        "pl": "Zapewnia całodobową pomoc w nagłych przypadkach dla zwierząt; Referral Veterinary Polyclinic ma całodobowy dyżur dla pacjentów w stanie krytycznym."
+        "pl": "Zapewnia całodobową pomoc w nagłych przypadkach dla zwierząt; Referral Veterinary Polyclinic ma całodobowy dyżur dla pacjentów w stanie krytycznym.",
+        "cs": "Poskytuje nonstop pohotovostní veterinární služby; Referral Veterinary Polyclinic má nonstop pohotovost pro kriticky nemocné pacienty."
       },
       "small_animals": true,
       "url": "https://ivri.nic.in/academics/TVCC.aspx",
@@ -197,7 +203,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7; pronto soccorso e terapia intensiva sempre attivi. Telefonare in anticipo mentre si è in viaggio.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana; urgências e cuidados intensivos 24 horas por dia. Liga a caminho.",
         "nl": "24 uur per dag, 7 dagen per week open; spoed en intensieve zorg de klok rond. Bel onderweg vooraf.",
-        "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu; pomoc w nagłych przypadkach i opieka intensywna całą dobę. Zadzwoń w drodze."
+        "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu; pomoc w nagłych przypadkach i opieka intensywna całą dobę. Zadzwoń w drodze.",
+        "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní a intenzivní péče nonstop. Cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://sahmumbai.com/",
@@ -220,7 +227,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per emergenze e terapia intensiva.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências e cuidados intensivos.",
         "nl": "24/7 open voor spoed en intensieve zorg.",
-        "pl": "Otwarte całą dobę dla nagłych przypadków i opieki intensywnej."
+        "pl": "Otwarte całą dobę dla nagłych przypadków i opieki intensywnej.",
+        "cs": "Otevřeno nonstop pro pohotovosti a intenzivní péči."
       },
       "small_animals": true,
       "url": "https://zigly.com/",
@@ -243,7 +251,8 @@
         "it": "Ospedale polispecialistico per animali aperto 24 ore su 24, 7 giorni su 7.",
         "pt": "Hospital multiespecialidades para animais de estimação aberto 24 horas por dia, 7 dias por semana.",
         "nl": "Multispecialistisch dierenziekenhuis voor huisdieren, 24/7 open.",
-        "pl": "Całodobowa wielospecjalistyczna lecznica dla zwierząt domowych."
+        "pl": "Całodobowa wielospecjalistyczna lecznica dla zwierząt domowych.",
+        "cs": "Víceoborová nemocnice pro domácí zvířata otevřená nonstop."
       },
       "small_animals": true,
       "url": "https://zigly.com/",
@@ -266,7 +275,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze degli animali. Linea di emergenza +91 80627 44111.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências com animais de estimação. Linha de apoio de urgência +91 80627 44111.",
         "nl": "24/7 open voor spoedgevallen bij huisdieren. Spoedhulplijn +91 80627 44111.",
-        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111."
+        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111.",
+        "cs": "Nonstop otevřeno pro pohotovosti domácích zvířat. Pohotovostní linka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -289,7 +299,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze degli animali. Linea di emergenza +91 80627 44111.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências com animais de estimação. Linha de apoio de urgência +91 80627 44111.",
         "nl": "24/7 open voor spoedgevallen bij huisdieren. Spoedhulplijn +91 80627 44111.",
-        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111."
+        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111.",
+        "cs": "Nonstop otevřeno pro pohotovosti domácích zvířat. Pohotovostní linka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -312,7 +323,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze degli animali. Linea di emergenza +91 80627 44111.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências com animais de estimação. Linha de apoio de urgência +91 80627 44111.",
         "nl": "24/7 open voor spoedgevallen bij huisdieren. Spoedhulplijn +91 80627 44111.",
-        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111."
+        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111.",
+        "cs": "Nonstop otevřeno pro pohotovosti domácích zvířat. Pohotovostní linka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -335,7 +347,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze degli animali. Linea di emergenza +91 80627 44111.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências com animais de estimação. Linha de apoio de urgência +91 80627 44111.",
         "nl": "24/7 open voor spoedgevallen bij huisdieren. Spoedhulplijn +91 80627 44111.",
-        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111."
+        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111.",
+        "cs": "Nonstop otevřeno pro pohotovosti domácích zvířat. Pohotovostní linka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -358,7 +371,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze degli animali. Linea di emergenza +91 80627 44111.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências com animais de estimação. Linha de apoio de urgência +91 80627 44111.",
         "nl": "24/7 open voor spoedgevallen bij huisdieren. Spoedhulplijn +91 80627 44111.",
-        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111."
+        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111.",
+        "cs": "Nonstop otevřeno pro pohotovosti domácích zvířat. Pohotovostní linka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -381,7 +395,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze degli animali. Linea di emergenza +91 80627 44111.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências com animais de estimação. Linha de apoio de urgência +91 80627 44111.",
         "nl": "24/7 open voor spoedgevallen bij huisdieren. Spoedhulplijn +91 80627 44111.",
-        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111."
+        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111.",
+        "cs": "Nonstop otevřeno pro pohotovosti domácích zvířat. Pohotovostní linka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -404,7 +419,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7 per le emergenze degli animali. Linea di emergenza +91 80627 44111.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, para urgências com animais de estimação. Linha de apoio de urgência +91 80627 44111.",
         "nl": "24/7 open voor spoedgevallen bij huisdieren. Spoedhulplijn +91 80627 44111.",
-        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111."
+        "pl": "Otwarte całą dobę w nagłych przypadkach zwierząt domowych. Całodobowa linia pomocy +91 80627 44111.",
+        "cs": "Nonstop otevřeno pro pohotovosti domácích zvířat. Pohotovostní linka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -427,7 +443,8 @@
         "it": "Aperto 24 ore su 24, tutti i giorni, per emergenze e ricoveri.",
         "pt": "Aberto 24 horas por dia, todos os dias, para urgências e internamento.",
         "nl": "24 uur per dag, elke dag open voor spoed en opname.",
-        "pl": "Otwarte całą dobę, codziennie, dla nagłych przypadków i hospitalizacji."
+        "pl": "Otwarte całą dobę, codziennie, dla nagłych przypadków i hospitalizacji.",
+        "cs": "Otevřeno nonstop, každý den, pro pohotovosti a hospitalizaci."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -450,7 +467,8 @@
         "it": "Telefonare per confermare gli orari; le emergenze hanno la precedenza. Fuori dall'orario della clinica è aperto 24 ore su 24 l'ospedale di Domlur a Bengaluru.",
         "pt": "Liga para confirmar o horário; as urgências são atendidas primeiro. Fora do horário da clínica, o hospital de Domlur, em Bengaluru, está aberto 24 horas por dia.",
         "nl": "Bel om de tijden te bevestigen; spoedgevallen worden eerst geholpen. Buiten de openingstijden van de praktijk is het ziekenhuis in Domlur (Bengaluru) 24 uur per dag open.",
-        "pl": "Zadzwoń i potwierdź godziny; nagłe przypadki przyjmowane w pierwszej kolejności. Poza godzinami pracy przychodni otwarty całą dobę szpital Domlur w Bengaluru."
+        "pl": "Zadzwoń i potwierdź godziny; nagłe przypadki przyjmowane w pierwszej kolejności. Poza godzinami pracy przychodni otwarty całą dobę szpital Domlur w Bengaluru.",
+        "cs": "Hodiny si ověřte telefonicky; pohotovosti se ošetřují přednostně. Mimo ordinační dobu je nonstop otevřena nemocnice Domlur v Bengaluru."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -473,7 +491,8 @@
         "it": "Telefonare per confermare gli orari; le emergenze hanno la precedenza. Fuori dall'orario della clinica è aperto 24 ore su 24 l'ospedale di Domlur a Bengaluru.",
         "pt": "Liga para confirmar o horário; as urgências são atendidas primeiro. Fora do horário da clínica, o hospital de Domlur, em Bengaluru, está aberto 24 horas por dia.",
         "nl": "Bel om de tijden te bevestigen; spoedgevallen worden eerst geholpen. Buiten de openingstijden van de praktijk is het ziekenhuis in Domlur (Bengaluru) 24 uur per dag open.",
-        "pl": "Zadzwoń i potwierdź godziny; nagłe przypadki przyjmowane w pierwszej kolejności. Poza godzinami pracy przychodni otwarty całą dobę szpital Domlur w Bengaluru."
+        "pl": "Zadzwoń i potwierdź godziny; nagłe przypadki przyjmowane w pierwszej kolejności. Poza godzinami pracy przychodni otwarty całą dobę szpital Domlur w Bengaluru.",
+        "cs": "Hodiny si ověřte telefonicky; pohotovosti se ošetřují přednostně. Mimo ordinační dobu je nonstop otevřena nemocnice Domlur v Bengaluru."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -496,7 +515,8 @@
         "it": "Telefonare per confermare gli orari; le emergenze hanno la precedenza. Fuori dall'orario della clinica è aperto 24 ore su 24 l'ospedale di Domlur a Bengaluru.",
         "pt": "Liga para confirmar o horário; as urgências são atendidas primeiro. Fora do horário da clínica, o hospital de Domlur, em Bengaluru, está aberto 24 horas por dia.",
         "nl": "Bel om de tijden te bevestigen; spoedgevallen worden eerst geholpen. Buiten de openingstijden van de praktijk is het ziekenhuis in Domlur (Bengaluru) 24 uur per dag open.",
-        "pl": "Zadzwoń i potwierdź godziny; nagłe przypadki przyjmowane w pierwszej kolejności. Poza godzinami pracy przychodni otwarty całą dobę szpital Domlur w Bengaluru."
+        "pl": "Zadzwoń i potwierdź godziny; nagłe przypadki przyjmowane w pierwszej kolejności. Poza godzinami pracy przychodni otwarty całą dobę szpital Domlur w Bengaluru.",
+        "cs": "Hodiny si ověřte telefonicky; pohotovosti se ošetřují přednostně. Mimo ordinační dobu je nonstop otevřena nemocnice Domlur v Bengaluru."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -519,7 +539,8 @@
         "it": "Telefonare per confermare gli orari; le emergenze hanno la precedenza. Fuori dall'orario della clinica è aperto 24 ore su 24 l'ospedale di Domlur a Bengaluru.",
         "pt": "Liga para confirmar o horário; as urgências são atendidas primeiro. Fora do horário da clínica, o hospital de Domlur, em Bengaluru, está aberto 24 horas por dia.",
         "nl": "Bel om de tijden te bevestigen; spoedgevallen worden eerst geholpen. Buiten de openingstijden van de praktijk is het ziekenhuis in Domlur (Bengaluru) 24 uur per dag open.",
-        "pl": "Zadzwoń i potwierdź godziny; nagłe przypadki przyjmowane w pierwszej kolejności. Poza godzinami pracy przychodni otwarty całą dobę szpital Domlur w Bengaluru."
+        "pl": "Zadzwoń i potwierdź godziny; nagłe przypadki przyjmowane w pierwszej kolejności. Poza godzinami pracy przychodni otwarty całą dobę szpital Domlur w Bengaluru.",
+        "cs": "Hodiny si ověřte telefonicky; pohotovosti se ošetřují přednostně. Mimo ordinační dobu je nonstop otevřena nemocnice Domlur v Bengaluru."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -542,7 +563,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7, fine settimana e festivi compresi; unità di pronto soccorso e terapia intensiva.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, incluindo fins de semana e feriados; unidade de urgência e cuidados intensivos.",
         "nl": "24/7 open, ook in het weekend en op feestdagen; afdeling spoed en intensieve zorg.",
-        "pl": "Otwarte całą dobę, także w weekendy i święta; oddział nagłych przypadków i opieki intensywnej."
+        "pl": "Otwarte całą dobę, także w weekendy i święta; oddział nagłych przypadków i opieki intensywnej.",
+        "cs": "Otevřeno nonstop včetně víkendů a svátků; pohotovostní a intenzivní oddělení."
       },
       "small_animals": true,
       "url": "https://sevenoakspet.in/",
@@ -565,7 +587,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7, fine settimana e festivi compresi.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, incluindo fins de semana e feriados.",
         "nl": "24/7 open, ook in het weekend en op feestdagen.",
-        "pl": "Otwarte całą dobę, także w weekendy i święta."
+        "pl": "Otwarte całą dobę, także w weekendy i święta.",
+        "cs": "Otevřeno nonstop včetně víkendů a svátků."
       },
       "small_animals": true,
       "url": "https://sevenoakspet.in/",
@@ -588,7 +611,8 @@
         "it": "Aperto 9:00–21:00.",
         "pt": "Aberto 9h00–21h00.",
         "nl": "Open 9.00–21.00 uur.",
-        "pl": "Otwarte 9:00–21:00."
+        "pl": "Otwarte 9:00–21:00.",
+        "cs": "Otevřeno 9:00–21:00."
       },
       "small_animals": true,
       "url": "https://sevenoakspet.in/",
@@ -611,7 +635,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi compresi.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, incluindo feriados.",
         "nl": "24/7 open, alle dagen, ook op feestdagen.",
-        "pl": "Otwarte całą dobę, codziennie, także w święta."
+        "pl": "Otwarte całą dobę, codziennie, także w święta.",
+        "cs": "Otevřeno nonstop, každý den včetně svátků."
       },
       "small_animals": true,
       "url": "https://www.littleangelspetclinic.com/",
@@ -634,7 +659,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; chiamare la sede.",
         "pt": "Urgências 24 horas por dia, 7 dias por semana; liga para a unidade.",
         "nl": "24/7 spoedzorg; bel de vestiging.",
-        "pl": "Całodobowa pomoc w nagłych przypadkach; zadzwoń do oddziału."
+        "pl": "Całodobowa pomoc w nagłych przypadkach; zadzwoń do oddziału.",
+        "cs": "Nonstop pohotovostní péče; zavolejte na pobočku."
       },
       "small_animals": true,
       "url": "https://drpet.co.in/",
@@ -657,7 +683,8 @@
         "it": "Aperto tutti i giorni 9:00–21:00; pronto soccorso durante l'orario di apertura, telefonare in anticipo per i casi urgenti.",
         "pt": "Aberto todos os dias 9h00–21h00; urgências durante o horário de funcionamento, liga antes em casos urgentes.",
         "nl": "Dagelijks open 9.00–21.00 uur; spoedzorg tijdens openingstijden, bel vooraf bij spoed.",
-        "pl": "Otwarte codziennie 9:00–21:00; pomoc w nagłych przypadkach w godzinach otwarcia, w pilnych przypadkach zadzwoń wcześniej."
+        "pl": "Otwarte codziennie 9:00–21:00; pomoc w nagłych przypadkach w godzinach otwarcia, w pilnych przypadkach zadzwoń wcześniej.",
+        "cs": "Otevřeno denně 9:00–21:00; pohotovostní péče v ordinační dobu, v naléhavých případech před cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://www.skspethospital.com/",
@@ -680,7 +707,8 @@
         "it": "Aperto tutti i giorni 9:00–22:00; pronto soccorso e ambulanza dichiarati attivi 24 ore su 24, telefonare in anticipo.",
         "pt": "Aberto todos os dias 9h00–22h00; serviços de urgência e ambulância anunciados 24 horas por dia, liga antes.",
         "nl": "Dagelijks open 9.00–22.00 uur; spoeddienst en ambulance naar eigen zeggen de klok rond, bel vooraf.",
-        "pl": "Otwarte codziennie 9:00–22:00; pogotowie i karetka dla zwierząt reklamowane jako całodobowe, zadzwoń wcześniej."
+        "pl": "Otwarte codziennie 9:00–22:00; pogotowie i karetka dla zwierząt reklamowane jako całodobowe, zadzwoń wcześniej.",
+        "cs": "Otevřeno denně 9:00–22:00; uvádí nonstop pohotovostní službu a sanitku pro zvířata, před cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://www.lifecarevet.com/",
@@ -703,7 +731,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7; pronto soccorso e terapia intensiva 24 ore su 24, 7 giorni su 7.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana; urgências e cuidados intensivos 24 horas por dia, 7 dias por semana.",
         "nl": "24 uur per dag, 7 dagen per week open; spoed en intensieve zorg 24/7.",
-        "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu; całodobowa pomoc w nagłych przypadkach i opieka intensywna."
+        "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu; całodobowa pomoc w nagłych przypadkach i opieka intensywna.",
+        "cs": "Otevřeno nonstop, 7 dní v týdnu; nonstop pohotovostní a intenzivní péče."
       },
       "small_animals": true,
       "url": "https://pupsnkitspethospital.com/",
@@ -726,7 +755,8 @@
         "it": "Aperto 9:30–20:30 tutti i giorni; pronto soccorso 24 ore su 24, 7 giorni su 7. Seconda linea +91 99984 72105.",
         "pt": "Aberto todos os dias 9h30–20h30; urgências 24 horas por dia, 7 dias por semana. Segunda linha +91 99984 72105.",
         "nl": "Dagelijks open 9.30–20.30 uur; spoeddienst 24/7. Tweede lijn +91 99984 72105.",
-        "pl": "Otwarte codziennie 9:30–20:30; pogotowie weterynaryjne całodobowo. Druga linia +91 99984 72105."
+        "pl": "Otwarte codziennie 9:30–20:30; pogotowie weterynaryjne całodobowo. Druga linia +91 99984 72105.",
+        "cs": "Otevřeno denně 9:30–20:30; pohotovostní služba nonstop. Druhá linka +91 99984 72105."
       },
       "small_animals": true,
       "url": "https://imperialvethospital.com/",
@@ -749,7 +779,8 @@
         "it": "Aperto 9:00–20:00 (domenica 9:00–13:00). Pronto soccorso dichiarato attivo 365 giorni all'anno; telefonare in anticipo.",
         "pt": "Aberto 9h00–20h00 (domingo 9h00–13h00). Serviços de urgência anunciados 365 dias por ano; liga antes.",
         "nl": "Open 9.00–20.00 uur (zo 9.00–13.00 uur). Spoeddienst naar eigen zeggen 365 dagen per jaar; bel vooraf.",
-        "pl": "Otwarte 9:00–20:00 (niedz. 9:00–13:00). Pogotowie reklamowane przez 365 dni w roku; zadzwoń wcześniej."
+        "pl": "Otwarte 9:00–20:00 (niedz. 9:00–13:00). Pogotowie reklamowane przez 365 dni w roku; zadzwoń wcześniej.",
+        "cs": "Otevřeno 9:00–20:00 (v neděli 9:00–13:00). Uvádí pohotovostní služby 365 dní v roce; před cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://www.petsandpawsindia.com/",
@@ -772,7 +803,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7; la linea di emergenza è presidiata da una persona 24 ore su 24.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana; a linha de urgência é atendida por uma pessoa a qualquer hora.",
         "nl": "24/7 open; de spoedlijn wordt de klok rond door een echt persoon bemand.",
-        "pl": "Otwarte całą dobę; linię alarmową przez całą dobę odbiera człowiek."
+        "pl": "Otwarte całą dobę; linię alarmową przez całą dobę odbiera człowiek.",
+        "cs": "Otevřeno nonstop; na pohotovostní lince je nonstop živý člověk."
       },
       "small_animals": true,
       "url": "https://supervetz.in/",
@@ -795,7 +827,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana.",
         "nl": "24 uur per dag, 7 dagen per week open.",
-        "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu."
+        "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu.",
+        "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu."
       },
       "small_animals": true,
       "url": "https://cochinpetspecialities.com/",
@@ -822,7 +855,8 @@
         "it": "Orari 9:00–21:00; linea di emergenza e ambulanza 24 ore su 24, 7 giorni su 7 dichiarate, telefonare in anticipo.",
         "pt": "Horário 9h00–21h00; linha de urgência e ambulância anunciadas 24 horas por dia, 7 dias por semana, liga antes.",
         "nl": "Open 9.00–21.00 uur; 24/7 spoedlijn en dierenambulance naar eigen zeggen, bel vooraf.",
-        "pl": "Godziny 9:00–21:00; reklamuje całodobową linię alarmową i karetkę, zadzwoń wcześniej."
+        "pl": "Godziny 9:00–21:00; reklamuje całodobową linię alarmową i karetkę, zadzwoń wcześniej.",
+        "cs": "Hodiny 9:00–21:00; uvádí nonstop pohotovostní linku a sanitku pro zvířata, před cestou zavolejte."
       }
     },
     {
@@ -840,7 +874,8 @@
         "it": "Pronto soccorso e ambulanza per animali 24 ore su 24, 7 giorni su 7.",
         "pt": "Urgências e ambulância para animais de estimação 24 horas por dia, 7 dias por semana.",
         "nl": "24/7 spoeddienst en dierenambulance.",
-        "pl": "Całodobowe pogotowie weterynaryjne i karetka dla zwierząt domowych."
+        "pl": "Całodobowe pogotowie weterynaryjne i karetka dla zwierząt domowych.",
+        "cs": "Nonstop pohotovostní služba a sanitka pro zvířata."
       },
       "small_animals": true,
       "url": "https://vetbrospethospital.com/",
@@ -863,7 +898,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7.",
         "pt": "Urgências 24 horas por dia, 7 dias por semana.",
         "nl": "Spoeddienst 24/7.",
-        "pl": "Pogotowie weterynaryjne całodobowo."
+        "pl": "Pogotowie weterynaryjne całodobowo.",
+        "cs": "Nonstop pohotovostní služba."
       },
       "small_animals": true,
       "url": "https://www.sukhdapethospital.com/",
@@ -885,7 +921,8 @@
         "it": "Pronto soccorso 24 ore su 24, notti, fine settimana e festivi compresi.",
         "pt": "Urgências 24 horas por dia, incluindo noites, fins de semana e feriados.",
         "nl": "Spoedzorg 24 uur per dag, ook 's nachts, in het weekend en op feestdagen.",
-        "pl": "Całodobowa pomoc w nagłych przypadkach, także w nocy, w weekendy i święta."
+        "pl": "Całodobowa pomoc w nagłych przypadkach, także w nocy, w weekendy i święta.",
+        "cs": "Nonstop pohotovostní péče včetně nocí, víkendů a svátků."
       },
       "small_animals": true,
       "url": "https://www.vet24animalhospital.com/",
@@ -908,7 +945,8 @@
         "it": "OPD (ambulatorio) 9:00–21:00; pronto soccorso 24 ore su 24, 7 giorni su 7.",
         "pt": "Consulta externa (OPD) 9h00–21h00; urgências 24 horas por dia, 7 dias por semana.",
         "nl": "Poli (OPD) 9.00–21.00 uur; spoed 24/7.",
-        "pl": "Poradnia (OPD) 9:00–21:00; nagłe przypadki całodobowo."
+        "pl": "Poradnia (OPD) 9:00–21:00; nagłe przypadki całodobowo.",
+        "cs": "Ambulance 9:00–21:00; pohotovost nonstop."
       },
       "small_animals": true,
       "url": "https://primevets.in/",
@@ -931,7 +969,8 @@
         "it": "Aperto tutti i giorni 9:30–20:00; linea di supporto per le emergenze dichiarata, telefonare in anticipo.",
         "pt": "Aberto todos os dias 9h30–20h00; linha de apoio de urgência anunciada, liga antes.",
         "nl": "Dagelijks open 9.30–20.00 uur; spoedlijn naar eigen zeggen beschikbaar, bel vooraf.",
-        "pl": "Otwarte codziennie 9:30–20:00; reklamuje linię pomocy w nagłych przypadkach, zadzwoń wcześniej."
+        "pl": "Otwarte codziennie 9:30–20:00; reklamuje linię pomocy w nagłych przypadkach, zadzwoń wcześniej.",
+        "cs": "Otevřeno denně 9:30–20:00; uvádí pohotovostní podpůrnou linku, před cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://thesmallanimalmohali.com/",
@@ -954,7 +993,8 @@
         "it": "Dichiarato aperto 24 ore su 24, 7 giorni su 7. Linee di emergenza 9317711155, 9780527267, 8288818220.",
         "pt": "Anunciado como aberto 24 horas por dia, 7 dias por semana. Linhas de apoio de urgência 9317711155, 9780527267, 8288818220.",
         "nl": "Naar eigen zeggen 24/7 open. Spoedhulplijnen 9317711155, 9780527267, 8288818220.",
-        "pl": "Reklamowane jako otwarte całą dobę. Całodobowe linie pomocy 9317711155, 9780527267, 8288818220."
+        "pl": "Reklamowane jako otwarte całą dobę. Całodobowe linie pomocy 9317711155, 9780527267, 8288818220.",
+        "cs": "Uvádí nonstop provoz. Pohotovostní linky 9317711155, 9780527267, 8288818220."
       },
       "small_animals": true,
       "url": "https://www.petsmarthospitals.com/",
@@ -977,7 +1017,8 @@
         "it": "Servizio continuo 24 ore su 24, 7 giorni su 7.",
         "pt": "Serviço sem interrupção, 24 horas por dia, 7 dias por semana.",
         "nl": "Non-stop service, 24/7.",
-        "pl": "Całodobowa obsługa bez przerwy."
+        "pl": "Całodobowa obsługa bez przerwy.",
+        "cs": "Nonstop služba."
       },
       "small_animals": true,
       "url": "https://animalveterinaryhospital.in/",
@@ -1000,7 +1041,8 @@
         "it": "Aperto dal lunedì al sabato 9:00–18:00.",
         "pt": "Aberto de segunda a sábado 9h00–18h00.",
         "nl": "Open ma–za 9.00–18.00 uur.",
-        "pl": "Otwarte od poniedziałku do soboty 9:00–18:00."
+        "pl": "Otwarte od poniedziałku do soboty 9:00–18:00.",
+        "cs": "Otevřeno Po–so 9:00–18:00."
       },
       "small_animals": true,
       "url": "https://papaslifeline.com/",
@@ -1023,7 +1065,8 @@
         "it": "Aperto tutti i giorni 9:00–23:00.",
         "pt": "Aberto todos os dias 9h00–23h00.",
         "nl": "Dagelijks open 9.00–23.00 uur.",
-        "pl": "Otwarte codziennie 9:00–23:00."
+        "pl": "Otwarte codziennie 9:00–23:00.",
+        "cs": "Otevřeno denně 9:00–23:00."
       },
       "small_animals": true,
       "url": "https://cupabangalore.org/",
@@ -1046,7 +1089,8 @@
         "it": "Orari dal lunedì al venerdì 9:00–18:00; dichiara di essere disponibile per le emergenze 24 ore su 24, 7 giorni su 7, telefonare in anticipo.",
         "pt": "Horário de segunda a sexta 9h00–18h00; indica estar disponível para urgências 24 horas por dia, 7 dias por semana, liga antes.",
         "nl": "Open ma–vr 9.00–18.00 uur; naar eigen zeggen 24/7 beschikbaar voor spoed, bel vooraf.",
-        "pl": "Godziny od poniedziałku do piątku 9:00–18:00; podaje, że jest dostępne w nagłych przypadkach całą dobę, zadzwoń wcześniej."
+        "pl": "Godziny od poniedziałku do piątku 9:00–18:00; podaje, że jest dostępne w nagłych przypadkach całą dobę, zadzwoń wcześniej.",
+        "cs": "Po–Pá 9:00–18:00; uvádí, že je pro pohotovosti k dispozici nonstop, před cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://mypetclinicvizag.com/",
@@ -1069,7 +1113,8 @@
         "it": "Aperto 9:00–20:00 per le visite generali; aperto 24 ore su 24, 7 giorni su 7 per le emergenze. Linea di emergenza +91 91931 00911.",
         "pt": "Aberto 9h00–20h00 para consultas gerais; aberto 24 horas por dia, 7 dias por semana, para urgências. Linha de apoio de urgência +91 91931 00911.",
         "nl": "Open 9.00–20.00 uur voor gewone bezoeken; voor spoed 24/7 open. Spoedhulplijn +91 91931 00911.",
-        "pl": "Otwarte 9:00–20:00 na zwykłe wizyty; w nagłych przypadkach całą dobę. Całodobowa linia pomocy +91 91931 00911."
+        "pl": "Otwarte 9:00–20:00 na zwykłe wizyty; w nagłych przypadkach całą dobę. Całodobowa linia pomocy +91 91931 00911.",
+        "cs": "Otevřeno 9:00–20:00 pro běžné návštěvy; pro pohotovosti nonstop. Pohotovostní linka +91 91931 00911."
       },
       "small_animals": true,
       "url": "https://evavets.com/",
@@ -1092,7 +1137,8 @@
         "it": "OPD (ambulatorio) 11:00–17:00; ricoveri (IPD) 10:00–18:00. Per le emergenze chiamare o scrivere su WhatsApp.",
         "pt": "Consulta externa (OPD) 11h00–17h00; admissão de internamento (IPD) 10h00–18h00. Liga ou envia mensagem por WhatsApp para urgências.",
         "nl": "Poli (OPD) 11.00–17.00 uur; opname (IPD) 10.00–18.00 uur. Bel of stuur een WhatsApp-bericht bij spoed.",
-        "pl": "Poradnia (OPD) 11:00–17:00; przyjęcia na oddział (IPD) 10:00–18:00. W nagłych przypadkach zadzwoń lub napisz na WhatsApp."
+        "pl": "Poradnia (OPD) 11:00–17:00; przyjęcia na oddział (IPD) 10:00–18:00. W nagłych przypadkach zadzwoń lub napisz na WhatsApp.",
+        "cs": "Ambulance 11:00–17:00; příjem hospitalizovaných 10:00–18:00. V pohotovosti volejte nebo pište na WhatsApp."
       },
       "small_animals": true,
       "url": "https://raahatanimalhospital.org/",
@@ -1115,7 +1161,8 @@
         "it": "Pronto soccorso per animali 24 ore su 24, 7 giorni su 7, di giorno e di notte.",
         "pt": "Tratamento de urgência para animais de estimação 24 horas por dia, 7 dias por semana, de dia ou de noite.",
         "nl": "Spoedbehandeling voor huisdieren 24/7, dag en nacht.",
-        "pl": "Całodobowe leczenie zwierząt domowych w nagłych przypadkach, w dzień i w nocy."
+        "pl": "Całodobowe leczenie zwierząt domowych w nagłych przypadkach, w dzień i w nocy.",
+        "cs": "Nonstop pohotovostní ošetření domácích zvířat, ve dne i v noci."
       },
       "small_animals": true,
       "url": "https://www.sspetcare.com/",
@@ -1138,7 +1185,8 @@
         "it": "Aperto tutti i giorni 10:00–20:00; pronto soccorso 24 ore su 24, 7 giorni su 7 dichiarato, telefonare in anticipo.",
         "pt": "Aberto todos os dias 10h00–20h00; serviços de urgência anunciados 24 horas por dia, 7 dias por semana, liga antes.",
         "nl": "Dagelijks open 10.00–20.00 uur; 24/7 spoeddienst naar eigen zeggen, bel vooraf.",
-        "pl": "Otwarte codziennie 10:00–20:00; reklamuje całodobowe pogotowie weterynaryjne, zadzwoń wcześniej."
+        "pl": "Otwarte codziennie 10:00–20:00; reklamuje całodobowe pogotowie weterynaryjne, zadzwoń wcześniej.",
+        "cs": "Otevřeno denně 10:00–20:00; uvádí nonstop pohotovostní služby, před cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://drsinghpetcaremaxpet.com/",
@@ -1161,7 +1209,8 @@
         "it": "Lun–ven 10:30–20:30, sab–dom 10:00–21:00; aiuto in emergenza dichiarato 24 ore su 24, 7 giorni su 7, telefonare in anticipo.",
         "pt": "Segunda a sexta 10h30–20h30, sábado e domingo 10h00–21h00; ajuda de urgência anunciada 24 horas por dia, 7 dias por semana, liga antes.",
         "nl": "Ma–vr 10.30–20.30 uur, za–zo 10.00–21.00 uur; spoedhulp naar eigen zeggen 24/7, bel vooraf.",
-        "pl": "Pon.–pt. 10:30–20:30, sob.–niedz. 10:00–21:00; reklamuje całodobową pomoc w nagłych przypadkach, zadzwoń wcześniej."
+        "pl": "Pon.–pt. 10:30–20:30, sob.–niedz. 10:00–21:00; reklamuje całodobową pomoc w nagłych przypadkach, zadzwoń wcześniej.",
+        "cs": "Po–Pá 10:30–20:30, so–ne 10:00–21:00; uvádí nonstop pohotovostní pomoc, před cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://pawcentric.in/",

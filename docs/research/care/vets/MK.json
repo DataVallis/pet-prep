@@ -49,7 +49,8 @@
         "it": "Casi urgenti e veterinario di guardia 24 ore su 24, 7 giorni su 7. Orario ordinario lun–ven 10:00–14:00 e 17:00–19:00, sab 10:00–14:00, chiuso la domenica.",
         "pt": "Casos urgentes e veterinário de piquete disponíveis 24 h/24, 7 dias por semana. Horário normal de segunda a sexta 10h00–14h00 e 17h00–19h00, sábado 10h00–14h00, domingo fechado.",
         "nl": "Spoedgevallen en dierenarts in achterwacht 24/7 beschikbaar. Reguliere openingstijden ma–vr 10.00–14.00 en 17.00–19.00 uur, za 10.00–14.00 uur, zo gesloten.",
-        "pl": "Pilne przypadki i weterynarz dyżurny całodobowo, 7 dni w tygodniu. Zwykłe godziny pon.–pt. 10:00–14:00 i 17:00–19:00, sob. 10:00–14:00, w niedziele zamknięte."
+        "pl": "Pilne przypadki i weterynarz dyżurny całodobowo, 7 dni w tygodniu. Zwykłe godziny pon.–pt. 10:00–14:00 i 17:00–19:00, sob. 10:00–14:00, w niedziele zamknięte.",
+        "cs": "Naléhavé případy a veterinář v pohotovosti nonstop. Běžná ordinační doba Po–Pá 10:00–14:00 a 17:00–19:00, so 10:00–14:00, v neděli zavřeno."
       },
       "url": "https://drcupona.mk/",
       "source_url": "https://drcupona.mk/",
@@ -75,7 +76,8 @@
         "it": "Lun–ven 8:00–20:00, sab 9:00–14:00, dom 10:00–14:00.",
         "pt": "Segunda a sexta 8h00–20h00, sábado 9h00–14h00, domingo 10h00–14h00.",
         "nl": "Ma–vr 08.00–20.00 uur, za 09.00–14.00 uur, zo 10.00–14.00 uur.",
-        "pl": "Pon.–pt. 08:00–20:00, sob. 09:00–14:00, niedz. 10:00–14:00."
+        "pl": "Pon.–pt. 08:00–20:00, sob. 09:00–14:00, niedz. 10:00–14:00.",
+        "cs": "Po–Pá 08:00–20:00, so 09:00–14:00, ne 10:00–14:00."
       },
       "url": "https://veterinarencentar.mk/",
       "source_url": "https://veterinarencentar.mk/kontakt/",
@@ -101,7 +103,8 @@
         "it": "Lun–ven 8:00–19:00, sab 8:00–15:00. Al telefono 070 722 967 rispondono 9:00–19:00.",
         "pt": "Segunda a sexta 8h00–19h00, sábado 8h00–15h00. O telefone 070 722 967 atende das 9h00 às 19h00.",
         "nl": "Ma–vr 8.00–19.00 uur, za 8.00–15.00 uur. Telefoon 070 722 967 bereikbaar 9.00–19.00 uur.",
-        "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–15:00. Telefon 070 722 967 odbierany 9:00–19:00."
+        "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–15:00. Telefon 070 722 967 odbierany 9:00–19:00.",
+        "cs": "Po–Pá 8:00–19:00, so 8:00–15:00. Telefon 070 722 967 je obsluhován 9:00–19:00."
       },
       "url": "https://www.manopetvet.com/",
       "source_url": "https://www.manopetvet.com/contact/",
@@ -127,7 +130,8 @@
         "it": "Lun–ven 8:00–18:00, sab 9:00–16:00, chiuso la domenica.",
         "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–16h00, domingo fechado.",
         "nl": "Ma–vr 08.00–18.00 uur, za 09.00–16.00 uur, zo gesloten.",
-        "pl": "Pon.–pt. 08:00–18:00, sob. 09:00–16:00, w niedziele zamknięte."
+        "pl": "Pon.–pt. 08:00–18:00, sob. 09:00–16:00, w niedziele zamknięte.",
+        "cs": "Po–Pá 08:00–18:00, so 09:00–16:00, v neděli zavřeno."
       },
       "url": "https://remediumvet.mk/",
       "source_url": "https://remediumvet.mk/",
@@ -153,7 +157,8 @@
         "it": "Secondo telefono +389 70 265 872.",
         "pt": "Segundo telefone +389 70 265 872.",
         "nl": "Tweede telefoonnummer +389 70 265 872.",
-        "pl": "Drugi telefon +389 70 265 872."
+        "pl": "Drugi telefon +389 70 265 872.",
+        "cs": "Druhý telefon +389 70 265 872."
       },
       "url": "https://petvetaerodrom.mk/",
       "source_url": "https://petvetaerodrom.mk/",
@@ -193,7 +198,8 @@
         "it": "Potrebbe esserci una linea di guardia separata; chiamare prima.",
         "pt": "Pode existir uma linha de piquete separada; liga antes.",
         "nl": "Mogelijk aparte dienstlijn; bel vooraf.",
-        "pl": "Może istnieć osobna linia dyżurna; zadzwoń wcześniej."
+        "pl": "Może istnieć osobna linia dyżurna; zadzwoń wcześniej.",
+        "cs": "Může existovat samostatná pohotovostní linka; předem zavolejte."
       },
       "url": "http://www.veterinarnabolnica.com.mk/",
       "source_url": "https://fva.gov.mk/images/2018/08/tabela-mikro-cipiranje.pdf",

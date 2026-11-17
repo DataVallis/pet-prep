@@ -49,7 +49,8 @@
       "checked": "2026-11-16",
       "note": "Own page: 'Open 24/7 · no lunch break, days off or holidays'. Legal entity MOY VETVRACH LLC.",
       "duty_i18n": {
-        "pl": "Czynne 24/7, bez przerwy obiadowej, dni wolnych i świąt. Linia dla nagłych przypadków +998 99 067 07 90."
+        "pl": "Czynne 24/7, bez przerwy obiadowej, dni wolnych i świąt. Linia dla nagłych przypadków +998 99 067 07 90.",
+        "cs": "Otevřeno nonstop, bez polední pauzy, dnů volna a svátků. Pohotovostní linka +998 99 067 07 90."
       }
     },
     {
@@ -67,7 +68,8 @@
       "checked": "2026-11-16",
       "note": "Own page: 'Режим работы: круглосуточно, без выходных'.",
       "duty_i18n": {
-        "pl": "Czynne całą dobę, bez dni wolnych. Inne numery: +998 97 344 08 47, +998 88 100 32 82."
+        "pl": "Czynne całą dobę, bez dni wolnych. Inne numery: +998 97 344 08 47, +998 88 100 32 82.",
+        "cs": "Otevřeno nonstop, bez dnů volna. Další čísla: +998 97 344 08 47, +998 88 100 32 82."
       }
     },
     {
@@ -85,7 +87,8 @@
       "checked": "2026-11-16",
       "note": "Own page; no 24 h statement.",
       "duty_i18n": {
-        "pl": "Codziennie 9:00–18:00, w niedziele nieczynne. Telefon stacjonarny +998 71 256 54 50."
+        "pl": "Codziennie 9:00–18:00, w niedziele nieczynne. Telefon stacjonarny +998 71 256 54 50.",
+        "cs": "Denně 9:00–18:00, v neděli zavřeno. Pevná linka +998 71 256 54 50."
       }
     },
     {
@@ -103,7 +106,8 @@
       "checked": "2026-11-16",
       "note": "Own page: 'Да, принимаем экстренные случаи'; no 24 h statement.",
       "duty_i18n": {
-        "pl": "pon.–pt. 9:00–18:00, sob.–niedz. 10:00–18:00, przerwa obiadowa 13:00–14:00; w godzinach otwarcia przyjmuje nagłe przypadki."
+        "pl": "pon.–pt. 9:00–18:00, sob.–niedz. 10:00–18:00, przerwa obiadowa 13:00–14:00; w godzinach otwarcia przyjmuje nagłe przypadki.",
+        "cs": "Po–Pá 9:00–18:00, so–ne 10:00–18:00, polední pauza 13:00–14:00; v ordinační dobu přijímá i pohotovostní případy."
       }
     }
   ],

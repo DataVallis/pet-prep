@@ -42,7 +42,10 @@
       "url": "https://www.vetdoest.com/",
       "source_url": "https://www.vetdoest.com/hours",
       "note": "Own site. Emergency number published but no 24 h wording, so emergency_24h=false.",
-      "checked": "2026-11-16"
+      "checked": "2026-11-16",
+      "duty_i18n": {
+        "cs": "Recepce Po–Pá 9:00–14:00, so 9:00–13:00, v neděli zavřeno. Pouze na objednání; návštěvy doma v úterý a v pátek. Pohotovostní číslo +599 9 565 1776."
+      }
     }
   ],
   "notes": "Only one clinic confirmed from an acceptable source. No Curacao veterinary association, Veterinary Service (LVV) contact page or duty rota found. Unreachable/blocked: facebook.com pages (Claus Clinic, Vlimmen/De Geus, VetDoest; robots), animalscaribbean.com (robots), cybo.com (error), licg.nl PDF (error), curacao.com pet page (provenance), vetdrvinck.com (Bluehost account suspended). Not covered: Centro Veterinario Dr. E.G. Vinck, Klinika Veterinaria Parera, Claus Clinic, Vlimmen Veterinary Services (only seen via search results/Facebook). No 24-h clinics and no animal poison line found."

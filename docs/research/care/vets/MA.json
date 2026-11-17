@@ -54,7 +54,8 @@
         "it": "Servizio di pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7.",
         "pt": "Serviço de urgência anunciado 24 h/24, 7 dias por semana.",
         "nl": "Spoeddienst naar eigen zeggen 24 uur per dag, 7 dagen per week.",
-        "pl": "Pogotowie weterynaryjne reklamowane jako czynne całodobowo, 7 dni w tygodniu."
+        "pl": "Pogotowie weterynaryjne reklamowane jako czynne całodobowo, 7 dni w tygodniu.",
+        "cs": "Pohotovostní služba uváděna nonstop, 7 dní v týdnu."
       },
       "small_animals": true,
       "url": "https://veterinairecasablanca.ma/",
@@ -77,7 +78,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7, festivi compresi.",
         "pt": "Aberto 24 h/24, 7 dias por semana, feriados incluídos.",
         "nl": "24 uur per dag, 7 dagen per week geopend, ook op feestdagen.",
-        "pl": "Otwarte całodobowo, 7 dni w tygodniu, także w święta."
+        "pl": "Otwarte całodobowo, 7 dni w tygodniu, także w święta.",
+        "cs": "Nonstop, 7 dní v týdnu, včetně státních svátků."
       },
       "small_animals": true,
       "url": "https://cliniqueveterinairesoleil.com/",
@@ -100,7 +102,8 @@
         "it": "Visite lun–ven 9:00–19:00, sab 9:00–16:00; pronto soccorso 24 ore su 24, 7 giorni su 7.",
         "pt": "Consultas de segunda a sexta 9h00–19h00, sábado 9h00–16h00; urgências 24 h/24, 7 dias por semana.",
         "nl": "Consulten ma–vr 9.00–19.00 uur, za 9.00–16.00 uur; spoed 24 uur per dag, 7 dagen per week.",
-        "pl": "Konsultacje pon.–pt. 9:00–19:00, sob. 9:00–16:00; nagłe przypadki całodobowo, 7 dni w tygodniu."
+        "pl": "Konsultacje pon.–pt. 9:00–19:00, sob. 9:00–16:00; nagłe przypadki całodobowo, 7 dni w tygodniu.",
+        "cs": "Konzultace Po–Pá 9:00–19:00, so 9:00–16:00; pohotovost nonstop, 7 dní v týdnu."
       },
       "small_animals": true,
       "url": "https://www.hermitagevets.com/",
@@ -123,7 +126,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7.",
         "pt": "Aberto 24 h/24, 7 dias por semana.",
         "nl": "24 uur per dag, 7 dagen per week geopend.",
-        "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu."
+        "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu.",
+        "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu."
       },
       "small_animals": true,
       "url": "https://www.veterinaireideal.com/",
@@ -146,7 +150,8 @@
         "it": "Lun–ven 9:00–19:00, sab 9:00–14:00; numero separato per le emergenze 06 61 49 26 18.",
         "pt": "Segunda a sexta 9h00–19h00, sábado 9h00–14h00; número de urgência separado 06 61 49 26 18.",
         "nl": "Ma–vr 9.00–19.00 uur, za 9.00–14.00 uur; apart spoednummer 06 61 49 26 18.",
-        "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–14:00; osobny numer alarmowy 06 61 49 26 18."
+        "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–14:00; osobny numer alarmowy 06 61 49 26 18.",
+        "cs": "Po–Pá 9:00–19:00, so 9:00–14:00; samostatné pohotovostní číslo 06 61 49 26 18."
       },
       "small_animals": true,
       "url": "https://sites.google.com/view/clinique-veterinaire-maarif/accueil",
@@ -169,7 +174,8 @@
         "it": "Aperto tutti i giorni 9:00–21:00; raggiungibile per telefono o WhatsApp per le situazioni critiche durante questi orari.",
         "pt": "Aberto todos os dias 9h00–21h00; contactável por telefone ou WhatsApp em situações críticas durante este horário.",
         "nl": "Dagelijks geopend 9.00–21.00 uur; in die uren bereikbaar per telefoon of WhatsApp voor kritieke situaties.",
-        "pl": "Otwarte codziennie 9:00–21:00; w sytuacjach krytycznych dostępne w tych godzinach telefonicznie lub przez WhatsApp."
+        "pl": "Otwarte codziennie 9:00–21:00; w sytuacjach krytycznych dostępne w tych godzinach telefonicznie lub przez WhatsApp.",
+        "cs": "Otevřeno denně 9:00–21:00; v kritických situacích je v této době dostupné telefonicky nebo přes WhatsApp."
       },
       "small_animals": true,
       "url": "https://www.vetsocrate.ma/",
@@ -191,7 +197,8 @@
         "it": "Pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7.",
         "pt": "Urgências anunciadas 24 horas por dia.",
         "nl": "Spoedzorg naar eigen zeggen 24/7.",
-        "pl": "Pogotowie reklamowane jako czynne całodobowo."
+        "pl": "Pogotowie reklamowane jako czynne całodobowo.",
+        "cs": "Pohotovostní péče uváděna nonstop."
       },
       "small_animals": true,
       "url": "https://cvt.ma/",
@@ -214,7 +221,8 @@
         "it": "Lun–ven 9:00–13:00 e 15:00–19:00; emergenze fuori orario 24 ore su 24, 7 giorni su 7 per telefono (anche 06 61 72 99 28).",
         "pt": "Segunda a sexta 9h00–13h00 e 15h00–19h00; urgências fora do horário 24 h/24, 7 dias por semana, por telefone (também 06 61 72 99 28).",
         "nl": "Ma–vr 9.00–13.00 en 15.00–19.00 uur; spoed buiten openingstijden 24 uur per dag, 7 dagen per week telefonisch (ook 06 61 72 99 28).",
-        "pl": "Pon.–pt. 9:00–13:00 i 15:00–19:00; nagłe przypadki poza godzinami otwarcia całodobowo, 7 dni w tygodniu, telefonicznie (także 06 61 72 99 28)."
+        "pl": "Pon.–pt. 9:00–13:00 i 15:00–19:00; nagłe przypadki poza godzinami otwarcia całodobowo, 7 dni w tygodniu, telefonicznie (także 06 61 72 99 28).",
+        "cs": "Po–Pá 9:00–13:00 a 15:00–19:00; pohotovost mimo ordinační dobu nonstop, 7 dní v týdnu telefonicky (také 06 61 72 99 28)."
       },
       "small_animals": true,
       "url": "https://cvy.ma/",
@@ -237,7 +245,8 @@
         "it": "Lun–ven circa 9:00–19:00, sab mattina; pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7.",
         "pt": "Segunda a sexta por volta das 9h00–19h00, sábado de manhã; urgências anunciadas 24 horas por dia.",
         "nl": "Ma–vr ongeveer 9.00–19.00 uur, za 's ochtends; spoed naar eigen zeggen 24/7.",
-        "pl": "Pon.–pt. około 9:00–19:00, sob. rano; pogotowie reklamowane jako czynne całodobowo."
+        "pl": "Pon.–pt. około 9:00–19:00, sob. rano; pogotowie reklamowane jako czynne całodobowo.",
+        "cs": "Po–Pá přibližně 9:00–19:00, so dopoledne; pohotovost uváděna nonstop."
       },
       "small_animals": true,
       "url": "https://agafayvetpractice.wixsite.com/anix",
@@ -260,7 +269,8 @@
         "it": "Lun–sab 9:00–20:00; emergenze gestite fino alle 3:00 di notte.",
         "pt": "Segunda a sábado 9h00–20h00; urgências atendidas até às 3h00.",
         "nl": "Ma–za 9.00–20.00 uur; spoedgevallen tot 3.00 uur 's nachts.",
-        "pl": "Pon.–sob. 9:00–20:00; nagłe przypadki obsługiwane do 3:00 w nocy."
+        "pl": "Pon.–sob. 9:00–20:00; nagłe przypadki obsługiwane do 3:00 w nocy.",
+        "cs": "Po–So 9:00–20:00; pohotovostní případy se řeší do 3:00 ráno."
       },
       "small_animals": true,
       "url": "https://vetezzaytoune.com/",
@@ -282,7 +292,8 @@
         "it": "Servizio di pronto soccorso dichiarato 24 ore su 24, tutti i giorni della settimana.",
         "pt": "Serviço de urgência anunciado 24 horas por dia, todos os dias da semana.",
         "nl": "Spoeddienst naar eigen zeggen 24/7, elke dag van de week.",
-        "pl": "Pogotowie reklamowane jako czynne całodobowo, codziennie."
+        "pl": "Pogotowie reklamowane jako czynne całodobowo, codziennie.",
+        "cs": "Pohotovostní služba uváděna nonstop, každý den v týdnu."
       },
       "small_animals": true,
       "url": "https://veterinairegibraltar.com/",
@@ -305,7 +316,8 @@
         "it": "Lun–ven 9:30–12:30 e 15:30–18:30, sab 9:30–13:00; visite a domicilio su richiesta telefonica.",
         "pt": "Segunda a sexta 9h30–12h30 e 15h30–18h30, sábado 9h30–13h00; consultas ao domicílio por telefone.",
         "nl": "Ma–vr 9.30–12.30 en 15.30–18.30 uur, za 9.30–13.00 uur; huisbezoek telefonisch aan te vragen.",
-        "pl": "Pon.–pt. 9:30–12:30 i 15:30–18:30, sob. 9:30–13:00; wizyty domowe telefonicznie."
+        "pl": "Pon.–pt. 9:30–12:30 i 15:30–18:30, sob. 9:30–13:00; wizyty domowe telefonicznie.",
+        "cs": "Po–Pá 9:30–12:30 a 15:30–18:30, so 9:30–13:00; návštěvy doma po telefonické domluvě."
       },
       "small_animals": true,
       "url": "https://www.veterinaireagadir.com/",
@@ -328,7 +340,8 @@
         "it": "Lun–ven 9:00–13:00 e 15:00–19:00, sab 9:00–14:00.",
         "pt": "Segunda a sexta 9h00–13h00 e 15h00–19h00, sábado 9h00–14h00.",
         "nl": "Ma–vr 9.00–13.00 en 15.00–19.00 uur, za 9.00–14.00 uur.",
-        "pl": "Pon.–pt. 9:00–13:00 i 15:00–19:00, sob. 9:00–14:00."
+        "pl": "Pon.–pt. 9:00–13:00 i 15:00–19:00, sob. 9:00–14:00.",
+        "cs": "Po–Pá 9:00–13:00 a 15:00–19:00, so 9:00–14:00."
       },
       "small_animals": true,
       "url": "https://vetcareagadir.lovable.app/",
@@ -351,7 +364,8 @@
         "it": "Visite tutti i giorni 9:00–18:00; pronto soccorso 18:00–9:00; aperto 24 ore su 24, 7 giorni su 7.",
         "pt": "Consultas todos os dias 9h00–18h00; urgências 18h00–9h00; aberto 24 h/24, 7 dias por semana.",
         "nl": "Consulten dagelijks 9.00–18.00 uur; spoeddienst 18.00–9.00 uur; 24 uur per dag, 7 dagen per week geopend.",
-        "pl": "Konsultacje codziennie 9:00–18:00; pogotowie 18:00–09:00; otwarte całodobowo, 7 dni w tygodniu."
+        "pl": "Konsultacje codziennie 9:00–18:00; pogotowie 18:00–09:00; otwarte całodobowo, 7 dni w tygodniu.",
+        "cs": "Konzultace denně 9:00–18:00; pohotovostní služba 18:00–09:00; nonstop, 7 dní v týdnu."
       },
       "small_animals": true,
       "url": "https://vetchampsdecourse.com/",
@@ -374,7 +388,8 @@
         "it": "Lun–ven 9:00–18:00, sab 9:00–14:00.",
         "pt": "Segunda a sexta 9h00–18h00, sábado 9h00–14h00.",
         "nl": "Ma–vr 9.00–18.00 uur, za 9.00–14.00 uur.",
-        "pl": "Pon.–pt. 9:00–18:00, sob. 9:00–14:00."
+        "pl": "Pon.–pt. 9:00–18:00, sob. 9:00–14:00.",
+        "cs": "Po–Pá 9:00–18:00, so 9:00–14:00."
       },
       "small_animals": true,
       "url": "https://veterinaire-rabat.com/",
@@ -396,7 +411,8 @@
         "it": "Pronto soccorso per i casi in pericolo di vita; chiamare prima.",
         "pt": "Atendimento urgente para casos com risco de vida; liga antes.",
         "nl": "Spoedzorg voor levensbedreigende gevallen; bel vooraf.",
-        "pl": "Pilna pomoc w przypadkach zagrażających życiu; zadzwoń wcześniej."
+        "pl": "Pilna pomoc w przypadkach zagrażających życiu; zadzwoń wcześniej.",
+        "cs": "Naléhavá péče pro případy ohrožující život; předem zavolejte."
       },
       "small_animals": true,
       "url": "https://mimosa.ma/",
@@ -433,7 +449,8 @@
         "it": "Lun–ven 9:00–17:00, sab 10:00–17:00; pronto soccorso dichiarato 24 ore su 24, 7 giorni su 7.",
         "pt": "Segunda a sexta 9h00–17h00, sábado 10h00–17h00; urgências anunciadas 24 h/24, 7 dias por semana.",
         "nl": "Ma–vr 9.00–17.00 uur, za 10.00–17.00 uur; spoedzorg naar eigen zeggen 24 uur per dag, 7 dagen per week.",
-        "pl": "Pon.–pt. 9:00–17:00, sob. 10:00–17:00; pogotowie reklamowane jako czynne całodobowo, 7 dni w tygodniu."
+        "pl": "Pon.–pt. 9:00–17:00, sob. 10:00–17:00; pogotowie reklamowane jako czynne całodobowo, 7 dni w tygodniu.",
+        "cs": "Po–Pá 9:00–17:00, so 10:00–17:00; pohotovostní péče uváděna nonstop, 7 dní v týdnu."
       },
       "small_animals": true,
       "url": "https://veterinaire-villehaute.com/",
@@ -456,7 +473,8 @@
         "it": "Lun–sab 9:30–19:00.",
         "pt": "Segunda a sábado 9h30–19h00.",
         "nl": "Ma–za 9.30–19.00 uur.",
-        "pl": "Pon.–sob. 9:30–19:00."
+        "pl": "Pon.–sob. 9:30–19:00.",
+        "cs": "Po–So 9:30–19:00."
       },
       "small_animals": true,
       "url": "https://petcare.ma/",
@@ -495,7 +513,8 @@
         "it": "Numero separato per le emergenze 06 61 56 16 10.",
         "pt": "Número de urgência separado 06 61 56 16 10.",
         "nl": "Apart spoednummer 06 61 56 16 10.",
-        "pl": "Osobny numer alarmowy 06 61 56 16 10."
+        "pl": "Osobny numer alarmowy 06 61 56 16 10.",
+        "cs": "Samostatné pohotovostní číslo 06 61 56 16 10."
       }
     }
   ],

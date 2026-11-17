@@ -38,7 +38,8 @@
         "it": "Ospedale per piccoli animali aperto dal lunedì al venerdì 9:00–19:00. Non è un pronto soccorso aperto 24 ore su 24.",
         "pt": "Hospital de pequenos animais aberto de segunda a sexta, 9h00–19h00. Não é uma clínica de urgências 24 horas.",
         "nl": "Dierenziekenhuis voor kleine huisdieren, open van maandag tot en met vrijdag 9.00–19.00 uur. Geen 24-uurs spoedkliniek.",
-        "pl": "Szpital dla małych zwierząt otwarty od poniedziałku do piątku 9:00–19:00. To nie całodobowa lecznica dla nagłych przypadków."
+        "pl": "Szpital dla małych zwierząt otwarty od poniedziałku do piątku 9:00–19:00. To nie całodobowa lecznica dla nagłych przypadków.",
+        "cs": "Nemocnice pro malá zvířata, otevřeno Po–Pá 9:00–19:00. Nejde o nonstop pohotovost."
       }
     },
     {
@@ -62,7 +63,8 @@
         "it": "Orari regolari dal lunedì al venerdì 10:00–12:00 e 14:00–17:00. Le urgenze sono seguite anche fuori da questi orari, di notte, nei fine settimana e nei festivi; telefonare in anticipo.",
         "pt": "Horário normal de segunda a sexta, 10h00–12h00 e 14h00–17h00. Fora deste horário, incluindo noites, fins de semana e feriados, atendem-se urgências; liga antes.",
         "nl": "Reguliere uren maandag tot en met vrijdag 10.00–12.00 en 14.00–17.00 uur. Spoedgevallen worden ook buiten deze uren geholpen, ook 's nachts, in het weekend en op feestdagen; bel vooraf.",
-        "pl": "Stałe godziny od poniedziałku do piątku 10:00–12:00 i 14:00–17:00. Nagłe przypadki są przyjmowane także poza tymi godzinami, w tym w nocy, w weekendy i święta; zadzwoń przed wizytą."
+        "pl": "Stałe godziny od poniedziałku do piątku 10:00–12:00 i 14:00–17:00. Nagłe przypadki są przyjmowane także poza tymi godzinami, w tym w nocy, w weekendy i święta; zadzwoń przed wizytą.",
+        "cs": "Běžná ordinační doba Po–Pá 10:00–12:00 a 14:00–17:00. Pohotovostní případy se ošetřují i mimo tuto dobu, včetně nocí, víkendů a svátků; před cestou zavolejte."
       }
     },
     {
@@ -85,7 +87,8 @@
         "it": "Servizio veterinario di informazione sui veleni, nei giorni feriali 8:00–18:00. Non è una linea attiva 24 ore su 24.",
         "pt": "Linha de apoio toxicológico para animais, dias úteis 8h00–18h00. Não funciona 24 horas por dia.",
         "nl": "Informatiedienst voor vergiftigingen bij dieren, werkdagen 8.00–18.00 uur. Geen 24-uurslijn.",
-        "pl": "Weterynaryjna informacja toksykologiczna, w dni robocze 8:00–18:00. To nie linia całodobowa."
+        "pl": "Weterynaryjna informacja toksykologiczna, w dni robocze 8:00–18:00. To nie linia całodobowa.",
+        "cs": "Veterinární toxikologická informační služba, v pracovní dny 8:00–18:00. Nejde o nonstop linku."
       }
     }
   ],

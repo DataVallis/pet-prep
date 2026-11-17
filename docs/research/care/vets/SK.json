@@ -52,7 +52,8 @@
         "it": "Lun–ven 8:30–12:00 e 13:00–15:15; giorni feriali 15:30–20:00 accettazione +421 915 991 474; giorni feriali 20:00–8:00 emergenze +421 905 579 559; sab–dom pronto soccorso continuato. Un veterinario è sempre presente in sede; supplemento per le emergenze.",
         "pt": "Seg–sex 8h30–12h00 e 13h00–15h15; dias úteis 15h30–20h00 receção +421 915 991 474; dias úteis 20h00–8h00 urgências +421 905 579 559; sáb–dom urgências sem interrupção. Há sempre um veterinário no local; aplica-se suplemento de urgência.",
         "nl": "Ma–vr 8.30–12.00 en 13.00–15.15 uur; werkdagen 15.30–20.00 uur receptie +421 915 991 474; werkdagen 20.00–8.00 uur spoed +421 905 579 559; za–zo spoed de klok rond. Er is altijd een dierenarts aanwezig; spoedtoeslag van toepassing.",
-        "pl": "pon.–pt. 8:30–12:00 i 13:00–15:15; w dni robocze 15:30–20:00 recepcja +421 915 991 474; w dni robocze 20:00–8:00 nagłe przypadki +421 905 579 559; sob.–niedz. nagłe przypadki całodobowo. Weterynarz jest zawsze na miejscu; obowiązuje dopłata za nagły przypadek."
+        "pl": "pon.–pt. 8:30–12:00 i 13:00–15:15; w dni robocze 15:30–20:00 recepcja +421 915 991 474; w dni robocze 20:00–8:00 nagłe przypadki +421 905 579 559; sob.–niedz. nagłe przypadki całodobowo. Weterynarz jest zawsze na miejscu; obowiązuje dopłata za nagły przypadek.",
+        "cs": "Po–Pá 8:30–12:00 a 13:00–15:15; ve všední dny 15:30–20:00 recepce +421 915 991 474; ve všední dny 20:00–8:00 pohotovost +421 905 579 559; so–ne pohotovost nonstop. Veterinář je vždy na místě; platí příplatek za pohotovost."
       },
       "small_animals": true,
       "url": "https://www.uvlf.sk/organizacna-struktura/univerzitna-veterinarna-nemocnica/klinika-malych-zvierat",
@@ -79,7 +80,8 @@
         "it": "Pronto soccorso per piccoli animali 20:00–8:00 (+421 905 579 559); 15:30–20:00 accettazione +421 915 991 474. Clinica equina 24 ore su 24 nei giorni non lavorativi.",
         "pt": "Serviço de urgência para pequenos animais 20h00–8h00 (+421 905 579 559); 15h30–20h00 receção +421 915 991 474. Clínica de cavalos 24 h em dias não úteis.",
         "nl": "Spoeddienst voor kleine dieren 20.00–8.00 uur (+421 905 579 559); 15.30–20.00 uur receptie +421 915 991 474. Paardenkliniek 24 uur per dag op niet-werkdagen.",
-        "pl": "Pogotowie dla małych zwierząt 20:00–8:00 (+421 905 579 559); 15:30–20:00 recepcja +421 915 991 474. Przychodnia dla koni całodobowo w dni wolne od pracy."
+        "pl": "Pogotowie dla małych zwierząt 20:00–8:00 (+421 905 579 559); 15:30–20:00 recepcja +421 915 991 474. Przychodnia dla koni całodobowo w dni wolne od pracy.",
+        "cs": "Pohotovostní služba pro malá zvířata 20:00–8:00 (+421 905 579 559); 15:30–20:00 recepce +421 915 991 474. Koňská klinika nonstop v nepracovní dny."
       },
       "small_animals": true,
       "url": "https://www.uvlf.sk/kliniky-sluzby/pohotovost",
@@ -106,7 +108,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, anche con turni notturni.",
         "pt": "Urgências 24 h/24, 7 dias por semana, incluindo turnos noturnos.",
         "nl": "Spoed 24/7, ook 's nachts.",
-        "pl": "Nagłe przypadki 24/7, także w nocy."
+        "pl": "Nagłe przypadki 24/7, także w nocy.",
+        "cs": "Pohotovost nonstop, včetně nočních směn."
       },
       "small_animals": true,
       "url": "https://vetline.sk/",
@@ -133,7 +136,8 @@
         "it": "Lun–ven 9:00–20:00; sere/notti dei giorni feriali 20:00–9:00 in reperibilità; sab, dom e festivi reperibilità 24 ore su 24 (supplemento).",
         "pt": "Seg–sex 9h00–20h00; noites em dias úteis 20h00–9h00 de piquete; sáb, dom e feriados de piquete 24 horas por dia (suplemento).",
         "nl": "Ma–vr 9.00–20.00 uur; op werkdagen achterwacht 20.00–9.00 uur; za, zo en feestdagen de klok rond achterwacht (toeslag).",
-        "pl": "pon.–pt. 9:00–20:00; w dni robocze wieczorem i w nocy 20:00–9:00 dyżur; sob., niedz. i święta dyżur całodobowy (dopłata)."
+        "pl": "pon.–pt. 9:00–20:00; w dni robocze wieczorem i w nocy 20:00–9:00 dyżur; sob., niedz. i święta dyżur całodobowy (dopłata).",
+        "cs": "Po–Pá 9:00–20:00; ve všední dny večer a v noci 20:00–9:00 pohotovost na telefonu; so, ne a o svátcích nonstop pohotovost na telefonu (příplatek)."
       },
       "small_animals": true,
       "url": "https://www.smallvet.sk/",
@@ -159,7 +163,8 @@
         "it": "Lun–dom 8:00–20:00; attività continuata. Telefonare in anticipo.",
         "pt": "Seg–dom 8h00–20h00; funcionamento ininterrupto. Liga antes.",
         "nl": "Ma–zo 8.00–20.00 uur; non-stop in bedrijf. Bel vooraf.",
-        "pl": "codziennie 8:00–20:00; bez przerwy. Zadzwoń przed wizytą."
+        "pl": "codziennie 8:00–20:00; bez przerwy. Zadzwoń przed wizytą.",
+        "cs": "Po–Ne 8:00–20:00; nonstop provoz. Před cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://marfilvet.sk/",
@@ -186,7 +191,8 @@
         "it": "Lun–ven 8:00–19:00, sab 9:00–14:00, dom 9:00–12:00; emergenze previo accordo telefonico tutti i giorni fino alle 24:00, poi solo animali ricoverati.",
         "pt": "Seg–sex 8h00–19h00, sáb 9h00–14h00, dom 9h00–12h00; urgências por contacto telefónico todos os dias até às 24h00, depois apenas animais internados.",
         "nl": "Ma–vr 8.00–19.00, za 9.00–14.00, zo 9.00–12.00 uur; spoed op telefonische afspraak dagelijks tot 24.00 uur, daarna alleen opgenomen dieren.",
-        "pl": "pon.–pt. 8:00–19:00, sob. 9:00–14:00, niedz. 9:00–12:00; nagłe przypadki po telefonicznym uzgodnieniu codziennie do 24:00, potem tylko zwierzęta hospitalizowane."
+        "pl": "pon.–pt. 8:00–19:00, sob. 9:00–14:00, niedz. 9:00–12:00; nagłe przypadki po telefonicznym uzgodnieniu codziennie do 24:00, potem tylko zwierzęta hospitalizowane.",
+        "cs": "Po–Pá 8:00–19:00, so 9:00–14:00, ne 9:00–12:00; pohotovost po telefonické domluvě denně do 24:00, poté pouze hospitalizovaná zvířata."
       },
       "small_animals": true,
       "url": "https://www.primavet.sk/",
@@ -212,7 +218,8 @@
         "it": "Lun–ven 10:00–24:00, sab–dom 8:00–24:00; pronto soccorso tutti i giorni, telefonare prima.",
         "pt": "Seg–sex 10h00–24h00, sáb–dom 8h00–24h00; urgências todos os dias, liga antes.",
         "nl": "Ma–vr 10.00–24.00, za–zo 8.00–24.00 uur; dagelijks spoed, bel eerst.",
-        "pl": "pon.–pt. 10:00–24:00, sob.–niedz. 8:00–24:00; nagłe przypadki codziennie, najpierw zadzwoń."
+        "pl": "pon.–pt. 10:00–24:00, sob.–niedz. 8:00–24:00; nagłe przypadki codziennie, najpierw zadzwoń.",
+        "cs": "Po–Pá 10:00–24:00, so–ne 8:00–24:00; pohotovost denně, nejdřív zavolejte."
       },
       "small_animals": true,
       "url": "https://www.mypet.sk/",
@@ -238,7 +245,8 @@
         "it": "Lun–ven 8:00–12:00 e 14:00–18:00.",
         "pt": "Seg–sex 8h00–12h00 e 14h00–18h00.",
         "nl": "Ma–vr 8.00–12.00 en 14.00–18.00 uur.",
-        "pl": "pon.–pt. 8:00–12:00 i 14:00–18:00."
+        "pl": "pon.–pt. 8:00–12:00 i 14:00–18:00.",
+        "cs": "Po–Pá 8:00–12:00 a 14:00–18:00."
       },
       "small_animals": true,
       "url": "https://x-vet.sk/",
@@ -264,7 +272,8 @@
         "it": "Lun–ven 8:00–19:00, sab–dom 9:00–17:00; linea di emergenza sempre attiva; veterinario in sede 24 ore su 24.",
         "pt": "Seg–sex 8h00–19h00, sáb–dom 9h00–17h00; linha de urgência ininterrupta; veterinário no local 24 h.",
         "nl": "Ma–vr 8.00–19.00, za–zo 9.00–17.00 uur; non-stop spoedlijn; dierenarts 24 uur per dag aanwezig.",
-        "pl": "pon.–pt. 8:00–19:00, sob.–niedz. 9:00–17:00; linia dla nagłych przypadków całodobowo; weterynarz na miejscu 24 godziny na dobę."
+        "pl": "pon.–pt. 8:00–19:00, sob.–niedz. 9:00–17:00; linia dla nagłych przypadków całodobowo; weterynarz na miejscu 24 godziny na dobę.",
+        "cs": "Po–Pá 8:00–19:00, so–ne 9:00–17:00; pohotovostní linka nonstop; veterinář na místě nonstop."
       },
       "small_animals": true,
       "url": "https://www.vetklinikazilina.sk/",
@@ -291,7 +300,8 @@
         "it": "Lun–ven 10:00–15:30, sab 10:00–12:00; fuori da questi orari linea di emergenza in reperibilità.",
         "pt": "Seg–sex 10h00–15h30, sáb 10h00–12h00; fora deste horário, linha de urgência de piquete.",
         "nl": "Ma–vr 10.00–15.30, za 10.00–12.00 uur; buiten deze uren spoedlijn met achterwacht.",
-        "pl": "pon.–pt. 10:00–15:30, sob. 10:00–12:00; poza tymi godzinami dyżurna linia dla nagłych przypadków."
+        "pl": "pon.–pt. 10:00–15:30, sob. 10:00–12:00; poza tymi godzinami dyżurna linia dla nagłych przypadków.",
+        "cs": "Po–Pá 10:00–15:30, so 10:00–12:00; mimo tuto dobu pohotovostní linka na telefonu."
       },
       "small_animals": true,
       "url": "https://www.klinikafenix.sk/",
@@ -318,7 +328,8 @@
         "it": "Lun–ven 9:00–19:00, sab–dom 9:00–12:00; pronto soccorso 24 ore su 24, 7 giorni su 7 fuori orario.",
         "pt": "Seg–sex 9h00–19h00, sáb–dom 9h00–12h00; urgências 24 h/24, 7 dias por semana fora de horas.",
         "nl": "Ma–vr 9.00–19.00, za–zo 9.00–12.00 uur; daarbuiten spoed 24/7.",
-        "pl": "pon.–pt. 9:00–19:00, sob.–niedz. 9:00–12:00; nagłe przypadki 24/7 poza godzinami przyjęć."
+        "pl": "pon.–pt. 9:00–19:00, sob.–niedz. 9:00–12:00; nagłe przypadki 24/7 poza godzinami przyjęć.",
+        "cs": "Po–Pá 9:00–19:00, so–ne 9:00–12:00; pohotovost nonstop mimo ordinační dobu."
       },
       "small_animals": true,
       "url": "https://www.petclinic.sk/",
@@ -345,7 +356,8 @@
         "it": "Lun–ven 9:00–12:00 e 14:00–17:00; sab–dom 8:00–10:00; linea di emergenza sempre attiva per casi acuti e pericolosi per la vita.",
         "pt": "Seg–sex 9h00–12h00 e 14h00–17h00; sáb–dom 8h00–10h00; linha de urgência ininterrupta para casos agudos e com risco de vida.",
         "nl": "Ma–vr 9.00–12.00 en 14.00–17.00 uur; za–zo 8.00–10.00 uur; non-stop spoedlijn voor acute, levensbedreigende gevallen.",
-        "pl": "pon.–pt. 9:00–12:00 i 14:00–17:00; sob.–niedz. 8:00–10:00; linia dla nagłych przypadków całodobowo, w przypadkach ostrych, zagrażających życiu."
+        "pl": "pon.–pt. 9:00–12:00 i 14:00–17:00; sob.–niedz. 8:00–10:00; linia dla nagłych przypadków całodobowo, w przypadkach ostrych, zagrażających życiu.",
+        "cs": "Po–Pá 9:00–12:00 a 14:00–17:00; so–ne 8:00–10:00; pohotovostní linka nonstop pro akutní, život ohrožující případy."
       },
       "small_animals": true,
       "url": "https://veterinanz.sk/",
@@ -372,7 +384,8 @@
         "it": "Orario dell'ambulatorio lun–ven 9:00–12:00 e 13:00–18:00; linea di emergenza sempre attiva.",
         "pt": "Horário da clínica seg–sex 9h00–12h00 e 13h00–18h00; linha de urgência ininterrupta.",
         "nl": "Openingstijden kliniek ma–vr 9.00–12.00 en 13.00–18.00 uur; non-stop spoedlijn.",
-        "pl": "Godziny przychodni pon.–pt. 9:00–12:00 i 13:00–18:00; linia dla nagłych przypadków całodobowo."
+        "pl": "Godziny przychodni pon.–pt. 9:00–12:00 i 13:00–18:00; linia dla nagłych przypadków całodobowo.",
+        "cs": "Ordinační doba Po–Pá 9:00–12:00 a 13:00–18:00; pohotovostní linka nonstop."
       },
       "small_animals": true,
       "url": "https://www.trivet.sk/",
@@ -399,7 +412,8 @@
         "it": "Lun–ven 9:00–17:00; linea di emergenza sempre attiva lun–dom.",
         "pt": "Seg–sex 9h00–17h00; linha de urgência ininterrupta, seg–dom.",
         "nl": "Ma–vr 9.00–17.00 uur; non-stop spoedlijn ma–zo.",
-        "pl": "pon.–pt. 9:00–17:00; linia dla nagłych przypadków całodobowo, od poniedziałku do niedzieli."
+        "pl": "pon.–pt. 9:00–17:00; linia dla nagłych przypadków całodobowo, od poniedziałku do niedzieli.",
+        "cs": "Po–Pá 9:00–17:00; pohotovostní linka nonstop Po–Ne."
       },
       "small_animals": true,
       "url": "https://scarvet.sk/",
@@ -425,7 +439,8 @@
         "it": "Pronto soccorso 24 ore su 24; copre i distretti di Poprad, Kežmarok, Levoča, Spišská Nová Ves.",
         "pt": "Serviço de urgência 24 horas por dia; abrange os distritos Poprad, Kežmarok, Levoča, Spišská Nová Ves.",
         "nl": "Spoeddienst de klok rond; voor de districten Poprad, Kežmarok, Levoča, Spišská Nová Ves.",
-        "pl": "Całodobowe pogotowie weterynaryjne; obejmuje powiaty Poprad, Kežmarok, Levoča, Spišská Nová Ves."
+        "pl": "Całodobowe pogotowie weterynaryjne; obejmuje powiaty Poprad, Kežmarok, Levoča, Spišská Nová Ves.",
+        "cs": "Pohotovostní služba nonstop; pokrývá okresy Poprad, Kežmarok, Levoča, Spišská Nová Ves."
       },
       "small_animals": true,
       "url": "https://www.veterinar-pohotovost.sk/",
@@ -452,7 +467,8 @@
         "it": "Lun–ven orario di visita diurno; pronto soccorso 24 ore su 24 per i clienti abituali, con supplemento.",
         "pt": "Seg–sex consultas durante o dia; urgências 24 h para clientes habituais, com suplemento.",
         "nl": "Ma–vr spreekuur overdag; 24 uur per dag spoed voor vaste klanten, toeslag van toepassing.",
-        "pl": "pon.–pt. godziny przyjęć w ciągu dnia; pogotowie całodobowe dla stałych klientów, obowiązuje dopłata."
+        "pl": "pon.–pt. godziny przyjęć w ciągu dnia; pogotowie całodobowe dla stałych klientów, obowiązuje dopłata.",
+        "cs": "Po–Pá denní ordinační hodiny; pohotovost nonstop pro stálé klienty, platí příplatek."
       },
       "small_animals": true,
       "url": "https://www.veterinamartin.sk/",
@@ -479,7 +495,8 @@
         "it": "Lun–ven 8:00–20:00, fine settimana e festivi 9:00–15:00.",
         "pt": "Seg–sex 8h00–20h00, fins de semana e feriados 9h00–15h00.",
         "nl": "Ma–vr 8.00–20.00, weekend en feestdagen 9.00–15.00 uur.",
-        "pl": "pon.–pt. 8:00–20:00, weekendy i święta 9:00–15:00."
+        "pl": "pon.–pt. 8:00–20:00, weekendy i święta 9:00–15:00.",
+        "cs": "Po–Pá 8:00–20:00, o víkendech a svátcích 9:00–15:00."
       },
       "small_animals": true,
       "url": "https://tatryvet.sk/",
@@ -505,7 +522,8 @@
         "it": "Lun–ven 8:00–18:00, sab–dom 9:00–16:00; pronto soccorso fino alle 24:00.",
         "pt": "Seg–sex 8h00–18h00, sáb–dom 9h00–16h00; urgências até às 24h00.",
         "nl": "Ma–vr 8.00–18.00, za–zo 9.00–16.00 uur; spoed tot 24.00 uur.",
-        "pl": "pon.–pt. 8:00–18:00, sob.–niedz. 9:00–16:00; nagłe przypadki do 24:00."
+        "pl": "pon.–pt. 8:00–18:00, sob.–niedz. 9:00–16:00; nagłe przypadki do 24:00.",
+        "cs": "Po–Pá 8:00–18:00, so–ne 9:00–16:00; pohotovost do 24:00."
       },
       "small_animals": true,
       "url": "http://www.cassovet.sk/kontakty/",
@@ -531,7 +549,8 @@
         "it": "Lun–ven 8:00–19:00, sab 9:00–12:00; modalità di emergenza sab 12:00–19:00, dom 9:00–12:00.",
         "pt": "Seg–sex 8h00–19h00, sáb 9h00–12h00; regime de urgência sáb 12h00–19h00, dom 9h00–12h00.",
         "nl": "Ma–vr 8.00–19.00, za 9.00–12.00 uur; spoedregeling za 12.00–19.00, zo 9.00–12.00 uur.",
-        "pl": "pon.–pt. 8:00–19:00, sob. 9:00–12:00; tryb nagłych przypadków sob. 12:00–19:00, niedz. 9:00–12:00."
+        "pl": "pon.–pt. 8:00–19:00, sob. 9:00–12:00; tryb nagłych przypadków sob. 12:00–19:00, niedz. 9:00–12:00.",
+        "cs": "Po–Pá 8:00–19:00, so 9:00–12:00; pohotovostní režim so 12:00–19:00, ne 9:00–12:00."
       },
       "small_animals": true,
       "url": "https://www.petstar.sk/",
@@ -587,7 +606,8 @@
         "it": "Giorni feriali 8:00–18:00; emergenze previo accordo telefonico nei giorni feriali fino alle 22:00, sab–dom 8:00–22:00; nessuna dalle 22:00 alle 8:00 (supplemento).",
         "pt": "Dias úteis 8h00–18h00; urgências por contacto telefónico em dias úteis até às 22h00, sáb–dom 8h00–22h00; sem serviço 22h00–8h00 (suplemento).",
         "nl": "Werkdagen 8.00–18.00 uur; spoed op telefonische afspraak op werkdagen tot 22.00 uur, za–zo 8.00–22.00 uur; geen spoed 22.00–8.00 uur (toeslag).",
-        "pl": "W dni robocze 8:00–18:00; nagłe przypadki po telefonicznym uzgodnieniu w dni robocze do 22:00, sob.–niedz. 8:00–22:00; brak 22:00–8:00 (dopłata)."
+        "pl": "W dni robocze 8:00–18:00; nagłe przypadki po telefonicznym uzgodnieniu w dni robocze do 22:00, sob.–niedz. 8:00–22:00; brak 22:00–8:00 (dopłata).",
+        "cs": "Ve všední dny 8:00–18:00; pohotovost po telefonické domluvě ve všední dny do 22:00, so–ne 8:00–22:00; od 22:00 do 8:00 není (příplatek)."
       },
       "small_animals": true,
       "url": "https://veterinapresov.sk/",
@@ -613,7 +633,8 @@
         "it": "Lun–ven orario diurno, sab 9:00–12:00, dom chiuso.",
         "pt": "Seg–sex durante o dia, sáb 9h00–12h00, dom fechado.",
         "nl": "Ma–vr overdag, za 9.00–12.00 uur, zo gesloten.",
-        "pl": "pon.–pt. w ciągu dnia, sob. 9:00–12:00, niedz. nieczynne."
+        "pl": "pon.–pt. w ciągu dnia, sob. 9:00–12:00, niedz. nieczynne.",
+        "cs": "Po–Pá přes den, so 9:00–12:00, ne zavřeno."
       },
       "small_animals": true,
       "url": "https://vetklinikapkb.sk/",
@@ -638,7 +659,8 @@
         "it": "Pronto soccorso lun–ven 16:00–22:00, sab–dom 8:00–22:00 (0905 184 429); ambulatorio di Radvaň giorni lavorativi 8:00–16:00.",
         "pt": "Urgências seg–sex 16h00–22h00, sáb–dom 8h00–22h00 (0905 184 429); clínica de Radvaň em dias úteis 8h00–16h00.",
         "nl": "Spoed ma–vr 16.00–22.00, za–zo 8.00–22.00 uur (0905 184 429); kliniek Radvaň op werkdagen 8.00–16.00 uur.",
-        "pl": "Nagłe przypadki pon.–pt. 16:00–22:00, sob.–niedz. 8:00–22:00 (0905 184 429); przychodnia Radvaň w dni robocze 8:00–16:00."
+        "pl": "Nagłe przypadki pon.–pt. 16:00–22:00, sob.–niedz. 8:00–22:00 (0905 184 429); przychodnia Radvaň w dni robocze 8:00–16:00.",
+        "cs": "Pohotovost Po–Pá 16:00–22:00, so–ne 8:00–22:00 (0905 184 429); klinika Radvaň ve všední dny 8:00–16:00."
       },
       "small_animals": true,
       "url": "https://petservis.sk/",
@@ -663,7 +685,8 @@
         "it": "Lun–ven 8:30–18:00, sab 8:30–11:00; pronto soccorso per i clienti registrati dopo telefonata.",
         "pt": "Seg–sex 8h30–18h00, sáb 8h30–11h00; urgências para clientes registados após contacto telefónico.",
         "nl": "Ma–vr 8.30–18.00, za 8.30–11.00 uur; spoed voor geregistreerde klanten na telefonisch contact.",
-        "pl": "pon.–pt. 8:30–18:00, sob. 8:30–11:00; nagłe przypadki dla zarejestrowanych klientów po telefonie."
+        "pl": "pon.–pt. 8:30–18:00, sob. 8:30–11:00; nagłe przypadki dla zarejestrowanych klientów po telefonie.",
+        "cs": "Po–Pá 8:30–18:00, so 8:30–11:00; pohotovost pro registrované klienty po telefonátu."
       },
       "small_animals": true,
       "url": "https://banby-vet.sk/",
@@ -702,7 +725,8 @@
         "it": "Lun–ven 8:00–19:00; pronto soccorso sab 12:00–19:00, dom 9:00–19:00; supplemento per le emergenze fuori orario.",
         "pt": "Seg–sex 8h00–19h00; urgências sáb 12h00–19h00, dom 9h00–19h00; suplemento para urgências fora de horas.",
         "nl": "Ma–vr 8.00–19.00 uur; spoed za 12.00–19.00, zo 9.00–19.00 uur; toeslag voor spoed buiten openingstijden.",
-        "pl": "pon.–pt. 8:00–19:00; nagłe przypadki sob. 12:00–19:00, niedz. 9:00–19:00; dopłata za nagłe przypadki poza godzinami przyjęć."
+        "pl": "pon.–pt. 8:00–19:00; nagłe przypadki sob. 12:00–19:00, niedz. 9:00–19:00; dopłata za nagłe przypadki poza godzinami przyjęć.",
+        "cs": "Po–Pá 8:00–19:00; pohotovost so 12:00–19:00, ne 9:00–19:00; příplatek za pohotovost mimo ordinační dobu."
       },
       "small_animals": true,
       "url": "https://elpa-tn.sk/",
@@ -728,7 +752,8 @@
         "it": "Lun–ven 9:00–18:00, sab 9:00–12:00; pronto soccorso lun–ven fino alle 22:00 previo accordo telefonico.",
         "pt": "Seg–sex 9h00–18h00, sáb 9h00–12h00; urgências seg–sex até às 22h00 por contacto telefónico.",
         "nl": "Ma–vr 9.00–18.00, za 9.00–12.00 uur; spoed ma–vr tot 22.00 uur op telefonische afspraak.",
-        "pl": "pon.–pt. 9:00–18:00, sob. 9:00–12:00; nagłe przypadki pon.–pt. do 22:00 po telefonicznym uzgodnieniu."
+        "pl": "pon.–pt. 9:00–18:00, sob. 9:00–12:00; nagłe przypadki pon.–pt. do 22:00 po telefonicznym uzgodnieniu.",
+        "cs": "Po–Pá 9:00–18:00, so 9:00–12:00; pohotovost Po–Pá do 22:00 po telefonické domluvě."
       },
       "small_animals": true,
       "url": "https://www.veterinarnaklinikanitra.sk/",
@@ -754,7 +779,8 @@
         "it": "Lun–ven 8:30–19:00, sab 8:30–11:30, dom chiuso.",
         "pt": "Seg–sex 8h30–19h00, sáb 8h30–11h30, dom fechado.",
         "nl": "Ma–vr 8.30–19.00, za 8.30–11.30 uur, zo gesloten.",
-        "pl": "pon.–pt. 8:30–19:00, sob. 8:30–11:30, niedz. nieczynne."
+        "pl": "pon.–pt. 8:30–19:00, sob. 8:30–11:30, niedz. nieczynne.",
+        "cs": "Po–Pá 8:30–19:00, so 8:30–11:30, ne zavřeno."
       },
       "small_animals": true,
       "url": "https://fazivet.sk/",
@@ -779,7 +805,8 @@
         "it": "Lun–ven 8:30–19:00, sab–dom e festivi 9:00–16:00 (supplemento nel fine settimana).",
         "pt": "Seg–sex 8h30–19h00, sáb–dom e feriados 9h00–16h00 (suplemento de fim de semana).",
         "nl": "Ma–vr 8.30–19.00, za–zo en feestdagen 9.00–16.00 uur (weekendtoeslag).",
-        "pl": "pon.–pt. 8:30–19:00, sob.–niedz. i święta 9:00–16:00 (dopłata weekendowa)."
+        "pl": "pon.–pt. 8:30–19:00, sob.–niedz. i święta 9:00–16:00 (dopłata weekendowa).",
+        "cs": "Po–Pá 8:30–19:00, so–ne a o svátcích 9:00–16:00 (víkendový příplatek)."
       },
       "small_animals": true,
       "url": "https://www.zkp.sk/",
@@ -804,7 +831,8 @@
         "it": "Lun–ven 9:00–12:00 e 16:00–19:00; fine settimana chiuso.",
         "pt": "Seg–sex 9h00–12h00 e 16h00–19h00; fins de semana fechado.",
         "nl": "Ma–vr 9.00–12.00 en 16.00–19.00 uur; weekend gesloten.",
-        "pl": "pon.–pt. 9:00–12:00 i 16:00–19:00; weekendy nieczynne."
+        "pl": "pon.–pt. 9:00–12:00 i 16:00–19:00; weekendy nieczynne.",
+        "cs": "Po–Pá 9:00–12:00 a 16:00–19:00; o víkendu zavřeno."
       },
       "small_animals": true,
       "url": "https://www.vetpo.sk/",

@@ -221,7 +221,8 @@
         "it": "Fine settimana/festivi: dalle 20:00 della sera prima di un festivo fino alle 9:00 del primo giorno lavorativo successivo; l'Ordine fornisce i contatti delle due cliniche di turno. Servizio a pagamento.",
         "pt": "Fins de semana e feriados: a partir das 20h00 da véspera do feriado até às 9h00 do dia útil seguinte; a Ordine fornece os contactos das duas clínicas de serviço. Serviço pago.",
         "nl": "Weekend en feestdagen: vanaf 20.00 uur de avond voor een feestdag tot 9.00 uur de volgende werkdag; de Ordine geeft de contactgegevens van de twee praktijken met dienst. Betaalde dienst.",
-        "pl": "Weekendy i święta: od 20:00 w przeddzień święta do 9:00 następnego dnia roboczego; Ordine podaje kontakty do dwóch przychodni dyżurujących. Usługa płatna."
+        "pl": "Weekendy i święta: od 20:00 w przeddzień święta do 9:00 następnego dnia roboczego; Ordine podaje kontakty do dwóch przychodni dyżurujących. Usługa płatna.",
+        "cs": "O víkendech a svátcích: od 20:00 v předvečer svátku do 9:00 následujícího pracovního dne; Ordine sdělí kontakty dvou klinik ve službě. Placená služba."
       },
       "small_animals": true,
       "url": "https://www.ordinevetverona.it/default.asp?iId=JJJDD",
@@ -247,7 +248,8 @@
         "it": "Turno di reperibilità volontario nei fine settimana e festivi degli studi per piccoli animali, pubblicato in PDF per comprensorio (Merano e Val Venosta, Bressanone, Bolzano, Val Pusteria). Nei giorni feriali: il proprio veterinario.",
         "pt": "Escala voluntária de fim de semana e feriados de clínicas de pequenos animais, publicada em PDF por distrito (Meran & Vinschgau, Brixen, Bozen, Pustertal). Dias úteis: veterinário próprio.",
         "nl": "Vrijwillige weekend- en feestdagendienst van praktijken voor gezelschapsdieren, per district als pdf gepubliceerd (Meran & Vinschgau, Brixen, Bozen, Pustertal). Op werkdagen: eigen dierenarts.",
-        "pl": "Dobrowolny grafik dyżurów przychodni dla małych zwierząt w weekendy i święta, publikowany w plikach PDF według okręgów (Meran i Vinschgau, Brixen, Bozen, Pustertal). W dni robocze: własny weterynarz."
+        "pl": "Dobrowolny grafik dyżurów przychodni dla małych zwierząt w weekendy i święta, publikowany w plikach PDF według okręgów (Meran i Vinschgau, Brixen, Bozen, Pustertal). W dni robocze: własny weterynarz.",
+        "cs": "Dobrovolná víkendová a sváteční pohotovostní služba ordinací malých zvířat, zveřejněná v PDF podle okresů (Meran & Vinschgau, Brixen, Bozen, Pustertal). Ve všední dny: vlastní veterinář."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer.com/bereitschaftsdienste/",
@@ -271,7 +273,8 @@
         "it": "Sei studi veterinari in Trentino con servizio h24 (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles).",
         "pt": "Seis clínicas veterinárias no Trentino com serviço 24 horas por dia (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles).",
         "nl": "Zes dierenartspraktijken in Trentino met een 24-uursdienst (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles).",
-        "pl": "Sześć gabinetów weterynaryjnych w Trentino z usługą całodobową (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles)."
+        "pl": "Sześć gabinetów weterynaryjnych w Trentino z usługą całodobową (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles).",
+        "cs": "Šest veterinárních ordinací v Trentinu s nonstop službou (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles)."
       },
       "small_animals": true,
       "url": "https://www.visittrentino.info/it/articoli/vacanze-a-quattro-zampe/veterinari-disponibili-24-7",
@@ -298,7 +301,8 @@
         "it": "Pronto soccorso piccoli animali h24 tutti i giorni; telefonare prima di arrivare. Linea informazioni +39 051 2097546 (9–16).",
         "pt": "Urgências de pequenos animais 24 horas por dia, todos os dias; liga antes de te deslocares. Linha de informações +39 051 2097546 (9h00–16h00).",
         "nl": "Spoed voor gezelschapsdieren 24 uur per dag, elke dag; bel voordat je komt. Infolijn +39 051 2097546 (9–16 uur).",
-        "pl": "Pogotowie dla małych zwierząt całodobowo, codziennie; zadzwoń przed przyjazdem. Linia informacyjna +39 051 2097546 (9:00–16:00)."
+        "pl": "Pogotowie dla małych zwierząt całodobowo, codziennie; zadzwoń przed przyjazdem. Linia informacyjna +39 051 2097546 (9:00–16:00).",
+        "cs": "Pohotovost pro malá zvířata nonstop každý den; před příjezdem zavolejte. Informační linka +39 051 2097546 (9:00–16:00)."
       },
       "small_animals": true,
       "url": "https://site.unibo.it/ospedale-veterinario/it",
@@ -325,7 +329,8 @@
         "it": "Pronto soccorso lun–ven 8:30–18:00; fine settimana/festivi 8:00–18:00 per i casi urgenti.",
         "pt": "Urgências segunda a sexta 8h30–18h00; fins de semana e feriados 8h00–18h00 para casos urgentes.",
         "nl": "Spoedeisende hulp ma–vr 8.30–18.00 uur; weekend en feestdagen 8.00–18.00 uur voor dringende gevallen.",
-        "pl": "Pogotowie pon.–pt. 8:30–18:00; w weekendy i święta 8:00–18:00 w pilnych przypadkach."
+        "pl": "Pogotowie pon.–pt. 8:30–18:00; w weekendy i święta 8:00–18:00 w pilnych przypadkach.",
+        "cs": "Pohotovost Po–Pá 8:30–18:00; o víkendech a svátcích 8:00–18:00 pro naléhavé případy."
       },
       "small_animals": true,
       "url": "https://ovud.maps.unipd.it/il-pronto-soccorso-veterinario",
@@ -351,7 +356,8 @@
         "it": "Piccoli animali lun–ven 8:00–20:00; dalle 20:00 alle 8:00 non si accettano nuovi casi.",
         "pt": "Pequenos animais segunda a sexta 8h00–20h00; não são aceites novos casos entre as 20h00 e as 8h00.",
         "nl": "Gezelschapsdieren ma–vr 8.00–20.00 uur; tussen 20.00 en 8.00 uur worden geen nieuwe gevallen aangenomen.",
-        "pl": "Małe zwierzęta pon.–pt. 8:00–20:00; w godzinach 20:00–8:00 nie przyjmujemy nowych przypadków."
+        "pl": "Małe zwierzęta pon.–pt. 8:00–20:00; w godzinach 20:00–8:00 nie przyjmujemy nowych przypadków.",
+        "cs": "Malá zvířata Po–Pá 8:00–20:00; 20:00–8:00 se nepřijímají nové případy."
       },
       "small_animals": true,
       "url": "https://www.ospedaleveterinario.unimi.it/",
@@ -377,7 +383,8 @@
         "it": "Pronto soccorso cani e gatti 24 ore su 24, 7 giorni su 7, tutto l'anno.",
         "pt": "Urgências de cães e gatos 24 horas por dia, 7 dias por semana, todo o ano.",
         "nl": "Spoed voor honden en katten 24/7, het hele jaar.",
-        "pl": "Pogotowie dla psów i kotów całodobowo, przez cały rok."
+        "pl": "Pogotowie dla psów i kotów całodobowo, przez cały rok.",
+        "cs": "Pohotovost pro psy a kočky nonstop, po celý rok."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-san-siro/",
@@ -404,7 +411,8 @@
         "it": "Pronto soccorso e ricovero h24, dal lunedì alla domenica, festivi compresi (giorno 8–20, notte 20–8).",
         "pt": "Urgências e internamento 24 horas por dia, de segunda a domingo, incluindo feriados (dia 8h00–20h00, noite 20h00–8h00).",
         "nl": "Spoed en opname 24 uur per dag, ma–zo, ook op feestdagen (overdag 8–20, 's nachts 20–8 uur)",
-        "pl": "Pogotowie i hospitalizacja całodobowo, od poniedziałku do niedzieli, także w święta (dzień 8:00–20:00, noc 20:00–8:00)."
+        "pl": "Pogotowie i hospitalizacja całodobowo, od poniedziałku do niedzieli, także w święta (dzień 8:00–20:00, noc 20:00–8:00).",
+        "cs": "Pohotovost a hospitalizace nonstop, každý den včetně svátků (den 8:00–20:00, noc 20:00–8:00)."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariagransasso.it/",
@@ -431,7 +439,8 @@
         "it": "Aperto 24 ore su 24, 365 giorni all'anno.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano.",
         "nl": "24 uur per dag open, 365 dagen per jaar.",
-        "pl": "Otwarte całą dobę, 365 dni w roku."
+        "pl": "Otwarte całą dobę, 365 dni w roku.",
+        "cs": "Otevřeno nonstop, 365 dní."
       },
       "small_animals": true,
       "url": "https://mypetclinic.it/",
@@ -457,7 +466,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7.",
         "pt": "Serviço de urgências 24 horas por dia, 7 dias por semana.",
         "nl": "Spoedafdeling 24/7.",
-        "pl": "Oddział nagłych przypadków całodobowo, 7 dni w tygodniu."
+        "pl": "Oddział nagłych przypadków całodobowo, 7 dni w tygodniu.",
+        "cs": "Pohotovostní oddělení nonstop."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/animal-hospital-cvc/",
@@ -483,7 +493,8 @@
         "it": "Visite lun–sab 8:30–20, dom 10–12; pronto soccorso in reperibilità 24 ore su 24, 7 giorni su 7 da Codogno.",
         "pt": "Consultas segunda a sábado 8h30–20h00, domingo 10h00–12h00; urgências de piquete 24 horas por dia, 7 dias por semana, a partir de Codogno.",
         "nl": "Spreekuur ma–za 8.30–20 uur, zo 10–12 uur; spoeddienst 24/7 vanuit Codogno.",
-        "pl": "Wizyty pon.–sob. 8:30–20:00, niedz. 10:00–12:00; dyżur w nagłych przypadkach całodobowo z Codogno."
+        "pl": "Wizyty pon.–sob. 8:30–20:00, niedz. 10:00–12:00; dyżur w nagłych przypadkach całodobowo z Codogno.",
+        "cs": "Ordinace Po–so 8:30–20:00, ne 10:00–12:00; pohotovost nonstop z Codogna."
       },
       "small_animals": true,
       "url": "https://www.cdcvet.it/",
@@ -510,7 +521,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, con veterinario sempre presente.",
         "pt": "Urgências 24 horas por dia, 7 dias por semana, com veterinário sempre no local.",
         "nl": "Spoed 24/7, dierenarts altijd aanwezig.",
-        "pl": "Pogotowie całodobowo, weterynarz zawsze na miejscu."
+        "pl": "Pogotowie całodobowo, weterynarz zawsze na miejscu.",
+        "cs": "Pohotovost nonstop, veterinář vždy na místě."
       },
       "small_animals": true,
       "url": "https://www.sancarloveterinaria.it/",
@@ -536,7 +548,8 @@
         "it": "Ambulatorio 10–19; pronto soccorso h24.",
         "pt": "Consulta externa 10h00–19h00; urgências 24 horas por dia.",
         "nl": "Poli 10–19 uur; spoed 24 uur per dag.",
-        "pl": "Poradnia 10:00–19:00; nagłe przypadki całodobowo."
+        "pl": "Poradnia 10:00–19:00; nagłe przypadki całodobowo.",
+        "cs": "Ambulance 10:00–19:00; pohotovost nonstop."
       },
       "small_animals": true,
       "url": "https://www.clinicasantantonio.it/",
@@ -563,7 +576,8 @@
         "it": "Casi urgenti/emergenze h24 tutti i giorni, festivi compresi; di notte suonare il campanello all'ingresso principale, se possibile telefonare prima.",
         "pt": "Casos urgentes e de emergência 24 horas por dia, todos os dias, incluindo feriados; à noite toca à campainha da entrada principal e, se possível, liga antes.",
         "nl": "Dringende gevallen en spoed 24 uur per dag, elke dag, ook op feestdagen; 's nachts aanbellen bij de hoofdingang, bel indien mogelijk vooraf.",
-        "pl": "Pilne przypadki i nagłe wypadki całodobowo, codziennie, także w święta; w nocy użyj dzwonka przy wejściu głównym, a jeśli to możliwe, zadzwoń wcześniej."
+        "pl": "Pilne przypadki i nagłe wypadki całodobowo, codziennie, także w święta; w nocy użyj dzwonka przy wejściu głównym, a jeśli to możliwe, zadzwoń wcześniej.",
+        "cs": "Naléhavé případy a pohotovost nonstop každý den včetně svátků; v noci zazvoňte u hlavního vchodu, pokud možno předem zavolejte."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/istituto-veterinario-novara/",
@@ -590,7 +604,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, senza prenotazione. Di domenica/nei festivi la porta può essere temporaneamente chiusa: chiamare il +39 366 7209024.",
         "pt": "Urgências 24 horas por dia, 7 dias por semana, sem marcação. Aos domingos e feriados a porta pode estar temporariamente fechada: liga para +39 366 7209024.",
         "nl": "Spoed 24/7, zonder afspraak. Op zon- en feestdagen kan de deur tijdelijk gesloten zijn: bel +39 366 7209024.",
-        "pl": "Pogotowie całodobowo, bez umawiania. W niedziele i święta drzwi mogą być chwilowo zamknięte: zadzwoń pod +39 366 7209024."
+        "pl": "Pogotowie całodobowo, bez umawiania. W niedziele i święta drzwi mogą być chwilowo zamknięte: zadzwoń pod +39 366 7209024.",
+        "cs": "Pohotovost nonstop, bez objednání. V neděli a o svátcích mohou být dveře dočasně zavřené: volejte +39 366 7209024."
       },
       "small_animals": true,
       "url": "https://www.clinvetorino.eu/",
@@ -615,7 +630,8 @@
         "it": "Pronto soccorso aperto h24, 7 giorni su 7.",
         "pt": "Urgências abertas 24 horas por dia, 7 dias por semana.",
         "nl": "Spoed 24 uur per dag, 7 dagen per week open.",
-        "pl": "Pogotowie otwarte całą dobę, 7 dni w tygodniu."
+        "pl": "Pogotowie otwarte całą dobę, 7 dni w tygodniu.",
+        "cs": "Pohotovost otevřená nonstop, 7 dní v týdnu."
       },
       "small_animals": true,
       "url": "https://www.bluvet.it/pronto-soccorso-veterinario-torino/",
@@ -642,7 +658,8 @@
         "it": "Studio di via Barabino aperto h24.",
         "pt": "Consultório de Via Barabino aberto 24 horas por dia.",
         "nl": "Praktijk Via Barabino 24 uur per dag open.",
-        "pl": "Gabinet przy Via Barabino otwarty całą dobę."
+        "pl": "Gabinet przy Via Barabino otwarty całą dobę.",
+        "cs": "Ordinace Via Barabino otevřena nonstop."
       },
       "small_animals": true,
       "url": "https://www.centroveterinariogenovese.it/",
@@ -668,7 +685,8 @@
         "it": "Sempre aperto; pronto soccorso h24 con almeno un veterinario presente.",
         "pt": "Sempre aberto; urgências 24 horas por dia com, pelo menos, um veterinário no local.",
         "nl": "Altijd open; spoed 24 uur per dag met minstens één dierenarts aanwezig.",
-        "pl": "Zawsze otwarte; pogotowie całodobowo, z co najmniej jednym weterynarzem na miejscu."
+        "pl": "Zawsze otwarte; pogotowie całodobowo, z co najmniej jednym weterynarzem na miejscu.",
+        "cs": "Vždy otevřeno; pohotovost nonstop s alespoň jedním veterinářem na místě."
       },
       "small_animals": true,
       "url": "https://www.cvsangiorgio.it/",
@@ -694,7 +712,8 @@
         "it": "Pronto soccorso 20:00–8:30 e nei festivi (oltre all'orario diurno).",
         "pt": "Serviço de urgência 20h00–8h30 e em feriados (além do horário diurno).",
         "nl": "Spoeddienst 20.00–8.30 uur en op feestdagen (daarnaast overdag open).",
-        "pl": "Pogotowie 20:00–8:30 i w święta (oraz w ciągu dnia)."
+        "pl": "Pogotowie 20:00–8:30 i w święta (oraz w ciągu dnia).",
+        "cs": "Pohotovostní služba 20:00–8:30 a o státních svátcích (vedle denní ordinační doby)."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-foce/",
@@ -720,7 +739,8 @@
         "it": "Visite su appuntamento lun–ven 9–20; per le emergenze chiamare direttamente la clinica.",
         "pt": "Consultas sob marcação segunda a sexta 9h00–20h00; para urgências liga diretamente para a clínica.",
         "nl": "Consulten op afspraak ma–vr 9–20 uur; bel voor spoed rechtstreeks de praktijk.",
-        "pl": "Wizyty po wcześniejszym umówieniu pon.–pt. 9:00–20:00; w nagłych przypadkach zadzwoń bezpośrednio do przychodni."
+        "pl": "Wizyty po wcześniejszym umówieniu pon.–pt. 9:00–20:00; w nagłych przypadkach zadzwoń bezpośrednio do przychodni.",
+        "cs": "Ordinace po objednání Po–Pá 9:00–20:00; v naléhavých případech volejte přímo na kliniku."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariahaziel.it/",
@@ -746,7 +766,8 @@
         "it": "Pronto soccorso e terapia intensiva 24 ore su 24, 7 giorni su 7, tutti i giorni dell'anno.",
         "pt": "Urgências e cuidados intensivos 24 horas por dia, todos os dias do ano.",
         "nl": "Spoed en intensieve zorg 24/7, elke dag van het jaar.",
-        "pl": "Pogotowie i opieka intensywna całodobowo, każdego dnia w roku."
+        "pl": "Pogotowie i opieka intensywna całodobowo, każdego dnia w roku.",
+        "cs": "Pohotovost a intenzivní péče nonstop, každý den v roce."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/ospedale-veterinario-portoni-rossi/",
@@ -772,7 +793,8 @@
         "it": "Lun–ven 9–19, sab 9–17; reperibilità h24 e visite a domicilio.",
         "pt": "Segunda a sexta 9h00–19h00, sábado 9h00–17h00; piquete 24 horas por dia (reperibilità) e visitas ao domicílio.",
         "nl": "Ma–vr 9–19 uur, za 9–17 uur; 24 uur per dag achterwacht (reperibilità) en huisbezoeken.",
-        "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–17:00; dyżur całodobowy (reperibilità) i wizyty domowe."
+        "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–17:00; dyżur całodobowy (reperibilità) i wizyty domowe.",
+        "cs": "Po–Pá 9:00–19:00, so 9:00–17:00; nonstop pohotovostní služba a návštěvy doma."
       },
       "small_animals": true,
       "url": "https://www.casadelcanerimini.com/",
@@ -799,7 +821,8 @@
         "it": "Pronto soccorso per l'area di Padova/Vicenza tutti i giorni, festivi compresi.",
         "pt": "Primeiros socorros de urgência para a zona de Pádua/Vicenza todos os dias, incluindo feriados.",
         "nl": "Eerste spoedhulp voor de regio Padova/Vicenza, elke dag, ook op feestdagen.",
-        "pl": "Pierwsza pomoc w nagłych przypadkach w rejonie Padwy i Vicenzy, codziennie, także w święta."
+        "pl": "Pierwsza pomoc w nagłych przypadkach w rejonie Padwy i Vicenzy, codziennie, także w święta.",
+        "cs": "První pomoc v naléhavých případech pro oblast Padova/Vicenza každý den včetně svátků."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-arcella/",
@@ -825,7 +848,8 @@
         "it": "Aperto h24 tutto l'anno.",
         "pt": "Aberto 24 horas por dia, todo o ano.",
         "nl": "Het hele jaar 24 uur per dag open.",
-        "pl": "Otwarte całą dobę, przez cały rok."
+        "pl": "Otwarte całą dobę, przez cały rok.",
+        "cs": "Otevřeno nonstop celý rok."
       },
       "small_animals": true,
       "url": "https://www.clinicavetlafenice.it/",
@@ -851,7 +875,8 @@
         "it": "Aperto 24 ore su 24, 365 giorni all'anno, veterinario sempre presente.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano, veterinário sempre no local.",
         "nl": "24 uur per dag open, 365 dagen per jaar, dierenarts altijd aanwezig.",
-        "pl": "Otwarte całą dobę, 365 dni w roku, weterynarz zawsze na miejscu."
+        "pl": "Otwarte całą dobę, 365 dni w roku, weterynarz zawsze na miejscu.",
+        "cs": "Otevřeno nonstop, 365 dní v roce, veterinář stále na místě."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariasanfrancesco.it/",
@@ -878,7 +903,8 @@
         "it": "Lun–ven 8:30–19:30, sab 9–14; pronto soccorso 24 ore su 24, 7 giorni su 7 (sabato pomeriggio e domenica solo pronto soccorso).",
         "pt": "Segunda a sexta 8h30–19h30, sábado 9h00–14h00; urgências 24 horas por dia, 7 dias por semana (sábado à tarde e domingo apenas urgências).",
         "nl": "Ma–vr 8.30–19.30 uur, za 9–14 uur; spoed 24/7 (zaterdagmiddag en zondag alleen spoed).",
-        "pl": "Pon.–pt. 8:30–19:30, sob. 9:00–14:00; pogotowie całodobowo (w sobotę po południu i w niedzielę tylko nagłe przypadki)."
+        "pl": "Pon.–pt. 8:30–19:30, sob. 9:00–14:00; pogotowie całodobowo (w sobotę po południu i w niedzielę tylko nagłe przypadki).",
+        "cs": "Po–Pá 8:30–19:30, so 9:00–14:00; pohotovost nonstop (v sobotu odpoledne a v neděli pouze pohotovost)."
       },
       "small_animals": true,
       "url": "https://www.ospedalesantalucia.it/",
@@ -904,7 +930,8 @@
         "it": "Accettazione lun–ven 9–19, sab 9–13; pronto soccorso e ricovero notturno.",
         "pt": "Receção segunda a sexta 9h00–19h00, sábado 9h00–13h00; serviço de urgência e internamento noturno.",
         "nl": "Receptie ma–vr 9–19 uur, za 9–13 uur; spoeddienst en nachtelijke opname.",
-        "pl": "Recepcja pon.–pt. 9:00–19:00, sob. 9:00–13:00; pogotowie i hospitalizacja nocna."
+        "pl": "Recepcja pon.–pt. 9:00–19:00, sob. 9:00–13:00; pogotowie i hospitalizacja nocna.",
+        "cs": "Recepce Po–Pá 9:00–19:00, so 9:00–13:00; pohotovost a noční hospitalizace."
       },
       "small_animals": true,
       "url": "https://www.clinicajesolo.com/",
@@ -943,7 +970,8 @@
         "it": "Lun–sab 10–12:30 e 16–19:30; domenica chiuso, salvo casi urgenti; pronto soccorso in reperibilità telefonica.",
         "pt": "Segunda a sábado 10h00–12h30 e 16h00–19h30; domingo encerrado, exceto casos urgentes; urgências de piquete por telefone.",
         "nl": "Ma–za 10–12.30 en 16–19.30 uur; zo gesloten behalve voor dringende gevallen; spoeddienst telefonisch bereikbaar.",
-        "pl": "Pon.–sob. 10:00–12:30 i 16:00–19:30; niedziela nieczynne, poza pilnymi przypadkami; dyżur w nagłych przypadkach telefonicznie."
+        "pl": "Pon.–sob. 10:00–12:30 i 16:00–19:30; niedziela nieczynne, poza pilnymi przypadkami; dyżur w nagłych przypadkach telefonicznie.",
+        "cs": "Po–So 10:00–12:30 a 16:00–19:30; v neděli zavřeno, kromě naléhavých případů; telefonická pohotovostní služba."
       },
       "url": "https://www.vetcortina.it/",
       "source_url": "https://www.vetcortina.it/",
@@ -968,7 +996,8 @@
         "it": "Trieste lun–ven 8:30–19:30, sab 9:30–15:30; telefono di emergenza raggiungibile 24 ore su 24, 7 giorni su 7. Numero principale +39 040 3480845; sede di Muggia Viale Luigi Frausin 5, +39 040 271043.",
         "pt": "Trieste segunda a sexta 8h30–19h30, sábado 9h30–15h30; telefone de urgência atendido 24 horas por dia, 7 dias por semana. Linha principal +39 040 3480845; unidade de Muggia, Viale Luigi Frausin 5, +39 040 271043.",
         "nl": "Trieste ma–vr 8.30–19.30 uur, za 9.30–15.30 uur; spoednummer 24/7 bereikbaar. Hoofdnummer +39 040 3480845; vestiging Muggia Viale Luigi Frausin 5, +39 040 271043.",
-        "pl": "Trieste pon.–pt. 8:30–19:30, sob. 9:30–15:30; telefon alarmowy dostępny całą dobę. Numer główny +39 040 3480845; oddział w Muggia, Viale Luigi Frausin 5, +39 040 271043."
+        "pl": "Trieste pon.–pt. 8:30–19:30, sob. 9:30–15:30; telefon alarmowy dostępny całą dobę. Numer główny +39 040 3480845; oddział w Muggia, Viale Luigi Frausin 5, +39 040 271043.",
+        "cs": "Trieste Po–Pá 8:30–19:30, so 9:30–15:30; pohotovostní telefon dostupný nonstop. Hlavní linka +39 040 3480845; pobočka Muggia Viale Luigi Frausin 5, +39 040 271043."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariatergeste.com/",
@@ -994,7 +1023,8 @@
         "it": "Numero di reperibilità per le emergenze fuori orario; terapia intensiva h24.",
         "pt": "Número de piquete para urgências fora do horário; cuidados intensivos 24 horas por dia.",
         "nl": "Spoednummer voor buiten kantooruren; intensieve zorg 24 uur per dag.",
-        "pl": "Numer dyżurny w nagłych przypadkach poza godzinami pracy; opieka intensywna całodobowo."
+        "pl": "Numer dyżurny w nagłych przypadkach poza godzinami pracy; opieka intensywna całodobowo.",
+        "cs": "Pohotovostní číslo mimo ordinační dobu; intenzivní péče nonstop."
       },
       "small_animals": true,
       "url": "https://www.clinicamiramare.it/",
@@ -1020,7 +1050,8 @@
         "it": "Giorni feriali 9–19; reperibilità notturna per le emergenze al +39 366 4779079.",
         "pt": "Dias úteis 9h00–19h00; piquete noturno para urgências em +39 366 4779079.",
         "nl": "Op werkdagen 9–19 uur; 's nachts achterwacht voor spoed op +39 366 4779079.",
-        "pl": "Dni robocze 9:00–19:00; nocny dyżur w nagłych przypadkach pod +39 366 4779079."
+        "pl": "Dni robocze 9:00–19:00; nocny dyżur w nagłych przypadkach pod +39 366 4779079.",
+        "cs": "Ve všední dny 9:00–19:00; noční pohotovost na čísle +39 366 4779079."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-gaspardis/",
@@ -1046,7 +1077,8 @@
         "it": "Lun–ven 9–19, sab 9–12:30; linea di emergenza +39 334 3817613 per domeniche, festivi e fuori orario: non sempre attiva per i clienti privati, telefonare prima.",
         "pt": "Segunda a sexta 9h00–19h00, sábado 9h00–12h30; linha de urgência +39 334 3817613 para domingos, feriados e fora do horário — nem sempre ativa para clientes particulares, liga primeiro.",
         "nl": "Ma–vr 9–19 uur, za 9–12.30 uur; spoedlijn +39 334 3817613 voor zon- en feestdagen en buiten kantooruren, niet altijd actief voor particuliere klanten, bel eerst.",
-        "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–12:30; linia alarmowa +39 334 3817613 w niedziele, święta i poza godzinami pracy; nie zawsze czynna dla klientów prywatnych, najpierw zadzwoń."
+        "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–12:30; linia alarmowa +39 334 3817613 w niedziele, święta i poza godzinami pracy; nie zawsze czynna dla klientów prywatnych, najpierw zadzwoń.",
+        "cs": "Po–Pá 9:00–19:00, so 9:00–12:30; pohotovostní linka +39 334 3817613 pro neděle, svátky a dobu mimo ordinační hodiny – pro soukromé klienty není vždy aktivní, nejprve zavolejte."
       },
       "small_animals": true,
       "url": "https://www.laclinicadeglianimali.it/",
@@ -1072,7 +1104,8 @@
         "it": "Pronto soccorso aperto h24 tutti i giorni, festivi compresi; numero generale +39 0471 204212 (lun–ven 7–20, sab–dom 8–19).",
         "pt": "Posto de urgência aberto 24 horas por dia, todos os dias, incluindo feriados; linha geral +39 0471 204212 (segunda a sexta 7h00–20h00, sábado e domingo 8h00–19h00).",
         "nl": "Spoedpost 24 uur per dag open, ook op feestdagen; algemeen nummer +39 0471 204212 (ma–vr 7–20 uur, za–zo 8–19 uur).",
-        "pl": "Punkt pogotowia otwarty całą dobę, codziennie, także w święta; linia ogólna +39 0471 204212 (pon.–pt. 7:00–20:00, sob.–niedz. 8:00–19:00)."
+        "pl": "Punkt pogotowia otwarty całą dobę, codziennie, także w święta; linia ogólna +39 0471 204212 (pon.–pt. 7:00–20:00, sob.–niedz. 8:00–19:00).",
+        "cs": "Pohotovost nonstop každý den včetně svátků; obecná linka +39 0471 204212 (Po–Pá 7:00–20:00, so–ne 8:00–19:00)."
       },
       "small_animals": true,
       "url": "https://www.vetbz.it/",
@@ -1098,7 +1131,8 @@
         "it": "Lun–ven 10–12, 16–19; emergenze sab 12–20, dom 8–20; pronto soccorso 24 ore su 24, 7 giorni su 7, telefonare prima.",
         "pt": "Segunda a sexta 10h00–12h00 e 16h00–19h00; urgências ao sábado 12h00–20h00, ao domingo 8h00–20h00; urgências 24 horas por dia, 7 dias por semana, liga antes.",
         "nl": "Ma–vr 10–12 en 16–19 uur; za spoed 12–20 uur, zo 8–20 uur; spoeddienst 24/7, bel vooraf.",
-        "pl": "Pon.–pt. 10:00–12:00 i 16:00–19:00; w sobotę nagłe przypadki 12:00–20:00, w niedzielę 8:00–20:00; pogotowie całodobowo, zadzwoń wcześniej."
+        "pl": "Pon.–pt. 10:00–12:00 i 16:00–19:00; w sobotę nagłe przypadki 12:00–20:00, w niedzielę 8:00–20:00; pogotowie całodobowo, zadzwoń wcześniej.",
+        "cs": "Po–Pá 10:00–12:00, 16:00–19:00; v sobotu pohotovost 12:00–20:00, v neděli 8:00–20:00; pohotovostní služba nonstop, předem zavolejte."
       },
       "small_animals": true,
       "url": "https://vetclinic.bz/",
@@ -1125,7 +1159,8 @@
         "it": "Pronto soccorso con reperibilità h24.",
         "pt": "Serviço de urgência com piquete 24 horas por dia.",
         "nl": "Spoeddienst met 24 uur per dag achterwacht.",
-        "pl": "Pogotowie z całodobowym dyżurem."
+        "pl": "Pogotowie z całodobowym dyżurem.",
+        "cs": "Pohotovost s nonstop pohotovostní službou."
       },
       "small_animals": true,
       "url": "https://www.vetpartnersitalia.it/strutture/clinica-veterinaria-animal-care/",
@@ -1151,7 +1186,8 @@
         "it": "Linea di emergenza in reperibilità 24 ore su 24, 7 giorni su 7, festivi compresi (chiamare, non scrivere messaggi). Clinica +39 0461 263826.",
         "pt": "Linha de urgência de piquete 24 horas por dia, 7 dias por semana, incluindo feriados (liga, não envies mensagem). Clínica +39 0461 263826.",
         "nl": "Spoedlijn 24/7 bereikbaar, ook op feestdagen (bel, stuur geen sms). Praktijk +39 0461 263826.",
-        "pl": "Linia alarmowa z dyżurem całodobowo, także w święta (zadzwoń, nie pisz SMS-a). Przychodnia +39 0461 263826."
+        "pl": "Linia alarmowa z dyżurem całodobowo, także w święta (zadzwoń, nie pisz SMS-a). Przychodnia +39 0461 263826.",
+        "cs": "Pohotovostní linka nonstop včetně svátků (volejte, nepište SMS). Klinika +39 0461 263826."
       },
       "small_animals": true,
       "url": "https://www.veterinariotrento.it/",
@@ -1177,7 +1213,8 @@
         "it": "Ospedale didattico universitario; pronto soccorso 24 ore su 24, 365 giorni all'anno. Linea PS alternativa +39 050 2210106; centralino +39 050 2210100",
         "pt": "Hospital veterinário universitário; urgências 24 horas por dia, 365 dias por ano. Linha alternativa das urgências +39 050 2210106; central +39 050 2210100",
         "nl": "Universitair opleidingsziekenhuis; spoeddienst 24 uur per dag, 365 dagen per jaar. Alternatieve spoedlijn (PS) +39 050 2210106; telefooncentrale +39 050 2210100",
-        "pl": "Uniwersytecka klinika weterynaryjna; pogotowie całą dobę, 365 dni w roku. Alternatywna linia pogotowia +39 050 2210106; centrala +39 050 2210100"
+        "pl": "Uniwersytecka klinika weterynaryjna; pogotowie całą dobę, 365 dni w roku. Alternatywna linia pogotowia +39 050 2210106; centrala +39 050 2210100",
+        "cs": "Univerzitní výuková veterinární nemocnice; pohotovost nonstop, 365 dní v roce. Alternativní linka pohotovosti +39 050 2210106; ústředna +39 050 2210100"
       },
       "url": "https://ospedale.vet.unipi.it/",
       "source_url": "https://ospedale.vet.unipi.it/terapia-intensiva-medicina-durgenza-2/",
@@ -1203,7 +1240,8 @@
         "it": "Pronto soccorso e terapia intensiva h24, 7 giorni su 7 al +39 081 2536088; visite lun–ven 9:30–17:00 su appuntamento (CUP +39 081 2536029)",
         "pt": "Urgências e cuidados intensivos 24 horas por dia, 7 dias por semana, através do +39 081 2536088; consultas de segunda a sexta, 9h30–17h00, sob marcação (CUP +39 081 2536029)",
         "nl": "Spoedeisende hulp en intensive care 24 uur per dag, 7 dagen per week op +39 081 2536088; consulten ma–vr 9.30–17.00 uur op afspraak (CUP +39 081 2536029)",
-        "pl": "Pogotowie i intensywna terapia całodobowo, 7 dni w tygodniu, pod +39 081 2536088; wizyty pon.–pt. 9:30–17:00 po wcześniejszym umówieniu (CUP +39 081 2536029)"
+        "pl": "Pogotowie i intensywna terapia całodobowo, 7 dni w tygodniu, pod +39 081 2536088; wizyty pon.–pt. 9:30–17:00 po wcześniejszym umówieniu (CUP +39 081 2536029)",
+        "cs": "Pohotovost a intenzivní péče nonstop na +39 081 2536088; ordinace Po–Pá 9:30–17:00 na objednání (CUP +39 081 2536029)"
       },
       "url": "https://www.mvpa-unina.org/ospedale/contatti_ovud.xhtml",
       "source_url": "https://www.mvpa-unina.org/ospedale/contatti_ovud.xhtml",
@@ -1229,7 +1267,8 @@
         "it": "Aperto h24 per le emergenze; per le visite urgenti telefonare prima",
         "pt": "Aberto 24 horas para urgências; as consultas urgentes devem ser anunciadas previamente por telefone",
         "nl": "24 uur per dag open voor spoed; meld dringende bezoeken eerst telefonisch aan",
-        "pl": "Otwarte całą dobę w nagłych przypadkach; pilne wizyty zapowiedz wcześniej telefonicznie"
+        "pl": "Otwarte całą dobę w nagłych przypadkach; pilne wizyty zapowiedz wcześniej telefonicznie",
+        "cs": "Pro pohotovost otevřeno nonstop; naléhavé návštěvy nejprve ohlaste telefonicky"
       },
       "url": "https://archivio.unime.it/sites/default/files/OVUD%20al%20servizio%20della%20cittadinanza%201%20%281%29.pdf",
       "source_url": "https://archivio.unime.it/sites/default/files/OVUD%20al%20servizio%20della%20cittadinanza%201%20%281%29.pdf",
@@ -1255,7 +1294,8 @@
         "it": "Clinica lun–ven 8:00–17:00; linea Medicina e Terapia d'urgenza +39 380 388 3406",
         "pt": "Clínica de segunda a sexta, 8h00–17h00; linha de medicina e urgências +39 380 388 3406",
         "nl": "Praktijk ma–vr 8.00–17.00 uur; lijn spoedgeneeskunde en intensieve therapie (Medicina e Terapia d'urgenza) +39 380 388 3406",
-        "pl": "Przychodnia pon.–pt. 8:00–17:00; linia medycyny i terapii nagłych przypadków +39 380 388 3406"
+        "pl": "Przychodnia pon.–pt. 8:00–17:00; linia medycyny i terapii nagłych przypadków +39 380 388 3406",
+        "cs": "Ordinace Po–Pá 8:00–17:00; linka interní medicíny a urgentní péče +39 380 388 3406"
       },
       "url": "https://www.ovudteramo.it/",
       "source_url": "https://www.ovudteramo.it/portfolio/servizio-di-accettazione-pronto-soccorso-ricovero/",
@@ -1281,7 +1321,8 @@
         "it": "Pronto soccorso tutti i giorni, 24 ore su 24",
         "pt": "Urgências todos os dias, 24 horas por dia",
         "nl": "Spoedeisende hulp elke dag, 24 uur per dag",
-        "pl": "Pogotowie codziennie, całą dobę"
+        "pl": "Pogotowie codziennie, całą dobę",
+        "cs": "Pohotovost každý den nonstop"
       },
       "url": "https://www.anicura.it/cliniche/policlinico-veterinario-roma-sud/",
       "source_url": "https://www.anicura.it/cliniche/policlinico-veterinario-roma-sud/",
@@ -1307,7 +1348,8 @@
         "it": "Aperto h24, 7 giorni su 7 (anche sede ambulatoriale in Via Prenestina 364d)",
         "pt": "Aberto 24 horas por dia, 7 dias por semana (também no polo de consultas externas em Via Prenestina 364d)",
         "nl": "24 uur per dag, 7 dagen per week open (ook locatie voor ambulante zorg Via Prenestina 364d)",
-        "pl": "Otwarte całą dobę, 7 dni w tygodniu (także punkt ambulatoryjny Via Prenestina 364d)"
+        "pl": "Otwarte całą dobę, 7 dni w tygodniu (także punkt ambulatoryjny Via Prenestina 364d)",
+        "cs": "Otevřeno nonstop, 7 dní v týdnu (také ambulance Via Prenestina 364d)"
       },
       "url": "https://www.polivet.it/",
       "source_url": "https://www.polivet.it/",
@@ -1333,7 +1375,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, festivi compresi; visite specialistiche lun–ven 10–19 su appuntamento",
         "pt": "Urgências 24 h/24, 7 dias por semana, incluindo feriados; consultas de especialidade de segunda a sexta, 10h00–19h00, sob marcação",
         "nl": "Spoed 24/7, ook op feestdagen; specialistische consulten ma–vr 10–19 uur op afspraak",
-        "pl": "Pogotowie całodobowo, także w święta; wizyty specjalistyczne pon.–pt. 10:00–19:00 po wcześniejszym umówieniu"
+        "pl": "Pogotowie całodobowo, także w święta; wizyty specjalistyczne pon.–pt. 10:00–19:00 po wcześniejszym umówieniu",
+        "cs": "Pohotovost nonstop včetně svátků; odborná vyšetření Po–Pá 10:00–19:00 na objednání"
       },
       "url": "https://www.ospedalecroceazzurra.it/",
       "source_url": "https://www.ospedalecroceazzurra.it/",
@@ -1359,7 +1402,8 @@
         "it": "Aperto h24, 365 giorni all'anno",
         "pt": "Aberto 24 horas por dia, 365 dias por ano",
         "nl": "24 uur per dag open, 365 dagen per jaar",
-        "pl": "Otwarte całą dobę, 365 dni w roku"
+        "pl": "Otwarte całą dobę, 365 dni w roku",
+        "cs": "Otevřeno nonstop, 365 dní v roce"
       },
       "url": "https://www.prontosoccorsoveterinarioroma.it/",
       "source_url": "https://www.prontosoccorsoveterinarioroma.it/",
@@ -1385,7 +1429,8 @@
         "it": "Clinica 8:30–19:00; attività di pronto soccorso giorno e notte.",
         "pt": "Clínica 8h30–19h00; urgências de dia e de noite.",
         "nl": "Praktijk 08.30–19.00 uur; spoedzorg dag en nacht.",
-        "pl": "Przychodnia 8:30–19:00; pogotowie w dzień i w nocy."
+        "pl": "Przychodnia 8:30–19:00; pogotowie w dzień i w nocy.",
+        "cs": "Ordinace 8:30–19:00; pohotovostní provoz ve dne i v noci."
       },
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-borghesiana/",
       "source_url": "https://www.anicura.it/cliniche/clinica-veterinaria-borghesiana/",
@@ -1411,7 +1456,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno",
         "pt": "Urgências 24 horas por dia, 365 dias por ano",
         "nl": "Spoed 24 uur per dag, 365 dagen per jaar",
-        "pl": "Pogotowie całodobowo, 365 dni w roku"
+        "pl": "Pogotowie całodobowo, 365 dni w roku",
+        "cs": "Pohotovost nonstop, 365 dní v roce"
       },
       "url": "https://www.vethospital.it/",
       "source_url": "https://www.vethospital.it/pronto-soccorso/",
@@ -1437,7 +1483,8 @@
         "it": "Servizio privato di reperibilità telefonica, soprattutto di notte e nei festivi",
         "pt": "Serviço de urgência privado por telefone, sobretudo à noite e em feriados",
         "nl": "Particuliere telefonische achterwacht, vooral 's nachts en op feestdagen",
-        "pl": "Prywatny dyżur telefoniczny, głównie w nocy i w święta"
+        "pl": "Prywatny dyżur telefoniczny, głównie w nocy i w święta",
+        "cs": "Soukromá telefonická pohotovostní služba, především v noci a o svátcích"
       },
       "url": "https://www.guardiamedicaveterinariafirenze.it/",
       "source_url": "https://www.guardiamedicaveterinariafirenze.it/",
@@ -1464,7 +1511,8 @@
         "it": "Lun–ven 9–13 e 14–18, sab 9–13; reperibilità h24.",
         "pt": "Segunda a sexta, 9h00–13h00 e 14h00–18h00, sábado 9h00–13h00; urgências por telefone 24 horas por dia.",
         "nl": "Ma–vr 9–13 en 14–18 uur, za 9–13 uur; achterwacht 24 uur per dag.",
-        "pl": "Pon.–pt. 9:00–13:00 i 14:00–18:00, sob. 9:00–13:00; dyżur całodobowy."
+        "pl": "Pon.–pt. 9:00–13:00 i 14:00–18:00, sob. 9:00–13:00; dyżur całodobowy.",
+        "cs": "Po–Pá 9:00–13:00 a 14:00–18:00, so 9:00–13:00; nonstop pohotovostní služba."
       },
       "url": "https://www.veterinariagrosseto.it/",
       "source_url": "https://www.veterinariagrosseto.it/contatti/",
@@ -1491,7 +1539,8 @@
         "it": "Lun–ven 8:30–19:30, sab 9:30–12:30; sabato pomeriggio e domenica in reperibilità; chiamate urgenti h24",
         "pt": "Segunda a sexta, 8h30–19h30, sábado 9h30–12h30; sábado à tarde e domingo, urgências por telefone; chamadas urgentes 24 horas por dia",
         "nl": "Ma–vr 8.30–19.30 uur, za 9.30–12.30 uur; zaterdagmiddag en zondag achterwacht; dringende oproepen 24 uur per dag",
-        "pl": "Pon.–pt. 8:30–19:30, sob. 9:30–12:30; w sobotę po południu i w niedzielę dyżur; pilne telefony całodobowo"
+        "pl": "Pon.–pt. 8:30–19:30, sob. 9:30–12:30; w sobotę po południu i w niedzielę dyżur; pilne telefony całodobowo",
+        "cs": "Po–Pá 8:30–19:30, so 9:30–12:30; v sobotu odpoledne a v neděli pohotovostní služba; naléhavé hovory nonstop"
       },
       "url": "https://www.clinicaveterinariavalmusone.it/",
       "source_url": "https://www.clinicaveterinariavalmusone.it/",
@@ -1517,7 +1566,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7",
         "pt": "Serviço de urgência 24 h/24, 7 dias por semana",
         "nl": "Spoeddienst 24/7",
-        "pl": "Pogotowie całodobowo, 7 dni w tygodniu"
+        "pl": "Pogotowie całodobowo, 7 dni w tygodniu",
+        "cs": "Pohotovostní služba nonstop"
       },
       "url": "https://www.clinicaveterinariapontefelcino.it/",
       "source_url": "https://www.prontosoccorsoveterinarioperugia.it/",
@@ -1543,7 +1593,8 @@
         "it": "Presidio di pronto soccorso 24 ore su 24, 365 giorni all'anno",
         "pt": "Unidade de urgência 24 horas por dia, 365 dias por ano",
         "nl": "Spoedpost 24 uur per dag, 365 dagen per jaar",
-        "pl": "Punkt pogotowia całodobowo, 365 dni w roku"
+        "pl": "Punkt pogotowia całodobowo, 365 dni w roku",
+        "cs": "Pohotovostní středisko nonstop, 365 dní v roce"
       },
       "url": "https://www.anicura.it/cliniche/ospedale-veterinario-h24-abruzzo/",
       "source_url": "https://www.anicura.it/cliniche/ospedale-veterinario-h24-abruzzo/",
@@ -1569,7 +1620,8 @@
         "it": "Pronto soccorso h24 – chiamare la linea di emergenza prima di arrivare; numero generale +39 081 19335838",
         "pt": "Urgências 24 horas por dia – liga para a linha de urgência antes de chegares; linha geral +39 081 19335838",
         "nl": "Spoed 24 uur per dag – bel de spoedlijn voordat je komt; algemeen nummer +39 081 19335838",
-        "pl": "Pogotowie całodobowo – zadzwoń na linię alarmową przed przyjazdem; linia ogólna +39 081 19335838"
+        "pl": "Pogotowie całodobowo – zadzwoń na linię alarmową przed przyjazdem; linia ogólna +39 081 19335838",
+        "cs": "Pohotovost nonstop – před příjezdem zavolejte na pohotovostní linku; obecná linka +39 081 19335838"
       },
       "url": "https://www.vetvillage.it/",
       "source_url": "https://www.vetvillage.it/pronto-soccorso-veterinario",
@@ -1595,7 +1647,8 @@
         "it": "Clinica lun–ven 9:30–19:00; pronto soccorso serale/notturno 19:00–9:30; fine settimana e festivi tutto il giorno",
         "pt": "Clínica de segunda a sexta, 9h30–19h00; urgências ao fim da tarde e à noite, 19h00–9h30; fins de semana e feriados 24 horas por dia",
         "nl": "Praktijk ma–vr 9.30–19.00 uur; avond-/nachtspoed 19.00–9.30 uur; weekend en feestdagen de hele dag",
-        "pl": "Przychodnia pon.–pt. 9:30–19:00; pogotowie wieczorem i w nocy 19:00–9:30; w weekendy i święta przez cały dzień"
+        "pl": "Przychodnia pon.–pt. 9:30–19:00; pogotowie wieczorem i w nocy 19:00–9:30; w weekendy i święta przez cały dzień",
+        "cs": "Ordinace Po–Pá 9:30–19:00; večerní a noční pohotovost 19:00–9:30; o víkendech a svátcích celý den"
       },
       "url": "https://clinicaveterinariacavour.com/",
       "source_url": "https://clinicaveterinariacavour.com/",
@@ -1619,7 +1672,8 @@
         "it": "Lun–sab 9:30–20:00; pronto soccorso 24 ore su 24, 7 giorni su 7",
         "pt": "Segunda a sábado, 9h30–20h00; serviço de urgência 24 h/24, 7 dias por semana",
         "nl": "Ma–za 9.30–20.00 uur; spoeddienst 24/7",
-        "pl": "Pon.–sob. 9:30–20:00; pogotowie całodobowo, 7 dni w tygodniu"
+        "pl": "Pon.–sob. 9:30–20:00; pogotowie całodobowo, 7 dni w tygodniu",
+        "cs": "Po–So 9:30–20:00; pohotovostní služba nonstop"
       },
       "url": "https://www.nolavet.it/",
       "source_url": "https://www.nolavet.it/pronto-soccorso/",
@@ -1647,7 +1701,8 @@
         "it": "Linea di emergenza attiva h24",
         "pt": "Linha de urgência ativa 24 horas por dia",
         "nl": "Spoedlijn 24 uur per dag actief",
-        "pl": "Linia alarmowa czynna całą dobę"
+        "pl": "Linia alarmowa czynna całą dobę",
+        "cs": "Pohotovostní linka nonstop"
       },
       "url": "https://www.clinicaveterinariasanleonardo.it/",
       "source_url": "https://www.clinicaveterinariasanleonardo.it/",
@@ -1674,7 +1729,8 @@
         "it": "Aperto tutti i giorni h24",
         "pt": "Aberto todos os dias, 24 horas por dia",
         "nl": "Elke dag 24 uur per dag open",
-        "pl": "Otwarte codziennie całą dobę"
+        "pl": "Otwarte codziennie całą dobę",
+        "cs": "Otevřeno každý den nonstop"
       },
       "url": "https://checkupvet.it/",
       "source_url": "https://checkupvet.it/",
@@ -1701,7 +1757,8 @@
         "it": "Lun–sab 9–13 e 16–19; per le emergenze notturne e festive chiamare il pronto soccorso al +39 081 7763859.",
         "pt": "Segunda a sábado, 9h00–13h00 e 16h00–19h00; para urgências noturnas ou em feriados, liga para as urgências +39 081 7763859.",
         "nl": "Ma–za 9–13 en 16–19 uur; bel voor spoed 's nachts en op feestdagen de spoedeisende hulp op +39 081 7763859.",
-        "pl": "Pon.–sob. 9:00–13:00 i 16:00–19:00; w nagłych przypadkach w nocy i w święta zadzwoń na pogotowie +39 081 7763859."
+        "pl": "Pon.–sob. 9:00–13:00 i 16:00–19:00; w nagłych przypadkach w nocy i w święta zadzwoń na pogotowie +39 081 7763859.",
+        "cs": "Po–So 9:00–13:00 a 16:00–19:00; v noci a o svátcích volejte pohotovost (pronto soccorso) na +39 081 7763859."
       },
       "url": "https://www.ambulatorioveterinarioiaccarino.it/",
       "source_url": "https://www.ambulatorioveterinarioiaccarino.it/",
@@ -1727,7 +1784,8 @@
         "it": "Pronto soccorso h24",
         "pt": "Urgências 24 horas por dia",
         "nl": "Spoed 24 uur per dag",
-        "pl": "Pogotowie całodobowo"
+        "pl": "Pogotowie całodobowo",
+        "cs": "Pohotovost nonstop"
       },
       "url": "https://www.ospedalesantafara.it/",
       "source_url": "https://www.ospedalesantafara.it/pronto-soccorso",
@@ -1753,7 +1811,8 @@
         "it": "Aperto 24 ore su 24",
         "pt": "Aberto 24 horas por dia",
         "nl": "24 uur per dag open",
-        "pl": "Otwarte całą dobę"
+        "pl": "Otwarte całą dobę",
+        "cs": "Otevřeno nonstop"
       },
       "url": "https://www.pingry.it/",
       "source_url": "https://www.pingry.it/",
@@ -1779,7 +1838,8 @@
         "it": "Ambulatorio lun–sab 9:00–19:30; accettazione 24 ore su 24, 7 giorni su 7, festivi compresi",
         "pt": "Consultas externas de segunda a sábado, 9h00–19h30; receção 24 h/24, 7 dias por semana, incluindo feriados",
         "nl": "Polikliniek ma–za 9.00–19.30 uur; receptie 24/7, ook op feestdagen",
-        "pl": "Poradnia pon.–sob. 9:00–19:30; recepcja całodobowo, także w święta"
+        "pl": "Poradnia pon.–sob. 9:00–19:30; recepcja całodobowo, także w święta",
+        "cs": "Ambulance Po–So 9:00–19:30; recepce nonstop včetně svátků"
       },
       "url": "https://centroveterinarioeinaudi.it/",
       "source_url": "https://centroveterinarioeinaudi.it/emergenza-24h/",
@@ -1805,7 +1865,8 @@
         "it": "Pronto soccorso h24, 7 giorni su 7 (Salento)",
         "pt": "Urgências 24 horas por dia, 7 dias por semana (Salento)",
         "nl": "Spoed 24 uur per dag, 7 dagen per week (Salento)",
-        "pl": "Pogotowie całodobowo, 7 dni w tygodniu (Salento)"
+        "pl": "Pogotowie całodobowo, 7 dni w tygodniu (Salento)",
+        "cs": "Pohotovost nonstop, 7 dní v týdnu (Salento)"
       },
       "url": "https://clinicaveterinariagbs.it/",
       "source_url": "https://clinicaveterinariagbs.it/pronto-soccorso-veterinario-lecce/",
@@ -1831,7 +1892,8 @@
         "it": "Pronto soccorso privato 24 ore su 24, 7 giorni su 7 (Salento)",
         "pt": "Serviço de urgência privado 24 h/24, 7 dias por semana (Salento)",
         "nl": "Particuliere spoeddienst 24/7 (Salento)",
-        "pl": "Prywatne pogotowie całodobowo, 7 dni w tygodniu (Salento)"
+        "pl": "Prywatne pogotowie całodobowo, 7 dni w tygodniu (Salento)",
+        "cs": "Soukromá pohotovostní služba nonstop (Salento)"
       },
       "url": "https://prontosoccorsoveterinariolecce.it/",
       "source_url": "https://prontosoccorsoveterinariolecce.it/pronto-soccorso-veterinario-lecce-clinica-h-24/",
@@ -1857,7 +1919,8 @@
         "it": "Visite lun–ven 8:30–20:00, sab–dom 8:30–13:00 su appuntamento; pronto soccorso 24 ore su 24, 365 giorni all'anno",
         "pt": "Consultas de segunda a sexta, 8h30–20h00, sábado e domingo, 8h30–13h00, sob marcação; urgências 24 horas por dia, 365 dias por ano",
         "nl": "Consulten ma–vr 8.30–20.00 uur, za–zo 8.30–13.00 uur op afspraak; spoed 24 uur per dag, 365 dagen per jaar",
-        "pl": "Wizyty pon.–pt. 8:30–20:00, sob.–niedz. 8:30–13:00 po wcześniejszym umówieniu; pogotowie całodobowo, 365 dni w roku"
+        "pl": "Wizyty pon.–pt. 8:30–20:00, sob.–niedz. 8:30–13:00 po wcześniejszym umówieniu; pogotowie całodobowo, 365 dni w roku",
+        "cs": "Ordinace Po–Pá 8:30–20:00, so–ne 8:30–13:00 na objednání; pohotovost nonstop, 365 dní v roce"
       },
       "url": "https://www.clinicaveterinariacamagna.it/",
       "source_url": "https://www.clinicaveterinariacamagna.it/pronto-soccorso",
@@ -1883,7 +1946,8 @@
         "it": "Lun–sab 9–12 e 16–19; emergenze/reperibilità +39 340 3948206",
         "pt": "Segunda a sábado, 9h00–12h00 e 16h00–19h00; urgências/piquete +39 340 3948206",
         "nl": "Ma–za 9–12 en 16–19 uur; spoed/achterwacht +39 340 3948206",
-        "pl": "Pon.–sob. 9:00–12:00 i 16:00–19:00; pogotowie i dyżur +39 340 3948206"
+        "pl": "Pon.–sob. 9:00–12:00 i 16:00–19:00; pogotowie i dyżur +39 340 3948206",
+        "cs": "Po–So 9:00–12:00 a 16:00–19:00; pohotovost/pohotovostní služba +39 340 3948206"
       },
       "url": "https://www.clinicaveterinariacittacatanzaro.it/",
       "source_url": "https://www.clinicaveterinariacittacatanzaro.it/chirurgia-d-urgenza",
@@ -1909,7 +1973,8 @@
         "it": "Pronto soccorso lun–sab 8:30–20:30; chiuso di notte e nei festivi; linea della clinica +39 0984 1907872",
         "pt": "Urgências de segunda a sábado, 8h30–20h30; encerrado à noite e em feriados; linha da clínica +39 0984 1907872",
         "nl": "Spoedeisende hulp ma–za 08.30–20.30 uur; 's nachts en op feestdagen gesloten; praktijklijn +39 0984 1907872",
-        "pl": "Pogotowie pon.–sob. 8:30–20:30; w nocy i w święta nieczynne; linia przychodni +39 0984 1907872"
+        "pl": "Pogotowie pon.–sob. 8:30–20:30; w nocy i w święta nieczynne; linia przychodni +39 0984 1907872",
+        "cs": "Pohotovost Po–So 8:30–20:30; v noci a o svátcích zavřeno; linka kliniky +39 0984 1907872"
       },
       "url": "https://www.clinicavetlife.it/",
       "source_url": "https://www.clinicavetlife.it/pronto-soccorso/",
@@ -1934,7 +1999,8 @@
         "it": "Pronto soccorso h24 tutti i giorni, festivi compresi",
         "pt": "Urgências 24 horas por dia, todos os dias, incluindo feriados",
         "nl": "Spoed 24 uur per dag, elke dag, ook op feestdagen",
-        "pl": "Pogotowie całodobowo, codziennie, także w święta"
+        "pl": "Pogotowie całodobowo, codziennie, także w święta",
+        "cs": "Pohotovost nonstop každý den včetně svátků"
       },
       "url": "https://www.clinicaveterinariahimera.it/",
       "source_url": "https://www.clinicaveterinariahimera.it/pronto-soccorso-veterinario/",
@@ -1960,7 +2026,8 @@
         "it": "Pronto soccorso h24, 7 giorni su 7",
         "pt": "Urgências 24 horas por dia, 7 dias por semana",
         "nl": "Spoed 24 uur per dag, 7 dagen per week",
-        "pl": "Pogotowie całodobowo, 7 dni w tygodniu"
+        "pl": "Pogotowie całodobowo, 7 dni w tygodniu",
+        "cs": "Pohotovost nonstop, 7 dní v týdnu"
       },
       "url": "https://www.clinicaveterinariaprimavera.it/",
       "source_url": "https://www.clinicaveterinariaprimavera.it/",
@@ -1986,7 +2053,8 @@
         "it": "Aperto h24, 365 giorni all'anno",
         "pt": "Aberto 24 horas por dia, 365 dias por ano",
         "nl": "24 uur per dag open, 365 dagen per jaar",
-        "pl": "Otwarte całą dobę, 365 dni w roku"
+        "pl": "Otwarte całą dobę, 365 dni w roku",
+        "cs": "Otevřeno nonstop, 365 dní v roce"
       },
       "url": "https://www.palermovet.it/",
       "source_url": "https://www.palermovet.it/about",
@@ -2012,7 +2080,8 @@
         "it": "Lun–dom 24 ore su 24",
         "pt": "Segunda a domingo, 24 horas por dia",
         "nl": "Ma–zo 24 uur per dag",
-        "pl": "Od poniedziałku do niedzieli całodobowo"
+        "pl": "Od poniedziałku do niedzieli całodobowo",
+        "cs": "Po–Ne nonstop"
       },
       "url": "https://www.clinicaveterinariaferrarotto.it/",
       "source_url": "https://www.clinicaveterinariaferrarotto.it/",
@@ -2039,7 +2108,8 @@
         "it": "Pronto soccorso h24",
         "pt": "Urgências 24 horas por dia",
         "nl": "Spoed 24 uur per dag",
-        "pl": "Pogotowie całodobowo"
+        "pl": "Pogotowie całodobowo",
+        "cs": "Pohotovost nonstop"
       },
       "url": "https://www.clinicaveterinariacatania.it/",
       "source_url": "https://www.clinicaveterinariacatania.it/contatti",
@@ -2065,7 +2135,8 @@
         "it": "Aperto 24 ore su 24, festivi compresi; primo soccorso 20:00–8:00",
         "pt": "Aberto 24 horas por dia, incluindo feriados; serviço de primeiros socorros 20h00–8h00",
         "nl": "24 uur per dag open, ook op feestdagen; eerstehulpdienst 20.00–08.00 uur.",
-        "pl": "Otwarte całą dobę, także w święta; pierwsza pomoc 20:00–8:00"
+        "pl": "Otwarte całą dobę, także w święta; pierwsza pomoc 20:00–8:00",
+        "cs": "Otevřeno nonstop včetně svátků; služba první pomoci 20:00–8:00"
       },
       "url": "https://clinicalaveterinaria.it/",
       "source_url": "https://clinicalaveterinaria.it/en/",
@@ -2092,7 +2163,8 @@
         "it": "H24 con pronto soccorso tramite reperibilità telefonica; fisso +39 0789 21104; linea in inglese +39 340 3976803 (Costa Smeralda)",
         "pt": "24 horas por dia, com urgências por chamada telefónica; telefone fixo +39 0789 21104; linha em inglês +39 340 3976803 (Costa Smeralda)",
         "nl": "24 uur per dag, met spoedeisende hulp via telefonische achterwacht; vaste lijn +39 0789 21104; Engelstalige lijn +39 340 3976803 (Costa Smeralda)",
-        "pl": "Całodobowo, z pogotowiem przez dyżur telefoniczny; telefon stacjonarny +39 0789 21104; linia anglojęzyczna +39 340 3976803 (Costa Smeralda)"
+        "pl": "Całodobowo, z pogotowiem przez dyżur telefoniczny; telefon stacjonarny +39 0789 21104; linia anglojęzyczna +39 340 3976803 (Costa Smeralda)",
+        "cs": "Nonstop; telefonická pohotovostní služba; pevná linka +39 0789 21104; anglická linka +39 340 3976803 (Costa Smeralda)"
       },
       "url": "https://www.clinicaveterinariaolbia.it/",
       "source_url": "https://www.clinicaveterinariaolbia.it/",
@@ -2118,7 +2190,8 @@
         "it": "Pronto soccorso 8:00–20:00, festivi compresi; altre sedi a Pula (Viale G. Marconi 24) e Capoterra (Via Lampedusa 40)",
         "pt": "Serviço de urgência 8h00–20h00, incluindo feriados; também com instalações em Pula (Viale G. Marconi 24) e Capoterra (Via Lampedusa 40)",
         "nl": "Spoeddienst 8.00–20.00 uur, ook op feestdagen; ook locaties in Pula (Viale G. Marconi 24) en Capoterra (Via Lampedusa 40).",
-        "pl": "Pogotowie 8:00–20:00, także w święta; także oddziały w Pula (Viale G. Marconi 24) i Capoterra (Via Lampedusa 40)"
+        "pl": "Pogotowie 8:00–20:00, także w święta; także oddziały w Pula (Viale G. Marconi 24) i Capoterra (Via Lampedusa 40)",
+        "cs": "Pohotovost 8:00–20:00 včetně svátků; další pracoviště v Pule (Viale G. Marconi 24) a Capoterra (Via Lampedusa 40)"
       },
       "url": "https://www.clinicanora.it/",
       "source_url": "https://www.clinicanora.it/",
@@ -2144,7 +2217,8 @@
         "it": "Festivi 8:00–20:00: un unico numero, risponde il veterinario di turno e visita l'animale nel proprio studio (piccoli animali).",
         "pt": "Feriados 8h00–20h00: um só número, o veterinário de serviço atende e vê o animal no seu consultório (animais de pequeno porte).",
         "nl": "Feestdagen 08.00–20.00 uur: één nummer, de dienstdoende dierenarts neemt op en ontvangt het dier in de eigen praktijk (gezelschapsdieren).",
-        "pl": "Święta 8:00–20:00: jeden numer, odbiera weterynarz dyżurny i przyjmuje zwierzę we własnym gabinecie (małe zwierzęta)."
+        "pl": "Święta 8:00–20:00: jeden numer, odbiera weterynarz dyżurny i przyjmuje zwierzę we własnym gabinecie (małe zwierzęta).",
+        "cs": "O státních svátcích 8:00–20:00: jedno číslo, veterinář ve službě zvíře ošetří ve své ordinaci (malá zvířata)."
       },
       "small_animals": true,
       "url": "https://www.ordinevetcremona.it/",
@@ -2169,7 +2243,8 @@
         "it": "Servizio privato a pagamento di veterinario di guardia: giorni feriali 19:00–9:00, festivi dalle 9:00 alle 9:00 del primo giorno lavorativo successivo; un unico numero per la provincia.",
         "pt": "Serviço veterinário de piquete privado, pago: dias úteis 19h00–9h00, feriados das 9h00 às 9h00 do dia útil seguinte; um só número para toda a província.",
         "nl": "Betaalde particuliere dierenartsdienst: op werkdagen 19.00–09.00 uur, op feestdagen van 09.00 uur tot 09.00 uur op de volgende werkdag; één nummer voor de hele provincie.",
-        "pl": "Płatny prywatny dyżur weterynaryjny: dni robocze 19:00–9:00, święta od 9:00 do 9:00 następnego dnia roboczego; jeden numer dla całej prowincji."
+        "pl": "Płatny prywatny dyżur weterynaryjny: dni robocze 19:00–9:00, święta od 9:00 do 9:00 następnego dnia roboczego; jeden numer dla całej prowincji.",
+        "cs": "Placená soukromá veterinární pohotovostní služba: ve všední dny 19:00–9:00, o svátcích od 9:00 do 9:00 následujícího pracovního dne; jedno číslo pro celou provincii."
       },
       "small_animals": true,
       "url": "https://ordineveterinaririmini.it/",
@@ -2195,7 +2270,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7 per cani, gatti, animali esotici, cavalli e animali da reddito (digitare 1). Linea notturna esotici 20:00–8:30: +39 366 6867428.",
         "pt": "Serviço de urgência 24 h/24, 7 dias por semana, para cães, gatos, animais exóticos, cavalos e animais de produção (marca 1). Linha noturna para exóticos 20h00–8h30: +39 366 6867428.",
         "nl": "Spoeddienst 24/7 voor honden, katten, exotische dieren, paarden en boerderijdieren (toets 1). Nachtlijn exoten 20.00–08.30 uur: +39 366 6867428.",
-        "pl": "Pogotowie całodobowo, 7 dni w tygodniu, dla psów, kotów, zwierząt egzotycznych, koni i zwierząt gospodarskich (wybierz 1). Nocna linia dla zwierząt egzotycznych 20:00–8:30: +39 366 6867428."
+        "pl": "Pogotowie całodobowo, 7 dni w tygodniu, dla psów, kotów, zwierząt egzotycznych, koni i zwierząt gospodarskich (wybierz 1). Nocna linia dla zwierząt egzotycznych 20:00–8:30: +39 366 6867428.",
+        "cs": "Pohotovost nonstop pro psy, kočky, exotická zvířata, koně a hospodářská zvířata (volba 1). Noční linka pro exoty 20:00–8:30: +39 366 6867428."
       },
       "small_animals": true,
       "url": "https://www.ospedaleveterinario.unito.it/",
@@ -2221,7 +2297,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7 (linea di emergenza); segreteria +39 0521 902817 lun–ven 8:30–13:00.",
         "pt": "Serviço de urgência 24 horas por dia, 7 dias por semana (linha de urgência); receção +39 0521 902817, segunda a sexta, 8h30–13h00.",
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week (spoedlijn); receptie +39 0521 902817 ma–vr 08.30–13.00 uur.",
-        "pl": "Pogotowie 24 godziny na dobę, 7 dni w tygodniu (linia alarmowa); recepcja +39 0521 902817 pon.–pt. 8:30–13:00."
+        "pl": "Pogotowie 24 godziny na dobę, 7 dni w tygodniu (linia alarmowa); recepcja +39 0521 902817 pon.–pt. 8:30–13:00.",
+        "cs": "Pohotovostní služba nonstop (pohotovostní linka); recepce +39 0521 902817 Po–Pá 8:30–13:00."
       },
       "small_animals": true,
       "url": "https://smv.unipr.it/en/services/hospital-veterinary-university-didactic",
@@ -2248,7 +2325,8 @@
         "it": "Pronto soccorso aperto h24, 7 giorni su 7; visite lun–ven 9:00–19:00.",
         "pt": "Urgências abertas 24 horas por dia, 7 dias por semana; consultas de segunda a sexta, 9h00–19h00.",
         "nl": "Spoedafdeling 24 uur per dag, 7 dagen per week open; consulten ma–vr 09.00–19.00 uur.",
-        "pl": "Pogotowie otwarte całą dobę, 7 dni w tygodniu; wizyty pon.–pt. 9:00–19:00."
+        "pl": "Pogotowie otwarte całą dobę, 7 dni w tygodniu; wizyty pon.–pt. 9:00–19:00.",
+        "cs": "Pohotovost otevřena nonstop, 7 dní v týdnu; ordinace Po–Pá 9:00–19:00."
       },
       "small_animals": true,
       "url": "https://www.ospedaleveterinariobg.com/",
@@ -2274,7 +2352,8 @@
         "it": "Aperto 24 ore su 24, tutti i giorni dell'anno, festivi compresi.",
         "pt": "Aberto 24 horas por dia, todos os dias do ano, incluindo feriados.",
         "nl": "Elke dag van het jaar 24 uur per dag open, ook op feestdagen.",
-        "pl": "Otwarte całą dobę, każdego dnia w roku, także w święta."
+        "pl": "Otwarte całą dobę, każdego dnia w roku, także w święta.",
+        "cs": "Otevřeno nonstop každý den v roce, včetně svátků."
       },
       "small_animals": true,
       "url": "https://ospedaleveterinariobaioni.com/",
@@ -2300,7 +2379,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno.",
         "pt": "Serviço de urgência 24 horas por dia, 365 dias por ano.",
         "nl": "24-uurs spoeddienst, 365 dagen per jaar.",
-        "pl": "Całodobowe pogotowie weterynaryjne, 365 dni w roku."
+        "pl": "Całodobowe pogotowie weterynaryjne, 365 dni w roku.",
+        "cs": "Nonstop pohotovostní služba, 365 dní v roce."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-malpensa/",
@@ -2326,7 +2406,8 @@
         "it": "Pronto soccorso tutti i giorni dell'anno, 24 ore su 24 senza interruzione.",
         "pt": "Urgências todos os dias do ano, 24 horas por dia, sem interrupção.",
         "nl": "Spoedafdeling elke dag van het jaar, 24 uur per dag zonder onderbreking.",
-        "pl": "Pogotowie każdego dnia w roku, całą dobę bez przerwy."
+        "pl": "Pogotowie każdego dnia w roku, całą dobę bez przerwy.",
+        "cs": "Pohotovost každý den v roce, nonstop bez přerušení."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-cmv/",
@@ -2352,7 +2433,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, notti e festivi compresi.",
         "pt": "Serviço de urgência 24 h/24, 7 dias por semana, incluindo noites e feriados.",
         "nl": "Spoeddienst 24/7, ook 's nachts en op feestdagen.",
-        "pl": "Pogotowie całodobowo, także w nocy i w święta."
+        "pl": "Pogotowie całodobowo, także w nocy i w święta.",
+        "cs": "Pohotovostní služba nonstop včetně nocí a svátků."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinaria24ore.com/",
@@ -2378,7 +2460,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; cellulare +39 331 5238524.",
         "pt": "Serviço de urgência 24 horas por dia, 7 dias por semana; telemóvel +39 331 5238524.",
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week; mobiel +39 331 5238524.",
-        "pl": "Pogotowie 24 godziny na dobę, 7 dni w tygodniu; komórka +39 331 5238524."
+        "pl": "Pogotowie 24 godziny na dobę, 7 dni w tygodniu; komórka +39 331 5238524.",
+        "cs": "Pohotovostní služba nonstop; mobil +39 331 5238524."
       },
       "small_animals": true,
       "url": "https://prealpivet.it/",
@@ -2403,7 +2486,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, con veterinari sempre presenti.",
         "pt": "Serviço de urgência 24 h/24, 7 dias por semana, com veterinários sempre no local.",
         "nl": "24/7 spoeddienst met dierenartsen altijd ter plaatse.",
-        "pl": "Pogotowie całodobowo, z weterynarzami zawsze na miejscu."
+        "pl": "Pogotowie całodobowo, z weterynarzami zawsze na miejscu.",
+        "cs": "Pohotovostní služba nonstop, veterináři stále na místě."
       },
       "small_animals": true,
       "url": "https://www.clinvetmonza.it/",
@@ -2430,7 +2514,8 @@
         "it": "Pronto soccorso aperto 24 ore su 24.",
         "pt": "Urgências abertas 24 horas por dia.",
         "nl": "Spoedafdeling 24 uur per dag open.",
-        "pl": "Pogotowie otwarte całą dobę."
+        "pl": "Pogotowie otwarte całą dobę.",
+        "cs": "Pohotovost otevřena nonstop."
       },
       "small_animals": true,
       "source_url": "https://ordineveterinarimantova.it/domande-frequenti/veterinari-reperibili-per-urgenze",
@@ -2456,7 +2541,8 @@
         "it": "Pronto soccorso aperto 24 ore su 24.",
         "pt": "Urgências abertas 24 horas por dia.",
         "nl": "Spoedafdeling 24 uur per dag open.",
-        "pl": "Pogotowie otwarte całą dobę."
+        "pl": "Pogotowie otwarte całą dobę.",
+        "cs": "Pohotovost otevřena nonstop."
       },
       "small_animals": true,
       "source_url": "https://ordineveterinarimantova.it/domande-frequenti/veterinari-reperibili-per-urgenze",
@@ -2482,7 +2568,8 @@
         "it": "Linea di emergenza in reperibilità 24 ore su 24, 7 giorni su 7 (anche WhatsApp); telefonare prima. Appuntamenti +39 0172 636575, lun–ven 9:00–12:30, 15:30–19:30, sab mattina/tardo pomeriggio.",
         "pt": "Linha de urgência 24 h/24, 7 dias por semana (também por WhatsApp); liga primeiro. Marcações +39 0172 636575, segunda a sexta, 9h00–12h30 e 15h30–19h30, sábado de manhã e ao fim da tarde.",
         "nl": "24/7 spoedlijn met achterwacht (ook via WhatsApp); bel eerst. Afspraken +39 0172 636575, ma–vr 09.00–12.30 en 15.30–19.30 uur, za 's ochtends en laat in de middag.",
-        "pl": "Całodobowa linia dyżurna w nagłych przypadkach (także WhatsApp); najpierw zadzwoń. Wizyty +39 0172 636575, pon.–pt. 9:00–12:30 i 15:30–19:30, w soboty rano i późnym popołudniem."
+        "pl": "Całodobowa linia dyżurna w nagłych przypadkach (także WhatsApp); najpierw zadzwoń. Wizyty +39 0172 636575, pon.–pt. 9:00–12:30 i 15:30–19:30, w soboty rano i późnym popołudniem.",
+        "cs": "Pohotovostní linka nonstop (také WhatsApp); nejprve zavolejte. Objednání +39 0172 636575, Po–Pá 9:00–12:30, 15:30–19:30, so dopoledne a pozdě odpoledne."
       },
       "small_animals": true,
       "url": "https://www.centroveterinariofossanese.eu/",
@@ -2508,7 +2595,8 @@
         "it": "Pronto soccorso veterinario 24 ore su 24, tutti i giorni (aperto dal 12 gennaio 2026).",
         "pt": "Urgências veterinárias 24 horas por dia, todos os dias (abertas desde 12 de janeiro de 2026).",
         "nl": "24-uurs dierenspoedafdeling, elke dag (geopend op 12 januari 2026).",
-        "pl": "Całodobowe pogotowie weterynaryjne, codziennie (otwarte 12 stycznia 2026)."
+        "pl": "Całodobowe pogotowie weterynaryjne, codziennie (otwarte 12 stycznia 2026).",
+        "cs": "Veterinární pohotovost nonstop, každý den (otevřena 12. ledna 2026)."
       },
       "small_animals": true,
       "url": "https://croceblu.it/",
@@ -2535,7 +2623,8 @@
         "it": "Pronto soccorso diurno solo durante l'orario di apertura.",
         "pt": "Serviço de urgência apenas durante o horário de funcionamento diurno.",
         "nl": "Spoeddienst alleen overdag, tijdens openingstijden.",
-        "pl": "Pogotowie dzienne tylko w godzinach otwarcia."
+        "pl": "Pogotowie dzienne tylko w godzinach otwarcia.",
+        "cs": "Denní pohotovostní služba pouze v ordinační době."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariamarengo.it/",
@@ -2561,7 +2650,8 @@
         "it": "Linea di emergenza in reperibilità 24 ore su 24, 7 giorni su 7 (stesso numero); clinica lun–ven 9:00–12:00, 15:30–19:30, sab 9:30–12:00; domeniche/festivi solo reperibilità urgente.",
         "pt": "Linha de urgência 24 h/24, 7 dias por semana (mesmo número); clínica de segunda a sexta, 9h00–12h00 e 15h30–19h30, sábado 9h30–12h00; domingos e feriados apenas urgências por telefone.",
         "nl": "Spoedlijn met achterwacht 24/7 (zelfde nummer); praktijk ma–vr 09.00–12.00 en 15.30–19.30 uur, za 09.30–12.00 uur; zon- en feestdagen alleen achterwacht voor dringende gevallen.",
-        "pl": "Całodobowa linia dyżurna w nagłych przypadkach (ten sam numer); przychodnia pon.–pt. 9:00–12:00 i 15:30–19:30, sob. 9:30–12:00; w niedziele i święta tylko dyżur w pilnych przypadkach."
+        "pl": "Całodobowa linia dyżurna w nagłych przypadkach (ten sam numer); przychodnia pon.–pt. 9:00–12:00 i 15:30–19:30, sob. 9:30–12:00; w niedziele i święta tylko dyżur w pilnych przypadkach.",
+        "cs": "Pohotovostní linka nonstop (stejné číslo); ordinace Po–Pá 9:00–12:00, 15:30–19:30, so 9:30–12:00; v neděli a o svátcích pouze naléhavá pohotovostní služba."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariavaldostana.it/",
@@ -2588,7 +2678,8 @@
         "it": "Degenza, terapia intensiva e pronto soccorso h24; appuntamenti lun–ven 8:30–20:30. Insieme al Poliambulatorio Argentina (Arma di Taggia) la copertura delle emergenze è garantita 24 ore su 24, 7 giorni su 7.",
         "pt": "Internamento, cuidados intensivos e urgências 24 horas por dia; marcações de segunda a sexta, 8h30–20h30. Em conjunto com o Poliambulatorio Argentina (Arma di Taggia), as urgências estão garantidas 24 horas por dia, 7 dias por semana.",
         "nl": "Opname, intensieve zorg en 24-uurs spoed; afspraken ma–vr 08.30–20.30 uur. Samen met Poliambulatorio Argentina (Arma di Taggia) is spoedzorg 24 uur per dag, 7 dagen per week gegarandeerd.",
-        "pl": "Hospitalizacja, opieka intensywna i pogotowie całodobowo; wizyty pon.–pt. 8:30–20:30. Wspólnie z Poliambulatorio Argentina (Arma di Taggia) zapewnione pogotowie całą dobę, 7 dni w tygodniu."
+        "pl": "Hospitalizacja, opieka intensywna i pogotowie całodobowo; wizyty pon.–pt. 8:30–20:30. Wspólnie z Poliambulatorio Argentina (Arma di Taggia) zapewnione pogotowie całą dobę, 7 dni w tygodniu.",
+        "cs": "Lůžková část, intenzivní péče a pohotovost nonstop; objednání Po–Pá 8:30–20:30. Společně s Poliambulatorio Argentina (Arma di Taggia) je zajištěna pohotovost nonstop, 7 dní v týdnu."
       },
       "small_animals": true,
       "url": "https://www.centroveterinarioimperiese.it/",
@@ -2615,7 +2706,8 @@
         "it": "Pronto soccorso senza appuntamento mar–gio 19:00–24:00, sab–dom 9:00–19:00; appuntamenti +39 0184 462458 lun–ven 10:00–13:00, 15:00–19:00. Fuori orario: Centro Veterinario Imperiese.",
         "pt": "Urgências sem marcação de terça a quinta, 19h00–24h00, sábado e domingo, 9h00–19h00; marcações +39 0184 462458, segunda a sexta, 10h00–13h00 e 15h00–19h00. Fora de horas: Centro Veterinario Imperiese.",
         "nl": "Spoed zonder afspraak di–do 19.00–24.00 uur, za–zo 09.00–19.00 uur; afspraken +39 0184 462458 ma–vr 10.00–13.00 en 15.00–19.00 uur. Buiten openingstijden: Centro Veterinario Imperiese.",
-        "pl": "Pogotowie bez umawiania wt.–czw. 19:00–24:00, sob.–niedz. 9:00–19:00; wizyty +39 0184 462458 pon.–pt. 10:00–13:00 i 15:00–19:00. Poza godzinami pracy: Centro Veterinario Imperiese."
+        "pl": "Pogotowie bez umawiania wt.–czw. 19:00–24:00, sob.–niedz. 9:00–19:00; wizyty +39 0184 462458 pon.–pt. 10:00–13:00 i 15:00–19:00. Poza godzinami pracy: Centro Veterinario Imperiese.",
+        "cs": "Pohotovost bez objednání Út–Čt 19:00–24:00, So–Ne 9:00–19:00; objednání +39 0184 462458 Po–Pá 10:00–13:00, 15:00–19:00. Mimo ordinační dobu: Centro Veterinario Imperiese."
       },
       "small_animals": true,
       "url": "https://pva-taggia.gruppoanimalia.it/",
@@ -2642,7 +2734,8 @@
         "it": "Aperto tutti i giorni 8:30–23:30.",
         "pt": "Aberto todos os dias, 8h30–23h30.",
         "nl": "Elke dag open 08.30–23.30 uur.",
-        "pl": "Otwarte codziennie 8:30–23:30."
+        "pl": "Otwarte codziennie 8:30–23:30.",
+        "cs": "Otevřeno každý den 8:30–23:30."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-letimbro/",
@@ -2668,7 +2761,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno, notti e festivi compresi; cani, gatti, esotici.",
         "pt": "Serviço de urgência 24 horas por dia, 365 dias por ano, incluindo noites e feriados; cães, gatos, animais exóticos.",
         "nl": "Spoeddienst 24 uur per dag, 365 dagen per jaar, ook 's nachts en op feestdagen; honden, katten, exoten.",
-        "pl": "Pogotowie całodobowo, 365 dni w roku, także w nocy i w święta; psy, koty, zwierzęta egzotyczne."
+        "pl": "Pogotowie całodobowo, 365 dni w roku, także w nocy i w święta; psy, koty, zwierzęta egzotyczne.",
+        "cs": "Pohotovost nonstop, 365 dní v roce včetně nocí a svátků; psi, kočky, exotická zvířata."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariamodenasud.it/",
@@ -2694,7 +2788,8 @@
         "it": "Linea di emergenza h24; informazioni +39 0522 286266, lun–sab 9:30–19:30.",
         "pt": "Linha de urgência 24 horas por dia; informações +39 0522 286266, segunda a sábado, 9h30–19h30.",
         "nl": "24-uurs spoedlijn; informatie +39 0522 286266, ma–za 09.30–19.30 uur.",
-        "pl": "Całodobowa linia alarmowa; informacje +39 0522 286266, pon.–sob. 9:30–19:30."
+        "pl": "Całodobowa linia alarmowa; informacje +39 0522 286266, pon.–sob. 9:30–19:30.",
+        "cs": "Pohotovostní linka nonstop; informace +39 0522 286266, Po–So 9:30–19:30."
       },
       "small_animals": true,
       "url": "https://www.clinicatrefontane.it/",
@@ -2720,7 +2815,8 @@
         "it": "Reperibilità 24 ore su 24 (chiamare a qualsiasi ora); ambulatorio lun–sab, domenica chiuso.",
         "pt": "Urgências por telefone 24 horas por dia (liga a qualquer hora); consultório de segunda a sábado, domingo encerrado.",
         "nl": "Achterwacht 24 uur per dag (bel op elk moment); spreekuur ma–za, zo gesloten.",
-        "pl": "Dyżur całodobowy (zadzwoń o każdej porze); gabinet pon.–sob., niedz. nieczynne."
+        "pl": "Dyżur całodobowy (zadzwoń o każdej porze); gabinet pon.–sob., niedz. nieczynne.",
+        "cs": "Pohotovostní služba nonstop (volejte kdykoli); ordinační doba Po–So, v neděli zavřeno."
       },
       "small_animals": true,
       "url": "https://www.ambulatorioveterinariobandini.com/",
@@ -2747,7 +2843,8 @@
         "it": "Pronto soccorso sempre attivo, festivi compresi.",
         "pt": "Urgências sempre ativas, incluindo feriados.",
         "nl": "Spoedafdeling altijd actief, ook op feestdagen.",
-        "pl": "Pogotowie zawsze czynne, także w święta."
+        "pl": "Pogotowie zawsze czynne, także w święta.",
+        "cs": "Pohotovost stále v provozu včetně svátků."
       },
       "small_animals": true,
       "url": "https://www.ospedaleveterinariofarnesiana.com/",
@@ -2774,7 +2871,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7; veterinari presenti di notte e nei fine settimana.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana; veterinários no local à noite e aos fins de semana.",
         "nl": "24 uur per dag, 7 dagen per week open; dierenartsen aanwezig 's nachts en in het weekend.",
-        "pl": "Otwarte całą dobę, 7 dni w tygodniu; weterynarze na miejscu w nocy i w weekendy."
+        "pl": "Otwarte całą dobę, 7 dni w tygodniu; weterynarze na miejscu w nocy i w weekendy.",
+        "cs": "Otevřeno nonstop, 7 dní v týdnu; veterináři na místě v noci i o víkendech."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaestense.com/",
@@ -2800,7 +2898,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7, tutto l'anno, festivi compresi; cani, gatti, conigli.",
         "pt": "Aberto 24 h/24, 7 dias por semana, todo o ano, incluindo feriados; cães, gatos, coelhos.",
         "nl": "24/7 open het hele jaar, ook op feestdagen; honden, katten, konijnen.",
-        "pl": "Otwarte całą dobę, przez cały rok, także w święta; psy, koty, króliki."
+        "pl": "Otwarte całą dobę, przez cały rok, także w święta; psy, koty, króliki.",
+        "cs": "Otevřeno nonstop celý rok včetně svátků; psi, kočky, králíci."
       },
       "small_animals": true,
       "url": "https://www.ospedaledeglianimali.it/",
@@ -2826,7 +2925,8 @@
         "it": "Pronto soccorso h24 tutti i giorni; servizio urgenze 19:30–8:30 e nei festivi.",
         "pt": "Urgências 24 horas por dia, todos os dias; serviço urgente 19h30–8h30 e em feriados.",
         "nl": "Spoed 24 uur per dag, elke dag; spoeddienst 19.30–08.30 uur en op feestdagen.",
-        "pl": "Pogotowie całodobowo, codziennie; pilna pomoc 19:30–8:30 i w święta."
+        "pl": "Pogotowie całodobowo, codziennie; pilna pomoc 19:30–8:30 i w święta.",
+        "cs": "Pohotovost nonstop každý den; naléhavá služba 19:30–8:30 a o státních svátcích."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-dellorologio/",
@@ -2852,7 +2952,8 @@
         "it": "Primo soccorso h24, 365 giorni all'anno (reperibilità fuori orario); clinica lun–ven 9:00–19:00, sab 9:00–13:00.",
         "pt": "Primeiros socorros 24 horas por dia, 365 dias por ano (urgências fora de horas por telefone); clínica de segunda a sexta, 9h00–19h00, sábado 9h00–13h00.",
         "nl": "Eerstehulpzorg 24 uur per dag, 365 dagen per jaar (buiten kantooruren via achterwacht); praktijk ma–vr 09.00–19.00 uur, za 09.00–13.00 uur.",
-        "pl": "Pierwsza pomoc całodobowo, 365 dni w roku (dyżur poza godzinami pracy); przychodnia pon.–pt. 9:00–19:00, sob. 9:00–13:00."
+        "pl": "Pierwsza pomoc całodobowo, 365 dni w roku (dyżur poza godzinami pracy); przychodnia pon.–pt. 9:00–19:00, sob. 9:00–13:00.",
+        "cs": "První pomoc nonstop, 365 dní v roce (pohotovostní služba mimo ordinační dobu); ordinace Po–Pá 9:00–19:00, so 9:00–13:00."
       },
       "small_animals": true,
       "url": "https://clinicaveterinarialevante.it/",
@@ -2879,7 +2980,8 @@
         "it": "Lun–sab 8:00–20:00, dom e festivi 10:00–17:00. Non è un servizio h24.",
         "pt": "Segunda a sábado, 8h00–20h00, domingo e feriados, 10h00–17h00. Não funciona 24 horas por dia.",
         "nl": "Ma–za 08.00–20.00 uur, zo en feestdagen 10.00–17.00 uur. Geen 24-uursdienst.",
-        "pl": "Pon.–sob. 8:00–20:00, niedz. i święta 10:00–17:00. Nie jest to placówka całodobowa."
+        "pl": "Pon.–sob. 8:00–20:00, niedz. i święta 10:00–17:00. Nie jest to placówka całodobowa.",
+        "cs": "Po–So 8:00–20:00, v neděli a o svátcích 10:00–17:00. Nejde o nonstop službu."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariasanmarcoravenna.it/",
@@ -2906,7 +3008,8 @@
         "it": "Reperibilità h24 (notti, prefestivi, festivi) e pronto soccorso clinico-chirurgico h24; cellulare di emergenza +39 339 4631224; clinica lun–sab 9:00–13:00, 15:00–20:00.",
         "pt": "Urgências por telefone 24 horas por dia (noites, vésperas de feriado, feriados) e urgências clínico-cirúrgicas 24 horas por dia; telemóvel de urgência +39 339 4631224; clínica de segunda a sábado, 9h00–13h00 e 15h00–20h00.",
         "nl": "Achterwacht 24 uur per dag ('s nachts, op de dag voor feestdagen en op feestdagen) en klinisch-chirurgische spoed 24 uur per dag; mobiel spoednummer +39 339 4631224; praktijk ma–za 09.00–13.00 en 15.00–20.00 uur.",
-        "pl": "Dyżur całodobowy (noce, wigilie świąt, święta) i całodobowe pogotowie kliniczno-chirurgiczne; komórka alarmowa +39 339 4631224; przychodnia pon.–sob. 9:00–13:00 i 15:00–20:00."
+        "pl": "Dyżur całodobowy (noce, wigilie świąt, święta) i całodobowe pogotowie kliniczno-chirurgiczne; komórka alarmowa +39 339 4631224; przychodnia pon.–sob. 9:00–13:00 i 15:00–20:00.",
+        "cs": "Pohotovostní služba nonstop (noci, předsváteční dny, svátky) a klinicko-chirurgická pohotovost nonstop; pohotovostní mobil +39 339 4631224; ordinace Po–So 9:00–13:00, 15:00–20:00."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariacittadiforli.it/",
@@ -2932,7 +3035,8 @@
         "it": "Aperto 7 giorni su 7 9:00–19:00 su appuntamento telefonico; domeniche solo casi urgenti; reperibilità telefonica per le urgenze.",
         "pt": "Aberto 7 dias por semana, 9h00–19h00, com marcação por telefone; domingos apenas casos urgentes; urgências por telefone.",
         "nl": "7 dagen per week open 09.00–19.00 uur op telefonische afspraak; zondag alleen dringende gevallen; telefonische achterwacht voor spoed.",
-        "pl": "Otwarte 7 dni w tygodniu 9:00–19:00 po umówieniu telefonicznym; w niedziele tylko pilne przypadki; dyżur telefoniczny w pilnych przypadkach."
+        "pl": "Otwarte 7 dni w tygodniu 9:00–19:00 po umówieniu telefonicznym; w niedziele tylko pilne przypadki; dyżur telefoniczny w pilnych przypadkach.",
+        "cs": "Otevřeno 7 dní v týdnu 9:00–19:00 po telefonické domluvě; v neděli pouze naléhavé případy; telefonická pohotovostní služba pro naléhavé případy."
       },
       "small_animals": true,
       "url": "https://alfiobulgarelli.com/",
@@ -2959,7 +3063,8 @@
         "it": "Pronto soccorso h24.",
         "pt": "Urgências 24 horas por dia.",
         "nl": "Spoedeisende hulp 24 uur per dag.",
-        "pl": "Pogotowie całodobowo."
+        "pl": "Pogotowie całodobowo.",
+        "cs": "Pohotovost nonstop."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariasanmarco.it/",
@@ -2985,7 +3090,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; solo cani e gatti.",
         "pt": "Serviço de urgência 24 h/24, 7 dias por semana; apenas cães e gatos.",
         "nl": "Spoedafdeling 24/7; alleen honden en katten.",
-        "pl": "Pogotowie całodobowo, 7 dni w tygodniu; tylko psy i koty."
+        "pl": "Pogotowie całodobowo, 7 dni w tygodniu; tylko psy i koty.",
+        "cs": "Pohotovost nonstop; pouze psi a kočky."
       },
       "small_animals": true,
       "url": "https://www.ospvet.it/",
@@ -3011,7 +3117,8 @@
         "it": "Aperto tutti i giorni h24 con veterinario presente; appuntamenti lun–sab 10:00–19:30.",
         "pt": "Aberto todos os dias, 24 horas por dia, com veterinário no local; marcações de segunda a sábado, 10h00–19h30.",
         "nl": "Elke dag 24 uur open, met dierenarts aanwezig; afspraken ma–za 10.00–19.30 uur.",
-        "pl": "Otwarte codziennie całą dobę z weterynarzem na miejscu; wizyty pon.–sob. 10:00–19:30."
+        "pl": "Otwarte codziennie całą dobę z weterynarzem na miejscu; wizyty pon.–sob. 10:00–19:30.",
+        "cs": "Otevřeno každý den nonstop s veterinářem na místě; objednání Po–So 10:00–19:30."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariastradaovest.com/",
@@ -3037,7 +3144,8 @@
         "it": "Pronto soccorso sempre attivo h24 (linea cellulare); clinica +39 0444 276070 lun–sab 9:00–20:00.",
         "pt": "Urgências sempre ativas, 24 horas por dia (linha móvel); clínica +39 0444 276070, segunda a sábado, 9h00–20h00.",
         "nl": "Spoed altijd actief, 24 uur per dag (mobiele lijn); praktijk +39 0444 276070 ma–za 09.00–20.00 uur.",
-        "pl": "Pogotowie zawsze czynne całą dobę (linia komórkowa); przychodnia +39 0444 276070 pon.–sob. 9:00–20:00."
+        "pl": "Pogotowie zawsze czynne całą dobę (linia komórkowa); przychodnia +39 0444 276070 pon.–sob. 9:00–20:00.",
+        "cs": "Pohotovost nonstop (mobilní linka); ordinace +39 0444 276070 Po–So 9:00–20:00."
       },
       "small_animals": true,
       "url": "https://www.vetbase.it/",
@@ -3063,7 +3171,8 @@
         "it": "Reperibilità h24, 365 giorni all'anno (cellulare di emergenza); ambulatorio +39 0444 611232.",
         "pt": "Urgências por telefone 24 horas por dia, 365 dias por ano (telemóvel de urgência); consultório +39 0444 611232.",
         "nl": "Achterwacht 24 uur per dag, 365 dagen per jaar (mobiel spoednummer); praktijk +39 0444 611232.",
-        "pl": "Dyżur całodobowy, 365 dni w roku (komórka alarmowa); gabinet +39 0444 611232."
+        "pl": "Dyżur całodobowy, 365 dni w roku (komórka alarmowa); gabinet +39 0444 611232.",
+        "cs": "Pohotovostní služba nonstop, 365 dní v roce (pohotovostní mobil); ordinace +39 0444 611232."
       },
       "small_animals": true,
       "url": "https://www.ambulatorioveterinariocamisano.it/",
@@ -3090,7 +3199,8 @@
         "it": "Linea urgenze h24; appuntamenti +39 045 6211221 lun–ven 10:00–12:30, 15:00–19:00, sab 10:00–12:30.",
         "pt": "Linha urgente 24 horas por dia; marcações +39 045 6211221, segunda a sexta, 10h00–12h30 e 15h00–19h00, sábado 10h00–12h30.",
         "nl": "Spoedlijn 24 uur per dag; afspraken +39 045 6211221 ma–vr 10.00–12.30 en 15.00–19.00 uur, za 10.00–12.30 uur.",
-        "pl": "Linia dla pilnych przypadków całodobowo; wizyty +39 045 6211221 pon.–pt. 10:00–12:30 i 15:00–19:00, sob. 10:00–12:30."
+        "pl": "Linia dla pilnych przypadków całodobowo; wizyty +39 045 6211221 pon.–pt. 10:00–12:30 i 15:00–19:00, sob. 10:00–12:30.",
+        "cs": "Naléhavá linka nonstop; objednání +39 045 6211221 Po–Pá 10:00–12:30, 15:00–19:00, so 10:00–12:30."
       },
       "small_animals": true,
       "url": "https://www.vetbardolino.it/",
@@ -3117,7 +3227,8 @@
         "it": "Lun–ven 9:00–19:00 (meglio con appuntamento), sab su appuntamento. Nessun pronto soccorso h24.",
         "pt": "Segunda a sexta, 9h00–19h00 (de preferência com marcação), sábado sob marcação. Sem serviço de urgência 24 horas por dia.",
         "nl": "Ma–vr 09.00–19.00 uur (bij voorkeur op afspraak), za op afspraak. Geen 24-uurs spoeddienst.",
-        "pl": "Pon.–pt. 9:00–19:00 (zalecane umówienie), sob. po wcześniejszym umówieniu. Brak całodobowego pogotowia."
+        "pl": "Pon.–pt. 9:00–19:00 (zalecane umówienie), sob. po wcześniejszym umówieniu. Brak całodobowego pogotowia.",
+        "cs": "Po–Pá 9:00–19:00 (nejlépe po objednání), so na objednání. Nonstop pohotovost není."
       },
       "small_animals": true,
       "url": "https://www.veterinariopeschiera.it/",
@@ -3143,7 +3254,8 @@
         "it": "Pronto soccorso h24, 7 giorni su 7, veterinario sempre presente; clinica +39 0434 783070 lun–ven 9:00–19:00, sab 9:00–17:00.",
         "pt": "Urgências 24 horas por dia, 7 dias por semana, com veterinário sempre presente; clínica +39 0434 783070, segunda a sexta, 9h00–19h00, sábado 9h00–17h00.",
         "nl": "Spoed 24 uur per dag, 7 dagen per week, dierenarts altijd aanwezig; praktijk +39 0434 783070 ma–vr 09.00–19.00 uur, za 09.00–17.00 uur.",
-        "pl": "Pogotowie całodobowo, 7 dni w tygodniu, weterynarz zawsze na miejscu; przychodnia +39 0434 783070 pon.–pt. 9:00–19:00, sob. 9:00–17:00."
+        "pl": "Pogotowie całodobowo, 7 dni w tygodniu, weterynarz zawsze na miejscu; przychodnia +39 0434 783070 pon.–pt. 9:00–19:00, sob. 9:00–17:00.",
+        "cs": "Pohotovost nonstop, 7 dní v týdnu, veterinář vždy na místě; ordinace +39 0434 783070 Po–Pá 9:00–19:00, so 9:00–17:00."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaserenissima.it/",
@@ -3169,7 +3281,8 @@
         "it": "Lun–ven 9:00–18:30, sab 9:00–12:30 su appuntamento; reperibilità notturna e festiva condivisa con altri studi di Udine: la segreteria telefonica indica il numero del veterinario di guardia.",
         "pt": "Segunda a sexta, 9h00–18h30, sábado 9h00–12h30, sob marcação; urgências noturnas e em feriados partilhadas com outras clínicas de Udine — o atendedor de chamadas indica o número do veterinário de serviço.",
         "nl": "Ma–vr 09.00–18.30 uur, za 09.00–12.30 uur op afspraak; de nacht- en feestdagendienst wordt gedeeld met andere praktijken in Udine; het antwoordapparaat geeft het nummer van de dienstdoende dierenarts.",
-        "pl": "Pon.–pt. 9:00–18:30, sob. 9:00–12:30 po wcześniejszym umówieniu; dyżur nocny i świąteczny wspólnie z innymi gabinetami w Udine – automatyczna sekretarka podaje numer weterynarza dyżurnego."
+        "pl": "Pon.–pt. 9:00–18:30, sob. 9:00–12:30 po wcześniejszym umówieniu; dyżur nocny i świąteczny wspólnie z innymi gabinetami w Udine – automatyczna sekretarka podaje numer weterynarza dyżurnego.",
+        "cs": "Po–Pá 9:00–18:30, so 9:00–12:30 na objednání; noční a sváteční pohotovostní službu sdílí s dalšími ordinacemi v Udine – záznamník sdělí číslo veterináře ve službě."
       },
       "small_animals": true,
       "url": "https://ambulatorioveterinarioschiavi.com/",
@@ -3195,7 +3308,8 @@
         "it": "Lun–ven 9:00–19:00, sab 9:00–14:00.",
         "pt": "Segunda a sexta, 9h00–19h00, sábado 9h00–14h00.",
         "nl": "Ma–vr 09.00–19.00 uur, za 09.00–14.00 uur.",
-        "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–14:00."
+        "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–14:00.",
+        "cs": "Po–Pá 9:00–19:00, so 9:00–14:00."
       },
       "small_animals": true,
       "url": "https://www.clinicadiana.it/",
@@ -3221,7 +3335,8 @@
         "it": "Pronto soccorso e terapia intensiva h24 (veterinario contrattista h24 di notte, nei fine settimana e nei festivi); accettazione lun–ven 8:30–17:00, +39 075 5857792. Pronto soccorso grandi animali +39 349 7602689.",
         "pt": "Urgências e cuidados intensivos 24 horas por dia (veterinário contratado 24 horas por dia à noite, aos fins de semana e em feriados); receção de segunda a sexta, 8h30–17h00, +39 075 5857792. Urgências para animais de grande porte +39 349 7602689.",
         "nl": "Spoedeisende hulp en intensieve zorg 24 uur per dag (Veterinario Contrattista H24 's nachts, in het weekend en op feestdagen); receptie ma–vr 8.30–17.00 uur, +39 075 5857792. Spoed voor grote dieren +39 349 7602689.",
-        "pl": "Pogotowie i opieka intensywna całodobowo (weterynarz kontraktowy całodobowo w nocy, w weekendy i święta); recepcja pon.–pt. 8:30–17:00, +39 075 5857792. Pogotowie dla dużych zwierząt +39 349 7602689."
+        "pl": "Pogotowie i opieka intensywna całodobowo (weterynarz kontraktowy całodobowo w nocy, w weekendy i święta); recepcja pon.–pt. 8:30–17:00, +39 075 5857792. Pogotowie dla dużych zwierząt +39 349 7602689.",
+        "cs": "Pohotovost a intenzivní péče nonstop (v noci, o víkendech a svátcích smluvní veterinář nonstop); recepce Po–Pá 8:30–17:00, +39 075 5857792. Pohotovost pro velká zvířata +39 349 7602689."
       },
       "small_animals": true,
       "url": "https://medvet.unipg.it/en/structures",
@@ -3248,7 +3363,8 @@
         "it": "Pronto soccorso 7 giorni su 7 9:00–20:00.",
         "pt": "Urgências 7 dias por semana, 9h00–20h00.",
         "nl": "Spoedeisende hulp 7 dagen per week 9.00–20.00 uur.",
-        "pl": "Pogotowie 7 dni w tygodniu 9:00–20:00."
+        "pl": "Pogotowie 7 dni w tygodniu 9:00–20:00.",
+        "cs": "Pohotovost 7 dní v týdnu 9:00–20:00."
       },
       "small_animals": true,
       "url": "https://www.vetsassari.it/",
@@ -3275,7 +3391,8 @@
         "it": "Pronto soccorso per cani e gatti 24 ore su 24, tutti i giorni dell'anno.",
         "pt": "Urgências 24 horas por dia para cães e gatos, todos os dias do ano.",
         "nl": "24-uurs spoedafdeling voor honden en katten, elke dag van het jaar.",
-        "pl": "Całodobowe pogotowie dla psów i kotów, każdego dnia w roku."
+        "pl": "Całodobowe pogotowie dla psów i kotów, każdego dnia w roku.",
+        "cs": "Pohotovost pro psy a kočky nonstop, každý den v roce."
       },
       "small_animals": true,
       "url": "https://www.ospedaleveterinarioardenza.com/",
@@ -3301,7 +3418,8 @@
         "it": "Aperto tutti i giorni 24 ore su 24.",
         "pt": "Aberto todos os dias, 24 horas por dia.",
         "nl": "Elke dag 24 uur open.",
-        "pl": "Otwarte codziennie całą dobę."
+        "pl": "Otwarte codziennie całą dobę.",
+        "cs": "Otevřeno každý den nonstop."
       },
       "small_animals": true,
       "url": "https://www.clinicamelosi.it/",
@@ -3327,7 +3445,8 @@
         "it": "Clinica aperta 24 ore su 24.",
         "pt": "Clínica aberta 24 horas por dia.",
         "nl": "Praktijk 24 uur per dag open.",
-        "pl": "Przychodnia otwarta całą dobę."
+        "pl": "Przychodnia otwarta całą dobę.",
+        "cs": "Ordinace otevřena nonstop."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaetruria.it/",
@@ -3353,7 +3472,8 @@
         "it": "Pronto soccorso h24, 365 giorni all'anno.",
         "pt": "Urgências 24 horas por dia, 365 dias por ano.",
         "nl": "Spoed 24 uur per dag, 365 dagen per jaar.",
-        "pl": "Pogotowie całodobowo, 365 dni w roku."
+        "pl": "Pogotowie całodobowo, 365 dni w roku.",
+        "cs": "Pohotovost nonstop, 365 dní v roce."
       },
       "small_animals": true,
       "url": "https://www.sosveterinario.it/",
@@ -3379,7 +3499,8 @@
         "it": "Aperto tutti i giorni 24 ore su 24; stesso numero per le emergenze.",
         "pt": "Aberto todos os dias, 24 horas por dia; mesmo número para urgências.",
         "nl": "Elke dag 24 uur open; zelfde nummer voor spoed.",
-        "pl": "Otwarte codziennie całą dobę; ten sam numer w nagłych przypadkach."
+        "pl": "Otwarte codziennie całą dobę; ten sam numer w nagłych przypadkach.",
+        "cs": "Otevřeno každý den nonstop; stejné číslo pro pohotovost."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinarialucca.it/",
@@ -3405,7 +3526,8 @@
         "it": "Servizio attivo 24 ore su 24, 365 giorni all'anno.",
         "pt": "Serviço ativo 24 horas por dia, 365 dias por ano.",
         "nl": "Dienst 24 uur per dag actief, 365 dagen per jaar.",
-        "pl": "Usługa czynna całą dobę, 365 dni w roku."
+        "pl": "Usługa czynna całą dobę, 365 dni w roku.",
+        "cs": "Služba v provozu nonstop, 365 dní v roce."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinaria-colombo.com/",
@@ -3431,7 +3553,8 @@
         "it": "Domeniche e festivi 9:00–19:00 aperto per visite urgenti.",
         "pt": "Domingos e feriados, 9h00–19h00, aberto para consultas urgentes.",
         "nl": "Zon- en feestdagen 9.00–19.00 uur open voor dringende consulten.",
-        "pl": "Niedziele i święta 9:00–19:00 – otwarte w pilnych przypadkach."
+        "pl": "Niedziele i święta 9:00–19:00 – otwarte w pilnych przypadkach.",
+        "cs": "V neděli a o státních svátcích 9:00–19:00 otevřeno pro naléhavá vyšetření."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariapietrasanta.com/",
@@ -3458,7 +3581,8 @@
         "it": "Pronto soccorso h24, 7 giorni su 7; orari d'ufficio lun–sab 9:00–19:00.",
         "pt": "Urgências 24 h/24, 7 dias por semana; horário do consultório de segunda a sábado, 9h00–19h00.",
         "nl": "Spoedeisende hulp 24 uur per dag, 7 dagen per week; kantooruren ma–za 9.00–19.00 uur.",
-        "pl": "Pogotowie weterynaryjne całodobowo, 7 dni w tygodniu; godziny przyjęć pon.–sob. 9:00–19:00."
+        "pl": "Pogotowie weterynaryjne całodobowo, 7 dni w tygodniu; godziny przyjęć pon.–sob. 9:00–19:00.",
+        "cs": "Pohotovost nonstop, 7 dní v týdnu; ordinační doba Po–So 9:00–19:00."
       },
       "small_animals": true,
       "url": "https://www.fanumfortunaevet.it/",
@@ -3485,7 +3609,8 @@
         "it": "Pronto soccorso sab 13:00–19:00, dom 9:00–19:00; reperibilità 20:00–24:00.",
         "pt": "Urgências sábado 13h00–19h00, domingo 9h00–19h00; urgências por telefone 20h00–24h00.",
         "nl": "Spoedeisende hulp za 13.00–19.00 uur, zo 9.00–19.00 uur; achterwacht 20.00–24.00 uur.",
-        "pl": "Pogotowie weterynaryjne w sob. 13:00–19:00, w niedz. 9:00–19:00; dyżur 20:00–24:00."
+        "pl": "Pogotowie weterynaryjne w sob. 13:00–19:00, w niedz. 9:00–19:00; dyżur 20:00–24:00.",
+        "cs": "Pohotovost v sobotu 13:00–19:00, v neděli 9:00–19:00; pohotovostní služba 20:00–24:00."
       },
       "small_animals": true,
       "url": "https://santateresavet.wixsite.com/clinicasantateresa",
@@ -3511,7 +3636,8 @@
         "it": "Reperibilità per le emergenze h24; orari normali lun–ven 8:30–19:30, sab 8:30–17:30. Cellulare +39 389 4457032.",
         "pt": "Urgências por telefone 24 horas por dia; horário normal de segunda a sexta, 8h30–19h30, sábado 8h30–17h30. Telemóvel +39 389 4457032.",
         "nl": "Achterwacht voor spoed 24 uur per dag; reguliere openingstijden ma–vr 8.30–19.30 uur, za 8.30–17.30 uur. Mobiel +39 389 4457032.",
-        "pl": "Dyżur w nagłych przypadkach całodobowo; zwykłe godziny pon.–pt. 8:30–19:30, sob. 8:30–17:30. Telefon komórkowy +39 389 4457032."
+        "pl": "Dyżur w nagłych przypadkach całodobowo; zwykłe godziny pon.–pt. 8:30–19:30, sob. 8:30–17:30. Telefon komórkowy +39 389 4457032.",
+        "cs": "Pohotovostní služba nonstop; běžná ordinační doba Po–Pá 8:30–19:30, so 8:30–17:30. Mobil +39 389 4457032."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariagaudenzi.it/",
@@ -3538,7 +3664,8 @@
         "it": "Pronto soccorso 24 ore su 24 tutti i giorni, festivi compresi.",
         "pt": "Serviço de urgência 24 horas por dia, todos os dias, incluindo feriados.",
         "nl": "Spoeddienst 24 uur per dag, elke dag, ook op feestdagen.",
-        "pl": "Pogotowie weterynaryjne całodobowo, codziennie, także w święta."
+        "pl": "Pogotowie weterynaryjne całodobowo, codziennie, także w święta.",
+        "cs": "Pohotovostní služba nonstop každý den včetně svátků."
       },
       "small_animals": true,
       "url": "https://www.futuravet.it/",
@@ -3564,7 +3691,8 @@
         "it": "Emergenze 24 ore su 24.",
         "pt": "Urgências 0h00–24h00.",
         "nl": "Spoed 00–24 uur.",
-        "pl": "Nagłe przypadki 0:00–24:00."
+        "pl": "Nagłe przypadki 0:00–24:00.",
+        "cs": "Pohotovost 0:00–24:00."
       },
       "small_animals": true,
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-tyrus/",
@@ -3590,7 +3718,8 @@
         "it": "Reperibilità h24 per le emergenze, festivi compresi (telefonare prima); clinica +39 0744 282530, lun–ven 10–13/16:30–19:30, sab 10–13.",
         "pt": "Urgências por telefone 24 horas por dia, incluindo feriados (liga primeiro); clínica +39 0744 282530, segunda a sexta, 10h00–13h00 e 16h30–19h30, sábado 10h00–13h00.",
         "nl": "Achterwacht 24 uur per dag voor spoed, ook op feestdagen (bel eerst); praktijk +39 0744 282530, ma–vr 10–13 en 16.30–19.30 uur, za 10–13 uur.",
-        "pl": "Dyżur w nagłych przypadkach całodobowo, także w święta (najpierw zadzwoń); przychodnia +39 0744 282530, pon.–pt. 10–13/16:30–19:30, sob. 10–13."
+        "pl": "Dyżur w nagłych przypadkach całodobowo, także w święta (najpierw zadzwoń); przychodnia +39 0744 282530, pon.–pt. 10–13/16:30–19:30, sob. 10–13.",
+        "cs": "Pohotovostní služba nonstop včetně svátků (nejprve zavolejte); ordinace +39 0744 282530, Po–Pá 10:00–13:00 a 16:30–19:30, so 10:00–13:00."
       },
       "small_animals": true,
       "url": "https://www.veterinariotriola.com/",
@@ -3617,7 +3746,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana.",
         "nl": "24 uur per dag, 7 dagen per week open.",
-        "pl": "Otwarte całodobowo, 7 dni w tygodniu."
+        "pl": "Otwarte całodobowo, 7 dni w tygodniu.",
+        "cs": "Otevřeno nonstop, 7 dní v týdnu."
       },
       "small_animals": true,
       "url": "https://www.cazampa.it/clinica/latina-ospedale-veterinario-amici-degli-animali/",
@@ -3643,7 +3773,8 @@
         "it": "Numero di emergenza attivo h24, 7 giorni su 7, festivi compresi; clinica +39 0761 824579.",
         "pt": "Número de urgência ativo 24 horas por dia, 7 dias por semana, incluindo feriados; clínica +39 0761 824579.",
         "nl": "Spoednummer 24 uur per dag actief, 7 dagen per week, ook op feestdagen; praktijk +39 0761 824579.",
-        "pl": "Numer alarmowy czynny całodobowo, 7 dni w tygodniu, także w święta; przychodnia +39 0761 824579."
+        "pl": "Numer alarmowy czynny całodobowo, 7 dni w tygodniu, także w święta; przychodnia +39 0761 824579.",
+        "cs": "Pohotovostní číslo funguje nonstop, 7 dní v týdnu včetně svátků; ordinace +39 0761 824579."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariadellatuscia.com/",
@@ -3670,7 +3801,8 @@
         "it": "Pronto soccorso h24.",
         "pt": "Urgências 24 horas por dia.",
         "nl": "Spoedeisende hulp 24 uur per dag.",
-        "pl": "Pogotowie weterynaryjne całodobowo."
+        "pl": "Pogotowie weterynaryjne całodobowo.",
+        "cs": "Pohotovost nonstop."
       },
       "small_animals": true,
       "url": "https://www.fidoefelix.it/",
@@ -3696,7 +3828,8 @@
         "it": "Aperto h24, 7 giorni su 7.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana.",
         "nl": "24 uur per dag, 7 dagen per week open.",
-        "pl": "Otwarte całodobowo, 7 dni w tygodniu."
+        "pl": "Otwarte całodobowo, 7 dni w tygodniu.",
+        "cs": "Otevřeno nonstop, 7 dní v týdnu."
       },
       "small_animals": true,
       "url": "https://www.vetprime.it/",
@@ -3722,7 +3855,8 @@
         "it": "Aperto tutti i giorni, festivi compresi, 7:00–23:00.",
         "pt": "Aberto todos os dias, incluindo feriados, 7h00–23h00.",
         "nl": "Elke dag open, ook op feestdagen, 07.00–23.00 uur.",
-        "pl": "Otwarte codziennie, także w święta, 07:00–23:00."
+        "pl": "Otwarte codziennie, także w święta, 07:00–23:00.",
+        "cs": "Otevřeno každý den včetně svátků 7:00–23:00."
       },
       "small_animals": true,
       "url": "https://clinicavetaretusea.it/",
@@ -3748,7 +3882,8 @@
         "it": "Pronto soccorso h24 con reperibilità costante; ricovero h24.",
         "pt": "Urgências 24 horas por dia com disponibilidade permanente por telefone; internamento 24 horas por dia.",
         "nl": "Spoedeisende hulp 24 uur per dag met constante bereikbaarheid; opname 24 uur per dag.",
-        "pl": "Pogotowie weterynaryjne całodobowo, ze stałym dyżurem; hospitalizacja całodobowo."
+        "pl": "Pogotowie weterynaryjne całodobowo, ze stałym dyżurem; hospitalizacja całodobowo.",
+        "cs": "Pohotovost nonstop s nepřetržitou pohotovostní službou; hospitalizace nonstop."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinarianoto.it/",
@@ -3774,7 +3909,8 @@
         "it": "Augusta lun–ven 9:00–13:00 e 15:15–19:30; Lentini lun/mer/ven 9:30–12:00. Cellulare +39 338 8827347.",
         "pt": "Augusta: segunda a sexta, 9h00–13h00 e 15h15–19h30; Lentini: segunda, quarta e sexta, 9h30–12h00. Telemóvel +39 338 8827347.",
         "nl": "Augusta ma–vr 9.00–13.00 en 15.15–19.30 uur; Lentini ma, wo, vr 9.30–12.00 uur. Mobiel +39 338 8827347.",
-        "pl": "Augusta pon.–pt. 9:00–13:00 i 15:15–19:30; Lentini pon./śr./pt. 9:30–12:00. Telefon komórkowy +39 338 8827347."
+        "pl": "Augusta pon.–pt. 9:00–13:00 i 15:15–19:30; Lentini pon./śr./pt. 9:30–12:00. Telefon komórkowy +39 338 8827347.",
+        "cs": "Augusta Po–Pá 9:00–13:00 a 15:15–19:30; Lentini Po, St, Pá 9:30–12:00. Mobil +39 338 8827347."
       },
       "small_animals": true,
       "url": "https://www.animalhospitalsrls.it/",
@@ -3800,7 +3936,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; orari d'ufficio lun–ven 9:30–19:30, sab 10–13. Cellulare +39 366 2878385.",
         "pt": "Urgências 24 horas por dia, 7 dias por semana; horário do consultório de segunda a sexta, 9h30–19h30, sábado 10h00–13h00. Telemóvel +39 366 2878385.",
         "nl": "Spoedeisende hulp 24 uur per dag, 7 dagen per week; kantooruren ma–vr 9.30–19.30 uur, za 10–13 uur. Mobiel +39 366 2878385.",
-        "pl": "Pogotowie weterynaryjne całodobowo, 7 dni w tygodniu; godziny przyjęć pon.–pt. 9:30–19:30, sob. 10–13. Telefon komórkowy +39 366 2878385."
+        "pl": "Pogotowie weterynaryjne całodobowo, 7 dni w tygodniu; godziny przyjęć pon.–pt. 9:30–19:30, sob. 10–13. Telefon komórkowy +39 366 2878385.",
+        "cs": "Pohotovost nonstop, 7 dní v týdnu; ordinační doba Po–Pá 9:30–19:30, so 10:00–13:00. Mobil +39 366 2878385."
       },
       "small_animals": true,
       "url": "https://www.veterinaritrapani.it/",
@@ -3827,7 +3964,8 @@
         "it": "Reperibilità h24.",
         "pt": "Urgências por telefone 24 horas por dia.",
         "nl": "24 uur per dag in achterwacht.",
-        "pl": "Dyżur całodobowo."
+        "pl": "Dyżur całodobowo.",
+        "cs": "Pohotovostní služba nonstop."
       },
       "small_animals": true,
       "url": "https://www.trapanivet.it/",
@@ -3854,7 +3992,8 @@
         "it": "Clinica lun–ven 10:00–13:00 e 16:30–20:00; disponibile h24 per visite a domicilio e day hospital nei casi più urgenti. Cellulare +39 320 3387772.",
         "pt": "Clínica de segunda a sexta, 10h00–13h00 e 16h30–20h00; disponível 24 horas por dia para visitas ao domicílio e hospital de dia nos casos mais urgentes. Telemóvel +39 320 3387772.",
         "nl": "Praktijk ma–vr 10.00–13.00 en 16.30–20.00 uur; 24 uur per dag beschikbaar voor huisbezoeken en dagopname in de meest dringende gevallen. Mobiel +39 320 3387772.",
-        "pl": "Przychodnia pon.–pt. 10:00–13:00 i 16:30–20:00; w najpilniejszych przypadkach dostępna całodobowo na wizyty domowe i hospitalizację dzienną. Telefon komórkowy +39 320 3387772."
+        "pl": "Przychodnia pon.–pt. 10:00–13:00 i 16:30–20:00; w najpilniejszych przypadkach dostępna całodobowo na wizyty domowe i hospitalizację dzienną. Telefon komórkowy +39 320 3387772.",
+        "cs": "Ordinace Po–Pá 10:00–13:00 a 16:30–20:00; nonstop k dispozici pro návštěvy doma a denní hospitalizaci v nejnaléhavějších případech. Mobil +39 320 3387772."
       },
       "small_animals": true,
       "url": "https://www.centroveterinarioizzo.it/",
@@ -3881,7 +4020,8 @@
         "it": "Lun–ven 9:00–12:30 e 15:30–19:00, sab mattina.",
         "pt": "Segunda a sexta, 9h00–12h30 e 15h30–19h00, sábado de manhã.",
         "nl": "Ma–vr 9.00–12.30 en 15.30–19.00 uur, za 's ochtends.",
-        "pl": "Pon.–pt. 9:00–12:30 i 15:30–19:00, sob. rano."
+        "pl": "Pon.–pt. 9:00–12:30 i 15:30–19:00, sob. rano.",
+        "cs": "Po–Pá 9:00–12:30 a 15:30–19:00, so dopoledne."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaragusa.it/",
@@ -3907,7 +4047,8 @@
         "it": "Emergenze festive: +39 380 7839368.",
         "pt": "Urgências em feriados: +39 380 7839368.",
         "nl": "Spoed op feestdagen: +39 380 7839368.",
-        "pl": "Nagłe przypadki w święta: +39 380 7839368."
+        "pl": "Nagłe przypadki w święta: +39 380 7839368.",
+        "cs": "Pohotovost o svátcích: +39 380 7839368."
       },
       "small_animals": true,
       "url": "https://www.clinicaamicomio.it/",
@@ -3933,7 +4074,8 @@
         "it": "Veterinario di guardia 24 ore su 24, tutti i giorni; clinica lun–ven 9:00–12:30 e 16:30–20:00, sab 9–13.",
         "pt": "Veterinário de serviço 24 horas por dia, todos os dias; clínica de segunda a sexta, 9h00–12h30 e 16h30–20h00, sábado 9h00–13h00.",
         "nl": "Dierenarts in achterwacht 24 uur per dag, elke dag; praktijk ma–vr 9.00–12.30 en 16.30–20.00 uur, za 9–13 uur.",
-        "pl": "Dyżur weterynaryjny całodobowo, codziennie; przychodnia pon.–pt. 9:00–12:30 i 16:30–20:00, sob. 9–13."
+        "pl": "Dyżur weterynaryjny całodobowo, codziennie; przychodnia pon.–pt. 9:00–12:30 i 16:30–20:00, sob. 9–13.",
+        "cs": "Veterinární pohotovostní služba nonstop každý den; ordinace Po–Pá 9:00–12:30 a 16:30–20:00, so 9:00–13:00."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariamagnagraecia.it/",
@@ -3960,7 +4102,8 @@
         "it": "Lun–ven 8:30–12:30 e 16:30–19:30, sab 8:30–12:00; casi urgenti per telefono durante gli orari di contatto.",
         "pt": "Segunda a sexta, 8h30–12h30 e 16h30–19h30, sábado 8h30–12h00; casos urgentes por telefone durante o horário de atendimento telefónico.",
         "nl": "Ma–vr 8.30–12.30 en 16.30–19.30 uur, za 8.30–12.00 uur; dringende gevallen telefonisch tijdens de contacturen.",
-        "pl": "Pon.–pt. 8:30–12:30 i 16:30–19:30, sob. 8:30–12:00; pilne przypadki telefonicznie w godzinach kontaktu."
+        "pl": "Pon.–pt. 8:30–12:30 i 16:30–19:30, sob. 8:30–12:00; pilne przypadki telefonicznie w godzinach kontaktu.",
+        "cs": "Po–Pá 8:30–12:30 a 16:30–19:30, so 8:30–12:00; naléhavé případy telefonicky v kontaktních hodinách."
       },
       "small_animals": true,
       "url": "https://www.veterinariovetland.it/",
@@ -3986,7 +4129,8 @@
         "it": "Pronto soccorso; disponibile anche nei festivi.",
         "pt": "Serviço de urgência; disponível também em feriados.",
         "nl": "Spoeddienst; ook op feestdagen beschikbaar.",
-        "pl": "Pogotowie weterynaryjne; dostępne także w święta."
+        "pl": "Pogotowie weterynaryjne; dostępne także w święta.",
+        "cs": "Pohotovostní služba; k dispozici i o státních svátcích."
       },
       "small_animals": true,
       "url": "https://www.centroveterinariosardo.it/",
@@ -4013,7 +4157,8 @@
         "it": "Casi urgenti: +39 342 1758375.",
         "pt": "Casos urgentes: +39 342 1758375.",
         "nl": "Dringende gevallen: +39 342 1758375.",
-        "pl": "Pilne przypadki: +39 342 1758375."
+        "pl": "Pilne przypadki: +39 342 1758375.",
+        "cs": "Naléhavé případy: +39 342 1758375."
       },
       "small_animals": true,
       "url": "https://www.ambulatorioveterinariodarwin.it/",
@@ -4040,7 +4185,8 @@
         "it": "Lun–ven 9:00–13:00 e 15:00–17:00; numero di reperibilità +39 328 0739567.",
         "pt": "Segunda a sexta, 9h00–13h00 e 15h00–17h00; número de urgência +39 328 0739567.",
         "nl": "Ma–vr 9.00–13.00 en 15.00–17.00 uur; achterwachtnummer +39 328 0739567.",
-        "pl": "Pon.–pt. 9:00–13:00 i 15:00–17:00; numer dyżurny +39 328 0739567."
+        "pl": "Pon.–pt. 9:00–13:00 i 15:00–17:00; numer dyżurny +39 328 0739567.",
+        "cs": "Po–Pá 9:00–13:00 a 15:00–17:00; pohotovostní číslo +39 328 0739567."
       },
       "small_animals": true,
       "url": "https://www.ambvetderosi.com/",
@@ -4065,7 +4211,8 @@
         "it": "Fine settimana e festivi; turno di reperibilità volontario per piccoli animali per comprensorio (PDF scaricabile). Nei giorni feriali: il proprio veterinario.",
         "pt": "Fins de semana e feriados; escala voluntária de urgência para animais de pequeno porte por distrito (PDF para descarregar). Dias úteis: o teu veterinário.",
         "nl": "Weekend en feestdagen; vrijwillig achterwachtrooster voor gezelschapsdieren per district (pdf-download). Op werkdagen: eigen dierenarts.",
-        "pl": "Weekendy i święta; ochotniczy dyżur weterynarzy małych zwierząt w podziale na rejony (do pobrania w PDF). W dni powszednie: własny weterynarz."
+        "pl": "Weekendy i święta; ochotniczy dyżur weterynarzy małych zwierząt w podziale na rejony (do pobrania w PDF). W dni powszednie: własny weterynarz.",
+        "cs": "O víkendech a státních svátcích; dobrovolná pohotovostní služba pro malá zvířata podle obvodů (ke stažení v PDF). Ve všední dny: vlastní veterinář."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer.com/it/download/reperibilita-veterinari-animali-daffezione-distretto-merano-val-venosta/",
@@ -4090,7 +4237,8 @@
         "it": "Fine settimana e festivi; turno di reperibilità volontario per piccoli animali per comprensorio (PDF scaricabile). Nei giorni feriali: il proprio veterinario.",
         "pt": "Fins de semana e feriados; escala voluntária de urgência para animais de pequeno porte por distrito (PDF para descarregar). Dias úteis: o teu veterinário.",
         "nl": "Weekend en feestdagen; vrijwillig achterwachtrooster voor gezelschapsdieren per district (pdf-download). Op werkdagen: eigen dierenarts.",
-        "pl": "Weekendy i święta; ochotniczy dyżur weterynarzy małych zwierząt w podziale na rejony (do pobrania w PDF). W dni powszednie: własny weterynarz."
+        "pl": "Weekendy i święta; ochotniczy dyżur weterynarzy małych zwierząt w podziale na rejony (do pobrania w PDF). W dni powszednie: własny weterynarz.",
+        "cs": "O víkendech a státních svátcích; dobrovolná pohotovostní služba pro malá zvířata podle obvodů (ke stažení v PDF). Ve všední dny: vlastní veterinář."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer.com/it/download/reperibilita-veterinari-per-animali-daffezione-bressanone/",
@@ -4115,7 +4263,8 @@
         "it": "Fine settimana e festivi; turno di reperibilità volontario per piccoli animali per comprensorio (PDF scaricabile). Nei giorni feriali: il proprio veterinario.",
         "pt": "Fins de semana e feriados; escala voluntária de urgência para animais de pequeno porte por distrito (PDF para descarregar). Dias úteis: o teu veterinário.",
         "nl": "Weekend en feestdagen; vrijwillig achterwachtrooster voor gezelschapsdieren per district (pdf-download). Op werkdagen: eigen dierenarts.",
-        "pl": "Weekendy i święta; ochotniczy dyżur weterynarzy małych zwierząt w podziale na rejony (do pobrania w PDF). W dni powszednie: własny weterynarz."
+        "pl": "Weekendy i święta; ochotniczy dyżur weterynarzy małych zwierząt w podziale na rejony (do pobrania w PDF). W dni powszednie: własny weterynarz.",
+        "cs": "O víkendech a státních svátcích; dobrovolná pohotovostní služba pro malá zvířata podle obvodů (ke stažení v PDF). Ve všední dny: vlastní veterinář."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer.com/it/download/reperibilita-veterinari-per-animali-daffezione-val-pusteria/",
@@ -4644,7 +4793,8 @@
         "it": "Clinica presidiata aperta 24 ore su 24, 365 giorni all'anno; orari della clinica 8:30–19:30, pronto soccorso 24 ore su 24.",
         "pt": "Clínica com pessoal presente aberta 24 horas por dia, 365 dias por ano; horário da clínica 8h30–19h30, urgências 0h00–24h00.",
         "nl": "Bemande praktijk 24 uur per dag open, 365 dagen per jaar; praktijktijden 08.30–19.30 uur, spoed 00–24 uur.",
-        "pl": "Przychodnia z obsadą otwarta całodobowo, 365 dni w roku; godziny przychodni 08:30–19:30, nagłe przypadki 0:00–24:00."
+        "pl": "Przychodnia z obsadą otwarta całodobowo, 365 dni w roku; godziny przychodni 08:30–19:30, nagłe przypadki 0:00–24:00.",
+        "cs": "Klinika s personálem nonstop, 365 dní v roce; ordinační doba 8:30–19:30, pohotovost 0:00–24:00."
       },
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-orobica/",
       "source_url": "https://www.anicura.it/cliniche/clinica-veterinaria-orobica/",
@@ -4670,7 +4820,8 @@
         "it": "Visite ambulatoriali 9:00–20:00 tutti i giorni, domeniche/festivi compresi; pronto soccorso 24 ore su 24, 7 giorni su 7, notti comprese.",
         "pt": "Consultas externas 9h00–20h00 todos os dias, incluindo domingos e feriados; serviço de urgência 24 h/24, 7 dias por semana, incluindo noites.",
         "nl": "Consulten 09.00–20.00 uur elke dag, ook op zon- en feestdagen; spoedeisende hulp (pronto soccorso) 24/7, ook 's nachts.",
-        "pl": "Wizyty ambulatoryjne 09:00–20:00 codziennie, także w niedziele i święta; pogotowie weterynaryjne całodobowo, 7 dni w tygodniu, także w nocy."
+        "pl": "Wizyty ambulatoryjne 09:00–20:00 codziennie, także w niedziele i święta; pogotowie weterynaryjne całodobowo, 7 dni w tygodniu, także w nocy.",
+        "cs": "Ambulantní vyšetření 9:00–20:00 každý den včetně nedělí a svátků; pohotovost nonstop včetně nocí."
       },
       "url": "https://www.gruppoanimalia.it/cliniche/ospedale-veterinario-dr-rosi/",
       "source_url": "https://www.clinicaveterinariadottpaolorosi.it/contatti/",
@@ -4696,7 +4847,8 @@
         "it": "Veterinario con visite a domicilio (senza clinica). Reperibilità telefonica 24 ore su 24 per le emergenze, notti/festivi compresi; visite di routine su appuntamento lun–ven 9:00–20:00, sab 9:00–13:00. Copre Brescia e provincia, Desenzano, Montichiari, Castiglione d/S, Verona.",
         "pt": "Veterinário ao domicílio (sem clínica). Urgências por telefone 24 horas por dia, incluindo noites e feriados; consultas de rotina sob marcação de segunda a sexta, 9h00–20h00, sábado 9h00–13h00. Cobre Brescia e província, Desenzano, Montichiari, Castiglione d/S, Verona.",
         "nl": "Mobiele dierenarts voor huisbezoeken (geen praktijk). Telefonische achterwacht 24 uur per dag voor spoed, ook 's nachts en op feestdagen; reguliere bezoeken op afspraak ma–vr 09.00–20.00 uur, za 09.00–13.00 uur. Actief in Brescia en provincie, Desenzano, Montichiari, Castiglione d/S, Verona.",
-        "pl": "Weterynarz wizyt domowych (bez przychodni). Dyżur telefoniczny całodobowo w nagłych przypadkach, także w nocy i w święta; wizyty rutynowe po wcześniejszym umówieniu pon.–pt. 09:00–20:00, sob. 09:00–13:00. Obsługuje Brescię i prowincję, Desenzano, Montichiari, Castiglione d/S, Weronę."
+        "pl": "Weterynarz wizyt domowych (bez przychodni). Dyżur telefoniczny całodobowo w nagłych przypadkach, także w nocy i w święta; wizyty rutynowe po wcześniejszym umówieniu pon.–pt. 09:00–20:00, sob. 09:00–13:00. Obsługuje Brescię i prowincję, Desenzano, Montichiari, Castiglione d/S, Weronę.",
+        "cs": "Mobilní veterinář s návštěvami doma (bez ordinace). Telefonická pohotovostní služba nonstop pro naléhavé případy včetně nocí a svátků; běžné návštěvy na objednání Po–Pá 9:00–20:00, so 9:00–13:00. Působí v Brescii a provincii, v Desenzanu, Montichiari, Castiglione d/S a ve Veroně."
       },
       "url": "https://www.tinavet.it/veterinario-domicilio-brescia-desenzano.php",
       "source_url": "https://www.tinavet.it/veterinario-domicilio-brescia-desenzano.php",
@@ -4723,7 +4875,8 @@
         "it": "Dal 1° luglio 2023: lun–sab 09:00–23:00 (festivi esclusi), dom 09:00–12:00 e 15:00–19:00. Il pronto soccorso notturno e festivo 24 ore su 24 è cessato.",
         "pt": "Desde 1 de julho de 2023: segunda a sábado, 9h00–23h00 (exceto feriados), domingo 9h00–12h00 e 15h00–19h00. O serviço de urgência 24 horas por dia, noturno e em feriados, terminou.",
         "nl": "Sinds 1 juli 2023: ma–za 09.00–23.00 uur (behalve feestdagen), zo 09.00–12.00 en 15.00–19.00 uur. De 24-uurs spoeddienst 's nachts en op feestdagen is beëindigd.",
-        "pl": "Od 1 lipca 2023: pon.–sob. 09:00–23:00 (z wyjątkiem świąt), niedz. 09:00–12:00 i 15:00–19:00. Całodobowy nocny i świąteczny dyżur pogotowia weterynaryjnego został zakończony."
+        "pl": "Od 1 lipca 2023: pon.–sob. 09:00–23:00 (z wyjątkiem świąt), niedz. 09:00–12:00 i 15:00–19:00. Całodobowy nocny i świąteczny dyżur pogotowia weterynaryjnego został zakończony.",
+        "cs": "Od 1. července 2023: Po–So 9:00–23:00 (mimo svátky), ne 9:00–12:00 a 15:00–19:00. Noční a sváteční nonstop pohotovost byla ukončena."
       },
       "url": "https://www.ospedaleveterinarioh24.it/",
       "source_url": "https://www.ospedaleveterinarioh24.it/",
@@ -4749,7 +4902,8 @@
         "it": "Lun–ven 09:00–19:00, sab 09:00–18:00; reperibilità telefonica la domenica e nei festivi 09:00–19:00; di notte indirizza alle cliniche di pronto soccorso vicine.",
         "pt": "Segunda a sexta, 9h00–19h00, sábado 9h00–18h00; urgências por telefone aos domingos e feriados, 9h00–19h00; à noite encaminha para clínicas de urgência próximas.",
         "nl": "Ma–vr 09.00–19.00 uur, za 09.00–18.00 uur; telefonische achterwacht zon- en feestdagen 09.00–19.00 uur; 's nachts wordt doorverwezen naar spoedklinieken in de buurt.",
-        "pl": "Pon.–pt. 09:00–19:00, sob. 09:00–18:00; dyżur telefoniczny w niedziele i święta 09:00–19:00; w nocy odsyła do pobliskich przychodni dla nagłych przypadków."
+        "pl": "Pon.–pt. 09:00–19:00, sob. 09:00–18:00; dyżur telefoniczny w niedziele i święta 09:00–19:00; w nocy odsyła do pobliskich przychodni dla nagłych przypadków.",
+        "cs": "Po–Pá 9:00–19:00, so 9:00–18:00; telefonická pohotovost v neděli a o svátcích 9:00–19:00; v noci odkazuje na blízké pohotovostní kliniky."
       },
       "note": "Page also shows Sat 10-12/15-18.",
       "url": "https://www.veterinariocornoldi.it/",
@@ -4776,7 +4930,8 @@
         "it": "Lun–ven 16:30–19:00, sab 10:00–12:00; fuori orario su appuntamento.",
         "pt": "Segunda a sexta, 16h30–19h00, sábado 10h00–12h00; fora de horas sob marcação.",
         "nl": "Ma–vr 16.30–19.00 uur, za 10.00–12.00 uur; buiten deze tijden op afspraak.",
-        "pl": "Pon.–pt. 16:30–19:00, sob. 10:00–12:00; poza godzinami po wcześniejszym umówieniu."
+        "pl": "Pon.–pt. 16:30–19:00, sob. 10:00–12:00; poza godzinami po wcześniejszym umówieniu.",
+        "cs": "Po–Pá 16:30–19:00, so 10:00–12:00; mimo tyto hodiny na objednání."
       },
       "url": "https://www.veterinariofreddi.com/",
       "source_url": "https://www.veterinariofreddi.com/",
@@ -4802,7 +4957,8 @@
         "it": "Lun–ven 09:00–13:00 e 14:30–20:00; sab–dom 09:00–13:00 e 14:30–19:30 (aperto nel weekend).",
         "pt": "Segunda a sexta, 9h00–13h00 e 14h30–20h00; sábado e domingo, 9h00–13h00 e 14h30–19h30 (aberto ao fim de semana).",
         "nl": "Ma–vr 09.00–13.00 en 14.30–20.00 uur; za–zo 09.00–13.00 en 14.30–19.30 uur (in het weekend open).",
-        "pl": "Pon.–pt. 09:00–13:00 i 14:30–20:00; sob.–niedz. 09:00–13:00 i 14:30–19:30 (otwarte w weekendy)."
+        "pl": "Pon.–pt. 09:00–13:00 i 14:30–20:00; sob.–niedz. 09:00–13:00 i 14:30–19:30 (otwarte w weekendy).",
+        "cs": "Po–Pá 9:00–13:00 a 14:30–20:00; so–ne 9:00–13:00 a 14:30–19:30 (otevřeno o víkendech)."
       },
       "url": "https://www.cvvf.it/",
       "source_url": "https://www.cvvf.it/contatti",
@@ -4828,7 +4984,8 @@
         "it": "Lun–ven 10:00–13:00 e 15:00–19:00, sab 10:00–13:00, chiuso la domenica; su appuntamento.",
         "pt": "Segunda a sexta, 10h00–13h00 e 15h00–19h00, sábado 10h00–13h00, domingo encerrado; sob marcação.",
         "nl": "Ma–vr 10.00–13.00 en 15.00–19.00 uur, za 10.00–13.00 uur, zo gesloten; op afspraak.",
-        "pl": "Pon.–pt. 10:00–13:00 i 15:00–19:00, sob. 10:00–13:00, niedz. zamknięte; po wcześniejszym umówieniu."
+        "pl": "Pon.–pt. 10:00–13:00 i 15:00–19:00, sob. 10:00–13:00, niedz. zamknięte; po wcześniejszym umówieniu.",
+        "cs": "Po–Pá 10:00–13:00 a 15:00–19:00, so 10:00–13:00, v neděli zavřeno; na objednání."
       },
       "url": "https://www.ambulatorioveterinariodalmine.com/",
       "source_url": "https://www.ambulatorioveterinariodalmine.com/contatti/",
@@ -4854,7 +5011,8 @@
         "it": "Lun–ven 09:00–13:00 e 15:00–19:00; visite su appuntamento.",
         "pt": "Segunda a sexta, 9h00–13h00 e 15h00–19h00; consultas sob marcação.",
         "nl": "Ma–vr 09.00–13.00 en 15.00–19.00 uur; consulten op afspraak.",
-        "pl": "Pon.–pt. 09:00–13:00 i 15:00–19:00; wizyty po wcześniejszym umówieniu."
+        "pl": "Pon.–pt. 09:00–13:00 i 15:00–19:00; wizyty po wcześniejszym umówieniu.",
+        "cs": "Po–Pá 9:00–13:00 a 15:00–19:00; vyšetření na objednání."
       },
       "url": "https://www.gardavet.com/",
       "source_url": "https://www.gardavet.com/",
@@ -4881,7 +5039,8 @@
         "it": "Lun–ven 10:00–12:00 e 16:00–19:00; sab 10:00–12:00 e 15:00–17:00.",
         "pt": "Segunda a sexta, 10h00–12h00 e 16h00–19h00; sábado 10h00–12h00 e 15h00–17h00.",
         "nl": "Ma–vr 10.00–12.00 en 16.00–19.00 uur; za 10.00–12.00 en 15.00–17.00 uur.",
-        "pl": "Pon.–pt. 10:00–12:00 i 16:00–19:00; sob. 10:00–12:00 i 15:00–17:00."
+        "pl": "Pon.–pt. 10:00–12:00 i 16:00–19:00; sob. 10:00–12:00 i 15:00–17:00.",
+        "cs": "Po–Pá 10:00–12:00 a 16:00–19:00; so 10:00–12:00 a 15:00–17:00."
       },
       "url": "https://www.clinicavetchiari.com/",
       "source_url": "https://www.clinicavetchiari.com/",
@@ -4907,7 +5066,8 @@
         "it": "Lun–ven 09:00–19:00 orario continuato, sab 09:00–13:00, chiuso la domenica; urgenze con priorità durante gli orari di apertura. Anche animali esotici.",
         "pt": "Segunda a sexta, 9h00–19h00 sem interrupção, sábado 9h00–13h00, domingo encerrado; urgências com prioridade durante o horário de funcionamento. Também animais exóticos.",
         "nl": "Ma–vr 09.00–19.00 uur doorlopend, za 09.00–13.00 uur, zo gesloten; spoed krijgt tijdens openingstijden voorrang. Ook exotische dieren.",
-        "pl": "Pon.–pt. 09:00–19:00 bez przerwy, sob. 09:00–13:00, niedz. zamknięte; nagłe przypadki mają pierwszeństwo w godzinach otwarcia. Także zwierzęta egzotyczne."
+        "pl": "Pon.–pt. 09:00–19:00 bez przerwy, sob. 09:00–13:00, niedz. zamknięte; nagłe przypadki mają pierwszeństwo w godzinach otwarcia. Także zwierzęta egzotyczne.",
+        "cs": "Po–Pá 9:00–19:00 bez polední přestávky, so 9:00–13:00, v neděli zavřeno; naléhavé případy mají v ordinační době přednost. Také exotická zvířata."
       },
       "url": "https://www.veterinarioanimaliesotici.com/",
       "source_url": "https://www.veterinarioanimaliesotici.com/contatti",
@@ -4947,7 +5107,8 @@
         "it": "Lun–ven 09:30–19:30, sab 09:30–17:00 (senza pausa pranzo); linea mobile separata per i casi urgenti 10:00–19:30. Nessun servizio notturno o 24 ore su 24.",
         "pt": "Segunda a sexta, 9h30–19h30, sábado 9h30–17h00 (sem pausa de almoço); linha móvel separada para casos urgentes, 10h00–19h30. Sem serviço noturno nem 24 horas por dia.",
         "nl": "Ma–vr 09.30–19.30 uur, za 09.30–17.00 uur (geen lunchpauze); aparte mobiele lijn voor dringende gevallen 10.00–19.30 uur. Geen nacht-/24-uursdienst.",
-        "pl": "Pon.–pt. 09:30–19:30, sob. 09:30–17:00 (bez przerwy obiadowej); osobny numer komórkowy dla pilnych przypadków 10:00–19:30. Brak obsługi nocnej i całodobowej."
+        "pl": "Pon.–pt. 09:30–19:30, sob. 09:30–17:00 (bez przerwy obiadowej); osobny numer komórkowy dla pilnych przypadków 10:00–19:30. Brak obsługi nocnej i całodobowej.",
+        "cs": "Po–Pá 9:30–19:30, so 9:30–17:00 (bez polední přestávky); samostatná mobilní linka pro naléhavé případy 10:00–19:30. Bez noční/nonstop služby."
       },
       "url": "https://www.clinicaveterinariaguidi.info/",
       "source_url": "https://www.clinicaveterinariaguidi.info/",
@@ -4973,7 +5134,8 @@
         "it": "Lun–sab 09:00–20:00 (telefonare prima per le fasce 9–10 e 12:30–15).",
         "pt": "Segunda a sábado, 9h00–20h00 (liga primeiro para os períodos 9h00–10h00 e 12h30–15h00).",
         "nl": "Ma–za 09.00–20.00 uur (bel eerst voor de tijdvakken 9–10 en 12.30–15 uur).",
-        "pl": "Pon.–sob. 09:00–20:00 (w godzinach 9–10 i 12:30–15 najpierw zadzwoń)."
+        "pl": "Pon.–sob. 09:00–20:00 (w godzinach 9–10 i 12:30–15 najpierw zadzwoń).",
+        "cs": "Po–So 9:00–20:00 (v době 9:00–10:00 a 12:30–15:00 nejprve zavolejte)."
       },
       "url": "https://clinicaveterinarinacaravaggio.jimdofree.com/",
       "source_url": "https://clinicaveterinarinacaravaggio.jimdofree.com/",
@@ -4999,7 +5161,8 @@
         "it": "Lun–dom 09:00–20:00 (7 giorni su 7).",
         "pt": "Segunda a domingo, 9h00–20h00 (7 dias por semana).",
         "nl": "Ma–zo 09.00–20.00 uur (7 dagen).",
-        "pl": "Pon.–niedz. 09:00–20:00 (7 dni w tygodniu)."
+        "pl": "Pon.–niedz. 09:00–20:00 (7 dni w tygodniu).",
+        "cs": "Po–Ne 9:00–20:00 (7 dní v týdnu)."
       },
       "url": "https://mypetclinic.it/cliniche/curno/",
       "source_url": "https://mypetclinic.it/cliniche/curno/",
@@ -5025,7 +5188,8 @@
         "it": "Lun–ven 09:00–19:00, sab 10:00–17:00, chiuso la domenica. Nessun pronto soccorso.",
         "pt": "Segunda a sexta, 9h00–19h00, sábado 10h00–17h00, domingo encerrado. Sem serviço de urgência.",
         "nl": "Ma–vr 09.00–19.00 uur, za 10.00–17.00 uur, zo gesloten. Geen spoeddienst.",
-        "pl": "Pon.–pt. 09:00–19:00, sob. 10:00–17:00, niedz. zamknięte. Brak pogotowia weterynaryjnego."
+        "pl": "Pon.–pt. 09:00–19:00, sob. 10:00–17:00, niedz. zamknięte. Brak pogotowia weterynaryjnego.",
+        "cs": "Po–Pá 9:00–19:00, so 10:00–17:00, v neděli zavřeno. Bez pohotovostní služby."
       },
       "url": "https://www.gruppoanimalia.it/cliniche/ambulatorio-veterinario-costa-volpino/",
       "source_url": "https://visitlakeiseo.info/en/info/vet/",
@@ -5103,7 +5267,8 @@
         "it": "Lun–ven 08:30–20:30; sab 09:30–13:00 e 17:00–20:00; meglio su appuntamento.",
         "pt": "Segunda a sexta, 8h30–20h30; sábado 9h30–13h00 e 17h00–20h00; de preferência com marcação.",
         "nl": "Ma–vr 08.30–20.30 uur; za 09.30–13.00 en 17.00–20.00 uur; bij voorkeur op afspraak.",
-        "pl": "Pon.–pt. 08:30–20:30; sob. 09:30–13:00 i 17:00–20:00; wskazane umówienie wizyty."
+        "pl": "Pon.–pt. 08:30–20:30; sob. 09:30–13:00 i 17:00–20:00; wskazane umówienie wizyty.",
+        "cs": "Po–Pá 8:30–20:30; so 9:30–13:00 a 17:00–20:00; nejlépe po objednání."
       },
       "url": "https://www.studioveterinariotaraschi.it/",
       "source_url": "https://www.studioveterinariotaraschi.it/contatti/",
@@ -5182,7 +5347,8 @@
         "it": "Aperto tutti i giorni 09:00–19:30.",
         "pt": "Aberto todos os dias, 9h00–19h30.",
         "nl": "Elke dag open 09.00–19.30 uur.",
-        "pl": "Otwarte codziennie 09:00–19:30."
+        "pl": "Otwarte codziennie 09:00–19:30.",
+        "cs": "Otevřeno každý den 9:00–19:30."
       },
       "url": "https://www.clinicaanimallife.it/",
       "source_url": "https://www.clinicaanimallife.it/contatti/",
@@ -5209,7 +5375,8 @@
         "it": "Lun–sab 09:30–19:00, chiuso la domenica.",
         "pt": "Segunda a sábado, 9h30–19h00, domingo encerrado.",
         "nl": "Ma–za 09.30–19.00 uur, zo gesloten.",
-        "pl": "Pon.–sob. 09:30–19:00, niedz. zamknięte."
+        "pl": "Pon.–sob. 09:30–19:00, niedz. zamknięte.",
+        "cs": "Po–So 9:30–19:00, v neděli zavřeno."
       },
       "url": "https://www.veterinariatac.com/index.htm",
       "source_url": "https://www.veterinariatac.com/index.htm",
@@ -5234,7 +5401,8 @@
         "it": "Lun–ven 09:00–19:00, sab 10:00–16:00. Numero di reperibilità fuori orario: +39 335 6569279.",
         "pt": "Segunda a sexta, 9h00–19h00, sábado 10h00–16h00. Número de urgência fora de horas: +39 335 6569279.",
         "nl": "Ma–vr 09.00–19.00 uur, za 10.00–16.00 uur. Achterwachtnummer buiten kantooruren: +39 335 6569279.",
-        "pl": "Pon.–pt. 09:00–19:00, sob. 10:00–16:00. Numer dyżurny poza godzinami: +39 335 6569279."
+        "pl": "Pon.–pt. 09:00–19:00, sob. 10:00–16:00. Numer dyżurny poza godzinami: +39 335 6569279.",
+        "cs": "Po–Pá 9:00–19:00, so 10:00–16:00. Pohotovostní číslo mimo ordinační dobu: +39 335 6569279."
       },
       "small_animals": true,
       "url": "https://www.ambulatorioveterinariobogonipasotti.com/",
@@ -5261,7 +5429,8 @@
         "it": "Su appuntamento; segreteria lun–ven 09:00–12:00 e 15:00–18:00.",
         "pt": "Sob marcação; secretaria de segunda a sexta, 9h00–12h00 e 15h00–18h00.",
         "nl": "Op afspraak; secretariaat ma–vr 09.00–12.00 en 15.00–18.00 uur.",
-        "pl": "Po wcześniejszym umówieniu; sekretariat pon.–pt. 09:00–12:00 i 15:00–18:00."
+        "pl": "Po wcześniejszym umówieniu; sekretariat pon.–pt. 09:00–12:00 i 15:00–18:00.",
+        "cs": "Na objednání; sekretariát Po–Pá 9:00–12:00 a 15:00–18:00."
       },
       "small_animals": true,
       "url": "https://www.veterinarisalo.it/",
@@ -5287,7 +5456,8 @@
         "it": "Su appuntamento; lun–ven 09:00–18:00, sab 09:00–13:00. WhatsApp +39 351 8277037.",
         "pt": "Sob marcação; segunda a sexta, 9h00–18h00, sábado 9h00–13h00. WhatsApp +39 351 8277037.",
         "nl": "Op afspraak; ma–vr 09.00–18.00 uur, za 09.00–13.00 uur. WhatsApp +39 351 8277037.",
-        "pl": "Po wcześniejszym umówieniu; pon.–pt. 09:00–18:00, sob. 09:00–13:00. WhatsApp +39 351 8277037."
+        "pl": "Po wcześniejszym umówieniu; pon.–pt. 09:00–18:00, sob. 09:00–13:00. WhatsApp +39 351 8277037.",
+        "cs": "Na objednání; Po–Pá 9:00–18:00, so 9:00–13:00. WhatsApp +39 351 8277037."
       },
       "small_animals": true,
       "url": "https://www.clinicayourpet.it/",
@@ -5313,7 +5483,8 @@
         "it": "Lun–ven 10:00–13:00 e 14:30–19:00, sab 10:00–16:00.",
         "pt": "Segunda a sexta, 10h00–13h00 e 14h30–19h00, sábado 10h00–16h00.",
         "nl": "Ma–vr 10.00–13.00 en 14.30–19.00 uur, za 10.00–16.00 uur.",
-        "pl": "Pon.–pt. 10:00–13:00 i 14:30–19:00, sob. 10:00–16:00."
+        "pl": "Pon.–pt. 10:00–13:00 i 14:30–19:00, sob. 10:00–16:00.",
+        "cs": "Po–Pá 10:00–13:00 a 14:30–19:00, so 10:00–16:00."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinarialalupa.it/",

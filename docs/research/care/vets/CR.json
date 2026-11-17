@@ -93,7 +93,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7, con pronto soccorso 24 ore su 24, 7 giorni su 7; appuntamenti tramite i suoi canali digitali.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, com serviço de urgência 24 h/24; marcações através dos canais digitais.",
         "nl": "24 uur per dag, 7 dagen per week open, met een spoeddienst de klok rond; afspraken maken via de digitale kanalen.",
-        "pl": "Czynne całodobowo, 7 dni w tygodniu, z całodobowym pogotowiem; wizyty umawiaj przez kanały cyfrowe."
+        "pl": "Czynne całodobowo, 7 dni w tygodniu, z całodobowym pogotowiem; wizyty umawiaj przez kanały cyfrowe.",
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, s pohotovostí 24/7; objednávejte se přes digitální kanály kliniky."
       }
     },
     {
@@ -115,7 +116,8 @@
         "it": "Cure ospedaliere e pronto soccorso 24 ore su 24; WhatsApp +506 6453 2349.",
         "pt": "Cuidados hospitalares e urgências 24 horas por dia; WhatsApp +506 6453 2349.",
         "nl": "Zorg in het dierenziekenhuis en spoed 24 uur per dag beschikbaar; WhatsApp +506 6453 2349.",
-        "pl": "Opieka szpitalna i nagłe przypadki całodobowo; WhatsApp +506 6453 2349."
+        "pl": "Opieka szpitalna i nagłe przypadki całodobowo; WhatsApp +506 6453 2349.",
+        "cs": "Hospitalizace a pohotovost nonstop; WhatsApp +506 6453 2349."
       }
     },
     {
@@ -136,7 +138,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, senza telefonare né prendere appuntamento; negozi aperti dal lunedì al sabato 8:00–20:00 e la domenica 8:00–19:00.",
         "pt": "Urgências 24 h/24, 7 dias por semana, sem necessidade de ligar nem de marcação; lojas abertas de segunda a sábado 8h00–20h00 e ao domingo 8h00–19h00.",
         "nl": "Spoeddienst de klok rond, zonder bellen of afspraak; winkels open maandag tot en met zaterdag 8.00–20.00 uur en zondag 8.00–19.00 uur.",
-        "pl": "Całodobowe pogotowie, bez dzwonienia i umawiania wizyt; sklepy czynne pon.–sob. 8:00–20:00 i w niedzielę 8:00–19:00."
+        "pl": "Całodobowe pogotowie, bez dzwonienia i umawiania wizyt; sklepy czynne pon.–sob. 8:00–20:00 i w niedzielę 8:00–19:00.",
+        "cs": "Pohotovost 24/7 bez předchozího volání či objednání; prodejny otevřeny Po–So 8:00–20:00 a v neděli 8:00–19:00."
       }
     },
     {
@@ -157,7 +160,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7, senza telefonare né prendere appuntamento; negozi aperti dal lunedì al sabato 8:00–20:00 e la domenica 8:00–19:00.",
         "pt": "Urgências 24 h/24, 7 dias por semana, sem necessidade de ligar nem de marcação; lojas abertas de segunda a sábado 8h00–20h00 e ao domingo 8h00–19h00.",
         "nl": "Spoeddienst de klok rond, zonder bellen of afspraak; winkels open maandag tot en met zaterdag 8.00–20.00 uur en zondag 8.00–19.00 uur.",
-        "pl": "Całodobowe pogotowie, bez dzwonienia i umawiania wizyt; sklepy czynne pon.–sob. 8:00–20:00 i w niedzielę 8:00–19:00."
+        "pl": "Całodobowe pogotowie, bez dzwonienia i umawiania wizyt; sklepy czynne pon.–sob. 8:00–20:00 i w niedzielę 8:00–19:00.",
+        "cs": "Pohotovost 24/7 bez předchozího volání či objednání; prodejny otevřeny Po–So 8:00–20:00 a v neděli 8:00–19:00."
       }
     },
     {
@@ -179,7 +183,8 @@
         "it": "Ospedale universitario per piccoli animali e fauna selvatica: dal lunedì al venerdì 9:00–19:00; nei weekend solo urgenze, 10:00–17:00. Non è un servizio 24 ore su 24; telefonare in anticipo.",
         "pt": "Hospital universitário de pequenos animais e animais selvagens: segunda a sexta 9h00–19h00; ao fim de semana só urgências, 10h00–17h00. Não funciona 24 horas; liga antes.",
         "nl": "Universitair dierenziekenhuis voor kleine huisdieren en wilde dieren: maandag tot en met vrijdag 9.00–19.00 uur; in het weekend alleen spoed, 10.00–17.00 uur. Geen 24-uursdienst; bel vooraf.",
-        "pl": "Uniwersytecki szpital dla małych zwierząt i dzikich zwierząt: pon.–pt. 9:00–19:00; w weekendy tylko nagłe przypadki, 10:00–17:00. Nie jest to usługa całodobowa; zadzwoń przed wizytą."
+        "pl": "Uniwersytecki szpital dla małych zwierząt i dzikich zwierząt: pon.–pt. 9:00–19:00; w weekendy tylko nagłe przypadki, 10:00–17:00. Nie jest to usługa całodobowa; zadzwoń przed wizytą.",
+        "cs": "Univerzitní nemocnice pro malá a divoká zvířata: Po–Pá 9:00–19:00; o víkendech pouze pohotovost, 10:00–17:00. Není nonstop; před cestou zavolejte."
       }
     },
     {
@@ -201,7 +206,8 @@
         "it": "Aperto tutti i giorni 8:00–22:00.",
         "pt": "Aberto todos os dias, 8h00–22h00.",
         "nl": "Dagelijks open 8.00–22.00 uur.",
-        "pl": "Czynne codziennie 8:00–22:00."
+        "pl": "Czynne codziennie 8:00–22:00.",
+        "cs": "Otevřeno denně 8:00–22:00."
       }
     },
     {
@@ -223,7 +229,8 @@
         "it": "Aperto tutti i giorni 9:00–21:00.",
         "pt": "Aberto todos os dias, 9h00–21h00.",
         "nl": "Dagelijks open 9.00–21.00 uur.",
-        "pl": "Czynne codziennie 9:00–21:00."
+        "pl": "Czynne codziennie 9:00–21:00.",
+        "cs": "Otevřeno denně 9:00–21:00."
       }
     },
     {
@@ -245,7 +252,8 @@
         "it": "Dal lunedì al sabato 9:00–12:00 e 14:00–19:00, solo su appuntamento; numero per le urgenze 8301 3271 (WhatsApp).",
         "pt": "Segunda a sábado 9h00–12h00 e 14h00–19h00, sob marcação; número de urgência 8301 3271 (WhatsApp).",
         "nl": "Maandag tot en met zaterdag 9.00–12.00 en 14.00–19.00 uur, alleen op afspraak; spoednummer 8301 3271 (WhatsApp).",
-        "pl": "Pon.–sob. 9:00–12:00 i 14:00–19:00, tylko po wcześniejszym umówieniu; numer alarmowy 8301 3271 (WhatsApp)."
+        "pl": "Pon.–sob. 9:00–12:00 i 14:00–19:00, tylko po wcześniejszym umówieniu; numer alarmowy 8301 3271 (WhatsApp).",
+        "cs": "Po–So 9:00–12:00 a 14:00–19:00, pouze na objednání; pohotovostní číslo 8301 3271 (WhatsApp)."
       }
     },
     {
@@ -267,7 +275,8 @@
         "it": "Ospedale aperto tutti i giorni 8:00–20:00, festivi inclusi, con pronto soccorso 24 ore su 24 per cani e gatti; secondo telefono +506 4700 1898.",
         "pt": "Hospital aberto todos os dias 8h00–20h00, incluindo feriados, com urgências 24 horas por dia para cães e gatos; segundo telefone +506 4700 1898.",
         "nl": "Dierenziekenhuis dagelijks open 8.00–20.00 uur, ook op feestdagen, met spoedzorg de klok rond voor honden en katten; tweede telefoonnummer +506 4700 1898.",
-        "pl": "Szpital czynny codziennie 8:00–20:00, także w święta, z całodobową pomocą w nagłych przypadkach dla psów i kotów; drugi telefon +506 4700 1898."
+        "pl": "Szpital czynny codziennie 8:00–20:00, także w święta, z całodobową pomocą w nagłych przypadkach dla psów i kotów; drugi telefon +506 4700 1898.",
+        "cs": "Nemocnice otevřená denně 8:00–20:00 včetně svátků, s nonstop pohotovostí pro psy a kočky; druhý telefon +506 4700 1898."
       }
     },
     {
@@ -289,7 +298,8 @@
         "it": "Dal lunedì al venerdì 8:00–21:00, sabato 9:00–19:00, domenica e festivi 9:00–17:00. Secondo telefono +506 4700 0518.",
         "pt": "Segunda a sexta 8h00–21h00, sábado 9h00–19h00, domingo e feriados 9h00–17h00. Segundo telefone +506 4700 0518.",
         "nl": "Maandag tot en met vrijdag 8.00–21.00 uur, zaterdag 9.00–19.00 uur, zondag en feestdagen 9.00–17.00 uur. Tweede telefoonnummer +506 4700 0518.",
-        "pl": "Pon.–pt. 8:00–21:00, sob. 9:00–19:00, niedz. i święta 9:00–17:00. Drugi telefon +506 4700 0518."
+        "pl": "Pon.–pt. 8:00–21:00, sob. 9:00–19:00, niedz. i święta 9:00–17:00. Drugi telefon +506 4700 0518.",
+        "cs": "Po–Pá 8:00–21:00, so 9:00–19:00, ne a svátky 9:00–17:00. Druhý telefon +506 4700 0518."
       }
     },
     {
@@ -311,7 +321,8 @@
         "it": "Dal lunedì al sabato 7:30–19:00, domenica 8:00–14:00; linea urgenze +506 8817 0000; WhatsApp +506 8661 1717.",
         "pt": "Segunda a sábado 7h30–19h00, domingo 8h00–14h00; linha de urgência +506 8817 0000; WhatsApp +506 8661 1717.",
         "nl": "Maandag tot en met zaterdag 7.30–19.00 uur, zondag 8.00–14.00 uur; spoedlijn +506 8817 0000; WhatsApp +506 8661 1717.",
-        "pl": "Pon.–sob. 7:30–19:00, niedz. 8:00–14:00; linia alarmowa +506 8817 0000; WhatsApp +506 8661 1717."
+        "pl": "Pon.–sob. 7:30–19:00, niedz. 8:00–14:00; linia alarmowa +506 8817 0000; WhatsApp +506 8661 1717.",
+        "cs": "Po–So 7:30–19:00, ne 8:00–14:00; pohotovostní linka +506 8817 0000; WhatsApp +506 8661 1717."
       }
     },
     {
@@ -333,7 +344,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7, con urgenze veterinarie 24 ore su 24, 7 giorni su 7; WhatsApp allo stesso numero.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, com urgências veterinárias 24 h/24; WhatsApp no mesmo número.",
         "nl": "24 uur per dag, 7 dagen per week open, met spoeddienst voor dieren de klok rond; WhatsApp op hetzelfde nummer.",
-        "pl": "Czynne całodobowo, 7 dni w tygodniu, z całodobowym pogotowiem weterynaryjnym; WhatsApp pod tym samym numerem."
+        "pl": "Czynne całodobowo, 7 dni w tygodniu, z całodobowym pogotowiem weterynaryjnym; WhatsApp pod tym samym numerem.",
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, s veterinární pohotovostí 24/7; WhatsApp na stejném čísle."
       }
     },
     {
@@ -355,7 +367,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7, con urgenze veterinarie 24 ore su 24, 7 giorni su 7; WhatsApp allo stesso numero.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana, com urgências veterinárias 24 h/24; WhatsApp no mesmo número.",
         "nl": "24 uur per dag, 7 dagen per week open, met spoeddienst voor dieren de klok rond; WhatsApp op hetzelfde nummer.",
-        "pl": "Czynne całodobowo, 7 dni w tygodniu, z całodobowym pogotowiem weterynaryjnym; WhatsApp pod tym samym numerem."
+        "pl": "Czynne całodobowo, 7 dni w tygodniu, z całodobowym pogotowiem weterynaryjnym; WhatsApp pod tym samym numerem.",
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, s veterinární pohotovostí 24/7; WhatsApp na stejném čísle."
       }
     },
     {
@@ -377,7 +390,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; secondo telefono +506 2203 1944.",
         "pt": "Urgências 24 h/24; segundo telefone +506 2203 1944.",
         "nl": "Spoeddienst de klok rond; tweede telefoonnummer +506 2203 1944.",
-        "pl": "Całodobowe pogotowie; drugi telefon +506 2203 1944."
+        "pl": "Całodobowe pogotowie; drugi telefon +506 2203 1944.",
+        "cs": "Pohotovost 24/7; druhý telefon +506 2203 1944."
       }
     },
     {
@@ -399,7 +413,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7; secondo telefono +506 2278 2681.",
         "pt": "Urgências 24 h/24; segundo telefone +506 2278 2681.",
         "nl": "Spoeddienst de klok rond; tweede telefoonnummer +506 2278 2681.",
-        "pl": "Całodobowe pogotowie; drugi telefon +506 2278 2681."
+        "pl": "Całodobowe pogotowie; drugi telefon +506 2278 2681.",
+        "cs": "Pohotovost 24/7; druhý telefon +506 2278 2681."
       }
     },
     {
@@ -420,7 +435,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7 per cani e gatti, festivi inclusi; WhatsApp +506 8780 5273.",
         "pt": "Urgências 24 h/24 para cães e gatos, incluindo feriados; WhatsApp +506 8780 5273.",
         "nl": "Spoedzorg de klok rond voor honden en katten, ook op feestdagen; WhatsApp +506 8780 5273.",
-        "pl": "Całodobowa pomoc w nagłych przypadkach dla psów i kotów, także w święta; WhatsApp +506 8780 5273."
+        "pl": "Całodobowa pomoc w nagłych przypadkach dla psów i kotów, także w święta; WhatsApp +506 8780 5273.",
+        "cs": "Pohotovost 24/7 pro psy a kočky, včetně svátků; WhatsApp +506 8780 5273."
       }
     },
     {
@@ -441,7 +457,8 @@
         "it": "Dal lunedì al sabato 8:00–20:30; pronto soccorso 24 ore su 24, 7 giorni su 7 fuori dall'orario ordinario; WhatsApp e secondo telefono +506 4070 0543.",
         "pt": "Segunda a sábado 8h00–20h30; urgências 24 h/24 fora do horário normal; WhatsApp e segundo telefone +506 4070 0543.",
         "nl": "Maandag tot en met zaterdag 8.00–20.30 uur; buiten de reguliere uren spoeddienst de klok rond; WhatsApp en tweede telefoonnummer +506 4070 0543.",
-        "pl": "Pon.–sob. 8:00–20:30; poza tymi godzinami całodobowe pogotowie; WhatsApp i drugi telefon +506 4070 0543."
+        "pl": "Pon.–sob. 8:00–20:30; poza tymi godzinami całodobowe pogotowie; WhatsApp i drugi telefon +506 4070 0543.",
+        "cs": "Po–So 8:00–20:30; mimo ordinační dobu pohotovost 24/7; WhatsApp a druhý telefon +506 4070 0543."
       }
     },
     {
@@ -476,7 +493,8 @@
         "it": "Urgenze notturne 18:00–06:00 tutti i giorni e la domenica solo urgenze; WhatsApp +506 8764 0777. Telefonare in anticipo per confermare gli orari.",
         "pt": "Urgências noturnas das 18h00 às 6h00, todos os dias, e ao domingo apenas urgências; WhatsApp +506 8764 0777. Liga antes para confirmar o horário.",
         "nl": "Nachtspoed dagelijks 18.00–6.00 uur en op zondag alleen spoed; WhatsApp +506 8764 0777. Bel vooraf om de uren te bevestigen.",
-        "pl": "Nocne pogotowie codziennie 18:00–06:00, a w niedziele tylko nagłe przypadki; WhatsApp +506 8764 0777. Zadzwoń, by potwierdzić godziny."
+        "pl": "Nocne pogotowie codziennie 18:00–06:00, a w niedziele tylko nagłe przypadki; WhatsApp +506 8764 0777. Zadzwoń, by potwierdzić godziny.",
+        "cs": "Noční pohotovost denně 18:00–6:00 a v neděli pouze pohotovost; WhatsApp +506 8764 0777. Otevírací dobu si před cestou ověřte telefonicky."
       }
     }
   ],

@@ -2,8 +2,16 @@
   "country": "ZM",
   "checked": "2026-11-16",
   "sources": [
-    { "name": "University of Zambia - Veterinary Medicine clinic (Products and Services offered)", "url": "https://www.unza.zm/node/1630", "note": "Official university page: address, phone, opening hours. No 24 h claim." },
-    { "name": "University of Zambia - School of Veterinary Medicine, Contact", "url": "https://unza.zm/veterinary-medicine/contacts", "note": "School address and switchboard; lists no clinic." }
+    {
+      "name": "University of Zambia - Veterinary Medicine clinic (Products and Services offered)",
+      "url": "https://www.unza.zm/node/1630",
+      "note": "Official university page: address, phone, opening hours. No 24 h claim."
+    },
+    {
+      "name": "University of Zambia - School of Veterinary Medicine, Contact",
+      "url": "https://unza.zm/veterinary-medicine/contacts",
+      "note": "School address and switchboard; lists no clinic."
+    }
   ],
   "entries": [
     {
@@ -19,7 +27,10 @@
       "url": "https://www.unza.zm/node/1630",
       "source_url": "https://www.unza.zm/node/1630",
       "checked": "2026-11-16",
-      "note": "Phone and hours opened on the unza.zm page. Email on that page: unzavetclinic@unza.zm (page has a stray space). WikiVet (secondary, not used as source) mentions an emergency number 097 8822000 and reception 01 291515, but no unza.zm page confirmed them, so not published and no 24 h claim. unza.zm/veterinary-medicine/services returned a fetch error."
+      "note": "Phone and hours opened on the unza.zm page. Email on that page: unzavetclinic@unza.zm (page has a stray space). WikiVet (secondary, not used as source) mentions an emergency number 097 8822000 and reception 01 291515, but no unza.zm page confirmed them, so not published and no 24 h claim. unza.zm/veterinary-medicine/services returned a fetch error.",
+      "duty_i18n": {
+        "cs": "Otevřeno Po–Pá 8:00–17:00, so 9:00–12:30, ne a státní svátky 10:00–12:00. Velká i malá zvířata; výuková klinika."
+      }
     }
   ],
   "notes": "Only one clinic confirmed on an official/own page. The Zambia Veterinary Association and Veterinary Council of Zambia sites were not found/reachable by search (no member or practice list opened). Private clinics (Petvet Lilayi, Loving Hand Vet Clinic, KAWS Kitwe, House Call Vet etc.) appear only in aggregator directories (vetshopzambia.com, bizbwana.com), which are not accepted as sole source, so they are left out. No duty rota or poison line found. Left: find own sites/Facebook pages of Lusaka, Kitwe, Ndola, Livingstone, Kabwe, Chipata clinics; ZVA / VCZ / MFL registers."

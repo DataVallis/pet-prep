@@ -47,7 +47,10 @@
       "url": "https://asociados.vet/",
       "source_url": "https://asociados.vet/",
       "checked": "2026-11-16",
-      "note": "Page wording: 'Abierto 24 Horas / Emergencias'; booking form also says 'Las Colinas Hospital 24 Horas'. Address on page: 'Las Colinas, de la Iglesia España 1c al este'."
+      "note": "Page wording: 'Abierto 24 Horas / Emergencias'; booking form also says 'Las Colinas Hospital 24 Horas'. Address on page: 'Las Colinas, de la Iglesia España 1c al este'.",
+      "duty_i18n": {
+        "cs": "Otevřeno nonstop, včetně pohotovosti. Telefon/WhatsApp +505 8966-5221."
+      }
     },
     {
       "kind": "clinic",
@@ -62,7 +65,10 @@
       "url": "https://asociados.vet/",
       "source_url": "https://asociados.vet/",
       "checked": "2026-11-16",
-      "note": "No 24 h wording for this location; 24 h care is at Las Colinas."
+      "note": "No 24 h wording for this location; 24 h care is at Las Colinas.",
+      "duty_i18n": {
+        "cs": "Otevřeno od pondělí do soboty 8:00–18:00."
+      }
     },
     {
       "kind": "clinic",
@@ -77,7 +83,10 @@
       "url": "https://www.sos-animales-nica.org/vetclinic",
       "source_url": "https://www.sos-animales-nica.org/vetclinic",
       "checked": "2026-11-16",
-      "note": "Nonprofit rescue clinic. Email on the home page: sos.animales.nica@gmail.com. No emergency wording."
+      "note": "Nonprofit rescue clinic. Email on the home page: sos.animales.nica@gmail.com. No emergency wording.",
+      "duty_i18n": {
+        "cs": "Otevřeno Po–Pá 9:00–17:00, v sobotu a v neděli zavřeno."
+      }
     }
   ],
   "notes": "Thin coverage: search returned mostly aggregators, theses and classifieds; only 3 entries had an own-site page with phone and hours. No official Nicaraguan veterinary college/association (CMVN), MAG/IPSA or university vet-hospital page listing clinics was found or usable. La Prensa article could not be fetched (client_error). Leads not verified (only names, from a Ficohsa promo PDF): Vet Life Clinica Veterinaria (Granada), VetNorte and Todo Para Tu Mascota (Esteli), Veterinaria Her Za and Farmacia Veterinaria Bienestar Animal (Leon), Clinica Veterinaria Manchas (Carazo), Clinica Veterinaria Robles / Dog Happy / Dog's House / Rances / AquaNimal (Managua), Raymari (Bolonia, Managua, phone 2264-0072 mentioned on a third-party blog). Not used: Yo Pet Clinic (suspicious, non-Nicaraguan contact number), Innova Pet's (demo site). No duty-rota page and no animal poison line found for Nicaragua."

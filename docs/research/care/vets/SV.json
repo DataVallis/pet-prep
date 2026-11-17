@@ -42,7 +42,10 @@
       "url": "https://www.chivopets.sv/",
       "source_url": "https://www.chivopets.sv/",
       "checked": "2026-11-16",
-      "note": "Address from elsalvador.com 2026 article; official page gives only area plus map link. A 2025 news item reported a presidential order to close Chivo Pets; 2026 articles and the live site show it operating."
+      "note": "Address from elsalvador.com 2026 article; official page gives only area plus map link. A 2025 news item reported a presidential order to close Chivo Pets; 2026 articles and the live site show it operating.",
+      "duty_i18n": {
+        "cs": "Pohotovost každý den, nonstop. Kontaktní centrum 195."
+      }
     },
     {
       "kind": "clinic",
@@ -57,7 +60,10 @@
       "url": "https://veterinarialosheroes.com/",
       "source_url": "https://veterinarialosheroes.com/",
       "checked": "2026-11-16",
-      "note": "Page gives no street number or regular hours. A directory (not used as source) places a Los Heroes clinic in Antiguo Cuscatlan - location unconfirmed."
+      "note": "Page gives no street number or regular hours. A directory (not used as source) places a Los Heroes clinic in Antiguo Cuscatlan - location unconfirmed.",
+      "duty_i18n": {
+        "cs": "Veterinární péče a pohotovostní pomoc 24 hodin denně, 7 dní v týdnu. Pohotovostní linka +503 2226 1062; WhatsApp +503 7606 6066."
+      }
     },
     {
       "kind": "clinic",
@@ -72,7 +78,10 @@
       "url": "https://veterinarialamascota.com/",
       "source_url": "https://veterinarialamascota.com/",
       "checked": "2026-11-16",
-      "note": "Other number on page: +503 7730-6086. No opening times on the page."
+      "note": "Other number on page: +503 7730-6086. No opening times on the page.",
+      "duty_i18n": {
+        "cs": "Pohotovostní péče nonstop. Otevřeno od pondělí do neděle."
+      }
     }
   ],
   "notes": "Only 3 entries. No official register of the Junta de Vigilancia de la Profesion Medico Veterinaria (CSSP) with a clinic list was found; only regulation PDFs surfaced. No duty rota or animal poison line found. Clinic own sites for Polivetsv, Hospital Veterinario San Francisco, La Sultana, Mascotic, San Miguel Clinica Veterinaria, MEDIVET (Santa Tecla), Animal Life, Hospital Canino Real, TUVET, Veterinaria San Juan, Clinica Gigante could not be surfaced by search (only aggregators vet24.company / happycat.net listed them), and veterinariasanjuan.com / veterinariagigante.com were refused (PROVENANCE_REQUIRED). Presidencia.gob.sv page failed. Nothing found for Santa Ana, San Miguel, El Tunco, Suchitoto, Ruta de las Flores from clinic or official pages. UES clinic (Thursdays 8-12) known only from a 2024 news article."

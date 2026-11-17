@@ -44,7 +44,8 @@
       "checked": "2026-11-15",
       "note": "Page lists 0263291354 / 059 643 9832; school line +233 302 500381. No emergency or 24 h statement. Page title labels it VTH.",
       "duty_i18n": {
-        "pl": "pon.–pt. 8:00–17:00, sob. 8:00–13:00, w niedzielę zamknięte. Psy i koty: konsultacje, szczepienia, laboratorium, USG, chirurgia, mikroczipowanie, apteka."
+        "pl": "pon.–pt. 8:00–17:00, sob. 8:00–13:00, w niedzielę zamknięte. Psy i koty: konsultacje, szczepienia, laboratorium, USG, chirurgia, mikroczipowanie, apteka.",
+        "cs": "Po–Pá 08:00–17:00, so 08:00–13:00, v neděli zavřeno. Psi a kočky: vyšetření, očkování, laboratoř, ultrazvuk, chirurgie, mikročipování, lékárna."
       }
     },
     {
@@ -61,7 +62,8 @@
       "checked": "2026-11-15",
       "note": "Second number 0502470223 on /contact and /emergency. No street address. Builder-hosted site (vercel.app). Emergency page quote: 'We respond as fast as we can and refer you to a clinic if we can't attend.' No 24 h claim.",
       "duty_i18n": {
-        "pl": "Mobilny weterynarz obsługujący Accrę, Tema i Kasoa. pon.–sob. 8:00–18:00; w nagłych przypadkach zadzwoń lub napisz na WhatsAppie, a jeśli nie może przyjechać, skieruje do przychodni."
+        "pl": "Mobilny weterynarz obsługujący Accrę, Tema i Kasoa. pon.–sob. 8:00–18:00; w nagłych przypadkach zadzwoń lub napisz na WhatsAppie, a jeśli nie może przyjechać, skieruje do przychodni.",
+        "cs": "Pojízdný veterinář pro Accru, Temu a Kasou. Po–so 08:00–18:00; v naléhavých případech volejte nebo pište na WhatsApp, pokud nemohou přijet, odkážou vás na kliniku."
       }
     },
     {
@@ -79,7 +81,8 @@
       "checked": "2026-11-15",
       "note": "Phone is the general university line, not a clinic line; no hours or emergency statement on the page.",
       "duty_i18n": {
-        "pl": "Uniwersytecka przychodnia weterynaryjna dla małych zwierząt; zadzwoń na numer uczelni, aby potwierdzić godziny."
+        "pl": "Uniwersytecka przychodnia weterynaryjna dla małych zwierząt; zadzwoń na numer uczelni, aby potwierdzić godziny.",
+        "cs": "Univerzitní veterinární klinika pro malá zvířata; ordinační dobu si ověřte na univerzitní lince."
       }
     },
     {
@@ -96,7 +99,8 @@
       "checked": "2026-11-15",
       "note": "No clinic phone or hours found on any opened page (KNUST news pages carry only the university relations line +233 5000 99299). ICU and overnight wards per the MyJoyOnline article; no 24 h claim. url is the KNUST SVM page that mentions the hospital.",
       "duty_i18n": {
-        "pl": "Uniwersytecka lecznica kliniczna z oddziałem intensywnej terapii, salami nocnymi i hotelem dla zwierząt; zadzwoń wcześniej w sprawie godzin."
+        "pl": "Uniwersytecka lecznica kliniczna z oddziałem intensywnej terapii, salami nocnymi i hotelem dla zwierząt; zadzwoń wcześniej w sprawie godzin.",
+        "cs": "Univerzitní výuková nemocnice s jednotkou intenzivní péče, nočními odděleními a hotelem pro zvířata; ordinační dobu zjistěte telefonicky."
       }
     },
     {
@@ -113,7 +117,8 @@
       "checked": "2026-11-15",
       "note": "Commissioned 22 Sep 2023; page says 'all kinds of animals' (pets not named separately); a GNA article says pets and food animals of personnel and civilians. No phone, hours or 24 h statement.",
       "duty_i18n": {
-        "pl": "Przychodnia weterynaryjna z apteką, laboratorium i salą operacyjną, przeznaczona dla personelu Sił Powietrznych i mieszkańców Regionu Zachodniego; godziny podaje Ghana Air Force."
+        "pl": "Przychodnia weterynaryjna z apteką, laboratorium i salą operacyjną, przeznaczona dla personelu Sił Powietrznych i mieszkańców Regionu Zachodniego; godziny podaje Ghana Air Force.",
+        "cs": "Veterinární klinika s lékárnou, laboratoří a operačním sálem, určená pro příslušníky letectva a širší Western Region; ordinační dobu zjistěte u Ghana Air Force."
       }
     }
   ],
