@@ -1420,7 +1420,9 @@ test('Miniature Schnauzer (M5-R10-27): up to 1 hour (RKC), FCI weight and height
 test('Shih Tzu (M5-R10-28): up to 1 hour (RKC), FCI weight for both sexes, PDSA height, FCI group 9 section 5 Tibet (China), VetCompass median + RKC band, Coren 70, short-muzzle chip, brushing every day', () => {
   const d = registry.breeds.find((b) => b.id === 'shih_tzu');
   assert.deepEqual(d.name, { en: 'Shih Tzu', sl: 'Shih tzu' });
-  assert.deepEqual(d.portrait, { file: 'shih-tzu.webp', width: 1024, height: 1024, kind: 'ai_photo' });
+  // Colour variants (backfill 2026-11-17) are covered by the generic colour-variant test.
+  const { colours: _colours, ...portrait } = d.portrait;
+  assert.deepEqual(portrait, { file: 'shih-tzu.webp', width: 1024, height: 1024, kind: 'ai_photo' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S231']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 208, group: 9, section: 5, origin: 'CN-XZ' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [4.5, 8], female: [4.5, 8] }, ['S229']]]);
