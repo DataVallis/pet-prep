@@ -8,7 +8,8 @@
     "it": "Bevande per sportivi",
     "fi": "Urheilujuomat",
     "nb": "Sportsdrikker",
-    "de": "Sportgetränke"
+    "de": "Sportgetränke",
+    "es": "Bebidas deportivas"
   },
   "question": {
     "en": "Can dogs drink sports drinks?",
@@ -17,7 +18,8 @@
     "it": "I cani possono bere le bevande per sportivi?",
     "fi": "Saako koira juoda urheilujuomia?",
     "nb": "Kan hunder drikke sportsdrikker?",
-    "de": "Dürfen Hunde Sportgetränke trinken?"
+    "de": "Dürfen Hunde Sportgetränke trinken?",
+    "es": "¿Pueden los perros beber bebidas deportivas?"
   },
   "url_slug": {
     "en": "sports-drinks",
@@ -26,7 +28,8 @@
     "it": "bevande-per-sportivi",
     "fi": "urheilujuomat",
     "nb": "sportsdrikker",
-    "de": "sportgetraenke"
+    "de": "sportgetraenke",
+    "es": "bebidas-deportivas"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "it": "No, i cani non devono bere bevande per sportivi come il Gatorade. Un minuscolo sorso non è strettamente tossico, ma queste bevande contengono troppo sodio e zucchero, che possono irritare lo stomaco del cane e peggiorare la disidratazione. Le versioni senza zucchero possono contenere xilitolo, che è altamente tossico.",
     "fi": "Ei saa. Koiran ei pidä juoda urheilujuomia, kuten Gatoradea. Pieni siemaus ei ole varsinaisesti myrkyllinen, mutta niissä on liikaa natriumia ja sokeria, jotka voivat sotkea koiran vatsan ja pahentaa nestehukkaa. Sokerittomissa versioissa voi olla ksylitolia, joka on erittäin myrkyllistä.",
     "nb": "Nei, hunder bør ikke drikke sportsdrikker som Gatorade. En liten slurk er ikke strengt tatt giftig, men de inneholder for mye natrium og sukker, som kan gi hunden urolig mage og forverre dehydrering. Sukkerfrie varianter kan inneholde xylitol, som er svært giftig.",
-    "de": "Nein, Hunde sollten keine Sportgetränke wie Gatorade trinken. Ein winziger Schluck ist nicht unbedingt giftig, aber Sportgetränke enthalten zu viel Natrium und Zucker, was den Magen eines Hundes reizen und die Austrocknung verschlimmern kann. Zuckerfreie Varianten können Xylit enthalten, das hochgiftig ist."
+    "de": "Nein, Hunde sollten keine Sportgetränke wie Gatorade trinken. Ein winziger Schluck ist nicht unbedingt giftig, aber Sportgetränke enthalten zu viel Natrium und Zucker, was den Magen eines Hundes reizen und die Austrocknung verschlimmern kann. Zuckerfreie Varianten können Xylit enthalten, das hochgiftig ist.",
+    "es": "No, los perros no deben beber bebidas deportivas como Gatorade. Un sorbito diminuto no es estrictamente tóxico, pero llevan demasiado sodio y azúcar, lo que puede sentar mal al estómago del perro y empeorar la deshidratación. Las versiones sin azúcar pueden contener xilitol, que es muy tóxico."
   },
   "why": {
     "en": "Human sports drinks contain excessive amounts of sodium and sugar, as well as artificial ingredients that aren't appropriate for dogs. CityVet says a tiny sip isn't strictly toxic but is highly discouraged, while PetMD says dogs should not drink Gatorade at all, so we follow the stricter advice. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -45,7 +49,8 @@
     "it": "Le bevande per sportivi destinate alle persone contengono quantità eccessive di sodio e zucchero, oltre a ingredienti artificiali non adatti ai cani. CityVet dice che un minuscolo sorso non è strettamente tossico ma è fortemente sconsigliato, mentre PetMD dice che i cani non devono bere affatto Gatorade, quindi seguiamo il consiglio più severo. Molte bevande a zero zuccheri contengono xilitolo, che è altamente tossico per i cani.",
     "fi": "Ihmisille tarkoitetuissa urheilujuomissa on liikaa natriumia ja sokeria sekä keinotekoisia aineita, jotka eivät sovi koirille. CityVetin mukaan pieni siemaus ei ole varsinaisesti myrkyllinen, mutta sitä ei suositella lainkaan, ja PetMD:n mukaan koiran ei pidä juoda Gatoradea ollenkaan, joten noudatamme tiukempaa ohjetta. Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä.",
     "nb": "Sportsdrikker for mennesker inneholder altfor mye natrium og sukker, og kunstige ingredienser som ikke passer for hunder. CityVet sier at en liten slurk ikke er strengt tatt giftig, men sterkt frarådet, mens PetMD sier at hunder ikke bør drikke Gatorade i det hele tatt, så vi følger det strengeste rådet. Mange sukkerfrie drikker inneholder xylitol, som er svært giftig for hunder.",
-    "de": "Sportgetränke für Menschen enthalten übermäßig viel Natrium und Zucker sowie künstliche Zusatzstoffe, die für Hunde nicht geeignet sind. Laut CityVet ist ein winziger Schluck nicht unbedingt giftig, aber dringend abzuraten; PetMD sagt, Hunde sollten Gatorade gar nicht trinken – wir folgen dem strengeren Rat. Viele zuckerfreie Getränke enthalten Xylit, das für Hunde hochgiftig ist."
+    "de": "Sportgetränke für Menschen enthalten übermäßig viel Natrium und Zucker sowie künstliche Zusatzstoffe, die für Hunde nicht geeignet sind. Laut CityVet ist ein winziger Schluck nicht unbedingt giftig, aber dringend abzuraten; PetMD sagt, Hunde sollten Gatorade gar nicht trinken – wir folgen dem strengeren Rat. Viele zuckerfreie Getränke enthalten Xylit, das für Hunde hochgiftig ist.",
+    "es": "Las bebidas deportivas para personas llevan demasiado sodio y azúcar, además de ingredientes artificiales poco adecuados para los perros. CityVet dice que un sorbito diminuto no es estrictamente tóxico pero se desaconseja firmemente, mientras que PetMD dice que los perros no deben beber Gatorade en absoluto, así que seguimos el consejo más estricto. Muchas bebidas sin azúcar contienen xilitol, que es muy tóxico para los perros."
   },
   "signs": {
     "en": [
@@ -75,6 +80,10 @@
     "de": [
       "Magenverstimmung",
       "Stärkere Austrocknung"
+    ],
+    "es": [
+      "Molestias de estómago",
+      "Deshidratación más grave"
     ]
   },
   "what_to_do": {
@@ -84,7 +93,8 @@
     "it": "Dai invece acqua fresca. Se noti segni di disidratazione, offri acqua fresca a piccole quantità, non tutta in una volta, così il cane non beve troppo in fretta e non vomita. Se il cane è disidratato, vomita o ha la diarrea, chiama il veterinario. Se la bevanda era senza zucchero, guarda la nostra pagina sullo xilitolo.",
     "fi": "Anna sen sijaan raikasta vettä. Jos huomaat nestehukan merkkejä, tarjoa pieni määrä viileää vettä, ei kaikkea kerralla, jottei koira juo liian nopeasti ja oksenna. Jos koirallasi on nestehukka, se oksentaa tai sillä on ripuli, soita eläinlääkärille. Jos juoma oli sokeriton, lue ksylitolisivumme.",
     "nb": "Gi friskt vann i stedet. Hvis du ser tegn på dehydrering, gir du litt kjølig vann om gangen, så hunden ikke drikker for fort og kaster opp. Hvis hunden er dehydrert, kaster opp eller har diaré, må du ringe dyrlegen. Hvis drikken var sukkerfri, kan du lese siden vår om xylitol.",
-    "de": "Geben Sie stattdessen frisches Wasser. Zeigt Ihr Hund Anzeichen von Austrocknung, bieten Sie ihm kühles Wasser in kleinen Mengen an, nicht alles auf einmal, damit er nicht zu hastig trinkt und erbricht. Ist Ihr Hund ausgetrocknet, erbricht er oder hat er Durchfall, rufen Sie Ihren Tierarzt an. War das Getränk zuckerfrei, lesen Sie unsere Seite zu Xylit."
+    "de": "Geben Sie stattdessen frisches Wasser. Zeigt Ihr Hund Anzeichen von Austrocknung, bieten Sie ihm kühles Wasser in kleinen Mengen an, nicht alles auf einmal, damit er nicht zu hastig trinkt und erbricht. Ist Ihr Hund ausgetrocknet, erbricht er oder hat er Durchfall, rufen Sie Ihren Tierarzt an. War das Getränk zuckerfrei, lesen Sie unsere Seite zu Xylit.",
+    "es": "Dale agua fresca en su lugar. Si notas signos de deshidratación, ofrécele un poco de agua fresca, no toda de golpe, para que no beba demasiado deprisa y vomite. Si tu perro está deshidratado, vomita o tiene diarrea, llama a tu veterinario. Si la bebida era sin azúcar, consulta nuestra página sobre el xilitol."
   },
   "serving": null,
   "child": {
@@ -94,7 +104,8 @@
     "it": "Le bevande per sportivi sono per le persone. Dopo aver corso e giocato, ai cani basta una ciotola di acqua fresca!",
     "fi": "Urheilujuomat ovat ihmisille. Juoksun ja leikin jälkeen koira tarvitsee vain kupillisen raikasta vettä!",
     "nb": "Sportsdrikker er for mennesker. Etter løping og lek trenger hunder bare en skål med friskt vann!",
-    "de": "Sportgetränke sind für Menschen. Nach dem Rennen und Spielen brauchen Hunde nur einen Napf mit frischem Wasser!"
+    "de": "Sportgetränke sind für Menschen. Nach dem Rennen und Spielen brauchen Hunde nur einen Napf mit frischem Wasser!",
+    "es": "Las bebidas deportivas son para las personas. ¡Después de correr y jugar, los perros solo necesitan un cuenco de agua fresca!"
   },
   "faq": [
     {
@@ -105,7 +116,8 @@
         "it": "Che cosa posso dare invece al mio cane attivo?",
         "fi": "Mitä voin antaa aktiiviselle koiralleni sen sijaan?",
         "nb": "Hva kan jeg gi den aktive hunden min i stedet?",
-        "de": "Was kann ich meinem aktiven Hund stattdessen geben?"
+        "de": "Was kann ich meinem aktiven Hund stattdessen geben?",
+        "es": "¿Qué puedo darle a mi perro activo en su lugar?"
       },
       "a": {
         "en": "For the average house dog, a fresh bowl of water is perfectly sufficient. Instead of sharing your gym drink, choose an electrolyte solution made for dogs, and if you think your dog may be dehydrated, contact your vet about next steps.",
@@ -114,7 +126,8 @@
         "it": "Per un normale cane da compagnia, una ciotola di acqua fresca è più che sufficiente. Invece di condividere la tua bevanda da palestra, scegli una soluzione di elettroliti pensata per i cani e, se pensi che il cane possa essere disidratato, contatta il veterinario per sapere come procedere.",
         "fi": "Tavalliselle kotikoiralle riittää hyvin kuppi raikasta vettä. Älä jaa omaa urheilujuomaasi, vaan valitse koirille tarkoitettu elektrolyyttiliuos. Jos epäilet koirasi kärsivän nestehukasta, ota yhteyttä eläinlääkäriin ja sovi jatkotoimista.",
         "nb": "For en vanlig familiehund er det helt nok med en skål friskt vann. I stedet for å dele treningsdrikken din kan du velge en elektrolyttløsning laget for hunder, og hvis du tror at hunden er dehydrert, bør du kontakte dyrlegen for å høre hva du skal gjøre videre.",
-        "de": "Für einen durchschnittlichen Haushund reicht ein frischer Napf Wasser völlig aus. Statt ihm von Ihrem Sportgetränk abzugeben, greifen Sie zu einer Elektrolytlösung, die für Hunde gemacht ist. Und wenn Sie vermuten, dass Ihr Hund ausgetrocknet sein könnte, fragen Sie Ihren Tierarzt, wie es weitergeht."
+        "de": "Für einen durchschnittlichen Haushund reicht ein frischer Napf Wasser völlig aus. Statt ihm von Ihrem Sportgetränk abzugeben, greifen Sie zu einer Elektrolytlösung, die für Hunde gemacht ist. Und wenn Sie vermuten, dass Ihr Hund ausgetrocknet sein könnte, fragen Sie Ihren Tierarzt, wie es weitergeht.",
+        "es": "Para un perro de casa corriente, un cuenco de agua fresca es más que suficiente. En vez de compartir tu bebida del gimnasio, elige una solución de electrolitos para perros, y si crees que tu perro puede estar deshidratado, consulta con tu veterinario qué hacer."
       }
     }
   ],
@@ -205,6 +218,11 @@
       "status": "verified",
       "verified_by": "claude-c-de-2026-11-17",
       "verified_hash": "63e6d4c04959d30bf02c29a038dbf9d0e7c29b50d49b819848f53334c8097092"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-c-es-2026-11-17",
+      "verified_hash": "f7865630e16881af0435fcba8b7a8b8a059e5ca62bb91f21a9a699bd86097493"
     }
   }
 }

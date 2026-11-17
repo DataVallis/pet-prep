@@ -8,7 +8,8 @@
     "it": "Brodo di ossa",
     "fi": "Luuliemi",
     "nb": "Beinkraft",
-    "de": "Knochenbrühe"
+    "de": "Knochenbrühe",
+    "es": "Caldo de huesos"
   },
   "question": {
     "en": "Can dogs have bone broth?",
@@ -17,7 +18,8 @@
     "it": "I cani possono mangiare il brodo di ossa?",
     "fi": "Saako koira juoda luulientä?",
     "nb": "Kan hunder få beinkraft?",
-    "de": "Dürfen Hunde Knochenbrühe bekommen?"
+    "de": "Dürfen Hunde Knochenbrühe bekommen?",
+    "es": "¿Pueden los perros tomar caldo de huesos?"
   },
   "url_slug": {
     "en": "bone-broth",
@@ -26,7 +28,8 @@
     "it": "brodo-di-ossa",
     "fi": "luuliemi",
     "nb": "beinkraft",
-    "de": "knochenbruehe"
+    "de": "knochenbruehe",
+    "es": "caldo-de-huesos"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "it": "Sì, il brodo di ossa semplice, fatto con ingredienti sicuri per i cani, va bene. È delicato e leggero per gli stomaci sensibili. Prima di servirlo togli tutte le ossa, elimina lo strato di grasso ed evita i brodi con cipolla, aglio o sale.",
     "fi": "Saa, kunhan luuliemi on maustamatonta ja tehty koiralle turvallisista aineksista. Se on mietoa ja hellää herkälle vatsalle. Siivilöi kaikki luut pois ennen tarjoamista, poista rasvakerros ja vältä liemiä, joissa on sipulia, valkosipulia tai suolaa.",
     "nb": "Ja, naturell beinkraft laget med ingredienser som er trygge for hunder, er greit. Den er mild og skånsom for en følsom mage. Sil bort alle bein før servering, fjern fettlaget, og dropp kraft med løk, hvitløk eller salt.",
-    "de": "Ja, einfache Knochenbrühe aus hundeverträglichen Zutaten ist in Ordnung. Sie ist mild und schonend für empfindliche Mägen. Seihen Sie die Brühe vor dem Servieren durch ein Sieb, damit kein Knochen darin bleibt, nehmen Sie die Fettschicht ab und verzichten Sie auf Brühen mit Zwiebeln, Knoblauch oder Salz."
+    "de": "Ja, einfache Knochenbrühe aus hundeverträglichen Zutaten ist in Ordnung. Sie ist mild und schonend für empfindliche Mägen. Seihen Sie die Brühe vor dem Servieren durch ein Sieb, damit kein Knochen darin bleibt, nehmen Sie die Fettschicht ab und verzichten Sie auf Brühen mit Zwiebeln, Knoblauch oder Salz.",
+    "es": "Sí: un caldo de huesos sencillo, hecho solo con ingredientes seguros para perros, no les hace daño. Es suave y sienta bien a los estómagos sensibles. Retira todos los huesos antes de servirlo, quita la capa de grasa y evita los caldos con cebolla, ajo o sal."
   },
   "why": {
     "en": "Bone broth is a stock made by slowly cooking animal bones at low heat for a long time. It is mild, flavourful and easy on sensitive stomachs, and it can make food more appealing to dogs with a reduced appetite. The risks come from what goes into it: some broths contain additives such as onions, garlic or salt, and cooked bones can splinter and injure your dog or get lodged in the throat.",
@@ -45,7 +49,8 @@
     "it": "Il brodo di ossa è un brodo ottenuto cuocendo a lungo, a fuoco basso, ossa di animali. È delicato, saporito e leggero per gli stomaci sensibili, e può rendere il cibo più appetitoso per i cani con poco appetito. I rischi vengono da ciò che contiene: alcuni brodi contengono ingredienti aggiunti come cipolla, aglio o sale, e le ossa cotte possono scheggiarsi e ferire il cane o rimanere incastrate in gola.",
     "fi": "Luuliemi syntyy, kun eläinten luita haudutetaan hitaasti matalalla lämmöllä pitkään. Se on mietoa, maukasta ja hellää herkälle vatsalle, ja se voi tehdä ruoasta houkuttelevampaa koiralle, jonka ruokahalu on heikko. Riskit liittyvät liemen aineksiin: joissakin liemissä on lisäaineina sipulia, valkosipulia tai suolaa, ja kypsennetyt luut voivat sirpaloitua ja vahingoittaa koiraa tai juuttua sen kurkkuun.",
     "nb": "Beinkraft er en kraft som lages ved å la bein fra dyr småkoke på lav varme i lang tid. Den er mild, smakfull og skånsom for en følsom mage, og den kan gjøre maten mer fristende for hunder med nedsatt matlyst. Risikoen ligger i det som puttes oppi: Noen kraftsorter inneholder tilsetninger som løk, hvitløk eller salt, og kokte bein kan splintres og skade hunden eller sette seg fast i halsen.",
-    "de": "Knochenbrühe ist ein Fond aus Tierknochen, die lange bei niedriger Hitze köcheln. Sie ist mild, aromatisch und schonend für empfindliche Mägen und kann Hunden mit wenig Appetit das Futter schmackhafter machen. Die Risiken stecken in den Zutaten: Manche Brühen enthalten Zusätze wie Zwiebeln, Knoblauch oder Salz, und gekochte Knochen können splittern und Ihren Hund verletzen oder im Hals stecken bleiben."
+    "de": "Knochenbrühe ist ein Fond aus Tierknochen, die lange bei niedriger Hitze köcheln. Sie ist mild, aromatisch und schonend für empfindliche Mägen und kann Hunden mit wenig Appetit das Futter schmackhafter machen. Die Risiken stecken in den Zutaten: Manche Brühen enthalten Zusätze wie Zwiebeln, Knoblauch oder Salz, und gekochte Knochen können splittern und Ihren Hund verletzen oder im Hals stecken bleiben.",
+    "es": "El caldo de huesos es el líquido que resulta de cocer huesos de animales a fuego lento durante mucho tiempo. Es suave, sabroso y sienta bien a los estómagos sensibles, y puede hacer que la comida resulte más apetecible para los perros con poco apetito. Los riesgos están en lo que se le añade: algunos caldos llevan aditivos como cebolla, ajo o sal, y los huesos cocinados pueden astillarse y herir a tu perro o quedarse atascados en la garganta."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "it": "Se il tuo cane ha bevuto un brodo con cipolla, aglio o molto sale, guarda le nostre pagine su cipolla, aglio e sale. Se il tuo cane ha ingoiato un osso cotto, guarda la nostra pagina sulle ossa cotte. Il brodo di ossa da solo non risolve i problemi alle articolazioni, quindi parlane con il veterinario.",
     "fi": "Jos koirasi sai lientä, jossa oli sipulia, valkosipulia tai paljon suolaa, lue sivumme sipulista, valkosipulista ja suolasta. Jos koirasi nieli kypsennetyn luun, lue sivumme kypsennetyistä luista. Luuliemi ei yksinään korjaa nivelongelmia, joten keskustele niistä eläinlääkärin kanssa.",
     "nb": "Hvis hunden har fått kraft som inneholder løk, hvitløk eller mye salt, kan du lese sidene våre om løk, hvitløk og salt. Hvis hunden har svelget et kokt bein, kan du lese siden vår om kokte bein. Beinkraft løser ikke leddproblemer på egen hånd, så snakk med dyrlegen om dem.",
-    "de": "Hat Ihr Hund Brühe mit Zwiebeln, Knoblauch oder viel Salz bekommen, lesen Sie unsere Seiten zu Zwiebeln, Knoblauch und Salz. Hat Ihr Hund einen gekochten Knochen verschluckt, lesen Sie unsere Seite zu gekochten Knochen. Knochenbrühe allein löst keine Gelenkprobleme – besprechen Sie diese deshalb mit Ihrem Tierarzt."
+    "de": "Hat Ihr Hund Brühe mit Zwiebeln, Knoblauch oder viel Salz bekommen, lesen Sie unsere Seiten zu Zwiebeln, Knoblauch und Salz. Hat Ihr Hund einen gekochten Knochen verschluckt, lesen Sie unsere Seite zu gekochten Knochen. Knochenbrühe allein löst keine Gelenkprobleme – besprechen Sie diese deshalb mit Ihrem Tierarzt.",
+    "es": "Si tu perro ha tomado un caldo con cebolla, ajo o mucha sal, consulta nuestras páginas sobre la cebolla, el ajo y la sal. Si tu perro se ha tragado un hueso cocinado, consulta nuestra página sobre los huesos cocinados. El caldo de huesos no soluciona por sí solo los problemas de articulaciones, así que habla con tu veterinario."
   },
   "serving": {
     "en": "Use only natural, dog-safe ingredients, with no onions, garlic or salt. After cooking, refrigerate the broth, remove the hardened layer of fat from the top and strain out every bone. Serve it on its own or mixed into dry food.",
@@ -64,7 +70,8 @@
     "it": "Usa solo ingredienti naturali e sicuri per i cani, senza cipolla, aglio né sale. Dopo la cottura metti il brodo in frigorifero, togli lo strato di grasso indurito dalla superficie e filtra via tutte le ossa. Servilo da solo o mescolato al cibo secco.",
     "fi": "Käytä vain luonnollisia, koiralle turvallisia aineksia ilman sipulia, valkosipulia ja suolaa. Laita liemi keittämisen jälkeen jääkaappiin, poista pinnalle jähmettynyt rasvakerros ja siivilöi kaikki luut pois. Tarjoa se sellaisenaan tai sekoitettuna kuivaruokaan.",
     "nb": "Bruk bare naturlige ingredienser som er trygge for hunder, uten løk, hvitløk eller salt. Etter koking setter du kraften i kjøleskapet, fjerner det stivnede fettlaget på toppen og siler bort alle bein. Server den ren, eller bland den i tørrfôret.",
-    "de": "Verwenden Sie nur natürliche, für Hunde unbedenkliche Zutaten, ohne Zwiebeln, Knoblauch oder Salz. Stellen Sie die Brühe nach dem Kochen in den Kühlschrank, nehmen Sie die erstarrte Fettschicht oben ab und seihen Sie alle Knochen heraus. Geben Sie sie pur oder unter das Trockenfutter gemischt."
+    "de": "Verwenden Sie nur natürliche, für Hunde unbedenkliche Zutaten, ohne Zwiebeln, Knoblauch oder Salz. Stellen Sie die Brühe nach dem Kochen in den Kühlschrank, nehmen Sie die erstarrte Fettschicht oben ab und seihen Sie alle Knochen heraus. Geben Sie sie pur oder unter das Trockenfutter gemischt.",
+    "es": "Usa solo ingredientes naturales y seguros para perros, sin cebolla, ajo ni sal. Después de cocinarlo, guarda el caldo en la nevera, quita la capa de grasa endurecida de la superficie y retira todos los huesos. Puedes dárselo solo o mezclado con pienso."
   },
   "child": {
     "en": "Bone broth can be a tasty treat for dogs. A grown-up makes it and takes out every bone first, because bones aren't safe for dogs.",
@@ -73,7 +80,8 @@
     "it": "Il brodo di ossa può essere un premietto gustoso per i cani. Lo prepara un adulto, che prima toglie tutte le ossa: non sono sicure per i cani.",
     "fi": "Luuliemi voi olla koiralle maukas herkku. Aikuinen tekee sen ja ottaa ensin kaikki luut pois, sillä luut eivät ole koirille turvallisia.",
     "nb": "Beinkraft kan være en god godbit for hunder. En voksen lager den og tar ut alle beinene først, for bein er ikke trygt for hunder.",
-    "de": "Knochenbrühe kann für Hunde ein leckeres Extra sein. Ein Erwachsener kocht sie und nimmt vorher alle Knochen heraus, denn Knochen sind für Hunde nicht sicher."
+    "de": "Knochenbrühe kann für Hunde ein leckeres Extra sein. Ein Erwachsener kocht sie und nimmt vorher alle Knochen heraus, denn Knochen sind für Hunde nicht sicher.",
+    "es": "El caldo de huesos puede ser un premio rico para los perros. Un adulto lo prepara y le quita antes todos los huesos, porque no son seguros para los perros."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "it": "In che cosa il brodo di ossa è diverso dal brodo normale?",
         "fi": "Miten luuliemi eroaa tavallisesta liemestä?",
         "nb": "Hva er forskjellen på beinkraft og vanlig kraft?",
-        "de": "Was unterscheidet Knochenbrühe von normaler Brühe?"
+        "de": "Was unterscheidet Knochenbrühe von normaler Brühe?",
+        "es": "¿En qué se diferencia el caldo de huesos del caldo normal?"
       },
       "a": {
         "en": "Bone broth is a stock liquid made by slowly cooking animal bones at low heat for an extended period. For everyday broth and stock cubes, see our broth page.",
@@ -93,7 +102,8 @@
         "it": "Il brodo di ossa è un liquido ottenuto cuocendo a lungo, a fuoco basso, ossa di animali. Per il brodo di tutti i giorni e i dadi da brodo, guarda la nostra pagina sul brodo.",
         "fi": "Luuliemi syntyy, kun eläinten luita haudutetaan hitaasti matalalla lämmöllä pitkään. Tavallisesta liemestä ja liemikuutioista kerromme liemisivullamme.",
         "nb": "Beinkraft er en kraft som lages ved å la bein fra dyr småkoke på lav varme i lang tid. Vanlig kraft og buljongterninger finner du på siden vår om buljong og kraft.",
-        "de": "Knochenbrühe ist ein Fond, für den Tierknochen lange bei niedriger Hitze köcheln. Mehr zu normaler Brühe und Brühwürfeln finden Sie auf unserer Seite zu Brühe und Fond."
+        "de": "Knochenbrühe ist ein Fond, für den Tierknochen lange bei niedriger Hitze köcheln. Mehr zu normaler Brühe und Brühwürfeln finden Sie auf unserer Seite zu Brühe und Fond.",
+        "es": "El caldo de huesos es el líquido que resulta de cocer huesos de animales a fuego lento durante mucho tiempo. Para el caldo de uso diario y las pastillas de caldo, consulta nuestra página sobre el caldo."
       }
     },
     {
@@ -104,7 +114,8 @@
         "it": "Posso usare il brodo di ossa già pronto?",
         "fi": "Voinko käyttää kaupan luulientä?",
         "nb": "Kan jeg bruke ferdiglaget beinkraft fra butikken?",
-        "de": "Kann ich fertige Knochenbrühe aus dem Laden verwenden?"
+        "de": "Kann ich fertige Knochenbrühe aus dem Laden verwenden?",
+        "es": "¿Puedo usar caldo de huesos comprado?"
       },
       "a": {
         "en": "Look for one with natural, dog-safe ingredients, because some contain additives for preservation and taste, such as onions, garlic or salt.",
@@ -113,7 +124,8 @@
         "it": "Scegline uno con ingredienti naturali e sicuri per i cani, perché alcuni contengono ingredienti aggiunti per conservarlo e dargli sapore, come cipolla, aglio o sale.",
         "fi": "Valitse sellainen, jossa on luonnollisia, koiralle turvallisia aineksia, sillä joissakin on säilyvyyden ja maun vuoksi lisäaineita, kuten sipulia, valkosipulia tai suolaa.",
         "nb": "Se etter en med naturlige ingredienser som er trygge for hunder, for noen inneholder tilsetninger for holdbarhet og smak, som løk, hvitløk eller salt.",
-        "de": "Achten Sie auf natürliche, für Hunde unbedenkliche Zutaten, denn manche Produkte enthalten Zusätze zur Haltbarkeit und für den Geschmack, etwa Zwiebeln, Knoblauch oder Salz."
+        "de": "Achten Sie auf natürliche, für Hunde unbedenkliche Zutaten, denn manche Produkte enthalten Zusätze zur Haltbarkeit und für den Geschmack, etwa Zwiebeln, Knoblauch oder Salz.",
+        "es": "Busca uno con ingredientes naturales y seguros para perros, porque algunos llevan aditivos para conservarlo y darle sabor, como cebolla, ajo o sal."
       }
     },
     {
@@ -124,7 +136,8 @@
         "it": "Il brodo di ossa fa bene alle articolazioni del mio cane?",
         "fi": "Auttaako luuliemi koiran niveliä?",
         "nb": "Hjelper beinkraft på hundens ledd?",
-        "de": "Hilft Knochenbrühe den Gelenken meines Hundes?"
+        "de": "Hilft Knochenbrühe den Gelenken meines Hundes?",
+        "es": "¿El caldo de huesos ayuda a las articulaciones de mi perro?"
       },
       "a": {
         "en": "The AKC says the collagen in bone broth contributes to joint health, but bone broth won't cure joint problems without other treatments, so contact your vet.",
@@ -133,7 +146,8 @@
         "it": "L’AKC afferma che il collagene del brodo di ossa contribuisce alla salute delle articolazioni, ma il brodo di ossa non cura i problemi articolari senza altre terapie, quindi rivolgiti al veterinario.",
         "fi": "AKC:n mukaan luuliemen kollageeni edistää nivelten terveyttä, mutta luuliemi ei yksinään paranna nivelongelmia, joten ota yhteyttä eläinlääkäriin.",
         "nb": "AKC sier at kollagenet i beinkraft bidrar til sunne ledd, men beinkraft kurerer ikke leddproblemer uten annen behandling, så kontakt dyrlegen.",
-        "de": "Laut AKC trägt das Kollagen in Knochenbrühe zur Gesundheit der Gelenke bei. Ohne weitere Behandlung heilt Knochenbrühe Gelenkprobleme aber nicht – wenden Sie sich deshalb an Ihren Tierarzt."
+        "de": "Laut AKC trägt das Kollagen in Knochenbrühe zur Gesundheit der Gelenke bei. Ohne weitere Behandlung heilt Knochenbrühe Gelenkprobleme aber nicht – wenden Sie sich deshalb an Ihren Tierarzt.",
+        "es": "Según el AKC, el colágeno del caldo de huesos contribuye a la salud de las articulaciones, pero el caldo de huesos no cura los problemas articulares sin otros tratamientos, así que consulta con tu veterinario."
       }
     }
   ],
@@ -231,6 +245,11 @@
       "status": "verified",
       "verified_by": "claude-c-de-2026-11-17",
       "verified_hash": "1b43e152bb28cfcbe7d66ad232e1d7dcca75f3e9eb9c68c9d9e6c84e6ac4cc72"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-c-es-2026-11-17",
+      "verified_hash": "e00236743e940d25ae6f622833fc57b2c3b25114b75f9baf96305f89e78a742e"
     }
   }
 }

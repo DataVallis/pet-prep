@@ -8,7 +8,8 @@
     "it": "Acqua di cocco",
     "fi": "Kookosvesi",
     "nb": "Kokosvann",
-    "de": "Kokoswasser"
+    "de": "Kokoswasser",
+    "es": "Agua de coco"
   },
   "question": {
     "en": "Can dogs drink coconut water?",
@@ -17,7 +18,8 @@
     "it": "I cani possono bere l’acqua di cocco?",
     "fi": "Saako koira juoda kookosvettä?",
     "nb": "Kan hunder drikke kokosvann?",
-    "de": "Dürfen Hunde Kokoswasser trinken?"
+    "de": "Dürfen Hunde Kokoswasser trinken?",
+    "es": "¿Pueden los perros beber agua de coco?"
   },
   "url_slug": {
     "en": "coconut-water",
@@ -26,7 +28,8 @@
     "it": "acqua-di-cocco",
     "fi": "kookosvesi",
     "nb": "kokosvann",
-    "de": "kokoswasser"
+    "de": "kokoswasser",
+    "es": "agua-de-coco"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "it": "Sì, come premio occasionale. Un veterinario citato dall’AKC dice che l’acqua di cocco è sicura per i cani ma deve essere un premio, non un sostituto dell’acqua di tutti i giorni. Scegli acqua di cocco pura, senza zuccheri aggiunti né conservanti, e dagliene con moderazione.",
     "fi": "Saa, satunnaisena herkkuna. AKC:n lainaaman eläinlääkärin mukaan kookosvesi on koiralle turvallista, mutta sen pitää olla herkku eikä tavallisen veden korvike. Valitse puhdas kookosvesi ilman lisättyä sokeria tai säilöntäaineita ja tarjoa sitä kohtuudella.",
     "nb": "Ja, som en godbit av og til. En dyrlege som AKC siterer, sier at kokosvann er trygt for hunder, men bør være en godbit, ikke en erstatning for vanlig vann. Velg rent kokosvann uten tilsatt sukker eller konserveringsmidler, og gi det med måte.",
-    "de": "Ja, als gelegentliches Leckerli. Die vom AKC zitierte tierärztliche Einschätzung lautet: Kokoswasser ist für Hunde unbedenklich, sollte aber ein Leckerli bleiben und kein Ersatz für normales Wasser sein. Wählen Sie reines Kokoswasser ohne zugesetzten Zucker oder Konservierungsstoffe und geben Sie es in Maßen."
+    "de": "Ja, als gelegentliches Leckerli. Die vom AKC zitierte tierärztliche Einschätzung lautet: Kokoswasser ist für Hunde unbedenklich, sollte aber ein Leckerli bleiben und kein Ersatz für normales Wasser sein. Wählen Sie reines Kokoswasser ohne zugesetzten Zucker oder Konservierungsstoffe und geben Sie es in Maßen.",
+    "es": "Sí, como premio ocasional. Una veterinaria citada por el AKC dice que el agua de coco es segura para los perros, pero debe ser un premio, no un sustituto del agua normal. Elige agua de coco pura, sin azúcares añadidos ni conservantes, y ofrécela con moderación."
   },
   "why": {
     "en": "Coconut is high in potassium, so caution is needed for dogs with kidney disease or other electrolyte disturbances. Too much coconut can make a dog sick, mainly with stomach upset such as diarrhoea. Anything you offer must be free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -45,7 +49,8 @@
     "it": "Il cocco è molto ricco di potassio, quindi serve cautela con i cani che soffrono di malattie renali o altri squilibri degli elettroliti. Troppo cocco può far stare male il cane, con disturbi di stomaco come la diarrea. Tutto ciò che offri deve essere privo di dolcificanti artificiali come lo xilitolo, che è tossico per i cani.",
     "fi": "Kookoksessa on paljon kaliumia, joten munuaissairaiden tai muista elektrolyyttihäiriöistä kärsivien koirien kohdalla on oltava varovainen. Liian suuri määrä kookosta voi tehdä koiran sairaaksi, yleensä vatsaoireina, kuten ripulina. Kaiken, mitä tarjoat, pitää olla ilman keinotekoisia makeutusaineita, kuten ksylitolia, joka on koirille myrkyllistä.",
     "nb": "Kokos inneholder mye kalium, så du må være forsiktig med hunder som har nyresykdom eller andre elektrolyttforstyrrelser. For mye kokos kan gjøre hunden syk, først og fremst med urolig mage, for eksempel diaré. Alt du gir, må være fritt for kunstige søtstoffer som xylitol, som er giftig for hunder.",
-    "de": "Kokos enthält viel Kalium, deshalb ist bei Hunden mit Nierenerkrankung oder anderen Störungen des Elektrolythaushalts Vorsicht geboten. Zu viel Kokos kann einem Hund Magenbeschwerden wie Durchfall bereiten. Alles, was Sie anbieten, muss frei von künstlichen Süßstoffen wie Xylit sein, das für Hunde giftig ist."
+    "de": "Kokos enthält viel Kalium, deshalb ist bei Hunden mit Nierenerkrankung oder anderen Störungen des Elektrolythaushalts Vorsicht geboten. Zu viel Kokos kann einem Hund Magenbeschwerden wie Durchfall bereiten. Alles, was Sie anbieten, muss frei von künstlichen Süßstoffen wie Xylit sein, das für Hunde giftig ist.",
+    "es": "El coco es rico en potasio, así que hay que tener cuidado si el perro tiene enfermedad renal u otra alteración de los electrolitos. Demasiado coco puede sentar mal a un perro, sobre todo con molestias de estómago, como diarrea. Lo que le ofrezcas no debe llevar edulcorantes artificiales, como el xilitol, que es tóxico para los perros."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "it": "Smetti di dare l’acqua di cocco se il tuo cane ha mal di stomaco o diarrea. Il cocco è molto ricco di potassio, quindi usalo con cautela se il tuo cane ha una malattia renale o un problema di elettroliti.",
     "fi": "Lopeta kookosveden antaminen, jos koiran vatsa menee sekaisin tai sille tulee ripuli. Kookoksessa on paljon kaliumia, joten ole varovainen, jos koirallasi on munuaissairaus tai elektrolyyttiongelma.",
     "nb": "Slutt å gi kokosvann hvis hunden får urolig mage eller diaré. Kokos inneholder mye kalium, så vær forsiktig hvis hunden har nyresykdom eller elektrolyttproblemer.",
-    "de": "Setzen Sie das Kokoswasser ab, wenn Ihr Hund eine Magenverstimmung oder Durchfall bekommt. Kokos enthält viel Kalium – seien Sie deshalb vorsichtig, wenn Ihr Hund eine Nierenerkrankung oder ein Elektrolytproblem hat."
+    "de": "Setzen Sie das Kokoswasser ab, wenn Ihr Hund eine Magenverstimmung oder Durchfall bekommt. Kokos enthält viel Kalium – seien Sie deshalb vorsichtig, wenn Ihr Hund eine Nierenerkrankung oder ein Elektrolytproblem hat.",
+    "es": "Deja de darle agua de coco si tu perro tiene el estómago revuelto o diarrea. El coco es rico en potasio, así que ten cuidado si tu perro tiene enfermedad renal o algún problema de electrolitos."
   },
   "serving": {
     "en": "Pure, unsweetened coconut water only, with no added sugar, preservatives or xylitol, offered in moderation as a treat and never instead of fresh water.",
@@ -64,7 +70,8 @@
     "it": "Solo acqua di cocco pura, senza zuccheri aggiunti, conservanti né xilitolo, data con moderazione come premio e mai al posto dell’acqua fresca.",
     "fi": "Vain puhdasta, makeuttamatonta kookosvettä ilman lisättyä sokeria, säilöntäaineita tai ksylitolia, kohtuudella herkkuna eikä koskaan raikkaan veden tilalla.",
     "nb": "Bare rent, usøtet kokosvann uten tilsatt sukker, konserveringsmidler eller xylitol. Gi det med måte som en godbit, aldri i stedet for friskt vann.",
-    "de": "Nur reines, ungesüßtes Kokoswasser ohne zugesetzten Zucker, Konservierungsstoffe oder Xylit, in Maßen als Leckerli und niemals anstelle von frischem Wasser."
+    "de": "Nur reines, ungesüßtes Kokoswasser ohne zugesetzten Zucker, Konservierungsstoffe oder Xylit, in Maßen als Leckerli und niemals anstelle von frischem Wasser.",
+    "es": "Solo agua de coco pura y sin endulzar, sin azúcar añadido, sin conservantes y sin xilitol, ofrecida con moderación como premio y nunca en lugar de agua fresca."
   },
   "child": {
     "en": "Coconut water is an occasional treat for dogs. Fresh water is still what they need to drink every day!",
@@ -73,7 +80,8 @@
     "it": "Ogni tanto l’acqua di cocco è un premietto per i cani. Ma da bere ogni giorno serve sempre acqua fresca!",
     "fi": "Kookosvesi on koiralle satunnainen herkku. Raikas vesi on silti se, mitä koira tarvitsee juodakseen joka päivä!",
     "nb": "Kokosvann er en godbit hunder kan få av og til. Hver dag er det friskt vann de trenger å drikke!",
-    "de": "Kokoswasser ist für Hunde ein gelegentliches Leckerli. Trotzdem brauchen sie jeden Tag frisches Wasser zum Trinken!"
+    "de": "Kokoswasser ist für Hunde ein gelegentliches Leckerli. Trotzdem brauchen sie jeden Tag frisches Wasser zum Trinken!",
+    "es": "El agua de coco es un premio ocasional para los perros. ¡Lo que necesitan beber cada día sigue siendo agua fresca!"
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "it": "L’acqua di cocco può aiutare il mio cane dopo l’attività fisica?",
         "fi": "Voiko kookosvesi auttaa koiraani liikunnan jälkeen?",
         "nb": "Kan kokosvann hjelpe hunden min etter trening?",
-        "de": "Kann Kokoswasser meinem Hund nach dem Sport helfen?"
+        "de": "Kann Kokoswasser meinem Hund nach dem Sport helfen?",
+        "es": "¿Puede ayudar el agua de coco a mi perro después del ejercicio?"
       },
       "a": {
         "en": "One vet quoted by the AKC offers her dogs coconut water for extra electrolytes after dog sport events. For the average house dog, though, a fresh bowl of water is perfectly sufficient.",
@@ -93,7 +102,8 @@
         "it": "Una veterinaria citata dall’AKC dà ai suoi cani l’acqua di cocco per dare loro più elettroliti dopo le gare di sport cinofili. Per un normale cane da compagnia, però, basta una ciotola di acqua fresca.",
         "fi": "Yksi AKC:n lainaama eläinlääkäri antaa koirilleen kookosvettä lisäelektrolyyttien vuoksi koiraurheilutapahtumien jälkeen. Tavalliselle kotikoiralle riittää kuitenkin hyvin kuppi raikasta vettä.",
         "nb": "En dyrlege som AKC siterer, gir hundene sine kokosvann for å få litt ekstra elektrolytter etter hundesport. For en vanlig familiehund er det likevel helt nok med en skål friskt vann.",
-        "de": "Eine vom AKC zitierte Tierärztin gibt ihren Hunden nach Hundesportveranstaltungen Kokoswasser für zusätzliche Elektrolyte. Für einen durchschnittlichen Haushund reicht aber ein frischer Napf Wasser völlig aus."
+        "de": "Eine vom AKC zitierte Tierärztin gibt ihren Hunden nach Hundesportveranstaltungen Kokoswasser für zusätzliche Elektrolyte. Für einen durchschnittlichen Haushund reicht aber ein frischer Napf Wasser völlig aus.",
+        "es": "Una veterinaria citada por el AKC da agua de coco a sus perros después de competiciones de deporte canino, para aportarles electrolitos extra. Para un perro de casa corriente, en cambio, un cuenco de agua fresca es más que suficiente."
       }
     }
   ],
@@ -182,6 +192,11 @@
       "status": "verified",
       "verified_by": "claude-c-de-2026-11-17",
       "verified_hash": "ddc78d994725d44f8ce1d2faa3c060a2e42a3f48edcc572ffb236d5aadfb83f5"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-c-es-2026-11-17",
+      "verified_hash": "75e7981b628260812a4d5ef7548f25654c6bc4ab1a05ad6b8a6e28878210780b"
     }
   }
 }

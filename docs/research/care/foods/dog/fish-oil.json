@@ -8,7 +8,8 @@
     "it": "Olio di pesce",
     "fi": "Kalaöljy",
     "nb": "Fiskeolje",
-    "de": "Fischöl"
+    "de": "Fischöl",
+    "es": "Aceite de pescado"
   },
   "question": {
     "en": "Can dogs have fish oil?",
@@ -17,7 +18,8 @@
     "it": "I cani possono assumere l’olio di pesce?",
     "fi": "Saako koira kalaöljyä?",
     "nb": "Kan hunder få fiskeolje?",
-    "de": "Dürfen Hunde Fischöl bekommen?"
+    "de": "Dürfen Hunde Fischöl bekommen?",
+    "es": "¿Pueden los perros tomar aceite de pescado?"
   },
   "url_slug": {
     "en": "fish-oil",
@@ -26,7 +28,8 @@
     "it": "olio-di-pesce",
     "fi": "kalaoljy",
     "nb": "fiskeolje",
-    "de": "fischoel"
+    "de": "fischoel",
+    "es": "aceite-de-pescado"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "it": "Solo se te lo consiglia il veterinario. L’olio di pesce è un integratore, non uno snack, e i veterinari consigliano di parlarne sempre con il proprio veterinario di fiducia prima di dare al cane qualsiasi integratore. Può causare effetti collaterali come diarrea, vomito, gas e alito di pesce.",
     "fi": "Vain, jos eläinlääkäri suosittelee sitä. Kalaöljy on ravintolisä eikä välipala, ja ennen minkä tahansa ravintolisän antamista koiralle on aina keskusteltava eläinlääkärin kanssa. Se voi aiheuttaa sivuvaikutuksia, kuten ripulia, oksentelua, ilmavaivoja ja kalan hajua hengityksessä.",
     "nb": "Bare hvis dyrlegen anbefaler det. Fiskeolje er et kosttilskudd, ikke en godbit, og dyrleger anbefaler alltid å snakke med din egen dyrlege før du gir hunden kosttilskudd. Det kan gi bivirkninger som diaré, oppkast, luft i magen og fiskeånde.",
-    "de": "Nur, wenn Ihr Tierarzt es empfiehlt. Fischöl ist ein Nahrungsergänzungsmittel und kein Leckerli – Tierärzte raten, jedes Nahrungsergänzungsmittel vorher mit dem Tierarzt abzusprechen. Es kann Nebenwirkungen wie Durchfall, Erbrechen, Blähungen und Mundgeruch nach Fisch haben."
+    "de": "Nur, wenn Ihr Tierarzt es empfiehlt. Fischöl ist ein Nahrungsergänzungsmittel und kein Leckerli – Tierärzte raten, jedes Nahrungsergänzungsmittel vorher mit dem Tierarzt abzusprechen. Es kann Nebenwirkungen wie Durchfall, Erbrechen, Blähungen und Mundgeruch nach Fisch haben.",
+    "es": "Solo si tu veterinario te lo recomienda. El aceite de pescado es un suplemento, no un premio, y conviene consultar siempre con el veterinario antes de darle cualquier suplemento a tu perro. Puede causar efectos secundarios como diarrea, vómitos, gases y aliento con olor a pescado."
   },
   "why": {
     "en": "Fish oil comes from oily fish such as salmon, mackerel and sardines, and its omega-3 fatty acids have been used to support a dog's skin, coat, joints and heart. But it is a health product: possible side effects include diarrhoea, vomiting, gas, fishy-smelling breath or skin and, in rare cases, a higher bleeding risk. VCA advises caution in dogs taking blood thinners, dogs with a clotting disorder, diabetes or a history of pancreatitis. Just because a product is natural does not mean it is safe.",
@@ -45,7 +49,8 @@
     "it": "L’olio di pesce si ricava da pesci grassi come salmone, sgombro e sardine, e i suoi acidi grassi omega-3 vengono usati per sostenere pelle, pelo, articolazioni e cuore del cane. Ma resta un prodotto per la salute: tra i possibili effetti collaterali ci sono diarrea, vomito, gas, alito e pelle che odorano di pesce e, in rari casi, un maggior rischio di sanguinamento. VCA raccomanda cautela nei cani che prendono anticoagulanti, che hanno un disturbo della coagulazione, il diabete o precedenti di pancreatite. Il fatto che un prodotto sia naturale non significa che sia sicuro.",
     "fi": "Kalaöljy on peräisin rasvaisista kaloista, kuten lohesta, makrillista ja sardiineista, ja sen omega-3-rasvahappoja käytetään tukemaan koiran ihoa, turkkia, niveliä ja sydäntä. Se on kuitenkin terveystuote: mahdollisia sivuvaikutuksia ovat ripuli, oksentelu, ilmavaivat, kalan hajuinen hengitys tai iho ja harvinaisissa tapauksissa suurempi verenvuotoriski. VCA neuvoo olemaan varovainen, jos koira käyttää verenohennuslääkkeitä tai sillä on hyytymishäiriö, diabetes tai aiempi haimatulehdus. Se, että tuote on luonnollinen, ei tarkoita, että se on turvallinen.",
     "nb": "Fiskeolje kommer fra fet fisk som laks, makrell og sardiner, og omega-3-fettsyrene har vært brukt til å støtte hundens hud, pels, ledd og hjerte. Men det er et helseprodukt: Mulige bivirkninger er diaré, oppkast, luft i magen, fiskelukt i pusten eller på huden og, i sjeldne tilfeller, økt blødningsrisiko. VCA råder til forsiktighet hos hunder som får blodfortynnende medisin, hunder med blodstørkningsforstyrrelse, diabetes eller tidligere betennelse i bukspyttkjertelen. At et produkt er naturlig, betyr ikke at det er trygt.",
-    "de": "Fischöl wird aus fettreichen Fischen wie Lachs, Makrele und Sardinen gewonnen, und seine Omega-3-Fettsäuren werden eingesetzt, um Haut, Fell, Gelenke und Herz eines Hundes zu unterstützen. Es ist aber ein Gesundheitsprodukt: Mögliche Nebenwirkungen sind Durchfall, Erbrechen, Blähungen, Fischgeruch von Atem oder Haut und in seltenen Fällen ein höheres Blutungsrisiko. VCA rät zur Vorsicht bei Hunden, die Blutverdünner bekommen, bei Hunden mit Gerinnungsstörung oder Diabetes sowie bei Hunden, die schon einmal eine Bauchspeicheldrüsenentzündung hatten. Dass ein Produkt natürlich ist, heißt nicht, dass es sicher ist."
+    "de": "Fischöl wird aus fettreichen Fischen wie Lachs, Makrele und Sardinen gewonnen, und seine Omega-3-Fettsäuren werden eingesetzt, um Haut, Fell, Gelenke und Herz eines Hundes zu unterstützen. Es ist aber ein Gesundheitsprodukt: Mögliche Nebenwirkungen sind Durchfall, Erbrechen, Blähungen, Fischgeruch von Atem oder Haut und in seltenen Fällen ein höheres Blutungsrisiko. VCA rät zur Vorsicht bei Hunden, die Blutverdünner bekommen, bei Hunden mit Gerinnungsstörung oder Diabetes sowie bei Hunden, die schon einmal eine Bauchspeicheldrüsenentzündung hatten. Dass ein Produkt natürlich ist, heißt nicht, dass es sicher ist.",
+    "es": "El aceite de pescado procede de pescados azules como el salmón, la caballa y las sardinas, y sus ácidos grasos omega-3 se usan para cuidar la piel, el pelo, las articulaciones y el corazón del perro. Pero es un producto de salud: entre los posibles efectos secundarios están la diarrea, los vómitos, los gases, el aliento o la piel con olor a pescado y, en casos raros, un mayor riesgo de sangrado. VCA recomienda precaución en perros que toman anticoagulantes o que tienen un trastorno de la coagulación, diabetes o antecedentes de pancreatitis. Que un producto sea natural no significa que sea seguro."
   },
   "signs": {
     "en": [
@@ -96,6 +101,13 @@
       "Blähungen",
       "Fischgeruch von Atem oder Haut",
       "Erhöhte Blutungsneigung (selten)"
+    ],
+    "es": [
+      "Diarrea",
+      "Vómitos",
+      "Gases",
+      "Aliento o piel con olor a pescado",
+      "Sangrar con más facilidad (raro)"
     ]
   },
   "what_to_do": {
@@ -105,7 +117,8 @@
     "it": "Parla con il veterinario prima di iniziare a dare l’olio di pesce o qualsiasi altro integratore. Se il tuo cane ha una reazione grave, smetti di dargli l’olio di pesce e contatta subito il veterinario. Tieni il flacone fuori dalla portata di bambini e animali.",
     "fi": "Keskustele eläinlääkärin kanssa ennen kalaöljyn tai minkään muun ravintolisän aloittamista. Jos koirallasi on vakava reaktio, lopeta kalaöljyn antaminen ja ota heti yhteyttä eläinlääkäriin. Pidä pakkaus poissa lasten ja lemmikkien ulottuvilta.",
     "nb": "Snakk med dyrlegen før du begynner med fiskeolje eller andre kosttilskudd. Hvis hunden får en alvorlig reaksjon, slutter du å gi fiskeolje og kontakter dyrlegen med en gang. Oppbevar beholderen utenfor barns og dyrs rekkevidde.",
-    "de": "Sprechen Sie mit Ihrem Tierarzt, bevor Sie mit Fischöl oder einem anderen Nahrungsergänzungsmittel beginnen. Hat Ihr Hund eine schwere Reaktion, setzen Sie das Fischöl ab und wenden Sie sich sofort an Ihren Tierarzt. Bewahren Sie den Behälter außerhalb der Reichweite von Kindern und Haustieren auf."
+    "de": "Sprechen Sie mit Ihrem Tierarzt, bevor Sie mit Fischöl oder einem anderen Nahrungsergänzungsmittel beginnen. Hat Ihr Hund eine schwere Reaktion, setzen Sie das Fischöl ab und wenden Sie sich sofort an Ihren Tierarzt. Bewahren Sie den Behälter außerhalb der Reichweite von Kindern und Haustieren auf.",
+    "es": "Habla con tu veterinario antes de darle aceite de pescado o cualquier otro suplemento. Si tu perro tiene una reacción grave, deja de darle aceite de pescado y contacta enseguida con tu veterinario. Guarda el envase fuera del alcance de niños y mascotas."
   },
   "serving": null,
   "child": {
@@ -115,7 +128,8 @@
     "it": "L’olio di pesce è un integratore speciale. Solo il veterinario e gli adulti decidono se un cane ne ha bisogno!",
     "fi": "Kalaöljy on erityinen ravintolisä. Vain eläinlääkäri ja aikuiset päättävät, tarvitseeko koira sitä!",
     "nb": "Fiskeolje er et spesielt kosttilskudd. Bare dyrlegen og de voksne avgjør om en hund trenger det!",
-    "de": "Fischöl ist ein besonderes Nahrungsergänzungsmittel. Ob ein Hund es braucht, entscheiden nur der Tierarzt und die Erwachsenen!"
+    "de": "Fischöl ist ein besonderes Nahrungsergänzungsmittel. Ob ein Hund es braucht, entscheiden nur der Tierarzt und die Erwachsenen!",
+    "es": "El aceite de pescado es un suplemento especial. ¡Solo el veterinario y los adultos deciden si un perro lo necesita!"
   },
   "faq": [
     {
@@ -126,7 +140,8 @@
         "it": "L’olio di pesce vecchio o rancido può far male al mio cane?",
         "fi": "Voiko vanha tai härskiintynyt kalaöljy vaivata koiraani?",
         "nb": "Kan gammel eller harsk fiskeolje gi hunden magebesvær?",
-        "de": "Kann altes oder ranziges Fischöl meinem Hund schaden?"
+        "de": "Kann altes oder ranziges Fischöl meinem Hund schaden?",
+        "es": "¿Puede sentarle mal a mi perro un aceite de pescado viejo o rancio?"
       },
       "a": {
         "en": "Yes. Consuming rancid fish oil may lead to stomach and gut upset, including vomiting or diarrhoea.",
@@ -135,7 +150,8 @@
         "it": "Sì. L’olio di pesce rancido può causare disturbi di stomaco e intestino, tra cui vomito o diarrea.",
         "fi": "Voi. Härskiintynyt kalaöljy voi aiheuttaa vatsa- ja suolisto-ongelmia, kuten oksentelua tai ripulia.",
         "nb": "Ja. Harsk fiskeolje kan gi mage- og tarmproblemer, blant annet oppkast eller diaré.",
-        "de": "Ja. Ranziges Fischöl kann zu Magen-Darm-Beschwerden führen, darunter Erbrechen oder Durchfall."
+        "de": "Ja. Ranziges Fischöl kann zu Magen-Darm-Beschwerden führen, darunter Erbrechen oder Durchfall.",
+        "es": "Sí. El aceite de pescado rancio puede causar molestias de estómago e intestino, como vómitos o diarrea."
       }
     },
     {
@@ -146,7 +162,8 @@
         "it": "L’olio di pesce è sicuro perché è naturale?",
         "fi": "Onko kalaöljy turvallista, koska se on luonnollista?",
         "nb": "Er fiskeolje trygg fordi den er naturlig?",
-        "de": "Ist Fischöl sicher, weil es natürlich ist?"
+        "de": "Ist Fischöl sicher, weil es natürlich ist?",
+        "es": "¿Es seguro el aceite de pescado por ser natural?"
       },
       "a": {
         "en": "Not automatically. Just because a product is natural does not mean it is safe. Your vet is the best source of information about the safety of non-drug health products for your dog.",
@@ -155,7 +172,8 @@
         "it": "Non automaticamente. Il fatto che un prodotto sia naturale non significa che sia sicuro. Il veterinario è la persona giusta a cui chiedere se un prodotto per la salute non farmacologico è sicuro per il tuo cane.",
         "fi": "Ei automaattisesti. Luonnollinen tuote ei ole aina turvallinen. Eläinlääkäri osaa parhaiten kertoa, ovatko lääkkeettömät terveystuotteet turvallisia koirallesi.",
         "nb": "Ikke automatisk. At et produkt er naturlig, betyr ikke at det er trygt. Dyrlegen er den beste kilden når du lurer på om helseprodukter som ikke er medisin, er trygge for hunden din.",
-        "de": "Nicht automatisch. Dass ein Produkt natürlich ist, heißt nicht, dass es sicher ist. Ihr Tierarzt kann Ihnen am besten sagen, wie sicher Gesundheitsprodukte sind, die keine Arzneimittel sind."
+        "de": "Nicht automatisch. Dass ein Produkt natürlich ist, heißt nicht, dass es sicher ist. Ihr Tierarzt kann Ihnen am besten sagen, wie sicher Gesundheitsprodukte sind, die keine Arzneimittel sind.",
+        "es": "No necesariamente. Que un producto sea natural no significa que sea seguro. Tu veterinario es quien mejor puede informarte sobre la seguridad para tu perro de los productos de salud que no son medicamentos."
       }
     }
   ],
@@ -259,6 +277,11 @@
       "status": "verified",
       "verified_by": "claude-c-de-2026-11-17",
       "verified_hash": "fbb6170f8602d468131216cb63aa2ac0e178aef5f955aa692caa6b417dd9caf8"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-c-es-2026-11-17",
+      "verified_hash": "149af3e919edbee8e479acb07c9797c2a249c49f965429c1a9e8a793ce486c7c"
     }
   }
 }
