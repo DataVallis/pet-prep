@@ -7,7 +7,8 @@
     "fr": "Boissons pour sportifs",
     "it": "Bevande per sportivi",
     "fi": "Urheilujuomat",
-    "nb": "Sportsdrikker"
+    "nb": "Sportsdrikker",
+    "de": "Sportgetränke"
   },
   "question": {
     "en": "Can cats drink sports drinks?",
@@ -15,7 +16,8 @@
     "fr": "Les chats peuvent-ils boire des boissons pour sportifs ?",
     "it": "I gatti possono bere le bevande per sportivi?",
     "fi": "Saako kissa juoda urheilujuomia?",
-    "nb": "Kan katter drikke sportsdrikker?"
+    "nb": "Kan katter drikke sportsdrikker?",
+    "de": "Dürfen Katzen Sportgetränke trinken?"
   },
   "url_slug": {
     "en": "sports-drinks",
@@ -23,7 +25,8 @@
     "fr": "boissons-pour-sportifs",
     "it": "bevande-per-sportivi",
     "fi": "urheilujuomat",
-    "nb": "sportsdrikker"
+    "nb": "sportsdrikker",
+    "de": "sportgetraenke"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "fr": "Non. Les boissons énergisantes ou pour sportifs contiennent souvent beaucoup de caféine, et les chats y sont plus sensibles que les humains. Aucune autre boisson ne remplace l’eau : c’est la seule boisson dont votre chat a besoin.",
     "it": "No. Le bevande energetiche o per sportivi contengono spesso molta caffeina, e i gatti sono più sensibili alla caffeina delle persone. Nessun’altra bevanda sostituisce l’acqua – è l’unica bevanda di cui il tuo gatto ha bisogno.",
     "fi": "Ei saa. Energia- tai urheilujuomissa on usein paljon kofeiinia, ja kissat ovat kofeiinille herkempiä kuin ihmiset. Mikään muu juoma ei korvaa vettä – se on ainoa juoma, jota kissasi tarvitsee.",
-    "nb": "Nei. Energidrikker og sportsdrikker inneholder ofte mye koffein, og katter er mer følsomme for koffein enn mennesker. Ingen annen drikke kan erstatte vann – det er det eneste katten din trenger å drikke."
+    "nb": "Nei. Energidrikker og sportsdrikker inneholder ofte mye koffein, og katter er mer følsomme for koffein enn mennesker. Ingen annen drikke kan erstatte vann – det er det eneste katten din trenger å drikke.",
+    "de": "Nein. Energy- oder Sportgetränke enthalten oft viel Koffein, und Katzen reagieren darauf empfindlicher als Menschen. Kein anderes Getränk ersetzt Wasser – es ist das Einzige, was Ihre Katze zum Trinken braucht."
   },
   "why": {
     "en": "VCA vets warn that energy or sports drinks in the fridge often contain a lot of caffeine. Dogs and cats are more sensitive to caffeine than humans; it stimulates the heart and nervous system, which can be dangerous, and can upset the stomach. Cats Protection adds that milk, cream or any other liquid is no substitute for water in a cat's diet.",
@@ -40,7 +44,8 @@
     "fr": "Les vétérinaires de VCA préviennent que les boissons énergisantes ou pour sportifs gardées au réfrigérateur contiennent souvent beaucoup de caféine. Les chiens et les chats y sont plus sensibles que les humains ; la caféine stimule le cœur et le système nerveux, ce qui peut être dangereux, et peut irriter l’estomac. Cats Protection ajoute que le lait, la crème ou tout autre liquide ne remplace pas l’eau dans l’alimentation d’un chat.",
     "it": "I veterinari di VCA avvertono che le bevande energetiche o per sportivi che teniamo in frigo contengono spesso molta caffeina. Cani e gatti sono più sensibili alla caffeina degli esseri umani; la caffeina stimola il cuore e il sistema nervoso, il che può essere pericoloso, e può causare anche disturbi di stomaco. Cats Protection aggiunge che latte, panna o qualsiasi altro liquido non sostituiscono l’acqua nell’alimentazione di un gatto.",
     "fi": "VCA:n eläinlääkärit varoittavat, että jääkaapissa olevissa energia- tai urheilujuomissa on usein paljon kofeiinia. Koirat ja kissat ovat kofeiinille herkempiä kuin ihmiset; se kiihdyttää sydämen ja hermoston toimintaa, mikä voi olla vaarallista, ja se voi myös sotkea vatsan. Cats Protection lisää, että maito, kerma tai mikään muu neste ei korvaa vettä kissan ruokavaliossa.",
-    "nb": "Dyrleger ved VCA advarer om at energidrikker og sportsdrikker i kjøleskapet ofte inneholder mye koffein. Hunder og katter er mer følsomme for koffein enn mennesker. Koffein stimulerer hjertet og nervesystemet, noe som kan være farlig, og det kan også gi urolig mage. Cats Protection legger til at melk, fløte eller annen væske ikke kan erstatte vann i kattens kosthold."
+    "nb": "Dyrleger ved VCA advarer om at energidrikker og sportsdrikker i kjøleskapet ofte inneholder mye koffein. Hunder og katter er mer følsomme for koffein enn mennesker. Koffein stimulerer hjertet og nervesystemet, noe som kan være farlig, og det kan også gi urolig mage. Cats Protection legger til at melk, fløte eller annen væske ikke kan erstatte vann i kattens kosthold.",
+    "de": "VCA-Tierärzte warnen: Energy- und Sportgetränke aus dem Kühlschrank enthalten oft viel Koffein. Hunde und Katzen reagieren darauf empfindlicher als Menschen; Koffein regt Herz und Nervensystem an, was gefährlich werden kann, und kann auf den Magen schlagen. Laut Cats Protection ist weder Milch noch Sahne noch irgendeine andere Flüssigkeit ein Ersatz für Wasser in der Ernährung einer Katze."
   },
   "signs": {
     "en": [
@@ -90,6 +95,14 @@
       "Urolig mage, oppkast eller diaré",
       "Skjelvinger",
       "Tisser oftere"
+    ],
+    "de": [
+      "Schneller Herzschlag",
+      "Übermäßige Aktivität, Unruhe, kann nicht still liegen",
+      "Auf- und Abgehen oder häufiges Miauen",
+      "Magenverstimmung, Erbrechen oder Durchfall",
+      "Zittern",
+      "Häufigeres Wasserlassen"
     ]
   },
   "what_to_do": {
@@ -98,7 +111,8 @@
     "fr": "Si votre chat a bu une boisson pour sportifs contenant de la caféine, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte. Les signes peuvent apparaître en quelques heures.",
     "it": "Se il tuo gatto ha bevuto una bevanda per sportivi con caffeina, chiama il veterinario o un centro antiveleni veterinario appena te ne accorgi. I sintomi possono comparire entro poche ore.",
     "fi": "Jos kissasi joi kofeiinia sisältävää urheilujuomaa, soita eläinlääkärille tai eläinten myrkytysneuvontaan heti, kun huomaat sen. Oireet voivat alkaa muutaman tunnin kuluessa.",
-    "nb": "Hvis katten har drukket en sportsdrikk med koffein, ringer du dyrlegen eller giftinformasjon for dyr så snart du oppdager det. Tegnene kan komme i løpet av noen timer."
+    "nb": "Hvis katten har drukket en sportsdrikk med koffein, ringer du dyrlegen eller giftinformasjon for dyr så snart du oppdager det. Tegnene kan komme i løpet av noen timer.",
+    "de": "Hat Ihre Katze ein koffeinhaltiges Sportgetränk getrunken, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an, sobald Sie es bemerken. Die Anzeichen können innerhalb weniger Stunden beginnen."
   },
   "serving": null,
   "child": {
@@ -107,7 +121,8 @@
     "fr": "Les boissons pour sportifs ne sont pas faites pour les chats. L’eau fraîche et propre est la meilleure boisson pour garder ton chat en bonne santé !",
     "it": "Le bevande per sportivi non sono per i gatti. L’acqua fresca e pulita è la bevanda migliore per tenere in salute il tuo micio!",
     "fi": "Urheilujuomat eivät ole kissoille. Raikas, puhdas vesi on paras juoma, jotta kissa pysyy terveenä!",
-    "nb": "Sportsdrikker er ikke noe for katter. Friskt, rent vann er best for å holde katten din frisk!"
+    "nb": "Sportsdrikker er ikke noe for katter. Friskt, rent vann er best for å holde katten din frisk!",
+    "de": "Sportgetränke sind nichts für Katzen. Frisches, sauberes Wasser ist das beste Getränk, damit deine Katze gesund bleibt!"
   },
   "faq": [
     {
@@ -117,7 +132,8 @@
         "fr": "Une boisson pour sportifs peut-elle aider si mon chat ne boit pas assez ?",
         "it": "Una bevanda per sportivi può aiutare se il mio gatto non beve abbastanza?",
         "fi": "Voiko urheilujuoma auttaa, jos kissani ei juo tarpeeksi?",
-        "nb": "Kan en sportsdrikk hjelpe hvis katten ikke drikker nok?"
+        "nb": "Kan en sportsdrikk hjelpe hvis katten ikke drikker nok?",
+        "de": "Kann ein Sportgetränk helfen, wenn meine Katze nicht genug trinkt?"
       },
       "a": {
         "en": "Give fresh water instead – no other liquid is a substitute for it. Signs of dehydration include lethargy, weakness, poor appetite and dry gums. If you are concerned that your cat is dehydrated, contact a vet promptly.",
@@ -125,7 +141,8 @@
         "fr": "Donnez plutôt de l’eau fraîche : aucun autre liquide ne la remplace. Parmi les signes de déshydratation : apathie, faiblesse, mauvais appétit et gencives sèches. Si vous craignez que votre chat soit déshydraté, contactez rapidement un vétérinaire.",
         "it": "Dagli invece acqua fresca – nessun altro liquido la sostituisce. Tra i segni di disidratazione ci sono letargia, debolezza, scarso appetito e gengive secche. Se temi che il tuo gatto sia disidratato, contatta subito il veterinario.",
         "fi": "Anna sen sijaan raikasta vettä – mikään muu neste ei korvaa sitä. Nestehukan merkkejä ovat velttous, heikkous, huono ruokahalu ja kuivat ikenet. Jos epäilet kissasi kärsivän nestehukasta, ota viipymättä yhteyttä eläinlääkäriin.",
-        "nb": "Gi friskt vann i stedet – ingen annen væske kan erstatte det. Tegn på dehydrering er sløvhet, svakhet, nedsatt matlyst og tørt tannkjøtt. Hvis du er bekymret for at katten er dehydrert, bør du kontakte dyrlegen raskt."
+        "nb": "Gi friskt vann i stedet – ingen annen væske kan erstatte det. Tegn på dehydrering er sløvhet, svakhet, nedsatt matlyst og tørt tannkjøtt. Hvis du er bekymret for at katten er dehydrert, bør du kontakte dyrlegen raskt.",
+        "de": "Geben Sie stattdessen frisches Wasser – keine andere Flüssigkeit ist ein Ersatz dafür. Anzeichen von Austrocknung sind Mattigkeit, Schwäche, schlechter Appetit und trockenes Zahnfleisch. Befürchten Sie, dass Ihre Katze ausgetrocknet ist, wenden Sie sich umgehend an Ihren Tierarzt."
       }
     }
   ],
@@ -240,6 +257,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "94037c13cf4fd957d252f0c243b1d9ccd6354a4baf5ffd719f01cecb0710d3ea"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-c-de-2026-11-17",
+      "verified_hash": "8d06399c76d851460a493f25e98205f233a9bfc2efc6fe25c033fca93dafc04c"
     }
   }
 }

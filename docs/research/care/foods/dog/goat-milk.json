@@ -7,7 +7,8 @@
     "fr": "Lait de chèvre",
     "it": "Latte di capra",
     "fi": "Vuohenmaito",
-    "nb": "Geitemelk"
+    "nb": "Geitemelk",
+    "de": "Ziegenmilch"
   },
   "question": {
     "en": "Can dogs drink goat's milk?",
@@ -15,7 +16,8 @@
     "fr": "Les chiens peuvent-ils boire du lait de chèvre ?",
     "it": "I cani possono bere il latte di capra?",
     "fi": "Saako koira juoda vuohenmaitoa?",
-    "nb": "Kan hunder drikke geitemelk?"
+    "nb": "Kan hunder drikke geitemelk?",
+    "de": "Dürfen Hunde Ziegenmilch trinken?"
   },
   "url_slug": {
     "en": "goat-milk",
@@ -23,7 +25,8 @@
     "fr": "lait-de-chevre",
     "it": "latte-di-capra",
     "fi": "vuohenmaito",
-    "nb": "geitemelk"
+    "nb": "geitemelk",
+    "de": "ziegenmilch"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "fr": "Seulement un peu, de temps en temps. Le lait de chèvre peut être une petite récompense occasionnelle, mais il contient presque autant de lactose que le lait de vache et peut quand même déranger l’estomac d’un chien. Un chien qui suit une alimentation équilibrée de qualité n’en a pas besoin. Ne donnez pas de lait de chèvre cru.",
     "it": "Solo un po’, ogni tanto. Il latte di capra può essere un premio occasionale, ma contiene quasi tanto lattosio quanto il latte vaccino e può comunque far venire il mal di stomaco al cane. I cani che mangiano in modo sano ed equilibrato non ne hanno bisogno. Non dare latte di capra crudo.",
     "fi": "Vain vähän, silloin tällöin. Vuohenmaito voi olla satunnainen palkinto, mutta siinä on lähes yhtä paljon laktoosia kuin lehmänmaidossa, ja se voi silti sotkea koiran vatsan. Hyvin ja tasapainoisesti ruokitut koirat eivät tarvitse sitä. Älä anna raakaa vuohenmaitoa.",
-    "nb": "Bare litt, av og til. Geitemelk kan være en belønning nå og da, men den har nesten like mye laktose som kumelk og kan fortsatt gi hunden urolig mage. Hunder som får et godt, balansert kosthold, trenger den ikke. Gi aldri rå geitemelk."
+    "nb": "Bare litt, av og til. Geitemelk kan være en belønning nå og da, men den har nesten like mye laktose som kumelk og kan fortsatt gi hunden urolig mage. Hunder som får et godt, balansert kosthold, trenger den ikke. Gi aldri rå geitemelk.",
+    "de": "Nur ein wenig und ab und zu. Ziegenmilch kann eine gelegentliche Belohnung sein, enthält aber fast so viel Laktose wie Kuhmilch und kann Hunden trotzdem auf den Magen schlagen. Hunde mit guter, ausgewogener Ernährung brauchen sie nicht. Geben Sie keine rohe Ziegenmilch."
   },
   "why": {
     "en": "Goat's milk has almost the same amount of lactose as cow's milk, and dogs can have varying degrees of lactose intolerance. The Australian Veterinary Association notes that goat's milk and lactose-free milk can still cause stomach and gut problems, and that some dogs can develop an allergy to milk protein. Raw milk can also carry germs such as E. coli, Salmonella and Listeria.",
@@ -40,7 +44,8 @@
     "fr": "Le lait de chèvre contient presque autant de lactose que le lait de vache, et l’intolérance au lactose varie d’un chien à l’autre. L’Australian Veterinary Association précise que le lait de chèvre et le lait sans lactose peuvent malgré tout provoquer des troubles de l’estomac et de l’intestin, et que certains chiens peuvent développer une allergie aux protéines du lait. Le lait cru peut en outre contenir des germes comme E. coli, Salmonella et Listeria.",
     "it": "Il latte di capra contiene quasi la stessa quantità di lattosio del latte vaccino, e i cani possono avere vari gradi di intolleranza al lattosio. L’Australian Veterinary Association osserva che il latte di capra e il latte senza lattosio possono comunque causare problemi di stomaco e intestino, e che alcuni cani possono sviluppare un’allergia alle proteine del latte. Il latte crudo può inoltre ospitare germi come E. coli, Salmonella e Listeria.",
     "fi": "Vuohenmaidossa on lähes yhtä paljon laktoosia kuin lehmänmaidossa, ja laktoosi-intoleranssin aste vaihtelee koirilla. Australian eläinlääkäriliitto huomauttaa, että vuohenmaito ja laktoositon maito voivat silti aiheuttaa vatsa- ja suolisto-ongelmia ja että joillekin koirille voi kehittyä maitoproteiiniallergia. Raa’assa maidossa voi myös olla bakteereja, kuten E. colia, salmonellaa ja listeriaa.",
-    "nb": "Geitemelk har nesten like mye laktose som kumelk, og hunder kan ha ulik grad av laktoseintoleranse. Den australske dyrlegeforeningen (Australian Veterinary Association) påpeker at geitemelk og laktosefri melk fortsatt kan gi mage- og tarmproblemer, og at noen hunder kan utvikle allergi mot melkeprotein. Rå melk kan dessuten inneholde bakterier som E. coli, salmonella og listeria."
+    "nb": "Geitemelk har nesten like mye laktose som kumelk, og hunder kan ha ulik grad av laktoseintoleranse. Den australske dyrlegeforeningen (Australian Veterinary Association) påpeker at geitemelk og laktosefri melk fortsatt kan gi mage- og tarmproblemer, og at noen hunder kan utvikle allergi mot melkeprotein. Rå melk kan dessuten inneholde bakterier som E. coli, salmonella og listeria.",
+    "de": "Ziegenmilch enthält fast genauso viel Laktose wie Kuhmilch, und Hunde können unterschiedlich stark laktoseintolerant sein. Die Australian Veterinary Association weist darauf hin, dass Ziegenmilch und laktosefreie Milch trotzdem Magen-Darm-Probleme verursachen können und manche Hunde eine Allergie gegen Milcheiweiß entwickeln. Rohmilch kann außerdem Keime wie E. coli, Salmonellen und Listerien enthalten."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Oppkast",
       "Vondt i magen",
       "Diaré"
+    ],
+    "de": [
+      "Weicher Kot",
+      "Blähungen",
+      "Erbrechen",
+      "Bauchschmerzen",
+      "Durchfall"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "fr": "Arrêtez le lait de chèvre si votre chien a les selles molles, des gaz, des vomissements, mal au ventre ou de la diarrhée, et veillez à ce qu’il ait toujours de l’eau fraîche à disposition. Avant d’ajouter du lait de chèvre à l’alimentation de votre chien, parlez-en d’abord à votre vétérinaire.",
     "it": "Smetti di dare il latte di capra se il tuo cane ha feci molli, gas, vomito, mal di pancia o diarrea, e assicurati che abbia sempre acqua fresca a disposizione. Prima di inserire il latte di capra nell’alimentazione del tuo cane, parlane con il veterinario.",
     "fi": "Lopeta vuohenmaidon antaminen, jos koiralla on löysää ulostetta, ilmavaivoja, oksentelua, vatsakipua tai ripulia, ja huolehdi, että raikasta vettä on aina saatavilla. Keskustele eläinlääkärin kanssa, ennen kuin lisäät vuohenmaitoa koiran ruokavalioon.",
-    "nb": "Slutt å gi geitemelk hvis hunden får løs avføring, luft i magen, oppkast, vondt i magen eller diaré, og sørg for at den alltid har friskt vann. Før du legger geitemelk til hundens kosthold, bør du snakke med dyrlegen."
+    "nb": "Slutt å gi geitemelk hvis hunden får løs avføring, luft i magen, oppkast, vondt i magen eller diaré, og sørg for at den alltid har friskt vann. Før du legger geitemelk til hundens kosthold, bør du snakke med dyrlegen.",
+    "de": "Setzen Sie die Ziegenmilch ab, wenn Ihr Hund weichen Kot, Blähungen, Erbrechen, Bauchschmerzen oder Durchfall bekommt, und sorgen Sie dafür, dass immer frisches Wasser da ist. Bevor Sie Ziegenmilch in den Speiseplan Ihres Hundes aufnehmen, sprechen Sie zuerst mit Ihrem Tierarzt darüber."
   },
   "serving": {
     "en": "Never raw. Offer it only as an occasional reward, never instead of fresh water or a balanced dog food.",
@@ -100,7 +113,8 @@
     "fr": "Jamais cru. À donner uniquement comme petite récompense occasionnelle, jamais à la place de l’eau fraîche ni d’une alimentation équilibrée pour chiens.",
     "it": "Mai crudo. Offrilo solo come premio occasionale, mai al posto dell’acqua fresca o di un cibo equilibrato per cani.",
     "fi": "Ei koskaan raakana. Tarjoa vain satunnaisena palkintona, ei koskaan raikkaan veden tai tasapainoisen koiranruoan tilalla.",
-    "nb": "Aldri rå. Gi den bare som en belønning av og til, aldri i stedet for friskt vann eller et balansert hundefôr."
+    "nb": "Aldri rå. Gi den bare som en belønning av og til, aldri i stedet for friskt vann eller et balansert hundefôr.",
+    "de": "Niemals roh. Geben Sie sie nur als gelegentliche Belohnung, niemals anstelle von frischem Wasser oder ausgewogenem Hundefutter."
   },
   "child": {
     "en": "Goat's milk is only a rare little treat for dogs. Fresh water is the best drink for them every day!",
@@ -108,7 +122,8 @@
     "fr": "Le lait de chèvre n’est qu’une petite friandise très rare pour les chiens. L’eau fraîche reste la meilleure boisson pour eux, tous les jours !",
     "it": "Il latte di capra è solo un premietto ogni tanto per i cani. L’acqua fresca è la bevanda migliore per loro ogni giorno!",
     "fi": "Vuohenmaito on koiralle vain harvinainen pieni herkku. Raikas vesi on koiran paras juoma joka päivä!",
-    "nb": "Geitemelk er bare en sjelden liten godbit for hunder. Friskt vann er den beste drikken for dem hver dag!"
+    "nb": "Geitemelk er bare en sjelden liten godbit for hunder. Friskt vann er den beste drikken for dem hver dag!",
+    "de": "Ziegenmilch ist für Hunde nur ein seltenes kleines Leckerli. Frisches Wasser ist jeden Tag das beste Getränk für sie!"
   },
   "faq": [
     {
@@ -118,7 +133,8 @@
         "fr": "Le lait de chèvre est-il plus facile à digérer pour un chien que le lait de vache ?",
         "it": "Il latte di capra è più facile da digerire per i cani rispetto a quello vaccino?",
         "fi": "Onko vuohenmaito koiralle helpompaa sulattaa kuin lehmänmaito?",
-        "nb": "Er geitemelk lettere for hunder å fordøye enn kumelk?"
+        "nb": "Er geitemelk lettere for hunder å fordøye enn kumelk?",
+        "de": "Verträgt ein Hund Ziegenmilch leichter als Kuhmilch?"
       },
       "a": {
         "en": "Not really. Goat's milk has almost the same amount of lactose as cow's milk. Its smaller fat globules are often mentioned, but homogenisation also makes the fat globules in cow's milk smaller.",
@@ -126,7 +142,8 @@
         "fr": "Pas vraiment. Le lait de chèvre contient presque autant de lactose que le lait de vache. On cite souvent ses globules gras plus petits, mais l’homogénéisation rend aussi plus petits ceux du lait de vache.",
         "it": "Non proprio. Il latte di capra contiene quasi la stessa quantità di lattosio del latte vaccino. Si dice spesso che abbia globuli di grasso più piccoli, ma anche l’omogeneizzazione li rimpicciolisce nel latte vaccino.",
         "fi": "Ei oikeastaan. Vuohenmaidossa on lähes yhtä paljon laktoosia kuin lehmänmaidossa. Usein mainitaan vuohenmaidon pienemmät rasvapallot, mutta myös homogenointi pienentää lehmänmaidon rasvapalloja.",
-        "nb": "Ikke egentlig. Geitemelk har nesten like mye laktose som kumelk. De mindre fettkulene nevnes ofte, men homogenisering gjør også fettkulene i kumelk mindre."
+        "nb": "Ikke egentlig. Geitemelk har nesten like mye laktose som kumelk. De mindre fettkulene nevnes ofte, men homogenisering gjør også fettkulene i kumelk mindre.",
+        "de": "Nicht wirklich. Ziegenmilch enthält fast genauso viel Laktose wie Kuhmilch. Oft heißt es, ihre Fettkügelchen seien kleiner, doch auch die Homogenisierung macht die Fettkügelchen der Kuhmilch kleiner."
       }
     },
     {
@@ -136,7 +153,8 @@
         "fr": "Le lait de chèvre peut-il remplacer le traitement de mon chien ?",
         "it": "Il latte di capra può sostituire le terapie del mio cane?",
         "fi": "Voiko vuohenmaito korvata koirani saamaa hoitoa?",
-        "nb": "Kan geitemelk erstatte hundens behandling?"
+        "nb": "Kan geitemelk erstatte hundens behandling?",
+        "de": "Kann Ziegenmilch die Behandlung meines Hundes ersetzen?"
       },
       "a": {
         "en": "No. A vet at the Drake Center warns that it can be dangerous if goat's milk is used in place of known appropriate treatments. Discuss it with your vet first.",
@@ -144,7 +162,8 @@
         "fr": "Non. Un vétérinaire du Drake Center avertit que cela peut être dangereux si le lait de chèvre est utilisé à la place de traitements reconnus. Parlez-en d’abord à votre vétérinaire.",
         "it": "No. Un veterinario della clinica Drake Center avverte che può essere pericoloso usare il latte di capra al posto di terapie appropriate e consolidate. Parlane prima con il veterinario.",
         "fi": "Ei. Drake Centerin eläinlääkäri varoittaa, että vuohenmaidon käyttäminen tunnettujen, asianmukaisten hoitojen sijaan voi olla vaarallista. Keskustele asiasta ensin eläinlääkärin kanssa.",
-        "nb": "Nei. En dyrlege ved Drake Center advarer om at det kan være farlig hvis geitemelk brukes i stedet for anerkjent, egnet behandling. Snakk med dyrlegen først."
+        "nb": "Nei. En dyrlege ved Drake Center advarer om at det kan være farlig hvis geitemelk brukes i stedet for anerkjent, egnet behandling. Snakk med dyrlegen først.",
+        "de": "Nein. Eine Tierärztin oder ein Tierarzt des Drake Center warnt, es könne gefährlich sein, wenn Ziegenmilch anstelle anerkannter, geeigneter Behandlungen eingesetzt wird. Besprechen Sie es zuerst mit Ihrem Tierarzt."
       }
     }
   ],
@@ -264,6 +283,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1422ae724b877f52690b8b5f8b11f41d1303c27f2bdd8b28502e28b0cb9ae69a"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-c-de-2026-11-17",
+      "verified_hash": "3476ebb21fc67d9a38104b2bc16f2f68733eb98ada70c66647dacf3732638feb"
     }
   }
 }
