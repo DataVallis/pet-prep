@@ -64,7 +64,7 @@ describe('webhook → order + voucher', function () {
         expect($email->to_address)->toBe('buyer@example.com')
             ->and($email->status)->toBe('pending')
             ->and($email->locale)->toBe('sl')
-            ->and($email->subject)->toBe('Vaš darilni bon PetPrep')
+            ->and($email->subject)->toBe('Vaš darilni bon PetPrep · '.$order->number)->toMatch('/ · PP-\d{4}-\d{6}$/')
             ->and($email->html)->not->toContain($code)->toContain('[[petprep-voucher-code]]')->toContain('petprep.si/sl/unovci')
             ->and($email->attachments)->toBe([['type' => 'voucher_pdf', 'voucher_id' => $voucher->id]]);
     });

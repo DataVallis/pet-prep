@@ -56,7 +56,8 @@ class ShopEmailComposer
         $vars = [
             'locale' => $locale,
             't' => $t,
-            'subject' => $t($gift ? 'gift_subject' : 'kit_subject'),
+            // The order number in the subject keeps e-mails of separate orders out of one thread (David 2026-11-17).
+            'subject' => $t($gift ? 'gift_subject' : 'kit_subject').' · '.$order->number,
             'preheader' => $t($gift ? 'gift_preheader' : 'kit_preheader'),
             'intro' => $t($gift ? 'gift_intro' : 'kit_intro'),
             // The code is never stored in outbound_emails: a token here, the real code at send time (OutboundEmailSender).
