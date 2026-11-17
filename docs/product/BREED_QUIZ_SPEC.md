@@ -108,8 +108,11 @@ pokritimi pasmami in to pove: »Izbiramo med X pasmami, za katere imamo preverje
 - **Brez PDF-jev in brez Lemon Squeezy za povzetke (David 16. 11. 2026; prodaja bonov in »Obljube« ostane, kjer je).** Povzetek »Vaše pasme« (top 3 + oznake + stroški) je
   dinamična stran za tisk, enako kot povzetek kalkulatorja (T8); starš jo natisne ali shrani sam.
 - **E-naslov zbiramo, a ni pogoj** za rezultat: isto polje in ista privolitev kot pri kalkulatorju, isti
-  `POST /api/summary-leads` (M6-S05) z novo vrednostjo `source: breed_quiz` (strežnik danes sprejme samo `real_cost` —
-  majhna sprememba ob gradnji) in `breed` = prva pasma rezultata. En e-naslov ostane ena vrstica.
+  `POST /api/summary-leads` (M6-S05) z `source: breed_quiz` in `breed` = prva pasma rezultata. **Od 17. 11. 2026 (M6-S09,
+  David: »Vse maile iz povsod zbiramo v naši bazi … segmentirani«)** kviz pošilja na enotni `POST /api/email-signups`
+  (`purpose: newsletter`, `source: breed_quiz`, `page_path`, `section` = kje v kvizu, `breed`, `quiz: {result: [top 3 id-ji],
+  answers: "012301230"}`, UTM, referrer): en e-naslov ostane en stik, vsaka oddaja je svoja vrstica z rezultatom kviza za
+  targetiranje. Stari `/api/summary-leads` deluje naprej samo za stare strani.
 - **Deljenje:** rezultat ima svoj URL z odgovori v parametrih (brez osebnih podatkov) in sliko za deljenje
   (»Za našo družino: …«).
 
@@ -121,7 +124,7 @@ pokritimi pasmami in to pove: »Izbiramo med X pasmami, za katere imamo preverje
 - Brez analitičnih orodij brez Davidovega OK (pravilo repozitorija). Če David odobri, šteti samo anonimno
   (zaključeni kvizi, kateri top 3, kliki na CTA) — to je tudi vrednost za sponzorja (»koliko družin je razmišljalo o X«),
   enako kot pri kalkulatorju: partner dobi številke, ne naslovov.
-- **Strežniški del zgrajen 16. 11. 2026 (M6-S06, backend):** `POST /api/breed-quiz/events` — javno, brez piškotkov, 60 na uro na IP (IP je samo ključ omejitve, ne shranjuje se in ne beleži), skrito polje `website` mora biti prazno (sicer 204 in nič shranjeno). Telo `{ "event": "completed" | "calculator_click" | "app_click", "locale": ena od 15 jezikov strani, "breeds": [id pasme] }`; `completed` → `breeds` = top 3 po vrstnem redu (1–3 id-ji), klika → natanko 1 id (kartica); id `^[a-z0-9_]{1,64}$`, brez iskanja v bazi. Odgovor `204`, pri neveljavnem vnosu `422`, ob preseženi omejitvi `429`. Shramba: tabela `breed_quiz_stats` (dan UTC · dogodek · pasma · mesto · jezik · števec, atomarni upsert, rang NULL pri klikih, `NULLS NOT DISTINCT`); pregled v administraciji (superadmin). E-naslov iz kviza: `POST /api/summary-leads` z `source: breed_quiz`, `breed` = prva pasma rezultata. Podrobnosti: ARCHITECTURE §3 + tabela `breed_quiz_stats`.
+- **Strežniški del zgrajen 16. 11. 2026 (M6-S06, backend):** `POST /api/breed-quiz/events` — javno, brez piškotkov, 60 na uro na IP (IP je samo ključ omejitve, ne shranjuje se in ne beleži), skrito polje `website` mora biti prazno (sicer 204 in nič shranjeno). Telo `{ "event": "completed" | "calculator_click" | "app_click", "locale": ena od 15 jezikov strani, "breeds": [id pasme] }`; `completed` → `breeds` = top 3 po vrstnem redu (1–3 id-ji), klika → natanko 1 id (kartica); id `^[a-z0-9_]{1,64}$`, brez iskanja v bazi. Odgovor `204`, pri neveljavnem vnosu `422`, ob preseženi omejitvi `429`. Shramba: tabela `breed_quiz_stats` (dan UTC · dogodek · pasma · mesto · jezik · števec, atomarni upsert, rang NULL pri klikih, `NULLS NOT DISTINCT`); pregled v administraciji (superadmin). E-naslov iz kviza: `POST /api/email-signups` z `source: breed_quiz` (od M6-S09, 17. 11. 2026; prej `POST /api/summary-leads`), `breed` = prva pasma rezultata, `quiz` = top 3 + odgovori; shramba `email_contacts` / `email_signups` (ARCHITECTURE). Podrobnosti: ARCHITECTURE §3 + tabela `breed_quiz_stats`.
 - Kartica rezultata ima prostor za partnerja (enako kot kalkulator, poziv »Želite postati naš partner?«).
 
 ## 9. Tehnika (predlog)

@@ -74,9 +74,10 @@ class GameDataResetService
         // M6-S03 partner inquiries from petprep.si: business leads, not game data (no
         // user/family FK; pruned after 12 months by its own command).
         'partner_inquiries',
-        // M6-S05 parent e-mails from the petprep.si page »Koliko dela je pes«: website leads
-        // with consent, not game data (no user/family FK; deleted only when the parent asks).
-        'summary_leads',
+        // M6-S09 every e-mail left on petprep.si (replaced summary_leads, M6-S05): website contacts
+        // with consent, not game data (no user/family FK; deleted only when the person asks).
+        'email_contacts',
+        'email_signups',
         // M6-S06 anonymous breed-quiz counters from petprep.si: website statistics, not game data.
         'breed_quiz_stats',
     ];

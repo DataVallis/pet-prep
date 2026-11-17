@@ -216,10 +216,16 @@ class AppServiceProvider extends ServiceProvider
             return Limit::perHour(5)->by('partner-inquiries:'.ClientIp::rateLimitKey($request->ip()));
         });
 
-        // M6-S05 parent e-mail on the page »Koliko dela je pes« (petprep.si): unauthenticated,
-        // writes or updates one row → 10 per hour per IP (IPv6 /64). Live in testing too.
+        // M6-S05 parent e-mail on the page »Koliko dela je pes« (petprep.si; old pages, M6-S09): unauthenticated,
+        // writes a contact + signup → 10 per hour per IP (IPv6 /64). Live in testing too.
         RateLimiter::for('summary-leads', function (Request $request) {
             return Limit::perHour(10)->by('summary-leads:'.ClientIp::rateLimitKey($request->ip()));
+        });
+
+        // M6-S09 every e-mail left on petprep.si (POST /api/email-signups): unauthenticated, adds a
+        // signup row → 20 per hour per IP (IPv6 /64). The address is only the key. Live in testing too.
+        RateLimiter::for('email-signups', function (Request $request) {
+            return Limit::perHour(20)->by('email-signups:'.ClientIp::rateLimitKey($request->ip()));
         });
 
         // M6-S06 breed quiz counters (petprep.si): unauthenticated, upserts counters →
