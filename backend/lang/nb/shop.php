@@ -37,5 +37,7 @@ return [
     'pdf_valid' => 'Gyldig til',
     'pdf_redeem' => 'Løs inn på',
     'pdf_file' => 'petprep-gavekort',
+    // Sender name of the shop e-mails in this language (David 2026-11-17: translated).
+    'from_name' => 'Curio fra PetPrep',
     'language_name' => 'norsk',
 ];

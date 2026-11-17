@@ -2,6 +2,7 @@
 
 namespace App\Services\Shop;
 
+use App\Models\GiftVoucher;
 use App\Models\OutboundEmail;
 use App\Models\ShopOrder;
 
@@ -74,7 +75,7 @@ class ShopEmailComposer
             'subject' => $vars['subject'],
             'html' => view('emails.shop.order', $vars)->render(),
             'text' => $this->text($vars),
-            'attachments' => $voucher !== null ? [['type' => 'voucher_pdf', 'voucher_id' => $voucher->id]] : [],
+            'attachments' => $this->attachmentsFor($order, $voucher, $locale),
         ];
     }
 
@@ -114,5 +115,28 @@ class ShopEmailComposer
         $lines[] = $t('order', ['number' => $v['number']]).' · '.$t('receipt');
 
         return implode("\n", $lines);
+    }
+
+    /**
+     * The voucher PDF for a gift order; the kit PDF in the buyer's language (else English) for a kit
+     * order (David 2026-11-17: the kit e-mail carries the file, not only links). Descriptions only —
+     * the files are read at send time.
+     *
+     * @return list<array<string, int|string>>
+     */
+    private function attachmentsFor(ShopOrder $order, ?GiftVoucher $voucher, string $locale): array
+    {
+        if ($voucher !== null) {
+            return [['type' => 'voucher_pdf', 'voucher_id' => $voucher->id]];
+        }
+        if ($order->product_key === ShopOrder::PRODUCT_PROMISE_KIT) {
+            foreach ([$locale, 'en'] as $l) {
+                if (ShopFiles::exists(ShopOrder::PRODUCT_PROMISE_KIT, $l)) {
+                    return [['type' => 'shop_file', 'product' => ShopOrder::PRODUCT_PROMISE_KIT, 'locale' => $l]];
+                }
+            }
+        }
+
+        return [];
     }
 }

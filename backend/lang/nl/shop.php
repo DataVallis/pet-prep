@@ -37,5 +37,7 @@ return [
     'pdf_valid' => 'Geldig tot',
     'pdf_redeem' => 'Inwisselen op',
     'pdf_file' => 'petprep-cadeaubon',
+    // Sender name of the shop e-mails in this language (David 2026-11-17: translated).
+    'from_name' => 'Curio van PetPrep',
     'language_name' => 'Nederlands',
 ];

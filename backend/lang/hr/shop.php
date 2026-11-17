@@ -37,5 +37,7 @@ return [
     'pdf_valid' => 'Vrijedi do',
     'pdf_redeem' => 'Iskoristite na',
     'pdf_file' => 'petprep-poklon-bon',
+    // Sender name of the shop e-mails in this language (David 2026-11-17: translated).
+    'from_name' => 'Curio iz PetPrep',
     'language_name' => 'hrvatski',
 ];

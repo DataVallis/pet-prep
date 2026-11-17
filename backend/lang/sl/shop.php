@@ -37,5 +37,7 @@ return [
     'pdf_valid' => 'Velja do',
     'pdf_redeem' => 'Unovčite na',
     'pdf_file' => 'petprep-darilni-bon',
+    // Sender name of the shop e-mails in this language (David 2026-11-17: translated).
+    'from_name' => 'Curio iz PetPrep',
     'language_name' => 'slovenščina',
 ];

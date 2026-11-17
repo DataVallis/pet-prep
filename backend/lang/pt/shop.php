@@ -37,5 +37,7 @@ return [
     'pdf_valid' => 'Válido até',
     'pdf_redeem' => 'Resgate em',
     'pdf_file' => 'petprep-vale-de-oferta',
+    // Sender name of the shop e-mails in this language (David 2026-11-17: translated).
+    'from_name' => 'Curio da PetPrep',
     'language_name' => 'português',
 ];

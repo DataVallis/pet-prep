@@ -3,6 +3,7 @@
 use App\Jobs\SendShopAlert;
 use App\Models\OutboundEmail;
 use App\Services\Mail\OutboundEmailSender;
+use App\Services\Shop\ShopFiles;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
@@ -45,13 +46,15 @@ it('E1: a paid gift order\'s e-mail goes out from Curio with reply-to hello@, HT
     expect($email->status)->toBe('sent')->and($email->attempts)->toBe(1)->and($email->sent_at)->not->toBeNull();
     $message = oeSent()[0]->getOriginalMessage();
     expect($message->getFrom()[0]->getAddress())->toBe('curio@petprep.si')
-        ->and($message->getFrom()[0]->getName())->toBe('Curio from PetPrep')
+        ->and($message->getFrom()[0]->getName())->toBe('Curio iz PetPrep') // sender name in the buyer's language
         ->and($message->getReplyTo()[0]->getAddress())->toBe('hello@petprep.si')
         ->and($message->getTo()[0]->getAddress())->toBe('buyer@example.com')
         ->and($message->getSubject())->toBe('Vaš darilni bon PetPrep')
         ->and($message->getHtmlBody())->toContain($code)
         ->and($message->getTextBody())->toContain($code);
-    $attachments = $message->getAttachments();
+    // The logo is embedded (cid), not a remote image.
+    expect($message->getHtmlBody())->toContain('cid:')->not->toContain('petprep-wordmark-320.png');
+    $attachments = array_values(array_filter($message->getAttachments(), fn ($p) => $p->getDisposition() !== 'inline'));
     expect($attachments)->toHaveCount(1)
         ->and($attachments[0]->getFilename())->toBe('petprep-darilni-bon.pdf')
         ->and(substr($attachments[0]->getBody(), 0, 5))->toBe('%PDF-');
@@ -153,4 +156,19 @@ it('E8: an e-mail of an order refunded before it went out is cancelled, not sent
     expect(app(OutboundEmailSender::class)->run()['sent'])->toBe(0)
         ->and(OutboundEmail::sole()->status)->toBe('cancelled')
         ->and(oeSent())->toBe([]);
+});
+
+it('E9: a kit order\'s e-mail carries the kit PDF in the buyer\'s language; the sender name is translated', function () {
+    $stripe = shStripe();
+    ShopFiles::disk()->put(ShopFiles::path('promise_kit', 'de'), '%PDF-1.4 kit de');
+    shKitSwitch(true);
+    shPaidOrder($stripe, 'promise_kit', ['metadata' => ['locale' => 'de']]);
+
+    expect(app(OutboundEmailSender::class)->run()['sent'])->toBe(1);
+    $message = oeSent()[0]->getOriginalMessage();
+    $files = array_values(array_filter($message->getAttachments(), fn ($p) => $p->getDisposition() !== 'inline'));
+    expect($message->getFrom()[0]->getName())->toBe('Curio von PetPrep')
+        ->and($files)->toHaveCount(1)
+        ->and($files[0]->getFilename())->toBe('petprep-promise-kit-de.pdf')
+        ->and($files[0]->getBody())->toBe('%PDF-1.4 kit de');
 });

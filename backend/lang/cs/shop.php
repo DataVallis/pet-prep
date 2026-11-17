@@ -37,5 +37,7 @@ return [
     'pdf_valid' => 'Platí do',
     'pdf_redeem' => 'Uplatněte na',
     'pdf_file' => 'petprep-darkovy-poukaz',
+    // Sender name of the shop e-mails in this language (David 2026-11-17: translated).
+    'from_name' => 'Curio z PetPrep',
     'language_name' => 'čeština',
 ];

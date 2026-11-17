@@ -37,5 +37,7 @@ return [
     'pdf_valid' => 'Valid until',
     'pdf_redeem' => 'Redeem at',
     'pdf_file' => 'petprep-gift-voucher',
+    // Sender name of the shop e-mails in this language (David 2026-11-17: translated).
+    'from_name' => 'Curio from PetPrep',
     'language_name' => 'English',
 ];
