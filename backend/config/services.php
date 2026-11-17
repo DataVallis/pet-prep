@@ -85,26 +85,24 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Lemon Squeezy — website gift voucher (M6-S01, WEBSITE_SALES_SPEC §3.4)
+    | Stripe — website shop (M6-S09, WEBSITE_SALES_SPEC §3.4)
     |--------------------------------------------------------------------------
-    | The voucher code = a Lemon Squeezy license key of the gift product.
-    | Redeem: POST /api/gift/redeem (License API, no key needed). Refunds:
-    | POST /api/webhooks/lemonsqueezy, HMAC-SHA256 (`X-Signature`) with the
-    | signing secret. Empty secret / store / product → the webhook answers 503
-    | and redeem 503 (fail closed). Secrets — never log or show them.
+    | Stripe Managed Payments (Link is the merchant of record). Checkout Sessions
+    | are created by POST /api/shop/checkout; payments, refunds and disputes arrive
+    | at POST /api/webhooks/stripe (`Stripe-Signature`, HMAC-SHA256 of
+    | "<t>.<raw body>"). No secret key / webhook secret → checkout 503 and webhook
+    | 503 (fail closed). Secrets — never log or show them.
     */
-    'lemonsqueezy' => [
-        'webhook_secret' => env('LEMONSQUEEZY_WEBHOOK_SECRET'),
-        'store_id' => env('LEMONSQUEEZY_STORE_ID'),
-        'gift_product_id' => env('LEMONSQUEEZY_GIFT_PRODUCT_ID'),
-        // Empty = any variant of the gift product.
-        'gift_variant_id' => env('LEMONSQUEEZY_GIFT_VARIANT_ID'),
-        'api_base' => rtrim((string) env('LEMONSQUEEZY_API_BASE', 'https://api.lemonsqueezy.com'), '/'),
-        // Optional: only for crash recovery (list the key's instances). Never logged.
-        'api_key' => env('LEMONSQUEEZY_API_KEY'),
-        // Accept LS test-mode keys and webhooks (staging / dry run). Default false.
-        'accept_test_mode' => (bool) env('LEMONSQUEEZY_ACCEPT_TEST_MODE', false),
-        'timeout_seconds' => 10,
+    'stripe' => [
+        'secret_key' => env('STRIPE_SECRET_KEY'),
+        'webhook_secret' => env('STRIPE_WEBHOOK_SECRET'),
+        'api_base' => rtrim((string) env('STRIPE_API_BASE', 'https://api.stripe.com'), '/'),
+        // Pinned: payload shapes of the code below. The webhook endpoint uses the same version.
+        'api_version' => env('STRIPE_API_VERSION', '2025-03-31.basil'),
+        // Accept test-mode sessions and events (first dry run on production). Default false.
+        'accept_test_mode' => (bool) env('STRIPE_ACCEPT_TEST_MODE', false),
+        'webhook_tolerance_seconds' => 300,
+        'timeout_seconds' => 15,
         'connect_timeout_seconds' => 5,
     ],
 

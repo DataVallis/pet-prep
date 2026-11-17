@@ -40,6 +40,17 @@ Schedule::command('pets:process-decay')
     ->name('pet-decay-loop')
     ->description('Minutely metric decay and escalation for active pets');
 
+// Every minute (M6-S09, WEBSITE_SALES_SPEC §3.6): send the due e-mails of the
+// outbound_emails queue through SMTP (retries with back-off, admin alert after the last).
+// SKIP LOCKED claims, so an overlap could not double-send; still one at a time.
+Schedule::command('emails:send')
+    ->everyMinute()
+    // A batch of 50 SMTP sends with PDFs stays well under 10 min (D34: explicit expiry).
+    ->withoutOverlapping(10)
+    ->runInBackground()
+    ->name('emails-send')
+    ->description('Send queued e-mails (website shop)');
+
 // Daily (M2-02): delete child login PINs that expired more than 7 days ago.
 // 03:17 UTC — off the hour, outside the families' evening rush.
 Schedule::command('pins:prune')

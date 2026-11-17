@@ -2683,7 +2683,6 @@ sequenceDiagram
   participant G as Google / Apple
   participant API as api.petprep.si
   participant DB as PostgreSQL
-  participant LS as Lemon Squeezy
   alt Google / Apple
     B->>G: location.assign(authorize?client_id=<website id>&nonce=sha256(raw)&state)
     G-->>B: petprep.si/auth/return#id_token=…&state=…
@@ -2700,13 +2699,56 @@ sequenceDiagram
   API-->>B: 200 {token, abilities: ["gift:redeem"], expires_at, expires_in: 900} (no user data; kept in JS memory)
   B->>API: POST /api/gift/redeem {code, locale} · Bearer <web token>
   Note over API: RequireWebSession: only a web token (app tokens → 401) · family = token's parent's
-  API->>LS: validate (outside any transaction)
-  API->>DB: claim (short tx)
-  API->>LS: activate instance family:<id>
-  API->>DB: commit (voucher → family locks) · one web_gift credit
+  Note over API: M6-S09 — the code is ours: lookup by sha256(canonical code), no external call
+  API->>DB: tx (voucher → family locks): checks · voucher redeemed · one web_gift credit
   API-->>B: 200 {status: redeemed, already}
   opt sign out
     B->>API: DELETE /api/web/parent-session · Bearer <web token> → 204 (app tokens never deleted)
   end
   Note over API: Any other API route with a web token → 403 token_scope (RestrictWebSessionTokens)
+```
+
+## Website shop purchase (M6-S09, David 2026-11-17 — Stripe Managed Payments)
+
+The website never sees card data; Stripe (Link) is the seller. Fulfilment has one path (`ShopFulfillment::fulfill`) that both the webhook and the thank-you page call — whichever arrives first wins, the other finds the order done.
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant B as Browser (petprep.si)
+  participant API as api.petprep.si
+  participant S as Stripe (Link)
+  participant DB as PostgreSQL
+  participant Q as emails:send (every minute)
+  participant M as mail.datavallis.com
+  B->>API: POST /api/shop/checkout {product, locale, success_path, cancel_path}
+  Note over API: product switch on? · paths on petprep.si only
+  API->>S: POST /v1/checkout/sessions (managed_payments, PetPrep branding, metadata)
+  API-->>B: {url} → redirect to Stripe Checkout
+  B->>S: pays (card / Apple Pay / Google Pay / Link)
+  S-->>B: redirect success_path?session_id=cs_…
+  par webhook
+    S->>API: checkout.session.completed (Stripe-Signature)
+    API->>DB: stripe_events (event.id once)
+    API->>S: GET session + line items (outside any transaction)
+    API->>DB: tx: order paid · number · voucher PP-XXXX-XXXX-XXXX (gift) · e-mail queued (full HTML)
+  and thank-you page
+    B->>API: GET /api/shop/orders/{session}
+    API->>S: (only if not fulfilled yet) GET session → same fulfilment
+    API-->>B: code · valid until · signed PDF links · masked e-mail
+  end
+  Q->>DB: claim due rows (FOR UPDATE SKIP LOCKED)
+  Q->>DB: order refunded meanwhile? → cancelled, not sent
+  Q->>M: SMTP (smtps 465) · code token → real code · voucher PDF built now
+  alt recipient refused (550 / 551 / 553, 5.1.x)
+    Q->>DB: failed → Discord alert (ids only)
+  else mail server down / login refused (connection, 421, 530 / 535)
+    Q->>DB: this row retried · rest of batch back to queue untouched · 1 alert / hour
+  else temporary error
+    Q->>DB: retry after 5 / 30 / 120 / 360 / 1440 min, then failed + alert
+  end
+  opt refund / dispute (David in Stripe, or Link ≤ 60 days)
+    S->>API: charge.refunded / charge.dispute.*
+    API->>DB: order → voucher → family → credit → pet: refunded / disabled, credit revoked · pending e-mails cancelled
+  end
 ```

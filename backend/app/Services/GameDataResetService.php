@@ -74,6 +74,15 @@ class GameDataResetService
         // M6-S03 partner inquiries from petprep.si: business leads, not game data (no
         // user/family FK; pruned after 12 months by its own command).
         'partner_inquiries',
+        // M6-S09 website shop: real purchases paid through Stripe — never game data. The
+        // credits a family got from a voucher are deleted above (with the family); the
+        // voucher keeps its own status (family_id → SET NULL with the family).
+        'shop_products',
+        'shop_orders',
+        'gift_vouchers',
+        'stripe_events',
+        'outbound_emails',
+        'shop_audit_logs',
         // M6-S05 parent e-mails from the petprep.si page »Koliko dela je pes«: website leads
         // with consent, not game data (no user/family FK; deleted only when the parent asks).
         'summary_leads',
@@ -100,9 +109,6 @@ class GameDataResetService
         // payments (M6-U01: purchase intents → credits, pets, users, families)
         'challenge_purchase_intents',
         'challenge_credits',
-        // M6-S01 website gift vouchers (credits reference vouchers) + the Lemon Squeezy ledger
-        'gift_vouchers',
-        'lemonsqueezy_events',
         // M6-W01 / W02 »Želje« (treats → items → credits → purchase_events)
         'pet_treat_events',
         'pet_items',

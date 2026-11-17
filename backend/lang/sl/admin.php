@@ -32,6 +32,12 @@ return [
         'wish_credit_model' => 'kredit želje',
         'gift_vouchers' => 'Darilni boni',
         'gift_voucher_model' => 'darilni bon',
+        'shop_orders' => 'Naročila',
+        'shop_order_model' => 'naročilo',
+        'shop_products' => 'Izdelki',
+        'shop_product_model' => 'izdelek',
+        'outbound_emails' => 'E-pošta',
+        'outbound_email_model' => 'e-pošta',
         'certificates' => 'Certifikati',
         'certificate_model' => 'certifikat',
         'breed_facts' => 'Zanimivosti o pasmah',
@@ -328,9 +334,11 @@ return [
         'video_compression' => 'Stiskaj shranjene videe',
         // M6-S01: unovčitev darilnih bonov na spletu (privzeto izklopljeno).
         'gift_vouchers_section' => 'Darilni boni',
-        'gift_vouchers_description' => 'Darilni boni, kupljeni na petprep.si (Lemon Squeezy) in unovčeni na spletni strani za kredit 12-tedenskega izziva.',
+        'gift_vouchers_description' => 'Izdelki, ki jih petprep.si prodaja prek Stripe (prodajalec je Link). Plačila, vračila in spori se obdelajo ne glede na ta stikala.',
         'gift_vouchers' => 'Darilni boni (unovčitev na spletu)',
-        'gift_vouchers_help' => 'Izklopljeno: petprep.si/sl/unovci odgovori »trenutno ni na voljo«. Webhooki za vračila se obdelajo v vsakem primeru.',
+        'gift_vouchers_help' => 'Izklopljeno: stran bona ne more začeti nakupa, petprep.si/sl/unovci pa odgovori »trenutno ni na voljo«.',
+        'promise_kit' => 'Prodaja kompleta Obljuba (PDF)',
+        'promise_kit_help' => 'Izklopljeno: stran kompleta ne more začeti nakupa. Vklopite šele, ko so naloženi PDF-ji v vseh jezikih (Izdelki).',
         'saved_body_partner_inquiries' => 'Povpraševanja partnerjev: :state',
         'partner_inquiries_section' => 'Povpraševanja partnerjev',
         'partner_inquiries_description' => 'Obrazec za povpraševanje na petprep.si/partnerji. Izklopljeno: strežnik odgovori 503 in ne shrani ničesar (spletna stran pokaže, da obrazec ni na voljo). Privzeto vklopljeno.',
@@ -657,23 +665,56 @@ return [
             'environments' => 'Okolje trgovine',
         ],
     ],
-    // M6-S01: darilni bon s spleta potrebuje pogled (samo id-ji).
-    'gift_voucher' => [
+    // M6-S09: admin trgovina (naročila, izdelki, boni, vrsta e-pošte).
+    'shop_admin' => [
+        'number' => 'Naročilo', 'date' => 'Datum', 'product' => 'Izdelek', 'amount' => 'Znesek', 'tax' => 'DDV', 'refunded' => 'Vrnjeno',
+        'customer' => 'Kupec', 'email' => 'E-naslov', 'name' => 'Ime', 'country' => 'Država', 'status' => 'Stanje', 'mode' => 'Način',
+        'live' => 'živo', 'test' => 'test', 'locale' => 'Jezik', 'paid_at' => 'Plačano', 'session' => 'Stripe seja', 'payment' => 'Stripe plačilo',
+        'voucher' => 'Darilni bon', 'code' => 'Koda', 'expires_at' => 'Velja do', 'redeemed_at' => 'Unovčen', 'family' => 'Družina', 'pet' => 'Ljubljenček',
+        'emails' => 'E-pošta', 'events' => 'Dogodki Stripe', 'open_stripe' => 'Odpri v Stripe', 'buyer_orders' => 'Vsa naročila tega kupca',
+        'show_code' => 'Pokaži kodo', 'show_code_note' => 'Vsak ogled kode se zabeleži (kdo, kdaj).', 'send_again' => 'Pošlji e-pošto znova',
+        'send_again_done' => 'E-pošta je v vrsti.', 'no_email' => 'Naročilo nima e-naslova kupca.', 'change_email' => 'Spremeni e-naslov in pošlji',
+        'new_email' => 'Nov e-naslov', 'products' => ['gift_voucher' => 'Darilni bon', 'promise_kit' => 'Komplet Obljuba'],
+        'statuses' => ['pending' => 'v obdelavi', 'paid' => 'plačano', 'refunded' => 'vrnjeno', 'partially_refunded' => 'delno vrnjeno', 'disputed' => 'spor', 'failed' => 'neuspešno'],
+        'sold' => 'Prodano', 'revenue' => 'Prihodek (z DDV)', 'price' => 'Cena (z DDV)', 'active' => 'Aktiven', 'synced_at' => 'Osveženo',
+        'files' => 'PDF-ji', 'sample_files' => 'PDF-ji vzorca', 'sync' => 'Osveži iz Stripe', 'sync_done' => 'Izdelki so osveženi iz Stripe.',
+        'upload' => 'Naloži PDF', 'file_kind' => 'Datoteka', 'file_kind_product' => 'Komplet Obljuba (prodaja)', 'file_kind_sample' => 'Vzorec kompleta (brezplačno)',
+        'file' => 'PDF', 'upload_done' => 'Datoteka je shranjena.', 'edit_in_stripe' => 'Uredi v Stripe',
+        'to' => 'Prejemnik', 'subject' => 'Zadeva', 'attempts' => 'Poskusi', 'next_attempt' => 'Naslednji poskus', 'last_error' => 'Zadnja napaka', 'sent_at' => 'Poslano',
+        'preview' => 'Predogled', 'requeue' => 'Pošlji znova', 'cancel' => 'Prekliči', 'cancelled' => 'Preklicano.', 'kind' => 'Vrsta',
+        'email_statuses' => ['pending' => 'čaka', 'sending' => 'pošiljanje', 'sent' => 'poslano', 'failed' => 'neuspešno', 'cancelled' => 'preklicano'],
+        'today' => 'Danes', 'month' => 'Ta mesec', 'orders_count' => 'plačanih naročil: :count',
+    ],
+    // M6-S09: trgovina na spletni strani potrebuje pogled (samo ID-ji — nikoli koda, e-naslov ali ime).
+    'shop' => [
         'discord' => [
-            'activated_elsewhere' => [
-                'title' => 'Darilni bon aktiviran zunaj PetPrepa',
-                'body' => 'Lemon Squeezy kaže kodo bona kot porabljeno, a je ni unovčila nobena družina v PetPrepu. Starš je dobil »že unovčen«. Preverite licenčni ključ v Lemon Squeezyju in bon v /admin (Darilni boni); če gre za pravi nakup, odklenite ročno (M6-S01).',
-            ],
-            'instance_mismatch' => [
-                'title' => 'Darilni bon aktiviran za eno družino, zapisan pri drugi',
-                'body' => 'Aktivacija v Lemon Squeezyju in vrstica bona v PetPrepu navajata različni družini. Preverite instance licenčnega ključa v Lemon Squeezyju in bon v /admin (Darilni boni) (M6-S01).',
-            ],
             'partial_refund' => [
-                'title' => 'Delno vračilo naročila darilnega bona',
-                'body' => 'Lemon Squeezy je sporočil delno vračilo. Samodejno ni bilo nič preklicano. Ročno se odločite, ali bon ostane veljaven (M6-S01).',
+                'title' => 'Delno vračilo naročila',
+                'body' => 'Stripe je sporočil delno vračilo. Samodejno ni bilo nič preklicano. Ročno se odločite, ali darilni bon ostane veljaven (/admin → Naročila).',
             ],
-            'voucher' => 'Id bona',
-            'order' => 'Id naročila LS',
+            'dispute_opened' => [
+                'title' => 'Odprt spor glede plačila',
+                'body' => 'Kupec je izpodbijal plačilo. Spor vodi Stripe (Link); zaenkrat ni bilo nič preklicano. Izgubljen spor bon samodejno onemogoči.',
+            ],
+            'dispute_lost' => [
+                'title' => 'Spor glede plačila izgubljen',
+                'body' => 'Stripe je spor zaključil kot izgubljen. Naročilo šteje kot vrnjeno; darilni bon je onemogočen in njegov kredit preklican, če še ni bil porabljen.',
+            ],
+            'email_failed' => [
+                'title' => 'E-pošte ni bilo mogoče poslati',
+                'body' => 'E-pošta kupcu po vseh ponovnih poskusih ni bila poslana (verjetno napačen naslov). Odprite /admin → E-pošta, popravite naslov na naročilu in jo pošljite znova.',
+            ],
+            'rejected_payment' => [
+                'title' => 'Plačano naročilo NI bilo dostavljeno',
+                'body' => 'Kupec je plačal blagajno PetPrep, vendar se cena, količina ali način ne ujema z nastavitvami (npr. cena je bila spremenjena, medtem ko je bila blagajna odprta, ali STRIPE_ACCEPT_TEST_MODE). Koda ali datoteka ni bila poslana. Preverite sejo v Stripe in popravite nastavitve ali vrnite denar.',
+            ],
+            'smtp_down' => [
+                'title' => 'Poštni strežnik ni dosegljiv ali zavrača prijavo',
+                'body' => 'Pošiljanje e-pošte trgovine ni uspelo na samem poštnem strežniku (povezava ali prijava). E-pošta ostane v vrsti in se pošlje znova. Preverite MAIL_* v /opt/petprep/.env in mail.datavallis.com.',
+            ],
+            'order' => 'ID naročila',
+            'ref' => 'Sklic',
+            'email' => 'ID e-pošte',
         ],
     ],
     'disk_space' => [

@@ -133,8 +133,8 @@ class ChallengeCreditService
             'source' => ChallengeCredit::SOURCE_WEB_GIFT,
             'gift_voucher_id' => $voucher->id,
             'purchase_event_id' => null,
-            'product_id' => 'lemonsqueezy:'.config('services.lemonsqueezy.gift_product_id'),
-            'store' => 'LEMON_SQUEEZY',
+            'product_id' => 'stripe:'.(config('shop.products.gift_voucher.price_id') ?: 'gift_voucher'),
+            'store' => 'STRIPE',
             'environment' => $voucher->environment,
             'transaction_id' => null,
             'purchased_at' => now()->startOfSecond(),
@@ -344,7 +344,7 @@ class ChallengeCreditService
 
     /**
      * M6-S01 (CONTRACT §4): revoke the credit of a refunded / disabled website
-     * gift voucher. Caller (LS webhook) holds the voucher row lock; the family
+     * gift voucher. Caller (Stripe webhook, ShopRefundService) holds the voucher row lock; the family
      * row is locked here, then the credit and its pet (as revokeForRefund).
      * Null when the voucher has no unrevoked credit (already revoked, or the
      * family was deleted with its credits).

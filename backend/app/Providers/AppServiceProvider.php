@@ -218,6 +218,17 @@ class AppServiceProvider extends ServiceProvider
 
         // M6-S05 parent e-mail on the page »Koliko dela je pes« (petprep.si): unauthenticated,
         // writes or updates one row → 10 per hour per IP (IPv6 /64). Live in testing too.
+        // M6-S09 website shop: checkout 10 / min + 30 / h per IP (IPv6 /64); the thank-you
+        // page polls the order (and downloads) 60 / min per IP. Live in testing.
+        RateLimiter::for('shop-checkout', function (Request $request) {
+            $key = 'shop-checkout:'.ClientIp::rateLimitKey($request->ip());
+
+            return [Limit::perMinute(10)->by($key.':minute'), Limit::perHour(30)->by($key.':hour')];
+        });
+        RateLimiter::for('shop-order', function (Request $request) {
+            return Limit::perMinute(60)->by('shop-order:'.ClientIp::rateLimitKey($request->ip()));
+        });
+
         RateLimiter::for('summary-leads', function (Request $request) {
             return Limit::perHour(10)->by('summary-leads:'.ClientIp::rateLimitKey($request->ip()));
         });
@@ -265,8 +276,8 @@ class AppServiceProvider extends ServiceProvider
             ];
         });
 
-        // Website gift voucher redemption (M6-S01, CONTRACT §2.3): public, calls Lemon
-        // Squeezy → 10 / min + 30 / h per IP (IPv6 /64) and 10 / h per code (any IP).
+        // Website gift voucher redemption (M6-S01, CONTRACT §2.3): public → 10 / min +
+        // 30 / h per IP (IPv6 /64) and 10 / h per code (any IP).
         // Live in testing (like register).
         RateLimiter::for('gift-redeem', function (Request $request) {
             $key = 'gift-redeem:'.ClientIp::rateLimitKey($request->ip());

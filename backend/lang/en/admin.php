@@ -33,6 +33,12 @@ return [
         'wish_credit_model' => 'wish credit',
         'gift_vouchers' => 'Gift vouchers',
         'gift_voucher_model' => 'gift voucher',
+        'shop_orders' => 'Shop orders',
+        'shop_order_model' => 'order',
+        'shop_products' => 'Shop products',
+        'shop_product_model' => 'product',
+        'outbound_emails' => 'E-mails',
+        'outbound_email_model' => 'e-mail',
         'certificates' => 'Certificates',
         'certificate_model' => 'certificate',
         'breed_facts' => 'Breed facts',
@@ -329,9 +335,11 @@ return [
         'video_compression' => 'Compress stored videos',
         // M6-S01: website gift voucher redemption (default off).
         'gift_vouchers_section' => 'Gift vouchers',
-        'gift_vouchers_description' => 'Gift vouchers bought on petprep.si (Lemon Squeezy) and redeemed on the website for a 12-week challenge credit.',
+        'gift_vouchers_description' => 'Products sold on petprep.si through Stripe (Link is the seller). Payments, refunds and disputes are processed whatever these switches say.',
         'gift_vouchers' => 'Gift vouchers (website redemption)',
-        'gift_vouchers_help' => "Off: petprep.si/redeem answers 'not available right now'. Refund webhooks are processed either way.",
+        'gift_vouchers_help' => "Off: the gift page cannot start a checkout and petprep.si/redeem answers 'not available right now'.",
+        'promise_kit' => 'Promise kit (PDF) sales',
+        'promise_kit_help' => 'Off: the promise kit page cannot start a checkout. Turn on only when every language PDF is uploaded (Shop products).',
         'saved_body_partner_inquiries' => 'Partner inquiries: :state',
         'partner_inquiries_section' => 'Partner inquiries',
         'partner_inquiries_description' => 'The inquiry form on petprep.si/partners. Off: the server answers 503 and stores nothing (the website shows that the form is unavailable). On by default.',
@@ -658,23 +666,56 @@ return [
             'environments' => 'Store environment',
         ],
     ],
-    // M6-S01: website gift voucher needs a look (ids only).
-    'gift_voucher' => [
+    // M6-S09: admin shop (orders, products, vouchers, e-mail queue).
+    'shop_admin' => [
+        'number' => 'Order', 'date' => 'Date', 'product' => 'Product', 'amount' => 'Amount', 'tax' => 'VAT', 'refunded' => 'Refunded',
+        'customer' => 'Buyer', 'email' => 'E-mail', 'name' => 'Name', 'country' => 'Country', 'status' => 'Status', 'mode' => 'Mode',
+        'live' => 'live', 'test' => 'test', 'locale' => 'Language', 'paid_at' => 'Paid', 'session' => 'Stripe session', 'payment' => 'Stripe payment',
+        'voucher' => 'Gift voucher', 'code' => 'Code', 'expires_at' => 'Valid until', 'redeemed_at' => 'Redeemed', 'family' => 'Family', 'pet' => 'Pet',
+        'emails' => 'E-mails', 'events' => 'Stripe events', 'open_stripe' => 'Open in Stripe', 'buyer_orders' => 'All orders of this buyer',
+        'show_code' => 'Show code', 'show_code_note' => 'Every look at a code is logged (who, when).', 'send_again' => 'Send the e-mail again',
+        'send_again_done' => 'The e-mail is queued.', 'no_email' => 'The order has no buyer e-mail.', 'change_email' => 'Change e-mail and send',
+        'new_email' => 'New e-mail address', 'products' => ['gift_voucher' => 'Gift voucher', 'promise_kit' => 'Promise kit'],
+        'statuses' => ['pending' => 'pending', 'paid' => 'paid', 'refunded' => 'refunded', 'partially_refunded' => 'partially refunded', 'disputed' => 'disputed', 'failed' => 'failed'],
+        'sold' => 'Sold', 'revenue' => 'Revenue (VAT incl.)', 'price' => 'Price (VAT incl.)', 'active' => 'Active', 'synced_at' => 'Synced',
+        'files' => 'PDF files', 'sample_files' => 'Sample PDFs', 'sync' => 'Refresh from Stripe', 'sync_done' => 'Products refreshed from Stripe.',
+        'upload' => 'Upload PDF', 'file_kind' => 'File', 'file_kind_product' => 'Promise kit (sold)', 'file_kind_sample' => 'Promise kit sample (free)',
+        'file' => 'PDF', 'upload_done' => 'File stored.', 'edit_in_stripe' => 'Edit in Stripe',
+        'to' => 'To', 'subject' => 'Subject', 'attempts' => 'Attempts', 'next_attempt' => 'Next attempt', 'last_error' => 'Last error', 'sent_at' => 'Sent',
+        'preview' => 'Preview', 'requeue' => 'Send again', 'cancel' => 'Cancel', 'cancelled' => 'Cancelled.', 'kind' => 'Kind',
+        'email_statuses' => ['pending' => 'pending', 'sending' => 'sending', 'sent' => 'sent', 'failed' => 'failed', 'cancelled' => 'cancelled'],
+        'today' => 'Today', 'month' => 'This month', 'orders_count' => ':count paid orders',
+    ],
+    // M6-S09: website shop needs a look (ids only — never a code, an e-mail or a name).
+    'shop' => [
         'discord' => [
-            'activated_elsewhere' => [
-                'title' => 'Gift voucher activated outside PetPrep',
-                'body' => 'Lemon Squeezy shows the voucher code as used, but no PetPrep family redeemed it. The parent got »already redeemed«. Check the license key in Lemon Squeezy and the voucher in /admin (Gift vouchers); unlock by hand if it is a real purchase (M6-S01).',
-            ],
-            'instance_mismatch' => [
-                'title' => 'Gift voucher activated for one family, held by another',
-                'body' => 'The Lemon Squeezy activation and the PetPrep voucher row name different families. Check the license key instances in Lemon Squeezy and the voucher in /admin (Gift vouchers) (M6-S01).',
-            ],
             'partial_refund' => [
-                'title' => 'Partial refund of a gift voucher order',
-                'body' => 'Lemon Squeezy reported a partial refund. Nothing was revoked automatically. Decide by hand whether the voucher stays valid (M6-S01).',
+                'title' => 'Partial refund of a shop order',
+                'body' => 'Stripe reported a partial refund. Nothing was revoked automatically. Decide by hand whether the gift voucher stays valid (/admin → Shop orders).',
             ],
-            'voucher' => 'Voucher id',
-            'order' => 'LS order id',
+            'dispute_opened' => [
+                'title' => 'Payment dispute opened',
+                'body' => 'A buyer disputed a shop payment. Stripe (Link) handles the dispute; nothing was revoked yet. A lost dispute disables the voucher automatically.',
+            ],
+            'dispute_lost' => [
+                'title' => 'Payment dispute lost',
+                'body' => 'Stripe closed a dispute as lost. The order counts as refunded; a gift voucher was disabled and its challenge credit revoked if it was not used yet.',
+            ],
+            'email_failed' => [
+                'title' => 'E-mail could not be sent',
+                'body' => 'An e-mail to a buyer failed after every retry (probably a wrong address). Open /admin → E-mails, correct the address on the order and send it again.',
+            ],
+            'rejected_payment' => [
+                'title' => 'Paid shop order was NOT delivered',
+                'body' => 'A buyer paid for a PetPrep checkout, but its price, quantity or mode does not match the configuration (e.g. the price was changed while the checkout was open, or STRIPE_ACCEPT_TEST_MODE). No code or file was sent. Check the session in Stripe and fix the configuration or refund.',
+            ],
+            'smtp_down' => [
+                'title' => 'Mail server unreachable or refuses login',
+                'body' => 'Sending shop e-mails failed at the mail server itself (connection or login). The e-mails stay in the queue and are retried. Check MAIL_* in /opt/petprep/.env and mail.datavallis.com.',
+            ],
+            'order' => 'Order id',
+            'ref' => 'Reference',
+            'email' => 'E-mail id',
         ],
     ],
     'disk_space' => [

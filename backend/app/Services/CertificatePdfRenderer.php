@@ -209,7 +209,7 @@ class CertificatePdfRenderer
         ];
     }
 
-    private static function svgDataUri(string $file): string
+    public static function svgDataUri(string $file): string
     {
         return 'data:image/svg+xml;base64,'.base64_encode((string) file_get_contents(resource_path('certificates/'.$file)));
     }
