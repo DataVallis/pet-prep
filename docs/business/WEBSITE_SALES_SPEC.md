@@ -3,7 +3,7 @@
 > **Specifikacija, 11. 11. 2026; prenovljena 17. 11. 2026 — plačila prek Stripe Managed Payments namesto Lemon Squeezy, lastna vrsta e-pošte, admin kot trgovina.** Lemon Squeezy je 17. 11. 2026 zavrnil trgovino PetPrep (ne sprejema več novih trgovin, zapre se 31. 3. 2027). David ima Stripe Managed Payments odobren na računu »David Tacer s.p.« in je odločil: **»vse bova s Stripe delala«**, **e-pošta prek lastnega strežnika `mail.datavallis.com` z vrsto v bazi in ponovnimi poskusi**, **admin mora biti kot trgovina (naročila, izdelki, zgodovina nakupov, dostop do kod)** (David 17. 11. 2026).
 > Kar je označeno **(David)**, je njegova odločitev. Kar je označeno *(Claude, David lahko spremeni)*, je moj predlog.
 > Naloge v ROADMAP: **M6-S01** (darilni bon), **M6-S02** (natisljivi komplet), **M6-S03** (partnerji, zgrajeno), **M6-S09** (Stripe namesto Lemon Squeezy, vrsta e-pošte, admin trgovina).
-> Stanje 17. 11. 2026: strežnik M6-S09 zgrajen (PR `feat/M6-S09-stripe-shop` v `pet-prep`); Lemon Squeezy odstranjen; Stripe (testni način) nastavljen — izdelka, ceni, webhook (§3.5). Spletna stran: PR v `pet-prep-website`. Vse za stikali (privzeto izklopljeno).
+> Stanje 17. 11. 2026: M6-S09 združen — strežnik `pet-prep` #1330 (en krog QA plačil, popravki v istem PR), spletna stran `pet-prep-website` #474; na produkcijo pride z naslednjim deployem (03:17). Lemon Squeezy odstranjen; Stripe (testni način) nastavljen — izdelka, ceni, webhook (§3.5). Vse za stikali (privzeto izklopljeno). Naslednje: Davidovi koraki §3.9.
 
 ## 1. Cilj in obseg
 
@@ -76,7 +76,7 @@ Testni ID-ji (Stripe test, 17. 11. 2026): izdelek bona `prod_Ve7EBi9SnjHz6l` / c
 ### 3.6 Vrsta e-pošte (`outbound_emails`) **(David 17. 11. 2026)**
 - Vsaka e-pošta PetPrepa se najprej **zapiše v bazo s celotnim HTML** (in besedilno različico): prejemnik, zadeva, HTML, besedilo, priponke (samo opis — PDF bona se nariše ob pošiljanju), vrsta (`gift_voucher`, `promise_kit`, …), povezava na naročilo, jezik, stanje (`pending` / `sending` / `sent` / `failed` / `cancelled`), število poskusov, naslednji poskus, zadnja napaka, poslano ob.
 - **Pošiljatelj v ozadju**: ukaz `emails:send` vsako minuto vzame do 50 čakajočih (`next_attempt_at <= now`, zaklep `FOR UPDATE SKIP LOCKED`) in jih pošlje prek SMTP `mail.datavallis.com`.
-- **Napaka** → ponovni poskus z razmikom *(Claude)*: 5 min, 30 min, 2 h, 6 h, 24 h (skupaj 6 poskusov). Po zadnjem `failed` + eno opozorilo v Discord in rdeča številka ob »E-pošta« v adminu (»E-pošte ni bilo mogoče poslati — verjetno napačen e-naslov«). Trajna zavrnitev SMTP (5xx, npr. neobstoječ naslov) → takoj `failed`. Vrstica, ki obvisi v `sending` (sesuta izvedba), se po 15 min vrne v vrsto.
+- **Napaka** → ponovni poskus z razmikom *(Claude)*: 5 min, 30 min, 2 h, 6 h, 24 h (skupaj 6 poskusov). Po zadnjem `failed` + eno opozorilo v Discord in rdeča številka ob »E-pošta« v adminu (»E-pošte ni bilo mogoče poslati — verjetno napačen e-naslov«). Strežnik zavrne prejemnika (550 / 551 / 553, 5.1.x, npr. neobstoječ naslov) → takoj `failed`. Vrstica, ki obvisi v `sending` (sesuta izvedba), po 15 min šteje kot neuspel poskus in gre na naslednji razmik.
 - Admin: seznam e-pošt z iskanjem, predogled HTML, »Pošlji znova«, »Spremeni e-naslov in pošlji« (na naročilu), »Prekliči«.
 - **Koda bona ni nikoli shranjena v vrsti:** HTML in besedilo imata namesto kode žeton, pošiljatelj ga tik pred pošiljanjem zamenja s kodo iz šifriranega bona; predogled v adminu kaže zakrito kodo (QA 17. 11. 2026). E-pošta naročila, ki je medtem vrnjeno, se prekliče, ne pošlje.
 - **Poštni strežnik nedosegljiv ali zavrne prijavo** (povezava, 421, 530 / 535) → ta e-pošta gre na naslednji poskus, ostale iz serije ostanejo v vrsti nedotaknjene, eno opozorilo v Discord na uro. Trajno neuspešno takoj samo, ko strežnik zavrne prejemnika (550 / 551 / 553, 5.1.x).
@@ -94,7 +94,7 @@ Testni ID-ji (Stripe test, 17. 11. 2026): izdelek bona `prod_Ve7EBi9SnjHz6l` / c
 - Lijak: »Plačali z bonom« ostane.
 
 ### 3.8 Testi
-`GiftVoucherTest` (webhook → naročilo + bon, dvojni dogodek in stran »hvala« hkrati, async plačilo, tuja cena / količina, testni način, podpis, Stripe nedosegljiv, unovčitev, vračila, spori), `ShopTest` (blagajna, odprta preusmeritev, stran »hvala«, prenosi, vzorec, admin, uvoz PDF, 15 jezikov), `OutboundEmailTest` (pošiljanje s priponko, razmiki, 5xx, obviseli `sending`, urnik), `GiftVoucherRegressionTest` (RevenueCat nespremenjen).
+`GiftVoucherTest` (webhook → naročilo + bon, dvojni dogodek in stran »hvala« hkrati, async plačilo, tuja cena / količina, testni način, podpis, Stripe nedosegljiv, unovčitev, vračila, spori), `ShopTest` (blagajna, odprta preusmeritev, stran »hvala«, prenosi, vzorec, admin, uvoz PDF, 15 jezikov), `OutboundEmailTest` (pošiljanje s priponko, razmiki, zavrnjen prejemnik, napačno geslo SMTP 535, obviseli `sending`, vrnjeno naročilo, urnik), `GiftVoucherRegressionTest` (RevenueCat nespremenjen).
 
 ### 3.9 Kaj mora narediti David
 1. V `/opt/petprep/.env`: Stripe **testni** ključi najprej (`STRIPE_SECRET_KEY` = omejen testni ključ, `STRIPE_WEBHOOK_SECRET` = podpisni ključ testnega webhooka, cene iz §3.5, `STRIPE_ACCEPT_TEST_MODE=true`) in SMTP podatki.
