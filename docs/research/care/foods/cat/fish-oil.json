@@ -12,7 +12,8 @@
     "es": "Aceite de pescado",
     "pt": "Óleo de peixe",
     "nl": "Visolie",
-    "pl": "Olej rybi"
+    "pl": "Olej rybi",
+    "cs": "Rybí olej"
   },
   "question": {
     "en": "Can cats have fish oil?",
@@ -25,7 +26,8 @@
     "es": "¿Pueden los gatos tomar aceite de pescado?",
     "pt": "Os gatos podem tomar óleo de peixe?",
     "nl": "Mogen katten visolie krijgen?",
-    "pl": "Czy koty mogą dostać olej rybi?"
+    "pl": "Czy koty mogą dostać olej rybi?",
+    "cs": "Mohou kočky dostat rybí olej?"
   },
   "url_slug": {
     "en": "fish-oil",
@@ -38,7 +40,8 @@
     "es": "aceite-de-pescado",
     "pt": "oleo-de-peixe",
     "nl": "visolie",
-    "pl": "olej-rybi"
+    "pl": "olej-rybi",
+    "cs": "rybi-olej"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "es": "Solo si tu veterinario te lo recomienda. El aceite de pescado es un suplemento que se usa mucho en gatos, pero puede no ser adecuado para todas las mascotas y provocar efectos secundarios. Habla siempre con tu veterinario antes de darle aceite de pescado o cualquier otro suplemento.",
     "pt": "Só se o veterinário o recomendar. O óleo de peixe é um suplemento muito usado em gatos, mas pode não ser adequado para todos e tem possíveis efeitos secundários. Fala sempre com o teu veterinário antes de dar óleo de peixe ou qualquer outro suplemento.",
     "nl": "Alleen als je dierenarts het adviseert. Veel katten krijgen visolie als supplement, maar het is niet voor elk huisdier geschikt en het kan bijwerkingen hebben. Overleg altijd met je dierenarts voordat je visolie of een ander supplement geeft.",
-    "pl": "Tylko jeśli zaleci to weterynarz. Olej rybi to suplement szeroko stosowany u kotów, ale może nie być odpowiedni dla każdego zwierzęcia i może mieć skutki uboczne. Zawsze porozmawiaj z weterynarzem, zanim podasz olej rybi lub jakikolwiek inny suplement."
+    "pl": "Tylko jeśli zaleci to weterynarz. Olej rybi to suplement szeroko stosowany u kotów, ale może nie być odpowiedni dla każdego zwierzęcia i może mieć skutki uboczne. Zawsze porozmawiaj z weterynarzem, zanim podasz olej rybi lub jakikolwiek inny suplement.",
+    "cs": "Jen pokud ho doporučí veterinář. Rybí olej je doplněk stravy, který se u koček hojně používá, ale nemusí být vhodný pro každé zvíře a může mít vedlejší účinky. Před podáním rybího oleje nebo jakéhokoli jiného doplňku se vždy poraďte s veterinářem."
   },
   "why": {
     "en": "Fish oil is used widely in cats, but omega-3 supplements may not be appropriate for every pet, and less is known about supplementing cats that have kidney disease. Possible side effects include mild stomach upset, a fishy odour, an oily coat and itchy, flaky skin; serious reactions include abnormal bruising or bleeding, especially in cats. Fish oil should not be given if a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity.",
@@ -65,7 +69,8 @@
     "es": "El aceite de pescado se usa mucho en gatos, pero los suplementos de omega-3 pueden no ser adecuados para todas las mascotas, y se sabe menos sobre su uso en gatos con enfermedad renal. Entre los posibles efectos secundarios están molestias leves de estómago, olor a pescado, pelo graso y picor con descamación de la piel; entre las reacciones graves, hematomas o sangrados anormales, sobre todo en gatos. No se debe dar aceite de pescado si no procede de una fuente fiable, porque algunas fuentes suponen un alto riesgo de toxicidad por metales pesados.",
     "pt": "O óleo de peixe é muito usado em gatos, mas os suplementos de ómega-3 podem não ser adequados para todos, e sabe-se menos sobre a suplementação em gatos com doença renal. Os possíveis efeitos secundários incluem mal-estar de estômago ligeiro, cheiro a peixe, pelo oleoso e pele com comichão e descamação; entre as reações graves estão nódoas negras ou hemorragias anormais, sobretudo nos gatos. Não se deve dar óleo de peixe se não for possível garantir uma fonte de confiança, porque algumas fontes têm um risco elevado de toxicidade por metais pesados.",
     "nl": "Veel katten krijgen visolie, maar omega-3-supplementen zijn niet voor elk huisdier geschikt, en over het geven van supplementen aan katten met nierziekte is minder bekend. Mogelijke bijwerkingen zijn lichte maagklachten, een visgeur, een vettige vacht en jeukende, schilferige huid. Ernstige reacties zijn onder meer ongewone blauwe plekken of bloedingen, vooral bij katten. Geef geen visolie als je geen betrouwbare bron hebt, want bij sommige bronnen is het risico op vergiftiging met zware metalen groot.",
-    "pl": "Olej rybi jest szeroko stosowany u kotów, ale suplementy z kwasami omega-3 mogą nie być odpowiednie dla każdego zwierzęcia, a o suplementacji u kotów z chorobą nerek wiadomo mniej. Możliwe skutki uboczne to łagodny rozstrój żołądka, rybi zapach, tłusta sierść oraz swędząca, łuszcząca się skóra; poważne reakcje to nietypowe siniaki lub krwawienia, zwłaszcza u kotów. Nie podawaj oleju rybiego, jeśli nie da się go kupić z wiarygodnego źródła, bo niektóre źródła wiążą się z wysokim ryzykiem zatrucia metalami ciężkimi."
+    "pl": "Olej rybi jest szeroko stosowany u kotów, ale suplementy z kwasami omega-3 mogą nie być odpowiednie dla każdego zwierzęcia, a o suplementacji u kotów z chorobą nerek wiadomo mniej. Możliwe skutki uboczne to łagodny rozstrój żołądka, rybi zapach, tłusta sierść oraz swędząca, łuszcząca się skóra; poważne reakcje to nietypowe siniaki lub krwawienia, zwłaszcza u kotów. Nie podawaj oleju rybiego, jeśli nie da się go kupić z wiarygodnego źródła, bo niektóre źródła wiążą się z wysokim ryzykiem zatrucia metalami ciężkimi.",
+    "cs": "Rybí olej se u koček hojně používá, ale doplňky s omega-3 nemusí být vhodné pro každé zvíře a o jejich podávání kočkám s onemocněním ledvin se ví méně. Mezi možné vedlejší účinky patří mírné potíže se žaludkem, zápach po rybách, mastná srst a svědivá, šupinatá kůže; k závažným reakcím patří neobvyklé modřiny nebo krvácení, zejména u koček. Rybí olej se nemá podávat, pokud nelze sehnat výrobek ze spolehlivého zdroje, protože u některých zdrojů hrozí vysoké riziko otravy těžkými kovy."
   },
   "signs": {
     "en": [
@@ -188,6 +193,17 @@
       "Reakcja alergiczna: nieregularny oddech, wysypka, gorączka, obrzęk wokół pyska",
       "Utrata apetytu",
       "Chwiejny chód lub drgawki"
+    ],
+    "cs": [
+      "Mírné potíže se žaludkem",
+      "Zápach po rybách",
+      "Mastná srst",
+      "Svědění nebo šupinatá kůže",
+      "Pomalé hojení ran",
+      "Neobvyklé modřiny nebo krvácení",
+      "Alergická reakce: nepravidelné dýchání, vyrážka, horečka, otok obličeje",
+      "Nechuť k jídlu",
+      "Vrávorání nebo křeče"
     ]
   },
   "what_to_do": {
@@ -201,7 +217,8 @@
     "es": "Habla con tu veterinario antes de darle aceite de pescado y cuéntale qué vitaminas o suplementos toma ya tu gato. Si aparecen signos graves, deja de darle el aceite de pescado y contacta enseguida con tu veterinario.",
     "pt": "Fala com o teu veterinário antes de dar óleo de peixe e diz-lhe que vitaminas ou suplementos o teu gato já toma. Se surgirem sinais graves, deixa de dar o óleo de peixe e contacta imediatamente o teu veterinário.",
     "nl": "Overleg met je dierenarts voordat je visolie geeft, en vertel ook welke vitamines of supplementen je kat al krijgt. Zie je ernstige verschijnselen, stop dan met de visolie en neem meteen contact op met je dierenarts.",
-    "pl": "Porozmawiaj z weterynarzem, zanim podasz olej rybi, i powiedz mu o wszystkich witaminach i suplementach, które kot już dostaje. Jeśli pojawią się poważne objawy, przestań podawać olej rybi i natychmiast skontaktuj się z weterynarzem."
+    "pl": "Porozmawiaj z weterynarzem, zanim podasz olej rybi, i powiedz mu o wszystkich witaminach i suplementach, które kot już dostaje. Jeśli pojawią się poważne objawy, przestań podawać olej rybi i natychmiast skontaktuj się z weterynarzem.",
+    "cs": "Před podáním rybího oleje se poraďte s veterinářem a řekněte mu o všech vitaminech a doplňcích, které kočka už dostává. Pokud se objeví závažné příznaky, rybí olej přestaňte podávat a ihned kontaktujte veterináře."
   },
   "serving": null,
   "child": {
@@ -215,7 +232,8 @@
     "es": "Solo el veterinario puede decidir si un gato necesita aceite de pescado. ¡Pide a un adulto que hable antes con el veterinario!",
     "pt": "Só o veterinário pode decidir se um gato precisa de óleo de peixe. Pede a um adulto para falar primeiro com o veterinário!",
     "nl": "Alleen de dierenarts kan bepalen of een kat visolie nodig heeft. Vraag een volwassene om eerst met de dierenarts te praten!",
-    "pl": "Tylko weterynarz może zdecydować, czy kot potrzebuje oleju rybiego. Poproś dorosłego, żeby najpierw porozmawiał z weterynarzem!"
+    "pl": "Tylko weterynarz może zdecydować, czy kot potrzebuje oleju rybiego. Poproś dorosłego, żeby najpierw porozmawiał z weterynarzem!",
+    "cs": "Jen veterinář může rozhodnout, jestli kočka potřebuje rybí olej. Požádej dospělého, ať se nejdřív zeptá veterináře!"
   },
   "faq": [
     {
@@ -230,7 +248,8 @@
         "es": "¿Importa la marca del aceite de pescado?",
         "pt": "A marca do óleo de peixe é importante?",
         "nl": "Maakt het merk visolie uit?",
-        "pl": "Czy marka oleju rybiego ma znaczenie?"
+        "pl": "Czy marka oleju rybiego ma znaczenie?",
+        "cs": "Záleží na značce rybího oleje?"
       },
       "a": {
         "en": "Yes. VCA advises against fish oil when a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity, and Tufts vets recommend a brand with good quality control. Your vet can advise.",
@@ -243,7 +262,8 @@
         "es": "Sí. VCA desaconseja el aceite de pescado que no procede de una fuente fiable, porque algunas fuentes suponen un alto riesgo de toxicidad por metales pesados, y los veterinarios de Tufts recomiendan una marca con buen control de calidad. Tu veterinario te puede aconsejar.",
         "pt": "Sim. A VCA desaconselha o óleo de peixe quando não se consegue garantir uma fonte de confiança, porque algumas fontes têm um risco elevado de toxicidade por metais pesados, e os veterinários da Tufts recomendam uma marca com bom controlo de qualidade. O teu veterinário pode aconselhar-te.",
         "nl": "Ja. VCA raadt visolie af als je geen betrouwbare bron hebt, omdat bij sommige bronnen het risico op vergiftiging met zware metalen groot is, en dierenartsen van Tufts adviseren een merk met goede kwaliteitscontrole. Je dierenarts kan je daarover adviseren.",
-        "pl": "Tak. VCA odradza olej rybi, jeśli nie da się go kupić z wiarygodnego źródła, bo niektóre źródła wiążą się z wysokim ryzykiem zatrucia metalami ciężkimi, a weterynarze z Tufts zalecają markę z dobrą kontrolą jakości. Najlepiej doradzi ci weterynarz."
+        "pl": "Tak. VCA odradza olej rybi, jeśli nie da się go kupić z wiarygodnego źródła, bo niektóre źródła wiążą się z wysokim ryzykiem zatrucia metalami ciężkimi, a weterynarze z Tufts zalecają markę z dobrą kontrolą jakości. Najlepiej doradzi ci weterynarz.",
+        "cs": "Ano. VCA rybí olej nedoporučuje, pokud nelze sehnat spolehlivý zdroj, protože u některých zdrojů hrozí vysoké riziko otravy těžkými kovy, a veterináři z Tufts doporučují značku s dobrou kontrolou kvality. Poradí vám váš veterinář."
       }
     }
   ],
@@ -383,6 +403,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-17",
       "verified_hash": "d7a94d47a05852dc6e1808e553e25e4e4a4a03f0dca8eb14181674f3a3e11963"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-17",
+      "verified_hash": "006c7a491487adde1b9baa8f2bc436a80bb78e610fa49b054ec2bd4aa03dea20"
     }
   }
 }

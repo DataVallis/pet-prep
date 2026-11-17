@@ -12,7 +12,8 @@
     "es": "Bebidas deportivas",
     "pt": "Bebidas desportivas",
     "nl": "Sportdranken",
-    "pl": "Napoje sportowe"
+    "pl": "Napoje sportowe",
+    "cs": "Sportovní nápoje"
   },
   "question": {
     "en": "Can cats drink sports drinks?",
@@ -25,7 +26,8 @@
     "es": "¿Pueden los gatos beber bebidas deportivas?",
     "pt": "Os gatos podem beber bebidas desportivas?",
     "nl": "Mogen katten sportdranken drinken?",
-    "pl": "Czy koty mogą pić napoje sportowe?"
+    "pl": "Czy koty mogą pić napoje sportowe?",
+    "cs": "Mohou kočky pít sportovní nápoje?"
   },
   "url_slug": {
     "en": "sports-drinks",
@@ -38,7 +40,8 @@
     "es": "bebidas-deportivas",
     "pt": "bebidas-desportivas",
     "nl": "sportdranken",
-    "pl": "napoje-sportowe"
+    "pl": "napoje-sportowe",
+    "cs": "sportovni-napoje"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "es": "No. Las bebidas energéticas o deportivas suelen contener mucha cafeína, y los gatos son más sensibles a ella que las personas. Ninguna otra bebida sustituye al agua: es lo único que tu gato necesita beber.",
     "pt": "Não. As bebidas energéticas ou desportivas costumam ter muita cafeína, e os gatos são mais sensíveis a ela do que as pessoas. Nenhuma outra bebida substitui a água – é a única de que o teu gato precisa.",
     "nl": "Nee. Energiedrankjes en sportdranken bevatten vaak veel cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Geen enkel ander drankje kan water vervangen – het is het enige wat je kat hoeft te drinken.",
-    "pl": "Nie. Napoje energetyczne i sportowe często zawierają dużo kofeiny, a koty są na nią bardziej wrażliwe niż ludzie. Żaden inny napój nie zastąpi wody – to jedyny napój, którego kot potrzebuje."
+    "pl": "Nie. Napoje energetyczne i sportowe często zawierają dużo kofeiny, a koty są na nią bardziej wrażliwe niż ludzie. Żaden inny napój nie zastąpi wody – to jedyny napój, którego kot potrzebuje.",
+    "cs": "Ne. Energetické nebo sportovní nápoje často obsahují hodně kofeinu a kočky jsou na kofein citlivější než lidé. Žádný jiný nápoj vodu nenahradí – kočka potřebuje pít jen ji."
   },
   "why": {
     "en": "VCA vets warn that energy or sports drinks in the fridge often contain a lot of caffeine. Dogs and cats are more sensitive to caffeine than humans; it stimulates the heart and nervous system, which can be dangerous, and can upset the stomach. Cats Protection adds that milk, cream or any other liquid is no substitute for water in a cat's diet.",
@@ -65,7 +69,8 @@
     "es": "Los veterinarios de VCA advierten de que las bebidas energéticas o deportivas que se guardan en la nevera suelen contener mucha cafeína. Los perros y los gatos son más sensibles a la cafeína que las personas: estimula el corazón y el sistema nervioso, lo que puede ser peligroso, y puede sentar mal al estómago. Cats Protection añade que la leche, la nata o cualquier otro líquido no sustituyen al agua en la dieta de un gato.",
     "pt": "Os veterinários da VCA avisam que as bebidas energéticas ou desportivas que guardamos no frigorífico costumam ter muita cafeína. Os cães e os gatos são mais sensíveis à cafeína do que as pessoas; ela estimula o coração e o sistema nervoso, o que pode ser perigoso, e pode irritar o estômago. A Cats Protection acrescenta que o leite, as natas ou qualquer outro líquido não substituem a água na alimentação de um gato.",
     "nl": "Dierenartsen van VCA waarschuwen dat energiedrankjes en sportdranken in de koelkast vaak veel cafeïne bevatten. Honden en katten zijn gevoeliger voor cafeïne dan mensen: het prikkelt het hart en het zenuwstelsel, wat gevaarlijk kan zijn, en kan de maag van streek maken. Cats Protection voegt eraan toe dat melk, room of een andere vloeistof water in de voeding van een kat niet kan vervangen.",
-    "pl": "Weterynarze z VCA ostrzegają, że napoje energetyczne i sportowe z lodówki często zawierają dużo kofeiny. Psy i koty są na kofeinę bardziej wrażliwe niż ludzie; pobudza ona serce i układ nerwowy, co może być niebezpieczne, a także może podrażnić żołądek. Cats Protection dodaje, że mleko, śmietanka ani żaden inny płyn nie zastąpią kotu wody w diecie."
+    "pl": "Weterynarze z VCA ostrzegają, że napoje energetyczne i sportowe z lodówki często zawierają dużo kofeiny. Psy i koty są na kofeinę bardziej wrażliwe niż ludzie; pobudza ona serce i układ nerwowy, co może być niebezpieczne, a także może podrażnić żołądek. Cats Protection dodaje, że mleko, śmietanka ani żaden inny płyn nie zastąpią kotu wody w diecie.",
+    "cs": "Veterináři z VCA upozorňují, že energetické nebo sportovní nápoje v lednici často obsahují hodně kofeinu. Psi i kočky jsou na kofein citlivější než lidé; kofein stimuluje srdce a nervovou soustavu, což může být nebezpečné, a může také podráždit žaludek. Cats Protection dodává, že mléko, smetana ani žádná jiná tekutina kočce vodu nenahradí."
   },
   "signs": {
     "en": [
@@ -155,6 +160,14 @@
       "Rozstrój żołądka, wymioty lub biegunka",
       "Drżenie mięśni",
       "Częstsze oddawanie moczu"
+    ],
+    "cs": [
+      "Rychlý tep",
+      "Hyperaktivita, neklid, kočka nevydrží klidně ležet",
+      "Přecházení sem a tam nebo nadměrné mňoukání",
+      "Podrážděný žaludek, zvracení nebo průjem",
+      "Třes",
+      "Častější močení"
     ]
   },
   "what_to_do": {
@@ -168,7 +181,8 @@
     "es": "Si tu gato ha bebido una bebida deportiva con cafeína, llama a tu veterinario o a una línea de información toxicológica para animales en cuanto te des cuenta. Los signos pueden empezar a las pocas horas.",
     "pt": "Se o teu gato bebeu uma bebida desportiva com cafeína, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes. Os sinais podem começar em poucas horas.",
     "nl": "Heeft je kat een sportdrank met cafeïne gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt. De verschijnselen kunnen binnen een paar uur beginnen.",
-    "pl": "Jeśli kot wypił napój sportowy z kofeiną, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, gdy tylko się zorientujesz. Objawy mogą pojawić się w ciągu kilku godzin."
+    "pl": "Jeśli kot wypił napój sportowy z kofeiną, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, gdy tylko się zorientujesz. Objawy mogą pojawić się w ciągu kilku godzin.",
+    "cs": "Pokud kočka vypila sportovní nápoj s kofeinem, zavolejte veterináři nebo na toxikologickou linku pro zvířata, jakmile si toho všimnete. Příznaky se mohou objevit během několika hodin."
   },
   "serving": null,
   "child": {
@@ -182,7 +196,8 @@
     "es": "Las bebidas deportivas no son para gatos. ¡El agua fresca y limpia es la mejor bebida para que tu gato esté sano!",
     "pt": "As bebidas desportivas não são para gatos. A melhor bebida para manter o teu gatinho saudável é água fresca e limpa!",
     "nl": "Sportdranken zijn niets voor katten. Vers, schoon water is het beste drankje om je kat gezond te houden!",
-    "pl": "Napoje sportowe nie są dla kotów. Świeża, czysta woda to najlepszy napój dla zdrowia kota!"
+    "pl": "Napoje sportowe nie są dla kotów. Świeża, czysta woda to najlepszy napój dla zdrowia kota!",
+    "cs": "Sportovní nápoje nejsou pro kočky. Nejlepším nápojem pro zdravou kočku je čerstvá čistá voda!"
   },
   "faq": [
     {
@@ -197,7 +212,8 @@
         "es": "¿Puede ayudar una bebida deportiva si mi gato no bebe lo suficiente?",
         "pt": "Uma bebida desportiva pode ajudar se o meu gato não beber o suficiente?",
         "nl": "Kan een sportdrank helpen als mijn kat te weinig drinkt?",
-        "pl": "Czy napój sportowy pomoże, jeśli kot za mało pije?"
+        "pl": "Czy napój sportowy pomoże, jeśli kot za mało pije?",
+        "cs": "Může sportovní nápoj pomoci, když moje kočka málo pije?"
       },
       "a": {
         "en": "Give fresh water instead – no other liquid is a substitute for it. Signs of dehydration include lethargy, weakness, poor appetite and dry gums. If you are concerned that your cat is dehydrated, contact a vet promptly.",
@@ -210,7 +226,8 @@
         "es": "Dale agua fresca: ningún otro líquido la sustituye. Entre los signos de deshidratación están el decaimiento, la debilidad, la falta de apetito y las encías secas. Si te preocupa que tu gato esté deshidratado, contacta cuanto antes con un veterinario.",
         "pt": "Dá-lhe antes água fresca – nenhum outro líquido a substitui. Os sinais de desidratação incluem apatia, fraqueza, pouco apetite e gengivas secas. Se receares que o teu gato esteja desidratado, contacta rapidamente um veterinário.",
         "nl": "Geef in plaats daarvan vers water – geen enkele andere vloeistof kan water vervangen. Verschijnselen van uitdroging zijn lusteloosheid, zwakte, weinig eetlust en droog tandvlees. Denk je dat je kat uitgedroogd is, neem dan snel contact op met een dierenarts.",
-        "pl": "Daj kotu zamiast tego świeżą wodę – żaden inny płyn jej nie zastąpi. Objawy odwodnienia to ospałość, osłabienie, słaby apetyt i suche dziąsła. Jeśli martwisz się, że kot jest odwodniony, szybko skontaktuj się z weterynarzem."
+        "pl": "Daj kotu zamiast tego świeżą wodę – żaden inny płyn jej nie zastąpi. Objawy odwodnienia to ospałość, osłabienie, słaby apetyt i suche dziąsła. Jeśli martwisz się, że kot jest odwodniony, szybko skontaktuj się z weterynarzem.",
+        "cs": "Dejte kočce raději čerstvou vodu – žádná jiná tekutina ji nenahradí. Mezi příznaky dehydratace patří malátnost, slabost, snížená chuť k jídlu a suché dásně. Pokud se obáváte, že je kočka dehydrovaná, neprodleně se obraťte na veterináře."
       }
     }
   ],
@@ -350,6 +367,11 @@
       "status": "verified",
       "verified_by": "claude-c-pl-2026-11-17",
       "verified_hash": "407e4c870241b7f9bb9b98ea38d5c9b465b6902415bf4e5807100961ec0b3dc5"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-c-cs-2026-11-17",
+      "verified_hash": "f312df8d837def35e95f425e75f4604640c70f046e7f396f76da9a0b963e8b3c"
     }
   }
 }
