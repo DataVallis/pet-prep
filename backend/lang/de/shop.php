@@ -37,5 +37,7 @@ return [
     'pdf_valid' => 'Gültig bis',
     'pdf_redeem' => 'Einlösen auf',
     'pdf_file' => 'petprep-geschenkgutschein',
+    // Sender name of the shop e-mails in this language (David 2026-11-17: translated).
+    'from_name' => 'Curio von PetPrep',
     'language_name' => 'Deutsch',
 ];

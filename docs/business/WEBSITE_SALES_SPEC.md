@@ -80,7 +80,8 @@ Testni ID-ji (Stripe test, 17. 11. 2026): izdelek bona `prod_Ve7EBi9SnjHz6l` / c
 - Admin: seznam e-pošt z iskanjem, predogled HTML, »Pošlji znova«, »Spremeni e-naslov in pošlji« (na naročilu), »Prekliči«.
 - **Koda bona ni nikoli shranjena v vrsti:** HTML in besedilo imata namesto kode žeton, pošiljatelj ga tik pred pošiljanjem zamenja s kodo iz šifriranega bona; predogled v adminu kaže zakrito kodo (QA 17. 11. 2026). E-pošta naročila, ki je medtem vrnjeno, se prekliče, ne pošlje.
 - **Poštni strežnik nedosegljiv ali zavrne prijavo** (povezava, 421, 530 / 535) → ta e-pošta gre na naslednji poskus, ostale iz serije ostanejo v vrsti nedotaknjene, eno opozorilo v Discord na uro. Trajno neuspešno takoj samo, ko strežnik zavrne prejemnika (550 / 551 / 553, 5.1.x).
-- Pošiljatelj **`Curio from PetPrep <curio@petprep.si>`**, odgovori na `hello@petprep.si` (David 17. 11. 2026: ne `noreply@`; ime Data Vallis kupec ne vidi). **SPF, DKIM in DMARC za `petprep.si`** morajo dovoliti `mail.datavallis.com` (David).
+- Pošiljatelj **`curio@petprep.si`**, ime prevedeno v jezik e-pošte (»Curio iz PetPrep«, »Curio from PetPrep«, »Curio von PetPrep« …, David 17. 11. 2026); logotip je vgrajen v e-pošto (prikaže se tudi, ko odjemalec blokira slike z interneta); naročilo kompleta ima PDF kompleta v jeziku nakupa kot priponko.
+- Prej: pošiljatelj **`Curio from PetPrep <curio@petprep.si>`**, odgovori na `hello@petprep.si` (David 17. 11. 2026: ne `noreply@`; ime Data Vallis kupec ne vidi). **SPF, DKIM in DMARC za `petprep.si`** morajo dovoliti `mail.datavallis.com` (David).
 - Ista vrsta služi kasneje vsem e-poštam PetPrepa (potrditev računa, ponastavitev gesla — M2-10b).
 - Besedila v vseh 15 jezikih (`lang/<jezik>/shop.php`).
 
@@ -125,4 +126,4 @@ Zgrajeno 11. 11. 2026 (15 jezikov 17. 11. 2026). Ni plačil.
 | S2 | Veljavnost bona | 12 mesecev |
 | S5 | Vračilo bona | neunovčen 14 dni, unovčen ne |
 | S9 | Razmiki ponovnih poskusov e-pošte | 5 min, 30 min, 2 h, 6 h, 24 h, nato `failed` |
-| S10 | Pošiljatelj | `Curio from PetPrep <curio@petprep.si>`, odgovori `hello@petprep.si` |
+| S10 | Pošiljatelj | `curio@petprep.si` z imenom v jeziku e-pošte (»Curio iz PetPrep«), odgovori `hello@petprep.si` |

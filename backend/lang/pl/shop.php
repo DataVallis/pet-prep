@@ -37,5 +37,7 @@ return [
     'pdf_valid' => 'Ważny do',
     'pdf_redeem' => 'Zrealizuj na',
     'pdf_file' => 'petprep-bon-podarunkowy',
+    // Sender name of the shop e-mails in this language (David 2026-11-17: translated).
+    'from_name' => 'Curio z PetPrep',
     'language_name' => 'polski',
 ];

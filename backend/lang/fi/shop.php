@@ -37,5 +37,7 @@ return [
     'pdf_valid' => 'Voimassa',
     'pdf_redeem' => 'Lunasta osoitteessa',
     'pdf_file' => 'petprep-lahjakortti',
+    // Sender name of the shop e-mails in this language (David 2026-11-17: translated).
+    'from_name' => 'Curio, PetPrep',
     'language_name' => 'suomi',
 ];

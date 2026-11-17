@@ -7,6 +7,7 @@ use App\Models\GiftVoucher;
 use App\Models\OutboundEmail;
 use App\Models\ShopOrder;
 use App\Services\Shop\ShopEmailComposer;
+use App\Services\Shop\ShopFiles;
 use App\Services\Shop\VoucherPdfRenderer;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Cache;
@@ -138,13 +139,20 @@ class OutboundEmailSender
             $code = $this->voucherCode($email);
             $html = str_replace(ShopEmailComposer::CODE_TOKEN, e($code), (string) $email->html);
             $text = str_replace(ShopEmailComposer::CODE_TOKEN, $code, (string) $email->text);
-            Mail::html($html, function (Message $m) use ($email, $attachments, $text): void {
+            Mail::html($html, function (Message $m) use ($email, $attachments, $text, $html): void {
                 $m->to($email->to_address, $email->to_name)
-                    ->from((string) config('shop.email.from_address'), (string) config('shop.email.from_name'))
+                    ->from((string) config('shop.email.from_address'), self::fromName($email->locale))
                     ->replyTo((string) config('shop.email.reply_to'))
                     ->subject($email->subject);
                 if ($text !== '') {
                     $m->getSymfonyMessage()->text($text);
+                }
+                // The logo travels inside the e-mail (cid), so it shows even where remote images are blocked.
+                $logoUrl = (string) config('shop.branding.logo_url');
+                $logoFile = resource_path('email/petprep-wordmark-320.png');
+                if ($logoUrl !== '' && str_contains($html, $logoUrl) && is_file($logoFile)) {
+                    $cid = $m->embedData((string) file_get_contents($logoFile), 'petprep.png', 'image/png');
+                    $m->getSymfonyMessage()->html(str_replace($logoUrl, $cid, $html));
                 }
                 foreach ($attachments as $a) {
                     $m->attachData($a['data'], $a['name'], ['mime' => $a['mime']]);
@@ -239,6 +247,16 @@ class OutboundEmailSender
         return (bool) preg_match('/Connection could not be established|Failed to authenticate|Unable to connect|Connection refused|timed out|got code\D{0,3}"?(?:421|454|530|534|535)\b/i', $m);
     }
 
+    /** Sender name in the e-mail's language (»Curio iz PetPrep«); SHOP_MAIL_FROM_NAME only when a language has none. */
+    public static function fromName(?string $locale): string
+    {
+        $locale = (string) ($locale ?: 'en');
+        $key = 'shop.from_name';
+        $name = trans($key, [], $locale);
+
+        return is_string($name) && $name !== $key ? $name : (string) config('shop.email.from_name');
+    }
+
     /** The decrypted voucher code for CODE_TOKEN (the row's voucher attachment names the voucher). */
     private function voucherCode(OutboundEmail $email): string
     {
@@ -260,6 +278,20 @@ class OutboundEmailSender
     {
         $out = [];
         foreach ((array) $email->attachments as $a) {
+            if (($a['type'] ?? null) === 'shop_file') {
+                $product = (string) ($a['product'] ?? '');
+                $locale = (string) ($a['locale'] ?? '');
+                if (! ShopFiles::exists($product, $locale)) {
+                    throw new \RuntimeException('Shop file of the e-mail is missing: '.$product.'/'.$locale);
+                }
+                $out[] = [
+                    'data' => (string) ShopFiles::disk()->get(ShopFiles::path($product, $locale)),
+                    'name' => 'petprep-promise-kit-'.$locale.'.pdf',
+                    'mime' => 'application/pdf',
+                ];
+
+                continue;
+            }
             if (($a['type'] ?? null) === 'voucher_pdf') {
                 $voucher = GiftVoucher::find((int) ($a['voucher_id'] ?? 0));
                 if ($voucher !== null) {
