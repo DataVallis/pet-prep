@@ -23,6 +23,8 @@ return [
     'download_lang' => 'PDF, kieli: :language',
     'links_valid' => 'Latauslinkit toimivat :days päivää. Jos ne vanhenevat, vastaa vain tähän sähköpostiin.',
     'help' => 'Hukkasitko koodin tai onko sinulla kysyttävää? Vastaa tähän sähköpostiin tai kirjoita osoitteeseen :email ja mainitse tilaus :number.',
+    // The same without the lost-code question (orders without a code: the promise kit).
+    'help_kit' => 'Onko sinulla kysyttävää? Vastaa tähän sähköpostiin tai kirjoita osoitteeseen :email ja mainitse tilaus :number.',
     'hello' => 'Hei,',
     'signoff' => 'Ystävällisin terveisin',
     'signature' => 'Curio ja PetPrep-tiimi',
