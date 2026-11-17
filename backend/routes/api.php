@@ -2,11 +2,11 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AppErrorController;
-use App\Http\Controllers\BreedQuizEventController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\BreedController;
 use App\Http\Controllers\BreedFactController;
+use App\Http\Controllers\BreedQuizEventController;
 use App\Http\Controllers\CareReminderController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\ChildAuthController;
@@ -19,7 +19,6 @@ use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\GiftVoucherController;
-use App\Http\Controllers\LemonSqueezyWebhookController;
 use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
 use App\Http\Controllers\ParentSettingsController;
@@ -31,14 +30,16 @@ use App\Http\Controllers\PetQuietHoursController;
 use App\Http\Controllers\PetTimezoneController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\StripeWebhookController;
 use App\Http\Controllers\SummaryLeadController;
 use App\Http\Controllers\TimeFormatController;
 use App\Http\Controllers\WebParentSessionController;
 use App\Http\Controllers\WishController;
 use App\Http\Middleware\LimitRequestBody;
 use App\Http\Middleware\RequireWebSession;
-use App\Http\Middleware\VerifyLemonSqueezyWebhook;
 use App\Http\Middleware\VerifyRevenueCatWebhook;
+use App\Http\Middleware\VerifyStripeWebhook;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -81,6 +82,19 @@ Route::delete('web/parent-session', [WebParentSessionController::class, 'destroy
 // tokens get 401); rate limited per IP, per code and per family.
 Route::post('gift/redeem', [GiftVoucherController::class, 'redeem'])
     ->middleware(['throttle:gift-redeem', RequireWebSession::class])->name('gift.redeem');
+
+// M6-S09: website shop (Stripe Managed Payments). Checkout: public, per-IP throttle;
+// 503 while the product's admin switch is off. Order: the thank-you page reads the paid
+// order by its Checkout Session id (fulfils it when the webhook is late). Download:
+// signed, expiring links of a paid order's files.
+Route::post('shop/checkout', [ShopController::class, 'checkout'])
+    ->middleware('throttle:shop-checkout')->name('shop.checkout');
+Route::get('shop/orders/{session}', [ShopController::class, 'order'])
+    ->middleware('throttle:shop-order')->where('session', 'cs_[A-Za-z0-9_]{10,250}')->name('shop.order');
+Route::get('shop/downloads/{order}/{locale}', [ShopController::class, 'download'])
+    ->middleware(['signed', 'throttle:shop-order'])->where(['order' => '[0-9]+', 'locale' => '[a-z]{2}'])->name('shop.download');
+Route::get('shop/sample/{locale}', [ShopController::class, 'sample'])
+    ->middleware(['signed', 'throttle:shop-order'])->where('locale', '[a-z]{2}')->name('shop.sample');
 
 // M6-S03: partner inquiry form of petprep.si/partners. Public; per-IP throttle (5 / hour);
 // 503 while the superadmin switch »Partner inquiries« is off.
@@ -141,10 +155,10 @@ Route::post('webhooks/fal-ai', [FalAiWebhookController::class, 'handle'])
 Route::post('webhooks/revenuecat', [RevenueCatWebhookController::class, 'handle'])
     ->middleware(['throttle:api', VerifyRevenueCatWebhook::class]);
 
-// Lemon Squeezy webhook (M6-S01 website gift vouchers): X-Signature HMAC-SHA256 of
-// the raw body; fails closed without the secret / store / product (503).
-Route::post('webhooks/lemonsqueezy', [LemonSqueezyWebhookController::class, 'handle'])
-    ->middleware(['throttle:api', VerifyLemonSqueezyWebhook::class]);
+// Stripe webhook (M6-S09 website shop): Stripe-Signature (HMAC-SHA256 of "<t>.<raw body>",
+// 5-minute tolerance); fails closed without STRIPE_WEBHOOK_SECRET (503).
+Route::post('webhooks/stripe', [StripeWebhookController::class, 'handle'])
+    ->middleware(['throttle:api', VerifyStripeWebhook::class]);
 
 /*
 |--------------------------------------------------------------------------

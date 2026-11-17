@@ -1,0 +1,41 @@
+<?php
+
+// M6-S09: e-mails and the voucher PDF of the website shop (WEBSITE_SALES_SPEC §3.6).
+// One file per website language; keep the keys identical in all 15 (ShopEmailLangTest).
+
+return [
+    'gift_subject' => 'PetPrep-lahjakorttisi',
+    'gift_preheader' => 'Koodi 12 viikon PetPrep-haasteeseen, valmiina lahjaksi.',
+    'gift_intro' => 'Kiitos tilauksestasi. Tässä on lahjakorttisi yhteen 12 viikon PetPrep-haasteeseen.',
+    'code_label' => 'Lahjakortin koodi',
+    'valid_until' => 'Voimassa :date asti',
+    'how_title' => 'Näin annat sen lahjaksi',
+    'step_print' => 'Tulosta tämän sähköpostin liitteenä oleva lahjakortti ja kirjoita, kenelle se on ja keneltä.',
+    'step_redeem' => 'Vanhempi kirjautuu osoitteessa :url samalla tilillä kuin PetPrep-sovelluksessa ja syöttää koodin.',
+    'step_start' => 'Sovelluksessa vanhempi valitsee lemmikin, jota haaste koskee, ja 12 viikkoa alkaa.',
+    'redeem_button' => 'Lunasta lahjakortti',
+    'kit_title' => 'Mukana: Lemmikkilupaus-paketti',
+    'kit_text' => 'Tulostettava perhepaketti keskusteluun lemmikin hankkimisesta. Lataa se tästä:',
+    'kit_subject' => 'Lemmikkilupaus-pakettisi',
+    'kit_preheader' => 'Tulostettava perhepakettisi on valmis ladattavaksi.',
+    'kit_intro' => 'Kiitos tilauksestasi. Tulostettava Lemmikkilupaus-pakettisi on valmis ladattavaksi.',
+    'download' => 'Lataa paketti (PDF)',
+    'download_lang' => 'PDF, kieli: :language',
+    'links_valid' => 'Latauslinkit toimivat :days päivää. Jos ne vanhenevat, vastaa vain tähän sähköpostiin.',
+    'help' => 'Hukkasitko koodin tai onko sinulla kysyttävää? Vastaa tähän sähköpostiin tai kirjoita osoitteeseen :email ja mainitse tilaus :number.',
+    'hello' => 'Hei,',
+    'signoff' => 'Ystävällisin terveisin',
+    'signature' => 'Curio ja PetPrep-tiimi',
+    'receipt' => 'Kuitin ja laskun saat erikseen Linkiltä, joka käsittelee maksun PetPrepin puolesta.',
+    'order' => 'Tilaus :number',
+    'pdf_title' => 'Lahjakortti',
+    'pdf_product' => '12 viikon PetPrep-haaste',
+    'pdf_tagline' => 'Älä anna lahjaksi koiranpentua. Anna kokeilu.',
+    'pdf_for' => 'Kenelle',
+    'pdf_from' => 'Keneltä',
+    'pdf_code' => 'Koodi',
+    'pdf_valid' => 'Voimassa',
+    'pdf_redeem' => 'Lunasta osoitteessa',
+    'pdf_file' => 'petprep-lahjakortti',
+    'language_name' => 'suomi',
+];

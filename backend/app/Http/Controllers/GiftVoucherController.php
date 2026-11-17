@@ -20,15 +20,15 @@ class GiftVoucherController extends Controller
      * `POST /api/web/parent-session` (M6-S01b) — ONLY that website token (ability
      * `gift:redeem`); app tokens get 401. The family is the token's parent's family.
      * Rate limited per IP (10 / min, 30 / h), per code (10 / h) and per family
-     * (20 / h) → 429 `rate_limited`. The code (a Lemon Squeezy license key) is checked
-     * with Lemon Squeezy. Success = one unused 12-week challenge purchase in the
-     * family (the parent chooses the pet in the app).
+     * (20 / h) → 429 `rate_limited`. The code is the one PetPrep e-mailed after the
+     * Stripe payment (`PP-XXXX-XXXX-XXXX`; spaces, dashes, case and the PP prefix are
+     * ignored). Success = one unused 12-week challenge purchase in the family (the
+     * parent chooses the pet in the app).
      *
      * 200 `{status: redeemed, already}` · 422 `invalid_request` | `invalid_code` |
      * `expired` | `refunded` · 409 `already_redeemed` · 401 `unauthenticated` (no /
-     * expired / non-web token; family gone) · 403 `not_parent` · 502
-     * `upstream_error` · 503 `unavailable` (switch off / not configured — checked
-     * after the token). `message` is for logs only (sl | en by `locale`; the other
+     * expired / non-web token; family gone) · 403 `not_parent` · 503 `unavailable`
+     * (switch off — checked after the token). `message` is for logs only (sl | en by `locale`; the other
      * website languages → en).
      *
      * POST /api/gift/redeem

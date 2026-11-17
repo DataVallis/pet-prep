@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-17 — Lemon Squeezy reče »ne«, Stripe reče »da«: lastna trgovina v enem popoldnevu
+
+**Kaj:** Lemon Squeezy je zavrnil trgovino PetPrep (ne sprejema več novih trgovin in se 31. 3. 2027 zapre). Isti dan je darilni bon in komplet »Obljuba o ljubljenčku« prevzel **Stripe Managed Payments** — Stripe (Link) je prodajalec in skrbi za DDV v več kot 80 državah. PetPrep zdaj sam ustvari kodo bona, jo pokaže na strani »hvala« in jo pošlje po e-pošti od maskote Curia (s priloženim natisljivim bonom, v 15 jezikih). Vsaka e-pošta gre najprej v vrsto v bazi; če pošiljanje ne uspe, strežnik poskusi znova (po 5 minutah … do 24 ur) in na koncu opozori. Administracija je postala trgovina: naročila, izdelki iz Stripe, prodaja danes / ta mesec, zgodovina po kupcu, »Pokaži kodo« (vsak ogled zabeležen).
+**Zakaj je pomembno:** Prvi prihodek s spletne strani ne visi več na ponudniku, ki se zapira. Koda bona je naša, zato je unovčitev preprostejša in hitrejša (brez klica tretje strani), podpora pa lahko izgubljeno kodo najde v adminu.
+**Kako povedati:** 👩 »Kupite darilni bon, kodo dobite takoj na zaslonu in po e-pošti — z natisljivim bonom za pod jelko.« 🧒 »Bon za 12-tedenski izziv — preizkus, preden pride pravi kuža.« 💼 »Plačila prek Stripe Managed Payments: DDV in spori pri Stripe, PetPrep obdrži kodo, dostavo in podatke o naročilih.« 🛠 »Stripe Checkout + podpisani webhook brez SDK-ja, ena pot izpolnitve za webhook in stran ›hvala‹ (idempotentno), vrsta e-pošte v Postgresu s `FOR UPDATE SKIP LOCKED` in eksponentnimi poskusi.«
+
 ## 2026-11-17 — Pred nakupom psa: kviz pasem in kalkulator za vsako pasmo, v 15 jezikih
 
 **Kaj:** V eni noči je spletna stran dobila podstran »Pred nakupom psa« (v glavi strani) s kvizom »Katera pasma je za vas?« in kalkulator »Koliko je dela s psom?« za vseh 111 psov iz registra — vse v 15 jezikih. Kviz ima 9 vprašanj in priporoči 3 pasme samo na podlagi oznak z viri (velikost, gibanje, »primerno za« / »razmislite o«); vedno doda tudi kartico o posvojitvi. Vsaka nova pasma v registru dobi stran kalkulatorja sama. Stran Partnerji in medijski komplet sta zdaj tudi v 15 jezikih.

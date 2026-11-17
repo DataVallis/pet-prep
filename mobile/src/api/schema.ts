@@ -1595,48 +1595,20 @@ export interface paths {
          *     `POST /api/web/parent-session` (M6-S01b) — ONLY that website token (ability
          *     `gift:redeem`); app tokens get 401. The family is the token's parent's family.
          *     Rate limited per IP (10 / min, 30 / h), per code (10 / h) and per family
-         *     (20 / h) → 429 `rate_limited`. The code (a Lemon Squeezy license key) is checked
-         *     with Lemon Squeezy. Success = one unused 12-week challenge purchase in the
-         *     family (the parent chooses the pet in the app).
+         *     (20 / h) → 429 `rate_limited`. The code is the one PetPrep e-mailed after the
+         *     Stripe payment (`PP-XXXX-XXXX-XXXX`; spaces, dashes, case and the PP prefix are
+         *     ignored). Success = one unused 12-week challenge purchase in the family (the
+         *     parent chooses the pet in the app).
          *
          *     200 `{status: redeemed, already}` · 422 `invalid_request` | `invalid_code` |
          *     `expired` | `refunded` · 409 `already_redeemed` · 401 `unauthenticated` (no /
-         *     expired / non-web token; family gone) · 403 `not_parent` · 502
-         *     `upstream_error` · 503 `unavailable` (switch off / not configured — checked
-         *     after the token). `message` is for logs only (sl | en by `locale`; the other
+         *     expired / non-web token; family gone) · 403 `not_parent` · 503 `unavailable`
+         *     (switch off — checked after the token). `message` is for logs only (sl | en by `locale`; the other
          *     website languages → en).
          *
          *     POST /api/gift/redeem
          */
         post: operations["gift.redeem"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/webhooks/lemonsqueezy": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        /**
-         * Lemon Squeezy webhook (M6-S01, website gift vouchers)
-         * @description Auth: `X-Signature` = hex HMAC-SHA256 of the raw body with
-         *     LEMONSQUEEZY_WEBHOOK_SECRET — not configured → 503, wrong → 401
-         *     (VerifyLemonSqueezyWebhook). Every delivery is stored once in
-         *     `lemonsqueezy_events` (a repeat → 200 `duplicate: true`). `order_created` is
-         *     recorded; `license_key_created` / `_updated` create or update the voucher;
-         *     a full `order_refunded` or a disabled key invalidates it and revokes its
-         *     challenge credit. Processed whatever the »Gift vouchers« switch says.
-         *
-         *     POST /api/webhooks/lemonsqueezy
-         */
-        post: operations["lemonSqueezyWebhook.handle"];
         delete?: never;
         options?: never;
         head?: never;
@@ -2126,6 +2098,126 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/shop/checkout": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Start a Stripe checkout for one product
+         * @description Public (petprep.si calls it from the browser), throttled per IP (10 / min, 30 / h).
+         *     Answers the Stripe Checkout URL; the website redirects the buyer to it. After the
+         *     payment Stripe sends the buyer to `success_path?session_id=cs_…`.
+         *
+         *     200 `{url}` · 422 `invalid_request` · 503 `unavailable` (product switch off / Stripe
+         *     not configured) · 502 `upstream_error` · 429.
+         *
+         *     POST /api/shop/checkout
+         */
+        post: operations["shop.checkout"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/shop/orders/{session}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * The order behind a Checkout Session (website thank-you page)
+         * @description Public; the session id from Stripe's redirect is the key (long, unguessable).
+         *     Throttled per IP (60 / min). When the payment is confirmed but the webhook has not
+         *     arrived yet, the order is fulfilled now. The voucher code and the download links
+         *     are returned only for a paid order and only for `shop.order_lookup_days` after the
+         *     purchase; after that (or after a refund) `status` alone.
+         *
+         *     200 order · 202 `{status: pending}` (payment not confirmed yet — ask again) ·
+         *     404 `not_found` · 502 `upstream_error`.
+         *
+         *     GET /api/shop/orders/{session}
+         */
+        get: operations["shop.order"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/shop/downloads/{order}/{locale}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * A file of a paid order (signed, expiring link from the thank-you page or the e-mail).
+         *     404 when the order no longer delivers (refunded) or the file is missing
+         * @description GET /api/shop/downloads/{order}/{locale}
+         */
+        get: operations["shop.download"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/shop/sample/{locale}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * The free promise kit sample (signed link from POST /api/summary-leads)
+         * @description GET /api/shop/sample/{locale}
+         */
+        get: operations["shop.sample"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/webhooks/stripe": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Stripe webhook (M6-S09 website shop). Authenticated by `Stripe-Signature`
+         *     (VerifyStripeWebhook — fails closed). Each event id is processed once; a duplicate
+         *     answers 200 `{duplicate: true}`. Stripe unreachable while fulfilling → 503 (Stripe
+         *     retries)
+         * @description POST /api/webhooks/stripe
+         */
+        post: operations["stripeWebhook.handle"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/summary-leads": {
         parameters: {
             query?: never;
@@ -2142,7 +2234,11 @@ export interface paths {
          *     The answer is the same for a new and a known address. No e-mail is sent
          *     and nothing about the visitor's address is stored. A filled hidden
          *     `website` field = bot: 201 and nothing stored
-         * @description 201 `{ok: true}`; 422 invalid body; 429 throttled.
+         * @description `source: promise_kit_sample` (M6-S09): the answer also carries `sample_url`, a
+         *     signed 24 h link to the free »Promise kit« sample PDF in `locale` (English when
+         *     that language has none; null while no sample is uploaded).
+         *
+         *     201 `{ok: true, sample_url?: string|null}`; 422 invalid body; 429 throttled.
          *
          *     POST /api/summary-leads
          */
@@ -3221,7 +3317,7 @@ export interface components {
          *     answers 422 `invalid_request` without echoing field names or values.
          */
         RedeemGiftRequest: {
-            /** @description The voucher code (a Lemon Squeezy license key) as printed: letters, digits, dashes, spaces. */
+            /** @description The voucher code as e-mailed / printed (PP-XXXX-XXXX-XXXX): letters, digits, dashes, spaces. */
             code: string;
             /**
              * @description Language of the `message` text only (one of the 15 website languages; the
@@ -3359,6 +3455,28 @@ export interface components {
                 transferred_from?: (string | null)[] | null;
                 transferred_to?: (string | null)[] | null;
             };
+        };
+        /**
+         * ShopCheckoutRequest
+         * @description POST /api/shop/checkout (M6-S09). The website sends the product, its language and
+         *     its own localised return paths; only a path on petprep.si is accepted (no scheme,
+         *     no host, no `//`, no query beyond what we add) — never an open redirect.
+         */
+        ShopCheckoutRequest: {
+            /**
+             * @description A key of config('shop.products'): gift_voucher | promise_kit.
+             * @enum {string}
+             */
+            product: "gift_voucher" | "promise_kit";
+            /**
+             * @description One of the 15 website languages: checkout page, e-mail and files.
+             * @enum {string}
+             */
+            locale: "en" | "sl" | "de" | "fr" | "es" | "it" | "pt" | "nl" | "pl" | "cs" | "hr" | "sv" | "da" | "fi" | "nb";
+            /** @description Website path of the thank-you page, e.g. `/sl/darilni-bon/hvala`. */
+            success_path: string;
+            /** @description Website path to return to when the buyer leaves the checkout, e.g. `/sl/darilni-bon`. */
+            cancel_path: string;
         };
         /**
          * SignContractRequest
@@ -3527,7 +3645,7 @@ export interface components {
             /** @enum {string} */
             consent_version: "2026-11";
             /** @enum {string} */
-            source: "real_cost" | "breed_quiz";
+            source: "real_cost" | "breed_quiz" | "promise_kit_sample";
             /** @description Website language (two letters) and the breed slug of the website's breed register. */
             locale?: string | null;
             breed?: string | null;
@@ -30312,30 +30430,6 @@ export interface operations {
             422: components["responses"]["ValidationException"];
         };
     };
-    "lemonSqueezyWebhook.handle": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "application/json": {
-                        received: boolean;
-                        duplicate: boolean;
-                        /** @enum {string|null} */
-                        outcome: "recorded" | "voucher_created" | "voucher_updated" | "refunded" | "revoked" | "disabled" | "expired" | "partial_refund" | "ignored" | "foreign_store" | "unknown_product" | "test_mode_ignored" | null;
-                    };
-                };
-            };
-        };
-    };
     "pairing.generatePin": {
         parameters: {
             query?: never;
@@ -32685,6 +32779,210 @@ export interface operations {
             422: components["responses"]["ValidationException"];
         };
     };
+    "shop.checkout": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ShopCheckoutRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": string | {
+                        url: unknown;
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "shop.order": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                session: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @enum {string} */
+                        status: "paid" | "refunded" | "partially_refunded" | "disputed" | "failed";
+                        /** @enum {string} */
+                        product: "gift_voucher" | "promise_kit";
+                        order_number: string | null;
+                        locale: string;
+                        /** @description The buyer's e-mail, middle hidden — the e-mail went there. */
+                        email_masked: string | null;
+                        voucher: {
+                            code: string;
+                            purchased_at: string;
+                            expires_at: string;
+                            /** @enum {string} */
+                            status: "purchased" | "redeemed" | "refunded" | "expired" | "disabled";
+                        } | null;
+                        downloads: {
+                            locale: string;
+                            url: string;
+                        }[];
+                    };
+                };
+            };
+            202: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        status: "pending";
+                    };
+                };
+            };
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        error: "not_found";
+                    };
+                };
+            };
+            502: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        error: "upstream_error";
+                    };
+                };
+            };
+        };
+    };
+    "shop.download": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                order: number;
+                locale: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    "Transfer-Encoding": "chunked";
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/pdf": string;
+                };
+            };
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        error: "not_found";
+                    };
+                };
+            };
+        };
+    };
+    "shop.sample": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                locale: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    "Transfer-Encoding": "chunked";
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/pdf": string;
+                };
+            };
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        error: "not_found";
+                    };
+                };
+            };
+        };
+    };
+    "stripeWebhook.handle": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        received: boolean;
+                        duplicate: boolean;
+                    } | {
+                        received: boolean;
+                        /** @enum {string|null} */
+                        outcome: "unknown_order" | "dispute_won" | "dispute_lost" | "disputed" | "fulfilled" | "pending" | "not_ours" | "failed" | "test_mode_ignored" | "ignored" | null;
+                    };
+                };
+            };
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "Try again later.";
+                    };
+                };
+            };
+        };
+    };
     "summaryLead.store": {
         parameters: {
             query?: never;
@@ -32705,6 +33003,9 @@ export interface operations {
                 content: {
                     "application/json": {
                         ok: boolean;
+                    } | {
+                        ok: boolean;
+                        sample_url: string | null;
                     };
                 };
             };

@@ -12,26 +12,28 @@ use Illuminate\Queue\InteractsWithQueue;
 use Throwable;
 
 /**
- * M6-S01 (CONTRACT §6.4): a website gift voucher needs an admin's eye. Ids only —
- * never a code, an e-mail or a name. Dispatched after commit (DiscordWebhook
- * refuses to run inside a transaction). Low-priority `alerts` queue.
+ * M6-S09: the website shop needs an admin's eye (partial refund, dispute, e-mail that
+ * failed every retry). Ids only — never a code, an e-mail address or a name. Dispatched
+ * after commit (DiscordWebhook refuses to run inside a transaction). `alerts` queue.
  */
-class SendGiftVoucherAlert implements ShouldQueue
+class SendShopAlert implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable;
 
-    public const REASON_ACTIVATED_ELSEWHERE = 'activated_elsewhere';
-
     public const REASON_PARTIAL_REFUND = 'partial_refund';
 
-    public const REASON_INSTANCE_MISMATCH = 'instance_mismatch';
+    public const REASON_DISPUTE_OPENED = 'dispute_opened';
+
+    public const REASON_DISPUTE_LOST = 'dispute_lost';
+
+    public const REASON_EMAIL_FAILED = 'email_failed';
 
     public int $tries = 1;
 
     public function __construct(
         public readonly string $reason,
-        public readonly ?int $voucherId,
-        public readonly ?int $lsOrderId,
+        public readonly ?int $orderId,
+        public readonly ?int $emailId = null,
     ) {
         $this->onQueue((string) config('system_health.app_errors.alert_queue', 'alerts'));
     }
@@ -41,17 +43,16 @@ class SendGiftVoucherAlert implements ShouldQueue
         if (! $discord->configured()) {
             return;
         }
-
-        $key = 'admin.gift_voucher.discord';
+        $key = 'admin.shop.discord';
         try {
             $discord->send(new AdminAlert(
-                AdminAlertKind::GiftVoucherIssue,
+                AdminAlertKind::ShopIssue,
                 __($key.'.'.$this->reason.'.title'),
                 __($key.'.'.$this->reason.'.body'),
-                [
-                    __($key.'.voucher') => $this->voucherId === null ? '—' : (string) $this->voucherId,
-                    __($key.'.order') => $this->lsOrderId === null ? '—' : (string) $this->lsOrderId,
-                ],
+                array_filter([
+                    __($key.'.order') => $this->orderId === null ? '—' : (string) $this->orderId,
+                    __($key.'.email') => $this->emailId === null ? null : (string) $this->emailId,
+                ]),
             ));
         } catch (Throwable $e) {
             report($e);

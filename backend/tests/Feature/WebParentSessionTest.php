@@ -30,7 +30,7 @@ use Laravel\Sanctum\PersonalAccessToken;
 | about the limit.
 */
 
-require_once __DIR__.'/../Support/GiftVoucherFakes.php';
+require_once __DIR__.'/../Support/ShopFakes.php';
 
 const WS_GOOGLE_JWKS = 'https://www.googleapis.com/oauth2/v3/certs';
 const WS_APPLE_JWKS = 'https://appleid.apple.com/auth/keys';
@@ -127,8 +127,6 @@ function wsCounts(): array
 beforeEach(function () {
     Carbon::setTestNow(Carbon::parse('2026-11-11 21:35:00', 'UTC'));
     config([
-        'services.lemonsqueezy.store_id' => (string) GV_STORE,
-        'services.lemonsqueezy.gift_product_id' => (string) GV_PRODUCT,
         'services.google.client_ids' => [WS_GOOGLE_APP],
         'services.google.web_client_ids' => [WS_GOOGLE_WEB],
         'services.apple.audiences' => [WS_APPLE_APP],
@@ -346,10 +344,6 @@ describe('switch, limits, tokens', function () {
         Hash::shouldNotHaveReceived('check');
         Http::assertNothingSent();
 
-        // Lemon Squeezy not configured counts as off too.
-        gvSwitch(true);
-        config(['services.lemonsqueezy.store_id' => '']);
-        wsSocial(ip: '198.51.100.51')->assertStatus(503)->assertJsonPath('error', 'unavailable');
     });
 
     it('WS13: the 11th request in a minute from one IP is 429 + Retry-After; another IP is unaffected; DELETE shares the bucket', function () {
@@ -466,8 +460,17 @@ describe('scope (rule W)', function () {
             // Fill every parameter so the route itself matches (respecting its `where`).
             $path = '/'.preg_replace_callback('/\{([^}?]+)\??\}/', function (array $m) use ($route, $pet): string {
                 $pattern = $route->wheres[$m[1]] ?? null;
+                if ($pattern === null) {
+                    return (string) $pet->id;
+                }
+                // First filler the route's `where` accepts (pet id, a word, a language, a Stripe session id).
+                foreach ([(string) $pet->id, 'abc', 'en', 'cs_test_0123456789ab'] as $candidate) {
+                    if (preg_match('/^'.$pattern.'$/', $candidate) === 1) {
+                        return $candidate;
+                    }
+                }
 
-                return $pattern === null || preg_match('/^'.$pattern.'$/', (string) $pet->id) === 1 ? (string) $pet->id : 'abc';
+                return 'abc';
             }, $uri);
             app('auth')->forgetGuards();
             $res = test()->withHeaders(['Authorization' => 'Bearer '.$web])

@@ -133,10 +133,16 @@ class AppSettingsService
 
     /**
      * M6-S01 (WEBSITE_SALES_SPEC §3.4): `{enabled: bool}` — website gift voucher
-     * redemption (POST /api/gift/redeem) — DEFAULT OFF until the app is in the stores.
-     * The Lemon Squeezy webhook (refunds) is processed whatever this says.
+     * sales (POST /api/shop/checkout) and redemption (POST /api/gift/redeem) — DEFAULT
+     * OFF until the app is in the stores. The Stripe webhook is processed whatever this says.
      */
     public const GIFT_VOUCHERS_KEY = 'gift_vouchers';
+
+    /**
+     * M6-S09: `{enabled: bool}` — website sales of the »Promise kit« PDF
+     * (POST /api/shop/checkout) — DEFAULT OFF until David approves the kit's text.
+     */
+    public const PROMISE_KIT_KEY = 'promise_kit';
 
     /** M5-T15 default low-balance threshold (no row / empty), USD. */
     public const FAL_BALANCE_ALERT_DEFAULT_USD = 20.0;
@@ -474,6 +480,34 @@ class AppSettingsService
     public function updateGiftVouchers(User $actor, bool $enabled): void
     {
         $this->store($actor, self::GIFT_VOUCHERS_KEY, ['enabled' => $enabled], ['enabled' => false]);
+    }
+
+    /** M6-S09: may the website sell the promise kit? Default off (no row = off). */
+    public function promiseKit(bool $fresh = false): bool
+    {
+        /** @var array{enabled?: bool} $value */
+        $value = $fresh
+            ? (AppSetting::find(self::PROMISE_KIT_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::PROMISE_KIT_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::PROMISE_KIT_KEY)?->value ?? []);
+
+        return (bool) ($value['enabled'] ?? false);
+    }
+
+    /** Save the promise kit switch (superadmin), audit it and bust the cache. */
+    public function updatePromiseKit(User $actor, bool $enabled): void
+    {
+        $this->store($actor, self::PROMISE_KIT_KEY, ['enabled' => $enabled], ['enabled' => false]);
+    }
+
+    /** M6-S09: is a shop product's admin switch on (`config('shop.products.<key>.switch')`)? */
+    public function shopProductEnabled(string $productKey, bool $fresh = false): bool
+    {
+        return match (config('shop.products.'.$productKey.'.switch')) {
+            self::GIFT_VOUCHERS_KEY => $this->giftVouchers($fresh),
+            self::PROMISE_KIT_KEY => $this->promiseKit($fresh),
+            default => false,
+        };
     }
 
     /**

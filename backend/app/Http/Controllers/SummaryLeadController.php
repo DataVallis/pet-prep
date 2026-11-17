@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreSummaryLeadRequest;
+use App\Services\Shop\ShopFiles;
 use App\Services\SummaryLeadService;
 use Illuminate\Http\JsonResponse;
 
@@ -21,7 +22,11 @@ class SummaryLeadController extends Controller
      * and nothing about the visitor's address is stored. A filled hidden
      * `website` field = bot: 201 and nothing stored.
      *
-     * 201 `{ok: true}`; 422 invalid body; 429 throttled.
+     * `source: promise_kit_sample` (M6-S09): the answer also carries `sample_url`, a
+     * signed 24 h link to the free »Promise kit« sample PDF in `locale` (English when
+     * that language has none; null while no sample is uploaded).
+     *
+     * 201 `{ok: true, sample_url?: string|null}`; 422 invalid body; 429 throttled.
      *
      * POST /api/summary-leads
      */
@@ -31,6 +36,10 @@ class SummaryLeadController extends Controller
         $data = $request->safe()->only(['email', 'consent_version', 'source', 'locale', 'breed', 'stage']);
 
         $this->leads->record($data);
+
+        if ($data['source'] === 'promise_kit_sample') {
+            return response()->json(['ok' => true, 'sample_url' => ShopFiles::sampleUrl((string) ($data['locale'] ?? 'en'))], 201);
+        }
 
         return response()->json(['ok' => true], 201);
     }

@@ -37,8 +37,8 @@ enum AdminAlertKind: string
     case GameLoopStalled = 'game_loop_stalled';
     /** M6-U01 (FREE_PET_UPGRADE_SPEC §5.3 safety net): a 12-week challenge purchase stayed unassigned > 10 min in a family with a pet waiting for payment or a purchase intent (once per purchase; ids + counts only). */
     case UnassignedChallengeCredit = 'unassigned_challenge_credit';
-    /** M6-S01: a website gift voucher needs a look (activated elsewhere, instance mismatch, partial refund — voucher / order ids only). */
-    case GiftVoucherIssue = 'gift_voucher_issue';
+    /** M6-S09: the website shop needs a look (partial refund, dispute, e-mail that could not be sent — order / e-mail ids only). */
+    case ShopIssue = 'shop_issue';
     /** M6-S03 (WEBSITE_SALES_SPEC §5.2): a partner inquiry arrived on petprep.si (informative — the type and the /admin link only, no sender data). */
     case PartnerInquiry = 'partner_inquiry';
     case Test = 'test';
@@ -53,7 +53,7 @@ enum AdminAlertKind: string
     public function severity(): string
     {
         return match ($this) {
-            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck, self::StillQualityRejected, self::GiftVoucherIssue => 'warning',
+            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck, self::StillQualityRejected, self::ShopIssue => 'warning',
             self::DiskSpace, self::GameLoopPetError, self::GameLoopStalled, self::UnassignedChallengeCredit => 'danger',
             self::AiBudgetBlocked, self::FalBalanceExhausted, self::AppErrorSpike => 'danger',
             self::PartnerInquiry, self::Test => 'info',
@@ -78,7 +78,7 @@ enum AdminAlertKind: string
             self::ActivityMediaStuck, self::FrugalClipFallback, self::StillQualityRejected => '/admin/pets',
             self::ItemMediaStuck => '/admin/item-media',
             self::UnassignedChallengeCredit => '/admin/challenge-credits',
-            self::GiftVoucherIssue => '/admin/gift-vouchers',
+            self::ShopIssue => '/admin/shop-orders',
             self::PartnerInquiry => '/admin/partner-inquiries',
             self::FalBalanceLow, self::FalBalanceExhausted, self::AppErrorNew, self::AppErrorSpike, self::AppErrorSuppressed, self::DiskSpace, self::GameLoopPetError, self::GameLoopStalled, self::Test => '/admin/system-health',
         };

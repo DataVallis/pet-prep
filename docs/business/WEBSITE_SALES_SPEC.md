@@ -1,185 +1,125 @@
 # PetPrep — prodaja prek spletne strani (darilni bon, natisljivi komplet, stran za partnerje)
 
-> **Specifikacija, 11. 11. 2026 (popravljena 11. 11. 2026 po pregledu kode in pogodbi `CONTRACT.md` M6-S01: §3.2–§3.5, §5.2).** David je 11. 11. 2026 izbral tri stvari iz `REVENUE_MODELS.md` §5 (»1, 2 in 5 — dajmo naredit«) in potrdil, da bo aplikacija v trgovinah čez približno en teden. Vse je *načrt* — nič še ni zgrajeno.
-> Kar je označeno **(David)**, je njegova odločitev. Kar je označeno *(Claude, David lahko spremeni)*, je moj predlog, s katerim agent lahko začne. Tehnični del je napisan iz dokumentov in hitrega pregleda kode, zato ga mora inženir pred gradnjo preveriti v obeh repozitorijih (`pet-prep`, `pet-prep-website`) in v trenutni dokumentaciji Lemon Squeezy.
-> Naloge v ROADMAP: **M6-S01** (darilni bon), **M6-S02** (natisljivi komplet), **M6-S03** (stran za partnerje).
+> **Specifikacija, 11. 11. 2026; prenovljena 17. 11. 2026 — plačila prek Stripe Managed Payments namesto Lemon Squeezy, lastna vrsta e-pošte, admin kot trgovina.** Lemon Squeezy je 17. 11. 2026 zavrnil trgovino PetPrep (ne sprejema več novih trgovin, zapre se 31. 3. 2027). David ima Stripe Managed Payments odobren na računu »David Tacer s.p.« in je odločil: **»vse bova s Stripe delala«**, **e-pošta prek lastnega strežnika `mail.datavallis.com` z vrsto v bazi in ponovnimi poskusi**, **admin mora biti kot trgovina (naročila, izdelki, zgodovina nakupov, dostop do kod)** (David 17. 11. 2026).
+> Kar je označeno **(David)**, je njegova odločitev. Kar je označeno *(Claude, David lahko spremeni)*, je moj predlog.
+> Naloge v ROADMAP: **M6-S01** (darilni bon), **M6-S02** (natisljivi komplet), **M6-S03** (partnerji, zgrajeno), **M6-S09** (Stripe namesto Lemon Squeezy, vrsta e-pošte, admin trgovina).
+> Stanje 17. 11. 2026: strežnik M6-S09 zgrajen (PR `feat/M6-S09-stripe-shop` v `pet-prep`); Lemon Squeezy odstranjen; Stripe (testni način) nastavljen — izdelka, ceni, webhook (§3.5). Spletna stran: PR v `pet-prep-website`. Vse za stikali (privzeto izklopljeno).
 
 ## 1. Cilj in obseg
 
-Prvi prihodek prek petprep.si, neodvisno od nakupov v trgovinah:
+| # | Izdelek | Cena |
+|---|---|---|
+| A | **Darilni bon za 12-tedenski izziv** | 49,99 € z DDV |
+| B | **Natisljivi komplet »Obljuba o ljubljenčku«** (PDF) | 6,90 € z DDV; priložen vsakemu bonu |
+| C | **Stran za partnerje** (zgrajena, brez plačil) | — |
 
-| # | Izdelek | Kdo kupi | Cena *(Claude)* |
-|---|---|---|---|
-| A | **Darilni bon za 12-tedenski izziv** | starši, stari starši, tete in strici — pred božičem | 49,99 € (enako kot v aplikaciji) |
-| B | **Natisljivi komplet »Obljuba o ljubljenčku«** | starši, ki jih otrok prosi za žival | 6,90 €; priložen brezplačno vsakemu bonu |
-| C | **Stran za partnerje in sponzorje** z medijskim kompletom in ponudbo »ustanovni partner« | zavarovalnice, trgovine, veterinarji, pasje šole, vzreditelji | po dogovoru; ustanovni vpis v imenik 190 € na leto |
-
-Ni v obsegu: vodniki po pasmah, plačljive pobarvanke, partnerske povezave, naročnina za pravega ljubljenčka (`REVENUE_MODELS.md`).
-
-Jeziki: **slovenščina in angleščina** *(Claude)*. Spletna stran danes streže 15 jezikov; strani teh treh izdelkov v ostalih 13 jezikih preusmerijo na angleško različico. Ostalih 13 jezikov spletne strani pride kasneje (val 1 validacije je Slovenija; načrt validacije nove jezike zamrzne).
+Jeziki: **vseh 15 jezikov spletne strani** (pravilo 16. 11. 2026). Cene z DDV **(David 11. 11. 2026)**.
 
 ## 2. Skupna pravila
 
-- **Plačila: Lemon Squeezy** (David ima račun). Lemon Squeezy je prodajalec (obračuna DDV, izda račun, pošlje e-pošto s potrdilom in izvede vračilo). PetPrep strežnik danes ne pošilja e-pošte (`MAIL_MAILER=log`), zato kupec vse dobi v e-pošti Lemon Squeezy in na strani po nakupu.
-- **Aplikacija nikoli ne omenja spletnega nakupa** in ne vsebuje povezave nanj; v aplikaciji ni polja za vnos kode. Bon se unovči na spletni strani (§3.3). **Pravila trgovin (Claude preveril 11. 11. 2026 v uradnih virih; ni pravno mnenje):**
-  - *Apple App Review Guidelines:* 3.1.1 — aplikacija ne sme odklepati vsebine z lastnimi mehanizmi, kot so licenčni ključi ali kode QR, in darilni boni za digitalno vsebino se **v aplikaciji** smejo prodajati samo z nakupom v aplikaciji → zato ni vnosa kode v aplikaciji in bona v aplikaciji ne prodajamo. 3.1.3(b) — aplikacija, ki deluje na več platformah, sme uporabniku dati dostop do vsebine, kupljene drugje (tudi na spletu), **če je ista vsebina na voljo tudi kot nakup v aplikaciji** → 12-tedenski izziv je. 3.1.3 — aplikacija ne sme spodbujati nakupa zunaj nje (izjeme: ZDA in posebna dovoljenja), razvijalec pa sme o drugih možnostih obveščati **zunaj aplikacije**. 1.3 (otroška kategorija) — brez povezav ven in nakupnih priložnosti zunaj starševske zapore → ne dodajamo nobene. <https://developer.apple.com/app-store/review/guidelines/> (zadnjega dela strani orodje ni prebralo).
-  - *Google Play, pravilnik o plačilih:* Googlov sistem je obvezen za nakupe **v aplikaciji**; aplikacija uporabnika ne sme voditi k drugemu načinu plačila; zunaj aplikacije (e-pošta, splet) sme razvijalec ponujati druge možnosti; uporabnik sme v aplikaciji dostopati do vsebine, plačane drugje. <https://support.google.com/googleplay/android-developer/answer/10281818>, <https://play.google.com/about/monetization-ads/payments>
-  - **Sklep:** prodaja bona na petprep.si in unovčitev na spletni strani sta s temi pravili skladna, dokler aplikacija bona ne omenja, nima povezave nanj in nima vnosa kode, izziv pa ostane na voljo tudi kot nakup v aplikaciji. Ostane tveganje presoje posameznega pregledovalca; opis v trgovinah naj bona ne omenja.
-- **Spletna stran kaže samo, kar res obstaja** (pravilo 13. 10. 2026): stran bona je javna šele, ko je aplikacija v vsaj eni trgovini in unovčitev deluje na produkciji (David 11. 11. 2026: prodaja bonov zunaj aplikacije je naša stvar; pravila trgovin zgoraj tega ne prepovedujejo). Do takrat je za stikalom.
-- **Besedila so izvirna**, v glasu znamke (`brand/README.md`), brez prepisovanja z drugih strani. Staršem v slovenščini vikamo. Nikoli ne omenjamo starosti otrok in ne kažemo otroka, prilepljenega na telefon. Curio je maskota znamke, ne ljubljenček iz aplikacije.
-- **Videz:** obstoječa CGP »Grafit in meta«, obstoječe komponente strani. Brez majhnih monospace oznak. Obstoječi logotipi partnerjev kot logotipi, ne besedilo.
-- **Brez izmišljenih številk.** Na strani za partnerje samo izmerjeni podatki z datumom; česar še ni, se ne navaja.
-- **Otroški podatki:** v nobenem od treh izdelkov ni osebnih podatkov otroka. Komplet se izpolni na papirju.
-- **Vse zunanje povezave** se odprejo v novem zavihku (pravilo 31. 10. 2026).
-- **Merjenje:** stran »Lijak« (`/admin/funnel`) dobi ločen stolpec za izzive, plačane z darilnim bonom. Prodaja bonov in kompletov se bere v Lemon Squeezy; PetPrep je ne podvaja.
+- **Plačila: Stripe Managed Payments** **(David 17. 11. 2026)** — račun »David Tacer s.p.«. Prodajalec (merchant of record) je Stripe prek Link: DDV v 80+ državah, račun in potrdilo kupcu, spori, podpora za plačila. Kupec na izpisku vidi `LINK.COM* <opis>`.
+  - Samo digitalni izdelki. Fizično blago (Curio plišek, puzzle) kasneje na navadnem Stripe.
+  - Integracija: **Checkout Session**, ki jo ustvari naš strežnik (`mode=payment`, `managed_payments[enabled]=true`, različica API `2025-03-31.basil`). **Ime in logotip blagajne PetPrep** se nastavita na vsaki seji (`branding_settings`), ker isti račun Stripe uporabljajo tudi druge Davidove prodaje *(Claude)*.
+  - E-pošt Link ne moremo spreminjati. **Naše vsebine (kodo, PDF) pošlje PetPrep sam** (§3.6) in jih pokaže na strani »hvala«.
+  - Link sme v nekaterih primerih sam vrniti denar v 60 dneh. Webhook vračilo obravnava ne glede na to, kdo ga je sprožil.
+- **Aplikacija nikoli ne omenja spletnega nakupa**, nima povezave nanj in nima vnosa kode (pravila App Store 3.1.1, 3.1.3(b), 1.3 in Google Play o plačilih — preverjeno 11. 11. 2026; skladno, dokler aplikacija bona ne omenja in izziv ostane tudi nakup v aplikaciji).
+- **Spletna stran kaže samo, kar res obstaja**: stran bona je javna, ko je aplikacija v vsaj eni trgovini in unovčitev deluje na produkciji. Do takrat stikalo.
+- **Besedila izvirna**, staršem vikamo, brez starosti otrok, Curio je maskota. CGP »Grafit in meta«, brez majhnih monospace oznak.
+- **Otroški podatki:** nikjer.
+- **Zunanje povezave** v novem zavihku; izjema: gumb za nakup preusmeri na blagajno v istem zavihku *(Claude)*.
 
-## 3. A — Darilni bon za 12-tedenski izziv (M6-S01)
+## 3. A — Darilni bon (M6-S01, M6-S09)
 
 ### 3.1 Kaj kupec dobi
-- En bon = **en 12-tedenski izziv za enega ljubljenčka**, katerokoli vrsto in pasmo, ki je takrat v aplikaciji. Enako kot nakup v aplikaciji: poln nabor posnetkov, celotna zgodovina, potrdilo.
-- Kodo bona (v e-pošti Lemon Squeezy; na strani po nakupu jo kupec prilepi in natisne bon), **natisljiv bon** (A4, dve na stran za prepogib; polja »Za« in »Od« se izpolnijo ročno) in **komplet B** kot priloženi PDF.
-- Veljavnost: **12 mesecev od nakupa** *(Claude)*. Vračilo: po pogojih Lemon Squeezy in potrošniški zakonodaji; **unovčen bon ni vračljiv**, neunovčen je vračljiv 14 dni *(Claude; pravni pregled z M5-06)*.
-- Sporočilo strani: »Ne podarite kužka. Podarite preizkus.« — bon je darilo otroku, ki si želi žival, in odgovor staršem, ali je pripravljen. Brez obljube, da bo otrok žival dobil.
+- En bon = en 12-tedenski izziv za enega ljubljenčka (katerakoli vrsta in pasma v aplikaciji).
+- **E-pošta PetPrep** s kodo, natisljivim bonom (PDF priponka) in povezavo na komplet B (PDF) v jeziku nakupa; **stran »hvala«** z isto vsebino. Račun pošlje Link.
+- Veljavnost 12 mesecev od nakupa *(Claude)*. Vračilo: neunovčen 14 dni, unovčen ne *(Claude; pravni pregled z M5-06)*; Link lahko izjemoma vrne do 60 dni.
 
-### 3.2 Stran na petprep.si
-`/gift` · `/sl/darilni-bon`. Razdelki: naslov in gumb za nakup; kaj je PetPrep v treh stavkih; kako deluje bon (kupi → natisni → starš unovči → otrok začne); kaj je vključeno; za koga je in za koga ni; pogosta vprašanja (veljavnost, vračilo, katere naprave, ali rabim račun, ali velja za mačko); povezava na unovčitev. Gumb odpre nakup Lemon Squeezy v novem zavihku. Po nakupu Lemon Squeezy preusmeri na `/gift/thanks`. Lemon Squeezy ima en naslov preusmeritve na izdelek, zato slovenska stran pred nakupom shrani samo jezik (`sl`), stran »hvala« pa kupca preusmeri na `/sl/darilni-bon/hvala`. **Lemon Squeezy v naslovu preusmeritve ne pošlje kode** *(popravek 11. 11. 2026)*. Zato je na strani »hvala« polje, kamor kupec prilepi kodo iz e-pošte Lemon Squeezy. Iz nje se v brskalniku nariše natisljiv bon, ob tem pa so navodila za unovčitev.
+### 3.2 Strani na petprep.si (15 jezikov)
+- **Bon** `/gift` · `/sl/darilni-bon`: vsebina kot doslej; gumb pokliče `POST /api/shop/checkout {product: gift_voucher, locale, success_path, cancel_path}` (poti strani v jeziku obiskovalca; strežnik sprejme samo pot na petprep.si) in preusmeri na `url`.
+- **»Hvala«** `…/hvala?session_id={CHECKOUT_SESSION_ID}`: `GET /api/shop/orders/{session_id}` → koda (gumb »Kopiraj«), natisljiv bon (tiskalni slog, A4, dva na list, »Za« / »Od«), prenos kompleta B, »Kodo smo poslali tudi na <delno skrit e-naslov>«. Dokler plačilo ni potrjeno: »Plačilo še potrjujemo …« in ponovni poskusi do ~2 min.
+- **Unovčitev** `/redeem` · `/sl/unovci`: prijava starša kot v aplikaciji + koda (M6-S01b, nespremenjeno).
+- Strani »hvala« in unovčitev: `noindex`, brez zunanjih skript; vse za `NEXT_PUBLIC_FEATURE_GIFT`.
 
-Natisljiv bon je del strani »hvala« s tiskalnim slogom (brez strežnika): A4, dva enaka bona na list s črto za prepogib. Na bonu so logotip, Curio, »12-tedenski PetPrep izziv«, koda, naslov strani za unovčitev, »Velja 12 mesecev od nakupa« (brez datuma — datuma nakupa stran ne pozna; popravek po pregledu QA 11. 11. 2026) ter prazni polji »Za« in »Od«. **Kode ne shranjujemo** (ne v brskalniku, ne v naslovu strani, ne v analitiki) in je ne pošiljamo na strežnik.
+### 3.3 Unovčitev (nespremenjeno)
+Prijavljen starš vnese kodo → družina dobi kupljen izziv (neporabljen nakup v aplikaciji), potisno obvestilo brez imen in brez omembe bona. Napake: neveljavna, potekla, vrnjena, unovčena v drugi družini.
 
-Stran bona, stran »hvala« in stran za unovčitev obstajajo samo v slovenščini in angleščini. Ostali jeziki strani preusmerijo na angleško različico. Vse tri so za stikalom `NEXT_PUBLIC_FEATURE_GIFT` (izklop = stran ne obstaja). Strani »hvala« in unovčitev imata `noindex` in nista v zemljevidu strani.
+### 3.4 Strežnik — trgovina (`pet-prep`)
+**Splošni del trgovine** (za bon, komplet in prihodnje digitalne izdelke):
+- **Izdelki in cene živijo v Stripe** (vir resnice, tam se računa DDV). `config/shop.php` preslika ključ izdelka (`gift_voucher`, `promise_kit`) na Stripe Price ID (env) in na admin stikalo. Tabela **`shop_products`** je kopija za admin (ime, opis, cena, valuta, aktiven, Stripe ID-ji, `livemode`), osvežena z ukazom `shop:sync-products` in gumbom »Osveži iz Stripe«. Urejanje cen samo v Stripe (povezava iz admina).
+- **`POST /api/shop/checkout {product, locale, success_path, cancel_path}`** (javno; 10 / min in 30 / h na IP; stikalo izdelka izklopljeno → 503; pot samo na petprep.si — nikoli odprta preusmeritev): Checkout Session z eno postavko, `managed_payments[enabled]=true`, `success_url` (stran »hvala« + `?session_id=…`), `cancel_url`, `metadata {petprep_product, locale}`, `branding_settings` PetPrep, `locale` blagajne. Vrne `{url}`.
+- **Tabela `shop_orders`** (eno naročilo = ena Checkout Session): številka naročila PetPrep (`PP-2026-000123`), izdelek, `stripe_checkout_session_id` (UNIQUE), `stripe_payment_intent_id`, `livemode`, znesek, DDV, vrnjeni znesek, valuta, jezik, **e-naslov in ime kupca** (iz Stripe, potrebno za pošiljanje — politika zasebnosti dobi odstavek), država kupca, stanje (`pending` / `paid` / `refunded` / `partially_refunded` / `disputed` / `failed`), časi.
+- **Izpolnitev na enem mestu** `ShopFulfillment::fulfill(sessionId)`: prebere sejo s postavkami iz Stripe, preveri `payment_status = paid`, ceno (natanko nastavljena, količina 1) in izdelek, `livemode` (testne samo z `STRIPE_ACCEPT_TEST_MODE=true`); pod zaklepom ustvari/posodobi naročilo in **natanko enkrat** izvede dostavo (bon → koda; komplet → nič dodatnega) ter postavi e-pošto v vrsto. Kličeta jo webhook in stran »hvala« (kar pride prej).
+- **`GET /api/shop/orders/{session_id}`** (javno, 60 / min na IP): po potrebi `fulfill`; plačano → `{status, product, order_number, locale, email_masked, voucher: {code, purchased_at, expires_at, status}|null, downloads: [{locale, url}]}` (podpisane povezave, 24 h); v obdelavi → `202`; neznano → 404. Koda in povezave se vračajo 30 dni po nakupu in samo, dokler naročilo ni vrnjeno *(Claude)*.
+- **Webhook `POST /api/webhooks/stripe`**: podpis `Stripe-Signature` (HMAC-SHA256 s `STRIPE_WEBHOOK_SECRET`, toleranca 5 min, brez zunanjega paketa); brez ključa → 503. Vsak dogodek enkrat po `event.id` (tabela `stripe_events` brez osebnih podatkov). Dogodki:
+  - `checkout.session.completed` (plačano), `checkout.session.async_payment_succeeded` → `fulfill`;
+  - `checkout.session.async_payment_failed` → naročilo `failed`;
+  - `charge.refunded`: celotno → naročilo `refunded` + pravila izdelka (bon: neunovčen → `refunded`; unovčen in nedodeljen → kredit preklican; dodeljen in izziv ni končan → obstoječe pravilo vračila; končan → oznaka; komplet: povezave ne delujejo več); delno → `partially_refunded` + Discord;
+  - `charge.dispute.created` → `disputed` + Discord; `charge.dispute.closed` dobljen → nazaj `paid`; izgubljen → kot celotno vračilo (bon `disabled`) + Discord.
+  - Stripe nedosegljiv med izpolnitvijo → 503, Stripe poskusi znova. Deluje ne glede na stikala.
+- **Brez paketa `stripe/stripe-php`**: klici z Laravel `Http` (`Shop\StripeClient`), glava `Stripe-Version` fiksna *(Claude; packagist v oblaku ni dosegljiv, odvisnost ni potrebna)*.
 
-### 3.3 Unovčitev — na spletni strani, ne v aplikaciji
-`/redeem` · `/sl/unovci`. **Spremenjeno 11. 11. 2026 (David, 22:20 — M6-S01b, CONTRACT_WEB_SIGNIN): e-naslova ne vpisuje.** Starš se najprej **prijavi z istim računom kot v aplikaciji** — Google, Apple ali e-naslov + geslo — nato vnese **kodo**. Razlog: uporabniki Apple imajo skrite e-naslove, aplikacija pa e-naslova računa ne prikaže. Google in Apple delujeta s preusmeritvijo na stran ponudnika in nazaj na `https://petprep.si/auth/return` (na strani se ne naloži nobena skripta Googla ali Appla). Prijava velja 15 minut, samo za unovčitev, in je shranjena le v pomnilniku strani (ponovno nalaganje odjavi). Prijava nikoli ne ustvari novega računa in ga ne poveže z drugim: kdor računa še nima, ga najprej ustvari v aplikaciji. Brskalnik pošlje zahtevi neposredno na `https://api.petprep.si/api/web/parent-session` in `…/api/gift/redeem`.
-1. Prijava ni uspela (napačen e-naslov ali geslo, račun Google / Apple ni povezan z računom PetPrep, račun ni račun starša) → jasno sporočilo, koda se ne preveri.
-2. Koda ni veljavna, je potekla, vrnjena (ali preklicana) ali že unovčena v drugi družini → jasno sporočilo, nič se ne zgodi.
-3. Koda je veljavna in starš je prijavljen → družina dobi **en kupljen izziv**; stran pokaže »Izziv je dodan. Odprite aplikacijo in izberite ljubljenčka.« Starš dobi potisno obvestilo (brez imen in brez omembe bona). Ponovna unovčitev iste kode za isto družino pokaže, da je bon že unovčen v tej družini, in ne doda drugega izziva.
+**Bon:**
+- Koda `PP-XXXX-XXXX-XXXX` (Crockford base32, 60 naključnih bitov); vnos je prizanesljiv (male črke, presledki, brez vezajev, brez »PP«, O namesto 0, I / L namesto 1).
+- `gift_vouchers`: `shop_order_id`, zgoščena koda (SHA-256, iskanje), **šifrirana koda** (`Crypt`, za prikaz, ponovno pošiljanje in podporo), zadnji 4 znaki, stanje (`purchased` / `redeemed` / `refunded` / `expired` / `disabled`), nakup, velja do (+12 mesecev), unovčitev, družina.
+- `POST /api/gift/redeem {code, locale}` (samo spletni žeton): lokalno preverjanje, unovčitev in kredit v eni transakciji z zaklepom. Kredit: `challenge_credits.source = web_gift`, `store = STRIPE`, `product_id = stripe:<price id>`. Testni (SANDBOX) bon se ne unovči, dokler je `STRIPE_ACCEPT_TEST_MODE` izklopljen.
+- **Odstranjeno** vse Lemon Squeezy (storitve, webhook, `lemonsqueezy_events`, env). Migracija `2027_04_16_120000_stripe_shop` preoblikuje `gift_vouchers` (zavrne se, če obstaja kak bon Lemon Squeezy).
 
-V aplikaciji se tak izziv pokaže kot obstoječi **neporabljen nakup** (»Uporabi kupljen izziv«), starš ga dodeli ljubljenčku — nov ali nadgradnja brezplačnega (`FREE_PET_UPGRADE_SPEC.md`). Ob unovčitvi se izziv ne dodeli samodejno. Obstoječe pravilo velja kot pri vsakem neporabljenem nakupu: če ima družina en sam nerojen neplačan izziv, ga neporabljen nakup plača ob rojstvu. 12 tednov začne teči ob dodelitvi, ne ob unovčitvi.
+**Komplet:** dostava = podpisane povezave do PDF (vseh 15 jezikov; jezik nakupa prvi) na strani »hvala« in v e-pošti; po vračilu ne delujejo. PDF-ji živijo na zasebnem disku strežnika (`shop-files/<izdelek>/<jezik>.pdf`) — naloži jih superadmin v **Izdelki → Naloži PDF** ali `php artisan shop:import-files <mapa>` (izhod `npm run kit:build`). **Brezplačen vzorec** prek obstoječega `POST /api/summary-leads` (`source: promise_kit_sample`) → odgovor ima `sample_url` (podpisana povezava 24 h; angleščina, če jezika ni; `null`, dokler vzorec ni naložen).
 
-Varnost (od M6-S01b): unovčitev ne razkrije, ali račun z nekim e-naslovom obstaja — napačen e-naslov, napačno geslo in račun brez gesla dajo enak odgovor. Prijava: 10 na minuto in 30 na uro na IP; po 5 napačnih geslih v 15 minutah je račun za spletno prijavo zaklenjen z vseh naslovov. Unovčitev: 10 na minuto in 30 na uro na IP, 10 na uro na kodo in 20 na uro na družino. Spletna prijava deluje samo na unovčitvi — za vse drugo jo strežnik zavrne.
+### 3.5 Okolje
+`STRIPE_SECRET_KEY` (omejen ključ: Checkout Sessions pisanje; Products, Prices, Payment Intents branje), `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_GIFT_VOUCHER`, `STRIPE_PRICE_PROMISE_KIT`, `STRIPE_ACCEPT_TEST_MODE` (privzeto `false`); pošta: `MAIL_MAILER=smtp`, `MAIL_SCHEME=smtps`, `MAIL_HOST=mail.datavallis.com`, `MAIL_PORT=465`, `MAIL_USERNAME`, `MAIL_PASSWORD`; pošiljatelj v `config/shop.php` (`SHOP_MAIL_FROM_ADDRESS` = `curio@petprep.si`, `SHOP_MAIL_FROM_NAME` = `Curio from PetPrep`, `SHOP_MAIL_REPLY_TO` = `hello@petprep.si`). Spletna stran: `NEXT_PUBLIC_FEATURE_GIFT`, `NEXT_PUBLIC_FEATURE_PROMISE_KIT`, `NEXT_PUBLIC_PETPREP_API_URL`; `NEXT_PUBLIC_LS_GIFT_URL` je odstranjen.
 
-### 3.4 Strežnik (`pet-prep`; natančna pogodba: `CONTRACT.md` M6-S01 in `CONTRACT_WEB_SIGNIN.md` M6-S01b)
-- **Koda = licenčni ključ Lemon Squeezy** izdelka »Darilni bon« (omejitev: 1 aktivacija). Lemon Squeezy ga ustvari ob nakupu in pošlje kupcu, zato PetPrep ne potrebuje lastnega pošiljanja e-pošte. *Dejstva o License API in dogodkih 11. 11. 2026 niso bila preverjena v trenutni dokumentaciji (spletni dostop ni deloval). Pred vklopom jih je treba preveriti z enim testnim ključem (`LEMONSQUEEZY_ACCEPT_TEST_MODE=true`).* Strežnik pri vsakem ključu in dogodku preveri trgovino in izdelek (ter različico, če je nastavljena). Tuj ključ šteje kot neveljaven in se nikoli ne aktivira.
-- **Ključa ne hranimo.** Tabela `gift_vouchers` hrani samo zgoščeno vrednost ključa (SHA-256), zadnje 4 znake za administracijo, ID ključa in naročila Lemon Squeezy, stanje (`purchased` / `redeemed` / `refunded` / `expired` / `disabled`), datum nakupa, veljavnost (nakup + 12 mesecev, računa strežnik), datum unovčitve, družino in ID aktivacije. Vrstico ustvari webhook `license_key_created` ali — če webhook še ni prišel — prva unovčitev.
-- `POST /api/web/parent-session {method: password | google | apple, …, locale}` (M6-S01b, omejitev `web-session`): samo obstoječi starš z družino → 15-minutni žeton z edino pravico `gift:redeem` (brez podatkov o uporabniku v odgovoru); Google / Apple samo s spletnima ID-jema (`GOOGLE_WEB_SIGNIN_CLIENT_IDS`, `APPLE_WEB_SERVICES_IDS`) in obveznim `nonce`; nikoli ne ustvari ali poveže računa. `DELETE` iste poti = odjava (izbriše samo spletni žeton). Spletni žeton na vseh drugih poteh → 403 `token_scope`. Napake: `invalid_request` (422), `invalid_credentials` / `invalid_token` (401), `account_not_found` (404), `not_parent` (403), `rate_limited` (429), `provider_disabled` / `provider_unavailable` / `unavailable` (503).
-- `POST /api/gift/redeem {code, locale}` z `Authorization: Bearer <spletni žeton>` (samo spletni žeton — žetoni aplikacije dobijo 401; omejitev `gift-redeem`). Vrstni red:
-  0. žeton → družina starša (brez žetona 401 `unauthenticated`, starš brez družine 403 `not_parent`);
-  1. preverjanje vnosa;
-  2. stikalo;
-  3. lokalno stanje;
-  4. **preverjanje** ključa pri Lemon Squeezy (`/v1/licenses/validate`, brez učinka);
-  5. *(iskanje računa po e-naslovu iz M6-S01 je odstranjeno — družina je iz žetona)*;
-  6. kratka transakcija »rezervacija« za družino;
-  7. **aktivacija** pri Lemon Squeezy (`/v1/licenses/activate`, `instance_name = family:<id>`) zunaj transakcije;
-  8. transakcija z zaklepanjem vrstice: unovčitev + kredit izziva;
-  9. po potrditvi potisno obvestilo.
+Testni ID-ji (Stripe test, 17. 11. 2026): izdelek bona `prod_Ve7EBi9SnjHz6l` / cena `price_1Ucp0KEShsvVJ1lPgY9IEF3q` (davčna koda `txcd_10103100`); komplet `prod_Ve7EcVKgJAPySN` / `price_1Ucp0KEShsvVJ1lP33ltYxfp` (`txcd_10302000`); webhook `we_1Ucp0iEShsvVJ1lP1AhiSHtP`. Oba izdelka testna blagajna z Managed Payments sprejme. V živem načinu se ustvarita enako, ko testi uspejo.
 
-  Idempotentno: ista koda za isto družino vrne 200 (`already: true`), za drugo družino 409. Če se strežnik sesuje med aktivacijo in zapisom, ponovni poskus iste družine konča unovčitev (po imenu aktivacije oziroma po rezervaciji). Napake: `invalid_request`, `invalid_code`, `expired`, `refunded` (422), `already_redeemed` (409), `unauthenticated` (401 — tudi če družina izgine med rezervacijo in zapisom), `not_parent` (403), `rate_limited` (429), `upstream_error` (502), `unavailable` (503). `locale` je eden od 15 jezikov spletne strani (besedilo `message` sl / en).
-- **Kredit izziva:** `challenge_credits` dobi stolpec `source` (`store` / `web_gift`, privzeto `store`), `purchase_event_id` postane neobvezen, dodan je `gift_voucher_id`. Pravilo CHECK zahteva natanko en sklic glede na izvor. Kredit iz bona ima `store = LEMON_SQUEEZY`, `transaction_id = null`, `purchased_at` = čas unovčitve. Dodelitev ljubljenčku, »neporabljen nakup«, polni mediji, opozorilo ob izbrisu in pravilo ob rojstvu delujejo po obstoječih poteh brez spremembe. Izziv, plačan z bonom, šteje kot plačan z nakupom (`challenge_paid_source = purchase`). Vračilo in prenos RevenueCat ter opozorilo »neporabljen nakup« v Discord upoštevajo samo kredite `source = store`. Za obstoječe nakupe se nič ne spremeni.
-- **Webhook Lemon Squeezy** `POST /api/webhooks/lemonsqueezy`: preveri podpis (`X-Signature` = hex HMAC-SHA256 surovega telesa s skrivnostjo). Brez nastavljene skrivnosti, trgovine ali izdelka zavrne z 503 (zaprto, kot RevenueCat). Lemon Squeezy ne pošlje ID-ja dogodka, zato je ključ za »vsak dogodek enkrat« zgoščena vrednost imena dogodka, vrste in ID-ja objekta ter `updated_at`. Dnevnik `lemonsqueezy_events` hrani samo ID-je, stanja, zneske in datume — brez ključa in brez e-naslova ali imena kupca. Dogodki:
-  - `order_created` se zabeleži.
-  - `order_refunded` (celotno vračilo):
-    - neunovčen bon → `refunded`;
-    - unovčen in kredit nedodeljen → kredit preklican;
-    - dodeljen in izziv ni končan → obstoječe pravilo vračila (ljubljenček se zaklene oziroma se mešanček ali nadgrajen brezplačni ljubljenček vrne na brezplačni načrt);
-    - končan izziv → samo oznaka.
-  - Delno vračilo → zabeleži se in pošlje opozorilo administratorju.
-  - `license_key_updated` s stanjem `disabled` → enako kot vračilo, stanje `disabled`.
-  - Webhook deluje ne glede na stikalo.
-- **Potek:** koda, starejša od 12 mesecev od nakupa, se zavrne (strežnik, ne glede na nastavitev Lemon Squeezy). Kredit, ki je že pri družini, ne poteče.
-- **Administracija:** seznam bonov (zadnji 4 znaki kode, naročilo, stanje: kupljen / unovčen / vrnjen / potekel / preklican, okolje, družina, ljubljenček, datumi), samo branje, samo superadmin, brez e-naslova kupca (ostane v Lemon Squeezy). Stikalo »Darilni boni« je privzeto izklopljeno (izklop = unovčitev vrne »trenutno ni na voljo«). Opozorilo v Discord (samo ID-ji) dobijo primeri, ki potrebujejo ročni pregled: aktivacija zunaj PetPrepa in delno vračilo.
-- **Lijak:** stolpec »Plačali z bonom« (`paid_voucher`, podmnožica stolpca »Plačali«).
-- **Potisno obvestilo:** neposredno prek Expo staršem družine, brez imen in brez besed »bon«, »koda« ali »splet«. Starejše aplikacije ga odprejo kot običajno obvestilo.
-- Okolje (`.env.example`, `docs/PRODUCTION_ENV.md`):
-  - obvezno: `LEMONSQUEEZY_WEBHOOK_SECRET`, `LEMONSQUEEZY_STORE_ID`, `LEMONSQUEEZY_GIFT_PRODUCT_ID`;
-  - neobvezno: `LEMONSQUEEZY_GIFT_VARIANT_ID`, `LEMONSQUEEZY_API_BASE`, `LEMONSQUEEZY_API_KEY` (samo za obnovo po sesutju), `LEMONSQUEEZY_ACCEPT_TEST_MODE` (privzeto `false`).
-  - Spletna stran: `NEXT_PUBLIC_FEATURE_GIFT`, `NEXT_PUBLIC_LS_GIFT_URL`, `NEXT_PUBLIC_PETPREP_API_URL` (privzeto `https://api.petprep.si`).
-- Testi (najmanj; popoln seznam v `CONTRACT.md` §9):
-  - veljavna koda + račun → en kredit; ponovitev → brez drugega kredita;
-  - neznan račun → koda ostane in se ne aktivira;
-  - potekla, vrnjena, preklicana, tuja, testna koda;
-  - vračilo pred in po unovčitvi (vsi primeri dodelitve), delno vračilo;
-  - podpis in ponovitev webhooka; omejitev poskusov;
-  - obnova po sesutju med aktivacijo in zapisom;
-  - kredit iz bona se dodeli in obnaša kot kupljen (polni mediji, opozorilo ob izbrisu);
-  - ključ ni nikjer shranjen;
-  - obstoječi nakupi prek RevenueCat nespremenjeni (tudi vračilo brez ID-ja transakcije in prenos v družini, ki ima tudi kredit iz bona), odgovori `billing` / `activate` za stare različice aplikacije nespremenjeni.
+### 3.6 Vrsta e-pošte (`outbound_emails`) **(David 17. 11. 2026)**
+- Vsaka e-pošta PetPrepa se najprej **zapiše v bazo s celotnim HTML** (in besedilno različico): prejemnik, zadeva, HTML, besedilo, priponke (samo opis — PDF bona se nariše ob pošiljanju), vrsta (`gift_voucher`, `promise_kit`, …), povezava na naročilo, jezik, stanje (`pending` / `sending` / `sent` / `failed` / `cancelled`), število poskusov, naslednji poskus, zadnja napaka, poslano ob.
+- **Pošiljatelj v ozadju**: ukaz `emails:send` vsako minuto vzame do 50 čakajočih (`next_attempt_at <= now`, zaklep `FOR UPDATE SKIP LOCKED`) in jih pošlje prek SMTP `mail.datavallis.com`.
+- **Napaka** → ponovni poskus z razmikom *(Claude)*: 5 min, 30 min, 2 h, 6 h, 24 h (skupaj 6 poskusov). Po zadnjem `failed` + eno opozorilo v Discord in rdeča številka ob »E-pošta« v adminu (»E-pošte ni bilo mogoče poslati — verjetno napačen e-naslov«). Trajna zavrnitev SMTP (5xx, npr. neobstoječ naslov) → takoj `failed`. Vrstica, ki obvisi v `sending` (sesuta izvedba), se po 15 min vrne v vrsto.
+- Admin: seznam e-pošt z iskanjem, predogled HTML, »Pošlji znova«, »Spremeni e-naslov in pošlji« (na naročilu), »Prekliči«.
+- Pošiljatelj **`Curio from PetPrep <curio@petprep.si>`**, odgovori na `hello@petprep.si` (David 17. 11. 2026: ne `noreply@`; ime Data Vallis kupec ne vidi). **SPF, DKIM in DMARC za `petprep.si`** morajo dovoliti `mail.datavallis.com` (David).
+- Ista vrsta služi kasneje vsem e-poštam PetPrepa (potrditev računa, ponastavitev gesla — M2-10b).
+- Besedila v vseh 15 jezikih (`lang/<jezik>/shop.php`).
 
-### 3.5 Kaj mora narediti David
-1. Lemon Squeezy: izdelek »PetPrep darilni bon — 12-tedenski izziv« (49,99 €, licenčni ključi vklopljeni, 1 aktivacija, priložena datoteka kompleta B, preusmeritev po nakupu na `https://petprep.si/gift/thanks`). Webhook na `https://api.petprep.si/api/webhooks/lemonsqueezy` z dogodki `order_created`, `order_refunded`, `license_key_created`, `license_key_updated`. Skrivnost, ID trgovine in ID izdelka v `/opt/petprep/.env`. Strežnik veljavnost 12 mesecev računa sam, zato je dolžina ključa v Lemon Squeezy lahko »neomejeno«.
-2. Pred vklopom en testni nakup v testnem načinu (`LEMONSQUEEZY_ACCEPT_TEST_MODE=true` na testnem okolju), da se potrdijo dejstva o License API.
-3. Dopolniti pogoje uporabe na petprep.si z odstavkom o darilnih bonih (veljavnost, vračilo, unovčitev).
-4. Potrditi angleška imena menija v aplikaciji (»Nadzor → Račun«) in e-naslov za pomoč pri sporočilu »že unovčen«.
-5. Povedati, ko je aplikacija v trgovinah — takrat se vklopita stikalo v administraciji in `NEXT_PUBLIC_FEATURE_GIFT=1` (nova gradnja strani).
+### 3.7 Admin kot trgovina (samo superadmin) **(David 17. 11. 2026)**
+- **Naročila**: seznam (številka, datum, izdelek, znesek, DDV, valuta, kupec, država, stanje, test/živo), filtri in iskanje (e-naslov, številka, ID Stripe); podrobnosti z bonom, e-poštami, dogodki Stripe in povezavo na plačilo v Stripe. Dejanja: »Pokaži kodo«, »Pošlji e-pošto znova«, »Spremeni e-naslov in pošlji«, »Odpri v Stripe«. Vračilo se sproži v Stripe, stanje se posodobi samo.
+- **Izdelki**: seznam iz `shop_products` (cena, aktiven, število prodanih, prihodek, kateri jeziki imajo PDF), »Osveži iz Stripe«, »Naloži PDF«, povezava za urejanje v Stripe. Stikali prodaje: /admin → Funkcije (»Darilni boni«, »Komplet Obljuba«).
+- **Boni**: koda skrita, **»Pokaži kodo«** (na bonu in na naročilu) in **»Pošlji e-pošto znova«** na naročilu (vsako dejanje zabeleženo v `shop_audit_logs`: kdo, kdaj), stanje, družina, ki je unovčila, ljubljenček.
+- **Kupci**: zgodovina nakupov po e-naslovu — klik na e-naslov v naročilu odpre vsa naročila istega kupca.
+- **E-pošta**: vrsta iz §3.6.
+- **Pregled**: prodaja danes / ta mesec po izdelku na vrhu naročil (iz `shop_orders`, samo živi način — za računovodstvo velja Stripe).
+- Lijak: »Plačali z bonom« ostane.
 
-## 4. B — Natisljivi komplet »Obljuba o ljubljenčku« (M6-S02)
+### 3.8 Testi
+`GiftVoucherTest` (webhook → naročilo + bon, dvojni dogodek in stran »hvala« hkrati, async plačilo, tuja cena / količina, testni način, podpis, Stripe nedosegljiv, unovčitev, vračila, spori), `ShopTest` (blagajna, odprta preusmeritev, stran »hvala«, prenosi, vzorec, admin, uvoz PDF, 15 jezikov), `OutboundEmailTest` (pošiljanje s priponko, razmiki, 5xx, obviseli `sending`, urnik), `GiftVoucherRegressionTest` (RevenueCat nespremenjen).
 
-### 4.1 Vsebina (PDF, A4, SL in EN, približno 10 strani)
-1. **Naslovnica** s Curiom in kratkim nagovorom staršem: čemu komplet služi in česa ne obljublja.
-2. **Družinski pogovor:** 10 vprašanj, o katerih se družina pogovori pred odločitvijo (kdo vstane zjutraj, kaj med počitnicami, kdo plača veterinarja, kaj če se otrok naveliča).
-3. **Obljuba o ljubljenčku:** pogodba med otrokom in starši z naštetimi vsakodnevnimi nalogami, prostorom za dogovorjena pravila in podpisi vseh.
-4. **Tabela nalog za 4 tedne:** hranjenje, voda, sprehod ali igra, čiščenje; ena stran na teden, otrok obkljuka, starš podpiše teden.
-5. **Koliko stane ljubljenček:** delovni list s kategorijami (nakup ali posvojitev, oprema, hrana, veterinar, zavarovanje, varstvo med dopustom) in **praznimi polji**, ki jih družina izpolni sama. Brez PetPrepovih zneskov, razen če imajo vir.
-6. **Smo pripravljeni?** kontrolni seznam za starše (čas, prostor, alergije, dopust, dolgoročna obveza) z vodilom, kako brati odgovore — brez »ocene« ali diagnoze.
-7. **Priznanje za prvi mesec:** stran, ki jo otrok pobarva in starši podpišejo.
-8. **Zadnja stran:** kaj je naslednji korak (12-tedenski izziv v aplikaciji) in naslov petprep.si.
+### 3.9 Kaj mora narediti David
+1. V `/opt/petprep/.env`: Stripe **testni** ključi najprej (`STRIPE_SECRET_KEY` = omejen testni ključ, `STRIPE_WEBHOOK_SECRET` = podpisni ključ testnega webhooka, cene iz §3.5, `STRIPE_ACCEPT_TEST_MODE=true`) in SMTP podatki.
+2. Na `mail.datavallis.com` nabiralnik ali alias `curio@petprep.si`; DNS za `petprep.si`: SPF, DKIM, DMARC za `mail.datavallis.com`.
+3. Testni nakup bona in kompleta s kartico `4242 4242 4242 4242`, testno vračilo.
+4. Nato Claude ustvari izdelka in webhook v živem načinu; ti zamenjaš ključe v `.env` in nastaviš `STRIPE_ACCEPT_TEST_MODE=false`.
+5. E-naslov za podporo v Stripe (Business details), ki ga res bereš (Link eskalira; brez odgovora v 48 h lahko sam vrne denar).
+6. Pogoji uporabe in politika zasebnosti na petprep.si: odstavek o bonih in o e-naslovu kupca.
+7. PDF-ji kompleta: `npm run kit:build` v `pet-prep-website`, nato **Izdelki → Naloži PDF** (ali `shop:import-files`).
+8. Ko je aplikacija v trgovinah: stikalo »Darilni boni« v adminu in `NEXT_PUBLIC_FEATURE_GIFT=1`.
 
-Komplet je splošen (pes ali mačka), brez pravil posamezne pasme in brez zdravstvenih nasvetov, zato ne potrebuje veterinarskega pregleda. Strani za otroka so napisane spolno nevtralno.
+## 4. B — Komplet »Obljuba o ljubljenčku« (M6-S02)
+Vsebina kot doslej (8 delov, približno 10 strani, 15 jezikov, `npm run kit:build`, kopija v Google Drive). Prodaja prek trgovine (§3.4), stran `/promise-kit` · `/sl/obljuba-o-ljubljencku`, stran »hvala« s prenosom, e-pošta s povezavami, brezplačen vzorec prek `summary-leads`. Za stikalom `NEXT_PUBLIC_FEATURE_PROMISE_KIT` in admin stikalom »Komplet Obljuba«, dokler David ne potrdi besedila.
 
-### 4.2 Prodaja
-- Stran `/promise-kit` · `/sl/obljuba-o-ljubljencku`: kaj je v kompletu (predogled 2–3 strani), za koga je, cena, gumb za nakup Lemon Squeezy, povezava na darilni bon.
-- **Brezplačen vzorec:** ena stran (Obljuba, točka 3) kot brezplačen izdelek v Lemon Squeezy v zameno za e-naslov starša (z izrecno privolitvijo za obveščanje). To je »Pet Promise« iz `BUSINESS_MODEL.md` §4.
-- Komplet je priložen vsakemu darilnemu bonu.
-- Izdelava PDF: iz HTML s tiskalnim slogom, skripta v repozitoriju spletne strani, da se komplet ob spremembi besedila zgradi znova; pisave in barve iz `brand/`. Datoteki `petprep-promise-kit-sl.pdf` in `-en.pdf` se shranita tudi v Google Drive (mapa PetPrep, `MEDIA_DRIVE.md`).
+## 5. C — Partnerji (M6-S03)
+Zgrajeno 11. 11. 2026 (15 jezikov 17. 11. 2026). Ni plačil.
 
-### 4.3 Kaj mora narediti David
-Pregledati besedilo kompleta pred objavo; v Lemon Squeezy ustvariti izdelek »Obljuba o ljubljenčku« (6,90 €, datoteki SL in EN) in brezplačen izdelek z vzorcem.
+## 6. Vrstni red
+1. M6-S09 strežnik — en PR v `pet-prep` (QA plačila).
+2. M6-S09 spletna stran — en PR v `pet-prep-website`.
+3. Davidov testni nakup (§3.9), nato živi način.
+4. Objava bona ob izidu aplikacije v trgovinah; komplet ob potrditvi besedila.
 
-## 5. C — Stran za partnerje in sponzorje (M6-S03)
-
-Stran »partnerji« na petprep.si že obstaja; ta naloga jo razširi. Agent najprej prebere obstoječo stran in `docs/audiences/PARTNERS.md` ter ohrani, kar drži.
-
-### 5.1 Vsebina
-`/partners` · `/sl/partnerji`:
-1. **Komu je PetPrep namenjen in zakaj je to zanimivo za partnerja:** družine tik pred odločitvijo o živali — z znano vrsto in pasmo.
-2. **Oblike sodelovanja:**
-   - **Sponzorstvo serije »12 Weeks«** in omemba v epizodi.
-   - **Sponzorirane vsebine na petprep.si** (stran pasme, baza znanja), vedno označene kot sponzorirane, brez vpliva na vsebino in vire.
-   - **Zavarovalnice:** plačilo za posredovan stik ali fiksno sponzorstvo. Stik se posreduje samo z izrecno privolitvijo starša; podatki otroka nikoli. *Posredovanje stikov ni zgrajeno — na strani je opisano kot »v pripravi«.*
-   - **Ustanovni partner v imenikih** (veterinarji, pasje šole, frizerji, vzreditelji): izpostavljen vpis z logotipom, opisom in povezavo; **190 € na leto, cena zaklenjena za ustanovne partnerje** *(Claude)*; omejeno število na državo.
-   - **Zavetišča in društva:** brezplačen vpis in možnost, da posvojiteljem priporočijo PetPrep.
-3. **Česa ne delamo:** oglasov v otroški aplikaciji, prodaje podatkov, zdravstvenih obljub, promocije pasem, ki jih veterinarska združenja odsvetujejo v oglaševanju.
-4. **Številke:** samo izmerjene, z datumom (npr. število pasem v registru, jeziki, ogledi serije). Kjer podatka še ni, ga ni.
-5. **Obrazec za povpraševanje:** ime podjetja, kontaktna oseba, e-naslov, vrsta sodelovanja, sporočilo. Brez samodejne e-pošte: strežnik shrani povpraševanje in pošlje opozorilo v obstoječi kanal Discord za administratorje; David odgovori sam. Zaščita pred neželenimi vnosi (omejitev, skrito polje).
-6. **Medijski komplet (PDF, SL in EN):** kaj je PetPrep, publika, oblike sodelovanja, primeri vsebin, kontakt `david@petprep.si`. Brez »Data Vallis«; podjetje je PetPrep (v ustanavljanju).
-
-### 5.2 Strežnik
-Nič od tega še ne obstaja (pregled kode 11. 11. 2026). Gradi se po obstoječih vzorcih:
-- `POST /api/partner-inquiries` (javno): nova imenovana omejitev `partner-inquiries` v `AppServiceProvider` (vzorec `register`: na IP na minuto in na uro, deluje tudi v testih). Telo je omejeno z `LimitRequestBody` (vzorec `app-errors`). Skrito polje (honeypot): izpolnjeno → 200 brez zapisa.
-- Tabela `partner_inquiries` (podjetje, kontaktna oseba, e-naslov, vrsta sodelovanja iz zaprtega seznama, sporočilo, `created_at`) in uvrstitev v `GameDataResetService` (`DELETE_ORDER`). Spletna stran pošlje obrazec neposredno na `api.petprep.si` (`NEXT_PUBLIC_PETPREP_API_URL`, enako kot unovčitev bona).
-- Seznam v administraciji: samo branje, samo superadmin (vzorec `WishCreditResource`; vrata `User::canAccessPanel`).
-- Opozorilo v Discord: nov primer `AdminAlertKind` (pot v administracijo), poslan iz čakalne vrste (`DiscordWebhook::send` ne sme teči v transakciji). Besedilo brez osebnih podatkov: samo »novo povpraševanje, vrsta: …« in povezava.
-- Povpraševanja se izbrišejo po 12 mesecih *(Claude)*: dnevni ukaz v `routes/console.php`.
-- Politika zasebnosti dobi vrstico o obrazcu na spletni strani (`src/content/en.ts` in `sl.ts`, razdelek `privacy`, ter datum v `src/content/updated.ts` / `src/lib/site.ts`).
-
-### 5.3 Kaj mora narediti David
-Potrditi ceno ustanovnega partnerja in številke na strani; povedati, katere logotipe partnerjev (če sploh) smemo pokazati.
-
-## 6. Vrstni red in ocena
-
-1. **B (komplet)** — brez odvisnosti; lahko je v prodaji prvi.
-2. **A (bon)** — strežnik in spletna stran vzporedno; objava, ko je aplikacija v trgovinah in so pravila trgovin preverjena.
-3. **C (partnerji)** — vzporedno z A.
-
-Vsak izdelek je svoj PR v vsakem repozitoriju. A je plačilna in varnostna sprememba, zato pred združitvijo en krog `qa-reviewer`.
-
-## 7. Odprto za Davida (privzeto velja predlog)
-
+## 7. Odprto (privzeto velja predlog)
 | # | Vprašanje | Predlog |
 |---|---|---|
-| S1 | Cena kompleta | 6,90 € |
-| S2 | Veljavnost bona | 12 mesecev od nakupa |
-| S3 | Cena ustanovnega partnerja v imeniku | 190 € na leto |
-| S4 | Jeziki ob objavi | slovenščina in angleščina |
+| S1 | Cena kompleta | 6,90 € z DDV |
+| S2 | Veljavnost bona | 12 mesecev |
 | S5 | Vračilo bona | neunovčen 14 dni, unovčen ne |
-| S6 | Pravila trgovin za unovčitev zunaj aplikacije | **Preverjeno 11. 11. 2026 (§2):** skladno, dokler aplikacija bona ne omenja in nima vnosa kode |
+| S9 | Razmiki ponovnih poskusov e-pošte | 5 min, 30 min, 2 h, 6 h, 24 h, nato `failed` |
+| S10 | Pošiljatelj | `Curio from PetPrep <curio@petprep.si>`, odgovori `hello@petprep.si` |
