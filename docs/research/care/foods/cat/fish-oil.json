@@ -14,7 +14,8 @@
     "nl": "Visolie",
     "pl": "Olej rybi",
     "cs": "Rybí olej",
-    "hr": "Riblje ulje"
+    "hr": "Riblje ulje",
+    "sv": "Fiskolja"
   },
   "question": {
     "en": "Can cats have fish oil?",
@@ -29,7 +30,8 @@
     "nl": "Mogen katten visolie krijgen?",
     "pl": "Czy koty mogą dostać olej rybi?",
     "cs": "Mohou kočky dostat rybí olej?",
-    "hr": "Smiju li mačke dobivati riblje ulje?"
+    "hr": "Smiju li mačke dobivati riblje ulje?",
+    "sv": "Får katter äta fiskolja?"
   },
   "url_slug": {
     "en": "fish-oil",
@@ -44,7 +46,8 @@
     "nl": "visolie",
     "pl": "olej-rybi",
     "cs": "rybi-olej",
-    "hr": "riblje-ulje"
+    "hr": "riblje-ulje",
+    "sv": "fiskolja"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "nl": "Alleen als je dierenarts het adviseert. Veel katten krijgen visolie als supplement, maar het is niet voor elk huisdier geschikt en het kan bijwerkingen hebben. Overleg altijd met je dierenarts voordat je visolie of een ander supplement geeft.",
     "pl": "Tylko jeśli zaleci to weterynarz. Olej rybi to suplement szeroko stosowany u kotów, ale może nie być odpowiedni dla każdego zwierzęcia i może mieć skutki uboczne. Zawsze porozmawiaj z weterynarzem, zanim podasz olej rybi lub jakikolwiek inny suplement.",
     "cs": "Jen pokud ho doporučí veterinář. Rybí olej je doplněk stravy, který se u koček hojně používá, ale nemusí být vhodný pro každé zvíře a může mít vedlejší účinky. Před podáním rybího oleje nebo jakéhokoli jiného doplňku se vždy poraďte s veterinářem.",
-    "hr": "Samo ako to preporuči veterinar. Riblje ulje je dodatak prehrani koji se često daje mačkama, ali možda nije prikladan za svakog ljubimca i može imati nuspojave. Prije davanja ribljeg ulja ili bilo kojeg drugog dodatka uvijek porazgovaraj s veterinarom."
+    "hr": "Samo ako to preporuči veterinar. Riblje ulje je dodatak prehrani koji se često daje mačkama, ali možda nije prikladan za svakog ljubimca i može imati nuspojave. Prije davanja ribljeg ulja ili bilo kojeg drugog dodatka uvijek porazgovaraj s veterinarom.",
+    "sv": "Bara om din veterinär rekommenderar det. Fiskolja är ett kosttillskott som ofta används till katter, men det passar inte alla djur och kan ge biverkningar. Prata alltid med veterinären innan du ger fiskolja eller något annat tillskott."
   },
   "why": {
     "en": "Fish oil is used widely in cats, but omega-3 supplements may not be appropriate for every pet, and less is known about supplementing cats that have kidney disease. Possible side effects include mild stomach upset, a fishy odour, an oily coat and itchy, flaky skin; serious reactions include abnormal bruising or bleeding, especially in cats. Fish oil should not be given if a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity.",
@@ -75,7 +79,8 @@
     "nl": "Veel katten krijgen visolie, maar omega-3-supplementen zijn niet voor elk huisdier geschikt, en over het geven van supplementen aan katten met nierziekte is minder bekend. Mogelijke bijwerkingen zijn lichte maagklachten, een visgeur, een vettige vacht en jeukende, schilferige huid. Ernstige reacties zijn onder meer ongewone blauwe plekken of bloedingen, vooral bij katten. Geef geen visolie als je geen betrouwbare bron hebt, want bij sommige bronnen is het risico op vergiftiging met zware metalen groot.",
     "pl": "Olej rybi jest szeroko stosowany u kotów, ale suplementy z kwasami omega-3 mogą nie być odpowiednie dla każdego zwierzęcia, a o suplementacji u kotów z chorobą nerek wiadomo mniej. Możliwe skutki uboczne to łagodny rozstrój żołądka, rybi zapach, tłusta sierść oraz swędząca, łuszcząca się skóra; poważne reakcje to nietypowe siniaki lub krwawienia, zwłaszcza u kotów. Nie podawaj oleju rybiego, jeśli nie da się go kupić z wiarygodnego źródła, bo niektóre źródła wiążą się z wysokim ryzykiem zatrucia metalami ciężkimi.",
     "cs": "Rybí olej se u koček hojně používá, ale doplňky s omega-3 nemusí být vhodné pro každé zvíře a o jejich podávání kočkám s onemocněním ledvin se ví méně. Mezi možné vedlejší účinky patří mírné potíže se žaludkem, zápach po rybách, mastná srst a svědivá, šupinatá kůže; k závažným reakcím patří neobvyklé modřiny nebo krvácení, zejména u koček. Rybí olej se nemá podávat, pokud nelze sehnat výrobek ze spolehlivého zdroje, protože u některých zdrojů hrozí vysoké riziko otravy těžkými kovy.",
-    "hr": "Riblje ulje često se daje mačkama, ali omega-3 dodaci možda nisu prikladni za svakog ljubimca, a manje se zna o njihovu davanju mačkama s bolešću bubrega. Moguće nuspojave uključuju blage želučane tegobe, miris po ribi, masnu dlaku te svrbež i ljuštenje kože; ozbiljne reakcije uključuju neuobičajene modrice ili krvarenje, osobito kod mačaka. Riblje ulje ne treba davati ako se ne može nabaviti iz pouzdanog izvora, jer neki izvori nose visok rizik od trovanja teškim metalima."
+    "hr": "Riblje ulje često se daje mačkama, ali omega-3 dodaci možda nisu prikladni za svakog ljubimca, a manje se zna o njihovu davanju mačkama s bolešću bubrega. Moguće nuspojave uključuju blage želučane tegobe, miris po ribi, masnu dlaku te svrbež i ljuštenje kože; ozbiljne reakcije uključuju neuobičajene modrice ili krvarenje, osobito kod mačaka. Riblje ulje ne treba davati ako se ne može nabaviti iz pouzdanog izvora, jer neki izvori nose visok rizik od trovanja teškim metalima.",
+    "sv": "Fiskolja används ofta till katter, men tillskott av omega-3 passar inte alla djur, och man vet mindre om tillskott till katter med njursjukdom. Möjliga biverkningar är lindrig orolig mage, fisklukt, fet päls samt kliande och fjällande hud. Till de allvarliga reaktionerna hör ovanliga blåmärken eller blödningar, särskilt hos katter. Ge inte fiskolja om du inte hittar en pålitlig källa, eftersom vissa källor medför hög risk för tungmetallförgiftning."
   },
   "signs": {
     "en": [
@@ -220,6 +225,17 @@
       "Alergijska reakcija: nepravilno disanje, osip, vrućica, oticanje oko lica",
       "Gubitak apetita",
       "Teturanje ili napadaji"
+    ],
+    "sv": [
+      "Lindrig orolig mage",
+      "Fisklukt",
+      "Fet päls",
+      "Klåda eller fjällande hud",
+      "Långsam sårläkning",
+      "Ovanliga blåmärken eller blödningar",
+      "Allergisk reaktion: oregelbunden andning, utslag, feber, svullnad runt ansiktet",
+      "Aptitlöshet",
+      "Ostadig gång eller kramper"
     ]
   },
   "what_to_do": {
@@ -235,7 +251,8 @@
     "nl": "Overleg met je dierenarts voordat je visolie geeft, en vertel ook welke vitamines of supplementen je kat al krijgt. Zie je ernstige verschijnselen, stop dan met de visolie en neem meteen contact op met je dierenarts.",
     "pl": "Porozmawiaj z weterynarzem, zanim podasz olej rybi, i powiedz mu o wszystkich witaminach i suplementach, które kot już dostaje. Jeśli pojawią się poważne objawy, przestań podawać olej rybi i natychmiast skontaktuj się z weterynarzem.",
     "cs": "Před podáním rybího oleje se poraďte s veterinářem a řekněte mu o všech vitaminech a doplňcích, které kočka už dostává. Pokud se objeví závažné příznaky, rybí olej přestaňte podávat a ihned kontaktujte veterináře.",
-    "hr": "Prije nego što mački daš riblje ulje, porazgovaraj s veterinarom i reci mu za sve vitamine ili dodatke koje mačka već dobiva. Ako se pojave ozbiljni znakovi, prestani davati riblje ulje i odmah se obrati veterinaru."
+    "hr": "Prije nego što mački daš riblje ulje, porazgovaraj s veterinarom i reci mu za sve vitamine ili dodatke koje mačka već dobiva. Ako se pojave ozbiljni znakovi, prestani davati riblje ulje i odmah se obrati veterinaru.",
+    "sv": "Prata med veterinären innan du ger fiskolja och berätta om alla vitaminer och tillskott som katten redan får. Om allvarliga symtom visar sig, sluta ge fiskoljan och kontakta veterinären direkt."
   },
   "serving": null,
   "child": {
@@ -251,7 +268,8 @@
     "nl": "Alleen de dierenarts kan bepalen of een kat visolie nodig heeft. Vraag een volwassene om eerst met de dierenarts te praten!",
     "pl": "Tylko weterynarz może zdecydować, czy kot potrzebuje oleju rybiego. Poproś dorosłego, żeby najpierw porozmawiał z weterynarzem!",
     "cs": "Jen veterinář může rozhodnout, jestli kočka potřebuje rybí olej. Požádej dospělého, ať se nejdřív zeptá veterináře!",
-    "hr": "Samo veterinar može odlučiti treba li mački riblje ulje. Zamoli odraslu osobu da prvo porazgovara s veterinarom!"
+    "hr": "Samo veterinar može odlučiti treba li mački riblje ulje. Zamoli odraslu osobu da prvo porazgovara s veterinarom!",
+    "sv": "Bara veterinären kan avgöra om en katt behöver fiskolja. Be en vuxen prata med veterinären först!"
   },
   "faq": [
     {
@@ -268,7 +286,8 @@
         "nl": "Maakt het merk visolie uit?",
         "pl": "Czy marka oleju rybiego ma znaczenie?",
         "cs": "Záleží na značce rybího oleje?",
-        "hr": "Je li važna marka ribljeg ulja?"
+        "hr": "Je li važna marka ribljeg ulja?",
+        "sv": "Spelar fiskoljans märke någon roll?"
       },
       "a": {
         "en": "Yes. VCA advises against fish oil when a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity, and Tufts vets recommend a brand with good quality control. Your vet can advise.",
@@ -283,7 +302,8 @@
         "nl": "Ja. VCA raadt visolie af als je geen betrouwbare bron hebt, omdat bij sommige bronnen het risico op vergiftiging met zware metalen groot is, en dierenartsen van Tufts adviseren een merk met goede kwaliteitscontrole. Je dierenarts kan je daarover adviseren.",
         "pl": "Tak. VCA odradza olej rybi, jeśli nie da się go kupić z wiarygodnego źródła, bo niektóre źródła wiążą się z wysokim ryzykiem zatrucia metalami ciężkimi, a weterynarze z Tufts zalecają markę z dobrą kontrolą jakości. Najlepiej doradzi ci weterynarz.",
         "cs": "Ano. VCA rybí olej nedoporučuje, pokud nelze sehnat spolehlivý zdroj, protože u některých zdrojů hrozí vysoké riziko otravy těžkými kovy, a veterináři z Tufts doporučují značku s dobrou kontrolou kvality. Poradí vám váš veterinář.",
-        "hr": "Da. VCA savjetuje da se riblje ulje ne daje ako se ne može nabaviti iz pouzdanog izvora, jer neki izvori nose visok rizik od trovanja teškim metalima, a veterinari sa Sveučilišta Tufts preporučuju marku s dobrom kontrolom kvalitete. Savjet ti može dati veterinar."
+        "hr": "Da. VCA savjetuje da se riblje ulje ne daje ako se ne može nabaviti iz pouzdanog izvora, jer neki izvori nose visok rizik od trovanja teškim metalima, a veterinari sa Sveučilišta Tufts preporučuju marku s dobrom kontrolom kvalitete. Savjet ti može dati veterinar.",
+        "sv": "Ja. VCA avråder från fiskolja om det inte går att få tag på en pålitlig källa, eftersom vissa källor medför hög risk för tungmetallförgiftning, och veterinärer vid Tufts rekommenderar ett märke med god kvalitetskontroll. Veterinären kan ge råd."
       }
     }
   ],
@@ -433,6 +453,11 @@
       "status": "verified",
       "verified_by": "claude-c-hr-2026-11-17",
       "verified_hash": "095a1dfbb55e96ecdb1d7c271ff1ed4e5a0f1bea0e7fb67079195cccc1935266"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-17",
+      "verified_hash": "2f8e299bccb10dc0dac11ee7566672bd5219b0d0dcd90dc9e18ebbca1a4c7804"
     }
   }
 }

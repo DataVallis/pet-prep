@@ -14,7 +14,8 @@
     "nl": "Frisdrank",
     "pl": "Napoje gazowane",
     "cs": "Sycené nápoje (limonády)",
-    "hr": "Gazirana pića"
+    "hr": "Gazirana pića",
+    "sv": "Läsk (läskedrycker)"
   },
   "question": {
     "en": "Can dogs drink soda?",
@@ -29,7 +30,8 @@
     "nl": "Mogen honden frisdrank drinken?",
     "pl": "Czy psy mogą pić napoje gazowane?",
     "cs": "Mohou psi pít sycené nápoje?",
-    "hr": "Smiju li psi piti gazirana pića?"
+    "hr": "Smiju li psi piti gazirana pića?",
+    "sv": "Får hundar dricka läsk?"
   },
   "url_slug": {
     "en": "soda",
@@ -44,7 +46,8 @@
     "nl": "frisdrank",
     "pl": "napoje-gazowane",
     "cs": "sycene-napoje",
-    "hr": "gazirana-pica"
+    "hr": "gazirana-pica",
+    "sv": "lask"
   },
   "level": "toxic",
   "answer": {
@@ -60,7 +63,8 @@
     "nl": "Nee. Honden mogen geen frisdrank drinken. Er zit veel suiker en cafeïne in, het heeft geen voedingswaarde voor honden en de cafeïne kan verschijnselen van vergiftiging veroorzaken. Een of twee likjes veroorzaken waarschijnlijk geen vergiftiging, maar houd frisdrank buiten het bereik van je hond.",
     "pl": "Nie. Psy nie powinny pić napojów gazowanych. Zawierają dużo cukru i kofeiny, nie mają dla psów wartości odżywczej, a kofeina może wywołać objawy zatrucia. Jedno czy dwa liźnięcia raczej nie spowodują zatrucia, ale trzymaj napoje gazowane poza zasięgiem psa.",
     "cs": "Ne. Psi by sycené nápoje pít neměli. Obsahují hodně cukru a kofeinu, nemají pro psy žádnou nutriční hodnotu a kofein může způsobit příznaky otravy. Jedno nebo dvě olíznutí otravu pravděpodobně nezpůsobí, ale sycené nápoje držte mimo dosah psa.",
-    "hr": "Ne. Psi ne bi smjeli piti gazirana pića. Ona sadrže mnogo šećera i kofeina, nemaju nikakvu hranjivu vrijednost za pse, a kofein može izazvati znakove trovanja. Jedno ili dva lizanja vjerojatno neće izazvati trovanje, ali drži gazirana pića izvan dosega psa."
+    "hr": "Ne. Psi ne bi smjeli piti gazirana pića. Ona sadrže mnogo šećera i kofeina, nemaju nikakvu hranjivu vrijednost za pse, a kofein može izazvati znakove trovanja. Jedno ili dva lizanja vjerojatno neće izazvati trovanje, ali drži gazirana pića izvan dosega psa.",
+    "sv": "Nej. Hundar ska inte dricka läsk. Den innehåller mycket socker och koffein, har inget näringsvärde för hundar, och koffeinet kan ge tecken på förgiftning. En eller två slickar ger knappast förgiftning, men förvara läsk utom räckhåll för hunden."
   },
   "why": {
     "en": "Pet Poison Helpline explains that soda has high levels of sugar, caffeine and other ingredients that can harm dogs, and there is no reason for dogs to drink it. The caffeine in soda can lead to signs of toxicity, and how much a dog drinks determines how severe they are. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -75,7 +79,8 @@
     "nl": "Pet Poison Helpline legt uit dat frisdrank veel suiker, cafeïne en andere ingrediënten bevat die schadelijk kunnen zijn voor honden, en dat er geen enkele reden is om ze het te laten drinken. De cafeïne in frisdrank kan leiden tot verschijnselen van vergiftiging; hoe ernstig die zijn, hangt af van hoeveel de hond drinkt. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden.",
     "pl": "Pet Poison Helpline wyjaśnia, że napoje gazowane zawierają dużo cukru, kofeiny i innych składników, które mogą szkodzić psom, i nie ma powodu, by psy je piły. Kofeina w napojach gazowanych może prowadzić do objawów zatrucia, a ich nasilenie zależy od tego, ile pies wypije. Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów.",
     "cs": "Pet Poison Helpline vysvětluje, že sycené nápoje obsahují hodně cukru, kofeinu a dalších složek, které mohou psům uškodit, a že není žádný důvod, aby je psi pili. Kofein v nich může vyvolat příznaky otravy a jejich závažnost závisí na tom, kolik pes vypije. Mnoho nápojů bez cukru obsahuje xylitol, který je pro psy vysoce toxický.",
-    "hr": "Pet Poison Helpline objašnjava da gazirana pića sadrže mnogo šećera, kofeina i drugih sastojaka koji mogu naškoditi psima te da za psa nema razloga da ih pije. Kofein iz gaziranih pića može dovesti do znakova trovanja, a o količini koju pas popije ovisi koliko će biti ozbiljni. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan."
+    "hr": "Pet Poison Helpline objašnjava da gazirana pića sadrže mnogo šećera, kofeina i drugih sastojaka koji mogu naškoditi psima te da za psa nema razloga da ih pije. Kofein iz gaziranih pića može dovesti do znakova trovanja, a o količini koju pas popije ovisi koliko će biti ozbiljni. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan.",
+    "sv": "Pet Poison Helpline förklarar att läsk innehåller höga halter av socker, koffein och andra ingredienser som kan skada hundar, och att hundar inte har någon anledning att dricka den. Koffeinet i läsk kan ge tecken på förgiftning, och hur allvarliga de blir beror på hur mycket hunden har druckit. Många drycker utan socker innehåller xylitol, som är mycket giftigt för hundar."
   },
   "signs": {
     "en": [
@@ -233,6 +238,18 @@
       "Drhtanje",
       "Napadaji",
       "Kolaps"
+    ],
+    "sv": [
+      "Överaktivitet",
+      "Rastlöshet",
+      "Kräkningar",
+      "Snabb puls",
+      "Högt blodtryck",
+      "Förhöjd kroppstemperatur",
+      "Oregelbunden hjärtrytm",
+      "Darrningar",
+      "Kramper",
+      "Kollaps"
     ]
   },
   "what_to_do": {
@@ -248,7 +265,8 @@
     "nl": "Heeft je hond frisdrank gedronken, let dan op verschijnselen. Heeft je hond veel gedronken, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, zodat je hond de juiste behandeling krijgt. Was de frisdrank suikervrij, bekijk dan onze pagina over xylitol.",
     "pl": "Jeśli pies wypił napój gazowany, obserwuj, czy nie pojawiają się objawy. Jeśli wypił dużo, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, żeby pies dostał właściwe leczenie. Jeśli napój był bez cukru, zajrzyj na naszą stronę o ksylitolu.",
     "cs": "Pokud pes vypil sycený nápoj, sledujte, zda se neobjeví příznaky. Pokud vypil větší množství, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, aby pes dostal správnou léčbu. Pokud byl nápoj bez cukru, podívejte se na naši stránku o xylitolu.",
-    "hr": "Ako je pas popio gazirano piće, pazi pojavljuju li se znakovi trovanja. Ako je popio veliku količinu, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja kako bi pas dobio odgovarajuće liječenje. Ako je piće bilo bez šećera, pogledaj našu stranicu o ksilitolu."
+    "hr": "Ako je pas popio gazirano piće, pazi pojavljuju li se znakovi trovanja. Ako je popio veliku količinu, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja kako bi pas dobio odgovarajuće liječenje. Ako je piće bilo bez šećera, pogledaj našu stranicu o ksilitolu.",
+    "sv": "Om din hund har druckit läsk, håll utkik efter symtom hos hunden. Om hunden har druckit en stor mängd, kontakta veterinären eller en giftrådgivning för djur direkt så att hunden kan få rätt behandling. Om läsken var sockerfri, se vår sida om xylitol."
   },
   "serving": null,
   "child": {
@@ -264,7 +282,8 @@
     "nl": "Drankjes met prik zijn voor mensen, niet voor honden. Honden hebben alleen vers water nodig, dus zet blikjes en bekers hoog neer!",
     "pl": "Napoje gazowane są dla ludzi, nie dla psów. Psy potrzebują tylko świeżej wody, więc trzymaj puszki i kubki wysoko!",
     "cs": "Šumivé nápoje jsou pro lidi, ne pro psy. Psi potřebují jen čerstvou vodu, takže plechovky a kelímky schovej vysoko!",
-    "hr": "Gazirana pića su za ljude, ne za pse. Psima treba samo svježa voda, zato limenke i čaše drži visoko!"
+    "hr": "Gazirana pića su za ljude, ne za pse. Psima treba samo svježa voda, zato limenke i čaše drži visoko!",
+    "sv": "Kolsyrade drycker är till för människor, inte för hundar. Hundar behöver bara friskt vatten, så ställ burkar och muggar högt upp!"
   },
   "faq": [
     {
@@ -281,7 +300,8 @@
         "nl": "Mijn hond likte wat gemorste frisdrank op. Is dat een probleem?",
         "pl": "Mój pies polizał rozlany napój gazowany. Czy to problem?",
         "cs": "Můj pes olízl trochu rozlitého syceného nápoje. Je to problém?",
-        "hr": "Moj je pas polizao malo prolivenog gaziranog pića. Je li to problem?"
+        "hr": "Moj je pas polizao malo prolivenog gaziranog pića. Je li to problem?",
+        "sv": "Min hund slickade i sig lite utspilld läsk. Är det ett problem?"
       },
       "a": {
         "en": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets. Keep an eye on your dog and keep soda stored away so it can't happen again.",
@@ -296,7 +316,8 @@
         "nl": "Een of twee likjes koffie, thee of frisdrank veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging. Houd je hond in de gaten en berg frisdrank op, zodat het niet nog een keer kan gebeuren.",
         "pl": "Jedno czy dwa liźnięcia kawy, herbaty lub napoju gazowanego raczej nie spowodują zatrucia u większości zwierząt. Miej psa na oku i chowaj napoje gazowane, żeby to się nie powtórzyło.",
         "cs": "Jedno nebo dvě olíznutí kávy, čaje nebo sycených nápojů většinu zvířat pravděpodobně neotráví. Sledujte psa a sycené nápoje ukládejte tak, aby se to už neopakovalo.",
-        "hr": "Jedno ili dva lizanja kave, čaja ili gaziranog pića kod većine kućnih ljubimaca vjerojatno neće izazvati trovanje. Pripazi na psa i spremi gazirana pića da se to više ne ponovi."
+        "hr": "Jedno ili dva lizanja kave, čaja ili gaziranog pića kod većine kućnih ljubimaca vjerojatno neće izazvati trovanje. Pripazi na psa i spremi gazirana pića da se to više ne ponovi.",
+        "sv": "En eller två slickar kaffe, te eller läsk ger knappast förgiftning hos de flesta djur. Ha koll på hunden och ställ undan läsken så att det inte händer igen."
       }
     },
     {
@@ -313,7 +334,8 @@
         "nl": "Hoe zit het met light of suikervrije frisdrank?",
         "pl": "A napoje dietetyczne lub bez cukru?",
         "cs": "A co dietní nápoje nebo nápoje bez cukru?",
-        "hr": "A dijetna ili bezšećerna gazirana pića?"
+        "hr": "A dijetna ili bezšećerna gazirana pića?",
+        "sv": "Hur är det med light- eller sockerfri läsk?"
       },
       "a": {
         "en": "Many zero-sugar drinks contain xylitol, which is highly toxic to dogs, so keep diet drinks away from your dog too.",
@@ -328,7 +350,8 @@
         "nl": "Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden, dus houd ook light-dranken uit de buurt van je hond.",
         "pl": "Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów, więc trzymaj napoje dietetyczne również z dala od psa.",
         "cs": "Mnoho nápojů bez cukru obsahuje xylitol, který je pro psy vysoce toxický, proto i dietní nápoje držte mimo dosah psa.",
-        "hr": "Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan, zato i dijetna pića drži podalje od psa."
+        "hr": "Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan, zato i dijetna pića drži podalje od psa.",
+        "sv": "Många sockerfria drycker innehåller xylitol, som är mycket giftigt för hundar, så håll även light- och sockerfria drycker borta från din hund."
       }
     }
   ],
@@ -505,6 +528,11 @@
       "status": "verified",
       "verified_by": "claude-c-hr-2026-11-17",
       "verified_hash": "da6d4c7bea924c8745db9a744fba3da7495b0436305a4081a3ef239e2ac108d1"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-17",
+      "verified_hash": "52b1f0240220a4999f13a41ef089f8f3a732b562a08d91981c88c19719c3f3c1"
     }
   }
 }

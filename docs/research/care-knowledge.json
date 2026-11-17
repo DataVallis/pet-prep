@@ -10783,7 +10783,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Dog food",
@@ -10798,7 +10799,8 @@
         "nl": "Hondenvoer",
         "pl": "Karma dla psów",
         "cs": "Psí krmivo",
-        "hr": "Hrana za pse"
+        "hr": "Hrana za pse",
+        "sv": "Hundmat"
       },
       "question": {
         "en": "Can cats eat dog food?",
@@ -10813,7 +10815,8 @@
         "nl": "Mogen katten hondenvoer eten?",
         "pl": "Czy koty mogą jeść karmę dla psów?",
         "cs": "Mohou kočky jíst psí krmivo?",
-        "hr": "Smiju li mačke jesti hranu za pse?"
+        "hr": "Smiju li mačke jesti hranu za pse?",
+        "sv": "Får katter äta hundmat?"
       },
       "url_slug": {
         "en": "dog-food",
@@ -10828,7 +10831,8 @@
         "nl": "hondenvoer",
         "pl": "karma-dla-psow",
         "cs": "psi-krmivo",
-        "hr": "hrana-za-pse"
+        "hr": "hrana-za-pse",
+        "sv": "hundmat"
       },
       "answer": {
         "en": "Not as their food. A morsel or two of dog food won't hurt most healthy cats, but you should not feed your dog's food to your cat. Dog food doesn't meet a cat's nutritional needs – for example, it doesn't contain enough taurine for a cat.",
@@ -10843,7 +10847,8 @@
         "nl": "Niet als hun voer. Een hapje of twee hondenvoer deert de meeste gezonde katten niet, maar je kat hoort het voer van je hond niet te krijgen. Hondenvoer voldoet niet aan de voedingsbehoeften van een kat – er zit bijvoorbeeld te weinig taurine in voor een kat.",
         "pl": "Nie jako pokarm dla kota. Kęs czy dwa psiej karmy nie zaszkodzą większości zdrowych kotów, ale nie karm kota jedzeniem swojego psa. Karma dla psów nie pokrywa potrzeb pokarmowych kota – na przykład zawiera dla niego za mało tauryny.",
         "cs": "Ne jako krmivo pro kočku. Kousek nebo dva psího krmiva většině zdravých koček neublíží, ale kočku psím krmivem krmit nemáte. Psí krmivo nepokrývá nutriční potřeby kočky – například v něm není dost taurinu.",
-        "hr": "Ne kao svoju hranu. Zalogaj-dva hrane za pse neće naškoditi većini zdravih mačaka, ali pseću hranu ne treba davati mački. Hrana za pse ne pokriva prehrambene potrebe mačke – primjerice, ne sadrži dovoljno taurina za mačku."
+        "hr": "Ne kao svoju hranu. Zalogaj-dva hrane za pse neće naškoditi većini zdravih mačaka, ali pseću hranu ne treba davati mački. Hrana za pse ne pokriva prehrambene potrebe mačke – primjerice, ne sadrži dovoljno taurina za mačku.",
+        "sv": "Inte som kattens mat. Ett par tuggor hundmat gör de flesta friska katter ingen skada, men du ska inte ge katten hundens mat. Hundmat täcker inte kattens näringsbehov – den innehåller till exempel för lite taurin för en katt."
       },
       "why": {
         "en": "Dogs and cats need different nutrients. Cats require taurine, an essential amino acid for them, while dogs do not, and dog food does not contain enough of it for a cat. The Merck Veterinary Manual adds that some dog foods are lower in protein and may lack nutrients cats need but dogs don't, such as preformed vitamin A and arachidonic acid. Too little taurine can weaken the heart muscle and damage the eyes, impairing vision.",
@@ -10858,7 +10863,8 @@
         "nl": "Honden en katten hebben andere voedingsstoffen nodig. Katten moeten taurine binnenkrijgen, een aminozuur dat voor hen essentieel is, honden niet, en er zit te weinig taurine in hondenvoer voor een kat. Volgens de Merck Veterinary Manual bevat sommig hondenvoer bovendien minder eiwit en kunnen er voedingsstoffen in ontbreken die katten wél nodig hebben en honden niet, zoals kant-en-klare vitamine A en arachidonzuur. Bij te weinig taurine kan de hartspier verzwakken en kunnen de ogen beschadigd raken, waardoor het zicht achteruitgaat.",
         "pl": "Psy i koty potrzebują innych składników odżywczych. Kot musi dostawać taurynę, bo to dla niego niezbędny aminokwas, a pies jej nie potrzebuje, więc karma dla psów zawiera jej dla kota za mało. Podręcznik weterynaryjny Merck dodaje, że niektóre karmy dla psów mają mniej białka i mogą nie zawierać składników potrzebnych kotom, a niepotrzebnych psom, takich jak witamina A w gotowej postaci i kwas arachidonowy. Zbyt mało tauryny może osłabić mięsień sercowy i uszkodzić oczy, pogarszając wzrok.",
         "cs": "Psi a kočky mají různé nároky na živiny. Kočka potřebuje taurin, který je pro ni esenciální aminokyselinou, kdežto pes ne, a psí krmivo ho pro kočku obsahuje málo. Merck Veterinary Manual dále uvádí, že některá psí krmiva mají méně bílkovin a mohou postrádat živiny, které potřebují kočky, ale psi ne – například vitamin A v hotové (preformované) podobě a kyselinu arachidonovou. Nedostatek taurinu může oslabit srdeční sval a poškodit oči i zrak.",
-        "hr": "Psima i mačkama trebaju različite hranjive tvari. Mačkama je potreban taurin, za njih esencijalna aminokiselina, dok psima nije, a hrana za pse ne sadrži ga dovoljno za mačku. Merck Veterinary Manual dodaje da neka hrana za pse ima manje bjelančevina i možda nema hranjivih tvari koje trebaju mačkama, a psima ne, poput preformiranog vitamina A i arahidonske kiseline. Premalo taurina može oslabiti srčani mišić i oštetiti oči, što narušava vid."
+        "hr": "Psima i mačkama trebaju različite hranjive tvari. Mačkama je potreban taurin, za njih esencijalna aminokiselina, dok psima nije, a hrana za pse ne sadrži ga dovoljno za mačku. Merck Veterinary Manual dodaje da neka hrana za pse ima manje bjelančevina i možda nema hranjivih tvari koje trebaju mačkama, a psima ne, poput preformiranog vitamina A i arahidonske kiseline. Premalo taurina može oslabiti srčani mišić i oštetiti oči, što narušava vid.",
+        "sv": "Hundar och katter behöver olika näringsämnen. Katter måste få i sig taurin, en aminosyra som är livsnödvändig för dem men inte för hundar, och hundmat innehåller inte tillräckligt av den för en katt. Enligt Merck Veterinary Manual har dessutom en del hundmat lägre proteinhalt och kan sakna näringsämnen som katter behöver men hundar inte, till exempel färdigbildat vitamin A och arakidonsyra. För lite taurin kan försvaga hjärtmuskeln och skada ögonen så att synen försämras."
       },
       "signs": {
         "en": [
@@ -10938,6 +10944,12 @@
           "Povraćanje",
           "Gubitak tjelesne mase",
           "Napadaji"
+        ],
+        "sv": [
+          "Illamående",
+          "Kräkningar",
+          "Viktnedgång",
+          "Kramper"
         ]
       },
       "what_to_do": {
@@ -10953,7 +10965,8 @@
         "nl": "Een hapje uit de bak van de hond is voor een gezonde kat meestal geen probleem. Geef elk huisdier eten uit een eigen bakje, op aparte plekken in huis. Een kat die alleen hondenvoer eet, kan binnen uren, dagen of weken ziek worden – neem contact op met je dierenarts als je je zorgen maakt.",
         "pl": "Kęs z miski psa zwykle nie szkodzi zdrowemu kotu. Karm każde zwierzę z osobnej miski i w osobnym miejscu. Kot, który je tylko psią karmę, może zachorować w ciągu kilku godzin, dni lub tygodni – jeśli się martwisz, skontaktuj się z weterynarzem.",
         "cs": "Ochutnat z psí misky zdravé kočce obvykle neuškodí. Každé zvíře krmte z jeho vlastní misky a na jiném místě doma. Kočka, která jí jen psí krmivo, může onemocnět během hodin, dnů i týdnů – máte-li obavy, obraťte se na veterináře.",
-        "hr": "Zalogaj iz pseće zdjelice obično je u redu za zdravu mačku. Svakog ljubimca hrani iz njegove zdjelice i na odvojenim mjestima u kući. Mačka koja jede samo hranu za pse može se razboljeti za nekoliko sati, dana ili tjedana – obrati se veterinaru ako te nešto brine."
+        "hr": "Zalogaj iz pseće zdjelice obično je u redu za zdravu mačku. Svakog ljubimca hrani iz njegove zdjelice i na odvojenim mjestima u kući. Mačka koja jede samo hranu za pse može se razboljeti za nekoliko sati, dana ili tjedana – obrati se veterinaru ako te nešto brine.",
+        "sv": "Ett smakprov ur hundens skål är oftast ingen fara för en frisk katt. Låt varje djur äta ur sin egen skål, på skilda platser i hemmet. En katt som bara äter hundmat kan bli sjuk inom timmar, dagar eller veckor – kontakta veterinären om du är orolig."
       },
       "serving": null,
       "child": {
@@ -10969,7 +10982,8 @@
         "nl": "Hondenvoer is gemaakt voor honden. Katten hebben hun eigen kattenvoer nodig om gezond te blijven!",
         "pl": "Karma dla psów jest przeznaczona dla psów. Koty potrzebują własnej karmy dla kotów, żeby być zdrowe!",
         "cs": "Psí krmivo je určené psům. Kočky potřebují své vlastní kočičí krmivo, aby zůstaly zdravé!",
-        "hr": "Hrana za pse napravljena je za pse. Da bi ostale zdrave, mačkama treba njihova vlastita hrana za mačke!"
+        "hr": "Hrana za pse napravljena je za pse. Da bi ostale zdrave, mačkama treba njihova vlastita hrana za mačke!",
+        "sv": "Hundmat är gjord för hundar. Katter behöver sin alldeles egna kattmat för att hålla sig friska!"
       },
       "faq": [
         {
@@ -10986,7 +11000,8 @@
             "nl": "Wat is taurine en waarom hebben katten het nodig?",
             "pl": "Czym jest tauryna i dlaczego koty jej potrzebują?",
             "cs": "Co je taurin a proč ho kočky potřebují?",
-            "hr": "Što je taurin i zašto je mačkama potreban?"
+            "hr": "Što je taurin i zašto je mačkama potreban?",
+            "sv": "Vad är taurin och varför behöver katter det?"
           },
           "a": {
             "en": "Taurine is an essential amino acid for cats, and cats have only a limited ability to make it themselves. Without enough of it, the heart muscle weakens and the cells of the retina eventually degenerate, impairing vision.",
@@ -11001,7 +11016,8 @@
             "nl": "Taurine is een essentieel aminozuur voor katten, en ze kunnen het zelf maar beperkt aanmaken. Zonder genoeg taurine verzwakt de hartspier en degenereren de cellen van het netvlies uiteindelijk, waardoor het zicht achteruitgaat.",
             "pl": "Tauryna to niezbędny dla kotów aminokwas, a koty potrafią wytwarzać ją same tylko w ograniczonym stopniu. Gdy jej brakuje, mięsień sercowy słabnie, a komórki siatkówki z czasem ulegają zwyrodnieniu, co pogarsza wzrok.",
             "cs": "Taurin je pro kočky esenciální aminokyselina a kočky si ho dokážou vytvořit jen v omezené míře. Bez dostatečného množství slábne srdeční sval a buňky sítnice postupně degenerují, což zhoršuje zrak.",
-            "hr": "Taurin je za mačke esencijalna aminokiselina, a mačke ga same mogu stvarati samo u ograničenoj mjeri. Bez dovoljno taurina srčani mišić slabi, a stanice mrežnice s vremenom propadaju, što narušava vid."
+            "hr": "Taurin je za mačke esencijalna aminokiselina, a mačke ga same mogu stvarati samo u ograničenoj mjeri. Bez dovoljno taurina srčani mišić slabi, a stanice mrežnice s vremenom propadaju, što narušava vid.",
+            "sv": "Taurin är en livsnödvändig aminosyra för katter, och katter har bara begränsad förmåga att bilda det själva. Utan tillräckligt med taurin försvagas hjärtmuskeln och näthinnans celler bryts så småningom ned, så att synen försämras."
           }
         }
       ],
@@ -11876,7 +11892,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Fish oil",
@@ -11891,7 +11908,8 @@
         "nl": "Visolie",
         "pl": "Olej rybi",
         "cs": "Rybí olej",
-        "hr": "Riblje ulje"
+        "hr": "Riblje ulje",
+        "sv": "Fiskolja"
       },
       "question": {
         "en": "Can cats have fish oil?",
@@ -11906,7 +11924,8 @@
         "nl": "Mogen katten visolie krijgen?",
         "pl": "Czy koty mogą dostać olej rybi?",
         "cs": "Mohou kočky dostat rybí olej?",
-        "hr": "Smiju li mačke dobivati riblje ulje?"
+        "hr": "Smiju li mačke dobivati riblje ulje?",
+        "sv": "Får katter äta fiskolja?"
       },
       "url_slug": {
         "en": "fish-oil",
@@ -11921,7 +11940,8 @@
         "nl": "visolie",
         "pl": "olej-rybi",
         "cs": "rybi-olej",
-        "hr": "riblje-ulje"
+        "hr": "riblje-ulje",
+        "sv": "fiskolja"
       },
       "answer": {
         "en": "Only if your vet recommends it. Fish oil is a supplement used widely in cats, but it may not be appropriate for every pet and can have side effects. Always talk to your vet before giving fish oil or any other supplement.",
@@ -11936,7 +11956,8 @@
         "nl": "Alleen als je dierenarts het adviseert. Veel katten krijgen visolie als supplement, maar het is niet voor elk huisdier geschikt en het kan bijwerkingen hebben. Overleg altijd met je dierenarts voordat je visolie of een ander supplement geeft.",
         "pl": "Tylko jeśli zaleci to weterynarz. Olej rybi to suplement szeroko stosowany u kotów, ale może nie być odpowiedni dla każdego zwierzęcia i może mieć skutki uboczne. Zawsze porozmawiaj z weterynarzem, zanim podasz olej rybi lub jakikolwiek inny suplement.",
         "cs": "Jen pokud ho doporučí veterinář. Rybí olej je doplněk stravy, který se u koček hojně používá, ale nemusí být vhodný pro každé zvíře a může mít vedlejší účinky. Před podáním rybího oleje nebo jakéhokoli jiného doplňku se vždy poraďte s veterinářem.",
-        "hr": "Samo ako to preporuči veterinar. Riblje ulje je dodatak prehrani koji se često daje mačkama, ali možda nije prikladan za svakog ljubimca i može imati nuspojave. Prije davanja ribljeg ulja ili bilo kojeg drugog dodatka uvijek porazgovaraj s veterinarom."
+        "hr": "Samo ako to preporuči veterinar. Riblje ulje je dodatak prehrani koji se često daje mačkama, ali možda nije prikladan za svakog ljubimca i može imati nuspojave. Prije davanja ribljeg ulja ili bilo kojeg drugog dodatka uvijek porazgovaraj s veterinarom.",
+        "sv": "Bara om din veterinär rekommenderar det. Fiskolja är ett kosttillskott som ofta används till katter, men det passar inte alla djur och kan ge biverkningar. Prata alltid med veterinären innan du ger fiskolja eller något annat tillskott."
       },
       "why": {
         "en": "Fish oil is used widely in cats, but omega-3 supplements may not be appropriate for every pet, and less is known about supplementing cats that have kidney disease. Possible side effects include mild stomach upset, a fishy odour, an oily coat and itchy, flaky skin; serious reactions include abnormal bruising or bleeding, especially in cats. Fish oil should not be given if a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity.",
@@ -11951,7 +11972,8 @@
         "nl": "Veel katten krijgen visolie, maar omega-3-supplementen zijn niet voor elk huisdier geschikt, en over het geven van supplementen aan katten met nierziekte is minder bekend. Mogelijke bijwerkingen zijn lichte maagklachten, een visgeur, een vettige vacht en jeukende, schilferige huid. Ernstige reacties zijn onder meer ongewone blauwe plekken of bloedingen, vooral bij katten. Geef geen visolie als je geen betrouwbare bron hebt, want bij sommige bronnen is het risico op vergiftiging met zware metalen groot.",
         "pl": "Olej rybi jest szeroko stosowany u kotów, ale suplementy z kwasami omega-3 mogą nie być odpowiednie dla każdego zwierzęcia, a o suplementacji u kotów z chorobą nerek wiadomo mniej. Możliwe skutki uboczne to łagodny rozstrój żołądka, rybi zapach, tłusta sierść oraz swędząca, łuszcząca się skóra; poważne reakcje to nietypowe siniaki lub krwawienia, zwłaszcza u kotów. Nie podawaj oleju rybiego, jeśli nie da się go kupić z wiarygodnego źródła, bo niektóre źródła wiążą się z wysokim ryzykiem zatrucia metalami ciężkimi.",
         "cs": "Rybí olej se u koček hojně používá, ale doplňky s omega-3 nemusí být vhodné pro každé zvíře a o jejich podávání kočkám s onemocněním ledvin se ví méně. Mezi možné vedlejší účinky patří mírné potíže se žaludkem, zápach po rybách, mastná srst a svědivá, šupinatá kůže; k závažným reakcím patří neobvyklé modřiny nebo krvácení, zejména u koček. Rybí olej se nemá podávat, pokud nelze sehnat výrobek ze spolehlivého zdroje, protože u některých zdrojů hrozí vysoké riziko otravy těžkými kovy.",
-        "hr": "Riblje ulje često se daje mačkama, ali omega-3 dodaci možda nisu prikladni za svakog ljubimca, a manje se zna o njihovu davanju mačkama s bolešću bubrega. Moguće nuspojave uključuju blage želučane tegobe, miris po ribi, masnu dlaku te svrbež i ljuštenje kože; ozbiljne reakcije uključuju neuobičajene modrice ili krvarenje, osobito kod mačaka. Riblje ulje ne treba davati ako se ne može nabaviti iz pouzdanog izvora, jer neki izvori nose visok rizik od trovanja teškim metalima."
+        "hr": "Riblje ulje često se daje mačkama, ali omega-3 dodaci možda nisu prikladni za svakog ljubimca, a manje se zna o njihovu davanju mačkama s bolešću bubrega. Moguće nuspojave uključuju blage želučane tegobe, miris po ribi, masnu dlaku te svrbež i ljuštenje kože; ozbiljne reakcije uključuju neuobičajene modrice ili krvarenje, osobito kod mačaka. Riblje ulje ne treba davati ako se ne može nabaviti iz pouzdanog izvora, jer neki izvori nose visok rizik od trovanja teškim metalima.",
+        "sv": "Fiskolja används ofta till katter, men tillskott av omega-3 passar inte alla djur, och man vet mindre om tillskott till katter med njursjukdom. Möjliga biverkningar är lindrig orolig mage, fisklukt, fet päls samt kliande och fjällande hud. Till de allvarliga reaktionerna hör ovanliga blåmärken eller blödningar, särskilt hos katter. Ge inte fiskolja om du inte hittar en pålitlig källa, eftersom vissa källor medför hög risk för tungmetallförgiftning."
       },
       "signs": {
         "en": [
@@ -12096,6 +12118,17 @@
           "Alergijska reakcija: nepravilno disanje, osip, vrućica, oticanje oko lica",
           "Gubitak apetita",
           "Teturanje ili napadaji"
+        ],
+        "sv": [
+          "Lindrig orolig mage",
+          "Fisklukt",
+          "Fet päls",
+          "Klåda eller fjällande hud",
+          "Långsam sårläkning",
+          "Ovanliga blåmärken eller blödningar",
+          "Allergisk reaktion: oregelbunden andning, utslag, feber, svullnad runt ansiktet",
+          "Aptitlöshet",
+          "Ostadig gång eller kramper"
         ]
       },
       "what_to_do": {
@@ -12111,7 +12144,8 @@
         "nl": "Overleg met je dierenarts voordat je visolie geeft, en vertel ook welke vitamines of supplementen je kat al krijgt. Zie je ernstige verschijnselen, stop dan met de visolie en neem meteen contact op met je dierenarts.",
         "pl": "Porozmawiaj z weterynarzem, zanim podasz olej rybi, i powiedz mu o wszystkich witaminach i suplementach, które kot już dostaje. Jeśli pojawią się poważne objawy, przestań podawać olej rybi i natychmiast skontaktuj się z weterynarzem.",
         "cs": "Před podáním rybího oleje se poraďte s veterinářem a řekněte mu o všech vitaminech a doplňcích, které kočka už dostává. Pokud se objeví závažné příznaky, rybí olej přestaňte podávat a ihned kontaktujte veterináře.",
-        "hr": "Prije nego što mački daš riblje ulje, porazgovaraj s veterinarom i reci mu za sve vitamine ili dodatke koje mačka već dobiva. Ako se pojave ozbiljni znakovi, prestani davati riblje ulje i odmah se obrati veterinaru."
+        "hr": "Prije nego što mački daš riblje ulje, porazgovaraj s veterinarom i reci mu za sve vitamine ili dodatke koje mačka već dobiva. Ako se pojave ozbiljni znakovi, prestani davati riblje ulje i odmah se obrati veterinaru.",
+        "sv": "Prata med veterinären innan du ger fiskolja och berätta om alla vitaminer och tillskott som katten redan får. Om allvarliga symtom visar sig, sluta ge fiskoljan och kontakta veterinären direkt."
       },
       "serving": null,
       "child": {
@@ -12127,7 +12161,8 @@
         "nl": "Alleen de dierenarts kan bepalen of een kat visolie nodig heeft. Vraag een volwassene om eerst met de dierenarts te praten!",
         "pl": "Tylko weterynarz może zdecydować, czy kot potrzebuje oleju rybiego. Poproś dorosłego, żeby najpierw porozmawiał z weterynarzem!",
         "cs": "Jen veterinář může rozhodnout, jestli kočka potřebuje rybí olej. Požádej dospělého, ať se nejdřív zeptá veterináře!",
-        "hr": "Samo veterinar može odlučiti treba li mački riblje ulje. Zamoli odraslu osobu da prvo porazgovara s veterinarom!"
+        "hr": "Samo veterinar može odlučiti treba li mački riblje ulje. Zamoli odraslu osobu da prvo porazgovara s veterinarom!",
+        "sv": "Bara veterinären kan avgöra om en katt behöver fiskolja. Be en vuxen prata med veterinären först!"
       },
       "faq": [
         {
@@ -12144,7 +12179,8 @@
             "nl": "Maakt het merk visolie uit?",
             "pl": "Czy marka oleju rybiego ma znaczenie?",
             "cs": "Záleží na značce rybího oleje?",
-            "hr": "Je li važna marka ribljeg ulja?"
+            "hr": "Je li važna marka ribljeg ulja?",
+            "sv": "Spelar fiskoljans märke någon roll?"
           },
           "a": {
             "en": "Yes. VCA advises against fish oil when a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity, and Tufts vets recommend a brand with good quality control. Your vet can advise.",
@@ -12159,7 +12195,8 @@
             "nl": "Ja. VCA raadt visolie af als je geen betrouwbare bron hebt, omdat bij sommige bronnen het risico op vergiftiging met zware metalen groot is, en dierenartsen van Tufts adviseren een merk met goede kwaliteitscontrole. Je dierenarts kan je daarover adviseren.",
             "pl": "Tak. VCA odradza olej rybi, jeśli nie da się go kupić z wiarygodnego źródła, bo niektóre źródła wiążą się z wysokim ryzykiem zatrucia metalami ciężkimi, a weterynarze z Tufts zalecają markę z dobrą kontrolą jakości. Najlepiej doradzi ci weterynarz.",
             "cs": "Ano. VCA rybí olej nedoporučuje, pokud nelze sehnat spolehlivý zdroj, protože u některých zdrojů hrozí vysoké riziko otravy těžkými kovy, a veterináři z Tufts doporučují značku s dobrou kontrolou kvality. Poradí vám váš veterinář.",
-            "hr": "Da. VCA savjetuje da se riblje ulje ne daje ako se ne može nabaviti iz pouzdanog izvora, jer neki izvori nose visok rizik od trovanja teškim metalima, a veterinari sa Sveučilišta Tufts preporučuju marku s dobrom kontrolom kvalitete. Savjet ti može dati veterinar."
+            "hr": "Da. VCA savjetuje da se riblje ulje ne daje ako se ne može nabaviti iz pouzdanog izvora, jer neki izvori nose visok rizik od trovanja teškim metalima, a veterinari sa Sveučilišta Tufts preporučuju marku s dobrom kontrolom kvalitete. Savjet ti može dati veterinar.",
+            "sv": "Ja. VCA avråder från fiskolja om det inte går att få tag på en pålitlig källa, eftersom vissa källor medför hög risk för tungmetallförgiftning, och veterinärer vid Tufts rekommenderar ett märke med god kvalitetskontroll. Veterinären kan ge råd."
           }
         }
       ],
@@ -13193,7 +13230,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Goat's milk",
@@ -13208,7 +13246,8 @@
         "nl": "Geitenmelk",
         "pl": "Mleko kozie",
         "cs": "Kozí mléko",
-        "hr": "Kozje mlijeko"
+        "hr": "Kozje mlijeko",
+        "sv": "Getmjölk"
       },
       "question": {
         "en": "Can cats drink goat's milk?",
@@ -13223,7 +13262,8 @@
         "nl": "Mogen katten geitenmelk drinken?",
         "pl": "Czy koty mogą pić mleko kozie?",
         "cs": "Mohou kočky pít kozí mléko?",
-        "hr": "Smiju li mačke piti kozje mlijeko?"
+        "hr": "Smiju li mačke piti kozje mlijeko?",
+        "sv": "Får katter dricka getmjölk?"
       },
       "url_slug": {
         "en": "goat-milk",
@@ -13238,7 +13278,8 @@
         "nl": "geitenmelk",
         "pl": "mleko-kozie",
         "cs": "kozi-mleko",
-        "hr": "kozje-mlijeko"
+        "hr": "kozje-mlijeko",
+        "sv": "getmjolk"
       },
       "answer": {
         "en": "It's best not to. Vets list goat's milk, like cow's milk, among the drinks that cause tummy trouble in lactose-intolerant cats, and most cats are lactose intolerant. Cat charities advise avoiding any type of milk – your cat only needs water.",
@@ -13253,7 +13294,8 @@
         "nl": "Liever niet. Dierenartsen noemen geitenmelk, net als koemelk, een van de dranken die buikklachten geven bij katten die lactose niet verdragen, en de meeste katten verdragen lactose niet. Kattenorganisaties raden af om welke soort melk dan ook te geven – je kat heeft alleen water nodig.",
         "pl": "Lepiej nie. Weterynarze zaliczają mleko kozie, podobnie jak krowie, do napojów, po których koty z nietolerancją laktozy mają dolegliwości żołądkowe, a większość kotów nie toleruje laktozy. Organizacje opiekujące się kotami radzą unikać każdego rodzaju mleka – kot potrzebuje tylko wody.",
         "cs": "Raději ne. Podle veterinářů způsobuje kozí mléko stejně jako kravské potíže s bříškem u koček s intolerancí laktózy, kterou má většina koček. Charitativní organizace zaměřené na kočky radí vyhýbat se jakémukoli mléku – kočka potřebuje jen vodu.",
-        "hr": "Bolje da ne. Veterinari kozje mlijeko, kao i kravlje, ubrajaju među pića koja mačkama koje ne podnose laktozu izazivaju probleme s trbuhom, a većina mačaka ne podnosi laktozu. Udruge za zaštitu mačaka savjetuju da se izbjegava svaka vrsta mlijeka – tvojoj mački treba samo voda."
+        "hr": "Bolje da ne. Veterinari kozje mlijeko, kao i kravlje, ubrajaju među pića koja mačkama koje ne podnose laktozu izazivaju probleme s trbuhom, a većina mačaka ne podnosi laktozu. Udruge za zaštitu mačaka savjetuju da se izbjegava svaka vrsta mlijeka – tvojoj mački treba samo voda.",
+        "sv": "Helst inte. Veterinärer räknar getmjölk, liksom komjölk, till de drycker som ger magbesvär hos laktosintoleranta katter, och de flesta katter är laktosintoleranta. Kattorganisationer avråder från mjölk av alla slag – katten behöver bara vatten."
       },
       "why": {
         "en": "Lactose intolerance is a common food reaction in cats, and VCA vets list diarrhoea, vomiting, bloating and tummy discomfort after cow's or goat's milk as its signs. There are no benefits to a cat having milk. For kittens the sources differ: VCA says goat's milk is not recommended for kittens because it is far too low in protein and fat, and allows pasteurised goat's milk only in an emergency until kitten milk replacer is available, while Cats Protection says never to give it, as kittens find it difficult to digest. We follow the stricter advice.",
@@ -13268,7 +13310,8 @@
         "nl": "Lactose-intolerantie komt bij katten vaak voor als voedselreactie, en dierenartsen van VCA noemen diarree, braken, een opgeblazen buik en buikpijn na koemelk of geitenmelk als de verschijnselen daarvan. Melk heeft voor een kat geen enkel voordeel. Voor kittens verschillen de bronnen: VCA zegt dat geitenmelk niet wordt aanbevolen voor kittens, omdat er veel te weinig eiwit en vet in zit, en staat gepasteuriseerde geitenmelk alleen toe in een noodgeval, totdat er kittenmelk te krijgen is. Cats Protection zegt daarentegen dat je het nooit moet geven, omdat kittens het moeilijk verteren. Wij volgen het strengere advies.",
         "pl": "Nietolerancja laktozy to częsta reakcja pokarmowa u kotów, a weterynarze z VCA jako objawy po wypiciu mleka krowiego lub koziego wymieniają biegunkę, wymioty, wzdęcia i dyskomfort w brzuchu. Mleko nie daje kotu żadnych korzyści. W przypadku kociąt źródła się różnią: VCA twierdzi, że mleka koziego nie zaleca się kociętom, bo zawiera zdecydowanie za mało białka i tłuszczu, i dopuszcza pasteryzowane mleko kozie tylko awaryjnie, do czasu zdobycia mleka zastępczego dla kociąt, a Cats Protection mówi, żeby nigdy go nie podawać, bo kociętom trudno je strawić. Stosujemy surowszą radę.",
         "cs": "Intolerance laktózy je u koček častá reakce na potravu a podle veterinářů z VCA se projevuje průjmem, zvracením, nadýmáním a nepříjemnými pocity v bříšku po kravském nebo kozím mléce. Mléko kočce nepřináší žádný prospěch. U koťat se zdroje liší: podle VCA se kozí mléko koťatům nedoporučuje, protože má příliš málo bílkovin a tuku, a pasterizované kozí mléko připouští jen v nouzi, než seženete náhradu mléka pro koťata; Cats Protection naopak říká, že se nesmí dávat nikdy, protože ho koťata obtížně tráví. Řídíme se přísnější radou.",
-        "hr": "Nepodnošenje laktoze česta je reakcija mačaka na hranu, a veterinari iz VCA kao njegove znakove navode proljev, povraćanje, nadutost i nelagodu u trbuhu nakon kravljeg ili kozjeg mlijeka. Mlijeko mački ne donosi nikakvu korist. Za mačiće se izvori razlikuju: VCA ne preporučuje kozje mlijeko za mačiće jer sadrži daleko premalo bjelančevina i masti, a pasterizirano kozje mlijeko dopušta samo u nuždi, dok se ne nabavi zamjensko mlijeko za mačiće. Cats Protection pak kaže da ga ne treba davati nikada jer ga mačići teško probavljaju. Slijedimo strožu preporuku."
+        "hr": "Nepodnošenje laktoze česta je reakcija mačaka na hranu, a veterinari iz VCA kao njegove znakove navode proljev, povraćanje, nadutost i nelagodu u trbuhu nakon kravljeg ili kozjeg mlijeka. Mlijeko mački ne donosi nikakvu korist. Za mačiće se izvori razlikuju: VCA ne preporučuje kozje mlijeko za mačiće jer sadrži daleko premalo bjelančevina i masti, a pasterizirano kozje mlijeko dopušta samo u nuždi, dok se ne nabavi zamjensko mlijeko za mačiće. Cats Protection pak kaže da ga ne treba davati nikada jer ga mačići teško probavljaju. Slijedimo strožu preporuku.",
+        "sv": "Laktosintolerans är en vanlig födoämnesreaktion hos katter, och veterinärerna på VCA nämner diarré, kräkningar, uppblåsthet och magont efter komjölk eller getmjölk som symtom. Katter har ingen nytta av mjölk. När det gäller kattungar skiljer sig källorna åt: VCA säger att getmjölk inte rekommenderas till kattungar eftersom den innehåller alldeles för lite protein och fett, och tillåter pastöriserad getmjölk bara i nödfall tills ersättningsmjölk för kattungar finns att tillgå, medan Cats Protection säger att man aldrig ska ge den eftersom kattungar har svårt att smälta den. Vi följer det strängare rådet."
       },
       "signs": {
         "en": [
@@ -13374,6 +13417,14 @@
           "Bol ili nelagoda u trbuhu",
           "Krčanje u trbuhu",
           "Bezvoljnost"
+        ],
+        "sv": [
+          "Diarré",
+          "Kräkningar",
+          "Uppblåst mage",
+          "Magont eller obehag i magen",
+          "Kurrande mage",
+          "Orkeslöshet"
         ]
       },
       "what_to_do": {
@@ -13389,7 +13440,8 @@
         "nl": "Stop met de geitenmelk en geef vers water. Krijgt je kat na zuivel diarree, geef dan kleine, lichtverteerbare maaltijden, meerdere keren per dag, en neem contact op met je dierenarts als je kat weigert te eten – ernstige gevallen hebben soms dierenartszorg nodig.",
         "pl": "Przestań podawać mleko kozie i daj świeżą wodę. Jeśli kot ma biegunkę po nabiale, karm go często, małymi, lekkostrawnymi porcjami, a jeśli odmawia jedzenia, porozmawiaj z weterynarzem – ciężkie przypadki mogą wymagać pomocy weterynaryjnej.",
         "cs": "Kozí mléko přestaňte dávat a nabídněte čerstvou vodu. Má-li kočka po mléčných výrobcích průjem, krmte ji častěji a po malých porcích lehce stravitelnými, nedráždivými pokrmy. Pokud kočka odmítá jíst, poraďte se s veterinářem – závažné případy mohou vyžadovat veterinární péči.",
-        "hr": "Prestani davati kozje mlijeko i ponudi svježu vodu. Ako mačka nakon mliječnih proizvoda dobije proljev, hrani je malim, blagim obrocima, češće nego inače, a obrati se veterinaru ako mačka odbija jesti – teži slučajevi mogu zahtijevati veterinarsku pomoć."
+        "hr": "Prestani davati kozje mlijeko i ponudi svježu vodu. Ako mačka nakon mliječnih proizvoda dobije proljev, hrani je malim, blagim obrocima, češće nego inače, a obrati se veterinaru ako mačka odbija jesti – teži slučajevi mogu zahtijevati veterinarsku pomoć.",
+        "sv": "Sluta ge getmjölken och erbjud friskt vatten. Om katten får diarré av mejeriprodukter, ge ofta små, milda måltider, och prata med veterinären om katten vägrar äta – svåra fall kan behöva veterinärvård."
       },
       "serving": null,
       "child": {
@@ -13405,7 +13457,8 @@
         "nl": "Katten hebben geen geitenmelk of andere melk nodig. Een bakje vers water is het beste drankje voor je kat!",
         "pl": "Koty nie potrzebują mleka koziego ani żadnego innego mleka. Miska świeżej wody to dla kota najlepszy napój!",
         "cs": "Kočky kozí mléko ani žádné jiné mléko nepotřebují. Miska čerstvé vody je pro tvoji kočku nejlepší nápoj!",
-        "hr": "Mačkama ne treba kozje mlijeko ni bilo koje drugo mlijeko. Zdjelica svježe vode najbolje je piće za tvoju mačku!"
+        "hr": "Mačkama ne treba kozje mlijeko ni bilo koje drugo mlijeko. Zdjelica svježe vode najbolje je piće za tvoju mačku!",
+        "sv": "Katter behöver varken getmjölk eller någon annan mjölk. En skål friskt vatten är den bästa drycken för din katt!"
       },
       "faq": [
         {
@@ -13422,7 +13475,8 @@
             "nl": "Mogen kittens geitenmelk drinken?",
             "pl": "Czy kocięta mogą pić mleko kozie?",
             "cs": "Mohou koťata pít kozí mléko?",
-            "hr": "Smiju li mačići piti kozje mlijeko?"
+            "hr": "Smiju li mačići piti kozje mlijeko?",
+            "sv": "Får kattungar dricka getmjölk?"
           },
           "a": {
             "en": "No. Cats Protection says never give cow's or goat's milk to kittens, as they find it difficult to digest – use substitute kitten milk made specifically for kittens. VCA vets add that goat's milk is far too low in protein and fat for kittens.",
@@ -13437,7 +13491,8 @@
             "nl": "Nee. Cats Protection zegt dat je kittens nooit koemelk of geitenmelk moet geven, omdat ze dat moeilijk verteren. Gebruik in plaats daarvan speciale kittenmelk. Dierenartsen van VCA voegen eraan toe dat er in geitenmelk veel te weinig eiwit en vet zit voor kittens.",
             "pl": "Nie. Cats Protection mówi, żeby nigdy nie dawać kociętom mleka krowiego ani koziego, bo trudno je strawić – należy podawać zastępcze mleko przeznaczone specjalnie dla kociąt. Weterynarze z VCA dodają, że mleko kozie zawiera zdecydowanie za mało białka i tłuszczu jak na potrzeby kociąt.",
             "cs": "Ne. Cats Protection uvádí, že koťatům se nesmí dávat kravské ani kozí mléko, protože ho obtížně tráví – používejte speciální náhradu mléka určenou pro koťata. Veterináři z VCA dodávají, že kozí mléko má pro koťata příliš málo bílkovin a tuku.",
-            "hr": "Ne. Cats Protection kaže da se mačićima nikada ne daje kravlje ni kozje mlijeko jer ga teško probavljaju – daj im zamjensko mlijeko napravljeno posebno za mačiće. Veterinari iz VCA dodaju da kozje mlijeko ima daleko premalo bjelančevina i masti za mačiće."
+            "hr": "Ne. Cats Protection kaže da se mačićima nikada ne daje kravlje ni kozje mlijeko jer ga teško probavljaju – daj im zamjensko mlijeko napravljeno posebno za mačiće. Veterinari iz VCA dodaju da kozje mlijeko ima daleko premalo bjelančevina i masti za mačiće.",
+            "sv": "Nej. Cats Protection säger att man aldrig ska ge kattungar komjölk eller getmjölk, eftersom de har svårt att smälta den – använd ersättningsmjölk som är gjord särskilt för kattungar. Veterinärerna på VCA påpekar dessutom att getmjölk innehåller alldeles för lite protein och fett för kattungar."
           }
         },
         {
@@ -13454,7 +13509,8 @@
             "nl": "Is geitenmelk beter voor katten dan koemelk?",
             "pl": "Czy mleko kozie jest dla kotów lepsze niż krowie?",
             "cs": "Je kozí mléko pro kočky lepší než kravské?",
-            "hr": "Je li kozje mlijeko za mačke bolje od kravljeg?"
+            "hr": "Je li kozje mlijeko za mačke bolje od kravljeg?",
+            "sv": "Är getmjölk bättre för katter än komjölk?"
           },
           "a": {
             "en": "Not according to vets: signs of lactose intolerance can appear after either cow's or goat's milk. It is best to avoid giving your cat any type of milk.",
@@ -13469,7 +13525,8 @@
             "nl": "Volgens dierenartsen niet: verschijnselen van lactose-intolerantie kunnen na koemelk én na geitenmelk optreden. Je kunt je kat het best geen enkele soort melk geven.",
             "pl": "Według weterynarzy nie: objawy nietolerancji laktozy mogą pojawić się zarówno po mleku krowim, jak i kozim. Najlepiej nie podawać kotu żadnego rodzaju mleka.",
             "cs": "Podle veterinářů ne: příznaky intolerance laktózy se mohou objevit po kravském i po kozím mléce. Nejlepší je kočce nedávat žádný druh mléka.",
-            "hr": "Prema veterinarima nije: znakovi nepodnošenja laktoze mogu se pojaviti nakon kravljeg i nakon kozjeg mlijeka. Najbolje je mački ne davati nikakvo mlijeko."
+            "hr": "Prema veterinarima nije: znakovi nepodnošenja laktoze mogu se pojaviti nakon kravljeg i nakon kozjeg mlijeka. Najbolje je mački ne davati nikakvo mlijeko.",
+            "sv": "Inte enligt veterinärer: symtom på laktosintolerans kan visa sig efter både komjölk och getmjölk. Det bästa är att inte ge katten någon form av mjölk."
           }
         }
       ],
@@ -27007,7 +27064,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Soda (soft drinks)",
@@ -27022,7 +27080,8 @@
         "nl": "Frisdrank",
         "pl": "Napoje gazowane",
         "cs": "Sycené nápoje (limonády)",
-        "hr": "Gazirana pića"
+        "hr": "Gazirana pića",
+        "sv": "Läsk (läskedrycker)"
       },
       "question": {
         "en": "Can cats drink soda?",
@@ -27037,7 +27096,8 @@
         "nl": "Mogen katten frisdrank drinken?",
         "pl": "Czy koty mogą pić napoje gazowane?",
         "cs": "Mohou kočky pít sycené nápoje?",
-        "hr": "Smiju li mačke piti gazirana pića?"
+        "hr": "Smiju li mačke piti gazirana pića?",
+        "sv": "Får katter dricka läsk?"
       },
       "url_slug": {
         "en": "soda",
@@ -27052,7 +27112,8 @@
         "nl": "frisdrank",
         "pl": "napoje-gazowane",
         "cs": "sycene-napoje",
-        "hr": "gazirana-pica"
+        "hr": "gazirana-pica",
+        "sv": "lask"
       },
       "answer": {
         "en": "No. Many sodas contain caffeine, and cats are more sensitive to caffeine than people. One or two licks is unlikely to cause poisoning, but if your cat drank more, call your vet. Your cat only needs to drink water.",
@@ -27067,7 +27128,8 @@
         "nl": "Nee. Veel frisdranken bevatten cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Een of twee likjes veroorzaken waarschijnlijk geen vergiftiging, maar als je kat meer heeft gedronken, bel dan je dierenarts. Je kat heeft alleen water nodig.",
         "pl": "Nie. Wiele napojów gazowanych zawiera kofeinę, a koty są na nią bardziej wrażliwe niż ludzie. Jedno czy dwa liźnięcia raczej nie spowodują zatrucia, ale jeśli kot wypił więcej, zadzwoń do weterynarza. Kot potrzebuje do picia tylko wody.",
         "cs": "Ne. Mnoho sycených nápojů obsahuje kofein a kočky jsou na kofein citlivější než lidé. Jedno nebo dvě olíznutí otravu pravděpodobně nezpůsobí, ale pokud kočka vypila víc, zavolejte veterináři. Kočka potřebuje pít jen vodu.",
-        "hr": "Ne. Mnoga gazirana pića sadrže kofein, a mačke su na kofein osjetljivije od ljudi. Jedno ili dva lizanja vjerojatno neće izazvati trovanje, ali ako je mačka popila više, nazovi veterinara. Tvojoj mački treba samo voda."
+        "hr": "Ne. Mnoga gazirana pića sadrže kofein, a mačke su na kofein osjetljivije od ljudi. Jedno ili dva lizanja vjerojatno neće izazvati trovanje, ali ako je mačka popila više, nazovi veterinara. Tvojoj mački treba samo voda.",
+        "sv": "Nej. Många läskedrycker innehåller koffein, och katter är känsligare för koffein än människor. En eller två slickar ger knappast förgiftning, men om katten har druckit mer ska du ringa veterinären. Katten behöver bara dricka vatten."
       },
       "why": {
         "en": "Many teas and sodas contain caffeine, and dogs and cats are more sensitive to caffeine than humans. Caffeine stimulates the heart and nervous system, which can be dangerous, and it can also upset the stomach. Signs can start within a few hours and last up to several days.",
@@ -27082,7 +27144,8 @@
         "nl": "Veel thee en frisdranken bevatten cafeïne, en honden en katten zijn gevoeliger voor cafeïne dan mensen. Cafeïne prikkelt het hart en het zenuwstelsel, wat gevaarlijk kan zijn, en kan ook de maag van streek maken. De verschijnselen kunnen binnen een paar uur beginnen en tot enkele dagen duren.",
         "pl": "Wiele herbat i napojów gazowanych zawiera kofeinę, a psy i koty są na nią bardziej wrażliwe niż ludzie. Kofeina pobudza serce i układ nerwowy, co może być niebezpieczne, a także może podrażnić żołądek. Objawy mogą pojawić się w ciągu kilku godzin i trwać nawet kilka dni.",
         "cs": "Mnoho čajů a sycených nápojů obsahuje kofein a psi i kočky jsou na kofein citlivější než lidé. Kofein stimuluje srdce a nervovou soustavu, což může být nebezpečné, a může také podráždit žaludek. Příznaky se mohou objevit během několika hodin a trvat až několik dní.",
-        "hr": "Mnogi čajevi i gazirana pića sadrže kofein, a psi i mačke osjetljiviji su na kofein od ljudi. Kofein potiče srce i živčani sustav, što može biti opasno, a može izazvati i probleme sa želucem. Znakovi se mogu pojaviti već nakon nekoliko sati i trajati i nekoliko dana."
+        "hr": "Mnogi čajevi i gazirana pića sadrže kofein, a psi i mačke osjetljiviji su na kofein od ljudi. Kofein potiče srce i živčani sustav, što može biti opasno, a može izazvati i probleme sa želucem. Znakovi se mogu pojaviti već nakon nekoliko sati i trajati i nekoliko dana.",
+        "sv": "Många sorters te och läskedrycker innehåller koffein, och hundar och katter är känsligare för koffein än människor. Koffein stimulerar hjärtat och nervsystemet, vilket kan vara farligt, och kan också ge orolig mage. Symtomen kan börja inom några timmar och som längst hålla i sig i flera dagar."
       },
       "signs": {
         "en": [
@@ -27188,6 +27251,14 @@
           "Probavne tegobe, povraćanje ili proljev",
           "Drhtanje",
           "Češće mokrenje"
+        ],
+        "sv": [
+          "Snabb puls",
+          "Överaktivitet, rastlöshet, vill inte ligga still",
+          "Går av och an eller jamar mycket",
+          "Orolig mage, kräkningar eller diarré",
+          "Darrningar",
+          "Ökat kissande"
         ]
       },
       "what_to_do": {
@@ -27203,7 +27274,8 @@
         "nl": "Heeft je kat frisdrank gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt. Een of twee likjes veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging.",
         "pl": "Jeśli kot napił się napoju gazowanego, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, gdy tylko się zorientujesz. Jedno czy dwa liźnięcia raczej nie spowodują zatrucia u większości zwierząt.",
         "cs": "Pokud kočka vypila sycený nápoj, zavolejte veterináři nebo na toxikologickou linku pro zvířata, jakmile si toho všimnete. Jedno nebo dvě olíznutí většinu zvířat pravděpodobně neotráví.",
-        "hr": "Ako je mačka popila gazirano piće, čim to shvatiš nazovi veterinara ili telefonsku liniju za otrovanja životinja. Jedno ili dva lizanja kod većine kućnih ljubimaca vjerojatno neće izazvati trovanje."
+        "hr": "Ako je mačka popila gazirano piće, čim to shvatiš nazovi veterinara ili telefonsku liniju za otrovanja životinja. Jedno ili dva lizanja kod većine kućnih ljubimaca vjerojatno neće izazvati trovanje.",
+        "sv": "Om din katt har druckit läsk, ring veterinären eller en giftrådgivning för djur så fort du upptäcker det. En eller två slickar leder knappast till förgiftning hos de flesta djur."
       },
       "serving": null,
       "child": {
@@ -27219,7 +27291,8 @@
         "nl": "Drankjes met prik zijn niets voor katten. Een bakje vers water is alles wat je kat nodig heeft!",
         "pl": "Napoje gazowane nie są dla kotów. Miska świeżej wody to wszystko, czego kot potrzebuje!",
         "cs": "Šumivé nápoje nejsou pro kočky. Tvoje kočka potřebuje jen misku čerstvé vody!",
-        "hr": "Gazirana pića nisu za mačke. Zdjelica svježe vode sve je što tvojoj mački treba!"
+        "hr": "Gazirana pića nisu za mačke. Zdjelica svježe vode sve je što tvojoj mački treba!",
+        "sv": "Kolsyrade drycker är inget för katter. En skål friskt vatten är allt din katt behöver!"
       },
       "faq": [
         {
@@ -27236,7 +27309,8 @@
             "nl": "Mijn kat likte aan mijn frisdrank – wat moet ik doen?",
             "pl": "Kot polizał mój napój gazowany – co robić?",
             "cs": "Kočka mi olízla sycený nápoj – co mám dělat?",
-            "hr": "Moja je mačka polizala moje gazirano piće – što da radim?"
+            "hr": "Moja je mačka polizala moje gazirano piće – što da radim?",
+            "sv": "Min katt slickade på min läsk – vad ska jag göra?"
           },
           "a": {
             "en": "One or two licks of soda is unlikely to cause poisoning in most pets. If your cat drank more, call your vet or a pet poison helpline as soon as you realise, because cats are more sensitive to caffeine than people.",
@@ -27251,7 +27325,8 @@
             "nl": "Een of twee likjes frisdrank veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging. Heeft je kat meer gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt, want katten zijn gevoeliger voor cafeïne dan mensen.",
             "pl": "Jedno czy dwa liźnięcia napoju gazowanego raczej nie spowodują zatrucia u większości zwierząt. Jeśli kot wypił więcej, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, gdy tylko się zorientujesz, bo koty są na kofeinę bardziej wrażliwe niż ludzie.",
             "cs": "Jedno nebo dvě olíznutí syceného nápoje většinu zvířat pravděpodobně neotráví. Pokud kočka vypila víc, zavolejte veterináři nebo na toxikologickou linku pro zvířata, jakmile si toho všimnete, protože kočky jsou na kofein citlivější než lidé.",
-            "hr": "Jedno ili dva lizanja gaziranog pića kod većine kućnih ljubimaca vjerojatno neće izazvati trovanje. Ako je mačka popila više, čim to shvatiš nazovi veterinara ili telefonsku liniju za otrovanja životinja, jer su mačke na kofein osjetljivije od ljudi."
+            "hr": "Jedno ili dva lizanja gaziranog pića kod većine kućnih ljubimaca vjerojatno neće izazvati trovanje. Ako je mačka popila više, čim to shvatiš nazovi veterinara ili telefonsku liniju za otrovanja životinja, jer su mačke na kofein osjetljivije od ljudi.",
+            "sv": "En eller två slickar läsk leder knappast till förgiftning hos de flesta djur. Om din katt drack mer, ring veterinären eller en giftrådgivning för djur så fort du upptäcker det, eftersom katter är känsligare för koffein än människor."
           }
         }
       ],
@@ -27515,7 +27590,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Sports drinks",
@@ -27530,7 +27606,8 @@
         "nl": "Sportdranken",
         "pl": "Napoje sportowe",
         "cs": "Sportovní nápoje",
-        "hr": "Sportska pića"
+        "hr": "Sportska pića",
+        "sv": "Sportdrycker"
       },
       "question": {
         "en": "Can cats drink sports drinks?",
@@ -27545,7 +27622,8 @@
         "nl": "Mogen katten sportdranken drinken?",
         "pl": "Czy koty mogą pić napoje sportowe?",
         "cs": "Mohou kočky pít sportovní nápoje?",
-        "hr": "Smiju li mačke piti sportska pića?"
+        "hr": "Smiju li mačke piti sportska pića?",
+        "sv": "Får katter dricka sportdrycker?"
       },
       "url_slug": {
         "en": "sports-drinks",
@@ -27560,7 +27638,8 @@
         "nl": "sportdranken",
         "pl": "napoje-sportowe",
         "cs": "sportovni-napoje",
-        "hr": "sportska-pica"
+        "hr": "sportska-pica",
+        "sv": "sportdrycker"
       },
       "answer": {
         "en": "No. Energy or sports drinks often contain a lot of caffeine, and cats are more sensitive to caffeine than people. No other drink is a substitute for water – it's the only drink your cat needs.",
@@ -27575,7 +27654,8 @@
         "nl": "Nee. Energiedrankjes en sportdranken bevatten vaak veel cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Geen enkel ander drankje kan water vervangen – het is het enige wat je kat hoeft te drinken.",
         "pl": "Nie. Napoje energetyczne i sportowe często zawierają dużo kofeiny, a koty są na nią bardziej wrażliwe niż ludzie. Żaden inny napój nie zastąpi wody – to jedyny napój, którego kot potrzebuje.",
         "cs": "Ne. Energetické nebo sportovní nápoje často obsahují hodně kofeinu a kočky jsou na kofein citlivější než lidé. Žádný jiný nápoj vodu nenahradí – kočka potřebuje pít jen ji.",
-        "hr": "Ne. Energetska ili sportska pića često sadrže mnogo kofeina, a mačke su na kofein osjetljivije od ljudi. Nijedno drugo piće ne zamjenjuje vodu – ona je jedino piće koje tvojoj mački treba."
+        "hr": "Ne. Energetska ili sportska pića često sadrže mnogo kofeina, a mačke su na kofein osjetljivije od ljudi. Nijedno drugo piće ne zamjenjuje vodu – ona je jedino piće koje tvojoj mački treba.",
+        "sv": "Nej. Energi- och sportdrycker innehåller ofta mycket koffein, och katter är känsligare för koffein än människor. Ingen annan dryck kan ersätta vatten – det är den enda drycken din katt behöver."
       },
       "why": {
         "en": "VCA vets warn that energy or sports drinks in the fridge often contain a lot of caffeine. Dogs and cats are more sensitive to caffeine than humans; it stimulates the heart and nervous system, which can be dangerous, and can upset the stomach. Cats Protection adds that milk, cream or any other liquid is no substitute for water in a cat's diet.",
@@ -27590,7 +27670,8 @@
         "nl": "Dierenartsen van VCA waarschuwen dat energiedrankjes en sportdranken in de koelkast vaak veel cafeïne bevatten. Honden en katten zijn gevoeliger voor cafeïne dan mensen: het prikkelt het hart en het zenuwstelsel, wat gevaarlijk kan zijn, en kan de maag van streek maken. Cats Protection voegt eraan toe dat melk, room of een andere vloeistof water in de voeding van een kat niet kan vervangen.",
         "pl": "Weterynarze z VCA ostrzegają, że napoje energetyczne i sportowe z lodówki często zawierają dużo kofeiny. Psy i koty są na kofeinę bardziej wrażliwe niż ludzie; pobudza ona serce i układ nerwowy, co może być niebezpieczne, a także może podrażnić żołądek. Cats Protection dodaje, że mleko, śmietanka ani żaden inny płyn nie zastąpią kotu wody w diecie.",
         "cs": "Veterináři z VCA upozorňují, že energetické nebo sportovní nápoje v lednici často obsahují hodně kofeinu. Psi i kočky jsou na kofein citlivější než lidé; kofein stimuluje srdce a nervovou soustavu, což může být nebezpečné, a může také podráždit žaludek. Cats Protection dodává, že mléko, smetana ani žádná jiná tekutina kočce vodu nenahradí.",
-        "hr": "Veterinari iz VCA upozoravaju da energetska ili sportska pića u hladnjaku često sadrže mnogo kofeina. Psi i mačke osjetljiviji su na kofein od ljudi; on potiče srce i živčani sustav, što može biti opasno, a može izazvati i probleme sa želucem. Cats Protection dodaje da mlijeko, vrhnje ili bilo koja druga tekućina ne zamjenjuju vodu u prehrani mačke."
+        "hr": "Veterinari iz VCA upozoravaju da energetska ili sportska pića u hladnjaku često sadrže mnogo kofeina. Psi i mačke osjetljiviji su na kofein od ljudi; on potiče srce i živčani sustav, što može biti opasno, a može izazvati i probleme sa želucem. Cats Protection dodaje da mlijeko, vrhnje ili bilo koja druga tekućina ne zamjenjuju vodu u prehrani mačke.",
+        "sv": "Veterinärerna på VCA varnar för att energi- och sportdrycker i kylskåpet ofta innehåller mycket koffein. Hundar och katter är känsligare för koffein än människor. Koffein stimulerar hjärtat och nervsystemet, vilket kan vara farligt, och kan ge orolig mage. Cats Protection tillägger att mjölk, grädde eller någon annan vätska inte kan ersätta vatten i kattens kost."
       },
       "signs": {
         "en": [
@@ -27696,6 +27777,14 @@
           "Probavne tegobe, povraćanje ili proljev",
           "Drhtanje",
           "Češće mokrenje"
+        ],
+        "sv": [
+          "Snabb puls",
+          "Överaktivitet, rastlöshet, vill inte ligga still",
+          "Går av och an eller jamar mycket",
+          "Orolig mage, kräkningar eller diarré",
+          "Darrningar",
+          "Ökat kissande"
         ]
       },
       "what_to_do": {
@@ -27711,7 +27800,8 @@
         "nl": "Heeft je kat een sportdrank met cafeïne gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt. De verschijnselen kunnen binnen een paar uur beginnen.",
         "pl": "Jeśli kot wypił napój sportowy z kofeiną, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, gdy tylko się zorientujesz. Objawy mogą pojawić się w ciągu kilku godzin.",
         "cs": "Pokud kočka vypila sportovní nápoj s kofeinem, zavolejte veterináři nebo na toxikologickou linku pro zvířata, jakmile si toho všimnete. Příznaky se mohou objevit během několika hodin.",
-        "hr": "Ako je mačka popila sportsko piće s kofeinom, čim to shvatiš nazovi veterinara ili telefonsku liniju za otrovanja životinja. Znakovi se mogu pojaviti već nakon nekoliko sati."
+        "hr": "Ako je mačka popila sportsko piće s kofeinom, čim to shvatiš nazovi veterinara ili telefonsku liniju za otrovanja životinja. Znakovi se mogu pojaviti već nakon nekoliko sati.",
+        "sv": "Om din katt har druckit en sportdryck med koffein, ring veterinären eller en giftrådgivning för djur så fort du upptäcker det. Symtomen kan börja inom några timmar."
       },
       "serving": null,
       "child": {
@@ -27727,7 +27817,8 @@
         "nl": "Sportdranken zijn niets voor katten. Vers, schoon water is het beste drankje om je kat gezond te houden!",
         "pl": "Napoje sportowe nie są dla kotów. Świeża, czysta woda to najlepszy napój dla zdrowia kota!",
         "cs": "Sportovní nápoje nejsou pro kočky. Nejlepším nápojem pro zdravou kočku je čerstvá čistá voda!",
-        "hr": "Sportska pića nisu za mačke. Svježa, čista voda najbolje je piće za zdravlje tvoje mačke!"
+        "hr": "Sportska pića nisu za mačke. Svježa, čista voda najbolje je piće za zdravlje tvoje mačke!",
+        "sv": "Sportdrycker är inget för katter. Friskt, rent vatten är bäst för att din katt ska hålla sig frisk!"
       },
       "faq": [
         {
@@ -27744,7 +27835,8 @@
             "nl": "Kan een sportdrank helpen als mijn kat te weinig drinkt?",
             "pl": "Czy napój sportowy pomoże, jeśli kot za mało pije?",
             "cs": "Může sportovní nápoj pomoci, když moje kočka málo pije?",
-            "hr": "Može li sportsko piće pomoći ako moja mačka ne pije dovoljno?"
+            "hr": "Može li sportsko piće pomoći ako moja mačka ne pije dovoljno?",
+            "sv": "Kan en sportdryck hjälpa om min katt inte dricker tillräckligt?"
           },
           "a": {
             "en": "Give fresh water instead – no other liquid is a substitute for it. Signs of dehydration include lethargy, weakness, poor appetite and dry gums. If you are concerned that your cat is dehydrated, contact a vet promptly.",
@@ -27759,7 +27851,8 @@
             "nl": "Geef in plaats daarvan vers water – geen enkele andere vloeistof kan water vervangen. Verschijnselen van uitdroging zijn lusteloosheid, zwakte, weinig eetlust en droog tandvlees. Denk je dat je kat uitgedroogd is, neem dan snel contact op met een dierenarts.",
             "pl": "Daj kotu zamiast tego świeżą wodę – żaden inny płyn jej nie zastąpi. Objawy odwodnienia to ospałość, osłabienie, słaby apetyt i suche dziąsła. Jeśli martwisz się, że kot jest odwodniony, szybko skontaktuj się z weterynarzem.",
             "cs": "Dejte kočce raději čerstvou vodu – žádná jiná tekutina ji nenahradí. Mezi příznaky dehydratace patří malátnost, slabost, snížená chuť k jídlu a suché dásně. Pokud se obáváte, že je kočka dehydrovaná, neprodleně se obraťte na veterináře.",
-            "hr": "Umjesto toga daj svježu vodu – nijedna druga tekućina ne zamjenjuje je. Znakovi dehidracije jesu bezvoljnost, slabost, slabiji apetit i suhe desni. Ako sumnjaš da je mačka dehidrirana, obrati se veterinaru što prije."
+            "hr": "Umjesto toga daj svježu vodu – nijedna druga tekućina ne zamjenjuje je. Znakovi dehidracije jesu bezvoljnost, slabost, slabiji apetit i suhe desni. Ako sumnjaš da je mačka dehidrirana, obrati se veterinaru što prije.",
+            "sv": "Ge friskt vatten i stället – ingen annan vätska kan ersätta det. Tecken på uttorkning är orkeslöshet, svaghet, dålig aptit och torrt tandkött. Om du är orolig för att katten är uttorkad, kontakta veterinären snabbt."
           }
         }
       ],
@@ -36543,7 +36636,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Bone broth",
@@ -36558,7 +36652,8 @@
         "nl": "Bottenbouillon",
         "pl": "Bulion kostny",
         "cs": "Kostní vývar",
-        "hr": "Juha od kostiju"
+        "hr": "Juha od kostiju",
+        "sv": "Benbuljong"
       },
       "question": {
         "en": "Can dogs have bone broth?",
@@ -36573,7 +36668,8 @@
         "nl": "Mogen honden bottenbouillon krijgen?",
         "pl": "Czy psy mogą pić bulion kostny?",
         "cs": "Mohou psi dostat kostní vývar?",
-        "hr": "Smiju li psi jesti juhu od kostiju?"
+        "hr": "Smiju li psi jesti juhu od kostiju?",
+        "sv": "Får hundar dricka benbuljong?"
       },
       "url_slug": {
         "en": "bone-broth",
@@ -36588,7 +36684,8 @@
         "nl": "bottenbouillon",
         "pl": "bulion-kostny",
         "cs": "kostni-vyvar",
-        "hr": "juha-od-kostiju"
+        "hr": "juha-od-kostiju",
+        "sv": "benbuljong"
       },
       "answer": {
         "en": "Yes, plain bone broth made with dog-safe ingredients is fine. It is mild and easy on sensitive stomachs. Strain out every bone before serving, remove the fat layer, and skip broths with onions, garlic or salt.",
@@ -36603,7 +36700,8 @@
         "nl": "Ja, een simpele bottenbouillon van ingrediënten die veilig zijn voor honden is prima. Het is mild en goed te verdragen voor een gevoelige maag. Zeef alle botten eruit voordat je de bouillon geeft, haal de vetlaag eraf en laat bouillon met ui, knoflook of zout staan.",
         "pl": "Tak, bulion kostny bez dodatków, przygotowany ze składników bezpiecznych dla psów, jest w porządku. Jest łagodny i lekkostrawny dla wrażliwych żołądków. Przed podaniem odcedź wszystkie kości, zdejmij warstwę tłuszczu i unikaj bulionów z cebulą, czosnkiem lub solą.",
         "cs": "Ano, obyčejný kostní vývar z přísad bezpečných pro psy je v pořádku. Je jemný a citlivým žaludkům nevadí. Před podáním z něj vyberte všechny kosti, seberte vrstvu tuku a nepodávejte vývary s cibulí, česnekem nebo solí.",
-        "hr": "Da, obična juha od kostiju, pripremljena samo od sastojaka sigurnih za pse, u redu je. Blaga je i ne opterećuje osjetljive želuce. Prije posluživanja izvadi sve kosti, skini sloj masti i izbjegavaj juhe s dodatkom luka, češnjaka ili soli."
+        "hr": "Da, obična juha od kostiju, pripremljena samo od sastojaka sigurnih za pse, u redu je. Blaga je i ne opterećuje osjetljive želuce. Prije posluživanja izvadi sve kosti, skini sloj masti i izbjegavaj juhe s dodatkom luka, češnjaka ili soli.",
+        "sv": "Ja, vanlig benbuljong som kokats på ingredienser som är säkra för hundar går bra. Den är mild och skonsam för känsliga magar. Sila bort alla ben innan du serverar, ta bort fettlagret och undvik buljonger med lök, vitlök eller salt."
       },
       "why": {
         "en": "Bone broth is a stock made by slowly cooking animal bones at low heat for a long time. It is mild, flavourful and easy on sensitive stomachs, and it can make food more appealing to dogs with a reduced appetite. The risks come from what goes into it: some broths contain additives such as onions, garlic or salt, and cooked bones can splinter and injure your dog or get lodged in the throat.",
@@ -36618,7 +36716,8 @@
         "nl": "Bottenbouillon is een bouillon die je maakt door dierlijke botten lang op laag vuur te laten sudderen. Het is mild, smaakvol en goed te verdragen voor een gevoelige maag, en het kan eten aantrekkelijker maken voor honden met weinig eetlust. De risico’s zitten in wat erin gaat: sommige bouillons bevatten toevoegingen zoals ui, knoflook of zout, en gekookte botten kunnen versplinteren en je hond verwonden of in zijn keel blijven steken.",
         "pl": "Bulion kostny to wywar powstający przez długie, powolne gotowanie kości zwierzęcych na małym ogniu. Jest łagodny, aromatyczny i lekkostrawny dla wrażliwych żołądków, a psom ze słabszym apetytem może uatrakcyjnić jedzenie. Ryzyko wynika z tego, co się do niego dodaje: niektóre buliony zawierają dodatki, takie jak cebula, czosnek czy sól, a ugotowane kości mogą pękać na ostre odłamki, zranić psa lub utknąć mu w gardle.",
         "cs": "Kostní vývar vzniká dlouhým a pomalým vařením zvířecích kostí na mírném ohni. Je jemný, chutný a citlivým žaludkům nevadí a psům se sníženou chutí k jídlu může udělat krmivo lákavější. Rizika spočívají v tom, co se do vývaru přidává: některé obsahují přísady, jako je cibule, česnek nebo sůl, a tepelně upravené kosti se mohou rozštípnout a psa zranit nebo mu uvíznout v krku.",
-        "hr": "Juha od kostiju je temeljac koji se dobiva dugim, laganim kuhanjem životinjskih kostiju na niskoj temperaturi. Blaga je, aromatična i ne opterećuje osjetljive želuce, a može hranu učiniti privlačnijom psima slabijeg apetita. Rizik je u onome što se u nju stavlja: neke juhe sadrže dodatke poput luka, češnjaka ili soli, a termički obrađene kosti mogu se rascijepati i ozlijediti psa ili zapeti u grlu."
+        "hr": "Juha od kostiju je temeljac koji se dobiva dugim, laganim kuhanjem životinjskih kostiju na niskoj temperaturi. Blaga je, aromatična i ne opterećuje osjetljive želuce, a može hranu učiniti privlačnijom psima slabijeg apetita. Rizik je u onome što se u nju stavlja: neke juhe sadrže dodatke poput luka, češnjaka ili soli, a termički obrađene kosti mogu se rascijepati i ozlijediti psa ili zapeti u grlu.",
+        "sv": "Benbuljong är en fond som kokas på djurben vid låg värme under lång tid. Den är mild, smakrik och skonsam för känsliga magar, och kan göra maten mer lockande för hundar med nedsatt aptit. Riskerna ligger i det som tillsätts: vissa buljonger innehåller tillsatser som lök, vitlök eller salt, och tillagade ben kan splittras och skada hunden eller fastna i halsen."
       },
       "signs": null,
       "what_to_do": {
@@ -36634,7 +36733,8 @@
         "nl": "Heeft je hond bouillon met ui, knoflook of veel zout gehad, bekijk dan onze pagina’s over ui, knoflook en zout. Heeft je hond een gekookt bot ingeslikt, bekijk dan onze pagina over gekookte botten. Bottenbouillon lost gewrichtsproblemen niet op, dus bespreek die met je dierenarts.",
         "pl": "Jeśli pies dostał bulion z cebulą, czosnkiem lub dużą ilością soli, zajrzyj na nasze strony o cebuli, czosnku i soli. Jeśli połknął ugotowaną kość, zajrzyj na stronę o gotowanych kościach. Bulion kostny sam nie rozwiąże problemów ze stawami, więc porozmawiaj o nich z weterynarzem.",
         "cs": "Pokud pes dostal vývar s cibulí, česnekem nebo velkým množstvím soli, podívejte se na naše stránky o cibuli, česneku a soli. Pokud pes spolkl tepelně upravenou kost, podívejte se na naši stránku o tepelně upravených kostech. Kostní vývar sám o sobě problémy s klouby nevyřeší, proto je řešte s veterinářem.",
-        "hr": "Ako je pas pojeo juhu s lukom, češnjakom ili mnogo soli, pogledaj naše stranice o luku, češnjaku i soli. Ako je pas progutao kuhanu kost, pogledaj našu stranicu o kuhanim kostima. Juha od kostiju sama neće riješiti probleme sa zglobovima, zato o njima porazgovaraj s veterinarom."
+        "hr": "Ako je pas pojeo juhu s lukom, češnjakom ili mnogo soli, pogledaj naše stranice o luku, češnjaku i soli. Ako je pas progutao kuhanu kost, pogledaj našu stranicu o kuhanim kostima. Juha od kostiju sama neće riješiti probleme sa zglobovima, zato o njima porazgovaraj s veterinarom.",
+        "sv": "Om din hund har fått buljong som innehåller lök, vitlök eller mycket salt, se våra sidor om lök, vitlök och salt. Om din hund har svalt ett tillagat ben, se vår sida om kokta ben. Benbuljong löser inte ledproblem på egen hand, så prata med veterinären om dem."
       },
       "serving": {
         "en": "Use only natural, dog-safe ingredients, with no onions, garlic or salt. After cooking, refrigerate the broth, remove the hardened layer of fat from the top and strain out every bone. Serve it on its own or mixed into dry food.",
@@ -36649,7 +36749,8 @@
         "nl": "Gebruik alleen natuurlijke ingrediënten die veilig zijn voor honden, zonder ui, knoflook of zout. Zet de bouillon na het koken in de koelkast, schep de verharde vetlaag er van boven af en zeef alle botten eruit. Geef de bouillon puur of meng hem door het droge voer.",
         "pl": "Używaj tylko naturalnych składników bezpiecznych dla psów, bez cebuli, czosnku i soli. Po ugotowaniu schłódź bulion w lodówce, zdejmij z wierzchu stwardniałą warstwę tłuszczu i odcedź wszystkie kości. Podaj go samego lub wymieszany z suchą karmą.",
         "cs": "Používejte jen přírodní přísady bezpečné pro psy, bez cibule, česneku a soli. Po uvaření vývar uložte do lednice, seberte z hladiny ztuhlou vrstvu tuku a vyberte všechny kosti. Podávejte ho samotný nebo smíchaný se suchým krmivem.",
-        "hr": "Koristi samo prirodne sastojke koji su sigurni za pse, bez luka, češnjaka i soli. Nakon kuhanja juhu ostavi da se ohladi u hladnjaku, skini stvrdnuti sloj masti s površine i izvadi sve kosti. Poslužuj je samu ili pomiješanu sa suhom hranom."
+        "hr": "Koristi samo prirodne sastojke koji su sigurni za pse, bez luka, češnjaka i soli. Nakon kuhanja juhu ostavi da se ohladi u hladnjaku, skini stvrdnuti sloj masti s površine i izvadi sve kosti. Poslužuj je samu ili pomiješanu sa suhom hranom.",
+        "sv": "Använd bara naturliga ingredienser som är säkra för hundar, utan lök, vitlök eller salt. Låt buljongen svalna i kylen efter tillagningen, ta bort det stelnade fettlagret överst och sila bort alla ben. Servera den som den är eller blanda ut den i torrfoder."
       },
       "child": {
         "en": "Bone broth can be a tasty treat for dogs. A grown-up makes it and takes out every bone first, because bones aren't safe for dogs.",
@@ -36664,7 +36765,8 @@
         "nl": "Bottenbouillon kan een lekker snoepje zijn voor honden. Een volwassene maakt de bouillon en haalt er eerst alle botten uit, want botten zijn niet veilig voor honden.",
         "pl": "Bulion kostny może być dla psa pysznym smakołykiem. Dorosły go przygotowuje i najpierw wyjmuje wszystkie kości, bo kości nie są dla psów bezpieczne.",
         "cs": "Kostní vývar může být pro psy chutný pamlsek. Dospělý ho uvaří a nejdřív z něj vyndá všechny kosti, protože kosti pro psy nejsou bezpečné.",
-        "hr": "Juha od kostiju može biti ukusna poslastica za pse. Odrasla osoba je skuha i najprije izvadi sve kosti, jer kosti nisu sigurne za pse."
+        "hr": "Juha od kostiju može biti ukusna poslastica za pse. Odrasla osoba je skuha i najprije izvadi sve kosti, jer kosti nisu sigurne za pse.",
+        "sv": "Benbuljong kan vara en läcker godbit för hundar. En vuxen kokar den och tar bort alla ben först, eftersom ben inte är säkra för hundar."
       },
       "faq": [
         {
@@ -36681,7 +36783,8 @@
             "nl": "Wat is het verschil tussen bottenbouillon en gewone bouillon?",
             "pl": "Czym bulion kostny różni się od zwykłego bulionu?",
             "cs": "Čím se kostní vývar liší od obyčejného vývaru?",
-            "hr": "Po čemu se juha od kostiju razlikuje od obične juhe?"
+            "hr": "Po čemu se juha od kostiju razlikuje od obične juhe?",
+            "sv": "Hur skiljer sig benbuljong från vanlig buljong?"
           },
           "a": {
             "en": "Bone broth is a stock liquid made by slowly cooking animal bones at low heat for an extended period. For everyday broth and stock cubes, see our broth page.",
@@ -36696,7 +36799,8 @@
             "nl": "Bottenbouillon is een bouillon die je maakt door dierlijke botten lange tijd op laag vuur te laten sudderen. Voor gewone bouillon en bouillonblokjes kun je terecht op onze bouillonpagina.",
             "pl": "Bulion kostny to wywar powstający przez długie, powolne gotowanie kości zwierzęcych na małym ogniu. O codziennym bulionie i kostkach bulionowych przeczytasz na naszej stronie o bulionie.",
             "cs": "Kostní vývar vzniká dlouhým pomalým vařením zvířecích kostí na mírném ohni. O běžném vývaru a bujónových kostkách se dočtete na naší stránce o vývaru.",
-            "hr": "Juha od kostiju je temeljac koji se dobiva dugim, laganim kuhanjem životinjskih kostiju na niskoj temperaturi. Za svakodnevnu juhu i kocke za juhu pogledaj našu stranicu o juhi i temeljcu."
+            "hr": "Juha od kostiju je temeljac koji se dobiva dugim, laganim kuhanjem životinjskih kostiju na niskoj temperaturi. Za svakodnevnu juhu i kocke za juhu pogledaj našu stranicu o juhi i temeljcu.",
+            "sv": "Benbuljong är en fond som kokas på djurben vid låg värme under lång tid. För vardagsbuljong och buljongtärningar, se vår sida om buljong och fond."
           }
         },
         {
@@ -36713,7 +36817,8 @@
             "nl": "Mag ik bottenbouillon uit de winkel gebruiken?",
             "pl": "Czy mogę dać psu bulion kostny ze sklepu?",
             "cs": "Mohu použít kostní vývar z obchodu?",
-            "hr": "Smijem li psu dati gotovu juhu od kostiju iz trgovine?"
+            "hr": "Smijem li psu dati gotovu juhu od kostiju iz trgovine?",
+            "sv": "Kan jag använda köpt benbuljong?"
           },
           "a": {
             "en": "Look for one with natural, dog-safe ingredients, because some contain additives for preservation and taste, such as onions, garlic or salt.",
@@ -36728,7 +36833,8 @@
             "nl": "Kies een bouillon met natuurlijke ingrediënten die veilig zijn voor honden, want sommige bevatten toevoegingen als ui, knoflook of zout om ze langer houdbaar en smakelijker te maken.",
             "pl": "Szukaj bulionu z naturalnych składników bezpiecznych dla psów, bo niektóre zawierają dodatki konserwujące i poprawiające smak, takie jak cebula, czosnek lub sól.",
             "cs": "Hledejte takový, který obsahuje přírodní přísady bezpečné pro psy, protože některé obsahují přísady pro konzervaci a chuť, například cibuli, česnek nebo sůl.",
-            "hr": "Traži juhu s prirodnim sastojcima sigurnima za pse, jer neke sadrže dodatke za dulju trajnost i bolji okus, poput luka, češnjaka ili soli."
+            "hr": "Traži juhu s prirodnim sastojcima sigurnima za pse, jer neke sadrže dodatke za dulju trajnost i bolji okus, poput luka, češnjaka ili soli.",
+            "sv": "Välj en med naturliga ingredienser som är säkra för hundar, eftersom vissa innehåller tillsatser för hållbarhet och smak, som lök, vitlök eller salt."
           }
         },
         {
@@ -36745,7 +36851,8 @@
             "nl": "Helpt bottenbouillon bij de gewrichten van mijn hond?",
             "pl": "Czy bulion kostny pomaga na stawy psa?",
             "cs": "Pomáhá kostní vývar psím kloubům?",
-            "hr": "Pomaže li juha od kostiju zglobovima mog psa?"
+            "hr": "Pomaže li juha od kostiju zglobovima mog psa?",
+            "sv": "Hjälper benbuljong hundens leder?"
           },
           "a": {
             "en": "The AKC says the collagen in bone broth contributes to joint health, but bone broth won't cure joint problems without other treatments, so contact your vet.",
@@ -36760,7 +36867,8 @@
             "nl": "Volgens de AKC draagt het collageen in bottenbouillon bij aan gezonde gewrichten, maar zonder andere behandelingen lost bottenbouillon gewrichtsproblemen niet op. Neem daarom contact op met je dierenarts.",
             "pl": "AKC podaje, że kolagen w bulionie kostnym wspiera zdrowie stawów, ale bulion kostny nie wyleczy problemów ze stawami bez innego leczenia, więc skontaktuj się z weterynarzem.",
             "cs": "AKC uvádí, že kolagen v kostním vývaru přispívá ke zdraví kloubů, ale kostní vývar bez další léčby problémy s klouby nevyléčí, proto se obraťte na veterináře.",
-            "hr": "AKC navodi da kolagen u juhi od kostiju pridonosi zdravlju zglobova, ali sama juha od kostiju neće izliječiti probleme sa zglobovima bez drugog liječenja, pa se obrati veterinaru."
+            "hr": "AKC navodi da kolagen u juhi od kostiju pridonosi zdravlju zglobova, ali sama juha od kostiju neće izliječiti probleme sa zglobovima bez drugog liječenja, pa se obrati veterinaru.",
+            "sv": "AKC säger att kollagenet i benbuljong bidrar till ledhälsan, men benbuljong botar inte ledproblem utan andra behandlingar, så kontakta veterinären."
           }
         }
       ],
@@ -39620,7 +39728,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Cat food",
@@ -39635,7 +39744,8 @@
         "nl": "Kattenvoer",
         "pl": "Karma dla kotów",
         "cs": "Kočičí krmivo",
-        "hr": "Hrana za mačke"
+        "hr": "Hrana za mačke",
+        "sv": "Kattmat"
       },
       "question": {
         "en": "Can dogs eat cat food?",
@@ -39650,7 +39760,8 @@
         "nl": "Mogen honden kattenvoer eten?",
         "pl": "Czy psy mogą jeść karmę dla kotów?",
         "cs": "Mohou psi jíst kočičí krmivo?",
-        "hr": "Smiju li psi jesti hranu za mačke?"
+        "hr": "Smiju li psi jesti hranu za mačke?",
+        "sv": "Får hundar äta kattmat?"
       },
       "url_slug": {
         "en": "cat-food",
@@ -39665,7 +39776,8 @@
         "nl": "kattenvoer",
         "pl": "karma-dla-kotow",
         "cs": "kocici-krmivo",
-        "hr": "hrana-za-macke"
+        "hr": "hrana-za-macke",
+        "sv": "kattmat"
       },
       "answer": {
         "en": "Not regularly. A dog that sneaks some of the cat's food now and then probably won't be harmed, but it shouldn't become a habit. Cat food is much higher in meat-based protein and doesn't have the right balance of nutrients for dogs.",
@@ -39680,7 +39792,8 @@
         "nl": "Niet regelmatig. Een hond die af en toe wat van het kattenvoer steelt, krijgt daar waarschijnlijk geen last van, maar het mag geen gewoonte worden. Kattenvoer bevat veel meer vleeseiwit en de voedingsstoffen zitten er niet in de juiste verhouding in voor honden.",
         "pl": "Nie na co dzień. Pies, który od czasu do czasu podkrada karmę kota, prawdopodobnie nic sobie nie zrobi, ale nie powinno to stać się nawykiem. Karma dla kotów zawiera znacznie więcej białka pochodzenia mięsnego i nie ma właściwej dla psów proporcji składników odżywczych.",
         "cs": "Pravidelně ne. Pokud si pes občas ukradne trochu kočičího krmiva, pravděpodobně se mu nic nestane, ale nemělo by se to stát zvykem. Kočičí krmivo obsahuje mnohem víc masových bílkovin a nemá pro psy správně vyvážené složení živin.",
-        "hr": "Ne redovito. Pas koji povremeno ukrade malo mačje hrane vjerojatno od toga neće imati štete, ali to ne smije postati navika. Hrana za mačke ima mnogo više bjelančevina iz mesa i ne sadrži hranjive tvari u omjeru koji odgovara psima."
+        "hr": "Ne redovito. Pas koji povremeno ukrade malo mačje hrane vjerojatno od toga neće imati štete, ali to ne smije postati navika. Hrana za mačke ima mnogo više bjelančevina iz mesa i ne sadrži hranjive tvari u omjeru koji odgovara psima.",
+        "sv": "Inte regelbundet. En hund som smygäter lite av kattens mat då och då tar sannolikt ingen skada, men det ska inte bli en vana. Kattmat innehåller mycket mer köttbaserat protein och har inte rätt näringsbalans för hundar."
       },
       "why": {
         "en": "Cats are obligate carnivores, so cat food is much higher in meat-based protein than dog food and doesn't have the correct balance of protein, fibre and nutrients dogs need. Over time the imbalance can lead to stomach and gut upset, obesity and pancreatitis, and the high protein levels can be hard on a dog's liver and kidneys.",
@@ -39695,7 +39808,8 @@
         "nl": "Katten zijn strikte vleeseters, dus kattenvoer bevat veel meer vleeseiwit dan hondenvoer, en de verhouding tussen eiwit, vezels en andere voedingsstoffen is niet de juiste voor honden. Op den duur kan die scheve verhouding leiden tot maag- en darmklachten, obesitas en alvleesklierontsteking, en het hoge eiwitgehalte kan de lever en nieren van een hond zwaar belasten.",
         "pl": "Koty są bezwzględnymi mięsożercami, dlatego karma dla kotów zawiera znacznie więcej białka pochodzenia mięsnego niż karma dla psów i nie ma właściwej proporcji białka, błonnika i składników odżywczych, których potrzebują psy. Z czasem taka nierównowaga może prowadzić do rozstroju żołądka i jelit, otyłości i zapalenia trzustki, a duża ilość białka może obciążać wątrobę i nerki psa.",
         "cs": "Kočky jsou obligátní masožravci, proto kočičí krmivo obsahuje mnohem víc masových bílkovin než psí a nemá správný poměr bílkovin, vlákniny a živin, které psi potřebují. Časem může tato nerovnováha vést k potížím se žaludkem a střevy, obezitě a zánětu slinivky břišní, a vysoký obsah bílkovin může zatěžovat psí játra a ledviny.",
-        "hr": "Mačke su strogi mesojedi, pa hrana za mačke sadrži mnogo više bjelančevina iz mesa od hrane za pse i ne sadrži bjelančevine, vlakna i hranjive tvari u omjeru koji je potreban psima. S vremenom ta neuravnoteženost može dovesti do probavnih tegoba, pretilosti i upale gušterače, a visoka razina bjelančevina može opteretiti jetru i bubrege psa."
+        "hr": "Mačke su strogi mesojedi, pa hrana za mačke sadrži mnogo više bjelančevina iz mesa od hrane za pse i ne sadrži bjelančevine, vlakna i hranjive tvari u omjeru koji je potreban psima. S vremenom ta neuravnoteženost može dovesti do probavnih tegoba, pretilosti i upale gušterače, a visoka razina bjelančevina može opteretiti jetru i bubrege psa.",
+        "sv": "Katter är obligata köttätare, så kattmat innehåller mycket mer köttbaserat protein än hundmat och har inte rätt balans av protein, fibrer och näringsämnen som hundar behöver. Med tiden kan obalansen leda till mag- och tarmproblem, fetma och bukspottkörtelinflammation, och den höga proteinhalten kan belasta hundens lever och njurar."
       },
       "signs": {
         "en": [
@@ -39814,6 +39928,15 @@
           "Proljev",
           "Napuhnut trbuh",
           "Vrućica"
+        ],
+        "sv": [
+          "Ont i magen och kutig rygg",
+          "Trötthet och svaghet",
+          "Vill inte äta",
+          "Kräkningar",
+          "Diarré",
+          "Svullen mage",
+          "Feber"
         ]
       },
       "what_to_do": {
@@ -39829,7 +39952,8 @@
         "nl": "Heeft je hond na het eten van kattenvoer buikklachten, bel dan je dierenarts. Bij verschijnselen van alvleesklierontsteking, zoals een gebogen rug met buikpijn, braken, zwakte of koorts, moet je meteen naar de dierenarts.",
         "pl": "Jeśli po zjedzeniu karmy dla kotów pies ma dolegliwości brzuszne, zadzwoń do weterynarza. Objawy zapalenia trzustki, takie jak zgarbiony grzbiet z bólem brzucha, wymioty, osłabienie lub gorączka, wymagają natychmiastowej opieki weterynaryjnej.",
         "cs": "Pokud má pes po kočičím krmivu potíže s břichem, zavolejte veterináři. Příznaky zánětu slinivky břišní, například shrbená záda s bolestí břicha, zvracení, slabost nebo horečka, vyžadují okamžitou veterinární péči.",
-        "hr": "Ako pas nakon što pojede mačju hranu pokazuje znakove nelagode u trbuhu, nazovi veterinara. Znakovi upale gušterače, poput pogrbljenih leđa uz bol u trbuhu, povraćanja, slabosti ili vrućice, zahtijevaju hitnu veterinarsku pomoć."
+        "hr": "Ako pas nakon što pojede mačju hranu pokazuje znakove nelagode u trbuhu, nazovi veterinara. Znakovi upale gušterače, poput pogrbljenih leđa uz bol u trbuhu, povraćanja, slabosti ili vrućice, zahtijevaju hitnu veterinarsku pomoć.",
+        "sv": "Om din hund visar tecken på magbesvär efter att ha ätit kattmat, ring veterinären. Symtom på bukspottkörtelinflammation, som kutig rygg med ont i magen, kräkningar, svaghet eller feber, kräver omedelbar veterinärvård."
       },
       "serving": null,
       "child": {
@@ -39845,7 +39969,8 @@
         "nl": "Kattenvoer is gemaakt voor katten. Honden blijven het gezondst met hun eigen hondenvoer, dus help mee en zet het bakje van de kat hoog neer!",
         "pl": "Karma dla kotów jest przeznaczona dla kotów. Psy są najzdrowsze, gdy jedzą własną karmę, więc pomóż postawić miskę kota tam, gdzie pies jej nie dosięgnie!",
         "cs": "Kočičí krmivo je určené kočkám. Psům nejvíc svědčí jejich vlastní psí krmivo, a tak pomoz hlídat, aby kočičí miska stála vysoko!",
-        "hr": "Hrana za mačke napravljena je za mačke. Psi su najzdraviji kad jedu svoju hranu za pse, zato pomozi da mačja zdjelica ostane na visokom mjestu!"
+        "hr": "Hrana za mačke napravljena je za mačke. Psi su najzdraviji kad jedu svoju hranu za pse, zato pomozi da mačja zdjelica ostane na visokom mjestu!",
+        "sv": "Kattmat är gjord för katter. Hundar håller sig friskast med sin egen hundmat, så hjälp till att ställa kattens skål högt upp!"
       },
       "faq": [
         {
@@ -39862,7 +39987,8 @@
             "nl": "Hoe zorg ik dat mijn hond niet aan het kattenvoer komt?",
             "pl": "Jak odgonić psa od karmy kota?",
             "cs": "Jak psovi zabránit, aby se dostal ke kočičímu krmivu?",
-            "hr": "Kako spriječiti psa da jede mačju hranu?"
+            "hr": "Kako spriječiti psa da jede mačju hranu?",
+            "sv": "Hur hindrar jag hunden från att äta kattens mat?"
           },
           "a": {
             "en": "Place the cat's food out of your dog's reach. If your dog regularly gets into it, change where you keep the cat's food or where and how you feed your cat.",
@@ -39877,7 +40003,8 @@
             "nl": "Zet het kattenvoer buiten het bereik van je hond. Komt je hond er toch regelmatig aan, verander dan waar je het kattenvoer bewaart of waar en hoe je je kat voert.",
             "pl": "Postaw jedzenie kota poza zasięgiem psa. Jeśli pies regularnie się do niego dobiera, zmień miejsce, w którym trzymasz karmę kota, albo miejsce i sposób karmienia kota.",
             "cs": "Kočičí krmivo uchovávejte mimo dosah psa. Pokud se k němu pes dostává pravidelně, změňte místo, kde ho uchováváte, nebo to, kde a jak kočku krmíte.",
-            "hr": "Mačju hranu stavi izvan dosega psa. Ako pas redovito dolazi do nje, promijeni mjesto na kojem je čuvaš ili gdje i kako hraniš mačku."
+            "hr": "Mačju hranu stavi izvan dosega psa. Ako pas redovito dolazi do nje, promijeni mjesto na kojem je čuvaš ili gdje i kako hraniš mačku.",
+            "sv": "Ställ kattens mat utom räckhåll för hunden. Om hunden ofta kommer åt den, ändra var du förvarar kattens mat eller var och hur du matar katten."
           }
         },
         {
@@ -39894,7 +40021,8 @@
             "nl": "Mag mijn hond in een noodgeval kattenvoer eten?",
             "pl": "Czy w sytuacji awaryjnej pies może zjeść karmę dla kotów?",
             "cs": "Může pes v nouzi jíst kočičí krmivo?",
-            "hr": "Smije li moj pas jesti hranu za mačke u slučaju nužde?"
+            "hr": "Smije li moj pas jesti hranu za mačke u slučaju nužde?",
+            "sv": "Kan min hund äta kattmat i en nödsituation?"
           },
           "a": {
             "en": "Dogs can survive on cat food in a tough spot, but unless your vet recommends otherwise, the best food for your dog is dog food.",
@@ -39909,7 +40037,8 @@
             "nl": "Een hond kan in noodgevallen op kattenvoer overleven, maar tenzij je dierenarts anders adviseert, is hondenvoer het beste voor je hond.",
             "pl": "W razie potrzeby pies może przeżyć na karmie dla kotów, ale jeśli weterynarz nie zaleci inaczej, najlepszym jedzeniem dla psa jest karma dla psów.",
             "cs": "Psi dokážou v nouzi na kočičím krmivu přežít, ale pokud veterinář nedoporučí jinak, je pro psa nejlepší psí krmivo.",
-            "hr": "U nuždi psi mogu preživjeti na mačjoj hrani, ali ako veterinar ne preporuči drukčije, najbolja hrana za tvog psa jest hrana za pse."
+            "hr": "U nuždi psi mogu preživjeti na mačjoj hrani, ali ako veterinar ne preporuči drukčije, najbolja hrana za tvog psa jest hrana za pse.",
+            "sv": "Hundar kan överleva på kattmat i en knipa, men om inte veterinären säger något annat är hundmat den bästa maten för din hund."
           }
         }
       ],
@@ -43952,7 +44081,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Coconut water",
@@ -43967,7 +44097,8 @@
         "nl": "Kokoswater",
         "pl": "Woda kokosowa",
         "cs": "Kokosová voda",
-        "hr": "Kokosova voda"
+        "hr": "Kokosova voda",
+        "sv": "Kokosvatten"
       },
       "question": {
         "en": "Can dogs drink coconut water?",
@@ -43982,7 +44113,8 @@
         "nl": "Mogen honden kokoswater drinken?",
         "pl": "Czy psy mogą pić wodę kokosową?",
         "cs": "Mohou psi pít kokosovou vodu?",
-        "hr": "Smiju li psi piti kokosovu vodu?"
+        "hr": "Smiju li psi piti kokosovu vodu?",
+        "sv": "Får hundar dricka kokosvatten?"
       },
       "url_slug": {
         "en": "coconut-water",
@@ -43997,7 +44129,8 @@
         "nl": "kokoswater",
         "pl": "woda-kokosowa",
         "cs": "kokosova-voda",
-        "hr": "kokosova-voda"
+        "hr": "kokosova-voda",
+        "sv": "kokosvatten"
       },
       "answer": {
         "en": "Yes, as an occasional treat. A vet quoted by the AKC says coconut water is safe for dogs but should be a treat, not a substitute for regular water. Choose pure coconut water with no added sugars or preservatives, and offer it in moderation.",
@@ -44012,7 +44145,8 @@
         "nl": "Ja, maar alleen af en toe, als snoepje. Een dierenarts die de AKC citeert, zegt dat kokoswater veilig is voor honden, maar dat het een snoepje moet blijven en geen vervanging is voor gewoon water. Kies puur kokoswater zonder toegevoegde suikers of conserveermiddelen en geef het met mate.",
         "pl": "Tak, od czasu do czasu, jako smakołyk. Weterynarz cytowany przez AKC mówi, że woda kokosowa jest dla psów bezpieczna, ale powinna być smakołykiem, a nie zamiennikiem zwykłej wody. Wybierz czystą wodę kokosową bez dodatku cukru i konserwantów i podawaj ją z umiarem.",
         "cs": "Ano, jako příležitostný pamlsek. Podle veterinářky citované AKC je kokosová voda pro psy bezpečná, ale má být jen pamlskem, ne náhradou běžné vody. Vybírejte čistou kokosovou vodu bez přidaného cukru a konzervantů a podávejte ji s mírou.",
-        "hr": "Da, ali samo povremeno, kao poslastica. Veterinar kojeg citira AKC kaže da je kokosova voda sigurna za pse, ali da je treba davati kao poslasticu, a ne umjesto obične vode. Odaberi čistu kokosovu vodu bez dodanih šećera i konzervansa i daj je umjereno."
+        "hr": "Da, ali samo povremeno, kao poslastica. Veterinar kojeg citira AKC kaže da je kokosova voda sigurna za pse, ali da je treba davati kao poslasticu, a ne umjesto obične vode. Odaberi čistu kokosovu vodu bez dodanih šećera i konzervansa i daj je umjereno.",
+        "sv": "Ja, som en godbit då och då. En veterinär som AKC citerar säger att kokosvatten är säkert för hundar men ska vara en godbit, inte en ersättning för vanligt vatten. Välj rent kokosvatten utan tillsatt socker eller konserveringsmedel och ge det med måtta."
       },
       "why": {
         "en": "Coconut is high in potassium, so caution is needed for dogs with kidney disease or other electrolyte disturbances. Too much coconut can make a dog sick, mainly with stomach upset such as diarrhoea. Anything you offer must be free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -44027,7 +44161,8 @@
         "nl": "Kokos bevat veel kalium, dus wees voorzichtig bij honden met nierziekte of andere verstoringen van de elektrolytenbalans. Te veel kokos kan een hond ziek maken, vooral met maagklachten zoals diarree. Alles wat je geeft, moet vrij zijn van kunstmatige zoetstoffen zoals xylitol, dat giftig is voor honden.",
         "pl": "Kokos zawiera dużo potasu, więc u psów z chorobą nerek lub innymi zaburzeniami elektrolitowymi trzeba zachować ostrożność. Zbyt dużo kokosu może rozstroić psa, głównie wywołując problemy żołądkowe, takie jak biegunka. Wszystko, co podajesz, musi być wolne od sztucznych słodzików, takich jak ksylitol, który jest toksyczny dla psów.",
         "cs": "Kokos obsahuje hodně draslíku, proto je třeba opatrnosti u psů s onemocněním ledvin nebo jinou poruchou elektrolytů. Příliš mnoho kokosu může psovi uškodit, hlavně potížemi se žaludkem, například průjmem. Cokoli psovi nabízíte, nesmí obsahovat umělá sladidla, jako je xylitol, který je pro psy toxický.",
-        "hr": "Kokos je bogat kalijem, pa je potreban oprez kod pasa s bolešću bubrega ili drugim poremećajima elektrolita. Previše kokosa psu može pozliti, uglavnom zbog želučanih tegoba poput proljeva. Sve što nudiš mora biti bez umjetnih sladila poput ksilitola, koji je otrovan za pse."
+        "hr": "Kokos je bogat kalijem, pa je potreban oprez kod pasa s bolešću bubrega ili drugim poremećajima elektrolita. Previše kokosa psu može pozliti, uglavnom zbog želučanih tegoba poput proljeva. Sve što nudiš mora biti bez umjetnih sladila poput ksilitola, koji je otrovan za pse.",
+        "sv": "Kokos innehåller mycket kalium, så försiktighet krävs för hundar med njursjukdom eller andra elektrolytrubbningar. För mycket kokos kan göra en hund sjuk, främst genom magbesvär som diarré. Allt du ger ska vara fritt från konstgjorda sötningsmedel som xylitol, som är giftigt för hundar."
       },
       "signs": null,
       "what_to_do": {
@@ -44043,7 +44178,8 @@
         "nl": "Stop met het kokoswater als je hond maagklachten of diarree krijgt. Kokos bevat veel kalium, dus wees er voorzichtig mee als je hond nierziekte heeft of een probleem met de elektrolytenbalans.",
         "pl": "Przestań podawać wodę kokosową, jeśli pies ma rozstrój żołądka lub biegunkę. Kokos zawiera dużo potasu, więc jeśli pies ma chorobę nerek lub zaburzenia elektrolitowe, zachowaj ostrożność.",
         "cs": "Pokud má pes po kokosové vodě podrážděný žaludek nebo průjem, přestaňte mu ji dávat. Kokos obsahuje hodně draslíku, proto buďte opatrní, má-li váš pes onemocnění ledvin nebo poruchu elektrolytů.",
-        "hr": "Prestani davati kokosovu vodu ako pas dobije probleme sa želucem ili proljev. Kokos je bogat kalijem, zato ga daj s oprezom ako tvoj pas ima bolest bubrega ili poremećaj elektrolita."
+        "hr": "Prestani davati kokosovu vodu ako pas dobije probleme sa želucem ili proljev. Kokos je bogat kalijem, zato ga daj s oprezom ako tvoj pas ima bolest bubrega ili poremećaj elektrolita.",
+        "sv": "Sluta ge kokosvattnet om hunden får orolig mage eller diarré. Kokos innehåller mycket kalium, så var försiktig om hunden har njursjukdom eller elektrolytrubbningar."
       },
       "serving": {
         "en": "Pure, unsweetened coconut water only, with no added sugar, preservatives or xylitol, offered in moderation as a treat and never instead of fresh water.",
@@ -44058,7 +44194,8 @@
         "nl": "Alleen puur, ongezoet kokoswater, zonder toegevoegde suiker, conserveermiddelen of xylitol. Geef het met mate als snoepje en nooit in plaats van vers water.",
         "pl": "Tylko czysta, niesłodzona woda kokosowa, bez dodatku cukru, konserwantów i ksylitolu, podawana z umiarem jako smakołyk i nigdy zamiast świeżej wody.",
         "cs": "Jen čistá neslazená kokosová voda bez přidaného cukru, konzervantů a xylitolu, podávaná s mírou jako pamlsek a nikdy místo čerstvé vody.",
-        "hr": "Samo čista, neslađena kokosova voda, bez dodanog šećera, konzervansa i ksilitola. Nudi je umjereno, kao poslasticu, i nikada umjesto svježe vode."
+        "hr": "Samo čista, neslađena kokosova voda, bez dodanog šećera, konzervansa i ksilitola. Nudi je umjereno, kao poslasticu, i nikada umjesto svježe vode.",
+        "sv": "Bara rent, osötat kokosvatten utan tillsatt socker, konserveringsmedel eller xylitol. Ge det med måtta som godbit, aldrig i stället för friskt vatten."
       },
       "child": {
         "en": "Coconut water is an occasional treat for dogs. Fresh water is still what they need to drink every day!",
@@ -44073,7 +44210,8 @@
         "nl": "Kokoswater is voor honden een snoepje voor af en toe. Vers water blijft wat ze elke dag moeten drinken!",
         "pl": "Woda kokosowa to smakołyk, który pies może dostać od czasu do czasu. Do codziennego picia nadal potrzebuje świeżej wody!",
         "cs": "Kokosová voda je pro psy občasný pamlsek. Každý den ale potřebují pít hlavně čerstvou vodu!",
-        "hr": "Kokosova voda povremena je poslastica za pse. Svježu vodu ipak trebaju piti svaki dan!"
+        "hr": "Kokosova voda povremena je poslastica za pse. Svježu vodu ipak trebaju piti svaki dan!",
+        "sv": "Kokosvatten är en godbit för hundar ibland. Men det de behöver dricka varje dag är friskt vatten!"
       },
       "faq": [
         {
@@ -44090,7 +44228,8 @@
             "nl": "Kan kokoswater mijn hond helpen na het sporten?",
             "pl": "Czy woda kokosowa pomoże psu po wysiłku?",
             "cs": "Pomůže kokosová voda mému psovi po zátěži?",
-            "hr": "Može li kokosova voda pomoći mom psu nakon vježbanja?"
+            "hr": "Može li kokosova voda pomoći mom psu nakon vježbanja?",
+            "sv": "Kan kokosvatten hjälpa min hund efter motion?"
           },
           "a": {
             "en": "One vet quoted by the AKC offers her dogs coconut water for extra electrolytes after dog sport events. For the average house dog, though, a fresh bowl of water is perfectly sufficient.",
@@ -44105,7 +44244,8 @@
             "nl": "Een dierenarts die de AKC citeert, geeft haar honden na wedstrijden in de hondensport kokoswater voor extra elektrolyten. Voor de gemiddelde huishond is een verse bak water echter ruim voldoende.",
             "pl": "Jedna z weterynarek cytowanych przez AKC podaje swoim psom wodę kokosową, żeby uzupełnić elektrolity po zawodach sportowych z udziałem psów. Dla przeciętnego psa domowego w zupełności wystarczy jednak miska świeżej wody.",
             "cs": "Jedna veterinářka citovaná AKC dává svým psům po psích sportovních akcích kokosovou vodu na doplnění elektrolytů. Pro běžného domácího psa ale stačí miska čerstvé vody.",
-            "hr": "Jedna veterinarka koju citira AKC svojim psima daje kokosovu vodu kao dodatni izvor elektrolita nakon sportskih natjecanja pasa. Prosječnom kućnom psu ipak je sasvim dovoljna zdjelica svježe vode."
+            "hr": "Jedna veterinarka koju citira AKC svojim psima daje kokosovu vodu kao dodatni izvor elektrolita nakon sportskih natjecanja pasa. Prosječnom kućnom psu ipak je sasvim dovoljna zdjelica svježe vode.",
+            "sv": "En veterinär som AKC citerar ger sina hundar kokosvatten för extra elektrolyter efter hundsportevenemang. För en vanlig familjehund räcker det dock gott med en skål friskt vatten."
           }
         }
       ],
@@ -49140,7 +49280,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Fish oil",
@@ -49155,7 +49296,8 @@
         "nl": "Visolie",
         "pl": "Olej rybi",
         "cs": "Rybí olej",
-        "hr": "Riblje ulje"
+        "hr": "Riblje ulje",
+        "sv": "Fiskolja"
       },
       "question": {
         "en": "Can dogs have fish oil?",
@@ -49170,7 +49312,8 @@
         "nl": "Mogen honden visolie krijgen?",
         "pl": "Czy psy mogą dostać olej rybi?",
         "cs": "Mohou psi dostat rybí olej?",
-        "hr": "Smiju li psi dobivati riblje ulje?"
+        "hr": "Smiju li psi dobivati riblje ulje?",
+        "sv": "Får hundar äta fiskolja?"
       },
       "url_slug": {
         "en": "fish-oil",
@@ -49185,7 +49328,8 @@
         "nl": "visolie",
         "pl": "olej-rybi",
         "cs": "rybi-olej",
-        "hr": "riblje-ulje"
+        "hr": "riblje-ulje",
+        "sv": "fiskolja"
       },
       "answer": {
         "en": "Only if your vet recommends it. Fish oil is a supplement, not a snack, and vets advise always talking to your veterinarian before giving your dog any supplements. It can cause side effects such as diarrhoea, vomiting, gas and fishy breath.",
@@ -49200,7 +49344,8 @@
         "nl": "Alleen als je dierenarts het adviseert. Visolie is een supplement, geen snoepje, en dierenartsen raden aan om altijd eerst te overleggen voordat je je hond supplementen geeft. Het kan bijwerkingen hebben, zoals diarree, braken, winderigheid en een vissige adem.",
         "pl": "Tylko jeśli zaleci to weterynarz. Olej rybi to suplement, a nie przekąska, i weterynarze radzą, zawsze skonsultować się z lekarzem weterynarii, zanim podasz psu jakikolwiek suplement. Może powodować skutki uboczne, takie jak biegunka, wymioty, gazy i rybi zapach z pyska.",
         "cs": "Jen pokud ho doporučí veterinář. Rybí olej je doplněk stravy, ne pamlsek, a veterináři radí vždy se před podáním jakéhokoli doplňku poradit s veterinářem. Může způsobit vedlejší účinky, například průjem, zvracení, plynatost a rybí zápach z tlamy.",
-        "hr": "Samo ako to preporuči veterinar. Riblje ulje je dodatak prehrani, a ne grickalica, a veterinari savjetuju da se prije davanja bilo kakvog dodatka psu uvijek posavjetuješ s veterinarom. Može izazvati nuspojave poput proljeva, povraćanja, plinova i zadaha po ribi."
+        "hr": "Samo ako to preporuči veterinar. Riblje ulje je dodatak prehrani, a ne grickalica, a veterinari savjetuju da se prije davanja bilo kakvog dodatka psu uvijek posavjetuješ s veterinarom. Može izazvati nuspojave poput proljeva, povraćanja, plinova i zadaha po ribi.",
+        "sv": "Bara om din veterinär rekommenderar det. Fiskolja är ett kosttillskott, ingen godbit, och veterinärer rekommenderar att du alltid frågar veterinären innan du ger hunden något tillskott. Det kan ge biverkningar som diarré, kräkningar, gaser och andedräkt som luktar fisk."
       },
       "why": {
         "en": "Fish oil comes from oily fish such as salmon, mackerel and sardines, and its omega-3 fatty acids have been used to support a dog's skin, coat, joints and heart. But it is a health product: possible side effects include diarrhoea, vomiting, gas, fishy-smelling breath or skin and, in rare cases, a higher bleeding risk. VCA advises caution in dogs taking blood thinners, dogs with a clotting disorder, diabetes or a history of pancreatitis. Just because a product is natural does not mean it is safe.",
@@ -49215,7 +49360,8 @@
         "nl": "Visolie wordt gewonnen uit vette vis zoals zalm, makreel en sardines, en de omega-3-vetzuren erin worden gebruikt om de huid, vacht, gewrichten en het hart van een hond te ondersteunen. Maar het is een gezondheidsproduct: mogelijke bijwerkingen zijn diarree, braken, winderigheid, een vissige adem of huidgeur en in zeldzame gevallen een groter risico op bloedingen. VCA adviseert voorzichtigheid bij honden die bloedverdunners gebruiken, bij honden met een stollingsstoornis of diabetes en bij honden die eerder alvleesklierontsteking hebben gehad. Dat een product natuurlijk is, betekent niet dat het veilig is.",
         "pl": "Olej rybi pochodzi z tłustych ryb, takich jak łosoś, makrela i sardynki, a zawarte w nim kwasy tłuszczowe omega-3 stosuje się, by wspierać skórę, sierść, stawy i serce psa. To jednak produkt zdrowotny: możliwe skutki uboczne to biegunka, wymioty, gazy, rybi zapach z pyska lub skóry, a w rzadkich przypadkach większe ryzyko krwawień. VCA zaleca ostrożność u psów przyjmujących leki rozrzedzające krew, z zaburzeniami krzepnięcia, cukrzycą lub przebytym zapaleniem trzustki. To, że produkt jest naturalny, nie znaczy, że jest bezpieczny.",
         "cs": "Rybí olej se získává z tučných ryb, jako je losos, makrela a sardinky, a jeho omega-3 mastné kyseliny se používají na podporu psí kůže, srsti, kloubů a srdce. Je to ale zdravotní přípravek: mezi možné vedlejší účinky patří průjem, zvracení, plynatost, rybí zápach z tlamy nebo z kůže a ve vzácných případech vyšší riziko krvácení. VCA radí k opatrnosti u psů, kteří užívají léky na ředění krve, mají poruchu srážlivosti, cukrovku nebo prodělali zánět slinivky břišní. To, že je přípravek přírodní, neznamená, že je bezpečný.",
-        "hr": "Riblje ulje dobiva se iz masnih riba poput lososa, skuše i sardina, a njegove se omega-3 masne kiseline koriste kao potpora zdravlju kože, dlake, zglobova i srca psa. No to je zdravstveni proizvod: moguće nuspojave su proljev, povraćanje, plinovi, dah ili koža koji mirišu po ribi te, u rijetkim slučajevima, povećan rizik od krvarenja. VCA savjetuje oprez kod pasa koji uzimaju razrjeđivače krvi, imaju poremećaj zgrušavanja krvi ili dijabetes ili su već imali upalu gušterače. To što je neki proizvod prirodan ne znači da je siguran."
+        "hr": "Riblje ulje dobiva se iz masnih riba poput lososa, skuše i sardina, a njegove se omega-3 masne kiseline koriste kao potpora zdravlju kože, dlake, zglobova i srca psa. No to je zdravstveni proizvod: moguće nuspojave su proljev, povraćanje, plinovi, dah ili koža koji mirišu po ribi te, u rijetkim slučajevima, povećan rizik od krvarenja. VCA savjetuje oprez kod pasa koji uzimaju razrjeđivače krvi, imaju poremećaj zgrušavanja krvi ili dijabetes ili su već imali upalu gušterače. To što je neki proizvod prirodan ne znači da je siguran.",
+        "sv": "Fiskolja utvinns ur fet fisk som lax, makrill och sardiner, och dess omega-3-fettsyror har använts för att stödja hundens hud, päls, leder och hjärta. Men det är en hälsoprodukt: möjliga biverkningar är diarré, kräkningar, gaser, andedräkt eller hud som luktar fisk och, i sällsynta fall, ökad blödningsrisk. VCA råder till försiktighet för hundar som får blodförtunnande läkemedel och hundar med koagulationsrubbning, diabetes eller tidigare bukspottkörtelinflammation. Att en produkt är naturlig betyder inte att den är säker."
       },
       "signs": {
         "en": [
@@ -49308,6 +49454,13 @@
           "Plinovi",
           "Dah ili koža koji mirišu po ribi",
           "Lakše krvarenje (rijetko)"
+        ],
+        "sv": [
+          "Diarré",
+          "Kräkningar",
+          "Gaser",
+          "Andedräkt eller hud som luktar fisk",
+          "Blöder lättare (sällsynt)"
         ]
       },
       "what_to_do": {
@@ -49323,7 +49476,8 @@
         "nl": "Overleg met je dierenarts voordat je met visolie of een ander supplement begint. Reageert je hond ernstig, stop dan met de visolie en neem meteen contact op met je dierenarts. Houd de verpakking buiten het bereik van kinderen en huisdieren.",
         "pl": "Porozmawiaj z weterynarzem, zanim zaczniesz podawać olej rybi lub jakikolwiek inny suplement. Jeśli pies ma poważną reakcję, przestań podawać olej rybi i natychmiast skontaktuj się z weterynarzem. Trzymaj opakowanie poza zasięgiem dzieci i zwierząt.",
         "cs": "Než rybí olej nebo jiný doplněk začnete podávat, poraďte se s veterinářem. Pokud se u psa objeví vážná reakce, rybí olej přestaňte podávat a ihned se obraťte na veterináře. Obal uchovávejte mimo dosah dětí i domácích zvířat.",
-        "hr": "Prije nego što počneš s ribljim uljem ili bilo kojim drugim dodatkom prehrani, porazgovaraj s veterinarom. Ako pas ima ozbiljnu reakciju, prestani davati riblje ulje i odmah se obrati veterinaru. Posudu drži izvan dosega djece i kućnih ljubimaca."
+        "hr": "Prije nego što počneš s ribljim uljem ili bilo kojim drugim dodatkom prehrani, porazgovaraj s veterinarom. Ako pas ima ozbiljnu reakciju, prestani davati riblje ulje i odmah se obrati veterinaru. Posudu drži izvan dosega djece i kućnih ljubimaca.",
+        "sv": "Prata med veterinären innan du börjar med fiskolja eller något annat tillskott. Om hunden får en allvarlig reaktion, sluta ge fiskolja och kontakta veterinären direkt. Förvara förpackningen utom räckhåll för barn och djur."
       },
       "serving": null,
       "child": {
@@ -49339,7 +49493,8 @@
         "nl": "Visolie is een speciaal supplement. Alleen de dierenarts en volwassenen beslissen of een hond het nodig heeft!",
         "pl": "Olej rybi to specjalny suplement. Tylko weterynarz i dorośli decydują, czy pies go potrzebuje!",
         "cs": "Rybí olej je zvláštní doplněk. Jestli ho pes potřebuje, rozhodují jen veterinář a dospělí!",
-        "hr": "Riblje ulje je poseban dodatak prehrani. Samo veterinar i odrasli odlučuju treba li ga pas dobivati!"
+        "hr": "Riblje ulje je poseban dodatak prehrani. Samo veterinar i odrasli odlučuju treba li ga pas dobivati!",
+        "sv": "Fiskolja är ett särskilt tillskott. Bara veterinären och de vuxna avgör om en hund behöver det!"
       },
       "faq": [
         {
@@ -49356,7 +49511,8 @@
             "nl": "Kan oude of ranzige visolie mijn hond van streek maken?",
             "pl": "Czy stary lub zjełczały olej rybi może rozstroić psa?",
             "cs": "Může starý nebo žluklý rybí olej psovi uškodit?",
-            "hr": "Može li staro ili užeglo riblje ulje naškoditi mom psu?"
+            "hr": "Može li staro ili užeglo riblje ulje naškoditi mom psu?",
+            "sv": "Kan gammal eller härsken fiskolja ge hunden orolig mage?"
           },
           "a": {
             "en": "Yes. Consuming rancid fish oil may lead to stomach and gut upset, including vomiting or diarrhoea.",
@@ -49371,7 +49527,8 @@
             "nl": "Ja. Ranzige visolie kan maag- en darmklachten veroorzaken, zoals braken of diarree.",
             "pl": "Tak. Zjełczały olej rybi może wywołać rozstrój żołądka i jelit, w tym wymioty lub biegunkę.",
             "cs": "Ano. Žluklý rybí olej může způsobit potíže se žaludkem a střevy, včetně zvracení nebo průjmu.",
-            "hr": "Da. Ako pas pojede užeglo riblje ulje, mogu se pojaviti probavne tegobe, uključujući povraćanje ili proljev."
+            "hr": "Da. Ako pas pojede užeglo riblje ulje, mogu se pojaviti probavne tegobe, uključujući povraćanje ili proljev.",
+            "sv": "Ja. Härsken fiskolja kan ge mag- och tarmbesvär, bland annat kräkningar eller diarré."
           }
         },
         {
@@ -49388,7 +49545,8 @@
             "nl": "Is visolie veilig omdat het natuurlijk is?",
             "pl": "Czy olej rybi jest bezpieczny, skoro jest naturalny?",
             "cs": "Je rybí olej bezpečný, protože je přírodní?",
-            "hr": "Je li riblje ulje sigurno jer je prirodno?"
+            "hr": "Je li riblje ulje sigurno jer je prirodno?",
+            "sv": "Är fiskolja säker eftersom den är naturlig?"
           },
           "a": {
             "en": "Not automatically. Just because a product is natural does not mean it is safe. Your vet is the best source of information about the safety of non-drug health products for your dog.",
@@ -49403,7 +49561,8 @@
             "nl": "Niet automatisch. Dat een product natuurlijk is, betekent niet dat het veilig is. Je dierenarts weet het best of gezondheidsproducten die geen medicijn zijn, veilig zijn voor je hond.",
             "pl": "Niekoniecznie. To, że produkt jest naturalny, nie znaczy, że jest bezpieczny. Najlepszym źródłem informacji o bezpieczeństwie produktów zdrowotnych, które nie są lekami, jest weterynarz.",
             "cs": "Ne automaticky. To, že je přípravek přírodní, neznamená, že je bezpečný. O bezpečnosti zdravotních přípravků, které nejsou léky, vám nejlépe poradí veterinář vašeho psa.",
-            "hr": "Ne nužno. To što je neki proizvod prirodan ne znači da je siguran. Veterinar je najbolji izvor informacija o sigurnosti proizvoda za zdravlje psa koji nisu lijekovi."
+            "hr": "Ne nužno. To što je neki proizvod prirodan ne znači da je siguran. Veterinar je najbolji izvor informacija o sigurnosti proizvoda za zdravlje psa koji nisu lijekovi.",
+            "sv": "Inte automatiskt. Att en produkt är naturlig betyder inte att den är säker. Veterinären vet bäst hur säkra hälsoprodukter som inte är läkemedel är för din hund."
           }
         }
       ],
@@ -50745,7 +50904,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Goat's milk",
@@ -50760,7 +50920,8 @@
         "nl": "Geitenmelk",
         "pl": "Mleko kozie",
         "cs": "Kozí mléko",
-        "hr": "Kozje mlijeko"
+        "hr": "Kozje mlijeko",
+        "sv": "Getmjölk"
       },
       "question": {
         "en": "Can dogs drink goat's milk?",
@@ -50775,7 +50936,8 @@
         "nl": "Mogen honden geitenmelk drinken?",
         "pl": "Czy psy mogą pić mleko kozie?",
         "cs": "Mohou psi pít kozí mléko?",
-        "hr": "Smiju li psi piti kozje mlijeko?"
+        "hr": "Smiju li psi piti kozje mlijeko?",
+        "sv": "Får hundar dricka getmjölk?"
       },
       "url_slug": {
         "en": "goat-milk",
@@ -50790,7 +50952,8 @@
         "nl": "geitenmelk",
         "pl": "mleko-kozie",
         "cs": "kozi-mleko",
-        "hr": "kozje-mlijeko"
+        "hr": "kozje-mlijeko",
+        "sv": "getmjolk"
       },
       "answer": {
         "en": "Only a little, now and then. Goat's milk can be an occasional reward, but it has almost as much lactose as cow's milk and can still upset a dog's stomach. Dogs on a good, balanced diet don't need it. Don't give raw goat's milk.",
@@ -50805,7 +50968,8 @@
         "nl": "Alleen een klein beetje, en niet vaak. Geitenmelk kan af en toe als beloning dienen, maar bevat bijna net zoveel lactose als koemelk en kan de maag van een hond nog steeds van streek maken. Honden die goed en evenwichtig eten, hebben het niet nodig. Geef geen rauwe geitenmelk.",
         "pl": "Tylko trochę i od czasu do czasu. Mleko kozie może być czasem nagrodą, ale zawiera niemal tyle samo laktozy co mleko krowie i nadal może rozstroić żołądek psa. Psy na dobrej, zbilansowanej diecie go nie potrzebują. Nie podawaj surowego mleka koziego.",
         "cs": "Jen trochu a jen občas. Kozí mléko může být příležitostná odměna, ale obsahuje téměř tolik laktózy jako kravské a psovi může stejně podráždit žaludek. Psi na kvalitní vyvážené stravě ho nepotřebují. Syrové kozí mléko nedávejte.",
-        "hr": "Samo malo i samo povremeno. Kozje mlijeko može poslužiti kao rijetka nagrada, ali ima gotovo jednako mnogo laktoze kao kravlje i psu ipak može izazvati probleme sa želucem. Psima koji se hrane dobrom, uravnoteženom hranom ono ne treba. Nikada ne daj sirovo kozje mlijeko."
+        "hr": "Samo malo i samo povremeno. Kozje mlijeko može poslužiti kao rijetka nagrada, ali ima gotovo jednako mnogo laktoze kao kravlje i psu ipak može izazvati probleme sa želucem. Psima koji se hrane dobrom, uravnoteženom hranom ono ne treba. Nikada ne daj sirovo kozje mlijeko.",
+        "sv": "Bara lite, då och då. Getmjölk kan vara en belöning ibland, men den innehåller nästan lika mycket laktos som komjölk och kan ändå ge hunden orolig mage. Hundar som får en bra och balanserad kost behöver den inte. Ge inte rå getmjölk."
       },
       "why": {
         "en": "Goat's milk has almost the same amount of lactose as cow's milk, and dogs can have varying degrees of lactose intolerance. The Australian Veterinary Association notes that goat's milk and lactose-free milk can still cause stomach and gut problems, and that some dogs can develop an allergy to milk protein. Raw milk can also carry germs such as E. coli, Salmonella and Listeria.",
@@ -50820,7 +50984,8 @@
         "nl": "Geitenmelk bevat bijna evenveel lactose als koemelk, en honden kunnen in verschillende mate lactose-intolerant zijn. Volgens de Australian Veterinary Association kunnen geitenmelk en lactosevrije melk nog steeds maag- en darmproblemen veroorzaken, en kunnen sommige honden een allergie voor melkeiwit ontwikkelen. Rauwe melk kan ook ziektekiemen bevatten, zoals E. coli, Salmonella en Listeria.",
         "pl": "Mleko kozie zawiera prawie tyle samo laktozy co mleko krowie, a psy mogą mieć nietolerancję laktozy w różnym stopniu. Australijskie Stowarzyszenie Lekarzy Weterynarii zaznacza, że mleko kozie i mleko bez laktozy nadal mogą powodować problemy żołądkowo-jelitowe, a u niektórych psów może rozwinąć się alergia na białko mleka. Surowe mleko może też zawierać drobnoustroje, takie jak E. coli, Salmonella i Listeria.",
         "cs": "Kozí mléko obsahuje téměř stejné množství laktózy jako kravské a psi mohou laktózu snášet v různé míře. Australská veterinární asociace (Australian Veterinary Association) upozorňuje, že i kozí mléko a mléko bez laktózy mohou způsobit potíže se žaludkem a střevy a že u některých psů se může vyvinout alergie na mléčné bílkoviny. Syrové mléko navíc může obsahovat choroboplodné zárodky, například E. coli, salmonelu a listerii.",
-        "hr": "Kozje mlijeko sadrži gotovo jednaku količinu laktoze kao kravlje, a psi laktozu podnose u različitoj mjeri. Australska veterinarska udruga (Australian Veterinary Association) upozorava da kozje mlijeko i mlijeko bez laktoze i dalje mogu izazvati probavne tegobe te da se kod nekih pasa može razviti alergija na mliječne bjelančevine. Uz to, sirovo mlijeko može prenositi uzročnike bolesti poput bakterija E. coli, salmonele i listerije."
+        "hr": "Kozje mlijeko sadrži gotovo jednaku količinu laktoze kao kravlje, a psi laktozu podnose u različitoj mjeri. Australska veterinarska udruga (Australian Veterinary Association) upozorava da kozje mlijeko i mlijeko bez laktoze i dalje mogu izazvati probavne tegobe te da se kod nekih pasa može razviti alergija na mliječne bjelančevine. Uz to, sirovo mlijeko može prenositi uzročnike bolesti poput bakterija E. coli, salmonele i listerije.",
+        "sv": "Getmjölk innehåller nästan lika mycket laktos som komjölk, och hundar kan vara laktosintoleranta i varierande grad. Den australiska veterinärföreningen Australian Veterinary Association påpekar att getmjölk och laktosfri mjölk ändå kan ge mag- och tarmproblem, och att vissa hundar kan utveckla allergi mot mjölkprotein. Rå mjölk kan dessutom innehålla bakterier som E. coli, salmonella och listeria."
       },
       "signs": {
         "en": [
@@ -50913,6 +51078,13 @@
           "Povraćanje",
           "Bol u trbuhu",
           "Proljev"
+        ],
+        "sv": [
+          "Lös avföring",
+          "Gaser",
+          "Kräkningar",
+          "Ont i magen",
+          "Diarré"
         ]
       },
       "what_to_do": {
@@ -50928,7 +51100,8 @@
         "nl": "Stop met de geitenmelk als je hond zachte ontlasting, winderigheid, braken, buikpijn of diarree krijgt, en zorg dat er altijd vers water beschikbaar is. Overleg eerst met je dierenarts voordat je geitenmelk aan de voeding van je hond toevoegt.",
         "pl": "Przestań podawać mleko kozie, jeśli pies ma luźne stolce, gazy, wymioty, ból brzucha lub biegunkę, i dopilnuj, by zawsze miał dostęp do świeżej wody. Zanim dodasz mleko kozie do diety psa, omów to najpierw z weterynarzem.",
         "cs": "Pokud se u psa po kozím mléce objeví řídká stolice, plynatost, zvracení, bolest břicha nebo průjem, kozí mléko přestaňte dávat a zajistěte, aby měl pes vždy čerstvou vodu. Než kozí mléko zařadíte do jídelníčku psa, poraďte se nejprve s veterinářem.",
-        "hr": "Prestani davati kozje mlijeko ako pas dobije rijetku stolicu, plinove, povraćanje, bol u trbuhu ili proljev i pobrini se da uvijek ima svježu vodu. Prije nego što kozje mlijeko uvedeš u prehranu svog psa, porazgovaraj o tome s veterinarom."
+        "hr": "Prestani davati kozje mlijeko ako pas dobije rijetku stolicu, plinove, povraćanje, bol u trbuhu ili proljev i pobrini se da uvijek ima svježu vodu. Prije nego što kozje mlijeko uvedeš u prehranu svog psa, porazgovaraj o tome s veterinarom.",
+        "sv": "Sluta ge getmjölken om hunden får lös avföring, gaser, kräkningar, ont i magen eller diarré, och se till att den alltid har tillgång till friskt vatten. Prata med veterinären innan du lägger till getmjölk i hundens kost."
       },
       "serving": {
         "en": "Never raw. Offer it only as an occasional reward, never instead of fresh water or a balanced dog food.",
@@ -50943,7 +51116,8 @@
         "nl": "Nooit rauw. Geef het alleen af en toe als beloning, nooit in plaats van vers water of een uitgebalanceerd hondenvoer.",
         "pl": "Nigdy surowe. Podawaj je tylko od czasu do czasu jako nagrodę, nigdy zamiast świeżej wody ani zbilansowanej karmy dla psów.",
         "cs": "Nikdy syrové. Nabízejte ho jen jako občasnou odměnu, nikdy místo čerstvé vody ani vyváženého krmiva pro psy.",
-        "hr": "Nikada sirovo. Nudi ga samo kao povremenu nagradu, nikad umjesto svježe vode ili uravnotežene hrane za pse."
+        "hr": "Nikada sirovo. Nudi ga samo kao povremenu nagradu, nikad umjesto svježe vode ili uravnotežene hrane za pse.",
+        "sv": "Aldrig rå. Ge den bara som en belöning då och då, aldrig i stället för friskt vatten eller balanserad hundmat."
       },
       "child": {
         "en": "Goat's milk is only a rare little treat for dogs. Fresh water is the best drink for them every day!",
@@ -50958,7 +51132,8 @@
         "nl": "Geitenmelk is voor honden maar een klein snoepje voor een keertje. Vers water is elke dag het beste drankje voor ze!",
         "pl": "Mleko kozie to tylko mały smakołyk na rzadkie okazje. Świeża woda to dla psa najlepszy napój na co dzień!",
         "cs": "Kozí mléko je pro psy jen vzácná malá dobrota. Nejlepším nápojem je pro ně každý den čerstvá voda!",
-        "hr": "Kozje mlijeko je za pse samo rijetka mala poslastica. Svježa voda najbolje im je piće svaki dan!"
+        "hr": "Kozje mlijeko je za pse samo rijetka mala poslastica. Svježa voda najbolje im je piće svaki dan!",
+        "sv": "Getmjölk är bara en liten godbit för hundar, och bara ibland. Friskt vatten är deras bästa dryck varje dag!"
       },
       "faq": [
         {
@@ -50975,7 +51150,8 @@
             "nl": "Is geitenmelk voor honden beter verteerbaar dan koemelk?",
             "pl": "Czy mleko kozie jest dla psów łatwiejsze do strawienia niż krowie?",
             "cs": "Tráví psi kozí mléko snadněji než kravské?",
-            "hr": "Probavljaju li psi kozje mlijeko lakše od kravljeg?"
+            "hr": "Probavljaju li psi kozje mlijeko lakše od kravljeg?",
+            "sv": "Är getmjölk lättare för hundar att smälta än komjölk?"
           },
           "a": {
             "en": "Not really. Goat's milk has almost the same amount of lactose as cow's milk. Its smaller fat globules are often mentioned, but homogenisation also makes the fat globules in cow's milk smaller.",
@@ -50990,7 +51166,8 @@
             "nl": "Niet echt. Geitenmelk bevat bijna evenveel lactose als koemelk. Vaak worden de kleinere vetbolletjes genoemd, maar ook door homogenisatie worden de vetbolletjes in koemelk kleiner.",
             "pl": "Niezupełnie. Mleko kozie zawiera prawie tyle samo laktozy co mleko krowie. Często wspomina się o jego mniejszych kuleczkach tłuszczu, ale homogenizacja zmniejsza kuleczki tłuszczu także w mleku krowim.",
             "cs": "Ne tak docela. Kozí mléko obsahuje téměř stejné množství laktózy jako kravské. Často se zmiňují jeho menší tukové kuličky, ale homogenizace zmenšuje tukové kuličky i v kravském mléce.",
-            "hr": "Ne baš. Kozje mlijeko sadrži gotovo jednaku količinu laktoze kao kravlje. Često se spominju manje masne kuglice u kozjem mlijeku, ali homogenizacija smanjuje masne kuglice i u kravljem."
+            "hr": "Ne baš. Kozje mlijeko sadrži gotovo jednaku količinu laktoze kao kravlje. Često se spominju manje masne kuglice u kozjem mlijeku, ali homogenizacija smanjuje masne kuglice i u kravljem.",
+            "sv": "Nej, inte egentligen. Getmjölk innehåller nästan lika mycket laktos som komjölk. De mindre fettkulorna nämns ofta, men även komjölkens fettkulor blir mindre vid homogenisering."
           }
         },
         {
@@ -51007,7 +51184,8 @@
             "nl": "Kan geitenmelk de behandeling van mijn hond vervangen?",
             "pl": "Czy mleko kozie może zastąpić leczenie psa?",
             "cs": "Může kozí mléko nahradit léčbu mého psa?",
-            "hr": "Može li kozje mlijeko zamijeniti liječenje mojeg psa?"
+            "hr": "Može li kozje mlijeko zamijeniti liječenje mojeg psa?",
+            "sv": "Kan getmjölk ersätta min hunds behandling?"
           },
           "a": {
             "en": "No. A vet at the Drake Center warns that it can be dangerous if goat's milk is used in place of known appropriate treatments. Discuss it with your vet first.",
@@ -51022,7 +51200,8 @@
             "nl": "Nee. Een dierenarts van het Drake Center waarschuwt dat het gevaarlijk kan zijn om geitenmelk te gebruiken in plaats van bekende, geschikte behandelingen. Bespreek het eerst met je dierenarts.",
             "pl": "Nie. Weterynarz z Drake Center ostrzega, że zastępowanie sprawdzonego, odpowiedniego leczenia mlekiem koziem może być niebezpieczne. Omów to najpierw z weterynarzem.",
             "cs": "Ne. Podle veterináře z Drake Center může být nebezpečné používat kozí mléko místo osvědčené vhodné léčby. Nejprve se poraďte s veterinářem.",
-            "hr": "Ne. Veterinar iz ustanove Drake Center upozorava da može biti opasno davati kozje mlijeko umjesto provjerenih, odgovarajućih terapija. Najprije porazgovaraj s veterinarom."
+            "hr": "Ne. Veterinar iz ustanove Drake Center upozorava da može biti opasno davati kozje mlijeko umjesto provjerenih, odgovarajućih terapija. Najprije porazgovaraj s veterinarom.",
+            "sv": "Nej. En veterinär vid Drake Center varnar för att det kan vara farligt om getmjölk används i stället för etablerade, lämpliga behandlingar. Prata med veterinären först."
           }
         }
       ],
@@ -54621,7 +54800,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Fruit juice",
@@ -54636,7 +54816,8 @@
         "nl": "Vruchtensap",
         "pl": "Sok owocowy",
         "cs": "Ovocný džus",
-        "hr": "Voćni sok"
+        "hr": "Voćni sok",
+        "sv": "Fruktjuice"
       },
       "question": {
         "en": "Can dogs drink fruit juice?",
@@ -54651,7 +54832,8 @@
         "nl": "Mogen honden vruchtensap drinken?",
         "pl": "Czy psy mogą pić sok owocowy?",
         "cs": "Mohou psi pít ovocný džus?",
-        "hr": "Smiju li psi piti voćni sok?"
+        "hr": "Smiju li psi piti voćni sok?",
+        "sv": "Får hundar dricka fruktjuice?"
       },
       "url_slug": {
         "en": "juice",
@@ -54666,7 +54848,8 @@
         "nl": "vruchtensap",
         "pl": "sok-owocowy",
         "cs": "ovocny-dzus",
-        "hr": "vocni-sok"
+        "hr": "vocni-sok",
+        "sv": "fruktjuice"
       },
       "answer": {
         "en": "It's best not to. Whole fruit is a better snack than juice. Orange juice, for example, isn't toxic but has concentrated sugars and none of the fruit's fibre. Lemon juice is high in citric acid, which is toxic to dogs, and sugar-free drinks may contain xylitol.",
@@ -54681,7 +54864,8 @@
         "nl": "Liever niet. Heel fruit is een beter tussendoortje dan sap. Sinaasappelsap is bijvoorbeeld niet giftig, maar bevat geconcentreerde suikers en niet de vezels van het fruit. Citroensap bevat veel citroenzuur, dat giftig is voor honden, en suikervrije dranken kunnen xylitol bevatten.",
         "pl": "Lepiej nie. Cały owoc to lepsza przekąska niż sok. Sok pomarańczowy na przykład nie jest toksyczny, ale zawiera skoncentrowane cukry i nie ma błonnika, który jest w całym owocu. Sok z cytryny zawiera dużo kwasu cytrynowego, który jest toksyczny dla psów, a napoje bez cukru mogą zawierać ksylitol.",
         "cs": "Raději ne. Celé ovoce je pro psa lepším pamlskem než džus. Pomerančový džus například není jedovatý, ale obsahuje koncentrované cukry a žádnou vlákninu z ovoce. Citronová šťáva je bohatá na kyselinu citronovou, která je pro psy toxická, a nápoje bez cukru mohou obsahovat xylitol.",
-        "hr": "Bolje da ne. Cijelo voće bolja je grickalica od soka. Sok od naranče, primjerice, nije otrovan, ali ima koncentrirane šećere, a nema vlakana kakva ima voće. Sok od limuna bogat je limunskom kiselinom, koja je otrovna za pse, a pića bez šećera mogu sadržavati ksilitol."
+        "hr": "Bolje da ne. Cijelo voće bolja je grickalica od soka. Sok od naranče, primjerice, nije otrovan, ali ima koncentrirane šećere, a nema vlakana kakva ima voće. Sok od limuna bogat je limunskom kiselinom, koja je otrovna za pse, a pića bez šećera mogu sadržavati ksilitol.",
+        "sv": "Helst inte. Hel frukt är ett bättre mellanmål än juice. Apelsinjuice är till exempel inte giftig men innehåller koncentrerat socker och saknar fruktens fibrer. Citronjuice innehåller mycket citronsyra, som är giftig för hundar, och sockerfria drycker kan innehålla xylitol."
       },
       "why": {
         "en": "Juice contains concentrated natural sugars and lacks the fibre of whole fruit; because it is higher in sugar and easy to drink in large amounts, it may increase the risk of digestive upset. Fruit juice concentrates are high in fructose, which may increase the risk of obesity. Lemon juice is a concentrated form of the fruit with high amounts of citric acid, which is toxic to dogs. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -54696,7 +54880,8 @@
         "nl": "Sap bevat geconcentreerde natuurlijke suikers en mist de vezels van heel fruit. Omdat er meer suiker in zit en je het makkelijk in grote hoeveelheden drinkt, kan het de kans op darmklachten vergroten. Geconcentreerd vruchtensap bevat veel fructose, wat de kans op obesitas kan vergroten. Citroensap is een geconcentreerde vorm van de vrucht met veel citroenzuur, dat giftig is voor honden. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden.",
         "pl": "Sok zawiera skoncentrowane cukry naturalne i nie ma błonnika całego owocu; ponieważ ma więcej cukru i łatwo wypić go dużo, może zwiększać ryzyko rozstroju żołądka i jelit. Soki z koncentratu mają dużo fruktozy, co może zwiększać ryzyko otyłości. Sok z cytryny to skoncentrowana postać owocu z dużą ilością kwasu cytrynowego, który jest toksyczny dla psów. Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów.",
         "cs": "Džus obsahuje koncentrované přírodní cukry a chybí mu vláknina z celého ovoce; protože má víc cukru a snadno se vypije ve velkém množství, může zvyšovat riziko zažívacích potíží. Koncentráty ovocných šťáv mají vysoký obsah fruktózy, která může zvyšovat riziko obezity. Citronová šťáva je koncentrovaná podoba ovoce s vysokým obsahem kyseliny citronové, která je pro psy toxická. Mnoho nápojů bez cukru obsahuje xylitol, který je pro psy vysoce toxický.",
-        "hr": "Sok ima koncentrirane prirodne šećere i nema vlakana kao cijelo voće; kako sadrži više šećera i lako se popije u velikoj količini, može povećati rizik od probavnih tegoba. Koncentrati voćnih sokova bogati su fruktozom, što može povećati rizik od pretilosti. Sok od limuna koncentrirani je oblik voća s mnogo limunske kiseline, koja je otrovna za pse. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan."
+        "hr": "Sok ima koncentrirane prirodne šećere i nema vlakana kao cijelo voće; kako sadrži više šećera i lako se popije u velikoj količini, može povećati rizik od probavnih tegoba. Koncentrati voćnih sokova bogati su fruktozom, što može povećati rizik od pretilosti. Sok od limuna koncentrirani je oblik voća s mnogo limunske kiseline, koja je otrovna za pse. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan.",
+        "sv": "Juice innehåller koncentrerat naturligt socker och saknar fibrerna i hel frukt. Eftersom den är sockerrikare och lätt att dricka i stora mängder kan den öka risken för magbesvär. Fruktjuicekoncentrat innehåller mycket fruktos, vilket kan öka risken för fetma. Citronjuice är en koncentrerad form av frukten med mycket citronsyra, som är giftig för hundar. Många drycker utan socker innehåller xylitol, som är mycket giftigt för hundar."
       },
       "signs": {
         "en": [
@@ -54737,6 +54922,9 @@
         ],
         "hr": [
           "Probavne tegobe"
+        ],
+        "sv": [
+          "Magbesvär"
         ]
       },
       "what_to_do": {
@@ -54752,7 +54940,8 @@
         "nl": "Geef in plaats daarvan vers water en let op verschijnselen van darmklachten bij je hond. Was de drank suikervrij of bevat die mogelijk xylitol, bekijk dan meteen onze pagina over xylitol. Heeft je hond druivensap gehad, bekijk dan onze pagina over druiven.",
         "pl": "Daj zamiast tego świeżą wodę i obserwuj, czy pies nie ma objawów rozstroju żołądka i jelit. Jeśli napój był bez cukru lub mógł zawierać ksylitol, od razu zajrzyj na naszą stronę o ksylitolu. Jeśli pies wypił sok z winogron, zajrzyj na naszą stronę o winogronach.",
         "cs": "Nabídněte místo toho čerstvou vodu a sledujte, zda se u psa neprojeví příznaky zažívacích potíží. Pokud byl nápoj bez cukru nebo v něm může být xylitol, ihned se podívejte na naši stránku o xylitolu. Pokud pes vypil hroznový džus, podívejte se na naši stránku o hroznech.",
-        "hr": "Umjesto toga ponudi svježu vodu i pazi pojavljuju li se znakovi probavnih tegoba. Ako je piće bilo bez šećera ili je moglo sadržavati ksilitol, odmah pogledaj našu stranicu o ksilitolu. Ako je pas popio sok od grožđa, pogledaj našu stranicu o grožđu."
+        "hr": "Umjesto toga ponudi svježu vodu i pazi pojavljuju li se znakovi probavnih tegoba. Ako je piće bilo bez šećera ili je moglo sadržavati ksilitol, odmah pogledaj našu stranicu o ksilitolu. Ako je pas popio sok od grožđa, pogledaj našu stranicu o grožđu.",
+        "sv": "Erbjud friskt vatten i stället och håll utkik efter tecken på magbesvär hos hunden. Om drycken var sockerfri eller kan innehålla xylitol, läs direkt vår sida om xylitol. Om hunden har fått druvjuice, se vår sida om vindruvor."
       },
       "serving": null,
       "child": {
@@ -54768,7 +54957,8 @@
         "nl": "Sap is te zoet voor honden. Een klein stukje vers fruit dat veilig is voor honden of een bak vers water is veel beter!",
         "pl": "Sok jest dla psów zbyt słodki. Mały kawałek świeżego owocu bezpiecznego dla psów albo miska świeżej wody to dużo lepszy smakołyk!",
         "cs": "Džus je pro psy příliš sladký. Malý kousek čerstvého ovoce, které psi smějí jíst, nebo miska čerstvé vody je mnohem lepší pamlsek!",
-        "hr": "Sok je za pse previše sladak. Mali komadić svježeg voća sigurnog za pse ili zdjelica svježe vode puno su bolja poslastica!"
+        "hr": "Sok je za pse previše sladak. Mali komadić svježeg voća sigurnog za pse ili zdjelica svježe vode puno su bolja poslastica!",
+        "sv": "Juice är för sockrig för hundar. En liten bit färsk frukt som är säker för hundar eller en skål friskt vatten är en betydligt bättre godbit!"
       },
       "faq": [
         {
@@ -54785,7 +54975,8 @@
             "nl": "Is sinaasappelsap giftig voor honden?",
             "pl": "Czy sok pomarańczowy jest toksyczny dla psów?",
             "cs": "Je pomerančový džus pro psy jedovatý?",
-            "hr": "Je li sok od naranče otrovan za pse?"
+            "hr": "Je li sok od naranče otrovan za pse?",
+            "sv": "Är apelsinjuice giftig för hundar?"
           },
           "a": {
             "en": "No, but it is not recommended because it contains concentrated sugars and lacks the fibre found in whole fruit. If you want to share the taste of oranges, offer small pieces of fresh fruit instead.",
@@ -54800,7 +54991,8 @@
             "nl": "Nee, maar het wordt niet aanbevolen omdat het geconcentreerde suikers bevat en de vezels van heel fruit mist. Wil je je hond laten proeven van sinaasappel, geef dan kleine stukjes vers fruit.",
             "pl": "Nie, ale nie jest zalecany, bo zawiera skoncentrowane cukry i nie ma błonnika, który jest w całym owocu. Jeśli chcesz, żeby pies poznał smak pomarańczy, daj mu małe kawałki świeżego owocu.",
             "cs": "Ne, ale nedoporučuje se, protože obsahuje koncentrované cukry a chybí mu vláknina, kterou má celé ovoce. Pokud se chcete se psem podělit o chuť pomerančů, nabídněte mu raději malé kousky čerstvého ovoce.",
-            "hr": "Nije, ali se ne preporučuje jer ima koncentrirane šećere i nema vlakana kao cijelo voće. Ako psu želiš dati kušati naranču, radije mu ponudi male komadiće svježeg voća."
+            "hr": "Nije, ali se ne preporučuje jer ima koncentrirane šećere i nema vlakana kao cijelo voće. Ako psu želiš dati kušati naranču, radije mu ponudi male komadiće svježeg voća.",
+            "sv": "Nej, men den rekommenderas inte eftersom den innehåller koncentrerat socker och saknar fibrerna i hel frukt. Om du vill att hunden ska få smaka apelsin, ge små bitar färsk frukt i stället."
           }
         },
         {
@@ -54817,7 +55009,8 @@
             "nl": "Hoe zit het met druivensap?",
             "pl": "A sok z winogron?",
             "cs": "A co hroznový džus?",
-            "hr": "A sok od grožđa?"
+            "hr": "A sok od grožđa?",
+            "sv": "Hur är det med druvjuice?"
           },
           "a": {
             "en": "Sources disagree. VCA says grape juice does not appear to cause the poisoning seen with grapes and raisins, while FirstVet says grape juice should never be given to dogs. We follow the stricter advice: don't give it.",
@@ -54832,7 +55025,8 @@
             "nl": "De bronnen spreken elkaar tegen. VCA zegt dat druivensap niet lijkt te leiden tot de vergiftiging die je bij druiven en rozijnen ziet, terwijl FirstVet zegt dat je honden nooit druivensap moet geven. Wij volgen het strengere advies: geef het niet.",
             "pl": "Źródła się nie zgadzają. VCA twierdzi, że sok z winogron nie wydaje się wywoływać zatrucia, jakie powodują winogrona i rodzynki, a FirstVet – że soku z winogron nigdy nie należy podawać psom. Stosujemy surowszą radę: nie dawaj go.",
             "cs": "Zdroje se neshodují. VCA uvádí, že hroznový džus podle všeho nezpůsobuje otravu, jakou známe po hroznech a rozinkách, zatímco FirstVet říká, že hroznový džus se psům nesmí dávat nikdy. Řídíme se přísnější radou: nedávejte ho.",
-            "hr": "Izvori se ne slažu. VCA kaže da sok od grožđa, čini se, ne izaziva trovanje kakvo se viđa kod grožđa i grožđica, dok FirstVet kaže da psima nikada ne treba davati sok od grožđa. Slijedimo strožu preporuku: ne daj ga."
+            "hr": "Izvori se ne slažu. VCA kaže da sok od grožđa, čini se, ne izaziva trovanje kakvo se viđa kod grožđa i grožđica, dok FirstVet kaže da psima nikada ne treba davati sok od grožđa. Slijedimo strožu preporuku: ne daj ga.",
+            "sv": "Källorna är oeniga. VCA säger att druvjuice inte verkar orsaka den förgiftning som vindruvor och russin ger, medan FirstVet säger att druvjuice aldrig ska ges till hundar. Vi följer det strängare rådet: ge den inte."
           }
         }
       ],
@@ -55211,7 +55405,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Kefir",
@@ -55226,7 +55421,8 @@
         "nl": "Kefir",
         "pl": "Kefir",
         "cs": "Kefír",
-        "hr": "Kefir"
+        "hr": "Kefir",
+        "sv": "Kefir"
       },
       "question": {
         "en": "Can dogs drink kefir?",
@@ -55241,7 +55437,8 @@
         "nl": "Mogen honden kefir drinken?",
         "pl": "Czy psy mogą pić kefir?",
         "cs": "Mohou psi pít kefír?",
-        "hr": "Smiju li psi piti kefir?"
+        "hr": "Smiju li psi piti kefir?",
+        "sv": "Får hundar dricka kefir?"
       },
       "url_slug": {
         "en": "kefir",
@@ -55256,7 +55453,8 @@
         "nl": "kefir",
         "pl": "kefir",
         "cs": "kefir",
-        "hr": "kefir"
+        "hr": "kefir",
+        "sv": "kefir"
       },
       "answer": {
         "en": "Only a little, and ask your vet first. The AKC lists yogurt or kefir with live cultures among the foods a vet may suggest to boost beneficial bacteria, but many dogs have trouble digesting lactose. Never give kefir with xylitol or other artificial sweeteners.",
@@ -55271,7 +55469,8 @@
         "nl": "Alleen een klein beetje, en vraag het eerst aan je dierenarts. De AKC noemt yoghurt of kefir met levende culturen als voeding die een dierenarts kan voorstellen om de nuttige bacteriën te ondersteunen, maar veel honden kunnen lactose slecht verteren. Geef nooit kefir met xylitol of andere kunstmatige zoetstoffen.",
         "pl": "Tylko odrobinę i najpierw zapytaj weterynarza. AKC wymienia jogurt lub kefir z żywymi kulturami bakterii wśród produktów, które weterynarz może zasugerować, by wspomóc pożyteczne bakterie, ale wiele psów ma kłopot z trawieniem laktozy. Nigdy nie podawaj kefiru z ksylitolem ani innymi sztucznymi słodzikami.",
         "cs": "Jen trochu a nejdřív se zeptejte veterináře. AKC řadí jogurt nebo kefír s živými kulturami mezi potraviny, které může veterinář doporučit na podporu prospěšných bakterií, ale mnoho psů má s trávením laktózy potíže. Nikdy nedávejte kefír s xylitolem nebo jinými umělými sladidly.",
-        "hr": "Samo malo, i to tek nakon što pitaš veterinara. AKC navodi jogurt ili kefir sa živim kulturama među namirnicama koje veterinar može predložiti za jačanje korisnih bakterija, ali mnogi psi teško probavljaju laktozu. Nikada ne daj kefir s ksilitolom ili drugim umjetnim sladilima."
+        "hr": "Samo malo, i to tek nakon što pitaš veterinara. AKC navodi jogurt ili kefir sa živim kulturama među namirnicama koje veterinar može predložiti za jačanje korisnih bakterija, ali mnogi psi teško probavljaju laktozu. Nikada ne daj kefir s ksilitolom ili drugim umjetnim sladilima.",
+        "sv": "Bara lite, och fråga veterinären först. AKC nämner yoghurt eller kefir med levande kulturer bland det en veterinär kan föreslå för att öka mängden nyttiga bakterier, men många hundar tål laktos dåligt. Ge aldrig kefir med xylitol eller andra konstgjorda sötningsmedel."
       },
       "why": {
         "en": "Many dogs have trouble digesting foods that contain lactose; a dog's body isn't designed to digest lactose after puppyhood, so it can cause gas and other tummy trouble. Some dogs can also develop an allergy to milk protein. Some artificial sweeteners, such as xylitol, are toxic to dogs, so kefir with artificial sweeteners is a risk.",
@@ -55286,7 +55485,8 @@
         "nl": "Veel honden kunnen voeding met lactose slecht verteren. Na de pupperiode is het lichaam van een hond er niet op ingericht om lactose te verteren, dus het kan winderigheid en andere buikklachten veroorzaken. Sommige honden kunnen ook een allergie voor melkeiwit ontwikkelen. Sommige kunstmatige zoetstoffen, zoals xylitol, zijn giftig voor honden, dus kefir met kunstmatige zoetstoffen is een risico.",
         "pl": "Wiele psów ma kłopot z trawieniem produktów zawierających laktozę; organizm psa nie jest przystosowany do trawienia laktozy po okresie szczenięcym, więc może ona powodować gazy i inne dolegliwości brzuszne. U niektórych psów może też rozwinąć się alergia na białko mleka. Niektóre sztuczne słodziki, takie jak ksylitol, są toksyczne dla psów, więc kefir ze sztucznymi słodzikami jest ryzykowny.",
         "cs": "Mnoho psů má potíže s trávením potravin, které obsahují laktózu; tělo psa není po štěněcím věku uzpůsobeno k jejímu trávení, a proto může laktóza způsobit plynatost a další potíže s bříškem. U některých psů se také může vyvinout alergie na mléčné bílkoviny. Některá umělá sladidla, například xylitol, jsou pro psy toxická, takže kefír s umělými sladidly představuje riziko.",
-        "hr": "Mnogi psi teško probavljaju hranu koja sadrži laktozu; tijelo psa nije stvoreno za probavu laktoze nakon štenećeg doba, pa može izazvati plinove i druge probavne tegobe. Kod nekih pasa može se razviti i alergija na mliječne bjelančevine. Neka umjetna sladila, poput ksilitola, otrovna su za pse, pa kefir s umjetnim sladilima predstavlja rizik."
+        "hr": "Mnogi psi teško probavljaju hranu koja sadrži laktozu; tijelo psa nije stvoreno za probavu laktoze nakon štenećeg doba, pa može izazvati plinove i druge probavne tegobe. Kod nekih pasa može se razviti i alergija na mliječne bjelančevine. Neka umjetna sladila, poput ksilitola, otrovna su za pse, pa kefir s umjetnim sladilima predstavlja rizik.",
+        "sv": "Många hundar har svårt att smälta mat som innehåller laktos. Efter valptiden är hundens kropp inte gjord för att bryta ned laktos, så det kan ge gaser och annat magbesvär. Vissa hundar kan också utveckla allergi mot mjölkprotein. Vissa konstgjorda sötningsmedel, som xylitol, är giftiga för hundar, så kefir med konstgjorda sötningsmedel innebär en risk."
       },
       "signs": {
         "en": [
@@ -55379,6 +55579,13 @@
           "Povraćanje",
           "Bol u trbuhu",
           "Proljev"
+        ],
+        "sv": [
+          "Lös avföring",
+          "Gaser",
+          "Kräkningar",
+          "Ont i magen",
+          "Diarré"
         ]
       },
       "what_to_do": {
@@ -55394,7 +55601,8 @@
         "nl": "Geef net als bij yoghurt eerst een kleine hoeveelheid en kijk hoe je hond reageert. Krijgt je hond zachte ontlasting, winderigheid, braken of diarree, stop dan met de kefir. Vraag je dierenarts of probiotische voeding geschikt is voor je hond.",
         "pl": "Tak jak w przypadku jogurtu, najpierw podaj odrobinę i zobacz, jak pies reaguje. Jeśli pies ma luźne stolce, gazy, wymioty lub biegunkę, przestań podawać kefir. Zapytaj weterynarza, czy produkty probiotyczne są odpowiednie dla twojego psa.",
         "cs": "Stejně jako u jogurtu nabídněte nejdřív jen malé množství a sledujte, jak pes zareaguje. Pokud se u psa objeví řídká stolice, plynatost, zvracení nebo průjem, kefír přestaňte dávat. Zeptejte se veterináře, zda se probiotické potraviny pro vašeho psa hodí.",
-        "hr": "Kao i jogurt, najprije ga daj u maloj količini i prati kako pas reagira. Ako pas dobije rijetku stolicu, plinove, povraćanje ili proljev, prestani davati kefir. Pitaj veterinara jesu li probiotičke namirnice prikladne za tvog psa."
+        "hr": "Kao i jogurt, najprije ga daj u maloj količini i prati kako pas reagira. Ako pas dobije rijetku stolicu, plinove, povraćanje ili proljev, prestani davati kefir. Pitaj veterinara jesu li probiotičke namirnice prikladne za tvog psa.",
+        "sv": "Som med yoghurt gäller det att börja med en liten mängd och se hur hunden reagerar. Om hunden får lös avföring, gaser, kräkningar eller diarré, sluta ge kefir. Fråga veterinären om probiotiska livsmedel passar just din hund."
       },
       "serving": {
         "en": "Choose plain kefir and read the label carefully to avoid all artificial sweeteners, especially xylitol. Start with a small amount.",
@@ -55409,7 +55617,8 @@
         "nl": "Kies naturel kefir en lees het etiket goed, zodat er geen enkele kunstmatige zoetstof in zit, vooral geen xylitol. Begin met een kleine hoeveelheid.",
         "pl": "Wybierz kefir naturalny i sprawdzaj skład i unikaj wszystkich sztucznych słodzików, zwłaszcza ksylitolu. Zacznij od niewielkiej ilości.",
         "cs": "Vybírejte obyčejný kefír a pozorně čtěte složení na obalu, abyste se vyhnuli všem umělým sladidlům, zejména xylitolu. Začněte malým množstvím.",
-        "hr": "Odaberi obični kefir i pažljivo pročitaj deklaraciju da u njemu nema nikakvih umjetnih sladila, osobito ksilitola. Počni s malom količinom."
+        "hr": "Odaberi obični kefir i pažljivo pročitaj deklaraciju da u njemu nema nikakvih umjetnih sladila, osobito ksilitola. Počni s malom količinom.",
+        "sv": "Välj naturell kefir och läs innehållsförteckningen noga för att undvika alla konstgjorda sötningsmedel, särskilt xylitol. Börja med en liten mängd."
       },
       "child": {
         "en": "Some dogs can have a tiny taste of plain kefir, but many get a sore tummy from milk drinks. Fresh water is always best!",
@@ -55424,7 +55633,8 @@
         "nl": "Sommige honden mogen een klein beetje naturel kefir proeven, maar veel honden krijgen buikpijn van melkdranken. Vers water is altijd het beste!",
         "pl": "Niektóre psy mogą spróbować odrobiny kefiru naturalnego, ale po napojach mlecznych wielu psom boli brzuch. Świeża woda jest zawsze najlepsza!",
         "cs": "Někteří psi smějí ochutnat trošku obyčejného kefíru, ale mnoho psů z mléčných nápojů bolí bříško. Nejlepší je vždycky čerstvá voda!",
-        "hr": "Neki psi smiju malo kušati obični kefir, ali mnogima od mliječnih pića zaboli trbuh. Svježa voda uvijek je najbolja!"
+        "hr": "Neki psi smiju malo kušati obični kefir, ali mnogima od mliječnih pića zaboli trbuh. Svježa voda uvijek je najbolja!",
+        "sv": "Vissa hundar kan få smaka lite naturell kefir, men många får ont i magen av mjölkdrycker. Friskt vatten är alltid bäst!"
       },
       "faq": [
         {
@@ -55441,7 +55651,8 @@
             "nl": "Is kefir een goed probioticum voor honden?",
             "pl": "Czy kefir to dobry probiotyk dla psa?",
             "cs": "Je kefír dobrý probiotický doplněk pro psy?",
-            "hr": "Je li kefir dobar probiotik za pse?"
+            "hr": "Je li kefir dobar probiotik za pse?",
+            "sv": "Är kefir ett bra probiotikum för hundar?"
           },
           "a": {
             "en": "The AKC lists yogurt or kefir with live cultures among the options a vet may suggest to boost beneficial bacteria. Ask your vet before adding it to your dog's diet.",
@@ -55456,7 +55667,8 @@
             "nl": "De AKC noemt yoghurt of kefir met levende culturen als een van de opties die een dierenarts kan voorstellen om nuttige bacteriën te ondersteunen. Vraag het eerst aan je dierenarts voordat je het aan de voeding van je hond toevoegt.",
             "pl": "AKC wymienia jogurt lub kefir z żywymi kulturami bakterii wśród opcji, które weterynarz może zasugerować, by wspomóc pożyteczne bakterie. Zapytaj weterynarza, zanim dodasz go do diety psa.",
             "cs": "AKC uvádí jogurt nebo kefír s živými kulturami mezi možnostmi, které může veterinář doporučit na podporu prospěšných bakterií. Než ho zařadíte do jídelníčku psa, zeptejte se veterináře.",
-            "hr": "AKC navodi jogurt ili kefir sa živim kulturama među namirnicama koje veterinar može predložiti za jačanje korisnih bakterija. Prije nego što ga dodaš u prehranu svog psa, pitaj veterinara."
+            "hr": "AKC navodi jogurt ili kefir sa živim kulturama među namirnicama koje veterinar može predložiti za jačanje korisnih bakterija. Prije nego što ga dodaš u prehranu svog psa, pitaj veterinara.",
+            "sv": "AKC nämner yoghurt eller kefir med levande kulturer bland de alternativ som en veterinär kan föreslå för att öka mängden nyttiga bakterier. Fråga veterinären innan du lägger till det i hundens kost."
           }
         }
       ],
@@ -72968,7 +73180,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Soda (soft drinks)",
@@ -72983,7 +73196,8 @@
         "nl": "Frisdrank",
         "pl": "Napoje gazowane",
         "cs": "Sycené nápoje (limonády)",
-        "hr": "Gazirana pića"
+        "hr": "Gazirana pića",
+        "sv": "Läsk (läskedrycker)"
       },
       "question": {
         "en": "Can dogs drink soda?",
@@ -72998,7 +73212,8 @@
         "nl": "Mogen honden frisdrank drinken?",
         "pl": "Czy psy mogą pić napoje gazowane?",
         "cs": "Mohou psi pít sycené nápoje?",
-        "hr": "Smiju li psi piti gazirana pića?"
+        "hr": "Smiju li psi piti gazirana pića?",
+        "sv": "Får hundar dricka läsk?"
       },
       "url_slug": {
         "en": "soda",
@@ -73013,7 +73228,8 @@
         "nl": "frisdrank",
         "pl": "napoje-gazowane",
         "cs": "sycene-napoje",
-        "hr": "gazirana-pica"
+        "hr": "gazirana-pica",
+        "sv": "lask"
       },
       "answer": {
         "en": "No. Dogs should not drink soda. It is high in sugar and caffeine, has no nutritional value for dogs, and the caffeine can cause signs of poisoning. One or two licks are unlikely to cause poisoning, but keep soda out of your dog's reach.",
@@ -73028,7 +73244,8 @@
         "nl": "Nee. Honden mogen geen frisdrank drinken. Er zit veel suiker en cafeïne in, het heeft geen voedingswaarde voor honden en de cafeïne kan verschijnselen van vergiftiging veroorzaken. Een of twee likjes veroorzaken waarschijnlijk geen vergiftiging, maar houd frisdrank buiten het bereik van je hond.",
         "pl": "Nie. Psy nie powinny pić napojów gazowanych. Zawierają dużo cukru i kofeiny, nie mają dla psów wartości odżywczej, a kofeina może wywołać objawy zatrucia. Jedno czy dwa liźnięcia raczej nie spowodują zatrucia, ale trzymaj napoje gazowane poza zasięgiem psa.",
         "cs": "Ne. Psi by sycené nápoje pít neměli. Obsahují hodně cukru a kofeinu, nemají pro psy žádnou nutriční hodnotu a kofein může způsobit příznaky otravy. Jedno nebo dvě olíznutí otravu pravděpodobně nezpůsobí, ale sycené nápoje držte mimo dosah psa.",
-        "hr": "Ne. Psi ne bi smjeli piti gazirana pića. Ona sadrže mnogo šećera i kofeina, nemaju nikakvu hranjivu vrijednost za pse, a kofein može izazvati znakove trovanja. Jedno ili dva lizanja vjerojatno neće izazvati trovanje, ali drži gazirana pića izvan dosega psa."
+        "hr": "Ne. Psi ne bi smjeli piti gazirana pića. Ona sadrže mnogo šećera i kofeina, nemaju nikakvu hranjivu vrijednost za pse, a kofein može izazvati znakove trovanja. Jedno ili dva lizanja vjerojatno neće izazvati trovanje, ali drži gazirana pića izvan dosega psa.",
+        "sv": "Nej. Hundar ska inte dricka läsk. Den innehåller mycket socker och koffein, har inget näringsvärde för hundar, och koffeinet kan ge tecken på förgiftning. En eller två slickar ger knappast förgiftning, men förvara läsk utom räckhåll för hunden."
       },
       "why": {
         "en": "Pet Poison Helpline explains that soda has high levels of sugar, caffeine and other ingredients that can harm dogs, and there is no reason for dogs to drink it. The caffeine in soda can lead to signs of toxicity, and how much a dog drinks determines how severe they are. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -73043,7 +73260,8 @@
         "nl": "Pet Poison Helpline legt uit dat frisdrank veel suiker, cafeïne en andere ingrediënten bevat die schadelijk kunnen zijn voor honden, en dat er geen enkele reden is om ze het te laten drinken. De cafeïne in frisdrank kan leiden tot verschijnselen van vergiftiging; hoe ernstig die zijn, hangt af van hoeveel de hond drinkt. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden.",
         "pl": "Pet Poison Helpline wyjaśnia, że napoje gazowane zawierają dużo cukru, kofeiny i innych składników, które mogą szkodzić psom, i nie ma powodu, by psy je piły. Kofeina w napojach gazowanych może prowadzić do objawów zatrucia, a ich nasilenie zależy od tego, ile pies wypije. Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów.",
         "cs": "Pet Poison Helpline vysvětluje, že sycené nápoje obsahují hodně cukru, kofeinu a dalších složek, které mohou psům uškodit, a že není žádný důvod, aby je psi pili. Kofein v nich může vyvolat příznaky otravy a jejich závažnost závisí na tom, kolik pes vypije. Mnoho nápojů bez cukru obsahuje xylitol, který je pro psy vysoce toxický.",
-        "hr": "Pet Poison Helpline objašnjava da gazirana pića sadrže mnogo šećera, kofeina i drugih sastojaka koji mogu naškoditi psima te da za psa nema razloga da ih pije. Kofein iz gaziranih pića može dovesti do znakova trovanja, a o količini koju pas popije ovisi koliko će biti ozbiljni. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan."
+        "hr": "Pet Poison Helpline objašnjava da gazirana pića sadrže mnogo šećera, kofeina i drugih sastojaka koji mogu naškoditi psima te da za psa nema razloga da ih pije. Kofein iz gaziranih pića može dovesti do znakova trovanja, a o količini koju pas popije ovisi koliko će biti ozbiljni. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan.",
+        "sv": "Pet Poison Helpline förklarar att läsk innehåller höga halter av socker, koffein och andra ingredienser som kan skada hundar, och att hundar inte har någon anledning att dricka den. Koffeinet i läsk kan ge tecken på förgiftning, och hur allvarliga de blir beror på hur mycket hunden har druckit. Många drycker utan socker innehåller xylitol, som är mycket giftigt för hundar."
       },
       "signs": {
         "en": [
@@ -73201,6 +73419,18 @@
           "Drhtanje",
           "Napadaji",
           "Kolaps"
+        ],
+        "sv": [
+          "Överaktivitet",
+          "Rastlöshet",
+          "Kräkningar",
+          "Snabb puls",
+          "Högt blodtryck",
+          "Förhöjd kroppstemperatur",
+          "Oregelbunden hjärtrytm",
+          "Darrningar",
+          "Kramper",
+          "Kollaps"
         ]
       },
       "what_to_do": {
@@ -73216,7 +73446,8 @@
         "nl": "Heeft je hond frisdrank gedronken, let dan op verschijnselen. Heeft je hond veel gedronken, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, zodat je hond de juiste behandeling krijgt. Was de frisdrank suikervrij, bekijk dan onze pagina over xylitol.",
         "pl": "Jeśli pies wypił napój gazowany, obserwuj, czy nie pojawiają się objawy. Jeśli wypił dużo, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, żeby pies dostał właściwe leczenie. Jeśli napój był bez cukru, zajrzyj na naszą stronę o ksylitolu.",
         "cs": "Pokud pes vypil sycený nápoj, sledujte, zda se neobjeví příznaky. Pokud vypil větší množství, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, aby pes dostal správnou léčbu. Pokud byl nápoj bez cukru, podívejte se na naši stránku o xylitolu.",
-        "hr": "Ako je pas popio gazirano piće, pazi pojavljuju li se znakovi trovanja. Ako je popio veliku količinu, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja kako bi pas dobio odgovarajuće liječenje. Ako je piće bilo bez šećera, pogledaj našu stranicu o ksilitolu."
+        "hr": "Ako je pas popio gazirano piće, pazi pojavljuju li se znakovi trovanja. Ako je popio veliku količinu, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja kako bi pas dobio odgovarajuće liječenje. Ako je piće bilo bez šećera, pogledaj našu stranicu o ksilitolu.",
+        "sv": "Om din hund har druckit läsk, håll utkik efter symtom hos hunden. Om hunden har druckit en stor mängd, kontakta veterinären eller en giftrådgivning för djur direkt så att hunden kan få rätt behandling. Om läsken var sockerfri, se vår sida om xylitol."
       },
       "serving": null,
       "child": {
@@ -73232,7 +73463,8 @@
         "nl": "Drankjes met prik zijn voor mensen, niet voor honden. Honden hebben alleen vers water nodig, dus zet blikjes en bekers hoog neer!",
         "pl": "Napoje gazowane są dla ludzi, nie dla psów. Psy potrzebują tylko świeżej wody, więc trzymaj puszki i kubki wysoko!",
         "cs": "Šumivé nápoje jsou pro lidi, ne pro psy. Psi potřebují jen čerstvou vodu, takže plechovky a kelímky schovej vysoko!",
-        "hr": "Gazirana pića su za ljude, ne za pse. Psima treba samo svježa voda, zato limenke i čaše drži visoko!"
+        "hr": "Gazirana pića su za ljude, ne za pse. Psima treba samo svježa voda, zato limenke i čaše drži visoko!",
+        "sv": "Kolsyrade drycker är till för människor, inte för hundar. Hundar behöver bara friskt vatten, så ställ burkar och muggar högt upp!"
       },
       "faq": [
         {
@@ -73249,7 +73481,8 @@
             "nl": "Mijn hond likte wat gemorste frisdrank op. Is dat een probleem?",
             "pl": "Mój pies polizał rozlany napój gazowany. Czy to problem?",
             "cs": "Můj pes olízl trochu rozlitého syceného nápoje. Je to problém?",
-            "hr": "Moj je pas polizao malo prolivenog gaziranog pića. Je li to problem?"
+            "hr": "Moj je pas polizao malo prolivenog gaziranog pića. Je li to problem?",
+            "sv": "Min hund slickade i sig lite utspilld läsk. Är det ett problem?"
           },
           "a": {
             "en": "One or two licks of coffee, tea or soda is unlikely to cause poisoning in most pets. Keep an eye on your dog and keep soda stored away so it can't happen again.",
@@ -73264,7 +73497,8 @@
             "nl": "Een of twee likjes koffie, thee of frisdrank veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging. Houd je hond in de gaten en berg frisdrank op, zodat het niet nog een keer kan gebeuren.",
             "pl": "Jedno czy dwa liźnięcia kawy, herbaty lub napoju gazowanego raczej nie spowodują zatrucia u większości zwierząt. Miej psa na oku i chowaj napoje gazowane, żeby to się nie powtórzyło.",
             "cs": "Jedno nebo dvě olíznutí kávy, čaje nebo sycených nápojů většinu zvířat pravděpodobně neotráví. Sledujte psa a sycené nápoje ukládejte tak, aby se to už neopakovalo.",
-            "hr": "Jedno ili dva lizanja kave, čaja ili gaziranog pića kod većine kućnih ljubimaca vjerojatno neće izazvati trovanje. Pripazi na psa i spremi gazirana pića da se to više ne ponovi."
+            "hr": "Jedno ili dva lizanja kave, čaja ili gaziranog pića kod većine kućnih ljubimaca vjerojatno neće izazvati trovanje. Pripazi na psa i spremi gazirana pića da se to više ne ponovi.",
+            "sv": "En eller två slickar kaffe, te eller läsk ger knappast förgiftning hos de flesta djur. Ha koll på hunden och ställ undan läsken så att det inte händer igen."
           }
         },
         {
@@ -73281,7 +73515,8 @@
             "nl": "Hoe zit het met light of suikervrije frisdrank?",
             "pl": "A napoje dietetyczne lub bez cukru?",
             "cs": "A co dietní nápoje nebo nápoje bez cukru?",
-            "hr": "A dijetna ili bezšećerna gazirana pića?"
+            "hr": "A dijetna ili bezšećerna gazirana pića?",
+            "sv": "Hur är det med light- eller sockerfri läsk?"
           },
           "a": {
             "en": "Many zero-sugar drinks contain xylitol, which is highly toxic to dogs, so keep diet drinks away from your dog too.",
@@ -73296,7 +73531,8 @@
             "nl": "Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden, dus houd ook light-dranken uit de buurt van je hond.",
             "pl": "Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów, więc trzymaj napoje dietetyczne również z dala od psa.",
             "cs": "Mnoho nápojů bez cukru obsahuje xylitol, který je pro psy vysoce toxický, proto i dietní nápoje držte mimo dosah psa.",
-            "hr": "Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan, zato i dijetna pića drži podalje od psa."
+            "hr": "Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan, zato i dijetna pića drži podalje od psa.",
+            "sv": "Många sockerfria drycker innehåller xylitol, som är mycket giftigt för hundar, så håll även light- och sockerfria drycker borta från din hund."
           }
         }
       ],
@@ -73979,7 +74215,8 @@
         "nl",
         "pl",
         "cs",
-        "hr"
+        "hr",
+        "sv"
       ],
       "name": {
         "en": "Sports drinks",
@@ -73994,7 +74231,8 @@
         "nl": "Sportdranken",
         "pl": "Napoje sportowe",
         "cs": "Sportovní nápoje",
-        "hr": "Sportska pića"
+        "hr": "Sportska pića",
+        "sv": "Sportdrycker"
       },
       "question": {
         "en": "Can dogs drink sports drinks?",
@@ -74009,7 +74247,8 @@
         "nl": "Mogen honden sportdranken drinken?",
         "pl": "Czy psy mogą pić napoje sportowe?",
         "cs": "Mohou psi pít sportovní nápoje?",
-        "hr": "Smiju li psi piti sportska pića?"
+        "hr": "Smiju li psi piti sportska pića?",
+        "sv": "Får hundar dricka sportdrycker?"
       },
       "url_slug": {
         "en": "sports-drinks",
@@ -74024,7 +74263,8 @@
         "nl": "sportdranken",
         "pl": "napoje-sportowe",
         "cs": "sportovni-napoje",
-        "hr": "sportska-pica"
+        "hr": "sportska-pica",
+        "sv": "sportdrycker"
       },
       "answer": {
         "en": "No, dogs should not drink sports drinks like Gatorade. A tiny sip isn't strictly toxic, but they contain too much sodium and sugar, which can upset a dog's stomach and worsen dehydration. Sugar-free versions may contain xylitol, which is highly toxic.",
@@ -74039,7 +74279,8 @@
         "nl": "Nee, honden mogen geen sportdranken zoals Gatorade drinken. Een klein slokje is niet per se giftig, maar sportdranken bevatten te veel natrium en suiker, en dat kan de maag van een hond van streek maken en uitdroging erger maken. Suikervrije varianten kunnen xylitol bevatten, dat zeer giftig is.",
         "pl": "Nie, psy nie powinny pić napojów sportowych, takich jak Gatorade. Maleńki łyk formalnie nie jest toksyczny, ale napoje te zawierają zbyt dużo sodu i cukru, co może rozstroić żołądek psa i pogłębić odwodnienie. Wersje bez cukru mogą zawierać ksylitol, który jest bardzo toksyczny.",
         "cs": "Ne, psi by sportovní nápoje, jako je Gatorade, pít neměli. Malý doušek sice není přímo jedovatý, ale tyto nápoje obsahují příliš mnoho sodíku a cukru, což může psovi podráždit žaludek a zhoršit dehydrataci. Varianty bez cukru mohou obsahovat xylitol, který je vysoce toxický.",
-        "hr": "Ne, psi ne bi smjeli piti sportska pića poput Gatoradea. Mali gutljaj nije strogo otrovan, ali ta pića sadrže previše natrija i šećera, što može izazvati probleme sa želucem i pogoršati dehidraciju. Pića bez šećera mogu sadržavati ksilitol, koji je vrlo otrovan."
+        "hr": "Ne, psi ne bi smjeli piti sportska pića poput Gatoradea. Mali gutljaj nije strogo otrovan, ali ta pića sadrže previše natrija i šećera, što može izazvati probleme sa želucem i pogoršati dehidraciju. Pića bez šećera mogu sadržavati ksilitol, koji je vrlo otrovan.",
+        "sv": "Nej, hundar ska inte dricka sportdrycker som Gatorade. En liten klunk är inte direkt giftig, men sportdrycker innehåller för mycket natrium och socker, vilket kan ge hunden orolig mage och förvärra uttorkning. Sockerfria varianter kan innehålla xylitol, som är mycket giftigt."
       },
       "why": {
         "en": "Human sports drinks contain excessive amounts of sodium and sugar, as well as artificial ingredients that aren't appropriate for dogs. CityVet says a tiny sip isn't strictly toxic but is highly discouraged, while PetMD says dogs should not drink Gatorade at all, so we follow the stricter advice. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -74054,7 +74295,8 @@
         "nl": "Sportdranken voor mensen bevatten te veel natrium en suiker, en kunstmatige ingrediënten die niet geschikt zijn voor honden. Volgens CityVet is een klein slokje niet per se giftig, maar wordt het sterk afgeraden, terwijl PetMD zegt dat honden helemaal geen Gatorade mogen drinken. Wij volgen daarom het strengere advies. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden.",
         "pl": "Napoje sportowe dla ludzi zawierają nadmierne ilości sodu i cukru, a także sztuczne składniki, które nie są odpowiednie dla psów. CityVet mówi, że maleńki łyk formalnie nie jest toksyczny, ale zdecydowanie odradza podawanie go, a PetMD – że psy w ogóle nie powinny pić Gatorade, więc stosujemy surowszą radę. Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów.",
         "cs": "Sportovní nápoje pro lidi obsahují nadměrné množství sodíku a cukru a také umělé přísady, které pro psy nejsou vhodné. CityVet uvádí, že malý doušek není přímo jedovatý, ale důrazně se nedoporučuje, zatímco PetMD říká, že psi by Gatorade neměli pít vůbec, a proto se řídíme přísnější radou. Mnoho nápojů bez cukru obsahuje xylitol, který je pro psy vysoce toxický.",
-        "hr": "Sportska pića za ljude sadrže prevelike količine natrija i šećera te umjetne sastojke koji nisu prikladni za pse. CityVet kaže da mali gutljaj nije strogo otrovan, ali da se to izrazito ne preporučuje, dok PetMD kaže da psi uopće ne bi smjeli piti Gatorade, pa slijedimo strožu preporuku. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan."
+        "hr": "Sportska pića za ljude sadrže prevelike količine natrija i šećera te umjetne sastojke koji nisu prikladni za pse. CityVet kaže da mali gutljaj nije strogo otrovan, ali da se to izrazito ne preporučuje, dok PetMD kaže da psi uopće ne bi smjeli piti Gatorade, pa slijedimo strožu preporuku. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan.",
+        "sv": "Sportdrycker för människor innehåller för mycket natrium och socker och konstgjorda ingredienser som inte är lämpliga för hundar. CityVet säger att en liten klunk inte är direkt giftig men att man starkt avråder från det, medan PetMD säger att hundar inte alls ska dricka Gatorade, så vi följer det strängare rådet. Många drycker utan socker innehåller xylitol, som är mycket giftigt för hundar."
       },
       "signs": {
         "en": [
@@ -74108,6 +74350,10 @@
         "hr": [
           "Želučane tegobe",
           "Pogoršanje dehidracije"
+        ],
+        "sv": [
+          "Orolig mage",
+          "Förvärrad uttorkning"
         ]
       },
       "what_to_do": {
@@ -74123,7 +74369,8 @@
         "nl": "Geef in plaats daarvan vers water. Zie je verschijnselen van uitdroging, geef dan een kleine hoeveelheid koel water, niet alles in één keer, zodat je hond niet te snel drinkt en moet braken. Is je hond uitgedroogd, moet hij braken of heeft hij diarree, bel dan je dierenarts. Was de drank suikervrij, bekijk dan onze pagina over xylitol.",
         "pl": "Daj zamiast tego świeżą wodę. Jeśli zauważysz objawy odwodnienia, podawaj chłodną wodę po trochu, a nie naraz, żeby pies nie pił zbyt szybko i nie zwymiotował. Jeśli pies jest odwodniony, ma wymioty lub biegunkę, zadzwoń do weterynarza. Jeśli napój był bez cukru, zajrzyj na naszą stronę o ksylitolu.",
         "cs": "Dejte psovi raději čerstvou vodu. Pokud si všimnete známek dehydratace, nabídněte malé množství chladné vody, ne všechnu najednou, aby pes nepil příliš rychle a nezvracel. Pokud je pes dehydrovaný, zvrací nebo má průjem, zavolejte veterináři. Pokud byl nápoj bez cukru, podívejte se na naši stránku o xylitolu.",
-        "hr": "Umjesto toga daj svježu vodu. Ako primijetiš znakove dehidracije, ponudi manje količine prohladne vode, ne sve odjednom, da pas ne bi prebrzo pio i povraćao. Ako je pas dehidriran, povraća ili ima proljev, nazovi veterinara. Ako je piće bilo bez šećera, pogledaj našu stranicu o ksilitolu."
+        "hr": "Umjesto toga daj svježu vodu. Ako primijetiš znakove dehidracije, ponudi manje količine prohladne vode, ne sve odjednom, da pas ne bi prebrzo pio i povraćao. Ako je pas dehidriran, povraća ili ima proljev, nazovi veterinara. Ako je piće bilo bez šećera, pogledaj našu stranicu o ksilitolu.",
+        "sv": "Ge friskt vatten i stället. Om du ser tecken på uttorkning, erbjud lite svalt vatten, inte allt på en gång, så att hunden inte dricker för snabbt och kräks. Om hunden är uttorkad, kräks eller har diarré, ring veterinären. Om drycken var sockerfri, se vår sida om xylitol."
       },
       "serving": null,
       "child": {
@@ -74139,7 +74386,8 @@
         "nl": "Sportdranken zijn voor mensen. Na het rennen en spelen heeft een hond gewoon een bak vers water nodig!",
         "pl": "Napoje sportowe są dla ludzi. Po bieganiu i zabawie psy potrzebują tylko miski świeżej wody!",
         "cs": "Sportovní nápoje jsou pro lidi. Po běhání a hraní potřebují psi jen misku čerstvé vody!",
-        "hr": "Sportska pića su za ljude. Nakon trčanja i igre psima treba samo zdjelica svježe vode!"
+        "hr": "Sportska pića su za ljude. Nakon trčanja i igre psima treba samo zdjelica svježe vode!",
+        "sv": "Sportdrycker är för människor. Efter spring och lek behöver hundar bara en skål friskt vatten!"
       },
       "faq": [
         {
@@ -74156,7 +74404,8 @@
             "nl": "Wat kan ik mijn actieve hond in plaats daarvan geven?",
             "pl": "Co mogę dać zamiast tego aktywnemu psu?",
             "cs": "Co dát aktivnímu psovi místo sportovního nápoje?",
-            "hr": "Što mogu dati svom aktivnom psu umjesto toga?"
+            "hr": "Što mogu dati svom aktivnom psu umjesto toga?",
+            "sv": "Vad kan jag ge min aktiva hund i stället?"
           },
           "a": {
             "en": "For the average house dog, a fresh bowl of water is perfectly sufficient. Instead of sharing your gym drink, choose an electrolyte solution made for dogs, and if you think your dog may be dehydrated, contact your vet about next steps.",
@@ -74171,7 +74420,8 @@
             "nl": "Voor de gemiddelde huishond is een verse bak water ruim voldoende. Deel je sportdrank dus niet met je hond. Kies liever een elektrolytenoplossing die speciaal voor honden is gemaakt, en vermoed je uitdroging, neem dan contact op met je dierenarts om te bespreken wat je het beste kunt doen.",
             "pl": "Dla przeciętnego psa domowego w zupełności wystarczy miska świeżej wody. Zamiast częstować psa swoim napojem z siłowni, wybierz roztwór elektrolitów przeznaczony dla psów, a jeśli podejrzewasz, że pies może być odwodniony, zapytaj weterynarza, co dalej.",
             "cs": "Pro běžného domácího psa stačí miska čerstvé vody. Místo svého nápoje z posilovny vyberte elektrolytový roztok určený pro psy, a pokud máte podezření, že je pes dehydrovaný, obraťte se na veterináře ohledně dalšího postupu.",
-            "hr": "Prosječnom kućnom psu sasvim je dovoljna zdjelica svježe vode. Umjesto da s njim dijeliš svoje piće iz teretane, odaberi otopinu elektrolita namijenjenu psima, a ako misliš da bi pas mogao biti dehidriran, obrati se veterinaru da te uputi što dalje."
+            "hr": "Prosječnom kućnom psu sasvim je dovoljna zdjelica svježe vode. Umjesto da s njim dijeliš svoje piće iz teretane, odaberi otopinu elektrolita namijenjenu psima, a ako misliš da bi pas mogao biti dehidriran, obrati se veterinaru da te uputi što dalje.",
+            "sv": "För en vanlig familjehund räcker det gott med en skål friskt vatten. Välj hellre en elektrolytlösning som är gjord för hundar än att dela din träningsdryck, och om du tror att hunden kan vara uttorkad, kontakta veterinären för råd om nästa steg."
           }
         }
       ],

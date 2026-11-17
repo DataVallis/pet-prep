@@ -14,7 +14,8 @@
     "nl": "Kokoswater",
     "pl": "Woda kokosowa",
     "cs": "Kokosová voda",
-    "hr": "Kokosova voda"
+    "hr": "Kokosova voda",
+    "sv": "Kokosvatten"
   },
   "question": {
     "en": "Can dogs drink coconut water?",
@@ -29,7 +30,8 @@
     "nl": "Mogen honden kokoswater drinken?",
     "pl": "Czy psy mogą pić wodę kokosową?",
     "cs": "Mohou psi pít kokosovou vodu?",
-    "hr": "Smiju li psi piti kokosovu vodu?"
+    "hr": "Smiju li psi piti kokosovu vodu?",
+    "sv": "Får hundar dricka kokosvatten?"
   },
   "url_slug": {
     "en": "coconut-water",
@@ -44,7 +46,8 @@
     "nl": "kokoswater",
     "pl": "woda-kokosowa",
     "cs": "kokosova-voda",
-    "hr": "kokosova-voda"
+    "hr": "kokosova-voda",
+    "sv": "kokosvatten"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "nl": "Ja, maar alleen af en toe, als snoepje. Een dierenarts die de AKC citeert, zegt dat kokoswater veilig is voor honden, maar dat het een snoepje moet blijven en geen vervanging is voor gewoon water. Kies puur kokoswater zonder toegevoegde suikers of conserveermiddelen en geef het met mate.",
     "pl": "Tak, od czasu do czasu, jako smakołyk. Weterynarz cytowany przez AKC mówi, że woda kokosowa jest dla psów bezpieczna, ale powinna być smakołykiem, a nie zamiennikiem zwykłej wody. Wybierz czystą wodę kokosową bez dodatku cukru i konserwantów i podawaj ją z umiarem.",
     "cs": "Ano, jako příležitostný pamlsek. Podle veterinářky citované AKC je kokosová voda pro psy bezpečná, ale má být jen pamlskem, ne náhradou běžné vody. Vybírejte čistou kokosovou vodu bez přidaného cukru a konzervantů a podávejte ji s mírou.",
-    "hr": "Da, ali samo povremeno, kao poslastica. Veterinar kojeg citira AKC kaže da je kokosova voda sigurna za pse, ali da je treba davati kao poslasticu, a ne umjesto obične vode. Odaberi čistu kokosovu vodu bez dodanih šećera i konzervansa i daj je umjereno."
+    "hr": "Da, ali samo povremeno, kao poslastica. Veterinar kojeg citira AKC kaže da je kokosova voda sigurna za pse, ali da je treba davati kao poslasticu, a ne umjesto obične vode. Odaberi čistu kokosovu vodu bez dodanih šećera i konzervansa i daj je umjereno.",
+    "sv": "Ja, som en godbit då och då. En veterinär som AKC citerar säger att kokosvatten är säkert för hundar men ska vara en godbit, inte en ersättning för vanligt vatten. Välj rent kokosvatten utan tillsatt socker eller konserveringsmedel och ge det med måtta."
   },
   "why": {
     "en": "Coconut is high in potassium, so caution is needed for dogs with kidney disease or other electrolyte disturbances. Too much coconut can make a dog sick, mainly with stomach upset such as diarrhoea. Anything you offer must be free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -75,7 +79,8 @@
     "nl": "Kokos bevat veel kalium, dus wees voorzichtig bij honden met nierziekte of andere verstoringen van de elektrolytenbalans. Te veel kokos kan een hond ziek maken, vooral met maagklachten zoals diarree. Alles wat je geeft, moet vrij zijn van kunstmatige zoetstoffen zoals xylitol, dat giftig is voor honden.",
     "pl": "Kokos zawiera dużo potasu, więc u psów z chorobą nerek lub innymi zaburzeniami elektrolitowymi trzeba zachować ostrożność. Zbyt dużo kokosu może rozstroić psa, głównie wywołując problemy żołądkowe, takie jak biegunka. Wszystko, co podajesz, musi być wolne od sztucznych słodzików, takich jak ksylitol, który jest toksyczny dla psów.",
     "cs": "Kokos obsahuje hodně draslíku, proto je třeba opatrnosti u psů s onemocněním ledvin nebo jinou poruchou elektrolytů. Příliš mnoho kokosu může psovi uškodit, hlavně potížemi se žaludkem, například průjmem. Cokoli psovi nabízíte, nesmí obsahovat umělá sladidla, jako je xylitol, který je pro psy toxický.",
-    "hr": "Kokos je bogat kalijem, pa je potreban oprez kod pasa s bolešću bubrega ili drugim poremećajima elektrolita. Previše kokosa psu može pozliti, uglavnom zbog želučanih tegoba poput proljeva. Sve što nudiš mora biti bez umjetnih sladila poput ksilitola, koji je otrovan za pse."
+    "hr": "Kokos je bogat kalijem, pa je potreban oprez kod pasa s bolešću bubrega ili drugim poremećajima elektrolita. Previše kokosa psu može pozliti, uglavnom zbog želučanih tegoba poput proljeva. Sve što nudiš mora biti bez umjetnih sladila poput ksilitola, koji je otrovan za pse.",
+    "sv": "Kokos innehåller mycket kalium, så försiktighet krävs för hundar med njursjukdom eller andra elektrolytrubbningar. För mycket kokos kan göra en hund sjuk, främst genom magbesvär som diarré. Allt du ger ska vara fritt från konstgjorda sötningsmedel som xylitol, som är giftigt för hundar."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "nl": "Stop met het kokoswater als je hond maagklachten of diarree krijgt. Kokos bevat veel kalium, dus wees er voorzichtig mee als je hond nierziekte heeft of een probleem met de elektrolytenbalans.",
     "pl": "Przestań podawać wodę kokosową, jeśli pies ma rozstrój żołądka lub biegunkę. Kokos zawiera dużo potasu, więc jeśli pies ma chorobę nerek lub zaburzenia elektrolitowe, zachowaj ostrożność.",
     "cs": "Pokud má pes po kokosové vodě podrážděný žaludek nebo průjem, přestaňte mu ji dávat. Kokos obsahuje hodně draslíku, proto buďte opatrní, má-li váš pes onemocnění ledvin nebo poruchu elektrolytů.",
-    "hr": "Prestani davati kokosovu vodu ako pas dobije probleme sa želucem ili proljev. Kokos je bogat kalijem, zato ga daj s oprezom ako tvoj pas ima bolest bubrega ili poremećaj elektrolita."
+    "hr": "Prestani davati kokosovu vodu ako pas dobije probleme sa želucem ili proljev. Kokos je bogat kalijem, zato ga daj s oprezom ako tvoj pas ima bolest bubrega ili poremećaj elektrolita.",
+    "sv": "Sluta ge kokosvattnet om hunden får orolig mage eller diarré. Kokos innehåller mycket kalium, så var försiktig om hunden har njursjukdom eller elektrolytrubbningar."
   },
   "serving": {
     "en": "Pure, unsweetened coconut water only, with no added sugar, preservatives or xylitol, offered in moderation as a treat and never instead of fresh water.",
@@ -106,7 +112,8 @@
     "nl": "Alleen puur, ongezoet kokoswater, zonder toegevoegde suiker, conserveermiddelen of xylitol. Geef het met mate als snoepje en nooit in plaats van vers water.",
     "pl": "Tylko czysta, niesłodzona woda kokosowa, bez dodatku cukru, konserwantów i ksylitolu, podawana z umiarem jako smakołyk i nigdy zamiast świeżej wody.",
     "cs": "Jen čistá neslazená kokosová voda bez přidaného cukru, konzervantů a xylitolu, podávaná s mírou jako pamlsek a nikdy místo čerstvé vody.",
-    "hr": "Samo čista, neslađena kokosova voda, bez dodanog šećera, konzervansa i ksilitola. Nudi je umjereno, kao poslasticu, i nikada umjesto svježe vode."
+    "hr": "Samo čista, neslađena kokosova voda, bez dodanog šećera, konzervansa i ksilitola. Nudi je umjereno, kao poslasticu, i nikada umjesto svježe vode.",
+    "sv": "Bara rent, osötat kokosvatten utan tillsatt socker, konserveringsmedel eller xylitol. Ge det med måtta som godbit, aldrig i stället för friskt vatten."
   },
   "child": {
     "en": "Coconut water is an occasional treat for dogs. Fresh water is still what they need to drink every day!",
@@ -121,7 +128,8 @@
     "nl": "Kokoswater is voor honden een snoepje voor af en toe. Vers water blijft wat ze elke dag moeten drinken!",
     "pl": "Woda kokosowa to smakołyk, który pies może dostać od czasu do czasu. Do codziennego picia nadal potrzebuje świeżej wody!",
     "cs": "Kokosová voda je pro psy občasný pamlsek. Každý den ale potřebují pít hlavně čerstvou vodu!",
-    "hr": "Kokosova voda povremena je poslastica za pse. Svježu vodu ipak trebaju piti svaki dan!"
+    "hr": "Kokosova voda povremena je poslastica za pse. Svježu vodu ipak trebaju piti svaki dan!",
+    "sv": "Kokosvatten är en godbit för hundar ibland. Men det de behöver dricka varje dag är friskt vatten!"
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "nl": "Kan kokoswater mijn hond helpen na het sporten?",
         "pl": "Czy woda kokosowa pomoże psu po wysiłku?",
         "cs": "Pomůže kokosová voda mému psovi po zátěži?",
-        "hr": "Može li kokosova voda pomoći mom psu nakon vježbanja?"
+        "hr": "Može li kokosova voda pomoći mom psu nakon vježbanja?",
+        "sv": "Kan kokosvatten hjälpa min hund efter motion?"
       },
       "a": {
         "en": "One vet quoted by the AKC offers her dogs coconut water for extra electrolytes after dog sport events. For the average house dog, though, a fresh bowl of water is perfectly sufficient.",
@@ -153,7 +162,8 @@
         "nl": "Een dierenarts die de AKC citeert, geeft haar honden na wedstrijden in de hondensport kokoswater voor extra elektrolyten. Voor de gemiddelde huishond is een verse bak water echter ruim voldoende.",
         "pl": "Jedna z weterynarek cytowanych przez AKC podaje swoim psom wodę kokosową, żeby uzupełnić elektrolity po zawodach sportowych z udziałem psów. Dla przeciętnego psa domowego w zupełności wystarczy jednak miska świeżej wody.",
         "cs": "Jedna veterinářka citovaná AKC dává svým psům po psích sportovních akcích kokosovou vodu na doplnění elektrolytů. Pro běžného domácího psa ale stačí miska čerstvé vody.",
-        "hr": "Jedna veterinarka koju citira AKC svojim psima daje kokosovu vodu kao dodatni izvor elektrolita nakon sportskih natjecanja pasa. Prosječnom kućnom psu ipak je sasvim dovoljna zdjelica svježe vode."
+        "hr": "Jedna veterinarka koju citira AKC svojim psima daje kokosovu vodu kao dodatni izvor elektrolita nakon sportskih natjecanja pasa. Prosječnom kućnom psu ipak je sasvim dovoljna zdjelica svježe vode.",
+        "sv": "En veterinär som AKC citerar ger sina hundar kokosvatten för extra elektrolyter efter hundsportevenemang. För en vanlig familjehund räcker det dock gott med en skål friskt vatten."
       }
     }
   ],
@@ -272,6 +282,11 @@
       "status": "verified",
       "verified_by": "claude-c-hr-2026-11-17",
       "verified_hash": "4905079573a29edab43983248febc427cf81331061885841cc51ffce192798ed"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-17",
+      "verified_hash": "15ec217300f02fab84e8fe0c7321a0c2c9555a3860818af5fe8ee622945ae43e"
     }
   }
 }
