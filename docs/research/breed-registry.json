@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "effbae40e2187fa48d157ca49502940ddcd098ae6fd55955ee0a1a6b90ec8c0c"
+      "sha256": "129e847308a4ddb2e29dcad39b3c36618b028943d023505ca8d1c27ef9cc7778"
     }
   },
   "suitability_vocabulary": {
@@ -68005,7 +68005,12 @@
           "S906"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "tibetan-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_checked",
         "tests": [],

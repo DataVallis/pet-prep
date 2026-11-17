@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `tibetan_terrier` (viri S904–S911; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: ni preverjen (stran RKC ni bila dosegljiva) |
 | Izvor | FCI št. 209, skupina 9, sekcija 5 (tibetanske pasme), Tibet (Kitajska), pokroviteljstvo Velika Britanija (S904) — po FCI pes družabnik, ne terier po tipu |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 117. mesto »Tibetan Terrier« (S174, prebrano 2026-11-17; 116. ameriški eskimski pes je blokiran) |
-| PR-ji | pet-prep #1292 (pasma) · portret pet-prep (sledi) · barvne različice (sledi) · spletna stran: pet-prep-website `feat/register-tibetan-terrier` |
+| PR-ji | pet-prep #1292 (pasma, združen `36f4c15`) · portret pet-prep (zagon `breed-portraits.yml` 44006138100, sprejet v prvem poskusu) · barvne različice (sledi) · spletna stran: pet-prep-website `feat/register-tibetan-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Česanje vsak dan, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-17 |
 | Ščetkanje zob vsak dan (otrok) | 🛠 | 💶 izziv | M5-R15 | 2026-11-17 |
 | Barve (izbirnik: 7 barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-17 |
-| AI portret v registru | 🗓 sledi po združitvi | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/tibetan-terrier`, `/sl/zivali/psi/tibetanski-terier`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), zlat, naravna dolga dlaka, rep zavihan čez hrbet | — | M5-R11-04 | 2026-11-17 |
+| Stran na petprep.si (`/animals/dogs/tibetan-terrier`, `/sl/zivali/psi/tibetanski-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
