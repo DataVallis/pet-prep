@@ -23,6 +23,8 @@ return [
     'download_lang' => 'Pdf in het :language',
     'links_valid' => 'De downloadlinks werken :days dagen. Zijn ze verlopen, beantwoord dan gewoon deze e-mail.',
     'help' => 'Code kwijt of een vraag? Beantwoord deze e-mail of schrijf naar :email en vermeld bestelling :number.',
+    // The same without the lost-code question (orders without a code: the promise kit).
+    'help_kit' => 'Een vraag? Beantwoord deze e-mail of schrijf naar :email en vermeld bestelling :number.',
     'hello' => 'Hallo,',
     'signoff' => 'Hartelijke groet,',
     'signature' => 'Curio en het PetPrep-team',

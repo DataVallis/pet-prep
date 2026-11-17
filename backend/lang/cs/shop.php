@@ -23,6 +23,8 @@ return [
     'download_lang' => 'PDF v jazyce: :language',
     'links_valid' => 'Odkazy ke stažení fungují :days dní. Pokud vyprší, stačí odpovědět na tento e-mail.',
     'help' => 'Ztratili jste kód nebo máte otázku? Odpovězte na tento e-mail nebo napište na :email a uveďte objednávku :number.',
+    // The same without the lost-code question (orders without a code: the promise kit).
+    'help_kit' => 'Máte otázku? Odpovězte na tento e-mail nebo napište na :email a uveďte objednávku :number.',
     'hello' => 'Dobrý den,',
     'signoff' => 'S pozdravem',
     'signature' => 'Curio a tým PetPrep',

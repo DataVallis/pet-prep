@@ -23,6 +23,8 @@ return [
     'download_lang' => 'PDF em :language',
     'links_valid' => 'As ligações de transferência funcionam durante :days dias. Se expirarem, basta responder a este e-mail.',
     'help' => 'Perdeu o código ou tem uma pergunta? Responda a este e-mail ou escreva para :email e indique a encomenda :number.',
+    // The same without the lost-code question (orders without a code: the promise kit).
+    'help_kit' => 'Tem uma pergunta? Responda a este e-mail ou escreva para :email e indique a encomenda :number.',
     'hello' => 'Olá,',
     'signoff' => 'Com os melhores cumprimentos,',
     'signature' => 'Curio e a equipa PetPrep',

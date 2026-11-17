@@ -23,6 +23,8 @@ return [
     'download_lang' => 'PDF v jeziku: :language',
     'links_valid' => 'Povezave za prenos delujejo :days dni. Če potečejo, preprosto odgovorite na to e-pošto.',
     'help' => 'Ste izgubili kodo ali imate vprašanje? Odgovorite na to e-pošto ali pišite na :email in navedite naročilo :number.',
+    // The same without the lost-code question (orders without a code: the promise kit).
+    'help_kit' => 'Imate vprašanje? Odgovorite na to e-pošto ali pišite na :email in navedite naročilo :number.',
     'hello' => 'Pozdravljeni,',
     'signoff' => 'Lep pozdrav,',
     'signature' => 'Curio in ekipa PetPrep',

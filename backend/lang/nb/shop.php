@@ -23,6 +23,8 @@ return [
     'download_lang' => 'PDF på :language',
     'links_valid' => 'Nedlastingslenkene virker i :days dager. Hvis de har utløpt, svarer du bare på denne e-posten.',
     'help' => 'Mistet koden eller har du et spørsmål? Svar på denne e-posten eller skriv til :email og oppgi bestilling :number.',
+    // The same without the lost-code question (orders without a code: the promise kit).
+    'help_kit' => 'Har du et spørsmål? Svar på denne e-posten eller skriv til :email og oppgi bestilling :number.',
     'hello' => 'Hei,',
     'signoff' => 'Vennlig hilsen',
     'signature' => 'Curio og PetPrep-teamet',

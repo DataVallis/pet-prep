@@ -23,6 +23,8 @@ return [
     'download_lang' => 'PDF på :language',
     'links_valid' => 'Downloadlinkene virker i :days dage. Hvis de er udløbet, så svar blot på denne e-mail.',
     'help' => 'Har du mistet koden eller et spørgsmål? Svar på denne e-mail eller skriv til :email og angiv bestilling :number.',
+    // The same without the lost-code question (orders without a code: the promise kit).
+    'help_kit' => 'Har du et spørgsmål? Svar på denne e-mail eller skriv til :email og angiv bestilling :number.',
     'hello' => 'Hej,',
     'signoff' => 'Venlig hilsen',
     'signature' => 'Curio og PetPrep-teamet',

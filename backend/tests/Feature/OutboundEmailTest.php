@@ -170,5 +170,6 @@ it('E9: a kit order\'s e-mail carries the kit PDF in the buyer\'s language; the 
     expect($message->getFrom()[0]->getName())->toBe('Curio von PetPrep')
         ->and($files)->toHaveCount(1)
         ->and($files[0]->getFilename())->toBe('petprep-promise-kit-de.pdf')
-        ->and($files[0]->getBody())->toBe('%PDF-1.4 kit de');
+        ->and($files[0]->getBody())->toBe('%PDF-1.4 kit de')
+        ->and($message->getHtmlBody())->toContain('Haben Sie eine Frage?')->not->toContain('Code verloren');
 });

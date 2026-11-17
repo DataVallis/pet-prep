@@ -23,6 +23,8 @@ return [
     'download_lang' => 'PDF auf :language',
     'links_valid' => 'Die Download-Links funktionieren :days Tage lang. Wenn sie abgelaufen sind, antworten Sie einfach auf diese E-Mail.',
     'help' => 'Code verloren oder eine Frage? Antworten Sie auf diese E-Mail oder schreiben Sie an :email und nennen Sie die Bestellung :number.',
+    // The same without the lost-code question (orders without a code: the promise kit).
+    'help_kit' => 'Haben Sie eine Frage? Antworten Sie auf diese E-Mail oder schreiben Sie an :email und nennen Sie die Bestellung :number.',
     'hello' => 'Hallo,',
     'signoff' => 'Herzliche Grüße',
     'signature' => 'Curio und das PetPrep-Team',

@@ -23,6 +23,8 @@ return [
     'download_lang' => 'PDF in :language',
     'links_valid' => 'I link per il download funzionano per :days giorni. Se scadono, rispondi semplicemente a questa e-mail.',
     'help' => 'Hai perso il codice o hai una domanda? Rispondi a questa e-mail o scrivi a :email indicando l\'ordine :number.',
+    // The same without the lost-code question (orders without a code: the promise kit).
+    'help_kit' => 'Hai una domanda? Rispondi a questa e-mail o scrivi a :email indicando l\'ordine :number.',
     'hello' => 'Ciao,',
     'signoff' => 'Un caro saluto,',
     'signature' => 'Curio e il team PetPrep',

@@ -107,7 +107,7 @@ class ShopEmailComposer
             $lines[] = $t('links_valid', ['days' => $v['linkDays']]);
             $lines[] = '';
         }
-        $lines[] = $t('help', ['email' => $v['support'], 'number' => $v['number']]);
+        $lines[] = $t($v['code'] !== null ? 'help' : 'help_kit', ['email' => $v['support'], 'number' => $v['number']]);
         $lines[] = '';
         $lines[] = $t('signoff');
         $lines[] = $t('signature');

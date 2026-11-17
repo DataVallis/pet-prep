@@ -64,7 +64,7 @@
 </td></tr>
 @endif
 <tr><td style="padding:24px 32px 0 32px;font-size:14px;line-height:21px;color:#5A635D;">
-    <p style="margin:0 0 12px 0;">{{ $t('help', ['email' => $support, 'number' => $number]) }}</p>
+    <p style="margin:0 0 12px 0;">{{ $t($code !== null ? 'help' : 'help_kit', ['email' => $support, 'number' => $number]) }}</p>
     <p style="margin:0;color:#121614;">{{ $t('signoff') }}<br>{{ $t('signature') }}</p>
 </td></tr>
 <tr><td style="padding:24px 32px 28px 32px;font-size:12px;line-height:18px;color:#5A635D;border-top:1px solid #DDE3DE;">
