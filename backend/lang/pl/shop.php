@@ -1,0 +1,41 @@
+<?php
+
+// M6-S09: e-mails and the voucher PDF of the website shop (WEBSITE_SALES_SPEC §3.6).
+// One file per website language; keep the keys identical in all 15 (ShopEmailLangTest).
+
+return [
+    'gift_subject' => 'Twój bon podarunkowy PetPrep',
+    'gift_preheader' => 'Kod na 12-tygodniowe wyzwanie PetPrep, gotowy do podarowania.',
+    'gift_intro' => 'Dziękujemy za zamówienie. Oto Twój bon podarunkowy na jedno 12-tygodniowe wyzwanie PetPrep.',
+    'code_label' => 'Kod bonu',
+    'valid_until' => 'Ważny do :date',
+    'how_title' => 'Jak go podarować',
+    'step_print' => 'Wydrukuj bon załączony do tego e-maila i wpisz, dla kogo jest i od kogo.',
+    'step_redeem' => 'Rodzic loguje się na :url tym samym kontem co w aplikacji PetPrep i wpisuje kod.',
+    'step_start' => 'W aplikacji rodzic wybiera zwierzaka, dla którego jest wyzwanie, i zaczyna się 12 tygodni.',
+    'redeem_button' => 'Zrealizuj bon',
+    'kit_title' => 'W zestawie: Obietnica dla zwierzaka',
+    'kit_text' => 'Rodzinny zestaw do wydruku, który pomaga porozmawiać o zwierzaku. Pobierz go tutaj:',
+    'kit_subject' => 'Twój zestaw Obietnica dla zwierzaka',
+    'kit_preheader' => 'Twój rodzinny zestaw do wydruku jest gotowy do pobrania.',
+    'kit_intro' => 'Dziękujemy za zamówienie. Twój zestaw Obietnica dla zwierzaka do wydruku jest gotowy do pobrania.',
+    'download' => 'Pobierz zestaw (PDF)',
+    'download_lang' => 'PDF w języku: :language',
+    'links_valid' => 'Linki do pobrania działają przez :days dni. Jeśli wygasną, po prostu odpowiedz na tego e-maila.',
+    'help' => 'Zgubiłeś kod lub masz pytanie? Odpowiedz na tego e-maila albo napisz na :email i podaj zamówienie :number.',
+    'hello' => 'Dzień dobry,',
+    'signoff' => 'Serdecznie pozdrawiamy,',
+    'signature' => 'Curio i zespół PetPrep',
+    'receipt' => 'Potwierdzenie płatności i fakturę otrzymasz osobno od firmy Link, która obsługuje płatność dla PetPrep.',
+    'order' => 'Zamówienie :number',
+    'pdf_title' => 'Bon podarunkowy',
+    'pdf_product' => '12-tygodniowe wyzwanie PetPrep',
+    'pdf_tagline' => 'Nie dawaj szczeniaka. Podaruj próbę.',
+    'pdf_for' => 'Dla',
+    'pdf_from' => 'Od',
+    'pdf_code' => 'Kod',
+    'pdf_valid' => 'Ważny do',
+    'pdf_redeem' => 'Zrealizuj na',
+    'pdf_file' => 'petprep-bon-podarunkowy',
+    'language_name' => 'polski',
+];

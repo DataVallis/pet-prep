@@ -40,7 +40,7 @@ class SummaryLead extends Model
     public const CONSENT_VERSIONS = ['2026-11'];
 
     /** @var list<string> */
-    public const SOURCES = ['real_cost', 'breed_quiz'];
+    public const SOURCES = ['real_cost', 'breed_quiz', 'promise_kit_sample'];
 
     /** @var list<string> */
     public const STAGES = ['adult', 'puppy'];

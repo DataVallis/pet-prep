@@ -154,7 +154,7 @@ class WebParentSessionService
         return 'web-session:pw:'.hash('sha256', mb_strtolower(trim($email)));
     }
 
-    /** Off while the gift switch is off or Lemon Squeezy is not configured — before any credential check. */
+    /** Off while the gift switch is off — before any credential check. */
     private function assertAvailable(): void
     {
         if (! $this->gifts->available()) {

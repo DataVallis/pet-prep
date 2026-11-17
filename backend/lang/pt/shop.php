@@ -1,0 +1,41 @@
+<?php
+
+// M6-S09: e-mails and the voucher PDF of the website shop (WEBSITE_SALES_SPEC §3.6).
+// One file per website language; keep the keys identical in all 15 (ShopEmailLangTest).
+
+return [
+    'gift_subject' => 'O seu vale de oferta PetPrep',
+    'gift_preheader' => 'O código para um desafio PetPrep de 12 semanas, pronto a oferecer.',
+    'gift_intro' => 'Obrigado pela sua encomenda. Aqui está o seu vale de oferta para um desafio PetPrep de 12 semanas.',
+    'code_label' => 'Código do vale',
+    'valid_until' => 'Válido até :date',
+    'how_title' => 'Como oferecer',
+    'step_print' => 'Imprima o vale anexado a este e-mail e escreva para quem é e de quem é.',
+    'step_redeem' => 'O pai ou a mãe inicia sessão em :url com a mesma conta da app PetPrep e introduz o código.',
+    'step_start' => 'Na app, escolhe o animal para quem é o desafio, e as 12 semanas começam.',
+    'redeem_button' => 'Resgatar o vale',
+    'kit_title' => 'Incluído: o kit Promessa ao animal',
+    'kit_text' => 'Um kit familiar para imprimir, para conversar sobre ter um animal. Descarregue-o aqui:',
+    'kit_subject' => 'O seu kit Promessa ao animal',
+    'kit_preheader' => 'O seu kit familiar para imprimir está pronto para descarregar.',
+    'kit_intro' => 'Obrigado pela sua encomenda. O seu kit Promessa ao animal para imprimir está pronto para descarregar.',
+    'download' => 'Descarregar o kit (PDF)',
+    'download_lang' => 'PDF em :language',
+    'links_valid' => 'As ligações de transferência funcionam durante :days dias. Se expirarem, basta responder a este e-mail.',
+    'help' => 'Perdeu o código ou tem uma pergunta? Responda a este e-mail ou escreva para :email e indique a encomenda :number.',
+    'hello' => 'Olá,',
+    'signoff' => 'Com os melhores cumprimentos,',
+    'signature' => 'Curio e a equipa PetPrep',
+    'receipt' => 'O recibo e a fatura chegam separadamente da Link, que processa o pagamento para a PetPrep.',
+    'order' => 'Encomenda :number',
+    'pdf_title' => 'Vale de oferta',
+    'pdf_product' => 'Desafio PetPrep de 12 semanas',
+    'pdf_tagline' => 'Não ofereça um cachorro. Ofereça um ensaio.',
+    'pdf_for' => 'Para',
+    'pdf_from' => 'De',
+    'pdf_code' => 'Código',
+    'pdf_valid' => 'Válido até',
+    'pdf_redeem' => 'Resgate em',
+    'pdf_file' => 'petprep-vale-de-oferta',
+    'language_name' => 'português',
+];
