@@ -62164,6 +62164,489 @@
       }
     }
   },
+  "greyhound": {
+    "_note": "Added 2026-11-17 (M5-R10-122, unattended run — appended after the Tibetan Terrier: AKC 2024 No. 118 'Greyhound', S174 full-list table recorded 2026-11-17 in row 121 '117 Tibetan Terrier', '118 Greyhound'). Quotes as returned by the web-fetch tool on 2026-11-17 (after a web search; non-preapproved pages: fragments); paraphrase only in notes, marked '(paraphrase)'. Sources S912–S922 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Standard: FCI-Standard N° 158 Greyhound (S912, fci.be PDF '06.10.2026/ EN', valid standard 08.09.2026; the fetch returned the colour sentence without 'fawn' — the KUSA copy S913 'effective date of 01/01/2026' lists fawn, so fawn is kept as a standard colour). The RKC Breeds A–Z page and RKC breed standard were refused by the fetch tool this run (redirect to royalkennelclub.com outside the provenance set) → no RKC key facts and no RKC health tests: the runbook's 'else PDSA' path — PDSA (S914) for size, height, weight band, lifespan band ('Over 10 years'), exercise ('about an hour of exercise daily') and grooming ('weekly grooming'). Weight from the AKC standard (S918, Greyhound Club of America copy: 'Dogs, 65 to 70 pounds' / 'Bitches, 60 to 65 pounds'). Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused again and the paper text has no Greyhound value → the VetCompass breed paper (O'Neill et al. 2019, S920) median 11.4 years → senior 103 (runbook: 'else a VetCompass median'); McMillan 2024 11.5 y only via a Wikipedia mirror (S921, tier C, background). Coren rank 46 'Greyhound' (S35, Average) → 1.0. RKC Breed Watch category 1 only via the breed club (S922) → no welfare chip. Never hypoallergenic. Slovenian »angleški hrt« (no KZS page reached — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 158, Group 10 Section 3 (Short-haired sighthounds), Great Britain",
+      "unit": "—",
+      "source_id": "S912",
+      "quote": "Section 3 Short-haired sighthounds",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 158 (S912): 'ORIGIN: Great Britain.', 'UTILIZATION: Sighthound.', 'Group 10 Sighthounds', 'Without working trial'. FCI nomenclature page (S912 note): 'Group : n°10 - Sighthounds', section 'Short-haired Sighthounds', country 'GREAT BRITAIN', accepted on a definitive basis '4/23/1955'."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S914",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "PDSA key fact 'Size' (S914) 'Large' — no RKC key fact reachable this run (runbook: else PDSA). Dogs Trust (S915) 'Large'; PetMD (S916) 'Greyhounds are considered large breed dogs' (fragment). AKC standard weight 60–70 lb (S918) → the 'Large (59–99 pounds)' class of S10."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            71,
+            76
+          ],
+          "female": [
+            68,
+            71
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S913",
+        "quote": "Males: 71cm – 76cm (approx. 28\" – 30\").",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 158, KUSA copy (S913): 'Ideal height at withers:' 'Males: 71cm – 76cm (approx. 28\" – 30\").' 'Females: 68cm – 71cm (approx. 27\" – 28\").'; the fci.be PDF (S912) 'Males: 71 – 76 cm' / 'Females: 68 – 71 cm' (ideal height). The register value. PDSA (S914) 'Average height' '69-76 cm'; WebMD (S917) males 28–30 in, females 27–28 in."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            29.5,
+            31.8
+          ],
+          "female": [
+            27.2,
+            29.5
+          ]
+        },
+        "unit": "kg (converted from dogs 65–70 lb, bitches 60–65 lb)",
+        "source_id": "S918",
+        "quote": "Dogs, 65 to 70 pounds",
+        "confidence": "high",
+        "notes": "AKC breed standard (S918, Greyhound Club of America copy): 'Dogs, 65 to 70 pounds'; 'Bitches, 60 to 65 pounds' — the game / register value (the FCI standard S912 / S913 gives no weight). AKC article (S919) 'males weigh about 65–70 pounds', 'females weigh about 60–65 pounds'; WebMD (S917) the same bands; PetMD (S916) 'weighing about 60-70 pounds'. VetCompass (S920) mean adult bodyweight of UK greyhounds: males 32.3 kg, females 27.2 kg (background, a mean).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                25,
+                35
+              ],
+              "female": [
+                25,
+                35
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S914",
+            "quote": "25-35 kg",
+            "notes": "PDSA key fact 'Average weight' (S914)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. AKC 60–70 lb (S918) → 'Large (59–99 pounds)'. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Greyhound growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 11.4,
+        "unit": "years",
+        "source_id": "S920",
+        "quote": "The median longevity of greyhounds overall was 11.4 years (IQR 9.6–12.8, range 0.2–16.5).",
+        "confidence": "high",
+        "notes": "VetCompass breed paper (O'Neill et al. 2019, Canine Genetics and Epidemiology 6:4, S920) — UK primary-care greyhounds under veterinary care in 2016, 474 deaths ('Based on 474 deaths, median longevity was 11.4 years (range 0.2–16.5).'). Runbook second choice (McMillan 2024 not reachable: S123 refused, the paper text names no Greyhound value). McMillan 2024 'a life expectancy of 11.5 years for the breed' only via a Wikipedia mirror (S921, tier C) — agrees, background. Many UK greyhounds are retired racing dogs (background)."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S914",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S914). Dogs Trust (S915) 'typically 10+ years' agrees. Not shorter_lifespan (no 'Under 10 years')."
+      },
+      "webmd": {
+        "value": "10–13",
+        "unit": "years",
+        "source_id": "S917",
+        "quote": "They live an average of 10 to 13 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S917). Background."
+      },
+      "senior_from": {
+        "value": 8.55,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 11.4 y (VetCompass median, S920) → 0.75 × 11.4 = 8.55 y = 102.6 months → 103 (half up). Dogs Trust rule of thumb > 7 y = 84 months (S14). Not chosen: 0.75 × 10 y (PDSA lower bound, S914) = 90.",
+        "derived_from": [
+          "S11",
+          "S920"
+        ],
+        "months": 103,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S914",
+        "quote": "Greyhounds aren't overly energetic, requiring about an hour of exercise daily.",
+        "confidence": "high",
+        "notes": "PDSA (S914) → 60 min ('about N' → N); key fact 'Minimum exercise (per day) | 1 hour' agrees. No RKC key fact reachable (runbook: RKC, else PDSA). PetMD (S916), WebMD (S917) and Dogs Trust (S915) give no minutes."
+      },
+      "daily_text": {
+        "value": "not overly energetic; about an hour a day, preferably a couple of good runs rather than long walks",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "They prefer the opportunity for a good couple of runs rather than miles of walking",
+        "confidence": "high",
+        "notes": "PDSA (S914, fragment). WebMD (S917): 'They like lazing about the house but need exercise every day.'; AKC flier (S919 note) a large, fenced area safe from cars (paraphrase)."
+      },
+      "runs": {
+        "value": "a couple of good runs a day rather than long walks",
+        "unit": "exercise type (sourced need)",
+        "source_id": "S914",
+        "quote": "They prefer the opportunity for a good couple of runs rather than miles of walking",
+        "confidence": "high",
+        "notes": "PDSA (S914). The game counts steps only; a sprint / run is not modelled → open for David (needs a new ROADMAP task, Whippet off-lead precedent)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise: PDSA (S914) and WebMD (S917) name GDV / bloat, PetMD (S916) advises two or three smaller meals ('You can also split meals into two or three smaller meals instead of one large meal a day.') — no quoted gap → no meal gap (runbook: never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "intelligent, gentle, affectionate and even tempered",
+        "unit": "—",
+        "source_id": "S912",
+        "quote": "Intelligent, gentle, affectionate and even tempered.",
+        "confidence": "high",
+        "notes": "FCI standard (S912). AKC (S919): 'a gentle, noble, and sweet-tempered companion with an independent spirit' (paraphrase of the AKC breed page line)."
+      },
+      "family": {
+        "value": "with the right socialisation as puppies, good family pets",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "With the right socialisation as puppies, they can make good family pets",
+        "confidence": "high",
+        "notes": "PDSA (S914, fragment) → family_pet chip (conditional on socialisation, kept in notes; David 2026-10-09: 'Družinski pes')."
+      },
+      "children": {
+        "value": "can be patient with children and walk away rather than snap; only moderately good with young children (WebMD)",
+        "unit": "—",
+        "source_id": "S916",
+        "quote": "Greyhounds can be patient with children and are more likely to walk away from a child than snap.",
+        "confidence": "medium",
+        "notes": "PetMD (S916). WebMD (S917): 'They're only moderately good with young children but are better with other dogs.' — the sources differ → no children / small_children chip (family_pet from PDSA only)."
+      },
+      "other_pets": {
+        "value": "very strong prey drive — not ideal with cats or other small animals; usually good with other dogs",
+        "unit": "—",
+        "source_id": "S916",
+        "quote": "Greyhounds have a very strong prey drive, so they aren't ideal for homes with cats or other small animals.",
+        "confidence": "high",
+        "notes": "PetMD (S916) → chases_small_pets. PDSA (S914): 'will need to be appropriately socialised with smaller pets due to their strong chase instinct.'; WebMD (S917): 'They have strong prey instincts and will happily chase after every squirrel.'; 'better with other dogs'. Never other_pets."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on time alone or separation anxiety (PetMD S916: they value some undisturbed 'me time' — paraphrase). No needs_company."
+      },
+      "socialisation": {
+        "value": "socialisation as puppies (family life, smaller pets)",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "With the right socialisation as puppies, they can make good family pets",
+        "confidence": "high",
+        "notes": "PDSA (S914, a condition — runbook 'given the right socialisation as puppies' shape) → breed DOG_SOCIALISATION entry (M5-R17). PetMD (S916): 'Socialization can help with curbing the prey drive instincts.'"
+      },
+      "training": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B training statement recorded this run (background: AKC 'an independent spirit')."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch category 1 (breed club S922 'The Greyhound is a category one breed') — no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: not checked (RKC health-testing section not reachable; the breed club names a Greyhound Neuropathy DNA test, S922 — not used without the RKC page).",
+      "gdv": {
+        "value": "gastric dilatation and volvulus (GDV, bloat) — the stomach twists; an emergency",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "often known as 'bloat', this is a condition where the stomach twists, trapping the contents and gases.",
+        "confidence": "high",
+        "notes": "PDSA (S914): 'This is an emergency and requires urgent veterinary attention.'; WebMD (S917) 'Gastric torsion or bloat.'; PetMD (S916) signs and 'Seek immediate veterinary care if any of these symptoms are noted.' Register health key bloat_gdv."
+      },
+      "periodontal": {
+        "value": "periodontal disease — infection and inflammation of the tissues around the teeth",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "infection and inflammation of the periodontium (tissues that surround and support the teeth)",
+        "confidence": "high",
+        "notes": "PDSA (S914). WebMD (S917) daily tooth brushing (suitability.webmd_teeth). Register health key periodontal_disease."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — gradual deterioration of the retina",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "gradual deterioration of the retina of the eye.",
+        "confidence": "high",
+        "notes": "PDSA (S914). Register health key pra_eye_disease."
+      },
+      "osteosarcoma": {
+        "value": "osteosarcoma (bone cancer)",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S914) lists osteosarcoma (bone cancer) (as returned, no full sentence). Background only — no register key."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand's disease — a bleeding disorder",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "deficiency in blood platelet function resulting in excessive bleeding.",
+        "confidence": "high",
+        "notes": "PDSA (S914). Register health key bleeding_disorder_vwd."
+      },
+      "other": {
+        "value": "hyperthermia and rigid paralysis can sometimes occur after exercise (PDSA)",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "Hyperthermia and rigid paralysis can sometimes occur following exercise.",
+        "confidence": "medium",
+        "notes": "PDSA (S914). Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 46,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Greyhound",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-17): rank 46 'Greyhound' — 'Average Working/Obedience Intelligence' (ranks 40–54), 'Understanding of new commands: 25 to 40 repetitions.', 'Obey first command: 50% of the time or better.' (shared with the Wirehaired Pointing Griffon row of 2026-10-22). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label for ranks 40–54 (as returned: 'Average Working/Obedience Intelligence')."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.greyhound.learning_multiplier (1.0, runbook rule: Average tier, rank 46).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "strongly built, upstanding sighthound of generous proportions, muscular power and symmetrical formation",
+        "unit": "—",
+        "source_id": "S912",
+        "quote": "Strongly built, upstanding, of generous proportions, muscular power and symmetrical formation,",
+        "confidence": "high",
+        "notes": "FCI standard (S912)."
+      },
+      "colours": {
+        "value": [
+          "brindle",
+          "black",
+          "fawn",
+          "blue",
+          "red",
+          "white with black patches"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S913",
+        "quote": "Black, white, red, blue, fawn, fallow, brindle or any of these colours broken with white.",
+        "confidence": "high",
+        "notes": "FCI standard, KUSA copy (S913); the fci.be PDF (S912) returned the same sentence without 'fawn' (fetch or edit — KUSA and the 2011 text list it). AKC standard (S918) 'Color – Immaterial'. The game draws six of the named colours (brindle first as the portrait default); fallow (a pale fawn) and the other white-broken combinations are not drawn; never merle (not named)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Brindle first with the highest weight → the portrait default."
+      },
+      "coat": {
+        "value": "fine and close",
+        "unit": "—",
+        "source_id": "S912",
+        "quote": "Fine and close.",
+        "confidence": "high",
+        "notes": "FCI standard (S912). PDSA (S914) 'Coat length | Short'."
+      },
+      "ears": {
+        "value": "small, rose-shaped ears of fine texture",
+        "unit": "—",
+        "source_id": "S912",
+        "quote": "Small, rose-shape, of fine texture.",
+        "confidence": "high",
+        "notes": "FCI standard (S912)."
+      },
+      "eyes": {
+        "value": "bright, intelligent, oval, obliquely set, preferably dark",
+        "unit": "—",
+        "source_id": "S912",
+        "quote": "Bright, intelligent, oval and obliquely set. Preferably dark.",
+        "confidence": "high",
+        "notes": "FCI standard (S912)."
+      },
+      "tail": {
+        "value": "long, set rather low, strong at the root, tapering, carried low and slightly curved",
+        "unit": "—",
+        "source_id": "S912",
+        "quote": "Long, set on rather low, strong at root, tapering to point, carried low, slightly curved.",
+        "confidence": "high",
+        "notes": "FCI standard (S912). Natural tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S914), PetMD (S916), WebMD (S917), Dogs Trust (S915), AKC (S919). The RKC breed page was not reachable on 2026-11-17 → no rkc_* key facts.",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Size' (S914) → size class."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S914) → 60 min. Not long_daily_exercise."
+      },
+      "pdsa_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Coat length' (S914)."
+      },
+      "pdsa_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "They have a short coat which requires weekly grooming to keep it in good condition.",
+        "confidence": "high",
+        "notes": "PDSA (S914) → brushing once a week (dog-grooming rule 'Once a week' → 1, M5-R13). AKC article (S919) 'weekly brushings' agrees; Dogs Trust (S915) 'only needs an occasional brush' (no number)."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S914",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S914) — see lifespan.pdsa."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth every day",
+        "unit": "—",
+        "source_id": "S917",
+        "quote": "Brush your dog's teeth on a daily basis with a dog-safe toothpaste to complete their grooming routine.",
+        "confidence": "high",
+        "notes": "WebMD (S917) → tooth brushing every day (M5-R15)."
+      },
+      "webmd_nails": {
+        "value": "trim the nails when they get too long — no frequency",
+        "unit": "—",
+        "source_id": "S917",
+        "quote": "Trim their nails whenever they get too long. Long nails can be painful and lead to difficulty walking.",
+        "confidence": "high",
+        "notes": "WebMD (S917); PetMD (S916) 'occasional baths and nail trims' — no frequency → no nail task."
+      },
+      "webmd_bath": {
+        "value": "a bath whenever too dirty or smelly — no frequency",
+        "unit": "—",
+        "source_id": "S917",
+        "quote": "They need one whenever they become too dirty or smelly for your liking.",
+        "confidence": "high",
+        "notes": "WebMD (S917) — no frequency → no bath reminder."
+      },
+      "petmd_ears": {
+        "value": "routine ear cleaning with a vet-approved cleanser — no frequency",
+        "unit": "—",
+        "source_id": "S916",
+        "quote": "Routine ear cleaning with a veterinary-approved ear cleanser is important in maintaining healthy ear canals.",
+        "confidence": "high",
+        "notes": "PetMD (S916); WebMD (S917) 'check their ears regularly' — no frequency → no ear-cleaning task."
+      },
+      "webmd_weather": {
+        "value": "no insulating undercoat — can be susceptible to extreme temperatures; watch them in dramatic weather changes",
+        "unit": "—",
+        "source_id": "S917",
+        "quote": "Since Greyhounds don't have insulating undercoats, they can be susceptible to extreme temperatures.",
+        "confidence": "high",
+        "notes": "WebMD (S917): 'Keep an eye on them when there are dramatic changes in the weather.' Not cold_sensitive (the source names extreme temperatures, not the cold). The game has no weather mechanic → open for David (needs a new ROADMAP task)."
+      },
+      "dogstrust_shedding": {
+        "value": "short coat with moderate shedding",
+        "unit": "—",
+        "source_id": "S915",
+        "quote": "Short length with moderate shedding.",
+        "confidence": "medium",
+        "notes": "Dogs Trust key fact (S915). WebMD (S917) 'Greyhounds shed infrequently and rarely drool.' — the sources disagree → no shedding fact, no low_shedding / sheds chip."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -93110,6 +93593,226 @@
         "confidence": "medium",
         "notes": "FCI standard (S904) as in tibetan_terrier.appearance. Seven standard colours; weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): golden is the portrait default (one of the FCI S904 colours; weights unsourced); natural coat (not clipped), natural tail"
+      }
+    },
+    "greyhound": {
+      "_note": "Unattended run M5-R10-122 (2026-11-17): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PDSA (S914 'about an hour of exercise daily' → 60; the RKC page was not reachable → runbook 'else PDSA'). Senior boundary 103 from the VetCompass median 11.4 y (S920; McMillan 2024 not reachable). Learning 1.0 (Coren 46, Average, S35). Built: brushing once a week (PDSA 'weekly grooming', M5-R13), tooth brushing every day (WebMD S917, M5-R15), puppy socialisation with the PDSA quote (M5-R17). No nail / ear / bath / groomer task (no frequency), no meal gap (no quote), no heat warning. Open for David (no mechanic): a couple of good runs (PDSA), weather care (WebMD). No new vocabulary key. In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S914",
+        "quote": "Greyhounds aren't overly energetic, requiring about an hour of exercise daily.",
+        "confidence": "high",
+        "notes": "PDSA (S914) → rule 'about N' → 60 (no RKC key fact reachable → PDSA). PDSA key fact '1 hour' agrees.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S914 'about an hour of exercise daily'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S914",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 103
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 103 = round(0.75 × 11.4 y × 12) = round(102.6) (S11 + the VetCompass median 11.4 y, S920 — McMillan 2024 not reachable).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S920"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_pdsa_lower_bound_10_y": 90
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 103 (0.75 × VetCompass median 11.4 y, S920)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 103
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 103)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 46 'Greyhound' (S35) → 'Average working/obedience intelligence' (ranks 40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 46, Average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S914",
+        "quote": "They have a short coat which requires weekly grooming to keep it in good condition.",
+        "confidence": "high",
+        "notes": "greyhound.suitability.pdsa_grooming. PDSA 'weekly grooming' → 1. AKC article (S919) 'weekly brushings' agrees. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »requires weekly grooming«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S917",
+        "quote": "Brush your dog's teeth on a daily basis with a dog-safe toothpaste to complete their grooming routine.",
+        "confidence": "high",
+        "notes": "greyhound.suitability.webmd_teeth → every day. Built: DOG_CARE_TASKS tooth_brushing [7, day], M5-R15. Nails 'whenever they get too long' → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »Brush your dog's teeth on a daily basis« → vsak dan"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S914",
+        "quote": "With the right socialisation as puppies, they can make good family pets",
+        "confidence": "high",
+        "notes": "greyhound.behaviour.socialisation (PDSA S914, a condition). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S914)"
+      },
+      "runs": {
+        "value": "a couple of good runs rather than long walks",
+        "unit": "exercise type (sourced need)",
+        "source_id": "S914",
+        "quote": "They prefer the opportunity for a good couple of runs rather than miles of walking",
+        "confidence": "high",
+        "notes": "PDSA (S914), greyhound.exercise.runs. The game counts steps only; a run / sprint is not modelled → open for David (needs a new ROADMAP task).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): nekaj dobrih tekov namesto dolgih sprehodov; mehanike ni → potrebna nova naloga v ROADMAP (David)"
+      },
+      "weather_care": {
+        "value": "watch the dog in extreme temperatures / dramatic weather changes (no insulating undercoat)",
+        "unit": "weather care (sourced need)",
+        "source_id": "S917",
+        "quote": "Since Greyhounds don't have insulating undercoats, they can be susceptible to extreme temperatures.",
+        "confidence": "high",
+        "notes": "WebMD (S917), greyhound.suitability.webmd_weather. The game has no weather mechanic → open for David (needs a new ROADMAP task).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pozornost ob skrajnih temperaturah; mehanike ni → potrebna nova naloga v ROADMAP (David)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-122); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S914"
+            ],
+            "refs": [
+              "greyhound.behaviour.family"
+            ],
+            "quote": "S914 'With the right socialisation as puppies, they can make good family pets'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S916"
+            ],
+            "refs": [
+              "greyhound.behaviour.other_pets"
+            ],
+            "quote": "S916 'Greyhounds have a very strong prey drive, so they aren't ideal for homes with cats or other small animals.'"
+          }
+        ],
+        "not_proposed": {
+          "children": "PetMD (S916) 'can be patient with children' vs WebMD (S917) 'only moderately good with young children' — the sources differ.",
+          "small_children": "No explicit rating; WebMD 'only moderately good with young children'.",
+          "apartment": "No RKC key fact 'Size of home' reachable (the chip needs RKC 'Flat/ Apartment').",
+          "active_family": "PDSA (S914) 'Greyhounds aren't overly energetic' — not proposed.",
+          "long_daily_exercise": "60 minutes a day (PDSA S914) — the chip is for 2 hours or more.",
+          "low_shedding": "WebMD 'shed infrequently' (S917) vs Dogs Trust 'moderate shedding' (S915) — conflicting.",
+          "sheds": "Conflicting sources (as above).",
+          "other_pets": "Very strong prey drive (S916) — the opposite.",
+          "needs_company": "No A/B statement on time alone.",
+          "cold_sensitive": "WebMD (S917) names 'extreme temperatures', not the cold — kept as an open weather need for David.",
+          "first_time_owner": "No source.",
+          "shorter_lifespan": "PDSA 'Over 10 years' (S914).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "RKC Breed Watch category 1 (breed club S922); no veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet; consider chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S922",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows the Greyhound with cats / small pets or off the lead in the open (strong chase instinct, S914 / S916) and never calls it hypoallergenic.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Greyhound, brindle: strongly built, upstanding sighthound of generous proportions; fine, close short coat; long head; small rose ears; bright oval dark eyes; long low-carried slightly curved tail; healthy lean condition",
+        "unit": "—",
+        "source_id": "S912",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S912) as in greyhound.appearance. Six standard colours; weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): brindle is the portrait default (one of the FCI S912 / S913 colours; weights unsourced); natural tail, ears not cropped"
       }
     }
   }
