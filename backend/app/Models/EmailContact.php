@@ -15,6 +15,11 @@ use Illuminate\Support\Carbon;
  * /admin (superadmin). Never deleted automatically (David 2026-11-15): a contact — and its
  * signups, ON DELETE CASCADE — goes only when the person asks.
  *
+ * `consent_version` / `consented_at` of the contact are the HIGHEST-RANKED consent ever given — NOT a
+ * per-purpose consent. Consent per purpose (newsletter vs early access) for the planned provider job
+ * (M6-S10) must be read from the signup rows (`email_signups.consent_version` + `purpose`). A repeat
+ * signup never clears `unsubscribed_at`.
+ *
  * `provider_synced_at` is the marker of the PLANNED job that pushes contacts to Klaviyo (or another
  * provider); nothing writes it yet. A contact is "changed since the last push" when `last_seen_at`
  * is later than it.

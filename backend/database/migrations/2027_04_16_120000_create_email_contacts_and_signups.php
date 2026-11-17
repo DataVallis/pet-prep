@@ -80,6 +80,11 @@ return new class extends Migration
         DB::statement("ALTER TABLE email_signups ADD CONSTRAINT email_signups_quiz_result_check CHECK (quiz_result IS NULL OR (jsonb_typeof(quiz_result) = 'array' AND jsonb_array_length(quiz_result) <= 3))");
 
         if (Schema::hasTable('summary_leads')) {
+            // The old container may still be answering: block writes to the old table until this
+            // migration's transaction ends, so no lead can arrive between the copy and the drop.
+            if (DB::getDriverName() === 'pgsql') {
+                DB::statement('LOCK TABLE summary_leads IN SHARE MODE');
+            }
             $locales = "'".implode("', '", WebsiteLocale::ALL)."'";
 
             DB::statement(<<<'SQL'
@@ -97,12 +102,19 @@ return new class extends Migration
                 JOIN email_contacts c ON c.email = s.email
             SQL);
 
+            // Guard: every lead must have been copied as exactly one contact and one signup — otherwise
+            // throw, the whole migration rolls back and summary_leads stays untouched.
+            $leads = DB::table('summary_leads')->count();
+            if (DB::table('email_contacts')->count() !== $leads || DB::table('email_signups')->count() !== $leads) {
+                throw new RuntimeException('summary_leads was not copied completely into email_contacts / email_signups; migration rolled back.');
+            }
+
             Schema::drop('summary_leads');
         }
     }
 
     /**
-     * Recreates summary_leads from the contacts (one row per contact: the FIRST signup's source,
+     * LOSSY — take a pg_dump before rolling back. Recreates summary_leads from the contacts (one row per contact: the FIRST signup's source,
      * the LATEST signup's breed / stage / locale). Signups of other sources or purposes than the
      * old table knew are not restored.
      */

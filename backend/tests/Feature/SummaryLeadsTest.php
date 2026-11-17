@@ -175,6 +175,7 @@ describe('POST /api/summary-leads', function () {
         'consent missing' => [['consent' => null], 'consent'],
         'consent not given' => [['consent' => false], 'consent'],
         'unknown consent version' => [['consent_version' => '1999-01'], 'consent_version'],
+        'the early-access consent version is not for the old endpoint' => [['consent_version' => 'ea-2026-11'], 'consent_version'],
         'no consent version' => [['consent_version' => null], 'consent_version'],
         'unknown source' => [['source' => 'newsletter'], 'source'],
         'no source' => [['source' => null], 'source'],

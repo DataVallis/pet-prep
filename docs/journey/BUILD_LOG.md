@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-17 — Ena baza za vse e-naslove s spletne strani
+
+**Kaj:** Vsak e-naslov, ki ga obiskovalec pusti na petprep.si (kalkulator, kviz pasem, zgodnji dostop), gre zdaj v **eno bazo**. En e-naslov je en stik, vsaka oddaja pa vrstica z vsem, kar pomaga pri targetiranju: kje na strani je bil naslov oddan (stran in del strani), za kakšen namen (novice ali zgodnji dostop), jezik, pasma, rezultat kviza ter UTM oznake in od kod je obiskovalec prišel. Stara tabela e-naslovov s kalkulatorja je prenesena vanjo, stari obrazci v predpomnilniku pa delujejo naprej. V administraciji je seznam s filtri (vir, namen, pasma, jezik, datum), podrobnosti stika z vsemi oddajami in izvoz CSV filtriranega seznama. IP-ja, brskalnika in imena ne shranjujemo, nič se ne briše samodejno.
+**Zakaj je pomembno:** David: »Vse maile iz povsod zbiramo v naši bazi … segmentirani«. Tako lahko pozneje starše z isto pasmo ali iz iste kampanje nagovorimo ciljano, partnerji pa še vedno dobijo samo številke, nikoli naslovov. Prenos v Klaviyo (job v ozadju) je *načrt* (M6-S10), do takrat je pot ročni uvoz iz CSV.
+**Kako povedati:** 🛠 »En stik, veliko oddaj: segmentacija brez sledenja obiskovalcu.« 🤝 »Številke po virih in pasmah, brez naslovov.« 👩 »Naslov uporabljamo samo za novice, ki ste jih izrecno odobrili.«
+
+---
+
 ## 2026-11-17 — Pred nakupom psa: kviz pasem in kalkulator za vsako pasmo, v 15 jezikih
 
 **Kaj:** V eni noči je spletna stran dobila podstran »Pred nakupom psa« (v glavi strani) s kvizom »Katera pasma je za vas?« in kalkulator »Koliko je dela s psom?« za vseh 111 psov iz registra — vse v 15 jezikih. Kviz ima 9 vprašanj in priporoči 3 pasme samo na podlagi oznak z viri (velikost, gibanje, »primerno za« / »razmislite o«); vedno doda tudi kartico o posvojitvi. Vsaka nova pasma v registru dobi stran kalkulatorja sama. Stran Partnerji in medijski komplet sta zdaj tudi v 15 jezikih.
