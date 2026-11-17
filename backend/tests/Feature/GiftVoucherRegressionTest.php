@@ -211,3 +211,41 @@ it('R9: one unrevoked credit per pet across both sources', function () {
         'pet_id' => $pet->id, 'assigned_at' => now(), 'assigned_via' => 'parent',
     ])))->toThrow(UniqueConstraintViolationException::class);
 });
+
+it('R10: the M6-S09 migration deletes Lemon Squeezy test vouchers with their unassigned credit, but refuses a real voucher or a test credit a pet uses', function () {
+    [$parent, $child, $family] = rgParent();
+    $shop = require database_path('migrations/2027_04_16_120000_stripe_shop.php');
+    $shop->down(); // back to the Lemon Squeezy schema of gift_vouchers
+
+    $lsVoucher = fn (string $env, int $n) => DB::table('gift_vouchers')->insertGetId([
+        'key_hash' => str_repeat((string) $n, 64), 'key_last4' => 'ABCD', 'ls_license_key_id' => $n, 'ls_order_id' => $n,
+        'environment' => $env, 'status' => 'redeemed', 'purchased_at' => now(), 'expires_at' => now()->addYear(),
+        'redeemed_at' => now(), 'family_id' => $family->id, 'created_at' => now(), 'updated_at' => now(),
+    ]);
+    $credit = fn (int $voucherId, ?int $petId = null) => DB::table('challenge_credits')->insertGetId([
+        'family_id' => $family->id, 'source' => 'web_gift', 'gift_voucher_id' => $voucherId, 'purchase_event_id' => null,
+        'product_id' => 'lemonsqueezy:1', 'store' => 'LEMON_SQUEEZY', 'environment' => 'SANDBOX', 'pet_id' => $petId,
+        'assigned_at' => $petId ? now() : null, 'assigned_via' => $petId ? 'parent' : null,
+        'purchased_at' => now(), 'created_at' => now(), 'updated_at' => now(),
+    ]);
+
+    // A test credit a pet uses → refuse, nothing deleted.
+    $pet = disableHygieneEvents(Pet::factory()->borderCollie()->trial()->create(['user_id' => $child->id]));
+    $used = $lsVoucher('SANDBOX', 1);
+    $credit($used, $pet->id);
+    expect(fn () => DB::transaction(fn () => $shop->up()))->toThrow(RuntimeException::class, 'Refusing M6-S09');
+    DB::table('challenge_credits')->delete();
+    DB::table('gift_vouchers')->delete();
+
+    // A real (PRODUCTION) voucher → refuse.
+    $lsVoucher('PRODUCTION', 2);
+    expect(fn () => DB::transaction(fn () => $shop->up()))->toThrow(RuntimeException::class, 'Refusing M6-S09');
+    DB::table('gift_vouchers')->delete();
+
+    // Production on 2026-11-17: one redeemed SANDBOX voucher + its unassigned credit → both deleted, migration runs.
+    $credit($lsVoucher('SANDBOX', 3));
+    $shop->up();
+    expect(DB::table('gift_vouchers')->count())->toBe(0)
+        ->and(DB::table('challenge_credits')->where('source', 'web_gift')->count())->toBe(0)
+        ->and(DB::getSchemaBuilder()->hasTable('shop_orders'))->toBeTrue();
+});
