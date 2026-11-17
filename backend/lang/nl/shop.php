@@ -1,0 +1,41 @@
+<?php
+
+// M6-S09: e-mails and the voucher PDF of the website shop (WEBSITE_SALES_SPEC §3.6).
+// One file per website language; keep the keys identical in all 15 (ShopEmailLangTest).
+
+return [
+    'gift_subject' => 'Je PetPrep-cadeaubon',
+    'gift_preheader' => 'De code voor een PetPrep-uitdaging van 12 weken, klaar om te geven.',
+    'gift_intro' => 'Bedankt voor je bestelling. Hier is je cadeaubon voor één PetPrep-uitdaging van 12 weken.',
+    'code_label' => 'Code van de bon',
+    'valid_until' => 'Geldig tot :date',
+    'how_title' => 'Zo geef je hem cadeau',
+    'step_print' => 'Print de bon die bij deze e-mail zit en vul in voor wie hij is en van wie.',
+    'step_redeem' => 'De ouder logt op :url in met hetzelfde account als in de PetPrep-app en voert de code in.',
+    'step_start' => 'In de app kiest de ouder het huisdier voor de uitdaging, en de 12 weken beginnen.',
+    'redeem_button' => 'Bon inwisselen',
+    'kit_title' => 'Inbegrepen: de Huisdierbelofte-set',
+    'kit_text' => 'Een printbare gezinsset voor het gesprek over een huisdier. Download hem hier:',
+    'kit_subject' => 'Je Huisdierbelofte-set',
+    'kit_preheader' => 'Je printbare gezinsset staat klaar om te downloaden.',
+    'kit_intro' => 'Bedankt voor je bestelling. Je printbare Huisdierbelofte-set staat klaar om te downloaden.',
+    'download' => 'Set downloaden (pdf)',
+    'download_lang' => 'Pdf in het :language',
+    'links_valid' => 'De downloadlinks werken :days dagen. Zijn ze verlopen, beantwoord dan gewoon deze e-mail.',
+    'help' => 'Code kwijt of een vraag? Beantwoord deze e-mail of schrijf naar :email en vermeld bestelling :number.',
+    'hello' => 'Hallo,',
+    'signoff' => 'Hartelijke groet,',
+    'signature' => 'Curio en het PetPrep-team',
+    'receipt' => 'Het betaalbewijs en de factuur krijg je apart van Link, dat de betaling voor PetPrep verwerkt.',
+    'order' => 'Bestelling :number',
+    'pdf_title' => 'Cadeaubon',
+    'pdf_product' => 'PetPrep-uitdaging van 12 weken',
+    'pdf_tagline' => 'Geef geen puppy. Geef een proefperiode.',
+    'pdf_for' => 'Voor',
+    'pdf_from' => 'Van',
+    'pdf_code' => 'Code',
+    'pdf_valid' => 'Geldig tot',
+    'pdf_redeem' => 'Inwisselen op',
+    'pdf_file' => 'petprep-cadeaubon',
+    'language_name' => 'Nederlands',
+];

@@ -1,0 +1,41 @@
+<?php
+
+// M6-S09: e-mails and the voucher PDF of the website shop (WEBSITE_SALES_SPEC §3.6).
+// One file per website language; keep the keys identical in all 15 (ShopEmailLangTest).
+
+return [
+    'gift_subject' => 'Il tuo buono regalo PetPrep',
+    'gift_preheader' => 'Il codice per una sfida PetPrep di 12 settimane, pronto da regalare.',
+    'gift_intro' => 'Grazie per il tuo ordine. Ecco il tuo buono regalo per una sfida PetPrep di 12 settimane.',
+    'code_label' => 'Codice del buono',
+    'valid_until' => 'Valido fino al :date',
+    'how_title' => 'Come regalarlo',
+    'step_print' => 'Stampa il buono allegato a questa e-mail e scrivi a chi è destinato e da parte di chi.',
+    'step_redeem' => 'Il genitore accede su :url con lo stesso account dell\'app PetPrep e inserisce il codice.',
+    'step_start' => 'Nell\'app il genitore sceglie l\'animale per cui è la sfida, e le 12 settimane hanno inizio.',
+    'redeem_button' => 'Riscatta il buono',
+    'kit_title' => 'Incluso: il kit Promessa all\'animale',
+    'kit_text' => 'Un kit per la famiglia da stampare, per parlare dell\'arrivo di un animale. Scaricalo qui:',
+    'kit_subject' => 'Il tuo kit Promessa all\'animale',
+    'kit_preheader' => 'Il tuo kit per la famiglia da stampare è pronto per il download.',
+    'kit_intro' => 'Grazie per il tuo ordine. Il tuo kit Promessa all\'animale da stampare è pronto per il download.',
+    'download' => 'Scarica il kit (PDF)',
+    'download_lang' => 'PDF in :language',
+    'links_valid' => 'I link per il download funzionano per :days giorni. Se scadono, rispondi semplicemente a questa e-mail.',
+    'help' => 'Hai perso il codice o hai una domanda? Rispondi a questa e-mail o scrivi a :email indicando l\'ordine :number.',
+    'hello' => 'Ciao,',
+    'signoff' => 'Un caro saluto,',
+    'signature' => 'Curio e il team PetPrep',
+    'receipt' => 'Ricevuta e fattura ti arrivano separatamente da Link, che gestisce il pagamento per PetPrep.',
+    'order' => 'Ordine :number',
+    'pdf_title' => 'Buono regalo',
+    'pdf_product' => 'Sfida PetPrep di 12 settimane',
+    'pdf_tagline' => 'Non regalare un cucciolo. Regala una prova.',
+    'pdf_for' => 'Per',
+    'pdf_from' => 'Da',
+    'pdf_code' => 'Codice',
+    'pdf_valid' => 'Valido fino al',
+    'pdf_redeem' => 'Riscatta su',
+    'pdf_file' => 'petprep-buono-regalo',
+    'language_name' => 'italiano',
+];

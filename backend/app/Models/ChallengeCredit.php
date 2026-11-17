@@ -41,7 +41,7 @@ class ChallengeCredit extends Model
     /** M6-S01: a store purchase through RevenueCat (every credit before M6-S01). */
     public const SOURCE_STORE = 'store';
 
-    /** M6-S01: a website gift voucher (Lemon Squeezy) redeemed for the family. */
+    /** M6-S01 / M6-S09: a website gift voucher (Stripe shop) redeemed for the family. */
     public const SOURCE_WEB_GIFT = 'web_gift';
 
     public const VIA_PARENT = 'parent';

@@ -1,0 +1,41 @@
+<?php
+
+// M6-S09: e-mails and the voucher PDF of the website shop (WEBSITE_SALES_SPEC §3.6).
+// One file per website language; keep the keys identical in all 15 (ShopEmailLangTest).
+
+return [
+    'gift_subject' => 'Votre bon cadeau PetPrep',
+    'gift_preheader' => 'Le code d\'un défi PetPrep de 12 semaines, prêt à offrir.',
+    'gift_intro' => 'Merci pour votre commande. Voici votre bon cadeau pour un défi PetPrep de 12 semaines.',
+    'code_label' => 'Code du bon',
+    'valid_until' => 'Valable jusqu\'au :date',
+    'how_title' => 'Comment l\'offrir',
+    'step_print' => 'Imprimez le bon joint à cet e-mail et indiquez à qui il est destiné et de la part de qui.',
+    'step_redeem' => 'Le parent se connecte sur :url avec le même compte que dans l\'application PetPrep et saisit le code.',
+    'step_start' => 'Dans l\'application, le parent choisit l\'animal concerné par le défi, et les 12 semaines commencent.',
+    'redeem_button' => 'Utiliser le bon',
+    'kit_title' => 'Inclus : le kit Promesse à l\'animal',
+    'kit_text' => 'Un kit familial à imprimer pour parler de l\'arrivée d\'un animal. Téléchargez-le ici :',
+    'kit_subject' => 'Votre kit Promesse à l\'animal',
+    'kit_preheader' => 'Votre kit familial à imprimer est prêt à être téléchargé.',
+    'kit_intro' => 'Merci pour votre commande. Votre kit Promesse à l\'animal à imprimer est prêt à être téléchargé.',
+    'download' => 'Télécharger le kit (PDF)',
+    'download_lang' => 'PDF en :language',
+    'links_valid' => 'Les liens de téléchargement fonctionnent pendant :days jours. S\'ils ont expiré, répondez simplement à cet e-mail.',
+    'help' => 'Code perdu ou une question ? Répondez à cet e-mail ou écrivez à :email en indiquant la commande :number.',
+    'hello' => 'Bonjour,',
+    'signoff' => 'Bien cordialement,',
+    'signature' => 'Curio et l\'équipe PetPrep',
+    'receipt' => 'Le reçu et la facture vous sont envoyés séparément par Link, qui traite le paiement pour PetPrep.',
+    'order' => 'Commande :number',
+    'pdf_title' => 'Bon cadeau',
+    'pdf_product' => 'Défi PetPrep de 12 semaines',
+    'pdf_tagline' => 'N\'offrez pas un chiot. Offrez un essai.',
+    'pdf_for' => 'Pour',
+    'pdf_from' => 'De la part de',
+    'pdf_code' => 'Code',
+    'pdf_valid' => 'Valable jusqu\'au',
+    'pdf_redeem' => 'À utiliser sur',
+    'pdf_file' => 'petprep-bon-cadeau',
+    'language_name' => 'français',
+];

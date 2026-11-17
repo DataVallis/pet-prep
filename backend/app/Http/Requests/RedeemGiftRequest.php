@@ -36,7 +36,7 @@ class RedeemGiftRequest extends FormRequest
     public function rules(): array
     {
         return [
-            // The voucher code (a Lemon Squeezy license key) as printed: letters, digits, dashes, spaces.
+            // The voucher code as e-mailed / printed (PP-XXXX-XXXX-XXXX): letters, digits, dashes, spaces.
             'code' => ['required', 'string', 'min:8', 'max:64', 'regex:/^[A-Za-z0-9\- ]+$/'],
             // Language of the `message` text only (one of the 15 website languages; the
             // server answers sl / en, the rest en — the website maps `error`).

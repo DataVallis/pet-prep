@@ -2,7 +2,6 @@
 
 use App\Models\ChallengeCredit;
 use App\Models\Family;
-use App\Models\GiftVoucher;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\ChallengeCreditService;
@@ -25,6 +24,8 @@ use Illuminate\Testing\TestResponse;
 |--------------------------------------------------------------------------
 */
 
+require_once __DIR__.'/../Support/ShopFakes.php';
+
 const RG_NOW = '2026-10-07 10:00:00';
 const RG_SECRET = 'rg-webhook-secret';
 
@@ -35,7 +36,6 @@ beforeEach(function () {
         'services.revenuecat.webhook_secret' => RG_SECRET,
         'services.revenuecat.accept_sandbox' => true,
         'services.revenuecat.challenge_products' => ['petprep_challenge_12w'],
-        'services.lemonsqueezy.gift_product_id' => '5202',
         'payments.enforced' => true,
     ]);
     $this->withoutMiddleware([ThrottleRequests::class]);
@@ -75,10 +75,8 @@ function rgParent(): array
 function rgGiftCredit(Family $family, ?Carbon $at = null): ChallengeCredit
 {
     $at ??= now();
-    $voucher = GiftVoucher::create([
-        'key_hash' => hash('sha256', Str::uuid()->toString()), 'key_last4' => 'ab12', 'ls_license_key_id' => random_int(1, 1_000_000),
-        'ls_order_id' => random_int(1, 1_000_000), 'environment' => 'PRODUCTION', 'status' => 'redeemed',
-        'purchased_at' => $at, 'expires_at' => $at->copy()->addYear(), 'redeemed_at' => $at, 'family_id' => $family->id,
+    $voucher = shVoucherRow([
+        'status' => 'redeemed', 'purchased_at' => $at, 'expires_at' => $at->copy()->addYear(), 'redeemed_at' => $at, 'family_id' => $family->id,
     ]);
 
     return Carbon::withTestNow($at, fn () => DB::transaction(fn () => app(ChallengeCreditService::class)->createFromGift($family, $voucher)));
@@ -181,13 +179,17 @@ it('R7: the migration gives existing rows source=store, valid constraints, and d
     [$parent] = rgParent();
     rgRc($parent)->assertOk();
     $migration = require database_path('migrations/2027_03_25_120000_create_gift_vouchers.php');
+    // M6-S09 changes gift_vouchers on top: roll it back first, re-apply it after.
+    $shop = require database_path('migrations/2027_04_16_120000_stripe_shop.php');
 
+    $shop->down();
     $migration->down();
     expect(DB::getSchemaBuilder()->hasColumn('challenge_credits', 'source'))->toBeFalse()
         ->and(DB::getSchemaBuilder()->hasTable('gift_vouchers'))->toBeFalse()
         ->and(DB::selectOne("SELECT is_nullable FROM information_schema.columns WHERE table_name = 'challenge_credits' AND column_name = 'purchase_event_id'")->is_nullable)->toBe('NO');
 
     $migration->up();
+    $shop->up();
     expect(DB::table('challenge_credits')->pluck('source')->all())->toBe(['store']);
     // The CHECK holds for the old row and refuses a store row without its event.
     expect(fn () => DB::transaction(fn () => DB::table('challenge_credits')->insert([

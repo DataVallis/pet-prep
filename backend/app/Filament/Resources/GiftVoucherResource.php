@@ -4,6 +4,9 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\GiftVoucherResource\Pages;
 use App\Models\GiftVoucher;
+use App\Models\User;
+use App\Services\Shop\ShopAdminService;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -11,9 +14,9 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Website gift vouchers (M6-S01, CONTRACT §6.1) — read only, superadmin (panel
- * gate). Written only by the redeem endpoint and the Lemon Squeezy webhook. No
- * buyer data exists to show (the code is shown as its last 4 characters).
+ * Website gift vouchers (M6-S01 / M6-S09) — read only, superadmin (panel gate).
+ * Written only by ShopFulfillment, ShopRefundService and the redeem endpoint. The
+ * code shows as its last 4 characters; »Show code« reveals it (audited, spec §3.7).
  */
 class GiftVoucherResource extends Resource
 {
@@ -59,12 +62,13 @@ class GiftVoucherResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->modifyQueryUsing(fn (Builder $query) => $query->with('credit'))
+            ->modifyQueryUsing(fn (Builder $query) => $query->with(['credit', 'order']))
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
                 Tables\Columns\TextColumn::make('key_last4')->label('Code')
-                    ->formatStateUsing(fn (string $state): string => '…'.$state),
-                Tables\Columns\TextColumn::make('ls_order_id')->label('LS order')->sortable(),
+                    ->formatStateUsing(fn (string $state): string => 'PP-…'.$state),
+                Tables\Columns\TextColumn::make('order.number')->label(__('admin.shop_admin.number'))
+                    ->url(fn (GiftVoucher $record): string => ShopOrderResource::getUrl('view', ['record' => $record->shop_order_id])),
                 Tables\Columns\TextColumn::make('status')->badge()
                     ->state(fn (GiftVoucher $record): string => $record->displayStatus())
                     ->color(fn (string $state): string => match ($state) {
@@ -91,7 +95,16 @@ class GiftVoucherResource extends Resource
                 Tables\Filters\SelectFilter::make('environment')
                     ->options(['PRODUCTION' => 'PRODUCTION', 'SANDBOX' => 'SANDBOX']),
             ])
-            ->actions([])
+            ->actions([
+                Tables\Actions\Action::make('showCode')->label(__('admin.shop_admin.show_code'))->icon('heroicon-o-eye')
+                    ->requiresConfirmation()->modalDescription(__('admin.shop_admin.show_code_note'))
+                    ->action(function (GiftVoucher $record): void {
+                        /** @var User $user */
+                        $user = auth()->user();
+                        $code = app(ShopAdminService::class)->revealCode($user, $record);
+                        Notification::make()->title(__('admin.shop_admin.code').': '.$code)->persistent()->success()->send();
+                    }),
+            ])
             ->bulkActions([]);
     }
 
