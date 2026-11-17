@@ -11,7 +11,8 @@
     "de": "Ziegenmilch",
     "es": "Leche de cabra",
     "pt": "Leite de cabra",
-    "nl": "Geitenmelk"
+    "nl": "Geitenmelk",
+    "pl": "Mleko kozie"
   },
   "question": {
     "en": "Can dogs drink goat's milk?",
@@ -23,7 +24,8 @@
     "de": "Dürfen Hunde Ziegenmilch trinken?",
     "es": "¿Pueden los perros beber leche de cabra?",
     "pt": "Os cães podem beber leite de cabra?",
-    "nl": "Mogen honden geitenmelk drinken?"
+    "nl": "Mogen honden geitenmelk drinken?",
+    "pl": "Czy psy mogą pić mleko kozie?"
   },
   "url_slug": {
     "en": "goat-milk",
@@ -35,7 +37,8 @@
     "de": "ziegenmilch",
     "es": "leche-de-cabra",
     "pt": "leite-de-cabra",
-    "nl": "geitenmelk"
+    "nl": "geitenmelk",
+    "pl": "mleko-kozie"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "de": "Nur ein wenig und ab und zu. Ziegenmilch kann eine gelegentliche Belohnung sein, enthält aber fast so viel Laktose wie Kuhmilch und kann Hunden trotzdem auf den Magen schlagen. Hunde mit guter, ausgewogener Ernährung brauchen sie nicht. Geben Sie keine rohe Ziegenmilch.",
     "es": "Solo un poco, de vez en cuando. La leche de cabra puede ser un premio ocasional, pero tiene casi tanta lactosa como la de vaca y también puede sentar mal al estómago de un perro. Los perros con una dieta equilibrada no la necesitan. No le des leche de cabra cruda.",
     "pt": "Só um pouco, de vez em quando. O leite de cabra pode ser uma guloseima ocasional, mas tem quase tanta lactose como o de vaca e, mesmo assim, pode irritar o estômago do cão. Um cão com uma alimentação boa e equilibrada não precisa dele. Não dês leite de cabra cru.",
-    "nl": "Alleen een klein beetje, en niet vaak. Geitenmelk kan af en toe als beloning dienen, maar bevat bijna net zoveel lactose als koemelk en kan de maag van een hond nog steeds van streek maken. Honden die goed en evenwichtig eten, hebben het niet nodig. Geef geen rauwe geitenmelk."
+    "nl": "Alleen een klein beetje, en niet vaak. Geitenmelk kan af en toe als beloning dienen, maar bevat bijna net zoveel lactose als koemelk en kan de maag van een hond nog steeds van streek maken. Honden die goed en evenwichtig eten, hebben het niet nodig. Geef geen rauwe geitenmelk.",
+    "pl": "Tylko trochę i od czasu do czasu. Mleko kozie może być czasem nagrodą, ale zawiera niemal tyle samo laktozy co mleko krowie i nadal może rozstroić żołądek psa. Psy na dobrej, zbilansowanej diecie go nie potrzebują. Nie podawaj surowego mleka koziego."
   },
   "why": {
     "en": "Goat's milk has almost the same amount of lactose as cow's milk, and dogs can have varying degrees of lactose intolerance. The Australian Veterinary Association notes that goat's milk and lactose-free milk can still cause stomach and gut problems, and that some dogs can develop an allergy to milk protein. Raw milk can also carry germs such as E. coli, Salmonella and Listeria.",
@@ -60,7 +64,8 @@
     "de": "Ziegenmilch enthält fast genauso viel Laktose wie Kuhmilch, und Hunde können unterschiedlich stark laktoseintolerant sein. Die Australian Veterinary Association weist darauf hin, dass Ziegenmilch und laktosefreie Milch trotzdem Magen-Darm-Probleme verursachen können und manche Hunde eine Allergie gegen Milcheiweiß entwickeln. Rohmilch kann außerdem Keime wie E. coli, Salmonellen und Listerien enthalten.",
     "es": "La leche de cabra tiene casi la misma cantidad de lactosa que la de vaca, y los perros pueden tener distintos grados de intolerancia a la lactosa. La Asociación Veterinaria Australiana señala que la leche de cabra y la leche sin lactosa también pueden causar problemas de estómago e intestino, y que algunos perros pueden desarrollar alergia a la proteína de la leche. La leche cruda, además, puede contener gérmenes como E. coli, Salmonella y Listeria.",
     "pt": "O leite de cabra tem quase tanta lactose como o leite de vaca, e os cães têm graus diferentes de intolerância à lactose. A Associação Veterinária Australiana refere que o leite de cabra e o leite sem lactose podem, ainda assim, causar problemas de estômago e intestinos, e que alguns cães podem desenvolver alergia à proteína do leite. O leite cru também pode conter bactérias como a E. coli, a Salmonella e a Listeria.",
-    "nl": "Geitenmelk bevat bijna evenveel lactose als koemelk, en honden kunnen in verschillende mate lactose-intolerant zijn. Volgens de Australian Veterinary Association kunnen geitenmelk en lactosevrije melk nog steeds maag- en darmproblemen veroorzaken, en kunnen sommige honden een allergie voor melkeiwit ontwikkelen. Rauwe melk kan ook ziektekiemen bevatten, zoals E. coli, Salmonella en Listeria."
+    "nl": "Geitenmelk bevat bijna evenveel lactose als koemelk, en honden kunnen in verschillende mate lactose-intolerant zijn. Volgens de Australian Veterinary Association kunnen geitenmelk en lactosevrije melk nog steeds maag- en darmproblemen veroorzaken, en kunnen sommige honden een allergie voor melkeiwit ontwikkelen. Rauwe melk kan ook ziektekiemen bevatten, zoals E. coli, Salmonella en Listeria.",
+    "pl": "Mleko kozie zawiera prawie tyle samo laktozy co mleko krowie, a psy mogą mieć nietolerancję laktozy w różnym stopniu. Australijskie Stowarzyszenie Lekarzy Weterynarii zaznacza, że mleko kozie i mleko bez laktozy nadal mogą powodować problemy żołądkowo-jelitowe, a u niektórych psów może rozwinąć się alergia na białko mleka. Surowe mleko może też zawierać drobnoustroje, takie jak E. coli, Salmonella i Listeria."
   },
   "signs": {
     "en": [
@@ -132,6 +137,13 @@
       "Braken",
       "Buikpijn",
       "Diarree"
+    ],
+    "pl": [
+      "Luźne stolce",
+      "Gazy",
+      "Wymioty",
+      "Ból brzucha",
+      "Biegunka"
     ]
   },
   "what_to_do": {
@@ -144,7 +156,8 @@
     "de": "Setzen Sie die Ziegenmilch ab, wenn Ihr Hund weichen Kot, Blähungen, Erbrechen, Bauchschmerzen oder Durchfall bekommt, und sorgen Sie dafür, dass immer frisches Wasser da ist. Bevor Sie Ziegenmilch in den Speiseplan Ihres Hundes aufnehmen, sprechen Sie zuerst mit Ihrem Tierarzt darüber.",
     "es": "Deja de darle leche de cabra si tu perro tiene heces blandas, gases, vómitos, dolor de barriga o diarrea, y asegúrate de que siempre tenga agua fresca a su disposición. Antes de añadir leche de cabra a la dieta de tu perro, habla primero con tu veterinario.",
     "pt": "Se o teu cão tiver fezes moles, gases, vómitos, dor de barriga ou diarreia, deixa de lhe dar leite de cabra e deixa sempre água fresca à disposição. Antes de o incluíres na alimentação do teu cão, fala com o teu veterinário.",
-    "nl": "Stop met de geitenmelk als je hond zachte ontlasting, winderigheid, braken, buikpijn of diarree krijgt, en zorg dat er altijd vers water beschikbaar is. Overleg eerst met je dierenarts voordat je geitenmelk aan de voeding van je hond toevoegt."
+    "nl": "Stop met de geitenmelk als je hond zachte ontlasting, winderigheid, braken, buikpijn of diarree krijgt, en zorg dat er altijd vers water beschikbaar is. Overleg eerst met je dierenarts voordat je geitenmelk aan de voeding van je hond toevoegt.",
+    "pl": "Przestań podawać mleko kozie, jeśli pies ma luźne stolce, gazy, wymioty, ból brzucha lub biegunkę, i dopilnuj, by zawsze miał dostęp do świeżej wody. Zanim dodasz mleko kozie do diety psa, omów to najpierw z weterynarzem."
   },
   "serving": {
     "en": "Never raw. Offer it only as an occasional reward, never instead of fresh water or a balanced dog food.",
@@ -156,7 +169,8 @@
     "de": "Niemals roh. Geben Sie sie nur als gelegentliche Belohnung, niemals anstelle von frischem Wasser oder ausgewogenem Hundefutter.",
     "es": "Nunca cruda. Ofrécela solo como premio ocasional, nunca en lugar de agua fresca ni de una comida equilibrada para perros.",
     "pt": "Nunca cru. Dá-o só de vez em quando, como guloseima, e nunca em vez de água fresca ou de uma alimentação equilibrada para cães.",
-    "nl": "Nooit rauw. Geef het alleen af en toe als beloning, nooit in plaats van vers water of een uitgebalanceerd hondenvoer."
+    "nl": "Nooit rauw. Geef het alleen af en toe als beloning, nooit in plaats van vers water of een uitgebalanceerd hondenvoer.",
+    "pl": "Nigdy surowe. Podawaj je tylko od czasu do czasu jako nagrodę, nigdy zamiast świeżej wody ani zbilansowanej karmy dla psów."
   },
   "child": {
     "en": "Goat's milk is only a rare little treat for dogs. Fresh water is the best drink for them every day!",
@@ -168,7 +182,8 @@
     "de": "Ziegenmilch ist für Hunde nur ein seltenes kleines Leckerli. Frisches Wasser ist jeden Tag das beste Getränk für sie!",
     "es": "La leche de cabra es solo un premio pequeño y poco frecuente para los perros. ¡El agua fresca es la mejor bebida para ellos cada día!",
     "pt": "O leite de cabra é um petisco que só se dá muito de vez em quando. Para os cães, a melhor bebida de todos os dias é água fresca!",
-    "nl": "Geitenmelk is voor honden maar een klein snoepje voor een keertje. Vers water is elke dag het beste drankje voor ze!"
+    "nl": "Geitenmelk is voor honden maar een klein snoepje voor een keertje. Vers water is elke dag het beste drankje voor ze!",
+    "pl": "Mleko kozie to tylko mały smakołyk na rzadkie okazje. Świeża woda to dla psa najlepszy napój na co dzień!"
   },
   "faq": [
     {
@@ -182,7 +197,8 @@
         "de": "Verträgt ein Hund Ziegenmilch leichter als Kuhmilch?",
         "es": "¿Es la leche de cabra más fácil de digerir para los perros que la de vaca?",
         "pt": "O leite de cabra é mais fácil de digerir pelos cães do que o de vaca?",
-        "nl": "Is geitenmelk voor honden beter verteerbaar dan koemelk?"
+        "nl": "Is geitenmelk voor honden beter verteerbaar dan koemelk?",
+        "pl": "Czy mleko kozie jest dla psów łatwiejsze do strawienia niż krowie?"
       },
       "a": {
         "en": "Not really. Goat's milk has almost the same amount of lactose as cow's milk. Its smaller fat globules are often mentioned, but homogenisation also makes the fat globules in cow's milk smaller.",
@@ -194,7 +210,8 @@
         "de": "Nicht wirklich. Ziegenmilch enthält fast genauso viel Laktose wie Kuhmilch. Oft heißt es, ihre Fettkügelchen seien kleiner, doch auch die Homogenisierung macht die Fettkügelchen der Kuhmilch kleiner.",
         "es": "No mucho. La leche de cabra tiene casi la misma cantidad de lactosa que la de vaca. Se suele decir que sus glóbulos de grasa son más pequeños, pero la homogeneización también reduce el tamaño de los de la leche de vaca.",
         "pt": "Não propriamente. O leite de cabra tem quase tanta lactose como o de vaca. Diz-se muitas vezes que tem glóbulos de gordura mais pequenos, mas a homogeneização também torna mais pequenos os do leite de vaca.",
-        "nl": "Niet echt. Geitenmelk bevat bijna evenveel lactose als koemelk. Vaak worden de kleinere vetbolletjes genoemd, maar ook door homogenisatie worden de vetbolletjes in koemelk kleiner."
+        "nl": "Niet echt. Geitenmelk bevat bijna evenveel lactose als koemelk. Vaak worden de kleinere vetbolletjes genoemd, maar ook door homogenisatie worden de vetbolletjes in koemelk kleiner.",
+        "pl": "Niezupełnie. Mleko kozie zawiera prawie tyle samo laktozy co mleko krowie. Często wspomina się o jego mniejszych kuleczkach tłuszczu, ale homogenizacja zmniejsza kuleczki tłuszczu także w mleku krowim."
       }
     },
     {
@@ -208,7 +225,8 @@
         "de": "Kann Ziegenmilch die Behandlung meines Hundes ersetzen?",
         "es": "¿Puede la leche de cabra sustituir el tratamiento de mi perro?",
         "pt": "O leite de cabra pode substituir o tratamento do meu cão?",
-        "nl": "Kan geitenmelk de behandeling van mijn hond vervangen?"
+        "nl": "Kan geitenmelk de behandeling van mijn hond vervangen?",
+        "pl": "Czy mleko kozie może zastąpić leczenie psa?"
       },
       "a": {
         "en": "No. A vet at the Drake Center warns that it can be dangerous if goat's milk is used in place of known appropriate treatments. Discuss it with your vet first.",
@@ -220,7 +238,8 @@
         "de": "Nein. Eine Tierärztin oder ein Tierarzt des Drake Center warnt, es könne gefährlich sein, wenn Ziegenmilch anstelle anerkannter, geeigneter Behandlungen eingesetzt wird. Besprechen Sie es zuerst mit Ihrem Tierarzt.",
         "es": "No. Una veterinaria del Drake Center advierte de que puede ser peligroso usar leche de cabra en lugar de tratamientos adecuados y reconocidos. Habla primero con tu veterinario.",
         "pt": "Não. Um veterinário do Drake Center avisa que usar leite de cabra em vez dos tratamentos adequados já conhecidos pode ser perigoso. Fala primeiro com o teu veterinário.",
-        "nl": "Nee. Een dierenarts van het Drake Center waarschuwt dat het gevaarlijk kan zijn om geitenmelk te gebruiken in plaats van bekende, geschikte behandelingen. Bespreek het eerst met je dierenarts."
+        "nl": "Nee. Een dierenarts van het Drake Center waarschuwt dat het gevaarlijk kan zijn om geitenmelk te gebruiken in plaats van bekende, geschikte behandelingen. Bespreek het eerst met je dierenarts.",
+        "pl": "Nie. Weterynarz z Drake Center ostrzega, że zastępowanie sprawdzonego, odpowiedniego leczenia mlekiem koziem może być niebezpieczne. Omów to najpierw z weterynarzem."
       }
     }
   ],
@@ -360,6 +379,11 @@
       "status": "verified",
       "verified_by": "claude-c-nl-2026-11-17",
       "verified_hash": "f2a8e93e06a1f5a54f7544c3b63fee6426fe434adb1eeded72cb4f96901bee63"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-17",
+      "verified_hash": "2e5db5284f3f56267c9dfafb6f6f75d0a04a4c55ce265f7208c387671c148675"
     }
   }
 }

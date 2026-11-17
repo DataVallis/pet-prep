@@ -11,7 +11,8 @@
     "de": "Fischöl",
     "es": "Aceite de pescado",
     "pt": "Óleo de peixe",
-    "nl": "Visolie"
+    "nl": "Visolie",
+    "pl": "Olej rybi"
   },
   "question": {
     "en": "Can dogs have fish oil?",
@@ -23,7 +24,8 @@
     "de": "Dürfen Hunde Fischöl bekommen?",
     "es": "¿Pueden los perros tomar aceite de pescado?",
     "pt": "Os cães podem tomar óleo de peixe?",
-    "nl": "Mogen honden visolie krijgen?"
+    "nl": "Mogen honden visolie krijgen?",
+    "pl": "Czy psy mogą dostać olej rybi?"
   },
   "url_slug": {
     "en": "fish-oil",
@@ -35,7 +37,8 @@
     "de": "fischoel",
     "es": "aceite-de-pescado",
     "pt": "oleo-de-peixe",
-    "nl": "visolie"
+    "nl": "visolie",
+    "pl": "olej-rybi"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "de": "Nur, wenn Ihr Tierarzt es empfiehlt. Fischöl ist ein Nahrungsergänzungsmittel und kein Leckerli – Tierärzte raten, jedes Nahrungsergänzungsmittel vorher mit dem Tierarzt abzusprechen. Es kann Nebenwirkungen wie Durchfall, Erbrechen, Blähungen und Mundgeruch nach Fisch haben.",
     "es": "Solo si tu veterinario te lo recomienda. El aceite de pescado es un suplemento, no un premio, y conviene consultar siempre con el veterinario antes de darle cualquier suplemento a tu perro. Puede causar efectos secundarios como diarrea, vómitos, gases y aliento con olor a pescado.",
     "pt": "Só se o veterinário o recomendar. O óleo de peixe é um suplemento, não uma guloseima, e convém falar sempre com o veterinário antes de dar qualquer suplemento ao cão. Pode causar efeitos secundários, como diarreia, vómitos, gases e hálito a peixe.",
-    "nl": "Alleen als je dierenarts het adviseert. Visolie is een supplement, geen snoepje, en dierenartsen raden aan om altijd eerst te overleggen voordat je je hond supplementen geeft. Het kan bijwerkingen hebben, zoals diarree, braken, winderigheid en een vissige adem."
+    "nl": "Alleen als je dierenarts het adviseert. Visolie is een supplement, geen snoepje, en dierenartsen raden aan om altijd eerst te overleggen voordat je je hond supplementen geeft. Het kan bijwerkingen hebben, zoals diarree, braken, winderigheid en een vissige adem.",
+    "pl": "Tylko jeśli zaleci to weterynarz. Olej rybi to suplement, a nie przekąska, i weterynarze radzą, zawsze skonsultować się z lekarzem weterynarii, zanim podasz psu jakikolwiek suplement. Może powodować skutki uboczne, takie jak biegunka, wymioty, gazy i rybi zapach z pyska."
   },
   "why": {
     "en": "Fish oil comes from oily fish such as salmon, mackerel and sardines, and its omega-3 fatty acids have been used to support a dog's skin, coat, joints and heart. But it is a health product: possible side effects include diarrhoea, vomiting, gas, fishy-smelling breath or skin and, in rare cases, a higher bleeding risk. VCA advises caution in dogs taking blood thinners, dogs with a clotting disorder, diabetes or a history of pancreatitis. Just because a product is natural does not mean it is safe.",
@@ -60,7 +64,8 @@
     "de": "Fischöl wird aus fettreichen Fischen wie Lachs, Makrele und Sardinen gewonnen, und seine Omega-3-Fettsäuren werden eingesetzt, um Haut, Fell, Gelenke und Herz eines Hundes zu unterstützen. Es ist aber ein Gesundheitsprodukt: Mögliche Nebenwirkungen sind Durchfall, Erbrechen, Blähungen, Fischgeruch von Atem oder Haut und in seltenen Fällen ein höheres Blutungsrisiko. VCA rät zur Vorsicht bei Hunden, die Blutverdünner bekommen, bei Hunden mit Gerinnungsstörung oder Diabetes sowie bei Hunden, die schon einmal eine Bauchspeicheldrüsenentzündung hatten. Dass ein Produkt natürlich ist, heißt nicht, dass es sicher ist.",
     "es": "El aceite de pescado procede de pescados azules como el salmón, la caballa y las sardinas, y sus ácidos grasos omega-3 se usan para cuidar la piel, el pelo, las articulaciones y el corazón del perro. Pero es un producto de salud: entre los posibles efectos secundarios están la diarrea, los vómitos, los gases, el aliento o la piel con olor a pescado y, en casos raros, un mayor riesgo de sangrado. VCA recomienda precaución en perros que toman anticoagulantes o que tienen un trastorno de la coagulación, diabetes o antecedentes de pancreatitis. Que un producto sea natural no significa que sea seguro.",
     "pt": "O óleo de peixe vem de peixes gordos, como o salmão, a cavala e as sardinhas, e os seus ácidos gordos ómega-3 usam-se para apoiar a pele, o pelo, as articulações e o coração do cão. Mas é um produto de saúde: os possíveis efeitos secundários incluem diarreia, vómitos, gases, hálito ou pele com cheiro a peixe e, em casos raros, maior risco de hemorragia. A VCA aconselha cautela em cães que tomam anticoagulantes, com problemas de coagulação, diabetes ou historial de pancreatite. Ser natural não quer dizer que seja seguro.",
-    "nl": "Visolie wordt gewonnen uit vette vis zoals zalm, makreel en sardines, en de omega-3-vetzuren erin worden gebruikt om de huid, vacht, gewrichten en het hart van een hond te ondersteunen. Maar het is een gezondheidsproduct: mogelijke bijwerkingen zijn diarree, braken, winderigheid, een vissige adem of huidgeur en in zeldzame gevallen een groter risico op bloedingen. VCA adviseert voorzichtigheid bij honden die bloedverdunners gebruiken, bij honden met een stollingsstoornis of diabetes en bij honden die eerder alvleesklierontsteking hebben gehad. Dat een product natuurlijk is, betekent niet dat het veilig is."
+    "nl": "Visolie wordt gewonnen uit vette vis zoals zalm, makreel en sardines, en de omega-3-vetzuren erin worden gebruikt om de huid, vacht, gewrichten en het hart van een hond te ondersteunen. Maar het is een gezondheidsproduct: mogelijke bijwerkingen zijn diarree, braken, winderigheid, een vissige adem of huidgeur en in zeldzame gevallen een groter risico op bloedingen. VCA adviseert voorzichtigheid bij honden die bloedverdunners gebruiken, bij honden met een stollingsstoornis of diabetes en bij honden die eerder alvleesklierontsteking hebben gehad. Dat een product natuurlijk is, betekent niet dat het veilig is.",
+    "pl": "Olej rybi pochodzi z tłustych ryb, takich jak łosoś, makrela i sardynki, a zawarte w nim kwasy tłuszczowe omega-3 stosuje się, by wspierać skórę, sierść, stawy i serce psa. To jednak produkt zdrowotny: możliwe skutki uboczne to biegunka, wymioty, gazy, rybi zapach z pyska lub skóry, a w rzadkich przypadkach większe ryzyko krwawień. VCA zaleca ostrożność u psów przyjmujących leki rozrzedzające krew, z zaburzeniami krzepnięcia, cukrzycą lub przebytym zapaleniem trzustki. To, że produkt jest naturalny, nie znaczy, że jest bezpieczny."
   },
   "signs": {
     "en": [
@@ -132,6 +137,13 @@
       "Winderigheid",
       "Adem of huid die naar vis ruikt",
       "Sneller bloeden (zeldzaam)"
+    ],
+    "pl": [
+      "Biegunka",
+      "Wymioty",
+      "Gazy",
+      "Rybi zapach z pyska lub skóry",
+      "Większa skłonność do krwawień (rzadko)"
     ]
   },
   "what_to_do": {
@@ -144,7 +156,8 @@
     "de": "Sprechen Sie mit Ihrem Tierarzt, bevor Sie mit Fischöl oder einem anderen Nahrungsergänzungsmittel beginnen. Hat Ihr Hund eine schwere Reaktion, setzen Sie das Fischöl ab und wenden Sie sich sofort an Ihren Tierarzt. Bewahren Sie den Behälter außerhalb der Reichweite von Kindern und Haustieren auf.",
     "es": "Habla con tu veterinario antes de darle aceite de pescado o cualquier otro suplemento. Si tu perro tiene una reacción grave, deja de darle aceite de pescado y contacta enseguida con tu veterinario. Guarda el envase fuera del alcance de niños y mascotas.",
     "pt": "Fala com o teu veterinário antes de começares a dar óleo de peixe ou qualquer outro suplemento. Se o teu cão tiver uma reação grave, deixa de lhe dar óleo de peixe e contacta imediatamente o teu veterinário. Guarda a embalagem fora do alcance das crianças e dos animais de estimação.",
-    "nl": "Overleg met je dierenarts voordat je met visolie of een ander supplement begint. Reageert je hond ernstig, stop dan met de visolie en neem meteen contact op met je dierenarts. Houd de verpakking buiten het bereik van kinderen en huisdieren."
+    "nl": "Overleg met je dierenarts voordat je met visolie of een ander supplement begint. Reageert je hond ernstig, stop dan met de visolie en neem meteen contact op met je dierenarts. Houd de verpakking buiten het bereik van kinderen en huisdieren.",
+    "pl": "Porozmawiaj z weterynarzem, zanim zaczniesz podawać olej rybi lub jakikolwiek inny suplement. Jeśli pies ma poważną reakcję, przestań podawać olej rybi i natychmiast skontaktuj się z weterynarzem. Trzymaj opakowanie poza zasięgiem dzieci i zwierząt."
   },
   "serving": null,
   "child": {
@@ -157,7 +170,8 @@
     "de": "Fischöl ist ein besonderes Nahrungsergänzungsmittel. Ob ein Hund es braucht, entscheiden nur der Tierarzt und die Erwachsenen!",
     "es": "El aceite de pescado es un suplemento especial. ¡Solo el veterinario y los adultos deciden si un perro lo necesita!",
     "pt": "O óleo de peixe é um suplemento especial. Só o veterinário e os adultos decidem se um cão precisa dele!",
-    "nl": "Visolie is een speciaal supplement. Alleen de dierenarts en volwassenen beslissen of een hond het nodig heeft!"
+    "nl": "Visolie is een speciaal supplement. Alleen de dierenarts en volwassenen beslissen of een hond het nodig heeft!",
+    "pl": "Olej rybi to specjalny suplement. Tylko weterynarz i dorośli decydują, czy pies go potrzebuje!"
   },
   "faq": [
     {
@@ -171,7 +185,8 @@
         "de": "Kann altes oder ranziges Fischöl meinem Hund schaden?",
         "es": "¿Puede sentarle mal a mi perro un aceite de pescado viejo o rancio?",
         "pt": "O óleo de peixe velho ou rançoso pode fazer mal ao meu cão?",
-        "nl": "Kan oude of ranzige visolie mijn hond van streek maken?"
+        "nl": "Kan oude of ranzige visolie mijn hond van streek maken?",
+        "pl": "Czy stary lub zjełczały olej rybi może rozstroić psa?"
       },
       "a": {
         "en": "Yes. Consuming rancid fish oil may lead to stomach and gut upset, including vomiting or diarrhoea.",
@@ -183,7 +198,8 @@
         "de": "Ja. Ranziges Fischöl kann zu Magen-Darm-Beschwerden führen, darunter Erbrechen oder Durchfall.",
         "es": "Sí. El aceite de pescado rancio puede causar molestias de estómago e intestino, como vómitos o diarrea.",
         "pt": "Sim. O óleo de peixe rançoso pode causar problemas de estômago e intestinos, incluindo vómitos ou diarreia.",
-        "nl": "Ja. Ranzige visolie kan maag- en darmklachten veroorzaken, zoals braken of diarree."
+        "nl": "Ja. Ranzige visolie kan maag- en darmklachten veroorzaken, zoals braken of diarree.",
+        "pl": "Tak. Zjełczały olej rybi może wywołać rozstrój żołądka i jelit, w tym wymioty lub biegunkę."
       }
     },
     {
@@ -197,7 +213,8 @@
         "de": "Ist Fischöl sicher, weil es natürlich ist?",
         "es": "¿Es seguro el aceite de pescado por ser natural?",
         "pt": "O óleo de peixe é seguro por ser natural?",
-        "nl": "Is visolie veilig omdat het natuurlijk is?"
+        "nl": "Is visolie veilig omdat het natuurlijk is?",
+        "pl": "Czy olej rybi jest bezpieczny, skoro jest naturalny?"
       },
       "a": {
         "en": "Not automatically. Just because a product is natural does not mean it is safe. Your vet is the best source of information about the safety of non-drug health products for your dog.",
@@ -209,7 +226,8 @@
         "de": "Nicht automatisch. Dass ein Produkt natürlich ist, heißt nicht, dass es sicher ist. Ihr Tierarzt kann Ihnen am besten sagen, wie sicher Gesundheitsprodukte sind, die keine Arzneimittel sind.",
         "es": "No necesariamente. Que un producto sea natural no significa que sea seguro. Tu veterinario es quien mejor puede informarte sobre la seguridad para tu perro de los productos de salud que no son medicamentos.",
         "pt": "Não necessariamente. Ser natural não quer dizer que seja seguro. O teu veterinário é a melhor fonte de informação sobre a segurança dos produtos de saúde que não são medicamentos para o teu cão.",
-        "nl": "Niet automatisch. Dat een product natuurlijk is, betekent niet dat het veilig is. Je dierenarts weet het best of gezondheidsproducten die geen medicijn zijn, veilig zijn voor je hond."
+        "nl": "Niet automatisch. Dat een product natuurlijk is, betekent niet dat het veilig is. Je dierenarts weet het best of gezondheidsproducten die geen medicijn zijn, veilig zijn voor je hond.",
+        "pl": "Niekoniecznie. To, że produkt jest naturalny, nie znaczy, że jest bezpieczny. Najlepszym źródłem informacji o bezpieczeństwie produktów zdrowotnych, które nie są lekami, jest weterynarz."
       }
     }
   ],
@@ -328,6 +346,11 @@
       "status": "verified",
       "verified_by": "claude-c-nl-2026-11-17",
       "verified_hash": "9a4f8f1631702036ab4b07aec79597be5958643da8d5ed9ff3c5af8b42c66140"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-c-pl-2026-11-17",
+      "verified_hash": "2aaaf7251029cf305723e5b5df6f64758b9fce910bc179c9c8e36b238ec8d30d"
     }
   }
 }
