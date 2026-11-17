@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "2ab666866d49d522675b19f69f051b70fa7e8c3cd4ff220e921ac97086c8d9fb"
+      "sha256": "9f7bd857cd0b51d8bdb4b07196fdf836f977c7c0c93b64aab60354b3eec89238"
     }
   },
   "suitability_vocabulary": {
@@ -68580,7 +68580,58 @@
         "file": "greyhound.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/greyhound.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/greyhound--black.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/greyhound--fawn.webp"
+          },
+          {
+            "key": "blue",
+            "label": {
+              "en": "Blue",
+              "sl": "Moder (siv)"
+            },
+            "file": "dog/greyhound--blue.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/greyhound--red.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/greyhound--black-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_checked",

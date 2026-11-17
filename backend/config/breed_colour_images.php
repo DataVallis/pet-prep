@@ -130,4 +130,12 @@ return [
         'parti-colour' => 'dogs/tibetan-terrier--parti-colour.webp',
         'tricolour' => 'dogs/tibetan-terrier--tricolour.webp',
     ],
+    'greyhound' => [
+        'brindle' => 'dogs/greyhound.webp',
+        'black' => 'dogs/greyhound--black.webp',
+        'fawn' => 'dogs/greyhound--fawn.webp',
+        'blue' => 'dogs/greyhound--blue.webp',
+        'red' => 'dogs/greyhound--red.webp',
+        'black-white' => 'dogs/greyhound--black-white.webp',
+    ],
 ];
