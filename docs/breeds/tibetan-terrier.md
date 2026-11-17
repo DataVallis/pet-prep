@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `tibetan_terrier` (viri S904–S911; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: ni preverjen (stran RKC ni bila dosegljiva) |
 | Izvor | FCI št. 209, skupina 9, sekcija 5 (tibetanske pasme), Tibet (Kitajska), pokroviteljstvo Velika Britanija (S904) — po FCI pes družabnik, ne terier po tipu |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 117. mesto »Tibetan Terrier« (S174, prebrano 2026-11-17; 116. ameriški eskimski pes je blokiran) |
-| PR-ji | pet-prep #1292 (pasma, združen `36f4c15`) · portret pet-prep (zagon `breed-portraits.yml` 44006138100, sprejet v prvem poskusu) · barvne različice (sledi) · spletna stran: pet-prep-website `feat/register-tibetan-terrier` |
+| PR-ji | pet-prep #1292 (pasma, združen `36f4c15`) · portret pet-prep (zagon `breed-portraits.yml` 44006138100, sprejet v prvem poskusu) · barvne različice pet-prep (zagona `breed-portraits.yml` 44007374464 in 44007757551) · spletna stran: pet-prep-website `feat/register-tibetan-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,7 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108. meseca; 4 → 3 → 2 obroka; učenje 0,7×) | 🛠 | 💶 izziv | M5-R10-121 | 2026-11-17 |
 | Česanje vsak dan, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-17 |
 | Ščetkanje zob vsak dan (otrok) | 🛠 | 💶 izziv | M5-R15 | 2026-11-17 |
-| Barve (izbirnik: 7 barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-17 |
+| Barve (izbirnik: 7 barv; fotografije za 6 — zlat (portret), bel, kremast, siv ali dimast, dvobarven, trobarven) | 🛠 | 💶 izziv | M5-R21 | 2026-11-17 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), zlat, naravna dolga dlaka, rep zavihan čez hrbet | — | M5-R11-04 | 2026-11-17 |
 | Stran na petprep.si (`/animals/dogs/tibetan-terrier`, `/sl/zivali/psi/tibetanski-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -51,6 +51,8 @@
 **Kako povedati** — starši: »Tibetanski terier je čudovit družinski pes, a z dolgo dlako: vsak dan česanje, vsak dan ščetkanje zob in uro gibanja. Ne mara biti dolgo sam. V PetPrepu boste videli, ali vaš otrok zmore ta vsakodnevni ritem.« · otroci: »Tibetanski terier ima dolgo, mehko dlako, ki ti pade čez oči — vsak dan ga počešeš, mu umiješ zobe in greš z njim na sprehod.« · vlagatelji / partnerji: »111. pasma psa, ki jo je samodejni nočni zagon sam izbral po javni lestvici AKC in dodal z viri — ko glavni vir (RKC) ni bil dosegljiv, je po pravilu uporabil PDSA in standard CKC.«
 
 ## Odprto za Davida
+
+- **colours needing David:** `black` — obe različici (prvi zagon in ponovitev s `force`) imata rjavkast gobček in noge, zato bolj spominjata na črno-rjavo kot na črno; brez fotografije (izbirnik barvo ponudi brez slike). Barvne različice odobril Claude 2026-11-17: bel, kremast, siv ali dimast, dvobarven, trobarven.
 
 - **Življenjska doba / starejše obdobje:** uporabljena je spodnja meja PDSA 12 let → starejši od 108. meseca. PetMD in WebMD navajata 15–16 let; tabela Dogs Trust McMillan 2024 (S123) ni bila dosegljiva — preverite vrstico »Tibetan Terrier«.
 - **Stran RKC:** ključni podatki RKC (velikost doma, izpadanje dlake, Breed Watch) in testi za vzreditelje niso bili dosegljivi (preusmeritev na royalkennelclub.com) → seznam za vzreditelja je »ni preverjen«; ob ročnem pregledu dopolnite.

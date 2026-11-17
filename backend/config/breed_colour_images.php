@@ -122,4 +122,12 @@ return [
     'manchester_terrier' => [
         'black-tan' => 'dogs/manchester-terrier.webp',
     ],
+    'tibetan_terrier' => [
+        'golden' => 'dogs/tibetan-terrier.webp',
+        'white' => 'dogs/tibetan-terrier--white.webp',
+        'cream' => 'dogs/tibetan-terrier--cream.webp',
+        'grey-smoke' => 'dogs/tibetan-terrier--grey-smoke.webp',
+        'parti-colour' => 'dogs/tibetan-terrier--parti-colour.webp',
+        'tricolour' => 'dogs/tibetan-terrier--tricolour.webp',
+    ],
 ];

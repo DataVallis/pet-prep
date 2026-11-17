@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "129e847308a4ddb2e29dcad39b3c36618b028943d023505ca8d1c27ef9cc7778"
+      "sha256": "51a31bb2af2843d3f3da27f75078593773e2d9df984022478e301f4955341db3"
     }
   },
   "suitability_vocabulary": {
@@ -68009,7 +68009,58 @@
         "file": "tibetan-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "golden",
+            "label": {
+              "en": "Golden",
+              "sl": "Zlat"
+            },
+            "file": "dog/tibetan-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/tibetan-terrier--white.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/tibetan-terrier--cream.webp"
+          },
+          {
+            "key": "grey-smoke",
+            "label": {
+              "en": "Grey or smoke",
+              "sl": "Siv ali dimast"
+            },
+            "file": "dog/tibetan-terrier--grey-smoke.webp"
+          },
+          {
+            "key": "parti-colour",
+            "label": {
+              "en": "Parti-colour",
+              "sl": "Dvobarven"
+            },
+            "file": "dog/tibetan-terrier--parti-colour.webp"
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour (black, white, tan)",
+              "sl": "Trobarven (črn, bel, rjavkast)"
+            },
+            "file": "dog/tibetan-terrier--tricolour.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_checked",
