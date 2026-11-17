@@ -32966,7 +32966,7 @@ export interface operations {
                     } | {
                         received: boolean;
                         /** @enum {string|null} */
-                        outcome: "unknown_order" | "dispute_won" | "dispute_lost" | "disputed" | "fulfilled" | "pending" | "not_ours" | "failed" | "test_mode_ignored" | "ignored" | null;
+                        outcome: "unknown_order" | "dispute_won" | "dispute_lost" | "disputed" | "fulfilled" | "pending" | "rejected" | "not_ours" | "failed" | "test_mode_ignored" | "ignored" | null;
                     };
                 };
             };
