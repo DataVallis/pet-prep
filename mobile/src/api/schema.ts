@@ -1507,6 +1507,35 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/email-signups": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Leave an e-mail with consent. Public, no token; throttled per IP (20 / hour, IPv6 /64) — the
+         *     address is only the throttle key, never stored or logged. `purpose` newsletter | early_access,
+         *     `source` = the form on the site, `page_path` (+ optional `section`) = where on the page; optional
+         *     context for targeting: `locale` (one of the 15 website languages), `species`, `breed`, `stage`,
+         *     `quiz` {result ≤ 3 breed ids, answers}, `utm`, `referrer_host`. One contact per e-mail (lower-case);
+         *     a repeat adds a signup row, never a second contact. The answer is the same for a new and a known
+         *     address. No e-mail is sent and nothing about the visitor's address or browser is stored. A filled
+         *     hidden `website` field = bot: 204 and nothing stored
+         * @description 204 no content; 422 invalid body; 429 throttled.
+         *
+         *     POST /api/email-signups
+         */
+        post: operations["emailSignup.store"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/webhooks/fal-ai": {
         parameters: {
             query?: never;
@@ -2138,7 +2167,8 @@ export interface paths {
         /**
          * Leave an e-mail for PetPrep news. Public, no token; throttled per IP
          *     (10 / hour, IPv6 /64). The parent must tick the consent box (`consent`).
-         *     One row per e-mail: a repeat visit updates the row, it never adds one.
+         *     Stored as a `newsletter` signup (`page_path` unknown) of the unified contact; a repeat visit adds
+         *     a signup row to the same contact, it never adds a second contact.
          *     The answer is the same for a new and a known address. No e-mail is sent
          *     and nothing about the visitor's address is stored. A filled hidden
          *     `website` field = bot: 201 and nothing stored
@@ -3493,6 +3523,54 @@ export interface components {
             website?: string | null;
         };
         /**
+         * StoreEmailSignupRequest
+         * @description POST /api/email-signups (M6-S09). Public.
+         */
+        StoreEmailSignupRequest: {
+            /**
+             * Format: email
+             * @description Printable ASCII without spaces only: no NUL / control bytes, no quoted local parts with
+             *     spaces, no non-ASCII — so the address is stored whole and lower-cases the same in PHP
+             *     and in PostgreSQL (the table's CHECK email = lower(email)).
+             */
+            email: string;
+            /**
+             * @description The person ticked the consent box; without it nothing is stored.
+             * @enum {unknown}
+             */
+            consent: "yes" | "on" | "1" | 1 | "true" | true;
+            /** @enum {string} */
+            consent_version: "2026-11";
+            /** @enum {string} */
+            purpose: "newsletter" | "early_access";
+            /** @description What form on the site: real_cost | breed_quiz | early_access_form | any later one. */
+            source: string;
+            /** @description Path only (no host, no query): where on the site the e-mail was left. */
+            page_path: string;
+            section?: string | null;
+            /** @enum {string} */
+            locale: "en" | "sl" | "de" | "fr" | "es" | "it" | "pt" | "nl" | "pl" | "cs" | "hr" | "sv" | "da" | "fi" | "nb";
+            /** @enum {string|null} */
+            species?: "dog" | "cat" | null;
+            breed?: string | null;
+            /** @enum {string|null} */
+            stage?: "adult" | "puppy" | null;
+            quiz?: {
+                result?: string[] | null;
+                answers?: string | null;
+            } | null;
+            utm?: {
+                source?: string | null;
+                medium?: string | null;
+                campaign?: string | null;
+                content?: string | null;
+                term?: string | null;
+            } | null;
+            /** @description Host only (no scheme, no path), optional port. */
+            referrer_host?: string | null;
+            website?: string | null;
+        };
+        /**
          * StorePartnerInquiryRequest
          * @description POST /api/partner-inquiries (M6-S03, WEBSITE_SALES_SPEC §5.2). Public.
          */
@@ -3509,7 +3587,8 @@ export interface components {
         };
         /**
          * StoreSummaryLeadRequest
-         * @description POST /api/summary-leads (M6-S05, THREEJS_OPPORTUNITIES T9). Public.
+         * @description POST /api/summary-leads (M6-S05, THREEJS_OPPORTUNITIES T9). Public. Kept for old cached pages since M6-S09
+         *     (stored in the unified `email_contacts` / `email_signups`); new pages use StoreEmailSignupRequest.
          */
         StoreSummaryLeadRequest: {
             /**
@@ -30151,6 +30230,29 @@ export interface operations {
             };
             401: components["responses"]["AuthenticationException"];
             403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "emailSignup.store": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["StoreEmailSignupRequest"];
+            };
+        };
+        responses: {
+            /** @description No content */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
             422: components["responses"]["ValidationException"];
         };
     };
