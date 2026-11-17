@@ -774,6 +774,16 @@ return [
     'manchester_terrier' => [
         ['key' => 'black-tan', 'value' => 'jet black and rich mahogany tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
     ],
+    // M5-R10-121: FCI-Standard N° 209 (S904) — the named standard colours, same order and values as breed_appearance.php.
+    'tibetan_terrier' => [
+        ['key' => 'golden', 'value' => 'golden', 'en' => 'Golden', 'sl' => 'Zlat'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'grey-smoke', 'value' => 'grey or smoke', 'en' => 'Grey or smoke', 'sl' => 'Siv ali dimast'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'parti-colour', 'value' => 'parti-colour (white with coloured patches)', 'en' => 'Parti-colour', 'sl' => 'Dvobarven'],
+        ['key' => 'tricolour', 'value' => 'tricolour (black, white and tan)', 'en' => 'Tricolour (black, white, tan)', 'sl' => 'Trobarven (črn, bel, rjavkast)'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

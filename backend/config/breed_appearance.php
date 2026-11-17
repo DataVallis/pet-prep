@@ -826,6 +826,12 @@
 | close to the head (natural, never cropped); short tapering natural tail. No welfare trait. One standard colour; weight
 | unsourced → `verified => false`. Not the English Toy Terrier.
 |
+| Tibetan Terrier (M5-R10-121, docs/research/dog-data tibetan_terrier.appearance): "Sturdy, medium-sized, long-haired,
+| generally square outline." (FCI-Standard N° 209, S904); colours white, golden, cream, grey or smoke, black, parti-colour and
+| tricolours — "any colour except chocolate, liver or merle" (S904); double coat with a profuse, fine, long top coat, straight
+| or waved; pendant V-shaped feathered ears; tail curled over the back (natural). No welfare trait. Seven named standard
+| colours, golden first (portrait default); weights unsourced → `verified => false`.
+|
 | Wire Fox Terrier (M5-R10-117, docs/research/dog-data wire_fox_terrier.appearance): "Active and lively, bone and strength
 | in small compass, never cloddy or coarse." (FCI-Standard N° 169, S871); colour "White predominates with black, black and tan
 | or tan markings." — brindle, red, liver or slate-blue markings undesirable, any other colour unacceptable (S871); coat dense,
@@ -5120,6 +5126,43 @@ return [
             'ear_carriage' => ['small V-shaped ears hanging close to the head above the eyes'],
             'eye_color' => ['small, dark, sparkling almond-shaped eyes'],
             'tail' => ['short natural tail, thick at the root and tapering to a point, carried not higher than the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-121 (docs/research/dog-data/data.json tibetan_terrier.appearance; runbook rules 2026-10-10: the seven named
+    // standard colours of FCI-Standard N° 209 (S904), golden first = the portrait default; natural, unclipped coat).
+    'tibetan_terrier' => [
+        'display_name' => 'Tibetan Terrier',
+        // Colour frequencies are in no source (tibetan_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 209 (S904, https://dev.fci.be/Nomenclature/Standards/209g09-en.pdf), PDSA (S905), CKC standard (S909) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S905 "Medium"; S904 "Height at the withers: Males: 36 - 41 cm; females slightly smaller."; S909 "Weight: 8.25 to 13.5 kg (18 to 30 lb)"',
+            'build' => 'S904 "Sturdy, medium-sized, long-haired, generally square outline."',
+            'coat_length' => 'S904 "Top coat profuse, fine but neither silky nor woolly; long; either straight or waved but not curled."; "Hair: Double coat. Undercoat fine and woolly."',
+            'coat_color' => 'S904 white, golden, cream, grey or smoke, black, parti-colour and tricolours, "in fact any colour except chocolate, liver or merle permissible." (weights unsourced)',
+            'ear_carriage' => 'S904 "Ears: Pendant, carried not too close to head, V-shaped, not too large" / "heavily feathered."',
+            'eye_color' => 'S904 "Eyes: Large, round, neither prominent nor sunken; set fairly wide apart; dark brown. Eye rims black."',
+            'tail' => 'S904 "TAIL: Medium length set on fairly high and carried in a gay curl over back."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'sturdy, medium-sized dog of generally square outline', 'weight' => 3], 'compact, square, sturdy long-haired companion dog'],
+            'coat_length' => ['profuse, fine, long double coat, straight or slightly waved, falling over the eyes and face'],
+            // FCI standard (S904): the named standard colours; golden first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'golden', 'weight' => 30],
+                ['value' => 'white', 'weight' => 15],
+                ['value' => 'cream', 'weight' => 10],
+                ['value' => 'grey or smoke', 'weight' => 10],
+                ['value' => 'black', 'weight' => 10],
+                ['value' => 'parti-colour (white with coloured patches)', 'weight' => 15],
+                ['value' => 'tricolour (black, white and tan)', 'weight' => 10],
+            ],
+            'ear_carriage' => ['pendant V-shaped ears, heavily feathered'],
+            'eye_color' => ['large, round, dark brown eyes with black eye rims'],
+            'tail' => ['natural tail of medium length, well feathered, carried in a curl over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
