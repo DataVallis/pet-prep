@@ -86,8 +86,72 @@ return [
     'bernese_mountain_dog' => [
         'tricolour' => 'dogs/bernese-mountain-dog.webp',
     ],
+    'siberian_husky' => [
+        'grey-white' => 'dogs/siberian-husky.webp',
+        'black-white' => 'dogs/siberian-husky--black-white.webp',
+        'red-white' => 'dogs/siberian-husky--red-white.webp',
+        'agouti' => 'dogs/siberian-husky--agouti.webp',
+        'sable-white' => 'dogs/siberian-husky--sable-white.webp',
+        'white' => 'dogs/siberian-husky--white.webp',
+    ],
+    'rottweiler' => [
+        'black-tan' => 'dogs/rottweiler.webp',
+        'black-mahogany' => 'dogs/rottweiler--black-mahogany.webp',
+    ],
+    'bulldog' => [
+        'red' => 'dogs/bulldog.webp',
+        'fawn' => 'dogs/bulldog--fawn.webp',
+        'fawn-brindle' => 'dogs/bulldog--fawn-brindle.webp',
+    ],
+    'german_shorthaired_pointer' => [
+        'liver-roan' => 'dogs/german-shorthaired-pointer.webp',
+        'liver' => 'dogs/german-shorthaired-pointer--liver.webp',
+        'liver-white-ticked' => 'dogs/german-shorthaired-pointer--liver-white-ticked.webp',
+        'black-roan' => 'dogs/german-shorthaired-pointer--black-roan.webp',
+        'black' => 'dogs/german-shorthaired-pointer--black.webp',
+    ],
     'yorkshire_terrier' => [
         'blue-tan' => 'dogs/yorkshire-terrier.webp',
+    ],
+    'cane_corso' => [
+        'black' => 'dogs/cane-corso.webp',
+        'grey' => 'dogs/cane-corso--grey.webp',
+        'black-brindle' => 'dogs/cane-corso--black-brindle.webp',
+        'grey-brindle' => 'dogs/cane-corso--grey-brindle.webp',
+        'fawn' => 'dogs/cane-corso--fawn.webp',
+        'stag-red' => 'dogs/cane-corso--stag-red.webp',
+        'dark-wheat' => 'dogs/cane-corso--dark-wheat.webp',
+    ],
+    'pembroke_welsh_corgi' => [
+        'red-white' => 'dogs/pembroke-welsh-corgi.webp',
+        'sable-white' => 'dogs/pembroke-welsh-corgi--sable-white.webp',
+        'fawn-white' => 'dogs/pembroke-welsh-corgi--fawn-white.webp',
+        'tricolour' => 'dogs/pembroke-welsh-corgi--tricolour.webp',
+    ],
+    'dobermann' => [
+        'black-rust' => 'dogs/dobermann.webp',
+        'brown-rust' => 'dogs/dobermann--brown-rust.webp',
+    ],
+    'boxer' => [
+        'fawn' => 'dogs/boxer.webp',
+        'brindle' => 'dogs/boxer--brindle.webp',
+    ],
+    'miniature_schnauzer' => [
+        'pepper-salt' => 'dogs/miniature-schnauzer.webp',
+        'black-silver' => 'dogs/miniature-schnauzer--black-silver.webp',
+        'black' => 'dogs/miniature-schnauzer--black.webp',
+    ],
+    'shih_tzu' => [
+        'gold-white' => 'dogs/shih-tzu.webp',
+        'black-white' => 'dogs/shih-tzu--black-white.webp',
+        'liver-white' => 'dogs/shih-tzu--liver-white.webp',
+    ],
+    'great_dane' => [
+        'fawn' => 'dogs/great-dane.webp',
+        'brindle' => 'dogs/great-dane--brindle.webp',
+        'harlequin' => 'dogs/great-dane--harlequin.webp',
+        'black' => 'dogs/great-dane--black.webp',
+        'blue' => 'dogs/great-dane--blue.webp',
     ],
     'maltese' => [
         'white' => 'dogs/maltese.webp',

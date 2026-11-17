@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "9f7bd857cd0b51d8bdb4b07196fdf836f977c7c0c93b64aab60354b3eec89238"
+      "sha256": "7e24a339a35a002ab389abf3bda779346ea493ca346fcd3895164ebf136aa851"
     }
   },
   "suitability_vocabulary": {
@@ -9598,7 +9598,58 @@
         "file": "siberian-husky.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "grey-white",
+            "label": {
+              "en": "Grey and white",
+              "sl": "Sivo-bel"
+            },
+            "file": "dog/siberian-husky.webp",
+            "default": true
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/siberian-husky--black-white.webp"
+          },
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/siberian-husky--red-white.webp"
+          },
+          {
+            "key": "agouti",
+            "label": {
+              "en": "Agouti (wild grey)",
+              "sl": "Agouti (divje siv)"
+            },
+            "file": "dog/siberian-husky--agouti.webp"
+          },
+          {
+            "key": "sable-white",
+            "label": {
+              "en": "Sable and white",
+              "sl": "Sobolji z belo"
+            },
+            "file": "dog/siberian-husky--sable-white.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/siberian-husky--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -10198,7 +10249,26 @@
         "file": "rottweiler.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/rottweiler.webp",
+            "default": true
+          },
+          {
+            "key": "black-mahogany",
+            "label": {
+              "en": "Black and mahogany",
+              "sl": "Črn z mahagonijevimi oznakami"
+            },
+            "file": "dog/rottweiler--black-mahogany.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -10832,7 +10902,34 @@
         "file": "bulldog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/bulldog.webp",
+            "default": true
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/bulldog--fawn.webp"
+          },
+          {
+            "key": "fawn-brindle",
+            "label": {
+              "en": "Fawn brindle",
+              "sl": "Plavo rjav tigrast"
+            },
+            "file": "dog/bulldog--fawn-brindle.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -11405,7 +11502,50 @@
         "file": "german-shorthaired-pointer.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "liver-roan",
+            "label": {
+              "en": "Liver roan",
+              "sl": "Jetrno rjav pikčast"
+            },
+            "file": "dog/german-shorthaired-pointer.webp",
+            "default": true
+          },
+          {
+            "key": "liver",
+            "label": {
+              "en": "Liver",
+              "sl": "Jetrno rjav"
+            },
+            "file": "dog/german-shorthaired-pointer--liver.webp"
+          },
+          {
+            "key": "liver-white-ticked",
+            "label": {
+              "en": "Liver and white ticked",
+              "sl": "Jetrno-bel pikčast"
+            },
+            "file": "dog/german-shorthaired-pointer--liver-white-ticked.webp"
+          },
+          {
+            "key": "black-roan",
+            "label": {
+              "en": "Black roan",
+              "sl": "Črn pikčast"
+            },
+            "file": "dog/german-shorthaired-pointer--black-roan.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/german-shorthaired-pointer--black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
@@ -12482,7 +12622,66 @@
         "file": "cane-corso.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/cane-corso.webp",
+            "default": true
+          },
+          {
+            "key": "grey",
+            "label": {
+              "en": "Grey (blue)",
+              "sl": "Siv (moder)"
+            },
+            "file": "dog/cane-corso--grey.webp"
+          },
+          {
+            "key": "black-brindle",
+            "label": {
+              "en": "Black brindle",
+              "sl": "Črn tigrast"
+            },
+            "file": "dog/cane-corso--black-brindle.webp"
+          },
+          {
+            "key": "grey-brindle",
+            "label": {
+              "en": "Grey brindle",
+              "sl": "Siv tigrast"
+            },
+            "file": "dog/cane-corso--grey-brindle.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/cane-corso--fawn.webp"
+          },
+          {
+            "key": "stag-red",
+            "label": {
+              "en": "Stag red",
+              "sl": "Jelenje rdeč"
+            },
+            "file": "dog/cane-corso--stag-red.webp"
+          },
+          {
+            "key": "dark-wheat",
+            "label": {
+              "en": "Dark wheat",
+              "sl": "Temno pšeničen"
+            },
+            "file": "dog/cane-corso--dark-wheat.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -13008,7 +13207,42 @@
         "file": "pembroke-welsh-corgi.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/pembroke-welsh-corgi.webp",
+            "default": true
+          },
+          {
+            "key": "sable-white",
+            "label": {
+              "en": "Sable and white",
+              "sl": "Sobolji z belo"
+            },
+            "file": "dog/pembroke-welsh-corgi--sable-white.webp"
+          },
+          {
+            "key": "fawn-white",
+            "label": {
+              "en": "Fawn and white",
+              "sl": "Plavo rjav z belo"
+            },
+            "file": "dog/pembroke-welsh-corgi--fawn-white.webp"
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour (black, tan, white)",
+              "sl": "Trobarven (črn, rjavkast, bel)"
+            },
+            "file": "dog/pembroke-welsh-corgi--tricolour.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -13610,7 +13844,26 @@
         "file": "dobermann.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-rust",
+            "label": {
+              "en": "Black and rust",
+              "sl": "Črn z rjastimi oznakami"
+            },
+            "file": "dog/dobermann.webp",
+            "default": true
+          },
+          {
+            "key": "brown-rust",
+            "label": {
+              "en": "Brown and rust",
+              "sl": "Rjav z rjastimi oznakami"
+            },
+            "file": "dog/dobermann--brown-rust.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -14263,7 +14516,26 @@
         "file": "boxer.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/boxer.webp",
+            "default": true
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/boxer--brindle.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -14813,7 +15085,34 @@
         "file": "miniature-schnauzer.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "pepper-salt",
+            "label": {
+              "en": "Pepper and salt",
+              "sl": "Poper in sol"
+            },
+            "file": "dog/miniature-schnauzer.webp",
+            "default": true
+          },
+          {
+            "key": "black-silver",
+            "label": {
+              "en": "Black and silver",
+              "sl": "Črno-srebrn"
+            },
+            "file": "dog/miniature-schnauzer--black-silver.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/miniature-schnauzer--black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -15339,7 +15638,34 @@
         "file": "shih-tzu.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "gold-white",
+            "label": {
+              "en": "Gold and white",
+              "sl": "Zlato-bel"
+            },
+            "file": "dog/shih-tzu.webp",
+            "default": true
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/shih-tzu--black-white.webp"
+          },
+          {
+            "key": "liver-white",
+            "label": {
+              "en": "Liver and white",
+              "sl": "Jetrno-bel"
+            },
+            "file": "dog/shih-tzu--liver-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "none_recommended",
@@ -15952,7 +16278,50 @@
         "file": "great-dane.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/great-dane.webp",
+            "default": true
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/great-dane--brindle.webp"
+          },
+          {
+            "key": "harlequin",
+            "label": {
+              "en": "Harlequin",
+              "sl": "Harlekin"
+            },
+            "file": "dog/great-dane--harlequin.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/great-dane--black.webp"
+          },
+          {
+            "key": "blue",
+            "label": {
+              "en": "Steel blue",
+              "sl": "Jekleno moder"
+            },
+            "file": "dog/great-dane--blue.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
