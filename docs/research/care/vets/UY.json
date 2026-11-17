@@ -57,7 +57,8 @@
         "it": "Pronto soccorso disponibile 24 ore su 24; chiamare la linea d'emergenza.",
         "pt": "Serviço de urgências 24 horas por dia; liga para a linha de urgência.",
         "nl": "Spoeddienst 24 uur per dag beschikbaar; bel de spoedlijn.",
-        "pl": "Pogotowie dostępne 24 godziny na dobę; zadzwoń na linię dla nagłych przypadków."
+        "pl": "Pogotowie dostępne 24 godziny na dobę; zadzwoń na linię dla nagłych przypadków.",
+        "cs": "Pohotovostní služba dostupná nonstop; zavolejte na pohotovostní linku."
       }
     },
     {
@@ -79,7 +80,8 @@
         "it": "Visite d'urgenza a domicilio 24 ore su 24; orario regolare martedì–domenica 9:00–16:00.",
         "pt": "Visitas urgentes ao domicílio 24 horas por dia; horário normal de terça a domingo 9h00–16h00.",
         "nl": "Spoedvisites aan huis 24 uur per dag; reguliere openingstijden di–zo 9.00–16.00 uur.",
-        "pl": "Wizyty domowe w nagłych przypadkach całą dobę; zwykłe godziny od wtorku do niedzieli 9:00–16:00."
+        "pl": "Wizyty domowe w nagłych przypadkach całą dobę; zwykłe godziny od wtorku do niedzieli 9:00–16:00.",
+        "cs": "Pohotovostní návštěvy doma nonstop; běžná otevírací doba od úterý do neděle 9:00–16:00."
       }
     },
     {
@@ -101,7 +103,8 @@
         "it": "Pronto soccorso 24 ore su 24; orario regolare lun–sab 9:00–20:00.",
         "pt": "Serviço de urgências 24 horas por dia; horário normal de segunda a sábado 9h00–20h00.",
         "nl": "Spoeddienst 24 uur per dag; reguliere openingstijden ma–za 9.00–20.00 uur.",
-        "pl": "Pogotowie całodobowo; zwykłe godziny od poniedziałku do soboty 9:00–20:00."
+        "pl": "Pogotowie całodobowo; zwykłe godziny od poniedziałku do soboty 9:00–20:00.",
+        "cs": "Pohotovostní služba nonstop; běžná otevírací doba Po–So 9:00–20:00."
       }
     },
     {
@@ -123,7 +126,8 @@
         "it": "Linea d'emergenza 24 ore su 24; orario della clinica lun–ven 10:00–20:00, sab 10:00–15:00.",
         "pt": "Linha de urgência 24 horas por dia; clínica aberta de segunda a sexta 10h00–20h00, sábado 10h00–15h00.",
         "nl": "Spoedlijn 24 uur per dag; openingstijden kliniek ma–vr 10.00–20.00 uur, za 10.00–15.00 uur.",
-        "pl": "Linia dla nagłych przypadków całodobowo; godziny przychodni od poniedziałku do piątku 10:00–20:00, w sobotę 10:00–15:00."
+        "pl": "Linia dla nagłych przypadków całodobowo; godziny przychodni od poniedziałku do piątku 10:00–20:00, w sobotę 10:00–15:00.",
+        "cs": "Pohotovostní linka nonstop; ordinační doba Po–Pá 10:00–20:00, so 10:00–15:00."
       }
     },
     {
@@ -145,7 +149,8 @@
         "it": "Aperto tutti i giorni 9:00–21:00; visite d'urgenza a domicilio 24 ore su 24 (a pagamento, chiamare il 091 404 141 e dire di essere socio di Veterinaria Lacucha).",
         "pt": "Aberto todos os dias 9h00–21h00; visitas urgentes ao domicílio 24 horas por dia (serviço pago; liga para 091 404 141 e diz que és sócio da Veterinaria Lacucha).",
         "nl": "Dagelijks open 9.00–21.00 uur; spoedvisites aan huis 24 uur per dag (tegen betaling; bel 091 404 141 en zeg dat je lid bent van Veterinaria Lacucha).",
-        "pl": "Czynne codziennie 9:00–21:00; całodobowe wizyty domowe w nagłych przypadkach (płatne, zadzwoń pod 091 404 141 i powiedz, że jesteś członkiem Veterinaria Lacucha)."
+        "pl": "Czynne codziennie 9:00–21:00; całodobowe wizyty domowe w nagłych przypadkach (płatne, zadzwoń pod 091 404 141 i powiedz, że jesteś członkiem Veterinaria Lacucha).",
+        "cs": "Otevřeno denně 9:00–21:00; nonstop pohotovostní návštěvy doma (za poplatek, volejte 091 404 141 a uveďte, že jste členem Veterinaria Lacucha)."
       }
     },
     {
@@ -167,7 +172,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno; orario del negozio lun–ven 9:00–20:00, sab 10:00–20:00, dom 12:00–20:00.",
         "pt": "Serviço de urgências 24 horas por dia, 365 dias por ano; loja aberta de segunda a sexta 9h00–20h00, sábado 10h00–20h00, domingo 12h00–20h00.",
         "nl": "Spoeddienst 24 uur per dag, 365 dagen per jaar; winkeltijden ma–vr 9.00–20.00 uur, za 10.00–20.00 uur, zo 12.00–20.00 uur.",
-        "pl": "Pogotowie całodobowo, 365 dni w roku; godziny sklepu od poniedziałku do piątku 9:00–20:00, w sobotę 10:00–20:00, w niedzielę 12:00–20:00."
+        "pl": "Pogotowie całodobowo, 365 dni w roku; godziny sklepu od poniedziałku do piątku 9:00–20:00, w sobotę 10:00–20:00, w niedzielę 12:00–20:00.",
+        "cs": "Pohotovostní služba nonstop, 365 dní v roce; otevírací doba prodejny Po–Pá 9:00–20:00, so 10:00–20:00, ne 12:00–20:00."
       }
     },
     {
@@ -188,7 +194,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno (chiamare la linea d'emergenza).",
         "pt": "Serviço de urgências 24 horas por dia, 365 dias por ano (liga para a linha de urgência).",
         "nl": "Spoeddienst 24 uur per dag, 365 dagen per jaar (bel de spoedlijn).",
-        "pl": "Pogotowie całodobowo, 365 dni w roku (zadzwoń na linię dla nagłych przypadków)."
+        "pl": "Pogotowie całodobowo, 365 dni w roku (zadzwoń na linię dla nagłych przypadków).",
+        "cs": "Pohotovostní služba nonstop, 365 dní v roce (volejte pohotovostní linku)."
       }
     },
     {
@@ -209,7 +216,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno (chiamare la linea d'emergenza).",
         "pt": "Serviço de urgências 24 horas por dia, 365 dias por ano (liga para a linha de urgência).",
         "nl": "Spoeddienst 24 uur per dag, 365 dagen per jaar (bel de spoedlijn).",
-        "pl": "Pogotowie całodobowo, 365 dni w roku (zadzwoń na linię dla nagłych przypadków)."
+        "pl": "Pogotowie całodobowo, 365 dni w roku (zadzwoń na linię dla nagłych przypadków).",
+        "cs": "Pohotovostní služba nonstop, 365 dní v roce (volejte pohotovostní linku)."
       }
     },
     {
@@ -231,7 +239,8 @@
         "it": "Urgenze e ricoveri 24 ore su 24, 7 giorni su 7; visite lun–ven 9:30–19:00, sab 9:00–14:00.",
         "pt": "Urgências e internamento 24 horas por dia, 7 dias por semana; consultas de segunda a sexta 9h30–19h00, sábado 9h00–14h00.",
         "nl": "Spoed en opname 24 uur per dag, 7 dagen per week; consulten ma–vr 9.30–19.00 uur, za 9.00–14.00 uur.",
-        "pl": "Nagłe przypadki i hospitalizacja 24 godziny na dobę, 7 dni w tygodniu; konsultacje od poniedziałku do piątku 9:30–19:00, w sobotę 9:00–14:00."
+        "pl": "Nagłe przypadki i hospitalizacja 24 godziny na dobę, 7 dni w tygodniu; konsultacje od poniedziałku do piątku 9:30–19:00, w sobotę 9:00–14:00.",
+        "cs": "Pohotovost a hospitalizace nonstop, 7 dní v týdnu; konzultace Po–Pá 9:30–19:00, so 9:00–14:00."
       }
     },
     {
@@ -253,7 +262,8 @@
         "it": "Lun–sab 10:00–19:00; domenica solo urgenze. Linea d'emergenza (solo chiamate), telefonare in anticipo.",
         "pt": "Segunda a sábado 10h00–19h00; domingo apenas urgências. Linha de urgência (apenas chamadas telefónicas), liga antes.",
         "nl": "Ma–za 10.00–19.00 uur; zondag alleen spoed. Spoedlijn (alleen telefonisch), bel vooraf.",
-        "pl": "Od poniedziałku do soboty 10:00–19:00; w niedzielę tylko nagłe przypadki. Linia dla nagłych przypadków (tylko rozmowy telefoniczne), zadzwoń przed wizytą."
+        "pl": "Od poniedziałku do soboty 10:00–19:00; w niedzielę tylko nagłe przypadki. Linia dla nagłych przypadków (tylko rozmowy telefoniczne), zadzwoń przed wizytą.",
+        "cs": "Po–So 10:00–19:00; v neděli pouze pohotovost. Pohotovostní linka (pouze telefonicky), před cestou zavolejte."
       }
     },
     {
@@ -275,7 +285,8 @@
         "it": "Urgenze 24 ore su 24, 7 giorni su 7; orario regolare lun–ven 8:30–12:30 e 15:00–18:00, sab 16:00–18:00.",
         "pt": "Urgências 24 horas por dia, 7 dias por semana; horário normal de segunda a sexta 8h30–12h30 e 15h00–18h00, sábado 16h00–18h00.",
         "nl": "Spoed 24 uur per dag, 7 dagen per week beschikbaar; reguliere openingstijden ma–vr 8.30–12.30 en 15.00–18.00 uur, za 16.00–18.00 uur.",
-        "pl": "Nagłe przypadki 24 godziny na dobę, 7 dni w tygodniu; zwykłe godziny od poniedziałku do piątku 8:30–12:30 i 15:00–18:00, w sobotę 16:00–18:00."
+        "pl": "Nagłe przypadki 24 godziny na dobę, 7 dni w tygodniu; zwykłe godziny od poniedziałku do piątku 8:30–12:30 i 15:00–18:00, w sobotę 16:00–18:00.",
+        "cs": "Pohotovost dostupná nonstop, 7 dní v týdnu; běžná otevírací doba Po–Pá 8:30–12:30 a 15:00–18:00, so 16:00–18:00."
       }
     },
     {
@@ -297,7 +308,8 @@
         "it": "Clinica per piccoli animali con linea d'emergenza; lun–ven 7:00–12:00 e 14:00–18:00, sab 7:00–12:00; telefonare in anticipo.",
         "pt": "Clínica para animais de pequeno porte com linha de urgência; segunda a sexta 7h00–12h00 e 14h00–18h00, sábado 7h00–12h00; liga antes.",
         "nl": "Kliniek voor kleine huisdieren met spoedlijn; ma–vr 7.00–12.00 en 14.00–18.00 uur, za 7.00–12.00 uur; bel vooraf.",
-        "pl": "Przychodnia dla małych zwierząt z linią dla nagłych przypadków; od poniedziałku do piątku 7:00–12:00 i 14:00–18:00, w sobotę 7:00–12:00; zadzwoń przed wizytą."
+        "pl": "Przychodnia dla małych zwierząt z linią dla nagłych przypadków; od poniedziałku do piątku 7:00–12:00 i 14:00–18:00, w sobotę 7:00–12:00; zadzwoń przed wizytą.",
+        "cs": "Klinika malých zvířat s pohotovostní linkou; Po–Pá 7:00–12:00 a 14:00–18:00, so 7:00–12:00; před cestou zavolejte."
       }
     },
     {
@@ -318,7 +330,8 @@
         "it": "Lun–ven 7:00–12:00 e 14:00–18:30, sab 7:00–12:00 (gli orari pomeridiani estivi variano leggermente).",
         "pt": "Segunda a sexta 7h00–12h00 e 14h00–18h30, sábado 7h00–12h00 (no verão, o horário da tarde varia ligeiramente).",
         "nl": "Ma–vr 7.00–12.00 en 14.00–18.30 uur, za 7.00–12.00 uur (in de zomer verschuiven de middaguren iets).",
-        "pl": "Od poniedziałku do piątku 7:00–12:00 i 14:00–18:30, w sobotę 7:00–12:00 (latem godziny popołudniowe nieco się przesuwają)."
+        "pl": "Od poniedziałku do piątku 7:00–12:00 i 14:00–18:30, w sobotę 7:00–12:00 (latem godziny popołudniowe nieco się przesuwają).",
+        "cs": "Po–Pá 7:00–12:00 a 14:00–18:30, so 7:00–12:00 (v létě se odpolední doba mírně posouvá)."
       }
     },
     {
@@ -340,7 +353,8 @@
         "it": "Telefonare in anticipo.",
         "pt": "Liga antes.",
         "nl": "Bel vooraf.",
-        "pl": "Zadzwoń przed wizytą."
+        "pl": "Zadzwoń przed wizytą.",
+        "cs": "Před cestou zavolejte."
       }
     },
     {
@@ -362,7 +376,8 @@
         "it": "Lun–ven 9:00–13:00 e 15:00–19:00, sab 9:00–13:00; telefonare in anticipo.",
         "pt": "Segunda a sexta 9h00–13h00 e 15h00–19h00, sábado 9h00–13h00; liga antes.",
         "nl": "Ma–vr 9.00–13.00 en 15.00–19.00 uur, za 9.00–13.00 uur; bel vooraf.",
-        "pl": "Od poniedziałku do piątku 9:00–13:00 i 15:00–19:00, w sobotę 9:00–13:00; zadzwoń przed wizytą."
+        "pl": "Od poniedziałku do piątku 9:00–13:00 i 15:00–19:00, w sobotę 9:00–13:00; zadzwoń przed wizytą.",
+        "cs": "Po–Pá 9:00–13:00 a 15:00–19:00, so 9:00–13:00; před cestou zavolejte."
       }
     },
     {
@@ -383,7 +398,8 @@
         "it": "Servizio comunale di pronto soccorso 24 ore su 24 per animali feriti su strada pubblica e per animali selvatici o esotici; non è una clinica generica. WhatsApp 099 019 500 tutti i giorni 6:00–24:00.",
         "pt": "Serviço municipal de urgências 24 horas por dia para animais feridos na via pública e animais selvagens ou exóticos; não é uma clínica geral. WhatsApp 099 019 500 todos os dias 6h00–24h00.",
         "nl": "Gemeentelijke spoeddienst, 24 uur per dag, voor dieren die gewond zijn geraakt op de openbare weg en voor wilde of exotische dieren; geen reguliere dierenkliniek. WhatsApp 099 019 500 dagelijks 6.00–24.00 uur.",
-        "pl": "Miejskie całodobowe pogotowie dla zwierząt rannych na drogach publicznych oraz dla zwierząt dzikich i egzotycznych; to nie jest przychodnia ogólna. WhatsApp 099 019 500 codziennie 6:00–24:00."
+        "pl": "Miejskie całodobowe pogotowie dla zwierząt rannych na drogach publicznych oraz dla zwierząt dzikich i egzotycznych; to nie jest przychodnia ogólna. WhatsApp 099 019 500 codziennie 6:00–24:00.",
+        "cs": "Městská nonstop pohotovostní služba pro zvířata zraněná na veřejných komunikacích a pro divoká nebo exotická zvířata; nejde o běžnou kliniku. WhatsApp 099 019 500 denně 6:00–24:00."
       }
     },
     {
@@ -405,7 +421,8 @@
         "it": "Pronto soccorso 24 ore su 24; visite diurne fino alle 20:00 da lunedì a sabato.",
         "pt": "Urgências 24 horas por dia; consultas diurnas até às 20h00, de segunda a sábado.",
         "nl": "Spoedeisende hulp 24 uur per dag; ma–za consulten overdag tot 20.00 uur.",
-        "pl": "Opieka w nagłych przypadkach całą dobę; konsultacje w ciągu dnia do 20:00 od poniedziałku do soboty."
+        "pl": "Opieka w nagłych przypadkach całą dobę; konsultacje w ciągu dnia do 20:00 od poniedziałku do soboty.",
+        "cs": "Pohotovostní péče nonstop; denní konzultace Po–So do 20:00."
       }
     }
   ],

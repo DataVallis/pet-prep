@@ -54,7 +54,8 @@
         "it": "Aperto 24 ore su 24, tutti i giorni, per emergenze e terapia intensiva. Telefonare in anticipo durante il tragitto.",
         "pt": "Aberto 24 horas por dia para urgências e cuidados intensivos. Liga durante o trajeto.",
         "nl": "Dagelijks 24 uur geopend voor spoed en intensieve zorg. Bel onderweg vooraf.",
-        "pl": "Czynne całodobowo, codziennie, w nagłych przypadkach i intensywnej terapii. Zadzwoń po drodze."
+        "pl": "Czynne całodobowo, codziennie, w nagłych przypadkach i intensywnej terapii. Zadzwoń po drodze.",
+        "cs": "Otevřeno denně nonstop pro pohotovosti a intenzivní péči. Během cesty zavolejte."
       },
       "small_animals": true,
       "url": "https://www.veshospital.com.sg/",
@@ -77,7 +78,8 @@
         "it": "Clinica veterinaria di pronto soccorso aperta 24 ore su 24. Telefonare in anticipo.",
         "pt": "Clínica veterinária de urgência 24 horas. Liga antes.",
         "nl": "24-uurs spoeddierenkliniek. Bel vooraf.",
-        "pl": "Całodobowa przychodnia weterynaryjna dla nagłych przypadków. Zadzwoń przed wizytą."
+        "pl": "Całodobowa przychodnia weterynaryjna dla nagłych przypadków. Zadzwoń przed wizytą.",
+        "cs": "Veterinární pohotovostní klinika nonstop. Před cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://www.westsideemergency.com.sg/",
@@ -100,7 +102,8 @@
         "it": "Reparto di pronto soccorso e terapia intensiva aperto 24 ore su 24.",
         "pt": "Serviço de urgências e cuidados intensivos aberto 24 horas por dia.",
         "nl": "Afdeling voor spoed en intensieve zorg, 24 uur per dag open.",
-        "pl": "Oddział nagłych przypadków i intensywnej terapii czynny 24 godziny na dobę."
+        "pl": "Oddział nagłych przypadków i intensywnej terapii czynny 24 godziny na dobę.",
+        "cs": "Oddělení pohotovosti a intenzivní péče otevřeno nonstop."
       },
       "small_animals": true,
       "url": "https://www.beecroft.com.sg/",
@@ -123,7 +126,8 @@
         "it": "Assistenza 24 ore su 24, inclusi pronto soccorso e terapia intensiva.",
         "pt": "Atendimento 24 horas por dia, incluindo urgências e cuidados intensivos.",
         "nl": "Zorg 24 uur per dag, ook voor spoed en intensieve zorg.",
-        "pl": "Oferuje opiekę 24 godziny na dobę, w tym pomoc w nagłych przypadkach i intensywną terapię."
+        "pl": "Oferuje opiekę 24 godziny na dobę, w tym pomoc w nagłych przypadkach i intensywną terapię.",
+        "cs": "Péče nonstop, včetně pohotovosti a intenzivní péče."
       },
       "small_animals": true,
       "url": "https://www.advancedvetcare.sg/",
@@ -146,7 +150,8 @@
         "it": "Aperto 24 ore su 24; clinica diurna più clinica notturna.",
         "pt": "Aberto 24 horas; clínica de dia e clínica noturna.",
         "nl": "24 uur per dag open; dagkliniek plus nachtkliniek.",
-        "pl": "Czynne całodobowo; przychodnia dzienna i nocna."
+        "pl": "Czynne całodobowo; przychodnia dzienna i nocna.",
+        "cs": "Otevřeno nonstop; denní a noční klinika."
       },
       "small_animals": true,
       "url": "http://www.comvet.com/",
@@ -169,7 +174,8 @@
         "it": "Servizio di pronto soccorso (Pet A&E); telefonare in anticipo per gli orari attuali.",
         "pt": "Serviço de urgência (Pet A&E); liga antes para saberes o horário atual.",
         "nl": "Spoeddienst (Pet A&E); bel vooraf voor de actuele openingstijden.",
-        "pl": "Pomoc w nagłych przypadkach (Pet A&E); zadzwoń i zapytaj o aktualne godziny."
+        "pl": "Pomoc w nagłych przypadkach (Pet A&E); zadzwoń i zapytaj o aktualne godziny.",
+        "cs": "Pohotovostní služba (Pet A&E); aktuální provozní dobu zjistíte telefonicky."
       },
       "small_animals": true,
       "url": "http://www.lvs.com.sg/",
@@ -192,7 +198,8 @@
         "it": "Ospedale di riferimento e specialistico; telefonare in anticipo.",
         "pt": "Hospital veterinário de referência e especialidade; liga antes.",
         "nl": "Dierenziekenhuis voor verwijzingen en specialistische zorg; bel vooraf.",
-        "pl": "Szpital referencyjny i specjalistyczny; zadzwoń przed wizytą."
+        "pl": "Szpital referencyjny i specjalistyczny; zadzwoń przed wizytą.",
+        "cs": "Specializovaná a odkazová nemocnice; před cestou zavolejte."
       },
       "small_animals": true,
       "url": "https://www.awrc.sg/",
@@ -215,7 +222,8 @@
         "it": "Telefonare per orari di apertura e modalità di emergenza.",
         "pt": "Liga para saberes o horário e as regime de urgência.",
         "nl": "Bel voor openingstijden en de regeling voor spoed.",
-        "pl": "Zadzwoń i zapytaj o godziny pracy oraz zasady pomocy w nagłych przypadkach."
+        "pl": "Zadzwoń i zapytaj o godziny pracy oraz zasady pomocy w nagłych przypadkach.",
+        "cs": "Otevírací dobu a pohotovostní režim zjistíte telefonicky."
       },
       "small_animals": true,
       "url": "http://www.mountpleasant.com.sg/",
@@ -238,7 +246,8 @@
         "it": "Telefonare per gli orari di apertura.",
         "pt": "Liga para saberes o horário.",
         "nl": "Bel voor openingstijden.",
-        "pl": "Zadzwoń, by poznać godziny otwarcia."
+        "pl": "Zadzwoń, by poznać godziny otwarcia.",
+        "cs": "Otevírací dobu zjistíte telefonicky."
       },
       "small_animals": true,
       "url": "http://jtvet.com",
@@ -261,7 +270,8 @@
         "it": "Telefonare per gli orari di apertura.",
         "pt": "Liga para saberes o horário.",
         "nl": "Bel voor openingstijden.",
-        "pl": "Zadzwoń, by poznać godziny otwarcia."
+        "pl": "Zadzwoń, by poznać godziny otwarcia.",
+        "cs": "Otevírací dobu zjistíte telefonicky."
       },
       "small_animals": true,
       "url": "https://www.unitedvetclinic.com/",
@@ -284,7 +294,8 @@
         "it": "Telefonare per gli orari di apertura.",
         "pt": "Liga para saberes o horário.",
         "nl": "Bel voor openingstijden.",
-        "pl": "Zadzwoń, by poznać godziny otwarcia."
+        "pl": "Zadzwoń, by poznać godziny otwarcia.",
+        "cs": "Otevírací dobu zjistíte telefonicky."
       },
       "small_animals": true,
       "url": "http://ambervet.com",
@@ -307,7 +318,8 @@
         "it": "Telefonare per gli orari di apertura.",
         "pt": "Liga para saberes o horário.",
         "nl": "Bel voor openingstijden.",
-        "pl": "Zadzwoń, by poznać godziny otwarcia."
+        "pl": "Zadzwoń, by poznać godziny otwarcia.",
+        "cs": "Otevírací dobu zjistíte telefonicky."
       },
       "small_animals": true,
       "url": "http://vetsforlife.com.sg",
@@ -330,7 +342,8 @@
         "it": "Telefonare per gli orari di apertura.",
         "pt": "Liga para saberes o horário.",
         "nl": "Bel voor openingstijden.",
-        "pl": "Zadzwoń, by poznać godziny otwarcia."
+        "pl": "Zadzwoń, by poznać godziny otwarcia.",
+        "cs": "Otevírací dobu zjistíte telefonicky."
       },
       "small_animals": true,
       "url": "http://vetsforlife.com.sg",
@@ -353,7 +366,8 @@
         "it": "Telefonare per gli orari di apertura.",
         "pt": "Liga para saberes o horário.",
         "nl": "Bel voor openingstijden.",
-        "pl": "Zadzwoń, by poznać godziny otwarcia."
+        "pl": "Zadzwoń, by poznać godziny otwarcia.",
+        "cs": "Otevírací dobu zjistíte telefonicky."
       },
       "small_animals": true,
       "url": "http://vetclinic.sg",
@@ -376,7 +390,8 @@
         "it": "Telefonare per gli orari di apertura. L'assistenza di emergenza fuori orario è riservata ai pazienti già in cura.",
         "pt": "Liga para saberes o horário. A ajuda de urgência fora de horas é só para pacientes já registados.",
         "nl": "Bel voor openingstijden. Spoedhulp buiten openingstijden alleen voor bestaande patiënten.",
-        "pl": "Zadzwoń i zapytaj o godziny pracy. Pomoc w nagłych przypadkach po godzinach pracy tylko dla dotychczasowych pacjentów."
+        "pl": "Zadzwoń i zapytaj o godziny pracy. Pomoc w nagłych przypadkach po godzinach pracy tylko dla dotychczasowych pacjentów.",
+        "cs": "Otevírací dobu zjistíte telefonicky. Pohotovostní pomoc mimo ordinační dobu pouze pro stávající pacienty."
       },
       "small_animals": true,
       "url": "http://thevisitingvets.com.sg",
@@ -398,7 +413,8 @@
         "it": "Telefonare o consultare il sito web per gli orari di apertura.",
         "pt": "Liga ou consulta o site para saberes o horário.",
         "nl": "Bel of kijk op de website voor openingstijden.",
-        "pl": "Zadzwoń lub sprawdź godziny pracy na stronie internetowej."
+        "pl": "Zadzwoń lub sprawdź godziny pracy na stronie internetowej.",
+        "cs": "Otevírací dobu zjistíte telefonicky nebo na webu."
       },
       "small_animals": true,
       "url": "https://www.apexvetclinic.com/",
@@ -420,7 +436,8 @@
         "it": "Consultare il sito web per gli orari di apertura.",
         "pt": "Consulta o site para saberes o horário.",
         "nl": "Kijk op de website voor openingstijden.",
-        "pl": "Sprawdź godziny pracy na stronie internetowej."
+        "pl": "Sprawdź godziny pracy na stronie internetowej.",
+        "cs": "Otevírací dobu najdete na webu."
       },
       "small_animals": true,
       "url": "https://petsavenue.com.sg/",
@@ -442,7 +459,8 @@
         "it": "Consultare il sito web per gli orari di apertura.",
         "pt": "Consulta o site para saberes o horário.",
         "nl": "Kijk op de website voor openingstijden.",
-        "pl": "Sprawdź godziny pracy na stronie internetowej."
+        "pl": "Sprawdź godziny pracy na stronie internetowej.",
+        "cs": "Otevírací dobu najdete na webu."
       },
       "small_animals": true,
       "url": "http://starsveterinaryclinic.com/our-facilities/",
@@ -465,7 +483,8 @@
         "it": "Ogni giorno 10:00–14:00 e 15:00–19:00, solo su appuntamento. Chiuso nei festivi.",
         "pt": "Todos os dias 10h00–14h00 e 15h00–19h00, só sob marcação. Fechado nos feriados.",
         "nl": "Dagelijks 10.00–14.00 en 15.00–19.00 uur, alleen op afspraak. Gesloten op feestdagen.",
-        "pl": "Codziennie 10:00–14:00 i 15:00–19:00, tylko po wcześniejszym umówieniu. W dni ustawowo wolne od pracy zamknięte."
+        "pl": "Codziennie 10:00–14:00 i 15:00–19:00, tylko po wcześniejszym umówieniu. W dni ustawowo wolne od pracy zamknięte.",
+        "cs": "Denně 10:00–14:00 a 15:00–19:00, pouze na objednání. O státních svátcích zavřeno."
       },
       "small_animals": true,
       "url": "https://brightonvetcare.com/pages/serangoon-gardens",
@@ -488,7 +507,8 @@
         "it": "Ogni giorno 10:00–14:00 e 15:00–19:00, solo su appuntamento. Chiuso nei festivi.",
         "pt": "Todos os dias 10h00–14h00 e 15h00–19h00, só sob marcação. Fechado nos feriados.",
         "nl": "Dagelijks 10.00–14.00 en 15.00–19.00 uur, alleen op afspraak. Gesloten op feestdagen.",
-        "pl": "Codziennie 10:00–14:00 i 15:00–19:00, tylko po wcześniejszym umówieniu. W dni ustawowo wolne od pracy zamknięte."
+        "pl": "Codziennie 10:00–14:00 i 15:00–19:00, tylko po wcześniejszym umówieniu. W dni ustawowo wolne od pracy zamknięte.",
+        "cs": "Denně 10:00–14:00 a 15:00–19:00, pouze na objednání. O státních svátcích zavřeno."
       },
       "small_animals": true,
       "url": "https://www.brightonvetcare.com/contact",
@@ -511,7 +531,8 @@
         "it": "Lun–ven 10:00–15:00 e 16:00–21:00; sab–dom 10:00–15:00; solo su appuntamento. Chiuso nei festivi.",
         "pt": "Seg–sex 10h00–15h00 e 16h00–21h00; sáb–dom 10h00–15h00; só sob marcação. Fechado nos feriados.",
         "nl": "Ma–vr 10.00–15.00 en 16.00–21.00 uur; za–zo 10.00–15.00 uur; alleen op afspraak. Gesloten op feestdagen.",
-        "pl": "Pon.–pt. 10:00–15:00 i 16:00–21:00; sob.–niedz. 10:00–15:00; tylko po wcześniejszym umówieniu. W dni ustawowo wolne od pracy zamknięte."
+        "pl": "Pon.–pt. 10:00–15:00 i 16:00–21:00; sob.–niedz. 10:00–15:00; tylko po wcześniejszym umówieniu. W dni ustawowo wolne od pracy zamknięte.",
+        "cs": "Po–Pá 10:00–15:00 a 16:00–21:00; so–ne 10:00–15:00; pouze na objednání. O státních svátcích zavřeno."
       },
       "small_animals": true,
       "url": "https://www.brightonvetcare.com/contact",

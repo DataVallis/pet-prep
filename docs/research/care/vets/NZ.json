@@ -65,7 +65,8 @@
         "it": "Aperto 24 ore su 24 dalle 8:00 del lunedì alle 8:00 del sabato. Il pronto soccorso del fine settimana (dalle 8:00 del sabato alle 8:00 del lunedì) è riservato ai clienti di Community Practice; gli altri sono indirizzati a Totally Vets Fielding, +64 6 324 0812. Tariffa della visita da pagare all'arrivo; acconto del 50% se l'animale viene ricoverato.",
         "pt": "Aberto 24 horas de segunda-feira às 8h00 a sábado às 8h00. As urgências de fim de semana (sábado às 8h00 a segunda-feira às 8h00) destinam-se apenas a clientes da Community Practice; os restantes são encaminhados para o Totally Vets Fielding, +64 6 324 0812. Consulta paga à chegada; depósito de 50 % se o animal ficar internado.",
         "nl": "Van maandag 8.00 uur tot zaterdag 8.00 uur 24 uur per dag geopend. Spoedzorg in het weekend (zaterdag 8.00 uur tot maandag 8.00 uur) is alleen voor klanten van Community Practice; andere bellers worden doorverwezen naar Totally Vets Fielding, +64 6 324 0812. Consulttarief bij aankomst; 50% aanbetaling als het huisdier wordt opgenomen.",
-        "pl": "Czynne całodobowo od poniedziałku 8:00 do soboty 8:00. Pomoc w nagłych przypadkach w weekend (od soboty 8:00 do poniedziałku 8:00) tylko dla klientów Community Practice; inni dzwoniący w weekend są kierowani do Totally Vets Fielding, +64 6 324 0812. Opłata za konsultację przy wizycie; 50% zaliczki, jeśli zwierzę zostaje w szpitalu."
+        "pl": "Czynne całodobowo od poniedziałku 8:00 do soboty 8:00. Pomoc w nagłych przypadkach w weekend (od soboty 8:00 do poniedziałku 8:00) tylko dla klientów Community Practice; inni dzwoniący w weekend są kierowani do Totally Vets Fielding, +64 6 324 0812. Opłata za konsultację przy wizycie; 50% zaliczki, jeśli zwierzę zostaje w szpitalu.",
+        "cs": "Otevřeno nonstop od pondělí 8:00 do soboty 8:00. Víkendová pohotovostní péče (sobota 8:00 až pondělí 8:00) je pouze pro klienty Community Practice; ostatní volající jsou odkázáni na Totally Vets Fielding, +64 6 324 0812. Poplatek za konzultaci se hradí při příchodu; 50% záloha při hospitalizaci zvířete."
       }
     },
     {
@@ -89,7 +90,8 @@
         "it": "Veterinari per incidenti e pronto soccorso 24 ore su 24. Accesso senza appuntamento; si consiglia di telefonare prima.",
         "pt": "Urgências veterinárias 24 horas por dia. Atendimento sem marcação; recomenda-se ligar antes.",
         "nl": "Spoeddierenartsen 24 uur per dag. Zonder afspraak welkom; vooraf bellen wordt aangeraden.",
-        "pl": "Pogotowie weterynaryjne całodobowo. Przyjęcia bez umawiania wizyty; zalecany wcześniejszy telefon."
+        "pl": "Pogotowie weterynaryjne całodobowo. Przyjęcia bez umawiania wizyty; zalecany wcześniejszy telefon.",
+        "cs": "Pohotovostní veterináři nonstop. Přijímají se i pacienti bez objednání; doporučuje se předem zavolat."
       }
     },
     {
@@ -113,7 +115,8 @@
         "it": "Pronto soccorso veterinario aperto 24 ore su 24.",
         "pt": "Urgências veterinárias 24 horas por dia.",
         "nl": "Spoeddierenartsen 24 uur per dag.",
-        "pl": "Pogotowie weterynaryjne całodobowo."
+        "pl": "Pogotowie weterynaryjne całodobowo.",
+        "cs": "Pohotovostní veterináři nonstop."
       }
     },
     {
@@ -137,7 +140,8 @@
         "it": "Clinica per emergenze fuori orario. Telefonare prima di andare.",
         "pt": "Clínica de urgências fora de horas. Liga antes de ir.",
         "nl": "Spoedkliniek buiten kantooruren. Bel voordat je komt.",
-        "pl": "Pogotowie weterynaryjne po godzinach pracy. Zadzwoń przed przyjazdem."
+        "pl": "Pogotowie weterynaryjne po godzinach pracy. Zadzwoń przed przyjazdem.",
+        "cs": "Pohotovostní klinika mimo ordinační dobu. Před cestou zavolejte."
       }
     },
     {
@@ -161,7 +165,8 @@
         "it": "Clinica per emergenze fuori orario. Telefonare prima di andare.",
         "pt": "Clínica de urgências fora de horas. Liga antes de ir.",
         "nl": "Spoedkliniek buiten kantooruren. Bel voordat je komt.",
-        "pl": "Pogotowie weterynaryjne po godzinach pracy. Zadzwoń przed przyjazdem."
+        "pl": "Pogotowie weterynaryjne po godzinach pracy. Zadzwoń przed przyjazdem.",
+        "cs": "Pohotovostní klinika mimo ordinační dobu. Před cestou zavolejte."
       }
     },
     {
@@ -185,7 +190,8 @@
         "it": "Clinica per emergenze fuori orario, non aperta 24 ore su 24: giorni feriali dalle 18:00 alle 8:00; weekend dalle 12:00 del sabato alle 8:00 del lunedì.",
         "pt": "Clínica de urgências fora de horas, não aberta 24 horas: dias úteis das 18h00 às 8h00; fins de semana de sábado às 12h00 a segunda-feira às 8h00.",
         "nl": "Spoedkliniek buiten kantooruren, niet 24 uur per dag geopend: op werkdagen 18.00–8.00 uur; in het weekend van za 12.00 uur tot ma 8.00 uur.",
-        "pl": "Pogotowie weterynaryjne po godzinach pracy, nie jest czynne całodobowo: w dni robocze od 18:00 do 8:00; w weekendy od soboty w południe do poniedziałku 8:00."
+        "pl": "Pogotowie weterynaryjne po godzinach pracy, nie jest czynne całodobowo: w dni robocze od 18:00 do 8:00; w weekendy od soboty w południe do poniedziałku 8:00.",
+        "cs": "Pohotovostní klinika mimo ordinační dobu, nikoli nonstop: v pracovní dny od 18:00 do 8:00; o víkendech od soboty v poledne do pondělí 8:00."
       }
     },
     {
@@ -209,7 +215,8 @@
         "it": "Ospedale specialistico di riferimento e pronto soccorso. Orari lun–ven 8:00–18:00; telefonare per informazioni sulle emergenze.",
         "pt": "Hospital de referência especializado e de urgências. Horário: segunda a sexta 8h00–18h00; liga para saber das urgências.",
         "nl": "Gespecialiseerd verwijs- en spoedziekenhuis. Kantooruren ma–vr 8.00–18.00 uur; bel voor informatie over spoedzorg.",
-        "pl": "Specjalistyczny szpital referencyjny i dla nagłych przypadków. Godziny pracy pon.–pt. 8:00–18:00; zadzwoń i zapytaj o pomoc w nagłych przypadkach."
+        "pl": "Specjalistyczny szpital referencyjny i dla nagłych przypadków. Godziny pracy pon.–pt. 8:00–18:00; zadzwoń i zapytaj o pomoc w nagłych przypadkach.",
+        "cs": "Odborná a pohotovostní nemocnice. Provozní doba Po–Pá 8:00–18:00; ohledně pohotovostní péče zavolejte."
       }
     },
     {
@@ -233,7 +240,8 @@
         "it": "Clinica regionale per emergenze fuori orario di Wellington. Telefonare prima, così il personale vi aspetta.",
         "pt": "Clínica regional de urgências fora de horas para Wellington. Liga primeiro para que a equipa te aguarde.",
         "nl": "Regionale spoedkliniek buiten kantooruren voor Wellington. Bel eerst, zodat het personeel je verwacht.",
-        "pl": "Regionalne pogotowie weterynaryjne po godzinach pracy dla Wellington. Najpierw zadzwoń, aby personel wiedział, że przyjedziesz."
+        "pl": "Regionalne pogotowie weterynaryjne po godzinach pracy dla Wellington. Najpierw zadzwoń, aby personel wiedział, że przyjedziesz.",
+        "cs": "Regionální pohotovostní klinika mimo ordinační dobu pro Wellington. Nejprve zavolejte, aby vás personál očekával."
       }
     },
     {
@@ -256,7 +264,8 @@
         "it": "Lun–ven 7:30–19:00, sab 9:00–16:00, chiuso la domenica e i festivi. Fuori orario le emergenze vanno alla Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "pt": "Segunda a sexta 7h30–19h00, sábado 9h00–16h00, fechado ao domingo e feriados. Fora de horas, as urgências são encaminhadas para a Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "nl": "Ma–vr 7.30–19.00 uur, za 9.00–16.00 uur, zondag en feestdagen gesloten. Buiten kantooruren gaan spoedgevallen naar Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "pl": "Pon.–pt. 7:30–19:00, sob. 9:00–16:00, w niedziele i święta nieczynne. Po godzinach pracy nagłe przypadki przyjmuje Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "pl": "Pon.–pt. 7:30–19:00, sob. 9:00–16:00, w niedziele i święta nieczynne. Po godzinach pracy nagłe przypadki przyjmuje Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "cs": "Po–Pá 7:30–19:00, So 9:00–16:00, v neděli a o státních svátcích zavřeno. Mimo ordinační dobu pohotovosti řeší Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -280,7 +289,8 @@
         "it": "Clinica per emergenze fuori orario: lun–gio 19:00–8:00; da ven 19:00 a lun 8:00; aperta in tutti i festivi. Non aperta 24 ore su 24 nei giorni feriali.",
         "pt": "Clínica de urgências fora de horas: segunda a quinta 19h00–8h00; sexta 19h00 a segunda 8h00; aberta em todos os feriados. Não está aberta 24 horas nos dias úteis.",
         "nl": "Spoedkliniek buiten kantooruren: ma–do 19.00–8.00 uur; vr 19.00 uur tot ma 8.00 uur; open op alle feestdagen. Op werkdagen niet 24 uur per dag geopend.",
-        "pl": "Pogotowie weterynaryjne po godzinach pracy: pon.–czw. 19:00–8:00; pt. od 19:00 do pon. 8:00; czynne we wszystkie święta. W dni robocze nie jest czynne całodobowo."
+        "pl": "Pogotowie weterynaryjne po godzinach pracy: pon.–czw. 19:00–8:00; pt. od 19:00 do pon. 8:00; czynne we wszystkie święta. W dni robocze nie jest czynne całodobowo.",
+        "cs": "Pohotovostní klinika mimo ordinační dobu: Po–Čt 19:00–8:00; Pá 19:00 až Po 8:00; otevřeno všechny státní svátky. V pracovní dny není otevřeno nonstop."
       }
     },
     {
@@ -303,7 +313,8 @@
         "it": "Lun–ven 8:00–19:00, sab 8:00–14:00, chiuso la domenica. Fuori orario chiamare la Christchurch Afterhours Veterinary Clinic, +64 3 366 1052.",
         "pt": "Segunda a sexta 8h00–19h00, sábado 8h00–14h00, fechado ao domingo. Fora de horas, liga para a Christchurch Afterhours Veterinary Clinic, +64 3 366 1052.",
         "nl": "Ma–vr 8.00–19.00 uur, za 8.00–14.00 uur, zondag gesloten. Bel buiten kantooruren Christchurch Afterhours Veterinary Clinic, +64 3 366 1052.",
-        "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–14:00, w niedzielę nieczynne. Po godzinach pracy zadzwoń do Christchurch Afterhours Veterinary Clinic, +64 3 366 1052."
+        "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–14:00, w niedzielę nieczynne. Po godzinach pracy zadzwoń do Christchurch Afterhours Veterinary Clinic, +64 3 366 1052.",
+        "cs": "Po–Pá 8:00–19:00, So 8:00–14:00, v neděli zavřeno. Mimo ordinační dobu volejte Christchurch Afterhours Veterinary Clinic, +64 3 366 1052."
       }
     },
     {
@@ -327,7 +338,8 @@
         "it": "Per le modalità fuori orario vedere la pagina «After Hours» della clinica.",
         "pt": "Consulta a página After Hours da clínica para saber o que está previsto fora de horas.",
         "nl": "Zie de pagina 'After Hours' van de kliniek voor de regeling buiten kantooruren.",
-        "pl": "Ustalenia dotyczące czasu poza godzinami pracy znajdziesz na stronie przychodni (After Hours)."
+        "pl": "Ustalenia dotyczące czasu poza godzinami pracy znajdziesz na stronie przychodni (After Hours).",
+        "cs": "Informace o službách mimo ordinační dobu najdete na stránce kliniky After Hours."
       }
     },
     {
@@ -351,7 +363,8 @@
         "it": "Lun, mar, gio, ven 8:00–17:30; mer 8:00–20:00; sab 9:00–13:00. Servizio di guardia 24 ore su 24 per piccoli animali: chiamare il numero della clinica.",
         "pt": "Segunda, terça, quinta e sexta 8h00–17h30; quarta 8h00–20h00; sábado 9h00–13h00. Serviço de urgências 24 horas para animais de pequeno porte: liga para o número da clínica.",
         "nl": "Ma, di, do, vr 8.00–17.30 uur; wo 8.00–20.00 uur; za 9.00–13.00 uur. 24-uurs bereikbaarheidsdienst voor kleine huisdieren: bel het nummer van de kliniek.",
-        "pl": "Pon., wt., czw., pt. 8:00–17:30; śr. 8:00–20:00; sob. 9:00–13:00. Całodobowy dyżur dla małych zwierząt: zadzwoń pod numer przychodni."
+        "pl": "Pon., wt., czw., pt. 8:00–17:30; śr. 8:00–20:00; sob. 9:00–13:00. Całodobowy dyżur dla małych zwierząt: zadzwoń pod numer przychodni.",
+        "cs": "Po, Út, Čt, Pá 8:00–17:30; St 8:00–20:00; So 9:00–13:00. Nonstop pohotovostní služba pro malá zvířata: volejte na číslo kliniky."
       }
     },
     {
@@ -375,7 +388,8 @@
         "it": "Lun–ven 8:30–17:30, sab 9:00–13:00, chiuso la domenica; gli orari possono variare nei festivi. In caso di emergenza chiamare per ricevere consigli.",
         "pt": "Segunda a sexta 8h30–17h30, sábado 9h00–13h00, fechado ao domingo; o horário pode variar nos feriados. Em caso de urgência, liga para pedir aconselhamento.",
         "nl": "Ma–vr 8.30–17.30 uur, za 9.00–13.00 uur, zondag gesloten; op feestdagen kunnen de tijden afwijken. Bel voor advies bij spoed.",
-        "pl": "Pon.–pt. 8:30–17:30, sob. 9:00–13:00, w niedzielę nieczynne; w święta godziny mogą się różnić. W nagłych przypadkach zadzwoń po poradę."
+        "pl": "Pon.–pt. 8:30–17:30, sob. 9:00–13:00, w niedzielę nieczynne; w święta godziny mogą się różnić. W nagłych przypadkach zadzwoń po poradę.",
+        "cs": "Po–Pá 8:30–17:30, So 9:00–13:00, v neděli zavřeno; o státních svátcích se hodiny mohou lišit. V případě pohotovosti zavolejte, poradí vám."
       }
     },
     {
@@ -398,7 +412,8 @@
         "it": "Lun–ven 8:00–18:00, sab 9:00–14:00, chiuso la domenica. Emergenze fuori orario: vedere il localizzatore delle cliniche sul sito.",
         "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–14h00, fechado ao domingo. Urgências fora de horas: consulta o localizador de clínicas no site.",
         "nl": "Ma–vr 8.00–18.00 uur, za 9.00–14.00 uur, zondag gesloten. Spoed buiten kantooruren: zie de klinieklocator op de website.",
-        "pl": "Pon.–pt. 8:00–18:00, sob. 9:00–14:00, w niedzielę nieczynne. Nagłe przypadki po godzinach pracy: zobacz wyszukiwarkę przychodni na stronie."
+        "pl": "Pon.–pt. 8:00–18:00, sob. 9:00–14:00, w niedzielę nieczynne. Nagłe przypadki po godzinach pracy: zobacz wyszukiwarkę przychodni na stronie.",
+        "cs": "Po–Pá 8:00–18:00, So 9:00–14:00, v neděli zavřeno. Pohotovosti mimo ordinační dobu: viz vyhledávač klinik na webu."
       }
     },
     {
@@ -421,7 +436,8 @@
         "it": "Linea di consulenza sugli avvelenamenti per proprietari di animali e cliniche veterinarie della Nuova Zelanda. A pagamento. Per un animale avvelenato chiamare anche il proprio veterinario; il National Poisons Centre per le persone indirizza qui i casi animali.",
         "pt": "Linha de aconselhamento toxicológico para donos de animais de estimação e clínicas veterinárias da Nova Zelândia. Serviço pago. Em caso de envenenamento, liga também ao teu veterinário; o National Poisons Centre, para pessoas, encaminha para aqui os casos com animais.",
         "nl": "Adviesnummer bij vergiftiging voor huisdiereigenaren en dierenklinieken in Nieuw-Zeeland. Er worden kosten in rekening gebracht. Bel bij een vergiftigd dier ook je dierenarts; het Nationaal Gifinformatiecentrum voor mensen verwijst gevallen met dieren hierheen.",
-        "pl": "Telefon porad w sprawie zatruć dla właścicieli zwierząt i przychodni weterynaryjnych w Nowej Zelandii. Połączenie płatne. Gdy zwierzę zostało zatrute, zadzwoń też do swojego weterynarza; ludzkie National Poisons Centre kieruje przypadki zwierząt tutaj."
+        "pl": "Telefon porad w sprawie zatruć dla właścicieli zwierząt i przychodni weterynaryjnych w Nowej Zelandii. Połączenie płatne. Gdy zwierzę zostało zatrute, zadzwoń też do swojego weterynarza; ludzkie National Poisons Centre kieruje przypadki zwierząt tutaj.",
+        "cs": "Poradenská linka pro případy otrav pro majitele domácích zvířat a veterinární kliniky na Novém Zélandu. Služba je zpoplatněna. U otráveného zvířete volejte také svého veterináře; lidské National Poisons Centre případy zvířat odkazuje sem."
       }
     },
     {
@@ -445,7 +461,8 @@
         "it": "Notti feriali dalle 18:00 alle 8:00 (da lunedì a venerdì); aperta 24 ore su 24 nel weekend. Telefonare prima di andare. Accoglie i casi fuori orario di tutte le cliniche dell'Hawke's Bay.",
         "pt": "De segunda a sexta, das 18h00 às 8h00; aberta 24 horas aos fins de semana. Liga antes de ir. Recebe casos fora de horas de todas as clínicas de Hawke's Bay.",
         "nl": "Doordeweekse avonden 18.00–8.00 uur (ma–vr); in het weekend 24 uur per dag geopend. Bel voordat je komt. Neemt spoedgevallen buiten kantooruren aan van alle klinieken in Hawke's Bay.",
-        "pl": "W dni robocze 18:00–8:00 (od poniedziałku do piątku); w weekendy czynne całodobowo. Zadzwoń przed przyjazdem. Przyjmuje przypadki po godzinach pracy ze wszystkich przychodni w Hawke's Bay."
+        "pl": "W dni robocze 18:00–8:00 (od poniedziałku do piątku); w weekendy czynne całodobowo. Zadzwoń przed przyjazdem. Przyjmuje przypadki po godzinach pracy ze wszystkich przychodni w Hawke's Bay.",
+        "cs": "V pracovní dny 18:00–8:00 (Po–Pá); o víkendech nonstop. Před cestou zavolejte. Přijímá pohotovostní případy ze všech klinik v Hawke's Bay."
       }
     },
     {
@@ -469,7 +486,8 @@
         "it": "Aperta nelle notti feriali 18:00–8:00; aperta 24 ore su 24 nel weekend e nei festivi (da venerdì 18:00 a lunedì 8:00). Telefonare prima di andare.",
         "pt": "Aberta nas noites de dias úteis, das 18h00 às 8h00; aberta 24 horas aos fins de semana e feriados (sexta 18h00 a segunda 8h00). Liga antes de ir.",
         "nl": "Doordeweekse avonden 18.00–8.00 uur geopend; in het weekend en op feestdagen 24 uur per dag (vr 18.00 uur tot ma 8.00 uur). Bel voordat je komt.",
-        "pl": "Czynne w dni robocze 18:00–8:00; w weekendy i święta całodobowo (od piątku 18:00 do poniedziałku 8:00). Zadzwoń przed przyjazdem."
+        "pl": "Czynne w dni robocze 18:00–8:00; w weekendy i święta całodobowo (od piątku 18:00 do poniedziałku 8:00). Zadzwoń przed przyjazdem.",
+        "cs": "V pracovní dny otevřeno 18:00–8:00; o víkendech a státních svátcích nonstop (od Pá 18:00 do Po 8:00). Před cestou zavolejte."
       }
     },
     {
@@ -493,7 +511,8 @@
         "it": "Ospedale per emergenze fuori orario di Tauranga. Telefonare prima di andare.",
         "pt": "Hospital de urgências fora de horas para Tauranga. Liga antes de ir.",
         "nl": "Spoedziekenhuis buiten kantooruren voor Tauranga. Bel voordat je komt.",
-        "pl": "Pogotowie weterynaryjne po godzinach pracy dla Tauranga. Zadzwoń przed przyjazdem."
+        "pl": "Pogotowie weterynaryjne po godzinach pracy dla Tauranga. Zadzwoń przed przyjazdem.",
+        "cs": "Pohotovostní nemocnice mimo ordinační dobu pro Tauranga. Před cestou zavolejte."
       }
     },
     {
@@ -517,7 +536,8 @@
         "it": "Clinica per emergenze e terapia intensiva fuori orario sulla North Shore di Auckland. Telefonare prima di andare.",
         "pt": "Clínica de urgências e cuidados intensivos fora de horas em North Shore, Auckland. Liga antes de ir.",
         "nl": "Spoed- en intensivecarekliniek buiten kantooruren aan de North Shore van Auckland. Bel voordat je komt.",
-        "pl": "Pogotowie i intensywna terapia po godzinach pracy na North Shore w Auckland. Zadzwoń przed przyjazdem."
+        "pl": "Pogotowie i intensywna terapia po godzinach pracy na North Shore w Auckland. Zadzwoń przed przyjazdem.",
+        "cs": "Pohotovostní klinika a klinika intenzivní péče mimo ordinační dobu na North Shore v Aucklandu. Před cestou zavolejte."
       }
     },
     {
@@ -541,7 +561,8 @@
         "it": "Clinica per emergenze fuori orario nella zona ovest di Auckland. Telefonare prima di andare.",
         "pt": "Clínica de urgências fora de horas no oeste de Auckland. Liga antes de ir.",
         "nl": "Spoedkliniek buiten kantooruren in West-Auckland. Bel voordat je komt.",
-        "pl": "Pogotowie weterynaryjne po godzinach pracy w zachodnim Auckland. Zadzwoń przed przyjazdem."
+        "pl": "Pogotowie weterynaryjne po godzinach pracy w zachodnim Auckland. Zadzwoń przed przyjazdem.",
+        "cs": "Pohotovostní klinika mimo ordinační dobu v západním Aucklandu. Před cestou zavolejte."
       }
     },
     {
@@ -565,7 +586,8 @@
         "it": "Lun–ven 8:00–18:00, sab 8:30–16:00, chiuso la domenica e i festivi. Fuori orario chiamare il numero della clinica per il contatto di turno.",
         "pt": "Segunda a sexta 8h00–18h00, sábado 8h30–16h00, fechado ao domingo e feriados. Fora de horas, liga para o número da clínica para obter o contacto de serviço.",
         "nl": "Ma–vr 8.00–18.00 uur, za 8.30–16.00 uur, zondag en feestdagen gesloten. Bel buiten kantooruren het nummer van de kliniek voor de dienstdoende contactpersoon.",
-        "pl": "Pon.–pt. 8:00–18:00, sob. 8:30–16:00, w niedziele i święta nieczynne. Po godzinach pracy zadzwoń pod numer przychodni, aby poznać kontakt do dyżuru."
+        "pl": "Pon.–pt. 8:00–18:00, sob. 8:30–16:00, w niedziele i święta nieczynne. Po godzinach pracy zadzwoń pod numer przychodni, aby poznać kontakt do dyżuru.",
+        "cs": "Po–Pá 8:00–18:00, So 8:30–16:00, v neděli a o státních svátcích zavřeno. Mimo ordinační dobu zavolejte na číslo kliniky pro kontakt na službu."
       }
     },
     {
@@ -589,7 +611,8 @@
         "it": "Lun–ven 8:00–17:00, sab 9:00–13:00, chiuso la domenica. Fuori orario chiamare il +64 7 872 2040 per parlare con un infermiere veterinario (consulenza telefonica gratuita 24 ore su 24, 7 giorni su 7) che può organizzare le cure d'urgenza.",
         "pt": "Segunda a sexta 8h00–17h00, sábado 9h00–13h00, fechado ao domingo. Fora de horas, liga para +64 7 872 2040 para falar com um enfermeiro veterinário (aconselhamento telefónico gratuito, 24 h/24, 7 dias por semana), que pode organizar o atendimento de urgência.",
         "nl": "Ma–vr 8.00–17.00 uur, za 9.00–13.00 uur, zondag gesloten. Bel buiten kantooruren +64 7 872 2040 om een dierverpleegkundige te spreken (gratis telefonisch advies, 24/7); die kan spoedzorg regelen.",
-        "pl": "Pon.–pt. 8:00–17:00, sob. 9:00–13:00, w niedzielę nieczynne. Po godzinach pracy zadzwoń pod +64 7 872 2040, aby połączyć się z pielęgniarką weterynaryjną (bezpłatna porada telefoniczna 24/7), która może zorganizować pomoc w nagłych przypadkach."
+        "pl": "Pon.–pt. 8:00–17:00, sob. 9:00–13:00, w niedzielę nieczynne. Po godzinach pracy zadzwoń pod +64 7 872 2040, aby połączyć się z pielęgniarką weterynaryjną (bezpłatna porada telefoniczna 24/7), która może zorganizować pomoc w nagłych przypadkach.",
+        "cs": "Po–Pá 8:00–17:00, So 9:00–13:00, v neděli zavřeno. Mimo ordinační dobu volejte +64 7 872 2040 a spojíte se s veterinární sestrou (bezplatné telefonické poradenství nonstop), která zajistí pohotovostní péči."
       }
     },
     {
@@ -612,7 +635,8 @@
         "it": "Lun–ven 8:00–17:30, sab 9:00–13:00, chiuso la domenica. Per le emergenze fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "pt": "Segunda a sexta 8h00–17h30, sábado 9h00–13h00, fechado ao domingo. Em caso de urgência fora de horas, liga para a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "nl": "Ma–vr 8.00–17.30 uur, za 9.00–13.00 uur, zondag gesloten. Bel bij spoed buiten kantooruren Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "pl": "Pon.–pt. 8:00–17:30, sob. 9:00–13:00, w niedzielę nieczynne. W nagłych przypadkach po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "pl": "Pon.–pt. 8:00–17:30, sob. 9:00–13:00, w niedzielę nieczynne. W nagłych przypadkach po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "cs": "Po–Pá 8:00–17:30, So 9:00–13:00, v neděli zavřeno. Pohotovosti mimo ordinační dobu: volejte Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -635,7 +659,8 @@
         "it": "Lun–ven 8:00–17:00; sabato e domenica chiuso, tranne un sabato su due 9:00–12:00 (chiamare per conferma). Emergenze fuori orario: vedere il localizzatore delle cliniche sul sito.",
         "pt": "Segunda a sexta 8h00–17h00; sábado e domingo fechado, exceto de 15 em 15 dias ao sábado, 9h00–12h00 (liga para confirmar). Urgências fora de horas: consulta o localizador de clínicas no site.",
         "nl": "Ma–vr 8.00–17.00 uur; za en zo gesloten, behalve om de week op zaterdag 9.00–12.00 uur (bel ter bevestiging). Spoed buiten kantooruren: zie de klinieklocator op de website.",
-        "pl": "Pon.–pt. 8:00–17:00; w sobotę i niedzielę nieczynne, z wyjątkiem co drugiej soboty 9:00–12:00 (zadzwoń, aby potwierdzić). Nagłe przypadki po godzinach pracy: zobacz wyszukiwarkę przychodni na stronie."
+        "pl": "Pon.–pt. 8:00–17:00; w sobotę i niedzielę nieczynne, z wyjątkiem co drugiej soboty 9:00–12:00 (zadzwoń, aby potwierdzić). Nagłe przypadki po godzinach pracy: zobacz wyszukiwarkę przychodni na stronie.",
+        "cs": "Po–Pá 8:00–17:00; v sobotu a v neděli zavřeno, kromě každé druhé soboty 9:00–12:00 (ověřte telefonicky). Pohotovosti mimo ordinační dobu: viz vyhledávač klinik na webu."
       }
     },
     {
@@ -659,7 +684,8 @@
         "it": "Lun–ven 8:00–17:30, sab 9:00–12:00. Chiamare per le modalità fuori orario.",
         "pt": "Segunda a sexta 8h00–17h30, sábado 9h00–12h00. Liga para saber o que está previsto fora de horas.",
         "nl": "Ma–vr 8.00–17.30 uur, za 9.00–12.00 uur. Bel voor de regeling buiten kantooruren.",
-        "pl": "Pon.–pt. 8:00–17:30, sob. 9:00–12:00. Zadzwoń, aby poznać ustalenia dotyczące czasu poza godzinami pracy."
+        "pl": "Pon.–pt. 8:00–17:30, sob. 9:00–12:00. Zadzwoń, aby poznać ustalenia dotyczące czasu poza godzinami pracy.",
+        "cs": "Po–Pá 8:00–17:30, So 9:00–12:00. Ohledně péče mimo ordinační dobu zavolejte."
       }
     },
     {
@@ -683,7 +709,8 @@
         "it": "Orari: lun, mer, ven 8:00–17:00; mar e gio 8:00–18:00; sab 9:00–14:00. Chiamare per le modalità fuori orario.",
         "pt": "Horário: segunda, quarta e sexta 8h00–17h00; terça e quinta 8h00–18h00; sábado 9h00–14h00. Liga para saber o que está previsto fora de horas.",
         "nl": "Openingstijden: ma, wo, vr 8.00–17.00 uur; di en do 8.00–18.00 uur; za 9.00–14.00 uur. Bel voor de regeling buiten kantooruren.",
-        "pl": "Godziny otwarcia: pon., śr., pt. 8:00–17:00; wt. i czw. 8:00–18:00; sob. 9:00–14:00. Zadzwoń, aby poznać ustalenia dotyczące czasu poza godzinami pracy."
+        "pl": "Godziny otwarcia: pon., śr., pt. 8:00–17:00; wt. i czw. 8:00–18:00; sob. 9:00–14:00. Zadzwoń, aby poznać ustalenia dotyczące czasu poza godzinami pracy.",
+        "cs": "Ordinační doba: Po, St, Pá 8:00–17:00; Út a Čt 8:00–18:00; So 9:00–14:00. Ohledně péče mimo ordinační dobu zavolejte."
       }
     },
     {
@@ -707,7 +734,8 @@
         "it": "Lun–ven 8:00–17:00. Chiamare per le modalità fuori orario.",
         "pt": "Segunda a sexta 8h00–17h00. Liga para saber o que está previsto fora de horas.",
         "nl": "Ma–vr 8.00–17.00 uur. Bel voor de regeling buiten kantooruren.",
-        "pl": "Pon.–pt. 8:00–17:00. Zadzwoń, aby poznać ustalenia dotyczące czasu poza godzinami pracy."
+        "pl": "Pon.–pt. 8:00–17:00. Zadzwoń, aby poznać ustalenia dotyczące czasu poza godzinami pracy.",
+        "cs": "Po–Pá 8:00–17:00. Ohledně péče mimo ordinační dobu zavolejte."
       }
     },
     {
@@ -731,7 +759,8 @@
         "it": "Lun e mer–gio 7:30–20:00, mar e ven 7:30–18:00, sab 9:00–12:00 (solo emergenze in giornata), chiuso la domenica. Fuori orario chiamare lo stesso numero per il servizio di emergenza 24 ore su 24, 7 giorni su 7.",
         "pt": "Segunda, quarta e quinta 7h30–20h00, terça e sexta 7h30–18h00, sábado 9h00–12h00 (apenas urgências do próprio dia), fechado ao domingo. Fora de horas, liga para o mesmo número para o serviço de urgências 24 h/24, 7 dias por semana.",
         "nl": "Ma en wo–do 7.30–20.00 uur, di en vr 7.30–18.00 uur, za 9.00–12.00 uur (alleen spoedgevallen van dezelfde dag), zondag gesloten. Bel buiten kantooruren hetzelfde nummer voor de 24/7 spoeddienst.",
-        "pl": "Pon. i śr.–czw. 7:30–20:00, wt. i pt. 7:30–18:00, sob. 9:00–12:00 (tylko nagłe przypadki tego samego dnia), w niedzielę nieczynne. Po godzinach pracy zadzwoń pod ten sam numer, aby skorzystać z całodobowego pogotowia."
+        "pl": "Pon. i śr.–czw. 7:30–20:00, wt. i pt. 7:30–18:00, sob. 9:00–12:00 (tylko nagłe przypadki tego samego dnia), w niedzielę nieczynne. Po godzinach pracy zadzwoń pod ten sam numer, aby skorzystać z całodobowego pogotowia.",
+        "cs": "Po a St–Čt 7:30–20:00, Út a Pá 7:30–18:00, So 9:00–12:00 (pouze pohotovosti téhož dne), v neděli zavřeno. Mimo ordinační dobu volejte na stejné číslo pro nonstop pohotovostní službu."
       }
     },
     {
@@ -755,7 +784,8 @@
         "it": "Lun–ven 8:00–18:00, sab–dom 9:00–13:00. Fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "pt": "Segunda a sexta 8h00–18h00, fins de semana 9h00–13h00. Fora de horas, liga para a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "nl": "Ma–vr 8.00–18.00 uur, weekend 9.00–13.00 uur. Bel buiten kantooruren Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "pl": "Pon.–pt. 8:00–18:00, w weekendy 9:00–13:00. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "pl": "Pon.–pt. 8:00–18:00, w weekendy 9:00–13:00. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "cs": "Po–Pá 8:00–18:00, o víkendech 9:00–13:00. Mimo ordinační dobu volejte Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -779,7 +809,8 @@
         "it": "Lun–ven 8:00–18:00, sab–dom 9:00–13:00. Fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "pt": "Segunda a sexta 8h00–18h00, fins de semana 9h00–13h00. Fora de horas, liga para a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "nl": "Ma–vr 8.00–18.00 uur, weekend 9.00–13.00 uur. Bel buiten kantooruren Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "pl": "Pon.–pt. 8:00–18:00, w weekendy 9:00–13:00. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "pl": "Pon.–pt. 8:00–18:00, w weekendy 9:00–13:00. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "cs": "Po–Pá 8:00–18:00, o víkendech 9:00–13:00. Mimo ordinační dobu volejte Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -803,7 +834,8 @@
         "it": "Lun–ven 8:00–17:30, sab–dom 9:00–13:00. Fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "pt": "Segunda a sexta 8h00–17h30, fins de semana 9h00–13h00. Fora de horas, liga para a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "nl": "Ma–vr 8.00–17.30 uur, weekend 9.00–13.00 uur. Bel buiten kantooruren Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "pl": "Pon.–pt. 8:00–17:30, w weekendy 9:00–13:00. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "pl": "Pon.–pt. 8:00–17:30, w weekendy 9:00–13:00. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "cs": "Po–Pá 8:00–17:30, o víkendech 9:00–13:00. Mimo ordinační dobu volejte Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -827,7 +859,8 @@
         "it": "Lun–ven 8:00–17:00, sab 9:00–12:00, chiuso la domenica. Fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "pt": "Segunda a sexta 8h00–17h00, sábado 9h00–12h00, fechado ao domingo. Fora de horas, liga para a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "nl": "Ma–vr 8.00–17.00 uur, za 9.00–12.00 uur, zondag gesloten. Bel buiten kantooruren Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "pl": "Pon.–pt. 8:00–17:00, sob. 9:00–12:00, w niedzielę nieczynne. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "pl": "Pon.–pt. 8:00–17:00, sob. 9:00–12:00, w niedzielę nieczynne. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "cs": "Po–Pá 8:00–17:00, So 9:00–12:00, v neděli zavřeno. Mimo ordinační dobu volejte Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -850,7 +883,8 @@
         "it": "Lun–ven 8:00–18:00, sab 9:00–14:00, dom 10:00–14:00. Fuori orario chiamare Hawke's Bay Urgent Care, +64 6 651 7103.",
         "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–14h00, domingo 10h00–14h00. Fora de horas, liga para a Hawke's Bay Urgent Care, +64 6 651 7103.",
         "nl": "Ma–vr 8.00–18.00 uur, za 9.00–14.00 uur, zo 10.00–14.00 uur. Bel buiten kantooruren Hawke's Bay Urgent Care, +64 6 651 7103.",
-        "pl": "Pon.–pt. 8:00–18:00, sob. 9:00–14:00, niedz. 10:00–14:00. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care, +64 6 651 7103."
+        "pl": "Pon.–pt. 8:00–18:00, sob. 9:00–14:00, niedz. 10:00–14:00. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care, +64 6 651 7103.",
+        "cs": "Po–Pá 8:00–18:00, So 9:00–14:00, Ne 10:00–14:00. Mimo ordinační dobu volejte Hawke's Bay Urgent Care, +64 6 651 7103."
       }
     },
     {
@@ -873,7 +907,8 @@
         "it": "Lun–ven 8:00–18:00, chiuso nel weekend e nei festivi. Fuori orario chiamare Bay After Hours Veterinary Hospital, +64 800 229 838.",
         "pt": "Segunda a sexta 8h00–18h00, fechado aos fins de semana e feriados. Fora de horas, liga para o Bay After Hours Veterinary Hospital, +64 800 229 838.",
         "nl": "Ma–vr 8.00–18.00 uur, in het weekend en op feestdagen gesloten. Bel buiten kantooruren Bay After Hours Veterinary Hospital, +64 800 229 838.",
-        "pl": "Pon.–pt. 8:00–18:00, w weekendy i święta nieczynne. Po godzinach pracy zadzwoń do Bay After Hours Veterinary Hospital, +64 800 229 838."
+        "pl": "Pon.–pt. 8:00–18:00, w weekendy i święta nieczynne. Po godzinach pracy zadzwoń do Bay After Hours Veterinary Hospital, +64 800 229 838.",
+        "cs": "Po–Pá 8:00–18:00, o víkendech a státních svátcích zavřeno. Mimo ordinační dobu volejte Bay After Hours Veterinary Hospital, +64 800 229 838."
       }
     },
     {
@@ -896,7 +931,8 @@
         "it": "Lun–ven 8:00–18:00, sab–dom 9:00–16:00 (nel weekend il veterinario non è sempre presente), chiuso nei festivi. Fuori orario chiamare Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "pt": "Segunda a sexta 8h00–18h00, sábado e domingo 9h00–16h00 (aos fins de semana nem sempre há veterinário no local), fechado nos feriados. Fora de horas, liga para a Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "nl": "Ma–vr 8.00–18.00 uur, za–zo 9.00–16.00 uur (in het weekend is niet altijd een dierenarts aanwezig), op feestdagen gesloten. Bel buiten kantooruren Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "pl": "Pon.–pt. 8:00–18:00, sob.–niedz. 9:00–16:00 (w weekendy weterynarz nie zawsze jest na miejscu), w święta nieczynne. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "pl": "Pon.–pt. 8:00–18:00, sob.–niedz. 9:00–16:00 (w weekendy weterynarz nie zawsze jest na miejscu), w święta nieczynne. Po godzinach pracy zadzwoń do Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "cs": "Po–Pá 8:00–18:00, So–Ne 9:00–16:00 (o víkendech veterinář není vždy na místě), o státních svátcích zavřeno. Mimo ordinační dobu volejte Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -919,7 +955,8 @@
         "it": "Lun–ven 8:00–19:00, sab 9:00–15:00, chiuso la domenica e i festivi. Fuori orario chiamare Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "pt": "Segunda a sexta 8h00–19h00, sábado 9h00–15h00, fechado ao domingo e feriados. Fora de horas, liga para a Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "nl": "Ma–vr 8.00–19.00 uur, za 9.00–15.00 uur, zondag en feestdagen gesloten. Bel buiten kantooruren Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "pl": "Pon.–pt. 8:00–19:00, sob. 9:00–15:00, w niedzielę i święta nieczynne. Po godzinach pracy zadzwoń do Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "pl": "Pon.–pt. 8:00–19:00, sob. 9:00–15:00, w niedzielę i święta nieczynne. Po godzinach pracy zadzwoń do Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "cs": "Po–Pá 8:00–19:00, So 9:00–15:00, v neděli a o státních svátcích zavřeno. Mimo ordinační dobu volejte Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -942,7 +979,8 @@
         "it": "Lun–mer e ven 8:00–18:30, gio 8:00–19:00, sab 9:00–16:30, dom 10:00–16:00, chiuso nei festivi. Fuori orario chiamare Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "pt": "Segunda a quarta e sexta 8h00–18h30, quinta 8h00–19h00, sábado 9h00–16h30, domingo 10h00–16h00, fechado nos feriados. Fora de horas, liga para a Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "nl": "Ma–wo en vr 8.00–18.30 uur, do 8.00–19.00 uur, za 9.00–16.30 uur, zo 10.00–16.00 uur, op feestdagen gesloten. Bel buiten kantooruren Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "pl": "Pon.–śr. i pt. 8:00–18:30, czw. 8:00–19:00, sob. 9:00–16:30, niedz. 10:00–16:00, w święta nieczynne. Po godzinach pracy zadzwoń do Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "pl": "Pon.–śr. i pt. 8:00–18:30, czw. 8:00–19:00, sob. 9:00–16:30, niedz. 10:00–16:00, w święta nieczynne. Po godzinach pracy zadzwoń do Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "cs": "Po–St a Pá 8:00–18:30, Čt 8:00–19:00, So 9:00–16:30, Ne 10:00–16:00, o státních svátcích zavřeno. Mimo ordinační dobu volejte Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -965,7 +1003,8 @@
         "it": "Lun–ven 8:00–19:00, sab 9:00–16:00, chiuso la domenica e i festivi. Fuori orario chiamare Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "pt": "Segunda a sexta 8h00–19h00, sábado 9h00–16h00, fechado ao domingo e feriados. Fora de horas, liga para a Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "nl": "Ma–vr 8.00–19.00 uur, za 9.00–16.00 uur, zondag en feestdagen gesloten. Bel buiten kantooruren Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "pl": "Pon.–pt. 8:00–19:00, sob. 9:00–16:00, w niedzielę i święta nieczynne. Po godzinach pracy zadzwoń do Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "pl": "Pon.–pt. 8:00–19:00, sob. 9:00–16:00, w niedzielę i święta nieczynne. Po godzinach pracy zadzwoń do Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "cs": "Po–Pá 8:00–19:00, So 9:00–16:00, v neděli a o státních svátcích zavřeno. Mimo ordinační dobu volejte Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -988,7 +1027,8 @@
         "it": "Lun–ven 8:00–18:00, sab 9:30–16:30, dom 10:00–15:00 (la domenica nessun veterinario in sede), chiuso nei festivi. Fuori orario chiamare Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "pt": "Segunda a sexta 8h00–18h00, sábado 9h30–16h30, domingo 10h00–15h00 (sem veterinário no local ao domingo), fechado nos feriados. Fora de horas, liga para a Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "nl": "Ma–vr 8.00–18.00 uur, za 9.30–16.30 uur, zo 10.00–15.00 uur (zondag geen dierenarts aanwezig), op feestdagen gesloten. Bel buiten kantooruren Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "pl": "Pon.–pt. 8:00–18:00, sob. 9:30–16:30, niedz. 10:00–15:00 (w niedziele nie ma weterynarza na miejscu), w święta nieczynne. Po godzinach pracy zadzwoń do Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "pl": "Pon.–pt. 8:00–18:00, sob. 9:30–16:30, niedz. 10:00–15:00 (w niedziele nie ma weterynarza na miejscu), w święta nieczynne. Po godzinach pracy zadzwoń do Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "cs": "Po–Pá 8:00–18:00, So 9:30–16:30, Ne 10:00–15:00 (v neděli veterinář není na místě), o státních svátcích zavřeno. Mimo ordinační dobu volejte Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -1011,7 +1051,8 @@
         "it": "Lun e gio–ven 8:00–18:00, mar–mer 8:00–19:00, sab 9:00–15:00, chiuso la domenica e i festivi. Fuori orario chiamare Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "pt": "Segunda, quinta e sexta 8h00–18h00, terça e quarta 8h00–19h00, sábado 9h00–15h00, fechado ao domingo e feriados. Fora de horas, liga para a Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "nl": "Ma en do–vr 8.00–18.00 uur, di–wo 8.00–19.00 uur, za 9.00–15.00 uur, zondag en feestdagen gesloten. Bel buiten kantooruren Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "pl": "Pon. i czw.–pt. 8:00–18:00, wt.–śr. 8:00–19:00, sob. 9:00–15:00, w niedzielę i święta nieczynne. Po godzinach pracy zadzwoń do Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "pl": "Pon. i czw.–pt. 8:00–18:00, wt.–śr. 8:00–19:00, sob. 9:00–15:00, w niedzielę i święta nieczynne. Po godzinach pracy zadzwoń do Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "cs": "Po a Čt–Pá 8:00–18:00, Út–St 8:00–19:00, So 9:00–15:00, v neděli a o státních svátcích zavřeno. Mimo ordinační dobu volejte Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -1034,7 +1075,8 @@
         "it": "Lun–ven 8:00–18:00, chiuso nel weekend e nei festivi. Fuori orario chiamare Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "pt": "Segunda a sexta 8h00–18h00, fechado aos fins de semana e feriados. Fora de horas, liga para o Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "nl": "Ma–vr 8.00–18.00 uur, in het weekend en op feestdagen gesloten. Bel buiten kantooruren Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "pl": "Pon.–pt. 8:00–18:00, w weekendy i święta nieczynne. Po godzinach pracy zadzwoń do Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "pl": "Pon.–pt. 8:00–18:00, w weekendy i święta nieczynne. Po godzinach pracy zadzwoń do Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "cs": "Po–Pá 8:00–18:00, o víkendech a státních svátcích zavřeno. Mimo ordinační dobu volejte Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -1057,7 +1099,8 @@
         "it": "Lun, mar, gio, ven 8:00–18:00, mer 8:00–19:00, sab–dom 9:00–16:00, chiuso nei festivi. Fuori orario chiamare Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "pt": "Segunda, terça, quinta e sexta 8h00–18h00, quarta 8h00–19h00, sábado e domingo 9h00–16h00, fechado nos feriados. Fora de horas, liga para o Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "nl": "Ma, di, do, vr 8.00–18.00 uur, wo 8.00–19.00 uur, za–zo 9.00–16.00 uur, op feestdagen gesloten. Bel buiten kantooruren Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "pl": "Pon., wt., czw., pt. 8:00–18:00, śr. 8:00–19:00, sob.–niedz. 9:00–16:00, w święta nieczynne. Po godzinach pracy zadzwoń do Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "pl": "Pon., wt., czw., pt. 8:00–18:00, śr. 8:00–19:00, sob.–niedz. 9:00–16:00, w święta nieczynne. Po godzinach pracy zadzwoń do Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "cs": "Po, Út, Čt, Pá 8:00–18:00, St 8:00–19:00, So–Ne 9:00–16:00, o státních svátcích zavřeno. Mimo ordinační dobu volejte Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -1080,7 +1123,8 @@
         "it": "Lun–mer e ven 8:00–18:00, gio 8:00–19:30, chiuso nel weekend e nei festivi. Fuori orario chiamare Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "pt": "Segunda a quarta e sexta 8h00–18h00, quinta 8h00–19h30, fechado aos fins de semana e feriados. Fora de horas, liga para o Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "nl": "Ma–wo en vr 8.00–18.00 uur, do 8.00–19.30 uur, in het weekend en op feestdagen gesloten. Bel buiten kantooruren Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "pl": "Pon.–śr. i pt. 8:00–18:00, czw. 8:00–19:30, w weekendy i święta nieczynne. Po godzinach pracy zadzwoń do Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "pl": "Pon.–śr. i pt. 8:00–18:00, czw. 8:00–19:30, w weekendy i święta nieczynne. Po godzinach pracy zadzwoń do Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "cs": "Po–St a Pá 8:00–18:00, Čt 8:00–19:30, o víkendech a státních svátcích zavřeno. Mimo ordinační dobu volejte Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -1103,7 +1147,8 @@
         "it": "Lun–ven 8:00–17:30, chiuso nel weekend e nei festivi. Fuori orario chiamare Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "pt": "Segunda a sexta 8h00–17h30, fechado aos fins de semana e feriados. Fora de horas, liga para o Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "nl": "Ma–vr 8.00–17.30 uur, in het weekend en op feestdagen gesloten. Bel buiten kantooruren Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "pl": "Pon.–pt. 8:00–17:30, w weekendy i święta nieczynne. Po godzinach pracy zadzwoń do Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "pl": "Pon.–pt. 8:00–17:30, w weekendy i święta nieczynne. Po godzinach pracy zadzwoń do Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "cs": "Po–Pá 8:00–17:30, o víkendech a státních svátcích zavřeno. Mimo ordinační dobu volejte Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -1126,7 +1171,8 @@
         "it": "Lun–ven 8:00–17:00, sab 9:00–12:00, chiuso la domenica e i festivi. Fuori orario chiamare il veterinario di guardia, +64 21 548 387.",
         "pt": "Segunda a sexta 8h00–17h00, sábado 9h00–12h00, fechado ao domingo e feriados. Fora de horas, liga para o veterinário de serviço, +64 21 548 387.",
         "nl": "Ma–vr 8.00–17.00 uur, za 9.00–12.00 uur, zondag en feestdagen gesloten. Bel buiten kantooruren de dienstdoende dierenarts, +64 21 548 387.",
-        "pl": "Pon.–pt. 8:00–17:00, sob. 9:00–12:00, w niedzielę i święta nieczynne. Po godzinach pracy zadzwoń do dyżurnego weterynarza, +64 21 548 387."
+        "pl": "Pon.–pt. 8:00–17:00, sob. 9:00–12:00, w niedzielę i święta nieczynne. Po godzinach pracy zadzwoń do dyżurnego weterynarza, +64 21 548 387.",
+        "cs": "Po–Pá 8:00–17:00, So 9:00–12:00, v neděli a o státních svátcích zavřeno. Mimo ordinační dobu volejte službu konajícího veterináře, +64 21 548 387."
       }
     }
   ],

@@ -43,7 +43,8 @@
         "it": "Linea urgenze 24 ore su 24, 7 giorni su 7: 3650 3200. Appuntamenti e informazioni generali 3650 3000, tutti i giorni 9:00–19:00.",
         "pt": "Linha de urgências 24 horas por dia 3650 3200, 7 dias por semana. Marcações e informações gerais 3650 3000, todos os dias 9h00–19h00.",
         "nl": "24-uurs spoedlijn 3650 3200, 7 dagen per week. Afspraken en algemene vragen 3650 3000, dagelijks 9.00–19.00 uur.",
-        "pl": "Całodobowa infolinia pogotowia 3650 3200, 7 dni w tygodniu. Umawianie wizyt i informacje ogólne 3650 3000, codziennie 9:00–19:00."
+        "pl": "Całodobowa infolinia pogotowia 3650 3200, 7 dni w tygodniu. Umawianie wizyt i informacje ogólne 3650 3000, codziennie 9:00–19:00.",
+        "cs": "Nonstop pohotovostní linka 3650 3200, 7 dní v týdnu. Objednání a obecné dotazy 3650 3000, denně 9:00–19:00."
       }
     },
     {
@@ -65,7 +66,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7. Linea urgenze 24 ore su 24 6828 6620; numero generale 2334 2334.",
         "pt": "Aberto 24 horas por dia, 7 dias por semana. Linha de urgências 24 horas por dia 6828 6620; linha geral 2334 2334.",
         "nl": "De klok rond open, 7 dagen per week. 24-uurs spoedlijn 6828 6620; algemene lijn 2334 2334.",
-        "pl": "Otwarte całodobowo, 7 dni w tygodniu. Całodobowa linia pogotowia 6828 6620; linia ogólna 2334 2334."
+        "pl": "Otwarte całodobowo, 7 dni w tygodniu. Całodobowa linia pogotowia 6828 6620; linia ogólna 2334 2334.",
+        "cs": "Otevřeno nonstop, 7 dní v týdnu. Nonstop pohotovostní linka 6828 6620; hlavní linka 2334 2334."
       }
     },
     {
@@ -87,7 +89,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7. Orario ordinario 9:00–19:00 tutti i giorni.",
         "pt": "Urgências 24 horas por dia, 7 dias por semana. Horário normal 9h00–19h00 todos os dias.",
         "nl": "Spoed 24 uur per dag, 7 dagen per week. Reguliere openingstijden dagelijks 9.00–19.00 uur.",
-        "pl": "Pogotowie całodobowo, 7 dni w tygodniu. Zwykłe godziny pracy codziennie 9:00–19:00."
+        "pl": "Pogotowie całodobowo, 7 dni w tygodniu. Zwykłe godziny pracy codziennie 9:00–19:00.",
+        "cs": "Nonstop pohotovost, 7 dní v týdnu. Běžná ordinační doba denně 9:00–19:00."
       }
     },
     {
@@ -109,7 +112,8 @@
         "it": "Pronto soccorso veterinario 24 ore su 24, 365 giorni all'anno, con veterinari in sede a ogni ora. Animali esotici: telefonare prima di mettersi in viaggio.",
         "pt": "Urgências veterinárias 24 horas por dia, 365 dias por ano, com veterinários nas instalações a toda a hora. Animais exóticos: liga antes de te deslocares.",
         "nl": "Spoedeisende dierenartszorg 24 uur per dag, 365 dagen per jaar, met dierenartsen de klok rond aanwezig. Exotische dieren: bel voordat je komt.",
-        "pl": "Całodobowa weterynaryjna pomoc w nagłych przypadkach, 365 dni w roku, weterynarze na miejscu przez całą dobę. Zwierzęta egzotyczne: zadzwoń przed przyjazdem."
+        "pl": "Całodobowa weterynaryjna pomoc w nagłych przypadkach, 365 dni w roku, weterynarze na miejscu przez całą dobę. Zwierzęta egzotyczne: zadzwoń przed przyjazdem.",
+        "cs": "Nonstop veterinární pohotovost, 365 dní v roce, veterináři na místě nepřetržitě. Exotická zvířata: před cestou zavolejte."
       }
     },
     {
@@ -131,7 +135,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno; accesso senza appuntamento tramite triage.",
         "pt": "Urgências 24 horas por dia, 365 dias por ano; atendimento sem marcação através de triagem.",
         "nl": "Spoedzorg 24 uur per dag, 365 dagen per jaar; zonder afspraak welkom via triage.",
-        "pl": "Pomoc w nagłych przypadkach całodobowo, 365 dni w roku; przyjmuje bez umawiania po triażu."
+        "pl": "Pomoc w nagłych przypadkach całodobowo, 365 dni w roku; przyjmuje bez umawiania po triażu.",
+        "cs": "Nonstop pohotovost, 365 dní v roce; bez objednání po posouzení závažnosti (triáž)."
       }
     },
     {
@@ -153,7 +158,8 @@
         "it": "Assistenza e ricovero 24 ore su 24; telefonare per una visita.",
         "pt": "Cuidados e internamento 24 horas por dia; liga para marcar consulta.",
         "nl": "Zorg en opname 24 uur per dag; bel voor een consult.",
-        "pl": "Całodobowa opieka i hospitalizacja; zadzwoń w sprawie konsultacji."
+        "pl": "Całodobowa opieka i hospitalizacja; zadzwoń w sprawie konsultacji.",
+        "cs": "Nonstop péče a hospitalizace; pro konzultaci zavolejte."
       }
     },
     {
@@ -175,7 +181,8 @@
         "it": "Aperto tutti i giorni 24 ore su 24.",
         "pt": "Aberto todos os dias 24 horas por dia.",
         "nl": "Dagelijks 24 uur open.",
-        "pl": "Otwarte codziennie całodobowo."
+        "pl": "Otwarte codziennie całodobowo.",
+        "cs": "Otevřeno denně nonstop."
       }
     },
     {
@@ -197,7 +204,8 @@
         "it": "Pronto soccorso 24 ore su 24, tutti i giorni. Linea urgenze 3102 8528; numero principale 3426 3500.",
         "pt": "Urgências 24 horas por dia, todos os dias. Linha de urgências 3102 8528; linha principal 3426 3500.",
         "nl": "Spoedeisende hulp 24 uur per dag, dagelijks. Spoedlijn 3102 8528; hoofdnummer 3426 3500.",
-        "pl": "Całodobowa izba przyjęć w nagłych przypadkach, codziennie. Numer pogotowia 3102 8528; numer główny 3426 3500."
+        "pl": "Całodobowa izba przyjęć w nagłych przypadkach, codziennie. Numer pogotowia 3102 8528; numer główny 3426 3500.",
+        "cs": "Nonstop pohotovost, denně. Pohotovostní linka 3102 8528; hlavní linka 3426 3500."
       }
     },
     {
@@ -218,7 +226,8 @@
         "it": "Ospedale di pronto soccorso 24 ore su 24, 7 giorni su 7.",
         "pt": "Hospital de urgências 24 h/24, 7 dias por semana.",
         "nl": "Dierenziekenhuis met spoedzorg 24/7.",
-        "pl": "Całodobowa lecznica dla nagłych przypadków."
+        "pl": "Całodobowa lecznica dla nagłych przypadków.",
+        "cs": "Nonstop pohotovostní nemocnice."
       }
     },
     {
@@ -239,7 +248,8 @@
         "it": "Ospedale di pronto soccorso 24 ore su 24, 7 giorni su 7.",
         "pt": "Hospital de urgências 24 h/24, 7 dias por semana.",
         "nl": "Dierenziekenhuis met spoedzorg 24/7.",
-        "pl": "Całodobowa lecznica dla nagłych przypadków."
+        "pl": "Całodobowa lecznica dla nagłych przypadków.",
+        "cs": "Nonstop pohotovostní nemocnice."
       }
     },
     {
@@ -260,7 +270,8 @@
         "it": "Ospedale di pronto soccorso 24 ore su 24, 7 giorni su 7.",
         "pt": "Hospital de urgências 24 h/24, 7 dias por semana.",
         "nl": "Dierenziekenhuis met spoedzorg 24/7.",
-        "pl": "Całodobowa lecznica dla nagłych przypadków."
+        "pl": "Całodobowa lecznica dla nagłych przypadków.",
+        "cs": "Nonstop pohotovostní nemocnice."
       }
     },
     {
@@ -282,7 +293,8 @@
         "it": "Attivo 24 ore su 24, 7 giorni su 7, 365 giorni all'anno, con veterinari in sede a ogni ora.",
         "pt": "Funciona 24 h/24, 7 dias por semana, 365 dias por ano, com veterinários nas instalações a toda a hora.",
         "nl": "24/7/365 geopend, met dierenartsen de klok rond aanwezig.",
-        "pl": "Czynne całodobowo, 365 dni w roku, weterynarze na miejscu przez całą dobę."
+        "pl": "Czynne całodobowo, 365 dni w roku, weterynarze na miejscu przez całą dobę.",
+        "cs": "Provoz nonstop, 365 dní v roce, veterináři na místě nepřetržitě."
       }
     },
     {
@@ -304,7 +316,8 @@
         "it": "Servizi veterinari di pronto soccorso 24 ore su 24, 7 giorni su 7, tutto l'anno.",
         "pt": "Serviços veterinários de urgência 24 h/24, 7 dias por semana, durante todo o ano.",
         "nl": "Het hele jaar spoedeisende dierenartszorg 24/7.",
-        "pl": "Weterynaryjne pogotowie całodobowo przez cały rok."
+        "pl": "Weterynaryjne pogotowie całodobowo przez cały rok.",
+        "cs": "Nonstop veterinární pohotovost po celý rok."
       }
     },
     {
@@ -325,7 +338,8 @@
         "it": "Linea telefonica attiva 24 ore su 24, tutti i giorni. Chiamare prima; non recarsi in un centro aspettandosi un veterinario di guardia. Solo per vere urgenze; l'assistenza veterinaria fuori orario si svolge di norma all'Hong Kong Centre.",
         "pt": "Linha de apoio disponível 24 horas por dia, todos os dias. Liga primeiro; não te desloques a um centro à espera de encontrar um veterinário de serviço. Só para urgências reais; os cuidados veterinários fora de horas são normalmente prestados no Hong Kong Centre.",
         "nl": "Hotline staat 24 uur per dag, elke dag paraat. Bel eerst; ga niet naar een centrum in de verwachting dat er een dierenarts dienst heeft. Alleen voor echte noodgevallen; dierenartszorg buiten kantooruren is meestal in het Hong Kong Centre.",
-        "pl": "Infolinia czynna całodobowo, codziennie. Najpierw zadzwoń; nie jedź do placówki, licząc na weterynarza na dyżurze. Tylko w prawdziwych nagłych przypadkach; opieka weterynaryjna poza godzinami pracy zwykle w Hong Kong Centre."
+        "pl": "Infolinia czynna całodobowo, codziennie. Najpierw zadzwoń; nie jedź do placówki, licząc na weterynarza na dyżurze. Tylko w prawdziwych nagłych przypadkach; opieka weterynaryjna poza godzinami pracy zwykle w Hong Kong Centre.",
+        "cs": "Linka v pohotovosti nonstop, každý den. Nejprve zavolejte; nechoďte do střediska v očekávání, že tam bude veterinář ve službě. Pouze pro skutečné nouzové případy; veterinární péče mimo ordinační dobu bývá v Hong Kong Centre."
       }
     },
     {
@@ -347,7 +361,8 @@
         "it": "Aperto tutti i giorni 7:00–21:00. Chiamare per confermare gli orari.",
         "pt": "Aberto todos os dias 7h00–21h00. Liga para confirmar o horário.",
         "nl": "Dagelijks open 7.00–21.00 uur. Bel om de openingstijden te bevestigen.",
-        "pl": "Otwarte codziennie 7:00–21:00. Zadzwoń, aby potwierdzić godziny."
+        "pl": "Otwarte codziennie 7:00–21:00. Zadzwoń, aby potwierdzić godziny.",
+        "cs": "Otevřeno denně 7:00–21:00. Ordinační dobu si ověřte telefonicky."
       }
     },
     {
@@ -369,7 +384,8 @@
         "it": "Servizio veterinario 8:00–20:00; servizio infermieristico 24 ore su 24.",
         "pt": "Serviço veterinário 8h00–20h00; serviço de enfermagem 24 horas por dia.",
         "nl": "Dierenarts 8.00–20.00 uur; verpleegkundige 24 uur per dag.",
-        "pl": "Weterynarz 8:00–20:00; opieka pielęgniarska całodobowo."
+        "pl": "Weterynarz 8:00–20:00; opieka pielęgniarska całodobowo.",
+        "cs": "Veterinární služba 8:00–20:00; ošetřovatelská služba nonstop."
       }
     },
     {
@@ -390,7 +406,8 @@
         "it": "Tutti i giorni 8:00–20:00.",
         "pt": "Todos os dias 8h00–20h00.",
         "nl": "Dagelijks 8.00–20.00 uur.",
-        "pl": "Codziennie 8:00–20:00."
+        "pl": "Codziennie 8:00–20:00.",
+        "cs": "Denně 8:00–20:00."
       }
     },
     {
@@ -411,7 +428,8 @@
         "it": "Tutti i giorni 10:30–13:30 e 16:00–19:00; chiuso nei festivi.",
         "pt": "Todos os dias 10h30–13h30 e 16h00–19h00; fechado nos feriados.",
         "nl": "Dagelijks 10.30–13.30 en 16.00–19.00 uur; gesloten op feestdagen.",
-        "pl": "Codziennie 10:30–13:30 i 16:00–19:00; w święta państwowe zamknięte."
+        "pl": "Codziennie 10:30–13:30 i 16:00–19:00; w święta państwowe zamknięte.",
+        "cs": "Denně 10:30–13:30 a 16:00–19:00; o státních svátcích zavřeno."
       }
     },
     {
@@ -433,7 +451,8 @@
         "it": "Tutti i giorni 10:30–13:30 e 16:00–19:00; chiuso nei festivi.",
         "pt": "Todos os dias 10h30–13h30 e 16h00–19h00; fechado nos feriados.",
         "nl": "Dagelijks 10.30–13.30 en 16.00–19.00 uur; gesloten op feestdagen.",
-        "pl": "Codziennie 10:30–13:30 i 16:00–19:00; w święta państwowe zamknięte."
+        "pl": "Codziennie 10:30–13:30 i 16:00–19:00; w święta państwowe zamknięte.",
+        "cs": "Denně 10:30–13:30 a 16:00–19:00; o státních svátcích zavřeno."
       }
     },
     {
@@ -454,7 +473,8 @@
         "it": "Lun–sab 9:00–21:00; dom e festivi 10:00–19:00.",
         "pt": "Seg–sáb 9h00–21h00; dom e feriados 10h00–19h00.",
         "nl": "Ma–za 9.00–21.00 uur; zo en feestdagen 10.00–19.00 uur.",
-        "pl": "pon.–sob. 9:00–21:00; niedz. i święta 10:00–19:00."
+        "pl": "pon.–sob. 9:00–21:00; niedz. i święta 10:00–19:00.",
+        "cs": "Po–so 9:00–21:00; ne a svátky 10:00–19:00."
       }
     },
     {
@@ -476,7 +496,8 @@
         "it": "Tutti i giorni 9:00–20:00; dom e festivi 10:00–19:00.",
         "pt": "Todos os dias 9h00–20h00; dom e feriados 10h00–19h00.",
         "nl": "Dagelijks 9.00–20.00 uur; zo en feestdagen 10.00–19.00 uur.",
-        "pl": "Codziennie 9:00–20:00; niedz. i święta państwowe 10:00–19:00."
+        "pl": "Codziennie 9:00–20:00; niedz. i święta państwowe 10:00–19:00.",
+        "cs": "Denně 9:00–20:00; ne a státní svátky 10:00–19:00."
       }
     },
     {
@@ -497,7 +518,8 @@
         "it": "Tutti i giorni 9:00–19:00.",
         "pt": "Todos os dias 9h00–19h00.",
         "nl": "Dagelijks 9.00–19.00 uur.",
-        "pl": "Codziennie 9:00–19:00."
+        "pl": "Codziennie 9:00–19:00.",
+        "cs": "Denně 9:00–19:00."
       }
     },
     {
@@ -518,7 +540,8 @@
         "it": "Tutti i giorni 9:00–19:00.",
         "pt": "Todos os dias 9h00–19h00.",
         "nl": "Dagelijks 9.00–19.00 uur.",
-        "pl": "Codziennie 9:00–19:00."
+        "pl": "Codziennie 9:00–19:00.",
+        "cs": "Denně 9:00–19:00."
       }
     },
     {
@@ -539,7 +562,8 @@
         "it": "Tutti i giorni 9:00–19:00.",
         "pt": "Todos os dias 9h00–19h00.",
         "nl": "Dagelijks 9.00–19.00 uur.",
-        "pl": "Codziennie 9:00–19:00."
+        "pl": "Codziennie 9:00–19:00.",
+        "cs": "Denně 9:00–19:00."
       }
     },
     {
@@ -560,7 +584,8 @@
         "it": "Lun–mar 9:00–21:00, mer–ven 9:00–19:00, sab 9:00–18:00, dom 10:00–17:00. Prenotazioni tramite WhatsApp +852 5935 6970.",
         "pt": "Seg–ter 9h00–21h00, qua–sex 9h00–19h00, sáb 9h00–18h00, dom 10h00–17h00. Marcações pelo WhatsApp +852 5935 6970.",
         "nl": "Ma–di 9.00–21.00 uur, wo–vr 9.00–19.00 uur, za 9.00–18.00 uur, zo 10.00–17.00 uur. Afspraken via WhatsApp +852 5935 6970.",
-        "pl": "pon.–wt. 9:00–21:00, śr.–pt. 9:00–19:00, sob. 9:00–18:00, niedz. 10:00–17:00. Rezerwacje przez WhatsApp +852 5935 6970."
+        "pl": "pon.–wt. 9:00–21:00, śr.–pt. 9:00–19:00, sob. 9:00–18:00, niedz. 10:00–17:00. Rezerwacje przez WhatsApp +852 5935 6970.",
+        "cs": "Po–Út 9:00–21:00, St–Pá 9:00–19:00, so 9:00–18:00, ne 10:00–17:00. Objednání přes WhatsApp +852 5935 6970."
       }
     }
   ],

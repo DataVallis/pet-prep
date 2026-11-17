@@ -43,7 +43,8 @@
       "checked": "2026-11-15",
       "note": "Source is a 2024 news article (opened); clinic's own site (vetmonaco.com, named by hellomonaco.com) blocked by WebFetch provenance rule, not fetched. Name confirmed also by expatfocus.com. No 24h claim.",
       "duty_i18n": {
-        "pl": "Po wcześniejszym umówieniu. Codziennie 9:00–19:00, w czwartki 9:00–16:00, w soboty 9:00–12:00; zadzwoń wcześniej."
+        "pl": "Po wcześniejszym umówieniu. Codziennie 9:00–19:00, w czwartki 9:00–16:00, w soboty 9:00–12:00; zadzwoń wcześniej.",
+        "cs": "Na objednání. Denně 9:00–19:00, ve čtvrtek 9:00–16:00, v sobotu 9:00–12:00; předem zavolejte."
       }
     },
     {
@@ -60,7 +61,8 @@
       "checked": "2026-11-15",
       "note": "Only source is the 2024 Monaco Tribune article (opened); clinic's own site not found/reachable. No 24h claim.",
       "duty_i18n": {
-        "pl": "Od poniedziałku do soboty 9:00–19:00; zadzwoń wcześniej."
+        "pl": "Od poniedziałku do soboty 9:00–19:00; zadzwoń wcześniej.",
+        "cs": "Od pondělí do soboty 9:00–19:00; předem zavolejte."
       }
     },
     {
@@ -77,7 +79,8 @@
       "checked": "2026-11-15",
       "note": "Only source is the 2024 Monaco Tribune article (opened), which is internally inconsistent about the street (also mentions Boulevard Rainier III). Own site not found. No 24h claim.",
       "duty_i18n": {
-        "pl": "Od poniedziałku do piątku 10:00–19:00; zadzwoń wcześniej."
+        "pl": "Od poniedziałku do piątku 10:00–19:00; zadzwoń wcześniej.",
+        "cs": "Od pondělí do pátku 10:00–19:00; předem zavolejte."
       }
     },
     {
@@ -94,7 +97,8 @@
       "checked": "2026-11-15",
       "note": "In France, directly bordering Monaco. 2024 Monaco Tribune article (opened) describes an on-call ('service d'astreinte') night/weekend service; not described as 24h. Own site not found.",
       "duty_i18n": {
-        "pl": "Dyżur po godzinach w nocy i w weekendy: +33 6 60 61 36 24. Nie jest to przychodnia całodobowa; zadzwoń wcześniej."
+        "pl": "Dyżur po godzinach w nocy i w weekendy: +33 6 60 61 36 24. Nie jest to przychodnia całodobowa; zadzwoń wcześniej.",
+        "cs": "Pohotovostní služba mimo ordinační dobu v noci a o víkendech: +33 6 60 61 36 24. Není to nonstop klinika; předem zavolejte."
       }
     }
   ],

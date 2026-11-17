@@ -47,7 +47,10 @@
       "url": "https://hospitalveterinarioriverahn.com/",
       "source_url": "https://hospitalveterinarioriverahn.com/contacto/",
       "checked": "2026-11-16",
-      "note": "Other numbers on the site: +504 9446-7901, +504 2552-2826/7. Page wording: 'EMERGENCIAS 24/7 SOLO EN BARRIO RIO DE PIEDRAS'."
+      "note": "Other numbers on the site: +504 9446-7901, +504 2552-2826/7. Page wording: 'EMERGENCIAS 24/7 SOLO EN BARRIO RIO DE PIEDRAS'.",
+      "duty_i18n": {
+        "cs": "Pohotovost nonstop na této pobočce na +504 9757-6797. Běžná ordinační doba Po–Pá 8:30–18:00, so 8:30–16:00, ne 9:00–15:00."
+      }
     },
     {
       "kind": "clinic",
@@ -62,7 +65,10 @@
       "url": "https://hospitalveterinarioriverahn.com/",
       "source_url": "https://hospitalveterinarioriverahn.com/contacto/",
       "checked": "2026-11-16",
-      "note": "Also +504 9430-4116. Phone-to-branch assignment inferred from footer order on the page."
+      "note": "Also +504 9430-4116. Phone-to-branch assignment inferred from footer order on the page.",
+      "duty_i18n": {
+        "cs": "Otevřeno Po–Pá 8:00–17:30, so 8:00–16:00, v neděli zavřeno. Nonstop pohotovost zajišťuje pobočka Rio de Piedras."
+      }
     },
     {
       "kind": "clinic",
@@ -77,7 +83,10 @@
       "url": "https://www.animalhealth.hn/",
       "source_url": "https://www.animalhealth.hn/",
       "checked": "2026-11-16",
-      "note": "Also +504 8767-3284 and +504 2225-6215. 9905-4693 is also WhatsApp."
+      "note": "Also +504 8767-3284 and +504 2225-6215. 9905-4693 is also WhatsApp.",
+      "duty_i18n": {
+        "cs": "Po–Pá 9:00–17:00 na objednání; v neděli 9:00–13:00 bez objednání, podle pořadí; v sobotu zavřeno."
+      }
     },
     {
       "kind": "clinic",
@@ -92,7 +101,10 @@
       "url": "https://veterinariabueno.jimdofree.com/",
       "source_url": "https://veterinariabueno.jimdofree.com/",
       "checked": "2026-11-16",
-      "note": "Also +504 2443-1521 and 2443-1525 (PBX). Page also covers large animals. 'Urgencia y Cuidados Intensivos' without 24 h wording."
+      "note": "Also +504 2443-1521 and 2443-1525 (PBX). Page also covers large animals. 'Urgencia y Cuidados Intensivos' without 24 h wording.",
+      "duty_i18n": {
+        "cs": "Otevřeno Po–Pá 7:30–17:00 a so 7:30–15:00. Nabízí pohotovost a intenzivní péči; před cestou zavolejte."
+      }
     }
   ],
   "notes": "Research 2026-11-16; only pages opened with WebFetch are used. Refused by robots / not opened: veterinariasoto.hn, veterinariadogsandcats.com, hospitalveterinariodelsur.co, Facebook pages (Pet Plaza Hospivet, Vida Animal, Animal Kingdom Roatan etc.), hospihuellas.com, radiohouse.hn, tiempo.hn. CMVH clinic directory is empty on its own site; no duty rota and no animal poison line found for Honduras. Not added: Servicio de Mascotas Hertuno (San Pedro Sula, page does not say it is a vet clinic); Tegucigalpa municipal free vet clinic (Barrio Guadalupe, Mon-Fri 9-17, Sat 9-14, opened July 2023) only found in a news article with no phone or own page. Still missing: Roatan / Bay Islands (Animal Kingdom, French Harbour - no own page found), Copan Ruinas, Comayagua (K-nine, CeMeVet, Medical Vet - Facebook only), Choluteca (Servellon, Castillo, Hospital Veterinario del Sur - Facebook / refused), Tela (Veterinaria del Norte, SAV - not reachable), Zamorano / UNAH / SENASA vet pages (no clinic info found)."

@@ -47,7 +47,10 @@
       "url": "https://www.govetclinic.com/",
       "source_url": "https://www.govetclinic.com/",
       "checked": "2026-11-16",
-      "note": "Second phone +679 788 7319. 24/7 is the clinic's own claim on its site."
+      "note": "Second phone +679 788 7319. 24/7 is the clinic's own claim on its site.",
+      "duty_i18n": {
+        "cs": "Pojízdná klinika pro domácí zvířata s návštěvami doma a pohotovostní péčí, uváděná jako dostupná nonstop v oblasti Suva, Nausori, Navua a Pacific Harbour."
+      }
     },
     {
       "kind": "clinic",
@@ -62,7 +65,10 @@
       "url": "https://www.spcafiji.com/our-services",
       "source_url": "https://www.spcafiji.com/our-services",
       "checked": "2026-11-16",
-      "note": "Phone given as 8926200 on page; formatted with +679."
+      "note": "Phone given as 8926200 on page; formatted with +679.",
+      "duty_i18n": {
+        "cs": "Otevřeno Po–So 8:00–16:30. Mimo ordinační dobu pouze pohotovost 17:00–22:00, SMS zprávou na 992 2634."
+      }
     },
     {
       "kind": "clinic",
@@ -76,7 +82,10 @@
       "small_animals": true,
       "url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
       "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
-      "checked": "2026-11-16"
+      "checked": "2026-11-16",
+      "duty_i18n": {
+        "cs": "Otevřeno Po–So 8:30–17:00, v neděli zavřeno. Pohotovostní linka mimo ordinační dobu na stejném čísle, v rámci možností (nejde o nonstop službu)."
+      }
     },
     {
       "kind": "clinic",
@@ -90,7 +99,10 @@
       "small_animals": true,
       "url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
       "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
-      "checked": "2026-11-16"
+      "checked": "2026-11-16",
+      "duty_i18n": {
+        "cs": "Otevřeno Út–So 8:30–17:00; v neděli a v pondělí zavřeno."
+      }
     },
     {
       "kind": "clinic",
@@ -104,7 +116,10 @@
       "small_animals": true,
       "url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
       "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
-      "checked": "2026-11-16"
+      "checked": "2026-11-16",
+      "duty_i18n": {
+        "cs": "Otevřeno Út–Pá 8:00–17:00 a so 8:00–13:00; v neděli a v pondělí zavřeno."
+      }
     },
     {
       "kind": "clinic",
@@ -118,7 +133,10 @@
       "small_animals": true,
       "url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
       "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
-      "checked": "2026-11-16"
+      "checked": "2026-11-16",
+      "duty_i18n": {
+        "cs": "Otevřeno Út–Pá 8:30–17:00 a so 8:00–13:00; v neděli a v pondělí zavřeno."
+      }
     },
     {
       "kind": "clinic",
@@ -131,7 +149,10 @@
       "url": "https://www.pashfiji.com/",
       "source_url": "https://www.pashfiji.com/",
       "checked": "2026-11-16",
-      "note": "Page gives no address or city; locate before publishing."
+      "note": "Page gives no address or city; locate before publishing.",
+      "duty_i18n": {
+        "cs": "Záchranná stanice a veterinární klinika, otevřeno Út–So 8:00–17:00. Objednání telefonicky."
+      }
     }
   ],
   "notes": "Research 2026-11-16; all source_urls opened with WebFetch (official sites first were not reachable by provenance: spcafiji.org, baf.com.fj root, agriculture.gov.fj were blocked and not opened; BAF quarantine page opened). No Fiji Veterinary Association site, duty rota or animal poison line found. Viti Mobile Vet refused by robots. Not added: Pacific Vetcare / Coastal Veterinary Hospital (not confirmed as Fiji, no page opened), Denarau/Coral Coast have no clinic found beyond GoVet mobile coverage of Pacific Harbour. FNU vet programme and BAF quarantine (Koronivia, +679 331 2512) are not clinics."

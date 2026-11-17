@@ -54,7 +54,8 @@
       "emergency_24h": false,
       "checked": "2026-11-15",
       "duty_i18n": {
-        "pl": "Otwarte w dni robocze 8:00–17:00 i w weekendy 10:00–13:00. Poza godzinami otwarcia weterynarz dyżurny (poważnie chore lub ranne zwierzęta) jest pod numerem +354 530 4888 (opłata za dojazd, wyższa w nocy i w święta)."
+        "pl": "Otwarte w dni robocze 8:00–17:00 i w weekendy 10:00–13:00. Poza godzinami otwarcia weterynarz dyżurny (poważnie chore lub ranne zwierzęta) jest pod numerem +354 530 4888 (opłata za dojazd, wyższa w nocy i w święta).",
+        "cs": "Otevřeno ve všední dny 8:00–17:00 a o víkendech 10:00–13:00. Mimo ordinační dobu je veterinář v pohotovosti pro vážně nemocná nebo zraněná zvířata k zastižení na +354 530 4888 (účtuje se poplatek za výjezd, v noci a o státních svátcích vyšší)."
       }
     },
     {
@@ -72,7 +73,8 @@
       "emergency_24h": false,
       "checked": "2026-11-15",
       "duty_i18n": {
-        "pl": "Otwarte od poniedziałku do piątku 8:00–17:00, w weekendy nieczynne. Poza godzinami otwarcia czynna przychodnia pogotowia w rejonie stolicy Animalía: +354 555 0112."
+        "pl": "Otwarte od poniedziałku do piątku 8:00–17:00, w weekendy nieczynne. Poza godzinami otwarcia czynna przychodnia pogotowia w rejonie stolicy Animalía: +354 555 0112.",
+        "cs": "Otevřeno Po–Pá 8:00–17:00, o víkendech zavřeno. Mimo ordinační dobu volejte pohotovostní kliniku Animalía pro oblast hlavního města na +354 555 0112."
       }
     },
     {
@@ -90,7 +92,8 @@
       "emergency_24h": false,
       "checked": "2026-11-15",
       "duty_i18n": {
-        "pl": "Otwarte od poniedziałku do czwartku 8:00–17:00, w piątek 8:00–15:00, w sobotę 10:00–12:00. Uczestniczy we współpracy pogotowia w rejonie stolicy; w pilnych przypadkach można też zadzwonić do Animalía pod +354 555 0112."
+        "pl": "Otwarte od poniedziałku do czwartku 8:00–17:00, w piątek 8:00–15:00, w sobotę 10:00–12:00. Uczestniczy we współpracy pogotowia w rejonie stolicy; w pilnych przypadkach można też zadzwonić do Animalía pod +354 555 0112.",
+        "cs": "Otevřeno Po–Čt 8:00–17:00, Pá 8:00–15:00, so 10:00–12:00. Součást pohotovostní spolupráce v oblasti hlavního města; naléhavé případy mohou volat také kliniku Animalía na +354 555 0112."
       }
     },
     {
@@ -105,7 +108,8 @@
       "kind": "clinic",
       "checked": "2026-11-15",
       "duty_i18n": {
-        "pl": "Całodobowa rejestracja nagłych przypadków zwierząt domowych w rejonie stolicy; zadzwoń pod +354 555 0112."
+        "pl": "Całodobowa rejestracja nagłych przypadków zwierząt domowych w rejonie stolicy; zadzwoń pod +354 555 0112.",
+        "cs": "Nonstop příjem pohotovostí domácích zvířat v oblasti hlavního města; volejte +354 555 0112."
       }
     },
     {

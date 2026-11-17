@@ -76,7 +76,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Telefonare in anticipo.",
         "pt": "Urgências 24 horas, 365 dias por ano. Liga antes.",
         "nl": "Spoedzorg 24 uur per dag, 365 dagen per jaar. Bel vooraf.",
-        "pl": "Pomoc w nagłych przypadkach całodobowo, 365 dni w roku. Zadzwoń przed wizytą."
+        "pl": "Pomoc w nagłych przypadkach całodobowo, 365 dni w roku. Zadzwoń przed wizytą.",
+        "cs": "Nonstop pohotovostní péče 365 dní v roce. Před cestou zavolejte."
       }
     },
     {
@@ -97,7 +98,8 @@
         "it": "Solo animali selvatici: aperto 24 ore su 24, 365 giorni all'anno per le emergenze, gratuito.",
         "pt": "Apenas animais selvagens: aberto 24 horas, 365 dias por ano para urgências, gratuito.",
         "nl": "Alleen wilde dieren: 24 uur per dag, 365 dagen per jaar open voor spoedgevallen, gratis.",
-        "pl": "Tylko dzikie zwierzęta: czynne całodobowo, 365 dni w roku w nagłych przypadkach, bezpłatnie."
+        "pl": "Tylko dzikie zwierzęta: czynne całodobowo, 365 dni w roku w nagłych przypadkach, bezpłatnie.",
+        "cs": "Pouze divoká zvířata: otevřeno nonstop 365 dní v roce pro pohotovostní případy, zdarma."
       }
     },
     {
@@ -118,7 +120,8 @@
         "it": "Clinica comunale gratuita. Visite dal lunedì al venerdì 08:00–16:30. Telefonare in anticipo per le emergenze.",
         "pt": "Clínica municipal gratuita. Consultas de segunda a sexta 8h00–16h30. Liga antes para urgências.",
         "nl": "Gratis gemeentelijke kliniek. Consulten maandag tot en met vrijdag 08.00–16.30 uur. Bel vooraf bij spoedgevallen.",
-        "pl": "Bezpłatna przychodnia miejska. Konsultacje pon.–pt. 08:00–16:30. W nagłych przypadkach zadzwoń przed wizytą."
+        "pl": "Bezpłatna przychodnia miejska. Konsultacje pon.–pt. 08:00–16:30. W nagłych przypadkach zadzwoń przed wizytą.",
+        "cs": "Bezplatná městská klinika. Ordinace Po–Pá 8:00–16:30. V naléhavých případech před cestou zavolejte."
       }
     },
     {
@@ -137,7 +140,8 @@
         "it": "Aperto dal lunedì al venerdì 08:00–16:00; pazienti accettati fino alle 15:00 circa, senza appuntamento. Dispone di un'area emergenze; nessun servizio notturno indicato.",
         "pt": "Aberto de segunda a sexta 8h00–16h00; atende até cerca das 15h00, sem marcação. Tem área de urgência; não indica serviço noturno.",
         "nl": "Open maandag tot en met vrijdag 08.00–16.00 uur; patiënten worden tot ongeveer 15.00 uur aangenomen, geen afspraak nodig. Heeft een spoedafdeling; geen nachtdienst vermeld.",
-        "pl": "Czynne pon.–pt. 08:00–16:00; pacjenci przyjmowani do ok. 15:00, bez umawiania wizyt. Ma oddział nagłych przypadków; nie podano dyżuru nocnego."
+        "pl": "Czynne pon.–pt. 08:00–16:00; pacjenci przyjmowani do ok. 15:00, bez umawiania wizyt. Ma oddział nagłych przypadków; nie podano dyżuru nocnego.",
+        "cs": "Otevřeno Po–Pá 8:00–16:00; pacienti se přijímají do cca 15:00, bez objednání. Má pohotovostní část; noční služba není uvedena."
       }
     },
     {
@@ -157,7 +161,8 @@
         "it": "Ospedale comunale per cani e gatti. Dal lunedì al venerdì 08:00–17:00, chiuso nei fine settimana e nei festivi.",
         "pt": "Hospital municipal para cães e gatos. Segunda a sexta 8h00–17h00, encerrado aos fins de semana e feriados.",
         "nl": "Gemeentelijk dierenziekenhuis voor honden en katten. Maandag tot en met vrijdag 08.00–17.00 uur, in het weekend en op feestdagen gesloten.",
-        "pl": "Szpital miejski dla psów i kotów. Pon.–pt. 08:00–17:00, w weekendy i święta nieczynny."
+        "pl": "Szpital miejski dla psów i kotów. Pon.–pt. 08:00–17:00, w weekendy i święta nieczynny.",
+        "cs": "Městská nemocnice pro psy a kočky. Po–Pá 8:00–17:00, o víkendech a svátcích zavřeno."
       }
     }
   ],

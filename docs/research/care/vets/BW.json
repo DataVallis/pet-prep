@@ -45,7 +45,10 @@
       "url": "https://matshwanevetclinic.weebly.com/services.html",
       "source_url": "https://matshwanevetclinic.weebly.com/services.html",
       "checked": "2026-11-16",
-      "note": "Own site states an out-of-hours emergency service exists; no 24 h statement, no phone, address or hours published on the page opened. Needs phone from another own page in a later run."
+      "note": "Own site states an out-of-hours emergency service exists; no 24 h statement, no phone, address or hours published on the page opened. Needs phone from another own page in a later run.",
+      "duty_i18n": {
+        "cs": "Pohotovostní služba mimo otevírací dobu; před cestou zavolejte. Návštěvy doma kvůli očkování a konzultacím v Gaborone a okolí."
+      }
     },
     {
       "kind": "clinic",
@@ -58,7 +61,10 @@
       "url": "https://www.vetagric.co.bw/index.php/home",
       "source_url": "https://www.vetagric.co.bw/index.php/home",
       "checked": "2026-11-16",
-      "note": "Own site (re-checked 2026-11-16) confirms Gaborone base and small animal services but gives no phone, address or 24 h statement. Branch locations (Block 3 Industrial, Phakalane) and the claim of a '24 hours emergency service' come only from the Sky Jobs employer profile (job board), so emergency_24h left false pending an own-site page. Phone seen masked (+267 3928689), not used. small_animals inferred from the clinic description, not stated on the own site."
+      "note": "Own site (re-checked 2026-11-16) confirms Gaborone base and small animal services but gives no phone, address or 24 h statement. Branch locations (Block 3 Industrial, Phakalane) and the claim of a '24 hours emergency service' come only from the Sky Jobs employer profile (job board), so emergency_24h left false pending an own-site page. Phone seen masked (+267 3928689), not used. small_animals inferred from the clinic description, not stated on the own site.",
+      "duty_i18n": {
+        "cs": "Veterinární praxe v Gaborone nabízející služby pro malá zvířata, hospodářská zvířata a divokou zvěř; otevírací dobu a pohotovost zjistíte telefonicky na klinice."
+      }
     }
   ],
   "notes": "Very thin run. Search surfaced almost no clinic own-sites for Botswana. No Botswana Veterinary Association, BUAN or Department of Veterinary Services page listing private small-animal clinics, duty rotas or an animal poison line was found. WebFetch refused (PROVENANCE_REQUIRED): https://www.vetagric.co.bw/ (root; the /index.php/home page was opened instead), https://familygems.co.bw/2017/11/28/owning-pet-botswana-medical-info/ (client_error). Not used (aggregator/directory only, not opened as entry source): localbotswana.com listings (Gaborone Veterinary Clinic +267 391 4121; Bhatanani Veterinary Clinic Francistown), medpages.info, directory.africa-business.com, goafricaonline (0 results). Nothing found for Francistown, Maun, Kasane, Palapye, Serowe private clinics. No 24 h clinic verified, no duty rota, no poison line. Government district veterinary offices (cms2.gov.bw PDF) are livestock/regulatory and not published. Needs own-site verification in a later run."

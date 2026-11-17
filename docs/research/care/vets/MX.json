@@ -70,7 +70,8 @@
         "it": "Ospedale didattico universitario per piccoli animali. Pronto soccorso lun–ven 8:00–17:00 e sab 8:00–14:00 (non 24 ore su 24); visite su appuntamento lun–ven 10:00–17:00, sab 10:00–14:00. Il servizio può essere sospeso senza preavviso.",
         "pt": "Hospital universitário para animais de pequeno porte. Urgências de segunda a sexta 8h00–17h00 e sábado 8h00–14h00 (não abre 24 horas); consultas de segunda a sexta 10h00–17h00, sábado 10h00–14h00. O serviço pode ser suspenso sem aviso prévio.",
         "nl": "Universitair dierenziekenhuis voor kleine huisdieren (opleidingsziekenhuis). Spoed ma–vr 8.00–17.00 uur en za 8.00–14.00 uur (niet 24 uur); afspraken ma–vr 10.00–17.00 uur, za 10.00–14.00 uur. Dienst kan zonder voorafgaand bericht worden opgeschort.",
-        "pl": "Uniwersytecki szpital kliniczny małych zwierząt. Nagłe przypadki pon.–pt. 8:00–17:00 i sob. 8:00–14:00 (nie całodobowo); wizyty po umówieniu pon.–pt. 10:00–17:00, sob. 10:00–14:00. Usługa może zostać zawieszona bez uprzedzenia."
+        "pl": "Uniwersytecki szpital kliniczny małych zwierząt. Nagłe przypadki pon.–pt. 8:00–17:00 i sob. 8:00–14:00 (nie całodobowo); wizyty po umówieniu pon.–pt. 10:00–17:00, sob. 10:00–14:00. Usługa może zostać zawieszona bez uprzedzenia.",
+        "cs": "Univerzitní výuková nemocnice pro malá zvířata. Pohotovost Po–Pá 8:00–17:00 a so 8:00–14:00 (ne nonstop); objednaní pacienti Po–Pá 10:00–17:00, so 10:00–14:00. Provoz může být bez upozornění pozastaven."
       }
     },
     {
@@ -93,7 +94,8 @@
         "it": "Aperto dal lunedì alla domenica, 24 ore su 24.",
         "pt": "Aberto de segunda a domingo, 24 horas por dia.",
         "nl": "Van maandag tot en met zondag 24 uur geopend.",
-        "pl": "Otwarte od poniedziałku do niedzieli, całodobowo."
+        "pl": "Otwarte od poniedziałku do niedzieli, całodobowo.",
+        "cs": "Otevřeno od pondělí do neděle, nonstop."
       }
     },
     {
@@ -116,7 +118,8 @@
         "it": "Aperto dal lunedì alla domenica, 24 ore su 24.",
         "pt": "Aberto de segunda a domingo, 24 horas por dia.",
         "nl": "Van maandag tot en met zondag 24 uur geopend.",
-        "pl": "Otwarte od poniedziałku do niedzieli, całodobowo."
+        "pl": "Otwarte od poniedziałku do niedzieli, całodobowo.",
+        "cs": "Otevřeno od pondělí do neděle, nonstop."
       }
     },
     {
@@ -140,7 +143,8 @@
         "it": "Aperto dal lunedì alla domenica, 24 ore su 24. Chiamare prima per confermare il pronto soccorso.",
         "pt": "Aberto de segunda a domingo, 24 horas por dia. Liga antes para confirmar o serviço de urgência.",
         "nl": "Van maandag tot en met zondag 24 uur geopend. Bel vooraf om de spoeddienst te bevestigen.",
-        "pl": "Otwarte od poniedziałku do niedzieli, całodobowo. Zadzwoń wcześniej, aby potwierdzić dostępność pogotowia."
+        "pl": "Otwarte od poniedziałku do niedzieli, całodobowo. Zadzwoń wcześniej, aby potwierdzić dostępność pogotowia.",
+        "cs": "Otevřeno od pondělí do neděle, nonstop. Dostupnost pohotovosti ověřte telefonicky."
       }
     },
     {
@@ -163,7 +167,8 @@
         "it": "Aperto tutti i giorni 10:00–20:00. Non è una sede aperta 24 ore su 24.",
         "pt": "Aberto todos os dias 10h00–20h00. Filial sem serviço 24 horas.",
         "nl": "Dagelijks geopend 10.00–20.00 uur. Geen 24-uursvestiging.",
-        "pl": "Czynne codziennie 10:00–20:00. To nie jest oddział całodobowy."
+        "pl": "Czynne codziennie 10:00–20:00. To nie jest oddział całodobowy.",
+        "cs": "Otevřeno denně 10:00–20:00. Pobočka není nonstop."
       }
     },
     {
@@ -186,7 +191,8 @@
         "it": "Aperto tutti i giorni 10:00–20:00. Non è una sede aperta 24 ore su 24.",
         "pt": "Aberto todos os dias 10h00–20h00. Filial sem serviço 24 horas.",
         "nl": "Dagelijks geopend 10.00–20.00 uur. Geen 24-uursvestiging.",
-        "pl": "Czynne codziennie 10:00–20:00. To nie jest oddział całodobowy."
+        "pl": "Czynne codziennie 10:00–20:00. To nie jest oddział całodobowy.",
+        "cs": "Otevřeno denně 10:00–20:00. Pobočka není nonstop."
       }
     },
     {
@@ -209,7 +215,8 @@
         "it": "Aperto tutti i giorni 10:00–20:00. Non è una sede aperta 24 ore su 24.",
         "pt": "Aberto todos os dias 10h00–20h00. Filial sem serviço 24 horas.",
         "nl": "Dagelijks geopend 10.00–20.00 uur. Geen 24-uursvestiging.",
-        "pl": "Czynne codziennie 10:00–20:00. To nie jest oddział całodobowy."
+        "pl": "Czynne codziennie 10:00–20:00. To nie jest oddział całodobowy.",
+        "cs": "Otevřeno denně 10:00–20:00. Pobočka není nonstop."
       }
     },
     {
@@ -233,7 +240,8 @@
         "it": "Pronto soccorso e laboratorio 24 ore su 24, 7 giorni su 7. Orario ordinario lun–sab 11:00–21:00.",
         "pt": "Urgências e laboratório 24 h/24, 7 dias por semana. Horário normal de segunda a sábado 11h00–21h00.",
         "nl": "Spoed en laboratorium 24 uur per dag, 7 dagen per week. Reguliere openingstijden ma–za 11.00–21.00 uur.",
-        "pl": "Nagłe przypadki i laboratorium całodobowo, 7 dni w tygodniu. Zwykłe godziny: pon.–sob. 11:00–21:00."
+        "pl": "Nagłe przypadki i laboratorium całodobowo, 7 dni w tygodniu. Zwykłe godziny: pon.–sob. 11:00–21:00.",
+        "cs": "Pohotovost a laboratoř nonstop, 7 dní v týdnu. Běžná ordinační doba Po–So 11:00–21:00."
       }
     },
     {
@@ -256,7 +264,8 @@
         "it": "Aperto tutti i giorni, 24 ore su 24, 365 giorni all'anno. Linea di emergenza; WhatsApp solo per messaggi.",
         "pt": "Aberto todos os dias, 24 horas por dia, 365 dias por ano. Linha de urgência; o WhatsApp serve apenas para mensagens.",
         "nl": "Elke dag 24 uur geopend, 365 dagen per jaar. Spoedlijn; WhatsApp alleen voor berichten.",
-        "pl": "Czynne codziennie, całodobowo, 365 dni w roku. Linia dla nagłych przypadków; WhatsApp tylko do wiadomości."
+        "pl": "Czynne codziennie, całodobowo, 365 dni w roku. Linia dla nagłych przypadków; WhatsApp tylko do wiadomości.",
+        "cs": "Nonstop, každý den, 365 dní v roce. Pohotovostní linka; WhatsApp je pouze pro zprávy."
       }
     },
     {
@@ -280,7 +289,8 @@
         "it": "Ospedale per gatti; aperto tutti i giorni, 24 ore su 24.",
         "pt": "Hospital de gatos; aberto todos os dias, 24 horas por dia.",
         "nl": "Kattenziekenhuis; elke dag 24 uur geopend.",
-        "pl": "Szpital dla kotów; czynny codziennie, całodobowo."
+        "pl": "Szpital dla kotów; czynny codziennie, całodobowo.",
+        "cs": "Kočičí nemocnice; otevřeno každý den, nonstop."
       }
     },
     {
@@ -304,7 +314,8 @@
         "it": "Medicina preventiva, aperto tutti i giorni 7:30–21:00. Non è una sede aperta 24 ore su 24.",
         "pt": "Cuidados preventivos, aberto todos os dias 7h30–21h00. Não abre 24 horas.",
         "nl": "Preventieve zorg, dagelijks geopend 7.30–21.00 uur. Geen 24-uurslocatie.",
-        "pl": "Opieka profilaktyczna, czynne codziennie 7:30–21:00. To nie jest placówka całodobowa."
+        "pl": "Opieka profilaktyczna, czynne codziennie 7:30–21:00. To nie jest placówka całodobowa.",
+        "cs": "Preventivní péče, otevřeno denně 7:30–21:00. Není nonstop."
       }
     },
     {
@@ -328,7 +339,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Clinica lun–sab 10:00–18:00, dom 10:00–15:00.",
         "pt": "Urgências 24 horas por dia, 365 dias por ano. Clínica de segunda a sábado 10h00–18h00, domingo 10h00–15h00.",
         "nl": "Spoed 24 uur per dag, 365 dagen per jaar. Kliniek ma–za 10.00–18.00 uur, zo 10.00–15.00 uur.",
-        "pl": "Nagłe przypadki całodobowo, 365 dni w roku. Przychodnia: pon.–sob. 10:00–18:00, niedz. 10:00–15:00."
+        "pl": "Nagłe przypadki całodobowo, 365 dni w roku. Przychodnia: pon.–sob. 10:00–18:00, niedz. 10:00–15:00.",
+        "cs": "Pohotovost nonstop, 365 dní v roce. Klinika Po–So 10:00–18:00, ne 10:00–15:00."
       }
     },
     {
@@ -351,7 +363,8 @@
         "it": "Aperto 24 ore su 24, 365 giorni all'anno (giorno 9:00–19:30, notte 19:31–8:59).",
         "pt": "Aberto 24 horas por dia, 365 dias por ano (dia 9h00–19h30, noite 19h31–8h59).",
         "nl": "24 uur geopend, 365 dagen per jaar (dag 9.00–19.30 uur, nacht 19.31–8.59 uur).",
-        "pl": "Czynne całodobowo, 365 dni w roku (dzień 9:00–19:30, noc 19:31–8:59)."
+        "pl": "Czynne całodobowo, 365 dni w roku (dzień 9:00–19:30, noc 19:31–8:59).",
+        "cs": "Nonstop, 365 dní v roce (den 9:00–19:30, noc 19:31–8:59)."
       }
     },
     {
@@ -374,7 +387,8 @@
         "it": "Servizio 24 ore su 24; pronto soccorso 24 ore su 24, 365 giorni all'anno.",
         "pt": "Serviço 24 horas por dia; urgências 24 horas por dia, 365 dias por ano.",
         "nl": "24-uursdienst; spoed 24 uur per dag, 365 dagen per jaar.",
-        "pl": "Usługi całodobowe; nagłe przypadki całodobowo, 365 dni w roku."
+        "pl": "Usługi całodobowe; nagłe przypadki całodobowo, 365 dni w roku.",
+        "cs": "Nonstop služba; pohotovost nonstop, 365 dní v roce."
       }
     },
     {
@@ -397,7 +411,8 @@
         "it": "Servizio 24 ore su 24; pronto soccorso 24 ore su 24, 365 giorni all'anno.",
         "pt": "Serviço 24 horas por dia; urgências 24 horas por dia, 365 dias por ano.",
         "nl": "24-uursdienst; spoed 24 uur per dag, 365 dagen per jaar.",
-        "pl": "Usługi całodobowe; nagłe przypadki całodobowo, 365 dni w roku."
+        "pl": "Usługi całodobowe; nagłe przypadki całodobowo, 365 dni w roku.",
+        "cs": "Nonstop služba; pohotovost nonstop, 365 dní v roce."
       }
     },
     {
@@ -421,7 +436,8 @@
         "it": "Ospedale aperto 24 ore su 24.",
         "pt": "Hospital aberto 24 horas por dia.",
         "nl": "Dierenziekenhuis 24 uur geopend.",
-        "pl": "Szpital czynny całą dobę."
+        "pl": "Szpital czynny całą dobę.",
+        "cs": "Nemocnice nonstop."
       }
     },
     {
@@ -444,7 +460,8 @@
         "it": "Aperto dal lunedì alla domenica e nei festivi, 24 ore su 24. Pronto soccorso di medicina interna 24 ore su 24.",
         "pt": "Aberto de segunda a domingo e feriados, 24 horas por dia. Urgências de medicina interna 24 horas por dia.",
         "nl": "Van maandag tot en met zondag en op feestdagen 24 uur geopend. Spoed interne geneeskunde 24 uur per dag.",
-        "pl": "Czynne od poniedziałku do niedzieli i w święta, całodobowo. Nagłe przypadki z zakresu chorób wewnętrznych całodobowo."
+        "pl": "Czynne od poniedziałku do niedzieli i w święta, całodobowo. Nagłe przypadki z zakresu chorób wewnętrznych całodobowo.",
+        "cs": "Otevřeno od pondělí do neděle a o svátcích, nonstop. Pohotovost interního lékařství nonstop."
       }
     },
     {
@@ -467,7 +484,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Visite 9:00–19:00, visite notturne 19:00–9:00.",
         "pt": "Urgências 24 horas por dia, 365 dias por ano. Consultas 9h00–19h00, consultas noturnas 19h00–9h00.",
         "nl": "Spoed 24 uur per dag, 365 dagen per jaar. Consulten 9.00–19.00 uur, nachtconsulten 19.00–9.00 uur.",
-        "pl": "Nagłe przypadki całodobowo, 365 dni w roku. Konsultacje 9:00–19:00, konsultacje nocne 19:00–9:00."
+        "pl": "Nagłe przypadki całodobowo, 365 dni w roku. Konsultacje 9:00–19:00, konsultacje nocne 19:00–9:00.",
+        "cs": "Pohotovost nonstop, 365 dní v roce. Konzultace 9:00–19:00, noční konzultace 19:00–9:00."
       }
     },
     {
@@ -505,7 +523,8 @@
         "it": "Pronto soccorso aperto 24 ore su 24.",
         "pt": "Urgências abertas 24 horas por dia.",
         "nl": "Spoed 24 uur geopend.",
-        "pl": "Nagłe przypadki przyjmowane całodobowo."
+        "pl": "Nagłe przypadki przyjmowane całodobowo.",
+        "cs": "Pohotovost nonstop."
       }
     },
     {
@@ -528,7 +547,8 @@
         "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco).",
         "pt": "Aberto todos os dias 9h00–21h00 (dentro de uma loja Petco).",
         "nl": "Dagelijks geopend 9.00–21.00 uur (in een Petco-winkel).",
-        "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco)."
+        "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco).",
+        "cs": "Otevřeno denně 9:00–21:00 (uvnitř prodejny Petco)."
       }
     },
     {
@@ -551,7 +571,8 @@
         "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco).",
         "pt": "Aberto todos os dias 9h00–21h00 (dentro de uma loja Petco).",
         "nl": "Dagelijks geopend 9.00–21.00 uur (in een Petco-winkel).",
-        "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco)."
+        "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco).",
+        "cs": "Otevřeno denně 9:00–21:00 (uvnitř prodejny Petco)."
       }
     },
     {
@@ -574,7 +595,8 @@
         "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco).",
         "pt": "Aberto todos os dias 9h00–21h00 (dentro de uma loja Petco).",
         "nl": "Dagelijks geopend 9.00–21.00 uur (in een Petco-winkel).",
-        "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco)."
+        "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco).",
+        "cs": "Otevřeno denně 9:00–21:00 (uvnitř prodejny Petco)."
       }
     },
     {
@@ -597,7 +619,8 @@
         "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco).",
         "pt": "Aberto todos os dias 9h00–21h00 (dentro de uma loja Petco).",
         "nl": "Dagelijks geopend 9.00–21.00 uur (in een Petco-winkel).",
-        "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco)."
+        "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco).",
+        "cs": "Otevřeno denně 9:00–21:00 (uvnitř prodejny Petco)."
       }
     },
     {
@@ -620,7 +643,8 @@
         "it": "Aperto tutti i giorni 9:00–21:00 (all'interno di un negozio Petco).",
         "pt": "Aberto todos os dias 9h00–21h00 (dentro de uma loja Petco).",
         "nl": "Dagelijks geopend 9.00–21.00 uur (in een Petco-winkel).",
-        "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco)."
+        "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco).",
+        "cs": "Otevřeno denně 9:00–21:00 (uvnitř prodejny Petco)."
       }
     },
     {
@@ -644,7 +668,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7, domeniche e festivi compresi.",
         "pt": "Aberto 24 h/24, 7 dias por semana, incluindo domingos e feriados.",
         "nl": "24 uur per dag, 7 dagen per week geopend, ook op zon- en feestdagen.",
-        "pl": "Czynne całą dobę, 7 dni w tygodniu, także w niedziele i święta."
+        "pl": "Czynne całą dobę, 7 dni w tygodniu, także w niedziele i święta.",
+        "cs": "Nonstop, 7 dní v týdnu, včetně nedělí a svátků."
       }
     },
     {
@@ -667,7 +692,8 @@
         "it": "Ospedale di Condesa aperto 24 ore su 24, 365 giorni all'anno.",
         "pt": "Hospital de Condesa aberto 24 horas por dia, 365 dias por ano.",
         "nl": "Dierenziekenhuis in Condesa 24 uur geopend, 365 dagen per jaar.",
-        "pl": "Szpital Condesa czynny całodobowo, 365 dni w roku."
+        "pl": "Szpital Condesa czynny całodobowo, 365 dni w roku.",
+        "cs": "Nemocnice Condesa nonstop, 365 dní v roce."
       }
     },
     {
@@ -691,7 +717,8 @@
         "it": "Aperto 24 ore su 24, tutti i giorni dell'anno, per medicina preventiva e pronto soccorso.",
         "pt": "Aberto 24 horas por dia, todos os dias do ano, para cuidados preventivos e urgências.",
         "nl": "24 uur geopend, elke dag van het jaar, voor preventieve zorg en spoed.",
-        "pl": "Czynne całodobowo, codziennie przez cały rok, dla opieki profilaktycznej i nagłych przypadków."
+        "pl": "Czynne całodobowo, codziennie przez cały rok, dla opieki profilaktycznej i nagłych przypadków.",
+        "cs": "Nonstop, každý den v roce, pro preventivní péči i pohotovost."
       }
     },
     {
@@ -715,7 +742,8 @@
         "it": "Telefonare in anticipo per gli orari.",
         "pt": "Liga antes para saber o horário.",
         "nl": "Bel vooraf voor de openingstijden.",
-        "pl": "Zadzwoń przed wizytą, by poznać godziny."
+        "pl": "Zadzwoń przed wizytą, by poznać godziny.",
+        "cs": "Otevírací dobu zjistíte telefonicky."
       }
     },
     {
@@ -738,7 +766,8 @@
         "it": "Pronto soccorso 24 ore su 24, 365 giorni all'anno. Specialisti di ortopedia e neurologia lun–ven.",
         "pt": "Urgências 24 horas por dia, 365 dias por ano. Especialistas em ortopedia e neurologia de segunda a sexta.",
         "nl": "Spoed 24 uur per dag, 365 dagen per jaar. Specialisten in orthopedie en neurologie ma–vr.",
-        "pl": "Nagłe przypadki całodobowo, 365 dni w roku. Specjaliści ortopedii i neurologii pon.–pt."
+        "pl": "Nagłe przypadki całodobowo, 365 dni w roku. Specjaliści ortopedii i neurologii pon.–pt.",
+        "cs": "Pohotovost nonstop, 365 dní v roce. Specialisté na ortopedii a neurologii Po–Pá."
       }
     },
     {
@@ -762,7 +791,8 @@
         "it": "Pronto soccorso 24 ore su 24, 7 giorni su 7. Visite lun–sab 9:00–20:00; la domenica solo emergenze.",
         "pt": "Urgências 24 h/24, 7 dias por semana. Consultas de segunda a sábado 9h00–20h00; aos domingos só urgências.",
         "nl": "Spoedzorg 24 uur per dag, 7 dagen per week. Consulten ma–za 9.00–20.00 uur; op zondag alleen spoed.",
-        "pl": "Pomoc w nagłych przypadkach całodobowo, 7 dni w tygodniu. Konsultacje pon.–sob. 9:00–20:00; w niedziele tylko nagłe przypadki."
+        "pl": "Pomoc w nagłych przypadkach całodobowo, 7 dni w tygodniu. Konsultacje pon.–sob. 9:00–20:00; w niedziele tylko nagłe przypadki.",
+        "cs": "Pohotovostní péče nonstop, 7 dní v týdnu. Konzultace Po–So 9:00–20:00; v neděli pouze pohotovost."
       }
     },
     {
@@ -784,7 +814,8 @@
         "it": "Cliniche veterinarie nella Zona Hotelera, in centro e a Puerto Cancún. Telefonare in anticipo per gli orari di apertura.",
         "pt": "Clínicas veterinárias na Zona Hoteleira, no Centro e em Puerto Cancún. Liga antes para saber o horário.",
         "nl": "Dierenklinieken in de Hotel Zone, Downtown en Puerto Cancún. Bel vooraf voor de openingstijden.",
-        "pl": "Przychodnie weterynaryjne w Hotel Zone, Downtown i Puerto Cancún. Zadzwoń przed wizytą, aby poznać godziny otwarcia."
+        "pl": "Przychodnie weterynaryjne w Hotel Zone, Downtown i Puerto Cancún. Zadzwoń przed wizytą, aby poznać godziny otwarcia.",
+        "cs": "Veterinární kliniky v Hotel Zone, Downtown a Puerto Cancún. Ordinační dobu zjistíte telefonicky."
       }
     },
     {
@@ -808,7 +839,8 @@
         "it": "Clinica per piccoli animali a Jardines del Sur. Telefonare in anticipo per gli orari di apertura.",
         "pt": "Clínica de animais de pequeno porte em Jardines del Sur. Liga antes para saber o horário.",
         "nl": "Kliniek voor kleine huisdieren in Jardines del Sur. Bel vooraf voor de openingstijden.",
-        "pl": "Przychodnia dla małych zwierząt w Jardines del Sur. Zadzwoń przed wizytą, aby poznać godziny otwarcia."
+        "pl": "Przychodnia dla małych zwierząt w Jardines del Sur. Zadzwoń przed wizytą, aby poznać godziny otwarcia.",
+        "cs": "Klinika pro malá zvířata v Jardines del Sur. Ordinační dobu zjistíte telefonicky."
       }
     },
     {
@@ -832,7 +864,8 @@
         "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–20:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24.",
         "pt": "Clínica e loja de animais: segunda a sábado 9h00–21h00, domingo 10h00–20h00. Consultas durante a semana sob marcação; aos fins de semana sem marcação, por ordem de chegada. Não abre 24 horas.",
         "nl": "Kliniek en dierenwinkel: ma–za 9.00–21.00 uur, zo 10.00–20.00 uur. Kliniekbezoek op werkdagen op afspraak; in het weekend op volgorde van binnenkomst. Geen 24-uurskliniek.",
-        "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–20:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa."
+        "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–20:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa.",
+        "cs": "Klinika a obchod pro domácí zvířata: Po–So 9:00–21:00, ne 10:00–20:00. V pracovní dny návštěvy kliniky na objednání; o víkendech bez objednání, podle pořadí příchodu. Nejde o nonstop kliniku."
       }
     },
     {
@@ -856,7 +889,8 @@
         "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–20:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24.",
         "pt": "Clínica e loja de animais: segunda a sábado 9h00–21h00, domingo 10h00–20h00. Consultas durante a semana sob marcação; aos fins de semana sem marcação, por ordem de chegada. Não abre 24 horas.",
         "nl": "Kliniek en dierenwinkel: ma–za 9.00–21.00 uur, zo 10.00–20.00 uur. Kliniekbezoek op werkdagen op afspraak; in het weekend op volgorde van binnenkomst. Geen 24-uurskliniek.",
-        "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–20:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa."
+        "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–20:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa.",
+        "cs": "Klinika a obchod pro domácí zvířata: Po–So 9:00–21:00, ne 10:00–20:00. V pracovní dny návštěvy kliniky na objednání; o víkendech bez objednání, podle pořadí příchodu. Nejde o nonstop kliniku."
       }
     },
     {
@@ -880,7 +914,8 @@
         "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–21:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24.",
         "pt": "Clínica e loja de animais: segunda a sábado 9h00–21h00, domingo 10h00–21h00. Consultas durante a semana sob marcação; aos fins de semana sem marcação, por ordem de chegada. Não abre 24 horas.",
         "nl": "Kliniek en dierenwinkel: ma–za 9.00–21.00 uur, zo 10.00–21.00 uur. Kliniekbezoek op werkdagen op afspraak; in het weekend op volgorde van binnenkomst. Geen 24-uurskliniek.",
-        "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–21:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa."
+        "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–21:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa.",
+        "cs": "Klinika a obchod pro domácí zvířata: Po–So 9:00–21:00, ne 10:00–21:00. V pracovní dny návštěvy kliniky na objednání; o víkendech bez objednání, podle pořadí příchodu. Nejde o nonstop kliniku."
       }
     },
     {
@@ -904,7 +939,8 @@
         "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–20:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24.",
         "pt": "Clínica e loja de animais: segunda a sábado 9h00–21h00, domingo 10h00–20h00. Consultas durante a semana sob marcação; aos fins de semana sem marcação, por ordem de chegada. Não abre 24 horas.",
         "nl": "Kliniek en dierenwinkel: ma–za 9.00–21.00 uur, zo 10.00–20.00 uur. Kliniekbezoek op werkdagen op afspraak; in het weekend op volgorde van binnenkomst. Geen 24-uurskliniek.",
-        "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–20:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa."
+        "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–20:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa.",
+        "cs": "Klinika a obchod pro domácí zvířata: Po–So 9:00–21:00, ne 10:00–20:00. V pracovní dny návštěvy kliniky na objednání; o víkendech bez objednání, podle pořadí příchodu. Nejde o nonstop kliniku."
       }
     },
     {
@@ -928,7 +964,8 @@
         "it": "Clinica e negozio per animali: lun–sab 9:00–21:00, dom 10:00–21:00. Visite in clinica nei giorni feriali su appuntamento; nel fine settimana in ordine di arrivo. Non è una clinica aperta 24 ore su 24.",
         "pt": "Clínica e loja de animais: segunda a sábado 9h00–21h00, domingo 10h00–21h00. Consultas durante a semana sob marcação; aos fins de semana sem marcação, por ordem de chegada. Não abre 24 horas.",
         "nl": "Kliniek en dierenwinkel: ma–za 9.00–21.00 uur, zo 10.00–21.00 uur. Kliniekbezoek op werkdagen op afspraak; in het weekend op volgorde van binnenkomst. Geen 24-uurskliniek.",
-        "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–21:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa."
+        "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–21:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa.",
+        "cs": "Klinika a obchod pro domácí zvířata: Po–So 9:00–21:00, ne 10:00–21:00. V pracovní dny návštěvy kliniky na objednání; o víkendech bez objednání, podle pořadí příchodu. Nejde o nonstop kliniku."
       }
     },
     {
@@ -952,7 +989,8 @@
         "it": "Lun–ven 9:00–19:00 e sab 9:00–16:00; chiuso la domenica. Emergenze fuori orario: chiamare prima per indicazioni. Inglese e spagnolo.",
         "pt": "Segunda a sexta 9h00–19h00 e sábado 9h00–16h00; fechado ao domingo. Urgências fora de horas: liga primeiro para obter orientação. Falam inglês e espanhol.",
         "nl": "Ma–vr 9.00–19.00 uur en za 9.00–16.00 uur; zondag gesloten. Spoed buiten openingstijden: bel eerst voor advies. Engels en Spaans.",
-        "pl": "Pon.–pt. 9:00–19:00 i sob. 9:00–16:00; w niedzielę nieczynne. Nagłe przypadki poza godzinami pracy: najpierw zadzwoń po wskazówki. Obsługa po angielsku i hiszpańsku."
+        "pl": "Pon.–pt. 9:00–19:00 i sob. 9:00–16:00; w niedzielę nieczynne. Nagłe przypadki poza godzinami pracy: najpierw zadzwoń po wskazówki. Obsługa po angielsku i hiszpańsku.",
+        "cs": "Po–Pá 9:00–19:00 a so 9:00–16:00; v neděli zavřeno. Pohotovost mimo ordinační dobu: nejdřív zavolejte pro pokyny. Anglicky a španělsky."
       }
     },
     {
@@ -976,7 +1014,8 @@
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Linea di emergenza e WhatsApp +52 33 2162 6445; appuntamenti +52 33 2316 2714.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Linha de urgência e WhatsApp +52 33 2162 6445; marcações +52 33 2316 2714.",
         "nl": "24 uur geopend, 365 dagen per jaar. Spoedlijn en WhatsApp +52 33 2162 6445; afspraken +52 33 2316 2714.",
-        "pl": "Czynne całodobowo, 365 dni w roku. Linia dla nagłych przypadków i WhatsApp +52 33 2162 6445; rejestracja wizyt +52 33 2316 2714."
+        "pl": "Czynne całodobowo, 365 dni w roku. Linia dla nagłych przypadków i WhatsApp +52 33 2162 6445; rejestracja wizyt +52 33 2316 2714.",
+        "cs": "Nonstop, 365 dní v roce. Pohotovostní linka a WhatsApp +52 33 2162 6445; objednávky +52 33 2316 2714."
       }
     },
     {
@@ -999,7 +1038,8 @@
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Pronto soccorso senza appuntamento.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Atendimento urgente sem marcação.",
         "nl": "24 uur geopend, 365 dagen per jaar. Spoedzorg zonder afspraak.",
-        "pl": "Czynne całodobowo, 365 dni w roku. Pilna pomoc bez umawiania wizyty."
+        "pl": "Czynne całodobowo, 365 dni w roku. Pilna pomoc bez umawiania wizyty.",
+        "cs": "Nonstop, 365 dní v roce. Naléhavá péče bez objednání."
       }
     },
     {
@@ -1022,7 +1062,8 @@
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Pronto soccorso senza appuntamento.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Atendimento urgente sem marcação.",
         "nl": "24 uur geopend, 365 dagen per jaar. Spoedzorg zonder afspraak.",
-        "pl": "Czynne całodobowo, 365 dni w roku. Pilna pomoc bez umawiania wizyty."
+        "pl": "Czynne całodobowo, 365 dni w roku. Pilna pomoc bez umawiania wizyty.",
+        "cs": "Nonstop, 365 dní v roce. Naléhavá péče bez objednání."
       }
     },
     {
@@ -1045,7 +1086,8 @@
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Pronto soccorso senza appuntamento.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Atendimento urgente sem marcação.",
         "nl": "24 uur geopend, 365 dagen per jaar. Spoedzorg zonder afspraak.",
-        "pl": "Czynne całodobowo, 365 dni w roku. Pilna pomoc bez umawiania wizyty."
+        "pl": "Czynne całodobowo, 365 dni w roku. Pilna pomoc bez umawiania wizyty.",
+        "cs": "Nonstop, 365 dní v roce. Naléhavá péče bez objednání."
       }
     },
     {
@@ -1068,7 +1110,8 @@
         "it": "Aperto 24 ore su 24. Pronto soccorso senza appuntamento.",
         "pt": "Aberto 24 horas por dia. Atendimento urgente sem marcação.",
         "nl": "24 uur geopend. Spoedzorg zonder afspraak.",
-        "pl": "Czynne całodobowo. Pilna pomoc bez umawiania wizyty."
+        "pl": "Czynne całodobowo. Pilna pomoc bez umawiania wizyty.",
+        "cs": "Nonstop. Naléhavá péče bez objednání."
       }
     },
     {
@@ -1091,7 +1134,8 @@
         "it": "Ospedale aperto 24 ore su 24, 365 giorni all'anno. WhatsApp +52 33 3849 4603.",
         "pt": "Hospital aberto 24 horas por dia, 365 dias por ano. WhatsApp +52 33 3849 4603.",
         "nl": "Dierenziekenhuis 24 uur geopend, 365 dagen per jaar. WhatsApp +52 33 3849 4603.",
-        "pl": "Szpital czynny całodobowo, 365 dni w roku. WhatsApp +52 33 3849 4603."
+        "pl": "Szpital czynny całodobowo, 365 dni w roku. WhatsApp +52 33 3849 4603.",
+        "cs": "Nemocnice nonstop, 365 dní v roce. WhatsApp +52 33 3849 4603."
       }
     },
     {
@@ -1115,7 +1159,8 @@
         "it": "Clinica succursale; telefonare in anticipo per gli orari. L'ospedale principale in Av. Patria è aperto 24 ore su 24.",
         "pt": "Clínica filial; liga antes para saber o horário. O hospital principal, na Av. Patria, está aberto 24 horas por dia.",
         "nl": "Vestiging; bel vooraf voor de openingstijden. Het hoofddierenziekenhuis aan Av. Patria is 24 uur geopend.",
-        "pl": "Filia przychodni; zadzwoń przed wizytą, aby poznać godziny. Główny szpital przy Av. Patria jest czynny całodobowo."
+        "pl": "Filia przychodni; zadzwoń przed wizytą, aby poznać godziny. Główny szpital przy Av. Patria jest czynny całodobowo.",
+        "cs": "Pobočka kliniky; ordinační dobu zjistíte telefonicky. Hlavní nemocnice na Av. Patria je nonstop."
       }
     },
     {
@@ -1138,7 +1183,8 @@
         "it": "Pronto soccorso 24 ore su 24, tutti i giorni; visite tutti i giorni 9:00–20:00.",
         "pt": "Urgências 24 horas por dia, todos os dias; consultas todos os dias 9h00–20h00.",
         "nl": "Spoed 24 uur per dag, elke dag; consulten dagelijks 9.00–20.00 uur.",
-        "pl": "Nagłe przypadki całodobowo, codziennie; konsultacje codziennie 9:00–20:00."
+        "pl": "Nagłe przypadki całodobowo, codziennie; konsultacje codziennie 9:00–20:00.",
+        "cs": "Pohotovost nonstop, každý den; konzultace denně 9:00–20:00."
       }
     },
     {
@@ -1161,7 +1207,8 @@
         "it": "Visite tutti i giorni 9:00–21:00. Il pronto soccorso 24 ore su 24 è presso l'ospedale in Av. La Calma 4471.",
         "pt": "Consultas todos os dias 9h00–21h00. As urgências 24 horas por dia são no hospital da Av. La Calma 4471.",
         "nl": "Consulten dagelijks 9.00–21.00 uur. Spoed 24 uur per dag in het dierenziekenhuis aan Av. La Calma 4471.",
-        "pl": "Konsultacje codziennie 9:00–21:00. Całodobowe nagłe przypadki przyjmuje szpital przy Av. La Calma 4471."
+        "pl": "Konsultacje codziennie 9:00–21:00. Całodobowe nagłe przypadki przyjmuje szpital przy Av. La Calma 4471.",
+        "cs": "Konzultace denně 9:00–21:00. Pohotovost nonstop je v nemocnici na Av. La Calma 4471."
       }
     },
     {
@@ -1185,7 +1232,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7, pronto soccorso compreso. Appuntamenti +52 81 1871 0654.",
         "pt": "Aberto 24 h/24, 7 dias por semana, incluindo urgências. Marcações +52 81 1871 0654.",
         "nl": "24 uur per dag, 7 dagen per week geopend, ook voor spoed. Afspraken +52 81 1871 0654.",
-        "pl": "Czynne całodobowo, 7 dni w tygodniu, także w nagłych przypadkach. Rejestracja wizyt +52 81 1871 0654."
+        "pl": "Czynne całodobowo, 7 dni w tygodniu, także w nagłych przypadkach. Rejestracja wizyt +52 81 1871 0654.",
+        "cs": "Nonstop, 7 dní v týdnu, včetně pohotovosti. Objednávky +52 81 1871 0654."
       }
     },
     {
@@ -1209,7 +1257,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7. Seconda linea +52 81 8348 0492.",
         "pt": "Aberto 24 h/24, 7 dias por semana. Segunda linha +52 81 8348 0492.",
         "nl": "24 uur per dag, 7 dagen per week geopend. Tweede lijn +52 81 8348 0492.",
-        "pl": "Czynne całodobowo, 7 dni w tygodniu. Druga linia +52 81 8348 0492."
+        "pl": "Czynne całodobowo, 7 dni w tygodniu. Druga linia +52 81 8348 0492.",
+        "cs": "Nonstop, 7 dní v týdnu. Druhá linka +52 81 8348 0492."
       }
     },
     {
@@ -1231,7 +1280,8 @@
         "it": "Ospedale veterinario con pronto soccorso; telefonare per gli orari di apertura.",
         "pt": "Hospital veterinário com urgências; liga para saber o horário.",
         "nl": "Dierenziekenhuis met spoedzorg; bel voor de openingstijden.",
-        "pl": "Szpital weterynaryjny z pomocą w nagłych przypadkach; zadzwoń, aby poznać godziny otwarcia."
+        "pl": "Szpital weterynaryjny z pomocą w nagłych przypadkach; zadzwoń, aby poznać godziny otwarcia.",
+        "cs": "Veterinární nemocnice s pohotovostní péčí; ordinační dobu zjistíte telefonicky."
       }
     },
     {
@@ -1254,7 +1304,8 @@
         "it": "Aperto 24 ore su 24, tutti i giorni. Altre linee +52 222 169 6687 e +52 221 195 3312.",
         "pt": "Aberto 24 horas por dia, todos os dias. Outras linhas +52 222 169 6687 e +52 221 195 3312.",
         "nl": "Elke dag 24 uur geopend. Overige nummers +52 222 169 6687 en +52 221 195 3312.",
-        "pl": "Czynne całodobowo, codziennie. Inne numery +52 222 169 6687 i +52 221 195 3312."
+        "pl": "Czynne całodobowo, codziennie. Inne numery +52 222 169 6687 i +52 221 195 3312.",
+        "cs": "Nonstop, každý den. Další linky +52 222 169 6687 a +52 221 195 3312."
       }
     },
     {
@@ -1277,7 +1328,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7.",
         "pt": "Aberto 24 h/24, 7 dias por semana.",
         "nl": "24 uur per dag, 7 dagen per week geopend.",
-        "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu."
+        "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu.",
+        "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu."
       }
     },
     {
@@ -1301,7 +1353,8 @@
         "it": "Telefonare in anticipo per gli orari. L'ospedale di Recta a Cholula è aperto 24 ore su 24.",
         "pt": "Liga antes para saber o horário. O hospital de Recta a Cholula está aberto 24 horas por dia.",
         "nl": "Bel vooraf voor de openingstijden. Het dierenziekenhuis aan de Recta a Cholula is 24 uur geopend.",
-        "pl": "Zadzwoń przed wizytą, aby poznać godziny. Szpital przy Recta a Cholula jest czynny całodobowo."
+        "pl": "Zadzwoń przed wizytą, aby poznać godziny. Szpital przy Recta a Cholula jest czynny całodobowo.",
+        "cs": "Ordinační dobu zjistíte telefonicky. Nemocnice na Recta a Cholula je nonstop."
       }
     },
     {
@@ -1324,7 +1377,8 @@
         "it": "Aperto 24 ore su 24, 365 giorni all'anno, fine settimana e festivi compresi. Telefono e WhatsApp.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano, incluindo fins de semana e feriados. Telefone e WhatsApp.",
         "nl": "24 uur geopend, 365 dagen per jaar, ook in weekenden en op feestdagen. Telefoon en WhatsApp.",
-        "pl": "Czynne całodobowo, 365 dni w roku, także w weekendy i święta. Telefon i WhatsApp."
+        "pl": "Czynne całodobowo, 365 dni w roku, także w weekendy i święta. Telefon i WhatsApp.",
+        "cs": "Nonstop, 365 dní v roce, včetně víkendů a svátků. Telefon a WhatsApp."
       }
     },
     {
@@ -1348,7 +1402,8 @@
         "it": "Aperto tutti i giorni 10:00–20:00; dopo le 20:00 emergenze previa telefonata. WhatsApp +52 442 269 8977.",
         "pt": "Aberto todos os dias 10h00–20h00; depois das 20h00, urgências mediante telefonema prévio. WhatsApp +52 442 269 8977.",
         "nl": "Dagelijks geopend 10.00–20.00 uur; na 20.00 uur spoed na telefonische aanmelding vooraf. WhatsApp +52 442 269 8977.",
-        "pl": "Czynne codziennie 10:00–20:00; po 20:00 nagłe przypadki po wcześniejszym telefonie. WhatsApp +52 442 269 8977."
+        "pl": "Czynne codziennie 10:00–20:00; po 20:00 nagłe przypadki po wcześniejszym telefonie. WhatsApp +52 442 269 8977.",
+        "cs": "Otevřeno denně 10:00–20:00; po 20:00 pohotovost po předchozím telefonátu. WhatsApp +52 442 269 8977."
       }
     },
     {
@@ -1372,7 +1427,8 @@
         "it": "Ospedale di pronto soccorso notturno: lun–ven 18:00–8:00, sab dalle 13:00 alle 8:00, domenica 24 ore su 24.",
         "pt": "Hospital de urgências noturnas: segunda a sexta 18h00–8h00, sábado das 13h00 às 8h00, domingo 24 horas por dia.",
         "nl": "Nachtelijk spoedziekenhuis: ma–vr 18.00–8.00 uur, za vanaf 13.00 tot 8.00 uur, zondag 24 uur.",
-        "pl": "Nocny szpital dla nagłych przypadków: pon.–pt. 18:00–8:00, sob. od 13:00 do 8:00, niedziela całodobowo."
+        "pl": "Nocny szpital dla nagłych przypadków: pon.–pt. 18:00–8:00, sob. od 13:00 do 8:00, niedziela całodobowo.",
+        "cs": "Noční pohotovostní nemocnice: Po–Pá 18:00–8:00, so od 13:00 do 8:00, v neděli nonstop."
       }
     },
     {
@@ -1395,7 +1451,8 @@
         "it": "Servizio disponibile 24 ore su 24, tutti i giorni. Telefono e WhatsApp.",
         "pt": "Serviço disponível 24 horas por dia, todos os dias. Telefone e WhatsApp.",
         "nl": "Dienst 24 uur per dag, elke dag beschikbaar. Telefoon en WhatsApp.",
-        "pl": "Usługi dostępne całodobowo, codziennie. Telefon i WhatsApp."
+        "pl": "Usługi dostępne całodobowo, codziennie. Telefon i WhatsApp.",
+        "cs": "Služba nonstop, každý den. Telefon a WhatsApp."
       }
     },
     {
@@ -1418,7 +1475,8 @@
         "it": "Aperto 24 ore su 24, dal lunedì alla domenica. WhatsApp +52 619 507 7283.",
         "pt": "Aberto 24 horas por dia, de segunda a domingo. WhatsApp +52 619 507 7283.",
         "nl": "24 uur geopend, van maandag tot en met zondag. WhatsApp +52 619 507 7283.",
-        "pl": "Czynne całodobowo, od poniedziałku do niedzieli. WhatsApp +52 619 507 7283."
+        "pl": "Czynne całodobowo, od poniedziałku do niedzieli. WhatsApp +52 619 507 7283.",
+        "cs": "Nonstop, od pondělí do neděle. WhatsApp +52 619 507 7283."
       }
     },
     {
@@ -1441,7 +1499,8 @@
         "it": "Pronto soccorso 24 ore su 24 (linea di emergenza +52 664 356 3990). Orario ordinario lun–sab 7:00–24:00, dom 9:00–24:00.",
         "pt": "Urgências 24 horas por dia (linha de urgência +52 664 356 3990). Horário normal de segunda a sábado 7h00–24h00, domingo 9h00–24h00.",
         "nl": "Spoed 24 uur (spoedlijn +52 664 356 3990). Reguliere openingstijden ma–za 7.00–24.00 uur, zo 9.00–24.00 uur.",
-        "pl": "Nagłe przypadki całodobowo (linia alarmowa +52 664 356 3990). Zwykłe godziny: pon.–sob. 7:00–24:00, niedz. 9:00–24:00."
+        "pl": "Nagłe przypadki całodobowo (linia alarmowa +52 664 356 3990). Zwykłe godziny: pon.–sob. 7:00–24:00, niedz. 9:00–24:00.",
+        "cs": "Pohotovost nonstop (pohotovostní linka +52 664 356 3990). Běžná ordinační doba Po–So 7:00–24:00, ne 9:00–24:00."
       }
     },
     {
@@ -1464,7 +1523,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7; pronto soccorso senza appuntamento.",
         "pt": "Aberto 24 h/24, 7 dias por semana; urgências sem marcação.",
         "nl": "24 uur per dag, 7 dagen per week geopend; spoed zonder afspraak.",
-        "pl": "Czynne całodobowo, 7 dni w tygodniu; nagłe przypadki bez umawiania wizyty."
+        "pl": "Czynne całodobowo, 7 dni w tygodniu; nagłe przypadki bez umawiania wizyty.",
+        "cs": "Nonstop, 7 dní v týdnu; pohotovost bez objednání."
       }
     },
     {
@@ -1488,7 +1548,8 @@
         "it": "Aperto 24 ore su 24, 365 giorni all'anno. Anche +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
         "pt": "Aberto 24 horas por dia, 365 dias por ano. Também +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
         "nl": "24 uur geopend, 365 dagen per jaar. Ook +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
-        "pl": "Czynne całodobowo, 365 dni w roku. Także +52 55 5373 4573; WhatsApp +52 56 1995 0824."
+        "pl": "Czynne całodobowo, 365 dni w roku. Także +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
+        "cs": "Nonstop, 365 dní v roce. Také +52 55 5373 4573; WhatsApp +52 56 1995 0824."
       }
     },
     {
@@ -1511,7 +1572,8 @@
         "it": "Servizio di pronto soccorso disponibile 24 ore su 24, 7 giorni su 7. Seconda linea +52 612 171 9708.",
         "pt": "Serviço de urgência disponível 24 h/24, 7 dias por semana. Segunda linha +52 612 171 9708.",
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week beschikbaar. Tweede lijn +52 612 171 9708.",
-        "pl": "Pomoc w nagłych przypadkach dostępna całodobowo, 7 dni w tygodniu. Druga linia +52 612 171 9708."
+        "pl": "Pomoc w nagłych przypadkach dostępna całodobowo, 7 dni w tygodniu. Druga linia +52 612 171 9708.",
+        "cs": "Pohotovostní služba nonstop, 7 dní v týdnu. Druhá linka +52 612 171 9708."
       }
     },
     {
@@ -1535,7 +1597,8 @@
         "it": "Pronto soccorso 24 ore su 24 dal lunedì al sabato; domenica 9:00–19:00. Telefono e WhatsApp.",
         "pt": "Urgências 24 horas por dia de segunda a sábado; domingo 9h00–19h00. Telefone e WhatsApp.",
         "nl": "Spoed 24 uur van maandag tot en met zaterdag; zondag 9.00–19.00 uur. Telefoon en WhatsApp.",
-        "pl": "Nagłe przypadki całodobowo od poniedziałku do soboty; w niedzielę 9:00–19:00. Telefon i WhatsApp."
+        "pl": "Nagłe przypadki całodobowo od poniedziałku do soboty; w niedzielę 9:00–19:00. Telefon i WhatsApp.",
+        "cs": "Pohotovost nonstop od pondělí do soboty; v neděli 9:00–19:00. Telefon a WhatsApp."
       }
     },
     {
@@ -1558,7 +1621,8 @@
         "it": "Aperto 24 ore su 24, 7 giorni su 7.",
         "pt": "Aberto 24 h/24, 7 dias por semana.",
         "nl": "24 uur per dag, 7 dagen per week geopend.",
-        "pl": "Otwarte całą dobę, 7 dni w tygodniu."
+        "pl": "Otwarte całą dobę, 7 dni w tygodniu.",
+        "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu."
       }
     }
   ],
