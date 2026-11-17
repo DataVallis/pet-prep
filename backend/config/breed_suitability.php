@@ -2888,5 +2888,20 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S907'], 'refs' => ['tibetan_terrier.behaviour.time_alone']],
             ],
         ],
+
+        // M5-R10-122: greyhound.* (S914–S917), runbook rules (data.json
+        // proposed_game_parameters.greyhound.suitability_tags). RKC page not reachable (no apartment / sheds key facts);
+        // children and shedding: the sources disagree → no chip; RKC Breed Watch category 1 (S922) → no welfare chip;
+        // in marketing. No new vocabulary key.
+        'greyhound' => [
+            'suits' => [
+                // S914 "With the right socialisation as puppies, they can make good family pets"
+                ['tag' => 'family_pet', 'source_ids' => ['S914'], 'refs' => ['greyhound.behaviour.family']],
+            ],
+            'consider' => [
+                // S916 "Greyhounds have a very strong prey drive, so they aren't ideal for homes with cats or other small animals."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S916'], 'refs' => ['greyhound.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];
