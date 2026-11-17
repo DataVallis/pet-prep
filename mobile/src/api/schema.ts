@@ -3540,7 +3540,7 @@ export interface components {
              */
             consent: "yes" | "on" | "1" | 1 | "true" | true;
             /** @enum {string} */
-            consent_version: "2026-11";
+            consent_version: "2026-11" | "ea-2026-11";
             /** @enum {string} */
             purpose: "newsletter" | "early_access";
             /** @description What form on the site: real_cost | breed_quiz | early_access_form | any later one. */
@@ -3604,7 +3604,7 @@ export interface components {
              */
             consent: "yes" | "on" | "1" | 1 | "true" | true;
             /** @enum {string} */
-            consent_version: "2026-11";
+            consent_version: "2026-11" | "ea-2026-11";
             /** @enum {string} */
             source: "real_cost" | "breed_quiz";
             /** @description Website language (two letters) and the breed slug of the website's breed register. */
