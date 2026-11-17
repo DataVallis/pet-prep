@@ -107,7 +107,7 @@ Testni ID-ji (Stripe test, 17. 11. 2026): izdelek bona `prod_Ve7EBi9SnjHz6l` / c
 8. Ko je aplikacija v trgovinah: stikalo »Darilni boni« v adminu in `NEXT_PUBLIC_FEATURE_GIFT=1`.
 
 ## 4. B — Komplet »Obljuba o ljubljenčku« (M6-S02)
-Vsebina kot doslej (8 delov, približno 10 strani, 15 jezikov, `npm run kit:build`, kopija v Google Drive). Prodaja prek trgovine (§3.4), stran `/promise-kit` · `/sl/obljuba-o-ljubljencku`, stran »hvala« s prenosom, e-pošta s povezavami, brezplačen vzorec prek `summary-leads`. Za stikalom `NEXT_PUBLIC_FEATURE_PROMISE_KIT` in admin stikalom »Komplet Obljuba«, dokler David ne potrdi besedila.
+Vsebina kot doslej (8 delov, približno 10 strani, 15 jezikov, `npm run kit:build`, kopija v Google Drive). Prodaja prek trgovine (§3.4), stran `/promise-kit` · `/sl/obljuba-o-ljubljencku`, stran »hvala« s prenosom, e-pošta s povezavami, brezplačen vzorec prek `summary-leads`. Stran vklopljena 17. 11. 2026 (David: »obdržimo, vklopi«; `NEXT_PUBLIC_FEATURE_PROMISE_KIT=1`). Nakup za admin stikalom »Komplet Obljuba« — vklopi se z živimi ključi Stripe in naloženimi PDF-ji (§3.9). Ni povezano z dinamičnim povzetkom »Koliko dela je pes« (T8).
 
 ## 5. C — Partnerji (M6-S03)
 Zgrajeno 11. 11. 2026 (15 jezikov 17. 11. 2026). Ni plačil.
