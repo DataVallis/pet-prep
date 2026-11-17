@@ -13,7 +13,8 @@
     "pt": "Comida para gatos",
     "nl": "Kattenvoer",
     "pl": "Karma dla kotów",
-    "cs": "Kočičí krmivo"
+    "cs": "Kočičí krmivo",
+    "hr": "Hrana za mačke"
   },
   "question": {
     "en": "Can dogs eat cat food?",
@@ -27,7 +28,8 @@
     "pt": "Os cães podem comer comida para gatos?",
     "nl": "Mogen honden kattenvoer eten?",
     "pl": "Czy psy mogą jeść karmę dla kotów?",
-    "cs": "Mohou psi jíst kočičí krmivo?"
+    "cs": "Mohou psi jíst kočičí krmivo?",
+    "hr": "Smiju li psi jesti hranu za mačke?"
   },
   "url_slug": {
     "en": "cat-food",
@@ -41,7 +43,8 @@
     "pt": "comida-para-gatos",
     "nl": "kattenvoer",
     "pl": "karma-dla-kotow",
-    "cs": "kocici-krmivo"
+    "cs": "kocici-krmivo",
+    "hr": "hrana-za-macke"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "pt": "Não como hábito. Se um cão rouba de vez em quando um pouco da comida do gato, provavelmente não terá problemas, mas isso não deve tornar-se um hábito. A comida para gatos tem muito mais proteína animal e não tem o equilíbrio certo de nutrientes para os cães.",
     "nl": "Niet regelmatig. Een hond die af en toe wat van het kattenvoer steelt, krijgt daar waarschijnlijk geen last van, maar het mag geen gewoonte worden. Kattenvoer bevat veel meer vleeseiwit en de voedingsstoffen zitten er niet in de juiste verhouding in voor honden.",
     "pl": "Nie na co dzień. Pies, który od czasu do czasu podkrada karmę kota, prawdopodobnie nic sobie nie zrobi, ale nie powinno to stać się nawykiem. Karma dla kotów zawiera znacznie więcej białka pochodzenia mięsnego i nie ma właściwej dla psów proporcji składników odżywczych.",
-    "cs": "Pravidelně ne. Pokud si pes občas ukradne trochu kočičího krmiva, pravděpodobně se mu nic nestane, ale nemělo by se to stát zvykem. Kočičí krmivo obsahuje mnohem víc masových bílkovin a nemá pro psy správně vyvážené složení živin."
+    "cs": "Pravidelně ne. Pokud si pes občas ukradne trochu kočičího krmiva, pravděpodobně se mu nic nestane, ale nemělo by se to stát zvykem. Kočičí krmivo obsahuje mnohem víc masových bílkovin a nemá pro psy správně vyvážené složení živin.",
+    "hr": "Ne redovito. Pas koji povremeno ukrade malo mačje hrane vjerojatno od toga neće imati štete, ali to ne smije postati navika. Hrana za mačke ima mnogo više bjelančevina iz mesa i ne sadrži hranjive tvari u omjeru koji odgovara psima."
   },
   "why": {
     "en": "Cats are obligate carnivores, so cat food is much higher in meat-based protein than dog food and doesn't have the correct balance of protein, fibre and nutrients dogs need. Over time the imbalance can lead to stomach and gut upset, obesity and pancreatitis, and the high protein levels can be hard on a dog's liver and kidneys.",
@@ -70,7 +74,8 @@
     "pt": "Os gatos são carnívoros estritos, por isso a comida para gatos tem muito mais proteína animal do que a comida para cães e não tem o equilíbrio certo de proteínas, fibra e nutrientes de que os cães precisam. Com o tempo, o desequilíbrio pode causar problemas de estômago e intestinos, obesidade e pancreatite, e o excesso de proteína pode sobrecarregar o fígado e os rins do cão.",
     "nl": "Katten zijn strikte vleeseters, dus kattenvoer bevat veel meer vleeseiwit dan hondenvoer, en de verhouding tussen eiwit, vezels en andere voedingsstoffen is niet de juiste voor honden. Op den duur kan die scheve verhouding leiden tot maag- en darmklachten, obesitas en alvleesklierontsteking, en het hoge eiwitgehalte kan de lever en nieren van een hond zwaar belasten.",
     "pl": "Koty są bezwzględnymi mięsożercami, dlatego karma dla kotów zawiera znacznie więcej białka pochodzenia mięsnego niż karma dla psów i nie ma właściwej proporcji białka, błonnika i składników odżywczych, których potrzebują psy. Z czasem taka nierównowaga może prowadzić do rozstroju żołądka i jelit, otyłości i zapalenia trzustki, a duża ilość białka może obciążać wątrobę i nerki psa.",
-    "cs": "Kočky jsou obligátní masožravci, proto kočičí krmivo obsahuje mnohem víc masových bílkovin než psí a nemá správný poměr bílkovin, vlákniny a živin, které psi potřebují. Časem může tato nerovnováha vést k potížím se žaludkem a střevy, obezitě a zánětu slinivky břišní, a vysoký obsah bílkovin může zatěžovat psí játra a ledviny."
+    "cs": "Kočky jsou obligátní masožravci, proto kočičí krmivo obsahuje mnohem víc masových bílkovin než psí a nemá správný poměr bílkovin, vlákniny a živin, které psi potřebují. Časem může tato nerovnováha vést k potížím se žaludkem a střevy, obezitě a zánětu slinivky břišní, a vysoký obsah bílkovin může zatěžovat psí játra a ledviny.",
+    "hr": "Mačke su strogi mesojedi, pa hrana za mačke sadrži mnogo više bjelančevina iz mesa od hrane za pse i ne sadrži bjelančevine, vlakna i hranjive tvari u omjeru koji je potreban psima. S vremenom ta neuravnoteženost može dovesti do probavnih tegoba, pretilosti i upale gušterače, a visoka razina bjelančevina može opteretiti jetru i bubrege psa."
   },
   "signs": {
     "en": [
@@ -180,6 +185,15 @@
       "Průjem",
       "Nafouklé břicho",
       "Horečka"
+    ],
+    "hr": [
+      "Bol u trbuhu i pogrbljena leđa",
+      "Umor i slabost",
+      "Odbijanje hrane",
+      "Povraćanje",
+      "Proljev",
+      "Napuhnut trbuh",
+      "Vrućica"
     ]
   },
   "what_to_do": {
@@ -194,7 +208,8 @@
     "pt": "Se o teu cão mostrar sinais de desconforto na barriga depois de comer comida para gatos, liga ao teu veterinário. Os sinais de pancreatite, como costas arqueadas com dor de barriga, vómitos, fraqueza ou febre, exigem cuidados veterinários imediatos.",
     "nl": "Heeft je hond na het eten van kattenvoer buikklachten, bel dan je dierenarts. Bij verschijnselen van alvleesklierontsteking, zoals een gebogen rug met buikpijn, braken, zwakte of koorts, moet je meteen naar de dierenarts.",
     "pl": "Jeśli po zjedzeniu karmy dla kotów pies ma dolegliwości brzuszne, zadzwoń do weterynarza. Objawy zapalenia trzustki, takie jak zgarbiony grzbiet z bólem brzucha, wymioty, osłabienie lub gorączka, wymagają natychmiastowej opieki weterynaryjnej.",
-    "cs": "Pokud má pes po kočičím krmivu potíže s břichem, zavolejte veterináři. Příznaky zánětu slinivky břišní, například shrbená záda s bolestí břicha, zvracení, slabost nebo horečka, vyžadují okamžitou veterinární péči."
+    "cs": "Pokud má pes po kočičím krmivu potíže s břichem, zavolejte veterináři. Příznaky zánětu slinivky břišní, například shrbená záda s bolestí břicha, zvracení, slabost nebo horečka, vyžadují okamžitou veterinární péči.",
+    "hr": "Ako pas nakon što pojede mačju hranu pokazuje znakove nelagode u trbuhu, nazovi veterinara. Znakovi upale gušterače, poput pogrbljenih leđa uz bol u trbuhu, povraćanja, slabosti ili vrućice, zahtijevaju hitnu veterinarsku pomoć."
   },
   "serving": null,
   "child": {
@@ -209,7 +224,8 @@
     "pt": "A comida para gatos é feita para gatos. Os cães ficam mais saudáveis com a comida deles, por isso ajuda a pôr a tigela do gato num sítio alto!",
     "nl": "Kattenvoer is gemaakt voor katten. Honden blijven het gezondst met hun eigen hondenvoer, dus help mee en zet het bakje van de kat hoog neer!",
     "pl": "Karma dla kotów jest przeznaczona dla kotów. Psy są najzdrowsze, gdy jedzą własną karmę, więc pomóż postawić miskę kota tam, gdzie pies jej nie dosięgnie!",
-    "cs": "Kočičí krmivo je určené kočkám. Psům nejvíc svědčí jejich vlastní psí krmivo, a tak pomoz hlídat, aby kočičí miska stála vysoko!"
+    "cs": "Kočičí krmivo je určené kočkám. Psům nejvíc svědčí jejich vlastní psí krmivo, a tak pomoz hlídat, aby kočičí miska stála vysoko!",
+    "hr": "Hrana za mačke napravljena je za mačke. Psi su najzdraviji kad jedu svoju hranu za pse, zato pomozi da mačja zdjelica ostane na visokom mjestu!"
   },
   "faq": [
     {
@@ -225,7 +241,8 @@
         "pt": "Como posso impedir que o meu cão chegue à comida do gato?",
         "nl": "Hoe zorg ik dat mijn hond niet aan het kattenvoer komt?",
         "pl": "Jak odgonić psa od karmy kota?",
-        "cs": "Jak psovi zabránit, aby se dostal ke kočičímu krmivu?"
+        "cs": "Jak psovi zabránit, aby se dostal ke kočičímu krmivu?",
+        "hr": "Kako spriječiti psa da jede mačju hranu?"
       },
       "a": {
         "en": "Place the cat's food out of your dog's reach. If your dog regularly gets into it, change where you keep the cat's food or where and how you feed your cat.",
@@ -239,7 +256,8 @@
         "pt": "Põe a comida do gato fora do alcance do cão. Se ele a apanhar com frequência, muda o sítio onde a guardas ou o local e a forma como alimentas o gato.",
         "nl": "Zet het kattenvoer buiten het bereik van je hond. Komt je hond er toch regelmatig aan, verander dan waar je het kattenvoer bewaart of waar en hoe je je kat voert.",
         "pl": "Postaw jedzenie kota poza zasięgiem psa. Jeśli pies regularnie się do niego dobiera, zmień miejsce, w którym trzymasz karmę kota, albo miejsce i sposób karmienia kota.",
-        "cs": "Kočičí krmivo uchovávejte mimo dosah psa. Pokud se k němu pes dostává pravidelně, změňte místo, kde ho uchováváte, nebo to, kde a jak kočku krmíte."
+        "cs": "Kočičí krmivo uchovávejte mimo dosah psa. Pokud se k němu pes dostává pravidelně, změňte místo, kde ho uchováváte, nebo to, kde a jak kočku krmíte.",
+        "hr": "Mačju hranu stavi izvan dosega psa. Ako pas redovito dolazi do nje, promijeni mjesto na kojem je čuvaš ili gdje i kako hraniš mačku."
       }
     },
     {
@@ -255,7 +273,8 @@
         "pt": "O meu cão pode comer comida para gatos numa emergência?",
         "nl": "Mag mijn hond in een noodgeval kattenvoer eten?",
         "pl": "Czy w sytuacji awaryjnej pies może zjeść karmę dla kotów?",
-        "cs": "Může pes v nouzi jíst kočičí krmivo?"
+        "cs": "Může pes v nouzi jíst kočičí krmivo?",
+        "hr": "Smije li moj pas jesti hranu za mačke u slučaju nužde?"
       },
       "a": {
         "en": "Dogs can survive on cat food in a tough spot, but unless your vet recommends otherwise, the best food for your dog is dog food.",
@@ -269,7 +288,8 @@
         "pt": "Um cão consegue sobreviver com comida para gatos se for preciso, mas, a não ser que o teu veterinário diga outra coisa, a melhor comida para ele é comida para cães.",
         "nl": "Een hond kan in noodgevallen op kattenvoer overleven, maar tenzij je dierenarts anders adviseert, is hondenvoer het beste voor je hond.",
         "pl": "W razie potrzeby pies może przeżyć na karmie dla kotów, ale jeśli weterynarz nie zaleci inaczej, najlepszym jedzeniem dla psa jest karma dla psów.",
-        "cs": "Psi dokážou v nouzi na kočičím krmivu přežít, ale pokud veterinář nedoporučí jinak, je pro psa nejlepší psí krmivo."
+        "cs": "Psi dokážou v nouzi na kočičím krmivu přežít, ale pokud veterinář nedoporučí jinak, je pro psa nejlepší psí krmivo.",
+        "hr": "U nuždi psi mogu preživjeti na mačjoj hrani, ali ako veterinar ne preporuči drukčije, najbolja hrana za tvog psa jest hrana za pse."
       }
     }
   ],
@@ -405,6 +425,11 @@
       "status": "verified",
       "verified_by": "claude-c-cs-2026-11-17",
       "verified_hash": "8d9dab9831597a798c5cc0dfac6ef325a0513340d97a22d207418789a2d3e46b"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-c-hr-2026-11-17",
+      "verified_hash": "a0d6371e3888c4df8585a7a179861e694f2a3814147872ea733870c956f51905"
     }
   }
 }

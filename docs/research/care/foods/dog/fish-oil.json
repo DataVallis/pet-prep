@@ -13,7 +13,8 @@
     "pt": "Óleo de peixe",
     "nl": "Visolie",
     "pl": "Olej rybi",
-    "cs": "Rybí olej"
+    "cs": "Rybí olej",
+    "hr": "Riblje ulje"
   },
   "question": {
     "en": "Can dogs have fish oil?",
@@ -27,7 +28,8 @@
     "pt": "Os cães podem tomar óleo de peixe?",
     "nl": "Mogen honden visolie krijgen?",
     "pl": "Czy psy mogą dostać olej rybi?",
-    "cs": "Mohou psi dostat rybí olej?"
+    "cs": "Mohou psi dostat rybí olej?",
+    "hr": "Smiju li psi dobivati riblje ulje?"
   },
   "url_slug": {
     "en": "fish-oil",
@@ -41,7 +43,8 @@
     "pt": "oleo-de-peixe",
     "nl": "visolie",
     "pl": "olej-rybi",
-    "cs": "rybi-olej"
+    "cs": "rybi-olej",
+    "hr": "riblje-ulje"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "pt": "Só se o veterinário o recomendar. O óleo de peixe é um suplemento, não uma guloseima, e convém falar sempre com o veterinário antes de dar qualquer suplemento ao cão. Pode causar efeitos secundários, como diarreia, vómitos, gases e hálito a peixe.",
     "nl": "Alleen als je dierenarts het adviseert. Visolie is een supplement, geen snoepje, en dierenartsen raden aan om altijd eerst te overleggen voordat je je hond supplementen geeft. Het kan bijwerkingen hebben, zoals diarree, braken, winderigheid en een vissige adem.",
     "pl": "Tylko jeśli zaleci to weterynarz. Olej rybi to suplement, a nie przekąska, i weterynarze radzą, zawsze skonsultować się z lekarzem weterynarii, zanim podasz psu jakikolwiek suplement. Może powodować skutki uboczne, takie jak biegunka, wymioty, gazy i rybi zapach z pyska.",
-    "cs": "Jen pokud ho doporučí veterinář. Rybí olej je doplněk stravy, ne pamlsek, a veterináři radí vždy se před podáním jakéhokoli doplňku poradit s veterinářem. Může způsobit vedlejší účinky, například průjem, zvracení, plynatost a rybí zápach z tlamy."
+    "cs": "Jen pokud ho doporučí veterinář. Rybí olej je doplněk stravy, ne pamlsek, a veterináři radí vždy se před podáním jakéhokoli doplňku poradit s veterinářem. Může způsobit vedlejší účinky, například průjem, zvracení, plynatost a rybí zápach z tlamy.",
+    "hr": "Samo ako to preporuči veterinar. Riblje ulje je dodatak prehrani, a ne grickalica, a veterinari savjetuju da se prije davanja bilo kakvog dodatka psu uvijek posavjetuješ s veterinarom. Može izazvati nuspojave poput proljeva, povraćanja, plinova i zadaha po ribi."
   },
   "why": {
     "en": "Fish oil comes from oily fish such as salmon, mackerel and sardines, and its omega-3 fatty acids have been used to support a dog's skin, coat, joints and heart. But it is a health product: possible side effects include diarrhoea, vomiting, gas, fishy-smelling breath or skin and, in rare cases, a higher bleeding risk. VCA advises caution in dogs taking blood thinners, dogs with a clotting disorder, diabetes or a history of pancreatitis. Just because a product is natural does not mean it is safe.",
@@ -70,7 +74,8 @@
     "pt": "O óleo de peixe vem de peixes gordos, como o salmão, a cavala e as sardinhas, e os seus ácidos gordos ómega-3 usam-se para apoiar a pele, o pelo, as articulações e o coração do cão. Mas é um produto de saúde: os possíveis efeitos secundários incluem diarreia, vómitos, gases, hálito ou pele com cheiro a peixe e, em casos raros, maior risco de hemorragia. A VCA aconselha cautela em cães que tomam anticoagulantes, com problemas de coagulação, diabetes ou historial de pancreatite. Ser natural não quer dizer que seja seguro.",
     "nl": "Visolie wordt gewonnen uit vette vis zoals zalm, makreel en sardines, en de omega-3-vetzuren erin worden gebruikt om de huid, vacht, gewrichten en het hart van een hond te ondersteunen. Maar het is een gezondheidsproduct: mogelijke bijwerkingen zijn diarree, braken, winderigheid, een vissige adem of huidgeur en in zeldzame gevallen een groter risico op bloedingen. VCA adviseert voorzichtigheid bij honden die bloedverdunners gebruiken, bij honden met een stollingsstoornis of diabetes en bij honden die eerder alvleesklierontsteking hebben gehad. Dat een product natuurlijk is, betekent niet dat het veilig is.",
     "pl": "Olej rybi pochodzi z tłustych ryb, takich jak łosoś, makrela i sardynki, a zawarte w nim kwasy tłuszczowe omega-3 stosuje się, by wspierać skórę, sierść, stawy i serce psa. To jednak produkt zdrowotny: możliwe skutki uboczne to biegunka, wymioty, gazy, rybi zapach z pyska lub skóry, a w rzadkich przypadkach większe ryzyko krwawień. VCA zaleca ostrożność u psów przyjmujących leki rozrzedzające krew, z zaburzeniami krzepnięcia, cukrzycą lub przebytym zapaleniem trzustki. To, że produkt jest naturalny, nie znaczy, że jest bezpieczny.",
-    "cs": "Rybí olej se získává z tučných ryb, jako je losos, makrela a sardinky, a jeho omega-3 mastné kyseliny se používají na podporu psí kůže, srsti, kloubů a srdce. Je to ale zdravotní přípravek: mezi možné vedlejší účinky patří průjem, zvracení, plynatost, rybí zápach z tlamy nebo z kůže a ve vzácných případech vyšší riziko krvácení. VCA radí k opatrnosti u psů, kteří užívají léky na ředění krve, mají poruchu srážlivosti, cukrovku nebo prodělali zánět slinivky břišní. To, že je přípravek přírodní, neznamená, že je bezpečný."
+    "cs": "Rybí olej se získává z tučných ryb, jako je losos, makrela a sardinky, a jeho omega-3 mastné kyseliny se používají na podporu psí kůže, srsti, kloubů a srdce. Je to ale zdravotní přípravek: mezi možné vedlejší účinky patří průjem, zvracení, plynatost, rybí zápach z tlamy nebo z kůže a ve vzácných případech vyšší riziko krvácení. VCA radí k opatrnosti u psů, kteří užívají léky na ředění krve, mají poruchu srážlivosti, cukrovku nebo prodělali zánět slinivky břišní. To, že je přípravek přírodní, neznamená, že je bezpečný.",
+    "hr": "Riblje ulje dobiva se iz masnih riba poput lososa, skuše i sardina, a njegove se omega-3 masne kiseline koriste kao potpora zdravlju kože, dlake, zglobova i srca psa. No to je zdravstveni proizvod: moguće nuspojave su proljev, povraćanje, plinovi, dah ili koža koji mirišu po ribi te, u rijetkim slučajevima, povećan rizik od krvarenja. VCA savjetuje oprez kod pasa koji uzimaju razrjeđivače krvi, imaju poremećaj zgrušavanja krvi ili dijabetes ili su već imali upalu gušterače. To što je neki proizvod prirodan ne znači da je siguran."
   },
   "signs": {
     "en": [
@@ -156,6 +161,13 @@
       "Plynatost",
       "Rybí zápach z tlamy nebo z kůže",
       "Snazší krvácení (vzácné)"
+    ],
+    "hr": [
+      "Proljev",
+      "Povraćanje",
+      "Plinovi",
+      "Dah ili koža koji mirišu po ribi",
+      "Lakše krvarenje (rijetko)"
     ]
   },
   "what_to_do": {
@@ -170,7 +182,8 @@
     "pt": "Fala com o teu veterinário antes de começares a dar óleo de peixe ou qualquer outro suplemento. Se o teu cão tiver uma reação grave, deixa de lhe dar óleo de peixe e contacta imediatamente o teu veterinário. Guarda a embalagem fora do alcance das crianças e dos animais de estimação.",
     "nl": "Overleg met je dierenarts voordat je met visolie of een ander supplement begint. Reageert je hond ernstig, stop dan met de visolie en neem meteen contact op met je dierenarts. Houd de verpakking buiten het bereik van kinderen en huisdieren.",
     "pl": "Porozmawiaj z weterynarzem, zanim zaczniesz podawać olej rybi lub jakikolwiek inny suplement. Jeśli pies ma poważną reakcję, przestań podawać olej rybi i natychmiast skontaktuj się z weterynarzem. Trzymaj opakowanie poza zasięgiem dzieci i zwierząt.",
-    "cs": "Než rybí olej nebo jiný doplněk začnete podávat, poraďte se s veterinářem. Pokud se u psa objeví vážná reakce, rybí olej přestaňte podávat a ihned se obraťte na veterináře. Obal uchovávejte mimo dosah dětí i domácích zvířat."
+    "cs": "Než rybí olej nebo jiný doplněk začnete podávat, poraďte se s veterinářem. Pokud se u psa objeví vážná reakce, rybí olej přestaňte podávat a ihned se obraťte na veterináře. Obal uchovávejte mimo dosah dětí i domácích zvířat.",
+    "hr": "Prije nego što počneš s ribljim uljem ili bilo kojim drugim dodatkom prehrani, porazgovaraj s veterinarom. Ako pas ima ozbiljnu reakciju, prestani davati riblje ulje i odmah se obrati veterinaru. Posudu drži izvan dosega djece i kućnih ljubimaca."
   },
   "serving": null,
   "child": {
@@ -185,7 +198,8 @@
     "pt": "O óleo de peixe é um suplemento especial. Só o veterinário e os adultos decidem se um cão precisa dele!",
     "nl": "Visolie is een speciaal supplement. Alleen de dierenarts en volwassenen beslissen of een hond het nodig heeft!",
     "pl": "Olej rybi to specjalny suplement. Tylko weterynarz i dorośli decydują, czy pies go potrzebuje!",
-    "cs": "Rybí olej je zvláštní doplněk. Jestli ho pes potřebuje, rozhodují jen veterinář a dospělí!"
+    "cs": "Rybí olej je zvláštní doplněk. Jestli ho pes potřebuje, rozhodují jen veterinář a dospělí!",
+    "hr": "Riblje ulje je poseban dodatak prehrani. Samo veterinar i odrasli odlučuju treba li ga pas dobivati!"
   },
   "faq": [
     {
@@ -201,7 +215,8 @@
         "pt": "O óleo de peixe velho ou rançoso pode fazer mal ao meu cão?",
         "nl": "Kan oude of ranzige visolie mijn hond van streek maken?",
         "pl": "Czy stary lub zjełczały olej rybi może rozstroić psa?",
-        "cs": "Může starý nebo žluklý rybí olej psovi uškodit?"
+        "cs": "Může starý nebo žluklý rybí olej psovi uškodit?",
+        "hr": "Može li staro ili užeglo riblje ulje naškoditi mom psu?"
       },
       "a": {
         "en": "Yes. Consuming rancid fish oil may lead to stomach and gut upset, including vomiting or diarrhoea.",
@@ -215,7 +230,8 @@
         "pt": "Sim. O óleo de peixe rançoso pode causar problemas de estômago e intestinos, incluindo vómitos ou diarreia.",
         "nl": "Ja. Ranzige visolie kan maag- en darmklachten veroorzaken, zoals braken of diarree.",
         "pl": "Tak. Zjełczały olej rybi może wywołać rozstrój żołądka i jelit, w tym wymioty lub biegunkę.",
-        "cs": "Ano. Žluklý rybí olej může způsobit potíže se žaludkem a střevy, včetně zvracení nebo průjmu."
+        "cs": "Ano. Žluklý rybí olej může způsobit potíže se žaludkem a střevy, včetně zvracení nebo průjmu.",
+        "hr": "Da. Ako pas pojede užeglo riblje ulje, mogu se pojaviti probavne tegobe, uključujući povraćanje ili proljev."
       }
     },
     {
@@ -231,7 +247,8 @@
         "pt": "O óleo de peixe é seguro por ser natural?",
         "nl": "Is visolie veilig omdat het natuurlijk is?",
         "pl": "Czy olej rybi jest bezpieczny, skoro jest naturalny?",
-        "cs": "Je rybí olej bezpečný, protože je přírodní?"
+        "cs": "Je rybí olej bezpečný, protože je přírodní?",
+        "hr": "Je li riblje ulje sigurno jer je prirodno?"
       },
       "a": {
         "en": "Not automatically. Just because a product is natural does not mean it is safe. Your vet is the best source of information about the safety of non-drug health products for your dog.",
@@ -245,7 +262,8 @@
         "pt": "Não necessariamente. Ser natural não quer dizer que seja seguro. O teu veterinário é a melhor fonte de informação sobre a segurança dos produtos de saúde que não são medicamentos para o teu cão.",
         "nl": "Niet automatisch. Dat een product natuurlijk is, betekent niet dat het veilig is. Je dierenarts weet het best of gezondheidsproducten die geen medicijn zijn, veilig zijn voor je hond.",
         "pl": "Niekoniecznie. To, że produkt jest naturalny, nie znaczy, że jest bezpieczny. Najlepszym źródłem informacji o bezpieczeństwie produktów zdrowotnych, które nie są lekami, jest weterynarz.",
-        "cs": "Ne automaticky. To, že je přípravek přírodní, neznamená, že je bezpečný. O bezpečnosti zdravotních přípravků, které nejsou léky, vám nejlépe poradí veterinář vašeho psa."
+        "cs": "Ne automaticky. To, že je přípravek přírodní, neznamená, že je bezpečný. O bezpečnosti zdravotních přípravků, které nejsou léky, vám nejlépe poradí veterinář vašeho psa.",
+        "hr": "Ne nužno. To što je neki proizvod prirodan ne znači da je siguran. Veterinar je najbolji izvor informacija o sigurnosti proizvoda za zdravlje psa koji nisu lijekovi."
       }
     }
   ],
@@ -374,6 +392,11 @@
       "status": "verified",
       "verified_by": "claude-c-cs-2026-11-17",
       "verified_hash": "c0888b8262f73c5db165f59fce4a200f6feff0b9a9f81d8c0cedcad5193c4812"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-c-hr-2026-11-17",
+      "verified_hash": "2ef212b89aec62975482036cf59bf02e4e288771f6404ce69a12c2e7074abb42"
     }
   }
 }
