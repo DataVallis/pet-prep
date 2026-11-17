@@ -13,7 +13,8 @@
     "pt": "Refrigerantes",
     "nl": "Frisdrank",
     "pl": "Napoje gazowane",
-    "cs": "Sycené nápoje (limonády)"
+    "cs": "Sycené nápoje (limonády)",
+    "hr": "Gazirana pića"
   },
   "question": {
     "en": "Can cats drink soda?",
@@ -27,7 +28,8 @@
     "pt": "Os gatos podem beber refrigerantes?",
     "nl": "Mogen katten frisdrank drinken?",
     "pl": "Czy koty mogą pić napoje gazowane?",
-    "cs": "Mohou kočky pít sycené nápoje?"
+    "cs": "Mohou kočky pít sycené nápoje?",
+    "hr": "Smiju li mačke piti gazirana pića?"
   },
   "url_slug": {
     "en": "soda",
@@ -41,7 +43,8 @@
     "pt": "refrigerantes",
     "nl": "frisdrank",
     "pl": "napoje-gazowane",
-    "cs": "sycene-napoje"
+    "cs": "sycene-napoje",
+    "hr": "gazirana-pica"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pt": "Não. Muitos refrigerantes contêm cafeína, e os gatos são mais sensíveis a ela do que as pessoas. Uma ou duas lambidelas dificilmente intoxicam, mas se o teu gato bebeu mais, liga ao teu veterinário. O teu gato só precisa de água.",
     "nl": "Nee. Veel frisdranken bevatten cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Een of twee likjes veroorzaken waarschijnlijk geen vergiftiging, maar als je kat meer heeft gedronken, bel dan je dierenarts. Je kat heeft alleen water nodig.",
     "pl": "Nie. Wiele napojów gazowanych zawiera kofeinę, a koty są na nią bardziej wrażliwe niż ludzie. Jedno czy dwa liźnięcia raczej nie spowodują zatrucia, ale jeśli kot wypił więcej, zadzwoń do weterynarza. Kot potrzebuje do picia tylko wody.",
-    "cs": "Ne. Mnoho sycených nápojů obsahuje kofein a kočky jsou na kofein citlivější než lidé. Jedno nebo dvě olíznutí otravu pravděpodobně nezpůsobí, ale pokud kočka vypila víc, zavolejte veterináři. Kočka potřebuje pít jen vodu."
+    "cs": "Ne. Mnoho sycených nápojů obsahuje kofein a kočky jsou na kofein citlivější než lidé. Jedno nebo dvě olíznutí otravu pravděpodobně nezpůsobí, ale pokud kočka vypila víc, zavolejte veterináři. Kočka potřebuje pít jen vodu.",
+    "hr": "Ne. Mnoga gazirana pića sadrže kofein, a mačke su na kofein osjetljivije od ljudi. Jedno ili dva lizanja vjerojatno neće izazvati trovanje, ali ako je mačka popila više, nazovi veterinara. Tvojoj mački treba samo voda."
   },
   "why": {
     "en": "Many teas and sodas contain caffeine, and dogs and cats are more sensitive to caffeine than humans. Caffeine stimulates the heart and nervous system, which can be dangerous, and it can also upset the stomach. Signs can start within a few hours and last up to several days.",
@@ -70,7 +74,8 @@
     "pt": "Muitos chás e refrigerantes contêm cafeína, e os cães e os gatos são mais sensíveis a ela do que as pessoas. A cafeína estimula o coração e o sistema nervoso, o que pode ser perigoso, e também pode irritar o estômago. Os sinais podem começar em poucas horas e durar vários dias.",
     "nl": "Veel thee en frisdranken bevatten cafeïne, en honden en katten zijn gevoeliger voor cafeïne dan mensen. Cafeïne prikkelt het hart en het zenuwstelsel, wat gevaarlijk kan zijn, en kan ook de maag van streek maken. De verschijnselen kunnen binnen een paar uur beginnen en tot enkele dagen duren.",
     "pl": "Wiele herbat i napojów gazowanych zawiera kofeinę, a psy i koty są na nią bardziej wrażliwe niż ludzie. Kofeina pobudza serce i układ nerwowy, co może być niebezpieczne, a także może podrażnić żołądek. Objawy mogą pojawić się w ciągu kilku godzin i trwać nawet kilka dni.",
-    "cs": "Mnoho čajů a sycených nápojů obsahuje kofein a psi i kočky jsou na kofein citlivější než lidé. Kofein stimuluje srdce a nervovou soustavu, což může být nebezpečné, a může také podráždit žaludek. Příznaky se mohou objevit během několika hodin a trvat až několik dní."
+    "cs": "Mnoho čajů a sycených nápojů obsahuje kofein a psi i kočky jsou na kofein citlivější než lidé. Kofein stimuluje srdce a nervovou soustavu, což může být nebezpečné, a může také podráždit žaludek. Příznaky se mohou objevit během několika hodin a trvat až několik dní.",
+    "hr": "Mnogi čajevi i gazirana pića sadrže kofein, a psi i mačke osjetljiviji su na kofein od ljudi. Kofein potiče srce i živčani sustav, što može biti opasno, a može izazvati i probleme sa želucem. Znakovi se mogu pojaviti već nakon nekoliko sati i trajati i nekoliko dana."
   },
   "signs": {
     "en": [
@@ -168,6 +173,14 @@
       "Podrážděný žaludek, zvracení nebo průjem",
       "Třes",
       "Častější močení"
+    ],
+    "hr": [
+      "Ubrzani rad srca",
+      "Hiperaktivnost, nemir, ne želi mirno ležati",
+      "Hodanje amo-tamo ili često mijaukanje",
+      "Probavne tegobe, povraćanje ili proljev",
+      "Drhtanje",
+      "Češće mokrenje"
     ]
   },
   "what_to_do": {
@@ -182,7 +195,8 @@
     "pt": "Se o teu gato bebeu refrigerante, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes. Uma ou duas lambidelas dificilmente intoxicam a maioria dos animais.",
     "nl": "Heeft je kat frisdrank gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt. Een of twee likjes veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging.",
     "pl": "Jeśli kot napił się napoju gazowanego, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, gdy tylko się zorientujesz. Jedno czy dwa liźnięcia raczej nie spowodują zatrucia u większości zwierząt.",
-    "cs": "Pokud kočka vypila sycený nápoj, zavolejte veterináři nebo na toxikologickou linku pro zvířata, jakmile si toho všimnete. Jedno nebo dvě olíznutí většinu zvířat pravděpodobně neotráví."
+    "cs": "Pokud kočka vypila sycený nápoj, zavolejte veterináři nebo na toxikologickou linku pro zvířata, jakmile si toho všimnete. Jedno nebo dvě olíznutí většinu zvířat pravděpodobně neotráví.",
+    "hr": "Ako je mačka popila gazirano piće, čim to shvatiš nazovi veterinara ili telefonsku liniju za otrovanja životinja. Jedno ili dva lizanja kod većine kućnih ljubimaca vjerojatno neće izazvati trovanje."
   },
   "serving": null,
   "child": {
@@ -197,7 +211,8 @@
     "pt": "As bebidas com gás não são para gatos. Uma tigela de água fresca é tudo o que o teu gatinho precisa!",
     "nl": "Drankjes met prik zijn niets voor katten. Een bakje vers water is alles wat je kat nodig heeft!",
     "pl": "Napoje gazowane nie są dla kotów. Miska świeżej wody to wszystko, czego kot potrzebuje!",
-    "cs": "Šumivé nápoje nejsou pro kočky. Tvoje kočka potřebuje jen misku čerstvé vody!"
+    "cs": "Šumivé nápoje nejsou pro kočky. Tvoje kočka potřebuje jen misku čerstvé vody!",
+    "hr": "Gazirana pića nisu za mačke. Zdjelica svježe vode sve je što tvojoj mački treba!"
   },
   "faq": [
     {
@@ -213,7 +228,8 @@
         "pt": "O meu gato lambeu o meu refrigerante – o que devo fazer?",
         "nl": "Mijn kat likte aan mijn frisdrank – wat moet ik doen?",
         "pl": "Kot polizał mój napój gazowany – co robić?",
-        "cs": "Kočka mi olízla sycený nápoj – co mám dělat?"
+        "cs": "Kočka mi olízla sycený nápoj – co mám dělat?",
+        "hr": "Moja je mačka polizala moje gazirano piće – što da radim?"
       },
       "a": {
         "en": "One or two licks of soda is unlikely to cause poisoning in most pets. If your cat drank more, call your vet or a pet poison helpline as soon as you realise, because cats are more sensitive to caffeine than people.",
@@ -227,7 +243,8 @@
         "pt": "Uma ou duas lambidelas de refrigerante dificilmente intoxicam a maioria dos animais. Se o teu gato bebeu mais, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes, porque os gatos são mais sensíveis à cafeína do que as pessoas.",
         "nl": "Een of twee likjes frisdrank veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging. Heeft je kat meer gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt, want katten zijn gevoeliger voor cafeïne dan mensen.",
         "pl": "Jedno czy dwa liźnięcia napoju gazowanego raczej nie spowodują zatrucia u większości zwierząt. Jeśli kot wypił więcej, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, gdy tylko się zorientujesz, bo koty są na kofeinę bardziej wrażliwe niż ludzie.",
-        "cs": "Jedno nebo dvě olíznutí syceného nápoje většinu zvířat pravděpodobně neotráví. Pokud kočka vypila víc, zavolejte veterináři nebo na toxikologickou linku pro zvířata, jakmile si toho všimnete, protože kočky jsou na kofein citlivější než lidé."
+        "cs": "Jedno nebo dvě olíznutí syceného nápoje většinu zvířat pravděpodobně neotráví. Pokud kočka vypila víc, zavolejte veterináři nebo na toxikologickou linku pro zvířata, jakmile si toho všimnete, protože kočky jsou na kofein citlivější než lidé.",
+        "hr": "Jedno ili dva lizanja gaziranog pića kod većine kućnih ljubimaca vjerojatno neće izazvati trovanje. Ako je mačka popila više, čim to shvatiš nazovi veterinara ili telefonsku liniju za otrovanja životinja, jer su mačke na kofein osjetljivije od ljudi."
       }
     }
   ],
@@ -369,6 +386,11 @@
       "status": "verified",
       "verified_by": "claude-c-cs-2026-11-17",
       "verified_hash": "a93f0dda0ccd7314b4d552c2a429df267b5b1cbdb0347abec3663f2e87187579"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-c-hr-2026-11-17",
+      "verified_hash": "3e6fc25e2cead1c6acb3f1e62ae743a02ebf1d09fc400223030818c7cd4bded3"
     }
   }
 }
