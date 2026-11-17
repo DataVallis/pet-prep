@@ -139,7 +139,7 @@ describe('breed, config and database', function () {
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
             // Other names and colours are no breed keys (only search keywords / a colour).
             ->and($refused(['breed_type' => 'mali_angleski_hrt']))->toThrow(QueryException::class)
-            ->and($refused(['breed_type' => 'greyhound']))->toThrow(QueryException::class);
+            ->and($refused(['breed_type' => 'snap_dog']))->toThrow(QueryException::class);
 
         $migration = require database_path('migrations/2027_01_10_120000_add_whippet_breed.php');
         // down() refuses while a Whippet exists (no silent data loss).
