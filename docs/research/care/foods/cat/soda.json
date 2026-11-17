@@ -10,7 +10,8 @@
     "nb": "Brus (leskedrikker)",
     "de": "Softdrinks",
     "es": "Refrescos",
-    "pt": "Refrigerantes"
+    "pt": "Refrigerantes",
+    "nl": "Frisdrank"
   },
   "question": {
     "en": "Can cats drink soda?",
@@ -21,7 +22,8 @@
     "nb": "Kan katter drikke brus?",
     "de": "Dürfen Katzen Softdrinks trinken?",
     "es": "¿Pueden los gatos beber refrescos?",
-    "pt": "Os gatos podem beber refrigerantes?"
+    "pt": "Os gatos podem beber refrigerantes?",
+    "nl": "Mogen katten frisdrank drinken?"
   },
   "url_slug": {
     "en": "soda",
@@ -32,7 +34,8 @@
     "nb": "brus",
     "de": "softdrinks",
     "es": "refrescos",
-    "pt": "refrigerantes"
+    "pt": "refrigerantes",
+    "nl": "frisdrank"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "nb": "Nei. Mange typer brus inneholder koffein, og katter er mer følsomme for koffein enn mennesker. En slikk eller to gir neppe forgiftning, men hvis katten har drukket mer, må du ringe dyrlegen. Katten trenger bare vann.",
     "de": "Nein. Viele Softdrinks enthalten Koffein, und Katzen reagieren darauf empfindlicher als Menschen. Ein- oder zweimal daran zu lecken führt wahrscheinlich nicht zu einer Vergiftung; hat Ihre Katze aber mehr getrunken, rufen Sie Ihren Tierarzt an. Ihre Katze braucht zum Trinken nur Wasser.",
     "es": "No. Muchos refrescos contienen cafeína, y los gatos son más sensibles a ella que las personas. Es poco probable que uno o dos lametones causen una intoxicación, pero si tu gato ha bebido más, llama a tu veterinario. Lo único que tu gato necesita beber es agua.",
-    "pt": "Não. Muitos refrigerantes contêm cafeína, e os gatos são mais sensíveis a ela do que as pessoas. Uma ou duas lambidelas dificilmente intoxicam, mas se o teu gato bebeu mais, liga ao teu veterinário. O teu gato só precisa de água."
+    "pt": "Não. Muitos refrigerantes contêm cafeína, e os gatos são mais sensíveis a ela do que as pessoas. Uma ou duas lambidelas dificilmente intoxicam, mas se o teu gato bebeu mais, liga ao teu veterinário. O teu gato só precisa de água.",
+    "nl": "Nee. Veel frisdranken bevatten cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Een of twee likjes veroorzaken waarschijnlijk geen vergiftiging, maar als je kat meer heeft gedronken, bel dan je dierenarts. Je kat heeft alleen water nodig."
   },
   "why": {
     "en": "Many teas and sodas contain caffeine, and dogs and cats are more sensitive to caffeine than humans. Caffeine stimulates the heart and nervous system, which can be dangerous, and it can also upset the stomach. Signs can start within a few hours and last up to several days.",
@@ -55,7 +59,8 @@
     "nb": "Mange typer te og brus inneholder koffein, og hunder og katter er mer følsomme for koffein enn mennesker. Koffein stimulerer hjertet og nervesystemet, noe som kan være farlig, og det kan også gi urolig mage. Tegnene kan komme i løpet av noen timer og vare i flere dager.",
     "de": "Viele Tees und Softdrinks enthalten Koffein, und Hunde und Katzen reagieren darauf empfindlicher als Menschen. Koffein regt Herz und Nervensystem an, was gefährlich werden kann, und es kann auch auf den Magen schlagen. Die Anzeichen können innerhalb weniger Stunden beginnen und bis zu mehreren Tagen anhalten.",
     "es": "Muchos tés y refrescos contienen cafeína, y los perros y los gatos son más sensibles a ella que las personas. La cafeína estimula el corazón y el sistema nervioso, lo que puede ser peligroso, y además puede sentar mal al estómago. Los signos pueden empezar a las pocas horas y durar hasta varios días.",
-    "pt": "Muitos chás e refrigerantes contêm cafeína, e os cães e os gatos são mais sensíveis a ela do que as pessoas. A cafeína estimula o coração e o sistema nervoso, o que pode ser perigoso, e também pode irritar o estômago. Os sinais podem começar em poucas horas e durar vários dias."
+    "pt": "Muitos chás e refrigerantes contêm cafeína, e os cães e os gatos são mais sensíveis a ela do que as pessoas. A cafeína estimula o coração e o sistema nervoso, o que pode ser perigoso, e também pode irritar o estômago. Os sinais podem começar em poucas horas e durar vários dias.",
+    "nl": "Veel thee en frisdranken bevatten cafeïne, en honden en katten zijn gevoeliger voor cafeïne dan mensen. Cafeïne prikkelt het hart en het zenuwstelsel, wat gevaarlijk kan zijn, en kan ook de maag van streek maken. De verschijnselen kunnen binnen een paar uur beginnen en tot enkele dagen duren."
   },
   "signs": {
     "en": [
@@ -129,6 +134,14 @@
       "Mal-estar de estômago, vómitos ou diarreia",
       "Tremores",
       "Precisar de fazer xixi mais vezes"
+    ],
+    "nl": [
+      "Snelle hartslag",
+      "Hyperactiviteit, onrust, niet stil willen liggen",
+      "Ijsberen of veel miauwen",
+      "Maagklachten, braken of diarree",
+      "Trillen",
+      "Vaker moeten plassen"
     ]
   },
   "what_to_do": {
@@ -140,7 +153,8 @@
     "nb": "Hvis katten har drukket brus, ringer du dyrlegen eller giftinformasjon for dyr så snart du oppdager det. En slikk eller to gir neppe forgiftning hos de fleste dyr.",
     "de": "Hat Ihre Katze etwas Softdrink getrunken, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an, sobald Sie es bemerken. Ein- oder zweimal daran zu lecken führt bei den meisten Tieren wahrscheinlich nicht zu einer Vergiftung.",
     "es": "Si tu gato ha bebido refresco, llama a tu veterinario o a una línea de información toxicológica para animales en cuanto te des cuenta. Es poco probable que uno o dos lametones causen una intoxicación en la mayoría de las mascotas.",
-    "pt": "Se o teu gato bebeu refrigerante, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes. Uma ou duas lambidelas dificilmente intoxicam a maioria dos animais."
+    "pt": "Se o teu gato bebeu refrigerante, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes. Uma ou duas lambidelas dificilmente intoxicam a maioria dos animais.",
+    "nl": "Heeft je kat frisdrank gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt. Een of twee likjes veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging."
   },
   "serving": null,
   "child": {
@@ -152,7 +166,8 @@
     "nb": "Brus er ikke noe for katter. En skål med friskt vann er alt katten din trenger!",
     "de": "Sprudelgetränke sind nichts für Katzen. Deine Katze braucht nur einen Napf mit frischem Wasser!",
     "es": "Las bebidas con burbujas no son para gatos. ¡Un cuenco de agua fresca es todo lo que tu gato necesita!",
-    "pt": "As bebidas com gás não são para gatos. Uma tigela de água fresca é tudo o que o teu gatinho precisa!"
+    "pt": "As bebidas com gás não são para gatos. Uma tigela de água fresca é tudo o que o teu gatinho precisa!",
+    "nl": "Drankjes met prik zijn niets voor katten. Een bakje vers water is alles wat je kat nodig heeft!"
   },
   "faq": [
     {
@@ -165,7 +180,8 @@
         "nb": "Katten min har slikket på brusen min – hva gjør jeg?",
         "de": "Meine Katze hat an meinem Softdrink geleckt – was soll ich tun?",
         "es": "Mi gato ha lamido mi refresco, ¿qué hago?",
-        "pt": "O meu gato lambeu o meu refrigerante – o que devo fazer?"
+        "pt": "O meu gato lambeu o meu refrigerante – o que devo fazer?",
+        "nl": "Mijn kat likte aan mijn frisdrank – wat moet ik doen?"
       },
       "a": {
         "en": "One or two licks of soda is unlikely to cause poisoning in most pets. If your cat drank more, call your vet or a pet poison helpline as soon as you realise, because cats are more sensitive to caffeine than people.",
@@ -176,7 +192,8 @@
         "nb": "En slikk eller to av brusen gir neppe forgiftning hos de fleste dyr. Hvis katten har drukket mer, ringer du dyrlegen eller giftinformasjon for dyr så snart du oppdager det, for katter er mer følsomme for koffein enn mennesker.",
         "de": "Ein- oder zweimal daran zu lecken führt bei den meisten Tieren wahrscheinlich nicht zu einer Vergiftung. Hat Ihre Katze mehr getrunken, rufen Sie Ihren Tierarzt oder einen Giftnotruf für Tiere an, sobald Sie es bemerken, denn Katzen reagieren auf Koffein empfindlicher als Menschen.",
         "es": "Es poco probable que uno o dos lametones de refresco causen una intoxicación en la mayoría de las mascotas. Si tu gato ha bebido más, llama a tu veterinario o a una línea de información toxicológica para animales en cuanto te des cuenta, porque los gatos son más sensibles a la cafeína que las personas.",
-        "pt": "Uma ou duas lambidelas de refrigerante dificilmente intoxicam a maioria dos animais. Se o teu gato bebeu mais, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes, porque os gatos são mais sensíveis à cafeína do que as pessoas."
+        "pt": "Uma ou duas lambidelas de refrigerante dificilmente intoxicam a maioria dos animais. Se o teu gato bebeu mais, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais assim que te aperceberes, porque os gatos são mais sensíveis à cafeína do que as pessoas.",
+        "nl": "Een of twee likjes frisdrank veroorzaken bij de meeste huisdieren waarschijnlijk geen vergiftiging. Heeft je kat meer gedronken, bel dan je dierenarts of een vergiftigingenlijn voor dieren zodra je het merkt, want katten zijn gevoeliger voor cafeïne dan mensen."
       }
     }
   ],
@@ -303,6 +320,11 @@
       "status": "verified",
       "verified_by": "claude-c-pt-2026-11-17",
       "verified_hash": "cdcc47939dd27daf88e29e7ba5a65b60fbadbbc53a2ce789bf62f19c51028747"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-c-nl-2026-11-17",
+      "verified_hash": "08e110b2426f37f66a089db29832fa59ea1b05cd72e9ea6600e754213cf288ad"
     }
   }
 }

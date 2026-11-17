@@ -10,7 +10,8 @@
     "nb": "Beinkraft",
     "de": "Knochenbrühe",
     "es": "Caldo de huesos",
-    "pt": "Caldo de ossos"
+    "pt": "Caldo de ossos",
+    "nl": "Bottenbouillon"
   },
   "question": {
     "en": "Can dogs have bone broth?",
@@ -21,7 +22,8 @@
     "nb": "Kan hunder få beinkraft?",
     "de": "Dürfen Hunde Knochenbrühe bekommen?",
     "es": "¿Pueden los perros tomar caldo de huesos?",
-    "pt": "Os cães podem tomar caldo de ossos?"
+    "pt": "Os cães podem tomar caldo de ossos?",
+    "nl": "Mogen honden bottenbouillon krijgen?"
   },
   "url_slug": {
     "en": "bone-broth",
@@ -32,7 +34,8 @@
     "nb": "beinkraft",
     "de": "knochenbruehe",
     "es": "caldo-de-huesos",
-    "pt": "caldo-de-ossos"
+    "pt": "caldo-de-ossos",
+    "nl": "bottenbouillon"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "nb": "Ja, naturell beinkraft laget med ingredienser som er trygge for hunder, er greit. Den er mild og skånsom for en følsom mage. Sil bort alle bein før servering, fjern fettlaget, og dropp kraft med løk, hvitløk eller salt.",
     "de": "Ja, einfache Knochenbrühe aus hundeverträglichen Zutaten ist in Ordnung. Sie ist mild und schonend für empfindliche Mägen. Seihen Sie die Brühe vor dem Servieren durch ein Sieb, damit kein Knochen darin bleibt, nehmen Sie die Fettschicht ab und verzichten Sie auf Brühen mit Zwiebeln, Knoblauch oder Salz.",
     "es": "Sí: un caldo de huesos sencillo, hecho solo con ingredientes seguros para perros, no les hace daño. Es suave y sienta bien a los estómagos sensibles. Retira todos los huesos antes de servirlo, quita la capa de grasa y evita los caldos con cebolla, ajo o sal.",
-    "pt": "Sim. O caldo de ossos simples, feito só com ingredientes seguros para cães, não faz mal. É suave e fácil para estômagos sensíveis. Tira todos os ossos antes de servir, retira a camada de gordura e evita caldos com cebola, alho ou sal."
+    "pt": "Sim. O caldo de ossos simples, feito só com ingredientes seguros para cães, não faz mal. É suave e fácil para estômagos sensíveis. Tira todos os ossos antes de servir, retira a camada de gordura e evita caldos com cebola, alho ou sal.",
+    "nl": "Ja, een simpele bottenbouillon van ingrediënten die veilig zijn voor honden is prima. Het is mild en goed te verdragen voor een gevoelige maag. Zeef alle botten eruit voordat je de bouillon geeft, haal de vetlaag eraf en laat bouillon met ui, knoflook of zout staan."
   },
   "why": {
     "en": "Bone broth is a stock made by slowly cooking animal bones at low heat for a long time. It is mild, flavourful and easy on sensitive stomachs, and it can make food more appealing to dogs with a reduced appetite. The risks come from what goes into it: some broths contain additives such as onions, garlic or salt, and cooked bones can splinter and injure your dog or get lodged in the throat.",
@@ -55,7 +59,8 @@
     "nb": "Beinkraft er en kraft som lages ved å la bein fra dyr småkoke på lav varme i lang tid. Den er mild, smakfull og skånsom for en følsom mage, og den kan gjøre maten mer fristende for hunder med nedsatt matlyst. Risikoen ligger i det som puttes oppi: Noen kraftsorter inneholder tilsetninger som løk, hvitløk eller salt, og kokte bein kan splintres og skade hunden eller sette seg fast i halsen.",
     "de": "Knochenbrühe ist ein Fond aus Tierknochen, die lange bei niedriger Hitze köcheln. Sie ist mild, aromatisch und schonend für empfindliche Mägen und kann Hunden mit wenig Appetit das Futter schmackhafter machen. Die Risiken stecken in den Zutaten: Manche Brühen enthalten Zusätze wie Zwiebeln, Knoblauch oder Salz, und gekochte Knochen können splittern und Ihren Hund verletzen oder im Hals stecken bleiben.",
     "es": "El caldo de huesos es el líquido que resulta de cocer huesos de animales a fuego lento durante mucho tiempo. Es suave, sabroso y sienta bien a los estómagos sensibles, y puede hacer que la comida resulte más apetecible para los perros con poco apetito. Los riesgos están en lo que se le añade: algunos caldos llevan aditivos como cebolla, ajo o sal, y los huesos cocinados pueden astillarse y herir a tu perro o quedarse atascados en la garganta.",
-    "pt": "O caldo de ossos faz-se cozendo ossos de animais em lume brando durante muito tempo. É suave, saboroso e fácil para estômagos sensíveis, e pode tornar a comida mais apetitosa para cães com pouco apetite. Os riscos vêm do que se lhe acrescenta: alguns caldos levam aditivos como cebola, alho ou sal, e os ossos cozinhados podem lascar e ferir o teu cão ou ficar presos na garganta."
+    "pt": "O caldo de ossos faz-se cozendo ossos de animais em lume brando durante muito tempo. É suave, saboroso e fácil para estômagos sensíveis, e pode tornar a comida mais apetitosa para cães com pouco apetite. Os riscos vêm do que se lhe acrescenta: alguns caldos levam aditivos como cebola, alho ou sal, e os ossos cozinhados podem lascar e ferir o teu cão ou ficar presos na garganta.",
+    "nl": "Bottenbouillon is een bouillon die je maakt door dierlijke botten lang op laag vuur te laten sudderen. Het is mild, smaakvol en goed te verdragen voor een gevoelige maag, en het kan eten aantrekkelijker maken voor honden met weinig eetlust. De risico’s zitten in wat erin gaat: sommige bouillons bevatten toevoegingen zoals ui, knoflook of zout, en gekookte botten kunnen versplinteren en je hond verwonden of in zijn keel blijven steken."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "nb": "Hvis hunden har fått kraft som inneholder løk, hvitløk eller mye salt, kan du lese sidene våre om løk, hvitløk og salt. Hvis hunden har svelget et kokt bein, kan du lese siden vår om kokte bein. Beinkraft løser ikke leddproblemer på egen hånd, så snakk med dyrlegen om dem.",
     "de": "Hat Ihr Hund Brühe mit Zwiebeln, Knoblauch oder viel Salz bekommen, lesen Sie unsere Seiten zu Zwiebeln, Knoblauch und Salz. Hat Ihr Hund einen gekochten Knochen verschluckt, lesen Sie unsere Seite zu gekochten Knochen. Knochenbrühe allein löst keine Gelenkprobleme – besprechen Sie diese deshalb mit Ihrem Tierarzt.",
     "es": "Si tu perro ha tomado un caldo con cebolla, ajo o mucha sal, consulta nuestras páginas sobre la cebolla, el ajo y la sal. Si tu perro se ha tragado un hueso cocinado, consulta nuestra página sobre los huesos cocinados. El caldo de huesos no soluciona por sí solo los problemas de articulaciones, así que habla con tu veterinario.",
-    "pt": "Se o teu cão tomou caldo com cebola, alho ou muito sal, vai às nossas páginas da cebola, do alho e do sal. Se engoliu um osso cozinhado, vai à nossa página dos ossos cozinhados. O caldo de ossos não resolve sozinho problemas nas articulações, por isso fala com o teu veterinário."
+    "pt": "Se o teu cão tomou caldo com cebola, alho ou muito sal, vai às nossas páginas da cebola, do alho e do sal. Se engoliu um osso cozinhado, vai à nossa página dos ossos cozinhados. O caldo de ossos não resolve sozinho problemas nas articulações, por isso fala com o teu veterinário.",
+    "nl": "Heeft je hond bouillon met ui, knoflook of veel zout gehad, bekijk dan onze pagina’s over ui, knoflook en zout. Heeft je hond een gekookt bot ingeslikt, bekijk dan onze pagina over gekookte botten. Bottenbouillon lost gewrichtsproblemen niet op, dus bespreek die met je dierenarts."
   },
   "serving": {
     "en": "Use only natural, dog-safe ingredients, with no onions, garlic or salt. After cooking, refrigerate the broth, remove the hardened layer of fat from the top and strain out every bone. Serve it on its own or mixed into dry food.",
@@ -78,7 +84,8 @@
     "nb": "Bruk bare naturlige ingredienser som er trygge for hunder, uten løk, hvitløk eller salt. Etter koking setter du kraften i kjøleskapet, fjerner det stivnede fettlaget på toppen og siler bort alle bein. Server den ren, eller bland den i tørrfôret.",
     "de": "Verwenden Sie nur natürliche, für Hunde unbedenkliche Zutaten, ohne Zwiebeln, Knoblauch oder Salz. Stellen Sie die Brühe nach dem Kochen in den Kühlschrank, nehmen Sie die erstarrte Fettschicht oben ab und seihen Sie alle Knochen heraus. Geben Sie sie pur oder unter das Trockenfutter gemischt.",
     "es": "Usa solo ingredientes naturales y seguros para perros, sin cebolla, ajo ni sal. Después de cocinarlo, guarda el caldo en la nevera, quita la capa de grasa endurecida de la superficie y retira todos los huesos. Puedes dárselo solo o mezclado con pienso.",
-    "pt": "Usa só ingredientes naturais e seguros para cães, sem cebola, alho nem sal. Depois de cozinhar, deixa o caldo arrefecer no frigorífico, retira a camada de gordura endurecida à superfície e tira todos os ossos. Serve-o sozinho ou misturado com a ração."
+    "pt": "Usa só ingredientes naturais e seguros para cães, sem cebola, alho nem sal. Depois de cozinhar, deixa o caldo arrefecer no frigorífico, retira a camada de gordura endurecida à superfície e tira todos os ossos. Serve-o sozinho ou misturado com a ração.",
+    "nl": "Gebruik alleen natuurlijke ingrediënten die veilig zijn voor honden, zonder ui, knoflook of zout. Zet de bouillon na het koken in de koelkast, schep de verharde vetlaag er van boven af en zeef alle botten eruit. Geef de bouillon puur of meng hem door het droge voer."
   },
   "child": {
     "en": "Bone broth can be a tasty treat for dogs. A grown-up makes it and takes out every bone first, because bones aren't safe for dogs.",
@@ -89,7 +96,8 @@
     "nb": "Beinkraft kan være en god godbit for hunder. En voksen lager den og tar ut alle beinene først, for bein er ikke trygt for hunder.",
     "de": "Knochenbrühe kann für Hunde ein leckeres Extra sein. Ein Erwachsener kocht sie und nimmt vorher alle Knochen heraus, denn Knochen sind für Hunde nicht sicher.",
     "es": "El caldo de huesos puede ser un premio rico para los perros. Un adulto lo prepara y le quita antes todos los huesos, porque no son seguros para los perros.",
-    "pt": "O caldo de ossos pode ser um petisco saboroso para os cães. Um adulto prepara-o e tira primeiro todos os ossos, porque os ossos não são seguros para os cães."
+    "pt": "O caldo de ossos pode ser um petisco saboroso para os cães. Um adulto prepara-o e tira primeiro todos os ossos, porque os ossos não são seguros para os cães.",
+    "nl": "Bottenbouillon kan een lekker snoepje zijn voor honden. Een volwassene maakt de bouillon en haalt er eerst alle botten uit, want botten zijn niet veilig voor honden."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "nb": "Hva er forskjellen på beinkraft og vanlig kraft?",
         "de": "Was unterscheidet Knochenbrühe von normaler Brühe?",
         "es": "¿En qué se diferencia el caldo de huesos del caldo normal?",
-        "pt": "Qual é a diferença entre o caldo de ossos e o caldo normal?"
+        "pt": "Qual é a diferença entre o caldo de ossos e o caldo normal?",
+        "nl": "Wat is het verschil tussen bottenbouillon en gewone bouillon?"
       },
       "a": {
         "en": "Bone broth is a stock liquid made by slowly cooking animal bones at low heat for an extended period. For everyday broth and stock cubes, see our broth page.",
@@ -113,7 +122,8 @@
         "nb": "Beinkraft er en kraft som lages ved å la bein fra dyr småkoke på lav varme i lang tid. Vanlig kraft og buljongterninger finner du på siden vår om buljong og kraft.",
         "de": "Knochenbrühe ist ein Fond, für den Tierknochen lange bei niedriger Hitze köcheln. Mehr zu normaler Brühe und Brühwürfeln finden Sie auf unserer Seite zu Brühe und Fond.",
         "es": "El caldo de huesos es el líquido que resulta de cocer huesos de animales a fuego lento durante mucho tiempo. Para el caldo de uso diario y las pastillas de caldo, consulta nuestra página sobre el caldo.",
-        "pt": "O caldo de ossos faz-se cozendo ossos de animais em lume brando durante muito tempo. Para o caldo do dia a dia e os cubos de caldo, vai à nossa página do caldo."
+        "pt": "O caldo de ossos faz-se cozendo ossos de animais em lume brando durante muito tempo. Para o caldo do dia a dia e os cubos de caldo, vai à nossa página do caldo.",
+        "nl": "Bottenbouillon is een bouillon die je maakt door dierlijke botten lange tijd op laag vuur te laten sudderen. Voor gewone bouillon en bouillonblokjes kun je terecht op onze bouillonpagina."
       }
     },
     {
@@ -126,7 +136,8 @@
         "nb": "Kan jeg bruke ferdiglaget beinkraft fra butikken?",
         "de": "Kann ich fertige Knochenbrühe aus dem Laden verwenden?",
         "es": "¿Puedo usar caldo de huesos comprado?",
-        "pt": "Posso usar caldo de ossos comprado?"
+        "pt": "Posso usar caldo de ossos comprado?",
+        "nl": "Mag ik bottenbouillon uit de winkel gebruiken?"
       },
       "a": {
         "en": "Look for one with natural, dog-safe ingredients, because some contain additives for preservation and taste, such as onions, garlic or salt.",
@@ -137,7 +148,8 @@
         "nb": "Se etter en med naturlige ingredienser som er trygge for hunder, for noen inneholder tilsetninger for holdbarhet og smak, som løk, hvitløk eller salt.",
         "de": "Achten Sie auf natürliche, für Hunde unbedenkliche Zutaten, denn manche Produkte enthalten Zusätze zur Haltbarkeit und für den Geschmack, etwa Zwiebeln, Knoblauch oder Salz.",
         "es": "Busca uno con ingredientes naturales y seguros para perros, porque algunos llevan aditivos para conservarlo y darle sabor, como cebolla, ajo o sal.",
-        "pt": "Procura um feito com ingredientes naturais e seguros para cães, porque alguns levam conservantes e aromatizantes, como cebola, alho ou sal."
+        "pt": "Procura um feito com ingredientes naturais e seguros para cães, porque alguns levam conservantes e aromatizantes, como cebola, alho ou sal.",
+        "nl": "Kies een bouillon met natuurlijke ingrediënten die veilig zijn voor honden, want sommige bevatten toevoegingen als ui, knoflook of zout om ze langer houdbaar en smakelijker te maken."
       }
     },
     {
@@ -150,7 +162,8 @@
         "nb": "Hjelper beinkraft på hundens ledd?",
         "de": "Hilft Knochenbrühe den Gelenken meines Hundes?",
         "es": "¿El caldo de huesos ayuda a las articulaciones de mi perro?",
-        "pt": "O caldo de ossos ajuda as articulações do meu cão?"
+        "pt": "O caldo de ossos ajuda as articulações do meu cão?",
+        "nl": "Helpt bottenbouillon bij de gewrichten van mijn hond?"
       },
       "a": {
         "en": "The AKC says the collagen in bone broth contributes to joint health, but bone broth won't cure joint problems without other treatments, so contact your vet.",
@@ -161,7 +174,8 @@
         "nb": "AKC sier at kollagenet i beinkraft bidrar til sunne ledd, men beinkraft kurerer ikke leddproblemer uten annen behandling, så kontakt dyrlegen.",
         "de": "Laut AKC trägt das Kollagen in Knochenbrühe zur Gesundheit der Gelenke bei. Ohne weitere Behandlung heilt Knochenbrühe Gelenkprobleme aber nicht – wenden Sie sich deshalb an Ihren Tierarzt.",
         "es": "Según el AKC, el colágeno del caldo de huesos contribuye a la salud de las articulaciones, pero el caldo de huesos no cura los problemas articulares sin otros tratamientos, así que consulta con tu veterinario.",
-        "pt": "A AKC diz que o colagénio do caldo de ossos ajuda a manter as articulações saudáveis, mas o caldo de ossos não cura problemas articulares sem outros tratamentos, por isso fala com o teu veterinário."
+        "pt": "A AKC diz que o colagénio do caldo de ossos ajuda a manter as articulações saudáveis, mas o caldo de ossos não cura problemas articulares sem outros tratamentos, por isso fala com o teu veterinário.",
+        "nl": "Volgens de AKC draagt het collageen in bottenbouillon bij aan gezonde gewrichten, maar zonder andere behandelingen lost bottenbouillon gewrichtsproblemen niet op. Neem daarom contact op met je dierenarts."
       }
     }
   ],
@@ -269,6 +283,11 @@
       "status": "verified",
       "verified_by": "claude-c-pt-2026-11-17",
       "verified_hash": "e86b3dc3af50e1b8453c0f4e44fee542ffed32f11f692e18a425a9514e455c65"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-c-nl-2026-11-17",
+      "verified_hash": "d9032575099c5a7e17fc8e09f8abec9cf90c59a6d09684bf9931985497325112"
     }
   }
 }
