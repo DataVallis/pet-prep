@@ -7,7 +7,8 @@
     "fr": "Jus de fruits",
     "it": "Succo di frutta",
     "fi": "Hedelmämehu",
-    "nb": "Fruktjuice"
+    "nb": "Fruktjuice",
+    "de": "Fruchtsaft"
   },
   "question": {
     "en": "Can dogs drink fruit juice?",
@@ -15,7 +16,8 @@
     "fr": "Les chiens peuvent-ils boire du jus de fruits ?",
     "it": "I cani possono bere il succo di frutta?",
     "fi": "Saako koira juoda hedelmämehua?",
-    "nb": "Kan hunder drikke fruktjuice?"
+    "nb": "Kan hunder drikke fruktjuice?",
+    "de": "Dürfen Hunde Fruchtsaft trinken?"
   },
   "url_slug": {
     "en": "juice",
@@ -23,7 +25,8 @@
     "fr": "jus-de-fruits",
     "it": "succo-di-frutta",
     "fi": "hedelmamehu",
-    "nb": "fruktjuice"
+    "nb": "fruktjuice",
+    "de": "fruchtsaft"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "fr": "Mieux vaut s’en abstenir. Un fruit entier est un meilleur en-cas qu’un jus. Le jus d’orange, par exemple, n’est pas toxique, mais il contient des sucres concentrés et ne contient pas les fibres du fruit. Le jus de citron contient beaucoup d’acide citrique, toxique pour les chiens, et les boissons sans sucre peuvent contenir du xylitol.",
     "it": "Meglio di no. La frutta intera è uno snack migliore del succo. Il succo d’arancia, per esempio, non è tossico ma contiene zuccheri concentrati e non ha le fibre della frutta. Il succo di limone è ricco di acido citrico, che è tossico per i cani, e le bevande senza zucchero possono contenere xilitolo.",
     "fi": "Parempi olla antamatta. Kokonainen hedelmä on mehua parempi välipala. Appelsiinimehu ei esimerkiksi ole myrkyllistä, mutta siinä on tiivistyneitä sokereita eikä lainkaan hedelmän kuitua. Sitruunamehussa on paljon sitruunahappoa, joka on koirille myrkyllistä, ja sokerittomissa juomissa voi olla ksylitolia.",
-    "nb": "Helst ikke. Hel frukt er en bedre godbit enn juice. Appelsinjuice er for eksempel ikke giftig, men inneholder konsentrert sukker og mangler fiberen i frukten. Sitronjuice inneholder mye sitronsyre, som er giftig for hunder, og sukkerfrie drikker kan inneholde xylitol."
+    "nb": "Helst ikke. Hel frukt er en bedre godbit enn juice. Appelsinjuice er for eksempel ikke giftig, men inneholder konsentrert sukker og mangler fiberen i frukten. Sitronjuice inneholder mye sitronsyre, som er giftig for hunder, og sukkerfrie drikker kan inneholde xylitol.",
+    "de": "Besser nicht. Als Snack ist frisches Obst besser geeignet als Saft. Orangensaft zum Beispiel ist nicht giftig, enthält aber konzentrierten Zucker und nicht die Ballaststoffe der Frucht. Zitronensaft enthält viel Zitronensäure, die für Hunde giftig ist, und zuckerfreie Getränke können Xylit enthalten."
   },
   "why": {
     "en": "Juice contains concentrated natural sugars and lacks the fibre of whole fruit; because it is higher in sugar and easy to drink in large amounts, it may increase the risk of digestive upset. Fruit juice concentrates are high in fructose, which may increase the risk of obesity. Lemon juice is a concentrated form of the fruit with high amounts of citric acid, which is toxic to dogs. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -40,7 +44,8 @@
     "fr": "Le jus contient des sucres naturels concentrés et n’a pas les fibres du fruit entier ; comme il est plus riche en sucre et facile à boire en grande quantité, il peut augmenter le risque de troubles digestifs. Les jus de fruits concentrés sont riches en fructose, ce qui peut augmenter le risque d’obésité. Le jus de citron est une forme concentrée du fruit, avec beaucoup d’acide citrique, toxique pour les chiens. De nombreuses boissons zéro sucre contiennent du xylitol, très toxique pour les chiens.",
     "it": "Il succo contiene zuccheri naturali concentrati e non ha le fibre della frutta intera; poiché è più ricco di zuccheri e facile da bere in grandi quantità, può aumentare il rischio di disturbi digestivi. I succhi di frutta concentrati sono ricchi di fruttosio, che può aumentare il rischio di obesità. Il succo di limone è una forma concentrata del frutto, con molto acido citrico, che è tossico per i cani. Molte bevande a zero zuccheri contengono xilitolo, che è altamente tossico per i cani.",
     "fi": "Mehussa on tiivistyneitä luonnollisia sokereita, eikä siinä ole kokonaisen hedelmän kuitua. Koska siinä on enemmän sokeria ja sitä on helppo juoda paljon, se voi lisätä ruoansulatusvaivojen riskiä. Hedelmämehutiivisteissä on paljon fruktoosia, joka voi lisätä lihavuuden riskiä. Sitruunamehu on hedelmän tiivistetty muoto, ja siinä on paljon sitruunahappoa, joka on koirille myrkyllistä. Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä.",
-    "nb": "Juice inneholder konsentrert naturlig sukker og mangler fiberen i hel frukt; fordi den har mer sukker og er lett å drikke mye av, kan den øke risikoen for fordøyelsesplager. Fruktjuicekonsentrater har mye fruktose, noe som kan øke risikoen for overvekt. Sitronjuice er en konsentrert form av frukten med mye sitronsyre, som er giftig for hunder. Mange sukkerfrie drikker inneholder xylitol, som er svært giftig for hunder."
+    "nb": "Juice inneholder konsentrert naturlig sukker og mangler fiberen i hel frukt; fordi den har mer sukker og er lett å drikke mye av, kan den øke risikoen for fordøyelsesplager. Fruktjuicekonsentrater har mye fruktose, noe som kan øke risikoen for overvekt. Sitronjuice er en konsentrert form av frukten med mye sitronsyre, som er giftig for hunder. Mange sukkerfrie drikker inneholder xylitol, som er svært giftig for hunder.",
+    "de": "Saft enthält konzentrierten natürlichen Zucker, und ihm fehlen die Ballaststoffe der ganzen Frucht. Weil er so zuckerreich ist und sich leicht in großen Mengen trinken lässt, kann er das Risiko für Verdauungsbeschwerden erhöhen. Fruchtsaftkonzentrate enthalten viel Fruktose, die das Risiko für Übergewicht erhöhen kann. Zitronensaft ist die konzentrierte Form der Frucht und enthält viel Zitronensäure, die für Hunde giftig ist. Viele zuckerfreie Getränke enthalten Xylit, das für Hunde hochgiftig ist."
   },
   "signs": {
     "en": [
@@ -60,6 +65,9 @@
     ],
     "nb": [
       "Fordøyelsesplager"
+    ],
+    "de": [
+      "Verdauungsbeschwerden"
     ]
   },
   "what_to_do": {
@@ -68,7 +76,8 @@
     "fr": "Proposez plutôt de l’eau fraîche et surveillez votre chien pour repérer d’éventuels signes de troubles digestifs. Si la boisson était sans sucre ou pouvait contenir du xylitol, consultez tout de suite notre page sur le xylitol. Si votre chien a bu du jus de raisin, consultez notre page sur le raisin.",
     "it": "Offri invece acqua fresca e controlla se il cane mostra segni di disturbi digestivi. Se la bevanda era senza zucchero o potrebbe contenere xilitolo, guarda subito la nostra pagina sullo xilitolo. Se il tuo cane ha bevuto succo d’uva, guarda la nostra pagina sull’uva.",
     "fi": "Tarjoa sen sijaan raikasta vettä ja tarkkaile koiraasi ruoansulatusvaivojen varalta. Jos juoma oli sokeriton tai siinä voi olla ksylitolia, lue heti ksylitolisivumme. Jos koirasi sai viinirypälemehua, lue viinirypälesivumme.",
-    "nb": "Gi friskt vann i stedet, og følg med på om hunden får tegn på fordøyelsesplager. Hvis drikken var sukkerfri eller kan inneholde xylitol, kan du lese siden vår om xylitol med en gang. Hvis hunden fikk druejuice, kan du lese siden vår om druer."
+    "nb": "Gi friskt vann i stedet, og følg med på om hunden får tegn på fordøyelsesplager. Hvis drikken var sukkerfri eller kan inneholde xylitol, kan du lese siden vår om xylitol med en gang. Hvis hunden fikk druejuice, kan du lese siden vår om druer.",
+    "de": "Bieten Sie stattdessen frisches Wasser an und achten Sie darauf, ob Ihr Hund Verdauungsbeschwerden bekommt. War das Getränk zuckerfrei oder könnte es Xylit enthalten, lesen Sie sofort unsere Seite zu Xylit. Hat Ihr Hund Traubensaft getrunken, lesen Sie unsere Seite zu Trauben."
   },
   "serving": null,
   "child": {
@@ -77,7 +86,8 @@
     "fr": "Le jus est trop sucré pour les chiens. Un petit morceau de fruit frais qu’il peut manger ou une gamelle d’eau fraîche, c’est une bien meilleure friandise !",
     "it": "Il succo è troppo zuccherato per i cani. Meglio un pezzettino di frutta fresca adatta ai cani, o una ciotola di acqua fresca!",
     "fi": "Mehu on koirille liian sokerista. Pieni pala koiralle sopivaa tuoretta hedelmää tai kuppi raikasta vettä on paljon parempi valinta!",
-    "nb": "Juice er for søtt for hunder. En liten bit frisk frukt som hunder tåler, eller en skål friskt vann er en mye bedre godbit!"
+    "nb": "Juice er for søtt for hunder. En liten bit frisk frukt som hunder tåler, eller en skål friskt vann er en mye bedre godbit!",
+    "de": "Saft ist für Hunde viel zu süß. Ein kleines Stück frisches Obst, das Hunde vertragen, oder ein Napf mit frischem Wasser ist ein viel besseres Leckerli!"
   },
   "faq": [
     {
@@ -87,7 +97,8 @@
         "fr": "Le jus d’orange est-il toxique pour les chiens ?",
         "it": "Il succo d’arancia è tossico per i cani?",
         "fi": "Onko appelsiinimehu myrkyllistä koiralle?",
-        "nb": "Er appelsinjuice giftig for hunder?"
+        "nb": "Er appelsinjuice giftig for hunder?",
+        "de": "Ist Orangensaft für Hunde giftig?"
       },
       "a": {
         "en": "No, but it is not recommended because it contains concentrated sugars and lacks the fibre found in whole fruit. If you want to share the taste of oranges, offer small pieces of fresh fruit instead.",
@@ -95,7 +106,8 @@
         "fr": "Non, mais il n’est pas recommandé, car il contient des sucres concentrés et n’a pas les fibres du fruit entier. Si vous voulez partager le goût des oranges, proposez plutôt de petits morceaux de fruit frais.",
         "it": "No, ma non è consigliato perché contiene zuccheri concentrati e non ha le fibre della frutta intera. Se vuoi far assaggiare al tuo cane il gusto dell’arancia, offrigli invece piccoli pezzi di frutta fresca.",
         "fi": "Ei, mutta sitä ei suositella, koska siinä on tiivistyneitä sokereita eikä kokonaisen hedelmän kuitua. Jos haluat antaa koiralle appelsiinin makua, tarjoa sen sijaan pieniä paloja tuoretta hedelmää.",
-        "nb": "Nei, men det anbefales ikke, fordi den inneholder konsentrert sukker og mangler fiberen i hel frukt. Hvis du vil la hunden smake på appelsin, kan du gi små biter frisk frukt i stedet."
+        "nb": "Nei, men det anbefales ikke, fordi den inneholder konsentrert sukker og mangler fiberen i hel frukt. Hvis du vil la hunden smake på appelsin, kan du gi små biter frisk frukt i stedet.",
+        "de": "Nein, empfehlenswert ist er aber nicht, weil er konzentrierten Zucker enthält und ihm die Ballaststoffe der ganzen Frucht fehlen. Wenn Ihr Hund den Geschmack von Orangen probieren soll, geben Sie ihm lieber ein paar kleine Stücke frisches Obst."
       }
     },
     {
@@ -105,7 +117,8 @@
         "fr": "Et le jus de raisin ?",
         "it": "E il succo d’uva?",
         "fi": "Entä viinirypälemehu?",
-        "nb": "Hva med druejuice?"
+        "nb": "Hva med druejuice?",
+        "de": "Und Traubensaft?"
       },
       "a": {
         "en": "Sources disagree. VCA says grape juice does not appear to cause the poisoning seen with grapes and raisins, while FirstVet says grape juice should never be given to dogs. We follow the stricter advice: don't give it.",
@@ -113,7 +126,8 @@
         "fr": "Les sources ne sont pas d’accord. VCA indique que le jus de raisin ne semble pas provoquer l’intoxication observée avec le raisin et les raisins secs, alors que FirstVet affirme qu’il ne faut jamais en donner aux chiens. Nous suivons l’avis le plus strict : n’en donnez pas.",
         "it": "Le fonti non concordano. VCA dice che il succo d’uva non sembra causare l’intossicazione provocata da uva e uvetta, mentre FirstVet dice che il succo d’uva non va mai dato ai cani. Seguiamo il consiglio più severo: non darlo.",
         "fi": "Lähteet ovat eri mieltä. VCA:n mukaan viinirypälemehu ei näytä aiheuttavan samaa myrkytystä kuin viinirypäleet ja rusinat, mutta FirstVetin mukaan koiralle ei pidä koskaan antaa viinirypälemehua. Noudatamme tiukempaa ohjetta: älä anna sitä.",
-        "nb": "Kildene er uenige. VCA sier at druejuice ikke ser ut til å gi den forgiftningen man ser ved druer og rosiner, mens FirstVet sier at druejuice aldri bør gis til hunder. Vi følger det strengeste rådet: Ikke gi den."
+        "nb": "Kildene er uenige. VCA sier at druejuice ikke ser ut til å gi den forgiftningen man ser ved druer og rosiner, mens FirstVet sier at druejuice aldri bør gis til hunder. Vi følger det strengeste rådet: Ikke gi den.",
+        "de": "Die Quellen sind sich nicht einig. Laut VCA scheint Traubensaft nicht die Vergiftung auszulösen, die man von Trauben und Rosinen kennt; FirstVet dagegen sagt, Hunde dürften niemals Traubensaft bekommen. Wir folgen dem strengeren Rat: Geben Sie ihn nicht."
       }
     }
   ],
@@ -224,6 +238,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "181dd72948ff64ffe70695c492455c2eb3ef066386be702850f91f7d3a7c54f9"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-c-de-2026-11-17",
+      "verified_hash": "b01e5ce0cbf06787c2a9a45e1ed4576abb2c26b37b49cc49a1c9372bd1face28"
     }
   }
 }

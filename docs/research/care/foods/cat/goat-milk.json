@@ -7,7 +7,8 @@
     "fr": "Lait de chèvre",
     "it": "Latte di capra",
     "fi": "Vuohenmaito",
-    "nb": "Geitemelk"
+    "nb": "Geitemelk",
+    "de": "Ziegenmilch"
   },
   "question": {
     "en": "Can cats drink goat's milk?",
@@ -15,7 +16,8 @@
     "fr": "Les chats peuvent-ils boire du lait de chèvre ?",
     "it": "I gatti possono bere il latte di capra?",
     "fi": "Saako kissa juoda vuohenmaitoa?",
-    "nb": "Kan katter drikke geitemelk?"
+    "nb": "Kan katter drikke geitemelk?",
+    "de": "Dürfen Katzen Ziegenmilch trinken?"
   },
   "url_slug": {
     "en": "goat-milk",
@@ -23,7 +25,8 @@
     "fr": "lait-de-chevre",
     "it": "latte-di-capra",
     "fi": "vuohenmaito",
-    "nb": "geitemelk"
+    "nb": "geitemelk",
+    "de": "ziegenmilch"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "fr": "Mieux vaut s’en abstenir. Les vétérinaires rangent le lait de chèvre, comme le lait de vache, parmi les boissons qui causent des maux de ventre chez les chats intolérants au lactose, et la plupart des chats le sont. Les associations de protection des chats conseillent d’éviter tout type de lait : votre chat n’a besoin que d’eau.",
     "it": "Meglio di no. I veterinari mettono il latte di capra, come quello vaccino, tra le bevande che causano disturbi di pancia nei gatti intolleranti al lattosio, e la maggior parte dei gatti lo è. Le associazioni per la tutela dei gatti consigliano di evitare qualsiasi tipo di latte – al tuo gatto basta l’acqua.",
     "fi": "Parempi olla antamatta. Eläinlääkärit lukevat vuohenmaidon lehmänmaidon tavoin juomiin, jotka aiheuttavat vatsavaivoja laktoosia sietämättömille kissoille, ja useimmat kissat eivät siedä laktoosia. Kissayhdistykset neuvovat välttämään kaikkia maitolajeja – kissasi tarvitsee vain vettä.",
-    "nb": "Helst ikke. Dyrleger nevner geitemelk, i likhet med kumelk, blant drikkene som gir magebesvær hos katter som ikke tåler laktose, og det gjelder de fleste katter. Katteorganisasjoner fraråder alle typer melk – katten trenger bare vann."
+    "nb": "Helst ikke. Dyrleger nevner geitemelk, i likhet med kumelk, blant drikkene som gir magebesvær hos katter som ikke tåler laktose, og det gjelder de fleste katter. Katteorganisasjoner fraråder alle typer melk – katten trenger bare vann.",
+    "de": "Besser nicht. Tierärzte zählen Ziegenmilch – wie Kuhmilch – zu den Getränken, die bei laktoseintoleranten Katzen Bauchbeschwerden auslösen, und die meisten Katzen sind laktoseintolerant. Katzenschutzorganisationen raten, auf jede Art von Milch zu verzichten – Ihre Katze braucht nur Wasser."
   },
   "why": {
     "en": "Lactose intolerance is a common food reaction in cats, and VCA vets list diarrhoea, vomiting, bloating and tummy discomfort after cow's or goat's milk as its signs. There are no benefits to a cat having milk. For kittens the sources differ: VCA says goat's milk is not recommended for kittens because it is far too low in protein and fat, and allows pasteurised goat's milk only in an emergency until kitten milk replacer is available, while Cats Protection says never to give it, as kittens find it difficult to digest. We follow the stricter advice.",
@@ -40,7 +44,8 @@
     "fr": "L’intolérance au lactose est une réaction alimentaire courante chez les chats, et les vétérinaires de VCA citent parmi ses signes la diarrhée, les vomissements, les ballonnements et la gêne au ventre après du lait de vache ou de chèvre. Le lait n’apporte aucun bénéfice à un chat. Pour les chatons, les sources divergent : VCA indique que le lait de chèvre n’est pas recommandé pour les chatons, car il est bien trop pauvre en protéines et en graisses, et n’autorise le lait de chèvre pasteurisé qu’en cas d’urgence, en attendant de disposer d’un lait de remplacement pour chatons, tandis que Cats Protection recommande de ne jamais en donner, car les chatons le digèrent difficilement. Nous suivons l’avis le plus strict.",
     "it": "L’intolleranza al lattosio è una reazione alimentare comune nei gatti, e i veterinari di VCA indicano tra i sintomi diarrea, vomito, gonfiore e fastidio alla pancia dopo latte vaccino o di capra. Per un gatto il latte non ha alcun beneficio. Per i gattini le fonti non concordano: VCA dice che il latte di capra non è consigliato ai gattini perché è decisamente troppo povero di proteine e grassi, e lo ammette solo in caso di emergenza, se pastorizzato, finché non è disponibile il latte artificiale per gattini, mentre Cats Protection dice di non darlo mai, perché i gattini lo digeriscono con difficoltà. Seguiamo il consiglio più severo.",
     "fi": "Laktoosi-intoleranssi on kissoilla yleinen ruokareaktio, ja VCA:n eläinlääkärien mukaan oireita ovat ripuli, oksentelu, turvotus ja vatsavaivat lehmän- tai vuohenmaidon jälkeen. Maidosta ei ole kissalle mitään hyötyä. Kissanpentujen kohdalla lähteet eroavat: VCA ei suosittele vuohenmaitoa kissanpennuille, koska siinä on aivan liian vähän proteiinia ja rasvaa. Pastöroitua vuohenmaitoa saa antaa vain hätätilanteessa, kunnes kissanpennun maidonkorviketta on saatavilla. Cats Protectionin mukaan sitä ei sen sijaan pidä koskaan antaa, koska kissanpennut sulattavat sitä huonosti. Noudatamme tiukempaa ohjetta.",
-    "nb": "Laktoseintoleranse er en vanlig matreaksjon hos katter, og dyrleger ved VCA nevner diaré, oppkast, oppblåst mage og vondt i magen etter kumelk eller geitemelk som tegn på den. En katt har ingen nytte av å drikke melk. For kattunger er kildene uenige. VCA sier at geitemelk ikke anbefales til kattunger, fordi den har altfor lite protein og fett, og at pasteurisert geitemelk bare kan brukes i nødsfall, til man får tak i melkeerstatning for kattunger. Cats Protection sier at kattunger aldri skal få den, fordi de har problemer med å fordøye den. Vi følger det strengeste rådet."
+    "nb": "Laktoseintoleranse er en vanlig matreaksjon hos katter, og dyrleger ved VCA nevner diaré, oppkast, oppblåst mage og vondt i magen etter kumelk eller geitemelk som tegn på den. En katt har ingen nytte av å drikke melk. For kattunger er kildene uenige. VCA sier at geitemelk ikke anbefales til kattunger, fordi den har altfor lite protein og fett, og at pasteurisert geitemelk bare kan brukes i nødsfall, til man får tak i melkeerstatning for kattunger. Cats Protection sier at kattunger aldri skal få den, fordi de har problemer med å fordøye den. Vi følger det strengeste rådet.",
+    "de": "Laktoseintoleranz ist bei Katzen eine häufige Unverträglichkeit, und VCA-Tierärzte nennen Durchfall, Erbrechen, Blähungen und Bauchbeschwerden nach Kuh- oder Ziegenmilch als Anzeichen. Für eine Katze hat Milch keinen Nutzen. Bei Kätzchen gehen die Quellen auseinander: Laut VCA wird Ziegenmilch für Kätzchen nicht empfohlen, weil sie viel zu wenig Eiweiß und Fett enthält; nur im Notfall sei pasteurisierte Ziegenmilch erlaubt, bis Aufzuchtmilch für Kätzchen zur Verfügung steht. Cats Protection rät, sie niemals zu geben, weil Kätzchen sie nur schwer verdauen. Wir folgen dem strengeren Rat."
   },
   "signs": {
     "en": [
@@ -90,6 +95,14 @@
       "Vondt eller ubehag i magen",
       "Rumling i magen",
       "Lite energi"
+    ],
+    "de": [
+      "Durchfall",
+      "Erbrechen",
+      "Aufgeblähter Bauch",
+      "Bauchschmerzen oder Unwohlsein im Bauch",
+      "Gluckernde Magengeräusche",
+      "Antriebslosigkeit"
     ]
   },
   "what_to_do": {
@@ -98,7 +111,8 @@
     "fr": "Arrêtez le lait de chèvre et proposez de l’eau fraîche. Si votre chat a de la diarrhée après des produits laitiers, donnez-lui de petits repas fréquents et faciles à digérer, et parlez-en à votre vétérinaire s’il refuse de manger : les cas graves peuvent nécessiter des soins vétérinaires.",
     "it": "Smetti di dare il latte di capra e offri acqua fresca. Se il tuo gatto ha la diarrea dopo aver preso latticini, dagli pasti piccoli, frequenti e in bianco, e parla con il veterinario se rifiuta di mangiare – i casi gravi possono richiedere cure veterinarie.",
     "fi": "Lopeta vuohenmaidon antaminen ja tarjoa raikasta vettä. Jos kissalle tulee ripuli maitotuotteiden jälkeen, ruoki sitä tiheästi pienillä, miedoilla aterioilla. Jos kissa ei suostu syömään, ota yhteyttä eläinlääkäriin: vaikeat tapaukset voivat vaatia eläinlääkärin hoitoa.",
-    "nb": "Slutt å gi geitemelk og tilby friskt vann. Hvis katten får diaré etter meieriprodukter, gir du hyppige, små og milde måltider. Snakk med dyrlegen hvis katten nekter å spise – i alvorlige tilfeller kan den trenge dyrlegehjelp."
+    "nb": "Slutt å gi geitemelk og tilby friskt vann. Hvis katten får diaré etter meieriprodukter, gir du hyppige, små og milde måltider. Snakk med dyrlegen hvis katten nekter å spise – i alvorlige tilfeller kan den trenge dyrlegehjelp.",
+    "de": "Geben Sie keine Ziegenmilch mehr und bieten Sie stattdessen frisches Wasser an. Bekommt Ihre Katze nach Milchprodukten Durchfall, füttern Sie kleine, schonende Mahlzeiten in kurzen Abständen und sprechen Sie mit Ihrem Tierarzt, wenn Ihre Katze nicht frisst – schwere Fälle können tierärztliche Behandlung erfordern."
   },
   "serving": null,
   "child": {
@@ -107,7 +121,8 @@
     "fr": "Les chats n’ont pas besoin de lait de chèvre ni d’aucun autre lait. Une gamelle d’eau fraîche est la meilleure boisson pour ton chat !",
     "it": "I gatti non hanno bisogno del latte di capra né di nessun altro latte. Una ciotola di acqua fresca è la bevanda migliore per il tuo micio!",
     "fi": "Kissa ei tarvitse vuohenmaitoa eikä mitään muutakaan maitoa. Kuppi raikasta vettä on kissan paras juoma!",
-    "nb": "Katter trenger ikke geitemelk eller annen melk. En skål med friskt vann er den beste drikken for katten din!"
+    "nb": "Katter trenger ikke geitemelk eller annen melk. En skål med friskt vann er den beste drikken for katten din!",
+    "de": "Katzen brauchen weder Ziegenmilch noch eine andere Milch. Ein Napf mit frischem Wasser ist das beste Getränk für deine Katze!"
   },
   "faq": [
     {
@@ -117,7 +132,8 @@
         "fr": "Les chatons peuvent-ils boire du lait de chèvre ?",
         "it": "I gattini possono bere il latte di capra?",
         "fi": "Saavatko kissanpennut juoda vuohenmaitoa?",
-        "nb": "Kan kattunger drikke geitemelk?"
+        "nb": "Kan kattunger drikke geitemelk?",
+        "de": "Dürfen Kätzchen Ziegenmilch trinken?"
       },
       "a": {
         "en": "No. Cats Protection says never give cow's or goat's milk to kittens, as they find it difficult to digest – use substitute kitten milk made specifically for kittens. VCA vets add that goat's milk is far too low in protein and fat for kittens.",
@@ -125,7 +141,8 @@
         "fr": "Non. Cats Protection recommande de ne jamais donner de lait de vache ni de chèvre aux chatons, car ils le digèrent difficilement : utilisez un lait de remplacement conçu spécialement pour les chatons. Les vétérinaires de VCA ajoutent que le lait de chèvre est bien trop pauvre en protéines et en graisses pour les chatons.",
         "it": "No. Cats Protection dice di non dare mai ai gattini latte vaccino o di capra, perché lo digeriscono con difficoltà: usa un latte artificiale fatto apposta per gattini. I veterinari di VCA aggiungono che il latte di capra è decisamente troppo povero di proteine e grassi per i gattini.",
         "fi": "Eivät. Cats Protectionin mukaan kissanpennuille ei pidä koskaan antaa lehmän- tai vuohenmaitoa, koska ne sulattavat sitä huonosti – käytä erityisesti kissanpennuille tarkoitettua maidonkorviketta. VCA:n eläinlääkärit lisäävät, että vuohenmaidossa on aivan liian vähän proteiinia ja rasvaa kissanpennuille.",
-        "nb": "Nei. Cats Protection sier at kattunger aldri skal få kumelk eller geitemelk, fordi de har problemer med å fordøye den – bruk melkeerstatning laget spesielt for kattunger. Dyrleger ved VCA legger til at geitemelk har altfor lite protein og fett for kattunger."
+        "nb": "Nei. Cats Protection sier at kattunger aldri skal få kumelk eller geitemelk, fordi de har problemer med å fordøye den – bruk melkeerstatning laget spesielt for kattunger. Dyrleger ved VCA legger til at geitemelk har altfor lite protein og fett for kattunger.",
+        "de": "Nein. Laut Cats Protection sollte man Kätzchen niemals Kuh- oder Ziegenmilch geben, weil sie sie nur schwer verdauen – verwenden Sie stattdessen spezielle Aufzuchtmilch für Kätzchen. VCA-Tierärzte ergänzen, dass Ziegenmilch für Kätzchen viel zu wenig Eiweiß und Fett enthält."
       }
     },
     {
@@ -135,7 +152,8 @@
         "fr": "Le lait de chèvre est-il meilleur pour les chats que le lait de vache ?",
         "it": "Il latte di capra è meglio di quello vaccino per i gatti?",
         "fi": "Onko vuohenmaito kissoille parempaa kuin lehmänmaito?",
-        "nb": "Er geitemelk bedre for katter enn kumelk?"
+        "nb": "Er geitemelk bedre for katter enn kumelk?",
+        "de": "Ist Ziegenmilch für Katzen besser verträglich als Kuhmilch?"
       },
       "a": {
         "en": "Not according to vets: signs of lactose intolerance can appear after either cow's or goat's milk. It is best to avoid giving your cat any type of milk.",
@@ -143,7 +161,8 @@
         "fr": "Pas selon les vétérinaires : des signes d’intolérance au lactose peuvent apparaître après du lait de vache comme après du lait de chèvre. Mieux vaut ne donner aucun type de lait à votre chat.",
         "it": "Non secondo i veterinari: i segni di intolleranza al lattosio possono comparire dopo il latte vaccino come dopo quello di capra. Meglio non dare al tuo gatto nessun tipo di latte.",
         "fi": "Eläinlääkärien mukaan ei: laktoosi-intoleranssin oireita voi ilmetä sekä lehmän- että vuohenmaidon jälkeen. Kissalle on parasta olla antamatta mitään maitoa.",
-        "nb": "Ikke ifølge dyrleger: Tegn på laktoseintoleranse kan komme både etter kumelk og geitemelk. Det er best å unngå å gi katten melk av noe slag."
+        "nb": "Ikke ifølge dyrleger: Tegn på laktoseintoleranse kan komme både etter kumelk og geitemelk. Det er best å unngå å gi katten melk av noe slag.",
+        "de": "Laut Tierärzten nicht: Anzeichen einer Laktoseintoleranz können sowohl nach Kuh- als auch nach Ziegenmilch auftreten. Am besten geben Sie Ihrer Katze gar keine Milch."
       }
     }
   ],
@@ -255,6 +274,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7b86a7275977ff47f7bd10d9b1c7a6ed43760b197a4669f34231cc9633f3820f"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-c-de-2026-11-17",
+      "verified_hash": "bea8e282ad4bfc6f2c3cd600fca96cb87d8a42d92641cae01103a8a2e9789e46"
     }
   }
 }

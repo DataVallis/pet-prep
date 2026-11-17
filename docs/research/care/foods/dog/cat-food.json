@@ -7,7 +7,8 @@
     "fr": "Nourriture pour chats",
     "it": "Cibo per gatti",
     "fi": "Kissanruoka",
-    "nb": "Kattefôr"
+    "nb": "Kattefôr",
+    "de": "Katzenfutter"
   },
   "question": {
     "en": "Can dogs eat cat food?",
@@ -15,7 +16,8 @@
     "fr": "Les chiens peuvent-ils manger de la nourriture pour chats ?",
     "it": "I cani possono mangiare il cibo per gatti?",
     "fi": "Saako koira syödä kissanruokaa?",
-    "nb": "Kan hunder spise kattefôr?"
+    "nb": "Kan hunder spise kattefôr?",
+    "de": "Dürfen Hunde Katzenfutter fressen?"
   },
   "url_slug": {
     "en": "cat-food",
@@ -23,7 +25,8 @@
     "fr": "nourriture-pour-chats",
     "it": "cibo-per-gatti",
     "fi": "kissanruoka",
-    "nb": "kattefor"
+    "nb": "kattefor",
+    "de": "katzenfutter"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "fr": "Pas de façon régulière. Un chien qui chipe de temps en temps un peu de la nourriture du chat ne risque probablement rien, mais cela ne doit pas devenir une habitude. La nourriture pour chats est beaucoup plus riche en protéines d’origine animale et n’offre pas le bon équilibre nutritionnel pour les chiens.",
     "it": "Non regolarmente. Un cane che ogni tanto ruba un po’ di cibo al gatto probabilmente non ne risente, ma non deve diventare un’abitudine. Il cibo per gatti ha molte più proteine di origine animale e non ha il giusto equilibrio di nutrienti per i cani.",
     "fi": "Ei säännöllisesti. Koira, joka näpistää silloin tällöin vähän kissan ruokaa, ei todennäköisesti vahingoitu, mutta siitä ei saa tulla tapaa. Kissanruoassa on paljon enemmän lihapohjaista proteiinia, eikä sen ravintoaineiden tasapaino sovi koiralle.",
-    "nb": "Ikke jevnlig. En hund som stjeler litt av kattens fôr nå og da, tar sannsynligvis ikke skade, men det bør ikke bli en vane. Kattefôr inneholder mye mer kjøttbasert protein, og næringsstoffene er ikke i riktig balanse for hunder."
+    "nb": "Ikke jevnlig. En hund som stjeler litt av kattens fôr nå og da, tar sannsynligvis ikke skade, men det bør ikke bli en vane. Kattefôr inneholder mye mer kjøttbasert protein, og næringsstoffene er ikke i riktig balanse for hunder.",
+    "de": "Nicht regelmäßig. Ein Hund, der ab und zu etwas vom Futter der Katze stibitzt, nimmt wahrscheinlich keinen Schaden, aber es sollte nicht zur Gewohnheit werden. Katzenfutter enthält deutlich mehr Eiweiß aus Fleisch und hat nicht die richtige Nährstoffzusammensetzung für Hunde."
   },
   "why": {
     "en": "Cats are obligate carnivores, so cat food is much higher in meat-based protein than dog food and doesn't have the correct balance of protein, fibre and nutrients dogs need. Over time the imbalance can lead to stomach and gut upset, obesity and pancreatitis, and the high protein levels can be hard on a dog's liver and kidneys.",
@@ -40,7 +44,8 @@
     "fr": "Les chats sont des carnivores stricts : leur nourriture contient donc beaucoup plus de protéines d’origine animale que celle des chiens, et n’offre pas l’équilibre de protéines, de fibres et de nutriments dont les chiens ont besoin. À la longue, ce déséquilibre peut provoquer des troubles de l’estomac et de l’intestin, de l’obésité et une pancréatite, et la forte teneur en protéines peut mettre à rude épreuve le foie et les reins du chien.",
     "it": "I gatti sono carnivori obbligati, quindi il cibo per gatti contiene molte più proteine di origine animale del cibo per cani e non ha il giusto equilibrio di proteine, fibre e nutrienti di cui i cani hanno bisogno. Con il tempo lo squilibrio può portare a disturbi di stomaco e intestino, obesità e pancreatite, e l’elevato contenuto proteico può affaticare il fegato e i reni del cane.",
     "fi": "Kissat ovat ehdottomia lihansyöjiä, joten kissanruoassa on paljon enemmän lihapohjaista proteiinia kuin koiranruoassa, eikä sen proteiinin, kuidun ja muiden ravintoaineiden suhde sovi koiran tarpeisiin. Epätasapaino voi ajan mittaan aiheuttaa vatsa- ja suolisto-ongelmia, lihavuutta ja haimatulehduksen, ja runsas proteiini voi rasittaa koiran maksaa ja munuaisia.",
-    "nb": "Katter er obligate kjøttetere, så kattefôr har mye mer kjøttbasert protein enn hundefôr, og balansen mellom protein, fiber og næringsstoffer er ikke riktig for hunder. Over tid kan ubalansen føre til mage- og tarmproblemer, overvekt og betennelse i bukspyttkjertelen, og det høye proteininnholdet kan belaste hundens lever og nyrer."
+    "nb": "Katter er obligate kjøttetere, så kattefôr har mye mer kjøttbasert protein enn hundefôr, og balansen mellom protein, fiber og næringsstoffer er ikke riktig for hunder. Over tid kan ubalansen føre til mage- og tarmproblemer, overvekt og betennelse i bukspyttkjertelen, og det høye proteininnholdet kan belaste hundens lever og nyrer.",
+    "de": "Katzen sind obligate Fleischfresser, deshalb enthält Katzenfutter viel mehr Eiweiß aus Fleisch als Hundefutter und liefert Eiweiß, Ballaststoffe und andere Nährstoffe nicht im richtigen Verhältnis für Hunde. Auf Dauer kann dieses Ungleichgewicht zu Magen-Darm-Beschwerden, Übergewicht und einer Bauchspeicheldrüsenentzündung führen, und der hohe Eiweißgehalt kann Leber und Nieren eines Hundes belasten."
   },
   "signs": {
     "en": [
@@ -96,6 +101,15 @@
       "Diaré",
       "Oppblåst mage",
       "Feber"
+    ],
+    "de": [
+      "Bauchschmerzen und ein krummer Rücken",
+      "Müdigkeit und Schwäche",
+      "Appetitlosigkeit",
+      "Erbrechen",
+      "Durchfall",
+      "Aufgetriebener Bauch",
+      "Fieber"
     ]
   },
   "what_to_do": {
@@ -104,7 +118,8 @@
     "fr": "Si votre chien semble avoir mal au ventre après avoir mangé de la nourriture pour chats, appelez votre vétérinaire. Les signes de pancréatite, comme un dos voûté avec des douleurs au ventre, des vomissements, de la faiblesse ou de la fièvre, nécessitent des soins vétérinaires immédiats.",
     "it": "Se dopo aver mangiato cibo per gatti il tuo cane mostra segni di mal di pancia, chiama il veterinario. I sintomi di pancreatite, come schiena ingobbita con dolore alla pancia, vomito, debolezza o febbre, richiedono cure veterinarie immediate.",
     "fi": "Jos koirallasi on vatsavaivoja kissanruoan syömisen jälkeen, soita eläinlääkärille. Haimatulehduksen oireet, kuten köyryselkä ja vatsakipu, oksentelu, heikkous tai kuume, vaativat välitöntä eläinlääkärinhoitoa.",
-    "nb": "Hvis hunden viser tegn på ubehag i magen etter å ha spist kattefôr, bør du ringe dyrlegen. Tegn på betennelse i bukspyttkjertelen, som krumrygg med vondt i magen, oppkast, svakhet eller feber, krever øyeblikkelig dyrlegehjelp."
+    "nb": "Hvis hunden viser tegn på ubehag i magen etter å ha spist kattefôr, bør du ringe dyrlegen. Tegn på betennelse i bukspyttkjertelen, som krumrygg med vondt i magen, oppkast, svakhet eller feber, krever øyeblikkelig dyrlegehjelp.",
+    "de": "Zeigt Ihr Hund nach dem Fressen von Katzenfutter Anzeichen von Bauchbeschwerden, rufen Sie Ihren Tierarzt an. Anzeichen einer Bauchspeicheldrüsenentzündung wie ein krummer Rücken mit Bauchschmerzen, Erbrechen, Schwäche oder Fieber erfordern sofortige tierärztliche Hilfe."
   },
   "serving": null,
   "child": {
@@ -113,7 +128,8 @@
     "fr": "La nourriture pour chats est faite pour les chats. Les chiens sont en meilleure santé avec leur propre nourriture : pense à mettre la gamelle du chat en hauteur !",
     "it": "Il cibo per gatti è fatto per i gatti. I cani stanno bene con il loro cibo, quindi aiuta a tenere la ciotola del gatto in alto!",
     "fi": "Kissanruoka on tehty kissoille. Koira pysyy terveimpänä omalla koiranruoallaan, joten pidä kissan kuppi poissa sen ulottuvilta!",
-    "nb": "Kattefôr er laget for katter. Hunder holder seg friskest med sitt eget hundefôr, så hjelp til med å holde kattens skål høyt oppe!"
+    "nb": "Kattefôr er laget for katter. Hunder holder seg friskest med sitt eget hundefôr, så hjelp til med å holde kattens skål høyt oppe!",
+    "de": "Katzenfutter ist für Katzen gemacht. Hunde bleiben mit ihrem eigenen Hundefutter am gesündesten – hilf also mit und stell den Napf der Katze weit oben ab!"
   },
   "faq": [
     {
@@ -123,7 +139,8 @@
         "fr": "Comment empêcher mon chien de manger la nourriture du chat ?",
         "it": "Come faccio a tenere il mio cane lontano dal cibo del gatto?",
         "fi": "Miten estän koiraa pääsemästä kissan ruokaan?",
-        "nb": "Hvordan hindrer jeg at hunden spiser kattens mat?"
+        "nb": "Hvordan hindrer jeg at hunden spiser kattens mat?",
+        "de": "Wie halte ich meinen Hund vom Futter der Katze fern?"
       },
       "a": {
         "en": "Place the cat's food out of your dog's reach. If your dog regularly gets into it, change where you keep the cat's food or where and how you feed your cat.",
@@ -131,7 +148,8 @@
         "fr": "Placez la nourriture du chat hors de portée de votre chien. Si votre chien y a régulièrement accès, changez l’endroit où vous la rangez, ou le lieu et la manière dont vous nourrissez votre chat.",
         "it": "Metti il cibo del gatto fuori dalla portata del cane. Se il cane ci arriva spesso, cambia il posto dove tieni il cibo del gatto o dove e come gli dai da mangiare.",
         "fi": "Pidä kissan ruoka koirasi ulottumattomissa. Jos koira pääsee siihen toistuvasti, vaihda kissanruoan säilytyspaikkaa tai sitä, missä ja miten kissaa ruokitaan.",
-        "nb": "Sett kattens mat utenfor hundens rekkevidde. Hvis hunden jevnlig kommer til den, kan du endre hvor du oppbevarer kattefôret, eller hvor og hvordan du gir katten mat."
+        "nb": "Sett kattens mat utenfor hundens rekkevidde. Hvis hunden jevnlig kommer til den, kan du endre hvor du oppbevarer kattefôret, eller hvor og hvordan du gir katten mat.",
+        "de": "Stellen Sie das Futter der Katze außerhalb der Reichweite Ihres Hundes ab. Kommt Ihr Hund regelmäßig daran, ändern Sie, wo Sie das Katzenfutter aufbewahren oder wo und wie Sie Ihre Katze füttern."
       }
     },
     {
@@ -141,7 +159,8 @@
         "fr": "Mon chien peut-il manger de la nourriture pour chats en cas d’urgence ?",
         "it": "Il mio cane può mangiare cibo per gatti in caso di emergenza?",
         "fi": "Voiko koira syödä kissanruokaa hätätilanteessa?",
-        "nb": "Kan hunden spise kattefôr i en nødssituasjon?"
+        "nb": "Kan hunden spise kattefôr i en nødssituasjon?",
+        "de": "Darf mein Hund im Notfall Katzenfutter fressen?"
       },
       "a": {
         "en": "Dogs can survive on cat food in a tough spot, but unless your vet recommends otherwise, the best food for your dog is dog food.",
@@ -149,7 +168,8 @@
         "fr": "Un chien peut s’en sortir avec de la nourriture pour chats si l’on n’a pas d’autre solution, mais, sauf avis contraire de votre vétérinaire, la meilleure nourriture pour votre chien est la nourriture pour chiens.",
         "it": "In un momento difficile i cani possono cavarsela con il cibo per gatti, ma a meno che il veterinario non consigli altro, il cibo migliore per il tuo cane è il cibo per cani.",
         "fi": "Hätätilanteessa koira pärjää kissanruoalla, mutta ellei eläinlääkäri neuvo toisin, koiralle paras ruoka on koiranruoka.",
-        "nb": "Hunder kan klare seg på kattefôr i en knipe, men med mindre dyrlegen anbefaler noe annet, er hundefôr det beste fôret til hunden din."
+        "nb": "Hunder kan klare seg på kattefôr i en knipe, men med mindre dyrlegen anbefaler noe annet, er hundefôr det beste fôret til hunden din.",
+        "de": "Hunde können sich zur Not von Katzenfutter ernähren, aber sofern Ihr Tierarzt nichts anderes empfiehlt, ist Hundefutter die beste Wahl für Ihren Hund."
       }
     }
   ],
@@ -255,6 +275,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "eb1d44a737fec32d99bf6efbda10139bee18ff9ae8944d2f7d12c3a9ff578d21"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-c-de-2026-11-17",
+      "verified_hash": "191f53c91859212e62beb04a9cea6060f5e59ddfd2953ff3082211c720c875bb"
     }
   }
 }
