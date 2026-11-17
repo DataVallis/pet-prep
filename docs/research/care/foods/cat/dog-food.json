@@ -8,7 +8,8 @@
     "it": "Cibo per cani",
     "fi": "Koiranruoka",
     "nb": "Hundefôr",
-    "de": "Hundefutter"
+    "de": "Hundefutter",
+    "es": "Comida para perros"
   },
   "question": {
     "en": "Can cats eat dog food?",
@@ -17,7 +18,8 @@
     "it": "I gatti possono mangiare il cibo per cani?",
     "fi": "Saako kissa syödä koiranruokaa?",
     "nb": "Kan katter spise hundefôr?",
-    "de": "Dürfen Katzen Hundefutter fressen?"
+    "de": "Dürfen Katzen Hundefutter fressen?",
+    "es": "¿Pueden los gatos comer comida para perros?"
   },
   "url_slug": {
     "en": "dog-food",
@@ -26,7 +28,8 @@
     "it": "cibo-per-cani",
     "fi": "koiranruoka",
     "nb": "hundefor",
-    "de": "hundefutter"
+    "de": "hundefutter",
+    "es": "comida-para-perros"
   },
   "level": "not_recommended",
   "answer": {
@@ -36,7 +39,8 @@
     "it": "No, non come cibo per il tuo gatto. Un boccone o due di cibo per cani non fanno male alla maggior parte dei gatti sani, ma non dovresti dare al tuo gatto il cibo del tuo cane. Il cibo per cani non soddisfa il fabbisogno nutrizionale del gatto – per esempio non contiene abbastanza taurina per un gatto.",
     "fi": "Ei kissan ruoaksi. Muutama muru koiranruokaa ei useimmille terveille kissoille vahingoita, mutta älä anna kissalle koirasi ruokaa. Se ei kata kissan ravinnontarvetta, ja siinä on esimerkiksi liian vähän tauriinia.",
     "nb": "Nei, ikke som mat til katten. En liten bit eller to hundefôr skader ikke de fleste friske katter, men la være å gi katten fôret til hunden din. Hundefôr dekker ikke kattens næringsbehov – det inneholder for eksempel for lite taurin.",
-    "de": "Nicht als Futter. Ein oder zwei Bröckchen Hundefutter schaden den meisten gesunden Katzen nicht, aber Hundefutter sollte nicht das Futter Ihrer Katze sein. Es deckt ihren Nährstoffbedarf nicht – zum Beispiel enthält es nicht genug Taurin."
+    "de": "Nicht als Futter. Ein oder zwei Bröckchen Hundefutter schaden den meisten gesunden Katzen nicht, aber Hundefutter sollte nicht das Futter Ihrer Katze sein. Es deckt ihren Nährstoffbedarf nicht – zum Beispiel enthält es nicht genug Taurin.",
+    "es": "No, no como alimento. A un gato sano un bocado o dos de comida para perros no suele hacerle daño, pero no conviene darle la comida de tu perro. No cubre las necesidades nutricionales de un gato; por ejemplo, no tiene suficiente taurina para él."
   },
   "why": {
     "en": "Dogs and cats need different nutrients. Cats require taurine, an essential amino acid for them, while dogs do not, and dog food does not contain enough of it for a cat. The Merck Veterinary Manual adds that some dog foods are lower in protein and may lack nutrients cats need but dogs don't, such as preformed vitamin A and arachidonic acid. Too little taurine can weaken the heart muscle and damage the eyes, impairing vision.",
@@ -45,7 +49,8 @@
     "it": "Cani e gatti hanno bisogno di nutrienti diversi. I gatti hanno bisogno di taurina, un amminoacido essenziale per loro, mentre i cani no, e il cibo per cani non ne contiene abbastanza per un gatto. Il Merck Veterinary Manual aggiunge che alcuni cibi per cani hanno meno proteine e possono essere carenti di nutrienti di cui i gatti hanno bisogno e i cani no, come la vitamina A preformata e l’acido arachidonico. Una quantità insufficiente di taurina può indebolire il muscolo cardiaco e danneggiare gli occhi, compromettendo la vista.",
     "fi": "Koirat ja kissat tarvitsevat eri ravintoaineita. Kissa tarvitsee tauriinia, joka on sille välttämätön aminohappo, mutta koira ei, eikä koiranruoassa ole sitä kissalle riittävästi. Merck Veterinary Manual -käsikirja lisää, että joissakin koiranruoissa on vähemmän proteiinia ja niistä voi puuttua ravintoaineita, joita kissa tarvitsee mutta koira ei, kuten valmista A-vitamiinia ja arakidonihappoa. Tauriinin puute voi heikentää sydänlihasta sekä vaurioittaa silmiä ja heikentää näköä.",
     "nb": "Hunder og katter trenger ulike næringsstoffer. Katter må få i seg taurin, en aminosyre som er livsnødvendig for dem, mens hunder ikke trenger den, og hundefôr inneholder ikke nok taurin til en katt. Merck Veterinary Manual legger til at noe hundefôr har lavere proteininnhold og kan mangle næringsstoffer som katter trenger, men hunder ikke, for eksempel ferdigdannet vitamin A og arakidonsyre. For lite taurin kan svekke hjertemuskelen og skade øynene, slik at synet blir dårligere.",
-    "de": "Hunde und Katzen brauchen unterschiedliche Nährstoffe. Katzen müssen Taurin aufnehmen, eine für sie essenzielle Aminosäure, Hunde dagegen nicht – und Hundefutter enthält davon nicht genug für eine Katze. Laut Merck Veterinary Manual enthalten manche Hundefutter außerdem weniger Eiweiß, und es können ihnen Nährstoffe fehlen, die Katzen brauchen, Hunde aber nicht, etwa präformiertes Vitamin A und Arachidonsäure. Zu wenig Taurin kann den Herzmuskel schwächen und den Augen schaden, sodass das Sehvermögen nachlässt."
+    "de": "Hunde und Katzen brauchen unterschiedliche Nährstoffe. Katzen müssen Taurin aufnehmen, eine für sie essenzielle Aminosäure, Hunde dagegen nicht – und Hundefutter enthält davon nicht genug für eine Katze. Laut Merck Veterinary Manual enthalten manche Hundefutter außerdem weniger Eiweiß, und es können ihnen Nährstoffe fehlen, die Katzen brauchen, Hunde aber nicht, etwa präformiertes Vitamin A und Arachidonsäure. Zu wenig Taurin kann den Herzmuskel schwächen und den Augen schaden, sodass das Sehvermögen nachlässt.",
+    "es": "Los perros y los gatos necesitan nutrientes distintos. Los gatos necesitan taurina, un aminoácido esencial para ellos, y los perros no, así que la comida para perros no contiene la suficiente para un gato. El Manual Merck de Veterinaria añade que algunas comidas para perros llevan menos proteína y pueden carecer de nutrientes que los gatos necesitan y los perros no, como la vitamina A preformada y el ácido araquidónico. Con poca taurina, el músculo del corazón puede debilitarse y los ojos sufrir daños que afectan a la vista."
   },
   "signs": {
     "en": [
@@ -89,6 +94,12 @@
       "Erbrechen",
       "Gewichtsverlust",
       "Krampfanfälle"
+    ],
+    "es": [
+      "Náuseas",
+      "Vómitos",
+      "Pérdida de peso",
+      "Convulsiones"
     ]
   },
   "what_to_do": {
@@ -98,7 +109,8 @@
     "it": "Un assaggio dalla ciotola del cane di solito non è un problema per un gatto sano. Fai mangiare ogni animale dalla propria ciotola, in zone separate della casa. Un gatto che mangia solo cibo per cani può stare male nel giro di ore, giorni o settimane – se sei in pensiero, contatta il veterinario.",
     "fi": "Kerran koiran kupista nokkaiseminen ei yleensä haittaa terveää kissaa. Ruoki kumpaakin lemmikkiä omasta kupistaan ja eri puolilla kotia. Kissa, joka syö pelkkää koiranruokaa, voi sairastua tuntien, päivien tai viikkojen kuluessa. Jos olet huolissasi, ota yhteyttä eläinlääkäriin.",
     "nb": "En liten smak fra hundens skål er vanligvis greit for en frisk katt. La hvert dyr spise av sin egen skål, på hvert sitt sted i hjemmet. En katt som bare får hundefôr, kan bli syk i løpet av timer, dager eller uker – kontakt dyrlegen hvis du er bekymret.",
-    "de": "Ein Happen aus dem Napf des Hundes ist für eine gesunde Katze meist unbedenklich. Füttern Sie jedes Tier aus seinem eigenen Napf, in getrennten Bereichen der Wohnung. Eine Katze, die nur Hundefutter frisst, kann innerhalb von Stunden, Tagen oder Wochen krank werden – wenden Sie sich an Ihren Tierarzt, wenn Sie sich Sorgen machen."
+    "de": "Ein Happen aus dem Napf des Hundes ist für eine gesunde Katze meist unbedenklich. Füttern Sie jedes Tier aus seinem eigenen Napf, in getrennten Bereichen der Wohnung. Eine Katze, die nur Hundefutter frisst, kann innerhalb von Stunden, Tagen oder Wochen krank werden – wenden Sie sich an Ihren Tierarzt, wenn Sie sich Sorgen machen.",
+    "es": "Un bocado del plato del perro no suele ser un problema para un gato sano. Alimenta a cada mascota en su propio comedero y en zonas distintas de la casa. Un gato que come solo comida para perros puede enfermar en cuestión de horas, días o semanas; si te preocupa, contacta con tu veterinario."
   },
   "serving": null,
   "child": {
@@ -108,7 +120,8 @@
     "it": "Il cibo per cani è fatto per i cani. Il tuo micio ha bisogno del suo cibo per gatti per stare bene!",
     "fi": "Koiranruoka on tehty koirille. Kissat tarvitsevat omaa kissanruokaansa pysyäkseen terveinä!",
     "nb": "Hundefôr er laget for hunder. Katter trenger sitt eget kattefôr for å holde seg friske!",
-    "de": "Hundefutter ist für Hunde gemacht. Katzen brauchen ihr eigenes Katzenfutter, damit sie gesund bleiben!"
+    "de": "Hundefutter ist für Hunde gemacht. Katzen brauchen ihr eigenes Katzenfutter, damit sie gesund bleiben!",
+    "es": "La comida para perros es para los perros. ¡Los gatos necesitan su propia comida para estar sanos!"
   },
   "faq": [
     {
@@ -119,7 +132,8 @@
         "it": "Che cos’è la taurina e perché i gatti ne hanno bisogno?",
         "fi": "Mitä tauriini on ja miksi kissat tarvitsevat sitä?",
         "nb": "Hva er taurin, og hvorfor trenger katter det?",
-        "de": "Was ist Taurin und warum brauchen Katzen es?"
+        "de": "Was ist Taurin und warum brauchen Katzen es?",
+        "es": "¿Qué es la taurina y por qué la necesitan los gatos?"
       },
       "a": {
         "en": "Taurine is an essential amino acid for cats, and cats have only a limited ability to make it themselves. Without enough of it, the heart muscle weakens and the cells of the retina eventually degenerate, impairing vision.",
@@ -128,7 +142,8 @@
         "it": "La taurina è un amminoacido essenziale per i gatti, che ne producono da soli solo in quantità limitata. Senza una quantità sufficiente, il muscolo cardiaco si indebolisce e le cellule della retina finiscono per degenerare, compromettendo la vista.",
         "fi": "Tauriini on kissoille välttämätön aminohappo, ja kissat pystyvät valmistamaan sitä itse vain rajallisesti. Ilman sitä sydänlihas heikkenee ja verkkokalvon solut rappeutuvat vähitellen, mikä heikentää näköä.",
         "nb": "Taurin er en aminosyre som er livsnødvendig for katter, og katter kan bare lage litt av den selv. Får de ikke nok, svekkes hjertemuskelen, og cellene i netthinnen brytes til slutt ned, slik at synet blir dårligere.",
-        "de": "Taurin ist für Katzen eine essenzielle Aminosäure, die sie nur begrenzt selbst bilden können. Fehlt Taurin, wird der Herzmuskel schwächer, und die Zellen der Netzhaut degenerieren mit der Zeit, sodass das Sehvermögen nachlässt."
+        "de": "Taurin ist für Katzen eine essenzielle Aminosäure, die sie nur begrenzt selbst bilden können. Fehlt Taurin, wird der Herzmuskel schwächer, und die Zellen der Netzhaut degenerieren mit der Zeit, sodass das Sehvermögen nachlässt.",
+        "es": "La taurina es un aminoácido esencial para los gatos, que solo pueden fabricar una cantidad limitada. Si les falta, el músculo del corazón se debilita y las células de la retina acaban degenerando, lo que afecta a la vista."
       }
     }
   ],
@@ -239,6 +254,11 @@
       "status": "verified",
       "verified_by": "claude-c-de-2026-11-17",
       "verified_hash": "ac9479eb205388516f54d5a93160be033765c214b66e995e7e30fc4662a7f1cf"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-c-es-2026-11-17",
+      "verified_hash": "90f5f6e2226e600811a22ba36ae8bb788b616efcbf4519d4bb73f75b65b26cac"
     }
   }
 }
