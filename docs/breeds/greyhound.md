@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `greyhound` (viri S912–S922; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: ni preverjen (stran RKC ni bila dosegljiva) |
 | Izvor | FCI št. 158, skupina 10 (hrti), sekcija 3 (kratkodlaki hrti), Velika Britanija (S912) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 118. mesto »Greyhound« (S174, zapisano 2026-11-17 v vrstici 121) |
-| PR-ji | pet-prep #1303 (pasma) · portret pet-prep · barvne različice pet-prep · spletna stran: pet-prep-website `feat/register-greyhound` |
+| PR-ji | pet-prep #1303 (pasma, združen `0fe447a`) · portret pet-prep (zagon `breed-portraits.yml` 44035672011, sprejet v prvem poskusu) · barvne različice (sledi) · spletna stran: pet-prep-website `feat/register-greyhound` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-17 |
 | Ščetkanje zob vsak dan (otrok) | 🛠 | 💶 izziv | M5-R15 | 2026-11-17 |
 | Barve (izbirnik: 6 barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-17 |
-| AI portret v registru | čaka na zagon `breed-portraits.yml` | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/greyhound`, `/sl/zivali/psi/angleski-hrt`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), tigrast, vitek atletski hrt, naravni rep | — | M5-R11-04 | 2026-11-17 |
+| Stran na petprep.si (`/animals/dogs/greyhound`, `/sl/zivali/psi/angleski-hrt`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
