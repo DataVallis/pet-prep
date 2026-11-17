@@ -14,7 +14,8 @@
     "nl": "Vruchtensap",
     "pl": "Sok owocowy",
     "cs": "Ovocný džus",
-    "hr": "Voćni sok"
+    "hr": "Voćni sok",
+    "sv": "Fruktjuice"
   },
   "question": {
     "en": "Can dogs drink fruit juice?",
@@ -29,7 +30,8 @@
     "nl": "Mogen honden vruchtensap drinken?",
     "pl": "Czy psy mogą pić sok owocowy?",
     "cs": "Mohou psi pít ovocný džus?",
-    "hr": "Smiju li psi piti voćni sok?"
+    "hr": "Smiju li psi piti voćni sok?",
+    "sv": "Får hundar dricka fruktjuice?"
   },
   "url_slug": {
     "en": "juice",
@@ -44,7 +46,8 @@
     "nl": "vruchtensap",
     "pl": "sok-owocowy",
     "cs": "ovocny-dzus",
-    "hr": "vocni-sok"
+    "hr": "vocni-sok",
+    "sv": "fruktjuice"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "nl": "Liever niet. Heel fruit is een beter tussendoortje dan sap. Sinaasappelsap is bijvoorbeeld niet giftig, maar bevat geconcentreerde suikers en niet de vezels van het fruit. Citroensap bevat veel citroenzuur, dat giftig is voor honden, en suikervrije dranken kunnen xylitol bevatten.",
     "pl": "Lepiej nie. Cały owoc to lepsza przekąska niż sok. Sok pomarańczowy na przykład nie jest toksyczny, ale zawiera skoncentrowane cukry i nie ma błonnika, który jest w całym owocu. Sok z cytryny zawiera dużo kwasu cytrynowego, który jest toksyczny dla psów, a napoje bez cukru mogą zawierać ksylitol.",
     "cs": "Raději ne. Celé ovoce je pro psa lepším pamlskem než džus. Pomerančový džus například není jedovatý, ale obsahuje koncentrované cukry a žádnou vlákninu z ovoce. Citronová šťáva je bohatá na kyselinu citronovou, která je pro psy toxická, a nápoje bez cukru mohou obsahovat xylitol.",
-    "hr": "Bolje da ne. Cijelo voće bolja je grickalica od soka. Sok od naranče, primjerice, nije otrovan, ali ima koncentrirane šećere, a nema vlakana kakva ima voće. Sok od limuna bogat je limunskom kiselinom, koja je otrovna za pse, a pića bez šećera mogu sadržavati ksilitol."
+    "hr": "Bolje da ne. Cijelo voće bolja je grickalica od soka. Sok od naranče, primjerice, nije otrovan, ali ima koncentrirane šećere, a nema vlakana kakva ima voće. Sok od limuna bogat je limunskom kiselinom, koja je otrovna za pse, a pića bez šećera mogu sadržavati ksilitol.",
+    "sv": "Helst inte. Hel frukt är ett bättre mellanmål än juice. Apelsinjuice är till exempel inte giftig men innehåller koncentrerat socker och saknar fruktens fibrer. Citronjuice innehåller mycket citronsyra, som är giftig för hundar, och sockerfria drycker kan innehålla xylitol."
   },
   "why": {
     "en": "Juice contains concentrated natural sugars and lacks the fibre of whole fruit; because it is higher in sugar and easy to drink in large amounts, it may increase the risk of digestive upset. Fruit juice concentrates are high in fructose, which may increase the risk of obesity. Lemon juice is a concentrated form of the fruit with high amounts of citric acid, which is toxic to dogs. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -75,7 +79,8 @@
     "nl": "Sap bevat geconcentreerde natuurlijke suikers en mist de vezels van heel fruit. Omdat er meer suiker in zit en je het makkelijk in grote hoeveelheden drinkt, kan het de kans op darmklachten vergroten. Geconcentreerd vruchtensap bevat veel fructose, wat de kans op obesitas kan vergroten. Citroensap is een geconcentreerde vorm van de vrucht met veel citroenzuur, dat giftig is voor honden. Veel suikervrije dranken bevatten xylitol, dat zeer giftig is voor honden.",
     "pl": "Sok zawiera skoncentrowane cukry naturalne i nie ma błonnika całego owocu; ponieważ ma więcej cukru i łatwo wypić go dużo, może zwiększać ryzyko rozstroju żołądka i jelit. Soki z koncentratu mają dużo fruktozy, co może zwiększać ryzyko otyłości. Sok z cytryny to skoncentrowana postać owocu z dużą ilością kwasu cytrynowego, który jest toksyczny dla psów. Wiele napojów bez cukru zawiera ksylitol, który jest bardzo toksyczny dla psów.",
     "cs": "Džus obsahuje koncentrované přírodní cukry a chybí mu vláknina z celého ovoce; protože má víc cukru a snadno se vypije ve velkém množství, může zvyšovat riziko zažívacích potíží. Koncentráty ovocných šťáv mají vysoký obsah fruktózy, která může zvyšovat riziko obezity. Citronová šťáva je koncentrovaná podoba ovoce s vysokým obsahem kyseliny citronové, která je pro psy toxická. Mnoho nápojů bez cukru obsahuje xylitol, který je pro psy vysoce toxický.",
-    "hr": "Sok ima koncentrirane prirodne šećere i nema vlakana kao cijelo voće; kako sadrži više šećera i lako se popije u velikoj količini, može povećati rizik od probavnih tegoba. Koncentrati voćnih sokova bogati su fruktozom, što može povećati rizik od pretilosti. Sok od limuna koncentrirani je oblik voća s mnogo limunske kiseline, koja je otrovna za pse. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan."
+    "hr": "Sok ima koncentrirane prirodne šećere i nema vlakana kao cijelo voće; kako sadrži više šećera i lako se popije u velikoj količini, može povećati rizik od probavnih tegoba. Koncentrati voćnih sokova bogati su fruktozom, što može povećati rizik od pretilosti. Sok od limuna koncentrirani je oblik voća s mnogo limunske kiseline, koja je otrovna za pse. Mnoga pića bez šećera sadrže ksilitol, koji je za pse vrlo otrovan.",
+    "sv": "Juice innehåller koncentrerat naturligt socker och saknar fibrerna i hel frukt. Eftersom den är sockerrikare och lätt att dricka i stora mängder kan den öka risken för magbesvär. Fruktjuicekoncentrat innehåller mycket fruktos, vilket kan öka risken för fetma. Citronjuice är en koncentrerad form av frukten med mycket citronsyra, som är giftig för hundar. Många drycker utan socker innehåller xylitol, som är mycket giftigt för hundar."
   },
   "signs": {
     "en": [
@@ -116,6 +121,9 @@
     ],
     "hr": [
       "Probavne tegobe"
+    ],
+    "sv": [
+      "Magbesvär"
     ]
   },
   "what_to_do": {
@@ -131,7 +139,8 @@
     "nl": "Geef in plaats daarvan vers water en let op verschijnselen van darmklachten bij je hond. Was de drank suikervrij of bevat die mogelijk xylitol, bekijk dan meteen onze pagina over xylitol. Heeft je hond druivensap gehad, bekijk dan onze pagina over druiven.",
     "pl": "Daj zamiast tego świeżą wodę i obserwuj, czy pies nie ma objawów rozstroju żołądka i jelit. Jeśli napój był bez cukru lub mógł zawierać ksylitol, od razu zajrzyj na naszą stronę o ksylitolu. Jeśli pies wypił sok z winogron, zajrzyj na naszą stronę o winogronach.",
     "cs": "Nabídněte místo toho čerstvou vodu a sledujte, zda se u psa neprojeví příznaky zažívacích potíží. Pokud byl nápoj bez cukru nebo v něm může být xylitol, ihned se podívejte na naši stránku o xylitolu. Pokud pes vypil hroznový džus, podívejte se na naši stránku o hroznech.",
-    "hr": "Umjesto toga ponudi svježu vodu i pazi pojavljuju li se znakovi probavnih tegoba. Ako je piće bilo bez šećera ili je moglo sadržavati ksilitol, odmah pogledaj našu stranicu o ksilitolu. Ako je pas popio sok od grožđa, pogledaj našu stranicu o grožđu."
+    "hr": "Umjesto toga ponudi svježu vodu i pazi pojavljuju li se znakovi probavnih tegoba. Ako je piće bilo bez šećera ili je moglo sadržavati ksilitol, odmah pogledaj našu stranicu o ksilitolu. Ako je pas popio sok od grožđa, pogledaj našu stranicu o grožđu.",
+    "sv": "Erbjud friskt vatten i stället och håll utkik efter tecken på magbesvär hos hunden. Om drycken var sockerfri eller kan innehålla xylitol, läs direkt vår sida om xylitol. Om hunden har fått druvjuice, se vår sida om vindruvor."
   },
   "serving": null,
   "child": {
@@ -147,7 +156,8 @@
     "nl": "Sap is te zoet voor honden. Een klein stukje vers fruit dat veilig is voor honden of een bak vers water is veel beter!",
     "pl": "Sok jest dla psów zbyt słodki. Mały kawałek świeżego owocu bezpiecznego dla psów albo miska świeżej wody to dużo lepszy smakołyk!",
     "cs": "Džus je pro psy příliš sladký. Malý kousek čerstvého ovoce, které psi smějí jíst, nebo miska čerstvé vody je mnohem lepší pamlsek!",
-    "hr": "Sok je za pse previše sladak. Mali komadić svježeg voća sigurnog za pse ili zdjelica svježe vode puno su bolja poslastica!"
+    "hr": "Sok je za pse previše sladak. Mali komadić svježeg voća sigurnog za pse ili zdjelica svježe vode puno su bolja poslastica!",
+    "sv": "Juice är för sockrig för hundar. En liten bit färsk frukt som är säker för hundar eller en skål friskt vatten är en betydligt bättre godbit!"
   },
   "faq": [
     {
@@ -164,7 +174,8 @@
         "nl": "Is sinaasappelsap giftig voor honden?",
         "pl": "Czy sok pomarańczowy jest toksyczny dla psów?",
         "cs": "Je pomerančový džus pro psy jedovatý?",
-        "hr": "Je li sok od naranče otrovan za pse?"
+        "hr": "Je li sok od naranče otrovan za pse?",
+        "sv": "Är apelsinjuice giftig för hundar?"
       },
       "a": {
         "en": "No, but it is not recommended because it contains concentrated sugars and lacks the fibre found in whole fruit. If you want to share the taste of oranges, offer small pieces of fresh fruit instead.",
@@ -179,7 +190,8 @@
         "nl": "Nee, maar het wordt niet aanbevolen omdat het geconcentreerde suikers bevat en de vezels van heel fruit mist. Wil je je hond laten proeven van sinaasappel, geef dan kleine stukjes vers fruit.",
         "pl": "Nie, ale nie jest zalecany, bo zawiera skoncentrowane cukry i nie ma błonnika, który jest w całym owocu. Jeśli chcesz, żeby pies poznał smak pomarańczy, daj mu małe kawałki świeżego owocu.",
         "cs": "Ne, ale nedoporučuje se, protože obsahuje koncentrované cukry a chybí mu vláknina, kterou má celé ovoce. Pokud se chcete se psem podělit o chuť pomerančů, nabídněte mu raději malé kousky čerstvého ovoce.",
-        "hr": "Nije, ali se ne preporučuje jer ima koncentrirane šećere i nema vlakana kao cijelo voće. Ako psu želiš dati kušati naranču, radije mu ponudi male komadiće svježeg voća."
+        "hr": "Nije, ali se ne preporučuje jer ima koncentrirane šećere i nema vlakana kao cijelo voće. Ako psu želiš dati kušati naranču, radije mu ponudi male komadiće svježeg voća.",
+        "sv": "Nej, men den rekommenderas inte eftersom den innehåller koncentrerat socker och saknar fibrerna i hel frukt. Om du vill att hunden ska få smaka apelsin, ge små bitar färsk frukt i stället."
       }
     },
     {
@@ -196,7 +208,8 @@
         "nl": "Hoe zit het met druivensap?",
         "pl": "A sok z winogron?",
         "cs": "A co hroznový džus?",
-        "hr": "A sok od grožđa?"
+        "hr": "A sok od grožđa?",
+        "sv": "Hur är det med druvjuice?"
       },
       "a": {
         "en": "Sources disagree. VCA says grape juice does not appear to cause the poisoning seen with grapes and raisins, while FirstVet says grape juice should never be given to dogs. We follow the stricter advice: don't give it.",
@@ -211,7 +224,8 @@
         "nl": "De bronnen spreken elkaar tegen. VCA zegt dat druivensap niet lijkt te leiden tot de vergiftiging die je bij druiven en rozijnen ziet, terwijl FirstVet zegt dat je honden nooit druivensap moet geven. Wij volgen het strengere advies: geef het niet.",
         "pl": "Źródła się nie zgadzają. VCA twierdzi, że sok z winogron nie wydaje się wywoływać zatrucia, jakie powodują winogrona i rodzynki, a FirstVet – że soku z winogron nigdy nie należy podawać psom. Stosujemy surowszą radę: nie dawaj go.",
         "cs": "Zdroje se neshodují. VCA uvádí, že hroznový džus podle všeho nezpůsobuje otravu, jakou známe po hroznech a rozinkách, zatímco FirstVet říká, že hroznový džus se psům nesmí dávat nikdy. Řídíme se přísnější radou: nedávejte ho.",
-        "hr": "Izvori se ne slažu. VCA kaže da sok od grožđa, čini se, ne izaziva trovanje kakvo se viđa kod grožđa i grožđica, dok FirstVet kaže da psima nikada ne treba davati sok od grožđa. Slijedimo strožu preporuku: ne daj ga."
+        "hr": "Izvori se ne slažu. VCA kaže da sok od grožđa, čini se, ne izaziva trovanje kakvo se viđa kod grožđa i grožđica, dok FirstVet kaže da psima nikada ne treba davati sok od grožđa. Slijedimo strožu preporuku: ne daj ga.",
+        "sv": "Källorna är oeniga. VCA säger att druvjuice inte verkar orsaka den förgiftning som vindruvor och russin ger, medan FirstVet säger att druvjuice aldrig ska ges till hundar. Vi följer det strängare rådet: ge den inte."
       }
     }
   ],
@@ -357,6 +371,11 @@
       "status": "verified",
       "verified_by": "claude-c-hr-2026-11-17",
       "verified_hash": "f0b97187a160b8439cfe196842dda5e7be356abcedbc2aefade07ec49021271e"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-17",
+      "verified_hash": "c823ad0409c864b3ca65c96ef00e5cb4c9e15b901ea20757333858c88130edc7"
     }
   }
 }

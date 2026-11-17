@@ -14,7 +14,8 @@
     "nl": "Kefir",
     "pl": "Kefir",
     "cs": "Kefír",
-    "hr": "Kefir"
+    "hr": "Kefir",
+    "sv": "Kefir"
   },
   "question": {
     "en": "Can dogs drink kefir?",
@@ -29,7 +30,8 @@
     "nl": "Mogen honden kefir drinken?",
     "pl": "Czy psy mogą pić kefir?",
     "cs": "Mohou psi pít kefír?",
-    "hr": "Smiju li psi piti kefir?"
+    "hr": "Smiju li psi piti kefir?",
+    "sv": "Får hundar dricka kefir?"
   },
   "url_slug": {
     "en": "kefir",
@@ -44,7 +46,8 @@
     "nl": "kefir",
     "pl": "kefir",
     "cs": "kefir",
-    "hr": "kefir"
+    "hr": "kefir",
+    "sv": "kefir"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "nl": "Alleen een klein beetje, en vraag het eerst aan je dierenarts. De AKC noemt yoghurt of kefir met levende culturen als voeding die een dierenarts kan voorstellen om de nuttige bacteriën te ondersteunen, maar veel honden kunnen lactose slecht verteren. Geef nooit kefir met xylitol of andere kunstmatige zoetstoffen.",
     "pl": "Tylko odrobinę i najpierw zapytaj weterynarza. AKC wymienia jogurt lub kefir z żywymi kulturami bakterii wśród produktów, które weterynarz może zasugerować, by wspomóc pożyteczne bakterie, ale wiele psów ma kłopot z trawieniem laktozy. Nigdy nie podawaj kefiru z ksylitolem ani innymi sztucznymi słodzikami.",
     "cs": "Jen trochu a nejdřív se zeptejte veterináře. AKC řadí jogurt nebo kefír s živými kulturami mezi potraviny, které může veterinář doporučit na podporu prospěšných bakterií, ale mnoho psů má s trávením laktózy potíže. Nikdy nedávejte kefír s xylitolem nebo jinými umělými sladidly.",
-    "hr": "Samo malo, i to tek nakon što pitaš veterinara. AKC navodi jogurt ili kefir sa živim kulturama među namirnicama koje veterinar može predložiti za jačanje korisnih bakterija, ali mnogi psi teško probavljaju laktozu. Nikada ne daj kefir s ksilitolom ili drugim umjetnim sladilima."
+    "hr": "Samo malo, i to tek nakon što pitaš veterinara. AKC navodi jogurt ili kefir sa živim kulturama među namirnicama koje veterinar može predložiti za jačanje korisnih bakterija, ali mnogi psi teško probavljaju laktozu. Nikada ne daj kefir s ksilitolom ili drugim umjetnim sladilima.",
+    "sv": "Bara lite, och fråga veterinären först. AKC nämner yoghurt eller kefir med levande kulturer bland det en veterinär kan föreslå för att öka mängden nyttiga bakterier, men många hundar tål laktos dåligt. Ge aldrig kefir med xylitol eller andra konstgjorda sötningsmedel."
   },
   "why": {
     "en": "Many dogs have trouble digesting foods that contain lactose; a dog's body isn't designed to digest lactose after puppyhood, so it can cause gas and other tummy trouble. Some dogs can also develop an allergy to milk protein. Some artificial sweeteners, such as xylitol, are toxic to dogs, so kefir with artificial sweeteners is a risk.",
@@ -75,7 +79,8 @@
     "nl": "Veel honden kunnen voeding met lactose slecht verteren. Na de pupperiode is het lichaam van een hond er niet op ingericht om lactose te verteren, dus het kan winderigheid en andere buikklachten veroorzaken. Sommige honden kunnen ook een allergie voor melkeiwit ontwikkelen. Sommige kunstmatige zoetstoffen, zoals xylitol, zijn giftig voor honden, dus kefir met kunstmatige zoetstoffen is een risico.",
     "pl": "Wiele psów ma kłopot z trawieniem produktów zawierających laktozę; organizm psa nie jest przystosowany do trawienia laktozy po okresie szczenięcym, więc może ona powodować gazy i inne dolegliwości brzuszne. U niektórych psów może też rozwinąć się alergia na białko mleka. Niektóre sztuczne słodziki, takie jak ksylitol, są toksyczne dla psów, więc kefir ze sztucznymi słodzikami jest ryzykowny.",
     "cs": "Mnoho psů má potíže s trávením potravin, které obsahují laktózu; tělo psa není po štěněcím věku uzpůsobeno k jejímu trávení, a proto může laktóza způsobit plynatost a další potíže s bříškem. U některých psů se také může vyvinout alergie na mléčné bílkoviny. Některá umělá sladidla, například xylitol, jsou pro psy toxická, takže kefír s umělými sladidly představuje riziko.",
-    "hr": "Mnogi psi teško probavljaju hranu koja sadrži laktozu; tijelo psa nije stvoreno za probavu laktoze nakon štenećeg doba, pa može izazvati plinove i druge probavne tegobe. Kod nekih pasa može se razviti i alergija na mliječne bjelančevine. Neka umjetna sladila, poput ksilitola, otrovna su za pse, pa kefir s umjetnim sladilima predstavlja rizik."
+    "hr": "Mnogi psi teško probavljaju hranu koja sadrži laktozu; tijelo psa nije stvoreno za probavu laktoze nakon štenećeg doba, pa može izazvati plinove i druge probavne tegobe. Kod nekih pasa može se razviti i alergija na mliječne bjelančevine. Neka umjetna sladila, poput ksilitola, otrovna su za pse, pa kefir s umjetnim sladilima predstavlja rizik.",
+    "sv": "Många hundar har svårt att smälta mat som innehåller laktos. Efter valptiden är hundens kropp inte gjord för att bryta ned laktos, så det kan ge gaser och annat magbesvär. Vissa hundar kan också utveckla allergi mot mjölkprotein. Vissa konstgjorda sötningsmedel, som xylitol, är giftiga för hundar, så kefir med konstgjorda sötningsmedel innebär en risk."
   },
   "signs": {
     "en": [
@@ -168,6 +173,13 @@
       "Povraćanje",
       "Bol u trbuhu",
       "Proljev"
+    ],
+    "sv": [
+      "Lös avföring",
+      "Gaser",
+      "Kräkningar",
+      "Ont i magen",
+      "Diarré"
     ]
   },
   "what_to_do": {
@@ -183,7 +195,8 @@
     "nl": "Geef net als bij yoghurt eerst een kleine hoeveelheid en kijk hoe je hond reageert. Krijgt je hond zachte ontlasting, winderigheid, braken of diarree, stop dan met de kefir. Vraag je dierenarts of probiotische voeding geschikt is voor je hond.",
     "pl": "Tak jak w przypadku jogurtu, najpierw podaj odrobinę i zobacz, jak pies reaguje. Jeśli pies ma luźne stolce, gazy, wymioty lub biegunkę, przestań podawać kefir. Zapytaj weterynarza, czy produkty probiotyczne są odpowiednie dla twojego psa.",
     "cs": "Stejně jako u jogurtu nabídněte nejdřív jen malé množství a sledujte, jak pes zareaguje. Pokud se u psa objeví řídká stolice, plynatost, zvracení nebo průjem, kefír přestaňte dávat. Zeptejte se veterináře, zda se probiotické potraviny pro vašeho psa hodí.",
-    "hr": "Kao i jogurt, najprije ga daj u maloj količini i prati kako pas reagira. Ako pas dobije rijetku stolicu, plinove, povraćanje ili proljev, prestani davati kefir. Pitaj veterinara jesu li probiotičke namirnice prikladne za tvog psa."
+    "hr": "Kao i jogurt, najprije ga daj u maloj količini i prati kako pas reagira. Ako pas dobije rijetku stolicu, plinove, povraćanje ili proljev, prestani davati kefir. Pitaj veterinara jesu li probiotičke namirnice prikladne za tvog psa.",
+    "sv": "Som med yoghurt gäller det att börja med en liten mängd och se hur hunden reagerar. Om hunden får lös avföring, gaser, kräkningar eller diarré, sluta ge kefir. Fråga veterinären om probiotiska livsmedel passar just din hund."
   },
   "serving": {
     "en": "Choose plain kefir and read the label carefully to avoid all artificial sweeteners, especially xylitol. Start with a small amount.",
@@ -198,7 +211,8 @@
     "nl": "Kies naturel kefir en lees het etiket goed, zodat er geen enkele kunstmatige zoetstof in zit, vooral geen xylitol. Begin met een kleine hoeveelheid.",
     "pl": "Wybierz kefir naturalny i sprawdzaj skład i unikaj wszystkich sztucznych słodzików, zwłaszcza ksylitolu. Zacznij od niewielkiej ilości.",
     "cs": "Vybírejte obyčejný kefír a pozorně čtěte složení na obalu, abyste se vyhnuli všem umělým sladidlům, zejména xylitolu. Začněte malým množstvím.",
-    "hr": "Odaberi obični kefir i pažljivo pročitaj deklaraciju da u njemu nema nikakvih umjetnih sladila, osobito ksilitola. Počni s malom količinom."
+    "hr": "Odaberi obični kefir i pažljivo pročitaj deklaraciju da u njemu nema nikakvih umjetnih sladila, osobito ksilitola. Počni s malom količinom.",
+    "sv": "Välj naturell kefir och läs innehållsförteckningen noga för att undvika alla konstgjorda sötningsmedel, särskilt xylitol. Börja med en liten mängd."
   },
   "child": {
     "en": "Some dogs can have a tiny taste of plain kefir, but many get a sore tummy from milk drinks. Fresh water is always best!",
@@ -213,7 +227,8 @@
     "nl": "Sommige honden mogen een klein beetje naturel kefir proeven, maar veel honden krijgen buikpijn van melkdranken. Vers water is altijd het beste!",
     "pl": "Niektóre psy mogą spróbować odrobiny kefiru naturalnego, ale po napojach mlecznych wielu psom boli brzuch. Świeża woda jest zawsze najlepsza!",
     "cs": "Někteří psi smějí ochutnat trošku obyčejného kefíru, ale mnoho psů z mléčných nápojů bolí bříško. Nejlepší je vždycky čerstvá voda!",
-    "hr": "Neki psi smiju malo kušati obični kefir, ali mnogima od mliječnih pića zaboli trbuh. Svježa voda uvijek je najbolja!"
+    "hr": "Neki psi smiju malo kušati obični kefir, ali mnogima od mliječnih pića zaboli trbuh. Svježa voda uvijek je najbolja!",
+    "sv": "Vissa hundar kan få smaka lite naturell kefir, men många får ont i magen av mjölkdrycker. Friskt vatten är alltid bäst!"
   },
   "faq": [
     {
@@ -230,7 +245,8 @@
         "nl": "Is kefir een goed probioticum voor honden?",
         "pl": "Czy kefir to dobry probiotyk dla psa?",
         "cs": "Je kefír dobrý probiotický doplněk pro psy?",
-        "hr": "Je li kefir dobar probiotik za pse?"
+        "hr": "Je li kefir dobar probiotik za pse?",
+        "sv": "Är kefir ett bra probiotikum för hundar?"
       },
       "a": {
         "en": "The AKC lists yogurt or kefir with live cultures among the options a vet may suggest to boost beneficial bacteria. Ask your vet before adding it to your dog's diet.",
@@ -245,7 +261,8 @@
         "nl": "De AKC noemt yoghurt of kefir met levende culturen als een van de opties die een dierenarts kan voorstellen om nuttige bacteriën te ondersteunen. Vraag het eerst aan je dierenarts voordat je het aan de voeding van je hond toevoegt.",
         "pl": "AKC wymienia jogurt lub kefir z żywymi kulturami bakterii wśród opcji, które weterynarz może zasugerować, by wspomóc pożyteczne bakterie. Zapytaj weterynarza, zanim dodasz go do diety psa.",
         "cs": "AKC uvádí jogurt nebo kefír s živými kulturami mezi možnostmi, které může veterinář doporučit na podporu prospěšných bakterií. Než ho zařadíte do jídelníčku psa, zeptejte se veterináře.",
-        "hr": "AKC navodi jogurt ili kefir sa živim kulturama među namirnicama koje veterinar može predložiti za jačanje korisnih bakterija. Prije nego što ga dodaš u prehranu svog psa, pitaj veterinara."
+        "hr": "AKC navodi jogurt ili kefir sa živim kulturama među namirnicama koje veterinar može predložiti za jačanje korisnih bakterija. Prije nego što ga dodaš u prehranu svog psa, pitaj veterinara.",
+        "sv": "AKC nämner yoghurt eller kefir med levande kulturer bland de alternativ som en veterinär kan föreslå för att öka mängden nyttiga bakterier. Fråga veterinären innan du lägger till det i hundens kost."
       }
     }
   ],
@@ -388,6 +405,11 @@
       "status": "verified",
       "verified_by": "claude-c-hr-2026-11-17",
       "verified_hash": "3495f05f5620004f9dcb3954e3a29dfe5192d12ad897ee623c8a9ddce9d97abe"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-c-sv-2026-11-17",
+      "verified_hash": "cb2e2a1bbb14d4fc11beda5766a151b50cb8a4f457edd55686f4ee322f7091bd"
     }
   }
 }
