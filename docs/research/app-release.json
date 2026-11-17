@@ -2,7 +2,7 @@
   "note": "What production app users have (store build or OTA update). Written by scripts/record-app-release.mjs — never by hand. The register export marks these breeds in_app; breeds on main but not here are coming_soon.",
   "kind": "ota",
   "version": "4.1.4",
-  "commit": "3efcae2316b5b1a5ff2a0c69923b01e817010c73",
+  "commit": "9d5dc6e5f1894d50a6e25818e56a23c9c8fd4c8a",
   "date": "2026-11-17",
   "breeds": [
     "mutt",
