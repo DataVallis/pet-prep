@@ -9,7 +9,8 @@
     "fi": "Kalaöljy",
     "nb": "Fiskeolje",
     "de": "Fischöl",
-    "es": "Aceite de pescado"
+    "es": "Aceite de pescado",
+    "pt": "Óleo de peixe"
   },
   "question": {
     "en": "Can cats have fish oil?",
@@ -19,7 +20,8 @@
     "fi": "Saako kissa kalaöljyä?",
     "nb": "Kan katter få fiskeolje?",
     "de": "Dürfen Katzen Fischöl bekommen?",
-    "es": "¿Pueden los gatos tomar aceite de pescado?"
+    "es": "¿Pueden los gatos tomar aceite de pescado?",
+    "pt": "Os gatos podem tomar óleo de peixe?"
   },
   "url_slug": {
     "en": "fish-oil",
@@ -29,7 +31,8 @@
     "fi": "kalaoljy",
     "nb": "fiskeolje",
     "de": "fischoel",
-    "es": "aceite-de-pescado"
+    "es": "aceite-de-pescado",
+    "pt": "oleo-de-peixe"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "fi": "Vain, jos eläinlääkäri suosittelee sitä. Kissoille annetaan usein kalaöljyä ravintolisänä, mutta se ei välttämättä sovi jokaiselle lemmikille ja voi aiheuttaa sivuvaikutuksia. Keskustele aina eläinlääkärin kanssa ennen kalaöljyn tai minkään muun ravintolisän antamista.",
     "nb": "Bare hvis dyrlegen anbefaler det. Fiskeolje er et kosttilskudd som brukes mye til katter, men det passer kanskje ikke for alle dyr og kan gi bivirkninger. Snakk alltid med dyrlegen før du gir fiskeolje eller andre kosttilskudd.",
     "de": "Nur, wenn Ihr Tierarzt es empfiehlt. Fischöl ist ein Nahrungsergänzungsmittel, das bei Katzen häufig verwendet wird, aber nicht für jedes Tier geeignet ist und Nebenwirkungen haben kann. Sprechen Sie immer mit Ihrem Tierarzt, bevor Sie Fischöl oder ein anderes Nahrungsergänzungsmittel geben.",
-    "es": "Solo si tu veterinario te lo recomienda. El aceite de pescado es un suplemento que se usa mucho en gatos, pero puede no ser adecuado para todas las mascotas y provocar efectos secundarios. Habla siempre con tu veterinario antes de darle aceite de pescado o cualquier otro suplemento."
+    "es": "Solo si tu veterinario te lo recomienda. El aceite de pescado es un suplemento que se usa mucho en gatos, pero puede no ser adecuado para todas las mascotas y provocar efectos secundarios. Habla siempre con tu veterinario antes de darle aceite de pescado o cualquier otro suplemento.",
+    "pt": "Só se o veterinário o recomendar. O óleo de peixe é um suplemento muito usado em gatos, mas pode não ser adequado para todos e tem possíveis efeitos secundários. Fala sempre com o teu veterinário antes de dar óleo de peixe ou qualquer outro suplemento."
   },
   "why": {
     "en": "Fish oil is used widely in cats, but omega-3 supplements may not be appropriate for every pet, and less is known about supplementing cats that have kidney disease. Possible side effects include mild stomach upset, a fishy odour, an oily coat and itchy, flaky skin; serious reactions include abnormal bruising or bleeding, especially in cats. Fish oil should not be given if a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity.",
@@ -50,7 +54,8 @@
     "fi": "Kissoille annetaan usein kalaöljyä, mutta omega-3-lisät eivät välttämättä sovi jokaiselle lemmikille, ja munuaissairaiden kissojen ravintolisistä tiedetään vähemmän. Mahdollisia sivuvaikutuksia ovat lievät vatsaoireet, kalan haju, rasvainen turkki sekä kutiseva ja hilseilevä iho; vakavia reaktioita ovat epätavalliset mustelmat tai verenvuoto, etenkin kissoilla. Älä anna kalaöljyä, jos luotettavaa lähdettä ei löydy, sillä joissakin lähteissä on suuri raskasmetallimyrkytyksen riski.",
     "nb": "Fiskeolje brukes mye til katter, men tilskudd med omega-3 passer kanskje ikke for alle dyr, og man vet mindre om tilskudd til katter med nyresykdom. Mulige bivirkninger er lett urolig mage, fiskelukt, fet pels og kløende, flassende hud. Alvorlige reaksjoner er unormale blåmerker eller blødninger, særlig hos katter. Gi bare fiskeolje fra en pålitelig kilde, for noen kilder har høy risiko for tungmetallforgiftning.",
     "de": "Fischöl wird bei Katzen häufig verwendet, doch Omega-3-Präparate sind nicht für jedes Tier geeignet, und über die Gabe bei Katzen mit Nierenerkrankung ist weniger bekannt. Mögliche Nebenwirkungen sind eine leichte Magenverstimmung, Fischgeruch, ein öliges Fell sowie juckende, schuppige Haut. Schwerwiegende Reaktionen sind ungewöhnliche Blutergüsse oder Blutungen, besonders bei Katzen. Lässt sich keine seriöse Bezugsquelle finden, sollte man auf Fischöl verzichten, denn manche Quellen bergen ein hohes Risiko für Schwermetallvergiftungen.",
-    "es": "El aceite de pescado se usa mucho en gatos, pero los suplementos de omega-3 pueden no ser adecuados para todas las mascotas, y se sabe menos sobre su uso en gatos con enfermedad renal. Entre los posibles efectos secundarios están molestias leves de estómago, olor a pescado, pelo graso y picor con descamación de la piel; entre las reacciones graves, hematomas o sangrados anormales, sobre todo en gatos. No se debe dar aceite de pescado si no procede de una fuente fiable, porque algunas fuentes suponen un alto riesgo de toxicidad por metales pesados."
+    "es": "El aceite de pescado se usa mucho en gatos, pero los suplementos de omega-3 pueden no ser adecuados para todas las mascotas, y se sabe menos sobre su uso en gatos con enfermedad renal. Entre los posibles efectos secundarios están molestias leves de estómago, olor a pescado, pelo graso y picor con descamación de la piel; entre las reacciones graves, hematomas o sangrados anormales, sobre todo en gatos. No se debe dar aceite de pescado si no procede de una fuente fiable, porque algunas fuentes suponen un alto riesgo de toxicidad por metales pesados.",
+    "pt": "O óleo de peixe é muito usado em gatos, mas os suplementos de ómega-3 podem não ser adequados para todos, e sabe-se menos sobre a suplementação em gatos com doença renal. Os possíveis efeitos secundários incluem mal-estar de estômago ligeiro, cheiro a peixe, pelo oleoso e pele com comichão e descamação; entre as reações graves estão nódoas negras ou hemorragias anormais, sobretudo nos gatos. Não se deve dar óleo de peixe se não for possível garantir uma fonte de confiança, porque algumas fontes têm um risco elevado de toxicidade por metais pesados."
   },
   "signs": {
     "en": [
@@ -140,6 +145,17 @@
       "Reacción alérgica: respiración irregular, sarpullido, fiebre, hinchazón alrededor de la cara",
       "Pérdida de apetito",
       "Tambaleo o convulsiones"
+    ],
+    "pt": [
+      "Mal-estar de estômago ligeiro",
+      "Cheiro a peixe",
+      "Pelo oleoso",
+      "Comichão ou descamação da pele",
+      "Cicatrização lenta",
+      "Nódoas negras ou hemorragias anormais",
+      "Reação alérgica: respiração irregular, erupção na pele, febre, inchaço na cara",
+      "Perda de apetite",
+      "Andar a cambalear ou convulsões"
     ]
   },
   "what_to_do": {
@@ -150,7 +166,8 @@
     "fi": "Keskustele eläinlääkärin kanssa ennen kalaöljyn antamista ja kerro hänelle kaikista vitamiineista ja ravintolisistä, joita kissasi jo saa. Jos ilmenee vakavia oireita, lopeta kalaöljyn antaminen ja ota heti yhteyttä eläinlääkäriin.",
     "nb": "Snakk med dyrlegen før du gir fiskeolje, og fortell om alle vitaminer og kosttilskudd katten din allerede får. Hvis det dukker opp alvorlige tegn, slutter du å gi fiskeolje og kontakter dyrlegen med en gang.",
     "de": "Besprechen Sie die Gabe von Fischöl vorab mit Ihrem Tierarzt und nennen Sie ihm alle Vitamine und Nahrungsergänzungsmittel, die Ihre Katze schon bekommt. Treten ernste Anzeichen auf, setzen Sie das Fischöl ab und wenden Sie sich sofort an Ihren Tierarzt.",
-    "es": "Habla con tu veterinario antes de darle aceite de pescado y cuéntale qué vitaminas o suplementos toma ya tu gato. Si aparecen signos graves, deja de darle el aceite de pescado y contacta enseguida con tu veterinario."
+    "es": "Habla con tu veterinario antes de darle aceite de pescado y cuéntale qué vitaminas o suplementos toma ya tu gato. Si aparecen signos graves, deja de darle el aceite de pescado y contacta enseguida con tu veterinario.",
+    "pt": "Fala com o teu veterinário antes de dar óleo de peixe e diz-lhe que vitaminas ou suplementos o teu gato já toma. Se surgirem sinais graves, deixa de dar o óleo de peixe e contacta imediatamente o teu veterinário."
   },
   "serving": null,
   "child": {
@@ -161,7 +178,8 @@
     "fi": "Vain eläinlääkäri voi päättää, tarvitseeko kissa kalaöljyä. Pyydä aikuista puhumaan ensin eläinlääkärin kanssa!",
     "nb": "Bare dyrlegen kan avgjøre om en katt trenger fiskeolje. Be en voksen snakke med dyrlegen først!",
     "de": "Ob eine Katze Fischöl braucht, entscheidet allein der Tierarzt. Bitte einen Erwachsenen, vorher mit dem Tierarzt zu sprechen!",
-    "es": "Solo el veterinario puede decidir si un gato necesita aceite de pescado. ¡Pide a un adulto que hable antes con el veterinario!"
+    "es": "Solo el veterinario puede decidir si un gato necesita aceite de pescado. ¡Pide a un adulto que hable antes con el veterinario!",
+    "pt": "Só o veterinário pode decidir se um gato precisa de óleo de peixe. Pede a um adulto para falar primeiro com o veterinário!"
   },
   "faq": [
     {
@@ -173,7 +191,8 @@
         "fi": "Onko kalaöljyn valmistajalla väliä?",
         "nb": "Spiller merket på fiskeoljen noen rolle?",
         "de": "Spielt die Marke des Fischöls eine Rolle?",
-        "es": "¿Importa la marca del aceite de pescado?"
+        "es": "¿Importa la marca del aceite de pescado?",
+        "pt": "A marca do óleo de peixe é importante?"
       },
       "a": {
         "en": "Yes. VCA advises against fish oil when a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity, and Tufts vets recommend a brand with good quality control. Your vet can advise.",
@@ -183,7 +202,8 @@
         "fi": "On. VCA neuvoo välttämään kalaöljyä, jos luotettavaa lähdettä ei löydy, koska joissakin lähteissä on suuri raskasmetallimyrkytyksen riski, ja Tuftsin eläinlääkärit suosittelevat valmistetta, jonka laadunvalvonta on hyvä. Eläinlääkäri osaa neuvoa.",
         "nb": "Ja. VCA fraråder fiskeolje når man ikke får tak i en pålitelig kilde, fordi noen kilder har høy risiko for tungmetallforgiftning, og dyrleger ved Tufts anbefaler et merke med god kvalitetskontroll. Dyrlegen kan gi deg råd.",
         "de": "Ja. VCA rät von Fischöl ab, wenn sich keine seriöse Bezugsquelle finden lässt, da manche Quellen ein hohes Risiko für Schwermetallvergiftungen bergen. Die Tierärzte von Tufts empfehlen eine Marke mit guter Qualitätskontrolle. Ihr Tierarzt kann Sie beraten.",
-        "es": "Sí. VCA desaconseja el aceite de pescado que no procede de una fuente fiable, porque algunas fuentes suponen un alto riesgo de toxicidad por metales pesados, y los veterinarios de Tufts recomiendan una marca con buen control de calidad. Tu veterinario te puede aconsejar."
+        "es": "Sí. VCA desaconseja el aceite de pescado que no procede de una fuente fiable, porque algunas fuentes suponen un alto riesgo de toxicidad por metales pesados, y los veterinarios de Tufts recomiendan una marca con buen control de calidad. Tu veterinario te puede aconsejar.",
+        "pt": "Sim. A VCA desaconselha o óleo de peixe quando não se consegue garantir uma fonte de confiança, porque algumas fontes têm um risco elevado de toxicidade por metais pesados, e os veterinários da Tufts recomendam uma marca com bom controlo de qualidade. O teu veterinário pode aconselhar-te."
       }
     }
   ],
@@ -308,6 +328,11 @@
       "status": "verified",
       "verified_by": "claude-c-es-2026-11-17",
       "verified_hash": "fac47f4f705a95a8eae0e3d82bab27eda708da8e3501f91cd033084abb7df69c"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-c-pt-2026-11-17",
+      "verified_hash": "d1f3571b1dcff2b247a8c764b760471fa49d96b74d0b4c35469b49913a4cd591"
     }
   }
 }

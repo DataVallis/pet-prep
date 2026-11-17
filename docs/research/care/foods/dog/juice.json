@@ -9,7 +9,8 @@
     "fi": "Hedelmämehu",
     "nb": "Fruktjuice",
     "de": "Fruchtsaft",
-    "es": "Zumo de fruta"
+    "es": "Zumo de fruta",
+    "pt": "Sumo de fruta"
   },
   "question": {
     "en": "Can dogs drink fruit juice?",
@@ -19,7 +20,8 @@
     "fi": "Saako koira juoda hedelmämehua?",
     "nb": "Kan hunder drikke fruktjuice?",
     "de": "Dürfen Hunde Fruchtsaft trinken?",
-    "es": "¿Pueden los perros beber zumo de fruta?"
+    "es": "¿Pueden los perros beber zumo de fruta?",
+    "pt": "Os cães podem beber sumo de fruta?"
   },
   "url_slug": {
     "en": "juice",
@@ -29,7 +31,8 @@
     "fi": "hedelmamehu",
     "nb": "fruktjuice",
     "de": "fruchtsaft",
-    "es": "zumo-de-fruta"
+    "es": "zumo-de-fruta",
+    "pt": "sumo-de-fruta"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "fi": "Parempi olla antamatta. Kokonainen hedelmä on mehua parempi välipala. Appelsiinimehu ei esimerkiksi ole myrkyllistä, mutta siinä on tiivistyneitä sokereita eikä lainkaan hedelmän kuitua. Sitruunamehussa on paljon sitruunahappoa, joka on koirille myrkyllistä, ja sokerittomissa juomissa voi olla ksylitolia.",
     "nb": "Helst ikke. Hel frukt er en bedre godbit enn juice. Appelsinjuice er for eksempel ikke giftig, men inneholder konsentrert sukker og mangler fiberen i frukten. Sitronjuice inneholder mye sitronsyre, som er giftig for hunder, og sukkerfrie drikker kan inneholde xylitol.",
     "de": "Besser nicht. Als Snack ist frisches Obst besser geeignet als Saft. Orangensaft zum Beispiel ist nicht giftig, enthält aber konzentrierten Zucker und nicht die Ballaststoffe der Frucht. Zitronensaft enthält viel Zitronensäure, die für Hunde giftig ist, und zuckerfreie Getränke können Xylit enthalten.",
-    "es": "Es mejor no dárselo. La fruta entera es mejor premio que el zumo. El zumo de naranja, por ejemplo, no es tóxico, pero tiene azúcares concentrados y no aporta la fibra de la fruta. El zumo de limón tiene mucho ácido cítrico, que es tóxico para los perros, y las bebidas sin azúcar pueden contener xilitol."
+    "es": "Es mejor no dárselo. La fruta entera es mejor premio que el zumo. El zumo de naranja, por ejemplo, no es tóxico, pero tiene azúcares concentrados y no aporta la fibra de la fruta. El zumo de limón tiene mucho ácido cítrico, que es tóxico para los perros, y las bebidas sin azúcar pueden contener xilitol.",
+    "pt": "É melhor não. A fruta inteira é mais indicada do que o sumo. O sumo de laranja, por exemplo, não é tóxico, mas tem açúcares concentrados e perde a fibra da fruta. O sumo de limão tem muito ácido cítrico, que é tóxico para os cães, e as bebidas sem açúcar podem conter xilitol."
   },
   "why": {
     "en": "Juice contains concentrated natural sugars and lacks the fibre of whole fruit; because it is higher in sugar and easy to drink in large amounts, it may increase the risk of digestive upset. Fruit juice concentrates are high in fructose, which may increase the risk of obesity. Lemon juice is a concentrated form of the fruit with high amounts of citric acid, which is toxic to dogs. Many zero-sugar drinks contain xylitol, which is highly toxic to dogs.",
@@ -50,7 +54,8 @@
     "fi": "Mehussa on tiivistyneitä luonnollisia sokereita, eikä siinä ole kokonaisen hedelmän kuitua. Koska siinä on enemmän sokeria ja sitä on helppo juoda paljon, se voi lisätä ruoansulatusvaivojen riskiä. Hedelmämehutiivisteissä on paljon fruktoosia, joka voi lisätä lihavuuden riskiä. Sitruunamehu on hedelmän tiivistetty muoto, ja siinä on paljon sitruunahappoa, joka on koirille myrkyllistä. Monissa sokerittomissa juomissa on ksylitolia, joka on koirille erittäin myrkyllistä.",
     "nb": "Juice inneholder konsentrert naturlig sukker og mangler fiberen i hel frukt; fordi den har mer sukker og er lett å drikke mye av, kan den øke risikoen for fordøyelsesplager. Fruktjuicekonsentrater har mye fruktose, noe som kan øke risikoen for overvekt. Sitronjuice er en konsentrert form av frukten med mye sitronsyre, som er giftig for hunder. Mange sukkerfrie drikker inneholder xylitol, som er svært giftig for hunder.",
     "de": "Saft enthält konzentrierten natürlichen Zucker, und ihm fehlen die Ballaststoffe der ganzen Frucht. Weil er so zuckerreich ist und sich leicht in großen Mengen trinken lässt, kann er das Risiko für Verdauungsbeschwerden erhöhen. Fruchtsaftkonzentrate enthalten viel Fruktose, die das Risiko für Übergewicht erhöhen kann. Zitronensaft ist die konzentrierte Form der Frucht und enthält viel Zitronensäure, die für Hunde giftig ist. Viele zuckerfreie Getränke enthalten Xylit, das für Hunde hochgiftig ist.",
-    "es": "El zumo contiene azúcares naturales concentrados y no tiene la fibra de la fruta entera; como lleva más azúcar y es fácil beber mucho, puede aumentar el riesgo de molestias digestivas. Los zumos concentrados de fruta son ricos en fructosa, lo que puede aumentar el riesgo de obesidad. El zumo de limón es una versión concentrada de la fruta, con mucho ácido cítrico, que es tóxico para los perros. Muchas bebidas sin azúcar contienen xilitol, que es muy tóxico para los perros."
+    "es": "El zumo contiene azúcares naturales concentrados y no tiene la fibra de la fruta entera; como lleva más azúcar y es fácil beber mucho, puede aumentar el riesgo de molestias digestivas. Los zumos concentrados de fruta son ricos en fructosa, lo que puede aumentar el riesgo de obesidad. El zumo de limón es una versión concentrada de la fruta, con mucho ácido cítrico, que es tóxico para los perros. Muchas bebidas sin azúcar contienen xilitol, que es muy tóxico para los perros.",
+    "pt": "O sumo tem açúcares naturais concentrados e perde a fibra da fruta inteira; como tem mais açúcar e se bebe com facilidade em grandes quantidades, pode aumentar o risco de mal-estar digestivo. Os concentrados de sumo de fruta são ricos em frutose, o que pode aumentar o risco de obesidade. O sumo de limão é a fruta em forma concentrada, com muito ácido cítrico, que é tóxico para os cães. Muitas bebidas sem açúcar contêm xilitol, que é muito tóxico para os cães."
   },
   "signs": {
     "en": [
@@ -76,6 +81,9 @@
     ],
     "es": [
       "Molestias digestivas"
+    ],
+    "pt": [
+      "Mal-estar digestivo"
     ]
   },
   "what_to_do": {
@@ -86,7 +94,8 @@
     "fi": "Tarjoa sen sijaan raikasta vettä ja tarkkaile koiraasi ruoansulatusvaivojen varalta. Jos juoma oli sokeriton tai siinä voi olla ksylitolia, lue heti ksylitolisivumme. Jos koirasi sai viinirypälemehua, lue viinirypälesivumme.",
     "nb": "Gi friskt vann i stedet, og følg med på om hunden får tegn på fordøyelsesplager. Hvis drikken var sukkerfri eller kan inneholde xylitol, kan du lese siden vår om xylitol med en gang. Hvis hunden fikk druejuice, kan du lese siden vår om druer.",
     "de": "Bieten Sie stattdessen frisches Wasser an und achten Sie darauf, ob Ihr Hund Verdauungsbeschwerden bekommt. War das Getränk zuckerfrei oder könnte es Xylit enthalten, lesen Sie sofort unsere Seite zu Xylit. Hat Ihr Hund Traubensaft getrunken, lesen Sie unsere Seite zu Trauben.",
-    "es": "Ofrécele agua fresca y vigila si aparecen signos de molestias digestivas. Si la bebida era sin azúcar o puede contener xilitol, consulta enseguida nuestra página sobre el xilitol. Si tu perro ha tomado zumo de uva, consulta nuestra página sobre las uvas."
+    "es": "Ofrécele agua fresca y vigila si aparecen signos de molestias digestivas. Si la bebida era sin azúcar o puede contener xilitol, consulta enseguida nuestra página sobre el xilitol. Si tu perro ha tomado zumo de uva, consulta nuestra página sobre las uvas.",
+    "pt": "Dá-lhe antes água fresca e observa se aparecem sinais de mal-estar digestivo. Se a bebida era sem açúcar ou pode conter xilitol, vai imediatamente à nossa página do xilitol. Se o teu cão bebeu sumo de uva, vai à nossa página das uvas."
   },
   "serving": null,
   "child": {
@@ -97,7 +106,8 @@
     "fi": "Mehu on koirille liian sokerista. Pieni pala koiralle sopivaa tuoretta hedelmää tai kuppi raikasta vettä on paljon parempi valinta!",
     "nb": "Juice er for søtt for hunder. En liten bit frisk frukt som hunder tåler, eller en skål friskt vann er en mye bedre godbit!",
     "de": "Saft ist für Hunde viel zu süß. Ein kleines Stück frisches Obst, das Hunde vertragen, oder ein Napf mit frischem Wasser ist ein viel besseres Leckerli!",
-    "es": "El zumo tiene demasiado azúcar para los perros. ¡Es mucho mejor un trocito de fruta fresca apta para perros o un cuenco de agua fresca!"
+    "es": "El zumo tiene demasiado azúcar para los perros. ¡Es mucho mejor un trocito de fruta fresca apta para perros o un cuenco de agua fresca!",
+    "pt": "O sumo tem açúcar a mais para os cães. Um pedacinho de fruta fresca que seja segura para cães ou uma tigela de água fresca é um petisco bem melhor!"
   },
   "faq": [
     {
@@ -109,7 +119,8 @@
         "fi": "Onko appelsiinimehu myrkyllistä koiralle?",
         "nb": "Er appelsinjuice giftig for hunder?",
         "de": "Ist Orangensaft für Hunde giftig?",
-        "es": "¿Es tóxico el zumo de naranja para los perros?"
+        "es": "¿Es tóxico el zumo de naranja para los perros?",
+        "pt": "O sumo de laranja é tóxico para os cães?"
       },
       "a": {
         "en": "No, but it is not recommended because it contains concentrated sugars and lacks the fibre found in whole fruit. If you want to share the taste of oranges, offer small pieces of fresh fruit instead.",
@@ -119,7 +130,8 @@
         "fi": "Ei, mutta sitä ei suositella, koska siinä on tiivistyneitä sokereita eikä kokonaisen hedelmän kuitua. Jos haluat antaa koiralle appelsiinin makua, tarjoa sen sijaan pieniä paloja tuoretta hedelmää.",
         "nb": "Nei, men det anbefales ikke, fordi den inneholder konsentrert sukker og mangler fiberen i hel frukt. Hvis du vil la hunden smake på appelsin, kan du gi små biter frisk frukt i stedet.",
         "de": "Nein, empfehlenswert ist er aber nicht, weil er konzentrierten Zucker enthält und ihm die Ballaststoffe der ganzen Frucht fehlen. Wenn Ihr Hund den Geschmack von Orangen probieren soll, geben Sie ihm lieber ein paar kleine Stücke frisches Obst.",
-        "es": "No, pero no se recomienda: tiene azúcares concentrados y no aporta la fibra de la fruta entera. Si quieres que pruebe el sabor de la naranja, ofrécele mejor trocitos de fruta fresca."
+        "es": "No, pero no se recomienda: tiene azúcares concentrados y no aporta la fibra de la fruta entera. Si quieres que pruebe el sabor de la naranja, ofrécele mejor trocitos de fruta fresca.",
+        "pt": "Não, mas não é recomendado, porque tem açúcares concentrados e perde a fibra da fruta inteira. Se quiseres que o teu cão experimente o sabor da laranja, dá-lhe antes uns pedacinhos de fruta fresca."
       }
     },
     {
@@ -131,7 +143,8 @@
         "fi": "Entä viinirypälemehu?",
         "nb": "Hva med druejuice?",
         "de": "Und Traubensaft?",
-        "es": "¿Y el zumo de uva?"
+        "es": "¿Y el zumo de uva?",
+        "pt": "E o sumo de uva?"
       },
       "a": {
         "en": "Sources disagree. VCA says grape juice does not appear to cause the poisoning seen with grapes and raisins, while FirstVet says grape juice should never be given to dogs. We follow the stricter advice: don't give it.",
@@ -141,7 +154,8 @@
         "fi": "Lähteet ovat eri mieltä. VCA:n mukaan viinirypälemehu ei näytä aiheuttavan samaa myrkytystä kuin viinirypäleet ja rusinat, mutta FirstVetin mukaan koiralle ei pidä koskaan antaa viinirypälemehua. Noudatamme tiukempaa ohjetta: älä anna sitä.",
         "nb": "Kildene er uenige. VCA sier at druejuice ikke ser ut til å gi den forgiftningen man ser ved druer og rosiner, mens FirstVet sier at druejuice aldri bør gis til hunder. Vi følger det strengeste rådet: Ikke gi den.",
         "de": "Die Quellen sind sich nicht einig. Laut VCA scheint Traubensaft nicht die Vergiftung auszulösen, die man von Trauben und Rosinen kennt; FirstVet dagegen sagt, Hunde dürften niemals Traubensaft bekommen. Wir folgen dem strengeren Rat: Geben Sie ihn nicht.",
-        "es": "Las fuentes no coinciden. VCA dice que el zumo de uva no parece causar la intoxicación que provocan las uvas y las pasas, mientras que FirstVet dice que nunca se debe dar zumo de uva a los perros. Seguimos el consejo más estricto: no se lo des."
+        "es": "Las fuentes no coinciden. VCA dice que el zumo de uva no parece causar la intoxicación que provocan las uvas y las pasas, mientras que FirstVet dice que nunca se debe dar zumo de uva a los perros. Seguimos el consejo más estricto: no se lo des.",
+        "pt": "As fontes não concordam. A VCA diz que o sumo de uva não parece causar a intoxicação que se vê com as uvas e as passas, enquanto a FirstVet diz que nunca se deve dar sumo de uva aos cães. Seguimos o conselho mais prudente: não dês."
       }
     }
   ],
@@ -262,6 +276,11 @@
       "status": "verified",
       "verified_by": "claude-c-es-2026-11-17",
       "verified_hash": "64d345e6ae7233540c6a3789bd70ffe2e9ac3986a53294d2f2676bb4a0e2cac7"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-c-pt-2026-11-17",
+      "verified_hash": "73e93b6c473752fc20d0d663be0db9ddc4a49a8f6759a8ebb7c368f8744e5071"
     }
   }
 }
