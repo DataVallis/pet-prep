@@ -928,6 +928,13 @@ class FalAiService
                 .'a close, smooth, short and glossy coat, a long wedge-shaped head with a black nose, small dark sparkling almond-shaped eyes, '
                 .'small natural V-shaped ears hanging close to the head, a short natural tail tapering to a point, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-121: FCI-Standard N° 209 (S904) — sturdy, medium-sized, long-haired, square outline; golden (one of the named
+            // standard colours); profuse, fine, long double coat; pendant V-shaped feathered ears; tail curled over the back.
+            BreedType::TibetanTerrier => 'A sturdy, medium-sized Tibetan Terrier of generally square outline, a long-haired companion dog, '
+                .'golden coat, a profuse, fine, long double coat, straight or slightly waved, falling over the eyes and face, '
+                .'a strong muzzle with a black nose, large round dark brown eyes, pendant V-shaped ears heavily feathered, '
+                .'a natural well-feathered tail carried in a curl over the back, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2191,6 +2198,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'close, smooth, short and glossy coat of firm texture',
                 'markings' => 'tan muzzle, cheek and eyebrow spots, tan legs with black toes and thumbmarks, small natural V-shaped ears, short tapering tail',
+            ],
+            // M5-R10-121: FCI S904 golden (the portrait default of the named standard colours).
+            BreedType::TibetanTerrier => [
+                'color_scheme' => 'golden',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'profuse, fine, long double coat, straight or slightly waved',
+                'markings' => 'long hair falling over the eyes, pendant V-shaped feathered ears, tail curled over the back',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

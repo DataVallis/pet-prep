@@ -2869,5 +2869,24 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S890'], 'refs' => ['manchester_terrier.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-121: tibetan_terrier.* (S905–S908), runbook rules (data.json
+        // proposed_game_parameters.tibetan_terrier.suitability_tags). RKC page not reachable (no apartment / sheds key facts);
+        // children and shedding: the sources disagree → no chip; no veterinary association names the breed → no welfare chip;
+        // in marketing. No new vocabulary key.
+        'tibetan_terrier' => [
+            'suits' => [
+                // S905 "Tibetan Terriers need around an hour of exercise every day and will happily join in with family games and activities."
+                ['tag' => 'active_family', 'source_ids' => ['S905'], 'refs' => ['tibetan_terrier.exercise.adult', 'tibetan_terrier.exercise.daily_text']],
+                // S905 "Tibetan Terriers generally get along well with everyone and will make good family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S905'], 'refs' => ['tibetan_terrier.behaviour.family']],
+            ],
+            'consider' => [
+                // S905 "Grooming is a daily requirement to keep their coats in tip-top condition."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S905'], 'refs' => ['tibetan_terrier.suitability.pdsa_grooming']],
+                // S907 "Tibetan Terriers can develop separation anxiety if left alone for long periods"
+                ['tag' => 'needs_company', 'source_ids' => ['S907'], 'refs' => ['tibetan_terrier.behaviour.time_alone']],
+            ],
+        ],
     ],
 ];

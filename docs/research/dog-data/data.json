@@ -61646,6 +61646,524 @@
       }
     }
   },
+  "tibetan_terrier": {
+    "_note": "Added 2026-11-17 (M5-R10-121, unattended run — appended after the American Eskimo Dog (blocked): AKC 2024 No. 117 'Tibetan Terrier', S174 full-list table fetched 2026-11-17 '116 American Eskimo Dog', '117 Tibetan Terrier', '118 Greyhound'). Quotes as returned by the web-fetch tool on 2026-11-17 (non-preapproved pages: fragments up to 125 characters); paraphrase only in notes, marked '(paraphrase)'. Sources S904–S911 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Standard: FCI-Standard N° 209 Tibetan Terrier (S904; the dev.fci.be PDF returned the 2017 text '05.10.2017/ EN' while the FCI nomenclature page lists a valid standard of 9/8/2026 — the KUSA copy S911 'effective date of 01/01/2026' has the same height and colour sentences). The RKC Breeds A–Z page and the RKC breed standard were refused by the fetch tool this run (redirect to royalkennelclub.com outside the provenance set) → no RKC key facts, no Breed Watch category and no RKC health tests: the runbook's 'else PDSA' path — PDSA (S905) for size, height, weight band, lifespan ('Over 12 years'), exercise ('around an hour of exercise every day'), coat and grooming ('a daily requirement'), as for the Manchester Terrier. PetMD (S907, Michelle Diener, DVM, Nov. 20, 2023) and WebMD (S906, medically reviewed 2026-04-23) for care frequencies and behaviour; Dogs Trust (S908) breed page as background. Weight from the CKC standard (S909, '8.25 to 13.5 kg (18 to 30 lb)'); UKC (S910) 'approximately 18 to 30 pounds'. Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused again; the 2024 paper (nature.com PDF, verbatim part) names the Tibetan Terrier only as a Fig. 5 tip label without a value → senior boundary from the PDSA lower bound 12 y = 108 (runbook rule, Manchester Terrier precedent). Coren rank 62 'Tibetan Terrier' (S35, shared, Fair) → 0.7. Not a terrier by type (FCI Group 9 companion dog). Never hypoallergenic. Slovenian »tibetanski terier« (no KZS page reached — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 209, Group 9 Section 5 (Tibetan breeds), Tibet (China)",
+      "unit": "—",
+      "source_id": "S904",
+      "quote": "Section 5 Tibetan breeds.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 209 (S904): 'ORIGIN: Tibet (China).', 'PATRONAGE: Great Britain.', 'UTILIZATION: Companion Dog.', 'Group 9 Companion and Toy Dogs.', 'Section 5 Tibetan breeds.', 'Without working trial.'. FCI nomenclature page (S904 note): 'TIBETAN TERRIER (209)', group 'n°9 - Companion and Toy Dogs', section 'Tibetan breeds', country 'Tibet (China)', patronage 'GREAT BRITAIN', accepted on a definitive basis '12/18/1957'."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S905",
+      "quote": "Medium",
+      "confidence": "medium",
+      "notes": "PDSA key fact 'Size' (S905) 'Medium' — no RKC key fact reachable this run (runbook: else PDSA). FCI (S904) 'Sturdy, medium-sized, long-haired, generally square outline.'; Dogs Trust (S908) says 'Small' and WebMD (S906) 'on the border between the small and medium-sized breeds' (paraphrase). Weight 18–30 lb (S909) → the 'Medium (24–59 pounds)' class of S10 for growth (upper part of the band)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            36,
+            41
+          ],
+          "female": [
+            36,
+            41
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S904",
+        "quote": "Height at the withers: Males: 36 - 41 cm; females slightly smaller.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 209 (S904): a range for males only; 'females slightly smaller' has no number, so the female value repeats the male range as an upper reference — not exported (the register shows the PDSA average height, height.pdsa). KUSA copy of the FCI standard (S911): 'Males: 36cm – 41cm (approx. 14” – 16”).'; CKC (S909) 'Height: 35.5 to 40.75 cm (14 to 16 in)'; UKC (S910) 'The average height for males is 14 to 16 inches. Slightly less for females.'"
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            36,
+            41
+          ],
+          "female": [
+            36,
+            41
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S905",
+        "quote": "36-41 cm",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average height' (S905), both sexes — the register value. WebMD (S906) 'between 14 and 17 inches tall'; PetMD (S907) '14 to 17 inches tall'."
+      }
+    },
+    "adult_weight": {
+      "ckc": {
+        "value": {
+          "male": [
+            8.25,
+            13.5
+          ],
+          "female": [
+            8.25,
+            13.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S909",
+        "quote": "Weight: 8.25 to 13.5 kg (18 to 30 lb)",
+        "confidence": "high",
+        "notes": "Canadian Kennel Club standard (S909, effective January 2018, Group VI Non-Sporting) — one band for both sexes; the game / register value (the FCI standard S904 has no weight). 'The weight must be proportionate to the height, maintaining a sturdy, compact build.' UKC (S910) 'Weight range is approximately 18 to 30 pounds.'; WebMD (S906) 'They weigh an average of 18 to 30 pounds.'; PDSA (S905) 'Average weight' '9-11 kg'.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                9,
+                11
+              ],
+              "female": [
+                9,
+                11
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S905",
+            "quote": "9-11 kg",
+            "notes": "PDSA key fact 'Average weight' (S905)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. CKC 18–30 lb (S909) straddles the Small (12–24) and Medium (24–59) classes; PDSA (S905) 'Medium' → the Medium class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Tibetan Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S905",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S905). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable; the RKC page was refused this run → the same PDSA band, Manchester Terrier precedent). Dogs Trust (S908) 'typically 12+ years' agrees. Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "15–16",
+        "unit": "years",
+        "source_id": "S907",
+        "quote": "lifespan of 15–16 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S907, fragment); WebMD (S906) 'On average they live for 15 to 16 years.' Background; the PDSA lower bound is used."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (PDSA lower bound 'Over 12 years', S905) → 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). McMillan 2024: the Dogs Trust table (S123) was refused; the paper names the breed only as a Fig. 5 tip label without a value → not used.",
+        "derived_from": [
+          "S11",
+          "S905"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S905",
+        "quote": "Tibetan Terriers need around an hour of exercise every day and will happily join in with family games and activities.",
+        "confidence": "high",
+        "notes": "PDSA (S905) → 60 min ('around N' → N, Cane Corso precedent 'about'); key fact 'Minimum exercise (per day) | 1 hour' agrees. No RKC key fact reachable (runbook: RKC, else PDSA). PetMD (S907) 'at least an hour' agrees; WebMD (S906) and Dogs Trust (S908) give no minutes.",
+        "alternatives": [
+          {
+            "value": "≥ 60",
+            "unit": "minutes/day",
+            "source_id": "S907",
+            "quote": "Tibetan Terriers require at least an hour of exercise daily, but happily accept more activity if given the opportunity.",
+            "notes": "PetMD (S907) — the same 60."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "lively; around an hour of exercise a day and happy to join in family games",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Tibetan Terriers need around an hour of exercise every day and will happily join in with family games and activities.",
+        "confidence": "high",
+        "notes": "PDSA (S905). FCI (S904): 'Lively, good-natured.'; Dogs Trust (S908): 'They need daily walks, plus plenty of time and opportunity to explore, burn energy, and play.'"
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PDSA / PetMD / WebMD / Dogs Trust name no bloat) → no meal gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "lively, good-natured; outgoing, alert, intelligent and game; sparing of affection to strangers",
+        "unit": "—",
+        "source_id": "S904",
+        "quote": "Outgoing, alert, intelligent and game; neither fierce nor pugnacious.",
+        "confidence": "high",
+        "notes": "FCI standard (S904): 'Lively, good-natured.', 'Sparing of affection to strangers.'. PDSA (S905): 'Tibetan Terriers are gentle, friendly, affectionate dogs.'; PetMD (S907): 'they may be suspicious of new people and might bark at strangers.'"
+      },
+      "family": {
+        "value": "get along well with everyone; make good family pets",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Tibetan Terriers generally get along well with everyone and will make good family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S905) → family_pet chip (David 2026-10-09: 'Družinski pes')."
+      },
+      "children": {
+        "value": "can be good with young children when introductions are supervised; some individuals struggle with young children",
+        "unit": "—",
+        "source_id": "S907",
+        "quote": "They can be good with young children and other dogs when introductions are supervised and done properly.",
+        "confidence": "medium",
+        "notes": "PetMD (S907, supervision caveat). WebMD (S906): 'Some individuals can struggle with other dogs and young children.' — the sources disagree → no children / small_children chip (family_pet from PDSA only)."
+      },
+      "other_pets": {
+        "value": "can be good with other dogs when introductions are supervised; no prey-drive statement",
+        "unit": "—",
+        "source_id": "S907",
+        "quote": "They can be good with young children and other dogs when introductions are supervised and done properly.",
+        "confidence": "medium",
+        "notes": "PetMD (S907); WebMD (S906) 'Some individuals can struggle with other dogs' (paraphrase of the same sentence). No A/B source names a high prey drive → no chases_small_pets; conflicting → no other_pets."
+      },
+      "time_alone": {
+        "value": "can develop separation anxiety if left alone for long periods",
+        "unit": "—",
+        "source_id": "S907",
+        "quote": "Tibetan Terriers can develop separation anxiety if left alone for long periods",
+        "confidence": "high",
+        "notes": "PetMD (S907, fragment; it continues with crate training and interactive toys — paraphrase) → needs_company chip (Boxer / Boston Terrier precedent)."
+      },
+      "socialisation": {
+        "value": "socialisation classes for the puppy before 16 weeks",
+        "unit": "—",
+        "source_id": "S907",
+        "quote": "Enrolling your Tibetan Terrier puppy in socialization classes before they're 16 weeks old",
+        "confidence": "high",
+        "notes": "PetMD (S907, fragment as returned; the sentence continues that this helps them become comfortable with children, other dogs and new people — paraphrase) → breed DOG_SOCIALISATION entry (M5-R17)."
+      },
+      "training": {
+        "value": "likes to please but can be a little stubborn and headstrong; reward-based training",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "They generally like to please their owners, but can occasionally be a little stubborn and headstrong.",
+        "confidence": "high",
+        "notes": "PDSA (S905); 'training will require patience, but can be achieved using reward-based techniques.' PetMD (S907): 'Due to their high intelligence and loyalty, Tibetan Terrier puppies are usually easy to train.'; WebMD (S906): 'They're easy to train but don't do well with harsh reprimands.' Background."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found (WebMD S906: 'They're likely to leave food in their dishes.' — the opposite; background)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. The RKC Breed Watch category was not reachable this run (RKC page refused); no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: not checked (RKC health-testing section not reachable).",
+      "luxating_patella": {
+        "value": "luxating patellas — the kneecap slips out of place",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Luxating patellas",
+        "confidence": "high",
+        "notes": "PDSA (S905) list item; PetMD (S907) 'patellar luxation'. Register health key kneecap_luxation."
+      },
+      "primary_lens_luxation": {
+        "value": "primary lens luxation — dislocation of the lens of the eye",
+        "unit": "—",
+        "source_id": "S907",
+        "quote": "primary lens luxation",
+        "confidence": "high",
+        "notes": "PetMD (S907); PDSA (S905) 'Lens luxation'. Register health key primary_lens_luxation."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — inherited eye disease that can lead to blindness",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Progressive retinal atrophy",
+        "confidence": "high",
+        "notes": "PDSA (S905) list item; PetMD (S907) 'progressive retinal atrophy (PRA)'. Register health key pra_inherited_blindness."
+      },
+      "distichiasis": {
+        "value": "distichiasis — extra eyelashes that can rub the eye",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Distichiasis",
+        "confidence": "high",
+        "notes": "PDSA (S905) list item; PetMD (S907). Register health key extra_eyelashes."
+      },
+      "cataracts": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Cataracts",
+        "confidence": "high",
+        "notes": "PDSA (S905) list item; PetMD (S907); WebMD (S906). Register health key cataracts."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Hip dysplasia",
+        "confidence": "high",
+        "notes": "PDSA (S905) list item; PetMD (S907); WebMD (S906). Register health key hip_dysplasia."
+      },
+      "diabetes": {
+        "value": "insulin-dependent diabetes mellitus",
+        "unit": "—",
+        "source_id": "S907",
+        "quote": "insulin-dependent diabetes mellitus",
+        "confidence": "medium",
+        "notes": "PetMD (S907) — the risk statement for middle-aged dogs stays here as background (no comparison shown). Register health key diabetes_mellitus."
+      },
+      "other": {
+        "value": "neuronal ceroid lipofuscinosis (NCL), atopic dermatitis, tear staining; heart murmurs in old age and cancer (WebMD)",
+        "unit": "—",
+        "source_id": "S907",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S907) 'neuronal ceroid lipofuscinosis', atopic dermatitis, tear staining; WebMD (S906) geriatric heart murmurs, cancer, food sensitivities (paraphrase). Background only — no register key (the register's storage_disease sentence describes young dogs, the Tibetan Terrier NCL is adult-onset — not used)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 62,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Tibetan Terrier",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-12 for the Japanese Chin, M5-R10-107): rank 62 shared by 'Japanese Chin', 'Dandie Dinmont Terrier', 'Petit Basset Griffon Vendéen', 'Tibetan Terrier', 'Lakeland Terrier' under 'Fair Working/Obedience Intelligence' (ranks 55–69). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label for ranks 55–69 (as returned: 'Fair Working/Obedience Intelligence')."
+      },
+      "training_notes": {
+        "value": "likes to please, can be stubborn; reward-based training, no harsh reprimands",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S905), WebMD (S906) (paraphrase). The game uses Coren's rank only (62 → 0.7)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.tibetan_terrier.learning_multiplier (0.7, runbook rule: Fair tier, rank 62).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "sturdy, medium-sized, long-haired dog of generally square outline",
+        "unit": "—",
+        "source_id": "S904",
+        "quote": "Sturdy, medium-sized, long-haired, generally square outline.",
+        "confidence": "high",
+        "notes": "FCI standard (S904)."
+      },
+      "colours": {
+        "value": [
+          "golden",
+          "white",
+          "cream",
+          "grey or smoke",
+          "black",
+          "parti-colour",
+          "tricolour"
+        ],
+        "unit": "list (any colour except chocolate, liver or merle)",
+        "source_id": "S904",
+        "quote": "in fact any colour except chocolate, liver or merle permissible.",
+        "confidence": "high",
+        "notes": "FCI standard (S904): 'White, golden, cream, grey or smoke, black, parti-colour and tricolours' (first part, fragment); KUSA copy (S911) the same two fragments. CKC (S909) 'Any colour or combination of colours including white.'; UKC (S910) any colour, albinism a disqualification (paraphrase). The game draws the seven named standard colours (golden listed first as the portrait default — the order of the standard starts with white); never chocolate, liver or merle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Golden first with the highest weight → the portrait default."
+      },
+      "coat": {
+        "value": "double coat: fine woolly undercoat; profuse, fine, long top coat, straight or waved but not curled",
+        "unit": "—",
+        "source_id": "S904",
+        "quote": "Top coat profuse, fine but neither silky nor woolly; long; either straight or waved but not curled.",
+        "confidence": "high",
+        "notes": "FCI standard (S904); 'Hair: Double coat. Undercoat fine and woolly.' PDSA (S905) 'Coat length | Long'."
+      },
+      "muzzle": {
+        "value": "strong muzzle as long as the skull; marked but not exaggerated stop; black nose",
+        "unit": "—",
+        "source_id": "S904",
+        "quote": "Muzzle: Strong. Length from eye to tip of nose equal to length from eye to occiput.",
+        "confidence": "high",
+        "notes": "FCI standard (S904); 'Stop: Marked in front of eyes, but not exaggerated.'; 'Nose: Black.' Not a flat-faced breed."
+      },
+      "eyes": {
+        "value": "large, round, dark brown eyes set fairly wide apart, black eye rims",
+        "unit": "—",
+        "source_id": "S904",
+        "quote": "Eyes: Large, round, neither prominent nor sunken; set fairly wide apart; dark brown. Eye rims black.",
+        "confidence": "high",
+        "notes": "FCI standard (S904)."
+      },
+      "ears": {
+        "value": "pendant, V-shaped, not too large, heavily feathered ears",
+        "unit": "—",
+        "source_id": "S904",
+        "quote": "Ears: Pendant, carried not too close to head, V-shaped, not too large",
+        "confidence": "high",
+        "notes": "FCI standard (S904); 'heavily feathered.'"
+      },
+      "tail": {
+        "value": "medium length, set fairly high, carried in a gay curl over the back",
+        "unit": "—",
+        "source_id": "S904",
+        "quote": "TAIL: Medium length set on fairly high and carried in a gay curl over back.",
+        "confidence": "high",
+        "notes": "FCI standard (S904). Natural tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S905), PetMD (S907), WebMD (S906), Dogs Trust (S908). The RKC breed page was not reachable on 2026-11-17 → no rkc_* key facts.",
+      "pdsa_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Size' (S905) → size class."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S905) → 60 min. Not long_daily_exercise."
+      },
+      "pdsa_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Long",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Coat length' (S905)."
+      },
+      "pdsa_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Grooming is a daily requirement to keep their coats in tip-top condition.",
+        "confidence": "high",
+        "notes": "PDSA (S905) → brushing every day (dog-grooming rule: 'daily' → 7, M5-R13); frequent_grooming chip. PetMD (S907) 'They also need to be brushed once or twice a week to prevent their long, double coat from matting.' and 'should be brushed several times a week' — lower (alternatives, Lhasa Apso precedent)."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S905) — see lifespan.pdsa."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth every day",
+        "unit": "—",
+        "source_id": "S906",
+        "quote": "You should always trim your dog's nails as needed and brush their teeth on a daily basis.",
+        "confidence": "high",
+        "notes": "WebMD (S906) → tooth brushing every day (M5-R15); nails 'as needed' — no frequency → no nail task."
+      },
+      "petmd_bath": {
+        "value": "bath when the coat is dirty or smelly — no frequency",
+        "unit": "—",
+        "source_id": "S907",
+        "quote": "While frequent bathing isn't necessary, Tibetan Terriers should be bathed when their coat becomes dirty or smelly.",
+        "confidence": "high",
+        "notes": "PetMD (S907) — no frequency → no bath reminder."
+      },
+      "petmd_ears": {
+        "value": "ear cleaner with a drying agent; after baths and swimming — no routine frequency",
+        "unit": "—",
+        "source_id": "S907",
+        "quote": "Cleaning their ears with a routine ear cleaner that contains a drying agent can help minimize ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S907): 'It's also important to clean their ears after a bath or other water activity, such as swimming.'; for allergic dogs ask the vet how often — no frequency → no ear-cleaning task."
+      },
+      "webmd_groomer": {
+        "value": "groomer optional — no frequency",
+        "unit": "—",
+        "source_id": "S906",
+        "quote": "You can choose to manage your dog's coat yourself or take them to a groomer.",
+        "confidence": "high",
+        "notes": "WebMD (S906); PetMD (S907) 'A professional groomer can help minimize coat care needs by keeping their fur trimmed shorter so it's easier to manage.' — no frequency → no groomer reminder."
+      },
+      "dogstrust_shedding": {
+        "value": "shed very little",
+        "unit": "—",
+        "source_id": "S908",
+        "quote": "Their long, shaggy coats shed very little and can be any colour.",
+        "confidence": "medium",
+        "notes": "Dogs Trust (S908). WebMD (S906): 'they shed a moderate amount and drool even less.' — the sources disagree → no shedding fact, no low_shedding / sheds chip."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -92358,6 +92876,240 @@
         "confidence": "medium",
         "notes": "FCI standard (S888) as in manchester_terrier.appearance. One colour; weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan is the portrait default (FCI S888 — the only standard colour); natural (uncropped) ears, natural tail"
+      }
+    },
+    "tibetan_terrier": {
+      "_note": "Unattended run M5-R10-121 (2026-11-17): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PDSA (S905 'around an hour of exercise every day' → 60; the RKC page was not reachable → runbook 'else PDSA'). Senior boundary 108 from the PDSA lower bound 'Over 12 years' (S905; no McMillan 2024 value reachable). Learning 0.7 (Coren 62, Fair, S35). Built: brushing every day (PDSA 'a daily requirement', M5-R13), tooth brushing every day (WebMD S906, M5-R15), puppy socialisation with the PetMD quote (M5-R17). No nail / ear / bath / groomer task (no frequency), no meal gap, no heat warning. No new vocabulary key. In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S905",
+        "quote": "Tibetan Terriers need around an hour of exercise every day and will happily join in with family games and activities.",
+        "confidence": "high",
+        "notes": "PDSA (S905) → rule 'around N' → 60 (no RKC key fact reachable → PDSA). PDSA key fact '1 hour' and PetMD (S907) 'at least an hour' agree.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S907",
+            "quote": "Tibetan Terriers require at least an hour of exercise daily, but happily accept more activity if given the opportunity."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S905 'around an hour of exercise every day'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S905",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + the PDSA lower bound 'Over 12 years', S905 — no McMillan 2024 / VetCompass row reachable, no RKC page).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S905"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × PDSA lower bound 'Over 12 years', S905)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 62 'Tibetan Terrier' (S35, shared) → 'Fair working/obedience intelligence' (ranks 55–69) → 0.7 (same as the Japanese Chin, rank 62). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 62, Fair, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S905",
+        "quote": "Grooming is a daily requirement to keep their coats in tip-top condition.",
+        "confidence": "medium",
+        "notes": "tibetan_terrier.suitability.pdsa_grooming. PDSA 'a daily requirement' → 7 (Lhasa Apso precedent). PetMD (S907) 'once or twice a week' / 'several times a week' → alternatives. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 2,
+            "source_id": "S907",
+            "quote": "They also need to be brushed once or twice a week to prevent their long, double coat from matting."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (PDSA »Grooming is a daily requirement«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S906",
+        "quote": "You should always trim your dog's nails as needed and brush their teeth on a daily basis.",
+        "confidence": "high",
+        "notes": "tibetan_terrier.suitability.webmd_teeth → every day. Built: DOG_CARE_TASKS tooth_brushing [7, day], M5-R15. Nails 'as needed' → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brush their teeth on a daily basis« → vsak dan"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S907",
+        "quote": "Enrolling your Tibetan Terrier puppy in socialization classes before they're 16 weeks old",
+        "confidence": "high",
+        "notes": "tibetan_terrier.behaviour.socialisation (PetMD S907, advice). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S907)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-121); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S905"
+            ],
+            "refs": [
+              "tibetan_terrier.exercise.adult",
+              "tibetan_terrier.exercise.daily_text"
+            ],
+            "quote": "S905 'Tibetan Terriers need around an hour of exercise every day and will happily join in with family games and activities.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S905"
+            ],
+            "refs": [
+              "tibetan_terrier.behaviour.family"
+            ],
+            "quote": "S905 'Tibetan Terriers generally get along well with everyone and will make good family pets.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S905"
+            ],
+            "refs": [
+              "tibetan_terrier.suitability.pdsa_grooming"
+            ],
+            "quote": "S905 'Grooming is a daily requirement to keep their coats in tip-top condition.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S907"
+            ],
+            "refs": [
+              "tibetan_terrier.behaviour.time_alone"
+            ],
+            "quote": "S907 'Tibetan Terriers can develop separation anxiety if left alone for long periods'"
+          }
+        ],
+        "not_proposed": {
+          "children": "PetMD (S907) 'good with young children … when introductions are supervised' vs WebMD (S906) 'Some individuals can struggle with other dogs and young children.' — conflicting sources.",
+          "small_children": "Supervision caveat and conflicting sources.",
+          "apartment": "No RKC key fact 'Size of home' reachable (the chip needs RKC 'Flat/ Apartment').",
+          "long_daily_exercise": "60 minutes a day (PDSA S905) — the chip is for 2 hours or more.",
+          "low_shedding": "Dogs Trust 'shed very little' (S908) vs WebMD 'shed a moderate amount' (S906) — conflicting.",
+          "sheds": "Conflicting sources (as above).",
+          "other_pets": "PetMD good with other dogs when supervised vs WebMD 'struggle with other dogs' — conflicting.",
+          "chases_small_pets": "No prey-drive statement.",
+          "cold_sensitive": "PetMD (S907): 'they do well in chillier temperatures' — the opposite.",
+          "first_time_owner": "No source.",
+          "shorter_lifespan": "PDSA 'Over 12 years' (S905).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "RKC Breed Watch category not reachable this run; no veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet; consider frequent_grooming, needs_company"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S905",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never calls the Tibetan Terrier hypoallergenic or low-maintenance (daily grooming, S905).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Tibetan Terrier, golden: sturdy, medium-sized, long-haired, square outline; profuse long fine top coat, straight or waved; large round dark brown eyes; pendant V-shaped feathered ears; tail curled over the back",
+        "unit": "—",
+        "source_id": "S904",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S904) as in tibetan_terrier.appearance. Seven standard colours; weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): golden is the portrait default (one of the FCI S904 colours; weights unsourced); natural coat (not clipped), natural tail"
       }
     }
   }
