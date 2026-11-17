@@ -1465,6 +1465,19 @@
             "prompt_hash": "sha256:ae1557919a6b02125466bcf3bb5c33d3e3f47bfae150df52c9b14ee9ba88d52d",
             "generated_at": "2026-11-16T07:04:46+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "tibetan_terrier",
+            "species": "dog",
+            "colour": "golden",
+            "file": "dog/tibetan-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:50d4a96d0c224670a0ba83410a49c20841ce4ca91564a80feb734f0139460db7",
+            "generated_at": "2026-11-17T02:53:26+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
