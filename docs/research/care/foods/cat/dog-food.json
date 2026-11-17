@@ -5,6 +5,7 @@
     "en": "Dog food",
     "sl": "Pasja hrana",
     "fr": "Nourriture pour chiens",
+    "it": "Cibo per cani",
     "fi": "Koiranruoka",
     "nb": "Hundefôr"
   },
@@ -12,6 +13,7 @@
     "en": "Can cats eat dog food?",
     "sl": "Ali lahko mačke jedo pasjo hrano?",
     "fr": "Les chats peuvent-ils manger de la nourriture pour chiens ?",
+    "it": "I gatti possono mangiare il cibo per cani?",
     "fi": "Saako kissa syödä koiranruokaa?",
     "nb": "Kan katter spise hundefôr?"
   },
@@ -19,6 +21,7 @@
     "en": "dog-food",
     "sl": "pasja-hrana",
     "fr": "nourriture-pour-chiens",
+    "it": "cibo-per-cani",
     "fi": "koiranruoka",
     "nb": "hundefor"
   },
@@ -27,6 +30,7 @@
     "en": "Not as their food. A morsel or two of dog food won't hurt most healthy cats, but you should not feed your dog's food to your cat. Dog food doesn't meet a cat's nutritional needs – for example, it doesn't contain enough taurine for a cat.",
     "sl": "Ne kot njihova hrana. Grižljaj ali dva pasje hrane večini zdravih mačk ne bo škodil, vendar mački ne bi smeli dajati pasje hrane. Ta ne pokrije mačjih prehranskih potreb – na primer ne vsebuje dovolj tavrina za mačko.",
     "fr": "Pas comme alimentation. Une bouchée ou deux de nourriture pour chiens ne feront pas de mal à la plupart des chats en bonne santé, mais ne leur donnez pas la nourriture de votre chien : elle ne couvre pas leurs besoins, par exemple en taurine.",
+    "it": "No, non come cibo per il tuo gatto. Un boccone o due di cibo per cani non fanno male alla maggior parte dei gatti sani, ma non dovresti dare al tuo gatto il cibo del tuo cane. Il cibo per cani non soddisfa il fabbisogno nutrizionale del gatto – per esempio non contiene abbastanza taurina per un gatto.",
     "fi": "Ei kissan ruoaksi. Muutama muru koiranruokaa ei useimmille terveille kissoille vahingoita, mutta älä anna kissalle koirasi ruokaa. Se ei kata kissan ravinnontarvetta, ja siinä on esimerkiksi liian vähän tauriinia.",
     "nb": "Nei, ikke som mat til katten. En liten bit eller to hundefôr skader ikke de fleste friske katter, men la være å gi katten fôret til hunden din. Hundefôr dekker ikke kattens næringsbehov – det inneholder for eksempel for lite taurin."
   },
@@ -34,6 +38,7 @@
     "en": "Dogs and cats need different nutrients. Cats require taurine, an essential amino acid for them, while dogs do not, and dog food does not contain enough of it for a cat. The Merck Veterinary Manual adds that some dog foods are lower in protein and may lack nutrients cats need but dogs don't, such as preformed vitamin A and arachidonic acid. Too little taurine can weaken the heart muscle and damage the eyes, impairing vision.",
     "sl": "Psi in mačke potrebujejo različna hranila. Mačke potrebujejo tavrin, ki je zanje esencialna aminokislina, psi pa ne, in pasja hrana ga za mačko ne vsebuje dovolj. Veterinarski priročnik Merck dodaja, da imajo nekatere pasje hrane manj beljakovin in jim lahko manjkajo hranila, ki jih potrebujejo mačke, psi pa ne, na primer že izoblikovan vitamin A in arahidonska kislina. Premalo tavrina lahko oslabi srčno mišico in okvari oči, kar poslabša vid.",
     "fr": "Les chiens et les chats n’ont pas besoin des mêmes nutriments. Les chats ont besoin de taurine, un acide aminé essentiel pour eux, alors que ce n’est pas le cas des chiens, et la nourriture pour chiens n’en contient pas assez pour un chat. Le Manuel vétérinaire Merck ajoute que certains aliments pour chiens sont moins riches en protéines et peuvent manquer de nutriments dont les chats ont besoin mais pas les chiens, comme la vitamine A préformée et l’acide arachidonique. Un manque de taurine peut affaiblir le muscle cardiaque et abîmer les yeux et altérer la vue.",
+    "it": "Cani e gatti hanno bisogno di nutrienti diversi. I gatti hanno bisogno di taurina, un amminoacido essenziale per loro, mentre i cani no, e il cibo per cani non ne contiene abbastanza per un gatto. Il Merck Veterinary Manual aggiunge che alcuni cibi per cani hanno meno proteine e possono essere carenti di nutrienti di cui i gatti hanno bisogno e i cani no, come la vitamina A preformata e l’acido arachidonico. Una quantità insufficiente di taurina può indebolire il muscolo cardiaco e danneggiare gli occhi, compromettendo la vista.",
     "fi": "Koirat ja kissat tarvitsevat eri ravintoaineita. Kissa tarvitsee tauriinia, joka on sille välttämätön aminohappo, mutta koira ei, eikä koiranruoassa ole sitä kissalle riittävästi. Merck Veterinary Manual -käsikirja lisää, että joissakin koiranruoissa on vähemmän proteiinia ja niistä voi puuttua ravintoaineita, joita kissa tarvitsee mutta koira ei, kuten valmista A-vitamiinia ja arakidonihappoa. Tauriinin puute voi heikentää sydänlihasta sekä vaurioittaa silmiä ja heikentää näköä.",
     "nb": "Hunder og katter trenger ulike næringsstoffer. Katter må få i seg taurin, en aminosyre som er livsnødvendig for dem, mens hunder ikke trenger den, og hundefôr inneholder ikke nok taurin til en katt. Merck Veterinary Manual legger til at noe hundefôr har lavere proteininnhold og kan mangle næringsstoffer som katter trenger, men hunder ikke, for eksempel ferdigdannet vitamin A og arakidonsyre. For lite taurin kan svekke hjertemuskelen og skade øynene, slik at synet blir dårligere."
   },
@@ -56,6 +61,12 @@
       "Perte de poids",
       "Convulsions"
     ],
+    "it": [
+      "Nausea",
+      "Vomito",
+      "Perdita di peso",
+      "Convulsioni"
+    ],
     "fi": [
       "Pahoinvointi",
       "Oksentelu",
@@ -73,6 +84,7 @@
     "en": "A nibble from the dog's bowl is usually fine for a healthy cat. Feed each pet from its own bowl in separate areas of the home. A cat that eats only dog food can become ill within hours, days or weeks – contact your vet if you are worried.",
     "sl": "Grižljaj iz pasje sklede zdravi muci običajno ne škodi. Vsako žival hranite iz njene sklede in v ločenih delih doma. Mačka, ki je le pasjo hrano, lahko zboli v nekaj urah, dneh ali tednih – če vas skrbi, pokličite veterinarja.",
     "fr": "Une petite bouchée prise dans la gamelle du chien ne pose généralement pas de problème à un chat en bonne santé. Nourrissez chaque animal dans sa propre gamelle, dans des endroits séparés de la maison. Un chat qui ne mange que de la nourriture pour chiens peut tomber malade en quelques heures, quelques jours ou quelques semaines : contactez votre vétérinaire si vous vous inquiétez.",
+    "it": "Un assaggio dalla ciotola del cane di solito non è un problema per un gatto sano. Fai mangiare ogni animale dalla propria ciotola, in zone separate della casa. Un gatto che mangia solo cibo per cani può stare male nel giro di ore, giorni o settimane – se sei in pensiero, contatta il veterinario.",
     "fi": "Kerran koiran kupista nokkaiseminen ei yleensä haittaa terveää kissaa. Ruoki kumpaakin lemmikkiä omasta kupistaan ja eri puolilla kotia. Kissa, joka syö pelkkää koiranruokaa, voi sairastua tuntien, päivien tai viikkojen kuluessa. Jos olet huolissasi, ota yhteyttä eläinlääkäriin.",
     "nb": "En liten smak fra hundens skål er vanligvis greit for en frisk katt. La hvert dyr spise av sin egen skål, på hvert sitt sted i hjemmet. En katt som bare får hundefôr, kan bli syk i løpet av timer, dager eller uker – kontakt dyrlegen hvis du er bekymret."
   },
@@ -81,6 +93,7 @@
     "en": "Dog food is made for dogs. Cats need their very own cat food to stay healthy!",
     "sl": "Pasja hrana je narejena za pse. Muce za zdravje potrebujejo svojo, mačjo hrano!",
     "fr": "La nourriture pour chiens est faite pour les chiens. Les chats, eux, ont besoin de leur propre nourriture pour rester en bonne santé !",
+    "it": "Il cibo per cani è fatto per i cani. Il tuo micio ha bisogno del suo cibo per gatti per stare bene!",
     "fi": "Koiranruoka on tehty koirille. Kissat tarvitsevat omaa kissanruokaansa pysyäkseen terveinä!",
     "nb": "Hundefôr er laget for hunder. Katter trenger sitt eget kattefôr for å holde seg friske!"
   },
@@ -90,6 +103,7 @@
         "en": "What is taurine and why do cats need it?",
         "sl": "Kaj je tavrin in zakaj ga mačke potrebujejo?",
         "fr": "Qu’est-ce que la taurine, et pourquoi les chats en ont-ils besoin ?",
+        "it": "Che cos’è la taurina e perché i gatti ne hanno bisogno?",
         "fi": "Mitä tauriini on ja miksi kissat tarvitsevat sitä?",
         "nb": "Hva er taurin, og hvorfor trenger katter det?"
       },
@@ -97,6 +111,7 @@
         "en": "Taurine is an essential amino acid for cats, and cats have only a limited ability to make it themselves. Without enough of it, the heart muscle weakens and the cells of the retina eventually degenerate, impairing vision.",
         "sl": "Tavrin je za mačke esencialna aminokislina, ki jo mačke same tvorijo le v omejeni meri. Če ga primanjkuje, srčna mišica oslabi, celice mrežnice pa sčasoma propadejo, kar poslabša vid.",
         "fr": "La taurine est un acide aminé essentiel pour les chats, qui n’ont qu’une capacité limitée à la fabriquer eux-mêmes. Sans quantité suffisante, le muscle cardiaque s’affaiblit et les cellules de la rétine finissent par dégénérer, ce qui altère la vue.",
+        "it": "La taurina è un amminoacido essenziale per i gatti, che ne producono da soli solo in quantità limitata. Senza una quantità sufficiente, il muscolo cardiaco si indebolisce e le cellule della retina finiscono per degenerare, compromettendo la vista.",
         "fi": "Tauriini on kissoille välttämätön aminohappo, ja kissat pystyvät valmistamaan sitä itse vain rajallisesti. Ilman sitä sydänlihas heikkenee ja verkkokalvon solut rappeutuvat vähitellen, mikä heikentää näköä.",
         "nb": "Taurin er en aminosyre som er livsnødvendig for katter, og katter kan bare lage litt av den selv. Får de ikke nok, svekkes hjertemuskelen, og cellene i netthinnen brytes til slutt ned, slik at synet blir dårligere."
       }
@@ -199,6 +214,11 @@
       "status": "verified",
       "verified_by": "claude-c-nb-2026-11-17",
       "verified_hash": "419e80b7607070e4a4e7ed2743e4e2bf19c093ce3f15a811d640e4bb7ca9ac0d"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "83a168ddee0df1416b854710fe571ae82798bfd3e8ce3de390b977cf1afbea24"
     }
   }
 }

@@ -5,6 +5,7 @@
     "en": "Kefir",
     "sl": "Kefir",
     "fr": "Kéfir",
+    "it": "Kefir",
     "fi": "Kefiiri",
     "nb": "Kefir"
   },
@@ -12,6 +13,7 @@
     "en": "Can dogs drink kefir?",
     "sl": "Ali lahko psi pijejo kefir?",
     "fr": "Les chiens peuvent-ils boire du kéfir ?",
+    "it": "I cani possono bere il kefir?",
     "fi": "Saako koira juoda kefiiriä?",
     "nb": "Kan hunder drikke kefir?"
   },
@@ -19,6 +21,7 @@
     "en": "kefir",
     "sl": "kefir",
     "fr": "kefir",
+    "it": "kefir",
     "fi": "kefiiri",
     "nb": "kefir"
   },
@@ -27,6 +30,7 @@
     "en": "Only a little, and ask your vet first. The AKC lists yogurt or kefir with live cultures among the foods a vet may suggest to boost beneficial bacteria, but many dogs have trouble digesting lactose. Never give kefir with xylitol or other artificial sweeteners.",
     "sl": "Le malo in najprej vprašajte veterinarja. AKC jogurt ali kefir z živimi kulturami navaja med živili, ki jih lahko veterinar predlaga za krepitev koristnih bakterij, vendar mnogi psi težko prebavljajo laktozo. Nikoli ne dajajte kefirja s ksilitolom ali drugimi umetnimi sladili.",
     "fr": "Seulement un peu, et demandez d’abord conseil à votre vétérinaire. L’AKC cite le yaourt ou le kéfir contenant des ferments vivants parmi les aliments qu’un vétérinaire peut suggérer pour favoriser les bonnes bactéries, mais beaucoup de chiens digèrent mal le lactose. Ne donnez jamais de kéfir contenant du xylitol ou d’autres édulcorants artificiels.",
+    "it": "Solo un po’, e chiedi prima al veterinario. L’AKC indica lo yogurt o il kefir con fermenti vivi tra gli alimenti che un veterinario può suggerire per aumentare i batteri benefici, ma molti cani digeriscono male il lattosio. Non dare mai kefir con xilitolo o altri dolcificanti artificiali.",
     "fi": "Vain vähän, ja kysy ensin eläinlääkäriltä. AKC:n mukaan eläinlääkäri voi ehdottaa eläviä bakteerikantoja sisältävää jogurttia tai kefiiriä lisäämään hyödyllisiä bakteereja, mutta monen koiran on vaikea sulattaa laktoosia. Älä koskaan anna kefiiriä, jossa on ksylitolia tai muita keinotekoisia makeutusaineita.",
     "nb": "Bare litt, og spør dyrlegen først. AKC nevner yoghurt eller kefir med levende kulturer blant matvarene en dyrlege kan foreslå for å styrke de gode bakteriene, men mange hunder har problemer med å fordøye laktose. Gi aldri kefir med xylitol eller andre kunstige søtstoffer."
   },
@@ -34,6 +38,7 @@
     "en": "Many dogs have trouble digesting foods that contain lactose; a dog's body isn't designed to digest lactose after puppyhood, so it can cause gas and other tummy trouble. Some dogs can also develop an allergy to milk protein. Some artificial sweeteners, such as xylitol, are toxic to dogs, so kefir with artificial sweeteners is a risk.",
     "sl": "Mnogi psi težko prebavljajo živila, ki vsebujejo laktozo; pasje telo po obdobju mladička ni narejeno za prebavo laktoze, zato lahko povzroči vetrove in druge težave s trebuhom. Pri nekaterih psih se lahko razvije tudi alergija na mlečne beljakovine. Nekatera umetna sladila, na primer ksilitol, so za pse strupena, zato je kefir z umetnimi sladili tvegan.",
     "fr": "Beaucoup de chiens digèrent mal les aliments contenant du lactose ; l’organisme du chien n’est pas conçu pour digérer le lactose après le stade de chiot, ce qui peut provoquer des gaz et d’autres maux de ventre. Certains chiens peuvent aussi développer une allergie aux protéines du lait. Certains édulcorants artificiels, comme le xylitol, sont toxiques pour les chiens : un kéfir contenant des édulcorants artificiels représente donc un risque.",
+    "it": "Molti cani digeriscono con difficoltà gli alimenti che contengono lattosio; l’organismo del cane non è fatto per digerire il lattosio dopo l’età del cucciolo, quindi può causare gas e altri disturbi di pancia. Alcuni cani possono inoltre sviluppare un’allergia alle proteine del latte. Alcuni dolcificanti artificiali, come lo xilitolo, sono tossici per i cani, quindi il kefir con dolcificanti artificiali è rischioso.",
     "fi": "Monen koiran on vaikea sulattaa laktoosia sisältäviä ruokia; koiran elimistö ei ole tehty sulattamaan laktoosia pentuiän jälkeen, joten se voi aiheuttaa ilmavaivoja ja muita vatsavaivoja. Joillekin koirille voi myös kehittyä maitoproteiiniallergia. Jotkin keinotekoiset makeutusaineet, kuten ksylitoli, ovat koirille myrkyllisiä, joten keinotekoisilla makeutusaineilla makeutettu kefiiri on riski.",
     "nb": "Mange hunder har problemer med å fordøye mat som inneholder laktose; hundens kropp er ikke laget for å fordøye laktose etter valpetiden, så det kan gi luft i magen og andre magebesvær. Noen hunder kan også utvikle allergi mot melkeprotein. Noen kunstige søtstoffer, som xylitol, er giftige for hunder, så kefir med kunstige søtstoffer innebærer en risiko."
   },
@@ -59,6 +64,13 @@
       "Maux de ventre",
       "Diarrhée"
     ],
+    "it": [
+      "Feci molli",
+      "Gas",
+      "Vomito",
+      "Mal di pancia",
+      "Diarrea"
+    ],
     "fi": [
       "Löysä uloste",
       "Ilmavaivat",
@@ -78,6 +90,7 @@
     "en": "As with yogurt, offer a small amount at first and see how your dog reacts. If your dog gets loose stools, gas, vomiting or diarrhoea, stop the kefir. Ask your vet whether probiotic foods suit your dog.",
     "sl": "Kot pri jogurtu najprej ponudite majhno količino in opazujte, kako se pes odzove. Če ima pes mehko blato, vetrove, bruha ali ima drisko, kefirja ne dajajte več. Veterinarja vprašajte, ali so probiotična živila primerna za vašega psa.",
     "fr": "Comme pour le yaourt, commencez par une petite quantité et observez la réaction de votre chien. Si votre chien a les selles molles, des gaz, des vomissements ou de la diarrhée, arrêtez le kéfir. Demandez à votre vétérinaire si les aliments probiotiques conviennent à votre chien.",
+    "it": "Come per lo yogurt, comincia con una piccola quantità e osserva come reagisce il cane. Se il tuo cane ha feci molli, gas, vomito o diarrea, smetti di dare il kefir. Chiedi al veterinario se gli alimenti probiotici vanno bene per il tuo cane.",
     "fi": "Kuten jogurtin kanssa, tarjoa ensin pieni määrä ja katso, miten koirasi reagoi. Jos koiralla on löysää ulostetta, ilmavaivoja, oksentelua tai ripulia, lopeta kefiirin antaminen. Kysy eläinlääkäriltä, sopivatko probioottiset ruoat koirallesi.",
     "nb": "Som med yoghurt gir du først en liten mengde og ser hvordan hunden reagerer. Hvis hunden får løs avføring, luft i magen, oppkast eller diaré, slutter du å gi kefir. Spør dyrlegen om probiotisk mat passer for hunden din."
   },
@@ -85,6 +98,7 @@
     "en": "Choose plain kefir and read the label carefully to avoid all artificial sweeteners, especially xylitol. Start with a small amount.",
     "sl": "Izberite navaden kefir in natančno preberite deklaracijo, da se izognete vsem umetnim sladilom, predvsem ksilitolu. Začnite z majhno količino.",
     "fr": "Choisissez du kéfir nature et lisez attentivement l’étiquette pour éviter tous les édulcorants artificiels, en particulier le xylitol. Commencez par une petite quantité.",
+    "it": "Scegli un kefir al naturale e leggi con attenzione l’etichetta per evitare tutti i dolcificanti artificiali, soprattutto lo xilitolo. Inizia con una piccola quantità.",
     "fi": "Valitse maustamaton kefiiri ja lue pakkausmerkinnät tarkasti, jotta vältät kaikki keinotekoiset makeutusaineet, etenkin ksylitolin. Aloita pienellä määrällä.",
     "nb": "Velg naturell kefir og les etiketten nøye for å unngå alle kunstige søtstoffer, særlig xylitol. Begynn med en liten mengde."
   },
@@ -92,6 +106,7 @@
     "en": "Some dogs can have a tiny taste of plain kefir, but many get a sore tummy from milk drinks. Fresh water is always best!",
     "sl": "Nekateri psi lahko poskusijo čisto malo navadnega kefirja, mnoge pa od mlečnih pijač boli trebušček. Sveža voda je vedno najboljša!",
     "fr": "Certains chiens peuvent goûter un tout petit peu de kéfir nature, mais beaucoup ont mal au ventre avec les boissons lactées. L’eau fraîche reste toujours le mieux !",
+    "it": "Alcuni cani possono assaggiare un goccino di kefir al naturale, ma a molti il latte fa venire il mal di pancia. L’acqua fresca è sempre la scelta migliore!",
     "fi": "Jotkut koirat voivat maistaa pikkuisen maustamatonta kefiiriä, mutta monen vatsa menee maitojuomista kipeäksi. Raikas vesi on aina parasta!",
     "nb": "Noen hunder kan få en bitteliten smak av naturell kefir, men mange får vondt i magen av melkedrikker. Friskt vann er alltid best!"
   },
@@ -101,6 +116,7 @@
         "en": "Is kefir a good probiotic for dogs?",
         "sl": "Ali je kefir dober probiotik za pse?",
         "fr": "Le kéfir est-il un bon probiotique pour les chiens ?",
+        "it": "Il kefir è un buon probiotico per i cani?",
         "fi": "Onko kefiiri hyvä probiootti koiralle?",
         "nb": "Er kefir et godt probiotikum for hunder?"
       },
@@ -108,6 +124,7 @@
         "en": "The AKC lists yogurt or kefir with live cultures among the options a vet may suggest to boost beneficial bacteria. Ask your vet before adding it to your dog's diet.",
         "sl": "AKC jogurt ali kefir z živimi kulturami navaja med možnostmi, ki jih lahko veterinar predlaga za krepitev koristnih bakterij. Preden ga dodate v pasji jedilnik, vprašajte veterinarja.",
         "fr": "L’AKC cite le yaourt ou le kéfir contenant des ferments vivants parmi les options qu’un vétérinaire peut suggérer pour favoriser les bonnes bactéries. Demandez conseil à votre vétérinaire avant d’en ajouter à l’alimentation de votre chien.",
+        "it": "L’AKC indica lo yogurt o il kefir con fermenti vivi tra le opzioni che un veterinario può suggerire per aumentare i batteri benefici. Chiedi al veterinario prima di inserirlo nell’alimentazione del tuo cane.",
         "fi": "AKC:n mukaan eläinlääkäri voi ehdottaa eläviä bakteerikantoja sisältävää jogurttia tai kefiiriä lisäämään hyödyllisiä bakteereja. Kysy eläinlääkäriltä, ennen kuin lisäät sitä koirasi ruokavalioon.",
         "nb": "AKC nevner yoghurt eller kefir med levende kulturer blant alternativene en dyrlege kan foreslå for å styrke de gode bakteriene. Spør dyrlegen før du legger det til hundens kosthold."
       }
@@ -212,6 +229,11 @@
       "status": "verified",
       "verified_by": "claude-c-nb-2026-11-17",
       "verified_hash": "43d9e125c00b3c32cd2437be48e8ef51669bcf3e7214e938b2ca089b07338e57"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3f174f069dd45aee2a983032ab8cb324479b5b5cde8364d3e94ea1dfe1ca52b1"
     }
   }
 }

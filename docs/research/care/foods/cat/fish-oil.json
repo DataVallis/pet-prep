@@ -5,6 +5,7 @@
     "en": "Fish oil",
     "sl": "Ribje olje",
     "fr": "Huile de poisson",
+    "it": "Olio di pesce",
     "fi": "Kalaöljy",
     "nb": "Fiskeolje"
   },
@@ -12,6 +13,7 @@
     "en": "Can cats have fish oil?",
     "sl": "Ali lahko mačke dobijo ribje olje?",
     "fr": "Les chats peuvent-ils prendre de l’huile de poisson ?",
+    "it": "I gatti possono assumere l’olio di pesce?",
     "fi": "Saako kissa kalaöljyä?",
     "nb": "Kan katter få fiskeolje?"
   },
@@ -19,6 +21,7 @@
     "en": "fish-oil",
     "sl": "ribje-olje",
     "fr": "huile-de-poisson",
+    "it": "olio-di-pesce",
     "fi": "kalaoljy",
     "nb": "fiskeolje"
   },
@@ -27,6 +30,7 @@
     "en": "Only if your vet recommends it. Fish oil is a supplement used widely in cats, but it may not be appropriate for every pet and can have side effects. Always talk to your vet before giving fish oil or any other supplement.",
     "sl": "Le če ga priporoči veterinar. Ribje olje je prehransko dopolnilo, ki se pri mačkah pogosto uporablja, vendar morda ni primerno za vsako žival in ima lahko stranske učinke. Preden muci daste ribje olje ali katero koli drugo dopolnilo, se vedno posvetujte z veterinarjem.",
     "fr": "Seulement si votre vétérinaire la recommande. L’huile de poisson est un complément très utilisé chez les chats, mais elle ne convient pas forcément à tous les animaux et peut avoir des effets indésirables. Demandez toujours conseil à votre vétérinaire avant de donner de l’huile de poisson ou tout autre complément.",
+    "it": "Solo se te lo consiglia il veterinario. L’olio di pesce è un integratore molto usato per i gatti, ma può non essere adatto a tutti e può avere effetti collaterali. Parlane sempre con il veterinario prima di dare olio di pesce o qualsiasi altro integratore.",
     "fi": "Vain, jos eläinlääkäri suosittelee sitä. Kissoille annetaan usein kalaöljyä ravintolisänä, mutta se ei välttämättä sovi jokaiselle lemmikille ja voi aiheuttaa sivuvaikutuksia. Keskustele aina eläinlääkärin kanssa ennen kalaöljyn tai minkään muun ravintolisän antamista.",
     "nb": "Bare hvis dyrlegen anbefaler det. Fiskeolje er et kosttilskudd som brukes mye til katter, men det passer kanskje ikke for alle dyr og kan gi bivirkninger. Snakk alltid med dyrlegen før du gir fiskeolje eller andre kosttilskudd."
   },
@@ -34,6 +38,7 @@
     "en": "Fish oil is used widely in cats, but omega-3 supplements may not be appropriate for every pet, and less is known about supplementing cats that have kidney disease. Possible side effects include mild stomach upset, a fishy odour, an oily coat and itchy, flaky skin; serious reactions include abnormal bruising or bleeding, especially in cats. Fish oil should not be given if a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity.",
     "sl": "Ribje olje se pri mačkah pogosto uporablja, vendar dopolnila z omega-3 morda niso primerna za vsako žival, o dodajanju pri mačkah z boleznijo ledvic pa je znanega manj. Možni stranski učinki so blage prebavne težave, ribji vonj, masten kožuh ter srbeča, luskasta koža; resnejši odzivi so nenavadne modrice ali krvavitve, zlasti pri mačkah. Ribjega olja ne dajemo, če ni na voljo iz zanesljivega vira, saj nekateri viri nosijo veliko tveganje za zastrupitev s težkimi kovinami.",
     "fr": "L’huile de poisson est très utilisée chez les chats, mais les compléments d’oméga-3 ne conviennent pas forcément à tous les animaux, et on sait moins de choses sur leur utilisation chez les chats atteints d’une maladie rénale. Parmi les effets indésirables possibles : de légers maux d’estomac, une odeur de poisson, un pelage gras et une peau qui démange ou qui desquame ; parmi les réactions graves figurent des bleus ou des saignements anormaux, surtout chez les chats. Il ne faut pas donner d’huile de poisson si l’on ne peut pas se procurer une source fiable, car certaines sources présentent un risque élevé de toxicité par les métaux lourds.",
+    "it": "L’olio di pesce è molto usato per i gatti, ma gli integratori di omega-3 possono non essere adatti a tutti, e si sa meno su come integrarli nei gatti con malattie renali. Tra i possibili effetti collaterali ci sono lievi disturbi di stomaco, odore di pesce, pelo unto e pelle che prude e si desquama; le reazioni gravi comprendono lividi o sanguinamenti anomali, soprattutto nei gatti. Non dare olio di pesce se non puoi procurartelo da una fonte affidabile, perché alcune fonti comportano un alto rischio di intossicazione da metalli pesanti.",
     "fi": "Kissoille annetaan usein kalaöljyä, mutta omega-3-lisät eivät välttämättä sovi jokaiselle lemmikille, ja munuaissairaiden kissojen ravintolisistä tiedetään vähemmän. Mahdollisia sivuvaikutuksia ovat lievät vatsaoireet, kalan haju, rasvainen turkki sekä kutiseva ja hilseilevä iho; vakavia reaktioita ovat epätavalliset mustelmat tai verenvuoto, etenkin kissoilla. Älä anna kalaöljyä, jos luotettavaa lähdettä ei löydy, sillä joissakin lähteissä on suuri raskasmetallimyrkytyksen riski.",
     "nb": "Fiskeolje brukes mye til katter, men tilskudd med omega-3 passer kanskje ikke for alle dyr, og man vet mindre om tilskudd til katter med nyresykdom. Mulige bivirkninger er lett urolig mage, fiskelukt, fet pels og kløende, flassende hud. Alvorlige reaksjoner er unormale blåmerker eller blødninger, særlig hos katter. Gi bare fiskeolje fra en pålitelig kilde, for noen kilder har høy risiko for tungmetallforgiftning."
   },
@@ -71,6 +76,17 @@
       "Perte d’appétit",
       "Démarche chancelante ou convulsions"
     ],
+    "it": [
+      "Lievi disturbi di stomaco",
+      "Odore di pesce",
+      "Pelo unto",
+      "Prurito o pelle che si desquama",
+      "Guarigione lenta delle ferite",
+      "Lividi o sanguinamenti anomali",
+      "Reazione allergica: respiro irregolare, eruzione cutanea, febbre, gonfiore intorno al muso",
+      "Perdita di appetito",
+      "Andatura barcollante o convulsioni"
+    ],
     "fi": [
       "Lievä vatsaoire",
       "Kalan haju",
@@ -98,6 +114,7 @@
     "en": "Talk to your vet before giving fish oil, and tell them about any vitamins or supplements your cat already gets. If serious signs appear, stop the fish oil and contact your vet immediately.",
     "sl": "Pred dajanjem ribjega olja se posvetujte z veterinarjem in mu povejte za vse vitamine ali dopolnila, ki jih muca že dobiva. Če se pojavijo resni znaki, prenehajte z ribjim oljem in takoj pokličite veterinarja.",
     "fr": "Parlez-en à votre vétérinaire avant de donner de l’huile de poisson, et signalez-lui les vitamines ou compléments que votre chat reçoit déjà. Si des signes graves apparaissent, arrêtez l’huile de poisson et contactez immédiatement votre vétérinaire.",
+    "it": "Parla con il veterinario prima di dare l’olio di pesce e digli quali vitamine o integratori il tuo gatto assume già. Se compaiono sintomi gravi, interrompi l’olio di pesce e contatta subito il veterinario.",
     "fi": "Keskustele eläinlääkärin kanssa ennen kalaöljyn antamista ja kerro hänelle kaikista vitamiineista ja ravintolisistä, joita kissasi jo saa. Jos ilmenee vakavia oireita, lopeta kalaöljyn antaminen ja ota heti yhteyttä eläinlääkäriin.",
     "nb": "Snakk med dyrlegen før du gir fiskeolje, og fortell om alle vitaminer og kosttilskudd katten din allerede får. Hvis det dukker opp alvorlige tegn, slutter du å gi fiskeolje og kontakter dyrlegen med en gang."
   },
@@ -106,6 +123,7 @@
     "en": "Only the vet can decide if a cat needs fish oil. Ask a grown-up to talk to the vet first!",
     "sl": "Ali muca potrebuje ribje olje, lahko odloči le veterinar. Prosi odraslega, naj se najprej pogovori z njim!",
     "fr": "Seul le vétérinaire peut décider si un chat a besoin d’huile de poisson. Demande à un adulte d’en parler d’abord au vétérinaire !",
+    "it": "Solo il veterinario può decidere se un gatto ha bisogno dell’olio di pesce. Chiedi a un adulto di parlarne prima con il veterinario!",
     "fi": "Vain eläinlääkäri voi päättää, tarvitseeko kissa kalaöljyä. Pyydä aikuista puhumaan ensin eläinlääkärin kanssa!",
     "nb": "Bare dyrlegen kan avgjøre om en katt trenger fiskeolje. Be en voksen snakke med dyrlegen først!"
   },
@@ -115,6 +133,7 @@
         "en": "Does the brand of fish oil matter?",
         "sl": "Ali je pomembno, katero ribje olje izberem?",
         "fr": "La marque d’huile de poisson a-t-elle de l’importance ?",
+        "it": "La marca dell’olio di pesce è importante?",
         "fi": "Onko kalaöljyn valmistajalla väliä?",
         "nb": "Spiller merket på fiskeoljen noen rolle?"
       },
@@ -122,6 +141,7 @@
         "en": "Yes. VCA advises against fish oil when a reputable source can't be obtained, because some sources carry a high risk of heavy metal toxicity, and Tufts vets recommend a brand with good quality control. Your vet can advise.",
         "sl": "Da. VCA odsvetuje ribje olje, če ni na voljo iz zanesljivega vira, saj nekateri viri nosijo veliko tveganje za zastrupitev s težkimi kovinami, veterinarji Tufts pa priporočajo znamko z dobrim nadzorom kakovosti. Svetuje vam lahko veterinar.",
         "fr": "Oui. VCA déconseille l’huile de poisson lorsqu’on ne peut pas se procurer une source fiable, car certaines sources présentent un risque élevé de toxicité par les métaux lourds, et les vétérinaires de Tufts recommandent une marque dont la qualité est bien contrôlée. Votre vétérinaire peut vous conseiller.",
+        "it": "Sì. I veterinari di VCA sconsigliano l’olio di pesce quando non è possibile ottenerlo da una fonte affidabile, perché alcune fonti comportano un alto rischio di intossicazione da metalli pesanti, e i veterinari di Tufts consigliano una marca con un buon controllo di qualità. Il tuo veterinario può darti un consiglio.",
         "fi": "On. VCA neuvoo välttämään kalaöljyä, jos luotettavaa lähdettä ei löydy, koska joissakin lähteissä on suuri raskasmetallimyrkytyksen riski, ja Tuftsin eläinlääkärit suosittelevat valmistetta, jonka laadunvalvonta on hyvä. Eläinlääkäri osaa neuvoa.",
         "nb": "Ja. VCA fraråder fiskeolje når man ikke får tak i en pålitelig kilde, fordi noen kilder har høy risiko for tungmetallforgiftning, og dyrleger ved Tufts anbefaler et merke med god kvalitetskontroll. Dyrlegen kan gi deg råd."
       }
@@ -233,6 +253,11 @@
       "status": "verified",
       "verified_by": "claude-c-nb-2026-11-17",
       "verified_hash": "9e5c481989ce0eab3b9ac1476428337cb26e90ff8d07e7f7c93171e77470c2fe"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "26d0eb822b45d45a566b269bac9cc2e0341e7e64d5e6f6be0fa0eef08dcc654e"
     }
   }
 }

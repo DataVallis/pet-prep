@@ -5,6 +5,7 @@
     "en": "Soda (soft drinks)",
     "sl": "Gazirane pijače",
     "fr": "Soda (boissons gazeuses)",
+    "it": "Bevande gassate",
     "fi": "Limsa (virvoitusjuomat)",
     "nb": "Brus (leskedrikker)"
   },
@@ -12,6 +13,7 @@
     "en": "Can cats drink soda?",
     "sl": "Ali lahko mačke pijejo gazirane pijače?",
     "fr": "Les chats peuvent-ils boire du soda ?",
+    "it": "I gatti possono bere le bevande gassate?",
     "fi": "Saako kissa juoda limsaa?",
     "nb": "Kan katter drikke brus?"
   },
@@ -19,6 +21,7 @@
     "en": "soda",
     "sl": "gazirane-pijace",
     "fr": "soda",
+    "it": "bevande-gassate",
     "fi": "limsa",
     "nb": "brus"
   },
@@ -27,6 +30,7 @@
     "en": "No. Many sodas contain caffeine, and cats are more sensitive to caffeine than people. One or two licks is unlikely to cause poisoning, but if your cat drank more, call your vet. Your cat only needs to drink water.",
     "sl": "Ne. Veliko gaziranih pijač vsebuje kofein, mačke pa so nanj bolj občutljive kot ljudje. Lizanje ali dve verjetno ne bo povzročilo zastrupitve, če pa je muca popila več, pokličite veterinarja. Muca potrebuje le vodo.",
     "fr": "Non. De nombreux sodas contiennent de la caféine, et les chats y sont plus sensibles que les humains. Un ou deux coups de langue ont peu de chances de provoquer une intoxication, mais si votre chat en a bu davantage, appelez votre vétérinaire. Votre chat n’a besoin que d’eau.",
+    "it": "No. Molte bevande gassate contengono caffeina, e i gatti sono più sensibili alla caffeina delle persone. Una o due leccate difficilmente causano un’intossicazione, ma se il tuo gatto ne ha bevuto di più, chiama il veterinario. Al tuo gatto basta l’acqua.",
     "fi": "Ei saa. Monissa limsoissa on kofeiinia, ja kissat ovat kofeiinille herkempiä kuin ihmiset. Yksi tai kaksi nuolaisua tuskin aiheuttaa myrkytystä, mutta jos kissasi joi enemmän, soita eläinlääkärille. Kissasi tarvitsee juomaksi vain vettä.",
     "nb": "Nei. Mange typer brus inneholder koffein, og katter er mer følsomme for koffein enn mennesker. En slikk eller to gir neppe forgiftning, men hvis katten har drukket mer, må du ringe dyrlegen. Katten trenger bare vann."
   },
@@ -34,6 +38,7 @@
     "en": "Many teas and sodas contain caffeine, and dogs and cats are more sensitive to caffeine than humans. Caffeine stimulates the heart and nervous system, which can be dangerous, and it can also upset the stomach. Signs can start within a few hours and last up to several days.",
     "sl": "Veliko čajev in gaziranih pijač vsebuje kofein, psi in mačke pa so nanj bolj občutljivi kot ljudje. Kofein spodbuja srce in živčevje, kar je lahko nevarno, poleg tega lahko razdraži želodec. Znaki se lahko pojavijo v nekaj urah in trajajo tudi več dni.",
     "fr": "De nombreux thés et sodas contiennent de la caféine, et les chiens comme les chats y sont plus sensibles que les humains. La caféine stimule le cœur et le système nerveux, ce qui peut être dangereux, et elle peut aussi irriter l’estomac. Les signes peuvent apparaître en quelques heures et durer plusieurs jours.",
+    "it": "Molti tè e molte bevande gassate contengono caffeina, e cani e gatti sono più sensibili alla caffeina degli esseri umani. La caffeina stimola il cuore e il sistema nervoso, e questo può essere pericoloso; può anche causare disturbi di stomaco. I sintomi possono comparire entro poche ore e durare fino a diversi giorni.",
     "fi": "Monissa teissä ja limsoissa on kofeiinia, ja koirat ja kissat ovat kofeiinille herkempiä kuin ihmiset. Kofeiini kiihdyttää sydämen ja hermoston toimintaa, mikä voi olla vaarallista, ja se voi myös sotkea vatsan. Oireet voivat alkaa muutaman tunnin kuluessa ja kestää jopa useita päiviä.",
     "nb": "Mange typer te og brus inneholder koffein, og hunder og katter er mer følsomme for koffein enn mennesker. Koffein stimulerer hjertet og nervesystemet, noe som kan være farlig, og det kan også gi urolig mage. Tegnene kan komme i løpet av noen timer og vare i flere dager."
   },
@@ -62,6 +67,14 @@
       "Tremblements",
       "Besoin d’uriner plus souvent"
     ],
+    "it": [
+      "Battito cardiaco accelerato",
+      "Iperattività, agitazione, difficoltà a stare fermo",
+      "Camminare avanti e indietro o miagolare molto",
+      "Disturbi di stomaco, vomito o diarrea",
+      "Tremori",
+      "Bisogno di fare pipì più spesso"
+    ],
     "fi": [
       "Nopea syke",
       "Ylivilkkaus, levottomuus, haluttomuus pysyä aloillaan",
@@ -83,6 +96,7 @@
     "en": "If your cat drank soda, call your vet or a pet poison helpline as soon as you realise. One or two licks is unlikely to cause poisoning in most pets.",
     "sl": "Če je muca pila gazirano pijačo, takoj ko to opazite, pokličite veterinarja ali center za zastrupitve živali. Lizanje ali dve pri večini živali verjetno ne bo povzročilo zastrupitve.",
     "fr": "Si votre chat a bu du soda, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte. Un ou deux coups de langue ont peu de chances d’intoxiquer la plupart des animaux.",
+    "it": "Se il tuo gatto ha bevuto una bevanda gassata, chiama il veterinario o un centro antiveleni veterinario appena te ne accorgi. Una o due leccate difficilmente causano un’intossicazione nella maggior parte degli animali domestici.",
     "fi": "Jos kissasi joi limsaa, soita eläinlääkärille tai eläinten myrkytysneuvontaan heti, kun huomaat sen. Yksi tai kaksi nuolaisua tuskin aiheuttaa myrkytystä useimmille lemmikeille.",
     "nb": "Hvis katten har drukket brus, ringer du dyrlegen eller giftinformasjon for dyr så snart du oppdager det. En slikk eller to gir neppe forgiftning hos de fleste dyr."
   },
@@ -91,6 +105,7 @@
     "en": "Fizzy drinks aren't for cats. A bowl of fresh water is all your cat needs!",
     "sl": "Gazirane pijače niso za muce. Skledica sveže vode je vse, kar muca potrebuje!",
     "fr": "Les boissons gazeuses ne sont pas pour les chats. Une gamelle d’eau fraîche, c’est tout ce dont ton chat a besoin !",
+    "it": "Le bevande gassate non sono per i gatti. Al tuo micio basta una ciotola di acqua fresca!",
     "fi": "Kuplivat juomat eivät ole kissoille. Kupillinen raikasta vettä on kaikki, mitä kissasi tarvitsee!",
     "nb": "Brus er ikke noe for katter. En skål med friskt vann er alt katten din trenger!"
   },
@@ -100,6 +115,7 @@
         "en": "My cat licked my soda – what should I do?",
         "sl": "Muca je polizala mojo gazirano pijačo – kaj naj naredim?",
         "fr": "Mon chat a léché mon soda : que faire ?",
+        "it": "Il mio gatto ha leccato la mia bevanda gassata – che cosa devo fare?",
         "fi": "Kissani nuolaisi limsaani – mitä teen?",
         "nb": "Katten min har slikket på brusen min – hva gjør jeg?"
       },
@@ -107,6 +123,7 @@
         "en": "One or two licks of soda is unlikely to cause poisoning in most pets. If your cat drank more, call your vet or a pet poison helpline as soon as you realise, because cats are more sensitive to caffeine than people.",
         "sl": "Lizanje ali dve gazirane pijače pri večini živali verjetno ne bo povzročilo zastrupitve. Če je muca popila več, takoj pokličite veterinarja ali center za zastrupitve živali, saj so mačke na kofein bolj občutljive kot ljudje.",
         "fr": "Un ou deux coups de langue de soda ont peu de chances d’intoxiquer la plupart des animaux. Si votre chat en a bu davantage, appelez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous en rendez compte, car les chats sont plus sensibles à la caféine que les humains.",
+        "it": "Una o due leccate di bevanda gassata difficilmente causano un’intossicazione nella maggior parte degli animali domestici. Se il tuo gatto ne ha bevuto di più, chiama il veterinario o un centro antiveleni veterinario appena te ne accorgi, perché i gatti sono più sensibili alla caffeina delle persone.",
         "fi": "Yksi tai kaksi nuolaisua limsasta tuskin aiheuttaa myrkytystä useimmille lemmikeille. Jos kissasi joi enemmän, soita eläinlääkärille tai eläinten myrkytysneuvontaan heti, kun huomaat sen, sillä kissat ovat kofeiinille herkempiä kuin ihmiset.",
         "nb": "En slikk eller to av brusen gir neppe forgiftning hos de fleste dyr. Hvis katten har drukket mer, ringer du dyrlegen eller giftinformasjon for dyr så snart du oppdager det, for katter er mer følsomme for koffein enn mennesker."
       }
@@ -215,6 +232,11 @@
       "status": "verified",
       "verified_by": "claude-c-nb-2026-11-17",
       "verified_hash": "9118fa8f657f12a5851753fa3bd7db7ed8535480376e20efeacf27559fa62c42"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "64d9923b501af5dab3e71f777d14270f7f59136908519d9829835fab7fa738d4"
     }
   }
 }
