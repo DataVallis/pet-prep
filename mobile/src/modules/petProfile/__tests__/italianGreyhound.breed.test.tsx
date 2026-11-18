@@ -75,7 +75,8 @@ describe('M5-R10-60 Italian Greyhound', () => {
     expect(find('Mali italijanski hrt')).toEqual(['italian_greyhound']);
     expect(find('italijanski hrt')).toEqual(['italian_greyhound']);
     // »italijanski« alone also finds the Cane Corso (»italijanski korzo«).
-    expect(find('italijanski')).toEqual(['cane_corso', 'italian_greyhound']);
+    // M5-R10-124: … and the Spinone Italiano (»italijanski ostrodlaki ptičar«).
+    expect(find('italijanski')).toEqual(['cane_corso', 'italian_greyhound', 'spinone_italiano']);
     expect(find('piccolo levriero')).toEqual(['italian_greyhound']);
   });
 

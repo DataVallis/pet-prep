@@ -73,7 +73,8 @@ describe('M5-R10-55 Wirehaired Pointing Griffon', () => {
     expect(find('Korthals Griffon')).toEqual(['wirehaired_pointing_griffon']);
     expect(find('Francoski ostrodlaki ptičar')).toEqual(['wirehaired_pointing_griffon']);
     // M5-R10-65: »ostrodlaki ptičar« also finds the German Wirehaired Pointer (»nemški ostrodlaki ptičar«).
-    expect(find('ostrodlaki pticar')).toEqual(['wirehaired_pointing_griffon', 'german_wirehaired_pointer']);
+    // M5-R10-124: … and the Spinone Italiano (»italijanski ostrodlaki ptičar«).
+    expect(find('ostrodlaki pticar')).toEqual(['wirehaired_pointing_griffon', 'german_wirehaired_pointer', 'spinone_italiano']);
     // M5-R10-88: »grifon« also finds the Brussels Griffon (»bruseljski grifon« — its own name, no way around it).
     expect(find('grifon')).toEqual(['wirehaired_pointing_griffon', 'brussels_griffon']);
   });

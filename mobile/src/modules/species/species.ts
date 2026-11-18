@@ -135,6 +135,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   tibetan_terrier: 'dog',
   greyhound: 'dog',
   xoloitzcuintli: 'dog',
+  spinone_italiano: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -273,6 +274,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'manchester_terrier',
   'tibetan_terrier',
   'greyhound',
+  'spinone_italiano',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
