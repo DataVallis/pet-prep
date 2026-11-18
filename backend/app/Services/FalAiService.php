@@ -947,6 +947,12 @@ class FalAiService
                 .'smooth hairless solid black skin with a little short coarse hair on the top of the head, a wedge-shaped head with a straight muzzle and a dark nose, '
                 .'almond-shaped dark eyes, long, large, erect ears of fine texture, a long thin natural tail tapering to the tip, healthy unburnt skin, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-124: FCI-Standard N° 165 (S935) — solid, robust, square-built pointing dog; white with orange markings
+            // (the portrait default of the standard colours); rough coat with eyebrows, moustache and beard; natural tail.
+            BreedType::SpinoneItaliano => 'A solid, robust and vigorous Spinone Italiano, a square-built Italian pointing dog with powerful bone in healthy lean working condition, '
+                .'white coat with orange markings, a rough, dense, harsh coat of medium length with thick eyebrows, a moustache and a beard, a long head with a large nose, '
+                .'large, almost round ochre eyes, practically triangular low-carried ears, a natural thick tail carried horizontally, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2231,6 +2237,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'hairless, smooth skin',
                 'markings' => 'short coarse hair only on the top of the head, long large erect ears, long thin tapering tail',
+            ],
+            // M5-R10-124: FCI S935 white with orange markings (the portrait default of the standard colours).
+            BreedType::SpinoneItaliano => [
+                'color_scheme' => 'white with orange markings',
+                'eye_color' => 'ochre',
+                'fur_texture' => 'rough, dense, harsh coat of medium length',
+                'markings' => 'orange patches on a white coat, thick eyebrows, moustache and beard, low-carried triangular ears, natural thick tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -122,6 +122,7 @@ return [
     'tibetan_terrier' => 'Tibetan Terrier',
     'greyhound' => 'Greyhound',
     'xoloitzcuintli' => 'Xoloitzcuintli',
+    'spinone_italiano' => 'Spinone Italiano',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

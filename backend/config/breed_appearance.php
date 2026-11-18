@@ -845,6 +845,13 @@
 | large ears of fine texture; long thin tapering natural tail. No welfare trait (healthy, unburnt skin). Six named standard
 | colours, black first (portrait default); weights unsourced → `verified => false`.
 |
+| Spinone Italiano (M5-R10-124, docs/research/dog-data spinone_italiano.appearance): "Dog of solid construction, robust and
+| vigorous with powerful bone, well-developed muscles and with a rough coat." (FCI-Standard N° 165, S935); colours "Pure white,
+| white with orange markings, white speckled with orange," "white with brown (chestnut) markings, orange roan or brown roan
+| (chestnut)." (S935; never tricolour, tan markings or black); rough, dense coat 4–6 cm with eyebrows, moustache and beard;
+| practically triangular, low-carried ears; natural thick tail. No welfare trait. Five standard colours, white with orange
+| markings first (portrait default); weights unsourced → `verified => false`.
+|
 | Wire Fox Terrier (M5-R10-117, docs/research/dog-data wire_fox_terrier.appearance): "Active and lively, bone and strength
 | in small compass, never cloddy or coarse." (FCI-Standard N° 169, S871); colour "White predominates with black, black and tan
 | or tan markings." — brindle, red, liver or slate-blue markings undesirable, any other colour unacceptable (S871); coat dense,
@@ -5252,6 +5259,41 @@ return [
             'muzzle' => ['straight muzzle with strong square jaws, wedge-shaped skull, dark nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-124 (docs/research/dog-data/data.json spinone_italiano.appearance; runbook rules 2026-10-10: the five standard
+    // colours of FCI-Standard N° 165 (S935), white with orange markings first = the portrait default; natural tail, never docked).
+    'spinone_italiano' => [
+        'display_name' => 'Spinone Italiano',
+        // Colour frequencies are in no source (spinone_italiano.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 165 (S935), PDSA (S936) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S936 "Large"; S935 "Males: 60 – 70 cm." (females 58–65 cm); S935 "Males: 32 – 37 kg." (females 28–30 kg)',
+            'build' => 'S935 "Dog of solid construction, robust and vigorous with powerful bone, well-developed muscles and with a rough coat."',
+            'coat_length' => 'S935 "Of a length of 4 to 6 cm on the body, shorter on the muzzle, the head, the ears, the front sides of the legs and the feet."',
+            'coat_color' => 'S935 "Pure white, white with orange markings, white speckled with orange," "white with brown (chestnut) markings, orange roan or brown roan (chestnut)." (weights unsourced; never tricolour / tan markings / black)',
+            'ear_carriage' => 'S935 "Practically triangular in shape; in length they are not more than 5 cm longer than the lower line of the throat;"',
+            'eye_color' => 'S935 "Large and set well apart." (almost round, ochre)',
+            'tail' => 'S935 "Natural and thick, particularly at the base; without fringes; carried either horizontally, or down;"',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'solid, robust and vigorous pointing dog with powerful bone and well-developed muscles, a square build, in healthy lean working condition', 'weight' => 3], 'strong, athletic, square-built gundog standing calmly'],
+            'coat_length' => ['rough, dense, harsh coat of medium length, shorter on the head and legs, with thick eyebrows, a moustache and a beard'],
+            // FCI standard (S935): the five standard colours; white with orange markings first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'white with orange markings', 'weight' => 30],
+                ['value' => 'brown roan', 'weight' => 25],
+                ['value' => 'white with brown markings', 'weight' => 20],
+                ['value' => 'orange roan', 'weight' => 15],
+                ['value' => 'pure white', 'weight' => 10],
+            ],
+            'ear_carriage' => ['practically triangular, low-carried pendant ears with short dense hair'],
+            'eye_color' => ['large, almost round ochre eyes set well apart, with a gentle expression'],
+            'tail' => ['natural thick tail without fringes, carried horizontally or down'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
