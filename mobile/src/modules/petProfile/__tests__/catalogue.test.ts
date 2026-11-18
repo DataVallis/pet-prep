@@ -755,7 +755,8 @@ describe('breed search', () => {
     expect(find('pticar')).toEqual(['german_shorthaired_pointer', 'brittany', 'hungarian_vizsla', 'wirehaired_pointing_griffon', 'weimaraner', 'german_wirehaired_pointer', 'spinone_italiano']);
     expect(find('kurzhaar')).toEqual(['german_shorthaired_pointer']);
     // M5-R10-124: … and the Spinone Italiano (»Italian Wire-haired Pointer«).
-    expect(find('pointer')).toEqual(['german_shorthaired_pointer', 'hungarian_vizsla', 'german_wirehaired_pointer', 'spinone_italiano']);
+    // M5-R10-125: … and the Pointer itself.
+    expect(find('pointer')).toEqual(['german_shorthaired_pointer', 'hungarian_vizsla', 'german_wirehaired_pointer', 'spinone_italiano', 'pointer']);
     expect(find('gsp')).toEqual(['german_shorthaired_pointer']);
   });
 
@@ -766,7 +767,8 @@ describe('breed search', () => {
     // M5-R10-41: … and the English Cocker Spaniel (»angleški koker španjel«); M5-R10-45: … and the Mastiff (»angleški mastif«);
     // M5-R10-54: … and the Whippet (»mali angleški hrt«); M5-R10-93: … and the Old English Sheepdog (»staroangleški ovčar«);
     // M5-R10-97: … and the English Setter (»angleški seter«); M5-R10-122: … and the Greyhound (»angleški hrt«).
-    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel', 'english_cocker_spaniel', 'mastiff', 'whippet', 'old_english_sheepdog', 'english_setter', 'greyhound']);
+    // M5-R10-125: … and the Pointer (»angleški pointer«).
+    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel', 'english_cocker_spaniel', 'mastiff', 'whippet', 'old_english_sheepdog', 'english_setter', 'greyhound', 'pointer']);
     expect(find('english bulldog')).toEqual(['bulldog']);
     expect(find('british')).toEqual(['bulldog']);
   });
