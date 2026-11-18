@@ -232,3 +232,15 @@ Status: `[ ]` todo · `[x]` live (address form, PRs, date) · `[!]` blocked (rea
 - [x] fi top-up — 2 breeds (Tibetan Terrier, Greyhound; register names, slugs, synonyms) — address: sinä (lower-case) as live; website #490, 2026-11-18. B 0 fixes, C 0 fixes. Names: Tiibetinterrieri (slug tiibetinterrieri; synonym Tibetan terrier), Greyhound (Suomen Kennelliitto; synonyms Englanninvinttikoira, English greyhound). All 284 foods already verified in fi. Next top-up: nb, it — same 2 breeds.
 - [x] nb top-up — 2 breeds (Tibetan Terrier, Greyhound; register names, slugs, synonyms) — address: du (lower-case) as live; website #493 (merge 02c8de2782e713a0c376915cd841a51cc2534536), 2026-11-18. B 0 fixes, C 0 fixes. Names: Tibetansk terrier, Greyhound (NKK; synonym Engelsk mynde). Next top-up: it — same 2 breeds; then Xoloitzcuintli for all 13 languages once the website registry sync has it.
 - [x] it top-up — 3 breeds (Greyhound, Tibetan Terrier, Xoloitzcuintli; register names, slugs, synonyms; website it.json only, no care-knowledge change) — address: tu (it-IT) as live; website #494, 2026-11-18. B 0 fixes, C 0 fixes. Names: Greyhound (greyhound; Levriero inglese), Terrier tibetano (terrier-tibetano), Xoloitzcuintle (xoloitzcuintle; Cane nudo messicano). Open for the other 12 languages: Xoloitzcuintli (register id xoloitzcuintli, coming soon).
+- [x] fr top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website fr.json only, no care-knowledge change) — address: vous (adults), tu (child texts); website #496, 2026-11-18
+- [ ] de top-up — 1 breed (Xoloitzcuintli; register name, slug, synonyms; `it` has it, the other 12 languages lack it; website registry/locales/<code>.json only)
+- [ ] es top-up — 1 breed (Xoloitzcuintli; same)
+- [ ] pt top-up — 1 breed (Xoloitzcuintli; same)
+- [ ] nl top-up — 1 breed (Xoloitzcuintli; same)
+- [ ] pl top-up — 1 breed (Xoloitzcuintli; same)
+- [ ] cs top-up — 1 breed (Xoloitzcuintli; same)
+- [ ] hr top-up — 1 breed (Xoloitzcuintli; same)
+- [ ] sv top-up — 1 breed (Xoloitzcuintli; same)
+- [ ] da top-up — 1 breed (Xoloitzcuintli; same)
+- [ ] fi top-up — 1 breed (Xoloitzcuintli; same)
+- [ ] nb top-up — 1 breed (Xoloitzcuintli; same)
