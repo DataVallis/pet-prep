@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "e3dffb8bbf21652cb7a11f3d3cd15bc337864cfa9737fd0cddf83d7989a20757"
+      "sha256": "960d7f7adb1aeb826bdfcf722b3c5220695748e431a1f6d53043acc75d8a3283"
     }
   },
   "suitability_vocabulary": {
@@ -69462,7 +69462,58 @@
         "file": "xoloitzcuintli.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/xoloitzcuintli.webp",
+            "default": true
+          },
+          {
+            "key": "slate-grey",
+            "label": {
+              "en": "Slate grey",
+              "sl": "Skrilasto siv"
+            },
+            "file": "dog/xoloitzcuintli--slate-grey.webp"
+          },
+          {
+            "key": "reddish",
+            "label": {
+              "en": "Reddish",
+              "sl": "Rdečkast"
+            },
+            "file": "dog/xoloitzcuintli--reddish.webp"
+          },
+          {
+            "key": "liver",
+            "label": {
+              "en": "Liver",
+              "sl": "Jetrno rjav"
+            },
+            "file": "dog/xoloitzcuintli--liver.webp"
+          },
+          {
+            "key": "bronze",
+            "label": {
+              "en": "Bronze",
+              "sl": "Bronast"
+            },
+            "file": "dog/xoloitzcuintli--bronze.webp"
+          },
+          {
+            "key": "blonde",
+            "label": {
+              "en": "Blonde",
+              "sl": "Svetlo zlat"
+            },
+            "file": "dog/xoloitzcuintli--blonde.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_checked",

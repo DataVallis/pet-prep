@@ -202,4 +202,12 @@ return [
         'red' => 'dogs/greyhound--red.webp',
         'black-white' => 'dogs/greyhound--black-white.webp',
     ],
+    'xoloitzcuintli' => [
+        'black' => 'dogs/xoloitzcuintli.webp',
+        'slate-grey' => 'dogs/xoloitzcuintli--slate-grey.webp',
+        'reddish' => 'dogs/xoloitzcuintli--reddish.webp',
+        'liver' => 'dogs/xoloitzcuintli--liver.webp',
+        'bronze' => 'dogs/xoloitzcuintli--bronze.webp',
+        'blonde' => 'dogs/xoloitzcuintli--blonde.webp',
+    ],
 ];
