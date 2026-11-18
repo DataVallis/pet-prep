@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `spinone_italiano` (viri S934–S941; ponovno S10, S11, S14, S24, S35, S45, S174, S771); seznam za vzreditelja: ni preverjen (stran RKC ni bila dosegljiva) |
 | Izvor | FCI št. 165, skupina 7 (ptičarji), sekcija 1.3 (celinski ptičarji, tip grifon), Italija (S935, S934) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 120. mesto »Spinone Italiano« (S174, zapisano 2026-11-18 v vrstici 123) |
-| PR-ji | pet-prep #1354 (pasma) · portret, barvne različice in spletna stran: glejte vrstico 124 v `docs/research/BREED_QUEUE.md` |
+| PR-ji | pet-prep #1354 (pasma, združen `55cac82`) · portret pet-prep (zagon `breed-portraits.yml` 44227113983, sprejet v prvem poskusu) · barvne različice pet-prep (po portretu, runbook §8b) · spletna stran: pet-prep-website `feat/register-spinone-italiano` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Česanje 3× na teden, »Nova izkušnja« za mladička, opozorilo po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-18 |
 | Ščetkanje zob vsak dan, striženje krempljev 1× na teden (otrok) | 🛠 | 💶 izziv | M5-R15 / M5-R19 | 2026-11-18 |
 | Barve (izbirnik: 5 barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-18 |
-| AI portret v registru | 🗓 po združitvi (runbook §8) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/spinone-italiano`, `/sl/zivali/psi/italijanski-ostrodlaki-pticar`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), belo-oranžen z lisami, robusten ptičar z brado, naravni rep | — | M5-R11-04 | 2026-11-18 |
+| Stran na petprep.si (`/animals/dogs/spinone-italiano`, `/sl/zivali/psi/italijanski-ostrodlaki-pticar`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
