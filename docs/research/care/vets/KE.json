@@ -53,7 +53,8 @@
         "pt": "Aberto todos os dias, 10h00–19h00; para urgências, aberto 24 horas por dia, 7 dias por semana, no mesmo número.",
         "nl": "Dagelijks open 10.00–19.00 uur; voor spoed 24 uur per dag, 7 dagen per week bereikbaar op hetzelfde nummer.",
         "pl": "Otwarte codziennie 10:00–19:00; w nagłych przypadkach otwarte całodobowo, 7 dni w tygodniu, pod tym samym numerem.",
-        "cs": "Otevřeno denně 10:00–19:00; pohotovost nonstop, 7 dní v týdnu, na stejném čísle."
+        "cs": "Otevřeno denně 10:00–19:00; pohotovost nonstop, 7 dní v týdnu, na stejném čísle.",
+        "sv": "Öppet dagligen 10.00–19.00; för akutfall öppet 24 h, 7 dagar i veckan på samma nummer."
       }
     },
     {
@@ -75,7 +76,8 @@
         "pt": "Aberto todos os dias, 10h00–19h00; liga antes em caso de urgência.",
         "nl": "Dagelijks open 10.00–19.00 uur; bel vooraf bij spoed.",
         "pl": "Otwarte codziennie 10:00–19:00; w nagłych przypadkach zadzwoń wcześniej.",
-        "cs": "Otevřeno denně 10:00–19:00; v naléhavých případech před cestou zavolejte."
+        "cs": "Otevřeno denně 10:00–19:00; v naléhavých případech před cestou zavolejte.",
+        "sv": "Öppet dagligen 10.00–19.00; ring innan du kommer vid akutfall."
       }
     },
     {
@@ -97,7 +99,8 @@
         "pt": "Aberto todos os dias, 10h00–19h00; liga antes em caso de urgência.",
         "nl": "Dagelijks open 10.00–19.00 uur; bel vooraf bij spoed.",
         "pl": "Otwarte codziennie 10:00–19:00; w nagłych przypadkach zadzwoń wcześniej.",
-        "cs": "Otevřeno denně 10:00–19:00; v naléhavých případech před cestou zavolejte."
+        "cs": "Otevřeno denně 10:00–19:00; v naléhavých případech před cestou zavolejte.",
+        "sv": "Öppet dagligen 10.00–19.00; ring innan du kommer vid akutfall."
       }
     },
     {
@@ -118,7 +121,8 @@
         "pt": "Atendimento sem marcação; também com clínica em Busia. Liga ou envia mensagem por WhatsApp antes em caso de urgência.",
         "nl": "Zonder afspraak welkom; ook een kliniek in Busia. Bel of stuur vooraf een WhatsApp-bericht bij spoed.",
         "pl": "Przyjmujemy bez zapisu; przychodnia także w Busia. W nagłych przypadkach zadzwoń lub napisz na WhatsApp.",
-        "cs": "Přijímáme i bez objednání; další klinika v Busii. V naléhavých případech před cestou zavolejte nebo napište na WhatsApp."
+        "cs": "Přijímáme i bez objednání; další klinika v Busii. V naléhavých případech před cestou zavolejte nebo napište na WhatsApp.",
+        "sv": "Drop-in välkomnas; även klinik i Busia. Ring eller skriv på WhatsApp i förväg vid akutfall."
       }
     },
     {
@@ -140,7 +144,8 @@
         "pt": "Segunda a sexta, 8h00–18h00; domingos apenas urgências; taxa de urgência adicional fora de horas.",
         "nl": "Ma–vr 08.00–18.00 uur; zondag alleen spoed; buiten kantooruren extra spoedtoeslag.",
         "pl": "Pon.–pt. 08:00–18:00; w niedziele tylko nagłe przypadki; poza godzinami dodatkowa opłata za pogotowie.",
-        "cs": "Po–Pá 08:00–18:00; v neděli pouze pohotovost; mimo ordinační dobu příplatek za pohotovost."
+        "cs": "Po–Pá 08:00–18:00; v neděli pouze pohotovost; mimo ordinační dobu příplatek za pohotovost.",
+        "sv": "Mån–fre 08.00–18.00; söndagar endast akutfall; extra akutavgift utanför öppettid."
       }
     },
     {
@@ -161,7 +166,8 @@
         "pt": "Secção de animais de pequeno porte do hospital universitário; liga antes para saber o horário.",
         "nl": "Afdeling kleine dieren van het opleidingsziekenhuis; bel vooraf voor de openingstijden.",
         "pl": "Oddział małych zwierząt szpitala klinicznego; zadzwoń przed wizytą w sprawie godzin.",
-        "cs": "Oddělení malých zvířat výukové nemocnice; ordinační dobu zjistíte telefonicky."
+        "cs": "Oddělení malých zvířat výukové nemocnice; ordinační dobu zjistíte telefonicky.",
+        "sv": "Smådjursavdelning vid undervisningssjukhuset; ring innan du kommer för öppettider."
       }
     }
   ],

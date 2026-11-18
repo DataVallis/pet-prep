@@ -49,7 +49,8 @@
       "checked": "2026-11-16",
       "note": "Other numbers on the site: +504 9446-7901, +504 2552-2826/7. Page wording: 'EMERGENCIAS 24/7 SOLO EN BARRIO RIO DE PIEDRAS'.",
       "duty_i18n": {
-        "cs": "Pohotovost nonstop na této pobočce na +504 9757-6797. Běžná ordinační doba Po–Pá 8:30–18:00, so 8:30–16:00, ne 9:00–15:00."
+        "cs": "Pohotovost nonstop na této pobočce na +504 9757-6797. Běžná ordinační doba Po–Pá 8:30–18:00, so 8:30–16:00, ne 9:00–15:00.",
+        "sv": "Akutfall dygnet runt på denna filial på +504 9757-6797. Ordinarie tider mån–fre 8.30–18.00, lör 8.30–16.00, sön 9.00–15.00."
       }
     },
     {
@@ -67,7 +68,8 @@
       "checked": "2026-11-16",
       "note": "Also +504 9430-4116. Phone-to-branch assignment inferred from footer order on the page.",
       "duty_i18n": {
-        "cs": "Otevřeno Po–Pá 8:00–17:30, so 8:00–16:00, v neděli zavřeno. Nonstop pohotovost zajišťuje pobočka Rio de Piedras."
+        "cs": "Otevřeno Po–Pá 8:00–17:30, so 8:00–16:00, v neděli zavřeno. Nonstop pohotovost zajišťuje pobočka Rio de Piedras.",
+        "sv": "Öppet mån–fre 8.00–17.30, lör 8.00–16.00, söndag stängt. Akutfall dygnet runt hanteras på filialen Rio de Piedras."
       }
     },
     {
@@ -85,7 +87,8 @@
       "checked": "2026-11-16",
       "note": "Also +504 8767-3284 and +504 2225-6215. 9905-4693 is also WhatsApp.",
       "duty_i18n": {
-        "cs": "Po–Pá 9:00–17:00 na objednání; v neděli 9:00–13:00 bez objednání, podle pořadí; v sobotu zavřeno."
+        "cs": "Po–Pá 9:00–17:00 na objednání; v neděli 9:00–13:00 bez objednání, podle pořadí; v sobotu zavřeno.",
+        "sv": "Mån–fre 9.00–17.00 efter bokad tid; söndag 9.00–13.00 först till kvarn; lördag stängt."
       }
     },
     {
@@ -103,7 +106,8 @@
       "checked": "2026-11-16",
       "note": "Also +504 2443-1521 and 2443-1525 (PBX). Page also covers large animals. 'Urgencia y Cuidados Intensivos' without 24 h wording.",
       "duty_i18n": {
-        "cs": "Otevřeno Po–Pá 7:30–17:00 a so 7:30–15:00. Nabízí pohotovost a intenzivní péči; před cestou zavolejte."
+        "cs": "Otevřeno Po–Pá 7:30–17:00 a so 7:30–15:00. Nabízí pohotovost a intenzivní péči; před cestou zavolejte.",
+        "sv": "Öppet mån–fre 7.30–17.00 och lör 7.30–15.00. Akut- och intensivvård erbjuds; ring innan du kommer."
       }
     }
   ],

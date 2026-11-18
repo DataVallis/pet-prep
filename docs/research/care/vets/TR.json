@@ -113,7 +113,8 @@
         "pt": "Serviço de urgência aberto 24 h/24, 7 dias por semana, incluindo fins de semana e feriados",
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week, ook in weekenden en op feestdagen",
         "pl": "Pogotowie czynne 24 godziny na dobę, 7 dni w tygodniu, także w weekendy i święta",
-        "cs": "Pohotovostní služba otevřena nonstop, 7 dní v týdnu, včetně víkendů a státních svátků"
+        "cs": "Pohotovostní služba otevřena nonstop, 7 dní v týdnu, včetně víkendů a státních svátků",
+        "sv": "Akutmottagning öppen dygnet runt, alla dagar i veckan, även på helger och helgdagar"
       },
       "small_animals": true,
       "url": "https://www.anatoliapet.com/",
@@ -140,7 +141,8 @@
         "pt": "Aberto 24 h/24, 7 dias por semana, sem marcação; telefone também no WhatsApp",
         "nl": "24 uur per dag, 7 dagen per week open, zonder afspraak; telefoon ook via WhatsApp bereikbaar",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu, bez umawiania wizyt; telefon także na WhatsAppie",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu, bez objednání; telefon i na WhatsApp"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, bez objednání; telefon i na WhatsApp",
+        "sv": "Öppet dygnet runt, alla dagar i veckan, ingen tidsbokning behövs; telefon även på WhatsApp"
       },
       "small_animals": true,
       "url": "https://animalpark.tr/vet/",
@@ -167,7 +169,8 @@
         "pt": "Serviço veterinário de urgência 24 h/24, 7 dias por semana",
         "nl": "Spoeddienst dierenarts 24/7",
         "pl": "Pogotowie weterynaryjne całodobowo",
-        "cs": "Veterinární pohotovost nonstop"
+        "cs": "Veterinární pohotovost nonstop",
+        "sv": "Akut veterinärvård dygnet runt"
       },
       "small_animals": true,
       "url": "https://www.gloriavet.com/",
@@ -194,7 +197,8 @@
         "pt": "Serviço de urgência de piquete 24 horas para Kadıköy, Üsküdar, Acıbadem e Altunizade",
         "nl": "Spoedachterwacht 24 uur per dag voor Kadıköy, Üsküdar, Acıbadem en Altunizade",
         "pl": "Całodobowy dyżur pogotowia dla Kadıköy, Üsküdar, Acıbadem i Altunizade",
-        "cs": "Nonstop pohotovostní služba pro Kadıköy, Üsküdar, Acıbadem a Altunizade"
+        "cs": "Nonstop pohotovostní služba pro Kadıköy, Üsküdar, Acıbadem a Altunizade",
+        "sv": "Akutjour dygnet runt för Kadıköy, Üsküdar, Acıbadem och Altunizade"
       },
       "small_animals": true,
       "url": "https://vet216kosuyolu.com/vet216-uskudar-veteriner-klinigi/",
@@ -221,7 +225,8 @@
         "pt": "Aberto 24 h/24, 7 dias por semana para cães e gatos",
         "nl": "24/7 open voor katten en honden",
         "pl": "Czynne całodobowo dla kotów i psów",
-        "cs": "Otevřeno nonstop pro kočky a psy"
+        "cs": "Otevřeno nonstop pro kočky a psy",
+        "sv": "Öppet dygnet runt för katter och hundar"
       },
       "small_animals": true,
       "url": "https://www.pulseveteriner.com/",
@@ -249,7 +254,8 @@
         "pt": "Urgências e veterinário de serviço todos os dias, 24 h",
         "nl": "Spoedzorg en dienstdoende dierenarts, elke dag 24 uur",
         "pl": "Opieka weterynaryjna w nagłych przypadkach i dyżur codziennie, całą dobę",
-        "cs": "Pohotovostní veterinární péče každý den nonstop"
+        "cs": "Pohotovostní veterinární péče každý den nonstop",
+        "sv": "Akut och jourhavande veterinärvård alla dagar, dygnet runt"
       },
       "small_animals": true,
       "url": "https://beylerbeyiveterinerklinigi.com/",
@@ -277,7 +283,8 @@
         "pt": "Serviço veterinário de urgência 24 h/24, 7 dias por semana; WhatsApp +90 553 939 47 77",
         "nl": "Spoeddienst dierenarts 24/7; WhatsApp +90 553 939 47 77",
         "pl": "Pogotowie weterynaryjne całodobowo; WhatsApp +90 553 939 47 77",
-        "cs": "Veterinární pohotovost nonstop; WhatsApp +90 553 939 47 77"
+        "cs": "Veterinární pohotovost nonstop; WhatsApp +90 553 939 47 77",
+        "sv": "Akut veterinärvård dygnet runt; WhatsApp +90 553 939 47 77"
       },
       "small_animals": true,
       "url": "https://www.hospetia.com/",
@@ -305,7 +312,8 @@
         "pt": "Aberto 24 horas, urgências 24 h/24, 7 dias por semana",
         "nl": "24 uur per dag open, spoedzorg 24/7",
         "pl": "Czynne całą dobę, opieka w nagłych przypadkach całodobowo",
-        "cs": "Otevřeno nonstop, včetně pohotovostní péče"
+        "cs": "Otevřeno nonstop, včetně pohotovostní péče",
+        "sv": "Öppet dygnet runt, med akutvård"
       },
       "small_animals": true,
       "url": "https://besiktasveteriner.com/",
@@ -332,7 +340,8 @@
         "pt": "Policlínica de urgência 24 h/24, 7 dias por semana para cães e gatos; telemóvel +90 538 667 83 61",
         "nl": "Dierenkliniek 24/7 voor spoed bij katten en honden; mobiel +90 538 667 83 61",
         "pl": "Całodobowa przychodnia pogotowia weterynaryjnego dla kotów i psów; telefon komórkowy +90 538 667 83 61",
-        "cs": "Pohotovostní poliklinika nonstop pro kočky a psy; mobil +90 538 667 83 61"
+        "cs": "Pohotovostní poliklinika nonstop pro kočky a psy; mobil +90 538 667 83 61",
+        "sv": "Akutmottagning dygnet runt för katter och hundar; mobil +90 538 667 83 61"
       },
       "small_animals": true,
       "url": "https://leventveteriner.com/",
@@ -360,7 +369,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana; linha de urgência +90 552 278 11 00",
         "nl": "24 uur per dag, 7 dagen per week open; spoedlijn +90 552 278 11 00",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu; linia dla nagłych przypadków +90 552 278 11 00",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní linka +90 552 278 11 00"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní linka +90 552 278 11 00",
+        "sv": "Öppet dygnet runt, alla dagar i veckan; akutlinje +90 552 278 11 00"
       },
       "small_animals": true,
       "url": "https://housevetveteriner.com/",
@@ -387,7 +397,8 @@
         "pt": "Aberto 24 horas todos os dias da semana",
         "nl": "Elke dag van de week 24 uur open",
         "pl": "Czynne całą dobę, codziennie",
-        "cs": "Otevřeno nonstop každý den v týdnu"
+        "cs": "Otevřeno nonstop každý den v týdnu",
+        "sv": "Öppet dygnet runt, alla veckodagar"
       },
       "small_animals": true,
       "url": "https://patipalace.com/",
@@ -414,7 +425,8 @@
         "pt": "Aberto 24 h/24, 7 dias por semana, sem interrupção",
         "nl": "24/7 doorlopend open",
         "pl": "Czynne całodobowo, bez przerw",
-        "cs": "Otevřeno nonstop bez přestávky"
+        "cs": "Otevřeno nonstop bez přestávky",
+        "sv": "Öppet dygnet runt utan avbrott"
       },
       "small_animals": true,
       "url": "https://www.maslakvetzoo.com/",
@@ -440,7 +452,8 @@
         "pt": "Policlínica 24 h/24, 7 dias por semana com unidade de cuidados intensivos; WhatsApp 24 h/24, 7 dias por semana; telemóvel +90 506 344 05 05",
         "nl": "Dierenkliniek 24/7 met intensive care; WhatsApp 24/7; mobiel +90 506 344 05 05",
         "pl": "Całodobowa przychodnia z oddziałem intensywnej terapii; WhatsApp całodobowo; telefon komórkowy +90 506 344 05 05",
-        "cs": "Poliklinika nonstop s jednotkou intenzivní péče; WhatsApp nonstop; mobil +90 506 344 05 05"
+        "cs": "Poliklinika nonstop s jednotkou intenzivní péče; WhatsApp nonstop; mobil +90 506 344 05 05",
+        "sv": "Klinik med intensivvårdsavdelning dygnet runt; WhatsApp dygnet runt; mobil +90 506 344 05 05"
       },
       "small_animals": true,
       "url": "https://leventcityveteriner.com/sariyer/",
@@ -468,7 +481,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana, incluindo noites, fins de semana e feriados",
         "nl": "24 uur per dag, 7 dagen per week open, ook 's nachts, in weekenden en op feestdagen",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu, także w nocy, weekendy i święta",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně nocí, víkendů a státních svátků"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně nocí, víkendů a státních svátků",
+        "sv": "Öppet dygnet runt, alla dagar i veckan, även nätter, helger och helgdagar"
       },
       "small_animals": true,
       "url": "https://www.vet34.com/",
@@ -496,7 +510,8 @@
         "pt": "Aberto 24 horas todos os dias, incluindo urgências e domingos; telefone também no WhatsApp",
         "nl": "Elke dag 24 uur open, ook voor spoed en op zondag; telefoon ook via WhatsApp bereikbaar",
         "pl": "Czynne całą dobę, codziennie, także w nagłych przypadkach i w niedziele; telefon także na WhatsAppie",
-        "cs": "Otevřeno nonstop každý den, včetně pohotovosti a nedělí; telefon i na WhatsApp"
+        "cs": "Otevřeno nonstop každý den, včetně pohotovosti a nedělí; telefon i na WhatsApp",
+        "sv": "Öppet dygnet runt alla dagar, även för akutfall och på söndagar; telefon även på WhatsApp"
       },
       "small_animals": true,
       "url": "https://animalove-basaksehir-veteriner.com/",
@@ -523,7 +538,8 @@
         "pt": "Aberto todos os dias, 24 h",
         "nl": "Elke dag 24 uur open",
         "pl": "Czynne codziennie, całą dobę",
-        "cs": "Otevřeno každý den nonstop"
+        "cs": "Otevřeno každý den nonstop",
+        "sv": "Öppet alla dagar, dygnet runt"
       },
       "small_animals": true,
       "url": "https://sirinpati.com/bagcilar-acil-veteriner/",
@@ -549,7 +565,8 @@
         "pt": "Clínica veterinária de serviço 24 horas, 7 dias por semana; viatura para visitas ao domicílio",
         "nl": "Dienstdoende dierenkliniek 24 uur per dag, 7 dagen per week; met voertuig voor huisbezoeken",
         "pl": "Dyżurna przychodnia weterynaryjna całodobowo, 7 dni w tygodniu; samochód do wizyt domowych",
-        "cs": "Pohotovostní veterinární klinika nonstop, 7 dní v týdnu; vůz pro návštěvy doma"
+        "cs": "Pohotovostní veterinární klinika nonstop, 7 dní v týdnu; vůz pro návštěvy doma",
+        "sv": "Jourhavande veterinärklinik dygnet runt, alla dagar i veckan; fordon för hembesök"
       },
       "small_animals": true,
       "url": "https://www.auraveteriner.com/",
@@ -577,7 +594,8 @@
         "pt": "Serviço veterinário de urgência 24 h/24, 7 dias por semana",
         "nl": "Spoeddienst dierenarts 24/7",
         "pl": "Pogotowie weterynaryjne całodobowo",
-        "cs": "Veterinární pohotovost nonstop"
+        "cs": "Veterinární pohotovost nonstop",
+        "sv": "Akut veterinärvård dygnet runt"
       },
       "small_animals": true,
       "url": "https://www.petivveteriner.com/beylikduzu",
@@ -603,7 +621,8 @@
         "pt": "Liga antes para confirmares o horário",
         "nl": "Bel vooraf om de openingstijden te bevestigen",
         "pl": "Zadzwoń przed wizytą, aby potwierdzić godziny otwarcia",
-        "cs": "Otevírací dobu si před cestou ověřte telefonicky"
+        "cs": "Otevírací dobu si před cestou ověřte telefonicky",
+        "sv": "Ring innan du kommer för att bekräfta öppettiderna"
       },
       "small_animals": true,
       "url": "https://www.atasehirveteriner.com/",
@@ -630,7 +649,8 @@
         "pt": "Aberto todos os dias 9h00–20h00; número do veterinário de serviço +90 552 666 57 47",
         "nl": "Elke dag 9.00–20.00 uur; nummer van de dienstdoende dierenarts +90 552 666 57 47",
         "pl": "Czynne codziennie 09:00–20:00; numer dyżurnego weterynarza +90 552 666 57 47",
-        "cs": "Otevřeno každý den 9:00–20:00; číslo pohotovostního veterináře +90 552 666 57 47"
+        "cs": "Otevřeno každý den 9:00–20:00; číslo pohotovostního veterináře +90 552 666 57 47",
+        "sv": "Öppet alla dagar 09.00–20.00; jourhavande veterinärens nummer +90 552 666 57 47"
       },
       "small_animals": true,
       "url": "https://leylekvet.com/",
@@ -657,7 +677,8 @@
         "pt": "Seg–sáb 10h00–21h00, dom 11h00–19h00; liga antes em caso de urgência",
         "nl": "Ma–za 10.00–21.00, zo 11.00–19.00 uur; bel vooraf bij spoed",
         "pl": "pon.–sob. 10:00–21:00, niedz. 11:00–19:00; w nagłych przypadkach zadzwoń przed wizytą",
-        "cs": "Po–So 10:00–21:00, ne 11:00–19:00; v případě pohotovosti nejdřív zavolejte"
+        "cs": "Po–So 10:00–21:00, ne 11:00–19:00; v případě pohotovosti nejdřív zavolejte",
+        "sv": "Mån–lör 10.00–21.00, sön 11.00–19.00; ring innan du kommer vid akutfall"
       },
       "small_animals": true,
       "url": "https://citypetveterinerklinigi.com/",
@@ -684,7 +705,8 @@
         "pt": "Todos os dias 10h30–21h00; veterinário no local até à meia-noite",
         "nl": "Dagelijks 10.30–21.00 uur; dierenarts aanwezig tot middernacht",
         "pl": "Codziennie 10:30–21:00; weterynarz na miejscu do północy",
-        "cs": "Denně 10:30–21:00; veterinář na místě do půlnoci"
+        "cs": "Denně 10:30–21:00; veterinář na místě do půlnoci",
+        "sv": "Dagligen 10.30–21.00; veterinär på plats till midnatt"
       },
       "small_animals": true,
       "url": "https://cevizlibagvet.com/fatih-veteriner-klinigi/",
@@ -711,7 +733,8 @@
         "pt": "Seg–sáb 9h30–24h00, dom 10h00–20h00",
         "nl": "Ma–za 9.30–24.00, zo 10.00–20.00 uur",
         "pl": "pon.–sob. 09:30–00:00, niedz. 10:00–20:00",
-        "cs": "Po–So 9:30–24:00, ne 10:00–20:00"
+        "cs": "Po–So 9:30–24:00, ne 10:00–20:00",
+        "sv": "Mån–lör 09.30–24.00, sön 10.00–20.00"
       },
       "small_animals": true,
       "url": "https://www.floryaveterinerklinigi.com/iletisim",
@@ -736,7 +759,8 @@
         "pt": "Unidade municipal para animais de rua; rotativa: Büyükada (seg, qua), Burgazada (ter), Kınalıada (qui), Heybeliada (sex); marcação por telefone",
         "nl": "Gemeentelijke dienst voor zwerfdieren; wisselt tussen Büyükada (ma, wo), Burgazada (di), Kınalıada (do), Heybeliada (vr); afspraak per telefoon",
         "pl": "Miejska jednostka opieki nad zwierzętami bezdomnymi; przyjmuje rotacyjnie: Büyükada (pon., śr.), Burgazada (wt.), Kınalıada (czw.), Heybeliada (pt.); wizyty po telefonicznym umówieniu",
-        "cs": "Městská jednotka pro toulavá zvířata; střídavě Büyükada (Po, St), Burgazada (Út), Kınalıada (Čt), Heybeliada (Pá); objednání telefonicky"
+        "cs": "Městská jednotka pro toulavá zvířata; střídavě Büyükada (Po, St), Burgazada (Út), Kınalıada (Čt), Heybeliada (Pá); objednání telefonicky",
+        "sv": "Kommunal enhet för gatudjur; roterar mellan Büyükada (mån, ons), Burgazada (tis), Kınalıada (tors), Heybeliada (fre); tidsbokning via telefon"
       },
       "small_animals": false,
       "url": "https://adalar.bel.tr/duyurular/veterinerlik-birimi-calisma-programi/",
@@ -763,7 +787,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana, incluindo noites e fins de semana; contacto por WhatsApp",
         "nl": "24 uur per dag, 7 dagen per week open, ook 's nachts en in het weekend; contact via WhatsApp",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu, także w nocy i weekendy; kontakt przez WhatsApp",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně nocí a víkendů; kontakt přes WhatsApp"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně nocí a víkendů; kontakt přes WhatsApp",
+        "sv": "Öppet dygnet runt, alla dagar i veckan, även nätter och helger; kontakt via WhatsApp"
       },
       "small_animals": true,
       "url": "https://umraniyeveterinerklinigi.com/",
@@ -791,7 +816,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana; clínica de urgência",
         "nl": "24 uur per dag, 7 dagen per week open; spoedkliniek",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu; przychodnia pogotowia",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní klinika"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní klinika",
+        "sv": "Öppet dygnet runt, alla dagar i veckan; akutklinik"
       },
       "small_animals": true,
       "url": "https://www.limavet.com/",
@@ -816,7 +842,8 @@
         "pt": "Serviço 24 h/24, 7 dias por semana; liga antes",
         "nl": "Dienst de klok rond (24/7); bel vooraf",
         "pl": "Usługi całodobowe; zadzwoń przed wizytą",
-        "cs": "Nonstop provoz; před cestou zavolejte"
+        "cs": "Nonstop provoz; před cestou zavolejte",
+        "sv": "Service dygnet runt; ring innan du kommer"
       },
       "small_animals": true,
       "url": "https://www.veticana.com/",
@@ -844,7 +871,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.marioveteriner.com/",
@@ -871,7 +899,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana; linha telefónica de urgência 24 horas",
         "nl": "24 uur per dag, 7 dagen per week open; spoedtelefoonlijn 24 uur per dag",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu; całodobowa linia telefoniczna dla nagłych przypadków",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu; nonstop pohotovostní telefonní linka"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu; nonstop pohotovostní telefonní linka",
+        "sv": "Öppet dygnet runt, alla dagar i veckan; akuttelefon dygnet runt"
       },
       "small_animals": true,
       "url": "http://maywellveteriner.com/iletisim/",
@@ -898,7 +927,8 @@
         "pt": "Aberto todos os dias, 24 h/24, 7 dias por semana",
         "nl": "24/7 open",
         "pl": "Czynne codziennie, całodobowo",
-        "cs": "Otevřeno každý den nonstop"
+        "cs": "Otevřeno každý den nonstop",
+        "sv": "Öppet alla dagar, dygnet runt"
       },
       "small_animals": true,
       "url": "https://marcaveteriner.com/",
@@ -926,7 +956,8 @@
         "pt": "Aberto todos os dias, 24 h; unidade de cuidados intensivos",
         "nl": "Elke dag 24 uur open; intensive care",
         "pl": "Czynne codziennie, całą dobę; oddział intensywnej terapii",
-        "cs": "Otevřeno každý den nonstop; jednotka intenzivní péče"
+        "cs": "Otevřeno každý den nonstop; jednotka intenzivní péče",
+        "sv": "Öppet alla dagar, dygnet runt; intensivvårdsavdelning"
       },
       "small_animals": true,
       "url": "https://www.vetuniverseveteriner.com/",
@@ -953,7 +984,8 @@
         "pt": "Serviço de urgência 24 horas, 7 dias por semana",
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week",
         "pl": "Pogotowie całodobowo, 7 dni w tygodniu",
-        "cs": "Pohotovostní služba nonstop, 7 dní v týdnu"
+        "cs": "Pohotovostní služba nonstop, 7 dní v týdnu",
+        "sv": "Akutmottagning dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.dozveterinerklinigi.com/",
@@ -981,7 +1013,8 @@
         "pt": "Aberto 7 dias por semana, 24 horas (urgências)",
         "nl": "7 dagen per week 24 uur geopend (spoed)",
         "pl": "Czynne 7 dni w tygodniu, całą dobę (nagłe przypadki)",
-        "cs": "Otevřeno 7 dní v týdnu nonstop (pohotovost)"
+        "cs": "Otevřeno 7 dní v týdnu nonstop (pohotovost)",
+        "sv": "Öppet alla dagar i veckan, dygnet runt (akut)"
       },
       "small_animals": true,
       "url": "https://cihangirpark.com.tr/",
@@ -1008,7 +1041,8 @@
         "pt": "Aberto 24 horas, linha de urgência 24 h/24, 7 dias por semana",
         "nl": "De klok rond open, spoedlijn 24/7",
         "pl": "Czynne całą dobę, całodobowa linia dla nagłych przypadków",
-        "cs": "Otevřeno nonstop, pohotovostní linka nonstop"
+        "cs": "Otevřeno nonstop, pohotovostní linka nonstop",
+        "sv": "Öppet dygnet runt, med akutlinje dygnet runt"
       },
       "small_animals": true,
       "url": "https://www.petivveteriner.com/avcilar",
@@ -1036,7 +1070,8 @@
         "pt": "Liga antes para saberes o horário",
         "nl": "Bel vooraf voor openingstijden",
         "pl": "Zadzwoń przed wizytą, aby poznać godziny otwarcia",
-        "cs": "Otevírací dobu zjistíte telefonicky"
+        "cs": "Otevírací dobu zjistíte telefonicky",
+        "sv": "Ring innan du kommer för att få veta öppettiderna"
       },
       "small_animals": true,
       "url": "https://istanimal.com/",
@@ -1063,7 +1098,8 @@
         "pt": "Todos os dias 9h30–21h30; urgências 24 h/24, 7 dias por semana por telefone",
         "nl": "Dagelijks 9.30–21.30 uur; spoedgevallen 24/7 telefonisch",
         "pl": "Codziennie 09:30–21:30; nagłe przypadki całodobowo przez telefon",
-        "cs": "Denně 9:30–21:30; pohotovostní případy nonstop telefonicky"
+        "cs": "Denně 9:30–21:30; pohotovostní případy nonstop telefonicky",
+        "sv": "Dagligen 09.30–21.30; akutfall via telefon dygnet runt"
       },
       "small_animals": true,
       "url": "https://vetpartnerveteriner.com/",
@@ -1089,7 +1125,8 @@
         "pt": "Seg–sáb 10h00–23h00; apoio de urgência noturno e ao fim de semana",
         "nl": "Ma–za 10.00–23.00 uur; spoedhulp 's nachts en in het weekend",
         "pl": "pon.–sob. 10:00–23:00; pomoc w nagłych przypadkach w nocy i w weekendy",
-        "cs": "Po–So 10:00–23:00; noční a víkendová pohotovostní podpora"
+        "cs": "Po–So 10:00–23:00; noční a víkendová pohotovostní podpora",
+        "sv": "Mån–lör 10.00–23.00; akutstöd nattetid och på helger"
       },
       "small_animals": true,
       "url": "https://www.vetix.com.tr/",
@@ -1116,7 +1153,8 @@
         "pt": "Todos os dias 10h00–20h30",
         "nl": "Dagelijks 10.00–20.30 uur",
         "pl": "Codziennie 10:00–20:30",
-        "cs": "Denně 10:00–20:30"
+        "cs": "Denně 10:00–20:30",
+        "sv": "Dagligen 10.00–20.30"
       },
       "small_animals": true,
       "url": "https://www.vetumayveteriner.com/",
@@ -1142,7 +1180,8 @@
         "pt": "Todos os dias 9h00–21h00",
         "nl": "Dagelijks 9.00–21.00 uur",
         "pl": "Codziennie 09:00–21:00",
-        "cs": "Denně 9:00–21:00"
+        "cs": "Denně 9:00–21:00",
+        "sv": "Dagligen 09.00–21.00"
       },
       "small_animals": true,
       "url": "https://www.petisveteriner.com/acilveteriner",
@@ -1169,7 +1208,8 @@
         "pt": "Contacto para urgências a qualquer hora (telefone 24 h/24, 7 dias por semana)",
         "nl": "Bij spoed te allen tijde bereikbaar (telefonisch 24/7)",
         "pl": "Kontakt w nagłych przypadkach o każdej porze (telefon całodobowo)",
-        "cs": "Pro pohotovost k zastižení kdykoli (telefonický kontakt nonstop)"
+        "cs": "Pro pohotovost k zastižení kdykoli (telefonický kontakt nonstop)",
+        "sv": "Nåbar vid akutfall när som helst (telefonkontakt dygnet runt)"
       },
       "small_animals": true,
       "url": "https://sisliveterinerklinigi.com/",
@@ -1196,7 +1236,8 @@
         "pt": "Seg–sáb 9h30–20h00, dom 12h00–16h00",
         "nl": "Ma–za 9.30–20.00, zo 12.00–16.00 uur",
         "pl": "pon.–sob. 09:30–20:00, niedz. 12:00–16:00",
-        "cs": "Po–So 9:30–20:00, ne 12:00–16:00"
+        "cs": "Po–So 9:30–20:00, ne 12:00–16:00",
+        "sv": "Mån–lör 09.30–20.00, sön 12.00–16.00"
       },
       "small_animals": true,
       "url": "https://junoveteriner.com/",
@@ -1223,7 +1264,8 @@
         "pt": "Seg–sáb 9h30–19h30, dom fechado",
         "nl": "Ma–za 9.30–19.30 uur, zo gesloten",
         "pl": "pon.–sob. 09:30–19:30, niedz. nieczynne",
-        "cs": "Po–So 9:30–19:30, v neděli zavřeno"
+        "cs": "Po–So 9:30–19:30, v neděli zavřeno",
+        "sv": "Mån–lör 09.30–19.30, söndag stängt"
       },
       "small_animals": true,
       "url": "https://www.mecidiyekoyveterinerklinigi.com.tr/",
@@ -1250,7 +1292,8 @@
         "pt": "Informação e encaminhamento por telefone 24 h/24, 7 dias por semana; liga antes",
         "nl": "Telefonische informatie en doorverwijzing 24/7; bel vooraf",
         "pl": "Informacja telefoniczna i kierowanie do placówek całodobowo; zadzwoń przed wizytą",
-        "cs": "Telefonické informace a doporučení nonstop; před cestou zavolejte."
+        "cs": "Telefonické informace a doporučení nonstop; před cestou zavolejte.",
+        "sv": "Telefoninformation och remittering dygnet runt; ring innan du kommer"
       },
       "small_animals": true,
       "url": "https://bomontiveteriner.com/iletisim/",
@@ -1276,7 +1319,8 @@
         "pt": "Liga para saberes o horário",
         "nl": "Bel voor openingstijden",
         "pl": "W sprawie godzin zadzwoń",
-        "cs": "Ordinační dobu zjistíte telefonicky"
+        "cs": "Ordinační dobu zjistíte telefonicky",
+        "sv": "Ring för att få veta öppettiderna"
       },
       "small_animals": true,
       "url": "https://www.whitevet.com.tr/",
@@ -1303,7 +1347,8 @@
         "pt": "Todos os dias 10h00–22h00; veterinário de serviço por telefone fora de horas, liga antes de ires",
         "nl": "Dagelijks 10.00–22.00 uur; buiten openingstijden is een dienstdoende dierenarts telefonisch bereikbaar, bel vooraf",
         "pl": "Codziennie 10:00–22:00; poza godzinami dyżurny weterynarz przez telefon, zadzwoń przed wizytą",
-        "cs": "Denně 10:00–22:00; mimo tuto dobu veterinář v pohotovosti telefonicky, před návštěvou zavolejte."
+        "cs": "Denně 10:00–22:00; mimo tuto dobu veterinář v pohotovosti telefonicky, před návštěvou zavolejte.",
+        "sv": "Dagligen 10.00–22.00; jourhavande veterinär via telefon utanför öppettiderna, ring innan du kommer"
       },
       "small_animals": true,
       "url": "https://www.vetorium.com/",
@@ -1328,7 +1373,8 @@
         "pt": "Apoio de urgência 24 h/24, 7 dias por semana; liga antes",
         "nl": "Spoedhulp 24/7; bel vooraf",
         "pl": "Pomoc w nagłych przypadkach całodobowo; zadzwoń przed wizytą",
-        "cs": "Pohotovostní podpora nonstop; před cestou zavolejte."
+        "cs": "Pohotovostní podpora nonstop; před cestou zavolejte.",
+        "sv": "Akutstöd dygnet runt; ring innan du kommer"
       },
       "small_animals": true,
       "url": "https://bambiveteriner.com/",
@@ -1355,7 +1401,8 @@
         "pt": "Admissão de pacientes 10h00–20h00; internamento e cirurgia de urgência fora deste horário; liga antes",
         "nl": "Patiënten ontvangen 10.00–20.00 uur; opname en spoedoperaties buiten deze uren; bel vooraf",
         "pl": "Przyjęcia pacjentów 10:00–20:00; opieka stacjonarna i pilne operacje poza tymi godzinami; zadzwoń przed wizytą",
-        "cs": "Příjem pacientů 10:00–20:00; hospitalizace a pohotovostní operace mimo tuto dobu; před cestou zavolejte."
+        "cs": "Příjem pacientů 10:00–20:00; hospitalizace a pohotovostní operace mimo tuto dobu; před cestou zavolejte.",
+        "sv": "Patienter tas emot 10.00–20.00; slutenvård och akutkirurgi utanför dessa tider; ring innan du kommer"
       },
       "small_animals": true,
       "url": "https://www.sirinvet.com/",
@@ -1382,7 +1429,8 @@
         "pt": "Liga para saberes o horário",
         "nl": "Bel voor openingstijden",
         "pl": "W sprawie godzin zadzwoń",
-        "cs": "Ordinační dobu zjistíte telefonicky"
+        "cs": "Ordinační dobu zjistíte telefonicky",
+        "sv": "Ring för att få veta öppettiderna"
       },
       "small_animals": true,
       "url": "https://www.vet-center.com/",
@@ -1408,7 +1456,8 @@
         "pt": "Liga para saberes o horário",
         "nl": "Bel voor openingstijden",
         "pl": "W sprawie godzin zadzwoń",
-        "cs": "Ordinační dobu zjistíte telefonicky"
+        "cs": "Ordinační dobu zjistíte telefonicky",
+        "sv": "Ring för att få veta öppettiderna"
       },
       "small_animals": true,
       "url": "https://www.fatihsifaveterinerklinigi.com/",
@@ -1435,7 +1484,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana, aceita também urgências noturnas; telefone também no WhatsApp",
         "nl": "24 uur per dag, 7 dagen per week open, ook voor spoed 's nachts; telefoon ook via WhatsApp bereikbaar",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu, przyjmuje też nocne nagłe przypadki; telefon także na WhatsAppie",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu, přijímá i noční pohotovosti; telefon také na WhatsAppu."
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, přijímá i noční pohotovosti; telefon také na WhatsAppu.",
+        "sv": "Öppet dygnet runt, alla dagar i veckan, tar även emot akutfall på natten; telefon även på WhatsApp"
       },
       "small_animals": true,
       "url": "https://www.caglayanveterinerklinigi.com/",
@@ -1463,7 +1513,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana para urgências; telefone também no WhatsApp",
         "nl": "24 uur per dag, 7 dagen per week open voor spoed; telefoon ook via WhatsApp bereikbaar",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu w nagłych przypadkach; telefon także na WhatsAppie",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu, pro pohotovosti; telefon také na WhatsAppu."
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, pro pohotovosti; telefon také na WhatsAppu.",
+        "sv": "Öppet dygnet runt, alla dagar i veckan, för akutfall; telefon även på WhatsApp"
       },
       "small_animals": true,
       "url": "https://aksucoskunveteriner.com/",
@@ -1490,7 +1541,8 @@
         "pt": "Serviço de urgência 7 dias por semana, 24 horas, incluindo domingos; telefone também no WhatsApp",
         "nl": "Spoeddienst 7 dagen per week, 24 uur per dag, ook op zondag; telefoon ook via WhatsApp bereikbaar",
         "pl": "Pogotowie 7 dni w tygodniu, całą dobę, także w niedziele; telefon także na WhatsAppie",
-        "cs": "Pohotovostní služba 7 dní v týdnu, nonstop, včetně nedělí; telefon také na WhatsAppu."
+        "cs": "Pohotovostní služba 7 dní v týdnu, nonstop, včetně nedělí; telefon také na WhatsAppu.",
+        "sv": "Akutmottagning alla dagar i veckan, dygnet runt, även på söndagar; telefon även på WhatsApp"
       },
       "small_animals": true,
       "url": "https://www.antalyadunyaveteriner.com/",
@@ -1518,7 +1570,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana; linha de urgência também no WhatsApp",
         "nl": "24 uur per dag, 7 dagen per week open; spoedlijn ook via WhatsApp bereikbaar",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu; linia dla nagłych przypadków także na WhatsAppie",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní linka také na WhatsAppu."
+        "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní linka také na WhatsAppu.",
+        "sv": "Öppet dygnet runt, alla dagar i veckan; akutlinje även på WhatsApp"
       },
       "small_animals": true,
       "url": "https://www.premiumveteriner.com/",
@@ -1546,7 +1599,8 @@
         "pt": "Linha telefónica de apoio de urgência 24 h/24, 7 dias por semana; liga antes",
         "nl": "Spoedlijn 24/7; bel vooraf",
         "pl": "Całodobowa telefoniczna linia pomocy w nagłych przypadkach; zadzwoń przed wizytą",
-        "cs": "Nonstop pohotovostní telefonní linka; před cestou zavolejte."
+        "cs": "Nonstop pohotovostní telefonní linka; před cestou zavolejte.",
+        "sv": "Stödlinje för akutfall dygnet runt; ring innan du kommer"
       },
       "small_animals": true,
       "url": "https://akdenizhayvanhastanesi.com/",
@@ -1573,7 +1627,8 @@
         "pt": "Contacto por telefone 24 horas por dia, 7 dias por semana; confirma o horário por telefone",
         "nl": "24 uur per dag, 7 dagen per week telefonisch bereikbaar; bevestig de openingstijden telefonisch",
         "pl": "Dostępni telefonicznie 24 godziny na dobę, 7 dni w tygodniu; godziny otwarcia potwierdź telefonicznie",
-        "cs": "Telefonicky dostupné nonstop, 7 dní v týdnu; otevírací dobu si ověřte telefonicky."
+        "cs": "Telefonicky dostupné nonstop, 7 dní v týdnu; otevírací dobu si ověřte telefonicky.",
+        "sv": "Nåbar via telefon dygnet runt, alla dagar i veckan; bekräfta öppettiderna via telefon"
       },
       "small_animals": true,
       "url": "https://www.laralifevetclinic.com/",
@@ -1600,7 +1655,8 @@
         "pt": "Linha telefónica de apoio 24 h/24, 7 dias por semana; liga antes",
         "nl": "Telefonische hulplijn 24/7; bel vooraf",
         "pl": "Całodobowa telefoniczna linia wsparcia; zadzwoń przed wizytą",
-        "cs": "Nonstop telefonní linka podpory; před cestou zavolejte."
+        "cs": "Nonstop telefonní linka podpory; před cestou zavolejte.",
+        "sv": "Telefonstöd dygnet runt; ring innan du kommer"
       },
       "small_animals": true,
       "url": "https://www.kemervet.com/",
@@ -1627,7 +1683,8 @@
         "pt": "Seg–sáb 9h30–19h00, dom 10h00–16h00",
         "nl": "Ma–za 9.30–19.00, zo 10.00–16.00 uur",
         "pl": "pon.–sob. 09:30–19:00, niedz. 10:00–16:00",
-        "cs": "Po–So 9:30–19:00, ne 10:00–16:00"
+        "cs": "Po–So 9:30–19:00, ne 10:00–16:00",
+        "sv": "Mån–lör 09.30–19.00, sön 10.00–16.00"
       },
       "small_animals": true,
       "url": "https://www.sidevet.net/tr/iletisim",
@@ -1666,7 +1723,8 @@
         "pt": "Horário 9h00–20h00; também serviço de urgência 24 horas.",
         "nl": "Open 9.00–20.00 uur; daarnaast spoeddienst 24 uur per dag.",
         "pl": "Godziny otwarcia 09:00–20:00; także całodobowe pogotowie.",
-        "cs": "Otevírací doba 9:00–20:00; také nonstop pohotovostní služba."
+        "cs": "Otevírací doba 9:00–20:00; také nonstop pohotovostní služba.",
+        "sv": "Öppettider 09.00–20.00; även akutmottagning dygnet runt."
       },
       "small_animals": true,
       "url": "https://maviankaveteriner.com/",
@@ -1693,7 +1751,8 @@
         "pt": "Aberto de segunda a sábado 8h00–20h00, fechado aos domingos.",
         "nl": "Open ma–za 8.00–20.00 uur, zo gesloten.",
         "pl": "Czynne od poniedziałku do soboty 08:00–20:00, w niedziele nieczynne.",
-        "cs": "Otevřeno Po–So 8:00–20:00, v neděli zavřeno."
+        "cs": "Otevřeno Po–So 8:00–20:00, v neděli zavřeno.",
+        "sv": "Öppet måndag–lördag 08.00–20.00, stängt på söndagar."
       },
       "small_animals": true,
       "url": "https://kocavet.com.tr/",
@@ -1720,7 +1779,8 @@
         "pt": "Aberto seg–sex 10h00–19h00, sáb 10h00–18h00, dom 11h00–17h00; em caso de urgência, liga antes.",
         "nl": "Open ma–vr 10.00–19.00, za 10.00–18.00, zo 11.00–17.00 uur; bij spoed eerst bellen.",
         "pl": "Czynne pon.–pt. 10:00–19:00, sob. 10:00–18:00, niedz. 11:00–17:00; w nagłych przypadkach najpierw zadzwoń.",
-        "cs": "Otevřeno Po–Pá 10:00–19:00, so 10:00–18:00, ne 11:00–17:00; v případě pohotovosti nejdřív zavolejte."
+        "cs": "Otevřeno Po–Pá 10:00–19:00, so 10:00–18:00, ne 11:00–17:00; v případě pohotovosti nejdřív zavolejte.",
+        "sv": "Öppet mån–fre 10.00–19.00, lör 10.00–18.00, sön 11.00–17.00; vid akutfall ring först."
       },
       "small_animals": true,
       "url": "https://vetopya.com/",
@@ -1745,7 +1805,8 @@
         "pt": "Linha telefónica de apoio 24 h/24, 7 dias por semana: +90 542 213 66 36.",
         "nl": "Telefonische hulplijn 24/7: +90 542 213 66 36.",
         "pl": "Całodobowa telefoniczna linia wsparcia: +90 542 213 66 36.",
-        "cs": "Nonstop telefonní linka podpory: +90 542 213 66 36."
+        "cs": "Nonstop telefonní linka podpory: +90 542 213 66 36.",
+        "sv": "Telefonstöd dygnet runt: +90 542 213 66 36."
       },
       "small_animals": true,
       "url": "https://www.antalyaveterinerklinigi.com/",
@@ -1772,7 +1833,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana; telefone também no WhatsApp",
         "nl": "24 uur per dag, 7 dagen per week open; telefoon ook via WhatsApp bereikbaar",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu; telefon także na WhatsAppie",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu; telefon také na WhatsAppu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu; telefon také na WhatsAppu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan; telefon även på WhatsApp"
       },
       "small_animals": true,
       "url": "https://www.westvet.com.tr/",
@@ -1800,7 +1862,8 @@
         "pt": "Serviço veterinário de urgência 7 dias por semana, 24 horas",
         "nl": "Spoeddienst 7 dagen per week, 24 uur per dag",
         "pl": "Pogotowie weterynaryjne 7 dni w tygodniu, całą dobę",
-        "cs": "Veterinární pohotovost 7 dní v týdnu, nonstop"
+        "cs": "Veterinární pohotovost 7 dní v týdnu, nonstop",
+        "sv": "Akut veterinärvård alla dagar i veckan, dygnet runt"
       },
       "small_animals": true,
       "url": "https://www.batikentveteriner.com.tr/",
@@ -1828,7 +1891,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.humanimal.com.tr/",
@@ -1855,7 +1919,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.starvetveteriner.com/",
@@ -1882,7 +1947,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.veterinerankara.com/",
@@ -1910,7 +1976,8 @@
         "pt": "Urgência de serviço 7 dias por semana, 24 horas",
         "nl": "Dienstdoende spoeddienst, 7 dagen per week, 24 uur per dag",
         "pl": "Pogotowie dyżurne 7 dni w tygodniu, całą dobę",
-        "cs": "Pohotovostní služba 7 dní v týdnu, nonstop"
+        "cs": "Pohotovostní služba 7 dní v týdnu, nonstop",
+        "sv": "Akutjour alla dagar i veckan, dygnet runt"
       },
       "small_animals": true,
       "url": "https://dorukgiller.com/ankara-nobetci-veteriner-klinigi/",
@@ -1936,7 +2003,8 @@
         "pt": "Serviço de urgência e consultas externas 24 horas, 7 dias por semana; laboratório apenas em horário de expediente nos dias úteis",
         "nl": "Spoedeisende hulp en reguliere zorg 24 uur per dag, 7 dagen per week; laboratorium alleen op werkdagen tijdens kantooruren",
         "pl": "Pogotowie i przyjęcia ambulatoryjne całą dobę, 7 dni w tygodniu; laboratorium tylko w godzinach pracy w dni robocze",
-        "cs": "Pohotovost a ambulance nonstop, 7 dní v týdnu; laboratoř pouze v pracovní dny v ordinační dobu"
+        "cs": "Pohotovost a ambulance nonstop, 7 dní v týdnu; laboratoř pouze v pracovní dny v ordinační dobu",
+        "sv": "Akut och öppenvård dygnet runt, alla dagar i veckan; laboratoriet endast på vardagar under arbetstid"
       },
       "small_animals": true,
       "url": "https://hayvanhastanesi.xn--yaamkent-owb.com.tr/",
@@ -1964,7 +2032,8 @@
         "pt": "Serviço de urgência 24 horas, 7 dias por semana",
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week",
         "pl": "Pogotowie całodobowo, 7 dni w tygodniu",
-        "cs": "Pohotovostní služba nonstop, 7 dní v týdnu"
+        "cs": "Pohotovostní služba nonstop, 7 dní v týdnu",
+        "sv": "Akutmottagning dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.izmirhayvanhastanesi.com.tr/",
@@ -1992,7 +2061,8 @@
         "pt": "Horário normal seg–sáb 9h00–21h00, dom 12h00–17h00; urgências de dia e de noite por telefone +90 538 694 44 55",
         "nl": "Reguliere uren ma–za 9.00–21.00, zo 12.00–17.00 uur; spoed dag en nacht telefonisch +90 538 694 44 55",
         "pl": "Zwykłe godziny pon.–sob. 09:00–21:00, niedz. 12:00–17:00; nagłe przypadki dniem i nocą pod telefonem +90 538 694 44 55",
-        "cs": "Běžná otevírací doba Po–So 9:00–21:00, ne 12:00–17:00; pohotovost dnem i nocí na telefonu +90 538 694 44 55"
+        "cs": "Běžná otevírací doba Po–So 9:00–21:00, ne 12:00–17:00; pohotovost dnem i nocí na telefonu +90 538 694 44 55",
+        "sv": "Ordinarie öppettider mån–lör 09.00–21.00, sön 12.00–17.00; akutfall dag och natt via telefon +90 538 694 44 55"
       },
       "small_animals": true,
       "url": "https://www.kiymetveteriner.com/",
@@ -2019,7 +2089,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://vethovenveteriner.com.tr/",
@@ -2047,7 +2118,8 @@
         "pt": "Aberto 24 horas, todos os dias",
         "nl": "Elke dag 24 uur open",
         "pl": "Czynne całą dobę, codziennie",
-        "cs": "Otevřeno nonstop, každý den"
+        "cs": "Otevřeno nonstop, každý den",
+        "sv": "Öppet dygnet runt, alla dagar"
       },
       "small_animals": true,
       "url": "https://www.vetsim.com.tr/",
@@ -2073,7 +2145,8 @@
         "pt": "Serviço de urgência aberto 24 horas, 7 dias por semana",
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week open",
         "pl": "Pogotowie czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Pohotovostní služba otevřena nonstop, 7 dní v týdnu"
+        "cs": "Pohotovostní služba otevřena nonstop, 7 dní v týdnu",
+        "sv": "Akutmottagning öppen dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.dogavet.net/contact.php",
@@ -2101,7 +2174,8 @@
         "pt": "Horário normal seg–sáb 9h00–19h00; urgências 24 horas para pacientes registados",
         "nl": "Reguliere uren ma–za 9.00–19.00 uur; 24 uur per dag spoedzorg voor geregistreerde patiënten",
         "pl": "Zwykłe godziny pon.–sob. 09:00–19:00; całodobowa opieka w nagłych przypadkach dla zarejestrowanych pacjentów",
-        "cs": "Běžná otevírací doba Po–So 9:00–19:00; nonstop pohotovostní péče pro registrované pacienty"
+        "cs": "Běžná otevírací doba Po–So 9:00–19:00; nonstop pohotovostní péče pro registrované pacienty",
+        "sv": "Ordinarie öppettider mån–lör 09.00–19.00; akutvård dygnet runt för registrerade patienter"
       },
       "small_animals": true,
       "url": "https://www.alsancakveteriner.com/",
@@ -2128,7 +2202,8 @@
         "pt": "Seg–sáb 9h00–24h00, dom 10h00–19h00; urgências sem marcação, liga antes",
         "nl": "Ma–za 9.00–24.00, zo 10.00–19.00 uur; spoed zonder afspraak, bel eerst",
         "pl": "pon.–sob. 09:00–24:00, niedz. 10:00–19:00; nagłe przypadki bez umawiania wizyt, najpierw zadzwoń",
-        "cs": "Po–So 9:00–24:00, ne 10:00–19:00; pohotovost bez objednání, nejdřív zavolejte"
+        "cs": "Po–So 9:00–24:00, ne 10:00–19:00; pohotovost bez objednání, nejdřív zavolejte",
+        "sv": "Mån–lör 09.00–24.00, sön 10.00–19.00; akutfall utan tidsbokning, ring först"
       },
       "small_animals": true,
       "url": "https://pityvet.com/tr",
@@ -2155,7 +2230,8 @@
         "pt": "Aberto 24 horas; contacto para urgências 7 dias por semana",
         "nl": "24 uur per dag open; spoed 7 dagen per week bereikbaar",
         "pl": "Czynne całą dobę; nagłe przypadki 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop; pohotovost dostupná 7 dní v týdnu"
+        "cs": "Otevřeno nonstop; pohotovost dostupná 7 dní v týdnu",
+        "sv": "Öppet dygnet runt; akutfall kan nås alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.drfimarine.com/",
@@ -2182,7 +2258,8 @@
         "pt": "Serviço 24 horas por dia",
         "nl": "Dienst de klok rond",
         "pl": "Usługi całodobowe",
-        "cs": "Nonstop provoz"
+        "cs": "Nonstop provoz",
+        "sv": "Service dygnet runt"
       },
       "small_animals": true,
       "url": "https://www.siriusveteriner.com.tr/",
@@ -2210,7 +2287,8 @@
         "pt": "Serviço de urgência 7 dias por semana, 24 horas",
         "nl": "Spoeddienst 7 dagen per week, 24 uur per dag",
         "pl": "Pogotowie 7 dni w tygodniu, całą dobę",
-        "cs": "Pohotovostní služba 7 dní v týdnu, nonstop"
+        "cs": "Pohotovostní služba 7 dní v týdnu, nonstop",
+        "sv": "Akutmottagning alla dagar i veckan, dygnet runt"
       },
       "small_animals": true,
       "url": "https://www.newlifeveteriner.com/",
@@ -2237,7 +2315,8 @@
         "pt": "Horário normal 9h00–20h00; serviço de urgência 24 horas por dia",
         "nl": "Reguliere uren 9.00–20.00 uur; spoeddienst de klok rond",
         "pl": "Zwykłe godziny 09:00–20:00; pogotowie całodobowo",
-        "cs": "Běžná otevírací doba 9:00–20:00; pohotovostní služba nonstop"
+        "cs": "Běžná otevírací doba 9:00–20:00; pohotovostní služba nonstop",
+        "sv": "Ordinarie öppettider 09.00–20.00; akutmottagning dygnet runt"
       },
       "small_animals": true,
       "url": "https://bodrumarvenveterinerklinigi.com.tr/",
@@ -2265,7 +2344,8 @@
         "pt": "Seg–sex 9h30–19h30, sáb 9h30–19h00, dom 10h00–18h00",
         "nl": "Ma–vr 9.30–19.30, za 9.30–19.00, zo 10.00–18.00 uur",
         "pl": "pon.–pt. 09:30–19:30, sob. 09:30–19:00, niedz. 10:00–18:00",
-        "cs": "Po–Pá 9:30–19:30, so 9:30–19:00, ne 10:00–18:00"
+        "cs": "Po–Pá 9:30–19:30, so 9:30–19:00, ne 10:00–18:00",
+        "sv": "Mån–fre 09.30–19.30, lör 09.30–19.00, sön 10.00–18.00"
       },
       "small_animals": true,
       "url": "https://horizonveteriner.com/",
@@ -2292,7 +2372,8 @@
         "pt": "Clínica de serviço de urgência, 24 horas, 7 dias por semana",
         "nl": "Dienstdoende spoedkliniek, 24 uur per dag, 7 dagen per week",
         "pl": "Dyżurna przychodnia pogotowia, całą dobę, 7 dni w tygodniu",
-        "cs": "Pohotovostní veterinární klinika, nonstop, 7 dní v týdnu"
+        "cs": "Pohotovostní veterinární klinika, nonstop, 7 dní v týdnu",
+        "sv": "Jourhavande akutklinik, dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.patipark.com.tr/",
@@ -2318,7 +2399,8 @@
         "pt": "Serviço de urgência; liga antes",
         "nl": "Spoeddienst; bel vooraf",
         "pl": "Pogotowie; zadzwoń przed wizytą",
-        "cs": "Pohotovostní služba; před cestou zavolejte."
+        "cs": "Pohotovostní služba; před cestou zavolejte.",
+        "sv": "Akutmottagning; ring innan du kommer"
       },
       "small_animals": true,
       "url": "https://fethiyevetpati.com/",
@@ -2345,7 +2427,8 @@
         "pt": "Seg–sáb 9h00–19h30, dom 10h00–19h00; urgências fora de horas por telefone",
         "nl": "Ma–za 9.00–19.30, zo 10.00–19.00 uur; spoed buiten openingstijden telefonisch",
         "pl": "pon.–sob. 09:00–19:30, niedz. 10:00–19:00; nagłe przypadki po godzinach przez telefon",
-        "cs": "Po–So 9:00–19:30, ne 10:00–19:00; pohotovost mimo ordinační dobu telefonicky"
+        "cs": "Po–So 9:00–19:30, ne 10:00–19:00; pohotovost mimo ordinační dobu telefonicky",
+        "sv": "Mån–lör 09.00–19.30, sön 10.00–19.00; akutfall efter öppettid via telefon"
       },
       "small_animals": true,
       "url": "https://enpativet.com/",
@@ -2386,7 +2469,8 @@
         "pt": "Todos os dias 9h00–19h00; liga para urgências",
         "nl": "Dagelijks 9.00–19.00 uur; bel bij spoed",
         "pl": "Codziennie 09:00–19:00; w nagłych przypadkach zadzwoń",
-        "cs": "Denně 9:00–19:00; v případě pohotovosti zavolejte"
+        "cs": "Denně 9:00–19:00; v případě pohotovosti zavolejte",
+        "sv": "Dagligen 09.00–19.00; ring vid akutfall"
       },
       "small_animals": true,
       "url": "https://www.dalamanveterinerklinigi.com/",
@@ -2413,7 +2497,8 @@
         "pt": "Seg–sex 9h00–19h00, dom 9h00–15h00",
         "nl": "Ma–vr 9.00–19.00, zo 9.00–15.00 uur",
         "pl": "pon.–pt. 09:00–19:00, niedz. 09:00–15:00",
-        "cs": "Po–Pá 9:00–19:00, ne 9:00–15:00"
+        "cs": "Po–Pá 9:00–19:00, ne 9:00–15:00",
+        "sv": "Mån–fre 09.00–19.00, sön 09.00–15.00"
       },
       "small_animals": true,
       "url": "https://kayavetdatca.com/",
@@ -2440,7 +2525,8 @@
         "pt": "Seg–sáb 9h00–19h00, dom fechado",
         "nl": "Ma–za 9.00–19.00 uur, zo gesloten",
         "pl": "pon.–sob. 09:00–19:00, niedz. nieczynne",
-        "cs": "Po–So 9:00–19:00, v neděli zavřeno"
+        "cs": "Po–So 9:00–19:00, v neděli zavřeno",
+        "sv": "Mån–lör 09.00–19.00, sön stängt"
       },
       "small_animals": true,
       "url": "https://datcaveteriner.com/",
@@ -2467,7 +2553,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana, sem marcação",
         "nl": "24 uur per dag, 7 dagen per week open, zonder afspraak",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu, bez umawiania wizyt",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu, bez objednání"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, bez objednání",
+        "sv": "Öppet dygnet runt, alla dagar i veckan, ingen tidsbokning behövs"
       },
       "small_animals": true,
       "url": "https://www.rotaveteriner.com.tr/",
@@ -2494,7 +2581,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana para urgências",
         "nl": "24 uur per dag, 7 dagen per week open voor spoed",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu w nagłych przypadkach",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu, pro pohotovosti"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, pro pohotovosti",
+        "sv": "Öppet dygnet runt, alla dagar i veckan, för akutfall"
       },
       "small_animals": true,
       "url": "https://www.pet224.com/",
@@ -2522,7 +2610,8 @@
         "pt": "Serviço veterinário 7 dias por semana, 24 horas",
         "nl": "Dierenartsendienst 7 dagen per week, 24 uur per dag",
         "pl": "Usługi weterynaryjne 7 dni w tygodniu, całą dobę",
-        "cs": "Veterinární služba 7 dní v týdnu, nonstop"
+        "cs": "Veterinární služba 7 dní v týdnu, nonstop",
+        "sv": "Veterinärvård alla dagar i veckan, dygnet runt"
       },
       "small_animals": true,
       "url": "https://petclassveteriner.com/bursa-nilufer-nobetci-veteriner/",
@@ -2550,7 +2639,8 @@
         "pt": "Hospital veterinário universitário; liga para confirmares o horário",
         "nl": "Universitair dierenziekenhuis; bel om de openingstijden te bevestigen",
         "pl": "Uniwersytecka lecznica dla zwierząt; zadzwoń, aby potwierdzić godziny",
-        "cs": "Univerzitní veterinární nemocnice; otevírací dobu si ověřte telefonicky"
+        "cs": "Univerzitní veterinární nemocnice; otevírací dobu si ověřte telefonicky",
+        "sv": "Universitetets djursjukhus; ring för att bekräfta öppettiderna"
       },
       "small_animals": true,
       "url": "https://uludag.edu.tr/hayvanhastanesi/about-us-69221",
@@ -2577,7 +2667,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana, incluindo feriados",
         "nl": "24 uur per dag, 7 dagen per week open, ook op feestdagen",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu, także w święta",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně státních svátků"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně státních svátků",
+        "sv": "Öppet dygnet runt, alla dagar i veckan, även helgdagar"
       },
       "small_animals": true,
       "url": "https://heypati.com.tr/",
@@ -2604,7 +2695,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana; urgências sem marcação",
         "nl": "24 uur per dag, 7 dagen per week open; spoed zonder afspraak",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu; nagłe przypadki bez umawiania wizyt",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovost bez objednání"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovost bez objednání",
+        "sv": "Öppet dygnet runt, alla dagar i veckan; akutfall utan tidsbokning"
       },
       "small_animals": true,
       "url": "https://adanaartemishayvanhastanesi.com/",
@@ -2631,7 +2723,8 @@
         "pt": "Aberto todos os dias, 24 h/24, 7 dias por semana; telefone também no WhatsApp",
         "nl": "Elke dag 24/7 open; telefoon ook via WhatsApp bereikbaar",
         "pl": "Czynne codziennie, całodobowo; telefon także na WhatsAppie",
-        "cs": "Otevřeno každý den nonstop; telefon také na WhatsAppu"
+        "cs": "Otevřeno každý den nonstop; telefon také na WhatsAppu",
+        "sv": "Öppet alla dagar, dygnet runt; telefon även på WhatsApp"
       },
       "small_animals": true,
       "url": "https://adanaferahveterinerklinigi.com/",
@@ -2659,7 +2752,8 @@
         "pt": "Serviço veterinário de urgência 24 horas, 7 dias por semana",
         "nl": "Spoeddienst dierenarts 24 uur per dag, 7 dagen per week",
         "pl": "Pogotowie weterynaryjne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Veterinární pohotovost nonstop, 7 dní v týdnu"
+        "cs": "Veterinární pohotovost nonstop, 7 dní v týdnu",
+        "sv": "Akut veterinärvård dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.petical.com.tr/",
@@ -2687,7 +2781,8 @@
         "pt": "Serviço de veterinário de piquete 24 horas, 7 dias por semana",
         "nl": "Dienstdoende dierenarts 24 uur per dag, 7 dagen per week",
         "pl": "Dyżur weterynaryjny 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Pohotovostní veterinární služba nonstop, 7 dní v týdnu"
+        "cs": "Pohotovostní veterinární služba nonstop, 7 dní v týdnu",
+        "sv": "Jourhavande veterinär dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.veterinoloji.com/",
@@ -2714,7 +2809,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.canakkalevetlandvet.com/",
@@ -2740,7 +2836,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://ankahayvanhastanesi.com/",
@@ -2768,7 +2865,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://canakkalepetikoveteriner.com/",
@@ -2794,7 +2892,8 @@
         "pt": "Intervenção de urgência 24 horas, 7 dias por semana",
         "nl": "Spoedhulp 24 uur per dag, 7 dagen per week",
         "pl": "Interwencja w nagłych przypadkach 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Pohotovostní zákrok nonstop, 7 dní v týdnu"
+        "cs": "Pohotovostní zákrok nonstop, 7 dní v týdnu",
+        "sv": "Akutinsats dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.acarveterinerlik.com.tr/",
@@ -2821,7 +2920,8 @@
         "pt": "Liga para confirmares o horário",
         "nl": "Bel om de openingstijden te bevestigen",
         "pl": "Zadzwoń, aby potwierdzić godziny",
-        "cs": "Otevírací dobu si ověřte telefonicky"
+        "cs": "Otevírací dobu si ověřte telefonicky",
+        "sv": "Ring för att bekräfta öppettiderna"
       },
       "small_animals": true,
       "url": "https://isikveterinerlik.com/",
@@ -2848,7 +2948,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana, incluindo feriados",
         "nl": "24 uur per dag, 7 dagen per week open, ook op feestdagen",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu, także w święta",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně státních svátků"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně státních svátků",
+        "sv": "Öppet dygnet runt, alla dagar i veckan, även helgdagar"
       },
       "small_animals": true,
       "url": "https://www.vetpet.com.tr/gaziantep-veteriner/",
@@ -2876,7 +2977,8 @@
         "pt": "Serviço de urgência 7 dias por semana, 24 horas",
         "nl": "Spoeddienst 7 dagen per week, 24 uur per dag",
         "pl": "Pogotowie 7 dni w tygodniu, całą dobę",
-        "cs": "Pohotovostní služba 7 dní v týdnu, nonstop"
+        "cs": "Pohotovostní služba 7 dní v týdnu, nonstop",
+        "sv": "Akutmottagning alla dagar i veckan, dygnet runt"
       },
       "small_animals": true,
       "url": "https://www.petkingveteriner.com/",
@@ -2904,7 +3006,8 @@
         "pt": "Seg–sáb 9h00–21h00, dom 10h00–21h00; linha telefónica de urgência 24 horas por dia",
         "nl": "Ma–za 9.00–21.00, zo 10.00–21.00 uur; spoedlijn de klok rond",
         "pl": "pon.–sob. 09:00–21:00, niedz. 10:00–21:00; telefon w nagłych przypadkach całodobowo",
-        "cs": "Po–So 9:00–21:00, ne 10:00–21:00; pohotovostní telefonní linka nonstop"
+        "cs": "Po–So 9:00–21:00, ne 10:00–21:00; pohotovostní telefonní linka nonstop",
+        "sv": "Mån–lör 09.00–21.00, sön 10.00–21.00; akutlinje dygnet runt"
       },
       "small_animals": true,
       "url": "https://www.dogtorveteriner.com/",
@@ -2931,7 +3034,8 @@
         "pt": "Seg–sáb 10h00–19h00, dom fechado; liga antes de vires em caso de urgência",
         "nl": "Ma–za 10.00–19.00 uur, zo gesloten; bel bij spoed eerst voordat je langskomt",
         "pl": "pon.–sob. 10:00–19:00, niedz. nieczynne; w nagłych przypadkach zadzwoń przed przyjazdem",
-        "cs": "Po–So 10:00–19:00, v neděli zavřeno; v případě pohotovosti před příchodem zavolejte"
+        "cs": "Po–So 10:00–19:00, v neděli zavřeno; v případě pohotovosti před příchodem zavolejte",
+        "sv": "Mån–lör 10.00–19.00, sön stängt; ring innan du kommer vid akutfall"
       },
       "small_animals": true,
       "url": "https://www.canakbasveteriner.com/iletisim",
@@ -2957,7 +3061,8 @@
         "pt": "Horário normal dias úteis 9h30–19h00; serviço de urgência 24 horas, 7 dias por semana",
         "nl": "Reguliere uren op werkdagen 9.30–19.00 uur; spoeddienst 24 uur per dag, 7 dagen per week",
         "pl": "Zwykłe godziny w dni robocze 09:30–19:00; pogotowie 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Běžná otevírací doba v pracovní dny 9:30–19:00; pohotovostní služba nonstop, 7 dní v týdnu"
+        "cs": "Běžná otevírací doba v pracovní dny 9:30–19:00; pohotovostní služba nonstop, 7 dní v týdnu",
+        "sv": "Ordinarie öppettider vardagar 09.30–19.00; akutmottagning dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://odunpazariveteriner.com.tr/",
@@ -2984,7 +3089,8 @@
         "pt": "Seg–sáb 9h00–21h00; clínica de urgência, liga antes",
         "nl": "Ma–za 9.00–21.00 uur; spoedkliniek, bel vooraf",
         "pl": "pon.–sob. 09:00–21:00; przychodnia pogotowia, zadzwoń przed wizytą",
-        "cs": "Po–So 9:00–21:00; pohotovostní klinika, před cestou zavolejte"
+        "cs": "Po–So 9:00–21:00; pohotovostní klinika, před cestou zavolejte",
+        "sv": "Mån–lör 09.00–21.00; akutklinik, ring innan du kommer"
       },
       "small_animals": true,
       "url": "https://www.sayinveteriner.com/",
@@ -3010,7 +3116,8 @@
         "pt": "Seg–sáb 10h00–22h00, dom 12h00–19h00",
         "nl": "Ma–za 10.00–22.00, zo 12.00–19.00 uur",
         "pl": "pon.–sob. 10:00–22:00, niedz. 12:00–19:00",
-        "cs": "Po–So 10:00–22:00, ne 12:00–19:00"
+        "cs": "Po–So 10:00–22:00, ne 12:00–19:00",
+        "sv": "Mån–lör 10.00–22.00, sön 12.00–19.00"
       },
       "small_animals": true,
       "url": "https://melodimveteriner.com/tepebasi-nobetci-veterinerler/",
@@ -3036,7 +3143,8 @@
         "pt": "Serviço de urgência aberto 24 horas, 7 dias por semana",
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week open",
         "pl": "Pogotowie czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Pohotovostní služba otevřena nonstop, 7 dní v týdnu"
+        "cs": "Pohotovostní služba otevřena nonstop, 7 dní v týdnu",
+        "sv": "Akutmottagning öppen dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://trakyahayvanhastanesi.org/",
@@ -3064,7 +3172,8 @@
         "pt": "Serviço 7 dias por semana, 24 horas",
         "nl": "Dienst 7 dagen per week, 24 uur per dag",
         "pl": "Usługi 7 dni w tygodniu, całą dobę",
-        "cs": "Služba 7 dní v týdnu, nonstop"
+        "cs": "Služba 7 dní v týdnu, nonstop",
+        "sv": "Service alla dagar i veckan, dygnet runt"
       },
       "small_animals": true,
       "url": "https://www.vivaveteriner.com/",
@@ -3092,7 +3201,8 @@
         "pt": "Aberto 24 horas, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.cerkezkoyveteriner.com.tr/",
@@ -3119,7 +3229,8 @@
         "pt": "Serviço de urgência 7 dias por semana, 24 horas",
         "nl": "Spoeddienst 7 dagen per week, 24 uur per dag",
         "pl": "Pogotowie 7 dni w tygodniu, całą dobę",
-        "cs": "Pohotovostní služba 7 dní v týdnu, nonstop"
+        "cs": "Pohotovostní služba 7 dní v týdnu, nonstop",
+        "sv": "Akutmottagning alla dagar i veckan, dygnet runt"
       },
       "small_animals": true,
       "url": "https://marmaraveterinerlik.com/",
@@ -3147,7 +3258,8 @@
         "pt": "Aberto 24 horas por dia, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://ventusvet.com/sayfa/gebze-nobetci-veteriner",
@@ -3174,7 +3286,8 @@
         "pt": "Segunda a sábado 9h00–20h00, domingo 9h00–19h00; urgências 24 h/24, 7 dias por semana. Liga antes.",
         "nl": "Ma–za 9.00–20.00, zo 9.00–19.00 uur; spoedzorg 24/7, bel vooraf",
         "pl": "pon.–sob. 09:00–20:00, niedz. 09:00–19:00; opieka w nagłych przypadkach 24/7, zadzwoń przed wizytą",
-        "cs": "Po–So 9:00–20:00, ne 9:00–19:00; nonstop pohotovostní péče, před cestou zavolejte"
+        "cs": "Po–So 9:00–20:00, ne 9:00–19:00; nonstop pohotovostní péče, před cestou zavolejte",
+        "sv": "Mån–lör 09.00–20.00, sön 09.00–19.00; akutvård dygnet runt, ring innan du kommer"
       },
       "small_animals": true,
       "url": "https://izmitacilveteriner.com/",
@@ -3201,7 +3314,8 @@
         "pt": "Serviço de urgências veterinárias 24 horas por dia, 7 dias por semana",
         "nl": "Spoeddienst dierenarts 24 uur per dag, 7 dagen per week",
         "pl": "Pogotowie weterynaryjne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Veterinární pohotovost nonstop, 7 dní v týdnu"
+        "cs": "Veterinární pohotovost nonstop, 7 dní v týdnu",
+        "sv": "Akut veterinärtjänst dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://denizlimerkezveteriner.com/",
@@ -3227,7 +3341,8 @@
         "pt": "Serviço de urgências 24 horas por dia, 7 dias por semana",
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week",
         "pl": "Pogotowie całodobowo, 7 dni w tygodniu",
-        "cs": "Pohotovostní služba nonstop, 7 dní v týdnu"
+        "cs": "Pohotovostní služba nonstop, 7 dní v týdnu",
+        "sv": "Akutmottagning dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.vet20.com/",
@@ -3255,7 +3370,8 @@
         "pt": "Hospital veterinário universitário, aberto 24 horas por dia; urgências 7 dias por semana, com atendimento por ordem de gravidade",
         "nl": "Universitair dierenziekenhuis, 24 uur per dag open; spoedkliniek 7 dagen per week, patiënten toegelaten volgens urgentie",
         "pl": "Uniwersytecka lecznica dla zwierząt, czynna całą dobę; przychodnia pogotowia 7 dni w tygodniu, pacjenci przyjmowani według pilności",
-        "cs": "Univerzitní veterinární nemocnice, otevřeno nonstop; pohotovostní klinika 7 dní v týdnu, pacienti se přijímají podle naléhavosti"
+        "cs": "Univerzitní veterinární nemocnice, otevřeno nonstop; pohotovostní klinika 7 dní v týdnu, pacienti se přijímají podle naléhavosti",
+        "sv": "Universitetets djursjukhus, öppet dygnet runt; akutklinik alla dagar i veckan, patienter tas emot efter hur akut det är"
       },
       "small_animals": true,
       "url": "https://hayvanhastanesi.aku.edu.tr/",
@@ -3283,7 +3399,8 @@
         "pt": "Segunda a sexta 9h00–19h00, fins de semana 10h00–18h00",
         "nl": "Werkdagen 9.00–19.00, weekend 10.00–18.00 uur",
         "pl": "W dni robocze 09:00–19:00, w weekendy 10:00–18:00",
-        "cs": "V pracovní dny 9:00–19:00, o víkendech 10:00–18:00"
+        "cs": "V pracovní dny 9:00–19:00, o víkendech 10:00–18:00",
+        "sv": "Vardagar 09.00–19.00, helger 10.00–18.00"
       },
       "small_animals": true,
       "url": "https://hatayaslanveteriner.kolay.vet/",
@@ -3308,7 +3425,8 @@
         "pt": "Consultas de segunda a sexta 8h30–17h00; urgências 24 h/24, 7 dias por semana",
         "nl": "Spreekuur op werkdagen 8.30–17.00 uur; spoeddienst 24/7",
         "pl": "Przychodnia ambulatoryjna w dni robocze 08:30–17:00; pogotowie 24/7",
-        "cs": "Ambulance v pracovní dny 8:30–17:00; pohotovostní služba nonstop"
+        "cs": "Ambulance v pracovní dny 8:30–17:00; pohotovostní služba nonstop",
+        "sv": "Öppenvårdsklinik vardagar 08.30–17.00; akutmottagning dygnet runt"
       },
       "small_animals": true,
       "url": "https://hayvanhastanesi.selcuk.edu.tr/",
@@ -3335,7 +3453,8 @@
         "pt": "Aberto 24 horas por dia, 7 dias por semana",
         "nl": "24 uur per dag, 7 dagen per week open",
         "pl": "Czynne 24 godziny na dobę, 7 dni w tygodniu",
-        "cs": "Otevřeno nonstop, 7 dní v týdnu"
+        "cs": "Otevřeno nonstop, 7 dní v týdnu",
+        "sv": "Öppet dygnet runt, alla dagar i veckan"
       },
       "small_animals": true,
       "url": "https://www.ikonyumvet.com/konya-veteriner",
@@ -3361,7 +3480,8 @@
         "pt": "Urgências 24 h/24, 7 dias por semana",
         "nl": "Spoeddienst 24/7",
         "pl": "Pogotowie całodobowo, 7 dni w tygodniu",
-        "cs": "Pohotovostní služba nonstop"
+        "cs": "Pohotovostní služba nonstop",
+        "sv": "Akutmottagning dygnet runt"
       },
       "small_animals": true,
       "url": "https://www.notaveterinerkonya.com.tr/",
@@ -3387,7 +3507,8 @@
         "pt": "Segunda a sexta 9h00–19h00, sábado 9h00–15h00, domingo encerrado",
         "nl": "Ma–vr 9.00–19.00, za 9.00–15.00 uur, zo gesloten",
         "pl": "pon.–pt. 09:00–19:00, sob. 09:00–15:00, niedz. nieczynne",
-        "cs": "Po–Pá 9:00–19:00, so 9:00–15:00, v neděli zavřeno"
+        "cs": "Po–Pá 9:00–19:00, so 9:00–15:00, v neděli zavřeno",
+        "sv": "Mån–fre 09.00–19.00, lör 09.00–15.00, söndag stängt"
       },
       "small_animals": true,
       "url": "https://piveterinerklinigi.com/",
@@ -3413,7 +3534,8 @@
         "pt": "Segunda a sábado 9h00–19h00, domingo encerrado",
         "nl": "Ma–za 9.00–19.00 uur, zo gesloten",
         "pl": "pon.–sob. 09:00–19:00, niedz. nieczynne",
-        "cs": "Po–So 9:00–19:00, v neděli zavřeno"
+        "cs": "Po–So 9:00–19:00, v neděli zavřeno",
+        "sv": "Mån–lör 09.00–19.00, söndag stängt"
       },
       "small_animals": true,
       "url": "https://www.familyavet.com.tr/",
@@ -3439,7 +3561,8 @@
         "pt": "Segunda a sexta 9h00–20h00, fins de semana 10h00–19h00",
         "nl": "Werkdagen 9.00–20.00, weekend 10.00–19.00 uur",
         "pl": "W dni robocze 09:00–20:00, w weekendy 10:00–19:00",
-        "cs": "V pracovní dny 9:00–20:00, o víkendech 10:00–19:00"
+        "cs": "V pracovní dny 9:00–20:00, o víkendech 10:00–19:00",
+        "sv": "Vardagar 09.00–20.00, helger 10.00–19.00"
       },
       "small_animals": true,
       "url": "https://naturavet.kolay.vet/",
@@ -3465,7 +3588,8 @@
         "pt": "Todos os dias 10h00–19h00",
         "nl": "Dagelijks 10.00–19.00 uur",
         "pl": "Codziennie 10:00–19:00",
-        "cs": "Denně 10:00–19:00"
+        "cs": "Denně 10:00–19:00",
+        "sv": "Dagligen 10.00–19.00"
       },
       "small_animals": true,
       "url": "https://atanvet.kolay.vet/",
@@ -3518,7 +3642,8 @@
         "pt": "Aberto 24 h/24, 7 dias por semana; sob marcação",
         "nl": "24/7 open; afspraak gewenst",
         "pl": "Czynne 24/7; prosimy o umówienie wizyty",
-        "cs": "Otevřeno nonstop; nutné objednání"
+        "cs": "Otevřeno nonstop; nutné objednání",
+        "sv": "Öppet dygnet runt; tidsbokning önskas"
       },
       "small_animals": true,
       "url": "https://www.petamicaveteriner.com/",
@@ -3559,7 +3684,8 @@
         "pt": "Contactável por telefone 24 horas por dia, 7 dias por semana; linha de urgência +90 533 159 26 00",
         "nl": "24 uur per dag, 7 dagen per week telefonisch bereikbaar; spoedlijn +90 533 159 26 00",
         "pl": "Dostępni telefonicznie 24 godziny na dobę, 7 dni w tygodniu; linia dla nagłych przypadków +90 533 159 26 00",
-        "cs": "Telefonicky dostupné nonstop, 7 dní v týdnu; pohotovostní linka +90 533 159 26 00"
+        "cs": "Telefonicky dostupné nonstop, 7 dní v týdnu; pohotovostní linka +90 533 159 26 00",
+        "sv": "Nåbar via telefon dygnet runt, alla dagar i veckan; akutlinje +90 533 159 26 00"
       },
       "small_animals": true,
       "url": "https://www.vetinternational.com.tr/iletisim/",
@@ -3586,7 +3712,8 @@
         "pt": "Segunda a sábado 9h30–18h00",
         "nl": "Ma–za 9.30–18.00 uur",
         "pl": "pon.–sob. 09:30–18:00",
-        "cs": "Po–So 9:30–18:00"
+        "cs": "Po–So 9:30–18:00",
+        "sv": "Mån–lör 09.30–18.00"
       },
       "small_animals": true,
       "url": "https://www.asvetkusadasi.com/",
@@ -3625,7 +3752,8 @@
         "pt": "Segunda a sábado 10h00–18h30, domingo encerrado",
         "nl": "Ma–za 10.00–18.30 uur, zondag gesloten",
         "pl": "pon.–sob. 10:00–18:30, niedz. nieczynne",
-        "cs": "Po–So 10:00–18:30, v neděli zavřeno"
+        "cs": "Po–So 10:00–18:30, v neděli zavřeno",
+        "sv": "Mån–lör 10.00–18.30, söndag stängt"
       },
       "small_animals": true,
       "url": "https://www.ozgencvet.com.tr/contact",
@@ -3651,7 +3779,8 @@
         "pt": "Segunda a sábado 9h00–19h00, domingo 13h00–19h00",
         "nl": "Ma–za 9.00–19.00 uur, zo 13.00–19.00 uur",
         "pl": "pon.–sob. 09:00–19:00, niedz. 13:00–19:00",
-        "cs": "Po–So 9:00–19:00, ne 13:00–19:00"
+        "cs": "Po–So 9:00–19:00, ne 13:00–19:00",
+        "sv": "Mån–lör 09.00–19.00, sön 13.00–19.00"
       },
       "small_animals": true,
       "url": "https://riva-veteriner-klinigi.vercel.app/",
@@ -3676,7 +3805,8 @@
         "pt": "Segunda a sábado 9h00–19h00, domingo 10h00–17h00",
         "nl": "Ma–za 9.00–19.00 uur, zo 10.00–17.00 uur",
         "pl": "pon.–sob. 09:00–19:00, niedz. 10:00–17:00",
-        "cs": "Po–So 9:00–19:00, ne 10:00–17:00"
+        "cs": "Po–So 9:00–19:00, ne 10:00–17:00",
+        "sv": "Mån–lör 09.00–19.00, sön 10.00–17.00"
       },
       "small_animals": true,
       "url": "https://petiteveteriner.com/",
@@ -3730,7 +3860,8 @@
         "pt": "Todos os dias 9h00–19h00",
         "nl": "Dagelijks 9.00–19.00 uur",
         "pl": "Codziennie 09:00–19:00",
-        "cs": "Denně 9:00–19:00"
+        "cs": "Denně 9:00–19:00",
+        "sv": "Dagligen 09.00–19.00"
       },
       "small_animals": true,
       "url": "https://akkentgaziantepdamlaveteriner.kolay.vet/",
@@ -3756,7 +3887,8 @@
         "pt": "Segunda a sábado 9h00–18h00",
         "nl": "Ma–za 9.00–18.00 uur",
         "pl": "pon.–sob. 09:00–18:00",
-        "cs": "Po–So 9:00–18:00"
+        "cs": "Po–So 9:00–18:00",
+        "sv": "Mån–lör 09.00–18.00"
       },
       "small_animals": true,
       "url": "https://www.trabzonveteriner.com/",

@@ -47,7 +47,8 @@
         "pt": "Hospital universitário, sob marcação: segunda a sexta 8h00–15h00, quarta com horário alargado ao fim do dia, sábado 9h00–13h00. Sem serviço de urgências para animais de pequeno porte.",
         "nl": "Opleidingskliniek, op afspraak: ma–vr 8.00–15.00 uur, woensdag verlengde avondopening, za 9.00–13.00 uur. Geen spoedeisende hulp voor kleine huisdieren vermeld.",
         "pl": "Szpital dydaktyczny, po wcześniejszym umówieniu: pon.–pt. 8:00–15:00, w środy wydłużone godziny wieczorne, sob. 9:00–13:00. Nie podano pogotowia dla małych zwierząt.",
-        "cs": "Výuková nemocnice, pouze na objednání: Po–Pá 8:00–15:00, ve středu prodloužená večerní doba, so 9:00–13:00. Pohotovostní služba pro malá zvířata není uvedena."
+        "cs": "Výuková nemocnice, pouze na objednání: Po–Pá 8:00–15:00, ve středu prodloužená večerní doba, so 9:00–13:00. Pohotovostní služba pro malá zvířata není uvedena.",
+        "sv": "Undervisningsdjursjukhus, efter bokning: mån–fre 08.00–15.00, ons förlängda kvällstider, lör 09.00–13.00. Ingen akutmottagning för smådjur anges."
       }
     },
     {
@@ -67,7 +68,8 @@
         "pt": "Segunda a sexta 8h00–18h00, sábado 9h00–14h00. Fora de horas e urgências: +1 868 688 8281.",
         "nl": "Ma–vr 8.00–18.00 uur, za 9.00–14.00 uur. Buiten kantooruren en bij spoed: +1 868 688 8281.",
         "pl": "pon.–pt. 8:00–18:00, sob. 9:00–14:00. Po godzinach i w nagłych przypadkach: +1 868 688 8281.",
-        "cs": "Po–Pá 8:00–18:00, so 9:00–14:00. Mimo ordinační dobu a v pohotovosti: +1 868 688 8281."
+        "cs": "Po–Pá 8:00–18:00, so 9:00–14:00. Mimo ordinační dobu a v pohotovosti: +1 868 688 8281.",
+        "sv": "Mån–fre 08.00–18.00, lör 09.00–14.00. Utanför öppettiderna och vid akutfall: +1 868 688 8281."
       }
     },
     {
@@ -100,7 +102,8 @@
         "pt": "Fora de horas e urgências: +1 868 725 2548.",
         "nl": "Buiten kantooruren en bij spoed: +1 868 725 2548.",
         "pl": "Po godzinach i w nagłych przypadkach: +1 868 725 2548.",
-        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 725 2548."
+        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 725 2548.",
+        "sv": "Utanför öppettiderna och vid akutfall: +1 868 725 2548."
       }
     },
     {
@@ -120,7 +123,8 @@
         "pt": "Fora de horas e urgências: +1 868 759 3161.",
         "nl": "Buiten kantooruren en bij spoed: +1 868 759 3161.",
         "pl": "Po godzinach i w nagłych przypadkach: +1 868 759 3161.",
-        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 759 3161."
+        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 759 3161.",
+        "sv": "Utanför öppettiderna och vid akutfall: +1 868 759 3161."
       }
     },
     {
@@ -140,7 +144,8 @@
         "pt": "Fora de horas e urgências: +1 868 310 1227.",
         "nl": "Buiten kantooruren en bij spoed: +1 868 310 1227.",
         "pl": "Po godzinach i w nagłych przypadkach: +1 868 310 1227.",
-        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 310 1227."
+        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 310 1227.",
+        "sv": "Utanför öppettiderna och vid akutfall: +1 868 310 1227."
       }
     },
     {
@@ -160,7 +165,8 @@
         "pt": "Segunda a sexta 8h00–16h45, sábado 9h00–12h45, domingo e feriados 9h00–10h45. WhatsApp +1 868 376 3427.",
         "nl": "Ma–vr 8.00–16.45 uur, za 9.00–12.45 uur, zo en feestdagen 9.00–10.45 uur. WhatsApp +1 868 376 3427.",
         "pl": "pon.–pt. 8:00–16:45, sob. 9:00–12:45, niedz. i święta 9:00–10:45. WhatsApp +1 868 376 3427.",
-        "cs": "Po–Pá 8:00–16:45, so 9:00–12:45, ne a státní svátky 9:00–10:45. WhatsApp +1 868 376 3427."
+        "cs": "Po–Pá 8:00–16:45, so 9:00–12:45, ne a státní svátky 9:00–10:45. WhatsApp +1 868 376 3427.",
+        "sv": "Mån–fre 08.00–16.45, lör 09.00–12.45, sön och helgdagar 09.00–10.45. WhatsApp +1 868 376 3427."
       }
     },
     {
@@ -180,7 +186,8 @@
         "pt": "Fora de horas e urgências apenas para clientes já registados.",
         "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten.",
         "pl": "Po godzinach i w nagłych przypadkach tylko dla stałych klientów.",
-        "cs": "Mimo ordinační dobu a v pohotovosti pouze pro stávající klienty."
+        "cs": "Mimo ordinační dobu a v pohotovosti pouze pro stávající klienty.",
+        "sv": "Utanför öppettiderna och vid akutfall endast för befintliga kunder."
       }
     },
     {
@@ -200,7 +207,8 @@
         "pt": "Fora de horas e urgências apenas para clientes já registados: +1 868 715 3555.",
         "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten: +1 868 715 3555.",
         "pl": "Po godzinach i w nagłych przypadkach tylko dla stałych klientów: +1 868 715 3555.",
-        "cs": "Mimo ordinační dobu a v pohotovosti pouze pro stávající klienty: +1 868 715 3555."
+        "cs": "Mimo ordinační dobu a v pohotovosti pouze pro stávající klienty: +1 868 715 3555.",
+        "sv": "Utanför öppettiderna och vid akutfall endast för befintliga kunder: +1 868 715 3555."
       }
     },
     {
@@ -220,7 +228,8 @@
         "pt": "Fora de horas e urgências: +1 868 353 3412.",
         "nl": "Buiten kantooruren en bij spoed: +1 868 353 3412.",
         "pl": "Po godzinach i w nagłych przypadkach: +1 868 353 3412.",
-        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 353 3412."
+        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 353 3412.",
+        "sv": "Utanför öppettiderna och vid akutfall: +1 868 353 3412."
       }
     },
     {
@@ -240,7 +249,8 @@
         "pt": "Fora de horas e urgências apenas para clientes já registados: +1 868 701 4288.",
         "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten: +1 868 701 4288.",
         "pl": "Po godzinach i w nagłych przypadkach tylko dla stałych klientów: +1 868 701 4288.",
-        "cs": "Mimo ordinační dobu a v pohotovosti pouze pro stávající klienty: +1 868 701 4288."
+        "cs": "Mimo ordinační dobu a v pohotovosti pouze pro stávající klienty: +1 868 701 4288.",
+        "sv": "Utanför öppettiderna och vid akutfall endast för befintliga kunder: +1 868 701 4288."
       }
     },
     {
@@ -260,7 +270,8 @@
         "pt": "Urgências: +1 868 360 4802.",
         "nl": "Spoed: +1 868 360 4802.",
         "pl": "Nagłe przypadki: +1 868 360 4802.",
-        "cs": "Pohotovost: +1 868 360 4802."
+        "cs": "Pohotovost: +1 868 360 4802.",
+        "sv": "Akutfall: +1 868 360 4802."
       }
     },
     {
@@ -293,7 +304,8 @@
         "pt": "Fora de horas e urgências: +1 868 333 1010.",
         "nl": "Buiten kantooruren en bij spoed: +1 868 333 1010.",
         "pl": "Po godzinach i w nagłych przypadkach: +1 868 333 1010.",
-        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 333 1010."
+        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 333 1010.",
+        "sv": "Utanför öppettiderna och vid akutfall: +1 868 333 1010."
       }
     },
     {
@@ -313,7 +325,8 @@
         "pt": "Fora de horas e urgências: +1 868 342 5928.",
         "nl": "Buiten kantooruren en bij spoed: +1 868 342 5928.",
         "pl": "Po godzinach i w nagłych przypadkach: +1 868 342 5928.",
-        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 342 5928."
+        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 342 5928.",
+        "sv": "Utanför öppettiderna och vid akutfall: +1 868 342 5928."
       }
     },
     {
@@ -346,7 +359,8 @@
         "pt": "Fora de horas e urgências apenas para clientes já registados.",
         "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten.",
         "pl": "Po godzinach i w nagłych przypadkach tylko dla stałych klientów.",
-        "cs": "Mimo ordinační dobu a v pohotovosti pouze pro stávající klienty."
+        "cs": "Mimo ordinační dobu a v pohotovosti pouze pro stávající klienty.",
+        "sv": "Utanför öppettiderna och vid akutfall endast för befintliga kunder."
       }
     },
     {
@@ -366,7 +380,8 @@
         "pt": "Fora de horas e urgências apenas para clientes já registados.",
         "nl": "Buiten kantooruren en bij spoed alleen voor bestaande klanten.",
         "pl": "Po godzinach i w nagłych przypadkach tylko dla stałych klientów.",
-        "cs": "Mimo ordinační dobu a v pohotovosti pouze pro stávající klienty."
+        "cs": "Mimo ordinační dobu a v pohotovosti pouze pro stávající klienty.",
+        "sv": "Utanför öppettiderna och vid akutfall endast för befintliga kunder."
       }
     },
     {
@@ -386,7 +401,8 @@
         "pt": "Fora de horas e urgências: +1 868 276 1706.",
         "nl": "Buiten kantooruren en bij spoed: +1 868 276 1706.",
         "pl": "Po godzinach i w nagłych przypadkach: +1 868 276 1706.",
-        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 276 1706."
+        "cs": "Mimo ordinační dobu a v pohotovosti: +1 868 276 1706.",
+        "sv": "Utanför öppettiderna och vid akutfall: +1 868 276 1706."
       }
     }
   ],

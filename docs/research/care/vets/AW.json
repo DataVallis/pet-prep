@@ -34,7 +34,8 @@
       "note": "Re-verified 2026-11-16: page shows '24/7 Emergency' in header/feature tags, but the Hours section only says emergencies are 'Available outside regular hours' (ambiguous, not explicit round-the-clock), so emergency_24h set to false; phone confirmation advisable. WhatsApp +297 699 0077.",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Po–Pá 8:00–18:00, so 9:00–13:00, v neděli zavřeno. Pohotovostní péče mimo běžnou ordinační dobu; zavolejte nebo napište na WhatsApp +297 699 0077."
+        "cs": "Po–Pá 8:00–18:00, so 9:00–13:00, v neděli zavřeno. Pohotovostní péče mimo běžnou ordinační dobu; zavolejte nebo napište na WhatsApp +297 699 0077.",
+        "sv": "Mån–fre 8.00–18.00, lör 9.00–13.00, sön stängt. Akutvård utanför ordinarie öppettider; ring eller skriv på WhatsApp +297 699 0077."
       }
     },
     {
@@ -52,7 +53,8 @@
       "note": "Contact page meta says 'For Emergency and Appointment Whatsapp: +297 5622710'; no 24-hour claim on opened pages.",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Po–So 8:00–18:00, v neděli zavřeno. Pohotovost a objednání přes WhatsApp +297 562 2710."
+        "cs": "Po–So 8:00–18:00, v neděli zavřeno. Pohotovost a objednání přes WhatsApp +297 562 2710.",
+        "sv": "Mån–lör 8.00–18.00, sön stängt. Akutfall och tidsbokning via WhatsApp +297 562 2710."
       }
     }
   ],

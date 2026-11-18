@@ -59,7 +59,8 @@
         "pt": "Internamento com médico de serviço 24 horas por dia, sem dias de folga. Consultas externas (Ivasyuk Ave. 4, +380 50 537 10 00) todos os dias 9h00–21h00.",
         "nl": "Opnameafdeling met dienstdoende arts de klok rond, elke dag. Polikliniek (Ivasyuk Ave. 4, +380 50 537 10 00) dagelijks 9.00–21.00 uur.",
         "pl": "Oddział stacjonarny z lekarzem dyżurnym całą dobę, bez dni wolnych. Poradnia ambulatoryjna (al. Ivasyuk 4, +380 50 537 10 00) codziennie 9:00–21:00.",
-        "cs": "Lůžkové oddělení s lékařem ve službě nonstop, bez dnů volna. Ambulance (Ivasyuk Ave. 4, +380 50 537 10 00) denně 9:00–21:00."
+        "cs": "Lůžkové oddělení s lékařem ve službě nonstop, bez dnů volna. Ambulance (Ivasyuk Ave. 4, +380 50 537 10 00) denně 9:00–21:00.",
+        "sv": "Slutenvårdsavdelning med jourhavande läkare dygnet runt, utan lediga dagar. Öppenvårdsavdelning (Ivasyuk Ave. 4, +380 50 537 10 00) 09.00–21.00 dagligen."
       }
     },
     {
@@ -83,7 +84,8 @@
         "pt": "Urgências para gatos e cães 24 horas por dia; em Dmytrivska 39, entrada de urgência n.º 3 8h00–20h00, entrada n.º 2 20h00–8h00.",
         "nl": "Spoedeisende hulp voor katten en honden 24 uur per dag; Dmytrivska 39: spoedingang nr. 3 8.00–20.00 uur, ingang nr. 2 20.00–8.00 uur.",
         "pl": "Opieka w nagłych przypadkach dla kotów i psów całą dobę; przy Dmytrivska 39 wejście dla nagłych przypadków nr 3 8:00–20:00, wejście nr 2 20:00–8:00.",
-        "cs": "Pohotovostní péče pro kočky a psy nonstop; na adrese Dmytrivska 39 pohotovostní vchod č. 3 8:00–20:00, vchod č. 2 20:00–8:00."
+        "cs": "Pohotovostní péče pro kočky a psy nonstop; na adrese Dmytrivska 39 pohotovostní vchod č. 3 8:00–20:00, vchod č. 2 20:00–8:00.",
+        "sv": "Akutvård för katter och hundar dygnet runt; på Dmytrivska 39 akutingång nr 3 08.00–20.00, ingång nr 2 20.00–08.00."
       }
     },
     {
@@ -107,7 +109,8 @@
         "pt": "Urgências para gatos e cães 24 horas por dia.",
         "nl": "Spoedeisende hulp voor katten en honden 24 uur per dag.",
         "pl": "Opieka w nagłych przypadkach dla kotów i psów całą dobę.",
-        "cs": "Pohotovostní péče pro kočky a psy nonstop."
+        "cs": "Pohotovostní péče pro kočky a psy nonstop.",
+        "sv": "Akutvård för katter och hundar dygnet runt."
       }
     },
     {
@@ -131,7 +134,8 @@
         "pt": "Aberto 24 horas por dia sob marcação; durante o recolher obrigatório só são admitidos casos urgentes.",
         "nl": "De klok rond open op afspraak; tijdens de avondklok worden alleen spoedgevallen toegelaten.",
         "pl": "Czynne całą dobę po wcześniejszym umówieniu; w czasie godziny policyjnej przyjmowani są tylko pacjenci w stanie pilnym.",
-        "cs": "Otevřeno nonstop po předchozím objednání; během zákazu vycházení se přijímají pouze naléhavé případy."
+        "cs": "Otevřeno nonstop po předchozím objednání; během zákazu vycházení se přijímají pouze naléhavé případy.",
+        "sv": "Öppet dygnet runt efter förhandsbokning; under utegångsförbud tas endast akuta patienter emot."
       }
     },
     {
@@ -154,7 +158,8 @@
         "pt": "Horário publicado 9h00–21h00, 364 dias por ano; liga antes para casos urgentes.",
         "nl": "Gepubliceerde openingstijden 9.00–21.00 uur, 364 dagen per jaar; bel vooraf bij spoed.",
         "pl": "Podane godziny 9:00–21:00, 364 dni w roku; w pilnych przypadkach zadzwoń przed wizytą.",
-        "cs": "Uváděná otevírací doba 9:00–21:00, 364 dní v roce; v naléhavých případech před cestou zavolejte."
+        "cs": "Uváděná otevírací doba 9:00–21:00, 364 dní v roce; v naléhavých případech před cestou zavolejte.",
+        "sv": "Angivna öppettider 09.00–21.00, 364 dagar om året; ring innan du kommer vid akuta fall."
       }
     },
     {
@@ -177,7 +182,8 @@
         "pt": "Clínicas 9h00–19h00 (Darnytsia) e 9h00–20h00 (Troyeshchyna, Pechersk); internamento 24 horas por dia.",
         "nl": "Klinieken 9.00–19.00 uur (Darnytsia) en 9.00–20.00 uur (Troyeshchyna, Pechersk); opnameafdeling de klok rond.",
         "pl": "Przychodnie 9:00–19:00 (Darnytsia) i 9:00–20:00 (Troyeshchyna, Pechersk); oddział stacjonarny działa całą dobę.",
-        "cs": "Kliniky 9:00–19:00 (Darnytsia) a 9:00–20:00 (Troyeshchyna, Pechersk); lůžkové oddělení v provozu nonstop."
+        "cs": "Kliniky 9:00–19:00 (Darnytsia) a 9:00–20:00 (Troyeshchyna, Pechersk); lůžkové oddělení v provozu nonstop.",
+        "sv": "Kliniker 09.00–19.00 (Darnytsia) och 09.00–20.00 (Troyeshchyna, Pechersk); slutenvårdsavdelningen är öppen dygnet runt."
       }
     },
     {
@@ -213,7 +219,8 @@
         "pt": "Aberto 24 h/24, todos os dias da semana.",
         "nl": "24/7 geopend.",
         "pl": "Czynne 24/7, codziennie.",
-        "cs": "Otevřeno nonstop, každý den v týdnu."
+        "cs": "Otevřeno nonstop, každý den v týdnu.",
+        "sv": "Öppet dygnet runt, alla veckodagar."
       }
     },
     {
@@ -237,7 +244,8 @@
         "pt": "Aberto 24 h/24, sem dias de folga nem feriados.",
         "nl": "24/7 open, ook op feestdagen.",
         "pl": "Czynne 24/7, bez dni wolnych i świąt.",
-        "cs": "Otevřeno nonstop, bez dnů volna a svátků."
+        "cs": "Otevřeno nonstop, bez dnů volna a svátků.",
+        "sv": "Öppet dygnet runt, utan lediga dagar eller helgdagar."
       }
     },
     {
@@ -261,7 +269,8 @@
         "pt": "Aberto 24 h/24, sem dias de folga nem feriados.",
         "nl": "24/7 open, ook op feestdagen.",
         "pl": "Czynne 24/7, bez dni wolnych i świąt.",
-        "cs": "Otevřeno nonstop, bez dnů volna a svátků."
+        "cs": "Otevřeno nonstop, bez dnů volna a svátků.",
+        "sv": "Öppet dygnet runt, utan lediga dagar eller helgdagar."
       }
     },
     {
@@ -285,7 +294,8 @@
         "pt": "Consultas sob marcação 10h00–20h00; internamento urgente e casos urgentes 24 horas por dia; 24 h/24 apenas sob marcação.",
         "nl": "Reguliere afspraken 10.00–20.00 uur; spoedopname en spoedgevallen de klok rond; 24/7 alleen op afspraak.",
         "pl": "Wizyty umówione 10:00–20:00; pilna hospitalizacja i pilne przypadki całą dobę; 24/7 tylko po wcześniejszym umówieniu.",
-        "cs": "Objednaní pacienti 10:00–20:00; naléhavá hospitalizace a naléhavé případy nonstop; nonstop pouze po předchozím objednání."
+        "cs": "Objednaní pacienti 10:00–20:00; naléhavá hospitalizace a naléhavé případy nonstop; nonstop pouze po předchozím objednání.",
+        "sv": "Bokade tider 10.00–20.00; akut inläggning och akuta fall dygnet runt; dygnet runt endast efter förhandsbokning."
       }
     },
     {
@@ -308,7 +318,8 @@
         "pt": "9h00–21h00; várias unidades em Lviv, Vynnyky e Busk.",
         "nl": "9.00–21.00 uur; meerdere vestigingen in Lviv, Vynnyky en Busk.",
         "pl": "9:00–21:00; kilka oddziałów we Lwowie, Vynnykach i Busku.",
-        "cs": "9:00–21:00; několik poboček: Lviv, Vynnyky a Busk."
+        "cs": "9:00–21:00; několik poboček: Lviv, Vynnyky a Busk.",
+        "sv": "09.00–21.00; flera filialer i Lviv, Vynnyky och Busk."
       }
     },
     {
@@ -332,7 +343,8 @@
         "pt": "Clínica veterinária aberta 24 horas por dia; receção de urgências 24 horas por dia.",
         "nl": "Dierenkliniek de klok rond open; spoedopvang de klok rond.",
         "pl": "Całodobowa przychodnia weterynaryjna; izba przyjęć w nagłych przypadkach całą dobę.",
-        "cs": "Veterinární klinika nonstop; pohotovostní příjem nonstop."
+        "cs": "Veterinární klinika nonstop; pohotovostní příjem nonstop.",
+        "sv": "Veterinärklinik öppen dygnet runt; akutmottagning dygnet runt."
       }
     },
     {
@@ -355,7 +367,8 @@
         "pt": "Atendimento todos os dias 9h00–21h00; visitas noturnas ao domicílio 19h00–9h00; internamento 24 horas por dia.",
         "nl": "Spreekuur dagelijks 9.00–21.00 uur; nachtelijke huisbezoeken 19.00–9.00 uur; opgenomen dieren de klok rond verzorgd.",
         "pl": "Pacjenci przyjmowani codziennie 9:00–21:00; nocne wizyty domowe 19:00–9:00; pacjenci stacjonarni pod opieką całą dobę.",
-        "cs": "Příjem pacientů denně 9:00–21:00; noční návštěvy doma 19:00–9:00; hospitalizovaní pacienti nonstop pod dohledem."
+        "cs": "Příjem pacientů denně 9:00–21:00; noční návštěvy doma 19:00–9:00; hospitalizovaní pacienti nonstop pod dohledem.",
+        "sv": "Patienter tas emot dagligen 09.00–21.00; nattliga hembesök 19.00–09.00; inlagda patienter vårdas dygnet runt."
       }
     },
     {
@@ -378,7 +391,8 @@
         "pt": "Horário publicado 9h00–20h00 todos os dias, sem dias de folga; liga antes para casos urgentes.",
         "nl": "Gepubliceerde openingstijden dagelijks 9.00–20.00 uur; bel vooraf bij spoed.",
         "pl": "Podane godziny 9:00–20:00 codziennie, bez dni wolnych; w pilnych przypadkach zadzwoń przed wizytą.",
-        "cs": "Uváděná otevírací doba denně 9:00–20:00, bez dnů volna; v naléhavých případech před cestou zavolejte."
+        "cs": "Uváděná otevírací doba denně 9:00–20:00, bez dnů volna; v naléhavých případech před cestou zavolejte.",
+        "sv": "Angivna öppettider 09.00–20.00 dagligen, utan lediga dagar; ring innan du kommer vid akuta fall."
       }
     },
     {
@@ -401,7 +415,8 @@
         "pt": "Segunda a sábado 9h00–19h00, domingo encerrado; atendimento urgente disponível, liga antes.",
         "nl": "Ma–za 9.00–19.00 uur, zondag gesloten; spoedhulp mogelijk, bel vooraf.",
         "pl": "pon.–sob. 9:00–19:00, niedz. nieczynne; pilna pomoc dostępna, zadzwoń przed wizytą.",
-        "cs": "Po–So 9:00–19:00, v neděli zavřeno; nabízí naléhavou pomoc, před cestou zavolejte."
+        "cs": "Po–So 9:00–19:00, v neděli zavřeno; nabízí naléhavou pomoc, před cestou zavolejte.",
+        "sv": "Mån–lör 09.00–19.00, söndag stängt; akut hjälp erbjuds, ring innan du kommer."
       }
     },
     {
@@ -425,7 +440,8 @@
         "pt": "Aberto 24 h/24, 7 dias por semana.",
         "nl": "24/7 open.",
         "pl": "Czynne całą dobę, 7 dni w tygodniu.",
-        "cs": "Nonstop."
+        "cs": "Nonstop.",
+        "sv": "Öppet dygnet runt."
       }
     },
     {
@@ -449,7 +465,8 @@
         "pt": "Clínica veterinária aberta 24 horas por dia (loja de animais e laboratório 9h00–20h00).",
         "nl": "Dierenkliniek de klok rond open (dierenwinkel en lab 9.00–20.00 uur).",
         "pl": "Przychodnia weterynaryjna czynna całą dobę (sklep zoologiczny i laboratorium 9:00–20:00).",
-        "cs": "Veterinární klinika otevřená nonstop (zverimex a laboratoř 9:00–20:00)."
+        "cs": "Veterinární klinika otevřená nonstop (zverimex a laboratoř 9:00–20:00).",
+        "sv": "Veterinärklinik öppen dygnet runt (djuraffär och labb 09.00–20.00)."
       }
     },
     {
@@ -473,7 +490,8 @@
         "pt": "Unidade de Oleksiivska 14 aberta 9h00–21h00; a unidade de Saltivka tem farmácia veterinária 24 horas por dia. Liga antes.",
         "nl": "Vestiging Oleksiivska 14 open 9.00–21.00 uur; vestiging Saltivka heeft een dierenapotheek die 24 uur per dag open is. Bel vooraf.",
         "pl": "Oddział przy Oleksiivska 14 czynny 9:00–21:00; oddział Saltivka ma całodobową aptekę weterynaryjną. Zadzwoń przed wizytą.",
-        "cs": "Pobočka Oleksiivska 14 otevřena 9:00–21:00; pobočka Saltivka má nonstop veterinární lékárnu. Před cestou zavolejte."
+        "cs": "Pobočka Oleksiivska 14 otevřena 9:00–21:00; pobočka Saltivka má nonstop veterinární lékárnu. Před cestou zavolejte.",
+        "sv": "Filialen på Oleksiivska 14 öppen 09.00–21.00; filialen i Saltivka har ett veterinärapotek öppet dygnet runt. Ring innan du kommer."
       }
     },
     {
@@ -496,7 +514,8 @@
         "pt": "Aberto todos os dias 9h00–22h00; consultas noturnas sob marcação; internamento.",
         "nl": "Dagelijks open 9.00–22.00 uur; nachtafspraken na reservering vooraf; opnameafdeling.",
         "pl": "Czynne codziennie 9:00–22:00; nocne wizyty po wcześniejszej rezerwacji; oddział stacjonarny.",
-        "cs": "Otevřeno denně 9:00–22:00; noční návštěvy po předchozí rezervaci; lůžkové oddělení."
+        "cs": "Otevřeno denně 9:00–22:00; noční návštěvy po předchozí rezervaci; lůžkové oddělení.",
+        "sv": "Öppet dagligen 09.00–22.00; nattbesök efter förhandsbokning; slutenvårdsavdelning."
       }
     },
     {
@@ -519,7 +538,8 @@
         "pt": "Segunda a quinta, sábado e domingo 9h00–19h00, sexta 11h00–19h00; internamento 24 horas por dia.",
         "nl": "Ma–do, za–zo 9.00–19.00 uur, vr 11.00–19.00 uur; opnamezorg de klok rond.",
         "pl": "pon.–czw., sob.–niedz. 9:00–19:00, pt. 11:00–19:00; opieka stacjonarna całą dobę.",
-        "cs": "Po–Čt, so–ne 9:00–19:00, pá 11:00–19:00; hospitalizace nonstop."
+        "cs": "Po–Čt, so–ne 9:00–19:00, pá 11:00–19:00; hospitalizace nonstop.",
+        "sv": "Mån–tors, lör–sön 09.00–19.00, fre 11.00–19.00; slutenvård dygnet runt."
       }
     },
     {
@@ -542,7 +562,8 @@
         "pt": "Segunda a sábado 9h00–16h00.",
         "nl": "Ma–za 9.00–16.00 uur.",
         "pl": "pon.–sob. 9:00–16:00.",
-        "cs": "Po–So 9:00–16:00."
+        "cs": "Po–So 9:00–16:00.",
+        "sv": "Mån–lör 09.00–16.00."
       }
     },
     {
@@ -564,7 +585,8 @@
         "pt": "Todos os dias 9h00–17h00.",
         "nl": "Dagelijks 9.00–17.00 uur.",
         "pl": "Codziennie 9:00–17:00.",
-        "cs": "Denně 9:00–17:00."
+        "cs": "Denně 9:00–17:00.",
+        "sv": "Dagligen 09.00–17.00."
       }
     },
     {
@@ -602,7 +624,8 @@
         "pt": "Hospital com internamento aberto 24 horas por dia, casos urgentes atendidos sem marcação; clínica de Reshetylivka todos os dias 9h00–15h00 sob marcação.",
         "nl": "Dierenziekenhuis met opnameafdeling, de klok rond open; spoedgevallen zonder afspraak; polikliniek Reshetylivka dagelijks 9.00–15.00 uur op afspraak.",
         "pl": "Szpital stacjonarny czynny całą dobę, pilne przypadki przyjmowane bez umawiania wizyt; poradnia ambulatoryjna w Reshetylivce codziennie 9:00–15:00 po umówieniu.",
-        "cs": "Lůžková nemocnice otevřená nonstop, naléhavé případy bez objednání; ambulance Reshetylivka denně 9:00–15:00 na objednání."
+        "cs": "Lůžková nemocnice otevřená nonstop, naléhavé případy bez objednání; ambulance Reshetylivka denně 9:00–15:00 na objednání.",
+        "sv": "Slutenvårdssjukhus öppet dygnet runt, akuta fall tas emot utan tidsbokning; öppenvårdskliniken i Reshetylivka dagligen 09.00–15.00 efter bokning."
       }
     },
     {
@@ -625,7 +648,8 @@
         "pt": "Todos os dias 9h00–19h00.",
         "nl": "Dagelijks 9.00–19.00 uur.",
         "pl": "Codziennie 9:00–19:00.",
-        "cs": "Denně 9:00–19:00."
+        "cs": "Denně 9:00–19:00.",
+        "sv": "Dagligen 09.00–19.00."
       }
     },
     {
@@ -648,7 +672,8 @@
         "pt": "Todos os dias 9h00–19h00 sob marcação; internamento 24 horas por dia.",
         "nl": "Dagelijks 9.00–19.00 uur na reservering vooraf; opnamezorg de klok rond.",
         "pl": "Codziennie 9:00–19:00 po wcześniejszej rezerwacji; całodobowa opieka stacjonarna.",
-        "cs": "Denně 9:00–19:00 po předchozí rezervaci; hospitalizace nonstop."
+        "cs": "Denně 9:00–19:00 po předchozí rezervaci; hospitalizace nonstop.",
+        "sv": "Dagligen 09.00–19.00 efter förhandsbokning; slutenvård dygnet runt."
       }
     },
     {
@@ -671,7 +696,8 @@
         "pt": "Segunda a sexta 9h00–18h30, sábado 10h00–15h00, domingo encerrado; cirurgia urgente possível, liga antes.",
         "nl": "Ma–vr 9.00–18.30 uur, za 10.00–15.00 uur, zondag gesloten; spoedoperatie mogelijk, bel vooraf.",
         "pl": "pon.–pt. 9:00–18:30, sob. 10:00–15:00, niedz. nieczynne; możliwa pilna operacja, zadzwoń przed wizytą.",
-        "cs": "Po–Pá 9:00–18:30, so 10:00–15:00, v neděli zavřeno; naléhavá operace možná, před cestou zavolejte."
+        "cs": "Po–Pá 9:00–18:30, so 10:00–15:00, v neděli zavřeno; naléhavá operace možná, před cestou zavolejte.",
+        "sv": "Mån–fre 09.00–18.30, lör 10.00–15.00, söndag stängt; akut kirurgi möjlig, ring innan du kommer."
       }
     },
     {
@@ -694,7 +720,8 @@
         "pt": "Todos os dias 9h00–20h00.",
         "nl": "Dagelijks 9.00–20.00 uur.",
         "pl": "Codziennie 9:00–20:00.",
-        "cs": "Denně 9:00–20:00."
+        "cs": "Denně 9:00–20:00.",
+        "sv": "Dagligen 09.00–20.00."
       }
     },
     {
@@ -717,7 +744,8 @@
         "pt": "Segunda a sexta 9h00–18h00, sábado e domingo 10h00–14h00.",
         "nl": "Ma–vr 9.00–18.00 uur, za–zo 10.00–14.00 uur.",
         "pl": "pon.–pt. 9:00–18:00, sob.–niedz. 10:00–14:00.",
-        "cs": "Po–Pá 9:00–18:00, so–ne 10:00–14:00."
+        "cs": "Po–Pá 9:00–18:00, so–ne 10:00–14:00.",
+        "sv": "Mån–fre 09.00–18.00, lör–sön 10.00–14.00."
       }
     },
     {
@@ -740,7 +768,8 @@
         "pt": "Sob marcação: segunda a sábado 9h00–20h00, domingo 10h00–18h00.",
         "nl": "Op afspraak: ma–za 9.00–20.00 uur, zo 10.00–18.00 uur.",
         "pl": "Po umówieniu: pon.–sob. 9:00–20:00, niedz. 10:00–18:00.",
-        "cs": "Na objednání: Po–So 9:00–20:00, ne 10:00–18:00."
+        "cs": "Na objednání: Po–So 9:00–20:00, ne 10:00–18:00.",
+        "sv": "Efter bokning: mån–lör 09.00–20.00, sön 10.00–18.00."
       }
     },
     {
@@ -763,7 +792,8 @@
         "pt": "Todos os dias 9h00–19h00.",
         "nl": "Dagelijks 9.00–19.00 uur.",
         "pl": "Codziennie 9:00–19:00.",
-        "cs": "Denně 9:00–19:00."
+        "cs": "Denně 9:00–19:00.",
+        "sv": "Dagligen 09.00–19.00."
       }
     },
     {
@@ -786,7 +816,8 @@
         "pt": "Segunda a sexta 9h00–19h00, sábado e domingo 9h00–16h00.",
         "nl": "Ma–vr 9.00–19.00 uur, za–zo 9.00–16.00 uur.",
         "pl": "pon.–pt. 9:00–19:00, sob.–niedz. 9:00–16:00.",
-        "cs": "Po–Pá 9:00–19:00, so–ne 9:00–16:00."
+        "cs": "Po–Pá 9:00–19:00, so–ne 9:00–16:00.",
+        "sv": "Mån–fre 09.00–19.00, lör–sön 09.00–16.00."
       }
     },
     {
@@ -809,7 +840,8 @@
         "pt": "Unidade 1 todos os dias 8h00–20h00; unidade 2 (Zluky Ave. 18/178, +380 96 05 52 200) de quinta a segunda 9h00–18h00.",
         "nl": "Vestiging 1 dagelijks 8.00–20.00 uur; vestiging 2 (Zluky Ave. 18/178, +380 96 05 52 200) do–ma 9.00–18.00 uur.",
         "pl": "Oddział 1 codziennie 8:00–20:00; oddział 2 (al. Zluky 18/178, +380 96 05 52 200) czw.–pon. 9:00–18:00.",
-        "cs": "Pobočka 1 denně 8:00–20:00; pobočka 2 (Zluky Ave. 18/178, +380 96 05 52 200) Čt–Po 9:00–18:00."
+        "cs": "Pobočka 1 denně 8:00–20:00; pobočka 2 (Zluky Ave. 18/178, +380 96 05 52 200) Čt–Po 9:00–18:00.",
+        "sv": "Filial 1 dagligen 08.00–20.00; filial 2 (Zluky Ave. 18/178, +380 96 05 52 200) tors–mån 09.00–18.00."
       }
     }
   ],

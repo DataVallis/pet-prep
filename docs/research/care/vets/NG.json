@@ -44,7 +44,8 @@
       "note": "Page quote: 'Open 24 hours, 7 days a week, including emergencies.' Phone 09028511038, WhatsApp 08153312813. No street address; site is a builder-hosted page (lovable.app), coverage 'anywhere in Lagos' vs five listed areas is unclear. Independent check 2026-11-15: all details and the 24 h claim re-confirmed on /ambulatory.",
       "duty_i18n": {
         "pl": "Mobilny weterynarz z wizytami domowymi dla psów i kotów; czynny całodobowo, 7 dni w tygodniu, także w nagłych przypadkach. Obsługiwane okolice: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
-        "cs": "Výjezdní veterinář pro psy a kočky; otevřeno nonstop, 7 dní v týdnu, včetně pohotovosti. Obsluhované oblasti: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun."
+        "cs": "Výjezdní veterinář pro psy a kočky; otevřeno nonstop, 7 dní v týdnu, včetně pohotovosti. Obsluhované oblasti: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
+        "sv": "Mobil veterinär med hembesök för hundar och katter; öppet dygnet runt, alla veckans dagar, även akutfall. Områden som täcks: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun."
       }
     },
     {
@@ -63,7 +64,8 @@
       "note": "WhatsApp 08084379459. Page mentions emergency care but no 24 h claim. Builder-hosted site (netlify.app).",
       "duty_i18n": {
         "pl": "Pon.–sob. 08:00–18:00; w niedzielę na życzenie. W nagłych przypadkach zadzwoń przed wizytą.",
-        "cs": "Po–So 8:00–18:00; v neděli na požádání. V případě pohotovosti před cestou zavolejte."
+        "cs": "Po–So 8:00–18:00; v neděli na požádání. V případě pohotovosti před cestou zavolejte.",
+        "sv": "Mån–lör 08.00–18.00; söndag på begäran. Ring innan du kommer vid akutfall."
       }
     },
     {
@@ -81,7 +83,8 @@
       "note": "Page gives phone and vth@abu.edu.ng only; no address, hours, small-animal or emergency statement (small_animals inferred from 'primary and tertiary animal healthcare').",
       "duty_i18n": {
         "pl": "Uniwersytecki szpital dydaktyczny i referencyjny dla zwierząt; zadzwoń przed wizytą, aby poznać godziny.",
-        "cs": "Univerzitní výuková a odborná nemocnice pro zvířata; ordinační dobu zjistěte telefonicky před cestou."
+        "cs": "Univerzitní výuková a odborná nemocnice pro zvířata; ordinační dobu zjistěte telefonicky před cestou.",
+        "sv": "Universitetets undervisnings- och remissdjursjukhus; ring innan du kommer för öppettider."
       }
     },
     {
@@ -98,7 +101,8 @@
       "note": "Page says services for pets, food animals and wild animals; contact section empty (contact page vet.ui.edu.ng/contactvettea blocked by provenance); no phone, hours or emergency statement.",
       "duty_i18n": {
         "pl": "Uniwersytecki szpital dydaktyczny dla zwierząt domowych, gospodarskich i dzikich; zadzwoń przed wizytą, aby poznać godziny.",
-        "cs": "Univerzitní výuková nemocnice pro domácí zvířata, hospodářská zvířata a volně žijící zvířata; ordinační dobu zjistěte telefonicky před cestou."
+        "cs": "Univerzitní výuková nemocnice pro domácí zvířata, hospodářská zvířata a volně žijící zvířata; ordinační dobu zjistěte telefonicky před cestou.",
+        "sv": "Universitetets undervisningssjukhus för sällskapsdjur, livsmedelsproducerande djur och vilda djur; ring innan du kommer för öppettider."
       }
     },
     {
@@ -116,7 +120,8 @@
       "note": "No phone, hours or emergency statement on the opened page.",
       "duty_i18n": {
         "pl": "Przychodnia dla małych zwierząt z oddziałem intensywnej terapii i oddziałem chorób zakaźnych; zadzwoń przed wizytą, aby poznać godziny.",
-        "cs": "Klinika pro malá zvířata s jednotkou intenzivní péče a infekčním oddělením; ordinační dobu zjistěte telefonicky před cestou."
+        "cs": "Klinika pro malá zvířata s jednotkou intenzivní péče a infekčním oddělením; ordinační dobu zjistěte telefonicky před cestou.",
+        "sv": "Smådjursklinik med intensivvård och avdelning för smittsamma sjukdomar; ring innan du kommer för öppettider."
       }
     }
   ],

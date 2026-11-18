@@ -47,7 +47,8 @@
         "pt": "Clínica veterinária aberta 24 h/24, 7 dias por semana, com cuidados intensivos.",
         "nl": "Dierenkliniek de klok rond geopend (24/7), inclusief intensive care.",
         "pl": "Przychodnia weterynaryjna czynna całą dobę (24 godziny na dobę, 7 dni w tygodniu), w tym intensywna terapia.",
-        "cs": "Veterinární klinika nonstop (24/7), včetně intenzivní péče."
+        "cs": "Veterinární klinika nonstop (24/7), včetně intenzivní péče.",
+        "sv": "Veterinärklinik öppen dygnet runt (24/7), inklusive intensivvård."
       }
     },
     {
@@ -70,7 +71,8 @@
         "pt": "Aberto 24 h/24, 7 dias por semana, na filial de Buiucani.",
         "nl": "24 uur per dag, 7 dagen per week geopend in de vestiging Buiucani.",
         "pl": "Otwarte całodobowo, 7 dni w tygodniu, w placówce Buiucani.",
-        "cs": "Nonstop, 7 dní v týdnu, na pobočce Buiucani."
+        "cs": "Nonstop, 7 dní v týdnu, na pobočce Buiucani.",
+        "sv": "Öppet dygnet runt, alla veckans dagar, på filialen i Buiucani."
       }
     },
     {
@@ -93,7 +95,8 @@
         "pt": "Segunda a sexta 9h00–17h00, sábado 9h00–13h00, domingo fechado. Telemóvel: (067) 32-32-11.",
         "nl": "Ma–vr 09.00–17.00 uur, za 09.00–13.00 uur, zo gesloten. Mobiel: (067) 32-32-11.",
         "pl": "Pon.–pt. 09:00–17:00, sob. 09:00–13:00, w niedziele zamknięte. Telefon komórkowy: (067) 32-32-11.",
-        "cs": "Po–Pá 09:00–17:00, so 09:00–13:00, v neděli zavřeno. Mobil: (067) 32-32-11."
+        "cs": "Po–Pá 09:00–17:00, so 09:00–13:00, v neděli zavřeno. Mobil: (067) 32-32-11.",
+        "sv": "Mån–fre 09.00–17.00, lör 09.00–13.00, sön stängt. Mobil: (067) 32-32-11."
       }
     },
     {
@@ -116,7 +119,8 @@
         "pt": "Recomenda-se marcação. Outros telefones: +373 79 588 317, +373 69 130 317.",
         "nl": "Afspraak aanbevolen. Overige telefoonnummers: +373 79 588 317, +373 69 130 317.",
         "pl": "Zalecane umówienie wizyty. Inne telefony: +373 79 588 317, +373 69 130 317.",
-        "cs": "Doporučujeme objednání. Další telefony: +373 79 588 317, +373 69 130 317."
+        "cs": "Doporučujeme objednání. Další telefony: +373 79 588 317, +373 69 130 317.",
+        "sv": "Bokad tid rekommenderas. Övriga telefonnummer: +373 79 588 317, +373 69 130 317."
       }
     },
     {
@@ -139,7 +143,8 @@
         "pt": "Segunda a sábado 9h00–18h00, domingo fechado. As urgências são atendidas primeiro durante o horário de abertura; liga antes de vires. Telemóvel/WhatsApp/Viber: +373 60 694 388.",
         "nl": "Ma–za 09.00–18.00 uur, zondag gesloten. Spoedgevallen komen tijdens openingstijden eerst aan de beurt; bel vooraf. Mobiel/WhatsApp/Viber: +373 60 694 388.",
         "pl": "Pon.–sob. 09:00–18:00, w niedziele zamknięte. W godzinach otwarcia nagłe przypadki są przyjmowane w pierwszej kolejności; zadzwoń przed wizytą. Telefon komórkowy/WhatsApp/Viber: +373 60 694 388.",
-        "cs": "Po–So 09:00–18:00, v neděli zavřeno. Pohotovostní případy se v ordinační době ošetřují přednostně; před cestou zavolejte. Mobil/WhatsApp/Viber: +373 60 694 388."
+        "cs": "Po–So 09:00–18:00, v neděli zavřeno. Pohotovostní případy se v ordinační době ošetřují přednostně; před cestou zavolejte. Mobil/WhatsApp/Viber: +373 60 694 388.",
+        "sv": "Mån–lör 09.00–18.00, söndag stängt. Akutfall tas emot först under öppettid; ring innan du kommer. Mobil/WhatsApp/Viber: +373 60 694 388."
       }
     },
     {
@@ -162,7 +167,8 @@
         "pt": "Oferece atendimento de urgência; liga antes para confirmar a disponibilidade. Filiais em Botanica, Centru, Codru, Telecentru, Durlești, Sângera e Ialoveni.",
         "nl": "Spoedzorg beschikbaar; bel vooraf voor beschikbaarheid. Vestigingen in Botanica, Centru, Codru, Telecentru, Durlești, Sângera en Ialoveni.",
         "pl": "Pomoc w nagłych przypadkach; w sprawie dostępności zadzwoń wcześniej. Placówki w Botanica, Centru, Codru, Telecentru, Durlești, Sângera i Ialoveni.",
-        "cs": "Nabízí pohotovostní péči; dostupnost zjistíte telefonicky. Pobočky v lokalitách Botanica, Centru, Codru, Telecentru, Durlești, Sângera a Ialoveni."
+        "cs": "Nabízí pohotovostní péči; dostupnost zjistíte telefonicky. Pobočky v lokalitách Botanica, Centru, Codru, Telecentru, Durlești, Sângera a Ialoveni.",
+        "sv": "Akutvård erbjuds; ring innan du kommer för att höra om det finns plats. Filialer finns i Botanica, Centru, Codru, Telecentru, Durlești, Sângera och Ialoveni."
       }
     }
   ],
