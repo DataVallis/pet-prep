@@ -55,7 +55,8 @@
       "note": "University page; says no 24 h service yet (planned). Lunch break 13:00-14:00.",
       "duty_i18n": {
         "pl": "Niedz.–czw. 9:00–17:00, sob. 9:00–14:00; w święta państwowe zamknięte. Leczy psy, koty, ptaki, króliki i żółwie; w nagłych przypadkach wezwanie przez służbę mobilną.",
-        "cs": "Ne–Čt 9:00–17:00, so 9:00–14:00; o státních svátcích zavřeno. Ošetřují psy, kočky, ptáky, králíky a želvy; pohotovostní výjezdy přes výjezdní službu."
+        "cs": "Ne–Čt 9:00–17:00, so 9:00–14:00; o státních svátcích zavřeno. Ošetřují psy, kočky, ptáky, králíky a želvy; pohotovostní výjezdy přes výjezdní službu.",
+        "sv": "Sön–tors 9.00–17.00, lör 9.00–14.00; stängt på helgdagar. Behandlar hundar, katter, fåglar, kaniner och sköldpaddor; akuta samtal via den mobila veterinärtjänsten."
       }
     },
     {
@@ -74,7 +75,8 @@
       "note": "Phone from CVASU page (no address there); address from 2019 TBS article https://www.tbsnews.net/node/11489 - may be outdated. No hours published.",
       "duty_i18n": {
         "pl": "Szpital dla małych zwierząt domowych prowadzony przez Chattogram Veterinary and Animal Sciences University; zadzwoń wcześniej, by poznać godziny.",
-        "cs": "Nemocnice pro malá zvířata při Chattogram Veterinary and Animal Sciences University; otevírací dobu zjistíte telefonicky."
+        "cs": "Nemocnice pro malá zvířata při Chattogram Veterinary and Animal Sciences University; otevírací dobu zjistíte telefonicky.",
+        "sv": "Djursjukhus för smådjur som drivs av Chattogram Veterinary and Animal Sciences University; ring innan du kommer för att få veta öppettiderna."
       }
     },
     {
@@ -93,7 +95,8 @@
       "note": "Phones listed on the page: +88 02996 666 846 and +88 02996 666 896 (university contact). Working-hours page not readable. Outreach page mostly livestock.",
       "duty_i18n": {
         "pl": "Uniwersytecki szpital kliniczny dla zwierząt domowych i gospodarskich; zadzwoń po godziny otwarcia.",
-        "cs": "Univerzitní výuková nemocnice pro mazlíčky a domácí zvířata; otevírací dobu zjistíte telefonicky."
+        "cs": "Univerzitní výuková nemocnice pro mazlíčky a domácí zvířata; otevírací dobu zjistíte telefonicky.",
+        "sv": "Universitetsdjursjukhus för sällskapsdjur och tamdjur; ring för öppettider."
       }
     },
     {
@@ -111,7 +114,8 @@
       "note": "Only a 2019 news article (page says 'all kinds of pet care', emergency ward, no hours); no phone or 24 h claim found. Facebook link taken from the article, not opened.",
       "duty_i18n": {
         "pl": "Prywatny szpital dla zwierząt domowych z opieką dzienną w Uttara.",
-        "cs": "Soukromá veterinární nemocnice s denní péčí o zvířata v Uttara."
+        "cs": "Soukromá veterinární nemocnice s denní péčí o zvířata v Uttara.",
+        "sv": "Privat djursjukhus med djurdagis i Uttara."
       }
     },
     {
@@ -130,7 +134,8 @@
       "note": "Own site heading 'We operate 24/7'. Also +8801533380720. Cats/dogs not mentioned; shop sells livestock-type products, so small_animals set false pending confirmation.",
       "duty_i18n": {
         "pl": "Działa całodobowo, z pomocą w nagłych przypadkach, wizytami domowymi oraz wizytami umawianymi telefonicznie lub online.",
-        "cs": "Nonstop, s pohotovostí, návštěvami doma a objednáním telefonicky či online."
+        "cs": "Nonstop, s pohotovostí, návštěvami doma a objednáním telefonicky či online.",
+        "sv": "Öppet dygnet runt, alla dagar, med akutjour, hembesök samt tidsbokning per telefon eller online."
       }
     }
   ],

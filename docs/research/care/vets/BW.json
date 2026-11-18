@@ -47,7 +47,8 @@
       "checked": "2026-11-16",
       "note": "Own site states an out-of-hours emergency service exists; no 24 h statement, no phone, address or hours published on the page opened. Needs phone from another own page in a later run.",
       "duty_i18n": {
-        "cs": "Pohotovostní služba mimo otevírací dobu; před cestou zavolejte. Návštěvy doma kvůli očkování a konzultacím v Gaborone a okolí."
+        "cs": "Pohotovostní služba mimo otevírací dobu; před cestou zavolejte. Návštěvy doma kvůli očkování a konzultacím v Gaborone a okolí.",
+        "sv": "Akutjour finns utanför öppettiderna; ring innan du kommer. Hembesök för vaccinationer och konsultationer i och runt Gaborone."
       }
     },
     {
@@ -63,7 +64,8 @@
       "checked": "2026-11-16",
       "note": "Own site (re-checked 2026-11-16) confirms Gaborone base and small animal services but gives no phone, address or 24 h statement. Branch locations (Block 3 Industrial, Phakalane) and the claim of a '24 hours emergency service' come only from the Sky Jobs employer profile (job board), so emergency_24h left false pending an own-site page. Phone seen masked (+267 3928689), not used. small_animals inferred from the clinic description, not stated on the own site.",
       "duty_i18n": {
-        "cs": "Veterinární praxe v Gaborone nabízející služby pro malá zvířata, hospodářská zvířata a divokou zvěř; otevírací dobu a pohotovost zjistíte telefonicky na klinice."
+        "cs": "Veterinární praxe v Gaborone nabízející služby pro malá zvířata, hospodářská zvířata a divokou zvěř; otevírací dobu a pohotovost zjistíte telefonicky na klinice.",
+        "sv": "Veterinärpraktik i Gaborone med tjänster för smådjur, lantbruksdjur och vilda djur; ring kliniken för öppettider och akutfall."
       }
     }
   ],

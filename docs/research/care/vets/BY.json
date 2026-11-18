@@ -50,7 +50,8 @@
       "note": "Own page opened: 'Режим работы: КРУГЛОСУТОЧНО'. Treats exotics too.",
       "duty_i18n": {
         "pl": "Czynne całą dobę. Dodatkowy numer: +375 29 392 80 81.",
-        "cs": "Nonstop. Také +375 29 392 80 81."
+        "cs": "Nonstop. Také +375 29 392 80 81.",
+        "sv": "Öppet dygnet runt. Även +375 29 392 80 81."
       }
     },
     {
@@ -69,7 +70,8 @@
       "note": "Own page opened: 'Круглосуточно без выходных'. Other numbers: +375 29 1 602 602, +375 29 8 602 602, +375 25 6 602 602, short 7031.",
       "duty_i18n": {
         "pl": "Czynne całą dobę, codziennie. Lekarze bez umawiania 09:00–19:00; po 21:00 lekarz dyżurny w taryfie nocnej.",
-        "cs": "Nonstop, každý den. Lékaři bez objednání 9:00–19:00; po 21:00 lékař ve službě za noční tarif."
+        "cs": "Nonstop, každý den. Lékaři bez objednání 9:00–19:00; po 21:00 lékař ve službě za noční tarif.",
+        "sv": "Öppet dygnet runt, alla dagar. Mottagning utan tidsbokning 09.00–19.00; efter 21.00 jourhavande veterinär enligt nattaxa."
       }
     },
     {
@@ -88,7 +90,8 @@
       "note": "Own page opened: open 24 h every day. News item: closed from 21:00 on 28.10-03.11.2026 (past). Same phones as the other branch.",
       "duty_i18n": {
         "pl": "Czynne całą dobę, codziennie. Lekarze bez umawiania 09:00–19:00; po 21:00 lekarz dyżurny w taryfie nocnej.",
-        "cs": "Nonstop, každý den. Lékaři bez objednání 9:00–19:00; po 21:00 lékař ve službě za noční tarif."
+        "cs": "Nonstop, každý den. Lékaři bez objednání 9:00–19:00; po 21:00 lékař ve službě za noční tarif.",
+        "sv": "Öppet dygnet runt, alla dagar. Mottagning utan tidsbokning 09.00–19.00; efter 21.00 jourhavande veterinär enligt nattaxa."
       }
     },
     {
@@ -107,7 +110,8 @@
       "note": "Own page opened: one listing says round-the-clock, another 9:00-21:00 for this address, and branch name to address mapping is not explicit; so 24 h not confirmed. Second number +375 33 326 30 00.",
       "duty_i18n": {
         "pl": "Skontaktuj się z przychodnią, by poznać aktualne godziny.",
-        "cs": "Aktuální otevírací dobu zjistíte na klinice."
+        "cs": "Aktuální otevírací dobu zjistíte na klinice.",
+        "sv": "Kontakta kliniken för aktuella öppettider."
       }
     },
     {
@@ -126,7 +130,8 @@
       "note": "Own page opened: hours given as 24 h in one place, but news says branch is 'moving to' round-the-clock; ambiguous, so false. Also +375 33 627 40 00.",
       "duty_i18n": {
         "pl": "Skontaktuj się z przychodnią, by poznać aktualne godziny.",
-        "cs": "Aktuální otevírací dobu zjistíte na klinice."
+        "cs": "Aktuální otevírací dobu zjistíte na klinice.",
+        "sv": "Kontakta kliniken för aktuella öppettider."
       }
     },
     {
@@ -145,7 +150,8 @@
       "note": "Own page opened.",
       "duty_i18n": {
         "pl": "Czynne codziennie 09:00–21:00.",
-        "cs": "Denně 9:00–21:00."
+        "cs": "Denně 9:00–21:00.",
+        "sv": "Öppet varje dag 09.00–21.00."
       }
     },
     {
@@ -164,7 +170,8 @@
       "note": "Own page opened: 'Режим работы: круглосуточно'. Mobile +375 29 7 521 521; page is inconsistent on operator names.",
       "duty_i18n": {
         "pl": "Czynne całą dobę; przerwa w środy 11:00–14:00.",
-        "cs": "Nonstop; přestávka ve středu 11:00–14:00."
+        "cs": "Nonstop; přestávka ve středu 11:00–14:00.",
+        "sv": "Öppet dygnet runt; paus på onsdagar 11.00–14.00."
       }
     },
     {
@@ -183,7 +190,8 @@
       "note": "Own page opened.",
       "duty_i18n": {
         "pl": "Czynne codziennie 09:00–21:00; przerwa w środy 11:00–14:00.",
-        "cs": "Denně 9:00–21:00; přestávka ve středu 11:00–14:00."
+        "cs": "Denně 9:00–21:00; přestávka ve středu 11:00–14:00.",
+        "sv": "Öppet varje dag 09.00–21.00; paus på onsdagar 11.00–14.00."
       }
     },
     {
@@ -202,7 +210,8 @@
       "note": "Own page opened; branch described as new.",
       "duty_i18n": {
         "pl": "Czynne codziennie 09:00–21:00; przerwa w środy 11:00–14:00.",
-        "cs": "Denně 9:00–21:00; přestávka ve středu 11:00–14:00."
+        "cs": "Denně 9:00–21:00; přestávka ve středu 11:00–14:00.",
+        "sv": "Öppet varje dag 09.00–21.00; paus på onsdagar 11.00–14.00."
       }
     },
     {
@@ -221,7 +230,8 @@
       "note": "Own page opened: 'круглосуточно, ежедневно'. Night line +375 44 583 73 63.",
       "duty_i18n": {
         "pl": "Czynne całą dobę, codziennie; nie każdy specjalista jest w nocy na dyżurze, więc zadzwoń wcześniej.",
-        "cs": "Nonstop, každý den; ne každý specialista je v noci ve službě, nejprve zavolejte."
+        "cs": "Nonstop, každý den; ne každý specialista je v noci ve službě, nejprve zavolejte.",
+        "sv": "Öppet dygnet runt, alla dagar; inte alla specialister har jour på natten – ring först."
       }
     }
   ],

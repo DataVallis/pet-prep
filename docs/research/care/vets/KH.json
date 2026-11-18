@@ -103,7 +103,8 @@
         "pt": "Aberto todos os dias, 9h00–19h00 (feriados 9h00–12h00). Urgências e cuidados intensivos 24 h/24, 7 dias por semana; liga para o número do hospital.",
         "nl": "Elke dag open 9.00–19.00 uur (feestdagen 9.00–12.00 uur). Spoed- en intensieve zorg 24/7; bel het nummer van het ziekenhuis.",
         "pl": "Otwarte codziennie 9:00–19:00 (w święta 9:00–12:00). Pogotowie i intensywna terapia całodobowo, 7 dni w tygodniu; zadzwoń pod numer szpitala.",
-        "cs": "Otevřeno denně 9:00–19:00 (státní svátky 9:00–12:00). Pohotovost a intenzivní péče nonstop; volejte na číslo nemocnice."
+        "cs": "Otevřeno denně 9:00–19:00 (státní svátky 9:00–12:00). Pohotovost a intenzivní péče nonstop; volejte na číslo nemocnice.",
+        "sv": "Öppet varje dag 9.00–19.00 (helgdagar 9.00–12.00). Akut- och intensivvård dygnet runt; ring sjukhusets nummer."
       }
     },
     {
@@ -125,7 +126,8 @@
         "pt": "Aberto todos os dias, 9h00–19h00 (pode fechar mais cedo – liga primeiro). Chamadas de urgência depois das 19h00 no mesmo número, apenas em inglês, com taxa fora de horas.",
         "nl": "Dagelijks open 9.00–19.00 uur (kan eerder sluiten – bel eerst). Spoedoproepen na 19.00 uur op hetzelfde nummer, alleen in het Engels, met toeslag buiten kantooruren.",
         "pl": "Otwarte codziennie 9:00–19:00 (może zamknąć wcześniej – najpierw zadzwoń). Połączenia alarmowe po 19:00 pod tym samym numerem, tylko po angielsku, z dopłatą po godzinach.",
-        "cs": "Otevřeno denně 9:00–19:00 (může zavřít dříve – nejdřív zavolejte). Pohotovostní hovory po 19:00 na stejném čísle, pouze anglicky, s příplatkem mimo ordinační dobu."
+        "cs": "Otevřeno denně 9:00–19:00 (může zavřít dříve – nejdřív zavolejte). Pohotovostní hovory po 19:00 na stejném čísle, pouze anglicky, s příplatkem mimo ordinační dobu.",
+        "sv": "Öppet 9.00–19.00 dagligen (kan stänga tidigare – ring först). Akutsamtal efter 19.00 på samma nummer, endast på engelska, med avgift utanför öppettid."
       }
     },
     {
@@ -147,7 +149,8 @@
         "pt": "Linha telefónica fora de horas disponível: +855 88 818 0022.",
         "nl": "Er is een telefoonlijn buiten kantooruren: +855 88 818 0022.",
         "pl": "Dostępna jest linia telefoniczna po godzinach: +855 88 818 0022.",
-        "cs": "K dispozici je telefonní linka mimo ordinační dobu: +855 88 818 0022."
+        "cs": "K dispozici je telefonní linka mimo ordinační dobu: +855 88 818 0022.",
+        "sv": "En telefonlinje utanför öppettid finns: +855 88 818 0022."
       }
     },
     {
@@ -169,7 +172,8 @@
         "pt": "Aberto de terça a sexta-feira e ao domingo; liga ou envia e-mail antes. Veterinários itinerantes também visitam Kampot em datas fixas.",
         "nl": "Open van dinsdag tot en met vrijdag en op zondag; bel of mail vooraf. Rondreizende dierenartsen komen op vaste data ook naar Kampot.",
         "pl": "Otwarte od wtorku do piątku i w niedzielę; zadzwoń lub napisz e-mail wcześniej. Weterynarze dojeżdżają też do Kampot w ustalonych terminach.",
-        "cs": "Otevřeno od úterý do pátku a v neděli; předem zavolejte nebo napište e-mailem. Hostující veterináři dojíždějí do Kampotu v pevně stanovených termínech."
+        "cs": "Otevřeno od úterý do pátku a v neděli; předem zavolejte nebo napište e-mailem. Hostující veterináři dojíždějí do Kampotu v pevně stanovených termínech.",
+        "sv": "Öppet tisdag–fredag och söndag; ring eller mejla i förväg. Besökande veterinärer kommer även till Kampot vissa bestämda datum."
       }
     },
     {
@@ -191,7 +195,8 @@
         "pt": "Horário não divulgado.",
         "nl": "Openingstijden niet gepubliceerd.",
         "pl": "Godziny otwarcia nie zostały podane.",
-        "cs": "Ordinační doba není zveřejněna."
+        "cs": "Ordinační doba není zveřejněna.",
+        "sv": "Öppettider ej publicerade."
       }
     },
     {
@@ -213,7 +218,8 @@
         "pt": "Consultas sob marcação, em dias úteis, 9h00–16h00.",
         "nl": "Consulten op afspraak, op werkdagen 9.00–16.00 uur.",
         "pl": "Konsultacje po wcześniejszym umówieniu, w dni powszednie 9:00–16:00.",
-        "cs": "Konzultace na objednání, v pracovní dny 9:00–16:00."
+        "cs": "Konzultace na objednání, v pracovní dny 9:00–16:00.",
+        "sv": "Konsultationer efter bokning, vardagar 9.00–16.00."
       }
     },
     {
@@ -235,7 +241,8 @@
         "pt": "Consultas sob marcação, todos os dias. Chamadas de urgência atendidas a qualquer hora; visitas ao domicílio disponíveis.",
         "nl": "Consulten op afspraak, dagelijks. Spoedoproepen op elk uur; huisbezoeken mogelijk.",
         "pl": "Konsultacje po wcześniejszym umówieniu, codziennie. Zgłoszenia alarmowe przyjmowane o każdej porze; możliwe wizyty domowe.",
-        "cs": "Konzultace na objednání, denně. Pohotovostní hovory kdykoli; možné i návštěvy doma."
+        "cs": "Konzultace na objednání, denně. Pohotovostní hovory kdykoli; možné i návštěvy doma.",
+        "sv": "Konsultationer efter bokning, dagligen. Akutsamtal tas emot när som helst; hembesök finns."
       }
     },
     {
@@ -257,7 +264,8 @@
         "pt": "Contactável por telefone 24 horas por dia; visitas ao domicílio.",
         "nl": "24 uur per dag telefonisch bereikbaar; huisbezoeken.",
         "pl": "Dostępny telefonicznie całą dobę; wizyty domowe.",
-        "cs": "Telefonicky dostupné 24 hodin denně; návštěvy doma."
+        "cs": "Telefonicky dostupné 24 hodin denně; návštěvy doma.",
+        "sv": "Nåbar per telefon 24 h om dygnet; hembesök."
       }
     },
     {
@@ -279,7 +287,8 @@
         "pt": "Aberto todos os dias, 7h30–17h00.",
         "nl": "Dagelijks open 7.30–17.00 uur.",
         "pl": "Otwarte codziennie 7:30–17:00.",
-        "cs": "Otevřeno denně 7:30–17:00."
+        "cs": "Otevřeno denně 7:30–17:00.",
+        "sv": "Öppet dagligen 7.30–17.00."
       }
     }
   ],

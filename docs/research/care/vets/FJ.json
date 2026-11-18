@@ -49,7 +49,8 @@
       "checked": "2026-11-16",
       "note": "Second phone +679 788 7319. 24/7 is the clinic's own claim on its site.",
       "duty_i18n": {
-        "cs": "Pojízdná klinika pro domácí zvířata s návštěvami doma a pohotovostní péčí, uváděná jako dostupná nonstop v oblasti Suva, Nausori, Navua a Pacific Harbour."
+        "cs": "Pojízdná klinika pro domácí zvířata s návštěvami doma a pohotovostní péčí, uváděná jako dostupná nonstop v oblasti Suva, Nausori, Navua a Pacific Harbour.",
+        "sv": "Mobil djurklinik med hembesök och akutvård, uppges vara tillgänglig dygnet runt i Suva, Nausori, Navua och Pacific Harbour."
       }
     },
     {
@@ -67,7 +68,8 @@
       "checked": "2026-11-16",
       "note": "Phone given as 8926200 on page; formatted with +679.",
       "duty_i18n": {
-        "cs": "Otevřeno Po–So 8:00–16:30. Mimo ordinační dobu pouze pohotovost 17:00–22:00, SMS zprávou na 992 2634."
+        "cs": "Otevřeno Po–So 8:00–16:30. Mimo ordinační dobu pouze pohotovost 17:00–22:00, SMS zprávou na 992 2634.",
+        "sv": "Öppet mån–lör 8.00–16.30. Akutfall utanför öppettider endast 17.00–22.00, via sms till 992 2634."
       }
     },
     {
@@ -84,7 +86,8 @@
       "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Otevřeno Po–So 8:30–17:00, v neděli zavřeno. Pohotovostní linka mimo ordinační dobu na stejném čísle, v rámci možností (nejde o nonstop službu)."
+        "cs": "Otevřeno Po–So 8:30–17:00, v neděli zavřeno. Pohotovostní linka mimo ordinační dobu na stejném čísle, v rámci možností (nejde o nonstop službu).",
+        "sv": "Öppet mån–lör 8.30–17.00, stängt söndagar. Akut- och jourlinje på samma nummer, besvaras i mån av möjlighet (ingen tjänst dygnet runt)."
       }
     },
     {
@@ -101,7 +104,8 @@
       "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Otevřeno Út–So 8:30–17:00; v neděli a v pondělí zavřeno."
+        "cs": "Otevřeno Út–So 8:30–17:00; v neděli a v pondělí zavřeno.",
+        "sv": "Öppet tis–lör 8.30–17.00; stängt sön och mån."
       }
     },
     {
@@ -118,7 +122,8 @@
       "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Otevřeno Út–Pá 8:00–17:00 a so 8:00–13:00; v neděli a v pondělí zavřeno."
+        "cs": "Otevřeno Út–Pá 8:00–17:00 a so 8:00–13:00; v neděli a v pondělí zavřeno.",
+        "sv": "Öppet tis–fre 8.00–17.00 och lör 8.00–13.00; stängt sön och mån."
       }
     },
     {
@@ -135,7 +140,8 @@
       "source_url": "https://www.animalsfiji.org/contact-us/locations-clinic-times",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Otevřeno Út–Pá 8:30–17:00 a so 8:00–13:00; v neděli a v pondělí zavřeno."
+        "cs": "Otevřeno Út–Pá 8:30–17:00 a so 8:00–13:00; v neděli a v pondělí zavřeno.",
+        "sv": "Öppet tis–fre 8.30–17.00 och lör 8.00–13.00; stängt sön och mån."
       }
     },
     {
@@ -151,7 +157,8 @@
       "checked": "2026-11-16",
       "note": "Page gives no address or city; locate before publishing.",
       "duty_i18n": {
-        "cs": "Záchranná stanice a veterinární klinika, otevřeno Út–So 8:00–17:00. Objednání telefonicky."
+        "cs": "Záchranná stanice a veterinární klinika, otevřeno Út–So 8:00–17:00. Objednání telefonicky.",
+        "sv": "Djurhem och veterinärklinik, öppet tis–lör 8.00–17.00. Ring för att boka tid."
       }
     }
   ],

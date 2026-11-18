@@ -48,7 +48,8 @@
         "pt": "Urgências 24 horas por dia, 365 dias por ano, incluindo feriados: +502 2375 8700. Consultas externas 7h00–18h00; horário de urgências a partir das 18h00. Ambulância só durante o dia.",
         "nl": "Spoedeisende zorg 24 uur per dag, 365 dagen per jaar, ook op feestdagen: +502 2375 8700. Poliklinische consulten 7.00–18.00 uur; spoeddienst vanaf 18.00 uur. Ambulance alleen overdag.",
         "pl": "Całodobowa pomoc w nagłych przypadkach, 365 dni w roku, także w święta: +502 2375 8700. Konsultacje ambulatoryjne 7:00–18:00; godziny pogotowia od 18:00. Karetka tylko w ciągu dnia.",
-        "cs": "Nonstop pohotovost, 365 dní v roce včetně svátků: +502 2375 8700. Ambulantní vyšetření 7:00–18:00; pohotovostní provoz od 18:00. Sanitka pouze ve dne."
+        "cs": "Nonstop pohotovost, 365 dní v roce včetně svátků: +502 2375 8700. Ambulantní vyšetření 7:00–18:00; pohotovostní provoz od 18:00. Sanitka pouze ve dne.",
+        "sv": "Akutvård dygnet runt, 365 dagar om året inklusive helgdagar: +502 2375 8700. Öppenvårdskonsultationer 7.00–18.00; akuttider från 18.00. Ambulans endast dagtid."
       }
     },
     {
@@ -70,7 +71,8 @@
         "pt": "Casos veterinários urgentes atendidos a qualquer hora. Telefone/WhatsApp +502 4363 4958, também +502 2394 9324. Liga para confirmar.",
         "nl": "Spoedgevallen worden op elk uur gezien. Telefoon/WhatsApp +502 4363 4958, ook +502 2394 9324. Bel om te bevestigen.",
         "pl": "Pilne przypadki weterynaryjne przyjmowane o każdej porze. Telefon/WhatsApp +502 4363 4958, także +502 2394 9324. Zadzwoń, aby potwierdzić.",
-        "cs": "Naléhavé veterinární případy ošetřují kdykoli. Telefon/WhatsApp +502 4363 4958, také +502 2394 9324. Pro potvrzení zavolejte."
+        "cs": "Naléhavé veterinární případy ošetřují kdykoli. Telefon/WhatsApp +502 4363 4958, také +502 2394 9324. Pro potvrzení zavolejte.",
+        "sv": "Brådskande veterinärfall tas emot när som helst. Telefon/WhatsApp +502 4363 4958, även +502 2394 9324. Ring för att bekräfta."
       }
     },
     {
@@ -91,7 +93,8 @@
         "pt": "Indicado como 24 h/24, 7 dias por semana, com serviço de urgências. Liga antes: +502 5480 8888.",
         "nl": "Vermeld als 24/7 met spoedzorg. Bel vooraf: +502 5480 8888.",
         "pl": "Podawane jako całodobowe z usługami w nagłych przypadkach. Zadzwoń wcześniej: +502 5480 8888.",
-        "cs": "Uváděno jako nonstop s pohotovostí. Před cestou zavolejte: +502 5480 8888."
+        "cs": "Uváděno jako nonstop s pohotovostí. Před cestou zavolejte: +502 5480 8888.",
+        "sv": "Anges ha akutservice dygnet runt. Ring innan du kommer: +502 5480 8888."
       }
     },
     {
@@ -112,7 +115,8 @@
         "pt": "Serviço de urgências indicado como 24 h/24, 7 dias por semana. Liga antes: +502 2215 2777.",
         "nl": "Spoeddienst vermeld als 24/7. Bel vooraf: +502 2215 2777.",
         "pl": "Pogotowie weterynaryjne podawane jako całodobowe. Zadzwoń wcześniej: +502 2215 2777.",
-        "cs": "Pohotovost je uváděna jako nonstop. Před cestou zavolejte: +502 2215 2777."
+        "cs": "Pohotovost je uváděna jako nonstop. Před cestou zavolejte: +502 2215 2777.",
+        "sv": "Akutservice anges finnas dygnet runt. Ring innan du kommer: +502 2215 2777."
       }
     },
     {
@@ -133,7 +137,8 @@
         "pt": "Aberto todos os dias 7h00–19h00; urgências atendidas sem marcação nesse horário. WhatsApp +502 5106 4444. Para urgências noturnas, a clínica encaminha para um hospital veterinário noturno.",
         "nl": "Dagelijks open 7.00–19.00 uur; spoedgevallen worden in die uren zonder afspraak gezien. WhatsApp +502 5106 4444. Bij spoed 's nachts verwijst de praktijk door naar een dierenziekenhuis met nachtdienst.",
         "pl": "Otwarte codziennie 7:00–19:00; nagłe przypadki przyjmowane w tych godzinach bez umawiania. WhatsApp +502 5106 4444. W nagłych przypadkach w nocy przychodnia kieruje do nocnej lecznicy weterynaryjnej.",
-        "cs": "Otevřeno denně 7:00–19:00; pohotovost bez objednání v této době. WhatsApp +502 5106 4444. V případě nočních pohotovostí klinika odkáže na noční veterinární nemocnici."
+        "cs": "Otevřeno denně 7:00–19:00; pohotovost bez objednání v této době. WhatsApp +502 5106 4444. V případě nočních pohotovostí klinika odkáže na noční veterinární nemocnici.",
+        "sv": "Öppet dagligen 7.00–19.00; akutfall tas emot utan tidsbokning under dessa tider. WhatsApp +502 5106 4444. Vid akutfall på natten hänvisar kliniken till ett djursjukhus med nattöppet."
       }
     },
     {
@@ -154,7 +159,8 @@
         "pt": "Seg–sex 8h00–17h00, sáb 7h00–14h00. WhatsApp +502 3040 8152.",
         "nl": "Ma–vr 8.00–17.00 uur, za 7.00–14.00 uur. WhatsApp +502 3040 8152.",
         "pl": "pon.–pt. 8:00–17:00, sob. 7:00–14:00. WhatsApp +502 3040 8152.",
-        "cs": "Po–Pá 8:00–17:00, so 7:00–14:00. WhatsApp +502 3040 8152."
+        "cs": "Po–Pá 8:00–17:00, so 7:00–14:00. WhatsApp +502 3040 8152.",
+        "sv": "Mån–fre 8.00–17.00, lör 7.00–14.00. WhatsApp +502 3040 8152."
       }
     }
   ],

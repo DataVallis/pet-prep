@@ -69,7 +69,8 @@
         "pt": "Hospital universitário para animais de companhia, selvagens e de jardim zoológico. Urgências e cuidados intensivos 24 horas por dia; consultas externas de segunda a sábado 8h00–20h00, domingo e feriados 8h00–12h00. Clínicos residentes de piquete para urgências 19h30–8h00. Admissão sob marcação, feita por um veterinário que encaminha o animal.",
         "nl": "Universitair opleidingsziekenhuis voor gezelschapsdieren, wilde dieren en dierentuindieren. Spoed- en intensieve zorg 24 uur per dag; polikliniek ma–za 8.00–20.00 uur, zo en feestdagen 8.00–12.00 uur. Artsen in opleiding zijn bij spoed in achterwacht van 19.30 tot 08.00 uur. Opname op afspraak, te boeken door een verwijzende dierenarts.",
         "pl": "Uniwersytecki szpital kliniczny dla zwierząt domowych, dzikich i z ogrodów zoologicznych. Pogotowie i intensywna terapia całodobowo; ambulatorium pon.–sob. 8:00–20:00, niedz. i święta 8:00–12:00. Lekarze dyżurujący na miejscu w nagłych przypadkach 19:30–08:00. Przyjęcie po umówieniu, rezerwacji dokonuje weterynarz kierujący.",
-        "cs": "Univerzitní výuková nemocnice pro domácí, divoká a zoologická zvířata. Pohotovost a intenzivní péče nonstop; ambulantní provoz Po–So 8:00–20:00, v neděli a o státních svátcích 8:00–12:00. Lékaři na místě mají pohotovost 19:30–08:00. Přijetí na objednání, objednává odesílající veterinář."
+        "cs": "Univerzitní výuková nemocnice pro domácí, divoká a zoologická zvířata. Pohotovost a intenzivní péče nonstop; ambulantní provoz Po–So 8:00–20:00, v neděli a o státních svátcích 8:00–12:00. Lékaři na místě mají pohotovost 19:30–08:00. Přijetí na objednání, objednává odesílající veterinář.",
+        "sv": "Universitetsdjursjukhus för sällskapsdjur, vilda djur och djurparksdjur. Akut- och intensivvård dygnet runt; öppenvård mån–lör 8.00–20.00, sön och helgdagar 8.00–12.00. Jourhavande veterinärer finns på plats vid akutfall 19.30–08.00. Intagning sker efter bokning av en remitterande veterinär."
       }
     },
     {
@@ -92,7 +93,8 @@
         "pt": "Consultas externas 6h00–22h00 sob marcação; urgências e cuidados intensivos abertos 24 horas por dia, 7 dias por semana.",
         "nl": "Polikliniek 6.00–22.00 uur op afspraak; spoed- en intensieve zorg 24 uur per dag, zeven dagen per week open.",
         "pl": "Ambulatorium 6:00–22:00 po wcześniejszym umówieniu; pogotowie i intensywna terapia otwarte całodobowo, siedem dni w tygodniu.",
-        "cs": "Ambulantní provoz 6:00–22:00 na objednání; pohotovost a intenzivní péče nonstop, sedm dní v týdnu."
+        "cs": "Ambulantní provoz 6:00–22:00 na objednání; pohotovost a intenzivní péče nonstop, sedm dní v týdnu.",
+        "sv": "Öppenvård 6.00–22.00 efter bokad tid; akut- och intensivvård öppen dygnet runt, sju dagar i veckan."
       }
     },
     {
@@ -113,7 +115,8 @@
         "pt": "Hospital de animais de pequeno porte gerido pela Força Aérea do Sri Lanka, em Borella. Liga antes para saber o horário e para urgências.",
         "nl": "Dierenziekenhuis voor kleine dieren van de Sri Lankaanse luchtmacht in Borella. Bel vooraf voor openingstijden en spoed.",
         "pl": "Szpital małych zwierząt prowadzony przez Siły Powietrzne Sri Lanki w Borelli. W sprawie godzin otwarcia i nagłych przypadków zadzwoń wcześniej.",
-        "cs": "Nemocnice pro malá zvířata provozovaná letectvem Srí Lanky v Borelle. Ordinační dobu a pohotovost zjistíte telefonicky."
+        "cs": "Nemocnice pro malá zvířata provozovaná letectvem Srí Lanky v Borelle. Ordinační dobu a pohotovost zjistíte telefonicky.",
+        "sv": "Smådjurssjukhus som drivs av Sri Lankas flygvapen i Borella. Ring innan du kommer för öppettider och akutfall."
       }
     }
   ],

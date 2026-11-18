@@ -99,7 +99,8 @@
       "note": "doa.gov.ky contact page labels 345-916-2218 'Livestock Emergency'; doa.gov.ky/faqs/ lists the same number as the after-hours emergency veterinary service number. No explicit '24 h' wording, so emergency_24h=false.",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Veterinární pohotovostní linka mimo ordinační dobu (uvedena jako pohotovost pro hospodářská zvířata). Kancelář Po–Pá 8:30–17:00 na čísle +1 345 947 3090."
+        "cs": "Veterinární pohotovostní linka mimo ordinační dobu (uvedena jako pohotovost pro hospodářská zvířata). Kancelář Po–Pá 8:30–17:00 na čísle +1 345 947 3090.",
+        "sv": "Jourlinje för veterinär utanför öppettid (listad som akutjour för lantbruksdjur). Kontor mån–fre 8.30–17.00 på +1 345 947 3090."
       }
     },
     {
@@ -117,7 +118,8 @@
       "note": "Contact page: 'Emergency Vet 345-925-5765'; FAQ marks it after-hours emergency. Aug 2025 notice said that during the assistant's absence emergencies went to 345-916-2218 (radiocayman.gov.ky/community-events/cayman-brac-animal-health-assistant-unavailable). Island has no permanent private vet per Cayman Compass 2020.",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Kontakt na pohotovostního veterináře na Cayman Brac (mimo ordinační dobu). Kancelář Po–Pá 8:30–16:30 na čísle +1 345 948 0522 / 948 1411."
+        "cs": "Kontakt na pohotovostního veterináře na Cayman Brac (mimo ordinační dobu). Kancelář Po–Pá 8:30–16:30 na čísle +1 345 948 0522 / 948 1411.",
+        "sv": "Jourhavande veterinär på Cayman Brac (utanför öppettid). Kontor mån–fre 8.30–16.30 på +1 345 948 0522 / 948 1411."
       }
     },
     {
@@ -135,7 +137,8 @@
       "note": "Confirmed on the clinic's own site (name, address, phone, hours). 24-h claim: meta description says 'Get 24/7 emergency service'; services page says the emergency line runs after hours on weekdays and 24/7 weekends/holidays, clients only (non-clients pay a surcharge). Kept emergency_24h=true on that basis.",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Po–Pá 8:00–17:00, poslední sobotu v měsíci 8:00–13:00, v neděli zavřeno. Pohotovostní linka +1 345 916 7387 (pouze pro klienty): mimo ordinační dobu v pracovní dny a nonstop o víkendech a státních svátcích."
+        "cs": "Po–Pá 8:00–17:00, poslední sobotu v měsíci 8:00–13:00, v neděli zavřeno. Pohotovostní linka +1 345 916 7387 (pouze pro klienty): mimo ordinační dobu v pracovní dny a nonstop o víkendech a státních svátcích.",
+        "sv": "Mån–fre 8.00–17.00, sista lördagen i månaden 8.00–13.00, stängt söndag. Akutlinje +1 345 916 7387 (endast för kunder): utanför öppettid på vardagar och dygnet runt på helger och helgdagar."
       }
     },
     {
@@ -153,7 +156,8 @@
       "note": "Confirmed on own site. Site lists 'Emergency Care' 24/7 but describes the after-hours line as advice and assistance; it does not say whether in-person treatment is available at night - phone first. Emergency number 525-5838 (Radio Cayman 2020) confirmed current.",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Po–Pá 8:00–18:00, so 8:30–13:30, pouze na objednání, v neděli a o státních svátcích zavřeno. Pohotovostní linka mimo ordinační dobu +1 345 525 5838. Výjezdní služba v úterý a v sobotu dopoledne."
+        "cs": "Po–Pá 8:00–18:00, so 8:30–13:30, pouze na objednání, v neděli a o státních svátcích zavřeno. Pohotovostní linka mimo ordinační dobu +1 345 525 5838. Výjezdní služba v úterý a v sobotu dopoledne.",
+        "sv": "Mån–fre 8.00–18.00, lör 8.30–13.30, endast efter bokad tid, stängt söndag och helgdagar. Akutlinje utanför öppettid +1 345 525 5838. Mobila besök tis och lör förmiddag."
       }
     },
     {
@@ -171,7 +175,8 @@
       "checked": "2026-11-16",
       "url": "https://islandveterinaryservices.com/",
       "duty_i18n": {
-        "cs": "Po–St a Pá 8:00–18:00, čt 8:00–17:00, so 8:00–13:00, v neděli zavřeno. Pohotovostní linka +1 345 916 2459."
+        "cs": "Po–St a Pá 8:00–18:00, čt 8:00–17:00, so 8:00–13:00, v neděli zavřeno. Pohotovostní linka +1 345 916 2459.",
+        "sv": "Mån–ons och fre 8.00–18.00, tors 8.00–17.00, lör 8.00–13.00, stängt söndag. Akutlinje +1 345 916 2459."
       }
     },
     {
@@ -188,7 +193,8 @@
       "note": "Name and phone 326-3450 confirmed on a second (non-Cayman Resident) page; street address 'Lawrence Bl 36' and hours Mon-Fri 8-17 appear only on the caymanresident.com profile, so were removed. Own site (345vets.com) not found/opened.",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Klinika pro malá zvířata. Ordinační dobu zjistíte telefonicky."
+        "cs": "Klinika pro malá zvířata. Ordinační dobu zjistíte telefonicky.",
+        "sv": "Smådjursklinik. Ring för öppettider."
       }
     },
     {
@@ -205,7 +211,8 @@
       "note": "Phone 945-1242 (BringFido) and location Countryside Shopping Village, Savannah (Cayman Compass 2011, old) confirmed; street '33 Hirst Road' and emergency line 926 1242 only on caymanresident.com profile, so removed. Compass 2011 says emergency services offered, no number.",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Klinika s specializovaným hotelem pro zvířata. Ordinační dobu a pohotovost zjistíte telefonicky."
+        "cs": "Klinika s specializovaným hotelem pro zvířata. Ordinační dobu a pohotovost zjistíte telefonicky.",
+        "sv": "Klinik med specialiserad djurpension. Ring för öppettider och akutfall."
       }
     },
     {
@@ -223,7 +230,8 @@
       "note": "Confirmed on own site (phone, hours) and visitcaymanislands.com. No emergency or 24 h wording.",
       "checked": "2026-11-16",
       "duty_i18n": {
-        "cs": "Výjezdní služba, Po–Pá 9:00–17:00."
+        "cs": "Výjezdní služba, Po–Pá 9:00–17:00.",
+        "sv": "Mobil veterinärtjänst med hembesök, mån–fre 9.00–17.00."
       }
     }
   ],
