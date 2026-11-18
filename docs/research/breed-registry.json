@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "7e24a339a35a002ab389abf3bda779346ea493ca346fcd3895164ebf136aa851"
+      "sha256": "e3dffb8bbf21652cb7a11f3d3cd15bc337864cfa9737fd0cddf83d7989a20757"
     }
   },
   "suitability_vocabulary": {
@@ -69458,7 +69458,12 @@
           "S928"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "xoloitzcuintli.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_checked",
         "tests": [],

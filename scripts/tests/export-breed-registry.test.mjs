@@ -691,11 +691,12 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   const dogs = list('GROOMING_DOG_BREEDS').sort();
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
-  // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  // Counted from BREED_SPECIES, so a new brushed dog breed needs no edit here (was a fixed 92 that went stale).
+  // M5-R13: every dog breed of the app except the mutt, the Border Collie and (M5-R10-123) the hairless Xoloitzcuintli
+  // (no grooming statement). Counted from BREED_SPECIES, so a new brushed dog breed needs no edit here (was a fixed 92 that went stale).
+  const unbrushed = ['mutt', 'border_collie', 'xoloitzcuintli'];
   const dogBreeds = [...species.matchAll(/^  ([a-z_]+): 'dog',$/gm)].map((x) => x[1]);
-  assert.equal(dogs.length, dogBreeds.length - 2);
-  assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
+  assert.equal(dogs.length, dogBreeds.length - unbrushed.length);
+  assert.ok(unbrushed.every((b) => dogBreeds.includes(b) && !dogs.includes(b)));
 });
 
 // ─── breed portraits (M5-R11, David 2026-10-10: AI photos, labelled) ───
