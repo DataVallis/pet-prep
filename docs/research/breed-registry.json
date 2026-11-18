@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "0950c34eb326a701300d83d89f64bb1148686a0a63bcff187e933902bcb0be95"
+      "sha256": "d29f1d85d67225d2fef330abc33594005d7809ca3cd2a4cba95852a25d3c3337"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "ff7257e95ebbc8f1e2bfb04e7dbe73e6b2c4abdd4d9339be293cc063d1679d82"
+      "sha256": "01acf7f7ebaf75d29af648febe1c3af14d5c769d0d7ca051988d9dc1154f4d4d"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "5c5f07a22bf50c0101c905f6bb6926d1a6a616f0f1632dc03b6fe87234b1b630"
+      "sha256": "ac98fb8891bbbd86eca66e280a341dccb24ec555a1167726c0b36f1cb9503354"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,12 +40,12 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "7f0de99c8d92b9083e6aa077c8101287f10a794efee69c57dca204c3fd066884"
+      "sha256": "4d36e96beffb18fea13be720d2c877c4ea3db5a156085640084b9bac0dbb1a97"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "3e50bcaa7af768594edfdedecbe203ee8c1be88f6538ac1368fa9f57a595f689"
+      "sha256": "78632d2a4a043e10315bad18f0b56c44749ee05e3dd4581f9b71bb3f83b48e36"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "80c7c9f6b4587ea195c0fa1a62b55ab6283e17fc09a53b51857f688792bc1932"
+      "sha256": "55c8b28358a593913147b54d3b941d795f97d0cf0469fe1ef4898648a1db5c36"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 114,
+      "breed_count": 115,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -69549,6 +69549,564 @@
       ]
     },
     {
+      "id": "spinone_italiano",
+      "species": "dog",
+      "order": 114,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Spinone Italiano",
+        "sl": "Italijanski ostrodlaki ptičar"
+      },
+      "slug": {
+        "en": "spinone-italiano",
+        "sl": "italijanski-ostrodlaki-pticar"
+      },
+      "synonyms": {
+        "en": [
+          "Italian Spinone",
+          "Spinone",
+          "Italian Griffon",
+          "Italian Wire-haired Pointer"
+        ],
+        "sl": [
+          "spinone",
+          "italijanski ostrodlaki pticar",
+          "italijanski spinone"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S936"
+          ],
+          "ref": "spinone_italiano.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              60,
+              70
+            ],
+            "female": [
+              58,
+              65
+            ]
+          },
+          "source_ids": [
+            "S935"
+          ],
+          "ref": "spinone_italiano.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              32,
+              37
+            ],
+            "female": [
+              28,
+              30
+            ]
+          },
+          "source_ids": [
+            "S935"
+          ],
+          "ref": "spinone_italiano.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "spinone_italiano.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S936"
+          ],
+          "ref": "spinone_italiano.lifespan.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            10,
+            12
+          ],
+          "source_ids": [
+            "S937"
+          ],
+          "ref": "spinone_italiano.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S936"
+          ],
+          "ref": "spinone_italiano.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S936"
+          ],
+          "ref": "spinone_italiano.suitability.pdsa_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 165,
+            "group": 7,
+            "section": 1,
+            "origin": "IT"
+          },
+          "source_ids": [
+            "S935"
+          ],
+          "ref": "spinone_italiano.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S936"
+          ],
+          "ref": "spinone_italiano.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S938"
+          ],
+          "ref": "spinone_italiano.health.hip_elbow_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "inherited_ataxia",
+          "source_ids": [
+            "S938"
+          ],
+          "ref": "spinone_italiano.health.cerebellar_ataxia",
+          "confidence": "high"
+        },
+        {
+          "key": "eyelids_turned",
+          "source_ids": [
+            "S936"
+          ],
+          "ref": "spinone_italiano.health.eyelids",
+          "confidence": "high"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S936"
+          ],
+          "ref": "spinone_italiano.health.hypothyroidism",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S936"
+          ],
+          "ref": "spinone_italiano.health.atopy",
+          "confidence": "high"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S936"
+          ],
+          "ref": "spinone_italiano.health.epilepsy",
+          "confidence": "high"
+        },
+        {
+          "key": "panosteitis",
+          "source_ids": [
+            "S936"
+          ],
+          "ref": "spinone_italiano.health.panosteitis",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S936"
+            ],
+            "refs": [
+              "spinone_italiano.exercise.adult",
+              "spinone_italiano.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S936"
+            ],
+            "refs": [
+              "spinone_italiano.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S938"
+            ],
+            "refs": [
+              "spinone_italiano.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S936"
+            ],
+            "refs": [
+              "spinone_italiano.exercise.adult",
+              "spinone_italiano.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S938"
+            ],
+            "refs": [
+              "spinone_italiano.behaviour.time_alone"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.spinone_italiano.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S936"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S936 'ideally more than 2 hours per day'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.spinone_italiano.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.spinone_italiano.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S936"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × PDSA lower bound 'Over 10 years', S936)"
+          },
+          {
+            "ref": "proposed_game_parameters.spinone_italiano.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.spinone_italiano.grooming",
+            "basis_source_ids": [
+              "S936"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (PDSA »2 or 3 times per week« → zgornja meja); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.spinone_italiano.tooth_brushing",
+            "basis_source_ids": [
+              "S938"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily tooth brushing« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.spinone_italiano.nail_trimming",
+            "basis_source_ids": [
+              "S938"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev 1× na teden (WebMD »Weekly nail trims«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S936",
+          "S938"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_checked",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S935",
+        "S936",
+        "S937",
+        "S938",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -76064,6 +76622,34 @@
       "publisher": "WebMD Pets — Ariel Grucza, medically reviewed by Zilpah Sheikh, MD (May 08, 2026)",
       "title": "What to Know About a Xoloitzcuintli",
       "url": "https://www.webmd.com/pets/dogs/what-to-know-about-xoloitzcuintli"
+    },
+    {
+      "id": "S935",
+      "tier": "A",
+      "publisher": "FCI (copy hosted by the Italian Spinone Club of Great Britain)",
+      "title": "FCI-Standard N° 165 — Spinone Italiano (Italian Spinone) (PDF, English text 17.12.2015)",
+      "url": "https://www.italianspinone.co.uk/documents/165g07-en.pdf"
+    },
+    {
+      "id": "S936",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Italian Spinone breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/italian-spinone"
+    },
+    {
+      "id": "S937",
+      "tier": "B",
+      "publisher": "PetMD (updated Mar. 27, 2025)",
+      "title": "Spinone Italiano",
+      "url": "https://petmd.com/dog/breeds/c_dg_spinone_italiano"
+    },
+    {
+      "id": "S938",
+      "tier": "B",
+      "publisher": "WebMD Pets — Lauren Barrow, medically reviewed by Zilpah Sheikh, MD (April 23, 2026)",
+      "title": "What to Know About a Spinone Italiano",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-a-spinone-italiano"
     },
     {
       "id": "C1",

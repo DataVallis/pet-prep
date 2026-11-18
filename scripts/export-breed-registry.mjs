@@ -504,6 +504,7 @@ const SPECIES = [
       { id: 'tibetan_terrier', synonyms: { en: ['Tibet Terrier'], sl: ['tibetan terier', 'tibet terier'] } },
       { id: 'greyhound', synonyms: { en: ['English Greyhound'], sl: ['greyhound', 'grejhaund'] } },
       { id: 'xoloitzcuintli', synonyms: { en: ['Xoloitzcuintle', 'Xolo', 'Mexican Hairless Dog', 'Mexican Hairless'], sl: ['xoloitzcuintli', 'xolo', 'mehiški goli', 'mehiski goli pes'] } },
+      { id: 'spinone_italiano', synonyms: { en: ['Italian Spinone', 'Spinone', 'Italian Griffon', 'Italian Wire-haired Pointer'], sl: ['spinone', 'italijanski ostrodlaki pticar', 'italijanski spinone'] } },
     ],
   },
   {
@@ -3126,6 +3127,32 @@ const DOG_FACTS = {
       ['kneecap_luxation', 'health.patellar_luxation'],
     ],
   },
+  // M5-R10-124. No RKC page reachable → PDSA (S936): exercise 'ideally more than 2 hours per day' (more than 120), coat
+  // 'Medium', lifespan 'Over 10 years'; PetMD 10–12 years (S937); height + weight = FCI-Standard N° 165 (S935). Not ranked by
+  // Coren (S35). FCI origin Italy. No grooming fact (PDSA '2 or 3 times per week' vs WebMD 'weekly brushing' — the game rule
+  // carries the brushing), no shedding fact (one WebMD statement only). Not exported: adult_weight alternatives (PDSA,
+  // WebMD), lifespan.kc_survey_2004 (tier C), lifespan.senior_from (derived), health.screening. No new health key.
+  spinone_italiano: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    coren_rank: false,
+    health: [
+      ['bloat_gdv', 'health.gdv'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['inherited_ataxia', 'health.cerebellar_ataxia'],
+      ['eyelids_turned', 'health.eyelids'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['epilepsy', 'health.epilepsy'],
+      ['panosteitis', 'health.panosteitis'],
+    ],
+  },
 
 
 
@@ -3208,6 +3235,7 @@ export const DOG_CARE_TASKS = {
   tibetan_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.tibetan_terrier.tooth_brushing']],
   greyhound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.greyhound.tooth_brushing']],
   xoloitzcuintli: [['tooth_brushing', 2, 7, 'proposed_game_parameters.xoloitzcuintli.tooth_brushing']],
+  spinone_italiano: [['tooth_brushing', 7, 7, 'proposed_game_parameters.spinone_italiano.tooth_brushing'], ['nail_trim', 1, 7, 'proposed_game_parameters.spinone_italiano.nail_trimming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4142,6 +4170,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.xoloitzcuintli.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.xoloitzcuintli.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.xoloitzcuintli.exercise_minutes_senior',
+  },
+  spinone_italiano: {
+    adult_minutes: ['proposed_game_parameters.spinone_italiano.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.spinone_italiano.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.spinone_italiano.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.spinone_italiano.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.spinone_italiano.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.spinone_italiano.exercise_minutes_senior',
   },
 
 
