@@ -1491,6 +1491,19 @@
             "prompt_hash": "sha256:a7dca16f7737de0b873d223258b0b4b934ab476070a481ef83186badb34e3023",
             "generated_at": "2026-11-17T07:03:25+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "xoloitzcuintli",
+            "species": "dog",
+            "colour": "black",
+            "file": "dog/xoloitzcuintli.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:1e725f04e13617b5429dbb4914ecbd488c8681aea1c23dfaa84858b1872def86",
+            "generated_at": "2026-11-18T01:06:30+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
