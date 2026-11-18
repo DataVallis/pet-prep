@@ -810,6 +810,13 @@ return [
         ['key' => 'orange-roan', 'value' => 'orange roan', 'en' => 'Orange roan', 'sl' => 'Oranžno lisast'],
         ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
     ],
+    // M5-R10-125: FCI-Standard N° 1 (S943) — the four usual colours, same order and values as breed_appearance.php.
+    'pointer' => [
+        ['key' => 'liver-white', 'value' => 'liver and white', 'en' => 'Liver and white', 'sl' => 'Rjavo-bel'],
+        ['key' => 'orange-white', 'value' => 'orange and white', 'en' => 'Orange and white', 'sl' => 'Oranžno-bel'],
+        ['key' => 'lemon-white', 'value' => 'lemon and white', 'en' => 'Lemon and white', 'sl' => 'Limonasto-bel'],
+        ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

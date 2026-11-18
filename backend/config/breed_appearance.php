@@ -845,6 +845,12 @@
 | large ears of fine texture; long thin tapering natural tail. No welfare trait (healthy, unburnt skin). Six named standard
 | colours, black first (portrait default); weights unsourced → `verified => false`.
 |
+| Pointer (M5-R10-125, docs/research/dog-data pointer.appearance): "Symmetrical and well built all over, general outline a
+| series of graceful curves. A strong but lissom appearance." (FCI-Standard N° 1, S943); colours "Usual colours are lemon and
+| white, orange and white, liver and white, and black and white." (S943); fine, short, hard coat with a decided sheen; thin,
+| fairly high-set ears lying close to the head; natural tail carried level with the back. No welfare trait. Four usual colours,
+| liver and white first (portrait default); weights unsourced → `verified => false`.
+|
 | Spinone Italiano (M5-R10-124, docs/research/dog-data spinone_italiano.appearance): "Dog of solid construction, robust and
 | vigorous with powerful bone, well-developed muscles and with a rough coat." (FCI-Standard N° 165, S935); colours "Pure white,
 | white with orange markings, white speckled with orange," "white with brown (chestnut) markings, orange roan or brown roan
@@ -5294,6 +5300,41 @@ return [
             'tail' => ['natural thick tail without fringes, carried horizontally or down'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-125 (docs/research/dog-data/data.json pointer.appearance; runbook rules 2026-10-10: the four usual colours of
+    // FCI-Standard N° 1 (S943), liver and white first = the portrait default; natural tail).
+    'pointer' => [
+        'display_name' => 'Pointer',
+        // Colour frequencies are in no source (pointer.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 1 (S943), PDSA (S944), UKC standard (S947) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S944 "Large"; S943 "Dogs: 63 - 69 cm." (bitches 61–66 cm); S947 males 55–75 lb, females 44–65 lb',
+            'build' => 'S943 "Symmetrical and well built all over, general outline a series of graceful curves. A strong but lissom appearance."',
+            'coat_length' => 'S943 "Fine, short, hard and evenly distributed, perfectly smooth and straight with decided sheen."',
+            'coat_color' => 'S943 "Usual colours are lemon and white, orange and white, liver and white, and black and white." (weights unsourced; self colours / tricolours not drawn)',
+            'ear_carriage' => 'S943 "Leathers thin, set on fairly high, lying close to head, of medium length, slightly pointed at tips."',
+            'eye_color' => 'S943 "Either hazel or brown according to colour of coat."',
+            'tail' => 'S943 "Medium length, thick at root, tapering gradually to a point."',
+            'muzzle' => 'S943 "Somewhat concave, ending on level with nostrils, giving a slightly dish-faced appearance."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'symmetrical, well-built, strong but lissom pointing dog with an outline of graceful curves, in healthy lean working condition', 'weight' => 3], 'athletic, elegant gundog standing alert'],
+            'coat_length' => ['fine, short, hard, perfectly smooth and straight coat with a decided sheen'],
+            // FCI standard (S943): the four usual colours; liver and white first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'liver and white', 'weight' => 35],
+                ['value' => 'orange and white', 'weight' => 25],
+                ['value' => 'lemon and white', 'weight' => 25],
+                ['value' => 'black and white', 'weight' => 15],
+            ],
+            'ear_carriage' => ['thin, fairly high-set ears of medium length lying close to the head, slightly pointed at the tips'],
+            'eye_color' => ['bright, kindly hazel or brown eyes matching the coat colour'],
+            'tail' => ['natural medium-length tail, thick at the root and tapering to a point, carried level with the back'],
+            'muzzle' => ['slightly concave, gently dish-faced muzzle with a dark nose and wide nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
