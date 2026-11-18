@@ -69,7 +69,8 @@ describe('M5-R10-72 Chinese Crested', () => {
     expect(find('Chinese Crested')).toEqual([KEY]);
     expect(find('kitajski goli pes')).toEqual([KEY]);
     expect(find('kitajski copasti')).toEqual([KEY]);
-    expect(find('hairless')).toEqual([KEY]);
+    // M5-R10-123: the Xoloitzcuintli (»Mexican Hairless Dog«) is found by »hairless« too.
+    expect(find('hairless')).toEqual([KEY, 'xoloitzcuintli']);
   });
 
   it('shows its chips in the picker, quotes 3.000 / 2.300 steps and confirms as a challenge dog', () => {

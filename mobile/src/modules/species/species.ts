@@ -134,6 +134,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   manchester_terrier: 'dog',
   tibetan_terrier: 'dog',
   greyhound: 'dog',
+  xoloitzcuintli: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
