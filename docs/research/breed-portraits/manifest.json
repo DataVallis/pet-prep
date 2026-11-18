@@ -1517,6 +1517,19 @@
             "prompt_hash": "sha256:b02aafc8e0914b579de6d9eed358c68dc97f4127b8cc1db9b00f573a07e86b37",
             "generated_at": "2026-11-18T02:59:34+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "pointer",
+            "species": "dog",
+            "colour": "liver-white",
+            "file": "dog/pointer.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:7a62eb9199a9e68ab1fec6fb9cf9ee0947197863ca418c8a1264070ac45b2535",
+            "generated_at": "2026-11-18T06:51:12+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
