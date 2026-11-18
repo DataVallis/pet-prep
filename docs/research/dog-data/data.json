@@ -63693,6 +63693,490 @@
       }
     }
   },
+  "pointer": {
+    "_note": "Added 2026-11-18 (M5-R10-125, unattended run — appended after the Spinone Italiano: AKC 2024 No. 121 'Pointer', S174 full-list table fetched 2026-11-18 '120 Spinone Italiano', '121 Pointer', '122 Mudi'). Quotes as returned by the web-fetch tool on 2026-11-18 (after a web search; the tool limits quotes to ~125 characters — longer sentences were returned as fragments); paraphrase only in notes, marked '(paraphrase)'. Sources S942–S947 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Standard: FCI-Standard N° 1 Pointer (S943, English text 28.10.2009 from dev.fci.be; the nomenclature page S942 lists a newer publication date of the valid standard — the newer text was not reached). Height from the FCI standard (S943); the FCI standard gives no weight → UKC standard (S947, 'Desirable weight …'). The RKC Breeds A–Z page / breed standard were refused (redirect to royalkennelclub.com outside the provenance set) → no RKC key facts, Breed Watch category or RKC health tests: the runbook's 'else PDSA' path — PDSA (S944) for size, lifespan band ('Over 12 years'), exercise ('over 2 hours per day ideally' → 120) and grooming ('just once a week' → 1). Lifespan: no McMillan 2024 value reachable (the Dogs Trust table S123 refused; the Nature paper S771 shows no plain 'Pointer' value in the fetched text), no VetCompass breed median found → the PDSA band 'Over 12 years' as the RKC-style lower bound (Tibetan Terrier / Manchester Terrier precedent) → senior 108. Coren rank 43 (S35, 'Average Working/Obedience Intelligence') → 1.0. Never hypoallergenic. Slovenian »angleški pointer« (KZS / Slovenian breeders' common name not checked against a KZS page — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 1, Group 7 Section 2.1 (British and Irish Pointers and Setters, Pointer), Great Britain",
+      "unit": "—",
+      "source_id": "S943",
+      "quote": "Section 2.1 British and Irish Pointers and Setters, Pointer.",
+      "confidence": "high",
+      "notes": "FCI-Standard N°1 (S943): 'Group 7 Pointing Dogs.', 'Section 2.1 British and Irish Pointers and Setters, Pointer.', 'With working trial.' FCI nomenclature page (S942): 'ENGLISH POINTER (1)', group 'n°7 - Pointing Dogs', section 'British and Irish Pointers and Setters', country 'GREAT BRITAIN', accepted on a definitive basis '3/5/1963'."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S944",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "PDSA key fact 'Size' (S944) 'Large' — no RKC key fact reachable this run (runbook: else PDSA). UKC weight 44–75 lb (S947) → mostly the 'Large (59–99 pounds)' class of S10."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            63,
+            69
+          ],
+          "female": [
+            61,
+            66
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S943",
+        "quote": "Dogs: 63 - 69 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N°1 (S943), height at withers: 'Dogs: 63 - 69 cm.' / 'Bitches: 61 - 66 cm.' The register value. UKC (S947) 'Desirable height at maturity for males is 25-27 inches and for females, 23-25 inches.'; PDSA (S944) 'Average height' '61-69 cm'; WebMD (S946) males 25 to 28 inches, females 23 to 26 inches."
+      }
+    },
+    "adult_weight": {
+      "ukc": {
+        "value": {
+          "male": [
+            24.9,
+            34.0
+          ],
+          "female": [
+            20.0,
+            29.5
+          ]
+        },
+        "unit": "kg (converted from males 55–75 lb, females 44–65 lb)",
+        "source_id": "S947",
+        "quote": "Desirable weight for a male in working condition is between 55 and 75 pounds, and between 44 and 65 pounds for a female.",
+        "confidence": "high",
+        "notes": "UKC standard (S947, revised May 1, 2017) — the game / register value (the FCI standard S943 has no weight line; the RKC standard was not reachable). WebMD (S946) 'Healthy males can weigh anywhere from 55 to 75 pounds.' / 'Healthy females weigh anywhere from 45 to 65 pounds.'; PetMD (S945) 'the weight of an adult Pointer can range from 45 to 75 pounds.'",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                20,
+                35
+              ],
+              "female": [
+                20,
+                35
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S944",
+            "quote": "20-35 kg",
+            "confidence": "medium",
+            "notes": "PDSA key fact 'Average weight' (S944)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 'Large' (S944); UKC 44–75 lb (S947) → 'Large (59–99 pounds)'. The puppy cap of 120 min is reached at 12 months."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Pointer growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S944",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S944). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable; the RKC page was refused this run → the same PDSA band, Tibetan Terrier / Manchester Terrier precedent). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "10–12",
+        "unit": "years",
+        "source_id": "S945",
+        "quote": "they are generally healthy dogs that live 10-12 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S945); WebMD (S946) 'The average Pointer lifespan is 12 to 17 years.' Background; the PDSA lower bound is used."
+      },
+      "senior_from": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (PDSA lower bound 'Over 12 years', S944) → 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). McMillan 2024: the Dogs Trust table (S123) was refused; no plain 'Pointer' value in the fetched Nature text (S771) → not used.",
+        "derived_from": [
+          "S11",
+          "S944"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S944",
+        "quote": "Pointers have high energy levels and will need plenty of exercise – over 2 hours per day ideally.",
+        "confidence": "high",
+        "notes": "PDSA (S944) → 120 min ('over N' → N); key fact 'Minimum exercise (per day) | 2 hours' agrees. No RKC key fact reachable (runbook: RKC, else PDSA). PetMD (S945) 'at least one to two hours' → alternative 60.",
+        "alternatives": [
+          {
+            "value": 60,
+            "unit": "minutes/day",
+            "source_id": "S945",
+            "quote": "If they are not used as sporting dogs, they require at least one to two hours of exercise a day, which should not be limited to walking.",
+            "confidence": "medium",
+            "notes": "PetMD (S945) — range 'one to two hours' → 60 by the range rule; the runbook takes PDSA when no RKC value exists."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "high energy; over 2 hours a day ideally; active owners; running, fetching, agility",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "They’ll need active owners that are happy to keep up with their high energy requirements.",
+        "confidence": "high",
+        "notes": "PDSA (S944). PetMD (S945): 'Running, fetching, or agility games are great ways to spend time with a Pointer.'; WebMD (S946): 'You should play with them extensively or take them on long walks every day.'"
+      },
+      "recall": {
+        "value": "needs good recall training (hunting instinct — follows a scent)",
+        "unit": "training (sourced need)",
+        "source_id": "S944",
+        "quote": "they need to be trained well for recall",
+        "confidence": "high",
+        "notes": "PDSA (S944, fragment): their instinct to hunt, point and retrieve may kick in if they smell a rabbit on a walk (paraphrase). PetMD (S945): 'Once they pick up on a scent, they will follow it.' Built: the 'Pridi' (come) command of every dog (German Shorthaired Pointer precedent)."
+      },
+      "enclosed_yard": {
+        "value": "kept in an enclosed yard so they do not wander off",
+        "unit": "home (sourced need)",
+        "source_id": "S945",
+        "quote": "it is important that they are kept in an enclosed yard so that they do not wander off and become lost.",
+        "confidence": "high",
+        "notes": "PetMD (S945, fragment); WebMD (S946): 'It's also helpful to have a fenced-in yard where they can run around all day.' → secure_fencing chip."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No verbatim A/B statement on a gap after eating before exercise: PetMD (S945) feeds the evening meal after the day's activities to help prevent GDV (feeding after exercise, not a wait after a meal); PDSA (S944) and WebMD (S946) name GDV / bloat. → no meal / exercise gap row (runbook M5-R16: never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "aristocratic, alert; kind, even disposition; friendly and fairly easy to train",
+        "unit": "—",
+        "source_id": "S943",
+        "quote": "Kind, even disposition.",
+        "confidence": "high",
+        "notes": "FCI standard (S943): 'Aristocratic. Alert with appearance of strength, endurance and speed. Kind, even disposition.' PDSA (S944): 'They are friendly and fairly easy to train.'"
+      },
+      "family": {
+        "value": "fits well into family life if socialised as a puppy",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "will fit well into family life if given the right socialisation as puppies",
+        "confidence": "high",
+        "notes": "PDSA (S944, fragment; 'as with all breeds') → family_pet chip (conditional on socialisation, kept in notes)."
+      },
+      "children": {
+        "value": "sources differ: a good match for families with children (PetMD) vs not particularly good with young children (WebMD)",
+        "unit": "—",
+        "source_id": "S946",
+        "quote": "they're not particularly good with young children.",
+        "confidence": "high",
+        "notes": "WebMD (S946) → not_for_small_children chip. PetMD (S945): 'Their energy, size, and playful temperament make them a good match for families with children.' and 'young children may accidentally be bumped or injured by a Pointer, especially puppies. Always supervise children and pets together.' → no children chip (sources conflict, runbook)."
+      },
+      "other_pets": {
+        "value": "generally fine with other dogs and cats; may be a threat to pet birds",
+        "unit": "—",
+        "source_id": "S945",
+        "quote": "Pointers generally do well in homes with other dogs and cats, but they may be a threat to the safety of pet birds because of their history as bird dogs.",
+        "confidence": "medium",
+        "notes": "PetMD (S945). No 'high prey drive' statement → no chases_small_pets; caveat → no other_pets chip."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found (PetMD S945: without enough exercise they 'will become troublesome and often destructive' — about exercise, not being alone)."
+      },
+      "socialisation": {
+        "value": "socialisation as a puppy for family life",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "will fit well into family life if given the right socialisation as puppies",
+        "confidence": "high",
+        "notes": "PDSA (S944, a condition — runbook 'given the right socialisation as puppies' shape; the quote names socialisation, PuppySocialisationTest) → breed DOG_SOCIALISATION entry (M5-R17)."
+      },
+      "training": {
+        "value": "friendly and fairly easy to train; independent; responds to positive reinforcement",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "They are friendly and fairly easy to train.",
+        "confidence": "high",
+        "notes": "PDSA (S944). PetMD (S945): 'Their independent nature, however, can sometimes make training a bit challenging.'; WebMD (S946) 'training is crucial for this breed.' (fragment)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B chewing statement (PetMD S945 'troublesome and often destructive' without enough exercise — not named as chewing)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. No veterinary association names the breed for conformation-related welfare problems (RKC Breed Watch category not reachable this run) → no welfare chip. Breeder checklist: not checked (RKC health-testing section not reachable).",
+      "gdv": {
+        "value": "gastric dilatation and volvulus (GDV, bloat) — the stomach twists; an emergency",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "often known as ‘bloat’, this is a condition where the stomach twists, trapping the contents and gases.",
+        "confidence": "high",
+        "notes": "PDSA (S944), an emergency that 'requires urgent veterinary attention' (fragment). PetMD (S945) and WebMD (S946) list it too. Register health key bloat_gdv."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": null,
+        "confidence": "high",
+        "notes": "PDSA (S944) lists hip dysplasia; PetMD (S945) and WebMD (S946) hip and elbow dysplasia (paraphrase of the condensed answers). Register health key hip_elbow_dysplasia."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (PRA)",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S944) lists progressive retinal atrophy (paraphrase). Register health key pra."
+      },
+      "eyelids_cataracts": {
+        "value": "entropion and cataracts",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S944) lists entropion and cataracts; WebMD (S946) cataracts and entropion (paraphrase). Register health keys eyelids_turned, cataracts."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S944) and WebMD (S946) list it (paraphrase). Register health key hypothyroidism."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 43,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-18): '43 | Pointer | Average Working/Obedience Intelligence' (ranks 40–54). Verify in the book before showing to users."
+      },
+      "coren_tier": {
+        "value": "Average Working/Obedience Intelligence",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35: ranks 40–54; 'Understanding of new commands: 25 to 40 repetitions.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.pointer.learning_multiplier (1.0, runbook rule: Average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "symmetrical, well-built pointing dog; outline of graceful curves; strong but lissom",
+        "unit": "—",
+        "source_id": "S943",
+        "quote": "Symmetrical and well built all over, general outline a series of graceful curves. A strong but lissom appearance.",
+        "confidence": "high",
+        "notes": "FCI standard (S943)."
+      },
+      "colours": {
+        "value": [
+          "liver and white",
+          "orange and white",
+          "lemon and white",
+          "black and white"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S943",
+        "quote": "Usual colours are lemon and white, orange and white, liver and white, and black and white.",
+        "confidence": "high",
+        "notes": "FCI standard (S943); 'Self colours and tricolours are also correct.' (not drawn — the standard names no particular self colour; UKC S947 faults tri-colour). The game draws the four usual colours (liver and white first as the portrait default)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Liver and white first with the highest weight → the portrait default; draft weights 35 / 25 / 25 / 15."
+      },
+      "coat": {
+        "value": "fine, short, hard, smooth and straight with a decided sheen",
+        "unit": "—",
+        "source_id": "S943",
+        "quote": "Fine, short, hard and evenly distributed, perfectly smooth and straight with decided sheen.",
+        "confidence": "high",
+        "notes": "FCI standard (S943); PDSA (S944) 'Coat length | Short'."
+      },
+      "ears": {
+        "value": "thin leathers set fairly high, lying close to the head, medium length, slightly pointed tips",
+        "unit": "—",
+        "source_id": "S943",
+        "quote": "Leathers thin, set on fairly high, lying close to head, of medium length, slightly pointed at tips.",
+        "confidence": "high",
+        "notes": "FCI standard (S943)."
+      },
+      "eyes": {
+        "value": "bright and kindly; hazel or brown according to the coat colour",
+        "unit": "—",
+        "source_id": "S943",
+        "quote": "Either hazel or brown according to colour of coat.",
+        "confidence": "high",
+        "notes": "FCI standard (S943)."
+      },
+      "nose": {
+        "value": "dark (lighter in lemon and white); wide nostrils; slightly concave 'dish-faced' muzzle",
+        "unit": "—",
+        "source_id": "S943",
+        "quote": "Somewhat concave, ending on level with nostrils, giving a slightly dish-faced appearance.",
+        "confidence": "high",
+        "notes": "FCI standard (S943) muzzle; nose 'Dark, but may be lighter in the case of a lemon and white coloured dog.'"
+      },
+      "tail": {
+        "value": "medium length, thick at the root, tapering to a point, carried level with the back",
+        "unit": "—",
+        "source_id": "S943",
+        "quote": "Medium length, thick at root, tapering gradually to a point.",
+        "confidence": "high",
+        "notes": "FCI standard (S943): 'Well covered with close hair, carried on a level with back, with no upward curl.' Natural tail (never docked in the standard)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S944), PetMD (S945), WebMD (S946). The RKC breed page was not reachable on 2026-11-18 → no rkc_* key facts.",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Size' (S944)."
+      },
+      "pdsa_exercise": {
+        "value": "2 hours",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "2 hours",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S944) → with 'over 2 hours per day ideally' 120 min. long_daily_exercise / active_family."
+      },
+      "pdsa_active_owners": {
+        "value": "needs active owners",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "They’ll need active owners that are happy to keep up with their high energy requirements.",
+        "confidence": "high",
+        "notes": "PDSA (S944) → active_family."
+      },
+      "pdsa_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Coat length' (S944)."
+      },
+      "pdsa_grooming": {
+        "value": "once a week",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "Their short coats will need grooming just once a week.",
+        "confidence": "high",
+        "notes": "PDSA (S944) → brushing 1× a week (dog-grooming rule 'Once a week' → 1, M5-R13). PetMD (S945) 'this can be minimized with weekly brushing.' and WebMD (S946) 'You can brush them on a weekly basis' agree."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S944) — see lifespan.pdsa."
+      },
+      "webmd_teeth": {
+        "value": "daily tooth brushing",
+        "unit": "—",
+        "source_id": "S946",
+        "quote": "brush their teeth on a daily basis to complete the grooming routine.",
+        "confidence": "high",
+        "notes": "WebMD (S946, fragment) → tooth brushing every day (M5-R15). Nails 'regularly' (WebMD) and ears 'Regularly check' / routine cleaning (WebMD, PetMD) — no frequency → no nail / ear task."
+      },
+      "petmd_bath": {
+        "value": "bathing only every few months",
+        "unit": "—",
+        "source_id": "S945",
+        "quote": "bathing is only necessary every few months (or more frequently if desired) to help keep their skin healthy and coat shiny.",
+        "confidence": "high",
+        "notes": "PetMD (S945). 'Every few months' gives no number (Giant Schnauzer precedent: 'every few months' → no reminder) → no bath reminder."
+      },
+      "petmd_shedding": {
+        "value": "average shedders",
+        "unit": "—",
+        "source_id": "S945",
+        "quote": "They are average shedders, but this can be minimized with weekly brushing.",
+        "confidence": "medium",
+        "notes": "PetMD (S945) — one B source, no RKC 'Sheds' key fact → no sheds chip."
+      },
+      "petmd_home": {
+        "value": "homes with space to run or very active families; enclosed yard",
+        "unit": "—",
+        "source_id": "S945",
+        "quote": "They thrive in homes with space for them to run and play or with very active families.",
+        "confidence": "medium",
+        "notes": "PetMD (S945). No RKC 'Size of home' → no large_home / apartment chip."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -95404,6 +95888,260 @@
         "confidence": "medium",
         "notes": "FCI standard (S935) as in spinone_italiano.appearance. Five standard colours; weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with orange markings is the portrait default (one of the FCI S935 colours; weights unsourced); natural tail, never docked; never black / tricolour / tan (not permitted)"
+      }
+    },
+    "pointer": {
+      "_note": "Unattended run M5-R10-125 (2026-11-18): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PDSA (S944 'over 2 hours per day ideally' → 120; the RKC page was not reachable → runbook 'else PDSA'). Senior boundary 108 from the PDSA lower bound 'Over 12 years' (S944; McMillan 2024 / VetCompass not reachable — Tibetan Terrier precedent). Learning 1.0 (Coren 43, Average, S35). Built: brushing 1× a week (PDSA 'just once a week', M5-R13), tooth brushing every day (WebMD S946, M5-R15), puppy socialisation with the PDSA quote (M5-R17), recall = the existing 'Pridi' command, enclosed yard = secure_fencing chip. No nail / ear / bath / groomer task (no frequency), no meal gap (no quote), no heat warning (not flat-faced). No new vocabulary key. In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S944",
+        "quote": "Pointers have high energy levels and will need plenty of exercise – over 2 hours per day ideally.",
+        "confidence": "high",
+        "notes": "PDSA (S944) → rule 'more than N' → 120 (no RKC key fact reachable → PDSA). PDSA key fact '2 hours' agrees.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S945",
+            "quote": "If they are not used as sporting dogs, they require at least one to two hours of exercise a day, which should not be limited to walking.",
+            "notes": "PetMD — not chosen (runbook: RKC, else PDSA)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S944 'over 2 hours per day ideally'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S944",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + the PDSA lower bound 'Over 12 years', S944 — no McMillan 2024 / VetCompass row reachable, no RKC page).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S944"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × PDSA lower bound 'Over 12 years', S944)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 43, 'Average Working/Obedience Intelligence' (S35, read 2026-11-18) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren 43, Average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S944",
+        "quote": "Their short coats will need grooming just once a week.",
+        "confidence": "high",
+        "notes": "pointer.suitability.pdsa_grooming. 'Once a week' → 1 (runbook »Dog grooming«); PetMD (S945) and WebMD (S946) weekly agree. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »just once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S946",
+        "quote": "brush their teeth on a daily basis to complete the grooming routine.",
+        "confidence": "high",
+        "notes": "pointer.suitability.webmd_teeth → every day. Built: DOG_CARE_TASKS tooth_brushing [7, day], M5-R15. Nails / ears 'regularly' and bath 'every few months' → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brush their teeth on a daily basis« → vsak dan"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S944",
+        "quote": "will fit well into family life if given the right socialisation as puppies",
+        "confidence": "high",
+        "notes": "pointer.behaviour.socialisation (PDSA S944, a condition). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S944)"
+      },
+      "recall_training": {
+        "value": "recall",
+        "unit": "training command (sourced need)",
+        "source_id": "S944",
+        "quote": "they need to be trained well for recall",
+        "confidence": "high",
+        "notes": "Built already: the game's training commands include recall ('Pridi', TrainingCommand::Come = 'come', M5-R03) for every dog — nothing new to build.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): odpoklic že obstaja kot ukaz 'Pridi' — brez nove mehanike"
+      },
+      "enclosed_yard": {
+        "value": "an enclosed yard so the dog does not wander off",
+        "unit": "home (sourced need)",
+        "source_id": "S945",
+        "quote": "it is important that they are kept in an enclosed yard so that they do not wander off and become lost.",
+        "confidence": "high",
+        "notes": "pointer.exercise.enclosed_yard. Built as the secure_fencing consider chip (the parent is told before choosing the breed); the game has no garden mechanic.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ograjeno dvorišče → oznaka secure_fencing"
+      },
+      "suitability_tags": {
+        "_note": "Tags to ship in backend/config/breed_suitability.php (M5-R10-125); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S944"
+            ],
+            "refs": [
+              "pointer.exercise.adult",
+              "pointer.suitability.pdsa_active_owners"
+            ],
+            "quote": "S944 'They’ll need active owners that are happy to keep up with their high energy requirements.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S944"
+            ],
+            "refs": [
+              "pointer.behaviour.family"
+            ],
+            "quote": "S944 'will fit well into family life if given the right socialisation as puppies'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S944"
+            ],
+            "refs": [
+              "pointer.exercise.adult",
+              "pointer.suitability.pdsa_exercise"
+            ],
+            "quote": "S944 'over 2 hours per day ideally'; key fact '2 hours'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S946"
+            ],
+            "refs": [
+              "pointer.behaviour.children"
+            ],
+            "quote": "S946 'they're not particularly good with young children.'"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S945"
+            ],
+            "refs": [
+              "pointer.exercise.enclosed_yard"
+            ],
+            "quote": "S945 'it is important that they are kept in an enclosed yard so that they do not wander off and become lost.'"
+          }
+        ],
+        "not_proposed": {
+          "children": "Sources conflict: PetMD (S945) 'a good match for families with children' vs WebMD (S946) 'not particularly good with young children' → neither children nor small_children.",
+          "apartment": "No RKC 'Flat/ Apartment'.",
+          "large_home": "No RKC 'Size of home' key fact reachable (PetMD 'homes with space for them to run').",
+          "other_pets": "PetMD (S945) fine with dogs and cats but a threat to pet birds — caveat.",
+          "chases_small_pets": "No 'high prey drive' statement (PetMD birds / PDSA rabbit scent).",
+          "sheds": "Only PetMD (S945) 'average shedders'.",
+          "needs_company": "No A/B separation statement.",
+          "chews_when_bored": "PetMD 'troublesome and often destructive' without exercise — not named as chewing.",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "RKC Breed Watch category not reachable; no veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet; consider long_daily_exercise, not_for_small_children, secure_fencing"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S944",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows the Pointer with small children (WebMD S946), never promises its health and never calls it hypoallergenic.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Pointer, liver and white: symmetrical, well-built, strong but lissom pointing dog with an outline of graceful curves; fine, short, hard, smooth coat with a decided sheen; slightly dish-faced muzzle; dark nose with wide nostrils; bright, kindly hazel or brown eyes; thin, fairly high-set ears lying close to the head; natural medium-length tail tapering to a point, carried level with the back; healthy lean working condition",
+        "unit": "—",
+        "source_id": "S943",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S943) as in pointer.appearance. Four usual colours; weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): liver and white is the portrait default (one of the FCI S943 usual colours; weights unsourced); natural tail"
       }
     }
   }
