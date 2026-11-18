@@ -240,7 +240,7 @@ Status: `[ ]` todo · `[x]` live (address form, PRs, date) · `[!]` blocked (rea
 - [x] pl top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website pl.json only, no care-knowledge change) — address: as live; website #503 (merge 5e8362d41fc5fb73fe8c39570ab53656edfad163), 2026-11-18. B 0 fixes, C 0 fixes. Names: Xoloitzcuintle (FCI 234; synonyms Xoloitzcuintli, Xolo, Meksykański pies bezwłosy). Next top-up: cs.
 - [x] cs top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website cs.json only, no care-knowledge change) — address: as live; website #504, 2026-11-18. B 0 fixes, C 0 fixes. Names: Xoloitzcuintle (FCI 234; synonyms Xoloitzcuintli, Xolo, Mexický naháč). Next top-up: hr.
 - [x] hr top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website hr.json only, no care-knowledge change) — address: ti as live; website #505 (merge aaf26c66ea0e010b55f52ffba798db967c75db33), 2026-11-18. B 0 fixes, C 0 fixes. Names: Xoloitzcuintle (FCI 234; synonyms Xoloitzcuintli, Xolo, Meksički goli pas). Next top-up: sv.
-- [ ] sv top-up — 1 breed (Xoloitzcuintli; same)
+- [x] sv top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website sv.json only, no care-knowledge change) — address: du as live; website #507, 2026-11-18. B 0 fixes, C 0 fixes. Names: Xoloitzcuintle (FCI 234; synonyms Xoloitzcuintli, Xolo, Mexikansk nakenhund). Next top-up: da.
 - [ ] da top-up — 1 breed (Xoloitzcuintli; same)
 - [ ] fi top-up — 1 breed (Xoloitzcuintli; same)
 - [ ] nb top-up — 1 breed (Xoloitzcuintli; same)
