@@ -838,6 +838,13 @@
 | low-carried, slightly curved natural tail. No welfare trait. Six named standard colours, brindle first (portrait
 | default); weights unsourced → `verified => false`.
 |
+| Xoloitzcuintli (M5-R10-123, docs/research/dog-data xoloitzcuintli.appearance): "The Xoloitzcuintle is an ancient natural
+| primitive dog, modelled by evolution," (FCI-Standard N° 234, KUSA copy S924); hairless and coated varieties, identical except
+| coat and dentition — the game draws the standard-size hairless variety; colours "The range includes black, blackish grey,
+| slate grey, dark grey, reddish, liver, bronze or blonde." (S924; never merle, white, brindle, black and tan, sable); long,
+| large ears of fine texture; long thin tapering natural tail. No welfare trait (healthy, unburnt skin). Six named standard
+| colours, black first (portrait default); weights unsourced → `verified => false`.
+|
 | Wire Fox Terrier (M5-R10-117, docs/research/dog-data wire_fox_terrier.appearance): "Active and lively, bone and strength
 | in small compass, never cloddy or coarse." (FCI-Standard N° 169, S871); colour "White predominates with black, black and tan
 | or tan markings." — brindle, red, liver or slate-blue markings undesirable, any other colour unacceptable (S871); coat dense,
@@ -5207,6 +5214,44 @@ return [
             'tail' => ['long natural tail set rather low, tapering, carried low and slightly curved'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-123 (docs/research/dog-data/data.json xoloitzcuintli.appearance; runbook rules 2026-10-10: six of the named standard
+    // colours of FCI-Standard N° 234 (S924), black first = the portrait default; standard-size hairless variety, natural tail).
+    'xoloitzcuintli' => [
+        'display_name' => 'Xoloitzcuintli (Mexican Hairless Dog)',
+        // Colour frequencies are in no source (xoloitzcuintli.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 234 (KUSA copy S924, https://www.kusa.co.za/…/Xoloitzcuintle … FCI [01-2019].pdf), WebMD (S928) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S924 "Standard: 46cm – 60cm (approx. 18” – 23½”)." (the drawn variety); S928 "Standard — between 18 and 23 inches tall and between 30 and 55 pounds"',
+            'build' => 'S924 "The Xoloitzcuintle is an ancient natural primitive dog, modelled by evolution,"',
+            'coat_length' => 'S924 "The characteristic of this breed is the total lack of hair on the body (hairless or nude dog)"',
+            'coat_color' => 'S924 "The range includes black, blackish grey, slate grey, dark grey, reddish, liver, bronze or blonde." (weights unsourced; never merle / white / brindle / black and tan)',
+            'ear_carriage' => 'S924 "In both varieties the ears are long, large, expressive, very elegant, and of fine texture;"',
+            'eye_color' => 'S924 "Medium-sized, almond-shaped, with an alert, and very intelligent expression."',
+            'tail' => 'S924 "Long, thin, and may have some tufts of hair, tapering from the base to the tip in the hairless variety,"',
+            'muzzle' => 'S924 "Muzzle: Seen from the side, the muzzle is straight, and the upper and lower jaws are square and very strong."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized (standard variety)'],
+            'build' => [['value' => 'lean, elegant, well-proportioned primitive dog with a deep chest, long neck and long slender legs', 'weight' => 3], 'graceful, athletic primitive dog standing calmly, slim but well-muscled'],
+            'coat_length' => ['hairless body with smooth, healthy, unburnt bare skin and only a little short coarse hair on the top of the head, the feet and the tail tip'],
+            // FCI standard (S924): six of the named skin colours; solid black first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'solid black skin', 'weight' => 35],
+                ['value' => 'solid slate-grey skin', 'weight' => 20],
+                ['value' => 'solid reddish skin', 'weight' => 15],
+                ['value' => 'solid liver (chocolate brown) skin', 'weight' => 10],
+                ['value' => 'solid bronze skin', 'weight' => 10],
+                ['value' => 'solid blonde (light golden) skin', 'weight' => 10],
+            ],
+            'ear_carriage' => ['long, large, elegant ears of fine texture, held erect'],
+            'eye_color' => ['medium-sized, almond-shaped dark eyes with an alert expression'],
+            'tail' => ['long, thin natural tail tapering from the base to the tip, nearly reaching the hock'],
+            'muzzle' => ['straight muzzle with strong square jaws, wedge-shaped skull, dark nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

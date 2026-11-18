@@ -941,6 +941,12 @@ class FalAiService
                 .'brindle coat, a fine, close, short coat, a long lean head with a dark nose, bright oval dark eyes, '
                 .'small rose-shaped ears folded back, a deep chest and arched loin, a long natural tail carried low and slightly curved, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-123: FCI-Standard N° 234 (S924) — ancient primitive dog, standard-size hairless variety; solid black skin
+            // (dark skin preferred); wedge-shaped head, straight muzzle; long, large, erect ears; long thin tapering natural tail.
+            BreedType::Xoloitzcuintli => 'An elegant, lean, standard-size hairless Xoloitzcuintli (Mexican Hairless Dog), an ancient primitive dog in healthy condition, '
+                .'smooth hairless solid black skin with a little short coarse hair on the top of the head, a wedge-shaped head with a straight muzzle and a dark nose, '
+                .'almond-shaped dark eyes, long, large, erect ears of fine texture, a long thin natural tail tapering to the tip, healthy unburnt skin, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2218,6 +2224,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'fine, close, short coat',
                 'markings' => 'brindle striping over the body, small rose-shaped ears folded back, long low-carried tail',
+            ],
+            // M5-R10-123: FCI S924 solid black skin (the portrait default of the named standard colours), hairless variety.
+            BreedType::Xoloitzcuintli => [
+                'color_scheme' => 'solid black skin',
+                'eye_color' => 'dark',
+                'fur_texture' => 'hairless, smooth skin',
+                'markings' => 'short coarse hair only on the top of the head, long large erect ears, long thin tapering tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

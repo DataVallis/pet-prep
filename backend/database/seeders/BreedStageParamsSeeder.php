@@ -1429,6 +1429,24 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_GREYHOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-122)';
 
     /**
+     * M5-R10-123 Xoloitzcuintli (unattended run 2026-11-18, data.json proposed_game_parameters.xoloitzcuintli.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 20 min (PetMD S926 "about 20 minutes of exercise every day"; no RKC / PDSA page reachable), senior 15 min,
+     * puppy 10 min × age capped at 20, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.0 (not ranked by
+     * Coren); care rates the Border Collie's. The senior boundary uses the closest rule row (PetMD lower bound "13–18 years",
+     * S926 — no McMillan 2024 / VetCompass median reachable, no RKC band) and is NOT covered by the confirmation: see
+     * PROPOSED_R10_XOLOITZCUINTLI_SENIOR.
+     */
+    public const CONFIRMED_R10_XOLOITZCUINTLI = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-123)';
+
+    /**
+     * M5-R10-123 Xoloitzcuintli senior boundary / senior arrival (117 months): Claude's suggestion from the closest rule row
+     * (0.75 × PetMD lower bound 13 y, S926 — Toy Fox Terrier precedent), verified=false until David decides
+     * (data.json proposed_game_parameters.xoloitzcuintli.senior_boundary_months).
+     */
+    public const PROPOSED_R10_XOLOITZCUINTLI_SENIOR = 'predlog Claude 2026-11-18 (najbližja vrstica pravila runbooka, M5-R10-123) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1818,6 +1836,9 @@ class BreedStageParamsSeeder extends Seeder
         'tibetan_terrier' => [
             'tooth_brushing' => [7, 'day', 'S906', "You should always trim your dog's nails as needed and brush their teeth on a daily basis.", 'proposed_game_parameters.tibetan_terrier.tooth_brushing', '"brush their teeth on a daily basis" → every day (nails "as needed", ears / bath / groomer: no frequency → no task)'],
         ],
+        'xoloitzcuintli' => [
+            'tooth_brushing' => [2, 'week', 'S928', 'Xolos need their teeth brushed two to three times a week,', 'proposed_game_parameters.xoloitzcuintli.tooth_brushing', '"two to three times a week" → 2× a week (range → lower bound; nails / ears / bath / groomer: no frequency → no task)'],
+        ],
         'greyhound' => [
             'tooth_brushing' => [7, 'day', 'S917', "Brush your dog's teeth on a daily basis with a dog-safe toothpaste to complete their grooming routine.", 'proposed_game_parameters.greyhound.tooth_brushing', '"Brush your dog\'s teeth on a daily basis" → every day (nails "whenever they get too long", ears / bath / groomer: no frequency → no task)'],
         ],
@@ -2147,13 +2168,14 @@ class BreedStageParamsSeeder extends Seeder
         'manchester_terrier' => ['S890', 'socialize your Manchester Terrier puppy from the moment you bring them home.'],
         'tibetan_terrier' => ['S907', "Enrolling your Tibetan Terrier puppy in socialization classes before they're 16 weeks old"],
         'greyhound' => ['S914', 'With the right socialisation as puppies, they can make good family pets'],
+        'xoloitzcuintli' => ['S926', "It's also important to socialize your Xolo puppy so they don't grow up suspicious of new people."],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2992,6 +3014,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::ManchesterTerrier => self::manchesterTerrierProfile(),
             BreedType::TibetanTerrier => self::tibetanTerrierProfile(),
             BreedType::Greyhound => self::greyhoundProfile(),
+            BreedType::Xoloitzcuintli => self::xoloitzcuintliProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -11480,6 +11503,90 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'greyhound.lifespan.median_uk',
                 'quote' => 'The median longevity of greyhounds overall was 11.4 years (IQR 9.6–12.8, range 0.2–16.5).',
                 'notes' => 'O\'Neill et al. 2019 (S920), VetCompass UK primary care, 474 deaths. McMillan 2024 (S54 / S123) not reachable this run (11.5 y only via a Wikipedia mirror, S921). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Xoloitzcuintli (M5-R10-123). Stage boundaries young / adult, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_XOLOITZCUINTLI); weight, growth and lifespan are sourced; not ranked
+     * by Coren. The senior boundary is Claude's suggestion (PROPOSED_R10_XOLOITZCUINTLI_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function xoloitzcuintliProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_XOLOITZCUINTLI;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S926', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.xoloitzcuintli.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog reaches adult weight at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [117, [
+                    'unit' => 'months', 'source_id' => 'S11,S926', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.xoloitzcuintli.senior_boundary_months', 'decision' => self::PROPOSED_R10_XOLOITZCUINTLI_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PetMD lower bound "13–18 years" (S926; WebMD S928 13–18 y too) = 9.75 y = 117 months. No RKC page, McMillan 2024 or VetCompass median reachable. Alternative: Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 117],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.xoloitzcuintli.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.xoloitzcuintli.senior_boundary_months', 'decision' => self::PROPOSED_R10_XOLOITZCUINTLI_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 117 months (0.75 × 13 y, S926).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 20 minutes, which 10 × age reaches at 2 months.',
+            'adult_minutes' => [20, [
+                'unit' => 'minutes/day', 'source_id' => 'S926', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.xoloitzcuintli.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'They need about 20 minutes of exercise every day',
+                'notes' => 'PetMD (S926): "about 20 minutes" → 20 min = 2,000 steps (runbook rule: "about N" → N; no RKC / PDSA page reachable). VCA (S927) / WebMD (S928) give no number; Purina UK (S932, tier C) about an hour for the larger sizes — alternative, open for David.',
+            ]],
+            'senior_minutes' => [15, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.xoloitzcuintli.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 20 minutes = 15 min = 1,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[4.5, 24.9], [
+                'unit' => 'kg', 'source_id' => 'S928', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'xoloitzcuintli.adult_weight.webmd',
+                'quote' => 'Standard — between 18 and 23 inches tall and between 30 and 55 pounds',
+                'notes' => 'WebMD (S928): toy 10–15 lb, miniature 15–30 lb, standard 30–55 lb → the whole breed 10–55 lb = 4.5–24.9 kg, one range for both sexes. FCI (S924) / UKC (S931) give no weight; VCA (S927) 10–50 lb.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'xoloitzcuintli.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (the standard variety 30–55 lb, S928 — the Medium class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'xoloitzcuintli.trainability.coren_rank',
+                'notes' => 'Not ranked: the Xoloitzcuintli is not in Coren\'s ranking as recorded from the Wikipedia table (S35; not re-read 2026-11-18).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.xoloitzcuintli.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (VCA S927: "intelligent and easy to train"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [13.0, [
+                'unit' => 'years', 'source_id' => 'S926', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'xoloitzcuintli.lifespan.petmd',
+                'quote' => 'They live a long life of 13–18 years',
+                'notes' => 'PetMD lower bound "13–18 years" (S926); WebMD 13–18 y (S928); VCA 15–20 y (S927). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

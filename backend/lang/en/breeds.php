@@ -121,6 +121,7 @@ return [
     'manchester_terrier' => 'Manchester Terrier',
     'tibetan_terrier' => 'Tibetan Terrier',
     'greyhound' => 'Greyhound',
+    'xoloitzcuintli' => 'Xoloitzcuintli',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

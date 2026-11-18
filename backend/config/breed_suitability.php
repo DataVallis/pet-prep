@@ -2903,5 +2903,26 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S916'], 'refs' => ['greyhound.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-123: xoloitzcuintli.* (S924–S928), runbook rules (data.json
+        // proposed_game_parameters.xoloitzcuintli.suitability_tags). RKC page not reachable (no apartment / sheds key facts);
+        // bare skin (PetMD / VCA) → sun_protection + cold_sensitive (Chinese Crested precedent); no welfare chip; in
+        // marketing. No new vocabulary key.
+        'xoloitzcuintli' => [
+            'suits' => [
+                // S928 "can be a good family dog for families with children."
+                ['tag' => 'family_pet', 'source_ids' => ['S928'], 'refs' => ['xoloitzcuintli.behaviour.family']],
+                // S926 "can be great friends to kids who know how to properly interact with pets"; caveat: always supervised.
+                ['tag' => 'children', 'source_ids' => ['S926'], 'refs' => ['xoloitzcuintli.behaviour.children']],
+            ],
+            'consider' => [
+                // S926 "Lather them in doggy sunscreen before they go outside to prevent sunburns."
+                ['tag' => 'sun_protection', 'source_ids' => ['S926'], 'refs' => ['xoloitzcuintli.suitability.petmd_sun', 'xoloitzcuintli.health.bare_skin']],
+                // S927 "Best suited to warm climates, they will need a sweater in cooler temperatures."
+                ['tag' => 'cold_sensitive', 'source_ids' => ['S927'], 'refs' => ['xoloitzcuintli.suitability.vca_cold']],
+                // S926 "These dogs also have a high prey drive and might dart after squirrels, rabbits, and other small animals."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S926'], 'refs' => ['xoloitzcuintli.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];
