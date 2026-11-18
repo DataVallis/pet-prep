@@ -11,7 +11,7 @@
 | Izvor | FCI št. 234, skupina 5 (špici in primitivni tipi), sekcija 6 (primitivni tip), Mehika (S923 / S924) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 119. mesto »Xoloitzcuintli« (S174, prebrano 2026-11-18) |
 | Različice | tri velikosti (FCI: mini 25–35 cm, srednja 35–45 cm, standardna 46–60 cm; AKC / WebMD: toy, miniature, standard) in dve dlaki (gola, dlakava). Igra je **en pes** s celim razponom teže; portret in AI videz kažeta **standardno golo** različico. |
-| PR-ji | pet-prep #1347 (pasma, združen `bd4a000`) · portret pet-prep (zagon `breed-portraits.yml` 44213117263, sprejet v prvem poskusu) · barvne različice pet-prep · spletna stran: pet-prep-website `feat/register-xoloitzcuintli` |
+| PR-ji | pet-prep #1347 (pasma, združen `bd4a000`) · portret pet-prep (zagon `breed-portraits.yml` 44213117263, sprejet v prvem poskusu) · barvne različice pet-prep (zagon `breed-portraits.yml` 44214963362, vse sprejete v prvem poskusu) · spletna stran: pet-prep-website `feat/register-xoloitzcuintli` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,7 +41,7 @@
 | Pravila po starosti (2.000 korakov od prihoda, odrasel 2.000, starejši 1.500 od 117. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 (starejša meja čaka Davida) | 💶 izziv | M5-R10-123 | 2026-11-18 |
 | »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R17 | 2026-11-18 |
 | Ščetkanje zob 2× na teden (otrok) | 🛠 | 💶 izziv | M5-R15 | 2026-11-18 |
-| Barve (izbirnik: 6 barv kože) | 🛠 | 💶 izziv | M5-R21 | 2026-11-18 |
+| Barve (izbirnik: 6 barv kože; fotografije za vse — črna (portret), skrilasto siva, rdečkasta, jetrno rjava, bronasta, svetlo zlata) | 🛠 | 💶 izziv | M5-R21 | 2026-11-18 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), standardna gola različica, črna koža, pokončna ušesa, naravni rep | — | M5-R11-04 | 2026-11-18 |
 | Stran na petprep.si (`/animals/dogs/xoloitzcuintli`, `/sl/zivali/psi/mehiski-goli-pes`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -57,6 +57,7 @@ Zagon `breed-portraits.yml` 44213117263 (koda `bd4a000`, brez produkcijske names
 
 ## Odprto za Davida
 
+- **Barvne različice:** odobril Claude 2026-11-18 — skrilasto siva (vidno svetlejša od črne), rdečkasta, jetrno rjava, bronasta, svetlo zlata; isti pes, poza in ozadje kot portret. Nobena barva ne čaka Davida.
 - **Starejše obdobje (117. mesec):** predlog Claude — 0,75 × spodnja meja PetMD 13 let. McMillan 2024 / VetCompass / RKC niso bili dosegljivi; vrstica je `verified: false`. Potrdite ali določite drugo mejo (npr. iz tabele Dogs Trust S123, če ima vrstico za pasmo).
 - **Gibanje 20 minut:** PetMD (S926) navaja »about 20 minutes« za pasmo; Purina UK (S932, vir C) za srednjo in standardno velikost »about an hour«. Igra je en pes za vse tri velikosti — odločite, ali naj standardna velikost dobi več.
 - **Tri velikosti v enem psu:** teža 4,5–24,9 kg in višina 25–60 cm pokrivata vse različice; portret kaže standardno golo. Če želite izbiro velikosti (mini / srednja / standardna) ali dlakavo različico, je to nova naloga (ROADMAP — David).
