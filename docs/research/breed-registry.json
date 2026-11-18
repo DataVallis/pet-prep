@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "8203b090e894f18c751e45fbe4eeccb4216bb30f725b1a3f0a6b5b7cb966c74e"
+      "sha256": "16ce57e56154d41a268c5c3fc979c755ead63cb5f574ada2735c21cc17a991c1"
     }
   },
   "suitability_vocabulary": {
@@ -16919,7 +16919,50 @@
         "file": "pomeranian.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "orange",
+            "label": {
+              "en": "Orange",
+              "sl": "Oranžen"
+            },
+            "file": "dog/pomeranian.webp",
+            "default": true
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/pomeranian--cream.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/pomeranian--white.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/pomeranian--black.webp"
+          },
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "dog/pomeranian--brown.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -17458,7 +17501,34 @@
         "file": "boston-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "brindle-white",
+            "label": {
+              "en": "Brindle and white",
+              "sl": "Tigrasto-bel"
+            },
+            "file": "dog/boston-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/boston-terrier--black-white.webp"
+          },
+          {
+            "key": "seal-white",
+            "label": {
+              "en": "Seal and white",
+              "sl": "Tjulnje rjav z belo"
+            },
+            "file": "dog/boston-terrier--seal-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
@@ -17955,7 +18025,42 @@
         "file": "miniature-american-shepherd.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "blue-merle",
+            "label": {
+              "en": "Blue merle",
+              "sl": "Modri merle"
+            },
+            "file": "dog/miniature-american-shepherd.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/miniature-american-shepherd--black.webp"
+          },
+          {
+            "key": "red-merle",
+            "label": {
+              "en": "Red merle",
+              "sl": "Rdeči merle"
+            },
+            "file": "dog/miniature-american-shepherd--red-merle.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/miniature-american-shepherd--red.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -18544,7 +18649,58 @@
         "file": "chihuahua.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/chihuahua.webp",
+            "default": true
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/chihuahua--cream.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/chihuahua--black-tan.webp"
+          },
+          {
+            "key": "chocolate",
+            "label": {
+              "en": "Chocolate",
+              "sl": "Čokoladen"
+            },
+            "file": "dog/chihuahua--chocolate.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/chihuahua--white.webp"
+          },
+          {
+            "key": "fawn-white",
+            "label": {
+              "en": "Fawn and white",
+              "sl": "Plavo rjav z belo"
+            },
+            "file": "dog/chihuahua--fawn-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -19159,7 +19315,42 @@
         "file": "english-springer-spaniel.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "liver-white",
+            "label": {
+              "en": "Liver and white",
+              "sl": "Jetrno-bel"
+            },
+            "file": "dog/english-springer-spaniel.webp",
+            "default": true
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/english-springer-spaniel--black-white.webp"
+          },
+          {
+            "key": "liver-white-tan",
+            "label": {
+              "en": "Liver, white and tan",
+              "sl": "Jetrno-bel z rjavimi oznakami"
+            },
+            "file": "dog/english-springer-spaniel--liver-white-tan.webp"
+          },
+          {
+            "key": "black-white-tan",
+            "label": {
+              "en": "Black, white and tan",
+              "sl": "Črno-bel z rjavimi oznakami"
+            },
+            "file": "dog/english-springer-spaniel--black-white-tan.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -19747,7 +19938,42 @@
         "file": "shetland-sheepdog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "sable-white",
+            "label": {
+              "en": "Sable and white",
+              "sl": "Sobolji z belo"
+            },
+            "file": "dog/shetland-sheepdog.webp",
+            "default": true
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Trobarven"
+            },
+            "file": "dog/shetland-sheepdog--tricolour.webp"
+          },
+          {
+            "key": "blue-merle",
+            "label": {
+              "en": "Blue merle",
+              "sl": "Modri merle"
+            },
+            "file": "dog/shetland-sheepdog--blue-merle.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/shetland-sheepdog--black-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -20380,7 +20606,58 @@
         "file": "brittany.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "orange-white",
+            "label": {
+              "en": "Orange and white",
+              "sl": "Oranžno-bel"
+            },
+            "file": "dog/brittany.webp",
+            "default": true
+          },
+          {
+            "key": "liver-white",
+            "label": {
+              "en": "Liver and white",
+              "sl": "Jetrno-bel"
+            },
+            "file": "dog/brittany--liver-white.webp"
+          },
+          {
+            "key": "orange-roan",
+            "label": {
+              "en": "Orange roan",
+              "sl": "Oranžni roan"
+            },
+            "file": "dog/brittany--orange-roan.webp"
+          },
+          {
+            "key": "liver-roan",
+            "label": {
+              "en": "Liver roan",
+              "sl": "Jetrni roan"
+            },
+            "file": "dog/brittany--liver-roan.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/brittany--black-white.webp"
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Trobarven"
+            },
+            "file": "dog/brittany--tricolour.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
@@ -20957,7 +21234,74 @@
         "file": "american-cocker-spaniel.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "buff",
+            "label": {
+              "en": "Buff",
+              "sl": "Svetlo zlato kremast"
+            },
+            "file": "dog/american-cocker-spaniel.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/american-cocker-spaniel--black.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/american-cocker-spaniel--black-tan.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/american-cocker-spaniel--red.webp"
+          },
+          {
+            "key": "chocolate",
+            "label": {
+              "en": "Chocolate",
+              "sl": "Čokoladno rjav"
+            },
+            "file": "dog/american-cocker-spaniel--chocolate.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/american-cocker-spaniel--black-white.webp"
+          },
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/american-cocker-spaniel--red-white.webp"
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Trobarven"
+            },
+            "file": "dog/american-cocker-spaniel--tricolour.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
