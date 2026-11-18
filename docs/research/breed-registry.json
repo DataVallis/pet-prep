@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "a23f974b609b26fa464df0627efc4450da82996952f586e00a3935f3f13f07e6"
+      "sha256": "eda5aafdcdfb9eee2bf68ee213628d45c77a699dd777b175fbbfbfaed76b6fc7"
     }
   },
   "suitability_vocabulary": {
@@ -70667,7 +70667,12 @@
           "S946"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "pointer.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_checked",
         "tests": [],
