@@ -1504,6 +1504,19 @@
             "prompt_hash": "sha256:1e725f04e13617b5429dbb4914ecbd488c8681aea1c23dfaa84858b1872def86",
             "generated_at": "2026-11-18T01:06:30+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "spinone_italiano",
+            "species": "dog",
+            "colour": "orange-white",
+            "file": "dog/spinone-italiano.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:b02aafc8e0914b579de6d9eed358c68dc97f4127b8cc1db9b00f573a07e86b37",
+            "generated_at": "2026-11-18T02:59:34+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
