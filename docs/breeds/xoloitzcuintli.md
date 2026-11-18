@@ -11,7 +11,7 @@
 | Izvor | FCI št. 234, skupina 5 (špici in primitivni tipi), sekcija 6 (primitivni tip), Mehika (S923 / S924) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 119. mesto »Xoloitzcuintli« (S174, prebrano 2026-11-18) |
 | Različice | tri velikosti (FCI: mini 25–35 cm, srednja 35–45 cm, standardna 46–60 cm; AKC / WebMD: toy, miniature, standard) in dve dlaki (gola, dlakava). Igra je **en pes** s celim razponom teže; portret in AI videz kažeta **standardno golo** različico. |
-| PR-ji | pet-prep #1347 (pasma) · portret pet-prep (zagon `breed-portraits.yml` — glej spodaj) · barvne različice pet-prep · spletna stran: pet-prep-website `feat/register-xoloitzcuintli` |
+| PR-ji | pet-prep #1347 (pasma, združen `bd4a000`) · portret pet-prep (zagon `breed-portraits.yml` 44213117263, sprejet v prvem poskusu) · barvne različice pet-prep · spletna stran: pet-prep-website `feat/register-xoloitzcuintli` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R17 | 2026-11-18 |
 | Ščetkanje zob 2× na teden (otrok) | 🛠 | 💶 izziv | M5-R15 | 2026-11-18 |
 | Barve (izbirnik: 6 barv kože) | 🛠 | 💶 izziv | M5-R21 | 2026-11-18 |
-| AI portret v registru | glej »Portret« spodaj | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/xoloitzcuintli`, `/sl/zivali/psi/mehiski-goli-pes`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), standardna gola različica, črna koža, pokončna ušesa, naravni rep | — | M5-R11-04 | 2026-11-18 |
+| Stran na petprep.si (`/animals/dogs/xoloitzcuintli`, `/sl/zivali/psi/mehiski-goli-pes`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
@@ -53,7 +53,7 @@
 
 ## Portret
 
-Glej vrstico v `docs/research/BREED_QUEUE.md` (vpiše se po zagonu `breed-portraits.yml`).
+Zagon `breed-portraits.yml` 44213117263 (koda `bd4a000`, brez produkcijske namestitve), Nano Banana Pro, 0,15 $. Pregled Claude 2026-11-18: realistična fotografija enega odraslega psa standardne gole različice, enakomerna črna koža, malo kratke dlake na glavi, velika pokončna ušesa, tanek naravni rep, sivo studijsko ozadje, brez besedila in rekvizitov — **sprejet v prvem poskusu**.
 
 ## Odprto za Davida
 
