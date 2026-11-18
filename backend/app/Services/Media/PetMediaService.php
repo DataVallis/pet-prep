@@ -2342,7 +2342,10 @@ class PetMediaService
     public function cleanupTempFiles(int $olderThanMinutes = 120): int
     {
         $deleted = 0;
-        $cutoff = now()->subMinutes($olderThanMinutes)->getTimestamp();
+        // Real wall clock, not now(): filemtime() is real time, and a test (or a frozen
+        // Carbon clock) that travels hours ahead must never sweep another process's
+        // download that is still being written (CI flake 2026-11-18, PhaseClipsTest).
+        $cutoff = time() - $olderThanMinutes * 60;
 
         foreach (glob(rtrim(sys_get_temp_dir(), '/').'/'.MediaDownloader::TEMP_PREFIX.'*') ?: [] as $file) {
             if (is_file($file) && (int) @filemtime($file) < $cutoff && @unlink($file)) {

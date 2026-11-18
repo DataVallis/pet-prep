@@ -1094,4 +1094,14 @@ describe('PR #24 review', function () {
         expect(file_exists($old))->toBeFalse()->and(file_exists($fresh))->toBeTrue();
         @unlink($fresh);
     });
+
+    it('n3: the sweep uses the real clock — travelling the test clock ahead never deletes a fresh download', function () {
+        $fresh = tempnam(sys_get_temp_dir(), 'petmedia-');
+        $this->travel(5)->hours();
+
+        app(PetMediaService::class)->cleanupTempFiles();
+
+        expect(file_exists($fresh))->toBeTrue();
+        @unlink($fresh);
+    });
 });
