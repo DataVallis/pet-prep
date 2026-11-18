@@ -2867,6 +2867,51 @@
             "prompt_hash": "sha256:4e642508f3fc50fb3b4cd2f7daa831895bf1a9171169840c0d3b90563ecf9861",
             "generated_at": "2026-11-18T03:11:32+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "pointer",
+            "species": "dog",
+            "colour": "orange-white",
+            "colour_value": "orange and white",
+            "file": "dog/pointer--orange-white.webp",
+            "reference": "dog/pointer.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:f76fed86021e37c9cbb82e670ae917b2c67c7eb71a3d58e42f2273a7f5014bcb",
+            "generated_at": "2026-11-18T07:03:58+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "pointer",
+            "species": "dog",
+            "colour": "lemon-white",
+            "colour_value": "lemon and white",
+            "file": "dog/pointer--lemon-white.webp",
+            "reference": "dog/pointer.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:29acc05d3b56a6a10405eaa553e34247a4bc4da8511142400a1b5f97c763e509",
+            "generated_at": "2026-11-18T07:04:17+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "pointer",
+            "species": "dog",
+            "colour": "black-white",
+            "colour_value": "black and white",
+            "file": "dog/pointer--black-white.webp",
+            "reference": "dog/pointer.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:2aaf117522c5e1ce91b4d5a1ef86e7273d62f2994a81f8bebf4f3bc609928c2e",
+            "generated_at": "2026-11-18T07:04:35+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

@@ -217,4 +217,10 @@ return [
         'orange-roan' => 'dogs/spinone-italiano--orange-roan.webp',
         'white' => 'dogs/spinone-italiano--white.webp',
     ],
+    'pointer' => [
+        'liver-white' => 'dogs/pointer.webp',
+        'orange-white' => 'dogs/pointer--orange-white.webp',
+        'lemon-white' => 'dogs/pointer--lemon-white.webp',
+        'black-white' => 'dogs/pointer--black-white.webp',
+    ],
 ];
