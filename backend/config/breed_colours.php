@@ -793,6 +793,15 @@ return [
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
         ['key' => 'black-white', 'value' => 'white with black patches', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
     ],
+    // M5-R10-123: FCI-Standard N° 234 (S924) — six of the named standard skin colours, same order and values as breed_appearance.php.
+    'xoloitzcuintli' => [
+        ['key' => 'black', 'value' => 'solid black skin', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'slate-grey', 'value' => 'solid slate-grey skin', 'en' => 'Slate grey', 'sl' => 'Skrilasto siv'],
+        ['key' => 'reddish', 'value' => 'solid reddish skin', 'en' => 'Reddish', 'sl' => 'Rdečkast'],
+        ['key' => 'liver', 'value' => 'solid liver (chocolate brown) skin', 'en' => 'Liver', 'sl' => 'Jetrno rjav'],
+        ['key' => 'bronze', 'value' => 'solid bronze skin', 'en' => 'Bronze', 'sl' => 'Bronast'],
+        ['key' => 'blonde', 'value' => 'solid blonde (light golden) skin', 'en' => 'Blonde', 'sl' => 'Svetlo zlat'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

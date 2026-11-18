@@ -503,6 +503,7 @@ const SPECIES = [
       { id: 'manchester_terrier', synonyms: { en: ['Manchester Terrier (Standard)', 'Black and Tan Terrier'], sl: ['manchester terier', 'manchester'] } },
       { id: 'tibetan_terrier', synonyms: { en: ['Tibet Terrier'], sl: ['tibetan terier', 'tibet terier'] } },
       { id: 'greyhound', synonyms: { en: ['English Greyhound'], sl: ['greyhound', 'grejhaund'] } },
+      { id: 'xoloitzcuintli', synonyms: { en: ['Xoloitzcuintle', 'Xolo', 'Mexican Hairless Dog', 'Mexican Hairless'], sl: ['xoloitzcuintli', 'xolo', 'mehiški goli', 'mehiski goli pes'] } },
     ],
   },
   {
@@ -3105,6 +3106,26 @@ const DOG_FACTS = {
       ['bleeding_disorder_vwd', 'health.von_willebrand'],
     ],
   },
+  // M5-R10-123. No RKC / PDSA page reachable → PetMD (S926): exercise 'about 20 minutes of exercise every day' (about 20),
+  // lifespan '13–18 years' (span); height = FCI 25–60 cm over the three varieties (KUSA copy S924); weight = WebMD 10–55 lb
+  // over the three varieties (S928). Not ranked by Coren (S35). FCI origin Mexico. Hairless: no coat / grooming / shedding
+  // fact (no RKC key facts). Not exported: adult_weight alternatives (VCA, Hill's), lifespan.webmd (same span as PetMD) /
+  // vca / mcmillan_2024 (null) / senior_from (derived), health.teeth (background). No new health key.
+  xoloitzcuintli: {
+    height: ['height.fci'],
+    weight: [['adult_weight.webmd', null]],
+    lifespan: [['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'about']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    coren_rank: false,
+    health: [
+      ['bare_skin_sun_cold', 'health.bare_skin'],
+      ['kneecap_luxation', 'health.patellar_luxation'],
+    ],
+  },
 
 
 
@@ -3186,6 +3207,7 @@ export const DOG_CARE_TASKS = {
   manchester_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.manchester_terrier.tooth_brushing']],
   tibetan_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.tibetan_terrier.tooth_brushing']],
   greyhound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.greyhound.tooth_brushing']],
+  xoloitzcuintli: [['tooth_brushing', 2, 7, 'proposed_game_parameters.xoloitzcuintli.tooth_brushing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4112,6 +4134,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.greyhound.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.greyhound.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.greyhound.exercise_minutes_senior',
+  },
+  xoloitzcuintli: {
+    adult_minutes: ['proposed_game_parameters.xoloitzcuintli.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.xoloitzcuintli.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.xoloitzcuintli.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.xoloitzcuintli.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.xoloitzcuintli.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.xoloitzcuintli.exercise_minutes_senior',
   },
 
 

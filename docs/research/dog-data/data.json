@@ -62647,6 +62647,474 @@
       }
     }
   },
+  "xoloitzcuintli": {
+    "_note": "Added 2026-11-18 (M5-R10-123, unattended run — appended after the Greyhound: AKC 2024 No. 119 'Xoloitzcuintli', S174 full-list table fetched 2026-11-18 '118 Greyhound', '119 Xoloitzcuintli', '120 Spinone Italiano'). Quotes as returned by the web-fetch tool on 2026-11-18 (after a web search; non-preapproved pages: fragments); paraphrase only in notes, marked '(paraphrase)'. Sources S923–S933 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Standard: FCI-Standard N° 234 Xoloitzcuintle (KUSA copy S924, 'effective date of 01/01/2019'; FCI nomenclature S923). One breed, three size varieties (miniature / intermediate / standard — AKC / UKC / WebMD: toy / miniature / standard) and two coat varieties (hairless / coated): the game models the breed as one dog with the whole weight range of all varieties (Rat Terrier precedent); the portrait and AI appearance show the standard-size HAIRLESS variety (the breed's characteristic, S924). The RKC Breeds A–Z pages were refused (redirect to royalkennelclub.com outside the provenance set) and no PDSA / Woodgreen / Dogs Trust page exists in the search results → exercise from PetMD (S926 'about 20 minutes of exercise every day' → 20), weight from WebMD (S928, per variety; FCI / UKC give no weight). Lifespan: no McMillan 2024 / VetCompass / RKC value reachable → closest rule row: PetMD lower bound 13 y (S926 '13–18 years'; WebMD S928 13–18 y too) → senior 117, verified=false (Toy Fox Terrier precedent). Coren: not ranked (S35 not re-read this run; the breed is absent from the ranking as recorded) → 1.0. Never hypoallergenic. Slovenian »mehiški goli pes« (no KZS page reached — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 234, Group 5 Section 6 (Primitive type), Mexico",
+      "unit": "—",
+      "source_id": "S923",
+      "quote": "Primitive type",
+      "confidence": "high",
+      "notes": "FCI nomenclature page (S923): 'Group : n°5 - Spitz and primitive types', section 'Primitive type', country 'MEXICO', accepted on a definitive basis '11/6/1961'. FCI-Standard N° 234, KUSA copy (S924): 'ORIGIN: Mexico.', 'FCI Classification: Group 5: Spitz and Primitive types' / 'Section 6.4. Primitive type' / 'Without Working Trial'."
+    },
+    "size_class": {
+      "value": "small-medium",
+      "unit": "—",
+      "source_id": "S928",
+      "quote": "Miniature — between 14 and 18 inches tall and between 15 and 30 pounds",
+      "confidence": "medium",
+      "notes": "No RKC / PDSA size key fact reachable. WebMD (S928) per variety: 'Toy — between 10 and 14 inches tall and between 10 and 15 pounds', the miniature line (quote), 'Standard — between 18 and 23 inches tall and between 30 and 55 pounds' → by the PetMD classes (S10) the toy / miniature are small, the standard medium → 'small-medium' for the breed (Shiba Inu / Lagotto precedent value). VCA (S927) lists the size as small and medium (paraphrase of its table, not verbatim)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            25,
+            60
+          ],
+          "female": [
+            25,
+            60
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S924",
+        "quote": "Standard: 46cm – 60cm (approx. 18” – 23½”).",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 234, KUSA copy (S924): 'Miniature: 25cm – 35cm (approx. 8½” – 13½”).', 'Intermediate: 35cm – 45cm (approx. 13½” – 17½”).', 'Standard: 46cm – 60cm (approx. 18” – 23½”).', 'There is a tolerance of +2cm in top quality dogs.' → all three varieties together 25–60 cm, one range for both sexes (stored per sex) — the register value. Dogs Australia copy (S925): intermediate 36–45 cm. AKC (S929) / UKC (S931) / WebMD (S928): toy 10–14 in, miniature 14–18 in, standard 18–23 in."
+      }
+    },
+    "adult_weight": {
+      "webmd": {
+        "value": {
+          "male": [
+            4.5,
+            24.9
+          ],
+          "female": [
+            4.5,
+            24.9
+          ]
+        },
+        "unit": "kg (converted from 10–55 lb over the three size varieties)",
+        "source_id": "S928",
+        "quote": "Standard — between 18 and 23 inches tall and between 30 and 55 pounds",
+        "confidence": "medium",
+        "notes": "WebMD (S928): 'Toy — between 10 and 14 inches tall and between 10 and 15 pounds', 'Miniature — between 14 and 18 inches tall and between 15 and 30 pounds', the standard line (quote) → the whole breed 10–55 lb = 4.5–24.9 kg (our conversion, 55 lb = 24.95 kg kept inside the range), one range for both sexes (stored per sex) — the game / register range. The FCI standard (S924) and the UKC standard (S931) give no weight. VCA (S927) 'Weight | 10 to 50 pounds'.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                4.5,
+                22.7
+              ],
+              "female": [
+                4.5,
+                22.7
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S927",
+            "quote": "Weight | 10 to 50 pounds",
+            "notes": "VCA Canada table (S927)."
+          },
+          {
+            "value": {
+              "male": [
+                4.5,
+                13.6
+              ],
+              "female": [
+                4.5,
+                11.3
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S933",
+            "quote": "Male 10-30 lbs.",
+            "notes": "Hill's (S933, tier C) 'Male 10-30 lbs.' / 'Female 10-25 lbs.' — background only."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: the standard variety 30–55 lb (S928) = the Medium class (toy / miniature would be 9–12 months, Small). The game is unaffected (the puppy cap of 20 min is reached at 2 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Xoloitzcuintli growth curve found."
+      }
+    },
+    "lifespan": {
+      "petmd": {
+        "value": "13–18",
+        "unit": "years",
+        "source_id": "S926",
+        "quote": "They live a long life of 13–18 years",
+        "confidence": "medium",
+        "notes": "PetMD (S926). The lower bound 13 y is the basis of the senior boundary (closest rule row, verified=false — Toy Fox Terrier precedent)."
+      },
+      "webmd": {
+        "value": "13–18",
+        "unit": "years",
+        "source_id": "S928",
+        "quote": "An average Xoloitzcuintli lifespan is a robust 13 to 18 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S928, medically reviewed). Same span as PetMD — not exported twice."
+      },
+      "vca": {
+        "value": "15–20",
+        "unit": "years",
+        "source_id": "S927",
+        "quote": "Life | 15 to 20 years",
+        "confidence": "low",
+        "notes": "VCA Canada table (S927). Background."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — the Dogs Trust table of McMillan et al. 2024 (S123) was refused by the fetch tool this run; the readable part of the paper (S771) names no Xoloitzcuintli. No VetCompass breed median found; RKC 'Lifespan:' line not reachable. Hill's (S933, tier C) '10-12 yrs.' and Purina UK (S932, tier C) '12-15 years' — background only, never alone."
+      },
+      "senior_from": {
+        "value": 9.75,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: last 25 % of lifespan (S11) × the PetMD lower bound 13 y (S926) = 9.75 y = 117 months (verified=false, Claude's suggestion — see proposed_game_parameters.xoloitzcuintli.senior_boundary_months).",
+        "derived_from": [
+          "S11",
+          "S926"
+        ],
+        "months": 117,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": 20,
+        "unit": "minutes/day",
+        "source_id": "S926",
+        "quote": "They need about 20 minutes of exercise every day",
+        "confidence": "medium",
+        "notes": "PetMD (S926) → 20 min (runbook rule 'about N' → N) — no RKC / PDSA page reachable, so the vet-reviewed PetMD page is the strongest source with a number. VCA (S927) 'Exercise | Moderate - needs to walk or play every day' and WebMD (S928) 'moderate exercise needs' give no minutes. Purina UK (S932, tier C): miniature about half an hour, intermediate / standard about an hour; Hill's (S933, tier C) '<20 minutes/day' — alternatives, never alone.",
+        "alternatives": [
+          {
+            "value": 60,
+            "unit": "minutes/day",
+            "source_id": "S932",
+            "quote": "the Intermediate and Standard need about an hour",
+            "notes": "Purina UK (S932, tier C) — open for David (the standard variety may need more than the PetMD number)."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "moderate — about 20 minutes a day of walking or play",
+        "unit": "—",
+        "source_id": "S926",
+        "quote": "They need about 20 minutes of exercise every day",
+        "confidence": "medium",
+        "notes": "PetMD (S926). VCA (S927): 'Moderate - needs to walk or play every day'."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise → no meal gap (M5-R16; never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "silent and calm, cheerful, alert and intelligent; never aggressive",
+        "unit": "—",
+        "source_id": "S924",
+        "quote": "The Xoloitzcuintle is a silent and calm dog, cheerful, alert, and intelligent,",
+        "confidence": "high",
+        "notes": "FCI standard (S924): 'He is never aggressive.'; Dogs Australia copy (S925): 'he might be suspicious toward strangers, he is a good watchdog and an excellent companion.'; PetMD (S926): often reserved and wary of strangers (paraphrase)."
+      },
+      "family": {
+        "value": "can be a good family dog for families with children",
+        "unit": "—",
+        "source_id": "S928",
+        "quote": "can be a good family dog for families with children.",
+        "confidence": "high",
+        "notes": "WebMD (S928) → family_pet chip. WebMD also: 'an adult should supervise all interactions between small children and Xolos.'"
+      },
+      "children": {
+        "value": "playful and can be great friends to kids who know how to interact with pets; always supervise",
+        "unit": "—",
+        "source_id": "S926",
+        "quote": "They are also playful and can be great friends to kids who know how to properly interact with pets.",
+        "confidence": "medium",
+        "notes": "PetMD (S926) → children chip with the caveat 'Interactions between children and dogs should always be supervised.' (kept in notes; never small_children). VCA (S927) 'With Kids | Excellent'; Purina UK (S932, tier C) older children or teenagers (paraphrase)."
+      },
+      "time_alone": {
+        "value": "fine alone after plenty of exercise (VCA table)",
+        "unit": "—",
+        "source_id": "S927",
+        "quote": "Home Alone | Fine with lots of exercise first",
+        "confidence": "low",
+        "notes": "VCA Canada table (S927). No needs_company (no statement about separation anxiety)."
+      },
+      "other_pets": {
+        "value": "high prey drive — may dart after squirrels, rabbits and other small animals; often fine with other dogs",
+        "unit": "—",
+        "source_id": "S926",
+        "quote": "These dogs also have a high prey drive and might dart after squirrels, rabbits, and other small animals.",
+        "confidence": "high",
+        "notes": "PetMD (S926) → chases_small_pets. WebMD (S928): 'high prey drive', 'a Xolo might not be the best fit for households with small animals like rabbits, guinea pigs, or hamsters.', 'often get along well with other dogs.' Never other_pets."
+      },
+      "socialisation": {
+        "value": "socialise the puppy so it does not grow up suspicious of new people",
+        "unit": "—",
+        "source_id": "S926",
+        "quote": "It's also important to socialize your Xolo puppy so they don't grow up suspicious of new people.",
+        "confidence": "high",
+        "notes": "PetMD (S926, a need) → breed DOG_SOCIALISATION entry (M5-R17). WebMD (S928): patient introductions to people and animals they do not know (paraphrase)."
+      },
+      "training": {
+        "value": "intelligent and easy to train; needs consistent training",
+        "unit": "—",
+        "source_id": "S927",
+        "quote": "Xolos are intelligent and easy to train, and learn housetraining faster than most breeds.",
+        "confidence": "medium",
+        "notes": "VCA Canada (S927). PetMD (S926): 'the breed club says this breed requires consistent training.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. No veterinary association names the breed for conformation-related welfare problems (RKC Breed Watch category not reachable) → no welfare chip; the bare skin needs sun and cold protection (sun_protection / cold_sensitive, Chinese Crested precedent). Breeder checklist: not checked (RKC health-testing section not reachable; WebMD S928 lists cardiac, patella, hip and eye screenings — not used without the RKC page).",
+      "bare_skin": {
+        "value": "hairless skin — sunburn, acne and sensitivity to lawn chemicals; needs dog sunscreen and protection from the cold",
+        "unit": "—",
+        "source_id": "S927",
+        "quote": "Without the protection of a coat, Xolos can be prone to skin issues, such as sunburn, acne, and sensitivity to lawn chemicals.",
+        "confidence": "high",
+        "notes": "VCA Canada (S927). PetMD (S926) 'Lather them in doggy sunscreen before they go outside to prevent sunburns.' / 'Never use sunscreen made for humans on dogs, as the ingredients can be toxic for them.'; Dogs Australia FCI copy (S925) 'the skin requires more care from exposure to the sun and elements due to its lack of natural protection.' Register health key bare_skin_sun_cold."
+      },
+      "patellar_luxation": {
+        "value": "patellar luxation (kneecap slipping out of place) and hip dysplasia",
+        "unit": "—",
+        "source_id": "S926",
+        "quote": "Xolos are prone to a few orthopedic conditions, such as hip dysplasia and patellar luxations.",
+        "confidence": "high",
+        "notes": "PetMD (S926). WebMD (S928) recommends patella screening for the miniature and toy (paraphrase). Register health keys kneecap_luxation, hip_dysplasia."
+      },
+      "teeth": {
+        "value": "missing teeth are common in the hairless variety (the hairless gene)",
+        "unit": "—",
+        "source_id": "S924",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S924): hairless and coated 'identical in conformation except for coat and dentition'; Dogs Australia copy (S925): 'The absence of a few incisors, canines, molars, pre-molars or rotated teeth should not be penalized'. Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Xoloitzcuintli is not in Coren's ranking as recorded from the Wikipedia table (S35; the table was refused by the fetch tool this run, not re-read). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked → no tier."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.xoloitzcuintli.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "ancient natural primitive dog; hairless and coated varieties identical in conformation except coat and dentition",
+        "unit": "—",
+        "source_id": "S924",
+        "quote": "The Xoloitzcuintle is an ancient natural primitive dog, modelled by evolution,",
+        "confidence": "high",
+        "notes": "FCI standard (S924): 'There are two varieties in the breed: hairless and coated, both identical in conformation except for coat and dentition.' The game draws the standard-size hairless variety."
+      },
+      "varieties": {
+        "value": "three sizes (miniature 25–35 cm, intermediate 35–45 cm, standard 46–60 cm) × two coats (hairless, coated)",
+        "unit": "—",
+        "source_id": "S924",
+        "quote": "Standard: 46cm – 60cm (approx. 18” – 23½”).",
+        "confidence": "high",
+        "notes": "FCI standard (S924). AKC (S929) / UKC (S931) / WebMD (S928) call the smallest size »toy« and the middle one »miniature«."
+      },
+      "colours": {
+        "value": [
+          "black",
+          "slate grey",
+          "reddish",
+          "liver",
+          "bronze",
+          "blonde"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S924",
+        "quote": "The range includes black, blackish grey, slate grey, dark grey, reddish, liver, bronze or blonde.",
+        "confidence": "high",
+        "notes": "FCI standard, KUSA copy (S924): 'Solid, uniform, dark-coloured skin is preferred.'; 'There may also be spots of any colour, including white markings.' The game draws six of the named skin colours (black first as the portrait default); blackish grey and dark grey are left out (visually between black and slate grey). Disqualifying (S924): 'Albinism.', 'Merle colour. Also, any other colour not mentioned in the standard, i.e. black and tan, brindle, white, sable etc.' → never merle, white, brindle or black and tan."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black first with the highest weight (solid dark skin preferred, S924) → the portrait default."
+      },
+      "coat": {
+        "value": "hairless — total lack of hair on the body, short coarse hair possible on head, feet and tail; smooth skin sensitive to touch",
+        "unit": "—",
+        "source_id": "S924",
+        "quote": "The characteristic of this breed is the total lack of hair on the body (hairless or nude dog)",
+        "confidence": "high",
+        "notes": "FCI standard (S924): 'It is smooth, sensitive to touch, and feels warmer because of direct heat emission due to the lack of hair;'. Coated variety: 'This variety has hair all over its body.' / 'The hair should be short, flat, preferably smooth and with no undercoat.' (not drawn)."
+      },
+      "ears": {
+        "value": "long, large, expressive, very elegant ears of fine texture, erect when alert",
+        "unit": "—",
+        "source_id": "S924",
+        "quote": "In both varieties the ears are long, large, expressive, very elegant, and of fine texture;",
+        "confidence": "high",
+        "notes": "FCI standard (S924): 'In the alert position their axis should be 50º – 80º from horizontal.'"
+      },
+      "eyes": {
+        "value": "medium-sized, almond-shaped, alert and very intelligent expression; darker colours preferred",
+        "unit": "—",
+        "source_id": "S924",
+        "quote": "Medium-sized, almond-shaped, with an alert, and very intelligent expression.",
+        "confidence": "high",
+        "notes": "FCI standard (S924): 'Darker colours are preferred and both eyes should match.'; blue eyes disqualifying."
+      },
+      "tail": {
+        "value": "long, thin, tapering, may carry some tufts of hair; nearly reaches the hock",
+        "unit": "—",
+        "source_id": "S924",
+        "quote": "Long, thin, and may have some tufts of hair, tapering from the base to the tip in the hairless variety,",
+        "confidence": "high",
+        "notes": "FCI standard (S924): 'The tail should nearly reach the hock.' Natural tail."
+      },
+      "muzzle": {
+        "value": "straight muzzle seen from the side, square and very strong jaws; wedge-shaped skull",
+        "unit": "—",
+        "source_id": "S924",
+        "quote": "Muzzle: Seen from the side, the muzzle is straight, and the upper and lower jaws are square and very strong.",
+        "confidence": "high",
+        "notes": "FCI standard (S924): 'Skull: Broad and strong, wedge-shaped.'; 'Nose: The nose should be dark in dark-coloured dogs.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = PetMD (S926), VCA Canada (S927), WebMD (S928), AKC (S929), Dogs Australia FCI copy (S925). The RKC breed pages were not reachable on 2026-11-18 → no rkc_* key facts.",
+      "petmd_sun": {
+        "value": "dog sunscreen before going outside; never human sunscreen",
+        "unit": "—",
+        "source_id": "S926",
+        "quote": "Lather them in doggy sunscreen before they go outside to prevent sunburns.",
+        "confidence": "high",
+        "notes": "PetMD (S926) → sun_protection chip. AKC (S929) 'Hairless Xolos may need a bit of sunscreen if they are lighter in color'; WebMD (S928) sunscreen for long periods outside. The game has no sun-care mechanic → open for David (needs a new ROADMAP task, Chinese Crested precedent)."
+      },
+      "vca_cold": {
+        "value": "best suited to warm climates; needs a sweater in cooler temperatures",
+        "unit": "—",
+        "source_id": "S927",
+        "quote": "Best suited to warm climates, they will need a sweater in cooler temperatures.",
+        "confidence": "high",
+        "notes": "VCA Canada (S927) → cold_sensitive chip. Purina UK (S932, tier C) a coat for winter walks. No mechanic → open for David (Italian Greyhound / Chinese Crested precedent)."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth two to three times a week",
+        "unit": "—",
+        "source_id": "S928",
+        "quote": "Xolos need their teeth brushed two to three times a week,",
+        "confidence": "high",
+        "notes": "WebMD (S928) → tooth brushing 2× a week (range → lower bound, M5-R15). WebMD also dental check-ups once or twice a year (vet, not a task)."
+      },
+      "bath": {
+        "value": "bath only now and then — do not over-bathe",
+        "unit": "—",
+        "source_id": "S927",
+        "quote": "Don't over-bathe as it can strip the skin of natural oils and cause skin infections.",
+        "confidence": "high",
+        "notes": "VCA Canada (S927) 'the odd bath'; WebMD (S928) 'Don't over bathe your Xolo.'; PetMD (S926) 'As a hairless dog, Xolos need regular bathing.' — no frequency → no bath reminder."
+      },
+      "petmd_ears": {
+        "value": "clean the ears after every bath — no own frequency",
+        "unit": "—",
+        "source_id": "S926",
+        "quote": "Clean your dog's ears after every bath.",
+        "confidence": "high",
+        "notes": "PetMD (S926) — tied to the bath, which has no frequency → no ear-cleaning task."
+      },
+      "nails": {
+        "value": "the nails should be trimmed — no frequency",
+        "unit": "—",
+        "source_id": "S925",
+        "quote": "The nails should be trimmed.",
+        "confidence": "high",
+        "notes": "Dogs Australia FCI copy (S925); WebMD (S928) an occasional nail trim (coated) — no frequency → no nail task."
+      },
+      "grooming": {
+        "value": "hairless: no brushing; wipe the skin with a damp washcloth",
+        "unit": "—",
+        "source_id": "S926",
+        "quote": "Wipe them down with a washcloth to keep their skin clean.",
+        "confidence": "high",
+        "notes": "PetMD (S926). Purina UK (S932, tier C): no hair-care required. Coated variety: an occasional bath (WebMD S928). No brushing frequency → no brushing routine (M5-R13)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -93813,6 +94281,251 @@
         "confidence": "medium",
         "notes": "FCI standard (S912) as in greyhound.appearance. Six standard colours; weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): brindle is the portrait default (one of the FCI S912 / S913 colours; weights unsourced); natural tail, ears not cropped"
+      }
+    },
+    "xoloitzcuintli": {
+      "_note": "Unattended run M5-R10-123 (2026-11-18): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PetMD (S926 'about 20 minutes of exercise every day' → 20; no RKC / PDSA page reachable). Senior boundary 117 = Claude's suggestion (0.75 × PetMD lower bound 13 y, verified=false — no McMillan 2024 / VetCompass / RKC value). Learning 1.0 (not ranked by Coren). Built: tooth brushing 2× a week (WebMD S928, M5-R15), puppy socialisation with the PetMD quote (M5-R17). No brushing (hairless), no nail / ear / bath / groomer task (no frequency), no meal gap (no quote), no heat warning (not flat-faced). Open for David (no mechanic): sun protection (sunscreen) and a sweater in the cold. One game dog for three size varieties (open for David). In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 20,
+        "unit": "minutes/day",
+        "source_id": "S926",
+        "quote": "They need about 20 minutes of exercise every day",
+        "confidence": "medium",
+        "notes": "PetMD (S926) → rule 'about N' → 20 (no RKC / PDSA page reachable). Purina UK (S932, tier C) about an hour for the intermediate / standard — alternative only.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S932",
+            "notes": "Purina UK, tier C — never alone; open for David."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 20 min/day (PetMD S926 'about 20 minutes of exercise every day'; no RKC / PDSA page)"
+      },
+      "step_goal_adult": {
+        "value": 2000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 20 min × 100 steps/min (S45) = 2,000.",
+        "derived_from": [
+          "S926",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 20 min × 100 steps/min → 2,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 15,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 20) = 15 min → 1,500 steps.",
+        "steps": 1500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 15 min → 1,500 steps (75 % of 20)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 20,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 20 reached at 2 months (the arrival age).",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 20 min (reached at 2 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 117
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 117 = round(0.75 × 13 y × 12) — the PetMD lower bound (S926); Claude's suggestion, see senior_boundary_months (verified=false).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S926"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36; senior 117 is Claude's suggestion (senior_boundary_months)"
+      },
+      "senior_boundary_months": {
+        "value": 117,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Closest rule row (Toy Fox Terrier / Rat Terrier precedent): 0.75 × the PetMD lower bound 13 y (S926; WebMD S928 13–18 y too) × 12 = 117. No McMillan 2024 / VetCompass median or RKC band reachable.",
+        "derived_from": [
+          "S11",
+          "S926"
+        ],
+        "decision": "predlog Claude 2026-11-18 (najbližja vrstica pravila runbooka, M5-R10-123) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 117
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage (senior = the unconfirmed 117).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 117 — senior unconfirmed)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not ranked by Coren (S35) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "tooth_brushing": {
+        "value": 2,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S928",
+        "quote": "Xolos need their teeth brushed two to three times a week,",
+        "confidence": "high",
+        "notes": "xoloitzcuintli.suitability.webmd_teeth → 2× a week (range → lower bound). Built: DOG_CARE_TASKS tooth_brushing [2, week], M5-R15. Nails / ears / bath: no frequency → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »two to three times a week« → 2× na teden (spodnja meja)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S926",
+        "quote": "It's also important to socialize your Xolo puppy so they don't grow up suspicious of new people.",
+        "confidence": "high",
+        "notes": "xoloitzcuintli.behaviour.socialisation (PetMD S926, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S926)"
+      },
+      "sun_cold_protection": {
+        "value": "dog sunscreen before going outside; a sweater in cooler temperatures",
+        "unit": "skin care (sourced need)",
+        "source_id": "S926",
+        "quote": "Lather them in doggy sunscreen before they go outside to prevent sunburns.",
+        "confidence": "high",
+        "notes": "PetMD (S926) + VCA Canada (S927) 'Best suited to warm climates, they will need a sweater in cooler temperatures.' The game has no sun / cold mechanic → open for David (needs a new ROADMAP task, Chinese Crested precedent).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): zaščita pred soncem in mrazom; mehanike ni → potrebna nova naloga v ROADMAP (David)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-123); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S928"
+            ],
+            "refs": [
+              "xoloitzcuintli.behaviour.family"
+            ],
+            "quote": "S928 'can be a good family dog for families with children.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S926"
+            ],
+            "refs": [
+              "xoloitzcuintli.behaviour.children"
+            ],
+            "quote": "S926 'They are also playful and can be great friends to kids who know how to properly interact with pets.' (caveat: always supervised)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sun_protection",
+            "source_ids": [
+              "S926"
+            ],
+            "refs": [
+              "xoloitzcuintli.suitability.petmd_sun",
+              "xoloitzcuintli.health.bare_skin"
+            ],
+            "quote": "S926 'Lather them in doggy sunscreen before they go outside to prevent sunburns.'"
+          },
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S927"
+            ],
+            "refs": [
+              "xoloitzcuintli.suitability.vca_cold"
+            ],
+            "quote": "S927 'Best suited to warm climates, they will need a sweater in cooler temperatures.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S926"
+            ],
+            "refs": [
+              "xoloitzcuintli.behaviour.other_pets"
+            ],
+            "quote": "S926 'These dogs also have a high prey drive and might dart after squirrels, rabbits, and other small animals.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No explicit rating without a supervision caveat (WebMD: an adult should supervise small children).",
+          "apartment": "No RKC key fact 'Size of home' reachable (the chip needs RKC 'Flat/ Apartment').",
+          "other_pets": "High prey drive (S926) — the opposite.",
+          "low_shedding": "Never for a hairless breed without an RKC 'Sheds: No' key fact; never hypoallergenic.",
+          "needs_company": "VCA 'Fine with lots of exercise first' — no separation statement.",
+          "shorter_lifespan": "PetMD 13–18 years (S926).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "No veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider sun_protection, cold_sensitive, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S926",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows a sunburnt or cold Xolo, never with small pets unsupervised, never as a fashion accessory and never calls it hypoallergenic.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult standard-size hairless Xoloitzcuintli, solid black skin: ancient primitive dog, lean and elegant; wedge-shaped head, straight muzzle; long, large, erect ears; almond-shaped dark eyes; long thin tapering tail; healthy, unburnt skin",
+        "unit": "—",
+        "source_id": "S924",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S924) as in xoloitzcuintli.appearance. Six standard skin colours; weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default (one of the FCI S924 colours, solid dark skin preferred; weights unsourced); hairless standard variety; natural tail, ears never cropped"
       }
     }
   }

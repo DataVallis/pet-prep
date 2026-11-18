@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "c8f02e25dd8faa7c4acda685029db74ab1c85df74190bcf116ccbcd3a30aabdd"
+      "sha256": "0950c34eb326a701300d83d89f64bb1148686a0a63bcff187e933902bcb0be95"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "4400e8ade0bb010b7a2a0105b483ef29f67da44192a7201917dcef823a2b7585"
+      "sha256": "ff7257e95ebbc8f1e2bfb04e7dbe73e6b2c4abdd4d9339be293cc063d1679d82"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "ae920a681f847d4b975a259f5ed77885734c3655e90fae01244fe581fd394e48"
+      "sha256": "5c5f07a22bf50c0101c905f6bb6926d1a6a616f0f1632dc03b6fe87234b1b630"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,12 +40,12 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "f7126c17d9aec7927c5d23f3bb4cc7f79f205a2d18f0d37a44d147d9a9543dfc"
+      "sha256": "7f0de99c8d92b9083e6aa077c8101287f10a794efee69c57dca204c3fd066884"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "2170156c10a637d4249fa60fbee3ee74f55a9b8d311a9670a3dd2d5d592b3d0b"
+      "sha256": "3e50bcaa7af768594edfdedecbe203ee8c1be88f6538ac1368fa9f57a595f689"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "dd7a36264707f7f7530dd0f370e98580e0be533ebabcff8f42a060e320f7bf1c"
+      "sha256": "80c7c9f6b4587ea195c0fa1a62b55ab6283e17fc09a53b51857f688792bc1932"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 113,
+      "breed_count": 114,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -69038,6 +69038,461 @@
       ]
     },
     {
+      "id": "xoloitzcuintli",
+      "species": "dog",
+      "order": 113,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Xoloitzcuintli",
+        "sl": "Mehiški goli pes"
+      },
+      "slug": {
+        "en": "xoloitzcuintli",
+        "sl": "mehiski-goli-pes"
+      },
+      "synonyms": {
+        "en": [
+          "Xoloitzcuintle",
+          "Xolo",
+          "Mexican Hairless Dog",
+          "Mexican Hairless"
+        ],
+        "sl": [
+          "xoloitzcuintli",
+          "xolo",
+          "mehiški goli",
+          "mehiski goli pes"
+        ]
+      },
+      "facets": {
+        "size": "small_medium",
+        "exercise": "under_1h"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small_medium",
+          "source_ids": [
+            "S928"
+          ],
+          "ref": "xoloitzcuintli.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25,
+              60
+            ],
+            "female": [
+              25,
+              60
+            ]
+          },
+          "source_ids": [
+            "S924"
+          ],
+          "ref": "xoloitzcuintli.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              4.5,
+              24.9
+            ],
+            "female": [
+              4.5,
+              24.9
+            ]
+          },
+          "source_ids": [
+            "S928"
+          ],
+          "ref": "xoloitzcuintli.adult_weight.webmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "xoloitzcuintli.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            13,
+            18
+          ],
+          "source_ids": [
+            "S926"
+          ],
+          "ref": "xoloitzcuintli.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "about",
+          "value": 20,
+          "source_ids": [
+            "S926"
+          ],
+          "ref": "xoloitzcuintli.exercise.adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 234,
+            "group": 5,
+            "section": 6,
+            "origin": "MX"
+          },
+          "source_ids": [
+            "S923"
+          ],
+          "ref": "xoloitzcuintli.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bare_skin_sun_cold",
+          "source_ids": [
+            "S927"
+          ],
+          "ref": "xoloitzcuintli.health.bare_skin",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S926"
+          ],
+          "ref": "xoloitzcuintli.health.patellar_luxation",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S928"
+            ],
+            "refs": [
+              "xoloitzcuintli.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S926"
+            ],
+            "refs": [
+              "xoloitzcuintli.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sun_protection",
+            "source_ids": [
+              "S926"
+            ],
+            "refs": [
+              "xoloitzcuintli.suitability.petmd_sun",
+              "xoloitzcuintli.health.bare_skin"
+            ]
+          },
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S927"
+            ],
+            "refs": [
+              "xoloitzcuintli.suitability.vca_cold"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S926"
+            ],
+            "refs": [
+              "xoloitzcuintli.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 2000,
+              "cap_month": 2
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 117
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 1500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 2000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 20,
+              "steps": 2000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 117
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 2,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.xoloitzcuintli.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S926"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 20 min/day (PetMD S926 'about 20 minutes of exercise every day'; no RKC / PDSA page)"
+          },
+          {
+            "ref": "proposed_game_parameters.xoloitzcuintli.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 15 min → 1,500 steps (75 % of 20)"
+          },
+          {
+            "ref": "proposed_game_parameters.xoloitzcuintli.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S926"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36; senior 117 is Claude's suggestion (senior_boundary_months)"
+          },
+          {
+            "ref": "proposed_game_parameters.xoloitzcuintli.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.xoloitzcuintli.tooth_brushing",
+            "basis_source_ids": [
+              "S928"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »two to three times a week« → 2× na teden (spodnja meja)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S926",
+          "S928"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_checked",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S923",
+        "S924",
+        "S926",
+        "S927",
+        "S928",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -75518,6 +75973,41 @@
       "publisher": "Canine Genetics and Epidemiology 6:4 (2019) (RVC repository copy)",
       "title": "O'Neill D. G., Rooney N. J., Brock C., Church D. B., Brodbelt D. C., Pegram C. Greyhounds under general veterinary care in the UK during 2016: demography and common disorders (PDF)",
       "url": "https://rvc-repository.worktribe.com/OutputFile/1382561"
+    },
+    {
+      "id": "S923",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Xoloitzcuintle — FCI nomenclature page (standard N° 234)",
+      "url": "https://fci.be/en/nomenclature/XOLOITZCUINTLE-234.html"
+    },
+    {
+      "id": "S924",
+      "tier": "A",
+      "publisher": "FCI (KUSA copy)",
+      "title": "FCI-Standard N° 234 — Xoloitzcuintle [Mexican Hairless Dog] (3 varieties) (PDF, KUSA copy 'FCI [01-2019]')",
+      "url": "https://www.kusa.co.za/images/UTILITY%20GROUP%202025/Xoloitzcuintle%20%5BMexican%20Hairless%20Dog%5D%20(3%20varieties"
+    },
+    {
+      "id": "S926",
+      "tier": "B",
+      "publisher": "PetMD (updated Nov. 11, 2026)",
+      "title": "Xoloitzcuintli (Mexican Hairless)",
+      "url": "https://www.petmd.com/dog/breeds/xoloitzcuintli"
+    },
+    {
+      "id": "S927",
+      "tier": "B",
+      "publisher": "VCA Canada (LifeLearn, created Jun 2, 2014)",
+      "title": "Xoloitzcuintli — \"The Healer\"",
+      "url": "https://vcacanada.com/know-your-pet/xoloitzcuintli"
+    },
+    {
+      "id": "S928",
+      "tier": "B",
+      "publisher": "WebMD Pets — Ariel Grucza, medically reviewed by Zilpah Sheikh, MD (May 08, 2026)",
+      "title": "What to Know About a Xoloitzcuintli",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-xoloitzcuintli"
     },
     {
       "id": "C1",
