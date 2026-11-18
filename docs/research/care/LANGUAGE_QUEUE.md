@@ -237,7 +237,7 @@ Status: `[ ]` todo · `[x]` live (address form, PRs, date) · `[!]` blocked (rea
 - [x] es top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website es.json only, no care-knowledge change) — address: tú as live; website #499, 2026-11-18. B 0 fixes, C 0 fixes. Names: Xoloitzcuintle (RAE/FCI 234; synonyms Xoloitzcuintli, Xolo, Perro pelón mexicano, Perro sin pelo mexicano). Next top-up: pt.
 - [x] pt top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website pt.json only, no care-knowledge change) — address: tu (pt-PT, AO90) as live; website #500, 2026-11-18. B 0 fixes, C 0 fixes. Names: Xoloitzcuintle (xoloitzcuintle; synonyms Xoloitzcuintli, Xolo, Cão pelado mexicano). Next top-up: nl.
 - [x] nl top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website nl.json only, no care-knowledge change) — address: je/jij (nl-NL) as live; website #502 (merge a57ae5823bfa58cc50af3ededf49054af7129c5f), 2026-11-18. B 0 fixes, C 0 fixes. Names: Xoloitzcuintle (FCI 234; synonyms Xoloitzcuintli, Xolo, Mexicaanse naakthond, as «Chinese naakthond»). Next top-up: pl.
-- [ ] pl top-up — 1 breed (Xoloitzcuintli; same)
+- [x] pl top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website pl.json only, no care-knowledge change) — address: as live; website #503 (merge 5e8362d41fc5fb73fe8c39570ab53656edfad163), 2026-11-18. B 0 fixes, C 0 fixes. Names: Xoloitzcuintle (FCI 234; synonyms Xoloitzcuintli, Xolo, Meksykański pies bezwłosy). Next top-up: cs.
 - [ ] cs top-up — 1 breed (Xoloitzcuintli; same)
 - [ ] hr top-up — 1 breed (Xoloitzcuintli; same)
 - [ ] sv top-up — 1 breed (Xoloitzcuintli; same)
