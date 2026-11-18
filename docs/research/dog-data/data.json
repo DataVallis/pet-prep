@@ -63271,7 +63271,7 @@
     },
     "exercise": {
       "adult": {
-        "value": 120,
+        "value": "> 120",
         "unit": "minutes/day",
         "source_id": "S936",
         "quote": "Italian Spinones are an energetic breed requiring plenty of exercise – ideally more than 2 hours per day.",
@@ -63361,12 +63361,12 @@
         "notes": "WebMD (S938). PetMD (S937): 'Despite being bred to work outside, these are house dogs who want to be near their families as much as possible.' and 'Bored, lonely Spinoni with energy to spare will be more likely to display unwanted behaviors like excessive barking.' → needs_company chip."
       },
       "socialisation": {
-        "value": "expose puppies to animals, people, environments and objects in the first 16 weeks",
+        "value": "socialised puppies fit in well with family life; expose puppies to animals, people, environments and objects in the first 16 weeks",
         "unit": "—",
-        "source_id": "S937",
-        "quote": "It’s important to safely expose Spinone Italiano puppies to different animals, people, environments, and objects during their first 16 weeks of life.",
+        "source_id": "S936",
+        "quote": "Once socialised, they fit in well with family life.",
         "confidence": "high",
-        "notes": "PetMD (S937, a need) → breed DOG_SOCIALISATION entry (M5-R17). PDSA (S936): 'Once socialised, they fit in well with family life.'"
+        "notes": "PDSA (S936, a condition — runbook 'if socialised correctly …' shape; the quote names socialisation, PuppySocialisationTest) → breed DOG_SOCIALISATION entry (M5-R17). PetMD (S937, a need): 'It’s important to safely expose Spinone Italiano puppies to different animals, people, environments, and objects during their first 16 weeks of life.'"
       },
       "training": {
         "value": "keen to please — easy to train with consistency; positive, reward-based training",
@@ -95198,7 +95198,7 @@
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
       },
       "learning_multiplier": {
-        "value": 1,
+        "value": 1.0,
         "unit": "× mixed-breed learning speed (game)",
         "source_id": null,
         "quote": null,
@@ -95266,11 +95266,11 @@
       "socialisation": {
         "value": 1,
         "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
-        "source_id": "S937",
-        "quote": "It’s important to safely expose Spinone Italiano puppies to different animals, people, environments, and objects during their first 16 weeks of life.",
+        "source_id": "S936",
+        "quote": "Once socialised, they fit in well with family life.",
         "confidence": "high",
-        "notes": "spinone_italiano.behaviour.socialisation (PetMD S937, a need). Built in M5-R17.",
-        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S937)"
+        "notes": "spinone_italiano.behaviour.socialisation (PDSA S936, a condition; PetMD S937 names the first 16 weeks). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S936)"
       },
       "meal_exercise_gap": {
         "value": 60,
