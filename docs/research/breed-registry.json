@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "9e5171d4320d64041c92928d84b65973f54f7d91486e3836b983113b5d33f096"
+      "sha256": "ca1ebc64a293c5e620a31051266814bc7ea91f9e26cd570c808d010cb602b708"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -69041,7 +69041,7 @@
       "id": "xoloitzcuintli",
       "species": "dog",
       "order": 113,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Xoloitzcuintli",
         "sl": "Mehiški goli pes"
@@ -69552,7 +69552,7 @@
       "id": "spinone_italiano",
       "species": "dog",
       "order": 114,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Spinone Italiano",
         "sl": "Italijanski ostrodlaki ptičar"
@@ -70158,7 +70158,7 @@
       "id": "pointer",
       "species": "dog",
       "order": 115,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Pointer",
         "sl": "Angleški pointer"
