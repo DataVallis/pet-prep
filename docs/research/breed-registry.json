@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "960d7f7adb1aeb826bdfcf722b3c5220695748e431a1f6d53043acc75d8a3283"
+      "sha256": "2b076a27954e7810f8b84de41906bd66ca28e185d11b8ed0ab023552e4753133"
     }
   },
   "suitability_vocabulary": {
@@ -70073,7 +70073,12 @@
           "S938"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "spinone-italiano.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_checked",
         "tests": [],
