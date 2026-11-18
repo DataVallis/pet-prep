@@ -234,7 +234,7 @@ Status: `[ ]` todo · `[x]` live (address form, PRs, date) · `[!]` blocked (rea
 - [x] it top-up — 3 breeds (Greyhound, Tibetan Terrier, Xoloitzcuintli; register names, slugs, synonyms; website it.json only, no care-knowledge change) — address: tu (it-IT) as live; website #494, 2026-11-18. B 0 fixes, C 0 fixes. Names: Greyhound (greyhound; Levriero inglese), Terrier tibetano (terrier-tibetano), Xoloitzcuintle (xoloitzcuintle; Cane nudo messicano). Open for the other 12 languages: Xoloitzcuintli (register id xoloitzcuintli, coming soon).
 - [x] fr top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website fr.json only, no care-knowledge change) — address: vous (adults), tu (child texts); website #496, 2026-11-18
 - [x] de top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website de.json only, no care-knowledge change) — address: Sie (adults), du (child texts); website #497 (merge 67fee961fa81693023e987164a6ef72d238d71da), 2026-11-18. B 0 fixes, C 0 fixes. Names: Xoloitzcuintle (VDH/FCI 234; synonyms Xoloitzcuintli, Xolo, Mexikanischer Nackthund). Next top-up: es.
-- [ ] es top-up — 1 breed (Xoloitzcuintli; same)
+- [x] es top-up — 1 breed (Xoloitzcuintli → Xoloitzcuintle; register name, slug, synonyms; website es.json only, no care-knowledge change) — address: tú as live; website #499, 2026-11-18. B 0 fixes, C 0 fixes. Names: Xoloitzcuintle (RAE/FCI 234; synonyms Xoloitzcuintli, Xolo, Perro pelón mexicano, Perro sin pelo mexicano). Next top-up: pt.
 - [ ] pt top-up — 1 breed (Xoloitzcuintli; same)
 - [ ] nl top-up — 1 breed (Xoloitzcuintli; same)
 - [ ] pl top-up — 1 breed (Xoloitzcuintli; same)
