@@ -2794,6 +2794,66 @@
             "prompt_hash": "sha256:0425d93ca3957808badb3b9797d6a795fdc74bf802154e43a91449edf5c8eedc",
             "generated_at": "2026-11-18T01:21:49+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "spinone_italiano",
+            "species": "dog",
+            "colour": "brown-roan",
+            "colour_value": "brown roan",
+            "file": "dog/spinone-italiano--brown-roan.webp",
+            "reference": "dog/spinone-italiano.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:8c65c563029c6e71155850c975868477bfdeda6bb4d913b7c4c24fa3b46f644c",
+            "generated_at": "2026-11-18T03:10:35+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "spinone_italiano",
+            "species": "dog",
+            "colour": "brown-white",
+            "colour_value": "white with brown markings",
+            "file": "dog/spinone-italiano--brown-white.webp",
+            "reference": "dog/spinone-italiano.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:df391331bd84b413d656f64a6c6b631f5977aa37811e5cd0b4bdae35c1a54d71",
+            "generated_at": "2026-11-18T03:10:53+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "spinone_italiano",
+            "species": "dog",
+            "colour": "orange-roan",
+            "colour_value": "orange roan",
+            "file": "dog/spinone-italiano--orange-roan.webp",
+            "reference": "dog/spinone-italiano.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:c7ea93398a0bfdf3f280b0022343d33c4a43e804551507cd46efd8f2fff020fa",
+            "generated_at": "2026-11-18T03:11:13+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "spinone_italiano",
+            "species": "dog",
+            "colour": "white",
+            "colour_value": "pure white",
+            "file": "dog/spinone-italiano--white.webp",
+            "reference": "dog/spinone-italiano.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:4e642508f3fc50fb3b4cd2f7daa831895bf1a9171169840c0d3b90563ecf9861",
+            "generated_at": "2026-11-18T03:11:32+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

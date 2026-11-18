@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `spinone_italiano` (viri S934–S941; ponovno S10, S11, S14, S24, S35, S45, S174, S771); seznam za vzreditelja: ni preverjen (stran RKC ni bila dosegljiva) |
 | Izvor | FCI št. 165, skupina 7 (ptičarji), sekcija 1.3 (celinski ptičarji, tip grifon), Italija (S935, S934) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 120. mesto »Spinone Italiano« (S174, zapisano 2026-11-18 v vrstici 123) |
-| PR-ji | pet-prep #1354 (pasma, združen `55cac82`) · portret pet-prep (zagon `breed-portraits.yml` 44227113983, sprejet v prvem poskusu) · barvne različice pet-prep (po portretu, runbook §8b) · spletna stran: pet-prep-website `feat/register-spinone-italiano` |
+| PR-ji | pet-prep #1354 (pasma, združen `55cac82`) · portret pet-prep (zagon `breed-portraits.yml` 44227113983, sprejet v prvem poskusu) · barvne različice pet-prep (zagon `breed-portraits.yml` 44228423366, vse sprejete v prvem poskusu) · spletna stran: pet-prep-website `feat/register-spinone-italiano` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,7 +41,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-124 | 2026-11-18 |
 | Česanje 3× na teden, »Nova izkušnja« za mladička, opozorilo po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-18 |
 | Ščetkanje zob vsak dan, striženje krempljev 1× na teden (otrok) | 🛠 | 💶 izziv | M5-R15 / M5-R19 | 2026-11-18 |
-| Barve (izbirnik: 5 barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-18 |
+| Barve (izbirnik: 5 barv; fotografije za vse — belo-oranžen (portret), rjavo lisast, belo-rjav, oranžno lisast, bel) | 🛠 | 💶 izziv | M5-R21 | 2026-11-18 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), belo-oranžen z lisami, robusten ptičar z brado, naravni rep | — | M5-R11-04 | 2026-11-18 |
 | Stran na petprep.si (`/animals/dogs/spinone-italiano`, `/sl/zivali/psi/italijanski-ostrodlaki-pticar`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -53,6 +53,7 @@
 
 ## Odprto za Davida
 
+- **Barvne različice:** odobril Claude 2026-11-18 — rjavo lisast, belo-rjav, oranžno lisast, bel; isti pes, poza in ozadje kot portret. Nobena barva ne čaka Davida.
 - **Potreba brez mehanike (potrebna nova naloga v ROADMAP):** zunaj na povodcu ali v ograjenem prostoru (PetMD S937 »Hunting dogs at heart, Spinoni need to be kept on a leash or within a fenced area when outside …«) — igra šteje le korake.
 - **Potreba brez mehanike (potrebna nova naloga v ROADMAP):** občasno ročno trimanje dlake (PetMD S937 »… hand-strip … your Spinone occasionally.«) — brez pogostosti; igra pozna le česanje.
 - **Potreba brez mehanike (potrebna nova naloga v ROADMAP):** skrb za brado po hrani in vodi (PetMD S937 »… pay special attention to your Spinone Italiano’s beard …«).

@@ -210,4 +210,11 @@ return [
         'bronze' => 'dogs/xoloitzcuintli--bronze.webp',
         'blonde' => 'dogs/xoloitzcuintli--blonde.webp',
     ],
+    'spinone_italiano' => [
+        'orange-white' => 'dogs/spinone-italiano.webp',
+        'brown-roan' => 'dogs/spinone-italiano--brown-roan.webp',
+        'brown-white' => 'dogs/spinone-italiano--brown-white.webp',
+        'orange-roan' => 'dogs/spinone-italiano--orange-roan.webp',
+        'white' => 'dogs/spinone-italiano--white.webp',
+    ],
 ];
