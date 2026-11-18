@@ -505,6 +505,7 @@ const SPECIES = [
       { id: 'greyhound', synonyms: { en: ['English Greyhound'], sl: ['greyhound', 'grejhaund'] } },
       { id: 'xoloitzcuintli', synonyms: { en: ['Xoloitzcuintle', 'Xolo', 'Mexican Hairless Dog', 'Mexican Hairless'], sl: ['xoloitzcuintli', 'xolo', 'mehiški goli', 'mehiski goli pes'] } },
       { id: 'spinone_italiano', synonyms: { en: ['Italian Spinone', 'Spinone', 'Italian Griffon', 'Italian Wire-haired Pointer'], sl: ['spinone', 'italijanski ostrodlaki pticar', 'italijanski spinone'] } },
+      { id: 'pointer', synonyms: { en: ['English Pointer'], sl: ['pointer', 'angleski pointer'] } },
     ],
   },
   {
@@ -3153,6 +3154,29 @@ const DOG_FACTS = {
       ['panosteitis', 'health.panosteitis'],
     ],
   },
+  // M5-R10-125. No RKC page reachable → PDSA (S944): exercise 'over 2 hours per day ideally' (more than 120), coat 'Short',
+  // grooming 'just once a week' (Once a week), lifespan 'Over 12 years'; PetMD 10–12 years (S945); height = FCI-Standard N° 1
+  // (S943); weight = UKC standard (S947, the FCI standard has none). Coren rank 43 (S35). FCI origin Great Britain. No
+  // shedding fact (one PetMD statement only). Not exported: adult_weight alternatives (PDSA), lifespan.senior_from (derived).
+  // No new health key.
+  pointer: {
+    height: ['height.fci'],
+    weight: [['adult_weight.ukc', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['bloat_gdv', 'health.gdv'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['eyelids_turned', 'health.eyelids_cataracts'],
+      ['cataracts', 'health.eyelids_cataracts'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 
 
 
@@ -3236,6 +3260,7 @@ export const DOG_CARE_TASKS = {
   greyhound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.greyhound.tooth_brushing']],
   xoloitzcuintli: [['tooth_brushing', 2, 7, 'proposed_game_parameters.xoloitzcuintli.tooth_brushing']],
   spinone_italiano: [['tooth_brushing', 7, 7, 'proposed_game_parameters.spinone_italiano.tooth_brushing'], ['nail_trim', 1, 7, 'proposed_game_parameters.spinone_italiano.nail_trimming']],
+  pointer: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pointer.tooth_brushing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4178,6 +4203,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.spinone_italiano.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.spinone_italiano.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.spinone_italiano.exercise_minutes_senior',
+  },
+  pointer: {
+    adult_minutes: ['proposed_game_parameters.pointer.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.pointer.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.pointer.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.pointer.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.pointer.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.pointer.exercise_minutes_senior',
   },
 
 

@@ -2945,5 +2945,21 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S938'], 'refs' => ['spinone_italiano.behaviour.time_alone']],
             ],
         ],
+        'pointer' => [
+            'suits' => [
+                // S944 "They’ll need active owners that are happy to keep up with their high energy requirements."
+                ['tag' => 'active_family', 'source_ids' => ['S944'], 'refs' => ['pointer.exercise.adult', 'pointer.suitability.pdsa_active_owners']],
+                // S944 "will fit well into family life if given the right socialisation as puppies"
+                ['tag' => 'family_pet', 'source_ids' => ['S944'], 'refs' => ['pointer.behaviour.family']],
+            ],
+            'consider' => [
+                // S944 "over 2 hours per day ideally"; key fact "2 hours"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S944'], 'refs' => ['pointer.exercise.adult', 'pointer.suitability.pdsa_exercise']],
+                // S946 "they're not particularly good with young children." (PetMD S945 supervise young children)
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S946'], 'refs' => ['pointer.behaviour.children']],
+                // S945 "it is important that they are kept in an enclosed yard so that they do not wander off and become lost."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S945'], 'refs' => ['pointer.exercise.enclosed_yard']],
+            ],
+        ],
     ],
 ];

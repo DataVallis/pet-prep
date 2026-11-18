@@ -953,6 +953,12 @@ class FalAiService
                 .'white coat with orange markings, a rough, dense, harsh coat of medium length with thick eyebrows, a moustache and a beard, a long head with a large nose, '
                 .'large, almost round ochre eyes, practically triangular low-carried ears, a natural thick tail carried horizontally, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-125: FCI-Standard N° 1 (S943) — symmetrical, lissom pointing dog; liver and white (the portrait default of
+            // the four usual colours); fine short coat with a sheen; slightly dish-faced muzzle; natural tail.
+            BreedType::Pointer => 'A symmetrical, well-built Pointer, a strong but lissom English pointing dog with an outline of graceful curves in healthy lean working condition, '
+                .'liver and white coat, a fine, short, hard, smooth coat with a decided sheen, a slightly dish-faced muzzle with a dark nose and wide nostrils, '
+                .'bright, kindly hazel eyes, thin, fairly high-set ears lying close to the head, a natural medium-length tail carried level with the back, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2244,6 +2250,14 @@ class FalAiService
                 'eye_color' => 'ochre',
                 'fur_texture' => 'rough, dense, harsh coat of medium length',
                 'markings' => 'orange patches on a white coat, thick eyebrows, moustache and beard, low-carried triangular ears, natural thick tail',
+            ],
+
+            // M5-R10-125: FCI S943 liver and white (the portrait default of the four usual colours).
+            BreedType::Pointer => [
+                'color_scheme' => 'liver and white',
+                'eye_color' => 'hazel',
+                'fur_texture' => 'fine, short, hard, smooth coat with a decided sheen',
+                'markings' => 'liver patches on a white coat, slightly dish-faced muzzle, thin ears lying close to the head, natural medium-length tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

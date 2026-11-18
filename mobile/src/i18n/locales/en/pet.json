@@ -212,6 +212,7 @@
       "greyhound": "Part of the 12-week challenge · brushing 1× a week",
       "xoloitzcuintli": "Part of the 12-week challenge.",
       "spinone_italiano": "Part of the 12-week challenge · brushing 3× a week",
+      "pointer": "Part of the 12-week challenge · brushing 1× a week",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
       "british_shorthair": "Short, dense coat · brushing 1× a week",
@@ -758,6 +759,12 @@
         "senior": "2 meals a day; shorter walks — 1,500 steps a day."
       },
       "spinone_italiano": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "pointer": {
         "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
         "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
         "adult": "2 meals a day; walks of 12,000 steps a day.",
