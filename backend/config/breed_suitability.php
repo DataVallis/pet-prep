@@ -2924,5 +2924,26 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S926'], 'refs' => ['xoloitzcuintli.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-124: spinone_italiano.* (S936–S938), runbook rules (data.json
+        // proposed_game_parameters.spinone_italiano.suitability_tags). RKC page not reachable (no apartment / sheds key facts);
+        // WebMD names only "a prey drive" (not high) → no chases_small_pets; grooming sources differ → no frequent_grooming;
+        // no welfare chip; in marketing. No new vocabulary key.
+        'spinone_italiano' => [
+            'suits' => [
+                // S936 "Italian Spinones are an energetic breed requiring plenty of exercise – ideally more than 2 hours per day."
+                ['tag' => 'active_family', 'source_ids' => ['S936'], 'refs' => ['spinone_italiano.exercise.adult', 'spinone_italiano.suitability.pdsa_exercise']],
+                // S936 "Once socialised, they fit in well with family life."
+                ['tag' => 'family_pet', 'source_ids' => ['S936'], 'refs' => ['spinone_italiano.behaviour.family']],
+                // S938 "They're generally regarded to be good with other dogs and kids,"; caveat: supervise very small children.
+                ['tag' => 'children', 'source_ids' => ['S938'], 'refs' => ['spinone_italiano.behaviour.children']],
+            ],
+            'consider' => [
+                // S936 "ideally more than 2 hours per day"; key fact "2 hours"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S936'], 'refs' => ['spinone_italiano.exercise.adult', 'spinone_italiano.suitability.pdsa_exercise']],
+                // S938 "However, be aware that leaving them alone for long periods of time will often lead to them getting into trouble."
+                ['tag' => 'needs_company', 'source_ids' => ['S938'], 'refs' => ['spinone_italiano.behaviour.time_alone']],
+            ],
+        ],
     ],
 ];

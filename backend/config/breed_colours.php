@@ -802,6 +802,14 @@ return [
         ['key' => 'bronze', 'value' => 'solid bronze skin', 'en' => 'Bronze', 'sl' => 'Bronast'],
         ['key' => 'blonde', 'value' => 'solid blonde (light golden) skin', 'en' => 'Blonde', 'sl' => 'Svetlo zlat'],
     ],
+    // M5-R10-124: FCI-Standard N° 165 (S935) — the five standard colours, same order and values as breed_appearance.php.
+    'spinone_italiano' => [
+        ['key' => 'orange-white', 'value' => 'white with orange markings', 'en' => 'White and orange', 'sl' => 'Belo-oranžen'],
+        ['key' => 'brown-roan', 'value' => 'brown roan', 'en' => 'Brown roan', 'sl' => 'Rjavo lisast'],
+        ['key' => 'brown-white', 'value' => 'white with brown markings', 'en' => 'White and brown', 'sl' => 'Belo-rjav'],
+        ['key' => 'orange-roan', 'value' => 'orange roan', 'en' => 'Orange roan', 'sl' => 'Oranžno lisast'],
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

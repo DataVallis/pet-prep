@@ -122,6 +122,7 @@ return [
     'tibetan_terrier' => 'Tibetanski terier',
     'greyhound' => 'Angleški hrt',
     'xoloitzcuintli' => 'Mehiški goli pes',
+    'spinone_italiano' => 'Italijanski ostrodlaki ptičar',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
