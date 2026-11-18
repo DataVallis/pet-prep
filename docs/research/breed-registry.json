@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "eda5aafdcdfb9eee2bf68ee213628d45c77a699dd777b175fbbfbfaed76b6fc7"
+      "sha256": "8203b090e894f18c751e45fbe4eeccb4216bb30f725b1a3f0a6b5b7cb966c74e"
     }
   },
   "suitability_vocabulary": {
@@ -70671,7 +70671,42 @@
         "file": "pointer.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "liver-white",
+            "label": {
+              "en": "Liver and white",
+              "sl": "Rjavo-bel"
+            },
+            "file": "dog/pointer.webp",
+            "default": true
+          },
+          {
+            "key": "orange-white",
+            "label": {
+              "en": "Orange and white",
+              "sl": "Oranžno-bel"
+            },
+            "file": "dog/pointer--orange-white.webp"
+          },
+          {
+            "key": "lemon-white",
+            "label": {
+              "en": "Lemon and white",
+              "sl": "Limonasto-bel"
+            },
+            "file": "dog/pointer--lemon-white.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/pointer--black-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_checked",

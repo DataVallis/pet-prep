@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `pointer` (viri S942–S947; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: ni preverjen (stran RKC ni bila dosegljiva) |
 | Izvor | FCI št. 1, skupina 7 (ptičarji), sekcija 2.1 (britanski in irski ptičarji in seterji, pointer), Velika Britanija (S943, S942) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 121. mesto »Pointer« (S174, prebrano 2026-11-18) |
-| PR-ji | pet-prep #1361 (pasma, združen `ed1d470`) · portret pet-prep (zagon `breed-portraits.yml` 44254306445, sprejet v prvem poskusu) · barvne različice pet-prep (sledi) · spletna stran: pet-prep-website `feat/register-pointer` |
+| PR-ji | pet-prep #1361 (pasma, združen `ed1d470`) · portret pet-prep (zagon `breed-portraits.yml` 44254306445, sprejet v prvem poskusu) · barvne različice pet-prep (zagon `breed-portraits.yml` 44255864198, vse sprejete v prvem poskusu) · spletna stran: pet-prep-website `feat/register-pointer` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,7 +42,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 108. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-125 | 2026-11-18 |
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-18 |
 | Ščetkanje zob vsak dan (otrok) | 🛠 | 💶 izziv | M5-R15 | 2026-11-18 |
-| Barve (izbirnik: 4 barve — rjavo-bel, oranžno-bel, limonasto-bel, črno-bel) | 🛠 | 💶 izziv | M5-R21 | 2026-11-18 |
+| Barve (izbirnik: 4 barve; fotografije za vse — rjavo-bel (portret), oranžno-bel, limonasto-bel, črno-bel) | 🛠 | 💶 izziv | M5-R21 | 2026-11-18 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), rjavo-bel, eleganten ptičar na sivem ozadju, naravni rep | — | M5-R11-04 | 2026-11-18 |
 | Stran na petprep.si (`/animals/dogs/pointer`, `/sl/zivali/psi/angleski-pointer`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -54,6 +54,7 @@
 
 ## Odprto za Davida
 
+- **Barvne različice:** odobril Claude 2026-11-18 — oranžno-bel, limonasto-bel, črno-bel; isti pes, poza in ozadje kot portret. Nobena barva ne čaka Davida.
 - **Življenjska doba / starejše obdobje:** uporabljena je spodnja meja PDSA »Over 12 years« → starejši od 108. meseca. Preverite vrstico »Pointer« v tabeli Dogs Trust (S123, McMillan 2024), če obstaja (tabela ni bila dosegljiva).
 - **Oznaka ograje:** čip »rad pobegne — potrebuje varno, visoko ograjo« sloni na PetMD (S945, ograjeno dvorišče, da ne odtava) in WebMD (S946); vir ne govori o višini ograje. Če želite blažjo besedo, je potreben nov ključ oznake.
 - **Stran RKC:** ključni podatki RKC (velikost doma, izpadanje dlake), kategorija Breed Watch in testi za vzreditelje niso bili dosegljivi (preusmeritev na royalkennelclub.com) → seznam za vzreditelja je »ni preverjen«.
