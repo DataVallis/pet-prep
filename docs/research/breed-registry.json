@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "2b076a27954e7810f8b84de41906bd66ca28e185d11b8ed0ab023552e4753133"
+      "sha256": "a23f974b609b26fa464df0627efc4450da82996952f586e00a3935f3f13f07e6"
     }
   },
   "suitability_vocabulary": {
@@ -70077,7 +70077,50 @@
         "file": "spinone-italiano.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "orange-white",
+            "label": {
+              "en": "White and orange",
+              "sl": "Belo-oranžen"
+            },
+            "file": "dog/spinone-italiano.webp",
+            "default": true
+          },
+          {
+            "key": "brown-roan",
+            "label": {
+              "en": "Brown roan",
+              "sl": "Rjavo lisast"
+            },
+            "file": "dog/spinone-italiano--brown-roan.webp"
+          },
+          {
+            "key": "brown-white",
+            "label": {
+              "en": "White and brown",
+              "sl": "Belo-rjav"
+            },
+            "file": "dog/spinone-italiano--brown-white.webp"
+          },
+          {
+            "key": "orange-roan",
+            "label": {
+              "en": "Orange roan",
+              "sl": "Oranžno lisast"
+            },
+            "file": "dog/spinone-italiano--orange-roan.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/spinone-italiano--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_checked",
