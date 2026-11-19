@@ -45,7 +45,8 @@
       "duty_i18n": {
         "pl": "Po wcześniejszym umówieniu. Codziennie 9:00–19:00, w czwartki 9:00–16:00, w soboty 9:00–12:00; zadzwoń wcześniej.",
         "cs": "Na objednání. Denně 9:00–19:00, ve čtvrtek 9:00–16:00, v sobotu 9:00–12:00; předem zavolejte.",
-        "sv": "Efter bokad tid. Dagligen 9.00–19.00, torsdag 9.00–16.00, lördag 9.00–12.00; ring innan du kommer."
+        "sv": "Efter bokad tid. Dagligen 9.00–19.00, torsdag 9.00–16.00, lördag 9.00–12.00; ring innan du kommer.",
+        "da": "Efter aftale. Dagligt 9.00–19.00, torsdag 9.00–16.00, lørdag 9.00–12.00; ring på forhånd."
       }
     },
     {
@@ -64,7 +65,8 @@
       "duty_i18n": {
         "pl": "Od poniedziałku do soboty 9:00–19:00; zadzwoń wcześniej.",
         "cs": "Od pondělí do soboty 9:00–19:00; předem zavolejte.",
-        "sv": "Måndag–lördag 9.00–19.00; ring innan du kommer."
+        "sv": "Måndag–lördag 9.00–19.00; ring innan du kommer.",
+        "da": "Mandag til lørdag 9.00–19.00; ring på forhånd."
       }
     },
     {
@@ -83,7 +85,8 @@
       "duty_i18n": {
         "pl": "Od poniedziałku do piątku 10:00–19:00; zadzwoń wcześniej.",
         "cs": "Od pondělí do pátku 10:00–19:00; předem zavolejte.",
-        "sv": "Måndag–fredag 10.00–19.00; ring innan du kommer."
+        "sv": "Måndag–fredag 10.00–19.00; ring innan du kommer.",
+        "da": "Mandag til fredag 10.00–19.00; ring på forhånd."
       }
     },
     {
@@ -102,7 +105,8 @@
       "duty_i18n": {
         "pl": "Dyżur po godzinach w nocy i w weekendy: +33 6 60 61 36 24. Nie jest to przychodnia całodobowa; zadzwoń wcześniej.",
         "cs": "Pohotovostní služba mimo ordinační dobu v noci a o víkendech: +33 6 60 61 36 24. Není to nonstop klinika; předem zavolejte.",
-        "sv": "Jourtjänst utanför öppettid för nätter och helger: +33 6 60 61 36 24. Ingen klinik med öppet dygnet runt; ring innan du kommer."
+        "sv": "Jourtjänst utanför öppettid för nätter och helger: +33 6 60 61 36 24. Ingen klinik med öppet dygnet runt; ring innan du kommer.",
+        "da": "Vagtservice uden for åbningstid om nætter og i weekender: +33 6 60 61 36 24. Ikke en døgnåben klinik; ring på forhånd."
       }
     }
   ],

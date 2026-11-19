@@ -64,7 +64,8 @@
         "nl": "Werktijden 10.00–17.00 uur, zondag tot en met vrijdag. Bel vooraf; 9801912476 is ook de reddingslijn van KAT voor dieren in nood.",
         "pl": "Godziny pracy 10:00–17:00, od niedzieli do piątku. Zadzwoń przed wizytą; 9801912476 to także linia ratunkowa KAT dla zwierząt w niebezpieczeństwie.",
         "cs": "Pracovní doba 10:00–17:00, od neděle do pátku. Před cestou zavolejte; číslo 9801912476 je zároveň linka záchranné služby KAT pro zvířata v nouzi.",
-        "sv": "Öppet 10.00–17.00, sön–fre. Ring innan du kommer; 9801912476 är också KAT:s räddningslinje för djur i nöd."
+        "sv": "Öppet 10.00–17.00, sön–fre. Ring innan du kommer; 9801912476 är också KAT:s räddningslinje för djur i nöd.",
+        "da": "Åbningstid 10.00–17.00, søndag til fredag. Ring på forhånd; 9801912476 er også KATs redningslinje for dyr i nød."
       }
     },
     {
@@ -86,7 +87,8 @@
         "nl": "Dagelijks geopend 8.30–18.30 uur; spoedzorg 24 uur per dag beschikbaar. Bel vooraf.",
         "pl": "Czynne codziennie 8:30–18:30; pomoc w nagłych przypadkach dostępna całodobowo. Zadzwoń przed wizytą.",
         "cs": "Otevřeno denně 8:30–18:30; pohotovostní služby dostupné nonstop. Před cestou zavolejte.",
-        "sv": "Öppet dagligen 8.30–18.30; akutvård dygnet runt. Ring innan du kommer."
+        "sv": "Öppet dagligen 8.30–18.30; akutvård dygnet runt. Ring innan du kommer.",
+        "da": "Åbent hver dag 8.30–18.30; akut hjælp døgnet rundt. Ring på forhånd."
       }
     },
     {
@@ -108,7 +110,8 @@
         "nl": "Het hele jaar (365 dagen) 24 uur per dag geopend, met spoedzorg. Alleen honden en katten.",
         "pl": "Czynne całodobowo, 365 dni w roku, z pomocą w nagłych przypadkach. Tylko psy i koty.",
         "cs": "Otevřeno nonstop, 365 dní v roce, včetně pohotovosti. Pouze psi a kočky.",
-        "sv": "Öppet dygnet runt, årets alla dagar, med akutvård. Endast hundar och katter."
+        "sv": "Öppet dygnet runt, årets alla dagar, med akutvård. Endast hundar och katter.",
+        "da": "Åbent døgnet rundt, 365 dage om året, med akut hjælp. Kun hunde og katte."
       }
     },
     {
@@ -130,7 +133,8 @@
         "nl": "24 uur per dag, 7 dagen per week geopend.",
         "pl": "Otwarte całą dobę, 7 dni w tygodniu.",
         "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu.",
-        "sv": "Öppet dygnet runt, alla dagar i veckan."
+        "sv": "Öppet dygnet runt, alla dagar i veckan.",
+        "da": "Åbent døgnet rundt, alle ugens dage."
       }
     },
     {
@@ -152,7 +156,8 @@
         "nl": "Spoedzorg en reguliere zorg. Bel vooraf voor de openingstijden.",
         "pl": "Nagłe przypadki i wizyty zwykłe. Zadzwoń przed wizytą, aby poznać godziny.",
         "cs": "Pohotovostní i běžné služby. Ordinační dobu zjistěte telefonicky před cestou.",
-        "sv": "Akut och icke-akut vård. Ring och fråga om öppettider."
+        "sv": "Akut och icke-akut vård. Ring och fråga om öppettider.",
+        "da": "Akut og ikke-akut behandling. Ring på forhånd for åbningstider."
       }
     },
     {
@@ -174,7 +179,8 @@
         "nl": "Slechts enkele uren per dag geopend; bel vooraf.",
         "pl": "Czynne tylko kilka godzin dziennie; zadzwoń przed wizytą.",
         "cs": "Otevřeno jen několik hodin denně; před cestou zavolejte.",
-        "sv": "Öppet bara några timmar om dagen; ring innan du kommer."
+        "sv": "Öppet bara några timmar om dagen; ring innan du kommer.",
+        "da": "Åbent kun nogle få timer om dagen; ring på forhånd."
       }
     },
     {
@@ -196,7 +202,8 @@
         "nl": "Verwijsziekenhuis van de overheid; dienstverlening vanaf 10.00 uur. Volgens de laatst gepubliceerde informatie geen spoedzorg.",
         "pl": "Państwowy szpital referencyjny; przyjęcia od 10:00. Według ostatnich dostępnych informacji nie ma pomocy w nagłych przypadkach.",
         "cs": "Státní odborná nemocnice; provoz od 10:00. Podle posledních zveřejněných informací bez pohotovostní služby.",
-        "sv": "Statligt remissjukhus; öppet från 10.00. Ingen akutjour enligt den senast publicerade informationen."
+        "sv": "Statligt remissjukhus; öppet från 10.00. Ingen akutjour enligt den senast publicerade informationen.",
+        "da": "Offentligt henvisningshospital; åbent fra 10.00. Ingen akuttjeneste ifølge de seneste oplysninger."
       }
     }
   ],

@@ -50,7 +50,8 @@
       "note": "Page wording: 'Abierto 24 Horas / Emergencias'; booking form also says 'Las Colinas Hospital 24 Horas'. Address on page: 'Las Colinas, de la Iglesia España 1c al este'.",
       "duty_i18n": {
         "cs": "Otevřeno nonstop, včetně pohotovosti. Telefon/WhatsApp +505 8966-5221.",
-        "sv": "Öppet dygnet runt, inklusive akutfall. Telefon/WhatsApp +505 8966-5221."
+        "sv": "Öppet dygnet runt, inklusive akutfall. Telefon/WhatsApp +505 8966-5221.",
+        "da": "Åbent døgnet rundt, også akut. Telefon/WhatsApp +505 8966-5221."
       }
     },
     {
@@ -69,7 +70,8 @@
       "note": "No 24 h wording for this location; 24 h care is at Las Colinas.",
       "duty_i18n": {
         "cs": "Otevřeno od pondělí do soboty 8:00–18:00.",
-        "sv": "Öppet måndag–lördag 8.00–18.00."
+        "sv": "Öppet måndag–lördag 8.00–18.00.",
+        "da": "Åbent mandag til lørdag 8.00–18.00."
       }
     },
     {
@@ -88,7 +90,8 @@
       "note": "Nonprofit rescue clinic. Email on the home page: sos.animales.nica@gmail.com. No emergency wording.",
       "duty_i18n": {
         "cs": "Otevřeno Po–Pá 9:00–17:00, v sobotu a v neděli zavřeno.",
-        "sv": "Öppet måndag–fredag 9.00–17.00, stängt lördag och söndag."
+        "sv": "Öppet måndag–fredag 9.00–17.00, stängt lördag och söndag.",
+        "da": "Åbent mandag til fredag 9.00–17.00, lukket lørdag og søndag."
       }
     }
   ],

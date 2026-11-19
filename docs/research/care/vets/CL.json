@@ -67,7 +67,8 @@
         "nl": "Dagelijks 24 uur open.",
         "pl": "Czynne całą dobę, każdego dnia tygodnia.",
         "cs": "Nonstop, každý den v týdnu.",
-        "sv": "Öppet dygnet runt, alla dagar i veckan."
+        "sv": "Öppet dygnet runt, alla dagar i veckan.",
+        "da": "Åbent døgnet rundt, alle ugens dage."
       }
     },
     {
@@ -93,7 +94,8 @@
         "nl": "Universitair dierenziekenhuis. Alleen de vestiging Bilbao (Providencia) is 24 uur open.",
         "pl": "Szpital uniwersytecki. Całodobowo czynna jest placówka w Bilbao (Providencia).",
         "cs": "Univerzitní výuková nemocnice. Nonstop je otevřeno pracoviště v Bilbau (Providencia).",
-        "sv": "Universitetsdjursjukhus för undervisning. Det är enheten i Bilbao (Providencia) som har öppet dygnet runt."
+        "sv": "Universitetsdjursjukhus för undervisning. Det är enheten i Bilbao (Providencia) som har öppet dygnet runt.",
+        "da": "Universitetsdyrehospital. Det er afdelingen i Bilbao (Providencia), der har døgnåbent."
       }
     },
     {
@@ -119,7 +121,8 @@
         "nl": "Dagelijks open 10.00–20.00 uur; spoedgevallen worden 24 uur per dag behandeld.",
         "pl": "Czynne codziennie 10:00–20:00; nagłe przypadki przyjmowane całą dobę.",
         "cs": "Otevřeno denně 10:00–20:00; pohotovost nonstop.",
-        "sv": "Öppet dagligen 10.00–20.00; akutfall tas emot dygnet runt."
+        "sv": "Öppet dagligen 10.00–20.00; akutfall tas emot dygnet runt.",
+        "da": "Åbent dagligt 10.00–20.00; akutte tilfælde modtages døgnet rundt."
       }
     },
     {
@@ -145,7 +148,8 @@
         "nl": "Werkdagen 8.30–18.30 uur (verlengde openingstijden aangekondigd). Opgenomen patiënten worden de klok rond gemonitord; geen 24-uurs spoedkliniek.",
         "pl": "W dni powszednie 08:30–18:30 (zapowiedziano wydłużenie godzin pracy). Pacjenci hospitalizowani są monitorowani całą dobę; to nie jest całodobowa przychodnia dla nagłych przypadków.",
         "cs": "V pracovní dny 8:30–18:30 (prodloužená ordinační doba bude oznámena). Hospitalizovaní pacienti jsou sledováni nonstop; není to nonstop pohotovostní klinika.",
-        "sv": "Vardagar 08.30–18.30 (förlängda öppettider har aviserats). Inlagda patienter övervakas dygnet runt; ingen akutklinik med öppet dygnet runt."
+        "sv": "Vardagar 08.30–18.30 (förlängda öppettider har aviserats). Inlagda patienter övervakas dygnet runt; ingen akutklinik med öppet dygnet runt.",
+        "da": "Hverdage 08.30–18.30 (udvidet åbningstid meddeles). Indlagte patienter overvåges døgnet rundt; ikke en døgnåben akutklinik."
       }
     },
     {
@@ -171,7 +175,8 @@
         "nl": "Werkdagen 9.00–19.00 uur. Geen 24-uurs spoedkliniek.",
         "pl": "W dni powszednie 09:00–19:00. To nie jest całodobowa przychodnia dla nagłych przypadków.",
         "cs": "V pracovní dny 9:00–19:00. Není to nonstop pohotovostní klinika.",
-        "sv": "Vardagar 09.00–19.00. Ingen akutklinik med öppet dygnet runt."
+        "sv": "Vardagar 09.00–19.00. Ingen akutklinik med öppet dygnet runt.",
+        "da": "Hverdage 09.00–19.00. Ikke en døgnåben akutklinik."
       }
     },
     {
@@ -197,7 +202,8 @@
         "nl": "Dagelijks open 10.00–20.00 uur. Geen 24-uurs spoedkliniek.",
         "pl": "Czynne codziennie 10:00–20:00. To nie jest całodobowa przychodnia dla nagłych przypadków.",
         "cs": "Otevřeno denně 10:00–20:00. Není to nonstop pohotovostní klinika.",
-        "sv": "Öppet dagligen 10.00–20.00. Ingen akutklinik med öppet dygnet runt."
+        "sv": "Öppet dagligen 10.00–20.00. Ingen akutklinik med öppet dygnet runt.",
+        "da": "Åbent dagligt 10.00–20.00. Ikke en døgnåben akutklinik."
       }
     },
     {
@@ -223,7 +229,8 @@
         "nl": "Spoedgevallen 24 uur per dag, 365 dagen per jaar, zonder afspraak. Geplande afspraken dagelijks 9.30–20.00 uur.",
         "pl": "Nagłe przypadki przyjmowane całodobowo, 365 dni w roku, bez umawiania wizyt. Wizyty planowe codziennie 09:30–20:00.",
         "cs": "Pohotovost nonstop, 365 dní v roce, bez objednání. Objednaná vyšetření denně 9:30–20:00.",
-        "sv": "Akutfall tas emot dygnet runt, årets alla dagar, utan tidsbokning. Bokade tider dagligen 09.30–20.00."
+        "sv": "Akutfall tas emot dygnet runt, årets alla dagar, utan tidsbokning. Bokade tider dagligen 09.30–20.00.",
+        "da": "Akutte tilfælde modtages døgnet rundt, 365 dage om året, uden tidsbestilling. Tidsbestilte konsultationer dagligt 09.30–20.00."
       }
     },
     {
@@ -249,7 +256,8 @@
         "nl": "Spoedzorg 24 uur per dag, 7 dagen per week beschikbaar.",
         "pl": "Pomoc w nagłych przypadkach 24 godziny na dobę, 7 dni w tygodniu.",
         "cs": "Akutní péče nonstop, 7 dní v týdnu.",
-        "sv": "Brådskande vård dygnet runt, alla dagar i veckan."
+        "sv": "Brådskande vård dygnet runt, alla dagar i veckan.",
+        "da": "Akut hjælp døgnet rundt, 7 dage om ugen."
       }
     },
     {
@@ -275,7 +283,8 @@
         "nl": "Vestiging Providencia elke dag 24 uur open voor spoedgevallen. De vestiging Santiago Centro (Huérfanos 1951) is niet 24 uur open.",
         "pl": "Oddział Providencia czynny całodobowo, codziennie, w nagłych przypadkach. Oddział Santiago Centro (Huérfanos 1951) nie jest czynny całą dobę.",
         "cs": "Pobočka Providencia je pro pohotovost otevřena nonstop, každý den. Pobočka Santiago Centro (Huérfanos 1951) není nonstop.",
-        "sv": "Filialen i Providencia har öppet dygnet runt, varje dag, för akutfall. Filialen Santiago Centro (Huérfanos 1951) har inte öppet dygnet runt."
+        "sv": "Filialen i Providencia har öppet dygnet runt, varje dag, för akutfall. Filialen Santiago Centro (Huérfanos 1951) har inte öppet dygnet runt.",
+        "da": "Afdelingen i Providencia er åben døgnet rundt, hver dag, for akutte tilfælde. Afdelingen Santiago Centro (Huérfanos 1951) har ikke døgnåbent."
       }
     },
     {
@@ -301,7 +310,8 @@
         "nl": "Dierenziekenhuis met spoedzorg de klok rond.",
         "pl": "Całodobowy szpital z pomocą w nagłych przypadkach 24 godziny na dobę, 7 dni w tygodniu.",
         "cs": "Nonstop nemocnice s pohotovostní péčí.",
-        "sv": "Djursjukhus med öppet dygnet runt och akutvård dygnet runt, alla dagar i veckan."
+        "sv": "Djursjukhus med öppet dygnet runt och akutvård dygnet runt, alla dagar i veckan.",
+        "da": "Døgnåbent hospital med akut hjælp døgnet rundt."
       }
     },
     {
@@ -327,7 +337,8 @@
         "nl": "Spoeddienst 24 uur per dag. Medische consulten maandag tot en met vrijdag 9.00–18.30 uur.",
         "pl": "Pogotowie weterynaryjne całodobowo. Konsultacje lekarskie pon.–pt. 09:00–18:30.",
         "cs": "Pohotovost nonstop. Lékařská vyšetření Po–Pá 9:00–18:30.",
-        "sv": "Akutjour dygnet runt. Veterinärbesök mån–fre 09.00–18.30."
+        "sv": "Akutjour dygnet runt. Veterinärbesök mån–fre 09.00–18.30.",
+        "da": "Akuttjeneste døgnet rundt. Konsultationer mandag til fredag 09.00–18.30."
       }
     },
     {
@@ -353,7 +364,8 @@
         "nl": "Dagelijks open 9.00–20.00 uur; spoeddienst 24 uur per dag.",
         "pl": "Czynne codziennie 09:00–20:00; pogotowie weterynaryjne całodobowo.",
         "cs": "Otevřeno denně 9:00–20:00; pohotovost nonstop.",
-        "sv": "Öppet dagligen 09.00–20.00; akutjour dygnet runt."
+        "sv": "Öppet dagligen 09.00–20.00; akutjour dygnet runt.",
+        "da": "Åbent dagligt 09.00–20.00; akuttjeneste døgnet rundt."
       }
     },
     {
@@ -379,7 +391,8 @@
         "nl": "Spoedeisende dierenartszorg 24 uur per dag, 7 dagen per week in de kliniek in Asunción.",
         "pl": "Weterynaryjna pomoc w nagłych przypadkach 24 godziny na dobę, 7 dni w tygodniu w przychodni w Asunción.",
         "cs": "Veterinární pohotovost nonstop, 7 dní v týdnu, na klinice v Asunciónu.",
-        "sv": "Akut veterinärvård dygnet runt, alla dagar i veckan, på kliniken i Asunción."
+        "sv": "Akut veterinärvård dygnet runt, alla dagar i veckan, på kliniken i Asunción.",
+        "da": "Akut dyrlægehjælp døgnet rundt, 7 dage om ugen, på klinikken i Asunción."
       }
     },
     {
@@ -405,7 +418,8 @@
         "nl": "24 uur per dag, 7 dagen per week open; spoedgevallen elke dag van het jaar.",
         "pl": "Czynne całodobowo, 7 dni w tygodniu; nagłe przypadki przez cały rok.",
         "cs": "Nonstop, 7 dní v týdnu; pohotovost každý den v roce.",
-        "sv": "Öppet dygnet runt, alla dagar i veckan; akutfall årets alla dagar."
+        "sv": "Öppet dygnet runt, alla dagar i veckan; akutfall årets alla dagar.",
+        "da": "Døgnåbent, 7 dage om ugen; akutte tilfælde alle årets dage."
       }
     },
     {
@@ -431,7 +445,8 @@
         "nl": "Spoedgevallen worden 24 uur per dag behandeld, elke dag van het jaar (beide vestigingen Los Castaños).",
         "pl": "Nagłe przypadki przyjmowane całodobowo, codziennie przez cały rok (oba oddziały Los Castaños).",
         "cs": "Pohotovost nonstop, každý den v roce (obě pobočky Los Castaños).",
-        "sv": "Akutfall tas emot dygnet runt, årets alla dagar (båda filialerna i Los Castaños)."
+        "sv": "Akutfall tas emot dygnet runt, årets alla dagar (båda filialerna i Los Castaños).",
+        "da": "Akutte tilfælde modtages døgnet rundt, alle årets dage (begge afdelinger i Los Castaños)."
       }
     },
     {
@@ -457,7 +472,8 @@
         "nl": "Maandag tot en met zaterdag 8.00–20.00 uur; spoeddienst elke dag tot 1.00 uur. Niet 24 uur open.",
         "pl": "Pon.–sob. 08:00–20:00; pogotowie codziennie do 01:00. Nie jest czynne całą dobę.",
         "cs": "Po–So 8:00–20:00; pohotovost každý den do 1:00. Není nonstop.",
-        "sv": "Mån–lör 08.00–20.00; akutjour varje dag till 01.00. Inte öppet dygnet runt."
+        "sv": "Mån–lör 08.00–20.00; akutjour varje dag till 01.00. Inte öppet dygnet runt.",
+        "da": "Mandag til lørdag 08.00–20.00; akuttjeneste hver dag til 01.00. Ikke døgnåbent."
       }
     },
     {
@@ -483,7 +499,8 @@
         "nl": "Spoed 24 uur per dag open, elke dag, ook op feestdagen. Geplande afspraken maandag tot en met vrijdag 9.00–21.00 uur.",
         "pl": "Pogotowie czynne całodobowo, codziennie, także w święta. Wizyty planowe pon.–pt. 09:00–21:00.",
         "cs": "Pohotovost nonstop každý den včetně svátků. Objednaná vyšetření Po–Pá 9:00–21:00.",
-        "sv": "Akutmottagningen har öppet dygnet runt varje dag, även på helgdagar. Bokade tider mån–fre 09.00–21.00."
+        "sv": "Akutmottagningen har öppet dygnet runt varje dag, även på helgdagar. Bokade tider mån–fre 09.00–21.00.",
+        "da": "Akutmodtagelsen er døgnåben hver dag, også på helligdage. Tidsbestilte konsultationer mandag til fredag 09.00–21.00."
       }
     },
     {
@@ -509,7 +526,8 @@
         "nl": "Spoeddienst elke dag 11.00–23.00 uur. Niet 24 uur open.",
         "pl": "Pogotowie codziennie 11:00–23:00. Nie jest czynne całą dobę.",
         "cs": "Pohotovost každý den 11:00–23:00. Není nonstop.",
-        "sv": "Akutjour varje dag 11.00–23.00. Inte öppet dygnet runt."
+        "sv": "Akutjour varje dag 11.00–23.00. Inte öppet dygnet runt.",
+        "da": "Akuttjeneste hver dag 11.00–23.00. Ikke døgnåbent."
       }
     },
     {
@@ -535,7 +553,8 @@
         "nl": "Spoedzorg 24 uur per dag, 7 dagen per week. Afspraken dagelijks ongeveer 9.30/10.30–19.30 uur.",
         "pl": "Pomoc w nagłych przypadkach 24 godziny na dobę, 7 dni w tygodniu. Wizyty codziennie ok. 09:30/10:30–19:30.",
         "cs": "Pohotovost nonstop, 7 dní v týdnu. Objednaná vyšetření denně přibližně 9:30/10:30–19:30.",
-        "sv": "Akutvård dygnet runt, alla dagar i veckan. Bokade tider dagligen cirka 09.30/10.30–19.30."
+        "sv": "Akutvård dygnet runt, alla dagar i veckan. Bokade tider dagligen cirka 09.30/10.30–19.30.",
+        "da": "Akut hjælp døgnet rundt, 7 dage om ugen. Konsultationer dagligt ca. 09.30/10.30–19.30."
       }
     },
     {
@@ -561,7 +580,8 @@
         "nl": "Universitair dierenziekenhuis: maandag tot en met donderdag 9.00–12.00 en 14.00–17.00 uur, vrijdag 9.00–12.00 uur. Spoednummer voor kleine huisdieren +56 9 3775 8382.",
         "pl": "Szpital uniwersytecki: pon.–czw. 09:00–12:00 i 14:00–17:00, pt. 09:00–12:00. Numer alarmowy dla małych zwierząt +56 9 3775 8382.",
         "cs": "Univerzitní nemocnice: Po–Čt 9:00–12:00 a 14:00–17:00, Pá 9:00–12:00. Pohotovostní číslo pro malá zvířata +56 9 3775 8382.",
-        "sv": "Universitetsdjursjukhus: mån–tors 09.00–12.00 och 14.00–17.00, fre 09.00–12.00. Journummer för smådjur +56 9 3775 8382."
+        "sv": "Universitetsdjursjukhus: mån–tors 09.00–12.00 och 14.00–17.00, fre 09.00–12.00. Journummer för smådjur +56 9 3775 8382.",
+        "da": "Universitetshospital: mandag til torsdag 09.00–12.00 og 14.00–17.00, fredag 09.00–12.00. Akutnummer for små kæledyr +56 9 3775 8382."
       }
     },
     {
@@ -587,7 +607,8 @@
         "nl": "Spoed de klok rond. Consulten maandag tot en met vrijdag 9.00–19.00 uur, zaterdag 10.00–18.00 uur.",
         "pl": "Nagłe przypadki całodobowo, 7 dni w tygodniu. Konsultacje pon.–pt. 09:00–19:00, sob. 10:00–18:00.",
         "cs": "Pohotovost nonstop. Vyšetření Po–Pá 9:00–19:00, so 10:00–18:00.",
-        "sv": "Akutfall dygnet runt, alla dagar i veckan. Konsultationer mån–fre 09.00–19.00, lör 10.00–18.00."
+        "sv": "Akutfall dygnet runt, alla dagar i veckan. Konsultationer mån–fre 09.00–19.00, lör 10.00–18.00.",
+        "da": "Akut hjælp døgnet rundt. Konsultationer mandag til fredag 09.00–19.00, lørdag 10.00–18.00."
       }
     },
     {
@@ -613,7 +634,8 @@
         "nl": "Spoed maandag tot en met zaterdag 9.30–24.00 uur; op zondag afhankelijk van beschikbaarheid. Opgenomen patiënten worden 24 uur per dag gemonitord. Voor consulten is een afspraak nodig.",
         "pl": "Nagłe przypadki pon.–sob. 09:30–24:00; w niedziele w miarę możliwości. Pacjenci hospitalizowani pod całodobowym nadzorem. Konsultacje po wcześniejszym umówieniu.",
         "cs": "Pohotovost Po–So 9:30–24:00; v neděli podle dostupnosti. Hospitalizovaní pacienti pod dohledem nonstop. Na vyšetření je nutné objednání.",
-        "sv": "Akutfall mån–lör 09.30–24.00; söndagar i mån av tillgång. Inlagda patienter övervakas dygnet runt. Tidsbokning krävs för konsultationer."
+        "sv": "Akutfall mån–lör 09.30–24.00; söndagar i mån av tillgång. Inlagda patienter övervakas dygnet runt. Tidsbokning krävs för konsultationer.",
+        "da": "Akutte tilfælde mandag til lørdag 09.30–24.00; søndage efter kapacitet. Indlagte patienter overvåges døgnet rundt. Konsultationer kræver tidsbestilling."
       }
     },
     {
@@ -639,7 +661,8 @@
         "nl": "24 uur per dag, 7 dagen per week open: consulten 9.00–20.00 uur, spoed 20.30–8.30 uur.",
         "pl": "Czynne całodobowo, 7 dni w tygodniu: konsultacje 09:00–20:00, nagłe przypadki 20:30–08:30.",
         "cs": "Nonstop, 7 dní v týdnu: vyšetření 9:00–20:00, pohotovost 20:30–8:30.",
-        "sv": "Öppet dygnet runt, alla dagar i veckan: konsultationer 09.00–20.00, akutfall 20.30–08.30."
+        "sv": "Öppet dygnet runt, alla dagar i veckan: konsultationer 09.00–20.00, akutfall 20.30–08.30.",
+        "da": "Døgnåbent, 7 dage om ugen: konsultationer 09.00–20.00, akutte tilfælde 20.30–08.30."
       }
     },
     {
@@ -665,7 +688,8 @@
         "nl": "Opgenomen patiënten worden de klok rond verzorgd door een dierenarts; bel voor de spoedregeling.",
         "pl": "Pacjenci hospitalizowani są całą dobę pod opieką weterynarza; zadzwoń, by ustalić zasady w nagłych przypadkach.",
         "cs": "O hospitalizované pacienty pečuje veterinář nonstop; podrobnosti k pohotovosti zjistíte telefonicky.",
-        "sv": "Inlagda patienter vårdas dygnet runt av en veterinär; ring för att höra vad som gäller vid akutfall."
+        "sv": "Inlagda patienter vårdas dygnet runt av en veterinär; ring för att höra vad som gäller vid akutfall.",
+        "da": "Indlagte patienter passes døgnet rundt af en dyrlæge; ring for at høre om akut hjælp."
       }
     },
     {
@@ -691,7 +715,8 @@
         "nl": "Spoeddienst tot 2.00 uur.",
         "pl": "Pogotowie do 02:00.",
         "cs": "Pohotovost do 2:00.",
-        "sv": "Akutjour till 02.00."
+        "sv": "Akutjour till 02.00.",
+        "da": "Akuttjeneste til 02.00."
       }
     },
     {
@@ -717,7 +742,8 @@
         "nl": "Spoeddienst tot 2.00 uur; opname met 24-uurs monitoring.",
         "pl": "Pogotowie do 02:00; całodobowa hospitalizacja.",
         "cs": "Pohotovost do 2:00; nonstop hospitalizace.",
-        "sv": "Akutjour till 02.00; slutenvård dygnet runt."
+        "sv": "Akutjour till 02.00; slutenvård dygnet runt.",
+        "da": "Akuttjeneste til 02.00; indlæggelse døgnet rundt."
       }
     },
     {
@@ -743,7 +769,8 @@
         "nl": "Spoedopvang tot 22.00 uur. Werkdagen 9.00–18.00 uur, zaterdag 10.00–14.00 uur.",
         "pl": "Nagłe przypadki do 22:00. Dni robocze 09:00–18:00, sob. 10:00–14:00.",
         "cs": "Pohotovost do 22:00. V pracovní dny 9:00–18:00, so 10:00–14:00.",
-        "sv": "Akutvård till 22.00. Vardagar 09.00–18.00, lör 10.00–14.00."
+        "sv": "Akutvård till 22.00. Vardagar 09.00–18.00, lör 10.00–14.00.",
+        "da": "Akut hjælp til 22.00. Hverdage 09.00–18.00, lørdag 10.00–14.00."
       }
     },
     {
@@ -769,7 +796,8 @@
         "nl": "24-uurs opnamedienst voor opgenomen huisdieren.",
         "pl": "Całodobowa opieka dla hospitalizowanych zwierząt.",
         "cs": "Nonstop služba pro hospitalizovaná domácí zvířata.",
-        "sv": "Slutenvård dygnet runt för inlagda sällskapsdjur."
+        "sv": "Slutenvård dygnet runt för inlagda sällskapsdjur.",
+        "da": "Døgnbemandet hospitalsafdeling for indlagte kæledyr."
       }
     },
     {
@@ -795,7 +823,8 @@
         "nl": "Maandag tot en met zaterdag 9.00–19.00 uur. Spoed afhankelijk van beschikbaarheid; neem vooraf contact op.",
         "pl": "Pon.–sob. 09:00–19:00. Nagłe przypadki w miarę możliwości; skontaktuj się przed przyjazdem.",
         "cs": "Po–So 9:00–19:00. Pohotovost podle dostupnosti; před cestou se spojte telefonicky.",
-        "sv": "Mån–lör 09.00–19.00. Akutfall i mån av tillgång; kontakta kliniken innan du kommer."
+        "sv": "Mån–lör 09.00–19.00. Akutfall i mån av tillgång; kontakta kliniken innan du kommer.",
+        "da": "Mandag til lørdag 09.00–19.00. Akutte tilfælde efter kapacitet; kontakt klinikken, før du kommer."
       }
     },
     {
@@ -819,7 +848,8 @@
         "nl": "Maandag tot en met vrijdag 9.00–17.00 uur.",
         "pl": "Pon.–pt. 09:00–17:00.",
         "cs": "Po–Pá 9:00–17:00.",
-        "sv": "Mån–fre 09.00–17.00."
+        "sv": "Mån–fre 09.00–17.00.",
+        "da": "Mandag til fredag 09.00–17.00."
       }
     },
     {
@@ -845,7 +875,8 @@
         "nl": "Maandag tot en met vrijdag 9.00–19.00 uur; zaterdagochtend. Na verbouwing in 2026 heropend of op het punt te heropenen; bel om dit te bevestigen.",
         "pl": "Pon.–pt. 09:00–19:00; sobota rano. Ponownie otwarta lub w trakcie ponownego otwarcia w 2026 r. po remoncie; zadzwoń, by potwierdzić.",
         "cs": "Po–Pá 9:00–19:00; v sobotu dopoledne. V roce 2026 po rekonstrukci znovu otevřeno nebo se otevírá; ověřte telefonicky.",
-        "sv": "Mån–fre 09.00–19.00; lör förmiddag. Har öppnat eller öppnar igen under 2026 efter renovering; ring för att bekräfta."
+        "sv": "Mån–fre 09.00–19.00; lör förmiddag. Har öppnat eller öppnar igen under 2026 efter renovering; ring för att bekräfta.",
+        "da": "Mandag til fredag 09.00–19.00; lørdag formiddag. Genåbnet eller genåbner i 2026 efter ombygning; ring for at få det bekræftet."
       }
     },
     {
@@ -871,7 +902,8 @@
         "nl": "Gemeentelijke kliniek; afspraken telefonisch dinsdag tot en met donderdag vanaf 9.00 uur. Geen spoeddienst of opname.",
         "pl": "Przychodnia miejska; wizyty umawiane telefonicznie wt.–czw. od 09:00. Brak pogotowia i hospitalizacji.",
         "cs": "Městská klinika; objednání telefonicky Út–Čt od 9:00. Bez pohotovosti a hospitalizace.",
-        "sv": "Kommunal klinik; tidsbokning per telefon tis–tors från 09.00. Ingen akutjour eller slutenvård."
+        "sv": "Kommunal klinik; tidsbokning per telefon tis–tors från 09.00. Ingen akutjour eller slutenvård.",
+        "da": "Kommunal klinik; tidsbestilling pr. telefon tirsdag til torsdag fra 09.00. Ingen akuttjeneste eller indlæggelse."
       }
     }
   ],

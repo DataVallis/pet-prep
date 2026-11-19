@@ -72,7 +72,8 @@
         "nl": "Universitair dierenziekenhuis voor kleine huisdieren (opleidingsziekenhuis). Spoed ma–vr 8.00–17.00 uur en za 8.00–14.00 uur (niet 24 uur); afspraken ma–vr 10.00–17.00 uur, za 10.00–14.00 uur. Dienst kan zonder voorafgaand bericht worden opgeschort.",
         "pl": "Uniwersytecki szpital kliniczny małych zwierząt. Nagłe przypadki pon.–pt. 8:00–17:00 i sob. 8:00–14:00 (nie całodobowo); wizyty po umówieniu pon.–pt. 10:00–17:00, sob. 10:00–14:00. Usługa może zostać zawieszona bez uprzedzenia.",
         "cs": "Univerzitní výuková nemocnice pro malá zvířata. Pohotovost Po–Pá 8:00–17:00 a so 8:00–14:00 (ne nonstop); objednaní pacienti Po–Pá 10:00–17:00, so 10:00–14:00. Provoz může být bez upozornění pozastaven.",
-        "sv": "Universitetets undervisningssjukhus för smådjur. Akutfall mån–fre 8.00–17.00 och lör 8.00–14.00 (inte dygnet runt); bokade tider mån–fre 10.00–17.00, lör 10.00–14.00. Tjänsten kan stängas utan förvarning."
+        "sv": "Universitetets undervisningssjukhus för smådjur. Akutfall mån–fre 8.00–17.00 och lör 8.00–14.00 (inte dygnet runt); bokade tider mån–fre 10.00–17.00, lör 10.00–14.00. Tjänsten kan stängas utan förvarning.",
+        "da": "Universitetshospital for små dyr. Akutte tilfælde man–fre 8.00–17.00 og lør 8.00–14.00 (ikke døgnet rundt); tidsbestilling man–fre 10.00–17.00, lør 10.00–14.00. Tilbuddet kan blive sat på pause uden varsel."
       }
     },
     {
@@ -97,7 +98,8 @@
         "nl": "Van maandag tot en met zondag 24 uur geopend.",
         "pl": "Otwarte od poniedziałku do niedzieli, całodobowo.",
         "cs": "Otevřeno od pondělí do neděle, nonstop.",
-        "sv": "Öppet måndag–söndag, dygnet runt."
+        "sv": "Öppet måndag–söndag, dygnet runt.",
+        "da": "Åbent mandag til søndag, døgnet rundt."
       }
     },
     {
@@ -122,7 +124,8 @@
         "nl": "Van maandag tot en met zondag 24 uur geopend.",
         "pl": "Otwarte od poniedziałku do niedzieli, całodobowo.",
         "cs": "Otevřeno od pondělí do neděle, nonstop.",
-        "sv": "Öppet måndag–söndag, dygnet runt."
+        "sv": "Öppet måndag–söndag, dygnet runt.",
+        "da": "Åbent mandag til søndag, døgnet rundt."
       }
     },
     {
@@ -148,7 +151,8 @@
         "nl": "Van maandag tot en met zondag 24 uur geopend. Bel vooraf om de spoeddienst te bevestigen.",
         "pl": "Otwarte od poniedziałku do niedzieli, całodobowo. Zadzwoń wcześniej, aby potwierdzić dostępność pogotowia.",
         "cs": "Otevřeno od pondělí do neděle, nonstop. Dostupnost pohotovosti ověřte telefonicky.",
-        "sv": "Öppet måndag–söndag, dygnet runt. Ring innan du kommer för att bekräfta akuttjänsten."
+        "sv": "Öppet måndag–söndag, dygnet runt. Ring innan du kommer för att bekräfta akuttjänsten.",
+        "da": "Åbent mandag til søndag, døgnet rundt. Ring på forhånd for at bekræfte akutservice."
       }
     },
     {
@@ -173,7 +177,8 @@
         "nl": "Dagelijks geopend 10.00–20.00 uur. Geen 24-uursvestiging.",
         "pl": "Czynne codziennie 10:00–20:00. To nie jest oddział całodobowy.",
         "cs": "Otevřeno denně 10:00–20:00. Pobočka není nonstop.",
-        "sv": "Öppet alla dagar 10.00–20.00. Inte en filial med öppet dygnet runt."
+        "sv": "Öppet alla dagar 10.00–20.00. Inte en filial med öppet dygnet runt.",
+        "da": "Åbent dagligt 10.00–20.00. Ikke en døgnåben afdeling."
       }
     },
     {
@@ -198,7 +203,8 @@
         "nl": "Dagelijks geopend 10.00–20.00 uur. Geen 24-uursvestiging.",
         "pl": "Czynne codziennie 10:00–20:00. To nie jest oddział całodobowy.",
         "cs": "Otevřeno denně 10:00–20:00. Pobočka není nonstop.",
-        "sv": "Öppet alla dagar 10.00–20.00. Inte en filial med öppet dygnet runt."
+        "sv": "Öppet alla dagar 10.00–20.00. Inte en filial med öppet dygnet runt.",
+        "da": "Åbent dagligt 10.00–20.00. Ikke en døgnåben afdeling."
       }
     },
     {
@@ -223,7 +229,8 @@
         "nl": "Dagelijks geopend 10.00–20.00 uur. Geen 24-uursvestiging.",
         "pl": "Czynne codziennie 10:00–20:00. To nie jest oddział całodobowy.",
         "cs": "Otevřeno denně 10:00–20:00. Pobočka není nonstop.",
-        "sv": "Öppet alla dagar 10.00–20.00. Inte en filial med öppet dygnet runt."
+        "sv": "Öppet alla dagar 10.00–20.00. Inte en filial med öppet dygnet runt.",
+        "da": "Åbent dagligt 10.00–20.00. Ikke en døgnåben afdeling."
       }
     },
     {
@@ -249,7 +256,8 @@
         "nl": "Spoed en laboratorium 24 uur per dag, 7 dagen per week. Reguliere openingstijden ma–za 11.00–21.00 uur.",
         "pl": "Nagłe przypadki i laboratorium całodobowo, 7 dni w tygodniu. Zwykłe godziny: pon.–sob. 11:00–21:00.",
         "cs": "Pohotovost a laboratoř nonstop, 7 dní v týdnu. Běžná ordinační doba Po–So 11:00–21:00.",
-        "sv": "Akutfall och laboratorium dygnet runt, alla veckans dagar. Ordinarie öppettider mån–lör 11.00–21.00."
+        "sv": "Akutfall och laboratorium dygnet runt, alla veckans dagar. Ordinarie öppettider mån–lör 11.00–21.00.",
+        "da": "Akutte tilfælde og laboratorium døgnet rundt, 7 dage om ugen. Almindelig åbningstid man–lør 11.00–21.00."
       }
     },
     {
@@ -274,7 +282,8 @@
         "nl": "Elke dag 24 uur geopend, 365 dagen per jaar. Spoedlijn; WhatsApp alleen voor berichten.",
         "pl": "Czynne codziennie, całodobowo, 365 dni w roku. Linia dla nagłych przypadków; WhatsApp tylko do wiadomości.",
         "cs": "Nonstop, každý den, 365 dní v roce. Pohotovostní linka; WhatsApp je pouze pro zprávy.",
-        "sv": "Öppet alla dagar, dygnet runt, 365 dagar om året. Akutlinje; WhatsApp är endast för meddelanden."
+        "sv": "Öppet alla dagar, dygnet runt, 365 dagar om året. Akutlinje; WhatsApp är endast för meddelanden.",
+        "da": "Åbent alle dage, døgnet rundt, alle årets 365 dage. Akuttelefon; WhatsApp er kun til beskeder."
       }
     },
     {
@@ -300,7 +309,8 @@
         "nl": "Kattenziekenhuis; elke dag 24 uur geopend.",
         "pl": "Szpital dla kotów; czynny codziennie, całodobowo.",
         "cs": "Kočičí nemocnice; otevřeno každý den, nonstop.",
-        "sv": "Kattsjukhus; öppet alla dagar, dygnet runt."
+        "sv": "Kattsjukhus; öppet alla dagar, dygnet runt.",
+        "da": "Kattehospital; åbent alle dage, døgnet rundt."
       }
     },
     {
@@ -326,7 +336,8 @@
         "nl": "Preventieve zorg, dagelijks geopend 7.30–21.00 uur. Geen 24-uurslocatie.",
         "pl": "Opieka profilaktyczna, czynne codziennie 7:30–21:00. To nie jest placówka całodobowa.",
         "cs": "Preventivní péče, otevřeno denně 7:30–21:00. Není nonstop.",
-        "sv": "Förebyggande vård, öppet alla dagar 7.30–21.00. Inte öppet dygnet runt."
+        "sv": "Förebyggande vård, öppet alla dagar 7.30–21.00. Inte öppet dygnet runt.",
+        "da": "Forebyggende behandling, åbent dagligt 7.30–21.00. Ikke et døgnåbent sted."
       }
     },
     {
@@ -352,7 +363,8 @@
         "nl": "Spoed 24 uur per dag, 365 dagen per jaar. Kliniek ma–za 10.00–18.00 uur, zo 10.00–15.00 uur.",
         "pl": "Nagłe przypadki całodobowo, 365 dni w roku. Przychodnia: pon.–sob. 10:00–18:00, niedz. 10:00–15:00.",
         "cs": "Pohotovost nonstop, 365 dní v roce. Klinika Po–So 10:00–18:00, ne 10:00–15:00.",
-        "sv": "Akutfall dygnet runt, 365 dagar om året. Klinik mån–lör 10.00–18.00, sön 10.00–15.00."
+        "sv": "Akutfall dygnet runt, 365 dagar om året. Klinik mån–lör 10.00–18.00, sön 10.00–15.00.",
+        "da": "Akutte tilfælde døgnet rundt, alle årets 365 dage. Klinik man–lør 10.00–18.00, søn 10.00–15.00."
       }
     },
     {
@@ -377,7 +389,8 @@
         "nl": "24 uur geopend, 365 dagen per jaar (dag 9.00–19.30 uur, nacht 19.31–8.59 uur).",
         "pl": "Czynne całodobowo, 365 dni w roku (dzień 9:00–19:30, noc 19:31–8:59).",
         "cs": "Nonstop, 365 dní v roce (den 9:00–19:30, noc 19:31–8:59).",
-        "sv": "Öppet dygnet runt, 365 dagar om året (dag 9.00–19.30, natt 19.31–8.59)."
+        "sv": "Öppet dygnet runt, 365 dagar om året (dag 9.00–19.30, natt 19.31–8.59).",
+        "da": "Døgnåbent alle årets 365 dage (dag 9.00–19.30, nat 19.31–8.59)."
       }
     },
     {
@@ -402,7 +415,8 @@
         "nl": "24-uursdienst; spoed 24 uur per dag, 365 dagen per jaar.",
         "pl": "Usługi całodobowe; nagłe przypadki całodobowo, 365 dni w roku.",
         "cs": "Nonstop služba; pohotovost nonstop, 365 dní v roce.",
-        "sv": "Tjänst dygnet runt; akutfall dygnet runt, 365 dagar om året."
+        "sv": "Tjänst dygnet runt; akutfall dygnet runt, 365 dagar om året.",
+        "da": "Service døgnet rundt; akutte tilfælde døgnet rundt, alle årets 365 dage."
       }
     },
     {
@@ -427,7 +441,8 @@
         "nl": "24-uursdienst; spoed 24 uur per dag, 365 dagen per jaar.",
         "pl": "Usługi całodobowe; nagłe przypadki całodobowo, 365 dni w roku.",
         "cs": "Nonstop služba; pohotovost nonstop, 365 dní v roce.",
-        "sv": "Tjänst dygnet runt; akutfall dygnet runt, 365 dagar om året."
+        "sv": "Tjänst dygnet runt; akutfall dygnet runt, 365 dagar om året.",
+        "da": "Service døgnet rundt; akutte tilfælde døgnet rundt, alle årets 365 dage."
       }
     },
     {
@@ -453,7 +468,8 @@
         "nl": "Dierenziekenhuis 24 uur geopend.",
         "pl": "Szpital czynny całą dobę.",
         "cs": "Nemocnice nonstop.",
-        "sv": "Sjukhus öppet dygnet runt."
+        "sv": "Sjukhus öppet dygnet runt.",
+        "da": "Døgnåbent hospital."
       }
     },
     {
@@ -478,7 +494,8 @@
         "nl": "Van maandag tot en met zondag en op feestdagen 24 uur geopend. Spoed interne geneeskunde 24 uur per dag.",
         "pl": "Czynne od poniedziałku do niedzieli i w święta, całodobowo. Nagłe przypadki z zakresu chorób wewnętrznych całodobowo.",
         "cs": "Otevřeno od pondělí do neděle a o svátcích, nonstop. Pohotovost interního lékařství nonstop.",
-        "sv": "Öppet måndag–söndag och helgdagar, dygnet runt. Akutfall inom internmedicin dygnet runt."
+        "sv": "Öppet måndag–söndag och helgdagar, dygnet runt. Akutfall inom internmedicin dygnet runt.",
+        "da": "Åbent mandag til søndag og helligdage, døgnet rundt. Akutte tilfælde inden for indre medicin døgnet rundt."
       }
     },
     {
@@ -503,7 +520,8 @@
         "nl": "Spoed 24 uur per dag, 365 dagen per jaar. Consulten 9.00–19.00 uur, nachtconsulten 19.00–9.00 uur.",
         "pl": "Nagłe przypadki całodobowo, 365 dni w roku. Konsultacje 9:00–19:00, konsultacje nocne 19:00–9:00.",
         "cs": "Pohotovost nonstop, 365 dní v roce. Konzultace 9:00–19:00, noční konzultace 19:00–9:00.",
-        "sv": "Akutfall dygnet runt, 365 dagar om året. Konsultationer 9.00–19.00, nattkonsultationer 19.00–9.00."
+        "sv": "Akutfall dygnet runt, 365 dagar om året. Konsultationer 9.00–19.00, nattkonsultationer 19.00–9.00.",
+        "da": "Akutte tilfælde døgnet rundt, alle årets 365 dage. Konsultationer 9.00–19.00, natkonsultationer 19.00–9.00."
       }
     },
     {
@@ -543,7 +561,8 @@
         "nl": "Spoed 24 uur geopend.",
         "pl": "Nagłe przypadki przyjmowane całodobowo.",
         "cs": "Pohotovost nonstop.",
-        "sv": "Akutmottagning öppen dygnet runt."
+        "sv": "Akutmottagning öppen dygnet runt.",
+        "da": "Akutmodtagelsen er åben døgnet rundt."
       }
     },
     {
@@ -568,7 +587,8 @@
         "nl": "Dagelijks geopend 9.00–21.00 uur (in een Petco-winkel).",
         "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco).",
         "cs": "Otevřeno denně 9:00–21:00 (uvnitř prodejny Petco).",
-        "sv": "Öppet alla dagar 9.00–21.00 (inne i en Petco-butik)."
+        "sv": "Öppet alla dagar 9.00–21.00 (inne i en Petco-butik).",
+        "da": "Åbent dagligt 9.00–21.00 (inde i en Petco-butik)."
       }
     },
     {
@@ -593,7 +613,8 @@
         "nl": "Dagelijks geopend 9.00–21.00 uur (in een Petco-winkel).",
         "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco).",
         "cs": "Otevřeno denně 9:00–21:00 (uvnitř prodejny Petco).",
-        "sv": "Öppet alla dagar 9.00–21.00 (inne i en Petco-butik)."
+        "sv": "Öppet alla dagar 9.00–21.00 (inne i en Petco-butik).",
+        "da": "Åbent dagligt 9.00–21.00 (inde i en Petco-butik)."
       }
     },
     {
@@ -618,7 +639,8 @@
         "nl": "Dagelijks geopend 9.00–21.00 uur (in een Petco-winkel).",
         "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco).",
         "cs": "Otevřeno denně 9:00–21:00 (uvnitř prodejny Petco).",
-        "sv": "Öppet alla dagar 9.00–21.00 (inne i en Petco-butik)."
+        "sv": "Öppet alla dagar 9.00–21.00 (inne i en Petco-butik).",
+        "da": "Åbent dagligt 9.00–21.00 (inde i en Petco-butik)."
       }
     },
     {
@@ -643,7 +665,8 @@
         "nl": "Dagelijks geopend 9.00–21.00 uur (in een Petco-winkel).",
         "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco).",
         "cs": "Otevřeno denně 9:00–21:00 (uvnitř prodejny Petco).",
-        "sv": "Öppet alla dagar 9.00–21.00 (inne i en Petco-butik)."
+        "sv": "Öppet alla dagar 9.00–21.00 (inne i en Petco-butik).",
+        "da": "Åbent dagligt 9.00–21.00 (inde i en Petco-butik)."
       }
     },
     {
@@ -668,7 +691,8 @@
         "nl": "Dagelijks geopend 9.00–21.00 uur (in een Petco-winkel).",
         "pl": "Czynne codziennie 9:00–21:00 (w sklepie Petco).",
         "cs": "Otevřeno denně 9:00–21:00 (uvnitř prodejny Petco).",
-        "sv": "Öppet alla dagar 9.00–21.00 (inne i en Petco-butik)."
+        "sv": "Öppet alla dagar 9.00–21.00 (inne i en Petco-butik).",
+        "da": "Åbent dagligt 9.00–21.00 (inde i en Petco-butik)."
       }
     },
     {
@@ -694,7 +718,8 @@
         "nl": "24 uur per dag, 7 dagen per week geopend, ook op zon- en feestdagen.",
         "pl": "Czynne całą dobę, 7 dni w tygodniu, także w niedziele i święta.",
         "cs": "Nonstop, 7 dní v týdnu, včetně nedělí a svátků.",
-        "sv": "Öppet dygnet runt, alla veckans dagar, även söndagar och helgdagar."
+        "sv": "Öppet dygnet runt, alla veckans dagar, även söndagar och helgdagar.",
+        "da": "Døgnåben, 7 dage om ugen, også på søn- og helligdage."
       }
     },
     {
@@ -719,7 +744,8 @@
         "nl": "Dierenziekenhuis in Condesa 24 uur geopend, 365 dagen per jaar.",
         "pl": "Szpital Condesa czynny całodobowo, 365 dni w roku.",
         "cs": "Nemocnice Condesa nonstop, 365 dní v roce.",
-        "sv": "Sjukhuset i Condesa är öppet dygnet runt, 365 dagar om året."
+        "sv": "Sjukhuset i Condesa är öppet dygnet runt, 365 dagar om året.",
+        "da": "Hospitalet i Condesa er døgnåbent alle årets 365 dage."
       }
     },
     {
@@ -745,7 +771,8 @@
         "nl": "24 uur geopend, elke dag van het jaar, voor preventieve zorg en spoed.",
         "pl": "Czynne całodobowo, codziennie przez cały rok, dla opieki profilaktycznej i nagłych przypadków.",
         "cs": "Nonstop, každý den v roce, pro preventivní péči i pohotovost.",
-        "sv": "Öppet dygnet runt, årets alla dagar, för förebyggande vård och akutfall."
+        "sv": "Öppet dygnet runt, årets alla dagar, för förebyggande vård och akutfall.",
+        "da": "Døgnåbent alle årets dage til forebyggende behandling og akutte tilfælde."
       }
     },
     {
@@ -771,7 +798,8 @@
         "nl": "Bel vooraf voor de openingstijden.",
         "pl": "Zadzwoń przed wizytą, by poznać godziny.",
         "cs": "Otevírací dobu zjistíte telefonicky.",
-        "sv": "Ring för öppettider."
+        "sv": "Ring för öppettider.",
+        "da": "Ring på forhånd for åbningstider."
       }
     },
     {
@@ -796,7 +824,8 @@
         "nl": "Spoed 24 uur per dag, 365 dagen per jaar. Specialisten in orthopedie en neurologie ma–vr.",
         "pl": "Nagłe przypadki całodobowo, 365 dni w roku. Specjaliści ortopedii i neurologii pon.–pt.",
         "cs": "Pohotovost nonstop, 365 dní v roce. Specialisté na ortopedii a neurologii Po–Pá.",
-        "sv": "Akutfall dygnet runt, 365 dagar om året. Specialister inom ortopedi och neurologi mån–fre."
+        "sv": "Akutfall dygnet runt, 365 dagar om året. Specialister inom ortopedi och neurologi mån–fre.",
+        "da": "Akutte tilfælde døgnet rundt, alle årets 365 dage. Specialister i ortopædi og neurologi man–fre."
       }
     },
     {
@@ -822,7 +851,8 @@
         "nl": "Spoedzorg 24 uur per dag, 7 dagen per week. Consulten ma–za 9.00–20.00 uur; op zondag alleen spoed.",
         "pl": "Pomoc w nagłych przypadkach całodobowo, 7 dni w tygodniu. Konsultacje pon.–sob. 9:00–20:00; w niedziele tylko nagłe przypadki.",
         "cs": "Pohotovostní péče nonstop, 7 dní v týdnu. Konzultace Po–So 9:00–20:00; v neděli pouze pohotovost.",
-        "sv": "Akutvård dygnet runt, alla veckans dagar. Konsultationer mån–lör 9.00–20.00; söndagar endast akutfall."
+        "sv": "Akutvård dygnet runt, alla veckans dagar. Konsultationer mån–lör 9.00–20.00; söndagar endast akutfall.",
+        "da": "Akuthjælp døgnet rundt, 7 dage om ugen. Konsultationer man–lør 9.00–20.00; søndage kun akutte tilfælde."
       }
     },
     {
@@ -846,7 +876,8 @@
         "nl": "Dierenklinieken in de Hotel Zone, Downtown en Puerto Cancún. Bel vooraf voor de openingstijden.",
         "pl": "Przychodnie weterynaryjne w Hotel Zone, Downtown i Puerto Cancún. Zadzwoń przed wizytą, aby poznać godziny otwarcia.",
         "cs": "Veterinární kliniky v Hotel Zone, Downtown a Puerto Cancún. Ordinační dobu zjistíte telefonicky.",
-        "sv": "Veterinärkliniker i Hotel Zone, Downtown och Puerto Cancún. Ring innan du kommer för öppettider."
+        "sv": "Veterinärkliniker i Hotel Zone, Downtown och Puerto Cancún. Ring innan du kommer för öppettider.",
+        "da": "Dyreklinikker i Hotel Zone, Downtown og Puerto Cancún. Ring på forhånd for åbningstider."
       }
     },
     {
@@ -872,7 +903,8 @@
         "nl": "Kliniek voor kleine huisdieren in Jardines del Sur. Bel vooraf voor de openingstijden.",
         "pl": "Przychodnia dla małych zwierząt w Jardines del Sur. Zadzwoń przed wizytą, aby poznać godziny otwarcia.",
         "cs": "Klinika pro malá zvířata v Jardines del Sur. Ordinační dobu zjistíte telefonicky.",
-        "sv": "Smådjursklinik i Jardines del Sur. Ring innan du kommer för öppettider."
+        "sv": "Smådjursklinik i Jardines del Sur. Ring innan du kommer för öppettider.",
+        "da": "Klinik for små dyr i Jardines del Sur. Ring på forhånd for åbningstider."
       }
     },
     {
@@ -898,7 +930,8 @@
         "nl": "Kliniek en dierenwinkel: ma–za 9.00–21.00 uur, zo 10.00–20.00 uur. Kliniekbezoek op werkdagen op afspraak; in het weekend op volgorde van binnenkomst. Geen 24-uurskliniek.",
         "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–20:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa.",
         "cs": "Klinika a obchod pro domácí zvířata: Po–So 9:00–21:00, ne 10:00–20:00. V pracovní dny návštěvy kliniky na objednání; o víkendech bez objednání, podle pořadí příchodu. Nejde o nonstop kliniku.",
-        "sv": "Klinik och djuraffär: mån–lör 9.00–21.00, sön 10.00–20.00. Klinikbesök på vardagar efter bokad tid; på helger först till kvarn. Inte en klinik med öppet dygnet runt."
+        "sv": "Klinik och djuraffär: mån–lör 9.00–21.00, sön 10.00–20.00. Klinikbesök på vardagar efter bokad tid; på helger först till kvarn. Inte en klinik med öppet dygnet runt.",
+        "da": "Klinik og dyrebutik: man–lør 9.00–21.00, søn 10.00–20.00. Klinikbesøg på hverdage efter aftale; i weekender uden tidsbestilling, efter først til mølle. Ikke en døgnåben klinik."
       }
     },
     {
@@ -924,7 +957,8 @@
         "nl": "Kliniek en dierenwinkel: ma–za 9.00–21.00 uur, zo 10.00–20.00 uur. Kliniekbezoek op werkdagen op afspraak; in het weekend op volgorde van binnenkomst. Geen 24-uurskliniek.",
         "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–20:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa.",
         "cs": "Klinika a obchod pro domácí zvířata: Po–So 9:00–21:00, ne 10:00–20:00. V pracovní dny návštěvy kliniky na objednání; o víkendech bez objednání, podle pořadí příchodu. Nejde o nonstop kliniku.",
-        "sv": "Klinik och djuraffär: mån–lör 9.00–21.00, sön 10.00–20.00. Klinikbesök på vardagar efter bokad tid; på helger först till kvarn. Inte en klinik med öppet dygnet runt."
+        "sv": "Klinik och djuraffär: mån–lör 9.00–21.00, sön 10.00–20.00. Klinikbesök på vardagar efter bokad tid; på helger först till kvarn. Inte en klinik med öppet dygnet runt.",
+        "da": "Klinik og dyrebutik: man–lør 9.00–21.00, søn 10.00–20.00. Klinikbesøg på hverdage efter aftale; i weekender uden tidsbestilling, efter først til mølle. Ikke en døgnåben klinik."
       }
     },
     {
@@ -950,7 +984,8 @@
         "nl": "Kliniek en dierenwinkel: ma–za 9.00–21.00 uur, zo 10.00–21.00 uur. Kliniekbezoek op werkdagen op afspraak; in het weekend op volgorde van binnenkomst. Geen 24-uurskliniek.",
         "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–21:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa.",
         "cs": "Klinika a obchod pro domácí zvířata: Po–So 9:00–21:00, ne 10:00–21:00. V pracovní dny návštěvy kliniky na objednání; o víkendech bez objednání, podle pořadí příchodu. Nejde o nonstop kliniku.",
-        "sv": "Klinik och djuraffär: mån–lör 9.00–21.00, sön 10.00–21.00. Klinikbesök på vardagar efter bokad tid; på helger först till kvarn. Inte en klinik med öppet dygnet runt."
+        "sv": "Klinik och djuraffär: mån–lör 9.00–21.00, sön 10.00–21.00. Klinikbesök på vardagar efter bokad tid; på helger först till kvarn. Inte en klinik med öppet dygnet runt.",
+        "da": "Klinik og dyrebutik: man–lør 9.00–21.00, søn 10.00–21.00. Klinikbesøg på hverdage efter aftale; i weekender uden tidsbestilling, efter først til mølle. Ikke en døgnåben klinik."
       }
     },
     {
@@ -976,7 +1011,8 @@
         "nl": "Kliniek en dierenwinkel: ma–za 9.00–21.00 uur, zo 10.00–20.00 uur. Kliniekbezoek op werkdagen op afspraak; in het weekend op volgorde van binnenkomst. Geen 24-uurskliniek.",
         "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–20:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa.",
         "cs": "Klinika a obchod pro domácí zvířata: Po–So 9:00–21:00, ne 10:00–20:00. V pracovní dny návštěvy kliniky na objednání; o víkendech bez objednání, podle pořadí příchodu. Nejde o nonstop kliniku.",
-        "sv": "Klinik och djuraffär: mån–lör 9.00–21.00, sön 10.00–20.00. Klinikbesök på vardagar efter bokad tid; på helger först till kvarn. Inte en klinik med öppet dygnet runt."
+        "sv": "Klinik och djuraffär: mån–lör 9.00–21.00, sön 10.00–20.00. Klinikbesök på vardagar efter bokad tid; på helger först till kvarn. Inte en klinik med öppet dygnet runt.",
+        "da": "Klinik og dyrebutik: man–lør 9.00–21.00, søn 10.00–20.00. Klinikbesøg på hverdage efter aftale; i weekender uden tidsbestilling, efter først til mølle. Ikke en døgnåben klinik."
       }
     },
     {
@@ -1002,7 +1038,8 @@
         "nl": "Kliniek en dierenwinkel: ma–za 9.00–21.00 uur, zo 10.00–21.00 uur. Kliniekbezoek op werkdagen op afspraak; in het weekend op volgorde van binnenkomst. Geen 24-uurskliniek.",
         "pl": "Przychodnia i sklep zoologiczny: pon.–sob. 9:00–21:00, niedz. 10:00–21:00. W dni robocze wizyty w przychodni po wcześniejszym umówieniu; w weekendy w kolejności zgłoszeń. To nie jest przychodnia całodobowa.",
         "cs": "Klinika a obchod pro domácí zvířata: Po–So 9:00–21:00, ne 10:00–21:00. V pracovní dny návštěvy kliniky na objednání; o víkendech bez objednání, podle pořadí příchodu. Nejde o nonstop kliniku.",
-        "sv": "Klinik och djuraffär: mån–lör 9.00–21.00, sön 10.00–21.00. Klinikbesök på vardagar efter bokad tid; på helger först till kvarn. Inte en klinik med öppet dygnet runt."
+        "sv": "Klinik och djuraffär: mån–lör 9.00–21.00, sön 10.00–21.00. Klinikbesök på vardagar efter bokad tid; på helger först till kvarn. Inte en klinik med öppet dygnet runt.",
+        "da": "Klinik og dyrebutik: man–lør 9.00–21.00, søn 10.00–21.00. Klinikbesøg på hverdage efter aftale; i weekender uden tidsbestilling, efter først til mølle. Ikke en døgnåben klinik."
       }
     },
     {
@@ -1028,7 +1065,8 @@
         "nl": "Ma–vr 9.00–19.00 uur en za 9.00–16.00 uur; zondag gesloten. Spoed buiten openingstijden: bel eerst voor advies. Engels en Spaans.",
         "pl": "Pon.–pt. 9:00–19:00 i sob. 9:00–16:00; w niedzielę nieczynne. Nagłe przypadki poza godzinami pracy: najpierw zadzwoń po wskazówki. Obsługa po angielsku i hiszpańsku.",
         "cs": "Po–Pá 9:00–19:00 a so 9:00–16:00; v neděli zavřeno. Pohotovost mimo ordinační dobu: nejdřív zavolejte pro pokyny. Anglicky a španělsky.",
-        "sv": "Mån–fre 9.00–19.00 och lör 9.00–16.00; stängt söndag. Akutfall utanför öppettid: ring först för vägledning. Engelska och spanska."
+        "sv": "Mån–fre 9.00–19.00 och lör 9.00–16.00; stängt söndag. Akutfall utanför öppettid: ring först för vägledning. Engelska och spanska.",
+        "da": "Man–fre 9.00–19.00 og lør 9.00–16.00; lukket søndag. Akutte tilfælde uden for åbningstid: ring først for vejledning. Engelsk og spansk."
       }
     },
     {
@@ -1054,7 +1092,8 @@
         "nl": "24 uur geopend, 365 dagen per jaar. Spoedlijn en WhatsApp +52 33 2162 6445; afspraken +52 33 2316 2714.",
         "pl": "Czynne całodobowo, 365 dni w roku. Linia dla nagłych przypadków i WhatsApp +52 33 2162 6445; rejestracja wizyt +52 33 2316 2714.",
         "cs": "Nonstop, 365 dní v roce. Pohotovostní linka a WhatsApp +52 33 2162 6445; objednávky +52 33 2316 2714.",
-        "sv": "Öppet dygnet runt, 365 dagar om året. Akutlinje och WhatsApp +52 33 2162 6445; tidsbokning +52 33 2316 2714."
+        "sv": "Öppet dygnet runt, 365 dagar om året. Akutlinje och WhatsApp +52 33 2162 6445; tidsbokning +52 33 2316 2714.",
+        "da": "Døgnåbent alle årets 365 dage. Akuttelefon og WhatsApp +52 33 2162 6445; tidsbestilling +52 33 2316 2714."
       }
     },
     {
@@ -1079,7 +1118,8 @@
         "nl": "24 uur geopend, 365 dagen per jaar. Spoedzorg zonder afspraak.",
         "pl": "Czynne całodobowo, 365 dni w roku. Pilna pomoc bez umawiania wizyty.",
         "cs": "Nonstop, 365 dní v roce. Naléhavá péče bez objednání.",
-        "sv": "Öppet dygnet runt, 365 dagar om året. Akutvård utan bokad tid."
+        "sv": "Öppet dygnet runt, 365 dagar om året. Akutvård utan bokad tid.",
+        "da": "Døgnåbent alle årets 365 dage. Akut hjælp uden tidsbestilling."
       }
     },
     {
@@ -1104,7 +1144,8 @@
         "nl": "24 uur geopend, 365 dagen per jaar. Spoedzorg zonder afspraak.",
         "pl": "Czynne całodobowo, 365 dni w roku. Pilna pomoc bez umawiania wizyty.",
         "cs": "Nonstop, 365 dní v roce. Naléhavá péče bez objednání.",
-        "sv": "Öppet dygnet runt, 365 dagar om året. Akutvård utan bokad tid."
+        "sv": "Öppet dygnet runt, 365 dagar om året. Akutvård utan bokad tid.",
+        "da": "Døgnåbent alle årets 365 dage. Akut hjælp uden tidsbestilling."
       }
     },
     {
@@ -1129,7 +1170,8 @@
         "nl": "24 uur geopend, 365 dagen per jaar. Spoedzorg zonder afspraak.",
         "pl": "Czynne całodobowo, 365 dni w roku. Pilna pomoc bez umawiania wizyty.",
         "cs": "Nonstop, 365 dní v roce. Naléhavá péče bez objednání.",
-        "sv": "Öppet dygnet runt, 365 dagar om året. Akutvård utan bokad tid."
+        "sv": "Öppet dygnet runt, 365 dagar om året. Akutvård utan bokad tid.",
+        "da": "Døgnåbent alle årets 365 dage. Akut hjælp uden tidsbestilling."
       }
     },
     {
@@ -1154,7 +1196,8 @@
         "nl": "24 uur geopend. Spoedzorg zonder afspraak.",
         "pl": "Czynne całodobowo. Pilna pomoc bez umawiania wizyty.",
         "cs": "Nonstop. Naléhavá péče bez objednání.",
-        "sv": "Öppet dygnet runt. Akutvård utan bokad tid."
+        "sv": "Öppet dygnet runt. Akutvård utan bokad tid.",
+        "da": "Døgnåbent. Akut hjælp uden tidsbestilling."
       }
     },
     {
@@ -1179,7 +1222,8 @@
         "nl": "Dierenziekenhuis 24 uur geopend, 365 dagen per jaar. WhatsApp +52 33 3849 4603.",
         "pl": "Szpital czynny całodobowo, 365 dni w roku. WhatsApp +52 33 3849 4603.",
         "cs": "Nemocnice nonstop, 365 dní v roce. WhatsApp +52 33 3849 4603.",
-        "sv": "Sjukhus öppet dygnet runt, 365 dagar om året. WhatsApp +52 33 3849 4603."
+        "sv": "Sjukhus öppet dygnet runt, 365 dagar om året. WhatsApp +52 33 3849 4603.",
+        "da": "Hospital åbent døgnet rundt alle årets 365 dage. WhatsApp +52 33 3849 4603."
       }
     },
     {
@@ -1205,7 +1249,8 @@
         "nl": "Vestiging; bel vooraf voor de openingstijden. Het hoofddierenziekenhuis aan Av. Patria is 24 uur geopend.",
         "pl": "Filia przychodni; zadzwoń przed wizytą, aby poznać godziny. Główny szpital przy Av. Patria jest czynny całodobowo.",
         "cs": "Pobočka kliniky; ordinační dobu zjistíte telefonicky. Hlavní nemocnice na Av. Patria je nonstop.",
-        "sv": "Filialklinik; ring innan du kommer för öppettider. Huvudsjukhuset på Av. Patria är öppet dygnet runt."
+        "sv": "Filialklinik; ring innan du kommer för öppettider. Huvudsjukhuset på Av. Patria är öppet dygnet runt.",
+        "da": "Afdelingsklinik; ring på forhånd for åbningstider. Hovedhospitalet på Av. Patria er døgnåbent."
       }
     },
     {
@@ -1230,7 +1275,8 @@
         "nl": "Spoed 24 uur per dag, elke dag; consulten dagelijks 9.00–20.00 uur.",
         "pl": "Nagłe przypadki całodobowo, codziennie; konsultacje codziennie 9:00–20:00.",
         "cs": "Pohotovost nonstop, každý den; konzultace denně 9:00–20:00.",
-        "sv": "Akutfall dygnet runt, alla dagar; konsultationer alla dagar 9.00–20.00."
+        "sv": "Akutfall dygnet runt, alla dagar; konsultationer alla dagar 9.00–20.00.",
+        "da": "Akutte tilfælde døgnet rundt, alle dage; konsultationer dagligt 9.00–20.00."
       }
     },
     {
@@ -1255,7 +1301,8 @@
         "nl": "Consulten dagelijks 9.00–21.00 uur. Spoed 24 uur per dag in het dierenziekenhuis aan Av. La Calma 4471.",
         "pl": "Konsultacje codziennie 9:00–21:00. Całodobowe nagłe przypadki przyjmuje szpital przy Av. La Calma 4471.",
         "cs": "Konzultace denně 9:00–21:00. Pohotovost nonstop je v nemocnici na Av. La Calma 4471.",
-        "sv": "Konsultationer alla dagar 9.00–21.00. Akutfall dygnet runt tas emot på sjukhuset på Av. La Calma 4471."
+        "sv": "Konsultationer alla dagar 9.00–21.00. Akutfall dygnet runt tas emot på sjukhuset på Av. La Calma 4471.",
+        "da": "Konsultationer dagligt 9.00–21.00. Akutte tilfælde døgnet rundt behandles på hospitalet på Av. La Calma 4471."
       }
     },
     {
@@ -1281,7 +1328,8 @@
         "nl": "24 uur per dag, 7 dagen per week geopend, ook voor spoed. Afspraken +52 81 1871 0654.",
         "pl": "Czynne całodobowo, 7 dni w tygodniu, także w nagłych przypadkach. Rejestracja wizyt +52 81 1871 0654.",
         "cs": "Nonstop, 7 dní v týdnu, včetně pohotovosti. Objednávky +52 81 1871 0654.",
-        "sv": "Öppet dygnet runt, alla veckans dagar, inklusive akutfall. Tidsbokning +52 81 1871 0654."
+        "sv": "Öppet dygnet runt, alla veckans dagar, inklusive akutfall. Tidsbokning +52 81 1871 0654.",
+        "da": "Døgnåbent, 7 dage om ugen, også akutte tilfælde. Tidsbestilling +52 81 1871 0654."
       }
     },
     {
@@ -1307,7 +1355,8 @@
         "nl": "24 uur per dag, 7 dagen per week geopend. Tweede lijn +52 81 8348 0492.",
         "pl": "Czynne całodobowo, 7 dni w tygodniu. Druga linia +52 81 8348 0492.",
         "cs": "Nonstop, 7 dní v týdnu. Druhá linka +52 81 8348 0492.",
-        "sv": "Öppet dygnet runt, alla veckans dagar. Andra linjen +52 81 8348 0492."
+        "sv": "Öppet dygnet runt, alla veckans dagar. Andra linjen +52 81 8348 0492.",
+        "da": "Døgnåbent, 7 dage om ugen. Anden linje +52 81 8348 0492."
       }
     },
     {
@@ -1331,7 +1380,8 @@
         "nl": "Dierenziekenhuis met spoedzorg; bel voor de openingstijden.",
         "pl": "Szpital weterynaryjny z pomocą w nagłych przypadkach; zadzwoń, aby poznać godziny otwarcia.",
         "cs": "Veterinární nemocnice s pohotovostní péčí; ordinační dobu zjistíte telefonicky.",
-        "sv": "Djursjukhus med akutvård; ring för öppettider."
+        "sv": "Djursjukhus med akutvård; ring för öppettider.",
+        "da": "Dyrehospital med akuthjælp; ring for åbningstider."
       }
     },
     {
@@ -1356,7 +1406,8 @@
         "nl": "Elke dag 24 uur geopend. Overige nummers +52 222 169 6687 en +52 221 195 3312.",
         "pl": "Czynne całodobowo, codziennie. Inne numery +52 222 169 6687 i +52 221 195 3312.",
         "cs": "Nonstop, každý den. Další linky +52 222 169 6687 a +52 221 195 3312.",
-        "sv": "Öppet dygnet runt, alla dagar. Övriga linjer +52 222 169 6687 och +52 221 195 3312."
+        "sv": "Öppet dygnet runt, alla dagar. Övriga linjer +52 222 169 6687 och +52 221 195 3312.",
+        "da": "Døgnåbent alle dage. Andre numre +52 222 169 6687 og +52 221 195 3312."
       }
     },
     {
@@ -1381,7 +1432,8 @@
         "nl": "24 uur per dag, 7 dagen per week geopend.",
         "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu.",
         "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu.",
-        "sv": "Öppet dygnet runt, alla veckans dagar."
+        "sv": "Öppet dygnet runt, alla veckans dagar.",
+        "da": "Åbent døgnet rundt, alle ugens dage."
       }
     },
     {
@@ -1407,7 +1459,8 @@
         "nl": "Bel vooraf voor de openingstijden. Het dierenziekenhuis aan de Recta a Cholula is 24 uur geopend.",
         "pl": "Zadzwoń przed wizytą, aby poznać godziny. Szpital przy Recta a Cholula jest czynny całodobowo.",
         "cs": "Ordinační dobu zjistíte telefonicky. Nemocnice na Recta a Cholula je nonstop.",
-        "sv": "Ring innan du kommer för öppettider. Sjukhuset på Recta a Cholula är öppet dygnet runt."
+        "sv": "Ring innan du kommer för öppettider. Sjukhuset på Recta a Cholula är öppet dygnet runt.",
+        "da": "Ring på forhånd for åbningstider. Hospitalet på Recta a Cholula er døgnåbent."
       }
     },
     {
@@ -1432,7 +1485,8 @@
         "nl": "24 uur geopend, 365 dagen per jaar, ook in weekenden en op feestdagen. Telefoon en WhatsApp.",
         "pl": "Czynne całodobowo, 365 dni w roku, także w weekendy i święta. Telefon i WhatsApp.",
         "cs": "Nonstop, 365 dní v roce, včetně víkendů a svátků. Telefon a WhatsApp.",
-        "sv": "Öppet dygnet runt, 365 dagar om året, även helger och helgdagar. Telefon och WhatsApp."
+        "sv": "Öppet dygnet runt, 365 dagar om året, även helger och helgdagar. Telefon och WhatsApp.",
+        "da": "Døgnåbent alle årets 365 dage, også weekender og helligdage. Telefon og WhatsApp."
       }
     },
     {
@@ -1458,7 +1512,8 @@
         "nl": "Dagelijks geopend 10.00–20.00 uur; na 20.00 uur spoed na telefonische aanmelding vooraf. WhatsApp +52 442 269 8977.",
         "pl": "Czynne codziennie 10:00–20:00; po 20:00 nagłe przypadki po wcześniejszym telefonie. WhatsApp +52 442 269 8977.",
         "cs": "Otevřeno denně 10:00–20:00; po 20:00 pohotovost po předchozím telefonátu. WhatsApp +52 442 269 8977.",
-        "sv": "Öppet alla dagar 10.00–20.00; efter 20.00 akutfall efter telefonsamtal i förväg. WhatsApp +52 442 269 8977."
+        "sv": "Öppet alla dagar 10.00–20.00; efter 20.00 akutfall efter telefonsamtal i förväg. WhatsApp +52 442 269 8977.",
+        "da": "Åbent dagligt 10.00–20.00; efter 20.00 kun akutte tilfælde efter forudgående opkald. WhatsApp +52 442 269 8977."
       }
     },
     {
@@ -1484,7 +1539,8 @@
         "nl": "Nachtelijk spoedziekenhuis: ma–vr 18.00–8.00 uur, za vanaf 13.00 tot 8.00 uur, zondag 24 uur.",
         "pl": "Nocny szpital dla nagłych przypadków: pon.–pt. 18:00–8:00, sob. od 13:00 do 8:00, niedziela całodobowo.",
         "cs": "Noční pohotovostní nemocnice: Po–Pá 18:00–8:00, so od 13:00 do 8:00, v neděli nonstop.",
-        "sv": "Nattakutsjukhus: mån–fre 18.00–8.00, lör från 13.00 till 8.00, söndag dygnet runt."
+        "sv": "Nattakutsjukhus: mån–fre 18.00–8.00, lör från 13.00 till 8.00, söndag dygnet runt.",
+        "da": "Akuthospital om natten: man–fre 18.00–8.00, lør fra 13.00 til 8.00, søn døgnet rundt."
       }
     },
     {
@@ -1509,7 +1565,8 @@
         "nl": "Dienst 24 uur per dag, elke dag beschikbaar. Telefoon en WhatsApp.",
         "pl": "Usługi dostępne całodobowo, codziennie. Telefon i WhatsApp.",
         "cs": "Služba nonstop, každý den. Telefon a WhatsApp.",
-        "sv": "Tjänsten finns dygnet runt, alla dagar. Telefon och WhatsApp."
+        "sv": "Tjänsten finns dygnet runt, alla dagar. Telefon och WhatsApp.",
+        "da": "Døgnåben hver dag. Telefon og WhatsApp."
       }
     },
     {
@@ -1534,7 +1591,8 @@
         "nl": "24 uur geopend, van maandag tot en met zondag. WhatsApp +52 619 507 7283.",
         "pl": "Czynne całodobowo, od poniedziałku do niedzieli. WhatsApp +52 619 507 7283.",
         "cs": "Nonstop, od pondělí do neděle. WhatsApp +52 619 507 7283.",
-        "sv": "Öppet dygnet runt, måndag–söndag. WhatsApp +52 619 507 7283."
+        "sv": "Öppet dygnet runt, måndag–söndag. WhatsApp +52 619 507 7283.",
+        "da": "Åbent døgnet rundt, mandag til søndag. WhatsApp +52 619 507 7283."
       }
     },
     {
@@ -1559,7 +1617,8 @@
         "nl": "Spoed 24 uur (spoedlijn +52 664 356 3990). Reguliere openingstijden ma–za 7.00–24.00 uur, zo 9.00–24.00 uur.",
         "pl": "Nagłe przypadki całodobowo (linia alarmowa +52 664 356 3990). Zwykłe godziny: pon.–sob. 7:00–24:00, niedz. 9:00–24:00.",
         "cs": "Pohotovost nonstop (pohotovostní linka +52 664 356 3990). Běžná ordinační doba Po–So 7:00–24:00, ne 9:00–24:00.",
-        "sv": "Akutfall dygnet runt (akutlinje +52 664 356 3990). Ordinarie öppettider mån–lör 7.00–24.00, sön 9.00–24.00."
+        "sv": "Akutfall dygnet runt (akutlinje +52 664 356 3990). Ordinarie öppettider mån–lör 7.00–24.00, sön 9.00–24.00.",
+        "da": "Akut døgnet rundt (akuttelefon +52 664 356 3990). Almindelig åbningstid man–lør 7.00–24.00, søn 9.00–24.00."
       }
     },
     {
@@ -1584,7 +1643,8 @@
         "nl": "24 uur per dag, 7 dagen per week geopend; spoed zonder afspraak.",
         "pl": "Czynne całodobowo, 7 dni w tygodniu; nagłe przypadki bez umawiania wizyty.",
         "cs": "Nonstop, 7 dní v týdnu; pohotovost bez objednání.",
-        "sv": "Öppet dygnet runt, alla veckans dagar; akutfall utan bokad tid."
+        "sv": "Öppet dygnet runt, alla veckans dagar; akutfall utan bokad tid.",
+        "da": "Åbent døgnet rundt, 7 dage om ugen; akutte tilfælde uden tidsbestilling."
       }
     },
     {
@@ -1610,7 +1670,8 @@
         "nl": "24 uur geopend, 365 dagen per jaar. Ook +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
         "pl": "Czynne całodobowo, 365 dni w roku. Także +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
         "cs": "Nonstop, 365 dní v roce. Také +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
-        "sv": "Öppet dygnet runt, 365 dagar om året. Även +52 55 5373 4573; WhatsApp +52 56 1995 0824."
+        "sv": "Öppet dygnet runt, 365 dagar om året. Även +52 55 5373 4573; WhatsApp +52 56 1995 0824.",
+        "da": "Åbent døgnet rundt, 365 dage om året. Også +52 55 5373 4573; WhatsApp +52 56 1995 0824."
       }
     },
     {
@@ -1635,7 +1696,8 @@
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week beschikbaar. Tweede lijn +52 612 171 9708.",
         "pl": "Pomoc w nagłych przypadkach dostępna całodobowo, 7 dni w tygodniu. Druga linia +52 612 171 9708.",
         "cs": "Pohotovostní služba nonstop, 7 dní v týdnu. Druhá linka +52 612 171 9708.",
-        "sv": "Akuttjänst dygnet runt, alla veckans dagar. Andra linjen +52 612 171 9708."
+        "sv": "Akuttjänst dygnet runt, alla veckans dagar. Andra linjen +52 612 171 9708.",
+        "da": "Akutvagt døgnet rundt, 7 dage om ugen. Anden linje +52 612 171 9708."
       }
     },
     {
@@ -1661,7 +1723,8 @@
         "nl": "Spoed 24 uur van maandag tot en met zaterdag; zondag 9.00–19.00 uur. Telefoon en WhatsApp.",
         "pl": "Nagłe przypadki całodobowo od poniedziałku do soboty; w niedzielę 9:00–19:00. Telefon i WhatsApp.",
         "cs": "Pohotovost nonstop od pondělí do soboty; v neděli 9:00–19:00. Telefon a WhatsApp.",
-        "sv": "Akutfall dygnet runt måndag–lördag; söndag 9.00–19.00. Telefon och WhatsApp."
+        "sv": "Akutfall dygnet runt måndag–lördag; söndag 9.00–19.00. Telefon och WhatsApp.",
+        "da": "Akut døgnet rundt fra mandag til lørdag; søndag 9.00–19.00. Telefon og WhatsApp."
       }
     },
     {
@@ -1686,7 +1749,8 @@
         "nl": "24 uur per dag, 7 dagen per week geopend.",
         "pl": "Otwarte całą dobę, 7 dni w tygodniu.",
         "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu.",
-        "sv": "Öppet dygnet runt, alla veckans dagar."
+        "sv": "Öppet dygnet runt, alla veckans dagar.",
+        "da": "Åbent døgnet rundt, alle ugens dage."
       }
     }
   ],

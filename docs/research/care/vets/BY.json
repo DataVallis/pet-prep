@@ -51,7 +51,8 @@
       "duty_i18n": {
         "pl": "Czynne całą dobę. Dodatkowy numer: +375 29 392 80 81.",
         "cs": "Nonstop. Také +375 29 392 80 81.",
-        "sv": "Öppet dygnet runt. Även +375 29 392 80 81."
+        "sv": "Öppet dygnet runt. Även +375 29 392 80 81.",
+        "da": "Åbent døgnet rundt. Også +375 29 392 80 81."
       }
     },
     {
@@ -71,7 +72,8 @@
       "duty_i18n": {
         "pl": "Czynne całą dobę, codziennie. Lekarze bez umawiania 09:00–19:00; po 21:00 lekarz dyżurny w taryfie nocnej.",
         "cs": "Nonstop, každý den. Lékaři bez objednání 9:00–19:00; po 21:00 lékař ve službě za noční tarif.",
-        "sv": "Öppet dygnet runt, alla dagar. Mottagning utan tidsbokning 09.00–19.00; efter 21.00 jourhavande veterinär enligt nattaxa."
+        "sv": "Öppet dygnet runt, alla dagar. Mottagning utan tidsbokning 09.00–19.00; efter 21.00 jourhavande veterinär enligt nattaxa.",
+        "da": "Døgnåben, alle dage. Dyrlæger uden tidsbestilling 09.00–19.00; efter 21.00 en vagthavende læge til nattakst."
       }
     },
     {
@@ -91,7 +93,8 @@
       "duty_i18n": {
         "pl": "Czynne całą dobę, codziennie. Lekarze bez umawiania 09:00–19:00; po 21:00 lekarz dyżurny w taryfie nocnej.",
         "cs": "Nonstop, každý den. Lékaři bez objednání 9:00–19:00; po 21:00 lékař ve službě za noční tarif.",
-        "sv": "Öppet dygnet runt, alla dagar. Mottagning utan tidsbokning 09.00–19.00; efter 21.00 jourhavande veterinär enligt nattaxa."
+        "sv": "Öppet dygnet runt, alla dagar. Mottagning utan tidsbokning 09.00–19.00; efter 21.00 jourhavande veterinär enligt nattaxa.",
+        "da": "Døgnåben, alle dage. Dyrlæger uden tidsbestilling 09.00–19.00; efter 21.00 en vagthavende læge til nattakst."
       }
     },
     {
@@ -111,7 +114,8 @@
       "duty_i18n": {
         "pl": "Skontaktuj się z przychodnią, by poznać aktualne godziny.",
         "cs": "Aktuální otevírací dobu zjistíte na klinice.",
-        "sv": "Kontakta kliniken för aktuella öppettider."
+        "sv": "Kontakta kliniken för aktuella öppettider.",
+        "da": "Kontakt klinikken for aktuelle åbningstider."
       }
     },
     {
@@ -131,7 +135,8 @@
       "duty_i18n": {
         "pl": "Skontaktuj się z przychodnią, by poznać aktualne godziny.",
         "cs": "Aktuální otevírací dobu zjistíte na klinice.",
-        "sv": "Kontakta kliniken för aktuella öppettider."
+        "sv": "Kontakta kliniken för aktuella öppettider.",
+        "da": "Kontakt klinikken for aktuelle åbningstider."
       }
     },
     {
@@ -151,7 +156,8 @@
       "duty_i18n": {
         "pl": "Czynne codziennie 09:00–21:00.",
         "cs": "Denně 9:00–21:00.",
-        "sv": "Öppet varje dag 09.00–21.00."
+        "sv": "Öppet varje dag 09.00–21.00.",
+        "da": "Åbent dagligt 09.00–21.00."
       }
     },
     {
@@ -171,7 +177,8 @@
       "duty_i18n": {
         "pl": "Czynne całą dobę; przerwa w środy 11:00–14:00.",
         "cs": "Nonstop; přestávka ve středu 11:00–14:00.",
-        "sv": "Öppet dygnet runt; paus på onsdagar 11.00–14.00."
+        "sv": "Öppet dygnet runt; paus på onsdagar 11.00–14.00.",
+        "da": "Døgnåben; pause onsdag 11.00–14.00."
       }
     },
     {
@@ -191,7 +198,8 @@
       "duty_i18n": {
         "pl": "Czynne codziennie 09:00–21:00; przerwa w środy 11:00–14:00.",
         "cs": "Denně 9:00–21:00; přestávka ve středu 11:00–14:00.",
-        "sv": "Öppet varje dag 09.00–21.00; paus på onsdagar 11.00–14.00."
+        "sv": "Öppet varje dag 09.00–21.00; paus på onsdagar 11.00–14.00.",
+        "da": "Åbent dagligt 09.00–21.00; pause onsdag 11.00–14.00."
       }
     },
     {
@@ -211,7 +219,8 @@
       "duty_i18n": {
         "pl": "Czynne codziennie 09:00–21:00; przerwa w środy 11:00–14:00.",
         "cs": "Denně 9:00–21:00; přestávka ve středu 11:00–14:00.",
-        "sv": "Öppet varje dag 09.00–21.00; paus på onsdagar 11.00–14.00."
+        "sv": "Öppet varje dag 09.00–21.00; paus på onsdagar 11.00–14.00.",
+        "da": "Åbent dagligt 09.00–21.00; pause onsdag 11.00–14.00."
       }
     },
     {
@@ -231,7 +240,8 @@
       "duty_i18n": {
         "pl": "Czynne całą dobę, codziennie; nie każdy specjalista jest w nocy na dyżurze, więc zadzwoń wcześniej.",
         "cs": "Nonstop, každý den; ne každý specialista je v noci ve službě, nejprve zavolejte.",
-        "sv": "Öppet dygnet runt, alla dagar; inte alla specialister har jour på natten – ring först."
+        "sv": "Öppet dygnet runt, alla dagar; inte alla specialister har jour på natten – ring först.",
+        "da": "Åbent døgnet rundt, alle dage; ikke alle specialister er på vagt om natten – ring først."
       }
     }
   ],
