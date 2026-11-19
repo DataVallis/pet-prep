@@ -289,7 +289,9 @@ return [
         // its clip). The rest stay unchecked and are picked up by the next run.
         'max_recheck_regenerations' => (int) env('AI_QUALITY_MAX_RECHECK_REGENERATIONS', 10),
         // Automatic regenerations (new seed, next prompt variant where one exists) per chain after a
-        // failed still (item clips: a failed technical check); then the self-healing fallback.
+        // failed still (item clips: a failed technical OR — since 2026-11-19 — AI realism check; a clip
+        // whose item is wrong regenerates its key image, which spends a try of BOTH chains — one shared
+        // budget, never more than this per chain); then the self-healing fallback.
         'max_still_retries' => (int) env('AI_QUALITY_MAX_STILL_RETRIES', 2),
         // Item clips that should barely move (the bed: the animal sleeps) — low-motion threshold.
         'low_motion_items' => ['bed'],

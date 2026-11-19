@@ -10,6 +10,9 @@ use App\Services\Media\AiSpendGuard;
 use App\Services\Media\ItemMediaService;
 use App\Services\Media\StillQualityService;
 use Illuminate\Console\Command;
+use Illuminate\Contracts\Console\Isolatable;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 
 /**
  * Re-check STORED »Želje« item content with the realism rubric (David 2026-11-19: a »Navy cushion
@@ -29,10 +32,17 @@ use Illuminate\Console\Command;
  *   --limit=N      at most N files this run (0 = all).
  *   --max-regenerations=N  stop checking after N regenerations (default
  *                  media.quality_check.max_recheck_regenerations, 10); the rest stay for the next run.
- * Never scheduled. Audited (`app_setting_changes` `media_item_recheck`).
+ * Only files an active owner's pet SHOWS now are checked (QA #1414 M2: owns the item — an action
+ * item only while in use —, current stage, current content). A failing stored clip always starts a
+ * fresh key image chain (M4). An AI error is reported as `error`, recorded on nothing, not audited
+ * and not re-selected by later runs (m2). One run at a time (QA #1414 m5: Isolatable `--isolated`
+ * plus a cache lock for --run). Never scheduled. Audited (`app_setting_changes` `media_item_recheck`).
  */
-class ItemRecheckCommand extends Command
+class ItemRecheckCommand extends Command implements Isolatable
 {
+    /** Cache lock of a real run (QA #1414 m5). */
+    public const LOCK_KEY = 'media:item-recheck:run';
+
     /** app_setting_changes key of a real run. */
     public const AUDIT_KEY = 'media_item_recheck';
 
@@ -52,16 +62,16 @@ class ItemRecheckCommand extends Command
             : max(0, (int) config('media.quality_check.max_recheck_regenerations', 10));
         $mode = $settings->qualityStillsMode(fresh: true);
 
-        $query = $stills->itemsToRecheck();
-        $images = (clone $query)->where('kind', ItemMedia::KIND_IMAGE)->count();
-        $clips = (clone $query)->where('kind', ItemMedia::KIND_CLIP)->count();
+        $candidates = $stills->recheckCandidates();
+        $images = $candidates->filter(fn (ItemMedia $r) => $r->isStill())->count();
+        $clips = $candidates->count() - $images;
         $total = $limit > 0 ? min($limit, $images + $clips) : $images + $clips;
         $perCheck = $stills->costUsd();
         $estimate = round($total * $perCheck, 4);
         $perKeyImage = $items->keyImageRegenerationCostUsd();
         $regenerations = $mode === AppSettingsService::QUALITY_ENFORCE ? min($total, $regenCap) : 0;
 
-        $this->line(sprintf('Stored item content not checked with the realism rubric: %d key image(s), %d clip(s). To check: %d × ≈ $%.4f = ≈ $%.4f (production AI budget; left today $%.2f of $%.2f). Item check mode: %s.',
+        $this->line(sprintf('Stored item content shown to an owner and not checked with the realism rubric: %d key image(s), %d clip(s). To check: %d × ≈ $%.4f = ≈ $%.4f (production AI budget; left today $%.2f of $%.2f). Item check mode: %s.',
             $images, $clips, $total, $perCheck, $estimate, max(0, $guard->dailyCapUsd() - $guard->spentTodayUsd()), $guard->dailyCapUsd(), $mode));
         $this->line(sprintf('Regenerations if they fail (enforce, at most %d per run): up to %d × ≈ $%.2f (new key image + its clip) = ≈ $%.2f — worst case of this run ≈ $%.2f.',
             $regenCap, $regenerations, $perKeyImage, $regenerations * $perKeyImage, $estimate + $regenerations * $perKeyImage));
@@ -88,6 +98,25 @@ class ItemRecheckCommand extends Command
             return self::SUCCESS;
         }
 
+        $lock = Cache::lock(self::LOCK_KEY, 3600);
+        if (! $lock->get()) {
+            $this->warn('Another media:item-recheck --run is running — nothing checked.');
+
+            return self::SUCCESS;
+        }
+
+        try {
+            return $this->runChecks($stills, $guard, $candidates, $limit, $regenCap, $estimate, $mode);
+        } finally {
+            $lock->release();
+        }
+    }
+
+    /**
+     * @param  Collection<int, ItemMedia>  $candidates
+     */
+    private function runChecks(StillQualityService $stills, AiSpendGuard $guard, Collection $candidates, int $limit, int $regenCap, float $estimate, string $mode): int
+    {
         if ($guard->refusalFor($estimate, AiSpendPurpose::QualityCheck) !== null) {
             $this->warn('The estimate does not fit today\'s budget: files after the budget is used up wait for the next run.');
         }
@@ -99,7 +128,7 @@ class ItemRecheckCommand extends Command
         $failed = [];
         $rows = [];
 
-        foreach ($query->when($limit > 0, fn ($q) => $q->limit($limit))->get() as $row) {
+        foreach ($limit > 0 ? $candidates->take($limit) : $candidates as $row) {
             if ($regenerated >= $regenCap) {
                 $this->warn("Regeneration cap of this run reached ({$regenCap}) — the remaining files stay for the next run.");
 
@@ -111,7 +140,7 @@ class ItemRecheckCommand extends Command
 
                 break;
             }
-            $done += in_array($result['outcome'], ['skipped', 'busy', 'waiting', 'unavailable'], true) ? 0 : 1;
+            $done += in_array($result['outcome'], ['skipped', 'busy', 'waiting', 'unavailable', 'error'], true) ? 0 : 1;
             $cost += $result['cost_usd'];
             $outcomes[$result['outcome']] = ($outcomes[$result['outcome']] ?? 0) + 1;
             $regenerated += in_array($result['outcome'], ['regenerating', 'regenerating_key_image'], true) ? 1 : 0;

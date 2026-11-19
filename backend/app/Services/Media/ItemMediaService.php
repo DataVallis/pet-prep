@@ -876,14 +876,18 @@ class ItemMediaService
      * the try too (`quality_retries` + 1, carried into its next chain by ensureRow()) and WAITS
      * (pending, its candidate deleted) until the new key image is stored — then it follows it. With
      * `$candidate` null the clip's STORED file is the one judged (media:item-recheck): it is flagged
-     * and the clip waits the same way. False (nothing changed) when the key image is not a stored,
-     * shown, unapproved file, has no tries left, or the clip moved on.
+     * and the clip waits the same way. `$freshChain` (QA #1414 M4, media:item-recheck of a STORED
+     * clip): the key image starts a NEW chain whose first try counts as one retry (like
+     * media:still-check), whatever retries the old chain used — a stored clip is never remade from
+     * the same bad start frame. False (nothing changed) when the key image is not a stored, shown,
+     * unapproved file, has no tries left (pipeline), or the clip moved on. Every flag tells the
+     * pets at once (one PetUpdated per pet — QA #1414 M1).
      */
-    public function regenerateKeyImageOf(ItemMedia $clip, ?string $candidate, string $reason): bool
+    public function regenerateKeyImageOf(ItemMedia $clip, ?string $candidate, string $reason, bool $freshChain = false): bool
     {
         $image = $this->siblingImage($clip);
         if ($image === null || ! $image->isReady() || ! $image->isShown() || $image->quality === PetMedia::QUALITY_APPROVED
-            || $image->quality_retries >= StillQualityService::maxRetries()) {
+            || (! $freshChain && $image->quality_retries >= StillQualityService::maxRetries())) {
             return false;
         }
 
@@ -908,7 +912,7 @@ class ItemMediaService
                 'error_reason' => null,
                 'error' => mb_substr('Quality check failed, regenerating its key image first: '.$reason, 0, 2000),
                 'updated_at' => now(),
-            ], $candidate === null ? ['quality' => PetMedia::QUALITY_FLAGGED, 'quality_reason' => $why] : [])) !== 1;
+            ], $candidate === null ? ['quality' => PetMedia::QUALITY_FLAGGED, 'quality_reason' => $why, 'flagged_at' => now()] : [])) !== 1;
 
         if ($clipMoved) {
             return false;
@@ -918,14 +922,47 @@ class ItemMediaService
         }
 
         $flagged = ItemMedia::query()->whereKey($image->id)->where('status', ItemMedia::STATUS_READY)->where('storage_path', $image->storage_path)
-            ->update(['quality' => PetMedia::QUALITY_FLAGGED, 'quality_reason' => $why]) === 1;
+            ->update(['quality' => PetMedia::QUALITY_FLAGGED, 'quality_reason' => $why, 'flagged_at' => now()]) === 1;
         if ($flagged && ($fresh = $image->fresh()) !== null) {
-            $this->resetChain($fresh, null, $image->quality_retries + 1);
-            $fresh->update(['prompt_variant' => min($image->prompt_variant + 1, PetAppearancePrompt::ITEM_PROMPT_VARIANTS - 1)]);
+            $this->resetChain($fresh, null, $freshChain ? min(1, StillQualityService::maxRetries()) : $image->quality_retries + 1);
+            $fresh->update(['prompt_variant' => $freshChain ? 0 : min($image->prompt_variant + 1, PetAppearancePrompt::ITEM_PROMPT_VARIANTS - 1)]);
             GenerateItemMedia::dispatch((int) $fresh->id);
         }
+        $this->tellPetsOf($image);
 
         return true;
+    }
+
+    /**
+     * QA #1414 M1: a stored file of $row was hidden (flagged) — every pet that shows the row gets ONE
+     * PetUpdated (`item_media_ready`, after commit) so the apps drop the file now, not at the next
+     * refresh. The item reads »Na poti …« until its replacement is stored (settle() tells them again).
+     */
+    public function tellPetsOf(ItemMedia $row): void
+    {
+        foreach ($this->petsOf($row) as $pet) {
+            PetUpdated::afterCommit($pet, 'item_media_ready');
+        }
+    }
+
+    /**
+     * QA #1414 M2: is this stored key image / clip what an active owner's pet shows NOW — a pet that
+     * owns the item (an ACTION item only while it is in use) at the row's stage, whose current
+     * content state has this very row as its image or clip. media:item-recheck checks only those.
+     */
+    public function shownToAnOwner(ItemMedia $row): bool
+    {
+        foreach ($this->petsOf($row) as $pet) {
+            if ($pet->is_game_over || ! $this->actionInUse($pet, (string) $row->item_key)) {
+                continue;
+            }
+            $state = $this->statesFor($pet)[$row->item_key] ?? null;
+            if ($state !== null && $state['content_key'] === $row->design && ($state['image']?->id === $row->id || $state['clip']?->id === $row->id)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /** The key image row a clip is made from (same scope, owner, design, stage). */
@@ -1183,6 +1220,7 @@ class ItemMediaService
             'candidate_mime' => null,
             'quality' => $quality,
             'quality_reason' => $quality === null ? null : $reason,
+            'flagged_at' => null,
             'error_reason' => null,
             'error' => null,
             'auto_retries' => 0,
@@ -1249,9 +1287,17 @@ class ItemMediaService
     /** Record the verdict of a stored file (media:still-check); an approved file stays approved. */
     public function recordQuality(ItemMedia $row, string $path, string $quality, ?string $reason): bool
     {
-        return ItemMedia::query()->whereKey($row->id)->where('storage_path', $path)
+        $flag = $quality === PetMedia::QUALITY_FLAGGED;
+        $done = ItemMedia::query()->whereKey($row->id)->where('storage_path', $path)
             ->where(fn ($q) => $q->whereNull('quality')->orWhere('quality', '!=', PetMedia::QUALITY_APPROVED))
-            ->update(['quality' => $quality, 'quality_reason' => $reason !== null ? mb_substr($reason, 0, 2000) : null]) === 1;
+            // David 2026-11-19: a file flagged from now on is HIDDEN (ItemMedia::isShown()) — the pets are told.
+            ->update(['quality' => $quality, 'quality_reason' => $reason !== null ? mb_substr($reason, 0, 2000) : null, 'flagged_at' => $flag ? now() : null]) === 1;
+
+        if ($done && $flag) {
+            $this->tellPetsOf($row);
+        }
+
+        return $done;
     }
 
     /** `items/{id}/…` (catalogue), `looks/{look}/item-…` (shared), `{pet}/item-…` (own; deleted with the pet). */

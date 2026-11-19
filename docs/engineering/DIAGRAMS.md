@@ -2021,13 +2021,16 @@ flowchart TD
   CC --> T[free technical check · clip mode, default shadow<br/>+ contact sheet 4 frames]
   T --> CA{vision · item_clip rubric<br/>contact sheet + start frame · item mode, default enforce<br/>≈ $0.001, $0.003 reserved}
   CA -->|no budget| WT[WAIT unclaimed — item sweep re-runs it]
+  CA -->|paid call, no verdict| VE[check released · job retries in 120 s · ≤ 2 per generation, then used unchecked]
   CA -->|pass| SHOWN[stored · shown · settle]
   CA -->|fail: object floats / pasted / too small, retries left| RK[key image flagged + regenerated<br/>clip pending, quality_retries + 1] --> K
   CA -->|fail: anatomy / motion / artefacts, retries left| RC[new clip from the same key image] --> CC
   CA -->|fail, no retries left| NR[»Needs review« → heal: bed / bowls / toys without content · treats stay locked]
   CMD[media:item-recheck — dry run unless --run] --> SEL[READY key images + clips never decided by the current rubric]
   SEL --> RCH{vision check, trigger recheck}
-  RCH -->|fail, enforce| FL[flagged → never shown · regenerated · its clip follows]
+  RCH -->|fail, enforce| FL[flagged + flagged_at → hidden, PetUpdated per pet, app URL 404 · regenerated · a stored clip: fresh key image chain]
+  RCH -->|no verdict| ER[outcome error · nothing recorded · not re-selected]
+  SEL -.->|only what an active owner's pet shows now| RCH
   RCH -->|pass| OK[quality passed]
 ```
 
