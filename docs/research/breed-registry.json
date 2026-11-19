@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "ca1ebc64a293c5e620a31051266814bc7ea91f9e26cd570c808d010cb602b708"
+      "sha256": "013c50224204ea8276fee8275555e791ad8038867940fd9da078894dc40d6632"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -71092,7 +71092,7 @@
       "id": "mudi",
       "species": "dog",
       "order": 116,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Mudi",
         "sl": "Mudi"
@@ -71651,7 +71651,7 @@
       "id": "welsh_terrier",
       "species": "dog",
       "order": 117,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Welsh Terrier",
         "sl": "Valižanski terier"
@@ -72326,7 +72326,7 @@
       "id": "norwegian_elkhound",
       "species": "dog",
       "order": 118,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Norwegian Elkhound",
         "sl": "Norveški losovec"
