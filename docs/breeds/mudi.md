@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `mudi` (viri S948–S953; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC ne priporoča testov pred vzrejo (`none_recommended`, S950) |
 | Izvor | FCI št. 238, skupina 1 (ovčarski in pastirski psi), sekcija 1 (ovčarji), Madžarska (S948, S949) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 122. mesto »Mudi« (S174, zabeleženo 2026-11-18 v vrstici 125) |
-| PR-ji | pet-prep #1385 (pasma) · portret pet-prep (sledi) · barvne različice pet-prep (sledi) · spletna stran: pet-prep-website `feat/register-mudi` |
+| PR-ji | pet-prep #1385 (pasma, združen `a4c91ea`) · portret pet-prep (zagon `breed-portraits.yml` 44433911312, sprejet v prvem poskusu) · barvne različice pet-prep (sledi) · spletna stran: pet-prep-website `feat/register-mudi` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-126 | 2026-11-19 |
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-19 |
 | Barve (izbirnik: 7 barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-19 |
-| AI portret v registru | 🗓 sledi v tem zagonu | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/mudi`, `/sl/zivali/psi/mudi`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črn, valovita dlaka in pokončna ušesa na sivem ozadju, naravni rep | — | M5-R11-04 | 2026-11-19 |
+| Stran na petprep.si (`/animals/dogs/mudi`, `/sl/zivali/psi/mudi`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 

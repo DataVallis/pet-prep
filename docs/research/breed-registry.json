@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "16ce57e56154d41a268c5c3fc979c755ead63cb5f574ada2735c21cc17a991c1"
+      "sha256": "64542e2c9816c4b5bfe1798a3e94d23d708736903687277c64846c4303eef712"
     }
   },
   "suitability_vocabulary": {
@@ -71545,7 +71545,12 @@
           "S950"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "mudi.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "none_recommended",
         "tests": [],
