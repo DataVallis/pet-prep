@@ -2008,6 +2008,29 @@ flowchart LR
   PETS[media:still-check --pets — manual only, --dry-run = count × cost] --> REC[verdict recorded only — shadow_failed shown, never regenerated]
 ```
 
+### 10i. Item content realism check (David 2026-11-19)
+
+A bought bed came out pasted in (studio-lit, floating, detached shadow) under a big Dobermann lying ON TOP of it. Item key images now use the `item` rubric (animal keys + grounded / integrated / scale), every item clip gets an AI check in the ITEM mode, a clip whose object is wrong regenerates its key image, and flagged files are never shown. See ARCHITECTURE *Item content realism check*.
+
+```mermaid
+flowchart TD
+  K[item key image candidate] --> KR{vision · item rubric<br/>one_animal · legs_ok · no_ghost_parts · scene_ok · clean<br/>item_grounded · item_integrated · scale_ok}
+  KR -->|fail, enforce, retries left| KN[new key image: fresh seed · next prompt variant]
+  KR -->|pass| KS[key image stored → its clip is submitted]
+  KS --> CC[item clip candidate]
+  CC --> T[free technical check · clip mode, default shadow<br/>+ contact sheet 4 frames]
+  T --> CA{vision · item_clip rubric<br/>contact sheet + start frame · item mode, default enforce<br/>≈ $0.001, $0.003 reserved}
+  CA -->|no budget| WT[WAIT unclaimed — item sweep re-runs it]
+  CA -->|pass| SHOWN[stored · shown · settle]
+  CA -->|fail: object floats / pasted / too small, retries left| RK[key image flagged + regenerated<br/>clip pending, quality_retries + 1] --> K
+  CA -->|fail: anatomy / motion / artefacts, retries left| RC[new clip from the same key image] --> CC
+  CA -->|fail, no retries left| NR[»Needs review« → heal: bed / bowls / toys without content · treats stay locked]
+  CMD[media:item-recheck — dry run unless --run] --> SEL[READY key images + clips never decided by the current rubric]
+  SEL --> RCH{vision check, trigger recheck}
+  RCH -->|fail, enforce| FL[flagged → never shown · regenerated · its clip follows]
+  RCH -->|pass| OK[quality passed]
+```
+
 ## 11. Push notifications (M3-02, 2026-10-05)
 
 ### 11a. Escalation → push

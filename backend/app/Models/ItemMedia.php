@@ -156,6 +156,18 @@ class ItemMedia extends Model
         return filled($this->storage_path);
     }
 
+    /**
+     * David 2026-11-19: a stored file a pet may SHOW — servable and not rejected by an enforced
+     * check of the stored file (`quality = flagged`, media:still-check / media:item-recheck, or a
+     * key image whose clip check found the item pasted / floating / too small). A flagged file
+     * stays servable for /admin, but no payload, album or clip start frame uses it; its row is
+     * being regenerated (or given up → the item is shown without that content).
+     */
+    public function isShown(): bool
+    {
+        return $this->isServable() && $this->quality !== PetMedia::QUALITY_FLAGGED;
+    }
+
     /** The current generation is stored. */
     public function isReady(): bool
     {

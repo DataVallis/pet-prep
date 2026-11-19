@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-19 — Postelja ne sme lebdeti: AI zdaj preveri, ali je kupljena stvar res v sobi
+
+**Kaj:** David je kupil posteljo »Modra blazina« za 7 mesecev staro dobermanko. Video »Spi« je bil slab: postelja je bila videti kot prilepljena fotografija iz kataloga (ostra, osvetljena kot v studiu, brez sence na tleh, lebdela nad parketom), velik pes pa je ležal NA premajhni postelji. Pri treh drugih psih je bila ista postelja v redu. Vzrok: slika ljubljenčka s stvarjo je nastala iz kataloške fotografije stvari, poziv je zahteval »ostro« sliko in ni omenil svetlobe, sence ne velikosti; AI preverjanje je gledalo samo tačke in prosojne ostanke, kratki videi stvari pa sploh niso imeli AI preverjanja. Zdaj AI pri sliki preveri še, ali stvar stoji na tleh, ali je posneta v isti sobi in ali je prave velikosti; **vsak video stvari** pred prikazom preveri AI (≈ 0,001 $). Neuspešen se ne pokaže in se naredi znova; pozivi stvar vrišejo v sobo in posteljo prilagodijo pasmi (dobermann: ~120 cm). Že narejene vsebine preveri ročni ukaz.
+**Zakaj je pomembno:** otrok in starš vidita ljubljenčka s stvarjo, ki so jo kupili — če je videti ponarejeno, izgubimo zaupanje. Vsak video gre zdaj skozi enaka vrata kot slike, za manj kot desetinko centa.
+**Kako povedati:** 👩 »Vsak posnetek ljubljenčka z novo stvarjo pred prikazom pregleda AI — realističnost, velikost, svetloba.« 💼 »Samodejni nadzor kakovosti AI vsebin: < 1 % stroška vsebine, ki jo varuje.« 🛠 »Vision-LLM rubrika (grounded / integrated / scale) nad kontaktnim listom + prvo sličico; napaka predmeta sproži novo ključno sliko, ne samo nov video.«
+
 ## 2026-11-17 — Lemon Squeezy reče »ne«, Stripe reče »da«: lastna trgovina v enem popoldnevu
 
 **Kaj:** Lemon Squeezy je zavrnil trgovino PetPrep (ne sprejema več novih trgovin in se 31. 3. 2027 zapre). Isti dan je darilni bon in komplet »Obljuba o ljubljenčku« prevzel **Stripe Managed Payments** — Stripe (Link) je prodajalec in skrbi za DDV v več kot 80 državah. PetPrep zdaj sam ustvari kodo bona, jo pokaže na strani »hvala« in jo pošlje po e-pošti od maskote Curia (s priloženim natisljivim bonom, v 15 jezikih). Vsaka e-pošta gre najprej v vrsto v bazi; če pošiljanje ne uspe, strežnik poskusi znova (po 5 minutah … do 24 ur) in na koncu opozori. Administracija je postala trgovina: naročila, izdelki iz Stripe, prodaja danes / ta mesec, zgodovina po kupcu, »Pokaži kodo« (vsak ogled zabeležen).

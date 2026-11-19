@@ -597,6 +597,26 @@ class PetAppearancePrompt
         .'identical eye colour, ears, size and age. Keep the same room, floor, background, natural light, camera position and framing; '
         .'the whole body stays in frame. Change only the pose and add exactly this one object, at a natural size for the animal.';
 
+    /**
+     * David 2026-11-19 (production: a »Navy cushion bed« pasted into the room like a razor-sharp,
+     * studio-lit product photo, floating above the floor with a detached shadow blob): the object is
+     * RE-RENDERED as a real object in this room — same light, focus, perspective and grain, resting
+     * on the floor with a soft contact shadow — never pasted.
+     */
+    public const ITEM_INTEGRATION = 'The object is a real object standing in this room, photographed together with the animal in one shot — not a pasted '
+        .'cut-out or product photo: it rests flat on the floor in the same perspective as the floor, lit by the same light as the room '
+        .'(same direction, softness, colour temperature and brightness), with the same focus, depth of field, softness and grain as the '
+        .'floor right around it, and a soft natural contact shadow exactly where it touches the floor; no hard cut-out edges, no studio '
+        .'light, no grey backdrop, no separate, offset or floating shadow, no gap between the object and the floor.';
+
+    /** With the catalogue picture as 2nd reference: take its design only, never its photo. */
+    public const ITEM_REFERENCE_DESIGN_ONLY = 'Use the second reference image only for the object\'s design (shape, colours, materials, details); '
+        .'do not copy that photograph\'s studio lighting, background, shadow, sharpness or camera angle.';
+
+    /** Item key image style: KEYFRAME_STYLE without »sharp focus« — the focus of the reference image. */
+    public const ITEM_STYLE = 'Realistic 35mm photograph with the same natural light, focus and depth of field as the reference image, '
+        .'true-to-life fur texture and colours. Only the animal and this one object: no people, no children, no hands, no text, no watermark, no logo.';
+
     public const ITEM_PICTURE_STYLE = 'Realistic product photograph, the object alone and whole in the centre of the frame, '
         .'on a plain soft light-grey background, soft even studio light, a gentle shadow under it, sharp focus, true-to-life materials and colours. '
         .'Only the object: no animal, no people, no hands, no text, no price tag, no logo, no watermark.';
@@ -619,9 +639,14 @@ class PetAppearancePrompt
      * animal now with the item (`$itemKey` decides what it does with it). `$withPicture` = the
      * design's catalogue picture is the second reference image. Breed + traits + stage only.
      *
+     * David 2026-11-19: the object is re-rendered INTO the room (ITEM_INTEGRATION; the catalogue
+     * picture gives its design only), the bed is sized for the breed (`$size` = ItemMediaService::sizeOf())
+     * and the animal lies IN it, and the style keeps the reference image's focus (no »sharp focus«).
+     *
      * @param  array<string, string>  $traits
+     * @param  array{class: string, bed_cm: int}|null  $size
      */
-    public function itemImagePrompt(string $breedKey, string $itemKey, string $description, array $traits = [], ?LifeStage $stage = null, bool $withPicture = false, int $variant = 0): string
+    public function itemImagePrompt(string $breedKey, string $itemKey, string $description, array $traits = [], ?LifeStage $stage = null, bool $withPicture = false, int $variant = 0, ?array $size = null): string
     {
         $species = self::speciesOf($breedKey);
         $this->refuseCatWithoutTraits($species, $traits);
@@ -629,36 +654,62 @@ class PetAppearancePrompt
         $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
         $variant = max(0, min(self::ITEM_PROMPT_VARIANTS - 1, $variant));
         $object = $withPicture
-            ? $description.' — exactly the object shown in the second reference image (same shape, colours and materials)'
+            ? $description.' — the same design as the object in the second reference image (same shape, colours and materials)'
             : $description;
         $action = self::itemPose($itemKey, $species, $object);
-        // David 2026-11-04: the animal fully on / with the item, exactly four legs, nothing else on the floor.
-        $anatomy = sprintf(self::POSE_ANATOMY, $noun).' '.self::itemPlacement($itemKey, $noun).' '.sprintf(self::NO_REMNANTS, $noun);
+        // David 2026-11-04: the animal fully in / with the item, exactly four legs, nothing else on the floor.
+        $anatomy = sprintf(self::POSE_ANATOMY, $noun).' '.self::itemPlacement($itemKey, $noun).' '.self::itemSize($itemKey, $noun, $size).' '.sprintf(self::NO_REMNANTS, $noun);
+        $integration = self::ITEM_INTEGRATION.($withPicture ? ' '.self::ITEM_REFERENCE_DESIGN_ONLY : '');
 
         return $variant === 0
-            ? 'The same '.$noun.' as in the first reference image ('.$subject.'), now '.$action.'. '.$anatomy.' '.self::ITEM_KEEP.' '.self::KEYFRAME_STYLE
+            ? 'The same '.$noun.' as in the first reference image ('.$subject.'), now '.$action.'. '.$anatomy.' '.$integration.' '.self::ITEM_KEEP.' '.self::ITEM_STYLE
             : 'A realistic photograph of the same '.$noun.' as in the first reference image ('.$subject.') in the same room: the '.$noun.' is '.$action.'. '
-                .$anatomy.' '.self::ITEM_KEEP.' '.self::KEYFRAME_STYLE;
+                .$anatomy.' '.$integration.' '.self::ITEM_KEEP.' '.self::ITEM_STYLE;
+    }
+
+    /**
+     * David 2026-11-19: how big the item is next to the animal. The bed: big enough that the whole
+     * animal lies INSIDE it with room to spare (dogs: the breed's size class and inside length);
+     * bowls: sized for the dog. Toys / treats keep their own described size.
+     *
+     * @param  array{class: string, bed_cm: int}|null  $size
+     */
+    public static function itemSize(string $itemKey, string $noun, ?array $size): string
+    {
+        return match ($itemKey) {
+            'bed' => $size !== null
+                ? 'The bed is a bed for a '.$size['class'].' '.$noun.', about '.$size['bed_cm'].' cm long inside — clearly longer and wider than this '.$noun
+                    .' lying curled up, so the whole '.$noun.' fits inside it with room around it; never a small bed under a big '.$noun.'.'
+                : 'The bed is big enough for this '.$noun.': the whole '.$noun.' fits inside it with room around it; never a small bed under a big '.$noun.'.',
+            'bowls' => 'The bowls are sized for '.($size !== null ? 'a '.$size['class'].' '.$noun : 'this '.$noun).', in natural proportion to its head.',
+            default => 'The object has a natural size next to the '.$noun.'.',
+        };
     }
 
     /**
      * M6-W03: the CLIP of a bought item — start frame = the item key image only. Bed and toys
      * loop (the clip comes back close to the start), bowls and treats are played once.
      *
+     * David 2026-11-19: the object stays a real object on the floor of the room — same size, place,
+     * light and focus as in the start image (both variants).
+     *
      * @param  array<string, string>  $traits
      */
     public function itemClipPrompt(string $breedKey, string $itemKey, string $description, array $traits = [], ?LifeStage $stage = null, int $variant = 0): string
     {
         $species = self::speciesOf($breedKey);
+        $noun = $species === Species::Cat ? 'cat' : 'dog';
         $subject = $this->clipSubject($breedKey, $species, $traits, $stage);
         $style = $species === Species::Cat ? self::CAT_LOOP_STYLE : self::LOOP_STYLE;
         $loops = in_array($itemKey, ['bed', 'toy_1', 'toy_2'], true);
         $note = $loops ? self::LOOP_NOTE : self::SAME_FRAME_PHASE_NOTE;
         $motion = self::itemMotion($itemKey, $species);
+        $grounded = ($itemKey === 'bed' ? 'The '.$noun.' stays lying inside the bed. ' : '')
+            .'The object stays a real object resting on the floor of this room, the same size, in the same place, light and focus as in the image; it never floats, grows, shrinks or changes.';
 
         return $variant === 0
-            ? 'The same '.$subject.' as in the image, '.$motion.'. The object stays exactly as in the image ('.$description.'). '.$note.' '.$style
-            : 'A realistic video of the same '.$subject.' as in the start image: '.$motion.'. '.$note.' '.$style;
+            ? 'The same '.$subject.' as in the image, '.$motion.'. The object stays exactly as in the image ('.$description.'). '.$grounded.' '.$note.' '.$style
+            : 'A realistic video of the same '.$subject.' as in the start image: '.$motion.'. '.$grounded.' '.$note.' '.$style;
     }
 
     /** Negative prompt of an item clip (start frame only, like a loop). */
@@ -668,23 +719,29 @@ class PetAppearancePrompt
     }
 
     /**
-     * David 2026-11-04: where the animal's body is in an item key image (the bed: entirely on it —
-     * production had a 4th paw sticking out under the bed). `$noun` = dog | cat.
+     * David 2026-11-04: where the animal's body is in an item key image (the bed: entirely in it —
+     * production had a 4th paw sticking out under the bed; 2026-11-19: a big Dobermann lay ON TOP
+     * of a small bed, body hanging over it — the animal lies IN the bed, on its cushion inside the
+     * rim). `$noun` = dog | cat.
      */
     private static function itemPlacement(string $itemKey, string $noun): string
     {
         return $itemKey === 'bed'
-            ? 'The whole '.$noun.' lies on the bed: its body, all four legs and paws and its tail are on the bed or tucked under its own body; no paw or leg hangs out under or beside the bed.'
+            ? 'The whole '.$noun.' lies in the bed, on its cushion inside its rim or sides: its body, all four legs and paws and its tail are inside the bed or tucked under its own body; no paw, leg or part of the body hangs over the edge or out under or beside the bed.'
             : 'All four legs belong to the '.$noun.'\'s body; apart from the '.$noun.' and this one object nothing else is on the floor.';
     }
 
     /**
      * What an item key image should show (the vision check's scene — StillQualityService): the
-     * same words as the prompt's action.
+     * same words as the prompt's action, plus the size rule (David 2026-11-19).
+     *
+     * @param  array{class: string, bed_cm: int}|null  $size
      */
-    public static function itemScene(string $itemKey, Species $species, string $description): string
+    public static function itemScene(string $itemKey, Species $species, string $description, ?array $size = null): string
     {
-        return self::itemPose($itemKey, $species, $description);
+        $noun = $species === Species::Cat ? 'cat' : 'dog';
+
+        return self::itemPose($itemKey, $species, $description).'. '.self::itemSize($itemKey, $noun, $size);
     }
 
     /** What the animal does with the item in its key image. */
@@ -693,11 +750,17 @@ class PetAppearancePrompt
         $cat = $species === Species::Cat;
 
         return match ($itemKey) {
-            'bed' => $cat ? 'curled up asleep in '.$object.', eyes closed, relaxed' : 'lying curled up asleep on '.$object.', eyes closed, relaxed',
+            'bed' => $cat ? 'curled up asleep in '.$object.', eyes closed, relaxed' : 'lying curled up asleep in '.$object.', eyes closed, relaxed',
             'bowls' => 'standing in front of '.$object.' with its head lowered, eating from the food bowl',
             'treats' => $cat ? 'crouched on the floor, sniffing and nibbling '.$object.' lying in front of its front paws' : 'sitting on the floor, holding '.$object.' gently in its mouth',
             default => $cat ? 'in a playful crouch on the floor, batting at '.$object.' with one front paw' : 'lying on the floor in a playful pose, holding '.$object.' between its front paws and mouthing it',
         };
+    }
+
+    /** What an item clip should show the animal doing (the clip check's »action_done«) — the prompt's motion. */
+    public static function itemClipIntent(string $itemKey, Species $species): string
+    {
+        return self::itemMotion($itemKey, $species);
     }
 
     /** What the animal does in the item clip. */
@@ -706,7 +769,7 @@ class PetAppearancePrompt
         $cat = $species === Species::Cat;
 
         return match ($itemKey) {
-            'bed' => 'sleeping peacefully on its bed: slow, clearly visible breathing, an ear twitching, a small shift of a paw, staying asleep with its eyes closed',
+            'bed' => 'sleeping peacefully in its bed: slow, clearly visible breathing, an ear twitching, a small shift of a paw, staying asleep with its eyes closed',
             'bowls' => 'eating from the food bowl: chewing with clearly visible jaw movement, then lifting its head and licking its lips contentedly',
             'treats' => 'eating the treat: picking it up, chewing it with clearly visible jaw movement, then licking its lips happily',
             default => $cat

@@ -113,12 +113,19 @@ function sqFakeFal(?callable $pass = null, ?callable $clip = null): void
             $ok = $row !== null && $pass($row);
             $rubric = match (true) {
                 $row instanceof ItemMedia && $row->isPicture() => MediaVisionCheck::RUBRIC_OBJECT,
+                // David 2026-11-19: item key images and clips have their own realism rubrics.
+                $row instanceof ItemMedia && $row->isClip() => MediaVisionCheck::RUBRIC_ITEM_CLIP,
+                $row instanceof ItemMedia => MediaVisionCheck::RUBRIC_ITEM,
                 $row instanceof PetMedia && $row->state === 'empty' => MediaVisionCheck::RUBRIC_EMPTY,
                 default => MediaVisionCheck::RUBRIC_ANIMAL,
             };
             $answer = array_fill_keys(MediaVisionCheck::STILL_KEYS[$rubric], true);
             if (! $ok) {
-                $answer[$rubric === MediaVisionCheck::RUBRIC_ANIMAL ? 'no_ghost_parts' : 'clean'] = false;
+                $answer[match ($rubric) {
+                    MediaVisionCheck::RUBRIC_ANIMAL, MediaVisionCheck::RUBRIC_ITEM => 'no_ghost_parts',
+                    MediaVisionCheck::RUBRIC_ITEM_CLIP => 'anatomy_ok',
+                    default => 'clean',
+                }] = false;
             }
 
             return Http::response(['output' => json_encode($answer + ['verdict' => $ok ? 'pass' : 'fail', 'reason' => $ok ? 'looks fine' : 'two ghost paws on the floor']), 'usage' => ['prompt_tokens' => 900, 'completion_tokens' => 60, 'cost' => 0.0004]]);
@@ -159,6 +166,8 @@ function sqRowOf(string $url): PetMedia|ItemMedia|null
 {
     return match (true) {
         preg_match('#/api/media/candidates/(\d+)#', $url, $m) === 1 => PetMedia::find((int) $m[1]),
+        // David 2026-11-19: an item clip's contact sheet → its item row.
+        preg_match('#/api/media/item-quality-sheets/(\d+)#', $url, $m) === 1 => ItemMediaQualityCheck::find((int) $m[1])?->itemMedia,
         preg_match('#/api/media/items/(\d+)#', $url, $m) === 1 => ItemMedia::find((int) $m[1]),
         preg_match('#/api/media/(\d+)#', $url, $m) === 1 => PetMedia::find((int) $m[1]),
         default => null,
@@ -822,7 +831,7 @@ describe('prompts and profile', function () {
         $key = $prompts->keyframePrompt('labrador_retriever', PetStateEnum::Sleeping, ['coat_color' => 'black']);
 
         expect($bed)->toContain('exactly four legs and four paws')
-            ->toContain('The whole dog lies on the bed')->toContain('no paw or leg hangs out under or beside the bed')
+            ->toContain('The whole dog lies in the bed')->toContain('no paw, leg or part of the body hangs over the edge')
             ->toContain('no extra, ghost-like, faded or semi-transparent paws')
             ->and($bowls)->toContain('nothing else is on the floor')->not->toContain('lies on the bed')
             ->and($key)->toContain('Nothing of the dog\'s pose in the reference image is left behind')

@@ -156,12 +156,13 @@ class MediaClipAnalyzer
      * `frames` evenly spaced frames of the clip tiled into one JPEG (`sheet_columns` per row).
      * Returns false when ffmpeg failed.
      */
-    public function contactSheet(string $clipPath, float $durationSeconds, string $outPath): bool
+    public function contactSheet(string $clipPath, float $durationSeconds, string $outPath, ?int $frames = null, ?int $columns = null, ?int $frameWidth = null): bool
     {
-        $frames = max(2, (int) config('media.quality_check.frames', 6));
-        $columns = max(1, (int) config('media.quality_check.sheet_columns', 3));
+        // David 2026-11-19: item clips pass their own (fewer, larger) frames — compositing needs detail.
+        $frames = max(2, $frames ?? (int) config('media.quality_check.frames', 6));
+        $columns = max(1, $columns ?? (int) config('media.quality_check.sheet_columns', 3));
         $rows = (int) ceil($frames / $columns);
-        $width = max(64, (int) config('media.quality_check.sheet_frame_width', 240));
+        $width = max(64, $frameWidth ?? (int) config('media.quality_check.sheet_frame_width', 240));
         // Sample in the middle of each of `frames` equal slices of the clip.
         $rate = $frames / max(0.5, $durationSeconds);
 
