@@ -127,6 +127,14 @@ describe('request payloads', () => {
       expect(picker).toEqual({ keys: ['bed', 'bowls', 'toy_1'], fixed: {}, picks: { bed: 'bed_navy', bowls: 'bowls_wood', toy_1: 'rope_red' } });
     });
 
+    it('two open wishes for the same item, bundle opened from the newer one → its (fixed) look beats the oldest wanted', () => {
+      const wanted = wantedDesigns([wish(12, 'bowls', 'bowls_steel', '2026-11-19T08:00:00Z'), wish(12, 'bowls', 'bowls_wood', '2026-11-19T11:00:00Z')], 12);
+      expect(wanted).toEqual({ bowls: 'bowls_steel' });
+      const picker = designPickerFor('petprep_wish_bundle_welcome', items, { bowls: 'bowls_wood' }, wanted);
+      expect(picker?.keys).toEqual(['bed', 'bowls', 'toy_1']);
+      expect(picker?.picks.bowls).toBe('bowls_wood');
+    });
+
     it('an item without an open wish falls back to its first design; an unknown wanted design too', () => {
       const picker = designPickerFor('petprep_wish_bundle_welcome', items, {}, { toy_1: 'gone' });
       expect(picker?.picks).toEqual({ bed: 'bed_round', bowls: 'bowls_steel', toy_1: 'rope_red' });

@@ -359,6 +359,16 @@ describe('designs', function () {
         imRedeem($parent2, $pet2, 'petprep_wish_bundle_welcome', ['wish_id' => $wish2, 'designs' => ['bowls' => 'nope']])->assertOk();
         expect(PetItem::where('pet_id', $pet2->id)->pluck('design', 'item_key')->all())
             ->toBe(['bed' => 'dog_bed_round_grey', 'bowls' => 'dog_bowls_bamboo_stand', 'toy_1' => 'dog_rope_red_white']);
+
+        // A real design of another item (a bed design for the bowls) or of the other species is
+        // not a valid pick for the wished key → the wish's design too.
+        foreach (['dog_bed_wicker_checked', 'cat_bowls_teal_fish'] as $i => $wrong) {
+            [$parent3, $child3, $pet3] = imFamily();
+            imAs($child3);
+            $wish3 = postJson('/api/child/wishes', ['item_key' => 'bowls', 'design' => 'dog_bowls_bamboo_stand'])->assertCreated()->json('wish.id');
+            imRedeem($parent3, $pet3, 'petprep_wish_bundle_welcome', ['wish_id' => $wish3, 'designs' => ['bowls' => $wrong]])->assertOk();
+            expect(PetItem::where('pet_id', $pet3->id)->where('item_key', 'bowls')->value('design'))->toBe('dog_bowls_bamboo_stand', "case {$i}: {$wrong}");
+        }
     });
 
     it('gives an item owned before designs existed its first design (backfill rule)', function () {
