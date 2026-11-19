@@ -64877,7 +64877,7 @@
         "source_id": "S957",
         "quote": "They love children and are always up for any game on offer, making them excellent family pets.",
         "confidence": "high",
-        "notes": "PDSA (S957) — the basis of the children chip. PetMD (S958): 'They can be good with young children and other dogs when properly socialized.' (supervised introductions). WebMD (S959) disagrees for small children — see behaviour.small_children. No small_children chip."
+        "notes": "PDSA (S957) — the basis of the children chip. PetMD (S958): 'They can be good with young children and other dogs when properly socialized.' (supervised introductions). WebMD (S959) disagrees for small children — see behaviour.small_children (defensive_older_children chip). No small_children chip."
       },
       "small_children": {
         "value": "not recommended for households with small children",
@@ -64885,7 +64885,7 @@
         "source_id": "S959",
         "quote": "they're not recommended for households with small children due to their defensive reflexes.",
         "confidence": "medium",
-        "notes": "WebMD (S959, written by Ariel Grucza, medically reviewed 2026-05-08) → not_for_small_children chip (Mastiff / Pyrenean Mountain Dog precedent: children + not_for_small_children). WebMD also: they may chase 'even running children if given the chance.'"
+        "notes": "WebMD (S959, written by Ariel Grucza, medically reviewed 2026-05-08) → new defensive_older_children chip (runbook »New tag«; Mastiff / Pyrenean Mountain Dog precedent: a children chip next to a small-children caution). WebMD also: they may chase 'even running children if given the chance.'"
       },
       "other_pets": {
         "value": "strong prey drive — may chase smaller animals; not safe with cats or small pets",
@@ -97471,7 +97471,7 @@
       }
     },
     "welsh_terrier": {
-      "_note": "Unattended run M5-R10-127 (2026-11-19): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S956 'Up to 1 hour per day' → 60). Senior boundary 108 from the RKC lower bound 'Over 12 years' (S956; McMillan 2024 / VetCompass not reachable). Learning 1.0 (Coren 'Average' tier, S35). Built: brushing 3× a week (RKC 'More than once a week' → PDSA 'two-three times per week', M5-R13), puppy socialisation with the PDSA quote (M5-R17), tooth brushing every day (WebMD S959, M5-R15), groomer and bath reminders every 8 weeks (PetMD S958 'every two to three months', M5-R19 / R20). No nail / ear task (no frequency), no meal gap (no quote), no heat warning (not flat-faced). No new vocabulary key. In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic.",
+      "_note": "Unattended run M5-R10-127 (2026-11-19): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S956 'Up to 1 hour per day' → 60). Senior boundary 108 from the RKC lower bound 'Over 12 years' (S956; McMillan 2024 / VetCompass not reachable). Learning 1.0 (Coren 'Average' tier, S35). Built: brushing 3× a week (RKC 'More than once a week' → PDSA 'two-three times per week', M5-R13), puppy socialisation with the PDSA quote (M5-R17), tooth brushing every day (WebMD S959, M5-R15), groomer and bath reminders every 8 weeks (PetMD S958 'every two to three months', M5-R19 / R20). No nail / ear task (no frequency), no meal gap (no quote), no heat warning (not flat-faced). New vocabulary key defensive_older_children (WebMD S959 defensive reflexes). In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic.",
       "exercise_minutes_adult": {
         "value": 60,
         "unit": "minutes/day",
@@ -97648,7 +97648,7 @@
         "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S957)"
       },
       "suitability_tags": {
-        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-127); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-127); refs = JSON paths in this file. New vocabulary key defensive_older_children (runbook »New tag«: WebMD S959 'defensive reflexes' — none of the existing child chips names this reason; not_for_small_children names a large dog). No percentages in the app. Never hypoallergenic.",
         "suits": [
           {
             "tag": "active_family",
@@ -97685,7 +97685,7 @@
         ],
         "consider": [
           {
-            "tag": "not_for_small_children",
+            "tag": "defensive_older_children",
             "source_ids": [
               "S959"
             ],
@@ -97726,13 +97726,14 @@
           }
         ],
         "not_proposed": {
-          "small_children": "WebMD (S959) advises against homes with small children → not_for_small_children instead.",
+          "small_children": "WebMD (S959) advises against homes with small children → defensive_older_children instead.",
           "apartment": "RKC 'Small house' (S956), not 'Flat/ Apartment'.",
           "long_daily_exercise": "60 minutes a day (RKC S956) — the chip is for 2 hours or more.",
           "frequent_grooming": "3× a week (PDSA S957), not daily (Spinone Italiano precedent).",
           "experienced_owner": "That chip names a powerful dog — the Welsh Terrier is small (stubbornness stays in the breed text).",
           "needs_company": "No A/B statement on being left alone.",
-          "hypoallergenic": "never (runbook)."
+          "hypoallergenic": "never (runbook).",
+          "not_for_small_children": "That chip names a large dog — the Welsh Terrier is small; the WebMD reason (defensive reflexes) gets its own key defensive_older_children."
         }
       },
       "marketing": {
