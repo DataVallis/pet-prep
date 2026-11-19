@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "7f9545200a9304596898234d01053796ea2179cefc16fb9c34b82257577141e8"
+      "sha256": "ca93b1c9a97640722323c67a0ce8d3cc2d311789c46629f2ee35cc18a300eeb9"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "061c440dfbcae3629edc5f88942eeae91aefdea464293eb67b516b112c8f1afa"
+      "sha256": "ea046664dd730df73769fa4701db155bdb4911f4ae589d1eda6441c5796c2d88"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,31 +25,31 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "3dca21cf7af3ecab7ed9901e89432f0287ff2ea8354d8f9802dd1db0fe1642ab"
+      "sha256": "caacba2b3eefa2aeedfb17fb5ed886933ebe1e20874daf9ea20fc27f43ae8db1"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "db00021836f81b7e5eb0693648c82402183ac241c70ba03bb860f71e4104bc58"
+      "sha256": "5087fb019700f76350e74d490a465bf75360c366847249a506e92bdab1c72d9a"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "1ac957cc4277c7a4997aa74641d2924ffd9578cf4415da86fa137c6aa071a060"
+      "sha256": "e76d6ca316e13bc1f7b933537f1567954e693d58af226705fba663758b3c859b"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "4de5ef10d480bc3e43ee85662350a8f1c82ddc119851532ba857e10bda15ca6f"
+      "sha256": "7ec91ad92a3b0b31d531133e07d51039b29e90c8378c28f640761880f44c0989"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "b729f3c78cab96823c5ace4eddaccb4f36eff2414c43c8f280eaf883985af8a4"
+      "sha256": "67653c6c55e5d277f60374057dfea3f5a0872b94cbaa8f8b502db11a48b26d74"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "59cef7f2bd3ed8adf01a3d94f5924f5660f69c166a85476e3cfcf626a45e1731"
+      "sha256": "0cfb6c78035ef53621a46f86fdcf0d3ffe7d2fb77070a83b058718f5d9bd985e"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "d7936fd8e531f12fad377e2c0e58b01b04e0d47718403fc1cf04285819730953"
+      "sha256": "24d222085afefdcaced924fc22bde2da93758dc4e5e0a2a0e22356cf1288f026"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -77,6 +77,7 @@
     "chews_when_bored": "consider",
     "children": "suits",
     "cold_sensitive": "consider",
+    "defensive_older_children": "consider",
     "drools": "consider",
     "experienced_owner": "consider",
     "eyelid_problems": "consider",
@@ -124,6 +125,7 @@
         "chews_when_bored": "chews things when bored",
         "children": "families with children",
         "cold_sensitive": "thin coat — feels the cold",
+        "defensive_older_children": "defensive reflexes — better with older children",
         "drools": "drools — keep a cloth at hand",
         "experienced_owner": "powerful dog — needs an experienced owner",
         "eyelid_problems": "eyelids and eyes — check eye tests",
@@ -171,6 +173,7 @@
         "chews_when_bored": "ko se dolgočasi, grize stvari",
         "children": "družino z otroki",
         "cold_sensitive": "tanka dlaka — občutljiv na mraz",
+        "defensive_older_children": "obrambni refleksi — bolje za starejše otroke",
         "drools": "se slini — imejte pri roki krpo",
         "experienced_owner": "močan pes — potrebuje izkušenega lastnika",
         "eyelid_problems": "veke in oči — preverite preglede oči",
@@ -225,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 117,
+      "breed_count": 118,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -71645,6 +71648,657 @@
       ]
     },
     {
+      "id": "welsh_terrier",
+      "species": "dog",
+      "order": 117,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Welsh Terrier",
+        "sl": "Valižanski terier"
+      },
+      "slug": {
+        "en": "welsh-terrier",
+        "sl": "valizanski-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Welshie",
+          "Welsh"
+        ],
+        "sl": [
+          "valizanski terier",
+          "velški terier",
+          "welsh terier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S956"
+          ],
+          "ref": "welsh_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              39,
+              39
+            ],
+            "female": [
+              39,
+              39
+            ]
+          },
+          "source_ids": [
+            "S955"
+          ],
+          "ref": "welsh_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              9,
+              9.5
+            ],
+            "female": [
+              9,
+              9.5
+            ]
+          },
+          "source_ids": [
+            "S955"
+          ],
+          "ref": "welsh_terrier.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "welsh_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S956"
+          ],
+          "ref": "welsh_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S958"
+          ],
+          "ref": "welsh_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S956"
+          ],
+          "ref": "welsh_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S956"
+          ],
+          "ref": "welsh_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S956"
+          ],
+          "ref": "welsh_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S956"
+          ],
+          "ref": "welsh_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 78,
+            "group": 3,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S954"
+          ],
+          "ref": "welsh_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "primary_lens_luxation",
+          "source_ids": [
+            "S957"
+          ],
+          "ref": "welsh_terrier.health.primary_lens_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "glaucoma",
+          "source_ids": [
+            "S957"
+          ],
+          "ref": "welsh_terrier.health.glaucoma",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S957"
+          ],
+          "ref": "welsh_terrier.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S957"
+          ],
+          "ref": "welsh_terrier.health.atopy",
+          "confidence": "high"
+        },
+        {
+          "key": "dry_eye",
+          "source_ids": [
+            "S957"
+          ],
+          "ref": "welsh_terrier.health.dry_eye",
+          "confidence": "high"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S958"
+          ],
+          "ref": "welsh_terrier.health.legg_perthes",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S958"
+          ],
+          "ref": "welsh_terrier.health.patellar_luxation",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S958"
+          ],
+          "ref": "welsh_terrier.health.cataracts",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S958"
+          ],
+          "ref": "welsh_terrier.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "addisons_disease",
+          "source_ids": [
+            "S959"
+          ],
+          "ref": "welsh_terrier.health.addisons",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S956",
+              "S957"
+            ],
+            "refs": [
+              "welsh_terrier.exercise.adult",
+              "welsh_terrier.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S957"
+            ],
+            "refs": [
+              "welsh_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S957"
+            ],
+            "refs": [
+              "welsh_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "defensive_older_children",
+            "source_ids": [
+              "S959"
+            ],
+            "refs": [
+              "welsh_terrier.behaviour.small_children"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S959"
+            ],
+            "refs": [
+              "welsh_terrier.exercise.fencing"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S956"
+            ],
+            "refs": [
+              "welsh_terrier.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S958"
+            ],
+            "refs": [
+              "welsh_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 56
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 56
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S956"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S956 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S956"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × RKC lower bound 'Over 12 years', S956)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren 'Average' tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_terrier.grooming",
+            "basis_source_ids": [
+              "S957"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (RKC »More than once a week« brez števila → PDSA »two-three times per week« → 3); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S959"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »every day« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_terrier.professional_grooming",
+            "basis_source_ids": [
+              "S958"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): obisk frizerja vsakih 8 tednov (PetMD »every two to three months« → spodnja meja)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_terrier.bathing",
+            "basis_source_ids": [
+              "S958"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): kopanje vsakih 8 tednov (PetMD »every two to three months« → spodnja meja)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S956",
+          "S957",
+          "S958",
+          "S959"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S956"
+            ]
+          },
+          {
+            "key": "dna_pll",
+            "level": "minimum",
+            "source_ids": [
+              "S956"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S956"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S954",
+        "S955",
+        "S956",
+        "S957",
+        "S958",
+        "S959",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -78251,6 +78905,48 @@
       "publisher": "PetMD — Erica Puisis, reviewed by Barri J. Morrison, DVM (updated Jul. 1, 2024)",
       "title": "Mudi",
       "url": "https://www.petmd.com/dog/breeds/mudi"
+    },
+    {
+      "id": "S954",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — WELSH TERRIER (78)",
+      "url": "https://fci.be/en/nomenclature/WELSH-TERRIER-78.html"
+    },
+    {
+      "id": "S955",
+      "tier": "A",
+      "publisher": "FCI (reprint by kutya-tar.hu)",
+      "title": "FCI-Standard N°78 — Welsh Terrier (PDF, 19.05.2009 / GB)",
+      "url": "https://www.kutya-tar.hu/standard/en/pdf/078-2009-en.pdf"
+    },
+    {
+      "id": "S956",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Welsh Terrier — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/welsh-terrier/"
+    },
+    {
+      "id": "S957",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Welsh Terrier breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/welsh-terrier"
+    },
+    {
+      "id": "S958",
+      "tier": "B",
+      "publisher": "PetMD — Michelle Diener, DVM (Feb. 13, 2024)",
+      "title": "Welsh Terrier",
+      "url": "https://www.petmd.com/dog/breeds/welsh-terrier"
+    },
+    {
+      "id": "S959",
+      "tier": "B",
+      "publisher": "WebMD Pets — Ariel Grucza, medically reviewed by Zilpah Sheikh, MD (May 08, 2026)",
+      "title": "What to Know About Welsh Terriers",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-welsh-terriers"
     },
     {
       "id": "C1",
