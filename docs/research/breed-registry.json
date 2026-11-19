@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "252a914db0d92e07b546f631cdd178808e7957b186be1ad32caf3be18390fff1"
+      "sha256": "7f9545200a9304596898234d01053796ea2179cefc16fb9c34b82257577141e8"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "03202aecef1cf3647a764abfbf05fb7534e8449ef5679e48bc467114f59a6d7e"
+      "sha256": "061c440dfbcae3629edc5f88942eeae91aefdea464293eb67b516b112c8f1afa"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "c0fee556ee36da95ad7060df64df96f70a178358e286a146e28aa5bbfe5a6831"
+      "sha256": "3dca21cf7af3ecab7ed9901e89432f0287ff2ea8354d8f9802dd1db0fe1642ab"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "6e3398acac93cd08578634a7fea2081b9f99338d3f7c13deaf2fbea41029225c"
+      "sha256": "4de5ef10d480bc3e43ee85662350a8f1c82ddc119851532ba857e10bda15ca6f"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "0ece4e2e013006342e8340f92e0bee70b14000ec0b12e84142c7b65589dcd6d7"
+      "sha256": "b729f3c78cab96823c5ace4eddaccb4f36eff2414c43c8f280eaf883985af8a4"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "1e325973e887b97bd81d6d4f30216a2498b63996c8679c36276befeaee79512f"
+      "sha256": "59cef7f2bd3ed8adf01a3d94f5924f5660f69c166a85476e3cfcf626a45e1731"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "ffc09805a7e294038485b75b5ad1e74b50fc11aafb3e070c81481c737bb754fc"
+      "sha256": "d7936fd8e531f12fad377e2c0e58b01b04e0d47718403fc1cf04285819730953"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 116,
+      "breed_count": 117,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -71086,6 +71086,501 @@
       ]
     },
     {
+      "id": "mudi",
+      "species": "dog",
+      "order": 116,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Mudi",
+        "sl": "Mudi"
+      },
+      "slug": {
+        "en": "mudi",
+        "sl": "mudi"
+      },
+      "synonyms": {
+        "en": [
+          "Hungarian Mudi"
+        ],
+        "sl": [
+          "madžarski mudi",
+          "madzarski mudi"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S950"
+          ],
+          "ref": "mudi.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              41,
+              47
+            ],
+            "female": [
+              38,
+              44
+            ]
+          },
+          "source_ids": [
+            "S949"
+          ],
+          "ref": "mudi.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              8.2,
+              13.2
+            ],
+            "female": [
+              8.2,
+              13.2
+            ]
+          },
+          "source_ids": [
+            "S952"
+          ],
+          "ref": "mudi.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "mudi.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S950"
+          ],
+          "ref": "mudi.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            14
+          ],
+          "source_ids": [
+            "S952"
+          ],
+          "ref": "mudi.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S950"
+          ],
+          "ref": "mudi.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S950"
+          ],
+          "ref": "mudi.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S950"
+          ],
+          "ref": "mudi.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S950"
+          ],
+          "ref": "mudi.suitability.rkc_sheds",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 238,
+            "group": 1,
+            "section": 1,
+            "origin": "HU"
+          },
+          "source_ids": [
+            "S948"
+          ],
+          "ref": "mudi.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S952"
+          ],
+          "ref": "mudi.health.hip_elbow_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S952"
+          ],
+          "ref": "mudi.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S952"
+          ],
+          "ref": "mudi.health.cataracts",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S952"
+          ],
+          "ref": "mudi.health.patella",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S950"
+            ],
+            "refs": [
+              "mudi.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S950"
+            ],
+            "refs": [
+              "mudi.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S950"
+            ],
+            "refs": [
+              "mudi.suitability.rkc_sheds"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.mudi.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S950"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S950 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.mudi.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.mudi.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S950"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 'Over 10 years', S950)"
+          },
+          {
+            "ref": "proposed_game_parameters.mudi.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.mudi.grooming",
+            "basis_source_ids": [
+              "S950"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S950"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "none_recommended",
+        "tests": [],
+        "basis_source_ids": [
+          "S950"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S948",
+        "S949",
+        "S950",
+        "S952",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -77664,6 +78159,34 @@
       "publisher": "United Kennel Club",
       "title": "English Pointer — Official UKC Breed Standard (PDF, revised May 1, 2017)",
       "url": "https://www.ukcdogs.com/docs/breeds/english-pointer.pdf"
+    },
+    {
+      "id": "S948",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — MUDI (238)",
+      "url": "https://fci.be/en/nomenclature/MUDI-238.html"
+    },
+    {
+      "id": "S949",
+      "tier": "A",
+      "publisher": "FCI (reprint by the Kennel Union of Southern Africa)",
+      "title": "FCI-Standard N° 238 — Mudi (PDF, effective 01/01/2024)",
+      "url": "https://kusa.co.za/images/HERDING%20GROUP%202025/Mudi%20-%20FCI%20[01-2024].pdf"
+    },
+    {
+      "id": "S950",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Hungarian Mudi (Imp) — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/hungarian-mudi-imp/"
+    },
+    {
+      "id": "S952",
+      "tier": "B",
+      "publisher": "PetMD — Erica Puisis, reviewed by Barri J. Morrison, DVM (updated Jul. 1, 2024)",
+      "title": "Mudi",
+      "url": "https://www.petmd.com/dog/breeds/mudi"
     },
     {
       "id": "C1",

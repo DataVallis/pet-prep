@@ -506,6 +506,7 @@ const SPECIES = [
       { id: 'xoloitzcuintli', synonyms: { en: ['Xoloitzcuintle', 'Xolo', 'Mexican Hairless Dog', 'Mexican Hairless'], sl: ['xoloitzcuintli', 'xolo', 'mehiški goli', 'mehiski goli pes'] } },
       { id: 'spinone_italiano', synonyms: { en: ['Italian Spinone', 'Spinone', 'Italian Griffon', 'Italian Wire-haired Pointer'], sl: ['spinone', 'italijanski ostrodlaki pticar', 'italijanski spinone'] } },
       { id: 'pointer', synonyms: { en: ['English Pointer'], sl: ['pointer', 'angleski pointer'] } },
+      { id: 'mudi', synonyms: { en: ['Hungarian Mudi'], sl: ['madžarski mudi', 'madzarski mudi'] } },
     ],
   },
   {
@@ -3177,6 +3178,27 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-126. RKC Breeds A–Z (S950): exercise 'Up to 1 hour per day', coat 'Medium', grooming 'Once a week', sheds 'Yes',
+  // lifespan 'Over 10 years'; PetMD 12–14 years and 18–29 lb (S952 — the FCI standard has no weight); height = FCI-Standard
+  // N° 238 (S949). Not ranked by Coren. FCI origin Hungary. Not exported: lifespan.senior_from (derived). No new health key.
+  mudi: {
+    height: ['height.fci'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_sheds'],
+    // Not ranked by Coren (S35) → no coren_rank fact.
+    coren_rank: false,
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['epilepsy', 'health.epilepsy'],
+      ['cataracts', 'health.cataracts'],
+      ['kneecap_luxation', 'health.patella'],
+    ],
+  },
 
 
 
@@ -4211,6 +4233,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.pointer.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.pointer.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.pointer.exercise_minutes_senior',
+  },
+  mudi: {
+    adult_minutes: ['proposed_game_parameters.mudi.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.mudi.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.mudi.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.mudi.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.mudi.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.mudi.exercise_minutes_senior',
   },
 
 

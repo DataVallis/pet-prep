@@ -817,6 +817,16 @@ return [
         ['key' => 'lemon-white', 'value' => 'lemon and white', 'en' => 'Lemon and white', 'sl' => 'Limonasto-bel'],
         ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
     ],
+    // M5-R10-126: FCI-Standard N° 238 (S949) — the seven standard colours, same order and values as breed_appearance.php.
+    'mudi' => [
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Rumenorjav'],
+        ['key' => 'blue', 'value' => 'ash (blue)', 'en' => 'Ash (blue)', 'sl' => 'Pepelnat (moder)'],
+        ['key' => 'liver', 'value' => 'liver (brown)', 'en' => 'Liver', 'sl' => 'Rjav'],
+        ['key' => 'isabella', 'value' => 'ash-brown (isabella)', 'en' => 'Ash-brown', 'sl' => 'Pepelnato rjav'],
+        ['key' => 'blue-merle', 'value' => 'blue merle (cifra)', 'en' => 'Merle (cifra)', 'sl' => 'Marmoriran (cifra)'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
