@@ -1556,6 +1556,19 @@
             "prompt_hash": "sha256:1e6aa480aa25ba029a76b4cafbaaa059a0826a52b4af0a49534ba26335cfb532",
             "generated_at": "2026-11-19T02:55:29+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "norwegian_elkhound",
+            "species": "dog",
+            "colour": "grey",
+            "file": "dog/norwegian-elkhound.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:3ad27edad0bc3c3e81a268ecef9ed5ce386030f60172df0441b42760a36d1de7",
+            "generated_at": "2026-11-19T06:55:09+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
