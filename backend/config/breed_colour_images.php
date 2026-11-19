@@ -279,4 +279,13 @@ return [
         'lemon-white' => 'dogs/pointer--lemon-white.webp',
         'black-white' => 'dogs/pointer--black-white.webp',
     ],
+    'mudi' => [
+        'black' => 'dogs/mudi.webp',
+        'white' => 'dogs/mudi--white.webp',
+        'fawn' => 'dogs/mudi--fawn.webp',
+        'blue' => 'dogs/mudi--blue.webp',
+        'liver' => 'dogs/mudi--liver.webp',
+        'isabella' => 'dogs/mudi--isabella.webp',
+        'blue-merle' => 'dogs/mudi--blue-merle.webp',
+    ],
 ];
