@@ -222,6 +222,7 @@
       "spinone_italiano": "Del 12-tedenskega izziva · česanje 3× na teden",
       "pointer": "Del 12-tedenskega izziva · česanje 1× na teden",
       "mudi": "Del 12-tedenskega izziva · česanje 1× na teden",
+      "welsh_terrier": "Del 12-tedenskega izziva · česanje 3× na teden",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
@@ -785,6 +786,12 @@
         "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
       },
+      "welsh_terrier": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.",
+        "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
+      },
       "afghan_hound": {
         "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
         "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
@@ -1115,6 +1122,7 @@
       "sun_protection": "gola koža — potrebuje zaščito pred soncem",
       "lively_older_children": "živahen pes — bolje za starejše otroke",
       "independent_older_children": "samosvoj pes — bolje za starejše otroke",
+      "defensive_older_children": "obrambni refleksi — bolje za starejše otroke",
       "independent_experienced_owner": "samostojen in trmast — najbolje z izkušenim lastnikom"
     }
   },
