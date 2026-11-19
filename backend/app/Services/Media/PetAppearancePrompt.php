@@ -383,6 +383,12 @@ class PetAppearancePrompt
         return $species === Species::Cat ? self::CAT_LOOP_NEGATIVE : self::LOOP_NEGATIVE;
     }
 
+    /** Negative prompt of a SLEEP clip (David 2026-11-19): no waking, head lifting, twitching, tail or camera movement. */
+    public function sleepNegativePrompt(Species $species = Species::Dog): string
+    {
+        return $species === Species::Cat ? self::CAT_SLEEP_NEGATIVE : self::SLEEP_NEGATIVE;
+    }
+
     /**
      * State video prompt from the pet's DNA (breed + traits) and the state —
      * the start image fixes the look, the text repeats it so the model keeps it.
@@ -466,6 +472,39 @@ class PetAppearancePrompt
     public const SAME_FRAME_PHASE_NOTE = 'The movement is clearly visible and natural, never a still image; it ends close to the starting pose.';
 
     /**
+     * David 2026-11-19 (bed clip of shared look #11 failed 3× — the puppy woke, lifted its head and
+     * flailed its tail; his Dobermann's good bed clip only breathes): every SLEEP clip (the Sleeping
+     * state loop, the bed item clip) is calm. Replaces LOOP_NOTE / LOOP_STYLE / LOOP_NEGATIVE
+     * (»clearly visible«, »lively«, negative »still image, no movement«) for them only. The
+     * technical check uses the low-motion threshold for these clips, so calm passes it.
+     */
+    public const SLEEP_NOTE = 'Only the slow, gentle breathing moves; everything else stays exactly as in the image and the clip ends in the same pose, so it can loop.';
+
+    /** Variant 1+ of a sleep clip (an automatic retry after a failed check): stricter still. */
+    public const SLEEP_STILL_NOTE = 'Perfectly still, like a photograph in which only the gentle breathing moves.';
+
+    public const SLEEP_STYLE = 'Keep the dog\'s exact appearance, size, coat colours and markings from the image; the same single dog throughout. '
+        .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
+        .'Calm, realistic sleeping dog with correct anatomy and weight. No people, no hands, no other animals, no text.';
+
+    public const CAT_SLEEP_STYLE = 'Keep the cat\'s exact appearance, size, coat colours and markings from the image; the same single cat throughout. '
+        .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
+        .'Calm, realistic sleeping cat with correct anatomy and weight. No people, no hands, no other animals, no text.';
+
+    /** What a sleep clip must never do (Kling v3 Pro `negative_prompt` — supports_negative_prompt in config/media.php). */
+    public const SLEEP_AVOID = 'waking up, opening eyes, lifting the head, raising the head, getting up, standing up, '
+        .'tail wagging, twitching, jerky movement, sudden motion, fast motion, camera movement';
+
+    public const SLEEP_NEGATIVE = self::NEGATIVE.', camera shake, zoom, pan, scene cut, morphing, '
+        .'second dog, other animals, changing fur colour, changing markings, '.self::SLEEP_AVOID;
+
+    public const CAT_SLEEP_NEGATIVE = self::CAT_NEGATIVE.', camera shake, zoom, pan, scene cut, morphing, '
+        .'second cat, other animals, changing fur colour, changing markings, '.self::SLEEP_AVOID;
+
+    /** Prompt variants of a sleep clip (0 = first try; each automatic retry after a failed check is calmer). */
+    public const SLEEP_PROMPT_VARIANTS = 3;
+
+    /**
      * M5-T08: the edit prompt of a state's KEY IMAGE — the animal of the
      * stage's reference image in the state's pose (PetStateEnum::keyPose).
      * Breed + traits + stage only, never personal data.
@@ -490,13 +529,38 @@ class PetAppearancePrompt
      *
      * @param  array<string, string>  $traits
      */
-    public function loopVideoPrompt(string $breedKey, PetStateEnum $state, array $traits = [], ?LifeStage $stage = null): string
+    public function loopVideoPrompt(string $breedKey, PetStateEnum $state, array $traits = [], ?LifeStage $stage = null, int $variant = 0): string
     {
         $species = self::speciesOf($breedKey);
         $subject = $this->clipSubject($breedKey, $species, $traits, $stage);
+
+        if ($state === PetStateEnum::Sleeping) {
+            return $this->sleepClipPrompt($subject, $species, $state->loopMotion($species), $variant, '');
+        }
+
         $style = $species === Species::Cat ? self::CAT_LOOP_STYLE : self::LOOP_STYLE;
 
         return 'The same '.$subject.' as in the image, '.$state->loopMotion($species).'. '.self::LOOP_NOTE.' '.$style;
+    }
+
+    /**
+     * David 2026-11-19: a calm SLEEP clip (Sleeping loop, bed item clip). `$variant` (0 …
+     * SLEEP_PROMPT_VARIANTS − 1) escalates per automatic retry after a failed check: 1 adds
+     * SLEEP_STILL_NOTE, 2 is the shortest, most static wording. `$grounded` = the item sentences
+     * (empty for the state loop).
+     */
+    private function sleepClipPrompt(string $subject, Species $species, string $motion, int $variant, string $grounded): string
+    {
+        $variant = max(0, min(self::SLEEP_PROMPT_VARIANTS - 1, $variant));
+        $style = $species === Species::Cat ? self::CAT_SLEEP_STYLE : self::SLEEP_STYLE;
+        $grounded = $grounded !== '' ? $grounded.' ' : '';
+
+        return match ($variant) {
+            0 => 'The same '.$subject.' as in the image, '.$motion.'. '.$grounded.self::SLEEP_NOTE.' '.$style,
+            1 => 'The same '.$subject.' as in the image, '.$motion.'. '.self::SLEEP_STILL_NOTE.' '.$grounded.self::SLEEP_NOTE.' '.$style,
+            default => 'A still, calm video of the same '.$subject.' exactly as in the start image: it stays asleep and does not move at all except slow, gentle breathing; '
+                .'eyes closed, head resting, the camera does not move. '.$grounded.self::SLEEP_STILL_NOTE.' '.$style,
+        };
     }
 
     /**
@@ -589,8 +653,16 @@ class PetAppearancePrompt
 
     // ── M6-W03 »Želje« item content (SHOP_SPEC §5, David 2026-11-03) ──
 
-    /** Prompt variants of every item request (a variant is used only after fal's `no_media_generated`). */
+    /** Prompt variants of every item request after fal's `no_media_generated` (ItemMediaService::heal()). */
     public const ITEM_PROMPT_VARIANTS = 2;
+
+    /**
+     * David 2026-11-19: the wording of an item key image / clip escalates with each automatic retry
+     * after a FAILED CHECK inside the existing budget (`max_still_retries` = 2 → 3 tries): try n uses
+     * variant max(prompt_variant, quality_retries) — ItemMedia::checkVariant(). Variant 2 = the
+     * strictest placement (bed / bowls) or the most static sleep clip (bed); other items reuse variant 1.
+     */
+    public const ITEM_CHECK_VARIANTS = 3;
 
     /** Item key image edit: the same animal, room and framing; only the pose changes and the item is added. */
     public const ITEM_KEEP = 'Keep it clearly the same individual animal: identical coat colours, coat pattern and markings, '
@@ -608,6 +680,22 @@ class PetAppearancePrompt
         .'(same direction, softness, colour temperature and brightness), with the same focus, depth of field, softness and grain as the '
         .'floor right around it, and a soft natural contact shadow exactly where it touches the floor; no hard cut-out edges, no studio '
         .'light, no grey backdrop, no separate, offset or floating shadow, no gap between the object and the floor.';
+
+    /**
+     * David 2026-11-19 (shared look #11: a round bed with almost no contact shadow, studio-sharp in
+     * a soft room — still »half pasted« after ITEM_INTEGRATION): how the bed / the bowls meet the
+     * floor. `%s` = dog | cat.
+     */
+    public const BED_CONTACT = 'The bed\'s bottom edge touches the floor along its whole length and sinks slightly under the %s\'s weight; '
+        .'a soft contact shadow lies under the entire base, darkest right where it meets the floor; the bed has the same depth of field, '
+        .'softness and grain as the room — never sharper than the floor around it; no bright outline or halo around it.';
+
+    public const BOWLS_CONTACT = 'Each bowl stands flat on the floor with its whole base touching it; a soft contact shadow lies under each entire base, '
+        .'darkest right where it meets the floor; the bowls have the same depth of field, softness and grain as the room — never sharper '
+        .'than the floor around them; no bright outline or halo around them.';
+
+    /** Variant 2 of a bed / bowls key image (the last automatic retry): the floor contact first, stated as the rule. */
+    public const CONTACT_FIRST = 'Most important: the object stands ON the floor of this room like a real object — never above it, never touching it at only one point, never pasted on top of the photo.';
 
     /** With the catalogue picture as 2nd reference: take its design only, never its photo. */
     public const ITEM_REFERENCE_DESIGN_ONLY = 'Use the second reference image only for the object\'s design (shape, colours, materials, details); '
@@ -652,19 +740,34 @@ class PetAppearancePrompt
         $this->refuseCatWithoutTraits($species, $traits);
         $noun = $species === Species::Cat ? 'cat' : 'dog';
         $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
-        $variant = max(0, min(self::ITEM_PROMPT_VARIANTS - 1, $variant));
+        $variant = max(0, min(self::ITEM_CHECK_VARIANTS - 1, $variant));
         $object = $withPicture
             ? $description.' — the same design as the object in the second reference image (same shape, colours and materials)'
             : $description;
         $action = self::itemPose($itemKey, $species, $object);
         // David 2026-11-04: the animal fully in / with the item, exactly four legs, nothing else on the floor.
         $anatomy = sprintf(self::POSE_ANATOMY, $noun).' '.self::itemPlacement($itemKey, $noun).' '.self::itemSize($itemKey, $noun, $size).' '.sprintf(self::NO_REMNANTS, $noun);
-        $integration = self::ITEM_INTEGRATION.($withPicture ? ' '.self::ITEM_REFERENCE_DESIGN_ONLY : '');
+        $contact = self::itemContact($itemKey, $noun);
+        $integration = self::ITEM_INTEGRATION.($contact !== '' ? ' '.$contact : '').($withPicture ? ' '.self::ITEM_REFERENCE_DESIGN_ONLY : '');
 
-        return $variant === 0
-            ? 'The same '.$noun.' as in the first reference image ('.$subject.'), now '.$action.'. '.$anatomy.' '.$integration.' '.self::ITEM_KEEP.' '.self::ITEM_STYLE
-            : 'A realistic photograph of the same '.$noun.' as in the first reference image ('.$subject.') in the same room: the '.$noun.' is '.$action.'. '
-                .$anatomy.' '.$integration.' '.self::ITEM_KEEP.' '.self::ITEM_STYLE;
+        return match (true) {
+            $variant === 0 => 'The same '.$noun.' as in the first reference image ('.$subject.'), now '.$action.'. '.$anatomy.' '.$integration.' '.self::ITEM_KEEP.' '.self::ITEM_STYLE,
+            // David 2026-11-19: the last retry of a bed / bowls key image leads with the floor contact.
+            $variant >= 2 && $contact !== '' => self::CONTACT_FIRST.' A realistic photograph, taken in one shot, of the same '.$noun.' as in the first reference image ('.$subject.') in the same room: the '.$noun.' is '.$action.'. '
+                .$anatomy.' '.$integration.' '.self::ITEM_KEEP.' '.self::ITEM_STYLE,
+            default => 'A realistic photograph of the same '.$noun.' as in the first reference image ('.$subject.') in the same room: the '.$noun.' is '.$action.'. '
+                .$anatomy.' '.$integration.' '.self::ITEM_KEEP.' '.self::ITEM_STYLE,
+        };
+    }
+
+    /** David 2026-11-19: the floor contact of the bed / the bowls in their key image ('' for toys / treats). */
+    public static function itemContact(string $itemKey, string $noun): string
+    {
+        return match ($itemKey) {
+            'bed' => sprintf(self::BED_CONTACT, $noun),
+            'bowls' => self::BOWLS_CONTACT,
+            default => '',
+        };
     }
 
     /**
@@ -707,15 +810,21 @@ class PetAppearancePrompt
         $grounded = ($itemKey === 'bed' ? 'The '.$noun.' stays lying inside the bed. ' : '')
             .'The object stays a real object resting on the floor of this room, the same size, in the same place, light and focus as in the image; it never floats, grows, shrinks or changes.';
 
+        if ($itemKey === 'bed') {
+            // David 2026-11-19: the bed clip is a calm sleep clip, calmer with every retry (variants 0–2).
+            return $this->sleepClipPrompt($subject, $species, $motion, $variant,
+                ($variant === 0 ? 'The object stays exactly as in the image ('.$description.'). ' : '').$grounded);
+        }
+
         return $variant === 0
             ? 'The same '.$subject.' as in the image, '.$motion.'. The object stays exactly as in the image ('.$description.'). '.$grounded.' '.$note.' '.$style
             : 'A realistic video of the same '.$subject.' as in the start image: '.$motion.'. '.$grounded.' '.$note.' '.$style;
     }
 
-    /** Negative prompt of an item clip (start frame only, like a loop). */
-    public function itemClipNegativePrompt(Species $species): string
+    /** Negative prompt of an item clip (start frame only, like a loop; the bed: a sleep clip — David 2026-11-19). */
+    public function itemClipNegativePrompt(Species $species, string $itemKey = ''): string
     {
-        return $this->loopNegativePrompt($species);
+        return $itemKey === 'bed' ? $this->sleepNegativePrompt($species) : $this->loopNegativePrompt($species);
     }
 
     /**
@@ -769,7 +878,8 @@ class PetAppearancePrompt
         $cat = $species === Species::Cat;
 
         return match ($itemKey) {
-            'bed' => 'sleeping peacefully in its bed: slow, clearly visible breathing, an ear twitching, a small shift of a paw, staying asleep with its eyes closed',
+            // David 2026-11-19: calm — the old »clearly visible breathing, an ear twitching, a small shift of a paw« woke the puppy.
+            'bed' => 'sleeping in its bed, '.PetStateEnum::SLEEP_MOTION,
             'bowls' => 'eating from the food bowl: chewing with clearly visible jaw movement, then lifting its head and licking its lips contentedly',
             'treats' => 'eating the treat: picking it up, chewing it with clearly visible jaw movement, then licking its lips happily',
             default => $cat

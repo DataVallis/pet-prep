@@ -2601,7 +2601,9 @@ class FalAiService
 
         $submitted = $this->gateway->submit(
             $profile,
-            $profile->videoInput($startImageUrl, $this->prompts->videoPrompt($breedKey, $state, $traits, $stage), $this->prompts->videoNegativePrompt($species)),
+            // David 2026-11-19: a sleep clip gets the calm sleep negative (no waking, head lifting, tail, twitching).
+            $profile->videoInput($startImageUrl, $this->prompts->videoPrompt($breedKey, $state, $traits, $stage),
+                $state === PetStateEnum::Sleeping ? $this->prompts->sleepNegativePrompt($species) : $this->prompts->videoNegativePrompt($species)),
             AiSpendPurpose::StateVideo,
             $this->webhookUrl(),
             petId: $petId,
@@ -2627,17 +2629,21 @@ class FalAiService
      * `state_short` length (3 s, media.state_media.clip_seconds) — the server serves its
      * ffmpeg ping-pong. The caller decides (MediaEntitlementService::shortLoop).
      *
+     * David 2026-11-19: the Sleeping loop is a calm sleep clip with its own negative prompt;
+     * `$variant` = PetMedia::sleepVariant() (1 on the automatic regeneration after a failed check).
+     *
      * @param  array<string, string>  $traits
      * @return array{request_id: string, profile: string, duration_seconds: int, recipe: string|null}
      *
      * @throws AiCallException
      */
-    public function submitLoopVideoFor(string $breedKey, array $traits, ?LifeStage $stage, PetStateEnum $state, string $keyImageUrl, ?int $petId = null, ?int $petMediaId = null, bool $short = false): array
+    public function submitLoopVideoFor(string $breedKey, array $traits, ?LifeStage $stage, PetStateEnum $state, string $keyImageUrl, ?int $petId = null, ?int $petMediaId = null, bool $short = false, int $variant = 0): array
     {
         $profile = $short ? $this->profiles->clipVideo('state_short') : $this->profiles->stateVideo();
-        $prompt = $this->prompts->loopVideoPrompt($breedKey, $state, $traits, $stage);
+        $prompt = $this->prompts->loopVideoPrompt($breedKey, $state, $traits, $stage, $variant);
+        $negative = $state === PetStateEnum::Sleeping ? $this->prompts->sleepNegativePrompt(PetAppearancePrompt::speciesOf($breedKey)) : null;
 
-        return $this->submitClip($profile, $breedKey, $prompt, $keyImageUrl, $keyImageUrl, $petId, $petMediaId, sameFrame: true);
+        return $this->submitClip($profile, $breedKey, $prompt, $keyImageUrl, $keyImageUrl, $petId, $petMediaId, sameFrame: true, negative: $negative);
     }
 
     /**
@@ -2693,7 +2699,7 @@ class FalAiService
      *
      * @throws AiCallException
      */
-    private function submitClip(ModelProfile $profile, string $breedKey, string $prompt, string $startImageUrl, ?string $endImageUrl, ?int $petId, ?int $petMediaId, bool $sameFrame = false): array
+    private function submitClip(ModelProfile $profile, string $breedKey, string $prompt, string $startImageUrl, ?string $endImageUrl, ?int $petId, ?int $petMediaId, bool $sameFrame = false, ?string $negative = null): array
     {
         $species = PetAppearancePrompt::speciesOf($breedKey);
         $end = self::endFrameUrl($startImageUrl, $endImageUrl, $sameFrame);
@@ -2705,7 +2711,7 @@ class FalAiService
             Log::warning('FalAiService: clip frames resolved to the same image — sent without end frame', ['pet_id' => $petId, 'pet_media_id' => $petMediaId]);
         }
         // A start-only clip must move: no "fast motion" in its negative prompt (loop / same-pose phase).
-        $negative = $startOnly ? $this->prompts->loopNegativePrompt($species) : $this->prompts->videoNegativePrompt($species);
+        $negative ??= $startOnly ? $this->prompts->loopNegativePrompt($species) : $this->prompts->videoNegativePrompt($species);
 
         $submitted = $this->gateway->submit(
             $profile,

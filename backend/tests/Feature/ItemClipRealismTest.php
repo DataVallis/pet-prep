@@ -351,30 +351,87 @@ describe('item clip AI realism check', function () {
         $this->get("/api/media/item-quality-sheets/{$firstCheck->id}")->assertForbidden();
     });
 
-    it('a clip that keeps failing is retried within the budget, then needs review; the bed falls back, treats stay locked', function () {
+    it('a clip that keeps failing is retried within the budget with calmer prompts; the bed falls back AT ONCE (David 2026-11-19), treats stay locked', function () {
         ircNeedsFfmpeg();
         Queue::fake([SendItemMediaAlert::class]);
-        ircFakeFal(fn (ItemMedia $row, string $rubric) => $rubric === MediaVisionCheck::RUBRIC_ITEM_CLIP ? ['anatomy_ok'] : []);
+        Cache::forget(ItemMediaService::GIVE_UP_WINDOW_KEY);
+        Cache::forget(ItemMediaService::GIVE_UP_COUNT_KEY);
+        ircFakeFal(fn (ItemMedia $row, string $rubric) => $rubric === MediaVisionCheck::RUBRIC_ITEM_CLIP ? ['action_done'] : []);
+        $items = app(ItemMediaService::class);
 
-        $pets = [];
-        foreach (['bed' => 'dog_bed_navy_bolster', 'treats' => ''] as $key => $design) {
-            $pet = $pets[$key] = ircPet($key, $design);
-            app(ItemMediaService::class)->ensure($pet);
-            ircComplete();
+        // The bed: 3 tries (1 + max_still_retries), each calmer, then given up at once — no review wait.
+        $bed = ircPet('bed', 'dog_bed_round_grey');
+        $items->ensure($bed);
+        ircComplete();
 
-            $clip = ircRow($pet, 'clip');
-            expect($clip->status)->toBe('failed')->and($clip->error_reason)->toBe('quality_failed')->and($clip->needsReview())->toBeTrue()
-                // 1 + max_still_retries (2) clips, all from the same key image (anatomy is the clip's fault).
-                ->and(AiSpendLedger::where('item_media_id', $clip->id)->where('purpose', 'item_media')->count())->toBe(3)
-                ->and(ircRow($pet, 'image')->quality_retries)->toBe(0)
-                ->and(app(ItemMediaService::class)->statesFor($pet)[$key]['clip'])->toBeNull();
-        }
+        $clip = ircRow($bed, 'clip');
+        $image = ircRow($bed, 'image');
+        $prompts = ircSubmits('kling')->pluck('prompt')->values();
+        $state = $items->statesFor($bed->fresh())['bed'];
+        $payload = $items->payloadFor($bed->fresh());
+
+        expect($clip->status)->toBe('failed')->and($clip->error_reason)->toBe('quality_failed')
+            ->and($clip->isExhausted())->toBeTrue()->and($clip->error)->not->toContain('needs review')
+            ->and(AiSpendLedger::where('item_media_id', $clip->id)->where('purpose', 'item_media')->count())->toBe(3)
+            ->and($image->quality_retries)->toBe(0)
+            // Escalating variants: 0 → + »perfectly still« → the shortest, most static wording.
+            ->and($prompts)->toHaveCount(3)
+            ->and($prompts[0])->toContain('sound asleep and completely still')->not->toContain('Perfectly still')
+            ->and($prompts[1])->toContain('Perfectly still, like a photograph')
+            ->and($prompts[2])->toStartWith('A still, calm video of the same')
+            ->and(ircSubmits('kling')->pluck('negative_prompt')->unique()->values()->all())->toBe([app(PetAppearancePrompt::class)->sleepNegativePrompt()])
+            // The passed key image is the bed's picture now: no clip, media_ready true.
+            ->and($state['outcome'])->toBe(ItemMediaService::OUTCOME_FALLBACK)
+            ->and($state['image']?->id)->toBe($image->id)->and($state['clip'])->toBeNull()
+            ->and($items->readiness($bed->fresh())['bed'])->toBeTrue()
+            ->and($payload['bed']['image'])->toContain("/api/media/items/{$image->id}")->and($payload['bed']['video'])->toBeNull()
+            ->and(Cache::get(ItemMediaService::GIVE_UP_COUNT_KEY))->toBe(1);
+        // One counting alert, queued for the end of its window (takes the count then).
+        Queue::assertPushed(SendItemMediaAlert::class, fn (SendItemMediaAlert $job) => $job->count === null);
+        Queue::assertPushed(SendItemMediaAlert::class, 1);
+
+        // Treats are unchanged (DECISIONS 2026-11-15): »Needs review«, heal() gives up after the delay, the action stays locked.
+        $treats = ircPet('treats', '');
+        $items->ensure($treats);
+        ircComplete();
+        $treatClip = ircRow($treats, 'clip');
+        expect($treatClip->needsReview())->toBeTrue()->and($treatClip->exhausted_at)->toBeNull()
+            ->and($treatClip->error)->toContain('needs review');
 
         Carbon::setTestNow(now()->addMinutes(31));
-        app(ItemMediaService::class)->heal();
-        expect(app(ItemMediaService::class)->statesFor($pets['bed']->fresh())['bed']['outcome'])->toBe(ItemMediaService::OUTCOME_FALLBACK)
-            // David 2026-11-15: an action item is never usable without its clip — given up stays locked.
-            ->and(app(ItemMediaService::class)->actionReady($pets['treats']->fresh(), 'treats'))->toBeFalse();
+        $items->heal();
+        expect($items->actionReady($treats->fresh(), 'treats'))->toBeFalse()
+            ->and($items->statesFor($bed->fresh())['bed']['outcome'])->toBe(ItemMediaService::OUTCOME_FALLBACK);
+        Queue::assertPushed(SendItemMediaAlert::class, 2);
+        Queue::assertPushed(SendItemMediaAlert::class, fn (SendItemMediaAlert $job) => $job->count === 1 && $job->locked === 1);
+
+        // The window's alert posts the count once (and resets it).
+        expect(ItemMediaService::takeGiveUpCount())->toBe(1)->and(ItemMediaService::takeGiveUpCount())->toBe(0);
+    });
+
+    it('a durable key image that never passes falls back to the item without content at once (no key image passed)', function () {
+        Queue::fake([SendItemMediaAlert::class]);
+        Cache::forget(ItemMediaService::GIVE_UP_WINDOW_KEY);
+        Cache::forget(ItemMediaService::GIVE_UP_COUNT_KEY);
+        ircFakeFal(fn (ItemMedia $row, string $rubric) => $rubric === MediaVisionCheck::RUBRIC_ITEM ? ['item_grounded'] : []);
+        $items = app(ItemMediaService::class);
+        $pet = ircPet('bed', 'dog_bed_round_grey');
+        $items->ensure($pet);
+        ircComplete();
+
+        $image = ircRow($pet, 'image');
+        $edits = ircSubmits('edit')->pluck('prompt')->values();
+        $state = $items->statesFor($pet->fresh())['bed'];
+
+        expect($image->isExhausted())->toBeTrue()->and($image->error_reason)->toBe('quality_failed')
+            ->and($edits)->toHaveCount(3)
+            // Stricter placement every try; the last one leads with the floor contact.
+            ->and($edits[0])->toContain('soft contact shadow lies under the entire base')->not->toStartWith('Most important')
+            ->and($edits[2])->toStartWith('Most important: the object stands ON the floor')
+            ->and(ircSubmits('kling'))->toHaveCount(0)
+            ->and($state['outcome'])->toBe(ItemMediaService::OUTCOME_FALLBACK)->and($state['image'])->toBeNull()
+            ->and($items->readiness($pet->fresh())['bed'])->toBeTrue()
+            ->and($items->payloadFor($pet->fresh()))->not->toHaveKey('bed');
         Queue::assertPushed(SendItemMediaAlert::class, 1);
     });
 

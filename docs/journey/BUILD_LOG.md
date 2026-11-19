@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-19 — Kuža v postelji naj spi, ne pa se zbuja: mirni posnetki spanja v 3 poskusih
+
+**Kaj:** posnetek postelje mladička stafordširskega bulterierja je 3-krat padel na preverjanju (skupaj 1,01 $): mladiček se je sredi posnetka zbudil, dvignil glavo, mahal z repom in se spet ulegel. Vzrok je bil v pozivu — prosil je za »vidno dihanje, trzanje ušesa, premik tačke«, Kling pa je to v 3–5 sekundah pretiraval. Zdaj posnetki spanja (postelja in stanje »spi«, pes in mačka) prosijo za trdno spanje: samo mirno dihanje, oči zaprte, glava na mestu, brez prebujanja in repa; zraven gre negativni poziv. Vsak od 3 poskusov je mirnejši od prejšnjega, ključna slika postelje pa vsakič strožja glede stika s tlemi (senca pod celo podlago, ne ostrejša od sobe). Če vseeno vsi 3 padejo, postelja ne čaka na skrbnika: takoj se pokaže zadnja dobra slika ljubljenčka na postelji. Brez novih AI-klicev.
+**Zakaj je pomembno:** dober posnetek spanja (kot pri Davidovi Suki, ki samo diha) je tisto, kar otrok gleda največ časa — mora biti miren in naraven, in nikoli ne sme obtičati na »Na poti …«.
+**Kako povedati:** 👩 »Ljubljenček v svoji postelji mirno spi — kot pravi.« 🛠 »Pozivi za Kling: manj je več — ‚clearly visible motion' je delal živčne posnetke; mirni poziv + negativni poziv + stopnjevanje po poskusih v istem proračunu.«
+
 ## 2026-11-19 — Postelja ne sme lebdeti: AI zdaj preveri, ali je kupljena stvar res v sobi
 
 **Kaj:** David je kupil posteljo »Modra blazina« za 7 mesecev staro dobermanko. Video »Spi« je bil slab: postelja je bila videti kot prilepljena fotografija iz kataloga (ostra, osvetljena kot v studiu, brez sence na tleh, lebdela nad parketom), velik pes pa je ležal NA premajhni postelji. Pri treh drugih psih je bila ista postelja v redu. Vzrok: slika ljubljenčka s stvarjo je nastala iz kataloške fotografije stvari, poziv je zahteval »ostro« sliko in ni omenil svetlobe, sence ne velikosti; AI preverjanje je gledalo samo tačke in prosojne ostanke, kratki videi stvari pa sploh niso imeli AI preverjanja. Zdaj AI pri sliki preveri še, ali stvar stoji na tleh, ali je posneta v isti sobi in ali je prave velikosti; **vsak video stvari** pred prikazom preveri AI (≈ 0,001 $). Neuspešen se ne pokaže in se naredi znova; pozivi stvar vrišejo v sobo in posteljo prilagodijo pasmi (dobermann: ~120 cm). Že narejene vsebine preveri ročni ukaz.

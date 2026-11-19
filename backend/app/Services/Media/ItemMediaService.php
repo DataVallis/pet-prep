@@ -773,7 +773,7 @@ class ItemMediaService
             if ($picture === false) {
                 return null; // the catalogue picture is still on its way — its store queues this row again
             }
-            $prompt = $this->prompts->itemImagePrompt($breedKey, $row->item_key, $description, $traits, $stage, $picture !== null, $row->prompt_variant, $this->sizeOf($breedKey));
+            $prompt = $this->prompts->itemImagePrompt($breedKey, $row->item_key, $description, $traits, $stage, $picture !== null, $row->checkVariant(), $this->sizeOf($breedKey));
 
             return [
                 'target' => (string) $sourceImage->storage_path,
@@ -790,12 +790,12 @@ class ItemMediaService
         }
         $species = PetAppearancePrompt::speciesOf($breedKey);
         $clipStage = $image->life_stage !== null ? LifeStage::tryFrom($image->life_stage) : null;
-        $prompt = $this->prompts->itemClipPrompt($breedKey, $row->item_key, $description, $traits, $clipStage, $row->prompt_variant);
+        $prompt = $this->prompts->itemClipPrompt($breedKey, $row->item_key, $description, $traits, $clipStage, $row->checkVariant());
 
         return [
             'target' => (string) $image->storage_path,
             'stage' => $image->life_stage,
-            'submit' => fn (): array => $this->fal->submitItemClip($prompt, $this->prompts->itemClipNegativePrompt($species), $this->falFetchUrl($image), $petId, $row->id),
+            'submit' => fn (): array => $this->fal->submitItemClip($prompt, $this->prompts->itemClipNegativePrompt($species, (string) $row->item_key), $this->falFetchUrl($image), $petId, $row->id),
         ];
     }
 
@@ -1282,6 +1282,70 @@ class ItemMediaService
                 'completed_at' => now(),
                 'updated_at' => now(),
             ]) === 1;
+    }
+
+    /**
+     * David 2026-11-19 (»ne naslednji dan ne poskusi ponovno«): a DURABLE item's key image / clip (bed,
+     * bowls, toys — not treats, not catalogue pictures) whose candidate failed its check after every
+     * automatic try. No »Needs review« wait, no admin step: the chain is given up AT ONCE (exhausted +
+     * alerted, candidate kept for an optional »Approve anyway«), so statesFor() makes the item a
+     * fallback right away — the last key image that passed its check is shown as the item's picture
+     * (no clip), or, when no key image passed, the item without content; `media_ready` is true. The
+     * pets are told (settle()) and ONE counting Discord post per window is queued (countGiveUp()).
+     */
+    public function givesUpAtOnce(ItemMedia $row): bool
+    {
+        return ! $row->isPicture() && ! in_array($row->item_key, self::ACTION_ITEMS, true);
+    }
+
+    public function giveUpQuality(ItemMedia $row, string $candidate, string $reason): bool
+    {
+        $what = $row->isClip() ? 'its last passed key image is shown without a clip' : 'the item is shown without its picture';
+        $done = ItemMedia::query()->whereKey($row->id)->where('status', ItemMedia::STATUS_RUNNING)->where('candidate_path', $candidate)
+            ->update([
+                'status' => ItemMedia::STATUS_FAILED,
+                'error_reason' => AiCallFailure::QualityFailed->value,
+                'error' => mb_substr('Quality check failed after every automatic try — given up, '.$what.': '.$reason, 0, 2000),
+                'completed_at' => now(),
+                'exhausted_at' => now(),
+                'alerted_at' => now(),
+                'updated_at' => now(),
+            ]) === 1;
+
+        if ($done) {
+            self::countGiveUp();
+            foreach ($this->petsOf($row) as $pet) {
+                $this->settle($pet);
+            }
+        }
+
+        return $done;
+    }
+
+    /** Cache keys + window of the aggregated durable-item give-up alert (like StillQualityService::countAlert). */
+    public const GIVE_UP_COUNT_KEY = 'item-media-give-up:count';
+
+    public const GIVE_UP_WINDOW_KEY = 'item-media-give-up:window';
+
+    public const GIVE_UP_WINDOW_MINUTES = 15;
+
+    /** Count one given-up durable item row; the first of a window queues ONE SendItemMediaAlert for its end. */
+    public static function countGiveUp(): void
+    {
+        Cache::add(self::GIVE_UP_COUNT_KEY, 0, now()->addDay());
+        Cache::increment(self::GIVE_UP_COUNT_KEY);
+
+        if (Cache::add(self::GIVE_UP_WINDOW_KEY, true, now()->addMinutes(self::GIVE_UP_WINDOW_MINUTES + 5))) {
+            SendItemMediaAlert::dispatch()->delay(now()->addMinutes(self::GIVE_UP_WINDOW_MINUTES));
+        }
+    }
+
+    /** The count of the window that ends now (the window closes first, so a new give-up opens the next one). */
+    public static function takeGiveUpCount(): int
+    {
+        Cache::forget(self::GIVE_UP_WINDOW_KEY);
+
+        return (int) Cache::pull(self::GIVE_UP_COUNT_KEY, 0);
     }
 
     /** Record the verdict of a stored file (media:still-check); an approved file stays approved. */

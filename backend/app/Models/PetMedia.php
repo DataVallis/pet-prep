@@ -419,6 +419,16 @@ class PetMedia extends Model
     }
 
     /**
+     * David 2026-11-19: the prompt variant of a SLEEP loop — 1 while this generation is the clip
+     * check's one automatic regeneration (`quality_retry_generation`), else 0. Calmer on the retry
+     * (PetAppearancePrompt::loopVideoPrompt); no new retry, no new column.
+     */
+    public function sleepVariant(): int
+    {
+        return $this->quality_retry_generation !== null && (int) $this->quality_retry_generation === (int) $this->generation ? 1 : 0;
+    }
+
+    /**
      * The STORED file was made the frozen way (fix 2026-10-23): a loop with the same image
      * as start and end frame (stored_recipe `loop`), or a same-pose phase clip made with an
      * end frame (stored_recipe null; `$endFrameProfile` = its profile took an end frame —

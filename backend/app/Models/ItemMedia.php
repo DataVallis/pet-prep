@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\LifeStage;
+use App\Services\Media\PetAppearancePrompt;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -200,6 +201,16 @@ class ItemMedia extends Model
     public function seedFor(int $base): int
     {
         return $this->seed_override !== null ? (int) $this->seed_override : $base;
+    }
+
+    /**
+     * David 2026-11-19 (»da v 3 promptih pride ok«): the prompt variant of this key image / clip
+     * request — every automatic retry after a failed check (`quality_retries`) is a calmer / stricter
+     * wording, within the existing budget (max_still_retries). Never below the no-media variant.
+     */
+    public function checkVariant(): int
+    {
+        return min(PetAppearancePrompt::ITEM_CHECK_VARIANTS - 1, max((int) $this->prompt_variant, (int) $this->quality_retries));
     }
 
     /** The candidate failed its check for good and waits for »Approve anyway« (never shown). */

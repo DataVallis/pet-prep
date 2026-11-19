@@ -173,11 +173,18 @@ describe('submit: same frame → start frame only', function () {
         $loops = $queue->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'so it can loop'))->values();
         expect($loops)->toHaveCount(8);
         foreach ($loops as $r) {
-            expect($r->data())->not->toHaveKey('end_image_url')
-                ->and((string) $r['prompt'])->toContain('clearly visible')->not->toContain('Subtle, slow')
+            expect($r->data())->not->toHaveKey('end_image_url')->and((string) $r['prompt'])->not->toContain('Subtle, slow');
+            if (str_contains((string) $r['prompt'], 'sound asleep')) {
+                // David 2026-11-19: the Sleeping loop is a calm sleep clip with its own negative.
+                expect((string) $r['prompt'])->not->toContain('clearly visible')->not->toContain('twitches')
+                    ->and((string) $r['negative_prompt'])->toContain('waking up')->toContain('lifting the head')->not->toContain('still image');
+
+                continue;
+            }
+            expect((string) $r['prompt'])->toContain('clearly visible')
                 ->and((string) $r['negative_prompt'])->not->toContain('fast motion')->toContain('frozen frame');
         }
-        expect((string) $phase('asleep and staying curled up')['prompt'])->toContain('rising and falling with each breath');
+        expect((string) $phase('sound asleep and completely still')['prompt'])->toContain('only slow, gentle, even breathing');
 
         // Same-pose phase clips (school attention + success, ball waiting): start only.
         foreach (['looks up at the camera eagerly', 'stays sitting proudly', 'bouncing excitedly on the front paws, the tail wagging fast, ready to run'] as $needle) {
@@ -224,7 +231,8 @@ describe('submit: same frame → start frame only', function () {
         $pounce = $prompts->phaseVideoPrompt('maine_coon', PetPhaseClip::WandPouncing, $traits);
 
         expect(strtolower($loop.$pounce.$prompts->loopNegativePrompt(Species::Cat)))->not->toContain('dog')
-            ->and($loop)->toContain('lively cat motion')
+            ->and($loop)->toContain('Calm, realistic sleeping cat')->not->toContain('lively')
+            ->and(strtolower($prompts->sleepNegativePrompt(Species::Cat)))->not->toContain('dog')
             ->and($pounce)->toContain('ends close to the starting pose');
     });
 });
