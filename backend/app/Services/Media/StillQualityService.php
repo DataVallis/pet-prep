@@ -36,8 +36,10 @@ use Throwable;
  *    download as a candidate; loops / transitions / phase clips wait for a STORED still;
  *  - item KEY images and CATALOGUE pictures (ItemMediaService) — the clip waits for the key image,
  *    the key images wait for their catalogue picture.
- *  Item CLIPS get the free technical check (MediaClipAnalyzer: length, frozen, jumps) here too
- *  (item_media is not pet_media; mode = the clip check's mode).
+ *  Item CLIPS get the free technical check (MediaClipAnalyzer: length, frozen, jumps; the clip
+ *  check's mode) and, since David 2026-11-19, the AI realism check (contact sheet + start frame,
+ *  rubric `item_clip`, the ITEM mode while `clip_ai` is on) — decideItemClip(). Item key images use
+ *  the `item` rubric (grounded / integrated / scale). Stored files: recheckItemRealism() (media:item-recheck).
  *  The reference image is NOT checked: it is generated during pairing, its failure path (pets.
  *  media_status, stage remakes) is separate, and every key / pose image made from it is checked.
  *
@@ -331,7 +333,10 @@ class StillQualityService
         }
 
         $candidate = (string) $row->candidate_path;
-        $mode = $row->isClip() ? $this->settings->qualityCheckMode(fresh: true) : $this->stillsMode();
+        // David 2026-11-19: an item clip has two parts — the free technical check (clip `mode`) and the
+        // AI realism check (the ITEM mode `stills_mode`, while `clip_ai` is on).
+        $clipModes = $row->isClip() ? $this->itemClipModes() : null;
+        $mode = $clipModes !== null ? $this->strongest($clipModes['technical'], $clipModes['ai']) : $this->stillsMode();
 
         if ($mode === AppSettingsService::QUALITY_OFF) {
             return $this->items->promoteCandidate($row, $candidate, null, null) ? 'promoted' : 'skipped';
@@ -341,14 +346,15 @@ class StillQualityService
             ->where('trigger', PetMediaQualityCheck::TRIGGER_PIPELINE)->first();
 
         if ($check === null || $check->status !== PetMediaQualityCheck::STATUS_DECIDED) {
-            if ($row->isStill()) {
-                $gate = $this->gate();
-                if ($gate === 'disabled') {
+            $gate = $row->isStill() || $clipModes['ai'] !== AppSettingsService::QUALITY_OFF ? $this->gate() : 'ok';
+            if ($gate === 'disabled') {
+                if ($row->isStill()) {
                     return $this->items->promoteCandidate($row, $candidate, PetMedia::QUALITY_UNCHECKED, 'Not AI-checked (no vision profile / fal disabled)') ? 'promoted' : 'skipped';
                 }
-                if ($gate === 'waiting') {
-                    return 'waiting';
-                }
+                $clipModes['ai'] = AppSettingsService::QUALITY_OFF; // no vision → the technical check alone
+            }
+            if ($gate === 'waiting') {
+                return 'waiting';
             }
 
             $check = $this->claim(ItemMediaQualityCheck::class, 'item_media_id', $row->id, $row->generation, PetMediaQualityCheck::TRIGGER_PIPELINE);
@@ -358,8 +364,10 @@ class StillQualityService
 
             if ($check->status !== PetMediaQualityCheck::STATUS_DECIDED) {
                 if ($row->isClip()) {
-                    $this->technicalItemClip($row, $check, $candidate);
-                } elseif ($this->judge($check, fn (): array => $this->vision->judgeStill(...$this->itemRubric($row), imageUrl: $this->itemCandidateUrl($row), petId: $row->pet_id, itemMediaId: $row->id)) === 'waiting') {
+                    if ($this->decideItemClip($row, $check, $candidate, $clipModes['technical'], $clipModes['ai']) === 'waiting') {
+                        return 'waiting';
+                    }
+                } elseif ($this->judge($check, fn (): array => $this->vision->judgeStill(...$this->itemRubric($row), imageUrl: $this->itemCandidateUrl($row), petId: $row->pet_id, itemMediaId: $row->id), $this->itemRubric($row)['rubric']) === 'waiting') {
                     return 'waiting';
                 }
             }
@@ -375,13 +383,24 @@ class StillQualityService
             return $this->items->promoteCandidate($fresh, $candidate, self::passQuality($check), $check->reason) ? 'promoted' : 'skipped';
         }
 
-        if ($mode === AppSettingsService::QUALITY_SHADOW) {
+        // The mode of the part that failed (a clip: the AI part → the item mode, else the clip mode).
+        $failMode = $clipModes === null ? $mode
+            : ($check->ai_status === PetMediaQualityCheck::AI_FAILED ? $this->itemClipModes()['ai'] : $this->itemClipModes()['technical']);
+
+        if ($failMode !== AppSettingsService::QUALITY_ENFORCE) {
             Log::warning('StillQualityService: item file would fail the check (shadow mode — used anyway)', ['item_media_id' => $row->id, 'reason' => $check->reason]);
 
             return $this->items->promoteCandidate($fresh, $candidate, PetMedia::QUALITY_SHADOW_FAILED, $check->reason) ? 'promoted' : 'skipped';
         }
 
         if ($fresh->quality_retries < self::maxRetries()) {
+            // David 2026-11-19: the clip check found the OBJECT wrong (floating / pasted / too small) —
+            // that comes from its start frame: the key image is regenerated, the clip follows it.
+            if ($fresh->isClip() && self::placementFailed($check) && $this->items->regenerateKeyImageOf($fresh, $candidate, (string) $check->reason)) {
+                Log::warning('StillQualityService: item clip shows the object wrong — regenerating its key image', ['item_media_id' => $row->id, 'reason' => $check->reason]);
+
+                return 'retrying';
+            }
             $retried = $this->items->retryAfterCheck($fresh, $candidate, (string) $check->reason);
             if ($retried) {
                 Log::warning('StillQualityService: item file failed the check — regenerating with a new seed', ['item_media_id' => $row->id, 'retry' => $fresh->quality_retries + 1, 'reason' => $check->reason]);
@@ -436,11 +455,26 @@ class StillQualityService
             return ['rubric' => MediaVisionCheck::RUBRIC_OBJECT, 'species' => Species::Dog, 'scene' => $description];
         }
 
-        $species = $row->scope === ItemMedia::SCOPE_LOOK
+        $species = $this->itemSpecies($row);
+
+        // David 2026-11-19: the item rubric — the animal questions + grounded / integrated / scale.
+        return ['rubric' => MediaVisionCheck::RUBRIC_ITEM, 'species' => $species, 'scene' => $this->itemSceneOf($row, $species)];
+    }
+
+    private function itemSpecies(ItemMedia $row): Species
+    {
+        return $row->scope === ItemMedia::SCOPE_LOOK
             ? ($row->look?->breed_type?->species() ?? Species::Dog)
             : ($row->pet?->speciesValue() ?? Species::Dog);
+    }
 
-        return ['rubric' => MediaVisionCheck::RUBRIC_ANIMAL, 'species' => $species, 'scene' => PetAppearancePrompt::itemScene($row->item_key, $species, $description)];
+    /** What the item key image / clip should show — the prompt's action + the size rule of the breed. */
+    private function itemSceneOf(ItemMedia $row, Species $species): string
+    {
+        $description = ItemDesigns::description($row->design) ?? $row->design;
+        $breedKey = $row->scope === ItemMedia::SCOPE_LOOK ? $row->look?->breed_type?->value : $row->pet?->breed_type?->value;
+
+        return PetAppearancePrompt::itemScene($row->item_key, $species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species) : null);
     }
 
     /** Signed URL fal fetches an item candidate from (GET /api/media/items/{itemMedia}/candidate). */
@@ -457,54 +491,174 @@ class StillQualityService
         return filled($row->candidate_path) ? $this->itemCandidateUrl($row) : null;
     }
 
-    /** Free technical check of an item clip candidate (MediaClipAnalyzer) — decides the check row. */
-    private function technicalItemClip(ItemMedia $row, ItemMediaQualityCheck $check, string $candidate): void
+    /**
+     * David 2026-11-19: the modes of an item clip's two checks — `technical` = the clip `mode` (free
+     * MediaClipAnalyzer check, shadow until calibrated), `ai` = the ITEM mode `stills_mode` (default
+     * enforce) while the clip check's AI call `clip_ai` is on, else off. Fresh reads.
+     *
+     * @return array{technical: string, ai: string}
+     */
+    public function itemClipModes(): array
     {
-        $local = $this->localCopy($candidate);
-        $tech = ['ok' => null, 'reason' => null, 'failures' => [], 'metrics' => []];
+        return [
+            'technical' => $this->settings->qualityCheckMode(fresh: true),
+            'ai' => $this->settings->qualityClipAi(fresh: true) ? $this->stillsMode() : AppSettingsService::QUALITY_OFF,
+        ];
+    }
 
-        try {
-            if ($local === null) {
-                $tech = ['ok' => false, 'reason' => 'the clip file is missing', 'failures' => ['missing file'], 'metrics' => []];
-            } elseif (($measured = $this->analyzer->measure($local, null)) === null) {
-                $tech['reason'] = 'ffmpeg / ffprobe not available';
+    /** The stricter of two modes (off < shadow < enforce). */
+    private function strongest(string $a, string $b): string
+    {
+        $rank = [AppSettingsService::QUALITY_OFF => 0, AppSettingsService::QUALITY_SHADOW => 1, AppSettingsService::QUALITY_ENFORCE => 2];
+
+        return ($rank[$a] ?? 0) >= ($rank[$b] ?? 0) ? $a : $b;
+    }
+
+    /** Did an item check fail on the OBJECT's placement (grounded / integrated / scale)? */
+    public static function placementFailed(ItemMediaQualityCheck $check): bool
+    {
+        $verdict = is_array($check->ai_verdict) ? $check->ai_verdict : [];
+
+        return $check->ai_status === PetMediaQualityCheck::AI_FAILED
+            && collect(MediaVisionCheck::ITEM_PLACEMENT_KEYS)->contains(fn (string $k): bool => array_key_exists($k, $verdict) && $verdict[$k] !== true);
+    }
+
+    /**
+     * Check an item clip file (a CLAIMED check row) and decide the row: (1) the free technical check
+     * (MediaClipAnalyzer: length, frozen, jumps; the bed is low motion) + a contact sheet; (2) the AI
+     * realism check (MediaVisionCheck::judgeItemClip: contact sheet + the start frame = its key image)
+     * unless the AI part is off or the technical part already failed in enforce. Verdict fail = a
+     * failed AI part, or a failed technical part while the clip mode is on. The paid call is marked
+     * `calling` first (a stale takeover never repeats it); a refusal that cost nothing (budget) deletes
+     * the claim → 'waiting'. The contact sheet is kept only for a failed clip.
+     *
+     * @return 'decided'|'waiting'
+     */
+    private function decideItemClip(ItemMedia $row, ItemMediaQualityCheck $check, string $path, string $techMode, string $aiMode): string
+    {
+        $wantAi = $aiMode !== AppSettingsService::QUALITY_OFF;
+        $tech = $this->itemClipTechnical($row, $check, $path, $wantAi);
+        $ai = ['status' => PetMediaQualityCheck::AI_NOT_RUN, 'verdict' => null, 'reason' => null, 'cost_usd' => 0.0, 'reported_cost_usd' => null];
+        $skipAi = $tech['ok'] === false && $techMode === AppSettingsService::QUALITY_ENFORCE; // regenerated anyway
+
+        if ($check->ai_status === PetMediaQualityCheck::AI_CALLING) {
+            $ai = ['status' => PetMediaQualityCheck::AI_ERROR, 'verdict' => null, 'reason' => 'the vision call of a dead worker (not repeated)', 'cost_usd' => (float) $check->ai_cost_usd, 'reported_cost_usd' => null];
+        } elseif ($wantAi && ! $skipAi) {
+            $image = $this->items->keyImageOf($row);
+            if ($tech['sheet_path'] === null || $image === null) {
+                $ai = ['status' => PetMediaQualityCheck::AI_ERROR, 'verdict' => null, 'reason' => 'no contact sheet / start frame', 'cost_usd' => 0.0, 'reported_cost_usd' => null];
             } else {
-                $low = in_array($row->item_key, (array) config('media.quality_check.low_motion_items', []), true);
-                $result = MediaClipAnalyzer::evaluate($measured, $row->duration_seconds, false, $low);
-                $tech = [
-                    'ok' => $result['ok'],
-                    'reason' => $result['ok'] === null ? 'no video frames could be measured' : ($result['failures'] === [] ? null : implode('; ', $result['failures'])),
-                    'failures' => $result['failures'],
-                    'metrics' => $result['metrics'],
-                ];
-            }
-        } catch (Throwable $e) {
-            $tech = ['ok' => null, 'reason' => 'technical check failed to run', 'failures' => [], 'metrics' => ['error' => mb_substr($e->getMessage(), 0, 200)]];
-        } finally {
-            if ($local !== null) {
-                @unlink($local);
+                $check->update(['sheet_path' => $tech['sheet_path'], 'rubric' => MediaVisionCheck::RUBRIC_ITEM_CLIP, 'ai_status' => PetMediaQualityCheck::AI_CALLING]);
+                $species = $this->itemSpecies($row);
+                $ai = $this->vision->judgeItemClip($species, PetAppearancePrompt::itemClipIntent($row->item_key, $species), $this->itemSceneOf($row, $species),
+                    $this->itemSheetUrl($check), $this->items->falFetchUrl($image), $row->pet_id, (int) $row->id);
+
+                if (in_array($ai['status'], [PetMediaQualityCheck::AI_SKIPPED_BUDGET, PetMediaQualityCheck::AI_DISABLED], true) && (float) $ai['cost_usd'] === 0.0) {
+                    $this->media->disk()->delete($tech['sheet_path']);
+                    ItemMediaQualityCheck::query()->whereKey($check->id)->where('status', PetMediaQualityCheck::STATUS_RUNNING)->delete();
+
+                    return 'waiting';
+                }
             }
         }
 
-        $pass = $tech['ok'] !== false;
+        $techFails = $tech['ok'] === false && $techMode !== AppSettingsService::QUALITY_OFF;
+        $aiFails = $ai['status'] === PetMediaQualityCheck::AI_FAILED;
+        $pass = ! $techFails && ! $aiFails;
         $reason = match (true) {
-            $tech['ok'] === false => 'Technical check: '.$tech['reason'],
+            $aiFails => (string) $ai['reason'],
+            $techFails => 'Technical check: '.$tech['reason'],
             $tech['ok'] === null => 'Not checked: '.($tech['reason'] ?? 'ffmpeg / ffprobe not available'),
-            default => null,
+            ! $wantAi || $ai['status'] === PetMediaQualityCheck::AI_PASSED || $skipAi => null,
+            default => 'Not AI-checked ('.$ai['status'].($ai['reason'] !== null ? ': '.$ai['reason'] : '').')',
         };
-
-        if ($tech['ok'] === null) {
-            Log::error('StillQualityService: item clip could not be checked (used unchecked)', ['item_media_id' => $row->id, 'reason' => $reason]);
-        }
 
         $check->update([
             'status' => PetMediaQualityCheck::STATUS_DECIDED,
             'technical' => ['metrics' => $tech['metrics'], 'failures' => $tech['failures']],
             'technical_ok' => $tech['ok'],
+            'ai_status' => $ai['status'],
+            'ai_verdict' => $ai['verdict'],
+            'ai_cost_usd' => round((float) $ai['cost_usd'], 4),
+            'ai_reported_cost_usd' => $ai['reported_cost_usd'],
             'verdict' => $pass ? PetMediaQualityCheck::VERDICT_PASS : PetMediaQualityCheck::VERDICT_FAIL,
             'reason' => $reason !== null ? mb_substr($reason, 0, 2000) : null,
+            // The AI realism part was due (it decides `quality` — passQuality()); null = technical only.
+            'rubric' => $wantAi && ! $skipAi ? MediaVisionCheck::RUBRIC_ITEM_CLIP : null,
+            'sheet_path' => $pass ? null : $tech['sheet_path'],
             'decided_at' => now(),
         ]);
+
+        // The contact sheet is kept only for a failed clip (admin review); a pass frees the disk.
+        if ($pass && $tech['sheet_path'] !== null) {
+            $this->media->disk()->delete($tech['sheet_path']);
+        }
+
+        if ($tech['ok'] === null || ($wantAi && ! $skipAi && ! in_array($ai['status'], [PetMediaQualityCheck::AI_PASSED, PetMediaQualityCheck::AI_FAILED], true))) {
+            Log::error('StillQualityService: item clip not fully checked (used unchecked)', ['item_media_id' => $row->id, 'ai' => $ai['status'], 'reason' => $reason]);
+        }
+        Log::info('StillQualityService: item clip checked', ['item_media_id' => $row->id, 'generation' => $check->generation, 'verdict' => $pass ? 'pass' : 'fail', 'ai' => $ai['status'], 'reason' => $reason]);
+
+        return 'decided';
+    }
+
+    /**
+     * The free technical check of an item clip file (+ its contact sheet when the AI part needs one).
+     *
+     * @return array{ok: bool|null, reason: string|null, failures: list<string>, metrics: array<string, mixed>, sheet_path: string|null}
+     */
+    private function itemClipTechnical(ItemMedia $row, ItemMediaQualityCheck $check, string $path, bool $withSheet): array
+    {
+        $local = $this->localCopy($path);
+        $tech = ['ok' => null, 'reason' => null, 'failures' => [], 'metrics' => [], 'sheet_path' => null];
+
+        try {
+            if ($local === null) {
+                return ['ok' => false, 'reason' => 'the clip file is missing', 'failures' => ['missing file'], 'metrics' => [], 'sheet_path' => null];
+            }
+            if (($measured = $this->analyzer->measure($local, null)) === null) {
+                $tech['reason'] = 'ffmpeg / ffprobe not available';
+
+                return $tech;
+            }
+            $low = in_array($row->item_key, (array) config('media.quality_check.low_motion_items', []), true);
+            $result = MediaClipAnalyzer::evaluate($measured, $row->duration_seconds, false, $low);
+            $tech = [
+                'ok' => $result['ok'],
+                'reason' => $result['ok'] === null ? 'no video frames could be measured' : ($result['failures'] === [] ? null : implode('; ', $result['failures'])),
+                'failures' => $result['failures'],
+                'metrics' => $result['metrics'],
+                'sheet_path' => null,
+            ];
+
+            if ($withSheet && $result['ok'] !== null) {
+                $base = tempnam(sys_get_temp_dir(), MediaDownloader::TEMP_PREFIX);
+                $tmp = $base.'.jpg';
+                $sheet = (array) config('media.quality_check.item_sheet', []);
+                if ($this->analyzer->contactSheet($local, (float) ($measured['duration'] ?? $row->duration_seconds ?? 3), $tmp, $sheet['frames'] ?? null, $sheet['columns'] ?? null, $sheet['frame_width'] ?? null)) {
+                    $tech['sheet_path'] = sprintf('%s/qc-item-%d-g%d-%s.jpg', dirname($path), $row->id, $check->generation, $check->trigger);
+                    $this->media->disk()->put($tech['sheet_path'], (string) file_get_contents($tmp));
+                }
+                @unlink($tmp);
+                @unlink($base);
+            }
+
+            return $tech;
+        } catch (Throwable $e) {
+            return ['ok' => null, 'reason' => 'technical check failed to run', 'failures' => [], 'metrics' => ['error' => mb_substr($e->getMessage(), 0, 200)], 'sheet_path' => $tech['sheet_path']];
+        } finally {
+            if ($local !== null) {
+                @unlink($local);
+            }
+        }
+    }
+
+    /** Signed URL fal fetches an item clip's contact sheet from (GET /api/media/item-quality-sheets/{check}). */
+    public function itemSheetUrl(ItemMediaQualityCheck $check): string
+    {
+        $path = URL::temporarySignedRoute('media.item-quality-sheet', $this->media->urlExpiry(30), ['check' => $check->id], absolute: false);
+
+        return rtrim((string) config('app.url'), '/').$path;
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -560,7 +714,7 @@ class StillQualityService
         }
 
         if ($check->status !== PetMediaQualityCheck::STATUS_DECIDED
-            && $this->judge($check, fn (): array => $this->vision->judgeStill(...$this->itemRubric($row), imageUrl: $this->items->falFetchUrl($row), petId: $row->pet_id, itemMediaId: $row->id)) === 'waiting') {
+            && $this->judge($check, fn (): array => $this->vision->judgeStill(...$this->itemRubric($row), imageUrl: $this->items->falFetchUrl($row), petId: $row->pet_id, itemMediaId: $row->id), $this->itemRubric($row)['rubric']) === 'waiting') {
             return ['outcome' => 'waiting', 'reason' => 'no AI budget now', 'cost_usd' => 0.0];
         }
         $check->refresh();
@@ -582,6 +736,99 @@ class StillQualityService
         }
 
         return ['outcome' => 'failed', 'reason' => $check->reason, 'cost_usd' => (float) $check->ai_cost_usd];
+    }
+
+    /**
+     * David 2026-11-19 (media:item-recheck): STORED item key images and clips (pet / look rows) whose
+     * current generation was never decided by the CURRENT item rubric (`item` / `item_clip`) — every
+     * file made before the realism check. Approved and already flagged files are left alone. Key
+     * images first (a failing key image regenerates its clip too), then clips.
+     *
+     * @return Builder<ItemMedia>
+     */
+    public function itemsToRecheck(): Builder
+    {
+        return ItemMedia::query()->whereIn('kind', [ItemMedia::KIND_IMAGE, ItemMedia::KIND_CLIP])
+            ->whereIn('scope', [ItemMedia::SCOPE_LOOK, ItemMedia::SCOPE_PET])
+            ->where('status', ItemMedia::STATUS_READY)->whereNotNull('storage_path')
+            ->where(fn ($q) => $q->whereNull('quality')->orWhereNotIn('quality', [PetMedia::QUALITY_APPROVED, PetMedia::QUALITY_FLAGGED]))
+            ->whereNotExists(fn ($q) => $q->select(DB::raw(1))->from('item_media_quality_checks')
+                ->whereColumn('item_media_quality_checks.item_media_id', 'item_media.id')
+                ->whereColumn('item_media_quality_checks.generation', 'item_media.generation')
+                ->where('item_media_quality_checks.status', PetMediaQualityCheck::STATUS_DECIDED)
+                ->whereIn('item_media_quality_checks.rubric', [MediaVisionCheck::RUBRIC_ITEM, MediaVisionCheck::RUBRIC_ITEM_CLIP])
+                ->whereIn('item_media_quality_checks.ai_status', [PetMediaQualityCheck::AI_PASSED, PetMediaQualityCheck::AI_FAILED]))
+            ->orderByRaw("CASE WHEN kind = 'image' THEN 0 ELSE 1 END")->orderBy('id');
+    }
+
+    /**
+     * Re-check one STORED item key image / clip with the current realism rubric (trigger `recheck`,
+     * one paid vision call). Fail + item mode enforce → the file is flagged (never shown again) and
+     * regenerated: a key image as a new chain (its clip follows), a clip whose OBJECT is wrong
+     * through a new key image (regenerateKeyImageOf), any other clip fail as a new clip. Shadow →
+     * recorded only (`shadow_failed`). A clip whose key image is no longer shown (flagged / being
+     * regenerated) is skipped — it follows the new key image anyway.
+     *
+     * @return array{outcome: string, reason: string|null, cost_usd: float}
+     */
+    public function recheckItemRealism(ItemMedia $row): array
+    {
+        $path = (string) $row->storage_path;
+
+        if ($row->isClip() && (($image = $this->items->keyImageOf($row)) === null || ! $image->isReady() || ! $image->isShown())) {
+            return ['outcome' => 'skipped', 'reason' => 'its key image is being regenerated', 'cost_usd' => 0.0];
+        }
+        if ($row->isClip() && ! $this->settings->qualityClipAi(fresh: true)) {
+            return ['outcome' => 'unavailable', 'reason' => 'the clip AI check is switched off (Feature switches)', 'cost_usd' => 0.0];
+        }
+        if (($gate = $this->gate()) !== 'ok') {
+            return ['outcome' => $gate === 'waiting' ? 'waiting' : 'unavailable', 'reason' => 'no vision call possible now', 'cost_usd' => 0.0];
+        }
+
+        $check = $this->claim(ItemMediaQualityCheck::class, 'item_media_id', $row->id, $row->generation, ItemMediaQualityCheck::TRIGGER_RECHECK);
+        if ($check === null) {
+            return ['outcome' => 'busy', 'reason' => null, 'cost_usd' => 0.0];
+        }
+
+        if ($check->status !== PetMediaQualityCheck::STATUS_DECIDED) {
+            $decided = $row->isClip()
+                // The stored clip was served already — only the realism (AI) part decides now.
+                ? $this->decideItemClip($row, $check, $path, AppSettingsService::QUALITY_OFF, AppSettingsService::QUALITY_ENFORCE)
+                : $this->judge($check, fn (): array => $this->vision->judgeStill(...$this->itemRubric($row), imageUrl: $this->items->falFetchUrl($row), petId: $row->pet_id, itemMediaId: $row->id), MediaVisionCheck::RUBRIC_ITEM);
+            if ($decided === 'waiting') {
+                return ['outcome' => 'waiting', 'reason' => 'no AI budget now', 'cost_usd' => 0.0];
+            }
+        }
+        $check->refresh();
+        $cost = (float) $check->ai_cost_usd;
+
+        if ($check->verdict === PetMediaQualityCheck::VERDICT_PASS) {
+            $this->items->recordQuality($row, $path, self::passQuality($check), $check->reason);
+
+            return ['outcome' => 'passed', 'reason' => $check->reason, 'cost_usd' => $cost];
+        }
+
+        if ($this->stillsMode() !== AppSettingsService::QUALITY_ENFORCE) {
+            $this->items->recordQuality($row, $path, PetMedia::QUALITY_SHADOW_FAILED, $check->reason);
+
+            return ['outcome' => 'failed', 'reason' => $check->reason, 'cost_usd' => $cost];
+        }
+
+        $fresh = $row->fresh();
+        if ($fresh === null || $fresh->status !== ItemMedia::STATUS_READY || $fresh->storage_path !== $path) {
+            return ['outcome' => 'failed', 'reason' => $check->reason, 'cost_usd' => $cost];
+        }
+
+        if ($fresh->isClip() && self::placementFailed($check) && $this->items->regenerateKeyImageOf($fresh, null, (string) $check->reason)) {
+            return ['outcome' => 'regenerating_key_image', 'reason' => $check->reason, 'cost_usd' => $cost];
+        }
+
+        $this->items->recordQuality($fresh, $path, PetMedia::QUALITY_FLAGGED, $check->reason);
+        // A new chain whose first try counts as one retry (like media:still-check); the clip of a key image follows it.
+        $this->items->resetChain($fresh->fresh() ?? $fresh, null, qualityRetries: min(1, self::maxRetries()));
+        GenerateItemMedia::dispatch((int) $fresh->id);
+
+        return ['outcome' => 'regenerating', 'reason' => $check->reason, 'cost_usd' => $cost];
     }
 
     /**
@@ -674,8 +921,12 @@ class StillQualityService
      * @param  callable(): array{status: string, verdict: array<string, mixed>|null, reason: string|null, cost_usd: float, reported_cost_usd: float|null}  $call
      * @return 'decided'|'waiting'
      */
-    private function judge(PetMediaQualityCheck|ItemMediaQualityCheck $check, callable $call): string
+    private function judge(PetMediaQualityCheck|ItemMediaQualityCheck $check, callable $call, ?string $rubric = null): string
     {
+        if ($rubric !== null && $check instanceof ItemMediaQualityCheck) {
+            $check->update(['rubric' => $rubric]);
+        }
+
         if ($check->ai_status === PetMediaQualityCheck::AI_CALLING) {
             $ai = ['status' => PetMediaQualityCheck::AI_ERROR, 'verdict' => null, 'reason' => 'the vision call of a dead worker (not repeated)', 'cost_usd' => (float) $check->ai_cost_usd, 'reported_cost_usd' => null];
         } else {
@@ -723,6 +974,9 @@ class StillQualityService
     {
         return match (true) {
             $check->ai_status === PetMediaQualityCheck::AI_PASSED => PetMedia::QUALITY_PASSED,
+            // David 2026-11-19: an item clip whose AI realism check was wanted but gave no verdict is
+            // »used unchecked« (System health counts it), not »passed the technical check«.
+            $check instanceof ItemMediaQualityCheck && $check->rubric === MediaVisionCheck::RUBRIC_ITEM_CLIP => PetMedia::QUALITY_UNCHECKED,
             $check->technical_ok === true => PetMedia::QUALITY_PASSED_TECHNICAL,
             default => PetMedia::QUALITY_UNCHECKED,
         };

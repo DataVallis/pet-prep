@@ -5,8 +5,10 @@ namespace App\Services\Media;
 use App\Enums\AdminAlertKind;
 use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
+use App\Enums\BreedType;
 use App\Enums\LifeStage;
 use App\Enums\Species;
+use App\Enums\StageParamKey;
 use App\Events\PetUpdated;
 use App\Jobs\CheckItemMediaQuality;
 use App\Jobs\GenerateItemMedia;
@@ -23,6 +25,7 @@ use App\Models\PetMedia;
 use App\Models\ShopItem;
 use App\Services\AppSettingsService;
 use App\Services\FalAiService;
+use App\Services\LifeStageService;
 use App\Services\NotificationService;
 use App\Services\Shop\ItemDesigns;
 use Carbon\CarbonImmutable;
@@ -72,8 +75,10 @@ use Illuminate\Support\Facades\URL;
  *
  * Quality check (David 2026-11-04, StillQualityService): a downloaded catalogue picture / key
  * image (stills mode on) or clip (clip mode on) is a CANDIDATE (`candidate_path`) until its check
- * passes — the AI vision check for stills, the free technical check for clips — so a clip is
- * only made from a passed key image. A failed check regenerates with a fresh seed (and the next
+ * passes — the AI vision check for stills, the free technical check + (since 2026-11-19) the AI
+ * realism check for clips — so a clip is only made from a passed key image. A file flagged by a
+ * check of the stored file is never shown (ItemMedia::isShown()); a clip whose OBJECT is wrong
+ * regenerates its key image (regenerateKeyImageOf()). A failed check regenerates with a fresh seed (and the next
  * prompt variant) ≤ `max_still_retries` per chain, then the row fails `quality_failed` (candidate
  * kept for »Approve anyway«) and heal() gives it up like any other failure (fallback + alert).
  * Every regeneration (admin Regenerate, Generate missing, heal, check retry) gets a fresh seed.
@@ -276,8 +281,9 @@ class ItemMediaService
 
             $image = $rows->first(fn (ItemMedia $r) => $r->design === $own['content_key'] && $r->kind === ItemMedia::KIND_IMAGE);
             $clip = $rows->first(fn (ItemMedia $r) => $r->design === $own['content_key'] && $r->kind === ItemMedia::KIND_CLIP);
-            $imageCurrent = $image !== null && $image->isServable() && $image->source_path === $picture['path'];
-            $clipCurrent = $imageCurrent && $clip !== null && $clip->isServable() && $clip->source_path === $image->storage_path;
+            // David 2026-11-19: a flagged file (failed an enforced check of the stored file) is never shown.
+            $imageCurrent = $image !== null && $image->isShown() && $image->source_path === $picture['path'];
+            $clipCurrent = $imageCurrent && $clip !== null && $clip->isShown() && $clip->source_path === $image->storage_path;
 
             $state['image'] = $imageCurrent ? $image : null;
             $state['clip'] = $clipCurrent ? $clip : null;
@@ -491,7 +497,8 @@ class ItemMediaService
             }
             $image = $this->row($picture, $own['item_key'], $own['content_key'], ItemMedia::KIND_IMAGE);
 
-            if ($image->isServable() && $image->source_path === $picture['path']) {
+            // A flagged key image (David 2026-11-19) is being regenerated — its clip waits for the new one.
+            if ($image->isShown() && $image->source_path === $picture['path']) {
                 if (! $this->clipsEnabled()) {
                     continue; // QA #655 m4: no clip while its profile is off — the picture is shown
                 }
@@ -569,7 +576,7 @@ class ItemMediaService
      */
     private function ensureRow(ItemMedia $row, string $source): bool
     {
-        if ($row->isServable() && $row->source_path === $source && $row->status !== ItemMedia::STATUS_PENDING) {
+        if ($row->isShown() && $row->source_path === $source && $row->status !== ItemMedia::STATUS_PENDING) {
             return false;
         }
 
@@ -582,7 +589,9 @@ class ItemMediaService
         }
 
         if ($row->status !== ItemMedia::STATUS_PENDING || $row->target_path !== $source) {
-            $this->resetChain($row, $source);
+            // David 2026-11-19: a clip that waited for its key image to be regenerated
+            // (regenerateKeyImageOf) keeps the tries it used — the retry budget is per chain, not per key image.
+            $this->resetChain($row, $source, $row->isClip() && $row->status === ItemMedia::STATUS_PENDING ? $row->quality_retries : 0);
         }
 
         GenerateItemMedia::dispatch($row->id);
@@ -764,7 +773,7 @@ class ItemMediaService
             if ($picture === false) {
                 return null; // the catalogue picture is still on its way — its store queues this row again
             }
-            $prompt = $this->prompts->itemImagePrompt($breedKey, $row->item_key, $description, $traits, $stage, $picture !== null, $row->prompt_variant);
+            $prompt = $this->prompts->itemImagePrompt($breedKey, $row->item_key, $description, $traits, $stage, $picture !== null, $row->prompt_variant, $this->sizeOf($breedKey));
 
             return [
                 'target' => (string) $sourceImage->storage_path,
@@ -773,8 +782,10 @@ class ItemMediaService
             ];
         }
 
+        // David 2026-11-19: only from a key image that is stored AND shown — never from a flagged one
+        // or the old file of a key image that is being regenerated (its store queues the clip again).
         $image = $this->siblingImage($row);
-        if ($image === null || ! $image->isServable()) {
+        if ($image === null || ! $image->isReady() || ! $image->isShown()) {
             return null;
         }
         $species = PetAppearancePrompt::speciesOf($breedKey);
@@ -849,6 +860,72 @@ class ItemMediaService
         $image = PetMedia::query()->where('pet_id', $pet->id)->images()->first();
 
         return [$breedKey, $traits, (int) ($dna['seed'] ?? $pet->id), $image, $pet->id];
+    }
+
+    /** The key image row of a clip row (its start frame), null when missing. */
+    public function keyImageOf(ItemMedia $clip): ?ItemMedia
+    {
+        return $clip->isClip() ? $this->siblingImage($clip) : null;
+    }
+
+    /**
+     * David 2026-11-19: a clip check found the OBJECT wrong (floating, pasted in, too small) — that
+     * comes from the clip's start frame, so a new clip from the same key image would repeat it. The
+     * key image is flagged (never shown again) and regenerated as the next try of its chain (fresh
+     * seed, next prompt variant, `quality_retries` + 1 — within `max_still_retries`); the clip counts
+     * the try too (`quality_retries` + 1, carried into its next chain by ensureRow()) and WAITS
+     * (pending, its candidate deleted) until the new key image is stored — then it follows it. With
+     * `$candidate` null the clip's STORED file is the one judged (media:item-recheck): it is flagged
+     * and the clip waits the same way. False (nothing changed) when the key image is not a stored,
+     * shown, unapproved file, has no tries left, or the clip moved on.
+     */
+    public function regenerateKeyImageOf(ItemMedia $clip, ?string $candidate, string $reason): bool
+    {
+        $image = $this->siblingImage($clip);
+        if ($image === null || ! $image->isReady() || ! $image->isShown() || $image->quality === PetMedia::QUALITY_APPROVED
+            || $image->quality_retries >= StillQualityService::maxRetries()) {
+            return false;
+        }
+
+        $why = mb_substr('Its clip shows the object wrong: '.$reason, 0, 2000);
+        $clipMoved = ItemMedia::query()->whereKey($clip->id)
+            ->when($candidate !== null,
+                fn ($q) => $q->where('status', ItemMedia::STATUS_RUNNING)->where('candidate_path', $candidate),
+                fn ($q) => $q->where('status', ItemMedia::STATUS_READY)->where('storage_path', $clip->storage_path))
+            ->update(array_merge([
+                'status' => ItemMedia::STATUS_PENDING,
+                // A new generation: its check is a new claim, never the failed verdict of this one.
+                'generation' => DB::raw('generation + 1'),
+                'quality_retries' => DB::raw('quality_retries + 1'),
+                'request_id' => null,
+                'status_url' => null,
+                'response_url' => null,
+                'source_url' => null,
+                'candidate_path' => null,
+                'candidate_bytes' => null,
+                'candidate_mime' => null,
+                'download_attempts' => 0,
+                'error_reason' => null,
+                'error' => mb_substr('Quality check failed, regenerating its key image first: '.$reason, 0, 2000),
+                'updated_at' => now(),
+            ], $candidate === null ? ['quality' => PetMedia::QUALITY_FLAGGED, 'quality_reason' => $why] : [])) !== 1;
+
+        if ($clipMoved) {
+            return false;
+        }
+        if ($candidate !== null && $candidate !== $clip->storage_path) {
+            $this->media->disk()->delete($candidate);
+        }
+
+        $flagged = ItemMedia::query()->whereKey($image->id)->where('status', ItemMedia::STATUS_READY)->where('storage_path', $image->storage_path)
+            ->update(['quality' => PetMedia::QUALITY_FLAGGED, 'quality_reason' => $why]) === 1;
+        if ($flagged && ($fresh = $image->fresh()) !== null) {
+            $this->resetChain($fresh, null, $image->quality_retries + 1);
+            $fresh->update(['prompt_variant' => min($image->prompt_variant + 1, PetAppearancePrompt::ITEM_PROMPT_VARIANTS - 1)]);
+            GenerateItemMedia::dispatch((int) $fresh->id);
+        }
+
+        return true;
     }
 
     /** The key image row a clip is made from (same scope, owner, design, stage). */
@@ -1022,9 +1099,14 @@ class ItemMediaService
     {
         $settings = app(AppSettingsService::class);
 
-        return $row->isStill()
-            ? $settings->qualityStillsMode(fresh: true) !== AppSettingsService::QUALITY_OFF
-            : $settings->qualityCheckMode(fresh: true) !== AppSettingsService::QUALITY_OFF;
+        if ($row->isStill()) {
+            return $settings->qualityStillsMode(fresh: true) !== AppSettingsService::QUALITY_OFF;
+        }
+
+        // David 2026-11-19: a clip is checked while its technical check (clip mode) OR its AI realism
+        // check (the item mode, with the clip AI call on) is on.
+        return $settings->qualityCheckMode(fresh: true) !== AppSettingsService::QUALITY_OFF
+            || ($settings->qualityClipAi(fresh: true) && $settings->qualityStillsMode(fresh: true) !== AppSettingsService::QUALITY_OFF);
     }
 
     /** Remember the downloaded file as the row's candidate (the row stays running) and queue its check. Idempotent. */
@@ -1698,6 +1780,51 @@ class ItemMediaService
      * QA #736 M2: what regenerating ONE item key image costs at most — the key image, its still
      * check(s) are separate — plus its clip (made again from the new key image).
      */
+    /**
+     * David 2026-11-19 (a big Dobermann lay ON TOP of a small bed): the size class of a DOG breed for
+     * the item prompts — from the breed's adult weight (`breed_stage_params` `adult_weight_kg`, the
+     * upper end of its range) against `media.item_media.size_classes`. Adult size on purpose: a bed
+     * bought for a growing dog is bought for its adult size, and a bed that is too big never looks
+     * wrong. Null for a cat (its beds are made for cats), an unknown breed or a breed without data.
+     *
+     * @return array{class: string, bed_cm: int}|null
+     */
+    public function sizeOf(string $breedKey, ?Species $species = null): ?array
+    {
+        $species ??= PetAppearancePrompt::speciesOf($breedKey);
+        $type = BreedType::tryFrom($breedKey);
+        if ($species !== Species::Dog || $type === null) {
+            return null;
+        }
+
+        $row = collect(app(LifeStageService::class)->paramsFor($type->slug()))
+            ->first(fn (array $p): bool => $p['key'] === StageParamKey::AdultWeightKg->value);
+        $range = is_array($row['value'] ?? null) ? array_values(array_filter($row['value'], 'is_numeric')) : [];
+        if ($range === []) {
+            return null;
+        }
+
+        return self::sizeClassFor((float) max($range));
+    }
+
+    /**
+     * PURE: the size class of an adult weight (kg) — the first `media.item_media.size_classes` entry
+     * whose `max_kg` it does not exceed (the last one above all).
+     *
+     * @return array{class: string, bed_cm: int}|null
+     */
+    public static function sizeClassFor(float $adultKg): ?array
+    {
+        $classes = array_values((array) config('media.item_media.size_classes', []));
+        foreach ($classes as $i => $c) {
+            if ($adultKg <= (float) ($c['max_kg'] ?? INF) || $i === count($classes) - 1) {
+                return ['class' => (string) $c['class'], 'bed_cm' => (int) $c['bed_cm']];
+            }
+        }
+
+        return null;
+    }
+
     public function keyImageRegenerationCostUsd(): float
     {
         $image = $this->profiles->itemImage()?->estimatedCostUsd() ?? 0.0;

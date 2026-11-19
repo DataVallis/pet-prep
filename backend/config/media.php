@@ -212,6 +212,16 @@ return [
         'watchdog_hours' => 2,
         // Pass the design's catalogue picture to the item image edit as a 2nd reference image.
         'picture_as_reference' => true,
+        // David 2026-11-19 (a big Dobermann lay ON TOP of a small bed): the item prompts name the
+        // bed / bowl size for the breed's ADULT weight (breed_stage_params `adult_weight_kg`, upper
+        // end — ItemMediaService::sizeOf()). First entry whose `max_kg` the weight does not exceed;
+        // `bed_cm` = the bed's inside length. Prompt wording only — no game rule reads it. Dogs only.
+        'size_classes' => [
+            ['max_kg' => 10, 'class' => 'small', 'bed_cm' => 60],
+            ['max_kg' => 25, 'class' => 'medium-sized', 'bed_cm' => 80],
+            ['max_kg' => 40, 'class' => 'large', 'bed_cm' => 100],
+            ['max_kg' => null, 'class' => 'extra-large', 'bed_cm' => 120],
+        ],
     ],
 
     /*
@@ -283,6 +293,10 @@ return [
         'max_still_retries' => (int) env('AI_QUALITY_MAX_STILL_RETRIES', 2),
         // Item clips that should barely move (the bed: the animal sleeps) — low-motion threshold.
         'low_motion_items' => ['bed'],
+        // David 2026-11-19: the contact sheet of an ITEM clip for its AI realism check (fewer, larger
+        // frames than a pet clip: a pasted / floating object shows in the detail). The clip's start
+        // frame (its key image) is sent at full size next to it.
+        'item_sheet' => ['frames' => 4, 'columns' => 2, 'frame_width' => 480],
     ],
 
     /*

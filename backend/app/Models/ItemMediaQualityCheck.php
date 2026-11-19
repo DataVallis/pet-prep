@@ -24,15 +24,22 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property float|null $ai_reported_cost_usd
  * @property string|null $verdict
  * @property string|null $reason
+ * @property string|null $rubric
+ * @property string|null $sheet_path
  */
 class ItemMediaQualityCheck extends Model
 {
+    /** David 2026-11-19: a `media:item-recheck` check of a stored file (current rubric). */
+    public const TRIGGER_RECHECK = 'recheck';
+
     protected $table = 'item_media_quality_checks';
 
     /** @var list<string> */
     protected $fillable = [
         'item_media_id', 'generation', 'trigger', 'status', 'technical', 'technical_ok',
         'ai_status', 'ai_verdict', 'ai_cost_usd', 'ai_reported_cost_usd', 'verdict', 'reason', 'decided_at',
+        // David 2026-11-19: the rubric that decided the row (`item` / `item_clip`) and an item clip's contact sheet.
+        'rubric', 'sheet_path',
     ];
 
     /** @return array<string, string> */

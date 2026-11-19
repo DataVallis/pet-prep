@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ItemMedia;
+use App\Models\ItemMediaQualityCheck;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
@@ -186,6 +187,19 @@ class PetMediaController extends Controller
     public function showItemCandidate(ItemMedia $itemMedia, PetMediaService $service): Response
     {
         return $this->serve(null, filled($itemMedia->candidate_path), (string) $itemMedia->candidate_path, (string) ($itemMedia->candidate_mime ?? 'image/jpeg'), $service);
+    }
+
+    /**
+     * GET /api/media/item-quality-sheets/{check}?expires=…&signature=… (David 2026-11-19)
+     *
+     * The contact sheet of an item clip for its AI realism check (StillQualityService) — fetched by
+     * fal's vision model; kept afterwards only for a failed clip. Signature only, like the item
+     * candidate (a request with a Sanctum token is refused). 404 without a sheet. Internal.
+     */
+    #[ExcludeRouteFromDocs]
+    public function showItemQualitySheet(ItemMediaQualityCheck $check, PetMediaService $service): Response
+    {
+        return $this->serve(null, filled($check->sheet_path), (string) $check->sheet_path, 'image/jpeg', $service);
     }
 
     private function serve(?Pet $pet, bool $servable, string $path, string $mime, PetMediaService $service, bool $public = false): Response
