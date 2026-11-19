@@ -64396,7 +64396,7 @@
         "source_id": "S950",
         "quote": "The Mudi is best suited to an experienced owner who can provide the stimulation, structure and purpose this spirited breed needs",
         "confidence": "high",
-        "notes": "RKC (S950, fragment). PetMD (S952): 'The Mudi is a smart dog and an independent thinker' → independent_experienced_owner chip (not experienced_owner — that chip names a powerful dog)."
+        "notes": "RKC (S950, fragment). PetMD (S952): 'The Mudi is a smart dog and an independent thinker'. No chip: experienced_owner names a powerful dog, independent_experienced_owner is held by the Shiba Inu's own test → breed text only (open for David)."
       },
       "training": {
         "value": "smart, independent thinker; works best with variation, patience and positive reinforcement",
@@ -96806,16 +96806,6 @@
         ],
         "consider": [
           {
-            "tag": "independent_experienced_owner",
-            "source_ids": [
-              "S950"
-            ],
-            "refs": [
-              "mudi.behaviour.experienced_owner"
-            ],
-            "quote": "S950 'The Mudi is best suited to an experienced owner who can provide the stimulation, structure and purpose this spirited breed needs'"
-          },
-          {
             "tag": "needs_mental_stimulation",
             "source_ids": [
               "S950"
@@ -96842,10 +96832,11 @@
           "large_home": "RKC 'Small house'.",
           "long_daily_exercise": "RKC 'Up to 1 hour per day'.",
           "active_family": "No 'active owners' statement; up to 1 hour.",
-          "experienced_owner": "That chip names a powerful dog — the Mudi is medium-sized → independent_experienced_owner.",
+          "experienced_owner": "That chip names a powerful dog — the Mudi is medium-sized.",
           "chases_small_pets": "No 'high prey drive' statement.",
           "secure_fencing": "PetMD 'Never leave your Mudi outside unsupervised' (jump) — no fencing statement.",
-          "hypoallergenic": "never (runbook)."
+          "hypoallergenic": "never (runbook).",
+          "independent_experienced_owner": "RKC S950 'best suited to an experienced owner' + PetMD 'independent thinker' would fit, but the key is the Shiba Inu's only (ShibaInuBreedTest, another breed's own file — runbook 'Own files only') → recorded as text; open for David."
         }
       },
       "marketing": {

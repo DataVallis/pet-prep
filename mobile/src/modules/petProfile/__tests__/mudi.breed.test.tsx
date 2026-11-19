@@ -59,7 +59,7 @@ describe('M5-R10-126 Mudi', () => {
     expect(dog?.search_keywords).toEqual(['mudi', 'hungarian mudi', 'madžarski mudi', 'madzarski mudi']);
     expect(dog?.suitability).toEqual({
       suits: ['family_pet'],
-      consider: ['independent_experienced_owner', 'needs_mental_stimulation', 'sheds'],
+      consider: ['needs_mental_stimulation', 'sheds'],
     });
   });
 
@@ -82,7 +82,7 @@ describe('M5-R10-126 Mudi', () => {
     expect(suits).not.toHaveTextContent(/družino z otroki/);
     expect(suits).not.toHaveTextContent(/aktivno družino/);
     const consider = screen.getByTestId(`breed-suitability-${KEY}-consider`);
-    expect(consider).toHaveTextContent(/najbolje z izkušenim lastnikom/);
+    expect(consider).not.toHaveTextContent(/najbolje z izkušenim lastnikom/);
     expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
     expect(consider).toHaveTextContent(/izpada mu dlaka/);
     expect(consider).not.toHaveTextContent(/vsak dan potrebuje veliko gibanja/);
@@ -109,7 +109,7 @@ describe('M5-R10-126 Mudi', () => {
       renderPicker(FALLBACK_CATALOGUE);
       const consider = screen.getByTestId(`breed-suitability-${KEY}-consider`);
       expect(screen.getByTestId(`breed-suitability-${KEY}-suits`)).toHaveTextContent(/family life/);
-      expect(consider).toHaveTextContent(/best with an experienced owner/);
+      expect(consider).not.toHaveTextContent(/best with an experienced owner/);
       expect(consider).toHaveTextContent(/needs mental challenges/);
       expect(consider).toHaveTextContent(/sheds/);
       expect(consider).not.toHaveTextContent(/hypoallergenic/i);

@@ -3922,7 +3922,7 @@ test('Mudi (M5-R10-126): RKC up to 1 h, FCI height, PetMD weight, RKC over 10 ye
   assert.ok(!d.game.rules.some((r) => r.key === 'care_task'));
   assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet']);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['independent_experienced_owner', 'needs_mental_stimulation', 'sheds']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['needs_mental_stimulation', 'sheds']);
   assert.deepEqual(d.health.map((h) => h.key), ['hip_elbow_dysplasia', 'epilepsy', 'cataracts', 'kneecap_luxation']);
   // RKC: no recommended pre-breeding health screening (S950).
   assert.equal(d.breeder_checklist.status, 'none_recommended');

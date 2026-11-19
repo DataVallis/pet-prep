@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "82a53e660f8efac0831c8a3db5d94021971171221494c5cf510cd81f96ef65cf"
+      "sha256": "7f9545200a9304596898234d01053796ea2179cefc16fb9c34b82257577141e8"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "8020e82327ee516fbc580f156e2916dc7aa269914177928c820df3bae6ee046b"
+      "sha256": "3dca21cf7af3ecab7ed9901e89432f0287ff2ea8354d8f9802dd1db0fe1642ab"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -71332,15 +71332,6 @@
           }
         ],
         "consider": [
-          {
-            "tag": "independent_experienced_owner",
-            "source_ids": [
-              "S950"
-            ],
-            "refs": [
-              "mudi.behaviour.experienced_owner"
-            ]
-          },
           {
             "tag": "needs_mental_stimulation",
             "source_ids": [

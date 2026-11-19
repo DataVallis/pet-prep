@@ -39,7 +39,7 @@ use function Pest\Laravel\postJson;
 | learning × 1.0 (not ranked by Coren), paid breed, Border Collie care rates, brushing 1× a week (RKC "Once a week",
 | M5-R13), puppy socialisation with the PetMD quote (S952, M5-R17); no tooth / nail / ear / bath / groomer task (no
 | frequency), no meal gap, no heat warning. No welfare chip, in marketing; suits family_pet; consider
-| independent_experienced_owner, needs_mental_stimulation, sheds; black portrait (one of seven FCI colours), natural tail.
+| needs_mental_stimulation, sheds; black portrait (one of seven FCI colours), natural tail.
 */
 
 beforeEach(function () {
@@ -410,7 +410,7 @@ describe('GET /api/breeds', function () {
             'search_keywords' => seededBreedConfig('mudi')['search_keywords'], 'sort_order' => 1170,
             'suitability' => [
                 'suits' => ['family_pet'],
-                'consider' => ['independent_experienced_owner', 'needs_mental_stimulation', 'sheds'],
+                'consider' => ['needs_mental_stimulation', 'sheds'],
             ],
         ]);
     });
@@ -489,16 +489,17 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
 });
 
 describe('suitability tags (own file, runbook "Own files only")', function () {
-    it('suits a family; consider an experienced owner, mental stimulation and shedding', function () {
+    it('suits a family; consider mental stimulation and shedding', function () {
         $tags = app(BreedSuitability::class)->for(BreedType::Mudi);
         expect($tags['suits'])->toBe(['family_pet'])
-            ->and($tags['consider'])->toBe(['independent_experienced_owner', 'needs_mental_stimulation', 'sheds'])
+            ->and($tags['consider'])->toBe(['needs_mental_stimulation', 'sheds'])
             // No explicit children statement → no children chip; RKC "Small house" → neither apartment nor large_home;
-            // up to 1 hour → no long_daily_exercise; medium-sized → not experienced_owner (that chip names a powerful dog).
+            // up to 1 hour → no long_daily_exercise; medium-sized → not experienced_owner (that chip names a powerful dog);
+            // independent_experienced_owner stays the Shiba Inu's only (its own test) → the RKC advice is text only (open for David).
             ->and($tags['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')
             ->not->toContain('apartment')->not->toContain('large_home')->not->toContain('low_shedding')->not->toContain('first_time_owner')
             ->not->toContain('active_family')
-            ->and($tags['consider'])->not->toContain('experienced_owner')->not->toContain('chases_small_pets')->not->toContain('long_daily_exercise')
+            ->and($tags['consider'])->not->toContain('experienced_owner')->not->toContain('independent_experienced_owner')->not->toContain('chases_small_pets')->not->toContain('long_daily_exercise')
             ->not->toContain('shorter_lifespan')->not->toContain('secure_fencing')->not->toContain('frequent_grooming');
 
         expect(mudiData('mudi.behaviour.family.quote'))->toBe('Loyal and affectionate with their families')
