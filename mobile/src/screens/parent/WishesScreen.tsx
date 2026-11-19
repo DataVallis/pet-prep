@@ -12,6 +12,8 @@
  * M6-W03 designs (David 2026-11-03): a wish shows the requested design's picture + name and is
  * bought as exactly that design; a surprise purchase, the welcome bundle (one design per item)
  * and »Komu?« ask for the design(s) first (`DesignChoice`). A server without designs → as before.
+ * Bundle picker (David 2026-11-19): »Vse tri« always shows all three items (also the one of the
+ * wish it was opened from); every picker preselects the look the pet's open wish asks for.
  */
 
 import { petZoneOf } from '@/modules/familyZone/familyZone';
@@ -37,16 +39,16 @@ import { isGoodResult, useWishPurchase, wishResultText, type WishPurchaseResult 
 import { useAppStore } from '@/store/appStore';
 import { retryPendingPurchases } from '@/modules/wishes/redeem';
 import {
-  defaultDesigns,
   designChoiceFor,
-  designKeysFor,
   designOf,
+  designPickerFor,
   errorReason,
   isFeatureMissing,
   parentItemState,
   productIdsOf,
   showBundleOffer,
   variantFor,
+  wantedDesigns,
   wishDesign,
   type ParentWish,
   type ParentWishPet,
@@ -73,14 +75,19 @@ export interface PendingDesignChoice {
 /** The chooser for a product on a pet, or null when nothing is left to choose (buy at once). */
 export function designChoiceOf(
   pet: ParentWishPet,
-  opts: { anchor: string; action: 'buy' | 'assign'; productId: string; wishId: number | null; fixed?: Partial<Record<WishItemKey, string>> },
+  opts: {
+    anchor: string;
+    action: 'buy' | 'assign';
+    productId: string;
+    wishId: number | null;
+    fixed?: Partial<Record<WishItemKey, string>>;
+    /** The looks this pet's open wishes ask for (`wantedDesigns`) — preselected (David 2026-11-19). */
+    wanted?: Partial<Record<WishItemKey, string>>;
+  },
 ): PendingDesignChoice | null {
-  const fixed = opts.fixed ?? {};
-  const keys = designKeysFor(opts.productId, pet.items);
-  const open = keys.filter((k) => fixed[k] === undefined);
-  const picks = { ...defaultDesigns(keys, pet.items), ...fixed };
-  if (open.length === 0) return null;
-  return { anchor: opts.anchor, action: opts.action, productId: opts.productId, petId: pet.pet_id, wishId: opts.wishId, species: pet.species, keys: open, fixed, picks };
+  const picker = designPickerFor(opts.productId, pet.items, opts.fixed ?? {}, opts.wanted ?? {});
+  if (picker === null) return null;
+  return { anchor: opts.anchor, action: opts.action, productId: opts.productId, petId: pet.pet_id, wishId: opts.wishId, species: pet.species, ...picker };
 }
 
 type Message =
@@ -189,7 +196,8 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
   const buy = (anchor: string, productId: string, petId: number, wishId: number | null, species: 'dog' | 'cat', fixed: Partial<Record<WishItemKey, string>> = {}) => {
     if (busy || !productOf(productId)) return;
     const pet = petOf(petId);
-    const pending = pet === null ? null : designChoiceOf(pet, { anchor, action: 'buy', productId, wishId, fixed });
+    const wanted = wantedDesigns(data?.wishes ?? [], petId);
+    const pending = pet === null ? null : designChoiceOf(pet, { anchor, action: 'buy', productId, wishId, fixed, wanted });
     if (pending !== null) {
       setMessage(null);
       setChoice(pending);
@@ -215,7 +223,7 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
 
   const assign = (productId: string, pet: ParentWishPet) => {
     if (busy) return;
-    const pending = designChoiceOf(pet, { anchor: `credit-${productId}`, action: 'assign', productId, wishId: null });
+    const pending = designChoiceOf(pet, { anchor: `credit-${productId}`, action: 'assign', productId, wishId: null, wanted: wantedDesigns(data?.wishes ?? [], pet.pet_id) });
     if (pending !== null) {
       setMessage(null);
       setChoice(pending);

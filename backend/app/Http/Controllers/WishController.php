@@ -237,7 +237,8 @@ class WishController extends Controller
      * `Idempotency-Key` (store transaction id): a repeat → `already_assigned`.
      * M6-W03: the item gets the wish's design; without a wish `design` (missing
      * → the item's first design); the bundle `designs` {bed, bowls, toy_1} (each
-     * missing → first design; the wished item keeps the wish's). The item's AI
+     * missing → first design; a valid pick wins also for the wished item, else
+     * it keeps the wish's — David 2026-11-19). The item's AI
      * content is queued at once (`media_ready` false until it is there).
      * 409 no_credit (retry); 422 already_owned | bundle_not_eligible |
      * unknown_product | pet_not_active | wish_mismatch; 404 pet_not_found.

@@ -69,7 +69,8 @@ class WishCreditService
     /**
      * M6-W03 designs: a durable item gets the design of the wish it is bought for (the child's
      * pick); without a wish the parent's `$design`; the bundle (S12) takes `$designs[key]` per
-     * item, the wish's design for the wished item, else each item's FIRST design. A missing or
+     * item (the parent's pick — since David 2026-11-19 also for the wished item, whose look the
+     * app preselects), else the wish's design for the wished item, else each item's FIRST design. A missing or
      * unknown design never refuses a paid purchase (QA #655 m1) — it falls back to the first design.
      *
      * @param  array<string, string|null>  $designs  bundle: item key => design
@@ -185,8 +186,9 @@ class WishCreditService
 
     /**
      * M6-W03: item key => design for the durable items a purchase covers (treats: none). A paid
-     * purchase is NEVER refused over a cosmetic choice (QA #655 m1): the wish's design first, else
-     * the requested one when it is a valid design of the item, else the item's first design.
+     * purchase is NEVER refused over a cosmetic choice (QA #655 m1). Single item: the wish's design
+     * first, else the requested one when valid. Bundle: the requested (valid) one first, else the
+     * wish's (David 2026-11-19). Otherwise the item's first design.
      *
      * @param  array<string, string|null>  $designs
      * @return array<string, string|null>
@@ -199,9 +201,12 @@ class WishCreditService
                 continue;
             }
             $asked = $item->isBundle() ? ($designs[$key] ?? null) : $design;
+            $asked = ItemDesigns::isValid($key, $species, $asked) ? $asked : null;
             $fromWish = $wish !== null && $wish->item_key === $key && ItemDesigns::isValid($key, $species, $wish->design) ? $wish->design : null;
-            $chosen[$key] = $fromWish
-                ?? (ItemDesigns::isValid($key, $species, $asked) ? $asked : null)
+            // David 2026-11-19: the bundle picker shows all three items (the wished one preselected
+            // with the wish's look) and the parent may change any of them — the bundle takes the
+            // parent's valid pick first. A single item bought for a wish stays the wish's design.
+            $chosen[$key] = ($item->isBundle() ? ($asked ?? $fromWish) : ($fromWish ?? $asked))
                 ?? ItemDesigns::defaultFor($key, $species);
         }
 
