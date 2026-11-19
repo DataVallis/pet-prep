@@ -351,7 +351,7 @@ describe('retention', function () {
 describe('migration of summary_leads', function () {
     function esMigrationPath(): string
     {
-        return base_path('database/migrations/2027_04_16_120000_create_email_contacts_and_signups.php');
+        return base_path('database/migrations/2027_04_24_120000_create_email_contacts_and_signups.php');
     }
 
     /** Puts the database back into the state before the migration: the old table filled, the new ones gone. */
@@ -362,7 +362,7 @@ describe('migration of summary_leads', function () {
         Schema::dropIfExists('summary_leads');
         (require base_path('database/migrations/2027_04_08_120000_create_summary_leads_table.php'))->up();
         DB::statement('ALTER TABLE summary_leads DROP CONSTRAINT summary_leads_source_check');
-        DB::statement("ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_source_check CHECK (source IN ('real_cost', 'breed_quiz'))");
+        DB::statement("ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_source_check CHECK (source IN ('real_cost', 'breed_quiz', 'promise_kit_sample'))"); // since the M6-S09 shop
 
         $row = fn (array $o) => array_merge([
             'consent_version' => '2026-11', 'consented_at' => '2026-11-15 10:00:00', 'source' => 'real_cost', 'locale' => 'sl',
@@ -374,6 +374,7 @@ describe('migration of summary_leads', function () {
             $row(['email' => 'two@example.test', 'source' => 'breed_quiz', 'locale' => 'xx', 'breed' => 'cavalier-king-charles-spaniel', 'stage' => null,
                 'visits' => 3, 'created_at' => '2026-11-10 08:00:00', 'last_seen_at' => '2026-11-16 09:30:00', 'consent_version' => '2025-01', 'consented_at' => '2026-11-10 08:00:00']),
             $row(['email' => 'three@example.test', 'locale' => null, 'breed' => null, 'stage' => 'puppy']),
+            $row(['email' => 'four@example.test', 'source' => 'promise_kit_sample', 'locale' => 'de', 'breed' => null, 'stage' => null]),
         ]);
     }
 
@@ -383,7 +384,7 @@ describe('migration of summary_leads', function () {
         (require esMigrationPath())->up();
 
         expect(Schema::hasTable('summary_leads'))->toBeFalse()
-            ->and(EmailContact::count())->toBe(3)->and(EmailSignup::count())->toBe(3);
+            ->and(EmailContact::count())->toBe(4)->and(EmailSignup::count())->toBe(4);
 
         $two = EmailContact::where('email', 'two@example.test')->sole();
         expect($two->signups_count)->toBe(3)
@@ -406,6 +407,10 @@ describe('migration of summary_leads', function () {
 
         $one = EmailContact::where('email', 'one@example.test')->sole()->signups->sole();
         expect($one->source)->toBe('real_cost')->and($one->locale)->toBe('sl')->and($one->breed)->toBe('labrador_retriever')->and($one->stage)->toBe('adult');
+
+        // The Promise kit sample form (M6-S09 shop) keeps its own source.
+        $four = EmailContact::where('email', 'four@example.test')->sole()->signups->sole();
+        expect($four->source)->toBe('promise_kit_sample')->and($four->purpose)->toBe('newsletter')->and($four->locale)->toBe('de');
     });
 
     it('down() restores the old table from the contacts', function () {
@@ -417,7 +422,8 @@ describe('migration of summary_leads', function () {
 
         expect(Schema::hasTable('email_contacts'))->toBeFalse()->and(Schema::hasTable('email_signups'))->toBeFalse();
         $rows = DB::table('summary_leads')->orderBy('email')->get()->keyBy('email');
-        expect($rows)->toHaveCount(3)
+        expect($rows)->toHaveCount(4)
+            ->and($rows['four@example.test']->source)->toBe('promise_kit_sample')
             ->and($rows['two@example.test']->visits)->toBe(3)
             ->and($rows['two@example.test']->source)->toBe('breed_quiz')
             ->and($rows['two@example.test']->breed)->toBe('cavalier_king_charles_spaniel')

@@ -783,6 +783,7 @@ return [
         'sources' => [
             'real_cost' => 'Calculator — How much work is a dog',
             'breed_quiz' => 'Breed quiz',
+            'promise_kit_sample' => 'Pet Promise Kit — free sample',
             'early_access_form' => 'Early access',
         ],
         'purposes' => [

@@ -782,6 +782,7 @@ return [
         'sources' => [
             'real_cost' => 'Kalkulator — Koliko je dela s psom',
             'breed_quiz' => 'Kviz pasem',
+            'promise_kit_sample' => 'Komplet Obljuba — brezplačni vzorec',
             'early_access_form' => 'Zgodnji dostop',
         ],
         'purposes' => [

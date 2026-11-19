@@ -19,7 +19,11 @@ use Illuminate\Support\Facades\Schema;
  * No IP, no user agent, no name is stored. Nothing is deleted automatically — a contact (and its
  * signups, ON DELETE CASCADE) goes only when the person asks (admin delete).
  *
- * `summary_leads` (M6-S05 / M6-S06) is COPIED into the new tables and then dropped, so no second
+ * Dated after every migration on main (2027_04_24): it was first written as 2027_04_16, the same
+ * timestamp as the Stripe shop migration that added the `promise_kit_sample` source to
+ * summary_leads — those rows are copied with their source like every other lead.
+ *
+ * `summary_leads` (M6-S05 / M6-S06 / M6-S09 shop) is COPIED into the new tables and then dropped, so no second
  * copy of the addresses survives a delete request. A lead becomes one contact (`signups_count` =
  * its `visits`) with ONE signup row (purpose `newsletter`, source as stored, `page_path` NULL —
  * the old table never kept it, time = its first visit): earlier visits were never stored as rows.
@@ -137,7 +141,7 @@ return new class extends Migration
             $table->index('breed');
         });
 
-        DB::statement("ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_source_check CHECK (source IN ('real_cost', 'breed_quiz'))");
+        DB::statement("ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_source_check CHECK (source IN ('real_cost', 'breed_quiz', 'promise_kit_sample'))");
         DB::statement("ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_stage_check CHECK (stage IS NULL OR stage IN ('adult', 'puppy'))");
         DB::statement('ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_email_lower_check CHECK (email = lower(email))');
         DB::statement("ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_locale_check CHECK (locale IS NULL OR locale ~ '^[a-z]{2}\$')");
@@ -145,13 +149,13 @@ return new class extends Migration
         DB::statement(<<<'SQL'
             INSERT INTO summary_leads (email, consent_version, consented_at, source, locale, breed, stage, visits, last_seen_at, created_at, updated_at)
             SELECT c.email, c.consent_version, c.consented_at,
-                   (SELECT f.source FROM email_signups f WHERE f.email_contact_id = c.id AND f.source IN ('real_cost', 'breed_quiz') ORDER BY f.id ASC LIMIT 1),
+                   (SELECT f.source FROM email_signups f WHERE f.email_contact_id = c.id AND f.source IN ('real_cost', 'breed_quiz', 'promise_kit_sample') ORDER BY f.id ASC LIMIT 1),
                    (SELECT l.locale FROM email_signups l WHERE l.email_contact_id = c.id AND l.locale IS NOT NULL ORDER BY l.id DESC LIMIT 1),
                    (SELECT b.breed FROM email_signups b WHERE b.email_contact_id = c.id AND b.breed IS NOT NULL ORDER BY b.id DESC LIMIT 1),
                    (SELECT t.stage FROM email_signups t WHERE t.email_contact_id = c.id AND t.stage IS NOT NULL ORDER BY t.id DESC LIMIT 1),
                    c.signups_count, c.last_seen_at, c.first_seen_at, c.updated_at
             FROM email_contacts c
-            WHERE EXISTS (SELECT 1 FROM email_signups x WHERE x.email_contact_id = c.id AND x.source IN ('real_cost', 'breed_quiz'))
+            WHERE EXISTS (SELECT 1 FROM email_signups x WHERE x.email_contact_id = c.id AND x.source IN ('real_cost', 'breed_quiz', 'promise_kit_sample'))
         SQL);
 
         Schema::dropIfExists('email_signups');

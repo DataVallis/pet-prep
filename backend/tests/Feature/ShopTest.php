@@ -4,11 +4,12 @@ use App\Filament\Resources\OutboundEmailResource\Pages\ListOutboundEmails;
 use App\Filament\Resources\ShopOrderResource\Pages\ListShopOrders;
 use App\Filament\Resources\ShopOrderResource\Pages\ViewShopOrder;
 use App\Filament\Resources\ShopProductResource\Pages\ListShopProducts;
+use App\Models\EmailContact;
+use App\Models\EmailSignup;
 use App\Models\OutboundEmail;
 use App\Models\ShopAuditLog;
 use App\Models\ShopOrder;
 use App\Models\ShopProduct;
-use App\Models\SummaryLead;
 use App\Models\User;
 use App\Services\Shop\ShopAdminService;
 use App\Services\Shop\ShopFiles;
@@ -165,7 +166,7 @@ describe('thank-you page', function () {
 describe('free sample', function () {
     it('S1: summary-leads with source promise_kit_sample answers a signed sample link (English fallback, null without a file)', function () {
         $lead = fn (string $locale) => postJson('/api/summary-leads', [
-            'email' => 'parent@example.com', 'consent' => true, 'consent_version' => SummaryLead::CONSENT_VERSIONS[0], 'source' => 'promise_kit_sample', 'locale' => $locale,
+            'email' => 'parent@example.com', 'consent' => true, 'consent_version' => EmailSignup::LEGACY_CONSENT_VERSIONS[0], 'source' => 'promise_kit_sample', 'locale' => $locale,
         ]);
         expect($lead('fr')->assertCreated()->json('sample_url'))->toBeNull();
 
@@ -173,6 +174,12 @@ describe('free sample', function () {
         $url = $lead('fr')->assertCreated()->json('sample_url');
         expect($url)->toContain('/api/shop/sample/en');
         $this->get($url)->assertOk()->assertHeader('Content-Type', 'application/pdf');
+
+        // M6-S09 unified e-mail store: one contact, one `newsletter` signup per request, source kept.
+        $contact = EmailContact::sole();
+        expect($contact->email)->toBe('parent@example.com')->and($contact->signups_count)->toBe(2)
+            ->and($contact->signups->pluck('source')->unique()->all())->toBe(['promise_kit_sample'])
+            ->and($contact->signups->pluck('purpose')->unique()->all())->toBe(['newsletter']);
     });
 });
 

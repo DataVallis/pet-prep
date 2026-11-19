@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Lang;
  * @property int $id
  * @property int $email_contact_id
  * @property string $purpose newsletter | early_access
- * @property string $source real_cost | breed_quiz | early_access_form | any ^[a-z0-9_]{1,32}$
+ * @property string $source real_cost | breed_quiz | promise_kit_sample | early_access_form | any ^[a-z0-9_]{1,32}$
  * @property string|null $page_path
  * @property string|null $section
  * @property string|null $locale
@@ -51,8 +51,12 @@ class EmailSignup extends Model
     /** @var list<string> */
     public const STAGES = ['adult', 'puppy'];
 
-    /** Sources the OLD POST /api/summary-leads still accepts (old cached pages). */
-    public const LEGACY_SOURCES = ['real_cost', 'breed_quiz'];
+    /**
+     * Sources POST /api/summary-leads accepts: old cached pages (`real_cost`, `breed_quiz`) and the
+     * free sample form of the Promise kit page (`promise_kit_sample`, M6-S09 shop — its answer
+     * carries the sample link).
+     */
+    public const LEGACY_SOURCES = ['real_cost', 'breed_quiz', 'promise_kit_sample'];
 
     /** The only consent version the OLD POST /api/summary-leads form ever sent. */
     public const LEGACY_CONSENT_VERSIONS = ['2026-11'];
