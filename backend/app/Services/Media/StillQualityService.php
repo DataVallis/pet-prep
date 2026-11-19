@@ -19,6 +19,7 @@ use App\Models\User;
 use App\Services\AppSettingsService;
 use App\Services\Shop\ItemDesigns;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -322,7 +323,12 @@ class StillQualityService
      * Check an item row's candidate (catalogue picture / key image: AI vision; clip: technical)
      * and act on the verdict. Idempotent.
      *
-     * @return 'promoted'|'retrying'|'needs_review'|'waiting'|'busy'|'skipped'
+     * QA #1414 m2: a vision call without a usable verdict (timeout, malformed answer, a dead
+     * worker's call) is not used silently — the check is released and the job tries again later
+     * ('retry'), at most VISION_ERROR_RETRIES times per generation; then the file is used
+     * »not AI-checked« (quality unchecked, System health).
+     *
+     * @return 'promoted'|'retrying'|'needs_review'|'waiting'|'busy'|'skipped'|'retry'
      */
     public function checkItemCandidate(int $rowId): string
     {
@@ -347,11 +353,15 @@ class StillQualityService
 
         if ($check === null || $check->status !== PetMediaQualityCheck::STATUS_DECIDED) {
             $gate = $row->isStill() || $clipModes['ai'] !== AppSettingsService::QUALITY_OFF ? $this->gate() : 'ok';
+            $aiOffReason = $clipModes !== null && $clipModes['ai'] === AppSettingsService::QUALITY_OFF
+                ? ($this->settings->qualityClipAi(fresh: true) ? 'item check switched off' : 'clip AI call switched off')
+                : null;
             if ($gate === 'disabled') {
                 if ($row->isStill()) {
                     return $this->items->promoteCandidate($row, $candidate, PetMedia::QUALITY_UNCHECKED, 'Not AI-checked (no vision profile / fal disabled)') ? 'promoted' : 'skipped';
                 }
                 $clipModes['ai'] = AppSettingsService::QUALITY_OFF; // no vision → the technical check alone
+                $aiOffReason = 'no vision profile / fal disabled';
             }
             if ($gate === 'waiting') {
                 return 'waiting';
@@ -364,7 +374,7 @@ class StillQualityService
 
             if ($check->status !== PetMediaQualityCheck::STATUS_DECIDED) {
                 if ($row->isClip()) {
-                    if ($this->decideItemClip($row, $check, $candidate, $clipModes['technical'], $clipModes['ai']) === 'waiting') {
+                    if ($this->decideItemClip($row, $check, $candidate, $clipModes['technical'], $clipModes['ai'], $row->target_path, $aiOffReason) === 'waiting') {
                         return 'waiting';
                     }
                 } elseif ($this->judge($check, fn (): array => $this->vision->judgeStill(...$this->itemRubric($row), imageUrl: $this->itemCandidateUrl($row), petId: $row->pet_id, itemMediaId: $row->id), $this->itemRubric($row)['rubric']) === 'waiting') {
@@ -372,6 +382,10 @@ class StillQualityService
                 }
             }
             $check->refresh();
+
+            if ($this->retryAfterVisionError($row, $check)) {
+                return 'retry';
+            }
         }
 
         $fresh = $row->fresh();
@@ -514,6 +528,38 @@ class StillQualityService
         return ($rank[$a] ?? 0) >= ($rank[$b] ?? 0) ? $a : $b;
     }
 
+    /** QA #1414 m2: tries of an item check whose vision call gave no verdict (per row + generation). */
+    public const VISION_ERROR_RETRIES = 2;
+
+    /**
+     * A vision error of a call that was made (not a budget wait, not a missing contact sheet / stale
+     * start frame — those would only repeat) releases the decided check so the job can run it again, ≤ VISION_ERROR_RETRIES
+     * per generation (cache counter). True = released (the caller answers 'retry').
+     */
+    private function retryAfterVisionError(ItemMedia $row, ItemMediaQualityCheck $check): bool
+    {
+        // Only a vision call that was really made (it cost something) and gave no verdict; a check
+        // that never called (no contact sheet, stale start frame, ffmpeg missing) would only repeat.
+        $reason = (string) $check->reason;
+        if ($check->ai_status !== PetMediaQualityCheck::AI_ERROR || (float) $check->ai_cost_usd <= 0.0) {
+            return false;
+        }
+
+        $key = "item-check-vision-error:{$row->id}:{$row->generation}";
+        Cache::add($key, 0, now()->addDay());
+        if ((int) Cache::increment($key) > self::VISION_ERROR_RETRIES) {
+            return false;
+        }
+
+        if (filled($check->sheet_path)) {
+            $this->media->disk()->delete((string) $check->sheet_path);
+        }
+        ItemMediaQualityCheck::query()->whereKey($check->id)->delete();
+        Log::warning('StillQualityService: the item check got no verdict — trying the check again', ['item_media_id' => $row->id, 'reason' => $reason]);
+
+        return true;
+    }
+
     /** Did an item check fail on the OBJECT's placement (grounded / integrated / scale)? */
     public static function placementFailed(ItemMediaQualityCheck $check): bool
     {
@@ -534,7 +580,7 @@ class StillQualityService
      *
      * @return 'decided'|'waiting'
      */
-    private function decideItemClip(ItemMedia $row, ItemMediaQualityCheck $check, string $path, string $techMode, string $aiMode): string
+    private function decideItemClip(ItemMedia $row, ItemMediaQualityCheck $check, string $path, string $techMode, string $aiMode, ?string $madeFrom, ?string $aiOffReason = null): string
     {
         $wantAi = $aiMode !== AppSettingsService::QUALITY_OFF;
         $tech = $this->itemClipTechnical($row, $check, $path, $wantAi);
@@ -547,6 +593,9 @@ class StillQualityService
             $image = $this->items->keyImageOf($row);
             if ($tech['sheet_path'] === null || $image === null) {
                 $ai = ['status' => PetMediaQualityCheck::AI_ERROR, 'verdict' => null, 'reason' => 'no contact sheet / start frame', 'cost_usd' => 0.0, 'reported_cost_usd' => null];
+            } elseif ($madeFrom === null || $image->storage_path !== $madeFrom || ! $image->isShown()) {
+                // QA #1414 m4: the start frame sent must be the key image the clip was made from (and shown).
+                $ai = ['status' => PetMediaQualityCheck::AI_ERROR, 'verdict' => null, 'reason' => 'the clip was not made from the current key image', 'cost_usd' => 0.0, 'reported_cost_usd' => null];
             } else {
                 $check->update(['sheet_path' => $tech['sheet_path'], 'rubric' => MediaVisionCheck::RUBRIC_ITEM_CLIP, 'ai_status' => PetMediaQualityCheck::AI_CALLING]);
                 $species = $this->itemSpecies($row);
@@ -569,7 +618,9 @@ class StillQualityService
             $aiFails => (string) $ai['reason'],
             $techFails => 'Technical check: '.$tech['reason'],
             $tech['ok'] === null => 'Not checked: '.($tech['reason'] ?? 'ffmpeg / ffprobe not available'),
-            ! $wantAi || $ai['status'] === PetMediaQualityCheck::AI_PASSED || $skipAi => null,
+            $ai['status'] === PetMediaQualityCheck::AI_PASSED || $skipAi => null,
+            // QA #1414 m1: like a pet clip without its AI call — »not AI-checked«, with why.
+            ! $wantAi => 'Not AI-checked ('.($aiOffReason ?? 'clip AI call or item check switched off').')',
             default => 'Not AI-checked ('.$ai['status'].($ai['reason'] !== null ? ': '.$ai['reason'] : '').')',
         };
 
@@ -698,9 +749,10 @@ class StillQualityService
     }
 
     /**
-     * Check one STORED item key image. Fail + stills mode enforce → the row is regenerated (a new
-     * chain whose first try counts as one of its `max_still_retries`; the clip follows the new key
-     * image); shadow → only recorded. The stored file stays shown until a new one passes.
+     * Check one STORED item key image. Fail + stills mode enforce → the file is flagged and HIDDEN at
+     * once (David 2026-11-19: `flagged_at`, ItemMedia::isShown(); its pets get one PetUpdated) and the
+     * row is regenerated (a new chain whose first try counts as one of its `max_still_retries`; the
+     * clip follows the new key image) — the item reads »Na poti …« until then; shadow → only recorded.
      *
      * @return array{outcome: string, reason: string|null, cost_usd: float}
      */
@@ -740,9 +792,11 @@ class StillQualityService
 
     /**
      * David 2026-11-19 (media:item-recheck): STORED item key images and clips (pet / look rows) whose
-     * current generation was never decided by the CURRENT item rubric (`item` / `item_clip`) — every
+     * current generation was never decided by the CURRENT item rubric (`item` / `item_clip`) nor
+     * checked by an earlier recheck (an AI error is not retried by every run — QA #1414 m2) — every
      * file made before the realism check. Approved and already flagged files are left alone. Key
-     * images first (a failing key image regenerates its clip too), then clips.
+     * images first (a failing key image regenerates its clip too), then clips. The SQL part only —
+     * recheckCandidates() keeps what an owner's pet shows now.
      *
      * @return Builder<ItemMedia>
      */
@@ -756,9 +810,38 @@ class StillQualityService
                 ->whereColumn('item_media_quality_checks.item_media_id', 'item_media.id')
                 ->whereColumn('item_media_quality_checks.generation', 'item_media.generation')
                 ->where('item_media_quality_checks.status', PetMediaQualityCheck::STATUS_DECIDED)
-                ->whereIn('item_media_quality_checks.rubric', [MediaVisionCheck::RUBRIC_ITEM, MediaVisionCheck::RUBRIC_ITEM_CLIP])
-                ->whereIn('item_media_quality_checks.ai_status', [PetMediaQualityCheck::AI_PASSED, PetMediaQualityCheck::AI_FAILED]))
+                ->where(fn ($q) => $q->where(fn ($q) => $q->whereIn('item_media_quality_checks.rubric', [MediaVisionCheck::RUBRIC_ITEM, MediaVisionCheck::RUBRIC_ITEM_CLIP])
+                    ->whereIn('item_media_quality_checks.ai_status', [PetMediaQualityCheck::AI_PASSED, PetMediaQualityCheck::AI_FAILED]))
+                    ->orWhere('item_media_quality_checks.trigger', ItemMediaQualityCheck::TRIGGER_RECHECK)))
             ->orderByRaw("CASE WHEN kind = 'image' THEN 0 ELSE 1 END")->orderBy('id');
+    }
+
+    /**
+     * QA #1414 M2: the files media:item-recheck may check — itemsToRecheck() rows that an active
+     * owner's pet SHOWS now (owns the item, an action item only while in use, the current stage's
+     * row, the current content of its state — ItemMediaService::shownToAnOwner()). Nobody pays for a
+     * file no child sees; a clip whose start frame is not its current key image is left out too.
+     *
+     * @return Collection<int, ItemMedia>
+     */
+    public function recheckCandidates(int $limit = 0): Collection
+    {
+        $out = collect();
+        $this->itemsToRecheck()->chunkById(200, function ($rows) use ($out, $limit): bool {
+            foreach ($rows as $row) {
+                if ($this->items->shownToAnOwner($row)) {
+                    $out->push($row);
+                    if ($limit > 0 && $out->count() >= $limit) {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        });
+
+        // chunkById pages by id — keep the key images first.
+        return $out->sortBy(fn (ItemMedia $r) => [$r->isClip() ? 1 : 0, $r->id])->values();
     }
 
     /**
@@ -767,7 +850,11 @@ class StillQualityService
      * regenerated: a key image as a new chain (its clip follows), a clip whose OBJECT is wrong
      * through a new key image (regenerateKeyImageOf), any other clip fail as a new clip. Shadow →
      * recorded only (`shadow_failed`). A clip whose key image is no longer shown (flagged / being
-     * regenerated) is skipped — it follows the new key image anyway.
+     * regenerated) is skipped — it follows the new key image anyway. QA #1414: a file no owner's pet
+     * shows now is skipped (M2); a failing STORED clip always starts a fresh key image chain — never
+     * a new clip from the same start frame (M4; only an approved key image keeps it); an AI error is
+     * reported as `error` (never `passed`), nothing is recorded on the file (m2); every flag tells
+     * the pets at once (M1).
      *
      * @return array{outcome: string, reason: string|null, cost_usd: float}
      */
@@ -777,6 +864,9 @@ class StillQualityService
 
         if ($row->isClip() && (($image = $this->items->keyImageOf($row)) === null || ! $image->isReady() || ! $image->isShown())) {
             return ['outcome' => 'skipped', 'reason' => 'its key image is being regenerated', 'cost_usd' => 0.0];
+        }
+        if (! $this->items->shownToAnOwner($row)) {
+            return ['outcome' => 'skipped', 'reason' => 'no active owner shows it now', 'cost_usd' => 0.0];
         }
         if ($row->isClip() && ! $this->settings->qualityClipAi(fresh: true)) {
             return ['outcome' => 'unavailable', 'reason' => 'the clip AI check is switched off (Feature switches)', 'cost_usd' => 0.0];
@@ -793,7 +883,7 @@ class StillQualityService
         if ($check->status !== PetMediaQualityCheck::STATUS_DECIDED) {
             $decided = $row->isClip()
                 // The stored clip was served already — only the realism (AI) part decides now.
-                ? $this->decideItemClip($row, $check, $path, AppSettingsService::QUALITY_OFF, AppSettingsService::QUALITY_ENFORCE)
+                ? $this->decideItemClip($row, $check, $path, AppSettingsService::QUALITY_OFF, AppSettingsService::QUALITY_ENFORCE, $row->source_path)
                 : $this->judge($check, fn (): array => $this->vision->judgeStill(...$this->itemRubric($row), imageUrl: $this->items->falFetchUrl($row), petId: $row->pet_id, itemMediaId: $row->id), MediaVisionCheck::RUBRIC_ITEM);
             if ($decided === 'waiting') {
                 return ['outcome' => 'waiting', 'reason' => 'no AI budget now', 'cost_usd' => 0.0];
@@ -801,6 +891,10 @@ class StillQualityService
         }
         $check->refresh();
         $cost = (float) $check->ai_cost_usd;
+
+        if (! in_array($check->ai_status, [PetMediaQualityCheck::AI_PASSED, PetMediaQualityCheck::AI_FAILED], true)) {
+            return ['outcome' => 'error', 'reason' => $check->reason, 'cost_usd' => $cost];
+        }
 
         if ($check->verdict === PetMediaQualityCheck::VERDICT_PASS) {
             $this->items->recordQuality($row, $path, self::passQuality($check), $check->reason);
@@ -819,7 +913,7 @@ class StillQualityService
             return ['outcome' => 'failed', 'reason' => $check->reason, 'cost_usd' => $cost];
         }
 
-        if ($fresh->isClip() && self::placementFailed($check) && $this->items->regenerateKeyImageOf($fresh, null, (string) $check->reason)) {
+        if ($fresh->isClip() && $this->items->regenerateKeyImageOf($fresh, null, (string) $check->reason, freshChain: true)) {
             return ['outcome' => 'regenerating_key_image', 'reason' => $check->reason, 'cost_usd' => $cost];
         }
 

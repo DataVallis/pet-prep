@@ -153,7 +153,10 @@ class PetMediaController extends Controller
      * (`pet` signed into the URL: the row must be that pet's own or its shared look's; a request
      * carrying a Sanctum token must be allowed to listen to the pet, like show()). Without `pet`
      * (only the URLs fal fetches start frames from) a token is refused, like a shared look's
-     * pet_media row. 404 while nothing is stored.
+     * pet_media row. 404 while nothing is stored. QA #1414 M1: a HIDDEN file (flagged by a check —
+     * ItemMedia::isHidden()) is never served on a pet's URL (`pet` = an app URL from a payload) —
+     * 404, so an app that still holds an old URL drops it; the signature-only URL (fal, the
+     * superadmin's Item media »open«) still serves it for review.
      */
     public function showItem(ItemMedia $itemMedia, PetMediaService $service): Response
     {
@@ -172,6 +175,7 @@ class PetMediaController extends Controller
             ? (int) $itemMedia->pet_id === (int) $pet->id
             : $pet->pet_look_id !== null && (int) $itemMedia->pet_look_id === (int) $pet->pet_look_id);
         abort_unless($belongs, 404);
+        abort_if($itemMedia->isHidden(), 404);
 
         return $this->serve($pet, $itemMedia->isServable(), (string) $itemMedia->storage_path, (string) $itemMedia->mime, $service);
     }

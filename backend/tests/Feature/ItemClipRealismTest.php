@@ -1,6 +1,8 @@
 <?php
 
+use App\Console\Commands\ItemRecheckCommand;
 use App\Enums\Species;
+use App\Events\PetUpdated;
 use App\Jobs\SendItemMediaAlert;
 use App\Models\AiSpendLedger;
 use App\Models\AppSettingChange;
@@ -21,6 +23,7 @@ use Illuminate\Http\Client\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Queue;
@@ -114,6 +117,10 @@ function ircFakeFal(?callable $fails = null): void
                 default => MediaVisionCheck::RUBRIC_ITEM,
             };
             $bad = $row === null ? [] : $fails($row, $rubric);
+            if ($bad === ['__malformed']) {
+                // A vision answer without a usable verdict (paid, but no rubric JSON).
+                return Http::response(['output' => 'Sorry, I cannot tell.', 'usage' => ['cost' => 0.0008]]);
+            }
             $answer = array_fill_keys(MediaVisionCheck::STILL_KEYS[$rubric], true);
             foreach ($bad as $key) {
                 $answer[$key] = false;
@@ -518,5 +525,181 @@ describe('rubric', function () {
             ->and(MediaVisionCheck::stillFails(MediaVisionCheck::RUBRIC_ITEM, $ok))->toBeFalse()
             ->and(MediaVisionCheck::stillFails(MediaVisionCheck::RUBRIC_ITEM, ['scale_ok' => false] + $ok))->toBeTrue()
             ->and(MediaVisionCheck::parseStill(MediaVisionCheck::RUBRIC_ITEM, (string) json_encode(['one_animal' => true, 'verdict' => 'pass'])))->toBeNull();
+    });
+});
+
+/* ─────────────────────────── QA #1414 ─────────────────────────── */
+
+/** A pet whose item content was made before the realism check (checks off): image + clip ready, content shown. */
+function ircMadeBefore(string $itemKey = 'bed', string $design = 'dog_bed_navy_bolster'): Pet
+{
+    config(['media.quality_check.stills_mode' => 'off']);
+    useQualityCheck('off');
+    $pet = ircPet($itemKey, $design);
+    app(ItemMediaService::class)->ensure($pet);
+    ircComplete();
+    config(['media.quality_check.stills_mode' => 'enforce']);
+    useQualityCheck('shadow');
+
+    return $pet->fresh();
+}
+
+describe('QA #1414', function () {
+    it('M3: a file flagged before this change (no flagged_at) stays shown; only a new flag hides it', function () {
+        ircNeedsFfmpeg();
+        ircFakeFal();
+        $pet = ircMadeBefore('treats', '');
+        $items = app(ItemMediaService::class);
+        // As production may have them: flagged by the old still check, never hidden.
+        ItemMedia::where('pet_id', $pet->id)->update(['quality' => PetMedia::QUALITY_FLAGGED, 'flagged_at' => null]);
+
+        expect($items->statesFor($pet->fresh())['treats']['outcome'])->toBe(ItemMediaService::OUTCOME_CONTENT)
+            ->and($items->actionReady($pet->fresh(), 'treats'))->toBeTrue();
+
+        $image = ircRow($pet, 'image');
+        expect($items->recordQuality($image, (string) $image->storage_path, PetMedia::QUALITY_FLAGGED, 'pasted'))->toBeTrue()
+            ->and($image->fresh()->isHidden())->toBeTrue()
+            ->and($items->statesFor($pet->fresh())['treats']['image'])->toBeNull()
+            ->and($items->actionReady($pet->fresh(), 'treats'))->toBeFalse();
+    });
+
+    it('M1: a flag tells the pets at once; an app URL of a hidden file answers 404, the signature-only URL still serves it', function () {
+        ircNeedsFfmpeg();
+        ircFakeFal(fn (ItemMedia $row, string $rubric) => $rubric === MediaVisionCheck::RUBRIC_ITEM ? ['item_integrated'] : []);
+        $pet = ircMadeBefore();
+        $image = ircRow($pet, 'image');
+        $appUrl = app(ItemMediaService::class)->signedUrl($image, $pet);
+        $this->get(str_replace('https://api.petprep.si', '', $appUrl))->assertOk();
+
+        Event::fake([PetUpdated::class]);
+        $this->artisan('media:item-recheck --run --max-regenerations=1')->assertSuccessful();
+
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'item_media_ready');
+        expect(ItemMedia::find($image->id)->isHidden())->toBeTrue();
+        $this->get(str_replace('https://api.petprep.si', '', $appUrl))->assertNotFound();
+        $this->get(str_replace('https://api.petprep.si', '', app(ItemMediaService::class)->signedUrl(ItemMedia::find($image->id))))->assertOk();
+    });
+
+    it('M2: the recheck checks only what an active owner shows now (used-up treats and inactive pets are skipped)', function () {
+        ircNeedsFfmpeg();
+        ircFakeFal();
+        $shown = ircMadeBefore();
+        $usedUp = ircMadeBefore('treats', '');
+        PetItem::where('pet_id', $usedUp->id)->update(['quantity_left' => 0]);
+        $inactive = ircMadeBefore('bed', 'dog_bed_round_grey');
+        $inactive->forceFill(['is_active' => false])->saveQuietly();
+
+        $candidates = app(StillQualityService::class)->recheckCandidates();
+        expect($candidates->pluck('pet_id')->unique()->values()->all())->toBe([$shown->id])
+            ->and($candidates->map(fn (ItemMedia $r) => $r->kind)->all())->toBe(['image', 'clip']);
+
+        $this->artisan('media:item-recheck')->assertSuccessful()->expectsOutputToContain('1 key image(s), 1 clip(s).');
+        $this->artisan('media:item-recheck --run')->assertSuccessful();
+        expect(ItemMediaQualityCheck::whereIn('item_media_id', ItemMedia::whereIn('pet_id', [$usedUp->id, $inactive->id])->pluck('id'))->count())->toBe(0);
+    });
+
+    it('M4: a stored clip that fails for any reason starts a fresh key image chain, never a clip from the same start frame', function () {
+        ircNeedsFfmpeg();
+        ircFakeFal(fn (ItemMedia $row, string $rubric) => $rubric === MediaVisionCheck::RUBRIC_ITEM_CLIP && $row->quality === null ? ['anatomy_ok'] : []);
+        $pet = ircMadeBefore();
+        $image = ircRow($pet, 'image');
+        // The key image already used both of its pipeline retries: a fresh chain anyway.
+        $image->update(['quality_retries' => 2]);
+        ItemMediaQualityCheck::create(['item_media_id' => $image->id, 'generation' => $image->generation, 'trigger' => 'recheck', 'status' => 'decided', 'rubric' => 'item', 'verdict' => 'pass', 'ai_status' => 'passed', 'decided_at' => now()]);
+        $edits = ircSubmits('edit')->count();
+
+        $this->artisan('media:item-recheck --run')->assertSuccessful()->expectsOutputToContain('regenerating_key_image 1');
+
+        expect(ircSubmits('edit')->count())->toBe($edits + 1)
+            ->and(ircRow($pet, 'image')->quality_retries)->toBe(1)->and(ircRow($pet, 'image')->prompt_variant)->toBe(0)
+            ->and(ircRow($pet, 'clip')->isHidden())->toBeTrue();
+    });
+
+    it('m1: an item clip checked without its AI part says »not AI-checked« and why', function () {
+        ircNeedsFfmpeg();
+        config(['media.quality_check.clip_ai' => false]);
+        useQualityCheck('enforce');
+        ircFakeFal();
+        $pet = ircPet();
+        app(ItemMediaService::class)->ensure($pet);
+        ircComplete();
+
+        $clip = ircRow($pet, 'clip');
+        expect($clip->quality)->toBe(PetMedia::QUALITY_PASSED_TECHNICAL)
+            ->and($clip->quality_reason)->toBe('Not AI-checked (clip AI call switched off)');
+    });
+
+    it('m2: a vision answer without a verdict is checked again (bounded), then used »not AI-checked«; in a recheck it is an error, not a pass, and not re-selected', function () {
+        ircNeedsFfmpeg();
+        $malformed = 1;
+        ircFakeFal(function (ItemMedia $row, string $rubric) use (&$malformed) {
+            if ($rubric === MediaVisionCheck::RUBRIC_ITEM_CLIP && $malformed > 0) {
+                $malformed--;
+
+                return ['__malformed'];
+            }
+
+            return [];
+        });
+        $pet = ircPet();
+        $stills = app(StillQualityService::class);
+        app(ItemMediaService::class)->ensure($pet);
+        ircComplete();
+        $clip = ircRow($pet, 'clip');
+        // The sync queue cannot release: the check came back »retry«, the clip waits unshown.
+        expect($clip->status)->toBe('running')->and($clip->candidate_path)->not->toBeNull()
+            ->and(ItemMediaQualityCheck::where('item_media_id', $clip->id)->count())->toBe(0);
+        expect($stills->checkItemCandidate($clip->id))->toBe('promoted')
+            ->and($clip->fresh()->quality)->toBe(PetMedia::QUALITY_PASSED);
+
+        // Always malformed: after VISION_ERROR_RETRIES the clip is used unchecked.
+        $malformed = 99;
+        $other = ircPet('bed', 'dog_bed_round_grey');
+        app(ItemMediaService::class)->ensure($other);
+        ircComplete();
+        $otherClip = ircRow($other, 'clip');
+        // The pipeline's own run was try 1 (»retry«); the job's next runs: try 2 »retry«, try 3 decides.
+        $outcomes = [];
+        for ($i = 0; $i < StillQualityService::VISION_ERROR_RETRIES; $i++) {
+            $outcomes[] = $stills->checkItemCandidate($otherClip->id);
+        }
+        expect($outcomes)->toBe(['retry', 'promoted'])->and($otherClip->fresh()->quality)->toBe(PetMedia::QUALITY_UNCHECKED)
+            ->and(AiSpendLedger::where('item_media_id', $otherClip->id)->where('purpose', 'quality_check')->count())->toBe(StillQualityService::VISION_ERROR_RETRIES + 1);
+
+        // A recheck whose vision call errors: »error«, nothing recorded on the file, not audited, not re-selected.
+        $old = ircMadeBefore('bed', 'dog_bed_wicker_checked');
+        $malformed = 99;
+        ItemMediaQualityCheck::create(['item_media_id' => ircRow($old, 'image')->id, 'generation' => ircRow($old, 'image')->generation, 'trigger' => 'recheck', 'status' => 'decided', 'rubric' => 'item', 'verdict' => 'pass', 'ai_status' => 'passed', 'decided_at' => now()]);
+        $audits = AppSettingChange::where('key', ItemRecheckCommand::AUDIT_KEY)->count();
+        // Two clips: the old bed's and the one used unchecked above (never AI-decided).
+        $this->artisan('media:item-recheck --run')->assertSuccessful()->expectsOutputToContain('error 2');
+        expect(ircRow($old, 'clip')->quality)->toBeNull()->and($otherClip->fresh()->quality)->toBe(PetMedia::QUALITY_UNCHECKED)
+            ->and(AppSettingChange::where('key', ItemRecheckCommand::AUDIT_KEY)->count())->toBe($audits);
+        $this->artisan('media:item-recheck')->assertSuccessful()->expectsOutputToContain('0 key image(s), 0 clip(s)');
+    });
+
+    it('m4: a clip whose start frame is not its current key image is never judged against it (no paid call)', function () {
+        ircNeedsFfmpeg();
+        ircFakeFal();
+        $pet = ircMadeBefore();
+        $clip = ircRow($pet, 'clip');
+        $clip->update(['source_path' => 'somewhere/else.jpg']);
+        $calls = ircVision()->count();
+
+        expect(app(StillQualityService::class)->recheckItemRealism($clip->fresh())['outcome'])->toBe('skipped')
+            ->and(ircVision()->count())->toBe($calls);
+    });
+
+    it('m5: one real run at a time; --max-regenerations=0 is fine in a dry run', function () {
+        ircFakeFal();
+        $this->artisan('media:item-recheck --max-regenerations=0')->assertSuccessful()->expectsOutputToContain('at most 0 per run')->expectsOutputToContain('Dry run');
+
+        ircNeedsFfmpeg();
+        ircMadeBefore();
+        $lock = Cache::lock(ItemRecheckCommand::LOCK_KEY, 60);
+        expect($lock->get())->toBeTrue();
+        $this->artisan('media:item-recheck --run')->assertSuccessful()->expectsOutputToContain('Another media:item-recheck --run is running');
+        $lock->release();
+        expect(ItemMediaQualityCheck::where('trigger', 'recheck')->count())->toBe(0);
     });
 });

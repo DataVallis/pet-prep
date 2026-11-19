@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Schema;
  *  - `item_media_quality_checks.sheet_path`: the contact sheet of an item clip sent to the vision
  *    model (kept only for a failed clip, like `pet_media_quality_checks.sheet_path`).
  *  - trigger `recheck` = a `media:item-recheck` check of a stored file.
+ *  - `item_media.flagged_at`: when a STORED file was flagged by a check from this change on. Only
+ *    such a file is hidden (ItemMedia::isShown()); rows flagged before this migration (null) keep
+ *    their old behaviour — still shown, no newly locked treats (QA #1414 M3: deploy-safe without
+ *    reading production data). Cleared whenever a new file is stored.
  * Additive (nullable columns, a wider CHECK) — existing rows stay as they are.
  */
 return new class extends Migration
@@ -31,6 +35,10 @@ return new class extends Migration
 
         DB::statement('ALTER TABLE item_media_quality_checks DROP CONSTRAINT IF EXISTS item_media_quality_checks_trigger_check');
         DB::statement("ALTER TABLE item_media_quality_checks ADD CONSTRAINT item_media_quality_checks_trigger_check CHECK (trigger IN ('pipeline', 'command', 'recheck'))");
+
+        Schema::table('item_media', function (Blueprint $table) {
+            $table->timestamp('flagged_at')->nullable();
+        });
     }
 
     public function down(): void
@@ -46,6 +54,10 @@ return new class extends Migration
 
         Schema::table('item_media_quality_checks', function (Blueprint $table) {
             $table->dropColumn(['rubric', 'sheet_path']);
+        });
+
+        Schema::table('item_media', function (Blueprint $table) {
+            $table->dropColumn('flagged_at');
         });
     }
 };

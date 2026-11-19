@@ -65,6 +65,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $candidate_mime
  * @property string|null $quality
  * @property string|null $quality_reason
+ * @property Carbon|null $flagged_at
  * @property Carbon|null $updated_at
  */
 class ItemMedia extends Model
@@ -102,6 +103,8 @@ class ItemMedia extends Model
         'attempts', 'auto_retries', 'prompt_variant', 'download_attempts', 'exhausted_at', 'alerted_at', 'completed_at',
         // David 2026-11-04 (StillQualityService): seed of a regeneration, check retries, the file waiting for its check.
         'seed_override', 'quality_retries', 'candidate_path', 'candidate_bytes', 'candidate_mime', 'quality', 'quality_reason',
+        // David 2026-11-19 (QA #1414 M3): when a stored file was flagged (hidden) — null for rows flagged before.
+        'flagged_at',
     ];
 
     protected function casts(): array
@@ -121,6 +124,7 @@ class ItemMedia extends Model
             'exhausted_at' => 'datetime',
             'alerted_at' => 'datetime',
             'completed_at' => 'datetime',
+            'flagged_at' => 'datetime',
         ];
     }
 
@@ -157,15 +161,22 @@ class ItemMedia extends Model
     }
 
     /**
-     * David 2026-11-19: a stored file a pet may SHOW — servable and not rejected by an enforced
-     * check of the stored file (`quality = flagged`, media:still-check / media:item-recheck, or a
-     * key image whose clip check found the item pasted / floating / too small). A flagged file
-     * stays servable for /admin, but no payload, album or clip start frame uses it; its row is
-     * being regenerated (or given up → the item is shown without that content).
+     * David 2026-11-19: a stored file a pet may SHOW — servable and not HIDDEN. Hidden = flagged by a
+     * check of the stored file from 2026-11-19 on (`quality = flagged` AND `flagged_at` set:
+     * media:still-check / media:item-recheck, or a key image whose clip check found the item pasted /
+     * floating / too small). Rows flagged before that (`flagged_at` null) keep the old behaviour —
+     * shown (QA #1414 M3: no newly hidden files or locked treats at deploy). A hidden file stays
+     * servable for /admin and fal, but no payload, album, app URL or clip start frame uses it.
      */
     public function isShown(): bool
     {
-        return $this->isServable() && $this->quality !== PetMedia::QUALITY_FLAGGED;
+        return $this->isServable() && ! $this->isHidden();
+    }
+
+    /** Flagged by a check from 2026-11-19 on — never shown to a pet ({@see isShown()}). */
+    public function isHidden(): bool
+    {
+        return $this->quality === PetMedia::QUALITY_FLAGGED && $this->flagged_at !== null;
     }
 
     /** The current generation is stored. */
