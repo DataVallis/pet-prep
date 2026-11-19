@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "da88342e68a5b7030b73c58a3175c892b0f019d1091a6a1e55188768595943a0"
+      "sha256": "08ed87a5155114d9fea2f122bf60d2b866a63cd7800ef10caa80c834ba22d7d7"
     }
   },
   "suitability_vocabulary": {
@@ -72250,7 +72250,26 @@
         "file": "welsh-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/welsh-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "black-grizzle-tan",
+            "label": {
+              "en": "Black grizzle and tan",
+              "sl": "Črno-sivkast z rjavimi oznakami"
+            },
+            "file": "dog/welsh-terrier--black-grizzle-tan.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",

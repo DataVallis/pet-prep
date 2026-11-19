@@ -288,4 +288,8 @@ return [
         'isabella' => 'dogs/mudi--isabella.webp',
         'blue-merle' => 'dogs/mudi--blue-merle.webp',
     ],
+    'welsh_terrier' => [
+        'black-tan' => 'dogs/welsh-terrier.webp',
+        'black-grizzle-tan' => 'dogs/welsh-terrier--black-grizzle-tan.webp',
+    ],
 ];
