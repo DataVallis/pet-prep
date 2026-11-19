@@ -4186,6 +4186,14 @@
         }
       ],
       "notes": "RKC breed page (dog-data S872, 2026-11-16; names as returned): minimum — the genetic-diversity link (inbreeding_coi); Best Practice — the BVA/KC/ISDS eye scheme. 'We don’t currently offer a breed-specific DNA testing package for this breed' (S872). No new key."
+    },
+    "mudi": {
+      "status": "none_recommended",
+      "basis": {
+        "source_id": "S950",
+        "quote": "At this time this breed does not have any recommended pre-breeding health screening in place"
+      },
+      "tests": []
     }
   }
 }
