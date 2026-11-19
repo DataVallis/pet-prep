@@ -134,9 +134,13 @@ return new class extends Migration
 
         Schema::dropIfExists('lemonsqueezy_events');
 
-        // The free promise kit sample is handed out for an e-mail (spec §4.2).
-        DB::statement('ALTER TABLE summary_leads DROP CONSTRAINT summary_leads_source_check');
-        DB::statement("ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_source_check CHECK (source IN ('real_cost', 'breed_quiz', 'promise_kit_sample'))");
+        // The free promise kit sample is handed out for an e-mail (spec §4.2). summary_leads is gone
+        // once 2027_04_24_120000_create_email_contacts_and_signups ran (its source is free text there);
+        // the guard only matters when a test re-runs this migration on the newer schema.
+        if (Schema::hasTable('summary_leads')) {
+            DB::statement('ALTER TABLE summary_leads DROP CONSTRAINT summary_leads_source_check');
+            DB::statement("ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_source_check CHECK (source IN ('real_cost', 'breed_quiz', 'promise_kit_sample'))");
+        }
 
         Schema::table('gift_vouchers', function (Blueprint $table) {
             $table->dropUnique(['ls_license_key_id']);
@@ -156,9 +160,11 @@ return new class extends Migration
             throw new RuntimeException('Refusing to roll back M6-S09: Stripe gift vouchers exist. Decide with David first.');
         }
 
-        DB::table('summary_leads')->where('source', 'promise_kit_sample')->update(['source' => 'real_cost']);
-        DB::statement('ALTER TABLE summary_leads DROP CONSTRAINT summary_leads_source_check');
-        DB::statement("ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_source_check CHECK (source IN ('real_cost', 'breed_quiz'))");
+        if (Schema::hasTable('summary_leads')) { // gone after 2027_04_24_120000 (see up())
+            DB::table('summary_leads')->where('source', 'promise_kit_sample')->update(['source' => 'real_cost']);
+            DB::statement('ALTER TABLE summary_leads DROP CONSTRAINT summary_leads_source_check');
+            DB::statement("ALTER TABLE summary_leads ADD CONSTRAINT summary_leads_source_check CHECK (source IN ('real_cost', 'breed_quiz'))");
+        }
 
         Schema::table('gift_vouchers', function (Blueprint $table) {
             $table->dropConstrainedForeignId('shop_order_id');
