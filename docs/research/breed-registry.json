@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "301d3e3eb617c420c13a679638bc0ca143f010cb4068b439aa1a594361d6d47f"
+      "sha256": "6924ccea951135aaefbf50e446389f1b768e5616d7ea192849ec32e1f0162ddb"
     }
   },
   "suitability_vocabulary": {
@@ -21941,7 +21941,26 @@
         "file": "belgian-malinois.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn with black mask",
+              "sl": "Plav s črno masko"
+            },
+            "file": "dog/belgian-malinois.webp",
+            "default": true
+          },
+          {
+            "key": "mahogany",
+            "label": {
+              "en": "Mahogany with black mask",
+              "sl": "Mahagonij s črno masko"
+            },
+            "file": "dog/belgian-malinois--mahogany.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
@@ -22556,7 +22575,26 @@
         "file": "basset-hound.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Trobarven"
+            },
+            "file": "dog/basset-hound.webp",
+            "default": true
+          },
+          {
+            "key": "lemon-white",
+            "label": {
+              "en": "Lemon and white",
+              "sl": "Limonasto-bel"
+            },
+            "file": "dog/basset-hound--lemon-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -23840,7 +23878,74 @@
         "file": "english-cocker-spaniel.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "golden",
+            "label": {
+              "en": "Golden",
+              "sl": "Zlat"
+            },
+            "file": "dog/english-cocker-spaniel.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/english-cocker-spaniel--black.webp"
+          },
+          {
+            "key": "liver",
+            "label": {
+              "en": "Liver",
+              "sl": "Čokoladno rjav"
+            },
+            "file": "dog/english-cocker-spaniel--liver.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/english-cocker-spaniel--black-tan.webp"
+          },
+          {
+            "key": "blue-roan",
+            "label": {
+              "en": "Blue roan",
+              "sl": "Modro mešan"
+            },
+            "file": "dog/english-cocker-spaniel--blue-roan.webp"
+          },
+          {
+            "key": "orange-roan",
+            "label": {
+              "en": "Orange roan",
+              "sl": "Oranžno mešan"
+            },
+            "file": "dog/english-cocker-spaniel--orange-roan.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/english-cocker-spaniel--black-white.webp"
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Trobarven"
+            },
+            "file": "dog/english-cocker-spaniel--tricolour.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -25102,7 +25207,42 @@
         "file": "pug.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plav"
+            },
+            "file": "dog/pug.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/pug--black.webp"
+          },
+          {
+            "key": "apricot",
+            "label": {
+              "en": "Apricot",
+              "sl": "Marelični"
+            },
+            "file": "dog/pug--apricot.webp"
+          },
+          {
+            "key": "silver",
+            "label": {
+              "en": "Silver",
+              "sl": "Srebrn"
+            },
+            "file": "dog/pug--silver.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -25708,7 +25848,34 @@
         "file": "rough-collie.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "sable-white",
+            "label": {
+              "en": "Sable and white",
+              "sl": "Sobolji z belo"
+            },
+            "file": "dog/rough-collie.webp",
+            "default": true
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Trobarven"
+            },
+            "file": "dog/rough-collie--tricolour.webp"
+          },
+          {
+            "key": "blue-merle-white",
+            "label": {
+              "en": "Blue merle and white",
+              "sl": "Modri merle z belo"
+            },
+            "file": "dog/rough-collie--blue-merle-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -26331,7 +26498,34 @@
         "file": "mastiff.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/mastiff.webp",
+            "default": true
+          },
+          {
+            "key": "apricot",
+            "label": {
+              "en": "Apricot",
+              "sl": "Marelični"
+            },
+            "file": "dog/mastiff--apricot.webp"
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/mastiff--brindle.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
@@ -26864,7 +27058,34 @@
         "file": "shiba-inu.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/shiba-inu.webp",
+            "default": true
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn s porjavelimi oznakami"
+            },
+            "file": "dog/shiba-inu--black-tan.webp"
+          },
+          {
+            "key": "sesame",
+            "label": {
+              "en": "Sesame",
+              "sl": "Sezamov"
+            },
+            "file": "dog/shiba-inu--sesame.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -27490,7 +27711,26 @@
         "file": "rhodesian-ridgeback.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red-wheaten",
+            "label": {
+              "en": "Red wheaten",
+              "sl": "Rdeče pšenični"
+            },
+            "file": "dog/rhodesian-ridgeback.webp",
+            "default": true
+          },
+          {
+            "key": "light-wheaten",
+            "label": {
+              "en": "Light wheaten",
+              "sl": "Svetlo pšenični"
+            },
+            "file": "dog/rhodesian-ridgeback--light-wheaten.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -28154,7 +28394,42 @@
         "file": "papillon.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red-white",
+            "label": {
+              "en": "White and red",
+              "sl": "Belo-rdeč"
+            },
+            "file": "dog/papillon.webp",
+            "default": true
+          },
+          {
+            "key": "sable-white",
+            "label": {
+              "en": "White and sable",
+              "sl": "Belo-sobolj"
+            },
+            "file": "dog/papillon--sable-white.webp"
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Tribarven"
+            },
+            "file": "dog/papillon--tricolour.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "White and black",
+              "sl": "Belo-črn"
+            },
+            "file": "dog/papillon--black-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -28764,7 +29039,34 @@
         "file": "portuguese-water-dog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/portuguese-water-dog.webp",
+            "default": true
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/portuguese-water-dog--black-white.webp"
+          },
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "dog/portuguese-water-dog--brown.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -30001,7 +30303,34 @@
         "file": "newfoundland.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/newfoundland.webp",
+            "default": true
+          },
+          {
+            "key": "landseer",
+            "label": {
+              "en": "Landseer (white and black)",
+              "sl": "Landseer (belo-črn)"
+            },
+            "file": "dog/newfoundland--landseer.webp"
+          },
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "dog/newfoundland--brown.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
