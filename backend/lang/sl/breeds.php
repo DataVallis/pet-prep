@@ -125,6 +125,7 @@ return [
     'spinone_italiano' => 'Italijanski ostrodlaki ptičar',
     'pointer' => 'Angleški pointer',
     'mudi' => 'Mudi',
+    'welsh_terrier' => 'valižanski terier',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
