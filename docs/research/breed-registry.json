@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "08ed87a5155114d9fea2f122bf60d2b866a63cd7800ef10caa80c834ba22d7d7"
+      "sha256": "301d3e3eb617c420c13a679638bc0ca143f010cb4068b439aa1a594361d6d47f"
     }
   },
   "suitability_vocabulary": {
@@ -72866,7 +72866,12 @@
           "S964"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "norwegian-elkhound.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],

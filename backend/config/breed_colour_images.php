@@ -292,4 +292,7 @@ return [
         'black-tan' => 'dogs/welsh-terrier.webp',
         'black-grizzle-tan' => 'dogs/welsh-terrier--black-grizzle-tan.webp',
     ],
+    'norwegian_elkhound' => [
+        'grey' => 'dogs/norwegian-elkhound.webp',
+    ],
 ];

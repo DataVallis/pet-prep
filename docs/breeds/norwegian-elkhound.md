@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `norwegian_elkhound` (viri S960–S966; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: ni preverjen (strani RKC niso bile dosegljive) |
 | Izvor | FCI št. 242 (»Norwegian Elkhound Grey«, Norsk Elghund Grå), skupina 5 (špici in pasme primitivnega tipa), sekcija 2 (nordijski lovski psi), Norveška (S960) — črni norveški losovec (FCI 268) je druga pasma in ni v aplikaciji |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 124. mesto »Norwegian Elkhound« (S174, zabeleženo 2026-11-19 v vrstici 127 čakalne vrste) |
-| PR-ji | pet-prep #1400 (pasma) · portret pet-prep (zagon `breed-portraits.yml`) · barvne različice: ni potrebe (le ena standardna barva) · spletna stran: pet-prep-website `feat/register-norwegian-elkhound` |
+| PR-ji | pet-prep #1400 (pasma, združen `beafbc8`) · portret pet-prep (zagon `breed-portraits.yml` 44475585200, sprejet v prvem poskusu) · barvne različice: ni potrebe (le ena standardna barva) · spletna stran: pet-prep-website `feat/register-norwegian-elkhound` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108. meseca — predlog; 4 → 3 → 2 obroka; učenje 1,2×) | 🛠 | 💶 izziv | M5-R10-128 | 2026-11-19 |
 | Česanje vsak dan, »Nova izkušnja« za mladička, ščetkanje zob vsak dan | 🛠 | 💶 izziv | M5-R13 / R15 / R17 | 2026-11-19 |
 | Barve (ena standardna barva — siva; izbirnik brez izbire) | 🛠 | 💶 izziv | M5-R21 | 2026-11-19 |
-| AI portret v registru | 🗓 po združitvi (§8) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/norwegian-elkhound`, `/sl/zivali/psi/norveski-losovec`) | 🗓 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), siv z »oprsnico«, pokončna ušesa, rep zavit čez hrbet, na svetlo sivem ozadju | — | M5-R11-04 | 2026-11-19 |
+| Stran na petprep.si (`/animals/dogs/norwegian-elkhound`, `/sl/zivali/psi/norveski-losovec`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
