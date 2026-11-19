@@ -1530,6 +1530,19 @@
             "prompt_hash": "sha256:7a62eb9199a9e68ab1fec6fb9cf9ee0947197863ca418c8a1264070ac45b2535",
             "generated_at": "2026-11-18T06:51:12+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "mudi",
+            "species": "dog",
+            "colour": "black",
+            "file": "dog/mudi.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:ac2bc93dbb2db51eb61d51c3a45aaa695e35cd458f9aec003e874afdeb162186",
+            "generated_at": "2026-11-19T01:03:58+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
