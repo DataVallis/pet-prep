@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "a168d276f203fcddc49648c8ae276d842832fc77c9ee88af3c12d9e8494140e8"
+      "sha256": "da88342e68a5b7030b73c58a3175c892b0f019d1091a6a1e55188768595943a0"
     }
   },
   "suitability_vocabulary": {
@@ -72246,7 +72246,12 @@
           "S959"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "welsh-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
