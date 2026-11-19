@@ -84,16 +84,23 @@ return new class extends Migration
         DB::statement("ALTER TABLE email_signups ADD CONSTRAINT email_signups_quiz_result_check CHECK (quiz_result IS NULL OR (jsonb_typeof(quiz_result) = 'array' AND jsonb_array_length(quiz_result) <= 3))");
 
         if (Schema::hasTable('summary_leads')) {
-            // The old container may still be answering: block writes to the old table until this
-            // migration's transaction ends, so no lead can arrive between the copy and the drop.
+            // The old container may still be answering: block the old table until this migration's
+            // transaction ends, so no lead can arrive between the copy and the drop. ACCESS EXCLUSIVE
+            // up front (QA #1418 m1): a SHARE lock upgraded by the DROP could deadlock with an old
+            // request holding ROW SHARE while it waits for our lock.
             if (DB::getDriverName() === 'pgsql') {
-                DB::statement('LOCK TABLE summary_leads IN SHARE MODE');
+                DB::statement('LOCK TABLE summary_leads IN ACCESS EXCLUSIVE MODE');
             }
             $locales = "'".implode("', '", WebsiteLocale::ALL)."'";
 
             DB::statement(<<<'SQL'
                 INSERT INTO email_contacts (email, first_seen_at, last_seen_at, signups_count, consent_version, consented_at, created_at, updated_at)
-                SELECT email, created_at, last_seen_at, visits, consent_version, consented_at, created_at, updated_at
+                SELECT email,
+                       COALESCE(created_at, consented_at, CURRENT_TIMESTAMP),
+                       COALESCE(last_seen_at, updated_at, created_at, consented_at, CURRENT_TIMESTAMP),
+                       visits, consent_version, consented_at,
+                       COALESCE(created_at, consented_at, CURRENT_TIMESTAMP),
+                       COALESCE(updated_at, created_at, consented_at, CURRENT_TIMESTAMP)
                 FROM summary_leads
             SQL);
             // The old breed slug allowed hyphens; the breed type ids of the new contract use underscores.
@@ -101,7 +108,8 @@ return new class extends Migration
                 INSERT INTO email_signups (email_contact_id, purpose, source, page_path, locale, breed, stage, consent_version, created_at)
                 SELECT c.id, 'newsletter', s.source, NULL,
                        CASE WHEN s.locale IN ({$locales}) THEN s.locale END,
-                       replace(s.breed, '-', '_'), s.stage, s.consent_version, s.created_at
+                       replace(s.breed, '-', '_'), s.stage, s.consent_version,
+                       COALESCE(s.created_at, s.consented_at, CURRENT_TIMESTAMP)
                 FROM summary_leads s
                 JOIN email_contacts c ON c.email = s.email
             SQL);
