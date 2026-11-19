@@ -136,7 +136,7 @@ class ItemMediaResource extends Resource
                 Tables\Columns\TextColumn::make('file')->label('File')
                     ->getStateUsing(fn (ItemMedia $r): ?string => $r->isServable() ? 'open' : null)->placeholder('—')
                     ->url(fn (ItemMedia $r): ?string => $r->isServable()
-                        ? app(ItemMediaService::class)->signedUrl($r, $r->scope === ItemMedia::SCOPE_PET ? $r->pet : $r->look?->pets()->first())
+                        ? app(ItemMediaService::class)->signedUrl($r, $r->isHidden() ? null : ($r->scope === ItemMedia::SCOPE_PET ? $r->pet : $r->look?->pets()->first()))
                         : null, shouldOpenInNewTab: true),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime()->sortable(),
             ])

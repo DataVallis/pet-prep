@@ -28,6 +28,10 @@ use Throwable;
  * semi-transparent / duplicate body parts (leftovers of the reference pose), the scene (item) as
  * described, no text / watermark, no people / hands. Empty-room and object-only rubrics for the
  * empty pose and catalogue pictures.
+ *
+ * Items (David 2026-11-19, a pasted, floating bed under a Dobermann lying on top of it): the item key
+ * image rubric adds grounded / integrated / scale, and judgeItemClip() checks an item clip (contact
+ * sheet + its start frame) with the same realism questions.
  */
 class MediaVisionCheck
 {
@@ -131,12 +135,35 @@ class MediaVisionCheck
     /** Rubric of a catalogue picture: the object alone. */
     public const RUBRIC_OBJECT = 'object';
 
+    /**
+     * Rubric of an ITEM key image (David 2026-11-19: a pasted, floating, studio-lit bed under a
+     * Dobermann lying on top of it passed the animal rubric): the animal questions + the item sits
+     * naturally in the room (grounded, same light / focus / perspective) at a plausible scale.
+     */
+    public const RUBRIC_ITEM = 'item';
+
+    /** Rubric of an ITEM clip (contact sheet + its start frame) — judgeItemClip(). */
+    public const RUBRIC_ITEM_CLIP = 'item_clip';
+
     /** The boolean keys of each still rubric (all must be true to pass). */
     public const STILL_KEYS = [
         self::RUBRIC_ANIMAL => ['one_animal', 'legs_ok', 'no_ghost_parts', 'scene_ok', 'clean'],
         self::RUBRIC_EMPTY => ['no_animal', 'scene_ok', 'clean'],
         self::RUBRIC_OBJECT => ['object_ok', 'no_animal', 'clean'],
+        self::RUBRIC_ITEM => ['one_animal', 'legs_ok', 'no_ghost_parts', 'scene_ok', 'clean', 'item_grounded', 'item_integrated', 'scale_ok'],
+        self::RUBRIC_ITEM_CLIP => ['anatomy_ok', 'same_animal', 'action_done', 'item_grounded', 'item_integrated', 'scale_ok', 'no_artifacts'],
     ];
+
+    /** The keys of the item rubrics that judge the OBJECT in the scene (a fail of these in a clip = its start frame is wrong). */
+    public const ITEM_PLACEMENT_KEYS = ['item_grounded', 'item_integrated', 'scale_ok'];
+
+    /** The item realism questions shared by the key image and the clip rubric (`$animal` = dog | cat). */
+    private static function itemQuestions(string $animal): string
+    {
+        return "- item_grounded: the object rests on the floor like a real object — a soft contact shadow where it touches the floor, no gap under it, not floating or hovering, no separate, offset or detached shadow blob beside or under it.\n"
+            ."- item_integrated: the object looks photographed in this room together with the {$animal}, not pasted in: the same light direction, softness, colour temperature and brightness as the room, the same focus, depth of field, sharpness and grain as the floor around it, the same perspective as the floor; no cut-out edges, no studio-lit or razor-sharp product look in a softer room.\n"
+            ."- scale_ok: the object's size is plausible next to the {$animal}; a bed is big enough that the {$animal} lies INSIDE it (on its cushion, within its rim / sides) — not on top of a too-small bed with its body overhanging; bowls and toys have a natural size for this {$animal}.\n";
+    }
 
     /**
      * David 2026-11-04: the vision check of ONE still image (fal fetches `$imageUrl`). Same budget,
@@ -145,6 +172,49 @@ class MediaVisionCheck
      * @return array{status: string, verdict: array<string, mixed>|null, reason: string|null, cost_usd: float, reported_cost_usd: float|null}
      */
     public function judgeStill(string $rubric, Species $species, string $scene, string $imageUrl, ?int $petId = null, ?int $petMediaId = null, ?int $itemMediaId = null): array
+    {
+        return $this->runRubric($rubric, $this->stillPrompt($rubric, $species, $scene), self::STILL_SYSTEM_PROMPT, [$imageUrl], $petId, $petMediaId, $itemMediaId);
+    }
+
+    public const ITEM_CLIP_SYSTEM_PROMPT = 'You review short AI-generated video clips of a pet with an object for a children\'s app. '
+        .'Be strict about anatomy and about whether the object looks real in the room. Answer with ONE JSON object only, no markdown, no other text.';
+
+    /**
+     * David 2026-11-19: the AI check of an ITEM clip — image 1 = a contact sheet of its frames, image
+     * 2 = its start frame (the item key image, full size: compositing shows best there). Rubric
+     * RUBRIC_ITEM_CLIP (every key true + verdict pass). Same budget, ledger and statuses as judgeStill().
+     *
+     * @return array{status: string, verdict: array<string, mixed>|null, reason: string|null, cost_usd: float, reported_cost_usd: float|null}
+     */
+    public function judgeItemClip(Species $species, string $intent, string $scene, string $sheetUrl, string $startFrameUrl, ?int $petId, int $itemMediaId): array
+    {
+        return $this->runRubric(self::RUBRIC_ITEM_CLIP, $this->itemClipPrompt($species, $intent, $scene), self::ITEM_CLIP_SYSTEM_PROMPT, [$sheetUrl, $startFrameUrl], $petId, null, $itemMediaId);
+    }
+
+    /** The item clip rubric (fixed; only the species, the motion and the scene change). */
+    public function itemClipPrompt(Species $species, string $intent, string $scene): string
+    {
+        $animal = $species === Species::Cat ? 'cat' : 'dog';
+        $json = '{'.implode(', ', array_map(fn (string $k) => "\"{$k}\": true|false", self::STILL_KEYS[self::RUBRIC_ITEM_CLIP])).', "verdict": "pass"|"fail", "reason": "<one short sentence>"}';
+
+        return 'Image 1 is a contact sheet: frames of one short clip in time order (left to right, then the next row). '
+            ."Image 2 is the clip's first frame at full size. The clip should show the {$animal} {$scene}, {$intent}.\n"
+            ."Check (in every frame and in image 2):\n"
+            ."- anatomy_ok: the {$animal} has a normal body: four normal legs, one head, one tail, no melting, merging, stretching or morphing body parts, no legs that dissolve or appear.\n"
+            ."- same_animal: it is the same {$animal} in every frame (breed, colour, markings).\n"
+            ."- action_done: the clip really shows that, with natural movement.\n"
+            .self::itemQuestions($animal)
+            ."- no_artifacts: no visual glitches (flicker, a second animal, people, hands, text, sudden cuts, objects appearing, changing or changing size).\n"
+            .'Be strict: if the object looks pasted in, floats, has a detached shadow, or is too small for the '.$animal.', that key is false. Answer only: '.$json;
+    }
+
+    /**
+     * One paid vision call with a fixed boolean rubric (STILL_KEYS[$rubric]).
+     *
+     * @param  list<string>  $imageUrls
+     * @return array{status: string, verdict: array<string, mixed>|null, reason: string|null, cost_usd: float, reported_cost_usd: float|null}
+     */
+    private function runRubric(string $rubric, string $prompt, string $system, array $imageUrls, ?int $petId, ?int $petMediaId, ?int $itemMediaId): array
     {
         $none = ['verdict' => null, 'cost_usd' => 0.0, 'reported_cost_usd' => null];
 
@@ -158,9 +228,9 @@ class MediaVisionCheck
         }
 
         $input = [
-            'prompt' => $this->stillPrompt($rubric, $species, $scene),
-            'system_prompt' => self::STILL_SYSTEM_PROMPT,
-            'image_urls' => [$imageUrl],
+            'prompt' => $prompt,
+            'system_prompt' => $system,
+            'image_urls' => $imageUrls,
         ] + $profile->params;
 
         try {
@@ -215,6 +285,15 @@ class MediaVisionCheck
                 ."- scene_ok: it is a realistic photograph of an empty room with a clear floor.\n"
                 ."- clean: no text, letters, watermark or logo, and no people or hands.\n"
                 .'Answer only: '.$json,
+            self::RUBRIC_ITEM => "The image is an AI edit of a photograph of a {$animal} in a room. It should show the {$animal} {$scene}.\n"
+                ."Check:\n"
+                ."- one_animal: exactly one {$animal} is in the picture — no second animal and no duplicate or partial copy of it.\n"
+                ."- legs_ok: the {$animal} has exactly four legs and four paws, each either visible or plausibly hidden by its own body or by the object; one head and one tail; no extra, missing, detached or floating legs or paws (count every paw you can see, also under or beside the object).\n"
+                ."- no_ghost_parts: nothing semi-transparent, ghost-like, faded or duplicated anywhere: no leftover paws, legs, tail, head or body outline on the floor or elsewhere.\n"
+                ."- scene_ok: the picture shows what is described above (the named object is there, and the {$animal} is in, on or with it as described).\n"
+                ."- clean: no text, letters, watermark or logo, and no people, children or hands.\n"
+                .self::itemQuestions($animal)
+                .'Be strict: if the object looks pasted in, floats, has a detached shadow, or is too small for the '.$animal.', that key is false. Answer only: '.$json,
             default => "The image is an AI edit of a photograph of a {$animal}. It should show the {$animal} {$scene}.\n"
                 ."Check:\n"
                 ."- one_animal: exactly one {$animal} is in the picture — no second animal and no duplicate or partial copy of it.\n"

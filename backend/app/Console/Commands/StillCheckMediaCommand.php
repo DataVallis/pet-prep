@@ -20,7 +20,9 @@ use Illuminate\Console\Command;
  *   (default) / --items   READY item key images (few rows). Scheduled daily (self-limiting: after
  *                         the first run only files made with the check off are left). A fail in
  *                         stills mode enforce regenerates the key image (new seed; ≤ max_still_retries
- *                         per chain) and its clip follows — the old files stay shown until then.
+ *                         per chain) and its clip follows — since 2026-11-19 the failed key image
+ *                         is HIDDEN at once (`flagged_at`, ItemMedia::isShown(); its pets get one
+ *                         PetUpdated) and the item reads »Na poti …« until the new one passes.
  *   --pets                READY pet key / pose images (own media + shared look rows). NEVER
  *                         scheduled (cost): verdicts are only recorded (fail = `shadow_failed`, shown;
  *                         /admin → Pet → AI media → Regenerate / »Approve anyway«).

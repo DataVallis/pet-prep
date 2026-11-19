@@ -16,8 +16,10 @@ use Throwable;
 
 /**
  * Check of a downloaded »Želje« item file candidate (David 2026-11-04): AI vision check of a
- * catalogue picture / key image, free technical check of a clip, then store / regenerate with a
- * new seed / »Needs review« (StillQualityService::checkItemCandidate). Never inside a DB
+ * catalogue picture / key image; for a clip the free technical check + (David 2026-11-19) the AI
+ * realism check of its contact sheet and start frame; then store / regenerate (a clip whose item
+ * is wrong: its key image first) / »Needs review« (StillQualityService::checkItemCandidate). A
+ * vision call without a verdict is retried later (release, ≤ VISION_ERROR_RETRIES). Never inside a DB
  * transaction (the vision call goes through FalGateway). Unique per row; the check row is the
  * claim against a double check / double spend. A lost job (or a check that waited for budget) is
  * re-dispatched by the item sweep (StoreItemMedia of a row that already has a candidate).
@@ -26,14 +28,19 @@ class CheckItemMediaQuality implements ShouldBeUnique, ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    /** Room for a release() while another worker holds the check. */
-    public int $tries = 4;
+    /** Room for release()s while another worker holds the check or a vision error is retried (QA #1414 m2). */
+    public int $tries = 8;
 
     /** @var list<int> */
     public array $backoff = [60];
 
-    /** Below the queue's retry_after (90 s): one vision call (30 s) or ≤ 4 ffmpeg calls × 12 s. */
-    public int $timeout = 85;
+    /**
+     * QA #1414 m3: an item clip = ffprobe + frame statistics + the contact sheet (≤ 4 ffmpeg calls ×
+     * 12 s) AND one vision call (30 s) + the copy from the disk — 110 s. Below the queue's
+     * retry_after (config/queue.php redis / database, 150 s since 2026-11-19) so a running check is
+     * never handed to a second worker.
+     */
+    public int $timeout = 110;
 
     public int $uniqueFor = 900;
 
@@ -46,9 +53,11 @@ class CheckItemMediaQuality implements ShouldBeUnique, ShouldQueue
 
     public function handle(StillQualityService $stills): void
     {
-        if ($stills->checkItemCandidate($this->itemMediaId) === 'busy') {
-            $this->release(MediaQualityService::STALE_CHECK_MINUTES * 60 + 30);
-        }
+        match ($stills->checkItemCandidate($this->itemMediaId)) {
+            'busy' => $this->release(MediaQualityService::STALE_CHECK_MINUTES * 60 + 30),
+            'retry' => $this->release(120),
+            default => null,
+        };
     }
 
     public function failed(?Throwable $exception): void
