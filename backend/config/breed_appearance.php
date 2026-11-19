@@ -856,6 +856,11 @@
 | wiry, hard, very close coat; small V-shaped ears carried forward; natural tail. No welfare trait. Two standard colours, black and tan
 | first (portrait default); weights unsourced → `verified => false`.
 |
+| Norwegian Elkhound (M5-R10-128, docs/research/dog-data norwegian_elkhound.appearance): "A typical Spitz." (FCI-Standard N° 242,
+| S960); compact, short, squarely built; colour "Grey, of various shades." (the only standard colour); thick, coarse, abundant
+| medium-length coat; small pointed erect ears; tail tightly curled over the back. No welfare trait. One standard colour → weight
+| unsourced → `verified => false`.
+|
 | Mudi (M5-R10-126, docs/research/dog-data mudi.appearance): "Medium-sized herding dog with a wedge-shaped head. Prick ears.
 | Body topline is distinctly sloping towards the rear." (FCI-Standard N° 238, S949); colours black, white, fawn, ash (blue), liver,
 | ash-brown and cifra (merle) (S949 / FCI nomenclature S948); dense, shiny, wavy coat 3–7 cm; high-set prick ears; natural tail.
@@ -5410,6 +5415,36 @@ return [
             'ear_carriage' => ['small V-shaped ears set fairly high, carried forward close to the cheek'],
             'eye_color' => ['small, dark, well-set eyes'],
             'tail' => ['natural tail, well set on and carried erect, not curved over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-128 (docs/research/dog-data/data.json norwegian_elkhound.appearance; runbook rules 2026-10-10: the only colour of
+    // FCI-Standard N° 242 (S960), grey = the portrait default).
+    'norwegian_elkhound' => [
+        'display_name' => 'Norwegian Elkhound',
+        // Colour frequencies are in no source (norwegian_elkhound.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 242 (S960, 1999), AKC standard (S961), PetMD (S963) — for the traits listed in `sources`. Colour weight is unsourced.',
+        'sources' => [
+            'size' => 'S963 "The fluffy, medium-size breed has perky ears and an attitude to match."; S960 "Height at the withers: Males: Ideal height 52 cm."',
+            'build' => 'S960 "A typical Spitz." — compact and short body, squarely built',
+            'coat_length' => 'S960 "Hair: Of medium length; thick, coarse, abundant outer coat without curls."',
+            'coat_color' => 'S960 "Grey, of various shades." (the only standard colour; weight unsourced)',
+            'ear_carriage' => 'S960 "Set on high, firm and upstanding, relatively small."',
+            'eye_color' => 'S960 "Not prominent, dark brown in colour."',
+            'tail' => 'S960 "Firmly curled over the center line, not carried on either side of the back."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized spitz'],
+            'build' => [['value' => 'typical spitz with a compact, short, squarely built body and a wedge-shaped head', 'weight' => 3], 'sturdy, square Nordic hunting spitz standing alert'],
+            'coat_length' => [['value' => 'thick, coarse, abundant medium-length coat with a soft undercoat and a fuller ruff on the neck', 'weight' => 3], 'dense, weatherproof double coat, short and smooth on the head and front of the legs'],
+            // FCI standard (S960): grey is the only colour — black-tipped outer hairs, lighter underparts, darker muzzle and ears.
+            'coat_color' => [
+                ['value' => 'grey', 'weight' => 100],
+            ],
+            'ear_carriage' => ['small, pointed, firmly erect ears set high'],
+            'eye_color' => ['dark brown, not prominent eyes'],
+            'tail' => ['tail set high and tightly curled over the centre of the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

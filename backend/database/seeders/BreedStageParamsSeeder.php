@@ -1485,6 +1485,25 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_WELSH_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-127)';
 
     /**
+     * M5-R10-128 Norwegian Elkhound (unattended run 2026-11-19, data.json proposed_game_parameters.norwegian_elkhound.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (PetMD S963 "One hour of exercise a day is recommended"; no RKC / PDSA page reachable), senior 45 min,
+     * puppy 10 min × age capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.2 (Coren rank 36,
+     * Above average, S35); care rates the Border Collie's. The senior boundary uses the closest rule row (PetMD lower bound
+     * "12–15 years", S963 — no McMillan 2024 / VetCompass median reachable, no RKC band) and is NOT covered by the
+     * confirmation: see PROPOSED_R10_NORWEGIAN_ELKHOUND_SENIOR.
+     */
+    public const CONFIRMED_R10_NORWEGIAN_ELKHOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-128)';
+
+    /**
+     * M5-R10-128 Norwegian Elkhound senior boundary / senior arrival (108 months): Claude's suggestion from the closest rule row
+     * (0.75 × PetMD lower bound 12 y, S963 — Miniature American Shepherd / Xoloitzcuintli precedent), verified=false until David
+     * decides (data.json proposed_game_parameters.norwegian_elkhound.senior_boundary_months; Wikipedia S965, tier C, quotes
+     * McMillan 2024 12.9 y → 116 as the alternative).
+     */
+    public const PROPOSED_R10_NORWEGIAN_ELKHOUND_SENIOR = 'predlog Claude 2026-11-19 (najbližja vrstica pravila runbooka, M5-R10-128) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1892,6 +1911,9 @@ class BreedStageParamsSeeder extends Seeder
             'groomer_visit' => [1, 'two_months', 'S958', 'A professional grooming appointment is needed every two to three months to keep their coat short and tidy.', 'proposed_game_parameters.welsh_terrier.professional_grooming', '"every two to three months" → the lower bound, 2 months (8 program weeks)'],
             'bath' => [1, 'two_months', 'S958', 'bathed every two to three months', 'proposed_game_parameters.welsh_terrier.bathing', '"every two to three months" → the lower bound, 2 months (8 program weeks; nails "if they\'re clicking", ears: no frequency → no task)'],
         ],
+        'norwegian_elkhound' => [
+            'tooth_brushing' => [7, 'day', 'S964', 'brush their teeth daily', 'proposed_game_parameters.norwegian_elkhound.tooth_brushing', '"brush their teeth daily" → every day (nails "as needed", ears: no frequency, bath "a couple of times a year" / groomer spring and autumn: no period the rules map → no task)'],
+        ],
     ];
 
     /**
@@ -2036,6 +2058,7 @@ class BreedStageParamsSeeder extends Seeder
         'pointer' => [1, 'S944', 'Their short coats will need grooming just once a week.', 'high', false],
         'mudi' => [1, 'S950', 'Once a week', 'high', false],
         'welsh_terrier' => [3, 'S957', 'Welsh Terriers will need around an hour of exercise daily, and grooming two-three times per week.', 'high', false],
+        'norwegian_elkhound' => [7, 'S964', "You should brush your dog's coats for at least two minutes every day.", 'high', false],
     ];
 
     /**
@@ -2228,13 +2251,14 @@ class BreedStageParamsSeeder extends Seeder
         'pointer' => ['S944', 'will fit well into family life if given the right socialisation as puppies'],
         'mudi' => ['S952', 'need socialization from an early age to be comfortable around children, other pets, and new people.'],
         'welsh_terrier' => ['S957', 'As with all breeds, training, along with socialisation, is very important at a young age in order for Welsh Terriers to grow up into confident, sociable dogs.'],
+        'norwegian_elkhound' => ['S963', 'When socialized properly as puppies and trained early, Norwegian Elkhounds make wonderful family dogs.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -3078,6 +3102,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::Pointer => self::pointerProfile(),
             BreedType::Mudi => self::mudiProfile(),
             BreedType::WelshTerrier => self::welshTerrierProfile(),
+            BreedType::NorwegianElkhound => self::norwegianElkhoundProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -11939,6 +11964,90 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'welsh_terrier.lifespan.rkc',
                 'quote' => 'Over 12 years',
                 'notes' => 'RKC lower bound (S956; PDSA S957 agrees); PetMD / WebMD 12–15 years (S958 / S959). No McMillan 2024 / VetCompass value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Norwegian Elkhound (M5-R10-128). Stage boundaries young / adult, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_NORWEGIAN_ELKHOUND); weight, growth and lifespan are sourced. The
+     * senior boundary is Claude's suggestion (PROPOSED_R10_NORWEGIAN_ELKHOUND_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function norwegianElkhoundProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_NORWEGIAN_ELKHOUND;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S963', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.norwegian_elkhound.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog reaches adult weight at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, [
+                    'unit' => 'months', 'source_id' => 'S11,S963', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.norwegian_elkhound.senior_boundary_months', 'decision' => self::PROPOSED_R10_NORWEGIAN_ELKHOUND_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PetMD lower bound "12–15 years" (S963; WebMD S964 12–15 y too) = 9 y = 108 months. No RKC page, McMillan 2024 or VetCompass median reachable. Alternatives: Wikipedia (S965, tier C) quotes McMillan 2024 12.9 y → 116; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.norwegian_elkhound.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.norwegian_elkhound.senior_boundary_months', 'decision' => self::PROPOSED_R10_NORWEGIAN_ELKHOUND_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 108 months (0.75 × 12 y, S963).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S963', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.norwegian_elkhound.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'One hour of exercise a day is recommended for this breed',
+                'notes' => 'PetMD (S963): one hour → 60 min = 6,000 steps (runbook rule: one number N → N; no RKC / PDSA page reachable). WebMD (S964) gives no number; Vetstreet (S966, tier C) 2 × 20–30 min — not used.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.norwegian_elkhound.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[21.8, 24.9], [
+                'unit' => 'kg', 'source_id' => 'S961', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'norwegian_elkhound.adult_weight.akc',
+                'quote' => 'Weight for dogs about 55 pounds, for bitches about 48 pounds.',
+                'notes' => 'AKC standard (S961): dogs about 55 lb = 24.9 kg, bitches about 48 lb = 21.8 kg (our conversion) → one range for both sexes. UKC (S962) the same; the FCI standard (S960) gives no weight.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'norwegian_elkhound.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (AKC about 48–55 lb, S961 — the Medium class of S10).',
+            ]],
+            'coren_rank' => [36, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'norwegian_elkhound.trainability.coren_rank',
+                'notes' => 'Rank 36 "Norwegian Elkhound", Above Average Working Dogs (S35, read 2026-11-19).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.norwegian_elkhound.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 36, tier "Above average" (S35) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S963', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'norwegian_elkhound.lifespan.petmd',
+                'quote' => 'Norwegian Elkhound dogs have an average life span of 12–15 years, typical for a medium-size dog.',
+                'notes' => 'PetMD lower bound "12–15 years" (S963); WebMD 12–15 y (S964). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

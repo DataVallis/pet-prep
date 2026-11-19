@@ -971,6 +971,12 @@ class FalAiService
                 .'black and tan coat with a black jacket and rich tan head, legs and underparts, a wiry, hard, very close and abundant coat with the typical furnishings on the muzzle and legs, '
                 .'small, dark, well-set eyes, a black nose, small V-shaped ears carried forward close to the cheek, a natural tail carried erect, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-128: FCI-Standard N° 242 (S960) — a typical Spitz, compact and squarely built; grey (the only standard colour);
+            // thick, coarse, medium-length coat; small pointed erect ears; tail tightly curled over the back.
+            BreedType::NorwegianElkhound => 'A medium-sized Norwegian Elkhound, a typical spitz with a compact, short, squarely built body and a wedge-shaped head, '
+                .'grey coat with black-tipped outer hairs, a lighter silver-grey chest, belly and legs and a darker muzzle and ears, a thick, coarse, abundant medium-length coat with a soft undercoat, '
+                .'dark brown eyes, a black nose, small pointed firmly erect ears, a tail tightly curled over the back, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2286,6 +2292,14 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'wiry, hard, very close and abundant coat',
                 'markings' => 'black jacket with rich tan head, legs and underparts, small V-shaped ears carried forward, natural tail carried erect',
+            ],
+
+            // M5-R10-128: FCI S960 grey (the only standard colour).
+            BreedType::NorwegianElkhound => [
+                'color_scheme' => 'grey',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'thick, coarse, abundant medium-length coat with a soft undercoat',
+                'markings' => 'black-tipped grey outer coat, lighter silver-grey chest, belly and legs, darker muzzle and ears, small pointed erect ears, tail tightly curled over the back',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

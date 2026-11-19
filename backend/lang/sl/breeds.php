@@ -126,6 +126,7 @@ return [
     'pointer' => 'Angleški pointer',
     'mudi' => 'Mudi',
     'welsh_terrier' => 'valižanski terier',
+    'norwegian_elkhound' => 'norveški losovec',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
