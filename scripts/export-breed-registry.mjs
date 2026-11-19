@@ -507,6 +507,7 @@ const SPECIES = [
       { id: 'spinone_italiano', synonyms: { en: ['Italian Spinone', 'Spinone', 'Italian Griffon', 'Italian Wire-haired Pointer'], sl: ['spinone', 'italijanski ostrodlaki pticar', 'italijanski spinone'] } },
       { id: 'pointer', synonyms: { en: ['English Pointer'], sl: ['pointer', 'angleski pointer'] } },
       { id: 'mudi', synonyms: { en: ['Hungarian Mudi'], sl: ['madžarski mudi', 'madzarski mudi'] } },
+      { id: 'welsh_terrier', synonyms: { en: ['Welshie', 'Welsh'], sl: ['valizanski terier', 'velški terier', 'welsh terier'] } },
     ],
   },
   {
@@ -3199,6 +3200,34 @@ const DOG_FACTS = {
       ['kneecap_luxation', 'health.patella'],
     ],
   },
+  // M5-R10-127. RKC Breeds A–Z (S956): exercise 'Up to 1 hour per day', coat 'Medium', grooming 'More than once a week', sheds 'Yes',
+  // lifespan 'Over 12 years'; PetMD 12–15 years (S958); height + weight = FCI-Standard N°78 (S955, 2009 text). Coren: 'Average' tier
+  // without a readable rank number → no coren_rank fact. FCI origin Great Britain (GB). Not exported: weight / size alternatives
+  // (PDSA), lifespan.senior_from (derived), health.breed_watch (Category 1, background). No new health key.
+  welsh_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    // Rank number not readable (S35 lists the breed under 'Average' only) → no coren_rank fact.
+    coren_rank: false,
+    food_motivation: null,
+    health: [
+      ['primary_lens_luxation', 'health.primary_lens_luxation'],
+      ['glaucoma', 'health.glaucoma'],
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['dry_eye', 'health.dry_eye'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['kneecap_luxation', 'health.patellar_luxation'],
+      ['cataracts', 'health.cataracts'],
+      ['epilepsy', 'health.epilepsy'],
+      ['addisons_disease', 'health.addisons'],
+    ],
+  },
 
 
 
@@ -3283,6 +3312,7 @@ export const DOG_CARE_TASKS = {
   xoloitzcuintli: [['tooth_brushing', 2, 7, 'proposed_game_parameters.xoloitzcuintli.tooth_brushing']],
   spinone_italiano: [['tooth_brushing', 7, 7, 'proposed_game_parameters.spinone_italiano.tooth_brushing'], ['nail_trim', 1, 7, 'proposed_game_parameters.spinone_italiano.nail_trimming']],
   pointer: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pointer.tooth_brushing']],
+  welsh_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.welsh_terrier.tooth_brushing'], ['groomer_visit', 1, 56, 'proposed_game_parameters.welsh_terrier.professional_grooming'], ['bath', 1, 56, 'proposed_game_parameters.welsh_terrier.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4241,6 +4271,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.mudi.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.mudi.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.mudi.exercise_minutes_senior',
+  },
+  welsh_terrier: {
+    adult_minutes: ['proposed_game_parameters.welsh_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.welsh_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.welsh_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.welsh_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.welsh_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.welsh_terrier.exercise_minutes_senior',
   },
 
 

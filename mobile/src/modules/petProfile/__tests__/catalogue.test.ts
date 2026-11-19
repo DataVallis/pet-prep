@@ -471,7 +471,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(30);
+    expect(CONSIDER_TAGS).toHaveLength(31);
+    // M5-R10-127 (runbook new-tag rule): defensive reflexes — better with older children (the Welsh Terrier, WebMD S959); no numbers.
+    expect(CONSIDER_TAGS).toContain('defensive_older_children');
     // M5-R10-87 (runbook new-tag rule): independent dog — better with older children (the Shar Pei, PDSA S660); no numbers.
     expect(CONSIDER_TAGS).toContain('independent_older_children');
     // M5-R10-76 (runbook new-tag rule): lively dog — better with older children (the Bull Terrier, PDSA S591); no numbers.
@@ -720,7 +722,8 @@ describe('breed search', () => {
     expect(find('corgi')).toEqual(['pembroke_welsh_corgi', 'cardigan_welsh_corgi']);
     expect(find('korgi')).toEqual(['pembroke_welsh_corgi', 'cardigan_welsh_corgi']);
     expect(find('pembroke')).toEqual(['pembroke_welsh_corgi']);
-    expect(find('valizanski')).toEqual(['pembroke_welsh_corgi', 'cardigan_welsh_corgi']);
+    // M5-R10-127: »valižanski« is also the Welsh Terrier's SL name.
+    expect(find('valizanski')).toEqual(['pembroke_welsh_corgi', 'cardigan_welsh_corgi', 'welsh_terrier']);
   });
 
   it('M5-R10-23: finds the Cane Corso by its SL / EN names and nicknames', () => {

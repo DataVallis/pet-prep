@@ -188,6 +188,12 @@ return [
         // bones), `sensitive_older_children` (a sensitive dog), `lively_older_children` (an excitable dog) or
         // `not_for_small_children` (a large dog). A calm chip, never a number.
         'independent_older_children' => 'consider',
+        // M5-R10-127 (runbook "new tag" rule, 2026-11-19): a dog whose defensive reflexes make it a poor fit for a home with
+        // small children (Welsh Terrier: WebMD S959 "they're not recommended for households with small children due to their
+        // defensive reflexes." — PDSA S957 "They love children …"). Not `not_for_small_children` (a large dog), `older_children`
+        // (a small dog), `fragile_older_children`, `sensitive_older_children`, `lively_older_children` or
+        // `independent_older_children` — none of those reasons is sourced for this breed. A calm chip, never a number.
+        'defensive_older_children' => 'consider',
     ],
 
     'breeds' => [
@@ -2971,6 +2977,26 @@ return [
                 ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S950'], 'refs' => ['mudi.exercise.daily_text']],
                 // S950 key fact "Sheds" "Yes"
                 ['tag' => 'sheds', 'source_ids' => ['S950'], 'refs' => ['mudi.suitability.rkc_sheds']],
+            ],
+        ],
+        'welsh_terrier' => [
+            'suits' => [
+                // S956 "Exercise: Up to 1 hour per day"; S957 "Welsh Terriers will need around an hour of exercise daily, …"
+                ['tag' => 'active_family', 'source_ids' => ['S956', 'S957'], 'refs' => ['welsh_terrier.exercise.adult', 'welsh_terrier.exercise.daily_text']],
+                // S957 "They love children and are always up for any game on offer, making them excellent family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S957'], 'refs' => ['welsh_terrier.behaviour.family']],
+                // S957 "They love children …" (WebMD S959 advises against small children → defensive_older_children below)
+                ['tag' => 'children', 'source_ids' => ['S957'], 'refs' => ['welsh_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S959 "they're not recommended for households with small children due to their defensive reflexes."
+                ['tag' => 'defensive_older_children', 'source_ids' => ['S959'], 'refs' => ['welsh_terrier.behaviour.small_children']],
+                // S959 "Fences should extend 6\" belowground to keep a Welsh terrier from tunneling underneath."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S959'], 'refs' => ['welsh_terrier.exercise.fencing']],
+                // S956 key fact "Sheds" "Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S956'], 'refs' => ['welsh_terrier.suitability.rkc_shedding']],
+                // S958 "This breed has a strong prey drive because of their hunting history and may see smaller animals as something to chase."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S958'], 'refs' => ['welsh_terrier.behaviour.other_pets']],
             ],
         ],
     ],

@@ -965,6 +965,12 @@ class FalAiService
                 .'solid black coat, a dense, shiny, wavy or slightly curled coat of medium length with short smooth hair on the head and the front of the legs, '
                 .'dark almond-shaped eyes, high-set prick ears of reverse V-shape covered with abundant hair, a natural tail set at medium height, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-127: FCI-Standard N°78 (S955) — smart, workmanlike, compact terrier; black and tan (FCI "for preference", the
+            // portrait default of the two standard colours); wiry, hard, close coat; small V-shaped ears carried forward; natural tail.
+            BreedType::WelshTerrier => 'A small, square Welsh Terrier, a smart, workmanlike, well-balanced and compact terrier, '
+                .'black and tan coat with a black jacket and rich tan head, legs and underparts, a wiry, hard, very close and abundant coat with the typical furnishings on the muzzle and legs, '
+                .'small, dark, well-set eyes, a black nose, small V-shaped ears carried forward close to the cheek, a natural tail carried erect, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2272,6 +2278,14 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'dense, shiny, wavy or slightly curled coat of medium length, short and smooth on the head',
                 'markings' => 'solid black, wedge-shaped head, high-set prick ears covered with abundant hair, natural tail',
+            ],
+
+            // M5-R10-127: FCI S955 black and tan (the portrait default of the two standard colours).
+            BreedType::WelshTerrier => [
+                'color_scheme' => 'black and tan',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'wiry, hard, very close and abundant coat',
+                'markings' => 'black jacket with rich tan head, legs and underparts, small V-shaped ears carried forward, natural tail carried erect',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -4194,6 +4194,32 @@
         "quote": "At this time this breed does not have any recommended pre-breeding health screening in place"
       },
       "tests": []
+    },
+    "welsh_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S956",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S956",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_pll",
+          "level": "minimum",
+          "name": "DNA test for primary lens luxation (PLL)",
+          "source_id": "S956",
+          "quote": "DNA test for primary lens luxation (PLL)"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S956, 2026-11-19; heading 'Good Practice schemes and tests' with the 'at a minimum' sentence = minimum; no Best Practice list): the genetic-diversity link (inbreeding_coi) and DNA PLL. No new key."
     }
   }
 }

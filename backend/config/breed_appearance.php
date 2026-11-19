@@ -851,6 +851,11 @@
 | fairly high-set ears lying close to the head; natural tail carried level with the back. No welfare trait. Four usual colours,
 | liver and white first (portrait default); weights unsourced → `verified => false`.
 |
+| Welsh Terrier (M5-R10-127, docs/research/dog-data welsh_terrier.appearance): "Smart, workmanlike, well-balanced and compact."
+| (FCI-Standard N°78, S955, 2009 text); colours "Black and tan for preference, or black grizzle and tan" (S955; RKC S956 Black & Tan);
+| wiry, hard, very close coat; small V-shaped ears carried forward; natural tail. No welfare trait. Two standard colours, black and tan
+| first (portrait default); weights unsourced → `verified => false`.
+|
 | Mudi (M5-R10-126, docs/research/dog-data mudi.appearance): "Medium-sized herding dog with a wedge-shaped head. Prick ears.
 | Body topline is distinctly sloping towards the rear." (FCI-Standard N° 238, S949); colours black, white, fawn, ash (blue), liver,
 | ash-brown and cifra (merle) (S949 / FCI nomenclature S948); dense, shiny, wavy coat 3–7 cm; high-set prick ears; natural tail.
@@ -5374,6 +5379,37 @@ return [
             'ear_carriage' => ['high-set prick ears of reverse V-shape, covered with abundant hair'],
             'eye_color' => ['dark brown, almond-shaped, slightly oblique eyes'],
             'tail' => ['natural tail set at medium height, hanging at rest with the lower third raised'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-127 (docs/research/dog-data/data.json welsh_terrier.appearance; runbook rules 2026-10-10: the two colours of
+    // FCI-Standard N°78 (S955), black and tan first = the portrait default; natural tail).
+    'welsh_terrier' => [
+        'display_name' => 'Welsh Terrier',
+        // Colour frequencies are in no source (welsh_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N°78 (S955, 2009 text), FCI nomenclature (S954), RKC Breeds A–Z (S956), PDSA (S957) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S956 "Size: Small"; S955 "Height at shoulders not exceeding 39 cm (15 ½ ins.)." / "9-9,5 kg (20-21 lbs)."',
+            'build' => 'S955 "Smart, workmanlike, well-balanced and compact."',
+            'coat_length' => 'S955 "Wiry, hard, very close and abundant. Single coat undesirable."; S956 "Coat length: Medium"',
+            'coat_color' => 'S955 "Black and tan for preference, or black grizzle and tan, free from black pencilling on toes." (weights unsourced)',
+            'ear_carriage' => 'S955 "V-shaped, small, leathers not too thin, set on fairly high, carried forward and close to cheek."',
+            'eye_color' => 'S955 "Small, well set in, dark, expression indicative of temperament."',
+            'tail' => 'S955 "Well set on. Carried erect but not curved over the back." (natural tail drawn)',
+        ],
+        'traits' => [
+            'size' => ['small, square terrier'],
+            'build' => [['value' => 'smart, workmanlike, well-balanced and compact terrier', 'weight' => 3], 'game, alert terrier standing four-square on straight legs'],
+            'coat_length' => [['value' => 'wiry, hard, very close and abundant coat with the typical furnishings on the muzzle and legs', 'weight' => 3], 'dense, wiry coat, hand-stripped tidy'],
+            // FCI standard (S955): black and tan "for preference" weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'black and tan', 'weight' => 85],
+                ['value' => 'black grizzle and tan', 'weight' => 15],
+            ],
+            'ear_carriage' => ['small V-shaped ears set fairly high, carried forward close to the cheek'],
+            'eye_color' => ['small, dark, well-set eyes'],
+            'tail' => ['natural tail, well set on and carried erect, not curved over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

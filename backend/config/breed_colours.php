@@ -827,6 +827,11 @@ return [
         ['key' => 'isabella', 'value' => 'ash-brown (isabella)', 'en' => 'Ash-brown', 'sl' => 'Pepelnato rjav'],
         ['key' => 'blue-merle', 'value' => 'blue merle (cifra)', 'en' => 'Merle (cifra)', 'sl' => 'Marmoriran (cifra)'],
     ],
+    // M5-R10-127: FCI-Standard N°78 (S955) "Black and tan for preference, or black grizzle and tan" — same order and values as breed_appearance.php.
+    'welsh_terrier' => [
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+        ['key' => 'black-grizzle-tan', 'value' => 'black grizzle and tan', 'en' => 'Black grizzle and tan', 'sl' => 'Črno-sivkast z rjavimi oznakami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
