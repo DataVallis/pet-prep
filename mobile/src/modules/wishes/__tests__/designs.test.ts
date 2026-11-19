@@ -14,11 +14,13 @@ import {
   designChoiceFor,
   designKeysFor,
   designOf,
+  designPickerFor,
   needsDesign,
   readChildWishes,
   readDesigns,
   readParentWishes,
   treatClipUrl,
+  wantedDesigns,
   wishDesign,
   wishRequestBody,
 } from '@/modules/wishes/wishes';
@@ -96,6 +98,48 @@ describe('request payloads', () => {
     expect(designKeysFor('petprep_wish_toy_1', items)).toEqual([]);
     expect(defaultDesigns(['bed', 'bowls'], items, { bowls: 'b2' })).toEqual({ bed: 'bed_round', bowls: 'b2' });
     expect(defaultDesigns(['bowls'], items, { bowls: 'gone' })).toEqual({ bowls: 'b1' });
+  });
+
+  describe('bundle picker (David 2026-11-19: »Vse tri« = three, preselect what the child waits for)', () => {
+    const items = [
+      { key: 'bed' as const, designs: readDesigns([{ key: 'bed_round', name: 'Round' }, { key: 'bed_navy', name: 'Navy' }]) },
+      { key: 'bowls' as const, designs: readDesigns([{ key: 'bowls_steel', name: 'Steel' }, { key: 'bowls_wood', name: 'Wood' }]) },
+      { key: 'toy_1' as const, designs: readDesigns([{ key: 'rope_red', name: 'Red' }, { key: 'rope_blue', name: 'Blue' }]) },
+    ];
+    const wish = (pet_id: number, item_key: 'bed' | 'bowls' | 'toy_1', design: string | null, created_at: string | null = '2026-11-19T08:00:00Z') => ({ pet_id, item_key, design, created_at });
+
+    it('wantedDesigns: open wishes of THIS pet with a design; the oldest wins per item', () => {
+      const wishes = [
+        wish(12, 'bed', 'bed_navy', '2026-11-19T09:00:00Z'),
+        wish(12, 'bed', 'bed_round', '2026-11-19T10:00:00Z'),
+        wish(12, 'toy_1', 'rope_red'),
+        wish(12, 'bowls', null),
+        wish(99, 'bowls', 'bowls_wood'),
+      ];
+      expect(wantedDesigns(wishes, 12)).toEqual({ bed: 'bed_navy', toy_1: 'rope_red' });
+      expect(wantedDesigns(wishes, 99)).toEqual({ bowls: 'bowls_wood' });
+      expect(wantedDesigns([], 12)).toEqual({});
+    });
+
+    it('the bundle from a wish shows ALL three items, the wished one included, each preselected with its wish', () => {
+      const wanted = { bed: 'bed_navy', bowls: 'bowls_wood', toy_1: 'rope_red' };
+      const picker = designPickerFor('petprep_wish_bundle_welcome', items, { bowls: 'bowls_wood' }, wanted);
+      expect(picker).toEqual({ keys: ['bed', 'bowls', 'toy_1'], fixed: {}, picks: { bed: 'bed_navy', bowls: 'bowls_wood', toy_1: 'rope_red' } });
+    });
+
+    it('an item without an open wish falls back to its first design; an unknown wanted design too', () => {
+      const picker = designPickerFor('petprep_wish_bundle_welcome', items, {}, { toy_1: 'gone' });
+      expect(picker?.picks).toEqual({ bed: 'bed_round', bowls: 'bowls_steel', toy_1: 'rope_red' });
+    });
+
+    it('a single item bought for its wish stays fixed (no picker); a surprise single item preselects the wish', () => {
+      expect(designPickerFor('petprep_wish_bowls', items, { bowls: 'bowls_wood' })).toBeNull();
+      expect(designPickerFor('petprep_wish_bed', items, {}, { bed: 'bed_navy' })).toEqual({ keys: ['bed'], fixed: {}, picks: { bed: 'bed_navy' } });
+    });
+
+    it('no designs (older server) → no picker', () => {
+      expect(designPickerFor('petprep_wish_bundle_welcome', items.map((i) => ({ ...i, designs: [] })))).toBeNull();
+    });
   });
 
   it('redeemWithRetry sends the choice with every attempt', async () => {

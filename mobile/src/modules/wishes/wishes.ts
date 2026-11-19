@@ -189,6 +189,61 @@ export function defaultDesigns(
   return out;
 }
 
+/**
+ * The looks the pet's OPEN wishes ask for (item key → design), so a picker preselects what the
+ * child is waiting for (David 2026-11-19). Several open wishes for one item → the oldest one.
+ */
+export function wantedDesigns(
+  wishes: readonly Pick<ParentWish, 'pet_id' | 'item_key' | 'design' | 'created_at'>[],
+  petId: number,
+): Partial<Record<WishItemKey, string>> {
+  const out: Partial<Record<WishItemKey, string>> = {};
+  const since: Partial<Record<WishItemKey, number>> = {};
+  for (const wish of wishes) {
+    if (wish.pet_id !== petId || wish.design === null) continue;
+    const at = ms(wish.created_at);
+    const time = Number.isNaN(at) ? Number.POSITIVE_INFINITY : at;
+    const seen = since[wish.item_key];
+    if (seen !== undefined && seen <= time) continue;
+    out[wish.item_key] = wish.design;
+    since[wish.item_key] = time;
+  }
+  return out;
+}
+
+/** What a design picker for a purchase / assignment shows. */
+export interface DesignPicker {
+  /** The items whose look the parent chooses (in catalogue order). */
+  keys: WishItemKey[];
+  /** Picks that are not the parent's to change (a single item bought for the child's wish). */
+  fixed: Partial<Record<WishItemKey, string>>;
+  /** The preselected pick per item (+ the fixed ones). */
+  picks: Partial<Record<WishItemKey, string>>;
+}
+
+/**
+ * The picker of a product on a pet, or null when nothing is left to choose (buy at once).
+ * - A single item: `fixed` (the wish's design) is bought as is; otherwise one choice.
+ * - The welcome bundle (David 2026-11-19, »Vse tri« = three): ALWAYS all three items with designs,
+ *   also the one of the wish it was opened from — nothing fixed, the parent may change any look.
+ * Preselection per item: the fixed design, else the look an open wish of this pet asks for
+ * (`wanted`, see `wantedDesigns`), else the item's first design.
+ */
+export function designPickerFor(
+  productId: string,
+  items: readonly { key: WishItemKey; designs: readonly WishDesign[] }[],
+  fixed: Partial<Record<WishItemKey, string>> = {},
+  wanted: Partial<Record<WishItemKey, string>> = {},
+): DesignPicker | null {
+  const all = designKeysFor(productId, items);
+  const bundle = keyOfProduct(productId) === 'welcome_bundle';
+  const locked: Partial<Record<WishItemKey, string>> = bundle ? {} : fixed;
+  const keys = all.filter((k) => locked[k] === undefined);
+  if (keys.length === 0) return null;
+  const picks = { ...defaultDesigns(all, items, { ...wanted, ...fixed }), ...locked };
+  return { keys, fixed: locked, picks };
+}
+
 /** The redeem design fields of a purchase: one key → `design`, the bundle → `designs`. */
 export function designChoiceFor(productId: string, picks: Partial<Record<WishItemKey, string>>): WishDesignChoice {
   const keys = keysOfProduct(productId);
