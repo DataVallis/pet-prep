@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "64542e2c9816c4b5bfe1798a3e94d23d708736903687277c64846c4303eef712"
+      "sha256": "a168d276f203fcddc49648c8ae276d842832fc77c9ee88af3c12d9e8494140e8"
     }
   },
   "suitability_vocabulary": {
@@ -71549,7 +71549,66 @@
         "file": "mudi.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/mudi.webp",
+            "default": true
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/mudi--white.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Rumenorjav"
+            },
+            "file": "dog/mudi--fawn.webp"
+          },
+          {
+            "key": "blue",
+            "label": {
+              "en": "Ash (blue)",
+              "sl": "Pepelnat (moder)"
+            },
+            "file": "dog/mudi--blue.webp"
+          },
+          {
+            "key": "liver",
+            "label": {
+              "en": "Liver",
+              "sl": "Rjav"
+            },
+            "file": "dog/mudi--liver.webp"
+          },
+          {
+            "key": "isabella",
+            "label": {
+              "en": "Ash-brown",
+              "sl": "Pepelnato rjav"
+            },
+            "file": "dog/mudi--isabella.webp"
+          },
+          {
+            "key": "blue-merle",
+            "label": {
+              "en": "Merle (cifra)",
+              "sl": "Marmoriran (cifra)"
+            },
+            "file": "dog/mudi--blue-merle.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "none_recommended",
