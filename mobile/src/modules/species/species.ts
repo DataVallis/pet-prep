@@ -139,6 +139,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   pointer: 'dog',
   mudi: 'dog',
   welsh_terrier: 'dog',
+  norwegian_elkhound: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -281,6 +282,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'pointer',
   'mudi',
   'welsh_terrier',
+  'norwegian_elkhound',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

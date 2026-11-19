@@ -4220,6 +4220,11 @@
         }
       ],
       "notes": "RKC breed page (dog-data S956, 2026-11-19; heading 'Good Practice schemes and tests' with the 'at a minimum' sentence = minimum; no Best Practice list): the genetic-diversity link (inbreeding_coi) and DNA PLL. No new key."
+    },
+    "norwegian_elkhound": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "RKC Breeds A–Z page (thekennelclub.org.uk display.aspx?id=1016 → royalkennelclub.com …/hound/norwegian-elkhound) and the RKC breed standard refused by the fetch tool on 2026-11-19 (provenance) — health-testing section not read. PetMD (dog-data S963) / WebMD (S964) name conditions (Fanconi syndrome, PRA, hip dysplasia) but no tests for parents. Show the general dog checklist only."
     }
   }
 }

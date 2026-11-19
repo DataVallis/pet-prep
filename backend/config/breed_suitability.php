@@ -2999,5 +2999,29 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S958'], 'refs' => ['welsh_terrier.behaviour.other_pets']],
             ],
         ],
+        // M5-R10-128 Norwegian Elkhound (data.json proposed_game_parameters.norwegian_elkhound.suitability_tags; runbook rules —
+        // no RKC page reachable, PetMD S963 / WebMD S964). No chases_small_pets: PetMD names no prey drive (open for David).
+        'norwegian_elkhound' => [
+            'suits' => [
+                // S963 "One hour of exercise a day is recommended for this breed"; "They need mental stimulation as much as they need physical exercise, …"
+                ['tag' => 'active_family', 'source_ids' => ['S963'], 'refs' => ['norwegian_elkhound.exercise.adult', 'norwegian_elkhound.exercise.daily_text']],
+                // S963 "When socialized properly as puppies and trained early, Norwegian Elkhounds make wonderful family dogs."
+                ['tag' => 'family_pet', 'source_ids' => ['S963'], 'refs' => ['norwegian_elkhound.behaviour.family']],
+                // S963 "… great around children of all ages, though all interactions between kids and dogs need to be supervised." (WebMD S964 → no small_children)
+                ['tag' => 'children', 'source_ids' => ['S963'], 'refs' => ['norwegian_elkhound.behaviour.children']],
+            ],
+            'consider' => [
+                // S963 "They need mental stimulation as much as they need physical exercise, as a bored Elkie can become destructive and noisy."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S963'], 'refs' => ['norwegian_elkhound.exercise.daily_text']],
+                // S963 "Always keep this dog inside a secure, fenced area or on a leash when they're outside."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S963'], 'refs' => ['norwegian_elkhound.exercise.fencing']],
+                // S964 "You should brush your dog's coats for at least two minutes every day."; PetMD S963 every day
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S964', 'S963'], 'refs' => ['norwegian_elkhound.suitability.webmd_grooming']],
+                // S963 "families with Elkies are in for a lot of shedding—as in silver tumbleweeds."
+                ['tag' => 'sheds', 'source_ids' => ['S963'], 'refs' => ['norwegian_elkhound.suitability.petmd_shedding']],
+                // S963 "this thick-coated breed is prone to overheating."
+                ['tag' => 'heat_sensitive', 'source_ids' => ['S963'], 'refs' => ['norwegian_elkhound.exercise.heat']],
+            ],
+        ],
     ],
 ];

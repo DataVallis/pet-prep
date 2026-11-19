@@ -832,6 +832,10 @@ return [
         ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
         ['key' => 'black-grizzle-tan', 'value' => 'black grizzle and tan', 'en' => 'Black grizzle and tan', 'sl' => 'Črno-sivkast z rjavimi oznakami'],
     ],
+    // M5-R10-128: FCI-Standard N° 242 (S960) "Grey, of various shades." — the only colour; same value as breed_appearance.php.
+    'norwegian_elkhound' => [
+        ['key' => 'grey', 'value' => 'grey', 'en' => 'Grey', 'sl' => 'Siv'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "ca93b1c9a97640722323c67a0ce8d3cc2d311789c46629f2ee35cc18a300eeb9"
+      "sha256": "f106220aa2059d7d114ade707a045fc2c71f8d729d2645d530db51234e21523c"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "ea046664dd730df73769fa4701db155bdb4911f4ae589d1eda6441c5796c2d88"
+      "sha256": "cf41070c7044539e59a0677b1e7805591564ca0d76108c53891c9500b35a78c5"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "caacba2b3eefa2aeedfb17fb5ed886933ebe1e20874daf9ea20fc27f43ae8db1"
+      "sha256": "3572bd33dc02816f092586ac9ba5adeda87993154721eba3457158ed9094beb4"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "7ec91ad92a3b0b31d531133e07d51039b29e90c8378c28f640761880f44c0989"
+      "sha256": "9d6b7c47e8ce8ad66b2c245403cccdc6f41f860c42ca73d979addd68af697df7"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "67653c6c55e5d277f60374057dfea3f5a0872b94cbaa8f8b502db11a48b26d74"
+      "sha256": "8390e21ecbd29090c7769df137e5d38907ff023d6d3842f0d9281a6553e1fd4d"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "0cfb6c78035ef53621a46f86fdcf0d3ffe7d2fb77070a83b058718f5d9bd985e"
+      "sha256": "6bc7ada97c6a2e0e08331d2244471ae84b5b23bcf4988f1413ff0064dbd48dc0"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "24d222085afefdcaced924fc22bde2da93758dc4e5e0a2a0e22356cf1288f026"
+      "sha256": "0c568039f33068389d52a5decb88a91ea982fab6f912ede7087f1bbcdeda34ec"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 118,
+      "breed_count": 119,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -72323,6 +72323,583 @@
       ]
     },
     {
+      "id": "norwegian_elkhound",
+      "species": "dog",
+      "order": 118,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Norwegian Elkhound",
+        "sl": "Norveški losovec"
+      },
+      "slug": {
+        "en": "norwegian-elkhound",
+        "sl": "norveski-losovec"
+      },
+      "synonyms": {
+        "en": [
+          "Elkhound",
+          "Elkie",
+          "Norwegian Elkhound Grey",
+          "Norsk Elghund Grå",
+          "Norwegian Moose Dog"
+        ],
+        "sl": [
+          "norveski losovec",
+          "losovec",
+          "norveški elkhund"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "h1_2",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S963"
+          ],
+          "ref": "norwegian_elkhound.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              52,
+              52
+            ],
+            "female": [
+              49,
+              49
+            ]
+          },
+          "source_ids": [
+            "S960"
+          ],
+          "ref": "norwegian_elkhound.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "about",
+          "value": {
+            "male": [
+              24.9,
+              24.9
+            ],
+            "female": [
+              21.8,
+              21.8
+            ]
+          },
+          "source_ids": [
+            "S961"
+          ],
+          "ref": "norwegian_elkhound.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "norwegian_elkhound.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S963"
+          ],
+          "ref": "norwegian_elkhound.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "about",
+          "value": 60,
+          "source_ids": [
+            "S963"
+          ],
+          "ref": "norwegian_elkhound.exercise.adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S960"
+          ],
+          "ref": "norwegian_elkhound.suitability.fci_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S964"
+          ],
+          "ref": "norwegian_elkhound.suitability.webmd_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S963"
+          ],
+          "ref": "norwegian_elkhound.suitability.petmd_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 36,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "norwegian_elkhound.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 242,
+            "group": 5,
+            "section": 2,
+            "origin": "NO"
+          },
+          "source_ids": [
+            "S960"
+          ],
+          "ref": "norwegian_elkhound.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "fanconi_kidney_disease",
+          "source_ids": [
+            "S963"
+          ],
+          "ref": "norwegian_elkhound.health.fanconi_syndrome",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S963"
+          ],
+          "ref": "norwegian_elkhound.health.pra",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S963"
+          ],
+          "ref": "norwegian_elkhound.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S964"
+          ],
+          "ref": "norwegian_elkhound.health.patellar_luxation",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S964"
+          ],
+          "ref": "norwegian_elkhound.health.hypothyroidism",
+          "confidence": "medium"
+        },
+        {
+          "key": "weight_gain",
+          "source_ids": [
+            "S963"
+          ],
+          "ref": "norwegian_elkhound.health.obesity",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.exercise.adult",
+              "norwegian_elkhound.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.exercise.fencing"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S963",
+              "S964"
+            ],
+            "refs": [
+              "norwegian_elkhound.suitability.webmd_grooming"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.suitability.petmd_shedding"
+            ]
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.exercise.heat"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.norwegian_elkhound.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S963"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PetMD S963 'One hour of exercise a day is recommended')"
+          },
+          {
+            "ref": "proposed_game_parameters.norwegian_elkhound.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.norwegian_elkhound.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S963"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36; senior 108 is Claude's suggestion (senior_boundary_months)"
+          },
+          {
+            "ref": "proposed_game_parameters.norwegian_elkhound.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 36, Above average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.norwegian_elkhound.grooming",
+            "basis_source_ids": [
+              "S964"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (WebMD »every day« → 7); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.norwegian_elkhound.tooth_brushing",
+            "basis_source_ids": [
+              "S964"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily« → vsak dan"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S963",
+          "S964"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S960",
+        "S961",
+        "S963",
+        "S964",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -78971,6 +79548,34 @@
       "publisher": "WebMD Pets — Ariel Grucza, medically reviewed by Zilpah Sheikh, MD (May 08, 2026)",
       "title": "What to Know About Welsh Terriers",
       "url": "https://www.webmd.com/pets/dogs/what-to-know-about-welsh-terriers"
+    },
+    {
+      "id": "S960",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 242 — Norwegian Elkhound Grey / Norsk Elghund Grå (PDF, 09.08.1999 / EN)",
+      "url": "https://www.fci.be/Nomenclature/Standards/242g05-en.pdf"
+    },
+    {
+      "id": "S961",
+      "tier": "A",
+      "publisher": "American Kennel Club (Show Sight magazine reprint, July 2017)",
+      "title": "Official Standard of the Norwegian Elkhound (approved December 13, 1988, effective February 1, 1989)",
+      "url": "https://digital.showsightmagazine.com/view/602052551/224/"
+    },
+    {
+      "id": "S963",
+      "tier": "B",
+      "publisher": "PetMD — Jamie Frevele, reviewed by Barri J. Morrison, DVM (updated Jun. 24, 2023)",
+      "title": "Norwegian Elkhound",
+      "url": "https://www.petmd.com/dog/breeds/norwegian-elkhound"
+    },
+    {
+      "id": "S964",
+      "tier": "B",
+      "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Vanesa Farmer, DVM (May 30, 2024)",
+      "title": "What to Know About Norwegian Elkhounds",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-norwegian-elkhounds"
     },
     {
       "id": "C1",
