@@ -65281,6 +65281,511 @@
       }
     }
   },
+  "norwegian_elkhound": {
+    "_note": "Added 2026-11-19 (M5-R10-128, unattended run — appended after the Welsh Terrier: AKC 2024 No. 124 'Norwegian Elkhound', S174 full-list table as recorded 2026-11-19 in queue row 127 '123 Welsh Terrier', '124 Norwegian Elkhound'). Quotes as returned by the web-fetch tool on 2026-11-19 (after a web search; the tool limits quotes to ~125 characters — longer passages were returned as fragments or summaries); paraphrase only in notes, marked '(paraphrase)'. Sources S960–S966 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. The breed is the grey Norwegian Elkhound (FCI N° 242, Norsk Elghund Grå) — the AKC / RKC 'Norwegian Elkhound'; the black variety (FCI N° 268) is a separate breed and not in the app. Standard: FCI-Standard N° 242 (S960, 09.08.1999) — height only, no weight → weight from the AKC standard (S961, 'about 55 / 48 pounds'), UKC (S962) the same. The RKC Breeds A–Z page and the RKC breed standard were refused by the fetch tool (thekennelclub.org.uk display.aspx?id=1016 → royalkennelclub.com redirect, provenance); no PDSA / Woodgreen / Dogs Trust breed page found; the Dogs Trust McMillan 2024 table (S123) refused. → exercise from PetMD (S963, tier B: 'One hour of exercise a day is recommended' → 60); lifespan from PetMD 12–15 y (S963) → senior 108 = Claude's suggestion (closest rule row, verified=false — Miniature American Shepherd / Xoloitzcuintli precedent; Wikipedia S965, tier C, quotes McMillan 2024 12.9 y → 116 as an alternative for David). Coren rank 36 'Above Average Working Dogs' (S35, en.wikipedia.org read 2026-11-19) → 1.2. Never hypoallergenic. Slovenian name »norveški losovec« (Claude — no KZS page found, open for David).",
+    "identity": {
+      "value": "FCI No. 242, Group 5 Section 2 (Nordic Hunting Dogs), Norway",
+      "unit": "—",
+      "source_id": "S960",
+      "quote": "Section 2 Nordic Hunting Dogs.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 242 (S960, publication of the valid standard 09.08.1999): 'FCI-CLASSIFICATION: Group 5 Spitz and primitive types.', 'With working trial only for the Nordic countries (Sweden, Norway, Finland).'; origin Norway; utilisation 'Dog for elk-hunting.' (as returned). The FCI nomenclature page (fci.be …/NORWEGIAN-ELKHOUND-GREY-242.html) was refused by the fetch tool (provenance) — acceptance date not recorded. FCI name 'Norwegian Elkhound Grey' (Norsk Elghund Grå)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S963",
+      "quote": "The fluffy, medium-size breed has perky ears and an attitude to match.",
+      "confidence": "medium",
+      "notes": "PetMD (S963): 'typical for a medium-size dog' as well. No RKC 'Size:' key fact reachable (S-none, refused). AKC weight about 48–55 lb (S961) → the 'Medium (24–59 pounds)' class of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            52,
+            52
+          ],
+          "female": [
+            49,
+            49
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S960",
+        "quote": "Height at the withers: Males: Ideal height 52 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 242 (S960): 'Females: Ideal height 49 cm.' — ideal heights stored as single values. Disqualifying: a height more than 3 cm under or 4 cm over the ideal (paraphrase). AKC (S961): 'Height at the withers for dogs is 20½ inches, for bitches 19½ inches.' (52 / 49.5 cm — the same)."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            24.9,
+            24.9
+          ],
+          "female": [
+            21.8,
+            21.8
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S961",
+        "quote": "Weight for dogs about 55 pounds, for bitches about 48 pounds.",
+        "confidence": "high",
+        "notes": "AKC Official Standard of the Norwegian Elkhound (S961, approved December 13, 1988, effective February 1, 1989; Show Sight magazine reprint): dogs about 55 lb = 24.9 kg, bitches about 48 lb = 21.8 kg (pounds × 0.4536 by us, rounded to 0.1 kg). Single values → the game range 21.8–24.9 kg. The FCI standard (S960) gives no weight. UKC (S962): 'About 55 pounds for males; about 48 pounds for females.' WebMD (S964): 'Males weigh an average of 55 pounds and females are just slightly lighter — weighing an average of 48 pounds.'",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                22.7,
+                27.2
+              ],
+              "female": [
+                18.1,
+                24.9
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S963",
+            "quote": "Male Norwegian Elkhounds are about 20 inches tall at the shoulder and weigh 50–60 pounds.",
+            "confidence": "medium",
+            "notes": "PetMD FAQ (S963): 'Females are slightly smaller, about 19 inches tall and 40–55 pounds.' — the same page also says 45–57 pounds (inconsistent); background only."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. AKC about 48–55 lb (S961) → the 'Medium (24–59 pounds)' class. No breed-specific statement found (PetMD S963 gives none). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Norwegian Elkhound growth curve found."
+      }
+    },
+    "lifespan": {
+      "petmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S963",
+        "quote": "Norwegian Elkhound dogs have an average life span of 12–15 years, typical for a medium-size dog.",
+        "confidence": "medium",
+        "notes": "PetMD (S963, reviewed by Barri J. Morrison, DVM). The lower bound 12 y is the basis of the senior boundary (closest rule row, verified=false — Miniature American Shepherd precedent). WebMD (S964): 'The Norwegian elkhound lifespan is an average of 12 to 15 years.'"
+      },
+      "webmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S964",
+        "quote": "The Norwegian elkhound lifespan is an average of 12 to 15 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S964, medically reviewed). Same span as PetMD — not exported twice."
+      },
+      "mcmillan_2024": {
+        "value": 12.9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED as an A/B value — Wikipedia (S965, tier C) reports a 2024 UK study (McMillan et al. 2024) with 12.9 years for the breed (paraphrase), but the Dogs Trust table of that study (S123) was refused by the fetch tool this run and the Dogs Trust / LJMU news pages (read 2026-11-19) name no Norwegian Elkhound. Never shown; alternative for David: 0.75 × 12.9 × 12 = 116 months."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: last 25 % of lifespan (S11) × the PetMD lower bound 12 y (S963) = 9 y = 108 months (verified=false, Claude's suggestion — see proposed_game_parameters.norwegian_elkhound.senior_boundary_months). No RKC band, McMillan 2024 or VetCompass median reachable.",
+        "derived_from": [
+          "S11",
+          "S963"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S963",
+        "quote": "One hour of exercise a day is recommended for this breed",
+        "confidence": "medium",
+        "notes": "PetMD (S963, fragment) → 60 min (runbook rule: one number N → N); PetMD also 'Make sure your Elkhound pup gets at least 60 minutes of outdoor exercise every day.' No RKC / PDSA page reachable, so the vet-reviewed PetMD page is the strongest source with a number. WebMD (S964) gives no number ('They enjoy long walks and hikes in the woods.'). Vetstreet (S966, tier C) '20 to 30 minutes twice a day' (40–60) — alternative.",
+        "alternatives": [
+          {
+            "value": 40,
+            "unit": "minutes/day",
+            "source_id": "S966",
+            "quote": "Joint health and overall health permitting, plan to exercise him for 20 to 30 minutes twice a day.",
+            "confidence": "low",
+            "notes": "Vetstreet (S966, tier C) — 2 × 20–30 min = 40–60, range lower bound 40; never alone, not used."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "high energy and playful; needs mental stimulation as much as physical exercise; bored dogs become destructive and noisy",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "They need mental stimulation as much as they need physical exercise, as a bored Elkie can become destructive and noisy.",
+        "confidence": "high",
+        "notes": "PetMD (S963): 'The Norwegian Elkhound's high energy and playful nature also make them ready for adventure.' WebMD (S964): 'This means that they have a reasonable amount of energy that needs to be burned off.'"
+      },
+      "fencing": {
+        "value": "secure fence or lead outside; tends to wander off following its nose",
+        "unit": "home (sourced advice)",
+        "source_id": "S963",
+        "quote": "Always keep this dog inside a secure, fenced area or on a leash when they're outside.",
+        "confidence": "high",
+        "notes": "PetMD (S963) → secure_fencing chip. WebMD (S964): 'But resist letting them wander off-leash.'; 'They love to explore their environments and won't hesitate to wander off.'"
+      },
+      "heat": {
+        "value": "thick coat — prone to overheating; keep cool with shade, water, a swim or air conditioning",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "this thick-coated breed is prone to overheating.",
+        "confidence": "medium",
+        "notes": "PetMD (S963, fragment); 'Keep your dog cool with a swim, air conditioning, and plenty of shade and water to drink when temperatures climb.' → heat_sensitive chip (Samoyed precedent). Not flat-faced → no DOG_NO_WALK_IN_HEAT row (runbook: flat-faced breeds only). WebMD (S964): 'hardy northern dogs that can handle harsh weather conditions.'"
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PetMD / WebMD name no bloat) → no meal gap (runbook M5-R16: never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "fearless, energetic and brave; bold, an effective guardian yet normally friendly, dignified and independent",
+        "unit": "—",
+        "source_id": "S960",
+        "quote": "Fearless, energetic, brave.",
+        "confidence": "high",
+        "notes": "FCI standard (S960) behaviour / temperament. AKC standard (S961): 'bold and energetic, an effective guardian yet normally friendly, with great dignity and independence of character.' Disqualifying (FCI): 'Aggressive or overly shy dogs.'"
+      },
+      "family": {
+        "value": "makes a wonderful family dog when socialised properly as a puppy and trained early",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "When socialized properly as puppies and trained early, Norwegian Elkhounds make wonderful family dogs.",
+        "confidence": "high",
+        "notes": "PetMD FAQ (S963) — the basis of the family_pet chip; 'They live well around adults as well as children.'"
+      },
+      "children": {
+        "value": "great around children of all ages — all interactions between children and dogs supervised",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "This temperament makes them great around children of all ages, though all interactions between kids and dogs need to be supervised.",
+        "confidence": "high",
+        "notes": "PetMD (S963) — the basis of the children chip (supervision caveat kept). WebMD (S964): 'they're not always friendly with strangers, young children, and other dogs.' → no small_children chip. Vetstreet (S966, tier C): 'If he is brought up with children, the loving and good-natured Elkhound enjoys their company and can be a good playmate.'"
+      },
+      "other_pets": {
+        "value": "bred as hunters — may dart off after smaller animals such as rabbits, squirrels and cats",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "This means they can dart off after smaller animals like rabbits, squirrels, and even cats.",
+        "confidence": "medium",
+        "notes": "PetMD (S963); preceding sentence 'Elkies were bred for thousands of years to be hunters.' The page does not use the words 'prey drive' → no chases_small_pets chip (runbook: the quote must name a high prey drive — open for David). WebMD (S964): 'they're not always friendly with … other dogs.' (fragment)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on being left alone (WebMD's 'Always make sure that your dog feels safe before leaving them alone with others.' is about other people / animals) → no needs_company chip."
+      },
+      "socialisation": {
+        "value": "socialising the puppy is key; properly socialised and trained early they make wonderful family dogs",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "When socialized properly as puppies and trained early, Norwegian Elkhounds make wonderful family dogs.",
+        "confidence": "high",
+        "notes": "PetMD (S963, a condition) → breed DOG_SOCIALISATION entry (M5-R17). PetMD also: 'While socializing your Norwegian Elkhound puppy is key' (fragment)."
+      },
+      "training": {
+        "value": "smart but with an independent streak — can be a little difficult to train; consistent, positive reinforcement",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "This part of their personality might make them a little difficult to train, though they're smart dogs.",
+        "confidence": "medium",
+        "notes": "PetMD (S963): 'they have an undeniable independent streak.'; 'Be consistent and use positive reinforcement methods'. Background (no vocabulary key: independent_experienced_owner needs a quote naming an experienced owner)."
+      },
+      "barking": {
+        "value": "barks a lot, also when unprovoked",
+        "unit": "—",
+        "source_id": "S964",
+        "quote": "The breed does tend to bark a lot — even when unprovoked.",
+        "confidence": "medium",
+        "notes": "WebMD (S964); 'They also bark a lot when their prey is stationary so you can find them.' Background (no vocabulary key)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found (PetMD: a bored Elkie 'can become destructive' — kept in exercise.daily_text)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found (PetMD S963 lists obesity among health problems and suggests a slow feeder for fast eaters — paraphrase)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch category not reachable (RKC pages refused); no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: not_found (RKC health-testing section not reachable).",
+      "fanconi_syndrome": {
+        "value": "Fanconi syndrome (inherited kidney disease)",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "Perhaps the most worrisome health problem to watch for in your Norwegian Elkhound is Fanconi syndrome",
+        "confidence": "high",
+        "notes": "PetMD (S963); WebMD (S964): kidney problems including Fanconi syndrome. Register health key fanconi_kidney_disease (new — the existing fanconi_syndrome text names a DNA test of the parents, which no source gives for this breed)."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "Progressive retinal atrophy (PRA)",
+        "confidence": "medium",
+        "notes": "PetMD (S963) list item (as returned); WebMD (S964) eye problems (progressive retinal atrophy). Register health key pra_inherited_blindness."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "hip dysplasia",
+        "confidence": "medium",
+        "notes": "PetMD (S963) list item (as returned); WebMD (S964). Register health key hip_dysplasia."
+      },
+      "patellar_luxation": {
+        "value": "patellar luxation",
+        "unit": "—",
+        "source_id": "S964",
+        "quote": "patellar luxation",
+        "confidence": "medium",
+        "notes": "WebMD (S964) list item (as returned). Register health key kneecap_luxation."
+      },
+      "hypothyroidism": {
+        "value": "thyroid problems",
+        "unit": "—",
+        "source_id": "S964",
+        "quote": "thyroid problems",
+        "confidence": "medium",
+        "notes": "WebMD (S964) list item (as returned). Register health key hypothyroidism."
+      },
+      "obesity": {
+        "value": "obesity",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "obesity",
+        "confidence": "medium",
+        "notes": "PetMD (S963) list item (as returned). Register health key weight_gain."
+      },
+      "sebaceous_cysts": {
+        "value": "sebaceous cysts",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "sebaceous cysts",
+        "confidence": "medium",
+        "notes": "PetMD (S963) and WebMD (S964) list items. Background — no register key."
+      },
+      "skin": {
+        "value": "skin issues (moist dermatitis)",
+        "unit": "—",
+        "source_id": "S964",
+        "quote": "moist dermatitis",
+        "confidence": "low",
+        "notes": "WebMD (S964) list item (as returned). Background — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 36,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Norwegian Elkhound",
+        "confidence": "medium",
+        "notes": "Wikipedia 'The Intelligence of Dogs' ranking table (S35, tier C; en.wikipedia.org read 2026-11-19): row '| 36 | Norwegian Elkhound | Above Average Working Dogs' (as returned). Wikipedia breed article (S965): 'They rank 36th in Stanley Coren's The Intelligence of Dogs, being of above average working/obedience intelligence.' Verify in the book."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 'Above Average Working Dogs' (ranks 27–39): 'Understanding of new commands: 15 to 25 repetitions.', 'Obey first command: 70% of the time or better.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.norwegian_elkhound.learning_multiplier (1.2, runbook rule: Above average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "a typical Spitz: compact, short body, squarely built; erect ears, tail tightly curled over the back",
+        "unit": "—",
+        "source_id": "S960",
+        "quote": "A typical Spitz.",
+        "confidence": "high",
+        "notes": "FCI standard (S960): 'Compact and short body, squarely built.'; 'Tail is tightly curled over the back.'"
+      },
+      "colours": {
+        "value": [
+          "grey"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S960",
+        "quote": "Grey, of various shades.",
+        "confidence": "high",
+        "notes": "FCI standard (S960): the grey comes from the black tips of the outer coat; lighter chest, belly, legs and underside of the tail, a harness marking from withers to elbow, darker ears and muzzle front (a mask) (paraphrase). Disqualifying: 'Any variety in colour other than grey.' AKC (S961): 'Gray, medium preferred, variations in shade determined by the length of black tips and quantity of guard hairs.'; 'Disqualifications: An overall color other than gray.' One colour only → no colour variants (runbook §8b)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). One standard colour (grey) → weight 100."
+      },
+      "coat": {
+        "value": "medium length; thick, coarse, abundant outer coat without curls; soft undercoat",
+        "unit": "—",
+        "source_id": "S960",
+        "quote": "Hair: Of medium length; thick, coarse, abundant outer coat without curls.",
+        "confidence": "high",
+        "notes": "FCI standard (S960): short and smooth on the head and front of the legs, longest on the neck, thighs, back of the legs and tail; soft undercoat (paraphrase)."
+      },
+      "eyes": {
+        "value": "not prominent, dark brown",
+        "unit": "—",
+        "source_id": "S960",
+        "quote": "Not prominent, dark brown in colour.",
+        "confidence": "high",
+        "notes": "FCI standard (S960). Disqualifying: 'Yellow or blue eyes.'"
+      },
+      "ears": {
+        "value": "set high, firm and upstanding, relatively small, pointed and very mobile",
+        "unit": "—",
+        "source_id": "S960",
+        "quote": "Set on high, firm and upstanding, relatively small.",
+        "confidence": "high",
+        "notes": "FCI standard (S960). Disqualifying: 'Ears not erect.'"
+      },
+      "nose": {
+        "value": "black",
+        "unit": "—",
+        "source_id": "S960",
+        "quote": "Black.",
+        "confidence": "high",
+        "notes": "FCI standard (S960)."
+      },
+      "tail": {
+        "value": "set high, strong, relatively short, firmly curled over the centre line of the back",
+        "unit": "—",
+        "source_id": "S960",
+        "quote": "Firmly curled over the center line, not carried on either side of the back.",
+        "confidence": "high",
+        "notes": "FCI standard (S960). Disqualifying: 'Naturally short tail.'"
+      }
+    },
+    "suitability": {
+      "_note": "No RKC key facts (Breeds A–Z page refused), no PDSA / Woodgreen page. Sources: FCI (S960), PetMD (S963), WebMD (S964); Vetstreet (S966, tier C) only next to them.",
+      "fci_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S960",
+        "quote": "Hair: Of medium length; thick, coarse, abundant outer coat without curls.",
+        "confidence": "high",
+        "notes": "FCI standard (S960) — read as the register category 'Medium' (our wording; quote verbatim)."
+      },
+      "webmd_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S964",
+        "quote": "You should brush your dog's coats for at least two minutes every day.",
+        "confidence": "high",
+        "notes": "WebMD (S964) — read as the register category 'Every day' (our wording; quote verbatim); 'Then increase it to several minutes a day during shedding season.' PetMD (S963): 'If you can't brush his back for 2–5 minutes every day, this may not be the breed for you.' → brushing every day (M5-R13) and the frequent_grooming chip. Vetstreet (S966, tier C) 'weekly' / 'several times a week' — background."
+      },
+      "petmd_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "families with Elkies are in for a lot of shedding—as in silver tumbleweeds.",
+        "confidence": "high",
+        "notes": "PetMD (S963) — read as the register shedding value 'Yes' (our wording). WebMD (S964): 'Norwegian Elkhounds shed a little bit all year round.'; 'It becomes much worse during shedding season which happens about twice a year.' → sheds chip (no contrary statement)."
+      },
+      "petmd_professional_grooming": {
+        "value": "professional deshedding session in spring and autumn",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "Schedule a professional deshedding session with a local groomer during spring and fall",
+        "confidence": "medium",
+        "notes": "PetMD (S963, fragment) — seasonal (twice a year), no period the M5-R20 rule maps (longest 3 months) → no groomer task; the fact stays in the breed text."
+      },
+      "petmd_bath": {
+        "value": "a handful of baths a year",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "only need to be bathed a handful of times a year.",
+        "confidence": "medium",
+        "notes": "PetMD (S963, fragment); WebMD (S964): 'you'll only need to bathe your dog a couple of times a year.' — no number per period the M5-R19 rule maps → no bath task."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth daily",
+        "unit": "—",
+        "source_id": "S964",
+        "quote": "brush their teeth daily",
+        "confidence": "high",
+        "notes": "WebMD (S964, fragment as returned) → tooth brushing every day (M5-R15)."
+      },
+      "webmd_nails": {
+        "value": "trim the nails as needed",
+        "unit": "—",
+        "source_id": "S964",
+        "quote": "you should trim your dog's nails as needed",
+        "confidence": "medium",
+        "notes": "WebMD (S964) — no frequency → no nail task. Vetstreet (S966, tier C) 'usually every six weeks' — never alone, not used."
+      },
+      "petmd_ears": {
+        "value": "check the ears for redness, debris or odour",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": "pet parents should still monitor their Norwegian Elkhound's ears for redness, debris, or odor.",
+        "confidence": "medium",
+        "notes": "PetMD (S963) — no cleaning frequency → no ear task."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -97753,6 +98258,290 @@
         "confidence": "medium",
         "notes": "FCI standard (S955) as in welsh_terrier.appearance. Two standard colours; weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan is the portrait default (FCI S955 'for preference'; weights unsourced); natural tail"
+      }
+    },
+    "norwegian_elkhound": {
+      "_note": "Unattended run M5-R10-128 (2026-11-19): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PetMD (S963 'One hour of exercise a day is recommended' → 60 — no RKC / PDSA page reachable). Senior boundary 108 = Claude's suggestion from the closest rule row (0.75 × PetMD lower bound 12 y, S963; verified=false — senior_boundary_months). Learning 1.2 (Coren rank 36, Above average, S35). Built: brushing every day (WebMD S964 / PetMD S963, M5-R13), puppy socialisation with the PetMD quote (M5-R17), tooth brushing every day (WebMD S964, M5-R15). No nail / ear / bath / groomer task (no frequency the rules map), no meal gap (no quote), no heat warning (not flat-faced; heat_sensitive chip instead). No new vocabulary key. In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S963",
+        "quote": "One hour of exercise a day is recommended for this breed",
+        "confidence": "medium",
+        "notes": "PetMD (S963) → rule 'one number N' → 60 (no RKC / PDSA page reachable). Vetstreet (S966, tier C) 2 × 20–30 min — not used.",
+        "alternatives": [
+          {
+            "value": 40,
+            "source_id": "S966",
+            "quote": "Joint health and overall health permitting, plan to exercise him for 20 to 30 minutes twice a day.",
+            "notes": "Vetstreet (tier C) — never alone."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PetMD S963 'One hour of exercise a day is recommended')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S963",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) — the PetMD lower bound (S963); Claude's suggestion, see senior_boundary_months (verified=false).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S963"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_mcmillan_wikipedia_12_9_y": 116
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36; senior 108 is Claude's suggestion (senior_boundary_months)"
+      },
+      "senior_boundary_months": {
+        "value": 108,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Closest rule row (Miniature American Shepherd / Xoloitzcuintli precedent): 0.75 × the PetMD lower bound 12 y (S963; WebMD S964 12–15 y too) × 12 = 108. No RKC band, McMillan 2024 (S123 refused) or VetCompass median reachable. Alternative for David: Wikipedia (S965, tier C) quotes McMillan 2024 12.9 y → 116.",
+        "derived_from": [
+          "S11",
+          "S963"
+        ],
+        "decision": "predlog Claude 2026-11-19 (najbližja vrstica pravila runbooka, M5-R10-128) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage (senior = the unconfirmed 108).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108 — senior unconfirmed)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 36 'Norwegian Elkhound' (S35) → tier Above average (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 36, Above average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S964",
+        "quote": "You should brush your dog's coats for at least two minutes every day.",
+        "confidence": "high",
+        "notes": "norwegian_elkhound.suitability.webmd_grooming. 'every day' → 7 (runbook »Dog grooming«). PetMD (S963) 'every day' agrees. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 7,
+            "source_id": "S963",
+            "quote": "If you can't brush his back for 2–5 minutes every day, this may not be the breed for you.",
+            "notes": "PetMD — the same number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (WebMD »every day« → 7); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S964",
+        "quote": "brush their teeth daily",
+        "confidence": "high",
+        "notes": "norwegian_elkhound.suitability.webmd_teeth → every day. Built: DOG_CARE_TASKS tooth_brushing [7, day], M5-R15.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily« → vsak dan"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S963",
+        "quote": "When socialized properly as puppies and trained early, Norwegian Elkhounds make wonderful family dogs.",
+        "confidence": "high",
+        "notes": "norwegian_elkhound.behaviour.socialisation (PetMD S963, a condition). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S963)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-128); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.exercise.adult",
+              "norwegian_elkhound.exercise.daily_text"
+            ],
+            "quote": "S963 'One hour of exercise a day is recommended for this breed'; 'They need mental stimulation as much as they need physical exercise, …'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.behaviour.family"
+            ],
+            "quote": "S963 'When socialized properly as puppies and trained early, Norwegian Elkhounds make wonderful family dogs.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.behaviour.children"
+            ],
+            "quote": "S963 'This temperament makes them great around children of all ages, though all interactions between kids and dogs need to be supervised.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.exercise.daily_text"
+            ],
+            "quote": "S963 'They need mental stimulation as much as they need physical exercise, as a bored Elkie can become destructive and noisy.'"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.exercise.fencing"
+            ],
+            "quote": "S963 'Always keep this dog inside a secure, fenced area or on a leash when they're outside.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S964",
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.suitability.webmd_grooming"
+            ],
+            "quote": "S964 'You should brush your dog's coats for at least two minutes every day.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.suitability.petmd_shedding"
+            ],
+            "quote": "S963 'families with Elkies are in for a lot of shedding—as in silver tumbleweeds.'"
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S963"
+            ],
+            "refs": [
+              "norwegian_elkhound.exercise.heat"
+            ],
+            "quote": "S963 'this thick-coated breed is prone to overheating.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PetMD asks for supervision; WebMD (S964) 'not always friendly with … young children' → no small_children chip.",
+          "chases_small_pets": "PetMD (S963) 'can dart off after smaller animals like rabbits, squirrels, and even cats' — the page never names a prey drive (runbook: a high prey drive must be quoted) → open for David.",
+          "apartment": "No RKC 'Size of home' key fact reachable.",
+          "long_daily_exercise": "60 minutes a day (PetMD S963) — the chip is for 2 hours or more.",
+          "needs_company": "No A/B statement on being left alone.",
+          "independent_experienced_owner": "PetMD names an independent streak but no source says the breed is for an experienced owner.",
+          "hypoallergenic": "never (runbook)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S963",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch category not reachable this run. Marketing never promises the breed's health and never calls it hypoallergenic.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Norwegian Elkhound, grey: a typical Spitz with a compact, short, squarely built body; thick, coarse, abundant medium-length grey coat with black tips on the outer hairs, lighter silver-grey chest, belly and legs, a darker muzzle and ears; wedge-shaped head, small pointed erect ears, dark brown eyes, black nose; tail tightly curled over the back",
+        "unit": "—",
+        "source_id": "S960",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S960) as in norwegian_elkhound.appearance. One standard colour; weight unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey is the portrait default (FCI S960 — the only standard colour)"
       }
     }
   }
