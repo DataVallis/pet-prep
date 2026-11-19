@@ -209,11 +209,70 @@ return [
         'red-white' => 'dogs/american-cocker-spaniel--red-white.webp',
         'tricolour' => 'dogs/american-cocker-spaniel--tricolour.webp',
     ],
+    'belgian_malinois' => [
+        'fawn' => 'dogs/belgian-malinois.webp',
+        'mahogany' => 'dogs/belgian-malinois--mahogany.webp',
+    ],
+    'basset_hound' => [
+        'tricolour' => 'dogs/basset-hound.webp',
+        'lemon-white' => 'dogs/basset-hound--lemon-white.webp',
+    ],
+    'english_cocker_spaniel' => [
+        'golden' => 'dogs/english-cocker-spaniel.webp',
+        'black' => 'dogs/english-cocker-spaniel--black.webp',
+        'liver' => 'dogs/english-cocker-spaniel--liver.webp',
+        'black-tan' => 'dogs/english-cocker-spaniel--black-tan.webp',
+        'blue-roan' => 'dogs/english-cocker-spaniel--blue-roan.webp',
+        'orange-roan' => 'dogs/english-cocker-spaniel--orange-roan.webp',
+        'black-white' => 'dogs/english-cocker-spaniel--black-white.webp',
+        'tricolour' => 'dogs/english-cocker-spaniel--tricolour.webp',
+    ],
     'maltese' => [
         'white' => 'dogs/maltese.webp',
     ],
+    'pug' => [
+        'fawn' => 'dogs/pug.webp',
+        'black' => 'dogs/pug--black.webp',
+        'apricot' => 'dogs/pug--apricot.webp',
+        'silver' => 'dogs/pug--silver.webp',
+    ],
+    'rough_collie' => [
+        'sable-white' => 'dogs/rough-collie.webp',
+        'tricolour' => 'dogs/rough-collie--tricolour.webp',
+        'blue-merle-white' => 'dogs/rough-collie--blue-merle-white.webp',
+    ],
+    'mastiff' => [
+        'fawn' => 'dogs/mastiff.webp',
+        'apricot' => 'dogs/mastiff--apricot.webp',
+        'brindle' => 'dogs/mastiff--brindle.webp',
+    ],
+    'shiba_inu' => [
+        'red' => 'dogs/shiba-inu.webp',
+        'black-tan' => 'dogs/shiba-inu--black-tan.webp',
+        'sesame' => 'dogs/shiba-inu--sesame.webp',
+    ],
+    'rhodesian_ridgeback' => [
+        'red-wheaten' => 'dogs/rhodesian-ridgeback.webp',
+        'light-wheaten' => 'dogs/rhodesian-ridgeback--light-wheaten.webp',
+    ],
+    'papillon' => [
+        'red-white' => 'dogs/papillon.webp',
+        'sable-white' => 'dogs/papillon--sable-white.webp',
+        'tricolour' => 'dogs/papillon--tricolour.webp',
+        'black-white' => 'dogs/papillon--black-white.webp',
+    ],
+    'portuguese_water_dog' => [
+        'black' => 'dogs/portuguese-water-dog.webp',
+        'black-white' => 'dogs/portuguese-water-dog--black-white.webp',
+        'brown' => 'dogs/portuguese-water-dog--brown.webp',
+    ],
     'bichon_frise' => [
         'white' => 'dogs/bichon-frise.webp',
+    ],
+    'newfoundland' => [
+        'black' => 'dogs/newfoundland.webp',
+        'landseer' => 'dogs/newfoundland--landseer.webp',
+        'brown' => 'dogs/newfoundland--brown.webp',
     ],
     'soft_coated_wheaten_terrier' => [
         'wheaten' => 'dogs/soft-coated-wheaten-terrier.webp',
