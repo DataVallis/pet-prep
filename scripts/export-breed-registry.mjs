@@ -508,6 +508,7 @@ const SPECIES = [
       { id: 'pointer', synonyms: { en: ['English Pointer'], sl: ['pointer', 'angleski pointer'] } },
       { id: 'mudi', synonyms: { en: ['Hungarian Mudi'], sl: ['madžarski mudi', 'madzarski mudi'] } },
       { id: 'welsh_terrier', synonyms: { en: ['Welshie', 'Welsh'], sl: ['valizanski terier', 'velški terier', 'welsh terier'] } },
+      { id: 'norwegian_elkhound', synonyms: { en: ['Elkhound', 'Elkie', 'Norwegian Elkhound Grey', 'Norsk Elghund Grå', 'Norwegian Moose Dog'], sl: ['norveski losovec', 'losovec', 'norveški elkhund'] } },
     ],
   },
   {
@@ -532,7 +533,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG', Afghanistan: 'AF' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG', Afghanistan: 'AF', Norway: 'NO' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -3228,6 +3229,30 @@ const DOG_FACTS = {
       ['addisons_disease', 'health.addisons'],
     ],
   },
+  // M5-R10-128. No RKC page reachable → PetMD (S963): exercise 'One hour of exercise a day' (about 60), lifespan '12–15 years'
+  // (span); height = FCI-Standard N° 242 ideal heights (S960); weight = the AKC standard 'about 55 / 48 pounds' (S961 — FCI gives
+  // none); coat 'Medium' (FCI hair 'Of medium length'), grooming = WebMD 'every day' (S964), sheds = PetMD 'a lot of shedding'
+  // (S963). Coren rank 36 (S35). FCI origin Norway (NO, new). Not exported: adult_weight alternatives (PetMD), lifespan.webmd
+  // (same span) / mcmillan_2024 (Wikipedia, tier C) / senior_from (derived), health.sebaceous_cysts / skin (background).
+  // New health key fanconi_kidney_disease (the fanconi_syndrome text names a parents' DNA test no source gives for this breed).
+  norwegian_elkhound: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', 'about']],
+    lifespan: [['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'about']],
+    coat: ['suitability.fci_coat_length'],
+    grooming: [['suitability.webmd_grooming', 'grooming_frequency']],
+    shedding: ['suitability.petmd_shedding'],
+    food_motivation: null,
+    health: [
+      ['fanconi_kidney_disease', 'health.fanconi_syndrome'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['kneecap_luxation', 'health.patellar_luxation'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['weight_gain', 'health.obesity'],
+    ],
+  },
 
 
 
@@ -3313,6 +3338,7 @@ export const DOG_CARE_TASKS = {
   spinone_italiano: [['tooth_brushing', 7, 7, 'proposed_game_parameters.spinone_italiano.tooth_brushing'], ['nail_trim', 1, 7, 'proposed_game_parameters.spinone_italiano.nail_trimming']],
   pointer: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pointer.tooth_brushing']],
   welsh_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.welsh_terrier.tooth_brushing'], ['groomer_visit', 1, 56, 'proposed_game_parameters.welsh_terrier.professional_grooming'], ['bath', 1, 56, 'proposed_game_parameters.welsh_terrier.bathing']],
+  norwegian_elkhound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.norwegian_elkhound.tooth_brushing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4279,6 +4305,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.welsh_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.welsh_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.welsh_terrier.exercise_minutes_senior',
+  },
+  norwegian_elkhound: {
+    adult_minutes: ['proposed_game_parameters.norwegian_elkhound.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.norwegian_elkhound.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.norwegian_elkhound.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.norwegian_elkhound.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.norwegian_elkhound.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.norwegian_elkhound.exercise_minutes_senior',
   },
 
 
