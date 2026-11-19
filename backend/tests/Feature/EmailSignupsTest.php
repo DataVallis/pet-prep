@@ -153,6 +153,14 @@ describe('POST /api/email-signups', function () {
         expect($old->consent_version)->toBe('2026-11')->and($old->consented_at->toDateTimeString())->toBe('2026-11-17 10:00:00');
     });
 
+    it('a repeat signup never clears an unsubscribe (QA #1316 / #1418)', function () {
+        EmailContact::factory()->create(['email' => 'odjava@example.test', 'unsubscribed_at' => now()->subDay()]);
+
+        $this->postJson('/api/email-signups', esBody(['email' => 'odjava@example.test']))->assertNoContent();
+
+        expect(EmailContact::where('email', 'odjava@example.test')->sole()->unsubscribed_at)->not->toBeNull();
+    });
+
     it('accepts the early-access consent version ea-2026-11 and keeps it per signup', function () {
         $this->postJson('/api/email-signups', esBody(['consent_version' => 'ea-2026-11', 'purpose' => 'early_access', 'source' => 'early_access_form', 'section' => 'home_cta']))->assertNoContent();
 

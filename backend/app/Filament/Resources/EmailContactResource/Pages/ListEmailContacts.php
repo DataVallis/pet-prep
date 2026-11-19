@@ -15,7 +15,7 @@ class ListEmailContacts extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
-            // CSV of exactly what the list shows (search + filters applied), for Klaviyo / partners' import.
+            // CSV of exactly what the list shows (search + filters applied), for a Klaviyo import (partners get numbers, never this file).
             Action::make('export_csv')
                 ->label(__('admin.email_signups.export_csv'))
                 ->icon('heroicon-o-arrow-down-tray')
