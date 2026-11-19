@@ -2,6 +2,7 @@
 
 use App\Enums\PushType;
 use App\Enums\Species;
+use App\Enums\WishStatus;
 use App\Events\PetUpdated;
 use App\Filament\Resources\ItemMediaResource\Pages\ListItemMedia;
 use App\Jobs\SendItemMediaAlert;
@@ -333,6 +334,41 @@ describe('designs', function () {
         imRedeem($parent2, $pet2, 'petprep_wish_bundle_welcome', ['designs' => ['bowls' => 'dog_bowls_blue_ceramic']])->assertOk();
         expect(PetItem::where('pet_id', $pet2->id)->pluck('design', 'item_key')->all())
             ->toBe(['bed' => 'dog_bed_round_grey', 'bowls' => 'dog_bowls_blue_ceramic', 'toy_1' => 'dog_rope_red_white']);
+    });
+
+    it('bundle: every item takes the parent\'s pick, also the wished one; without a valid pick the wish, then the first design (David 2026-11-19)', function () {
+        config(['services.fal_ai.key' => null]);
+        [$parent, $child, $pet] = imFamily();
+        imAs($child);
+        $bowls = postJson('/api/child/wishes', ['item_key' => 'bowls', 'design' => 'dog_bowls_bamboo_stand'])->assertCreated()->json('wish.id');
+        $bed = postJson('/api/child/wishes', ['item_key' => 'bed', 'design' => 'dog_bed_wicker_checked'])->assertCreated()->json('wish.id');
+
+        imRedeem($parent, $pet, 'petprep_wish_bundle_welcome', ['wish_id' => $bowls, 'designs' => [
+            'bed' => 'dog_bed_wicker_checked', 'bowls' => 'dog_bowls_blue_ceramic', 'toy_1' => 'dog_rope_rainbow',
+        ]])->assertOk();
+        expect(PetItem::where('pet_id', $pet->id)->pluck('design', 'item_key')->all())
+            ->toBe(['bed' => 'dog_bed_wicker_checked', 'bowls' => 'dog_bowls_blue_ceramic', 'toy_1' => 'dog_rope_rainbow'])
+            // The open wishes the bundle covers are settled as before.
+            ->and(PetWish::whereKey($bowls)->value('status'))->toBe(WishStatus::Bought)
+            ->and(PetWish::whereKey($bed)->value('status'))->toBe(WishStatus::Cancelled);
+
+        // An older app without a valid pick for the wished item → the wish's design.
+        [$parent2, $child2, $pet2] = imFamily();
+        imAs($child2);
+        $wish2 = postJson('/api/child/wishes', ['item_key' => 'bowls', 'design' => 'dog_bowls_bamboo_stand'])->assertCreated()->json('wish.id');
+        imRedeem($parent2, $pet2, 'petprep_wish_bundle_welcome', ['wish_id' => $wish2, 'designs' => ['bowls' => 'nope']])->assertOk();
+        expect(PetItem::where('pet_id', $pet2->id)->pluck('design', 'item_key')->all())
+            ->toBe(['bed' => 'dog_bed_round_grey', 'bowls' => 'dog_bowls_bamboo_stand', 'toy_1' => 'dog_rope_red_white']);
+
+        // A real design of another item (a bed design for the bowls) or of the other species is
+        // not a valid pick for the wished key → the wish's design too.
+        foreach (['dog_bed_wicker_checked', 'cat_bowls_teal_fish'] as $i => $wrong) {
+            [$parent3, $child3, $pet3] = imFamily();
+            imAs($child3);
+            $wish3 = postJson('/api/child/wishes', ['item_key' => 'bowls', 'design' => 'dog_bowls_bamboo_stand'])->assertCreated()->json('wish.id');
+            imRedeem($parent3, $pet3, 'petprep_wish_bundle_welcome', ['wish_id' => $wish3, 'designs' => ['bowls' => $wrong]])->assertOk();
+            expect(PetItem::where('pet_id', $pet3->id)->where('item_key', 'bowls')->value('design'))->toBe('dog_bowls_bamboo_stand', "case {$i}: {$wrong}");
+        }
     });
 
     it('gives an item owned before designs existed its first design (backfill rule)', function () {

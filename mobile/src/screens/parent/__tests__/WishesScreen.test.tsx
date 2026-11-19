@@ -199,6 +199,10 @@ describe('WishesScreen — designs (M6-W03)', () => {
       { key: 'bowls', variant: 'dog_bowls', product_id: 'petprep_wish_bowls', owned: false, media_ready: false, designs: BOWL_DESIGNS },
     ],
   };
+  const ROPE_DESIGNS = [
+    { key: 'rope_red', name: 'Rdeče-bela vrv', image: null },
+    { key: 'rope_blue', name: 'Modri obroč', image: null },
+  ];
   const DESIGN_WISH = { ...WISH, design: 'bowls_clay' };
   const DESIGN_BODY = { ...BODY, wishes: [DESIGN_WISH], pets: [PET] };
 
@@ -216,8 +220,17 @@ describe('WishesScreen — designs (M6-W03)', () => {
     expect(redeemPetItem).toHaveBeenCalledWith(12, { product_id: 'petprep_wish_bowls', wish_id: 31, design: 'bowls_clay' }, 'tx-d', expect.anything());
   });
 
-  it('the bundle from a wish: the wished design stays, the parent picks the other item\'s design', async () => {
-    getParentWishes.mockResolvedValue(DESIGN_BODY);
+  it('the bundle from a wish shows all three items, each preselected with the look its open wish asks for', async () => {
+    const pet = {
+      ...PET,
+      items: [...PET.items, { key: 'toy_1', variant: 'dog_rope', product_id: 'petprep_wish_toy_1', owned: false, media_ready: false, designs: ROPE_DESIGNS }],
+    };
+    const wishes = [
+      DESIGN_WISH,
+      { ...WISH, id: 32, item_key: 'bed', variant: 'dog_bed', product_id: 'petprep_wish_bed', design: 'bed_box' },
+      { ...WISH, id: 33, item_key: 'toy_1', variant: 'dog_rope', product_id: 'petprep_wish_toy_1', design: 'rope_blue' },
+    ];
+    getParentWishes.mockResolvedValue({ ...BODY, open_count: 3, wishes, pets: [pet] });
     getProducts.mockResolvedValue([product('petprep_wish_bowls', '5,99 €'), product('petprep_wish_bundle_welcome', '15,99 €')]);
     purchaseStoreProduct.mockResolvedValue({ productIdentifier: 'petprep_wish_bundle_welcome', customerInfo: {}, transaction: { transactionIdentifier: 'tx-b' } });
     redeemPetItem.mockResolvedValue({ status: 'assigned', items: [], open_count: 0 });
@@ -226,17 +239,36 @@ describe('WishesScreen — designs (M6-W03)', () => {
     fireEvent.press(screen.getByTestId('wish-bundle-31'));
     expect(purchaseStoreProduct).not.toHaveBeenCalled();
     expect(screen.getByTestId('design-choice-wish-31')).toBeTruthy();
-    // Only the bed is the parent's to choose (bowls = the child's wish).
-    expect(screen.queryByTestId('design-choice-wish-31-bowls-bowls_steel')).toBeNull();
-    fireEvent.press(screen.getByTestId('design-choice-wish-31-bed-bed_box'));
+    // All three — the bowls of the card it was opened from included.
+    expect(screen.getByText('Izberite videz: Pasja postelja')).toBeTruthy();
+    expect(screen.getByText('Izberite videz: Skledi za hrano in vodo')).toBeTruthy();
+    expect(screen.getByText('Izberite videz: Vrv za vlečenje')).toBeTruthy();
+    // Preselected = what the child is waiting for, not the first design.
+    expect(screen.getByTestId('design-choice-wish-31-bed-bed_box')).toBeSelected();
+    expect(screen.getByTestId('design-choice-wish-31-bed-bed_round')).not.toBeSelected();
+    expect(screen.getByTestId('design-choice-wish-31-bowls-bowls_clay')).toBeSelected();
+    expect(screen.getByTestId('design-choice-wish-31-toy_1-rope_blue')).toBeSelected();
+    // The parent may still change any look.
+    fireEvent.press(screen.getByTestId('design-choice-wish-31-bowls-bowls_steel'));
     fireEvent.press(screen.getByTestId('design-choice-confirm-wish-31'));
     expect(await screen.findByText('Kupljeno — stvar je dodana.')).toBeTruthy();
     expect(redeemPetItem).toHaveBeenCalledWith(
       12,
-      { product_id: 'petprep_wish_bundle_welcome', wish_id: 31, designs: { bed: 'bed_box', bowls: 'bowls_clay' } },
+      { product_id: 'petprep_wish_bundle_welcome', wish_id: 31, designs: { bed: 'bed_box', bowls: 'bowls_steel', toy_1: 'rope_blue' } },
       'tx-b',
       expect.anything(),
     );
+  });
+
+  it('»Kupi brez prošnje« bundle shares the picker: all three, open wishes preselected, the rest first design', async () => {
+    getParentWishes.mockResolvedValue(DESIGN_BODY);
+    getProducts.mockResolvedValue([product('petprep_wish_bundle_welcome', '15,99 €')]);
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    fireEvent.press(screen.getByTestId('surprise-pet-12'));
+    fireEvent.press(screen.getByTestId('surprise-buy-12-welcome_bundle'));
+    expect(screen.getByTestId('design-choice-surprise-12-welcome_bundle-bowls-bowls_clay')).toBeSelected();
+    expect(screen.getByTestId('design-choice-surprise-12-welcome_bundle-bed-bed_round')).toBeSelected();
   });
 
   it('surprise: pet → item → design (first preselected, placeholder card without a picture)', async () => {
