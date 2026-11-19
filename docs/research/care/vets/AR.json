@@ -40,7 +40,8 @@
         "nl": "Dierenziekenhuis voor kleine huisdieren, open van maandag tot en met vrijdag 9.00–19.00 uur. Geen 24-uurs spoedkliniek.",
         "pl": "Szpital dla małych zwierząt otwarty od poniedziałku do piątku 9:00–19:00. To nie całodobowa lecznica dla nagłych przypadków.",
         "cs": "Nemocnice pro malá zvířata, otevřeno Po–Pá 9:00–19:00. Nejde o nonstop pohotovost.",
-        "sv": "Djursjukhus för smådjur, öppet måndag–fredag 9.00–19.00. Inte en akutklinik med öppet dygnet runt."
+        "sv": "Djursjukhus för smådjur, öppet måndag–fredag 9.00–19.00. Inte en akutklinik med öppet dygnet runt.",
+        "da": "Dyrehospital for smådyr, åbent mandag til fredag 9.00–19.00. Ikke en akutklinik med åbent døgnet rundt."
       }
     },
     {
@@ -66,7 +67,8 @@
         "nl": "Reguliere uren maandag tot en met vrijdag 10.00–12.00 en 14.00–17.00 uur. Spoedgevallen worden ook buiten deze uren geholpen, ook 's nachts, in het weekend en op feestdagen; bel vooraf.",
         "pl": "Stałe godziny od poniedziałku do piątku 10:00–12:00 i 14:00–17:00. Nagłe przypadki są przyjmowane także poza tymi godzinami, w tym w nocy, w weekendy i święta; zadzwoń przed wizytą.",
         "cs": "Běžná ordinační doba Po–Pá 10:00–12:00 a 14:00–17:00. Pohotovostní případy se ošetřují i mimo tuto dobu, včetně nocí, víkendů a svátků; před cestou zavolejte.",
-        "sv": "Ordinarie öppettider måndag–fredag 10.00–12.00 och 14.00–17.00. Akutfall tas emot även utanför dessa tider, bland annat nätter, helger och helgdagar; ring innan du kommer."
+        "sv": "Ordinarie öppettider måndag–fredag 10.00–12.00 och 14.00–17.00. Akutfall tas emot även utanför dessa tider, bland annat nätter, helger och helgdagar; ring innan du kommer.",
+        "da": "Almindelig åbningstid mandag til fredag 10.00–12.00 og 14.00–17.00. Akutte tilfælde tages imod uden for åbningstiden, også om natten, i weekenden og på helligdage; ring på forhånd."
       }
     },
     {
@@ -91,7 +93,8 @@
         "nl": "Informatiedienst voor vergiftigingen bij dieren, werkdagen 8.00–18.00 uur. Geen 24-uurslijn.",
         "pl": "Weterynaryjna informacja toksykologiczna, w dni robocze 8:00–18:00. To nie linia całodobowa.",
         "cs": "Veterinární toxikologická informační služba, v pracovní dny 8:00–18:00. Nejde o nonstop linku.",
-        "sv": "Giftinformation för djur, vardagar 8.00–18.00. Linjen har inte öppet dygnet runt."
+        "sv": "Giftinformation för djur, vardagar 8.00–18.00. Linjen har inte öppet dygnet runt.",
+        "da": "Giftrådgivning for dyr, hverdage 8.00–18.00. Ikke en døgnåben linje."
       }
     }
   ],

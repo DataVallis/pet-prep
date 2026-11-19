@@ -44,7 +44,8 @@
         "nl": "Dagelijks de klok rond open (staatskliniek). Bel eerst het stedelijke contactcentrum voor dierenartsen +7 495 612 12 12.",
         "pl": "Czynne codziennie całą dobę (przychodnia państwowa). Najpierw zadzwoń do miejskiego centrum kontaktowego weterynarii +7 495 612 12 12.",
         "cs": "Otevřeno nonstop, každý den (státní klinika). Nejdřív zavolejte na městské veterinární kontaktní centrum +7 495 612 12 12.",
-        "sv": "Öppet dygnet runt, alla dagar (statlig klinik). Ring först till stadens veterinärkontaktcenter +7 495 612 12 12."
+        "sv": "Öppet dygnet runt, alla dagar (statlig klinik). Ring först till stadens veterinärkontaktcenter +7 495 612 12 12.",
+        "da": "Åbent dagligt døgnet rundt (statslig klinik). Ring først til byens dyrlægekontaktcenter +7 495 612 12 12."
       }
     },
     {
@@ -66,7 +67,8 @@
         "nl": "Dagelijks 9.00–21.00 uur; 24-uurs opnameafdeling voor ernstig zieke dieren.",
         "pl": "Codziennie 9:00–21:00; całodobowy oddział stacjonarny dla ciężko chorych zwierząt.",
         "cs": "Denně 9:00–21:00; nonstop lůžkové oddělení pro těžce nemocná zvířata.",
-        "sv": "Alla dagar 09.00–21.00; vårdavdelning dygnet runt för svårt sjuka djur."
+        "sv": "Alla dagar 09.00–21.00; vårdavdelning dygnet runt för svårt sjuka djur.",
+        "da": "Dagligt 09.00–21.00; indlæggelsesafdeling 24 timer for alvorligt syge dyr."
       }
     },
     {
@@ -88,7 +90,8 @@
         "nl": "Stedelijk contactcentrum van de staatsdierenartsendienst, de klok rond: geeft aan welke staatsklinieken dieren aannemen en stuurt een dierenarts aan huis, ook 's nachts en in het weekend.",
         "pl": "Całodobowe miejskie centrum kontaktowe państwowej służby weterynaryjnej: podpowie, które przychodnie państwowe przyjmują zwierzęta, i wyśle weterynarza do domu, także w nocy i w weekendy.",
         "cs": "Nonstop městské kontaktní centrum státní veterinární služby: sdělí, které státní kliniky přijímají zvířata, a pošle veterináře domů, i v noci a o víkendech.",
-        "sv": "Stadens kontaktcenter för den statliga veterinärtjänsten, öppet dygnet runt: berättar vilka statliga kliniker som tar emot djur och skickar en veterinär på hembesök, även på natten och på helger."
+        "sv": "Stadens kontaktcenter för den statliga veterinärtjänsten, öppet dygnet runt: berättar vilka statliga kliniker som tar emot djur och skickar en veterinär på hembesök, även på natten och på helger.",
+        "da": "Byens kontaktcenter for den statslige dyrlægetjeneste, åbent døgnet rundt: fortæller, hvilke statslige klinikker der modtager dyr, og sender en dyrlæge ud til hjemmet, også om natten og i weekenden."
       }
     },
     {
@@ -111,7 +114,8 @@
         "nl": "De klok rond open, elke dag. Gratis bewaakte parkeerplaats.",
         "pl": "Czynne całą dobę, bez dni wolnych. Bezpłatny strzeżony parking.",
         "cs": "Otevřeno nonstop, bez dnů volna. Bezplatné hlídané parkoviště.",
-        "sv": "Öppet dygnet runt, alla dagar. Gratis bevakad parkering."
+        "sv": "Öppet dygnet runt, alla dagar. Gratis bevakad parkering.",
+        "da": "Åbent døgnet rundt, alle dage. Gratis bevogtet parkering."
       }
     },
     {
@@ -134,7 +138,8 @@
         "nl": "De klok rond open, elke dag, met intensive care en opnameafdeling.",
         "pl": "Czynne całą dobę, bez dni wolnych, z intensywną terapią i oddziałem stacjonarnym.",
         "cs": "Otevřeno nonstop, bez dnů volna, s intenzivní péčí a lůžkovým oddělením.",
-        "sv": "Öppet dygnet runt, alla dagar, med intensivvård och vårdavdelning."
+        "sv": "Öppet dygnet runt, alla dagar, med intensivvård och vårdavdelning.",
+        "da": "Åbent døgnet rundt, alle dage, med intensivafdeling og indlæggelsesafdeling."
       }
     },
     {
@@ -157,7 +162,8 @@
         "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag.",
         "pl": "Sieć całodobowych przychodni; czynne całą dobę, wizyty domowe 24 godziny na dobę.",
         "cs": "Síť nonstop klinik; otevřeno nonstop, návštěvy doma nonstop.",
-        "sv": "Kedja av kliniker som har öppet dygnet runt; öppet dygnet runt, hembesök dygnet runt."
+        "sv": "Kedja av kliniker som har öppet dygnet runt; öppet dygnet runt, hembesök dygnet runt.",
+        "da": "Netværk af døgnåbne klinikker; åbent døgnet rundt, hjemmebesøg 24 timer."
       }
     },
     {
@@ -180,7 +186,8 @@
         "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag.",
         "pl": "Sieć całodobowych przychodni; czynne całą dobę, wizyty domowe 24 godziny na dobę.",
         "cs": "Síť nonstop klinik; otevřeno nonstop, návštěvy doma nonstop.",
-        "sv": "Kedja av kliniker som har öppet dygnet runt; öppet dygnet runt, hembesök dygnet runt."
+        "sv": "Kedja av kliniker som har öppet dygnet runt; öppet dygnet runt, hembesök dygnet runt.",
+        "da": "Netværk af døgnåbne klinikker; åbent døgnet rundt, hjemmebesøg 24 timer."
       }
     },
     {
@@ -203,7 +210,8 @@
         "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag.",
         "pl": "Sieć całodobowych przychodni; czynne całą dobę, wizyty domowe 24 godziny na dobę.",
         "cs": "Síť nonstop klinik; otevřeno nonstop, návštěvy doma nonstop.",
-        "sv": "Kedja av kliniker som har öppet dygnet runt; öppet dygnet runt, hembesök dygnet runt."
+        "sv": "Kedja av kliniker som har öppet dygnet runt; öppet dygnet runt, hembesök dygnet runt.",
+        "da": "Netværk af døgnåbne klinikker; åbent døgnet rundt, hjemmebesøg 24 timer."
       }
     },
     {
@@ -226,7 +234,8 @@
         "nl": "Netwerk van 24-uursklinieken; de klok rond open, huisbezoeken 24 uur per dag.",
         "pl": "Sieć całodobowych przychodni; czynne całą dobę, wizyty domowe 24 godziny na dobę.",
         "cs": "Síť nonstop klinik; otevřeno nonstop, návštěvy doma nonstop.",
-        "sv": "Kedja av kliniker som har öppet dygnet runt; öppet dygnet runt, hembesök dygnet runt."
+        "sv": "Kedja av kliniker som har öppet dygnet runt; öppet dygnet runt, hembesök dygnet runt.",
+        "da": "Netværk af døgnåbne klinikker; åbent døgnet rundt, hjemmebesøg 24 timer."
       }
     },
     {
@@ -249,7 +258,8 @@
         "nl": "Ziekenhuisvestiging de klok rond open; overige vestigingen 9.00–21.00 uur.",
         "pl": "Oddział szpitalny czynny całą dobę; pozostałe oddziały 9:00–21:00.",
         "cs": "Pobočka s nemocnicí otevřená nonstop; ostatní pobočky 9:00–21:00.",
-        "sv": "Sjukhusfilial öppen dygnet runt; övriga filialer 09.00–21.00."
+        "sv": "Sjukhusfilial öppen dygnet runt; övriga filialer 09.00–21.00.",
+        "da": "Hospitalsafdeling åben døgnet rundt; øvrige afdelinger 09.00–21.00."
       }
     },
     {
@@ -272,7 +282,8 @@
         "nl": "24/7 open, elke dag, met 24-uurs opnameafdeling.",
         "pl": "Czynne 24/7, bez dni wolnych, z całodobowym oddziałem stacjonarnym.",
         "cs": "Otevřeno nonstop, bez dnů volna, s nonstop lůžkovým oddělením.",
-        "sv": "Öppet dygnet runt, alla dagar, med vårdavdelning dygnet runt."
+        "sv": "Öppet dygnet runt, alla dagar, med vårdavdelning dygnet runt.",
+        "da": "Åbent 24/7, alle dage, med indlæggelsesafdeling 24 timer."
       }
     },
     {
@@ -295,7 +306,8 @@
         "nl": "24/7 open, elke dag, met 24-uurs opnameafdeling.",
         "pl": "Czynne 24/7, bez dni wolnych, z całodobowym oddziałem stacjonarnym.",
         "cs": "Otevřeno nonstop, bez dnů volna, s nonstop lůžkovým oddělením.",
-        "sv": "Öppet dygnet runt, alla dagar, med vårdavdelning dygnet runt."
+        "sv": "Öppet dygnet runt, alla dagar, med vårdavdelning dygnet runt.",
+        "da": "Åbent 24/7, alle dage, med indlæggelsesafdeling 24 timer."
       }
     },
     {
@@ -318,7 +330,8 @@
         "nl": "24 uur per dag open. Tweede vestiging (Bukharestskaya 146 k.1) dagelijks 10.00–20.00 uur geopend. 's Nachts (20.00–10.00 uur) werken alleen de dienstdoende arts en een assistent, met een beperkter aanbod aan diensten.",
         "pl": "Czynne całodobowo. Drugi oddział (Bukharestskaya 146 k.1) czynny codziennie 10:00–20:00. W nocy (20:00–10:00) pracują tylko lekarz dyżurny i asystent, z ograniczonym zakresem usług.",
         "cs": "Otevřeno nonstop. Druhá pobočka (Bukharestskaya 146 k.1) je otevřena denně 10:00–20:00. V noci (20:00–10:00) pracuje jen lékař na pohotovostní službě s asistentem, rozsah služeb je omezený.",
-        "sv": "Öppet dygnet runt. Den andra filialen (Bukharestskaya 146 k.1) är öppen 10.00–20.00 varje dag. På natten (20.00–10.00) arbetar bara jourhavande veterinär och en assistent, med ett begränsat utbud av tjänster."
+        "sv": "Öppet dygnet runt. Den andra filialen (Bukharestskaya 146 k.1) är öppen 10.00–20.00 varje dag. På natten (20.00–10.00) arbetar bara jourhavande veterinär och en assistent, med ett begränsat utbud av tjänster.",
+        "da": "Åbent 24 timer. Anden afdeling (Bukharestskaya 146 k.1) er åben 10.00–20.00 hver dag. Om natten (20.00–10.00) arbejder kun vagthavende læge og en assistent, med et begrænset udvalg af ydelser."
       }
     },
     {
@@ -341,7 +354,8 @@
         "nl": "De klok rond open; volgens de kliniek geen nachttoeslag.",
         "pl": "Czynne całą dobę; według przychodni bez nocnej dopłaty.",
         "cs": "Otevřeno nonstop; podle kliniky bez nočního příplatku.",
-        "sv": "Öppet dygnet runt; inget nattillägg enligt kliniken."
+        "sv": "Öppet dygnet runt; inget nattillägg enligt kliniken.",
+        "da": "Åbent døgnet rundt; ifølge klinikken intet nattillæg."
       }
     },
     {
@@ -363,7 +377,8 @@
         "nl": "De klok rond open, elke dag.",
         "pl": "Czynne całą dobę, bez dni wolnych.",
         "cs": "Otevřeno nonstop, bez dnů volna.",
-        "sv": "Öppet dygnet runt, alla dagar."
+        "sv": "Öppet dygnet runt, alla dagar.",
+        "da": "Åbent døgnet rundt, alle dage."
       }
     },
     {
@@ -385,7 +400,8 @@
         "nl": "Balie dagelijks 9.00–21.00 uur; opnameafdeling en intensive care 24/7.",
         "pl": "Rejestracja codziennie 9:00–21:00; oddział stacjonarny i intensywna terapia 24/7.",
         "cs": "Recepce denně 9:00–21:00; lůžkové oddělení a intenzivní péče nonstop.",
-        "sv": "Reception alla dagar 09.00–21.00; inläggning och intensivvård dygnet runt."
+        "sv": "Reception alla dagar 09.00–21.00; inläggning och intensivvård dygnet runt.",
+        "da": "Reception dagligt 09.00–21.00; indlæggelsesafdeling og intensivafdeling 24/7."
       }
     },
     {
@@ -407,7 +423,8 @@
         "nl": "Balie dagelijks 8.00–22.00 uur; opnameafdeling de klok rond.",
         "pl": "Rejestracja codziennie 8:00–22:00; całodobowy oddział stacjonarny.",
         "cs": "Recepce denně 8:00–22:00; lůžkové oddělení nonstop.",
-        "sv": "Reception alla dagar 08.00–22.00; vårdavdelning dygnet runt."
+        "sv": "Reception alla dagar 08.00–22.00; vårdavdelning dygnet runt.",
+        "da": "Reception dagligt 08.00–22.00; indlæggelsesafdeling døgnet rundt."
       }
     },
     {
@@ -430,7 +447,8 @@
         "nl": "24 uur per dag open.",
         "pl": "Czynne całą dobę.",
         "cs": "Nonstop.",
-        "sv": "Öppet dygnet runt."
+        "sv": "Öppet dygnet runt.",
+        "da": "Døgnåben."
       }
     },
     {
@@ -453,7 +471,8 @@
         "nl": "24 uur per dag open.",
         "pl": "Czynne całą dobę.",
         "cs": "Nonstop.",
-        "sv": "Öppet dygnet runt."
+        "sv": "Öppet dygnet runt.",
+        "da": "Døgnåben."
       }
     },
     {
@@ -476,7 +495,8 @@
         "nl": "Deze vestiging is de klok rond open.",
         "pl": "Ten oddział jest czynny całą dobę.",
         "cs": "Tato pobočka je otevřena nonstop.",
-        "sv": "Öppet dygnet runt på den här filialen."
+        "sv": "Öppet dygnet runt på den här filialen.",
+        "da": "Åbent døgnet rundt på denne afdeling."
       }
     },
     {
@@ -498,7 +518,8 @@
         "nl": "Dagelijks 8.00–23.00 uur.",
         "pl": "Codziennie 8:00–23:00.",
         "cs": "Denně 8:00–23:00.",
-        "sv": "Alla dagar 08.00–23.00."
+        "sv": "Alla dagar 08.00–23.00.",
+        "da": "Dagligt 08.00–23.00."
       }
     },
     {
@@ -521,7 +542,8 @@
         "nl": "De klok rond open; nachttarief 21.00–9.00 uur.",
         "pl": "Czynne całą dobę; taryfa nocna 21:00–9:00.",
         "cs": "Otevřeno nonstop; noční tarif 21:00–9:00.",
-        "sv": "Öppet dygnet runt; nattaxa 21.00–09.00."
+        "sv": "Öppet dygnet runt; nattaxa 21.00–09.00.",
+        "da": "Åbent døgnet rundt; nattakst 21.00–09.00."
       }
     },
     {
@@ -544,7 +566,8 @@
         "nl": "De klok rond open, elke dag; nachttarief 21.00–9.00 uur.",
         "pl": "Czynne całą dobę, bez dni wolnych; taryfa nocna 21:00–9:00.",
         "cs": "Otevřeno nonstop, bez dnů volna; noční tarif 21:00–9:00.",
-        "sv": "Öppet dygnet runt, alla dagar; nattaxa 21.00–09.00."
+        "sv": "Öppet dygnet runt, alla dagar; nattaxa 21.00–09.00.",
+        "da": "Åbent døgnet rundt, alle dage; nattakst 21.00–09.00."
       }
     },
     {
@@ -567,7 +590,8 @@
         "nl": "24/7 open elke dag. Bel voordat je komt bij spoed.",
         "pl": "Czynne 24/7 bez dni wolnych. W nagłych przypadkach zadzwoń przed przyjazdem.",
         "cs": "Otevřeno nonstop, bez dnů volna. V pohotovostním případě před cestou zavolejte.",
-        "sv": "Öppet dygnet runt, alla dagar. Ring innan du kommer vid akutfall."
+        "sv": "Öppet dygnet runt, alla dagar. Ring innan du kommer vid akutfall.",
+        "da": "Åbent 24/7 alle dage. Ring, før du kommer ved akutte tilfælde."
       }
     },
     {
@@ -590,7 +614,8 @@
         "nl": "Zegt de klok rond te werken; chirurgie, intensive care en röntgen 24 uur per dag, overige diensten overdag.",
         "pl": "Deklaruje pracę całodobową; chirurgia, intensywna terapia i RTG całą dobę, pozostałe usługi w ciągu dnia.",
         "cs": "Uvádí, že pracuje nonstop; chirurgie, intenzivní péče a rentgen nonstop, ostatní služby ve dne.",
-        "sv": "Uppger att kliniken har öppet dygnet runt; kirurgi, intensivvård och röntgen dygnet runt, övriga tjänster dagtid."
+        "sv": "Uppger att kliniken har öppet dygnet runt; kirurgi, intensivvård och röntgen dygnet runt, övriga tjänster dagtid.",
+        "da": "Oplyser at have åbent døgnet rundt; kirurgi, intensivafdeling og røntgen 24 timer, øvrige ydelser i dagtimerne."
       }
     },
     {
@@ -613,7 +638,8 @@
         "nl": "24/7/365 open, spoedzorg de klok rond. Tweede vestiging aan ul. Uralskaya 184/2 is open 9.00–21.00 uur.",
         "pl": "Czynne 24/7/365, pomoc w nagłych przypadkach całą dobę. Drugi oddział przy ul. Uralskaya 184/2 czynny 9:00–21:00.",
         "cs": "Otevřeno nonstop, 365 dní v roce, pohotovostní péče nonstop. Druhá pobočka na ul. Uralskaya 184/2 je otevřena 9:00–21:00.",
-        "sv": "Öppet dygnet runt, årets alla dagar, med akutvård dygnet runt. Den andra filialen på ul. Uralskaya 184/2 är öppen 09.00–21.00."
+        "sv": "Öppet dygnet runt, årets alla dagar, med akutvård dygnet runt. Den andra filialen på ul. Uralskaya 184/2 är öppen 09.00–21.00.",
+        "da": "Åbent 24/7/365, akut hjælp døgnet rundt. Anden afdeling på ul. Uralskaya 184/2 er åben 09.00–21.00."
       }
     },
     {
@@ -636,7 +662,8 @@
         "nl": "24/7 open.",
         "pl": "Czynne całą dobę, 7 dni w tygodniu.",
         "cs": "Nonstop.",
-        "sv": "Öppet dygnet runt, årets alla dagar."
+        "sv": "Öppet dygnet runt, årets alla dagar.",
+        "da": "Åbent døgnet rundt."
       }
     },
     {
@@ -658,7 +685,8 @@
         "nl": "Dagelijks 8.00–20.00 uur; tot een uur voor sluitingstijd kun je met je dier terecht.",
         "pl": "Codziennie 8:00–20:00; zwierzęta przyjmowane do godziny przed zamknięciem.",
         "cs": "Denně 8:00–20:00; zvířata přijímají nejpozději hodinu před zavřením.",
-        "sv": "Alla dagar 08.00–20.00; djur tas emot fram till en timme före stängning."
+        "sv": "Alla dagar 08.00–20.00; djur tas emot fram till en timme före stängning.",
+        "da": "Dagligt 08.00–20.00; dyr modtages indtil en time før lukketid."
       }
     },
     {
@@ -680,7 +708,8 @@
         "nl": "Dagelijks 8.00–20.00 uur; tot een uur voor sluitingstijd kun je met je dier terecht.",
         "pl": "Codziennie 8:00–20:00; zwierzęta przyjmowane do godziny przed zamknięciem.",
         "cs": "Denně 8:00–20:00; zvířata přijímají nejpozději hodinu před zavřením.",
-        "sv": "Alla dagar 08.00–20.00; djur tas emot fram till en timme före stängning."
+        "sv": "Alla dagar 08.00–20.00; djur tas emot fram till en timme före stängning.",
+        "da": "Dagligt 08.00–20.00; dyr modtages indtil en time før lukketid."
       }
     },
     {
@@ -702,7 +731,8 @@
         "nl": "Ma–vr 9.00–17.00 uur; za–zo gesloten.",
         "pl": "Pon.–pt. 9:00–17:00; sob.–niedz. zamknięte.",
         "cs": "Po–Pá 9:00–17:00; so–ne zavřeno.",
-        "sv": "Mån–fre 09.00–17.00; stängt lör–sön."
+        "sv": "Mån–fre 09.00–17.00; stängt lör–sön.",
+        "da": "Man–fre 09.00–17.00; lukket lør–søn."
       }
     },
     {
@@ -724,7 +754,8 @@
         "nl": "Elke dag open, ook op feestdagen; bel voor de exacte openingstijden.",
         "pl": "Czynne codziennie, także w święta; zadzwoń i zapytaj o dokładne godziny.",
         "cs": "Otevřeno každý den, včetně svátků; přesnou ordinační dobu zjistěte telefonicky.",
-        "sv": "Öppet alla dagar, även helgdagar; ring för exakta öppettider."
+        "sv": "Öppet alla dagar, även helgdagar; ring för exakta öppettider.",
+        "da": "Åbent hver dag, også på helligdage; ring for præcise åbningstider."
       }
     }
   ],

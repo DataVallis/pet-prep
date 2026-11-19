@@ -64,7 +64,8 @@
         "nl": "Naar eigen zeggen 24/7 geopend bij de kliniek in Albion. Bel vooraf bij spoed.",
         "pl": "Reklamowana jako czynna całodobowo, 7 dni w tygodniu, w przychodni Albion. W nagłych przypadkach zadzwoń wcześniej.",
         "cs": "Klinika Albion uvádí provoz nonstop. V naléhavých případech předem zavolejte.",
-        "sv": "Marknadsförs som öppet dygnet runt på kliniken i Albion. Ring innan du kommer vid akutfall."
+        "sv": "Marknadsförs som öppet dygnet runt på kliniken i Albion. Ring innan du kommer vid akutfall.",
+        "da": "Annonceret som døgnåben på Albion-klinikken. Ring på forhånd ved akutte tilfælde."
       }
     },
     {
@@ -87,7 +88,8 @@
         "nl": "Bel de kliniek voor openingstijden en spoedgevallen.",
         "pl": "W sprawie godzin otwarcia i nagłych przypadków zadzwoń do przychodni.",
         "cs": "Ordinační dobu a pohotovost zjistíte telefonicky na klinice.",
-        "sv": "Ring kliniken för öppettider och akutfall."
+        "sv": "Ring kliniken för öppettider och akutfall.",
+        "da": "Ring til klinikken for åbningstider og akutte tilfælde."
       }
     },
     {
@@ -108,7 +110,8 @@
         "nl": "Volgens de titel van de website 24/7 dierenklinieken op Mauritius, maar zonder 24-uursvermelding per kliniek; bel de kliniek ter bevestiging.",
         "pl": "Tytuł strony mówi o całodobowych przychodniach weterynaryjnych na Mauritiusie, ale brak informacji o całodobowej pracy poszczególnych przychodni; zadzwoń do przychodni, aby potwierdzić.",
         "cs": "Název webu hlásí nonstop veterinární kliniky na Mauriciu, u jednotlivých klinik však provoz nonstop uveden není; ověřte telefonicky na klinice.",
-        "sv": "Webbplatsens titel anger veterinärkliniker dygnet runt på Mauritius, men inga uppgifter om öppet dygnet runt för de enskilda klinikerna; ring kliniken för att bekräfta."
+        "sv": "Webbplatsens titel anger veterinärkliniker dygnet runt på Mauritius, men inga uppgifter om öppet dygnet runt för de enskilda klinikerna; ring kliniken för att bekräfta.",
+        "da": "Hjemmesidens titel nævner dyreklinikker med døgnåbent på Mauritius, men der er ingen oplysning om døgnåbent for den enkelte klinik; ring til klinikken for at bekræfte."
       }
     },
     {
@@ -129,7 +132,8 @@
         "nl": "Bel de kliniek voor de openingstijden.",
         "pl": "W sprawie godzin otwarcia zadzwoń do przychodni.",
         "cs": "Ordinační dobu zjistíte telefonicky na klinice.",
-        "sv": "Ring kliniken för öppettider."
+        "sv": "Ring kliniken för öppettider.",
+        "da": "Ring til klinikken for åbningstider."
       }
     },
     {
@@ -152,7 +156,8 @@
         "nl": "Geopend ma–vr 9.00–21.00 uur, za 9.00–18.00 uur, zon- en feestdagen 9.00–12.00 uur. Spoedlijn +230 5947 2244 (volgens de pagina spoed 9.00–21.00 uur).",
         "pl": "Otwarte pon.–pt. 9:00–21:00, sob. 9:00–18:00, w niedziele i święta 9:00–12:00. Linia alarmowa +230 5947 2244 (według strony: nagłe przypadki 9:00–21:00).",
         "cs": "Otevřeno Po–Pá 9:00–21:00, so 9:00–18:00, v neděli a o státních svátcích 9:00–12:00. Pohotovostní linka +230 5947 2244 (podle stránky: pohotovost 9:00–21:00).",
-        "sv": "Öppet mån–fre 9–21, lör 9–18, sön och helgdagar 9–12. Akutlinje +230 5947 2244 (sidan: akutfall 9–21)."
+        "sv": "Öppet mån–fre 9–21, lör 9–18, sön och helgdagar 9–12. Akutlinje +230 5947 2244 (sidan: akutfall 9–21).",
+        "da": "Åbent man–fre 9.00–21.00, lør 9.00–18.00, søn og helligdage 9.00–12.00. Akuttelefon +230 5947 2244 (ifølge siden: akutte tilfælde 9.00–21.00)."
       }
     },
     {
@@ -175,7 +180,8 @@
         "nl": "Geopend ma–vr 13.00–19.00 uur, za 9.00–15.00 uur, zon- en feestdagen gesloten.",
         "pl": "Otwarte pon.–pt. 13:00–19:00, sob. 9:00–15:00, w niedziele i święta zamknięte.",
         "cs": "Otevřeno Po–Pá 13:00–19:00, so 9:00–15:00, v neděli a o státních svátcích zavřeno.",
-        "sv": "Öppet mån–fre 13–19, lör 9–15, stängt söndagar och helgdagar."
+        "sv": "Öppet mån–fre 13–19, lör 9–15, stängt söndagar och helgdagar.",
+        "da": "Åbent man–fre 13.00–19.00, lør 9.00–15.00, lukket søndage og helligdage."
       }
     },
     {
@@ -198,7 +204,8 @@
         "nl": "Dagelijks geopend, ongeveer 8.00–21.00 uur; 24/7 opname en spoedhuisbezoeken mogelijk. Bel vooraf.",
         "pl": "Otwarte codziennie, mniej więcej 8:00–21:00; hospitalizacja całodobowo i wizyty domowe w nagłych przypadkach. Zadzwoń wcześniej.",
         "cs": "Otevřeno denně, přibližně 8:00–21:00; nabízí nonstop lůžkovou péči a pohotovostní návštěvy doma. Předem zavolejte.",
-        "sv": "Öppet alla dagar, ungefär 8–21; inneliggande vård dygnet runt och akuta hembesök erbjuds. Ring innan du kommer."
+        "sv": "Öppet alla dagar, ungefär 8–21; inneliggande vård dygnet runt och akuta hembesök erbjuds. Ring innan du kommer.",
+        "da": "Åbent dagligt, ca. 8.00–21.00; indlæggelse døgnet rundt og akutte hjemmebesøg tilbydes. Ring på forhånd."
       }
     },
     {
@@ -220,7 +227,8 @@
         "nl": "Elke dag geopend, artsen beschikbaar 7.00–21.00 uur. Spoed: +230 5736 2402.",
         "pl": "Otwarte codziennie, lekarze dostępni 7:00–21:00. Nagłe przypadki: +230 5736 2402.",
         "cs": "Otevřeno každý den, lékaři k dispozici 7:00–21:00. Pohotovost: +230 5736 2402.",
-        "sv": "Öppet alla dagar, veterinärer tillgängliga 7–21. Akutfall: +230 5736 2402."
+        "sv": "Öppet alla dagar, veterinärer tillgängliga 7–21. Akutfall: +230 5736 2402.",
+        "da": "Åbent alle dage, læger til stede 7.00–21.00. Akutte tilfælde: +230 5736 2402."
       }
     }
   ],

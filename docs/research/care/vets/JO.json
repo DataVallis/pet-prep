@@ -48,7 +48,8 @@
         "nl": "24 uur per dag open; 24-uurs spoedlijn op hetzelfde nummer.",
         "pl": "Otwarte całodobowo; całodobowa linia alarmowa pod tym samym numerem.",
         "cs": "Otevřeno nonstop; nonstop pohotovostní linka na stejném čísle.",
-        "sv": "Öppet 24 h; akutlinje 24 h på samma nummer."
+        "sv": "Öppet 24 h; akutlinje 24 h på samma nummer.",
+        "da": "Åbent døgnet rundt; akuttelefonen har samme nummer."
       }
     },
     {
@@ -70,7 +71,8 @@
         "nl": "24 uur per dag, 7 dagen per week open; spoedartsen 's nachts aanwezig.",
         "pl": "Otwarte całodobowo, 7 dni w tygodniu; lekarze dyżurujący na miejscu w nocy.",
         "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní veterináři na místě přes noc.",
-        "sv": "Öppet 24 h, 7 dagar i veckan; akutveterinärer på plats under natten."
+        "sv": "Öppet 24 h, 7 dagar i veckan; akutveterinärer på plats under natten.",
+        "da": "Åbent døgnet rundt, alle ugens dage; akutlæger til stede natten over."
       }
     },
     {
@@ -93,7 +95,8 @@
         "nl": "Afdeling voor kleine dieren met spoed en intensieve zorg; bel vooraf voor de openingstijden.",
         "pl": "Oddział małych zwierząt z pogotowiem i intensywną terapią; zadzwoń przed wizytą w sprawie godzin.",
         "cs": "Oddělení malých zvířat s pohotovostní a intenzivní péčí; ordinační dobu zjistěte telefonicky.",
-        "sv": "Smådjursavdelning med akut- och intensivvård; ring innan du kommer för öppettider."
+        "sv": "Smådjursavdelning med akut- och intensivvård; ring innan du kommer för öppettider.",
+        "da": "Smådyrsafdeling med akut- og intensivbehandling; ring i forvejen angående åbningstider."
       }
     },
     {
@@ -115,7 +118,8 @@
         "nl": "Dagelijks 10.00–22.00 uur; vr 14.00–22.00 uur.",
         "pl": "Codziennie 10:00–22:00; w piątek 14:00–22:00.",
         "cs": "Denně 10:00–22:00; v pátek 14:00–22:00.",
-        "sv": "Dagligen 10.00–22.00; fredag 14.00–22.00."
+        "sv": "Dagligen 10.00–22.00; fredag 14.00–22.00.",
+        "da": "Dagligt 10.00–22.00; fredag 14.00–22.00."
       }
     },
     {
@@ -138,7 +142,8 @@
         "nl": "Dagelijks 11.00–19.00 uur; bel vooraf bij spoed.",
         "pl": "Codziennie 11:00–19:00; w nagłych przypadkach zadzwoń przed wizytą.",
         "cs": "Denně 11:00–19:00; v naléhavých případech předem zavolejte.",
-        "sv": "Dagligen 11.00–19.00; ring innan du kommer vid akutfall."
+        "sv": "Dagligen 11.00–19.00; ring innan du kommer vid akutfall.",
+        "da": "Dagligt 11.00–19.00; ring i forvejen ved akutte tilfælde."
       }
     },
     {
@@ -160,7 +165,8 @@
         "nl": "Za–wo 08.00–20.00 uur (di tot 19.30 uur).",
         "pl": "Sob.–śr. 08:00–20:00 (we wt. do 19:30).",
         "cs": "So–St 8:00–20:00 (v úterý do 19:30).",
-        "sv": "Lör–ons 08.00–20.00 (tis till 19.30)."
+        "sv": "Lör–ons 08.00–20.00 (tis till 19.30).",
+        "da": "Lør–ons 08.00–20.00 (tirsdag til 19.30)."
       }
     },
     {
@@ -182,7 +188,8 @@
         "nl": "Za–wo 09.00–18.00 uur.",
         "pl": "Sob.–śr. 09:00–18:00.",
         "cs": "So–St 9:00–18:00.",
-        "sv": "Lör–ons 09.00–18.00."
+        "sv": "Lör–ons 09.00–18.00.",
+        "da": "Lør–ons 09.00–18.00."
       }
     },
     {
@@ -204,7 +211,8 @@
         "nl": "Za–wo 09.30–18.00 uur.",
         "pl": "Sob.–śr. 09:30–18:00.",
         "cs": "So–St 9:30–18:00.",
-        "sv": "Lör–ons 09.30–18.00."
+        "sv": "Lör–ons 09.30–18.00.",
+        "da": "Lør–ons 09.30–18.00."
       }
     },
     {
@@ -227,7 +235,8 @@
         "nl": "Dringende zorg op dezelfde dag; bel vooraf voor de openingstijden.",
         "pl": "Pilna pomoc tego samego dnia; zadzwoń przed wizytą w sprawie godzin.",
         "cs": "Naléhavá péče týž den; ordinační dobu zjistěte telefonicky.",
-        "sv": "Brådskande vård samma dag; ring innan du kommer för öppettider."
+        "sv": "Brådskande vård samma dag; ring innan du kommer för öppettider.",
+        "da": "Hastehjælp samme dag; ring i forvejen angående åbningstider."
       }
     }
   ],

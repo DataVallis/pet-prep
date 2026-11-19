@@ -56,7 +56,8 @@
       "duty_i18n": {
         "pl": "Otwarte w dni robocze 8:00–17:00 i w weekendy 10:00–13:00. Poza godzinami otwarcia weterynarz dyżurny (poważnie chore lub ranne zwierzęta) jest pod numerem +354 530 4888 (opłata za dojazd, wyższa w nocy i w święta).",
         "cs": "Otevřeno ve všední dny 8:00–17:00 a o víkendech 10:00–13:00. Mimo ordinační dobu je veterinář v pohotovosti pro vážně nemocná nebo zraněná zvířata k zastižení na +354 530 4888 (účtuje se poplatek za výjezd, v noci a o státních svátcích vyšší).",
-        "sv": "Öppet vardagar 08.00–17.00 och helger 10.00–13.00. Utanför öppettiderna nås en jourhavande veterinär för allvarligt sjuka eller skadade djur på +354 530 4888 (utryckningsavgift tillkommer, högre nattetid och på helgdagar)."
+        "sv": "Öppet vardagar 08.00–17.00 och helger 10.00–13.00. Utanför öppettiderna nås en jourhavande veterinär för allvarligt sjuka eller skadade djur på +354 530 4888 (utryckningsavgift tillkommer, högre nattetid och på helgdagar).",
+        "da": "Åbent på hverdage 08.00–17.00 og i weekender 10.00–13.00. Uden for åbningstid kan en vagthavende dyrlæge for alvorligt syge eller tilskadekomne dyr træffes på +354 530 4888 (udkaldsgebyr, højere om natten og på helligdage)."
       }
     },
     {
@@ -76,7 +77,8 @@
       "duty_i18n": {
         "pl": "Otwarte od poniedziałku do piątku 8:00–17:00, w weekendy nieczynne. Poza godzinami otwarcia czynna przychodnia pogotowia w rejonie stolicy Animalía: +354 555 0112.",
         "cs": "Otevřeno Po–Pá 8:00–17:00, o víkendech zavřeno. Mimo ordinační dobu volejte pohotovostní kliniku Animalía pro oblast hlavního města na +354 555 0112.",
-        "sv": "Öppet måndag–fredag 08.00–17.00, stängt på helger. Utanför öppettiderna nås akutkliniken Animalía i huvudstadsområdet på +354 555 0112."
+        "sv": "Öppet måndag–fredag 08.00–17.00, stängt på helger. Utanför öppettiderna nås akutkliniken Animalía i huvudstadsområdet på +354 555 0112.",
+        "da": "Åbent mandag–fredag 08.00–17.00, lukket i weekender. Uden for åbningstid kan akutklinikken Animalía i hovedstadsområdet træffes på +354 555 0112."
       }
     },
     {
@@ -96,7 +98,8 @@
       "duty_i18n": {
         "pl": "Otwarte od poniedziałku do czwartku 8:00–17:00, w piątek 8:00–15:00, w sobotę 10:00–12:00. Uczestniczy we współpracy pogotowia w rejonie stolicy; w pilnych przypadkach można też zadzwonić do Animalía pod +354 555 0112.",
         "cs": "Otevřeno Po–Čt 8:00–17:00, Pá 8:00–15:00, so 10:00–12:00. Součást pohotovostní spolupráce v oblasti hlavního města; naléhavé případy mohou volat také kliniku Animalía na +354 555 0112.",
-        "sv": "Öppet måndag–torsdag 08.00–17.00, fredag 08.00–15.00, lördag 10.00–12.00. Ingår i akutsamarbetet i huvudstadsområdet; brådskande fall kan också ringa Animalía på +354 555 0112."
+        "sv": "Öppet måndag–torsdag 08.00–17.00, fredag 08.00–15.00, lördag 10.00–12.00. Ingår i akutsamarbetet i huvudstadsområdet; brådskande fall kan också ringa Animalía på +354 555 0112.",
+        "da": "Åbent mandag–torsdag 08.00–17.00, fredag 08.00–15.00, lørdag 10.00–12.00. Del af akutsamarbejdet i hovedstadsområdet; akutte tilfælde kan også ringe til Animalía på +354 555 0112."
       }
     },
     {
@@ -113,7 +116,8 @@
       "duty_i18n": {
         "pl": "Całodobowa rejestracja nagłych przypadków zwierząt domowych w rejonie stolicy; zadzwoń pod +354 555 0112.",
         "cs": "Nonstop příjem pohotovostí domácích zvířat v oblasti hlavního města; volejte +354 555 0112.",
-        "sv": "Akutmottagning dygnet runt för sällskapsdjur i huvudstadsområdet; ring +354 555 0112."
+        "sv": "Akutmottagning dygnet runt för sällskapsdjur i huvudstadsområdet; ring +354 555 0112.",
+        "da": "Akutmodtagelse for kæledyr i hovedstadsområdet døgnet rundt; ring +354 555 0112."
       }
     },
     {

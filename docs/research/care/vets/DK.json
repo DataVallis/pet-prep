@@ -64,7 +64,8 @@
         "nl": "Spoedeisende hulp en dienstdoende dierenarts 24/7 bereikbaar op hetzelfde nummer, ook in weekenden en op feestdagen. Afspraken overdag ma–vr 8.30–15.30 uur.",
         "pl": "Izba przyjęć w nagłych przypadkach i dyżurny weterynarz dostępni całodobowo pod tym samym numerem, także w weekendy i święta. Wizyty w ciągu dnia pon.–pt. 8:30–15:30.",
         "cs": "Pohotovostní ambulance a veterinář ve službě dostupní nonstop na stejném čísle, včetně víkendů a státních svátků. Denní objednání Po–Pá 8:30–15:30.",
-        "sv": "Akutmottagning och jourhavande veterinär nås dygnet runt på samma nummer, även helger och helgdagar. Tidsbokning dagtid mån–fre 8.30–15.30."
+        "sv": "Akutmottagning och jourhavande veterinär nås dygnet runt på samma nummer, även helger och helgdagar. Tidsbokning dagtid mån–fre 8.30–15.30.",
+        "da": "Akutmodtagelse og vagthavende dyrlæge kan nås døgnet rundt på samme nummer, også i weekender og på helligdage. Tidsbestilling i dagtimerne man–fre 8.30–15.30."
       },
       "small_animals": true,
       "url": "https://dyrehospitalet.ku.dk/",
@@ -92,7 +93,8 @@
         "nl": "Spoedeisende hulp elke dag de klok rond open (00–24); kliniek op werkdagen 8–16 uur. Bel vóór aankomst.",
         "pl": "Izba przyjęć w nagłych przypadkach czynna codziennie całą dobę (00–24); klinika w dni robocze 8–16. Zadzwoń przed przyjazdem.",
         "cs": "Pohotovostní ambulance otevřená každý den nepřetržitě (0:00–24:00); klinika ve všední dny 8:00–16:00. Před příjezdem zavolejte.",
-        "sv": "Akutmottagningen är öppen alla dagar dygnet runt (00–24); kliniken vardagar 8–16. Ring innan du kommer."
+        "sv": "Akutmottagningen är öppen alla dagar dygnet runt (00–24); kliniken vardagar 8–16. Ring innan du kommer.",
+        "da": "Akutmodtagelsen er åben hver dag døgnet rundt (00–24); klinikken på hverdage 8–16. Ring, før du kommer."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/koebenhavns-dyrehospital/",
@@ -120,7 +122,8 @@
         "nl": "Spoedeisende hulp 24 uur open; bel vóór aankomst. Overdag 8–18 uur.",
         "pl": "Izba przyjęć w nagłych przypadkach czynna całodobowo; zadzwoń przed przyjazdem. W ciągu dnia 8–18.",
         "cs": "Pohotovostní ambulance otevřená nonstop; před příjezdem zavolejte. Přes den 8:00–18:00.",
-        "sv": "Akutmottagningen är öppen dygnet runt; ring innan du kommer. Dagtid 8–18."
+        "sv": "Akutmottagningen är öppen dygnet runt; ring innan du kommer. Dagtid 8–18.",
+        "da": "Akutmodtagelsen er døgnåben; ring, før du kommer. Dagtimerne 8–18."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/koge-dyrehospital/",
@@ -149,7 +152,8 @@
         "nl": "Spoedlijn 77 77 77 11; algemeen 46 15 15 25. Spoedeisende hulp ma 18–08, di–vr 17–08, za–zo 08–08 uur; dierenziekenhuis elke dag 24 uur open. Bel voordat je komt.",
         "pl": "Linia alarmowa 77 77 77 11; ogólna 46 15 15 25. Izba przyjęć pon. 18–08, wt.–pt. 17–08, sob.–niedz. 08–08; szpital czynny całodobowo codziennie. Zadzwoń przed wizytą.",
         "cs": "Pohotovostní linka 77 77 77 11; hlavní 46 15 15 25. Pohotovostní ambulance Po 18:00–8:00, út–pá 17:00–8:00, so–ne 8:00–8:00; nemocnice otevřena nonstop každý den. Před příchodem zavolejte.",
-        "sv": "Jourlinje 77 77 77 11; växel 46 15 15 25. Akutmottagning mån 18–08, tis–fre 17–08, lör–sön 08–08; djursjukhuset är öppet dygnet runt alla dagar. Ring innan du kommer."
+        "sv": "Jourlinje 77 77 77 11; växel 46 15 15 25. Akutmottagning mån 18–08, tis–fre 17–08, lör–sön 08–08; djursjukhuset är öppet dygnet runt alla dagar. Ring innan du kommer.",
+        "da": "Akutlinje 77 77 77 11; hovednummer 46 15 15 25. Akutmodtagelse man 18–08, tirs–fre 17–08, lør–søn 08–08; hospitalet er døgnåbent hver dag. Ring, før du kommer."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyreklinik/evidensia-karlslunde-dyrehospital/",
@@ -177,7 +181,8 @@
         "nl": "Spoedeisende hulp 24 uur per dag het hele jaar; telefonisch altijd de dienstdoende dierenarts te bereiken. Reguliere consulten op werkdagen 8–16 uur. Bel voordat je komt.",
         "pl": "Całodobowa izba przyjęć w nagłych przypadkach przez cały rok; telefon łączy z dyżurnym weterynarzem o każdej porze. Zwykłe konsultacje w dni robocze 8–16. Zadzwoń przed wizytą.",
         "cs": "Nonstop pohotovostní ambulance po celý rok; telefonem se vždy dovoláte k veterináři ve službě. Běžné konzultace ve všední dny 8:00–16:00. Před příchodem zavolejte.",
-        "sv": "Akutmottagning dygnet runt, årets alla dagar; telefonen når jourhavande veterinär när som helst. Ordinarie mottagning vardagar 8–16. Ring innan du kommer."
+        "sv": "Akutmottagning dygnet runt, årets alla dagar; telefonen når jourhavande veterinär när som helst. Ordinarie mottagning vardagar 8–16. Ring innan du kommer.",
+        "da": "Døgnåben akutmodtagelse alle årets dage; telefonen når vagtdyrlægen til enhver tid. Almindelige konsultationer på hverdage 8–16. Ring, før du kommer."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/odense-dyrehospital/",
@@ -205,7 +210,8 @@
         "nl": "Spoedeisende hulp 24 uur open; bel vóór aankomst. Overdag 8–17 uur.",
         "pl": "Izba przyjęć w nagłych przypadkach czynna całodobowo; zadzwoń przed przyjazdem. W ciągu dnia 8–17.",
         "cs": "Pohotovostní ambulance otevřená nonstop; před příjezdem zavolejte. Přes den 8:00–17:00.",
-        "sv": "Akutmottagningen är öppen dygnet runt; ring innan du kommer. Dagtid 8–17."
+        "sv": "Akutmottagningen är öppen dygnet runt; ring innan du kommer. Dagtid 8–17.",
+        "da": "Akutmodtagelsen er døgnåben; ring, før du kommer. Dagtimerne 8–17."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/varde-dyrehospital/",
@@ -234,7 +240,8 @@
         "nl": "Spoedeisende hulp de klok rond open, het hele jaar; bel eerst. Reguliere tijden ma–vr 08.00–17.00 uur.",
         "pl": "Izba przyjęć w nagłych przypadkach czynna całodobowo, przez cały rok; najpierw zadzwoń. Zwykłe godziny pon.–pt. 08:00–17:00.",
         "cs": "Pohotovost je otevřena nonstop po celý rok, předem zavolejte. Běžná ordinační doba Po–Pá 8:00–17:00.",
-        "sv": "Akutmottagningen är öppen dygnet runt, hela året; ring först. Ordinarie tider mån–fre 08.00–17.00."
+        "sv": "Akutmottagningen är öppen dygnet runt, hela året; ring först. Ordinarie tider mån–fre 08.00–17.00.",
+        "da": "Akutmodtagelsen er åben døgnet rundt hele året; ring først. Normal åbningstid man–fre 08.00–17.00."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/aarhus-dyrehospital/",
@@ -263,7 +270,8 @@
         "nl": "Spoedeisende hulp 24 uur open; bel vóór aankomst. Overdag 8–16.30 uur.",
         "pl": "Izba przyjęć w nagłych przypadkach czynna całodobowo; zadzwoń przed przyjazdem. W ciągu dnia 8–16:30.",
         "cs": "Pohotovost nonstop, před příjezdem zavolejte. Ve dne 8:00–16:30.",
-        "sv": "Akutmottagningen är öppen dygnet runt; ring innan du kommer. Dagtid 8–16.30."
+        "sv": "Akutmottagningen är öppen dygnet runt; ring innan du kommer. Dagtid 8–16.30.",
+        "da": "Akutmodtagelsen er døgnåben; ring, før du kommer. Dagtimerne 8–16.30."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/for-dyreejere/dyrlaegevagt/",
@@ -292,7 +300,8 @@
         "nl": "Dienstdoende dierenarts buiten reguliere tijden op hetzelfde nummer; acuut zieke of gewonde dieren kunnen 'hele døgnet' (de klok rond) worden behandeld.",
         "pl": "Dyżurny weterynarz poza zwykłymi godzinami pod tym samym numerem; ostro chore lub ranne zwierzęta mogą być leczone „hele døgnet” (całą dobę).",
         "cs": "Mimo ordinační dobu slouží pohotovostní veterinář na stejném čísle; akutně nemocná nebo zraněná zvířata lze ošetřit nonstop.",
-        "sv": "Jourhavande veterinär utanför ordinarie tider på samma nummer; akut sjuka eller skadade djur kan behandlas 'hele døgnet' (dygnet runt)."
+        "sv": "Jourhavande veterinär utanför ordinarie tider på samma nummer; akut sjuka eller skadade djur kan behandlas 'hele døgnet' (dygnet runt).",
+        "da": "Vagtdyrlæge uden for normal åbningstid på samme nummer; akut syge eller tilskadekomne dyr kan behandles 'hele døgnet'."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/dyrehospitalet-city-syd/",
@@ -320,7 +329,8 @@
         "nl": "Spoed 8–23 uur; reguliere tijden 8–17 uur.",
         "pl": "Pogotowie 8–23; zwykłe godziny 8–17.",
         "cs": "Pohotovost 8:00–23:00, běžná ordinační doba 8:00–17:00.",
-        "sv": "Akut 8–23; ordinarie tider 8–17."
+        "sv": "Akut 8–23; ordinarie tider 8–17.",
+        "da": "Akut 8–23; normal åbningstid 8–17."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/akutklinikker/",
@@ -348,7 +358,8 @@
         "nl": "Spoed alleen 8–17 uur.",
         "pl": "Pogotowie tylko 8–17.",
         "cs": "Pohotovost pouze 8:00–17:00.",
-        "sv": "Akut endast 8–17."
+        "sv": "Akut endast 8–17.",
+        "da": "Akut kun 8–17."
       },
       "small_animals": true,
       "url": "https://www.anicura.dk/akutklinikker/",
@@ -376,7 +387,8 @@
         "nl": "Bel 75 52 23 33 en je wordt doorverbonden met de dienstdoende dierenarts in de regio Trekant, 24 uur per dag, ook in weekenden en op feestdagen. Bereikbaarheidsdienst: er is niet altijd een dierenarts ter plaatse; spreek tijd en plaats telefonisch af.",
         "pl": "Zadzwoń pod 75 52 23 33, a nastąpi połączenie z dyżurującym weterynarzem w rejonie Trekant, całodobowo, także w weekendy i święta. Dyżur telefoniczny: weterynarz nie zawsze jest na miejscu; czas i miejsce ustal telefonicznie.",
         "cs": "Na čísle 75 52 23 33 vás spojí s pohotovostním veterinářem v oblasti Trekant, nonstop včetně víkendů a státních svátků. Pohotovost na zavolání: veterinář není vždy v ordinaci, čas a místo se domlouvají telefonicky.",
-        "sv": "Ring 75 52 23 33 så kopplas du till jourhavande veterinär i Trekant-området, dygnet runt inklusive helger och helgdagar. Jour: en veterinär finns inte alltid på plats; bestäm tid och plats per telefon."
+        "sv": "Ring 75 52 23 33 så kopplas du till jourhavande veterinär i Trekant-området, dygnet runt inklusive helger och helgdagar. Jour: en veterinär finns inte alltid på plats; bestäm tid och plats per telefon.",
+        "da": "Ring på 75 52 23 33, så forbindes du til vagtdyrlægen i Trekant-området, døgnet rundt inkl. weekender og helligdage. Rådighedsvagt: der er ikke altid en dyrlæge til stede; aftal tid og sted pr. telefon."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyreklinik/evidensia-kolding-dyrehospital/",
@@ -404,7 +416,8 @@
         "nl": "Openingstijden ma 8–18, di–vr 8–17 uur, in het weekend gesloten; buiten die tijden zie de vermelding van de dienstsamenwerking Trekant.",
         "pl": "Godziny otwarcia pon. 8–18, wt.–pt. 8–17, weekendy nieczynne; po godzinach zobacz wpis o wspólnym dyżurze w rejonie Trekant.",
         "cs": "Ordinační doba Po 8:00–18:00, Út–Pá 8:00–17:00, o víkendech zavřeno; mimo ordinační dobu viz společná pohotovost Trekant.",
-        "sv": "Öppettider mån 8–18, tis–fre 8–17, stängt på helger; efter stängning, se posten om Trekant-joursamarbetet."
+        "sv": "Öppettider mån 8–18, tis–fre 8–17, stängt på helger; efter stängning, se posten om Trekant-joursamarbetet.",
+        "da": "Åbningstid man 8–18, tirs–fre 8–17, lukket i weekender; uden for åbningstiden se opslaget om Trekant-vagtsamarbejdet."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyreklinik/evidensia-kolding-dyrehospital/",
@@ -431,7 +444,8 @@
         "nl": "Bereikbaarheidsdienst do–vr 17.00–22.30 uur en za 8.00–17.00 uur; er is niet per se een dierenarts ter plaatse, bel om tijd en plaats af te spreken.",
         "pl": "Dyżur telefoniczny czw.–pt. 17:00–22:30 i sob. 8:00–17:00; weterynarz niekoniecznie jest na miejscu, zadzwoń, by ustalić czas i miejsce.",
         "cs": "Pohotovost Čt–Pá 17:00–22:30 a v sobotu 8:00–17:00; veterinář nemusí být v ordinaci, zavolejte a domluvte čas a místo.",
-        "sv": "Jour tors–fre 17.00–22.30 och lör 8.00–17.00; en veterinär är inte nödvändigtvis på plats, ring och bestäm tid och plats."
+        "sv": "Jour tors–fre 17.00–22.30 och lör 8.00–17.00; en veterinär är inte nödvändigtvis på plats, ring och bestäm tid och plats.",
+        "da": "Rådighedsvagt tors–fre 17.00–22.30 og lør 8.00–17.00; der er ikke nødvendigvis en dyrlæge til stede, ring for at aftale tid og sted."
       },
       "small_animals": true,
       "url": "https://evidensia.dk/dyrlaegevagten-akut-dyrlaege/",
@@ -459,7 +473,8 @@
         "nl": "Overdag Helsingør +45 49 20 30 16 (ma–do 8–17, vr 8–16 uur); buiten kantooruren bel Birkerød Dyrehospital +45 81 81 89 81, waar altijd een dierenarts te bereiken is (Birkerød biedt de klok rond dienst).",
         "pl": "W ciągu dnia Helsingør +45 49 20 30 16 (pon.–czw. 8–17, pt. 8–16); po godzinach zadzwoń do Birkerød Dyrehospital +45 81 81 89 81, gdzie zawsze dodzwonisz się do weterynarza (Birkerød oferuje całodobowy dyżur).",
         "cs": "Ve dne Helsingør +45 49 20 30 16 (Po–Čt 8:00–17:00, Pá 8:00–16:00); mimo ordinační dobu volejte Birkerød Dyrehospital +45 81 81 89 81, kde veterináře zastihnete vždy (Birkerød má nonstop pohotovost).",
-        "sv": "Dagtid Helsingør +45 49 20 30 16 (mån–tors 8–17, fre 8–16); efter stängning ring Birkerød Dyrehospital +45 81 81 89 81, där du alltid når en veterinär (Birkerød har jour dygnet runt)."
+        "sv": "Dagtid Helsingør +45 49 20 30 16 (mån–tors 8–17, fre 8–16); efter stängning ring Birkerød Dyrehospital +45 81 81 89 81, där du alltid når en veterinär (Birkerød har jour dygnet runt).",
+        "da": "Dagtimerne Helsingør +45 49 20 30 16 (man–tors 8–17, fre 8–16); uden for åbningstiden ring til Birkerød Dyrehospital +45 81 81 89 81, hvor du altid kan få fat i en dyrlæge (Birkerød har vagt døgnet rundt)."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/helsingoerdyrehospital/",
@@ -487,7 +502,8 @@
         "nl": "Dienst op werkdagen 17–22 uur en in weekenden 8–22 uur door de eigen dierenarts van de kliniek; 'voor zover mogelijk' de klok rond, anders verwijzing naar Karlslunde Dyrehospital.",
         "pl": "Dyżur w dni robocze 17–22 i w weekendy 8–22 pełni własny weterynarz przychodni; „w miarę możliwości” całodobowo, w przeciwnym razie skierowanie do Karlslunde Dyrehospital.",
         "cs": "Pohotovost ve všední dny 17:00–22:00 a o víkendech 8:00–22:00 zajišťuje veterinář kliniky; nonstop „pokud je to možné“, jinak odkáží na Karlslunde Dyrehospital.",
-        "sv": "Jour vardagar 17–22 och helger 8–22 av klinikens egen veterinär; 'i möjligaste mån' dygnet runt, i övrigt hänvisning till Karlslunde Dyrehospital."
+        "sv": "Jour vardagar 17–22 och helger 8–22 av klinikens egen veterinär; 'i möjligaste mån' dygnet runt, i övrigt hänvisning till Karlslunde Dyrehospital.",
+        "da": "Vagt hverdage 17–22 og weekender 8–22 ved klinikkens egen dyrlæge; 'så vidt muligt' døgnet rundt, ellers henvisning til Karlslunde Dyrehospital."
       },
       "small_animals": true,
       "url": "https://storehavelsedyreklinik.dk/",
@@ -514,7 +530,8 @@
         "nl": "Dienstdoende dierenarts buiten openingstijden (ma–do 8–17, vr 8–16 uur) bereikbaar op hetzelfde nummer; dienstafspraak met Guldborgsund Dyrehospital; 100 % toeslag voor de dienst.",
         "pl": "Dyżurny weterynarz dostępny poza godzinami otwarcia (pon.–czw. 8–17, pt. 8–16) pod tym samym numerem; dyżur uzgodniony z Guldborgsund Dyrehospital; dopłata za dyżur 100 %.",
         "cs": "Pohotovostního veterináře zastihnete mimo ordinační dobu (Po–Čt 8:00–17:00, Pá 8:00–16:00) na stejném čísle; pohotovost zajišťuje ve spolupráci s Guldborgsund Dyrehospital; příplatek za pohotovost 100 %.",
-        "sv": "Jourhavande veterinär nås utanför öppettiderna (mån–tors 8–17, fre 8–16) på samma nummer; joursamarbete med Guldborgsund Dyrehospital; 100 % jourtillägg."
+        "sv": "Jourhavande veterinär nås utanför öppettiderna (mån–tors 8–17, fre 8–16) på samma nummer; joursamarbete med Guldborgsund Dyrehospital; 100 % jourtillägg.",
+        "da": "Vagtdyrlæge kan nås uden for åbningstiden (man–tors 8–17, fre 8–16) på samme nummer; vagtaftale med Guldborgsund Dyrehospital; 100 % vagttillæg."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/nykfdyrehospital/",
@@ -542,7 +559,8 @@
         "nl": "Bel 97 51 30 45 voor de dienstdoende dierenarts: vanaf sluitingstijd tot 22.00 uur wisselen Skive Dyrehospital, Morsø Dyreklinik en Dyrehospitalet Heden elkaar af; 22.00–08.00 uur Dyrehospitalet Heden, Herning.",
         "pl": "Zadzwoń pod 97 51 30 45, by dodzwonić się do dyżurnego weterynarza: od zamknięcia do 22:00 na zmianę Skive Dyrehospital, Morsø Dyreklinik i Dyrehospitalet Heden; 22:00–08:00 Dyrehospitalet Heden, Herning.",
         "cs": "Na čísle 97 51 30 45 zastihnete pohotovostního veterináře: od konce ordinační doby do 22:00 se střídají Skive Dyrehospital, Morsø Dyreklinik a Dyrehospitalet Heden; 22:00–8:00 Dyrehospitalet Heden, Herning.",
-        "sv": "Ring 97 51 30 45 för att nå jourhavande veterinär: från stängning till 22.00 turas Skive Dyrehospital, Morsø Dyreklinik och Dyrehospitalet Heden om; 22.00–08.00 Dyrehospitalet Heden, Herning."
+        "sv": "Ring 97 51 30 45 för att nå jourhavande veterinär: från stängning till 22.00 turas Skive Dyrehospital, Morsø Dyreklinik och Dyrehospitalet Heden om; 22.00–08.00 Dyrehospitalet Heden, Herning.",
+        "da": "Ring på 97 51 30 45 for at få fat i vagtdyrlægen: fra lukketid til 22.00 skiftes Skive Dyrehospital, Morsø Dyreklinik og Dyrehospitalet Heden til at have vagten; 22.00–08.00 Dyrehospitalet Heden, Herning."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/skivedyrehospital/",
@@ -570,7 +588,8 @@
         "nl": "Dekt de nachtdienst 22.00–08.00 uur voor het dienstrooster Skive/Morsø/Herning.",
         "pl": "Obejmuje dyżur nocny 22:00–08:00 w grafiku dyżurów Skive/Morsø/Herning.",
         "cs": "Zajišťuje noční pohotovost 22:00–8:00 v rámci společné pohotovosti Skive/Morsø/Herning.",
-        "sv": "Täcker nattjouren 22.00–08.00 för jourschemat Skive/Morsø/Herning."
+        "sv": "Täcker nattjouren 22.00–08.00 för jourschemat Skive/Morsø/Herning.",
+        "da": "Dækker natvagten 22.00–08.00 for vagtkredsen Skive/Morsø/Herning."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/skivedyrehospital/vagtordning/",
@@ -598,7 +617,8 @@
         "nl": "Bereikbaarheidsdienst op werkdagen 17.00–08.00 uur, in weekenden van vrijdag 17.00 uur tot maandag 08.00 uur en op feestdagen; bel het hoofdnummer om te horen welke dierenarts dienst heeft.",
         "pl": "Dyżur w dni robocze 17:00–08:00, w weekendy od piątku 17:00 do poniedziałku 08:00 oraz w święta; zadzwoń na numer główny, by dowiedzieć się, który weterynarz dyżuruje.",
         "cs": "Pohotovost ve všední dny 17:00–8:00, o víkendech od pátku 17:00 do pondělí 8:00 a ve státní svátky; na hlavním čísle vám sdělí, který veterinář má službu.",
-        "sv": "Jour vardagar 17.00–08.00, helger från fredag 17.00 till måndag 08.00 samt helgdagar; ring huvudnumret så får du veta vilken veterinär som har jour."
+        "sv": "Jour vardagar 17.00–08.00, helger från fredag 17.00 till måndag 08.00 samt helgdagar; ring huvudnumret så får du veta vilken veterinär som har jour.",
+        "da": "Rådighedsvagt hverdage 17.00–08.00, weekender fra fredag 17.00 til mandag 08.00 og helligdage; ring til hovednummeret for at høre, hvilken dyrlæge der har vagten."
       },
       "small_animals": true,
       "url": "https://vodskovdyreklinik.dk/",
@@ -626,7 +646,8 @@
         "nl": "24-uurs bereikbaarheidsdienst voor acuut gewonde dieren op hetzelfde nummer; open ma–vr 8–17 uur (gesloten 12–13 uur). Bereikbaarheidsdienst, niet per se ter plaatse bemand.",
         "pl": "Całodobowy dyżur dla z nagłymi urazami zwierząt pod tym samym numerem; czynne pon.–pt. 8–17 (przerwa 12–13). Dyżur telefoniczny, niekoniecznie z obsługą na miejscu.",
         "cs": "Nonstop pohotovost pro akutně zraněná zvířata na stejném čísle; otevřeno Po–Pá 8:00–17:00 (12:00–13:00 zavřeno). Pohotovost na zavolání, v ordinaci nemusí být nikdo přítomen.",
-        "sv": "Jour dygnet runt för akut skadade djur på samma nummer; öppet mån–fre 8–17 (stängt 12–13). Jourtjänst, inte nödvändigtvis bemannad på plats."
+        "sv": "Jour dygnet runt för akut skadade djur på samma nummer; öppet mån–fre 8–17 (stängt 12–13). Jourtjänst, inte nödvändigtvis bemannad på plats.",
+        "da": "Rådighedsvagt døgnet rundt for akut tilskadekomne dyr på samme nummer; åbent man–fre 8–17 (lukket 12–13). Rådighedsvagt, ikke nødvendigvis bemandet på stedet."
       },
       "small_animals": true,
       "url": "https://dyrlaegegaardenbornholm.dk/",
@@ -654,7 +675,8 @@
         "nl": "Alleen op werkdagen (ma–vr) open (bijv. di 08.30–16.30 uur); buiten openingstijden worden oproepen doorgeschakeld naar Bindslev Dyrehospital. Grotere onderzoeken en operaties in Bindslev.",
         "pl": "Pon.–pt. tylko w dni robocze (np. wt. 08:30–16:30); poza godzinami otwarcia połączenia są przekierowywane do Bindslev Dyrehospital. Większe badania i operacje w Bindslev.",
         "cs": "Pouze v pracovní dny Po–Pá (např. Út 8:30–16:30); mimo ordinační dobu se hovory přesměrují na Bindslev Dyrehospital. Větší vyšetření a operace v Bindslevu.",
-        "sv": "Endast vardagar mån–fre (t.ex. tis 08.30–16.30); utanför öppettiderna vidarekopplas samtal till Bindslev Dyrehospital. Större undersökningar och kirurgi i Bindslev."
+        "sv": "Endast vardagar mån–fre (t.ex. tis 08.30–16.30); utanför öppettiderna vidarekopplas samtal till Bindslev Dyrehospital. Större undersökningar och kirurgi i Bindslev.",
+        "da": "man–fre kun hverdagstider (f.eks. tirs 08.30–16.30); uden for åbningstiden stilles opkald videre til Bindslev Dyrehospital. Større undersøgelser og operationer i Bindslev."
       },
       "small_animals": true,
       "url": "https://bindslevdyrehospital.dk/skagen/",
@@ -681,7 +703,8 @@
         "nl": "Bel om de openingstijden te bevestigen.",
         "pl": "Zadzwoń, by potwierdzić godziny.",
         "cs": "Otevírací dobu potvrďte telefonicky.",
-        "sv": "Ring för att bekräfta öppettiderna."
+        "sv": "Ring för att bekräfta öppettiderna.",
+        "da": "Ring for at få bekræftet åbningstider."
       },
       "small_animals": true,
       "url": "https://www.dcvest.dk",
@@ -770,7 +793,8 @@
         "nl": "ma–vr 8.00–17.00 uur.",
         "pl": "Pon.–pt. 8:00–17:00.",
         "cs": "Po–Pá 8:00–17:00.",
-        "sv": "mån–fre 8.00–17.00."
+        "sv": "mån–fre 8.00–17.00.",
+        "da": "man–fre 8.00–17.00."
       },
       "small_animals": true,
       "url": "https://vetgruppen.dk/esbjergdyrehospital/",

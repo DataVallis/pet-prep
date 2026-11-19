@@ -79,7 +79,8 @@
         "nl": "24/7 open, elke dag van het jaar; spoedgevallen zonder afspraak",
         "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu, przez cały rok; pomoc w nagłych przypadkach bez umawiania",
         "cs": "Otevřeno nonstop, každý den v roce; pohotovost bez objednání",
-        "sv": "Öppet dygnet runt, årets alla dagar; akutmottagning utan tidsbokning"
+        "sv": "Öppet dygnet runt, årets alla dagar; akutmottagning utan tidsbokning",
+        "da": "Døgnåben alle årets dage; akut uden tidsbestilling"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/dundrum-vets",
@@ -108,7 +109,8 @@
         "nl": "24/7 open, elke dag van het jaar; spoeddienst ook voor klanten van andere Village Vets-praktijken",
         "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu, przez cały rok; pomoc w nagłych przypadkach także dla klientów innych przychodni Village Vets",
         "cs": "Otevřeno nonstop, každý den v roce; pohotovost i pro klienty dalších klinik Village Vets",
-        "sv": "Öppet dygnet runt, årets alla dagar; akutmottagningen är öppen även för kunder på övriga Village Vets-kliniker"
+        "sv": "Öppet dygnet runt, årets alla dagar; akutmottagningen är öppen även för kunder på övriga Village Vets-kliniker",
+        "da": "Døgnåben alle årets dage; akutberedskab åbent for kunder på Village Vets' øvrige klinikker"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/emergencies",
@@ -137,7 +139,8 @@
         "nl": "24/7 open, elke dag van het jaar",
         "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu, przez cały rok",
         "cs": "Otevřeno nonstop, každý den v roce",
-        "sv": "Öppet dygnet runt, årets alla dagar"
+        "sv": "Öppet dygnet runt, årets alla dagar",
+        "da": "Døgnåben alle årets dage"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/emergencies",
@@ -166,7 +169,8 @@
         "nl": "Spoeddienst 24 uur per dag, 365 dagen per jaar. Lijn buiten kantooruren 01 517 5213; extra kosten buiten de openingstijden",
         "pl": "Pogotowie weterynaryjne całodobowo, 365 dni w roku. Linia poza godzinami pracy 01 517 5213; poza zwykłymi godzinami dodatkowe opłaty",
         "cs": "Nonstop pohotovost, 365 dní v roce. Linka mimo ordinační dobu 01 517 5213; mimo běžnou ordinační dobu se účtují příplatky",
-        "sv": "Akutservice dygnet runt, 365 dagar om året. Jourlinje utanför öppettiderna 01 517 5213; extra avgifter utanför ordinarie öppettider"
+        "sv": "Akutservice dygnet runt, 365 dagar om året. Jourlinje utanför öppettiderna 01 517 5213; extra avgifter utanför ordinarie öppettider",
+        "da": "Akutberedskab døgnet rundt, 365 dage om året. Vagttelefon 01 517 5213; tillæg uden for normal åbningstid"
       },
       "small_animals": true,
       "url": "https://www.myvet.ie/emergencies",
@@ -194,7 +198,8 @@
         "nl": "Spoeddienst buiten kantooruren 24/7 voor geregistreerde klanten",
         "pl": "Całodobowe pogotowie weterynaryjne poza godzinami pracy dla zarejestrowanych klientów",
         "cs": "Nonstop pohotovost mimo ordinační dobu pro registrované klienty",
-        "sv": "Akutservice dygnet runt utanför öppettiderna för registrerade kunder"
+        "sv": "Akutservice dygnet runt utanför öppettiderna för registrerade kunder",
+        "da": "Akutvagt døgnet rundt for tilmeldte kunder"
       },
       "small_animals": true,
       "url": "https://www.wicklowvets.ie/",
@@ -223,7 +228,8 @@
         "nl": "Spoeddienst 24 uur per dag beschikbaar",
         "pl": "Dostępne całodobowe pogotowie weterynaryjne",
         "cs": "K dispozici je nonstop pohotovost",
-        "sv": "Akutservice dygnet runt finns"
+        "sv": "Akutservice dygnet runt finns",
+        "da": "Akutberedskab døgnet rundt"
       },
       "small_animals": true,
       "url": "https://www.murphysheerinvets.ie/",
@@ -252,7 +258,8 @@
         "nl": "Spoeddierenziekenhuis buiten kantooruren: doordeweeks 18.00–8.00 uur; 24 uur per dag in het weekend en op feestdagen. Bel voordat je komt",
         "pl": "Lecznica dla nagłych przypadków poza godzinami pracy: noce w dni robocze 18:00–8:00; całą dobę w weekendy i święta. Zadzwoń przed wyjazdem",
         "cs": "Pohotovostní nemocnice mimo ordinační dobu: ve všední dny od 18:00 do 8:00; o víkendech a státních svátcích nonstop. Před cestou zavolejte",
-        "sv": "Akutdjursjukhus utanför öppettiderna: vardagsnätter 18–8; dygnet runt på helger och helgdagar. Ring innan du åker"
+        "sv": "Akutdjursjukhus utanför öppettiderna: vardagsnätter 18–8; dygnet runt på helger och helgdagar. Ring innan du åker",
+        "da": "Akuthospital uden for åbningstid: hverdage 18.00–08.00; døgnet rundt i weekender og på helligdage. Ring, før du kører af sted"
       },
       "small_animals": true,
       "url": "https://petemergencyhospital.ie/contact/",
@@ -280,7 +287,8 @@
         "nl": "Zeven dagen per week open; spoed buiten kantooruren via het Pet Emergency Hospital",
         "pl": "Otwarte siedem dni w tygodniu; nagłe przypadki poza godzinami pracy przez Pet Emergency Hospital",
         "cs": "Otevřeno sedm dní v týdnu; pohotovost mimo ordinační dobu přes Pet Emergency Hospital",
-        "sv": "Öppet sju dagar i veckan; akutfall utanför öppettiderna via Pet Emergency Hospital"
+        "sv": "Öppet sju dagar i veckan; akutfall utanför öppettiderna via Pet Emergency Hospital",
+        "da": "Åbent syv dage om ugen; akutte tilfælde uden for åbningstid via Pet Emergency Hospital"
       },
       "small_animals": true,
       "url": "https://www.caravetgroup.com/",
@@ -308,7 +316,8 @@
         "nl": "Op afspraak (ma, di, do en vr 16.00–18.30 uur; za 9.00–11.30 uur). Buiten kantooruren: zie de pagina over spoedzorg",
         "pl": "Po wcześniejszym umówieniu (pon., wt., czw., pt. 16:00–18:30; sob. 9:00–11:30). Poza godzinami pracy: zobacz stronę o pomocy w nagłych przypadkach",
         "cs": "Na objednání (Po, Út, Čt, Pá 16:00–18:30; so 9:00–11:30). Mimo ordinační dobu: viz stránka o pohotovostní péči",
-        "sv": "Efter tidsbokning (mån, tis, tors, fre 16–18.30; lör 9–11.30). Utanför öppettiderna: se sidan om akutvård"
+        "sv": "Efter tidsbokning (mån, tis, tors, fre 16–18.30; lör 9–11.30). Utanför öppettiderna: se sidan om akutvård",
+        "da": "Efter aftale (man, tirs, tors, fre 16.00–18.30; lør 9.00–11.30). Uden for åbningstid: se siden om akut hjælp"
       },
       "small_animals": true,
       "url": "https://www.caravetgroup.com/about-us/cara-vet-opening-hours/cara-vets-in-dublin-7",
@@ -336,7 +345,8 @@
         "nl": "Ma–vr 8.00–19.00 uur, za 9.00–12.00 uur; spoed 's nachts en in het weekend via het Pet Emergency Hospital (eerst bellen)",
         "pl": "Pon.–pt. 8:00–19:00, sob. 9:00–12:00; nagłe przypadki w nocy i w weekendy przez Pet Emergency Hospital (najpierw zadzwoń)",
         "cs": "Po–Pá 8:00–19:00, so 9:00–12:00; noční a víkendová pohotovost přes Pet Emergency Hospital (nejdřív zavolejte)",
-        "sv": "Mån–fre 8–19, lör 9–12; akutfall nattetid och på helger via Pet Emergency Hospital (ring först)"
+        "sv": "Mån–fre 8–19, lör 9–12; akutfall nattetid och på helger via Pet Emergency Hospital (ring först)",
+        "da": "Man–fre 8.00–19.00, lør 9.00–12.00; akutte tilfælde om natten og i weekenden via Pet Emergency Hospital (ring først)"
       },
       "small_animals": true,
       "url": "https://sandymountvets.ie/contact-us/",
@@ -363,7 +373,8 @@
         "nl": "Ma–vr 8.00–19.00 uur, za 9.30–12.30 uur; spoed buiten kantooruren via MyVet Lucan (01 601 0060)",
         "pl": "Pon.–pt. 8:00–19:00, sob. 9:30–12:30; nagłe przypadki poza godzinami pracy przez MyVet Lucan (01 601 0060)",
         "cs": "Po–Pá 8:00–19:00, so 9:30–12:30; pohotovost mimo ordinační dobu přes MyVet Lucan (01 601 0060)",
-        "sv": "Mån–fre 8–19, lör 9.30–12.30; akutfall utanför öppettiderna via MyVet Lucan (01 601 0060)"
+        "sv": "Mån–fre 8–19, lör 9.30–12.30; akutfall utanför öppettiderna via MyVet Lucan (01 601 0060)",
+        "da": "Man–fre 8.00–19.00, lør 9.30–12.30; akutte tilfælde uden for åbningstid via MyVet Lucan (01 601 0060)"
       },
       "small_animals": true,
       "url": "https://www.blackrockvet.ie/",
@@ -391,7 +402,8 @@
         "nl": "Ma–vr 9.00–19.00 uur, za 9.00–17.00 uur; na kantooruren worden telefoontjes doorgezet naar de 24/7-spoedklinieken van de groep",
         "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–17:00; po godzinach telefony są przekierowywane do całodobowych przychodni grupy",
         "cs": "Po–Pá 9:00–19:00, so 9:00–17:00; po ordinační době se hovory přesměrují na nonstop pohotovostní kliniky skupiny",
-        "sv": "Mån–fre 9–19, lör 9–17; samtal efter stängning kopplas till gruppens akutkliniker som har öppet dygnet runt"
+        "sv": "Mån–fre 9–19, lör 9–17; samtal efter stängning kopplas till gruppens akutkliniker som har öppet dygnet runt",
+        "da": "Man–fre 9.00–19.00, lør 9.00–17.00; uden for åbningstid stilles opkald videre til gruppens akutklinikker døgnet rundt"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/rathfarnham-vets-dspca",
@@ -419,7 +431,8 @@
         "nl": "Ma–vr 9.00–19.00 uur, za 9.00–17.00 uur op bepaalde zaterdagen; bij spoed: bel de dichtstbijzijnde Village Vets-praktijk",
         "pl": "Pon.–pt. 9:00–19:00, w wybrane soboty 9:00–17:00; pilne przypadki: zadzwoń do najbliższej przychodni Village Vets",
         "cs": "Po–Pá 9:00–19:00, so 9:00–17:00 ve vybrané soboty; naléhavé případy: zavolejte na nejbližší kliniku Village Vets",
-        "sv": "Mån–fre 9–19, lör 9–17 vissa lördagar; brådskande fall: ring närmaste Village Vets-klinik"
+        "sv": "Mån–fre 9–19, lör 9–17 vissa lördagar; brådskande fall: ring närmaste Village Vets-klinik",
+        "da": "Man–fre 9.00–19.00, lør 9.00–17.00 på udvalgte lørdage; akutte tilfælde: ring til nærmeste Village Vets-klinik"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/raheny",
@@ -446,7 +459,8 @@
         "nl": "Ma–vr 9.00–19.00 uur; telefoontjes buiten kantooruren worden doorgezet naar een 24/7-spoedkliniek",
         "pl": "Pon.–pt. 9:00–19:00; telefony poza godzinami pracy są przekierowywane do całodobowej przychodni dla nagłych przypadków",
         "cs": "Po–Pá 9:00–19:00; hovory mimo ordinační dobu se přepojují na nonstop pohotovostní kliniku",
-        "sv": "Mån–fre 9–19; samtal utanför öppettiderna kopplas vidare till en akutklinik som har öppet dygnet runt"
+        "sv": "Mån–fre 9–19; samtal utanför öppettiderna kopplas vidare till en akutklinik som har öppet dygnet runt",
+        "da": "Man–fre 9.00–19.00; opkald uden for åbningstid stilles videre til en akutklinik døgnet rundt"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/portmarnock",
@@ -473,7 +487,8 @@
         "nl": "Ma–vr 8.30–19.00 uur, za 9.00–13.00 uur; telefoontjes buiten kantooruren worden doorgezet naar de 24/7-kliniek in Ashbourne",
         "pl": "Pon.–pt. 8:30–19:00, sob. 9:00–13:00; telefony poza godzinami pracy są przekierowywane do całodobowej przychodni w Ashbourne",
         "cs": "Po–Pá 8:30–19:00, so 9:00–13:00; hovory mimo ordinační dobu se přepojují na nonstop kliniku Ashbourne",
-        "sv": "Mån–fre 8.30–19, lör 9–13; samtal utanför öppettiderna kopplas vidare till kliniken i Ashbourne som har öppet dygnet runt"
+        "sv": "Mån–fre 8.30–19, lör 9–13; samtal utanför öppettiderna kopplas vidare till kliniken i Ashbourne som har öppet dygnet runt",
+        "da": "Man–fre 8.30–19.00, lør 9.00–13.00; opkald uden for åbningstid stilles videre til klinikken i Ashbourne, der er åben døgnet rundt"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/lissenhall-vets",
@@ -501,7 +516,8 @@
         "nl": "Ma–vr 9.00–19.30 uur, za 9.00–16.30 uur; spoedzorg 24 uur per dag bij MyVet Lucan (01 517 5213)",
         "pl": "Pon.–pt. 9:00–19:30, sob. 9:00–16:30; całodobowa pomoc w nagłych przypadkach w MyVet Lucan (01 517 5213)",
         "cs": "Po–Pá 9:00–19:30, so 9:00–16:30; nonstop pohotovostní péče v MyVet Lucan (01 517 5213)",
-        "sv": "Mån–fre 9–19.30, lör 9–16.30; akutvård dygnet runt på MyVet Lucan (01 517 5213)"
+        "sv": "Mån–fre 9–19.30, lör 9–16.30; akutvård dygnet runt på MyVet Lucan (01 517 5213)",
+        "da": "Man–fre 9.00–19.30, lør 9.00–16.30; akut hjælp døgnet rundt på MyVet Lucan (01 517 5213)"
       },
       "small_animals": true,
       "url": "https://www.myvet.ie/about-us/celbridge",
@@ -527,7 +543,8 @@
         "nl": "Ma–vr 8.00–20.00 uur, za 8.30–16.30 uur; spoed buiten kantooruren via de dienstdoende dierenarts (bel de praktijk)",
         "pl": "Pon.–pt. 8:00–20:00, sob. 8:30–16:30; nagłe przypadki poza godzinami pracy przez weterynarza dyżurnego (zadzwoń do gabinetu)",
         "cs": "Po–Pá 8:00–20:00, so 8:30–16:30; pohotovost mimo ordinační dobu přes veterináře ve službě (zavolejte do ordinace)",
-        "sv": "Mån–fre 8–20, lör 8.30–16.30; akutfall utanför öppettiderna via jourhavande veterinär (ring kliniken)"
+        "sv": "Mån–fre 8–20, lör 8.30–16.30; akutfall utanför öppettiderna via jourhavande veterinär (ring kliniken)",
+        "da": "Man–fre 8.00–20.00, lør 8.30–16.30; akutte tilfælde uden for åbningstid via vagthavende dyrlæge (ring til klinikken)"
       },
       "small_animals": true,
       "url": "https://www.wexfordvethospital.ie/small-animals/in-an-emergency",
@@ -554,7 +571,8 @@
         "nl": "Spoed: bel de praktijk",
         "pl": "Nagłe przypadki: zadzwoń do gabinetu",
         "cs": "Pohotovost: zavolejte do ordinace",
-        "sv": "Akutfall: ring kliniken"
+        "sv": "Akutfall: ring kliniken",
+        "da": "Akut: ring til klinikken"
       },
       "small_animals": true,
       "url": "https://www.arenavets.ie/",
@@ -582,7 +600,8 @@
         "nl": "24/7 open, 365 dagen per jaar",
         "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu, 365 dni w roku",
         "cs": "Otevřeno nonstop, 365 dní v roce",
-        "sv": "Öppet dygnet runt, 365 dagar om året"
+        "sv": "Öppet dygnet runt, 365 dagar om året",
+        "da": "Døgnåben, 365 dage om året"
       },
       "small_animals": true,
       "url": "https://limerickveterinaryhospital.ie/",
@@ -611,7 +630,8 @@
         "nl": "Spoeddienst 24 uur per dag het hele jaar door; consulten op afspraak",
         "pl": "Pogotowie weterynaryjne całodobowo, przez cały rok; konsultacje po wcześniejszym umówieniu",
         "cs": "Nonstop pohotovost po celý rok; konzultace na objednání",
-        "sv": "Akutservice dygnet runt, hela året; konsultationer efter tidsbokning"
+        "sv": "Akutservice dygnet runt, hela året; konsultationer efter tidsbokning",
+        "da": "Akutberedskab døgnet rundt hele året; konsultationer efter aftale"
       },
       "small_animals": true,
       "url": "https://treatyveterinaryhospital.ie/limerick/",
@@ -639,7 +659,8 @@
         "nl": "Spoeddienst 24 uur per dag, 7 dagen per week; buiten kantooruren belt de dierenarts je terug; toeslag",
         "pl": "Pogotowie weterynaryjne 24 godziny na dobę, 7 dni w tygodniu; poza godzinami pracy weterynarz oddzwania; dodatkowa opłata",
         "cs": "Pohotovost 24 hodin denně, 7 dní v týdnu; veterinář mimo ordinační dobu volá zpět; účtuje se příplatek",
-        "sv": "Akutservice dygnet runt, alla veckans dagar; jourhavande veterinär ringer tillbaka utanför öppettiderna; extra avgift tillkommer"
+        "sv": "Akutservice dygnet runt, alla veckans dagar; jourhavande veterinär ringer tillbaka utanför öppettiderna; extra avgift tillkommer",
+        "da": "Akutberedskab døgnet rundt, alle ugens dage; dyrlægen ringer tilbage uden for åbningstid; tillæg"
       },
       "small_animals": true,
       "url": "https://www.cvcvets.ie/emergencies",
@@ -667,7 +688,8 @@
         "nl": "Spoeddienst 24 uur per dag",
         "pl": "Całodobowe pogotowie weterynaryjne",
         "cs": "Nonstop pohotovost",
-        "sv": "Akutservice dygnet runt"
+        "sv": "Akutservice dygnet runt",
+        "da": "Akutberedskab døgnet rundt"
       },
       "small_animals": true,
       "url": "https://rockhallveterinary.ie/",
@@ -696,7 +718,8 @@
         "nl": "Spoeddienst 24 uur per dag",
         "pl": "Całodobowe pogotowie weterynaryjne",
         "cs": "Nonstop pohotovost",
-        "sv": "Akutservice dygnet runt"
+        "sv": "Akutservice dygnet runt",
+        "da": "Akutberedskab døgnet rundt"
       },
       "small_animals": true,
       "url": "https://rockhallveterinary.ie/",
@@ -725,7 +748,8 @@
         "nl": "Spoeddienst 24 uur per dag",
         "pl": "Całodobowe pogotowie weterynaryjne",
         "cs": "Nonstop pohotovost",
-        "sv": "Akutservice dygnet runt"
+        "sv": "Akutservice dygnet runt",
+        "da": "Akutberedskab døgnet rundt"
       },
       "small_animals": true,
       "url": "https://rockhallveterinary.ie/",
@@ -752,7 +776,8 @@
         "nl": "24 uur per dag bereikbaar",
         "pl": "Dyżur całodobowy",
         "cs": "Nonstop pohotovostní služba",
-        "sv": "Jour dygnet runt"
+        "sv": "Jour dygnet runt",
+        "da": "Vagt døgnet rundt"
       },
       "small_animals": true,
       "url": "https://www.ennisvetclinic.ie/",
@@ -781,7 +806,8 @@
         "nl": "Spoeddienst 24 uur per dag, 365 dagen per jaar; ma–vr 8.00–19.00 uur, za 9.00–17.00 uur",
         "pl": "Całodobowe pogotowie weterynaryjne, 365 dni w roku; pon.–pt. 8:00–19:00, sob. 9:00–17:00",
         "cs": "Nonstop pohotovost, 365 dní v roce; Po–Pá 8:00–19:00, so 9:00–17:00",
-        "sv": "Akutservice dygnet runt, 365 dagar om året; mån–fre 8–19, lör 9–17"
+        "sv": "Akutservice dygnet runt, 365 dagar om året; mån–fre 8–19, lör 9–17",
+        "da": "Akutberedskab døgnet rundt, 365 dage om året; man–fre 8.00–19.00, lør 9.00–17.00"
       },
       "small_animals": true,
       "url": "https://abbeyvillevet.ie/about-abbeyville-veterinary-hospital/",
@@ -809,7 +835,8 @@
         "nl": "Spoeddienst 24 uur per dag; bel het nummer van het ziekenhuis",
         "pl": "Całodobowe pogotowie weterynaryjne; zadzwoń pod numer lecznicy",
         "cs": "Nonstop pohotovost; volejte na číslo nemocnice",
-        "sv": "Akutservice dygnet runt; ring djursjukhusets nummer"
+        "sv": "Akutservice dygnet runt; ring djursjukhusets nummer",
+        "da": "Akutberedskab døgnet rundt; ring til hospitalets nummer"
       },
       "small_animals": true,
       "url": "https://gilabbeyvet.com/",
@@ -838,7 +865,8 @@
         "nl": "Spoeddienst 24 uur per dag; ma–vr 9.00–18.00 uur, za 9.00–16.00 uur",
         "pl": "Całodobowe pogotowie weterynaryjne; pon.–pt. 9:00–18:00, sob. 9:00–16:00",
         "cs": "Nonstop pohotovost; Po–Pá 9:00–18:00, so 9:00–16:00",
-        "sv": "Akutservice dygnet runt; mån–fre 9–18, lör 9–16"
+        "sv": "Akutservice dygnet runt; mån–fre 9–18, lör 9–16",
+        "da": "Akutberedskab døgnet rundt; man–fre 9.00–18.00, lør 9.00–16.00"
       },
       "small_animals": true,
       "url": "https://www.blackpoolvets.ie/",
@@ -866,7 +894,8 @@
         "nl": "Dierenziekenhuis 24/7 bemand; spoedzorg 24 uur per dag",
         "pl": "Lecznica z całodobowym personelem; całodobowa pomoc w nagłych przypadkach",
         "cs": "Nemocnice s nonstop provozem; nonstop pohotovostní péče",
-        "sv": "Djursjukhus bemannat dygnet runt; akutvård dygnet runt"
+        "sv": "Djursjukhus bemannat dygnet runt; akutvård dygnet runt",
+        "da": "Hospitalet er bemandet døgnet rundt; akut hjælp døgnet rundt"
       },
       "small_animals": true,
       "url": "https://www.sunbeamvets.com/",
@@ -895,7 +924,8 @@
         "nl": "Ma–vr 9.00–19.00 uur, za 9.00–13.00 uur; spoed buiten kantooruren via Sunbeam Veterinary Hospital (021 439 1600)",
         "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–13:00; nagłe przypadki poza godzinami pracy przez Sunbeam Veterinary Hospital (021 439 1600)",
         "cs": "Po–Pá 9:00–19:00, so 9:00–13:00; pohotovost mimo ordinační dobu přes Sunbeam Veterinary Hospital (021 439 1600)",
-        "sv": "Mån–fre 9–19, lör 9–13; akutfall utanför öppettiderna via Sunbeam Veterinary Hospital (021 439 1600)"
+        "sv": "Mån–fre 9–19, lör 9–13; akutfall utanför öppettiderna via Sunbeam Veterinary Hospital (021 439 1600)",
+        "da": "Man–fre 9.00–19.00, lør 9.00–13.00; akutte tilfælde uden for åbningstid via Sunbeam Veterinary Hospital (021 439 1600)"
       },
       "small_animals": true,
       "url": "https://www.westsideveterinary.ie/contact-us",
@@ -923,7 +953,8 @@
         "nl": "Spoed buiten kantooruren: bel het nummer van de praktijk en je wordt doorverbonden met de spoeddienst buiten kantooruren",
         "pl": "Nagłe przypadki poza godzinami pracy: zadzwoń pod numer przychodni, a zostaniesz połączony z dyżurem",
         "cs": "Pohotovost mimo ordinační dobu: zavolejte na číslo kliniky a budete přesměrováni na pohotovostní službu",
-        "sv": "Akutfall utanför öppettiderna: ring klinikens nummer så kopplas du vidare till jourtjänsten"
+        "sv": "Akutfall utanför öppettiderna: ring klinikens nummer så kopplas du vidare till jourtjänsten",
+        "da": "Akutte tilfælde uden for åbningstid: ring til klinikkens nummer, så stilles du videre til vagten"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/locations/cork",
@@ -951,7 +982,8 @@
         "nl": "Spoed buiten kantooruren: bel het nummer van de praktijk en je wordt doorverbonden met de spoeddienst buiten kantooruren",
         "pl": "Nagłe przypadki poza godzinami pracy: zadzwoń pod numer przychodni, a zostaniesz połączony z dyżurem",
         "cs": "Pohotovost mimo ordinační dobu: zavolejte na číslo kliniky a budete přesměrováni na pohotovostní službu",
-        "sv": "Akutfall utanför öppettiderna: ring klinikens nummer så kopplas du vidare till jourtjänsten"
+        "sv": "Akutfall utanför öppettiderna: ring klinikens nummer så kopplas du vidare till jourtjänsten",
+        "da": "Akutte tilfælde uden for åbningstid: ring til klinikkens nummer, så stilles du videre til vagten"
       },
       "small_animals": true,
       "url": "https://www.villagevets.ie/locations/cork",
@@ -978,7 +1010,8 @@
         "nl": "Ma–vr 8.30–18.30 uur, za 9.00–13.00 uur; eigen spoeddienst op elk moment (bel het nummer van de praktijk)",
         "pl": "Pon.–pt. 8:30–18:30, sob. 9:00–13:00; własny dyżur w nagłych przypadkach przez całą dobę (zadzwoń pod numer gabinetu)",
         "cs": "Po–Pá 8:30–18:30, so 9:00–13:00; vlastní pohotovost nonstop (volejte na číslo ordinace)",
-        "sv": "Mån–fre 8.30–18.30, lör 9–13; egen akutberedskap alltid (ring klinikens nummer)"
+        "sv": "Mån–fre 8.30–18.30, lör 9–13; egen akutberedskap alltid (ring klinikens nummer)",
+        "da": "Man–fre 8.30–18.30, lør 9.00–13.00; eget akutberedskab hele tiden (ring til klinikkens nummer)"
       },
       "small_animals": true,
       "url": "https://midletonvets.ie/emergencies/",
@@ -1006,7 +1039,8 @@
         "nl": "Spoeddienst 24/7; ma–vr 9.00–18.00 uur, za 9.00–13.00 uur",
         "pl": "Pogotowie weterynaryjne całodobowo; pon.–pt. 9:00–18:00, sob. 9:00–13:00",
         "cs": "Nonstop pohotovostní služby; Po–Pá 9:00–18:00, so 9:00–13:00",
-        "sv": "Akutservice dygnet runt; mån–fre 9–18, lör 9–13"
+        "sv": "Akutservice dygnet runt; mån–fre 9–18, lör 9–13",
+        "da": "Akutberedskab døgnet rundt; man–fre 9.00–18.00, lør 9.00–13.00"
       },
       "small_animals": true,
       "url": "https://faxbridgevets.ie/faxbridge-veterinary/contact-faxbridge-veterinary/",
@@ -1035,7 +1069,8 @@
         "nl": "Spoeddienst 24 uur per dag; ma–vr 9.00–17.00 uur, za 9.00–12.00 uur",
         "pl": "Całodobowe pogotowie weterynaryjne; pon.–pt. 9:00–17:00, sob. 9:00–12:00",
         "cs": "Nonstop pohotovost; Po–Pá 9:00–17:00, so 9:00–12:00",
-        "sv": "Akutservice dygnet runt; mån–fre 9–17, lör 9–12"
+        "sv": "Akutservice dygnet runt; mån–fre 9–17, lör 9–12",
+        "da": "Akutberedskab døgnet rundt; man–fre 9.00–17.00, lør 9.00–12.00"
       },
       "small_animals": true,
       "url": "https://vikingvets.ie/opening-hours/",
@@ -1063,7 +1098,8 @@
         "nl": "Spoeddienst 24 uur per dag, 365 dagen per jaar, voor kleine en grote dieren",
         "pl": "Całodobowe pogotowie weterynaryjne, 365 dni w roku, dla małych i dużych zwierząt",
         "cs": "Nonstop pohotovost, 365 dní v roce, pro malá i velká zvířata",
-        "sv": "Akutservice dygnet runt, 365 dagar om året, för små och stora djur"
+        "sv": "Akutservice dygnet runt, 365 dagar om året, för små och stora djur",
+        "da": "Akutberedskab døgnet rundt, 365 dage om året, til små og store dyr"
       },
       "small_animals": true,
       "url": "https://lismorevets.ie/",
@@ -1091,7 +1127,8 @@
         "nl": "Spoeddienst 24 uur per dag buiten de openingstijden van de praktijk (ma–vr 8.30–18.00 uur, za 9.00–18.00 uur)",
         "pl": "Całodobowe pogotowie weterynaryjne poza godzinami pracy przychodni (pon.–pt. 8:30–18:00, sob. 9:00–18:00)",
         "cs": "Nonstop pohotovost mimo ordinační dobu kliniky (Po–Pá 8:30–18:00, so 9:00–18:00)",
-        "sv": "Akutservice dygnet runt utanför klinikens öppettider (mån–fre 8.30–18, lör 9–18)"
+        "sv": "Akutservice dygnet runt utanför klinikens öppettider (mån–fre 8.30–18, lör 9–18)",
+        "da": "Akutberedskab døgnet rundt uden for klinikkens åbningstid (man–fre 8.30–18.00, lør 9.00–18.00)"
       },
       "small_animals": true,
       "url": "https://www.allcarevets.ie/contact-us",
@@ -1119,7 +1156,8 @@
         "nl": "Spoedzorg 24 uur per dag: 066 712 2100 tijdens kantooruren, 087 265 6611 erbuiten",
         "pl": "Całodobowa pomoc w nagłych przypadkach: 066 712 2100 w godzinach pracy, 087 265 6611 poza godzinami",
         "cs": "Nonstop pohotovostní péče: 066 712 2100 v ordinační dobu, 087 265 6611 mimo ordinační dobu",
-        "sv": "Akutvård dygnet runt: 066 712 2100 under öppettiderna, 087 265 6611 utanför öppettiderna"
+        "sv": "Akutvård dygnet runt: 066 712 2100 under öppettiderna, 087 265 6611 utanför öppettiderna",
+        "da": "Akut hjælp døgnet rundt: 066 712 2100 i åbningstiden, 087 265 6611 uden for åbningstid"
       },
       "small_animals": true,
       "url": "https://abbeyvets.ie/contact-us/",
@@ -1147,7 +1185,8 @@
         "nl": "Spoedlijn 24/7 +353 83 152 2459; ma–vr 9.00–17.00 uur, za 9.00–14.00 uur op afspraak",
         "pl": "Całodobowa linia alarmowa +353 83 152 2459; pon.–pt. 9:00–17:00, sob. 9:00–14:00 po wcześniejszym umówieniu",
         "cs": "Nonstop pohotovostní linka +353 83 152 2459; Po–Pá 9:00–17:00, so 9:00–14:00 na objednání",
-        "sv": "Akutlinje dygnet runt +353 83 152 2459; mån–fre 9–17, lör 9–14 efter tidsbokning"
+        "sv": "Akutlinje dygnet runt +353 83 152 2459; mån–fre 9–17, lör 9–14 efter tidsbokning",
+        "da": "Akuttelefon døgnet rundt +353 83 152 2459; man–fre 9.00–17.00, lør 9.00–14.00 efter aftale"
       },
       "small_animals": true,
       "url": "https://www.allcreaturesvetcentre.ie/",
@@ -1176,7 +1215,8 @@
         "nl": "Spoeddienst 24/7/365; hogere tarieven op zondag, feestdagen en buiten kantooruren",
         "pl": "Pogotowie weterynaryjne 24 godziny na dobę, 7 dni w tygodniu, 365 dni w roku; wyższe stawki w niedziele, święta i poza godzinami pracy",
         "cs": "Nonstop pohotovost 365 dní v roce; vyšší sazby v neděli, o státních svátcích a mimo ordinační dobu",
-        "sv": "Akutservice dygnet runt, årets alla dagar; högre taxa på söndagar, helgdagar och utanför öppettiderna"
+        "sv": "Akutservice dygnet runt, årets alla dagar; högre taxa på söndagar, helgdagar och utanför öppettiderna",
+        "da": "Akutberedskab døgnet rundt, 365 dage om året; højere takster på søndage, helligdage og uden for åbningstid"
       },
       "small_animals": true,
       "url": "https://dingleveterinaryclinic.com/contact/",
@@ -1204,7 +1244,8 @@
         "nl": "Spoeddienst 24 uur per dag, 365 dagen per jaar; bel 091 445005",
         "pl": "Całodobowe pogotowie weterynaryjne, 365 dni w roku; zadzwoń pod 091 445005",
         "cs": "Nonstop pohotovost, 365 dní v roce; volejte 091 445005",
-        "sv": "Akutservice dygnet runt, 365 dagar om året; ring 091 445005"
+        "sv": "Akutservice dygnet runt, 365 dagar om året; ring 091 445005",
+        "da": "Akutberedskab døgnet rundt, 365 dage om året; ring 091 445005"
       },
       "small_animals": true,
       "url": "https://bushyparkvets.ie/24-7-emergency-vet-service/",
@@ -1232,7 +1273,8 @@
         "nl": "Spoed 24 uur per dag, 365 dagen per jaar",
         "pl": "Pomoc w nagłych przypadkach całodobowo, 365 dni w roku",
         "cs": "Pohotovost nonstop, 365 dní v roce",
-        "sv": "Akutöppettider dygnet runt, 365 dagar om året"
+        "sv": "Akutöppettider dygnet runt, 365 dagar om året",
+        "da": "Akut døgnet rundt, 365 dage om året"
       },
       "small_animals": true,
       "url": "https://gorteenacrevets.ie/locations/",
@@ -1261,7 +1303,8 @@
         "nl": "Spoed 24 uur per dag, 365 dagen per jaar",
         "pl": "Pomoc w nagłych przypadkach całodobowo, 365 dni w roku",
         "cs": "Pohotovost nonstop, 365 dní v roce",
-        "sv": "Akutöppettider dygnet runt, 365 dagar om året"
+        "sv": "Akutöppettider dygnet runt, 365 dagar om året",
+        "da": "Akut døgnet rundt, 365 dage om året"
       },
       "small_animals": true,
       "url": "https://gorteenacrevets.ie/locations/",
@@ -1290,7 +1333,8 @@
         "nl": "Spoeddienst 24/7: 087 914 5862",
         "pl": "Całodobowe pogotowie weterynaryjne: 087 914 5862",
         "cs": "Nonstop pohotovost: 087 914 5862",
-        "sv": "Akutservice dygnet runt: 087 914 5862"
+        "sv": "Akutservice dygnet runt: 087 914 5862",
+        "da": "Akutberedskab døgnet rundt: 087 914 5862"
       },
       "small_animals": true,
       "url": "https://www.kellyvets.com/contact-2/",
@@ -1319,7 +1363,8 @@
         "nl": "6 dagen per week open, met een dierenarts 24 uur per dag in achterwacht",
         "pl": "Otwarte 6 dni w tygodniu, z całodobowym dyżurem",
         "cs": "Otevřeno 6 dní v týdnu s nonstop pohotovostní službou",
-        "sv": "Öppet 6 dagar i veckan med jourberedskap dygnet runt"
+        "sv": "Öppet 6 dagar i veckan med jourberedskap dygnet runt",
+        "da": "Åbent 6 dage om ugen med vagt døgnet rundt"
       },
       "small_animals": true,
       "url": "https://www.athenrypetclinic.ie/about-athenry-pet-clinic/",
@@ -1347,7 +1392,8 @@
         "nl": "Ma–vr 8.30–18.00 uur, za 9.30–16.00 uur",
         "pl": "Pon.–pt. 8:30–18:00, sob. 9:30–16:00",
         "cs": "Po–Pá 8:30–18:00, so 9:30–16:00",
-        "sv": "Mån–fre 8.30–18, lör 9.30–16"
+        "sv": "Mån–fre 8.30–18, lör 9.30–16",
+        "da": "Man–fre 8.30–18.00, lør 9.30–16.00"
       },
       "small_animals": true,
       "url": "https://www.arkvetsgalway.com/",
@@ -1375,7 +1421,8 @@
         "nl": "Ma–vr 9.00–18.00 uur, za 10.00–14.00 uur",
         "pl": "Pon.–pt. 9:00–18:00, sob. 10:00–14:00",
         "cs": "Po–Pá 9:00–18:00, so 10:00–14:00",
-        "sv": "Mån–fre 9–18, lör 10–14"
+        "sv": "Mån–fre 9–18, lör 10–14",
+        "da": "Man–fre 9.00–18.00, lør 10.00–14.00"
       },
       "small_animals": true,
       "url": "https://cuddyvets.com/",
@@ -1403,7 +1450,8 @@
         "nl": "Ma–vr 9.00–18.00 uur, za 9.00–13.00 uur; spoedlijn is het nummer van de praktijk",
         "pl": "Pon.–pt. 9:00–18:00, sob. 9:00–13:00; linią alarmową jest numer gabinetu",
         "cs": "Po–Pá 9:00–18:00, so 9:00–13:00; pohotovostní linka je číslo ordinace",
-        "sv": "Mån–fre 9–18, lör 9–13; akutlinjen är klinikens nummer"
+        "sv": "Mån–fre 9–18, lör 9–13; akutlinjen är klinikens nummer",
+        "da": "Man–fre 9.00–18.00, lør 9.00–13.00; akuttelefonen er klinikkens nummer"
       },
       "small_animals": true,
       "url": "https://www.oranvets.com/",
@@ -1431,7 +1479,8 @@
         "nl": "Spoedzorg 24 uur per dag, 365 dagen per jaar; toeslag buiten kantooruren",
         "pl": "Całodobowa pomoc w nagłych przypadkach, 365 dni w roku; poza godzinami pracy dodatkowa opłata",
         "cs": "Nonstop pohotovostní péče, 365 dní v roce; mimo ordinační dobu příplatek",
-        "sv": "Akutvård dygnet runt, 365 dagar om året; extra avgift utanför öppettiderna"
+        "sv": "Akutvård dygnet runt, 365 dagar om året; extra avgift utanför öppettiderna",
+        "da": "Akut hjælp døgnet rundt, 365 dage om året; tillæg uden for åbningstid"
       },
       "small_animals": true,
       "url": "https://www.sligovet.ie/contact-vet-in-sligo.html",
@@ -1460,7 +1509,8 @@
         "nl": "Spoeddienst 24 uur per dag; ma–vr 9.00–18.00 uur, za 9.00–15.00 uur",
         "pl": "Całodobowe pogotowie weterynaryjne; pon.–pt. 9:00–18:00, sob. 9:00–15:00",
         "cs": "Nonstop pohotovost; Po–Pá 9:00–18:00, so 9:00–15:00",
-        "sv": "Akutservice dygnet runt; mån–fre 9–18, lör 9–15"
+        "sv": "Akutservice dygnet runt; mån–fre 9–18, lör 9–15",
+        "da": "Akutberedskab døgnet rundt; man–fre 9.00–18.00, lør 9.00–15.00"
       },
       "small_animals": true,
       "url": "https://letterkennyvets.ie/",
@@ -1489,7 +1539,8 @@
         "nl": "Spoeddienst 24 uur per dag; ma–vr 9.00–18.00 uur, za 9.00–15.00 uur",
         "pl": "Całodobowe pogotowie weterynaryjne; pon.–pt. 9:00–18:00, sob. 9:00–15:00",
         "cs": "Nonstop pohotovost; Po–Pá 9:00–18:00, so 9:00–15:00",
-        "sv": "Akutservice dygnet runt; mån–fre 9–18, lör 9–15"
+        "sv": "Akutservice dygnet runt; mån–fre 9–18, lör 9–15",
+        "da": "Akutberedskab døgnet rundt; man–fre 9.00–18.00, lør 9.00–15.00"
       },
       "small_animals": true,
       "url": "https://letterkennyvets.ie/",

@@ -195,7 +195,8 @@
         "nl": "Berlijnse klinieken met 24-uurs spoeddienst voor kleine huisdieren en praktijken met spoeduren in de avond, het weekend en op feestdagen; zoek op 'Notdienst, Tierarzt, Berlin, Stadtbezirk'; gebruik klinieken alleen bij levensbedreigende gevallen.",
         "pl": "Berlińskie kliniki z całodobowym pogotowiem dla małych zwierząt oraz gabinety z godzinami pogotowia wieczorem, w weekendy i święta; wyszukaj „Notdienst, Tierarzt, Berlin, Stadtbezirk”; z klinik korzystaj tylko w przypadkach zagrażających życiu.",
         "cs": "Berlínské kliniky s nonstop pohotovostí pro malá zvířata a ordinace s večerní, víkendovou a sváteční pohotovostí; hledejte „Notdienst, Tierarzt, Berlin, Stadtbezirk“; kliniky využívejte pouze při život ohrožujících stavech.",
-        "sv": "Kliniker i Berlin med smådjursakut dygnet runt och praktiker med akuttider kvällar, helger och helgdagar; sök efter 'Notdienst, Tierarzt, Berlin, Stadtbezirk'; använd klinikerna endast vid livshotande fall."
+        "sv": "Kliniker i Berlin med smådjursakut dygnet runt och praktiker med akuttider kvällar, helger och helgdagar; sök efter 'Notdienst, Tierarzt, Berlin, Stadtbezirk'; använd klinikerna endast vid livshotande fall.",
+        "da": "Berlin-klinikker med døgnåben akutvagt for små dyr og klinikker med akuttid om aftenen, i weekender og på helligdage; søg 'Notdienst, Tierarzt, Berlin, Stadtbezirk'; brug kun klinikkerne ved livstruende tilfælde."
       },
       "note": "No central emergency phone; chamber office number is administrative only. Clinics report severe capacity shortages. Source: Tierärztekammer Berlin page listing these clinics/practices.",
       "source_url": "https://tieraerztekammer-berlin.de/notdienst/",
@@ -222,7 +223,8 @@
         "nl": "Rooster van de dienstdoende praktijk: ma–vr 20.00–08.00 uur, weekenden en feestdagen 08.00–08.00 uur de volgende dag; informatielijn 040 434379; bel altijd eerst de praktijk.",
         "pl": "Grafik dyżurującego gabinetu: pon.–pt. 20:00–08:00, weekendy i święta 08:00–08:00 następnego dnia; linia informacyjna 040 434379; zawsze najpierw zadzwoń do gabinetu",
         "cs": "Rozpis ordinace ve službě: Po–Pá 20:00–8:00, o víkendech a svátcích 8:00–8:00 následujícího dne; informační linka 040 434379; vždy nejprve zavolejte do ordinace",
-        "sv": "Jourschema för den praktik som har jour: mån–fre 20.00–08.00, helger och helgdagar 08.00–08.00 nästa dag; informationslinje 040 434379; ring alltid praktiken först"
+        "sv": "Jourschema för den praktik som har jour: mån–fre 20.00–08.00, helger och helgdagar 08.00–08.00 nästa dag; informationslinje 040 434379; ring alltid praktiken först",
+        "da": "Vagtplan for den vagthavende klinik: man–fre 20.00–08.00, weekender og helligdage 08.00–08.00 næste dag; informationslinje 040 434379; ring altid til klinikken først"
       },
       "note": "Emergency surcharge 50 EUR + VAT under GOT.",
       "source_url": "https://tieraerztekammer-hamburg.de/aktueller-notdienstplan",
@@ -249,7 +251,8 @@
         "nl": "ma–vr 18.00–22.00 uur; za, zo en feestdagen 08.00–22.00 uur; telefonische aanmelding verplicht. Buiten die tijden: klinieken in de omgeving (Posthausen, Sottrum, TiHo Hannover).",
         "pl": "Pon.–pt. 18:00–22:00; sob., niedz. i święta 08:00–22:00; obowiązkowa rejestracja telefoniczna. Poza tymi godzinami: okoliczne kliniki (Posthausen, Sottrum, TiHo Hannover)",
         "cs": "Po–Pá 18:00–22:00; so, ne a svátky 8:00–22:00; nutná telefonická registrace. Mimo tuto dobu: okolní kliniky (Posthausen, Sottrum, TiHo Hannover)",
-        "sv": "Mån–fre 18.00–22.00; lör, sön och helgdagar 08.00–22.00; telefonanmälan obligatorisk. Utanför dessa tider: kliniker i omgivningen (Posthausen, Sottrum, TiHo Hannover)"
+        "sv": "Mån–fre 18.00–22.00; lör, sön och helgdagar 08.00–22.00; telefonanmälan obligatorisk. Utanför dessa tider: kliniker i omgivningen (Posthausen, Sottrum, TiHo Hannover)",
+        "da": "man–fre 18.00–22.00; lør, søn og helligdage 08.00–22.00; telefonisk tilmelding er obligatorisk. Uden for disse tider: klinikker i nærheden (Posthausen, Sottrum, TiHo Hannover)"
       },
       "source_url": "https://tieraerztekammer-bremen.org/notdienst/",
       "checked": "2026-11-02",
@@ -275,7 +278,8 @@
         "nl": "Sinds 1 jan. 2025: ma–vr 18.00–08.00 uur en de hele dag in weekenden en op feestdagen; de beller wordt direct doorverbonden met de dichtstbijzijnde dienstdoende praktijk (op basis van locatie). Alleen kleine huisdieren, meestal geen huisbezoeken.",
         "pl": "Od 1 stycznia 2025: pon.–pt. 18:00–08:00 oraz przez całą dobę w weekendy i święta; dzwoniący zostaje połączony bezpośrednio z najbliższym dyżurującym gabinetem (wybranym według miejsca połączenia). Tylko małe zwierzęta, zwykle bez wizyt domowych",
         "cs": "Od 1. 1. 2025: Po–Pá 18:00–8:00 a celý den o víkendech a svátcích; volající je spojen přímo s nejbližší ordinací ve službě (podle místa volajícího). Pouze malá zvířata, obvykle bez návštěv doma",
-        "sv": "Sedan 1 jan 2025: mån–fre 18.00–08.00 och hela dygnet på helger och helgdagar; den som ringer kopplas direkt till närmaste jourhavande praktik (utifrån uppringarens plats). Endast smådjur, vanligen inga hembesök"
+        "sv": "Sedan 1 jan 2025: mån–fre 18.00–08.00 och hela dygnet på helger och helgdagar; den som ringer kopplas direkt till närmaste jourhavande praktik (utifrån uppringarens plats). Endast smådjur, vanligen inga hembesök",
+        "da": "Siden 1. jan. 2025: man–fre 18.00–08.00 og hele dagen i weekender og på helligdage; den, der ringer, forbindes direkte til nærmeste vagthavende klinik (valgt efter opkalderens position). Kun små dyr, normalt ingen hjemmebesøg"
       },
       "quote": "Montag – Freitag 18:00 – 08:00 Uhr und ganztägig am Wochenende und an den Feiertagen",
       "note": "Sächsische Landestierärztekammer announcement. 01805 is a charged service number. vetnotdienst.de could not be fetched (not reachable from this tool).",
@@ -303,7 +307,8 @@
         "nl": "ma–do 18.00–08.00 uur, vr 18.00 uur tot ma 08.00 uur, feestdagen 0–24 uur; bel vooraf.",
         "pl": "Pon.–czw. 18:00–08:00, od piątku 18:00 do poniedziałku 08:00, w święta 0–24; zadzwoń przed wizytą",
         "cs": "Po–Čt 18:00–8:00, pá 18:00 do pondělí 8:00, státní svátky 0:00–24:00; před cestou zavolejte",
-        "sv": "Mån–tors 18.00–08.00, fre 18.00 till mån 08.00, helgdagar 0–24; ring innan du kommer"
+        "sv": "Mån–tors 18.00–08.00, fre 18.00 till mån 08.00, helgdagar 0–24; ring innan du kommer",
+        "da": "man–tors 18.00–08.00, fre 18.00 til man 08.00, helligdage 0–24; ring i forvejen"
       },
       "quote": "Die Brandenburg-weite Notdienstnummer ist die 01805843736.",
       "note": "Stated on a participating practice's page; AniCura Potsdam's page also names 'Tierärztlicher Notdienstring Berlin-Brandenburg' 01805 84 37 36. LTK Brandenburg page on the new emergency model could not be fetched (2 tries).",
@@ -330,7 +335,8 @@
         "nl": "Deelstaatbreed nummer dat doorverbindt met de dichtstbijzijnde dienstdoende praktijk in Mecklenburg-Vorpommern.",
         "pl": "Numer dla całego landu, łączący z najbliższym dyżurującym gabinetem w Meklemburgii-Pomorzu Przednim",
         "cs": "Číslo pro celou spolkovou zemi, které spojí s nejbližší ordinací ve službě v Meklenbursku-Předním Pomořansku",
-        "sv": "Nummer för hela delstaten som kopplar till närmaste jourhavande praktik i Mecklenburg-Vorpommern"
+        "sv": "Nummer för hela delstaten som kopplar till närmaste jourhavande praktik i Mecklenburg-Vorpommern",
+        "da": "Delstatsdækkende nummer, der forbinder til nærmeste vagthavende klinik i Mecklenburg-Vorpommern"
       },
       "note": "Stated on Tierklinik Rostock's emergency page; Tierarztpraxis Puvogel (Rügen) and Tierarztpraxis Maack (Usedom) also refer small-animal emergencies to 01805 84 37 36. No chamber page found.",
       "source_url": "https://www.tierklinikrostock.de/notfallmedizin/",
@@ -358,7 +364,8 @@
         "nl": "Centraal nummer verbindt door met de dichtstbijzijnde dienstdoende dierenarts; meld het spoedgeval vóór aankomst aan.",
         "pl": "Numer centralny łączy z najbliższym dyżurującym weterynarzem; zgłoś nagły przypadek przed przyjazdem",
         "cs": "Centrální číslo spojí s nejbližším veterinářem ve službě; pohotovost před příjezdem ohlaste",
-        "sv": "Centralt nummer som kopplar till närmaste jourhavande veterinär; anmäl akutfallet innan du kommer"
+        "sv": "Centralt nummer som kopplar till närmaste jourhavande veterinär; anmäl akutfallet innan du kommer",
+        "da": "Centralt nummer forbinder til nærmeste vagthavende dyrlæge; meld akutten, før du kommer"
       },
       "quote": "Seit 2022 wird der 24-stündige tierärztliche Notdienst zentral von der Tierärztekammer Schleswig-Holstein organisiert.",
       "note": "Same number on Tiermedizin am Kurpark (heading '24-Stunden-Notdienst Schleswig-Holstein:'), Tierklinik Neustädter Bucht and fehmarn.de. Chamber's own Kleintiernotdienst page redirected to a login area and could not be read.",
@@ -384,7 +391,8 @@
         "nl": "Online zoeken naar de dienstdoende dierenarts; werkdagen 18.00–08.00 uur, vr 18.00 uur tot ma 08.00 uur, feestdagen de hele dag; meld het spoedgeval telefonisch aan bij de dienstdoende dierenarts.",
         "pl": "Wyszukiwarka dyżurującego weterynarza online; w dni robocze 18:00–08:00, od piątku 18:00 do poniedziałku 08:00, w święta całą dobę; zgłoś nagły przypadek dyżurującemu weterynarzowi telefonicznie",
         "cs": "Online vyhledávání veterináře ve službě; v noci ve všední dny 18:00–8:00, pá 18:00 do pondělí 8:00, o svátcích celý den; pohotovost ohlaste veterináři ve službě telefonicky",
-        "sv": "Onlinesökning efter jourhavande veterinär; vardagar 18.00–08.00, fre 18.00 till mån 08.00, helgdagar hela dygnet; anmäl akutfallet till jourhavande veterinär per telefon"
+        "sv": "Onlinesökning efter jourhavande veterinär; vardagar 18.00–08.00, fre 18.00 till mån 08.00, helgdagar hela dygnet; anmäl akutfallet till jourhavande veterinär per telefon",
+        "da": "Onlinesøgning efter vagthavende dyrlæge; hverdagsaftener 18.00–08.00, fre 18.00 til man 08.00, helligdage hele dagen; meld akutten til vagtdyrlægen pr. telefon"
       },
       "quote": "Der Notfall ist dem diensthabenden Tierarzt/ der diensthabenden Tierärztin vorab telefonisch anzukündigen.",
       "note": "Tierärztekammer Sachsen-Anhalt flyer and homepage link to tieraerztliche-notdienste.de ('Notdienstsuche für Tierhalter in Sachsen-Anhalt'). No central phone.",
@@ -412,7 +420,8 @@
         "nl": "Lijn met de dienstdoende dierenartsen in Thüringen buiten openingstijden.",
         "pl": "Linia podająca dyżurujących weterynarzy w Turyngii poza godzinami pracy gabinetów",
         "cs": "Linka s veterináři ve službě v Durynsku mimo ordinační dobu",
-        "sv": "Linje som anger jourhavande veterinärer i Thüringen utanför praktikernas öppettider"
+        "sv": "Linje som anger jourhavande veterinärer i Thüringen utanför praktikernas öppettider",
+        "da": "Linje med oplysning om vagthavende dyrlæger i Thüringen uden for klinikkernes åbningstid"
       },
       "quote": "diensthabenden Tierärzte in Thüringen 24 h",
       "note": "Number as printed on Tierärztliche Klinik Erfurt's contact page. Thüringer Landtag answer (Drs. 'Tierärztlicher Notdienst in Thüringen erneut nachgefragt') describes regional Notdienstringe with central call handling at the Kassenärztliche Vereinigung Thüringen. Landestierärztekammer site (ltkt.de) could not be fetched.",
@@ -438,7 +447,8 @@
         "nl": "Spoedrooster van de praktijken in Hannover; TiHo verwijst niet-kritieke gevallen hierheen en elders naar de lokale Ringnotdienste.",
         "pl": "Grafik pogotowia gabinetów w Hanowerze; TiHo kieruje tu przypadki niekrytyczne, a gdzie indziej do lokalnych Ringnotdienste",
         "cs": "Pohotovostní rozpis hannoverských ordinací; TiHo odkazuje nekritické případy sem a jinde na místní Ringnotdienste",
-        "sv": "Akutjour för praktikerna i Hannover; TiHo remitterar icke-kritiska fall hit och till lokala Ringnotdienste på andra orter"
+        "sv": "Akutjour för praktikerna i Hannover; TiHo remitterar icke-kritiska fall hit och till lokala Ringnotdienste på andra orter",
+        "da": "Hannover-klinikkernes akutvagtplan; TiHo henviser ikke-kritiske tilfælde hertil og til lokale Ringnotdienste andre steder"
       },
       "note": "URL taken from TiHo's emergency page; the rota site itself redirected in a loop and could not be read. Langenhagen practice page names an answering machine for the Hannover emergency service: 0511 65 51 18 21.",
       "source_url": "https://www.tiho-hannover.de/kliniken-institute/kliniken/klinik-fuer-kleintiere/notdienst-information",
@@ -462,7 +472,8 @@
         "nl": "Rooster met data van jan. 2026 tot jan. 2027: werkdagen 07.00 uur tot 07.00 uur de volgende ochtend, weekenden za 12.00 uur tot ma 07.00 uur; bel eerst.",
         "pl": "Grafik z datami styczeń 2026–styczeń 2027: w dni robocze od 07:00 do 07:00 następnego dnia, w weekendy od soboty 12:00 do poniedziałku 07:00; najpierw zadzwoń",
         "cs": "Rozpis s daty od ledna 2026 do ledna 2027: ve všední dny od 7:00 do 7:00 následujícího rána, o víkendech od so 12:00 do pondělí 7:00; nejprve zavolejte",
-        "sv": "Schema med datum jan 2026–jan 2027: vardagar 07.00 till 07.00 nästa morgon, helger lör 12.00 till mån 07.00; ring först"
+        "sv": "Schema med datum jan 2026–jan 2027: vardagar 07.00 till 07.00 nästa morgon, helger lör 12.00 till mån 07.00; ring först",
+        "da": "Vagtplan med datoer jan. 2026–jan. 2027: hverdage 07.00 til 07.00 næste morgen, weekender lør 12.00 til man 07.00; ring først"
       },
       "note": "Hosted by a participating practice. Moved from duty (2026-11-10): no guarantee of accuracy",
       "source_url": "https://kleintierpraxis-langenhagen.com/notdienstplan/",
@@ -486,7 +497,8 @@
         "nl": "Gezamenlijk rooster van de praktijken in de stad Oldenburg voor nachten, weekenden en feestdagen; bel de dienstdoende praktijk voordat je komt; geen huisbezoeken.",
         "pl": "Wspólny grafik gabinetów z miasta Oldenburg na noce, weekendy i święta; przed wizytą zadzwoń do dyżurującego gabinetu; bez wizyt domowych",
         "cs": "Společný rozpis oldenburských městských ordinací pro noci, víkendy a svátky; před cestou zavolejte do ordinace ve službě; bez návštěv doma",
-        "sv": "Gemensam jour för Oldenburgs stadspraktiker nätter, helger och helgdagar; ring jourpraktiken innan du åker; inga hembesök"
+        "sv": "Gemensam jour för Oldenburgs stadspraktiker nätter, helger och helgdagar; ring jourpraktiken innan du åker; inga hembesök",
+        "da": "Fælles vagtplan for Oldenburgs byklinikker om natten, i weekender og på helligdage; ring til vagtklinikken, før du kører derhen; ingen hjemmebesøg"
       },
       "note": "Life-threatening emergencies only; emergency fee 50 EUR + VAT. Moved from duty (2026-11-10): see 'Dienstplan'",
       "source_url": "https://tierarztnotdienst-stadtol.de/",
@@ -514,7 +526,8 @@
         "nl": "Mobiele spoedpraktijk voor de stad Osnabrück en omliggende gemeenten (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) en het Tecklenburger Land; telefonische aanmelding vereist.",
         "pl": "Mobilny gabinet pogotowia dla miasta Osnabrück i okolicznych gmin (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) oraz Tecklenburger Land; wymagana rejestracja telefoniczna",
         "cs": "Mobilní pohotovostní ordinace pro město Osnabrück a okolní obce (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) a Tecklenburger Land; nutná telefonická registrace",
-        "sv": "Mobil akutpraktik för Osnabrücks stad och omgivande kommuner (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) och Tecklenburger Land; telefonanmälan krävs"
+        "sv": "Mobil akutpraktik för Osnabrücks stad och omgivande kommuner (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) och Tecklenburger Land; telefonanmälan krävs",
+        "da": "Mobil akutklinik for Osnabrück by og omegnskommunerne (Bad Iburg, Belm, Bissendorf, Bramsche, Georgsmarienhütte, Wallenhorst …) og Tecklenburger Land; telefonisk tilmelding påkrævet"
       },
       "quote": "365 Tage im Jahr - 24 Stunden am Tag",
       "note": "Tecklenburger Land part lies in NRW. Operator not named on the page.",
@@ -540,7 +553,8 @@
         "nl": "Landkreis Cuxhaven en Bremerhaven, de klok rond bereikbaar; neem contact op met de Notdienstgruppe van de eigen dierenarts (groep 1: 04744 4563999; groep 2: 09001 144244, betaald; groep 3: online rooster; groep 4: antwoordapparaat van de eigen dierenarts). Geen huisbezoeken.",
         "pl": "Landkreis Cuxhaven i Bremerhaven, dyżur całodobowy; skontaktuj się z grupą dyżurną (Notdienstgruppe) swojego weterynarza (grupa 1: 04744 4563999; grupa 2: 09001 144244, płatne; grupa 3: grafik online; grupa 4: automatyczna sekretarka własnego weterynarza). Bez wizyt domowych",
         "cs": "Landkreis Cuxhaven a Bremerhaven, nepřetržitá pohotovost; kontaktujte Notdienstgruppe vlastního veterináře (skupina 1: 04744 4563999; skupina 2: 09001 144244, zpoplatněno; skupina 3: online rozpis; skupina 4: záznamník vlastního veterináře). Bez návštěv doma",
-        "sv": "Landkreis Cuxhaven och Bremerhaven, jour dygnet runt; kontakta din egen veterinärs Notdienstgruppe (grupp 1: 04744 4563999; grupp 2: 09001 144244, avgiftsbelagt; grupp 3: onlineschema; grupp 4: den egna veterinärens telefonsvarare). Inga hembesök"
+        "sv": "Landkreis Cuxhaven och Bremerhaven, jour dygnet runt; kontakta din egen veterinärs Notdienstgruppe (grupp 1: 04744 4563999; grupp 2: 09001 144244, avgiftsbelagt; grupp 3: onlineschema; grupp 4: den egna veterinärens telefonsvarare). Inga hembesök",
+        "da": "Landkreis Cuxhaven og Bremerhaven, vagt døgnet rundt; kontakt vagtgruppen hos din egen dyrlæge (gruppe 1: 04744 4563999; gruppe 2: 09001 144244, betalingsnummer; gruppe 3: online vagtplan; gruppe 4: din egen dyrlæges telefonsvarer). Ingen hjemmebesøg"
       },
       "note": "Backup named on the page: Tierklinik Posthausen and Klinik für Kleintiere Sottrum. Bremerhaven belongs to the Land Bremen.",
       "source_url": "https://kleintiernotdienst-cuxland-bremerhaven.de/",
@@ -566,7 +580,8 @@
         "nl": "Rooster met data van de dienstdoende praktijk: werkdagen 20.00–08.00 uur, za 12.00 uur tot ma 08.00 uur, feestdagen 08.00–08.00 uur; bel altijd vooraf.",
         "pl": "Grafik dyżurującego gabinetu z datami: w dni robocze 20:00–08:00, od soboty 12:00 do poniedziałku 08:00, w święta 08:00–08:00; zawsze najpierw zadzwoń",
         "cs": "Rozpis ordinace ve službě s daty: ve všední dny 20:00–8:00, so 12:00 do pondělí 8:00, svátky 8:00–8:00; vždy předem zavolejte",
-        "sv": "Schema med datum för jourpraktiken: vardagar 20.00–08.00, lör 12.00 till mån 08.00, helgdagar 08.00–08.00; ring alltid i förväg"
+        "sv": "Schema med datum för jourpraktiken: vardagar 20.00–08.00, lör 12.00 till mån 08.00, helgdagar 08.00–08.00; ring alltid i förväg",
+        "da": "Vagtplan med datoer for vagtklinikken: hverdage 20.00–08.00, lør 12.00 til man 08.00, helligdage 08.00–08.00; ring altid i forvejen"
       },
       "quote": "Melden Sie Ihren Besuch immer telefonisch an, die Praxen sind nicht dauerhaft besetzt.",
       "note": "Page also lists TiHo Hannover small-animal clinic (24 h) and Tierklinik Kaufungen (Hessen, 24 h) as fallbacks.",
@@ -596,7 +611,8 @@
         "nl": "Kritieke en acuut levensbedreigende spoedgevallen op elk moment; eerst triage, niet-dringende gevallen kunnen worden doorverwezen naar een Ringnotdienst.",
         "pl": "Przypadki krytyczne i ostre, zagrażające życiu, o każdej porze; najpierw segregacja pacjentów, przypadki niepilne mogą zostać skierowane do Ringnotdienst",
         "cs": "Kritické a akutně život ohrožující případy kdykoli; nejprve triáž, neurgentní případy mohou být odkázány na Ringnotdienst",
-        "sv": "Kritiska och akut livshotande fall när som helst; triage först, icke-brådskande fall kan remitteras till en Ringnotdienst"
+        "sv": "Kritiska och akut livshotande fall när som helst; triage först, icke-brådskande fall kan remitteras till en Ringnotdienst",
+        "da": "Kritiske og akut livstruende nødsituationer til enhver tid; triage først, ikke-hastende tilfælde kan henvises til en Ringnotdienst"
       },
       "quote": "Kritische und akut lebensbedrohliche Notfälle versorgen wir jederzeit – rund um die Uhr",
       "note": "University small-animal hospital. Phone from tiho-hannover.de/kontakt (Klinik für Kleintiere, Notdienst); exotic pets: Klinik für Heimtiere, Reptilien, Zier- und Wildvögel +49 511 953-6800 (hannover.de).",
@@ -624,7 +640,8 @@
         "nl": "Spoed ma–vr 8–18 uur, weekenden en feestdagen 10–18 uur; buiten die tijden alleen na telefonische aanmelding (+49 160 37 58 447).",
         "pl": "Nagłe przypadki pon.–pt. 8–18, weekendy i święta 10–18; poza tymi godzinami tylko po rejestracji telefonicznej (+49 160 37 58 447)",
         "cs": "Pohotovost Po–Pá 8:00–18:00, o víkendech a svátcích 10:00–18:00; mimo tuto dobu pouze po telefonické registraci (+49 160 37 58 447)",
-        "sv": "Akutfall mån–fre 8–18, helger och helgdagar 10–18; utanför dessa tider endast efter telefonanmälan (+49 160 37 58 447)"
+        "sv": "Akutfall mån–fre 8–18, helger och helgdagar 10–18; utanför dessa tider endast efter telefonanmälan (+49 160 37 58 447)",
+        "da": "Akut man–fre 8–18, weekender og helligdage 10–18; uden for disse tider kun efter telefonisk tilmelding (+49 160 37 58 447)"
       },
       "note": "University hospital; ended its 24-h small-animal emergency care 'bis auf Weiteres' in May 2022 (FU press release). 24-h service exists only for Berlin wildlife.",
       "source_url": "https://www.vetmed.fu-berlin.de/einrichtungen/kliniken/we20/tierhalter/notdienst/index.html",
@@ -723,7 +740,8 @@
         "nl": "Mobiele spoeddierenartsen, alleen huisbezoeken.",
         "pl": "Mobilni weterynarze pogotowia, tylko wizyty domowe",
         "cs": "Mobilní pohotovostní veterináři, pouze návštěvy doma",
-        "sv": "Mobila jourveterinärer, endast hembesök"
+        "sv": "Mobila jourveterinärer, endast hembesök",
+        "da": "Mobile akutdyrlæger, kun hjemmebesøg"
       },
       "quote": "täglich 24 Stunden Hausbesuche",
       "note": "Listed on the Tierärztekammer Berlin emergency page; mobile service, no clinic.",
@@ -750,7 +768,8 @@
         "nl": "Spoeduren dagelijks 9–24 uur.",
         "pl": "Godziny pogotowia codziennie 9–24",
         "cs": "Pohotovostní doba denně 9:00–24:00",
-        "sv": "Akuttider alla dagar 9–24"
+        "sv": "Akuttider alla dagar 9–24",
+        "da": "Akuttid hver dag 9–24"
       },
       "source_url": "https://tieraerztekammer-berlin.de/notdienst/",
       "checked": "2026-11-02",
@@ -778,7 +797,8 @@
         "nl": "Spoedtelefoon ('Notdienst'); consulten op afspraak ma–vr 8–20 uur, za 9–12 uur.",
         "pl": "Telefon pogotowia („Notdienst”); konsultacje po umówieniu pon.–pt. 8–20, sob. 9–12.",
         "cs": "Pohotovostní telefon („Notdienst“); konzultace na objednání Po–Pá 8:00–20:00, so 9:00–12:00.",
-        "sv": "Akuttelefon ('Notdienst'); tidsbokade konsultationer mån–fre 8–20, lör 9–12."
+        "sv": "Akuttelefon ('Notdienst'); tidsbokade konsultationer mån–fre 8–20, lör 9–12.",
+        "da": "Akuttelefon ('Notdienst'); tidsbestilt konsultation man–fre 8–20, lør 9–12."
       },
       "quote": "24h Notdienst",
       "note": "Named as fallback by Tierärztekammer Bremen and the Cuxland/Bremerhaven rota. 24-h wording is the site banner only. Original: 'phone listed'.",
@@ -807,7 +827,8 @@
         "nl": "Reguliere tijden ma–vr 8.30–20.00 uur.",
         "pl": "Zwykłe godziny pon.–pt. 8:30–20:00",
         "cs": "Běžná ordinační doba Po–Pá 8:30–20:00",
-        "sv": "Ordinarie öppettider mån–fre 8.30–20.00"
+        "sv": "Ordinarie öppettider mån–fre 8.30–20.00",
+        "da": "Normal åbningstid man–fre 8.30–20.00"
       },
       "quote": "24/7 NOTDIENST",
       "note": "About 25 km east of Bremen; named as fallback by Tierärztekammer Bremen. Site posted a temporary suspension of the night service on some dates – phone ahead.",
@@ -836,7 +857,8 @@
         "nl": "Spoed elke dag de klok rond; bel vóór het vervoer.",
         "pl": "Pogotowie codziennie całodobowo; zadzwoń przed transportem",
         "cs": "Pohotovost každý den nepřetržitě; před převozem zavolejte",
-        "sv": "Akut dygnet runt, alla dagar; ring innan du åker"
+        "sv": "Akut dygnet runt, alla dagar; ring innan du åker",
+        "da": "Akut hver dag døgnet rundt; ring, før du kører af sted"
       },
       "quote": "rund um die Uhr (24/7)",
       "source_url": "https://www.tierklinikrostock.de/notfallmedizin/",
@@ -864,7 +886,8 @@
         "nl": "Bel bij spoedgevallen aan bij de ingang.",
         "pl": "W nagłych przypadkach zadzwoń dzwonkiem przy wejściu",
         "cs": "Při pohotovosti zazvoňte u vchodu",
-        "sv": "Vid akutfall ringer du på vid entrén"
+        "sv": "Vid akutfall ringer du på vid entrén",
+        "da": "Ring på ved indgangen ved akutte tilfælde"
       },
       "quote": "24-Stunden-Notfall-Bereitschaft - 365 Tage im Jahr",
       "note": "Just north of Hamburg. Clinic now treats only on referral by the own vet or after pre-examination by the regional emergency service, except acutely life-threatening cases.",
@@ -893,7 +916,8 @@
         "nl": "Bel vooraf voordat je binnenkomt.",
         "pl": "Zadzwoń przed przyjściem",
         "cs": "Před příchodem zavolejte",
-        "sv": "Ring innan du kommer"
+        "sv": "Ring innan du kommer",
+        "da": "Ring på forhånd, før du kommer"
       },
       "quote": "Unser Rundum-Notdienst gewährleistet zudem schnelle Hilfe auch im Notfall - 24 Stunden am Tag - 365 Tage im Jahr.",
       "note": "North-west of Hamburg.",
@@ -922,7 +946,8 @@
         "nl": "Op werkdagen afspraken 9–19 uur; spoedlijn de klok rond.",
         "pl": "W dni robocze wizyty 9–19; linia alarmowa całodobowo",
         "cs": "Ve všední dny objednaní pacienti 9:00–19:00; pohotovostní linka nepřetržitě",
-        "sv": "Vardagar 9–19 efter tidsbokning; akutlinje dygnet runt"
+        "sv": "Vardagar 9–19 efter tidsbokning; akutlinje dygnet runt",
+        "da": "Hverdage tidsbestilling 9–19; akutlinje døgnet rundt"
       },
       "quote": "24 Stunden am Tag an 365 Tagen",
       "source_url": "https://www.tierklinik-lueneburg.de/",
@@ -950,7 +975,8 @@
         "nl": "Notfallambulanz ma–vr 8–18 uur; 24-uurs spoeddienst; controleer de actuele capaciteit.",
         "pl": "Izba przyjęć (Notfallambulanz) pon.–pt. 8–18; całodobowe pogotowie; sprawdź aktualne obłożenie",
         "cs": "Pohotovostní ambulance Po–Pá 8:00–18:00; nonstop pohotovost; ověřte aktuální kapacitu",
-        "sv": "Notfallambulanz mån–fre 8–18; akutservice dygnet runt; kontrollera aktuell kapacitet"
+        "sv": "Notfallambulanz mån–fre 8–18; akutservice dygnet runt; kontrollera aktuell kapacitet",
+        "da": "Akutmodtagelse (Notfallambulanz) man–fre 8–18; døgnåben akutvagt; tjek aktuel kapacitet"
       },
       "quote": "rund um die Uhr an 365 Tagen im Jahr",
       "note": "Page gives postcode 24637 in one place and 24647 in the footer. Posted occasional closures (no emergency service) – phone ahead.",
@@ -979,7 +1005,8 @@
         "nl": "24-uurs spoeddienst voor acuut levensbedreigende gevallen bij kleine huisdieren; 's nachts en in het weekend geen inloopkliniek - bel vooraf.",
         "pl": "Całodobowe pogotowie w ostrych przypadkach zagrażających życiu u małych zwierząt; w nocy i w weekendy klinika nie przyjmuje wtedy bez zapowiedzi – zadzwoń przed wizytą",
         "cs": "Nonstop pohotovost pro akutně život ohrožující případy malých zvířat; v noci a o víkendech nepřijímá bez ohlášení – před cestou zavolejte",
-        "sv": "Akutservice dygnet runt för akut livshotande smådjursfall; ingen klinik med drop-in nattetid/helger – ring innan du kommer"
+        "sv": "Akutservice dygnet runt för akut livshotande smådjursfall; ingen klinik med drop-in nattetid/helger – ring innan du kommer",
+        "da": "Døgnåben akutvagt til akut livstruende tilfælde hos små dyr; ikke en åben klinik uden aftale om natten/i weekenden – ring på forhånd"
       },
       "quote": "Für akut lebensbedrohlich erkrankte Kleintiere hält unsere Tierklinik einen 24stündigen Notdienst bereit.",
       "note": "Eastern edge of Leipzig.",
@@ -1007,7 +1034,8 @@
         "nl": "Eigen spoedlijn 0431 668866; teledierenartslijn van een partner, geadverteerd als 24/7.",
         "pl": "Własna linia alarmowa 0431 668866; partnerska infolinia z teleweterynarzem reklamowana jako całodobowa",
         "cs": "Vlastní pohotovostní linka 0431 668866; partnerská telefonická veterinární linka uváděná nonstop",
-        "sv": "Egen akutlinje 0431 668866; partnerns veterinärjour per telefon annonseras som tillgänglig dygnet runt"
+        "sv": "Egen akutlinje 0431 668866; partnerns veterinärjour per telefon annonseras som tillgänglig dygnet runt",
+        "da": "Egen akutlinje 0431 668866; samarbejdende teledyrlægelinje, der er annonceret som døgnåben"
       },
       "note": "'24H Tierarzthotline' refers to the partner hotline (Pfotendoctor), not the clinic, so not marked 24 h. Out of hours use the Schleswig-Holstein central number.",
       "source_url": "https://kielvet.de/notdienst/",
@@ -1035,7 +1063,8 @@
         "nl": "Eigen spoeddienst ma–vr 8–20, za 12–18, zo/feestdagen 9–18 uur (spoedmobiel 0151 16906850 bij antwoordapparaat); anders het centrale nummer van SH 0481 85823998.",
         "pl": "Własne pogotowie pon.–pt. 8–20, sob. 12–18, niedz./święta 9–18 (telefon komórkowy pogotowia 0151 16906850, jeśli włączy się automatyczna sekretarka); poza tym centralny numer SH 0481 85823998",
         "cs": "Vlastní pohotovost Po–Pá 8:00–20:00, so 12:00–18:00, ne a svátky 9:00–18:00 (pohotovostní mobil 0151 16906850, pokud je zapnutý záznamník); jinak ústřední číslo SH 0481 85823998",
-        "sv": "Egen akutservice mån–fre 8–20, lör 12–18, sön/helgdagar 9–18 (akutmobil 0151 16906850 om telefonsvararen svarar); annars SH:s centralnummer 0481 85823998"
+        "sv": "Egen akutservice mån–fre 8–20, lör 12–18, sön/helgdagar 9–18 (akutmobil 0151 16906850 om telefonsvararen svarar); annars SH:s centralnummer 0481 85823998",
+        "da": "Egen akutvagt man–fre 8–20, lør 12–18, søn/helligdage 9–18 (akuttelefon 0151 16906850, hvis telefonsvareren er slået til); ellers SH's centrale nummer 0481 85823998"
       },
       "source_url": "https://kleintierklinik-am-stadtpark.de/notdienst.html",
       "checked": "2026-11-02",
@@ -1062,7 +1091,8 @@
         "nl": "Spoedconsulten ma 20–21, di/do 20–22, za 12–14 uur; gesloten op zo/feestdagen; anders de lijn van de Tierärztekammer Hamburg 040 434379.",
         "pl": "Konsultacje w nagłych przypadkach pon. 20–21, wt./czw. 20–22, sob. 12–14; niedz./święta nieczynne; poza tym linia Tierärztekammer Hamburg 040 434379",
         "cs": "Pohotovostní konzultace Po 20:00–21:00, út, čt 20:00–22:00, so 12:00–14:00; ne a svátky zavřeno; jinak linka Tierärztekammer Hamburg 040 434379",
-        "sv": "Akutkonsultationer mån 20–21, tis/tors 20–22, lör 12–14; stängt sön/helgdagar; annars Tierärztekammer Hamburgs linje 040 434379"
+        "sv": "Akutkonsultationer mån 20–21, tis/tors 20–22, lör 12–14; stängt sön/helgdagar; annars Tierärztekammer Hamburgs linje 040 434379",
+        "da": "Akutkonsultation man 20–21, tirs/tors 20–22, lør 12–14; lukket søn/helligdage; ellers Tierärztekammer Hamburgs linje 040 434379"
       },
       "source_url": "https://www.tierarztfuhlsbuettel.de/notdienst-notfall/",
       "checked": "2026-11-02",
@@ -1089,7 +1119,8 @@
         "nl": "Spoed ma–vr 8–12 en 16–19, za 10–12, zo 10–11 uur; spoeddienst voor levensbedreigende gevallen ook 's nachts en in het weekend.",
         "pl": "Pon.–pt. 8–12 i 16–19, sob. 10–12, niedz. 10–11 nagłe przypadki; pogotowie w przypadkach zagrażających życiu także w nocy i w weekendy",
         "cs": "Po–Pá 8:00–12:00 a 16:00–19:00, so 10:00–12:00, ne 10:00–11:00 pouze pohotovosti; pohotovost pro život ohrožující případy i v noci a o víkendech",
-        "sv": "Mån–fre 8–12 och 16–19, lör 10–12, sön 10–11 akutfall; akutservice för livshotande fall även nattetid och på helger"
+        "sv": "Mån–fre 8–12 och 16–19, lör 10–12, sön 10–11 akutfall; akutservice för livshotande fall även nattetid och på helger",
+        "da": "man–fre 8–12 og 16–19, lør 10–12, søn 10–11 akutte tilfælde; akutvagt til livstruende tilfælde også om natten og i weekenden"
       },
       "quote": "Notdienst bei lebensbedrohlichen Notfällen auch nachts und an Wochenenden",
       "note": "Not stated as 24 h. Weekend/emergency surcharges, cash only.",
@@ -1118,7 +1149,8 @@
         "nl": "Spoeddienst na telefonische aanmelding ma–vr 8–22, za/zo/feestdagen 10–16 uur; anders het centrale nummer van Saksen 01805 84 37 36.",
         "pl": "Pogotowie po rejestracji telefonicznej pon.–pt. 8–22, sob./niedz./święta 10–16; poza tym centralny numer Saksonii 01805 84 37 36",
         "cs": "Pohotovost po telefonické registraci Po–Pá 8:00–22:00, so, ne a svátky 10:00–16:00; jinak ústřední číslo Sachsen 01805 84 37 36",
-        "sv": "Akutservice efter telefonanmälan mån–fre 8–22, lör/sön/helgdagar 10–16; annars Sachsens centralnummer 01805 84 37 36"
+        "sv": "Akutservice efter telefonanmälan mån–fre 8–22, lör/sön/helgdagar 10–16; annars Sachsens centralnummer 01805 84 37 36",
+        "da": "Akutvagt efter telefonisk tilmelding man–fre 8–22, lør/søn/helligdage 10–16; ellers Sachsens centrale nummer 01805 84 37 36"
       },
       "note": "Dogs and cats.",
       "source_url": "https://avetia-dresden.de/",
@@ -1146,7 +1178,8 @@
         "nl": "Levensbedreigende spoedgevallen rechtstreeks op werkdagen 7.30–19.00 uur; op andere tijden via de dienstlijn voor dierenartsen in Thüringen 0361 644 788 08.",
         "pl": "Nagłe przypadki zagrażające życiu bezpośrednio w dni robocze 7:30–19:00; w pozostałych godzinach przez linię dyżurnych weterynarzy w Turyngii 0361 644 788 08",
         "cs": "Život ohrožující případy přímo ve všední dny 7:30–19:00; jindy přes linku veterináře ve službě v Durynsku 0361 644 788 08",
-        "sv": "Livshotande akutfall direkt på vardagar 7.30–19.00; övrig tid via Thüringens jourlinje för veterinärer 0361 644 788 08"
+        "sv": "Livshotande akutfall direkt på vardagar 7.30–19.00; övrig tid via Thüringens jourlinje för veterinärer 0361 644 788 08",
+        "da": "Livstruende akutte tilfælde direkte på hverdage 7.30–19.00; på andre tidspunkter via Thüringens vagtdyrlægelinje 0361 644 788 08"
       },
       "source_url": "https://www.tierklinik-erfurt.de/kontakt",
       "checked": "2026-11-02",
@@ -1173,7 +1206,8 @@
         "nl": "Vanaf 19.10.2026 open ma–zo 8–20 uur; buiten die tijden Notdienstring Berlin-Brandenburg 01805 84 37 36; meld chirurgische spoedgevallen telefonisch aan.",
         "pl": "Od 19.10.2026 czynne pon.–niedz. 8–20; poza tymi godzinami Notdienstring Berlin-Brandenburg 01805 84 37 36; nagłe przypadki chirurgiczne zgłoś telefonicznie",
         "cs": "Od 19. 10. 2026 otevřeno denně 8:00–20:00; mimo tuto dobu Notdienstring Berlin-Brandenburg 01805 84 37 36; chirurgické pohotovosti ohlaste telefonicky",
-        "sv": "Från 19.10.2026 öppet mån–sön 8–20; utanför dessa tider Notdienstring Berlin-Brandenburg 01805 84 37 36; anmäl kirurgiska akutfall per telefon"
+        "sv": "Från 19.10.2026 öppet mån–sön 8–20; utanför dessa tider Notdienstring Berlin-Brandenburg 01805 84 37 36; anmäl kirurgiska akutfall per telefon",
+        "da": "Fra 19.10.2026 åbent man–søn 8–20; uden for disse tider Notdienstring Berlin-Brandenburg 01805 84 37 36; meld kirurgiske akutte tilfælde pr. telefon"
       },
       "note": "Former 24-h Tierklinik Potsdam site; page now states 8–20 only.",
       "source_url": "https://www.anicura.de/standorte/potsdam/infosundevents/notdienst/",
@@ -1201,7 +1235,8 @@
         "nl": "Notdienst ma–vr 7–24, za/zo/feestdagen 11–13 en 19–21 uur; telefonisch aanmelden.",
         "pl": "Pogotowie (Notdienst) pon.–pt. 7–24, sob./niedz./święta 11–13 i 19–21; rejestracja telefoniczna",
         "cs": "Pohotovost Po–Pá 7:00–24:00, so, ne a svátky 11:00–13:00 a 19:00–21:00; registrace telefonicky",
-        "sv": "Notdienst mån–fre 7–24, lör/sön/helgdagar 11–13 och 19–21; anmäl dig per telefon"
+        "sv": "Notdienst mån–fre 7–24, lör/sön/helgdagar 11–13 och 19–21; anmäl dig per telefon",
+        "da": "Notdienst man–fre 7–24, lør/søn/helligdage 11–13 og 19–21; tilmeld dig pr. telefon"
       },
       "quote": "NOTDIENST: Mo-Fr 7-24 Uhr, Sa 11-13 und 19-21 Uhr, So 11-13 und 19-21 Uhr und an Feiertagen 11-13 und 19-21 Uhr.",
       "source_url": "https://www.tierklinik-tholen.de/",
@@ -1229,7 +1264,8 @@
         "nl": "ma/di/do 8–12 en 14–16, wo/vr 8–12 uur; mobiel 0151 46341056.",
         "pl": "Pon./wt./czw. 8–12 i 14–16, śr./pt. 8–12; telefon komórkowy 0151 46341056",
         "cs": "Po, út, čt 8:00–12:00 a 14:00–16:00, st, pá 8:00–12:00; mobil 0151 46341056",
-        "sv": "Mån/tis/tors 8–12 och 14–16, ons/fre 8–12; mobil 0151 46341056"
+        "sv": "Mån/tis/tors 8–12 och 14–16, ons/fre 8–12; mobil 0151 46341056",
+        "da": "man/tirs/tors 8–12 og 14–16, ons/fre 8–12; mobil 0151 46341056"
       },
       "note": "Small animals and pets ('Klein- und Heimtiere'). Island practice.",
       "source_url": "https://sylter-tierarztpraxis.de/",
@@ -1271,7 +1307,8 @@
         "nl": "ma–vr 9.00–12.30 uur op afspraak; middagen en spoed na overleg; spoedtelefoon 0171 5254095.",
         "pl": "Pon.–pt. 9:00–12:30 po umówieniu; popołudnia i nagłe przypadki po uzgodnieniu; telefon alarmowy 0171 5254095",
         "cs": "Po–Pá 9:00–12:30 na objednání; odpoledne a pohotovosti po domluvě; pohotovostní telefon 0171 5254095",
-        "sv": "Mån–fre 9.00–12.30 efter tidsbokning; eftermiddagar och akutfall efter överenskommelse; akuttelefon 0171 5254095"
+        "sv": "Mån–fre 9.00–12.30 efter tidsbokning; eftermiddagar och akutfall efter överenskommelse; akuttelefon 0171 5254095",
+        "da": "man–fre 9.00–12.30 efter aftale; eftermiddage og akutte tilfælde efter aftale; akuttelefon 0171 5254095"
       },
       "quote": "in dringenden Fällen erreichen Sie uns über das Notfalltelefon unter 0171 / 5254095",
       "note": "East Frisian island; dogs, cats, small pets.",
@@ -1300,7 +1337,8 @@
         "nl": "ma, di, do, vr 9–11, do ook 16–18.30 uur; gesloten op wo, za, zo.",
         "pl": "Pon., wt., czw., pt. 9–11, czw. także 16–18:30; śr., sob., niedz. nieczynne",
         "cs": "Po, út, čt, pá 9:00–11:00, čt také 16:00–18:30; st, so, ne zavřeno",
-        "sv": "Mån, tis, tors, fre 9–11, tors även 16–18.30; stängt ons, lör, sön"
+        "sv": "Mån, tis, tors, fre 9–11, tors även 16–18.30; stängt ons, lör, sön",
+        "da": "man, tirs, tors, fre 9–11, tors også 16–18.30; lukket ons, lør, søn"
       },
       "note": "East Frisian island branch of the Norderney practice.",
       "source_url": "https://www.tierarztpraxis-solaro.de/",
@@ -1328,7 +1366,8 @@
         "nl": "Afspraken ma–vr 8.30–18, za 9–13 uur; spoeddienst voor kleine huisdieren ma–vr 18–22 uur via 03838 23323; na 22.00 uur en in weekenden 01805 84 37 36.",
         "pl": "Wizyty pon.–pt. 8:30–18, sob. 9–13; pogotowie dla małych zwierząt pon.–pt. 18–22 pod 03838 23323; po 22:00 i w weekendy 01805 84 37 36",
         "cs": "Na objednání Po–Pá 8:30–18:00, so 9:00–13:00; pohotovost pro malá zvířata Po–Pá 18:00–22:00 na 03838 23323; po 22:00 a o víkendech 01805 84 37 36",
-        "sv": "Tidsbokning mån–fre 8.30–18, lör 9–13; smådjursakut mån–fre 18–22 på 03838 23323; efter 22.00 och på helger 01805 84 37 36"
+        "sv": "Tidsbokning mån–fre 8.30–18, lör 9–13; smådjursakut mån–fre 18–22 på 03838 23323; efter 22.00 och på helger 01805 84 37 36",
+        "da": "Tidsbestilling man–fre 8.30–18, lør 9–13; akutvagt for små dyr man–fre 18–22 på 03838 23323; efter 22.00 og i weekender 01805 84 37 36"
       },
       "note": "Second site in Schaprode (Streu 6, 18569 Schaprode, 038309 22836); 24-h readiness there is for horses and farm animals only.",
       "source_url": "https://www.tierarztpraxis-puvogel.de/",
@@ -1356,7 +1395,8 @@
         "nl": "Winteruren (01.10.2026–28.03.2027): di/do 9–12 en 16–18, vr 16–18 uur.",
         "pl": "Godziny zimowe (01.10.2026–28.03.2027): wt./czw. 9–12 i 16–18, pt. 16–18",
         "cs": "Zimní provoz (1. 10. 2026–28. 3. 2027): út, čt 9:00–12:00 a 16:00–18:00, pá 16:00–18:00",
-        "sv": "Vintertider (01.10.2026–28.03.2027): tis/tors 9–12 och 16–18, fre 16–18"
+        "sv": "Vintertider (01.10.2026–28.03.2027): tis/tors 9–12 och 16–18, fre 16–18",
+        "da": "Vinteråbningstid (01.10.2026–28.03.2027): tirs/tors 9–12 og 16–18, fre 16–18"
       },
       "quote": "Unser praxiseigener Notdienst ist ein zusätzlicher Service und nicht täglich oder rund um die Uhr verfügbar.",
       "note": "Dogs, cats, small pets. Company holiday Oct–6 Nov 2026 with only a few open days.",
@@ -1385,7 +1425,8 @@
         "nl": "Afspraken ma–do 8–12 (wo ook 13–15), vr 8–10 uur; spoed voor kleine huisdieren via 01805 84 37 36.",
         "pl": "Wizyty pon.–czw. 8–12 (śr. także 13–15), pt. 8–10; nagłe przypadki małych zwierząt przez 01805 84 37 36",
         "cs": "Na objednání Po–Čt 8:00–12:00 (st také 13:00–15:00), pá 8:00–10:00; pohotovosti malých zvířat přes 01805 84 37 36",
-        "sv": "Tidsbokning mån–tors 8–12 (ons även 13–15), fre 8–10; smådjursakut via 01805 84 37 36"
+        "sv": "Tidsbokning mån–tors 8–12 (ons även 13–15), fre 8–10; smådjursakut via 01805 84 37 36",
+        "da": "Tidsbestilling man–tors 8–12 (ons også 13–15), fre 8–10; akutte tilfælde hos små dyr via 01805 84 37 36"
       },
       "note": "Page currently shows the practice as closed and names a substitute in Heringsdorf (see next entry).",
       "source_url": "https://www.tierarztpraxis-maack.de/",
@@ -1412,7 +1453,8 @@
         "nl": "Open spreekuur ma 10–12 en 16–18, di 16–18, wo 10–12, do 10–12 en 16–18, vr 10–12 uur.",
         "pl": "Przyjęcia bez umawiania pon. 10–12 i 16–18, wt. 16–18, śr. 10–12, czw. 10–12 i 16–18, pt. 10–12",
         "cs": "Otevřené konzultace Po 10:00–12:00 a 16:00–18:00, út 16:00–18:00, st 10:00–12:00, čt 10:00–12:00 a 16:00–18:00, pá 10:00–12:00",
-        "sv": "Öppen mottagning mån 10–12 och 16–18, tis 16–18, ons 10–12, tors 10–12 och 16–18, fre 10–12"
+        "sv": "Öppen mottagning mån 10–12 och 16–18, tis 16–18, ons 10–12, tors 10–12 och 16–18, fre 10–12",
+        "da": "Åben konsultation man 10–12 og 16–18, tirs 16–18, ons 10–12, tors 10–12 og 16–18, fre 10–12"
       },
       "note": "Listed as substitute practice on Tierarztpraxis Maack's page; own website not found.",
       "source_url": "https://www.tierarztpraxis-maack.de/",
@@ -1453,7 +1495,8 @@
         "nl": "Grote en kleine dieren, röntgen, huisbezoeken mogelijk.",
         "pl": "Duże i małe zwierzęta, RTG, możliwe wizyty domowe",
         "cs": "Velká i malá zvířata, rentgen, možné návštěvy doma",
-        "sv": "Stora och små djur, röntgen, hembesök möjliga"
+        "sv": "Stora och små djur, röntgen, hembesök möjliga",
+        "da": "Store og små dyr, røntgen, hjemmebesøg mulige"
       },
       "quote": "24 Stunden Notdienst nach telefonischer Absprache",
       "note": "From the municipality of St. Peter-Ording's page; no phone or address given there (practice website not opened).",
@@ -1481,7 +1524,8 @@
         "nl": "Praktijk voor kleine huisdieren, afspraken ma/di/do/vr 9–13 en 15–18, wo 9–12 uur; spoed: 24-uurslijn SH 0481 85823998.",
         "pl": "Gabinet dla małych zwierząt, wizyty pon./wt./czw./pt. 9–13 i 15–18, śr. 9–12; nagłe przypadki: całodobowa linia SH 0481 85823998",
         "cs": "Ordinace pro malá zvířata, na objednání Po, út, čt, pá 9:00–13:00 a 15:00–18:00, st 9:00–12:00; pohotovost: nonstop linka SH 0481 85823998",
-        "sv": "Smådjurspraktik, tidsbokning mån/tis/tors/fre 9–13 och 15–18, ons 9–12; akutfall: SH:s jourlinje dygnet runt 0481 85823998"
+        "sv": "Smådjurspraktik, tidsbokning mån/tis/tors/fre 9–13 och 15–18, ons 9–12; akutfall: SH:s jourlinje dygnet runt 0481 85823998",
+        "da": "Klinik for små dyr, tidsbestilling man/tirs/tors/fre 9–13 og 15–18, ons 9–12; akut: SH's døgnlinje 0481 85823998"
       },
       "source_url": "https://tiermedizin-kurpark.de/",
       "checked": "2026-11-02",
@@ -1508,7 +1552,8 @@
         "nl": "Vergiftigingsinformatiecentrum voor Niedersachsen, Bremen, Hamburg en Schleswig-Holstein; 24-uurs telefonisch advies.",
         "pl": "Centrum informacji toksykologicznej dla Dolnej Saksonii, Bremy, Hamburga i Szlezwiku-Holsztynu; całodobowa porada telefoniczna",
         "cs": "Toxikologické informační středisko pro Dolní Sasko, Brémy, Hamburk a Šlesvicko-Holštýnsko; telefonické poradenství nonstop",
-        "sv": "Giftinformationscentral för Niedersachsen, Bremen, Hamburg och Schleswig-Holstein; telefonrådgivning dygnet runt"
+        "sv": "Giftinformationscentral för Niedersachsen, Bremen, Hamburg och Schleswig-Holstein; telefonrådgivning dygnet runt",
+        "da": "Giftinformation for Niedersachsen, Bremen, Hamburg og Schleswig-Holstein; telefonrådgivning døgnet rundt"
       },
       "quote": "Besondere Erfahrungen bei der Beratung von Tiervergiftungen hat das GIZ Nord in Göttingen",
       "note": "Animal coverage per Deutsches Tierärzteblatt 3/2015 (BfR article): all eight German GIZ advise 'aber auch bei Tiervergiftungen', 'sieben Tage in der Woche rund um die Uhr'. Phone, 24-h wording ('täglich rund um die Uhr') and states served from UMG press release on the 2020 annual report. GIZ-Nord's own site could not be fetched (robots/client error).",
@@ -1550,7 +1595,8 @@
         "nl": "Spoeddienst op werkdagen 18.00–08.00 uur, vr 18.00 uur tot ma 08.00 uur en op alle feestdagen; kom direct, het spoedteam is niet telefonisch bereikbaar. Alleen honden en katten; momenteel geen tand- of oogspoedgevallen.",
         "pl": "Pogotowie w dni robocze 18:00–08:00, od piątku 18:00 do poniedziałku 08:00 oraz we wszystkie święta; przyjdź bezpośrednio, zespół pogotowia nie odbiera telefonów. Tylko psy i koty; obecnie brak pogotowia stomatologicznego i okulistycznego.",
         "cs": "Pohotovost ve všední dny 18:00–8:00, pá 18:00 do pondělí 8:00 a ve všechny státní svátky; přijďte přímo, pohotovostní tým není telefonicky dostupný. Pouze psi a kočky; aktuálně bez zubních a očních pohotovostí.",
-        "sv": "Akutservice vardagar 18.00–08.00, fre 18.00–mån 08.00 och alla helgdagar; kom direkt, akutteamet nås inte per telefon. Endast hundar och katter; för närvarande inga tand- eller ögonakutfall."
+        "sv": "Akutservice vardagar 18.00–08.00, fre 18.00–mån 08.00 och alla helgdagar; kom direkt, akutteamet nås inte per telefon. Endast hundar och katter; för närvarande inga tand- eller ögonakutfall.",
+        "da": "Akutvagt hverdage 18.00–08.00, fre 18.00–man 08.00 og alle helligdage; mød direkte op, akutholdet kan ikke nås pr. telefon. Kun hunde og katte; for tiden ingen akutte tand- eller øjentilfælde."
       },
       "small_animals": true,
       "url": "https://www.vetmed.lmu.de/kleintierklinik/de/fuer-tierhalterinnen-und-tierhalter/notfaelle/",
@@ -1579,7 +1625,8 @@
         "nl": "Dringende en levensbedreigende spoedgevallen op elk moment van dag en nacht; bel vooraf. Lijnen buiten kantooruren: Innere Medizin +49 151 55027008, Chirurgie +49 175 2973717.",
         "pl": "Pilne przypadki zagrażające życiu o każdej porze dnia i nocy; zadzwoń przed wizytą. Linie poza godzinami: Innere Medizin +49 151 55027008, Chirurgie +49 175 2973717.",
         "cs": "Urgentní a život ohrožující případy kdykoli ve dne i v noci; předem zavolejte. Linky mimo ordinační dobu: interna +49 151 55027008, chirurgie +49 175 2973717.",
-        "sv": "Brådskande och livshotande akutfall när som helst på dygnet; ring i förväg. Linjer utanför öppettiderna: Innere Medizin +49 151 55027008, Chirurgie +49 175 2973717."
+        "sv": "Brådskande och livshotande akutfall när som helst på dygnet; ring i förväg. Linjer utanför öppettiderna: Innere Medizin +49 151 55027008, Chirurgie +49 175 2973717.",
+        "da": "Akutte og livstruende tilfælde når som helst på døgnet; ring venligst på forhånd. Vagtlinjer uden for åbningstiden: Innere Medizin +49 151 55027008, Chirurgie +49 175 2973717."
       },
       "small_animals": true,
       "url": "https://www.uni-giessen.de/de/fbz/fb10/institute_klinikum/klinikum/kleintierklinik/Info/sprechstunde/notdienst",
@@ -1608,7 +1655,8 @@
         "nl": "Notdienst vanaf 20.00 uur ma–vr en de hele dag op za, zo en feestdagen; hetzelfde nummer voor de 24-uurs spoeddienst.",
         "pl": "Pogotowie (Notdienst) od 20:00 pon.–pt. oraz przez całą dobę w soboty, niedziele i święta; ten sam numer obsługuje całodobowe pogotowie.",
         "cs": "Pohotovost od 20:00 Po–Pá a celý den so, ne a státní svátky; stejné číslo pro nonstop pohotovost.",
-        "sv": "Notdienst från 20.00 mån–fre och hela dagen lör, sön och helgdagar; samma nummer för akutservice dygnet runt."
+        "sv": "Notdienst från 20.00 mån–fre och hela dagen lör, sön och helgdagar; samma nummer för akutservice dygnet runt.",
+        "da": "Notdienst fra 20.00 man–fre og hele dagen lør, søn og helligdage; samme nummer til den døgnåbne akutvagt."
       },
       "small_animals": true,
       "url": "https://tierklinik-oberhaching.de/",
@@ -1637,7 +1685,8 @@
         "nl": "24-uurs spoedbezetting en operatiekamer paraat, ook in weekenden; reguliere tijden ma–vr 8–20 uur op afspraak.",
         "pl": "Całodobowy personel pogotowia i gotowość do operacji, także w weekendy; zwykłe godziny pon.–pt. 8–20 po umówieniu.",
         "cs": "Nonstop pohotovostní personál a připravenost operačního sálu, i o víkendech; běžná doba Po–Pá 8:00–20:00 na objednání.",
-        "sv": "Akutbemanning och operationsberedskap dygnet runt, även på helger; ordinarie öppettider mån–fre 8–20 efter tidsbokning."
+        "sv": "Akutbemanning och operationsberedskap dygnet runt, även på helger; ordinarie öppettider mån–fre 8–20 efter tidsbokning.",
+        "da": "Døgnåben akutbemanding og operationsberedskab, også i weekenden; normal åbningstid man–fre 8–20 efter aftale."
       },
       "small_animals": true,
       "url": "https://tierklinik-ismaning.de/",
@@ -1663,7 +1712,8 @@
         "nl": "24/7 spoeddienst voor levensbedreigende gevallen; spoeduren elke dag 00–24 uur.",
         "pl": "Całodobowe pogotowie w przypadkach zagrażających życiu; godziny pogotowia codziennie 00–24",
         "cs": "Nonstop pohotovost pro život ohrožující případy; pohotovostní doba každý den 0:00–24:00",
-        "sv": "Akutservice dygnet runt för livshotande akutfall; akuttider alla dagar 00–24"
+        "sv": "Akutservice dygnet runt för livshotande akutfall; akuttider alla dagar 00–24",
+        "da": "Akutvagt døgnet rundt til livstruende tilfælde; akuttid hver dag 00–24"
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierklinik-haar/",
@@ -1691,7 +1741,8 @@
         "nl": "Bel eerst.",
         "pl": "Najpierw zadzwoń",
         "cs": "Nejprve zavolejte",
-        "sv": "Ring först"
+        "sv": "Ring först",
+        "da": "Ring først"
       },
       "small_animals": true,
       "source_url": "https://www.kleintierklinik-lutz.vet/",
@@ -1721,7 +1772,8 @@
         "nl": "Spoeddienst 365 dagen per jaar, 24 uur per dag; telefonisch alleen tijdens het spreekuur (7–19 uur, niet in het weekend). Controleer de actuele drukte voordat je komt; niet-levensbedreigende gevallen kunnen 4–6 uur wachten.",
         "pl": "Pogotowie 365 dni w roku, 24 godziny na dobę; telefon tylko w godzinach konsultacji (7–19, nie w weekendy). Przed przyjazdem sprawdź aktualne obłożenie kliniki; przypadki niezagrażające życiu mogą czekać 4–6 godzin.",
         "cs": "Nonstop pohotovost 365 dní; telefon pouze v ordinační době (7:00–19:00, ne o víkendech). Před příjezdem zjistěte aktuální vytížení kliniky; případy neohrožující život mohou čekat 4–6 h.",
-        "sv": "Akutservice 365 dagar, dygnet runt; telefon endast under mottagningstid (7–19, inte på helger). Kontrollera aktuell belastning på kliniken innan du kommer; fall som inte är livshotande kan få vänta 4–6 h."
+        "sv": "Akutservice 365 dagar, dygnet runt; telefon endast under mottagningstid (7–19, inte på helger). Kontrollera aktuell belastning på kliniken innan du kommer; fall som inte är livshotande kan få vänta 4–6 h.",
+        "da": "Akutvagt alle 365 dage, døgnet rundt; telefon kun i konsultationstiden (7–19, ikke i weekenden). Tjek den aktuelle belastning på klinikken, før du kommer; tilfælde, der ikke er livstruende, kan vente 4–6 timer."
       },
       "small_animals": true,
       "url": "https://www.vetzentrum-koeln.de/",
@@ -1750,7 +1802,8 @@
         "nl": "24/7 spoeddienst; bel zo mogelijk vooraf, bij acute gevallen direct komen. Reguliere tijden: ma/wo/vr 7–21, di/do 7–19 uur. Algemene lijn +49 221 4745430.",
         "pl": "Całodobowe pogotowie; w miarę możliwości zadzwoń przed wizytą, w ostrych przypadkach przyjedź bezpośrednio. Zwykłe godziny: pon./śr./pt. 7–21, wt./czw. 7–19. Linia ogólna +49 221 4745430.",
         "cs": "Nonstop pohotovost; pokud možno předem zavolejte, v akutních případech přijeďte přímo. Běžná doba: Po, st, pá 7:00–21:00, út, čt 7:00–19:00. Hlavní linka +49 221 4745430.",
-        "sv": "Akutservice dygnet runt; ring i förväg om möjligt, kom direkt vid akuta fall. Ordinarie öppettider: mån/ons/fre 7–21, tis/tors 7–19. Allmän linje +49 221 4745430."
+        "sv": "Akutservice dygnet runt; ring i förväg om möjligt, kom direkt vid akuta fall. Ordinarie öppettider: mån/ons/fre 7–21, tis/tors 7–19. Allmän linje +49 221 4745430.",
+        "da": "Akutvagt døgnet rundt; ring på forhånd, hvis det er muligt, ved akutte tilfælde mød direkte op. Normal åbningstid: man/ons/fre 7–21, tirs/tors 7–19. Hovednummer +49 221 4745430."
       },
       "small_animals": true,
       "url": "https://koelner-tierklinik.de/",
@@ -1779,7 +1832,8 @@
         "nl": "24/7 spoeddienst voor levensbedreigende gevallen; de telefoon wordt tijdens de spoeddienst NIET bemand; patiënten worden op urgentie ingedeeld. Afspraken telefonisch ma–vr 8–19 uur.",
         "pl": "Całodobowe pogotowie w przypadkach zagrażających życiu; telefon NIE jest obsługiwany w czasie pogotowia; pacjenci są segregowani według pilności. Wizyty telefonicznie pon.–pt. 8–19.",
         "cs": "Nonstop pohotovost pro život ohrožující případy; telefon během pohotovostní služby NENÍ obsazen; pacienti jsou řazeni podle naléhavosti. Objednání telefonicky Po–Pá 8:00–19:00.",
-        "sv": "Akutservice dygnet runt för livshotande akutfall; telefonen är INTE bemannad under akutservicen; patienter prioriteras efter hur brådskande det är. Tidsbokning per telefon mån–fre 8–19."
+        "sv": "Akutservice dygnet runt för livshotande akutfall; telefonen är INTE bemannad under akutservicen; patienter prioriteras efter hur brådskande det är. Tidsbokning per telefon mån–fre 8–19.",
+        "da": "Akutvagt døgnet rundt til livstruende tilfælde; telefonen er IKKE bemandet under akutvagten; patienter prioriteres efter hastegrad. Tidsbestilling pr. telefon man–fre 8–19."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierklinik-neandertal/",
@@ -1806,7 +1860,8 @@
         "nl": "24-uurs spoeddienst; dierenarts en dierenartsassistent ter plaatse, 365 dagen per jaar; spoeduren elke dag 00–24 uur.",
         "pl": "Całodobowe pogotowie; weterynarz i pielęgniarka weterynaryjna na miejscu 365 dni w roku; godziny pogotowia codziennie 00–24",
         "cs": "Nonstop pohotovost; veterinář a veterinární sestra na místě 365 dní v roce; pohotovostní doba každý den 0:00–24:00",
-        "sv": "Akutservice dygnet runt; veterinär och veterinärsjuksköterska på plats 365 dagar om året; akuttider alla dagar 00–24"
+        "sv": "Akutservice dygnet runt; veterinär och veterinärsjuksköterska på plats 365 dagar om året; akuttider alla dagar 00–24",
+        "da": "Døgnåben akutvagt; dyrlæge og dyrlægesygeplejerske til stede alle årets 365 dage; akuttid hver dag 00–24"
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierarztliche-klinik-vom-bokelberg/",
@@ -1835,7 +1890,8 @@
         "nl": "Spoeddienst de klok rond; reguliere tijden ma–vr 8–18 uur; spoedtarieven buiten openingstijden.",
         "pl": "Pogotowie całodobowo; zwykłe godziny pon.–pt. 8–18; poza godzinami pracy opłaty za pogotowie.",
         "cs": "Nonstop pohotovost; běžná doba Po–Pá 8:00–18:00; mimo ordinační dobu se účtují pohotovostní poplatky.",
-        "sv": "Akutservice dygnet runt; ordinarie öppettider mån–fre 8–18; akutavgifter utanför öppettiderna."
+        "sv": "Akutservice dygnet runt; ordinarie öppettider mån–fre 8–18; akutavgifter utanför öppettiderna.",
+        "da": "Akutvagt døgnet rundt; normal åbningstid man–fre 8–18; akuttillæg uden for åbningstiden."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/recklinghausen-tieraerztliche-klinik-fuer-kleintiere/",
@@ -1863,7 +1919,8 @@
         "nl": "24-uurs spoeddienst 365 dagen; van 27.07. tot 31.10. beperkt (ma–do 7–22 uur, weekenden 24 uur). Reguliere bezoeken op afspraak.",
         "pl": "Całodobowe pogotowie 365 dni w roku; od 27.07. do 31.10. ograniczone (pon.–czw. 7–22, weekendy całodobowo). Zwykłe wizyty po umówieniu.",
         "cs": "Nonstop pohotovost 365 dní; od 27. 7. do 31. 10. omezeně (Po–Čt 7:00–22:00, o víkendech nonstop). Běžné návštěvy na objednání.",
-        "sv": "Akutservice dygnet runt 365 dagar; 27.07.–31.10. begränsad (mån–tors 7–22, helger dygnet runt). Ordinarie besök efter tidsbokning."
+        "sv": "Akutservice dygnet runt 365 dagar; 27.07.–31.10. begränsad (mån–tors 7–22, helger dygnet runt). Ordinarie besök efter tidsbokning.",
+        "da": "Døgnåben akutvagt alle 365 dage; fra 27.07. til 31.10. begrænset (man–tors 7–22, weekender døgnet rundt). Almindelige besøg efter aftale."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/kleintierklinik-babenhausen/",
@@ -1892,7 +1949,8 @@
         "nl": "Spoed op elk moment, gewoon binnenlopen; tijdens de spoeduren niet telefonisch bereikbaar. Regulier ma–vr 8–18 uur.",
         "pl": "Nagłe przypadki o każdej porze, wystarczy przyjść; w godzinach pogotowia telefon nie jest obsługiwany. Zwykłe godziny pon.–pt. 8–18.",
         "cs": "Pohotovosti kdykoli, stačí přijít; v pohotovostní době telefonicky nedostupné. Běžná doba Po–Pá 8:00–18:00.",
-        "sv": "Akutfall när som helst, kom bara in; nås inte per telefon under akuttiderna. Ordinarie mån–fre 8–18."
+        "sv": "Akutfall när som helst, kom bara in; nås inte per telefon under akuttiderna. Ordinarie mån–fre 8–18.",
+        "da": "Akutte tilfælde til enhver tid, bare mød op; kan ikke nås pr. telefon i akuttiden. Normal åbningstid man–fre 8–18."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-hofheim.de/",
@@ -1920,7 +1978,8 @@
         "nl": "24-uurs spoeddienst voor levensbedreigende gevallen, 365 dagen; kantooruren ma–vr 8–19 uur.",
         "pl": "Całodobowe pogotowie w przypadkach zagrażających życiu, 365 dni w roku; godziny biura pon.–pt. 8–19.",
         "cs": "Nonstop pohotovost pro život ohrožující případy, 365 dní; ordinační doba Po–Pá 8:00–19:00.",
-        "sv": "Akutservice dygnet runt för livshotande akutfall, 365 dagar; kontorstid mån–fre 8–19."
+        "sv": "Akutservice dygnet runt för livshotande akutfall, 365 dagar; kontorstid mån–fre 8–19.",
+        "da": "Døgnåben akutvagt til livstruende tilfælde, 365 dage; kontortid man–fre 8–19."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-kalbach.de/",
@@ -1949,7 +2008,8 @@
         "nl": "Bel eerst.",
         "pl": "Najpierw zadzwoń",
         "cs": "Nejprve zavolejte",
-        "sv": "Ring först"
+        "sv": "Ring först",
+        "da": "Ring først"
       },
       "small_animals": true,
       "source_url": "https://www.anicura.de/standorte/tierklinik-frankfurt/kontakt/",
@@ -1977,7 +2037,8 @@
         "nl": "Spoeduren 0–24 uur.",
         "pl": "Godziny pogotowia 0–24",
         "cs": "Pohotovostní doba 0:00–24:00",
-        "sv": "Akuttider 0–24"
+        "sv": "Akuttider 0–24",
+        "da": "Akuttid 0–24"
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierklinik-stuttgart/",
@@ -2006,7 +2067,8 @@
         "nl": "Spoed 24 uur per dag, 365 dagen; spoeduren 00–24 uur.",
         "pl": "Nagłe przypadki całodobowo, 365 dni w roku; godziny pogotowia 00–24.",
         "cs": "Pohotovost 24 hodin, 365 dní; pohotovostní doba 0:00–24:00.",
-        "sv": "Akutfall dygnet runt, 365 dagar; akuttider 00–24."
+        "sv": "Akutfall dygnet runt, 365 dagar; akuttider 00–24.",
+        "da": "Akut døgnet rundt, 365 dage; akuttid 00–24."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/ludwigsburg-ossweil/",
@@ -2034,7 +2096,8 @@
         "nl": "Spoed 0–24 uur, zeven dagen per week. Dichtstbijzijnde 24-uurskliniek voor het Bodenseegebied / Konstanz.",
         "pl": "Nagłe przypadki 0–24, 7 dni w tygodniu. Najbliższa całodobowa klinika dla okolic Jeziora Bodeńskiego i Konstancji",
         "cs": "Pohotovost 0:00–24:00, sedm dní v týdnu. Nejbližší nonstop klinika pro oblast Bodensee / Konstanz",
-        "sv": "Akut 0–24, sju dagar i veckan. Närmaste klinik med öppet dygnet runt för området Bodensee / Konstanz"
+        "sv": "Akut 0–24, sju dagar i veckan. Närmaste klinik med öppet dygnet runt för området Bodensee / Konstanz",
+        "da": "Akut 0–24, syv dage om ugen. Nærmeste døgnåbne klinik for Bodensee/Konstanz-området"
       },
       "small_animals": true,
       "url": "https://www.anicura.de/en/our-clinics/kleintierspezialisten-ravensburg/",
@@ -2062,7 +2125,8 @@
         "nl": "24-uurs spoeddienst; de spoedkliniek van het Saarland buiten de uren van het centrale weekendnummer. Telefoon en e-mail ma–vr.",
         "pl": "Całodobowe pogotowie; pogotowie pozagodzinowe w Saarze poza godzinami weekendowego numeru centralnego. Telefon i e-mail pon.–pt.",
         "cs": "Nonstop pohotovost; saarlandská pohotovostní klinika mimo ordinační dobu, mimo hodiny víkendového centrálního čísla. Telefon a e-mail Po–Pá.",
-        "sv": "Akutservice dygnet runt; Saarlands jourklinik utanför de tider då helgens centralnummer är bemannat. Telefon och e-post mån–fre."
+        "sv": "Akutservice dygnet runt; Saarlands jourklinik utanför de tider då helgens centralnummer är bemannat. Telefon och e-post mån–fre.",
+        "da": "Døgnåben akutvagt; Saarlands akutklinik uden for de tidsrum, hvor det centrale weekendnummer er åbent. Telefon og e-mail man–fre."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-elversberg.de/",
@@ -2091,7 +2155,8 @@
         "nl": "Bereikbaar voor spoed, maar door personeelstekort kan de kliniek niet meer alle nacht- en spoeddiensten dekken; zie notdienst-rheinland-pfalz.de; bel voordat je komt.",
         "pl": "Dyżur w nagłych przypadkach, ale z powodu braku personelu klinika nie może już obsługiwać wszystkich dyżurów nocnych i nagłych; zobacz notdienst-rheinland-pfalz.de; zadzwoń przed wizytą",
         "cs": "Zajišťuje pohotovost, ale kvůli nedostatku personálu již nemůže pokrýt všechny noční a pohotovostní služby; viz notdienst-rheinland-pfalz.de; před příchodem zavolejte",
-        "sv": "Har jour för akutfall, men på grund av personalbrist kan kliniken inte längre täcka alla natt- och akutpass; se notdienst-rheinland-pfalz.de; ring innan du kommer"
+        "sv": "Har jour för akutfall, men på grund av personalbrist kan kliniken inte längre täcka alla natt- och akutpass; se notdienst-rheinland-pfalz.de; ring innan du kommer",
+        "da": "Har akutberedskab, men på grund af personalemangel kan klinikken ikke længere dække alle nat- og akutvagter; se notdienst-rheinland-pfalz.de; ring, før du kommer"
       },
       "small_animals": true,
       "url": "https://www.tierklinik-trier.de/",
@@ -2120,7 +2185,8 @@
         "nl": "24-uurs spoeddienst alleen ma 19.30 uur tot vr 08.00 uur; in weekenden spoedconsulten tegen spoedtarief (59,50 EUR) - telefonisch bevestigen.",
         "pl": "Całodobowe pogotowie tylko od poniedziałku 19:30 do piątku 08:00; w weekendy konsultacje w nagłych przypadkach za opłatą za pogotowie (59,50 EUR) – potwierdź telefonicznie.",
         "cs": "Nonstop pohotovost pouze od po 19:30 do pá 8:00; o víkendech pohotovostní konzultace za pohotovostní poplatek (59,50 EUR) – ověřte telefonicky.",
-        "sv": "Akutservice dygnet runt endast mån 19.30 till fre 08.00; på helger akutbesök mot akutavgift (59,50 EUR) — bekräfta per telefon."
+        "sv": "Akutservice dygnet runt endast mån 19.30 till fre 08.00; på helger akutbesök mot akutavgift (59,50 EUR) — bekräfta per telefon.",
+        "da": "Døgnåben akutvagt kun man 19.30 til fre 08.00; i weekender akutkonsultation mod akuttillæg (59,50 EUR) – bekræft pr. telefon."
       },
       "small_animals": true,
       "url": "https://tierklinik-zw.de/",
@@ -2149,7 +2215,8 @@
         "nl": "Spoeduren ('Notfall') 08.00–20.00 uur.",
         "pl": "Godziny przyjęć w nagłych przypadkach („Notfall”) 08:00–20:00.",
         "cs": "Pohotovostní („Notfall“) doba 8:00–20:00.",
-        "sv": "Akuttider ('Notfall') 08.00–20.00."
+        "sv": "Akuttider ('Notfall') 08.00–20.00.",
+        "da": "Akuttid ('Notfall') 08.00–20.00."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/anicura-kassel/",
@@ -2176,7 +2243,8 @@
         "nl": "Stand-by 's nachts en in het weekend voor ernstig zieke dieren en dringende spoedgevallen; bel de spoedlijn om een bezoek af te spreken. Algemene lijn +49 821 4559000.",
         "pl": "Gotowość w nocy i w weekendy dla ciężko chorych zwierząt i pilnych nagłych przypadków; zadzwoń na linię alarmową, by umówić wizytę. Linia ogólna +49 821 4559000.",
         "cs": "Pohotovost v noci a o víkendech pro těžce nemocná zvířata a naléhavé případy; návštěvu domluvte na pohotovostní lince. Hlavní linka +49 821 4559000.",
-        "sv": "Beredskap nätter och helger för svårt sjuka djur och brådskande akutfall; ring akutlinjen för att komma överens om ett besök. Allmän linje +49 821 4559000."
+        "sv": "Beredskap nätter och helger för svårt sjuka djur och brådskande akutfall; ring akutlinjen för att komma överens om ett besök. Allmän linje +49 821 4559000.",
+        "da": "Beredskab om natten og i weekenden til alvorligt syge dyr og akutte tilfælde; ring til akutlinjen for at aftale et besøg. Hovednummer +49 821 4559000."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/kleintierspezialisten-augsburg/",
@@ -2205,7 +2273,8 @@
         "nl": "Spoeddienst dagelijks 8.00–24.00 uur. Dekt het gebied Chiemsee / Inntal.",
         "pl": "Pogotowie codziennie 8:00–24:00. Obejmuje okolice Chiemsee / doliny Innu.",
         "cs": "Pohotovost denně 8:00–24:00. Pokrývá oblast Chiemsee a údolí řeky Inn.",
-        "sv": "Akutservice alla dagar 8.00–24.00. Täcker området Chiemsee / Inndalen."
+        "sv": "Akutservice alla dagar 8.00–24.00. Täcker området Chiemsee / Inndalen.",
+        "da": "Akutvagt dagligt 8.00–24.00. Dækker Chiemsee/Inn-dalen."
       },
       "small_animals": true,
       "url": "https://tierklinik-rosenheim.de/",
@@ -2233,7 +2302,8 @@
         "nl": "Spoeduren za 15.00–18.30 uur, zo 10.00–16.00 uur; ma–do 20.00–08.00 uur via +49 931 69017; feestdagen/weekenden buiten deze uren via +49 180 5009682.",
         "pl": "Godziny pogotowia sob. 15:00–18:30, niedz. 10:00–16:00; pon.–czw. 20:00–08:00 przez +49 931 69017; święta/weekendy poza tymi godzinami przez +49 180 5009682.",
         "cs": "Pohotovostní doba so 15:00–18:30, ne 10:00–16:00; Po–Čt 20:00–8:00 přes +49 931 69017; víkendy a svátky mimo tuto dobu přes +49 180 5009682.",
-        "sv": "Akuttider lör 15.00–18.30, sön 10.00–16.00; mån–tors 20.00–08.00 via +49 931 69017; helger/helgdagar utanför dessa tider via +49 180 5009682."
+        "sv": "Akuttider lör 15.00–18.30, sön 10.00–16.00; mån–tors 20.00–08.00 via +49 931 69017; helger/helgdagar utanför dessa tider via +49 180 5009682.",
+        "da": "Akuttid lør 15.00–18.30, søn 10.00–16.00; man–tors 20.00–08.00 via +49 931 69017; helligdage/weekender uden for disse tider via +49 180 5009682."
       },
       "small_animals": true,
       "url": "https://ktz-mainfranken.de/",
@@ -2260,7 +2330,8 @@
         "nl": "Spoedgevallen worden tijdens het spreekuur zonder afspraak gezien.",
         "pl": "Nagłe przypadki przyjmowane bez umawiania w godzinach konsultacji.",
         "cs": "Pohotovosti se ošetřují bez objednání v ordinační době.",
-        "sv": "Akutfall tas emot utan tidsbokning under mottagningstid."
+        "sv": "Akutfall tas emot utan tidsbokning under mottagningstid.",
+        "da": "Akutte tilfælde tages imod uden tidsbestilling i konsultationstiden."
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/kleintierspezialisten-kempten/",
@@ -2288,7 +2359,8 @@
         "nl": "Spoed: bel tijdens openingstijden; gebruik buiten die tijden de online spoedkaart.",
         "pl": "Nagłe przypadki: zadzwoń w godzinach pracy; poza nimi skorzystaj z internetowej mapy pogotowia",
         "cs": "Pohotovost: volejte v ordinační době; mimo ni použijte online mapu pohotovostí",
-        "sv": "Akutfall: ring under öppettiderna; utanför dem använder du onlinekartan för akutfall"
+        "sv": "Akutfall: ring under öppettiderna; utanför dem använder du onlinekartan för akutfall",
+        "da": "Akutte tilfælde: ring i åbningstiden; uden for den brug det digitale akutkort"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-garmisch.com/",
@@ -2316,7 +2388,8 @@
         "nl": "Gericht op kleine huisdieren; ma–vr 8–12, ma/do/vr ook 16–18 uur. Spoedgevallen tijdens openingstijden worden met voorrang behandeld - bel vooraf. Buiten openingstijden is de praktijk niet het aanspreekpunt voor spoed.",
         "pl": "Specjalizacja: małe zwierzęta; pon.–pt. 8–12, pon./czw./pt. także 16–18. Nagłe przypadki w godzinach pracy leczone priorytetowo – zadzwoń wcześniej. Poza godzinami gabinet nie jest kontaktem w nagłych przypadkach.",
         "cs": "Zaměření na malá zvířata; Po–Pá 8:00–12:00, po, čt, pá také 16:00–18:00. Pohotovosti v ordinační době se ošetřují přednostně – předem zavolejte. Mimo ordinační dobu ordinace pohotovostním kontaktem není.",
-        "sv": "Fokus på smådjur; mån–fre 8–12, mån/tors/fre även 16–18. Akutfall under öppettiderna behandlas med prioritet — ring i förväg. Utanför öppettiderna är praktiken inte kontaktpunkt för akutfall."
+        "sv": "Fokus på smådjur; mån–fre 8–12, mån/tors/fre även 16–18. Akutfall under öppettiderna behandlas med prioritet — ring i förväg. Utanför öppettiderna är praktiken inte kontaktpunkt för akutfall.",
+        "da": "Fokus på små dyr; man–fre 8–12, man/tors/fre også 16–18. Akutte tilfælde i åbningstiden behandles med prioritet – ring i forvejen. Uden for åbningstiden er klinikken ikke akutkontakt."
       },
       "small_animals": true,
       "url": "https://tierarztpraxis-werdenfels.de/",
@@ -2343,7 +2416,8 @@
         "nl": "ma–vr 8–13 en 14.30–18 uur op afspraak; buiten die tijden en op zon- en feestdagen is een spoeddienst bereikbaar via het praktijknummer.",
         "pl": "Pon.–pt. 8–13 i 14:30–18 po umówieniu; poza godzinami oraz w niedziele/święta pogotowie dostępne pod numerem gabinetu.",
         "cs": "Po–Pá 8:00–13:00 a 14:30–18:00 na objednání; mimo ordinační dobu a v neděli a o svátcích je pohotovost dostupná na čísle ordinace.",
-        "sv": "Mån–fre 8–13 och 14.30–18 efter tidsbokning; utanför öppettiderna och på söndagar/helgdagar nås en akutservice via praktikens nummer."
+        "sv": "Mån–fre 8–13 och 14.30–18 efter tidsbokning; utanför öppettiderna och på söndagar/helgdagar nås en akutservice via praktikens nummer.",
+        "da": "man–fre 8–13 og 14.30–18 efter aftale; uden for åbningstiden og på søndage/helligdage kan en akutvagt nås via klinikkens nummer."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-thiele.de/",
@@ -2371,7 +2445,8 @@
         "nl": "Kleine en gezelschapsdieren; ma–vr 9–13, ma/di/do/vr 15–18 uur; ambulante en klinische spoedbehandeling.",
         "pl": "Małe zwierzęta i zwierzęta domowe; pon.–pt. 9–13, pon./wt./czw./pt. 15–18; ambulatoryjne i stacjonarne leczenie w nagłych przypadkach.",
         "cs": "Malá a domácí zvířata; Po–Pá 9:00–13:00, po, út, čt, pá 15:00–18:00; ambulantní i lůžkové pohotovostní ošetření.",
-        "sv": "Små och sällskapsdjur; mån–fre 9–13, mån/tis/tors/fre 15–18; akutbehandling i öppen- och slutenvård."
+        "sv": "Små och sällskapsdjur; mån–fre 9–13, mån/tis/tors/fre 15–18; akutbehandling i öppen- och slutenvård.",
+        "da": "Små dyr og kæledyr; man–fre 9–13, man/tirs/tors/fre 15–18; ambulant og indlagt akutbehandling."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-konstanz.de/",
@@ -2399,7 +2474,8 @@
         "nl": "Spoed dagelijks 7.00–22.00 uur, 365 dagen; buiten die tijden de spoedlijn van het district Karlsruhe +49 721 495566.",
         "pl": "Nagłe przypadki codziennie 7:00–22:00, 365 dni w roku; poza tymi godzinami powiatowa linia pogotowia Karlsruhe +49 721 495566.",
         "cs": "Pohotovost denně 7:00–22:00, 365 dní v roce; mimo tuto dobu pohotovostní linka okresu Karlsruhe +49 721 495566.",
-        "sv": "Akutfall alla dagar 7.00–22.00, 365 dagar; utanför dessa tider akutlinjen för Karlsruhe-distriktet +49 721 495566."
+        "sv": "Akutfall alla dagar 7.00–22.00, 365 dagar; utanför dessa tider akutlinjen för Karlsruhe-distriktet +49 721 495566.",
+        "da": "Akutte tilfælde dagligt 7.00–22.00, 365 dage; uden for disse tider Karlsruhe-distriktets akutlinje +49 721 495566."
       },
       "small_animals": true,
       "url": "https://tierarzt-karlsruhe-durlach.de/en/",
@@ -2425,7 +2501,8 @@
         "nl": "Geen centraal nummer: neem contact op met de eigen dierenarts of de vermelde 24-uursklinieken (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22).",
         "pl": "Brak numeru centralnego: skontaktuj się z własnym weterynarzem lub z wymienionymi klinikami całodobowymi (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22).",
         "cs": "Bez centrálního čísla: kontaktujte svého veterináře nebo uvedené nonstop kliniky (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8:00–22:00).",
-        "sv": "Inget centralt nummer: kontakta din egen veterinär eller de angivna klinikerna som har öppet dygnet runt (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22)."
+        "sv": "Inget centralt nummer: kontakta din egen veterinär eller de angivna klinikerna som har öppet dygnet runt (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22).",
+        "da": "Intet centralt nummer: kontakt din egen dyrlæge eller de anførte døgnåbne klinikker (Riem, Haar, Ismaning, Oberhaching, LMU; Germering 8–22)."
       },
       "small_animals": true,
       "url": "https://www.tbv-oberbayern.de/notdienst/muenchen-und-landkreis-muenchen",
@@ -2451,7 +2528,8 @@
         "nl": "Online zoeken naar de dienstdoende praktijk op plaats en straal; alleen weekenden en feestdagen. Op werkdagen de dichtstbijzijnde kliniek bellen. Bel eerst de dienstdoende dierenarts.",
         "pl": "Wyszukiwarka dyżurującego gabinetu online według miejscowości i promienia; tylko weekendy i święta. W dni robocze zadzwoń do najbliższej kliniki. Najpierw zadzwoń do dyżurującego weterynarza.",
         "cs": "Online vyhledávání ordinace ve službě podle místa a okruhu; pouze o víkendech a svátcích. Ve všední dny volejte na nejbližší kliniku. Nejprve zavolejte veterináři ve službě.",
-        "sv": "Onlinesökning efter jourhavande praktik utifrån ort och radie; endast helger och helgdagar. På vardagar ringer du närmaste klinik. Ring jourhavande veterinär först."
+        "sv": "Onlinesökning efter jourhavande praktik utifrån ort och radie; endast helger och helgdagar. På vardagar ringer du närmaste klinik. Ring jourhavande veterinär först.",
+        "da": "Onlinesøgning efter vagthavende klinik efter sted og radius; kun weekender og helligdage. På hverdage ring til nærmeste klinik. Ring først til vagtdyrlægen."
       },
       "small_animals": true,
       "url": "https://tierarztnotdienst-mittelfranken.de/",
@@ -2479,7 +2557,8 @@
         "nl": "Centraal spoednummer voor Stuttgart; vraag telefonisch wie dienst heeft. Ook www.tierärzte-stuttgart.de.",
         "pl": "Centralny numer pogotowia dla Stuttgartu; telefonicznie dowiesz się, kto dyżuruje. Także www.tierärzte-stuttgart.de.",
         "cs": "Centrální pohotovostní číslo pro Stuttgart; telefonicky se zeptejte, kdo má službu. Také www.tierärzte-stuttgart.de.",
-        "sv": "Centralt akutnummer för Stuttgart; fråga per telefon vem som har jour. Även www.tierärzte-stuttgart.de."
+        "sv": "Centralt akutnummer för Stuttgart; fråga per telefon vem som har jour. Även www.tierärzte-stuttgart.de.",
+        "da": "Centralt akutnummer for Stuttgart; spørg pr. telefon, hvem der har vagt. Se også www.tierärzte-stuttgart.de."
       },
       "small_animals": true,
       "url": "https://lptbawue.de/notdienst/stuttgart",
@@ -2506,7 +2585,8 @@
         "nl": "Centraal nummer van de Notdienstring, bereikbaar tot 22.00 uur; het antwoordapparaat noemt de dienstdoende praktijk.",
         "pl": "Centralny numer Notdienstring, czynny do 22:00; automatyczna sekretarka podaje dyżurujący gabinet.",
         "cs": "Centrální číslo Notdienstringu, dostupné do 22:00; záznamník sdělí ordinaci ve službě.",
-        "sv": "Notdienstringens centralnummer, som går att nå till 22.00; telefonsvararen anger jourpraktiken."
+        "sv": "Notdienstringens centralnummer, som går att nå till 22.00; telefonsvararen anger jourpraktiken.",
+        "da": "Centralt nummer for Notdienstring, kan nås til 22.00; telefonsvareren oplyser vagtklinikken."
       },
       "small_animals": true,
       "source_url": "https://lptbawue.de/notdienst/mannheim",
@@ -2532,7 +2612,8 @@
         "nl": "In weekenden en op feestdagen de klok rond doorverbonden met een dienstdoende praktijk voor kleine huisdieren; op andere tijden noemt een opname de dienstdoende klinieken. Betaalnummer, 2,99 EUR/min.",
         "pl": "W weekendy i święta całą dobę nastąpi połączenie z dyżurującym gabinetem dla małych zwierząt; w pozostałych godzinach nagranie podaje dyżurujące kliniki. Numer premium, 2,99 EUR/min.",
         "cs": "O víkendech a státních svátcích nepřetržitě vás spojí s ordinací pro malá zvířata ve službě; jindy nahrávka uvede kliniky ve službě. Číslo s příplatkem, 2,99 EUR/min.",
-        "sv": "På helger och helgdagar kopplas du dygnet runt till en jourhavande smådjurspraktik; övrig tid anger ett inspelat meddelande vilka kliniker som har jour. Premiumnummer, 2,99 EUR/min."
+        "sv": "På helger och helgdagar kopplas du dygnet runt till en jourhavande smådjurspraktik; övrig tid anger ett inspelat meddelande vilka kliniker som har jour. Premiumnummer, 2,99 EUR/min.",
+        "da": "I weekender og på helligdage døgnet rundt forbindes du til en vagthavende klinik for små dyr; på andre tidspunkter nævner en optagelse de vagthavende klinikker. Betalingsnummer, 2,99 EUR/min."
       },
       "small_animals": true,
       "url": "https://lptbawue.de/notdienst/heidelberg",
@@ -2560,7 +2641,8 @@
         "nl": "Wisselende spoeddienst van dierenartsen uit Ulm en Neu-Ulm, nummer dagelijks bereikbaar tot 23.00 uur.",
         "pl": "Rotacyjne pogotowie weterynarzy z Ulm i Neu-Ulm, numer czynny codziennie do 23:00.",
         "cs": "Střídavá pohotovostní služba veterinářů z Ulmu a Neu-Ulmu, číslo dostupné denně do 23:00.",
-        "sv": "Roterande akutjour med veterinärer från Ulm och Neu-Ulm, numret går att nå alla dagar till 23.00."
+        "sv": "Roterande akutjour med veterinärer från Ulm och Neu-Ulm, numret går att nå alla dagar till 23.00.",
+        "da": "Skiftende akutvagt for dyrlæger fra Ulm og Neu-Ulm, nummeret kan nås dagligt til 23.00."
       },
       "small_animals": true,
       "source_url": "https://lptbawue.de/notdienst/alb-donau-kreis",
@@ -2587,7 +2669,8 @@
         "nl": "Een opname noemt de dienstdoende dierenarts; nummer 24 uur per dag / 365 dagen beschikbaar.",
         "pl": "Nagranie podaje dyżurującego weterynarza; numer dostępny całodobowo, 365 dni w roku",
         "cs": "Nahrané hlášení uvádí veterináře ve službě; číslo dostupné nonstop, 365 dní v roce",
-        "sv": "Inspelat meddelande anger jourhavande veterinär; numret är tillgängligt dygnet runt / 365 dagar"
+        "sv": "Inspelat meddelande anger jourhavande veterinär; numret är tillgängligt dygnet runt / 365 dagar",
+        "da": "En optagelse nævner den vagthavende dyrlæge; nummeret er åbent døgnet rundt, 365 dage"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-notdienst-karlsruhe.de/",
@@ -2615,7 +2698,8 @@
         "nl": "Regionale spoedring; bel de dienstdoende dierenarts vooraf.",
         "pl": "Regionalna sieć dyżurów pogotowia; zadzwoń wcześniej do dyżurującego weterynarza.",
         "cs": "Regionální pohotovostní okruh; veterináři ve službě předem zavolejte.",
-        "sv": "Regional akutring; ring jourhavande veterinär i förväg."
+        "sv": "Regional akutring; ring jourhavande veterinär i förväg.",
+        "da": "Regional akutring; ring til vagtdyrlægen på forhånd."
       },
       "small_animals": true,
       "url": "https://koelner-tieraerztenotdienst.de/",
@@ -2642,7 +2726,8 @@
         "nl": "Nummer van de regionale spoedring; bel vooraf.",
         "pl": "Numer regionalnej sieci dyżurów pogotowia; zadzwoń wcześniej.",
         "cs": "Číslo regionálního pohotovostního okruhu; předem zavolejte.",
-        "sv": "Nummer till regional akutring; ring i förväg."
+        "sv": "Nummer till regional akutring; ring i förväg.",
+        "da": "Regionalt akutringnummer; ring på forhånd."
       },
       "small_animals": true,
       "source_url": "https://www.tieraerztekammer-nordrhein.de/informationen-zum-tieraerztlichen-notdienst/",
@@ -2668,7 +2753,8 @@
         "nl": "Nummer van de regionale spoedring; bel vooraf.",
         "pl": "Numer regionalnej sieci dyżurów pogotowia; zadzwoń wcześniej.",
         "cs": "Číslo regionálního pohotovostního okruhu; předem zavolejte.",
-        "sv": "Regionalt akutringnummer; ring i förväg."
+        "sv": "Regionalt akutringnummer; ring i förväg.",
+        "da": "Regionalt akutringnummer; ring på forhånd."
       },
       "small_animals": true,
       "source_url": "https://www.tieraerztekammer-nordrhein.de/informationen-zum-tieraerztlichen-notdienst/",
@@ -2694,7 +2780,8 @@
         "nl": "ma–vr 18–22 uur, weekenden en feestdagen 10–22 uur; 20 cent per gesprek.",
         "pl": "Pon.–pt. 18–22, weekendy i święta 10–22; 20 centów za połączenie",
         "cs": "Po–Pá 18:00–22:00, o víkendech a svátcích 10:00–22:00; 20 centů za hovor",
-        "sv": "Mån–fre 18–22, helger och helgdagar 10–22; 20 cent per samtal"
+        "sv": "Mån–fre 18–22, helger och helgdagar 10–22; 20 cent per samtal",
+        "da": "man–fre 18–22, weekender og helligdage 10–22; 20 cent pr. opkald"
       },
       "small_animals": true,
       "source_url": "https://www.tieraerztekammer-nordrhein.de/informationen-zum-tieraerztlichen-notdienst/",
@@ -2719,7 +2806,8 @@
         "nl": "wo en vr 12.00 uur tot de volgende ochtend 08.00 uur; za, zo en feestdagen 08.00–08.00 uur; ma/di/do de eigen dierenarts. Bel altijd eerst. Alleen voor patiënten van aangesloten praktijken.",
         "pl": "Śr. i pt. od 12:00 do 08:00 następnego dnia; sob., niedz. i święta 08:00–08:00; pon./wt./czw. własny weterynarz. Zawsze najpierw zadzwoń. Tylko dla pacjentów gabinetów uczestniczących.",
         "cs": "St a pá 12:00 do 8:00 následujícího rána; so, ne a svátky 8:00–8:00; po, út, čt vlastní veterinář. Vždy nejprve zavolejte. Pouze pro pacienty členských ordinací.",
-        "sv": "Ons och fre 12.00 till nästa morgon 08.00; lör, sön och helgdagar 08.00–08.00; mån/tis/tors din egen veterinär. Ring alltid först. Endast för patienter hos medlemspraktiker."
+        "sv": "Ons och fre 12.00 till nästa morgon 08.00; lör, sön och helgdagar 08.00–08.00; mån/tis/tors din egen veterinär. Ring alltid först. Endast för patienter hos medlemspraktiker.",
+        "da": "ons og fre 12.00–08.00 næste morgen; lør, søn og helligdage 08.00–08.00; man/tirs/tors din egen dyrlæge. Ring altid først. Kun for patienter hos medlemsklinikker."
       },
       "small_animals": true,
       "url": "https://www.bonner-tieraerzte.de/",
@@ -2746,7 +2834,8 @@
         "nl": "Regionale spoeddienst.",
         "pl": "Regionalna służba dyżurna w nagłych przypadkach.",
         "cs": "Regionální pohotovostní služba.",
-        "sv": "Regional akutjour."
+        "sv": "Regional akutjour.",
+        "da": "Regional akutvagt."
       }
     },
     {
@@ -2767,7 +2856,8 @@
         "nl": "Website van de spoeddienst van de Kreisstelle Dortmund.",
         "pl": "Strona pogotowia Kreisstelle Dortmund.",
         "cs": "Web pohotovostní služby Kreisstelle Dortmund.",
-        "sv": "Kreisstelle Dortmunds webbplats för akutjour."
+        "sv": "Kreisstelle Dortmunds webbplats för akutjour.",
+        "da": "Kreisstelle Dortmunds hjemmeside for akutvagten."
       },
       "small_animals": true,
       "url": "https://tiernotdienst-dortmund.de",
@@ -2793,7 +2883,8 @@
         "nl": "Jaarlijks dienstrooster (pdf), gepubliceerd door de dierenartsenkamer.",
         "pl": "Roczny plan dyżurów (PDF) publikowany przez izbę.",
         "cs": "Roční rozpis služeb (PDF) zveřejněný komorou.",
-        "sv": "Årlig jourplan (PDF) som publiceras av kammaren."
+        "sv": "Årlig jourplan (PDF) som publiceras av kammaren.",
+        "da": "Årlig vagtplan (PDF) udgivet af dyrlægekammeret."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer-wl.de/fileadmin/user_upload/tak/04_Fuer_Tierhalter/04.3_Notdienst-Finder/NotdienstMuenster2026_240926.pdf",
@@ -2819,7 +2910,8 @@
         "nl": "Website van de spoeddienst van de Kreisstelle Bielefeld/Herford.",
         "pl": "Strona pogotowia Kreisstelle Bielefeld/Herford.",
         "cs": "Web pohotovostní služby Kreisstelle Bielefeld/Herford.",
-        "sv": "Kreisstelle Bielefeld/Herfords webbplats för akutjour."
+        "sv": "Kreisstelle Bielefeld/Herfords webbplats för akutjour.",
+        "da": "Kreisstelle Bielefeld/Herfords hjemmeside for akutvagten."
       },
       "small_animals": true,
       "url": "https://tier-not-dienst.de/",
@@ -2845,7 +2937,8 @@
         "nl": "Dagelijks rooster jan.–dec. 2026 met de dienstdoende praktijk en telefoonnummer (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
         "pl": "Plan dzień po dniu styczeń–grudzień 2026 z podaniem dyżurującego gabinetu i jego telefonu (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
         "cs": "Rozpis den po dni leden–prosinec 2026 s uvedením ordinace ve službě a jejího telefonu (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
-        "sv": "Dag-för-dag-plan jan–dec 2026 som anger jourpraktiken och dess telefon (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern)."
+        "sv": "Dag-för-dag-plan jan–dec 2026 som anger jourpraktiken och dess telefon (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern).",
+        "da": "Dag-for-dag-plan jan.–dec. 2026 med vagtklinik og telefonnummer (Recklinghausen, Dorsten, Castrop-Rauxel, Herten, Gladbeck, Marl, Waltrop, Datteln, Oer-Erkenschwick, Haltern)."
       },
       "small_animals": true,
       "url": "https://www.tieraerztekammer-wl.de/fileadmin/user_upload/tak/04_Fuer_Tierhalter/04.3_Notdienst-Finder/Notdienste-Kreis-Recklinghausen-2026.pdf",
@@ -2872,7 +2965,8 @@
         "nl": "Weekenden en feestdagen 8–22 uur, georganiseerd via vetnotdienst.de (vaste lijn automatisch doorgeschakeld; mobiel: postcode invoeren); 0,14 EUR/min. Buiten die tijden: Tierklinik Elversberg.",
         "pl": "Weekendy i święta 8–22, organizowane przez vetnotdienst.de (telefon stacjonarny kierowany automatycznie; komórkowy: wpisz kod pocztowy); 0,14 EUR/min. Poza tymi godzinami: Tierklinik Elversberg.",
         "cs": "O víkendech a státních svátcích 8:00–22:00, organizováno přes vetnotdienst.de (pevná linka se přesměruje automaticky; mobil: zadejte PSČ); 0,14 EUR/min. Mimo tuto dobu: Tierklinik Elversberg.",
-        "sv": "Helger och helgdagar 8–22, organiserat via vetnotdienst.de (fast telefon dirigeras automatiskt; mobil: ange postnummer); 0,14 EUR/min. Utanför dessa tider: Tierklinik Elversberg."
+        "sv": "Helger och helgdagar 8–22, organiserat via vetnotdienst.de (fast telefon dirigeras automatiskt; mobil: ange postnummer); 0,14 EUR/min. Utanför dessa tider: Tierklinik Elversberg.",
+        "da": "Weekender og helligdage 8–22, organiseret via vetnotdienst.de (fastnet stilles automatisk igennem; mobil: indtast postnummer); 0,14 EUR/min. Uden for disse tider: Tierklinik Elversberg."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-saar.de/",
@@ -2899,7 +2993,8 @@
         "nl": "Spoeddienst in weekenden en op feestdagen 08.00–22.00 uur door lokale dierenartsen; rooster kan op korte termijn wijzigen; bel vooraf.",
         "pl": "Pogotowie weekendowe i świąteczne 08:00–22:00 prowadzone przez lokalnych weterynarzy; plan może się zmienić z krótkim wyprzedzeniem; zadzwoń wcześniej.",
         "cs": "Víkendová a sváteční pohotovost 8:00–22:00 místních veterinářů; rozpis se může narychlo změnit; předem zavolejte.",
-        "sv": "Akutjour helger och helgdagar 08.00–22.00 hos lokala veterinärer; planen kan ändras med kort varsel; ring i förväg."
+        "sv": "Akutjour helger och helgdagar 08.00–22.00 hos lokala veterinärer; planen kan ändras med kort varsel; ring i förväg.",
+        "da": "Akutvagt i weekender og på helligdage 08.00–22.00 hos lokale dyrlæger; planen kan ændres med kort varsel; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://www.kleintiernotdienst-regensburg.de/",
@@ -2926,7 +3021,8 @@
         "nl": "Vrijwillige kring van dierenartsen in de Landkreis; za en zo 10–18 uur heeft één praktijk dienst; centraal nummer of bel de vermelde praktijk. Vast spoedtarief van toepassing.",
         "pl": "Dobrowolna sieć dyżurna weterynarzy w powiecie; w soboty i niedziele 10–18 dyżuruje jeden gabinet; numer centralny lub zadzwoń do wskazanego gabinetu. Obowiązuje ryczałt za pogotowie.",
         "cs": "Dobrovolný okruh veterinářů v okrese; so a ne 10:00–18:00 slouží jedna ordinace; centrální číslo nebo zavolejte uvedené ordinaci. Účtuje se paušální pohotovostní poplatek.",
-        "sv": "Frivillig ring av veterinärer i Landkreis; lördagar och söndagar 10–18 har en praktik jour; centralt nummer eller ring den angivna praktiken. Fast akutavgift tillkommer."
+        "sv": "Frivillig ring av veterinärer i Landkreis; lördagar och söndagar 10–18 har en praktik jour; centralt nummer eller ring den angivna praktiken. Fast akutavgift tillkommer.",
+        "da": "Frivillig dyrlægering i Landkreis; lørdage og søndage 10–18 har én klinik vagten; centralt nummer eller ring til den anførte klinik. Fast akuttillæg gælder."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-bgd.de/wir-sind-f%C3%BCr-sie-da-notdienst/",
@@ -2955,7 +3051,8 @@
         "nl": "ma–do 19.00–06.00 uur; vr 19.00 uur tot ma 06.00 uur doorlopend (op werkdagen overdag niet bemand); bel eerst.",
         "pl": "Pon.–czw. 19:00–06:00; od piątku 19:00 do poniedziałku 06:00 bez przerwy (w dni robocze w ciągu dnia nie ma obsługi); najpierw zadzwoń",
         "cs": "Po–Čt 19:00–6:00; pá 19:00 do pondělí 6:00 nepřetržitě (ve všední dny přes den neobsazeno); nejprve zavolejte",
-        "sv": "Mån–tors 19.00–06.00; fre 19.00 till mån 06.00 sammanhängande (inte bemannat dagtid på vardagar); ring först"
+        "sv": "Mån–tors 19.00–06.00; fre 19.00 till mån 06.00 sammanhängande (inte bemannat dagtid på vardagar); ring först",
+        "da": "man–tors 19.00–06.00; fre 19.00 til man 06.00 uafbrudt (ikke bemandet i dagtimerne på hverdage); ring først"
       },
       "small_animals": true,
       "url": "https://notfalltierarzt-leipzig.de/",
@@ -2983,7 +3080,8 @@
         "nl": "Spoedtelefoon +49 341 9738781; afspraken dagelijks +49 341 9738711.",
         "pl": "Telefon alarmowy +49 341 9738781; wizyty codziennie +49 341 9738711",
         "cs": "Pohotovostní telefon +49 341 9738781; objednání denně +49 341 9738711",
-        "sv": "Akuttelefon +49 341 9738781; tidsbokning alla dagar +49 341 9738711"
+        "sv": "Akuttelefon +49 341 9738781; tidsbokning alla dagar +49 341 9738711",
+        "da": "Akuttelefon +49 341 9738781; tidsbestilling dagligt +49 341 9738711"
       },
       "small_animals": true,
       "url": "https://kleintierklinik.uni-leipzig.de/",
@@ -3012,7 +3110,8 @@
         "nl": "Spoedspreekuur in afzonderlijke weekenden (bijv. za 08.00–18.00 uur); na 18.00 uur verwijzing naar de universitaire kliniek voor kleine huisdieren of de Notfallambulanz Stötteritz.",
         "pl": "Konsultacje w nagłych przypadkach w wybrane weekendy (np. sob. 08:00–18:00); po 18:00 skierowanie do uniwersyteckiej kliniki małych zwierząt lub do Notfallambulanz Stötteritz",
         "cs": "Pohotovostní ordinační hodiny o vybraných víkendech (např. so 8:00–18:00); po 18:00 odkázání na univerzitní kliniku pro malá zvířata nebo Notfallambulanz Stötteritz",
-        "sv": "Akuttider enstaka helger (t.ex. lör 08.00–18.00); efter 18.00 remiss till universitetets smådjursklinik eller Notfallambulanz Stötteritz"
+        "sv": "Akuttider enstaka helger (t.ex. lör 08.00–18.00); efter 18.00 remiss till universitetets smådjursklinik eller Notfallambulanz Stötteritz",
+        "da": "Akutkonsultation på enkelte weekender (f.eks. lør 08.00–18.00); efter 18.00 henvisning til universitetets klinik for små dyr eller Notfallambulanz Stötteritz"
       },
       "small_animals": true,
       "url": "https://tierpraxis-leipzig.de/",
@@ -3040,7 +3139,8 @@
         "nl": "Eigen bereikbaarheidsdienst vr–zo en op feestdagen, telefonisch tot 21.30 uur (spoedmobiel +49 171 7514405); spoedspreekuur zo/feestdagen 10–12 uur.",
         "pl": "Własny dyżur pt.–niedz. i w święta, telefonicznie do 21:30 (telefon komórkowy pogotowia +49 171 7514405); konsultacja w nagłych przypadkach w niedz./święta 10–12",
         "cs": "Vlastní pohotovostní služba pá–ne a o svátcích, telefonicky do 21:30 (pohotovostní mobil +49 171 7514405); v neděli a o svátcích pohotovostní konzultace 10:00–12:00",
-        "sv": "Egen jour fre–sön och helgdagar, per telefon till 21.30 (akutmobil +49 171 7514405); akutbesök sön/helgdagar 10–12"
+        "sv": "Egen jour fre–sön och helgdagar, per telefon till 21.30 (akutmobil +49 171 7514405); akutbesök sön/helgdagar 10–12",
+        "da": "Egen vagt fre–søn og på helligdage, pr. telefon til 21.30 (akuttelefon +49 171 7514405); akutkonsultation søn/helligdage 10–12"
       },
       "small_animals": true,
       "url": "https://www.tierarztleipzig.de/",
@@ -3067,7 +3167,8 @@
         "nl": "Dierenspoeddienst za 12.00–14.00 uur, zo 10.00–14.00 uur; spoedmobiel +49 176 45777675.",
         "pl": "Pogotowie weterynaryjne sob. 12:00–14:00, niedz. 10:00–14:00; telefon komórkowy pogotowia +49 176 45777675",
         "cs": "Veterinární pohotovost so 12:00–14:00, ne 10:00–14:00; pohotovostní mobil +49 176 45777675",
-        "sv": "Veterinärakut lör 12.00–14.00, sön 10.00–14.00; akutmobil +49 176 45777675"
+        "sv": "Veterinärakut lör 12.00–14.00, sön 10.00–14.00; akutmobil +49 176 45777675",
+        "da": "Dyrlægevagt lør 12.00–14.00, søn 10.00–14.00; akuttelefon +49 176 45777675"
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-sascha-weinlein.de/",
@@ -3094,7 +3195,8 @@
         "nl": "Spoedspreekuur zo/feestdagen 08–12 en 16–20 uur; 's nachts alleen acuut levensbedreigende gevallen.",
         "pl": "Konsultacje w nagłych przypadkach w niedz./święta 08–12 i 16–20; w nocy tylko przypadki ostro zagrażające życiu",
         "cs": "V neděli a o svátcích pohotovostní konzultace 8:00–12:00 a 16:00–20:00; v noci pouze akutně život ohrožující případy",
-        "sv": "Akutbesök sön/helgdagar 08–12 och 16–20; nattetid endast akut livshotande fall"
+        "sv": "Akutbesök sön/helgdagar 08–12 och 16–20; nattetid endast akut livshotande fall",
+        "da": "Akutkonsultation søn/helligdage 08–12 og 16–20; om natten kun akut livstruende tilfælde"
       },
       "small_animals": true,
       "url": "https://www.kleintierklinik-meisinger.de/",
@@ -3123,7 +3225,8 @@
         "nl": "ma–do 8–12 en 14–17, vr 8–13 uur; spoed alleen na telefonische aanmelding, binnen de capaciteit.",
         "pl": "Pon.–czw. 8–12 i 14–17, pt. 8–13; nagłe przypadki tylko po rejestracji telefonicznej, w miarę możliwości",
         "cs": "Po–Čt 8:00–12:00 a 14:00–17:00, pá 8:00–13:00; pohotovosti pouze po telefonické registraci, v rámci kapacity",
-        "sv": "Mån–tors 8–12 och 14–17, fre 8–13; akutfall endast efter telefonanmälan, i mån av kapacitet"
+        "sv": "Mån–tors 8–12 och 14–17, fre 8–13; akutfall endast efter telefonanmälan, i mån av kapacitet",
+        "da": "man–tors 8–12 og 14–17, fre 8–13; akutte tilfælde kun efter telefonisk tilmelding, inden for kapaciteten"
       },
       "small_animals": true,
       "url": "https://www.vet-chemnitz.de/",
@@ -3151,7 +3254,8 @@
         "nl": "ma–vr, afspraken na telefonisch overleg; spoeddienst via nottierarzt-chemnitz.de.",
         "pl": "Pon.–pt., wizyty po telefonicznym uzgodnieniu; pogotowie przez nottierarzt-chemnitz.de",
         "cs": "Po–Pá, objednání po telefonické domluvě; pohotovost přes nottierarzt-chemnitz.de",
-        "sv": "Mån–fre, tidsbokning efter telefonöverenskommelse; akutservice via nottierarzt-chemnitz.de"
+        "sv": "Mån–fre, tidsbokning efter telefonöverenskommelse; akutservice via nottierarzt-chemnitz.de",
+        "da": "man–fre, tidsbestilling efter telefonisk aftale; akutvagt via nottierarzt-chemnitz.de"
       },
       "small_animals": true,
       "url": "https://tiertagesklinik.de/",
@@ -3178,7 +3282,8 @@
         "nl": "Spreekuur op werkdagen; daarbuiten zie het spoedrooster van de stad Magdeburg.",
         "pl": "Godziny konsultacji w dni robocze; poza nimi zobacz grafik pogotowia miasta Magdeburg",
         "cs": "Ordinační doba ve všední dny; mimo ni viz pohotovostní rozpis města Magdeburg",
-        "sv": "Mottagningstider på vardagar; utanför dem, se Magdeburgs stadsakutjour"
+        "sv": "Mottagningstider på vardagar; utanför dem, se Magdeburgs stadsakutjour",
+        "da": "Konsultationstid på hverdage; uden for den se akutvagtplanen for Magdeburg by"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-zentrum-magdeburg.de/",
@@ -3205,7 +3310,8 @@
         "nl": "Spoed na telefonische aanmelding ma–vr 07–22, za 07–13 uur (mobiel +49 170 7777365); acuut levensbedreigende gevallen ook zonder aanmelding.",
         "pl": "Nagłe przypadki po rejestracji telefonicznej pon.–pt. 07–22, sob. 07–13 (telefon komórkowy +49 170 7777365); nagłe przypadki ostro zagrażające życiu także bez rejestracji",
         "cs": "Pohotovosti po telefonické registraci Po–Pá 7:00–22:00, so 7:00–13:00 (mobil +49 170 7777365); akutně život ohrožující případy i bez registrace",
-        "sv": "Akutfall efter telefonanmälan mån–fre 07–22, lör 07–13 (mobil +49 170 7777365); akut livshotande fall även utan anmälan"
+        "sv": "Akutfall efter telefonanmälan mån–fre 07–22, lör 07–13 (mobil +49 170 7777365); akut livshotande fall även utan anmälan",
+        "da": "Akutte tilfælde efter telefonisk tilmelding man–fre 07–22, lør 07–13 (mobil +49 170 7777365); akut livstruende tilfælde også uden tilmelding"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-mensing.de/",
@@ -3245,7 +3351,8 @@
         "nl": "De dienstdoende praktijk wisselt wekelijks per district, rooster met telefoonnummers op de pagina van het district; bel indien mogelijk niet tussen 23 en 06 uur.",
         "pl": "Dyżurujący gabinet zmienia się co tydzień w danym powiecie, grafik z numerami telefonów na stronie powiatu; jeśli to możliwe, nie dzwoń 23–06",
         "cs": "Ordinace ve službě se mění týdně podle okresu, rozpis s telefonními čísly na stránce okresu; pokud možno nevolejte 23:00–6:00",
-        "sv": "Jourpraktiken växlar varje vecka per distrikt, schema med telefonnummer finns på distriktets sida; ring helst inte 23–06"
+        "sv": "Jourpraktiken växlar varje vecka per distrikt, schema med telefonnummer finns på distriktets sida; ring helst inte 23–06",
+        "da": "Vagtklinikken skifter ugentligt pr. distrikt, vagtplan med telefonnumre på distriktets side; ring om muligt ikke 23–06"
       },
       "small_animals": true,
       "url": "https://www.landkreis-boerde.de/menschen/natur-und-umwelt/notfalldienste-tieraerzte",
@@ -3271,7 +3378,8 @@
         "nl": "De dienst wisselt dagelijks; maandroosters als pdf en lijst van deelnemende praktijken met telefoonnummer op de pagina.",
         "pl": "Dyżur zmienia się codziennie; miesięczne grafiki w PDF i lista uczestniczących gabinetów z telefonami na stronie",
         "cs": "Služba se mění denně; měsíční rozpisy ve formátu PDF a seznam zapojených ordinací s telefonem na stránce",
-        "sv": "Jouren växlar varje dag; månadsscheman som PDF och lista över deltagande praktiker med telefon finns på sidan"
+        "sv": "Jouren växlar varje dag; månadsscheman som PDF och lista över deltagande praktiker med telefon finns på sidan",
+        "da": "Vagten skifter dagligt; månedlige vagtplaner som PDF og liste over deltagende klinikker med telefon på siden"
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-sturm.de/informationen/notdienste/",
@@ -3299,7 +3407,8 @@
         "nl": "ma, di, do 09–12 en 14–18; wo 09–12; vr 09–12 en 14–16 uur (afspraak na overleg).",
         "pl": "Pon., wt., czw. 09–12 i 14–18; śr. 09–12; pt. 09–12 i 14–16 (po umówieniu)",
         "cs": "Po, út, čt 9:00–12:00 a 14:00–18:00; st 9:00–12:00; pá 9:00–12:00 a 14:00–16:00 (po domluvě)",
-        "sv": "Mån, tis, tors 09–12 och 14–18; ons 09–12; fre 09–12 och 14–16 (tid efter överenskommelse)"
+        "sv": "Mån, tis, tors 09–12 och 14–18; ons 09–12; fre 09–12 och 14–16 (tid efter överenskommelse)",
+        "da": "man, tirs, tors 09–12 og 14–18; ons 09–12; fre 09–12 og 14–16 (tidsbestilling efter aftale)"
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-zipper.de/",
@@ -3326,7 +3435,8 @@
         "nl": "ma, di, do 10–11.30 en 15–18.30; wo 15–18.30; vr 10–11.30 en 14–15.30 uur; buiten die tijden: dienstdoende spoeddierenarts.",
         "pl": "Pon., wt., czw. 10–11:30 i 15–18:30; śr. 15–18:30; pt. 10–11:30 i 14–15:30; poza tymi godzinami: dyżurujący weterynarz pogotowia",
         "cs": "Po, út, čt 10:00–11:30 a 15:00–18:30; st 15:00–18:30; pá 10:00–11:30 a 14:00–15:30; mimo tuto dobu: pohotovostní veterinář ve službě",
-        "sv": "Mån, tis, tors 10–11.30 och 15–18.30; ons 15–18.30; fre 10–11.30 och 14–15.30; utanför dessa tider: jourhavande veterinär"
+        "sv": "Mån, tis, tors 10–11.30 och 15–18.30; ons 15–18.30; fre 10–11.30 och 14–15.30; utanför dessa tider: jourhavande veterinär",
+        "da": "man, tirs, tors 10–11.30 og 15–18.30; ons 15–18.30; fre 10–11.30 og 14–15.30; uden for disse tider: vagthavende akutdyrlæge"
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-suedstadt.de/",
@@ -3353,7 +3463,8 @@
         "nl": "ma–do 09–18, vr 09–15 uur; alleen op telefonische afspraak.",
         "pl": "Pon.–czw. 09–18, pt. 09–15; tylko po telefonicznym umówieniu",
         "cs": "Po–Čt 9:00–18:00, pá 9:00–15:00; pouze na telefonické objednání",
-        "sv": "Mån–tors 09–18, fre 09–15; endast efter tidsbokning per telefon"
+        "sv": "Mån–tors 09–18, fre 09–15; endast efter tidsbokning per telefon",
+        "da": "man–tors 09–18, fre 09–15; kun efter telefonisk tidsbestilling"
       },
       "small_animals": true,
       "url": "https://kleintierpraxis-strauss.de/halle/",
@@ -3407,7 +3518,8 @@
         "nl": "ma–vr 10–12, ma/di/do 16–17 uur; spoed buiten die tijden: spoednummer Thüringen +49 361 64478808.",
         "pl": "Pon.–pt. 10–12, pon./wt./czw. 16–17; nagłe przypadki poza tymi godzinami: numer pogotowia w Turyngii +49 361 64478808",
         "cs": "Po–Pá 10:00–12:00, po, út, čt 16:00–17:00; pohotovosti mimo tuto dobu: pohotovostní číslo Durynska +49 361 64478808",
-        "sv": "Mån–fre 10–12, mån/tis/tors 16–17; akutfall utanför dessa tider: Thüringens akutnummer +49 361 64478808"
+        "sv": "Mån–fre 10–12, mån/tis/tors 16–17; akutfall utanför dessa tider: Thüringens akutnummer +49 361 64478808",
+        "da": "man–fre 10–12, man/tirs/tors 16–17; akut uden for disse tider: Thüringens akutnummer +49 361 64478808"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-jena-nord.de/",
@@ -3434,7 +3546,8 @@
         "nl": "ma–vr 08–18 uur; buiten die tijden: spoeddienst voor kleine huisdieren van Mecklenburg-Vorpommern +49 1805 843736.",
         "pl": "Pon.–pt. 08–18; poza tymi godzinami: pogotowie dla małych zwierząt i zwierząt domowych w Meklemburgii-Pomorzu Przednim +49 1805 843736",
         "cs": "Po–Pá 8:00–18:00; mimo tuto dobu: pohotovostní služba pro malá a domácí zvířata Meklenburska-Předního Pomořanska +49 1805 843736",
-        "sv": "Mån–fre 08–18; utanför dessa tider: Mecklenburg-Vorpommerns akutjour för smådjur och sällskapsdjur +49 1805 843736"
+        "sv": "Mån–fre 08–18; utanför dessa tider: Mecklenburg-Vorpommerns akutjour för smådjur och sällskapsdjur +49 1805 843736",
+        "da": "man–fre 08–18; uden for disse tider: akutvagt for små dyr og kæledyr i Mecklenburg-Vorpommern +49 1805 843736"
       },
       "small_animals": true,
       "url": "https://kleintierzentrum-schwerin.de/",
@@ -3461,7 +3574,8 @@
         "nl": "Spoed ma–vr 08–19 uur na telefonische afspraak; wanneer de praktijk dienst heeft: +49 172 3925086; anders +49 1805 843736.",
         "pl": "Nagłe przypadki pon.–pt. 08–19 po telefonicznym uzgodnieniu; gdy gabinet dyżuruje: +49 172 3925086; w przeciwnym razie +49 1805 843736",
         "cs": "Pohotovosti Po–Pá 8:00–19:00 po telefonické domluvě; když má ordinace službu: +49 172 3925086; jinak +49 1805 843736",
-        "sv": "Akutfall mån–fre 08–19 efter telefonöverenskommelse; när praktiken har jour: +49 172 3925086; annars +49 1805 843736"
+        "sv": "Akutfall mån–fre 08–19 efter telefonöverenskommelse; när praktiken har jour: +49 172 3925086; annars +49 1805 843736",
+        "da": "Akutte tilfælde man–fre 08–19 efter telefonisk aftale; når klinikken har vagten: +49 172 3925086; ellers +49 1805 843736"
       },
       "small_animals": true,
       "url": "https://www.tiergesundheitszentrum-schwerin.de/",
@@ -3489,7 +3603,8 @@
         "nl": "ma, di, do 8.30–13.30 en 14–16; wo 8.30–14; vr 8.30–12 uur; acuut spreekuur zonder afspraak ma–vr 08.00–08.30 uur.",
         "pl": "Pon., wt., czw. 8:30–13:30 i 14–16; śr. 8:30–14; pt. 8:30–12; pilna konsultacja bez umawiania pon.–pt. 08:00–08:30",
         "cs": "Po, út, čt 8:30–13:30 a 14:00–16:00; st 8:30–14:00; pá 8:30–12:00; akutní konzultace bez objednání Po–Pá 8:00–8:30",
-        "sv": "Mån, tis, tors 8.30–13.30 och 14–16; ons 8.30–14; fre 8.30–12; akut konsultation utan tidsbokning mån–fre 08.00–08.30"
+        "sv": "Mån, tis, tors 8.30–13.30 och 14–16; ons 8.30–14; fre 8.30–12; akut konsultation utan tidsbokning mån–fre 08.00–08.30",
+        "da": "man, tirs, tors 8.30–13.30 og 14–16; ons 8.30–14; fre 8.30–12; akut konsultation uden tidsbestilling man–fre 08.00–08.30"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-albrecht.de/",
@@ -3515,7 +3630,8 @@
         "nl": "Wisselende spoeddienst van dierenartsen in Osnabrück buiten spreekuren; doorgeschakeld naar de dienstdoende praktijk (0,14 €/min vast net, max. 0,42 €/min mobiel).",
         "pl": "Rotacyjne pogotowie weterynarzy z Osnabrück poza godzinami konsultacji; połączenie z dyżurującym gabinetem (0,14 €/min z telefonu stacjonarnego, maks. 0,42 €/min z komórkowego)",
         "cs": "Střídavá pohotovostní služba osnabrückých veterinářů mimo ordinační dobu; přepojení na ordinaci ve službě (0,14 €/min z pevné linky, max. 0,42 €/min z mobilu)",
-        "sv": "Roterande akutjour med veterinärer i Osnabrück utanför mottagningstid; vidarekopplas till jourpraktiken (0,14 €/min fast telefon, max 0,42 €/min mobil)"
+        "sv": "Roterande akutjour med veterinärer i Osnabrück utanför mottagningstid; vidarekopplas till jourpraktiken (0,14 €/min fast telefon, max 0,42 €/min mobil)",
+        "da": "Skiftende akutvagt for dyrlæger i Osnabrück uden for konsultationstiden; stilles videre til vagtklinikken (0,14 €/min fastnet, højst 0,42 €/min mobil)"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-osnabrueck.de/notdienst.html",
@@ -3558,7 +3674,8 @@
         "nl": "Buiten spreekuren: spoedlijn van de dierenartsen in Osnabrück +49 1805 000241.",
         "pl": "Poza godzinami konsultacji: linia pogotowia weterynarzy z Osnabrück +49 1805 000241",
         "cs": "Mimo ordinační dobu: pohotovostní linka osnabrückých veterinářů +49 1805 000241",
-        "sv": "Utanför mottagningstid: Osnabrücks veterinärers jourlinje +49 1805 000241"
+        "sv": "Utanför mottagningstid: Osnabrücks veterinärers jourlinje +49 1805 000241",
+        "da": "Uden for konsultationstiden: Osnabrück-dyrlægernes akutlinje +49 1805 000241"
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-os.de/",
@@ -3585,7 +3702,8 @@
         "nl": "Buiten spreekuren: centraal spoednummer +49 1805 000241.",
         "pl": "Poza godzinami konsultacji: centralny numer pogotowia +49 1805 000241",
         "cs": "Mimo ordinační dobu: centrální pohotovostní číslo +49 1805 000241",
-        "sv": "Utanför mottagningstid: central jourtelefon +49 1805 000241"
+        "sv": "Utanför mottagningstid: central jourtelefon +49 1805 000241",
+        "da": "Uden for konsultationstiden: centralt akutnummer +49 1805 000241"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-osnabrueck.com/",
@@ -3612,7 +3730,8 @@
         "nl": "Buiten spreekuren: spoedlijn van de dierenartsen in Osnabrück +49 1805 000241.",
         "pl": "Poza godzinami konsultacji: linia pogotowia weterynarzy z Osnabrück +49 1805 000241",
         "cs": "Mimo ordinační dobu: pohotovostní linka osnabrückých veterinářů +49 1805 000241",
-        "sv": "Utanför mottagningstid: Osnabrücks veterinärers jourlinje +49 1805 000241"
+        "sv": "Utanför mottagningstid: Osnabrücks veterinärers jourlinje +49 1805 000241",
+        "da": "Uden for konsultationstiden: Osnabrück-dyrlægernes akutlinje +49 1805 000241"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-osnabrueck.de/",
@@ -3639,7 +3758,8 @@
         "nl": "Spoed ma–vr 19–20 uur na telefonische aanmelding; daarna en in weekenden: spoeddienst van de dierenartsen in Göttingen.",
         "pl": "Nagłe przypadki pon.–pt. 19–20 po rejestracji telefonicznej; potem i w weekendy: pogotowie weterynaryjne w Getyndze",
         "cs": "Pohotovosti Po–Pá 19:00–20:00 po telefonické registraci; poté a o víkendech: göttingenská veterinární pohotovostní služba",
-        "sv": "Akutfall mån–fre 19–20 efter telefonanmälan; därefter och på helger: Göttingens veterinärjour"
+        "sv": "Akutfall mån–fre 19–20 efter telefonanmälan; därefter och på helger: Göttingens veterinärjour",
+        "da": "Akutte tilfælde man–fre 19–20 efter telefonisk tilmelding; derefter og i weekender: Göttingens dyrlægevagt"
       },
       "small_animals": true,
       "url": "https://www.uni-goettingen.de/de/tierklinik/571084.html",
@@ -3667,7 +3787,8 @@
         "nl": "Spoeddienst ma/di/do/vr 19–22, wo 19–08 (volgende dag), za/zo 08–22, feestdagen 08–17 uur; alleen na telefonische aanmelding.",
         "pl": "Pogotowie pon./wt./czw./pt. 19–22, śr. 19–08 (następnego dnia), sob./niedz. 08–22, w święta 08–17; tylko po rejestracji telefonicznej",
         "cs": "Pohotovost Po, út, čt, pá 19:00–22:00, st 19:00–8:00 (následující den), so, ne 8:00–22:00, svátky 8:00–17:00; pouze po telefonické registraci",
-        "sv": "Jour mån/tis/tors/fre 19–22, ons 19–08 (nästa dag), lör/sön 08–22, helgdagar 08–17; endast efter telefonanmälan"
+        "sv": "Jour mån/tis/tors/fre 19–22, ons 19–08 (nästa dag), lör/sön 08–22, helgdagar 08–17; endast efter telefonanmälan",
+        "da": "Akutvagt man/tirs/tors/fre 19–22, ons 19–08 (næste dag), lør/søn 08–22, helligdage 08–17; kun efter telefonisk tilmelding"
       },
       "small_animals": true,
       "url": "https://tgz-suedharz.de/",
@@ -3692,7 +3813,8 @@
         "nl": "Spoeddienst in weekenden en op feestdagen za 06.00 uur tot ma 06.00 uur, wisselende praktijken voor kleine huisdieren met telefoonnummer in het rooster; bel eerst.",
         "pl": "Pogotowie weekendowe i świąteczne od soboty 06:00 do poniedziałku 06:00, rotacyjnie gabinety małych zwierząt, numer telefonu w grafiku; najpierw zadzwoń",
         "cs": "Víkendová a sváteční pohotovost so 6:00 do pondělí 6:00, střídající se ordinace pro malá zvířata s telefonním číslem v rozpisu; nejprve zavolejte",
-        "sv": "Helg- och helgdagsjour från lör 06.00 till mån 06.00, växlande smådjursmottagningar med telefonnummer i jourlistan; ring först"
+        "sv": "Helg- och helgdagsjour från lör 06.00 till mån 06.00, växlande smådjursmottagningar med telefonnummer i jourlistan; ring först",
+        "da": "Akutvagt i weekender og på helligdage lør 06.00 til man 06.00, skiftende klinikker for små dyr med telefonnummer i vagtplanen; ring først"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-notdienst-landkreis-northeim.de/",
@@ -3720,7 +3842,8 @@
         "nl": "Spreekuur op werkdagen; vraag via de spoedcentrale +49 3941 69999 naar de dienstdoende dierenarts; praktijkmobiel +49 171 2433497.",
         "pl": "Godziny konsultacji w dni robocze; o dyżurującego weterynarza zapytaj w dyspozytorni pogotowia +49 3941 69999; telefon komórkowy gabinetu +49 171 2433497",
         "cs": "Ordinační doba ve všední dny; veterináře ve službě zjistíte přes pohotovostní dispečink +49 3941 69999; mobil ordinace +49 171 2433497",
-        "sv": "Mottagning vardagar; fråga efter jourhavande veterinär via jourcentralen +49 3941 69999; mottagningens mobil +49 171 2433497"
+        "sv": "Mottagning vardagar; fråga efter jourhavande veterinär via jourcentralen +49 3941 69999; mottagningens mobil +49 171 2433497",
+        "da": "Konsultationstid på hverdage; bed om vagtdyrlægen via akutcentralen +49 3941 69999; klinikkens mobil +49 171 2433497"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-wernigerode.de/",
@@ -3747,7 +3870,8 @@
         "nl": "Wisselende bereikbaarheidsdienst met andere praktijken in het district; dienstdoende praktijk op tieraerztliche-notdienste.de.",
         "pl": "Rotacyjny dyżur z innymi gabinetami w powiecie; dyżurny gabinet na tieraerztliche-notdienste.de",
         "cs": "Střídavá pohotovostní služba s dalšími ordinacemi v okrese; ordinace ve službě na tieraerztliche-notdienste.de",
-        "sv": "Växlande jour tillsammans med andra mottagningar i distriktet; jourhavande mottagning finns på tieraerztliche-notdienste.de"
+        "sv": "Växlande jour tillsammans med andra mottagningar i distriktet; jourhavande mottagning finns på tieraerztliche-notdienste.de",
+        "da": "Skiftende vagt sammen med andre klinikker i distriktet; vagtklinik på tieraerztliche-notdienste.de"
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-wernigerode.de/",
@@ -3774,7 +3898,8 @@
         "nl": "Buiten openingstijden districtsbrede spoeddienst (avonden, weekenden, feestdagen); dienstrooster op goslar-tierarzt.de.",
         "pl": "Poza godzinami pracy powiatowe pogotowie (wieczory, weekendy, święta); grafik dyżurów na goslar-tierarzt.de",
         "cs": "Mimo ordinační dobu okresní pohotovostní služba (večery, víkendy, svátky); rozpis služeb na goslar-tierarzt.de",
-        "sv": "Utanför öppettiderna finns en jour för hela distriktet (kvällar, helger, helgdagar); jourschema på goslar-tierarzt.de"
+        "sv": "Utanför öppettiderna finns en jour för hela distriktet (kvällar, helger, helgdagar); jourschema på goslar-tierarzt.de",
+        "da": "Uden for åbningstiden distriktsdækkende akutvagt (aftener, weekender, helligdage); vagtplan på goslar-tierarzt.de"
       },
       "small_animals": true,
       "url": "https://kleintierpraxis-goslar.de/",
@@ -3815,7 +3940,8 @@
         "nl": "ma, di, do, vr 09.30–10.30 en 18.30–19.00 uur en op afspraak.",
         "pl": "Pon., wt., czw., pt. 09:30–10:30 i 18:30–19:00 oraz po uzgodnieniu",
         "cs": "Po, út, čt, pá 9:30–10:30 a 18:30–19:00 a po domluvě",
-        "sv": "mån, tis, tors, fre 09.30–10.30 och 18.30–19.00 samt efter överenskommelse"
+        "sv": "mån, tis, tors, fre 09.30–10.30 och 18.30–19.00 samt efter överenskommelse",
+        "da": "man, tirs, tors, fre 09.30–10.30 og 18.30–19.00 og efter aftale"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-fehmarn.de/",
@@ -3954,7 +4080,8 @@
         "nl": "ma–vr 18.00–23.00 uur, za/zo/feestdagen 08.00–23.00 uur; na 23.00 uur Tierklinik Hofheim (+49 6192 290290).",
         "pl": "Pon.–pt. 18:00–23:00, sob./niedz./święta 08:00–23:00; po 23:00 Tierklinik Hofheim (+49 6192 290290)",
         "cs": "Po–Pá 18:00–23:00, so, ne a svátky 8:00–23:00; po 23:00 Tierklinik Hofheim (+49 6192 290290)",
-        "sv": "mån–fre 18.00–23.00, lör/sön/helgdag 08.00–23.00; efter 23.00 Tierklinik Hofheim (+49 6192 290290)"
+        "sv": "mån–fre 18.00–23.00, lör/sön/helgdag 08.00–23.00; efter 23.00 Tierklinik Hofheim (+49 6192 290290)",
+        "da": "man–fre 18.00–23.00, lør/søn/helligdage 08.00–23.00; efter 23.00 Tierklinik Hofheim (+49 6192 290290)"
       },
       "small_animals": true,
       "url": "https://tierarzt-notdienst-rtk.de/",
@@ -3981,7 +4108,8 @@
         "nl": "Werkdagen 19.00–23.00 uur, weekenden 08.00–23.00 uur; na 23.00 uur Tierklinik Hofheim.",
         "pl": "W dni robocze 19:00–23:00, weekendy 08:00–23:00; po 23:00 Tierklinik Hofheim",
         "cs": "Ve všední dny 19:00–23:00, o víkendech 8:00–23:00; po 23:00 Tierklinik Hofheim",
-        "sv": "Vardagar 19.00–23.00, helger 08.00–23.00; efter 23.00 Tierklinik Hofheim"
+        "sv": "Vardagar 19.00–23.00, helger 08.00–23.00; efter 23.00 Tierklinik Hofheim",
+        "da": "Hverdage 19.00–23.00, weekender 08.00–23.00; efter 23.00 Tierklinik Hofheim"
       },
       "small_animals": true,
       "url": "https://die-tierarztpraxis.eu/notdienstring/",
@@ -4032,7 +4160,8 @@
         "nl": "za 08.00 uur tot ma 08.00 uur en op feestdagen.",
         "pl": "Od soboty 08:00 do poniedziałku 08:00 oraz w święta",
         "cs": "So 8:00 – Po 8:00 a státní svátky",
-        "sv": "lör 08.00 – mån 08.00 samt helgdagar"
+        "sv": "lör 08.00 – mån 08.00 samt helgdagar",
+        "da": "lør 08.00 – man 08.00 og helligdage"
       },
       "small_animals": true,
       "url": "https://tiernotdienst-kassel.de/",
@@ -4058,7 +4187,8 @@
         "nl": "Overdag in weekenden en op feestdagen.",
         "pl": "W ciągu dnia w weekendy i święta",
         "cs": "Přes den o víkendech a státních svátcích",
-        "sv": "Dagtid på helger och helgdagar"
+        "sv": "Dagtid på helger och helgdagar",
+        "da": "Weekender og helligdage i dagtimerne"
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-storck.de/willkommen-in-der-praxis/notdienst/",
@@ -4085,7 +4215,8 @@
         "nl": "08.00–00.00 uur; 00.00–08.00 uur via Pfotendoctor.de +49 800 7777444.",
         "pl": "08:00–00:00; 00:00–08:00 przez Pfotendoctor.de +49 800 7777444",
         "cs": "8:00–24:00; 0:00–8:00 přes Pfotendoctor.de +49 800 7777444",
-        "sv": "08.00–00.00; 00.00–08.00 via Pfotendoctor.de +49 800 7777444"
+        "sv": "08.00–00.00; 00.00–08.00 via Pfotendoctor.de +49 800 7777444",
+        "da": "08.00–00.00; 00.00–08.00 via Pfotendoctor.de +49 800 7777444"
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-pfennigsweg.de/notdienst",
@@ -4112,7 +4243,8 @@
         "nl": "ma–do 19.00–08.00 uur, weekenden/feestdagen 08.00–08.00 uur.",
         "pl": "Pon.–czw. 19:00–08:00, weekendy/święta 08:00–08:00",
         "cs": "Po–Čt 19:00–8:00, o víkendech a svátcích 8:00–8:00",
-        "sv": "mån–tors 19.00–08.00, helger/helgdagar 08.00–08.00"
+        "sv": "mån–tors 19.00–08.00, helger/helgdagar 08.00–08.00",
+        "da": "man–tors 19.00–08.00, weekender/helligdage 08.00–08.00"
       },
       "small_animals": true,
       "url": "https://www.tieraerztlicherverbund-notdienst-in-der-ortenau.de/wer-hat-notdienst/",
@@ -4272,7 +4404,8 @@
         "nl": "Spoedlijn ma–vr 08.00–22.00 uur, weekenden/feestdagen 08.00–20.00 uur.",
         "pl": "Linia alarmowa pon.–pt. 08:00–22:00, weekendy/święta 08:00–20:00",
         "cs": "Pohotovostní linka Po–Pá 8:00–22:00, o víkendech a svátcích 8:00–20:00",
-        "sv": "Jourlinje mån–fre 08.00–22.00, helger/helgdagar 08.00–20.00"
+        "sv": "Jourlinje mån–fre 08.00–22.00, helger/helgdagar 08.00–20.00",
+        "da": "Akutlinje man–fre 08.00–22.00, weekender/helligdage 08.00–20.00"
       },
       "small_animals": true,
       "url": "https://kleintierzentrum-landwasser.de/",
@@ -4313,7 +4446,8 @@
         "nl": "ma–vr 10.00–18.00 uur.",
         "pl": "Pon.–pt. 10:00–18:00",
         "cs": "Po–Pá 10:00–18:00",
-        "sv": "mån–fre 10.00–18.00"
+        "sv": "mån–fre 10.00–18.00",
+        "da": "man–fre 10.00–18.00"
       },
       "small_animals": true,
       "url": "https://kleintierzentrum-baden-baden.de/",
@@ -4341,7 +4475,8 @@
         "nl": "Spoedhotline +49 160 8007070, 08.00–20.00 uur (voor klanten van de praktijk).",
         "pl": "Infolinia pogotowia +49 160 8007070, 08:00–20:00 (dla klientów gabinetu)",
         "cs": "Pohotovostní linka +49 160 8007070, 8:00–20:00 (pro klienty ordinace)",
-        "sv": "Jourlinje +49 160 8007070, 08.00–20.00 (för mottagningens kunder)"
+        "sv": "Jourlinje +49 160 8007070, 08.00–20.00 (för mottagningens kunder)",
+        "da": "Akut-hotline +49 160 8007070, 08.00–20.00 (for klinikkens kunder)"
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-itkina.de/",
@@ -4383,7 +4518,8 @@
         "nl": "Zaterdag 10.00–12.00 uur spoedspreekuur.",
         "pl": "Sobota 10:00–12:00 konsultacja w nagłych przypadkach",
         "cs": "Pohotovostní konzultace v sobotu 10:00–12:00",
-        "sv": "Lördag 10.00–12.00 akutbesök"
+        "sv": "Lördag 10.00–12.00 akutbesök",
+        "da": "Lørdag 10.00–12.00 akutkonsultation"
       },
       "small_animals": true,
       "url": "https://www.tierarzt-dr-gruebl.de/",
@@ -4410,7 +4546,8 @@
         "nl": "20.00–08.00 uur worden oproepen doorgeschakeld naar de dienstdoende dierenarts van het Notfallverbund Wiesbadener Tierärzte.",
         "pl": "20:00–08:00 połączenia przekierowywane do dyżurującego weterynarza z Notfallverbund Wiesbadener Tierärzte",
         "cs": "20:00–8:00 hovory přesměrovány na veterináře ve službě Notfallverbund Wiesbadener Tierärzte",
-        "sv": "20.00–08.00 vidarekopplas samtal till jourhavande veterinär i Notfallverbund Wiesbadener Tierärzte"
+        "sv": "20.00–08.00 vidarekopplas samtal till jourhavande veterinär i Notfallverbund Wiesbadener Tierärzte",
+        "da": "20.00–08.00 stilles opkald videre til vagtdyrlægen i Notfallverbund Wiesbadener Tierärzte"
       },
       "small_animals": true,
       "url": "https://www.tiergesundheitszentrum-wiesbaden.de/",
@@ -4479,7 +4616,8 @@
         "nl": "Gezamenlijke spoeddienst in weekenden/op feestdagen met Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), telefonische aanmelding.",
         "pl": "Wspólne pogotowie weekendowe i świąteczne z Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), rejestracja telefoniczna",
         "cs": "Společná víkendová a sváteční pohotovost s Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), telefonická registrace",
-        "sv": "Gemensam jour på helger och helgdagar med Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), telefonanmälan"
+        "sv": "Gemensam jour på helger och helgdagar med Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), telefonanmälan",
+        "da": "Fælles akutvagt i weekender og på helligdage med Kleintierpraxis Dr. Luitz, Sonthofen (+49 8321 6744555), telefonisk tilmelding"
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-oberstdorf.de/",
@@ -4520,7 +4658,8 @@
         "nl": "Buiten kantooruren en bij spoed: +49 171 7942360.",
         "pl": "Poza godzinami i w nagłych przypadkach: +49 171 7942360",
         "cs": "Mimo ordinační dobu a pro pohotovosti: +49 171 7942360",
-        "sv": "Utanför öppettid och vid akutfall: +49 171 7942360"
+        "sv": "Utanför öppettid och vid akutfall: +49 171 7942360",
+        "da": "Uden for åbningstiden og akut: +49 171 7942360"
       },
       "small_animals": true,
       "url": "https://tierarztpraxis-kamuf.de/",

@@ -40,7 +40,8 @@
         "nl": "Opgenomen huisdieren worden 24 uur per dag bewaakt.",
         "pl": "Hospitalizowane zwierzęta są monitorowane całą dobę.",
         "cs": "Hospitalizovaná zvířata jsou sledována nonstop.",
-        "sv": "Inlagda djur övervakas dygnet runt."
+        "sv": "Inlagda djur övervakas dygnet runt.",
+        "da": "Indlagte kæledyr overvåges døgnet rundt."
       }
     },
     {
@@ -64,7 +65,8 @@
         "nl": "ma–vr 7.00–18.00 uur, za 9.00–15.00 uur. Buiten openingstijden telefoonlijn voor advies bij dringende klachten.",
         "pl": "Pon.–pt. 7:00–18:00, sob. 9:00–15:00. Po godzinach telefoniczna porada przy pilnych objawach.",
         "cs": "Po–Pá 7:00–18:00, so 9:00–15:00. Mimo ordinační dobu telefonická linka s radou při akutních příznacích.",
-        "sv": "mån–fre 7.00–18.00, lör 9.00–15.00. Telefonlinje utanför öppettid för vägledning vid akuta symtom."
+        "sv": "mån–fre 7.00–18.00, lör 9.00–15.00. Telefonlinje utanför öppettid för vägledning vid akuta symtom.",
+        "da": "man–fre 7.00–18.00, lør 9.00–15.00. Telefonlinje uden for åbningstiden til vejledning ved akutte symptomer."
       }
     },
     {
@@ -88,7 +90,8 @@
         "nl": "ma–vr 7.00–18.00 uur, za 9.00–15.00 uur. Buiten openingstijden telefoonlijn voor advies bij dringende klachten.",
         "pl": "Pon.–pt. 7:00–18:00, sob. 9:00–15:00. Po godzinach telefoniczna porada przy pilnych objawach.",
         "cs": "Po–Pá 7:00–18:00, so 9:00–15:00. Mimo ordinační dobu telefonická linka s radou při akutních příznacích.",
-        "sv": "mån–fre 7.00–18.00, lör 9.00–15.00. Telefonlinje utanför öppettid för vägledning vid akuta symtom."
+        "sv": "mån–fre 7.00–18.00, lör 9.00–15.00. Telefonlinje utanför öppettid för vägledning vid akuta symtom.",
+        "da": "man–fre 7.00–18.00, lør 9.00–15.00. Telefonlinje uden for åbningstiden til vejledning ved akutte symptomer."
       }
     },
     {
@@ -112,7 +115,8 @@
         "nl": "ma–vr 8.00–17.00 uur. Buiten openingstijden telefoonlijn voor advies bij dringende klachten.",
         "pl": "Pon.–pt. 8:00–17:00. Po godzinach telefoniczna porada przy pilnych objawach.",
         "cs": "Po–Pá 8:00–17:00. Mimo ordinační dobu telefonická linka s radou při akutních příznacích.",
-        "sv": "mån–fre 8.00–17.00. Telefonlinje utanför öppettid för vägledning vid akuta symtom."
+        "sv": "mån–fre 8.00–17.00. Telefonlinje utanför öppettid för vägledning vid akuta symtom.",
+        "da": "man–fre 8.00–17.00. Telefonlinje uden for åbningstiden til vejledning ved akutte symptomer."
       }
     },
     {
@@ -136,7 +140,8 @@
         "nl": "ma–vr 9.00–18.00 uur, za 9.00–14.00 uur, gesloten op zondagen en feestdagen. 24/7 telefonische spoedlijn alleen voor geregistreerde patiënten.",
         "pl": "Pon.–pt. 9:00–18:00, sob. 9:00–14:00, niedz. i święta nieczynne. Całodobowa telefoniczna linia alarmowa tylko dla zarejestrowanych pacjentów.",
         "cs": "Po–Pá 9:00–18:00, so 9:00–14:00, v neděli a o svátcích zavřeno. Nonstop telefonická pohotovostní linka pouze pro registrované pacienty.",
-        "sv": "mån–fre 9.00–18.00, lör 9.00–14.00, stängt söndagar och helgdagar. Jourtelefon dygnet runt, årets alla dagar, endast för registrerade patienter."
+        "sv": "mån–fre 9.00–18.00, lör 9.00–14.00, stängt söndagar och helgdagar. Jourtelefon dygnet runt, årets alla dagar, endast för registrerade patienter.",
+        "da": "man–fre 9.00–18.00, lør 9.00–14.00, lukket søn og helligdage. Akuttelefon døgnet rundt kun for registrerede patienter."
       }
     }
   ],

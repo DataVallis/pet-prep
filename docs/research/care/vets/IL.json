@@ -46,7 +46,8 @@
         "nl": "Spoedeisende en intensieve zorg 24 uur per dag, 365 dagen per jaar. Spoedlijn ook *8818; spoedafdeling +972 3 968 8533.",
         "pl": "Pomoc w nagłych przypadkach i opieka intensywna 24 godziny na dobę, 365 dni w roku. Linia alarmowa także *8818; oddział nagłych przypadków +972 3 968 8533.",
         "cs": "Pohotovostní a intenzivní péče nonstop, 365 dní v roce. Pohotovostní linka také *8818; pohotovostní oddělení +972 3 968 8533.",
-        "sv": "Akut- och intensivvård dygnet runt, 365 dagar om året. Akutlinje även *8818; akutmottagning +972 3 968 8533."
+        "sv": "Akut- och intensivvård dygnet runt, 365 dagar om året. Akutlinje även *8818; akutmottagning +972 3 968 8533.",
+        "da": "Akut og intensiv pleje døgnet rundt, 365 dage om året. Akuttelefon også *8818; skadestue +972 3 968 8533."
       },
       "small_animals": true,
       "url": "https://vethospital.huji.ac.il/english",
@@ -71,7 +72,8 @@
         "nl": "24 uur per dag open, 7 dagen per week, ook op sjabbat en feestdagen; dienstdoende dierenarts aanwezig. Spoed- en verwijsziekenhuis, geen reguliere basiszorg.",
         "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu, także w szabat i święta; weterynarz dyżurny. Szpital dla nagłych przypadków i przypadków skierowanych, bez rutynowej opieki ogólnej.",
         "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně šabatu a svátků; veterinář ve službě. Pohotovostní a doporučující nemocnice, bez běžné všeobecné péče.",
-        "sv": "Öppet dygnet runt, alla veckans dagar, även sabbat och helgdagar; jourhavande veterinär. Akut- och remissdjursjukhus, ingen vanlig allmänvård."
+        "sv": "Öppet dygnet runt, alla veckans dagar, även sabbat och helgdagar; jourhavande veterinär. Akut- och remissdjursjukhus, ingen vanlig allmänvård.",
+        "da": "Åbent døgnet rundt, alle ugens dage inkl. sabbat og helligdage; vagthavende dyrlæge. Akut- og henvisningshospital, ingen almindelig rutinebehandling."
       },
       "small_animals": true,
       "url": "https://www.vetcenter.co.il/",
@@ -96,7 +98,8 @@
         "nl": "24 uur per dag open, 365 dagen per jaar; het hoofdnummer is ook de 24/7-spoedlijn.",
         "pl": "Otwarte 24 godziny na dobę, 365 dni w roku; numer główny jest też całodobową linią alarmową.",
         "cs": "Otevřeno nonstop, 365 dní v roce; hlavní číslo je zároveň nonstop pohotovostní linka.",
-        "sv": "Öppet dygnet runt, 365 dagar om året; huvudnumret är också akutlinjen dygnet runt."
+        "sv": "Öppet dygnet runt, 365 dagar om året; huvudnumret är också akutlinjen dygnet runt.",
+        "da": "Åbent døgnet rundt, 365 dage om året; hovednummeret er også akuttelefonen døgnet rundt."
       },
       "small_animals": true,
       "url": "https://chavatdaat.co.il/haifa/",
@@ -121,7 +124,8 @@
         "nl": "24 uur per dag open, 365 dagen per jaar; het hoofdnummer is ook de 24/7-spoedlijn.",
         "pl": "Otwarte 24 godziny na dobę, 365 dni w roku; numer główny jest też całodobową linią alarmową.",
         "cs": "Otevřeno nonstop, 365 dní v roce; hlavní číslo je zároveň nonstop pohotovostní linka.",
-        "sv": "Öppet dygnet runt, 365 dagar om året; huvudnumret är också akutlinjen dygnet runt."
+        "sv": "Öppet dygnet runt, 365 dagar om året; huvudnumret är också akutlinjen dygnet runt.",
+        "da": "Åbent døgnet rundt, 365 dage om året; hovednummeret er også akuttelefonen døgnet rundt."
       },
       "small_animals": true,
       "url": "https://chavatdaat.co.il/rehovot",
@@ -146,7 +150,8 @@
         "nl": "24 uur per dag open, 365 dagen per jaar; 24/7-spoedlijn op hetzelfde nummer.",
         "pl": "Otwarte 24 godziny na dobę, 365 dni w roku; całodobowa linia alarmowa pod tym samym numerem.",
         "cs": "Otevřeno nonstop, 365 dní v roce; nonstop pohotovostní linka na stejném čísle.",
-        "sv": "Öppet dygnet runt, 365 dagar om året; akutlinje dygnet runt på samma nummer."
+        "sv": "Öppet dygnet runt, 365 dagar om året; akutlinje dygnet runt på samma nummer.",
+        "da": "Åbent døgnet rundt, 365 dage om året; akuttelefon døgnet rundt på samme nummer."
       },
       "small_animals": true,
       "url": "https://chavatdaat.co.il/kefar-sava",
@@ -171,7 +176,8 @@
         "nl": "Bel voor de openingstijden.",
         "pl": "Zadzwoń, by poznać godziny otwarcia.",
         "cs": "Otevírací dobu zjistíte telefonicky.",
-        "sv": "Ring för att få veta öppettiderna."
+        "sv": "Ring för att få veta öppettiderna.",
+        "da": "Ring for åbningstider."
       },
       "small_animals": true,
       "url": "https://chavatdaat.co.il/beer-sheva",
@@ -196,7 +202,8 @@
         "nl": "Bel voor de openingstijden.",
         "pl": "Zadzwoń, by poznać godziny otwarcia.",
         "cs": "Otevírací dobu zjistíte telefonicky.",
-        "sv": "Ring för att få veta öppettiderna."
+        "sv": "Ring för att få veta öppettiderna.",
+        "da": "Ring for åbningstider."
       },
       "small_animals": true,
       "url": "https://chavatdaat.co.il/kiryat-motzkin",
@@ -221,7 +228,8 @@
         "nl": "Zo–wo 9.00–19.00 uur; do, vr en za 24 uur per dag open. Spoedlijn met dienstdoende dierenarts: +972 52 978 7882.",
         "pl": "Niedz.–śr. 9:00–19:00; czw., pt. i sob. otwarte całą dobę. Linia alarmowa z weterynarzem dyżurnym: +972 52 978 7882.",
         "cs": "Ne–St 9:00–19:00; Čt, Pá a so otevřeno nonstop. Pohotovostní linka s veterinářem ve službě: +972 52 978 7882.",
-        "sv": "Sön–ons 9–19; tors, fre och lör öppet dygnet runt. Akutlinje med jourhavande veterinär: +972 52 978 7882."
+        "sv": "Sön–ons 9–19; tors, fre och lör öppet dygnet runt. Akutlinje med jourhavande veterinär: +972 52 978 7882.",
+        "da": "Søn–ons 9.00–19.00; tors, fre og lør døgnåbent. Akuttelefon med vagthavende dyrlæge: +972 52 978 7882."
       },
       "small_animals": true,
       "url": "https://www.moriahvc.co.il/",
@@ -246,7 +254,8 @@
         "nl": "Dierenziekenhuis 24 uur per dag open, ook in het weekend en op feestdagen. Spoedlijn +972 52 473 9482.",
         "pl": "Szpital dla zwierząt otwarty całą dobę, także w weekendy i święta. Linia alarmowa +972 52 473 9482.",
         "cs": "Zvířecí nemocnice otevřená nonstop, včetně víkendů a svátků. Pohotovostní linka +972 52 473 9482.",
-        "sv": "Djursjukhus öppet dygnet runt, även helger och helgdagar. Akutlinje +972 52 473 9482."
+        "sv": "Djursjukhus öppet dygnet runt, även helger och helgdagar. Akutlinje +972 52 473 9482.",
+        "da": "Dyrehospital åbent døgnet rundt, også i weekender og på helligdage. Akuttelefon +972 52 473 9482."
       },
       "small_animals": true,
       "url": "https://www.drlevanon.com/24-%D7%A9%D7%A2%D7%95%D7%AA-%D7%9C%D7%97%D7%99%D7%95%D7%AA/",
@@ -271,7 +280,8 @@
         "nl": "24 uur per dag open, 7 dagen per week, ook op vrijdag, zaterdag en feestdagen; bij spoed geen afspraak nodig.",
         "pl": "Otwarte 24 godziny na dobę, 7 dni w tygodniu, także w piątek, sobotę i święta; w nagłych przypadkach bez umawiania.",
         "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně pátku, soboty a svátků; pohotovost bez objednání.",
-        "sv": "Öppet dygnet runt, alla veckans dagar, även fredag, lördag och helgdagar; ingen tidsbokning behövs vid akutfall."
+        "sv": "Öppet dygnet runt, alla veckans dagar, även fredag, lördag och helgdagar; ingen tidsbokning behövs vid akutfall.",
+        "da": "Åbent døgnet rundt, alle ugens dage, også fredag, lørdag og helligdage; akutte tilfælde uden tidsbestilling."
       },
       "small_animals": true,
       "url": "https://www.doctorvet.co.il/services/veterinarian-on-call/",
@@ -296,7 +306,8 @@
         "nl": "Spoeddierenarts 24 uur per dag beschikbaar, ook op sjabbat en feestdagen: +972 72 279 1610. Andere vestigingen: Kfar Saba +972 72 279 1608, Kfar Shmaryahu +972 50 649 3693, Tzur Yigal +972 72 279 1609.",
         "pl": "Weterynarz pogotowia dostępny 24 godziny na dobę, także w szabat i święta: +972 72 279 1610. Inne oddziały: Kfar Saba +972 72 279 1608, Kfar Shmaryahu +972 50 649 3693, Tzur Yigal +972 72 279 1609.",
         "cs": "Pohotovostní veterinář k dispozici nonstop včetně šabatu a svátků: +972 72 279 1610. Další pobočky: Kfar Saba +972 72 279 1608, Kfar Shmaryahu +972 50 649 3693, Tzur Yigal +972 72 279 1609.",
-        "sv": "Akutveterinär tillgänglig dygnet runt, även sabbat och helgdagar: +972 72 279 1610. Övriga filialer: Kfar Saba +972 72 279 1608, Kfar Shmaryahu +972 50 649 3693, Tzur Yigal +972 72 279 1609."
+        "sv": "Akutveterinär tillgänglig dygnet runt, även sabbat och helgdagar: +972 72 279 1610. Övriga filialer: Kfar Saba +972 72 279 1608, Kfar Shmaryahu +972 50 649 3693, Tzur Yigal +972 72 279 1609.",
+        "da": "Akut dyrlæge døgnet rundt, også på sabbat og helligdage: +972 72 279 1610. Andre afdelinger: Kfar Saba +972 72 279 1608, Kfar Shmaryahu +972 50 649 3693, Tzur Yigal +972 72 279 1609."
       },
       "small_animals": true,
       "url": "https://petholim.co.il/",
@@ -321,7 +332,8 @@
         "nl": "Zo–do 9.00–13.00 en 16.00–20.00 uur, vr 9.00–13.00 uur. Spoeddienst in Be'er Sheva en omgeving 24 uur per dag, ook op zaterdag en feestdagen: +972 50 754 5907.",
         "pl": "Niedz.–czw. 9:00–13:00 i 16:00–20:00, pt. 9:00–13:00. Pogotowie weterynaryjne w Be'er Sheva i okolicach całodobowo, także w soboty i święta: +972 50 754 5907.",
         "cs": "Ne–Čt 9:00–13:00 a 16:00–20:00, Pá 9:00–13:00. Pohotovostní služba v Be'er Sheva a okolí nonstop, včetně sobot a svátků: +972 50 754 5907.",
-        "sv": "Sön–tors 9–13 och 16–20, fre 9–13. Akutservice i Be'er Sheva med omnejd dygnet runt, även lördagar och helgdagar: +972 50 754 5907."
+        "sv": "Sön–tors 9–13 och 16–20, fre 9–13. Akutservice i Be'er Sheva med omnejd dygnet runt, även lördagar och helgdagar: +972 50 754 5907.",
+        "da": "Søn–tors 9.00–13.00 og 16.00–20.00, fre 9.00–13.00. Akutberedskab i Be'er Sheva og omegn døgnet rundt, også lørdage og helligdage: +972 50 754 5907."
       },
       "small_animals": true,
       "url": "https://www.sherman-vet.co.il/",
@@ -346,7 +358,8 @@
         "nl": "Zo–do 9.00–13.00 en 16.00–20.00 uur, vr 9.00–14.00 uur; buiten deze uren neemt de spoedlijn (hetzelfde nummer) op; sjabbat en feestdagen na telefonische afspraak.",
         "pl": "Niedz.–czw. 9:00–13:00 i 16:00–20:00, pt. 9:00–14:00; poza tymi godzinami odpowiada linia alarmowa (ten sam numer); szabat i święta po uzgodnieniu telefonicznym.",
         "cs": "Ne–Čt 9:00–13:00 a 16:00–20:00, Pá 9:00–14:00; mimo tuto dobu odpovídá pohotovostní linka (stejné číslo); šabat a svátky po telefonické domluvě.",
-        "sv": "Sön–tors 9–13 och 16–20, fre 9–14; utanför dessa tider svarar akutlinjen (samma nummer); sabbat och helgdagar efter överenskommelse per telefon."
+        "sv": "Sön–tors 9–13 och 16–20, fre 9–14; utanför dessa tider svarar akutlinjen (samma nummer); sabbat och helgdagar efter överenskommelse per telefon.",
+        "da": "Søn–tors 9.00–13.00 og 16.00–20.00, fre 9.00–14.00; uden for disse tider besvares akuttelefonen (samme nummer); sabbat og helligdage efter telefonisk aftale."
       },
       "small_animals": true,
       "url": "https://www.vet4pet.org.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-24-%D7%A9%D7%A2%D7%95%D7%AA-%D7%91%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%9C%D7%A6%D7%99%D7%95%D7%9F/",
@@ -371,7 +384,8 @@
         "nl": "Zo–do 9.00–20.30 uur, vr en feestdagen 9.00–14.00 uur; medisch team naar eigen zeggen 24/7 beschikbaar. Spoed: +972 52 464 6869.",
         "pl": "Niedz.–czw. 9:00–20:30, pt. i święta 9:00–14:00; zespół lekarski podobno dostępny całą dobę. Nagłe przypadki: +972 52 464 6869.",
         "cs": "Ne–Čt 9:00–20:30, Pá a svátky 9:00–14:00; zdravotnický tým je údajně k dispozici nonstop. Pohotovost: +972 52 464 6869.",
-        "sv": "Sön–tors 9–20.30, fre och helgdagar 9–14; medicinsk personal uppges vara tillgänglig dygnet runt. Akut: +972 52 464 6869."
+        "sv": "Sön–tors 9–20.30, fre och helgdagar 9–14; medicinsk personal uppges vara tillgänglig dygnet runt. Akut: +972 52 464 6869.",
+        "da": "Søn–tors 9.00–20.30, fre og helligdage 9.00–14.00; lægeteamet oplyses at være tilgængeligt døgnet rundt. Akut: +972 52 464 6869."
       },
       "small_animals": true,
       "url": "https://ahavat-hai.co.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%9C%D7%A6%D7%99%D7%95%D7%9F-%D7%90%D7%94%D7%91%D7%AA-%D7%94%D7%97%D7%99-%D7%9E%D7%A2%D7%A0/",
@@ -396,7 +410,8 @@
         "nl": "Spoedlijn en dienstdoende dierenarts 24/7 beschikbaar, ook 's nachts en in het weekend; bel vooraf. Mobiel +972 52 450 4856.",
         "pl": "Linia alarmowa i weterynarz dyżurny dostępni całą dobę, także w nocy i w weekendy; zadzwoń wcześniej. Komórka +972 52 450 4856.",
         "cs": "Pohotovostní telefonní linka a veterinář ve službě nonstop, včetně nocí a víkendů; před cestou zavolejte. Mobil +972 52 450 4856.",
-        "sv": "Akuttelefon och jourhavande veterinär tillgängliga dygnet runt, även nätter och helger; ring innan du kommer. Mobil +972 52 450 4856."
+        "sv": "Akuttelefon och jourhavande veterinär tillgängliga dygnet runt, även nätter och helger; ring innan du kommer. Mobil +972 52 450 4856.",
+        "da": "Akuttelefon og vagthavende dyrlæge døgnet rundt, også om natten og i weekenden; ring på forhånd. Mobil +972 52 450 4856."
       },
       "small_animals": true,
       "url": "https://www.dr-uri.co.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%9C%D7%A6%D7%99%D7%95%D7%9F/",
@@ -421,7 +436,8 @@
         "nl": "Zo–do 10.00–12.00 en 16.30–19.30 uur, vr en de dag voor feestdagen 9.00–13.00 uur. Telefonisch 24 uur per dag bereikbaar; spoedlijn +972 54 472 8711.",
         "pl": "Niedz.–czw. 10:00–12:00 i 16:30–19:30, pt. i w wigilie świąt 9:00–13:00. Telefon dostępny całą dobę; linia alarmowa +972 54 472 8711.",
         "cs": "Ne–Čt 10:00–12:00 a 16:30–19:30, Pá a předvečer svátků 9:00–13:00. Telefon k dispozici nonstop; pohotovostní linka +972 54 472 8711.",
-        "sv": "Sön–tors 10–12 och 16.30–19.30, fre och dagar före helgdagar 9–13. Telefonen är bemannad dygnet runt; akutlinje +972 54 472 8711."
+        "sv": "Sön–tors 10–12 och 16.30–19.30, fre och dagar före helgdagar 9–13. Telefonen är bemannad dygnet runt; akutlinje +972 54 472 8711.",
+        "da": "Søn–tors 10.00–12.00 og 16.30–19.30, fre og dage før helligdage 9.00–13.00. Telefonen er åben døgnet rundt; akuttelefon +972 54 472 8711."
       },
       "small_animals": true,
       "url": "https://vetericar.co.il/%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8-%D7%AA%D7%95%D7%A8%D7%9F/",
@@ -446,7 +462,8 @@
         "nl": "Voor spoed 24 uur per dag, 7 dagen per week beschikbaar.",
         "pl": "Dostępne w nagłych przypadkach 24 godziny na dobę, 7 dni w tygodniu.",
         "cs": "K dispozici pro pohotovosti nonstop, 7 dní v týdnu.",
-        "sv": "Tillgänglig för akutfall dygnet runt, alla veckans dagar."
+        "sv": "Tillgänglig för akutfall dygnet runt, alla veckans dagar.",
+        "da": "Tilgængelig ved akutte tilfælde døgnet rundt, alle ugens dage."
       },
       "small_animals": true,
       "url": "https://www.ashdodvet.co.il/contact.asp",
@@ -471,7 +488,8 @@
         "nl": "Zo–do 9.00–13.00 en 16.00–21.00 uur, vr en de dag voor feestdagen 9.30–15.00 uur. Spoeddienst tot middernacht: +972 53 680 8788.",
         "pl": "Niedz.–czw. 9:00–13:00 i 16:00–21:00, pt. i w wigilie świąt 9:30–15:00. Pogotowie weterynaryjne do północy: +972 53 680 8788.",
         "cs": "Ne–Čt 9:00–13:00 a 16:00–21:00, Pá a předvečer svátků 9:30–15:00. Pohotovostní služba do půlnoci: +972 53 680 8788.",
-        "sv": "Sön–tors 9–13 och 16–21, fre och dagar före helgdagar 9.30–15. Akutservice till midnatt: +972 53 680 8788."
+        "sv": "Sön–tors 9–13 och 16–21, fre och dagar före helgdagar 9.30–15. Akutservice till midnatt: +972 53 680 8788.",
+        "da": "Søn–tors 9.00–13.00 og 16.00–21.00, fre og dage før helligdage 9.30–15.00. Akutberedskab til midnat: +972 53 680 8788."
       },
       "small_animals": true,
       "url": "https://www.animalcenter.co.il/",
@@ -496,7 +514,8 @@
         "nl": "Zo–do 9.00–13.00 en 17.00–20.00 uur, vr 9.00–13.00 uur. Spoedhulp 24 uur per dag.",
         "pl": "Niedz.–czw. 9:00–13:00 i 17:00–20:00, pt. 9:00–13:00. Pomoc w nagłych przypadkach całodobowo.",
         "cs": "Ne–Čt 9:00–13:00 a 17:00–20:00, Pá 9:00–13:00. Pohotovostní pomoc nonstop.",
-        "sv": "Sön–tors 9–13 och 17–20, fre 9–13. Akutberedskap dygnet runt."
+        "sv": "Sön–tors 9–13 och 17–20, fre 9–13. Akutberedskap dygnet runt.",
+        "da": "Søn–tors 9.00–13.00 og 17.00–20.00, fre 9.00–13.00. Akut hjælp døgnet rundt."
       },
       "small_animals": true,
       "url": "https://veteilatclinic.wixsite.com/elad-ravid",
@@ -521,7 +540,8 @@
         "nl": "Zo–do 9.00–13.00 en 16.00–20.00 uur, vr 9.00–14.00 uur. Spoedlijn: +972 52 823 5947.",
         "pl": "Niedz.–czw. 9:00–13:00 i 16:00–20:00, pt. 9:00–14:00. Linia alarmowa: +972 52 823 5947.",
         "cs": "Ne–Čt 9:00–13:00 a 16:00–20:00, Pá 9:00–14:00. Pohotovostní linka: +972 52 823 5947.",
-        "sv": "Sön–tors 9–13 och 16–20, fre 9–14. Akutlinje: +972 52 823 5947."
+        "sv": "Sön–tors 9–13 och 16–20, fre 9–14. Akutlinje: +972 52 823 5947.",
+        "da": "Søn–tors 9.00–13.00 og 16.00–20.00, fre 9.00–14.00. Akuttelefon: +972 52 823 5947."
       },
       "small_animals": true,
       "url": "https://polegvet.co.il/%D7%9E%D7%A8%D7%A4%D7%90%D7%AA-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8%D7%99%D7%AA/",
@@ -546,7 +566,8 @@
         "nl": "Zo–do 10.00–12.30 en 16.30–20.00 uur, vr 10.00–15.00 uur, za gesloten. Buiten de openingstijden zijn de dierenartsen 24 uur per dag bereikbaar voor dringende gevallen (de praktijk is niet 24/7 open).",
         "pl": "Niedz.–czw. 10:00–12:30 i 16:30–20:00, pt. 10:00–15:00, sob. nieczynne. Weterynarze dostępni całą dobę w pilnych przypadkach poza godzinami otwarcia (przychodnia nie jest czynna całodobowo).",
         "cs": "Ne–Čt 10:00–12:30 a 16:30–20:00, Pá 10:00–15:00, so zavřeno. Veterináři jsou mimo ordinační dobu k zastižení nonstop pro naléhavé případy (klinika nemá nonstop provoz).",
-        "sv": "Sön–tors 10–12.30 och 16.30–20, fre 10–15, lör stängt. Veterinärer nås dygnet runt vid brådskande fall utanför öppettiderna (kliniken har inte öppet dygnet runt)."
+        "sv": "Sön–tors 10–12.30 och 16.30–20, fre 10–15, lör stängt. Veterinärer nås dygnet runt vid brådskande fall utanför öppettiderna (kliniken har inte öppet dygnet runt).",
+        "da": "Søn–tors 10.00–12.30 og 16.30–20.00, fre 10.00–15.00, lør lukket. Dyrlæger kan kontaktes døgnet rundt ved akutte tilfælde uden for åbningstid (klinikken er ikke døgnåben)."
       },
       "small_animals": true,
       "url": "https://www.vet-center.co.il/",
@@ -571,7 +592,8 @@
         "nl": "Zo–do 9.00–19.00 uur, vr 9.00–14.00 uur. Spoedlijn voor klanten: +972 52 340 3020; 24-uursopname voor patiënten onder toezicht.",
         "pl": "Niedz.–czw. 9:00–19:00, pt. 9:00–14:00. Linia alarmowa dla klientów: +972 52 340 3020; całodobowa hospitalizacja pacjentów pod nadzorem.",
         "cs": "Ne–Čt 9:00–19:00, Pá 9:00–14:00. Pohotovostní linka pro klienty: +972 52 340 3020; nonstop hospitalizace pro sledované pacienty.",
-        "sv": "Sön–tors 9–19, fre 9–14. Akutlinje för kunder: +972 52 340 3020; sjukhusvård dygnet runt för patienter under övervakning."
+        "sv": "Sön–tors 9–19, fre 9–14. Akutlinje för kunder: +972 52 340 3020; sjukhusvård dygnet runt för patienter under övervakning.",
+        "da": "Søn–tors 9.00–19.00, fre 9.00–14.00. Akuttelefon for kunder: +972 52 340 3020; indlæggelse døgnet rundt for overvågede patienter."
       },
       "small_animals": true,
       "url": "https://www.iritvet.co.il/english/",
@@ -596,7 +618,8 @@
         "nl": "Zo–do 8.30–20.00 uur, vr en de dag voor feestdagen 8.30–14.00 uur; za en op feestdagen spoed voor patiënten van de praktijk: +972 54 220 9447.",
         "pl": "Niedz.–czw. 8:30–20:00, pt. i w wigilie świąt 8:30–14:00; w soboty i święta nagłe przypadki dla pacjentów przychodni: +972 54 220 9447.",
         "cs": "Ne–Čt 8:30–20:00, Pá a předvečer svátků 8:30–14:00; v sobotu a o svátcích pohotovost pro pacienty kliniky: +972 54 220 9447.",
-        "sv": "Sön–tors 8.30–20, fre och dagar före helgdagar 8.30–14; lör och helgdagar akutfall för klinikens patienter: +972 54 220 9447."
+        "sv": "Sön–tors 8.30–20, fre och dagar före helgdagar 8.30–14; lör och helgdagar akutfall för klinikens patienter: +972 54 220 9447.",
+        "da": "Søn–tors 8.30–20.00, fre og dage før helligdage 8.30–14.00; lør og helligdage akut for klinikkens patienter: +972 54 220 9447."
       },
       "small_animals": true,
       "url": "https://www.haiviva.co.il/english",
@@ -621,7 +644,8 @@
         "nl": "Za–do 10.00–19.00 uur; achterwacht voor spoed buiten openingstijden.",
         "pl": "Sobota–czwartek 10:00–19:00; dyżur w nagłych przypadkach poza godzinami pracy.",
         "cs": "So–Čt 10:00–19:00; mimo pracovní dobu pohotovost na zavolání.",
-        "sv": "Lör–tors 10–19; jour för akutfall utanför arbetstid."
+        "sv": "Lör–tors 10–19; jour för akutfall utanför arbetstid.",
+        "da": "Lør–tors 10.00–19.00; akutvagt uden for åbningstid."
       },
       "small_animals": true,
       "url": "https://vetdogtor.com/",
@@ -646,7 +670,8 @@
         "nl": "Zo–do 8.00–20.00 uur, vr 8.00–14.00 uur.",
         "pl": "Niedz.–czw. 8:00–20:00, pt. 8:00–14:00.",
         "cs": "Ne–Čt 8:00–20:00, Pá 8:00–14:00.",
-        "sv": "Sön–tors 8–20, fre 8–14."
+        "sv": "Sön–tors 8–20, fre 8–14.",
+        "da": "Søn–tors 8.00–20.00, fre 8.00–14.00."
       },
       "small_animals": true,
       "url": "https://vets4life.co.il/poison/",
@@ -671,7 +696,8 @@
         "nl": "Bel voor de openingstijden.",
         "pl": "Zadzwoń, by poznać godziny otwarcia.",
         "cs": "Otevírací dobu zjistíte telefonicky.",
-        "sv": "Ring för att få veta öppettiderna."
+        "sv": "Ring för att få veta öppettiderna.",
+        "da": "Ring for åbningstider."
       },
       "small_animals": true,
       "url": "https://www.animalhospital.co.il/vet-tlv",
@@ -696,7 +722,8 @@
         "nl": "Spoeddierenarts, naar eigen zeggen 24 uur per dag, 7 dagen per week beschikbaar, ook op sjabbat en feestdagen; actief in Tel Aviv, Kfar Saba, Petah Tikva, Holon, Bat Yam, Netanya en de Sharon. WhatsApp +972 50 385 8100.",
         "pl": "Pogotowie weterynaryjne podobno czynne 24 godziny na dobę, 7 dni w tygodniu, także w szabat i święta; obejmuje Tel Awiw, Kfar Saba, Petah Tikva, Holon, Bat Yam, Netanya i Szaron. WhatsApp +972 50 385 8100.",
         "cs": "Veterinární pohotovost údajně otevřená nonstop, 7 dní v týdnu včetně šabatu a svátků; pokrývá Tel Aviv, Kfar Saba, Petah Tikva, Holon, Bat Yam, Netanya a Sharon. WhatsApp +972 50 385 8100.",
-        "sv": "Akutveterinärtjänst uppges ha öppet dygnet runt, alla veckans dagar, även sabbat och helgdagar; täcker Tel Aviv, Kfar Saba, Petah Tikva, Holon, Bat Yam, Netanya och Sharon. WhatsApp +972 50 385 8100."
+        "sv": "Akutveterinärtjänst uppges ha öppet dygnet runt, alla veckans dagar, även sabbat och helgdagar; täcker Tel Aviv, Kfar Saba, Petah Tikva, Holon, Bat Yam, Netanya och Sharon. WhatsApp +972 50 385 8100.",
+        "da": "Akut dyrlægehjælp oplyses at være åben døgnet rundt, alle ugens dage, også sabbat og helligdage; dækker Tel Aviv, Kfar Saba, Petah Tikva, Holon, Bat Yam, Netanya og Sharon. WhatsApp +972 50 385 8100."
       },
       "small_animals": true,
       "url": "https://vetadom.co.il/",
@@ -725,7 +752,8 @@
         "nl": "Spoedlijn naar eigen zeggen 24/7 bereikbaar. Tweede vestiging Kikar HaMedina (5 Iyar St. 64): +972 3 544 3352.",
         "pl": "Telefon alarmowy podobno dostępny całą dobę. Drugi oddział Kikar HaMedina (5 Iyar St. 64): +972 3 544 3352.",
         "cs": "Pohotovostní telefonní linka údajně k dispozici nonstop. Druhá pobočka Kikar HaMedina (5 Iyar St. 64): +972 3 544 3352.",
-        "sv": "Akuttelefonlinje uppges vara tillgänglig dygnet runt. Andra filialen Kikar HaMedina (5 Iyar St. 64): +972 3 544 3352."
+        "sv": "Akuttelefonlinje uppges vara tillgänglig dygnet runt. Andra filialen Kikar HaMedina (5 Iyar St. 64): +972 3 544 3352.",
+        "da": "Akuttelefon oplyses at være åben døgnet rundt. Anden afdeling Kikar HaMedina (5 Iyar St. 64): +972 3 544 3352."
       }
     },
     {
@@ -745,7 +773,8 @@
         "nl": "Zo 12.00–14.00 uur, ma en di 16.00–21.30 uur, wo gesloten, do 16.00–21.30 uur, vr 10.00–13.00 uur.",
         "pl": "Niedz. 12:00–14:00, pon. i wt. 16:00–21:30, śr. nieczynne, czw. 16:00–21:30, pt. 10:00–13:00.",
         "cs": "Ne 12:00–14:00, Po a Út 16:00–21:30, St zavřeno, Čt 16:00–21:30, Pá 10:00–13:00.",
-        "sv": "Sön 12–14, mån och tis 16–21.30, ons stängt, tors 16–21.30, fre 10–13."
+        "sv": "Sön 12–14, mån och tis 16–21.30, ons stängt, tors 16–21.30, fre 10–13.",
+        "da": "Søn 12.00–14.00, man og tirs 16.00–21.30, ons lukket, tors 16.00–21.30, fre 10.00–13.00."
       },
       "small_animals": true,
       "url": "https://24-7vet.co.il/?lang=en",
@@ -770,7 +799,8 @@
         "nl": "Zeven dagen per week open voor publiek, tijdens openingstijden zonder afspraak. Afspraken voor operaties: *4553 of +972 3 513 6500.",
         "pl": "Otwarte dla klientów siedem dni w tygodniu, w godzinach otwarcia bez umawiania. Zabiegi chirurgiczne po wcześniejszym umówieniu: *4553 lub +972 3 513 6500.",
         "cs": "Otevřeno pro veřejnost sedm dní v týdnu, v ordinační dobu bez objednání. Objednání na operace: *4553 nebo +972 3 513 6500.",
-        "sv": "Öppet för allmänheten sju dagar i veckan, ingen tidsbokning behövs under öppettiderna. Tidsbokning för operationer: *4553 eller +972 3 513 6500."
+        "sv": "Öppet för allmänheten sju dagar i veckan, ingen tidsbokning behövs under öppettiderna. Tidsbokning för operationer: *4553 eller +972 3 513 6500.",
+        "da": "Åbent for alle syv dage om ugen, ingen tidsbestilling nødvendig i åbningstiden. Tidsbestilling til operationer: *4553 eller +972 3 513 6500."
       },
       "small_animals": true,
       "url": "https://spca.co.il/clinic/",
@@ -795,7 +825,8 @@
         "nl": "Zo–do 7.00–21.00 uur, vr 7.00–16.00 uur; za 24 uur per dag, alleen voor spoed. Spoedeisende dierenartshulp 24 uur per dag in de centrale regio.",
         "pl": "Niedz.–czw. 7:00–21:00, pt. 7:00–16:00; w sobotę całodobowo tylko w nagłych przypadkach. Pilna pomoc weterynaryjna całodobowo w całym regionie centralnym.",
         "cs": "Ne–Čt 7:00–21:00, Pá 7:00–16:00; v sobotu nonstop pouze pro pohotovosti. Naléhavá veterinární služba nonstop v celém středním regionu.",
-        "sv": "Sön–tors 7–21, fre 7–16; lördag dygnet runt endast för akutfall. Brådskande veterinärservice dygnet runt i hela centrala regionen."
+        "sv": "Sön–tors 7–21, fre 7–16; lördag dygnet runt endast för akutfall. Brådskande veterinärservice dygnet runt i hela centrala regionen.",
+        "da": "Søn–tors 7.00–21.00, fre 7.00–16.00; lørdag døgnåbent kun til akutte tilfælde. Akut dyrlægehjælp døgnet rundt i hele den centrale region."
       },
       "small_animals": true,
       "url": "https://xn--4dbcanpgcv9a8ecy.com/",
@@ -820,7 +851,8 @@
         "nl": "Zo–do 8.30–20.30 uur, vr 8.30–14.00 uur. Voor spoed 24 uur per dag bereikbaar; dringende oproepen buiten kantooruren: +972 3 932 6261.",
         "pl": "Niedz.–czw. 8:30–20:30, pt. 8:30–14:00. Dostępne w nagłych przypadkach całą dobę; pilne telefony poza godzinami pracy: +972 3 932 6261.",
         "cs": "Ne–Čt 8:30–20:30, Pá 8:30–14:00. K dispozici nonstop pro pohotovosti; naléhavé hovory mimo pracovní dobu: +972 3 932 6261.",
-        "sv": "Sön–tors 8.30–20.30, fre 8.30–14. Tillgänglig dygnet runt för akutfall; brådskande samtal utanför öppettiderna: +972 3 932 6261."
+        "sv": "Sön–tors 8.30–20.30, fre 8.30–14. Tillgänglig dygnet runt för akutfall; brådskande samtal utanför öppettiderna: +972 3 932 6261.",
+        "da": "Søn–tors 8.30–20.30, fre 8.30–14.00. Tilgængelig døgnet rundt ved akutte tilfælde; hastende opkald uden for åbningstid: +972 3 932 6261."
       },
       "small_animals": true,
       "url": "https://www.dr-avi-sarfati.biz/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99-%D7%94%D7%9E%D7%A8%D7%A4%D7%90%D7%94/",
@@ -849,7 +881,8 @@
         "nl": "Spoednummer, 24 uur per dag bereikbaar: +972 55 884 6840.",
         "pl": "Numer alarmowy odbierany całą dobę: +972 55 884 6840.",
         "cs": "Pohotovostní číslo nonstop: +972 55 884 6840.",
-        "sv": "Akutnummer som svarar dygnet runt: +972 55 884 6840."
+        "sv": "Akutnummer som svarar dygnet runt: +972 55 884 6840.",
+        "da": "Akutnummer besvaret døgnet rundt: +972 55 884 6840."
       }
     },
     {
@@ -869,7 +902,8 @@
         "nl": "Zo–do 9.00–20.00 uur, vr 9.00–14.00 uur; spoed naar eigen zeggen 24 uur per dag mogelijk.",
         "pl": "Niedz.–czw. 9:00–20:00, pt. 9:00–14:00; nagłe przypadki podobno całodobowo.",
         "cs": "Ne–Čt 9:00–20:00, Pá 9:00–14:00; pohotovost údajně nonstop.",
-        "sv": "Sön–tors 9–20, fre 9–14; akutfall uppges vara tillgängliga dygnet runt."
+        "sv": "Sön–tors 9–20, fre 9–14; akutfall uppges vara tillgängliga dygnet runt.",
+        "da": "Søn–tors 9.00–20.00, fre 9.00–14.00; akut oplyses at være tilgængeligt døgnet rundt."
       },
       "small_animals": true,
       "url": "https://www.vethadarim.co.il/",
@@ -894,7 +928,8 @@
         "nl": "Zo–do 9.00–12.00 en 17.00–19.00 uur, vr en de dag voor feestdagen 9.00–12.00 uur. Vestigingen in Avihayil en Kfar Yedidya op afspraak.",
         "pl": "Niedz.–czw. 9:00–12:00 i 17:00–19:00, pt. i w wigilie świąt 9:00–12:00. Oddziały w Avihayil i Kfar Yedidya po wcześniejszym umówieniu.",
         "cs": "Ne–Čt 9:00–12:00 a 17:00–19:00, Pá a předvečer svátků 9:00–12:00. Pobočky Avihayil a Kfar Yedidya na objednání.",
-        "sv": "Sön–tors 9–12 och 17–19, fre och dagar före helgdagar 9–12. Filialerna i Avihayil och Kfar Yedidya efter tidsbokning."
+        "sv": "Sön–tors 9–12 och 17–19, fre och dagar före helgdagar 9–12. Filialerna i Avihayil och Kfar Yedidya efter tidsbokning.",
+        "da": "Søn–tors 9.00–12.00 og 17.00–19.00, fre og dage før helligdage 9.00–12.00. Afdelinger i Avihayil og Kfar Yedidya efter aftale."
       },
       "small_animals": true,
       "url": "https://www.hostpetall.co.il/%D7%90%D7%95%D7%93%D7%95%D7%AA",
@@ -919,7 +954,8 @@
         "nl": "Zo en di–do 9.00–19.30 uur, ma 9.00–20.00 uur, vr en de dag voor feestdagen 9.00–14.00 uur. Spoednummer: +972 52 392 8243.",
         "pl": "Niedz., wt.–czw. 9:00–19:30, pon. 9:00–20:00, pt. i w wigilie świąt 9:00–14:00. Telefon alarmowy: +972 52 392 8243.",
         "cs": "Ne, Út–Čt 9:00–19:30, Po 9:00–20:00, Pá a předvečer svátků 9:00–14:00. Pohotovostní telefon: +972 52 392 8243.",
-        "sv": "Sön, tis–tors 9–19.30, mån 9–20, fre och dagar före helgdagar 9–14. Akuttelefon: +972 52 392 8243."
+        "sv": "Sön, tis–tors 9–19.30, mån 9–20, fre och dagar före helgdagar 9–14. Akuttelefon: +972 52 392 8243.",
+        "da": "Søn, tirs–tors 9.00–19.30, man 9.00–20.00, fre og dage før helligdage 9.00–14.00. Akuttelefon: +972 52 392 8243."
       },
       "small_animals": true,
       "url": "https://www.pinathachay.co.il/",
@@ -948,7 +984,8 @@
         "nl": "WhatsApp +972 50 912 8363.",
         "pl": "WhatsApp +972 50 912 8363.",
         "cs": "WhatsApp +972 50 912 8363.",
-        "sv": "WhatsApp +972 50 912 8363."
+        "sv": "WhatsApp +972 50 912 8363.",
+        "da": "WhatsApp +972 50 912 8363."
       }
     },
     {
@@ -972,7 +1009,8 @@
         "nl": "Spoedbehandeling 24/7, ook op feestdagen en in het weekend; spoednummer +972 54 302 3036.",
         "pl": "Pomoc w nagłych przypadkach całodobowo, także w święta i weekendy; telefon alarmowy +972 54 302 3036.",
         "cs": "Pohotovostní ošetření nonstop včetně svátků a víkendů; pohotovostní telefon +972 54 302 3036.",
-        "sv": "Akutbehandling dygnet runt, även helgdagar och helger; akuttelefon +972 54 302 3036."
+        "sv": "Akutbehandling dygnet runt, även helgdagar och helger; akuttelefon +972 54 302 3036.",
+        "da": "Akut behandling døgnet rundt, også på helligdage og i weekender; akuttelefon +972 54 302 3036."
       }
     },
     {
@@ -992,7 +1030,8 @@
         "nl": "Zo 10.00–12.00 en 17.00–19.00 uur, ma 17.00–19.00 uur, di 10.00–12.00 uur, wo 17.00–19.00 uur, do 10.00–12.00 en 17.00–19.00 uur, vr 10.00–13.30 uur.",
         "pl": "Niedz. 10:00–12:00 i 17:00–19:00, pon. 17:00–19:00, wt. 10:00–12:00, śr. 17:00–19:00, czw. 10:00–12:00 i 17:00–19:00, pt. 10:00–13:30.",
         "cs": "Ne 10:00–12:00 a 17:00–19:00, Po 17:00–19:00, Út 10:00–12:00, St 17:00–19:00, Čt 10:00–12:00 a 17:00–19:00, Pá 10:00–13:30.",
-        "sv": "Sön 10–12 och 17–19, mån 17–19, tis 10–12, ons 17–19, tors 10–12 och 17–19, fre 10–13.30."
+        "sv": "Sön 10–12 och 17–19, mån 17–19, tis 10–12, ons 17–19, tors 10–12 och 17–19, fre 10–13.30.",
+        "da": "Søn 10.00–12.00 og 17.00–19.00, man 17.00–19.00, tirs 10.00–12.00, ons 17.00–19.00, tors 10.00–12.00 og 17.00–19.00, fre 10.00–13.30."
       },
       "small_animals": true,
       "url": "https://www.vetmarket.co.il/clinics/%D7%97%D7%A0%D7%94-%D7%94%D7%A8%D7%A9%D7%A7%D7%95-%D7%9E%D7%A8%D7%A4%D7%90%D7%94-%D7%95%D7%98%D7%A8%D7%99%D7%A0%D7%A8%D7%99%D7%AA",
@@ -1017,7 +1056,8 @@
         "nl": "Openingstijden tijdens proefperiode: zo–do 9.00–24.00 uur, vr 8.00–14.00 uur, za alleen op afspraak. Bedient Ashkelon, Ashdod, Kiryat Malachi en de regio rond Gaza. Bel vooraf.",
         "pl": "Próbne godziny otwarcia: niedz.–czw. 9:00–24:00, pt. 8:00–14:00, sob. tylko po wcześniejszym umówieniu. Obsługuje Aszkelon, Aszdod, Kiryat Malachi i okolice Strefy Gazy. Najpierw zadzwoń.",
         "cs": "Zkušební otevírací doba: ne–Čt 9:00–24:00, Pá 8:00–14:00, so pouze na objednání. Obsluhuje Ashkelon, Ashdod, Kiryat Malachi a oblast kolem Gazy. Nejdřív zavolejte.",
-        "sv": "Öppettider under prövotid: sön–tors 9–24, fre 8–14, lör endast efter tidsbokning. Betjänar Ashkelon, Ashdod, Kiryat Malachi och Gazaremsans närområde. Ring först."
+        "sv": "Öppettider under prövotid: sön–tors 9–24, fre 8–14, lör endast efter tidsbokning. Betjänar Ashkelon, Ashdod, Kiryat Malachi och Gazaremsans närområde. Ring först.",
+        "da": "Åbningstid på prøve: søn–tors 9.00–24.00, fre 8.00–14.00, lør kun efter aftale. Betjener Ashkelon, Ashdod, Kiryat Malachi og Gaza-grænseområdet. Ring først."
       },
       "small_animals": true,
       "url": "https://bgvet.co.il/",
@@ -1046,7 +1086,8 @@
         "nl": "Spoedlijn: 1-700-722-200 toets 0.",
         "pl": "Linia alarmowa: 1-700-722-200 wewn. 0.",
         "cs": "Pohotovostní linka: 1-700-722-200, klapka 0.",
-        "sv": "Akutlinje: 1-700-722-200 anknytning 0."
+        "sv": "Akutlinje: 1-700-722-200 anknytning 0.",
+        "da": "Akuttelefon: 1-700-722-200 lokal 0."
       }
     },
     {
@@ -1066,7 +1107,8 @@
         "nl": "Zo–do 9.00–20.00 uur, vr 9.00–14.00 uur; op afspraak. Voor spoed zijn de artsen op elk uur van de dag telefonisch bereikbaar.",
         "pl": "Niedz.–czw. 9:00–20:00, pt. 9:00–14:00; umów wizytę wcześniej. Lekarze dostępni telefonicznie w nagłych przypadkach o każdej porze.",
         "cs": "Ne–Čt 9:00–20:00, Pá 9:00–14:00; objednejte se předem. Lékaři jsou pro pohotovosti telefonicky k zastižení v kteroukoli denní i noční dobu.",
-        "sv": "Sön–tors 9–20, fre 9–14; boka i förväg. Läkarna nås per telefon vid akutfall alla tider på dygnet."
+        "sv": "Sön–tors 9–20, fre 9–14; boka i förväg. Läkarna nås per telefon vid akutfall alla tider på dygnet.",
+        "da": "Søn–tors 9.00–20.00, fre 9.00–14.00; book på forhånd. Lægerne kan kontaktes telefonisk ved akutte tilfælde på alle tider af døgnet."
       },
       "small_animals": true,
       "url": "https://www.vethanasi.co.il/",
@@ -1091,7 +1133,8 @@
         "nl": "Zo–do 10.00–12.00 en 17.00–20.00 uur, vr en de dag voor feestdagen 10.00–13.00 uur; voor spoed naar eigen zeggen 24/7 bereikbaar.",
         "pl": "Niedz.–czw. 10:00–12:00 i 17:00–20:00, pt. i w wigilie świąt 10:00–13:00; podobno dostępne całą dobę w nagłych przypadkach.",
         "cs": "Ne–Čt 10:00–12:00 a 17:00–20:00, Pá a předvečer svátků 10:00–13:00; pro pohotovosti údajně k dispozici nonstop.",
-        "sv": "Sön–tors 10–12 och 17–20, fre och dagar före helgdagar 10–13; uppges vara tillgängliga dygnet runt vid akutfall."
+        "sv": "Sön–tors 10–12 och 17–20, fre och dagar före helgdagar 10–13; uppges vara tillgängliga dygnet runt vid akutfall.",
+        "da": "Søn–tors 10.00–12.00 og 17.00–20.00, fre og dage før helligdage 10.00–13.00; oplyses at være tilgængelig døgnet rundt ved akutte tilfælde."
       },
       "small_animals": true,
       "url": "https://www.alef-vet.com/",
@@ -1116,7 +1159,8 @@
         "nl": "Zo–do 10.00–19.00 uur, vr en de dag voor feestdagen 10.00–14.00 uur. Mobiel +972 50 761 9364.",
         "pl": "Niedz.–czw. 10:00–19:00, pt. i w wigilie świąt 10:00–14:00. Komórka +972 50 761 9364.",
         "cs": "Ne–Čt 10:00–19:00, Pá a předvečer svátků 10:00–14:00. Mobil +972 50 761 9364.",
-        "sv": "Sön–tors 10–19, fre och dagar före helgdagar 10–14. Mobil +972 50 761 9364."
+        "sv": "Sön–tors 10–19, fre och dagar före helgdagar 10–14. Mobil +972 50 761 9364.",
+        "da": "Søn–tors 10.00–19.00, fre og dage før helligdage 10.00–14.00. Mobil +972 50 761 9364."
       },
       "small_animals": true,
       "url": "https://www.nikivet.com/",
@@ -1141,7 +1185,8 @@
         "nl": "Zo–do 10.00–19.00 uur, vr 10.00–14.00 uur. Mobiel +972 52 261 2445.",
         "pl": "Niedz.–czw. 10:00–19:00, pt. 10:00–14:00. Komórka +972 52 261 2445.",
         "cs": "Ne–Čt 10:00–19:00, Pá 10:00–14:00. Mobil +972 52 261 2445.",
-        "sv": "Sön–tors 10–19, fre 10–14. Mobil +972 52 261 2445."
+        "sv": "Sön–tors 10–19, fre 10–14. Mobil +972 52 261 2445.",
+        "da": "Søn–tors 10.00–19.00, fre 10.00–14.00. Mobil +972 52 261 2445."
       },
       "small_animals": true,
       "url": "https://zdvet.co.il/",
@@ -1166,7 +1211,8 @@
         "nl": "Receptie 9.00–22.00 uur; spoedzorg 24 uur per dag, spoednummer +972 54 806 4848.",
         "pl": "Recepcja 9:00–22:00; całodobowe pogotowie weterynaryjne, telefon alarmowy +972 54 806 4848.",
         "cs": "Recepce 9:00–22:00; nonstop pohotovostní služba, pohotovostní telefon +972 54 806 4848.",
-        "sv": "Reception 9–22; akutservice dygnet runt, akuttelefon +972 54 806 4848."
+        "sv": "Reception 9–22; akutservice dygnet runt, akuttelefon +972 54 806 4848.",
+        "da": "Reception 9.00–22.00; akutberedskab døgnet rundt, akuttelefon +972 54 806 4848."
       },
       "small_animals": true,
       "url": "https://www.zaarbh.info/",
@@ -1191,7 +1237,8 @@
         "nl": "Zo–do 9.00–13.00 en 16.00–19.00 uur; spoedlijn 24/7: +972 52 370 0076.",
         "pl": "Niedz.–czw. 9:00–13:00 i 16:00–19:00; całodobowa linia alarmowa: +972 52 370 0076.",
         "cs": "Ne–Čt 9:00–13:00 a 16:00–19:00; pohotovostní linka nonstop: +972 52 370 0076.",
-        "sv": "Sön–tors 9–13 och 16–19; akutlinje dygnet runt: +972 52 370 0076."
+        "sv": "Sön–tors 9–13 och 16–19; akutlinje dygnet runt: +972 52 370 0076.",
+        "da": "Søn–tors 9.00–13.00 og 16.00–19.00; akuttelefon døgnet rundt: +972 52 370 0076."
       },
       "small_animals": true,
       "url": "https://allher2.wixsite.com/vetsapir",
@@ -1216,7 +1263,8 @@
         "nl": "Zo–do 8.30–12.00 en 16.00–19.00 uur, vr 8.30–12.00 uur. Spoedlijn: +972 50 639 3578.",
         "pl": "Niedz.–czw. 8:30–12:00 i 16:00–19:00, pt. 8:30–12:00. Linia alarmowa: +972 50 639 3578.",
         "cs": "Ne–Čt 8:30–12:00 a 16:00–19:00, Pá 8:30–12:00. Pohotovostní linka: +972 50 639 3578.",
-        "sv": "Sön–tors 8.30–12 och 16–19, fre 8.30–12. Akutlinje: +972 50 639 3578."
+        "sv": "Sön–tors 8.30–12 och 16–19, fre 8.30–12. Akutlinje: +972 50 639 3578.",
+        "da": "Søn–tors 8.30–12.00 og 16.00–19.00, fre 8.30–12.00. Akuttelefon: +972 50 639 3578."
       },
       "small_animals": true,
       "url": "https://vethakerem.com/",
@@ -1241,7 +1289,8 @@
         "nl": "Overdag en 's avonds beschikbaar voor spoed; 's nachts en op zaterdag wordt de telefoon opgenomen. Mobiel +972 55 925 2033.",
         "pl": "Dostępne w nagłych przypadkach w ciągu dnia i wieczorem, a w nocy i w soboty odbiera telefon. Komórka +972 55 925 2033.",
         "cs": "K dispozici pro pohotovosti přes den i večer, v noci a v sobotu telefonicky. Mobil +972 55 925 2033.",
-        "sv": "Tillgänglig för akutfall under dagen och kvällen, med telefonsvar nattetid och på lördagar. Mobil +972 55 925 2033."
+        "sv": "Tillgänglig för akutfall under dagen och kvällen, med telefonsvar nattetid och på lördagar. Mobil +972 55 925 2033.",
+        "da": "Åbent for akutte tilfælde hele dagen og aftenen; telefonvagt om natten og lørdage. Mobil +972 55 925 2033."
       },
       "small_animals": true,
       "url": "https://www.jerusalemveterinaryclinic.com/",
@@ -1266,7 +1315,8 @@
         "nl": "Zo–do 9.30–20.00 uur, vr 9.00–14.00 uur. Spoednummer: +972 54 893 9193.",
         "pl": "Niedz.–czw. 9:30–20:00, pt. 9:00–14:00. Telefon alarmowy: +972 54 893 9193.",
         "cs": "Ne–Čt 9:30–20:00, Pá 9:00–14:00. Pohotovostní telefon: +972 54 893 9193.",
-        "sv": "Sön–tors 9.30–20, fre 9–14. Akuttelefon: +972 54 893 9193."
+        "sv": "Sön–tors 9.30–20, fre 9–14. Akuttelefon: +972 54 893 9193.",
+        "da": "Søn–tor 9.30–20.00, fre 9.00–14.00. Akuttelefon: +972 54 893 9193."
       },
       "small_animals": true,
       "url": "https://www.vetpsagotclinic.co.il/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",

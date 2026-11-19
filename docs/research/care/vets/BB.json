@@ -44,7 +44,8 @@
         "nl": "Spoedlijn 24 uur per dag: +1 246 429 9355. Spoed voor dieren op het hele eiland.",
         "pl": "Całodobowa linia dla nagłych przypadków: +1 246 429 9355. Pomoc weterynaryjna w nagłych przypadkach na całej wyspie.",
         "cs": "Pohotovostní linka nonstop: +1 246 429 9355. Veterinární pohotovost na celém ostrově.",
-        "sv": "Akutlinje dygnet runt: +1 246 429 9355. Akut veterinärhjälp över hela ön."
+        "sv": "Akutlinje dygnet runt: +1 246 429 9355. Akut veterinärhjälp över hela ön.",
+        "da": "Akuttelefon døgnet rundt: +1 246 429 9355. Akut dyrlægehjælp på hele øen."
       }
     },
     {
@@ -63,7 +64,8 @@
         "nl": "Spoedlijn: +1 246 231 0450.",
         "pl": "Linia dla nagłych przypadków: +1 246 231 0450.",
         "cs": "Pohotovostní linka: +1 246 231 0450.",
-        "sv": "Akutlinje: +1 246 231 0450."
+        "sv": "Akutlinje: +1 246 231 0450.",
+        "da": "Akuttelefon: +1 246 231 0450."
       }
     },
     {
@@ -85,7 +87,8 @@
         "nl": "Op afspraak. Ma–vr 8.30–17.00 uur, za–zo 9.00–11.00 uur.",
         "pl": "Po umówieniu. Pon.–pt. 8:30–17:00, sob.–niedz. 9:00–11:00.",
         "cs": "Na objednání. Po–Pá 8:30–17:00, so–ne 9:00–11:00.",
-        "sv": "Efter tidsbokning. Mån–fre 8.30–17.00, lör–sön 9.00–11.00."
+        "sv": "Efter tidsbokning. Mån–fre 8.30–17.00, lör–sön 9.00–11.00.",
+        "da": "Efter aftale. Man–fre 8.30–17.00, lør–søn 9.00–11.00."
       }
     },
     {
@@ -107,7 +110,8 @@
         "nl": "Op afspraak. Ma–vr 9.00–18.00 uur, za–zo 9.00–11.00 uur.",
         "pl": "Po umówieniu. Pon.–pt. 9:00–18:00, sob.–niedz. 9:00–11:00.",
         "cs": "Na objednání. Po–Pá 9:00–18:00, so–ne 9:00–11:00.",
-        "sv": "Efter tidsbokning. Mån–fre 9.00–18.00, lör–sön 9.00–11.00."
+        "sv": "Efter tidsbokning. Mån–fre 9.00–18.00, lör–sön 9.00–11.00.",
+        "da": "Efter aftale. Man–fre 9.00–18.00, lør–søn 9.00–11.00."
       }
     }
   ],

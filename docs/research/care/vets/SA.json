@@ -54,7 +54,8 @@
         "nl": "Elke dag 24 uur geopend.",
         "pl": "Czynne całą dobę, codziennie.",
         "cs": "Nonstop, každý den.",
-        "sv": "Öppet dygnet runt, alla dagar."
+        "sv": "Öppet dygnet runt, alla dagar.",
+        "da": "Døgnåben, alle dage."
       }
     },
     {
@@ -77,7 +78,8 @@
         "nl": "Elke dag 24 uur geopend.",
         "pl": "Czynne całą dobę, codziennie.",
         "cs": "Nonstop, každý den.",
-        "sv": "Öppet dygnet runt, alla dagar."
+        "sv": "Öppet dygnet runt, alla dagar.",
+        "da": "Døgnåben, alle dage."
       }
     },
     {
@@ -98,7 +100,8 @@
         "nl": "24 uur per dag open van za tot en met do; vr 4.00–16.00 uur, alleen spoedgevallen.",
         "pl": "Czynne całodobowo od soboty do czwartku; w piątek 4:00–16:00, tylko nagłe przypadki.",
         "cs": "Otevřeno nonstop od soboty do čtvrtka; v pátek 4:00–16:00, pouze pohotovost.",
-        "sv": "Öppet dygnet runt lördag till torsdag; fredag 4–16, endast akutfall."
+        "sv": "Öppet dygnet runt lördag till torsdag; fredag 4–16, endast akutfall.",
+        "da": "Åbent 24 timer lørdag til torsdag; fredag kl. 4–16, kun akutte tilfælde."
       }
     },
     {
@@ -121,7 +124,8 @@
         "nl": "Spoeddienst 24/7; bel vooraf.",
         "pl": "Pomoc w nagłych przypadkach 24/7; zadzwoń przed wizytą.",
         "cs": "Pohotovostní služba nonstop; před cestou zavolejte.",
-        "sv": "Akutmottagning dygnet runt, årets alla dagar; ring innan du kommer."
+        "sv": "Akutmottagning dygnet runt, årets alla dagar; ring innan du kommer.",
+        "da": "Akutservice 24/7; ring på forhånd."
       }
     },
     {
@@ -144,7 +148,8 @@
         "nl": "Za–wo 8.00–22.00 uur; do–vr 16.00–22.00 uur. Spoedlijn 24/7: +966 50 229 6655.",
         "pl": "Sob.–śr. 8:00–22:00; czw.–pt. 16:00–22:00. Całodobowa linia dla nagłych przypadków 24/7: +966 50 229 6655.",
         "cs": "So–St 8:00–22:00; čt–pá 16:00–22:00. Pohotovostní linka nonstop: +966 50 229 6655.",
-        "sv": "Lör–ons 8–22; tors–fre 16–22. Akutlinje dygnet runt: +966 50 229 6655."
+        "sv": "Lör–ons 8–22; tors–fre 16–22. Akutlinje dygnet runt: +966 50 229 6655.",
+        "da": "Lør–ons kl. 8–22; tor–fre kl. 16–22. Akutlinje 24/7: +966 50 229 6655."
       }
     },
     {
@@ -167,7 +172,8 @@
         "nl": "Zo–do en za 10.00–23.00 uur; vr 15.00–23.00 uur. Huisbezoeken mogelijk.",
         "pl": "Niedz.–czw. i sob. 10:00–23:00; pt. 15:00–23:00. Dostępne wizyty domowe.",
         "cs": "Ne–Čt a so 10:00–23:00; pá 15:00–23:00. K dispozici návštěvy doma.",
-        "sv": "Sön–tors och lör 10–23; fre 15–23. Hembesök finns."
+        "sv": "Sön–tors och lör 10–23; fre 15–23. Hembesök finns.",
+        "da": "Søn–tor og lør kl. 10–23; fre kl. 15–23. Hjemmebesøg mulige."
       }
     },
     {
@@ -189,7 +195,8 @@
         "nl": "Za–do 9.00–24.00 uur; vr 16.00–24.00 uur. Geen spoedzorg na middernacht; bel voordat je komt.",
         "pl": "Sob.–czw. 9:00–24:00; pt. 16:00–24:00. Brak pomocy w nagłych przypadkach po północy; zadzwoń przed wizytą.",
         "cs": "So–Čt 9:00–24:00; pá 16:00–24:00. Po půlnoci pohotovostní péči neposkytují; před cestou zavolejte.",
-        "sv": "Lör–tors 9–24; fre 16–24. Ingen akutvård efter midnatt; ring innan du kommer."
+        "sv": "Lör–tors 9–24; fre 16–24. Ingen akutvård efter midnatt; ring innan du kommer.",
+        "da": "Lør–tor kl. 9–24; fre kl. 16–24. Ingen akut hjælp efter midnat; ring, før du kommer."
       }
     },
     {
@@ -211,7 +218,8 @@
         "nl": "Dagelijks open 15.30–23.30 uur.",
         "pl": "Codziennie 15:30–23:30.",
         "cs": "Otevřeno denně 15:30–23:30.",
-        "sv": "Alla dagar 15.30–23.30."
+        "sv": "Alla dagar 15.30–23.30.",
+        "da": "Åbent dagligt kl. 15.30–23.30."
       }
     },
     {
@@ -261,7 +269,8 @@
         "nl": "Ma–do en za 14.00–22.00 uur; vr 16.00–22.00 uur; zo gesloten.",
         "pl": "Pon.–czw. i sob. 14:00–22:00; pt. 16:00–22:00; niedz. zamknięte.",
         "cs": "Po–Čt a so 14:00–22:00; pá 16:00–22:00; v neděli zavřeno.",
-        "sv": "Mån–tors och lör 14–22; fre 16–22; stängt söndag."
+        "sv": "Mån–tors och lör 14–22; fre 16–22; stängt söndag.",
+        "da": "Man–tor og lør kl. 14–22; fre kl. 16–22; lukket søndag."
       }
     },
     {
@@ -284,7 +293,8 @@
         "nl": "Za–do 9.00–23.00 uur; vr 14.00–23.00 uur.",
         "pl": "Sob.–czw. 9:00–23:00; pt. 14:00–23:00.",
         "cs": "So–Čt 9:00–23:00; pá 14:00–23:00.",
-        "sv": "Lör–tors 9–23; fre 14–23."
+        "sv": "Lör–tors 9–23; fre 14–23.",
+        "da": "Lør–tor kl. 9–23; fre kl. 14–23."
       }
     },
     {
@@ -306,7 +316,8 @@
         "nl": "Za–do 9.00–22.00 uur; spoeddienst volgens de kliniek 24/7, bel vooraf.",
         "pl": "Sob.–czw. 9:00–22:00; pomoc w nagłych przypadkach reklamowana jako 24/7, zadzwoń przed wizytą.",
         "cs": "So–Čt 9:00–22:00; pohotovostní služba nonstop, před cestou zavolejte.",
-        "sv": "Lör–tors 9–22; akutmottagning uppges vara öppen dygnet runt, årets alla dagar; ring innan du kommer."
+        "sv": "Lör–tors 9–22; akutmottagning uppges vara öppen dygnet runt, årets alla dagar; ring innan du kommer.",
+        "da": "Lør–tor kl. 9–22; akutservice oplyst som 24/7, ring på forhånd."
       }
     },
     {
@@ -329,7 +340,8 @@
         "nl": "Za–do 8.30–22.00 uur; vr 16.00–22.00 uur. Spoedlijn: 0500521717.",
         "pl": "Sob.–czw. 8:30–22:00; pt. 16:00–22:00. Linia dla nagłych przypadków: 0500521717.",
         "cs": "So–Čt 8:30–22:00; pá 16:00–22:00. Pohotovostní linka: 0500521717.",
-        "sv": "Lör–tors 8.30–22; fre 16–22. Akutlinje: 0500521717."
+        "sv": "Lör–tors 8.30–22; fre 16–22. Akutlinje: 0500521717.",
+        "da": "Lør–tor kl. 8.30–22; fre kl. 16–22. Akutlinje: 0500521717."
       }
     },
     {
@@ -352,7 +364,8 @@
         "nl": "Zo–do en za 8.30–23.00 uur; vr 16.00–21.00 uur. Spoedlijn: 0559171818.",
         "pl": "Niedz.–czw. i sob. 8:30–23:00; pt. 16:00–21:00. Linia dla nagłych przypadków: 0559171818.",
         "cs": "Ne–Čt a so 8:30–23:00; pá 16:00–21:00. Pohotovostní linka: 0559171818.",
-        "sv": "Sön–tors och lör 8.30–23; fre 16–21. Akutlinje: 0559171818."
+        "sv": "Sön–tors och lör 8.30–23; fre 16–21. Akutlinje: 0559171818.",
+        "da": "Søn–tor og lør kl. 8.30–23; fre kl. 16–21. Akutlinje: 0559171818."
       }
     },
     {
@@ -375,7 +388,8 @@
         "nl": "Za–do 8.30–22.00 uur; vr 16.00–22.00 uur. Spoedlijn: 0559825550.",
         "pl": "Sob.–czw. 8:30–22:00; pt. 16:00–22:00. Linia dla nagłych przypadków: 0559825550.",
         "cs": "So–Čt 8:30–22:00, pá 16:00–22:00. Pohotovostní linka: 0559825550.",
-        "sv": "Lör–tors 8.30–22; fre 16–22. Akutlinje: 0559825550."
+        "sv": "Lör–tors 8.30–22; fre 16–22. Akutlinje: 0559825550.",
+        "da": "Lør–tor kl. 8.30–22; fre kl. 16–22. Akutlinje: 0559825550."
       }
     },
     {
@@ -398,7 +412,8 @@
         "nl": "Za–do 9.00–22.00 uur; vr 14.00–22.00 uur.",
         "pl": "Sob.–czw. 9:00–22:00; pt. 14:00–22:00.",
         "cs": "So–Čt 9:00–22:00, pá 14:00–22:00.",
-        "sv": "Lör–tors 9–22; fre 14–22."
+        "sv": "Lör–tors 9–22; fre 14–22.",
+        "da": "Lør–tor kl. 9–22; fre kl. 14–22."
       }
     },
     {

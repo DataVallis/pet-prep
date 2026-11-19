@@ -30,7 +30,8 @@
       "note": "Phone and hours opened on the unza.zm page. Email on that page: unzavetclinic@unza.zm (page has a stray space). WikiVet (secondary, not used as source) mentions an emergency number 097 8822000 and reception 01 291515, but no unza.zm page confirmed them, so not published and no 24 h claim. unza.zm/veterinary-medicine/services returned a fetch error.",
       "duty_i18n": {
         "cs": "Otevřeno Po–Pá 8:00–17:00, so 9:00–12:30, ne a státní svátky 10:00–12:00. Velká i malá zvířata; výuková klinika.",
-        "sv": "Öppet mån–fre 08.00–17.00, lör 09.00–12.30, sön och helgdagar 10.00–12.00. Stordjur och smådjur; undervisningsklinik."
+        "sv": "Öppet mån–fre 08.00–17.00, lör 09.00–12.30, sön och helgdagar 10.00–12.00. Stordjur och smådjur; undervisningsklinik.",
+        "da": "Åbent man–fre 8.00–17.00, lør 9.00–12.30, søn og helligdage 10.00–12.00. Store og små dyr; undervisningsklinik."
       }
     }
   ],

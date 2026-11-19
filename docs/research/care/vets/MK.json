@@ -51,7 +51,8 @@
         "nl": "Spoedgevallen en dierenarts in achterwacht 24/7 beschikbaar. Reguliere openingstijden ma–vr 10.00–14.00 en 17.00–19.00 uur, za 10.00–14.00 uur, zo gesloten.",
         "pl": "Pilne przypadki i weterynarz dyżurny całodobowo, 7 dni w tygodniu. Zwykłe godziny pon.–pt. 10:00–14:00 i 17:00–19:00, sob. 10:00–14:00, w niedziele zamknięte.",
         "cs": "Naléhavé případy a veterinář v pohotovosti nonstop. Běžná ordinační doba Po–Pá 10:00–14:00 a 17:00–19:00, so 10:00–14:00, v neděli zavřeno.",
-        "sv": "Akutfall och jourhavande veterinär dygnet runt, årets alla dagar. Ordinarie öppettider mån–fre 10.00–14.00 och 17.00–19.00, lör 10.00–14.00, sön stängt."
+        "sv": "Akutfall och jourhavande veterinär dygnet runt, årets alla dagar. Ordinarie öppettider mån–fre 10.00–14.00 och 17.00–19.00, lör 10.00–14.00, sön stängt.",
+        "da": "Akutte tilfælde og dyrlægevagt døgnet rundt. Almindelig åbningstid man–fre 10.00–14.00 og 17.00–19.00, lør 10.00–14.00, søn lukket."
       },
       "url": "https://drcupona.mk/",
       "source_url": "https://drcupona.mk/",
@@ -79,7 +80,8 @@
         "nl": "Ma–vr 08.00–20.00 uur, za 09.00–14.00 uur, zo 10.00–14.00 uur.",
         "pl": "Pon.–pt. 08:00–20:00, sob. 09:00–14:00, niedz. 10:00–14:00.",
         "cs": "Po–Pá 08:00–20:00, so 09:00–14:00, ne 10:00–14:00.",
-        "sv": "Mån–fre 08.00–20.00, lör 09.00–14.00, sön 10.00–14.00."
+        "sv": "Mån–fre 08.00–20.00, lör 09.00–14.00, sön 10.00–14.00.",
+        "da": "Man–fre 8.00–20.00, lør 9.00–14.00, søn 10.00–14.00."
       },
       "url": "https://veterinarencentar.mk/",
       "source_url": "https://veterinarencentar.mk/kontakt/",
@@ -107,7 +109,8 @@
         "nl": "Ma–vr 8.00–19.00 uur, za 8.00–15.00 uur. Telefoon 070 722 967 bereikbaar 9.00–19.00 uur.",
         "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–15:00. Telefon 070 722 967 odbierany 9:00–19:00.",
         "cs": "Po–Pá 8:00–19:00, so 8:00–15:00. Telefon 070 722 967 je obsluhován 9:00–19:00.",
-        "sv": "Mån–fre 8.00–19.00, lör 8.00–15.00. Telefon 070 722 967 besvaras 9.00–19.00."
+        "sv": "Mån–fre 8.00–19.00, lör 8.00–15.00. Telefon 070 722 967 besvaras 9.00–19.00.",
+        "da": "Man–fre 8.00–19.00, lør 8.00–15.00. Telefon 070 722 967 besvares 9.00–19.00."
       },
       "url": "https://www.manopetvet.com/",
       "source_url": "https://www.manopetvet.com/contact/",
@@ -135,7 +138,8 @@
         "nl": "Ma–vr 08.00–18.00 uur, za 09.00–16.00 uur, zo gesloten.",
         "pl": "Pon.–pt. 08:00–18:00, sob. 09:00–16:00, w niedziele zamknięte.",
         "cs": "Po–Pá 08:00–18:00, so 09:00–16:00, v neděli zavřeno.",
-        "sv": "Mån–fre 08.00–18.00, lör 09.00–16.00, sön stängt."
+        "sv": "Mån–fre 08.00–18.00, lör 09.00–16.00, sön stängt.",
+        "da": "Man–fre 8.00–18.00, lør 9.00–16.00, søn lukket."
       },
       "url": "https://remediumvet.mk/",
       "source_url": "https://remediumvet.mk/",
@@ -163,7 +167,8 @@
         "nl": "Tweede telefoonnummer +389 70 265 872.",
         "pl": "Drugi telefon +389 70 265 872.",
         "cs": "Druhý telefon +389 70 265 872.",
-        "sv": "Ytterligare telefon +389 70 265 872."
+        "sv": "Ytterligare telefon +389 70 265 872.",
+        "da": "Andet telefonnummer +389 70 265 872."
       },
       "url": "https://petvetaerodrom.mk/",
       "source_url": "https://petvetaerodrom.mk/",
@@ -205,7 +210,8 @@
         "nl": "Mogelijk aparte dienstlijn; bel vooraf.",
         "pl": "Może istnieć osobna linia dyżurna; zadzwoń wcześniej.",
         "cs": "Může existovat samostatná pohotovostní linka; předem zavolejte.",
-        "sv": "Det kan finnas en separat jourlinje; ring innan du kommer."
+        "sv": "Det kan finnas en separat jourlinje; ring innan du kommer.",
+        "da": "Der findes muligvis en særskilt vagtlinje; ring på forhånd."
       },
       "url": "http://www.veterinarnabolnica.com.mk/",
       "source_url": "https://fva.gov.mk/images/2018/08/tabela-mikro-cipiranje.pdf",
