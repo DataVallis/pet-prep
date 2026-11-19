@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `welsh_terrier` (viri S954–S959; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC — genetska raznolikost + DNK test za primarno luksacijo leče (PLL), oboje »minimum« (S956) |
 | Izvor | FCI št. 78, skupina 3 (terierji), sekcija 1 (veliki in srednje veliki terierji), Velika Britanija (S954, S955) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 123. mesto »Welsh Terrier« (S174, prebrano 2026-11-19) |
-| PR-ji | pet-prep #1391 (pasma) · portret in barvne različice: glejte vrstico v `BREED_QUEUE.md` · spletna stran: pet-prep-website `feat/register-welsh-terrier` |
+| PR-ji | pet-prep #1391 (pasma, združen `53171c9`) · portret pet-prep (zagon `breed-portraits.yml` 44447699409, sprejet v prvem poskusu) · barvne različice pet-prep (glejte vrstico v `BREED_QUEUE.md`) · spletna stran: pet-prep-website `feat/register-welsh-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,7 +42,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-127 | 2026-11-19 |
 | Česanje 3× na teden, »Nova izkušnja« za mladička, ščetkanje zob vsak dan, opomnik za frizerja in kopanje vsakih 8 tednov | 🛠 | 💶 izziv | M5-R13 / R15 / R17 / R19 / R20 | 2026-11-19 |
 | Barve (izbirnik: 2 barvi — črn z rjavimi oznakami (portret), črno-sivkast z rjavimi oznakami) | 🛠 | 💶 izziv | M5-R21 | 2026-11-19 |
-| AI portret v registru | glejte `BREED_QUEUE.md` (vrstica 127) | — | M5-R11-04 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črn z rjavimi oznakami, žičnata dlaka in brada, ušesa naprej, naravni pokončni rep na svetlo sivem ozadju | — | M5-R11-04 | 2026-11-19 |
 | Stran na petprep.si (`/animals/dogs/welsh-terrier`, `/sl/zivali/psi/valizanski-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
