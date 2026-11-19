@@ -959,6 +959,12 @@ class FalAiService
                 .'liver and white coat, a fine, short, hard, smooth coat with a decided sheen, a slightly dish-faced muzzle with a dark nose and wide nostrils, '
                 .'bright, kindly hazel eyes, thin, fairly high-set ears lying close to the head, a natural medium-length tail carried level with the back, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-126: FCI-Standard N° 238 (S949) — medium-sized Hungarian herding dog; black (the portrait default of the
+            // seven standard colours); dense, shiny, wavy coat; high-set prick ears; natural tail.
+            BreedType::Mudi => 'A medium-sized Mudi, an agile Hungarian herding dog with a wedge-shaped head and a topline sloping towards the rear, in lean working condition, '
+                .'solid black coat, a dense, shiny, wavy or slightly curled coat of medium length with short smooth hair on the head and the front of the legs, '
+                .'dark almond-shaped eyes, high-set prick ears of reverse V-shape covered with abundant hair, a natural tail set at medium height, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2258,6 +2264,14 @@ class FalAiService
                 'eye_color' => 'hazel',
                 'fur_texture' => 'fine, short, hard, smooth coat with a decided sheen',
                 'markings' => 'liver patches on a white coat, slightly dish-faced muzzle, thin ears lying close to the head, natural medium-length tail',
+            ],
+
+            // M5-R10-126: FCI S949 black (the portrait default of the seven standard colours).
+            BreedType::Mudi => [
+                'color_scheme' => 'black',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'dense, shiny, wavy or slightly curled coat of medium length, short and smooth on the head',
+                'markings' => 'solid black, wedge-shaped head, high-set prick ears covered with abundant hair, natural tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

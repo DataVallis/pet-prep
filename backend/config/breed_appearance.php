@@ -851,6 +851,11 @@
 | fairly high-set ears lying close to the head; natural tail carried level with the back. No welfare trait. Four usual colours,
 | liver and white first (portrait default); weights unsourced → `verified => false`.
 |
+| Mudi (M5-R10-126, docs/research/dog-data mudi.appearance): "Medium-sized herding dog with a wedge-shaped head. Prick ears.
+| Body topline is distinctly sloping towards the rear." (FCI-Standard N° 238, S949); colours black, white, fawn, ash (blue), liver,
+| ash-brown and cifra (merle) (S949 / FCI nomenclature S948); dense, shiny, wavy coat 3–7 cm; high-set prick ears; natural tail.
+| No welfare trait. Seven standard colours, black first (portrait default); weights unsourced → `verified => false`.
+|
 | Spinone Italiano (M5-R10-124, docs/research/dog-data spinone_italiano.appearance): "Dog of solid construction, robust and
 | vigorous with powerful bone, well-developed muscles and with a rough coat." (FCI-Standard N° 165, S935); colours "Pure white,
 | white with orange markings, white speckled with orange," "white with brown (chestnut) markings, orange roan or brown roan
@@ -5335,6 +5340,42 @@ return [
             'muzzle' => ['slightly concave, gently dish-faced muzzle with a dark nose and wide nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-126 (docs/research/dog-data/data.json mudi.appearance; runbook rules 2026-10-10: the seven colours of
+    // FCI-Standard N° 238 (S949), black first = the portrait default; merle drawn on a black base; natural tail).
+    'mudi' => [
+        'display_name' => 'Mudi',
+        // Colour frequencies are in no source (mudi.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 238 (S949), FCI nomenclature (S948), RKC Breeds A–Z (S950), PetMD (S952) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S950 "Medium"; S949 males 41–47 cm, females 38–44 cm; S952 "18–29 pounds"',
+            'build' => 'S949 "Medium-sized herding dog with a wedge-shaped head. Prick ears. Body topline is distinctly sloping towards the rear."',
+            'coat_length' => 'S949 "It is dense and always shiny, about 3cm to 7cm long." (head and front of the limbs short and smooth, body wavy or slightly curled)',
+            'coat_color' => 'S949 / S948 black, white, fawn, ash (blue), liver, ash-brown, cifra (merle) (weights unsourced)',
+            'ear_carriage' => 'S949 "High-set prick ears, which are of a reverse V-shape, are covered with abundant hair."',
+            'eye_color' => 'S949 "Almond shaped and set slightly oblique." — as dark as possible',
+            'tail' => 'S949 "Set-on at medium height." (natural tail drawn)',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'agile, medium-sized herding dog with a wedge-shaped head and a topline sloping towards the rear, in lean working condition', 'weight' => 3], 'lively, alert sheepdog standing four-square'],
+            'coat_length' => ['dense, shiny, wavy or slightly curled coat of medium length, short and smooth on the head and the front of the legs'],
+            // FCI standard (S949): the seven colours; black first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'black', 'weight' => 40],
+                ['value' => 'white', 'weight' => 10],
+                ['value' => 'fawn', 'weight' => 10],
+                ['value' => 'ash (blue)', 'weight' => 10],
+                ['value' => 'liver (brown)', 'weight' => 10],
+                ['value' => 'ash-brown (isabella)', 'weight' => 5],
+                ['value' => 'blue merle (cifra)', 'weight' => 15],
+            ],
+            'ear_carriage' => ['high-set prick ears of reverse V-shape, covered with abundant hair'],
+            'eye_color' => ['dark brown, almond-shaped, slightly oblique eyes'],
+            'tail' => ['natural tail set at medium height, hanging at rest with the lower third raised'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

@@ -2961,5 +2961,19 @@ return [
                 ['tag' => 'secure_fencing', 'source_ids' => ['S945'], 'refs' => ['pointer.exercise.enclosed_yard']],
             ],
         ],
+        'mudi' => [
+            'suits' => [
+                // S950 "Loyal and affectionate with their families"
+                ['tag' => 'family_pet', 'source_ids' => ['S950'], 'refs' => ['mudi.behaviour.family']],
+            ],
+            'consider' => [
+                // S950 "The Mudi is best suited to an experienced owner who can provide the stimulation, structure and purpose …"
+                ['tag' => 'independent_experienced_owner', 'source_ids' => ['S950'], 'refs' => ['mudi.behaviour.experienced_owner']],
+                // S950 "they do require an outlet for their energy and intelligence."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S950'], 'refs' => ['mudi.exercise.daily_text']],
+                // S950 key fact "Sheds" "Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S950'], 'refs' => ['mudi.suitability.rkc_sheds']],
+            ],
+        ],
     ],
 ];
