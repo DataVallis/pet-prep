@@ -187,6 +187,11 @@ Route::get('media/items/{itemMedia}/candidate', [PetMediaController::class, 'sho
     ->whereNumber('itemMedia')
     ->middleware(['signed:relative', 'throttle:media'])
     ->name('media.item-candidate');
+// David 2026-11-19: an item clip's contact sheet for its AI realism check (fal's vision model).
+Route::get('media/item-quality-sheets/{check}', [PetMediaController::class, 'showItemQualitySheet'])
+    ->whereNumber('check')
+    ->middleware(['signed:relative', 'throttle:media'])
+    ->name('media.item-quality-sheet');
 // M5-R04 growth album: archived reference images of earlier life stages.
 Route::get('media/history/{history}', [PetMediaController::class, 'showHistory'])
     ->middleware(['signed:relative', 'throttle:media'])

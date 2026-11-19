@@ -124,6 +124,8 @@ class ObjectStorageMover
             ->merge(DB::table('item_media')->whereNotNull('storage_path')->pluck('storage_path'))
             // David 2026-11-04: item files waiting for their check (StillQualityService).
             ->merge(DB::table('item_media')->whereNotNull('candidate_path')->pluck('candidate_path'))
+            // David 2026-11-19: contact sheets of failed item clips (their AI realism check).
+            ->merge(DB::table('item_media_quality_checks')->whereNotNull('sheet_path')->pluck('sheet_path'))
             ->filter(fn ($p): bool => is_string($p) && $p !== '')
             ->unique()->values()->all();
     }
