@@ -36,6 +36,16 @@ enum PetStateEnum: string
     case Scratching = 'scratching';
 
     /**
+     * David 2026-11-19 (»moramo to izpilit, da v 3 promptih pride ok«): how a SLEEPING animal moves
+     * in every sleep clip (state loop, classic state video, the bed item clip). The old wording
+     * (»clearly visible breathing«, »dreaming twitches«, »a small shift of a paw«) made Kling wake
+     * the puppy, lift its head and flail its tail in 3–5 s. Calm is safe: sleeping / the bed use the
+     * low-motion threshold of the technical check (media.quality_check.low_motion_states / _items).
+     * Also the clip check's »action_done« intent (MediaQualityService::intentOf, itemClipIntent).
+     */
+    public const SLEEP_MOTION = 'sound asleep and completely still, only slow, gentle, even breathing; the head stays resting and the eyes stay closed the whole time; no waking, no lifting the head, no twitching, no tail movement; the camera does not move';
+
+    /**
      * The values `pets.pet_state` can take (pets_pet_state_check): the six
      * classic states. Behaviour states are video slots only.
      *
@@ -114,7 +124,8 @@ enum PetStateEnum: string
         if ($species === Species::Cat) {
             return match ($this) {
                 self::Idle => 'staying in the same position as in the image, turning the head to look around, blinking, the ears swivelling, the tail curling and flicking, a visible breath and a small shift of weight',
-                self::Sleeping => 'asleep and staying curled up the whole time, the flank clearly rising and falling with each breath, small twitches of the ears, whiskers and paws',
+                // David 2026-11-19: calm sleep — Kling over-acted »clearly visible / twitches« (woke up, lifted the head).
+                self::Sleeping => self::SLEEP_MOTION,
                 self::LowEnergy => 'staying on the windowsill, the tail tip flicking, the head turning to look outside and back, slow visible breathing',
                 self::Hungry => 'staying seated by the bowl, looking down at it, sniffing it and looking up again, licking its lips, the tail swishing',
                 self::Sick => 'staying in the loaf position, visible slow breathing, the eyes half closing and opening, a small ear twitch, not getting up',
@@ -126,7 +137,8 @@ enum PetStateEnum: string
 
         return match ($this) {
             self::Idle => 'standing in the same spot, breathing visibly, turning the head to look around and sniffing the air, the tail wagging, the ears moving, shifting its weight from paw to paw, without sitting or lying down',
-            self::Sleeping => 'asleep and staying curled up the whole time, the chest clearly rising and falling with each breath, small dreaming twitches of the ears, lips and paws',
+            // David 2026-11-19: calm sleep (see SLEEP_MOTION).
+            self::Sleeping => self::SLEEP_MOTION,
             self::LowEnergy => 'lying down, slow visible tired breathing, the eyelids drooping and blinking, the head lifting a little and resting again, a weak tail thump',
             self::Hungry => 'staying seated by the bowl, sniffing the bowl, looking up again and licking its lips, the tail sweeping the floor',
             self::Sick => 'lying down with visible slow breathing, the eyes blinking, the head lifting a little and resting again, not getting up',
@@ -173,7 +185,7 @@ enum PetStateEnum: string
         if ($species === Species::Cat) {
             return match ($this) {
                 self::Idle => 'sitting calmly and looking around, blinking slowly, the tail gently curling and moving, an occasional ear twitch',
-                self::Sleeping => 'curled up in a tight ball asleep on a soft blanket, eyes closed, slow rhythmic breathing, a small ear twitch',
+                self::Sleeping => 'curled up in a tight ball asleep on a soft blanket, '.self::SLEEP_MOTION,
                 // Energy is the play meter for a cat (M5-R06-04): low = bored, not tired.
                 self::LowEnergy => 'lying on a windowsill and gazing out of the window with a bored expression, the tail tip slowly flicking, barely moving',
                 self::Hungry => 'sitting next to an empty cat food bowl, looking down at it and then up expectantly, licking its lips',
@@ -188,7 +200,7 @@ enum PetStateEnum: string
 
         return match ($this) {
             self::Idle => 'sitting calmly and looking around with a relaxed expression, gentle breathing, an occasional slow tail wag and ear twitch',
-            self::Sleeping => 'curled up asleep on the floor, eyes closed, slow rhythmic breathing, a small ear twitch',
+            self::Sleeping => 'curled up asleep on the floor, '.self::SLEEP_MOTION,
             self::LowEnergy => 'lying down with droopy eyelids, head resting on the front paws, slow tired breathing, barely moving',
             self::Hungry => 'sitting next to an empty dog food bowl, looking down at it and then up hopefully, licking its lips',
             self::Sick => 'lying down quietly with sad tired eyes, head low, slow shallow breathing, not getting up',

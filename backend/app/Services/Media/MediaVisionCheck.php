@@ -160,8 +160,8 @@ class MediaVisionCheck
     /** The item realism questions shared by the key image and the clip rubric (`$animal` = dog | cat). */
     private static function itemQuestions(string $animal): string
     {
-        return "- item_grounded: the object rests on the floor like a real object — a soft contact shadow where it touches the floor, no gap under it, not floating or hovering, no separate, offset or detached shadow blob beside or under it.\n"
-            ."- item_integrated: the object looks photographed in this room together with the {$animal}, not pasted in: the same light direction, softness, colour temperature and brightness as the room, the same focus, depth of field, sharpness and grain as the floor around it, the same perspective as the floor; no cut-out edges, no studio-lit or razor-sharp product look in a softer room.\n"
+        return "- item_grounded: the object rests on the floor like a real object — its whole bottom edge / base touches the floor, with a soft contact shadow under the WHOLE base (darkest where it meets the floor), no gap under it, not floating or hovering; false if the shadow is only at one point or one side, if the object touches the floor at a single point, or if there is a separate, offset or detached shadow blob beside or under it.\n"
+            ."- item_integrated: the object looks photographed in this room together with the {$animal}, not pasted in: the same light direction, softness, colour temperature and brightness as the room, the same focus, depth of field, sharpness and grain as the floor around it, the same perspective as the floor; false if the object is noticeably sharper or crisper than the floor it stands on, has a bright outline or halo, cut-out edges, or a studio-lit, razor-sharp product look in a softer room.\n"
             ."- scale_ok: the object's size is plausible next to the {$animal}; a bed is big enough that the {$animal} lies INSIDE it (on its cushion, within its rim / sides) — not on top of a too-small bed with its body overhanging; bowls and toys have a natural size for this {$animal}.\n";
     }
 
@@ -202,7 +202,7 @@ class MediaVisionCheck
             ."Check (in every frame and in image 2):\n"
             ."- anatomy_ok: the {$animal} has a normal body: four normal legs, one head, one tail, no melting, merging, stretching or morphing body parts, no legs that dissolve or appear.\n"
             ."- same_animal: it is the same {$animal} in every frame (breed, colour, markings).\n"
-            ."- action_done: the clip really shows that, with natural movement.\n"
+            ."- action_done: the clip really shows that, with natural movement; when the {$animal} should stay asleep and still, only gentle breathing is right — false if it wakes up, opens its eyes, lifts its head, gets up or wags its tail.\n"
             .self::itemQuestions($animal)
             ."- no_artifacts: no visual glitches (flicker, a second animal, people, hands, text, sudden cuts, objects appearing, changing or changing size).\n"
             .'Be strict: if the object looks pasted in, floats, has a detached shadow, or is too small for the '.$animal.', that key is false. Answer only: '.$json;
@@ -373,7 +373,8 @@ class MediaVisionCheck
             ."Check:\n"
             ."- anatomy_ok: in EVERY frame the {$animal} has a normal body: four normal legs, one head, one tail, no melting, merging, stretching or morphing body parts, no legs that dissolve or appear.\n"
             ."- same_animal: it is the same {$animal} as in the reference photo (breed, colour, markings) in every frame.\n"
-            .'- action_done: the clip really shows the action with natural movement'.($hasEndImage ? ' and ends in the pose of image 3 by moving into it, not by morphing' : '').".\n"
+            .'- action_done: the clip really shows the action with natural movement'.($hasEndImage ? ' and ends in the pose of image 3 by moving into it, not by morphing' : '')
+            ."; when the {$animal} should stay asleep and still, only gentle breathing is right — false if it wakes up, opens its eyes, lifts its head, gets up or wags its tail.\n"
             ."- artifacts: true if there are visual glitches (flicker, a second animal, people, hands, text, sudden cuts, objects appearing).\n"
             .'Answer only: {"anatomy_ok": true|false, "same_animal": true|false, "action_done": true|false, "artifacts": true|false, "verdict": "pass"|"fail", "reason": "<one short sentence>"}';
     }

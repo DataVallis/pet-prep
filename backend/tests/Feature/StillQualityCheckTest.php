@@ -610,18 +610,22 @@ describe('item media', function () {
 
     it('gives a key image up after 2 regenerations: the item is shown without content, ONE alert, approve anyway works', function () {
         Queue::fake([SendItemMediaAlert::class]);
+        Cache::forget(ItemMediaService::GIVE_UP_WINDOW_KEY);
         sqFakeFal(fn ($row) => ! ($row instanceof ItemMedia && $row->kind === 'image'));
         $pet = sqItemPet();
         app(ItemMediaService::class)->ensure($pet);
         sqCompleteItems();
 
+        // David 2026-11-19: a durable item is given up AT ONCE (no review wait): fallback + one counting alert.
         $image = sqItemRow($pet, 'image');
         expect($image->status)->toBe('failed')->and($image->error_reason)->toBe('quality_failed')->and($image->needsReview())->toBeTrue()
+            ->and($image->isExhausted())->toBeTrue()
             ->and($image->quality_retries)->toBe(2)
             ->and(sqClipSubmits())->toHaveCount(0)
-            ->and(app(ItemMediaService::class)->statesFor($pet)['bed']['outcome'])->toBe(ItemMediaService::OUTCOME_WAITING);
+            ->and(app(ItemMediaService::class)->statesFor($pet)['bed']['outcome'])->toBe(ItemMediaService::OUTCOME_FALLBACK);
+        Queue::assertPushed(SendItemMediaAlert::class, 1);
 
-        // The self-healing gives the chain up (fallback + one alert per run).
+        // heal() has nothing left to give up (no second alert).
         Carbon::setTestNow(now()->addMinutes(31));
         app(ItemMediaService::class)->heal();
         expect(app(ItemMediaService::class)->statesFor($pet->fresh())['bed']['outcome'])->toBe(ItemMediaService::OUTCOME_FALLBACK);

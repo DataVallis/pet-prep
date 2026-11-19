@@ -2010,12 +2010,13 @@ flowchart LR
 
 ### 10i. Item content realism check (David 2026-11-19)
 
-A bought bed came out pasted in (studio-lit, floating, detached shadow) under a big Dobermann lying ON TOP of it. Item key images now use the `item` rubric (animal keys + grounded / integrated / scale), every item clip gets an AI check in the ITEM mode, a clip whose object is wrong regenerates its key image, and flagged files are never shown. See ARCHITECTURE *Item content realism check*.
+A bought bed came out pasted in (studio-lit, floating, detached shadow) under a big Dobermann lying ON TOP of it. Item key images now use the `item` rubric (animal keys + grounded / integrated / scale), every item clip gets an AI check in the ITEM mode, a clip whose object is wrong regenerates its key image, and flagged files are never shown. Since 2026-11-19 (calm sleep clips + bed fit) sleep / bed clips are calm with a sleep negative prompt, every try is calmer / stricter, and a durable item is given up at once after its last try. See ARCHITECTURE *Item content realism check* and *Calm sleep clips + bed fit*.
 
 ```mermaid
 flowchart TD
   K[item key image candidate] --> KR{vision · item rubric<br/>one_animal · legs_ok · no_ghost_parts · scene_ok · clean<br/>item_grounded · item_integrated · scale_ok}
-  KR -->|fail, enforce, retries left| KN[new key image: fresh seed · next prompt variant]
+  KR -->|fail, enforce, retries left| KN[new key image: fresh seed · stricter variant<br/>try 3 leads with the floor contact]
+  KR -->|fail, no retries left| KG[given up at once: bed / bowls / toys without content · media_ready true · counting alert]
   KR -->|pass| KS[key image stored → its clip is submitted]
   KS --> CC[item clip candidate]
   CC --> T[free technical check · clip mode, default shadow<br/>+ contact sheet 4 frames]
@@ -2024,8 +2025,9 @@ flowchart TD
   CA -->|paid call, no verdict| VE[check released · job retries in 120 s · ≤ 2 per generation, then used unchecked]
   CA -->|pass| SHOWN[stored · shown · settle]
   CA -->|fail: object floats / pasted / too small, retries left| RK[key image flagged + regenerated<br/>clip pending, quality_retries + 1] --> K
-  CA -->|fail: anatomy / motion / artefacts, retries left| RC[new clip from the same key image] --> CC
-  CA -->|fail, no retries left| NR[»Needs review« → heal: bed / bowls / toys without content · treats stay locked]
+  CA -->|fail: anatomy / motion / artefacts, retries left| RC[new clip from the same key image<br/>calmer variant per try: bed 0 → 1 »perfectly still« → 2 most static] --> CC
+  CA -->|fail, no retries left · bed / bowls / toys| GU[given up AT ONCE 2026-11-19: last passed key image shown as the picture, no clip<br/>media_ready true · one counting Discord alert per 15 min · no review wait]
+  CA -->|fail, no retries left · treats| NR[»Needs review« → heal after 30 min: treats stay locked]
   CMD[media:item-recheck — dry run unless --run] --> SEL[READY key images + clips never decided by the current rubric]
   SEL --> RCH{vision check, trigger recheck}
   RCH -->|fail, enforce| FL[flagged + flagged_at → hidden, PetUpdated per pet, app URL 404 · regenerated · a stored clip: fresh key image chain]

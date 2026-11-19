@@ -119,6 +119,7 @@ class ItemMediaResource extends Resource
                     ->color(fn (?string $state): string => match ($state) {
                         'passed', 'approved', 'passed (technical)' => 'success',
                         'needs review', 'failed' => 'danger',
+                        'given up (fallback shown)' => 'warning',
                         'would fail (shadow)' => 'warning',
                         'checking', 'retrying' => 'info',
                         default => 'gray',
@@ -185,6 +186,8 @@ class ItemMediaResource extends Resource
     private static function qualityLabel(ItemMedia $r): ?string
     {
         return match (true) {
+            // David 2026-11-19: a durable item given up at once after its check tries — the fallback is shown, nothing to do.
+            $r->needsReview() && $r->isExhausted() && ! in_array($r->item_key, ItemMediaService::ACTION_ITEMS, true) => 'given up (fallback shown)',
             $r->needsReview() => 'needs review',
             $r->status === ItemMedia::STATUS_RUNNING && filled($r->candidate_path) => 'checking',
             $r->isInFlight() && $r->quality_retries > 0 => 'retrying',

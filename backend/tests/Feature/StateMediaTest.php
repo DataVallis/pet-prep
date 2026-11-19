@@ -301,9 +301,15 @@ describe('pipeline for a pet with its own media', function () {
         $loopSubmits = smCalls('https://queue.fal.run/fal-ai/kling-video/')->filter(fn (Request $r) => ! str_contains((string) $r['prompt'], 'start image'))->values();
         expect($loopSubmits)->toHaveCount(6);
         foreach ($loopSubmits as $r) {
-            expect($r->data())->not->toHaveKey('end_image_url')
-                ->and($r['prompt'])->toContain('clearly visible')->toContain('close to the starting pose so it can loop')
-                ->and($r['prompt'])->not->toContain('Subtle, slow')
+            expect($r->data())->not->toHaveKey('end_image_url')->and($r['prompt'])->not->toContain('Subtle, slow');
+            if (str_contains((string) $r['prompt'], 'sound asleep')) {
+                // David 2026-11-19: the Sleeping loop is calm (only breathing) with the sleep negative prompt.
+                expect($r['prompt'])->toContain('so it can loop')->not->toContain('clearly visible')
+                    ->and($r['negative_prompt'])->toContain('waking up');
+
+                continue;
+            }
+            expect($r['prompt'])->toContain('clearly visible')->toContain('close to the starting pose so it can loop')
                 ->and($r['negative_prompt'])->not->toContain('fast motion');
         }
         expect(PetMedia::where('pet_id', $pet->id)->where('kind', 'video')->whereNotNull('request_id')->pluck('recipe')->unique()->all())->toBe(['start_only']);

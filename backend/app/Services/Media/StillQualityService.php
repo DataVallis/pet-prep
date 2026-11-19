@@ -328,7 +328,7 @@ class StillQualityService
      * ('retry'), at most VISION_ERROR_RETRIES times per generation; then the file is used
      * »not AI-checked« (quality unchecked, System health).
      *
-     * @return 'promoted'|'retrying'|'needs_review'|'waiting'|'busy'|'skipped'|'retry'
+     * @return 'promoted'|'retrying'|'needs_review'|'fallback'|'waiting'|'busy'|'skipped'|'retry'
      */
     public function checkItemCandidate(int $rowId): string
     {
@@ -423,7 +423,19 @@ class StillQualityService
             return $retried ? 'retrying' : 'skipped';
         }
 
-        // heal() gives the chain up (fallback + one alert per run); »Approve anyway« shows the candidate.
+        // David 2026-11-19: a durable item (bed, bowls, toys) is given up AT ONCE — its last passed key
+        // image is shown (or the item without content), media_ready true, one counting alert; no review wait.
+        if ($this->items->givesUpAtOnce($fresh)) {
+            $given = $this->items->giveUpQuality($fresh, $candidate, (string) $check->reason);
+            if ($given) {
+                Log::warning('StillQualityService: durable item file failed the check after its retries — given up, fallback shown', ['item_media_id' => $row->id, 'reason' => $check->reason]);
+            }
+
+            return $given ? 'fallback' : 'skipped';
+        }
+
+        // Treats / catalogue pictures: heal() gives the chain up (fallback / locked + one alert per run);
+        // »Approve anyway« shows the candidate.
         $failed = $this->items->failQuality($fresh, $candidate, (string) $check->reason);
         if ($failed) {
             Log::warning('StillQualityService: item file failed the check after its retries — needs review', ['item_media_id' => $row->id, 'reason' => $check->reason]);

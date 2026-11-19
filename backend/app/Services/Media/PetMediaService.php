@@ -825,7 +825,7 @@ class PetMediaService
                 [$breedKey, $traits] = $this->prompts->subjectOf($pet);
                 // Frugal clips C (David 2026-10-30): low-motion loops 3 s (served as a ping-pong).
                 $submitted = $this->fal->submitLoopVideoFor($breedKey, $traits, $pet->life_stage, $state, $this->falFetchUrl($pose), $pet->id, $slot->id,
-                    short: $this->entitlements->shortLoop($pet->speciesValue(), $state, $slot, fresh: true));
+                    short: $this->entitlements->shortLoop($pet->speciesValue(), $state, $slot, fresh: true), variant: $slot->sleepVariant());
             } else {
                 $submitted = $this->fal->submitStateVideo($pet, $state, $this->falFetchUrl($image), $slot->id) + ['recipe' => null];
             }
@@ -2881,7 +2881,7 @@ class PetMediaService
                 ),
                 $pose !== null => $this->fal->submitLoopVideoFor(
                     $look->breed_type->value, $look->traits(), $stage, $state, $this->falFetchUrl($pose), null, $row->id,
-                    short: $this->entitlements->shortLoop($look->breed_type->species(), $state, $row, fresh: true),
+                    short: $this->entitlements->shortLoop($look->breed_type->species(), $state, $row, fresh: true), variant: $row->sleepVariant(),
                 ),
                 default => $this->fal->submitStateVideoFor(
                     $look->breed_type->value, $look->traits(), $stage, $state, $this->falFetchUrl($image), null, $row->id,
