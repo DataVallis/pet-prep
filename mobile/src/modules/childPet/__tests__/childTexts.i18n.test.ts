@@ -88,7 +88,7 @@ describe('English child copy', () => {
     const clock = { hold_hours: 2, clock_started_at: NOW, next_due_at: '2026-10-04T13:20:00+02:00', last_taken_out_at: null };
     expect(takeOutCountdown(clock, Date.parse(NOW), TZ)?.line).toBe('Your pup needs to go out within ~1 h 20 min.');
     expect(takeOutCountdown(clock, Date.parse(NOW), TZ)?.howTo).toBe('Press “Take out” before time runs out.');
-    expect(takeOutCountdown(clock, Date.parse('2026-10-04T13:20:00+02:00'), TZ)?.line).toBe('Your pup wants to go outside.');
+    expect(takeOutCountdown(clock, Date.parse('2026-10-04T13:20:00+02:00'), TZ)?.line).toBe('Your pup needs to go outside.');
   });
 
   it('training: refusals with a time, result lines and the parent summary', () => {

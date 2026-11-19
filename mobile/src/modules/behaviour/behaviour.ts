@@ -312,7 +312,7 @@ export function takeOutLevel(minutesLeft: number, holdHours: number): TakeOutLev
  * Deadline for "Pelji ven" in SERVER time (`serverNowMs` = device clock + skew). M5-T01: the
  * clock is a deadline for the child's action, not a countdown to an event.
  * Under 3 h: "Kuža mora ven v ~1 h 20 min."; later (quiet hours in between, a long hold):
- * "najkasneje ob 14:30" / "jutri ob 07:10" in the family clock; due: a calm "Kuža bi rad šel ven."
+ * "najkasneje ob 14:30" / "jutri ob 07:10" in the family clock; due: a calm "Kuža mora ven." (never "wants": the pup may be asleep and still needs to be woken and taken out — David 2026-11-19)
  */
 export function takeOutCountdown(clock: TakeOutClock, serverNowMs: number, timezone: string | null): TakeOutCountdown | null {
   const dueMs = Date.parse(clock.next_due_at);

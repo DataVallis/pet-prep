@@ -13,7 +13,7 @@
     "takeOutNotNeeded": "Your pup doesn't need to go out right now.",
     "takeOutIn": "Your pup needs to go out within {{duration}}.",
     "takeOutAt": "Your pup needs to go out {{when}} at the latest.",
-    "takeOutNow": "Your pup wants to go outside.",
+    "takeOutNow": "Your pup needs to go outside.",
     "takeOutHowTo": "Press “Take out” before time runs out.",
     "nextTakeOutIn": "Next time in {{duration}}.",
     "nextTakeOutAt": "Next time {{when}}.",

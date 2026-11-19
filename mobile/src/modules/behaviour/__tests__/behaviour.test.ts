@@ -169,16 +169,16 @@ describe('calm countdown', () => {
     expect(tomorrow?.line).toBe('Kuža mora ven najkasneje jutri ob 7:10.');
   });
 
-  it('under a minute left: "wants to go out", not "~1 min"', () => {
+  it('under a minute left: "needs to go out", not "~1 min"', () => {
     const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:00:00+02:00') - 40_000, TZ);
-    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null, short: 'Kuža mora ven zdaj' });
+    expect(c).toEqual({ line: 'Kuža mora ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null, short: 'Kuža mora ven zdaj' });
     const justOver = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:00:00+02:00') - 61_000, TZ);
     expect(justOver?.line).toBe('Kuža mora ven v ~1 min.');
   });
 
   it('due: a calm line, never an alarm', () => {
     const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:05:00+02:00'), TZ);
-    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null, short: 'Kuža mora ven zdaj' });
+    expect(c).toEqual({ line: 'Kuža mora ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null, short: 'Kuža mora ven zdaj' });
     expect(c?.line).not.toMatch(/!|nujno|hitro/i);
   });
 });

@@ -148,7 +148,7 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
     expect(screen.getByTestId('hud-take-out-level-urgent')).toBeTruthy();
     expect(screen.getByTestId('action-take-out-pulse')).toBeTruthy();
 
-    // Past the due time: calm "wants to go out", hint "zdaj".
+    // Past the due time: calm "needs to go out", hint "zdaj".
     getChildPet.mockResolvedValue(puppy({ server_time: '2026-10-04T13:00:30+02:00' }));
     await act(async () => {
       await jest.advanceTimersByTimeAsync(26 * 60_000);
