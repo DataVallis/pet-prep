@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "6279503751073d7df3828d8c2b5bdc1ee9dfe0499dac295f0868bae0be14c96c"
+      "sha256": "78894b6da3c0e98f0867d8ee6a9ce274544530397d889cd5ef914feac1e5fd22"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "b2bdfeb405a6b43ab46ab6bf6d0e65a821fb6e226b8e8df13d7ff0fd63d89ee6"
+      "sha256": "39b14608e2c37b22a9b783f0693a232868fe757a2951514a5f13f86d1962819b"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "b68d5da7614566a7e27ab08b7441fb22df7cc91cc1d04cc85a86d249770c2a70"
+      "sha256": "a2532e730d7b40a8e16cbe22dc0333a495b278ecf140043b6dd0d00bca37c13d"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "9bee63b538bcf7478ca1137089b1337517c253d8f7f49229b439cfd239338b03"
+      "sha256": "e0559bec4fb6295a502c7d21ee51c26347691b118e1ff54eb1fa8ed53ec91969"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "c2486100c7493838c24bc786bce0c3fd89ddd4877ff17466d004814fc3ca7241"
+      "sha256": "66d9e0344ee202ed0ad817a3db45c49dab835d2f50d577bf409c48cf6b80f0b7"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "a56f0315bf0d4401da4879ebe6a78b4e8b38a683f91d023d449f5bc3d3e43171"
+      "sha256": "7ee80c2e4be21115e601ad10f0bcb6c6744d6226b5c4c6134cd934c9c291454d"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "d8fdad6ef4c3acdbd5b5e176aee96c347b127344348778ecda32aa99a478331d"
+      "sha256": "045a94bc215743f1fc9241c7f781c6fc0c1efb8cb0516ef9b20cfb13a1b41387"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 121,
+      "breed_count": 122,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -74477,6 +74477,640 @@
       ]
     },
     {
+      "id": "black_russian_terrier",
+      "species": "dog",
+      "order": 121,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Black Russian Terrier",
+        "sl": "Ruski črni terier"
+      },
+      "slug": {
+        "en": "black-russian-terrier",
+        "sl": "ruski-crni-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Russian Black Terrier",
+          "Russian Terrier",
+          "Tchiorny Terrier",
+          "BRT",
+          "RBT"
+        ],
+        "sl": [
+          "ruski crni terier",
+          "črni ruski terier",
+          "ruski terier"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S986"
+          ],
+          "ref": "black_russian_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              72,
+              76
+            ],
+            "female": [
+              68,
+              72
+            ]
+          },
+          "source_ids": [
+            "S985"
+          ],
+          "ref": "black_russian_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              50,
+              60
+            ],
+            "female": [
+              45,
+              50
+            ]
+          },
+          "source_ids": [
+            "S985"
+          ],
+          "ref": "black_russian_terrier.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "black_russian_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S986"
+          ],
+          "ref": "black_russian_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S986"
+          ],
+          "ref": "black_russian_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S986"
+          ],
+          "ref": "black_russian_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S986"
+          ],
+          "ref": "black_russian_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S986"
+          ],
+          "ref": "black_russian_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 327,
+            "group": 2,
+            "section": 1,
+            "origin": "RU"
+          },
+          "source_ids": [
+            "S984"
+          ],
+          "ref": "black_russian_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S990"
+          ],
+          "ref": "black_russian_terrier.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S990"
+          ],
+          "ref": "black_russian_terrier.health.progressive_retinal_atrophy",
+          "confidence": "high"
+        },
+        {
+          "key": "bladder_stones",
+          "source_ids": [
+            "S989"
+          ],
+          "ref": "black_russian_terrier.health.hyperuricosuria",
+          "confidence": "high"
+        },
+        {
+          "key": "laryngeal_paralysis_polyneuropathy",
+          "source_ids": [
+            "S986"
+          ],
+          "ref": "black_russian_terrier.health.juvenile_laryngeal_paralysis",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S989"
+          ],
+          "ref": "black_russian_terrier.health.bloat",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S986"
+            ],
+            "refs": [
+              "black_russian_terrier.exercise.adult",
+              "black_russian_terrier.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S989"
+            ],
+            "refs": [
+              "black_russian_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S989"
+            ],
+            "refs": [
+              "black_russian_terrier.behaviour.children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S986"
+            ],
+            "refs": [
+              "black_russian_terrier.suitability.rkc_size_of_home"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S986"
+            ],
+            "refs": [
+              "black_russian_terrier.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S986"
+            ],
+            "refs": [
+              "black_russian_terrier.exercise.adult",
+              "black_russian_terrier.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S986"
+            ],
+            "refs": [
+              "black_russian_terrier.suitability.rkc_grooming"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S990"
+            ],
+            "refs": [
+              "black_russian_terrier.behaviour.older_children"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 42
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.black_russian_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S986"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S986 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.black_russian_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.black_russian_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S986"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 'Over 10 years', S986)"
+          },
+          {
+            "ref": "proposed_game_parameters.black_russian_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.black_russian_terrier.grooming",
+            "basis_source_ids": [
+              "S986"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Every day« → 7); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.black_russian_terrier.ear_care",
+            "basis_source_ids": [
+              "S989"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): »weekly« → enkrat na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.black_russian_terrier.nail_trimming",
+            "basis_source_ids": [
+              "S990"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »Weekly pedicures« → enkrat na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.black_russian_terrier.professional_grooming",
+            "basis_source_ids": [
+              "S990"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): obisk frizerja vsakih 6 tednov (VCA »every six to eight weeks« → spodnja meja)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S986",
+          "S989",
+          "S990"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S986"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S986"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S986"
+            ]
+          },
+          {
+            "key": "dna_huu",
+            "level": "best_practice",
+            "source_ids": [
+              "S986"
+            ]
+          },
+          {
+            "key": "dna_jlpp",
+            "level": "best_practice",
+            "source_ids": [
+              "S986"
+            ]
+          },
+          {
+            "key": "dna_prcd_pra",
+            "level": "best_practice",
+            "source_ids": [
+              "S986"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S986"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S984",
+        "S985",
+        "S986",
+        "S989",
+        "S990",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -81216,6 +81850,41 @@
       "publisher": "WebMD Pets — Mallika Bhattacharya, medically reviewed by Zilpah Sheikh, MD (2026-05-08)",
       "title": "What to Know About Tibetan Spaniels",
       "url": "https://www.webmd.com/pets/dogs/what-to-know-about-tibetan-spaniels"
+    },
+    {
+      "id": "S984",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI breeds nomenclature: RUSSKIY TCHIORNY TERRIER (327)",
+      "url": "https://www.fci.be/EN/nomenclature/TERRIER-NOIR-RUSSE-327.html"
+    },
+    {
+      "id": "S985",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard N° 327: Russian Black Terrier (valid standard 13.10.2010, EN 10.01.2011) (PDF)",
+      "url": "https://fci.be/Nomenclature/Standards/327g02-en.pdf"
+    },
+    {
+      "id": "S986",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A–Z: Russian Black Terrier",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/russian-black-terrier/"
+    },
+    {
+      "id": "S989",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Black Russian Terrier — dog breed page",
+      "url": "https://www.petmd.com/dog/breeds/black-russian-terrier"
+    },
+    {
+      "id": "S990",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals",
+      "title": "Black Russian Terrier ('Army Dog Turned Family Friend')",
+      "url": "https://vcahospitals.com/know-your-pet/black-russian-terrier"
     },
     {
       "id": "C1",

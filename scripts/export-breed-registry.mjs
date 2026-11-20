@@ -511,6 +511,7 @@ const SPECIES = [
       { id: 'norwegian_elkhound', synonyms: { en: ['Elkhound', 'Elkie', 'Norwegian Elkhound Grey', 'Norsk Elghund Grå', 'Norwegian Moose Dog'], sl: ['norveski losovec', 'losovec', 'norveški elkhund'] } },
       { id: 'american_hairless_terrier', synonyms: { en: ['AHT', 'Hairless Terrier'], sl: ['ameriski goli terier', 'goli terier'] } },
       { id: 'tibetan_spaniel', synonyms: { en: ['Tibbie'], sl: ['tibetanski spanjel', 'tibetan španjel'] } },
+      { id: 'black_russian_terrier', synonyms: { en: ['Russian Black Terrier', 'Russian Terrier', 'Tchiorny Terrier', 'BRT', 'RBT'], sl: ['ruski crni terier', 'črni ruski terier', 'ruski terier'] } },
     ],
   },
   {
@@ -3302,6 +3303,30 @@ const DOG_FACTS = {
       ['extra_eyelashes', 'health.distichiasis'],
     ],
   },
+  // M5-R10-131. RKC Breeds A–Z page reached (S986): exercise 'More than 2 hours per day', coat 'Medium', grooming 'Every day',
+  // sheds 'No', lifespan 'Over 10 years'; height + weight = FCI-Standard N° 327 (S985: males 72–76 / females 68–72 cm,
+  // males 50–60 / females 45–50 kg). No Coren rank (unranked). FCI origin Russia. Not exported: height.fci alternatives (RKC
+  // standard, the same fact twice), lifespan.petmd (span background), lifespan.mcmillan_2024_wikipedia (tier C), senior_from
+  // (derived), health.heart (no named condition). No new health key (hyperuricosuria → bladder_stones, Dalmatian precedent).
+  black_russian_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35, not re-read this run — open for David) → no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_dysplasia'],
+      ['pra_inherited_blindness', 'health.progressive_retinal_atrophy'],
+      ['bladder_stones', 'health.hyperuricosuria'],
+      ['laryngeal_paralysis_polyneuropathy', 'health.juvenile_laryngeal_paralysis'],
+      ['bloat_gdv', 'health.bloat'],
+    ],
+  },
 
 
 
@@ -3390,6 +3415,7 @@ export const DOG_CARE_TASKS = {
   norwegian_elkhound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.norwegian_elkhound.tooth_brushing']],
   american_hairless_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.american_hairless_terrier.tooth_brushing'], ['nail_trim', 1, 7, 'proposed_game_parameters.american_hairless_terrier.nail_trimming'], ['bath', 1, 7, 'proposed_game_parameters.american_hairless_terrier.bathing']],
   tibetan_spaniel: [['tooth_brushing', 7, 7, 'proposed_game_parameters.tibetan_spaniel.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.tibetan_spaniel.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.tibetan_spaniel.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.tibetan_spaniel.bathing']],
+  black_russian_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.black_russian_terrier.ear_care'], ['nail_trim', 1, 7, 'proposed_game_parameters.black_russian_terrier.nail_trimming'], ['groomer_visit', 1, 42, 'proposed_game_parameters.black_russian_terrier.professional_grooming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4380,6 +4406,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.tibetan_spaniel.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.tibetan_spaniel.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.tibetan_spaniel.exercise_minutes_senior',
+  },
+  black_russian_terrier: {
+    adult_minutes: ['proposed_game_parameters.black_russian_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.black_russian_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.black_russian_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.black_russian_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.black_russian_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.black_russian_terrier.exercise_minutes_senior',
   },
 
 
