@@ -73,7 +73,7 @@ class ItemRecheckCommand extends Command implements Isolatable
 
         $this->line(sprintf('Stored item content shown to an owner and not checked with the realism rubric: %d key image(s), %d clip(s). To check: %d × ≈ $%.4f = ≈ $%.4f (production AI budget; left today $%.2f of $%.2f). Item check mode: %s.',
             $images, $clips, $total, $perCheck, $estimate, max(0, $guard->dailyCapUsd() - $guard->spentTodayUsd()), $guard->dailyCapUsd(), $mode));
-        $this->line(sprintf('Regenerations if they fail (enforce, at most %d per run): up to %d × ≈ $%.2f (new key image + its clip) = ≈ $%.2f — worst case of this run ≈ $%.2f.',
+        $this->line(sprintf('Regenerations if they fail (enforce, at most %d per run): up to %d × ≈ $%.2f (new key image + its clips — worst case the bowls: eating + drinking) = ≈ $%.2f — worst case of this run ≈ $%.2f.',
             $regenCap, $regenerations, $perKeyImage, $regenerations * $perKeyImage, $estimate + $regenerations * $perKeyImage));
 
         if (! $run) {

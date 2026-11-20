@@ -22,6 +22,10 @@ use Illuminate\Support\Carbon;
  *   scope pet       — the same for a pet with its own media (unique DNA), per (pet, design,
  *                     kind), regenerated in place when the pet's reference image changes.
  *
+ *   kind `drink_clip` (David 2026-11-20, »1+A«) — the bowls only ({@see DRINK_ITEMS}): a second
+ *                     clip from the SAME key image (both bowls are in it) where the animal drinks
+ *                     from the water bowl; feed plays `clip` (eating), water plays `drink_clip`.
+ *
  * `design` = the design key (config/shop_designs.php) or, for treats, `dog_treats` /
  * `cat_treats`. Status like pet_media: pending → running (submitted; `request_id`) → ready
  * (`storage_path`) | failed (`error_reason`, `error`). The stored file stays servable while a
@@ -86,6 +90,18 @@ class ItemMedia extends Model
     /** The clip made from the key image (loop for bed / toys, played once for bowls / treats). */
     public const KIND_CLIP = 'clip';
 
+    /**
+     * David 2026-11-20 (»1+A se strinjam«): the bowls' DRINKING clip — made from the same key image as
+     * the eating clip; played once after an accepted »Voda«. Never part of the item's readiness.
+     */
+    public const KIND_DRINK_CLIP = 'drink_clip';
+
+    /** Every clip kind (start frame = the key image; checked by the item clip rubric). */
+    public const CLIP_KINDS = [self::KIND_CLIP, self::KIND_DRINK_CLIP];
+
+    /** Items that also get a drinking clip. */
+    public const DRINK_ITEMS = ['bowls'];
+
     public const STATUS_PENDING = 'pending';
 
     public const STATUS_RUNNING = 'running';
@@ -147,12 +163,19 @@ class ItemMedia extends Model
     /** A still (catalogue picture or key image): image mimes, `images[0].url` on the webhook. */
     public function isStill(): bool
     {
-        return $this->kind !== self::KIND_CLIP;
+        return ! $this->isClip();
     }
 
+    /** A clip made from the key image — the eating / sleeping / playing clip or the bowls' drinking clip. */
     public function isClip(): bool
     {
-        return $this->kind === self::KIND_CLIP;
+        return in_array($this->kind, self::CLIP_KINDS, true);
+    }
+
+    /** David 2026-11-20: the bowls' drinking clip (»Voda«). */
+    public function isDrinkClip(): bool
+    {
+        return $this->kind === self::KIND_DRINK_CLIP;
     }
 
     /** A stored file exists (possibly of an older generation while a new one runs). */
@@ -235,6 +258,7 @@ class ItemMedia extends Model
         return match ($this->kind) {
             self::KIND_PICTURE => "{$this->design} catalogue picture",
             self::KIND_IMAGE => "{$this->design} key image",
+            self::KIND_DRINK_CLIP => "{$this->design} drinking clip",
             default => "{$this->design} clip",
         };
     }

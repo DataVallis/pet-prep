@@ -48,6 +48,10 @@ use Illuminate\Support\Facades\URL;
  *    (the reference image of its life stage): a KEY IMAGE (Nano Banana Pro Edit of that
  *    picture, the design's catalogue picture as the 2nd reference) and a CLIP (Kling, start
  *    frame = the key image only, `clip_seconds.item`). Bed / toys loop, bowls / treats play once.
+ *    The bowls (ItemMedia::DRINK_ITEMS, David 2026-11-20 »1+A«) get a second clip from the SAME key
+ *    image — the animal DRINKING from the water bowl (kind `drink_clip`): feed plays the eating clip,
+ *    water the drinking clip. The drinking clip never decides `media_ready` (feed / water are core
+ *    care, never locked); payload `drink_video` / `drink_video_seconds` stay null until it is shown.
  *
  * Sharing: a pet of a shared look (pool / paid breed + colour) gets the LOOK rows of
  * (look, design, stage) — made once, every later buyer of that design for that look and
@@ -252,7 +256,9 @@ class ItemMediaService
      * @param  Collection<int, PetMedia>|null  $slots
      *                                                 `given_up` = the recovery of the current chain is exhausted and no clip is shown (a durable
      *                                                 item is then a fallback, an ACTION item keeps waiting — locked).
-     * @return array<string, array{item_key: string, design: string|null, content_key: string, outcome: string, stage: string|null, image: ItemMedia|null, clip: ItemMedia|null, given_up: bool, given_up_row: ItemMedia|null}>
+     *                                                 `drink_clip` (bowls only, David 2026-11-20) = the shown drinking clip of the
+     *                                                 current key image, else null — never part of the outcome.
+     * @return array<string, array{item_key: string, design: string|null, content_key: string, outcome: string, stage: string|null, image: ItemMedia|null, clip: ItemMedia|null, drink_clip: ItemMedia|null, given_up: bool, given_up_row: ItemMedia|null}>
      */
     public function statesFor(Pet $pet, ?Collection $slots = null): array
     {
@@ -268,7 +274,7 @@ class ItemMediaService
 
         $states = [];
         foreach ($owned as $key => $own) {
-            $state = $own + ['outcome' => self::OUTCOME_WAITING, 'stage' => $picture['stage'] ?? null, 'image' => null, 'clip' => null, 'given_up' => false, 'given_up_row' => null];
+            $state = $own + ['outcome' => self::OUTCOME_WAITING, 'stage' => $picture['stage'] ?? null, 'image' => null, 'clip' => null, 'drink_clip' => null, 'given_up' => false, 'given_up_row' => null];
 
             if ($picture === null) {
                 if ($noMedia) {
@@ -287,6 +293,12 @@ class ItemMediaService
 
             $state['image'] = $imageCurrent ? $image : null;
             $state['clip'] = $clipCurrent ? $clip : null;
+            // David 2026-11-20: the bowls' drinking clip of the same key image — shown on its own, it
+            // never changes the outcome (a missing / given-up drinking clip only means »no clip on Voda«).
+            if (in_array($own['item_key'], ItemMedia::DRINK_ITEMS, true) && $imageCurrent) {
+                $drink = $rows->first(fn (ItemMedia $r) => $r->design === $own['content_key'] && $r->kind === ItemMedia::KIND_DRINK_CLIP);
+                $state['drink_clip'] = $drink !== null && $drink->isShown() && $drink->source_path === $image->storage_path ? $drink : null;
+            }
             // The automatic recovery of the current chain gave up (heal(): exhausted + one alert).
             $givenUp = (! $imageCurrent && $image !== null && $image->isExhausted() && $image->target_path === $picture['path'])
                 || ($imageCurrent && $clip !== null && $clip->isExhausted() && $clip->target_path === $image->storage_path);
@@ -337,8 +349,11 @@ class ItemMediaService
      * shown — signed URLs of OUR files (never fal URLs). Absent while it is made, for a pet
      * without AI media and for a fallback without any picture.
      *
+     * The bowls (ItemMedia::DRINK_ITEMS) also carry `drink_video` / `drink_video_seconds` — the drinking
+     * clip (David 2026-11-20), null until it is stored and passed its check, or when it gave up.
+     *
      * @param  Collection<int, PetMedia>|null  $slots
-     * @return array<string, array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}>
+     * @return array<string, array{image: string|null, video: string|null, video_seconds: float|null, loop: bool, drink_video?: string|null, drink_video_seconds?: float|null}>
      */
     public function payloadFor(Pet $pet, ?Collection $slots = null, ?CarbonImmutable $expires = null): array
     {
@@ -356,6 +371,11 @@ class ItemMediaService
                 'video_seconds' => $clip?->duration_seconds,
                 'loop' => in_array($key, self::LOOP_ITEMS, true),
             ];
+            if (in_array($key, ItemMedia::DRINK_ITEMS, true)) {
+                $drink = $state['drink_clip'];
+                $items[$key]['drink_video'] = $drink !== null ? $this->signedUrl($drink, $pet, $expires) : null;
+                $items[$key]['drink_video_seconds'] = $drink?->duration_seconds;
+            }
         }
 
         return $items;
@@ -504,6 +524,12 @@ class ItemMediaService
                 }
                 $clip = $this->row($picture, $own['item_key'], $own['content_key'], ItemMedia::KIND_CLIP);
                 $dispatched += $this->ensureRow($clip, (string) $image->storage_path) ? 1 : 0;
+                // David 2026-11-20: the bowls' drinking clip from the same key image (also the backfill
+                // of bowls bought before — this runs for every owner in media:item-media).
+                if (in_array($own['item_key'], ItemMedia::DRINK_ITEMS, true)) {
+                    $drink = $this->row($picture, $own['item_key'], $own['content_key'], ItemMedia::KIND_DRINK_CLIP);
+                    $dispatched += $this->ensureRow($drink, (string) $image->storage_path) ? 1 : 0;
+                }
 
                 continue;
             }
@@ -790,12 +816,18 @@ class ItemMediaService
         }
         $species = PetAppearancePrompt::speciesOf($breedKey);
         $clipStage = $image->life_stage !== null ? LifeStage::tryFrom($image->life_stage) : null;
-        $prompt = $this->prompts->itemClipPrompt($breedKey, $row->item_key, $description, $traits, $clipStage, $row->checkVariant());
+        // David 2026-11-20: the bowls' drinking clip — same key image, drinking prompt.
+        $prompt = $row->isDrinkClip()
+            ? $this->prompts->itemDrinkClipPrompt($breedKey, $description, $traits, $clipStage, $row->checkVariant())
+            : $this->prompts->itemClipPrompt($breedKey, $row->item_key, $description, $traits, $clipStage, $row->checkVariant());
+        $negative = $row->isDrinkClip()
+            ? $this->prompts->itemDrinkClipNegativePrompt($species)
+            : $this->prompts->itemClipNegativePrompt($species, (string) $row->item_key);
 
         return [
             'target' => (string) $image->storage_path,
             'stage' => $image->life_stage,
-            'submit' => fn (): array => $this->fal->submitItemClip($prompt, $this->prompts->itemClipNegativePrompt($species, (string) $row->item_key), $this->falFetchUrl($image), $petId, $row->id),
+            'submit' => fn (): array => $this->fal->submitItemClip($prompt, $negative, $this->falFetchUrl($image), $petId, $row->id),
         ];
     }
 
@@ -957,7 +989,8 @@ class ItemMediaService
                 continue;
             }
             $state = $this->statesFor($pet)[$row->item_key] ?? null;
-            if ($state !== null && $state['content_key'] === $row->design && ($state['image']?->id === $row->id || $state['clip']?->id === $row->id)) {
+            if ($state !== null && $state['content_key'] === $row->design
+                && in_array($row->id, [$state['image']?->id, $state['clip']?->id, $state['drink_clip']?->id], true)) {
                 return true;
             }
         }
@@ -1300,7 +1333,12 @@ class ItemMediaService
 
     public function giveUpQuality(ItemMedia $row, string $candidate, string $reason): bool
     {
-        $what = $row->isClip() ? 'its last passed key image is shown without a clip' : 'the item is shown without its picture';
+        $what = match (true) {
+            // David 2026-11-20: a given-up drinking clip only means »nothing extra on Voda« — the item is unaffected.
+            $row->isDrinkClip() => 'no drinking clip is played (the bowls and their eating clip are unaffected)',
+            $row->isClip() => 'its last passed key image is shown without a clip',
+            default => 'the item is shown without its picture',
+        };
         $done = ItemMedia::query()->whereKey($row->id)->where('status', ItemMedia::STATUS_RUNNING)->where('candidate_path', $candidate)
             ->update([
                 'status' => ItemMedia::STATUS_FAILED,
@@ -1376,7 +1414,11 @@ class ItemMediaService
         };
     }
 
-    /** What follows a stored file: picture → its waiting key images; image → its clip; clip → the pets are told. */
+    /**
+     * What follows a stored file: picture → its waiting key images; image → its clip(s); clip → the
+     * pets are told. The bowls' drinking clip (David 2026-11-20) does not change the item's outcome,
+     * so settle() has nothing new — its pets get one PetUpdated `item_media_ready` (the apps refetch).
+     */
     private function afterStored(ItemMedia $row): void
     {
         if ($row->isPicture()) {
@@ -1389,7 +1431,10 @@ class ItemMediaService
 
         foreach ($this->petsOf($row) as $pet) {
             $this->ensure($pet);
-            $this->settle($pet);
+            $settled = $this->settle($pet);
+            if ($row->isDrinkClip() && ! in_array($row->item_key, $settled, true)) {
+                PetUpdated::afterCommit($pet->fresh() ?? $pet, 'item_media_ready');
+            }
         }
     }
 
@@ -1938,7 +1983,8 @@ class ItemMediaService
     public function keyImageRegenerationCostUsd(): float
     {
         $image = $this->profiles->itemImage()?->estimatedCostUsd() ?? 0.0;
-        $clip = $this->clipsEnabled() ? $this->profiles->clipVideo('item')->estimatedCostUsd() : 0.0;
+        // Worst case: the bowls' key image remakes two clips (eating + drinking, David 2026-11-20).
+        $clip = $this->clipsEnabled() ? 2 * $this->profiles->clipVideo('item')->estimatedCostUsd() : 0.0;
 
         return round($image + $clip, 4);
     }
@@ -1953,9 +1999,17 @@ class ItemMediaService
         $items = 0;
         $cost = 0.0;
         foreach ($states as $state) {
+            // David 2026-11-20: the bowls' drinking clip is one more clip when it is not shown yet.
+            $drink = $clip > 0 && in_array($state['item_key'], ItemMedia::DRINK_ITEMS, true) && $state['drink_clip'] === null && $state['outcome'] !== self::OUTCOME_NO_MEDIA;
             if ($state['outcome'] === self::OUTCOME_CONTENT || $state['outcome'] === self::OUTCOME_NO_MEDIA) {
+                if ($drink && $state['outcome'] === self::OUTCOME_CONTENT) {
+                    $items++;
+                    $cost += $clip;
+                }
+
                 continue;
             }
+            $cost += $drink ? $clip : 0.0;
             $items++;
             if ($state['image'] === null) {
                 $cost += $image + (ItemDesigns::find((string) $state['content_key']) !== null && ! $pictures->has($state['content_key']) ? $picture : 0.0);

@@ -827,6 +827,75 @@ class PetAppearancePrompt
         return $itemKey === 'bed' ? $this->sleepNegativePrompt($species) : $this->loopNegativePrompt($species);
     }
 
+    /** David 2026-11-20: what the animal does in the bowls' DRINKING clip (David's wording; the clip check's intent too). */
+    public const DRINK_MOTION = 'drinking water from the water bowl: lapping the water with its tongue, small calm head movements, staying in the same spot';
+
+    public const CAT_DRINK_MOTION = 'drinking water from the water bowl: lapping the water with quick small flicks of its tongue, small calm head movements, staying in the same spot';
+
+    /** The drinking clip is calm: LOOP_STYLE with calm instead of lively motion. */
+    public const DRINK_STYLE = 'Keep the dog\'s exact appearance, size, coat colours and markings from the image; the same single dog throughout. '
+        .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
+        .'Realistic, natural, calm dog motion with correct anatomy and weight. No people, no hands, no other animals, no text.';
+
+    public const CAT_DRINK_STYLE = 'Keep the cat\'s exact appearance, size, coat colours and markings from the image; the same single cat throughout. '
+        .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
+        .'Realistic, natural, calm cat motion with correct anatomy and weight. No people, no hands, no other animals, no text.';
+
+    /** Added to the loop negative prompt of a drinking clip: never eating, never leaving the bowls. */
+    public const DRINK_NEGATIVE = 'eating kibble, eating food, chewing food, food in the mouth, head in the food bowl, '
+        .'walking away, leaving the bowls, turning away, lying down, jumping, spilling water, bowls moving';
+
+    /**
+     * David 2026-11-20 (»1+A se strinjam«): the bowls' DRINKING clip — start frame = the SAME bowls key
+     * image as the eating clip (both bowls are in it), the animal drinks from the water bowl, calmly,
+     * in the same spot. Played once after an accepted »Voda«. Variants escalate per check retry like
+     * the other item clips (ItemMedia::checkVariant()).
+     *
+     * @param  array<string, string>  $traits
+     */
+    public function itemDrinkClipPrompt(string $breedKey, string $description, array $traits = [], ?LifeStage $stage = null, int $variant = 0): string
+    {
+        $species = self::speciesOf($breedKey);
+        $noun = $species === Species::Cat ? 'cat' : 'dog';
+        $subject = $this->clipSubject($breedKey, $species, $traits, $stage);
+        $style = $species === Species::Cat ? self::CAT_DRINK_STYLE : self::DRINK_STYLE;
+        $motion = self::itemDrinkClipIntent($species);
+        $only = 'The '.$noun.' drinks only water from the water bowl; it does not eat and never puts its head in the food bowl.';
+        $grounded = 'Both bowls stay real objects resting on the floor of this room, the same size, in the same place, light and focus as in the image; they never float, slide, grow, shrink or change.';
+        $note = 'The lapping and the small head movements are clearly visible and natural, never a still image.';
+
+        return match (true) {
+            $variant === 0 => 'The same '.$subject.' as in the image, '.$motion.'. '.$only.' The bowls stay exactly as in the image ('.$description.'). '.$grounded.' '.$note.' '.$style,
+            $variant === 1 => 'A realistic video of the same '.$subject.' as in the start image: '.$motion.'. '.$only.' '.$grounded.' '.$note.' '.$style,
+            default => 'A realistic, calm video of the same '.$subject.' as in the start image, standing still in front of the bowls with its head lowered over the water bowl, '
+                .$motion.'. '.$only.' Its body and legs do not move. '.$grounded.' '.$style,
+        };
+    }
+
+    /** Negative prompt of the bowls' drinking clip: the loop negative + no eating, no walking away. */
+    public function itemDrinkClipNegativePrompt(Species $species): string
+    {
+        return $this->loopNegativePrompt($species).', '.self::DRINK_NEGATIVE;
+    }
+
+    /** What the drinking clip should show (the item clip check's »action_done«) — the prompt's motion. */
+    public static function itemDrinkClipIntent(Species $species): string
+    {
+        return $species === Species::Cat ? self::CAT_DRINK_MOTION : self::DRINK_MOTION;
+    }
+
+    /**
+     * What the drinking clip's scene is (the clip check): the animal at the bowls, head over the water bowl.
+     *
+     * @param  array{class: string, bed_cm: int}|null  $size
+     */
+    public static function itemDrinkScene(Species $species, string $description, ?array $size = null): string
+    {
+        $noun = $species === Species::Cat ? 'cat' : 'dog';
+
+        return 'standing in front of '.$description.' with its head lowered over the water bowl. '.self::itemSize('bowls', $noun, $size);
+    }
+
     /**
      * David 2026-11-04: where the animal's body is in an item key image (the bed: entirely in it —
      * production had a 4th paw sticking out under the bed; 2026-11-19: a big Dobermann lay ON TOP

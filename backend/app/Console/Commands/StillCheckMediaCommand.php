@@ -73,7 +73,7 @@ class StillCheckMediaCommand extends Command
         $this->line(sprintf('Unchecked stored stills: %d item key image(s), %d pet key / pose image(s)%s. To check now: %d × ≈ $%.4f = ≈ $%.4f (production AI budget; left today $%.2f of $%.2f). Still check mode: %s.',
             $itemCount, $petCount, $pets ? '' : ' (pets not selected — --pets)', $total, $perCheck, $estimate,
             max(0, $guard->dailyCapUsd() - $guard->spentTodayUsd()), $guard->dailyCapUsd(), $mode));
-        $this->line(sprintf('Regenerations if they fail (enforce, at most %d per run): up to %d × ≈ $%.2f (new key image + its clip) = ≈ $%.2f — worst case of this run ≈ $%.2f.',
+        $this->line(sprintf('Regenerations if they fail (enforce, at most %d per run): up to %d × ≈ $%.2f (new key image + its clips — worst case the bowls: eating + drinking) = ≈ $%.2f — worst case of this run ≈ $%.2f.',
             $regenCap, $regenerations, $perRegeneration, $regenerations * $perRegeneration, $estimate + $regenerations * $perRegeneration));
 
         if ($dryRun || $total === 0) {

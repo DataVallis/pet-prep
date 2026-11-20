@@ -760,3 +760,49 @@ describe('QA #1414', function () {
         expect(ItemMediaQualityCheck::where('trigger', 'recheck')->count())->toBe(0);
     });
 });
+
+/* ─────────────────────────── Bowls: the drinking clip (David 2026-11-20) ─────────────────────────── */
+
+describe('bowls drinking clip check', function () {
+    it('judges the drinking clip on drinking (intent + scene), the eating clip on eating — same start frame', function () {
+        ircNeedsFfmpeg();
+        ircFakeFal();
+        $pet = ircPet('bowls', 'dog_bowls_steel_stand');
+        app(ItemMediaService::class)->ensure($pet);
+        ircComplete();
+
+        $image = ircRow($pet, 'image');
+        $eat = ircRow($pet, 'clip');
+        $drink = ircRow($pet, 'drink_clip');
+        $sheets = ircVision()->filter(fn (array $b) => str_contains((string) $b['image_urls'][0], '/api/media/item-quality-sheets/'))->values();
+        $drinkCall = $sheets->first(fn (array $b) => str_contains((string) $b['prompt'], PetAppearancePrompt::DRINK_MOTION));
+        $eatCall = $sheets->first(fn (array $b) => ! str_contains((string) $b['prompt'], 'drinking water'));
+
+        expect($sheets)->toHaveCount(2)
+            ->and($drinkCall['prompt'])->toContain('with its head lowered over the water bowl')->not->toContain('eating from the food bowl')
+            ->and($drinkCall['image_urls'][1])->toContain("/api/media/items/{$image->id}")
+            ->and($eatCall['prompt'])->toContain('eating from the food bowl')
+            ->and($eatCall['image_urls'][1])->toContain("/api/media/items/{$image->id}")
+            ->and(ItemMediaQualityCheck::where('item_media_id', $drink->id)->sole()->rubric)->toBe(MediaVisionCheck::RUBRIC_ITEM_CLIP)
+            ->and([$eat->status, $drink->status])->toBe(['ready', 'ready'])
+            ->and($drink->source_path)->toBe($image->storage_path)
+            ->and(app(ItemMediaService::class)->statesFor($pet->fresh())['bowls']['drink_clip']?->id)->toBe($drink->id);
+    });
+
+    it('a drinking clip that fails its check on every try is given up at once — drink_video null, the bowls stay ready', function () {
+        ircNeedsFfmpeg();
+        Queue::fake([SendItemMediaAlert::class]);
+        ircFakeFal(fn (ItemMedia $row, string $rubric) => $row->isDrinkClip() ? ['action_done'] : []);
+        $pet = ircPet('bowls', 'dog_bowls_steel_stand');
+        app(ItemMediaService::class)->ensure($pet);
+        ircComplete();
+
+        $drink = ircRow($pet, 'drink_clip');
+        $payload = app(ItemMediaService::class)->payloadFor($pet->fresh());
+        expect($drink->status)->toBe('failed')->and($drink->exhausted_at)->not->toBeNull()
+            ->and(ItemMediaQualityCheck::where('item_media_id', $drink->id)->count())->toBe(StillQualityService::maxRetries() + 1)
+            ->and($payload['bowls']['video'])->not->toBeNull()->and($payload['bowls']['drink_video'])->toBeNull()
+            ->and(app(ItemMediaService::class)->readiness($pet->fresh()))->toBe(['bowls' => true])
+            ->and(ircRow($pet, 'clip')->status)->toBe('ready')->and(ircRow($pet, 'image')->isShown())->toBeTrue();
+    });
+});
