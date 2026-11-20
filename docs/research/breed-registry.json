@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "6924ccea951135aaefbf50e446389f1b768e5616d7ea192849ec32e1f0162ddb"
+      "sha256": "4e3a1736fd4c16739dd8e1f8241b8b339daa632f7d134620f0d7cba364b48232"
     }
   },
   "suitability_vocabulary": {
@@ -73708,7 +73708,12 @@
           "S977"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "american-hairless-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

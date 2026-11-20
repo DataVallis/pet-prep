@@ -1569,6 +1569,19 @@
             "prompt_hash": "sha256:3ad27edad0bc3c3e81a268ecef9ed5ce386030f60172df0441b42760a36d1de7",
             "generated_at": "2026-11-19T06:55:09+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "american_hairless_terrier",
+            "species": "dog",
+            "colour": "pink-black-spots",
+            "file": "dog/american-hairless-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:4b83173bc7160b3cf8cbebedf36c2a9a3edb7e777b3d693bfc40201e730f0999",
+            "generated_at": "2026-11-20T01:12:37+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
