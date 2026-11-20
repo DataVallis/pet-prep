@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "aef4c27867ff3232b604db2f9af884334e00292a17bd6b82cf63a5f4a5abfa0e"
+      "sha256": "d620cb875b29b8e7fda4ed64ee9def873b75d852cdd07c25bf350b313c9fe1b9"
     }
   },
   "suitability_vocabulary": {
@@ -75035,7 +75035,26 @@
         "file": "black-russian-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/black-russian-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "black-grey",
+            "label": {
+              "en": "Black with grey hairs",
+              "sl": "Črn s sivimi dlakami"
+            },
+            "file": "dog/black-russian-terrier--black-grey.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",

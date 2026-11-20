@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `black_russian_terrier` (viri S984–S992; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S986) |
 | Izvor | FCI št. 327, skupina 2, sekcija 1.4 (pinči in šnavcerji — Tchiorny terier), Rusija (S984, S985) — po RKC in AKC delovni pes |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 127. mesto »Black Russian Terrier« (S174, prebrano 2026-11-20: »126 Tibetan Spaniel«, »127 Black Russian Terrier«, »128 Neopolitan Mastiff«) |
-| PR-ji | pet-prep #1445 (pasma, združen `fa046ed`) · portret pet-prep (zagon `breed-portraits.yml` 44692875656, sprejet v prvem poskusu) · barvne različice pet-prep (sledijo) · spletna stran: pet-prep-website `feat/register-black-russian-terrier` |
+| PR-ji | pet-prep #1445 (pasma, združen `fa046ed`) · portret pet-prep (zagon `breed-portraits.yml` 44692875656, sprejet v prvem poskusu) · barvne različice pet-prep (zagon `breed-portraits.yml` 44694415516, 1/1 odobril Claude) · spletna stran: pet-prep-website `feat/register-black-russian-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,7 +41,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-131 | 2026-11-20 |
 | Česanje vsak dan, »Nova izkušnja« za mladička, opozorilo 60 min po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-20 |
 | Ušesa in kremplji vsak teden (otrok); opomnik za frizerja vsakih 6 tednov (starši) | 🛠 | 💶 izziv | M5-R14 / R18 / R20 | 2026-11-20 |
-| Barve (izbirnik: 2 barvi — črn (portret), črn s sivimi dlakami) | 🛠 | 💶 izziv | M5-R21 | 2026-11-20 |
+| Barve (izbirnik: 2 barvi; fotografiji za obe — črn (portret), črn s sivimi dlakami) | 🛠 | 💶 izziv | M5-R21 | 2026-11-20 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črn, brada in obrvi, viseča ušesa, naraven rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-20 |
 | Stran na petprep.si (`/animals/dogs/black-russian-terrier`, `/sl/zivali/psi/ruski-crni-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -52,6 +52,8 @@
 **Kako povedati** — starši: »Ruski črni terier je miren in zvest, a ogromen in zahteven: dve uri gibanja, česanje vsak dan in frizer vsakih šest tednov. V PetPrepu boste videli, ali vaš otrok zmore ta ritem.« · otroci: »Ruski črni terier ima brado in obrvi kot dedek — vsak dan ga počešeš, pogledaš ušesa in greš z njim na dolg sprehod.« · vlagatelji / partnerji: »122. pasma psa, ki jo je samodejni nočni zagon sam izbral po javni lestvici AKC in dodal z viri — ključne podatke je vzel s strani Royal Kennel Club, telesne mere iz standarda FCI.«
 
 ## Odprto za Davida
+
+- **Barvne različice:** »črn s sivimi dlakami« je 2026-11-20 odobril Claude — isti pes, poza in ozadje kot portret, posamezne sive dlake brez zaplat in belih lis; nobena barva ne čaka Davida.
 
 - **Življenjska doba:** McMillan 2024 pri viru A/B ni bil berljiv (Nature PDF ima pasmo le na sliki 5, tabela Dogs Trust je bila zavrnjena); Wikipedija (vir C) navaja 10,9 leta iz »2024 UK study« → starejši bi bil 98 namesto 90 mesecev. Ob ročnem pregledu tabele Dogs Trust lahko mejo popravite.
 - **Coren:** stran Wikipedije s Corenovo lestvico (S35) ta zagon ni bila dosegljiva; pasma je obravnavana kot neuvrščena (1,0×). Ob ročnem pregledu potrdite.
