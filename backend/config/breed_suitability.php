@@ -3042,5 +3042,27 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S977'], 'refs' => ['american_hairless_terrier.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-130 Tibetan Spaniel (data.json proposed_game_parameters.tibetan_spaniel.suitability_tags; S981–S983), runbook rules.
+        // RKC page not reachable (no apartment key fact); no prey-drive statement; no veterinary association names the breed → no
+        // welfare chip; in marketing. No new vocabulary key.
+        'tibetan_spaniel' => [
+            'suits' => [
+                // S981 "Tibetan Spaniels need around an hour of exercise every day and will happily join in with family games and activities."
+                ['tag' => 'active_family', 'source_ids' => ['S981'], 'refs' => ['tibetan_spaniel.exercise.adult', 'tibetan_spaniel.exercise.daily_text']],
+                // S981 "Tibetan Spaniels generally get along well with everyone and will make good family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S981'], 'refs' => ['tibetan_spaniel.behaviour.family']],
+            ],
+            'consider' => [
+                // S982 "Tibetan Spaniels are also prone to separation anxiety."
+                ['tag' => 'needs_company', 'source_ids' => ['S982'], 'refs' => ['tibetan_spaniel.behaviour.time_alone']],
+                // S982 "This is why Tibbies are better suited for families with older children who can handle them responsibly."
+                ['tag' => 'older_children', 'source_ids' => ['S982'], 'refs' => ['tibetan_spaniel.behaviour.children']],
+                // S982 "The only thing you need to have in your house is a secure fenced yard for them."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S982'], 'refs' => ['tibetan_spaniel.exercise.fencing']],
+                // S982 "Hot weather can trigger overheating and respiratory problems in Tibbies."
+                ['tag' => 'heat_sensitive', 'source_ids' => ['S982'], 'refs' => ['tibetan_spaniel.exercise.heat']],
+            ],
+        ],
     ],
 ];

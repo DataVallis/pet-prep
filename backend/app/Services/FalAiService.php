@@ -984,6 +984,13 @@ class FalAiService
                 .'smooth hairless parti-coloured pink skin with black spots, only whiskers and a few guard hairs on the eyebrows and muzzle, a solid-coloured nose, '
                 .'round, expressive, obliquely set brown eyes, V-shaped erect ears set at the outside edge of the skull, a natural undocked tail carried in an upward curve, healthy unburnt skin, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-130: FCI-Standard N° 231 (S980) — small, active and alert, slightly longer than tall; golden (all colours except
+            // merle permitted); silky coat of moderate length lying flat; pendant feathered ears; plumed tail curled over the back.
+            BreedType::TibetanSpaniel => 'A small, active and alert Tibetan Spaniel, a well balanced companion dog slightly longer in body than tall, '
+                .'golden coat, a silky top coat of moderate length lying rather flat with a mane on the neck, a medium-length blunt muzzle with a black nose, '
+                .'dark brown oval expressive eyes, medium-sized pendant ears set fairly high and well feathered, '
+                .'a richly plumed tail carried in a curl over the back, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2315,6 +2322,13 @@ class FalAiService
                 'eye_color' => 'brown',
                 'fur_texture' => 'hairless, smooth skin',
                 'markings' => 'black spots on pink skin, whiskers and eyebrow guard hairs only, V-shaped erect ears, natural undocked tail',
+            ],
+            // M5-R10-130: FCI S980 golden (the portrait default of the six common colours).
+            BreedType::TibetanSpaniel => [
+                'color_scheme' => 'golden',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'silky top coat of moderate length lying rather flat, fine dense undercoat',
+                'markings' => 'mane on the neck, feathered pendant ears, plumed tail curled over the back, black nose',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
