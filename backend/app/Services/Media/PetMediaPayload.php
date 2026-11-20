@@ -41,7 +41,7 @@ final class PetMediaPayload
         public readonly array $phaseSeconds = [],
         /** @var array<string, array{exit_side: string}> Games phase 1: phase clip => facts measured from it (ball_running => exit_side) */
         public readonly array $phaseMeta = [],
-        /** @var array<string, array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}> M6-W03: owned item => its content for the current picture */
+        /** @var array<string, array{image: string|null, video: string|null, video_seconds: float|null, loop: bool, drink_video?: string|null, drink_video_seconds?: float|null}> M6-W03: owned item => its content for the current picture (bowls: + drink_video, David 2026-11-20) */
         public readonly array $items = [],
     ) {}
 
@@ -186,9 +186,13 @@ final class PetMediaPayload
              * content). `image` = the pet with its item (key image), `video` = the clip made from
              * it (null when only the picture could be made), `video_seconds` = its length,
              * `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+             * Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+             * (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+             * `drink_video_seconds` its length — null until it is stored and passed its check, or
+             * when it gave up (then nothing extra is played). It never changes `media_ready`.
              * Signed URLs like every media URL (expire with `expires_at`). Always an object.
              *
-             * @var array{bed?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, bowls?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, toy_1?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, toy_2?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, treats?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}}
+             * @var array{bed?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, bowls?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool, drink_video: string|null, drink_video_seconds: float|null}, toy_1?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, toy_2?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, treats?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}}
              */
             'items' => (object) $this->items,
         ];

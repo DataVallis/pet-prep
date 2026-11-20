@@ -503,6 +503,15 @@ class StillQualityService
         return PetAppearancePrompt::itemScene($row->item_key, $species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species) : null);
     }
 
+    /** David 2026-11-20: the scene of the bowls' drinking clip (the animal at the bowls, head over the water bowl). */
+    private function itemDrinkSceneOf(ItemMedia $row, Species $species): string
+    {
+        $description = ItemDesigns::description($row->design) ?? $row->design;
+        $breedKey = $row->scope === ItemMedia::SCOPE_LOOK ? $row->look?->breed_type?->value : $row->pet?->breed_type?->value;
+
+        return PetAppearancePrompt::itemDrinkScene($species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species) : null);
+    }
+
     /** Signed URL fal fetches an item candidate from (GET /api/media/items/{itemMedia}/candidate). */
     private function itemCandidateUrl(ItemMedia $row): string
     {
@@ -611,7 +620,10 @@ class StillQualityService
             } else {
                 $check->update(['sheet_path' => $tech['sheet_path'], 'rubric' => MediaVisionCheck::RUBRIC_ITEM_CLIP, 'ai_status' => PetMediaQualityCheck::AI_CALLING]);
                 $species = $this->itemSpecies($row);
-                $ai = $this->vision->judgeItemClip($species, PetAppearancePrompt::itemClipIntent($row->item_key, $species), $this->itemSceneOf($row, $species),
+                // David 2026-11-20: the bowls' drinking clip is judged on drinking, not on eating.
+                $ai = $this->vision->judgeItemClip($species,
+                    $row->isDrinkClip() ? PetAppearancePrompt::itemDrinkClipIntent($species) : PetAppearancePrompt::itemClipIntent($row->item_key, $species),
+                    $row->isDrinkClip() ? $this->itemDrinkSceneOf($row, $species) : $this->itemSceneOf($row, $species),
                     $this->itemSheetUrl($check), $this->items->falFetchUrl($image), $row->pet_id, (int) $row->id);
 
                 if (in_array($ai['status'], [PetMediaQualityCheck::AI_SKIPPED_BUDGET, PetMediaQualityCheck::AI_DISABLED], true) && (float) $ai['cost_usd'] === 0.0) {
@@ -684,7 +696,8 @@ class StillQualityService
 
                 return $tech;
             }
-            $low = in_array($row->item_key, (array) config('media.quality_check.low_motion_items', []), true);
+            $low = in_array($row->item_key, (array) config('media.quality_check.low_motion_items', []), true)
+                || in_array($row->kind, (array) config('media.quality_check.low_motion_item_kinds', []), true);
             $result = MediaClipAnalyzer::evaluate($measured, $row->duration_seconds, false, $low);
             $tech = [
                 'ok' => $result['ok'],
@@ -814,7 +827,7 @@ class StillQualityService
      */
     public function itemsToRecheck(): Builder
     {
-        return ItemMedia::query()->whereIn('kind', [ItemMedia::KIND_IMAGE, ItemMedia::KIND_CLIP])
+        return ItemMedia::query()->whereIn('kind', [ItemMedia::KIND_IMAGE, ...ItemMedia::CLIP_KINDS])
             ->whereIn('scope', [ItemMedia::SCOPE_LOOK, ItemMedia::SCOPE_PET])
             ->where('status', ItemMedia::STATUS_READY)->whereNotNull('storage_path')
             ->where(fn ($q) => $q->whereNull('quality')->orWhereNotIn('quality', [PetMedia::QUALITY_APPROVED, PetMedia::QUALITY_FLAGGED]))
