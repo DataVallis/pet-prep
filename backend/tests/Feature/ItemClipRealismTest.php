@@ -788,6 +788,7 @@ describe('bowls drinking clip check', function () {
             ->toContain('action_done is false only if the dog eats kibble or puts its head into the bowl with kibble, or never drinks from the bowl with water')
             ->and($drinkCall['image_urls'][1])->toContain("/api/media/items/{$image->id}")
             ->and($eatCall['prompt'])->toContain('eating from the food bowl')->toContain('the first frame is the neutral start pose at the bowls')
+            ->toContain('with its head between the two bowls, then lowering it into the bowl with kibble') // QA #1459 m4: itemEatScene()
             ->toContain('action_done is false only if the dog drinks or puts its head into the bowl with water, or never eats from the bowl with kibble')
             ->and($eatCall['image_urls'][1])->toContain("/api/media/items/{$image->id}")
             ->and(ItemMediaQualityCheck::where('item_media_id', $drink->id)->sole()->rubric)->toBe(MediaVisionCheck::RUBRIC_ITEM_CLIP)
@@ -856,6 +857,7 @@ describe('bowls neutral pose and puppy size', function () {
         expect($e0)->toContain('starting with its head between the two bowls, then lowering its head into the bowl with kibble')
             ->and($e1)->toContain('from its head between the two bowls, lowering its head into the bowl with kibble')
             ->and($e2)->toContain('it turns its head to the bowl with kibble — not the bowl with water — lowers its muzzle into it and eats')
+            ->and(PetAppearancePrompt::itemEatScene(Species::Cat, 'two white bowls', null, LifeStage::Puppy))->toContain('then lowering it into the bowl with cat food')->toContain('this kitten')
             ->and($prompts->itemDrinkClipNegativePrompt(Species::Dog))->toContain('eating kibble')->toContain('head in the food bowl')->toContain('touching the food bowl')
             ->and($prompts->itemClipNegativePrompt(Species::Dog, 'bowls'))->toContain('drinking water')->toContain('head in the water bowl')
             ->and($prompts->itemClipNegativePrompt(Species::Dog, 'toy_1'))->toBe($prompts->loopNegativePrompt(Species::Dog));

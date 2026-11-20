@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-20 — Skledi drugič: pes najprej stoji ob skledah, šele nato je ali pije
+
+**Kaj:** po namestitvi videa pitja (dopoldne 20. 11.) so vsi 4 videi pitja (dva lastna ljubljenčka, dva skupna videza, vsi mladički) in en video hranjenja padli na AI preverjanju po 3 poskusih. Razlogi: »pes je briketke, ne pije vode«, »skleda z vodo je prazna«, »že v prvi sličici je briketke« — in pri hranjenju »to je mladiček, ne zelo velik pes, skledi sta prevelika«. Vzrok: oba videa sta začela iz iste slike, na kateri pes že je iz sklede s hrano, voda pa se ni videla; velikost skled in postelje je bila opisana za odraslo pasmo (dobermann → »zelo velik pes«). Popravek: nova slika skled pokaže psa ob obeh skledah z glavo med njima, z zaprtimi usti, v eni skledi briketi, v drugi vidno čista voda; iz nje gre hranjenje v skledo z briketi in pitje v skledo z vodo, preverjanje pa začetni položaj sprejme. Postelja in skledi so zdaj velike za žival v trenutnem obdobju (mladiček za mladička). Stare slike skled se po namestitvi naredijo znova samodejno: za 4 ljubljenčke / videze s skledami takoj (≈ 3,3 $ pri enem poskusu, največ ≈ 10 $), za videze, ki jih nihče nima, šele ob nakupu (do takrat 0 $). Brez novih AI klicev na stvar.
+**Zakaj je pomembno:** David je 19. 11. zahteval, da vsebina pride prava v 3 poskusih brez njegovega posredovanja. Napaka ni bila v modelu, ampak v začetni sliki — en popravek poziva reši oba videa.
+**Kako povedati:** 🧒 »Tvoj kuža zdaj najprej stoji pri skledah — potem je ali pije, kar mu daš.« 👩 »Mladiček dobi skledi in posteljo v svoji velikosti.« 🛠 »Image-to-video: začetna sličica določa dejanje. Nevtralna poza + ime sklede po vsebini (ne po strani) + preverjanje, ki dovoli začetni položaj; velikost po življenjskem obdobju, ne po odrasli pasmi.«
+
 ## 2026-11-20 — Voda je voda: ob »Voda« ljubljenček zdaj pije, ne je
 
 **Kaj:** ko je imel ljubljenček kupljeni skledi, je otrok ob »Voda« videl sporočilo »Sveža voda!«, posnetek pa je pokazal, kako pes je briketke. David je potrdil predlog (»1+A se strinjam«): skledi dobita drug kratek posnetek — ljubljenček mirno pije iz sklede z vodo. Nastane iz iste slike skled (na njej sta obe skledi), zato nova slika ni potrebna: en dodaten 3-sekundni video ≈ 0,34 $ na videz pasme + barve + obdobja, vsak naslednji kupec istih skled pri istem videzu 0 $. Narejen je samodejno tudi za skledi, ki so že kupljene. Strežnik je narejen; predvajanje v aplikaciji je v ločenem mobilnem PR.

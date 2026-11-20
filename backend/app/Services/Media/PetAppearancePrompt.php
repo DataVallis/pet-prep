@@ -952,7 +952,10 @@ class PetAppearancePrompt
     /** Negative prompt of the bowls' drinking clip: the loop negative + no eating, no walking away. */
     public function itemDrinkClipNegativePrompt(Species $species): string
     {
-        return $this->loopNegativePrompt($species).', '.self::DRINK_NEGATIVE;
+        // QA #1459: a cat's bowl holds cat food, not kibble.
+        $negative = $species === Species::Cat ? str_replace('kibble', 'cat food', self::DRINK_NEGATIVE) : self::DRINK_NEGATIVE;
+
+        return $this->loopNegativePrompt($species).', '.$negative;
     }
 
     /**
@@ -978,6 +981,19 @@ class PetAppearancePrompt
         $noun = $species === Species::Cat ? 'cat' : 'dog';
 
         return 'starting at '.$description.' with its head between the two bowls, then lowering it into the bowl with clear water. '.self::itemSize('bowls', $noun, $size, $stage, $species);
+    }
+
+    /**
+     * QA #1459 m4: what the bowls' EATING clip's scene is (the clip check) — the same neutral start
+     * pose as the drinking clip, then the head into the bowl with kibble / cat food.
+     *
+     * @param  array{class: string, bed_cm: int}|null  $size
+     */
+    public static function itemEatScene(Species $species, string $description, ?array $size = null, ?LifeStage $stage = null): string
+    {
+        $noun = $species === Species::Cat ? 'cat' : 'dog';
+
+        return 'starting at '.$description.' with its head between the two bowls, then lowering it into the bowl with '.self::foodOf($species).'. '.self::itemSize('bowls', $noun, $size, $stage, $species);
     }
 
     /**
