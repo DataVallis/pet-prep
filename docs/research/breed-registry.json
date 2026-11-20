@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "0155d1cb9e026108e948d42ea629f623fb7363603159be3aa93f8c317ab17c42"
+      "sha256": "6279503751073d7df3828d8c2b5bdc1ee9dfe0499dac295f0868bae0be14c96c"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "af33c536e1e39c479e249720d31359c68c8415a69e1816cab50ac34de9f1274a"
+      "sha256": "b2bdfeb405a6b43ab46ab6bf6d0e65a821fb6e226b8e8df13d7ff0fd63d89ee6"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "2ce0d243edbc7fb9441d9402f8dea19eb4ac7b92692677826847e0ca8c4eb210"
+      "sha256": "b68d5da7614566a7e27ab08b7441fb22df7cc91cc1d04cc85a86d249770c2a70"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,12 +40,12 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "8b3149c00f7c48e4e9d194ba2fff4bc36a8d4c3e1b8d395423429a49530c779f"
+      "sha256": "9bee63b538bcf7478ca1137089b1337517c253d8f7f49229b439cfd239338b03"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "029c4a1e3137859d01ab0f2f6399fe262c2a1f963e11dfe90846d7d720663855"
+      "sha256": "c2486100c7493838c24bc786bce0c3fd89ddd4877ff17466d004814fc3ca7241"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "946c6b730d18567fce54d073a1677386fd302684703816a62625611baedccb2e"
+      "sha256": "d8fdad6ef4c3acdbd5b5e176aee96c347b127344348778ecda32aa99a478331d"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 120,
+      "breed_count": 121,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -73830,6 +73830,597 @@
       ]
     },
     {
+      "id": "tibetan_spaniel",
+      "species": "dog",
+      "order": 120,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Tibetan Spaniel",
+        "sl": "Tibetanski španjel"
+      },
+      "slug": {
+        "en": "tibetan-spaniel",
+        "sl": "tibetanski-spanjel"
+      },
+      "synonyms": {
+        "en": [
+          "Tibbie"
+        ],
+        "sl": [
+          "tibetanski spanjel",
+          "tibetan španjel"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "h1_2",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S981"
+          ],
+          "ref": "tibetan_spaniel.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25.4,
+              25.4
+            ],
+            "female": [
+              25.4,
+              25.4
+            ]
+          },
+          "source_ids": [
+            "S980"
+          ],
+          "ref": "tibetan_spaniel.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              4.1,
+              6.8
+            ],
+            "female": [
+              4.1,
+              6.8
+            ]
+          },
+          "source_ids": [
+            "S980"
+          ],
+          "ref": "tibetan_spaniel.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "tibetan_spaniel.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 15.2,
+          "source_ids": [
+            "S771"
+          ],
+          "ref": "tibetan_spaniel.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S981"
+          ],
+          "ref": "tibetan_spaniel.lifespan.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "about",
+          "value": 60,
+          "source_ids": [
+            "S981"
+          ],
+          "ref": "tibetan_spaniel.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S981"
+          ],
+          "ref": "tibetan_spaniel.suitability.pdsa_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S981"
+          ],
+          "ref": "tibetan_spaniel.suitability.pdsa_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 46,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "tibetan_spaniel.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 231,
+            "group": 9,
+            "section": 5,
+            "origin": "CN-XZ"
+          },
+          "source_ids": [
+            "S980"
+          ],
+          "ref": "tibetan_spaniel.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S981"
+          ],
+          "ref": "tibetan_spaniel.health.luxating_patella",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S981"
+          ],
+          "ref": "tibetan_spaniel.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S981"
+          ],
+          "ref": "tibetan_spaniel.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "entropion",
+          "source_ids": [
+            "S981"
+          ],
+          "ref": "tibetan_spaniel.health.entropion",
+          "confidence": "high"
+        },
+        {
+          "key": "extra_eyelashes",
+          "source_ids": [
+            "S981"
+          ],
+          "ref": "tibetan_spaniel.health.distichiasis",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S981"
+            ],
+            "refs": [
+              "tibetan_spaniel.exercise.adult",
+              "tibetan_spaniel.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S981"
+            ],
+            "refs": [
+              "tibetan_spaniel.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S982"
+            ],
+            "refs": [
+              "tibetan_spaniel.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S982"
+            ],
+            "refs": [
+              "tibetan_spaniel.behaviour.children"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S982"
+            ],
+            "refs": [
+              "tibetan_spaniel.exercise.fencing"
+            ]
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S982"
+            ],
+            "refs": [
+              "tibetan_spaniel.exercise.heat"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 137
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 137
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.tibetan_spaniel.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S981"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S981 'around an hour of exercise every day'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.tibetan_spaniel.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.tibetan_spaniel.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S771"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 137 (0.75 × 15.2 y, McMillan 2024 S771)"
+          },
+          {
+            "ref": "proposed_game_parameters.tibetan_spaniel.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 46, Average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.tibetan_spaniel.grooming",
+            "basis_source_ids": [
+              "S981"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (PDSA »a couple of times per week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.tibetan_spaniel.tooth_brushing",
+            "basis_source_ids": [
+              "S982"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brushing their teeth daily« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.tibetan_spaniel.ear_care",
+            "basis_source_ids": [
+              "S982"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »at least once a week« → enkrat na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.tibetan_spaniel.nail_trimming",
+            "basis_source_ids": [
+              "S982"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »at least once monthly« → vsake 4 tedne"
+          },
+          {
+            "ref": "proposed_game_parameters.tibetan_spaniel.bathing",
+            "basis_source_ids": [
+              "S982"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »a bath roughly every month« → vsake 4 tedne"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S771",
+          "S981",
+          "S982"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_checked",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S771",
+        "S980",
+        "S981",
+        "S982",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -80548,6 +81139,27 @@
       "publisher": "American Hairless Terrier Club of America (hosted by AKC)",
       "title": "American Hairless Terrier Club Flyer 20240411 — National Breed Club (PDF, © 2024)",
       "url": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2024/05/21112850/American-Hairless-Terrier-Club-Flyer-20240411.pdf"
+    },
+    {
+      "id": "S980",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 231 — Tibetan Spaniel (English PDF, '06.10.2026/ EN') + FCI nomenclature page",
+      "url": "https://www.fci.be/Nomenclature/Standards/231g09-en.pdf"
+    },
+    {
+      "id": "S981",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Tibetan Spaniel breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/tibetan-spaniel"
+    },
+    {
+      "id": "S982",
+      "tier": "B",
+      "publisher": "WebMD Pets — Mallika Bhattacharya, medically reviewed by Zilpah Sheikh, MD (2026-05-08)",
+      "title": "What to Know About Tibetan Spaniels",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-tibetan-spaniels"
     },
     {
       "id": "C1",
