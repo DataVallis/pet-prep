@@ -1582,6 +1582,19 @@
             "prompt_hash": "sha256:4b83173bc7160b3cf8cbebedf36c2a9a3edb7e777b3d693bfc40201e730f0999",
             "generated_at": "2026-11-20T01:12:37+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "tibetan_spaniel",
+            "species": "dog",
+            "colour": "golden",
+            "file": "dog/tibetan-spaniel.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:4cb3537b4a591b36a9f11749a218a0faeabf33d99785c85b76734366b5c05003",
+            "generated_at": "2026-11-20T03:10:16+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
