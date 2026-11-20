@@ -1229,9 +1229,11 @@ describe('bowls drinking clip', function () {
         expect($clips)->toHaveCount(2)
             ->and([$drink->scope, $drink->pet_look_id, $drink->life_stage, $drink->design])->toBe(['look', $look->id, 'young', 'dog_bowls_steel_stand'])
             ->and($drinkBody['prompt'])->toContain(PetAppearancePrompt::DRINK_MOTION)
-            ->toContain('it does not eat and never puts its head in the food bowl')->toContain('calm dog motion')
-            ->and($drinkBody['negative_prompt'])->toContain('eating kibble')->toContain('walking away')->toContain('camera movement')
-            ->and($eatBody['prompt'])->toContain('eating from the food bowl')->not->toContain('drinking')
+            // 2026-11-20: from the neutral key image pose into the bowl WITH WATER, never the food bowl.
+            ->toContain('starting with its head between the two bowls')->toContain('it never eats, never touches or sniffs the bowl with kibble')->toContain('calm dog motion')
+            ->and($drinkBody['negative_prompt'])->toContain('eating kibble')->toContain('touching the food bowl')->toContain('walking away')->toContain('camera movement')
+            ->and($eatBody['prompt'])->toContain('lowering its head into the bowl with kibble and eating from the food bowl')->toContain('it never drinks')->not->toContain('drinking')
+            ->and($eatBody['negative_prompt'])->toContain('drinking water')->toContain('head in the water bowl')
             // Both clips start from the same stored key image.
             ->and(json_encode($drinkBody))->toContain('\/api\/media\/items\/'.$image->id.'?')
             ->and(json_encode($eatBody))->toContain('\/api\/media\/items\/'.$image->id.'?')
@@ -1336,7 +1338,117 @@ describe('bowls drinking clip', function () {
         $prompts = app(PetAppearancePrompt::class);
         $prompt = $prompts->itemDrinkClipPrompt('domestic_cat', (string) ItemDesigns::description('cat_bowls_white_gold'), ['coat_color' => 'grey tabby']);
         expect(strtolower($prompt))->not->toMatch('/\bdog\b/')->toContain('quick small flicks of its tongue')
-            ->and(PetAppearancePrompt::itemDrinkClipIntent(Species::Cat))->toBe(PetAppearancePrompt::CAT_DRINK_MOTION)
+            ->and(PetAppearancePrompt::itemDrinkClipIntent(Species::Cat))->toStartWith(PetAppearancePrompt::CAT_DRINK_MOTION.'; the first frame is the neutral start pose')
+            ->and(strtolower(PetAppearancePrompt::itemDrinkClipIntent(Species::Cat)))->toContain('eats cat food')->not->toMatch('/\bdog\b/')
             ->and(strtolower($prompts->itemDrinkClipNegativePrompt(Species::Cat)))->toContain('eating kibble')->not->toMatch('/\bdog\b/');
+    });
+});
+
+/*
+| 2026-11-20 production evidence: every bowls drinking clip (and one eating clip) was given up
+| after 3 tries because the key image showed the dog eating and the size said »extra-large« for a
+| puppy. The migration gives each affected KEY IMAGE that an owner still shows one fresh chain;
+| its store remakes both clips. No manual step.
+*/
+
+/** Give $row up like a failed last check (status failed, quality_failed, exhausted / alerted). */
+function imGiveUpQuality(ItemMedia $row, string $reason = 'AI check: The dog is eating kibble, not drinking water'): void
+{
+    $row->forceFill(['status' => 'failed', 'error_reason' => 'quality_failed', 'error' => 'Quality check failed after every automatic try — given up: '.$reason,
+        'exhausted_at' => now()->subHour(), 'alerted_at' => now()->subHour(), 'completed_at' => now()->subHour(), 'quality_retries' => 2, 'prompt_variant' => 1])->save();
+}
+
+/** A pet owning $item ($design) with its content made (picture, key image, clip(s)). */
+function imOwnerWithContent(?PetLook $look, string $item, string $design, array $attributes = []): Pet
+{
+    [, , $pet] = imFamily($look, $attributes);
+    PetItem::create(['pet_id' => $pet->id, 'item_key' => $item, 'kind' => 'durable', 'variant' => "dog_{$item}", 'design' => $design, 'quantity_total' => 1, 'quantity_left' => 1, 'acquired_at' => now()->subDays(2)]);
+    app(ItemMediaService::class)->ensure($pet->fresh());
+    imComplete();
+
+    return $pet->fresh();
+}
+
+describe('one-off reopen after the bowls pose / puppy size fix', function () {
+    it('reopens only key images whose bowls clip (or a bed clip on its size) was given up, that an owner still shows — one fresh chain each, idempotent, then both clips are remade', function () {
+        Queue::fake([SendItemMediaAlert::class]);
+        $items = app(ItemMediaService::class);
+        $kind = fn (Pet|PetLook $owner, string $k, string $item = 'bowls') => ItemMedia::where('item_key', $item)->where('kind', $k)
+            ->where($owner instanceof PetLook ? 'pet_look_id' : 'pet_id', $owner->id)->sole();
+
+        // A — own media, its drinking clip given up (eating clip shown).
+        $a = imOwnerWithContent(null, 'bowls', 'dog_bowls_bamboo_stand');
+        imGiveUpQuality($kind($a, 'drink_clip'));
+        // B — a shared look, its EATING clip given up on the size (drinking clip shown).
+        $look = imLook();
+        $b = imOwnerWithContent($look, 'bowls', 'dog_bowls_blue_ceramic');
+        imGiveUpQuality($kind($look, 'clip'), 'AI check: The dog is a puppy, not an extra-large dog, so the bowls are too large for it');
+        $kind($look, 'clip')->update(['storage_path' => null, 'source_path' => null]); // like row 60: never stored
+        // Bed: a clip given up on the size at the young stage → reopened; another bed on anything else → untouched.
+        $bed = imOwnerWithContent(null, 'bed', 'dog_bed_round_grey');
+        imGiveUpQuality($kind($bed, 'clip', 'bed'), 'AI check: the bed is too small for the dog');
+        $bedOther = imOwnerWithContent(null, 'bed', 'dog_bed_round_grey');
+        imGiveUpQuality($kind($bedOther, 'clip', 'bed'), 'AI check: the dog wakes up and lifts its head');
+        // Untouched: a game-over owner, a revoked item, a failed generation (not the check).
+        $over = imOwnerWithContent(null, 'bowls', 'dog_bowls_steel_stand');
+        imGiveUpQuality($kind($over, 'drink_clip'));
+        $over->forceFill(['is_game_over' => true])->save();
+        $revoked = imOwnerWithContent(null, 'bowls', 'dog_bowls_steel_stand');
+        imGiveUpQuality($kind($revoked, 'drink_clip'));
+        PetItem::where('pet_id', $revoked->id)->update(['revoked_at' => now()]);
+        $httpFail = imOwnerWithContent(null, 'bowls', 'dog_bowls_steel_stand');
+        imGiveUpQuality($kind($httpFail, 'drink_clip'));
+        $kind($httpFail, 'drink_clip')->update(['error_reason' => 'generation_failed']);
+
+        $imageA = $kind($a, 'image');
+        $imageB = $kind($look, 'image');
+        $imageBed = $kind($bed, 'image', 'bed');
+        $before = ItemMedia::where('kind', 'image')->get()->keyBy('id');
+        $outcomes = fn () => [$items->statesFor($a->fresh())['bowls']['outcome'], $items->statesFor($b->fresh())['bowls']['outcome']];
+        expect($outcomes())->toBe(['content', 'fallback']);
+
+        $migration = require database_path('migrations/2027_04_29_120000_reopen_bowls_given_up_before_pose_fix.php');
+        $reopened = $migration->reopen();
+        sort($reopened);
+        expect($reopened)->toBe([$imageA->id, $imageB->id, $imageBed->id])
+            ->and($migration->reopen())->toBe([]); // idempotent
+
+        foreach ([$imageA, $imageB, $imageBed] as $image) {
+            $fresh = $image->fresh();
+            expect($fresh->status)->toBe('pending')
+                ->and($fresh->generation)->toBe($before[$image->id]->generation + 1)
+                ->and($fresh->seed_override)->not->toBeNull()
+                ->and([$fresh->quality_retries, $fresh->prompt_variant, $fresh->auto_retries])->toBe([0, 0, 0])
+                ->and($fresh->storage_path)->toBe($before[$image->id]->storage_path); // the old file stays shown meanwhile
+        }
+        // Nothing else moved; nothing went back to »preparing«.
+        ItemMedia::where('kind', 'image')->whereNotIn('id', $reopened)->get()
+            ->each(fn (ItemMedia $other) => expect($other->status)->toBe($before[$other->id]->status));
+        expect($outcomes())->toBe(['content', 'fallback']);
+
+        // The next scheduled pass makes the three key images (no manual step), then both clips of each from them.
+        $images = imFalSubmits('image')->count();
+        $clips = imFalSubmits('clip')->count();
+        artisan('media:item-media')->assertSuccessful();
+        expect(imFalSubmits('image')->count())->toBe($images + 3)->and(imFalSubmits('clip')->count())->toBe($clips);
+        artisan('media:item-media')->assertSuccessful();
+        expect(imFalSubmits('image')->count())->toBe($images + 3); // claimed once
+        imComplete();
+        expect(imFalSubmits('clip')->count())->toBe($clips + 5) // A: eat + drink, B: eat + drink, bed: clip
+            ->and($kind($a, 'drink_clip')->fresh()->status)->toBe('ready')
+            ->and($kind($a, 'drink_clip')->fresh()->source_path)->toBe($imageA->fresh()->storage_path)
+            ->and($kind($look, 'clip')->fresh()->exhausted_at)->toBeNull()
+            ->and($outcomes())->toBe(['content', 'content'])
+            ->and($items->statesFor($a->fresh())['bowls']['drink_clip'])->not->toBeNull()
+            ->and($kind($bedOther, 'clip', 'bed')->fresh()->status)->toBe('failed')
+            ->and($kind($over, 'drink_clip')->fresh()->status)->toBe('failed')
+            ->and($kind($revoked, 'drink_clip')->fresh()->status)->toBe('failed')
+            ->and($kind($httpFail, 'drink_clip')->fresh()->exhausted_at)->not->toBeNull()
+            ->and($migration->reopen())->toBe([]); // the new chains are never reopened again
+
+        // Steady state.
+        $calls = imFalSubmits()->count();
+        artisan('media:item-media')->assertSuccessful();
+        expect(imFalSubmits()->count())->toBe($calls);
     });
 });

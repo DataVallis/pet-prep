@@ -730,6 +730,9 @@ class PetAppearancePrompt
      * David 2026-11-19: the object is re-rendered INTO the room (ITEM_INTEGRATION; the catalogue
      * picture gives its design only), the bed is sized for the breed (`$size` = ItemMediaService::sizeOf())
      * and the animal lies IN it, and the style keeps the reference image's focus (no »sharp focus«).
+     * 2026-11-20 (production: »the dog is a puppy, not an extra-large dog«): a puppy / young animal
+     * gets items sized for it as it is in the picture (`$size` null + `$stage`, itemSize()); the
+     * bowls key image is the NEUTRAL start pose of both bowls clips (itemPose()).
      *
      * @param  array<string, string>  $traits
      * @param  array{class: string, bed_cm: int}|null  $size
@@ -746,7 +749,7 @@ class PetAppearancePrompt
             : $description;
         $action = self::itemPose($itemKey, $species, $object);
         // David 2026-11-04: the animal fully in / with the item, exactly four legs, nothing else on the floor.
-        $anatomy = sprintf(self::POSE_ANATOMY, $noun).' '.self::itemPlacement($itemKey, $noun).' '.self::itemSize($itemKey, $noun, $size).' '.sprintf(self::NO_REMNANTS, $noun);
+        $anatomy = sprintf(self::POSE_ANATOMY, $noun).' '.self::itemPlacement($itemKey, $noun).' '.self::itemSize($itemKey, $noun, $size, $stage, $species).' '.sprintf(self::NO_REMNANTS, $noun);
         $contact = self::itemContact($itemKey, $noun);
         $integration = self::ITEM_INTEGRATION.($contact !== '' ? ' '.$contact : '').($withPicture ? ' '.self::ITEM_REFERENCE_DESIGN_ONLY : '');
 
@@ -775,10 +778,25 @@ class PetAppearancePrompt
      * animal lies INSIDE it with room to spare (dogs: the breed's size class and inside length);
      * bowls: sized for the dog. Toys / treats keep their own described size.
      *
+     * 2026-11-20 (production: the check rejected the bowls of a Dobermann PUPPY because the prompt
+     * and the rubric said »extra-large dog«): a puppy / kitten or a young animal gets items sized
+     * for it AS IT IS IN THE PICTURE — never the adult class (ItemMediaService::sizeOf() is null for
+     * those stages); the adult class only for adult / senior (and legacy pets without a stage).
+     *
      * @param  array{class: string, bed_cm: int}|null  $size
      */
-    public static function itemSize(string $itemKey, string $noun, ?array $size): string
+    public static function itemSize(string $itemKey, string $noun, ?array $size, ?LifeStage $stage = null, ?Species $species = null): string
     {
+        $young = self::youngNoun($stage, $species ?? ($noun === 'cat' ? Species::Cat : Species::Dog));
+        if ($size === null && $young !== null) {
+            return match ($itemKey) {
+                'bed' => 'The bed is sized for this '.$young.' as it is in the picture, not for the adult breed: clearly longer and wider than the '.$young
+                    .' lying curled up, so the whole '.$young.' fits inside it with room around it, in natural proportion to it; never a small bed under it.',
+                'bowls' => 'The bowls are sized for this '.$young.' as it is in the picture, not for the adult breed: small and low enough that it reaches into them comfortably, in natural proportion to its head.',
+                default => 'The object has a natural size next to this '.$young.'.',
+            };
+        }
+
         return match ($itemKey) {
             'bed' => $size !== null
                 ? 'The bed is a bed for a '.$size['class'].' '.$noun.', about '.$size['bed_cm'].' cm long inside — clearly longer and wider than this '.$noun
@@ -789,12 +807,26 @@ class PetAppearancePrompt
         };
     }
 
+    /** 2026-11-20: »puppy« / »kitten« / »young dog« / »young cat« for a growing animal; null for adult / senior / no stage. */
+    public static function youngNoun(?LifeStage $stage, Species $species): ?string
+    {
+        $cat = $species === Species::Cat;
+
+        return match ($stage) {
+            LifeStage::Puppy => $cat ? 'kitten' : 'puppy',
+            LifeStage::Young => $cat ? 'young cat' : 'young dog',
+            default => null,
+        };
+    }
+
     /**
      * M6-W03: the CLIP of a bought item — start frame = the item key image only. Bed and toys
      * loop (the clip comes back close to the start), bowls and treats are played once.
      *
      * David 2026-11-19: the object stays a real object on the floor of the room — same size, place,
      * light and focus as in the start image (both variants).
+     * 2026-11-20: the bowls clip starts from the NEUTRAL key image pose (head between the bowls,
+     * mouth closed) and lowers into the FOOD bowl (itemMotion()); never into the water bowl.
      *
      * @param  array<string, string>  $traits
      */
@@ -816,6 +848,19 @@ class PetAppearancePrompt
                 ($variant === 0 ? 'The object stays exactly as in the image ('.$description.'). ' : '').$grounded);
         }
 
+        if ($itemKey === 'bowls') {
+            $food = self::foodOf($species);
+            $only = 'It eats only from the bowl with '.$food.'; it never drinks and never puts its head in the bowl with water.';
+
+            return match (true) {
+                $variant === 0 => 'The same '.$subject.' as in the image, starting with its head between the two bowls, then '.$motion.'. '.$only.' The bowls stay exactly as in the image ('.$description.'). '.$grounded.' '.$note.' '.$style,
+                $variant === 1 => 'A realistic video of the same '.$subject.' as in the start image: from its head between the two bowls, '.$motion.'. '.$only.' '.$grounded.' '.$note.' '.$style,
+                default => 'A realistic video of the same '.$subject.' as in the start image, standing still at the bowls: it turns its head to the bowl with '.$food
+                    .' — not the bowl with water — lowers its muzzle into it and eats, chewing with clearly visible jaw movement, then lifts its head and licks its lips. '
+                    .$only.' Its body and legs do not move. '.$grounded.' '.$style,
+            };
+        }
+
         return $variant === 0
             ? 'The same '.$subject.' as in the image, '.$motion.'. The object stays exactly as in the image ('.$description.'). '.$grounded.' '.$note.' '.$style
             : 'A realistic video of the same '.$subject.' as in the start image: '.$motion.'. '.$grounded.' '.$note.' '.$style;
@@ -824,13 +869,40 @@ class PetAppearancePrompt
     /** Negative prompt of an item clip (start frame only, like a loop; the bed: a sleep clip — David 2026-11-19). */
     public function itemClipNegativePrompt(Species $species, string $itemKey = ''): string
     {
-        return $itemKey === 'bed' ? $this->sleepNegativePrompt($species) : $this->loopNegativePrompt($species);
+        return match ($itemKey) {
+            'bed' => $this->sleepNegativePrompt($species),
+            // 2026-11-20: the eating clip never drinks (drinking is its own clip).
+            'bowls' => $this->loopNegativePrompt($species).', '.self::EAT_NEGATIVE,
+            default => $this->loopNegativePrompt($species),
+        };
     }
 
-    /** David 2026-11-20: what the animal does in the bowls' DRINKING clip (David's wording; the clip check's intent too). */
-    public const DRINK_MOTION = 'drinking water from the water bowl: lapping the water with its tongue, small calm head movements, staying in the same spot';
+    /** 2026-11-20: added to the loop negative prompt of the bowls' EATING clip. */
+    public const EAT_NEGATIVE = 'drinking water, lapping water, head in the water bowl, walking away, leaving the bowls, bowls moving';
 
-    public const CAT_DRINK_MOTION = 'drinking water from the water bowl: lapping the water with quick small flicks of its tongue, small calm head movements, staying in the same spot';
+    /** The food word of the bowls (the designs: »brown dry kibble« for dogs, »brown cat food« for cats). */
+    private static function foodOf(Species $species): string
+    {
+        return $species === Species::Cat ? 'cat food' : 'kibble';
+    }
+
+    /**
+     * David 2026-11-20: what the animal does in the bowls' DRINKING clip (David's wording; the start of
+     * the clip check's intent). Since the production fix of the same day the clip starts from the
+     * NEUTRAL key image (head between the bowls, mouth closed), so it first lowers its head into the
+     * bowl WITH WATER.
+     */
+    public const DRINK_MOTION = 'lowering its head into the bowl with clear water and drinking water from it: lapping the water with its tongue, small calm head movements, staying in the same spot';
+
+    public const CAT_DRINK_MOTION = 'lowering its head into the bowl with clear water and drinking water from it: lapping the water with quick small flicks of its tongue, small calm head movements, staying in the same spot';
+
+    /**
+     * 2026-11-20 (production: every drinking clip failed with »eating kibble in the first frame«): the
+     * check rule of both bowls clips — the first frame is the neutral start pose, the action is
+     * judged over the whole clip. `%1$s` = the animal, `%2$s` = what it must do, `%3$s` = the fail.
+     */
+    public const BOWLS_CHECK_RULE = 'the first frame is the neutral start pose at the bowls (the %1$s\'s head between or just above the two bowls, mouth closed, not eating or drinking yet) — that is right, never a fail by itself; '
+        .'judge the action over the whole clip: action_done is false only if the %1$s %3$s, or never %2$s';
 
     /** The drinking clip is calm: LOOP_STYLE with calm instead of lively motion. */
     public const DRINK_STYLE = 'Keep the dog\'s exact appearance, size, coat colours and markings from the image; the same single dog throughout. '
@@ -842,14 +914,18 @@ class PetAppearancePrompt
         .'Realistic, natural, calm cat motion with correct anatomy and weight. No people, no hands, no other animals, no text.';
 
     /** Added to the loop negative prompt of a drinking clip: never eating, never leaving the bowls. */
-    public const DRINK_NEGATIVE = 'eating kibble, eating food, chewing food, food in the mouth, head in the food bowl, '
-        .'walking away, leaving the bowls, turning away, lying down, jumping, spilling water, bowls moving';
+    public const DRINK_NEGATIVE = 'eating kibble, eating food, chewing food, food in the mouth, head in the food bowl, touching the food bowl, sniffing the kibble, '
+        .'walking away, leaving the bowls, turning away, lying down, jumping, spilling water, empty water bowl, bowls moving';
 
     /**
      * David 2026-11-20 (»1+A se strinjam«): the bowls' DRINKING clip — start frame = the SAME bowls key
      * image as the eating clip (both bowls are in it), the animal drinks from the water bowl, calmly,
      * in the same spot. Played once after an accepted »Voda«. Variants escalate per check retry like
      * the other item clips (ItemMedia::checkVariant()).
+     * 2026-11-20 (production: Kling kept EATING — the old key image showed the head in the kibble):
+     * the start frame is now the neutral pose (head between the bowls, mouth closed); the animal
+     * lowers its head into »the bowl with clear water« (named by its content, not by a side — the
+     * key image's composition is not fixed) and never touches the food bowl.
      *
      * @param  array<string, string>  $traits
      */
@@ -859,16 +935,17 @@ class PetAppearancePrompt
         $noun = $species === Species::Cat ? 'cat' : 'dog';
         $subject = $this->clipSubject($breedKey, $species, $traits, $stage);
         $style = $species === Species::Cat ? self::CAT_DRINK_STYLE : self::DRINK_STYLE;
-        $motion = self::itemDrinkClipIntent($species);
-        $only = 'The '.$noun.' drinks only water from the water bowl; it does not eat and never puts its head in the food bowl.';
+        $motion = $species === Species::Cat ? self::CAT_DRINK_MOTION : self::DRINK_MOTION;
+        $food = self::foodOf($species);
+        $only = 'The '.$noun.' drinks only from the bowl with water; it never eats, never touches or sniffs the bowl with '.$food.' and never puts its head in it.';
         $grounded = 'Both bowls stay real objects resting on the floor of this room, the same size, in the same place, light and focus as in the image; they never float, slide, grow, shrink or change.';
         $note = 'The lapping and the small head movements are clearly visible and natural, never a still image.';
 
         return match (true) {
-            $variant === 0 => 'The same '.$subject.' as in the image, '.$motion.'. '.$only.' The bowls stay exactly as in the image ('.$description.'). '.$grounded.' '.$note.' '.$style,
-            $variant === 1 => 'A realistic video of the same '.$subject.' as in the start image: '.$motion.'. '.$only.' '.$grounded.' '.$note.' '.$style,
-            default => 'A realistic, calm video of the same '.$subject.' as in the start image, standing still in front of the bowls with its head lowered over the water bowl, '
-                .$motion.'. '.$only.' Its body and legs do not move. '.$grounded.' '.$style,
+            $variant === 0 => 'The same '.$subject.' as in the image, starting with its head between the two bowls, then '.$motion.'. '.$only.' The bowls stay exactly as in the image ('.$description.'). '.$grounded.' '.$note.' '.$style,
+            $variant === 1 => 'A realistic video of the same '.$subject.' as in the start image: from its head between the two bowls, '.$motion.'. '.$only.' '.$grounded.' '.$note.' '.$style,
+            default => 'A realistic, calm video of the same '.$subject.' as in the start image, standing still at the bowls: it turns its head to the bowl with clear water — not the bowl with '.$food
+                .' — lowers its muzzle into the water and laps it with its tongue, small calm head movements. '.$only.' Its body and legs do not move. '.$grounded.' '.$style,
         };
     }
 
@@ -878,22 +955,29 @@ class PetAppearancePrompt
         return $this->loopNegativePrompt($species).', '.self::DRINK_NEGATIVE;
     }
 
-    /** What the drinking clip should show (the item clip check's »action_done«) — the prompt's motion. */
+    /**
+     * What the drinking clip should show (the item clip check's »action_done«): the prompt's motion +
+     * the neutral-start rule (2026-11-20, BOWLS_CHECK_RULE) — it fails only for eating or never drinking.
+     */
     public static function itemDrinkClipIntent(Species $species): string
     {
-        return $species === Species::Cat ? self::CAT_DRINK_MOTION : self::DRINK_MOTION;
+        $food = self::foodOf($species);
+
+        return ($species === Species::Cat ? self::CAT_DRINK_MOTION : self::DRINK_MOTION).'; '
+            .sprintf(self::BOWLS_CHECK_RULE, $species === Species::Cat ? 'cat' : 'dog', 'drinks from the bowl with water', 'eats '.$food.' or puts its head into the bowl with '.$food);
     }
 
     /**
-     * What the drinking clip's scene is (the clip check): the animal at the bowls, head over the water bowl.
+     * What the drinking clip's scene is (the clip check): the neutral start pose at the bowls (its key
+     * image), then the head into the bowl with water; the size relative to the animal's stage (2026-11-20).
      *
      * @param  array{class: string, bed_cm: int}|null  $size
      */
-    public static function itemDrinkScene(Species $species, string $description, ?array $size = null): string
+    public static function itemDrinkScene(Species $species, string $description, ?array $size = null, ?LifeStage $stage = null): string
     {
         $noun = $species === Species::Cat ? 'cat' : 'dog';
 
-        return 'standing in front of '.$description.' with its head lowered over the water bowl. '.self::itemSize('bowls', $noun, $size);
+        return 'starting at '.$description.' with its head between the two bowls, then lowering it into the bowl with clear water. '.self::itemSize('bowls', $noun, $size, $stage, $species);
     }
 
     /**
@@ -915,11 +999,11 @@ class PetAppearancePrompt
      *
      * @param  array{class: string, bed_cm: int}|null  $size
      */
-    public static function itemScene(string $itemKey, Species $species, string $description, ?array $size = null): string
+    public static function itemScene(string $itemKey, Species $species, string $description, ?array $size = null, ?LifeStage $stage = null): string
     {
         $noun = $species === Species::Cat ? 'cat' : 'dog';
 
-        return self::itemPose($itemKey, $species, $description).'. '.self::itemSize($itemKey, $noun, $size);
+        return self::itemPose($itemKey, $species, $description).'. '.self::itemSize($itemKey, $noun, $size, $stage, $species);
     }
 
     /** What the animal does with the item in its key image. */
@@ -929,7 +1013,12 @@ class PetAppearancePrompt
 
         return match ($itemKey) {
             'bed' => $cat ? 'curled up asleep in '.$object.', eyes closed, relaxed' : 'lying curled up asleep in '.$object.', eyes closed, relaxed',
-            'bowls' => 'standing in front of '.$object.' with its head lowered, eating from the food bowl',
+            // 2026-11-20 (production: Kling kept eating in the DRINKING clip, its check saw kibble in
+            // frame 1 and a water bowl without visible water): a NEUTRAL pose both bowls clips start
+            // from — not eating or drinking yet, both bowls visibly filled.
+            'bowls' => 'standing right at '.$object.', its head lowered between the two bowls, just above them, mouth closed — not eating or drinking yet; '
+                .'the food bowl is visibly filled with '.($cat ? 'cat food' : 'dry kibble').' and the water bowl is visibly filled with clear water '
+                .'(a shiny water surface with a soft reflection — clearly water, never an empty-looking bowl)',
             'treats' => $cat ? 'crouched on the floor, sniffing and nibbling '.$object.' lying in front of its front paws' : 'sitting on the floor, holding '.$object.' gently in its mouth',
             default => $cat ? 'in a playful crouch on the floor, batting at '.$object.' with one front paw' : 'lying on the floor in a playful pose, holding '.$object.' between its front paws and mouthing it',
         };
@@ -938,6 +1027,14 @@ class PetAppearancePrompt
     /** What an item clip should show the animal doing (the clip check's »action_done«) — the prompt's motion. */
     public static function itemClipIntent(string $itemKey, Species $species): string
     {
+        if ($itemKey === 'bowls') {
+            // 2026-11-20: the eating clip starts from the neutral pose too (BOWLS_CHECK_RULE).
+            $food = self::foodOf($species);
+
+            return self::itemMotion($itemKey, $species).'; '
+                .sprintf(self::BOWLS_CHECK_RULE, $species === Species::Cat ? 'cat' : 'dog', 'eats from the bowl with '.$food, 'drinks or puts its head into the bowl with water');
+        }
+
         return self::itemMotion($itemKey, $species);
     }
 
@@ -949,7 +1046,8 @@ class PetAppearancePrompt
         return match ($itemKey) {
             // David 2026-11-19: calm — the old »clearly visible breathing, an ear twitching, a small shift of a paw« woke the puppy.
             'bed' => 'sleeping in its bed, '.PetStateEnum::SLEEP_MOTION,
-            'bowls' => 'eating from the food bowl: chewing with clearly visible jaw movement, then lifting its head and licking its lips contentedly',
+            // 2026-11-20: from the neutral key image pose into the food bowl (never the water bowl).
+            'bowls' => 'lowering its head into the bowl with '.self::foodOf($species).' and eating from the food bowl: chewing with clearly visible jaw movement, then lifting its head and licking its lips contentedly',
             'treats' => 'eating the treat: picking it up, chewing it with clearly visible jaw movement, then licking its lips happily',
             default => $cat
                 ? 'playing with the toy: batting it with its front paws, a quick playful pounce, then settling back into its crouch'

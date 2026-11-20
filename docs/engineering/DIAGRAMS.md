@@ -943,7 +943,7 @@ flowchart TD
   IMG -->|webhook → StoreItemMedia| CLIP[clip: Kling 3 s, start frame only]
   CLIP -->|webhook → StoreItemMedia| SET[settle pets of the row]
   SET --> EV[PetUpdated item_media_ready + push item_ready<br/>once per pet + item + design]
-  IMG -->|bowls only, David 2026-11-20| DRINK[drink_clip: Kling 3 s from the SAME key image<br/>drinking from the water bowl · ≈ $0.34 per look + design + stage]
+  IMG -->|bowls only, David 2026-11-20| DRINK[drink_clip: Kling 3 s from the SAME key image<br/>neutral start pose → head into the bowl with water · ≈ $0.34 per look + design + stage]
   DRINK -->|webhook → StoreItemMedia| DEV[media.items.bowls.drink_video<br/>PetUpdated item_media_ready · no push · never media_ready]
   IMG -. fail .-> H{heal}
   CLIP -. fail .-> H
