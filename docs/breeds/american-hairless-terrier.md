@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `american_hairless_terrier` (viri S967–S979; ponovno S10, S11, S14, S24, S35, S45, S174, S771); seznam za vzreditelja: `listed` (AHTCA K43) |
 | Izvor | ZDA (Louisiana, iz dlakavih rat terierjev — UKC S968); AKC skupina terierjev od 1. 1. 2016 (S969), UKC od 2004 (S968), Dogs Australia skupina 2 (S976). **Ni priznan pri FCI** (ni na seznamu začasno priznanih pasem S979) → v registru brez podatka FCI |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 125. mesto »American Hairless Terrier« (S174, vrstica 129 čakalne vrste) |
-| PR-ji | pet-prep #1431 (pasma, združen `7bf2778`) · portret pet-prep (zagon `breed-portraits.yml` 44651807133, sprejet v prvem poskusu) · barvne različice: sledijo · spletna stran: pet-prep-website `feat/register-american-hairless-terrier` |
+| PR-ji | pet-prep #1431 (pasma, združen `7bf2778`) · portret pet-prep (zagon `breed-portraits.yml` 44651807133, sprejet v prvem poskusu) · barvne različice: zagon `breed-portraits.yml` 44653324521, vse 3 odobrene v prvem poskusu · spletna stran: pet-prep-website `feat/register-american-hairless-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -45,7 +45,7 @@
 | »Nova izkušnja« za mladička, ščetkanje zob vsak dan, striženje krempljev vsak teden, opomnik staršu za tedensko kopanje | 🛠 | 💶 izziv | M5-R17 / R15 / R19 | 2026-11-20 |
 | Barve (izbirnik: 4 barve kože) | 🛠 | 💶 izziv | M5-R21 | 2026-11-20 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), gola rožnata koža s črnimi pegami, temnejša glava, pokončna ušesa, naraven rep, na svetlo sivem ozadju | — | M5-R11-04 | 2026-11-20 |
-| Barvne različice (3 dodatne barve kože) | 🗓 po portretu (§8b) | — | M5-R11-08 | — |
+| Barvne različice (3 dodatne barve kože: rožnata s čokoladnimi pegami, temno siva z rožnatimi lisami, rožnata z rjavkastimi pegami) | ✅ AI fotografije, isti pes in poza, spremenjena le barva kože | — | M5-R11-08 | 2026-11-20 |
 | Stran na petprep.si (`/animals/dogs/american-hairless-terrier`, `/sl/zivali/psi/ameriski-goli-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)

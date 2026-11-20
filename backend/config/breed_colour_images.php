@@ -354,4 +354,10 @@ return [
     'norwegian_elkhound' => [
         'grey' => 'dogs/norwegian-elkhound.webp',
     ],
+    'american_hairless_terrier' => [
+        'pink-black-spots' => 'dogs/american-hairless-terrier.webp',
+        'pink-chocolate-spots' => 'dogs/american-hairless-terrier--pink-chocolate-spots.webp',
+        'grey-pink-patches' => 'dogs/american-hairless-terrier--grey-pink-patches.webp',
+        'pink-tan-spots' => 'dogs/american-hairless-terrier--pink-tan-spots.webp',
+    ],
 ];

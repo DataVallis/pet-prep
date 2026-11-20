@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "4e3a1736fd4c16739dd8e1f8241b8b339daa632f7d134620f0d7cba364b48232"
+      "sha256": "3316d4f9cc80e69a5e01a50d5446e382b6982907c6b50efc483e6c3fab32e6cb"
     }
   },
   "suitability_vocabulary": {
@@ -73712,7 +73712,42 @@
         "file": "american-hairless-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "pink-black-spots",
+            "label": {
+              "en": "Pink with black spots",
+              "sl": "Rožnat s črnimi pegami"
+            },
+            "file": "dog/american-hairless-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "pink-chocolate-spots",
+            "label": {
+              "en": "Pink with chocolate spots",
+              "sl": "Rožnat s čokoladnimi pegami"
+            },
+            "file": "dog/american-hairless-terrier--pink-chocolate-spots.webp"
+          },
+          {
+            "key": "grey-pink-patches",
+            "label": {
+              "en": "Dark grey with pink patches",
+              "sl": "Temno siv z rožnatimi lisami"
+            },
+            "file": "dog/american-hairless-terrier--grey-pink-patches.webp"
+          },
+          {
+            "key": "pink-tan-spots",
+            "label": {
+              "en": "Pink with tan spots",
+              "sl": "Rožnat z rjavkastimi pegami"
+            },
+            "file": "dog/american-hairless-terrier--pink-tan-spots.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
