@@ -66857,12 +66857,12 @@
       "notes": "FCI nomenclature page (S984): heading 'RUSSKIY TCHIORNY TERRIER', English name 'RUSSIAN BLACK TERRIER', group 'n°2 - Chiens de type Pinscher et Schnauzer - Molossoïdes et chiens de montagne et de bouvier suisses', section 'Type Pinscher et Schnauzer', subsection 'Tchiorny Terrier', country 'RUSSIE (FEDERATION DE)', definitive acceptance '29/09/1983', official valid standard '13/10/2010' (English text 10/01/2011). FCI standard (S985): 'ORIGIN / PATRONAGE: Russia.', 'Section 1.4 Pinscher and Schnauzer.', 'Working trial optional.' (the nomenclature page says no working trial — background). AKC (S988) and RKC (S986) Working group. Country code RU (Borzoi precedent)."
     },
     "size_class": {
-      "value": "giant",
+      "value": "large",
       "unit": "—",
       "source_id": "S986",
       "quote": "Large",
       "confidence": "high",
-      "notes": "RKC key fact 'Size' (S986) 'Large'. FCI 50–60 kg males / 45–50 kg females (S985) = about 99–132 lb → the 'Giant (over 100 pounds)' class of S10 for growth (Saint Bernard / Leonberger precedent: RKC 'Large', weight in the giant class)."
+      "notes": "RKC key fact 'Size' (S986) 'Large' (Giant Schnauzer / Newfoundland / Leonberger precedent). FCI 50–60 kg males / 45–50 kg females (S985) = about 99–132 lb → the 'Giant (over 100 pounds)' class of S10 for growth only."
     },
     "height": {
       "fci": {
@@ -67063,7 +67063,7 @@
         "source_id": "S989",
         "quote": "and they can be good with children when supervised.",
         "confidence": "medium",
-        "notes": "PetMD (S989, fragment of 'The breed can live well with other dogs and cats when well-socialized and introduced properly, and they can be good with children when supervised.') — the basis of the children chip (supervision caveat kept here). VCA (S990) Ideal Owner 'Children | Older kids' and Quick Facts 'With Kids | Fine if raised with them' → older_children chip. Purina UK (S991, C): not recommended with small children (paraphrase) → no small_children chip."
+        "notes": "PetMD (S989, fragment of 'The breed can live well with other dogs and cats when well-socialized and introduced properly, and they can be good with children when supervised.') — the basis of the children chip (supervision caveat kept here). VCA (S990) Ideal Owner 'Children | Older kids' and Quick Facts 'With Kids | Fine if raised with them' → not_for_small_children chip. Purina UK (S991, C): not recommended with small children (paraphrase) → no small_children chip."
       },
       "older_children": {
         "value": "ideal owner: older kids",
@@ -67071,7 +67071,7 @@
         "source_id": "S990",
         "quote": "Children | Older kids",
         "confidence": "medium",
-        "notes": "VCA Ideal Owner table (S990) → older_children chip (Tibetan Spaniel precedent)."
+        "notes": "VCA Ideal Owner table (S990) → not_for_small_children chip (a large dog; the older_children label names a small dog — Giant Schnauzer precedent)."
       },
       "other_pets": {
         "value": "can live with other dogs and cats when well socialised and introduced properly",
@@ -100975,7 +100975,7 @@
             "refs": [
               "black_russian_terrier.behaviour.children"
             ],
-            "quote": "S989 'and they can be good with children when supervised.' (supervision caveat; VCA 'Older kids' → older_children)"
+            "quote": "S989 'and they can be good with children when supervised.' (supervision caveat; VCA 'Older kids' → not_for_small_children)"
           },
           {
             "tag": "large_home",
@@ -101021,7 +101021,7 @@
             "quote": "S986 'Every day'"
           },
           {
-            "tag": "older_children",
+            "tag": "not_for_small_children",
             "source_ids": [
               "S990"
             ],
@@ -101032,7 +101032,7 @@
           }
         ],
         "not_proposed": {
-          "small_children": "VCA (S990) 'Older kids'; PetMD only 'when supervised' → no small_children chip.",
+          "small_children": "VCA (S990) 'Older kids'; PetMD only 'when supervised' → no small_children chip; older_children names a small dog → not_for_small_children (large dog, Giant Schnauzer precedent).",
           "apartment": "RKC 'Large house' (S986), not 'Flat/ Apartment'.",
           "experienced_owner": "No A/B quote naming experienced owners (only Purina UK, tier C).",
           "chases_small_pets": "No prey-drive statement in an A/B source.",
