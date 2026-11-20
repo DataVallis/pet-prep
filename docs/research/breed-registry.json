@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "eeffedd713cdf16e4a6c1ba96b4bd56f74bed7061e2824f2f329cd77279227c6"
+      "sha256": "aef4c27867ff3232b604db2f9af884334e00292a17bd6b82cf63a5f4a5abfa0e"
     }
   },
   "suitability_vocabulary": {
@@ -75031,7 +75031,12 @@
           "S990"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "black-russian-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
