@@ -3939,6 +3939,51 @@
             "prompt_hash": "sha256:db6612ab9da387478ef0c422e6e90c58aeb9216caa31f421ba5b49d54ef9777f",
             "generated_at": "2026-11-19T22:54:38+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "american_hairless_terrier",
+            "species": "dog",
+            "colour": "pink-chocolate-spots",
+            "colour_value": "parti-coloured: pink skin with chocolate (brown) spots",
+            "file": "dog/american-hairless-terrier--pink-chocolate-spots.webp",
+            "reference": "dog/american-hairless-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:d44fb3a387e7d4963d626c46a5443ba17bab6ac56f44f5af8fa5bc5b7a9b3bdf",
+            "generated_at": "2026-11-20T01:24:40+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "american_hairless_terrier",
+            "species": "dog",
+            "colour": "grey-pink-patches",
+            "colour_value": "parti-coloured: dark grey skin with pink patches",
+            "file": "dog/american-hairless-terrier--grey-pink-patches.webp",
+            "reference": "dog/american-hairless-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:a3ae57498e7e4fad2cf54b345f69631baac3daf8f9a6b834a7d60453899c2d61",
+            "generated_at": "2026-11-20T01:24:59+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "american_hairless_terrier",
+            "species": "dog",
+            "colour": "pink-tan-spots",
+            "colour_value": "parti-coloured: pink skin with tan spots",
+            "file": "dog/american-hairless-terrier--pink-tan-spots.webp",
+            "reference": "dog/american-hairless-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:6ff62037755e70c98d808470b76b106717846f99ab93e831e648d033bd34b74c",
+            "generated_at": "2026-11-20T01:25:16+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
