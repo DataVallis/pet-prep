@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "d620cb875b29b8e7fda4ed64ee9def873b75d852cdd07c25bf350b313c9fe1b9"
+      "sha256": "0ab63331526b3fe94ed21f34f7e791ddb2181d72619d915985f186b59e6bf1b8"
     }
   },
   "suitability_vocabulary": {
@@ -75454,7 +75454,74 @@
         "file": "maine-coon.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "cat/maine-coon.webp",
+            "default": true
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "cat/maine-coon--red.webp"
+          },
+          {
+            "key": "silver",
+            "label": {
+              "en": "Silver",
+              "sl": "Srebrn"
+            },
+            "file": "cat/maine-coon--silver.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "cat/maine-coon--cream.webp"
+          },
+          {
+            "key": "blue-grey",
+            "label": {
+              "en": "Blue-grey",
+              "sl": "Modro siv"
+            },
+            "file": "cat/maine-coon--blue-grey.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "cat/maine-coon--black.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "cat/maine-coon--white.webp"
+          },
+          {
+            "key": "tortoiseshell",
+            "label": {
+              "en": "Tortoiseshell",
+              "sl": "Želvovinast"
+            },
+            "file": "cat/maine-coon--tortoiseshell.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -75833,7 +75900,74 @@
         "file": "british-shorthair.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "blue-grey",
+            "label": {
+              "en": "Blue-grey",
+              "sl": "Modro siv"
+            },
+            "file": "cat/british-shorthair.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "cat/british-shorthair--black.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "cat/british-shorthair--cream.webp"
+          },
+          {
+            "key": "lilac",
+            "label": {
+              "en": "Lilac",
+              "sl": "Lila"
+            },
+            "file": "cat/british-shorthair--lilac.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "cat/british-shorthair--white.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "cat/british-shorthair--red.webp"
+          },
+          {
+            "key": "silver",
+            "label": {
+              "en": "Silver",
+              "sl": "Srebrn"
+            },
+            "file": "cat/british-shorthair--silver.webp"
+          },
+          {
+            "key": "tortoiseshell",
+            "label": {
+              "en": "Tortoiseshell",
+              "sl": "Želvovinast"
+            },
+            "file": "cat/british-shorthair--tortoiseshell.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
@@ -76198,7 +76332,50 @@
         "file": "ragdoll.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "seal-point",
+            "label": {
+              "en": "Seal point",
+              "sl": "Seal point (temne točke)"
+            },
+            "file": "cat/ragdoll.webp",
+            "default": true
+          },
+          {
+            "key": "blue-point",
+            "label": {
+              "en": "Blue point",
+              "sl": "Blue point (modre točke)"
+            },
+            "file": "cat/ragdoll--blue-point.webp"
+          },
+          {
+            "key": "lilac-point",
+            "label": {
+              "en": "Lilac point",
+              "sl": "Lilac point (lila točke)"
+            },
+            "file": "cat/ragdoll--lilac-point.webp"
+          },
+          {
+            "key": "red-point",
+            "label": {
+              "en": "Red point",
+              "sl": "Red point (rdeče točke)"
+            },
+            "file": "cat/ragdoll--red-point.webp"
+          },
+          {
+            "key": "cream-point",
+            "label": {
+              "en": "Cream point",
+              "sl": "Cream point (kremaste točke)"
+            },
+            "file": "cat/ragdoll--cream-point.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -76581,7 +76758,74 @@
         "file": "siberian-cat.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "cat/siberian-cat.webp",
+            "default": true
+          },
+          {
+            "key": "silver",
+            "label": {
+              "en": "Silver",
+              "sl": "Srebrn"
+            },
+            "file": "cat/siberian-cat--silver.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "cat/siberian-cat--red.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "cat/siberian-cat--black.webp"
+          },
+          {
+            "key": "blue-grey",
+            "label": {
+              "en": "Blue-grey",
+              "sl": "Modro siv"
+            },
+            "file": "cat/siberian-cat--blue-grey.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "cat/siberian-cat--cream.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "cat/siberian-cat--white.webp"
+          },
+          {
+            "key": "tortoiseshell",
+            "label": {
+              "en": "Tortoiseshell",
+              "sl": "Želvovinast"
+            },
+            "file": "cat/siberian-cat--tortoiseshell.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
@@ -76961,7 +77205,74 @@
         "file": "norwegian-forest-cat.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "cat/norwegian-forest-cat.webp",
+            "default": true
+          },
+          {
+            "key": "silver",
+            "label": {
+              "en": "Silver",
+              "sl": "Srebrn"
+            },
+            "file": "cat/norwegian-forest-cat--silver.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "cat/norwegian-forest-cat--red.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "cat/norwegian-forest-cat--black.webp"
+          },
+          {
+            "key": "blue-grey",
+            "label": {
+              "en": "Blue-grey",
+              "sl": "Modro siv"
+            },
+            "file": "cat/norwegian-forest-cat--blue-grey.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "cat/norwegian-forest-cat--cream.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "cat/norwegian-forest-cat--white.webp"
+          },
+          {
+            "key": "tortoiseshell",
+            "label": {
+              "en": "Tortoiseshell",
+              "sl": "Želvovinast"
+            },
+            "file": "cat/norwegian-forest-cat--tortoiseshell.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -77344,7 +77655,34 @@
         "file": "bengal.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "brown-spotted",
+            "label": {
+              "en": "Brown spotted",
+              "sl": "Rjavo lisast"
+            },
+            "file": "cat/bengal.webp",
+            "default": true
+          },
+          {
+            "key": "silver-spotted",
+            "label": {
+              "en": "Silver spotted",
+              "sl": "Srebrno lisast"
+            },
+            "file": "cat/bengal--silver-spotted.webp"
+          },
+          {
+            "key": "snow",
+            "label": {
+              "en": "Snow",
+              "sl": "Snežni"
+            },
+            "file": "cat/bengal--snow.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",

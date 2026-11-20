@@ -12,3 +12,4 @@ here with `needs-david` is skipped by the backfill until David decides (delete t
 | papillon | lemon-white | needs-david | Both edits made the patches an unnatural olive / mustard green instead of pale lemon. | 44631516939, 44633153271 | 2026-11-19 |
 | portuguese_water_dog | brown-white | needs-david | Both edits changed the dog itself (head, tail carriage, legs, framing) instead of only the coat colour. | 44631516939, 44633153271 | 2026-11-19 |
 | portuguese_water_dog | white | needs-david | Both edits changed the dog itself (different head, pose and crop) instead of only the coat colour. | 44631516939, 44633153271 | 2026-11-19 |
+| ragdoll | chocolate-point | needs-david | Both edits returned the seal-point portrait unchanged (byte-identical file on the redo) — no lighter milk-chocolate points. | 44831297924, 44832970443 | 2026-11-20 |
