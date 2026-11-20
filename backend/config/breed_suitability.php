@@ -3064,5 +3064,31 @@ return [
                 ['tag' => 'heat_sensitive', 'source_ids' => ['S982'], 'refs' => ['tibetan_spaniel.exercise.heat']],
             ],
         ],
+
+        // M5-R10-131 Black Russian Terrier (data.json proposed_game_parameters.black_russian_terrier.suitability_tags; S986, S989,
+        // S990), runbook rules. RKC Breed Watch Category 1 → no welfare chip; no prey-drive statement; in marketing. No new
+        // vocabulary key. Never hypoallergenic (low_shedding only).
+        'black_russian_terrier' => [
+            'suits' => [
+                // S986 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S986'], 'refs' => ['black_russian_terrier.exercise.adult', 'black_russian_terrier.suitability.rkc_exercise']],
+                // S989 "devoted to their families"
+                ['tag' => 'family_pet', 'source_ids' => ['S989'], 'refs' => ['black_russian_terrier.behaviour.family']],
+                // S989 "and they can be good with children when supervised." (supervision caveat in data.json)
+                ['tag' => 'children', 'source_ids' => ['S989'], 'refs' => ['black_russian_terrier.behaviour.children']],
+                // S986 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S986'], 'refs' => ['black_russian_terrier.suitability.rkc_size_of_home']],
+                // S986 "Sheds: No"
+                ['tag' => 'low_shedding', 'source_ids' => ['S986'], 'refs' => ['black_russian_terrier.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S986 "Exercise: More than 2 hours per day"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S986'], 'refs' => ['black_russian_terrier.exercise.adult', 'black_russian_terrier.suitability.rkc_exercise']],
+                // S986 "Grooming: Every day"
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S986'], 'refs' => ['black_russian_terrier.suitability.rkc_grooming']],
+                // S990 "Children | Older kids" (a large dog → not_for_small_children)
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S990'], 'refs' => ['black_russian_terrier.behaviour.older_children']],
+            ],
+        ],
     ],
 ];

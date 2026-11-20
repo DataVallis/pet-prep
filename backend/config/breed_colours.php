@@ -854,6 +854,12 @@ return [
         ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
         ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
     ],
+    // M5-R10-131: FCI-Standard N° 327 (S985) — black, or black with intermingling grey hair; same order and values as
+    // breed_appearance.php.
+    'black_russian_terrier' => [
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'black-grey', 'value' => 'black with intermingling grey hairs', 'en' => 'Black with grey hairs', 'sl' => 'Črn s sivimi dlakami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

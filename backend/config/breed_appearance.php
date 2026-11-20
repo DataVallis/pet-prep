@@ -875,6 +875,12 @@
 | back; medium-length blunt muzzle (not flat-faced). No welfare trait. Golden first (portrait default); weights unsourced →
 | `verified => false`.
 |
+| Black Russian Terrier (M5-R10-131, docs/research/dog-data black_russian_terrier.appearance): "The Russian Black Terrier is a
+| large dog with a slightly long body and very athletic built" (FCI-Standard N° 327, S985); "Black, black with insignificant
+| intermingling grey hair is permissible." (S985) → two colours (black; black with intermingling grey hairs — never white
+| markings or grey patches); rough, thick double coat with eyebrows, moustache and beard; high-set hanging ears; natural tail.
+| No welfare trait. Black first (portrait default); weights unsourced → `verified => false`.
+|
 | Mudi (M5-R10-126, docs/research/dog-data mudi.appearance): "Medium-sized herding dog with a wedge-shaped head. Prick ears.
 | Body topline is distinctly sloping towards the rear." (FCI-Standard N° 238, S949); colours black, white, fawn, ash (blue), liver,
 | ash-brown and cifra (merle) (S949 / FCI nomenclature S948); dense, shiny, wavy coat 3–7 cm; high-set prick ears; natural tail.
@@ -5527,6 +5533,37 @@ return [
             'ear_carriage' => ['medium-sized pendant ears set fairly high, well feathered'],
             'eye_color' => ['dark brown, oval, bright and expressive eyes with black rims'],
             'tail' => ['natural tail set high, richly plumed, carried in a curl over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-131 (docs/research/dog-data/data.json black_russian_terrier.appearance; runbook rules 2026-10-10: FCI-Standard N° 327
+    // (S985) — black or black with intermingling grey hair (≤ 1/3), black first = the portrait default; natural ears and tail).
+    'black_russian_terrier' => [
+        'display_name' => 'Black Russian Terrier',
+        // Colour frequencies are in no source (black_russian_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 327 (S985, https://fci.be/Nomenclature/Standards/327g02-en.pdf), RKC (S986) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S986 "Large"; S985 "Males: 72 - 76 cms." / "Males: 50 – 60 kgs. Females: 45 – 50 kgs."',
+            'build' => 'S985 "The Russian Black Terrier is a large dog with a slightly long body and very athletic built"; "It is symmetrical with a large head and compact body and a voluminous and deep chest."',
+            'coat_length' => 'S985 "Rough and thick double coat."; "The head furnishing is very well developed and forms abundant eyebrows, moustaches and beard."',
+            'coat_color' => 'S985 "Black, black with insignificant intermingling grey hair is permissible." (weights unsourced; never white markings or grey patches)',
+            'ear_carriage' => 'S985 "EARS: Hanging. Set high and symmetrical, medium sized, triangular shaped."',
+            'eye_color' => 'S985 "EYES: Medium size, oval shaped, set straight and wide apart, dark colour."',
+            'tail' => 'S985 "Preferable shape of the undocked tail is sabre or sickle."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'large, robust and very athletic working dog with a slightly long body, a large head and a voluminous, deep chest', 'weight' => 3], 'powerful, heavy-boned dog of hardy constitution with a compact body and a large black nose'],
+            'coat_length' => ['rough, thick, slightly waved double coat of medium length with abundant eyebrows, moustache and beard'],
+            // FCI (S985): black, or black with intermingling grey hair; black first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'black', 'weight' => 80],
+                ['value' => 'black with intermingling grey hairs', 'weight' => 20],
+            ],
+            'ear_carriage' => ['medium-sized triangular ears set high, hanging with the front edge close to the cheek'],
+            'eye_color' => ['dark, medium-sized oval eyes set wide apart, with tight black rims'],
+            'tail' => ['thick natural tail set high, sabre-shaped'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

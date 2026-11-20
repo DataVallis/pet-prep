@@ -991,6 +991,13 @@ class FalAiService
                 .'dark brown oval expressive eyes, medium-sized pendant ears set fairly high and well feathered, '
                 .'a richly plumed tail carried in a curl over the back, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-131: FCI-Standard N° 327 (S985) — large, robust, very athletic, slightly long body, large head, deep chest;
+            // black (or black with intermingling grey hair); rough thick double coat with eyebrows, moustache and beard; hanging ears.
+            BreedType::BlackRussianTerrier => 'A large, robust and very athletic Black Russian Terrier, a powerful working dog with a slightly long body, a large head and a deep chest, '
+                .'solid black coat, a rough, thick, slightly waved double coat with abundant eyebrows, moustache and beard, a large black nose, '
+                .'dark oval eyes, medium-sized triangular hanging ears set high, '
+                .'a thick natural undocked sabre-shaped tail, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2329,6 +2336,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'silky top coat of moderate length lying rather flat, fine dense undercoat',
                 'markings' => 'mane on the neck, feathered pendant ears, plumed tail curled over the back, black nose',
+            ],
+            // M5-R10-131: FCI S985 black (the portrait default of the two standard colours).
+            BreedType::BlackRussianTerrier => [
+                'color_scheme' => 'black',
+                'eye_color' => 'dark',
+                'fur_texture' => 'rough, thick, slightly waved double coat with a soft dense undercoat',
+                'markings' => 'abundant eyebrows, moustache and beard, triangular hanging ears, natural sabre-shaped tail, large black nose',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
