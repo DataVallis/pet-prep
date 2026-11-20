@@ -510,6 +510,7 @@ const SPECIES = [
       { id: 'welsh_terrier', synonyms: { en: ['Welshie', 'Welsh'], sl: ['valizanski terier', 'velški terier', 'welsh terier'] } },
       { id: 'norwegian_elkhound', synonyms: { en: ['Elkhound', 'Elkie', 'Norwegian Elkhound Grey', 'Norsk Elghund Grå', 'Norwegian Moose Dog'], sl: ['norveski losovec', 'losovec', 'norveški elkhund'] } },
       { id: 'american_hairless_terrier', synonyms: { en: ['AHT', 'Hairless Terrier'], sl: ['ameriski goli terier', 'goli terier'] } },
+      { id: 'tibetan_spaniel', synonyms: { en: ['Tibbie'], sl: ['tibetanski spanjel', 'tibetan španjel'] } },
     ],
   },
   {
@@ -3279,6 +3280,28 @@ const DOG_FACTS = {
       ['deafness', 'health.deafness'],
     ],
   },
+  // M5-R10-130. No RKC page reachable → PDSA (S981): exercise 'around an hour of exercise every day' (about 60), coat 'Medium',
+  // grooming 'a couple of times per week' (More than once a week), lifespan 'Over 12 years'; height + weight = FCI-Standard N° 231
+  // (S980: about 25.4 cm, ideal 4.1–6.8 kg, both sexes); McMillan 2024 median 15.2 y (S771). Coren rank 46 (S35). FCI origin Tibet
+  // (China). No shedding fact (no source). Not exported: height.pdsa / adult_weight alternatives (the same facts twice),
+  // lifespan.webmd (span background), lifespan.senior_from (derived), health.other (background). No new health key.
+  tibetan_spaniel: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.pdsa', 'more_than']],
+    exercise: [['exercise.adult', 'about']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['entropion', 'health.entropion'],
+      ['extra_eyelashes', 'health.distichiasis'],
+    ],
+  },
 
 
 
@@ -3366,6 +3389,7 @@ export const DOG_CARE_TASKS = {
   welsh_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.welsh_terrier.tooth_brushing'], ['groomer_visit', 1, 56, 'proposed_game_parameters.welsh_terrier.professional_grooming'], ['bath', 1, 56, 'proposed_game_parameters.welsh_terrier.bathing']],
   norwegian_elkhound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.norwegian_elkhound.tooth_brushing']],
   american_hairless_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.american_hairless_terrier.tooth_brushing'], ['nail_trim', 1, 7, 'proposed_game_parameters.american_hairless_terrier.nail_trimming'], ['bath', 1, 7, 'proposed_game_parameters.american_hairless_terrier.bathing']],
+  tibetan_spaniel: [['tooth_brushing', 7, 7, 'proposed_game_parameters.tibetan_spaniel.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.tibetan_spaniel.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.tibetan_spaniel.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.tibetan_spaniel.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4348,6 +4372,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.american_hairless_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.american_hairless_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.american_hairless_terrier.exercise_minutes_senior',
+  },
+  tibetan_spaniel: {
+    adult_minutes: ['proposed_game_parameters.tibetan_spaniel.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.tibetan_spaniel.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.tibetan_spaniel.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.tibetan_spaniel.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.tibetan_spaniel.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.tibetan_spaniel.exercise_minutes_senior',
   },
 
 

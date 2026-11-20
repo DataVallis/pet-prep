@@ -868,6 +868,13 @@
 | colours; never albino or merle, S967); V-shaped ears, erect; natural tail, never docked. No welfare trait (healthy, unburnt
 | skin). Pink with black spots first (portrait default); weights unsourced → `verified => false`.
 |
+| Tibetan Spaniel (M5-R10-130, docs/research/dog-data tibetan_spaniel.appearance): "Small, active and alert. Well balanced in
+| general outline, slightly longer in body than height at withers." (FCI-Standard N° 231, S980); "All colours and mixture of
+| colours permissible, except merle which is unacceptable." (S980) → six common colours (golden, red, sable, cream, black and
+| tan, black — never merle); silky top coat of moderate length lying flat, feathered ears, richly plumed tail curled over the
+| back; medium-length blunt muzzle (not flat-faced). No welfare trait. Golden first (portrait default); weights unsourced →
+| `verified => false`.
+|
 | Mudi (M5-R10-126, docs/research/dog-data mudi.appearance): "Medium-sized herding dog with a wedge-shaped head. Prick ears.
 | Body topline is distinctly sloping towards the rear." (FCI-Standard N° 238, S949); colours black, white, fawn, ash (blue), liver,
 | ash-brown and cifra (merle) (S949 / FCI nomenclature S948); dense, shiny, wavy coat 3–7 cm; high-set prick ears; natural tail.
@@ -5485,6 +5492,41 @@ return [
             'ear_carriage' => ['V-shaped erect ears set at the outside edge of the skull'],
             'eye_color' => ['round, expressive, obliquely set brown eyes'],
             'tail' => ['natural, undocked tail tapering to the tip, carried in an upward curve'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-130 (docs/research/dog-data/data.json tibetan_spaniel.appearance; runbook rules 2026-10-10: FCI-Standard N° 231 (S980)
+    // permits all colours except merle → six common colours, golden first = the portrait default; natural, untrimmed coat).
+    'tibetan_spaniel' => [
+        'display_name' => 'Tibetan Spaniel',
+        // Colour frequencies are in no source (tibetan_spaniel.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 231 (S980, https://www.fci.be/Nomenclature/Standards/231g09-en.pdf), PDSA (S981) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S981 "Small"; S980 "Height at the withers: About 25,4 cm." / "Weight: Ideal 4,1 to 6,8 kg."',
+            'build' => 'S980 "Small, active and alert. Well balanced in general outline, slightly longer in body than height at withers."; "Muzzle: Medium in length. Blunt with cushioning, free from wrinkle."',
+            'coat_length' => 'S980 "Topcoat silky in texture, smooth on face and front of legs, of moderate length on body, but lying rather flat."',
+            'coat_color' => 'S980 "All colours and mixture of colours permissible, except merle which is unacceptable." (the six colours and their weights are unsourced; never merle)',
+            'ear_carriage' => 'S980 "Medium size, pendant, well feathered in adults, set fairly high."',
+            'eye_color' => 'S980 "Dark brown, oval, bright and expressive, medium size, set fairly well apart but forward looking. Rims black."',
+            'tail' => 'S980 "Set high, richly plumed and carried in a gay curl or over back when moving."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small, active and alert dog, slightly longer in body than tall, with a medium-length blunt muzzle and a black nose', 'weight' => 3], 'well balanced small companion dog with a slightly domed head and a short, blunt but not flat muzzle'],
+            'coat_length' => ['silky top coat of moderate length lying rather flat, smooth on the face and front of the legs, with a mane on the neck and feathering on the ears, backs of the forelegs and buttocks'],
+            // FCI (S980): all colours except merle; golden first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'golden', 'weight' => 30],
+                ['value' => 'red', 'weight' => 20],
+                ['value' => 'sable', 'weight' => 15],
+                ['value' => 'cream', 'weight' => 10],
+                ['value' => 'black and tan', 'weight' => 15],
+                ['value' => 'black', 'weight' => 10],
+            ],
+            'ear_carriage' => ['medium-sized pendant ears set fairly high, well feathered'],
+            'eye_color' => ['dark brown, oval, bright and expressive eyes with black rims'],
+            'tail' => ['natural tail set high, richly plumed, carried in a curl over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

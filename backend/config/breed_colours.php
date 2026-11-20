@@ -844,6 +844,16 @@ return [
         ['key' => 'grey-pink-patches', 'value' => 'parti-coloured: dark grey skin with pink patches', 'en' => 'Dark grey with pink patches', 'sl' => 'Temno siv z rožnatimi lisami'],
         ['key' => 'pink-tan-spots', 'value' => 'parti-coloured: pink skin with tan spots', 'en' => 'Pink with tan spots', 'sl' => 'Rožnat z rjavkastimi pegami'],
     ],
+    // M5-R10-130: FCI-Standard N° 231 (S980) — all colours except merle; six common colours, same order and values as
+    // breed_appearance.php.
+    'tibetan_spaniel' => [
+        ['key' => 'golden', 'value' => 'golden', 'en' => 'Golden', 'sl' => 'Zlat'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'sable', 'value' => 'sable', 'en' => 'Sable', 'sl' => 'Sobolji'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

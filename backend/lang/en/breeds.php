@@ -128,6 +128,7 @@ return [
     'welsh_terrier' => 'Welsh Terrier',
     'norwegian_elkhound' => 'Norwegian Elkhound',
     'american_hairless_terrier' => 'American Hairless Terrier',
+    'tibetan_spaniel' => 'Tibetan Spaniel',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
