@@ -1,6 +1,7 @@
 /**
  * M6-W03 HUD: bought items in the pet's scenes — the bed replaces the sleeping loop (picture mode:
- * its image), the bowls play once after an accepted water / meal, the treat clip plays once on the
+ * its image), the bowls play once after an accepted meal (eating clip) / water (drinking clip,
+ * 2026-11-20 — never the eating clip), the treat clip plays once on the
  * stage after »Priboljšek«; without items the normal scene stays.
  */
 import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
@@ -36,6 +37,7 @@ const BED_VID = u(11, 'bedvid');
 const BOWLS_IMG = u(12, 'bowlimg');
 const BOWLS_VID = u(13, 'bowlvid');
 const TREAT_VID = u(14, 'treatvid');
+const DRINK_VID = u(15, 'drinkvid');
 
 const ITEMS = {
   bed: { image: BED_IMG, video: BED_VID, video_seconds: 3, loop: true },
@@ -93,17 +95,31 @@ it('picture mode: the bed image, no player', async () => {
   expect(liveVideoPlayers()).toHaveLength(0);
 });
 
-it('an accepted water plays the bowls once, then back to the normal stage', async () => {
+it('an accepted water plays the bowls DRINKING clip once, then back to the normal stage', async () => {
+  const withDrink = { ...ITEMS, bowls: { ...ITEMS.bowls, drink_video: DRINK_VID, drink_video_seconds: 3 } };
+  await renderHud(state('idle', withDrink));
+  (api.waterPet as jest.Mock).mockResolvedValue({ status: 'accepted', state: state('idle', withDrink) });
+  fireEvent.press(screen.getByTestId('action-water'));
+  await waitFor(() => expect(playerUris()).toContain(DRINK_VID));
+  expect(playerUris()).not.toContain(BOWLS_VID);
+  const drinking = liveVideoPlayers().find((p) => sourceUri(p) === DRINK_VID);
+  expect(drinking?.loop).toBe(false);
+  await act(async () => {
+    drinking?.emit('playToEnd', {});
+  });
+  await waitFor(() => expect(liveVideoPlayers().some((p) => sourceUri(p) === DRINK_VID && !p.released)).toBe(false));
+});
+
+it('bowls without a drinking clip: an accepted water never plays the eating clip', async () => {
   await renderHud(state('idle'));
   (api.waterPet as jest.Mock).mockResolvedValue({ status: 'accepted', state: state('idle') });
   fireEvent.press(screen.getByTestId('action-water'));
-  await waitFor(() => expect(playerUris()).toContain(BOWLS_VID));
-  const bowls = liveVideoPlayers().find((p) => sourceUri(p) === BOWLS_VID);
-  expect(bowls?.loop).toBe(false);
+  await waitFor(() => expect(api.waterPet).toHaveBeenCalledTimes(1));
+  // Let the accepted answer land (toast + moment) before checking.
   await act(async () => {
-    bowls?.emit('playToEnd', {});
+    await Promise.resolve();
   });
-  await waitFor(() => expect(liveVideoPlayers().some((p) => sourceUri(p) === BOWLS_VID && !p.released)).toBe(false));
+  expect(playerUris()).not.toContain(BOWLS_VID);
 });
 
 it('without bowls an accepted water keeps the normal stage (no extra player)', async () => {

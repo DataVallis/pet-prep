@@ -148,7 +148,7 @@ import PetAlbum from '@/components/PetAlbum';
 import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
 import { EMPTY_PET_MEDIA, isMediaPending } from '@/modules/petMedia/petMedia';
 import { useItemMoment } from '@/modules/petMedia/useItemMoment';
-import { advanceToyTurn } from '@/modules/petMedia/itemMedia';
+import { advanceToyTurn, bowlsMoment } from '@/modules/petMedia/itemMedia';
 import CleaningOverlay from '@/components/CleaningOverlay';
 import { loadMessGames } from '@/modules/cleaning/loadMessGames';
 import { messStages } from '@/modules/cleaning/messPlan';
@@ -597,8 +597,10 @@ export default function ChildHudScreen() {
             : successMessage(action, response.status);
         // M5-T01 (spec §4): an accepted care is a ✓ confirmation with "next time" where the state knows it.
         const accepted = response.status === 'accepted';
-        // M6-W03: the pet's own bowls once on the stage after an accepted meal / water (looks only, S1).
-        if (accepted && (action === 'feed' || action === 'water')) playItemMoment('bowls');
+        // M6-W03: the pet's own bowls once on the stage after an accepted meal / water (looks only, S1):
+        // feed → the eating clip, water → the drinking clip, never the eating one (David 2026-11-20).
+        const bowlsClip = accepted ? bowlsMoment(action) : null;
+        if (bowlsClip !== null) playItemMoment('bowls', null, bowlsClip);
         showToast({ tone: 'ok', message, confirm: accepted, next: confirmationNext(action, response.status, after, response.feed_mode) });
       },
       onError: (error) => {

@@ -1,5 +1,6 @@
 /**
- * M6-W03: the one-shot item moment of a stage (bowls after a feed / water, treats after
+ * M6-W03: the one-shot item moment of a stage (bowls after a feed — eating — or a water —
+ * drinking, 2026-11-20 —, treats after
  * »Priboljšek») — UI state only. WHAT shows comes from `itemMomentPlayback` (pure); the host
  * passes `phase` + `onPhaseEnd` to its `PetMediaView`. The moment ends when its clip ends or
  * fails (`onPhaseEnd`), after `maxMs` at the latest, or when the host calls `end()`.
@@ -7,7 +8,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import { itemMomentPlayback, type ItemMoment, type MomentItemKey } from '@/modules/petMedia/itemMedia';
+import { itemMomentPlayback, type ItemMoment, type MomentClip, type MomentItemKey } from '@/modules/petMedia/itemMedia';
 import type { PetMediaInfo } from '@/modules/petMedia/petMedia';
 import type { PhasePlayback } from '@/modules/petMedia/phasePlayer';
 import type { MediaMode } from '@/modules/petMedia/statePlayer';
@@ -21,9 +22,10 @@ export interface ItemMomentControl {
   phase: PhasePlayback | null;
   /**
    * Start a moment; false = the pet has nothing to show for it (the host keeps its plain
-   * feedback). `fallbackClip` = a clip from an older answer contract (the treat's `media`).
+   * feedback). `fallbackClip` = a clip from an older answer contract (the treat's `media`);
+   * `clip` = which bowls clip (`drink` after a water, 2026-11-20).
    */
-  play: (key: MomentItemKey, fallbackClip?: string | null) => boolean;
+  play: (key: MomentItemKey, fallbackClip?: string | null, clip?: MomentClip) => boolean;
   /** Back to the normal stage (also the `onPhaseEnd` handler). */
   end: () => void;
 }
@@ -34,9 +36,9 @@ export function useItemMoment(media: PetMediaInfo, mode: MediaMode): ItemMomentC
   const latest = useRef({ media, mode });
   latest.current = { media, mode };
 
-  const play = useCallback((key: MomentItemKey, fallbackClip: string | null = null) => {
+  const play = useCallback((key: MomentItemKey, fallbackClip: string | null = null, clip: MomentClip = 'eat') => {
     const { media: m, mode: md } = latest.current;
-    const next: Running = { key, instance: seq.current + 1, fallbackClip };
+    const next: Running = { key, instance: seq.current + 1, fallbackClip, clip };
     if (itemMomentPlayback(m.items, next, md, m.referenceImageUrl, { fallbackClip }) === null) return false;
     seq.current = next.instance;
     setMoment(next);

@@ -1203,6 +1203,7 @@
     "accident": "Puddle on the floor — clean up",
     "chewing": "Chewed slipper — tidy up",
     "scratching": "Scratched sofa",
-    "hard_stopped": "Game paused"
+    "hard_stopped": "Game paused",
+    "needs_cleaning": "Needs cleaning"
   }
 }

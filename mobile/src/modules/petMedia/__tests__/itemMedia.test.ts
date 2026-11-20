@@ -11,6 +11,7 @@ import {
   ITEM_CLIP_GRACE_MS,
   ITEM_PICTURE_MS,
   advanceToyTurn,
+  bowlsMoment,
   currentToyTurn,
   hasPlayingMedia,
   itemMomentPlayback,
@@ -39,6 +40,7 @@ const ROPE_VID = u(15, 'ropevid');
 const SQUEAK_IMG = u(16, 'sqimg');
 const SQUEAK_VID = u(17, 'sqvid');
 const TREAT_VID = u(18, 'treatvid');
+const DRINK_VID = u(19, 'drinkvid');
 
 const RAW_ITEMS = {
   bed: { image: BED_IMG, video: BED_VID, video_seconds: 3, loop: true },
@@ -227,6 +229,62 @@ describe('itemMomentPlayback (bowls / treats once)', () => {
 
   it('a failing clip → its image', () => {
     expect(itemMomentPlayback(m.items, { key: 'bowls', instance: 1 }, 'video', IMAGE, { canPlayVideo: () => false })?.current).toMatchObject({ kind: 'image', url: BOWLS_IMG });
+  });
+});
+
+describe('bowls: feed → eating, water → drinking (David 2026-11-20, option A)', () => {
+  const RAW_WITH_DRINK = { ...RAW_ITEMS, bowls: { ...RAW_ITEMS.bowls, drink_video: DRINK_VID, drink_video_seconds: 5 } };
+  const withDrink = media({}, RAW_WITH_DRINK);
+  const oldShape = media();
+
+  it('bowlsMoment maps the accepted care action to the clip', () => {
+    expect(bowlsMoment('feed')).toBe('eat');
+    expect(bowlsMoment('water')).toBe('drink');
+    expect(bowlsMoment('clean')).toBeNull();
+    expect(bowlsMoment('walk')).toBeNull();
+  });
+
+  it('readItemMedia reads drink_video / drink_video_seconds of the bowls only', () => {
+    expect(readItemMedia(RAW_WITH_DRINK).bowls).toEqual({ image: BOWLS_IMG, video: BOWLS_VID, videoMs: 4000, loop: false, drinkVideo: DRINK_VID, drinkVideoMs: 5000 });
+    // Null / missing (older server, clip not made yet) → no drink clip.
+    expect(readItemMedia({ bowls: { ...RAW_ITEMS.bowls, drink_video: null, drink_video_seconds: null } }).bowls?.drinkVideo).toBeUndefined();
+    expect(readItemMedia(RAW_ITEMS).bowls?.drinkVideo).toBeUndefined();
+    // Another item never gets one.
+    expect(readItemMedia({ bed: { ...RAW_ITEMS.bed, drink_video: DRINK_VID } }).bed?.drinkVideo).toBeUndefined();
+    // Bad length → unknown (the default length applies).
+    expect(readItemMedia({ bowls: { ...RAW_ITEMS.bowls, drink_video: DRINK_VID, drink_video_seconds: 99 } }).bowls?.drinkVideoMs).toBeNull();
+  });
+
+  it('feed → the eating clip, even when a drinking clip exists', () => {
+    const p = itemMomentPlayback(withDrink.items, { key: 'bowls', instance: 1, clip: 'eat' }, 'video', IMAGE);
+    expect(p?.current).toMatchObject({ kind: 'clip', url: BOWLS_VID });
+    expect(p?.maxMs).toBe(4000 + ITEM_CLIP_GRACE_MS);
+  });
+
+  it('water with a drinking clip → the drinking clip, its own length and key', () => {
+    const p = itemMomentPlayback(withDrink.items, { key: 'bowls', instance: 1, clip: 'drink' }, 'video', IMAGE);
+    const eat = itemMomentPlayback(withDrink.items, { key: 'bowls', instance: 1, clip: 'eat' }, 'video', IMAGE);
+    expect(p?.current).toMatchObject({ kind: 'clip', url: DRINK_VID, loop: false });
+    expect(p?.still).toBe(BOWLS_IMG);
+    expect(p?.maxMs).toBe(5000 + ITEM_CLIP_GRACE_MS);
+    expect(p?.current.key).not.toBe(eat?.current.key);
+  });
+
+  it('water without a drinking clip (old payload shape) → nothing item-specific, never the eating clip', () => {
+    expect(itemMomentPlayback(oldShape.items, { key: 'bowls', instance: 1, clip: 'drink' }, 'video', IMAGE)).toBeNull();
+    // A moment without `clip` (older callers) stays the eating clip.
+    expect(itemMomentPlayback(oldShape.items, { key: 'bowls', instance: 1 }, 'video', IMAGE)?.current).toMatchObject({ url: BOWLS_VID });
+  });
+
+  it('picture mode → the bowls image for feed and water (as before)', () => {
+    for (const items of [withDrink.items, oldShape.items]) {
+      expect(itemMomentPlayback(items, { key: 'bowls', instance: 1, clip: 'drink' }, 'picture', IMAGE)?.current).toEqual({ kind: 'image', url: BOWLS_IMG, key: mediaKey(BOWLS_IMG), state: null });
+      expect(itemMomentPlayback(items, { key: 'bowls', instance: 1, clip: 'eat' }, 'picture', IMAGE)?.current).toMatchObject({ kind: 'image', url: BOWLS_IMG });
+    }
+  });
+
+  it('a failing drinking clip → the bowls image', () => {
+    expect(itemMomentPlayback(withDrink.items, { key: 'bowls', instance: 1, clip: 'drink' }, 'video', IMAGE, { canPlayVideo: (url) => url !== DRINK_VID })?.current).toMatchObject({ kind: 'image', url: BOWLS_IMG });
   });
 });
 

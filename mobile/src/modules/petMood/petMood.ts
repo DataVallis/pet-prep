@@ -29,6 +29,7 @@ export type PetMoodKind =
   | 'chewing'
   | 'scratching'
   | 'hard_stopped'
+  | 'needs_cleaning'
   | 'ill'
   | 'payment_required'
   | 'game_over'
@@ -48,6 +49,7 @@ export type PetMoodIcon =
   | 'ball'
   | 'smile'
   | 'mess'
+  | 'sparkle'
   | 'pause'
   | 'vet'
   | 'lock'
@@ -82,6 +84,7 @@ const LOOK: Readonly<Record<PetMoodKind, { tone: PetMoodTone; icon: PetMoodIcon 
   chewing: { tone: 'warn', icon: 'mess' },
   scratching: { tone: 'warn', icon: 'mess' },
   hard_stopped: { tone: 'neutral', icon: 'pause' },
+  needs_cleaning: { tone: 'warn', icon: 'sparkle' },
   ill: { tone: 'danger', icon: 'vet' },
   payment_required: { tone: 'neutral', icon: 'lock' },
   game_over: { tone: 'danger', icon: 'shelter' },
@@ -121,6 +124,7 @@ const TEXT_KEYS: Readonly<Record<PetMoodKind, string>> = {
   chewing: 'pet:mood.chewing',
   scratching: 'pet:mood.scratching',
   hard_stopped: 'pet:mood.hard_stopped',
+  needs_cleaning: 'pet:mood.needs_cleaning',
   ill: 'child:locked.illness.title',
   payment_required: 'child:locked.payment_required.title',
   game_over: 'child:locked.game_over.title',
@@ -145,11 +149,23 @@ export function moodText(m: Pick<PetMood, 'kind'>, species: string | null | unde
  */
 export function familyPetMood(pet: FamilyPet): PetMood | null {
   if (petStatus(pet) !== null || isPaymentRequired(pet.plan) || pet.pet_state === null) return null;
-  return petMoodOf({
+  const mood = petMoodOf({
     petState: pet.pet_state,
     lockReason: null,
     scene: panelScene(pet.behaviour),
     hunger: pet.metrics.hunger,
     thirst: pet.metrics.thirst,
   });
+  return parentMood(mood, pet.is_ill);
+}
+
+/**
+ * Parent wording of the server's `sick` (David 2026-11-20, »1+A«): the server says
+ * `pet_state = sick` whenever hygiene is 0 % (`PetDecayService::determinePetState`) — a
+ * mess that was not cleaned up, not an illness. Real illness is the separate illness lock
+ * (`is_ill`, `Pet::isIll()`). So a `sick` mood without that lock reads »Treba počistiti« /
+ * »Needs cleaning« (sparkle icon); with the lock it stays »Sick«. Same rule for cats.
+ */
+export function parentMood(mood: PetMood, isIll: boolean): PetMood {
+  return mood.kind === 'sick' && !isIll ? { kind: 'needs_cleaning', ...LOOK.needs_cleaning } : mood;
 }
