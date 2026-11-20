@@ -105,7 +105,7 @@ describe('album — item tiles', () => {
       media({
         treats: once(TREAT_IMG, null),
         toy_2: loop(TOY2_IMG, TOY2_VID),
-        bowls: once(BOWL_IMG, BOWL_VID),
+        bowls: { ...once(BOWL_IMG, BOWL_VID), drink_video: null, drink_video_seconds: null },
         toy_1: loop(TOY1_IMG, TOY1_VID),
       }),
     );
@@ -128,7 +128,7 @@ describe('album — item tiles', () => {
   });
 
   it('picture mode → every item tile shows its image', () => {
-    const items = buildAlbumItems(media({ bowls: once(BOWL_IMG, BOWL_VID), toy_1: loop(TOY1_IMG, TOY1_VID) }), 'picture');
+    const items = buildAlbumItems(media({ bowls: { ...once(BOWL_IMG, BOWL_VID), drink_video: null, drink_video_seconds: null }, toy_1: loop(TOY1_IMG, TOY1_VID) }), 'picture');
     expect(byId(items, 'bowls')).toMatchObject({ kind: 'photo', url: BOWL_IMG });
     expect(byId(items, 'toy_1')).toMatchObject({ kind: 'photo', url: TOY1_IMG });
   });
