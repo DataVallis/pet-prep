@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "6daa7429ba62c54c4add23e79a6ef00d13f4da63fbffeab9b106e7c3580a6789"
+      "sha256": "531b1f495b91d5d533ce596ee9df12d398ed2b12f5d120f8ae4d69efbeda7a78"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -73237,7 +73237,7 @@
       "id": "american_hairless_terrier",
       "species": "dog",
       "order": 119,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "American Hairless Terrier",
         "sl": "Ameriški goli terier"
@@ -73833,7 +73833,7 @@
       "id": "tibetan_spaniel",
       "species": "dog",
       "order": 120,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Tibetan Spaniel",
         "sl": "Tibetanski španjel"
@@ -74480,7 +74480,7 @@
       "id": "black_russian_terrier",
       "species": "dog",
       "order": 121,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Black Russian Terrier",
         "sl": "Ruski črni terier"
