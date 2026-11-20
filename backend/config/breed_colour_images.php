@@ -368,4 +368,8 @@ return [
         'black-tan' => 'dogs/tibetan-spaniel--black-tan.webp',
         'black' => 'dogs/tibetan-spaniel--black.webp',
     ],
+    'black_russian_terrier' => [
+        'black' => 'dogs/black-russian-terrier.webp',
+        'black-grey' => 'dogs/black-russian-terrier--black-grey.webp',
+    ],
 ];
