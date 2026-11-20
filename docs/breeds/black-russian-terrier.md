@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `black_russian_terrier` (viri S984–S992; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S986) |
 | Izvor | FCI št. 327, skupina 2, sekcija 1.4 (pinči in šnavcerji — Tchiorny terier), Rusija (S984, S985) — po RKC in AKC delovni pes |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 127. mesto »Black Russian Terrier« (S174, prebrano 2026-11-20: »126 Tibetan Spaniel«, »127 Black Russian Terrier«, »128 Neopolitan Mastiff«) |
-| PR-ji | pet-prep #1445 (pasma) · portret pet-prep (sledi) · barvne različice pet-prep (sledijo) · spletna stran: pet-prep-website `feat/register-black-russian-terrier` |
+| PR-ji | pet-prep #1445 (pasma, združen `fa046ed`) · portret pet-prep (zagon `breed-portraits.yml` 44692875656, sprejet v prvem poskusu) · barvne različice pet-prep (sledijo) · spletna stran: pet-prep-website `feat/register-black-russian-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Česanje vsak dan, »Nova izkušnja« za mladička, opozorilo 60 min po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-20 |
 | Ušesa in kremplji vsak teden (otrok); opomnik za frizerja vsakih 6 tednov (starši) | 🛠 | 💶 izziv | M5-R14 / R18 / R20 | 2026-11-20 |
 | Barve (izbirnik: 2 barvi — črn (portret), črn s sivimi dlakami) | 🛠 | 💶 izziv | M5-R21 | 2026-11-20 |
-| AI portret v registru | 🗓 sledi v tem zagonu | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/black-russian-terrier`, `/sl/zivali/psi/ruski-crni-terier`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črn, brada in obrvi, viseča ušesa, naraven rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-20 |
+| Stran na petprep.si (`/animals/dogs/black-russian-terrier`, `/sl/zivali/psi/ruski-crni-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
