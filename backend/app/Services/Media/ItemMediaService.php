@@ -519,6 +519,17 @@ class ItemMediaService
 
             // A flagged key image (David 2026-11-19) is being regenerated — its clip waits for the new one.
             if ($image->isShown() && $image->source_path === $picture['path']) {
+                if ($image->status === ItemMedia::STATUS_PENDING) {
+                    // 2026-11-20: a fresh chain of a SHOWN key image (the one-off reopen of the bowls /
+                    // bed key images from before the neutral-pose / puppy-size fix — migration
+                    // 2027_04_29_120000 — or any regeneration in place): its old file stays shown, the
+                    // new one is made now (unique job, claimed once; budget-guarded at the submit).
+                    // No clip is made from the file being replaced (QA #1459 M1) — its store queues them.
+                    GenerateItemMedia::dispatch($image->id);
+                    $dispatched++;
+
+                    continue;
+                }
                 if (! $this->clipsEnabled()) {
                     continue; // QA #655 m4: no clip while its profile is off — the picture is shown
                 }
@@ -799,7 +810,7 @@ class ItemMediaService
             if ($picture === false) {
                 return null; // the catalogue picture is still on its way — its store queues this row again
             }
-            $prompt = $this->prompts->itemImagePrompt($breedKey, $row->item_key, $description, $traits, $stage, $picture !== null, $row->checkVariant(), $this->sizeOf($breedKey));
+            $prompt = $this->prompts->itemImagePrompt($breedKey, $row->item_key, $description, $traits, $stage, $picture !== null, $row->checkVariant(), $this->sizeOf($breedKey, null, $stage));
 
             return [
                 'target' => (string) $sourceImage->storage_path,
@@ -1422,9 +1433,10 @@ class ItemMediaService
     private function afterStored(ItemMedia $row): void
     {
         if ($row->isPicture()) {
+            // QA #1459 M1: only key images an owner waits for (a reopened row nobody owns costs nothing until bought).
             ItemMedia::query()->where('kind', ItemMedia::KIND_IMAGE)->where('design', $row->design)
                 ->where('status', ItemMedia::STATUS_PENDING)->orderBy('id')
-                ->each(fn (ItemMedia $waiting) => GenerateItemMedia::dispatch($waiting->id));
+                ->each(fn (ItemMedia $waiting) => $this->hasOwner($waiting) ? GenerateItemMedia::dispatch($waiting->id) : null);
 
             return;
         }
@@ -1436,6 +1448,26 @@ class ItemMediaService
                 PetUpdated::afterCommit($pet->fresh() ?? $pet, 'item_media_ready');
             }
         }
+    }
+
+    /**
+     * QA #1459 M1: an active, not game-over pet owns $row's item IN ITS DESIGN (unrevoked) — its own
+     * pet, or a pet of the look. A pending row without one is never submitted by a catalogue-picture
+     * store / give-up; ensure() submits it once someone owns it.
+     */
+    public function hasOwner(ItemMedia $row): bool
+    {
+        if (! in_array($row->scope, [ItemMedia::SCOPE_LOOK, ItemMedia::SCOPE_PET], true)) {
+            return false;
+        }
+        // Treats have no design on the pack (content key `dog_treats` / `cat_treats`); a pack without a
+        // design (bought before M6-W03) shows the item's default design — counted as an owner.
+        $items = PetItem::query()->whereNull('revoked_at')->where('item_key', $row->item_key)
+            ->when(ItemDesigns::find($row->design) !== null, fn ($i) => $i->where(fn ($d) => $d->where('design', $row->design)->orWhereNull('design')))->select('pet_id');
+
+        return Pet::query()
+            ->when($row->scope === ItemMedia::SCOPE_LOOK, fn ($q) => $q->where('pet_look_id', $row->pet_look_id), fn ($q) => $q->whereKey($row->pet_id))
+            ->where('is_active', true)->where('is_game_over', false)->whereIn('id', $items)->exists();
     }
 
     /**
@@ -1706,10 +1738,10 @@ class ItemMediaService
             }
             foreach ($exhausted as $row) {
                 if ($row->isPicture()) {
-                    // Its waiting key images are made without the 2nd reference now.
+                    // Its waiting key images are made without the 2nd reference now (only those an owner waits for — QA #1459 M1).
                     ItemMedia::query()->where('kind', ItemMedia::KIND_IMAGE)->where('design', $row->design)
                         ->where('status', ItemMedia::STATUS_PENDING)->orderBy('id')
-                        ->each(fn (ItemMedia $waiting) => GenerateItemMedia::dispatch($waiting->id));
+                        ->each(fn (ItemMedia $waiting) => $this->hasOwner($waiting) ? GenerateItemMedia::dispatch($waiting->id) : null);
 
                     continue;
                 }
@@ -1938,17 +1970,22 @@ class ItemMediaService
     /**
      * David 2026-11-19 (a big Dobermann lay ON TOP of a small bed): the size class of a DOG breed for
      * the item prompts — from the breed's adult weight (`breed_stage_params` `adult_weight_kg`, the
-     * upper end of its range) against `media.item_media.size_classes`. Adult size on purpose: a bed
-     * bought for a growing dog is bought for its adult size, and a bed that is too big never looks
-     * wrong. Null for a cat (its beds are made for cats), an unknown breed or a breed without data.
+     * upper end of its range) against `media.item_media.size_classes`. Null for a cat (its beds are
+     * made for cats), an unknown breed or a breed without data.
+     *
+     * 2026-11-20 (production: »The dog is a puppy, not an extra-large dog, so the bowls are too large
+     * for it« — a Dobermann PUPPY got bowls / a bed described for an extra-large adult): the adult
+     * class only for an adult / senior animal (and a legacy pet without a stage, `$stage` null); a
+     * puppy or young animal gets null → PetAppearancePrompt::itemSize() sizes the item for the
+     * animal AS IT IS IN THE PICTURE (»this puppy«) — in the prompt and in the check's scene.
      *
      * @return array{class: string, bed_cm: int}|null
      */
-    public function sizeOf(string $breedKey, ?Species $species = null): ?array
+    public function sizeOf(string $breedKey, ?Species $species = null, ?LifeStage $stage = null): ?array
     {
         $species ??= PetAppearancePrompt::speciesOf($breedKey);
         $type = BreedType::tryFrom($breedKey);
-        if ($species !== Species::Dog || $type === null) {
+        if ($species !== Species::Dog || $type === null || PetAppearancePrompt::youngNoun($stage, $species) !== null) {
             return null;
         }
 

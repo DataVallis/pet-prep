@@ -1,6 +1,7 @@
 <?php
 
 use App\Console\Commands\ItemRecheckCommand;
+use App\Enums\LifeStage;
 use App\Enums\Species;
 use App\Events\PetUpdated;
 use App\Jobs\SendItemMediaAlert;
@@ -175,8 +176,8 @@ function ircComplete(int $rounds = 12): void
     }
 }
 
-/** A Dobermann with its own picture owning $design (David's case: Suki and the navy bed). */
-function ircPet(string $itemKey = 'bed', string $design = 'dog_bed_navy_bolster'): Pet
+/** A Dobermann with its own picture (at $stage) owning $design (David's case: Suki and the navy bed). */
+function ircPet(string $itemKey = 'bed', string $design = 'dog_bed_navy_bolster', string $stage = 'young'): Pet
 {
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
@@ -184,7 +185,7 @@ function ircPet(string $itemKey = 'bed', string $design = 'dog_bed_navy_bolster'
     disableHygieneEvents($pet);
     $path = "{$pet->id}/reference-g1.jpg";
     Storage::disk('pet_media')->put($path, IRC_JPEG.str_repeat("\x00", 64));
-    PetMedia::query()->updateOrCreate(['pet_id' => $pet->id, 'kind' => 'image', 'state' => null], ['status' => 'ready', 'storage_path' => $path, 'life_stage' => 'young', 'mime' => 'image/jpeg', 'generation' => 1]);
+    PetMedia::query()->updateOrCreate(['pet_id' => $pet->id, 'kind' => 'image', 'state' => null], ['status' => 'ready', 'storage_path' => $path, 'life_stage' => $stage, 'mime' => 'image/jpeg', 'generation' => 1]);
     PetItem::create(['pet_id' => $pet->id, 'item_key' => $itemKey, 'kind' => $itemKey === 'treats' ? 'consumable' : 'durable', 'variant' => "dog_{$itemKey}", 'design' => $itemKey === 'treats' ? null : $design, 'quantity_total' => $itemKey === 'treats' ? 5 : 1, 'quantity_left' => $itemKey === 'treats' ? 5 : 1, 'acquired_at' => now()]);
 
     return $pet->fresh();
@@ -212,9 +213,9 @@ function ircVision(): Collection
 /* ─────────────────────────── Generation ─────────────────────────── */
 
 describe('prompts', function () {
-    it('re-renders the item into the room, sizes the bed for the breed and puts the dog IN it', function () {
+    it('re-renders the item into the room, sizes the bed for the breed (adult) and puts the dog IN it', function () {
         ircFakeFal();
-        $pet = ircPet();
+        $pet = ircPet('bed', 'dog_bed_navy_bolster', 'adult');
         app(ItemMediaService::class)->ensure($pet);
         ircComplete();
 
@@ -223,6 +224,8 @@ describe('prompts', function () {
 
         // Dobermann: adult weight 32–45 kg (breed_stage_params) → extra-large, 120 cm inside.
         expect(app(ItemMediaService::class)->sizeOf('dobermann'))->toBe(['class' => 'extra-large', 'bed_cm' => 120])
+            ->and(app(ItemMediaService::class)->sizeOf('dobermann', null, LifeStage::Adult))->toBe(['class' => 'extra-large', 'bed_cm' => 120])
+            ->and(app(ItemMediaService::class)->sizeOf('dobermann', null, LifeStage::Senior))->toBe(['class' => 'extra-large', 'bed_cm' => 120])
             ->and($edit['prompt'])->toContain('lying curled up asleep in a low rectangular dog bed')
             ->toContain('The bed is a bed for a extra-large dog, about 120 cm long inside')
             ->toContain('never a small bed under a big dog')
@@ -779,9 +782,14 @@ describe('bowls drinking clip check', function () {
         $eatCall = $sheets->first(fn (array $b) => ! str_contains((string) $b['prompt'], 'drinking water'));
 
         expect($sheets)->toHaveCount(2)
-            ->and($drinkCall['prompt'])->toContain('with its head lowered over the water bowl')->not->toContain('eating from the food bowl')
+            // 2026-11-20: both start from the neutral pose; each fails only for the wrong action over the clip.
+            ->and($drinkCall['prompt'])->toContain('with its head between the two bowls, then lowering it into the bowl with clear water')->not->toContain('eating from the food bowl')
+            ->toContain('the first frame is the neutral start pose at the bowls')
+            ->toContain('action_done is false only if the dog eats kibble or puts its head into the bowl with kibble, or never drinks from the bowl with water')
             ->and($drinkCall['image_urls'][1])->toContain("/api/media/items/{$image->id}")
-            ->and($eatCall['prompt'])->toContain('eating from the food bowl')
+            ->and($eatCall['prompt'])->toContain('eating from the food bowl')->toContain('the first frame is the neutral start pose at the bowls')
+            ->toContain('with its head between the two bowls, then lowering it into the bowl with kibble') // QA #1459 m4: itemEatScene()
+            ->toContain('action_done is false only if the dog drinks or puts its head into the bowl with water, or never eats from the bowl with kibble')
             ->and($eatCall['image_urls'][1])->toContain("/api/media/items/{$image->id}")
             ->and(ItemMediaQualityCheck::where('item_media_id', $drink->id)->sole()->rubric)->toBe(MediaVisionCheck::RUBRIC_ITEM_CLIP)
             ->and([$eat->status, $drink->status])->toBe(['ready', 'ready'])
@@ -804,5 +812,97 @@ describe('bowls drinking clip check', function () {
             ->and($payload['bowls']['video'])->not->toBeNull()->and($payload['bowls']['drink_video'])->toBeNull()
             ->and(app(ItemMediaService::class)->readiness($pet->fresh()))->toBe(['bowls' => true])
             ->and(ircRow($pet, 'clip')->status)->toBe('ready')->and(ircRow($pet, 'image')->isShown())->toBeTrue();
+    });
+});
+
+/* ───────── Bowls: neutral start pose + stage-relative size (production evidence 2026-11-20) ───────── */
+
+describe('bowls neutral pose and puppy size', function () {
+    it('the bowls key image is a neutral pose both clips start from: head between the bowls, mouth closed, kibble and clear water visible', function () {
+        $prompts = app(PetAppearancePrompt::class);
+        $desc = (string) ItemDesigns::description('dog_bowls_blue_ceramic');
+
+        foreach ([0, 1, 2] as $variant) {
+            $p = $prompts->itemImagePrompt('dobermann', 'bowls', $desc, [], LifeStage::Puppy, true, $variant, null);
+            expect($p)->toContain('its head lowered between the two bowls, just above them, mouth closed — not eating or drinking yet')
+                ->toContain('the food bowl is visibly filled with dry kibble and the water bowl is visibly filled with clear water')
+                ->toContain('a shiny water surface with a soft reflection')
+                ->not->toContain('eating from the food bowl')
+                ->toContain('Each bowl stands flat on the floor with its whole base touching it'); // #1417 / #1429 realism kept
+        }
+
+        // The key image check judges the same neutral scene (scene_ok: water visible, not eating).
+        $scene = PetAppearancePrompt::itemScene('bowls', Species::Dog, $desc, null, LifeStage::Puppy);
+        expect($scene)->toContain('mouth closed — not eating or drinking yet')->toContain('visibly filled with clear water')
+            ->and(strtolower(PetAppearancePrompt::itemScene('bowls', Species::Cat, 'two white bowls', null, LifeStage::Puppy)))
+            ->toContain('visibly filled with cat food')->toContain('this kitten')->not->toMatch('/\bdog\b/');
+    });
+
+    it('drink / eat clips start from the neutral pose and escalate per retry; each names the bowl by its content', function () {
+        $prompts = app(PetAppearancePrompt::class);
+        $desc = (string) ItemDesigns::description('dog_bowls_steel_stand');
+        [$d0, $d1, $d2] = array_map(fn (int $v) => $prompts->itemDrinkClipPrompt('dobermann', $desc, [], LifeStage::Puppy, $v), [0, 1, 2]);
+        [$e0, $e1, $e2] = array_map(fn (int $v) => $prompts->itemClipPrompt('dobermann', 'bowls', $desc, [], LifeStage::Puppy, $v), [0, 1, 2]);
+
+        foreach ([$d0, $d1, $d2] as $d) {
+            expect($d)->toContain('drinks only from the bowl with water; it never eats, never touches or sniffs the bowl with kibble');
+        }
+        expect($d0)->toContain('starting with its head between the two bowls, then lowering its head into the bowl with clear water')
+            ->and($d1)->toContain('from its head between the two bowls, lowering its head into the bowl with clear water')
+            ->and($d2)->toContain('it turns its head to the bowl with clear water — not the bowl with kibble — lowers its muzzle into the water and laps it')
+            ->toContain('Its body and legs do not move');
+        foreach ([$e0, $e1, $e2] as $e) {
+            expect($e)->toContain('It eats only from the bowl with kibble; it never drinks and never puts its head in the bowl with water')->not->toContain('drinking');
+        }
+        expect($e0)->toContain('starting with its head between the two bowls, then lowering its head into the bowl with kibble')
+            ->and($e1)->toContain('from its head between the two bowls, lowering its head into the bowl with kibble')
+            ->and($e2)->toContain('it turns its head to the bowl with kibble — not the bowl with water — lowers its muzzle into it and eats')
+            ->and(PetAppearancePrompt::itemEatScene(Species::Cat, 'two white bowls', null, LifeStage::Puppy))->toContain('then lowering it into the bowl with cat food')->toContain('this kitten')
+            ->and($prompts->itemDrinkClipNegativePrompt(Species::Dog))->toContain('eating kibble')->toContain('head in the food bowl')->toContain('touching the food bowl')
+            ->and($prompts->itemClipNegativePrompt(Species::Dog, 'bowls'))->toContain('drinking water')->toContain('head in the water bowl')
+            ->and($prompts->itemClipNegativePrompt(Species::Dog, 'toy_1'))->toBe($prompts->loopNegativePrompt(Species::Dog));
+    });
+
+    it('sizes the bed / bowls for the CURRENT stage: puppy / young never get the adult class; adult / senior / no stage keep it', function () {
+        $items = app(ItemMediaService::class);
+        $prompts = app(PetAppearancePrompt::class);
+        expect($items->sizeOf('dobermann', null, LifeStage::Puppy))->toBeNull()
+            ->and($items->sizeOf('dobermann', null, LifeStage::Young))->toBeNull()
+            ->and($items->sizeOf('dobermann', null, LifeStage::Adult)['class'])->toBe('extra-large')
+            ->and($items->sizeOf('dobermann')['class'])->toBe('extra-large'); // legacy pet without a stage
+
+        $puppyBowls = $prompts->itemImagePrompt('dobermann', 'bowls', 'two steel bowls', [], LifeStage::Puppy, false, 0, $items->sizeOf('dobermann', null, LifeStage::Puppy));
+        $puppyBed = $prompts->itemImagePrompt('dobermann', 'bed', 'a navy bed', [], LifeStage::Puppy, false, 0, $items->sizeOf('dobermann', null, LifeStage::Puppy));
+        $youngBed = $prompts->itemImagePrompt('dobermann', 'bed', 'a navy bed', [], LifeStage::Young, false, 0, $items->sizeOf('dobermann', null, LifeStage::Young));
+        $adultBowls = $prompts->itemImagePrompt('dobermann', 'bowls', 'two steel bowls', [], LifeStage::Adult, false, 0, $items->sizeOf('dobermann', null, LifeStage::Adult));
+        expect($puppyBowls)->toContain('The bowls are sized for this puppy as it is in the picture, not for the adult breed')->not->toContain('extra-large')
+            ->and($puppyBed)->toContain('The bed is sized for this puppy as it is in the picture, not for the adult breed')->toContain('the whole puppy fits inside it')->not->toContain('extra-large')
+            ->and($youngBed)->toContain('sized for this young dog as it is in the picture')->not->toContain('extra-large')
+            ->and($adultBowls)->toContain('The bowls are sized for a extra-large dog');
+
+        // The rubric's scale question compares with the animal AS SHOWN (both item rubrics).
+        $vision = app(MediaVisionCheck::class);
+        foreach ([$vision->stillPrompt(MediaVisionCheck::RUBRIC_ITEM, Species::Dog, 'x'), $vision->itemClipPrompt(Species::Dog, 'y', 'x')] as $rubric) {
+            expect($rubric)->toContain('scale_ok: the object\'s size is plausible next to the dog AS IT IS SHOWN in the picture')
+                ->toContain('never judged against the adult breed');
+        }
+        // Cats stay cats (no adult class; kitten wording).
+        expect(strtolower($prompts->itemImagePrompt('domestic_cat', 'bed', 'a grey cave', ['coat_color' => 'grey tabby'], LifeStage::Puppy)))->toContain('this kitten')->not->toMatch('/\bdog\b/');
+    });
+
+    it('a Dobermann PUPPY: no »extra-large« in any key image / clip prompt or check, and both bowls clips start from the same neutral key image', function () {
+        ircNeedsFfmpeg();
+        ircFakeFal();
+        $pet = ircPet('bowls', 'dog_bowls_bamboo_stand', 'puppy');
+        app(ItemMediaService::class)->ensure($pet);
+        ircComplete();
+
+        $texts = ircSubmits('edit')->pluck('prompt')->merge(ircSubmits('kling')->pluck('prompt'))->merge(ircVision()->pluck('prompt'));
+        $image = ircRow($pet, 'image');
+        expect($texts->filter(fn ($t) => str_contains((string) $t, 'extra-large')))->toHaveCount(0)
+            ->and(ircSubmits('edit')->first()['prompt'])->toContain('sized for this puppy as it is in the picture')
+            ->and(ircVision()->first(fn (array $b) => str_contains((string) $b['image_urls'][0], "/api/media/items/{$image->id}"))['prompt'])
+            ->toContain('mouth closed — not eating or drinking yet')->toContain('sized for this puppy')
+            ->and([ircRow($pet, 'clip')->source_path, ircRow($pet, 'drink_clip')->source_path])->toBe([$image->storage_path, $image->storage_path]);
     });
 });

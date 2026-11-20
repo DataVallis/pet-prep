@@ -500,7 +500,8 @@ class StillQualityService
         $description = ItemDesigns::description($row->design) ?? $row->design;
         $breedKey = $row->scope === ItemMedia::SCOPE_LOOK ? $row->look?->breed_type?->value : $row->pet?->breed_type?->value;
 
-        return PetAppearancePrompt::itemScene($row->item_key, $species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species) : null);
+        // 2026-11-20: sized for the animal's CURRENT stage (a puppy's bowls / bed for the puppy as shown).
+        return PetAppearancePrompt::itemScene($row->item_key, $species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species, $row->stage()) : null, $row->stage());
     }
 
     /** David 2026-11-20: the scene of the bowls' drinking clip (the animal at the bowls, head over the water bowl). */
@@ -509,7 +510,16 @@ class StillQualityService
         $description = ItemDesigns::description($row->design) ?? $row->design;
         $breedKey = $row->scope === ItemMedia::SCOPE_LOOK ? $row->look?->breed_type?->value : $row->pet?->breed_type?->value;
 
-        return PetAppearancePrompt::itemDrinkScene($species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species) : null);
+        return PetAppearancePrompt::itemDrinkScene($species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species, $row->stage()) : null, $row->stage());
+    }
+
+    /** QA #1459 m4: the scene of the bowls' EATING clip (neutral start pose, then into the bowl with kibble). */
+    private function itemEatSceneOf(ItemMedia $row, Species $species): string
+    {
+        $description = ItemDesigns::description($row->design) ?? $row->design;
+        $breedKey = $row->scope === ItemMedia::SCOPE_LOOK ? $row->look?->breed_type?->value : $row->pet?->breed_type?->value;
+
+        return PetAppearancePrompt::itemEatScene($species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species, $row->stage()) : null, $row->stage());
     }
 
     /** Signed URL fal fetches an item candidate from (GET /api/media/items/{itemMedia}/candidate). */
@@ -623,7 +633,8 @@ class StillQualityService
                 // David 2026-11-20: the bowls' drinking clip is judged on drinking, not on eating.
                 $ai = $this->vision->judgeItemClip($species,
                     $row->isDrinkClip() ? PetAppearancePrompt::itemDrinkClipIntent($species) : PetAppearancePrompt::itemClipIntent($row->item_key, $species),
-                    $row->isDrinkClip() ? $this->itemDrinkSceneOf($row, $species) : $this->itemSceneOf($row, $species),
+                    $row->isDrinkClip() ? $this->itemDrinkSceneOf($row, $species)
+                        : ($row->item_key === 'bowls' ? $this->itemEatSceneOf($row, $species) : $this->itemSceneOf($row, $species)),
                     $this->itemSheetUrl($check), $this->items->falFetchUrl($image), $row->pet_id, (int) $row->id);
 
                 if (in_array($ai['status'], [PetMediaQualityCheck::AI_SKIPPED_BUDGET, PetMediaQualityCheck::AI_DISABLED], true) && (float) $ai['cost_usd'] === 0.0) {
