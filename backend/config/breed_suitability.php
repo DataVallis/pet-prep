@@ -3023,5 +3023,24 @@ return [
                 ['tag' => 'heat_sensitive', 'source_ids' => ['S963'], 'refs' => ['norwegian_elkhound.exercise.heat']],
             ],
         ],
+        // M5-R10-129 American Hairless Terrier (data.json proposed_game_parameters.american_hairless_terrier.suitability_tags;
+        // runbook rules — no RKC / PDSA page exists). Bare skin → sun_protection + cold_sensitive (Chinese Crested / Xoloitzcuintli
+        // precedent); no welfare chip; in marketing. No new vocabulary key; never hypoallergenic.
+        'american_hairless_terrier' => [
+            'suits' => [
+                // S971 "These dogs can be great playmates for children thanks to their rambunctious energy." (caveat: supervise young children → no small_children)
+                ['tag' => 'children', 'source_ids' => ['S971'], 'refs' => ['american_hairless_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S977 "Sunscreen or protective clothing is a must to prevent serious sunburn."
+                ['tag' => 'sun_protection', 'source_ids' => ['S977'], 'refs' => ['american_hairless_terrier.suitability.ahtca_sun', 'american_hairless_terrier.health.bare_skin']],
+                // S971 "They also get cold easily when the temperature drops, so keep them warm with a doggy sweater"
+                ['tag' => 'cold_sensitive', 'source_ids' => ['S971'], 'refs' => ['american_hairless_terrier.suitability.petmd_cold']],
+                // S971 "Regular exercise and mental stimulation are other musts for this breed"
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S971'], 'refs' => ['american_hairless_terrier.behaviour.mental_stimulation']],
+                // S977 "… as they have a high prey drive."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S977'], 'refs' => ['american_hairless_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

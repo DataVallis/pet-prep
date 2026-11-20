@@ -65786,6 +65786,531 @@
       }
     }
   },
+  "american_hairless_terrier": {
+    "_note": "Added 2026-11-20 (M5-R10-129, unattended run — appended after the Norwegian Elkhound: AKC 2024 No. 125 'American Hairless Terrier', S174 full-list table fetched 2026-11-20 '124 Norwegian Elkhound', '125 American Hairless Terrier', '126 Tibetan Spaniel'). Quotes as returned by the web-fetch tool on 2026-11-20 (after a web search; the tool limits quotes to ~125 characters — longer passages were returned as fragments, marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S967–S979 (reused S10, S11, S14, S24, S35, S45, S174, S771). No health percentages anywhere. An American terrier (Louisiana, from coated Rat Terriers — UKC S968, paraphrase; Toy Fox Terrier / Rat Terrier precedent for the identity): AKC Terrier Group since 1 January 2016 (S969), UKC since 2004 (S968), Dogs Australia Group 2 (S976); not FCI-recognised (not on the FCI provisional list S979; McMillan 2024 S771 names it among breeds recognised by neither the Kennel Club nor the FCI) → no RKC Breeds A–Z page, no PDSA / Woodgreen / Dogs Trust page, no McMillan 2024 value, not in Coren's ranking (S35, re-read 2026-11-20 → 1.0). Standard: the Official Standard (AKC wording, 'Approved March 9, 2010 Effective January 1, 2014', Showsight reprint S967 — the reprint names no body; Dogs Australia S976 / CKC use the same text); UKC standard revised 2006 (S968) for skin colour and coated colours. Exercise from the Dogs NSW breed page key fact (S973 'Exercise: 20 min/day' → 20 — a kennel-club breed page, tier B; PetMD S971 / WebMD S972 give no minutes). Weight from PetMD (S971, 12–28 lb; the standards give no weight). Lifespan: PetMD / WebMD 14–16 y, Dogs Victoria 12–14 y (S974) — no McMillan 2024 / VetCompass value → senior boundary from the vet-reviewed lower bound 14 y = 126, seeded verified=false (Toy Fox Terrier / Xoloitzcuintli precedent; Dogs Victoria lower bound 12 y → 108 for David). Two varieties (hairless, coated — the coated dogs carry the hairless gene, S969): the portrait shows the hairless variety. The breed is marketed for allergy sufferers (AKC S969 / S970, WebMD S972 'as hypoallergenic as a dog can get'; PetMD S971 'though there's really no such thing') — recorded as a note only, never a tag. Names: AKC 'American Hairless Terrier'; nickname 'AHT' (Dogs NSW S973, AHTCA S977); Slovenian »ameriški goli terier« (queue row; no KZS page — Claude, open for David).",
+    "identity": {
+      "value": "AKC Terrier Group (full recognition 2016; standard effective 2014), USA — not FCI",
+      "unit": "—",
+      "source_id": "S969",
+      "quote": "Both breeds became eligible to compete in their respective AKC groups on Jan. 1, 2016.",
+      "confidence": "high",
+      "notes": "AKC news (S969): 'Joining the Terrier group, the American Hairless Terrier is a small to medium sized, active terrier.' Standard (S967): 'Approved March 9, 2010 Effective January 1, 2014'. UKC (S968): recognised 'January 1, 2004' (as returned). Dogs Australia (S976): 'Group 2 (Terriers)'. Not FCI: the FCI provisional list (S979, read 2026-11-20) has 20 breeds without it; McMillan et al. 2024 (S771): 'Those that are not included in either but appear in the data were used as outgroups for phylogenetic analyses' / 'e.g., American Hairless Terrier, Apennine Wolf, …' ('either' = the Kennel Club and FCI lists). The export carries no fci_standard fact (DOG_FACTS fci_standard: false)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S973",
+      "quote": "Small (under 11kg)",
+      "confidence": "high",
+      "notes": "Dogs NSW Quick Glance (S973) 'Size: Small (under 11kg)'. AKC (S969) / standard (S967) 'small to medium sized'; PetMD (S971) 12–28 lb would reach the PetMD 'Medium' class only at the top (S10). 'small' like the Toy Fox Terrier / Rat Terrier in the game."
+    },
+    "height": {
+      "akc": {
+        "value": {
+          "male": [
+            30.5,
+            40.6
+          ],
+          "female": [
+            30.5,
+            40.6
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S967",
+        "quote": "Ideal height is from 12 to 16 inches at the withers.",
+        "confidence": "high",
+        "notes": "Official Standard (S967): 12–16 in = 30.5–40.6 cm (Dogs Australia S976 'Ideal height is from 30.5cm to 40.6cm (12 to 16 inches) at the withers.'), one range for both sexes (stored per sex). UKC (S968): 'The American Hairless Terrier ranges in height from 10 to 18 inches tall.' (25.4–45.7 cm) — alternative; PetMD / WebMD 12–16 in.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                25.4,
+                45.7
+              ],
+              "female": [
+                25.4,
+                45.7
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S968",
+            "quote": "The American Hairless Terrier ranges in height from 10 to 18 inches tall.",
+            "confidence": "high",
+            "notes": "UKC standard (S968); 10–18 in (our conversion)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            5.4,
+            12.7
+          ],
+          "female": [
+            5.4,
+            12.7
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S971",
+        "quote": "Standing 12–16 inches tall and weighing between 12 and 28 pounds",
+        "confidence": "medium",
+        "notes": "PetMD (S971, vet-reviewed, fragment): 12–28 lb = 5.4–12.7 kg (our conversion), one range for both sexes (stored per sex) — the game / register range. The standards give no weight (S967 'The body is slightly longer than tall.'; UKC S968 obesity is a fault — paraphrase). WebMD (S972) 'Healthy dogs can weigh anywhere from 12 to 16 pounds.' and Dogs NSW (S973) 'Small (under 11kg)' — alternatives; Wikipedia (S978, tier C) '7–14 lb (3.2–6.4 kg)' — background.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                5.4,
+                7.3
+              ],
+              "female": [
+                5.4,
+                7.3
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S972",
+            "quote": "Healthy dogs can weigh anywhere from 12 to 16 pounds.",
+            "confidence": "medium",
+            "notes": "WebMD (S972); 12–16 lb (our conversion)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. 12–28 lb (S971) → mostly the 'Small (12–24 pounds)' class. The game is unaffected (the puppy cap of 20 min is reached at 2 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no American Hairless Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "petmd": {
+        "value": "14–16",
+        "unit": "years",
+        "source_id": "S971",
+        "quote": "American Hairless Terriers are typically healthy dogs who live for 14–16 years on average.",
+        "confidence": "medium",
+        "notes": "PetMD (S971, vet-reviewed). The lower bound 14 y is the basis of the senior boundary (closest rule row, verified=false — Toy Fox Terrier / Xoloitzcuintli precedent)."
+      },
+      "webmd": {
+        "value": "14–16",
+        "unit": "years",
+        "source_id": "S972",
+        "quote": "The dogs live an average of 14 to 16 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S972, medically reviewed by an MD). Same span as PetMD — not exported twice."
+      },
+      "dogs_victoria": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S974",
+        "quote": "The average life span is 12 to 14 years.",
+        "confidence": "medium",
+        "notes": "Dogs Victoria breed page (S974, kennel club). Lower than PetMD / WebMD: 0.75 × 12 × 12 = 108 would be the senior boundary — alternative, open for David."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024 (S771) used the breed only as a phylogenetic outgroup ('e.g., American Hairless Terrier, …'; no life expectancy); the Dogs Trust table (S123) was refused by the fetch tool (not in provenance). No VetCompass breed median found; no RKC page (not RKC-recognised)."
+      },
+      "senior_from": {
+        "value": 10.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: last 25 % of lifespan (S11) × the PetMD lower bound 14 y (S971) = 10.5 y = 126 months (verified=false, Claude's suggestion — see proposed_game_parameters.american_hairless_terrier.senior_boundary_months).",
+        "derived_from": [
+          "S11",
+          "S971"
+        ],
+        "months": 126,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": 20,
+        "unit": "minutes/day",
+        "source_id": "S973",
+        "quote": "20 min/day",
+        "confidence": "medium",
+        "notes": "Dogs NSW breed page Quick Glance 'Exercise: 20 min/day' (S973, kennel-club breed page, tier B) → 20 (runbook rule: one number N → N). No RKC / PDSA page exists. PetMD (S971) 'Regular exercise and mental stimulation are other musts for this breed' and 'Regular walks and indoor playtime will keep them happy.'; WebMD (S972) 'American Hairless Terriers have moderate exercise needs.' and 'A daily walk or time in a fenced-in yard will be enough to keep them healthy and happy.'; Dogs Victoria (S974) 'He should be walked daily on lead, because he still has a prey drive.' — no minutes. PetMD calls the breed 'high-energy' — 20 min may be low; open for David."
+      },
+      "daily_text": {
+        "value": "moderate — a daily walk on the lead plus play; about 20 minutes a day",
+        "unit": "—",
+        "source_id": "S972",
+        "quote": "A daily walk or time in a fenced-in yard will be enough to keep them healthy and happy.",
+        "confidence": "medium",
+        "notes": "WebMD (S972); Dogs NSW (S973) '20 min/day'; Dogs Victoria (S974) walked daily on lead (paraphrase)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PetMD / WebMD name no bloat) → no meal gap (M5-R16; never invent a quote). PetMD (S971): 'Once your American Hairless Terrier is fully grown, two meals a day should be enough to keep them healthy and satisfied.'"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "energetic, alert, curious and intelligent; friendly, playful, eager to please",
+        "unit": "—",
+        "source_id": "S967",
+        "quote": "The breed is energetic, alert, curious and intelligent.",
+        "confidence": "high",
+        "notes": "Official Standard (S967): 'Aggressiveness or extreme shyness is to be faulted.' UKC (S968): 'The American Hairless Terrier is an exceptionally friendly companion, getting along well with children,' (fragment). PetMD (S971): 'American Hairless Terriers are intelligent, high-energy, and playful dogs.' Dogs NSW (S973): 'The AHT typically likes to dig, chase small game and will bark when alarmed and will act as a good watch dog.'"
+      },
+      "family": {
+        "value": "affectionate companion for its owners and family when socialised and trained",
+        "unit": "—",
+        "source_id": "S976",
+        "quote": "excel as companions, displaying great affection for their owners and family",
+        "confidence": "medium",
+        "notes": "Dogs Australia standard page (S976, fragment; preceded by 'Given early socialization and training they' — AHTCA S977). Not the family_pet chip (no 'family pet / family dog' statement)."
+      },
+      "children": {
+        "value": "great playmates for children; supervise young children; small dogs can be hurt if handled roughly",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "These dogs can be great playmates for children thanks to their rambunctious energy.",
+        "confidence": "high",
+        "notes": "PetMD (S971) → children chip with the caveat 'it's still important to supervise young children at all times with any dog' (fragment) and 'teach kids how to appropriately interact with small pets' (fragment). WebMD (S972) 'American Hairless Terriers are fantastic with young children.'; UKC (S968) 'getting along well with children,' (fragment); Dogs NSW (S973) 'Due to the small size of many AHTs, they can be hurt if roughly handled.'; Dogs Victoria (S974) 'it is imperative that when children are with dogs they are supervised at all times.' → no small_children (supervision / rough-handling caveats) — open for David."
+      },
+      "time_alone": {
+        "value": "alone with support (Dogs NSW key fact)",
+        "unit": "—",
+        "source_id": "S973",
+        "quote": "Alone with support",
+        "confidence": "low",
+        "notes": "Dogs NSW Quick Glance 'Time at home: Alone with support' (S973). No statement on separation anxiety → no needs_company."
+      },
+      "other_pets": {
+        "value": "high prey drive — chases small game; walk on the lead; can do well with other pets when socialised",
+        "unit": "—",
+        "source_id": "S977",
+        "quote": "but can be more prevalent with American Hairless Terriers, as they have a high prey drive.",
+        "confidence": "high",
+        "notes": "AHTCA flyer (S977, fragment; preceded by 'Chewing, Biting and Mouthing: These are predominant traits in almost every puppy,') → chases_small_pets (runbook rule: a verbatim high prey drive). Dogs Victoria (S974) 'He should be walked daily on lead, because he still has a prey drive.'; Dogs NSW (S973) likes to 'chase small game' (fragment). Conflicting: UKC (S968) 'getting along well with children, other dogs, and even cats' (fragment, as returned), PetMD (S971) 'A properly socialized American Hairless Terrier will do well around new people and with other pets.', WebMD (S972) 'But they're only moderately good with other dogs and strangers.' → no other_pets chip."
+      },
+      "socialisation": {
+        "value": "begin socialising the puppy as soon as it comes home",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "Begin socializing your American Hairless Terrier puppy as soon as you bring them home.",
+        "confidence": "high",
+        "notes": "PetMD (S971, a need) → breed DOG_SOCIALISATION entry (M5-R17). WebMD (S972): 'With early training and socialization, they can become a lot more comfortable with others.'; AHTCA (S977) 'Given early socialization and training they excel as companions' (paraphrase of the joined fragments)."
+      },
+      "training": {
+        "value": "intelligent, very trainable and eager to please; obedience and trick training",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "They're very trainable, so keeping their mind occupied with obedience and trick training is a good place to start.",
+        "confidence": "high",
+        "notes": "PetMD (S971). UKC (S968): curiosity and intelligence make him easy to train (paraphrase). WebMD (S972): 'These skills can be put to use in canine sports like agility, rally, and obedience.'"
+      },
+      "mental_stimulation": {
+        "value": "needs regular exercise and mental stimulation, otherwise destructive behaviour",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "Regular exercise and mental stimulation are other musts for this breed",
+        "confidence": "high",
+        "notes": "PetMD (S971, fragment); 'without them, these smart dogs with abundant energy can develop undesirable and destructive behaviors' (fragment). Basis of needs_mental_stimulation."
+      },
+      "chewing": {
+        "value": "chewing, biting and mouthing are common in puppies; toys may be destroyed and swallowed — supervise play",
+        "unit": "—",
+        "source_id": "S977",
+        "quote": "Play time should be supervised as they tend to destroy their toys and may swallow pieces of the toy which can lead to impactions.",
+        "confidence": "medium",
+        "notes": "AHTCA flyer (S977). About toys and puppies, not boredom → no chews_when_bored chip."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Not RKC-registered → no Breed Watch category; no veterinary association names the breed for conformation-related welfare problems → no welfare chip; the bare skin needs sun and cold protection (sun_protection / cold_sensitive, Chinese Crested / Xoloitzcuintli precedent). AHTCA (S977): 'Dentition in the AHT is full and strong, and skin problems are rare.' Breeder checklist: AHTCA CHIC list (S977 / K43). WebMD (S972) also names hip dysplasia, diabetes, idiopathic epilepsy, allergies, Cushing's disease and hypothyroidism (background, no register key).",
+      "bare_skin": {
+        "value": "hairless skin — sunburns easily, can develop skin cancer if unprotected; needs dog sunscreen or clothing, moisturising and protection from the cold",
+        "unit": "—",
+        "source_id": "S977",
+        "quote": "Like humans, AHT can develop skin cancer if the skin is not protected.",
+        "confidence": "high",
+        "notes": "AHTCA flyer (S977): 'Sunscreen or protective clothing is a must to prevent serious sunburn.' WebMD (S972): 'They can sunburn easily.'; PetMD (S971): 'Keeping their skin moisturized is also important; use dog-friendly lotion or cream.'; UKC (S968): 'The hairless dogs require protection from the sun and winter cold weather.' Register health key bare_skin_sun_cold."
+      },
+      "patellar_luxation": {
+        "value": "patellar luxation — the kneecap slips out of place",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "Patella Luxation",
+        "confidence": "high",
+        "notes": "PetMD (S971) subheading (as returned); WebMD (S972) 'Patellar luxation'; AHTCA CHIC test (S977 / K43). Register health key kneecap_luxation."
+      },
+      "legg_calve_perthes": {
+        "value": "Legg-Calvé-Perthes disease (hip necrosis)",
+        "unit": "—",
+        "source_id": "S972",
+        "quote": "This is a degenerative hip condition that's formally called Legg-Calves-Perthes disease.",
+        "confidence": "high",
+        "notes": "WebMD (S972, under 'Hip necrosis'); AHTCA CHIC test 'Legg-Calve-Perthes' (S977 / K43). Register health key legg_perthes."
+      },
+      "lens_luxation": {
+        "value": "primary lens luxation — the lens of the eye loosens; DNA test of breeding dogs",
+        "unit": "—",
+        "source_id": "S972",
+        "quote": "This eye condition can cause your dog's lens to loosen.",
+        "confidence": "high",
+        "notes": "WebMD (S972, under 'Primary lens luxation'); PetMD (S971) subheading 'Primary Lens Luxation'; AHTCA CHIC test (S977 / K43). Register health key primary_lens_luxation."
+      },
+      "heart": {
+        "value": "heart disease, particularly in older dogs; cardiac evaluation of breeding dogs",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "American Hairless Terriers can develop heart disease, particularly as they get older.",
+        "confidence": "medium",
+        "notes": "PetMD (S971, under 'Heart Disease'); AHTCA CHIC test 'Cardiac Evaluation' (S977 / K43). No exact register key (heart disease unspecified) — background only (Claude; open for David)."
+      },
+      "deafness": {
+        "value": "congenital deafness — can be heritable; hearing test of breeding dogs",
+        "unit": "—",
+        "source_id": "S972",
+        "quote": "This can be a heritable condition, so pay attention to your pet when they're young to see if they listen to you.",
+        "confidence": "medium",
+        "notes": "WebMD (S972, under 'Deafness'); AHTCA CHIC test 'Congenital Deafness' (S977 / K43); UKC (S968) deafness is a disqualification (paraphrase). Register health key deafness."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, re-read 2026-11-20, 79 ranks) lists neither 'American Hairless Terrier' nor 'Rat Terrier' nor any hairless breed. Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "intelligent, very trainable; short, varied obedience and trick training",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "They're very trainable, so keeping their mind occupied with obedience and trick training is a good place to start.",
+        "confidence": "medium",
+        "notes": "PetMD (S971); UKC (S968) easy to train (paraphrase). The game uses Coren's rank only (unranked → 1.0)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.american_hairless_terrier.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small to medium sized, smoothly muscled and active terrier, slightly longer than tall; hairless (the portrait) and coated varieties",
+        "unit": "—",
+        "source_id": "S967",
+        "quote": "The American Hairless Terrier is a small to medium sized, smoothly muscled and active terrier.",
+        "confidence": "high",
+        "notes": "Official Standard (S967): 'The body is slightly longer than tall.' AKC (S969): 'The breed comes in both a hairless and coated variety, although the coated dogs still carry the hairless gene.' The game draws the hairless variety."
+      },
+      "varieties": {
+        "value": "two coats: hairless (skin with whiskers and eyebrow / muzzle guard hairs) and coated (short, smooth, dense coat with a sheen)",
+        "unit": "—",
+        "source_id": "S967",
+        "quote": "The coated variety is covered with a short, smooth and dense coat that has a sheen.",
+        "confidence": "high",
+        "notes": "Official Standard (S967). UKC (S968): 'The coated American Hairless Terrier may be solid white, bi-color, tri-color, sable or brindle,' (fragment)."
+      },
+      "colours": {
+        "value": [
+          "parti-coloured: pink skin with black spots",
+          "parti-coloured: pink skin with chocolate (brown) spots",
+          "parti-coloured: dark grey skin with pink patches",
+          "parti-coloured: pink skin with tan spots"
+        ],
+        "unit": "list (hairless skin colours)",
+        "source_id": "S968",
+        "quote": "The skin is usually parti-colored with an underlying skin color and freckles or spots of contrasting color.",
+        "confidence": "high",
+        "notes": "UKC standard (S968), hairless variety: 'Any skin color is acceptable.', 'Freckles enlarge with age, and skin color will darken when exposed to the sun.' Official Standard (S967): 'Any color or combination of colors is allowed with the exception of albino or merle.'; 'Disqualification - Merle, albinism.' The game draws four parti-coloured skins built from the UKC coated colours ('black', 'tan', 'chocolate' — fragments, S968) — our wording; pink with black spots first = the portrait default (Claude: the most typical look). Never albino, never merle. Coated variety (not drawn): 'but must always have some white, which may be of any size and located anywhere on the dog.' (S968, fragment)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Pink skin with black spots first with the highest weight (the portrait default), then the other parti-coloured skins."
+      },
+      "coat": {
+        "value": "hairless — a mature dog is free of hair except whiskers and guard hairs on the eyebrows and muzzle; smooth skin, warm to the touch",
+        "unit": "—",
+        "source_id": "S967",
+        "quote": "A mature, hairless dog should be free of hair with the exception of whiskers and guard hairs on the eyebrows and muzzle.",
+        "confidence": "high",
+        "notes": "Official Standard (S967): 'The skin is smooth and warm to the touch.'; 'Hairless puppies are born with a soft, vestigial \"down\" known as the \"birth coat\".' Coated variety: 'The coated variety is covered with a short, smooth and dense coat that has a sheen.' (not drawn)."
+      },
+      "ears": {
+        "value": "V-shaped, set at the outside edge of the skull; erect preferred, tipped or button acceptable",
+        "unit": "—",
+        "source_id": "S967",
+        "quote": "Ears are set at the outside edge of the skull and V-shaped.",
+        "confidence": "high",
+        "notes": "Official Standard (S967); UKC (S968): 'Ears are V-shaped, set at the outside edges of the skull, and may be erect, tipped or button.' Hanging ears disqualify (S967). Portrait: erect ears (UKC preferred, paraphrase)."
+      },
+      "eyes": {
+        "value": "expressive, set obliquely, round, somewhat prominent; darkest brown to amber and hazel with body colour",
+        "unit": "—",
+        "source_id": "S967",
+        "quote": "Eye color varies with body color from darkest brown to amber and hazel.",
+        "confidence": "high",
+        "notes": "Official Standard (S967): 'Eyes are expressive, set obliquely, round, somewhat prominent but moderate in size' (fragment)."
+      },
+      "tail": {
+        "value": "natural tail, never docked in the hairless variety; carried in an upward curve when alert",
+        "unit": "—",
+        "source_id": "S967",
+        "quote": "The tail on the hairless variety should never be docked.",
+        "confidence": "high",
+        "notes": "Official Standard (S967): 'Bobtail or docked tail on the hairless variety.' is a disqualification; 'Tail docking on the coated variety is permitted and optional.' UKC (S968) curve when alert (paraphrase)."
+      },
+      "nose": {
+        "value": "solid coloured",
+        "unit": "—",
+        "source_id": "S967",
+        "quote": "The nose is solid colored.",
+        "confidence": "high",
+        "notes": "Official Standard (S967)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PetMD (S971), WebMD (S972), Dogs NSW (S973), Dogs Victoria (S974), Dogs Queensland (S975), AHTCA (S977), UKC (S968). No RKC / PDSA / Woodgreen page exists for this breed → no rkc_* / pdsa_* rows.",
+      "ahtca_sun": {
+        "value": "sunscreen or protective clothing is a must",
+        "unit": "—",
+        "source_id": "S977",
+        "quote": "Sunscreen or protective clothing is a must to prevent serious sunburn.",
+        "confidence": "high",
+        "notes": "AHTCA flyer (S977) → sun_protection chip. PetMD (S971) 'To avoid sunburns, protect their skin with dog-friendly sunscreen or by blocking the sun's rays with clothing.'; WebMD (S972) 'Keep them protected with sunscreen or a layer of clothes whenever they're outside for an extended period of time.'; Dogs NSW (S973) 'If needed, sunscreen can be applied or a light shirt may be worn.' The game has no sun-care mechanic → open for David (needs a new ROADMAP task, Chinese Crested / Xoloitzcuintli precedent)."
+      },
+      "petmd_cold": {
+        "value": "gets cold easily — a sweater or coat outdoors",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "They also get cold easily when the temperature drops, so keep them warm with a doggy sweater",
+        "confidence": "high",
+        "notes": "PetMD (S971, fragment; 'or coat when outdoors') → cold_sensitive chip. WebMD (S972) 'They'll also need clothes to protect them from cold weather.'; UKC (S968) 'The hairless dogs require protection from the sun and winter cold weather.'; Dogs Victoria (S974) 'Extra care must be taken for both cold weather and for sunburn.' No mechanic → open for David."
+      },
+      "petmd_skin": {
+        "value": "keep the skin moisturised, protected and clean",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "Keeping their skin moisturized is also important; use dog-friendly lotion or cream.",
+        "confidence": "high",
+        "notes": "PetMD (S971): 'It's important to keep their skin moisturized, protected from hazards, and clean.' No frequency → no task (fact only)."
+      },
+      "petmd_bath": {
+        "value": "regular baths, preferably every week",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "To avoid skin issues, American Hairless Terriers also need regular baths, preferably every week.",
+        "confidence": "high",
+        "notes": "PetMD (S971) → bath reminder every week (M5-R19, parent reminder). WebMD (S972) 'Give both varieties a bath whenever they become too dirty for your liking.' (no frequency); Dogs NSW (S973) 'It is, however, important to keep the skin clean with regular, possibly daily' (fragment; Dogs Queensland S975 'possibly daily depending on application of sunscreen or moisturizers' — conditional) → alternatives, no number taken."
+      },
+      "webmd_teeth_nails": {
+        "value": "brush the teeth daily; trim the nails regularly",
+        "unit": "—",
+        "source_id": "S972",
+        "quote": "Also, trim their nails on a regular basis and brush their teeth daily to complete your dog's grooming routine.",
+        "confidence": "high",
+        "notes": "WebMD (S972) → the child's tooth-brushing mini-game every day (M5-R15). Nails 'on a regular basis' has no frequency → the AHTCA weekly number (suitability.ahtca_nails)."
+      },
+      "ahtca_nails": {
+        "value": "weekly nail trimming",
+        "unit": "—",
+        "source_id": "S977",
+        "quote": "Weekly nail trimming with a Dremel will help you maintain healthy nails.",
+        "confidence": "high",
+        "notes": "AHTCA flyer (S977, the US national breed club) → the child's nail-trim mini-game every week (M5-R19). 'nails that touch the floor will eventually cause the toe to break down and could lead to more serious issues' (fragment)."
+      },
+      "petmd_ears": {
+        "value": "ask the vet how often to clean the ears — no frequency",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "ask your vet how often you should clean your dog's ears",
+        "confidence": "high",
+        "notes": "PetMD (S971, fragment); WebMD (S972) 'Check the ears of both varieties for debris and signs of infection.' — no frequency → no ear-cleaning task."
+      },
+      "grooming": {
+        "value": "hairless: no brushing routine; coated: easy to groom",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "Because they lack a full coat, American Hairless Terriers don't require the grooming routine many other dog breeds have.",
+        "confidence": "high",
+        "notes": "PetMD (S971). WebMD (S972) 'Both the hairless and coated varieties of the American Hairless Terrier are easy to groom.'; Dogs NSW (S973) 'Grooming: Low maintenance'. No brushing frequency → no brushing routine (M5-R13); no groomer visit."
+      },
+      "petmd_apartment": {
+        "value": "great apartment dog; content indoors with regular exercise",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "their small size makes them great apartment dogs",
+        "confidence": "medium",
+        "notes": "PetMD (S971, fragment). Dogs NSW (S973) 'Size of home: Some outdoor space'; Dogs Victoria (S974) 'Suitable for suburbia'. Not the apartment chip (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "allergies_note": {
+        "value": "marketed for allergy sufferers — never a hypoallergenic tag",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": "sometimes considered to be hypoallergenic dogs (though there's really no such thing)",
+        "confidence": "medium",
+        "notes": "PetMD (S971, fragment). AKC (S969) 'The American Hairless Terrier is well known for its propensity for fewer allergic reactions than other breeds' (fragment); WebMD (S972) 'On a positive note, the hairless variety is as hypoallergenic as a dog can get.' Note only — never a hypoallergenic / low_shedding tag (runbook)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -98542,6 +99067,273 @@
         "confidence": "medium",
         "notes": "FCI standard (S960) as in norwegian_elkhound.appearance. One standard colour; weight unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey is the portrait default (FCI S960 — the only standard colour)"
+      }
+    },
+    "american_hairless_terrier": {
+      "_note": "Unattended run M5-R10-129 (2026-11-20): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry — except the senior boundary (closest row, Claude's suggestion, seeded verified=false). No RKC / PDSA page exists → exercise from the Dogs NSW breed page (S973 'Exercise: 20 min/day' → 20). Senior boundary 126 = 0.75 × PetMD lower bound 14 y (S971; Dogs Victoria 12–14 y S974 → 108 for David). Learning 1.0 (not ranked by Coren, S35). Built: tooth brushing every day (WebMD S972, M5-R15), nail trim every week (AHTCA S977, M5-R19), bath every week (PetMD S971, M5-R19 parent reminder), puppy socialisation with the PetMD quote (M5-R17). No brushing (hairless — no frequency), no ear task (PetMD: ask the vet), no groomer reminder, no meal gap (no quote), no heat warning (not flat-faced). Open for David (no mechanic): sun protection (sunscreen / clothing) and warmth in the cold. Proposed tags: suits children; consider sun_protection, cold_sensitive, needs_mental_stimulation, chases_small_pets. No new vocabulary key. In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 20,
+        "unit": "minutes/day",
+        "source_id": "S973",
+        "quote": "20 min/day",
+        "confidence": "medium",
+        "notes": "Dogs NSW breed page key fact 'Exercise: 20 min/day' (S973) → rule 'one number N' → 20. No RKC / PDSA page exists; PetMD (S971) / WebMD (S972 'moderate exercise needs') give no minutes.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 20 min/day (Dogs NSW S973 '20 min/day'; no RKC / PDSA page)"
+      },
+      "step_goal_adult": {
+        "value": 2000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 20 min × 100 steps/min (S45) = 2,000.",
+        "derived_from": [
+          "S973",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 20 min × 100 steps/min → 2,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 15,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 20) = 15 min → 1,500 steps.",
+        "steps": 1500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 15 min → 1,500 steps (75 % of 20)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 20,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 20 reached at 2 months (the arrival age).",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 20 min (reached at 2 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 126
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 126 = round(0.75 × 14 y × 12) (S11 + the PetMD lower bound '14–16 years', S971 — no McMillan 2024 / VetCompass row, no RKC page). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S971"
+        ],
+        "alternatives": {
+          "senior_dogs_victoria_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 126 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 126,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Closest rule row (Toy Fox Terrier / Xoloitzcuintli precedent): 0.75 × the PetMD lower bound 14 y (S971; WebMD S972 14–16 y too) × 12 = 126. Dogs Victoria (S974, kennel club) 'The average life span is 12 to 14 years.' → 108 — alternative for David. No McMillan 2024 / VetCompass median (S771: outgroup only).",
+        "derived_from": [
+          "S11",
+          "S971"
+        ],
+        "decision": "predlog Claude 2026-11-20 (najbližja vrstica pravila runbooka, M5-R10-129) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 126
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 126 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not ranked by Coren (S35, re-read 2026-11-20) → unranked rule → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S972",
+        "quote": "Also, trim their nails on a regular basis and brush their teeth daily to complete your dog's grooming routine.",
+        "confidence": "high",
+        "notes": "american_hairless_terrier.suitability.webmd_teeth_nails → every day. Built: the child's tooth-brushing mini-game every day (DOG_CARE_TASKS tooth_brushing [7, day], M5-R15).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brush their teeth daily« → vsak dan"
+      },
+      "nail_trimming": {
+        "value": [
+          1,
+          7
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R19)",
+        "source_id": "S977",
+        "quote": "Weekly nail trimming with a Dremel will help you maintain healthy nails.",
+        "confidence": "high",
+        "notes": "american_hairless_terrier.suitability.ahtca_nails. 'Weekly' → once a week. WebMD (S972) 'on a regular basis' (no number) — not an alternative value. Ears: PetMD 'ask your vet how often' (no frequency) → no ear task; groomer: no source → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev vsak teden (AHTCA »Weekly nail trimming«)"
+      },
+      "bathing": {
+        "value": [
+          1,
+          7
+        ],
+        "unit": "[times, period days] — parent reminder (M5-R19, never scored)",
+        "source_id": "S971",
+        "quote": "To avoid skin issues, American Hairless Terriers also need regular baths, preferably every week.",
+        "confidence": "high",
+        "notes": "american_hairless_terrier.suitability.petmd_bath. 'preferably every week' → once a week. WebMD (S972) 'whenever they become too dirty' and Dogs NSW / Dogs Queensland 'regular, possibly daily' (conditional on sunscreen / moisturiser, S973 / S975) — no rule number → not taken.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): kopanje vsak teden (PetMD »preferably every week«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S971",
+        "quote": "Begin socializing your American Hairless Terrier puppy as soon as you bring them home.",
+        "confidence": "high",
+        "notes": "american_hairless_terrier.behaviour.socialisation (PetMD S971, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S971)"
+      },
+      "sun_cold_protection": {
+        "value": "dog sunscreen or protective clothing outdoors; a sweater or coat in the cold; moisturised, clean skin",
+        "unit": "skin care (sourced need)",
+        "source_id": "S977",
+        "quote": "Sunscreen or protective clothing is a must to prevent serious sunburn.",
+        "confidence": "high",
+        "notes": "AHTCA (S977) + PetMD (S971) 'They also get cold easily when the temperature drops, so keep them warm with a doggy sweater' (fragment). No frequency (sunscreen whenever outside for long, WebMD S972) → no care task; the game has no sun / cold mechanic → open for David (needs a new ROADMAP task, Chinese Crested / Xoloitzcuintli precedent).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): zaščita pred soncem in mrazom; mehanike ni → potrebna nova naloga v ROADMAP (David)"
+      },
+      "suitability_tags": {
+        "_note": "Proposed for backend/config/breed_suitability.php (M5-R10-129); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic (marketed for allergy sufferers — american_hairless_terrier.suitability.allergies_note, note only).",
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S971"
+            ],
+            "refs": [
+              "american_hairless_terrier.behaviour.children"
+            ],
+            "quote": "S971 'These dogs can be great playmates for children thanks to their rambunctious energy.' (caveat: supervise young children)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sun_protection",
+            "source_ids": [
+              "S977"
+            ],
+            "refs": [
+              "american_hairless_terrier.suitability.ahtca_sun",
+              "american_hairless_terrier.health.bare_skin"
+            ],
+            "quote": "S977 'Sunscreen or protective clothing is a must to prevent serious sunburn.'"
+          },
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S971"
+            ],
+            "refs": [
+              "american_hairless_terrier.suitability.petmd_cold"
+            ],
+            "quote": "S971 'They also get cold easily when the temperature drops, so keep them warm with a doggy sweater'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S971"
+            ],
+            "refs": [
+              "american_hairless_terrier.behaviour.mental_stimulation"
+            ],
+            "quote": "S971 'Regular exercise and mental stimulation are other musts for this breed'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S977"
+            ],
+            "refs": [
+              "american_hairless_terrier.behaviour.other_pets"
+            ],
+            "quote": "S977 'but can be more prevalent with American Hairless Terriers, as they have a high prey drive.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "WebMD 'fantastic with young children' (S972) — but PetMD asks to supervise young children (S971), Dogs NSW 'can be hurt if roughly handled' (S973), Dogs Victoria supervision (S974) → caveats → no small_children (open for David).",
+          "family_pet": "No 'family pet / family dog' statement (Dogs Australia S976 'great affection for their owners and family' only).",
+          "apartment": "PetMD 'great apartment dogs' (S971) — the runbook allows the chip only from RKC 'Flat/ Apartment' (no RKC page).",
+          "other_pets": "UKC / PetMD good with other pets vs AHTCA high prey drive and WebMD 'only moderately good with other dogs' → conflicting → no other_pets; chases_small_pets per the prey-drive rule.",
+          "low_shedding": "Never for a hairless breed without an RKC 'Sheds: No'; never hypoallergenic.",
+          "needs_company": "Dogs NSW 'Alone with support' (S973) — no separation statement.",
+          "chews_when_bored": "AHTCA (S977) destroys toys as a puppy trait — not boredom.",
+          "secure_fencing": "WebMD 'fenced-in yard' / Dogs Victoria 'secure yard' are exercise options, not an escape warning.",
+          "long_daily_exercise": "20 minutes a day — the chip is for 2 hours or more.",
+          "hypoallergenic": "Never a tag (runbook).",
+          "shorter_lifespan": "12–16 years (S971 / S972 / S974).",
+          "welfare": "Not RKC-registered (no Breed Watch); no veterinary association names the breed for conformation-related welfare problems → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children; consider sun_protection, cold_sensitive, needs_mental_stimulation, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S971",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); not RKC-registered (no Breed Watch). Marketing never shows a sunburnt or cold AHT, never with small pets unsupervised, and never calls it hypoallergenic or a dog for allergy sufferers (S971, S972, S977).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult hairless American Hairless Terrier, parti-coloured pink skin with black spots (default): small to medium, smoothly muscled, active terrier, slightly longer than tall; free of hair except whiskers and eyebrow / muzzle guard hairs; smooth healthy, unburnt skin; V-shaped erect ears set at the outside edge of the skull; round, expressive, obliquely set brown eyes; solid-coloured nose; natural undocked tail carried in an upward curve",
+        "unit": "—",
+        "source_id": "S967",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S967 (Official Standard) and S968 (UKC) as in american_hairless_terrier.appearance. Weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): pink skin with black spots is the portrait default (UKC S968 parti-coloured skin; any colour except albino / merle, S967); hairless variety; natural tail, never docked"
       }
     }
   }

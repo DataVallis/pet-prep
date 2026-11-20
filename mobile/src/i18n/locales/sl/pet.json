@@ -224,6 +224,7 @@
       "mudi": "Del 12-tedenskega izziva · česanje 1× na teden",
       "welsh_terrier": "Del 12-tedenskega izziva · česanje 3× na teden",
       "norwegian_elkhound": "Del 12-tedenskega izziva · česanje vsak dan",
+      "american_hairless_terrier": "Del 12-tedenskega izziva.",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
@@ -798,6 +799,12 @@
         "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
         "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
+      },
+      "american_hairless_terrier": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan (kot odrasel pes).",
+        "young": "2 obroka na dan; sprehod 2.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 2.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 1.500 korakov na dan."
       },
       "afghan_hound": {
         "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",

@@ -861,6 +861,13 @@
 | medium-length coat; small pointed erect ears; tail tightly curled over the back. No welfare trait. One standard colour → weight
 | unsourced → `verified => false`.
 |
+| American Hairless Terrier (M5-R10-129, docs/research/dog-data american_hairless_terrier.appearance): "The American Hairless
+| Terrier is a small to medium sized, smoothly muscled and active terrier." (Official Standard, AKC wording, Showsight reprint
+| S967); hairless and coated varieties — the game draws the hairless variety; UKC (S968) "The skin is usually parti-colored with
+| an underlying skin color and freckles or spots of contrasting color." → four parti-coloured skins (our wording from the UKC
+| colours; never albino or merle, S967); V-shaped ears, erect; natural tail, never docked. No welfare trait (healthy, unburnt
+| skin). Pink with black spots first (portrait default); weights unsourced → `verified => false`.
+|
 | Mudi (M5-R10-126, docs/research/dog-data mudi.appearance): "Medium-sized herding dog with a wedge-shaped head. Prick ears.
 | Body topline is distinctly sloping towards the rear." (FCI-Standard N° 238, S949); colours black, white, fawn, ash (blue), liver,
 | ash-brown and cifra (merle) (S949 / FCI nomenclature S948); dense, shiny, wavy coat 3–7 cm; high-set prick ears; natural tail.
@@ -5445,6 +5452,39 @@ return [
             'ear_carriage' => ['small, pointed, firmly erect ears set high'],
             'eye_color' => ['dark brown, not prominent eyes'],
             'tail' => ['tail set high and tightly curled over the centre of the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-129 (docs/research/dog-data/data.json american_hairless_terrier.appearance; runbook rules 2026-10-10: four parti-coloured
+    // skins of the UKC standard (S968), pink with black spots first = the portrait default; hairless variety, natural tail).
+    'american_hairless_terrier' => [
+        'display_name' => 'American Hairless Terrier',
+        // Colour frequencies are in no source (american_hairless_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'Official Standard (AKC wording, Showsight reprint S967), UKC standard (S968), PetMD (S971) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S967 "Ideal height is from 12 to 16 inches at the withers."; S971 "Standing 12–16 inches tall and weighing between 12 and 28 pounds"',
+            'build' => 'S967 "The American Hairless Terrier is a small to medium sized, smoothly muscled and active terrier."; "The body is slightly longer than tall."',
+            'coat_length' => 'S967 "A mature, hairless dog should be free of hair with the exception of whiskers and guard hairs on the eyebrows and muzzle."',
+            'coat_color' => 'S968 "The skin is usually parti-colored with an underlying skin color and freckles or spots of contrasting color." (weights unsourced; never albino / merle, S967)',
+            'ear_carriage' => 'S967 "Ears are set at the outside edge of the skull and V-shaped." (erect, UKC S968)',
+            'eye_color' => 'S967 "Eye color varies with body color from darkest brown to amber and hazel."',
+            'tail' => 'S967 "The tail on the hairless variety should never be docked."',
+        ],
+        'traits' => [
+            'size' => ['small to medium-sized terrier'],
+            'build' => [['value' => 'smoothly muscled, active terrier, slightly longer than tall, with a broad wedge-shaped head and a solid-coloured nose', 'weight' => 3], 'lively, alert small terrier standing square and balanced'],
+            'coat_length' => ['hairless body with smooth, healthy, unburnt bare skin, only whiskers and a few guard hairs on the eyebrows and muzzle'],
+            // UKC standard (S968): parti-coloured skin; pink with black spots first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'parti-coloured: pink skin with black spots', 'weight' => 40],
+                ['value' => 'parti-coloured: pink skin with chocolate (brown) spots', 'weight' => 25],
+                ['value' => 'parti-coloured: dark grey skin with pink patches', 'weight' => 20],
+                ['value' => 'parti-coloured: pink skin with tan spots', 'weight' => 15],
+            ],
+            'ear_carriage' => ['V-shaped erect ears set at the outside edge of the skull'],
+            'eye_color' => ['round, expressive, obliquely set brown eyes'],
+            'tail' => ['natural, undocked tail tapering to the tip, carried in an upward curve'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

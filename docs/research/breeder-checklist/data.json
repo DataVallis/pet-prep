@@ -4225,6 +4225,58 @@
       "status": "not_found",
       "tests": [],
       "notes": "RKC Breeds A–Z page (thekennelclub.org.uk display.aspx?id=1016 → royalkennelclub.com …/hound/norwegian-elkhound) and the RKC breed standard refused by the fetch tool on 2026-11-19 (provenance) — health-testing section not read. PetMD (dog-data S963) / WebMD (S964) name conditions (Fanconi syndrome, PRA, hip dysplasia) but no tests for parents. Show the general dog checklist only."
+    },
+    "american_hairless_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K43",
+        "quote": "Recommended test required to receive a CHIC:"
+      },
+      "tests": [
+        {
+          "key": "cardiac_exam",
+          "level": "other_scheme",
+          "name": "Heart examination of breeding dogs (US breed club: required for CHIC)",
+          "source_id": "K43",
+          "quote": "Cardiac Evaluation"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip evaluation of breeding dogs — OFA or PennHIP (US breed club: required for CHIC)",
+          "source_id": "K43",
+          "quote": "Hip Dysplasia: OFA or Pennhip"
+        },
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Kneecap (patella) evaluation of breeding dogs (US breed club: required for CHIC)",
+          "source_id": "K43",
+          "quote": "Patellar Luxation"
+        },
+        {
+          "key": "legg_perthes_scheme",
+          "level": "other_scheme",
+          "name": "Hip evaluation for Legg-Calvé-Perthes disease (US breed club: required for CHIC)",
+          "source_id": "K43",
+          "quote": "Legg-Calve-Perthes"
+        },
+        {
+          "key": "hearing_baer",
+          "level": "other_scheme",
+          "name": "Hearing test for congenital deafness (US breed club: required for CHIC)",
+          "source_id": "K43",
+          "quote": "Congenital Deafness"
+        },
+        {
+          "key": "dna_pll",
+          "level": "other_scheme",
+          "name": "Test for primary lens luxation (US breed club: required for CHIC)",
+          "source_id": "K43",
+          "quote": "Primary Lens Luxation"
+        }
+      ],
+      "notes": "Not RKC- or FCI-registered → no RKC minimum / best_practice level. American Hairless Terrier Club of America flyer hosted by the AKC (K43, © 2024): 'Recommended test required to receive a CHIC:' Cardiac Evaluation, Hip Dysplasia (OFA or Pennhip), Patellar Luxation, Legg-Calve-Perthes, Congenital Deafness, Primary Lens Luxation; '(Optional but recommended)' ACVO Eye Exam, Elbow Dysplasia, Progressive Retinal Atrophy (PRA) DNA Test — optional tests not taken (Rat Terrier / Toy Fox Terrier precedent). The flyer: 'it is important for the overall protection of the breed to do health testing as recommended by the AHTCA' (paraphrase of the returned fragment). The flyer does not say verbatim that the PLL test is a DNA test → named 'Test for …' (Claude). The AKC Terrier Group health-testing page returned no AHT section. New key legg_perthes_scheme (website words needed in registry checklist.tests — en/sl)."
     }
   }
 }

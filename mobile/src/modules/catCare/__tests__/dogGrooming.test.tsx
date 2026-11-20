@@ -190,14 +190,15 @@ describe('texts per species', () => {
 });
 
 describe('breeds and build features', () => {
-  it('every brushed dog breed has a routine; the mutt, the Border Collie and the hairless Xoloitzcuintli have none', () => {
-    // Every dog of this build except the mutt, the Border Collie and (M5-R10-123) the hairless Xoloitzcuintli — no source gives
+  it('every brushed dog breed has a routine; the mutt, the Border Collie and the hairless Xoloitzcuintli / American Hairless Terrier have none', () => {
+    // Every dog of this build except the mutt, the Border Collie and the hairless Xoloitzcuintli (M5-R10-123) and American Hairless Terrier (M5-R10-129) — no source gives
     // it a brushing frequency (read from BREED_SPECIES — a new breed run needs no edit here).
-    expect(GROOMING_DOG_BREEDS).toHaveLength(KNOWN_BREEDS.filter((b) => BREED_SPECIES[b] === 'dog').length - 3);
+    expect(GROOMING_DOG_BREEDS).toHaveLength(KNOWN_BREEDS.filter((b) => BREED_SPECIES[b] === 'dog').length - 4);
     for (const breed of GROOMING_DOG_BREEDS) expect(hasGroomingRoutine(breed)).toBe(true);
     expect(hasGroomingRoutine('mutt')).toBe(false);
     expect(hasGroomingRoutine('border_collie')).toBe(false);
     expect(hasGroomingRoutine('xoloitzcuintli')).toBe(false);
+    expect(hasGroomingRoutine('american_hairless_terrier')).toBe(false);
   });
 
   it('this build declares `dog_grooming` (the server enables it for a new dog only with both apps)', () => {

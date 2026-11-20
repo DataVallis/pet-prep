@@ -836,6 +836,14 @@ return [
     'norwegian_elkhound' => [
         ['key' => 'grey', 'value' => 'grey', 'en' => 'Grey', 'sl' => 'Siv'],
     ],
+    // M5-R10-129: UKC standard (S968) parti-coloured skin — four skins built from the UKC colours (black, chocolate, tan);
+    // same order and values as breed_appearance.php (never albino / merle, S967).
+    'american_hairless_terrier' => [
+        ['key' => 'pink-black-spots', 'value' => 'parti-coloured: pink skin with black spots', 'en' => 'Pink with black spots', 'sl' => 'Rožnat s črnimi pegami'],
+        ['key' => 'pink-chocolate-spots', 'value' => 'parti-coloured: pink skin with chocolate (brown) spots', 'en' => 'Pink with chocolate spots', 'sl' => 'Rožnat s čokoladnimi pegami'],
+        ['key' => 'grey-pink-patches', 'value' => 'parti-coloured: dark grey skin with pink patches', 'en' => 'Dark grey with pink patches', 'sl' => 'Temno siv z rožnatimi lisami'],
+        ['key' => 'pink-tan-spots', 'value' => 'parti-coloured: pink skin with tan spots', 'en' => 'Pink with tan spots', 'sl' => 'Rožnat z rjavkastimi pegami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

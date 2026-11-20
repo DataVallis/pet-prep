@@ -2554,6 +2554,26 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.norwegian_elkhound',
                 'search_keywords' => ['norwegian elkhound', 'elkhound', 'elkie', 'norsk elghund', 'norveški losovec', 'norveski losovec', 'losovec', 'norveški elkhund'],
             ],
+            // M5-R10-129 American Hairless Terrier (docs/research/dog-data/data.json american_hairless_terrier, sources S967–S979;
+            // runbook rules confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.american_hairless_terrier.step_goal_adult: 20 min × 100 steps/min — Dogs NSW S973
+            // "20 min/day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::AmericanHairlessTerrier->slug(),
+                'daily_steps_required' => 2000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1200,
+                'label_key' => 'breeds.american_hairless_terrier',
+                'search_keywords' => ['american hairless terrier', 'hairless terrier', 'aht', 'ameriški goli terier', 'ameriski goli terier', 'goli terier'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and
