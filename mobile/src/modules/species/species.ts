@@ -140,6 +140,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   mudi: 'dog',
   welsh_terrier: 'dog',
   norwegian_elkhound: 'dog',
+  american_hairless_terrier: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
