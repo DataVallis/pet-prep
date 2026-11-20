@@ -360,4 +360,12 @@ return [
         'grey-pink-patches' => 'dogs/american-hairless-terrier--grey-pink-patches.webp',
         'pink-tan-spots' => 'dogs/american-hairless-terrier--pink-tan-spots.webp',
     ],
+    'tibetan_spaniel' => [
+        'golden' => 'dogs/tibetan-spaniel.webp',
+        'red' => 'dogs/tibetan-spaniel--red.webp',
+        'sable' => 'dogs/tibetan-spaniel--sable.webp',
+        'cream' => 'dogs/tibetan-spaniel--cream.webp',
+        'black-tan' => 'dogs/tibetan-spaniel--black-tan.webp',
+        'black' => 'dogs/tibetan-spaniel--black.webp',
+    ],
 ];

@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "2e6c0cff5365fcc3772c9c5757ffc29c4a314d34002d2c7be97ee36b29a1b177"
+      "sha256": "eeffedd713cdf16e4a6c1ba96b4bd56f74bed7061e2824f2f329cd77279227c6"
     }
   },
   "suitability_vocabulary": {
@@ -74391,7 +74391,58 @@
         "file": "tibetan-spaniel.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "golden",
+            "label": {
+              "en": "Golden",
+              "sl": "Zlat"
+            },
+            "file": "dog/tibetan-spaniel.webp",
+            "default": true
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/tibetan-spaniel--red.webp"
+          },
+          {
+            "key": "sable",
+            "label": {
+              "en": "Sable",
+              "sl": "Sobolji"
+            },
+            "file": "dog/tibetan-spaniel--sable.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/tibetan-spaniel--cream.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/tibetan-spaniel--black-tan.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/tibetan-spaniel--black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_checked",

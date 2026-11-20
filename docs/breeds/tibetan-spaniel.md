@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `tibetan_spaniel` (viri S980–S983; ponovno S10, S11, S14, S24, S35, S45, S174, S771); seznam za vzreditelja: ni preverjen (stran RKC ni bila dosegljiva) |
 | Izvor | FCI št. 231, skupina 9, sekcija 5 (tibetanske pasme), Tibet (Kitajska), pokroviteljstvo Velika Britanija (S980) — po FCI pes družabnik, ne španjel po tipu |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 126. mesto »Tibetan Spaniel« (S174, zapisano 2026-11-20 v vrstici 129 čakalne vrste) |
-| PR-ji | pet-prep #1435 (pasma, združen `8972a21`) · portret pet-prep (zagon `breed-portraits.yml` 44665785472, sprejet v prvem poskusu) · barvne različice pet-prep (sledijo) · spletna stran: pet-prep-website `feat/register-tibetan-spaniel` |
+| PR-ji | pet-prep #1435 (pasma, združen `8972a21`) · portret pet-prep (zagon `breed-portraits.yml` 44665785472, sprejet v prvem poskusu) · barvne različice pet-prep (zagon `breed-portraits.yml` 44667389260, 5/5 odobril Claude) · spletna stran: pet-prep-website `feat/register-tibetan-spaniel` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,7 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 137. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-130 | 2026-11-20 |
 | Česanje 2× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-20 |
 | Ščetkanje zob vsak dan, ušesa vsak teden, kremplji vsake 4 tedne (otrok); opomnik za kopanje vsake 4 tedne (starši) | 🛠 | 💶 izziv | M5-R15 / R18 / R19 / R20 | 2026-11-20 |
-| Barve (izbirnik: 6 barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-20 |
+| Barve (izbirnik: 6 barv; fotografije za vse — zlat (portret), rdeč, sobolji, kremast, črn z rjavimi oznakami, črn) | 🛠 | 💶 izziv | M5-R21 | 2026-11-20 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), zlat, grivast vrat, košat rep zavihan čez hrbet, zmeren gobček | — | M5-R11-04 | 2026-11-20 |
 | Stran na petprep.si (`/animals/dogs/tibetan-spaniel`, `/sl/zivali/psi/tibetanski-spanjel`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -51,6 +51,8 @@
 **Kako povedati** — starši: »Tibetanski španjel je majhen, a ni igrača: uro gibanja na dan, redna nega in veliko družbe — in lahko živi več kot 15 let. V PetPrepu boste videli, ali vaš otrok zmore ta ritem.« · otroci: »Tibetanski španjel ima grivo kot majhen lev in košat rep — vsak dan mu umiješ zobe, dvakrat na teden ga počešeš in greš z njim na sprehod.« · vlagatelji / partnerji: »121. pasma psa, ki jo je samodejni nočni zagon sam izbral po javni lestvici AKC in dodal z viri — ko RKC ni bil dosegljiv, je po pravilu uporabil PDSA, za življenjsko dobo pa recenzirano raziskavo McMillan 2024.«
 
 ## Odprto za Davida
+
+- **Barvne različice:** vseh 5 (rdeč, sobolji, kremast, črn z rjavimi oznakami, črn) je 2026-11-20 odobril Claude — isti pes, poza in ozadje kot portret; nobena barva ne čaka Davida.
 
 - **Barve:** standard FCI dovoli vse barve razen merle; za AI in izbirnik sem izbral šest pogostih (zlat, rdeč, sobolji, kremast, črn z rjavimi oznakami, črn). Povejte, če želite drugačen nabor.
 - **Stran RKC:** ključni podatki RKC (velikost doma, izpadanje dlake, Breed Watch) in testi za vzreditelje niso bili dosegljivi (preusmeritev na royalkennelclub.com) → seznam za vzreditelja je »ni preverjen«; ob ročnem pregledu dopolnite.
