@@ -977,6 +977,13 @@ class FalAiService
                 .'grey coat with black-tipped outer hairs, a lighter silver-grey chest, belly and legs and a darker muzzle and ears, a thick, coarse, abundant medium-length coat with a soft undercoat, '
                 .'dark brown eyes, a black nose, small pointed firmly erect ears, a tail tightly curled over the back, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-129: Official Standard (AKC wording, S967) + UKC (S968) — small to medium, smoothly muscled, active terrier;
+            // hairless variety, parti-coloured pink skin with black spots (the portrait default; never albino / merle); V-shaped
+            // erect ears; natural tail, never docked.
+            BreedType::AmericanHairlessTerrier => 'A small to medium-sized hairless American Hairless Terrier, a smoothly muscled, active terrier slightly longer than tall, '
+                .'smooth hairless parti-coloured pink skin with black spots, only whiskers and a few guard hairs on the eyebrows and muzzle, a solid-coloured nose, '
+                .'round, expressive, obliquely set brown eyes, V-shaped erect ears set at the outside edge of the skull, a natural undocked tail carried in an upward curve, healthy unburnt skin, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2300,6 +2307,14 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'thick, coarse, abundant medium-length coat with a soft undercoat',
                 'markings' => 'black-tipped grey outer coat, lighter silver-grey chest, belly and legs, darker muzzle and ears, small pointed erect ears, tail tightly curled over the back',
+            ],
+
+            // M5-R10-129: UKC S968 parti-coloured skin — pink with black spots (the portrait default), hairless variety.
+            BreedType::AmericanHairlessTerrier => [
+                'color_scheme' => 'parti-coloured pink skin with black spots',
+                'eye_color' => 'brown',
+                'fur_texture' => 'hairless, smooth skin',
+                'markings' => 'black spots on pink skin, whiskers and eyebrow guard hairs only, V-shaped erect ears, natural undocked tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

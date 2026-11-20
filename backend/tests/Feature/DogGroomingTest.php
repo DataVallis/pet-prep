@@ -251,10 +251,13 @@ describe('values per breed (runbook grooming rule, data.json)', function () {
             ->and(BreedStageParamsSeeder::dogGrooming(BreedType::BorderCollie))->toBeNull()
             // M5-R10-123: the hairless Xoloitzcuintli — the sources give no brushing frequency (PetMD S926: wipe the skin).
             ->and(BreedStageParamsSeeder::dogGrooming(BreedType::Xoloitzcuintli))->toBeNull()
-            ->and(dgData('proposed_game_parameters.xoloitzcuintli'))->not->toHaveKey('grooming');
+            ->and(dgData('proposed_game_parameters.xoloitzcuintli'))->not->toHaveKey('grooming')
+            // M5-R10-129: the hairless American Hairless Terrier — no brushing frequency (PetMD S971: no full coat, no grooming routine).
+            ->and(BreedStageParamsSeeder::dogGrooming(BreedType::AmericanHairlessTerrier))->toBeNull()
+            ->and(dgData('proposed_game_parameters.american_hairless_terrier'))->not->toHaveKey('grooming');
         // Every seeded dog breed has a decision: a row or "no statement".
         expect(array_keys(BreedStageParamsSeeder::DOG_GROOMING))->toEqualCanonicalizing(array_values(array_diff(
-            array_map(fn (BreedType $b) => $b->value, BreedStageParamsSeeder::DOG_BREEDS), ['mutt', 'border_collie', 'xoloitzcuintli'],
+            array_map(fn (BreedType $b) => $b->value, BreedStageParamsSeeder::DOG_BREEDS), ['mutt', 'border_collie', 'xoloitzcuintli', 'american_hairless_terrier'],
         )));
         // The matted coat rule of the cat (ceil(goal / 2)) — 1 → 1, 2 → 1, 3 → 2, 7 → 4.
         expect(array_map(fn (int $n) => CatChoreService::mattedAfterMissed($n), [1, 2, 3, 7]))->toBe([1, 1, 2, 4]);
