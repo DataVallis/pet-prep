@@ -509,6 +509,7 @@ const SPECIES = [
       { id: 'mudi', synonyms: { en: ['Hungarian Mudi'], sl: ['madžarski mudi', 'madzarski mudi'] } },
       { id: 'welsh_terrier', synonyms: { en: ['Welshie', 'Welsh'], sl: ['valizanski terier', 'velški terier', 'welsh terier'] } },
       { id: 'norwegian_elkhound', synonyms: { en: ['Elkhound', 'Elkie', 'Norwegian Elkhound Grey', 'Norsk Elghund Grå', 'Norwegian Moose Dog'], sl: ['norveski losovec', 'losovec', 'norveški elkhund'] } },
+      { id: 'american_hairless_terrier', synonyms: { en: ['AHT', 'Hairless Terrier'], sl: ['ameriski goli terier', 'goli terier'] } },
     ],
   },
   {
@@ -3253,6 +3254,31 @@ const DOG_FACTS = {
       ['weight_gain', 'health.obesity'],
     ],
   },
+  // M5-R10-129. An American breed (AKC Terrier Group 2016, S969): no RKC / PDSA page, no FCI standard → `fci_standard: false`,
+  // not ranked by Coren (S35) → `coren_rank: false`. Height = the Official Standard 12–16 in (S967), weight = PetMD 12–28 lb
+  // (S971; the standards give none), lifespan = PetMD 14–16 y (S971; WebMD the same span — not exported twice) and Dogs Victoria
+  // 12–14 y (S974), exercise = Dogs NSW '20 min/day' (S973, about 20). Hairless: no coat / grooming / shedding fact (Xoloitzcuintli
+  // precedent). Not exported: adult_weight alternatives (WebMD), lifespan.mcmillan_2024 (null) / senior_from (derived),
+  // health.heart (no exact register key — background, open for David). No new health key.
+  american_hairless_terrier: {
+    height: ['height.akc'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.petmd', 'span'], ['lifespan.dogs_victoria', 'span']],
+    exercise: [['exercise.adult', 'about']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    coren_rank: false,
+    fci_standard: false,
+    health: [
+      ['bare_skin_sun_cold', 'health.bare_skin'],
+      ['kneecap_luxation', 'health.patellar_luxation'],
+      ['legg_perthes', 'health.legg_calve_perthes'],
+      ['primary_lens_luxation', 'health.lens_luxation'],
+      ['deafness', 'health.deafness'],
+    ],
+  },
 
 
 
@@ -3339,6 +3365,7 @@ export const DOG_CARE_TASKS = {
   pointer: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pointer.tooth_brushing']],
   welsh_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.welsh_terrier.tooth_brushing'], ['groomer_visit', 1, 56, 'proposed_game_parameters.welsh_terrier.professional_grooming'], ['bath', 1, 56, 'proposed_game_parameters.welsh_terrier.bathing']],
   norwegian_elkhound: [['tooth_brushing', 7, 7, 'proposed_game_parameters.norwegian_elkhound.tooth_brushing']],
+  american_hairless_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.american_hairless_terrier.tooth_brushing'], ['nail_trim', 1, 7, 'proposed_game_parameters.american_hairless_terrier.nail_trimming'], ['bath', 1, 7, 'proposed_game_parameters.american_hairless_terrier.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4313,6 +4340,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.norwegian_elkhound.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.norwegian_elkhound.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.norwegian_elkhound.exercise_minutes_senior',
+  },
+  american_hairless_terrier: {
+    adult_minutes: ['proposed_game_parameters.american_hairless_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.american_hairless_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.american_hairless_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.american_hairless_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.american_hairless_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.american_hairless_terrier.exercise_minutes_senior',
   },
 
 

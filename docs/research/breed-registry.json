@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "f106220aa2059d7d114ade707a045fc2c71f8d729d2645d530db51234e21523c"
+      "sha256": "0155d1cb9e026108e948d42ea629f623fb7363603159be3aa93f8c317ab17c42"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "cf41070c7044539e59a0677b1e7805591564ca0d76108c53891c9500b35a78c5"
+      "sha256": "af33c536e1e39c479e249720d31359c68c8415a69e1816cab50ac34de9f1274a"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "3572bd33dc02816f092586ac9ba5adeda87993154721eba3457158ed9094beb4"
+      "sha256": "2ce0d243edbc7fb9441d9402f8dea19eb4ac7b92692677826847e0ca8c4eb210"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "9d6b7c47e8ce8ad66b2c245403cccdc6f41f860c42ca73d979addd68af697df7"
+      "sha256": "8b3149c00f7c48e4e9d194ba2fff4bc36a8d4c3e1b8d395423429a49530c779f"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "8390e21ecbd29090c7769df137e5d38907ff023d6d3842f0d9281a6553e1fd4d"
+      "sha256": "029c4a1e3137859d01ab0f2f6399fe262c2a1f963e11dfe90846d7d720663855"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "6bc7ada97c6a2e0e08331d2244471ae84b5b23bcf4988f1413ff0064dbd48dc0"
+      "sha256": "a56f0315bf0d4401da4879ebe6a78b4e8b38a683f91d023d449f5bc3d3e43171"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "220e5e765dd61164bae792e6514b44abc71c0a5884763bd1208bc9b563a2042d"
+      "sha256": "d713dd33721fabe0493d479c4127520b650b14f128fd764ce081af31ad627359"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "0c568039f33068389d52a5decb88a91ea982fab6f912ede7087f1bbcdeda34ec"
+      "sha256": "946c6b730d18567fce54d073a1677386fd302684703816a62625611baedccb2e"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 119,
+      "breed_count": 120,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -73234,6 +73234,562 @@
       ]
     },
     {
+      "id": "american_hairless_terrier",
+      "species": "dog",
+      "order": 119,
+      "availability": "coming_soon",
+      "name": {
+        "en": "American Hairless Terrier",
+        "sl": "Ameriški goli terier"
+      },
+      "slug": {
+        "en": "american-hairless-terrier",
+        "sl": "ameriski-goli-terier"
+      },
+      "synonyms": {
+        "en": [
+          "AHT",
+          "Hairless Terrier"
+        ],
+        "sl": [
+          "ameriski goli terier",
+          "goli terier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S973"
+          ],
+          "ref": "american_hairless_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              30.5,
+              40.6
+            ],
+            "female": [
+              30.5,
+              40.6
+            ]
+          },
+          "source_ids": [
+            "S967"
+          ],
+          "ref": "american_hairless_terrier.height.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              5.4,
+              12.7
+            ],
+            "female": [
+              5.4,
+              12.7
+            ]
+          },
+          "source_ids": [
+            "S971"
+          ],
+          "ref": "american_hairless_terrier.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "american_hairless_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            14,
+            16
+          ],
+          "source_ids": [
+            "S971"
+          ],
+          "ref": "american_hairless_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            14
+          ],
+          "source_ids": [
+            "S974"
+          ],
+          "ref": "american_hairless_terrier.lifespan.dogs_victoria",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "about",
+          "value": 20,
+          "source_ids": [
+            "S973"
+          ],
+          "ref": "american_hairless_terrier.exercise.adult",
+          "confidence": "medium"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bare_skin_sun_cold",
+          "source_ids": [
+            "S977"
+          ],
+          "ref": "american_hairless_terrier.health.bare_skin",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S971"
+          ],
+          "ref": "american_hairless_terrier.health.patellar_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S972"
+          ],
+          "ref": "american_hairless_terrier.health.legg_calve_perthes",
+          "confidence": "high"
+        },
+        {
+          "key": "primary_lens_luxation",
+          "source_ids": [
+            "S972"
+          ],
+          "ref": "american_hairless_terrier.health.lens_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S972"
+          ],
+          "ref": "american_hairless_terrier.health.deafness",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S971"
+            ],
+            "refs": [
+              "american_hairless_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sun_protection",
+            "source_ids": [
+              "S977"
+            ],
+            "refs": [
+              "american_hairless_terrier.suitability.ahtca_sun",
+              "american_hairless_terrier.health.bare_skin"
+            ]
+          },
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S971"
+            ],
+            "refs": [
+              "american_hairless_terrier.suitability.petmd_cold"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S971"
+            ],
+            "refs": [
+              "american_hairless_terrier.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S977"
+            ],
+            "refs": [
+              "american_hairless_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 2000,
+              "cap_month": 2
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 126
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 1500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 2000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 20,
+              "steps": 2000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 126
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.american_hairless_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S973"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 20 min/day (Dogs NSW S973 '20 min/day'; no RKC / PDSA page)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_hairless_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 15 min → 1,500 steps (75 % of 20)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_hairless_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S971"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 126 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.american_hairless_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_hairless_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S972"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brush their teeth daily« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.american_hairless_terrier.nail_trimming",
+            "basis_source_ids": [
+              "S977"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev vsak teden (AHTCA »Weekly nail trimming«)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_hairless_terrier.bathing",
+            "basis_source_ids": [
+              "S971"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): kopanje vsak teden (PetMD »preferably every week«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S971",
+          "S972",
+          "S973",
+          "S977"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "cardiac_exam",
+            "level": "other_scheme",
+            "source_ids": [
+              "K43"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K43"
+            ]
+          },
+          {
+            "key": "patella_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K43"
+            ]
+          },
+          {
+            "key": "legg_perthes_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K43"
+            ]
+          },
+          {
+            "key": "hearing_baer",
+            "level": "other_scheme",
+            "source_ids": [
+              "K43"
+            ]
+          },
+          {
+            "key": "dna_pll",
+            "level": "other_scheme",
+            "source_ids": [
+              "K43"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K43"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S967",
+        "S971",
+        "S972",
+        "S973",
+        "S974",
+        "S977",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K43"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -79912,6 +80468,48 @@
       "url": "https://www.webmd.com/pets/dogs/what-to-know-norwegian-elkhounds"
     },
     {
+      "id": "S967",
+      "tier": "A",
+      "publisher": "American Kennel Club standard (Show Sight magazine reprint — the page names no body; same text as Dogs Australia S976 / CKC)",
+      "title": "Official Standard of the American Hairless Terrier (Approved March 9, 2010, Effective January 1, 2014) — American Hairless Terrier Breed Magazine",
+      "url": "https://digital.showsightmagazine.com/view/345894"
+    },
+    {
+      "id": "S971",
+      "tier": "B",
+      "publisher": "PetMD — Sarah Kloepple, reviewed by Teresa Manucy, DVM (updated Jul. 25, 2024)",
+      "title": "American Hairless Terrier",
+      "url": "https://www.petmd.com/dog/breeds/american-hairless-terrier"
+    },
+    {
+      "id": "S972",
+      "tier": "B",
+      "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Shruthi N, MD (April 25, 2026)",
+      "title": "What to Know About American Hairless Terriers",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-american-hairless-terriers"
+    },
+    {
+      "id": "S973",
+      "tier": "B",
+      "publisher": "Dogs NSW",
+      "title": "American Hairless Terrier — breed page (Browse all breeds)",
+      "url": "https://www.dogsnsw.org.au/breeds/browse-all-breeds/american-hairless-terrier/"
+    },
+    {
+      "id": "S974",
+      "tier": "B",
+      "publisher": "Dogs Victoria",
+      "title": "American Hairless Terrier — breed page (Choosing a breed)",
+      "url": "https://dogsvictoria.org.au/choosing-a-breed/browse-all-breeds/61/American-Hairless-Terrier/"
+    },
+    {
+      "id": "S977",
+      "tier": "B",
+      "publisher": "American Hairless Terrier Club of America (hosted by AKC)",
+      "title": "American Hairless Terrier Club Flyer 20240411 — National Breed Club (PDF, © 2024)",
+      "url": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2024/05/21112850/American-Hairless-Terrier-Club-Flyer-20240411.pdf"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -80372,6 +80970,13 @@
       "publisher": "American Toy Fox Terrier Club",
       "title": "Health (© 2009 – 2022)",
       "url": "https://atftc.com/health/health.htm"
+    },
+    {
+      "id": "K43",
+      "tier": "B",
+      "publisher": "American Hairless Terrier Club of America (hosted by AKC)",
+      "title": "American Hairless Terrier Club Flyer 20240411 — National Breed Club (PDF, © 2024)",
+      "url": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2024/05/21112850/American-Hairless-Terrier-Club-Flyer-20240411.pdf"
     }
   ]
 }
