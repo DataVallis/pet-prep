@@ -1595,6 +1595,19 @@
             "prompt_hash": "sha256:4cb3537b4a591b36a9f11749a218a0faeabf33d99785c85b76734366b5c05003",
             "generated_at": "2026-11-20T03:10:16+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "black_russian_terrier",
+            "species": "dog",
+            "colour": "black",
+            "file": "dog/black-russian-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c4cf5ad39c476f530dcc6e79f6d5c19b8e1b6b39c256f00a7e9c57e85cda6435",
+            "generated_at": "2026-11-20T07:10:18+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
