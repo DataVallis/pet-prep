@@ -730,7 +730,7 @@ describe('pet content', function () {
         expect($pet->only(array_keys($before)))->toBe($before)
             ->and($scoreOf($pet))->toBe($score)
             ->and(PetMedia::where('pet_id', $pet->id)->count())->toBe($media);
-        expect(ItemMedia::where('scope', 'look')->count())->toBe(6); // bed, bowls, toy_1: image + clip each
+        expect(ItemMedia::where('scope', 'look')->count())->toBe(7); // bed, bowls, toy_1: image + clip each; bowls + drinking clip (David 2026-11-20)
     });
 
     it('answers 404 to a webhook that beats our submit, and the admin list shows the rows', function () {
@@ -1181,5 +1181,162 @@ describe('treats wait for their clip', function () {
         imAs($child);
         postJson('/api/child/pet/treat')->assertOk()->assertJsonPath('treats_left', 9)->assertJsonPath('media', null)
             ->assertJsonPath('state.wishes.treats.ready', true);
+    });
+});
+
+/*
+| David 2026-11-20 (»1+A se strinjam«): the bowls get a second clip from the SAME key image — the
+| dog DRINKING from the water bowl (kind `drink_clip`). Feed plays `video` (eating), water plays
+| `drink_video`. Readiness never waits for it (feed / water are core care, never locked).
+*/
+
+/** Answer the running requests of $kind only (the others keep running). */
+function imCompleteKind(string $kind): void
+{
+    ItemMedia::query()->where('kind', $kind)->where('status', 'running')->whereNotNull('request_id')->whereNull('source_url')->orderBy('id')->get()
+        ->each(function (ItemMedia $row): void {
+            $payload = $row->isStill()
+                ? ['images' => [['url' => "https://v3.fal.media/files/im/{$row->request_id}.jpg"]]]
+                : ['video' => ['url' => "https://v3.fal.media/files/im/{$row->request_id}.mp4"]];
+            sendFalWebhook(['request_id' => $row->request_id, 'status' => 'OK', 'payload' => $payload])->assertOk();
+        });
+}
+
+/** Request bodies of the submitted clips. */
+function imClipBodies(): Collection
+{
+    return imFalSubmits('clip')->map(fn (Request $r) => $r->data())->values();
+}
+
+describe('bowls drinking clip', function () {
+    it('queues the drinking clip from the same key image once it exists; feed = eating clip, water = drinking clip; readiness does not wait for it', function () {
+        $look = imLook();
+        [$parent, $child, $pet] = imFamily($look);
+        imRedeem($parent, $pet, 'petprep_wish_bowls', ['design' => 'dog_bowls_steel_stand'])->assertOk();
+
+        // No clip before the key image exists.
+        imCompleteKind('picture');
+        expect(imFalSubmits('clip'))->toHaveCount(0)->and(ItemMedia::where('kind', 'drink_clip')->exists())->toBeFalse();
+
+        imCompleteKind('image');
+        $image = ItemMedia::where('kind', 'image')->sole();
+        $eat = ItemMedia::where('kind', 'clip')->sole();
+        $drink = ItemMedia::where('kind', 'drink_clip')->sole();
+        $clips = imClipBodies();
+        $drinkBody = $clips->first(fn (array $b) => str_contains((string) $b['prompt'], 'drinking water'));
+        $eatBody = $clips->first(fn (array $b) => ! str_contains((string) $b['prompt'], 'drinking water'));
+
+        expect($clips)->toHaveCount(2)
+            ->and([$drink->scope, $drink->pet_look_id, $drink->life_stage, $drink->design])->toBe(['look', $look->id, 'young', 'dog_bowls_steel_stand'])
+            ->and($drinkBody['prompt'])->toContain(PetAppearancePrompt::DRINK_MOTION)
+            ->toContain('it does not eat and never puts its head in the food bowl')->toContain('calm dog motion')
+            ->and($drinkBody['negative_prompt'])->toContain('eating kibble')->toContain('walking away')->toContain('camera movement')
+            ->and($eatBody['prompt'])->toContain('eating from the food bowl')->not->toContain('drinking')
+            // Both clips start from the same stored key image.
+            ->and(json_encode($drinkBody))->toContain('\/api\/media\/items\/'.$image->id.'?')
+            ->and(json_encode($eatBody))->toContain('\/api\/media\/items\/'.$image->id.'?')
+            ->and(app(ItemMediaService::class)->readiness($pet->fresh()))->toBe(['bowls' => false]);
+
+        // The eating clip alone makes the bowls ready; the drinking clip is still on its way → null.
+        Event::fake([PetUpdated::class]);
+        imCompleteKind('clip');
+        $state = imChildState($child);
+        expect(collect($state->json('wishes.items'))->firstWhere('key', 'bowls')['media_ready'])->toBeTrue();
+        $bowls = $state->json('pet.media.items.bowls');
+        expect(array_keys($bowls))->toBe(['image', 'video', 'video_seconds', 'loop', 'drink_video', 'drink_video_seconds'])
+            ->and($bowls['loop'])->toBeFalse()->and($bowls['video'])->toContain('/api/media/items/'.$eat->id.'?')
+            ->and($bowls['drink_video'])->toBeNull()->and($bowls['drink_video_seconds'])->toBeNull();
+        $readyEvents = fn (): int => collect(Event::dispatched(PetUpdated::class))->filter(fn ($e) => $e[0]->eventType === 'item_media_ready' && $e[0]->petId === $pet->id)->count();
+        $before = $readyEvents();
+
+        // The drinking clip arrives → one more `item_media_ready` (the app refetches), no second push.
+        imCompleteKind('drink_clip');
+        $bowls = imChildState($child)->json('pet.media.items.bowls');
+        expect($bowls['drink_video'])->toContain('/api/media/items/'.$drink->id.'?')->toContain('pet='.$pet->id)->not->toContain('fal.media')
+            ->and((float) $bowls['drink_video_seconds'])->toBe(3.0)
+            ->and($bowls['video'])->toContain('/api/media/items/'.$eat->id.'?')
+            ->and($readyEvents())->toBe($before + 1)
+            ->and(PushNotification::where('type', 'item_ready')->where('pet_id', $pet->id)->count())->toBe(1);
+        imAs($child);
+        get(str_replace('https://api.petprep.si', '', $bowls['drink_video']))->assertOk();
+
+        // Other items carry no drink keys and get no drinking clip.
+        PetItem::create(['pet_id' => $pet->id, 'item_key' => 'bed', 'kind' => 'durable', 'variant' => 'dog_bed', 'design' => 'dog_bed_round_grey', 'quantity_total' => 1, 'quantity_left' => 1, 'acquired_at' => now()]);
+        artisan('media:item-media')->assertSuccessful();
+        imComplete();
+        expect(array_keys(imChildState($child)->json('pet.media.items.bed')))->toBe(['image', 'video', 'video_seconds', 'loop'])
+            ->and(ItemMedia::where('kind', 'drink_clip')->count())->toBe(1);
+
+        // Steady state: the scheduler queues nothing more.
+        $calls = imFalSubmits()->count();
+        artisan('media:item-media')->assertSuccessful();
+        expect(imFalSubmits()->count())->toBe($calls);
+    });
+
+    it('costs 0 $ for a later buyer of the same bowls of the same look and stage (drinking clip included)', function () {
+        $look = imLook();
+        [$parent, , $pet] = imFamily($look);
+        imRedeem($parent, $pet, 'petprep_wish_bowls', ['design' => 'dog_bowls_steel_stand'])->assertOk();
+        imComplete();
+        $calls = imFalSubmits()->count();
+        $spent = (float) AiSpendLedger::sum('cost_usd');
+        expect(imFalSubmits('clip'))->toHaveCount(2);
+
+        [$parent2, $child2, $pet2] = imFamily($look);
+        $redeemed = imRedeem($parent2, $pet2, 'petprep_wish_bowls', ['design' => 'dog_bowls_steel_stand'])->assertOk();
+        expect(collect($redeemed->json('items'))->firstWhere('key', 'bowls')['media_ready'])->toBeTrue();
+        $bowls = imChildState($child2)->json('pet.media.items.bowls');
+        expect(imFalSubmits()->count())->toBe($calls)->and((float) AiSpendLedger::sum('cost_usd'))->toBe($spent)
+            ->and($bowls['drink_video'])->toContain('pet='.$pet2->id)->and($bowls['video'])->not->toBeNull();
+    });
+
+    it('backfills the drinking clip for a pet that already owns bowls with their eating clip (scheduled pass, one clip)', function () {
+        [, $child, $pet] = imFamily(null);
+        PetItem::create(['pet_id' => $pet->id, 'item_key' => 'bowls', 'kind' => 'durable', 'variant' => 'dog_bowls', 'design' => 'dog_bowls_blue_ceramic', 'quantity_total' => 1, 'quantity_left' => 1, 'acquired_at' => now()->subDays(3)]);
+        artisan('media:item-media')->assertSuccessful();
+        imComplete();
+        // As before this feature: the bowls had only the eating clip.
+        ItemMedia::where('kind', 'drink_clip')->delete();
+        expect(imChildState($child)->json('pet.media.items.bowls.drink_video'))->toBeNull();
+        $clips = imFalSubmits('clip')->count();
+
+        artisan('media:item-media')->assertSuccessful();
+        expect(imFalSubmits('clip')->count())->toBe($clips + 1)
+            ->and(imFalSubmits('image')->count())->toBe(1);
+        imComplete();
+        expect(imChildState($child)->json('pet.media.items.bowls.drink_video'))->not->toBeNull()
+            ->and(ItemMedia::where('kind', 'drink_clip')->sole()->scope)->toBe('pet');
+    });
+
+    it('a drinking clip that gives up leaves drink_video null — the bowls stay ready with their eating clip', function () {
+        Queue::fake([SendItemMediaAlert::class]);
+        [, $child, $pet] = imFamily(null);
+        PetItem::create(['pet_id' => $pet->id, 'item_key' => 'bowls', 'kind' => 'durable', 'variant' => 'dog_bowls', 'design' => 'dog_bowls_steel_stand', 'quantity_total' => 1, 'quantity_left' => 1, 'acquired_at' => now()]);
+        artisan('media:item-media')->assertSuccessful();
+        imCompleteKind('picture');
+        imCompleteKind('image');
+        imCompleteKind('clip');
+        $drink = ItemMedia::where('kind', 'drink_clip')->sole();
+        foreach ([0, 1, 2] as $try) {
+            imFailWebhook($drink->fresh());
+            $this->travel(31)->minutes();
+            artisan('media:item-media')->assertSuccessful();
+        }
+
+        $state = app(ItemMediaService::class)->statesFor($pet->fresh())['bowls'];
+        expect($drink->fresh()->exhausted_at)->not->toBeNull()
+            ->and($state['outcome'])->toBe('content')->and($state['given_up'])->toBeFalse()->and($state['drink_clip'])->toBeNull()
+            ->and(app(ItemMediaService::class)->readiness($pet->fresh()))->toBe(['bowls' => true])
+            ->and(imChildState($child)->json('pet.media.items.bowls.video'))->not->toBeNull()
+            ->and(imChildState($child)->json('pet.media.items.bowls.drink_video'))->toBeNull();
+        Queue::assertPushed(SendItemMediaAlert::class, fn ($job) => $job->count === 1 && $job->locked === 0);
+    });
+
+    it('builds a cat drinking prompt without the word dog', function () {
+        $prompts = app(PetAppearancePrompt::class);
+        $prompt = $prompts->itemDrinkClipPrompt('domestic_cat', (string) ItemDesigns::description('cat_bowls_white_gold'), ['coat_color' => 'grey tabby']);
+        expect(strtolower($prompt))->not->toMatch('/\bdog\b/')->toContain('quick small flicks of its tongue')
+            ->and(PetAppearancePrompt::itemDrinkClipIntent(Species::Cat))->toBe(PetAppearancePrompt::CAT_DRINK_MOTION)
+            ->and(strtolower($prompts->itemDrinkClipNegativePrompt(Species::Cat)))->toContain('eating kibble')->not->toMatch('/\bdog\b/');
     });
 });

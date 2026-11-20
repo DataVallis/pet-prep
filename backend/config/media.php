@@ -295,6 +295,9 @@ return [
         'max_still_retries' => (int) env('AI_QUALITY_MAX_STILL_RETRIES', 2),
         // Item clips that should barely move (the bed: the animal sleeps) — low-motion threshold.
         'low_motion_items' => ['bed'],
+        // David 2026-11-20: item clip KINDS that move calmly (the bowls' drinking clip: lapping, small
+        // head movements) — the same low-motion threshold.
+        'low_motion_item_kinds' => ['drink_clip'],
         // David 2026-11-19: the contact sheet of an ITEM clip for its AI realism check (fewer, larger
         // frames than a pet clip: a pasted / floating object shows in the detail). The clip's start
         // frame (its key image) is sent at full size next to it.

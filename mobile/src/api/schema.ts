@@ -3159,6 +3159,10 @@ export interface components {
                  *     content). `image` = the pet with its item (key image), `video` = the clip made from
                  *     it (null when only the picture could be made), `video_seconds` = its length,
                  *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                 *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                 *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                 *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                 *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                  *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                  */
                 items: {
@@ -3173,6 +3177,8 @@ export interface components {
                         video: string | null;
                         video_seconds: number | null;
                         loop: boolean;
+                        drink_video: string | null;
+                        drink_video_seconds: number | null;
                     };
                     toy_1?: {
                         image: string | null;
@@ -5467,6 +5473,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -5481,6 +5491,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -6522,6 +6534,10 @@ export interface operations {
                                  *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                  *     it (null when only the picture could be made), `video_seconds` = its length,
                                  *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                 *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                 *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                 *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                 *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                  *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                  */
                                 items: {
@@ -6536,6 +6552,8 @@ export interface operations {
                                         video: string | null;
                                         video_seconds: number | null;
                                         loop: boolean;
+                                        drink_video: string | null;
+                                        drink_video_seconds: number | null;
                                     };
                                     toy_1?: {
                                         image: string | null;
@@ -7598,6 +7616,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -7612,6 +7634,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -8672,6 +8696,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -8686,6 +8714,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -9746,6 +9776,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -9760,6 +9794,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -10820,6 +10856,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -10834,6 +10874,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -11894,6 +11936,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -11908,6 +11954,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -12972,6 +13020,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -12986,6 +13038,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -14050,6 +14104,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -14064,6 +14122,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -15128,6 +15188,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -15142,6 +15206,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -16206,6 +16272,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -16220,6 +16290,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -17284,6 +17356,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -17298,6 +17374,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -18358,6 +18436,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -18372,6 +18454,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -19432,6 +19516,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -19446,6 +19534,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -20510,6 +20600,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -20524,6 +20618,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -21584,6 +21680,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -21598,6 +21698,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -22662,6 +22764,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -22676,6 +22782,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -23736,6 +23844,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -23750,6 +23862,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -24814,6 +24928,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -24828,6 +24946,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -25892,6 +26012,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -25906,6 +26030,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -26970,6 +27096,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -26984,6 +27114,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -28048,6 +28180,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -28062,6 +28198,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -29126,6 +29264,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -29140,6 +29282,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -30896,6 +31040,10 @@ export interface operations {
                                  *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                  *     it (null when only the picture could be made), `video_seconds` = its length,
                                  *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                 *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                 *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                 *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                 *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                  *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                  */
                                 items: {
@@ -30910,6 +31058,8 @@ export interface operations {
                                         video: string | null;
                                         video_seconds: number | null;
                                         loop: boolean;
+                                        drink_video: string | null;
+                                        drink_video_seconds: number | null;
                                     };
                                     toy_1?: {
                                         image: string | null;
@@ -31305,6 +31455,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -31319,6 +31473,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -31925,6 +32081,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -31939,6 +32099,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -33759,6 +33921,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -33773,6 +33939,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -34815,6 +34983,10 @@ export interface operations {
                                      *     content). `image` = the pet with its item (key image), `video` = the clip made from
                                      *     it (null when only the picture could be made), `video_seconds` = its length,
                                      *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Bowls only (David 2026-11-20): `drink_video` = the DRINKING clip from the same key image
+                                     *     (played once after an accepted »Voda«; `video` = eating, after »Hrana«) and
+                                     *     `drink_video_seconds` its length — null until it is stored and passed its check, or
+                                     *     when it gave up (then nothing extra is played). It never changes `media_ready`.
                                      *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
                                      */
                                     items: {
@@ -34829,6 +35001,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
+                                            drink_video: string | null;
+                                            drink_video_seconds: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;

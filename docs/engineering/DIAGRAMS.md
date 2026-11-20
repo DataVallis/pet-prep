@@ -924,7 +924,7 @@ sequenceDiagram
   Note over API,C: David 2026-11-15: redeem queues the treat clip (QueuePetItemMedia after commit)<br/>until it is stored: wishes.treats.ready = false → »Priboljšek« disabled (»se še pripravljajo«)
   C->>API: POST /api/child/pet/treat (max 2 / local day, not asleep, 423 when locked)
   API-->>C: 422 media_not_ready while the clip is not stored (nothing used up) · 200 accepted + media once it is
-  Note over API,C: M6-W03: item content ready → PetUpdated item_media_ready + push item_ready<br/>media.items → bed (sleeping), toy (playing), bowls / treats once; »Na poti …« → »Že ima«
+  Note over API,C: M6-W03: item content ready → PetUpdated item_media_ready + push item_ready<br/>media.items → bed (sleeping), toy (playing), bowls once (feed: eating clip, water: drink_video), treats once; »Na poti …« → »Že ima«
 ```
 
 **M6-W03 item content on the server** (`Media\ItemMediaService`, table `item_media`, WISHES_API §8). One look + design + stage is made once; every later pet of that look gets it for 0 $. Every fal call goes through FalGateway / AiSpendGuard (purpose `item_media`).
@@ -943,8 +943,11 @@ flowchart TD
   IMG -->|webhook → StoreItemMedia| CLIP[clip: Kling 3 s, start frame only]
   CLIP -->|webhook → StoreItemMedia| SET[settle pets of the row]
   SET --> EV[PetUpdated item_media_ready + push item_ready<br/>once per pet + item + design]
+  IMG -->|bowls only, David 2026-11-20| DRINK[drink_clip: Kling 3 s from the SAME key image<br/>drinking from the water bowl · ≈ $0.34 per look + design + stage]
+  DRINK -->|webhook → StoreItemMedia| DEV[media.items.bowls.drink_video<br/>PetUpdated item_media_ready · no push · never media_ready]
   IMG -. fail .-> H{heal}
   CLIP -. fail .-> H
+  DRINK -. fail .-> H
   H -->|budget / balance| BW[wait for the budget · not counted]
   H -->|no_media_generated| VAR[next prompt variant]
   H -->|http / invalid / generation| RT[≤ 2 retries per chain, ≥ 30 min]
@@ -2017,7 +2020,7 @@ flowchart TD
   K[item key image candidate] --> KR{vision · item rubric<br/>one_animal · legs_ok · no_ghost_parts · scene_ok · clean<br/>item_grounded · item_integrated · scale_ok}
   KR -->|fail, enforce, retries left| KN[new key image: fresh seed · stricter variant<br/>try 3 leads with the floor contact]
   KR -->|fail, no retries left| KG[given up at once: bed / bowls / toys without content · media_ready true · counting alert]
-  KR -->|pass| KS[key image stored → its clip is submitted]
+  KR -->|pass| KS[key image stored → its clip is submitted<br/>bowls: + the drinking clip, judged on drinking]
   KS --> CC[item clip candidate]
   CC --> T[free technical check · clip mode, default shadow<br/>+ contact sheet 4 frames]
   T --> CA{vision · item_clip rubric<br/>contact sheet + start frame · item mode, default enforce<br/>≈ $0.001, $0.003 reserved}

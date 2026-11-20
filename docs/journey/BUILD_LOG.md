@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-20 — Voda je voda: ob »Voda« ljubljenček zdaj pije, ne je
+
+**Kaj:** ko je imel ljubljenček kupljeni skledi, je otrok ob »Voda« videl sporočilo »Sveža voda!«, posnetek pa je pokazal, kako pes je briketke. David je potrdil predlog (»1+A se strinjam«): skledi dobita drug kratek posnetek — ljubljenček mirno pije iz sklede z vodo. Nastane iz iste slike skled (na njej sta obe skledi), zato nova slika ni potrebna: en dodaten 3-sekundni video ≈ 0,34 $ na videz pasme + barve + obdobja, vsak naslednji kupec istih skled pri istem videzu 0 $. Narejen je samodejno tudi za skledi, ki so že kupljene. Strežnik je narejen; predvajanje v aplikaciji je v ločenem mobilnem PR.
+**Zakaj je pomembno:** otrok se uči, da sta hrana in voda dve različni skrbi — posnetek mora pokazati prav to, kar je otrok naredil. Neskladje (voda → hranjenje) bi to učenje pokvarilo.
+**Kako povedati:** 🧒 »Ko natočiš vodo, tvoj kuža zdaj res pije.« 👩 »Vsaka skrb ima svoj prizor — hranjenje in pitje sta različna.« 🛠 »Drugi Kling posnetek iz iste ključne slike: +0,34 $ na videz, deljeno med vsemi kupci istega videza.«
+
 ## 2026-11-19 — Kuža v postelji naj spi, ne pa se zbuja: mirni posnetki spanja v 3 poskusih
 
 **Kaj:** posnetek postelje mladička stafordširskega bulterierja je 3-krat padel na preverjanju (skupaj 1,01 $): mladiček se je sredi posnetka zbudil, dvignil glavo, mahal z repom in se spet ulegel. Vzrok je bil v pozivu — prosil je za »vidno dihanje, trzanje ušesa, premik tačke«, Kling pa je to v 3–5 sekundah pretiraval. Zdaj posnetki spanja (postelja in stanje »spi«, pes in mačka) prosijo za trdno spanje: samo mirno dihanje, oči zaprte, glava na mestu, brez prebujanja in repa; zraven gre negativni poziv. Vsak od 3 poskusov je mirnejši od prejšnjega, ključna slika postelje pa vsakič strožja glede stika s tlemi (senca pod celo podlago, ne ostrejša od sobe). Če vseeno vsi 3 padejo, postelja ne čaka na skrbnika: takoj se pokaže zadnja dobra slika ljubljenčka na postelji. Brez novih AI-klicev.

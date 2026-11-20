@@ -62,6 +62,14 @@ class ItemMediaResource extends Resource
         return false;
     }
 
+    /** Kind labels of the list (David 2026-11-20: `drink_clip` = the bowls' drinking clip, played on »Voda«). */
+    public const KIND_LABELS = [
+        ItemMedia::KIND_PICTURE => 'catalogue picture',
+        ItemMedia::KIND_IMAGE => 'key image',
+        ItemMedia::KIND_CLIP => 'clip',
+        ItemMedia::KIND_DRINK_CLIP => 'drinking clip (bowls)',
+    ];
+
     public static function table(Table $table): Table
     {
         return self::configure($table)
@@ -85,6 +93,8 @@ class ItemMediaResource extends Resource
                     'toy_2' => 'Toy 2',
                     'treats' => 'Treats',
                 ]),
+                // David 2026-11-20: the bowls' drinking clip is its own kind.
+                Tables\Filters\SelectFilter::make('kind')->options(self::KIND_LABELS),
                 Tables\Filters\Filter::make('exhausted')->label('Given up (durable: shown without content · treats: »Treat« stays locked)')
                     ->query(fn ($q) => $q->whereNotNull('exhausted_at')),
                 Tables\Filters\Filter::make('quality')->label('Needs review / failed check')
@@ -103,7 +113,8 @@ class ItemMediaResource extends Resource
                 Tables\Columns\TextColumn::make('owner')->label('Owner')
                     ->getStateUsing(fn (ItemMedia $r): string => $r->pet_look_id !== null ? 'look #'.$r->pet_look_id : ($r->pet_id !== null ? 'pet #'.$r->pet_id : '—')),
                 Tables\Columns\TextColumn::make('design')->searchable(),
-                Tables\Columns\TextColumn::make('kind')->badge(),
+                Tables\Columns\TextColumn::make('kind')->badge()
+                    ->formatStateUsing(fn (string $state): string => self::KIND_LABELS[$state] ?? $state),
                 Tables\Columns\TextColumn::make('life_stage')->label('Stage')->placeholder('—'),
                 Tables\Columns\TextColumn::make('status')->badge()
                     ->color(fn (string $state): string => match ($state) {
