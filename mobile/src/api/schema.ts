@@ -3177,8 +3177,8 @@ export interface components {
                         video: string | null;
                         video_seconds: number | null;
                         loop: boolean;
-                        drink_video: string | null;
-                        drink_video_seconds: number | null;
+                        drink_video?: string | null;
+                        drink_video_seconds?: number | null;
                     };
                     toy_1?: {
                         image: string | null;
@@ -5491,8 +5491,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -6552,8 +6552,8 @@ export interface operations {
                                         video: string | null;
                                         video_seconds: number | null;
                                         loop: boolean;
-                                        drink_video: string | null;
-                                        drink_video_seconds: number | null;
+                                        drink_video?: string | null;
+                                        drink_video_seconds?: number | null;
                                     };
                                     toy_1?: {
                                         image: string | null;
@@ -7634,8 +7634,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -8714,8 +8714,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -9794,8 +9794,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -10874,8 +10874,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -11954,8 +11954,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -13038,8 +13038,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -14122,8 +14122,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -15206,8 +15206,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -16290,8 +16290,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -17374,8 +17374,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -18454,8 +18454,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -19534,8 +19534,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -20618,8 +20618,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -21698,8 +21698,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -22782,8 +22782,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -23862,8 +23862,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -24946,8 +24946,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -26030,8 +26030,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -27114,8 +27114,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -28198,8 +28198,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -29282,8 +29282,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -31058,8 +31058,8 @@ export interface operations {
                                         video: string | null;
                                         video_seconds: number | null;
                                         loop: boolean;
-                                        drink_video: string | null;
-                                        drink_video_seconds: number | null;
+                                        drink_video?: string | null;
+                                        drink_video_seconds?: number | null;
                                     };
                                     toy_1?: {
                                         image: string | null;
@@ -31473,8 +31473,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -32099,8 +32099,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -33939,8 +33939,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;
@@ -35001,8 +35001,8 @@ export interface operations {
                                             video: string | null;
                                             video_seconds: number | null;
                                             loop: boolean;
-                                            drink_video: string | null;
-                                            drink_video_seconds: number | null;
+                                            drink_video?: string | null;
+                                            drink_video_seconds?: number | null;
                                         };
                                         toy_1?: {
                                             image: string | null;

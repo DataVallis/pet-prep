@@ -192,7 +192,7 @@ final class PetMediaPayload
              * when it gave up (then nothing extra is played). It never changes `media_ready`.
              * Signed URLs like every media URL (expire with `expires_at`). Always an object.
              *
-             * @var array{bed?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, bowls?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool, drink_video: string|null, drink_video_seconds: float|null}, toy_1?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, toy_2?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, treats?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}}
+             * @var array{bed?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, bowls?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool, drink_video?: string|null, drink_video_seconds?: float|null}, toy_1?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, toy_2?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, treats?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}}
              */
             'items' => (object) $this->items,
         ];
