@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "3316d4f9cc80e69a5e01a50d5446e382b6982907c6b50efc483e6c3fab32e6cb"
+      "sha256": "2e6c0cff5365fcc3772c9c5757ffc29c4a314d34002d2c7be97ee36b29a1b177"
     }
   },
   "suitability_vocabulary": {
@@ -74387,7 +74387,12 @@
           "S982"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "tibetan-spaniel.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_checked",
         "tests": [],
