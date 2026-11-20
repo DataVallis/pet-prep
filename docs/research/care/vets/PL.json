@@ -102,7 +102,8 @@
         "pl": "Rejestracja 8:00–20:00; przychodnia czynna całą dobę, 7 dni w tygodniu.",
         "cs": "Registrace 8:00–20:00; klinika otevřena nonstop, 7 dní v týdnu.",
         "sv": "Registrering 08.00–20.00; kliniken öppen dygnet runt, alla dagar i veckan.",
-        "da": "Registrering 8.00–20.00; klinikken er åben døgnet rundt, 7 dage om ugen."
+        "da": "Registrering 8.00–20.00; klinikken er åben døgnet rundt, 7 dage om ugen.",
+        "fi": "Ilmoittautuminen 8.00–20.00; klinikka auki ympäri vuorokauden, 7 päivää viikossa."
       },
       "url": "https://klinikawet.sggw.edu.pl/",
       "source_url": "https://klinikawet.sggw.edu.pl/kontakt/",
@@ -132,7 +133,8 @@
         "pl": "Izba przyjęć dla nagłych przypadków ER 24 H/7; pacjenci w stanie pilnym przyjmowani bez skierowania; zadzwoń przed wizytą.",
         "cs": "Pohotovostní příjem ER 24 H/7; akutní pacienty přijímají bez doporučení; před cestou zavolejte.",
         "sv": "Akutmottagning ER 24 h/7; akuta patienter tas emot utan remiss; ring innan du kommer.",
-        "da": "Akutmodtagelse ER 24 H/7; akutte patienter modtages uden henvisning; ring på forhånd."
+        "da": "Akutmodtagelse ER 24 H/7; akutte patienter modtages uden henvisning; ring på forhånd.",
+        "fi": "Päivystysosasto ER 24 H/7; kiireelliset potilaat otetaan vastaan ilman lähetettä; soita etukäteen."
       },
       "url": "https://veterio.pl/en/",
       "source_url": "https://veterio.pl/en/contact/",
@@ -161,7 +163,8 @@
         "pl": "Przychodnia czynna całą dobę.",
         "cs": "Klinika otevřena nonstop.",
         "sv": "Kliniken öppen dygnet runt.",
-        "da": "Klinikken er åben døgnet rundt."
+        "da": "Klinikken er åben døgnet rundt.",
+        "fi": "Klinikka auki ympäri vuorokauden."
       },
       "url": "https://klinikasfora.pl/",
       "source_url": "https://klinikasfora.pl/kontakt/",
@@ -190,7 +193,8 @@
         "pl": "Czynne 24/7, także w nocy, w niedziele i święta.",
         "cs": "Otevřeno nonstop, i v noci, v neděli a o svátcích.",
         "sv": "Öppet dygnet runt, även nätter, söndagar och helgdagar.",
-        "da": "Åbent døgnet rundt, også nætter, søndage og helligdage."
+        "da": "Åbent døgnet rundt, også nætter, søndage og helligdage.",
+        "fi": "Auki 24/7, myös öisin, sunnuntaisin ja pyhäpäivinä."
       },
       "url": "https://mkw-24.pl/",
       "source_url": "https://mkw-24.pl/o-nas.html",
@@ -219,7 +223,8 @@
         "pl": "Czynne 24/7, 365 dni.",
         "cs": "Otevřeno nonstop, 365 dní v roce.",
         "sv": "Öppet dygnet runt, årets alla dagar.",
-        "da": "Åbent døgnet rundt, 365 dage."
+        "da": "Åbent døgnet rundt, 365 dage.",
+        "fi": "Auki 24/7, 365 päivää."
       },
       "url": "https://klinikavet.pl/",
       "source_url": "https://klinikavet.pl/calodobowa-klinika-weterynaryjna-w-warszawie/",
@@ -248,7 +253,8 @@
         "pl": "Dyżur dzienny pon.–pt. 9:00–23:00, sob.–niedz. 10:00–18:00; także całodobowo.",
         "cs": "Denní služba Po–Pá 9:00–23:00, so–ne 10:00–18:00; také nonstop.",
         "sv": "Dagjour mån–fre 09.00–23.00, lör–sön 10.00–18.00; även dygnet runt.",
-        "da": "Dagvagt man–fre 9.00–23.00, lør–søn 10.00–18.00; også døgnet rundt."
+        "da": "Dagvagt man–fre 9.00–23.00, lør–søn 10.00–18.00; også døgnet rundt.",
+        "fi": "Päiväpäivystys ma–pe 9.00–23.00, la–su 10.00–18.00; myös ympärivuorokautinen."
       },
       "url": "https://www.pulsvet.pl/",
       "source_url": "https://www.pulsvet.pl/",
@@ -278,7 +284,8 @@
         "pl": "Dyżur w nagłych przypadkach całą dobę; recepcja 8:00–21:00.",
         "cs": "Pohotovostní služba nonstop; recepce 8:00–21:00.",
         "sv": "Akutjour dygnet runt; reception 08.00–21.00.",
-        "da": "Akutvagt døgnet rundt; reception 8.00–21.00."
+        "da": "Akutvagt døgnet rundt; reception 8.00–21.00.",
+        "fi": "Päivystys ympäri vuorokauden; vastaanotto 8.00–21.00."
       },
       "url": "https://www.multiwet.pl/",
       "source_url": "https://www.multiwet.pl/",
@@ -308,7 +315,8 @@
         "pl": "Pon.–niedz. 7:00–23:00; w święta 9:00–21:00.",
         "cs": "Po–Ne 7:00–23:00; o svátcích 9:00–21:00.",
         "sv": "Mån–sön 07.00–23.00; helgdagar 09.00–21.00.",
-        "da": "Man–søn 7.00–23.00; helligdage 9.00–21.00."
+        "da": "Man–søn 7.00–23.00; helligdage 9.00–21.00.",
+        "fi": "ma–su 7.00–23.00; pyhäpäivinä 9.00–21.00."
       },
       "url": "https://wetwitolin.waw.pl/",
       "source_url": "https://wetwitolin.waw.pl/kontakt/",
@@ -336,7 +344,8 @@
         "pl": "Pon.–czw. 8:00–24:00; pt.–niedz. całodobowo.",
         "cs": "Po–Čt 8:00–24:00; pá–ne nonstop.",
         "sv": "Mån–tors 08.00–24.00; fre–sön dygnet runt.",
-        "da": "Man–tor 8.00–24.00; fre–søn døgnet rundt."
+        "da": "Man–tor 8.00–24.00; fre–søn døgnet rundt.",
+        "fi": "ma–to 8.00–24.00; pe–su ympäri vuorokauden."
       },
       "url": "https://oiomvet.pl/",
       "source_url": "https://oiomvet.pl/",
@@ -366,7 +375,8 @@
         "pl": "Pon.–pt. 8:00–21:00, sob. 9:00–20:00; Dyżur EMERGENCY 24h; opieka szpitalna całą dobę.",
         "cs": "Po–Pá 8:00–21:00, so 9:00–20:00; Dyżur EMERGENCY 24h; hospitalizační péče nonstop.",
         "sv": "Mån–fre 08.00–21.00, lör 09.00–20.00; Dyżur EMERGENCY 24 h; sjukhusvård dygnet runt.",
-        "da": "Man–fre 8.00–21.00, lør 9.00–20.00; Dyżur EMERGENCY døgnet rundt; indlæggelse døgnet rundt."
+        "da": "Man–fre 8.00–21.00, lør 9.00–20.00; Dyżur EMERGENCY døgnet rundt; indlæggelse døgnet rundt.",
+        "fi": "ma–pe 8.00–21.00, la 9.00–20.00; Dyżur EMERGENCY 24 h; sairaalahoito ympäri vuorokauden."
       },
       "url": "https://krakow.amvet.pl/",
       "source_url": "https://krakow.amvet.pl/szpital-24h/",
@@ -396,7 +406,8 @@
         "pl": "Pon.–pt. dzień 9:00–20:00, noc 20:00–9:00; sob. 10:00–13:00 dzień, 13:00–24:00 dyżur interwencyjny; niedz. dyżur interwencyjny.",
         "cs": "Po–Pá den 9:00–20:00, noc 20:00–9:00; so 10:00–13:00 denní provoz, 13:00–24:00 pohotovostní služba; v neděli pohotovostní služba.",
         "sv": "Mån–fre dag 09.00–20.00, natt 20.00–09.00; lör 10.00–13.00 dag, 13.00–24.00 akutjour; sön akutjour.",
-        "da": "Man–fre dag 9.00–20.00, nat 20.00–9.00; lør 10.00–13.00 dag, 13.00–24.00 akut indgreb; søn akut indgreb."
+        "da": "Man–fre dag 9.00–20.00, nat 20.00–9.00; lør 10.00–13.00 dag, 13.00–24.00 akut indgreb; søn akut indgreb.",
+        "fi": "ma–pe päivä 9.00–20.00, yö 20.00–9.00; la 10.00–13.00 päivä, 13.00–24.00 kiireelliset toimenpiteet; su kiireelliset toimenpiteet."
       },
       "url": "https://luxvet24.pl/",
       "source_url": "https://luxvet24.pl/",
@@ -426,7 +437,8 @@
         "pl": "Pon.–niedz. 00:00–00:00 (całodobowo).",
         "cs": "Po–Ne nonstop (00:00–00:00).",
         "sv": "Mån–sön 00.00–24.00 (całodobowo)",
-        "da": "Man–søn 00.00–00.00 (całodobowo)."
+        "da": "Man–søn 00.00–00.00 (całodobowo).",
+        "fi": "ma–su 00.00–00.00 (całodobowo)."
       },
       "url": "https://www.skotnicka24.pl/",
       "source_url": "https://www.skotnicka24.pl/",
@@ -455,7 +467,8 @@
         "pl": "Czynne 24/7, także w nocy, w niedziele i święta.",
         "cs": "Otevřeno nonstop, i v noci, v neděli a o svátcích.",
         "sv": "Öppet dygnet runt, även nätter, söndagar och helgdagar.",
-        "da": "Åbent døgnet rundt, også nætter, søndage og helligdage."
+        "da": "Åbent døgnet rundt, også nætter, søndage og helligdage.",
+        "fi": "Auki 24/7, myös öisin, sunnuntaisin ja pyhäpäivinä."
       },
       "url": "https://kwt24.pl/",
       "source_url": "https://kwt24.pl/",
@@ -484,7 +497,8 @@
         "pl": "Pon.–pt. 8:00–21:00, sob. 8:00–16:00; w niedz., święta i poza tymi godzinami dyżur w nagłych przypadkach.",
         "cs": "Po–Pá 8:00–21:00, so 8:00–16:00; v neděli, o svátcích a mimo tyto hodiny pohotovostní služba.",
         "sv": "Mån–fre 08.00–21.00, lör 08.00–16.00; sön/helgdagar och övriga tider akutjour.",
-        "da": "Man–fre 8.00–21.00, lør 8.00–16.00; søn/helligdage og uden for åbningstid akutvagt."
+        "da": "Man–fre 8.00–21.00, lør 8.00–16.00; søn/helligdage og uden for åbningstid akutvagt.",
+        "fi": "ma–pe 8.00–21.00, la 8.00–16.00; su, pyhäpäivinä ja muina aikoina päivystys."
       },
       "url": "https://upw.urk.edu.pl/",
       "source_url": "https://upw.urk.edu.pl/",
@@ -514,7 +528,8 @@
         "pl": "Pon.–pt. 9:00–18:00, sob. 9:00–14:00.",
         "cs": "Po–Pá 9:00–18:00, so 9:00–14:00.",
         "sv": "Mån–fre 09.00–18.00, lör 09.00–14.00.",
-        "da": "Man–fre 9.00–18.00, lør 9.00–14.00."
+        "da": "Man–fre 9.00–18.00, lør 9.00–14.00.",
+        "fi": "ma–pe 9.00–18.00, la 9.00–14.00."
       },
       "url": "https://www.wetzakopianka.pl/",
       "source_url": "https://www.wetzakopianka.pl/",
@@ -543,7 +558,8 @@
         "pl": "Rejestracja pon.–pt. 8:00–20:30, sob.–niedz. i święta 9:00–16:00; przychodnia czynna całą dobę; dopłata za dyżur nocny.",
         "cs": "Registrace Po–Pá 8:00–20:30, so–ne a o svátcích 9:00–16:00; klinika otevřena nonstop; noční služba za příplatek.",
         "sv": "Registrering mån–fre 08.00–20.30, lör–sön/helgdagar 09.00–16.00; kliniken öppen dygnet runt; jourtillägg nattetid.",
-        "da": "Tidsbestilling man–fre 8.00–20.30, lør–søn/helligdage 9.00–16.00; klinikken er åben døgnet rundt; nattillæg."
+        "da": "Tidsbestilling man–fre 8.00–20.30, lør–søn/helligdage 9.00–16.00; klinikken er åben døgnet rundt; nattillæg.",
+        "fi": "Ilmoittautuminen ma–pe 8.00–20.30, la–su ja pyhäpäivinä 9.00–16.00; klinikka auki ympäri vuorokauden; yöpäivystyslisä."
       },
       "url": "https://www.skvet.pl/",
       "source_url": "https://www.skvet.pl/",
@@ -572,7 +588,8 @@
         "pl": "Opieka weterynaryjna 24/7.",
         "cs": "Veterinární péče nonstop.",
         "sv": "Veterinärvård dygnet runt.",
-        "da": "Dyrlæge døgnet rundt."
+        "da": "Dyrlæge døgnet rundt.",
+        "fi": "Eläinlääkärihoito 24/7."
       },
       "url": "https://dolvetwroclaw.pl/",
       "source_url": "https://dolvetwroclaw.pl/",
@@ -602,7 +619,8 @@
         "pl": "Ołtaszyn pon.–pt. 9:00–22:00, sob. 9:00–16:00, niedz. 11:00–13:00; osobny numer „Pogotowie całodobowe” 698 922 911.",
         "cs": "Ołtaszyn Po–Pá 9:00–22:00, so 9:00–16:00, ne 11:00–13:00; samostatné číslo „Pogotowie całodobowe“ 698 922 911.",
         "sv": "Ołtaszyn mån–fre 09.00–22.00, lör 09.00–16.00, sön 11.00–13.00; separat nummer \"Pogotowie całodobowe\" 698 922 911.",
-        "da": "Ołtaszyn man–fre 9.00–22.00, lør 9.00–16.00, søn 11.00–13.00; særligt nummer til \"Pogotowie całodobowe\" 698 922 911."
+        "da": "Ołtaszyn man–fre 9.00–22.00, lør 9.00–16.00, søn 11.00–13.00; særligt nummer til \"Pogotowie całodobowe\" 698 922 911.",
+        "fi": "Ołtaszyn ma–pe 9.00–22.00, la 9.00–16.00, su 11.00–13.00; erillinen ”Pogotowie całodobowe” -numero 698 922 911."
       },
       "url": "https://oltaszynska.pl/",
       "source_url": "https://oltaszynska.pl/kontakt/",
@@ -632,7 +650,8 @@
         "pl": "Pon.–pt. 8:00–21:00; sob.–niedz. Dyżur EMERGENCY 24h; poza zaplanowanymi wizytami całodobowy tryb dyżuru w nagłych przypadkach.",
         "cs": "Po–Pá 8:00–21:00; so–ne Dyżur EMERGENCY 24h; mimo plánované návštěvy pohotovostní režim nonstop.",
         "sv": "Mån–fre 08.00–21.00; lör–sön Dyżur EMERGENCY 24 h; utanför planerade besök akutjour dygnet runt.",
-        "da": "Man–fre 8.00–21.00; lør–søn Dyżur EMERGENCY døgnet rundt; uden for planlagte aftaler akutvagt døgnet rundt."
+        "da": "Man–fre 8.00–21.00; lør–søn Dyżur EMERGENCY døgnet rundt; uden for planlagte aftaler akutvagt døgnet rundt.",
+        "fi": "ma–pe 8.00–21.00; la–su Dyżur EMERGENCY 24 h; suunniteltujen käyntien ulkopuolella päivystystila 24/7."
       },
       "url": "https://gdansk.amvet.pl/",
       "source_url": "https://gdansk.amvet.pl/uslugi/dyzury-emergency/",
@@ -662,7 +681,8 @@
         "pl": "Czynne codziennie całą dobę.",
         "cs": "Otevřeno každý den nonstop.",
         "sv": "Öppet varje dag, dygnet runt.",
-        "da": "Åbent hver dag døgnet rundt."
+        "da": "Åbent hver dag døgnet rundt.",
+        "fi": "Auki joka päivä ympäri vuorokauden."
       },
       "url": "https://lecznicazwierzyniec.pl/",
       "source_url": "https://lecznicazwierzyniec.pl/",
@@ -691,7 +711,8 @@
         "pl": "Recepcja pon.–pt. 9:00–20:00, sob. 9:00–16:00; poza tym dyżur nocny.",
         "cs": "Recepce Po–Pá 9:00–20:00, so 9:00–16:00; jinak noční služba.",
         "sv": "Reception mån–fre 09.00–20.00, lör 09.00–16.00; i övrigt nattjour.",
-        "da": "Reception man–fre 9.00–20.00, lør 9.00–16.00; ellers nattevagt."
+        "da": "Reception man–fre 9.00–20.00, lør 9.00–16.00; ellers nattevagt.",
+        "fi": "Vastaanotto ma–pe 9.00–20.00, la 9.00–16.00; muina aikoina yöpäivystys."
       },
       "url": "https://sosken.pl/",
       "source_url": "https://sosken.pl/",
@@ -720,7 +741,8 @@
         "pl": "Redłowo pon.–pt. 9:00–20:00, sob.–niedz. i święta 9:00–12:00; po godzinach pracy dyżur nocny – zadzwoń przed wizytą, aby poznać godziny.",
         "cs": "Redłowo Po–Pá 9:00–20:00, so–ne a o svátcích 9:00–12:00; mimo ordinační dobu noční služba, časy si ověřte telefonicky.",
         "sv": "Redłowo mån–fre 09.00–20.00, lör–sön/helgdagar 09.00–12.00; nattjour utanför öppettiderna – ring innan du kommer för att få veta tiderna.",
-        "da": "Redłowo man–fre 9.00–20.00, lør–søn/helligdage 9.00–12.00; nattevagt uden for åbningstid – ring på forhånd for tider."
+        "da": "Redłowo man–fre 9.00–20.00, lør–søn/helligdage 9.00–12.00; nattevagt uden for åbningstid – ring på forhånd for tider.",
+        "fi": "Redłowo ma–pe 9.00–20.00, la–su ja pyhäpäivinä 9.00–12.00; yöpäivystys virka-ajan ulkopuolella – soita ja kysy ajat."
       },
       "url": "https://lecznica.gdynia.pl/",
       "source_url": "https://lecznica.gdynia.pl/",
@@ -749,7 +771,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 8:00–15:00, w niedzielę tylko dyżur w nagłych przypadkach; dyżur w nagłych przypadkach całą dobę.",
         "cs": "Po–Pá 8:00–20:00, so 8:00–15:00, v neděli pouze pohotovostní služba; pohotovostní služba nonstop.",
         "sv": "Mån–fre 08.00–20.00, lör 08.00–15.00, sön endast akutjour; akutjour dygnet runt.",
-        "da": "Man–fre 8.00–20.00, lør 8.00–15.00, søn kun akutvagt; akutvagt døgnet rundt."
+        "da": "Man–fre 8.00–20.00, lør 8.00–15.00, søn kun akutvagt; akutvagt døgnet rundt.",
+        "fi": "ma–pe 8.00–20.00, la 8.00–15.00, su vain päivystys; päivystys ympäri vuorokauden."
       },
       "url": "https://wetklinika.pl/",
       "source_url": "https://wetklinika.pl/",
@@ -779,7 +802,8 @@
         "pl": "Dyżur dzienny 8:00–19:30, w święta 9:00–17:30, potem dyżur nocny dla nagłych przypadków (zgłoś się osobiście).",
         "cs": "Denní služba 8:00–19:30, o svátcích 9:00–17:30, poté noční služba pro pohotovostní případy (přijďte osobně).",
         "sv": "Dagjour 08.00–19.30, helgdagar 09.00–17.30, därefter nattjour för akutfall (kom dit personligen).",
-        "da": "Dagvagt 8.00–19.30, helligdage 9.00–17.30, derefter nattevagt til akutte tilfælde (mød personligt op)."
+        "da": "Dagvagt 8.00–19.30, helligdage 9.00–17.30, derefter nattevagt til akutte tilfælde (mød personligt op).",
+        "fi": "Päiväpäivystys 8.00–19.30, pyhäpäivinä 9.00–17.30, sen jälkeen yöpäivystys kiireellisiin tapauksiin (tule paikan päälle)."
       },
       "url": "https://www.lecznica-brynow.pl/",
       "source_url": "https://www.lecznica-brynow.pl/medycyna-ratunkowa/",
@@ -808,7 +832,8 @@
         "pl": "Czynne całą dobę, 7 dni w tygodniu.",
         "cs": "Nonstop.",
         "sv": "Öppet dygnet runt.",
-        "da": "Åbent døgnet rundt."
+        "da": "Åbent døgnet rundt.",
+        "fi": "Auki 24/7."
       },
       "url": "https://tauzenwet.pl/",
       "source_url": "https://tauzen-wet.pl/ostry-dyzur-weterynaryjny-katowice/",
@@ -837,7 +862,8 @@
         "pl": "Czynne 24/7; w nocy zgłoś się osobiście (trudny kontakt telefoniczny).",
         "cs": "Otevřeno nonstop; v noci přijďte osobně (telefonicky se obtížně dovoláte).",
         "sv": "Öppet dygnet runt; på natten bör du komma personligen (svårt att nå via telefon).",
-        "da": "Åbent 24/7; om natten skal du møde op personligt (svært at komme igennem på telefon)."
+        "da": "Åbent 24/7; om natten skal du møde op personligt (svært at komme igennem på telefon).",
+        "fi": "Auki 24/7; yöllä tule paikan päälle (puhelimella vaikea tavoittaa)."
       },
       "url": "https://www.weterynaria-poznan.pl/",
       "source_url": "https://www.weterynaria-poznan.pl/dyzur-weterynaryjny/",
@@ -867,7 +893,8 @@
         "pl": "Czynne całodobowo, 7 dni w tygodniu.",
         "cs": "Otevřeno nonstop, 7 dní v týdnu.",
         "sv": "Öppet dygnet runt, alla dagar.",
-        "da": "Åbent 24 timer / 7 dage."
+        "da": "Åbent 24 timer / 7 dage.",
+        "fi": "Auki 24 h / 7 päivää."
       },
       "url": "https://www.klinwet.pl/",
       "source_url": "https://www.klinwet.pl/kontakt",
@@ -897,7 +924,8 @@
         "pl": "Całodobowo, 7 dni w tygodniu, także w święta.",
         "cs": "Nonstop, 7 dní v týdnu, včetně svátků.",
         "sv": "Dygnet runt, alla dagar, även helgdagar.",
-        "da": "24 timer, 7 dage, også helligdage."
+        "da": "24 timer, 7 dage, også helligdage.",
+        "fi": "24 h, 7 päivää, myös pyhäpäivinä."
       },
       "url": "https://www.vet-med-lodz.pl/",
       "source_url": "https://www.vet-med-lodz.pl/",
@@ -927,7 +955,8 @@
         "pl": "24/7.",
         "cs": "Nonstop.",
         "sv": "Dygnet runt.",
-        "da": "24/7."
+        "da": "24/7.",
+        "fi": "24/7."
       },
       "url": "https://lancet.pl/",
       "source_url": "https://lancet.pl/",
@@ -953,7 +982,8 @@
         "pl": "Pomoc nocna i świąteczna w Łodzi: Vet-Med i Lancet (całą dobę), SOWA (8:00–23:00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki).",
         "cs": "Noční pomoc a pomoc o svátcích v Lodži: Vet-Med a Lancet (nonstop), SOWA (8:00–23:00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki).",
         "sv": "Natt-/helgdagshjälp i Łódź: Vet-Med och Lancet (dygnet runt), SOWA (08.00–23.00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki).",
-        "da": "Nat- og helligdagshjælp i Łódź: Vet-Med og Lancet (døgnet rundt), SOWA (8.00–23.00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki)."
+        "da": "Nat- og helligdagshjælp i Łódź: Vet-Med og Lancet (døgnet rundt), SOWA (8.00–23.00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki).",
+        "fi": "Yö- ja pyhäpäivystys Łódźissa: Vet-Med ja Lancet (ympäri vuorokauden), SOWA (8.00–23.00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki)."
       },
       "small_animals": true,
       "url": "https://lodz.pl/artykul/nocna-pomoc-weterenaryjna-w-lodzi-sprawdz-gdzie-calodobowo-pomagaja-zwierzetom-lista-70367/",
@@ -984,7 +1014,8 @@
         "pl": "Całodobowo, 7 dni w tygodniu, 365 dni w roku.",
         "cs": "Nonstop, 7 dní v týdnu, 365 dní v roce.",
         "sv": "Dygnet runt, alla dagar, årets alla dagar.",
-        "da": "24 timer / 7 dage / 365 dage."
+        "da": "24 timer / 7 dage / 365 dage.",
+        "fi": "24 h / 7 päivää / 365 päivää."
       },
       "url": "https://klinikaszmaragdowa.pl/",
       "source_url": "https://klinikaszmaragdowa.pl/kontakt/",
@@ -1013,7 +1044,8 @@
         "pl": "Przychodnia całodobowo; szpital 24/7.",
         "cs": "Klinika nonstop; nemocnice nonstop.",
         "sv": "Klinik dygnet runt; sjukhus dygnet runt.",
-        "da": "Klinik 24 timer; hospital 24/7."
+        "da": "Klinik 24 timer; hospital 24/7.",
+        "fi": "Klinikka 24 h; sairaala 24/7."
       },
       "url": "https://lcmz.pl/",
       "source_url": "https://lcmz.pl/",
@@ -1043,7 +1075,8 @@
         "pl": "Rejestracja pon.–pt. 8:00–20:00, sob.–niedz. 8:00–14:00; weterynarz na dyżurze po godzinach pracy, w weekendy i święta pod +48 81 528 46 27 lub +48 515 078 885.",
         "cs": "Registrace Po–Pá 8:00–20:00, so–ne 8:00–14:00; pohotovostní veterinář mimo ordinační dobu, o víkendech a svátcích na +48 81 528 46 27 nebo +48 515 078 885.",
         "sv": "Registrering mån–fre 08.00–20.00, lör–sön 08.00–14.00; jourhavande veterinär utanför öppettiderna, på helger och helgdagar på +48 81 528 46 27 eller +48 515 078 885.",
-        "da": "Tidsbestilling man–fre 8.00–20.00, lør–søn 8.00–14.00; vagthavende dyrlæge uden for åbningstid, i weekender og på helligdage på +48 81 528 46 27 eller +48 515 078 885."
+        "da": "Tidsbestilling man–fre 8.00–20.00, lør–søn 8.00–14.00; vagthavende dyrlæge uden for åbningstid, i weekender og på helligdage på +48 81 528 46 27 eller +48 515 078 885.",
+        "fi": "Ilmoittautuminen ma–pe 8.00–20.00, la–su 8.00–14.00; päivystävä eläinlääkäri virka-ajan ulkopuolella, viikonloppuisin ja pyhäpäivinä numeroissa +48 81 528 46 27 tai +48 515 078 885."
       },
       "url": "https://up.lublin.pl/en/services/veterinary-clinic/",
       "source_url": "https://up.lublin.pl/en/services/veterinary-clinic/",
@@ -1086,7 +1119,8 @@
         "pl": "Pon.–pt. 9:00–17:00, sob. 9:00–13:00.",
         "cs": "Po–Pá 9:00–17:00, so 9:00–13:00.",
         "sv": "Mån–fre 09.00–17.00, lör 09.00–13.00.",
-        "da": "Man–fre 9.00–17.00, lør 9.00–13.00."
+        "da": "Man–fre 9.00–17.00, lør 9.00–13.00.",
+        "fi": "ma–pe 9.00–17.00, la 9.00–13.00."
       },
       "url": "https://vetmaria.mazury.pl/",
       "source_url": "https://vetmaria.mazury.pl/",
@@ -1115,7 +1149,8 @@
         "pl": "Zmiana dzienna pon.–pt. 8:00–20:00; zmiana nocna 20:00–8:00 pon.–niedz.; w sob.–niedz. dzienny dyżur interwencyjny 8:00–20:00.",
         "cs": "Denní směna Po–Pá 8:00–20:00; noční směna 20:00–8:00 Po–Ne; so–ne denní pohotovostní služba 8:00–20:00.",
         "sv": "Dagskift mån–fre 08.00–20.00; nattskift 20.00–08.00 mån–sön; lör–sön akut dagjour 08.00–20.00.",
-        "da": "Dagvagt man–fre 8.00–20.00; nattevagt 20.00–8.00 man–søn; lør–søn akut dagvagt 8.00–20.00."
+        "da": "Dagvagt man–fre 8.00–20.00; nattevagt 20.00–8.00 man–søn; lør–søn akut dagvagt 8.00–20.00.",
+        "fi": "Päivävuoro ma–pe 8.00–20.00; yövuoro 20.00–8.00 ma–su; la–su kiireellisten toimenpiteiden päivävuoro 8.00–20.00."
       },
       "url": "https://www.klinikavet24h.pl/",
       "source_url": "https://www.klinikavet24h.pl/kontakt/",
@@ -1144,7 +1179,8 @@
         "pl": "Zmiana dzienna 8:00–22:00, zmiana nocna 22:00–8:00 dla nagłych przypadków; tylko wizyty po telefonie.",
         "cs": "Denní směna 8:00–22:00, noční směna 22:00–8:00 pro pohotovostní případy; pouze po telefonické objednávce.",
         "sv": "Dagskift 08.00–22.00, nattskift 22.00–08.00 för akutfall; endast tidsbokning per telefon.",
-        "da": "Dagvagt 8.00–22.00, nattevagt 22.00–8.00 til akutte tilfælde; kun telefonisk tidsbestilling."
+        "da": "Dagvagt 8.00–22.00, nattevagt 22.00–8.00 til akutte tilfælde; kun telefonisk tidsbestilling.",
+        "fi": "Päivävuoro 8.00–22.00, yövuoro 22.00–8.00 päivystystapauksille; vain puhelinajanvaraus."
       },
       "url": "https://klinikacentrum.pl/",
       "source_url": "https://klinikacentrum.pl/",
@@ -1173,7 +1209,8 @@
         "pl": "Pon.–pt. 7:00–22:00, sob.–niedz. i święta 8:00–20:00.",
         "cs": "Po–Pá 7:00–22:00, so–ne a o svátcích 8:00–20:00.",
         "sv": "Mån–fre 07.00–22.00, lör–sön/helgdagar 08.00–20.00.",
-        "da": "Man–fre 7.00–22.00, lør–søn/helligdage 8.00–20.00."
+        "da": "Man–fre 7.00–22.00, lør–søn/helligdage 8.00–20.00.",
+        "fi": "ma–pe 7.00–22.00, la–su ja pyhäpäivinä 8.00–20.00."
       },
       "url": "https://www.lecznica-kora.pl/",
       "source_url": "https://www.lecznica-kora.pl/",
@@ -1202,7 +1239,8 @@
         "pl": "Pon.–sob. 20:00–8:00; w niedziele i święta całodobowo.",
         "cs": "Po–So 20:00–8:00; v neděli a o svátcích nonstop.",
         "sv": "Mån–lör 20.00–08.00; söndagar och helgdagar dygnet runt.",
-        "da": "Man–lør 20.00–8.00; søn og helligdage 24 timer."
+        "da": "Man–lør 20.00–8.00; søn og helligdage 24 timer.",
+        "fi": "ma–la 20.00–8.00; sunnuntaisin ja pyhäpäivinä 24 h."
       },
       "url": "https://www.pogotowieweterynaryjne.pl/",
       "source_url": "https://www.pogotowieweterynaryjne.pl/kontakt",
@@ -1232,7 +1270,8 @@
         "pl": "Pon.–sob. 20:00–8:00; w niedziele i święta całodobowo.",
         "cs": "Po–So 20:00–8:00; v neděli a o svátcích nonstop.",
         "sv": "Mån–lör 20.00–08.00; söndagar och helgdagar dygnet runt.",
-        "da": "Man–lør 20.00–8.00; søn og helligdage 24 timer."
+        "da": "Man–lør 20.00–8.00; søn og helligdage 24 timer.",
+        "fi": "ma–la 20.00–8.00; sunnuntaisin ja pyhäpäivinä 24 h."
       },
       "url": "https://www.pogotowieweterynaryjne.pl/",
       "source_url": "https://www.pogotowieweterynaryjne.pl/kontakt",
@@ -1262,7 +1301,8 @@
         "pl": "Godziny przychodni pon.–sob. w ciągu dnia i wieczorem; osobny numer Pogotowie 24/7 dla nagłych przypadków, stała opłata za dojazd.",
         "cs": "Ordinační doba Po–So přes den a večer; samostatné číslo Pogotowie nonstop pro pohotovost, pevný poplatek za výjezd.",
         "sv": "Klinikens öppettider mån–lör dag/kväll; separat Pogotowie-nummer dygnet runt för akutfall, fast utryckningsavgift.",
-        "da": "Klinikkens åbningstid man–lør dag/aften; særligt Pogotowie-nummer 24/7 til akutte tilfælde, fast udkaldsgebyr."
+        "da": "Klinikkens åbningstid man–lør dag/aften; særligt Pogotowie-nummer 24/7 til akutte tilfælde, fast udkaldsgebyr.",
+        "fi": "Klinikan aukioloajat ma–la päivisin ja iltaisin; erillinen Pogotowie 24/7 -numero päivystykseen, kiinteä käyntimaksu."
       },
       "url": "https://przychodnia-arka.pl/",
       "source_url": "https://przychodnia-arka.pl/kontakt",
@@ -1292,7 +1332,8 @@
         "pl": "Całodobowa praktyka weterynaryjna zapewniająca opiekę w nocy; zadzwoń przed wizytą.",
         "cs": "Veterinární praxe nonstop, poskytuje noční péči; před cestou zavolejte.",
         "sv": "Veterinärpraktik som är öppen dygnet runt och ger vård nattetid; ring innan du kommer.",
-        "da": "Døgnåben dyrlægepraksis med behandling om natten; ring på forhånd."
+        "da": "Døgnåben dyrlægepraksis med behandling om natten; ring på forhånd.",
+        "fi": "Ympärivuorokautinen eläinlääkäriasema, joka hoitaa myös öisin; soita etukäteen."
       },
       "url": "https://aquavet.opole.pl/",
       "source_url": "https://www.opole.pl/print/pdf/node/1884",
@@ -1322,7 +1363,8 @@
         "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–14:00, niedz. 10:00–12:00.",
         "cs": "Po–Pá 9:00–19:00, so 9:00–14:00, ne 10:00–12:00.",
         "sv": "Mån–fre 09.00–19.00, lör 09.00–14.00, sön 10.00–12.00.",
-        "da": "Man–fre 9.00–19.00, lør 9.00–14.00, søn 10.00–12.00."
+        "da": "Man–fre 9.00–19.00, lør 9.00–14.00, søn 10.00–12.00.",
+        "fi": "ma–pe 9.00–19.00, la 9.00–14.00, su 10.00–12.00."
       },
       "url": "https://weterynaria.bialystok.pl/",
       "source_url": "https://weterynaria.bialystok.pl/",
@@ -1351,7 +1393,8 @@
         "pl": "Pon.–pt. 9:00–19:00, sob. według ustaleń, w niedzielę nieczynne. Rezerwacja telefoniczna.",
         "cs": "Po–Pá 9:00–19:00, so dle domluvy, v neděli zavřeno. Objednávky telefonicky.",
         "sv": "Mån–fre 09.00–19.00, lör efter överenskommelse, sön stängt. Tidsbokning per telefon.",
-        "da": "Man–fre 9.00–19.00, lør efter aftale, søn lukket. Bookning pr. telefon."
+        "da": "Man–fre 9.00–19.00, lør efter aftale, søn lukket. Bookning pr. telefon.",
+        "fi": "ma–pe 9.00–19.00, la sopimuksen mukaan, su suljettu. Ajanvaraus puhelimitse."
       },
       "url": "https://pupil.bialystok.pl/",
       "source_url": "https://pupil.bialystok.pl/kontakt/",
@@ -1380,7 +1423,8 @@
         "pl": "Pon.–pt. 10:00–19:00, sob. 10:00–14:00.",
         "cs": "Po–Pá 10:00–19:00, so 10:00–14:00.",
         "sv": "Mån–fre 10.00–19.00, lör 10.00–14.00.",
-        "da": "Man–fre 10.00–19.00, lør 10.00–14.00."
+        "da": "Man–fre 10.00–19.00, lør 10.00–14.00.",
+        "fi": "ma–pe 10.00–19.00, la 10.00–14.00."
       },
       "url": "https://amicus.bialystok.pl/",
       "source_url": "https://amicus.bialystok.pl/",
@@ -1409,7 +1453,8 @@
         "pl": "Pon.–pt. 8:00–19:00 (po wcześniejszym umówieniu), sob. 8:00–13:00.",
         "cs": "Po–Pá 8:00–19:00 (na objednání), so 8:00–13:00.",
         "sv": "Mån–fre 08.00–19.00 (efter tidsbokning), lör 08.00–13.00.",
-        "da": "Man–fre 8.00–19.00 (efter aftale), lør 8.00–13.00."
+        "da": "Man–fre 8.00–19.00 (efter aftale), lør 8.00–13.00.",
+        "fi": "ma–pe 8.00–19.00 (ajanvarauksella), la 8.00–13.00."
       },
       "url": "https://help.zgora.pl/",
       "source_url": "https://help.zgora.pl/",
@@ -1438,7 +1483,8 @@
         "pl": "Pon.–pt. 8:00–18:00, sob. 9:00–15:00, niedz. 10:00–12:00.",
         "cs": "Po–Pá 8:00–18:00, so 9:00–15:00, ne 10:00–12:00.",
         "sv": "Mån–fre 08.00–18.00, lör 09.00–15.00, sön 10.00–12.00.",
-        "da": "Man–fre 8.00–18.00, lør 9.00–15.00, søn 10.00–12.00."
+        "da": "Man–fre 8.00–18.00, lør 9.00–15.00, søn 10.00–12.00.",
+        "fi": "ma–pe 8.00–18.00, la 9.00–15.00, su 10.00–12.00."
       },
       "url": "https://lecznica.zgora.pl/",
       "source_url": "https://lecznica.zgora.pl/kontakt/",
@@ -1467,7 +1513,8 @@
         "pl": "Pon.–pt. 7:00–20:00, sob. 8:00–16:00, w niedzielę nieczynne.",
         "cs": "Po–Pá 7:00–20:00, so 8:00–16:00, v neděli zavřeno.",
         "sv": "Mån–fre 07.00–20.00, lör 08.00–16.00, sön stängt.",
-        "da": "Man–fre 7.00–20.00, lør 8.00–16.00, søn lukket."
+        "da": "Man–fre 7.00–20.00, lør 8.00–16.00, søn lukket.",
+        "fi": "ma–pe 7.00–20.00, la 8.00–16.00, su suljettu."
       },
       "url": "https://gswet.pl/",
       "source_url": "https://gswet.pl/strona-glowna/kontakt/",
@@ -1495,7 +1542,8 @@
         "pl": "Pon.–pt. 9:00–18:00, sob. 9:00–12:00 (tylko leczenie kontrolne).",
         "cs": "Po–Pá 9:00–18:00, so 9:00–12:00 (pouze kontrolní ošetření).",
         "sv": "Mån–fre 09.00–18.00, lör 09.00–12.00 (endast uppföljande behandling).",
-        "da": "Man–fre 9.00–18.00, lør 9.00–12.00 (kun opfølgende behandling)."
+        "da": "Man–fre 9.00–18.00, lør 9.00–12.00 (kun opfølgende behandling).",
+        "fi": "ma–pe 9.00–18.00, la 9.00–12.00 (vain jatkohoito)."
       },
       "url": "https://przychodniawet.pl/",
       "source_url": "https://przychodniawet.pl/kontakt/",
@@ -1524,7 +1572,8 @@
         "pl": "Pon.–pt. 8:00–20:00; w sob.–niedz. nieczynne. Pomoc w nagłych przypadkach oferowana jako usługa; brak kontaktu po godzinach pracy.",
         "cs": "Po–Pá 8:00–20:00; so–ne zavřeno. Pohotovostní pomoc je nabízena jako služba; mimo ordinační dobu kontakt není k dispozici.",
         "sv": "Mån–fre 08.00–20.00; lör–sön stängt. Akuthjälp erbjuds som tjänst; ingen kontakt utanför öppettiderna.",
-        "da": "Man–fre 8.00–20.00; lør–søn lukket. Akut hjælp tilbydes som en service; ingen kontakt uden for åbningstid."
+        "da": "Man–fre 8.00–20.00; lør–søn lukket. Akut hjælp tilbydes som en service; ingen kontakt uden for åbningstid.",
+        "fi": "ma–pe 8.00–20.00; la–su suljettu. Päivystysapua tarjotaan palveluna; yhteystietoa virka-ajan ulkopuolelle ei ole."
       },
       "url": "https://czterylapy.com/",
       "source_url": "https://czterylapy.com/",
@@ -1553,7 +1602,8 @@
         "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–14:00, niedz. 9:00–12:00; w dni ustawowo wolne od pracy zamknięte.",
         "cs": "Po–Pá 9:00–19:00, so 9:00–14:00, ne 9:00–12:00; o státních svátcích zavřeno.",
         "sv": "Mån–fre 09.00–19.00, lör 09.00–14.00, sön 09.00–12.00; stängt på helgdagar.",
-        "da": "Man–fre 9.00–19.00, lør 9.00–14.00, søn 9.00–12.00; lukket på helligdage."
+        "da": "Man–fre 9.00–19.00, lør 9.00–14.00, søn 9.00–12.00; lukket på helligdage.",
+        "fi": "ma–pe 9.00–19.00, la 9.00–14.00, su 9.00–12.00; pyhäpäivinä suljettu."
       },
       "url": "https://weterynarz-kielce.eu/",
       "source_url": "https://weterynarz-kielce.eu/kontakt/",
@@ -1582,7 +1632,8 @@
         "pl": "Pon.–pt. 9:00–12:00 i 17:00–20:00; sob. po wcześniejszym umówieniu; niedz. zamknięte.",
         "cs": "Po–Pá 9:00–12:00 a 17:00–20:00; so na objednání; v neděli zavřeno.",
         "sv": "Mån–fre 09.00–12.00 och 17.00–20.00; lör efter tidsbokning; sön stängt.",
-        "da": "Man–fre 9.00–12.00 og 17.00–20.00; lør efter aftale; søn lukket."
+        "da": "Man–fre 9.00–12.00 og 17.00–20.00; lør efter aftale; søn lukket.",
+        "fi": "ma–pe 9.00–12.00 ja 17.00–20.00; la ajanvarauksella; su suljettu."
       },
       "url": "https://na4lapy.mragowo.pl/",
       "source_url": "https://na4lapy.mragowo.pl/",

@@ -185,7 +185,8 @@
         "pl": "Nagłe przypadki przyjmowane całodobowo bez wcześniejszego telefonu; personel pogotowia nie odbiera telefonów",
         "cs": "Pohotovostní pacienty přijímají nonstop bez předchozího telefonátu; pohotovostní personál nemůže přijímat telefonní hovory",
         "sv": "Akutpatienter tas emot dygnet runt utan att ringa i förväg; akutpersonalen kan inte svara i telefon",
-        "da": "Akutte patienter tages imod døgnet rundt uden at ringe på forhånd; akutpersonalet kan ikke besvare telefonopkald"
+        "da": "Akutte patienter tages imod døgnet rundt uden at ringe på forhånd; akutpersonalet kan ikke besvare telefonopkald",
+        "fi": "Päivystyspotilaat otetaan vastaan ympäri vuorokauden ilman että soitat etukäteen; päivystyshenkilökunta ei vastaa puheluihin"
       },
       "small_animals": true,
       "url": "https://www.vef.unizg.hr/en/services/university-veterinary-hospital/",
@@ -215,7 +216,8 @@
         "pl": "Numer pogotowia/dyżuru 060 600 100 (dni robocze 20:00–8:00, sob. od 13:30, niedz. i święta); zwykłe godziny pracy pon.–pt. 8–20, sob. 8:30–13:30",
         "cs": "Pohotovostní/služební linka 060 600 100 (v pracovní dny 20:00–8:00, so od 13:30, ne a svátky); běžná ordinační doba Po–Pá 8:00–20:00, so 8:30–13:30",
         "sv": "Akut-/jourlinje 060 600 100 (vardagar 20.00–08.00, lör från 13.30, sön och helgdagar); ordinarie öppettider mån–fre 8–20, lör 8.30–13.30",
-        "da": "Akut-/vagttelefon 060 600 100 (hverdage 20.00–08.00, lør fra 13.30, søn og helligdage); normal åbningstid man–fre 8–20, lør 8.30–13.30"
+        "da": "Akut-/vagttelefon 060 600 100 (hverdage 20.00–08.00, lør fra 13.30, søn og helligdage); normal åbningstid man–fre 8–20, lør 8.30–13.30",
+        "fi": "Päivystysnumero 060 600 100 (arkisin 20.00–8.00, la klo 13.30 alkaen, su ja pyhinä); normaalit aukioloajat ma–pe 8–20, la 8.30–13.30"
       },
       "small_animals": true,
       "url": "https://vetti-buba.hr/en/",
@@ -245,7 +247,8 @@
         "pl": "pon.–pt. 8–20, sob. 9–14, w niedzielę zamknięte; nagłe przypadki: przychodnia Buba 060 600 100",
         "cs": "Po–Pá 8:00–20:00, so 9:00–14:00, v neděli zavřeno; pohotovost: klinika Buba 060 600 100",
         "sv": "Mån–fre 8–20, lör 9–14, sön stängt; akutfall: Buba clinic 060 600 100",
-        "da": "Man–fre 8–20, lør 9–14, søn lukket; akut: klinikken Buba 060 600 100"
+        "da": "Man–fre 8–20, lør 9–14, søn lukket; akut: klinikken Buba 060 600 100",
+        "fi": "ma–pe 8–20, la 9–14, su suljettu; päivystys: Buba-klinikka 060 600 100"
       },
       "small_animals": true,
       "url": "https://vetti-buba.hr/en/",
@@ -273,7 +276,8 @@
         "pl": "Przyjęcia w nagłych przypadkach całodobowo po wcześniejszym telefonie pod 098 214 099; pon.–pt. 9–12 i 16–20, sob. 9–12",
         "cs": "Pohotovostní příjem nonstop po předchozím telefonátu na 098 214 099; Po–Pá 9:00–12:00 a 16:00–20:00, so 9:00–12:00",
         "sv": "Akutmottagning dygnet runt efter att du ringt i förväg till 098 214 099; mån–fre 9–12 och 16–20, lör 9–12",
-        "da": "Akut indlæggelse døgnet rundt efter forudgående opkald til 098 214 099; man–fre 9–12 og 16–20, lør 9–12"
+        "da": "Akut indlæggelse døgnet rundt efter forudgående opkald til 098 214 099; man–fre 9–12 og 16–20, lør 9–12",
+        "fi": "Päivystyspotilaiden vastaanotto 0–24 soittamalla ensin numeroon 098 214 099; ma–pe 9–12 ja 16–20, la 9–12"
       },
       "small_animals": true,
       "url": "https://veterinarska-bolnica.hr/",
@@ -303,7 +307,8 @@
         "pl": "Interwencje w nagłych przypadkach całodobowo (numer komórkowy na stronie przychodni); pon.–pt. 9–19:30, sob. 9–12",
         "cs": "Pohotovostní zákroky nonstop (číslo mobilu na webu kliniky); Po–Pá 9:00–19:30, so 9:00–12:00",
         "sv": "Akutinsatser dygnet runt (mobilnummer på klinikens webbplats); mån–fre 9–19.30, lör 9–12",
-        "da": "Akut hjælp døgnet rundt (mobilnummer på klinikkens hjemmeside); man–fre 9–19.30, lør 9–12"
+        "da": "Akut hjælp døgnet rundt (mobilnummer på klinikkens hjemmeside); man–fre 9–19.30, lør 9–12",
+        "fi": "Päivystys ympäri vuorokauden (matkapuhelinnumero klinikan sivuilla); ma–pe 9–19.30, la 9–12"
       },
       "small_animals": true,
       "url": "https://morna.hr/",
@@ -333,7 +338,8 @@
         "pl": "Dyżur całodobowo pod +385 1 3095 340; pon.–pt. 9–19:30, sob. 9–11:30",
         "cs": "Pohotovostní služba nonstop na +385 1 3095 340; Po–Pá 9:00–19:30, so 9:00–11:30",
         "sv": "Jour dygnet runt på +385 1 3095 340; mån–fre 9–19.30, lör 9–11.30",
-        "da": "Vagt døgnet rundt på +385 1 3095 340; man–fre 9–19.30, lør 9–11.30"
+        "da": "Vagt døgnet rundt på +385 1 3095 340; man–fre 9–19.30, lør 9–11.30",
+        "fi": "Päivystys ympäri vuorokauden numerossa +385 1 3095 340; ma–pe 9–19.30, la 9–11.30"
       },
       "small_animals": true,
       "url": "https://www.fabela.hr/",
@@ -362,7 +368,8 @@
         "pl": "pon.–pt. 8–20, sob. 9–13; nagłe przypadki całodobowo przez Veterinarska klinika Buba 060 600 100",
         "cs": "Po–Pá 8:00–20:00, so 9:00–13:00; pohotovost nonstop přes Veterinarska klinika Buba 060 600 100",
         "sv": "Mån–fre 8–20, lör 9–13; akutfall dygnet runt via Veterinarska klinika Buba 060 600 100",
-        "da": "Man–fre 8–20, lør 9–13; akut døgnet rundt via Veterinarska klinika Buba 060 600 100"
+        "da": "Man–fre 8–20, lør 9–13; akut døgnet rundt via Veterinarska klinika Buba 060 600 100",
+        "fi": "ma–pe 8–20, la 9–13; päivystys ympäri vuorokauden Veterinarska klinika Buban kautta 060 600 100"
       },
       "small_animals": true,
       "url": "https://www.markovic.hr/",
@@ -391,7 +398,8 @@
         "pl": "pon.–pt. 7–20, sob. 8–14, niedz./święta 8–12; poza godzinami pracy: Veterinarska klinika Buba 060 600 100; weterynarz w pogotowiu 098 339 671",
         "cs": "Po–Pá 7:00–20:00, so 8:00–14:00, ne a svátky 8:00–12:00; mimo ordinační dobu: Veterinarska klinika Buba 060 600 100; veterinář v pohotovosti 098 339 671",
         "sv": "Mån–fre 7–20, lör 8–14, sön och helgdagar 8–12; utanför öppettiderna: Veterinarska klinika Buba 060 600 100; veterinär i beredskap 098 339 671",
-        "da": "Man–fre 7–20, lør 8–14, søn/helligdage 8–12; uden for åbningstid: Veterinarska klinika Buba 060 600 100; dyrlæge i beredskab 098 339 671"
+        "da": "Man–fre 7–20, lør 8–14, søn/helligdage 8–12; uden for åbningstid: Veterinarska klinika Buba 060 600 100; dyrlæge i beredskab 098 339 671",
+        "fi": "ma–pe 7–20, la 8–14, su ja pyhinä 8–12; aukioloaikojen ulkopuolella: Veterinarska klinika Buba 060 600 100; eläinlääkäri varalla 098 339 671"
       },
       "small_animals": true,
       "url": "https://www.vs-grada-zagreba.hr/veterinarske-ambulante/",
@@ -419,7 +427,8 @@
         "pl": "pon.–pt. 7–20, sob. 8–14, niedz./święta zamknięte; poza godzinami pracy: Buba 060 600 100",
         "cs": "Po–Pá 7:00–20:00, so 8:00–14:00, v neděli a o svátcích zavřeno; mimo ordinační dobu: Buba 060 600 100",
         "sv": "Mån–fre 7–20, lör 8–14, sön och helgdagar stängt; utanför öppettiderna: Buba 060 600 100",
-        "da": "Man–fre 7–20, lør 8–14, søn/helligdage lukket; uden for åbningstid: Buba 060 600 100"
+        "da": "Man–fre 7–20, lør 8–14, søn/helligdage lukket; uden for åbningstid: Buba 060 600 100",
+        "fi": "ma–pe 7–20, la 8–14, su ja pyhinä suljettu; aukioloaikojen ulkopuolella: Buba 060 600 100"
       },
       "small_animals": true,
       "url": "https://www.vs-grada-zagreba.hr/veterinarske-ambulante/",
@@ -447,7 +456,8 @@
         "pl": "pon.–pt. 7–20, sob. 8–13, niedz./święta zamknięte; poza godzinami pracy: Buba 060 600 100",
         "cs": "Po–Pá 7:00–20:00, so 8:00–13:00, v neděli a o svátcích zavřeno; mimo ordinační dobu: Buba 060 600 100",
         "sv": "Mån–fre 7–20, lör 8–13, sön och helgdagar stängt; utanför öppettiderna: Buba 060 600 100",
-        "da": "Man–fre 7–20, lør 8–13, søn/helligdage lukket; uden for åbningstid: Buba 060 600 100"
+        "da": "Man–fre 7–20, lør 8–13, søn/helligdage lukket; uden for åbningstid: Buba 060 600 100",
+        "fi": "ma–pe 7–20, la 8–13, su ja pyhinä suljettu; aukioloaikojen ulkopuolella: Buba 060 600 100"
       },
       "small_animals": true,
       "url": "https://www.vs-grada-zagreba.hr/veterinarske-ambulante/",
@@ -475,7 +485,8 @@
         "pl": "pon.–pt. 8–20, sob. 9–13; numer pogotowia 099 250 3208",
         "cs": "Po–Pá 8:00–20:00, so 9:00–13:00; pohotovostní číslo 099 250 3208",
         "sv": "Mån–fre 8–20, lör 9–13; akutnummer 099 250 3208",
-        "da": "Man–fre 8–20, lør 9–13; akutnummer 099 250 3208"
+        "da": "Man–fre 8–20, lør 9–13; akutnummer 099 250 3208",
+        "fi": "ma–pe 8–20, la 9–13; päivystysnumero 099 250 3208"
       },
       "small_animals": true,
       "url": "https://vetiva.hr/",
@@ -504,7 +515,8 @@
         "pl": "Wizyty tylko po wcześniejszym umówieniu, z wyjątkiem nagłych przypadków; pogotowie/dyżur 091 633 8896",
         "cs": "Objednání nutné, kromě pohotovosti; pohotovost/služba 091 633 8896",
         "sv": "Tidsbokning krävs utom vid akutfall; akut/jour 091 633 8896",
-        "da": "Kun efter aftale, undtagen akutte tilfælde; akut/vagt 091 633 8896"
+        "da": "Kun efter aftale, undtagen akutte tilfælde; akut/vagt 091 633 8896",
+        "fi": "Ajanvaraus pakollinen paitsi päivystystapauksissa; päivystys 091 633 8896"
       },
       "small_animals": true,
       "url": "https://vetpoint.hr/",
@@ -532,7 +544,8 @@
         "pl": "pon.–pt. 9–12 i 16–20, sob. 8–13; telefon w nagłych przypadkach 098 411 042",
         "cs": "Po–Pá 9:00–12:00 a 16:00–20:00, so 8:00–13:00; pohotovostní hovory 098 411 042",
         "sv": "Mån–fre 9–12 och 16–20, lör 8–13; akutsamtal 098 411 042",
-        "da": "Man–fre 9–12 og 16–20, lør 8–13; akutopkald 098 411 042"
+        "da": "Man–fre 9–12 og 16–20, lør 8–13; akutopkald 098 411 042",
+        "fi": "ma–pe 9–12 ja 16–20, la 8–13; päivystyspuhelut 098 411 042"
       },
       "small_animals": true,
       "url": "https://www.vet-makar.com/",
@@ -561,7 +574,8 @@
         "pl": "pon.–pt. 9–20, sob. 9–11:30, niedz./święta zamknięte",
         "cs": "Po–Pá 9:00–20:00, so 9:00–11:30, v neděli a o svátcích zavřeno",
         "sv": "Mån–fre 9–20, lör 9–11.30, sön och helgdagar stängt",
-        "da": "Man–fre 9–20, lør 9–11.30, søn/helligdage lukket"
+        "da": "Man–fre 9–20, lør 9–11.30, søn/helligdage lukket",
+        "fi": "ma–pe 9–20, la 9–11.30, su ja pyhinä suljettu"
       },
       "small_animals": true,
       "url": "https://macjikasalj.hr/",
@@ -589,7 +603,8 @@
         "pl": "Interwencje w nagłych przypadkach całodobowo przez numery komórkowe dyżurnych podane na stronie przychodni; godziny letnie pon.–pt. 8–13 i 17–20, sob. 9–13, niedz. 9–11",
         "cs": "Pohotovostní zákroky nonstop přes mobilní čísla pohotovostní služby uvedená na webu kliniky; letní doba Po–Pá 8:00–13:00 a 17:00–20:00, so 9:00–13:00, ne 9:00–11:00",
         "sv": "Akutinsatser dygnet runt via jourmobiler som publiceras på klinikens webbplats; sommartider mån–fre 8–13 och 17–20, lör 9–13, sön 9–11",
-        "da": "Akut hjælp døgnet rundt via vagtmobiler på klinikkens hjemmeside; sommertid man–fre 8–13 og 17–20, lør 9–13, søn 9–11"
+        "da": "Akut hjælp døgnet rundt via vagtmobiler på klinikkens hjemmeside; sommertid man–fre 8–13 og 17–20, lør 9–13, søn 9–11",
+        "fi": "Päivystys ympäri vuorokauden klinikan sivuilla julkaistuihin päivystysnumeroihin; kesäaukioloajat ma–pe 8–13 ja 17–20, la 9–13, su 9–11"
       },
       "small_animals": true,
       "url": "https://www.ava-vet.hr/",
@@ -619,7 +634,8 @@
         "pl": "pon.–pt. 13–20, sob. 10–13, niedz. całodobowo; kontakt w nagłych przypadkach +385 91 789 7777",
         "cs": "Po–Pá 13:00–20:00, so 10:00–13:00, ne 0:00–24:00; pohotovostní kontakt +385 91 789 7777",
         "sv": "Mån–fre 13–20, lör 10–13, sön dygnet runt; akutkontakt +385 91 789 7777",
-        "da": "Man–fre 13–20, lør 10–13, søn døgnet rundt; akutkontakt +385 91 789 7777"
+        "da": "Man–fre 13–20, lør 10–13, søn døgnet rundt; akutkontakt +385 91 789 7777",
+        "fi": "ma–pe 13–20, la 10–13, su ympäri vuorokauden; päivystysyhteys +385 91 789 7777"
       },
       "small_animals": true,
       "url": "https://pet-it.com.hr/",
@@ -648,7 +664,8 @@
         "pl": "pon.–pt. 8:30–12 i 16–20, sob. 8:30–12; nagłe przypadki 091 733 8896",
         "cs": "Po–Pá 8:30–12:00 a 16:00–20:00, so 8:30–12:00; pohotovost 091 733 8896",
         "sv": "Mån–fre 8.30–12 och 16–20, lör 8.30–12; akutfall 091 733 8896",
-        "da": "Man–fre 8.30–12 og 16–20, lør 8.30–12; akut 091 733 8896"
+        "da": "Man–fre 8.30–12 og 16–20, lør 8.30–12; akut 091 733 8896",
+        "fi": "ma–pe 8.30–12 ja 16–20, la 8.30–12; päivystys 091 733 8896"
       },
       "small_animals": true,
       "url": "https://www.vetpoint40.hr/",
@@ -676,7 +693,8 @@
         "pl": "Dyżur całodobowy po wcześniejszym telefonie pod 060 600 900; pon.–pt. 8:00–20:00, sob. 8:00–13:00",
         "cs": "Pohotovost nonstop po předchozím zavolání na 060 600 900; Po–Pá 8:00–20:00, so 8:00–13:00",
         "sv": "Jour dygnet runt efter att du ringt i förväg till 060 600 900; mån–fre 8–20, lör 8–13",
-        "da": "Vagt døgnet rundt efter forudgående opkald til 060 600 900; man–fre 8–20, lør 8–13"
+        "da": "Vagt døgnet rundt efter forudgående opkald til 060 600 900; man–fre 8–20, lør 8–13",
+        "fi": "Päivystys ympäri vuorokauden, soita ensin numeroon 060 600 900; ma–pe 8–20, la 8–13"
       },
       "small_animals": true,
       "url": "https://vetti-split.hr/",
@@ -706,7 +724,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 8:00–12:00",
         "cs": "Po–Pá 8:00–20:00, so 8:00–12:00",
         "sv": "Mån–fre 8–20, lör 8–12",
-        "da": "Man–fre 8–20, lør 8–12"
+        "da": "Man–fre 8–20, lør 8–12",
+        "fi": "ma–pe 8–20, la 8–12"
       },
       "small_animals": true,
       "url": "https://www.ambulantabosnjak.hr/",
@@ -734,7 +753,8 @@
         "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–13:00",
         "cs": "Po–Pá 8:00–19:00, so 8:00–13:00",
         "sv": "Mån–fre 8–19, lör 8–13",
-        "da": "Man–fre 8–19, lør 8–13"
+        "da": "Man–fre 8–19, lør 8–13",
+        "fi": "ma–pe 8–19, la 8–13"
       },
       "url": "https://likomed.hr/",
       "source_url": "https://likomed.hr/",
@@ -774,7 +794,8 @@
         "pl": "Pon.–pt. 7:00–21:00, sob. 8:00–14:00, niedz. i święta nieczynne; komórka 091 214 8822",
         "cs": "Po–Pá 7:00–21:00, so 8:00–14:00, ne a svátky zavřeno; mobil 091 214 8822",
         "sv": "Mån–fre 7–21, lör 8–14, sön och helgdagar stängt; mobil 091 214 8822",
-        "da": "Man–fre 7–21, lør 8–14, søn/helligdage lukket; mobil 091 214 8822"
+        "da": "Man–fre 7–21, lør 8–14, søn/helligdage lukket; mobil 091 214 8822",
+        "fi": "ma–pe 7–21, la 8–14, su ja pyhinä suljettu; matkapuhelin 091 214 8822"
       },
       "small_animals": true,
       "url": "https://veterinarska.hr/klinika-rijeka/",
@@ -866,7 +887,8 @@
         "pl": "Nagłe przypadki +385 91 567 1918",
         "cs": "Pohotovost +385 91 567 1918",
         "sv": "Akutfall +385 91 567 1918",
-        "da": "Akut +385 91 567 1918"
+        "da": "Akut +385 91 567 1918",
+        "fi": "Päivystys +385 91 567 1918"
       },
       "small_animals": true,
       "url": "https://veterinar-polic.com/",
@@ -894,7 +916,8 @@
         "pl": "Nagłe przypadki 091 762 6462",
         "cs": "Pohotovost 091 762 6462",
         "sv": "Akutfall 091 762 6462",
-        "da": "Akut 091 762 6462"
+        "da": "Akut 091 762 6462",
+        "fi": "Päivystys 091 762 6462"
       },
       "url": "https://www.ferarica.com/",
       "source_url": "https://www.ferarica.com/",
@@ -921,7 +944,8 @@
         "pl": "Nagłe przypadki całodobowo pod +385 98 334 092 (także 098 334 091 / 093); pon.–pt. 8:00–15:00 i 17:00–19:00, sob. 8:00–13:00, niedz. 8:00–9:00",
         "cs": "Pohotovost nonstop na +385 98 334 092 (také 098 334 091 / 093); Po–Pá 8:00–15:00 a 17:00–19:00, so 8:00–13:00, ne 8:00–9:00",
         "sv": "Akutfall dygnet runt på +385 98 334 092 (även 098 334 091 / 093); mån–fre 8–15 och 17–19, lör 8–13, sön 8–9",
-        "da": "Akut døgnet rundt på +385 98 334 092 (også 098 334 091 / 093); man–fre 8–15 og 17–19, lør 8–13, søn 8–9"
+        "da": "Akut døgnet rundt på +385 98 334 092 (også 098 334 091 / 093); man–fre 8–15 og 17–19, lør 8–13, søn 8–9",
+        "fi": "Päivystys 0–24 numerossa +385 98 334 092 (myös 098 334 091 / 093); ma–pe 8–15 ja 17–19, la 8–13, su 8–9"
       },
       "small_animals": true,
       "url": "https://www.vet-rovinj.com/",
@@ -950,7 +974,8 @@
         "pl": "Nagłe przypadki całodobowo pod numerami komórkowymi w Rovinj; pon.–pt. 9:00–15:00, sob. 11:00–13:00, niedz. 11:00–12:00",
         "cs": "Pohotovost nonstop na mobilech v Rovinji; Po–Pá 9:00–15:00, so 11:00–13:00, ne 11:00–12:00",
         "sv": "Akutfall dygnet runt via mobilerna i Rovinj; mån–fre 9–15, lör 11–13, sön 11–12",
-        "da": "Akut døgnet rundt via mobilerne i Rovinj; man–fre 9–15, lør 11–13, søn 11–12"
+        "da": "Akut døgnet rundt via mobilerne i Rovinj; man–fre 9–15, lør 11–13, søn 11–12",
+        "fi": "Päivystys 0–24 Rovinjin matkapuhelinnumeroista; ma–pe 9–15, la 11–13, su 11–12"
       },
       "small_animals": true,
       "url": "https://www.vet-rovinj.com/",
@@ -979,7 +1004,8 @@
         "pl": "Interwencje w nagłych przypadkach całodobowo (komórki 098 398 003 / 098 334 403 / 099 814 5105); pon.–pt. 8:00–12:00 i 17:00–19:00, sob. 8:00–12:00",
         "cs": "Pohotovostní zákroky nonstop (mobily 098 398 003 / 098 334 403 / 099 814 5105); Po–Pá 8:00–12:00 a 17:00–19:00, so 8:00–12:00",
         "sv": "Akutinsatser dygnet runt (mobiler 098 398 003 / 098 334 403 / 099 814 5105); mån–fre 8–12 och 17–19, lör 8–12",
-        "da": "Akut hjælp døgnet rundt (mobiler 098 398 003 / 098 334 403 / 099 814 5105); man–fre 8–12 og 17–19, lør 8–12"
+        "da": "Akut hjælp døgnet rundt (mobiler 098 398 003 / 098 334 403 / 099 814 5105); man–fre 8–12 og 17–19, lør 8–12",
+        "fi": "Päivystys ympäri vuorokauden (puhelimet 098 398 003 / 098 334 403 / 099 814 5105); ma–pe 8–12 ja 17–19, la 8–12"
       },
       "url": "https://vetkk.hr/",
       "source_url": "https://vetkk.hr/",
@@ -1020,7 +1046,8 @@
         "pl": "Telefon alarmowy +385 91 521 6783 poza godzinami pracy; pon.–pt. 8:00–20:00, sob. 8:00–13:00 i 17:00–20:00, niedz. i święta 8:00–10:00",
         "cs": "Pohotovostní telefon +385 91 521 6783 mimo ordinační dobu; Po–Pá 8:00–20:00, so 8:00–13:00 a 17:00–20:00, ne a svátky 8:00–10:00",
         "sv": "Akuttelefon +385 91 521 6783 utanför öppettiderna; mån–fre 8–20, lör 8–13 och 17–20, sön och helgdagar 8–10",
-        "da": "Akuttelefon +385 91 521 6783 uden for åbningstid; man–fre 8–20, lør 8–13 og 17–20, søn/helligdage 8–10"
+        "da": "Akuttelefon +385 91 521 6783 uden for åbningstid; man–fre 8–20, lør 8–13 og 17–20, søn/helligdage 8–10",
+        "fi": "Päivystysnumero +385 91 521 6783 aukioloaikojen ulkopuolella; ma–pe 8–20, la 8–13 ja 17–20, su ja pyhinä 8–10"
       },
       "small_animals": true,
       "url": "https://veterinarska-bolnica-porec.com/en/",
@@ -1085,7 +1112,8 @@
         "pl": "Pon.–pt. 7:00–19:00, sob. 8:00–18:00; dyżur 099 2000 250 (niedziele i święta)",
         "cs": "Po–Pá 7:00–19:00, so 8:00–18:00; pohotovost 099 2000 250 (v neděli a o svátcích)",
         "sv": "Mån–fre 7–19, lör 8–18; jour 099 2000 250 (söndagar och helgdagar)",
-        "da": "Man–fre 7–19, lør 8–18; vagt 099 2000 250 (søn-/helligdage)"
+        "da": "Man–fre 7–19, lør 8–18; vagt 099 2000 250 (søn-/helligdage)",
+        "fi": "ma–pe 7–19, la 8–18; päivystys 099 2000 250 (su ja pyhinä)"
       },
       "small_animals": true,
       "url": "https://vetos.hr/",
@@ -1113,7 +1141,8 @@
         "pl": "Nagłe przypadki 24 godziny na dobę, 7 dni w tygodniu pod +385 31 272 230 (poza godzinami pracy zadzwoń przed przyjazdem)",
         "cs": "Pohotovost nonstop na +385 31 272 230 (mimo ordinační dobu před cestou zavolejte)",
         "sv": "Akutfall dygnet runt, alla dagar, på +385 31 272 230 (ring innan du kommer utanför öppettiderna)",
-        "da": "Akut døgnet rundt på +385 31 272 230 (ring, før du kommer uden for åbningstid)"
+        "da": "Akut døgnet rundt på +385 31 272 230 (ring, før du kommer uden for åbningstid)",
+        "fi": "Päivystys 24/7 numerossa +385 31 272 230 (soita ennen tuloa aukioloaikojen ulkopuolella)"
       },
       "small_animals": true,
       "url": "https://www.dr-doolitle.com.hr/",
@@ -1143,7 +1172,8 @@
         "pl": "Telefon dyżurny 098 411 888 (własni pacjenci; poza godzinami tylko przypadki zagrażające życiu); pon., śr., pt. 8:00–16:00, wt., czw. 12:00–20:00",
         "cs": "Pohotovostní mobil 098 411 888 (pouze vlastní pacienti; mimo ordinační dobu jen život ohrožující případy); Po, St, Pá 8:00–16:00, Út, Čt 12:00–20:00",
         "sv": "Jourmobil 098 411 888 (egna patienter; utanför öppettiderna endast livshotande fall); mån, ons, fre 8–16, tis, tors 12–20",
-        "da": "Vagtmobil 098 411 888 (egne patienter; uden for åbningstid kun livstruende tilfælde); man/ons/fre 8–16, tirs/tors 12–20"
+        "da": "Vagtmobil 098 411 888 (egne patienter; uden for åbningstid kun livstruende tilfælde); man/ons/fre 8–16, tirs/tors 12–20",
+        "fi": "Päivystysnumero 098 411 888 (omille potilaille; aukioloaikojen ulkopuolella vain henkeä uhkaavissa tapauksissa); ma, ke, pe 8–16; ti, to 12–20"
       },
       "small_animals": true,
       "url": "https://vetosan.com.hr/",
@@ -1171,7 +1201,8 @@
         "pl": "Telefon dyżurny +385 98 33 94 00 poza godzinami pracy i w weekendy; pon.–pt. 7:30–20:00, sob. 7:30–12:30",
         "cs": "Pohotovostní mobil +385 98 33 94 00 mimo ordinační dobu a o víkendech; Po–Pá 7:30–20:00, so 7:30–12:30",
         "sv": "Jourmobil +385 98 33 94 00 utanför öppettiderna och på helger; mån–fre 7.30–20, lör 7.30–12.30",
-        "da": "Vagtmobil +385 98 33 94 00 uden for åbningstid og i weekenden; man–fre 7.30–20, lør 7.30–12.30"
+        "da": "Vagtmobil +385 98 33 94 00 uden for åbningstid og i weekenden; man–fre 7.30–20, lør 7.30–12.30",
+        "fi": "Päivystysnumero +385 98 33 94 00 aukioloaikojen ulkopuolella ja viikonloppuisin; ma–pe 7.30–20, la 7.30–12.30"
       },
       "url": "https://veterinarskastanicazadar.hr/",
       "source_url": "https://veterinarskastanicazadar.hr/",
@@ -1226,7 +1257,8 @@
         "pl": "Dyżur całodobowy pod 099 6240 123 (20:00–7:00, poza godzinami pracy przychodni)",
         "cs": "Pohotovost nonstop na 099 6240 123 (20:00–7:00 mimo ordinační dobu kliniky)",
         "sv": "Jour utan uppehåll på 099 6240 123 (20–07 utanför klinikens öppettider)",
-        "da": "Vagt døgnet rundt på 099 6240 123 (20–07 uden for klinikkens åbningstid)"
+        "da": "Vagt døgnet rundt på 099 6240 123 (20–07 uden for klinikkens åbningstid)",
+        "fi": "Päivystys keskeytyksettä numerossa 099 6240 123 (20–7 klinikan aukioloaikojen ulkopuolella)"
       },
       "small_animals": true,
       "url": "https://www.vsv.hr/",
@@ -1256,7 +1288,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 8:00–13:00; w niedziele i święta dyżur całodobowy",
         "cs": "Po–Pá 8:00–20:00, so 8:00–13:00; v neděli a o svátcích pohotovostní služba nonstop",
         "sv": "Mån–fre 8–20, lör 8–13; söndagar och helgdagar jour dygnet runt",
-        "da": "Man–fre 8–20, lør 8–13; søn- og helligdage vagt døgnet rundt"
+        "da": "Man–fre 8–20, lør 8–13; søn- og helligdage vagt døgnet rundt",
+        "fi": "ma–pe 8–20, la 8–13; su ja pyhinä päivystys ympäri vuorokauden"
       },
       "small_animals": true,
       "url": "https://www.vsklc.hr/",
@@ -1285,7 +1318,8 @@
         "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–12:00",
         "cs": "Po–Pá 8:00–19:00, so 8:00–12:00",
         "sv": "Mån–fre 8–19, lör 8–12",
-        "da": "Man–fre 8–19, lør 8–12"
+        "da": "Man–fre 8–19, lør 8–12",
+        "fi": "ma–pe 8–19, la 8–12"
       },
       "small_animals": true,
       "url": "https://veterina-petplus.hr/",
@@ -1326,7 +1360,8 @@
         "pl": "Nagłe przypadki całodobowo; pon.–pt. 8:00–19:00, sob. 8:00–12:00, niedz. 9:00–11:00",
         "cs": "Pohotovost nonstop; Po–Pá 8:00–19:00, so 8:00–12:00, ne 9:00–11:00",
         "sv": "Akutfall dygnet runt; mån–fre 8–19, lör 8–12, sön 9–11",
-        "da": "Akut døgnet rundt; man–fre 8–19, lør 8–12, søn 9–11"
+        "da": "Akut døgnet rundt; man–fre 8–19, lør 8–12, søn 9–11",
+        "fi": "Päivystys 0–24; ma–pe 8–19, la 8–12, su 9–11"
       },
       "small_animals": true,
       "url": "https://veterinarska-koprivnica.hr/",
@@ -1368,7 +1403,8 @@
         "pl": "Pon.–pt. 7:00–19:00, sob. 7:00–17:00, niedz. 8:00–12:00",
         "cs": "Po–Pá 7:00–19:00, so 7:00–17:00, ne 8:00–12:00",
         "sv": "Mån–fre 7–19, lör 7–17, sön 8–12",
-        "da": "Man–fre 7–19, lør 7–17, søn 8–12"
+        "da": "Man–fre 7–19, lør 7–17, søn 8–12",
+        "fi": "ma–pe 7–19, la 7–17, su 8–12"
       },
       "small_animals": true,
       "url": "https://veterinarskastanicavk.hr/",
@@ -1397,7 +1433,8 @@
         "pl": "Nagłe przypadki całodobowo, 7 dni w tygodniu (komórka 099 441 0061)",
         "cs": "Pohotovost 24 hodin denně, 7 dní v týdnu (mobil 099 441 0061)",
         "sv": "Akutfall dygnet runt, alla veckans dagar (mobil 099 441 0061)",
-        "da": "Akut døgnet rundt, alle ugens dage (mobil 099 441 0061)"
+        "da": "Akut døgnet rundt, alle ugens dage (mobil 099 441 0061)",
+        "fi": "Päivystys 24 h, 7 päivää (matkapuhelin 099 441 0061)"
       },
       "small_animals": true,
       "url": "https://vsvu.hr/",
@@ -1426,7 +1463,8 @@
         "pl": "Telefon dyżurny +385 91 363 8080; pon.–pt. 8:00–12:00 i 16:00–19:00, sob. 8:00–12:00, niedz. 8:00–9:00",
         "cs": "Pohotovostní telefon +385 91 363 8080; Po–Pá 8:00–12:00 a 16:00–19:00, so 8:00–12:00, ne 8:00–9:00",
         "sv": "Jourtelefon +385 91 363 8080; mån–fre 8–12 och 16–19, lör 8–12, sön 8–9",
-        "da": "Vagttelefon +385 91 363 8080; man–fre 8–12 og 16–19, lør 8–12, søn 8–9"
+        "da": "Vagttelefon +385 91 363 8080; man–fre 8–12 og 16–19, lør 8–12, søn 8–9",
+        "fi": "Päivystysnumero +385 91 363 8080; ma–pe 8–12 ja 16–19, la 8–12, su 8–9"
       },
       "small_animals": true,
       "url": "https://www.vet-ambulanta-jug.hr/",
@@ -1455,7 +1493,8 @@
         "pl": "Pon.–pt. 7:00–14:00, sob. 7:00–12:00",
         "cs": "Po–Pá 7:00–14:00, so 7:00–12:00",
         "sv": "Mån–fre 7–14, lör 7–12",
-        "da": "Man–fre 7–14, lør 7–12"
+        "da": "Man–fre 7–14, lør 7–12",
+        "fi": "ma–pe 7–14, la 7–12"
       },
       "small_animals": true,
       "url": "https://www.va-gospic.hr/",
@@ -1483,7 +1522,8 @@
         "pl": "Pon.–pt. 7:00–19:00, sob. 7:00–12:00, niedz. i święta 7:00–9:00; zwierzęta domowe przyjmowane tylko w przychodni w godzinach pracy",
         "cs": "Po–Pá 7:00–19:00, so 7:00–12:00, ne a svátky 7:00–9:00; domácí zvířata se ošetřují jen v ordinaci v ordinační době",
         "sv": "Mån–fre 7–19, lör 7–12, sön och helgdagar 7–9; djur behandlas endast på kliniken under öppettiderna",
-        "da": "Man–fre 7–19, lør 7–12, søn/helligdage 7–9; dyr behandles kun på klinikken i åbningstiden"
+        "da": "Man–fre 7–19, lør 7–12, søn/helligdage 7–9; dyr behandles kun på klinikken i åbningstiden",
+        "fi": "ma–pe 7–19, la 7–12, su ja pyhinä 7–9; lemmikkejä hoidetaan vain klinikalla aukioloaikoina"
       },
       "small_animals": true,
       "url": "https://www.anima-vet.hr/",
@@ -1511,7 +1551,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 8:00–12:00, niedz. nieczynne.",
         "cs": "Po–Pá 8:00–20:00, so 8:00–12:00, ne zavřeno.",
         "sv": "Mån–fre 8–20, lör 8–12, sön stängt.",
-        "da": "Man–fre 08–20, lør 08–12, søn lukket."
+        "da": "Man–fre 08–20, lør 08–12, søn lukket.",
+        "fi": "ma–pe 8–20, la 8–12, su suljettu."
       },
       "small_animals": true,
       "url": "https://vet-svijet.hr/",
@@ -1539,7 +1580,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob. 9:00–13:00; linia dyżurna 099 3887542 codziennie całodobowo",
         "cs": "Po–Pá 9:00–20:00, so 9:00–13:00; pohotovostní linka 099 3887542 každý den nonstop",
         "sv": "Mån–fre 9–20, lör 9–13; jourlinje 099 3887542 alla dagar dygnet runt",
-        "da": "Man–fre 09–20, lør 09–13; vagttelefon 099 3887542 hver dag døgnet rundt"
+        "da": "Man–fre 09–20, lør 09–13; vagttelefon 099 3887542 hver dag døgnet rundt",
+        "fi": "ma–pe 9–20, la 9–13; päivystysnumero 099 3887542 joka päivä ympäri vuorokauden"
       },
       "small_animals": true,
       "url": "https://www.veterinabranimir.hr/",
@@ -1569,7 +1611,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob. 9:00–13:00; wspólna linia dyżurna 099 3887542 codziennie całodobowo",
         "cs": "Po–Pá 9:00–20:00, so 9:00–13:00; společná pohotovostní linka 099 3887542 každý den nonstop",
         "sv": "Mån–fre 9–20, lör 9–13; gemensam jourlinje 099 3887542 alla dagar dygnet runt",
-        "da": "Man–fre 09–20, lør 09–13; fælles vagttelefon 099 3887542 hver dag døgnet rundt"
+        "da": "Man–fre 09–20, lør 09–13; fælles vagttelefon 099 3887542 hver dag døgnet rundt",
+        "fi": "ma–pe 9–20, la 9–13; yhteinen päivystysnumero 099 3887542 joka päivä ympäri vuorokauden"
       },
       "small_animals": true,
       "url": "https://www.veterinabranimir.hr/",
@@ -1597,7 +1640,8 @@
         "pl": "Zadzwoń, by potwierdzić godziny.",
         "cs": "Otevírací dobu potvrďte telefonicky.",
         "sv": "Ring och bekräfta öppettiderna.",
-        "da": "Ring for at få bekræftet åbningstider."
+        "da": "Ring for at få bekræftet åbningstider.",
+        "fi": "Varmista aukioloajat soittamalla."
       },
       "small_animals": true,
       "url": "https://ljubimac.net/",
@@ -1626,7 +1670,8 @@
         "pl": "Tylko po wcześniejszym umówieniu: pon.–pt. 8:30–11:30 i 16:00–19:30, sob. 9:00–12:00; niedz. i święta nagłe przypadki tylko po wcześniejszym uzgodnieniu",
         "cs": "Pouze na objednání: Po–Pá 8:30–11:30 a 16:00–19:30, so 9:00–12:00; v neděli a o svátcích pohotovost pouze po předchozí domluvě",
         "sv": "Endast efter tidsbokning: mån–fre 8.30–11.30 och 16.00–19.30, lör 9–12; sön och helgdagar endast akutfall efter överenskommelse i förväg",
-        "da": "Kun efter aftale: man–fre 08.30–11.30 og 16.00–19.30, lør 09–12; søn/helligdage kun akutte tilfælde efter forudgående aftale"
+        "da": "Kun efter aftale: man–fre 08.30–11.30 og 16.00–19.30, lør 09–12; søn/helligdage kun akutte tilfælde efter forudgående aftale",
+        "fi": "Vain ajanvarauksella: ma–pe 8.30–11.30 ja 16.00–19.30, la 9–12; su/pyhinä vain päivystystapaukset sopimalla etukäteen"
       },
       "url": "https://www.galavet.hr/",
       "source_url": "https://www.galavet.hr/",
@@ -1653,7 +1698,8 @@
         "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–13:00; poza godzinami pracy zadzwoń do Veterinarska klinika Buba 060 600 100",
         "cs": "Po–Pá 9:00–19:00, so 9:00–13:00; mimo ordinační dobu volejte Veterinarska klinika Buba, 060 600 100",
         "sv": "Mån–fre 9–19, lör 9–13; efter stängning: ring Veterinarska klinika Buba 060 600 100",
-        "da": "Man–fre 09–19, lør 09–13; uden for åbningstid: ring til Veterinarska klinika Buba 060 600 100"
+        "da": "Man–fre 09–19, lør 09–13; uden for åbningstid: ring til Veterinarska klinika Buba 060 600 100",
+        "fi": "ma–pe 9–19, la 9–13; aukioloaikojen ulkopuolella soita Veterinarska klinika Bubaan 060 600 100"
       },
       "small_animals": true,
       "url": "https://klinika-kreszinger.com/",
@@ -1682,7 +1728,8 @@
         "pl": "Pon.–pt. 8:00–12:00 i 15:00–19:00, sob. 8:00–14:00; dyżur dla małych zwierząt 19:30–8:00 pod 091 2753 102; dyżur dla dużych zwierząt całodobowo pod 091 2753 103",
         "cs": "Po–Pá 8:00–12:00 a 15:00–19:00, so 8:00–14:00; pohotovost pro malá zvířata 19:30–8:00 na 091 2753 102; pohotovost pro velká zvířata nonstop na 091 2753 103",
         "sv": "Mån–fre 8–12 och 15–19, lör 8–14; jour för smådjur 19.30–08.00 på 091 2753 102; jour för stordjur dygnet runt på 091 2753 103",
-        "da": "Man–fre 08–12 og 15–19, lør 8–14; vagt for små dyr 19.30–08.00 på 091 2753 102; vagt for store dyr døgnet rundt på 091 2753 103"
+        "da": "Man–fre 08–12 og 15–19, lør 8–14; vagt for små dyr 19.30–08.00 på 091 2753 102; vagt for store dyr døgnet rundt på 091 2753 103",
+        "fi": "ma–pe 8–12 ja 15–19, la 8–14; pieneläinpäivystys 19.30–8.00 numerossa 091 2753 102; suurieläinpäivystys ympäri vuorokauden numerossa 091 2753 103"
       },
       "small_animals": true,
       "url": "https://www.vads.hr/",
@@ -1736,7 +1783,8 @@
         "pl": "Małe zwierzęta: pon., śr. 8:00–11:00 i 16:00–19:00; wt., czw., pt. 8:00–11:00; sob. 8:00–12:00 (11:00–14:00 pacjenci umówieni). Kontakt w nagłych przypadkach całodobowo: 099 2130 323",
         "cs": "Malá zvířata: Po a St 8:00–11:00 a 16:00–19:00; Út, Čt, Pá 8:00–11:00; so 8:00–12:00 (11:00–14:00 pro objednané pacienty). Pohotovostní kontakt nonstop: 099 2130 323",
         "sv": "Smådjur: mån och ons 8–11 och 16–19; tis, tors, fre 8–11; lör 8–12 (11–14 bokade patienter). Akutkontakt dygnet runt: 099 2130 323",
-        "da": "Små dyr: man og ons 08–11 og 16–19; tirs, tors, fre 08–11; lør 08–12 (11–14 for patienter med tid). Akutkontakt døgnet rundt: 099 2130 323"
+        "da": "Små dyr: man og ons 08–11 og 16–19; tirs, tors, fre 08–11; lør 08–12 (11–14 for patienter med tid). Akutkontakt døgnet rundt: 099 2130 323",
+        "fi": "Pieneläimet: ma ja ke 8–11 ja 16–19; ti, to, pe 8–11; la 8–12 (11–14 ajanvarauspotilaat). Päivystys ympäri vuorokauden: 099 2130 323"
       },
       "small_animals": true,
       "url": "https://vad.hr/",
@@ -1801,7 +1849,8 @@
         "pl": "Pon., śr., pt. 9:00–14:00; wt., czw. 14:00–19:00; sob. 9:00–12:00; niedz. i święta nieczynne; interwencje w nagłych przypadkach całodobowo",
         "cs": "Po, St, Pá 9:00–14:00; Út, Čt 14:00–19:00; so 9:00–12:00; ne a svátky zavřeno; pohotovostní zákroky nonstop",
         "sv": "Mån, ons, fre 9–14; tis, tors 14–19; lör 9–12; sön och helgdagar stängt; akutinsatser dygnet runt",
-        "da": "Man, ons, fre 09–14; tirs, tors 14–19; lør 09–12; søn og helligdage lukket; akut hjælp døgnet rundt"
+        "da": "Man, ons, fre 09–14; tirs, tors 14–19; lør 09–12; søn og helligdage lukket; akut hjælp døgnet rundt",
+        "fi": "ma, ke, pe 9–14; ti, to 14–19; la 9–12; su ja pyhinä suljettu; päivystys ympäri vuorokauden"
       },
       "url": "https://www.vaistravet.hr/",
       "source_url": "https://www.vaistravet.hr/index.php/kontakt-istra-vet",
@@ -1852,7 +1901,8 @@
         "pl": "Weterynarz dyżurny całodobowo pod 091 511 5092.",
         "cs": "Pohotovostní veterinář nonstop na 091 511 5092.",
         "sv": "Jourhavande veterinär dygnet runt på 091 511 5092.",
-        "da": "Vagthavende dyrlæge døgnet rundt på 091 511 5092."
+        "da": "Vagthavende dyrlæge døgnet rundt på 091 511 5092.",
+        "fi": "Päivystävä eläinlääkäri ympäri vuorokauden numerossa 091 511 5092."
       },
       "small_animals": true,
       "url": "https://veterinarskaambulantabokanjac.hr/",
@@ -1879,7 +1929,8 @@
         "pl": "Wizyty po wcześniejszym umówieniu telefonicznym; zadzwoń i potwierdź godziny.",
         "cs": "Objednání telefonicky; před návštěvou zavolejte a ověřte otevírací dobu.",
         "sv": "Tidsbokning per telefon; ring och bekräfta öppettiderna.",
-        "da": "Tidsbestilling pr. telefon; ring for at bekræfte åbningstiden."
+        "da": "Tidsbestilling pr. telefon; ring for at bekræfte åbningstiden.",
+        "fi": "Ajanvaraus puhelimitse; varmista aukioloajat soittamalla."
       },
       "small_animals": true,
       "url": "https://www.veterina-zilic.hr/",
@@ -1930,7 +1981,8 @@
         "pl": "Telefon dyżurny 099 700 3737 (całodobowo).",
         "cs": "Pohotovostní telefon 099 700 3737 (nonstop).",
         "sv": "Jourtelefon 099 700 3737 (dygnet runt).",
-        "da": "Vagttelefon 099 700 3737 (døgnet rundt)."
+        "da": "Vagttelefon 099 700 3737 (døgnet rundt).",
+        "fi": "Päivystyspuhelin 099 700 3737 (0–24)."
       },
       "url": "http://www.veterinar-vodice.com",
       "source_url": "https://www.grad-vodice.hr/informacije/vazni-telefonski-brojevi",
@@ -1971,7 +2023,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 8:00–13:00",
         "cs": "Po–Pá 8:00–20:00, so 8:00–13:00",
         "sv": "Mån–fre 8–20, lör 8–13",
-        "da": "Man–fre 8–20, lør 8–13"
+        "da": "Man–fre 8–20, lør 8–13",
+        "fi": "ma–pe 8–20, la 8–13"
       },
       "small_animals": true,
       "url": "https://veterina-ivana-pilic.hr/",
@@ -2000,7 +2053,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 8:30–13:00, niedz. nieczynne",
         "cs": "Po–Pá 8:00–20:00, so 8:30–13:00, ne zavřeno",
         "sv": "Mån–fre 08.00–20.00, lör 08.30–13.00, sön stängt",
-        "da": "Man–fre 08.00–20.00, lør 08.30–13.00, søn lukket"
+        "da": "Man–fre 08.00–20.00, lør 08.30–13.00, søn lukket",
+        "fi": "ma–pe 8.00–20.00, la 8.30–13.00, su suljettu"
       },
       "small_animals": true,
       "url": "https://vet-anima.com/",
@@ -2177,7 +2231,8 @@
         "pl": "Przychodnia dla małych zwierząt pon.–pt. 7:00–14:30, sob. 7:00–12:00 (lub pon.–pt. 7:30–19:00 z przerwą 16:30–17:30, sob. 7:00–13:00). Weterynarz dyżurny 24 godziny na dobę, 7 dni w tygodniu.",
         "cs": "Klinika malých zvířat Po–Pá 7:00–14:30, so 7:00–12:00 (nebo Po–Pá 7:30–19:00 s pauzou 16:30–17:30, so 7:00–13:00). Pohotovostní veterinář nonstop.",
         "sv": "Smådjursklinik mån–fre 07.00–14.30, lör 07.00–12.00 (eller mån–fre 07.30–19.00 med paus 16.30–17.30, lör 07.00–13.00). Jourhavande veterinär dygnet runt, alla dagar.",
-        "da": "Klinik for smådyr man–fre 07.00–14.30, lør 07.00–12.00 (eller man–fre 07.30–19.00 med pause 16.30–17.30, lør 07.00–13.00). Vagthavende dyrlæge døgnet rundt."
+        "da": "Klinik for smådyr man–fre 07.00–14.30, lør 07.00–12.00 (eller man–fre 07.30–19.00 med pause 16.30–17.30, lør 07.00–13.00). Vagthavende dyrlæge døgnet rundt.",
+        "fi": "Pieneläinklinikka ma–pe 7.00–14.30, la 7.00–12.00 (tai ma–pe 7.30–19.00, tauko 16.30–17.30, la 7.00–13.00). Päivystävä eläinlääkäri 24/7."
       },
       "small_animals": true,
       "url": "https://www.vs-krapina.hr/",
@@ -2205,7 +2260,8 @@
         "pl": "Dyżur całodobowy w nagłych przypadkach: zadzwoń pod numer przychodni, a automatyczna sekretarka poda komórkę weterynarza dyżurnego.",
         "cs": "Pohotovost nonstop: zavolejte na číslo kliniky a záznamník sdělí mobil veterináře ve službě.",
         "sv": "Jour dygnet runt för akutfall: ring klinikens nummer så ger telefonsvararen den jourhavande veterinärens mobilnummer.",
-        "da": "Vagt døgnet rundt ved akutte tilfælde: ring til klinikkens nummer, så oplyser telefonsvareren den vagthavende dyrlæges mobil."
+        "da": "Vagt døgnet rundt ved akutte tilfælde: ring til klinikkens nummer, så oplyser telefonsvareren den vagthavende dyrlæges mobil.",
+        "fi": "Päivystys 0–24: soita klinikan numeroon, niin vastaaja kertoo päivystävän eläinlääkärin matkapuhelinnumeron."
       },
       "small_animals": true,
       "url": "https://veterinarska-pozega.hr/",
@@ -2233,7 +2289,8 @@
         "pl": "Nagłe przypadki i poza godzinami pracy: 060 606 777 (weterynarz dyżurny dla zwierząt domowych).",
         "cs": "Pohotovost a mimo ordinační dobu: 060 606 777 (pohotovostní veterinář pro domácí zvířata).",
         "sv": "Akutfall och utanför öppettiderna: 060 606 777 (jourhavande veterinär för sällskapsdjur).",
-        "da": "Akut og uden for åbningstid: 060 606 777 (vagthavende dyrlæge for kæledyr)."
+        "da": "Akut og uden for åbningstid: 060 606 777 (vagthavende dyrlæge for kæledyr).",
+        "fi": "Päivystys ja aukioloaikojen ulkopuolella: 060 606 777 (lemmikkien päivystävä eläinlääkäri)."
       },
       "url": "https://vs-djakovo.hr/",
       "source_url": "https://vs-djakovo.hr/kontakt/",
@@ -2283,7 +2340,8 @@
         "pl": "Informacje o schronisku i adopcje: pon.–sob. 7:00–11:00, wt. i czw. po południu.",
         "cs": "Informace o útulku a adopcích: Po–so 7:00–11:00, Út a Čt odpoledne.",
         "sv": "Information om djurhemmet och adoption: mån–lör 7–11, tis och tors eftermiddagar.",
-        "da": "Information om internatet og adoption: man–lør 7–11, tirs og tors om eftermiddagen."
+        "da": "Information om internatet og adoption: man–lør 7–11, tirs og tors om eftermiddagen.",
+        "fi": "Tietoa turvakodista ja adoptiosta: ma–la 7–11, ti ja to iltapäivisin."
       },
       "url": "http://veterinarskastanicasisak.yolasite.com/",
       "source_url": "https://sisak.hr/info-centar-za-izgubljene-i-napustene-zivotinje/",

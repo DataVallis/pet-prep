@@ -120,7 +120,8 @@
         "pl": "Reklamuje się jako czynne całą dobę, bez dni wolnych. Zadzwoń wcześniej.",
         "cs": "Uvádí nepřetržitý provoz bez dnů volna. Předem zavolejte.",
         "sv": "Marknadsför sig med öppet dygnet runt utan lediga dagar. Ring innan du kommer.",
-        "da": "Reklamerer med drift døgnet rundt uden fridage. Ring på forhånd."
+        "da": "Reklamerer med drift døgnet rundt uden fridage. Ring på forhånd.",
+        "fi": "Mainostaa toimivansa ympäri vuorokauden ilman vapaapäiviä. Soita etukäteen."
       }
     },
     {
@@ -144,7 +145,8 @@
         "pl": "Reklamuje całodobowe operacje w nagłych przypadkach, całodobowe wizyty domowe i całodobowe oddziały hospitalizacji. Zadzwoń wcześniej.",
         "cs": "Uvádí nonstop pohotovostní chirurgii, nonstop návštěvy doma a nonstop lůžková oddělení. Předem zavolejte.",
         "sv": "Marknadsför akutkirurgi, hembesök och avdelningar för inneliggande vård dygnet runt. Ring innan du kommer.",
-        "da": "Reklamerer med akutkirurgi og hjemmebesøg døgnet rundt og indlæggelsesafdelinger døgnet rundt. Ring på forhånd."
+        "da": "Reklamerer med akutkirurgi og hjemmebesøg døgnet rundt og indlæggelsesafdelinger døgnet rundt. Ring på forhånd.",
+        "fi": "Mainostaa päivystysleikkauksia 24/7, kotikäyntejä 24/7 ja ympärivuorokautisia vuodeosastoja. Soita etukäteen."
       }
     },
     {
@@ -168,7 +170,8 @@
         "pl": "Reklamuje się jako przychodnia całodobowa. Zwykła rejestracja 9:30–20:00; po 20:00 tylko pacjenci w nagłych przypadkach; dopłata nocna 50% w godzinach 21:00–09:00.",
         "cs": "Uváděna jako nonstop klinika. Běžný příjem 9:30–20:00; po 20:00 pouze pohotovostní pacienti; noční příplatek 50 % platí 21:00–09:00.",
         "sv": "Marknadsförs som en klinik som har öppet dygnet runt. Ordinarie mottagning 9.30–20.00; efter 20.00 endast akutpatienter; 50 % nattillägg 21.00–09.00.",
-        "da": "Markedsføres som en klinik, der er åben døgnet rundt. Almindelig modtagelse 9.30–20.00; efter 20.00 kun akutte patienter; 50 % nattillæg 21.00–9.00."
+        "da": "Markedsføres som en klinik, der er åben døgnet rundt. Almindelig modtagelse 9.30–20.00; efter 20.00 kun akutte patienter; 50 % nattillæg 21.00–9.00.",
+        "fi": "Mainostaa olevansa ympärivuorokautinen klinikka. Normaali vastaanotto 9.30–20.00; klo 20.00 jälkeen vain päivystyspotilaat; 50 %:n yölisä 21.00–9.00."
       }
     },
     {
@@ -192,7 +195,8 @@
         "pl": "Reklamuje się jako przychodnia całodobowa. Zwykła rejestracja 9:30–20:00; po 20:00 tylko pacjenci w nagłych przypadkach; dopłata nocna 50% w godzinach 21:00–09:00.",
         "cs": "Uváděna jako nonstop klinika. Běžný příjem 9:30–20:00; po 20:00 pouze pohotovostní pacienti; noční příplatek 50 % platí 21:00–09:00.",
         "sv": "Marknadsförs som en klinik som har öppet dygnet runt. Ordinarie mottagning 9.30–20.00; efter 20.00 endast akutpatienter; 50 % nattillägg 21.00–09.00.",
-        "da": "Markedsføres som en klinik, der er åben døgnet rundt. Almindelig modtagelse 9.30–20.00; efter 20.00 kun akutte patienter; 50 % nattillæg 21.00–9.00."
+        "da": "Markedsføres som en klinik, der er åben døgnet rundt. Almindelig modtagelse 9.30–20.00; efter 20.00 kun akutte patienter; 50 % nattillæg 21.00–9.00.",
+        "fi": "Mainostaa olevansa ympärivuorokautinen klinikka. Normaali vastaanotto 9.30–20.00; klo 20.00 jälkeen vain päivystyspotilaat; 50 %:n yölisä 21.00–9.00."
       }
     },
     {
@@ -216,7 +220,8 @@
         "pl": "Reklamuje całodobowych weterynarzy, RTG, aptekę i sklep; otwarte codziennie. Zadzwoń wcześniej.",
         "cs": "Uvádí nonstop veterináře, rentgen, lékárnu a obchod; otevřeno každý den. Předem zavolejte.",
         "sv": "Marknadsför veterinärer, röntgen, apotek och butik dygnet runt; öppet alla dagar. Ring innan du kommer.",
-        "da": "Reklamerer med dyrlæger, røntgen, apotek og butik døgnet rundt; åbent alle dage. Ring på forhånd."
+        "da": "Reklamerer med dyrlæger, røntgen, apotek og butik døgnet rundt; åbent alle dage. Ring på forhånd.",
+        "fi": "Mainostaa ympärivuorokautisia eläinlääkäreitä, röntgeniä, apteekkia ja kauppaa; auki joka päivä. Soita etukäteen."
       }
     },
     {
@@ -240,7 +245,8 @@
         "pl": "Reklamuje się jako czynne całą dobę, bez dni wolnych; krótkie przerwy techniczne 08:30–09:00 i 19:30–20:00. Zadzwoń wcześniej.",
         "cs": "Uváděna jako nonstop, bez dnů volna; krátké technické přestávky 08:30–09:00 a 19:30–20:00. Předem zavolejte.",
         "sv": "Marknadsförs som öppet dygnet runt, utan lediga dagar; korta tekniska pauser 08.30–09.00 och 19.30–20.00. Ring innan du kommer.",
-        "da": "Markedsføres som åben døgnet rundt uden fridage; korte tekniske pauser 8.30–9.00 og 19.30–20.00. Ring på forhånd."
+        "da": "Markedsføres som åben døgnet rundt uden fridage; korte tekniske pauser 8.30–9.00 og 19.30–20.00. Ring på forhånd.",
+        "fi": "Mainostaa toimivansa ympäri vuorokauden ilman vapaapäiviä; lyhyet tekniset tauot 8.30–9.00 ja 19.30–20.00. Soita etukäteen."
       }
     },
     {
@@ -264,7 +270,8 @@
         "pl": "Czynne codziennie 9:00–18:00.",
         "cs": "Otevřeno denně 9:00–18:00.",
         "sv": "Öppet alla dagar 9.00–18.00.",
-        "da": "Åbent dagligt 9.00–18.00."
+        "da": "Åbent dagligt 9.00–18.00.",
+        "fi": "Auki päivittäin klo 9.00–18.00."
       }
     },
     {
@@ -288,7 +295,8 @@
         "pl": "Otwarte codziennie 10:00–18:00.",
         "cs": "Otevřeno denně 10:00–18:00.",
         "sv": "Öppet alla dagar 10.00–18.00.",
-        "da": "Åbent dagligt 10.00–18.00."
+        "da": "Åbent dagligt 10.00–18.00.",
+        "fi": "Auki päivittäin 10.00–18.00."
       }
     },
     {
@@ -312,7 +320,8 @@
         "pl": "Otwarte codziennie 10:00–18:00.",
         "cs": "Otevřeno denně 10:00–18:00.",
         "sv": "Öppet alla dagar 10.00–18.00.",
-        "da": "Åbent dagligt 10.00–18.00."
+        "da": "Åbent dagligt 10.00–18.00.",
+        "fi": "Auki päivittäin 10.00–18.00."
       }
     },
     {
@@ -336,7 +345,8 @@
         "pl": "Reklamuje działanie całodobowe, bez dni wolnych, i całodobowy oddział hospitalizacji. Zadzwoń wcześniej.",
         "cs": "Uvádí nonstop provoz bez dnů volna a nonstop lůžkové oddělení. Předem zavolejte.",
         "sv": "Marknadsför drift dygnet runt utan lediga dagar och en avdelning för inneliggande vård dygnet runt. Ring innan du kommer.",
-        "da": "Reklamerer med drift døgnet rundt uden fridage og en indlæggelsesafdeling døgnet rundt. Ring på forhånd."
+        "da": "Reklamerer med drift døgnet rundt uden fridage og en indlæggelsesafdeling døgnet rundt. Ring på forhånd.",
+        "fi": "Mainostaa toimivansa 24/7 ilman vapaapäiviä ja ympärivuorokautista vuodeosastoa. Soita etukäteen."
       }
     },
     {
@@ -386,7 +396,8 @@
         "pl": "Otwarte siedem dni w tygodniu bez przerwy; możliwe wizyty w nagłych przypadkach. W nocy zadzwoń wcześniej.",
         "cs": "Otevřeno sedm dní v týdnu bez přestávky; lze se objednat na pohotovost. V noci předem zavolejte.",
         "sv": "Öppet sju dagar i veckan utan paus; akuta tider erbjuds. Ring innan du kommer på natten.",
-        "da": "Åbent syv dage om ugen uden pause; akutte tider tilbydes. Ring på forhånd om natten."
+        "da": "Åbent syv dage om ugen uden pause; akutte tider tilbydes. Ring på forhånd om natten.",
+        "fi": "Auki seitsemän päivää viikossa ilman taukoa; päivystysaikoja tarjolla. Soita etukäteen yöllä."
       }
     },
     {
@@ -410,7 +421,8 @@
         "pl": "Pon.–pt. 9:00–18:00, sob. 9:00–15:00, niedz. 10:00–14:00.",
         "cs": "Po–Pá 9:00–18:00, so 9:00–15:00, ne 10:00–14:00.",
         "sv": "Mån–fre 9.00–18.00, lör 9.00–15.00, sön 10.00–14.00.",
-        "da": "Man–fre 9.00–18.00, lør 9.00–15.00, søn 10.00–14.00."
+        "da": "Man–fre 9.00–18.00, lør 9.00–15.00, søn 10.00–14.00.",
+        "fi": "ma–pe 9.00–18.00, la 9.00–15.00, su 10.00–14.00."
       }
     },
     {
@@ -433,7 +445,8 @@
         "pl": "Weterynarz z wizytami domowymi w Atyrau i regionie; reklamuje całodobową pomoc w nagłych przypadkach. Zadzwoń wcześniej.",
         "cs": "Výjezdní veterinář s návštěvami doma v Atyrau a okolí; uvádí nonstop pohotovostní pomoc. Předem zavolejte.",
         "sv": "Mobil veterinär med hembesök i Atyrau och regionen; marknadsför akut hjälp dygnet runt. Ring innan du kommer.",
-        "da": "Mobil dyrlæge med hjemmebesøg i Atyrau og omegn; har annonceret akuthjælp døgnet rundt. Ring på forhånd."
+        "da": "Mobil dyrlæge med hjemmebesøg i Atyrau og omegn; har annonceret akuthjælp døgnet rundt. Ring på forhånd.",
+        "fi": "Liikkuva eläinlääkäri kotikäynneillä Atyraussa ja sen alueella; mainostaa ympärivuorokautista päivystysapua. Soita etukäteen."
       }
     },
     {
@@ -457,7 +470,8 @@
         "pl": "Otwarte codziennie 9:00–21:00. Dostępny oddział hospitalizacji i usługi wizyt domowych.",
         "cs": "Otevřeno denně 9:00–21:00. Nabízí lůžkové oddělení a výjezdní službu.",
         "sv": "Öppet alla dagar 9.00–21.00. Avdelning för inneliggande vård och mobil tjänst erbjuds.",
-        "da": "Åbent dagligt 9.00–21.00. Indlæggelsesafdeling og mobil service tilbydes."
+        "da": "Åbent dagligt 9.00–21.00. Indlæggelsesafdeling og mobil service tilbydes.",
+        "fi": "Auki päivittäin 9.00–21.00. Vuodeosasto ja liikkuva palvelu tarjolla."
       }
     },
     {
@@ -494,7 +508,8 @@
         "pl": "Czynne codziennie 9:00–21:00.",
         "cs": "Otevřeno denně 9:00–21:00.",
         "sv": "Öppet alla dagar 9.00–21.00.",
-        "da": "Åbent dagligt 9.00–21.00."
+        "da": "Åbent dagligt 9.00–21.00.",
+        "fi": "Auki päivittäin klo 9.00–21.00."
       }
     }
   ],

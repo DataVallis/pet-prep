@@ -46,7 +46,8 @@
         "pl": "Mobilny weterynarz z wizytami domowymi dla psów i kotów; czynny całodobowo, 7 dni w tygodniu, także w nagłych przypadkach. Obsługiwane okolice: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
         "cs": "Výjezdní veterinář pro psy a kočky; otevřeno nonstop, 7 dní v týdnu, včetně pohotovosti. Obsluhované oblasti: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
         "sv": "Mobil veterinär med hembesök för hundar och katter; öppet dygnet runt, alla veckans dagar, även akutfall. Områden som täcks: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
-        "da": "Mobil dyrlæge, der kommer hjem til hunde og katte; åben døgnet rundt, 7 dage om ugen, også akut. Dækker: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun."
+        "da": "Mobil dyrlæge, der kommer hjem til hunde og katte; åben døgnet rundt, 7 dage om ugen, også akut. Dækker: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
+        "fi": "Liikkuva eläinlääkäri, joka tekee kotikäyntejä koirille ja kissoille; auki ympäri vuorokauden, 7 päivää viikossa, myös päivystys. Palvelualueet: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun."
       }
     },
     {
@@ -67,7 +68,8 @@
         "pl": "Pon.–sob. 08:00–18:00; w niedzielę na życzenie. W nagłych przypadkach zadzwoń przed wizytą.",
         "cs": "Po–So 8:00–18:00; v neděli na požádání. V případě pohotovosti před cestou zavolejte.",
         "sv": "Mån–lör 08.00–18.00; söndag på begäran. Ring innan du kommer vid akutfall.",
-        "da": "Man–lør 08.00–18.00; søndag efter aftale. Ring på forhånd ved akutte tilfælde."
+        "da": "Man–lør 08.00–18.00; søndag efter aftale. Ring på forhånd ved akutte tilfælde.",
+        "fi": "ma–la 8.00–18.00; su pyynnöstä. Soita etukäteen päivystystapauksissa."
       }
     },
     {
@@ -87,7 +89,8 @@
         "pl": "Uniwersytecki szpital dydaktyczny i referencyjny dla zwierząt; zadzwoń przed wizytą, aby poznać godziny.",
         "cs": "Univerzitní výuková a odborná nemocnice pro zvířata; ordinační dobu zjistěte telefonicky před cestou.",
         "sv": "Universitetets undervisnings- och remissdjursjukhus; ring innan du kommer för öppettider.",
-        "da": "Universitetets undervisnings- og henvisningsdyrehospital; ring på forhånd for åbningstider."
+        "da": "Universitetets undervisnings- og henvisningsdyrehospital; ring på forhånd for åbningstider.",
+        "fi": "Yliopiston opetus- ja erikoissairaala eläimille; soita etukäteen ja kysy aukioloajat."
       }
     },
     {
@@ -106,7 +109,8 @@
         "pl": "Uniwersytecki szpital dydaktyczny dla zwierząt domowych, gospodarskich i dzikich; zadzwoń przed wizytą, aby poznać godziny.",
         "cs": "Univerzitní výuková nemocnice pro domácí zvířata, hospodářská zvířata a volně žijící zvířata; ordinační dobu zjistěte telefonicky před cestou.",
         "sv": "Universitetets undervisningssjukhus för sällskapsdjur, livsmedelsproducerande djur och vilda djur; ring innan du kommer för öppettider.",
-        "da": "Universitetets undervisningshospital for kæledyr, produktionsdyr og vilde dyr; ring på forhånd for åbningstider."
+        "da": "Universitetets undervisningshospital for kæledyr, produktionsdyr og vilde dyr; ring på forhånd for åbningstider.",
+        "fi": "Yliopiston opetussairaala lemmikeille, tuotantoeläimille ja luonnonvaraisille eläimille; soita etukäteen ja kysy aukioloajat."
       }
     },
     {
@@ -126,7 +130,8 @@
         "pl": "Przychodnia dla małych zwierząt z oddziałem intensywnej terapii i oddziałem chorób zakaźnych; zadzwoń przed wizytą, aby poznać godziny.",
         "cs": "Klinika pro malá zvířata s jednotkou intenzivní péče a infekčním oddělením; ordinační dobu zjistěte telefonicky před cestou.",
         "sv": "Smådjursklinik med intensivvård och avdelning för smittsamma sjukdomar; ring innan du kommer för öppettider.",
-        "da": "Klinik for små dyr med intensivafdeling og afdeling for smitsomme sygdomme; ring på forhånd for åbningstider."
+        "da": "Klinik for små dyr med intensivafdeling og afdeling for smitsomme sygdomme; ring på forhånd for åbningstider.",
+        "fi": "Pieneläinklinikka, jolla on tehohoito ja tartuntatautiosasto; soita etukäteen ja kysy aukioloajat."
       }
     }
   ],

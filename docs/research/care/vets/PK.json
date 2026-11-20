@@ -45,7 +45,8 @@
         "pl": "Uniwersytecki szpital dydaktyczny, czynny całodobowo, 7 dni w tygodniu, z pomocą w nagłych przypadkach i intensywną terapią.",
         "cs": "Univerzitní výuková nemocnice, otevřeno nonstop, 7 dní v týdnu, s pohotovostní a intenzivní péčí.",
         "sv": "Universitetets undervisningssjukhus, öppet dygnet runt, alla dagar i veckan, med akut- och intensivvård.",
-        "da": "Universitetets undervisningshospital, åbent døgnet rundt, 7 dage om ugen, med akut- og intensivafdeling."
+        "da": "Universitetets undervisningshospital, åbent døgnet rundt, 7 dage om ugen, med akut- og intensivafdeling.",
+        "fi": "Yliopiston opetussairaala, auki ympäri vuorokauden 7 päivää viikossa, päivystys ja tehohoito."
       }
     },
     {
@@ -69,7 +70,8 @@
         "pl": "Linia dla nagłych przypadków czynna całodobowo, 7 dni w tygodniu, także w święta, w placówkach DHA i Lake City. Placówka UVAS 9:00–03:00, placówka UET 12:00–22:00.",
         "cs": "Pohotovostní linka nonstop, 7 dní v týdnu, včetně státních svátků, na pobočkách DHA a Lake City. Pobočka UVAS 9:00–3:00, pobočka UET 12:00–22:00.",
         "sv": "Akutlinje öppen dygnet runt, alla dagar, även helgdagar, vid filialerna DHA och Lake City. Filialen UVAS 09.00–03.00, filialen UET 12.00–22.00.",
-        "da": "Akuttelefon døgnet rundt, 7 dage om ugen, også på helligdage, på afdelingerne DHA og Lake City. Afdelingen UVAS 09.00–03.00, afdelingen UET 12.00–22.00."
+        "da": "Akuttelefon døgnet rundt, 7 dage om ugen, også på helligdage, på afdelingerne DHA og Lake City. Afdelingen UVAS 09.00–03.00, afdelingen UET 12.00–22.00.",
+        "fi": "Päivystyslinja auki ympäri vuorokauden, 7 päivää viikossa, myös pyhäpäivinä, DHA:n ja Lake Cityn toimipisteissä. UVAS-toimipiste 9.00–3.00, UET-toimipiste 12.00–22.00."
       }
     },
     {
@@ -93,7 +95,8 @@
         "pl": "Czynne od poniedziałku do niedzieli całą dobę; całodobowa pomoc w nagłych przypadkach.",
         "cs": "Otevřeno nonstop od pondělí do neděle; pohotovostní péče nonstop.",
         "sv": "Öppet måndag–söndag dygnet runt; akutvård dygnet runt.",
-        "da": "Åbent mandag til søndag døgnet rundt; akut hjælp døgnet rundt."
+        "da": "Åbent mandag til søndag døgnet rundt; akut hjælp døgnet rundt.",
+        "fi": "Auki joka päivä ympäri vuorokauden; päivystys 24/7."
       }
     },
     {
@@ -116,7 +119,8 @@
         "pl": "Czynne 24/7 z całodobowym nadzorem nad hospitalizowanymi zwierzętami.",
         "cs": "Otevřeno nonstop s nepřetržitým sledováním hospitalizovaných zvířat.",
         "sv": "Öppet dygnet runt med övervakning av inlagda djur dygnet runt.",
-        "da": "Åbent døgnet rundt med døgnovervågning af indlagte dyr."
+        "da": "Åbent døgnet rundt med døgnovervågning af indlagte dyr.",
+        "fi": "Auki 24/7, sairaalahoidossa olevia lemmikkejä valvotaan ympäri vuorokauden."
       }
     },
     {
@@ -139,7 +143,8 @@
         "pl": "Czynne 24/7, Airport Road. Rezerwacja przez WhatsApp.",
         "cs": "Otevřeno nonstop, Airport Road. Objednání přes WhatsApp.",
         "sv": "Öppet dygnet runt, Airport Road. Bokning via WhatsApp.",
-        "da": "Åbent døgnet rundt, Airport Road. Tidsbestilling via WhatsApp."
+        "da": "Åbent døgnet rundt, Airport Road. Tidsbestilling via WhatsApp.",
+        "fi": "Auki 24/7, Airport Road. Ajanvaraus WhatsAppilla."
       }
     },
     {
@@ -163,7 +168,8 @@
         "pl": "Czynne codziennie 11:00–23:00; nagłe przypadki 24/7. Telefon komórkowy 0306 7997887.",
         "cs": "Otevřeno denně 11:00–23:00; pohotovostní případy nonstop. Mobil 0306 7997887.",
         "sv": "Öppet dagligen 11.00–23.00; akutfall dygnet runt. Mobil 0306 7997887.",
-        "da": "Åbent hver dag 11.00–23.00; akutte tilfælde døgnet rundt. Mobil 0306 7997887."
+        "da": "Åbent hver dag 11.00–23.00; akutte tilfælde døgnet rundt. Mobil 0306 7997887.",
+        "fi": "Auki päivittäin 11.00–23.00; päivystystapaukset 24/7. Matkapuhelin 0306 7997887."
       }
     },
     {
@@ -187,7 +193,8 @@
         "pl": "Poradnia 10:00–22:00 codziennie; nagłe przypadki 24/7, dzwoń o każdej porze.",
         "cs": "Ambulance denně 10:00–22:00; pohotovost nonstop, volejte kdykoli.",
         "sv": "Mottagning 10.00–22.00 dagligen; akutfall dygnet runt, ring när som helst.",
-        "da": "Ambulant 10.00–22.00 hver dag; akut døgnet rundt, ring når som helst."
+        "da": "Ambulant 10.00–22.00 hver dag; akut døgnet rundt, ring når som helst.",
+        "fi": "Avovastaanotto päivittäin 10.00–22.00; päivystys 24/7, soita milloin tahansa."
       }
     },
     {
@@ -211,7 +218,8 @@
         "pl": "Czynne całą dobę, 24/7. Także 0304 534 9999, 051 2653157.",
         "cs": "Otevřeno nonstop. Také 0304 534 9999, 051 2653157.",
         "sv": "Öppet dygnet runt. Även 0304 534 9999, 051 2653157.",
-        "da": "Åbent døgnet rundt. Også 0304 534 9999, 051 2653157."
+        "da": "Åbent døgnet rundt. Også 0304 534 9999, 051 2653157.",
+        "fi": "Auki ympäri vuorokauden, 24/7. Myös 0304 534 9999, 051 2653157."
       }
     },
     {
@@ -234,7 +242,8 @@
         "pl": "Pomoc w nagłych przypadkach 24/7, zespół w gotowości. Także 051 5148545.",
         "cs": "Nonstop pohotovostní péče o domácí zvířata, tým je stále v pohotovosti. Také 051 5148545.",
         "sv": "Akut djurvård dygnet runt, akutteam i beredskap. Även 051 5148545.",
-        "da": "Akut dyrehjælp døgnet rundt, akutteam i beredskab. Også 051 5148545."
+        "da": "Akut dyrehjælp døgnet rundt, akutteam i beredskab. Også 051 5148545.",
+        "fi": "Lemmikkien päivystys 24/7, päivystystiimi valmiudessa. Myös 051 5148545."
       }
     },
     {
@@ -257,7 +266,8 @@
         "pl": "Czynne codziennie 9:30–21:00; linia dla nagłych przypadków 0315 9596162, rejestracja wizyt 0333 1904310.",
         "cs": "Otevřeno denně 9:30–21:00; pohotovostní linka 0315 9596162, objednávky 0333 1904310.",
         "sv": "Öppet dagligen 09.30–21.00; akutlinje 0315 9596162, tidsbokning 0333 1904310.",
-        "da": "Åbent hver dag 9.30–21.00; akuttelefon 0315 9596162, tidsbestilling 0333 1904310."
+        "da": "Åbent hver dag 9.30–21.00; akuttelefon 0315 9596162, tidsbestilling 0333 1904310.",
+        "fi": "Auki päivittäin 9.30–21.00; päivystyslinja 0315 9596162, ajanvaraus 0333 1904310."
       }
     },
     {
@@ -280,7 +290,8 @@
         "pl": "Czynne codziennie od około 11:00 do 23:30; oferuje pomoc w nagłych przypadkach, zadzwoń przed wizytą. Także 0320 8285086.",
         "cs": "Otevřeno denně přibližně 11:00–23:30; nabízí pohotovostní pomoc, před cestou zavolejte. Také 0320 8285086.",
         "sv": "Öppet dagligen från ca 11.00 till 23.30; akutstöd erbjuds, ring innan du kommer. Även 0320 8285086.",
-        "da": "Åbent hver dag fra ca. 11.00 til 23.30; akut hjælp tilbydes, ring på forhånd. Også 0320 8285086."
+        "da": "Åbent hver dag fra ca. 11.00 til 23.30; akut hjælp tilbydes, ring på forhånd. Også 0320 8285086.",
+        "fi": "Auki päivittäin noin 11.00–23.30; päivystysapua tarjolla, soita etukäteen. Myös 0320 8285086."
       }
     },
     {
@@ -303,7 +314,8 @@
         "pl": "Czynne codziennie od południa do północy. Także +92 304 0738738.",
         "cs": "Otevřeno denně 12:00–24:00. Také +92 304 0738738.",
         "sv": "Öppet dagligen 12.00–24.00. Även +92 304 0738738.",
-        "da": "Åbent hver dag fra middag til midnat. Også +92 304 0738738."
+        "da": "Åbent hver dag fra middag til midnat. Også +92 304 0738738.",
+        "fi": "Auki päivittäin klo 12–24. Myös +92 304 0738738."
       }
     },
     {
@@ -327,7 +339,8 @@
         "pl": "Czynne całodobowo, z pomocą w nagłych przypadkach 24/7.",
         "cs": "Otevřeno nonstop, pohotovost 24 hodin denně, 7 dní v týdnu.",
         "sv": "Öppet dygnet runt, med akutberedskap dygnet runt.",
-        "da": "Døgnåben, med akut hjælp døgnet rundt."
+        "da": "Døgnåben, med akut hjælp døgnet rundt.",
+        "fi": "Auki ympäri vuorokauden, päivystys 24/7."
       }
     },
     {
@@ -351,7 +364,8 @@
         "pl": "Zwykła opieka codziennie 11:00–21:00; pomoc w nagłych przypadkach dostępna 24/7.",
         "cs": "Běžná péče denně 11:00–21:00; pohotovostní pomoc nonstop.",
         "sv": "Rutinvård dagligen 11.00–21.00; akutstöd dygnet runt.",
-        "da": "Almindelig behandling hver dag 11.00–21.00; akut hjælp døgnet rundt."
+        "da": "Almindelig behandling hver dag 11.00–21.00; akut hjælp døgnet rundt.",
+        "fi": "Perushoito päivittäin 11.00–21.00; päivystysapua saatavilla 24/7."
       }
     },
     {
@@ -374,7 +388,8 @@
         "pl": "Czynne codziennie 15:00–22:00. Dostępny WhatsApp.",
         "cs": "Otevřeno denně 15:00–22:00. K dispozici je WhatsApp.",
         "sv": "Öppet dagligen 15.00–22.00. Går att nå via WhatsApp.",
-        "da": "Åbent hver dag 15.00–22.00. Kan kontaktes på WhatsApp."
+        "da": "Åbent hver dag 15.00–22.00. Kan kontaktes på WhatsApp.",
+        "fi": "Auki päivittäin klo 15–22. WhatsApp käytössä."
       }
     },
     {
@@ -397,7 +412,8 @@
         "pl": "Pon.–pt. 8:00–18:00, sob. 8:00–16:00; pomoc w nagłych przypadkach dostępna całą dobę.",
         "cs": "Po–Pá 8:00–18:00, so 8:00–16:00; pohotovostní služba nonstop.",
         "sv": "Mån–fre 08.00–18.00, lör 08.00–16.00; akutjour dygnet runt.",
-        "da": "Man–fre 8.00–18.00, lør 8.00–16.00; akuttjeneste døgnet rundt."
+        "da": "Man–fre 8.00–18.00, lør 8.00–16.00; akuttjeneste døgnet rundt.",
+        "fi": "ma–pe 8.00–18.00, la 8.00–16.00; päivystys ympäri vuorokauden."
       }
     },
     {
@@ -421,7 +437,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 9:00–20:00, w niedzielę nieczynne; pomoc w nagłych przypadkach dla zwierząt domowych i gospodarskich reklamowana jako całodobowa (także +92 315 6300087).",
         "cs": "Po–Pá 8:00–20:00, so 9:00–20:00, v neděli zavřeno; pohotovostní pomoc pro domácí a hospodářská zvířata nonstop (také +92 315 6300087).",
         "sv": "Mån–fre 08.00–20.00, lör 09.00–20.00, stängt sön; akutstöd för sällskapsdjur och lantbruksdjur marknadsförs dygnet runt (även +92 315 6300087).",
-        "da": "Man–fre 8.00–20.00, lør 9.00–20.00, lukket søndag; akut hjælp til kæledyr og husdyr oplyses som døgnåben (også +92 315 6300087)."
+        "da": "Man–fre 8.00–20.00, lør 9.00–20.00, lukket søndag; akut hjælp til kæledyr og husdyr oplyses som døgnåben (også +92 315 6300087).",
+        "fi": "ma–pe 8.00–20.00, la 9.00–20.00, su suljettu; päivystysapu lemmikeille ja tuotantoeläimille ilmoitettu 24/7 (myös +92 315 6300087)."
       }
     },
     {
@@ -443,7 +460,8 @@
         "pl": "Czynne codziennie, Hayatabad Phase 3.",
         "cs": "Otevřeno denně, Hayatabad Phase 3.",
         "sv": "Öppet dagligen, Hayatabad Phase 3.",
-        "da": "Åbent hver dag, Hayatabad Phase 3."
+        "da": "Åbent hver dag, Hayatabad Phase 3.",
+        "fi": "Auki päivittäin, Hayatabad Phase 3."
       }
     }
   ],

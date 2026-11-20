@@ -51,7 +51,8 @@
       "duty_i18n": {
         "cs": "Otevřeno nonstop, včetně pohotovosti. Telefon/WhatsApp +505 8966-5221.",
         "sv": "Öppet dygnet runt, inklusive akutfall. Telefon/WhatsApp +505 8966-5221.",
-        "da": "Åbent døgnet rundt, også akut. Telefon/WhatsApp +505 8966-5221."
+        "da": "Åbent døgnet rundt, også akut. Telefon/WhatsApp +505 8966-5221.",
+        "fi": "Auki ympäri vuorokauden, myös päivystys. Puhelin/WhatsApp +505 8966-5221."
       }
     },
     {
@@ -71,7 +72,8 @@
       "duty_i18n": {
         "cs": "Otevřeno od pondělí do soboty 8:00–18:00.",
         "sv": "Öppet måndag–lördag 8.00–18.00.",
-        "da": "Åbent mandag til lørdag 8.00–18.00."
+        "da": "Åbent mandag til lørdag 8.00–18.00.",
+        "fi": "Auki maanantaista lauantaihin 8.00–18.00."
       }
     },
     {
@@ -91,7 +93,8 @@
       "duty_i18n": {
         "cs": "Otevřeno Po–Pá 9:00–17:00, v sobotu a v neděli zavřeno.",
         "sv": "Öppet måndag–fredag 9.00–17.00, stängt lördag och söndag.",
-        "da": "Åbent mandag til fredag 9.00–17.00, lukket lørdag og søndag."
+        "da": "Åbent mandag til fredag 9.00–17.00, lukket lørdag og søndag.",
+        "fi": "Auki maanantaista perjantaihin 9.00–17.00, lauantaisin ja sunnuntaisin suljettu."
       }
     }
   ],

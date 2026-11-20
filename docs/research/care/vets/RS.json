@@ -45,7 +45,8 @@
         "pl": "Czynne całodobowo, codziennie. Telefon dyżurny 063 241-668; możesz dzwonić o każdej porze.",
         "cs": "Otevřeno nonstop, každý den. Pohotovostní telefon 063 241-668; volat můžete kdykoli.",
         "sv": "Öppet dygnet runt, alla dagar. Jourtelefon 063 241-668; du kan ringa när som helst.",
-        "da": "Åbent 24 timer, hver dag. Vagttelefon 063 241-668; du kan ringe når som helst."
+        "da": "Åbent 24 timer, hver dag. Vagttelefon 063 241-668; du kan ringe når som helst.",
+        "fi": "Auki ympäri vuorokauden joka päivä. Päivystysnumero 063 241-668; voit soittaa milloin tahansa."
       },
       "small_animals": true,
       "url": "https://www.vetboban.rs/",
@@ -73,7 +74,8 @@
         "pl": "Godziny przyjęć pon.–pt. 10:00–19:00; całodobowy dyżur w nagłych przypadkach – najpierw zadzwoń i umów się telefonicznie.",
         "cs": "Ordinační doba Po–Pá 10:00–19:00; nonstop pohotovostní služba, nejdřív zavolejte a objednejte se telefonicky.",
         "sv": "Mottagning mån–fre 10.00–19.00; jour dygnet runt för akutfall – ring först och boka per telefon.",
-        "da": "Åbningstid man–fre 10.00–19.00; vagt 24 timer til akutte tilfælde – ring først og bestil tid pr. telefon."
+        "da": "Åbningstid man–fre 10.00–19.00; vagt 24 timer til akutte tilfælde – ring først og bestil tid pr. telefon.",
+        "fi": "Vastaanottoaika ma–pe 10–19; päivystys ympäri vuorokauden hätätapauksille – soita ensin ja sovi aika puhelimitse."
       },
       "small_animals": true,
       "url": "https://dezurniveterinarbgd.com/",
@@ -102,7 +104,8 @@
         "pl": "Przychodnia czynna 9:00–20:00; dyżur w nagłych przypadkach 0–24 codziennie przez cały rok. Telefon dyżurny 063 34 22 35.",
         "cs": "Klinika otevřena 9:00–20:00; pohotovostní služba 00–24 každý den v roce. Pohotovostní telefon 063 34 22 35.",
         "sv": "Kliniken är öppen 09.00–20.00; akutjour 00–24 årets alla dagar. Jourtelefon 063 34 22 35.",
-        "da": "Klinik åben 09.00–20.00; akutvagt 00–24 hver dag hele året. Vagttelefon 063 34 22 35."
+        "da": "Klinik åben 09.00–20.00; akutvagt 00–24 hver dag hele året. Vagttelefon 063 34 22 35.",
+        "fi": "Klinikka auki 9–20; päivystys ympäri vuorokauden joka päivä vuoden ympäri. Päivystysnumero 063 34 22 35."
       },
       "small_animals": true,
       "url": "https://veturgent.rs/",
@@ -131,7 +134,8 @@
         "pl": "Przychodnia pon.–pt. 9:00–20:00, sob.–niedz. 9:00–14:00; pilne interwencje 0–24 pod numerem 064 1157 802.",
         "cs": "Klinika Po–Pá 9:00–20:00, so–ne 9:00–14:00; pohotovostní zásahy 0–24 na 064 1157 802.",
         "sv": "Klinik mån–fre 09.00–20.00, lör–sön 09.00–14.00; akuta ingrepp 0–24 på 064 1157 802.",
-        "da": "Klinik man–fre 09.00–20.00, lør–søn 09.00–14.00; akutte indgreb 0–24 på 064 1157 802."
+        "da": "Klinik man–fre 09.00–20.00, lør–søn 09.00–14.00; akutte indgreb 0–24 på 064 1157 802.",
+        "fi": "Klinikka ma–pe 9–20, la–su 9–14; päivystystoimenpiteet ympäri vuorokauden numerossa 064 1157 802."
       },
       "small_animals": true,
       "url": "https://vetnovak.com/",
@@ -159,7 +163,8 @@
         "pl": "Pomoc w nagłych przypadkach 24/7 (zadzwoń przed wizytą).",
         "cs": "Pohotovostní péče nonstop (před cestou zavolejte).",
         "sv": "Akutvård dygnet runt, årets alla dagar (ring innan du kommer).",
-        "da": "Akut hjælp 24/7 (ring på forhånd)."
+        "da": "Akut hjælp 24/7 (ring på forhånd).",
+        "fi": "Päivystys 24/7 (soita etukäteen)."
       },
       "small_animals": true,
       "url": "https://zootopija.rs/contact",
@@ -188,7 +193,8 @@
         "pl": "W dni robocze 11:00–19:00, w sob. 10:00–14:00; pilne interwencje całą dobę – najpierw zadzwoń.",
         "cs": "Ve všední dny 11:00–19:00, v sobotu 10:00–14:00; pohotovostní zásahy nonstop – nejdřív zavolejte.",
         "sv": "Vardagar 11.00–19.00, lördag 10.00–14.00; akuta ingrepp dygnet runt – ring först.",
-        "da": "Hverdage 11.00–19.00, lørdag 10.00–14.00; akutte indgreb døgnet rundt – ring først."
+        "da": "Hverdage 11.00–19.00, lørdag 10.00–14.00; akutte indgreb døgnet rundt – ring først.",
+        "fi": "Arkisin 11–19, lauantaisin 10–14; päivystystoimenpiteet ympäri vuorokauden – soita ensin."
       },
       "small_animals": true,
       "url": "https://www.myvet.rs/",
@@ -217,7 +223,8 @@
         "pl": "Pon.–pt. 9:00–19:00, sob. 10:00–13:00; telefon dyżurny 069 27-26-350 dostępny 24/7, 365 dni w roku.",
         "cs": "Po–Pá 9:00–19:00, so 10:00–13:00; pohotovostní telefon 069 27-26-350 nonstop, 365 dní v roce.",
         "sv": "Mån–fre 09.00–19.00, lör 10.00–13.00; jourtelefon 069 27-26-350 dygnet runt, årets alla dagar.",
-        "da": "Man–fre 09.00–19.00, lør 10.00–13.00; vagttelefon 069 27-26-350 tilgængelig 24/7, 365 dage om året."
+        "da": "Man–fre 09.00–19.00, lør 10.00–13.00; vagttelefon 069 27-26-350 tilgængelig 24/7, 365 dage om året.",
+        "fi": "ma–pe 9–19, la 10–13; päivystysnumero 069 27-26-350 käytössä 24/7, vuoden jokaisena päivänä."
       },
       "small_animals": true,
       "url": "https://azvet.rs/",
@@ -246,7 +253,8 @@
         "pl": "Pon.–pt. 9:00–19:00, sob. 10:00–14:00, niedz. 10:00–12:00; dyżurny weterynarz 0–24 – najpierw zadzwoń.",
         "cs": "Po–Pá 9:00–19:00, so 10:00–14:00, ne 10:00–12:00; pohotovostní veterinář 00–24 – nejdřív zavolejte.",
         "sv": "Mån–fre 09.00–19.00, lör 10.00–14.00, sön 10.00–12.00; jourhavande veterinär 00–24 – ring först.",
-        "da": "Man–fre 09.00–19.00, lør 10.00–14.00, søn 10.00–12.00; vagthavende dyrlæge 00–24 – ring først."
+        "da": "Man–fre 09.00–19.00, lør 10.00–14.00, søn 10.00–12.00; vagthavende dyrlæge 00–24 – ring først.",
+        "fi": "ma–pe 9–19, la 10–14, su 10–12; päivystävä eläinlääkäri ympäri vuorokauden – soita ensin."
       },
       "small_animals": true,
       "url": "https://locovet.rs/",
@@ -274,7 +282,8 @@
         "pl": "Pomoc w nagłych przypadkach 0–24 dla klientów przychodni; telefon dyżurnego weterynarza 064 365 5547.",
         "cs": "Pohotovostní služba 00–24 pro klienty kliniky; telefon pohotovostního veterináře 064 365 5547.",
         "sv": "Akutjour 00–24 för klinikens kunder; telefon till jourhavande veterinär 064 365 5547.",
-        "da": "Akutservice 00–24 for klinikkens kunder; vagttelefon hos dyrlægen 064 365 5547."
+        "da": "Akutservice 00–24 for klinikkens kunder; vagttelefon hos dyrlægen 064 365 5547.",
+        "fi": "Päivystys ympäri vuorokauden klinikan asiakkaille; päivystävän eläinlääkärin numero 064 365 5547."
       },
       "small_animals": true,
       "url": "https://vetvozdovac.weebly.com/",
@@ -303,7 +312,8 @@
         "pl": "Godziny pomocy w nagłych przypadkach: pon.–sob. 20:00–8:00, niedz. 14:00–2:00. Linia okulistyczna 066 240 373.",
         "cs": "Pohotovostní doba Po–So 20:00–8:00, v neděli 14:00–2:00. Linka oční ordinace 066 240 373.",
         "sv": "Akuttider mån–lör 20.00–08.00, söndag 14.00–02.00. Ögonlinje (oftalmologi) 066 240 373.",
-        "da": "Akuttid man–lør 20.00–08.00, søndag 14.00–02.00. Linje for øjensygdomme 066 240 373."
+        "da": "Akuttid man–lør 20.00–08.00, søndag 14.00–02.00. Linje for øjensygdomme 066 240 373.",
+        "fi": "Päivystysaika ma–la 20–8, su 14–2. Silmätautien puhelin 066 240 373."
       },
       "small_animals": true,
       "url": "https://urgentnaveterinaoculus.rs/",
@@ -332,7 +342,8 @@
         "pl": "Novi Beograd pon.–pt. 9:00–21:00, sob.–niedz. 10:00–20:00. Druga przychodnia przy Vidikovački venac 2a (011 4386 279).",
         "cs": "Novi Beograd Po–Pá 9:00–21:00, so–ne 10:00–20:00. Druhá klinika na Vidikovački venac 2a (011 4386 279).",
         "sv": "Novi Beograd mån–fre 09.00–21.00, lör–sön 10.00–20.00. Ytterligare en klinik på Vidikovački venac 2a (011 4386 279).",
-        "da": "Novi Beograd man–fre 09.00–21.00, lør–søn 10.00–20.00. Endnu en klinik på Vidikovački venac 2a (011 4386 279)."
+        "da": "Novi Beograd man–fre 09.00–21.00, lør–søn 10.00–20.00. Endnu en klinik på Vidikovački venac 2a (011 4386 279).",
+        "fi": "Novi Beograd ma–pe 9–21, la–su 10–20. Toinen klinikka osoitteessa Vidikovački venac 2a (011 4386 279)."
       },
       "small_animals": true,
       "url": "https://petvetcare.rs/",
@@ -361,7 +372,8 @@
         "pl": "Pon.–pt. 9:00–14:00 i 16:00–20:00, sob.–niedz. 9:00–14:00. Telefon komórkowy 062 800 9160. Egzotyczne zwierzęta po wcześniejszym umówieniu.",
         "cs": "Po–Pá 9:00–14:00 a 16:00–20:00, so–ne 9:00–14:00. Mobil 062 800 9160. Exotická zvířata na objednání.",
         "sv": "Mån–fre 09.00–14.00 och 16.00–20.00, lör–sön 09.00–14.00. Mobil 062 800 9160. Exotiska djur efter tidsbokning.",
-        "da": "Man–fre 09.00–14.00 og 16.00–20.00, lør–søn 09.00–14.00. Mobil 062 800 9160. Eksotiske dyr efter aftale."
+        "da": "Man–fre 09.00–14.00 og 16.00–20.00, lør–søn 09.00–14.00. Mobil 062 800 9160. Eksotiske dyr efter aftale.",
+        "fi": "ma–pe 9–14 ja 16–20, la–su 9–14. Matkapuhelin 062 800 9160. Eksoottiset eläimet ajanvarauksella."
       },
       "small_animals": true,
       "url": "https://vet.bg.ac.rs/en/klinike-i-laboratorije/klinike",
@@ -389,7 +401,8 @@
         "pl": "Czynne całodobowo; telefon komórkowy +381 60 0575721.",
         "cs": "Otevřeno nonstop; mobil +381 60 0575721.",
         "sv": "Öppet dygnet runt; mobil +381 60 0575721.",
-        "da": "Åbent 24 timer; mobil +381 60 0575721."
+        "da": "Åbent 24 timer; mobil +381 60 0575721.",
+        "fi": "Auki ympäri vuorokauden; matkapuhelin +381 60 0575721."
       },
       "small_animals": true,
       "url": "https://familyvet.rs/veterinar-novi-sad/",
@@ -418,7 +431,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob.–niedz. 9:00–12:00; nagłe przypadki 0–24 pod numerem 064 93-77-000.",
         "cs": "Po–Pá 9:00–20:00, so–ne 9:00–12:00; pohotovost 0–24 na 064 93-77-000.",
         "sv": "Mån–fre 09.00–20.00, lör–sön 09.00–12.00; akutfall 0–24 på 064 93-77-000.",
-        "da": "Man–fre 09.00–20.00, lør–søn 09.00–12.00; akutte tilfælde 0–24 på 064 93-77-000."
+        "da": "Man–fre 09.00–20.00, lør–søn 09.00–12.00; akutte tilfælde 0–24 på 064 93-77-000.",
+        "fi": "ma–pe 9–20, la–su 9–12; hätätapaukset ympäri vuorokauden numerossa 064 93-77-000."
       },
       "small_animals": true,
       "url": "https://cityvet.rs/",
@@ -447,7 +461,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob. 9:00–13:00, niedz. zamknięte; pilne interwencje 0–24 – najpierw zadzwoń.",
         "cs": "Po–Pá 9:00–20:00, so 9:00–13:00, v neděli zavřeno; pohotovostní zásahy 00–24 – nejdřív zavolejte.",
         "sv": "Mån–fre 09.00–20.00, lör 09.00–13.00, sön stängt; akuta ingrepp 00–24 – ring först.",
-        "da": "Man–fre 09.00–20.00, lør 09.00–13.00, søn lukket; akutte indgreb 00–24 – ring først."
+        "da": "Man–fre 09.00–20.00, lør 09.00–13.00, søn lukket; akutte indgreb 00–24 – ring først.",
+        "fi": "ma–pe 9–20, la 9–13, su suljettu; päivystystoimenpiteet ympäri vuorokauden – soita ensin."
       },
       "small_animals": true,
       "url": "https://www.diamondpet.rs/",
@@ -476,7 +491,8 @@
         "pl": "Pon.–sob. 9:00–21:00, niedz. 10:00–15:00; dyżurny weterynarz 24/7 w nagłych przypadkach pod numerem 064 25-63-541.",
         "cs": "Po–So 9:00–21:00, ne 10:00–15:00; pohotovostní veterinář nonstop na 064 25-63-541.",
         "sv": "Mån–lör 09.00–21.00, sön 10.00–15.00; jourhavande veterinär dygnet runt för akutfall på 064 25-63-541.",
-        "da": "Man–lør 09.00–21.00, søn 10.00–15.00; vagthavende dyrlæge 24/7 til akutte tilfælde på 064 25-63-541."
+        "da": "Man–lør 09.00–21.00, søn 10.00–15.00; vagthavende dyrlæge 24/7 til akutte tilfælde på 064 25-63-541.",
+        "fi": "ma–la 9–21, su 10–15; päivystävä eläinlääkäri 24/7 hätätapauksille numerossa 064 25-63-541."
       },
       "small_animals": true,
       "url": "https://pvabenezan.rs/",
@@ -505,7 +521,8 @@
         "pl": "Gabinet 9:00–20:00, sob.–niedz. 9:00–12:00; nagłe przypadki 0–24 (telefon komórkowy 063 85-86-007).",
         "cs": "Ordinace 9:00–20:00, so–ne 9:00–12:00; pohotovost 0–24 (mobil 063 85-86-007).",
         "sv": "Mottagning 09.00–20.00, lör–sön 09.00–12.00; akutfall 0–24 (mobil 063 85-86-007).",
-        "da": "Kontortid 09.00–20.00, lør–søn 09.00–12.00; akutte tilfælde 0–24 (mobil 063 85-86-007)."
+        "da": "Kontortid 09.00–20.00, lør–søn 09.00–12.00; akutte tilfælde 0–24 (mobil 063 85-86-007).",
+        "fi": "Vastaanotto 9–20, la–su 9–12; päivystys ympäri vuorokauden (matkapuhelin 063 85-86-007)."
       },
       "small_animals": true,
       "url": "https://www.petvetnovisad.com/",
@@ -534,7 +551,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob.–niedz. 9:00–12:00; pilne interwencje w dni robocze 20:00–0:00, w weekendy 9:00–0:00. Telefon komórkowy 065 90 20 357.",
         "cs": "Po–Pá 9:00–20:00, so–ne 9:00–12:00; pohotovostní zásahy ve všední dny 20:00–24:00, o víkendech 9:00–24:00. Mobil 065 90 20 357.",
         "sv": "Mån–fre 09.00–20.00, lör–sön 09.00–12.00; akuta ingrepp vardagar 20.00–00.00, helger 09.00–00.00. Mobil 065 90 20 357.",
-        "da": "Man–fre 09.00–20.00, lør–søn 09.00–12.00; akutte indgreb hverdage 20.00–00.00, weekender 09.00–00.00. Mobil 065 90 20 357."
+        "da": "Man–fre 09.00–20.00, lør–søn 09.00–12.00; akutte indgreb hverdage 20.00–00.00, weekender 09.00–00.00. Mobil 065 90 20 357.",
+        "fi": "ma–pe 9–20, la–su 9–12; päivystystoimenpiteet arkisin 20–24, viikonloppuisin 9–24. Matkapuhelin 065 90 20 357."
       },
       "small_animals": true,
       "url": "https://www.timvet.rs/",
@@ -563,7 +581,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob. 9:00–14:00, niedz. 9:00–12:00. Telefon komórkowy 063 500 700.",
         "cs": "Po–Pá 9:00–20:00, so 9:00–14:00, ne 9:00–12:00. Mobil 063 500 700.",
         "sv": "Mån–fre 09.00–20.00, lör 09.00–14.00, sön 09.00–12.00. Mobil 063 500 700.",
-        "da": "Man–fre 09.00–20.00, lør 09.00–14.00, søn 09.00–12.00. Mobil 063 500 700."
+        "da": "Man–fre 09.00–20.00, lør 09.00–14.00, søn 09.00–12.00. Mobil 063 500 700.",
+        "fi": "ma–pe 9–20, la 9–14, su 9–12. Matkapuhelin 063 500 700."
       },
       "small_animals": true,
       "url": "https://www.veterinarnovisad.com/",
@@ -592,7 +611,8 @@
         "pl": "Pon.–pt. 9:00–20:00; w sobotę dwie zmiany; w niedziele dyżury – zadzwoń przed wizytą. Telefon komórkowy 066 858-58-54.",
         "cs": "Po–Pá 9:00–20:00; v sobotu dvě směny; v neděli pohotovostní termíny – před cestou zavolejte. Mobil 066 858-58-54.",
         "sv": "Mån–fre 09.00–20.00; lördag två pass; söndag jourtider – ring innan du kommer. Mobil 066 858-58-54.",
-        "da": "Man–fre 09.00–20.00; lørdag to skift; søndag vagttider – ring på forhånd. Mobil 066 858-58-54."
+        "da": "Man–fre 09.00–20.00; lørdag to skift; søndag vagttider – ring på forhånd. Mobil 066 858-58-54.",
+        "fi": "ma–pe 9–20; lauantaisin kaksi vuoroa; sunnuntaisin päivystysvuoroja – soita etukäteen. Matkapuhelin 066 858-58-54."
       },
       "small_animals": true,
       "url": "https://www.021.rs/novi-sad/vesti/360585/foto-ovo-je-basna-veterinarska-ambulanta-u-kojoj-se-vasi-ljubimci-osecaju-kao-kod-kuce",
@@ -621,7 +641,8 @@
         "pl": "Telefon dyżurny 24/7 (także poza godzinami pracy, w weekendy i święta) – zadzwoń przed przyjazdem. Telefon stacjonarny +381 18 220111.",
         "cs": "Pohotovostní telefon nonstop (i mimo ordinační dobu, o víkendech a svátcích) – před cestou zavolejte. Pevná linka +381 18 220111.",
         "sv": "Jourtelefon dygnet runt (även utanför arbetstid, på helger och helgdagar) – ring innan du kommer. Fast telefon +381 18 220111.",
-        "da": "Vagttelefon 24/7 (også uden for åbningstid, i weekender og på helligdage) – ring, før du kommer. Fastnet +381 18 220111."
+        "da": "Vagttelefon 24/7 (også uden for åbningstid, i weekender og på helligdage) – ring, før du kommer. Fastnet +381 18 220111.",
+        "fi": "Päivystysnumero 24/7 (myös työajan ulkopuolella, viikonloppuisin ja pyhinä) – soita ennen tuloa. Lankapuhelin +381 18 220111."
       },
       "small_animals": true,
       "url": "https://vetmedica.rs/",
@@ -650,7 +671,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 8:00–14:00, niedz. 9:00–13:00. Telefon komórkowy 063 41 85 42.",
         "cs": "Po–Pá 8:00–20:00, so 8:00–14:00, ne 9:00–13:00. Mobil 063 41 85 42.",
         "sv": "Mån–fre 08.00–20.00, lör 08.00–14.00, sön 09.00–13.00. Mobil 063 41 85 42.",
-        "da": "Man–fre 08.00–20.00, lør 08.00–14.00, søn 09.00–13.00. Mobil 063 41 85 42."
+        "da": "Man–fre 08.00–20.00, lør 08.00–14.00, søn 09.00–13.00. Mobil 063 41 85 42.",
+        "fi": "ma–pe 8–20, la 8–14, su 9–13. Matkapuhelin 063 41 85 42."
       },
       "small_animals": true,
       "url": "https://veterinarskastanicanis.rs/",
@@ -679,7 +701,8 @@
         "pl": "Pon.–pt. 10:00–20:00, sob. 9:00–15:00, niedz. i święta telefonicznie. Pilne interwencje 064 061-58-58.",
         "cs": "Po–Pá 10:00–20:00, so 9:00–15:00, v neděli a o svátcích telefonicky. Pohotovostní zásahy 064 061-58-58.",
         "sv": "Mån–fre 10.00–20.00, lör 09.00–15.00, sön och helgdagar per telefon. Akuta ingrepp 064 061-58-58.",
-        "da": "Man–fre 10.00–20.00, lør 09.00–15.00, søn og helligdage pr. telefon. Akutte indgreb 064 061-58-58."
+        "da": "Man–fre 10.00–20.00, lør 09.00–15.00, søn og helligdage pr. telefon. Akutte indgreb 064 061-58-58.",
+        "fi": "ma–pe 10–20, la 9–15, su ja pyhinä puhelimitse. Päivystystoimenpiteet 064 061-58-58."
       },
       "small_animals": true,
       "url": "https://vethealth.rs/",
@@ -708,7 +731,8 @@
         "pl": "Pon.–pt. 10:00–18:00, sob. 9:00–15:00; pomoc w nagłych przypadkach telefonicznie 062 517-528.",
         "cs": "Po–Pá 10:00–18:00, so 9:00–15:00; pohotovostní služba telefonicky 062 517-528.",
         "sv": "Mån–fre 10.00–18.00, lör 09.00–15.00; akutjour per telefon 062 517-528.",
-        "da": "Man–fre 10.00–18.00, lør 09.00–15.00; akutservice pr. telefon 062 517-528."
+        "da": "Man–fre 10.00–18.00, lør 09.00–15.00; akutservice pr. telefon 062 517-528.",
+        "fi": "ma–pe 10–18, la 9–15; päivystys puhelimitse 062 517-528."
       },
       "small_animals": true,
       "url": "https://www.vetimpuls.com/",
@@ -737,7 +761,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 9:00–15:00; nagłe przypadki: zadzwoń pod numer 063 303 476 o każdej porze (0–24).",
         "cs": "Po–Pá 8:00–20:00, so 9:00–15:00; pohotovost: volejte 063 303 476 v kteroukoli hodinu (0–24).",
         "sv": "Mån–fre 08.00–20.00, lör 09.00–15.00; akutfall: ring 063 303 476 när som helst på dygnet (0–24).",
-        "da": "Man–fre 08.00–20.00, lør 09.00–15.00; akutte tilfælde: ring til 063 303 476 på alle tider (0–24)."
+        "da": "Man–fre 08.00–20.00, lør 09.00–15.00; akutte tilfælde: ring til 063 303 476 på alle tider (0–24).",
+        "fi": "ma–pe 8–20, la 9–15; hätätapauksissa soita 063 303 476 mihin aikaan tahansa (ympäri vuorokauden)."
       },
       "small_animals": true,
       "url": "https://veterinarkragujevac.rs/",
@@ -765,7 +790,8 @@
         "pl": "Telefon stacjonarny 8:00–20:00; telefon komórkowy 064 12-68-424 0–24.",
         "cs": "Pevná linka 8:00–20:00; mobil 064 12-68-424 00–24.",
         "sv": "Fast telefon 08.00–20.00; mobil 064 12-68-424 00–24.",
-        "da": "Fastnet 08.00–20.00; mobil 064 12-68-424 00–24."
+        "da": "Fastnet 08.00–20.00; mobil 064 12-68-424 00–24.",
+        "fi": "Lankapuhelin 8–20; matkapuhelin 064 12-68-424 ympäri vuorokauden."
       },
       "small_animals": true,
       "url": "https://medikavet.rs/",
@@ -794,7 +820,8 @@
         "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–14:00, niedz. zamknięte. Telefon komórkowy 065 364 6333.",
         "cs": "Po–Pá 9:00–19:00, so 9:00–14:00, v neděli zavřeno. Mobil 065 364 6333.",
         "sv": "Mån–fre 09.00–19.00, lör 09.00–14.00, sön stängt. Mobil 065 364 6333.",
-        "da": "Man–fre 09.00–19.00, lør 09.00–14.00, søn lukket. Mobil 065 364 6333."
+        "da": "Man–fre 09.00–19.00, lør 09.00–14.00, søn lukket. Mobil 065 364 6333.",
+        "fi": "ma–pe 9–19, la 9–14, su suljettu. Matkapuhelin 065 364 6333."
       },
       "small_animals": true,
       "url": "https://lavvet.rs/",
@@ -822,7 +849,8 @@
         "pl": "Pon.–pt. 7:00–19:00, sob. 7:00–14:00; w niedzielę zadzwoń i zapytaj o godziny. Telefon komórkowy 060 671 0600.",
         "cs": "Po–Pá 7:00–19:00, so 7:00–14:00; v neděli ordinační dobu zjistěte telefonicky. Mobil 060 671 0600.",
         "sv": "Mån–fre 07.00–19.00, lör 07.00–14.00; söndag: ring innan du kommer för öppettider. Mobil 060 671 0600.",
-        "da": "Man–fre 07.00–19.00, lør 07.00–14.00; søndag: ring på forhånd for åbningstider. Mobil 060 671 0600."
+        "da": "Man–fre 07.00–19.00, lør 07.00–14.00; søndag: ring på forhånd for åbningstider. Mobil 060 671 0600.",
+        "fi": "ma–pe 7–19, la 7–14; sunnuntaisin kysy aukioloajat etukäteen soittamalla. Matkapuhelin 060 671 0600."
       },
       "small_animals": true,
       "url": "https://www.veterinar.co.rs/kontakt",
@@ -851,7 +879,8 @@
         "pl": "Pon.–pt. 9:00–17:00, sob.–niedz. 9:00–14:00; dostępne wizyty domowe.",
         "cs": "Po–Pá 9:00–17:00, so–ne 9:00–14:00; k dispozici návštěvy doma.",
         "sv": "Mån–fre 09.00–17.00, lör–sön 09.00–14.00; hembesök erbjuds.",
-        "da": "Man–fre 09.00–17.00, lør–søn 09.00–14.00; hjemmebesøg mulige."
+        "da": "Man–fre 09.00–17.00, lør–søn 09.00–14.00; hjemmebesøg mulige.",
+        "fi": "ma–pe 9–17, la–su 9–14; kotikäynnit mahdollisia."
       },
       "small_animals": true,
       "url": "https://www.vivavet.rs/",
@@ -880,7 +909,8 @@
         "pl": "Pon.–pt. 10:00–18:00, sob. 9:00–11:00; w niedzielę tylko telefonicznie. Druga placówka w Zemunie (Ševina 37a, 011 37 30 565).",
         "cs": "Po–Pá 10:00–18:00, so 9:00–11:00; v neděli pouze telefonicky. Druhé pracoviště v Zemunu (Ševina 37a, 011 37 30 565).",
         "sv": "Mån–fre 10.00–18.00, lör 09.00–11.00; söndag endast efter samtal. Ytterligare en plats i Zemun (Ševina 37a, 011 37 30 565).",
-        "da": "Man–fre 10.00–18.00, lør 09.00–11.00; søndag kun efter opringning. Anden afdeling i Zemun (Ševina 37a, 011 37 30 565)."
+        "da": "Man–fre 10.00–18.00, lør 09.00–11.00; søndag kun efter opringning. Anden afdeling i Zemun (Ševina 37a, 011 37 30 565).",
+        "fi": "ma–pe 10–18, la 9–11; sunnuntaisin vain puhelimitse. Toinen toimipiste Zemunissa (Ševina 37a, 011 37 30 565)."
       },
       "small_animals": true,
       "url": "https://www.veterinarbozinovic.rs/kontakt/",

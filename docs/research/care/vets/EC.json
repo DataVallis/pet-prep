@@ -79,7 +79,8 @@
         "pl": "Pomoc w nagłych przypadkach całodobowo, 365 dni w roku. Zadzwoń przed wizytą.",
         "cs": "Nonstop pohotovostní péče 365 dní v roce. Před cestou zavolejte.",
         "sv": "Akutvård dygnet runt, 365 dagar om året. Ring innan du kommer.",
-        "da": "Akutbehandling døgnet rundt, 365 dage om året. Ring på forhånd."
+        "da": "Akutbehandling døgnet rundt, 365 dage om året. Ring på forhånd.",
+        "fi": "Päivystys 24 tuntia vuorokaudessa, 365 päivää vuodessa. Soita etukäteen."
       }
     },
     {
@@ -103,7 +104,8 @@
         "pl": "Tylko dzikie zwierzęta: czynne całodobowo, 365 dni w roku w nagłych przypadkach, bezpłatnie.",
         "cs": "Pouze divoká zvířata: otevřeno nonstop 365 dní v roce pro pohotovostní případy, zdarma.",
         "sv": "Endast vilda djur: öppet dygnet runt, 365 dagar om året för akutfall, kostnadsfritt.",
-        "da": "Kun vilde dyr: åbent døgnet rundt, 365 dage om året, til akutte tilfælde, gratis."
+        "da": "Kun vilde dyr: åbent døgnet rundt, 365 dage om året, til akutte tilfælde, gratis.",
+        "fi": "Vain luonnonvaraiset eläimet: auki 24 tuntia, 365 päivää vuodessa hätätapauksia varten, maksutta."
       }
     },
     {
@@ -127,7 +129,8 @@
         "pl": "Bezpłatna przychodnia miejska. Konsultacje pon.–pt. 08:00–16:30. W nagłych przypadkach zadzwoń przed wizytą.",
         "cs": "Bezplatná městská klinika. Ordinace Po–Pá 8:00–16:30. V naléhavých případech před cestou zavolejte.",
         "sv": "Kostnadsfri kommunal klinik. Mottagning måndag–fredag 08.00–16.30. Ring innan du kommer vid akutfall.",
-        "da": "Gratis kommunal klinik. Konsultation mandag til fredag 08.00–16.30. Ring på forhånd ved akutte tilfælde."
+        "da": "Gratis kommunal klinik. Konsultation mandag til fredag 08.00–16.30. Ring på forhånd ved akutte tilfælde.",
+        "fi": "Ilmainen kunnallinen klinikka. Vastaanotto ma–pe klo 8.00–16.30. Soita päivystystapauksissa etukäteen."
       }
     },
     {
@@ -149,7 +152,8 @@
         "pl": "Czynne pon.–pt. 08:00–16:00; pacjenci przyjmowani do ok. 15:00, bez umawiania wizyt. Ma oddział nagłych przypadków; nie podano dyżuru nocnego.",
         "cs": "Otevřeno Po–Pá 8:00–16:00; pacienti se přijímají do cca 15:00, bez objednání. Má pohotovostní část; noční služba není uvedena.",
         "sv": "Öppet måndag–fredag 08.00–16.00; patienter tas emot till cirka 15.00, ingen tidsbokning behövs. Har akutavdelning; ingen nattjänst angiven.",
-        "da": "Åbent mandag til fredag 08.00–16.00; patienter tages imod til ca. 15.00, ingen tidsbestilling nødvendig. Har et akutområde; ingen natvagt oplyst."
+        "da": "Åbent mandag til fredag 08.00–16.00; patienter tages imod til ca. 15.00, ingen tidsbestilling nødvendig. Har et akutområde; ingen natvagt oplyst.",
+        "fi": "Auki ma–pe klo 8.00–16.00; potilaita otetaan vastaan noin klo 15 asti, ajanvarausta ei tarvita. Klinikalla on päivystysosasto; yöpäivystystä ei ole ilmoitettu."
       }
     },
     {
@@ -172,7 +176,8 @@
         "pl": "Szpital miejski dla psów i kotów. Pon.–pt. 08:00–17:00, w weekendy i święta nieczynny.",
         "cs": "Městská nemocnice pro psy a kočky. Po–Pá 8:00–17:00, o víkendech a svátcích zavřeno.",
         "sv": "Kommunalt djursjukhus för hundar och katter. Måndag–fredag 08.00–17.00, stängt helger och helgdagar.",
-        "da": "Kommunalt hospital for hunde og katte. Mandag til fredag 08.00–17.00, lukket i weekender og på helligdage."
+        "da": "Kommunalt hospital for hunde og katte. Mandag til fredag 08.00–17.00, lukket i weekender og på helligdage.",
+        "fi": "Kunnallinen koirien ja kissojen sairaala. Ma–pe klo 8.00–17.00, suljettu viikonloppuisin ja pyhäpäivinä."
       }
     }
   ],

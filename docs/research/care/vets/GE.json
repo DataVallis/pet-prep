@@ -70,7 +70,8 @@
         "pl": "Pomoc w nagłych przypadkach reklamowana jako dostępna całodobowo (strona w języku gruzińskim). Zadzwoń przed wizytą.",
         "cs": "Pohotovostní pomoc je podle webu k dispozici nonstop (web v gruzínštině). Před cestou zavolejte.",
         "sv": "Akuthjälp anges finnas dygnet runt (webbplats på georgiska). Ring innan du kommer.",
-        "da": "Akut hjælp annonceres som tilgængelig døgnet rundt (georgisksproget hjemmeside). Ring på forhånd."
+        "da": "Akut hjælp annonceres som tilgængelig døgnet rundt (georgisksproget hjemmeside). Ring på forhånd.",
+        "fi": "Päivystysapua ilmoitetaan olevan saatavilla 24/7 (georgiankielinen sivusto). Soita etukäteen."
       }
     },
     {
@@ -95,7 +96,8 @@
         "pl": "Otwarte codziennie 10:00–20:00; w nagłych przypadkach zadzwoń wcześniej. Lecznica dla psów i kotów z oddziałem kotów.",
         "cs": "Otevřeno denně 10:00–20:00; v naléhavých případech před cestou zavolejte. Nemocnice pro psy a kočky s kočičím oddělením.",
         "sv": "Öppet dagligen 10.00–20.00; ring innan du kommer vid akutfall. Djursjukhus för hundar och katter med kattavdelning.",
-        "da": "Åbent 10.00–20.00 hver dag; ring på forhånd ved akut sygdom. Hospital for hunde og katte med en afdeling for katte."
+        "da": "Åbent 10.00–20.00 hver dag; ring på forhånd ved akut sygdom. Hospital for hunde og katte med en afdeling for katte.",
+        "fi": "Auki päivittäin 10.00–20.00; päivystystapauksissa soita etukäteen. Koira- ja kissasairaala, jossa on kissaosasto."
       }
     },
     {
@@ -120,7 +122,8 @@
         "pl": "Otwarte codziennie 10:00–19:00.",
         "cs": "Otevřeno denně 10:00–19:00.",
         "sv": "Öppet dagligen 10.00–19.00.",
-        "da": "Åbent hver dag 10.00–19.00."
+        "da": "Åbent hver dag 10.00–19.00.",
+        "fi": "Auki päivittäin 10.00–19.00."
       }
     },
     {
@@ -145,7 +148,8 @@
         "pl": "Otwarte codziennie 11:00–20:00. Psy i koty.",
         "cs": "Otevřeno denně 11:00–20:00. Psi a kočky.",
         "sv": "Öppet dagligen 11.00–20.00. Hundar och katter.",
-        "da": "Åbent hver dag 11.00–20.00. Hunde og katte."
+        "da": "Åbent hver dag 11.00–20.00. Hunde og katte.",
+        "fi": "Auki päivittäin 11.00–20.00. Koirat ja kissat."
       }
     },
     {
@@ -170,7 +174,8 @@
         "pl": "Podobno przychodnia całodobowa; przed przyjazdem potwierdź telefonicznie.",
         "cs": "Údajně nonstop klinika; před cestou si ověřte telefonicky.",
         "sv": "Uppges ha öppet dygnet runt; bekräfta per telefon innan du åker.",
-        "da": "Skal efter sigende være en døgnåben klinik; bekræft telefonisk, før du kører derhen."
+        "da": "Skal efter sigende være en døgnåben klinik; bekræft telefonisk, før du kører derhen.",
+        "fi": "Ilmoituksen mukaan ympärivuorokautinen klinikka; varmista puhelimitse ennen lähtöä."
       }
     },
     {
@@ -195,7 +200,8 @@
         "pl": "Podobno otwarte całodobowo, codziennie; przed przyjazdem potwierdź telefonicznie.",
         "cs": "Údajně otevřeno denně 24 hodin; před cestou si ověřte telefonicky.",
         "sv": "Uppges ha öppet dygnet runt varje dag; bekräfta per telefon innan du åker.",
-        "da": "Skal efter sigende have åbent døgnet rundt hver dag; bekræft telefonisk, før du kører derhen."
+        "da": "Skal efter sigende have åbent døgnet rundt hver dag; bekræft telefonisk, før du kører derhen.",
+        "fi": "Ilmoituksen mukaan auki ympäri vuorokauden päivittäin; varmista puhelimitse ennen lähtöä."
       }
     },
     {
@@ -220,7 +226,8 @@
         "pl": "Po wcześniejszym umówieniu: pon.–pt. 10:00–18:00, niedz. 11:00–16:00, sob. zamknięte. Wizyty domowe. Psy, koty, króliki, świnki morskie, gryzonie.",
         "cs": "Na objednání: Po–Pá 10:00–18:00, ne 11:00–16:00, v sobotu zavřeno. Návštěvy doma. Psi, kočky, králíci, morčata, hlodavci.",
         "sv": "Efter bokad tid: mån–fre 10.00–18.00, sön 11.00–16.00, lör stängt. Hembesök. Hundar, katter, kaniner, marsvin, gnagare.",
-        "da": "Efter aftale: man–fre 10.00–18.00, søn 11.00–16.00, lør lukket. Hjemmebesøg. Hunde, katte, kaniner, marsvin, gnavere."
+        "da": "Efter aftale: man–fre 10.00–18.00, søn 11.00–16.00, lør lukket. Hjemmebesøg. Hunde, katte, kaniner, marsvin, gnavere.",
+        "fi": "Ajanvarauksella: ma–pe 10.00–18.00, su 11.00–16.00, la suljettu. Kotikäynnit. Koirat, kissat, kanit, marsut, jyrsijät."
       }
     }
   ],

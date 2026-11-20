@@ -60,7 +60,8 @@
         "pl": "Pogotowie dostępne 24 godziny na dobę; zadzwoń na linię dla nagłych przypadków.",
         "cs": "Pohotovostní služba dostupná nonstop; zavolejte na pohotovostní linku.",
         "sv": "Akutmottagning tillgänglig dygnet runt; ring akutlinjen.",
-        "da": "Akutvagt døgnet rundt; ring til akuttelefonen."
+        "da": "Akutvagt døgnet rundt; ring til akuttelefonen.",
+        "fi": "Päivystys saatavilla 24 h; soita päivystysnumeroon."
       }
     },
     {
@@ -85,7 +86,8 @@
         "pl": "Wizyty domowe w nagłych przypadkach całą dobę; zwykłe godziny od wtorku do niedzieli 9:00–16:00.",
         "cs": "Pohotovostní návštěvy doma nonstop; běžná otevírací doba od úterý do neděle 9:00–16:00.",
         "sv": "Akuta hembesök dygnet runt; ordinarie öppettider tisdag–söndag 09.00–16.00.",
-        "da": "Akutte hjemmebesøg døgnet rundt; almindelige åbningstider tirsdag til søndag 9.00–16.00."
+        "da": "Akutte hjemmebesøg døgnet rundt; almindelige åbningstider tirsdag til søndag 9.00–16.00.",
+        "fi": "Päivystyskotikäynnit 24 h; normaali aukioloaika ti–su 9.00–16.00."
       }
     },
     {
@@ -110,7 +112,8 @@
         "pl": "Pogotowie całodobowo; zwykłe godziny od poniedziałku do soboty 9:00–20:00.",
         "cs": "Pohotovostní služba nonstop; běžná otevírací doba Po–So 9:00–20:00.",
         "sv": "Akutmottagning dygnet runt; ordinarie öppettider måndag–lördag 09.00–20.00.",
-        "da": "Akutvagt døgnet rundt; almindelige åbningstider mandag til lørdag 9.00–20.00."
+        "da": "Akutvagt døgnet rundt; almindelige åbningstider mandag til lørdag 9.00–20.00.",
+        "fi": "Päivystys 24 h; normaali aukioloaika ma–la 9.00–20.00."
       }
     },
     {
@@ -135,7 +138,8 @@
         "pl": "Linia dla nagłych przypadków całodobowo; godziny przychodni od poniedziałku do piątku 10:00–20:00, w sobotę 10:00–15:00.",
         "cs": "Pohotovostní linka nonstop; ordinační doba Po–Pá 10:00–20:00, so 10:00–15:00.",
         "sv": "Akutlinje dygnet runt; klinikens öppettider måndag–fredag 10.00–20.00, lördag 10.00–15.00.",
-        "da": "Akuttelefon døgnet rundt; klinikkens åbningstider mandag til fredag 10.00–20.00, lørdag 10.00–15.00."
+        "da": "Akuttelefon døgnet rundt; klinikkens åbningstider mandag til fredag 10.00–20.00, lørdag 10.00–15.00.",
+        "fi": "Päivystyspuhelin 24 h; klinikan aukioloaika ma–pe 10.00–20.00, la 10.00–15.00."
       }
     },
     {
@@ -160,7 +164,8 @@
         "pl": "Czynne codziennie 9:00–21:00; całodobowe wizyty domowe w nagłych przypadkach (płatne, zadzwoń pod 091 404 141 i powiedz, że jesteś członkiem Veterinaria Lacucha).",
         "cs": "Otevřeno denně 9:00–21:00; nonstop pohotovostní návštěvy doma (za poplatek, volejte 091 404 141 a uveďte, že jste členem Veterinaria Lacucha).",
         "sv": "Öppet dagligen 09.00–21.00; akuta hembesök dygnet runt (avgift tillkommer, ring 091 404 141 och säg att du är medlem i Veterinaria Lacucha).",
-        "da": "Åbent hver dag 9.00–21.00; akutte hjemmebesøg døgnet rundt (mod betaling, ring på 091 404 141 og sig, at du er medlem af Veterinaria Lacucha)."
+        "da": "Åbent hver dag 9.00–21.00; akutte hjemmebesøg døgnet rundt (mod betaling, ring på 091 404 141 og sig, at du er medlem af Veterinaria Lacucha).",
+        "fi": "Auki joka päivä 9.00–21.00; päivystyskotikäynnit 24 h (maksullinen, soita 091 404 141 ja kerro olevasi Veterinaria Lacuchan jäsen)."
       }
     },
     {
@@ -185,7 +190,8 @@
         "pl": "Pogotowie całodobowo, 365 dni w roku; godziny sklepu od poniedziałku do piątku 9:00–20:00, w sobotę 10:00–20:00, w niedzielę 12:00–20:00.",
         "cs": "Pohotovostní služba nonstop, 365 dní v roce; otevírací doba prodejny Po–Pá 9:00–20:00, so 10:00–20:00, ne 12:00–20:00.",
         "sv": "Akutmottagning dygnet runt, 365 dagar om året; butikens öppettider måndag–fredag 09.00–20.00, lördag 10.00–20.00, söndag 12.00–20.00.",
-        "da": "Akutvagt døgnet rundt, 365 dage om året; butikkens åbningstider mandag til fredag 9.00–20.00, lørdag 10.00–20.00, søndag 12.00–20.00."
+        "da": "Akutvagt døgnet rundt, 365 dage om året; butikkens åbningstider mandag til fredag 9.00–20.00, lørdag 10.00–20.00, søndag 12.00–20.00.",
+        "fi": "Päivystys 24 h, 365 päivää vuodessa; kaupan aukioloajat ma–pe 9.00–20.00, la 10.00–20.00, su 12.00–20.00."
       }
     },
     {
@@ -209,7 +215,8 @@
         "pl": "Pogotowie całodobowo, 365 dni w roku (zadzwoń na linię dla nagłych przypadków).",
         "cs": "Pohotovostní služba nonstop, 365 dní v roce (volejte pohotovostní linku).",
         "sv": "Akutmottagning dygnet runt, 365 dagar om året (ring akutlinjen).",
-        "da": "Akutvagt døgnet rundt, 365 dage om året (ring til akuttelefonen)."
+        "da": "Akutvagt døgnet rundt, 365 dage om året (ring til akuttelefonen).",
+        "fi": "Päivystys 24 h, 365 päivää vuodessa (soita päivystysnumeroon)."
       }
     },
     {
@@ -233,7 +240,8 @@
         "pl": "Pogotowie całodobowo, 365 dni w roku (zadzwoń na linię dla nagłych przypadków).",
         "cs": "Pohotovostní služba nonstop, 365 dní v roce (volejte pohotovostní linku).",
         "sv": "Akutmottagning dygnet runt, 365 dagar om året (ring akutlinjen).",
-        "da": "Akutvagt døgnet rundt, 365 dage om året (ring til akuttelefonen)."
+        "da": "Akutvagt døgnet rundt, 365 dage om året (ring til akuttelefonen).",
+        "fi": "Päivystys 24 h, 365 päivää vuodessa (soita päivystysnumeroon)."
       }
     },
     {
@@ -258,7 +266,8 @@
         "pl": "Nagłe przypadki i hospitalizacja 24 godziny na dobę, 7 dni w tygodniu; konsultacje od poniedziałku do piątku 9:30–19:00, w sobotę 9:00–14:00.",
         "cs": "Pohotovost a hospitalizace nonstop, 7 dní v týdnu; konzultace Po–Pá 9:30–19:00, so 9:00–14:00.",
         "sv": "Akutfall och slutenvård dygnet runt, alla dagar i veckan; mottagning måndag–fredag 09.30–19.00, lördag 09.00–14.00.",
-        "da": "Akut hjælp og indlæggelse døgnet rundt, 7 dage om ugen; konsultationer mandag til fredag 9.30–19.00, lørdag 9.00–14.00."
+        "da": "Akut hjælp og indlæggelse døgnet rundt, 7 dage om ugen; konsultationer mandag til fredag 9.30–19.00, lørdag 9.00–14.00.",
+        "fi": "Päivystys ja sairaalahoito 24 h, 7 vrk viikossa; vastaanotto ma–pe 9.30–19.00, la 9.00–14.00."
       }
     },
     {
@@ -283,7 +292,8 @@
         "pl": "Od poniedziałku do soboty 10:00–19:00; w niedzielę tylko nagłe przypadki. Linia dla nagłych przypadków (tylko rozmowy telefoniczne), zadzwoń przed wizytą.",
         "cs": "Po–So 10:00–19:00; v neděli pouze pohotovost. Pohotovostní linka (pouze telefonicky), před cestou zavolejte.",
         "sv": "Måndag–lördag 10.00–19.00; söndagar endast akutfall. Akutlinje (endast samtal), ring innan du kommer.",
-        "da": "Mandag til lørdag 10.00–19.00; søndag kun akutte tilfælde. Akuttelefon (kun opkald), ring på forhånd."
+        "da": "Mandag til lørdag 10.00–19.00; søndag kun akutte tilfælde. Akuttelefon (kun opkald), ring på forhånd.",
+        "fi": "ma–la 10.00–19.00; sunnuntaisin vain päivystys. Päivystysnumero (vain puhelut), soita etukäteen."
       }
     },
     {
@@ -308,7 +318,8 @@
         "pl": "Nagłe przypadki 24 godziny na dobę, 7 dni w tygodniu; zwykłe godziny od poniedziałku do piątku 8:30–12:30 i 15:00–18:00, w sobotę 16:00–18:00.",
         "cs": "Pohotovost dostupná nonstop, 7 dní v týdnu; běžná otevírací doba Po–Pá 8:30–12:30 a 15:00–18:00, so 16:00–18:00.",
         "sv": "Akutfall tas emot dygnet runt, alla dagar i veckan; ordinarie öppettider måndag–fredag 08.30–12.30 och 15.00–18.00, lördag 16.00–18.00.",
-        "da": "Akut hjælp døgnet rundt, 7 dage om ugen; almindelige åbningstider mandag til fredag 8.30–12.30 og 15.00–18.00, lørdag 16.00–18.00."
+        "da": "Akut hjælp døgnet rundt, 7 dage om ugen; almindelige åbningstider mandag til fredag 8.30–12.30 og 15.00–18.00, lørdag 16.00–18.00.",
+        "fi": "Päivystys 24 h, 7 vrk viikossa; normaali aukioloaika ma–pe 8.30–12.30 ja 15.00–18.00, la 16.00–18.00."
       }
     },
     {
@@ -333,7 +344,8 @@
         "pl": "Przychodnia dla małych zwierząt z linią dla nagłych przypadków; od poniedziałku do piątku 7:00–12:00 i 14:00–18:00, w sobotę 7:00–12:00; zadzwoń przed wizytą.",
         "cs": "Klinika malých zvířat s pohotovostní linkou; Po–Pá 7:00–12:00 a 14:00–18:00, so 7:00–12:00; před cestou zavolejte.",
         "sv": "Smådjursklinik med akutlinje; måndag–fredag 07.00–12.00 och 14.00–18.00, lördag 07.00–12.00; ring innan du kommer.",
-        "da": "Smådyrsklinik med akuttelefon; mandag til fredag 7.00–12.00 og 14.00–18.00, lørdag 7.00–12.00; ring på forhånd."
+        "da": "Smådyrsklinik med akuttelefon; mandag til fredag 7.00–12.00 og 14.00–18.00, lørdag 7.00–12.00; ring på forhånd.",
+        "fi": "Pieneläinklinikka ja päivystysnumero; ma–pe 7.00–12.00 ja 14.00–18.00, la 7.00–12.00; soita etukäteen."
       }
     },
     {
@@ -357,7 +369,8 @@
         "pl": "Od poniedziałku do piątku 7:00–12:00 i 14:00–18:30, w sobotę 7:00–12:00 (latem godziny popołudniowe nieco się przesuwają).",
         "cs": "Po–Pá 7:00–12:00 a 14:00–18:30, so 7:00–12:00 (v létě se odpolední doba mírně posouvá).",
         "sv": "Måndag–fredag 07.00–12.00 och 14.00–18.30, lördag 07.00–12.00 (eftermiddagstiderna ändras något på sommaren).",
-        "da": "Mandag til fredag 7.00–12.00 og 14.00–18.30, lørdag 7.00–12.00 (om sommeren flytter eftermiddagstiderne sig lidt)."
+        "da": "Mandag til fredag 7.00–12.00 og 14.00–18.30, lørdag 7.00–12.00 (om sommeren flytter eftermiddagstiderne sig lidt).",
+        "fi": "ma–pe 7.00–12.00 ja 14.00–18.30, la 7.00–12.00 (kesällä iltapäivän aukioloajat vaihtelevat hieman)."
       }
     },
     {
@@ -382,7 +395,8 @@
         "pl": "Zadzwoń przed wizytą.",
         "cs": "Před cestou zavolejte.",
         "sv": "Ring innan du kommer.",
-        "da": "Ring på forhånd."
+        "da": "Ring på forhånd.",
+        "fi": "Soita etukäteen."
       }
     },
     {
@@ -407,7 +421,8 @@
         "pl": "Od poniedziałku do piątku 9:00–13:00 i 15:00–19:00, w sobotę 9:00–13:00; zadzwoń przed wizytą.",
         "cs": "Po–Pá 9:00–13:00 a 15:00–19:00, so 9:00–13:00; před cestou zavolejte.",
         "sv": "Måndag–fredag 09.00–13.00 och 15.00–19.00, lördag 09.00–13.00; ring innan du kommer.",
-        "da": "Mandag til fredag 9.00–13.00 og 15.00–19.00, lørdag 9.00–13.00; ring på forhånd."
+        "da": "Mandag til fredag 9.00–13.00 og 15.00–19.00, lørdag 9.00–13.00; ring på forhånd.",
+        "fi": "ma–pe 9.00–13.00 ja 15.00–19.00, la 9.00–13.00; soita etukäteen."
       }
     },
     {
@@ -431,7 +446,8 @@
         "pl": "Miejskie całodobowe pogotowie dla zwierząt rannych na drogach publicznych oraz dla zwierząt dzikich i egzotycznych; to nie jest przychodnia ogólna. WhatsApp 099 019 500 codziennie 6:00–24:00.",
         "cs": "Městská nonstop pohotovostní služba pro zvířata zraněná na veřejných komunikacích a pro divoká nebo exotická zvířata; nejde o běžnou kliniku. WhatsApp 099 019 500 denně 6:00–24:00.",
         "sv": "Kommunal akutjour dygnet runt för djur som skadats på allmän väg samt för vilda eller exotiska djur; inte en allmän klinik. WhatsApp 099 019 500 dagligen 06.00–24.00.",
-        "da": "Kommunal akutvagt døgnet rundt for dyr, der er kommet til skade på offentlig vej, og for vilde eller eksotiske dyr; ikke en almindelig klinik. WhatsApp 099 019 500 hver dag 6.00–24.00."
+        "da": "Kommunal akutvagt døgnet rundt for dyr, der er kommet til skade på offentlig vej, og for vilde eller eksotiske dyr; ikke en almindelig klinik. WhatsApp 099 019 500 hver dag 6.00–24.00.",
+        "fi": "Kunnallinen päivystys 24 h yleisillä teillä loukkaantuneille sekä villeille ja eksoottisille eläimille; ei yleisklinikka. WhatsApp 099 019 500 joka päivä 6.00–24.00."
       }
     },
     {
@@ -456,7 +472,8 @@
         "pl": "Opieka w nagłych przypadkach całą dobę; konsultacje w ciągu dnia do 20:00 od poniedziałku do soboty.",
         "cs": "Pohotovostní péče nonstop; denní konzultace Po–So do 20:00.",
         "sv": "Akutvård dygnet runt; dagtidsmottagning till 20.00 måndag–lördag.",
-        "da": "Akut hjælp døgnet rundt; dagkonsultationer til kl. 20.00 mandag til lørdag."
+        "da": "Akut hjælp døgnet rundt; dagkonsultationer til kl. 20.00 mandag til lørdag.",
+        "fi": "Päivystys ympäri vuorokauden; päiväsaikaan vastaanotto ma–la klo 20 asti."
       }
     }
   ],

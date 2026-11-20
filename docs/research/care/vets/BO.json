@@ -52,7 +52,8 @@
         "pl": "Całodobowa opieka we wszystkich nagłych przypadkach; zadzwoń wcześniej.",
         "cs": "Péče nonstop pro všechny naléhavé případy; před cestou zavolejte.",
         "sv": "Vård dygnet runt vid alla akutfall; ring innan du kommer.",
-        "da": "Akut hjælp døgnet rundt ved alle akutte tilfælde; ring på forhånd."
+        "da": "Akut hjælp døgnet rundt ved alle akutte tilfælde; ring på forhånd.",
+        "fi": "Hoitoa ympäri vuorokauden kaikissa päivystystapauksissa; soita etukäteen."
       }
     },
     {
@@ -73,7 +74,8 @@
         "pl": "Otwarte pon.–pt. 8:00–19:00 i sob. 8:00–15:00; pilna pomoc całodobowo.",
         "cs": "Po–Pá 8:00–19:00 a so 8:00–15:00; naléhavá péče nonstop.",
         "sv": "Öppet mån–fre 8.00–19.00 och lör 8.00–15.00; akutvård dygnet runt.",
-        "da": "Åbent man–fre 8.00–19.00 og lør 8.00–15.00; akut hjælp døgnet rundt."
+        "da": "Åbent man–fre 8.00–19.00 og lør 8.00–15.00; akut hjælp døgnet rundt.",
+        "fi": "Auki ma–pe 8–19 ja la 8–15; kiireellistä hoitoa ympäri vuorokauden."
       }
     },
     {
@@ -94,7 +96,8 @@
         "pl": "Otwarte codziennie 8:00–19:00.",
         "cs": "Denně 8:00–19:00.",
         "sv": "Öppet varje dag 8.00–19.00.",
-        "da": "Åbent dagligt 8.00–19.00."
+        "da": "Åbent dagligt 8.00–19.00.",
+        "fi": "Auki päivittäin 8–19."
       }
     },
     {
@@ -115,7 +118,8 @@
         "pl": "Otwarte pon.–sob. 8:00–20:00, niedz. i święta państwowe 8:00–13:00.",
         "cs": "Po–So 8:00–20:00, ne a o svátcích 8:00–13:00.",
         "sv": "Öppet mån–lör 8.00–20.00, sön och helgdagar 8.00–13.00.",
-        "da": "Åbent man–lør 8.00–20.00, søn og helligdage 8.00–13.00."
+        "da": "Åbent man–lør 8.00–20.00, søn og helligdage 8.00–13.00.",
+        "fi": "Auki ma–la 8–20, su ja pyhäpäivinä 8–13."
       }
     }
   ],

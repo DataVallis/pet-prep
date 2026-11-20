@@ -71,7 +71,8 @@
         "pl": "Uniwersytecki szpital kliniczny dla zwierząt domowych, dzikich i z ogrodów zoologicznych. Pogotowie i intensywna terapia całodobowo; ambulatorium pon.–sob. 8:00–20:00, niedz. i święta 8:00–12:00. Lekarze dyżurujący na miejscu w nagłych przypadkach 19:30–08:00. Przyjęcie po umówieniu, rezerwacji dokonuje weterynarz kierujący.",
         "cs": "Univerzitní výuková nemocnice pro domácí, divoká a zoologická zvířata. Pohotovost a intenzivní péče nonstop; ambulantní provoz Po–So 8:00–20:00, v neděli a o státních svátcích 8:00–12:00. Lékaři na místě mají pohotovost 19:30–08:00. Přijetí na objednání, objednává odesílající veterinář.",
         "sv": "Universitetsdjursjukhus för sällskapsdjur, vilda djur och djurparksdjur. Akut- och intensivvård dygnet runt; öppenvård mån–lör 8.00–20.00, sön och helgdagar 8.00–12.00. Jourhavande veterinärer finns på plats vid akutfall 19.30–08.00. Intagning sker efter bokning av en remitterande veterinär.",
-        "da": "Universitetshospital for kæledyr, vilde dyr og zoodyr. Akut- og intensivbehandling døgnet rundt; ambulant man–lør 8.00–20.00, søn og helligdage 8.00–12.00. Klinikere i vagt til akutte tilfælde 19.30–8.00. Indlæggelse efter aftale, bestilt af en henvisende dyrlæge."
+        "da": "Universitetshospital for kæledyr, vilde dyr og zoodyr. Akut- og intensivbehandling døgnet rundt; ambulant man–lør 8.00–20.00, søn og helligdage 8.00–12.00. Klinikere i vagt til akutte tilfælde 19.30–8.00. Indlæggelse efter aftale, bestilt af en henvisende dyrlæge.",
+        "fi": "Yliopiston opetussairaala seura-, villi- ja eläintarhaeläimille. Päivystys ja tehohoito 24 h; vastaanotto ma–la 8.00–20.00, su ja pyhinä 8.00–12.00. Erikoistuvat lääkärit päivystysvalmiudessa hätätapauksille 19.30–8.00. Vastaanotto ajanvarauksella, jonka tekee lähettävä eläinlääkäri."
       }
     },
     {
@@ -96,7 +97,8 @@
         "pl": "Ambulatorium 6:00–22:00 po wcześniejszym umówieniu; pogotowie i intensywna terapia otwarte całodobowo, siedem dni w tygodniu.",
         "cs": "Ambulantní provoz 6:00–22:00 na objednání; pohotovost a intenzivní péče nonstop, sedm dní v týdnu.",
         "sv": "Öppenvård 6.00–22.00 efter bokad tid; akut- och intensivvård öppen dygnet runt, sju dagar i veckan.",
-        "da": "Ambulant 6.00–22.00 efter aftale; akut- og intensivbehandling åben døgnet rundt, 7 dage om ugen."
+        "da": "Ambulant 6.00–22.00 efter aftale; akut- og intensivbehandling åben døgnet rundt, 7 dage om ugen.",
+        "fi": "Vastaanotto 6.00–22.00 ajanvarauksella; päivystys ja tehohoito auki 24 h, seitsemän päivää viikossa."
       }
     },
     {
@@ -119,7 +121,8 @@
         "pl": "Szpital małych zwierząt prowadzony przez Siły Powietrzne Sri Lanki w Borelli. W sprawie godzin otwarcia i nagłych przypadków zadzwoń wcześniej.",
         "cs": "Nemocnice pro malá zvířata provozovaná letectvem Srí Lanky v Borelle. Ordinační dobu a pohotovost zjistíte telefonicky.",
         "sv": "Smådjurssjukhus som drivs av Sri Lankas flygvapen i Borella. Ring innan du kommer för öppettider och akutfall.",
-        "da": "Dyrehospital for små dyr drevet af Sri Lankas flyvevåben i Borella. Ring på forhånd for åbningstider og akutte tilfælde."
+        "da": "Dyrehospital for små dyr drevet af Sri Lankas flyvevåben i Borella. Ring på forhånd for åbningstider og akutte tilfælde.",
+        "fi": "Sri Lankan ilmavoimien ylläpitämä pieneläinsairaala Borellassa. Kysy aukioloajat ja päivystys soittamalla etukäteen."
       }
     }
   ],

@@ -36,7 +36,8 @@
       "duty_i18n": {
         "cs": "Po–Pá 8:00–18:00, so 9:00–13:00, v neděli zavřeno. Pohotovostní péče mimo běžnou ordinační dobu; zavolejte nebo napište na WhatsApp +297 699 0077.",
         "sv": "Mån–fre 8.00–18.00, lör 9.00–13.00, sön stängt. Akutvård utanför ordinarie öppettider; ring eller skriv på WhatsApp +297 699 0077.",
-        "da": "Man–fre 8.00–18.00, lør 9.00–13.00, søn lukket. Akut hjælp uden for almindelig åbningstid; ring eller skriv på WhatsApp +297 699 0077."
+        "da": "Man–fre 8.00–18.00, lør 9.00–13.00, søn lukket. Akut hjælp uden for almindelig åbningstid; ring eller skriv på WhatsApp +297 699 0077.",
+        "fi": "ma–pe 8–18, la 9–13, su suljettu. Päivystys aukioloaikojen ulkopuolella; soita tai lähetä WhatsApp-viesti numeroon +297 699 0077."
       }
     },
     {
@@ -56,7 +57,8 @@
       "duty_i18n": {
         "cs": "Po–So 8:00–18:00, v neděli zavřeno. Pohotovost a objednání přes WhatsApp +297 562 2710.",
         "sv": "Mån–lör 8.00–18.00, sön stängt. Akutfall och tidsbokning via WhatsApp +297 562 2710.",
-        "da": "Man–lør 8.00–18.00, søn lukket. Akutte tilfælde og tidsbestilling via WhatsApp +297 562 2710."
+        "da": "Man–lør 8.00–18.00, søn lukket. Akutte tilfælde og tidsbestilling via WhatsApp +297 562 2710.",
+        "fi": "ma–la 8–18, su suljettu. Päivystys ja ajanvaraus WhatsAppin kautta: +297 562 2710."
       }
     }
   ],

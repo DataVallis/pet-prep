@@ -76,7 +76,8 @@
         "pl": "Otwarte codziennie 9:00–20:00 (nie całodobowo).",
         "cs": "Denně 9:00–20:00 (není nonstop).",
         "sv": "Öppet varje dag 09.00–20.00 (inte dygnet runt).",
-        "da": "Åbent dagligt 09.00–20.00 (ikke døgnåbent)."
+        "da": "Åbent dagligt 09.00–20.00 (ikke døgnåbent).",
+        "fi": "Auki päivittäin 9–20 (ei ympärivuorokautisesti)."
       },
       "small_animals": true,
       "url": "https://vssarajevo.ba/",
@@ -129,7 +130,8 @@
         "pl": "Stałe godziny 9:00–19:00; telefony w nagłych przypadkach 065 378 810 i 057 340 620.",
         "cs": "Běžná ordinační doba 9:00–19:00; pohotovostní telefony 065 378 810 a 057 340 620.",
         "sv": "Ordinarie öppettider 09.00–19.00; akuttelefon 065 378 810 och 057 340 620.",
-        "da": "Almindelig åbningstid 09.00–19.00; akuttelefoner 065 378 810 og 057 340 620."
+        "da": "Almindelig åbningstid 09.00–19.00; akuttelefoner 065 378 810 og 057 340 620.",
+        "fi": "Aukioloajat 9–19; päivystysnumerot 065 378 810 ja 057 340 620."
       },
       "source_url": "https://n1info.ba/vijesti/a154376-Sarajevo-ima-dezurnu-ambulantu-kod-andquotomiljenog-veterinaraandquot/",
       "checked": "2026-11-04",
@@ -156,7 +158,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 9:00–14:00; weterynarz na dyżurze poza godzinami i w niedziele w nagłych przypadkach: 066/484-373.",
         "cs": "Po–Pá 8:00–20:00, so 9:00–14:00; mimo ordinační dobu a v neděli je pro pohotovost k dispozici veterinář na čísle 066/484-373.",
         "sv": "Mån–fre 08.00–20.00, lör 09.00–14.00; jourhavande veterinär utanför öppettider och på söndagar vid akutfall: 066/484-373.",
-        "da": "Man–fre 08.00–20.00, lør 09.00–14.00; dyrlægevagt uden for åbningstid og om søndagen til akutte tilfælde: 066/484-373."
+        "da": "Man–fre 08.00–20.00, lør 09.00–14.00; dyrlægevagt uden for åbningstid og om søndagen til akutte tilfælde: 066/484-373.",
+        "fi": "ma–pe 8–20, la 9–14; päivystävä eläinlääkäri aukioloaikojen ulkopuolella ja sunnuntaisin päivystystapauksille: 066/484-373."
       },
       "url": "https://www.blvet.ba/",
       "source_url": "https://www.blvet.ba/",
@@ -184,7 +187,8 @@
         "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–13:00, niedz. dyżur; telefon dyżurny 066 321 132.",
         "cs": "Po–Pá 8:00–19:00, so 8:00–13:00, v neděli pohotovostní služba; pohotovostní telefon 066 321 132.",
         "sv": "Mån–fre 08.00–19.00, lör 08.00–13.00, sön i jour; jourtelefon 066 321 132.",
-        "da": "Man–fre 08.00–19.00, lør 08.00–13.00, søn vagtberedskab; vagttelefon 066 321 132."
+        "da": "Man–fre 08.00–19.00, lør 08.00–13.00, søn vagtberedskab; vagttelefon 066 321 132.",
+        "fi": "ma–pe 8–19, la 8–13, su päivystysvuorossa; päivystysnumero 066 321 132."
       },
       "url": "https://veterinarskaambulanta.ba/en/",
       "source_url": "https://veterinarskaambulanta.ba/en/contact-us/",
@@ -212,7 +216,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob. 9:00–14:00, w niedzielę zamknięte.",
         "cs": "Po–Pá 9:00–20:00, so 9:00–14:00, v neděli zavřeno.",
         "sv": "Mån–fre 09.00–20.00, lör 09.00–14.00, sön stängt.",
-        "da": "Man–fre 09.00–20.00, lør 09.00–14.00, søn lukket."
+        "da": "Man–fre 09.00–20.00, lør 09.00–14.00, søn lukket.",
+        "fi": "ma–pe 9–20, la 9–14, su suljettu."
       },
       "url": "https://www.vethealth.ba/",
       "source_url": "https://vethealth.ba/dezurni-veterinar.html",
@@ -300,7 +305,8 @@
         "pl": "Pon.–pt. 8:00–18:00, sob. 9:00–15:00, niedz. 10:00–14:00; dyżurny weterynarz w nagłych przypadkach pod 063 900 100.",
         "cs": "Po–Pá 8:00–18:00, so 9:00–15:00, ne 10:00–14:00; pohotovostní veterinář na čísle 063 900 100.",
         "sv": "Mån–fre 08.00–18.00, lör 09.00–15.00, sön 10.00–14.00; jourhavande veterinär vid akutfall på 063 900 100.",
-        "da": "Man–fre 08.00–18.00, lør 09.00–15.00, søn 10.00–14.00; vagtdyrlæge til akutte tilfælde på 063 900 100."
+        "da": "Man–fre 08.00–18.00, lør 09.00–15.00, søn 10.00–14.00; vagtdyrlæge til akutte tilfælde på 063 900 100.",
+        "fi": "ma–pe 8–18, la 9–15, su 10–14; päivystävä eläinlääkäri numerossa 063 900 100 päivystystapauksia varten."
       },
       "source_url": "https://www.klix.ba/biznis/u-mostaru-otvorena-najsavremenija-veterinarska-stanica-u-bih-uskoro-krece-i-centar-veterinarske-izvrsnosti/250403131",
       "checked": "2026-11-04",
@@ -423,7 +429,8 @@
         "pl": "Pon.–sob. 7:00–18:00, niedz. 7:00–11:00; telefon dyżurny 035/207-211.",
         "cs": "Po–So 7:00–18:00, ne 7:00–11:00; pohotovostní telefon 035/207-211.",
         "sv": "Mån–lör 07.00–18.00, sön 07.00–11.00; jourtelefon 035/207-211.",
-        "da": "Man–lør 07.00–18.00, søn 07.00–11.00; vagttelefon 035/207-211."
+        "da": "Man–lør 07.00–18.00, søn 07.00–11.00; vagttelefon 035/207-211.",
+        "fi": "ma–la 7–18, su 7–11; päivystysnumero 035/207-211."
       },
       "url": "https://vstuzla.ba/",
       "source_url": "https://vstuzla.ba/kontakt/",
@@ -549,7 +556,8 @@
         "pl": "Linia dla nagłych przypadków całą dobę pod +387 65 968 642; stałe godziny pon.–pt. 8:00–18:00, sob. 8:00–16:00.",
         "cs": "Pohotovostní linka nonstop na +387 65 968 642; běžná ordinační doba Po–Pá 8:00–18:00, so 8:00–16:00.",
         "sv": "Akutlinje dygnet runt på +387 65 968 642; ordinarie öppettider mån–fre 08.00–18.00, lör 08.00–16.00.",
-        "da": "Akuttelefon døgnet rundt på +387 65 968 642; almindelig åbningstid man–fre 08.00–18.00, lør 08.00–16.00."
+        "da": "Akuttelefon døgnet rundt på +387 65 968 642; almindelig åbningstid man–fre 08.00–18.00, lør 08.00–16.00.",
+        "fi": "24 tunnin päivystyslinja numerossa +387 65 968 642; aukioloajat ma–pe 8–18, la 8–16."
       },
       "url": "https://novavet.ba/",
       "source_url": "https://novavet.ba/pet-shop/",
@@ -577,7 +585,8 @@
         "pl": "Pon.–pt. 8:00–16:00.",
         "cs": "Po–Pá 8:00–16:00.",
         "sv": "Mån–fre 08.00–16.00.",
-        "da": "Man–fre 08.00–16.00."
+        "da": "Man–fre 08.00–16.00.",
+        "fi": "ma–pe 8–16."
       },
       "url": "https://medicusvet.ba/",
       "source_url": "https://medicusvet.ba/kontakt/",
@@ -605,7 +614,8 @@
         "pl": "Otwarte całą dobę.",
         "cs": "Nonstop.",
         "sv": "Öppet dygnet runt.",
-        "da": "Døgnåben."
+        "da": "Døgnåben.",
+        "fi": "Auki 24 h."
       },
       "url": "https://medicusvet.ba/",
       "source_url": "https://medicusvet.ba/kontakt/",
@@ -632,7 +642,8 @@
         "pl": "Otwarte całą dobę.",
         "cs": "Nonstop.",
         "sv": "Öppet dygnet runt.",
-        "da": "Døgnåben."
+        "da": "Døgnåben.",
+        "fi": "Auki 24 h."
       },
       "url": "https://medicusvet.ba/",
       "source_url": "https://medicusvet.ba/kontakt/",
