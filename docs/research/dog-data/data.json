@@ -66846,6 +66846,595 @@
       }
     }
   },
+  "black_russian_terrier": {
+    "_note": "Added 2026-11-20 (M5-R10-131, unattended run — appended after the Tibetan Spaniel: AKC 2024 No. 127 'Black Russian Terrier', S174 full-list table fetched 2026-11-20 '126 Tibetan Spaniel', '127 Black Russian Terrier', '128 Neopolitan Mastiff'). Quotes as returned by the web-fetch tool on 2026-11-20 (after a web search; the tool limits quotes to ~125 characters — longer passages were returned as fragments); paraphrase only in notes, marked '(paraphrase)'. Sources S984–S992 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Identity from the FCI nomenclature (S984, 'RUSSKIY TCHIORNY TERRIER', English 'RUSSIAN BLACK TERRIER', Group 2 Section 1.4, Russia); standard wording from FCI-Standard N° 327 (S985, valid standard published 13.10.2010). RKC Breeds A–Z page (S986) reached at royalkennelclub.com: size 'Large', exercise 'More than 2 hours per day' → 120, grooming 'Every day' → 7, sheds 'No', lifespan 'Over 10 years' → senior 90. Lifespan: McMillan et al. 2024 names the breed only as a Fig. 5 label in the Nature PDF (no value in the text) and the Dogs Trust table (S123) was refused by the fetch tool; Wikipedia (S992, C) reports 10.9 y from 'A 2024 UK study' — not used alone (tier C) → senior 90 from the RKC lower bound, open for David. Coren (S35): the Wikipedia ranking page was refused by the fetch tool this run; the breed is not known to be ranked (Coren's survey predates its AKC recognition — Claude's reading) → unranked 1.0, open for David. Names: RKC / FCI EN 'Russian Black Terrier', AKC 'Black Russian Terrier'; other names 'Russian Terrier, Tchornyi Terrier, BRT, RBT' (S992); Slovenian »ruski črni terier« (Claude, after the FCI word order — no KZS page read, open for David).",
+    "identity": {
+      "value": "FCI No. 327, Group 2 Section 1.4 (Pinscher and Schnauzer type — Tchiorny Terrier), Russia",
+      "unit": "—",
+      "source_id": "S984",
+      "quote": "RUSSIAN BLACK TERRIER",
+      "confidence": "high",
+      "notes": "FCI nomenclature page (S984): heading 'RUSSKIY TCHIORNY TERRIER', English name 'RUSSIAN BLACK TERRIER', group 'n°2 - Chiens de type Pinscher et Schnauzer - Molossoïdes et chiens de montagne et de bouvier suisses', section 'Type Pinscher et Schnauzer', subsection 'Tchiorny Terrier', country 'RUSSIE (FEDERATION DE)', definitive acceptance '29/09/1983', official valid standard '13/10/2010' (English text 10/01/2011). FCI standard (S985): 'ORIGIN / PATRONAGE: Russia.', 'Section 1.4 Pinscher and Schnauzer.', 'Working trial optional.' (the nomenclature page says no working trial — background). AKC (S988) and RKC (S986) Working group. Country code RU (Borzoi precedent)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S986",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC key fact 'Size' (S986) 'Large' (Giant Schnauzer / Newfoundland / Leonberger precedent). FCI 50–60 kg males / 45–50 kg females (S985) = about 99–132 lb → the 'Giant (over 100 pounds)' class of S10 for growth only."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            72,
+            76
+          ],
+          "female": [
+            68,
+            72
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S985",
+        "quote": "Males: 72 - 76 cms. but no less than 70 cms. and not more than 78 cms.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 327 (S985); females 'Females: 68 - 72 cms. but no less than 66 cms. and not more than 74 cms.'; 'Slightly taller specimens are tolerated providing they are proportionate and of excellent breed type.' RKC standard (S987) 'Height at withers: dogs 68-77 cms (27-30½ ins), bitches 66-72 cms (26-28½ ins).'; AKC standard (S988) males 27–30 in, females 26–29 in over 18 months (paraphrase).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                68,
+                77
+              ],
+              "female": [
+                66,
+                72
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S987",
+            "quote": "Height at withers: dogs 68-77 cms (27-30½ ins), bitches 66-72 cms (26-28½ ins).",
+            "confidence": "high",
+            "notes": "RKC breed standard (S987, updated 1 April 2025)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            50,
+            60
+          ],
+          "female": [
+            45,
+            50
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S985",
+        "quote": "Males: 50 – 60 kgs. Females: 45 – 50 kgs.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 327 (S985) — the game / register value. The RKC standard (S987) and the AKC standard (S988) give no weight. PetMD (S989) 'They typically stand 26–30 inches at the shoulder and weigh 80–130 pounds.'; VCA (S990) 'Weight | 80 to 145 pounds'; Wikipedia (S992) the same 50–60 / 45–50 kg.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                36,
+                59
+              ],
+              "female": [
+                36,
+                59
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S989",
+            "quote": "They typically stand 26–30 inches at the shoulder and weigh 80–130 pounds.",
+            "confidence": "medium",
+            "notes": "PetMD (S989) 80–130 lb ≈ 36–59 kg, one range for both sexes (stored per sex)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 50–60 / 45–50 kg (S985) ≈ 99–132 lb → the 'Giant (over 100 pounds)' class. Purina UK (S991, C): they take a long time to reach maturity (paraphrase, no age). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Black Russian Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S986",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S986). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable — the McMillan 2024 PDF names the breed only as a Fig. 5 label, the Dogs Trust table S123 was refused). Not shorter_lifespan (not 'Under 10 years')."
+      },
+      "petmd": {
+        "value": "10–12",
+        "unit": "years",
+        "source_id": "S989",
+        "quote": "Their lifespan is typically 10–12 years, about average for dogs their size.",
+        "confidence": "medium",
+        "notes": "PetMD (S989). VCA (S990) 'Life | 10 to 12 years'. Background; the RKC lower bound is used."
+      },
+      "mcmillan_2024_wikipedia": {
+        "value": 10.9,
+        "unit": "years",
+        "source_id": "S992",
+        "quote": "A 2024 UK study found a life expectancy of 10.9 years for the breed compared to an average of 12.7 for purebreeds and 12 for crossbreeds.",
+        "confidence": "low",
+        "notes": "Wikipedia (S992, tier C) citing the 2024 UK study (McMillan et al. 2024) — not readable at an A/B source this run (Nature PDF: Fig. 5 label only; Dogs Trust table S123 refused). Would give senior round(0.75 × 10.9 × 12) = 98 months — open for David; never shown as a statistic."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S986) → 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). McMillan 2024 not reachable at an A/B source (Wikipedia 10.9 y → 98 months, C) — open for David.",
+        "derived_from": [
+          "S11",
+          "S986"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S986",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S986), runbook first choice → 120 min ('more than N' → N). Purina UK (S991, C) 'the adult RBT needs a good two hours walking per day' agrees. PetMD (S989) 'at least two walks a day and plenty of play time in between' (no minutes); VCA (S990) 'Exercise | High - needs to walk every day, plus some running and play'.",
+        "alternatives": [
+          {
+            "value": 120,
+            "unit": "minutes/day",
+            "source_id": "S991",
+            "quote": "the adult RBT needs a good two hours walking per day",
+            "confidence": "low",
+            "notes": "Purina UK (S991, tier C) — the same number, only next to the RKC."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "high exercise need: daily walks plus running and play; at least two walks a day",
+        "unit": "—",
+        "source_id": "S990",
+        "quote": "Exercise | High - needs to walk every day, plus some running and play",
+        "confidence": "medium",
+        "notes": "VCA Quick Facts (S990). PetMD (S989): 'at least two walks a day and plenty of play time in between'."
+      },
+      "after_meals": {
+        "value": "avoid strenuous exercise right before and after meals (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S989",
+        "quote": "Because Black Russian Terriers are susceptible to bloat, avoid strenuous exercise right before and after mealtimes.",
+        "confidence": "high",
+        "notes": "PetMD (S989) → meal / exercise gap warning (M5-R16, 60 min = David's number). PetMD also: 'Gastric dilatation-volvulus is a serious and potentially life-threatening form of bloat in dogs'; 'It is more common in deep-chested breeds like the Black Russian Terrier.'; a slow-feeder bowl (paraphrase)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "dignified, confident and well controlled; amiable, undemanding, smart and friendly; defends when needed and calms quickly",
+        "unit": "—",
+        "source_id": "S985",
+        "quote": "A dignified and confident dog; well controlled in all situations.",
+        "confidence": "high",
+        "notes": "FCI standard (S985); 'This handsome breed is amiable and has great endurance; it is undemanding, smart and friendly.'; 'When circumstances require, he immediately assumes an active-defensive posture,' … 'quickly calms down at the disappearance of threat.' RKC standard (S987): 'Alert, lively and even-tempered, wary of strangers. Resilient, brave and self-confident.'; 'Natural guarding instincts. Easily trained. Very adaptable.' AKC standard (S988): 'calm, confident, courageous and self-assured.'; bred to guard, aloof with strangers (paraphrase)."
+      },
+      "family": {
+        "value": "devoted to the family",
+        "unit": "—",
+        "source_id": "S989",
+        "quote": "devoted to their families",
+        "confidence": "medium",
+        "notes": "PetMD (S989, fragment) — the basis of the family_pet chip. AKC (S988): deeply loyal to the family (paraphrase)."
+      },
+      "children": {
+        "value": "can be good with children when supervised; better with older children",
+        "unit": "—",
+        "source_id": "S989",
+        "quote": "and they can be good with children when supervised.",
+        "confidence": "medium",
+        "notes": "PetMD (S989, fragment of 'The breed can live well with other dogs and cats when well-socialized and introduced properly, and they can be good with children when supervised.') — the basis of the children chip (supervision caveat kept here). VCA (S990) Ideal Owner 'Children | Older kids' and Quick Facts 'With Kids | Fine if raised with them' → not_for_small_children chip. Purina UK (S991, C): not recommended with small children (paraphrase) → no small_children chip."
+      },
+      "older_children": {
+        "value": "ideal owner: older kids",
+        "unit": "—",
+        "source_id": "S990",
+        "quote": "Children | Older kids",
+        "confidence": "medium",
+        "notes": "VCA Ideal Owner table (S990) → not_for_small_children chip (a large dog; the older_children label names a small dog — Giant Schnauzer precedent)."
+      },
+      "other_pets": {
+        "value": "can live with other dogs and cats when well socialised and introduced properly",
+        "unit": "—",
+        "source_id": "S989",
+        "quote": "The breed can live well with other dogs and cats when well-socialized and introduced properly,",
+        "confidence": "medium",
+        "notes": "PetMD (S989, fragment). No prey-drive statement in an A/B source → no chases_small_pets chip. Purina UK (S991, C): might not like other dogs (paraphrase) → no other_pets chip either."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No verbatim A/B statement captured: VCA (S990) Quick Facts says fine alone as a trained adult and suggests a part-time owner or a dog walker (paraphrase of a summarised table) → no needs_company chip. Purina UK (S991, C): can be left occasionally with training (paraphrase)."
+      },
+      "socialisation": {
+        "value": "early and consistent socialisation is important",
+        "unit": "—",
+        "source_id": "S989",
+        "quote": "Early and consistent socialization is important for this breed to be comfortable around new people, animals, and situations.",
+        "confidence": "high",
+        "notes": "PetMD (S989, a need) → breed DOG_SOCIALISATION entry (M5-R17). VCA (S990): 'requires early training and socialization to ensure that his protective tendencies don't get out of hand.'"
+      },
+      "training": {
+        "value": "smart; does well with consistent positive-reinforcement training; easily trained",
+        "unit": "—",
+        "source_id": "S987",
+        "quote": "Natural guarding instincts. Easily trained. Very adaptable.",
+        "confidence": "high",
+        "notes": "RKC standard (S987). PetMD (S989): smart dogs that do well with consistent positive reinforcement training (paraphrase). VCA (S990): intelligent, good at problem-solving; can be stubborn (paraphrase). Background (no experienced_owner quote in an A/B source)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S986) — no points of concern specific to the breed for judges; no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: RKC Good Practice genetic diversity + BVA/RKC elbow and hip schemes; Best Practice DNA HUU, DNA JLPP, prcd-PRA (S986).",
+      "breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S986): currently no points of concern specific to this breed identified for special attention by judges (paraphrase)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S990",
+        "quote": "The most common are hip dysplasia, elbow dysplasia and progressive retinal atrophy.",
+        "confidence": "high",
+        "notes": "VCA (S990); PetMD (S989) hip dysplasia; RKC (S986) BVA/RKC Hip Dysplasia Scheme. Register health key hip_dysplasia."
+      },
+      "elbow_dysplasia": {
+        "value": "elbow dysplasia",
+        "unit": "—",
+        "source_id": "S990",
+        "quote": "The most common are hip dysplasia, elbow dysplasia and progressive retinal atrophy.",
+        "confidence": "high",
+        "notes": "VCA (S990); PetMD (S989); RKC (S986) BVA/RKC Elbow Dysplasia Scheme. Register health key elbow_dysplasia."
+      },
+      "progressive_retinal_atrophy": {
+        "value": "progressive retinal atrophy (PRA)",
+        "unit": "—",
+        "source_id": "S990",
+        "quote": "The most common are hip dysplasia, elbow dysplasia and progressive retinal atrophy.",
+        "confidence": "high",
+        "notes": "VCA (S990); PetMD (S989) PRA; RKC (S986) prcd-PRA test. Register health key progressive_retinal_atrophy."
+      },
+      "hyperuricosuria": {
+        "value": "hyperuricosuria — uric acid builds up in the urine (stones)",
+        "unit": "—",
+        "source_id": "S989",
+        "quote": "Black Russian Terriers can develop hyperuricosuria, a condition in which uric acid accumulates in urine;",
+        "confidence": "high",
+        "notes": "PetMD (S989, fragment); RKC (S986) DNA test for Hyperuricosuria (HUU). Register health key hyperuricosuria."
+      },
+      "juvenile_laryngeal_paralysis": {
+        "value": "juvenile laryngeal paralysis and polyneuropathy (JLPP)",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "DNA test for Juvenile laryngeal paralysis and polyneuropathy (JLPP)",
+        "confidence": "high",
+        "notes": "RKC Best Practice test (S986); Purina UK (S991, C) names it too. Register health key juvenile_laryngeal_paralysis."
+      },
+      "bloat": {
+        "value": "bloat / gastric dilatation-volvulus (deep-chested breed)",
+        "unit": "—",
+        "source_id": "S989",
+        "quote": "It is more common in deep-chested breeds like the Black Russian Terrier.",
+        "confidence": "high",
+        "notes": "PetMD (S989) → meal / exercise gap (exercise.after_meals). Register health key bloat_gdv."
+      },
+      "heart": {
+        "value": "heart issues",
+        "unit": "—",
+        "source_id": "S989",
+        "quote": "they may be predisposed to certain health conditions such as hip dysplasia and heart issues.",
+        "confidence": "medium",
+        "notes": "PetMD (S989, fragment) — general mention, no named condition. Background only (no register key)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not ranked as far as known: the Wikipedia page of Coren's ranking (S35) was refused by the fetch tool this run (provenance), so the table was not re-read by name; Coren's survey (1994) predates the breed's AKC recognition and no earlier run recorded a 'Russian' row (Claude's reading — open for David). Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35, see coren_rank)."
+      },
+      "training_notes": {
+        "value": "easily trained, very adaptable; intelligent",
+        "unit": "—",
+        "source_id": "S987",
+        "quote": "Natural guarding instincts. Easily trained. Very adaptable.",
+        "confidence": "medium",
+        "notes": "RKC standard (S987); AKC standard (S988): highly intelligent and adapts well to training (paraphrase). The game uses Coren's rank only (unranked → 1.0)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.black_russian_terrier.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "large, robust and very athletic dog with a slightly long body, large head, compact body and deep chest",
+        "unit": "—",
+        "source_id": "S985",
+        "quote": "The Russian Black Terrier is a large dog with a slightly long body and very athletic built",
+        "confidence": "high",
+        "notes": "FCI standard (S985); 'of a robust type and hardy constitution.'; 'It is symmetrical with a large head and compact body and a voluminous and deep chest.' AKC (S988): 'The Black Russian Terrier is a large, immensely powerful worker of heavy bone and coarse all-black coat.' (breed page)."
+      },
+      "colours": {
+        "value": [
+          "black",
+          "black with intermingling grey hairs"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S985",
+        "quote": "Black, black with insignificant intermingling grey hair is permissible.",
+        "confidence": "high",
+        "notes": "FCI standard (S985): '(Grey intermingling hair not to cover more than a 1/3 of the whole body).'; disqualifying 'Any other colour than the ones described.', 'White spots or markings.', 'Clearly defined patches of grey hair.' RKC standard (S987): 'Black; or black with intermingling grey hairs distributed through the coat and in total no more than one third of the coat.'; AKC (S988) solid black or black with scattered gray hairs (paraphrase). The game draws the two standard colours (black first = portrait default); never white markings, never grey patches."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black first with the highest weight → the portrait default; draft weights 80 / 20."
+      },
+      "coat": {
+        "value": "rough, thick double coat: coarse, slightly waved outer coat over a soft dense undercoat, 5–15 cm untrimmed; abundant eyebrows, moustache and beard",
+        "unit": "—",
+        "source_id": "S985",
+        "quote": "Rough and thick double coat.",
+        "confidence": "high",
+        "notes": "FCI standard (S985): 'Composed of a coarse, thick, slightly waved outer coat and a soft, short and dense undercoat.'; 'The natural and untrimmed coat length is between 5 – 15 cms.'; 'The head furnishing is very well developed and forms abundant eyebrows, moustaches and beard.' RKC (S986) 'Coat length: Medium'. AKC (S988): trimming is needed for shape and upkeep (paraphrase)."
+      },
+      "eyes": {
+        "value": "medium, oval, dark, set wide apart, black tight rims",
+        "unit": "—",
+        "source_id": "S985",
+        "quote": "EYES: Medium size, oval shaped, set straight and wide apart, dark colour.",
+        "confidence": "high",
+        "notes": "FCI standard (S985); 'Eye rims dry, tight and black.'"
+      },
+      "ears": {
+        "value": "medium, triangular, high-set hanging ears, front edge close to the cheek (never cropped)",
+        "unit": "—",
+        "source_id": "S985",
+        "quote": "EARS: Hanging. Set high and symmetrical, medium sized, triangular shaped.",
+        "confidence": "high",
+        "notes": "FCI standard (S985); 'Front edge close to cheek. Ear leather is dense, without folds.' AKC (S988): cropped ears not acceptable (paraphrase)."
+      },
+      "nose": {
+        "value": "large and black",
+        "unit": "—",
+        "source_id": "S985",
+        "quote": "Nose: Large and black.",
+        "confidence": "high",
+        "notes": "FCI standard (S985); disqualifying 'Nose other than black.'"
+      },
+      "tail": {
+        "value": "thick, set high; natural undocked tail sabre or sickle shaped (drawn natural)",
+        "unit": "—",
+        "source_id": "S985",
+        "quote": "Preferable shape of the undocked tail is sabre or sickle.",
+        "confidence": "high",
+        "notes": "FCI standard (S985): 'Thick at root and set high.'; 'Tail traditionally docked in country of origin.'; 'An undocked tails length or shape has no influence on the evaluation of the dog.' Portrait: natural tail (Claude — the natural-tail rule of the other breeds)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z page 'Russian Black Terrier' (S986, read 2026-11-20 at royalkennelclub.com), PetMD (S989), VCA (S990).",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S986)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (S986) → 120 min → long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "Large house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S986) → large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S986)."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "Every day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S986) → brushing every day (7× a week, M5-R13) → frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S986)."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S986) → low_shedding (never hypoallergenic). PetMD (S989) 'the breed does not shed excessively' agrees; Purina UK (S991, C) rates shedding 3/5 — tier C only, not a conflict of A/B sources."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S986) — see lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S986)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact 'Vulnerable native breed' (S986)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S986) — see health.breed_watch."
+      },
+      "petmd_brushing": {
+        "value": "brush at least a few times a week",
+        "unit": "—",
+        "source_id": "S989",
+        "quote": "Use a slicker brush and brush your dog at least a few times a week.",
+        "confidence": "medium",
+        "notes": "PetMD (S989) — no number; the RKC 'Every day' decides (7)."
+      },
+      "vca_brushing": {
+        "value": "brushing and combing at least once a week",
+        "unit": "—",
+        "source_id": "S990",
+        "quote": "Brushing and combing need to be performed regularly – at least once a week –",
+        "confidence": "medium",
+        "notes": "VCA (S990, fragment) — alternative 1; the RKC 'Every day' decides."
+      },
+      "vca_professional_grooming": {
+        "value": "trimming by a professional groomer every six to eight weeks",
+        "unit": "—",
+        "source_id": "S990",
+        "quote": "trimming by a professional groomer should occur every six to eight weeks.",
+        "confidence": "high",
+        "notes": "VCA (S990) → groomer reminder every 6 weeks (range → lower bound, M5-R20; Samoyed precedent). Purina UK (S991, C): clipping to the traditional working cut every 6 to 8 weeks (paraphrase)."
+      },
+      "vca_nails": {
+        "value": "weekly pedicures",
+        "unit": "—",
+        "source_id": "S990",
+        "quote": "Weekly pedicures",
+        "confidence": "medium",
+        "notes": "VCA (S990, fragment) → nail trimming once a week (M5-R18; Pyrenean Mountain Dog / Greater Swiss Mountain Dog precedent 'weekly pedicure')."
+      },
+      "vca_bath": {
+        "value": "periodic baths",
+        "unit": "—",
+        "source_id": "S990",
+        "quote": "periodic baths will help keep this dog looking and feeling his best.",
+        "confidence": "medium",
+        "notes": "VCA (S990) — 'periodic', no number → no bath reminder."
+      },
+      "petmd_ears": {
+        "value": "check the ears weekly",
+        "unit": "—",
+        "source_id": "S989",
+        "quote": "Check the ears weekly for signs of redness, wax buildup, or a foul odor.",
+        "confidence": "high",
+        "notes": "PetMD (S989) → ear care once a week (M5-R14; Papillon precedent 'Check your dog's ears every week'). VCA (S990): 'ear cleanings – which can help ward off infections in those drop ears' (no number)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -100156,6 +100745,319 @@
         "confidence": "medium",
         "notes": "FCI (S980). Natural, untrimmed coat; moderate, blunt medium-length muzzle (not flat-faced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): portrait default golden (first colour, highest weight); colours only from the standard (never merle)"
+      }
+    },
+    "black_russian_terrier": {
+      "_note": "Unattended run M5-R10-131 (2026-11-20): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S986 'More than 2 hours per day' → 120). Senior boundary 90 from the RKC lower bound 'Over 10 years' (S986; McMillan 2024 not reachable at an A/B source — Wikipedia S992 10.9 y → 98, open for David). Learning 1.0 (unranked, S35 not re-read — open for David). Built: brushing every day (RKC 'Every day', M5-R13), puppy socialisation with the PetMD quote (M5-R17), meal / exercise gap 60 min (PetMD S989 bloat, M5-R16), nail trimming weekly (VCA 'Weekly pedicures', M5-R18), ear care weekly (PetMD 'Check the ears weekly', M5-R14), groomer reminder every 6 weeks (VCA 'every six to eight weeks', M5-R20). No tooth / bath task (no frequency), no heat warning (not flat-faced). No new vocabulary key. In marketing (Breed Watch Category 1). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S986",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S986) → rule 'more than N' → 120. Purina UK (S991, C) 'a good two hours walking per day' agrees; PetMD / VCA give no minutes.",
+        "alternatives": [
+          {
+            "value": 120,
+            "source_id": "S991",
+            "quote": "the adult RBT needs a good two hours walking per day",
+            "notes": "Purina UK (tier C) — the same number; RKC preferred."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S986 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S986",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + the RKC lower bound 'Over 10 years', S986 — no McMillan 2024 / VetCompass row reachable at an A/B source). PetMD / VCA 10–12 y (S989 / S990) give the same lower bound; Wikipedia (S992, C) 10.9 y from the 2024 UK study → 98 — open for David.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S986"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_mcmillan_2024_via_wikipedia": 98
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 'Over 10 years', S986)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35 not re-read this run — see black_russian_terrier.trainability.coren_rank) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S986",
+        "quote": "Every day",
+        "confidence": "high",
+        "notes": "black_russian_terrier.suitability.rkc_grooming. RKC 'Every day' (S986) → 7 (runbook »Dog grooming«). Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S990",
+            "quote": "Brushing and combing need to be performed regularly – at least once a week –",
+            "notes": "VCA — at least once a week; not used (RKC preferred)."
+          },
+          {
+            "value": null,
+            "source_id": "S989",
+            "quote": "Use a slicker brush and brush your dog at least a few times a week.",
+            "notes": "PetMD — no number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Every day« → 7); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S989",
+        "quote": "Because Black Russian Terriers are susceptible to bloat, avoid strenuous exercise right before and after mealtimes.",
+        "confidence": "high",
+        "notes": "black_russian_terrier.exercise.after_meals (PetMD S989, bloat / GDV).",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "nail_trimming": {
+        "value": [
+          1,
+          7
+        ],
+        "unit": "[times, period days] — child task (M5-R18)",
+        "source_id": "S990",
+        "quote": "Weekly pedicures",
+        "confidence": "medium",
+        "notes": "black_russian_terrier.suitability.vca_nails. 'Weekly pedicures' → once a week (Pyrenean Mountain Dog / Greater Swiss Mountain Dog precedent).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »Weekly pedicures« → enkrat na teden"
+      },
+      "ear_care": {
+        "value": [
+          1,
+          7
+        ],
+        "unit": "[times, period days] — child task (M5-R14)",
+        "source_id": "S989",
+        "quote": "Check the ears weekly for signs of redness, wax buildup, or a foul odor.",
+        "confidence": "high",
+        "notes": "black_russian_terrier.suitability.petmd_ears. 'weekly' → once a week (Papillon / American Cocker Spaniel precedent).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): »weekly« → enkrat na teden"
+      },
+      "professional_grooming": {
+        "value": [
+          1,
+          42
+        ],
+        "unit": "[times, period days] — parent reminder (M5-R20, never scored)",
+        "source_id": "S990",
+        "quote": "trimming by a professional groomer should occur every six to eight weeks.",
+        "confidence": "high",
+        "notes": "black_russian_terrier.suitability.vca_professional_grooming. 'every six to eight weeks' → the lower bound, 6 weeks (Samoyed precedent). Teeth: no source; bath: VCA 'periodic' → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): obisk frizerja vsakih 6 tednov (VCA »every six to eight weeks« → spodnja meja)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S989",
+        "quote": "Early and consistent socialization is important for this breed to be comfortable around new people, animals, and situations.",
+        "confidence": "high",
+        "notes": "black_russian_terrier.behaviour.socialisation (PetMD S989, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S989)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-131); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S986"
+            ],
+            "refs": [
+              "black_russian_terrier.exercise.adult",
+              "black_russian_terrier.suitability.rkc_exercise"
+            ],
+            "quote": "S986 'More than 2 hours per day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S989"
+            ],
+            "refs": [
+              "black_russian_terrier.behaviour.family"
+            ],
+            "quote": "S989 'devoted to their families'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S989"
+            ],
+            "refs": [
+              "black_russian_terrier.behaviour.children"
+            ],
+            "quote": "S989 'and they can be good with children when supervised.' (supervision caveat; VCA 'Older kids' → not_for_small_children)"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S986"
+            ],
+            "refs": [
+              "black_russian_terrier.suitability.rkc_size_of_home"
+            ],
+            "quote": "S986 'Large house'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S986"
+            ],
+            "refs": [
+              "black_russian_terrier.suitability.rkc_shedding"
+            ],
+            "quote": "S986 key fact 'Sheds' 'No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S986"
+            ],
+            "refs": [
+              "black_russian_terrier.exercise.adult",
+              "black_russian_terrier.suitability.rkc_exercise"
+            ],
+            "quote": "S986 'More than 2 hours per day'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S986"
+            ],
+            "refs": [
+              "black_russian_terrier.suitability.rkc_grooming"
+            ],
+            "quote": "S986 'Every day'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S990"
+            ],
+            "refs": [
+              "black_russian_terrier.behaviour.older_children"
+            ],
+            "quote": "S990 'Children | Older kids'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "VCA (S990) 'Older kids'; PetMD only 'when supervised' → no small_children chip; older_children names a small dog → not_for_small_children (large dog, Giant Schnauzer precedent).",
+          "apartment": "RKC 'Large house' (S986), not 'Flat/ Apartment'.",
+          "experienced_owner": "No A/B quote naming experienced owners (only Purina UK, tier C).",
+          "chases_small_pets": "No prey-drive statement in an A/B source.",
+          "needs_company": "No A/B statement that the breed must not be left alone (VCA paraphrase: fine as a trained adult).",
+          "other_pets": "PetMD only with socialisation and proper introduction; Purina UK (C) contrary → neither.",
+          "hypoallergenic": "never (runbook)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S986",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch Category 1 (S986). Marketing never promises the breed's health, never calls it hypoallergenic and never shows it alone with small children.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Black Russian Terrier, black: large, robust, very athletic dog with a slightly long body, large head and deep chest; rough, thick, slightly waved double coat with abundant eyebrows, moustache and beard; medium triangular high-set hanging ears; dark oval eyes; large black nose; natural undocked sabre-shaped tail",
+        "unit": "—",
+        "source_id": "S985",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S985) as in black_russian_terrier.appearance. Two standard colours; weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default (first standard colour, highest weight; weights unsourced); natural tail, natural ears"
       }
     }
   }

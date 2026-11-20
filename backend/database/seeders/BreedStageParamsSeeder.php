@@ -1531,6 +1531,15 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_TIBETAN_SPANIEL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-130)';
 
     /**
+     * M5-R10-131 Black Russian Terrier (unattended run 2026-11-20, data.json proposed_game_parameters.black_russian_terrier.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S986 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound "Over 10 years", S986), arrival 2 / 9 / 36 / 90, learning
+     * multiplier 1.0 (unranked, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_BLACK_RUSSIAN_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-131)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1952,6 +1961,11 @@ class BreedStageParamsSeeder extends Seeder
             'nail_trim' => [1, 'month', 'S982', 'check if they need a trim at least once monthly', 'proposed_game_parameters.tibetan_spaniel.nail_trimming', '"at least once monthly" → every 4 weeks'],
             'bath' => [1, 'month', 'S982', 'giving them a bath roughly every month', 'proposed_game_parameters.tibetan_spaniel.bathing', '"roughly every month" → every 4 weeks (groomer: PetMD "at home", no frequency → no task)'],
         ],
+        'black_russian_terrier' => [
+            'ear_cleaning' => [1, 'week', 'S989', 'Check the ears weekly for signs of redness, wax buildup, or a foul odor.', 'proposed_game_parameters.black_russian_terrier.ear_care', '"weekly" → once a week'],
+            'nail_trim' => [1, 'week', 'S990', 'Weekly pedicures', 'proposed_game_parameters.black_russian_terrier.nail_trimming', '"Weekly pedicures" → once a week'],
+            'groomer_visit' => [1, 'six_weeks', 'S990', 'trimming by a professional groomer should occur every six to eight weeks.', 'proposed_game_parameters.black_russian_terrier.professional_grooming', '"every six to eight weeks" → the lower bound, 6 weeks (teeth: no source; bath: VCA "periodic" → no task)'],
+        ],
     ];
 
     /**
@@ -2098,6 +2112,7 @@ class BreedStageParamsSeeder extends Seeder
         'welsh_terrier' => [3, 'S957', 'Welsh Terriers will need around an hour of exercise daily, and grooming two-three times per week.', 'high', false],
         'norwegian_elkhound' => [7, 'S964', "You should brush your dog's coats for at least two minutes every day.", 'high', false],
         'tibetan_spaniel' => [2, 'S981', 'Grooming a couple of times per week is usually enough to keep their coats in tip-top condition.', 'high', false],
+        'black_russian_terrier' => [7, 'S986', 'Every day', 'high', false],
     ];
 
     /**
@@ -2159,6 +2174,7 @@ class BreedStageParamsSeeder extends Seeder
         'gordon_setter' => ['S844', 'Restrict exercise an hour before and after mealtimes'],
         'afghan_hound' => ['S852', 'It’s important to wait at least an hour after your Afghan Hound eats before letting them exercise'],
         'spinone_italiano' => ['S937', 'Don’t allow your dog to exercise for an hour before or after eating.'],
+        'black_russian_terrier' => ['S989', 'Because Black Russian Terriers are susceptible to bloat, avoid strenuous exercise right before and after mealtimes.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -2293,13 +2309,14 @@ class BreedStageParamsSeeder extends Seeder
         'norwegian_elkhound' => ['S963', 'When socialized properly as puppies and trained early, Norwegian Elkhounds make wonderful family dogs.'],
         'american_hairless_terrier' => ['S971', 'Begin socializing your American Hairless Terrier puppy as soon as you bring them home.'],
         'tibetan_spaniel' => ['S983', 'Begin socializing your Tibetan Spaniel puppy as soon as you bring them home.'],
+        'black_russian_terrier' => ['S989', 'Early and consistent socialization is important for this breed to be comfortable around new people, animals, and situations.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -3146,6 +3163,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::NorwegianElkhound => self::norwegianElkhoundProfile(),
             BreedType::AmericanHairlessTerrier => self::americanHairlessTerrierProfile(),
             BreedType::TibetanSpaniel => self::tibetanSpanielProfile(),
+            BreedType::BlackRussianTerrier => self::blackRussianTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -12248,6 +12266,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'tibetan_spaniel.lifespan.median_uk',
                 'quote' => 'Tibetan Spaniel (x̃ = 15.2, HR 0.5, 0.4–0.5)',
                 'notes' => 'McMillan et al. 2024 median (S771, results text). PDSA "Over 12 years" (S981), WebMD / PetMD 12–15 years (S982, S983). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Black Russian Terrier (M5-R10-131). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_BLACK_RUSSIAN_TERRIER); weight, growth and lifespan are sourced;
+     * no Coren rank (unranked → 1.0).
+     *
+     * @return array<string, mixed>
+     */
+    private static function blackRussianTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BLACK_RUSSIAN_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S986', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.black_russian_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog reaches adult weight at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S986) = 7.5 y = 90 months. Not chosen: 84 (Dogs Trust > 7 y, S14); 98 (McMillan 2024 via Wikipedia S992, tier C — open for David).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.black_russian_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S986', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.black_russian_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC breed page key fact (S986) → 120 min = 12,000 steps (runbook rule: "more than N" → N). Purina UK (S991, tier C) "a good two hours walking per day" agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.black_russian_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[45, 60], [
+                'unit' => 'kg', 'source_id' => 'S985', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'black_russian_terrier.adult_weight.fci',
+                'quote' => 'Males: 50 – 60 kgs. Females: 45 – 50 kgs.',
+                'notes' => 'FCI-Standard N° 327 (S985): males 50–60, females 45–50 kg. PetMD (S989) 80–130 lb; VCA (S990) 80 to 145 pounds.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'black_russian_terrier.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 50–60 / 45–50 kg ≈ 99–132 lb, S985 → the Giant class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'black_russian_terrier.trainability.coren_rank',
+                'notes' => 'Unranked as far as known: the Wikipedia table of Coren\'s ranking (S35) was not re-read by name this run (fetch refused); the breed postdates Coren\'s survey (Claude — open for David).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.black_russian_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): unranked (S35) → 1.0. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S986', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'black_russian_terrier.lifespan.rkc',
+                'quote' => 'Over 10 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S986). PetMD / VCA 10–12 years (S989, S990); Wikipedia (S992, C) cites the 2024 UK study. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
