@@ -162,7 +162,8 @@ class MediaVisionCheck
     {
         return "- item_grounded: the object rests on the floor like a real object — its whole bottom edge / base touches the floor, with a soft contact shadow under the WHOLE base (darkest where it meets the floor), no gap under it, not floating or hovering; false if the shadow is only at one point or one side, if the object touches the floor at a single point, or if there is a separate, offset or detached shadow blob beside or under it.\n"
             ."- item_integrated: the object looks photographed in this room together with the {$animal}, not pasted in: the same light direction, softness, colour temperature and brightness as the room, the same focus, depth of field, sharpness and grain as the floor around it, the same perspective as the floor; false if the object is noticeably sharper or crisper than the floor it stands on, has a bright outline or halo, cut-out edges, or a studio-lit, razor-sharp product look in a softer room.\n"
-            ."- scale_ok: the object's size is plausible next to the {$animal}; a bed is big enough that the {$animal} lies INSIDE it (on its cushion, within its rim / sides) — not on top of a too-small bed with its body overhanging; bowls and toys have a natural size for this {$animal}.\n";
+            // 2026-11-20 (production: a puppy's bowls failed as »too large« against the ADULT breed's size): compare with the animal AS SHOWN.
+            ."- scale_ok: the object's size is plausible next to the {$animal} AS IT IS SHOWN in the picture (its real size and age there — a puppy or kitten gets items sized for it, never judged against the adult breed); a bed is big enough that the {$animal} lies INSIDE it (on its cushion, within its rim / sides) — not on top of a too-small bed with its body overhanging; bowls and toys have a natural size for this {$animal}.\n";
     }
 
     /**

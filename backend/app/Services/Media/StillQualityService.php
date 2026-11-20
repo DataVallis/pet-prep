@@ -500,7 +500,8 @@ class StillQualityService
         $description = ItemDesigns::description($row->design) ?? $row->design;
         $breedKey = $row->scope === ItemMedia::SCOPE_LOOK ? $row->look?->breed_type?->value : $row->pet?->breed_type?->value;
 
-        return PetAppearancePrompt::itemScene($row->item_key, $species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species) : null);
+        // 2026-11-20: sized for the animal's CURRENT stage (a puppy's bowls / bed for the puppy as shown).
+        return PetAppearancePrompt::itemScene($row->item_key, $species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species, $row->stage()) : null, $row->stage());
     }
 
     /** David 2026-11-20: the scene of the bowls' drinking clip (the animal at the bowls, head over the water bowl). */
@@ -509,7 +510,7 @@ class StillQualityService
         $description = ItemDesigns::description($row->design) ?? $row->design;
         $breedKey = $row->scope === ItemMedia::SCOPE_LOOK ? $row->look?->breed_type?->value : $row->pet?->breed_type?->value;
 
-        return PetAppearancePrompt::itemDrinkScene($species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species) : null);
+        return PetAppearancePrompt::itemDrinkScene($species, $description, $breedKey !== null ? $this->items->sizeOf($breedKey, $species, $row->stage()) : null, $row->stage());
     }
 
     /** Signed URL fal fetches an item candidate from (GET /api/media/items/{itemMedia}/candidate). */
