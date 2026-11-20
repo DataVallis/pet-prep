@@ -66311,6 +66311,541 @@
       }
     }
   },
+  "tibetan_spaniel": {
+    "_note": "Added 2026-11-20 (M5-R10-130, unattended run — appended after the American Hairless Terrier: AKC 2024 No. 126 'Tibetan Spaniel', S174 full-list table recorded 2026-11-20 in queue row 129 '125 American Hairless Terrier', '126 Tibetan Spaniel'). Quotes as returned by the web-fetch tool on 2026-11-20 (non-preapproved pages: fragments up to 125 characters); paraphrase only in notes, marked '(paraphrase)'. Sources S980–S983 (reused S10, S11, S14, S24, S35, S45, S174, S771). No health percentages anywhere. Standard: FCI-Standard N° 231 Tibetan Spaniel (S980, '06.10.2026/ EN', valid since 08.09.2026). The RKC Breeds A–Z page and the RKC breed standard were refused by the fetch tool this run (redirect to royalkennelclub.com outside the provenance set) → no RKC key facts, no Breed Watch category and no RKC health tests: the runbook's 'else PDSA' path — PDSA (S981) for size, height, weight band, lifespan band, exercise ('around an hour of exercise every day'), coat and grooming ('a couple of times per week'), as for the Tibetan Terrier. WebMD (S982, medically reviewed 2026-05-08) and PetMD (S983, reviewed by Veronica Higgs, DVM, updated Apr. 12, 2024) for care frequencies and behaviour. Lifespan: McMillan et al. 2024 (nature.com PDF S771, results text) 'Tibetan Spaniel (x̃ = 15.2 …)' — the runbook's first choice → senior 137. Coren rank 46 'Tibetan Spaniel' (S35, shared, Average) → 1.0. Not a spaniel by type (FCI Group 9 companion dog). Never hypoallergenic. Slovenian »tibetanski španjel« (KZS page not reached — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 231, Group 9 Section 5 (Tibetan breeds), Tibet (China)",
+      "unit": "—",
+      "source_id": "S980",
+      "quote": "FCI-CLASSIFICATION: Group 9 Companion and Toy Dogs / Section 5 Tibetan breeds / Without working trial.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 231 (S980): 'ORIGIN: Tibet (China).', 'PATRONAGE: Great Britain.'; FCI nomenclature page: country of origin 'Tibet (China)', definitive acceptance 22 August 1961."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S981",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "PDSA key fact 'Size' (S981). FCI 'Small, active and alert.' (S980)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": 25.4,
+          "female": 25.4
+        },
+        "unit": "cm",
+        "source_id": "S980",
+        "quote": "Height at the withers: About 25,4 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 231 (S980), one approximate value for both sexes (decimal comma as printed)."
+      },
+      "pdsa": {
+        "value": {
+          "male": 25,
+          "female": 25
+        },
+        "unit": "cm",
+        "source_id": "S981",
+        "quote": "25 cm",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average height' (S981). WebMD (S982) 'about 10 inches tall' agrees."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            4.1,
+            6.8
+          ],
+          "female": [
+            4.1,
+            6.8
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S980",
+        "quote": "Weight: Ideal 4,1 to 6,8 kg.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 231 (S980), one band for both sexes (decimal comma as printed) — the register / game weight.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                4,
+                7
+              ],
+              "female": [
+                4,
+                7
+              ]
+            },
+            "source_id": "S981",
+            "quote": "4-7 kg"
+          },
+          {
+            "value": "9–15 lb",
+            "source_id": "S982",
+            "quote": "They are about 10 inches tall and weigh anywhere from 9 to 15 pounds."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 4.1–6.8 kg ≈ 9–15 lb (S980, S982) — mostly the 'Small (12–24 pounds)' class; PDSA 'Small' (S981). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Tibetan Spaniel growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 15.2,
+        "unit": "years",
+        "source_id": "S771",
+        "quote": "Tibetan Spaniel (x̃ = 15.2, HR 0.5, 0.4–0.5)",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep, nature.com PDF S771) results text as returned ('Those least at risk from early death included' …; the PDF extraction printed 'x ̃ = 15.2'). Runbook first choice (McMillan 2024) → not provisional. The LJMU press release gives '15.2 years' as well. Hazard ratio research only — never shown as a number or risk in the app."
+      },
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S981",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S981). Consistent with the McMillan median. Not shorter_lifespan."
+      },
+      "webmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S982",
+        "quote": "The lifespan of Tibetan Spaniels usually ranges from 12 to 15 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S982); PetMD (S983) 'Tibetan Spaniels have an average lifespan of 12–15 years.' Background; the McMillan median is used."
+      },
+      "senior_from": {
+        "value": 11.4,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 15.2 y (McMillan 2024, S771) → 0.75 × 15.2 = 11.4 y = 136.8 → 137 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S771"
+        ],
+        "months": 137,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S981",
+        "quote": "Tibetan Spaniels need around an hour of exercise every day and will happily join in with family games and activities.",
+        "confidence": "high",
+        "notes": "PDSA (S981) 'around an hour' → 60 (runbook: 'around N' → N; no RKC key fact reachable → PDSA). PDSA key fact 'Minimum exercise (per day) 1 hour'; WebMD (S982) 'at least one hour of exercise every day' agrees; PetMD (S983) 'Daily exercise needs are minimal' (no minutes).",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S982",
+            "quote": "Make sure to give your pet at least one hour of exercise every day."
+          },
+          {
+            "value": null,
+            "source_id": "S983",
+            "quote": "Daily exercise needs are minimal for Tibbies, but they'll appreciate short on-leash walks and outdoor outings."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "around an hour of exercise a day, happy to join in family games",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Tibetan Spaniels need around an hour of exercise every day and will happily join in with family games and activities.",
+        "confidence": "high",
+        "notes": "PDSA (S981)."
+      },
+      "fencing": {
+        "value": "needs a secure fenced yard",
+        "unit": "—",
+        "source_id": "S982",
+        "quote": "The only thing you need to have in your house is a secure fenced yard for them.",
+        "confidence": "high",
+        "notes": "WebMD (S982). Basis of the secure_fencing chip."
+      },
+      "heat": {
+        "value": "hot weather can cause overheating and breathing problems",
+        "unit": "—",
+        "source_id": "S982",
+        "quote": "Hot weather can trigger overheating and respiratory problems in Tibbies.",
+        "confidence": "high",
+        "notes": "WebMD (S982). Basis of the heat_sensitive chip. Not a flat-faced breed (FCI muzzle \"Medium in length\") → no DOG_NO_WALK_IN_HEAT rule (that rule is for flat-faced breeds whose source says not to exercise in the heat)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No source names a gap between meals and exercise for this breed → no meal / exercise gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gay and assertive, highly intelligent, aloof with strangers; alert, loyal but independent",
+        "unit": "—",
+        "source_id": "S980",
+        "quote": "Gay and assertive, highly intelligent, aloof with strangers. Alert, loyal but independent.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 231 (S980). PDSA (S981): \"sensitive, happy dogs that are known to be quite independent and also occasionally stubborn\"."
+      },
+      "family": {
+        "value": "get along well with everyone; make good family pets",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Tibetan Spaniels generally get along well with everyone and will make good family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S981)."
+      },
+      "children": {
+        "value": "better suited to families with older children",
+        "unit": "—",
+        "source_id": "S982",
+        "quote": "This is why Tibbies are better suited for families with older children who can handle them responsibly.",
+        "confidence": "high",
+        "notes": "WebMD (S982). PDSA and PetMD do not mention children. Basis of the older_children chip; no children / small_children chip."
+      },
+      "other_pets": {
+        "value": "well-socialised dogs are friendly with animals and other dogs; reserved with strangers",
+        "unit": "—",
+        "source_id": "S983",
+        "quote": "Although well-socialized Tibbies are friendly with animals and other dogs, you might find they're more reserved with strangers.",
+        "confidence": "medium",
+        "notes": "PetMD (S983). No prey-drive statement in any source → no chases_small_pets; conditional on socialisation → no other_pets chip."
+      },
+      "time_alone": {
+        "value": "prone to separation anxiety; does not like to be left alone",
+        "unit": "—",
+        "source_id": "S982",
+        "quote": "Tibetan Spaniels are also prone to separation anxiety.",
+        "confidence": "high",
+        "notes": "WebMD (S982); also 'They crave human companionship and don't like to be left alone, which is why you shouldn't leave them in a kennel.' PetMD (S983): 'if you spend most of your days away from home, a Tibetan Spaniel might not be the best fit for your family.' Basis of the needs_company chip."
+      },
+      "socialisation": {
+        "value": "socialise the puppy from the day it comes home",
+        "unit": "—",
+        "source_id": "S983",
+        "quote": "Begin socializing your Tibetan Spaniel puppy as soon as you bring them home.",
+        "confidence": "high",
+        "notes": "PetMD (S983), advice; also 'Puppies that are exposed to new people, places, animals, and experiences will be better adjusted'. WebMD (S982): 'let them have lots of positive interactions with strangers from a young age.'"
+      },
+      "training": {
+        "value": "training needs patience; reward-based techniques",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Training will require patience, but can be achieved using reward-based techniques.",
+        "confidence": "high",
+        "notes": "PDSA (S981); PetMD (S983) 'Tibbies have an independent streak, so training takes patience.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. The RKC Breed Watch category was not reachable this run (RKC page refused); no veterinary association names the breed for conformation-related welfare problems (FCI muzzle 'Medium in length', not flat-faced).",
+      "luxating_patella": {
+        "value": "luxating patellas — the kneecap slips out of place",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Luxating patellas",
+        "confidence": "high",
+        "notes": "PDSA (S981); WebMD (S982) and PetMD (S983) name patellar luxation too."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — inherited eye disease that can lead to blindness",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Progressive retinal atrophy",
+        "confidence": "high",
+        "notes": "PDSA (S981); WebMD (S982), PetMD (S983)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Hip dysplasia",
+        "confidence": "high",
+        "notes": "PDSA (S981); WebMD (S982)."
+      },
+      "entropion": {
+        "value": "entropion — the eyelid rolls inwards",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Entropion",
+        "confidence": "high",
+        "notes": "PDSA (S981)."
+      },
+      "distichiasis": {
+        "value": "distichiasis — extra eyelashes that can rub the eye",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Distichiasis",
+        "confidence": "high",
+        "notes": "PDSA (S981)."
+      },
+      "other": {
+        "value": "cherry eye, portosystemic (liver) shunt, hernia, allergies; heat-related problems",
+        "unit": "—",
+        "source_id": "S982",
+        "quote": null,
+        "confidence": "low",
+        "notes": "WebMD (S982) names (paraphrase — names only returned). Background only; not exported."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 46,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Tibetan Spaniel",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-11-20): row '46 | Tibetan Spaniel | Average Working/Obedience Intelligence', rank 46 shared with English Foxhound, Otterhound, Jack Russell Terrier, American Foxhound, Greyhound and Wirehaired Pointing Griffon (ranks 40–54 in the table). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label for rank 46 (as returned: 'Average Working/Obedience Intelligence')."
+      },
+      "training_notes": {
+        "value": "independent, occasionally stubborn; patience and reward-based training",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S981), PetMD (S983) (paraphrase). The game uses Coren's rank only (46 → 1.0)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.tibetan_spaniel.learning_multiplier (1.0, runbook rule: Average tier, rank 46).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, active and alert; well balanced, slightly longer in body than height at withers",
+        "unit": "—",
+        "source_id": "S980",
+        "quote": "Small, active and alert. Well balanced in general outline, slightly longer in body than height at withers.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 231 (S980)."
+      },
+      "colours": {
+        "value": [
+          "golden",
+          "red",
+          "sable",
+          "cream",
+          "black and tan",
+          "black"
+        ],
+        "unit": "list (all colours and mixtures permissible except merle)",
+        "source_id": "S980",
+        "quote": "All colours and mixture of colours permissible, except merle which is unacceptable.",
+        "confidence": "high",
+        "notes": "FCI (S980) permits all colours except merle; the six listed are common colours of the breed chosen for the AI looks (Claude, runbook rule 'standard colours only' — never merle). Golden first (portrait default)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no colour frequencies found; the weights in breed_appearance.php are a draft (verified => false)."
+      },
+      "coat": {
+        "value": "silky top coat of moderate length lying rather flat, smooth on face and front of legs; fine dense undercoat; feathered ears, plumed tail",
+        "unit": "—",
+        "source_id": "S980",
+        "quote": "Topcoat silky in texture, smooth on face and front of legs, of moderate length on body, but lying rather flat.",
+        "confidence": "high",
+        "notes": "FCI (S980); also \"Undercoat fine and dense.\" and \"Ears and back of forelegs nicely feathered, tail and buttocks well furnished with longer hair.\""
+      },
+      "muzzle": {
+        "value": "medium-length, blunt muzzle with cushioning, free from wrinkle",
+        "unit": "—",
+        "source_id": "S980",
+        "quote": "Muzzle: Medium in length. Blunt with cushioning, free from wrinkle. Chin showing some depth and width.",
+        "confidence": "high",
+        "notes": "FCI (S980). Not flat-faced — moderate features in the AI looks."
+      },
+      "nose": {
+        "value": "black nose preferred",
+        "unit": "—",
+        "source_id": "S980",
+        "quote": "Nose: Black preferred.",
+        "confidence": "high",
+        "notes": "FCI (S980)."
+      },
+      "eyes": {
+        "value": "dark brown, oval, bright and expressive eyes, medium size, black rims",
+        "unit": "—",
+        "source_id": "S980",
+        "quote": "Dark brown, oval, bright and expressive, medium size, set fairly well apart but forward looking. Rims black.",
+        "confidence": "high",
+        "notes": "FCI (S980)."
+      },
+      "ears": {
+        "value": "medium-sized pendant ears, well feathered, set fairly high",
+        "unit": "—",
+        "source_id": "S980",
+        "quote": "Medium size, pendant, well feathered in adults, set fairly high.",
+        "confidence": "high",
+        "notes": "FCI (S980)."
+      },
+      "tail": {
+        "value": "set high, richly plumed, carried in a gay curl over the back when moving",
+        "unit": "—",
+        "source_id": "S980",
+        "quote": "Set high, richly plumed and carried in a gay curl or over back when moving.",
+        "confidence": "high",
+        "notes": "FCI (S980)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S981), WebMD (S982), PetMD (S983). The RKC breed page was not reachable on 2026-11-20 → no rkc_* key facts.",
+      "pdsa_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Small",
+        "confidence": "high",
+        "notes": "PDSA key fact."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)'."
+      },
+      "pdsa_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "PDSA key fact."
+      },
+      "pdsa_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Grooming a couple of times per week is usually enough to keep their coats in tip-top condition.",
+        "confidence": "high",
+        "notes": "PDSA (S981) 'a couple of times per week' → category 'More than once a week'; the brushing routine uses 2 (Border Terrier precedent, PDSA 'a couple of times a week' → 2)."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S981",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth every day",
+        "unit": "—",
+        "source_id": "S982",
+        "quote": "brushing their teeth daily using toothpaste made specifically for dogs",
+        "confidence": "high",
+        "notes": "WebMD (S982) → tooth brushing every day (M5-R15)."
+      },
+      "webmd_bath": {
+        "value": "a bath roughly every month",
+        "unit": "—",
+        "source_id": "S982",
+        "quote": "giving them a bath roughly every month",
+        "confidence": "high",
+        "notes": "WebMD (S982) → bath reminder every 4 program weeks (M5-R20). PetMD gives no bathing frequency."
+      },
+      "webmd_nails": {
+        "value": "check the nails for a trim at least once a month",
+        "unit": "—",
+        "source_id": "S982",
+        "quote": "check if they need a trim at least once monthly",
+        "confidence": "high",
+        "notes": "WebMD (S982) → nail trim every 4 program weeks (M5-R19; \"check … at least once monthly\" read like the Chinese Crested's weekly check, S574)."
+      },
+      "webmd_ears": {
+        "value": "check the ears for debris at least once a week",
+        "unit": "—",
+        "source_id": "S982",
+        "quote": "checking their ears for debris at least once a week",
+        "confidence": "high",
+        "notes": "WebMD (S982) → ear check / cleaning once a week (M5-R18; weekly ear checks precedent: Papillon S400, Giant Schnauzer S497). PetMD (S983): \"It's good to comb your Tibbie's ear fringes once a week to prevent matting.\""
+      },
+      "petmd_apartment": {
+        "value": "does well in a house or an apartment",
+        "unit": "—",
+        "source_id": "S983",
+        "quote": "Their small size and minimal exercise needs mean they'll do well in either a house or apartment.",
+        "confidence": "medium",
+        "notes": "PetMD (S983). Background only — the apartment chip needs the RKC key fact \"Flat/ Apartment\" (runbook)."
+      },
+      "petmd_groomer": {
+        "value": "grooming can be done at home; coat not trimmed — no groomer frequency",
+        "unit": "—",
+        "source_id": "S983",
+        "quote": "Pet parents can likely take care of their dog's minimal grooming needs at home.",
+        "confidence": "high",
+        "notes": "PetMD (S983); also \"Tibbie coats do not need to be trimmed.\" → no groomer reminder."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -99334,6 +99869,293 @@
         "confidence": "medium",
         "notes": "S967 (Official Standard) and S968 (UKC) as in american_hairless_terrier.appearance. Weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): pink skin with black spots is the portrait default (UKC S968 parti-coloured skin; any colour except albino / merle, S967); hairless variety; natural tail, never docked"
+      }
+    },
+    "tibetan_spaniel": {
+      "_note": "Unattended run M5-R10-130 (2026-11-20): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PDSA (S981 'around an hour of exercise every day' → 60; the RKC page was not reachable → runbook 'else PDSA'). Senior boundary 137 from the McMillan 2024 median 15.2 y (S771). Learning 1.0 (Coren 46, Average, S35). Built: brushing 2× a week (PDSA 'a couple of times per week', M5-R13), tooth brushing every day (WebMD S982, M5-R15), ear check every week (WebMD, M5-R18), nail trim every 4 weeks (WebMD, M5-R19), bath reminder every 4 weeks (WebMD, M5-R20), puppy socialisation with the PetMD quote (M5-R17). No groomer task (PetMD: at home, no frequency), no meal gap, no heat walk ban (not flat-faced). No new vocabulary key. In marketing (no veterinary advice against advertising the breed type). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S981",
+        "quote": "Tibetan Spaniels need around an hour of exercise every day and will happily join in with family games and activities.",
+        "confidence": "high",
+        "notes": "PDSA (S981) → rule 'around N' → 60 (no RKC key fact reachable → PDSA). PDSA key fact '1 hour' and WebMD (S982) 'at least one hour' agree; PetMD (S983) 'minimal' (no number).",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S982",
+            "quote": "Make sure to give your pet at least one hour of exercise every day."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S981 'around an hour of exercise every day'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S981",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 137
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 137 = round(0.75 × 15.2 y × 12) = round(136.8) = 137 (S11 + McMillan 2024 median 15.2 y, S771). Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S771"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 137 (0.75 × 15.2 y, McMillan 2024 S771)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 137
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 137)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 46 'Tibetan Spaniel' (S35, shared) → 'Average working/obedience intelligence' (ranks 40–54) → 1.0 (same as the Greyhound, rank 46). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 46, Average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S981",
+        "quote": "Grooming a couple of times per week is usually enough to keep their coats in tip-top condition.",
+        "confidence": "high",
+        "notes": "tibetan_spaniel.suitability.pdsa_grooming. PDSA 'a couple of times per week' → 2 (Border Terrier precedent). WebMD (S982) 'Regular bathing and brushing' and PetMD (S983) 'brushing it occasionally' have no number → alternatives. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S982",
+            "quote": "Regular bathing and brushing can keep their coat clean and healthy."
+          },
+          {
+            "value": null,
+            "source_id": "S983",
+            "quote": "You can keep your Tibbie's coat in top shape just by brushing it occasionally."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (PDSA »a couple of times per week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S982",
+        "quote": "brushing their teeth daily using toothpaste made specifically for dogs",
+        "confidence": "high",
+        "notes": "tibetan_spaniel.suitability.webmd_teeth → every day. Built: DOG_CARE_TASKS tooth_brushing [7, day], M5-R15.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »brushing their teeth daily« → vsak dan"
+      },
+      "ear_care": {
+        "value": 1,
+        "unit": "ear checks per week (sourced need)",
+        "source_id": "S982",
+        "quote": "checking their ears for debris at least once a week",
+        "confidence": "high",
+        "notes": "tibetan_spaniel.suitability.webmd_ears → once a week. Built: DOG_CARE_TASKS ear_cleaning [1, week], M5-R18. PetMD (S983) combing the ear fringes once a week agrees.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »at least once a week« → enkrat na teden"
+      },
+      "nail_trimming": {
+        "value": 1,
+        "unit": "nail trims per 4 program weeks (sourced need)",
+        "source_id": "S982",
+        "quote": "check if they need a trim at least once monthly",
+        "confidence": "high",
+        "notes": "tibetan_spaniel.suitability.webmd_nails → once a month = every 4 program weeks. Built: DOG_CARE_TASKS nail_trim [1, month], M5-R19.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »at least once monthly« → vsake 4 tedne"
+      },
+      "bathing": {
+        "value": 1,
+        "unit": "bath reminders per 4 program weeks (sourced need, parent reminder)",
+        "source_id": "S982",
+        "quote": "giving them a bath roughly every month",
+        "confidence": "high",
+        "notes": "tibetan_spaniel.suitability.webmd_bath → roughly every month = every 4 program weeks. Built: DOG_CARE_TASKS bath [1, month], M5-R20 (parent reminder, never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »a bath roughly every month« → vsake 4 tedne"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S983",
+        "quote": "Begin socializing your Tibetan Spaniel puppy as soon as you bring them home.",
+        "confidence": "high",
+        "notes": "tibetan_spaniel.behaviour.socialisation (PetMD S983, advice). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S983)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-130); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S981"
+            ],
+            "refs": [
+              "tibetan_spaniel.exercise.adult",
+              "tibetan_spaniel.exercise.daily_text"
+            ],
+            "quote": "S981 'Tibetan Spaniels need around an hour of exercise every day and will happily join in with family games and activities.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S981"
+            ],
+            "refs": [
+              "tibetan_spaniel.behaviour.family"
+            ],
+            "quote": "S981 'Tibetan Spaniels generally get along well with everyone and will make good family pets.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S982"
+            ],
+            "refs": [
+              "tibetan_spaniel.behaviour.time_alone"
+            ],
+            "quote": "S982 'Tibetan Spaniels are also prone to separation anxiety.'"
+          },
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S982"
+            ],
+            "refs": [
+              "tibetan_spaniel.behaviour.children"
+            ],
+            "quote": "S982 'This is why Tibbies are better suited for families with older children who can handle them responsibly.'"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S982"
+            ],
+            "refs": [
+              "tibetan_spaniel.exercise.fencing"
+            ],
+            "quote": "S982 'The only thing you need to have in your house is a secure fenced yard for them.'"
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S982"
+            ],
+            "refs": [
+              "tibetan_spaniel.exercise.heat"
+            ],
+            "quote": "S982 'Hot weather can trigger overheating and respiratory problems in Tibbies.'"
+          }
+        ],
+        "not_proposed": {
+          "children": "WebMD (S982) \"better suited for families with older children\" → older_children, never children.",
+          "small_children": "No rating; WebMD names older children only.",
+          "apartment": "PetMD (S983) 'do well in either a house or apartment' — but no RKC key fact 'Size of home' reachable (the chip needs RKC 'Flat/ Apartment').",
+          "long_daily_exercise": "60 minutes a day (PDSA S981) — the chip is for 2 hours or more.",
+          "frequent_grooming": "PDSA 'a couple of times per week' — not daily grooming.",
+          "sheds": "No shedding statement.",
+          "low_shedding": "No shedding statement.",
+          "other_pets": "PetMD (S983) friendly with animals only when well socialised — conditional.",
+          "chases_small_pets": "No prey-drive statement.",
+          "cold_sensitive": "No source.",
+          "first_time_owner": "No source.",
+          "shorter_lifespan": "McMillan 2024 median 15.2 y (S771); PDSA 'Over 12 years' (S981).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "RKC Breed Watch category not reachable this run; no veterinary association names the breed for conformation-related welfare problems (muzzle 'Medium in length', S980) → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet; consider needs_company, older_children, secure_fencing, heat_sensitive"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S980",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against showing this type of dog in advertising (BVA S92 is about flat-faced breeds; the FCI muzzle is \"Medium in length\").",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): v aplikaciji da, v marketingu da"
+      },
+      "ai_appearance": {
+        "value": "adult Tibetan Spaniel, golden: small, active, slightly longer than tall, silky coat of moderate length, feathered ears, plumed tail curled over the back",
+        "unit": "—",
+        "source_id": "S980",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI (S980). Natural, untrimmed coat; moderate, blunt medium-length muzzle (not flat-faced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): portrait default golden (first colour, highest weight); colours only from the standard (never merle)"
       }
     }
   }
