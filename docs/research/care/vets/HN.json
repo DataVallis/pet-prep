@@ -51,7 +51,8 @@
       "duty_i18n": {
         "cs": "Pohotovost nonstop na této pobočce na +504 9757-6797. Běžná ordinační doba Po–Pá 8:30–18:00, so 8:30–16:00, ne 9:00–15:00.",
         "sv": "Akutfall dygnet runt på denna filial på +504 9757-6797. Ordinarie tider mån–fre 8.30–18.00, lör 8.30–16.00, sön 9.00–15.00.",
-        "da": "Akut døgnet rundt på denne afdeling på +504 9757-6797. Normal åbningstid man–fre 8.30–18.00, lør 8.30–16.00, søn 9.00–15.00."
+        "da": "Akut døgnet rundt på denne afdeling på +504 9757-6797. Normal åbningstid man–fre 8.30–18.00, lør 8.30–16.00, søn 9.00–15.00.",
+        "fi": "Päivystys 24/7 tässä toimipisteessä numerossa +504 9757-6797. Tavalliset aukioloajat ma–pe 8.30–18.00, la 8.30–16.00, su 9.00–15.00."
       }
     },
     {
@@ -71,7 +72,8 @@
       "duty_i18n": {
         "cs": "Otevřeno Po–Pá 8:00–17:30, so 8:00–16:00, v neděli zavřeno. Nonstop pohotovost zajišťuje pobočka Rio de Piedras.",
         "sv": "Öppet mån–fre 8.00–17.30, lör 8.00–16.00, söndag stängt. Akutfall dygnet runt hanteras på filialen Rio de Piedras.",
-        "da": "Åbent man–fre 8.00–17.30, lør 8.00–16.00, lukket søndag. Akut døgnet rundt håndteres på afdelingen i Rio de Piedras."
+        "da": "Åbent man–fre 8.00–17.30, lør 8.00–16.00, lukket søndag. Akut døgnet rundt håndteres på afdelingen i Rio de Piedras.",
+        "fi": "Auki ma–pe 8.00–17.30, la 8.00–16.00, su suljettu. Päivystys 24/7 hoidetaan Rio de Piedrasin toimipisteessä."
       }
     },
     {
@@ -91,7 +93,8 @@
       "duty_i18n": {
         "cs": "Po–Pá 9:00–17:00 na objednání; v neděli 9:00–13:00 bez objednání, podle pořadí; v sobotu zavřeno.",
         "sv": "Mån–fre 9.00–17.00 efter bokad tid; söndag 9.00–13.00 först till kvarn; lördag stängt.",
-        "da": "Man–fre 9.00–17.00 efter aftale; søndag 9.00–13.00 først til mølle; lukket lørdag."
+        "da": "Man–fre 9.00–17.00 efter aftale; søndag 9.00–13.00 først til mølle; lukket lørdag.",
+        "fi": "ma–pe 9.00–17.00 ajanvarauksella; sunnuntaisin 9.00–13.00 saapumisjärjestyksessä; lauantaisin suljettu."
       }
     },
     {
@@ -111,7 +114,8 @@
       "duty_i18n": {
         "cs": "Otevřeno Po–Pá 7:30–17:00 a so 7:30–15:00. Nabízí pohotovost a intenzivní péči; před cestou zavolejte.",
         "sv": "Öppet mån–fre 7.30–17.00 och lör 7.30–15.00. Akut- och intensivvård erbjuds; ring innan du kommer.",
-        "da": "Åbent man–fre 7.30–17.00 og lør 7.30–15.00. Akut hjælp og intensiv pleje tilbydes; ring på forhånd."
+        "da": "Åbent man–fre 7.30–17.00 og lør 7.30–15.00. Akut hjælp og intensiv pleje tilbydes; ring på forhånd.",
+        "fi": "Auki ma–pe 7.30–17.00 ja la 7.30–15.00. Päivystys ja tehohoito tarjolla; soita etukäteen."
       }
     }
   ],

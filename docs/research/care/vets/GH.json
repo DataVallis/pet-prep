@@ -47,7 +47,8 @@
         "pl": "pon.–pt. 8:00–17:00, sob. 8:00–13:00, w niedzielę zamknięte. Psy i koty: konsultacje, szczepienia, laboratorium, USG, chirurgia, mikroczipowanie, apteka.",
         "cs": "Po–Pá 08:00–17:00, so 08:00–13:00, v neděli zavřeno. Psi a kočky: vyšetření, očkování, laboratoř, ultrazvuk, chirurgie, mikročipování, lékárna.",
         "sv": "Mån–fre 08.00–17.00, lör 08.00–13.00, söndag stängt. Hundar och katter: konsultation, vaccination, laboratorium, ultraljud, kirurgi, mikrochipmärkning, apotek.",
-        "da": "man–fre 08.00–17.00, lør 08.00–13.00, søn lukket. Hunde og katte: konsultation, vaccination, laboratorium, ultralyd, kirurgi, mikrochipping, apotek."
+        "da": "man–fre 08.00–17.00, lør 08.00–13.00, søn lukket. Hunde og katte: konsultation, vaccination, laboratorium, ultralyd, kirurgi, mikrochipping, apotek.",
+        "fi": "ma–pe 8.00–17.00, la 8.00–13.00, su suljettu. Koirat ja kissat: vastaanotto, rokotukset, laboratorio, ultraääni, leikkaukset, mikrosirutus, apteekki."
       }
     },
     {
@@ -67,7 +68,8 @@
         "pl": "Mobilny weterynarz obsługujący Accrę, Tema i Kasoa. pon.–sob. 8:00–18:00; w nagłych przypadkach zadzwoń lub napisz na WhatsAppie, a jeśli nie może przyjechać, skieruje do przychodni.",
         "cs": "Pojízdný veterinář pro Accru, Temu a Kasou. Po–so 08:00–18:00; v naléhavých případech volejte nebo pište na WhatsApp, pokud nemohou přijet, odkážou vás na kliniku.",
         "sv": "Mobil veterinär i Accra, Tema och Kasoa. Mån–lör 08.00–18.00; vid akutfall ring eller skriv på WhatsApp, de hänvisar till en klinik om de inte kan komma.",
-        "da": "Mobil dyrlæge i Accra, Tema og Kasoa. man–lør 08.00–18.00; ved akut sygdom ring eller skriv på WhatsApp – hvis de ikke selv kan komme, henviser de til en klinik."
+        "da": "Mobil dyrlæge i Accra, Tema og Kasoa. man–lør 08.00–18.00; ved akut sygdom ring eller skriv på WhatsApp – hvis de ikke selv kan komme, henviser de til en klinik.",
+        "fi": "Liikkuva eläinlääkäri, palvelee Accraa, Temaa ja Kasoaa. ma–la 8.00–18.00; päivystystapauksissa soita tai lähetä WhatsApp-viesti; jos eläinlääkäri ei pääse paikalle, hän ohjaa klinikalle."
       }
     },
     {
@@ -88,7 +90,8 @@
         "pl": "Uniwersytecka przychodnia weterynaryjna dla małych zwierząt; zadzwoń na numer uczelni, aby potwierdzić godziny.",
         "cs": "Univerzitní veterinární klinika pro malá zvířata; ordinační dobu si ověřte na univerzitní lince.",
         "sv": "Universitetsklinik för smådjur; ring universitetets nummer för att bekräfta öppettiderna.",
-        "da": "Universitetets dyreklinik for smådyr; ring til universitetets nummer for at høre om åbningstiden."
+        "da": "Universitetets dyreklinik for smådyr; ring til universitetets nummer for at høre om åbningstiden.",
+        "fi": "Yliopiston pieneläinklinikka; varmista aukioloajat yliopiston numerosta."
       }
     },
     {
@@ -108,7 +111,8 @@
         "pl": "Uniwersytecka lecznica kliniczna z oddziałem intensywnej terapii, salami nocnymi i hotelem dla zwierząt; zadzwoń wcześniej w sprawie godzin.",
         "cs": "Univerzitní výuková nemocnice s jednotkou intenzivní péče, nočními odděleními a hotelem pro zvířata; ordinační dobu zjistěte telefonicky.",
         "sv": "Universitetsdjursjukhus med intensivvårdsavdelning, nattavdelningar och djurpensionat; ring för att få veta öppettiderna.",
-        "da": "Universitetets undervisningshospital med intensivafdeling, natafdelinger og kæledyrshotel; ring på forhånd for åbningstid."
+        "da": "Universitetets undervisningshospital med intensivafdeling, natafdelinger og kæledyrshotel; ring på forhånd for åbningstid.",
+        "fi": "Yliopiston opetussairaala, jossa teho-osasto, yöpymisosastot ja lemmikkihotelli; kysy aukioloajat soittamalla etukäteen."
       }
     },
     {
@@ -128,7 +132,8 @@
         "pl": "Przychodnia weterynaryjna z apteką, laboratorium i salą operacyjną, przeznaczona dla personelu Sił Powietrznych i mieszkańców Regionu Zachodniego; godziny podaje Ghana Air Force.",
         "cs": "Veterinární klinika s lékárnou, laboratoří a operačním sálem, určená pro příslušníky letectva a širší Western Region; ordinační dobu zjistěte u Ghana Air Force.",
         "sv": "Veterinärklinik med apotek, laboratorium och operationssal, avsedd för flygvapnets personal och övriga Western Region; kontakta Ghana Air Force för öppettider.",
-        "da": "Dyreklinik med apotek, laboratorium og operationsstue, beregnet til flyvevåbnets personale og resten af Western Region; kontakt Ghana Air Force for åbningstid."
+        "da": "Dyreklinik med apotek, laboratorium og operationsstue, beregnet til flyvevåbnets personale og resten af Western Region; kontakt Ghana Air Force for åbningstid.",
+        "fi": "Eläinklinikka, jossa apteekki, laboratorio ja leikkaussali, tarkoitettu ilmavoimien henkilöstölle ja laajemmin Western Regionin asukkaille; kysy aukioloajat Ghanan ilmavoimilta."
       }
     }
   ],

@@ -45,7 +45,8 @@
         "pl": "Nagłe przypadki przyjmowane w godzinach pracy i po nich; w nagłych przypadkach po godzinach zadzwoń przed 22:00, aby połączyć się z lekarzem dyżurnym.",
         "cs": "Pohotovostní případy řeší v ordinační době i mimo ni; při pohotovosti mimo ordinační dobu volejte před 22:00, zastihnete veterináře ve službě.",
         "sv": "Akutfall tas emot under och efter klinikens öppettider; för akutfall efter stängning, ring före 22.00 för att nå jourhavande veterinär.",
-        "da": "Akutte tilfælde behandles i og uden for klinikkens åbningstid; ved akutte tilfælde uden for åbningstid ring før kl. 22 for at nå den vagthavende læge."
+        "da": "Akutte tilfælde behandles i og uden for klinikkens åbningstid; ved akutte tilfælde uden for åbningstid ring før kl. 22 for at nå den vagthavende læge.",
+        "fi": "Hätätapaukset hoidetaan aukioloaikoina ja niiden jälkeen; aukioloajan jälkeisissä hätätapauksissa soita ennen klo 22, jotta tavoitat päivystävän lääkärin."
       }
     },
     {
@@ -69,7 +70,8 @@
         "pl": "Pomoc w nagłych przypadkach; alarmowy numer komórkowy +1 876-469-1260.",
         "cs": "Nabízí pohotovostní péči; pohotovostní mobil +1 876-469-1260.",
         "sv": "Akutvård erbjuds; akutmobil +1 876-469-1260.",
-        "da": "Akut hjælp tilbydes; akutmobil +1 876-469-1260."
+        "da": "Akut hjælp tilbydes; akutmobil +1 876-469-1260.",
+        "fi": "Päivystyspalvelu tarjolla; päivystysmatkapuhelin +1 876-469-1260."
       }
     },
     {
@@ -93,7 +95,8 @@
         "pl": "Otwarte od poniedziałku do soboty.",
         "cs": "Otevřeno od pondělí do soboty.",
         "sv": "Öppet måndag–lördag.",
-        "da": "Åbent mandag til lørdag."
+        "da": "Åbent mandag til lørdag.",
+        "fi": "Auki maanantaista lauantaihin."
       }
     },
     {
@@ -117,7 +120,8 @@
         "pl": "Od poniedziałku do piątku 8:00–19:00, w sobotę 9:00–16:00, w niedzielę 10:00–15:00.",
         "cs": "Pondělí až pátek 8:00–19:00, sobota 9:00–16:00, neděle 10:00–15:00.",
         "sv": "Måndag–fredag 8–19, lördag 9–16, söndag 10–15.",
-        "da": "Mandag til fredag 8–19, lørdag 9–16, søndag 10–15."
+        "da": "Mandag til fredag 8–19, lørdag 9–16, søndag 10–15.",
+        "fi": "Maanantaista perjantaihin 8–19, lauantaisin 9–16, sunnuntaisin 10–15."
       }
     },
     {
@@ -141,7 +145,8 @@
         "pl": "Przychodnia otwarta dla pacjentów.",
         "cs": "Klinika otevřená pro veřejnost.",
         "sv": "Kliniken är öppen för allmänheten.",
-        "da": "Klinikken er åben for offentligheden."
+        "da": "Klinikken er åben for offentligheden.",
+        "fi": "Klinikka avoinna yleisölle."
       }
     }
   ],

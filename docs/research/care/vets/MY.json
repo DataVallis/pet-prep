@@ -116,7 +116,8 @@
         "pl": "Całodobowy szpital dla nagłych przypadków i intensywnej terapii; zadzwoń przed wizytą.",
         "cs": "Nemocnice pro pohotovost a intenzivní péči nonstop; předem zavolejte.",
         "sv": "Akut- och intensivvårdssjukhus dygnet runt; ring innan du kommer.",
-        "da": "Døgnåbent akut- og intensivhospital; ring på forhånd."
+        "da": "Døgnåbent akut- og intensivhospital; ring på forhånd.",
+        "fi": "Päivystys- ja tehohoitosairaala 24 h; soita etukäteen."
       }
     },
     {
@@ -155,7 +156,8 @@
         "pl": "Całodobowy szpital dla kotów i psów. Konsultacje 07:00–18:00, nagłe przypadki 18:00–23:00, nocne nagłe przypadki 23:00–08:00 (zadzwoń przed wizytą); w nagłych przypadkach nie trzeba się umawiać.",
         "cs": "Nemocnice pro kočky a psy nonstop. Konzultace 07:00–18:00, pohotovost 18:00–23:00, noční pohotovost 23:00–08:00 (před návštěvou zavolejte); na pohotovost není nutné objednání.",
         "sv": "Sjukhus för katter och hundar dygnet runt. Konsultationer 07.00–18.00, akut 18.00–23.00, akut över natten 23.00–08.00 (ring innan du kommer); ingen bokad tid behövs vid akutfall.",
-        "da": "Døgnåbent hospital for katte og hunde. Konsultationer 07.00–18.00, akut 18.00–23.00, natakut 23.00–08.00 (ring, før du kommer); akutte tilfælde kræver ikke tidsbestilling."
+        "da": "Døgnåbent hospital for katte og hunde. Konsultationer 07.00–18.00, akut 18.00–23.00, natakut 23.00–08.00 (ring, før du kommer); akutte tilfælde kræver ikke tidsbestilling.",
+        "fi": "Kissojen ja koirien sairaala 24 h. Vastaanotto 7.00–18.00, päivystys 18.00–23.00, yöpäivystys 23.00–8.00 (soita ennen käyntiä); päivystykseen ei tarvita ajanvarausta."
       }
     },
     {
@@ -180,7 +182,8 @@
         "pl": "Całodobowy dyżur poza godzinami pracy (telefon poza godzinami pracy +604 227 2984 lub 019-474 1262). Przychodnia: pon.–sob. 09:00–12:00, 14:00–17:00, 20:00–21:30; niedz. i święta 09:00–12:00, 14:00–17:00.",
         "cs": "Pohotovostní služba mimo ordinační dobu nonstop (telefon mimo ordinační dobu +604 227 2984 nebo 019-474 1262). Ordinační doba Po–So 09:00–12:00, 14:00–17:00, 20:00–21:30; ne a státní svátky 09:00–12:00, 14:00–17:00.",
         "sv": "Akuttjänst utanför öppettid dygnet runt (telefon utanför öppettid +604 227 2984 eller 019-474 1262). Klinikens öppettider mån–lör 09.00–12.00, 14.00–17.00, 20.00–21.30; sön och helgdagar 09.00–12.00, 14.00–17.00.",
-        "da": "Døgnåben akutvagt uden for åbningstid (vagttelefon +604 227 2984 eller 019-474 1262). Klinikkens åbningstid man–lør 09.00–12.00, 14.00–17.00, 20.00–21.30; søn og helligdage 09.00–12.00, 14.00–17.00."
+        "da": "Døgnåben akutvagt uden for åbningstid (vagttelefon +604 227 2984 eller 019-474 1262). Klinikkens åbningstid man–lør 09.00–12.00, 14.00–17.00, 20.00–21.30; søn og helligdage 09.00–12.00, 14.00–17.00.",
+        "fi": "Päivystys aukioloaikojen ulkopuolella 24 h (puhelin aukioloajan ulkopuolella +604 227 2984 tai 019-474 1262). Klinikan aukioloaika ma–la 9.00–12.00, 14.00–17.00, 20.00–21.30; su ja pyhäpäivinä 9.00–12.00, 14.00–17.00."
       }
     },
     {
@@ -205,7 +208,8 @@
         "pl": "Przychodnia pon.–pt. 10:00–18:00, sob.–niedz. 10:00–17:00; pogotowie weterynaryjne codziennie 18:00–22:00 (obowiązują opłaty za nagłe przypadki). Rezerwacja nagłych wizyt przez WhatsApp 011-3700 4549.",
         "cs": "Klinika Po–Pá 10:00–18:00, So–Ne 10:00–17:00; pohotovostní ordinace denně 18:00–22:00 (účtují se pohotovostní poplatky). Objednání na pohotovost přes WhatsApp 011-3700 4549.",
         "sv": "Klinik mån–fre 10.00–18.00, lör–sön 10.00–17.00; akutklinik alla dagar 18.00–22.00 (akutavgifter tillkommer). Akutbokning via WhatsApp 011-3700 4549.",
-        "da": "Klinik man–fre 10.00–18.00, lør–søn 10.00–17.00; akutklinik hver dag 18.00–22.00 (akuttillæg gælder). Book akut tid via WhatsApp 011-3700 4549."
+        "da": "Klinik man–fre 10.00–18.00, lør–søn 10.00–17.00; akutklinik hver dag 18.00–22.00 (akuttillæg gælder). Book akut tid via WhatsApp 011-3700 4549.",
+        "fi": "Klinikka ma–pe 10.00–18.00, la–su 10.00–17.00; päivystysklinikka päivittäin 18.00–22.00 (päivystysmaksut veloitetaan). Päivystysajan varaus WhatsAppilla 011-3700 4549."
       }
     },
     {
@@ -230,7 +234,8 @@
         "pl": "Konsultacje codziennie 10:30–16:30 po wcześniejszym umówieniu (czynne codziennie, także w święta); linia dla nagłych przypadków 012-686 7363.",
         "cs": "Konzultace denně 10:30–16:30 na objednání (otevřeno každý den včetně státních svátků); pohotovostní linka 012-686 7363.",
         "sv": "Konsultationer alla dagar 10.30–16.30 efter bokad tid (öppet alla dagar, även helgdagar); akutlinje 012-686 7363.",
-        "da": "Konsultationer hver dag 10.30–16.30 efter aftale (åbent alle dage, også helligdage); akuttelefon 012-686 7363."
+        "da": "Konsultationer hver dag 10.30–16.30 efter aftale (åbent alle dage, også helligdage); akuttelefon 012-686 7363.",
+        "fi": "Vastaanotto päivittäin 10.30–16.30 ajanvarauksella (auki joka päivä, myös pyhäpäivinä); päivystysnumero 012-686 7363."
       }
     },
     {
@@ -255,7 +260,8 @@
         "pl": "Czynne codziennie 09:00–21:00; w święta nieczynne.",
         "cs": "Otevřeno denně 9:00–21:00; o státních svátcích zavřeno.",
         "sv": "Öppet alla dagar 09.00–21.00; stängt på helgdagar.",
-        "da": "Åbent hver dag 09.00–21.00; lukket på helligdage."
+        "da": "Åbent hver dag 09.00–21.00; lukket på helligdage.",
+        "fi": "Auki päivittäin 9.00–21.00; pyhäpäivinä suljettu."
       }
     },
     {
@@ -280,7 +286,8 @@
         "pl": "Nocna opieka weterynaryjna 14:30–22:30 (przerwa 17:30–18:30).",
         "cs": "Noční veterinární služba 14:30–22:30 (přestávka 17:30–18:30).",
         "sv": "Veterinärtjänster nattetid 14.30–22.30 (paus 17.30–18.30).",
-        "da": "Dyrlægetjeneste om aftenen 14.30–22.30 (pause 17.30–18.30)."
+        "da": "Dyrlægetjeneste om aftenen 14.30–22.30 (pause 17.30–18.30).",
+        "fi": "Yöaikainen eläinlääkäripalvelu 14.30–22.30 (tauko 17.30–18.30)."
       }
     },
     {
@@ -304,7 +311,8 @@
         "pl": "W ciągu dnia 09:30–18:30 (przerwa 13:00–14:00).",
         "cs": "Denní provoz 9:30–18:30 (přestávka 13:00–14:00).",
         "sv": "Dagtid 09.30–18.30 (paus 13.00–14.00).",
-        "da": "Dagtimer 09.30–18.30 (pause 13.00–14.00)."
+        "da": "Dagtimer 09.30–18.30 (pause 13.00–14.00).",
+        "fi": "Päiväsaikaan 9.30–18.30 (tauko 13.00–14.00)."
       }
     },
     {
@@ -328,7 +336,8 @@
         "pl": "W ciągu dnia 09:30–18:30 (przerwa 13:00–14:00).",
         "cs": "Denní provoz 9:30–18:30 (přestávka 13:00–14:00).",
         "sv": "Dagtid 09.30–18.30 (paus 13.00–14.00).",
-        "da": "Dagtimer 09.30–18.30 (pause 13.00–14.00)."
+        "da": "Dagtimer 09.30–18.30 (pause 13.00–14.00).",
+        "fi": "Päiväsaikaan 9.30–18.30 (tauko 13.00–14.00)."
       }
     },
     {
@@ -353,7 +362,8 @@
         "pl": "Czynne codziennie; zadzwoń, aby potwierdzić dostępność po godzinach pracy.",
         "cs": "Otevřeno denně; dostupnost mimo ordinační dobu ověřte telefonicky.",
         "sv": "Öppet alla dagar; ring för att bekräfta tillgänglighet utanför öppettid.",
-        "da": "Åbent hver dag; ring og hør, om der er åbent uden for almindelig åbningstid."
+        "da": "Åbent hver dag; ring og hør, om der er åbent uden for almindelig åbningstid.",
+        "fi": "Auki päivittäin; soita ja varmista saatavuus aukioloaikojen ulkopuolella."
       }
     },
     {
@@ -377,7 +387,8 @@
         "pl": "Codziennie 10:00–21:00.",
         "cs": "Denně 10:00–21:00.",
         "sv": "Dagligen 10.00–21.00.",
-        "da": "Hver dag 10.00–21.00."
+        "da": "Hver dag 10.00–21.00.",
+        "fi": "Päivittäin 10.00–21.00."
       }
     },
     {
@@ -402,7 +413,8 @@
         "pl": "Codziennie 10:00–23:00 (ostatnia wizyta 22:30).",
         "cs": "Denně 10:00–23:00 (poslední objednání 22:30).",
         "sv": "Dagligen 10.00–23.00 (sista bokade tiden 22.30).",
-        "da": "Hver dag 10.00–23.00 (sidste tid 22.30)."
+        "da": "Hver dag 10.00–23.00 (sidste tid 22.30).",
+        "fi": "Päivittäin 10.00–23.00 (viimeinen vastaanottoaika 22.30)."
       }
     },
     {
@@ -427,7 +439,8 @@
         "pl": "Codziennie 10:00–19:00 (ostatnia wizyta 18:30).",
         "cs": "Denně 10:00–19:00 (poslední objednání 18:30).",
         "sv": "Dagligen 10.00–19.00 (sista bokade tiden 18.30).",
-        "da": "Hver dag 10.00–19.00 (sidste tid 18.30)."
+        "da": "Hver dag 10.00–19.00 (sidste tid 18.30).",
+        "fi": "Päivittäin 10.00–19.00 (viimeinen vastaanottoaika 18.30)."
       }
     },
     {
@@ -451,7 +464,8 @@
         "pl": "Codziennie 10:00–21:30.",
         "cs": "Denně 10:00–21:30.",
         "sv": "Dagligen 10.00–21.30.",
-        "da": "Hver dag 10.00–21.30."
+        "da": "Hver dag 10.00–21.30.",
+        "fi": "Päivittäin 10.00–21.30."
       }
     },
     {
@@ -475,7 +489,8 @@
         "pl": "Codziennie 10:00–19:00 (ostatnia wizyta 18:30).",
         "cs": "Denně 10:00–19:00 (poslední objednání 18:30).",
         "sv": "Dagligen 10.00–19.00 (sista bokade tiden 18.30).",
-        "da": "Hver dag 10.00–19.00 (sidste tid 18.30)."
+        "da": "Hver dag 10.00–19.00 (sidste tid 18.30).",
+        "fi": "Päivittäin 10.00–19.00 (viimeinen vastaanottoaika 18.30)."
       }
     },
     {
@@ -500,7 +515,8 @@
         "pl": "W dni robocze 10:00–20:00; w weekendy i święta 10:00–16:00.",
         "cs": "Po–Pá 10:00–20:00; o víkendech a státních svátcích 10:00–16:00.",
         "sv": "Vardagar 10.00–20.00; helger och helgdagar 10.00–16.00.",
-        "da": "Hverdage 10.00–20.00; weekend og helligdage 10.00–16.00."
+        "da": "Hverdage 10.00–20.00; weekend og helligdage 10.00–16.00.",
+        "fi": "Arkisin 10.00–20.00; viikonloppuisin ja pyhäpäivinä 10.00–16.00."
       }
     },
     {
@@ -524,7 +540,8 @@
         "pl": "Pon.–czw. 09:00–11:30, 13:00–16:30, 18:00–21:30; pt.–niedz. 09:00–11:30, 13:00–16:30, 18:00–20:00.",
         "cs": "Po–Čt 9:00–11:30, 13:00–16:30, 18:00–21:30; Pá–Ne 9:00–11:30, 13:00–16:30, 18:00–20:00.",
         "sv": "Mån–tors 09.00–11.30, 13.00–16.30, 18.00–21.30; fre–sön 09.00–11.30, 13.00–16.30, 18.00–20.00.",
-        "da": "Man–tor 09.00–11.30, 13.00–16.30, 18.00–21.30; fre–søn 09.00–11.30, 13.00–16.30, 18.00–20.00."
+        "da": "Man–tor 09.00–11.30, 13.00–16.30, 18.00–21.30; fre–søn 09.00–11.30, 13.00–16.30, 18.00–20.00.",
+        "fi": "ma–to 9.00–11.30, 13.00–16.30, 18.00–21.30; pe–su 9.00–11.30, 13.00–16.30, 18.00–20.00."
       }
     },
     {
@@ -548,7 +565,8 @@
         "pl": "Pon.–czw. 08:30–11:30, 12:00–16:30, 18:00–21:30; pt.–niedz. 08:30–12:00, 13:30–16:30.",
         "cs": "Po–Čt 8:30–11:30, 12:00–16:30, 18:00–21:30; Pá–Ne 8:30–12:00, 13:30–16:30.",
         "sv": "Mån–tors 08.30–11.30, 12.00–16.30, 18.00–21.30; fre–sön 08.30–12.00, 13.30–16.30.",
-        "da": "Man–tor 08.30–11.30, 12.00–16.30, 18.00–21.30; fre–søn 08.30–12.00, 13.30–16.30."
+        "da": "Man–tor 08.30–11.30, 12.00–16.30, 18.00–21.30; fre–søn 08.30–12.00, 13.30–16.30.",
+        "fi": "ma–to 8.30–11.30, 12.00–16.30, 18.00–21.30; pe–su 8.30–12.00, 13.30–16.30."
       }
     },
     {
@@ -572,7 +590,8 @@
         "pl": "W dni robocze 09:30–19:30; w weekendy 08:30–17:00 (przerwa obiadowa 13:00–14:00).",
         "cs": "Po–Pá 9:30–19:30; o víkendech 8:30–17:00 (polední přestávka 13:00–14:00).",
         "sv": "Vardagar 09.30–19.30; helger 08.30–17.00 (lunch 13.00–14.00).",
-        "da": "Hverdage 09.30–19.30; weekend 08.30–17.00 (frokostpause 13.00–14.00)."
+        "da": "Hverdage 09.30–19.30; weekend 08.30–17.00 (frokostpause 13.00–14.00).",
+        "fi": "Arkisin 9.30–19.30; viikonloppuisin 8.30–17.00 (lounastauko 13.00–14.00)."
       }
     },
     {
@@ -597,7 +616,8 @@
         "pl": "Pon.–pt. 10:00–18:00, sob. 10:00–16:00 (przerwa obiadowa 13:00–14:00).",
         "cs": "Po–Pá 10:00–18:00, So 10:00–16:00 (polední přestávka 13:00–14:00).",
         "sv": "Mån–fre 10.00–18.00, lör 10.00–16.00 (lunch 13.00–14.00).",
-        "da": "Man–fre 10.00–18.00, lør 10.00–16.00 (frokostpause 13.00–14.00)."
+        "da": "Man–fre 10.00–18.00, lør 10.00–16.00 (frokostpause 13.00–14.00).",
+        "fi": "ma–pe 10.00–18.00, la 10.00–16.00 (lounastauko 13.00–14.00)."
       }
     },
     {

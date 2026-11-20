@@ -51,7 +51,8 @@
         "pl": "Czynne całą dobę we wszystkich usługach; nie trzeba dzwonić przed wizytą.",
         "cs": "Otevřeno nonstop ve všech službách; není třeba volat předem.",
         "sv": "Öppet dygnet runt för alla tjänster; du behöver inte ringa innan du kommer.",
-        "da": "Åbent 24 timer på alle afdelinger; du behøver ikke ringe på forhånd."
+        "da": "Åbent 24 timer på alle afdelinger; du behøver ikke ringe på forhånd.",
+        "fi": "Auki 24 tuntia kaikissa palveluissa; ei tarvitse soittaa etukäteen."
       }
     },
     {
@@ -71,7 +72,8 @@
         "pl": "W sprawie opieki lub nagłych przypadków zadzwoń do przychodni.",
         "cs": "Pro péči nebo pohotovost zavolejte na kliniku.",
         "sv": "Ring kliniken för vård eller akutfall.",
-        "da": "Ring til klinikken for behandling eller akutte tilfælde."
+        "da": "Ring til klinikken for behandling eller akutte tilfælde.",
+        "fi": "Hoitoa tai päivystystä varten soita klinikalle."
       }
     },
     {
@@ -104,7 +106,8 @@
         "pl": "Pon.–pt. 8:00–19:00, sob. 8:00–17:30.",
         "cs": "Po–Pá 8:00–19:00, so 8:00–17:30.",
         "sv": "Mån–fre 8.00–19.00, lör 8.00–17.30.",
-        "da": "Man–fre 8.00–19.00, lør 8.00–17.30."
+        "da": "Man–fre 8.00–19.00, lør 8.00–17.30.",
+        "fi": "ma–pe 8.00–19.00, la 8.00–17.30."
       }
     },
     {
@@ -124,7 +127,8 @@
         "pl": "Pon.–sob. 8:00–17:00.",
         "cs": "Po–So 8:00–17:00.",
         "sv": "Mån–lör 8.00–17.00.",
-        "da": "Man–lør 8.00–17.00."
+        "da": "Man–lør 8.00–17.00.",
+        "fi": "ma–la 8.00–17.00."
       }
     },
     {
@@ -157,7 +161,8 @@
         "pl": "Pon.–sob. 8:00–12:00 i 13:00–17:00.",
         "cs": "Po–So 8:00–12:00 a 13:00–17:00.",
         "sv": "Mån–lör 8.00–12.00 och 13.00–17.00.",
-        "da": "Man–lør 8.00–12.00 og 13.00–17.00."
+        "da": "Man–lør 8.00–12.00 og 13.00–17.00.",
+        "fi": "ma–la 8.00–12.00 ja 13.00–17.00."
       }
     }
   ],

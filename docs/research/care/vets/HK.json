@@ -46,7 +46,8 @@
         "pl": "Całodobowa infolinia pogotowia 3650 3200, 7 dni w tygodniu. Umawianie wizyt i informacje ogólne 3650 3000, codziennie 9:00–19:00.",
         "cs": "Nonstop pohotovostní linka 3650 3200, 7 dní v týdnu. Objednání a obecné dotazy 3650 3000, denně 9:00–19:00.",
         "sv": "Akutlinje dygnet runt 3650 3200, 7 dagar i veckan. Tidsbokning och allmänna frågor 3650 3000, dagligen 9.00–19.00.",
-        "da": "Akuttelefon døgnet rundt 3650 3200, alle ugens dage. Tidsbestilling og generelle henvendelser 3650 3000, dagligt 9.00–19.00."
+        "da": "Akuttelefon døgnet rundt 3650 3200, alle ugens dage. Tidsbestilling og generelle henvendelser 3650 3000, dagligt 9.00–19.00.",
+        "fi": "Päivystyslinja 24 h, 7 päivää viikossa: 3650 3200. Ajanvaraus ja yleiskysymykset 3650 3000, päivittäin 9.00–19.00."
       }
     },
     {
@@ -71,7 +72,8 @@
         "pl": "Otwarte całodobowo, 7 dni w tygodniu. Całodobowa linia pogotowia 6828 6620; linia ogólna 2334 2334.",
         "cs": "Otevřeno nonstop, 7 dní v týdnu. Nonstop pohotovostní linka 6828 6620; hlavní linka 2334 2334.",
         "sv": "Öppet dygnet runt, 7 dagar i veckan. Akutlinje dygnet runt 6828 6620; allmänt nummer 2334 2334.",
-        "da": "Åbent døgnet rundt, alle ugens dage. Akuttelefon døgnet rundt 6828 6620; hovednummer 2334 2334."
+        "da": "Åbent døgnet rundt, alle ugens dage. Akuttelefon døgnet rundt 6828 6620; hovednummer 2334 2334.",
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa. Päivystyslinja 24 h 6828 6620; pääpuhelin 2334 2334."
       }
     },
     {
@@ -96,7 +98,8 @@
         "pl": "Pogotowie całodobowo, 7 dni w tygodniu. Zwykłe godziny pracy codziennie 9:00–19:00.",
         "cs": "Nonstop pohotovost, 7 dní v týdnu. Běžná ordinační doba denně 9:00–19:00.",
         "sv": "Akutmottagning dygnet runt, 7 dagar i veckan. Ordinarie tider 9.00–19.00 dagligen.",
-        "da": "Akut døgnet rundt, alle ugens dage. Normal åbningstid 9.00–19.00 dagligt."
+        "da": "Akut døgnet rundt, alle ugens dage. Normal åbningstid 9.00–19.00 dagligt.",
+        "fi": "Päivystys 24 h, 7 päivää viikossa. Tavalliset aukioloajat päivittäin 9.00–19.00."
       }
     },
     {
@@ -121,7 +124,8 @@
         "pl": "Całodobowa weterynaryjna pomoc w nagłych przypadkach, 365 dni w roku, weterynarze na miejscu przez całą dobę. Zwierzęta egzotyczne: zadzwoń przed przyjazdem.",
         "cs": "Nonstop veterinární pohotovost, 365 dní v roce, veterináři na místě nepřetržitě. Exotická zvířata: před cestou zavolejte.",
         "sv": "Akut veterinärvård dygnet runt, 365 dagar om året, veterinärer på plats dygnet runt. Exotiska djur: ring innan du åker.",
-        "da": "Akut dyrlægehjælp døgnet rundt, 365 dage om året, dyrlæger på stedet hele døgnet. Eksotiske dyr: ring, før du kører af sted."
+        "da": "Akut dyrlægehjælp døgnet rundt, 365 dage om året, dyrlæger på stedet hele døgnet. Eksotiske dyr: ring, før du kører af sted.",
+        "fi": "Eläinlääkäripäivystys 24 h, 365 päivää vuodessa, eläinlääkärit paikalla ympäri vuorokauden. Eksoottiset eläimet: soita ennen tuloa."
       }
     },
     {
@@ -146,7 +150,8 @@
         "pl": "Pomoc w nagłych przypadkach całodobowo, 365 dni w roku; przyjmuje bez umawiania po triażu.",
         "cs": "Nonstop pohotovost, 365 dní v roce; bez objednání po posouzení závažnosti (triáž).",
         "sv": "Akutvård dygnet runt, 365 dagar om året; besök utan tidsbokning tas emot via triage.",
-        "da": "Akut hjælp døgnet rundt, 365 dage om året; uanmeldte patienter tages imod efter triage."
+        "da": "Akut hjælp døgnet rundt, 365 dage om året; uanmeldte patienter tages imod efter triage.",
+        "fi": "Päivystys ympäri vuorokauden, 365 päivää vuodessa; ilman ajanvarausta otetaan vastaan kiireellisyysarvion kautta."
       }
     },
     {
@@ -171,7 +176,8 @@
         "pl": "Całodobowa opieka i hospitalizacja; zadzwoń w sprawie konsultacji.",
         "cs": "Nonstop péče a hospitalizace; pro konzultaci zavolejte.",
         "sv": "Vård och inläggning dygnet runt; ring för konsultation.",
-        "da": "Pleje og indlæggelse døgnet rundt; ring for at få en konsultation."
+        "da": "Pleje og indlæggelse døgnet rundt; ring for at få en konsultation.",
+        "fi": "Hoito ja sairaalahoito ympäri vuorokauden; soita ja varaa vastaanottoaika."
       }
     },
     {
@@ -196,7 +202,8 @@
         "pl": "Otwarte codziennie całodobowo.",
         "cs": "Otevřeno denně nonstop.",
         "sv": "Öppet dagligen dygnet runt.",
-        "da": "Åbent dagligt døgnet rundt."
+        "da": "Åbent dagligt døgnet rundt.",
+        "fi": "Auki päivittäin 24 h."
       }
     },
     {
@@ -221,7 +228,8 @@
         "pl": "Całodobowa izba przyjęć w nagłych przypadkach, codziennie. Numer pogotowia 3102 8528; numer główny 3426 3500.",
         "cs": "Nonstop pohotovost, denně. Pohotovostní linka 3102 8528; hlavní linka 3426 3500.",
         "sv": "Akutmottagning dygnet runt, alla dagar. Akutlinje 3102 8528; huvudnummer 3426 3500.",
-        "da": "Skadestue døgnet rundt, dagligt. Akuttelefon 3102 8528; hovednummer 3426 3500."
+        "da": "Skadestue døgnet rundt, dagligt. Akuttelefon 3102 8528; hovednummer 3426 3500.",
+        "fi": "Päivystys 24 h päivittäin. Päivystyslinja 3102 8528; pääpuhelin 3426 3500."
       }
     },
     {
@@ -245,7 +253,8 @@
         "pl": "Całodobowa lecznica dla nagłych przypadków.",
         "cs": "Nonstop pohotovostní nemocnice.",
         "sv": "Akutdjursjukhus dygnet runt, alla dagar.",
-        "da": "Akuthospital åbent døgnet rundt."
+        "da": "Akuthospital åbent døgnet rundt.",
+        "fi": "Päivystyssairaala 24/7."
       }
     },
     {
@@ -269,7 +278,8 @@
         "pl": "Całodobowa lecznica dla nagłych przypadków.",
         "cs": "Nonstop pohotovostní nemocnice.",
         "sv": "Akutdjursjukhus dygnet runt, alla dagar.",
-        "da": "Akuthospital åbent døgnet rundt."
+        "da": "Akuthospital åbent døgnet rundt.",
+        "fi": "Päivystyssairaala 24/7."
       }
     },
     {
@@ -293,7 +303,8 @@
         "pl": "Całodobowa lecznica dla nagłych przypadków.",
         "cs": "Nonstop pohotovostní nemocnice.",
         "sv": "Akutdjursjukhus dygnet runt, alla dagar.",
-        "da": "Akuthospital åbent døgnet rundt."
+        "da": "Akuthospital åbent døgnet rundt.",
+        "fi": "Päivystyssairaala 24/7."
       }
     },
     {
@@ -318,7 +329,8 @@
         "pl": "Czynne całodobowo, 365 dni w roku, weterynarze na miejscu przez całą dobę.",
         "cs": "Provoz nonstop, 365 dní v roce, veterináři na místě nepřetržitě.",
         "sv": "Öppet dygnet runt, årets alla dagar, med veterinärer på plats dygnet runt.",
-        "da": "Åbent døgnet rundt, alle årets dage, med dyrlæger på stedet hele døgnet."
+        "da": "Åbent døgnet rundt, alle årets dage, med dyrlæger på stedet hele døgnet.",
+        "fi": "Toimii 24/7/365, eläinlääkärit paikalla ympäri vuorokauden."
       }
     },
     {
@@ -343,7 +355,8 @@
         "pl": "Weterynaryjne pogotowie całodobowo przez cały rok.",
         "cs": "Nonstop veterinární pohotovost po celý rok.",
         "sv": "Akut veterinärvård dygnet runt, året om.",
-        "da": "Akut dyrlægehjælp døgnet rundt hele året."
+        "da": "Akut dyrlægehjælp døgnet rundt hele året.",
+        "fi": "Eläinlääkäripäivystys 24/7 ympäri vuoden."
       }
     },
     {
@@ -367,7 +380,8 @@
         "pl": "Infolinia czynna całodobowo, codziennie. Najpierw zadzwoń; nie jedź do placówki, licząc na weterynarza na dyżurze. Tylko w prawdziwych nagłych przypadkach; opieka weterynaryjna poza godzinami pracy zwykle w Hong Kong Centre.",
         "cs": "Linka v pohotovosti nonstop, každý den. Nejprve zavolejte; nechoďte do střediska v očekávání, že tam bude veterinář ve službě. Pouze pro skutečné nouzové případy; veterinární péče mimo ordinační dobu bývá v Hong Kong Centre.",
         "sv": "Akutlinje i beredskap dygnet runt, varje dag. Ring först; åk inte till ett centrum i förväntan att en veterinär är i tjänst. Endast för riktiga akutfall; veterinärvård utanför öppettid sker oftast på Hong Kong Centre.",
-        "da": "Telefon i beredskab døgnet rundt, hver dag. Ring først; kør ikke til et center i forventning om en vagthavende dyrlæge. Kun til rigtige akutte tilfælde; dyrlægehjælp uden for åbningstid er som regel på Hong Kong Centre."
+        "da": "Telefon i beredskab døgnet rundt, hver dag. Ring først; kør ikke til et center i forventning om en vagthavende dyrlæge. Kun til rigtige akutte tilfælde; dyrlægehjælp uden for åbningstid er som regel på Hong Kong Centre.",
+        "fi": "Päivystyslinja valmiudessa 24 h joka päivä. Soita ensin; älä mene keskukseen olettaen, että eläinlääkäri on paikalla. Vain todellisiin hätätapauksiin; virka-ajan ulkopuolinen eläinlääkärinhoito on yleensä Hong Kong Centressä."
       }
     },
     {
@@ -392,7 +406,8 @@
         "pl": "Otwarte codziennie 7:00–21:00. Zadzwoń, aby potwierdzić godziny.",
         "cs": "Otevřeno denně 7:00–21:00. Ordinační dobu si ověřte telefonicky.",
         "sv": "Öppet dagligen 7.00–21.00. Ring för att bekräfta öppettiderna.",
-        "da": "Åbent dagligt 7.00–21.00. Ring for at bekræfte åbningstiden."
+        "da": "Åbent dagligt 7.00–21.00. Ring for at bekræfte åbningstiden.",
+        "fi": "Auki päivittäin 7.00–21.00. Varmista aukioloajat soittamalla."
       }
     },
     {
@@ -417,7 +432,8 @@
         "pl": "Weterynarz 8:00–20:00; opieka pielęgniarska całodobowo.",
         "cs": "Veterinární služba 8:00–20:00; ošetřovatelská služba nonstop.",
         "sv": "Veterinärtjänst 8.00–20.00; sjuksköterskor dygnet runt.",
-        "da": "Dyrlægeservice 8.00–20.00; sygeplejerske døgnet rundt."
+        "da": "Dyrlægeservice 8.00–20.00; sygeplejerske døgnet rundt.",
+        "fi": "Eläinlääkäripalvelu 8.00–20.00; hoitajapalvelu 24 h."
       }
     },
     {
@@ -441,7 +457,8 @@
         "pl": "Codziennie 8:00–20:00.",
         "cs": "Denně 8:00–20:00.",
         "sv": "Dagligen 8.00–20.00.",
-        "da": "Dagligt 8.00–20.00."
+        "da": "Dagligt 8.00–20.00.",
+        "fi": "Päivittäin 8–20."
       }
     },
     {
@@ -465,7 +482,8 @@
         "pl": "Codziennie 10:30–13:30 i 16:00–19:00; w święta państwowe zamknięte.",
         "cs": "Denně 10:30–13:30 a 16:00–19:00; o státních svátcích zavřeno.",
         "sv": "Dagligen 10.30–13.30 och 16.00–19.00; stängt på helgdagar.",
-        "da": "Dagligt 10.30–13.30 og 16.00–19.00; lukket på helligdage."
+        "da": "Dagligt 10.30–13.30 og 16.00–19.00; lukket på helligdage.",
+        "fi": "Päivittäin 10.30–13.30 ja 16.00–19.00; pyhinä suljettu."
       }
     },
     {
@@ -490,7 +508,8 @@
         "pl": "Codziennie 10:30–13:30 i 16:00–19:00; w święta państwowe zamknięte.",
         "cs": "Denně 10:30–13:30 a 16:00–19:00; o státních svátcích zavřeno.",
         "sv": "Dagligen 10.30–13.30 och 16.00–19.00; stängt på helgdagar.",
-        "da": "Dagligt 10.30–13.30 og 16.00–19.00; lukket på helligdage."
+        "da": "Dagligt 10.30–13.30 og 16.00–19.00; lukket på helligdage.",
+        "fi": "Päivittäin 10.30–13.30 ja 16.00–19.00; pyhinä suljettu."
       }
     },
     {
@@ -514,7 +533,8 @@
         "pl": "pon.–sob. 9:00–21:00; niedz. i święta 10:00–19:00.",
         "cs": "Po–so 9:00–21:00; ne a svátky 10:00–19:00.",
         "sv": "Mån–lör 9.00–21.00; sön och helgdagar 10.00–19.00.",
-        "da": "Man–lør 9.00–21.00; søn og helligdage 10.00–19.00."
+        "da": "Man–lør 9.00–21.00; søn og helligdage 10.00–19.00.",
+        "fi": "ma–la 9.00–21.00; su ja pyhinä 10.00–19.00."
       }
     },
     {
@@ -539,7 +559,8 @@
         "pl": "Codziennie 9:00–20:00; niedz. i święta państwowe 10:00–19:00.",
         "cs": "Denně 9:00–20:00; ne a státní svátky 10:00–19:00.",
         "sv": "Dagligen 9.00–20.00; sön och helgdagar 10.00–19.00.",
-        "da": "Dagligt 9.00–20.00; søn og helligdage 10.00–19.00."
+        "da": "Dagligt 9.00–20.00; søn og helligdage 10.00–19.00.",
+        "fi": "Päivittäin 9.00–20.00; su ja pyhinä 10.00–19.00."
       }
     },
     {
@@ -563,7 +584,8 @@
         "pl": "Codziennie 9:00–19:00.",
         "cs": "Denně 9:00–19:00.",
         "sv": "Dagligen 9.00–19.00.",
-        "da": "Dagligt 9.00–19.00."
+        "da": "Dagligt 9.00–19.00.",
+        "fi": "Päivittäin 9.00–19.00."
       }
     },
     {
@@ -587,7 +609,8 @@
         "pl": "Codziennie 9:00–19:00.",
         "cs": "Denně 9:00–19:00.",
         "sv": "Dagligen 9.00–19.00.",
-        "da": "Dagligt 9.00–19.00."
+        "da": "Dagligt 9.00–19.00.",
+        "fi": "Päivittäin 9.00–19.00."
       }
     },
     {
@@ -611,7 +634,8 @@
         "pl": "Codziennie 9:00–19:00.",
         "cs": "Denně 9:00–19:00.",
         "sv": "Dagligen 9.00–19.00.",
-        "da": "Dagligt 9.00–19.00."
+        "da": "Dagligt 9.00–19.00.",
+        "fi": "Päivittäin 9.00–19.00."
       }
     },
     {
@@ -635,7 +659,8 @@
         "pl": "pon.–wt. 9:00–21:00, śr.–pt. 9:00–19:00, sob. 9:00–18:00, niedz. 10:00–17:00. Rezerwacje przez WhatsApp +852 5935 6970.",
         "cs": "Po–Út 9:00–21:00, St–Pá 9:00–19:00, so 9:00–18:00, ne 10:00–17:00. Objednání přes WhatsApp +852 5935 6970.",
         "sv": "Mån–tis 9.00–21.00, ons–fre 9.00–19.00, lör 9.00–18.00, sön 10.00–17.00. Bokning via WhatsApp +852 5935 6970.",
-        "da": "Man–tirs 9.00–21.00, ons–fre 9.00–19.00, lør 9.00–18.00, søn 10.00–17.00. Bookning via WhatsApp +852 5935 6970."
+        "da": "Man–tirs 9.00–21.00, ons–fre 9.00–19.00, lør 9.00–18.00, søn 10.00–17.00. Bookning via WhatsApp +852 5935 6970.",
+        "fi": "ma–ti 9.00–21.00, ke–pe 9.00–19.00, la 9.00–18.00, su 10.00–17.00. Ajanvaraus WhatsAppilla +852 5935 6970."
       }
     }
   ],

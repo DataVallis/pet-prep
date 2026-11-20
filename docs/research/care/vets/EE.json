@@ -89,7 +89,8 @@
         "pl": "Pomoc w nagłych przypadkach całodobowo. Telefon 09:00–20:00 +372 731 3224, w nocy 20:00–09:00 +372 503 3878 (dyżurny weterynarz). Zadzwoń przed wizytą; pacjenci w stanie krytycznym są przyjmowani w pierwszej kolejności, a gdy w przychodni brakuje miejsc, możliwe jest skierowanie gdzie indziej.",
         "cs": "Pohotovost nonstop. Telefon 9:00–20:00 +372 731 3224, v noci 20:00–9:00 +372 503 3878 (veterinář ve službě). Před příjezdem zavolejte; kritické případy se ošetřují přednostně a při plném provozu vás mohou odkázat jinam.",
         "sv": "Akutvård dygnet runt, årets alla dagar. Telefon 09.00–20.00 +372 731 3224, natt 20.00–09.00 +372 503 3878 (jourhavande veterinär). Ring innan du kommer; kritiska patienter tas emot först och du kan hänvisas vidare om kliniken är full.",
-        "da": "Akutbehandling døgnet rundt. Telefon 09.00–20.00 +372 731 3224, nat 20.00–09.00 +372 503 3878 (vagthavende dyrlæge). Ring, før du kommer; kritiske patienter tages først, og du kan blive henvist videre, hvis klinikken er fuld."
+        "da": "Akutbehandling døgnet rundt. Telefon 09.00–20.00 +372 731 3224, nat 20.00–09.00 +372 503 3878 (vagthavende dyrlæge). Ring, før du kommer; kritiske patienter tages først, og du kan blive henvist videre, hvis klinikken er fuld.",
+        "fi": "Päivystys 24/7. Puhelin klo 9.00–20.00 +372 731 3224, yöllä klo 20.00–9.00 +372 503 3878 (päivystävä eläinlääkäri). Soita ennen tuloa; kriittiset potilaat otetaan ensin, ja jos klinikka on täynnä, sinut voidaan ohjata muualle."
       },
       "small_animals": true,
       "url": "https://loomakliinik.emu.ee/en",
@@ -118,7 +119,8 @@
         "pl": "Pogotowie dla zwierząt domowych, czynne całodobowo, codziennie, także w święta, z weterynarzem i asystentem na miejscu. Telefon +372 602 0888 lub numer skrócony 15222. Zadzwoń przed wizytą, bo po zwykłych godzinach drzwi są zamknięte; za wizyty w nagłych przypadkach poza godzinami obowiązuje dopłata 50 %.",
         "cs": "Zvířecí pohotovost otevřená nonstop každý den včetně státních svátků, na místě je veterinář a asistent. Telefon +372 602 0888 nebo krátké číslo 15222. Před příjezdem zavolejte, mimo běžnou ordinační dobu jsou dveře zamčené; za pohotovostní návštěvy mimo ordinační dobu se platí příplatek 50 %.",
         "sv": "Akutklinik för husdjur, öppen dygnet runt alla dagar inklusive helgdagar, med veterinär och assistent på plats. Telefon +372 602 0888 eller kortnummer 15222. Ring innan du kommer eftersom dörrarna är låsta efter ordinarie tid; ett tillägg på 50 % gäller för akutbesök utanför ordinarie tid.",
-        "da": "Akutklinik for kæledyr, åben døgnet rundt hver dag inkl. helligdage, med dyrlæge og assistent på stedet. Telefon +372 602 0888 eller kortnummer 15222. Ring på forhånd, for dørene er låst uden for normal åbningstid; der gælder et tillæg på 50 % ved akutte besøg uden for åbningstiden."
+        "da": "Akutklinik for kæledyr, åben døgnet rundt hver dag inkl. helligdage, med dyrlæge og assistent på stedet. Telefon +372 602 0888 eller kortnummer 15222. Ring på forhånd, for dørene er låst uden for normal åbningstid; der gælder et tillæg på 50 % ved akutte besøg uden for åbningstiden.",
+        "fi": "Lemmikkien päivystysklinikka, auki 24 tuntia joka päivä myös pyhäpäivinä; paikalla eläinlääkäri ja avustaja. Puhelin +372 602 0888 tai lyhytnumero 15222. Soita etukäteen, sillä ovet ovat lukossa normaalin aukioloajan jälkeen; aukioloajan ulkopuolisista päivystyskäynneistä peritään 50 %:n lisämaksu."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-rannamoisa",
@@ -147,7 +149,8 @@
         "pl": "Pogotowie dla zwierząt czynne całodobowo, 7 dni w tygodniu; zadzwoń przed wizytą pod +372 502 3191. Wizyty poza godzinami z dopłatą.",
         "cs": "Zvířecí pohotovost otevřená nonstop, 7 dní v týdnu; před příjezdem zavolejte na +372 502 3191. Za návštěvy mimo ordinační dobu se platí příplatek.",
         "sv": "Djurakutklinik öppen dygnet runt, alla veckodagar; ring innan du kommer på +372 502 3191. Besök utanför ordinarie tid medför tillägg.",
-        "da": "Akutklinik for dyr, åben døgnet rundt, 7 dage om ugen; ring på forhånd på +372 502 3191. Besøg uden for åbningstiden medfører tillæg."
+        "da": "Akutklinik for dyr, åben døgnet rundt, 7 dage om ugen; ring på forhånd på +372 502 3191. Besøg uden for åbningstiden medfører tillæg.",
+        "fi": "Eläinten päivystysklinikka auki 24 tuntia, 7 päivää viikossa; soita etukäteen numeroon +372 502 3191. Aukioloaikojen ulkopuolisista käynneistä peritään lisämaksu."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/loomade-kiirabikliinik/",
@@ -176,7 +179,8 @@
         "pl": "Zadzwoń przed wizytą, by poznać godziny otwarcia.",
         "cs": "Otevírací dobu zjistíte telefonicky.",
         "sv": "Ring innan du kommer för att få veta öppettiderna.",
-        "da": "Ring for at høre om åbningstiderne."
+        "da": "Ring for at høre om åbningstiderne.",
+        "fi": "Soita etukäteen ja kysy aukioloajat"
       },
       "small_animals": true,
       "url": "http://www.vastriku.ee",
@@ -204,7 +208,8 @@
         "pl": "Zadzwoń przed wizytą, by poznać godziny otwarcia.",
         "cs": "Otevírací dobu zjistíte telefonicky.",
         "sv": "Ring innan du kommer för att få veta öppettiderna.",
-        "da": "Ring for at høre om åbningstiderne."
+        "da": "Ring for at høre om åbningstiderne.",
+        "fi": "Soita etukäteen ja kysy aukioloajat"
       },
       "small_animals": true,
       "url": "http://www.toometikliinik.ee",
@@ -232,7 +237,8 @@
         "pl": "Czynne całodobowo, 7 dni w tygodniu w nagłych przypadkach (wizyty pon.–pt. 09:00–19:00). Zadzwoń przed przyjazdem na izbę przyjęć, aby zespół mógł się przygotować.",
         "cs": "Pohotovost nonstop, 7 dní v týdnu (objednání Po–Pá 9:00–19:00). Před příjezdem na pohotovost zavolejte, aby se tým mohl připravit.",
         "sv": "Öppet dygnet runt, alla dagar för akutfall (tidsbokning mån–fre 09.00–19.00). Ring innan du kommer till akutavdelningen så att teamet kan förbereda sig.",
-        "da": "Åben døgnet rundt, 7 dage om ugen, til akutte tilfælde (tidsbestilling man–fre 09.00–19.00). Ring på forhånd, før du kommer til akutmodtagelsen, så teamet kan forberede sig."
+        "da": "Åben døgnet rundt, 7 dage om ugen, til akutte tilfælde (tidsbestilling man–fre 09.00–19.00). Ring på forhånd, før du kommer til akutmodtagelsen, så teamet kan forberede sig.",
+        "fi": "Auki 24 tuntia, 7 päivää viikossa päivystystapauksille (ajanvaraus ma–pe klo 9.00–19.00). Soita etukäteen ennen saapumista päivystysosastolle, jotta tiimi voi valmistautua."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/tartu-vaikeloomakliinik/",
@@ -261,7 +267,8 @@
         "pl": "Zwykłe godziny pon.–pt. 09:00–19:00, sob.–niedz. nieczynne. Zadzwoń przed wizytą; w nagłych przypadkach w nocy i w weekendy skorzystaj z całodobowej przychodni.",
         "cs": "Běžná ordinační doba Po–Pá 9:00–19:00, v So–Ne zavřeno. Před cestou zavolejte; v noci a o víkendech v naléhavých případech využijte nonstop kliniku.",
         "sv": "Ordinarie tider mån–fre 09.00–19.00, stängt lör–sön. Ring innan du kommer; för akutfall nattetid och på helger, vänd dig till en klinik som har öppet dygnet runt.",
-        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; ved akutte tilfælde om natten og i weekenden brug en døgnåben klinik."
+        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; ved akutte tilfælde om natten og i weekenden brug en døgnåben klinik.",
+        "fi": "Normaali aukioloaika ma–pe klo 9.00–19.00, suljettu la–su. Soita etukäteen; yö- ja viikonloppupäivystykseen tarvitaan ympärivuorokautinen klinikka."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/billy-loomakliinik/",
@@ -289,7 +296,8 @@
         "pl": "Zwykłe godziny pon.–pt. 09:00–19:00, sob.–niedz. nieczynne. Zadzwoń przed wizytą; w nagłych przypadkach w nocy i w weekendy skorzystaj z całodobowej przychodni.",
         "cs": "Běžná ordinační doba Po–Pá 9:00–19:00, v So–Ne zavřeno. Před cestou zavolejte; v noci a o víkendech v naléhavých případech využijte nonstop kliniku.",
         "sv": "Ordinarie tider mån–fre 09.00–19.00, stängt lör–sön. Ring innan du kommer; för akutfall nattetid och på helger, vänd dig till en klinik som har öppet dygnet runt.",
-        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; ved akutte tilfælde om natten og i weekenden brug en døgnåben klinik."
+        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; ved akutte tilfælde om natten og i weekenden brug en døgnåben klinik.",
+        "fi": "Normaali aukioloaika ma–pe klo 9.00–19.00, suljettu la–su. Soita etukäteen; yö- ja viikonloppupäivystykseen tarvitaan ympärivuorokautinen klinikka."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/fahle-loomakliinik/",
@@ -317,7 +325,8 @@
         "pl": "Zwykłe godziny pon.–pt. 09:00–19:00, sob.–niedz. nieczynne. Zadzwoń przed wizytą; w nagłych przypadkach w nocy i w weekendy skorzystaj z całodobowej przychodni.",
         "cs": "Běžná ordinační doba Po–Pá 9:00–19:00, v So–Ne zavřeno. Před cestou zavolejte; v noci a o víkendech v naléhavých případech využijte nonstop kliniku.",
         "sv": "Ordinarie tider mån–fre 09.00–19.00, stängt lör–sön. Ring innan du kommer; för akutfall nattetid och på helger, vänd dig till en klinik som har öppet dygnet runt.",
-        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; ved akutte tilfælde om natten og i weekenden brug en døgnåben klinik."
+        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; ved akutte tilfælde om natten og i weekenden brug en døgnåben klinik.",
+        "fi": "Normaali aukioloaika ma–pe klo 9.00–19.00, suljettu la–su. Soita etukäteen; yö- ja viikonloppupäivystykseen tarvitaan ympärivuorokautinen klinikka."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/timmu-loomakliinik/",
@@ -345,7 +354,8 @@
         "pl": "Zwykłe godziny pon.–pt. 09:00–19:00, sob.–niedz. nieczynne. Zadzwoń przed wizytą; w nagłych przypadkach w nocy i w weekendy skorzystaj z całodobowej przychodni.",
         "cs": "Běžná ordinační doba Po–Pá 9:00–19:00, v So–Ne zavřeno. Před cestou zavolejte; v noci a o víkendech v naléhavých případech využijte nonstop kliniku.",
         "sv": "Ordinarie tider mån–fre 09.00–19.00, stängt lör–sön. Ring innan du kommer; för akutfall nattetid och på helger, vänd dig till en klinik som har öppet dygnet runt.",
-        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; ved akutte tilfælde om natten og i weekenden brug en døgnåben klinik."
+        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; ved akutte tilfælde om natten og i weekenden brug en døgnåben klinik.",
+        "fi": "Normaali aukioloaika ma–pe klo 9.00–19.00, suljettu la–su. Soita etukäteen; yö- ja viikonloppupäivystykseen tarvitaan ympärivuorokautinen klinikka."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/univet-loomakliinik/",
@@ -373,7 +383,8 @@
         "pl": "Zwykłe godziny pon.–pt. 09:00–19:00, sob.–niedz. nieczynne. Zadzwoń przed wizytą; w nagłych przypadkach w nocy i w weekendy skorzystaj z całodobowej przychodni.",
         "cs": "Běžná ordinační doba Po–Pá 9:00–19:00, v So–Ne zavřeno. Před cestou zavolejte; v noci a o víkendech v naléhavých případech využijte nonstop kliniku.",
         "sv": "Ordinarie tider mån–fre 09.00–19.00, stängt lör–sön. Ring innan du kommer; för akutfall nattetid och på helger, vänd dig till en klinik som har öppet dygnet runt.",
-        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; ved akutte tilfælde om natten og i weekenden brug en døgnåben klinik."
+        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; ved akutte tilfælde om natten og i weekenden brug en døgnåben klinik.",
+        "fi": "Normaali aukioloaika ma–pe klo 9.00–19.00, suljettu la–su. Soita etukäteen; yö- ja viikonloppupäivystykseen tarvitaan ympärivuorokautinen klinikka."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/viimsi-loomakliinik/",
@@ -401,7 +412,8 @@
         "pl": "Zwykłe godziny pon.–pt. 09:00–19:00, sob.–niedz. nieczynne. Zadzwoń przed wizytą; w nagłych przypadkach w nocy i w weekendy potrzebna jest całodobowa przychodnia (Tallinn).",
         "cs": "Běžná ordinační doba Po–Pá 9:00–19:00, v So–Ne zavřeno. Před cestou zavolejte; v noci a o víkendech v naléhavých případech je nutná nonstop klinika (Tallinn).",
         "sv": "Ordinarie tider mån–fre 09.00–19.00, stängt lör–sön. Ring innan du kommer; akutfall nattetid och på helger hänvisas till en klinik med öppet dygnet runt (Tallinn).",
-        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; akutte tilfælde om natten og i weekenden kræver en døgnåben klinik (Tallinn)."
+        "da": "Normal åbningstid man–fre 09.00–19.00, lukket lør–søn. Ring på forhånd; akutte tilfælde om natten og i weekenden kræver en døgnåben klinik (Tallinn).",
+        "fi": "Normaali aukioloaika ma–pe klo 9.00–19.00, suljettu la–su. Soita etukäteen; yö- ja viikonloppupäivystykseen tarvitaan ympärivuorokautinen klinikka (Tallinna)."
       },
       "small_animals": true,
       "url": "https://evidensia.ee/loomakliinik/rakvere-loomakliinik/",
@@ -429,7 +441,8 @@
         "pl": "Pon.–sob. 10:00–18:00 tylko po wcześniejszej rejestracji. W nagłych przypadkach w nocy i w weekendy najbliższa całodobowa przychodnia PetCity to Rannamõisa w Tallinie, +372 602 0888.",
         "cs": "Po–So 10:00–18:00 pouze na objednání. V noci a o víkendech v naléhavých případech nejbližší nonstop klinika PetCity Rannamõisa v Tallinnu, +372 602 0888.",
         "sv": "mån–lör 10.00–18.00 endast efter förhandsanmälan. För akutfall nattetid och på helger är närmaste PetCity-klinik med öppet dygnet runt Rannamõisa i Tallinn, +372 602 0888.",
-        "da": "man–lør 10.00–18.00 kun efter forudgående tilmelding. Ved akutte tilfælde om natten og i weekenden er nærmeste døgnåbne PetCity-klinik Rannamõisa i Tallinn, +372 602 0888."
+        "da": "man–lør 10.00–18.00 kun efter forudgående tilmelding. Ved akutte tilfælde om natten og i weekenden er nærmeste døgnåbne PetCity-klinik Rannamõisa i Tallinn, +372 602 0888.",
+        "fi": "ma–la klo 10.00–18.00 vain ennakkoilmoittautumisella. Yö- ja viikonloppupäivystyksessä lähin ympärivuorokautinen PetCity-klinikka on Rannamõisa Tallinnassa, +372 602 0888."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/narva-loomakliinik",
@@ -457,7 +470,8 @@
         "pl": "Pon.–sob. 10:00–20:00, niedz. 10:00–19:00. W nagłych przypadkach najpierw zadzwoń do przychodni; całodobowa opieka w PetCity Rannamõisa, +372 602 0888.",
         "cs": "Po–So 10:00–20:00, ne 10:00–19:00. V naléhavých případech nejprve zavolejte na kliniku; nonstop péče je v PetCity Rannamõisa, +372 602 0888.",
         "sv": "mån–lör 10.00–20.00, sön 10.00–19.00. Vid akutfall ring först kliniken; vård dygnet runt finns på PetCity Rannamõisa, +372 602 0888.",
-        "da": "man–lør 10.00–20.00, søn 10.00–19.00. Ved akutte tilfælde ring først til klinikken; døgnåben behandling findes hos PetCity Rannamõisa, +372 602 0888."
+        "da": "man–lør 10.00–20.00, søn 10.00–19.00. Ved akutte tilfælde ring først til klinikken; døgnåben behandling findes hos PetCity Rannamõisa, +372 602 0888.",
+        "fi": "ma–la klo 10.00–20.00, su klo 10.00–19.00. Päivystystapauksissa soita ensin klinikalle; ympärivuorokautinen hoito on PetCity Rannamõisassa, +372 602 0888."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/tahesaju-loomakliinik",
@@ -485,7 +499,8 @@
         "pl": "Pon.–sob. 10:00–21:00, niedz. 10:00–19:00. Całodobowa pomoc w nagłych przypadkach w PetCity Rannamõisa, +372 602 0888.",
         "cs": "Po–So 10:00–21:00, ne 10:00–19:00. Nonstop pohotovostní péče je v PetCity Rannamõisa, +372 602 0888.",
         "sv": "mån–lör 10.00–21.00, sön 10.00–19.00. Akutvård dygnet runt finns på PetCity Rannamõisa, +372 602 0888.",
-        "da": "man–lør 10.00–21.00, søn 10.00–19.00. Døgnåben akutbehandling findes hos PetCity Rannamõisa, +372 602 0888."
+        "da": "man–lør 10.00–21.00, søn 10.00–19.00. Døgnåben akutbehandling findes hos PetCity Rannamõisa, +372 602 0888.",
+        "fi": "ma–la klo 10.00–21.00, su klo 10.00–19.00. Ympärivuorokautinen päivystys on PetCity Rannamõisassa, +372 602 0888."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-ulemiste-loomakliinik-tallinnas",
@@ -513,7 +528,8 @@
         "pl": "Pon.–pt. 09:00–19:00. W przypadkach zagrażających życiu zadzwoń bezpośrednio do przychodni.",
         "cs": "Po–Pá 9:00–19:00. V případě ohrožení života volejte přímo na kliniku.",
         "sv": "mån–fre 09.00–19.00. Vid livshotande fall ring kliniken direkt.",
-        "da": "man–fre 09.00–19.00. Ved livstruende tilfælde ring direkte til klinikken."
+        "da": "man–fre 09.00–19.00. Ved livstruende tilfælde ring direkte til klinikken.",
+        "fi": "ma–pe klo 9.00–19.00. Hengenvaarallisissa tapauksissa soita suoraan klinikalle."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/lounakeskuse-loomakliinik",
@@ -541,7 +557,8 @@
         "pl": "Pon.–sob. 10:00–20:00, niedz. 10:00–19:00. Obecnie w tej przychodni nie ma weterynarza; w nagłych przypadkach w nocy i w święta zadzwoń pod 15222 (całodobowa przychodnia w Tallinie).",
         "cs": "Po–So 10:00–20:00, ne 10:00–19:00. V současnosti zde veterinář není; v noci a o státních svátcích v naléhavých případech volejte 15222 (nonstop klinika v Tallinnu).",
         "sv": "mån–lör 10.00–20.00, sön 10.00–19.00. För närvarande saknar kliniken veterinär; för akutfall nattetid och på helgdagar ring 15222 (klinik i Tallinn med öppet dygnet runt).",
-        "da": "man–lør 10.00–20.00, søn 10.00–19.00. Der er for tiden ingen dyrlæge på denne klinik; ved akutte tilfælde om natten og på helligdage ring til 15222 (døgnåben klinik i Tallinn)."
+        "da": "man–lør 10.00–20.00, søn 10.00–19.00. Der er for tiden ingen dyrlæge på denne klinik; ved akutte tilfælde om natten og på helligdage ring til 15222 (døgnåben klinik i Tallinn).",
+        "fi": "ma–la klo 10.00–20.00, su klo 10.00–19.00. Klinikalla ei tällä hetkellä ole eläinlääkäriä; yö- ja pyhäpäivystyksessä soita 15222 (ympärivuorokautinen klinikka Tallinnassa)."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-rakvere-loomakliinik",
@@ -569,7 +586,8 @@
         "pl": "Pon.–pt. 09:00–20:00, sob. 10:00–20:00, niedz. 10:00–18:00 (Pärnu Centre).",
         "cs": "Po–Pá 9:00–20:00, so 10:00–20:00, ne 10:00–18:00 (Pärnu Centre).",
         "sv": "mån–fre 09.00–20.00, lör 10.00–20.00, sön 10.00–18.00 (Pärnu Centre).",
-        "da": "man–fre 09.00–20.00, lør 10.00–20.00, søn 10.00–18.00 (Pärnu Centre)."
+        "da": "man–fre 09.00–20.00, lør 10.00–20.00, søn 10.00–18.00 (Pärnu Centre).",
+        "fi": "ma–pe klo 9.00–20.00, la klo 10.00–20.00, su klo 10.00–18.00 (Pärnu Centre)."
       },
       "small_animals": true,
       "url": "https://www.petcity.ee/petcity-parnu-keskuse-loomakliinik",
@@ -597,7 +615,8 @@
         "pl": "Pon.–sob. 08:00–18:00 (może się zmieniać; zadzwoń przed wizytą). Alternatywny telefon +372 447 0023.",
         "cs": "Po–So 8:00–18:00 (může se lišit, před cestou zavolejte). Další telefon +372 447 0023.",
         "sv": "mån–lör 08.00–18.00 (kan variera; ring innan du kommer). Annat telefonnummer +372 447 0023.",
-        "da": "man–lør 08.00–18.00 (kan variere; ring på forhånd). Alternativt telefonnummer +372 447 0023."
+        "da": "man–lør 08.00–18.00 (kan variere; ring på forhånd). Alternativt telefonnummer +372 447 0023.",
+        "fi": "ma–la klo 8.00–18.00 (voi vaihdella; soita etukäteen). Vaihtoehtoinen puhelinnumero +372 447 0023."
       },
       "small_animals": true,
       "url": "https://terveks.ee/",
@@ -625,7 +644,8 @@
         "pl": "Wrzesień–maj pon.–pt. 10:00–18:00, sob. 10:00–13:00; czerwiec–sierpień pon.–pt. 10:00–17:00. Poza godzinami napisz przez WhatsApp/Telegram/Viber; pomoc nie jest gwarantowana.",
         "cs": "Září–květen Po–Pá 10:00–18:00, so 10:00–13:00; červen–srpen Po–Pá 10:00–17:00. Mimo ordinační dobu pište přes WhatsApp/Telegram/Viber; pomoc není zaručena.",
         "sv": "sep–maj mån–fre 10.00–18.00, lör 10.00–13.00; jun–aug mån–fre 10.00–17.00. Utanför öppettid, skriv via WhatsApp/Telegram/Viber; hjälp kan inte garanteras.",
-        "da": "sep.–maj man–fre 10.00–18.00, lør 10.00–13.00; jun.–aug. man–fre 10.00–17.00. Uden for åbningstiden send en besked på WhatsApp/Telegram/Viber; hjælp er ikke garanteret."
+        "da": "sep.–maj man–fre 10.00–18.00, lør 10.00–13.00; jun.–aug. man–fre 10.00–17.00. Uden for åbningstiden send en besked på WhatsApp/Telegram/Viber; hjælp er ikke garanteret.",
+        "fi": "Syyskuusta toukokuuhun ma–pe klo 10.00–18.00, la klo 10.00–13.00; kesäkuusta elokuuhun ma–pe klo 10.00–17.00. Aukioloaikojen ulkopuolella lähetä viesti WhatsAppilla/Telegramilla/Viberillä; apua ei voida taata."
       },
       "small_animals": true,
       "url": "https://www.kuldbis.eu/ru/",
@@ -653,7 +673,8 @@
         "pl": "Pon.–pt. 09:00–18:00, sob. 09:00–14:00, niedz. nieczynne.",
         "cs": "Po–Pá 9:00–18:00, so 9:00–14:00, v neděli zavřeno.",
         "sv": "mån–fre 09.00–18.00, lör 09.00–14.00, stängt sön.",
-        "da": "man–fre 09.00–18.00, lør 09.00–14.00, lukket søn."
+        "da": "man–fre 09.00–18.00, lør 09.00–14.00, lukket søn.",
+        "fi": "ma–pe klo 9.00–18.00, la klo 9.00–14.00, su suljettu."
       },
       "small_animals": true,
       "url": "https://vetdok.eu/en/index.php?route=information/contact",

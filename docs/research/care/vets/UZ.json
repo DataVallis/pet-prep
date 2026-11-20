@@ -52,7 +52,8 @@
         "pl": "Czynne 24/7, bez przerwy obiadowej, dni wolnych i świąt. Linia dla nagłych przypadków +998 99 067 07 90.",
         "cs": "Otevřeno nonstop, bez polední pauzy, dnů volna a svátků. Pohotovostní linka +998 99 067 07 90.",
         "sv": "Öppet dygnet runt, ingen lunchpaus, inga lediga dagar eller helgdagar. Akutlinje +998 99 067 07 90.",
-        "da": "Åbent døgnet rundt, uden frokostpause, fridage eller helligdage. Akuttelefon +998 99 067 07 90."
+        "da": "Åbent døgnet rundt, uden frokostpause, fridage eller helligdage. Akuttelefon +998 99 067 07 90.",
+        "fi": "Auki 24/7, ei lounastaukoa, vapaapäiviä eikä pyhiä. Päivystysnumero +998 99 067 07 90."
       }
     },
     {
@@ -73,7 +74,8 @@
         "pl": "Czynne całą dobę, bez dni wolnych. Inne numery: +998 97 344 08 47, +998 88 100 32 82.",
         "cs": "Otevřeno nonstop, bez dnů volna. Další čísla: +998 97 344 08 47, +998 88 100 32 82.",
         "sv": "Öppet dygnet runt, inga lediga dagar. Andra nummer: +998 97 344 08 47, +998 88 100 32 82.",
-        "da": "Åbent døgnet rundt, ingen fridage. Andre numre: +998 97 344 08 47, +998 88 100 32 82."
+        "da": "Åbent døgnet rundt, ingen fridage. Andre numre: +998 97 344 08 47, +998 88 100 32 82.",
+        "fi": "Auki ympäri vuorokauden, ei vapaapäiviä. Muut numerot: +998 97 344 08 47, +998 88 100 32 82."
       }
     },
     {
@@ -94,7 +96,8 @@
         "pl": "Codziennie 9:00–18:00, w niedziele nieczynne. Telefon stacjonarny +998 71 256 54 50.",
         "cs": "Denně 9:00–18:00, v neděli zavřeno. Pevná linka +998 71 256 54 50.",
         "sv": "Dagligen 09.00–18.00, söndag stängt. Fast telefon +998 71 256 54 50.",
-        "da": "Hver dag 9.00–18.00, søndag lukket. Fastnet +998 71 256 54 50."
+        "da": "Hver dag 9.00–18.00, søndag lukket. Fastnet +998 71 256 54 50.",
+        "fi": "Joka päivä 9.00–18.00, su suljettu. Lankapuhelin +998 71 256 54 50."
       }
     },
     {
@@ -115,7 +118,8 @@
         "pl": "pon.–pt. 9:00–18:00, sob.–niedz. 10:00–18:00, przerwa obiadowa 13:00–14:00; w godzinach otwarcia przyjmuje nagłe przypadki.",
         "cs": "Po–Pá 9:00–18:00, so–ne 10:00–18:00, polední pauza 13:00–14:00; v ordinační dobu přijímá i pohotovostní případy.",
         "sv": "Mån–fre 09.00–18.00, lör–sön 10.00–18.00, lunch 13.00–14.00; tar emot akutfall under öppettiderna.",
-        "da": "man–fre 9.00–18.00, lør–søn 10.00–18.00, frokost 13.00–14.00; modtager akutte tilfælde i åbningstiden."
+        "da": "man–fre 9.00–18.00, lør–søn 10.00–18.00, frokost 13.00–14.00; modtager akutte tilfælde i åbningstiden.",
+        "fi": "ma–pe 9.00–18.00, la–su 10.00–18.00, lounastauko 13.00–14.00; ottaa vastaan päivystystapauksia aukioloaikana."
       }
     }
   ],

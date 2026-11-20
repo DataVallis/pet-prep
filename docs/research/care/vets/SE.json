@@ -70,7 +70,8 @@
         "pl": "Izba przyjęć dla nagłych przypadków czynna całą dobę, codziennie; zadzwoń przed wizytą (nocny punkt skierowań dla AniCura Albano).",
         "cs": "Pohotovost otevřena nonstop každý den; před příjezdem zavolejte (noční pracoviště, na které odkazuje AniCura Albano).",
         "sv": "Akutmottagning öppen dygnet runt, alla dagar; ring innan du kommer (nattlig hänvisningscentral för AniCura Albano).",
-        "da": "Akutafdeling åben døgnet rundt hver dag; ring, før du kommer (central for natlige henvisninger til AniCura Albano)."
+        "da": "Akutafdeling åben døgnet rundt hver dag; ring, før du kommer (central for natlige henvisninger til AniCura Albano).",
+        "fi": "Päivystys auki ympäri vuorokauden joka päivä; soita ennen tuloa (AniCura Albanon yöaikainen ohjauspiste)."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/stockholm/regiondjursjukhuset-bagarmossen/",
@@ -100,7 +101,8 @@
         "pl": "Izba przyjęć dla nagłych przypadków pon.–niedz. całodobowo; zadzwoń na wstępną ocenę. Psy, koty, króliki, gryzonie.",
         "cs": "Pohotovost nonstop, Po–Ne; pro první posouzení zavolejte. Psi, kočky, králíci, hlodavci.",
         "sv": "Akutmottagning måndag–söndag dygnet runt; ring för en första bedömning. Hundar, katter, kaniner, gnagare.",
-        "da": "Akutafdeling mandag–søndag 24 timer; ring for en første vurdering. Hunde, katte, kaniner, gnavere."
+        "da": "Akutafdeling mandag–søndag 24 timer; ring for en første vurdering. Hunde, katte, kaniner, gnavere.",
+        "fi": "Päivystys joka päivä ympäri vuorokauden; soita ensiarviota varten. Koirat, kissat, kanit, jyrsijät."
       },
       "small_animals": true,
       "url": "https://www.slu.se/universitetsdjursjukhuset/",
@@ -130,7 +132,8 @@
         "pl": "Izba przyjęć dla nagłych przypadków czynna całą dobę, we wszystkie dni; zadzwoń przed wizytą.",
         "cs": "Pohotovostní recepce otevřena nonstop každý den; před příjezdem zavolejte.",
         "sv": "Akutmottagning öppen dygnet runt, alla dagar; ring innan du kommer.",
-        "da": "Akutmodtagelse åben døgnet rundt, alle dage; ring, før du kommer."
+        "da": "Akutmodtagelse åben døgnet rundt, alle dage; ring, før du kommer.",
+        "fi": "Päivystysvastaanotto auki ympäri vuorokauden joka päivä; soita ennen tuloa."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-malmo/",
@@ -159,7 +162,8 @@
         "pl": "Czynne całą dobę, przez cały rok (małe zwierzęta; szpital dla koni ma ten sam numer).",
         "cs": "Otevřeno nonstop po celý rok (malá zvířata; číslo sdílí i koňská nemocnice).",
         "sv": "Öppet dygnet runt, hela året (smådjur; hästsjukhuset har samma nummer).",
-        "da": "Åbent døgnet rundt, hele året (små dyr; hestehospitalet har samme nummer)."
+        "da": "Åbent døgnet rundt, hele året (små dyr; hestehospitalet har samme nummer).",
+        "fi": "Auki ympäri vuorokauden, ympäri vuoden (pieneläimet; hevossairaala käyttää samaa numeroa)."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-specialistdjursjukhuset-helsingborg/",
@@ -188,7 +192,8 @@
         "pl": "Izba przyjęć dla nagłych przypadków czynna całą dobę, we wszystkie dni; zadzwoń przed wizytą. Psy i koty.",
         "cs": "Pohotovostní recepce otevřena nonstop každý den; před příjezdem zavolejte. Psi a kočky.",
         "sv": "Akutmottagning öppen dygnet runt, alla dagar; ring innan du kommer. Hundar och katter.",
-        "da": "Akutmodtagelse åben døgnet rundt, alle dage; ring, før du kommer. Hunde og katte."
+        "da": "Akutmodtagelse åben døgnet rundt, alle dage; ring, før du kommer. Hunde og katte.",
+        "fi": "Päivystysvastaanotto auki ympäri vuorokauden joka päivä; soita ennen tuloa. Koirat ja kissat."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-specialistdjursjukhuset-stromsholm/",
@@ -217,7 +222,8 @@
         "pl": "Izba przyjęć dla nagłych przypadków czynna całą dobę, we wszystkie dni; linia dla nagłych przypadków ma ten sam numer, zadzwoń przed wizytą.",
         "cs": "Pohotovost otevřena nonstop každý den; pohotovostní linka má stejné číslo, před příjezdem zavolejte.",
         "sv": "Akutmottagning öppen dygnet runt, alla dagar; akutlinjen har samma nummer, ring innan du kommer.",
-        "da": "Akutafdeling åben døgnet rundt, alle dage; akutlinjen er det samme nummer, ring, før du kommer."
+        "da": "Akutafdeling åben døgnet rundt, alle dage; akutlinjen er det samme nummer, ring, før du kommer.",
+        "fi": "Päivystys auki ympäri vuorokauden joka päivä; päivystysnumero on sama, soita ennen tuloa."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-gammelstad/",
@@ -246,7 +252,8 @@
         "pl": "Czynne całodobowo, we wszystkie dni roku.",
         "cs": "Otevřeno nonstop, každý den v roce.",
         "sv": "Öppet dygnet runt, årets alla dagar.",
-        "da": "Åbent 24 timer, alle årets dage."
+        "da": "Åbent 24 timer, alle årets dage.",
+        "fi": "Auki ympäri vuorokauden, vuoden jokaisena päivänä."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/djursjukhuset-sundsvall/",
@@ -275,7 +282,8 @@
         "pl": "Izba przyjęć dla nagłych przypadków codziennie całą dobę; numer rejestracji jest też linią dla nagłych przypadków.",
         "cs": "Pohotovostní recepce nonstop každý den; číslo recepce je zároveň pohotovostní linkou.",
         "sv": "Akutmottagning alla dagar dygnet runt; mottagningens nummer är också akutlinjen.",
-        "da": "Akutmodtagelse hver dag døgnet rundt; receptionens nummer er også akutlinjen."
+        "da": "Akutmodtagelse hver dag døgnet rundt; receptionens nummer er også akutlinjen.",
+        "fi": "Päivystysvastaanotto joka päivä ympäri vuorokauden; vastaanoton numero on myös päivystysnumero."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/ostersunds-djursjukhus/",
@@ -304,7 +312,8 @@
         "pl": "Weterynarz na dyżurze całą dobę, przez cały rok, dla małych i dużych zwierząt; sama przychodnia czynna pon.–pt. 8–18.",
         "cs": "Veterinář v pohotovosti nonstop po celý rok pro malá i velká zvířata; klinika Po–Pá 8:00–18:00.",
         "sv": "Jourhavande veterinär dygnet runt, hela året, för små och stora djur; själva kliniken är öppen mån–fre 08–18.",
-        "da": "Dyrlæge i beredskab (vagt) døgnet rundt, hele året, til små og store dyr; selve klinikken er åben man–fre 08–18."
+        "da": "Dyrlæge i beredskab (vagt) døgnet rundt, hele året, til små og store dyr; selve klinikken er åben man–fre 08–18.",
+        "fi": "Päivystävä eläinlääkäri (varallaolo) ympäri vuorokauden, ympäri vuoden, pieni- ja suurieläimille; klinikka itse auki ma–pe 8–18."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/gotlands-lan/gotland",
@@ -334,7 +343,8 @@
         "pl": "Weterynarza można wezwać całą dobę do nagle chorych zwierząt (psy, koty, konie, zwierzęta gospodarskie); pilne przypadki mogą być kierowane dalej, zależnie od możliwości.",
         "cs": "Veterináře lze zastihnout nonstop u akutně nemocných zvířat (psi, kočky, koně, hospodářská zvířata); naléhavé případy mohou být podle kapacit předány jinam.",
         "sv": "Veterinär kan nås dygnet runt för akut sjuka djur (hundar, katter, hästar, lantbruksdjur); brådskande fall kan hänvisas vidare beroende på resurser.",
-        "da": "Dyrlæge kan kontaktes døgnet rundt ved akut syge dyr (hunde, katte, heste, produktionsdyr); hastesager kan henvises videre afhængigt af ressourcer."
+        "da": "Dyrlæge kan kontaktes døgnet rundt ved akut syge dyr (hunde, katte, heste, produktionsdyr); hastesager kan henvises videre afhængigt af ressourcer.",
+        "fi": "Eläinlääkäri tavoitettavissa ympäri vuorokauden akuutisti sairaille eläimille (koirat, kissat, hevoset, tuotantoeläimet); kiireellisiä tapauksia voidaan ohjata eteenpäin resurssien mukaan."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/vimmerby",
@@ -364,7 +374,8 @@
         "pl": "Weterynarz na dyżurze, dostępny całą dobę w nagłych przypadkach (psy, koty); pilne przypadki mogą być kierowane dalej.",
         "cs": "Pohotovostní veterinář k zastižení nonstop u akutních případů (psi, kočky); naléhavé případy mohou být předány jinam.",
         "sv": "Jourhavande veterinär nås dygnet runt för akuta fall (hundar, katter); brådskande fall kan hänvisas vidare.",
-        "da": "Dyrlæge i beredskab kan kontaktes døgnet rundt ved akutte tilfælde (hunde, katte); hastesager kan henvises videre."
+        "da": "Dyrlæge i beredskab kan kontaktes døgnet rundt ved akutte tilfælde (hunde, katte); hastesager kan henvises videre.",
+        "fi": "Päivystävä eläinlääkäri tavoitettavissa ympäri vuorokauden akuuttitapauksissa (koirat, kissat); kiireellisiä tapauksia voidaan ohjata eteenpäin."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/vastervik",
@@ -393,7 +404,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę pod numerem 010-122 94 20; zadzwoń i potwierdź, że linia obejmuje małe zwierzęta.",
         "cs": "Veterinář telefonicky nonstop na 010-122 94 20; zavolejte a ověřte, zda linka pokrývá malá zvířata.",
         "sv": "Veterinär nås per telefon dygnet runt på 010-122 94 20; ring och kontrollera att linjen gäller smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt på 010-122 94 20; ring for at bekræfte, at linjen dækker små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt på 010-122 94 20; ring for at bekræfte, at linjen dækker små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden numerosta 010-122 94 20; varmista soittamalla, että numero kattaa pieneläimet."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/kalmar",
@@ -422,7 +434,8 @@
         "pl": "Czynne codziennie 7:30–23:00.",
         "cs": "Otevřeno každý den 7:30–23:00.",
         "sv": "Öppet alla dagar 07.30–23.00.",
-        "da": "Åbent hver dag 07.30–23.00."
+        "da": "Åbent hver dag 07.30–23.00.",
+        "fi": "Auki joka päivä 7.30–23."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-valla-djursjukhus-linkoping/vara-oppettider/",
@@ -451,7 +464,8 @@
         "pl": "Przychodnia dla nagłych przypadków w dni robocze 7–22, w weekendy 9–22.",
         "cs": "Pohotovostní klinika ve všední dny 7:00–22:00, o víkendech 9:00–22:00.",
         "sv": "Akutklinik vardagar 07–22, helger 09–22.",
-        "da": "Akutklinik hverdage 07–22, weekender 09–22."
+        "da": "Akutklinik hverdage 07–22, weekender 09–22.",
+        "fi": "Päivystysklinikka arkisin 7–22, viikonloppuisin 9–22."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-sodra-djursjukhuset-kungens-kurva/oppettider-tjanster/",
@@ -479,7 +493,8 @@
         "pl": "Pon.–pt. 7–22, sob.–niedz. 9–20; linia dla nagłych przypadków w tych samych godzinach.",
         "cs": "Po–Pá 7:00–22:00, so–ne 9:00–20:00; pohotovostní linka ve stejných hodinách.",
         "sv": "Mån–fre 7–22, lör–sön 9–20; akutlinjen har samma tider.",
-        "da": "Man–fre 7–22, lør–søn 9–20; akutlinje samme tider."
+        "da": "Man–fre 7–22, lør–søn 9–20; akutlinje samme tider.",
+        "fi": "ma–pe 7–22, la–su 9–20; päivystysnumero samoina aikoina."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-vaxjo/vara-oppettider/",
@@ -507,7 +522,8 @@
         "pl": "Pomoc w nagłych przypadkach pon.–pt. ok. 8–19/20, sob.–niedz. 9–16.",
         "cs": "Pohotovost Po–Pá přibližně 8:00–19:00/20:00, so–ne 9:00–16:00.",
         "sv": "Akutvård mån–fre ca 8–19/20, lör–sön 9–16.",
-        "da": "Akut hjælp man–fre ca. 8–19/20, lør–søn 9–16."
+        "da": "Akut hjælp man–fre ca. 8–19/20, lør–søn 9–16.",
+        "fi": "Päivystys ma–pe noin 8–19/20, la–su 9–16."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/taby-djursjukhus/vara-oppettider/",
@@ -536,7 +552,8 @@
         "pl": "Izba przyjęć dla nagłych przypadków w dni robocze 8–17, w soboty i dni ustawowo wolne od pracy 10–16.",
         "cs": "Pohotovostní recepce ve všední dny 8:00–17:00, v sobotu a o státních svátcích 10:00–16:00.",
         "sv": "Akutmottagning vardagar 08–17, lördagar och helgdagar 10–16.",
-        "da": "Akutmodtagelse hverdage 08–17, lørdage og helligdage 10–16."
+        "da": "Akutmodtagelse hverdage 08–17, lørdage og helligdage 10–16.",
+        "fi": "Päivystysvastaanotto arkisin 8–17, lauantaisin ja pyhinä 10–16."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-vasterort/",
@@ -563,7 +580,8 @@
         "pl": "Pon.–pt. 7–24, sob./niedz./święta 9–24.",
         "cs": "Po–Pá 7:00–24:00, so, ne a o svátcích 9:00–24:00.",
         "sv": "Mån–fre 7–24, lör/sön/helgdagar 9–24.",
-        "da": "Man–fre 7–24, lør/søn/helligdage 9–24."
+        "da": "Man–fre 7–24, lør/søn/helligdage 9–24.",
+        "fi": "ma–pe 7–24, la/su/pyhinä 9–24."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/goteborgs-djursjukhus-evidensia/vara-oppettider/",
@@ -591,7 +609,8 @@
         "pl": "Czynne codziennie 8–24.",
         "cs": "Otevřeno každý den 8:00–24:00.",
         "sv": "Öppet alla dagar 8–24.",
-        "da": "Åbent hver dag 8–24."
+        "da": "Åbent hver dag 8–24.",
+        "fi": "Auki joka päivä 8–24."
       },
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
@@ -619,7 +638,8 @@
         "pl": "Czynne ok. 8–20 w dni robocze, 9–20 w weekendy.",
         "cs": "Otevřeno přibližně 8:00–20:00 ve všední dny, 9:00–20:00 o víkendech.",
         "sv": "Öppet ca 8–20 vardagar, 9–20 helger.",
-        "da": "Åbent ca. 8–20 på hverdage, 9–20 i weekender."
+        "da": "Åbent ca. 8–20 på hverdage, 9–20 i weekender.",
+        "fi": "Auki arkisin noin 8–20, viikonloppuisin 9–20."
       },
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
@@ -647,7 +667,8 @@
         "pl": "W dni robocze 7–20, sob. 10–16, niedz. zamknięte.",
         "cs": "Ve všední dny 7:00–20:00, v sobotu 10:00–16:00, v neděli zavřeno.",
         "sv": "Vardagar 07–20, lördag 10–16, söndag stängt.",
-        "da": "Hverdage 07–20, lørdag 10–16, søndag lukket."
+        "da": "Hverdage 07–20, lørdag 10–16, søndag lukket.",
+        "fi": "Arkisin 7–20, lauantaisin 10–16, sunnuntaisin suljettu."
       },
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
@@ -674,7 +695,8 @@
         "pl": "Pon.–pt. 8–17; po godzinach pracy przychodnia odsyła do całodobowych szpitali Evidensia.",
         "cs": "Po–Pá 8:00–17:00; mimo ordinační dobu klinika odkazuje na nonstop nemocnice Evidensia.",
         "sv": "Mån–fre 8–17; utanför öppettiderna hänvisar kliniken till Evidensias djursjukhus som har öppet dygnet runt.",
-        "da": "Man–fre 8–17; uden for åbningstid henviser klinikken til Evidensias 24-timers hospitaler."
+        "da": "Man–fre 8–17; uden for åbningstid henviser klinikken til Evidensias 24-timers hospitaler.",
+        "fi": "ma–pe 8–17; virka-ajan ulkopuolella klinikka ohjaa Evidensian 24 h:n sairaaloihin."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-orebro/akutvard/",
@@ -702,7 +724,8 @@
         "pl": "Pon. 7:30–20, wt.–pt. 7:30–17; w weekendy zamknięte.",
         "cs": "Po 7:30–20:00, Út–Pá 7:30–17:00; o víkendech zavřeno.",
         "sv": "Mån 07.30–20, tis–fre 07.30–17; stängt på helger.",
-        "da": "Man 07.30–20, tir–fre 07.30–17; weekender lukket."
+        "da": "Man 07.30–20, tir–fre 07.30–17; weekender lukket.",
+        "fi": "ma 7.30–20, ti–pe 7.30–17; viikonloppuisin suljettu."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-vasteras/akutvard/",
@@ -729,7 +752,8 @@
         "pl": "Pon.–czw. 7:30–20, pt. 7:30–17; w weekendy zamknięte.",
         "cs": "Po–Čt 7:30–20:00, Pá 7:30–17:00; o víkendech zavřeno.",
         "sv": "Mån–tors 07.30–20, fre 07.30–17; stängt på helger.",
-        "da": "Man–tor 07.30–20, fre 07.30–17; weekender lukket."
+        "da": "Man–tor 07.30–20, fre 07.30–17; weekender lukket.",
+        "fi": "ma–to 7.30–20; pe 7.30–17; viikonloppuisin suljettu."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-gefle/akutvard/",
@@ -755,7 +779,8 @@
         "pl": "Pon.–pt. 8–17; gdy zamknięte, kieruje do Evidensia Valla Djursjukhus Linköping lub Specialistdjursjukhuset Strömsholm.",
         "cs": "Po–Pá 8:00–17:00; mimo otevírací dobu odkazuje na Evidensia Valla Djursjukhus Linköping nebo Specialistdjursjukhuset Strömsholm.",
         "sv": "Mån–fre 08–17; vid stängt hänvisar kliniken till Evidensia Valla Djursjukhus Linköping eller Specialistdjursjukhuset Strömsholm.",
-        "da": "Man–fre 08–17; når der er lukket, henvises til Evidensia Valla Djursjukhus Linköping eller Specialistdjursjukhuset Strömsholm."
+        "da": "Man–fre 08–17; når der er lukket, henvises til Evidensia Valla Djursjukhus Linköping eller Specialistdjursjukhuset Strömsholm.",
+        "fi": "ma–pe 8–17; suljettuna ohjaa Evidensia Valla Djursjukhus Linköpingiin tai Specialistdjursjukhuset Strömsholmiin."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-norrkoping/vara-oppettider/",
@@ -784,7 +809,8 @@
         "pl": "Pon.–pt. 8–17; po godzinach pracy zobacz dyżur Distriktsveterinärerna Gotland.",
         "cs": "Po–Pá 8:00–17:00; mimo ordinační dobu viz pohotovost Distriktsveterinärerna Gotland.",
         "sv": "Mån–fre 8–17; utanför öppettiderna, se jouren hos Distriktsveterinärerna Gotland.",
-        "da": "Man–fre 8–17; uden for åbningstid henvises til Distriktsveterinärerna Gotlands vagttjeneste."
+        "da": "Man–fre 8–17; uden for åbningstid henvises til Distriktsveterinärerna Gotlands vagttjeneste.",
+        "fi": "ma–pe 8–17; virka-ajan ulkopuolella katso Distriktsveterinärerna Gotlandin päivystys."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/djurkliniken-visby/",
@@ -812,7 +838,8 @@
         "pl": "Izba przyjęć dla nagłych przypadków 8–21, w nocy zamknięta (pacjenci hospitalizowani są monitorowani całą dobę).",
         "cs": "Pohotovostní recepce 8:00–21:00, v noci zavřeno (hospitalizovaná zvířata jsou sledována nonstop).",
         "sv": "Akutmottagning 8–21, stängt på natten (inneliggande patienter övervakas dygnet runt).",
-        "da": "Akutmodtagelse 8–21, lukket om natten (indlagte patienter overvåges døgnet rundt)."
+        "da": "Akutmodtagelse 8–21, lukket om natten (indlagte patienter overvåges døgnet rundt).",
+        "fi": "Päivystysvastaanotto 8–21, yöllä suljettu (osastopotilaita valvotaan ympäri vuorokauden)."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/goteborg/vastra-djursjukhuset/mottagningar/akutmottagningen/",
@@ -842,7 +869,8 @@
         "pl": "Nagłe przypadki 8–21; w nocy kieruje do AniCura Regiondjursjukhuset Bagarmossen (całodobowo).",
         "cs": "Pohotovost 8:00–21:00; v noci odkazuje na AniCura Regiondjursjukhuset Bagarmossen (nonstop).",
         "sv": "Akut 8–21; på natten hänvisas till AniCura Regiondjursjukhuset Bagarmossen (öppet dygnet runt).",
-        "da": "Akut 8–21; om natten henvises til AniCura Regiondjursjukhuset Bagarmossen (24 timer)."
+        "da": "Akut 8–21; om natten henvises til AniCura Regiondjursjukhuset Bagarmossen (24 timer).",
+        "fi": "Päivystys 8–21; öisin ohjaa AniCura Regiondjursjukhuset Bagarmossenille (24 h)."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/stockholm/djursjukhuset-albano/mottagningar/akutmottagningen/",
@@ -871,7 +899,8 @@
         "pl": "Pomoc w nagłych przypadkach 8:15–20:00; oddział obsadzony całą dobę.",
         "cs": "Pohotovost 8:15–20:00; lůžkové oddělení je obsazeno nonstop.",
         "sv": "Akutvård 8.15–20.00; vårdavdelningen är bemannad dygnet runt.",
-        "da": "Akut hjælp 8.15–20.00; afdeling bemandet døgnet rundt."
+        "da": "Akut hjælp 8.15–20.00; afdeling bemandet døgnet rundt.",
+        "fi": "Päivystys 8.15–20; osasto miehitetty ympäri vuorokauden."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/ostergotland/jagarvallens-djursjukhus/",
@@ -900,7 +929,8 @@
         "pl": "Godziny dla nagłych przypadków 7–21.",
         "cs": "Pohotovost 7:00–21:00.",
         "sv": "Akuttider 07–21.",
-        "da": "Akuttid 07–21."
+        "da": "Akuttid 07–21.",
+        "fi": "Päivystysaika 7–21."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -927,7 +957,8 @@
         "pl": "Godziny dla nagłych przypadków 8–22.",
         "cs": "Pohotovost 8:00–22:00.",
         "sv": "Akuttider 08–22.",
-        "da": "Akuttid 08–22."
+        "da": "Akuttid 08–22.",
+        "fi": "Päivystysaika 8–22."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -954,7 +985,8 @@
         "pl": "Godziny dla nagłych przypadków 8–24.",
         "cs": "Pohotovost 8:00–24:00.",
         "sv": "Akuttider 8–24.",
-        "da": "Akuttid 8–24."
+        "da": "Akuttid 8–24.",
+        "fi": "Päivystysaika 8–24."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -982,7 +1014,8 @@
         "pl": "Godziny dla nagłych przypadków 8–20.",
         "cs": "Pohotovost 8:00–20:00.",
         "sv": "Akuttider 08–20.",
-        "da": "Akuttid 08–20."
+        "da": "Akuttid 08–20.",
+        "fi": "Päivystysaika 8–20."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -1009,7 +1042,8 @@
         "pl": "Godziny dla nagłych przypadków 8–20.",
         "cs": "Pohotovost 8:00–20:00.",
         "sv": "Akuttider 08–20.",
-        "da": "Akuttid 08–20."
+        "da": "Akuttid 08–20.",
+        "fi": "Päivystysaika 8–20."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -1036,7 +1070,8 @@
         "pl": "Godziny dla nagłych przypadków 8–15:30.",
         "cs": "Pohotovost 8:00–15:30.",
         "sv": "Akuttider 08–15.30.",
-        "da": "Akuttid 08–15.30."
+        "da": "Akuttid 08–15.30.",
+        "fi": "Päivystysaika 8–15.30."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -1063,7 +1098,8 @@
         "pl": "Czynne 8–16.",
         "cs": "Otevřeno 8:00–16:00.",
         "sv": "Öppet 08–16.",
-        "da": "Åbent 08–16."
+        "da": "Åbent 08–16.",
+        "fi": "Auki 8–16."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -1090,7 +1126,8 @@
         "pl": "Czynne 8–17.",
         "cs": "Otevřeno 8:00–17:00.",
         "sv": "Öppet 08–17.",
-        "da": "Åbent 08–17."
+        "da": "Åbent 08–17.",
+        "fi": "Auki 8–17."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -1117,7 +1154,8 @@
         "pl": "Czynne 8–17.",
         "cs": "Otevřeno 8:00–17:00.",
         "sv": "Öppet 08–17.",
-        "da": "Åbent 08–17."
+        "da": "Åbent 08–17.",
+        "fi": "Auki 8–17."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
@@ -1145,7 +1183,8 @@
         "pl": "Przychodnia dla nagłych przypadków i opieki; gdy zamknięta, kieruje do innych szpitali dla zwierząt.",
         "cs": "Pohotovostní a ošetřovací klinika; v zavírací době odkazuje na jiné zvířecí nemocnice.",
         "sv": "Akut- och vårdklinik; hänvisar till andra djursjukhus när de har stängt.",
-        "da": "Akut- og plejeklinik; henviser til andre dyrehospitaler, når der er lukket."
+        "da": "Akut- og plejeklinik; henviser til andre dyrehospitaler, når der er lukket.",
+        "fi": "Päivystys- ja hoitoklinikka; kun klinikka on suljettu, ohjaa muihin eläinsairaaloihin."
       },
       "small_animals": true,
       "url": "https://www.djurakuten.se/",
@@ -1174,7 +1213,8 @@
         "pl": "Pacjenci w nagłych przypadkach w dni robocze ok. 9–17, bez zapisów w sob. 10–14, niedz. 12–16; telefon dla nagłych przypadków 018-781 41 60.",
         "cs": "Akutní pacienti ve všední dny přibližně 9:00–17:00, bez objednání so 10:00–14:00, ne 12:00–16:00; pohotovostní telefon 018-781 41 60.",
         "sv": "Akutpatienter vardagar ca 9–17, drop-in lör 10–14, sön 12–16; akuttelefon 018-781 41 60.",
-        "da": "Akutte patienter hverdage ca. 9–17, uden tidsbestilling lør 10–14, søn 12–16; akuttelefon 018-781 41 60."
+        "da": "Akutte patienter hverdage ca. 9–17, uden tidsbestilling lør 10–14, søn 12–16; akuttelefon 018-781 41 60.",
+        "fi": "Akuuttipotilaat arkisin noin 9–17, ilman ajanvarausta la 10–14, su 12–16; päivystysnumero 018-781 41 60."
       },
       "small_animals": true,
       "url": "https://www.rembacken.se/",
@@ -1202,7 +1242,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/skelleftea",
@@ -1231,7 +1272,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/vannas",
@@ -1260,7 +1302,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1289,7 +1332,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1319,7 +1363,8 @@
         "pl": "Przychodnia w dni robocze 8–16; nagle chore zwierzęta kieruje do przychodni w Vännäs.",
         "cs": "Klinika ve všední dny 8:00–16:00; akutně nemocná zvířata se odkazují na kliniku ve Vännäs.",
         "sv": "Klinik vardagar 8–16; akut sjuka djur hänvisas till kliniken i Vännäs.",
-        "da": "Klinik hverdage 8–16; akut syge dyr henvises til klinikken i Vännäs."
+        "da": "Klinik hverdage 8–16; akut syge dyr henvises til klinikken i Vännäs.",
+        "fi": "Klinikka arkisin 8–16; akuutisti sairaat eläimet ohjataan Vännäsin klinikalle."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/umaker",
@@ -1346,7 +1391,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/pitea",
@@ -1375,7 +1421,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1404,7 +1451,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/alvsbyn",
@@ -1433,7 +1481,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1462,7 +1511,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/jamtlands-lan/hede",
@@ -1491,7 +1541,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/dalarna-lan/mora",
@@ -1520,7 +1571,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1549,7 +1601,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/sodermanlands-lan/nykoping",
@@ -1578,7 +1631,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1607,7 +1661,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1636,7 +1691,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1665,7 +1721,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/uppsala-lan/fjardhundra",
@@ -1694,7 +1751,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1723,7 +1781,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1752,7 +1811,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1781,7 +1841,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/sjobo-osterlen",
@@ -1810,7 +1871,8 @@
         "pl": "Weterynarz dostępny telefonicznie całą dobę dla nagle chorych zwierząt (dyżur domowy, a nie całodobowy szpital z personelem); sama przychodnia czynna tylko w dni robocze. Psy, koty i inne małe zwierzęta.",
         "cs": "Veterinář k zastižení telefonicky nonstop u akutně nemocných zvířat (pohotovost na telefonu, nikoli nonstop obsazená nemocnice); klinika jen ve všední dny. Psi, kočky a další malá zvířata.",
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
-        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr."
+        "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
+        "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1839,7 +1901,8 @@
         "pl": "Pon.–pt. 7:30–12:00 i 13:00–16:30; brak numeru dla nagłych przypadków poza godzinami pracy.",
         "cs": "Po–Pá 7:30–12:00 a 13:00–16:30; mimo ordinační dobu bez pohotovostního čísla.",
         "sv": "Mån–fre 07.30–12.00 och 13.00–16.30; inget akutnummer utanför öppettiderna.",
-        "da": "Man–fre 07.30–12.00 og 13.00–16.30; intet akutnummer uden for åbningstid."
+        "da": "Man–fre 07.30–12.00 og 13.00–16.30; intet akutnummer uden for åbningstid.",
+        "fi": "ma–pe 7.30–12 ja 13–16.30; ei päivystysnumeroa virka-ajan ulkopuolella."
       },
       "note": "'On the page' (per source).",
       "small_animals": true,
@@ -1868,7 +1931,8 @@
         "pl": "Pon. 10:00–13:30 i 14:30–19:00; wt.–pt. 8:00–12:00 i 13:00–16:45; sob.–niedz. zamknięte; brak linii dla nagłych przypadków poza godzinami pracy (okolica narciarska i turystyczna; najbliższa całodobowa: Östersunds Djursjukhus).",
         "cs": "Po 10:00–13:30 a 14:30–19:00; Út–Pá 8:00–12:00 a 13:00–16:45; so–ne zavřeno; mimo ordinační dobu bez pohotovostní linky (lyžařská a turistická oblast; nejbližší nonstop: Östersunds Djursjukhus).",
         "sv": "Mån 10.00–13.30 och 14.30–19.00; tis–fre 08.00–12.00 och 13.00–16.45; stängt lör–sön; ingen akutlinje utanför öppettiderna (skid- och turistområde; närmaste med öppet dygnet runt: Östersunds Djursjukhus).",
-        "da": "man 10.00–13.30 og 14.30–19.00; tirs–fre 08.00–12.00 og 13.00–16.45; lukket lør–søn; ingen akutlinje uden for åbningstid (skiområde/turistområde; nærmeste døgnåbne dyrehospital: Östersunds Djursjukhus)."
+        "da": "man 10.00–13.30 og 14.30–19.00; tirs–fre 08.00–12.00 og 13.00–16.45; lukket lør–søn; ingen akutlinje uden for åbningstid (skiområde/turistområde; nærmeste døgnåbne dyrehospital: Östersunds Djursjukhus).",
+        "fi": "ma 10–13.30 ja 14.30–19, ti–pe 8–12 ja 13–16.45; la–su suljettu; ei päivystysnumeroa virka-ajan ulkopuolella (hiihto- ja matkailualue; lähin 24 h:n päivystys: Östersunds Djursjukhus)."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/are-djurklinik/",
@@ -1896,7 +1960,8 @@
         "pl": "Pon.–pt. 8:00–17:00; sob.–niedz. zamknięte; porady tylko w godzinach pracy.",
         "cs": "Po–Pá 8:00–17:00; so–ne zavřeno; poradenství pouze v ordinační dobu.",
         "sv": "Mån–fre 08.00–17.00; stängt lör–sön; rådgivning endast under öppettiderna.",
-        "da": "man–fre 08.00–17.00; lukket lør–søn; kun rådgivning i åbningstiden."
+        "da": "man–fre 08.00–17.00; lukket lør–søn; kun rådgivning i åbningstiden.",
+        "fi": "ma–pe 8–17; la–su suljettu; neuvontaa vain aukioloaikoina."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-kristianstad/",
@@ -1924,7 +1989,8 @@
         "pl": "Pon.–pt. 8:00–17:00; sob.–niedz. zamknięte.",
         "cs": "Po–Pá 8:00–17:00; so–ne zavřeno.",
         "sv": "Mån–fre 08.00–17.00; stängt lör–sön.",
-        "da": "man–fre 08.00–17.00; lukket lør–søn."
+        "da": "man–fre 08.00–17.00; lukket lør–søn.",
+        "fi": "ma–pe 8–17; la–su suljettu."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-eskilstuna/",
@@ -1952,7 +2018,8 @@
         "pl": "Pon.–pt. 8:00–17:00; sob.–niedz. zamknięte; nagle chore zwierzęta przyjmowane w godzinach pracy, w miarę dostępności.",
         "cs": "Po–Pá 8:00–17:00; so–ne zavřeno; akutně nemocná zvířata se v ordinační dobu ošetřují podle možností.",
         "sv": "Mån–fre 8.00–17.00; stängt lör–sön; akut sjuka djur tas emot i mån av tid under öppettid.",
-        "da": "man–fre 8.00–17.00; lukket lør–søn; akut syge dyr tages imod i åbningstiden, hvis der er plads."
+        "da": "man–fre 8.00–17.00; lukket lør–søn; akut syge dyr tages imod i åbningstiden, hvis der er plads.",
+        "fi": "ma–pe 8–17; la–su suljettu; akuutisti sairaita eläimiä otetaan vastaan resurssien mukaan aukioloaikoina."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-nykoping/",
@@ -1980,7 +2047,8 @@
         "pl": "Pon., śr., pt. 8:00–16:30; wt., czw. 8:00–20:00; sob.–niedz. zamknięte.",
         "cs": "Po, St, Pá 8:00–16:30; Út, Čt 8:00–20:00; so–ne zavřeno.",
         "sv": "Mån, ons, fre 08.00–16.30; tis, tors 08.00–20.00; stängt lör–sön.",
-        "da": "man, ons, fre 08.00–16.30; tirs, tors 08.00–20.00; lukket lør–søn."
+        "da": "man, ons, fre 08.00–16.30; tirs, tors 08.00–20.00; lukket lør–søn.",
+        "fi": "ma, ke, pe 8–16.30; ti, to 8–20; la–su suljettu."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/trestad-djurklinik-evidensia/",
@@ -2008,7 +2076,8 @@
         "pl": "Pon.–śr. 8:00–21:00; czw.–pt. 8:00–17:00; sob.–niedz. zamknięte.",
         "cs": "Po–St 8:00–21:00; Čt–Pá 8:00–17:00; so–ne zavřeno.",
         "sv": "Mån–ons 08.00–21.00; tors–fre 08.00–17.00; stängt lör–sön.",
-        "da": "man–ons 08.00–21.00; tors–fre 08.00–17.00; lukket lør–søn."
+        "da": "man–ons 08.00–21.00; tors–fre 08.00–17.00; lukket lør–søn.",
+        "fi": "ma–ke 8–21; to–pe 8–17; la–su suljettu."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/alviks-veterinarklinik/",
@@ -2035,7 +2104,8 @@
         "pl": "Izba przyjęć dla nagłych przypadków pon.–czw. 7:30–21:00, pt. 7:30–18:00; brak godzin dla nagłych przypadków w weekendy.",
         "cs": "Pohotovostní recepce Po–Čt 7:30–21:00, Pá 7:30–18:00; o víkendech pohotovost není.",
         "sv": "Akutmottagning mån–tors 07.30–21.00, fre 07.30–18.00; inga akuttider på helgen.",
-        "da": "Akutmodtagelse man–tors 07.30–21.00, fre 07.30–18.00; ingen akutåbning i weekenden."
+        "da": "Akutmodtagelse man–tors 07.30–21.00, fre 07.30–18.00; ingen akutåbning i weekenden.",
+        "fi": "Päivystysvastaanotto ma–to 7.30–21, pe 7.30–18; ei viikonloppupäivystystä."
       },
       "note": "'On the page' (per source).",
       "small_animals": true,
@@ -2064,7 +2134,8 @@
         "pl": "Pon., śr. 7:00–19:00; wt., czw., pt. 7:00–17:00; sob.–niedz. zamknięte.",
         "cs": "Po, St 7:00–19:00; Út, Čt, Pá 7:00–17:00; so–ne zavřeno.",
         "sv": "Mån, ons 07.00–19.00; tis, tors, fre 07.00–17.00; stängt lör–sön.",
-        "da": "man, ons 07.00–19.00; tirs, tors, fre 07.00–17.00; lukket lør–søn."
+        "da": "man, ons 07.00–19.00; tirs, tors, fre 07.00–17.00; lukket lør–søn.",
+        "fi": "ma, ke 7–19; ti, to, pe 7–17; la–su suljettu."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/kungsholmen-veterinarklinik-evidensia/",
@@ -2092,7 +2163,8 @@
         "pl": "Przychodnia pon.–pt. 7:00–20:00; pomoc w nagłych przypadkach pon.–pt. 7:00–20:00 i sob. 10:00–17:00; zadzwoń przed wizytą.",
         "cs": "Klinika Po–Pá 7:00–20:00; pohotovost Po–Pá 7:00–20:00 a so 10:00–17:00; před příjezdem zavolejte.",
         "sv": "Klinik mån–fre 07.00–20.00; akutvård mån–fre 07.00–20.00 och lör 10.00–17.00; ring innan du kommer.",
-        "da": "Klinik man–fre 07.00–20.00; akutbehandling man–fre 07.00–20.00 og lør 10.00–17.00; ring på forhånd."
+        "da": "Klinik man–fre 07.00–20.00; akutbehandling man–fre 07.00–20.00 og lør 10.00–17.00; ring på forhånd.",
+        "fi": "Klinikka ma–pe 7–20; päivystys ma–pe 7–20 ja la 10–17; soita ennen tuloa."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-nacka/",
@@ -2120,7 +2192,8 @@
         "pl": "Pon.–czw. 8:00–19:00; pt. 8:00–17:00; sob.–niedz. zamknięte.",
         "cs": "Po–Čt 8:00–19:00; Pá 8:00–17:00; so–ne zavřeno.",
         "sv": "Mån–tors 08.00–19.00; fre 08.00–17.00; stängt lör–sön.",
-        "da": "man–tors 08.00–19.00; fre 08.00–17.00; lukket lør–søn."
+        "da": "man–tors 08.00–19.00; fre 08.00–17.00; lukket lør–søn.",
+        "fi": "ma–to 8–19; pe 8–17; la–su suljettu."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/lidingo-veterinarklinik/",
@@ -2148,7 +2221,8 @@
         "pl": "Pon.–czw. 7:00–19:00; pt. 7:00–17:45; sob.–niedz. zamknięte.",
         "cs": "Po–Čt 7:00–19:00; Pá 7:00–17:45; so–ne zavřeno.",
         "sv": "Mån–tors 07.00–19.00; fre 07.00–17.45; stängt lör–sön.",
-        "da": "man–tors 07.00–19.00; fre 07.00–17.45; lukket lør–søn."
+        "da": "man–tors 07.00–19.00; fre 07.00–17.45; lukket lør–søn.",
+        "fi": "ma–to 7–19; pe 7–17.45; la–su suljettu."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/vasastans-veterinarklinik/",
@@ -2176,7 +2250,8 @@
         "pl": "Pon.–pt. 8:00–17:00; sob.–niedz. zamknięte.",
         "cs": "Po–Pá 8:00–17:00; so–ne zavřeno.",
         "sv": "Mån–fre 08.00–17.00; stängt lör–sön.",
-        "da": "man–fre 08.00–17.00; lukket lør–søn."
+        "da": "man–fre 08.00–17.00; lukket lør–søn.",
+        "fi": "ma–pe 8–17; la–su suljettu."
       },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/saltsjobadens-djurklinik/",
@@ -2204,7 +2279,8 @@
         "pl": "Pon.–czw. 7:30–20:00; pt. 7:30–17:00; sob.–niedz. 10:00–16:00 tylko w tygodniach nieparzystych. Nagłe przypadki po godzinach pracy kieruje do Alingsås Djursjukhus (0322-632 000, codziennie 8–21).",
         "cs": "Po–Čt 7:30–20:00; Pá 7:30–17:00; so–ne 10:00–16:00 pouze v lichých týdnech. Pohotovosti mimo ordinační dobu odkazuje na Alingsås Djursjukhus (0322-632 000, denně 8:00–21:00).",
         "sv": "Mån–tors 07.30–20.00; fre 07.30–17.00; lör–sön 10.00–16.00 endast udda veckor. Akutfall utanför öppettiderna hänvisas till Alingsås Djursjukhus (0322-632 000, alla dagar 08–21).",
-        "da": "man–tors 07.30–20.00; fre 07.30–17.00; lør–søn 10.00–16.00 kun i ulige uger. Akutte tilfælde uden for åbningstid henvises til Alingsås Djursjukhus (0322-632 000, dagligt 08–21)."
+        "da": "man–tors 07.30–20.00; fre 07.30–17.00; lør–søn 10.00–16.00 kun i ulige uger. Akutte tilfælde uden for åbningstid henvises til Alingsås Djursjukhus (0322-632 000, dagligt 08–21).",
+        "fi": "ma–to 7.30–20; pe 7.30–17; la–su 10–16 vain parittomilla viikoilla. Virka-ajan ulkopuoliset hätätapaukset ohjataan Alingsås Djursjukhusiin (0322-632 000, päivittäin 8–21)."
       },
       "small_animals": true,
       "url": "https://www.skovdedjurklinik.se/",
@@ -2232,7 +2308,8 @@
         "pl": "Pon. 8–18, wt./czw./pt. 8–17, śr. 8–16 (przerwa obiadowa 12–13); po godzinach pracy zobacz listę przychodni dla nagłych przypadków.",
         "cs": "Po 8:00–18:00, Út/Čt/Pá 8:00–17:00, St 8:00–16:00 (polední pauza 12:00–13:00); mimo ordinační dobu viz seznam pohotovostních klinik.",
         "sv": "Mån 8–18, tis/tors/fre 8–17, ons 8–16 (lunch 12–13); utanför öppettiderna, se listan över akutkliniker.",
-        "da": "man 8–18, tirs/tors/fre 8–17, ons 8–16 (frokost 12–13); uden for åbningstid se listen over akutklinikker."
+        "da": "man 8–18, tirs/tors/fre 8–17, ons 8–16 (frokost 12–13); uden for åbningstid se listen over akutklinikker.",
+        "fi": "ma 8–18, ti/to/pe 8–17, ke 8–16 (lounas 12–13); virka-ajan ulkopuolella katso päivystävien klinikoiden luettelo."
       },
       "small_animals": true,
       "url": "https://halmstadsdjurklinik.se/",
@@ -2260,7 +2337,8 @@
         "pl": "Przychodnia pon.–pt. 8:00–16:30; telefon odbierany w dni robocze 7:00–22:00 (wszystkie przychodnie Lapplands). Brak osobnych godzin dla nagłych przypadków.",
         "cs": "Klinika Po–Pá 8:00–16:30; telefon je ve všední dny k dispozici 7:00–22:00 (všechny kliniky Lapplands). Žádná samostatná pohotovostní doba.",
         "sv": "Klinik mån–fre 8.00–16.30; telefonen besvaras 7.00–22.00 vardagar (alla Lapplands kliniker). Inga separata akuttider.",
-        "da": "Klinik man–fre 8.00–16.30; telefonen er bemandet 7.00–22.00 på hverdage (alle Lapplands-klinikker). Ingen separat akuttid."
+        "da": "Klinik man–fre 8.00–16.30; telefonen er bemandet 7.00–22.00 på hverdage (alle Lapplands-klinikker). Ingen separat akuttid.",
+        "fi": "Klinikka ma–pe 8–16.30; puhelimeen vastataan arkisin 7–22 (kaikki Lapplands-klinikat). Ei erillistä päivystysaikaa."
       },
       "small_animals": true,
       "url": "https://lapplandsdjurklinik.se/kliniken-i-skelleftea-anderstorg/",
@@ -2289,7 +2367,8 @@
         "pl": "Przychodnia pon.–pt. 8:00–16:30; telefon odbierany w dni robocze 7:00–22:00 (wszystkie przychodnie Lapplands). Brak osobnych godzin dla nagłych przypadków.",
         "cs": "Klinika Po–Pá 8:00–16:30; telefon je ve všední dny k dispozici 7:00–22:00 (všechny kliniky Lapplands). Žádná samostatná pohotovostní doba.",
         "sv": "Klinik mån–fre 8.00–16.30; telefonen besvaras 7.00–22.00 vardagar (alla Lapplands kliniker). Inga separata akuttider.",
-        "da": "Klinik man–fre 8.00–16.30; telefonen er bemandet 7.00–22.00 på hverdage (alle Lapplands-klinikker). Ingen separat akuttid."
+        "da": "Klinik man–fre 8.00–16.30; telefonen er bemandet 7.00–22.00 på hverdage (alle Lapplands-klinikker). Ingen separat akuttid.",
+        "fi": "Klinikka ma–pe 8–16.30; puhelimeen vastataan arkisin 7–22 (kaikki Lapplands-klinikat). Ei erillistä päivystysaikaa."
       },
       "small_animals": true,
       "url": "https://lapplandsdjurklinik.se/kliniken-i-lulea/",
@@ -2318,7 +2397,8 @@
         "pl": "Przychodnia 8:00–12:00 i 13:00–17:00; telefon 8:00–9:00.",
         "cs": "Klinika 8:00–12:00 a 13:00–17:00; telefon 8:00–9:00.",
         "sv": "Klinik 8.00–12.00 och 13.00–17.00; telefon 8.00–9.00.",
-        "da": "Klinik 8.00–12.00 og 13.00–17.00; telefontid 8.00–9.00."
+        "da": "Klinik 8.00–12.00 og 13.00–17.00; telefontid 8.00–9.00.",
+        "fi": "Klinikka 8–12 ja 13–17; puhelinaika 8–9."
       },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/dalarna/borlangekliniken/",

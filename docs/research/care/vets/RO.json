@@ -64,7 +64,8 @@
         "pl": "Uniwersytecka lecznica dla nagłych przypadków, czynna 24/7. Jeśli możesz, zadzwoń przed wizytą.",
         "cs": "Univerzitní pohotovostní nemocnice, otevřeno nonstop. Pokud můžete, zavolejte předem.",
         "sv": "Universitetets akutsjukhus, öppet dygnet runt, årets alla dagar. Ring innan du kommer om du kan.",
-        "da": "Universitetets akuthospital, åbent 24/7. Ring på forhånd, hvis du kan."
+        "da": "Universitetets akuthospital, åbent 24/7. Ring på forhånd, hvis du kan.",
+        "fi": "Yliopiston päivystyssairaala, auki 24/7. Soita etukäteen, jos mahdollista."
       },
       "small_animals": true,
       "url": "https://fmvb.ro/site-vechi/english/articles/252-veterinary-emergency-university-hospital-prof-univ-dr-alin-birtoiu.html",
@@ -92,7 +93,8 @@
         "pl": "Izba przyjęć uniwersyteckiego szpitala, czynna bez przerwy 24/7.",
         "cs": "Pohotovostní oddělení univerzitní nemocnice, otevřeno nonstop.",
         "sv": "Universitetssjukhusets akutmottagning, öppen dygnet runt, årets alla dagar.",
-        "da": "Universitetshospitalets akutmodtagelse, åben døgnet rundt 24/7."
+        "da": "Universitetshospitalets akutmodtagelse, åben døgnet rundt 24/7.",
+        "fi": "Yliopistosairaalan päivystys, auki ympäri vuorokauden 24/7."
       },
       "small_animals": true,
       "url": "https://iuls.ro/medicina/en/emergency-service/",
@@ -120,7 +122,8 @@
         "pl": "Uniwersytecka linia dla nagłych przypadków, tylko w nagłych sytuacjach. Zadzwoń i zapytaj o godziny pracy.",
         "cs": "Univerzitní pohotovostní linka, pouze pro pohotovostní případy. Ordinační dobu zjistěte telefonicky.",
         "sv": "Universitetets akutlinje, endast för akutfall. Ring och fråga om öppettider.",
-        "da": "Universitetets akutlinje, kun til akutte tilfælde. Ring på forhånd for åbningstider."
+        "da": "Universitetets akutlinje, kun til akutte tilfælde. Ring på forhånd for åbningstider.",
+        "fi": "Yliopiston päivystysnumero vain hätätapauksille. Kysy aukioloajat soittamalla etukäteen."
       },
       "small_animals": true,
       "url": "https://fmv.usamvcluj.ro/index.php/component/content/article/11-demo-content/6-tutorials-and-guides",
@@ -149,7 +152,8 @@
         "pl": "W godzinach pracy możliwa jest pilna ocena stanu zwierzęcia tego samego dnia. Zadzwoń przed wizytą.",
         "cs": "Během ordinační doby může být možné akutní vyšetření týž den. Před cestou zavolejte.",
         "sv": "Akuta bedömningar samma dag kan vara möjliga under öppettiderna. Ring innan du kommer.",
-        "da": "Akutte undersøgelser samme dag kan være mulige i åbningstiden. Ring på forhånd."
+        "da": "Akutte undersøgelser samme dag kan være mulige i åbningstiden. Ring på forhånd.",
+        "fi": "Samana päivänä tehtävä kiireellinen arvio voi onnistua aukioloaikoina. Soita etukäteen."
       },
       "small_animals": true,
       "url": "https://joyvet.ro/",
@@ -178,7 +182,8 @@
         "pl": "Weterynaryjna pomoc w nagłych przypadkach. Zadzwoń przed wizytą i potwierdź godziny pracy.",
         "cs": "Veterinární pohotovostní služba. Ordinační dobu si ověřte telefonicky.",
         "sv": "Akut veterinärmottagning. Ring och kontrollera öppettiderna.",
-        "da": "Akut dyrlægehjælp. Ring på forhånd for at bekræfte åbningstider."
+        "da": "Akut dyrlægehjælp. Ring på forhånd for at bekræfte åbningstider.",
+        "fi": "Eläinlääkäripäivystys. Soita etukäteen ja varmista aukioloajat."
       },
       "small_animals": true,
       "source_url": "https://www.bzi.ro/farmacii-non-stop-in-iasi-unde-trebuie-sa-apelezi-in-caz-de-urgenta-4169662",
@@ -206,7 +211,8 @@
         "pl": "Przychodnia weterynaryjna. Zadzwoń przed wizytą i potwierdź godziny pracy.",
         "cs": "Veterinární klinika. Ordinační dobu si ověřte telefonicky.",
         "sv": "Veterinärklinik. Ring och kontrollera öppettiderna.",
-        "da": "Dyreklinik. Ring på forhånd for at bekræfte åbningstider."
+        "da": "Dyreklinik. Ring på forhånd for at bekræfte åbningstider.",
+        "fi": "Eläinlääkäriklinikka. Varmista aukioloajat soittamalla etukäteen."
       },
       "small_animals": true,
       "source_url": "https://www.bzi.ro/farmacii-non-stop-in-iasi-unde-trebuie-sa-apelezi-in-caz-de-urgenta-4169662",
@@ -234,7 +240,8 @@
         "pl": "Szpital weterynaryjny, czynny bez przerwy. WhatsApp 0762 762 762.",
         "cs": "Veterinární nemocnice, otevřeno nonstop. WhatsApp 0762 762 762.",
         "sv": "Djursjukhus, öppet dygnet runt. WhatsApp 0762 762 762.",
-        "da": "Dyrehospital, åbent døgnet rundt. WhatsApp 0762 762 762."
+        "da": "Dyrehospital, åbent døgnet rundt. WhatsApp 0762 762 762.",
+        "fi": "Eläinsairaala, auki ympäri vuorokauden. WhatsApp 0762 762 762."
       },
       "small_animals": true,
       "url": "https://pet-stuff.ro/contact/",
@@ -264,7 +271,8 @@
         "pl": "Przychodnia czynna bez przerwy.",
         "cs": "Klinika otevřena nonstop.",
         "sv": "Klinik öppen dygnet runt.",
-        "da": "Klinik åben døgnet rundt."
+        "da": "Klinik åben døgnet rundt.",
+        "fi": "Klinikka auki taukoamatta."
       },
       "small_animals": true,
       "url": "https://vet4life.ro/contact/",
@@ -294,7 +302,8 @@
         "pl": "Szpital weterynaryjny, czynny bez przerwy.",
         "cs": "Veterinární nemocnice, otevřeno nonstop.",
         "sv": "Djursjukhus, öppet dygnet runt.",
-        "da": "Dyrehospital, åbent døgnet rundt."
+        "da": "Dyrehospital, åbent døgnet rundt.",
+        "fi": "Eläinsairaala, auki ympäri vuorokauden."
       },
       "small_animals": true,
       "url": "https://partnervet.ro/urgente/",
@@ -324,7 +333,8 @@
         "pl": "Przychodnia czynna bez przerwy; dostępna karetka weterynaryjna.",
         "cs": "Klinika otevřena nonstop; nabízí veterinární sanitku.",
         "sv": "Klinik öppen dygnet runt; djurambulans erbjuds.",
-        "da": "Klinik åben døgnet rundt; dyreambulance tilbydes."
+        "da": "Klinik åben døgnet rundt; dyreambulance tilbydes.",
+        "fi": "Klinikka auki taukoamatta; eläinambulanssipalvelu tarjolla."
       },
       "small_animals": true,
       "url": "https://partnervet.ro/urgente/",
@@ -354,7 +364,8 @@
         "pl": "Szpital weterynaryjny, czynny bez przerwy.",
         "cs": "Veterinární nemocnice, otevřeno nonstop.",
         "sv": "Djursjukhus, öppet dygnet runt.",
-        "da": "Dyrehospital, åbent døgnet rundt."
+        "da": "Dyrehospital, åbent døgnet rundt.",
+        "fi": "Eläinsairaala, auki ympäri vuorokauden."
       },
       "small_animals": true,
       "url": "https://partnervet.ro/urgente/",
@@ -384,7 +395,8 @@
         "pl": "Szpital czynny bez przerwy 24/7, także w weekendy i dni ustawowo wolne od pracy.",
         "cs": "Nemocnice otevřená nonstop, včetně víkendů a státních svátků.",
         "sv": "Sjukhus öppet dygnet runt, årets alla dagar, även helger och helgdagar.",
-        "da": "Hospital åbent døgnet rundt 24/7, også i weekender og på helligdage."
+        "da": "Hospital åbent døgnet rundt 24/7, også i weekender og på helligdage.",
+        "fi": "Sairaala auki taukoamatta 24/7, myös viikonloppuisin ja pyhäpäivinä."
       },
       "small_animals": true,
       "url": "https://svtransilvania.ro/spital-veterinar-timisoara-iulius-town/",
@@ -414,7 +426,8 @@
         "pl": "Szpital z całodobową pomocą w nagłych przypadkach 24/7; przychodnia pon.–sob. 8:00–20:00.",
         "cs": "Nemocnice s nonstop pohotovostí; ordinační doba kliniky Po–So 8:00–20:00.",
         "sv": "Sjukhus med akutmottagning dygnet runt, årets alla dagar; klinik mån–lör 08.00–20.00.",
-        "da": "Hospital med akut hjælp døgnet rundt 24/7; klinikkens åbningstid man–lør 08.00–20.00."
+        "da": "Hospital med akut hjælp døgnet rundt 24/7; klinikkens åbningstid man–lør 08.00–20.00.",
+        "fi": "Sairaala, jossa päivystys taukoamatta 24/7; klinikan aukioloajat ma–la 8.00–20.00."
       },
       "small_animals": true,
       "url": "https://svtransilvania.ro/cluj/",
@@ -444,7 +457,8 @@
         "pl": "Szpital z całodobową pomocą w nagłych przypadkach 24/7; przychodnia pon.–sob. 8:00–20:00.",
         "cs": "Nemocnice s nonstop pohotovostí; ordinační doba kliniky Po–So 8:00–20:00.",
         "sv": "Sjukhus med akutmottagning dygnet runt, årets alla dagar; klinik mån–lör 08.00–20.00.",
-        "da": "Hospital med akut hjælp døgnet rundt 24/7; klinikkens åbningstid man–lør 08.00–20.00."
+        "da": "Hospital med akut hjælp døgnet rundt 24/7; klinikkens åbningstid man–lør 08.00–20.00.",
+        "fi": "Sairaala, jossa päivystys taukoamatta 24/7; klinikan aukioloajat ma–la 8.00–20.00."
       },
       "small_animals": true,
       "url": "https://svtransilvania.ro/",
@@ -474,7 +488,8 @@
         "pl": "Kliniki uniwersyteckie z całodobową pomocą w nagłych przypadkach. Zadzwoń przed wizytą.",
         "cs": "Univerzitní kliniky s pohotovostní službou, nonstop. Před cestou zavolejte.",
         "sv": "Universitetskliniker med akutmottagning, öppna dygnet runt. Ring innan du kommer.",
-        "da": "Universitetsklinikker med akutservice, døgnåbent. Ring på forhånd."
+        "da": "Universitetsklinikker med akutservice, døgnåbent. Ring på forhånd.",
+        "fi": "Yliopiston klinikat, joilla on päivystys ympäri vuorokauden. Soita etukäteen."
       },
       "small_animals": true,
       "url": "https://www.usab-tm.ro/ro/clinicile-veterinare-universitare-8981",
@@ -503,7 +518,8 @@
         "pl": "Pomoc w nagłych przypadkach 24/7, 365 dni w roku. Zadzwoń przed wizytą.",
         "cs": "Pohotovostní služba nonstop, 365 dní v roce. Před cestou zavolejte.",
         "sv": "Akutmottagning dygnet runt, årets alla dagar. Ring innan du kommer.",
-        "da": "Akutservice 24/7, 365 dage om året. Ring på forhånd."
+        "da": "Akutservice 24/7, 365 dage om året. Ring på forhånd.",
+        "fi": "Päivystys 24/7, 365 päivää vuodessa. Soita etukäteen."
       },
       "small_animals": true,
       "url": "https://vet365.ro/",
@@ -533,7 +549,8 @@
         "pl": "Przychodnia czynna bez przerwy, 24 godziny na dobę, 7 dni w tygodniu.",
         "cs": "Klinika otevřena nonstop, 24 hodin denně, 7 dní v týdnu.",
         "sv": "Klinik öppen dygnet runt, alla dagar i veckan.",
-        "da": "Klinik åben døgnet rundt, 24 timer i døgnet, 7 dage om ugen."
+        "da": "Klinik åben døgnet rundt, 24 timer i døgnet, 7 dage om ugen.",
+        "fi": "Klinikka auki taukoamatta, 24 tuntia vuorokaudessa, 7 päivää viikossa."
       },
       "small_animals": true,
       "url": "https://aristocratvet.ro/",
@@ -560,7 +577,8 @@
         "pl": "Szpital weterynaryjny czynny bez przerwy, z pomocą w nagłych przypadkach 24/7. Zadzwoń przed wizytą.",
         "cs": "Veterinární nemocnice s nonstop provozem a pohotovostí. Před cestou zavolejte.",
         "sv": "Djursjukhus som är öppet dygnet runt, med akutmottagning dygnet runt, årets alla dagar. Ring innan du kommer.",
-        "da": "Dyrehospital med døgnåben service og akut hjælp 24/7. Ring på forhånd."
+        "da": "Dyrehospital med døgnåben service og akut hjælp 24/7. Ring på forhånd.",
+        "fi": "Eläinsairaala, joka on auki ympäri vuorokauden ja päivystää 24/7. Soita etukäteen."
       },
       "small_animals": true,
       "url": "https://vet-zone.ro/",
@@ -590,7 +608,8 @@
         "pl": "Przychodnia pon.–pt. 10:00–19:00, sob. 10:00–14:00; całodobowa telefoniczna linia dla nagłych przypadków 24/7.",
         "cs": "Klinika Po–Pá 10:00–19:00, so 10:00–14:00; nonstop pohotovostní telefonní linka.",
         "sv": "Klinik mån–fre 10.00–19.00, lör 10.00–14.00; akuttelefon dygnet runt, årets alla dagar.",
-        "da": "Klinik man–fre 10.00–19.00, lør 10.00–14.00; akuttelefon døgnet rundt 24/7."
+        "da": "Klinik man–fre 10.00–19.00, lør 10.00–14.00; akuttelefon døgnet rundt 24/7.",
+        "fi": "Klinikka ma–pe 10.00–19.00, la 10.00–14.00; päivystyspuhelinlinja taukoamatta 24/7."
       },
       "small_animals": true,
       "url": "https://vetricare.ro/servicii/urgente/",
@@ -620,7 +639,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob.–niedz. 9:00–13:00. W nagłych przypadkach zadzwoń pod numer przychodni.",
         "cs": "Po–Pá 9:00–20:00, so–ne 9:00–13:00. V pohotovostních případech volejte na číslo kliniky.",
         "sv": "Mån–fre 09.00–20.00, lör–sön 09.00–13.00. Ring klinikens nummer vid akutfall.",
-        "da": "Man–fre 09.00–20.00, lør–søn 09.00–13.00. Ring til klinikkens nummer ved akutte tilfælde."
+        "da": "Man–fre 09.00–20.00, lør–søn 09.00–13.00. Ring til klinikkens nummer ved akutte tilfælde.",
+        "fi": "ma–pe 9–20, la–su 9–13. Hätätapauksissa soita klinikan numeroon."
       },
       "small_animals": true,
       "url": "https://partnervet.ro/retea/clinica-veterinara-cluj/",
@@ -649,7 +669,8 @@
         "pl": "Pon.–pt. 9:00–20:00. Zadzwoń przed wizytą.",
         "cs": "Po–Pá 9:00–20:00. Před cestou zavolejte.",
         "sv": "Mån–fre 09.00–20.00. Ring innan du kommer.",
-        "da": "Man–fre 09.00–20.00. Ring på forhånd."
+        "da": "Man–fre 09.00–20.00. Ring på forhånd.",
+        "fi": "ma–pe 9–20. Soita etukäteen."
       },
       "small_animals": true,
       "url": "https://cvscluj.ro/",
@@ -676,7 +697,8 @@
         "pl": "Pon.–pt. 9:00–21:00, sob. 9:00–16:00, niedz. 10:00–14:00. Linie dla pilnych przypadków 0745 010 539 / 0745 640 764.",
         "cs": "Po–Pá 9:00–21:00, so 9:00–16:00, ne 10:00–14:00. Linky pro naléhavé případy 0745 010 539 / 0745 640 764.",
         "sv": "Mån–fre 09.00–21.00, lör 09.00–16.00, sön 10.00–14.00. Akutlinjer 0745 010 539 / 0745 640 764.",
-        "da": "Man–fre 09.00–21.00, lør 09.00–16.00, søn 10.00–14.00. Akutlinjer 0745 010 539 / 0745 640 764."
+        "da": "Man–fre 09.00–21.00, lør 09.00–16.00, søn 10.00–14.00. Akutlinjer 0745 010 539 / 0745 640 764.",
+        "fi": "ma–pe 9–21, la 9–16, su 10–14. Kiireellisten tapausten numerot 0745 010 539 / 0745 640 764."
       },
       "small_animals": true,
       "url": "https://sanvete.ro/",
@@ -705,7 +727,8 @@
         "pl": "Pon.–pt. 9:00–21:00, sob. 9:00–14:00; całodobowa linia dla nagłych przypadków 0771 355 315.",
         "cs": "Po–Pá 9:00–21:00, so 9:00–14:00; nonstop pohotovostní linka 0771 355 315.",
         "sv": "Mån–fre 09.00–21.00, lör 09.00–14.00; akutlinje dygnet runt 0771 355 315.",
-        "da": "Man–fre 09.00–21.00, lør 09.00–14.00; akutlinje døgnet rundt 0771 355 315."
+        "da": "Man–fre 09.00–21.00, lør 09.00–14.00; akutlinje døgnet rundt 0771 355 315.",
+        "fi": "ma–pe 9–21, la 9–14; päivystysnumero ympäri vuorokauden 0771 355 315."
       },
       "small_animals": true,
       "url": "https://genesis-vet.ro/contact/",
@@ -734,7 +757,8 @@
         "pl": "Dyżur w nagłych przypadkach 24/7 telefonicznie. Zadzwoń przed wizytą.",
         "cs": "Pohotovost telefonicky nonstop. Před cestou zavolejte.",
         "sv": "Jour för akutfall per telefon dygnet runt, årets alla dagar. Ring innan du kommer.",
-        "da": "Akutvagt pr. telefon døgnet rundt. Ring på forhånd."
+        "da": "Akutvagt pr. telefon døgnet rundt. Ring på forhånd.",
+        "fi": "Päivystys puhelimitse 24/7. Soita etukäteen."
       },
       "small_animals": true,
       "url": "https://clinica-veterinara-timisoara.ro/",
@@ -764,7 +788,8 @@
         "pl": "Pon.–pt. 9:00–17:00 (Take Ionescu), 15:00–20:00 (Rebreanu). Całodobowa pomoc w nagłych przypadkach tylko dla klientów przychodni: 0721 635 466.",
         "cs": "Po–Pá 9:00–17:00 (Take Ionescu), 15:00–20:00 (Rebreanu). Nonstop pohotovost pouze pro stávající klienty kliniky: 0721 635 466.",
         "sv": "Mån–fre 9.00–17.00 (Take Ionescu), 15.00–20.00 (Rebreanu). Akut dygnet runt endast för klinikens egna kunder: 0721 635 466.",
-        "da": "Man–fre 9.00–17.00 (Take Ionescu), 15.00–20.00 (Rebreanu). Akut hjælp døgnet rundt kun til klinikkens egne kunder: 0721 635 466."
+        "da": "Man–fre 9.00–17.00 (Take Ionescu), 15.00–20.00 (Rebreanu). Akut hjælp døgnet rundt kun til klinikkens egne kunder: 0721 635 466.",
+        "fi": "ma–pe 9–17 (Take Ionescu), 15–20 (Rebreanu). Päivystys ympäri vuorokauden vain klinikan omille asiakkaille: 0721 635 466."
       },
       "small_animals": true,
       "url": "https://veterinartimisoara.ro/",
@@ -793,7 +818,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 9:00–14:00, niedz. zamknięte. W nagłych przypadkach zadzwoń do przychodni.",
         "cs": "Po–Pá 8:00–20:00, so 9:00–14:00, v neděli zavřeno. V pohotovostních případech volejte na kliniku.",
         "sv": "Mån–fre 08.00–20.00, lör 09.00–14.00, sön stängt. Ring kliniken vid akutfall.",
-        "da": "Man–fre 08.00–20.00, lør 09.00–14.00, søn lukket. Ring til klinikken ved akutte tilfælde."
+        "da": "Man–fre 08.00–20.00, lør 09.00–14.00, søn lukket. Ring til klinikken ved akutte tilfælde.",
+        "fi": "ma–pe 8.00–20.00, la 9.00–14.00, su suljettu. Päivystystapauksissa soita klinikalle."
       },
       "small_animals": true,
       "url": "https://daroczivet.ro/",
@@ -821,7 +847,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob.–niedz. 9:00–16:00; nagłe przypadki w nocy 20:00–8:00 pod numerem 0765 289 462.",
         "cs": "Po–Pá 8:00–20:00, so–ne 9:00–16:00; noční pohotovost 20:00–8:00 na 0765 289 462.",
         "sv": "Mån–fre 08.00–20.00, lör–sön 09.00–16.00; nattakut 20.00–08.00 på 0765 289 462.",
-        "da": "Man–fre 08.00–20.00, lør–søn 09.00–16.00; akut hjælp om natten 20.00–08.00 på 0765 289 462."
+        "da": "Man–fre 08.00–20.00, lør–søn 09.00–16.00; akut hjælp om natten 20.00–08.00 på 0765 289 462.",
+        "fi": "ma–pe 8.00–20.00, la–su 9.00–16.00; yöpäivystys 20.00–8.00 numerossa 0765 289 462."
       },
       "small_animals": true,
       "url": "https://www.kronveter.ro/",
@@ -849,7 +876,8 @@
         "pl": "Przychodnia pon.–pt. 10:00–18:00; całodobowa karetka weterynaryjna dla nagłych przypadków.",
         "cs": "Klinika Po–Pá 10:00–18:00; pohotovostní sanitka nonstop.",
         "sv": "Klinik mån–fre 10.00–18.00; akutambulans dygnet runt.",
-        "da": "Klinik man–fre 10.00–18.00; akut ambulanceservice døgnet rundt."
+        "da": "Klinik man–fre 10.00–18.00; akut ambulanceservice døgnet rundt.",
+        "fi": "Klinikka ma–pe 10.00–18.00; päivystysambulanssi taukoamatta."
       },
       "small_animals": true,
       "url": "https://vetlabus.ro/ambulanta-veterinara-brasov/",
@@ -879,7 +907,8 @@
         "pl": "Linia dla nagłych przypadków 0746 028 320 poza godzinami pracy; odbierają weterynarze w systemie dyżurów, którzy przyjeżdżają do przychodni.",
         "cs": "Pohotovostní linka 0746 028 320 mimo ordinační dobu, hovory přijímají veterináři ve střídavé službě, kteří přijedou na kliniku.",
         "sv": "Akutlinje 0746 028 320 utanför arbetstid, besvaras av jourhavande veterinärer i tur och ordning, som kommer till kliniken.",
-        "da": "Akutlinje 0746 028 320 uden for åbningstid, besvares af dyrlæger på skift, som kommer til klinikken."
+        "da": "Akutlinje 0746 028 320 uden for åbningstid, besvares af dyrlæger på skift, som kommer til klinikken.",
+        "fi": "Päivystysnumero 0746 028 320 työajan ulkopuolella; vastaajina vuorotellen eläinlääkärit, jotka tulevat klinikalle."
       },
       "small_animals": true,
       "url": "https://www.ceres-vet.ro/urgente-veterinare",
@@ -907,7 +936,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob.–niedz. 9:00–16:00.",
         "cs": "Po–Pá 9:00–20:00, so–ne 9:00–16:00.",
         "sv": "Mån–fre 09.00–20.00, lör–sön 09.00–16.00.",
-        "da": "Man–fre 09.00–20.00, lør–søn 09.00–16.00."
+        "da": "Man–fre 09.00–20.00, lør–søn 09.00–16.00.",
+        "fi": "ma–pe 9–20, la–su 9–16."
       },
       "small_animals": true,
       "url": "https://www.hvet.ro/en-us/contact",
@@ -934,7 +964,8 @@
         "pl": "Pon.–pt. 10:00–20:00, sob. 10:00–14:00; całodobowa linia dla nagłych przypadków 0720 051 513.",
         "cs": "Po–Pá 10:00–20:00, so 10:00–14:00; pohotovostní linka 0720 051 513 nonstop.",
         "sv": "Mån–fre 10.00–20.00, lör 10.00–14.00; akutlinje 0720 051 513 dygnet runt.",
-        "da": "Man–fre 10.00–20.00, lør 10.00–14.00; akutlinje 0720 051 513 døgnet rundt."
+        "da": "Man–fre 10.00–20.00, lør 10.00–14.00; akutlinje 0720 051 513 døgnet rundt.",
+        "fi": "ma–pe 10–20, la 10–14; päivystysnumero 0720 051 513 ympäri vuorokauden."
       },
       "note": "Emergency line 'advertised as' non-stop (per source).",
       "small_animals": true,
@@ -964,7 +995,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob. 9:00–15:00. Pomoc w nagłych przypadkach; zadzwoń przed wizytą.",
         "cs": "Po–Pá 9:00–20:00, so 9:00–15:00. Pohotovost nabízejí; před cestou zavolejte.",
         "sv": "Mån–fre 09.00–20.00, lör 09.00–15.00. Akutfall tas emot; ring innan du kommer.",
-        "da": "Man–fre 09.00–20.00, lør 09.00–15.00. Akut hjælp tilbydes; ring på forhånd."
+        "da": "Man–fre 09.00–20.00, lør 09.00–15.00. Akut hjælp tilbydes; ring på forhånd.",
+        "fi": "ma–pe 9–20, la 9–15. Päivystys saatavilla; soita etukäteen."
       },
       "small_animals": true,
       "url": "https://clinica-veterinara-brasov.ro/",
@@ -991,7 +1023,8 @@
         "pl": "Pon.–pt. 9:00–20:00, sob. 9:00–14:00. Nagłe przypadki 24/7 tylko po wcześniejszym umówieniu; zadzwoń przed wizytą.",
         "cs": "Po–Pá 9:00–20:00, so 9:00–14:00. Pohotovost nonstop pouze na objednání; před cestou zavolejte.",
         "sv": "Mån–fre 09.00–20.00, lör 09.00–14.00. Akut dygnet runt, årets alla dagar, endast efter bokning; ring innan du kommer.",
-        "da": "Man–fre 09.00–20.00, lør 09.00–14.00. Akut hjælp 24/7 kun efter aftale; ring på forhånd."
+        "da": "Man–fre 09.00–20.00, lør 09.00–14.00. Akut hjælp 24/7 kun efter aftale; ring på forhånd.",
+        "fi": "ma–pe 9–20, la 9–14. Päivystys ympäri vuorokauden vain ajanvarauksella; soita etukäteen."
       },
       "small_animals": true,
       "url": "https://www.vethouse.ro/contact-veterinar-sibiu",
@@ -1020,7 +1053,8 @@
         "pl": "Pon.–pt. 10:00–18:00; nagłe przypadki całodobowo telefonicznie.",
         "cs": "Po–Pá 10:00–18:00; pohotovost nonstop telefonicky.",
         "sv": "Mån–fre 10.00–18.00; akutfall hanteras dygnet runt per telefon.",
-        "da": "Man–fre 10.00–18.00; akutte tilfælde håndteres døgnet rundt pr. telefon."
+        "da": "Man–fre 10.00–18.00; akutte tilfælde håndteres døgnet rundt pr. telefon.",
+        "fi": "ma–pe 10–18; hätätapaukset hoidetaan puhelimitse ympäri vuorokauden."
       },
       "note": "'Said to be' handled non-stop (per source).",
       "small_animals": true,
@@ -1050,7 +1084,8 @@
         "pl": "Pon.–pt. 8:00–20:00, sob. 9:00–15:00, niedz. 9:00–13:00; numer dla nagłych przypadków po godzinach pracy 0742 832 972.",
         "cs": "Po–Pá 8:00–20:00, so 9:00–15:00, ne 9:00–13:00; pohotovostní číslo mimo ordinační dobu 0742 832 972.",
         "sv": "Mån–fre 08.00–20.00, lör 09.00–15.00, sön 09.00–13.00; akutnummer utanför öppettiderna 0742 832 972.",
-        "da": "Man–fre 08.00–20.00, lør 09.00–15.00, søn 09.00–13.00; akutnummer uden for åbningstid 0742 832 972."
+        "da": "Man–fre 08.00–20.00, lør 09.00–15.00, søn 09.00–13.00; akutnummer uden for åbningstid 0742 832 972.",
+        "fi": "ma–pe 8.00–20.00, la 9.00–15.00, su 9.00–13.00; päivystysnumero virka-ajan ulkopuolella 0742 832 972."
       },
       "small_animals": true,
       "url": "https://www.skyvet.ro/",
@@ -1078,7 +1113,8 @@
         "pl": "Pon.–pt. 9:00–19:00; w nagłych przypadkach dojeżdża do pacjenta. Zadzwoń przed wizytą.",
         "cs": "Po–Pá 9:00–19:00; v pohotovostních případech přijedou k pacientovi. Před cestou zavolejte.",
         "sv": "Mån–fre 09.00–19.00; veterinären kommer till patienten vid akutfall. Ring innan du kommer.",
-        "da": "Man–fre 09.00–19.00; kommer ud til patienten ved akutte tilfælde. Ring på forhånd."
+        "da": "Man–fre 09.00–19.00; kommer ud til patienten ved akutte tilfælde. Ring på forhånd.",
+        "fi": "ma–pe 9–19; hätätapauksissa tulee potilaan luo. Soita etukäteen."
       },
       "small_animals": true,
       "url": "https://www.buneavet.ro/",
@@ -1107,7 +1143,8 @@
         "pl": "Pon.–pt. 8:00–18:00, sob. 8:00–11:00.",
         "cs": "Po–Pá 8:00–18:00, so 8:00–11:00.",
         "sv": "Mån–fre 08.00–18.00, lör 08.00–11.00.",
-        "da": "Man–fre 08.00–18.00, lør 08.00–11.00."
+        "da": "Man–fre 08.00–18.00, lør 08.00–11.00.",
+        "fi": "ma–pe 8.00–18.00, la 8.00–11.00."
       },
       "small_animals": true,
       "url": "https://www.clinica.vetcon.ro/",
@@ -1135,7 +1172,8 @@
         "pl": "Pon.–pt. 9:00–19:00, sob. 9:00–15:00, niedz. 9:00–13:00. Nagłe przypadki pod numerem przychodni.",
         "cs": "Po–Pá 9:00–19:00, so 9:00–15:00, ne 9:00–13:00. Pohotovost přes číslo kliniky.",
         "sv": "Mån–fre 09.00–19.00, lör 09.00–15.00, sön 09.00–13.00. Akutfall via klinikens nummer.",
-        "da": "Man–fre 09.00–19.00, lør 09.00–15.00, søn 09.00–13.00. Akutte tilfælde via klinikkens nummer."
+        "da": "Man–fre 09.00–19.00, lør 09.00–15.00, søn 09.00–13.00. Akutte tilfælde via klinikkens nummer.",
+        "fi": "ma–pe 9–19, la 9–15, su 9–13. Hätätapauksissa soita klinikan numeroon."
       },
       "small_animals": true,
       "url": "https://partnervet.ro/retea/clinica-veterinara-constanta/",
@@ -1164,7 +1202,8 @@
         "pl": "Przyjmuje nagłe przypadki; zadzwoń i zapytaj o godziny pracy.",
         "cs": "Pohotovostní případy řeší; ordinační dobu zjistěte telefonicky.",
         "sv": "Akutfall hanteras; ring och fråga om öppettider.",
-        "da": "Akutte tilfælde håndteres; ring på forhånd for åbningstider."
+        "da": "Akutte tilfælde håndteres; ring på forhånd for åbningstider.",
+        "fi": "Päivystystapauksia hoidetaan; soita etukäteen ja kysy aukioloajat."
       },
       "small_animals": true,
       "url": "https://helpvetconstanta.ro/",
@@ -1192,7 +1231,8 @@
         "pl": "Pon.–pt. 10:00–18:00, sob. 10:00–15:00, niedz. 10:00–12:00.",
         "cs": "Po–Pá 10:00–18:00, so 10:00–15:00, ne 10:00–12:00.",
         "sv": "Mån–fre 10.00–18.00, lör 10.00–15.00, sön 10.00–12.00.",
-        "da": "Man–fre 10.00–18.00, lør 10.00–15.00, søn 10.00–12.00."
+        "da": "Man–fre 10.00–18.00, lør 10.00–15.00, søn 10.00–12.00.",
+        "fi": "ma–pe 10–18, la 10–15, su 10–12."
       },
       "small_animals": true,
       "url": "https://www.megavet.ro/",

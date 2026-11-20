@@ -90,7 +90,8 @@
         "pl": "Nagłe przypadki całodobowo, 365 dni w roku, bez umawiania; zwykłe godziny pracy pon.–pt. 8:30–20:30, sob.–niedz. 9:30–15:30",
         "cs": "Pohotovost nonstop, 365 dní v roce, bez objednání; běžná ordinační doba Po–Pá 8:30–20:30, so–ne 9:30–15:30",
         "sv": "Akutfall dygnet runt, 365 dagar om året, ingen tidsbokning behövs; ordinarie öppettider mån–fre 8.30–20.30, lör–sön 9.30–15.30",
-        "da": "Akut døgnet rundt, 365 dage, uden tidsbestilling; almindelig åbningstid man–fre 8.30–20.30, lør–søn 9.30–15.30"
+        "da": "Akut døgnet rundt, 365 dage, uden tidsbestilling; almindelig åbningstid man–fre 8.30–20.30, lør–søn 9.30–15.30",
+        "fi": "Päivystys 24 h, 365 päivää, ilman ajanvarausta; tavalliset aukioloajat ma–pe 8.30–20.30, la–su 9.30–15.30"
       },
       "small_animals": true,
       "url": "https://www.plakentiavet.gr/en/",
@@ -120,7 +121,8 @@
         "pl": "pon.–pt. 8:30–20:30, sob.–niedz. 8:30–16:00",
         "cs": "Po–Pá 08:30–20:30, so–ne 08:30–16:00",
         "sv": "Mån–fre 08.30–20.30, lör–sön 08.30–16.00",
-        "da": "man–fre 08.30–20.30, lør–søn 08.30–16.00"
+        "da": "man–fre 08.30–20.30, lør–søn 08.30–16.00",
+        "fi": "ma–pe 8.30–20.30, la–su 8.30–16.00"
       },
       "small_animals": true,
       "url": "https://www.plakentiavet.gr/24%cf%89%cf%81%ce%b7-%ce%ba%cf%84%ce%b7%ce%bd%ce%b9%ce%b1%cf%84%cf%81%ce%b9%ce%ba%ce%ae-%ce%ba%ce%bb%ce%b9%ce%bd%ce%b9%ce%ba%ce%ae/%ce%b1%ce%b8%ce%ae%ce%bd%ce%b1-%ce%ac%ce%bb%ce%b9%ce%bc%ce%bf%cf%82/",
@@ -149,7 +151,8 @@
         "pl": "Nagłe przypadki i hospitalizacja całodobowo, 7 dni w tygodniu; wizyty ambulatoryjne po wcześniejszym umówieniu pon.–sob. 11:00–20:00; druga linia +30 210 664 0553",
         "cs": "Pohotovost a hospitalizace nonstop, 7 dní v týdnu; ambulantní vyšetření na objednání Po–so 11:00–20:00; druhá linka +30 210 664 0553",
         "sv": "Akutvård och inläggning dygnet runt, alla dagar; öppenvård efter bokad tid mån–lör 11.00–20.00; andra linjen +30 210 664 0553",
-        "da": "Akut og indlæggelse døgnet rundt, alle ugens dage; ambulante konsultationer efter aftale man–lør 11.00–20.00; ekstra nummer +30 210 664 0553"
+        "da": "Akut og indlæggelse døgnet rundt, alle ugens dage; ambulante konsultationer efter aftale man–lør 11.00–20.00; ekstra nummer +30 210 664 0553",
+        "fi": "Päivystys ja sairaalahoito 24 h / 7 päivää; vastaanottokäynnit ajanvarauksella ma–la 11.00–20.00; toinen linja +30 210 664 0553"
       },
       "small_animals": true,
       "url": "https://www.attikovet.gr/portal/",
@@ -179,7 +182,8 @@
         "pl": "Całodobowo od poniedziałku do niedzieli, 365 dni w roku; wizyty ambulatoryjne po wcześniejszym umówieniu codziennie 10:00–22:00; dyżur w nagłych przypadkach 22:00–10:00, także w święta (najlepiej zadzwoń wcześniej); tel. komórkowy +30 693 479 1016",
         "cs": "Nonstop služba Po–ne, 365 dní v roce; ambulantní vyšetření na objednání denně 10:00–22:00; pohotovostní služba 22:00–10:00 včetně svátků (raději předem zavolejte); mobil +30 693 479 1016",
         "sv": "Service dygnet runt, alla dagar, 365 dagar om året; öppenvård efter bokad tid dagligen 10.00–22.00; akutjour 22.00–10.00 inkl. helgdagar (ring helst innan); mobil +30 693 479 1016",
-        "da": "Åbent døgnet rundt man–søn, 365 dage; ambulant efter aftale hver dag 10.00–22.00; akutvagt 22.00–10.00 inkl. helligdage (ring helst på forhånd); mobil +30 693 479 1016"
+        "da": "Åbent døgnet rundt man–søn, 365 dage; ambulant efter aftale hver dag 10.00–22.00; akutvagt 22.00–10.00 inkl. helligdage (ring helst på forhånd); mobil +30 693 479 1016",
+        "fi": "Palvelu 24 h ma–su, 365 päivää; vastaanotto ajanvarauksella päivittäin 10.00–22.00; päivystys 22.00–10.00 myös pyhinä (soita mieluiten etukäteen); matkapuhelin +30 693 479 1016"
       },
       "small_animals": true,
       "url": "http://www.vetnet.gr/",
@@ -209,7 +213,8 @@
         "pl": "Dyżur całodobowo, 365 dni w roku (ten sam numer dla nagłych przypadków); wizyty w dni robocze 9:30–21:00, sob. 10:00–14:00; w niedziele i święta tylko nagłe przypadki",
         "cs": "Nonstop služba, 365 dní v roce (stejné číslo i pro pohotovost); na objednání v pracovní dny 9:30–21:00, so 10:00–14:00; v neděli a o svátcích pouze pohotovost",
         "sv": "Jour dygnet runt, 365 dagar om året (samma nummer för akutfall); tidsbokade besök vardagar 9.30–21.00, lör 10.00–14.00; sön/helgdagar endast akutfall",
-        "da": "Vagt døgnet rundt, 365 dage (samme nummer til akutte tilfælde); tidsbestilling på hverdage 9.30–21.00, lør 10.00–14.00; søndage/helligdage kun akut"
+        "da": "Vagt døgnet rundt, 365 dage (samme nummer til akutte tilfælde); tidsbestilling på hverdage 9.30–21.00, lør 10.00–14.00; søndage/helligdage kun akut",
+        "fi": "Päivystys 24 h, 365 päivää (sama numero päivystystapauksille); vastaanotto arkisin 9.30–21.00, la 10.00–14.00; sunnuntaisin ja pyhinä vain päivystystapaukset"
       },
       "small_animals": true,
       "url": "https://hospetal.gr/",
@@ -239,7 +244,8 @@
         "pl": "Nagłe przypadki całodobowo po telefonie; zwykłe godziny pracy pon.–pt. 9:00–13:00 i 17:00–20:30, sob. 9:00–17:00, w niedzielę zamknięte; druga linia +30 210 813 3574",
         "cs": "Pohotovost nepřetržitě po telefonickém hovoru; běžná ordinační doba Po–Pá 09:00–13:00 a 17:00–20:30, so 09:00–17:00, v neděli zavřeno; druhá linka +30 210 813 3574",
         "sv": "Akutfall dygnet runt efter telefonsamtal; ordinarie öppettider mån–fre 09.00–13.00 och 17.00–20.30, lör 09.00–17.00, sön stängt; andra linjen +30 210 813 3574",
-        "da": "Akut døgnet rundt efter telefonisk kontakt; almindelig åbningstid man–fre 09.00–13.00 og 17.00–20.30, lør 09.00–17.00, søn lukket; ekstra nummer +30 210 813 3574"
+        "da": "Akut døgnet rundt efter telefonisk kontakt; almindelig åbningstid man–fre 09.00–13.00 og 17.00–20.30, lør 09.00–17.00, søn lukket; ekstra nummer +30 210 813 3574",
+        "fi": "Päivystys ympäri vuorokauden puhelun jälkeen; tavalliset aukioloajat ma–pe 9.00–13.00 ja 17.00–20.30, la 9.00–17.00, su suljettu; toinen linja +30 210 813 3574"
       },
       "small_animals": true,
       "url": "https://klinikizoon-modestos.gr/",
@@ -269,7 +275,8 @@
         "pl": "Otwarte codziennie całodobowo; godziny odwiedzin hospitalizowanych zwierząt pon.–pt. 13:00–15:00; druga linia +30 210 811 1122",
         "cs": "Otevřeno každý den nonstop; návštěvy hospitalizovaných zvířat Po–Pá 13:00–15:00; druhá linka +30 210 811 1122",
         "sv": "Öppet alla dagar dygnet runt; besökstider för inlagda djur mån–fre 13.00–15.00; andra linjen +30 210 811 1122",
-        "da": "Åbent hver dag døgnet rundt; besøgstid for indlagte kæledyr man–fre 13.00–15.00; ekstra nummer +30 210 811 1122"
+        "da": "Åbent hver dag døgnet rundt; besøgstid for indlagte kæledyr man–fre 13.00–15.00; ekstra nummer +30 210 811 1122",
+        "fi": "Auki joka päivä 24/7; vierailuaika sairaalahoidossa oleville eläimille ma–pe 13.00–15.00; toinen linja +30 210 811 1122"
       },
       "small_animals": true,
       "url": "https://pawsitivevetcare.gr/en/",
@@ -298,7 +305,8 @@
         "pl": "pon.–pt. 9:00–22:00, sob. 9:00–21:00, niedz. 10:00–19:00; nagłe przypadki całodobowo telefonicznie",
         "cs": "Po–Pá 09:00–22:00, so 09:00–21:00, ne 10:00–19:00; pohotovost nonstop po telefonu",
         "sv": "Mån–fre 09.00–22.00, lör 09.00–21.00, sön 10.00–19.00; akutfall dygnet runt per telefon",
-        "da": "man–fre 09.00–22.00, lør 09.00–21.00, søn 10.00–19.00; akut døgnet rundt pr. telefon"
+        "da": "man–fre 09.00–22.00, lør 09.00–21.00, søn 10.00–19.00; akut døgnet rundt pr. telefon",
+        "fi": "ma–pe 9.00–22.00, la 9.00–21.00, su 10.00–19.00; päivystys 24/7 puhelimitse"
       },
       "small_animals": true,
       "url": "https://athensvetclinic.gr/",
@@ -328,7 +336,8 @@
         "pl": "Po wcześniejszym umówieniu pon., wt., czw., pt. 11:00–14:00 i 18:00–21:00; całodobowy kontakt telefoniczny w nagłych przypadkach; tel. komórkowy +30 697 399 0134",
         "cs": "Na objednání Po, Út, Čt, Pá 11:00–14:00 a 18:00–21:00; telefonický kontakt pro pohotovost nonstop; mobil +30 697 399 0134",
         "sv": "Efter bokad tid mån, tis, tors, fre 11.00–14.00 och 18.00–21.00; telefonkontakt dygnet runt vid akutfall; mobil +30 697 399 0134",
-        "da": "Efter aftale man, tirs, tors, fre 11.00–14.00 og 18.00–21.00; telefonisk kontakt døgnet rundt ved akut sygdom; mobil +30 697 399 0134"
+        "da": "Efter aftale man, tirs, tors, fre 11.00–14.00 og 18.00–21.00; telefonisk kontakt døgnet rundt ved akut sygdom; mobil +30 697 399 0134",
+        "fi": "Ajanvarauksella ma, ti, to, pe 11.00–14.00 ja 18.00–21.00; puhelimitse tavoitettavissa 24 h päivystystapauksissa; matkapuhelin +30 697 399 0134"
       },
       "small_animals": true,
       "url": "https://www.medicanimal.gr/",
@@ -357,7 +366,8 @@
         "pl": "7 dni w tygodniu",
         "cs": "7 dní v týdnu",
         "sv": "7 dagar i veckan",
-        "da": "Alle ugens dage"
+        "da": "Alle ugens dage",
+        "fi": "7 päivää viikossa"
       },
       "small_animals": true,
       "url": "https://vetproject.gr/",
@@ -386,7 +396,8 @@
         "pl": "pon.–pt. 10:00–13:00 i 17:00–20:00, sob. 10:00–13:00, w niedzielę zamknięte",
         "cs": "Po–Pá 10:00–13:00 a 17:00–20:00, so 10:00–13:00, v neděli zavřeno",
         "sv": "Mån–fre 10.00–13.00 och 17.00–20.00, lör 10.00–13.00, sön stängt",
-        "da": "man–fre 10.00–13.00 og 17.00–20.00, lør 10.00–13.00, søn lukket"
+        "da": "man–fre 10.00–13.00 og 17.00–20.00, lør 10.00–13.00, søn lukket",
+        "fi": "ma–pe 10.00–13.00 ja 17.00–20.00, la 10.00–13.00, su suljettu"
       },
       "small_animals": true,
       "url": "https://vetid.gr/",
@@ -415,7 +426,8 @@
         "pl": "pon.–pt. 10:00–14:00 i 17:30–20:00, sob. 10:00–13:00, w niedzielę zamknięte",
         "cs": "Po–Pá 10:00–14:00 a 17:30–20:00, so 10:00–13:00, v neděli zavřeno",
         "sv": "Mån–fre 10.00–14.00 och 17.30–20.00, lör 10.00–13.00, sön stängt",
-        "da": "man–fre 10.00–14.00 og 17.30–20.00, lør 10.00–13.00, søn lukket"
+        "da": "man–fre 10.00–14.00 og 17.30–20.00, lør 10.00–13.00, søn lukket",
+        "fi": "ma–pe 10.00–14.00 ja 17.30–20.00, la 10.00–13.00, su suljettu"
       },
       "small_animals": true,
       "url": "https://www.thepetclinic.gr/",
@@ -443,7 +455,8 @@
         "pl": "Nagłe przypadki bez umawiania: w dni robocze 14:00–9:00 następnego dnia, w weekendy i święta całodobowo; wizyty ambulatoryjne pon.–pt. 9:00–12:00 (szczepienia w piątki); telefon do umawiania wizyt 9:30–14:30",
         "cs": "Pohotovost bez objednání: v pracovní dny 14:00–9:00 následujícího dne, o víkendech a svátcích nonstop; ambulantní vyšetření Po–Pá 9:00–12:00 (očkování v pátek); telefon pro objednání 9:30–14:30",
         "sv": "Akutfall utan tidsbokning: vardagar 14.00–09.00 nästa dag, dygnet runt på helger och helgdagar; öppenvård mån–fre 9.00–12.00 (vaccinationer fre); telefontid för bokning 9.30–14.30",
-        "da": "Akut uden tidsbestilling: hverdage 14.00–09.00 næste dag, døgnet rundt i weekender og på helligdage; ambulant man–fre 9.00–12.00 (vaccinationer fre); telefonisk tidsbestilling 9.30–14.30"
+        "da": "Akut uden tidsbestilling: hverdage 14.00–09.00 næste dag, døgnet rundt i weekender og på helligdage; ambulant man–fre 9.00–12.00 (vaccinationer fre); telefonisk tidsbestilling 9.30–14.30",
+        "fi": "Päivystys ilman ajanvarausta: arkisin 14.00–9.00 seuraavana päivänä, viikonloppuisin ja pyhinä 24 h; vastaanotto ma–pe 9.00–12.00 (rokotukset pe); ajanvaraus puhelimitse 9.30–14.30"
       },
       "small_animals": true,
       "url": "https://vet.auth.gr/en/information/instructions-for-the-public/",
@@ -472,7 +485,8 @@
         "pl": "Czynne całodobowo; nagłe przypadki o każdej porze po wcześniejszym telefonie; wizyty 9:00–21:00",
         "cs": "Provoz nonstop; pohotovost kdykoli po předchozím telefonátu; objednání 9:00–21:00",
         "sv": "Öppet dygnet runt; akutfall när som helst efter att du ringt i förväg; tidsbokade besök 9.00–21.00",
-        "da": "Døgnåbent; akut til enhver tid efter telefonisk forhåndsaftale; tidsbestilling 9.00–21.00"
+        "da": "Døgnåbent; akut til enhver tid efter telefonisk forhåndsaftale; tidsbestilling 9.00–21.00",
+        "fi": "Toimii 24 h; päivystystapaukset milloin tahansa soitettuasi etukäteen; vastaanotto 9.00–21.00"
       },
       "small_animals": true,
       "url": "https://agiosmodestos.gr/",
@@ -501,7 +515,8 @@
         "pl": "Od poniedziałku do niedzieli całodobowo, 365 dni w roku",
         "cs": "Po–ne nonstop, 365 dní v roce",
         "sv": "Mån–sön dygnet runt, 365 dagar om året",
-        "da": "man–søn døgnet rundt, 365 dage"
+        "da": "man–søn døgnet rundt, 365 dage",
+        "fi": "ma–su 24 h, 365 päivää"
       },
       "small_animals": true,
       "url": "https://www.vet-hospital.net/",
@@ -530,7 +545,8 @@
         "pl": "Całodobowa linia pogotowia +30 2392 073 751; numer główny +30 23924 40080 (pon.–pt. 8:30–20:30)",
         "cs": "Nonstop pohotovostní linka +30 2392 073 751; hlavní linka +30 23924 40080 (Po–Pá 8:30–20:30)",
         "sv": "Akutlinje dygnet runt +30 2392 073 751; huvudnummer +30 23924 40080 (mån–fre 8.30–20.30)",
-        "da": "Akutlinje døgnet rundt +30 2392 073 751; hovednummer +30 23924 40080 (man–fre 8.30–20.30)"
+        "da": "Akutlinje døgnet rundt +30 2392 073 751; hovednummer +30 23924 40080 (man–fre 8.30–20.30)",
+        "fi": "Päivystyslinja 24 h +30 2392 073 751; pääpuhelin +30 23924 40080 (ma–pe 8.30–20.30)"
       },
       "small_animals": true,
       "url": "https://www.plakentiavet.gr/24%cf%89%cf%81%ce%b7-%ce%ba%cf%84%ce%b7%ce%bd%ce%b9%ce%b1%cf%84%cf%81%ce%b9%ce%ba%ce%ae-%ce%ba%ce%bb%ce%b9%ce%bd%ce%b9%ce%ba%ce%ae/%ce%b8%ce%b5%cf%83%cf%83%ce%b1%ce%bb%ce%bf%ce%bd%ce%af%ce%ba%ce%b7/",
@@ -560,7 +576,8 @@
         "pl": "W dni robocze 8:00–21:00 wizyty i nagłe przypadki, 21:00–8:00 tylko nagłe przypadki; w weekendy tylko nagłe przypadki; tel. komórkowy +30 693 611 9192",
         "cs": "V pracovní dny 08:00–21:00 objednání i pohotovost, 21:00–08:00 pouze pohotovost; o víkendech pouze pohotovost; mobil +30 693 611 9192",
         "sv": "Vardagar 08.00–21.00 tidsbokade besök och akutfall, 21.00–08.00 endast akutfall; helger endast akutfall; mobil +30 693 611 9192",
-        "da": "Hverdage 08.00–21.00 tidsbestilling og akut, 21.00–08.00 kun akut; weekender kun akut; mobil +30 693 611 9192"
+        "da": "Hverdage 08.00–21.00 tidsbestilling og akut, 21.00–08.00 kun akut; weekender kun akut; mobil +30 693 611 9192",
+        "fi": "Arkisin 8.00–21.00 vastaanotto ja päivystys, 21.00–8.00 vain päivystys; viikonloppuisin vain päivystys; matkapuhelin +30 693 611 9192"
       },
       "small_animals": true,
       "url": "https://www.agathangelidis.gr/",
@@ -589,7 +606,8 @@
         "pl": "Nagłe przypadki całodobowo; tel. komórkowy pogotowia +30 695 550 8522 (także +30 694 289 8065); weterynarz na dyżurze czeka na Ciebie po przyjeździe",
         "cs": "Pohotovost nonstop; pohotovostní mobil +30 695 550 8522 (také +30 694 289 8065); veterinář ve službě vás po příjezdu přivítá",
         "sv": "Akutfall dygnet runt; akutmobil +30 695 550 8522 (även +30 694 289 8065); jourhavande veterinär möter dig när du kommer",
-        "da": "Akut døgnet rundt; akutmobil +30 695 550 8522 (også +30 694 289 8065); den vagthavende dyrlæge møder dig ved ankomst"
+        "da": "Akut døgnet rundt; akutmobil +30 695 550 8522 (også +30 694 289 8065); den vagthavende dyrlæge møder dig ved ankomst",
+        "fi": "Päivystys 24 h; päivystysmatkapuhelin +30 695 550 8522 (myös +30 694 289 8065); päivystävä eläinlääkäri tapaa sinut saapuessasi"
       },
       "small_animals": true,
       "url": "https://ktiniatreio.net/",
@@ -618,7 +636,8 @@
         "pl": "Nagłe przypadki całodobowo pod +30 698 129 0095; informacje ogólne +30 24210 57811 (pon.–pt. 8:00–21:00, sob. 10:00–14:00)",
         "cs": "Pohotovost nonstop na +30 698 129 0095; obecné informace +30 24210 57811 (Po–Pá 08:00–21:00, so 10:00–14:00)",
         "sv": "Akutfall dygnet runt på +30 698 129 0095; allmän information +30 24210 57811 (mån–fre 08.00–21.00, lör 10.00–14.00)",
-        "da": "Akut døgnet rundt på +30 698 129 0095; generelle henvendelser +30 24210 57811 (man–fre 08.00–21.00, lør 10.00–14.00)"
+        "da": "Akut døgnet rundt på +30 698 129 0095; generelle henvendelser +30 24210 57811 (man–fre 08.00–21.00, lør 10.00–14.00)",
+        "fi": "Päivystys 24 h numerossa +30 698 129 0095; yleisneuvonta +30 24210 57811 (ma–pe 8.00–21.00, la 10.00–14.00)"
       },
       "small_animals": true,
       "url": "https://volosvetspecialists.gr/en/",
@@ -647,7 +666,8 @@
         "pl": "Tel. komórkowy +30 697 933 9460",
         "cs": "Mobil +30 697 933 9460",
         "sv": "Mobil +30 697 933 9460",
-        "da": "Mobil +30 697 933 9460"
+        "da": "Mobil +30 697 933 9460",
+        "fi": "Matkapuhelin +30 697 933 9460"
       },
       "small_animals": true,
       "url": "https://www.animalshealth.gr/",
@@ -676,7 +696,8 @@
         "pl": "pon., śr., pt. 9:00–14:00 i 17:30–21:00; wt., czw. 9:00–14:00; sob.–niedz. po wcześniejszym umówieniu",
         "cs": "Po, St, Pá 09:00–14:00 a 17:30–21:00; Út, Čt 09:00–14:00; so–ne na objednání",
         "sv": "Mån, ons, fre 09.00–14.00 och 17.30–21.00; tis, tors 09.00–14.00; lör–sön efter bokad tid",
-        "da": "man, ons, fre 09.00–14.00 og 17.30–21.00; tirs, tors 09.00–14.00; lør–søn efter aftale"
+        "da": "man, ons, fre 09.00–14.00 og 17.30–21.00; tirs, tors 09.00–14.00; lør–søn efter aftale",
+        "fi": "ma, ke, pe 9.00–14.00 ja 17.30–21.00; ti, to 9.00–14.00; la–su ajanvarauksella"
       },
       "small_animals": true,
       "url": "https://kogiannisvet.gr/el/ktiniatriko-kentro-larisa-ktiniatros",
@@ -705,7 +726,8 @@
         "pl": "pon.–pt. 10:00–14:00 i 18:00–21:00, sob. 10:00–13:00, w niedzielę zamknięte",
         "cs": "Po–Pá 10:00–14:00 a 18:00–21:00, so 10:00–13:00, v neděli zavřeno",
         "sv": "Mån–fre 10.00–14.00 och 18.00–21.00, lör 10.00–13.00, sön stängt",
-        "da": "man–fre 10.00–14.00 og 18.00–21.00, lør 10.00–13.00, søn lukket"
+        "da": "man–fre 10.00–14.00 og 18.00–21.00, lør 10.00–13.00, søn lukket",
+        "fi": "ma–pe 10.00–14.00 ja 18.00–21.00, la 10.00–13.00, su suljettu"
       },
       "small_animals": true,
       "url": "https://www.larissavet.gr/",
@@ -733,7 +755,8 @@
         "pl": "pon.–pt. 9:30–13:30 (+ popołudnia wt., czw., pt. 17:30–20:30), sob. 9:30–13:30; nagłe przypadki całodobowo po telefonie (połączenia są przekierowywane do weterynarza na dyżurze)",
         "cs": "Po–Pá 09:30–13:30 (+ odpoledne Út, Čt, Pá 17:30–20:30), so 09:30–13:30; pohotovost nonstop po telefonickém hovoru (hovory se přesměrují na veterináře ve službě)",
         "sv": "Mån–fre 09.30–13.30 (+ eftermiddagar tis, tors, fre 17.30–20.30), lör 09.30–13.30; akutfall dygnet runt efter telefonsamtal (samtalen vidarekopplas till jourhavande veterinär)",
-        "da": "man–fre 09.30–13.30 (+ eftermiddage tirs, tors, fre 17.30–20.30), lør 09.30–13.30; akut døgnet rundt efter telefonisk kontakt (opkald viderestilles til den vagthavende dyrlæge)"
+        "da": "man–fre 09.30–13.30 (+ eftermiddage tirs, tors, fre 17.30–20.30), lør 09.30–13.30; akut døgnet rundt efter telefonisk kontakt (opkald viderestilles til den vagthavende dyrlæge)",
+        "fi": "ma–pe 9.30–13.30 (lisäksi ti, to, pe 17.30–20.30), la 9.30–13.30; päivystys 24/7 puhelun jälkeen (puhelut ohjataan päivystävälle eläinlääkärille)"
       },
       "small_animals": true,
       "url": "https://animalmedpatras.gr/",
@@ -762,7 +785,8 @@
         "pl": "Tel. komórkowy +30 698 589 8242",
         "cs": "Mobil +30 698 589 8242",
         "sv": "Mobil +30 698 589 8242",
-        "da": "Mobil +30 698 589 8242"
+        "da": "Mobil +30 698 589 8242",
+        "fi": "Matkapuhelin +30 698 589 8242"
       },
       "small_animals": true,
       "url": "https://giotopoulosvet.gr/",
@@ -791,7 +815,8 @@
         "pl": "pon.–pt. 9:00–20:00, sob. 10:00–14:00, w niedzielę zamknięte; całodobowy triaż telefoniczny w nagłych przypadkach (bez osobnego numeru)",
         "cs": "Po–Pá 9:00–20:00, so 10:00–14:00, v neděli zavřeno; telefonická pohotovostní triáž nonstop (bez samostatného čísla)",
         "sv": "Mån–fre 9.00–20.00, lör 10.00–14.00, sön stängt; akuttriage per telefon dygnet runt (inget separat nummer)",
-        "da": "man–fre 9.00–20.00, lør 10.00–14.00, søn lukket; telefonisk akutvisitation døgnet rundt (intet separat nummer)"
+        "da": "man–fre 9.00–20.00, lør 10.00–14.00, søn lukket; telefonisk akutvisitation døgnet rundt (intet separat nummer)",
+        "fi": "ma–pe 9.00–20.00, la 10.00–14.00, su suljettu; puhelimitse tehtävä kiireellisyysarvio 24/7 (ei erillistä numeroa)"
       },
       "small_animals": true,
       "url": "https://www.siriusvetschania.gr/",
@@ -820,7 +845,8 @@
         "pl": "pon., śr., czw. 9:00–13:00 i 18:00–20:00; wt., pt. 9:00–16:00; po wcześniejszym umówieniu, z wyjątkiem nagłych przypadków",
         "cs": "Po, St, Čt 09:00–13:00 a 18:00–20:00; Út, Pá 09:00–16:00; na objednání, kromě pohotovosti",
         "sv": "Mån, ons, tors 09.00–13.00 och 18.00–20.00; tis, fre 09.00–16.00; efter bokad tid utom vid akutfall",
-        "da": "man, ons, tors 09.00–13.00 og 18.00–20.00; tirs, fre 09.00–16.00; efter aftale undtagen ved akut sygdom"
+        "da": "man, ons, tors 09.00–13.00 og 18.00–20.00; tirs, fre 09.00–16.00; efter aftale undtagen ved akut sygdom",
+        "fi": "ma, ke, to 9.00–13.00 ja 18.00–20.00; ti, pe 9.00–16.00; ajanvarauksella paitsi päivystystapauksissa"
       },
       "small_animals": true,
       "url": "https://www.chaniavet.gr/?lang=en",
@@ -847,7 +873,8 @@
         "pl": "Weekendy: sob. 17:30–20:30, niedz. 10:30–13:30 i 17:30–20:30 (rotacyjny dyżur prywatnych weterynarzy poza zwykłymi godzinami)",
         "cs": "O víkendech: so 17:30–20:30, ne 10:30–13:30 a 17:30–20:30 (střídání soukromých veterinářů mimo běžnou ordinační dobu)",
         "sv": "Helger: lör 17.30–20.30, sön 10.30–13.30 och 17.30–20.30 (turordning mellan privata veterinärer utanför ordinarie öppettider)",
-        "da": "Weekender: lør 17.30–20.30, søn 10.30–13.30 og 17.30–20.30 (vagtordning mellem private dyrlæger uden for almindelig åbningstid)"
+        "da": "Weekender: lør 17.30–20.30, søn 10.30–13.30 og 17.30–20.30 (vagtordning mellem private dyrlæger uden for almindelig åbningstid)",
+        "fi": "Viikonloput: la 17.30–20.30, su 10.30–13.30 ja 17.30–20.30 (yksityisten eläinlääkäreiden päivystysvuorot normaalien aukioloaikojen ulkopuolella)"
       },
       "small_animals": true,
       "url": "https://www.catspyjamas.org/organisations-vets/",
@@ -875,7 +902,8 @@
         "pl": "Nagłe przypadki przez specjalny numer podawany w sekretariacie; jednostka mobilna do opieki w domu",
         "cs": "Pohotovost přes zvláštní číslo, které sdělí sekretariát; mobilní jednotka pro péči doma",
         "sv": "Akutfall via ett särskilt nummer som du får av sekretariatet; mobil enhet för vård i hemmet",
-        "da": "Akut via et særligt nummer, som sekretariatet oplyser; mobilenhed til behandling i hjemmet"
+        "da": "Akut via et særligt nummer, som sekretariatet oplyser; mobilenhed til behandling i hjemmet",
+        "fi": "Päivystys sihteeristön antaman erikoisnumeron kautta; liikkuva yksikkö kotikäynteihin"
       },
       "note": "Hours not published.",
       "small_animals": true,
@@ -905,7 +933,8 @@
         "pl": "pon.–pt. 9:30–14:30; pon., śr., pt. także 17:30–20:30",
         "cs": "Po–Pá 9:30–14:30; Po, St, Pá také 17:30–20:30",
         "sv": "Mån–fre 9.30–14.30; mån, ons, fre även 17.30–20.30",
-        "da": "man–fre 9.30–14.30; man, ons, fre også 17.30–20.30"
+        "da": "man–fre 9.30–14.30; man, ons, fre også 17.30–20.30",
+        "fi": "ma–pe 9.30–14.30; ma, ke, pe myös 17.30–20.30"
       },
       "small_animals": true,
       "url": "https://www.markakivet.gr/en/",
@@ -931,7 +960,8 @@
         "pl": "Tel. komórkowy +30 698 239 2556",
         "cs": "Mobil +30 698 239 2556",
         "sv": "Mobil +30 698 239 2556",
-        "da": "Mobil +30 698 239 2556"
+        "da": "Mobil +30 698 239 2556",
+        "fi": "Matkapuhelin +30 698 239 2556"
       },
       "small_animals": true,
       "url": "https://pet-med.gr/en/",
@@ -959,7 +989,8 @@
         "pl": "Poza godzinami pracy i nagłe przypadki",
         "cs": "Mimo ordinační dobu a pohotovost",
         "sv": "Utanför öppettid och akutfall",
-        "da": "Uden for åbningstid og akut"
+        "da": "Uden for åbningstid og akut",
+        "fi": "Virka-ajan ulkopuolella ja päivystys"
       },
       "small_animals": true,
       "url": "http://www.crete4animals.gr/?page_id=799",
@@ -988,7 +1019,8 @@
         "pl": "Przychodnia pon.–pt. 8:00–21:00, sob. 9:00–17:00, niedz. 10:00–18:00; nagłe przypadki całodobowo; tel. komórkowy +30 693 725 2802",
         "cs": "Klinika Po–Pá 8:00–21:00, so 09:00–17:00, ne 10:00–18:00; pohotovost nonstop; mobil +30 693 725 2802",
         "sv": "Klinik mån–fre 8.00–21.00, lör 09.00–17.00, sön 10.00–18.00; akutfall dygnet runt; mobil +30 693 725 2802",
-        "da": "Klinik man–fre 8.00–21.00, lør 09.00–17.00, søn 10.00–18.00; akut døgnet rundt; mobil +30 693 725 2802"
+        "da": "Klinik man–fre 8.00–21.00, lør 09.00–17.00, søn 10.00–18.00; akut døgnet rundt; mobil +30 693 725 2802",
+        "fi": "Klinikka ma–pe 8.00–21.00, la 9.00–17.00, su 10.00–18.00; päivystys 24 h; matkapuhelin +30 693 725 2802"
       },
       "small_animals": true,
       "url": "https://www.plakentiavet.gr/%CE%B5%CF%80%CE%B9%CE%BA%CE%BF%CE%B9%CE%BD%CF%89%CE%BD%CE%AF%CE%B1/",
@@ -1018,7 +1050,8 @@
         "pl": "Codziennie 8:30–14:00 i 17:00–20:00 (latem 17:30–20:30); w środy i soboty po południu zamknięte; w niedzielę zamknięte; tel. komórkowy +30 694 585 3577",
         "cs": "Denně 8:30–14:00 a 17:00–20:00 (v létě 17:30–20:30); ve st a so odpoledne zavřeno; v neděli zavřeno; mobil +30 694 585 3577",
         "sv": "Dagligen 8.30–14.00 och 17.00–20.00 (på sommaren 17.30–20.30); stängt onsdags- och lördagseftermiddagar; sön stängt; mobil +30 694 585 3577",
-        "da": "Hver dag 8.30–14.00 og 17.00–20.00 (om sommeren 17.30–20.30); ons og lør eftermiddag lukket; søn lukket; mobil +30 694 585 3577"
+        "da": "Hver dag 8.30–14.00 og 17.00–20.00 (om sommeren 17.30–20.30); ons og lør eftermiddag lukket; søn lukket; mobil +30 694 585 3577",
+        "fi": "Päivittäin 8.30–14.00 ja 17.00–20.00 (kesällä 17.30–20.30); ke ja la iltapäivisin suljettu; su suljettu; matkapuhelin +30 694 585 3577"
       },
       "small_animals": true,
       "url": "https://www.vet-center.gr/",
@@ -1045,7 +1078,8 @@
         "pl": "„Emergency Call” +30 694 825 8149; filie Koskinou (5. km drogi Rodos–Lindos, +30 2241 181349) i Kiotari (+30 2244 042191); weterynarz dojeżdżający na Symi, Nisyros, Tilos, Chalki, Kastellorizo",
         "cs": "„Emergency Call“ +30 694 825 8149; pobočky Koskinou (5. km silnice Rhodos–Lindos, +30 2241 181349) a Kiotari (+30 2244 042191); návštěvy veterináře na Symi, Nisyru, Tilosu, Chalki a Kastellorizu",
         "sv": "'Emergency Call' +30 694 825 8149; filialer i Koskinou (5:e kilometern av vägen Rhodos–Lindos, +30 2241 181349) och Kiotari (+30 2244 042191); besöksveterinär på Symi, Nisyros, Tilos, Chalki, Kastellorizo",
-        "da": "'Emergency Call' +30 694 825 8149; filialer i Koskinou (5. km på vejen Rhodos–Lindos, +30 2241 181349) og Kiotari (+30 2244 042191); besøgende dyrlæge på Symi, Nisyros, Tilos, Chalki, Kastellorizo"
+        "da": "'Emergency Call' +30 694 825 8149; filialer i Koskinou (5. km på vejen Rhodos–Lindos, +30 2241 181349) og Kiotari (+30 2244 042191); besøgende dyrlæge på Symi, Nisyros, Tilos, Chalki, Kastellorizo",
+        "fi": "'Emergency Call' +30 694 825 8149; toimipisteet Koskinou (Rhodos–Lindos-tien 5. km, +30 2241 181349) ja Kiotari (+30 2244 042191); vierailevan eläinlääkärin palvelu Symillä, Nisyroksella, Tiloksella, Chalkilla ja Kastellorizolla"
       },
       "note": "Hours not published.",
       "small_animals": true,
@@ -1074,7 +1108,8 @@
         "pl": "pon., wt., czw., pt. 10:00–13:30 i 17:00–20:00; śr. 10:00–15:00; w soboty zamknięte",
         "cs": "Po, Út, Čt, Pá 10:00–13:30 a 17:00–20:00; St 10:00–15:00; v sobotu zavřeno",
         "sv": "Mån, tis, tors, fre 10.00–13.30 och 17.00–20.00; ons 10.00–15.00; lör stängt",
-        "da": "man, tirs, tors, fre 10.00–13.30 og 17.00–20.00; ons 10.00–15.00; lør lukket"
+        "da": "man, tirs, tors, fre 10.00–13.30 og 17.00–20.00; ons 10.00–15.00; lør lukket",
+        "fi": "ma, ti, to, pe 10.00–13.30 ja 17.00–20.00; ke 10.00–15.00; la suljettu"
       },
       "small_animals": true,
       "url": "https://santorinivet.com/?lang=en",
@@ -1101,7 +1136,8 @@
         "pl": "Przyjmuje bez umawiania; nagłe przypadki +30 694 437 2535",
         "cs": "Bez objednání; pohotovost +30 694 437 2535",
         "sv": "Besök utan tidsbokning tas emot; akutfall +30 694 437 2535",
-        "da": "Man kan møde op uden tidsbestilling; akut +30 694 437 2535"
+        "da": "Man kan møde op uden tidsbestilling; akut +30 694 437 2535",
+        "fi": "Vastaanotto ilman ajanvarausta; päivystys +30 694 437 2535"
       },
       "note": "Hours not published.",
       "small_animals": true,
@@ -1131,7 +1167,8 @@
         "pl": "pon.–pt. 9:00–14:00 i 18:00–20:00, sob. 9:00–14:00; tel. komórkowy weterynarza +30 698 744 4691",
         "cs": "Po–Pá 09:00–14:00 a 18:00–20:00, so 09:00–14:00; mobil veterináře +30 698 744 4691",
         "sv": "Mån–fre 09.00–14.00 och 18.00–20.00, lör 09.00–14.00; veterinärens mobil +30 698 744 4691",
-        "da": "man–fre 09.00–14.00 og 18.00–20.00, lør 09.00–14.00; dyrlægens mobil +30 698 744 4691"
+        "da": "man–fre 09.00–14.00 og 18.00–20.00, lør 09.00–14.00; dyrlægens mobil +30 698 744 4691",
+        "fi": "ma–pe 9.00–14.00 ja 18.00–20.00, la 9.00–14.00; eläinlääkärin matkapuhelin +30 698 744 4691"
       },
       "small_animals": true,
       "url": "https://www.vetandgroomer.com/en",
@@ -1159,7 +1196,8 @@
         "pl": "Codziennie 9:00–15:00, a także wt., czw., pt. 18:00–21:00; w niedzielę zamknięte; nagłe przypadki: tel. komórkowy weterynarza +30 694 427 8947",
         "cs": "Denně 9:00–15:00, navíc Út, Čt, Pá 18:00–21:00; v neděli zavřeno; pohotovost: mobil veterináře +30 694 427 8947",
         "sv": "Dagligen 9.00–15.00, dessutom tis, tors, fre 18.00–21.00; sön stängt; akutfall: veterinärens mobil +30 694 427 8947",
-        "da": "Hver dag 9.00–15.00, desuden tirs, tors, fre 18.00–21.00; søn lukket; akut: dyrlægens mobil +30 694 427 8947"
+        "da": "Hver dag 9.00–15.00, desuden tirs, tors, fre 18.00–21.00; søn lukket; akut: dyrlægens mobil +30 694 427 8947",
+        "fi": "Päivittäin 9.00–15.00 sekä ti, to, pe 18.00–21.00; su suljettu; päivystys: eläinlääkärin matkapuhelin +30 694 427 8947"
       },
       "small_animals": true,
       "url": "https://www.vet-naxos-vassalakis.gr/en",
@@ -1186,7 +1224,8 @@
         "pl": "Elastyczny grafik",
         "cs": "Pružná ordinační doba",
         "sv": "Flexibla tider",
-        "da": "Fleksibel åbningstid"
+        "da": "Fleksibel åbningstid",
+        "fi": "Joustavat aukioloajat"
       },
       "note": "Hours not published.",
       "small_animals": true,
@@ -1215,7 +1254,8 @@
         "pl": "Po wcześniejszym umówieniu: pon., śr., pt. 9:30–14:00; wt., czw. 9:30–13:30 i 16:30–18:00; sob. 10:00–13:00",
         "cs": "Na objednání: Po, St, Pá 09:30–14:00; Út, Čt 09:30–13:30 a 16:30–18:00; so 10:00–13:00",
         "sv": "Efter bokad tid: mån, ons, fre 09.30–14.00; tis, tors 09.30–13.30 och 16.30–18.00; lör 10.00–13.00",
-        "da": "Efter aftale: man, ons, fre 09.30–14.00; tirs, tors 09.30–13.30 og 16.30–18.00; lør 10.00–13.00"
+        "da": "Efter aftale: man, ons, fre 09.30–14.00; tirs, tors 09.30–13.30 og 16.30–18.00; lør 10.00–13.00",
+        "fi": "Ajanvarauksella: ma, ke, pe 9.30–14.00; ti, to 9.30–13.30 ja 16.30–18.00; la 10.00–13.00"
       },
       "small_animals": true,
       "url": "https://www.corfuanimalclinic.com/",
@@ -1257,7 +1297,8 @@
         "pl": "Także +30 26950 45155, tel. komórkowy +30 694 492 0878",
         "cs": "Také +30 26950 45155, mobil +30 694 492 0878",
         "sv": "Även +30 26950 45155, mobil +30 694 492 0878",
-        "da": "Desuden +30 26950 45155, mobil +30 694 492 0878"
+        "da": "Desuden +30 26950 45155, mobil +30 694 492 0878",
+        "fi": "Lisäksi +30 26950 45155, matkapuhelin +30 694 492 0878"
       },
       "small_animals": true,
       "url": "https://animalzante.gr/en_veterinary.php",
@@ -1286,7 +1327,8 @@
         "pl": "W nagłych przypadkach zadzwoń na numer stacjonarny i po nagranej wiadomości wybierz 8; tel. komórkowy +30 697 673 4239",
         "cs": "V naléhavých případech volejte pevnou linku a po nahraném hlášení stiskněte 8; mobil +30 697 673 4239",
         "sv": "Vid akutfall ring fasta numret och tryck 8 efter det inspelade meddelandet; mobil +30 697 673 4239",
-        "da": "Ved akut sygdom ring til fastnetnummeret og tryk 8 efter den indspillede besked; mobil +30 697 673 4239"
+        "da": "Ved akut sygdom ring til fastnetnummeret og tryk 8 efter den indspillede besked; mobil +30 697 673 4239",
+        "fi": "Päivystystapauksissa soita lankanumeroon ja valitse 8 nauhoitetun viestin jälkeen; matkapuhelin +30 697 673 4239"
       },
       "note": "Hours not published.",
       "small_animals": true,
@@ -1316,7 +1358,8 @@
         "pl": "pon.–pt. 9:00–21:00; pilne przypadki przyjmowane priorytetowo po telefonie",
         "cs": "Po–Pá 09:00–21:00; naléhavé případy ošetřují přednostně po telefonickém hovoru",
         "sv": "Mån–fre 09.00–21.00; brådskande fall tas emot med förtur efter telefonsamtal",
-        "da": "man–fre 09.00–21.00; hastende tilfælde tages ind med forrang efter telefonisk kontakt"
+        "da": "man–fre 09.00–21.00; hastende tilfælde tages ind med forrang efter telefonisk kontakt",
+        "fi": "ma–pe 9.00–21.00; kiireelliset tapaukset otetaan vastaan ensisijaisesti puhelun jälkeen"
       },
       "small_animals": true,
       "url": "https://www.ktiniatros-alexandroupoli.gr/",
@@ -1344,7 +1387,8 @@
         "pl": "pon.–pt. 9:00–14:00 i 18:00–21:00, sob. 9:00–13:00; tel. komórkowy +30 697 931 3388",
         "cs": "Po–Pá 09:00–14:00 a 18:00–21:00, so 09:00–13:00; mobil +30 697 931 3388",
         "sv": "Mån–fre 09.00–14.00 och 18.00–21.00, lör 09.00–13.00; mobil +30 697 931 3388",
-        "da": "man–fre 09.00–14.00 og 18.00–21.00, lør 09.00–13.00; mobil +30 697 931 3388"
+        "da": "man–fre 09.00–14.00 og 18.00–21.00, lør 09.00–13.00; mobil +30 697 931 3388",
+        "fi": "ma–pe 9.00–14.00 ja 18.00–21.00, la 9.00–13.00; matkapuhelin +30 697 931 3388"
       },
       "small_animals": true,
       "url": "https://www.kalamatavet.gr/",
@@ -1373,7 +1417,8 @@
         "pl": "pon.–śr., pt. 10:00–18:00; czw., sob. 10:00–14:00; w niedzielę zamknięte; głównie po wcześniejszym umówieniu",
         "cs": "Po–St, Pá 10:00–18:00; Čt, so 10:00–14:00; v neděli zavřeno; převážně na objednání",
         "sv": "Mån–ons, fre 10.00–18.00; tors, lör 10.00–14.00; sön stängt; främst efter bokad tid",
-        "da": "man–ons, fre 10.00–18.00; tors, lør 10.00–14.00; søn lukket; for det meste efter aftale"
+        "da": "man–ons, fre 10.00–18.00; tors, lør 10.00–14.00; søn lukket; for det meste efter aftale",
+        "fi": "ma–ke, pe 10.00–18.00; to, la 10.00–14.00; su suljettu; pääasiassa ajanvarauksella"
       },
       "small_animals": true,
       "url": "https://veterinary.gr/en/home-english/",
@@ -1402,7 +1447,8 @@
         "pl": "pon., wt., czw., pt. 9:30–14:30 i 18:00–21:00; śr. 9:30–15:30; sob. 10:00–14:00; w niedzielę zamknięte; tel. komórkowy +30 693 856 0601",
         "cs": "Po, Út, Čt, Pá 9:30–14:30 a 18:00–21:00; St 9:30–15:30; so 10:00–14:00; v neděli zavřeno; mobil +30 693 856 0601",
         "sv": "Mån, tis, tors, fre 9.30–14.30 och 18.00–21.00; ons 9.30–15.30; lör 10.00–14.00; sön stängt; mobil +30 693 856 0601",
-        "da": "man, tirs, tors, fre 9.30–14.30 og 18.00–21.00; ons 9.30–15.30; lør 10.00–14.00; søn lukket; mobil +30 693 856 0601"
+        "da": "man, tirs, tors, fre 9.30–14.30 og 18.00–21.00; ons 9.30–15.30; lør 10.00–14.00; søn lukket; mobil +30 693 856 0601",
+        "fi": "ma, ti, to, pe 9.30–14.30 ja 18.00–21.00; ke 9.30–15.30; la 10.00–14.00; su suljettu; matkapuhelin +30 693 856 0601"
       },
       "small_animals": true,
       "url": "https://petiatrico.gr/",
@@ -1429,7 +1475,8 @@
         "pl": "W dni robocze mniej więcej 9:00–18:00, w soboty częściowo; zadzwoń, aby potwierdzić godziny",
         "cs": "V pracovní dny přibližně 9:00–18:00, v sobotu částečně; ordinační dobu si ověřte telefonicky",
         "sv": "Vardagar ungefär 9.00–18.00, lör delvis; ring för att bekräfta öppettiderna",
-        "da": "Hverdage ca. 9.00–18.00, lør delvist; ring for at bekræfte åbningstiden"
+        "da": "Hverdage ca. 9.00–18.00, lør delvist; ring for at bekræfte åbningstiden",
+        "fi": "Arkisin noin 9.00–18.00, la osittain; varmista aukioloajat soittamalla"
       },
       "small_animals": true,
       "url": "https://ygeiavet.gr/",
@@ -1458,7 +1505,8 @@
         "pl": "Codziennie 8:00–21:00, po wcześniejszym umówieniu",
         "cs": "Denně 08:00–21:00, na objednání",
         "sv": "Dagligen 08.00–21.00, efter bokad tid",
-        "da": "Hver dag 08.00–21.00, efter aftale"
+        "da": "Hver dag 08.00–21.00, efter aftale",
+        "fi": "Päivittäin 8.00–21.00, ajanvarauksella"
       },
       "small_animals": true,
       "url": "https://aegeanvetcare.com/",
@@ -1486,7 +1534,8 @@
         "pl": "Nagłe przypadki całodobowo, 365 dni w roku; 0:00–9:00 zadzwoń przed przyjazdem",
         "cs": "Pohotovost nonstop, 365 dní v roce; od 00:00 do 09:00 před příjezdem zavolejte",
         "sv": "Akutfall dygnet runt, 365 dagar om året; 00.00–09.00 ring innan du kommer",
-        "da": "Akut døgnet rundt, 365 dage om året; 00.00–09.00 ring på forhånd"
+        "da": "Akut døgnet rundt, 365 dage om året; 00.00–09.00 ring på forhånd",
+        "fi": "Päivystys 24 h, 365 päivää; klo 0.00–9.00 soita ennen tuloa"
       },
       "small_animals": true,
       "url": "https://kkg.gr/",
@@ -1516,7 +1565,8 @@
         "pl": "Nagłe przypadki całodobowo, także w niedziele i święta; konsultacje pon./śr./sob. 10:00–13:00, wt./czw./pt. 17:30–20:00",
         "cs": "Pohotovost nonstop včetně nedělí a svátků; ordinační hodiny Po, St, so 10:00–13:00, Út, Čt, Pá 17:30–20:00",
         "sv": "Akutfall dygnet runt, även söndagar och helgdagar; konsultationer mån/ons/lör 10.00–13.00, tis/tors/fre 17.30–20.00",
-        "da": "Akut døgnet rundt inkl. søn- og helligdage; konsultation man/ons/lør 10.00–13.00, tirs/tors/fre 17.30–20.00"
+        "da": "Akut døgnet rundt inkl. søn- og helligdage; konsultation man/ons/lør 10.00–13.00, tirs/tors/fre 17.30–20.00",
+        "fi": "Päivystys 24 h myös sunnuntaisin ja pyhinä; vastaanotto ma, ke, la 10.00–13.00; ti, to, pe 17.30–20.00"
       },
       "small_animals": true,
       "url": "https://www.mantakas.gr/",
@@ -1545,7 +1595,8 @@
         "pl": "Całodobowo",
         "cs": "Nonstop",
         "sv": "Dygnet runt",
-        "da": "Døgnåben"
+        "da": "Døgnåben",
+        "fi": "24 h"
       },
       "small_animals": true,
       "url": "https://pet-clinic.gr/",
@@ -1575,7 +1626,8 @@
         "pl": "Codziennie 9:00–22:00; w pozostałych godzinach weterynarz na dyżurze",
         "cs": "Denně 09:00–22:00; mimo tuto dobu veterinář v pohotovosti",
         "sv": "Dagligen 09.00–22.00; veterinär i jour övrig tid",
-        "da": "Dagligt 09.00–22.00; vagthavende dyrlæge resten af tiden"
+        "da": "Dagligt 09.00–22.00; vagthavende dyrlæge resten af tiden",
+        "fi": "Päivittäin 9.00–22.00; muina aikoina päivystävä eläinlääkäri"
       },
       "small_animals": true,
       "url": "https://pet-clinic.gr/",
@@ -1618,7 +1670,8 @@
         "pl": "pon.–pt. 9:00–21:00, sob. 10:00–18:00; poza godzinami pracy dyżur +30 694 799 3873",
         "cs": "Po–Pá 09:00–21:00, so 10:00–18:00; pohotovost mimo ordinační dobu +30 694 799 3873",
         "sv": "Mån–fre 09.00–21.00, lör 10.00–18.00; jourtelefon utanför öppettid +30 694 799 3873",
-        "da": "Man–fre 09.00–21.00, lør 10.00–18.00; uden for åbningstid vagttelefon +30 694 799 3873"
+        "da": "Man–fre 09.00–21.00, lør 10.00–18.00; uden for åbningstid vagttelefon +30 694 799 3873",
+        "fi": "ma–pe 9.00–21.00, la 10.00–18.00; päivystys virka-ajan ulkopuolella +30 694 799 3873"
       },
       "small_animals": true,
       "url": "https://www.kontostolivet.gr/",
@@ -1648,7 +1701,8 @@
         "pl": "pon.–pt. 10:00–18:00, sob. 10:00–14:00; tel. komórkowy +30 694 710 0924",
         "cs": "Po–Pá 10:00–18:00, so 10:00–14:00; mobil +30 694 710 0924",
         "sv": "Mån–fre 10.00–18.00, lör 10.00–14.00; mobil +30 694 710 0924",
-        "da": "Man–fre 10.00–18.00, lør 10.00–14.00; mobil +30 694 710 0924"
+        "da": "Man–fre 10.00–18.00, lør 10.00–14.00; mobil +30 694 710 0924",
+        "fi": "ma–pe 10.00–18.00, la 10.00–14.00; matkapuhelin +30 694 710 0924"
       },
       "small_animals": true,
       "url": "https://vet-med.gr/",
@@ -1678,7 +1732,8 @@
         "pl": "pon.–pt. 8:30–14:00 i 18:00–20:00, sob. 8:30–13:30 (po wcześniejszym umówieniu); nagłe przypadki całodobowo pod +30 698 101 0706",
         "cs": "Po–Pá 08:30–14:00 a 18:00–20:00, so 08:30–13:30 (na objednání); pohotovost nonstop na +30 698 101 0706",
         "sv": "Mån–fre 08.30–14.00 och 18.00–20.00, lör 08.30–13.30 (efter bokad tid); akutfall dygnet runt på +30 698 101 0706",
-        "da": "Man–fre 08.30–14.00 og 18.00–20.00, lør 08.30–13.30 (efter aftale); akut døgnet rundt på +30 698 101 0706"
+        "da": "Man–fre 08.30–14.00 og 18.00–20.00, lør 08.30–13.30 (efter aftale); akut døgnet rundt på +30 698 101 0706",
+        "fi": "ma–pe 8.30–14.00 ja 18.00–20.00, la 8.30–13.30 (ajanvarauksella); päivystys 24/7 numerossa +30 698 101 0706"
       },
       "small_animals": true,
       "url": "https://vetclinic-pirgos.gr/en",
@@ -1708,7 +1763,8 @@
         "pl": "Także +30 22310 44463, tel. komórkowy +30 697 885 5533",
         "cs": "Také +30 22310 44463, mobil +30 697 885 5533",
         "sv": "Även +30 22310 44463, mobil +30 697 885 5533",
-        "da": "Også +30 22310 44463, mobil +30 697 885 5533"
+        "da": "Også +30 22310 44463, mobil +30 697 885 5533",
+        "fi": "Lisäksi +30 22310 44463, matkapuhelin +30 697 885 5533"
       },
       "small_animals": true,
       "url": "https://ktiniatrikiepe.4ty.gr/",
@@ -1738,7 +1794,8 @@
         "pl": "Także +30 210 496 0145, tel. komórkowy +30 693 248 6039",
         "cs": "Také +30 210 496 0145, mobil +30 693 248 6039",
         "sv": "Även +30 210 496 0145, mobil +30 693 248 6039",
-        "da": "Også +30 210 496 0145, mobil +30 693 248 6039"
+        "da": "Også +30 210 496 0145, mobil +30 693 248 6039",
+        "fi": "Lisäksi +30 210 496 0145, matkapuhelin +30 693 248 6039"
       },
       "small_animals": true,
       "url": "https://pet-vet.gr/",
@@ -1793,7 +1850,8 @@
         "pl": "pon.–pt. 10:00–19:30 po wcześniejszym umówieniu; nagłe przypadki +30 697 735 5767",
         "cs": "Po–Pá 10:00–19:30 na objednání; pohotovost +30 697 735 5767",
         "sv": "Mån–fre 10.00–19.30 efter bokad tid; akutfall +30 697 735 5767",
-        "da": "Man–fre 10.00–19.30 efter aftale; akut +30 697 735 5767"
+        "da": "Man–fre 10.00–19.30 efter aftale; akut +30 697 735 5767",
+        "fi": "ma–pe 10.00–19.30 ajanvarauksella; päivystys +30 697 735 5767"
       },
       "small_animals": true,
       "url": "https://2vets4pets.gr/",
@@ -1822,7 +1880,8 @@
         "pl": "pon.–pt. 10:00–19:00, sob. 10:00–14:00, po wcześniejszym umówieniu",
         "cs": "Po–Pá 10:00–19:00, so 10:00–14:00, na objednání",
         "sv": "Mån–fre 10.00–19.00, lör 10.00–14.00, efter bokad tid",
-        "da": "Man–fre 10.00–19.00, lør 10.00–14.00, efter aftale"
+        "da": "Man–fre 10.00–19.00, lør 10.00–14.00, efter aftale",
+        "fi": "ma–pe 10.00–19.00, la 10.00–14.00, ajanvarauksella"
       },
       "small_animals": true,
       "url": "https://www.animalmedicalcenter.gr/",
@@ -1850,7 +1909,8 @@
         "pl": "Tel. komórkowy +30 694 079 9744",
         "cs": "Mobil +30 694 079 9744",
         "sv": "Mobil +30 694 079 9744",
-        "da": "Mobil +30 694 079 9744"
+        "da": "Mobil +30 694 079 9744",
+        "fi": "Matkapuhelin +30 694 079 9744"
       },
       "small_animals": true,
       "url": "https://www.vetpaws.gr/",
@@ -1891,7 +1951,8 @@
         "pl": "pon.–pt. 10:00–13:00 i 17:00–20:00",
         "cs": "Po–Pá 10:00–13:00 a 17:00–20:00",
         "sv": "Mån–fre 10.00–13.00 och 17.00–20.00",
-        "da": "Man–fre 10.00–13.00 og 17.00–20.00"
+        "da": "Man–fre 10.00–13.00 og 17.00–20.00",
+        "fi": "ma–pe 10.00–13.00 ja 17.00–20.00"
       },
       "small_animals": true,
       "url": "https://www.medicalzoo.gr/",
@@ -1919,7 +1980,8 @@
         "pl": "pon.–pt. 10:00–13:00 i 17:00–20:00, sob. 10:00–13:00",
         "cs": "Po–Pá 10:00–13:00 a 17:00–20:00, so 10:00–13:00",
         "sv": "Mån–fre 10.00–13.00 och 17.00–20.00, lör 10.00–13.00",
-        "da": "Man–fre 10.00–13.00 og 17.00–20.00, lør 10.00–13.00"
+        "da": "Man–fre 10.00–13.00 og 17.00–20.00, lør 10.00–13.00",
+        "fi": "ma–pe 10.00–13.00 ja 17.00–20.00, la 10.00–13.00"
       },
       "small_animals": true,
       "url": "https://www.medicalzoo.gr/",
@@ -1947,7 +2009,8 @@
         "pl": "pon., wt., czw., pt. 10:00–13:00 i 17:00–20:00; śr. 10:00–18:00; sob. 11:00–13:00; po wcześniejszym umówieniu; tel. komórkowy +30 694 457 1156",
         "cs": "Po, Út, Čt, Pá 10:00–13:00 a 17:00–20:00; St 10:00–18:00; so 11:00–13:00; na objednání; mobil +30 694 457 1156",
         "sv": "Mån, tis, tors, fre 10.00–13.00 och 17.00–20.00; ons 10.00–18.00; lör 11.00–13.00; efter bokad tid; mobil +30 694 457 1156",
-        "da": "Man, tirs, tors, fre 10.00–13.00 og 17.00–20.00; ons 10.00–18.00; lør 11.00–13.00; efter aftale; mobil +30 694 457 1156"
+        "da": "Man, tirs, tors, fre 10.00–13.00 og 17.00–20.00; ons 10.00–18.00; lør 11.00–13.00; efter aftale; mobil +30 694 457 1156",
+        "fi": "ma, ti, to, pe 10.00–13.00 ja 17.00–20.00; ke 10.00–18.00; la 11.00–13.00; ajanvarauksella; matkapuhelin +30 694 457 1156"
       },
       "small_animals": true,
       "url": "https://vetlinou.gr/",
@@ -1975,7 +2038,8 @@
         "pl": "pon.–pt. 9:00–13:30 i 17:00–20:00, sob. 10:00–13:00; telefon w nagłych przypadkach +30 697 755 8945",
         "cs": "Po–Pá 09:00–13:30 a 17:00–20:00, so 10:00–13:00; pohotovostní telefon +30 697 755 8945",
         "sv": "Mån–fre 09.00–13.30 och 17.00–20.00, lör 10.00–13.00; akuttelefon +30 697 755 8945",
-        "da": "Man–fre 09.00–13.30 og 17.00–20.00, lør 10.00–13.00; akuttelefon +30 697 755 8945"
+        "da": "Man–fre 09.00–13.30 og 17.00–20.00, lør 10.00–13.00; akuttelefon +30 697 755 8945",
+        "fi": "ma–pe 9.00–13.30 ja 17.00–20.00, la 10.00–13.00; päivystyspuhelin +30 697 755 8945"
       },
       "small_animals": true,
       "url": "https://www.petvets.gr/",
@@ -2003,7 +2067,8 @@
         "pl": "Infolinia 10:00–24:00; w dni robocze po wcześniejszym umówieniu; filia Kastella (Παναγίας Μυρτιδιωτίσσης 8) +30 211 184 7273",
         "cs": "Call centrum 10:00–24:00; v pracovní dny na objednání; pobočka Kastella (Παναγίας Μυρτιδιωτίσσης 8) +30 211 184 7273",
         "sv": "Callcenter 10.00–24.00; vardagar efter bokad tid; filial Kastella (Παναγίας Μυρτιδιωτίσσης 8) +30 211 184 7273",
-        "da": "Callcenter 10.00–24.00; på hverdage efter aftale; afdeling Kastella (Παναγίας Μυρτιδιωτίσσης 8) +30 211 184 7273"
+        "da": "Callcenter 10.00–24.00; på hverdage efter aftale; afdeling Kastella (Παναγίας Μυρτιδιωτίσσης 8) +30 211 184 7273",
+        "fi": "Puhelinpalvelu 10.00–24.00; arkisin ajanvarauksella; toimipiste Kastella (Παναγίας Μυρτιδιωτίσσης 8) +30 211 184 7273"
       },
       "small_animals": true,
       "url": "https://kmy.gr/",
@@ -2032,7 +2097,8 @@
         "pl": "pon.–pt. 10:00–20:00, sob. 10:00–13:00; tel. komórkowy +30 698 087 3838",
         "cs": "Po–Pá 10:00–20:00, so 10:00–13:00; mobil +30 698 087 3838",
         "sv": "Mån–fre 10.00–20.00, lör 10.00–13.00; mobil +30 698 087 3838",
-        "da": "Man–fre 10.00–20.00, lør 10.00–13.00; mobil +30 698 087 3838"
+        "da": "Man–fre 10.00–20.00, lør 10.00–13.00; mobil +30 698 087 3838",
+        "fi": "ma–pe 10.00–20.00, la 10.00–13.00; matkapuhelin +30 698 087 3838"
       },
       "small_animals": true,
       "url": "https://vets4life.gr/en/",
@@ -2060,7 +2126,8 @@
         "pl": "pon.–pt. po wcześniejszym umówieniu",
         "cs": "Po–Pá na objednání",
         "sv": "Mån–fre efter bokad tid",
-        "da": "Man–fre efter aftale"
+        "da": "Man–fre efter aftale",
+        "fi": "ma–pe ajanvarauksella"
       },
       "small_animals": true,
       "url": "https://vetsurgery.gr/",
@@ -2089,7 +2156,8 @@
         "pl": "Także +30 2810 341690",
         "cs": "Také +30 2810 341690",
         "sv": "Även +30 2810 341690",
-        "da": "Også +30 2810 341690"
+        "da": "Også +30 2810 341690",
+        "fi": "Lisäksi +30 2810 341690"
       },
       "small_animals": true,
       "url": "https://www.cretavetclinic.gr/",
@@ -2117,7 +2185,8 @@
         "pl": "Po wcześniejszym umówieniu; tel. komórkowy +30 694 086 6215",
         "cs": "Na objednání; mobil +30 694 086 6215",
         "sv": "Efter bokad tid; mobil +30 694 086 6215",
-        "da": "Efter aftale; mobil +30 694 086 6215"
+        "da": "Efter aftale; mobil +30 694 086 6215",
+        "fi": "Ajanvarauksella; matkapuhelin +30 694 086 6215"
       },
       "small_animals": true,
       "url": "https://www.fepvet.gr/en/",
@@ -2145,7 +2214,8 @@
         "pl": "Poza godzinami pracy: +30 690 753 9910",
         "cs": "Mimo ordinační dobu: +30 690 753 9910",
         "sv": "Utanför öppettid: +30 690 753 9910",
-        "da": "Uden for åbningstid: +30 690 753 9910"
+        "da": "Uden for åbningstid: +30 690 753 9910",
+        "fi": "Virka-ajan ulkopuolella: +30 690 753 9910"
       },
       "small_animals": true,
       "url": "https://symviosis.vet/en/",
@@ -2173,7 +2243,8 @@
         "pl": "Poza godzinami pracy: +30 697 005 5012",
         "cs": "Mimo ordinační dobu: +30 697 005 5012",
         "sv": "Utanför öppettid: +30 697 005 5012",
-        "da": "Uden for åbningstid: +30 697 005 5012"
+        "da": "Uden for åbningstid: +30 697 005 5012",
+        "fi": "Virka-ajan ulkopuolella: +30 697 005 5012"
       },
       "small_animals": true,
       "url": "https://symviosis.vet/en/",
@@ -2217,7 +2288,8 @@
         "pl": "pon.–sob. 9:00–14:00, wt. i czw. także 17:30–20:30; linia weterynarza +30 698 182 5728",
         "cs": "Po–so 09:00–14:00, Út a Čt také 17:30–20:30; linka veterináře +30 698 182 5728",
         "sv": "Mån–lör 09.00–14.00, tis och tors även 17.30–20.30; veterinärlinje +30 698 182 5728",
-        "da": "Man–lør 09.00–14.00, tirs og tors også 17.30–20.30; dyrlægetelefon +30 698 182 5728"
+        "da": "Man–lør 09.00–14.00, tirs og tors også 17.30–20.30; dyrlægetelefon +30 698 182 5728",
+        "fi": "ma–la 9.00–14.00, ti ja to myös 17.30–20.30; eläinlääkärin linja +30 698 182 5728"
       },
       "small_animals": true,
       "url": "https://agrozo.com/",
@@ -2246,7 +2318,8 @@
         "pl": "Telefon w nagłych przypadkach +30 694 715 1585",
         "cs": "Pohotovostní telefon +30 694 715 1585",
         "sv": "Akuttelefon +30 694 715 1585",
-        "da": "Akuttelefon +30 694 715 1585"
+        "da": "Akuttelefon +30 694 715 1585",
+        "fi": "Päivystyspuhelin +30 694 715 1585"
       },
       "small_animals": true,
       "url": "https://lefkasvetclinic.gr/",
@@ -2274,7 +2347,8 @@
         "pl": "Tel. komórkowy +30 694 722 0097",
         "cs": "Mobil +30 694 722 0097",
         "sv": "Mobil +30 694 722 0097",
-        "da": "Mobil +30 694 722 0097"
+        "da": "Mobil +30 694 722 0097",
+        "fi": "Matkapuhelin +30 694 722 0097"
       },
       "small_animals": true,
       "source_url": "https://www.agni-animal-welfare-fund.co.uk/find-a-local-vet",
@@ -2302,7 +2376,8 @@
         "pl": "Tel. komórkowy +30 690 900 0459",
         "cs": "Mobil +30 690 900 0459",
         "sv": "Mobil +30 690 900 0459",
-        "da": "Mobil +30 690 900 0459"
+        "da": "Mobil +30 690 900 0459",
+        "fi": "Matkapuhelin +30 690 900 0459"
       },
       "small_animals": true,
       "source_url": "https://www.agni-animal-welfare-fund.co.uk/find-a-local-vet",
@@ -2330,7 +2405,8 @@
         "pl": "Tel. komórkowy +30 694 494 9722",
         "cs": "Mobil +30 694 494 9722",
         "sv": "Mobil +30 694 494 9722",
-        "da": "Mobil +30 694 494 9722"
+        "da": "Mobil +30 694 494 9722",
+        "fi": "Matkapuhelin +30 694 494 9722"
       },
       "small_animals": true,
       "source_url": "https://www.agni-animal-welfare-fund.co.uk/find-a-local-vet",
@@ -2358,7 +2434,8 @@
         "pl": "pon., śr., sob. 10:00–14:00; wt., czw., pt. 10:00–14:00 i 18:00–20:30; nagłe przypadki +30 694 481 8484",
         "cs": "Po, St, so 10:00–14:00; Út, Čt, Pá 10:00–14:00 a 18:00–20:30; pohotovost +30 694 481 8484",
         "sv": "Mån, ons, lör 10.00–14.00; tis, tors, fre 10.00–14.00 och 18.00–20.30; akutfall +30 694 481 8484",
-        "da": "Man, ons, lør 10.00–14.00; tirs, tors, fre 10.00–14.00 og 18.00–20.30; akut +30 694 481 8484"
+        "da": "Man, ons, lør 10.00–14.00; tirs, tors, fre 10.00–14.00 og 18.00–20.30; akut +30 694 481 8484",
+        "fi": "ma, ke, la 10.00–14.00; ti, to, pe 10.00–14.00 ja 18.00–20.30; päivystys +30 694 481 8484"
       },
       "small_animals": true,
       "url": "https://vetcenterpreveza.gr/",
@@ -2386,7 +2463,8 @@
         "pl": "pon.–pt. 10:00–17:00",
         "cs": "Po–Pá 10:00–17:00",
         "sv": "Mån–fre 10.00–17.00",
-        "da": "Man–fre 10.00–17.00"
+        "da": "Man–fre 10.00–17.00",
+        "fi": "ma–pe 10.00–17.00"
       },
       "small_animals": true,
       "url": "https://www.vetcare-preveza.gr/",
@@ -2414,7 +2492,8 @@
         "pl": "Tel. komórkowy +30 695 056 2353",
         "cs": "Mobil +30 695 056 2353",
         "sv": "Mobil +30 695 056 2353",
-        "da": "Mobil +30 695 056 2353"
+        "da": "Mobil +30 695 056 2353",
+        "fi": "Matkapuhelin +30 695 056 2353"
       },
       "small_animals": true,
       "url": "https://ktiniatros-ioannina.gr/",
@@ -2442,7 +2521,8 @@
         "pl": "pon.–sob. 10:00–14:00 i 18:00–21:00, w środy zamknięte; po wcześniejszym umówieniu",
         "cs": "Po–so 10:00–14:00 a 18:00–21:00, ve středu zavřeno; na objednání",
         "sv": "Mån–lör 10.00–14.00 och 18.00–21.00, onsdag stängt; efter bokad tid",
-        "da": "Man–lør 10.00–14.00 og 18.00–21.00, lukket onsdag; efter aftale"
+        "da": "Man–lør 10.00–14.00 og 18.00–21.00, lukket onsdag; efter aftale",
+        "fi": "ma–la 10.00–14.00 ja 18.00–21.00, keskiviikkoisin suljettu; ajanvarauksella"
       },
       "small_animals": true,
       "url": "https://slafioniatis.gr/",
@@ -2470,7 +2550,8 @@
         "pl": "pon.–pt. 9:30–18:00; tel. komórkowy +30 694 468 8020",
         "cs": "Po–Pá 09:30–18:00; mobil +30 694 468 8020",
         "sv": "Mån–fre 09.30–18.00; mobil +30 694 468 8020",
-        "da": "Man–fre 09.30–18.00; mobil +30 694 468 8020"
+        "da": "Man–fre 09.30–18.00; mobil +30 694 468 8020",
+        "fi": "ma–pe 9.30–18.00; matkapuhelin +30 694 468 8020"
       },
       "small_animals": true,
       "url": "https://symeonidisvet.gr/",
@@ -2510,7 +2591,8 @@
         "pl": "pon.–pt. rano (8:00–14:00 lub 9:00–14:30), wt. i czw. 18:00–20:00, sob. 9:30–13:30; tel. komórkowy +30 693 203 6426",
         "cs": "Po–Pá dopoledne (08:00–14:00 nebo 09:00–14:30), Út a Čt 18:00–20:00, so 09:30–13:30; mobil +30 693 203 6426",
         "sv": "Mån–fre förmiddag (08.00–14.00 eller 09.00–14.30), tis och tors 18.00–20.00, lör 09.30–13.30; mobil +30 693 203 6426",
-        "da": "Man–fre om formiddagen (08.00–14.00 eller 09.00–14.30), tirs og tors 18.00–20.00, lør 09.30–13.30; mobil +30 693 203 6426"
+        "da": "Man–fre om formiddagen (08.00–14.00 eller 09.00–14.30), tirs og tors 18.00–20.00, lør 09.30–13.30; mobil +30 693 203 6426",
+        "fi": "ma–pe aamupäivisin (8.00–14.00 tai 9.00–14.30), ti ja to 18.00–20.00, la 9.30–13.30; matkapuhelin +30 693 203 6426"
       },
       "note": "Source page gives two different morning hour ranges.",
       "small_animals": true,
@@ -2539,7 +2621,8 @@
         "pl": "pon.–sob. 8:00–14:30; wt. i czw. także 17:30–20:30; także +30 694 427 1776",
         "cs": "Po–so 08:00–14:30; Út a Čt také 17:30–20:30; také +30 694 427 1776",
         "sv": "Mån–lör 08.00–14.30; tis och tors även 17.30–20.30; även +30 694 427 1776",
-        "da": "Man–lør 08.00–14.30; tirs og tors også 17.30–20.30; også +30 694 427 1776"
+        "da": "Man–lør 08.00–14.30; tirs og tors også 17.30–20.30; også +30 694 427 1776",
+        "fi": "ma–la 8.00–14.30; ti ja to myös 17.30–20.30; myös +30 694 427 1776"
       },
       "small_animals": true,
       "url": "https://ktiniatreiotsatsakoulias.wordpress.com/",
@@ -2568,7 +2651,8 @@
         "pl": "pon., wt., czw., pt. 9:00–14:30 i 18:00–21:00; śr. 9:00–14:30; sob. 9:00–15:00; tel. komórkowy +30 694 691 7073",
         "cs": "Po, Út, Čt, Pá 09:00–14:30 a 18:00–21:00; St 09:00–14:30; so 09:00–15:00; mobil +30 694 691 7073",
         "sv": "Mån, tis, tors, fre 09.00–14.30 och 18.00–21.00; ons 09.00–14.30; lör 09.00–15.00; mobil +30 694 691 7073",
-        "da": "Man, tirs, tors, fre 09.00–14.30 og 18.00–21.00; ons 09.00–14.30; lør 09.00–15.00; mobil +30 694 691 7073"
+        "da": "Man, tirs, tors, fre 09.00–14.30 og 18.00–21.00; ons 09.00–14.30; lør 09.00–15.00; mobil +30 694 691 7073",
+        "fi": "ma, ti, to, pe 9.00–14.30 ja 18.00–21.00; ke 9.00–14.30; la 9.00–15.00; matkapuhelin +30 694 691 7073"
       },
       "small_animals": true,
       "url": "https://ktiniatreiovetlife.webnode.gr/",
@@ -2596,7 +2680,8 @@
         "pl": "pon., śr., pt., sob. 9:30–13:30; wt. i czw. 9:30–13:30 i 18:00–20:00",
         "cs": "Po, St, Pá, so 09:30–13:30; Út a Čt 09:30–13:30 a 18:00–20:00",
         "sv": "Mån, ons, fre, lör 09.30–13.30; tis och tors 09.30–13.30 och 18.00–20.00",
-        "da": "Man, ons, fre, lør 09.30–13.30; tirs og tors 09.30–13.30 og 18.00–20.00"
+        "da": "Man, ons, fre, lør 09.30–13.30; tirs og tors 09.30–13.30 og 18.00–20.00",
+        "fi": "ma, ke, pe, la 9.30–13.30; ti ja to 9.30–13.30 ja 18.00–20.00"
       },
       "small_animals": true,
       "url": "https://pavlouelenivet.gr/",
@@ -2624,7 +2709,8 @@
         "pl": "Tel. komórkowy +30 698 199 4466",
         "cs": "Mobil +30 698 199 4466",
         "sv": "Mobil +30 698 199 4466",
-        "da": "Mobil +30 698 199 4466"
+        "da": "Mobil +30 698 199 4466",
+        "fi": "Matkapuhelin +30 698 199 4466"
       },
       "small_animals": true,
       "url": "https://www.ktiniatreio-alikisland.gr/",
@@ -2652,7 +2738,8 @@
         "pl": "Tel. komórkowy +30 693 700 3780",
         "cs": "Mobil +30 693 700 3780",
         "sv": "Mobil +30 693 700 3780",
-        "da": "Mobil +30 693 700 3780"
+        "da": "Mobil +30 693 700 3780",
+        "fi": "Matkapuhelin +30 693 700 3780"
       },
       "small_animals": true,
       "url": "https://pharmavet.gr/",
@@ -2681,7 +2768,8 @@
         "pl": "pon.–pt. 9:00–13:00 i 17:00–20:00; sob. 9:00–13:00",
         "cs": "Po–Pá 09:00–13:00 a 17:00–20:00; so 09:00–13:00",
         "sv": "Mån–fre 09.00–13.00 och 17.00–20.00; lör 09.00–13.00",
-        "da": "Man–fre 09.00–13.00 og 17.00–20.00; lør 09.00–13.00"
+        "da": "Man–fre 09.00–13.00 og 17.00–20.00; lør 09.00–13.00",
+        "fi": "ma–pe 9.00–13.00 ja 17.00–20.00; la 9.00–13.00"
       },
       "small_animals": true,
       "source_url": "https://animalrescuekos.weebly.com/sheltervet-contactgeneral-inquiry-form.html",
@@ -2708,7 +2796,8 @@
         "pl": "pon.–pt. 10:00–18:00, po wcześniejszym umówieniu; poza godzinami pracy kliniki tylko nagłe przypadki",
         "cs": "Po–Pá 10:00–18:00 na objednání; mimo ordinační dobu pouze pohotovost",
         "sv": "Mån–fre 10.00–18.00, efter bokad tid; utanför klinikens öppettider endast akutfall",
-        "da": "Man–fre 10.00–18.00, efter aftale; uden for klinikkens åbningstid kun akutte tilfælde"
+        "da": "Man–fre 10.00–18.00, efter aftale; uden for klinikkens åbningstid kun akutte tilfælde",
+        "fi": "ma–pe 10.00–18.00, ajanvarauksella; klinikan aukioloaikojen ulkopuolella vain päivystystapaukset"
       },
       "small_animals": true,
       "source_url": "https://forthecatsofmilos.org/",
@@ -2736,7 +2825,8 @@
         "pl": "pon., śr. 8:30–14:30; wt., czw., pt. 8:30–14:30 i 18:00–20:00; sob. 9:00–14:00",
         "cs": "Po, St 08:30–14:30; Út, Čt, Pá 08:30–14:30 a 18:00–20:00; so 09:00–14:00",
         "sv": "Mån, ons 08.30–14.30; tis, tors, fre 08.30–14.30 och 18.00–20.00; lör 09.00–14.00",
-        "da": "Man, ons 08.30–14.30; tirs, tors, fre 08.30–14.30 og 18.00–20.00; lør 09.00–14.00"
+        "da": "Man, ons 08.30–14.30; tirs, tors, fre 08.30–14.30 og 18.00–20.00; lør 09.00–14.00",
+        "fi": "ma, ke 8.30–14.30; ti, to, pe 8.30–14.30 ja 18.00–20.00; la 9.00–14.00"
       },
       "small_animals": true,
       "source_url": "https://kefaloniaanimaltrust.org/vets-working-with-kat/",
@@ -2764,7 +2854,8 @@
         "pl": "pon., śr. 8:30–15:00; wt., czw., pt. 8:30–15:00 i 17:30–20:00",
         "cs": "Po, St 08:30–15:00; Út, Čt, Pá 08:30–15:00 a 17:30–20:00",
         "sv": "Mån, ons 08.30–15.00; tis, tors, fre 08.30–15.00 och 17.30–20.00",
-        "da": "Man, ons 08.30–15.00; tirs, tors, fre 08.30–15.00 og 17.30–20.00"
+        "da": "Man, ons 08.30–15.00; tirs, tors, fre 08.30–15.00 og 17.30–20.00",
+        "fi": "ma, ke 8.30–15.00; ti, to, pe 8.30–15.00 ja 17.30–20.00"
       },
       "small_animals": true,
       "source_url": "https://kefaloniaanimaltrust.org/vets-working-with-kat/",
@@ -2792,7 +2883,8 @@
         "pl": "pon.–pt. 9:00–13:00 (tylko rano)",
         "cs": "Po–Pá 09:00–13:00 (pouze dopoledne)",
         "sv": "Mån–fre 09.00–13.00 (endast förmiddagar)",
-        "da": "Man–fre 09.00–13.00 (kun om formiddagen)"
+        "da": "Man–fre 09.00–13.00 (kun om formiddagen)",
+        "fi": "ma–pe 9.00–13.00 (vain aamuisin)"
       },
       "small_animals": true,
       "source_url": "https://greekcats.org.uk/what-to-do-if-you-find-an-injured-or-ill-cat-or-dog-in-kefalonia/",
@@ -2820,7 +2912,8 @@
         "pl": "pon.–pt. 9:30–14:00 i 18:15–20:00; sob. 9:30–13:00",
         "cs": "Po–Pá 09:30–14:00 a 18:15–20:00; so 09:30–13:00",
         "sv": "Mån–fre 09.30–14.00 och 18.15–20.00; lör 09.30–13.00",
-        "da": "Man–fre 09.30–14.00 og 18.15–20.00; lør 09.30–13.00"
+        "da": "Man–fre 09.30–14.00 og 18.15–20.00; lør 09.30–13.00",
+        "fi": "ma–pe 9.30–14.00 ja 18.15–20.00; la 9.30–13.00"
       },
       "small_animals": true,
       "source_url": "https://greekcats.org.uk/what-to-do-if-you-find-an-injured-or-ill-cat-or-dog-in-kefalonia/",
@@ -2862,7 +2955,8 @@
         "pl": "pon. i śr. 9:00–14:00 i 18:00–20:45; wt., czw. 9:00–14:00; pt. 9:00–14:00 i wieczorem; w soboty zamknięte",
         "cs": "Po a St 09:00–14:00 a 18:00–20:45; Út, Čt 09:00–14:00; Pá 09:00–14:00 a večer; v sobotu zavřeno",
         "sv": "Mån och ons 09.00–14.00 och 18.00–20.45; tis, tors 09.00–14.00; fre 09.00–14.00 och kväll; lör stängt",
-        "da": "Man og ons 09.00–14.00 og 18.00–20.45; tirs, tors 09.00–14.00; fre 09.00–14.00 og om aftenen; lør lukket"
+        "da": "Man og ons 09.00–14.00 og 18.00–20.45; tirs, tors 09.00–14.00; fre 09.00–14.00 og om aftenen; lør lukket",
+        "fi": "ma ja ke 9.00–14.00 ja 18.00–20.45; ti, to 9.00–14.00; pe 9.00–14.00 ja ilta; la suljettu"
       },
       "small_animals": true,
       "url": "https://65f30c8884419.site123.me/",
@@ -2911,7 +3005,8 @@
         "pl": "Nagłe przypadki całodobowo (linie pogotowia +30 698 234 0617, +30 698 234 0618); wizyty w przychodni po wcześniejszym umówieniu",
         "cs": "Pohotovost nonstop (pohotovostní linky +30 698 234 0617, +30 698 234 0618); návštěvy kliniky na objednání",
         "sv": "Akutfall dygnet runt (akutlinjer +30 698 234 0617, +30 698 234 0618); klinikbesök efter bokad tid",
-        "da": "Akut døgnet rundt (akuttelefoner +30 698 234 0617, +30 698 234 0618); klinikbesøg efter aftale"
+        "da": "Akut døgnet rundt (akuttelefoner +30 698 234 0617, +30 698 234 0618); klinikbesøg efter aftale",
+        "fi": "Päivystys 24/7 (päivystysnumerot +30 698 234 0617, +30 698 234 0618); klinikkakäynnit ajanvarauksella"
       }
     },
     {

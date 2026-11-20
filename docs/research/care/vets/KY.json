@@ -101,7 +101,8 @@
       "duty_i18n": {
         "cs": "Veterinární pohotovostní linka mimo ordinační dobu (uvedena jako pohotovost pro hospodářská zvířata). Kancelář Po–Pá 8:30–17:00 na čísle +1 345 947 3090.",
         "sv": "Jourlinje för veterinär utanför öppettid (listad som akutjour för lantbruksdjur). Kontor mån–fre 8.30–17.00 på +1 345 947 3090.",
-        "da": "Dyrlægevagt uden for åbningstid (opført som akutvagt for produktionsdyr). Kontor man–fre 8.30–17.00 på +1 345 947 3090."
+        "da": "Dyrlægevagt uden for åbningstid (opført som akutvagt for produktionsdyr). Kontor man–fre 8.30–17.00 på +1 345 947 3090.",
+        "fi": "Aukioloajan jälkeinen eläinlääkäripäivystys (merkitty tuotantoeläinten päivystykseksi). Toimisto ma–pe 8.30–17.00 numerossa +1 345 947 3090."
       }
     },
     {
@@ -121,7 +122,8 @@
       "duty_i18n": {
         "cs": "Kontakt na pohotovostního veterináře na Cayman Brac (mimo ordinační dobu). Kancelář Po–Pá 8:30–16:30 na čísle +1 345 948 0522 / 948 1411.",
         "sv": "Jourhavande veterinär på Cayman Brac (utanför öppettid). Kontor mån–fre 8.30–16.30 på +1 345 948 0522 / 948 1411.",
-        "da": "Kontakt til akutdyrlæge på Cayman Brac (uden for åbningstid). Kontor man–fre 8.30–16.30 på +1 345 948 0522 / 948 1411."
+        "da": "Kontakt til akutdyrlæge på Cayman Brac (uden for åbningstid). Kontor man–fre 8.30–16.30 på +1 345 948 0522 / 948 1411.",
+        "fi": "Päivystävän eläinlääkärin yhteys Cayman Bracilla (aukioloajan jälkeen). Toimisto ma–pe 8.30–16.30 numeroissa +1 345 948 0522 / 948 1411."
       }
     },
     {
@@ -141,7 +143,8 @@
       "duty_i18n": {
         "cs": "Po–Pá 8:00–17:00, poslední sobotu v měsíci 8:00–13:00, v neděli zavřeno. Pohotovostní linka +1 345 916 7387 (pouze pro klienty): mimo ordinační dobu v pracovní dny a nonstop o víkendech a státních svátcích.",
         "sv": "Mån–fre 8.00–17.00, sista lördagen i månaden 8.00–13.00, stängt söndag. Akutlinje +1 345 916 7387 (endast för kunder): utanför öppettid på vardagar och dygnet runt på helger och helgdagar.",
-        "da": "Man–fre 8.00–17.00, sidste lørdag i måneden 8.00–13.00, lukket søndag. Akuttelefon +1 345 916 7387 (kun kunder): uden for åbningstid på hverdage og døgnet rundt i weekender og på helligdage."
+        "da": "Man–fre 8.00–17.00, sidste lørdag i måneden 8.00–13.00, lukket søndag. Akuttelefon +1 345 916 7387 (kun kunder): uden for åbningstid på hverdage og døgnet rundt i weekender og på helligdage.",
+        "fi": "ma–pe 8.00–17.00, kuukauden viimeinen lauantai 8.00–13.00, suljettu sunnuntaisin. Päivystyslinja +1 345 916 7387 (vain asiakkaille): arkisin aukioloajan jälkeen ja viikonloppuisin sekä pyhinä 24/7."
       }
     },
     {
@@ -161,7 +164,8 @@
       "duty_i18n": {
         "cs": "Po–Pá 8:00–18:00, so 8:30–13:30, pouze na objednání, v neděli a o státních svátcích zavřeno. Pohotovostní linka mimo ordinační dobu +1 345 525 5838. Výjezdní služba v úterý a v sobotu dopoledne.",
         "sv": "Mån–fre 8.00–18.00, lör 8.30–13.30, endast efter bokad tid, stängt söndag och helgdagar. Akutlinje utanför öppettid +1 345 525 5838. Mobila besök tis och lör förmiddag.",
-        "da": "Man–fre 8.00–18.00, lør 8.30–13.30, kun efter aftale, lukket søndag og helligdage. Akuttelefon uden for åbningstid +1 345 525 5838. Mobil dyrlæge tirs og lør formiddag."
+        "da": "Man–fre 8.00–18.00, lør 8.30–13.30, kun efter aftale, lukket søndag og helligdage. Akuttelefon uden for åbningstid +1 345 525 5838. Mobil dyrlæge tirs og lør formiddag.",
+        "fi": "ma–pe 8.00–18.00, la 8.30–13.30, vain ajanvarauksella, suljettu sunnuntaisin ja pyhinä. Aukioloajan jälkeinen päivystyslinja +1 345 525 5838. Liikkuvat käynnit tiistai- ja lauantaiaamuisin."
       }
     },
     {
@@ -181,7 +185,8 @@
       "duty_i18n": {
         "cs": "Po–St a Pá 8:00–18:00, čt 8:00–17:00, so 8:00–13:00, v neděli zavřeno. Pohotovostní linka +1 345 916 2459.",
         "sv": "Mån–ons och fre 8.00–18.00, tors 8.00–17.00, lör 8.00–13.00, stängt söndag. Akutlinje +1 345 916 2459.",
-        "da": "Man–ons og fre 8.00–18.00, tors 8.00–17.00, lør 8.00–13.00, lukket søndag. Akuttelefon +1 345 916 2459."
+        "da": "Man–ons og fre 8.00–18.00, tors 8.00–17.00, lør 8.00–13.00, lukket søndag. Akuttelefon +1 345 916 2459.",
+        "fi": "ma–ke ja pe 8.00–18.00, to 8.00–17.00, la 8.00–13.00, suljettu sunnuntaisin. Päivystyslinja +1 345 916 2459."
       }
     },
     {
@@ -200,7 +205,8 @@
       "duty_i18n": {
         "cs": "Klinika pro malá zvířata. Ordinační dobu zjistíte telefonicky.",
         "sv": "Smådjursklinik. Ring för öppettider.",
-        "da": "Klinik for små dyr. Ring for åbningstider."
+        "da": "Klinik for små dyr. Ring for åbningstider.",
+        "fi": "Pieneläinklinikka. Kysy aukioloajat soittamalla."
       }
     },
     {
@@ -219,7 +225,8 @@
       "duty_i18n": {
         "cs": "Klinika s specializovaným hotelem pro zvířata. Ordinační dobu a pohotovost zjistíte telefonicky.",
         "sv": "Klinik med specialiserad djurpension. Ring för öppettider och akutfall.",
-        "da": "Klinik med dyrepension. Ring for åbningstider og akutte tilfælde."
+        "da": "Klinik med dyrepension. Ring for åbningstider og akutte tilfælde.",
+        "fi": "Klinikka, jolla on erikoistunut lemmikkihoitola. Kysy aukioloajat ja päivystys soittamalla."
       }
     },
     {
@@ -239,7 +246,8 @@
       "duty_i18n": {
         "cs": "Výjezdní služba, Po–Pá 9:00–17:00.",
         "sv": "Mobil veterinärtjänst med hembesök, mån–fre 9.00–17.00.",
-        "da": "Mobil dyrlæge med hjemmebesøg, man–fre 9.00–17.00."
+        "da": "Mobil dyrlæge med hjemmebesøg, man–fre 9.00–17.00.",
+        "fi": "Liikkuva kotikäyntipalvelu, ma–pe 9.00–17.00."
       }
     }
   ],
