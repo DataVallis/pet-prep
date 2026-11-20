@@ -242,7 +242,7 @@ Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
 - **Semafor:** zelena = redno; rumena = danes zamujeni > 2 rutini; rdeča = kritično, opozorila ignorirana.
 - 4 žive metrike (Reverb), časovnica aktivnosti ("✓ 07:15 Pes nahranjen", "✗ 14:00 Zamujeno čiščenje"), tedenski stolpčni graf.
 - Nastavitve: tihe ure, hard stop (rdeč gumb s potrditvijo), izbira in nakup pasme.
-- **Oznaka razpoloženja (David 5. 11. 2026):** ista vrstica kot pri otroku na kartici ljubljenčka v »Pregled družine« in na podrobnostih otroka — samo, ko ni zaklepa ali plačilnega zaklepa (te že kaže statusna vrstica / značka).
+- **Oznaka razpoloženja (David 5. 11. 2026):** ista vrstica kot pri otroku na kartici ljubljenčka v »Pregled družine« in na podrobnostih otroka — samo, ko ni zaklepa ali plačilnega zaklepa (te že kaže statusna vrstica / značka). **Nered ni bolezen (David 20. 11. 2026, »1+A«):** strežnik da `pet_state = sick`, ko je higiena 0 %; brez zaklepa bolezni (`is_ill`) starš vidi »Treba počistiti« (EN »Needs cleaning«), ne »Bolan« — prava bolezen ostane statusna vrstica pri veterinarju. Velja za pse in muce; otrokova glava je nespremenjena.
 
 **Semafor po pravilih (David, 4. 10. 2026; strežnik M2-06):** velja za **vsakega otroka in vsakega psa** posebej, za **današnji dan po času ljubljenčka** (njegov pas, privzeto pas družine — David 9. 11. 2026).
 - **Rdeča**, če velja karkoli od: pes je odvzet (game over); je aktiven alarm faze 3 (metrika kaže 0 % več kot 1 uro); pes je **danes** zbolel.

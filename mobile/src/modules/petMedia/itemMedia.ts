@@ -14,7 +14,10 @@
  *   decks (ball / wand v2 with their group) are never touched.
  * - `bowls` / `treats` (once) → a one-shot moment on the stage after an accepted feed / water or
  *   a given treat (`itemMomentPlayback`), then the normal stage. Picture mode → the item image
- *   for `ITEM_PICTURE_MS`.
+ *   for `ITEM_PICTURE_MS`. Bowls (David 2026-11-20, option A): an accepted FEED plays the eating
+ *   clip (`video`), an accepted WATER the drinking clip (`drink_video`) — without a drinking clip
+ *   water shows nothing item-specific in video mode (never the eating clip); picture mode → the
+ *   bowls image for both (`bowlsMoment`).
  * A missing / failing URL falls back to the item image, then to the normal scene — never blank.
  * - The album (»Moj kuža« / parent »Posnetki«, `album.ts`, 2026-11-04): the »Spi« tile shows the
  *   bed through `sceneItemFor(…, 'sleeping', …)` — the same pick as the live sleeping scene — and
@@ -147,10 +150,22 @@ export const ITEM_CLIP_GRACE_MS = 2_000;
 /** Never longer than this (a stuck player never keeps the moment on screen). */
 export const ITEM_MOMENT_MAX_MS = 10_000;
 
+/** Which bowls clip a moment plays: `eat` = the item clip (feed), `drink` = `drink_video` (water). */
+export type MomentClip = 'eat' | 'drink';
+
 export interface ItemMoment {
   key: MomentItemKey;
   /** Changes for every moment (the same clip plays again from its start). */
   instance: number;
+  /** Bowls only: `drink` after a water (default `eat`). */
+  clip?: MomentClip;
+}
+
+/** The bowls moment after an accepted care action: feed → eating, water → drinking (null = no moment). */
+export function bowlsMoment(action: string): MomentClip | null {
+  if (action === 'feed') return 'eat';
+  if (action === 'water') return 'drink';
+  return null;
 }
 
 export interface ItemMomentPlayback {
@@ -178,11 +193,16 @@ export function itemMomentPlayback(
 ): ItemMomentPlayback | null {
   const item = items[moment.key];
   const image = item?.image ?? null;
-  const clip = item?.video ?? options.fallbackClip ?? null;
+  const drink = moment.key === 'bowls' && moment.clip === 'drink';
+  // Water never borrows the eating clip: no drinking clip → nothing item-specific in video mode.
+  if (drink && mode === 'video' && item?.drinkVideo === undefined) return null;
+  const clip = drink ? (item?.drinkVideo ?? null) : (item?.video ?? options.fallbackClip ?? null);
   if (mode === 'video' && clip !== null && (options.canPlayVideo?.(clip) ?? true)) {
-    const length = item?.video === clip && item.videoMs !== null ? item.videoMs : ITEM_CLIP_DEFAULT_MS;
+    const knownMs = drink ? (item?.drinkVideoMs ?? null) : item?.video === clip ? item.videoMs : null;
+    const length = knownMs ?? ITEM_CLIP_DEFAULT_MS;
+    const tag = drink ? `${moment.key}-drink` : moment.key;
     return {
-      current: { kind: 'clip', url: clip, key: `${mediaKey(clip)}#item-${moment.key}-${moment.instance}`, state: null, loop: false, transition: null },
+      current: { kind: 'clip', url: clip, key: `${mediaKey(clip)}#item-${tag}-${moment.instance}`, state: null, loop: false, transition: null },
       still: image ?? referenceImage,
       maxMs: Math.min(ITEM_MOMENT_MAX_MS, length + ITEM_CLIP_GRACE_MS),
     };

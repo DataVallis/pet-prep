@@ -73,4 +73,25 @@ describe('useItemMoment', () => {
     expect(started).toBe(true);
     expect(result.current.phase?.current).toMatchObject({ url: TREAT_VID });
   });
+
+  it('water: the drinking clip when the bowls have one; without it nothing starts (never the eating clip)', () => {
+    const DRINK_VID = 'https://api.petprep.si/api/media/15?v=dv&signature=x';
+    const withDrink: PetMediaInfo = {
+      ...withBowls,
+      items: readItemMedia({ bowls: { image: BOWLS_IMG, video: BOWLS_VID, video_seconds: 3, loop: false, drink_video: DRINK_VID, drink_video_seconds: 4 } }),
+    };
+    const drinking = setup(withDrink);
+    act(() => {
+      drinking.result.current.play('bowls', null, 'drink');
+    });
+    expect(drinking.result.current.phase?.current).toMatchObject({ kind: 'clip', url: DRINK_VID });
+
+    const old = setup(withBowls);
+    let started = true;
+    act(() => {
+      started = old.result.current.play('bowls', null, 'drink');
+    });
+    expect(started).toBe(false);
+    expect(old.result.current.phase).toBeNull();
+  });
 });

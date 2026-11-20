@@ -101,16 +101,27 @@ export const ITEM_MEDIA_KEYS: readonly ItemMediaKey[] = ['bed', 'bowls', 'toy_1'
 /**
  * The server's `media.items.<key>` (contract M6-W03) — the generated type in `schema.ts`
  * (`{image, video, video_seconds, loop}`); `readItemMedia` stays the only reader.
+ * Bowls also carry their DRINKING clip (David 2026-11-20, option A): `drink_video` (signed
+ * URL | null) + `drink_video_seconds` — missing on older servers and until the clip exists,
+ * so they are read defensively and typed here, not taken from `schema.ts`.
  */
-export type RawItemMedia = NonNullable<PetMedia['items']['bed']>;
+export type RawItemMedia = NonNullable<PetMedia['items']['bed']> & {
+  drink_video?: string | null;
+  drink_video_seconds?: number | null;
+};
 
 /** One item's media, normalised. */
 export interface ItemMedia {
   image: string | null;
+  /** The item clip (bowls: the EATING clip). */
   video: string | null;
   /** Clip length in ms (server `video_seconds`), null = unknown. */
   videoMs: number | null;
   loop: boolean;
+  /** Bowls only, set only when the server sent it: the drinking clip (`drink_video`). */
+  drinkVideo?: string;
+  /** Its length in ms (`drink_video_seconds`), null = unknown. */
+  drinkVideoMs?: number | null;
 }
 
 export type ItemMediaMap = Partial<Record<ItemMediaKey, ItemMedia>>;
@@ -119,6 +130,11 @@ export const NO_ITEM_MEDIA: ItemMediaMap = {};
 
 function isItemKey(value: string): value is ItemMediaKey {
   return (ITEM_MEDIA_KEYS as readonly string[]).includes(value);
+}
+
+/** A clip length in seconds from the payload (0–30 s; anything else → null = unknown). */
+function clipSeconds(value: unknown): number | null {
+  return typeof value === 'number' && Number.isFinite(value) && value > 0 && value <= 30 ? value : null;
 }
 
 /** `media.items` → typed map. Anything unknown / malformed is dropped (= the normal scene). */
@@ -131,14 +147,22 @@ export function readItemMedia(raw: unknown): ItemMediaMap {
     const image = urlOrNull(v.image);
     const video = urlOrNull(v.video);
     if (image === null && video === null) continue;
-    const seconds = typeof v.video_seconds === 'number' && Number.isFinite(v.video_seconds) && v.video_seconds > 0 && v.video_seconds <= 30 ? v.video_seconds : null;
-    out[key] = {
+    const seconds = clipSeconds(v.video_seconds);
+    const item: ItemMedia = {
       image,
       video,
       videoMs: seconds === null ? null : Math.round(seconds * 1000),
       // Bed / toys loop, bowls / treats play once (the contract's default when the flag is missing).
       loop: typeof v.loop === 'boolean' ? v.loop : key === 'bed' || key === 'toy_1' || key === 'toy_2',
     };
+    // Bowls: the drinking clip (2026-11-20) — older servers / not made yet → absent.
+    const drink = key === 'bowls' ? urlOrNull(v.drink_video) : null;
+    if (drink !== null) {
+      const drinkSeconds = clipSeconds(v.drink_video_seconds);
+      item.drinkVideo = drink;
+      item.drinkVideoMs = drinkSeconds === null ? null : Math.round(drinkSeconds * 1000);
+    }
+    out[key] = item;
   }
   return Object.keys(out).length === 0 ? NO_ITEM_MEDIA : out;
 }

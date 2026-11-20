@@ -1,6 +1,6 @@
 import { i18n } from '@/i18n';
 import { normalizePet } from '@/modules/family/family';
-import { familyPetMood, moodText, petMoodOf, type PetMoodInput, type PetMoodKind } from '@/modules/petMood/petMood';
+import { familyPetMood, moodText, parentMood, petMoodOf, type PetMoodInput, type PetMoodKind } from '@/modules/petMood/petMood';
 import { readPetState } from '@/modules/petMood/readPetState';
 import type { LockReason } from '@/modules/childPet/childPetView';
 import type { PetState } from '@/types';
@@ -68,13 +68,13 @@ describe('petMoodOf (David 2026-11-05, option A)', () => {
 describe('moodText', () => {
   const ALL: readonly PetMoodKind[] = [
     'idle', 'playing', 'sleeping', 'low_energy', 'hungry', 'thirsty', 'sick',
-    'accident', 'chewing', 'scratching', 'hard_stopped', 'ill', 'payment_required', 'game_over', 'inactive', 'unborn',
+    'accident', 'chewing', 'scratching', 'hard_stopped', 'needs_cleaning', 'ill', 'payment_required', 'game_over', 'inactive', 'unborn',
   ];
 
   it('Slovenian — dog', () => {
     expect(ALL.map((k) => text(k, 'dog'))).toEqual([
       'Zadovoljen', 'Igriv', 'Spi', 'Utrujen — rabi sprehod', 'Lačen', 'Žejen', 'Bolan',
-      'Luža na tleh — počisti', 'Pregrizen copat — pospravi', 'Opraskan kavč', 'Igra ustavljena',
+      'Luža na tleh — počisti', 'Pregrizen copat — pospravi', 'Opraskan kavč', 'Igra ustavljena', 'Treba počistiti',
       'Kuža je pri veterinarju', 'Igra počaka na starša', 'Kuža je v zavetišču', 'Igra ni aktivna', 'Kuža čaka na podpis pogodbe',
     ]);
   });
@@ -103,6 +103,8 @@ describe('moodText', () => {
     expect(text('hungry', 'dog')).toBe('Hungry');
     expect(text('thirsty', 'dog')).toBe('Thirsty');
     expect(text('hard_stopped', 'dog')).toBe('Game paused');
+    expect(text('needs_cleaning', 'dog')).toBe('Needs cleaning');
+    expect(text('needs_cleaning', 'cat')).toBe('Needs cleaning');
   });
 });
 
@@ -111,6 +113,22 @@ describe('familyPetMood (parent card)', () => {
     expect(familyPetMood(normalizePet(makeFamilyPet({ pet_state: 'low_energy' })))?.kind).toBe('low_energy');
     const thirsty = normalizePet(makeFamilyPet({ pet_state: 'hungry', metrics: { hunger: 80, thirst: 20, energy: 50, hygiene: 90 } }));
     expect(familyPetMood(thirsty)?.kind).toBe('thirsty');
+  });
+
+  it('hygiene 0 % (server `sick`) without the illness lock reads »Treba počistiti«, never »Bolan« (David 2026-11-20)', () => {
+    for (const species of ['dog', 'cat'] as const) {
+      const mood = familyPetMood(normalizePet(makeFamilyPet({ pet_state: 'sick', is_ill: false, species, metrics: { hunger: 80, thirst: 80, energy: 50, hygiene: 0 } })));
+      expect(mood).toEqual({ kind: 'needs_cleaning', tone: 'warn', icon: 'sparkle' });
+      expect(mood && moodText(mood, species)).toBe('Treba počistiti');
+    }
+  });
+
+  it('parentMood keeps »Sick« only for a real illness and leaves other moods alone', () => {
+    const sick = petMoodOf({ ...base, petState: 'sick' });
+    expect(parentMood(sick, true)).toEqual(sick);
+    expect(parentMood(sick, false).kind).toBe('needs_cleaning');
+    const hungry = petMoodOf({ ...base, petState: 'hungry' });
+    expect(parentMood(hungry, false)).toEqual(hungry);
   });
 
   it('an open mess overrides the mood', () => {
