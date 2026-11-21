@@ -60,8 +60,10 @@ class ParentValidationController extends Controller
      * choice (monthly: free / 2,99 € / 5,99 €) and »Obvestite me, ko bo na
      * voljo«. One row per parent (a new answer replaces the old one). With
      * `notify` true the `email` is required (422 `code: email_required`) and
-     * goes into the PetPrep e-mail store; `notify` false removes an address
-     * left here earlier. 200 `{status: "saved"}`.
+     * goes into the PetPrep e-mail store; `notify` false removes this
+     * parent's address (`email` is then ignored). **Withdrawal:** a parent who
+     * already answered may send only `{notify: false}` — the stored price
+     * stays (»Ne obveščajte me več«). 200 `{status: "saved"}`.
      *
      * POST /api/parent/phase2-interest
      */

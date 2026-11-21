@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\User;
 use App\Services\Media\PetMediaService;
+use App\Services\Validation\Phase2InterestService;
 use Illuminate\Contracts\Queue\ClearableQueue;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\Artisan;
@@ -84,7 +85,8 @@ class GameDataResetService
         'outbound_emails',
         'shop_audit_logs',
         // M6-S09 every e-mail left on petprep.si (replaced summary_leads, M6-S05): website contacts
-        // with consent, not game data (no user/family FK; deleted only when the person asks).
+        // with consent, not game data (no user/family FK; deleted only when the person asks). The
+        // app's own `app_phase2` signups go with their accounts (execute(), VALIDATION_PLAN §4.4).
         'email_contacts',
         'email_signups',
         // M6-S06 anonymous breed-quiz counters from petprep.si: website statistics, not game data.
@@ -161,8 +163,8 @@ class GameDataResetService
         'pets',
         // M4-10 shared look pool of free pets (after pets / pet_media, which reference it)
         'pet_looks',
-        // VALIDATION_PLAN §4.1 / §4.4 (H6 / H7, → users, families; phase2_interests → email_contacts,
-        // which are KEEP: an »Obvestite me« address left in the app stays in the e-mail store)
+        // VALIDATION_PLAN §4.1 / §4.4 (H6 / H7, → users, families). The e-mail store is KEEP, but
+        // execute() first removes each parent's own `app_phase2` signup (QA #1480 M1).
         'parent_dashboard_opens',
         'phase2_interests',
         // family model
@@ -301,6 +303,13 @@ class GameDataResetService
             DB::table('users')->whereIn('id', $adminIds)->update([
                 'parent_id' => null, 'pairing_pet_id' => null, 'pairing_pin' => null, 'pin_expires_at' => null,
             ]);
+
+            // VALIDATION_PLAN §4.4 (QA #1480 M1): the e-mail store is KEEP, but the »Obvestite me«
+            // signups left in the app belong to the accounts deleted here — remove each parent's own
+            // `app_phase2` signup (and a contact left empty) before phase2_interests goes.
+            app(Phase2InterestService::class)->forgetEmailsOf(
+                DB::table('phase2_interests')->orderBy('user_id')->pluck('user_id')->map(fn ($id): int => (int) $id)->all()
+            );
 
             $counts = [];
             foreach (self::DELETE_ORDER as $table) {

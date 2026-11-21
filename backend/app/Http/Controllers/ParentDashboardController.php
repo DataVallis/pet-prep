@@ -45,9 +45,9 @@ class ParentDashboardController extends Controller
      * caretakers, traffic light, metrics, Care Score, today and timeline —
      * M2-05 / M2-06) + legacy single-pet state, legacy traffic light
      * (escalation based, deprecated), quiet hours, recent activities, and
-     * `phase2_interest` {submitted, notify} (VALIDATION_PLAN §4.4: this
-     * parent already sent the »Dobili smo pravo žival« form / with »Obvestite
-     * me«).
+     * `phase2_interest` {submitted, notify, price_choice} (VALIDATION_PLAN
+     * §4.4: this parent already sent the »Dobili smo pravo žival« form / with
+     * a live »Obvestite me« consent / the stored price).
      */
     public function dashboard(Request $request): JsonResponse
     {
@@ -155,13 +155,13 @@ class ParentDashboardController extends Controller
             // M6-W01 »Želje«: open wishes of all children, all pets of the family.
             'wishes_open_count' => app(WishService::class)->openCountOfFamily($family),
             // VALIDATION_PLAN §4.4 (H7): has THIS parent sent the Phase-2 form (»Hvala« instead of the
-            // form), and with »Obvestite me« (`notify` false → a plain thank-you)?
+            // form), with a live »Obvestite me« consent (`notify` false → a plain thank-you), which price?
             'phase2_interest' => $this->phase2Interest($parent),
         ], 200);
     }
 
     /**
-     * @return array{submitted: bool, notify: bool}
+     * @return array{submitted: bool, notify: bool, price_choice: 'free'|'monthly_2_99'|'monthly_5_99'|null}
      */
     private function phase2Interest(User $parent): array
     {

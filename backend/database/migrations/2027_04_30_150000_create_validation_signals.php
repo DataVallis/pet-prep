@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Schema;
  *  - users.acquisition_source / acquisition_detail / acquisition_recorded_at: »Kje ste izvedeli za
  *    PetPrep?« (parents only; null = not answered).
  *  - parent_dashboard_opens: at most one row per parent per 30 minutes (H6); pruned after 400 days.
- *  - phase2_interests: one row per parent for the Phase-2 fake door (H7). `email_contact_id` links the
- *    »Obvestite me« e-mail in the unified e-mail store (email_contacts / email_signups, source
- *    `app_phase2`) so the export can show it and an account deletion can remove it.
+ *  - phase2_interests: one row per parent for the Phase-2 fake door (H7). `email_signup_id` links this
+ *    parent's own »Obvestite me« signup in the unified e-mail store (email_signups, source
+ *    `app_phase2`) so the export can show it and a withdrawal / account deletion / game-data reset
+ *    removes exactly that signup.
  */
 return new class extends Migration
 {
@@ -50,14 +51,15 @@ return new class extends Migration
             $table->string('price_choice', 16)->nullable();
             $table->boolean('notify')->default(false);
             $table->timestamp('submitted_at')->nullable();
-            // No FK on purpose: email_contacts belongs to the website store (an admin delete of the
-            // contact leaves a dangling id that every reader treats as "no address"; the e-mail
-            // store's own migration can still be rolled back on its own).
-            $table->unsignedBigInteger('email_contact_id')->nullable();
+            // This parent's OWN signup row in the e-mail store (source app_phase2). No FK on purpose:
+            // email_signups belongs to the website store (an admin delete of the contact leaves a
+            // dangling id that every reader treats as "no address / no consent"; the e-mail store's
+            // own migration can still be rolled back on its own).
+            $table->unsignedBigInteger('email_signup_id')->nullable();
             $table->timestamps();
 
             $table->index('family_id');
-            $table->index('email_contact_id');
+            $table->index('email_signup_id');
         });
 
         $sources = "'".implode("', '", AcquisitionSource::values())."'";

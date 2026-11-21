@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exceptions\TimezoneChangeTooSoonException;
+use App\Http\Requests\PatchParentSettingsRequest;
 use App\Http\Requests\UpdateParentSettingsRequest;
 use App\Services\FamilySettingsService;
 use App\Services\Validation\AcquisitionSourceService;
@@ -52,12 +53,15 @@ class ParentSettingsController extends Controller
      *   unknown value is ignored too (never a 422). `detail` is kept only with
      *   `other` / `ad`, trimmed, at most 60 characters.
      * - `timezone` is required only when the body carries no acquisition field.
+     * - Order: the answer is stored FIRST, then the timezone — a 422
+     *   `timezone_change_too_soon` still keeps a stored answer.
      *
      * PATCH /api/parent/settings
      */
-    public function patch(UpdateParentSettingsRequest $request): JsonResponse
+    public function patch(PatchParentSettingsRequest $request): JsonResponse
     {
-        $parent = $request->user();
+        // The answer first: a timezone refused by the 24 h cooldown (422) must not lose it.
+        $parent = $this->acquisition->recordOnce($request->user(), $request->acquisitionAnswer());
 
         if ($request->has('timezone')) {
             try {
@@ -66,8 +70,6 @@ class ParentSettingsController extends Controller
                 return response()->json($e->body(), 422);
             }
         }
-
-        $parent = $this->acquisition->recordOnce($parent, $request->acquisitionAnswer());
 
         return response()->json([
             'message' => 'Settings updated successfully.',

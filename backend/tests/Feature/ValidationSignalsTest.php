@@ -213,6 +213,18 @@ describe('acquisition source via PATCH /api/parent/settings', function () {
         expect($parent->fresh()->family->timezone)->toBe('Europe/Berlin');
     });
 
+    it('stores the answer even when the timezone in the same PATCH hits the 24 h cooldown (m1)', function () {
+        $parent = User::factory()->parent()->create();
+        vsAs($parent);
+        patchJson('/api/parent/settings', ['timezone' => 'Europe/Berlin'])->assertOk();
+
+        patchJson('/api/parent/settings', ['timezone' => 'Europe/Paris', 'acquisition_source' => 'youtube'])
+            ->assertUnprocessable()->assertJsonPath('reason', 'timezone_change_too_soon');
+
+        expect($parent->fresh()->acquisition_source)->toBe('youtube')
+            ->and($parent->fresh()->family->timezone)->toBe('Europe/Berlin');
+    });
+
     it('is parent only', function () {
         $parent = User::factory()->parent()->create();
         $child = User::factory()->child()->create(['parent_id' => $parent->id]);
@@ -324,7 +336,7 @@ describe('POST /api/parent/phase2-interest', function () {
         $parent = User::factory()->parent()->create();
         vsAs($parent);
 
-        getJson('/api/parent/dashboard')->assertOk()->assertJsonPath('phase2_interest', ['submitted' => false, 'notify' => false]);
+        getJson('/api/parent/dashboard')->assertOk()->assertJsonPath('phase2_interest', ['submitted' => false, 'notify' => false, 'price_choice' => null]);
 
         postJson('/api/parent/phase2-interest', ['price_choice' => 'monthly_2_99', 'notify' => false])
             ->assertOk()->assertExactJson(['status' => 'saved']);
@@ -339,9 +351,9 @@ describe('POST /api/parent/phase2-interest', function () {
             ->and($row->first_viewed_at->toDateTimeString())->toBe('2026-11-21 08:00:00')
             ->and(EmailContact::count())->toBe(0);
 
-        getJson('/api/parent/dashboard')->assertOk()->assertJsonPath('phase2_interest', ['submitted' => true, 'notify' => false]);
+        getJson('/api/parent/dashboard')->assertOk()->assertJsonPath('phase2_interest', ['submitted' => true, 'notify' => false, 'price_choice' => 'monthly_5_99']);
         postJson('/api/parent/phase2-interest', ['price_choice' => 'monthly_5_99', 'notify' => true, 'email' => 'mama@example.com'])->assertOk();
-        getJson('/api/parent/dashboard')->assertOk()->assertJsonPath('phase2_interest', ['submitted' => true, 'notify' => true]);
+        getJson('/api/parent/dashboard')->assertOk()->assertJsonPath('phase2_interest', ['submitted' => true, 'notify' => true, 'price_choice' => 'monthly_5_99']);
 
         // Another parent of the same family has not answered.
         $second = vsSecondParent($parent);
@@ -367,7 +379,7 @@ describe('POST /api/parent/phase2-interest', function () {
             ->and($contact->consent_version)->toBe('2026-11')
             ->and($signup->purpose)->toBe('early_access')
             ->and($signup->consent_version)->toBe(Phase2InterestService::CONSENT_VERSION)
-            ->and(Phase2Interest::sole()->email_contact_id)->toBe($contact->id)
+            ->and(Phase2Interest::sole()->email_signup_id)->toBe($signup->id)
             ->and(Phase2Interest::sole()->notify)->toBeTrue();
 
         // The same answer again adds no second signup.
@@ -383,15 +395,83 @@ describe('POST /api/parent/phase2-interest', function () {
         postJson('/api/parent/phase2-interest', ['price_choice' => 'free', 'notify' => true, 'email' => 'new@example.com'])->assertOk();
 
         expect(EmailContact::pluck('email')->all())->toBe(['new@example.com'])
-            ->and(Phase2Interest::sole()->email_contact_id)->toBe(EmailContact::sole()->id);
+            ->and(Phase2Interest::sole()->email_signup_id)->toBe(EmailSignup::sole()->id);
 
         postJson('/api/parent/phase2-interest', ['price_choice' => 'free', 'notify' => false, 'email' => 'new@example.com'])->assertOk();
 
         $row = Phase2Interest::sole();
         expect(EmailContact::count())->toBe(0)
             ->and(EmailSignup::count())->toBe(0)
-            ->and($row->email_contact_id)->toBeNull()
+            ->and($row->email_signup_id)->toBeNull()
             ->and($row->notify)->toBeFalse();
+    });
+
+    it('withdraws the consent with {notify: false} alone, keeping the stored price (QA #1480 B1)', function () {
+        $parent = User::factory()->parent()->create();
+        vsAs($parent);
+
+        // No earlier answer: the price is still required.
+        postJson('/api/parent/phase2-interest', ['notify' => false])->assertUnprocessable()->assertJsonValidationErrors('price_choice');
+
+        postJson('/api/parent/phase2-interest', ['price_choice' => 'monthly_2_99', 'notify' => true, 'email' => 'mama@example.com'])->assertOk();
+        // `email` is ignored when notify is false (exclude_unless), even an invalid one.
+        postJson('/api/parent/phase2-interest', ['notify' => false, 'email' => 'not an address'])->assertOk()->assertExactJson(['status' => 'saved']);
+
+        $row = Phase2Interest::sole();
+        expect($row->price_choice?->value)->toBe('monthly_2_99')
+            ->and($row->notify)->toBeFalse()
+            ->and($row->email_signup_id)->toBeNull()
+            ->and(EmailContact::count())->toBe(0);
+        getJson('/api/parent/dashboard')->assertOk()
+            ->assertJsonPath('phase2_interest', ['submitted' => true, 'notify' => false, 'price_choice' => 'monthly_2_99']);
+
+        // A notify: true without a price is still a normal answer and needs the price.
+        postJson('/api/parent/phase2-interest', ['notify' => true, 'email' => 'mama@example.com'])->assertUnprocessable()->assertJsonValidationErrors('price_choice');
+    });
+
+    it('removes only this parent\'s signup when two parents share one address (QA #1480 M4)', function () {
+        $mama = User::factory()->parent()->create();
+        $oce = vsSecondParent($mama);
+
+        vsAs($mama);
+        postJson('/api/parent/phase2-interest', ['price_choice' => 'free', 'notify' => true, 'email' => 'family@example.com'])->assertOk();
+        vsAs($oce);
+        postJson('/api/parent/phase2-interest', ['price_choice' => 'monthly_5_99', 'notify' => true, 'email' => 'family@example.com'])->assertOk();
+
+        $contact = EmailContact::sole();
+        expect($contact->signups_count)->toBe(2)->and($contact->signups()->count())->toBe(2);
+
+        vsAs($mama);
+        postJson('/api/parent/phase2-interest', ['notify' => false])->assertOk();
+
+        $contact->refresh();
+        $oceRow = Phase2Interest::where('user_id', $oce->id)->sole();
+        expect($contact->signups()->pluck('id')->all())->toBe([$oceRow->email_signup_id])
+            ->and($contact->signups_count)->toBe(1);
+        vsAs($oce);
+        getJson('/api/parent/dashboard')->assertOk()->assertJsonPath('phase2_interest.notify', true);
+
+        // The other parent's account deletion takes the last signup and the contact with it.
+        postJson('/api/parent/account/delete', ['password' => 'password', 'confirm' => true])->assertOk();
+        expect(EmailContact::count())->toBe(0)->and(EmailSignup::count())->toBe(0);
+    });
+
+    it('treats a consent whose signup is gone (admin delete on request) as no consent everywhere (m4)', function () {
+        vsAt('2026-11-21 08:00:00');
+        $parent = User::factory()->parent()->create();
+        vsAs($parent);
+        postJson('/api/parent/phase2-interest/viewed')->assertNoContent();
+        postJson('/api/parent/phase2-interest', ['price_choice' => 'free', 'notify' => true, 'email' => 'gone@example.com'])->assertOk();
+        expect(app(FunnelService::class)->phase2(12)['notify'])->toBe(1);
+
+        EmailContact::where('email', 'gone@example.com')->delete(); // /admin → E-mails → Delete
+
+        expect(Phase2Interest::sole()->notify)->toBeTrue(); // the stored flag is untouched …
+        getJson('/api/parent/dashboard')->assertOk()->assertJsonPath('phase2_interest.notify', false); // … but never exposed
+        getJson('/api/parent/account/export')->assertOk()
+            ->assertJsonPath('parents.0.phase2_interest.notify', false)
+            ->assertJsonPath('parents.0.phase2_interest.notify_email', null);
+        expect(app(FunnelService::class)->phase2(12)['notify'])->toBe(0);
     });
 
     it('is parent only', function () {

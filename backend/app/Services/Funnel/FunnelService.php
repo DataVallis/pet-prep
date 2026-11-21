@@ -119,7 +119,8 @@ class FunnelService
     /**
      * Phase-2 fake door (H7, VALIDATION_PLAN §4.4) over the parents of the families of the shown
      * sign-up weeks: `viewed` parents who tapped »Dobili smo pravo žival«, `submitted` who sent
-     * the form, `notify` who sent it with »Obvestite me« (H7 = notify / viewed), and the price split
+     * the form, `notify` who sent it with a LIVE »Obvestite me« consent (ticked and the linked
+     * signup still exists — Phase2Interest::notifies(); H7 = notify / viewed), and the price split
      * of the submitted answers.
      *
      * @return array{viewed: int, submitted: int, notify: int, prices: array<string, int>}
@@ -132,7 +133,8 @@ class FunnelService
         $row = DB::selectOne($with.<<<'SQL'
             SELECT COUNT(*) FILTER (WHERE pi.first_viewed_at IS NOT NULL) AS viewed,
                    COUNT(*) FILTER (WHERE pi.submitted_at IS NOT NULL) AS submitted,
-                   COUNT(*) FILTER (WHERE pi.submitted_at IS NOT NULL AND pi.notify) AS notify,
+                   COUNT(*) FILTER (WHERE pi.submitted_at IS NOT NULL AND pi.notify
+                                      AND EXISTS (SELECT 1 FROM email_signups es WHERE es.id = pi.email_signup_id)) AS notify,
                    COUNT(*) FILTER (WHERE pi.submitted_at IS NOT NULL AND pi.price_choice = 'free') AS price_free,
                    COUNT(*) FILTER (WHERE pi.submitted_at IS NOT NULL AND pi.price_choice = 'monthly_2_99') AS price_monthly_2_99,
                    COUNT(*) FILTER (WHERE pi.submitted_at IS NOT NULL AND pi.price_choice = 'monthly_5_99') AS price_monthly_5_99

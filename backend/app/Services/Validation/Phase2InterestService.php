@@ -22,9 +22,10 @@ use Illuminate\Support\Facades\DB;
  *
  * The »Obvestite me« e-mail goes into the unified e-mail store (EmailSignupService, source
  * SIGNUP_SOURCE, purpose `early_access`, consent CONSENT_VERSION = the app checkbox) — never a
- * parallel store. The row links the contact (`email_contact_id`) so the GDPR export shows the
- * address and unticking »Obvestite me« / deleting the account removes the `app_phase2` signups
- * (and the contact when nothing else is left on it). Website signups of the same address stay.
+ * parallel store. The row links THIS parent's own signup (`email_signup_id`), so a withdrawal
+ * (`notify: false`), the account deletion and the game-data reset remove exactly that signup: the
+ * contact's counter is recounted and the contact goes only when no signup is left on it. Another
+ * parent's or a website signup of the same address stays.
  */
 class Phase2InterestService
 {
@@ -58,43 +59,49 @@ class Phase2InterestService
         });
     }
 
+    /** May this parent send `{notify: false}` without a price (a withdrawal of an earlier answer)? */
+    public function hasAnswer(User $parent): bool
+    {
+        return Phase2Interest::where('user_id', $parent->id)->whereNotNull('price_choice')->exists();
+    }
+
     /**
      * POST /api/parent/phase2-interest: upserts the parent's answer. `notify` true needs an e-mail
-     * (the request refuses it without one — 422 `email_required`).
+     * (the request refuses it without one — 422 `email_required`). `$price` null = keep the stored
+     * price (only a withdrawal `{notify: false}` of an existing answer may omit it — the request
+     * enforces that).
      */
-    public function submit(User $parent, Phase2PriceChoice $price, bool $notify, ?string $email, ?CarbonImmutable $now = null): Phase2Interest
+    public function submit(User $parent, ?Phase2PriceChoice $price, bool $notify, ?string $email, ?CarbonImmutable $now = null): Phase2Interest
     {
         $now = ($now ?? CarbonImmutable::now())->utc();
         $email = $email !== null ? strtolower(trim($email)) : null;
 
         return $this->withLockedRow($parent, function (Phase2Interest $row) use ($price, $notify, $email, $now): Phase2Interest {
-            $linked = $row->email_contact_id !== null ? EmailContact::find($row->email_contact_id) : null;
+            $current = $row->email_signup_id !== null ? EmailSignup::with('contact')->find($row->email_signup_id) : null;
 
             if ($notify && $email !== null && $email !== '') {
-                if ($linked === null || $linked->email !== $email) {
-                    if ($linked !== null) {
-                        $this->forgetContact($linked->id);
-                    }
-                    $contact = $this->emails->record([
+                if ($current === null || $current->contact?->email !== $email) {
+                    $this->forgetSignup($row->email_signup_id);
+                    $signup = $this->emails->recordSignup([
                         'email' => $email,
                         'consent_version' => self::CONSENT_VERSION,
                         'purpose' => self::SIGNUP_PURPOSE,
                         'source' => self::SIGNUP_SOURCE,
                         'locale' => in_array(app()->getLocale(), WebsiteLocale::ALL, true) ? app()->getLocale() : null,
                     ]);
-                    $row->email_contact_id = $contact->id;
+                    $row->email_signup_id = $signup->id;
                 }
             } else {
-                if ($linked !== null) {
-                    $this->forgetContact($linked->id);
-                }
-                $row->email_contact_id = null;
+                $this->forgetSignup($row->email_signup_id);
+                $row->email_signup_id = null;
                 $notify = false;
             }
 
             $row->first_viewed_at ??= $now;
             $row->last_viewed_at ??= $now;
-            $row->price_choice = $price;
+            if ($price !== null) {
+                $row->price_choice = $price;
+            }
             $row->notify = $notify;
             $row->submitted_at = $now;
             $row->save();
@@ -104,21 +111,26 @@ class Phase2InterestService
     }
 
     /**
-     * GET /api/parent/dashboard `phase2_interest`: has this parent sent the form, and with
-     * »Obvestite me« (false while not submitted). Read only.
+     * GET /api/parent/dashboard `phase2_interest`: has this parent sent the form, with a live
+     * »Obvestite me« consent (notifies()), and which price. Read only.
      *
-     * @return array{submitted: bool, notify: bool}
+     * @return array{submitted: bool, notify: bool, price_choice: 'free'|'monthly_2_99'|'monthly_5_99'|null}
      */
     public function dashboardFor(User $parent): array
     {
-        $row = Phase2Interest::where('user_id', $parent->id)->whereNotNull('submitted_at')->first(['notify']);
+        $row = Phase2Interest::with('emailSignup')->where('user_id', $parent->id)->whereNotNull('submitted_at')->first();
 
-        return ['submitted' => $row !== null, 'notify' => $row !== null && $row->notify];
+        return [
+            'submitted' => $row !== null,
+            'notify' => $row !== null && $row->notifies(),
+            'price_choice' => $row?->price_choice?->value,
+        ];
     }
 
     /**
-     * Account deletion (inside its transaction, before the user rows go): the `app_phase2` signups
-     * of these parents' linked contacts. The rows themselves go with the users (FK cascade).
+     * Account deletion / game-data reset (inside their transaction, before the user rows go): each
+     * of these parents' OWN `app_phase2` signup. The rows themselves go with the users (FK cascade)
+     * or the reset.
      *
      * @param  list<int>  $userIds
      */
@@ -128,11 +140,9 @@ class Phase2InterestService
             return;
         }
 
-        $contactIds = Phase2Interest::whereIn('user_id', $userIds)->whereNotNull('email_contact_id')
-            ->pluck('email_contact_id')->map(fn ($id) => (int) $id)->unique()->values()->all();
-        foreach ($contactIds as $contactId) {
-            $this->forgetContact($contactId);
-        }
+        Phase2Interest::whereIn('user_id', $userIds)->whereNotNull('email_signup_id')
+            ->orderBy('id')->pluck('email_signup_id')
+            ->each(fn ($id) => $this->forgetSignup((int) $id));
     }
 
     /**
@@ -142,33 +152,42 @@ class Phase2InterestService
      */
     public function exportFor(User $parent): ?array
     {
-        $row = Phase2Interest::with('emailContact')->where('user_id', $parent->id)->first();
+        $row = Phase2Interest::with('emailSignup.contact')->where('user_id', $parent->id)->first();
         if ($row === null) {
             return null;
         }
+        $notifies = $row->notifies();
 
         return [
             'first_viewed_at' => $row->first_viewed_at?->utc()->toIso8601String(),
             'last_viewed_at' => $row->last_viewed_at?->utc()->toIso8601String(),
             'price_choice' => $row->price_choice?->value,
-            'notify' => $row->notify,
-            'notify_email' => $row->emailContact?->email,
+            'notify' => $notifies,
+            'notify_email' => $notifies ? $row->emailSignup?->contact?->email : null,
             'submitted_at' => $row->submitted_at?->utc()->toIso8601String(),
         ];
     }
 
     /**
-     * Removes the `app_phase2` signups of a contact; the contact goes too when no other signup is
-     * left on it, otherwise its counter follows the remaining signups.
+     * Removes ONE signup row; its contact's `signups_count` follows the remaining signups, and the
+     * contact goes only when none is left. A missing row (admin deleted the contact) is a no-op.
      */
-    private function forgetContact(int $contactId): void
+    private function forgetSignup(?int $signupId): void
     {
+        if ($signupId === null) {
+            return;
+        }
+        $contactId = EmailSignup::whereKey($signupId)->value('email_contact_id');
+        if ($contactId === null) {
+            return;
+        }
+
         $contact = EmailContact::whereKey($contactId)->lockForUpdate()->first();
         if ($contact === null) {
             return;
         }
 
-        EmailSignup::where('email_contact_id', $contact->id)->where('source', self::SIGNUP_SOURCE)->delete();
+        EmailSignup::whereKey($signupId)->delete();
         $left = EmailSignup::where('email_contact_id', $contact->id)->count();
         if ($left === 0) {
             $contact->delete();

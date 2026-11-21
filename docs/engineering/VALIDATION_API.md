@@ -1,6 +1,6 @@
 # Validation plan — API contract (VALIDATION_PLAN §4.1, §4.4; H6, H7) — agreed 2026-11-21
 
-> **Status:** backend built (`feat/M5-08-validation-signals`, 2026-11-21); app: mobile PR #1479. Contract additions of 2026-11-21 (coordinator, needed by #1479) are marked *(addition)*; what the implementation decided where the contract was silent is in §4.
+> **Status:** backend built (`feat/M5-08-validation-signals-v2`, 2026-11-21; supersedes #1480 after QA); app: in preparation (mobile PR follows). Contract additions of 2026-11-21 (coordinator, needed by the app) are marked *(addition)*, the QA #1480 changes *(QA)*; what the implementation decided where the contract was silent is in §4.
 
 David's decisions 2026-11-21:
 - (D1) The nightly breed / language runs keep running; the validation freeze does not apply to them.
@@ -16,6 +16,7 @@ David's decisions 2026-11-21:
 - New nullable columns on `users` (parents only): `acquisition_source`, `acquisition_detail`, `acquisition_recorded_at`.
 - `PATCH /api/parent/settings` accepts the same two fields only while `acquisition_source` is still null. This gives parents who signed up earlier one chance to answer later. Once it is set, the server answers 200 and ignores the fields.
   - *(addition)* `PATCH /api/parent/settings` is a new route with a **partial body**: the acquisition fields may be sent on their own; `timezone` is optional there (required only when no acquisition field is sent; same rules as PUT when present). Answer `200 {message, settings: {timezone, acquisition_source}}`. **`PUT /api/parent/settings` is unchanged** (timezone required, acquisition fields not taken, same response).
+  - *(QA)* PATCH has its own request (`PatchParentSettingsRequest`); the answer is stored **before** the timezone is applied, so a 422 `timezone_change_too_soon` in the same call still keeps the answer.
 - `GET /api/user` (parent) adds `acquisition_source` (string or null), so the app knows whether to offer the question.
 - The data is included in the GDPR export (parent section).
 - `/admin/funnel` gets a filter or breakdown by source, plus a »neznano« (unknown) row.
@@ -42,10 +43,11 @@ David's decisions 2026-11-21:
   }
   ```
 
-  - `email` is required when `notify` is true. Without one: 422 `email_required`. The app prefills the account e-mail.
-- New table `phase2_interests`: `user_id` (unique), `family_id`, `first_viewed_at`, `last_viewed_at`, `price_choice`, `notify`, `submitted_at`.
+  - `email` is required when `notify` is true. Without one: 422 `email_required`. The app prefills the account e-mail. *(QA)* When `notify` is false, `email` is ignored (`exclude_unless:notify,true`).
+  - *(QA, B1 — withdrawal »Ne obveščajte me več«)* A parent who already answered may send only `{ "notify": false }` (no `price_choice`): the stored price stays, `notify` becomes false and this parent's own signup is removed from the e-mail store. Without an earlier answer `price_choice` is still required (422).
+- New table `phase2_interests`: `user_id` (unique), `family_id`, `first_viewed_at`, `last_viewed_at`, `price_choice`, `notify`, `submitted_at`, *(QA, M4)* `email_signup_id` (this parent's own signup row in the e-mail store; no FK).
 - When `notify` is true, the e-mail goes into the unified e-mail store. Reuse `email_contacts` + `email_signups` from M6-S09 / #1418 with source `app_phase2`; do not add a parallel store.
-- `GET /api/parent/dashboard` adds a top-level `phase2_interest` field: *(addition)* `{ "submitted": bool, "notify": bool }` (of the requesting parent), so the app shows »Hvala« instead of the form — `notify` false → a plain thank-you (without »Obvestili vas bomo«).
+- `GET /api/parent/dashboard` adds a top-level `phase2_interest` field: *(addition / QA)* `{ "submitted": bool, "notify": bool, "price_choice": "free" | "monthly_2_99" | "monthly_5_99" | null }` (of the requesting parent), so the app shows »Hvala« instead of the form — `notify` false → a plain thank-you (without »Obvestili vas bomo«); `notify` true → the app can offer »Ne obveščajte me več«.
 - In `/admin/funnel`, H7 = submitted with notify / viewed. Taps, submits and the price split are shown too.
 - **Copy (honest, »v pripravi«):**
   - SL entry point: »Dobili smo pravo žival«
@@ -63,7 +65,9 @@ Where the contract was silent, the backend decided as follows (no product rule c
 - **Invalid input never blocks:** an unknown / non-string `acquisition_source` → null + one info log line (type and length only, never the value). `acquisition_detail` is trimmed, inner whitespace collapsed and **cut** to 60 characters (not refused); a non-string detail → null.
 - **Social sign-in:** the fields are stored only on the call that creates the account (`created: true`).
 - **Dedupe:** "at most one row per 30 minutes" = a new row only when the parent's latest row is ≥ 30 min old (checked under the user row lock). An unknown `trigger` → null (204, never a 422).
-- **Phase 2:** `notify` true with a bad address → 422 `code: email_invalid` (besides `email_required`). A submit without a recorded tap sets `first_viewed_at` / `last_viewed_at` too. The e-mail goes to `email_contacts` / `email_signups` (source `app_phase2`, purpose `early_access`, consent version `app-p2-2026-11` — not a website version, so it never replaces a website consent) and `phase2_interests.email_contact_id` links the contact (a column the contract did not list; needed so the export shows the address and the deletion can remove it). The same address again adds no signup; a new address moves it; `notify` false removes the `app_phase2` signups (and the contact when nothing else is on it). Account deletion does the same.
+- **Phase 2:** `notify` true with a bad address → 422 `code: email_invalid` (besides `email_required`). A submit without a recorded tap sets `first_viewed_at` / `last_viewed_at` too. The e-mail goes to `email_contacts` / `email_signups` (source `app_phase2`, purpose `early_access`, consent version `app-p2-2026-11` — not a website version, so it never replaces a website consent); `phase2_interests.email_signup_id` links **this parent's own signup** (needed so the export shows the address and a withdrawal / deletion / reset removes exactly it). The same address again adds no signup; a new address moves it; `notify` false, the account deletion and the game-data reset remove only that signup — the contact's `signups_count` is recounted and the contact goes only when no signup is left (two parents sharing one address keep each other's consent).
+- **`notify` as exposed** (dashboard, export, funnel H7) = the stored flag AND the linked signup still exists — an admin who deleted the contact on request in `/admin → E-mails` ends the consent everywhere (`Phase2Interest::notifies()`).
 - **Throttles:** `dashboard-opened` 30 / min per parent; both Phase-2 endpoints 10 / min per parent.
 - **Funnel:** a family's source = the earliest answer of any of its parents; H6 counts parents one by one (one parent with ≥ 3 opens), days 8–14 = [first birth + 7 d, + 14 d) on the wall clock like d1 / d7 (payment-lock time is not subtracted); eligible = first birth ≥ 14 days ago. H7 = parents who sent with notify / parents who tapped, over the parents of the families of the shown sign-up weeks; superadmins never count.
-- **Retention / reset:** `dashboard-opens:prune` daily 03:53 UTC (400 days). The game-data reset deletes both new tables; the e-mail store stays (KEEP).
+- **Retention / reset:** `dashboard-opens:prune` daily 03:53 UTC (400 days). The game-data reset deletes both new tables and first removes the `app_phase2` signup of every phase-2 row (QA M1); the rest of the e-mail store stays (KEEP).
+- **Open question for David (QA m5):** the GDPR export keeps the existing family model — any parent's export contains every parent of the family, so the other parent's acquisition answer, dashboard opens and Phase-2 answer (incl. the »Obvestite me« e-mail) are in it too, like their name and e-mail today. Unchanged on purpose; David decides whether per-parent fields should be limited to the requesting parent.

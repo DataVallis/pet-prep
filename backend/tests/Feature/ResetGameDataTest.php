@@ -1,9 +1,12 @@
 <?php
 
 use App\Console\Commands\ResetGameDataCommand;
+use App\Enums\Phase2PriceChoice;
 use App\Models\ActivityLog;
 use App\Models\AiSpendLedger;
 use App\Models\ChildLoginPin;
+use App\Models\EmailContact;
+use App\Models\EmailSignup;
 use App\Models\FamilyInvite;
 use App\Models\Pet;
 use App\Models\PetContract;
@@ -11,9 +14,11 @@ use App\Models\PetDailyStep;
 use App\Models\PetMedia;
 use App\Models\User;
 use App\Models\UserSocialAccount;
+use App\Services\EmailSignupService;
 use App\Services\FamilyService;
 use App\Services\GameDataResetService;
 use App\Services\Media\PetMediaService;
+use App\Services\Validation\Phase2InterestService;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Contracts\Foundation\MaintenanceMode;
 use Illuminate\Support\Facades\DB;
@@ -486,6 +491,24 @@ it('deletes all game data and media, keeps admins, their tokens and breed data; 
         ->expectsOutputToContain('Media files deleted: 0')
         ->assertSuccessful();
     expect(rgCounts())->toBe($after);
+});
+
+it('removes the app_phase2 e-mail signups of the deleted accounts and keeps website signups (QA #1480 M1)', function () {
+    $s = rgSeed();
+    $svc = app(Phase2InterestService::class);
+    // A website signup of an address that a parent also leaves in the app, and an app-only address.
+    app(EmailSignupService::class)->record(['email' => 'shared@example.com', 'consent_version' => '2026-11', 'purpose' => 'newsletter', 'source' => 'real_cost']);
+    $svc->submit($s['parent'], Phase2PriceChoice::Free, true, 'shared@example.com');
+    $svc->submit($s['admin'], Phase2PriceChoice::Monthly299, true, 'admin-app@example.com');
+
+    $this->artisan('petprep:reset-game-data', RG_FLAGS + ['--no-interaction' => true])->assertSuccessful();
+
+    $shared = EmailContact::where('email', 'shared@example.com')->sole();
+    expect(EmailSignup::where('source', Phase2InterestService::SIGNUP_SOURCE)->count())->toBe(0)
+        ->and($shared->signups()->pluck('source')->all())->toBe(['real_cost'])
+        ->and($shared->signups_count)->toBe(1)
+        ->and(EmailContact::where('email', 'admin-app@example.com')->exists())->toBeFalse()
+        ->and(DB::table('phase2_interests')->count())->toBe(0);
 });
 
 it('lets an admin start a new family after the reset', function () {
