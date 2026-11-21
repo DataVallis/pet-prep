@@ -82,7 +82,8 @@
         "cs": "Otevřeno denně 9:00–24:00; telefonní linka je uváděna jako nonstop. V noci před cestou zavolejte.",
         "sv": "Öppet alla dagar 9.00–24.00; telefonlinjen uppges vara öppen dygnet runt. Ring innan du kommer på natten.",
         "da": "Åbent dagligt 9.00–24.00; telefonen er angiveligt bemandet døgnet rundt. Ring på forhånd om natten.",
-        "fi": "Auki päivittäin 9–24; puhelin vastaa ilmoituksen mukaan 24/7. Soita yöllä etukäteen."
+        "fi": "Auki päivittäin 9–24; puhelin vastaa ilmoituksen mukaan 24/7. Soita yöllä etukäteen.",
+        "nb": "Åpent 9.00–24.00 hver dag; telefonlinjen er oppgitt å være åpen hele døgnet. Ring på forhånd om natten."
       }
     },
     {
@@ -107,7 +108,8 @@
         "cs": "Mobilní veterinář s návštěvami doma v Jerevanu a v okruhu 30 km; uvádí nonstop provoz a pohotovostního veterináře.",
         "sv": "Mobil veterinär med hembesök i Jerevan och upp till 30 km runt staden; uppges ha öppet dygnet runt med jourhavande veterinär.",
         "da": "Mobil dyrlæge med hjemmebesøg i Yerevan og op til 30 km omkring byen; oplyser at have åbent døgnet rundt med en akut dyrlæge til rådighed.",
-        "fi": "Liikkuva eläinlääkäri tekee kotikäyntejä Yerevanissa ja 30 km:n säteellä; ilmoituksen mukaan auki 24/7 ja päivystävä eläinlääkäri tavoitettavissa."
+        "fi": "Liikkuva eläinlääkäri tekee kotikäyntejä Yerevanissa ja 30 km:n säteellä; ilmoituksen mukaan auki 24/7 ja päivystävä eläinlääkäri tavoitettavissa.",
+        "nb": "Mobil dyrlege med hjemmebesøk i Jerevan og inntil 30 km rundt; oppgitt som døgnåpen med dyrlegevakt tilgjengelig."
       }
     },
     {
@@ -133,7 +135,8 @@
         "cs": "Nabízí nonstop veterinární pomoc a veterinární sanitku na čísle +374 99 404070. Před cestou zavolejte.",
         "sv": "Uppger sig erbjuda veterinärhjälp och djurambulans dygnet runt på +374 99 404070. Ring innan du kommer.",
         "da": "Tilbyder dyrlægehjælp og dyreambulance døgnet rundt på +374 99 404070. Ring på forhånd.",
-        "fi": "Ilmoittaa tarjoavansa eläinlääkäriapua 24/7 ja eläinambulanssin numerossa +374 99 404070. Soita etukäteen."
+        "fi": "Ilmoittaa tarjoavansa eläinlääkäriapua 24/7 ja eläinambulanssin numerossa +374 99 404070. Soita etukäteen.",
+        "nb": "Markedsfører dyrlegehjelp og dyreambulanse hele døgnet på +374 99 404070. Ring på forhånd."
       }
     },
     {
@@ -159,7 +162,8 @@
         "cs": "Otevřeno denně 10:00–22:00.",
         "sv": "Öppet alla dagar 10.00–22.00.",
         "da": "Åbent dagligt 10.00–22.00.",
-        "fi": "Auki päivittäin 10–22."
+        "fi": "Auki päivittäin 10–22.",
+        "nb": "Åpent 10.00–22.00 daglig."
       }
     },
     {
@@ -185,7 +189,8 @@
         "cs": "Po–So 10:00–20:00, ne 9:00–12:00.",
         "sv": "Mån–lör 10.00–20.00, sön 9.00–12.00.",
         "da": "Man–lør 10.00–20.00, søn 9.00–12.00.",
-        "fi": "ma–la 10–20, su 9–12."
+        "fi": "ma–la 10–20, su 9–12.",
+        "nb": "man–lør 10.00–20.00, søn 9.00–12.00."
       }
     },
     {
@@ -223,7 +228,8 @@
         "cs": "Út–So 11:00–19:00; v neděli a v pondělí zavřeno.",
         "sv": "Tis–lör 11.00–19.00; stängt sön och mån.",
         "da": "Tir–lør 11.00–19.00; lukket søndag og mandag.",
-        "fi": "ti–la 11–19; su ja ma suljettu."
+        "fi": "ti–la 11–19; su ja ma suljettu.",
+        "nb": "Tir–lør 11.00–19.00; stengt søn og man."
       }
     }
   ],

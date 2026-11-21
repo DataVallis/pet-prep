@@ -66,7 +66,8 @@
         "cs": "Otevřeno od pondělí do pátku 8:30–16:00 (ve čtvrtek návštěvy doma). V pohotovosti zavolejte na kliniku.",
         "sv": "Öppet måndag–fredag 08.30–16.00 (på torsdagar görs hembesök). Vid akutfall ring kliniken.",
         "da": "Åbent man–fre 8.30–16.00 (torsdag er hjemmebesøg). Ved akutte tilfælde ring til klinikken.",
-        "fi": "Auki maanantaista perjantaihin 8.30–16.00 (torstaisin kotikäynnit). Hätätapauksissa soita klinikalle."
+        "fi": "Auki maanantaista perjantaihin 8.30–16.00 (torstaisin kotikäynnit). Hätätapauksissa soita klinikalle.",
+        "nb": "Åpent mandag til fredag 08.30–16.00 (torsdager er hjemmebesøk). Ved nødtilfeller, ring klinikken."
       }
     },
     {
@@ -90,7 +91,8 @@
         "cs": "Linka mimo ordinační dobu: +255 753 520 244.",
         "sv": "Jourlinje utanför öppettiderna: +255 753 520 244.",
         "da": "Vagttelefon uden for åbningstid: +255 753 520 244.",
-        "fi": "Päivystysnumero aukioloajan ulkopuolella: +255 753 520 244."
+        "fi": "Päivystysnumero aukioloajan ulkopuolella: +255 753 520 244.",
+        "nb": "Vakttelefon: +255 753 520 244."
       }
     },
     {
@@ -114,7 +116,8 @@
         "cs": "Otevírací dobu a objednání vyřídíte telefonicky na klinice.",
         "sv": "Ring kliniken för öppettider och tidsbokning.",
         "da": "Ring til klinikken for åbningstider og tidsbestilling.",
-        "fi": "Soita klinikalle aukioloaikojen ja ajanvarauksen tiedustelua varten."
+        "fi": "Soita klinikalle aukioloaikojen ja ajanvarauksen tiedustelua varten.",
+        "nb": "Ring klinikken for å høre åpningstider og for timebestilling."
       }
     }
   ],

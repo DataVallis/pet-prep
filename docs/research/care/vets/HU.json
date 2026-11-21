@@ -141,7 +141,8 @@
         "cs": "Psi a kočky nonstop každý den: denní služba 8:00–20:00, noční pohotovost 20:00–8:00, víkendová pohotovost 8:00–20:00; noční příplatek.",
         "sv": "Hundar och katter dygnet runt, alla dagar: dagtjänst 08.00–20.00, nattjour 20.00–08.00, helgjour 08.00–20.00; nattillägg.",
         "da": "Hunde og katte hver dag døgnet rundt: dagvagt 08.00–20.00, nattevagt 20.00–08.00, weekendvagt 08.00–20.00; tillæg om natten.",
-        "fi": "Koirat ja kissat ympäri vuorokauden joka päivä: päiväpalvelu 8.00–20.00, yöpäivystys 20.00–8.00, viikonloppupäivystys 8.00–20.00; yölisämaksu."
+        "fi": "Koirat ja kissat ympäri vuorokauden joka päivä: päiväpalvelu 8.00–20.00, yöpäivystys 20.00–8.00, viikonloppupäivystys 8.00–20.00; yölisämaksu.",
+        "nb": "Hunder og katter hele døgnet, alle dager: dagvakt 08.00–20.00, nattvakt 20.00–08.00, helgevakt 08.00–20.00; nattillegg."
       },
       "small_animals": true,
       "url": "https://budapestiallatkorhaz.hu/",
@@ -172,7 +173,8 @@
         "cs": "Otevřeno nonstop, 365 dní v roce; pohotovostní služba 20:00–8:00.",
         "sv": "Öppet dygnet runt, 365 dagar om året; akutjour 20.00–08.00.",
         "da": "Åbent døgnet rundt, 365 dage om året; akutvagt 20.00–08.00.",
-        "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa; päivystys 20.00–8.00."
+        "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa; päivystys 20.00–8.00.",
+        "nb": "Åpent hele døgnet, 365 dager i året; akuttvakt 20.00–08.00."
       },
       "small_animals": true,
       "url": "https://juhaszallatkorhaz.hu/",
@@ -203,7 +205,8 @@
         "cs": "Otevřeno dnem i nocí každý den; pohotovostní služba denně 18:00–6:00 a o víkendech nonstop.",
         "sv": "Öppet dag och natt alla dagar; akutjour dagligen 18.00–06.00 och dygnet runt på helger.",
         "da": "Åbent dag og nat hver dag; akutvagt dagligt 18.00–06.00 og døgnet rundt i weekenden.",
-        "fi": "Auki yötä päivää joka päivä; päivystys päivittäin 18.00–6.00 ja viikonloppuisin keskeytyksettä."
+        "fi": "Auki yötä päivää joka päivä; päivystys päivittäin 18.00–6.00 ja viikonloppuisin keskeytyksettä.",
+        "nb": "Åpent dag og natt, alle dager; akuttjeneste daglig 18.00–06.00 og uavbrutt i helgene."
       },
       "small_animals": true,
       "url": "https://ivartalanitas.supervet.hu/",
@@ -234,7 +237,8 @@
         "cs": "Po–Pá příjem od 8:00, péče o pacienty 9:00–19:00. Od 1. března 2024 se mezi 20:00 a 8:00 nepřijímají noví pacienti (hospitalizovaní zůstávají v péči).",
         "sv": "Mån–fre incheckning från 08.00, patientvård 09.00–19.00. Sedan 1 mars 2024 tas inga nya patienter in 20.00–08.00 (inlagda patienter fortsätter att vårdas).",
         "da": "Man–fre indtjekning fra 08.00, patientpleje 09.00–19.00. Siden 1. marts 2024 optages der ingen nye patienter 20.00–08.00 (indlagte patienter fortsætter).",
-        "fi": "ma–pe ilmoittautuminen klo 8.00 alkaen, potilashoito 9.00–19.00. 1. maaliskuuta 2024 alkaen uusia potilaita ei oteta sisään klo 20.00–8.00 (osastopotilaiden hoito jatkuu)."
+        "fi": "ma–pe ilmoittautuminen klo 8.00 alkaen, potilashoito 9.00–19.00. 1. maaliskuuta 2024 alkaen uusia potilaita ei oteta sisään klo 20.00–8.00 (osastopotilaiden hoito jatkuu).",
+        "nb": "man–fre mottak fra 8.00, pasientbehandling 9.00–19.00. Siden 1. mars 2024 tas det ikke imot nye pasienter 20.00–8.00 (innlagte pasienter følges opp som før)."
       },
       "small_animals": true,
       "url": "https://univet.hu/hu/klinikak/kisallatklinika/",
@@ -264,7 +268,8 @@
         "cs": "Po–Pá 8:00–22:00 (20:00–22:00 pohotovostní služba s příplatkem po 19:45); so–ne a svátky 9:00–18:00 (příjem do 17:00).",
         "sv": "Mån–fre 08.00–22.00 (jour 20.00–22.00 med tillägg efter 19.45); lör–sön och helgdagar 09.00–18.00 (inskrivning till 17.00).",
         "da": "Man–fre 08.00–22.00 (20.00–22.00 vagt med tillæg efter 19.45); lør–søn og helligdage 09.00–18.00 (optagelse til 17.00).",
-        "fi": "ma–pe 8.00–22.00 (päivystys 20.00–22.00 lisämaksulla klo 19.45 jälkeen); la–su ja pyhinä 9.00–18.00 (sisäänotto klo 17.00 asti)."
+        "fi": "ma–pe 8.00–22.00 (päivystys 20.00–22.00 lisämaksulla klo 19.45 jälkeen); la–su ja pyhinä 9.00–18.00 (sisäänotto klo 17.00 asti).",
+        "nb": "Man–fre 08.00–22.00 (vakt 20.00–22.00 med tillegg etter kl. 19.45); lør–søn og helligdager 09.00–18.00 (innleggelse til kl. 17.00)."
       },
       "small_animals": true,
       "url": "https://fuziovet.hu/",
@@ -294,7 +299,8 @@
         "cs": "Každý den včetně svátků 8:00–21:00; pohotovostní služba 21:00–22:00.",
         "sv": "Alla dagar, även helgdagar, 08.00–21.00; akutjour 21.00–22.00.",
         "da": "Hver dag inkl. helligdage 08.00–21.00; akutvagt 21.00–22.00.",
-        "fi": "Joka päivä pyhät mukaan lukien 8.00–21.00; päivystys 21.00–22.00."
+        "fi": "Joka päivä pyhät mukaan lukien 8.00–21.00; päivystys 21.00–22.00.",
+        "nb": "Hver dag, også helligdager, kl. 08.00–21.00; akuttvakt kl. 21.00–22.00."
       },
       "small_animals": true,
       "url": "https://csipetcsapatallatorvos.hu/",
@@ -324,7 +330,8 @@
         "cs": "Po–Pá 8:00–20:00; o víkendech a svátcích otevřeno podle rozpisu.",
         "sv": "Mån–fre 08.00–20.00; helger och helgdagar öppet enligt schema.",
         "da": "Man–fre 08.00–20.00; weekender og helligdage åbent efter planen.",
-        "fi": "ma–pe 8.00–20.00; viikonloppuisin ja pyhinä auki aikataulun mukaan."
+        "fi": "ma–pe 8.00–20.00; viikonloppuisin ja pyhinä auki aikataulun mukaan.",
+        "nb": "Man–fre 08.00–20.00; helger og helligdager åpent etter oppsatt plan."
       },
       "small_animals": true,
       "url": "https://budatetenyiallatkorhaz.hu/en/",
@@ -354,7 +361,8 @@
         "cs": "Ve všední dny 8:00–20:00; pohotovostní služba ve všední dny 20:00–22:00, so–ne a svátky 9:00–20:00.",
         "sv": "Vardagar 08.00–20.00; öppettider av jourtyp vardagar 20.00–22.00, lör–sön och helgdagar 09.00–20.00.",
         "da": "Hverdage 08.00–20.00; vagttid hverdage 20.00–22.00, lør–søn og helligdage 09.00–20.00.",
-        "fi": "Arkisin 8.00–20.00; päivystysluonteiset ajat arkisin 20.00–22.00, la–su ja pyhinä 9.00–20.00."
+        "fi": "Arkisin 8.00–20.00; päivystysluonteiset ajat arkisin 20.00–22.00, la–su ja pyhinä 9.00–20.00.",
+        "nb": "Hverdager 8.00–20.00; åpningstid på vakt hverdager 20.00–22.00, lør–søn og helligdager 9.00–20.00."
       },
       "small_animals": true,
       "url": "https://www.primavetrendelo.hu/",
@@ -383,7 +391,8 @@
         "cs": "Po–Pá 8:00–20:00, so–ne 9:00–12:00 (na objednání).",
         "sv": "Mån–fre 08.00–20.00, lör–sön 09.00–12.00 (efter tidsbokning).",
         "da": "Man–fre 08.00–20.00, lør–søn 09.00–12.00 (efter aftale).",
-        "fi": "ma–pe 8.00–20.00, la–su 9.00–12.00 (ajanvarauksella)."
+        "fi": "ma–pe 8.00–20.00, la–su 9.00–12.00 (ajanvarauksella).",
+        "nb": "Man–fre 08.00–20.00, lør–søn 09.00–12.00 (etter avtale)."
       },
       "small_animals": true,
       "url": "https://www.rexrendelo.hu/",
@@ -413,7 +422,8 @@
         "cs": "Ve všední dny 9:00–20:00.",
         "sv": "Vardagar 09.00–20.00.",
         "da": "Hverdage 09.00–20.00.",
-        "fi": "Arkisin 9.00–20.00."
+        "fi": "Arkisin 9.00–20.00.",
+        "nb": "Hverdager 9.00–20.00."
       },
       "small_animals": true,
       "url": "https://murmuczok.hu/",
@@ -585,7 +595,8 @@
         "cs": "Každý den do půlnoci; linka přepojí na kliniku, která má ten týden pohotovost (záložní číslo +36 20 350 6656).",
         "sv": "Alla dagar till midnatt; linjen kopplar till den klinik som har jour den veckan (reservnummer +36 20 350 6656).",
         "da": "Hver dag til midnat; linjen stilles om til den klinik, der har vagten den uge (reservenummer +36 20 350 6656).",
-        "fi": "Joka päivä keskiyöhön asti; numero yhdistää sillä viikolla päivystävään klinikkaan (varanumero +36 20 350 6656)."
+        "fi": "Joka päivä keskiyöhön asti; numero yhdistää sillä viikolla päivystävään klinikkaan (varanumero +36 20 350 6656).",
+        "nb": "Hver dag til midnatt; linjen kobler til klinikken som har vakt den uken (reservenummer +36 20 350 6656)."
       },
       "small_animals": true,
       "source_url": "https://kutyadoktor.hu/ugyelet/",
@@ -615,7 +626,8 @@
         "cs": "Po–Pá 8:00–20:00, so–ne a svátky 9:00–12:00; vlastní pohotovost Po–Pá 19:00–22:00, so–ne a svátky 12:00–16:00.",
         "sv": "Mån–fre 08.00–20.00, lör–sön och helgdagar 09.00–12.00; egen jour mån–fre 19.00–22.00, lör–sön och helgdagar 12.00–16.00.",
         "da": "Man–fre 08.00–20.00, lør–søn og helligdage 09.00–12.00; egen vagt man–fre 19.00–22.00, lør–søn og helligdage 12.00–16.00.",
-        "fi": "ma–pe 8.00–20.00, la–su ja pyhinä 9.00–12.00; oma päivystys ma–pe 19.00–22.00, la–su ja pyhinä 12.00–16.00."
+        "fi": "ma–pe 8.00–20.00, la–su ja pyhinä 9.00–12.00; oma päivystys ma–pe 19.00–22.00, la–su ja pyhinä 12.00–16.00.",
+        "nb": "Man–fre 08.00–20.00, lør–søn og helligdager 09.00–12.00; egen vakt man–fre 19.00–22.00, lør–søn og helligdager 12.00–16.00."
       },
       "small_animals": true,
       "url": "https://allatkorhazdebrecen.hu/",
@@ -696,7 +708,8 @@
         "cs": "Ve všední dny 20:00–22:00; o víkendech 8:00–22:00; o prodloužených víkendech a svátcích 8:00–20:00. Před cestou zavolejte. Od 30. 10. do 5. 11. 2026 má pohotovost Móravárosi Állatgyógyászati Központ, Farkas utca 4 (+36 30 539 1371).",
         "sv": "Vardagar 20.00–22.00; helger 08.00–22.00; långhelger och helgdagar 08.00–20.00. Ring innan du kommer. Under 30 okt–5 nov 2026 ligger jouren på Móravárosi Állatgyógyászati Központ, Farkas utca 4 (+36 30 539 1371).",
         "da": "Hverdage 20.00–22.00; weekender 08.00–22.00; lange weekender/helligdage 08.00–20.00. Ring på forhånd. Den 30. okt–5. nov 2026 er vagten på Móravárosi Állatgyógyászati Központ, Farkas utca 4 (+36 30 539 1371).",
-        "fi": "Arkisin 20.00–22.00; viikonloppuisin 8.00–22.00; pitkinä viikonloppuina ja pyhinä 8.00–20.00. Soita etukäteen. 30. lokakuuta–5. marraskuuta 2026 päivystys on Móravárosi Állatgyógyászati Központissa, Farkas utca 4 (+36 30 539 1371)."
+        "fi": "Arkisin 20.00–22.00; viikonloppuisin 8.00–22.00; pitkinä viikonloppuina ja pyhinä 8.00–20.00. Soita etukäteen. 30. lokakuuta–5. marraskuuta 2026 päivystys on Móravárosi Állatgyógyászati Központissa, Farkas utca 4 (+36 30 539 1371).",
+        "nb": "Hverdager 20.00–22.00; helger 8.00–22.00; lange helger/helligdager 8.00–20.00. Ring på forhånd. 30. okt.–5. nov. 2026 har Móravárosi Állatgyógyászati Központ, Farkas utca 4, vakten (+36 30 539 1371)."
       },
       "small_animals": true,
       "url": "https://kisallat-ambulancia.hu/",
@@ -726,7 +739,8 @@
         "cs": "Zapojena do szegedské pohotovostní služby (ve všední dny 20:00–22:00, o víkendech 8:00–22:00, když má službu).",
         "sv": "Deltar i jourschemat i Szeged (vardagar 20.00–22.00, helger 08.00–22.00 när kliniken har jour).",
         "da": "Deltager i vagtordningen i Szeged (hverdage 20.00–22.00, weekender 08.00–22.00, når klinikken har vagten).",
-        "fi": "Osallistuu Szegedin päivystysvuoroihin (arkisin 20.00–22.00, viikonloppuisin 8.00–22.00 vuorossa ollessaan)."
+        "fi": "Osallistuu Szegedin päivystysvuoroihin (arkisin 20.00–22.00, viikonloppuisin 8.00–22.00 vuorossa ollessaan).",
+        "nb": "Deltar i vaktordningen i Szeged (hverdager 20.00–22.00, helger 8.00–22.00 når de har vakt)."
       },
       "small_animals": true,
       "url": "https://kisallat-ambulancia.hu/",
@@ -755,7 +769,8 @@
         "cs": "Zapojena do szegedské pohotovosti pro malá zvířata: so–ne 8:00–22:00, ve všední dny 20:00–22:00 (nejdřív zavolejte).",
         "sv": "Deltar i smådjursjouren i Szeged: lör–sön 08.00–22.00, vardagar 20.00–22.00 (ring först).",
         "da": "Deltager i smådyrsvagten i Szeged: lør–søn 08.00–22.00, hverdage 20.00–22.00 (ring først).",
-        "fi": "Osallistuu Szegedin pieneläinten varapäivystykseen: la–su 8.00–22.00, arkisin 20.00–22.00 (soita ensin)."
+        "fi": "Osallistuu Szegedin pieneläinten varapäivystykseen: la–su 8.00–22.00, arkisin 20.00–22.00 (soita ensin).",
+        "nb": "Deltar i beredskapsvakten for smådyr i Szeged: lør–søn 8.00–22.00, hverdager 20.00–22.00 (ring først)."
       },
       "small_animals": true,
       "url": "https://www.szegediallatorvos.hu/",
@@ -809,7 +824,8 @@
         "cs": "Ve všední dny 18:00–22:00, o víkendech 10:00–22:00, nebo Po–Pá 18:00–20:00, so–ne a svátky 12:00–18:00.",
         "sv": "Vardagar 18.00–22.00, helger 10.00–22.00, eller mån–fre 18.00–20.00, lör–sön och helgdagar 12.00–18.00.",
         "da": "Hverdage 18.00–22.00, weekender 10.00–22.00, eller man–fre 18.00–20.00, lør–søn og helligdage 12.00–18.00.",
-        "fi": "Arkisin 18.00–22.00, viikonloppuisin 10.00–22.00, tai ma–pe 18.00–20.00, la–su ja pyhinä 12.00–18.00."
+        "fi": "Arkisin 18.00–22.00, viikonloppuisin 10.00–22.00, tai ma–pe 18.00–20.00, la–su ja pyhinä 12.00–18.00.",
+        "nb": "Hverdager 18.00–22.00, helger 10.00–22.00, eller man–fre 18.00–20.00, lør–søn og helligdager 12.00–18.00."
       },
       "small_animals": true,
       "url": "https://allatorvosiugyeletmiskolc.webnode.hu/",
@@ -839,7 +855,8 @@
         "cs": "Po–Pá 10:00–18:00; so–ne zavřeno.",
         "sv": "Mån–fre 10.00–18.00; stängt lör–sön.",
         "da": "Man–fre 10.00–18.00; lukket lør–søn.",
-        "fi": "ma–pe 10.00–18.00; la–su suljettu."
+        "fi": "ma–pe 10.00–18.00; la–su suljettu.",
+        "nb": "Man–fre 10.00–18.00; stengt lør–søn."
       },
       "small_animals": true,
       "url": "https://www.nepkertiallatklinika.hu/",
@@ -882,7 +899,8 @@
         "cs": "Ve všední dny 20:00–22:00 po telefonu s výjezdem na místo; o víkendech (a svátcích) 8:00–20:00 pro naléhavé, život ohrožující případy. Příplatek.",
         "sv": "Vardagar 20.00–22.00 per telefon med besök på plats; helger (och helgdagar) 08.00–20.00 för brådskande, livshotande fall. Tillägg.",
         "da": "Hverdage 20.00–22.00 pr. telefon med besøg på stedet; weekender (og helligdage) 08.00–20.00 til akutte, livstruende tilfælde. Tillæg.",
-        "fi": "Arkisin 20.00–22.00 puhelimitse ja käynteinä paikan päällä; viikonloppuisin (ja pyhinä) 8.00–20.00 kiireellisiin, henkeä uhkaaviin tapauksiin. Lisämaksu."
+        "fi": "Arkisin 20.00–22.00 puhelimitse ja käynteinä paikan päällä; viikonloppuisin (ja pyhinä) 8.00–20.00 kiireellisiin, henkeä uhkaaviin tapauksiin. Lisämaksu.",
+        "nb": "Hverdager 20.00–22.00 på telefon med besøk på stedet; helger (og helligdager) 8.00–20.00 for hastetilfeller og livstruende tilfeller. Tillegg gjelder."
       },
       "small_animals": true,
       "url": "https://pecs.hu/allatorvosi-ugyelet/",
@@ -1007,7 +1025,8 @@
         "cs": "Ve všední dny 8:00–20:00 ambulance a chirurgie; v noci a o víkendech pohotovostní služba.",
         "sv": "Vardagar 08.00–20.00 mottagning och kirurgi; nätter och helger akutjour.",
         "da": "Hverdage 08.00–20.00 ambulant behandling og kirurgi; nætter og weekender akutvagt.",
-        "fi": "Arkisin 8.00–20.00 vastaanotto ja leikkaukset; öisin ja viikonloppuisin päivystys."
+        "fi": "Arkisin 8.00–20.00 vastaanotto ja leikkaukset; öisin ja viikonloppuisin päivystys.",
+        "nb": "Hverdager 8.00–20.00 poliklinikk og kirurgi; akuttvakt om natten og i helgene."
       },
       "small_animals": true,
       "url": "https://allatkorhaznyiregyhaza.hu/",
@@ -1038,7 +1057,8 @@
         "cs": "Přijímá zvířata ve všední dny, o víkendech i státních svátcích (hodiny na stránce „Nyitva tartás“).",
         "sv": "Tar emot djur på vardagar, helger och helgdagar (öppettider på sidan \"Nyitva tartás\").",
         "da": "Modtager dyr på hverdage, i weekender og på helligdage (åbningstider på siden »Nyitva tartás«).",
-        "fi": "Ottaa eläimiä vastaan arkisin, viikonloppuisin ja pyhinä (aukioloajat sivulla \"Nyitva tartás\")."
+        "fi": "Ottaa eläimiä vastaan arkisin, viikonloppuisin ja pyhinä (aukioloajat sivulla \"Nyitva tartás\").",
+        "nb": "Tar imot dyr på hverdager, i helger og på helligdager (åpningstider på siden «Nyitva tartás»)."
       },
       "small_animals": true,
       "url": "https://allatorvos-szombathely.hu/hu/",
@@ -1198,7 +1218,8 @@
         "cs": "Po, St, Čt 10:30–12:00 a 16:00–18:00; Út, Pá 10:30–12:00; o víkendech zavřeno kromě oznámených krátkých pohotovostních termínů (nejdřív zavolejte, příplatek).",
         "sv": "Mån, ons, tors 10.30–12.00 och 16.00–18.00; tis, fre 10.30–12.00; stängt på helger utom aviserade korta jourpass (ring först, tillägg).",
         "da": "Man, ons, tors 10.30–12.00 og 16.00–18.00; tirs, fre 10.30–12.00; lukket i weekenden bortset fra annoncerede korte vagttider (ring først, tillæg).",
-        "fi": "ma, ke, to 10.30–12.00 ja 16.00–18.00; ti, pe 10.30–12.00; viikonloppuisin suljettu paitsi ilmoitetuilla lyhyillä päivystysajoilla (soita ensin, lisämaksu)."
+        "fi": "ma, ke, to 10.30–12.00 ja 16.00–18.00; ti, pe 10.30–12.00; viikonloppuisin suljettu paitsi ilmoitetuilla lyhyillä päivystysajoilla (soita ensin, lisämaksu).",
+        "nb": "Man, ons, tor 10.30–12.00 og 16.00–18.00; tir, fre 10.30–12.00; stengt i helgene, bortsett fra kunngjorte korte vaktøkter (ring først, tillegg)."
       },
       "small_animals": true,
       "url": "https://nemes.vet/",
@@ -1306,7 +1327,8 @@
         "cs": "V sobotu 13:00–18:00; v neděli a o státních svátcích 8:00–18:00. Návštěva v místě pobytu zvířete nebo na klinice, domluva telefonicky.",
         "sv": "Lördagar 13.00–18.00; söndagar och helgdagar 08.00–18.00. Besök där djuret befinner sig eller på en klinik, överenskommet per telefon.",
         "da": "Lørdage 13.00–18.00; søndage og helligdage 08.00–18.00. Besøg hos dyret eller på en klinik, aftales pr. telefon.",
-        "fi": "la 13.00–18.00; su ja pyhinä 8.00–18.00. Käynti eläimen luona tai klinikalla, sovitaan puhelimitse."
+        "fi": "la 13.00–18.00; su ja pyhinä 8.00–18.00. Käynti eläimen luona tai klinikalla, sovitaan puhelimitse.",
+        "nb": "Lørdager kl. 13.00–18.00; søndager og helligdager kl. 8.00–18.00. Besøk der dyret befinner seg eller på en klinikk, avtales på telefon."
       },
       "small_animals": true,
       "url": "https://www.szolnok.hu/2026/05/19/allatorvosi-ugyelet/",
@@ -1336,7 +1358,8 @@
         "cs": "Po–Pá 9:00–18:00; so, ne a státní svátky 9:00–16:00. Bez domácích návštěv a bez pohotovosti mimo ordinační dobu.",
         "sv": "Mån–fre 09.00–18.00; lör, sön och helgdagar 09.00–16.00. Inga hembesök, ingen jour utanför öppettiderna.",
         "da": "Man–fre 09.00–18.00; lør, søn og helligdage 09.00–16.00. Ingen hjemmebesøg, ingen vagt uden for åbningstid.",
-        "fi": "ma–pe 9.00–18.00; la, su ja pyhinä 9.00–16.00. Ei kotikäyntejä, ei päivystystä aukioloaikojen ulkopuolella."
+        "fi": "ma–pe 9.00–18.00; la, su ja pyhinä 9.00–16.00. Ei kotikäyntejä, ei päivystystä aukioloaikojen ulkopuolella.",
+        "nb": "Man–fre 09.00–18.00; lør, søn og helligdager 09.00–16.00. Ingen hjemmebesøk, ingen vakt utenom åpningstiden."
       },
       "small_animals": true,
       "url": "https://petcity.hu/",
@@ -1363,7 +1386,8 @@
         "cs": "Každý den je ve službě jedna členská klinika: ve všední dny 19:00–22:00, o víkendech 8:00–22:00, o státních svátcích 8:00–19:00; příplatek za pohotovost; před cestou zavolejte",
         "sv": "En medlemsklinik har jour varje dag: vardagar 19.00–22.00, helger 8.00–22.00, helgdagar 8.00–19.00; jourtillägg; ring innan du åker",
         "da": "Én af medlemsklinikkerne har vagt hver dag: hverdage 19.00–22.00, weekender 8.00–22.00, helligdage 8.00–19.00; vagttillæg; ring, før du tager af sted",
-        "fi": "Yksi jäsenklinikka päivystää kunakin päivänä: arkisin 19.00–22.00, viikonloppuisin 8.00–22.00, pyhinä 8.00–19.00; päivystyslisämaksu; soita ennen lähtöä"
+        "fi": "Yksi jäsenklinikka päivystää kunakin päivänä: arkisin 19.00–22.00, viikonloppuisin 8.00–22.00, pyhinä 8.00–19.00; päivystyslisämaksu; soita ennen lähtöä",
+        "nb": "Én medlemsklinikk har vakt hver dag: hverdager 19.00–22.00, helger 8.00–22.00, offentlige helligdager 8.00–19.00; vakttillegg; ring før du drar"
       },
       "small_animals": true,
       "url": "https://allatorvosiugyeletgyor.hu/",
@@ -1394,7 +1418,8 @@
         "cs": "Člen győrské pohotovostní skupiny (střídavě)",
         "sv": "Medlem i jourgruppen i Győr (turordning)",
         "da": "Medlem af vagtgruppen i Győr (skiftende)",
-        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)"
+        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)",
+        "nb": "Med i vaktgruppen i Győr (rullerende)"
       },
       "small_animals": true,
       "url": "https://szigetkoziallatorvos.hu/",
@@ -1424,7 +1449,8 @@
         "cs": "Člen győrské pohotovostní skupiny (střídavě)",
         "sv": "Medlem i jourgruppen i Győr (turordning)",
         "da": "Medlem af vagtgruppen i Győr (skiftende)",
-        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)"
+        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)",
+        "nb": "Med i vaktgruppen i Győr (rullerende)"
       },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
@@ -1453,7 +1479,8 @@
         "cs": "Člen győrské pohotovostní skupiny (střídavě)",
         "sv": "Medlem i jourgruppen i Győr (turordning)",
         "da": "Medlem af vagtgruppen i Győr (skiftende)",
-        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)"
+        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)",
+        "nb": "Med i vaktgruppen i Győr (rullerende)"
       },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
@@ -1482,7 +1509,8 @@
         "cs": "Člen győrské pohotovostní skupiny (střídavě)",
         "sv": "Medlem i jourgruppen i Győr (turordning)",
         "da": "Medlem af vagtgruppen i Győr (skiftende)",
-        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)"
+        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)",
+        "nb": "Med i vaktgruppen i Győr (rullerende)"
       },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
@@ -1511,7 +1539,8 @@
         "cs": "Člen győrské pohotovostní skupiny (střídavě)",
         "sv": "Medlem i jourgruppen i Győr (turordning)",
         "da": "Medlem af vagtgruppen i Győr (skiftende)",
-        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)"
+        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)",
+        "nb": "Med i vaktgruppen i Győr (rullerende)"
       },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
@@ -1540,7 +1569,8 @@
         "cs": "Člen győrské pohotovostní skupiny (střídavě)",
         "sv": "Medlem i jourgruppen i Győr (turordning)",
         "da": "Medlem af vagtgruppen i Győr (skiftende)",
-        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)"
+        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)",
+        "nb": "Med i vaktgruppen i Győr (rullerende)"
       },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
@@ -1569,7 +1599,8 @@
         "cs": "Člen győrské pohotovostní skupiny (střídavě)",
         "sv": "Medlem i jourgruppen i Győr (turordning)",
         "da": "Medlem af vagtgruppen i Győr (skiftende)",
-        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)"
+        "fi": "Győrin päivystysryhmän jäsen (vuoroittain)",
+        "nb": "Med i vaktgruppen i Győr (rullerende)"
       },
       "small_animals": true,
       "source_url": "https://allatorvosiugyeletgyor.hu/csoport.html",
@@ -1729,7 +1760,8 @@
         "cs": "Centrální telefon; ve všední dny 6:00–9:00 a 18:00–22:00, o víkendech a státních svátcích 6:00–22:00; 8 zapojených klinik v Kecskemétu; pouze naléhavé případy domácích zvířat",
         "sv": "Centralt telefonnummer; vardagar 6.00–9.00 och 18.00–22.00, helger och helgdagar 6.00–22.00; 8 deltagande kliniker i Kecskemét; endast brådskande fall för sällskapsdjur",
         "da": "Central telefon; hverdage 6.00–9.00 og 18.00–22.00, weekender og helligdage 6.00–22.00; 8 deltagende klinikker i Kecskemét; kun akutte tilfælde hos kæledyr",
-        "fi": "Keskuspuhelin; arkisin 6.00–9.00 ja 18.00–22.00, viikonloppuisin ja pyhinä 6.00–22.00; 8 mukana olevaa Kecskemétin klinikkaa; vain kiireelliset lemmikkieläintapaukset"
+        "fi": "Keskuspuhelin; arkisin 6.00–9.00 ja 18.00–22.00, viikonloppuisin ja pyhinä 6.00–22.00; 8 mukana olevaa Kecskemétin klinikkaa; vain kiireelliset lemmikkieläintapaukset",
+        "nb": "Sentraltelefon; hverdager kl. 6.00–9.00 og 18.00–22.00, helger og helligdager kl. 6.00–22.00; 8 deltakende klinikker i Kecskemét; kun akutte tilfeller for kjæledyr"
       },
       "small_animals": true,
       "url": "https://www.allatorvosiugyeletkecskemet.hu/",
@@ -1760,7 +1792,8 @@
         "cs": "Zapojena do kecskemétské pohotovostní služby",
         "sv": "Deltar i jourtjänsten i Kecskemét",
         "da": "Deltager i vagtordningen i Kecskemét",
-        "fi": "Osallistuu Kecskemétin päivystyspalveluun"
+        "fi": "Osallistuu Kecskemétin päivystyspalveluun",
+        "nb": "Deltar i vakttjenesten i Kecskemét"
       },
       "small_animals": true,
       "url": "https://allatorvoskecskemet.hu/",

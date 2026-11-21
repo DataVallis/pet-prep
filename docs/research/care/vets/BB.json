@@ -46,7 +46,8 @@
         "cs": "Pohotovostní linka nonstop: +1 246 429 9355. Veterinární pohotovost na celém ostrově.",
         "sv": "Akutlinje dygnet runt: +1 246 429 9355. Akut veterinärhjälp över hela ön.",
         "da": "Akuttelefon døgnet rundt: +1 246 429 9355. Akut dyrlægehjælp på hele øen.",
-        "fi": "Päivystyslinja ympäri vuorokauden: +1 246 429 9355. Eläinlääkäripäivystys koko saarella."
+        "fi": "Päivystyslinja ympäri vuorokauden: +1 246 429 9355. Eläinlääkäripäivystys koko saarella.",
+        "nb": "Akuttlinje hele døgnet: +1 246 429 9355. Akutt dyrlegehjelp over hele øya."
       }
     },
     {
@@ -67,7 +68,8 @@
         "cs": "Pohotovostní linka: +1 246 231 0450.",
         "sv": "Akutlinje: +1 246 231 0450.",
         "da": "Akuttelefon: +1 246 231 0450.",
-        "fi": "Päivystyslinja: +1 246 231 0450."
+        "fi": "Päivystyslinja: +1 246 231 0450.",
+        "nb": "Akuttelefon: +1 246 231 0450."
       }
     },
     {
@@ -91,7 +93,8 @@
         "cs": "Na objednání. Po–Pá 8:30–17:00, so–ne 9:00–11:00.",
         "sv": "Efter tidsbokning. Mån–fre 8.30–17.00, lör–sön 9.00–11.00.",
         "da": "Efter aftale. Man–fre 8.30–17.00, lør–søn 9.00–11.00.",
-        "fi": "Ajanvarauksella. ma–pe 8.30–17, la–su 9–11."
+        "fi": "Ajanvarauksella. ma–pe 8.30–17, la–su 9–11.",
+        "nb": "Etter timebestilling. Man–fre kl. 8.30–17.00, lør–søn kl. 9.00–11.00."
       }
     },
     {
@@ -115,7 +118,8 @@
         "cs": "Na objednání. Po–Pá 9:00–18:00, so–ne 9:00–11:00.",
         "sv": "Efter tidsbokning. Mån–fre 9.00–18.00, lör–sön 9.00–11.00.",
         "da": "Efter aftale. Man–fre 9.00–18.00, lør–søn 9.00–11.00.",
-        "fi": "Ajanvarauksella. ma–pe 9–18, la–su 9–11."
+        "fi": "Ajanvarauksella. ma–pe 9–18, la–su 9–11.",
+        "nb": "Etter timebestilling. Man–fre kl. 9.00–18.00, lør–søn kl. 9.00–11.00."
       }
     }
   ],

@@ -47,7 +47,8 @@
         "cs": "Na objednání. Denně 9:00–19:00, ve čtvrtek 9:00–16:00, v sobotu 9:00–12:00; předem zavolejte.",
         "sv": "Efter bokad tid. Dagligen 9.00–19.00, torsdag 9.00–16.00, lördag 9.00–12.00; ring innan du kommer.",
         "da": "Efter aftale. Dagligt 9.00–19.00, torsdag 9.00–16.00, lørdag 9.00–12.00; ring på forhånd.",
-        "fi": "Ajanvarauksella. Päivittäin 9.00–19.00, torstaisin 9.00–16.00, lauantaisin 9.00–12.00; soita etukäteen."
+        "fi": "Ajanvarauksella. Päivittäin 9.00–19.00, torstaisin 9.00–16.00, lauantaisin 9.00–12.00; soita etukäteen.",
+        "nb": "Etter timebestilling. Alle dager kl. 9.00–19.00, torsdag kl. 9.00–16.00, lørdag kl. 9.00–12.00; ring på forhånd."
       }
     },
     {
@@ -68,7 +69,8 @@
         "cs": "Od pondělí do soboty 9:00–19:00; předem zavolejte.",
         "sv": "Måndag–lördag 9.00–19.00; ring innan du kommer.",
         "da": "Mandag til lørdag 9.00–19.00; ring på forhånd.",
-        "fi": "Maanantaista lauantaihin 9.00–19.00; soita etukäteen."
+        "fi": "Maanantaista lauantaihin 9.00–19.00; soita etukäteen.",
+        "nb": "mandag–lørdag 9.00–19.00; ring på forhånd."
       }
     },
     {
@@ -89,7 +91,8 @@
         "cs": "Od pondělí do pátku 10:00–19:00; předem zavolejte.",
         "sv": "Måndag–fredag 10.00–19.00; ring innan du kommer.",
         "da": "Mandag til fredag 10.00–19.00; ring på forhånd.",
-        "fi": "Maanantaista perjantaihin 10.00–19.00; soita etukäteen."
+        "fi": "Maanantaista perjantaihin 10.00–19.00; soita etukäteen.",
+        "nb": "mandag–fredag 10.00–19.00; ring på forhånd."
       }
     },
     {
@@ -110,7 +113,8 @@
         "cs": "Pohotovostní služba mimo ordinační dobu v noci a o víkendech: +33 6 60 61 36 24. Není to nonstop klinika; předem zavolejte.",
         "sv": "Jourtjänst utanför öppettid för nätter och helger: +33 6 60 61 36 24. Ingen klinik med öppet dygnet runt; ring innan du kommer.",
         "da": "Vagtservice uden for åbningstid om nætter og i weekender: +33 6 60 61 36 24. Ikke en døgnåben klinik; ring på forhånd.",
-        "fi": "Päivystys öisin ja viikonloppuisin aukioloaikojen ulkopuolella: +33 6 60 61 36 24. Ei 24 tunnin klinikka; soita etukäteen."
+        "fi": "Päivystys öisin ja viikonloppuisin aukioloaikojen ulkopuolella: +33 6 60 61 36 24. Ei 24 tunnin klinikka; soita etukäteen.",
+        "nb": "Vakttjeneste utenom åpningstid for netter og helger: +33 6 60 61 36 24. Ikke en døgnåpen klinikk; ring på forhånd."
       }
     }
   ],

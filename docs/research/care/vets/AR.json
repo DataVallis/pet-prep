@@ -42,7 +42,8 @@
         "cs": "Nemocnice pro malá zvířata, otevřeno Po–Pá 9:00–19:00. Nejde o nonstop pohotovost.",
         "sv": "Djursjukhus för smådjur, öppet måndag–fredag 9.00–19.00. Inte en akutklinik med öppet dygnet runt.",
         "da": "Dyrehospital for smådyr, åbent mandag til fredag 9.00–19.00. Ikke en akutklinik med åbent døgnet rundt.",
-        "fi": "Pieneläinsairaala auki ma–pe 9–19. Ei ole 24 tunnin päivystysklinikka."
+        "fi": "Pieneläinsairaala auki ma–pe 9–19. Ei ole 24 tunnin päivystysklinikka.",
+        "nb": "Smådyrsykehus åpent mandag til fredag kl. 9.00–19.00. Ikke en døgnåpen akuttklinikk."
       }
     },
     {
@@ -70,7 +71,8 @@
         "cs": "Běžná ordinační doba Po–Pá 10:00–12:00 a 14:00–17:00. Pohotovostní případy se ošetřují i mimo tuto dobu, včetně nocí, víkendů a svátků; před cestou zavolejte.",
         "sv": "Ordinarie öppettider måndag–fredag 10.00–12.00 och 14.00–17.00. Akutfall tas emot även utanför dessa tider, bland annat nätter, helger och helgdagar; ring innan du kommer.",
         "da": "Almindelig åbningstid mandag til fredag 10.00–12.00 og 14.00–17.00. Akutte tilfælde tages imod uden for åbningstiden, også om natten, i weekenden og på helligdage; ring på forhånd.",
-        "fi": "Tavalliset aukioloajat ma–pe 10–12 ja 14–17. Päivystystapaukset hoidetaan näiden aikojen ulkopuolella, myös öisin, viikonloppuisin ja pyhäpäivinä; soita etukäteen."
+        "fi": "Tavalliset aukioloajat ma–pe 10–12 ja 14–17. Päivystystapaukset hoidetaan näiden aikojen ulkopuolella, myös öisin, viikonloppuisin ja pyhäpäivinä; soita etukäteen.",
+        "nb": "Ordinær åpningstid mandag til fredag kl. 10.00–12.00 og 14.00–17.00. Nødtilfeller tas imot utenom disse tidene, også om natten, i helger og på helligdager; ring på forhånd."
       }
     },
     {
@@ -97,7 +99,8 @@
         "cs": "Veterinární toxikologická informační služba, v pracovní dny 8:00–18:00. Nejde o nonstop linku.",
         "sv": "Giftinformation för djur, vardagar 8.00–18.00. Linjen har inte öppet dygnet runt.",
         "da": "Giftrådgivning for dyr, hverdage 8.00–18.00. Ikke en døgnåben linje.",
-        "fi": "Eläinten myrkytystietopalvelu arkisin 8–18. Ei ole 24 tunnin linja."
+        "fi": "Eläinten myrkytystietopalvelu arkisin 8–18. Ei ole 24 tunnin linja.",
+        "nb": "Giftinformasjon for dyr, hverdager 8.00–18.00. Ikke en døgnåpen linje."
       }
     }
   ],
