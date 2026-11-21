@@ -1,5 +1,17 @@
 @php
     $f = $this->getFunnel();
+    $sources = $this->getSources();
+    $p2 = $this->getPhase2();
+    // VALIDATION_PLAN §4.1: steps per acquisition source.
+    $sourceCols = [
+        ['registered', null, null],
+        ['child_added', 'registered', null],
+        ['pet_born', 'registered', null],
+        ['d7', 'd7_eligible', 'd7_eligible'],
+        ['h6', 'h6_eligible', 'h6_eligible'],
+        ['paid', 'pet_born', null],
+        ['paid_test', 'pet_born', null],
+    ];
     $pct = fn (int $part, int $whole) => ($p = \App\Services\Funnel\FunnelService::percent($part, $whole)) === null ? '' : ' ('.$p.' %)';
     // [step, base it is a share of, eligible key or null]
     $cols = [
@@ -8,6 +20,7 @@
         ['pet_born', 'registered', null],
         ['d1', 'd1_eligible', 'd1_eligible'],
         ['d7', 'd7_eligible', 'd7_eligible'],
+        ['h6', 'h6_eligible', 'h6_eligible'],
         ['paid', 'pet_born', null],
         ['paid_test', 'pet_born', null],
         ['paid_voucher', 'pet_born', null],
@@ -55,7 +68,7 @@
                             @endforeach
                         </tr>
                     @empty
-                        <tr><td colspan="11" class="py-2 text-gray-500">{{ __('admin.funnel.empty') }}</td></tr>
+                        <tr><td colspan="12" class="py-2 text-gray-500">{{ __('admin.funnel.empty') }}</td></tr>
                     @endforelse
                 </tbody>
                 @if ($f['rows'] !== [])
@@ -70,6 +83,66 @@
                 @endif
             </table>
         </div>
+    </x-filament::section>
+
+    <x-filament::section>
+        <x-slot name="heading">{{ __('admin.funnel.sources.heading') }}</x-slot>
+        <x-slot name="description">{{ __('admin.funnel.sources.description') }}</x-slot>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+                <thead>
+                    <tr class="text-left border-b border-gray-200 dark:border-gray-700">
+                        <th class="py-1 pr-3">{{ __('admin.funnel.sources.col') }}</th>
+                        @foreach ($sourceCols as $col)
+                            <th class="py-1 pr-3 text-right">{{ __('admin.funnel.col.'.$col[0]) }}</th>
+                        @endforeach
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse ($sources as $line)
+                        <tr class="border-b border-gray-100 dark:border-gray-800">
+                            <td class="py-1 pr-3">{{ __('admin.funnel.sources.names.'.$line['source']) }}</td>
+                            @foreach ($sourceCols as $col)
+                                <td class="py-1 pr-3 text-right">{{ $cell($line, $col) }}</td>
+                            @endforeach
+                        </tr>
+                    @empty
+                        <tr><td colspan="8" class="py-2 text-gray-500">{{ __('admin.funnel.empty') }}</td></tr>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
+    </x-filament::section>
+
+    <x-filament::section>
+        <x-slot name="heading">{{ __('admin.funnel.phase2.heading') }}</x-slot>
+        <x-slot name="description">{{ __('admin.funnel.phase2.description') }}</x-slot>
+
+        <dl class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div>
+                <dt class="text-gray-500">{{ __('admin.funnel.phase2.h7') }}</dt>
+                <dd class="text-lg font-medium">{{ $p2['viewed'] === 0 ? '—' : $p2['notify'].' / '.$p2['viewed'].$pct($p2['notify'], $p2['viewed']) }}</dd>
+            </div>
+            <div>
+                <dt class="text-gray-500">{{ __('admin.funnel.phase2.viewed') }}</dt>
+                <dd class="text-lg font-medium">{{ $p2['viewed'] }}</dd>
+            </div>
+            <div>
+                <dt class="text-gray-500">{{ __('admin.funnel.phase2.submitted') }}</dt>
+                <dd class="text-lg font-medium">{{ $p2['submitted'] }}</dd>
+            </div>
+            <div>
+                <dt class="text-gray-500">{{ __('admin.funnel.phase2.notify') }}</dt>
+                <dd class="text-lg font-medium">{{ $p2['notify'] }}</dd>
+            </div>
+            @foreach ($p2['prices'] as $price => $count)
+                <div>
+                    <dt class="text-gray-500">{{ __('admin.funnel.phase2.prices.'.$price) }}</dt>
+                    <dd class="text-lg font-medium">{{ $count }}{{ $pct($count, $p2['submitted']) }}</dd>
+                </div>
+            @endforeach
+        </dl>
     </x-filament::section>
 
     <x-filament::section>

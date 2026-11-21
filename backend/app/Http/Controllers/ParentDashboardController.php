@@ -15,6 +15,7 @@ use App\Services\HardStopService;
 use App\Services\Media\PetMediaService;
 use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
+use App\Services\Validation\Phase2InterestService;
 use App\Services\WishService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -43,7 +44,10 @@ class ParentDashboardController extends Controller
      * Score, today's routines, last 7 days and 12-week progress; pets with
      * caretakers, traffic light, metrics, Care Score, today and timeline —
      * M2-05 / M2-06) + legacy single-pet state, legacy traffic light
-     * (escalation based, deprecated), quiet hours, recent activities.
+     * (escalation based, deprecated), quiet hours, recent activities, and
+     * `phase2_interest` {submitted, notify} (VALIDATION_PLAN §4.4: this
+     * parent already sent the »Dobili smo pravo žival« form / with »Obvestite
+     * me«).
      */
     public function dashboard(Request $request): JsonResponse
     {
@@ -67,6 +71,7 @@ class ParentDashboardController extends Controller
                 'recent_activities' => [],
                 'family' => null,
                 'wishes_open_count' => 0,
+                'phase2_interest' => $this->phase2Interest($parent),
             ], 200);
         }
 
@@ -90,6 +95,7 @@ class ParentDashboardController extends Controller
                 'family' => $familyData,
                 // M6-W01 »Želje«: open wishes of all children, all pets of the family.
                 'wishes_open_count' => app(WishService::class)->openCountOfFamily($family),
+                'phase2_interest' => $this->phase2Interest($parent),
             ], 200);
         }
 
@@ -148,7 +154,18 @@ class ParentDashboardController extends Controller
             'family' => $familyData,
             // M6-W01 »Želje«: open wishes of all children, all pets of the family.
             'wishes_open_count' => app(WishService::class)->openCountOfFamily($family),
+            // VALIDATION_PLAN §4.4 (H7): has THIS parent sent the Phase-2 form (»Hvala« instead of the
+            // form), and with »Obvestite me« (`notify` false → a plain thank-you)?
+            'phase2_interest' => $this->phase2Interest($parent),
         ], 200);
+    }
+
+    /**
+     * @return array{submitted: bool, notify: bool}
+     */
+    private function phase2Interest(User $parent): array
+    {
+        return app(Phase2InterestService::class)->dashboardFor($parent);
     }
 
     /**

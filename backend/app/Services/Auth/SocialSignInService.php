@@ -9,6 +9,7 @@ use App\Http\Requests\RegisterParentRequest;
 use App\Models\User;
 use App\Models\UserSocialAccount;
 use App\Services\FamilyService;
+use App\Services\Validation\AcquisitionAnswer;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Facades\DB;
 
@@ -50,13 +51,14 @@ class SocialSignInService
         string $timezone,
         ?string $requestName,
         string $deviceName,
+        ?AcquisitionAnswer $acquisition = null,
     ): SocialSignInResult {
         try {
-            return $this->attempt($identity, $termsAccepted, $timezone, $requestName, $deviceName);
+            return $this->attempt($identity, $termsAccepted, $timezone, $requestName, $deviceName, $acquisition);
         } catch (UniqueConstraintViolationException) {
             // A concurrent first sign-in with the same identity / e-mail won
             // the race; the second pass finds its rows and signs in or links.
-            return $this->attempt($identity, $termsAccepted, $timezone, $requestName, $deviceName);
+            return $this->attempt($identity, $termsAccepted, $timezone, $requestName, $deviceName, $acquisition);
         }
     }
 
@@ -66,8 +68,9 @@ class SocialSignInService
         string $timezone,
         ?string $requestName,
         string $deviceName,
+        ?AcquisitionAnswer $acquisition,
     ): SocialSignInResult {
-        return DB::transaction(function () use ($identity, $termsAccepted, $timezone, $requestName, $deviceName): SocialSignInResult {
+        return DB::transaction(function () use ($identity, $termsAccepted, $timezone, $requestName, $deviceName, $acquisition): SocialSignInResult {
             $link = UserSocialAccount::where('provider', $identity->provider->value)
                 ->where('subject', $identity->subject)
                 ->first();
@@ -117,7 +120,8 @@ class SocialSignInService
                 );
             }
 
-            $user = $this->createParent($identity, $timezone, $requestName);
+            // VALIDATION_PLAN §4.1: the acquisition answer is used only here (a new account).
+            $user = $this->createParent($identity, $timezone, $requestName, $acquisition);
             $this->link($user, $identity);
 
             return new SocialSignInResult($user, $this->issueToken($user, $deviceName), true);
@@ -134,7 +138,7 @@ class SocialSignInService
         }
     }
 
-    private function createParent(SocialIdentity $identity, string $timezone, ?string $requestName): User
+    private function createParent(SocialIdentity $identity, string $timezone, ?string $requestName, ?AcquisitionAnswer $acquisition): User
     {
         $user = new User;
         $user->forceFill([
@@ -149,6 +153,9 @@ class SocialSignInService
             'terms_accepted_at' => now(),
             'terms_version' => (string) config('legal.terms_version', 'draft-2026-10'),
         ]);
+        if ($acquisition !== null) {
+            $user->forceFill($acquisition->columns());
+        }
         $user->save();
 
         // The User::created hook already gave the parent a family; make sure

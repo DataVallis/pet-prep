@@ -161,6 +161,10 @@ class GameDataResetService
         'pets',
         // M4-10 shared look pool of free pets (after pets / pet_media, which reference it)
         'pet_looks',
+        // VALIDATION_PLAN §4.1 / §4.4 (H6 / H7, → users, families; phase2_interests → email_contacts,
+        // which are KEEP: an »Obvestite me« address left in the app stays in the e-mail store)
+        'parent_dashboard_opens',
+        'phase2_interests',
         // family model
         'family_invites',
         'family_user',

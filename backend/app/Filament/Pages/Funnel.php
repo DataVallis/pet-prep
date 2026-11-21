@@ -11,6 +11,8 @@ use Illuminate\Auth\Access\AuthorizationException;
  * Funnel (M5-08, VALIDATION_PLAN §4.1, David 2026-11-10, superadmin only):
  * families per weekly sign-up cohort at every step from registration to the
  * certificate — see FunnelService for the step definitions. Numbers only.
+ * VALIDATION_PLAN §4.1 / §4.4 (David 2026-11-21): + H6 column, the steps per
+ * acquisition source (with »neznano«) and the Phase-2 fake door (H7).
  */
 class Funnel extends Page
 {
@@ -69,6 +71,30 @@ class Funnel extends Page
         $this->authorizeAccess();
 
         return app(FunnelService::class)->cohorts($this->weeks);
+    }
+
+    /**
+     * VALIDATION_PLAN §4.1: the same steps per acquisition source (+ »neznano«).
+     *
+     * @return list<array<string, int|string>>
+     */
+    public function getSources(): array
+    {
+        $this->authorizeAccess();
+
+        return app(FunnelService::class)->sources($this->weeks);
+    }
+
+    /**
+     * VALIDATION_PLAN §4.4 (H7): Phase-2 fake door taps, answers and price split.
+     *
+     * @return array{viewed: int, submitted: int, notify: int, prices: array<string, int>}
+     */
+    public function getPhase2(): array
+    {
+        $this->authorizeAccess();
+
+        return app(FunnelService::class)->phase2($this->weeks);
     }
 
     private function authorizeAccess(): void
