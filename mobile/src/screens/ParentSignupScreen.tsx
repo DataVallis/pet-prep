@@ -4,6 +4,7 @@
  * (`POST /api/register`). Same dark style as ParentLoginScreen. On success the token
  * is stored like a login and AppNavigator routes the parent to the dashboard, whose
  * empty state offers "Dodaj otroka". The device timezone becomes the family timezone.
+ * M5-08: optional »Kje ste izvedeli za PetPrep?« (`AcquisitionPicker`) above the terms.
  */
 
 import { useState } from 'react';
@@ -28,6 +29,8 @@ import { light, palette } from '@/theme';
 import { AUTH_STYLES } from '@/components/auth/authStyles';
 import SocialSignInSection from '@/components/auth/SocialSignInSection';
 import TermsCheckbox from '@/components/auth/TermsCheckbox';
+import AcquisitionPicker from '@/components/auth/AcquisitionPicker';
+import { EMPTY_ACQUISITION, type AcquisitionChoice } from '@/modules/validation/acquisition';
 import { BrandLogo } from '@/components/brand/BrandLogo';
 
 const S = SIGNUP_STRINGS;
@@ -88,6 +91,8 @@ function PasswordInput({ placeholder, visible, onToggle, invalid, testID, ...inp
 export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScreenProps) {
   const [form, setForm] = useState<SignupForm>(EMPTY_FORM);
   const [errors, setErrors] = useState<SignupErrors>({});
+  // M5-08: optional »Kje ste izvedeli za PetPrep?« — never validated, never blocks the sign-up.
+  const [acquisition, setAcquisition] = useState<AcquisitionChoice>(EMPTY_ACQUISITION);
   const [general, setGeneral] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -116,7 +121,7 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
 
     setIsLoading(true);
     try {
-      const session = await performSignup(signupBody(form, deviceName(), deviceTimezone()));
+      const session = await performSignup(signupBody(form, deviceName(), deviceTimezone(), acquisition));
       // Same store update as login / session restore; AppNavigator routes by role.
       signIn(session);
     } catch (err) {
@@ -220,6 +225,10 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
               </View>
             </View>
 
+            <View style={styles.acquisition}>
+              <AcquisitionPicker value={acquisition} onChange={setAcquisition} disabled={formLocked} testID="signup-acquisition" />
+            </View>
+
             <TermsCheckbox
               checked={form.acceptTerms}
               onToggle={() => update('acceptTerms', !form.acceptTerms)}
@@ -269,4 +278,5 @@ const styles = StyleSheet.create({
   passwordInput: { flex: 1, height: '100%', fontSize: 15, color: light.ink },
   hint: { marginTop: 6, fontSize: 12, color: light.inkMuted },
   fieldError: { marginTop: 6, fontSize: 12, color: light.danger },
+  acquisition: { marginTop: 18 },
 });

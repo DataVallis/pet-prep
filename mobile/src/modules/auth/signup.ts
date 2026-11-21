@@ -19,6 +19,8 @@ import {
 } from '@/api/client';
 import type { SignInPayload } from '@/store/appStore';
 import { saveSignInMethod } from '@/modules/session/signInMethod';
+import { acquisitionFields, EMPTY_ACQUISITION, type AcquisitionChoice } from '@/modules/validation/acquisition';
+import { markAcquisitionPromptDone } from '@/modules/validation/acquisitionPrefs';
 import { currentLanguage, t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -119,12 +121,13 @@ export function deviceTimezone(): string | undefined {
   }
 }
 
-/** `POST /api/register` body from a validated form. */
+/** `POST /api/register` body from a validated form (+ the optional M5-08 acquisition answer). */
 export function signupBody(
   form: SignupForm,
   deviceName: string,
   /** Usually `deviceTimezone()`; undefined → the server uses Europe/Ljubljana. */
   timezone: string | undefined,
+  acquisition: AcquisitionChoice = EMPTY_ACQUISITION,
 ): RegisterParentRequest {
   const body: RegisterParentRequest = {
     name: normalizeName(form.name),
@@ -135,7 +138,8 @@ export function signupBody(
     device_name: deviceName,
   };
   if (timezone !== undefined) body.timezone = timezone;
-  return body;
+  // M5-08: never required — nothing picked = the fields are left out (the server stores null).
+  return { ...body, ...acquisitionFields(acquisition) };
 }
 
 export interface SignupFailure {
@@ -240,6 +244,8 @@ export async function performSignup(body: RegisterParentRequest): Promise<SignIn
     response = await api.register(withoutTimezone);
   }
   await saveAuthToken(response.token);
+  // M5-08: the parent saw »Kje ste izvedeli za PetPrep?« here — the dashboard card never asks again.
+  void markAcquisitionPromptDone(response.user.id);
   // M2-10c: an e-mail account confirms deletions with its password.
   await saveSignInMethod('password');
   return {

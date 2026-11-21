@@ -10,6 +10,8 @@
  * opens the challenge paywall (`ChallengeScreen`); the simulated "Pasme" tab is gone.
  * M5-F01: "12-week challenge — buy" on the child card and detail, and the "Purchases /
  * challenge" row in Nadzor open the same paywall (it lists every dog that can be bought).
+ * M5-08 validation signals: the H6 »dashboard opened« signal (`useDashboardOpenedSignal`), the
+ * once-only acquisition card and the H7 fake door row »Dobili smo pravo žival« (v pripravi).
  */
 
 import { useContext, useEffect, useState } from 'react';
@@ -20,7 +22,7 @@ import { BrandMark } from '@/components/brand/BrandLogo';
 import { fonts, radius, tightTracking } from '@/theme';
 import { LayoutDashboard, LogOut, Settings } from 'lucide-react-native';
 
-import { ApiError } from '@/api/client';
+import { ApiError, api } from '@/api/client';
 import { isNoChildPaired, useParentDashboard } from '@/hooks/queries/useParentDashboard';
 import { familyFromDashboard, petOfChild, type FamilyChild } from '@/modules/family/family';
 import { logout } from '@/modules/session/logout';
@@ -50,6 +52,11 @@ import { t } from '@/i18n';
 import { catCount, petCountText } from '@/modules/species/species';
 import { strings } from '@/i18n/strings';
 import { pushTargetChild } from '@/modules/certificate/certificate';
+import AcquisitionCard from '@/components/parent/AcquisitionCard';
+import Phase2Row from '@/components/parent/Phase2Row';
+import Phase2InterestScreen from '@/screens/parent/Phase2InterestScreen';
+import { readPhase2Interest } from '@/modules/validation/phase2';
+import { useDashboardOpenedSignal } from '@/modules/validation/useDashboardOpenedSignal';
 
 /** User-visible strings (`parent:dashboard`, M1-18). */
 export const DASHBOARD_STRINGS = strings('parent', 'dashboard', {
@@ -73,7 +80,9 @@ type Overlay =
   /** `focusPetId` (M6-U01): opened from a free pet's »Začni 12-tedenski izziv« → the upgrade copy for that pet. */
   | { kind: 'challenge'; backToChildId?: number; focusPetId?: number }
   /** M6-W05 »Želje« (dashboard row or a tapped `wish_created` push). */
-  | { kind: 'wishes' };
+  | { kind: 'wishes' }
+  /** M5-08 H7 fake door »Dobili smo pravo žival« (v pripravi). */
+  | { kind: 'phase2' };
 
 /** QA n3: where the "updating" pill sits — above the measured tab bar (0 when none) and the safe area. */
 export function updatingBannerBottom(tabBarHeight: number, safeBottom: number): number {
@@ -133,6 +142,17 @@ export default function ParentDashboardScreen() {
   const wishesOpenCount = readWishesOpenCount(dashboard.data);
   const children = family?.children ?? [];
   const livePetIds = (family?.pets ?? []).filter((p) => p.is_active && !p.is_game_over).map((p) => p.id);
+  // M5-08: the signed-in parent (H6 signal, acquisition card, e-mail prefill of the fake door).
+  const user = useAppStore((s) => s.user);
+  const parentId = user?.role === 'parent' ? user.id : null;
+  useDashboardOpenedSignal(parentId);
+  // M5-08 H7: null on an older server → no »Dobili smo pravo žival« row.
+  const phase2 = readPhase2Interest(dashboard.data);
+  const openPhase2 = () => {
+    // Fire and forget — a failure never blocks the screen.
+    void api.reportPhase2Viewed().catch(() => undefined);
+    setOverlay({ kind: 'phase2' });
+  };
 
   const openAddChild = () => setOverlay({ kind: 'addChild' });
   const openChildPin = (child: FamilyChild) => setOverlay({ kind: 'addChild', child });
@@ -240,6 +260,10 @@ export default function ParentDashboardScreen() {
           }}
         />
       );
+    }
+
+    if (overlay.kind === 'phase2') {
+      return <Phase2InterestScreen state={phase2} accountEmail={user?.email ?? null} onBack={closeOverlay} />;
     }
 
     const detailChild = overlay.kind === 'child' ? children.find((c) => c.id === overlay.childId) : undefined;
@@ -351,6 +375,9 @@ export default function ParentDashboardScreen() {
               />
             ))
           )}
+          {/* M5-08: once-only »Kje ste izvedeli za PetPrep?« and the calm H7 row, below the children. */}
+          {dashboard.data && parentId !== null && <AcquisitionCard userId={parentId} />}
+          {phase2 !== null && children.length > 0 && <Phase2Row state={phase2} onPress={openPhase2} />}
         </ScrollView>
 
         <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} onHeight={setTabBarHeight} />
