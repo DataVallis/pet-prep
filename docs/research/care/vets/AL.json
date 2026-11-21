@@ -44,7 +44,8 @@
         "cs": "Pohotovostní služba k dispozici 24 hodin denně, 7 dní v týdnu.",
         "sv": "Akutservice dygnet runt, alla dagar i veckan.",
         "da": "Akutberedskab døgnet rundt, alle ugens dage.",
-        "fi": "Päivystys auki ympäri vuorokauden, 7 päivää viikossa."
+        "fi": "Päivystys auki ympäri vuorokauden, 7 päivää viikossa.",
+        "nb": "Akuttjeneste tilgjengelig hele døgnet, sju dager i uken."
       },
       "small_animals": true,
       "url": "https://vethospitaltirana.com",

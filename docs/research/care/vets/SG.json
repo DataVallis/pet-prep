@@ -58,7 +58,8 @@
         "cs": "Otevřeno denně nonstop pro pohotovosti a intenzivní péči. Během cesty zavolejte.",
         "sv": "Öppet dygnet runt för akutfall och intensivvård. Ring på vägen dit.",
         "da": "Døgnåben hver dag til akutte og kritiske tilfælde. Ring på forhånd, når du er på vej.",
-        "fi": "Päivystys ja tehohoito auki ympäri vuorokauden päivittäin. Soita matkalla etukäteen."
+        "fi": "Päivystys ja tehohoito auki ympäri vuorokauden päivittäin. Soita matkalla etukäteen.",
+        "nb": "Åpent hele døgnet daglig for akutt- og intensivbehandling. Ring på forhånd mens du er på vei."
       },
       "small_animals": true,
       "url": "https://www.veshospital.com.sg/",
@@ -85,7 +86,8 @@
         "cs": "Veterinární pohotovostní klinika nonstop. Před cestou zavolejte.",
         "sv": "Veterinärakut öppen dygnet runt. Ring innan du kommer.",
         "da": "Døgnåben akutklinik for dyr. Ring på forhånd.",
-        "fi": "Eläinlääkäripäivystys ympäri vuorokauden. Soita etukäteen."
+        "fi": "Eläinlääkäripäivystys ympäri vuorokauden. Soita etukäteen.",
+        "nb": "Dyrlegevakt hele døgnet. Ring på forhånd."
       },
       "small_animals": true,
       "url": "https://www.westsideemergency.com.sg/",
@@ -112,7 +114,8 @@
         "cs": "Oddělení pohotovosti a intenzivní péče otevřeno nonstop.",
         "sv": "Akut- och intensivvårdsavdelning öppen dygnet runt.",
         "da": "Akut- og intensivafdeling åben døgnet rundt.",
-        "fi": "Päivystys- ja tehohoito-osasto auki ympäri vuorokauden."
+        "fi": "Päivystys- ja tehohoito-osasto auki ympäri vuorokauden.",
+        "nb": "Akutt- og intensivavdeling åpen hele døgnet."
       },
       "small_animals": true,
       "url": "https://www.beecroft.com.sg/",
@@ -139,7 +142,8 @@
         "cs": "Péče nonstop, včetně pohotovosti a intenzivní péče.",
         "sv": "Vård dygnet runt, inklusive akut- och intensivvård.",
         "da": "Behandling døgnet rundt, også akut og intensiv.",
-        "fi": "Hoitoa ympäri vuorokauden, myös päivystys ja tehohoito."
+        "fi": "Hoitoa ympäri vuorokauden, myös päivystys ja tehohoito.",
+        "nb": "Tilbyr behandling hele døgnet, inkludert akutt- og intensivbehandling."
       },
       "small_animals": true,
       "url": "https://www.advancedvetcare.sg/",
@@ -166,7 +170,8 @@
         "cs": "Otevřeno nonstop; denní a noční klinika.",
         "sv": "Öppet dygnet runt; dagklinik plus nattklinik.",
         "da": "Døgnåben; dagklinik og natklinik.",
-        "fi": "Auki 24 h; päiväklinikka ja yöklinikka."
+        "fi": "Auki 24 h; päiväklinikka ja yöklinikka.",
+        "nb": "Åpent hele døgnet; dagklinikk pluss nattklinikk."
       },
       "small_animals": true,
       "url": "http://www.comvet.com/",
@@ -193,7 +198,8 @@
         "cs": "Pohotovostní služba (Pet A&E); aktuální provozní dobu zjistíte telefonicky.",
         "sv": "Akutmottagning (Pet A&E); ring och fråga om aktuella öppettider.",
         "da": "Akutmodtagelse (Pet A&E); ring på forhånd for aktuelle åbningstider.",
-        "fi": "Päivystys (Pet A&E); kysy nykyiset aukioloajat soittamalla etukäteen."
+        "fi": "Päivystys (Pet A&E); kysy nykyiset aukioloajat soittamalla etukäteen.",
+        "nb": "Akuttjeneste (Pet A&E); ring på forhånd for gjeldende åpningstider."
       },
       "small_animals": true,
       "url": "http://www.lvs.com.sg/",
@@ -220,7 +226,8 @@
         "cs": "Specializovaná a odkazová nemocnice; před cestou zavolejte.",
         "sv": "Remiss- och specialistdjursjukhus; ring innan du kommer.",
         "da": "Specialistdyrehospital med henvisning; ring på forhånd.",
-        "fi": "Lähetesairaala ja erikoissairaala; soita etukäteen."
+        "fi": "Lähetesairaala ja erikoissairaala; soita etukäteen.",
+        "nb": "Henvisnings- og spesialistsykehus; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://www.awrc.sg/",
@@ -247,7 +254,8 @@
         "cs": "Otevírací dobu a pohotovostní režim zjistíte telefonicky.",
         "sv": "Ring och fråga om öppettider och hur akutfall hanteras.",
         "da": "Ring for åbningstider og akutordning.",
-        "fi": "Kysy aukioloajat ja päivystysjärjestelyt soittamalla."
+        "fi": "Kysy aukioloajat ja päivystysjärjestelyt soittamalla.",
+        "nb": "Ring for å høre åpningstidene og vaktordningen for nødtilfeller."
       },
       "small_animals": true,
       "url": "http://www.mountpleasant.com.sg/",
@@ -274,7 +282,8 @@
         "cs": "Otevírací dobu zjistíte telefonicky.",
         "sv": "Ring och fråga om öppettider.",
         "da": "Ring for åbningstider.",
-        "fi": "Soita ja kysy aukioloajat."
+        "fi": "Soita ja kysy aukioloajat.",
+        "nb": "Ring for å høre åpningstidene."
       },
       "small_animals": true,
       "url": "http://jtvet.com",
@@ -301,7 +310,8 @@
         "cs": "Otevírací dobu zjistíte telefonicky.",
         "sv": "Ring och fråga om öppettider.",
         "da": "Ring for åbningstider.",
-        "fi": "Soita ja kysy aukioloajat."
+        "fi": "Soita ja kysy aukioloajat.",
+        "nb": "Ring for å høre åpningstidene."
       },
       "small_animals": true,
       "url": "https://www.unitedvetclinic.com/",
@@ -328,7 +338,8 @@
         "cs": "Otevírací dobu zjistíte telefonicky.",
         "sv": "Ring och fråga om öppettider.",
         "da": "Ring for åbningstider.",
-        "fi": "Soita ja kysy aukioloajat."
+        "fi": "Soita ja kysy aukioloajat.",
+        "nb": "Ring for å høre åpningstidene."
       },
       "small_animals": true,
       "url": "http://ambervet.com",
@@ -355,7 +366,8 @@
         "cs": "Otevírací dobu zjistíte telefonicky.",
         "sv": "Ring och fråga om öppettider.",
         "da": "Ring for åbningstider.",
-        "fi": "Soita ja kysy aukioloajat."
+        "fi": "Soita ja kysy aukioloajat.",
+        "nb": "Ring for å høre åpningstidene."
       },
       "small_animals": true,
       "url": "http://vetsforlife.com.sg",
@@ -382,7 +394,8 @@
         "cs": "Otevírací dobu zjistíte telefonicky.",
         "sv": "Ring och fråga om öppettider.",
         "da": "Ring for åbningstider.",
-        "fi": "Soita ja kysy aukioloajat."
+        "fi": "Soita ja kysy aukioloajat.",
+        "nb": "Ring for å høre åpningstidene."
       },
       "small_animals": true,
       "url": "http://vetsforlife.com.sg",
@@ -409,7 +422,8 @@
         "cs": "Otevírací dobu zjistíte telefonicky.",
         "sv": "Ring och fråga om öppettider.",
         "da": "Ring for åbningstider.",
-        "fi": "Soita ja kysy aukioloajat."
+        "fi": "Soita ja kysy aukioloajat.",
+        "nb": "Ring for å høre åpningstidene."
       },
       "small_animals": true,
       "url": "http://vetclinic.sg",
@@ -436,7 +450,8 @@
         "cs": "Otevírací dobu zjistíte telefonicky. Pohotovostní pomoc mimo ordinační dobu pouze pro stávající pacienty.",
         "sv": "Ring och fråga om öppettider. Akuthjälp utanför öppettiderna gäller endast befintliga patienter.",
         "da": "Ring for åbningstider. Akut hjælp uden for åbningstid kun for eksisterende patienter.",
-        "fi": "Kysy aukioloajat soittamalla. Päivystysapu virka-ajan ulkopuolella vain nykyisille potilaille."
+        "fi": "Kysy aukioloajat soittamalla. Päivystysapu virka-ajan ulkopuolella vain nykyisille potilaille.",
+        "nb": "Ring for å høre åpningstidene. Akutthjelp utenfor åpningstid gis kun til pasienter som allerede er registrert."
       },
       "small_animals": true,
       "url": "http://thevisitingvets.com.sg",
@@ -462,7 +477,8 @@
         "cs": "Otevírací dobu zjistíte telefonicky nebo na webu.",
         "sv": "Ring eller se öppettiderna på webbplatsen.",
         "da": "Ring eller se hjemmesiden for åbningstider.",
-        "fi": "Kysy aukioloajat soittamalla tai verkkosivuilta."
+        "fi": "Kysy aukioloajat soittamalla tai verkkosivuilta.",
+        "nb": "Ring eller se nettstedet for åpningstidene."
       },
       "small_animals": true,
       "url": "https://www.apexvetclinic.com/",
@@ -488,7 +504,8 @@
         "cs": "Otevírací dobu najdete na webu.",
         "sv": "Se öppettiderna på webbplatsen.",
         "da": "Se hjemmesiden for åbningstider.",
-        "fi": "Katso aukioloajat verkkosivuilta."
+        "fi": "Katso aukioloajat verkkosivuilta.",
+        "nb": "Se nettstedet for åpningstidene."
       },
       "small_animals": true,
       "url": "https://petsavenue.com.sg/",
@@ -514,7 +531,8 @@
         "cs": "Otevírací dobu najdete na webu.",
         "sv": "Se öppettiderna på webbplatsen.",
         "da": "Se hjemmesiden for åbningstider.",
-        "fi": "Katso aukioloajat verkkosivuilta."
+        "fi": "Katso aukioloajat verkkosivuilta.",
+        "nb": "Se nettstedet for åpningstidene."
       },
       "small_animals": true,
       "url": "http://starsveterinaryclinic.com/our-facilities/",
@@ -541,7 +559,8 @@
         "cs": "Denně 10:00–14:00 a 15:00–19:00, pouze na objednání. O státních svátcích zavřeno.",
         "sv": "Alla dagar 10.00–14.00 och 15.00–19.00, endast efter tidsbokning. Stängt på helgdagar.",
         "da": "Dagligt 10.00–14.00 og 15.00–19.00, kun efter aftale. Lukket på helligdage.",
-        "fi": "Päivittäin 10–14 ja 15–19, vain ajanvarauksella. Suljettu yleisinä vapaapäivinä."
+        "fi": "Päivittäin 10–14 ja 15–19, vain ajanvarauksella. Suljettu yleisinä vapaapäivinä.",
+        "nb": "Alle dager 10.00–14.00 og 15.00–19.00, kun etter timeavtale. Stengt på helligdager."
       },
       "small_animals": true,
       "url": "https://brightonvetcare.com/pages/serangoon-gardens",
@@ -568,7 +587,8 @@
         "cs": "Denně 10:00–14:00 a 15:00–19:00, pouze na objednání. O státních svátcích zavřeno.",
         "sv": "Alla dagar 10.00–14.00 och 15.00–19.00, endast efter tidsbokning. Stängt på helgdagar.",
         "da": "Dagligt 10.00–14.00 og 15.00–19.00, kun efter aftale. Lukket på helligdage.",
-        "fi": "Päivittäin 10–14 ja 15–19, vain ajanvarauksella. Suljettu yleisinä vapaapäivinä."
+        "fi": "Päivittäin 10–14 ja 15–19, vain ajanvarauksella. Suljettu yleisinä vapaapäivinä.",
+        "nb": "Alle dager 10.00–14.00 og 15.00–19.00, kun etter timeavtale. Stengt på helligdager."
       },
       "small_animals": true,
       "url": "https://www.brightonvetcare.com/contact",
@@ -595,7 +615,8 @@
         "cs": "Po–Pá 10:00–15:00 a 16:00–21:00; so–ne 10:00–15:00; pouze na objednání. O státních svátcích zavřeno.",
         "sv": "Mån–fre 10.00–15.00 och 16.00–21.00; lör–sön 10.00–15.00; endast efter tidsbokning. Stängt på helgdagar.",
         "da": "man–fre 10.00–15.00 og 16.00–21.00; lør–søn 10.00–15.00; kun efter aftale. Lukket på helligdage.",
-        "fi": "ma–pe 10–15 ja 16–21; la–su 10–15; vain ajanvarauksella. Suljettu yleisinä vapaapäivinä."
+        "fi": "ma–pe 10–15 ja 16–21; la–su 10–15; vain ajanvarauksella. Suljettu yleisinä vapaapäivinä.",
+        "nb": "Man–fre 10.00–15.00 og 16.00–21.00; lør–søn 10.00–15.00; kun etter timebestilling. Stengt på helligdager."
       },
       "small_animals": true,
       "url": "https://www.brightonvetcare.com/contact",

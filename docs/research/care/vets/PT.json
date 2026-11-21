@@ -81,7 +81,8 @@
         "cs": "Otevřeno každý den nonstop, i o víkendech a svátcích; pohotovostní případy bez předchozí objednávky",
         "sv": "Öppet varje dag dygnet runt, även helger och helgdagar; akutfall utan föregående tidsbokning",
         "da": "Åbent hver dag 24 timer, også i weekender og på helligdage; akutte tilfælde uden forudgående aftale",
-        "fi": "Auki joka päivä 24 h, myös viikonloppuisin ja pyhäpäivinä; päivystystapaukset ilman ajanvarausta"
+        "fi": "Auki joka päivä 24 h, myös viikonloppuisin ja pyhäpäivinä; päivystystapaukset ilman ajanvarausta",
+        "nb": "Åpent hele døgnet, alle dager, også helger og helligdager; nødtilfeller uten timebestilling"
       },
       "small_animals": true,
       "url": "https://fmv.ulusofona.pt/contactos",
@@ -112,7 +113,8 @@
         "cs": "Pohotovost nonstop; pohotovostní linka +351 961 560 331",
         "sv": "Akut dygnet runt; akutlinje +351 961 560 331",
         "da": "Akut 24 timer; akutlinje +351 961 560 331",
-        "fi": "Päivystys 24 h; päivystysnumero +351 961 560 331"
+        "fi": "Päivystys 24 h; päivystysnumero +351 961 560 331",
+        "nb": "Nødtilfeller hele døgnet; akuttelefon +351 961 560 331"
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinario.uevora.pt/",
@@ -142,7 +144,8 @@
         "cs": "Pohotovostní služba nonstop, podle kritérií klinické priority; pohotovostní e-mail upvet@icbas.up.pt",
         "sv": "Akutmottagning dygnet runt; patienter tas emot enligt klinisk prioritering; e-post för akutfall upvet@icbas.up.pt",
         "da": "Akutservice 24 timer, efter kliniske prioriteringskriterier; e-mail til akutte henvendelser: upvet@icbas.up.pt",
-        "fi": "Päivystys 24 h kliinisten kiireellisyysperusteiden mukaan; päivystyksen sähköposti upvet@icbas.up.pt"
+        "fi": "Päivystys 24 h kliinisten kiireellisyysperusteiden mukaan; päivystyksen sähköposti upvet@icbas.up.pt",
+        "nb": "Akuttjeneste hele døgnet etter klinisk prioritering; akutt e-post upvet@icbas.up.pt"
       },
       "small_animals": true,
       "url": "https://icbas.up.pt/clinicavet/en/",
@@ -173,7 +176,8 @@
         "cs": "Pohotovost nonstop, 365 dní v roce; WhatsApp 910 932 022",
         "sv": "Akut dygnet runt, årets alla dagar; WhatsApp 910 932 022",
         "da": "Akut 24 timer / 365 dage; WhatsApp 910 932 022",
-        "fi": "Päivystys 24 h / 365 päivää; WhatsApp 910 932 022"
+        "fi": "Päivystys 24 h / 365 päivää; WhatsApp 910 932 022",
+        "nb": "Nødtilfeller hele døgnet, 365 dager; WhatsApp 910 932 022"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/restelo-hospital-veterinario/",
@@ -203,7 +207,8 @@
         "cs": "Pohotovost každý den 00:00–24:00; klinika Po–So 9:00–21:00",
         "sv": "Akut alla dagar 00.00–24.00; klinik mån–lör 09.00–21.00",
         "da": "Akut hver dag 00.00–24.00; klinik man–lør 09.00–21.00",
-        "fi": "Päivystys joka päivä ympäri vuorokauden; klinikka ma–la 9.00–21.00"
+        "fi": "Päivystys joka päivä ympäri vuorokauden; klinikka ma–la 9.00–21.00",
+        "nb": "Nødtilfeller alle dager 00.00–24.00; klinikk man–lør 09.00–21.00"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/arco-do-cego-hospital-veterinario/",
@@ -233,7 +238,8 @@
         "cs": "Pohotovost každý den 00:00–24:00; klinika Po–So 10:00–21:00",
         "sv": "Akut alla dagar 00.00–24.00; klinik mån–lör 10.00–21.00",
         "da": "Akut hver dag 00.00–24.00; klinik man–lør 10.00–21.00",
-        "fi": "Päivystys joka päivä ympäri vuorokauden; klinikka ma–la 10.00–21.00"
+        "fi": "Päivystys joka päivä ympäri vuorokauden; klinikka ma–la 10.00–21.00",
+        "nb": "Nødtilfeller alle dager 00.00–24.00; klinikk man–lør 10.00–21.00"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/vasco-da-gama-hospital-veterinario/",
@@ -263,7 +269,8 @@
         "cs": "Pohotovost každý den 00:00–24:00; klinika Po–Pá 8:00–21:00, so 9:00–19:00",
         "sv": "Akut alla dagar 00.00–24.00; klinik mån–fre 08.00–21.00, lör 09.00–19.00",
         "da": "Akut hver dag 00.00–24.00; klinik man–fre 08.00–21.00, lør 09.00–19.00",
-        "fi": "Päivystys joka päivä ympäri vuorokauden; klinikka ma–pe 8.00–21.00, la 9.00–19.00"
+        "fi": "Päivystys joka päivä ympäri vuorokauden; klinikka ma–pe 8.00–21.00, la 9.00–19.00",
+        "nb": "Nødtilfeller alle dager 00.00–24.00; klinikk man–fre 08.00–21.00, lør 09.00–19.00"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/anicura-alma-veterinaria-hospital-veterinario/",
@@ -293,7 +300,8 @@
         "cs": "Běžná ordinační doba 9:00–21:00; veterinář na místě nonstop, 7 dní v týdnu pro pohotovostní případy",
         "sv": "Ordinarie öppettider 09.00–21.00; veterinär på plats dygnet runt, alla dagar, för akutfall",
         "da": "Almindelig åbningstid 09.00–21.00; dyrlæge til stede 24 timer / 7 dage til akutte tilfælde",
-        "fi": "Tavalliset aukioloajat 9.00–21.00; eläinlääkäri paikalla 24 h / 7 päivää päivystystapauksia varten"
+        "fi": "Tavalliset aukioloajat 9.00–21.00; eläinlääkäri paikalla 24 h / 7 päivää päivystystapauksia varten",
+        "nb": "Ordinær åpningstid kl. 9.00–21.00; dyrlege på stedet hele døgnet, alle dager for nødtilfeller"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/anicura-atlantico-hospital-veterinario/",
@@ -323,7 +331,8 @@
         "cs": "Pohotovost každý den 00:00–24:00; klinika Po–Pá 10:00–20:00, so 10:00–17:00",
         "sv": "Akut alla dagar 00.00–24.00; klinik mån–fre 10.00–20.00, lör 10.00–17.00",
         "da": "Akut hver dag 00.00–24.00; klinik man–fre 10.00–20.00, lør 10.00–17.00",
-        "fi": "Päivystys joka päivä ympäri vuorokauden; klinikka ma–pe 10.00–20.00, la 10.00–17.00"
+        "fi": "Päivystys joka päivä ympäri vuorokauden; klinikka ma–pe 10.00–20.00, la 10.00–17.00",
+        "nb": "Nødtilfeller alle dager 00.00–24.00; klinikk man–fre 10.00–20.00, lør 10.00–17.00"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/anicura-aveiro-hospital-veterinario/",
@@ -353,7 +362,8 @@
         "cs": "Pohotovost 00–24; klinika 9:00–21:00",
         "sv": "Akut 00–24; klinik 09.00–21.00",
         "da": "Akut 00–24; klinik 09.00–21.00",
-        "fi": "Päivystys ympäri vuorokauden; klinikka 9.00–21.00"
+        "fi": "Päivystys ympäri vuorokauden; klinikka 9.00–21.00",
+        "nb": "Nødtilfeller hele døgnet; klinikk 09.00–21.00"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/algarve-hospital-veterinario/",
@@ -384,7 +394,8 @@
         "cs": "Nonstop, včetně víkendů a svátků",
         "sv": "Dygnet runt, även helger och helgdagar",
         "da": "24 timer i døgnet, også i weekender og på helligdage",
-        "fi": "24 h vuorokaudessa, myös viikonloppuisin ja pyhäpäivinä"
+        "fi": "24 h vuorokaudessa, myös viikonloppuisin ja pyhäpäivinä",
+        "nb": "Hele døgnet, også i helger og på helligdager"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/chv-porto-hospital-veterinario/",
@@ -414,7 +425,8 @@
         "cs": "Pohotovost 00–24; stálý veterinář, chirurgická pohotovost a monitorovaná hospitalizace nonstop",
         "sv": "Akut 00–24; veterinär alltid på plats, akutkirurgi och övervakad inläggning dygnet runt",
         "da": "Akut 00–24; fast dyrlæge, akut kirurgi og overvåget indlæggelse 24 timer",
-        "fi": "Päivystys ympäri vuorokauden; eläinlääkäri paikalla jatkuvasti, kirurginen päivystys ja valvottu sairaalahoito 24 h"
+        "fi": "Päivystys ympäri vuorokauden; eläinlääkäri paikalla jatkuvasti, kirurginen päivystys ja valvottu sairaalahoito 24 h",
+        "nb": "Nødtilfeller hele døgnet; fast dyrlege, akuttkirurgi og overvåket innleggelse hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/anicura-maisanimais-hospital-veterinario/",
@@ -444,7 +456,8 @@
         "cs": "Stálý veterinář nonstop, 365 dní v roce",
         "sv": "Veterinär på plats dygnet runt, årets alla dagar",
         "da": "Fast dyrlæge 24 timer / 365 dage",
-        "fi": "Eläinlääkäri paikalla jatkuvasti 24 h / 365 päivää"
+        "fi": "Eläinlääkäri paikalla jatkuvasti 24 h / 365 päivää",
+        "nb": "Fast dyrlege hele døgnet, 365 dager i året"
       },
       "small_animals": true,
       "url": "https://www.anicura.pt/clinicas-veterinarias/anicura-santa-marinha-hospital-veterinario/",
@@ -474,7 +487,8 @@
         "cs": "Po–Ne nonstop",
         "sv": "Mån–sön dygnet runt",
         "da": "Man–søn 24 timer",
-        "fi": "ma–su 24 h"
+        "fi": "ma–su 24 h",
+        "nb": "man–søn hele døgnet"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/seixal/",
@@ -504,7 +518,8 @@
         "cs": "Stálá pohotovostní služba nonstop",
         "sv": "Akutmottagning dygnet runt, alla dagar",
         "da": "Fast akutservice 24 timer",
-        "fi": "Jatkuva päivystys 24 h"
+        "fi": "Jatkuva päivystys 24 h",
+        "nb": "Fast akuttjeneste hele døgnet"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/porto/",
@@ -535,7 +550,8 @@
         "cs": "Po–Ne nonstop",
         "sv": "Mån–sön dygnet runt",
         "da": "Man–søn 24 timer",
-        "fi": "ma–su 24 h"
+        "fi": "ma–su 24 h",
+        "nb": "man–søn hele døgnet"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/cascais/",
@@ -565,7 +581,8 @@
         "cs": "Po–Ne nonstop",
         "sv": "Mån–sön dygnet runt",
         "da": "Man–søn 24 timer",
-        "fi": "ma–su 24 h"
+        "fi": "ma–su 24 h",
+        "nb": "man–søn hele døgnet"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/berna/",
@@ -595,7 +612,8 @@
         "cs": "Po–Ne nonstop",
         "sv": "Mån–sön dygnet runt",
         "da": "Man–søn 24 timer",
-        "fi": "ma–su 24 h"
+        "fi": "ma–su 24 h",
+        "nb": "man–søn hele døgnet"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/hvpalmela/",
@@ -626,7 +644,8 @@
         "cs": "Po–Ne nonstop",
         "sv": "Mån–sön dygnet runt",
         "da": "Man–søn 24 timer",
-        "fi": "ma–su 24 h"
+        "fi": "ma–su 24 h",
+        "nb": "man–søn hele døgnet"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/coimbra/",
@@ -656,7 +675,8 @@
         "cs": "Po–Ne nonstop",
         "sv": "Mån–sön dygnet runt",
         "da": "Man–søn 24 timer",
-        "fi": "ma–su 24 h"
+        "fi": "ma–su 24 h",
+        "nb": "man–søn hele døgnet"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/hvanimar/",
@@ -717,7 +737,8 @@
         "cs": "Pohotovost nonstop na +351 915 173 454",
         "sv": "Akut dygnet runt via +351 915 173 454",
         "da": "Akut 24 timer på +351 915 173 454",
-        "fi": "Päivystys 24 h numerossa +351 915 173 454"
+        "fi": "Päivystys 24 h numerossa +351 915 173 454",
+        "nb": "Akutt hjelp hele døgnet via +351 915 173 454"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/as-nossas-unidades/",
@@ -748,7 +769,8 @@
         "cs": "Pohotovost nonstop na +351 915 179 795",
         "sv": "Akut dygnet runt via +351 915 179 795",
         "da": "Akut 24 timer på +351 915 179 795",
-        "fi": "Päivystys 24 h numerossa +351 915 179 795"
+        "fi": "Päivystys 24 h numerossa +351 915 179 795",
+        "nb": "Akutt hjelp hele døgnet via +351 915 179 795"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/as-nossas-unidades/",
@@ -779,7 +801,8 @@
         "cs": "Služba nonstop na +351 926 707 922",
         "sv": "Service dygnet runt via +351 926 707 922",
         "da": "Service 24 timer på +351 926 707 922",
-        "fi": "Palvelu 24 h numerossa +351 926 707 922"
+        "fi": "Palvelu 24 h numerossa +351 926 707 922",
+        "nb": "Døgntjeneste via +351 926 707 922"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/as-nossas-unidades/",
@@ -900,7 +923,8 @@
         "cs": "Pohotovost nonstop každý den, včetně svátků; pohotovostní mobil +351 964 896 707; obecné číslo +351 291 145 500; klinika Po–Pá 9–21, so 9–18",
         "sv": "Akut dygnet runt alla dagar, även helgdagar; akutmobil +351 964 896 707; allmänt nummer +351 291 145 500; klinik mån–fre 09–21, lör 09–18",
         "da": "Akut 24 timer hver dag, også helligdage; akutmobil +351 964 896 707; hovednummer +351 291 145 500; klinik man–fre 09–21, lør 09–18",
-        "fi": "Päivystys 24 h joka päivä, myös pyhäpäivinä; päivystyksen matkapuhelin +351 964 896 707; yleisnumero +351 291 145 500; klinikka ma–pe 9–21, la 9–18"
+        "fi": "Päivystys 24 h joka päivä, myös pyhäpäivinä; päivystyksen matkapuhelin +351 964 896 707; yleisnumero +351 291 145 500; klinikka ma–pe 9–21, la 9–18",
+        "nb": "Akutt hjelp hele døgnet, alle dager, også på helligdager; nødmobil +351 964 896 707; sentralbord +351 291 145 500; klinikken er åpen man–fre 09–21, lør 09–18"
       },
       "small_animals": true,
       "url": "https://hospitalveterinariodamadeira.pt/",
@@ -930,7 +954,8 @@
         "cs": "Pohotovostní telefon +351 919 004 050; klinika Po–Pá 9–13 a 14–18, so 9–17 (Vilamoura); pohotovostní služba 9–22",
         "sv": "Akutnummer +351 919 004 050; klinik mån–fre 09–13 och 14–18, lör 09–17 (Vilamoura); akutmottagning 09–22",
         "da": "Akuttelefon +351 919 004 050; klinik man–fre 09–13 og 14–18, lør 09–17 (Vilamoura); akutservice 09–22",
-        "fi": "Päivystyspuhelin +351 919 004 050; klinikka ma–pe 9–13 ja 14–18, la 9–17 (Vilamoura); päivystys 9–22"
+        "fi": "Päivystyspuhelin +351 919 004 050; klinikka ma–pe 9–13 ja 14–18, la 9–17 (Vilamoura); päivystys 9–22",
+        "nb": "Akuttelefon +351 919 004 050; klinikk man–fre 9–13 og 14–18, lør 9–17 (Vilamoura); akuttjeneste 9–22"
       },
       "small_animals": true,
       "url": "https://clinicaveterinaria.pt/",
@@ -959,7 +984,8 @@
         "cs": "Nonstop, 7 dní v týdnu; mobil +351 968 759 065",
         "sv": "Dygnet runt, alla dagar; mobil +351 968 759 065",
         "da": "24 timer / 7 dage; mobil +351 968 759 065",
-        "fi": "24 h / 7 päivää; matkapuhelin +351 968 759 065"
+        "fi": "24 h / 7 päivää; matkapuhelin +351 968 759 065",
+        "nb": "24 timer / sju dager; mobil +351 968 759 065"
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinariodeportimao.com/",
@@ -1004,7 +1030,8 @@
         "cs": "Klinika Po–Pá 8–20, so 8–13; pohotovost nonstop každý den",
         "sv": "Klinik mån–fre 08–20, lör 08–13; akut dygnet runt alla dagar",
         "da": "Klinik man–fre 08–20, lør 08–13; akut 24 timer hver dag",
-        "fi": "Klinikka ma–pe 8–20, la 8–13; päivystys 24 h joka päivä"
+        "fi": "Klinikka ma–pe 8–20, la 8–13; päivystys 24 h joka päivä",
+        "nb": "Klinikk man–fre kl. 8–20, lør kl. 8–13; nødtilfeller hele døgnet, alle dager"
       },
       "small_animals": true,
       "url": "https://www.hvbomjesus.pt/",
@@ -1106,7 +1133,8 @@
         "cs": "Pohotovostní telefon +351 966 442 741; klinika Po–Pá 10–14 a 15–21, so 10–18",
         "sv": "Akutnummer +351 966 442 741; klinik mån–fre 10–14 och 15–21, lör 10–18",
         "da": "Akuttelefon +351 966 442 741; klinik man–fre 10–14 og 15–21, lør 10–18",
-        "fi": "Päivystyspuhelin +351 966 442 741; klinikka ma–pe 10–14 ja 15–21, la 10–18"
+        "fi": "Päivystyspuhelin +351 966 442 741; klinikka ma–pe 10–14 ja 15–21, la 10–18",
+        "nb": "Akuttelefon +351 966 442 741; klinikk man–fre 10–14 og 15–21, lør 10–18"
       },
       "small_animals": true,
       "url": "https://vetrinarea.pt/",
@@ -1136,7 +1164,8 @@
         "cs": "Klinika Po–Pá 9:00–19:30, so 9:00–18:00",
         "sv": "Klinik mån–fre 09.00–19.30, lör 09.00–18.00",
         "da": "Klinik man–fre 09.00–19.30, lør 09.00–18.00",
-        "fi": "Klinikka ma–pe 9.00–19.30, la 9.00–18.00"
+        "fi": "Klinikka ma–pe 9.00–19.30, la 9.00–18.00",
+        "nb": "Klinikk man–fre kl. 9.00–19.30, lør kl. 9.00–18.00"
       },
       "small_animals": true,
       "url": "https://cvpopulo.com/",
@@ -1166,7 +1195,8 @@
         "cs": "Po–Pá 9:30–13:30 a 14:30–18:30, so 9:30–13:30 a 14:30–18:00; mimo ordinační dobu odkazují na AniCura Algarve (Faro)",
         "sv": "Mån–fre 09.30–13.30 och 14.30–18.30, lör 09.30–13.30 och 14.30–18.00; utanför öppettiderna hänvisas till AniCura Algarve (Faro)",
         "da": "Man–fre 09.30–13.30 og 14.30–18.30, lør 09.30–13.30 og 14.30–18.00; uden for åbningstid henvises til AniCura Algarve (Faro)",
-        "fi": "ma–pe 9.30–13.30 ja 14.30–18.30, la 9.30–13.30 ja 14.30–18.00; virka-ajan ulkopuolella ohjataan AniCura Algarveen (Faro)"
+        "fi": "ma–pe 9.30–13.30 ja 14.30–18.30, la 9.30–13.30 ja 14.30–18.00; virka-ajan ulkopuolella ohjataan AniCura Algarveen (Faro)",
+        "nb": "man–fre 09.30–13.30 og 14.30–18.30, lør 09.30–13.30 og 14.30–18.00; utenom åpningstid henvises det til AniCura Algarve (Faro)"
       },
       "small_animals": true,
       "url": "https://www.vetgilao.pt/",
@@ -1195,7 +1225,8 @@
         "cs": "Po–Pá 10–18, so 10–13; nonstop telefonická linka +351 913 341 526 (pouze telefonicky)",
         "sv": "Mån–fre 10–18, lör 10–13; endast telefonjour dygnet runt på +351 913 341 526",
         "da": "Man–fre 10–18, lør 10–13; kun telefonisk hjælpelinje 24 timer +351 913 341 526",
-        "fi": "ma–pe 10–18, la 10–13; vain 24 h puhelinneuvonta +351 913 341 526"
+        "fi": "ma–pe 10–18, la 10–13; vain 24 h puhelinneuvonta +351 913 341 526",
+        "nb": "man–fre 10–18, lør 10–13; kun telefonlinje +351 913 341 526 hele døgnet"
       },
       "small_animals": true,
       "url": "https://vetalbufeira.pt/",
@@ -1225,7 +1256,8 @@
         "cs": "Otevřeno každý den: ve všední dny 10–22, o víkendech a svátcích 10–18",
         "sv": "Öppet alla dagar: vardagar 10–22, helger och helgdagar 10–18",
         "da": "Åbent hver dag: hverdage 10–22, weekender og helligdage 10–18",
-        "fi": "Auki joka päivä: arkisin 10–22, viikonloppuisin ja pyhäpäivinä 10–18"
+        "fi": "Auki joka päivä: arkisin 10–22, viikonloppuisin ja pyhäpäivinä 10–18",
+        "nb": "Åpent alle dager: ukedager kl. 10–22, helger og helligdager kl. 10–18"
       },
       "small_animals": true,
       "url": "https://govet24h.pt/",
@@ -1255,7 +1287,8 @@
         "cs": "Po–Pá 10–19:30, so 10–18; pohotovost +351 925 998 098, dočasně zavřeno 22:00–10:00",
         "sv": "Mån–fre 10–19.30, lör 10–18; akut +351 925 998 098, tillfälligt stängt 22.00–10.00",
         "da": "Man–fre 10–19.30, lør 10–18; akut +351 925 998 098, midlertidigt lukket 22.00–10.00",
-        "fi": "ma–pe 10–19.30, la 10–18; päivystys +351 925 998 098, tilapäisesti suljettu klo 22–10"
+        "fi": "ma–pe 10–19.30, la 10–18; päivystys +351 925 998 098, tilapäisesti suljettu klo 22–10",
+        "nb": "man–fre 10–19.30, lør 10–18; nødtelefon +351 925 998 098, midlertidig stengt 22.00–10.00"
       },
       "small_animals": true,
       "url": "https://cvsg.pt/en/homepage/",
@@ -1285,7 +1318,8 @@
         "cs": "Pohotovostní mobil +351 962 454 248",
         "sv": "Akutmobil +351 962 454 248",
         "da": "Akut mobil +351 962 454 248",
-        "fi": "Päivystyksen matkapuhelin +351 962 454 248"
+        "fi": "Päivystyksen matkapuhelin +351 962 454 248",
+        "nb": "Akuttmobil +351 962 454 248"
       },
       "small_animals": true,
       "url": "https://www.clivetareosa.pt/",
@@ -1315,7 +1349,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–12:30 a 14:00–19:00, so 10:00–13:00, v neděli a o svátcích zavřeno",
         "sv": "Öppettider: mån–fre 10.00–12.30 och 14.00–19.00, lör 10.00–13.00, sön och helgdagar stängt",
         "da": "Åbningstid: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdage lukket",
-        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu"
+        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu",
+        "nb": "Åpent: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdager stengt"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-5-de-outubro",
@@ -1345,7 +1380,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–12:30 a 14:00–19:00, so 10:00–13:00, v neděli a o svátcích zavřeno",
         "sv": "Öppettider: mån–fre 10.00–12.30 och 14.00–19.00, lör 10.00–13.00, sön och helgdagar stängt",
         "da": "Åbningstid: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdage lukket",
-        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu"
+        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu",
+        "nb": "Åpent: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdager stengt"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-ajuda",
@@ -1375,7 +1411,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–12:30 a 14:00–19:00, so 10:00–13:00, v neděli a o svátcích zavřeno",
         "sv": "Öppettider: mån–fre 10.00–12.30 och 14.00–19.00, lör 10.00–13.00, sön och helgdagar stängt",
         "da": "Åbningstid: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdage lukket",
-        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu"
+        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu",
+        "nb": "Åpent: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdager stengt"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-boa-nova",
@@ -1405,7 +1442,8 @@
         "cs": "Ordinační doba: Po–Ne 9:00–22:00",
         "sv": "Öppettider: mån–sön 09.00–22.00",
         "da": "Åbningstid: man–søn 09.00–22.00",
-        "fi": "Aukioloajat: joka päivä 9.00–22.00"
+        "fi": "Aukioloajat: joka päivä 9.00–22.00",
+        "nb": "Åpent: man–søn 9.00–22.00"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-plaza",
@@ -1435,7 +1473,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–21:00; so, ne a o svátcích 10:00–13:00 a 14:00–19:00",
         "sv": "Öppettider: mån–fre 10.00–21.00; lör, sön och helgdagar 10.00–13.00 och 14.00–19.00",
         "da": "Åbningstid: man–fre 10.00–21.00; lør, søn og helligdage 10.00–13.00 og 14.00–19.00",
-        "fi": "Aukioloajat: ma–pe 10.00–21.00; la, su ja pyhäpäivinä 10.00–13.00 ja 14.00–19.00"
+        "fi": "Aukioloajat: ma–pe 10.00–21.00; la, su ja pyhäpäivinä 10.00–13.00 ja 14.00–19.00",
+        "nb": "Åpent: man–fre 10.00–21.00; lør, søn og helligdager 10.00–13.00 og 14.00–19.00"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-sao-martinho",
@@ -1465,7 +1504,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–21:00; so, ne a o svátcích 10:00–13:00 a 14:00–19:00",
         "sv": "Öppettider: mån–fre 10.00–21.00; lör, sön och helgdagar 10.00–13.00 och 14.00–19.00",
         "da": "Åbningstid: man–fre 10.00–21.00; lør, søn og helligdage 10.00–13.00 og 14.00–19.00",
-        "fi": "Aukioloajat: ma–pe 10.00–21.00; la, su ja pyhäpäivinä 10.00–13.00 ja 14.00–19.00"
+        "fi": "Aukioloajat: ma–pe 10.00–21.00; la, su ja pyhäpäivinä 10.00–13.00 ja 14.00–19.00",
+        "nb": "Åpent: man–fre 10.00–21.00; lør, søn og helligdager 10.00–13.00 og 14.00–19.00"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-viveiros",
@@ -1495,7 +1535,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–12:30 a 14:00–19:00, so 10:00–13:00, v neděli a o svátcích zavřeno",
         "sv": "Öppettider: mån–fre 10.00–12.30 och 14.00–19.00, lör 10.00–13.00, sön och helgdagar stängt",
         "da": "Åbningstid: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdage lukket",
-        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu"
+        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu",
+        "nb": "Åpent: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdager stengt"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-camara-de-lobos",
@@ -1525,7 +1566,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–12:30 a 14:00–19:00, so 10:00–13:00, v neděli a o svátcích zavřeno",
         "sv": "Öppettider: mån–fre 10.00–12.30 och 14.00–19.00, lör 10.00–13.00, sön och helgdagar stängt",
         "da": "Åbningstid: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdage lukket",
-        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu"
+        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu",
+        "nb": "Åpent: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdager stengt"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-machico",
@@ -1555,7 +1597,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–12:30 a 14:00–19:00, so 10:00–13:00, v neděli a o svátcích zavřeno",
         "sv": "Öppettider: mån–fre 10.00–12.30 och 14.00–19.00, lör 10.00–13.00, sön och helgdagar stängt",
         "da": "Åbningstid: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdage lukket",
-        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu"
+        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu",
+        "nb": "Åpent: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdager stengt"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-ribeira-brava",
@@ -1585,7 +1628,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–12:30 a 14:00–19:00, so 10:00–13:00, v neděli a o svátcích zavřeno",
         "sv": "Öppettider: mån–fre 10.00–12.30 och 14.00–19.00, lör 10.00–13.00, sön och helgdagar stängt",
         "da": "Åbningstid: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdage lukket",
-        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu"
+        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu",
+        "nb": "Åpent: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdager stengt"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-ponta-do-sol",
@@ -1615,7 +1659,8 @@
         "cs": "Po–Pá 10–13 a 15–19, so 10–14; SMS linka pro naléhavé případy do 23:00 (919 141 281)",
         "sv": "Mån–fre 10–13 och 15–19, lör 10–14; SMS-linje för brådskande fall till 23.00 (919 141 281)",
         "da": "Man–fre 10–13 og 15–19, lør 10–14; sms-linje til hastesager indtil 23.00 (919 141 281)",
-        "fi": "ma–pe 10–13 ja 15–19, la 10–14; tekstiviestilinja kiireellisille tapauksille klo 23 asti (919 141 281)"
+        "fi": "ma–pe 10–13 ja 15–19, la 10–14; tekstiviestilinja kiireellisille tapauksille klo 23 asti (919 141 281)",
+        "nb": "man–fre 10–13 og 15–19, lør 10–14; SMS-linje for hastetilfeller til kl. 23.00 (919 141 281)"
       },
       "small_animals": true,
       "url": "https://solvet.pt/",
@@ -1644,7 +1689,8 @@
         "cs": "Po–Pá 10–13 a 15–19, so 10–14",
         "sv": "Mån–fre 10–13 och 15–19, lör 10–14",
         "da": "Man–fre 10–13 og 15–19, lør 10–14",
-        "fi": "ma–pe 10–13 ja 15–19, la 10–14"
+        "fi": "ma–pe 10–13 ja 15–19, la 10–14",
+        "nb": "man–fre 10–13 og 15–19, lør 10–14"
       },
       "small_animals": true,
       "url": "https://solvet.pt/",
@@ -1673,7 +1719,8 @@
         "cs": "Po–Pá 9–13 a 15–19, so 10–12; pohotovostní služba 9–22",
         "sv": "Mån–fre 09–13 och 15–19, lör 10–12; akutmottagning 9–22",
         "da": "Man–fre 09–13 og 15–19, lør 10–12; akutservice 9–22",
-        "fi": "ma–pe 9–13 ja 15–19, la 10–12; päivystys 9–22"
+        "fi": "ma–pe 9–13 ja 15–19, la 10–12; päivystys 9–22",
+        "nb": "man–fre 9–13 og 15–19, lør 10–12; akuttjeneste 9–22"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/cvpetvetlagos/",
@@ -1729,7 +1776,8 @@
         "cs": "Po–Pá 10–13 a 16–20, so 10–13",
         "sv": "Mån–fre 10–13 och 16–20, lör 10–13",
         "da": "Man–fre 10–13 og 16–20, lør 10–13",
-        "fi": "ma–pe 10–13 ja 16–20, la 10–13"
+        "fi": "ma–pe 10–13 ja 16–20, la 10–13",
+        "nb": "man–fre 10–13 og 16–20, lør 10–13"
       },
       "small_animals": true,
       "url": "https://clinicaveterinariadefaro.pt/",
@@ -1757,7 +1805,8 @@
         "cs": "Pohotovostní služba nonstop; mobil +351 967 721 777",
         "sv": "Akutmottagning dygnet runt; mobil +351 967 721 777",
         "da": "Akutservice 24 timer; mobil +351 967 721 777",
-        "fi": "Päivystys 24 h; matkapuhelin +351 967 721 777"
+        "fi": "Päivystys 24 h; matkapuhelin +351 967 721 777",
+        "nb": "Akuttjeneste hele døgnet; mobil +351 967 721 777"
       },
       "small_animals": true,
       "url": "https://cvportoseguro.pt/",
@@ -1788,7 +1837,8 @@
         "cs": "Po–Pá 9:30–13 a 14:30–19, so 10–14; naléhavá péče v kteroukoli hodinu, mobil +351 966 452 297",
         "sv": "Mån–fre 09.30–13 och 14.30–19, lör 10–14; akutvård när som helst på dygnet, mobil +351 966 452 297",
         "da": "Man–fre 09.30–13 og 14.30–19, lør 10–14; akut hjælp til alle døgnets tider, mobil +351 966 452 297",
-        "fi": "ma–pe 9.30–13 ja 14.30–19, la 10–14; kiireellinen hoito mihin aikaan tahansa, matkapuhelin +351 966 452 297"
+        "fi": "ma–pe 9.30–13 ja 14.30–19, la 10–14; kiireellinen hoito mihin aikaan tahansa, matkapuhelin +351 966 452 297",
+        "nb": "man–fre 09.30–13 og 14.30–19, lør 10–14; akuttbehandling til alle døgnets tider, mobil +351 966 452 297"
       },
       "small_animals": true,
       "url": "https://112animal.pt/",
@@ -1833,7 +1883,8 @@
         "cs": "Po–Pá 9:30–20:00, so 9:30–17:30, v neděli a o svátcích zavřeno",
         "sv": "Mån–fre 9.30–20.00, lör 9.30–17.30, stängt sön och helgdagar",
         "da": "Man–fre 9.30–20.00, lør 9.30–17.30, lukket søn og helligdage",
-        "fi": "ma–pe 9.30–20.00, la 9.30–17.30, su ja pyhäpäivinä suljettu"
+        "fi": "ma–pe 9.30–20.00, la 9.30–17.30, su ja pyhäpäivinä suljettu",
+        "nb": "man–fre 9.30–20.00, lør 9.30–17.30, stengt søn og helligdager"
       },
       "small_animals": true,
       "url": "https://www.patasepenas.pt/",
@@ -1862,7 +1913,8 @@
         "cs": "10–14 a 15–19; mobil 919 832 913",
         "sv": "10–14 och 15–19; mobil 919 832 913",
         "da": "10–14 og 15–19; mobil 919 832 913",
-        "fi": "10–14 ja 15–19; matkapuhelin 919 832 913"
+        "fi": "10–14 ja 15–19; matkapuhelin 919 832 913",
+        "nb": "10–14 og 15–19; mobil 919 832 913"
       },
       "small_animals": true,
       "url": "https://www.vetmontalvao.pt/",
@@ -1891,7 +1943,8 @@
         "cs": "Po–Pá 8–20, so 8–17, v neděli zavřeno",
         "sv": "Mån–fre 08–20, lör 08–17, stängt sön",
         "da": "Man–fre 08–20, lør 08–17, lukket søn",
-        "fi": "ma–pe 8–20, la 8–17, su suljettu"
+        "fi": "ma–pe 8–20, la 8–17, su suljettu",
+        "nb": "man–fre 8–20, lør 8–17, stengt søn"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/cvsaopedro/sobre-nos/",
@@ -1920,7 +1973,8 @@
         "cs": "Po–Pá 10:00–19:30, so 10:00–12:30, v neděli a o svátcích zavřeno",
         "sv": "Mån–fre 10.00–19.30, lör 10.00–12.30, stängt sön och helgdagar",
         "da": "Man–fre 10.00–19.30, lør 10.00–12.30, lukket søn og helligdage",
-        "fi": "ma–pe 10.00–19.30, la 10.00–12.30, su ja pyhäpäivinä suljettu"
+        "fi": "ma–pe 10.00–19.30, la 10.00–12.30, su ja pyhäpäivinä suljettu",
+        "nb": "man–fre 10.00–19.30, lør 10.00–12.30, stengt søn og helligdager"
       },
       "small_animals": true,
       "url": "https://cvcapelas.pt/",
@@ -1949,7 +2003,8 @@
         "cs": "Po–Pá 10–19, so 10–13",
         "sv": "Mån–fre 10–19, lör 10–13",
         "da": "Man–fre 10–19, lør 10–13",
-        "fi": "ma–pe 10–19, la 10–13"
+        "fi": "ma–pe 10–19, la 10–13",
+        "nb": "man–fre 10–19, lør 10–13"
       },
       "small_animals": true,
       "url": "https://www.clinicavetdopaim.pt/",
@@ -1978,7 +2033,8 @@
         "cs": "Klinika Po–Pá 9:30–19:30, so 10–19, ne a o svátcích 11–14 na objednání; ordinace Ribeira Grande; mobil +351 926 720 400",
         "sv": "Klinik mån–fre 9.30–19.30, lör 10–19, sön/helgdagar 11–14 efter tidsbokning; mottagning i Ribeira Grande; mobil +351 926 720 400",
         "da": "Klinik man–fre 9.30–19.30, lør 10–19, søn/helligdage 11–14 efter aftale; consultório Ribeira Grande; mobil +351 926 720 400",
-        "fi": "Klinikka ma–pe 9.30–19.30, la 10–19, su ja pyhäpäivinä 11–14 ajanvarauksella; vastaanotto: Ribeira Grande; matkapuhelin +351 926 720 400"
+        "fi": "Klinikka ma–pe 9.30–19.30, la 10–19, su ja pyhäpäivinä 11–14 ajanvarauksella; vastaanotto: Ribeira Grande; matkapuhelin +351 926 720 400",
+        "nb": "Klinikk man–fre kl. 9.30–19.30, lør kl. 10–19, søn/helligdager kl. 11–14 etter timebestilling; konsultasjonsrom Ribeira Grande; mobil +351 926 720 400"
       },
       "small_animals": true,
       "url": "https://www.mypet.pt/",
@@ -2009,7 +2065,8 @@
         "cs": "Po–Pá 9:30–12:30 a 14:30–19:30, so 10–12:30 a 14–16; pohotovostní linka 960 339 136",
         "sv": "Mån–fre 9.30–12.30 och 14.30–19.30, lör 10–12.30 och 14–16; akutlinje 960 339 136",
         "da": "Man–fre 9.30–12.30 og 14.30–19.30, lør 10–12.30 og 14–16; akutlinje 960 339 136",
-        "fi": "ma–pe 9.30–12.30 ja 14.30–19.30, la 10–12.30 ja 14–16; päivystyslinja 960 339 136"
+        "fi": "ma–pe 9.30–12.30 ja 14.30–19.30, la 10–12.30 ja 14–16; päivystyslinja 960 339 136",
+        "nb": "man–fre 9.30–12.30 og 14.30–19.30, lør 10–12.30 og 14–16; nødlinje 960 339 136"
       },
       "small_animals": true,
       "url": "https://vetaltominho.wordpress.com/",
@@ -2039,7 +2096,8 @@
         "cs": "Ordinace Po–So 10–22; pohotovost každý den, včetně nedělí a svátků",
         "sv": "Mottagning mån–lör 10–22; akut alla dagar, även söndagar och helgdagar",
         "da": "Konsultationer man–lør 10–22; akut hver dag, også søn og helligdage",
-        "fi": "Vastaanotot ma–la 10–22; päivystys joka päivä, myös sunnuntaisin ja pyhäpäivinä"
+        "fi": "Vastaanotot ma–la 10–22; päivystys joka päivä, myös sunnuntaisin ja pyhäpäivinä",
+        "nb": "Konsultasjoner man–lør kl. 10–22; nødtilfeller alle dager, også søndager og helligdager"
       },
       "small_animals": true,
       "url": "https://hospitalveterinario.eu/",
@@ -2069,7 +2127,8 @@
         "cs": "Denně 10:00–13:30 a 14:30–19:00",
         "sv": "Alla dagar 10.00–13.30 och 14.30–19.00",
         "da": "Dagligt 10.00–13.30 og 14.30–19.00",
-        "fi": "Päivittäin 10.00–13.30 ja 14.30–19.00"
+        "fi": "Päivittäin 10.00–13.30 ja 14.30–19.00",
+        "nb": "Alle dager 10.00–13.30 og 14.30–19.00"
       },
       "small_animals": true,
       "url": "https://vetplanet.pt/",
@@ -2099,7 +2158,8 @@
         "cs": "Po–Pá 10–14 a 15–20, so 10–14, v neděli a o svátcích zavřeno",
         "sv": "Mån–fre 10–14 och 15–20, lör 10–14, stängt sön och helgdagar",
         "da": "Man–fre 10–14 og 15–20, lør 10–14, lukket søn og helligdage",
-        "fi": "ma–pe 10–14 ja 15–20, la 10–14, su ja pyhäpäivinä suljettu"
+        "fi": "ma–pe 10–14 ja 15–20, la 10–14, su ja pyhäpäivinä suljettu",
+        "nb": "man–fre 10–14 og 15–20, lør 10–14, stengt søn og helligdager"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariadolambert-petvet.pt/",
@@ -2128,7 +2188,8 @@
         "cs": "Po–So 10–20; pohotovost nonstop telefonicky, mobil +351 964 015 950",
         "sv": "Mån–lör 10–20; akut dygnet runt per telefon, mobil +351 964 015 950",
         "da": "Man–lør 10–20; akut telefonservice 24 timer, mobil +351 964 015 950",
-        "fi": "ma–la 10–20; päivystys 24 h puhelimitse, matkapuhelin +351 964 015 950"
+        "fi": "ma–la 10–20; päivystys 24 h puhelimitse, matkapuhelin +351 964 015 950",
+        "nb": "man–lør 10–20; nødtilfeller hele døgnet på telefon, mobil +351 964 015 950"
       },
       "small_animals": true,
       "url": "https://en.vieiralopesvet.pt/",
@@ -2158,7 +2219,8 @@
         "cs": "Po–Pá 10–13 a 15:30–20:30, so 10–14; SOS +351 932 497 794",
         "sv": "Mån–fre 10–13 och 15.30–20.30, lör 10–14; SOS +351 932 497 794",
         "da": "Man–fre 10–13 og 15.30–20.30, lør 10–14; SOS +351 932 497 794",
-        "fi": "ma–pe 10–13 ja 15.30–20.30, la 10–14; SOS +351 932 497 794"
+        "fi": "ma–pe 10–13 ja 15.30–20.30, la 10–14; SOS +351 932 497 794",
+        "nb": "man–fre 10–13 og 15.30–20.30, lør 10–14; SOS +351 932 497 794"
       },
       "small_animals": true,
       "url": "https://www.vetfachada.pt/",
@@ -2189,7 +2251,8 @@
         "cs": "Po–Pá 10–13 a 15–20, so 10–13; pohotovostní linka 968 387 609",
         "sv": "Mån–fre 10–13 och 15–20, lör 10–13; akutlinje 968 387 609",
         "da": "Man–fre 10–13 og 15–20, lør 10–13; akutlinje 968 387 609",
-        "fi": "ma–pe 10–13 ja 15–20, la 10–13; päivystyslinja 968 387 609"
+        "fi": "ma–pe 10–13 ja 15–20, la 10–13; päivystyslinja 968 387 609",
+        "nb": "man–fre 10–13 og 15–20, lør 10–13; nødtelefon 968 387 609"
       },
       "small_animals": true,
       "url": "http://www.helpvetestoril.pt/",
@@ -2218,7 +2281,8 @@
         "cs": "Po–Pá 9–21, so 9–19; v noci, v neděli a o svátcích otevřeno; naléhavé případy a objednávky +351 964 355 346",
         "sv": "Mån–fre 9–21, lör 9–19; öppet nätter, söndagar och helgdagar; akutfall/tidsbokning +351 964 355 346",
         "da": "Man–fre 9–21, lør 9–19; åbent om natten, søndage og helligdage; akut/tidsbestilling +351 964 355 346",
-        "fi": "ma–pe 9–21, la 9–19; auki öisin, sunnuntaisin ja pyhäpäivinä; kiireelliset tapaukset ja ajanvaraus +351 964 355 346"
+        "fi": "ma–pe 9–21, la 9–19; auki öisin, sunnuntaisin ja pyhäpäivinä; kiireelliset tapaukset ja ajanvaraus +351 964 355 346",
+        "nb": "man–fre 9–21, lør 9–19; åpent natt, søndager og helligdager; hastetilfeller/timebestilling +351 964 355 346"
       },
       "small_animals": true,
       "url": "https://www.animalcare.pt/",
@@ -2248,7 +2312,8 @@
         "cs": "Po–Pá 10–20, so 10–13 a 15–18",
         "sv": "Mån–fre 10–20, lör 10–13 och 15–18",
         "da": "Man–fre 10–20, lør 10–13 og 15–18",
-        "fi": "ma–pe 10–20, la 10–13 ja 15–18"
+        "fi": "ma–pe 10–20, la 10–13 ja 15–18",
+        "nb": "man–fre 10–20, lør 10–13 og 15–18"
       },
       "small_animals": true,
       "url": "https://clinicaveterinariadeserralves.pt/",
@@ -2278,7 +2343,8 @@
         "cs": "Po–Pá 10–19:30, so 10–14",
         "sv": "Mån–fre 10–19.30, lör 10–14",
         "da": "Man–fre 10–19.30, lør 10–14",
-        "fi": "ma–pe 10–19.30, la 10–14"
+        "fi": "ma–pe 10–19.30, la 10–14",
+        "nb": "man–fre 10–19.30, lør 10–14"
       },
       "small_animals": true,
       "url": "https://cvfm.pt/",
@@ -2309,7 +2375,8 @@
         "cs": "Po–Pá 9:30–19, so 10–14",
         "sv": "Mån–fre 9.30–19, lör 10–14",
         "da": "Man–fre 9.30–19, lør 10–14",
-        "fi": "ma–pe 9.30–19, la 10–14"
+        "fi": "ma–pe 9.30–19, la 10–14",
+        "nb": "man–fre 9.30–19, lør 10–14"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariadafoz.pt/",
@@ -2338,7 +2405,8 @@
         "cs": "Po–Pá 10–13 a 14:30–20, so 10–13:30; pohotovostní mobil (urgências) 912 561 021",
         "sv": "Mån–fre 10–13 och 14.30–20, lör 10–13.30; akutmobil 912 561 021",
         "da": "Man–fre 10–13 og 14.30–20, lør 10–13.30; urgências mobil 912 561 021",
-        "fi": "ma–pe 10–13 ja 14.30–20, la 10–13.30; päivystyksen matkapuhelin 912 561 021"
+        "fi": "ma–pe 10–13 ja 14.30–20, la 10–13.30; päivystyksen matkapuhelin 912 561 021",
+        "nb": "man–fre 10–13 og 14.30–20, lør 10–13.30; akuttmobil (urgências) 912 561 021"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariadaprelada.pt/",
@@ -2380,7 +2448,8 @@
         "cs": "Pohotovostní číslo +351 962 518 494",
         "sv": "Akutnummer +351 962 518 494",
         "da": "Akutnummer +351 962 518 494",
-        "fi": "Päivystysnumero +351 962 518 494"
+        "fi": "Päivystysnumero +351 962 518 494",
+        "nb": "Akuttnummer +351 962 518 494"
       },
       "small_animals": true,
       "url": "https://www.coimbrapethospital.pt/",
@@ -2410,7 +2479,8 @@
         "cs": "Denně 10:00–20:00; mobil +351 914 905 440",
         "sv": "Alla dagar 10.00–20.00; mobil +351 914 905 440",
         "da": "Dagligt 10.00–20.00; mobil +351 914 905 440",
-        "fi": "Päivittäin 10.00–20.00; matkapuhelin +351 914 905 440"
+        "fi": "Päivittäin 10.00–20.00; matkapuhelin +351 914 905 440",
+        "nb": "Alle dager 10.00–20.00; mobil +351 914 905 440"
       },
       "small_animals": true,
       "url": "https://hospvetcoimbra.com/",
@@ -2440,7 +2510,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–12:30 a 14:00–19:00, so 10:00–13:00, v neděli a o svátcích zavřeno",
         "sv": "Öppettider: mån–fre 10.00–12.30 och 14.00–19.00, lör 10.00–13.00, sön och helgdagar stängt",
         "da": "Åbningstid: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdage lukket",
-        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu"
+        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu",
+        "nb": "Åpent: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdager stengt"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-anadia",
@@ -2470,7 +2541,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–12:30 a 14:00–19:00, so 10:00–13:00, v neděli a o svátcích zavřeno",
         "sv": "Öppettider: mån–fre 10.00–12.30 och 14.00–19.00, lör 10.00–13.00, sön och helgdagar stängt",
         "da": "Åbningstid: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdage lukket",
-        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu"
+        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu",
+        "nb": "Åpent: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdager stengt"
       },
       "small_animals": true,
       "url": "https://www.vetmedis.pt/centros-vetmedis/vetmedis-calheta",
@@ -2500,7 +2572,8 @@
         "cs": "Ordinační doba: st–ne 10:00–13:00 a 14:00–19:00, po–út zavřeno",
         "sv": "Öppettider: ons–sön 10.00–13.00 och 14.00–19.00, mån–tis stängt",
         "da": "Åbningstid: ons–søn 10.00–13.00 og 14.00–19.00, man–tir lukket",
-        "fi": "Aukioloajat: ke–su 10.00–13.00 ja 14.00–19.00, ma–ti suljettu"
+        "fi": "Aukioloajat: ke–su 10.00–13.00 ja 14.00–19.00, ma–ti suljettu",
+        "nb": "Åpent: ons–søn 10.00–13.00 og 14.00–19.00, man–tir stengt"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-camacha",
@@ -2530,7 +2603,8 @@
         "cs": "Ordinační doba: Po–Pá 10:00–12:30 a 14:00–19:00, so 10:00–13:00, v neděli a o svátcích zavřeno",
         "sv": "Öppettider: mån–fre 10.00–12.30 och 14.00–19.00, lör 10.00–13.00, sön och helgdagar stängt",
         "da": "Åbningstid: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdage lukket",
-        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu"
+        "fi": "Aukioloajat: ma–pe 10.00–12.30 ja 14.00–19.00, la 10.00–13.00, su ja pyhäpäivinä suljettu",
+        "nb": "Åpent: man–fre 10.00–12.30 og 14.00–19.00, lør 10.00–13.00, søn og helligdager stengt"
       },
       "small_animals": true,
       "url": "https://vetmedis.pt/centros-vetmedis/vetmedis-canico",
@@ -2560,7 +2634,8 @@
         "cs": "Ordinační doba kliniky: Po–Pá 10:00–13:00 a 15:00–20:00, so 10:00–13:00 a 14:30–19:00, v neděli zavřeno. Pohotovost mimo ordinační dobu: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)",
         "sv": "Klinikens öppettider: mån–fre 10.00–13.00 och 15.00–20.00, lör 10.00–13.00 och 14.30–19.00, sön stängt. Akutfall utanför öppettiderna: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)",
         "da": "Klinikkens åbningstid: man–fre 10.00–13.00 og 15.00–20.00, lør 10.00–13.00 og 14.30–19.00, søn lukket. Akut uden for åbningstid: Onevet Hospital Veterinário Porto (HVPO) (tlf. 228 348 170)",
-        "fi": "Klinikan aukioloajat: ma–pe 10.00–13.00 ja 15.00–20.00, la 10.00–13.00 ja 14.30–19.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Porto (HVPO) (puh. 228 348 170)"
+        "fi": "Klinikan aukioloajat: ma–pe 10.00–13.00 ja 15.00–20.00, la 10.00–13.00 ja 14.30–19.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Porto (HVPO) (puh. 228 348 170)",
+        "nb": "Klinikkens åpningstid: man–fre kl. 10.00–13.00 og 15.00–20.00, lør kl. 10.00–13.00 og 14.30–19.00, søn stengt. Nødtilfeller utenfor åpningstid: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/valongo/",
@@ -2591,7 +2666,8 @@
         "cs": "Ordinační doba kliniky: Po–Pá 10:00–13:00 a 15:00–20:00, so 10:00–13:00 a 14:30–19:00, v neděli zavřeno. Pohotovost mimo ordinační dobu: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)",
         "sv": "Klinikens öppettider: mån–fre 10.00–13.00 och 15.00–20.00, lör 10.00–13.00 och 14.30–19.00, sön stängt. Akutfall utanför öppettiderna: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)",
         "da": "Klinikkens åbningstid: man–fre 10.00–13.00 og 15.00–20.00, lør 10.00–13.00 og 14.30–19.00, søn lukket. Akut uden for åbningstid: Onevet Hospital Veterinário Porto (HVPO) (tlf. 228 348 170)",
-        "fi": "Klinikan aukioloajat: ma–pe 10.00–13.00 ja 15.00–20.00, la 10.00–13.00 ja 14.30–19.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Porto (HVPO) (puh. 228 348 170)"
+        "fi": "Klinikan aukioloajat: ma–pe 10.00–13.00 ja 15.00–20.00, la 10.00–13.00 ja 14.30–19.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Porto (HVPO) (puh. 228 348 170)",
+        "nb": "Klinikkens åpningstid: man–fre kl. 10.00–13.00 og 15.00–20.00, lør kl. 10.00–13.00 og 14.30–19.00, søn stengt. Nødtilfeller utenfor åpningstid: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/ermesinde/",
@@ -2622,7 +2698,8 @@
         "cs": "Ordinační doba kliniky: Po–Pá 10:00–20:00, so 10:00–13:00 a 14:30–19:00, v neděli zavřeno. Pohotovost mimo ordinační dobu: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)",
         "sv": "Klinikens öppettider: mån–fre 10.00–20.00, lör 10.00–13.00 och 14.30–19.00, sön stängt. Akutfall utanför öppettiderna: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)",
         "da": "Klinikkens åbningstid: man–fre 10.00–20.00, lør 10.00–13.00 og 14.30–19.00, søn lukket. Akut uden for åbningstid: Onevet Hospital Veterinário Porto (HVPO) (tlf. 228 348 170)",
-        "fi": "Klinikan aukioloajat: ma–pe 10.00–20.00, la 10.00–13.00 ja 14.30–19.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Porto (HVPO) (puh. 228 348 170)"
+        "fi": "Klinikan aukioloajat: ma–pe 10.00–20.00, la 10.00–13.00 ja 14.30–19.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Porto (HVPO) (puh. 228 348 170)",
+        "nb": "Klinikkens åpningstid: man–fre kl. 10.00–20.00, lør kl. 10.00–13.00 og 14.30–19.00, søn stengt. Nødtilfeller utenfor åpningstid: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/rio-tinto/",
@@ -2653,7 +2730,8 @@
         "cs": "Ordinační doba kliniky: Po–Pá 10:00–13:00 a 15:00–20:00, so 10:00–13:00, v neděli zavřeno. Pohotovost mimo ordinační dobu: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)",
         "sv": "Klinikens öppettider: mån–fre 10.00–13.00 och 15.00–20.00, lör 10.00–13.00, sön stängt. Akutfall utanför öppettiderna: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)",
         "da": "Klinikkens åbningstid: man–fre 10.00–13.00 og 15.00–20.00, lør 10.00–13.00, søn lukket. Akut uden for åbningstid: Onevet Hospital Veterinário Porto (HVPO) (tlf. 228 348 170)",
-        "fi": "Klinikan aukioloajat: ma–pe 10.00–13.00 ja 15.00–20.00, la 10.00–13.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Porto (HVPO) (puh. 228 348 170)"
+        "fi": "Klinikan aukioloajat: ma–pe 10.00–13.00 ja 15.00–20.00, la 10.00–13.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Porto (HVPO) (puh. 228 348 170)",
+        "nb": "Klinikkens åpningstid: man–fre kl. 10.00–13.00 og 15.00–20.00, lør kl. 10.00–13.00, søn stengt. Nødtilfeller utenfor åpningstid: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/carvalha/",
@@ -2684,7 +2762,8 @@
         "cs": "Ordinační doba kliniky: Po–Pá 10:00–20:00, so 10:00–13:00 a 15:00–18:00, v neděli zavřeno. Pohotovost mimo ordinační dobu: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)",
         "sv": "Klinikens öppettider: mån–fre 10.00–20.00, lör 10.00–13.00 och 15.00–18.00, sön stängt. Akutfall utanför öppettiderna: Onevet Hospital Veterinário Porto (HVPO) (tel. 228 348 170)",
         "da": "Klinikkens åbningstid: man–fre 10.00–20.00, lør 10.00–13.00 og 15.00–18.00, søn lukket. Akut uden for åbningstid: Onevet Hospital Veterinário Porto (HVPO) (tlf. 228 348 170)",
-        "fi": "Klinikan aukioloajat: ma–pe 10.00–20.00, la 10.00–13.00 ja 15.00–18.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Porto (HVPO) (puh. 228 348 170)"
+        "fi": "Klinikan aukioloajat: ma–pe 10.00–20.00, la 10.00–13.00 ja 15.00–18.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Porto (HVPO) (puh. 228 348 170)",
+        "nb": "Klinikkens åpningstid: man–fre kl. 10.00–20.00, lør kl. 10.00–13.00 og 15.00–18.00, søn stengt. Nødtilfeller utenfor åpningstid: Onevet Hospital Veterinário Porto (HVPO) (telefon 228 348 170)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/canidelo/",
@@ -2715,7 +2794,8 @@
         "cs": "Ordinační doba kliniky: Po–Pá 10:00–12:30 a 14:30–19:30, so 10:00–13:00 a 14:00–17:00, v neděli zavřeno. Pohotovost mimo ordinační dobu: Onevet Hospital Veterinário Trás-os-Montes (HVTM)",
         "sv": "Klinikens öppettider: mån–fre 10.00–12.30 och 14.30–19.30, lör 10.00–13.00 och 14.00–17.00, sön stängt. Akutfall utanför öppettiderna: Onevet Hospital Veterinário Trás-os-Montes (HVTM)",
         "da": "Klinikkens åbningstid: man–fre 10.00–12.30 og 14.30–19.30, lør 10.00–13.00 og 14.00–17.00, søn lukket. Akut uden for åbningstid: Onevet Hospital Veterinário Trás-os-Montes (HVTM)",
-        "fi": "Klinikan aukioloajat: ma–pe 10.00–12.30 ja 14.30–19.30, la 10.00–13.00 ja 14.00–17.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Trás-os-Montes (HVTM)"
+        "fi": "Klinikan aukioloajat: ma–pe 10.00–12.30 ja 14.30–19.30, la 10.00–13.00 ja 14.00–17.00, su suljettu. Päivystys virka-ajan ulkopuolella: Onevet Hospital Veterinário Trás-os-Montes (HVTM)",
+        "nb": "Klinikkens åpningstid: man–fre kl. 10.00–12.30 og 14.30–19.30, lør kl. 10.00–13.00 og 14.00–17.00, søn stengt. Nødtilfeller utenfor åpningstid: Onevet Hospital Veterinário Trás-os-Montes (HVTM)"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/peso-da-regua/",
@@ -2746,7 +2826,8 @@
         "cs": "Pohotovost nonstop; ordinační doba Po–Pá 9:30–20:00, so 10:00–19:00, v neděli zavřeno – mimo ordinační dobu nejdřív zavolejte",
         "sv": "Akut dygnet runt; klinikens öppettider mån–fre 09.30–20.00, lör 10.00–19.00, sön stängt – ring innan du kommer utanför öppettiderna",
         "da": "Akut 24 timer; klinikkens åbningstid man–fre 09.30–20.00, lør 10.00–19.00, søn lukket – ring først uden for åbningstid",
-        "fi": "Päivystys 24 h; klinikan aukioloajat ma–pe 9.30–20.00, la 10.00–19.00, su suljettu – soita ensin virka-ajan ulkopuolella"
+        "fi": "Päivystys 24 h; klinikan aukioloajat ma–pe 9.30–20.00, la 10.00–19.00, su suljettu – soita ensin virka-ajan ulkopuolella",
+        "nb": "Akutt hjelp hele døgnet; klinikken er åpen man–fre kl. 09.30–20.00, lør kl. 10.00–19.00, søn stengt – ring først utenom åpningstid"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/gondomar/",
@@ -2777,7 +2858,8 @@
         "cs": "Pohotovostní služba nonstop (nutno přijet na pracoviště); ordinační doba Po–So 10:00–13:00 a 15:00–20:00, v neděli zavřeno – nejdřív zavolejte",
         "sv": "Akutmottagning dygnet runt (res till enheten); klinikens öppettider mån–lör 10.00–13.00 och 15.00–20.00, sön stängt – ring innan du kommer",
         "da": "Akutservice 24 timer (mød op på enheden); klinikkens åbningstid man–lør 10.00–13.00 og 15.00–20.00, søn lukket – ring først",
-        "fi": "Päivystys 24 h (tule yksikköön); klinikan aukioloajat ma–la 10.00–13.00 ja 15.00–20.00, su suljettu – soita ensin"
+        "fi": "Päivystys 24 h (tule yksikköön); klinikan aukioloajat ma–la 10.00–13.00 ja 15.00–20.00, su suljettu – soita ensin",
+        "nb": "Akuttjeneste hele døgnet (de kommer til enheten); klinikken er åpen man–lør kl. 10.00–13.00 og 15.00–20.00, søn stengt – ring først"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/figueiradafoz/",
@@ -2807,7 +2889,8 @@
         "cs": "Pohotovost nonstop; ordinační doba Po–Pá 10:00–20:00, so 10:00–16:00 – mimo ordinační dobu nejdřív zavolejte",
         "sv": "Akut dygnet runt; klinikens öppettider mån–fre 10.00–20.00, lör 10.00–16.00 – ring innan du kommer utanför öppettiderna",
         "da": "Akut 24 timer; klinikkens åbningstid man–fre 10.00–20.00, lør 10.00–16.00 – ring først uden for åbningstid",
-        "fi": "Päivystys 24 h; klinikan aukioloajat ma–pe 10.00–20.00, la 10.00–16.00 – soita ensin virka-ajan ulkopuolella"
+        "fi": "Päivystys 24 h; klinikan aukioloajat ma–pe 10.00–20.00, la 10.00–16.00 – soita ensin virka-ajan ulkopuolella",
+        "nb": "Akutt hjelp hele døgnet; klinikken er åpen man–fre kl. 10.00–20.00, lør kl. 10.00–16.00 – ring først utenom åpningstid"
       },
       "small_animals": true,
       "url": "https://onevetgroup.pt/cvvetlirios/",

@@ -136,7 +136,8 @@
         "cs": "Informační linka o otravách zvířat pro majitele i veterináře, každý den 8:30–24:00.",
         "sv": "Giftinformation för djur till ägare och veterinärer, varje dag 8.30–24.00",
         "da": "Giftrådgivning for dyr til ejere og dyrlæger, alle dage 8.30–24.00",
-        "fi": "Eläinmyrkytystietopuhelin omistajille ja eläinlääkäreille, joka päivä 8.30–24.00"
+        "fi": "Eläinmyrkytystietopuhelin omistajille ja eläinlääkäreille, joka päivä 8.30–24.00",
+        "nb": "Giftinformasjon for dyr til eiere og dyrleger, alle dager kl. 8.30–24.00"
       },
       "url": "https://www.cnitv.fr/",
       "source_url": "https://www.cnitv.fr/centre-anti-poison",
@@ -166,7 +167,8 @@
         "cs": "Bezplatná informační linka o otravách zvířat pro majitele i veterináře, 8:30–24:00, 7 dní v týdnu.",
         "sv": "Kostnadsfri giftinformation för djur till ägare och veterinärer, 8.30–24.00, alla dagar i veckan",
         "da": "Gratis giftrådgivning for dyr til ejere og dyrlæger, 8.30–24.00, 7 dage om ugen",
-        "fi": "Maksuton eläinmyrkytystietopuhelin omistajille ja eläinlääkäreille, 8.30–24.00, 7 päivää viikossa"
+        "fi": "Maksuton eläinmyrkytystietopuhelin omistajille ja eläinlääkäreille, 8.30–24.00, 7 päivää viikossa",
+        "nb": "Gratis giftinformasjon for dyr til eiere og dyrleger, kl. 8.30–24.00, alle dager"
       },
       "url": "https://www.centre-antipoison-animal.com/",
       "source_url": "https://www.veterinaire.fr/je-suis-proprietaire-danimaux/les-contacts-durgence/centres-anti-poison",
@@ -193,7 +195,8 @@
         "cs": "Bezplatné krátké číslo z francouzských pevných linek i mobilů; podle PSČ přepojí na nejbližšího pohotovostního veterináře / pohotovostní kliniku; call centrum nonstop.",
         "sv": "Kostnadsfritt kortnummer från franska fasta telefoner och mobiler; kopplar via postnummer till närmaste jourhavande veterinär / akutklinik; callcenter öppet dygnet runt",
         "da": "Gratis kortnummer fra franske fastnet- og mobilnumre; dirigerer efter postnummer til nærmeste vagthavende dyrlæge / akutklinik; callcenter døgnet rundt",
-        "fi": "Maksuton lyhytnumero Ranskan lankaliittymistä ja matkapuhelimista; ohjaa postinumeron mukaan lähimmälle päivystävälle eläinlääkärille / päivystysklinikalle; puhelinkeskus ympäri vuorokauden"
+        "fi": "Maksuton lyhytnumero Ranskan lankaliittymistä ja matkapuhelimista; ohjaa postinumeron mukaan lähimmälle päivystävälle eläinlääkärille / päivystysklinikalle; puhelinkeskus ympäri vuorokauden",
+        "nb": "Gratis kortnummer fra franske fasttelefoner og mobiler; kobler deg etter postnummer til nærmeste dyrlege på vakt / dyrlegevakt; telefonsenter hele døgnet"
       },
       "url": "https://www.urgences-veterinaires.fr/",
       "source_url": "https://www.urgences-veterinaires.fr/",
@@ -223,7 +226,8 @@
         "cs": "Bezplatná linka, která posoudí naléhavost a nasměruje na nonstop pohotovostní kliniku, ordinaci nebo návštěvu doma; departementy 75, 77, 78, 91, 92, 93, 94, 95.",
         "sv": "Kostnadsfri telefonlinje som bedömer akutheten och hänvisar till en akutklinik med öppet dygnet runt, ett vanligt besök eller ett hembesök; departement 75, 77, 78, 91, 92, 93, 94, 95",
         "da": "Gratis telefonlinje, der visiterer og henviser til en døgnåben akutklinik, en konsultation eller et hjemmebesøg; departementer 75, 77, 78, 91, 92, 93, 94, 95",
-        "fi": "Maksuton puhelinlinja, joka arvioi tilanteen ja ohjaa ympärivuorokautiselle päivystysklinikalle, vastaanotolle tai kotikäynnille; departementit 75, 77, 78, 91, 92, 93, 94, 95"
+        "fi": "Maksuton puhelinlinja, joka arvioi tilanteen ja ohjaa ympärivuorokautiselle päivystysklinikalle, vastaanotolle tai kotikäynnille; departementit 75, 77, 78, 91, 92, 93, 94, 95",
+        "nb": "Gratis telefonlinje som vurderer saken og henviser til dyrlegevakt hele døgnet, en konsultasjon eller et hjemmebesøk; departementene 75, 77, 78, 91, 92, 93, 94, 95"
       },
       "url": "https://univet.fr/service/urgence/",
       "source_url": "https://univet.fr/service/urgence/",
@@ -254,7 +258,8 @@
         "cs": "Pohotovostní veterinář s návštěvami doma v departementech 75, 77, 78, 91, 92, 93, 94, 95 a 60.",
         "sv": "Akuta hembesök av veterinär i departementen 75, 77, 78, 91, 92, 93, 94, 95 och 60",
         "da": "Akutte hjemmebesøg af dyrlæge i departementerne 75, 77, 78, 91, 92, 93, 94, 95 og 60",
-        "fi": "Eläinlääkärin päivystyskotikäynnit departementeissa 75, 77, 78, 91, 92, 93, 94, 95 ja 60"
+        "fi": "Eläinlääkärin päivystyskotikäynnit departementeissa 75, 77, 78, 91, 92, 93, 94, 95 ja 60",
+        "nb": "Akutte hjemmebesøk av dyrlege i departementene 75, 77, 78, 91, 92, 93, 94, 95 og 60"
       },
       "url": "https://www.vetoadom.com/",
       "source_url": "https://www.vetoadom.com/",
@@ -285,7 +290,8 @@
         "cs": "Výuková nemocnice veterinární školy; pohotovost nonstop (objednání +33 1 43 96 73 73).",
         "sv": "Universitetsdjursjukhus vid veterinärhögskola; akutfall dygnet runt (tidsbokning +33 1 43 96 73 73)",
         "da": "Undervisningshospital ved dyrlægeskolen; akut døgnet rundt (tidsbestilling +33 1 43 96 73 73)",
-        "fi": "Eläinlääketieteellisen korkeakoulun opetussairaala; päivystys ympäri vuorokauden (ajanvaraus +33 1 43 96 73 73)"
+        "fi": "Eläinlääketieteellisen korkeakoulun opetussairaala; päivystys ympäri vuorokauden (ajanvaraus +33 1 43 96 73 73)",
+        "nb": "Undervisningssykehus ved veterinærhøgskole; nødtilfeller hele døgnet (timebestilling +33 1 43 96 73 73)"
       },
       "url": "https://www.vet-alfort.fr/",
       "source_url": "https://www.vet-alfort.fr/acces-au-campus-et-au-plan-de-l-ecole",
@@ -316,7 +322,8 @@
         "cs": "Veterinární nemocnice, pohotovost nonstop.",
         "sv": "Djursjukhus, akutfall dygnet runt",
         "da": "Dyrehospital, akut døgnet rundt",
-        "fi": "Eläinsairaala, päivystys ympäri vuorokauden"
+        "fi": "Eläinsairaala, päivystys ympäri vuorokauden",
+        "nb": "Dyresykehus, akutthjelp hele døgnet"
       },
       "url": "https://www.fregis.com/",
       "source_url": "https://www.fregis.com/nous-contacter/",
@@ -346,7 +353,8 @@
         "cs": "Veterinární nemocnice, pohotovost nonstop pro psy, kočky a exotická zvířata.",
         "sv": "Djursjukhus, akutfall dygnet runt för hundar, katter och exotiska djur",
         "da": "Dyrehospital, akut døgnet rundt for hunde, katte og eksotiske dyr",
-        "fi": "Eläinsairaala, päivystys ympäri vuorokauden koirille, kissoille ja eksoottisille lemmikeille"
+        "fi": "Eläinsairaala, päivystys ympäri vuorokauden koirille, kissoille ja eksoottisille lemmikeille",
+        "nb": "Dyresykehus, akutthjelp hele døgnet for hunder, katter og eksotiske dyr"
       },
       "url": "https://advetia.fr/",
       "source_url": "https://advetia.fr/urgences-veterinaires/",
@@ -376,7 +384,8 @@
         "cs": "Otevřeno nonstop, psi a kočky.",
         "sv": "Öppet dygnet runt, hundar och katter",
         "da": "Døgnåben, hunde og katte",
-        "fi": "Auki ympäri vuorokauden, koirat ja kissat"
+        "fi": "Auki ympäri vuorokauden, koirat ja kissat",
+        "nb": "Åpent hele døgnet, hunder og katter"
       },
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-crozatier-referes-urgences-gardes-24h-24-paris-sta/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-crozatier-referes-urgences-gardes-24h-24-paris-sta/",
@@ -406,7 +415,8 @@
         "cs": "Pohotovost nonstop každý den v roce; psi, kočky, NAC.",
         "sv": "Akutfall dygnet runt, årets alla dagar; hundar, katter, NAC",
         "da": "Akut døgnet rundt alle årets dage; hunde, katte, NAC",
-        "fi": "Päivystys ympäri vuorokauden vuoden jokaisena päivänä; koirat, kissat, eksoottiset lemmikit"
+        "fi": "Päivystys ympäri vuorokauden vuoden jokaisena päivänä; koirat, kissat, eksoottiset lemmikit",
+        "nb": "Nødtilfeller hele døgnet, alle dager i året; hund, katt og andre kjæledyr (NAC)"
       },
       "url": "https://www.vetinparis.com/",
       "source_url": "https://www.vetinparis.com/urgences-veterinaires",
@@ -436,7 +446,8 @@
         "cs": "Pohotovost nonstop; psi a kočky.",
         "sv": "Akutfall dygnet runt; hundar och katter",
         "da": "Akut døgnet rundt; hunde og katte",
-        "fi": "Päivystys ympäri vuorokauden; koirat ja kissat"
+        "fi": "Päivystys ympäri vuorokauden; koirat ja kissat",
+        "nb": "Nødtilfeller hele døgnet; hund og katt"
       },
       "url": "https://univet.fr/clinique/clinique-veterinaire-univet-levallois-perret-v24/",
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-univet-levallois-perret-v24/",
@@ -466,7 +477,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 20:00–8:00, v sobotu od 19:00, v neděli a o státních svátcích nepřetržitě.",
         "sv": "Akutklinik utanför öppettider: vardagar 20.00–08.00, lördagar från 19.00, söndagar och helgdagar dygnet runt",
         "da": "Akutklinik uden for åbningstiden: hverdage 20.00–08.00, lørdag fra 19.00, søndage og helligdage døgnet rundt",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.00, la klo 19.00 alkaen, su ja pyhinä yhtäjaksoisesti"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.00, la klo 19.00 alkaen, su ja pyhinä yhtäjaksoisesti",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 20.00–08.00, lørdag fra kl. 19.00, søndager og helligdager uavbrutt"
       },
       "url": "https://www.maisondesurgences-cityparis3.com/",
       "source_url": "https://www.maisondesurgences-cityparis3.com/CGF.php",
@@ -496,7 +508,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 20:00–8:00, v sobotu od 14:00, v neděli a o státních svátcích nepřetržitě.",
         "sv": "Akutklinik utanför öppettider: vardagar 20.00–08.00, lördagar från 14.00, söndagar och helgdagar dygnet runt",
         "da": "Akutklinik uden for åbningstiden: hverdage 20.00–08.00, lørdag fra 14.00, søndage og helligdage døgnet rundt",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.00, la klo 14.00 alkaen, su ja pyhinä yhtäjaksoisesti"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.00, la klo 14.00 alkaen, su ja pyhinä yhtäjaksoisesti",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 20.00–08.00, lørdag fra kl. 14.00, søndager og helligdager uavbrutt"
       },
       "url": "https://www.maisondesurgences.com/",
       "source_url": "https://www.maisondesurgences.com/CGF.php",
@@ -526,7 +539,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 20:00–8:00, v sobotu od 14:00, v neděli a o státních svátcích nepřetržitě; před cestou zavolejte.",
         "sv": "Akutklinik utanför öppettider: vardagar 20.00–08.00, lördagar från 14.00, söndagar och helgdagar dygnet runt; ring innan du kommer",
         "da": "Akutklinik uden for åbningstiden: hverdage 20.00–08.00, lørdag fra 14.00, søndage og helligdage døgnet rundt; ring på forhånd",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.00, la klo 14.00 alkaen, su ja pyhinä yhtäjaksoisesti; soita ennen tuloa"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.00, la klo 14.00 alkaen, su ja pyhinä yhtäjaksoisesti; soita ennen tuloa",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 20.00–08.00, lørdag fra kl. 14.00, søndager og helligdager uavbrutt; ring før du kommer"
       },
       "url": "https://www.urgencesveterinaires-77.com/",
       "source_url": "https://www.urgencesveterinaires-77.com/acces.php",
@@ -555,7 +569,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 20:00–8:00, v sobotu od 14:00, v neděli a o státních svátcích nonstop; před cestou zavolejte.",
         "sv": "Akutklinik utanför öppettider: vardagar 20.00–08.00, lördagar från 14.00, dygnet runt på söndagar och helgdagar; ring innan du kommer",
         "da": "Akutklinik uden for åbningstiden: hverdage 20.00–08.00, lørdag fra 14.00, døgnåben søndage og helligdage; ring på forhånd",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.00, la klo 14.00 alkaen, su ja pyhinä ympäri vuorokauden; soita ennen tuloa"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.00, la klo 14.00 alkaen, su ja pyhinä ympäri vuorokauden; soita ennen tuloa",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 20.00–08.00, lørdag fra kl. 14.00, hele døgnet søndager og helligdager; ring før du kommer"
       },
       "url": "https://www.urgencesveterinaires-95.com/",
       "source_url": "https://www.urgencesveterinaires-95.com/acces.php",
@@ -584,7 +599,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny od 19:00, od soboty 17:00 do pondělí 8:00, o státních svátcích nonstop; psi, kočky, NAC.",
         "sv": "Akutklinik utanför öppettider: vardagar från 19.00, lör 17.00 till mån 08.00, dygnet runt på helgdagar; hundar, katter, NAC",
         "da": "Akutklinik uden for åbningstiden: hverdage fra 19.00, lørdag 17.00 til mandag 08.00, døgnåben på helligdage; hunde, katte, NAC",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 17.00–ma 8.00, pyhinä ympäri vuorokauden; koirat, kissat, eksoottiset lemmikit"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 17.00–ma 8.00, pyhinä ympäri vuorokauden; koirat, kissat, eksoottiset lemmikit",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager fra kl. 19.00, lørdag kl. 17.00 til mandag kl. 08.00, hele døgnet på helligdager; hunder, katter, NAC"
       },
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-paris/",
       "source_url": "https://veterinaires2touteurgence.com/urgence-veterinaire-paris/",
@@ -613,7 +629,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: v noci, o víkendech a státních svátcích.",
         "sv": "Akutklinik utanför öppettider: nätter, helger och helgdagar",
         "da": "Akutklinik uden for åbningstiden: nætter, weekender og helligdage",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt, viikonloput ja pyhät"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt, viikonloput ja pyhät",
+        "nb": "Dyrlegevakt utenom åpningstid: netter, helger og helligdager"
       },
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-lisle-adam/",
       "source_url": "https://veterinaires2touteurgence.com/rcblocks/carte-de-france-interactive/",
@@ -642,7 +659,8 @@
         "cs": "Veterinární nemocnice, pohotovost nonstop pro psy a kočky.",
         "sv": "Djursjukhus, akutjour dygnet runt för hundar och katter",
         "da": "Dyrehospital, akutvagt døgnet rundt for hunde og katte",
-        "fi": "Eläinsairaala, päivystys ympäri vuorokauden koirille ja kissoille"
+        "fi": "Eläinsairaala, päivystys ympäri vuorokauden koirille ja kissoille",
+        "nb": "Dyresykehus, akuttjeneste hele døgnet for hunder og katter"
       },
       "url": "https://www.anicura.fr/cliniques/chv-nordvet/",
       "source_url": "https://www.anicura.fr/cliniques/chv-nordvet/nos-services/urgences-veterinaires/",
@@ -672,7 +690,8 @@
         "cs": "Pohotovostní klinika nonstop, včetně nocí a nedělí; psi, kočky, NAC.",
         "sv": "Akutklinik med öppet dygnet runt, även nätter och söndagar; hundar, katter, NAC",
         "da": "Akutklinik åben døgnet rundt inkl. nætter og søndage; hunde, katte, NAC",
-        "fi": "Päivystysklinikka auki ympäri vuorokauden, myös öisin ja sunnuntaisin; koirat, kissat, eksoottiset lemmikit"
+        "fi": "Päivystysklinikka auki ympäri vuorokauden, myös öisin ja sunnuntaisin; koirat, kissat, eksoottiset lemmikit",
+        "nb": "Akuttklinikk åpen hele døgnet, også natt og søndager; hunder, katter, NAC"
       },
       "url": "https://www.anicura.fr/cliniques/vet24/",
       "source_url": "https://www.anicura.fr/cliniques/vet24/services/urgences-veterinaires/",
@@ -702,7 +721,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: v noci, o víkendech a státních svátcích.",
         "sv": "Akutklinik utanför öppettider: nätter, helger och helgdagar",
         "da": "Akutklinik uden for åbningstiden: nætter, weekender og helligdage",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt, viikonloput ja pyhät"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt, viikonloput ja pyhät",
+        "nb": "Dyrlegevakt utenom åpningstid: netter, helger og helligdager"
       },
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-lille/",
       "source_url": "https://veterinaires2touteurgence.com/rcblocks/carte-de-france-interactive/",
@@ -731,7 +751,8 @@
         "cs": "Klinika pro exotická zvířata (NAC) s péčí a pohotovostí nonstop: králíci, hlodavci, fretky, ptáci, plazi.",
         "sv": "Klinik för exotiska sällskapsdjur (NAC) med vård och jour dygnet runt: kaniner, gnagare, illrar, fåglar, reptiler",
         "da": "Klinik for eksotiske kæledyr (NAC) med behandling og vagt døgnet rundt: kaniner, gnavere, fritter, fugle, krybdyr",
-        "fi": "Eksoottisten lemmikkien klinikka, hoito ja päivystys ympäri vuorokauden: kaniinit, jyrsijät, fretit, linnut, matelijat"
+        "fi": "Eksoottisten lemmikkien klinikka, hoito ja päivystys ympäri vuorokauden: kaniinit, jyrsijät, fretit, linnut, matelijat",
+        "nb": "Klinikk for eksotiske kjæledyr (NAC) med behandling og vakttelefon hele døgnet: kaniner, gnagere, fretter, fugler, krypdyr"
       },
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-vet-hauts-de-france-nac-henin-beaumont-vh2/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-vet-hauts-de-france-nac-henin-beaumont-vh2/",
@@ -762,7 +783,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 19:30–7:30, v sobotu od 12:00, v neděli a o státních svátcích nonstop; obsluhuje také Boulogne-sur-Mer.",
         "sv": "Akutklinik utanför öppettider: vardagar 19.30–07.30, lördagar från 12.00, dygnet runt på söndagar och helgdagar; tar även emot från Boulogne-sur-Mer",
         "da": "Akutklinik uden for åbningstiden: hverdage 19.30–07.30, lørdag fra 12.00, døgnåben søndage og helligdage; dækker også Boulogne-sur-Mer",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä ympäri vuorokauden; palvelee myös Boulogne-sur-Merin aluetta"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä ympäri vuorokauden; palvelee myös Boulogne-sur-Merin aluetta",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 19.30–07.30, lørdag fra kl. 12.00, hele døgnet søndager og helligdager; betjener også Boulogne-sur-Mer"
       },
       "url": "https://www.maisondesurgences-calais.com/",
       "source_url": "https://www.maisondesurgences-calais.com/pas-de-calais/veterinaire-garde-boulogne-sur-mer.php",
@@ -791,7 +813,8 @@
         "cs": "Praktická ordinace, ve všední dny 9:00–12:00 / 14:00–19:00, v sobotu dopoledne; nonstop telefon, který sdělí číslo veterináře ve službě.",
         "sv": "Allmän veterinärmottagning, vardagar 9.00–12.00/14.00–19.00, lör förmiddag; telefon som är bemannad dygnet runt och ger numret till jourhavande veterinär",
         "da": "Almindelig dyrlægepraksis, hverdage 9.00–12.00/14.00–19.00, lør formiddag; telefon døgnet rundt, der oplyser nummeret til den vagthavende dyrlæge",
-        "fi": "Yleisvastaanotto arkisin 9.00–12.00 / 14.00–19.00, la aamupäivällä; ympärivuorokautinen puhelin, joka antaa päivystävän eläinlääkärin numeron"
+        "fi": "Yleisvastaanotto arkisin 9.00–12.00 / 14.00–19.00, la aamupäivällä; ympärivuorokautinen puhelin, joka antaa päivystävän eläinlääkärin numeron",
+        "nb": "Allmennpraksis hverdager kl. 9.00–12.00/14.00–19.00, lørdag formiddag; telefon hele døgnet som gir nummeret til dyrlegen på vakt"
       },
       "url": "https://www.cliniqueveterinairedelacotedopale.fr/",
       "source_url": "https://www.cliniqueveterinairedelacotedopale.fr/",
@@ -822,7 +845,8 @@
         "cs": "Po–St, Pá 8:30–12:00 / 14:00–19:00, so 9:00–12:30; pohotovost přes den; telefon zůstává aktivní i mimo ordinační dobu a nasměruje na pohotovost.",
         "sv": "mån–ons, fre 8.30–12.00/14.00–19.00, lör 9.00–12.30; akutfall dagtid; telefonen är aktiv utanför öppettider för att hänvisa akutfall",
         "da": "Man–ons, fre 8.30–12.00/14.00–19.00, lør 9.00–12.30; akut i dagtimerne; telefonen er aktiv uden for åbningstiden og henviser akutte tilfælde videre",
-        "fi": "ma–ke, pe 8.30–12.00 / 14.00–19.00, la 9.00–12.30; päivystys päiväsaikaan; puhelin pysyy aktiivisena virka-ajan ulkopuolella ohjaten hätätapaukset eteenpäin"
+        "fi": "ma–ke, pe 8.30–12.00 / 14.00–19.00, la 9.00–12.30; päivystys päiväsaikaan; puhelin pysyy aktiivisena virka-ajan ulkopuolella ohjaten hätätapaukset eteenpäin",
+        "nb": "man–ons, fre 8.30–12.00/14.00–19.00, lør 9.00–12.30; nødtilfeller på dagtid; telefonen er aktiv utenom åpningstid for å henvise nødtilfeller"
       },
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-vallee-des-vignes-amiens-am2/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-vallee-des-vignes-amiens-am2/",
@@ -852,7 +876,8 @@
         "cs": "Výuková nemocnice veterinární školy, pohotovost nonstop; psi, kočky, NAC.",
         "sv": "Universitetsdjursjukhus vid veterinärhögskola, akutjour dygnet runt; hundar, katter, NAC",
         "da": "Undervisningshospital ved dyrlægeskolen, akut døgnet rundt; hunde, katte, NAC",
-        "fi": "Eläinlääketieteellisen korkeakoulun opetussairaala, päivystys ympäri vuorokauden; koirat, kissat, eksoottiset lemmikit"
+        "fi": "Eläinlääketieteellisen korkeakoulun opetussairaala, päivystys ympäri vuorokauden; koirat, kissat, eksoottiset lemmikit",
+        "nb": "Undervisningssykehus ved veterinærhøgskole, akuttjeneste hele døgnet; hunder, katter, NAC"
       },
       "url": "https://indivisa.unilasalle.fr/",
       "source_url": "https://indivisa.unilasalle.fr/urgences-veterinaires",
@@ -882,7 +907,8 @@
         "cs": "Odborná a pohotovostní klinika otevřená nonstop; psi a kočky.",
         "sv": "Remiss- och akutklinik med öppet dygnet runt; hundar och katter",
         "da": "Henvisningsklinik og akutklinik, døgnåben; hunde og katte",
-        "fi": "Erikois- ja päivystysklinikka auki ympäri vuorokauden; koirat ja kissat"
+        "fi": "Erikois- ja päivystysklinikka auki ympäri vuorokauden; koirat ja kissat",
+        "nb": "Henvisningsklinikk og akuttklinikk, åpen hele døgnet; hunder og katter"
       },
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-synervet-le-grand-quevilly-lgq/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-synervet-le-grand-quevilly-lgq/",
@@ -912,7 +938,8 @@
         "cs": "Odborná a pohotovostní klinika otevřená nonstop; psi a kočky.",
         "sv": "Remiss- och akutklinik med öppet dygnet runt; hundar och katter",
         "da": "Henvisningsklinik og akutklinik, døgnåben; hunde og katte",
-        "fi": "Erikois- ja päivystysklinikka auki ympäri vuorokauden; koirat ja kissat"
+        "fi": "Erikois- ja päivystysklinikka auki ympäri vuorokauden; koirat ja kissat",
+        "nb": "Henvisningsklinikk og akuttklinikk, åpen hele døgnet; hunder og katter"
       },
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-synervet-le-havre-lhv/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-synervet-le-havre-lhv/",
@@ -941,7 +968,8 @@
         "cs": "Veterinární pohotovost nonstop (pracoviště Rouen a Boos)",
         "sv": "Veterinärjour för akutfall dygnet runt (enheterna i Rouen och Boos)",
         "da": "Akut dyrlægevagt døgnet rundt (klinikkerne i Rouen og Boos)",
-        "fi": "Eläinlääkäripäivystys ympäri vuorokauden (Rouenin ja Boosin toimipisteet)"
+        "fi": "Eläinlääkäripäivystys ympäri vuorokauden (Rouenin ja Boosin toimipisteet)",
+        "nb": "Dyrlegevakt hele døgnet, alle dager (avdelingene i Rouen og Boos)"
       },
       "url": "https://www.seinevet.fr/",
       "source_url": "https://www.seinevet.fr/",
@@ -972,7 +1000,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: v noci, o víkendech a státních svátcích.",
         "sv": "Akutklinik utanför öppettider: nätter, helger och helgdagar",
         "da": "Akutklinik uden for åbningstiden: nætter, weekender og helligdage",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt, viikonloput ja pyhät"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt, viikonloput ja pyhät",
+        "nb": "Dyrlegevakt utenom åpningstid: netter, helger og helligdager"
       },
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-rouen/",
       "source_url": "https://veterinaires2touteurgence.com/rcblocks/carte-de-france-interactive/",
@@ -1001,7 +1030,8 @@
         "cs": "Po–So 8:00–19:00; v noci, v neděli a o svátcích pohotovostní tým na místě; psi, kočky, exotická zvířata",
         "sv": "mån–lör 8.00–19.00; akutteam på plats nätter, söndagar, helgdagar; hundar, katter, NAC",
         "da": "Man–lør 8.00–19.00; akutteam på stedet om natten, søndage og helligdage; hunde, katte, NAC",
-        "fi": "ma–la 8.00–19.00; päivystystiimi paikalla öisin, sunnuntaisin ja pyhinä; koirat, kissat, eksoottiset lemmikit"
+        "fi": "ma–la 8.00–19.00; päivystystiimi paikalla öisin, sunnuntaisin ja pyhinä; koirat, kissat, eksoottiset lemmikit",
+        "nb": "man–lør 8.00–19.00; akuttteam på stedet natt, søndager og helligdager; hunder, katter og eksotiske kjæledyr (NAC)"
       },
       "url": "https://www.cliniqueveterinaireducedre.com/",
       "source_url": "https://www.cliniqueveterinaireducedre.com/urgences",
@@ -1031,7 +1061,8 @@
         "cs": "Po–So 8:30–19:00; telefonická pohotovostní služba nonstop",
         "sv": "mån–lör 8.30–19.00; jour per telefon dygnet runt",
         "da": "Man–lør 8.30–19.00; vagt pr. telefon døgnet rundt",
-        "fi": "ma–la 8.30–19.00; päivystys puhelimitse ympäri vuorokauden"
+        "fi": "ma–la 8.30–19.00; päivystys puhelimitse ympäri vuorokauden",
+        "nb": "man–lør 8.30–19.00; vakt på telefon hele døgnet"
       },
       "url": "https://www.vetorino.com/veterinaire/caen-14000/",
       "source_url": "https://www.vetorino.com/veterinaire/caen-14000/",
@@ -1062,7 +1093,8 @@
         "cs": "Po–Pá 9:00–12:00, 14:00–18:30, so 9:00–12:00; mimo ordinační dobu pohotovost na čísle +33 2 99 48 03 69 (klinika Dol-de-Bretagne)",
         "sv": "mån–fre 9.00–12.00/14.00–18.30, lör 9.00–12.00; akutfall utanför öppettider via +33 2 99 48 03 69 (kliniken i Dol-de-Bretagne)",
         "da": "Man–fre 9.00–12.00/14.00–18.30, lør 9.00–12.00; akut uden for åbningstiden via +33 2 99 48 03 69 (klinikken i Dol-de-Bretagne)",
-        "fi": "ma–pe 9.00–12.00 / 14.00–18.30, la 9.00–12.00; päivystys virka-ajan ulkopuolella numerosta +33 2 99 48 03 69 (Dol-de-Bretagnen klinikka)"
+        "fi": "ma–pe 9.00–12.00 / 14.00–18.30, la 9.00–12.00; päivystys virka-ajan ulkopuolella numerosta +33 2 99 48 03 69 (Dol-de-Bretagnen klinikka)",
+        "nb": "man–fre 9.00–12.00/14.00–18.30, lør 9.00–12.00; nødtilfeller utenom åpningstid via +33 2 99 48 03 69 (klinikken i Dol-de-Bretagne)"
       },
       "url": "https://www.veterinairedolpontorson.fr/",
       "source_url": "https://www.veterinairedolpontorson.fr/",
@@ -1093,7 +1125,8 @@
         "cs": "Po–Pá 8:30–12:00, 13:30–19:00, so 8:30–12:30, 13:30–17:30; pohotovostní služba mimo ordinační dobu",
         "sv": "mån–fre 8.30–12.00/13.30–19.00, lör 8.30–12.30/13.30–17.30; akutjour utanför öppettider",
         "da": "Man–fre 8.30–12.00/13.30–19.00, lør 8.30–12.30/13.30–17.30; akutvagt uden for åbningstiden",
-        "fi": "ma–pe 8.30–12.00 / 13.30–19.00, la 8.30–12.30 / 13.30–17.30; päivystys virka-ajan ulkopuolella"
+        "fi": "ma–pe 8.30–12.00 / 13.30–19.00, la 8.30–12.30 / 13.30–17.30; päivystys virka-ajan ulkopuolella",
+        "nb": "man–fre 8.30–12.00/13.30–19.00, lør 8.30–12.30/13.30–17.30; akuttjeneste utenom åpningstid"
       },
       "url": "https://www.veterinairedolpontorson.fr/",
       "source_url": "https://www.veterinairedolpontorson.fr/",
@@ -1124,7 +1157,8 @@
         "cs": "Otevřeno 8:00–19:00; psi, kočky, exotická zvířata",
         "sv": "Öppet 8.00–19.00; hundar, katter, NAC",
         "da": "Åbent 8.00–19.00; hunde, katte, NAC",
-        "fi": "Auki 8.00–19.00; koirat, kissat, eksoottiset lemmikit"
+        "fi": "Auki 8.00–19.00; koirat, kissat, eksoottiset lemmikit",
+        "nb": "Åpent 8.00–19.00; hunder, katter, NAC"
       },
       "url": "https://www.anicura.fr/cliniques/broceliande/",
       "source_url": "https://www.anicura.fr/cliniques/broceliande/",
@@ -1154,7 +1188,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: v noci, o víkendech a státních svátcích.",
         "sv": "Akutklinik utanför öppettider: nätter, helger och helgdagar",
         "da": "Akutklinik uden for åbningstiden: nætter, weekender og helligdage",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt, viikonloput ja pyhät"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt, viikonloput ja pyhät",
+        "nb": "Dyrlegevakt utenom åpningstid: netter, helger og helligdager"
       },
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-rennes/",
       "source_url": "https://veterinaires2touteurgence.com/rcblocks/carte-de-france-interactive/",
@@ -1183,7 +1218,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 19:30–7:30, v sobotu od 12:00, v neděli a o státních svátcích nonstop",
         "sv": "Akutklinik utanför öppettider: vardagar 19.30–07.30, lördagar från 12.00, dygnet runt på söndagar och helgdagar",
         "da": "Akutklinik uden for åbningstiden: hverdage 19.30–07.30, lørdag fra 12.00, døgnåben søndage og helligdage",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä ympäri vuorokauden"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä ympäri vuorokauden",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 19.30–07.30, lørdag fra kl. 12.00, hele døgnet søndager og helligdager"
       },
       "url": "https://www.maisondesurgences-brest.com/",
       "source_url": "https://www.maisondesurgences-brest.com/",
@@ -1212,7 +1248,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 20:00–8:00, v sobotu od 13:00, v neděli a o státních svátcích nepřetržitě",
         "sv": "Akutklinik utanför öppettider: vardagar 20.00–08.00, lördagar från 13.00, söndagar och helgdagar dygnet runt",
         "da": "Akutklinik uden for åbningstiden: hverdage 20.00–08.00, lørdag fra 13.00, søndage og helligdage døgnet rundt",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.00, la klo 13.00 alkaen, su ja pyhinä yhtäjaksoisesti"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.00, la klo 13.00 alkaen, su ja pyhinä yhtäjaksoisesti",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 20.00–08.00, lørdag fra kl. 13.00, søndager og helligdager uavbrutt"
       },
       "url": "https://www.maisondesurgences-auray.com/",
       "source_url": "https://www.maisondesurgences-auray.com/acces.php",
@@ -1241,7 +1278,8 @@
         "cs": "Výuková nemocnice veterinární fakulty; psi a kočky nonstop po celý rok kromě srpna; před cestou zavolejte",
         "sv": "Universitetsdjursjukhus vid veterinärhögskola; hundar och katter dygnet runt hela året utom augusti; ring innan du kommer",
         "da": "Undervisningshospital ved dyrlægeskolen; hunde og katte døgnet rundt hele året undtagen august; ring på forhånd",
-        "fi": "Eläinlääketieteellisen korkeakoulun opetussairaala; koirat ja kissat ympäri vuorokauden ympäri vuoden paitsi elokuussa; soita ennen tuloa"
+        "fi": "Eläinlääketieteellisen korkeakoulun opetussairaala; koirat ja kissat ympäri vuorokauden ympäri vuoden paitsi elokuussa; soita ennen tuloa",
+        "nb": "Undervisningssykehus ved veterinærhøgskole; hunder og katter hele døgnet, hele året unntatt august; ring før du kommer"
       },
       "url": "https://chuv.oniris-nantes.fr/",
       "source_url": "https://chuv.oniris-nantes.fr/animaux-de-compagnie/urgences",
@@ -1272,7 +1310,8 @@
         "cs": "Veterinární nemocnice, pohotovostní vyšetření nonstop",
         "sv": "Djursjukhus, akutbesök dygnet runt",
         "da": "Dyrehospital, akutte konsultationer døgnet rundt",
-        "fi": "Eläinsairaala, päivystyskäynnit ympäri vuorokauden"
+        "fi": "Eläinsairaala, päivystyskäynnit ympäri vuorokauden",
+        "nb": "Dyresykehus, akuttkonsultasjoner hele døgnet"
       },
       "url": "https://www.chv-atlantia.fr/",
       "source_url": "https://www.chv-atlantia.fr/urgences/",
@@ -1302,7 +1341,8 @@
         "cs": "Na objednání Po–Pá 8:00–19:00, so 8:00–17:00; pohotovost nonstop; psi, kočky, exotická zvířata",
         "sv": "Tidsbokning mån–fre 8–19, lör 8–17; akutfall dygnet runt; hundar, katter, NAC",
         "da": "Tidsbestilling man–fre 8–19, lør 8–17; akut døgnet rundt; hunde, katte, NAC",
-        "fi": "Ajanvaraus ma–pe 8–19, la 8–17; päivystys ympäri vuorokauden; koirat, kissat, eksoottiset lemmikit"
+        "fi": "Ajanvaraus ma–pe 8–19, la 8–17; päivystys ympäri vuorokauden; koirat, kissat, eksoottiset lemmikit",
+        "nb": "Timebestilling man–fre 8–19, lør 8–17; nødtilfeller hele døgnet, alle dager; hunder, katter, eksotiske kjæledyr (NAC)"
       },
       "url": "https://univet.fr/clinique/clinique-veterinaire-vertou-vetoceane-44120-univet/",
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-vertou-vetoceane-44120-univet/",
@@ -1332,7 +1372,8 @@
         "cs": "Specializovaná klinika s nonstop pohotovostí; psi a kočky",
         "sv": "Remissklinik med akutjour dygnet runt; hundar och katter",
         "da": "Henvisningsklinik med akutvagt døgnet rundt; hunde og katte",
-        "fi": "Erikoisklinikka, jossa päivystys ympäri vuorokauden; koirat ja kissat"
+        "fi": "Erikoisklinikka, jossa päivystys ympäri vuorokauden; koirat ja kissat",
+        "nb": "Henvisningsklinikk med akuttjeneste hele døgnet; hunder og katter"
       },
       "url": "https://www.anicura.fr/cliniques/vetref/",
       "source_url": "https://www.anicura.fr/cliniques/vetref/nos-services/service-des-urgences/",
@@ -1362,7 +1403,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 20:00–8:30, od soboty 13:00 do pondělí 8:30, v neděli a o státních svátcích nonstop",
         "sv": "Akutklinik utanför öppettider: vardagar 20.00–08.30, lör 13.00 till mån 08.30, dygnet runt på söndagar och helgdagar",
         "da": "Akutklinik uden for åbningstiden: hverdage 20.00–08.30, lørdag 13.00 til mandag 08.30, døgnåben søndage og helligdage",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.30, la 13.00–ma 8.30, su ja pyhinä ympäri vuorokauden"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 20.00–8.30, la 13.00–ma 8.30, su ja pyhinä ympäri vuorokauden",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 20.00–08.30, lørdag kl. 13.00 til mandag kl. 08.30, hele døgnet søndager og helligdager"
       },
       "url": "https://www.maisondesurgences-lemans.com/",
       "source_url": "https://www.maisondesurgences-lemans.com/",
@@ -1391,7 +1433,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 19:30–7:30, v sobotu od 13:00, v neděli a o státních svátcích nepřetržitě; slouží i pro oblast Blois",
         "sv": "Akutklinik utanför öppettider: vardagar 19.30–07.30, lördagar från 13.00, söndagar och helgdagar dygnet runt; betjänar även området kring Blois",
         "da": "Akutklinik uden for åbningstiden: hverdage 19.30–07.30, lørdag fra 13.00, søndage og helligdage døgnet rundt; dækker også Blois-området",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 13.00 alkaen, su ja pyhinä yhtäjaksoisesti; palvelee myös Bloisin aluetta"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 13.00 alkaen, su ja pyhinä yhtäjaksoisesti; palvelee myös Bloisin aluetta",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 19.30–07.30, lørdag fra kl. 13.00, søndager og helligdager uavbrutt; betjener også Blois-området"
       },
       "url": "https://www.maisondesurgences-orleans.com/",
       "source_url": "https://www.maisondesurgences-orleans.com/",
@@ -1419,7 +1462,8 @@
         "cs": "Telefonní číslo pohotovosti mimo ordinační dobu, na které místní kliniky odkazují majitele zvířat",
         "sv": "Akutnummer utanför öppettider som lokala kliniker hänvisar ägare till",
         "da": "Akutnummer uden for åbningstiden, som lokale klinikker henviser ejere til",
-        "fi": "Päivystysnumero virka-ajan ulkopuolella, johon paikalliset klinikat ohjaavat omistajat"
+        "fi": "Päivystysnumero virka-ajan ulkopuolella, johon paikalliset klinikat ohjaavat omistajat",
+        "nb": "Nødnummer utenom åpningstid som lokale klinikker henviser eiere til"
       },
       "url": "https://www.cliniqueligeria.fr/urgences",
       "source_url": "https://www.cliniqueligeria.fr/urgences",
@@ -1449,7 +1493,8 @@
         "cs": "Pohotovostní klinika: každou noc 19:00–8:00, o víkendech a státních svátcích; psi, kočky, exotická zvířata",
         "sv": "Akutklinik: varje natt 19.00–08.00, helger och helgdagar; hundar, katter, NAC",
         "da": "Akutklinik: hver nat 19.00–08.00, weekender og helligdage; hunde, katte, NAC",
-        "fi": "Päivystysklinikka: joka yö 19.00–8.00, viikonloppuisin ja pyhinä; koirat, kissat, eksoottiset lemmikit"
+        "fi": "Päivystysklinikka: joka yö 19.00–8.00, viikonloppuisin ja pyhinä; koirat, kissat, eksoottiset lemmikit",
+        "nb": "Akuttklinikk: hver natt kl. 19.00–8.00, helger og helligdager; hunder, katter, NAC"
       },
       "url": "https://www.urgvet.fr/",
       "source_url": "https://www.urgvet.fr/",
@@ -1479,7 +1524,8 @@
         "cs": "Po–Pá 8:00–12:30, 14:00–19:00, so 8:00–12:30, 14:00–17:00; v noci a o svátcích pohotovostní veterinář po telefonickém hovoru (společná služba v Blois, hovory třídí Vétophonie)",
         "sv": "mån–fre 8.00–12.30/14.00–19.00, lör 8.00–12.30/14.00–17.00; jourhavande veterinär nätter och helgdagar efter telefonsamtal (gemensam jourlista i Blois, med förbedömning av Vétophonie)",
         "da": "Man–fre 8.00–12.30/14.00–19.00, lør 8.00–12.30/14.00–17.00; vagthavende dyrlæge om natten og på helligdage efter telefonopkald (fælles vagtordning i Blois, visiteret af Vétophonie)",
-        "fi": "ma–pe 8.00–12.30 / 14.00–19.00, la 8.00–12.30 / 14.00–17.00; päivystävä eläinlääkäri öisin ja pyhinä puhelinsoiton jälkeen (Bloisin yhteiset vuorot, Vétophonie arvioi puhelut ensin)"
+        "fi": "ma–pe 8.00–12.30 / 14.00–19.00, la 8.00–12.30 / 14.00–17.00; päivystävä eläinlääkäri öisin ja pyhinä puhelinsoiton jälkeen (Bloisin yhteiset vuorot, Vétophonie arvioi puhelut ensin)",
+        "nb": "man–fre 8.00–12.30/14.00–19.00, lør 8.00–12.30/14.00–17.00; dyrlege på vakt natt og helligdager etter telefonsamtale (felles vaktordning i Blois, silt av Vétophonie)"
       },
       "url": "https://fovea-vet.fr/cliniques/clinique-veterinaire-des-quais/",
       "source_url": "https://fovea-vet.fr/cliniques/clinique-veterinaire-des-quais/",
@@ -1508,7 +1554,8 @@
         "cs": "Veterinární nemocnice, veterináři a ošetřovatelé k dispozici nonstop; psi a kočky",
         "sv": "Djursjukhus, veterinärer och djursjukskötare tillgängliga dygnet runt; hundar och katter",
         "da": "Dyrehospital, dyrlæger og sygeplejersker til rådighed døgnet rundt; hunde og katte",
-        "fi": "Eläinsairaala, eläinlääkärit ja hoitajat tavoitettavissa ympäri vuorokauden; koirat ja kissat"
+        "fi": "Eläinsairaala, eläinlääkärit ja hoitajat tavoitettavissa ympäri vuorokauden; koirat ja kissat",
+        "nb": "Dyresykehus, dyrleger og dyrepleiere tilgjengelig hele døgnet; hunder og katter"
       },
       "url": "https://www.anicura.fr/cliniques/chv-pommery/",
       "source_url": "https://www.anicura.fr/cliniques/chv-pommery/nos-services/urgences-veterinaires/",
@@ -1538,7 +1585,8 @@
         "cs": "Po–Pá 8:30–12:30, 14:00–19:00, so 8:00–16:30; mimo ordinační dobu volejte +33 3 26 85 85 85 (CHV Pommery, Reims)",
         "sv": "mån–fre 8.30–12.30/14.00–19.00, lör 8.00–16.30; utanför öppettider ring +33 3 26 85 85 85 (CHV Pommery, Reims)",
         "da": "Man–fre 8.30–12.30/14.00–19.00, lør 8.00–16.30; uden for åbningstiden ring +33 3 26 85 85 85 (CHV Pommery, Reims)",
-        "fi": "ma–pe 8.30–12.30 / 14.00–19.00, la 8.00–16.30; virka-ajan ulkopuolella soita +33 3 26 85 85 85 (CHV Pommery, Reims)"
+        "fi": "ma–pe 8.30–12.30 / 14.00–19.00, la 8.00–16.30; virka-ajan ulkopuolella soita +33 3 26 85 85 85 (CHV Pommery, Reims)",
+        "nb": "man–fre 8.30–12.30/14.00–19.00, lør 8.00–16.30; utenom åpningstid ring +33 3 26 85 85 85 (CHV Pommery, Reims)"
       },
       "url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/epernay-saint-pierre-180",
       "source_url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/epernay-saint-pierre-180",
@@ -1567,7 +1615,8 @@
         "cs": "Ve všední dny 8:30–12:00, 13:30–19:00, so 8:30–16:00; pohotovost každý den nonstop",
         "sv": "Vardagar 8.30–12.00/13.30–19.00, lör 8.30–16.00; akutfall varje dag dygnet runt",
         "da": "Hverdage 8.30–12.00/13.30–19.00, lør 8.30–16.00; akut alle dage døgnet rundt",
-        "fi": "Arkisin 8.30–12.00 / 13.30–19.00, la 8.30–16.00; päivystys joka päivä ympäri vuorokauden"
+        "fi": "Arkisin 8.30–12.00 / 13.30–19.00, la 8.30–16.00; päivystys joka päivä ympäri vuorokauden",
+        "nb": "Hverdager 8.30–12.00 / 13.30–19.00, lør 8.30–16.00; nødtilfeller alle dager 0–24"
       },
       "url": "https://www.anicura.fr/cliniques/airelles/",
       "source_url": "https://www.anicura.fr/cliniques/airelles/contact/",
@@ -1598,7 +1647,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 19:30–7:30, v sobotu od 12:30, v neděli a o státních svátcích nonstop",
         "sv": "Akutklinik utanför öppettider: vardagar 19.30–07.30, lördagar från 12.30, dygnet runt på söndagar och helgdagar",
         "da": "Akutklinik uden for åbningstiden: hverdage 19.30–07.30, lørdag fra 12.30, døgnåben søndage og helligdage",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 12.30 alkaen, su ja pyhinä ympäri vuorokauden"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 12.30 alkaen, su ja pyhinä ympäri vuorokauden",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 19.30–07.30, lørdag fra kl. 12.30, hele døgnet søndager og helligdager"
       },
       "url": "https://www.maisondesurgences-strasbourg.com/",
       "source_url": "https://www.maisondesurgences-strasbourg.com/",
@@ -1628,7 +1678,8 @@
         "cs": "Pohotovostní a specializované centrum: v noci Po–Pá 19:00–8:00, od soboty 12:00 do pondělí 8:00, o státních svátcích; nejprve telefonická triáž",
         "sv": "Akut- och remisscentrum: nätter mån–fre 19.00–08.00, lör 12.00 till mån 08.00, helgdagar; telefonbedömning först",
         "da": "Akut-/henvisningscenter: nætter man–fre 19.00–08.00, lørdag 12.00 til mandag 08.00, helligdage; telefonisk visitering først",
-        "fi": "Päivystys- ja erikoiseläinlääkärikeskus: öisin ma–pe 19.00–8.00, la 12.00–ma 8.00, pyhinä; kiireellisyysarvio ensin puhelimessa"
+        "fi": "Päivystys- ja erikoiseläinlääkärikeskus: öisin ma–pe 19.00–8.00, la 12.00–ma 8.00, pyhinä; kiireellisyysarvio ensin puhelimessa",
+        "nb": "Akutt-/henvisningssenter: netter man–fre kl. 19.00–08.00, lørdag kl. 12.00 til mandag kl. 08.00, helligdager; først vurdering på telefon"
       },
       "url": "https://urgence-veterinaire-67.fr/",
       "source_url": "https://urgence-veterinaire-67.fr/",
@@ -1658,7 +1709,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 19:30–7:30, v sobotu od 12:00, v neděli a o státních svátcích nonstop; přijímá i pohotovostní případy z Colmaru",
         "sv": "Akutklinik utanför öppettider: vardagar 19.30–07.30, lördagar från 12.00, dygnet runt på söndagar och helgdagar; tar även emot akutfall från Colmar",
         "da": "Akutklinik uden for åbningstiden: hverdage 19.30–07.30, lørdag fra 12.00, døgnåben søndage og helligdage; modtager også akutte tilfælde fra Colmar",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä ympäri vuorokauden; ottaa vastaan myös Colmarin päivystystapaukset"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä ympäri vuorokauden; ottaa vastaan myös Colmarin päivystystapaukset",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 19.30–07.30, lørdag fra kl. 12.00, hele døgnet søndager og helligdager; tar også imot nødtilfeller fra Colmar"
       },
       "url": "https://www.maisondesurgences-mulhouse.com/",
       "source_url": "https://www.maisondesurgences-mulhouse.com/haut-rhin/veterinaire-garde-colmar.php",
@@ -1687,7 +1739,8 @@
         "cs": "Číslo se zvýšenou sazbou, na kterém zastihnete pohotovostního veterináře pro oblast Colmar (v poledne, v noci a o víkendech)",
         "sv": "Betalnummer som ger jourhavande veterinär för jourområdet Colmar (lunchtid, nätter, helger)",
         "da": "Betalingsnummer med forhøjet takst, der giver adgang til vagthavende dyrlæge i Colmars vagtområde (middag, nætter, weekender)",
-        "fi": "Maksullinen numero, joka antaa Colmarin päivystysalueen päivystävän eläinlääkärin (keskipäivä, yöt, viikonloput)"
+        "fi": "Maksullinen numero, joka antaa Colmarin päivystysalueen päivystävän eläinlääkärin (keskipäivä, yöt, viikonloput)",
+        "nb": "Betalingsnummer med høy takst som gir vakthavende dyrlege i vaktsektoren Colmar (midt på dagen, netter, helger)"
       },
       "url": "https://www.anivia.fr/gardes",
       "source_url": "https://www.anivia.fr/gardes",
@@ -1717,7 +1770,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–19:00, so 8:00–12:00; pohotovostní tým a dispečink nonstop; psi a kočky",
         "sv": "mån–fre 8–12/14–19, lör 8–12; akutteam och ärendedirigering dygnet runt; hundar och katter",
         "da": "Man–fre 8–12/14–19, lør 8–12; akutteam og vagtcentral døgnet rundt; hunde og katte",
-        "fi": "ma–pe 8–12 / 14–19, la 8–12; päivystystiimi ja ohjaus ympäri vuorokauden; koirat ja kissat"
+        "fi": "ma–pe 8–12 / 14–19, la 8–12; päivystystiimi ja ohjaus ympäri vuorokauden; koirat ja kissat",
+        "nb": "man–fre 8–12/14–19, lør 8–12; akuttteam og vaktsentral hele døgnet; hunder og katter"
       },
       "url": "https://www.mvet.fr/",
       "source_url": "https://www.mvet.fr/urgences",
@@ -1747,7 +1801,8 @@
         "cs": "Objednání Po–Pá 8:30–12:00, 14:30–18:30, v sobotu dopoledne; přes den pohotovost na klinice, v noci a o víkendech přes regulační linku střediska VETONIMO",
         "sv": "Tidsbokning mån–fre 8.30–12/14.30–18.30, lör förmiddag; akutfall dagtid på kliniken, nätter/helger via samordningslinjen hos VETONIMO-centret",
         "da": "Tidsbestilling man–fre 8.30–12/14.30–18.30, lør formiddag; akut i dagtimerne på klinikken, nætter/weekender via visiteringslinjen hos VETONIMO-centret",
-        "fi": "Ajanvaraus ma–pe 8.30–12.00 / 14.30–18.30, la aamupäivällä; päiväsaikaan päivystys klinikalla, öisin ja viikonloppuisin ohjauslinjan kautta VETONIMO-keskuksen kanssa"
+        "fi": "Ajanvaraus ma–pe 8.30–12.00 / 14.30–18.30, la aamupäivällä; päiväsaikaan päivystys klinikalla, öisin ja viikonloppuisin ohjauslinjan kautta VETONIMO-keskuksen kanssa",
+        "nb": "Timebestilling man–fre 8.30–12/14.30–18.30, lør formiddag; akutte tilfeller på dagtid ved klinikken, netter/helger via koordineringslinje med VETONIMO-senteret"
       },
       "url": "https://www.clinvetmetz.fr/",
       "source_url": "https://www.clinvetmetz.fr/index.php/bienvenue/nos-services/les-urgences/",
@@ -1778,7 +1833,8 @@
         "cs": "Po–Pá 8:30–19:00, so 8:30–12:00, v neděli pouze pohotovost; pohotovostní služba nonstop ve spolupráci se dvěma dalšími klinikami (číslo ukáže, která má službu)",
         "sv": "mån–fre 8.30–19.00, lör 8.30–12.00, söndagar endast akutfall; akutjour dygnet runt som delas med två andra kliniker (numret visar vilken som har jour)",
         "da": "Man–fre 8.30–19.00, lør 8.30–12.00, søn kun akut; akutvagt døgnet rundt delt med to andre klinikker (nummeret oplyser, hvem der har vagt)",
-        "fi": "ma–pe 8.30–19.00, la 8.30–12.00, sunnuntaisin vain päivystys; päivystys ympäri vuorokauden yhdessä kahden muun klinikan kanssa (numero kertoo, mikä niistä päivystää)"
+        "fi": "ma–pe 8.30–19.00, la 8.30–12.00, sunnuntaisin vain päivystys; päivystys ympäri vuorokauden yhdessä kahden muun klinikan kanssa (numero kertoo, mikä niistä päivystää)",
+        "nb": "man–fre 8.30–19.00, lør 8.30–12.00, søndag kun nødtilfeller; akuttvakt hele døgnet delt med to andre klinikker (nummeret oppgir hvem som har vakt)"
       },
       "url": "https://www.vetosaintmax.fr/",
       "source_url": "https://www.vetosaintmax.fr/urgence",
@@ -1809,7 +1865,8 @@
         "cs": "Specializovaná vyšetření Po–Pá 8:00–19:00, so 8:00–12:00; pohotovost nonstop",
         "sv": "Remissbesök mån–fre 8–19, lör 8–12; akutfall dygnet runt",
         "da": "Henvisningskonsultationer man–fre 8–19, lør 8–12; akut døgnet rundt",
-        "fi": "Erikoisvastaanotot ma–pe 8–19, la 8–12; päivystys ympäri vuorokauden"
+        "fi": "Erikoisvastaanotot ma–pe 8–19, la 8–12; päivystys ympäri vuorokauden",
+        "nb": "Henvisningskonsultasjoner man–fre kl. 8–19, lør 8–12; akuttbehandling hele døgnet"
       },
       "url": "https://www.vetddb.fr/",
       "source_url": "https://www.vetddb.fr/",
@@ -1839,7 +1896,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 19:30–7:30, v sobotu od 12:00, v neděli a o státních svátcích nepřetržitě",
         "sv": "Akutklinik utanför öppettider: vardagar 19.30–07.30, lördagar från 12.00, söndagar och helgdagar dygnet runt",
         "da": "Akutklinik uden for åbningstiden: hverdage 19.30–07.30, lørdag fra 12.00, søndage og helligdage døgnet rundt",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä yhtäjaksoisesti"
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä yhtäjaksoisesti",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 19.30–07.30, lørdag fra kl. 12.00, søndager og helligdager uavbrutt"
       },
       "url": "https://www.maisondesurgences-besancon.com/",
       "source_url": "https://www.maisondesurgences-besancon.com/",
@@ -1868,7 +1926,8 @@
         "cs": "Univerzitní pohotovost pro malá zvířata, resuscitace a jednotka intenzivní péče, nonstop; psi, kočky a exotická zvířata.",
         "sv": "Universitetets akutmottagning för smådjur med återupplivnings- och intensivvårdsenhet, dygnet runt; hundar, katter och NAC.",
         "da": "Universitetets akut-, genoplivnings- og intensivafdeling for smådyr, døgnet rundt; hunde, katte og NAC.",
-        "fi": "Yliopiston pieneläinten päivystys-, elvytys- ja tehohoitoyksikkö, ympäri vuorokauden; koirat, kissat ja eksoottiset lemmikit."
+        "fi": "Yliopiston pieneläinten päivystys-, elvytys- ja tehohoitoyksikkö, ympäri vuorokauden; koirat, kissat ja eksoottiset lemmikit.",
+        "nb": "Universitetets akutt-, gjenopplivings- og intensivavdeling for smådyr, hele døgnet, alle dager; hunder, katter og NAC."
       },
       "small_animals": true,
       "url": "https://www.vetagro-sup.fr/",
@@ -1897,7 +1956,8 @@
         "cs": "Pouze pohotovost: návštěvy doma do cca 30 km od Lyonu nebo vyšetření na pohotovostní klinice v Lyonu (7e); telefonní linka nonstop.",
         "sv": "Endast akutfall: hembesök inom cirka 30 km från Lyon eller mottagning på jourkliniken i Lyon 7e; telefonlinje dygnet runt.",
         "da": "Kun akut: hjemmebesøg inden for ca. 30 km fra Lyon eller konsultation på vagtklinikken i Lyon 7e; telefon døgnet rundt.",
-        "fi": "Vain päivystys: kotikäynnit noin 30 km säteellä Lyonista tai vastaanotto päivystysklinikalla (Lyon 7e); puhelinlinja ympäri vuorokauden."
+        "fi": "Vain päivystys: kotikäynnit noin 30 km säteellä Lyonista tai vastaanotto päivystysklinikalla (Lyon 7e); puhelinlinja ympäri vuorokauden.",
+        "nb": "Kun akuttilbud: hjemmebesøk innen ca. 30 km fra Lyon eller konsultasjon ved vaktklinikken i Lyon 7e; telefonlinje hele døgnet."
       },
       "small_animals": true,
       "url": "https://www.urgences-veterinaires-lyon.fr/",
@@ -1928,7 +1988,8 @@
         "cs": "Specializovaná a pohotovostní klinika, otevřeno nonstop každý den.",
         "sv": "Remiss- och akutklinik, öppet dygnet runt, alla dagar.",
         "da": "Henvisningsklinik og akutklinik, døgnåben alle dage.",
-        "fi": "Erikois- ja päivystysklinikka, auki ympäri vuorokauden joka päivä."
+        "fi": "Erikois- ja päivystysklinikka, auki ympäri vuorokauden joka päivä.",
+        "nb": "Henvisningsklinikk og akuttklinikk, åpen hele døgnet, alle dager."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-mermoz-vet-mz1/",
@@ -1958,7 +2019,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny od 19:00 do 8:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider: vardagar 19.00–08.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden: hverdage fra 19.00 til 08.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.00–8.00, la 12.00–ma 8.00, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.00–8.00, la 12.00–ma 8.00, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager fra kl. 19.00 til 08.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-dardilly/",
@@ -1988,7 +2050,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: v noci od 19:00, o víkendech, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider: nätter från 19.00, helger, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden: nætter fra 19.00, weekender, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt klo 19.00 alkaen, viikonloput, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt klo 19.00 alkaen, viikonloput, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid: netter fra kl. 19.00, helger, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/",
@@ -2018,7 +2081,8 @@
         "cs": "Veterinární nemocnice s nonstop pohotovostí (Nord-Isère, východně od Lyonu).",
         "sv": "Djursjukhus med akutjour dygnet runt (Nord-Isère, öster om Lyon).",
         "da": "Dyrehospital med akutvagt døgnet rundt (Nord-Isère, øst for Lyon).",
-        "fi": "Eläinsairaala, jossa päivystys ympäri vuorokauden (Nord-Isère, Lyonista itään)."
+        "fi": "Eläinsairaala, jossa päivystys ympäri vuorokauden (Nord-Isère, Lyonista itään).",
+        "nb": "Dyresykehus med akuttjeneste hele døgnet (Nord-Isère, øst for Lyon)."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/armonia/",
@@ -2048,7 +2112,8 @@
         "cs": "Klinika ve všední dny 8:00–19:00, so 8:00–17:00; pohotovost každý den 8:00–19:00.",
         "sv": "Klinik vardagar 08.00–19.00, lör 08.00–17.00; akutjour alla dagar 08.00–19.00.",
         "da": "Klinik hverdage 08.00–19.00, lør 08.00–17.00; akutvagt alle dage 08.00–19.00.",
-        "fi": "Klinikka arkisin 8.00–19.00, la 8.00–17.00; päivystys joka päivä 8.00–19.00."
+        "fi": "Klinikka arkisin 8.00–19.00, la 8.00–17.00; päivystys joka päivä 8.00–19.00.",
+        "nb": "Klinikk på hverdager kl. 8.00–19.00, lør kl. 8.00–17.00; akuttjeneste alle dager kl. 8.00–19.00."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/belleville/",
@@ -2078,7 +2143,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny od 19:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider: vardagar från 19.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden: hverdage fra 19.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager fra kl. 19.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-saint-etienne/",
@@ -2108,7 +2174,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny od 19:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider: vardagar från 19.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden: hverdage fra 19.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager fra kl. 19.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-clermont-ferrand/",
@@ -2136,7 +2203,8 @@
         "cs": "Pohotovostní návštěvy doma v oblasti Grenoblu a Chambéry; Po–Pá 19:00–8:00, od soboty 14:00, v neděli a o svátcích nepřetržitě.",
         "sv": "Akuta hembesök i områdena Grenoble och Chambéry; tider mån–fre 19.00–08.00, lör från 14.00, söndagar och helgdagar dygnet runt.",
         "da": "Akut hjemmebesøgsservice for områderne Grenoble og Chambéry; åbent man–fre 19.00–08.00, lør fra 14.00, søndage og helligdage døgnet rundt.",
-        "fi": "Päivystyskotikäyntipalvelu Grenoblen ja Chambéryn alueille; ma–pe 19.00–8.00, la klo 14.00 alkaen, sunnuntaisin ja pyhinä yhtäjaksoisesti."
+        "fi": "Päivystyskotikäyntipalvelu Grenoblen ja Chambéryn alueille; ma–pe 19.00–8.00, la klo 14.00 alkaen, sunnuntaisin ja pyhinä yhtäjaksoisesti.",
+        "nb": "Akutt hjemmebesøkstjeneste for områdene Grenoble og Chambéry; åpent man–fre kl. 19.00–8.00, lør fra kl. 14.00, søndager og helligdager sammenhengende."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-de-garde-grenoble.fr/",
@@ -2167,7 +2235,8 @@
         "cs": "Po–Pá 8:00–12:00, 13:30–18:30, so 8:00–12:00 (na objednání). Mimo ordinační dobu: linka kliniky +33 4 76 25 59 63 nebo Maison des Urgences de Grenoble +33 4 80 42 33 23.",
         "sv": "mån–fre 08.00–12.00 / 13.30–18.30, lör 08.00–12.00 (efter tidsbokning). Utanför öppettider: klinikens linje +33 4 76 25 59 63 eller Maison des Urgences de Grenoble +33 4 80 42 33 23.",
         "da": "Man–fre 08.00–12.00 / 13.30–18.30, lør 08.00–12.00 (tidsbestilling). Uden for åbningstiden: klinikkens nummer +33 4 76 25 59 63 eller Maison des Urgences de Grenoble +33 4 80 42 33 23.",
-        "fi": "ma–pe 8.00–12.00 / 13.30–18.30, la 8.00–12.00 (ajanvarauksella). Virka-ajan ulkopuolella: klinikan numero +33 4 76 25 59 63 tai Maison des Urgences de Grenoble +33 4 80 42 33 23."
+        "fi": "ma–pe 8.00–12.00 / 13.30–18.30, la 8.00–12.00 (ajanvarauksella). Virka-ajan ulkopuolella: klinikan numero +33 4 76 25 59 63 tai Maison des Urgences de Grenoble +33 4 80 42 33 23.",
+        "nb": "man–fre 8.00–12.00 / 13.30–18.30, lør 8.00–12.00 (etter timebestilling). Utenom åpningstiden: klinikkens telefon +33 4 76 25 59 63 eller Maison des Urgences de Grenoble +33 4 80 42 33 23."
       },
       "small_animals": true,
       "url": "https://univet.fr/clinique/clinique-veterinaire-etoile-grenoble-38000-univet/",
@@ -2196,7 +2265,8 @@
         "cs": "Veterinární nemocnice u Annecy (dálnice A41, sjezd 18); pohotovost nonstop na místě; specializovaná vyšetření Po–Pá 8:00–19:00, so 8:00–12:30.",
         "sv": "Djursjukhus nära Annecy (A41, avfart 18); akutfall dygnet runt på plats; specialistbesök mån–fre 08.00–19.00, lör 08.00–12.30.",
         "da": "Dyrehospital nær Annecy (A41 afkørsel 18); akut døgnet rundt på stedet; specialistkonsultationer man–fre 08.00–19.00, lør 08.00–12.30.",
-        "fi": "Eläinsairaala Annecyn lähellä (A41, liittymä 18); päivystys paikan päällä ympäri vuorokauden; erikoislääkärin vastaanotot ma–pe 8.00–19.00, la 8.00–12.30."
+        "fi": "Eläinsairaala Annecyn lähellä (A41, liittymä 18); päivystys paikan päällä ympäri vuorokauden; erikoislääkärin vastaanotot ma–pe 8.00–19.00, la 8.00–12.30.",
+        "nb": "Dyresykehus nær Annecy (A41, avkjørsel 18); akutthjelp hele døgnet på stedet; spesialistkonsultasjoner man–fre 8.00–19.00, lør 8.00–12.30."
       },
       "small_animals": true,
       "url": "https://www.chvsaintmartin.com/",
@@ -2226,7 +2296,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–19:00, so 8:30–12:00. V noci a o víkendech zajišťují Maison des Urgences Alpine (+33 4 58 39 00 00) a CHV de Saint-Martin (+33 4 50 60 09 00).",
         "sv": "mån–fre 08.00–12.00 / 14.00–19.00, lör 08.30–12.00. Nätter/helger hanteras av Maison des Urgences Alpine (+33 4 58 39 00 00) och CHV de Saint-Martin (+33 4 50 60 09 00).",
         "da": "Man–fre 08.00–12.00 / 14.00–19.00, lør 08.30–12.00. Nætter/weekender varetages af Maison des Urgences Alpine (+33 4 58 39 00 00) og CHV de Saint-Martin (+33 4 50 60 09 00).",
-        "fi": "ma–pe 8.00–12.00 / 14.00–19.00, la 8.30–12.00. Yöt ja viikonloput hoitavat Maison des Urgences Alpine (+33 4 58 39 00 00) ja CHV de Saint-Martin (+33 4 50 60 09 00)."
+        "fi": "ma–pe 8.00–12.00 / 14.00–19.00, la 8.30–12.00. Yöt ja viikonloput hoitavat Maison des Urgences Alpine (+33 4 58 39 00 00) ja CHV de Saint-Martin (+33 4 50 60 09 00).",
+        "nb": "man–fre 8.00–12.00 / 14.00–19.00, lør 8.30–12.00. Natt og helg dekkes av Maison des Urgences Alpine (+33 4 58 39 00 00) og CHV de Saint-Martin (+33 4 50 60 09 00)."
       },
       "small_animals": true,
       "url": "https://univet.fr/",
@@ -2256,7 +2327,8 @@
         "cs": "Po–Pá 8:30–12:30, 15:00–18:30, so 8:30–12:00 (na objednání); vlastní pohotovostní služba v noci, o víkendech a svátcích.",
         "sv": "mån–fre 08.30–12.30 / 15.00–18.30, lör 08.30–12.00 (efter tidsbokning); egen jour för akutfall nätter, helger och helgdagar.",
         "da": "Man–fre 08.30–12.30 / 15.00–18.30, lør 08.30–12.00 (tidsbestilling); egen vagtordning ved akutte tilfælde om natten, i weekender og på helligdage.",
-        "fi": "ma–pe 8.30–12.30 / 15.00–18.30, la 8.30–12.00 (ajanvarauksella); oma päivystys hätätapauksille öisin, viikonloppuisin ja pyhinä."
+        "fi": "ma–pe 8.30–12.30 / 15.00–18.30, la 8.30–12.00 (ajanvarauksella); oma päivystys hätätapauksille öisin, viikonloppuisin ja pyhinä.",
+        "nb": "man–fre 8.30–12.30 / 15.00–18.30, lør 8.30–12.00 (etter timebestilling); egen vakttjeneste for nødtilfeller natt, helg og helligdager."
       },
       "small_animals": true,
       "source_url": "https://www.haute-savoie-tourisme.org/services/sante/services-sante/790485-clinique-veterinaire-d-abondance",
@@ -2285,7 +2357,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–19:00, so 8:30–12:00, 14:00–16:00; zajištěna pohotovostní služba („Gardes assurées“).",
         "sv": "mån–fre 08.30–12.00 / 14.00–19.00, lör 08.30–12.00 / 14.00–16.00; 'Gardes assurées' (jour ordnad).",
         "da": "Man–fre 08.30–12.00 / 14.00–19.00, lør 08.30–12.00 / 14.00–16.00; 'Gardes assurées' (vagtordning sikret).",
-        "fi": "ma–pe 8.30–12.00 / 14.00–19.00, la 8.30–12.00 / 14.00–16.00; 'Gardes assurées' (päivystys järjestetty)."
+        "fi": "ma–pe 8.30–12.00 / 14.00–19.00, la 8.30–12.00 / 14.00–16.00; 'Gardes assurées' (päivystys järjestetty).",
+        "nb": "man–fre 8.30–12.00 / 14.00–19.00, lør 8.30–12.00 / 14.00–16.00; «Gardes assurées» (vakttjeneste sikret)."
       },
       "small_animals": true,
       "source_url": "https://www.haute-savoie-tourisme.org/services/sante/services-sante/245171-cabinet-medico-chirurgical-veterinaire-dr-edouard-senger",
@@ -2314,7 +2387,8 @@
         "cs": "Otevřeno celý rok, v neděli zavřeno.",
         "sv": "Öppet hela året, stängt söndagar.",
         "da": "Åbent hele året, lukket søndag.",
-        "fi": "Auki ympäri vuoden, su suljettu."
+        "fi": "Auki ympäri vuoden, su suljettu.",
+        "nb": "Åpent hele året, stengt søndag."
       },
       "small_animals": true,
       "source_url": "https://www.oz-en-oisans.com/winter/offers/veterinary-surgery-le-bourg-doisans-en-winter-2795237",
@@ -2343,7 +2417,8 @@
         "cs": "Po–Pá 9:00–12:00, 14:30–19:00, so 9:00–12:00, 14:30–18:00. Mimo ordinační dobu společná služba s Clinique de l'Enclave (Valréas); o víkendech a svátcích Clinique Sainte Anne Sorgues +33 4 90 83 37 74 nebo V2TU Avignon +33 4 48 75 05 15.",
         "sv": "mån–fre 09.00–12.00 / 14.30–19.00, lör 09.00–12.00 / 14.30–18.00. Utanför öppettider: gemensam jourlista med Clinique de l'Enclave (Valréas); helger/helgdagar Clinique Sainte Anne Sorgues +33 4 90 83 37 74 eller V2TU Avignon +33 4 48 75 05 15.",
         "da": "Man–fre 09.00–12.00 / 14.30–19.00, lør 09.00–12.00 / 14.30–18.00. Uden for åbningstiden: fælles vagtordning med Clinique de l'Enclave (Valréas); weekender/helligdage Clinique Sainte Anne Sorgues +33 4 90 83 37 74 eller V2TU Avignon +33 4 48 75 05 15.",
-        "fi": "ma–pe 9.00–12.00 / 14.30–19.00, la 9.00–12.00 / 14.30–18.00. Virka-ajan ulkopuolella yhteiset päivystysvuorot Clinique de l'Enclaven (Valréas) kanssa; viikonloppuisin ja pyhinä Clinique Sainte Anne Sorgues +33 4 90 83 37 74 tai V2TU Avignon +33 4 48 75 05 15."
+        "fi": "ma–pe 9.00–12.00 / 14.30–19.00, la 9.00–12.00 / 14.30–18.00. Virka-ajan ulkopuolella yhteiset päivystysvuorot Clinique de l'Enclaven (Valréas) kanssa; viikonloppuisin ja pyhinä Clinique Sainte Anne Sorgues +33 4 90 83 37 74 tai V2TU Avignon +33 4 48 75 05 15.",
+        "nb": "man–fre 9.00–12.00 / 14.30–19.00, lør 9.00–12.00 / 14.30–18.00. Utenom åpningstiden: felles vaktordning med Clinique de l'Enclave (Valréas); helg og helligdager Clinique Sainte Anne Sorgues +33 4 90 83 37 74 eller V2TU Avignon +33 4 48 75 05 15."
       },
       "small_animals": true,
       "url": "https://univet.fr/",
@@ -2373,7 +2448,8 @@
         "cs": "Univerzitní pohotovost a jednotka intenzivní péče, nonstop; před cestou zavolejte.",
         "sv": "Universitetets akut- och intensivvårdsenhet, dygnet runt; ring innan du kommer.",
         "da": "Universitetets akut- og intensivafdeling, døgnet rundt; ring på forhånd.",
-        "fi": "Yliopiston päivystys- ja tehohoitoyksikkö, ympäri vuorokauden; soita ennen tuloa."
+        "fi": "Yliopiston päivystys- ja tehohoitoyksikkö, ympäri vuorokauden; soita ennen tuloa.",
+        "nb": "Universitetets akutt- og intensivavdeling, hele døgnet, alle dager; ring før du kommer."
       },
       "small_animals": true,
       "url": "https://envt.fr/",
@@ -2404,7 +2480,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: Po–Pá 19:00–8:30, od soboty poledne do pondělí 8:30, o svátcích od 19:00 předchozího večera.",
         "sv": "Akutklinik utanför öppettider: mån–fre 19.00–08.30, lör 12.00 till mån 08.30, helgdagar från 19.00 kvällen före.",
         "da": "Akutklinik uden for åbningstiden: man–fre 19.00–08.30, lørdag kl. 12 til mandag 08.30, helligdage fra 19.00 aftenen før.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: ma–pe 19.00–8.30, la 12.00–ma 8.30, pyhinä edellisen illan klo 19.00 alkaen."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: ma–pe 19.00–8.30, la 12.00–ma 8.30, pyhinä edellisen illan klo 19.00 alkaen.",
+        "nb": "Dyrlegevakt utenom åpningstid: man–fre kl. 19.00–08.30, lørdag fra kl. 12 til mandag kl. 08.30, helligdager fra kl. 19.00 kvelden før."
       },
       "small_animals": true,
       "url": "https://vet-urgentys.fr/",
@@ -2434,7 +2511,8 @@
         "cs": "Pohotovostní návštěvy doma nonstop v oblasti Toulouse; pohotovostní ordinace Po–Pá 20:00–8:00, v sobotu od 18:00, v neděli nonstop, o svátcích od 19:00 předchozího večera.",
         "sv": "Akuta hembesök dygnet runt i Toulouseområdet; jourmottagning mån–fre 20.00–08.00, lör från 18.00, sön dygnet runt, helgdagar från 19.00 kvällen före.",
         "da": "Akutte hjemmebesøg døgnet rundt i Toulouse-området; vagtpraksis man–fre 20.00–08.00, lørdag fra 18.00, søndag døgnet rundt, helligdage fra 19.00 aftenen før.",
-        "fi": "Päivystyskotikäynnit ympäri vuorokauden Toulousen alueella; päivystysvastaanotto ma–pe 20.00–8.00, la klo 18.00 alkaen, su ympäri vuorokauden, pyhinä edellisen illan klo 19.00 alkaen."
+        "fi": "Päivystyskotikäynnit ympäri vuorokauden Toulousen alueella; päivystysvastaanotto ma–pe 20.00–8.00, la klo 18.00 alkaen, su ympäri vuorokauden, pyhinä edellisen illan klo 19.00 alkaen.",
+        "nb": "Akutte hjemmebesøk hele døgnet i Toulouse-området; vakthavende klinikk man–fre kl. 20.00–8.00, lørdag fra kl. 18.00, søndag hele døgnet, helligdager fra kl. 19.00 kvelden før."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-de-garde-toulouse.fr/",
@@ -2463,7 +2541,8 @@
         "cs": "Veterinární pohotovost mimo ordinační dobu v Toulouse: pohotovost ENVT, Vet-Urgentys, pohotovostní služba s návštěvami doma.",
         "sv": "Veterinärer utanför öppettider i Toulouse: ENVT akut, Vet-Urgentys, akut hembesökstjänst.",
         "da": "Muligheder for dyrlæge uden for åbningstiden i Toulouse: akut hos ENVT, Vet-Urgentys, akut hjemmebesøgsservice.",
-        "fi": "Eläinlääkärivaihtoehdot virka-ajan ulkopuolella Toulousessa: ENVT:n päivystys, Vet-Urgentys, päivystyskotikäyntipalvelu."
+        "fi": "Eläinlääkärivaihtoehdot virka-ajan ulkopuolella Toulousessa: ENVT:n päivystys, Vet-Urgentys, päivystyskotikäyntipalvelu.",
+        "nb": "Muligheter for dyrlegehjelp utenom åpningstid i Toulouse: ENVT nødtilfeller, Vet-Urgentys, akuttjeneste med hjemmebesøk."
       },
       "small_animals": true,
       "url": "https://metropole.toulouse.fr/",
@@ -2493,7 +2572,8 @@
         "cs": "Klinika pro malá zvířata; poradenství po telefonu.",
         "sv": "Smådjursklinik; ring för råd.",
         "da": "Smådyrsklinik; ring for rådgivning.",
-        "fi": "Pieneläinklinikka; soita ja kysy neuvoa."
+        "fi": "Pieneläinklinikka; soita ja kysy neuvoa.",
+        "nb": "Smådyrklinikk; ring for råd."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/volvestre/",
@@ -2523,7 +2603,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: v noci 19:00–8:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider: nätter 19.00–08.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden: nætter 19.00–08.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt 19.00–8.00, la 12.00–ma 8.00, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt 19.00–8.00, la 12.00–ma 8.00, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid: netter kl. 19.00–08.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-montpellier/",
@@ -2553,7 +2634,8 @@
         "cs": "Specializovaná klinika, pohotovost přes den; Po–Pá 8:00–12:00, 14:00–19:00, so 8:00–12:00, 14:00–17:00.",
         "sv": "Remissklinik, akutfall dagtid; mån–fre 08.00–12.00 / 14.00–19.00, lör 08.00–12.00 / 14.00–17.00.",
         "da": "Henvisningsklinik, akut i dagtimerne; man–fre 08.00–12.00 / 14.00–19.00, lør 08.00–12.00 / 14.00–17.00.",
-        "fi": "Erikoisklinikka, päivystys päiväsaikaan; ma–pe 8.00–12.00 / 14.00–19.00, la 8.00–12.00 / 14.00–17.00."
+        "fi": "Erikoisklinikka, päivystys päiväsaikaan; ma–pe 8.00–12.00 / 14.00–19.00, la 8.00–12.00 / 14.00–17.00.",
+        "nb": "Henvisningsklinikk, akuttbehandling på dagtid; man–fre kl. 8.00–12.00 / 14.00–19.00, lør 8.00–12.00 / 14.00–17.00."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-sevetys-occitanie-montpellier-mtp/",
@@ -2583,7 +2665,8 @@
         "cs": "Po–So 8:00–19:00; pohotovost přes den; mimo ordinační dobu telefon přesměruje hovor.",
         "sv": "mån–lör 08.00–19.00; akutfall dagtid; utanför öppettider hänvisar telefonen vidare.",
         "da": "Man–lør 08.00–19.00; akut i dagtimerne; telefonen henviser videre uden for åbningstiden.",
-        "fi": "ma–la 8.00–19.00; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin."
+        "fi": "ma–la 8.00–19.00; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin.",
+        "nb": "man–lør 08.00–19.00; akutte tilfeller på dagtid; utenom åpningstid videresendes telefonen."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-du-grand-m-montpellier-lgm/",
@@ -2612,7 +2695,8 @@
         "cs": "Po–Pá 8:15–12:00, 14:00–18:00, so 8:15–12:00; pohotovost přes den; mimo ordinační dobu telefon přesměruje hovor.",
         "sv": "mån–fre 08.15–12.00 / 14.00–18.00, lör 08.15–12.00; akutfall dagtid; utanför öppettider hänvisar telefonen vidare.",
         "da": "Man–fre 08.15–12.00 / 14.00–18.00, lør 08.15–12.00; akut i dagtimerne; telefonen henviser videre uden for åbningstiden.",
-        "fi": "ma–pe 8.15–12.00 / 14.00–18.00, la 8.15–12.00; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin."
+        "fi": "ma–pe 8.15–12.00 / 14.00–18.00, la 8.15–12.00; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin.",
+        "nb": "man–fre 8.15–12.00 / 14.00–18.00, lør 8.15–12.00; akutte tilfeller på dagtid; telefonen videresender utenom åpningstiden."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-du-cap-d-agde-agd/",
@@ -2641,7 +2725,8 @@
         "cs": "Po–Pá 9:00–19:00, so 8:30–12:30; pohotovost přes den; mimo ordinační dobu telefon přesměruje hovor.",
         "sv": "mån–fre 09.00–19.00, lör 08.30–12.30; akutfall dagtid; utanför öppettider hänvisar telefonen vidare.",
         "da": "Man–fre 09.00–19.00, lør 08.30–12.30; akut i dagtimerne; telefonen henviser videre uden for åbningstiden.",
-        "fi": "ma–pe 9.00–19.00, la 8.30–12.30; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin."
+        "fi": "ma–pe 9.00–19.00, la 8.30–12.30; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin.",
+        "nb": "man–fre 09.00–19.00, lør 08.30–12.30; akutte tilfeller på dagtid; utenom åpningstid videresendes telefonen."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-des-remparts-aigues-mortes-aig/",
@@ -2670,7 +2755,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny od 19:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider: vardagar från 19.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden: hverdage fra 19.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager fra kl. 19.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-nimes/",
@@ -2699,7 +2785,8 @@
         "cs": "Ordinace Po–Pá 8:00–12:00, 14:00–19:00, so 8:00–12:00, 14:00–18:00; pohotovost nonstop po celý rok.",
         "sv": "Besök mån–fre 08.00–12.00 / 14.00–19.00, lör 08.00–12.00 / 14.00–18.00; akutjour dygnet runt, hela året.",
         "da": "Konsultationer man–fre 08.00–12.00 / 14.00–19.00, lør 08.00–12.00 / 14.00–18.00; akutvagt døgnet rundt hele året.",
-        "fi": "Vastaanotto ma–pe 8.00–12.00 / 14.00–19.00, la 8.00–12.00 / 14.00–18.00; päivystys ympäri vuorokauden ympäri vuoden."
+        "fi": "Vastaanotto ma–pe 8.00–12.00 / 14.00–19.00, la 8.00–12.00 / 14.00–18.00; päivystys ympäri vuorokauden ympäri vuoden.",
+        "nb": "Konsultasjoner man–fre kl. 8.00–12.00 / 14.00–19.00, lør kl. 8.00–12.00 / 14.00–18.00; akuttjeneste hele døgnet, hele året."
       },
       "small_animals": true,
       "url": "https://www.clinique-veterinaire-perpignan.fr/",
@@ -2729,7 +2816,8 @@
         "cs": "Po–Pá 9:00–12:30, 14:00–18:30, so 9:00–12:30, 14:00–17:00; mimo ordinační dobu zajišťuje péči Neovet La Croix Bleue, Perpignan.",
         "sv": "mån–fre 09.00–12.30 / 14.00–18.30, lör 09.00–12.30 / 14.00–17.00; vård utanför öppettider sköts av Neovet La Croix Bleue, Perpignan.",
         "da": "Man–fre 09.00–12.30 / 14.00–18.30, lør 09.00–12.30 / 14.00–17.00; vagtdækning uden for åbningstiden hos Neovet La Croix Bleue, Perpignan.",
-        "fi": "ma–pe 9.00–12.30 / 14.00–18.30, la 9.00–12.30 / 14.00–17.00; virka-ajan ulkopuolella hoidon jatkuvuudesta vastaa Neovet La Croix Bleue, Perpignan."
+        "fi": "ma–pe 9.00–12.30 / 14.00–18.30, la 9.00–12.30 / 14.00–17.00; virka-ajan ulkopuolella hoidon jatkuvuudesta vastaa Neovet La Croix Bleue, Perpignan.",
+        "nb": "man–fre 09.00–12.30 / 14.00–18.30, lør 09.00–12.30 / 14.00–17.00; utenom åpningstid overtar Neovet La Croix Bleue, Perpignan."
       },
       "small_animals": true,
       "url": "https://univet.fr/",
@@ -2759,7 +2847,8 @@
         "cs": "Veterinární nemocnice (Bordeaux) s nonstop pohotovostí včetně státních svátků.",
         "sv": "Djursjukhus (Bordeaux) med akutjour dygnet runt, även helgdagar.",
         "da": "Dyrehospital (Bordeaux) med akutvagt døgnet rundt, også på helligdage.",
-        "fi": "Eläinsairaala (Bordeaux), päivystys ympäri vuorokauden, myös pyhinä."
+        "fi": "Eläinsairaala (Bordeaux), päivystys ympäri vuorokauden, myös pyhinä.",
+        "nb": "Dyresykehus (Bordeaux) med akuttjeneste hele døgnet, også på helligdager."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/chv-aquivet/",
@@ -2789,7 +2878,8 @@
         "cs": "Pohotovostní ordinace mimo ordinační dobu: Po–Pá 19:00–8:00, od soboty 18:00 do pondělí 8:00 (neděle nonstop), o svátcích od 19:00 předchozího večera; na objednání.",
         "sv": "Jourklinik utanför öppettider: mån–fre 19.00–08.00, lör 18.00 till mån 08.00 (sön dygnet runt), helgdagar från 19.00 kvällen före; efter tidsbokning.",
         "da": "Vagtklinik uden for åbningstiden: man–fre 19.00–08.00, lørdag 18.00 til mandag 08.00 (søndag døgnet rundt), helligdage fra 19.00 aftenen før; efter aftale.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: ma–pe 19.00–8.00, la 18.00–ma 8.00 (su ympäri vuorokauden), pyhinä edellisen illan klo 19.00 alkaen; ajanvarauksella."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: ma–pe 19.00–8.00, la 18.00–ma 8.00 (su ympäri vuorokauden), pyhinä edellisen illan klo 19.00 alkaen; ajanvarauksella.",
+        "nb": "Vaktklinikk utenom åpningstid: man–fre kl. 19.00–08.00, lørdag kl. 18.00 til mandag kl. 08.00 (søndag hele døgnet), helligdager fra kl. 19.00 kvelden før; etter timebestilling."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-de-garde-bordeaux.fr/",
@@ -2819,7 +2909,8 @@
         "cs": "Po–Pá 9:00–12:30, 14:00–19:00, so 9:00–12:30, 14:00–16:00; mimo ordinační dobu záznam sdělí, která ordinace má službu.",
         "sv": "mån–fre 09.00–12.30 / 14.00–19.00, lör 09.00–12.30 / 14.00–16.00; utanför öppettider talar ett telefonsvararmeddelande om vilken praktik som har jour.",
         "da": "Man–fre 09.00–12.30 / 14.00–19.00, lør 09.00–12.30 / 14.00–16.00; uden for åbningstiden oplyser en telefonbesked den vagthavende praksis.",
-        "fi": "ma–pe 9.00–12.30 / 14.00–19.00, la 9.00–12.30 / 14.00–16.00; virka-ajan ulkopuolella vastaajaviesti kertoo päivystävän vastaanoton."
+        "fi": "ma–pe 9.00–12.30 / 14.00–19.00, la 9.00–12.30 / 14.00–16.00; virka-ajan ulkopuolella vastaajaviesti kertoo päivystävän vastaanoton.",
+        "nb": "man–fre 09.00–12.30 / 14.00–19.00, lør 09.00–12.30 / 14.00–16.00; utenom åpningstid oppgir en telefonsvarer hvilken klinikk som har vakt."
       },
       "small_animals": true,
       "url": "https://www.clinique-veterinaire-arcavet.fr/",
@@ -2849,7 +2940,8 @@
         "cs": "Klinika 8:00–19:00; pohotovost nonstop s veterinářem na místě; psi, kočky, exotická zvířata.",
         "sv": "Klinik 08.00–19.00; akutjour dygnet runt med veterinär på plats; hundar, katter, NAC.",
         "da": "Klinik 08.00–19.00; akutvagt døgnet rundt med dyrlæge på stedet; hunde, katte, NAC.",
-        "fi": "Klinikka 8.00–19.00; päivystys ympäri vuorokauden, eläinlääkäri paikalla; koirat, kissat, eksoottiset lemmikit."
+        "fi": "Klinikka 8.00–19.00; päivystys ympäri vuorokauden, eläinlääkäri paikalla; koirat, kissat, eksoottiset lemmikit.",
+        "nb": "Klinikk kl. 8.00–19.00; akuttjeneste hele døgnet, alle dager, med dyrlege på stedet; hunder, katter, eksotiske kjæledyr (NAC)."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/saint-roch/",
@@ -2879,7 +2971,8 @@
         "cs": "Pohotovostní klinika otevřená nonstop každý den.",
         "sv": "Akutklinik med öppet dygnet runt, alla dagar.",
         "da": "Akutklinik, døgnåben alle dage.",
-        "fi": "Päivystysklinikka auki ympäri vuorokauden joka päivä."
+        "fi": "Päivystysklinikka auki ympäri vuorokauden joka päivä.",
+        "nb": "Akuttklinikk åpen hele døgnet, alle dager."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-de-la-paix-pau-pau/",
@@ -2909,7 +3002,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu pro baskické pobřeží: ve všední dny od 19:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider för baskiska kusten: vardagar från 19.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden for den baskiske kyst: hverdage fra 19.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella Baskirannikolle: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella Baskirannikolle: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid for baskerkysten: hverdager fra kl. 19.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-biarritz/",
@@ -2938,7 +3032,8 @@
         "cs": "Po–Pá 8:30–19:00, so 9:00–18:00; v noci, o víkendech a svátcích přesměrování na V2TU Biarritz.",
         "sv": "mån–fre 08.30–19.00, lör 09.00–18.00; nätter, helger och helgdagar hänvisas vidare till V2TU Biarritz.",
         "da": "Man–fre 08.30–19.00, lør 09.00–18.00; nætter, weekender og helligdage henvises til V2TU Biarritz.",
-        "fi": "ma–pe 8.30–19.00, la 9.00–18.00; yöt, viikonloput ja pyhät ohjataan eteenpäin: V2TU Biarritz."
+        "fi": "ma–pe 8.30–19.00, la 9.00–18.00; yöt, viikonloput ja pyhät ohjataan eteenpäin: V2TU Biarritz.",
+        "nb": "man–fre 8.30–19.00, lør 9.00–18.00; natt, helg og helligdager videreformidles til V2TU Biarritz."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-monveto.com/cliniques/clinique-veterinaire-croix-basque/",
@@ -2981,7 +3076,8 @@
         "cs": "Veterinární nemocnice; pohotovost pro psy a kočky nonstop, tým na místě.",
         "sv": "Djursjukhus; akutfall för hundar och katter dygnet runt med team på plats.",
         "da": "Dyrehospital; akut for hunde og katte døgnet rundt med team på stedet.",
-        "fi": "Eläinsairaala; koirien ja kissojen päivystys ympäri vuorokauden, tiimi paikalla."
+        "fi": "Eläinsairaala; koirien ja kissojen päivystys ympäri vuorokauden, tiimi paikalla.",
+        "nb": "Dyresykehus; akutthjelp for hunder og katter hele døgnet med team på stedet."
       },
       "small_animals": true,
       "url": "https://www.animedis.fr/",
@@ -3012,7 +3108,8 @@
         "cs": "Pohotovostní klinika bez objednání, nonstop včetně státních svátků.",
         "sv": "Akutklinik utan tidsbokning, nonstop även helgdagar.",
         "da": "Akutklinik uden tidsbestilling, døgnet rundt også på helligdage.",
-        "fi": "Päivystysklinikka ilman ajanvarausta, taukoamatta myös pyhinä."
+        "fi": "Päivystysklinikka ilman ajanvarausta, taukoamatta myös pyhinä.",
+        "nb": "Akuttklinikk uten timebestilling, åpen hele døgnet, også på helligdager."
       },
       "small_animals": true,
       "url": "https://www.kurgence.fr/",
@@ -3043,7 +3140,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: Po–Pá 19:00–8:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop; psi, kočky, exotická zvířata.",
         "sv": "Akutklinik utanför öppettider: mån–fre 19.00–08.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar; hundar, katter, NAC.",
         "da": "Akutklinik uden for åbningstiden: man–fre 19.00–08.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage; hunde, katte, NAC.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: ma–pe 19.00–8.00, la 12.00–ma 8.00, pyhinä ympäri vuorokauden; koirat, kissat, eksoottiset lemmikit."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: ma–pe 19.00–8.00, la 12.00–ma 8.00, pyhinä ympäri vuorokauden; koirat, kissat, eksoottiset lemmikit.",
+        "nb": "Dyrlegevakt utenom åpningstid: man–fre kl. 19.00–08.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager; hunder, katter, NAC."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/",
@@ -3073,7 +3171,8 @@
         "cs": "Po–Pá 9:00–12:00, 14:00–19:00; v noci a o víkendech přesměrování na V2TU Marseille, v poledne a v sobotu dopoledne na K d'Urgence.",
         "sv": "mån–fre 09.00–12.00 / 14.00–19.00; nätter/helger hänvisas vidare till V2TU Marseille, lunchtid/lördag förmiddag till K d'Urgence.",
         "da": "Man–fre 09.00–12.00 / 14.00–19.00; nætter/weekender henvises til V2TU Marseille, middag/lørdag formiddag til K d'Urgence.",
-        "fi": "ma–pe 9.00–12.00 / 14.00–19.00; yöt ja viikonloput ohjataan eteenpäin: V2TU Marseille, keskipäivällä ja la aamupäivällä K d'Urgence."
+        "fi": "ma–pe 9.00–12.00 / 14.00–19.00; yöt ja viikonloput ohjataan eteenpäin: V2TU Marseille, keskipäivällä ja la aamupäivällä K d'Urgence.",
+        "nb": "man–fre 9.00–12.00 / 14.00–19.00; natt og helg videreformidles til V2TU Marseille, middagstid og lørdag formiddag til K d'Urgence."
       },
       "small_animals": true,
       "url": "https://univet.fr/",
@@ -3103,7 +3202,8 @@
         "cs": "Klinika Po–So 8:00–19:30; pohotovost Po–So 8:30–19:00, v neděli a o svátcích 10:00–12:00 a 17:00–19:00.",
         "sv": "Klinik mån–lör 08.00–19.30; akutfall mån–lör 08.30–19.00, söndagar och helgdagar 10.00–12.00 och 17.00–19.00.",
         "da": "Klinik man–lør 08.00–19.30; akut man–lør 08.30–19.00, søndage og helligdage 10.00–12.00 og 17.00–19.00.",
-        "fi": "Klinikka ma–la 8.00–19.30; päivystys ma–la 8.30–19.00, sunnuntaisin ja pyhinä 10.00–12.00 ja 17.00–19.00."
+        "fi": "Klinikka ma–la 8.00–19.30; päivystys ma–la 8.30–19.00, sunnuntaisin ja pyhinä 10.00–12.00 ja 17.00–19.00.",
+        "nb": "Klinikk man–lør kl. 8.00–19.30; nødtilfeller man–lør kl. 8.30–19.00, søndager og helligdager kl. 10.00–12.00 og 17.00–19.00."
       },
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/vetetoile/",
@@ -3132,7 +3232,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: v noci 19:00–8:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider: nätter 19.00–08.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden: nætter 19.00–08.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt 19.00–8.00, la 12.00–ma 8.00, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt 19.00–8.00, la 12.00–ma 8.00, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid: netter kl. 19.00–08.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-aix/",
@@ -3162,7 +3263,8 @@
         "cs": "Pohotovostní klinika přijímá naléhavé případy ve dne v noci, o víkendech i svátcích.",
         "sv": "Akutklinik som tar emot akutfall dag och natt, helger och helgdagar.",
         "da": "Akutklinik, der modtager akutte tilfælde dag og nat, i weekender og på helligdage.",
-        "fi": "Päivystysklinikka ottaa hätätapaukset vastaan yötä päivää, viikonloppuisin ja pyhinä."
+        "fi": "Päivystysklinikka ottaa hätätapaukset vastaan yötä päivää, viikonloppuisin ja pyhinä.",
+        "nb": "Akuttklinikk som tar imot nødtilfeller dag og natt, i helger og på helligdager."
       },
       "small_animals": true,
       "url": "https://univet.fr/clinique/clinique-veterinaire-aix-karukera-13090-univet/",
@@ -3193,7 +3295,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny od 19:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider: vardagar från 19.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden: hverdage fra 19.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager fra kl. 19.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-avignon/",
@@ -3223,7 +3326,8 @@
         "cs": "Po–Pá 8:00–19:00, so 8:30–13:00, 14:00–18:30; pohotovost přes den; mimo ordinační dobu telefon přesměruje hovor.",
         "sv": "mån–fre 08.00–19.00, lör 08.30–13.00 / 14.00–18.30; akutfall dagtid; utanför öppettider hänvisar telefonen vidare.",
         "da": "Man–fre 08.00–19.00, lør 08.30–13.00 / 14.00–18.30; akut i dagtimerne; telefonen henviser videre uden for åbningstiden.",
-        "fi": "ma–pe 8.00–19.00, la 8.30–13.00 / 14.00–18.30; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin."
+        "fi": "ma–pe 8.00–19.00, la 8.30–13.00 / 14.00–18.30; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin.",
+        "nb": "man–fre 8.00–19.00, lør 8.30–13.00 / 14.00–18.30; akutte tilfeller på dagtid; telefonen videresender utenom åpningstiden."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-vetos-alpilles-saint-remy-de-provence-srp/",
@@ -3252,7 +3356,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: v noci 19:00–8:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider: nätter 19.00–08.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden: nætter 19.00–08.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt 19.00–8.00, la 12.00–ma 8.00, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: yöt 19.00–8.00, la 12.00–ma 8.00, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid: netter kl. 19.00–08.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-toulon/",
@@ -3281,7 +3386,8 @@
         "cs": "Pohotovostní návštěvy doma v Toulonu a přibližně 30 obcích: ve všední dny 19:00–8:00, od soboty 8:00 do neděle 8:00, v neděli a o svátcích od 8:00 do 8:00 následujícího dne.",
         "sv": "Akuta hembesök i Toulon och cirka 30 kommuner: vardagar 19.00–08.00, lör 08.00 till sön 08.00, sön/helgdagar 08.00 till nästa dag 08.00.",
         "da": "Akutte hjemmebesøg i Toulon og ca. 30 kommuner: hverdage 19.00–08.00, lørdag 08.00 til søndag 08.00, søndag/helligdage 08.00 til næste dag 08.00.",
-        "fi": "Päivystyskotikäynnit Toulonissa ja noin 30 kunnassa: arkisin 19.00–8.00, la 8.00–su 8.00, su/pyhinä 8.00–seuraavan päivän 8.00."
+        "fi": "Päivystyskotikäynnit Toulonissa ja noin 30 kunnassa: arkisin 19.00–8.00, la 8.00–su 8.00, su/pyhinä 8.00–seuraavan päivän 8.00.",
+        "nb": "Akutte hjemmebesøk i Toulon og ca. 30 kommuner: hverdager kl. 19.00–8.00, lørdag kl. 8.00 til søndag kl. 8.00, søndag/helligdager kl. 8.00 til neste dag kl. 8.00."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-de-garde-toulon.fr/",
@@ -3311,7 +3417,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:30–19:00, so 8:30–12:00; v noci a o víkendech přesměrování na Urgences Vétérinaires DELTA83 (Puget-sur-Argens) +33 4 89 88 34 34.",
         "sv": "mån–fre 08.30–12.00 / 14.30–19.00, lör 08.30–12.00; nätter och helger hänvisas vidare till Urgences Vétérinaires DELTA83 (Puget-sur-Argens) +33 4 89 88 34 34.",
         "da": "Man–fre 08.30–12.00 / 14.30–19.00, lør 08.30–12.00; nætter og weekender henvises til Urgences Vétérinaires DELTA83 (Puget-sur-Argens) +33 4 89 88 34 34.",
-        "fi": "ma–pe 8.30–12.00 / 14.30–19.00, la 8.30–12.00; yöt ja viikonloput ohjataan eteenpäin: Urgences Vétérinaires DELTA83 (Puget-sur-Argens) +33 4 89 88 34 34."
+        "fi": "ma–pe 8.30–12.00 / 14.30–19.00, la 8.30–12.00; yöt ja viikonloput ohjataan eteenpäin: Urgences Vétérinaires DELTA83 (Puget-sur-Argens) +33 4 89 88 34 34.",
+        "nb": "man–fre 8.30–12.00 / 14.30–19.00, lør 8.30–12.00; natt og helg videreformidles til Urgences Vétérinaires DELTA83 (Puget-sur-Argens) +33 4 89 88 34 34."
       },
       "small_animals": true,
       "url": "https://univet.fr/",
@@ -3341,7 +3448,8 @@
         "cs": "Otevřeno celý rok.",
         "sv": "Öppet hela året.",
         "da": "Åbent hele året.",
-        "fi": "Auki ympäri vuoden."
+        "fi": "Auki ympäri vuoden.",
+        "nb": "Åpent hele året."
       },
       "small_animals": true,
       "source_url": "https://cotedazurfrance.fr/offres/clinique-veterinaire-a-saint-tropez-saint-tropez-fr-3485477/",
@@ -3370,7 +3478,8 @@
         "cs": "Pohotovostní klinika otevřená každý den; veterinář je na místě vždy, druhý veterinář je pro operace v pohotovosti; před cestou zavolejte.",
         "sv": "Akutklinik öppen varje dag; veterinär på plats hela tiden, ytterligare en veterinär i beredskap för kirurgi; ring innan du kommer.",
         "da": "Akutklinik åben alle dage; dyrlæge på stedet hele tiden, en anden dyrlæge i beredskab til operationer; ring på forhånd.",
-        "fi": "Päivystysklinikka auki joka päivä; eläinlääkäri on aina paikalla, toinen eläinlääkäri varalla leikkauksia varten; soita etukäteen."
+        "fi": "Päivystysklinikka auki joka päivä; eläinlääkäri on aina paikalla, toinen eläinlääkäri varalla leikkauksia varten; soita etukäteen.",
+        "nb": "Akuttklinikk åpen alle dager; dyrlege på stedet hele tiden, en ekstra dyrlege på vakt for kirurgi; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://www.vetriviera.fr/a-propos/vetriviera-nice",
@@ -3400,7 +3509,8 @@
         "cs": "Pouze pohotovostní návštěvy doma v několika obcích departementu Alpes-Maritimes; telefonní regulace nonstop.",
         "sv": "Endast akuta hembesök i flera kommuner i Alpes-Maritimes; telefonsamordning dygnet runt.",
         "da": "Kun akutte hjemmebesøg i flere kommuner i Alpes-Maritimes; visitering pr. telefon døgnet rundt.",
-        "fi": "Vain päivystyskotikäynnit useissa Alpes-Maritimesin kunnissa; puhelinohjaus ympäri vuorokauden."
+        "fi": "Vain päivystyskotikäynnit useissa Alpes-Maritimesin kunnissa; puhelinohjaus ympäri vuorokauden.",
+        "nb": "Kun akutte hjemmebesøk i flere kommuner i Alpes-Maritimes; telefonmottak for nødtilfeller hele døgnet."
       },
       "small_animals": true,
       "url": "https://www.urgences-veterinaires-nice.fr",
@@ -3431,7 +3541,8 @@
         "cs": "Pohotovostní péče na klinice nebo doma, nonstop přes pohotovostní telefonní linku.",
         "sv": "Akutvård på kliniken eller i hemmet, dygnet runt via akuttelefon.",
         "da": "Akut hjælp på klinikken eller hjemme, døgnet rundt via akuttelefon.",
-        "fi": "Päivystys klinikalla tai kotikäyntinä ympäri vuorokauden päivystysnumeron kautta."
+        "fi": "Päivystys klinikalla tai kotikäyntinä ympäri vuorokauden päivystysnumeron kautta.",
+        "nb": "Akuttbehandling på klinikken eller hjemme, hele døgnet via akuttelefon."
       },
       "small_animals": true,
       "url": "http://www.urgences-veterinaires-delta-06.fr",
@@ -3462,7 +3573,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny od 19:00, od soboty poledne do pondělí 8:00, o státních svátcích nonstop.",
         "sv": "Akutklinik utanför öppettider: vardagar från 19.00, lör 12.00 till mån 08.00, dygnet runt på helgdagar.",
         "da": "Akutklinik uden for åbningstiden: hverdage fra 19.00, lørdag kl. 12 til mandag 08.00, døgnåben på helligdage.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin klo 19.00 alkaen, la 12.00–ma 8.00, pyhinä ympäri vuorokauden.",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager fra kl. 19.00, lørdag fra kl. 12 til mandag kl. 08.00, hele døgnet på helligdager."
       },
       "small_animals": true,
       "url": "https://veterinaires2touteurgence.com/urgence-veterinaire-nice/",
@@ -3492,7 +3604,8 @@
         "cs": "Ordinace Po–So 9:00–12:00, 14:00–19:00; pohotovost nonstop pro psy, kočky a exotická zvířata.",
         "sv": "Besök mån–lör 09.00–12.00 / 14.00–19.00; akutjour dygnet runt för hundar, katter, NAC.",
         "da": "Konsultationer man–lør 09.00–12.00 / 14.00–19.00; akutvagt døgnet rundt for hunde, katte, NAC.",
-        "fi": "Vastaanotto ma–la 9.00–12.00 / 14.00–19.00; päivystys ympäri vuorokauden koirille, kissoille ja eksoottisille lemmikeille."
+        "fi": "Vastaanotto ma–la 9.00–12.00 / 14.00–19.00; päivystys ympäri vuorokauden koirille, kissoille ja eksoottisille lemmikeille.",
+        "nb": "Konsultasjoner man–lør kl. 9.00–12.00 / 14.00–19.00; akuttjeneste hele døgnet, alle dager, for hunder, katter, eksotiske kjæledyr (NAC)."
       },
       "small_animals": true,
       "url": "https://univet.fr/clinique/clinique-veterinaire-cannes-carnot-06400-univet/",
@@ -3522,7 +3635,8 @@
         "cs": "Po–Pá 9:00–12:00, 14:30–19:00, so 9:00–12:00; pohotovost přes den; mimo ordinační dobu telefon přesměruje hovor.",
         "sv": "mån–fre 09.00–12.00 / 14.30–19.00, lör 09.00–12.00; akutfall dagtid; utanför öppettider hänvisar telefonen vidare.",
         "da": "Man–fre 09.00–12.00 / 14.30–19.00, lør 09.00–12.00; akut i dagtimerne; telefonen henviser videre uden for åbningstiden.",
-        "fi": "ma–pe 9.00–12.00 / 14.30–19.00, la 9.00–12.00; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin."
+        "fi": "ma–pe 9.00–12.00 / 14.30–19.00, la 9.00–12.00; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin.",
+        "nb": "man–fre 09.00–12.00 / 14.30–19.00, lør 09.00–12.00; akutte tilfeller på dagtid; utenom åpningstid videresendes telefonen."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/cabinet-veterinaire-biot-3000-biot-bio/",
@@ -3552,7 +3666,8 @@
         "cs": "Po–Pá 9:00–12:00, 15:00–19:00, so 9:00–12:00; pohotovost přes den; mimo ordinační dobu telefon přesměruje hovor.",
         "sv": "mån–fre 09.00–12.00 / 15.00–19.00, lör 09.00–12.00; akutfall dagtid; utanför öppettider hänvisar telefonen vidare.",
         "da": "Man–fre 09.00–12.00 / 15.00–19.00, lør 09.00–12.00; akut i dagtimerne; telefonen henviser videre uden for åbningstiden.",
-        "fi": "ma–pe 9.00–12.00 / 15.00–19.00, la 9.00–12.00; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin."
+        "fi": "ma–pe 9.00–12.00 / 15.00–19.00, la 9.00–12.00; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin.",
+        "nb": "man–fre 09.00–12.00 / 15.00–19.00, lør 09.00–12.00; akutte tilfeller på dagtid; utenom åpningstid videresendes telefonen."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-du-ray-nice-nic/",
@@ -3581,7 +3696,8 @@
         "cs": "Na objednání Po, Út, Čt, Pá; ve středu zavřeno; pohotovost (nutná hlasová zpráva) +33 6 95 32 42 20.",
         "sv": "Efter tidsbokning mån, tis, tors, fre; stängt onsdagar; akutfall (lämna ett röstmeddelande) +33 6 95 32 42 20.",
         "da": "Efter aftale man, tir, tor, fre; lukket onsdag; akut (indtal en besked) +33 6 95 32 42 20.",
-        "fi": "Ajanvarauksella ma, ti, to, pe; ke suljettu; päivystys (puheviesti pakollinen) +33 6 95 32 42 20."
+        "fi": "Ajanvarauksella ma, ti, to, pe; ke suljettu; päivystys (puheviesti pakollinen) +33 6 95 32 42 20.",
+        "nb": "Etter timebestilling man, tir, tor, fre; stengt onsdag; nødtilfeller (talemelding kreves) +33 6 95 32 42 20."
       },
       "small_animals": true,
       "url": "https://www.vethautetinee.com",
@@ -3611,7 +3727,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:30–19:00, so 8:30–12:00, 14:30–18:00; pohotovost přes den; mimo ordinační dobu telefon přesměruje hovor.",
         "sv": "mån–fre 08.30–12.00 / 14.30–19.00, lör 08.30–12.00 / 14.30–18.00; akutfall dagtid; utanför öppettider hänvisar telefonen vidare.",
         "da": "Man–fre 08.30–12.00 / 14.30–19.00, lør 08.30–12.00 / 14.30–18.00; akut i dagtimerne; telefonen henviser videre uden for åbningstiden.",
-        "fi": "ma–pe 8.30–12.00 / 14.30–19.00, la 8.30–12.00 / 14.30–18.00; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin."
+        "fi": "ma–pe 8.30–12.00 / 14.30–19.00, la 8.30–12.00 / 14.30–18.00; päivystys päiväsaikaan; virka-ajan ulkopuolella puhelin ohjaa eteenpäin.",
+        "nb": "man–fre 8.30–12.00 / 14.30–19.00, lør 8.30–12.00 / 14.30–18.00; akutte tilfeller på dagtid; telefonen videresender utenom åpningstiden."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-altivet-briancon-bi2/",
@@ -3641,7 +3758,8 @@
         "cs": "Po–Pá 8:00–18:00, so 8:00–16:00, v neděli zavřeno; pohotovost nonstop na klinice po telefonickém hovoru (zajišťuje i pohotovost mimo ordinační dobu pro Clinique Abbatucci).",
         "sv": "mån–fre 8.00–18.00, lör 8.00–16.00, sön stängt; akutfall dygnet runt på kliniken efter telefonsamtal (täcker även jour utanför öppettider för Clinique Abbatucci).",
         "da": "Man–fre 8.00–18.00, lør 8.00–16.00, søn lukket; akut døgnet rundt på klinikken efter telefonopkald (dækker også uden for åbningstiden for Clinique Abbatucci).",
-        "fi": "ma–pe 8.00–18.00, la 8.00–16.00, su suljettu; päivystys klinikalla ympäri vuorokauden puhelinsoiton jälkeen (kattaa myös Clinique Abbatuccin virka-ajan ulkopuolen)."
+        "fi": "ma–pe 8.00–18.00, la 8.00–16.00, su suljettu; päivystys klinikalla ympäri vuorokauden puhelinsoiton jälkeen (kattaa myös Clinique Abbatuccin virka-ajan ulkopuolen).",
+        "nb": "man–fre 8.00–18.00, lør 8.00–16.00, søn stengt; nødtilfeller hele døgnet på klinikken etter telefonsamtale (dekker også kvelds- og helgevakt for Clinique Abbatucci)."
       },
       "small_animals": true,
       "url": "https://www.cliniquedesvallees.com/",
@@ -3672,7 +3790,8 @@
         "cs": "Po–Pá 8:30–12:30, 14:00–19:00; so 8:30–12:00; mimo ordinační dobu sdělí linka kliniky mobilní číslo pohotovostního veterináře.",
         "sv": "mån–fre 8.30–12.30, 14.00–19.00; lör 8.30–12.00; utanför öppettider ger klinikens linje jourhavande veterinärens mobilnummer.",
         "da": "Man–fre 8.30–12.30, 14.00–19.00; lør 8.30–12.00; uden for åbningstiden oplyser klinikkens nummer den vagthavende dyrlæges mobilnummer.",
-        "fi": "ma–pe 8.30–12.30, 14.00–19.00; la 8.30–12.00; virka-ajan ulkopuolella klinikan numero antaa päivystävän eläinlääkärin matkapuhelinnumeron."
+        "fi": "ma–pe 8.30–12.30, 14.00–19.00; la 8.30–12.00; virka-ajan ulkopuolella klinikan numero antaa päivystävän eläinlääkärin matkapuhelinnumeron.",
+        "nb": "man–fre 8.30–12.30, 14.00–19.00; lør 8.30–12.00; utenom åpningstid oppgir klinikkens linje mobilnummeret til dyrlegen på vakt."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-saint-andre.com/",
@@ -3703,7 +3822,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–18:30; so 8:30–12:00; pohotovost nonstop ve spolupráci se sousedními klinikami.",
         "sv": "mån–fre 8.30–12.00, 14.00–18.30; lör 8.30–12.00; akutfall dygnet runt, delad jour med närliggande kliniker.",
         "da": "Man–fre 8.30–12.00, 14.00–18.30; lør 8.30–12.00; akut døgnet rundt delt med naboklinikkerne.",
-        "fi": "ma–pe 8.30–12.00, 14.00–18.30; la 8.30–12.00; päivystys ympäri vuorokauden yhdessä naapuriklinikoiden kanssa."
+        "fi": "ma–pe 8.30–12.00, 14.00–18.30; la 8.30–12.00; päivystys ympäri vuorokauden yhdessä naapuriklinikoiden kanssa.",
+        "nb": "man–fre 8.30–12.00, 14.00–18.30; lør 8.30–12.00; nødtilfeller hele døgnet, delt med naboklinikker."
       },
       "small_animals": true,
       "url": "https://www.kallistevet.com/",
@@ -3734,7 +3854,8 @@
         "cs": "Pohotovost nonstop pro klienty kliniky; regulační veterinář provede telefonické třídění; službu může mít Clinique du Val de l'Aurence (288 rue Armand Dutreix) nebo Cabinet Armand Dutreix (123 rue Armand Dutreix).",
         "sv": "Akutjour dygnet runt för klinikens kunder; en samordnande veterinär gör telefonbedömning; jour kan ligga på Clinique du Val de l'Aurence (288 rue Armand Dutreix) eller Cabinet Armand Dutreix (123 rue Armand Dutreix).",
         "da": "Akutvagt døgnet rundt for klinikkens kunder; en visiterende dyrlæge vurderer pr. telefon; vagten kan være hos Clinique du Val de l'Aurence (288 rue Armand Dutreix) eller Cabinet Armand Dutreix (123 rue Armand Dutreix).",
-        "fi": "Päivystys ympäri vuorokauden klinikan asiakkaille; puhelimessa vastaava eläinlääkäri arvioi kiireellisyyden; päivystyspaikka voi olla Clinique du Val de l'Aurence (288 rue Armand Dutreix) tai Cabinet Armand Dutreix (123 rue Armand Dutreix)."
+        "fi": "Päivystys ympäri vuorokauden klinikan asiakkaille; puhelimessa vastaava eläinlääkäri arvioi kiireellisyyden; päivystyspaikka voi olla Clinique du Val de l'Aurence (288 rue Armand Dutreix) tai Cabinet Armand Dutreix (123 rue Armand Dutreix).",
+        "nb": "Akuttjeneste hele døgnet for klinikkens kunder; en regulerende dyrlege vurderer hastegrad på telefon; vakten kan være ved Clinique du Val de l'Aurence (288 rue Armand Dutreix) eller Cabinet Armand Dutreix (123 rue Armand Dutreix)."
       },
       "small_animals": true,
       "url": "https://www.vetovanteaux.fr/",
@@ -3765,7 +3886,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:30–19:00; so 8:30–12:00; večer a o víkendech: sdružení SOS-VETO Poitiers (číslo na záznamníku kliniky), pouze pro klienty členských klinik.",
         "sv": "mån–fre 8.30–12.00, 14.30–19.00; lör 8.30–12.00; kvällar/helger: föreningen SOS-VETO Poitiers (numret finns på klinikens telefonsvarare), endast för kunder hos anslutna kliniker.",
         "da": "Man–fre 8.30–12.00, 14.30–19.00; lør 8.30–12.00; aftener/weekender: foreningen SOS-VETO Poitiers (nummeret findes på klinikkens telefonsvarer), kun for kunder i medlemsklinikkerne.",
-        "fi": "ma–pe 8.30–12.00, 14.30–19.00; la 8.30–12.00; illat ja viikonloput: SOS-VETO Poitiers -yhdistys (numero klinikan vastaajassa), vain jäsenklinikoiden asiakkaille."
+        "fi": "ma–pe 8.30–12.00, 14.30–19.00; la 8.30–12.00; illat ja viikonloput: SOS-VETO Poitiers -yhdistys (numero klinikan vastaajassa), vain jäsenklinikoiden asiakkaille.",
+        "nb": "man–fre 8.30–12.00, 14.30–19.00; lør 8.30–12.00; kvelder/helger: foreningen SOS-VETO Poitiers (nummer på klinikkens telefonsvarer), kun for kunder ved medlemsklinikkene."
       },
       "small_animals": true,
       "url": "https://veterinaire-delaroche-poitiers.fr/",
@@ -3796,7 +3918,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–19:00; so 8:30–12:00; pohotovost po telefonu nonstop.",
         "sv": "mån–fre 8.30–12.00, 14.00–19.00; lör 8.30–12.00; akutfall per telefon dygnet runt.",
         "da": "Man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00; akut pr. telefon døgnet rundt.",
-        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00; päivystys puhelimitse ympäri vuorokauden."
+        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00; päivystys puhelimitse ympäri vuorokauden.",
+        "nb": "man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00; nødtilfeller på telefon hele døgnet."
       },
       "small_animals": true,
       "url": "https://atlanticvet.fr/",
@@ -3827,7 +3950,8 @@
         "cs": "Po–Pá 9:00–12:00, 14:00–19:00; so 9:00–12:00; na objednání.",
         "sv": "mån–fre 9.00–12.00, 14.00–19.00; lör 9.00–12.00; efter tidsbokning.",
         "da": "Man–fre 9.00–12.00, 14.00–19.00; lør 9.00–12.00; efter aftale.",
-        "fi": "ma–pe 9.00–12.00, 14.00–19.00; la 9.00–12.00; ajanvarauksella."
+        "fi": "ma–pe 9.00–12.00, 14.00–19.00; la 9.00–12.00; ajanvarauksella.",
+        "nb": "man–fre 9.00–12.00, 14.00–19.00; lør 9.00–12.00; etter avtale."
       },
       "small_animals": true,
       "url": "https://www.1001pattes.vet/",
@@ -3858,7 +3982,8 @@
         "cs": "Ordinace Po–Út a Čt–Pá 9:00–12:30, 14:00–19:00; st a so 9:00–12:30; v neděli pohotovost; v noci, v neděli a o svátcích ošetření v Bayonne nebo na pohotovostním pracovišti BIO'VET (např. Saint-Paul-lès-Dax).",
         "sv": "Besök mån–tis och tors–fre 9.00–12.30, 14.00–19.00; ons och lör 9.00–12.30; söndagar akutfall; nätter/söndagar/helgdagar tas emot i Bayonne eller på en jourplats hos BIO'VET (t.ex. Saint-Paul-lès-Dax).",
         "da": "Konsultationer man–tir og tor–fre 9.00–12.30, 14.00–19.00; ons og lør 9.00–12.30; søndage akut; nætter/søndage/helligdage ses i Bayonne eller på et BIO'VET-vagtsted (f.eks. Saint-Paul-lès-Dax).",
-        "fi": "Vastaanotto ma–ti ja to–pe 9.00–12.30, 14.00–19.00; ke ja la 9.00–12.30; sunnuntaisin päivystys; öisin, sunnuntaisin ja pyhinä hoito Bayonnessa tai BIO'VET-päivystyspisteessä (esim. Saint-Paul-lès-Dax)."
+        "fi": "Vastaanotto ma–ti ja to–pe 9.00–12.30, 14.00–19.00; ke ja la 9.00–12.30; sunnuntaisin päivystys; öisin, sunnuntaisin ja pyhinä hoito Bayonnessa tai BIO'VET-päivystyspisteessä (esim. Saint-Paul-lès-Dax).",
+        "nb": "Konsultasjoner man–tir og tor–fre kl. 9.00–12.30 og 14.00–19.00; ons og lør kl. 9.00–12.30; søndager nødtilfeller; netter/søndager/helligdager behandles i Bayonne eller ved en vaktstasjon hos BIO'VET (f.eks. Saint-Paul-lès-Dax)."
       },
       "small_animals": true,
       "url": "https://www.biovetbayonne.fr/",
@@ -3889,7 +4014,8 @@
         "cs": "Otevřeno 8:00–19:00 bez přestávky; so 8:00–12:00, 14:00–18:00; pohotovost nonstop na klinice.",
         "sv": "Öppet 8.00–19.00 utan lunchstängning; lör 8.00–12.00, 14.00–18.00; akutfall dygnet runt på kliniken.",
         "da": "Åbent 8.00–19.00 uden pause; lør 8.00–12.00, 14.00–18.00; akut døgnet rundt på klinikken.",
-        "fi": "Auki 8.00–19.00 ilman taukoa; la 8.00–12.00, 14.00–18.00; päivystys klinikalla ympäri vuorokauden."
+        "fi": "Auki 8.00–19.00 ilman taukoa; la 8.00–12.00, 14.00–18.00; päivystys klinikalla ympäri vuorokauden.",
+        "nb": "Åpent 8.00–19.00 uten pause; lør 8.00–12.00, 14.00–18.00; nødtilfeller hele døgnet på klinikken."
       },
       "small_animals": true,
       "url": "https://veterinaire-saintjacques.fr/",
@@ -3919,7 +4045,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–19:00; so 9:00–12:00, 14:00–17:00; v neděli zavřeno; pohotovostní linka nonstop.",
         "sv": "mån–fre 8.30–12.00, 14.00–19.00; lör 9.00–12.00, 14.00–17.00; sön stängt; akutlinje dygnet runt.",
         "da": "Man–fre 8.30–12.00, 14.00–19.00; lør 9.00–12.00, 14.00–17.00; søn lukket; akuttelefon døgnet rundt.",
-        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 9.00–12.00, 14.00–17.00; su suljettu; päivystyslinja ympäri vuorokauden."
+        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 9.00–12.00, 14.00–17.00; su suljettu; päivystyslinja ympäri vuorokauden.",
+        "nb": "man–fre 8.30–12.00, 14.00–19.00; lør 9.00–12.00, 14.00–17.00; søn stengt; nødlinje hele døgnet."
       },
       "small_animals": true,
       "url": "https://clinique-veterinaire-montauban.fr/",
@@ -3950,7 +4077,8 @@
         "cs": "Pohotovostní klinika pro Pau, Tarbes a okolí, sedm dní v týdnu včetně nedělí a svátků; telefon dostupný nonstop; národní linka 3115.",
         "sv": "Jourklinik för Pau, Tarbes och regionen, alla dagar i veckan inklusive söndagar och helgdagar; telefonen går att nå dygnet runt; nationell linje 3115.",
         "da": "Vagtklinik for Pau, Tarbes og regionen, 7 dage om ugen inkl. søndage og helligdage; telefonen kan træffes døgnet rundt; landsdækkende nummer 3115.",
-        "fi": "Pau'n, Tarbesin ja ympäristön päivystysklinikka, 7 päivää viikossa, myös sunnuntaisin ja pyhinä; puhelin tavoitettavissa ympäri vuorokauden; kansallinen numero 3115."
+        "fi": "Pau'n, Tarbesin ja ympäristön päivystysklinikka, 7 päivää viikossa, myös sunnuntaisin ja pyhinä; puhelin tavoitettavissa ympäri vuorokauden; kansallinen numero 3115.",
+        "nb": "Vaktklinikk for Pau, Tarbes og regionen, alle dager i uken, også søndager og helligdager; telefonen er betjent hele døgnet; nasjonalt nummer 3115."
       },
       "small_animals": true,
       "url": "https://www.urgence-veterinaire-pau-tarbes.fr/",
@@ -3981,7 +4109,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:30–19:00; so 8:30–12:00; pohotovost ve dne i v noci",
         "sv": "mån–fre 8.30–12.00, 14.30–19.00; lör 8.30–12.00; akutfall dag och natt.",
         "da": "Man–fre 8.30–12.00, 14.30–19.00; lør 8.30–12.00; akut dag og nat.",
-        "fi": "ma–pe 8.30–12.00, 14.30–19.00; la 8.30–12.00; päivystys yötä päivää."
+        "fi": "ma–pe 8.30–12.00, 14.30–19.00; la 8.30–12.00; päivystys yötä päivää.",
+        "nb": "man–fre 8.30–12.00, 14.30–19.00; lør 8.30–12.00; nødtilfeller dag og natt."
       },
       "small_animals": true,
       "url": "https://vetolonzac.fr/",
@@ -4012,7 +4141,8 @@
         "cs": "Pohotovostní veterináři s návštěvami doma nonstop po celý rok, včetně nedělí a svátků; regulační centrum radí po telefonu nonstop.",
         "sv": "Veterinärer för akuta hembesök dygnet runt hela året, även söndagar och helgdagar; en samordningscentral ger råd per telefon dygnet runt.",
         "da": "Akutte dyrlæger med hjemmebesøg døgnet rundt hele året, også søndage og helligdage; visiteringscentral rådgiver pr. telefon døgnet rundt.",
-        "fi": "Päivystävät kotikäyntieläinlääkärit ympäri vuorokauden ympäri vuoden, myös sunnuntaisin ja pyhinä; ohjauskeskus neuvoo puhelimitse ympäri vuorokauden."
+        "fi": "Päivystävät kotikäyntieläinlääkärit ympäri vuorokauden ympäri vuoden, myös sunnuntaisin ja pyhinä; ohjauskeskus neuvoo puhelimitse ympäri vuorokauden.",
+        "nb": "Dyrleger på akutte hjemmebesøk hele døgnet hele året, også søndager og helligdager; vurderingssentralen gir råd på telefon hele døgnet."
       },
       "small_animals": true,
       "url": "https://www.vetoadom-alpin.com/",
@@ -4043,7 +4173,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–19:00; so 8:00–12:00; na objednání; mimo ordinační dobu sdělí záznamník mobilní číslo pohotovostního veterináře.",
         "sv": "mån–fre 8.00–12.00, 14.00–19.00; lör 8.00–12.00; efter tidsbokning; utanför öppettider ger telefonsvararen jourhavande veterinärens mobilnummer.",
         "da": "Man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00; efter aftale; uden for åbningstiden oplyser telefonsvareren den vagthavende dyrlæges mobilnummer.",
-        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00; ajanvarauksella; virka-ajan ulkopuolella vastaaja antaa päivystävän eläinlääkärin matkapuhelinnumeron."
+        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00; ajanvarauksella; virka-ajan ulkopuolella vastaaja antaa päivystävän eläinlääkärin matkapuhelinnumeron.",
+        "nb": "man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00; etter avtale; utenom åpningstid oppgir telefonsvareren mobilnummeret til dyrlegen på vakt."
       },
       "small_animals": true,
       "url": "https://clinique3v.wixsite.com/clinique3v",
@@ -4074,7 +4205,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–19:00; so 8:30–12:00; v neděli zavřeno; pohotovost nonstop na klinice po telefonickém hovoru.",
         "sv": "mån–fre 8.30–12.00, 14.00–19.00; lör 8.30–12.00; sön stängt; akutfall dygnet runt på kliniken efter telefonsamtal.",
         "da": "Man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00; søn lukket; akut døgnet rundt på klinikken efter telefonopkald.",
-        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00; su suljettu; päivystys klinikalla ympäri vuorokauden puhelinsoiton jälkeen."
+        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00; su suljettu; päivystys klinikalla ympäri vuorokauden puhelinsoiton jälkeen.",
+        "nb": "man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00; søn stengt; nødtilfeller hele døgnet på klinikken etter telefonsamtale."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-antibes-lacroixrouge.fr/",
@@ -4105,7 +4237,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–19:00; so–ne zavřeno; pohotovost mimo ordinační dobu po telefonu.",
         "sv": "mån–fre 8.30–12.00, 14.00–19.00; lör–sön stängt; akutfall utanför öppettider per telefon.",
         "da": "Man–fre 8.30–12.00, 14.00–19.00; lør–søn lukket; akut uden for åbningstiden pr. telefon.",
-        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la–su suljettu; virka-ajan ulkopuoliset hätätapaukset puhelimitse."
+        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la–su suljettu; virka-ajan ulkopuoliset hätätapaukset puhelimitse.",
+        "nb": "man–fre 8.30–12.00, 14.00–19.00; lør–søn stengt; nødtilfeller utenom åpningstid på telefon."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-antibes-laclairiere.fr/",
@@ -4136,7 +4269,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu: ve všední dny 19:00–8:00; od soboty 12:00 do pondělí 8:00; o svátcích od 19:00 předchozího dne do 8:00 následujícího dne. Zároveň číslo po 19:00 pro Golfe de Saint-Tropez.",
         "sv": "Akutklinik utanför öppettider: vardagar 19.00–8.00; lör 12.00 till mån 8.00; helgdagar från 19.00 dagen före till 8.00 dagen efter. Även numret efter 19.00 för Golfe de Saint-Tropez.",
         "da": "Akutklinik uden for åbningstiden: hverdage 19.00–8.00; lørdag 12.00 til mandag 8.00; helligdage fra 19.00 dagen før til 8.00 dagen efter. Også nummeret efter kl. 19.00 for Golfe de Saint-Tropez.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.00–8.00; la 12.00–ma 8.00; pyhinä edellisen päivän klo 19.00 – seuraavan päivän klo 8.00. Myös klo 19 jälkeinen numero Saint-Tropezin lahden alueelle."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 19.00–8.00; la 12.00–ma 8.00; pyhinä edellisen päivän klo 19.00 – seuraavan päivän klo 8.00. Myös klo 19 jälkeinen numero Saint-Tropezin lahden alueelle.",
+        "nb": "Dyrlegevakt utenom åpningstid: hverdager kl. 19.00–8.00; lørdag kl. 12.00 til mandag kl. 8.00; helligdager fra kl. 19.00 dagen før til kl. 8.00 dagen etter. Også nummeret etter kl. 19.00 for Golfe de Saint-Tropez."
       },
       "small_animals": true,
       "url": "https://www.urgences-veterinaires-delta-83.fr/",
@@ -4167,7 +4301,8 @@
         "cs": "Ve všední dny 19:30–7:30, v sobotu od 12:00, v neděli a o státních svátcích nonstop; před cestou zavolejte.",
         "sv": "Vardagar 19.30–7.30, lördagar från 12.00, dygnet runt på söndagar och helgdagar; ring innan du kommer.",
         "da": "Hverdage 19.30–7.30, lørdag fra 12.00, døgnåben søndage og helligdage; ring på forhånd.",
-        "fi": "Arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä ympäri vuorokauden; soita ennen tuloa."
+        "fi": "Arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä ympäri vuorokauden; soita ennen tuloa.",
+        "nb": "Hverdager 19.30–7.30, lørdag fra 12.00, hele døgnet på søndager og helligdager; ring før du kommer."
       },
       "small_animals": true,
       "url": "https://www.maisondesurgences-grenoble.com/",
@@ -4198,7 +4333,8 @@
         "cs": "Ve všední dny 19:30–7:30, v sobotu od 14:00, v neděli a o státních svátcích nepřetržitě; před cestou zavolejte.",
         "sv": "Vardagar 19.30–7.30, lördagar från 14.00, söndagar och helgdagar dygnet runt; ring innan du kommer.",
         "da": "Hverdage 19.30–7.30, lørdag fra 14.00, døgnet rundt søndage og helligdage; ring på forhånd.",
-        "fi": "Arkisin 19.30–7.30, la klo 14.00 alkaen, su ja pyhinä yhtäjaksoisesti; soita ennen tuloa."
+        "fi": "Arkisin 19.30–7.30, la klo 14.00 alkaen, su ja pyhinä yhtäjaksoisesti; soita ennen tuloa.",
+        "nb": "Hverdager 19.30–7.30, lørdag fra 14.00, sammenhengende på søndager og helligdager; ring før du kommer."
       },
       "small_animals": true,
       "url": "https://www.maisondesurgences-alpine.com/",
@@ -4228,7 +4364,8 @@
         "cs": "Ve všední dny 19:30–7:30, v sobotu od 12:00, v neděli a o státních svátcích nonstop.",
         "sv": "Vardagar 19.30–7.30, lördagar från 12.00, dygnet runt på söndagar och helgdagar.",
         "da": "Hverdage 19.30–7.30, lørdag fra 12.00, døgnåben søndage og helligdage.",
-        "fi": "Arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä ympäri vuorokauden."
+        "fi": "Arkisin 19.30–7.30, la klo 12.00 alkaen, su ja pyhinä ympäri vuorokauden.",
+        "nb": "Hverdager 19.30–7.30, lørdag fra 12.00, hele døgnet på søndager og helligdager."
       },
       "small_animals": true,
       "url": "https://www.maisondesurgences-hautesavoie.com/",
@@ -4258,7 +4395,8 @@
         "cs": "Klinika mimo ordinační dobu: Po–Pá od 19:00 do 8:00; o víkendech od soboty do pondělí 8:00, v neděli otevřeno celý den; o svátcích od 19:00 předchozího dne do 8:00 následujícího dne. Telefonní centrum funguje 7 dní v týdnu; vyšetření na objednání, s výjimkou případů ohrožení života.",
         "sv": "Klinik utanför öppettider: mån–fre från 19.00 till 8.00; helger från lör till mån 8.00, öppet hela söndagen; helgdagar från 19.00 dagen före till 8.00 dagen efter. Callcentret svarar alla dagar; besök efter tidsbokning utom vid livshotande fall.",
         "da": "Klinik uden for åbningstiden: man–fre fra 19.00 til 8.00; weekender fra lørdag til mandag 8.00, åbent hele søndagen; helligdage fra 19.00 dagen før til 8.00 dagen efter. Callcenteret er bemandet 7 dage om ugen; konsultation efter aftale undtagen ved livstruende tilfælde.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella: ma–pe klo 19.00–8.00; viikonloppuisin lauantaista maanantaihin klo 8.00, sunnuntaina auki koko päivän; pyhinä edellisen päivän klo 19.00 – seuraavan päivän klo 8.00. Puhelinkeskus vastaa joka päivä; vastaanotto ajanvarauksella paitsi hengenvaarallisissa tapauksissa."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella: ma–pe klo 19.00–8.00; viikonloppuisin lauantaista maanantaihin klo 8.00, sunnuntaina auki koko päivän; pyhinä edellisen päivän klo 19.00 – seuraavan päivän klo 8.00. Puhelinkeskus vastaa joka päivä; vastaanotto ajanvarauksella paitsi hengenvaarallisissa tapauksissa.",
+        "nb": "Dyrlegevakt utenom åpningstid: man–fre fra kl. 19.00 til 8.00; helger fra lørdag til mandag kl. 8.00, åpent hele søndagen; helligdager fra kl. 19.00 dagen før til kl. 8.00 dagen etter. Telefonsenteret svarer alle dager; konsultasjon etter timebestilling, unntatt ved livstruende tilfeller."
       },
       "small_animals": true,
       "url": "https://maison-des-urgences-veterinaires-valence.fr/",
@@ -4289,7 +4427,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–18:00; so 8:00–12:00; pohotovost v ordinační době; v noci, v neděli a o svátcích zajišťuje Clinique vétérinaire des Vallées.",
         "sv": "mån–fre 8.00–12.00, 14.00–18.00; lör 8.00–12.00; akutfall under öppettiderna; nätter/söndagar/helgdagar hanteras av Clinique vétérinaire des Vallées.",
         "da": "Man–fre 8.00–12.00, 14.00–18.00; lør 8.00–12.00; akut i åbningstiden; nætter/søndage/helligdage varetages af Clinique vétérinaire des Vallées.",
-        "fi": "ma–pe 8.00–12.00, 14.00–18.00; la 8.00–12.00; päivystys aukioloaikoina; yöt, sunnuntait ja pyhät hoitaa Clinique vétérinaire des Vallées."
+        "fi": "ma–pe 8.00–12.00, 14.00–18.00; la 8.00–12.00; päivystys aukioloaikoina; yöt, sunnuntait ja pyhät hoitaa Clinique vétérinaire des Vallées.",
+        "nb": "man–fre 8.00–12.00, 14.00–18.00; lør 8.00–12.00; nødtilfeller i åpningstiden; natt, søndager og helligdager håndteres av Clinique vétérinaire des Vallées."
       },
       "small_animals": true,
       "url": "https://www.veterinaire-abbatucci.fr/",
@@ -4320,7 +4459,8 @@
         "cs": "Po–Pá 9:00–19:00, so 9:00–13:00; bez objednání i na objednání; pohotovost po telefonu. Další pracoviště: Lupino, Marché (rue Neuve Saint-Roch), Erbalonga (Brando).",
         "sv": "mån–fre 9.00–19.00, lör 9.00–13.00; med eller utan tidsbokning; akutfall per telefon. Övriga enheter: Lupino, Marché (rue Neuve Saint-Roch), Erbalonga (Brando).",
         "da": "Man–fre 9.00–19.00, lør 9.00–13.00; uden tidsbestilling og efter aftale; akut pr. telefon. Øvrige klinikker: Lupino, Marché (rue Neuve Saint-Roch), Erbalonga (Brando).",
-        "fi": "ma–pe 9.00–19.00, la 9.00–13.00; ilman ajanvarausta ja ajanvarauksella; päivystys puhelimitse. Muut toimipisteet: Lupino, Marché (rue Neuve Saint-Roch), Erbalonga (Brando)."
+        "fi": "ma–pe 9.00–19.00, la 9.00–13.00; ilman ajanvarausta ja ajanvarauksella; päivystys puhelimitse. Muut toimipisteet: Lupino, Marché (rue Neuve Saint-Roch), Erbalonga (Brando).",
+        "nb": "man–fre 9.00–19.00, lør 9.00–13.00; uten avtale og etter avtale; nødtilfeller på telefon. Andre lokasjoner: Lupino, Marché (rue Neuve Saint-Roch), Erbalonga (Brando)."
       },
       "small_animals": true,
       "url": "https://www.cyrnevet.com/",
@@ -4350,7 +4490,8 @@
         "cs": "Po–Pá 8:00–19:00; so 8:00–17:00; pohotovost mimo ordinační dobu na stejném čísle, pouze pro vlastní klienty a odesílající veterináře.",
         "sv": "mån–fre 8.00–19.00; lör 8.00–17.00; akutfall utanför öppettider på samma nummer, endast egna kunder och remitterande veterinärer.",
         "da": "Man–fre 8.00–19.00; lør 8.00–17.00; akut uden for åbningstiden på samme nummer, kun egne kunder og henvisende dyrlæger.",
-        "fi": "ma–pe 8.00–19.00; la 8.00–17.00; päivystys virka-ajan ulkopuolella samasta numerosta, vain omille asiakkaille ja lähettäville eläinlääkäreille."
+        "fi": "ma–pe 8.00–19.00; la 8.00–17.00; päivystys virka-ajan ulkopuolella samasta numerosta, vain omille asiakkaille ja lähettäville eläinlääkäreille.",
+        "nb": "man–fre 8.00–19.00; lør 8.00–17.00; nødtilfeller utenom åpningstid på samme nummer, kun egne kunder og henvisende dyrleger."
       },
       "small_animals": true,
       "url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/limoges-val-de-l-aurence-204",
@@ -4380,7 +4521,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–19:00; so 8:00–12:00; pohotovost mimo ordinační dobu společně s dalšími místními klinikami (postup na záznamníku).",
         "sv": "mån–fre 8.00–12.00, 14.00–19.00; lör 8.00–12.00; akutfall utanför öppettider delas med andra lokala kliniker (rutin på telefonsvararen).",
         "da": "Man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00; akut uden for åbningstiden delt med andre lokale klinikker (fremgangsmåde på telefonsvareren).",
-        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00; virka-ajan ulkopuolinen päivystys jaetaan muiden paikallisten klinikoiden kanssa (ohje vastaajassa)."
+        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00; virka-ajan ulkopuolinen päivystys jaetaan muiden paikallisten klinikoiden kanssa (ohje vastaajassa).",
+        "nb": "man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00; nødtilfeller utenom åpningstid deles med andre lokale klinikker (fremgangsmåte på telefonsvareren)."
       },
       "small_animals": true,
       "url": "https://vplus.fr/nos-cliniques/beaulieupoitiers/",
@@ -4410,7 +4552,8 @@
         "cs": "Po–Pá 9:00–12:00, 14:00–19:00; so 9:00–14:00; v neděli zavřeno; číslo kliniky zůstává aktivní i mimo ordinační dobu a nasměruje na pohotovost.",
         "sv": "mån–fre 9.00–12.00, 14.00–19.00; lör 9.00–14.00; sön stängt; klinikens nummer är aktivt utanför öppettider för att hänvisa akutfall.",
         "da": "Man–fre 9.00–12.00, 14.00–19.00; lør 9.00–14.00; søn lukket; klinikkens nummer er aktivt uden for åbningstiden og henviser akutte tilfælde videre.",
-        "fi": "ma–pe 9.00–12.00, 14.00–19.00; la 9.00–14.00; su suljettu; klinikan numero pysyy aktiivisena virka-ajan ulkopuolella ohjaten hätätapaukset eteenpäin."
+        "fi": "ma–pe 9.00–12.00, 14.00–19.00; la 9.00–14.00; su suljettu; klinikan numero pysyy aktiivisena virka-ajan ulkopuolella ohjaten hätätapaukset eteenpäin.",
+        "nb": "man–fre 9.00–12.00, 14.00–19.00; lør 9.00–14.00; søn stengt; klinikkens nummer er aktivt utenom åpningstid for å henvise nødtilfeller."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-de-perigueux-per/",
@@ -4440,7 +4583,8 @@
         "cs": "Po–Pá 8:00–19:00; so 8:00–12:00; na objednání; mimo ordinační dobu zavolejte na kliniku.",
         "sv": "mån–fre 8.00–19.00; lör 8.00–12.00; efter tidsbokning; utanför öppettider ring kliniken.",
         "da": "Man–fre 8.00–19.00; lør 8.00–12.00; efter aftale; uden for åbningstiden ring til klinikken.",
-        "fi": "ma–pe 8.00–19.00; la 8.00–12.00; ajanvarauksella; virka-ajan ulkopuolella soita klinikalle."
+        "fi": "ma–pe 8.00–19.00; la 8.00–12.00; ajanvarauksella; virka-ajan ulkopuolella soita klinikalle.",
+        "nb": "man–fre 8.00–19.00; lør 8.00–12.00; etter avtale; utenom åpningstid ring klinikken."
       },
       "small_animals": true,
       "url": "https://univet.fr/clinique/clinique-veterinaire-mondoux-perigueux-24000-univet/",
@@ -4470,7 +4614,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–19:00; so 8:30–12:00; číslo kliniky zůstává aktivní i mimo ordinační dobu a nasměruje na pohotovost.",
         "sv": "mån–fre 8.30–12.00, 14.00–19.00; lör 8.30–12.00; klinikens nummer är aktivt utanför öppettider för att hänvisa akutfall.",
         "da": "Man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00; klinikkens nummer er aktivt uden for åbningstiden og henviser akutte tilfælde videre.",
-        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00; klinikan numero pysyy aktiivisena virka-ajan ulkopuolella ohjaten hätätapaukset eteenpäin."
+        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00; klinikan numero pysyy aktiivisena virka-ajan ulkopuolella ohjaten hätätapaukset eteenpäin.",
+        "nb": "man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00; klinikkens nummer er aktivt utenom åpningstid for å henvise nødtilfeller."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-faubourg-bergerac-be2/",
@@ -4500,7 +4645,8 @@
         "cs": "Po–Pá 8:30–12:30, 14:00–18:30; so 8:30–12:30; na objednání.",
         "sv": "mån–fre 8.30–12.30, 14.00–18.30; lör 8.30–12.30; efter tidsbokning.",
         "da": "Man–fre 8.30–12.30, 14.00–18.30; lør 8.30–12.30; efter aftale.",
-        "fi": "ma–pe 8.30–12.30, 14.00–18.30; la 8.30–12.30; ajanvarauksella."
+        "fi": "ma–pe 8.30–12.30, 14.00–18.30; la 8.30–12.30; ajanvarauksella.",
+        "nb": "man–fre 8.30–12.30, 14.00–18.30; lør 8.30–12.30; etter avtale."
       },
       "small_animals": true,
       "url": "https://vetlouisonbobet.wixsite.com/clinvetsarlat",
@@ -4531,7 +4677,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–19:00; so 8:00–12:00; na objednání.",
         "sv": "mån–fre 8.00–12.00, 14.00–19.00; lör 8.00–12.00; efter tidsbokning.",
         "da": "Man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00; efter aftale.",
-        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00; ajanvarauksella."
+        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00; ajanvarauksella.",
+        "nb": "man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00; etter avtale."
       },
       "small_animals": true,
       "url": "https://vetoperigaud.wixsite.com/selarlgp",
@@ -4561,7 +4708,8 @@
         "cs": "Po–Pá 8:30–13:00, 14:00–19:00; so 8:30–12:30; mimo ordinační dobu sdělí záznamník službu konajícího veterináře.",
         "sv": "mån–fre 8.30–13.00, 14.00–19.00; lör 8.30–12.30; utanför öppettider anger telefonsvararen jourhavande veterinär.",
         "da": "Man–fre 8.30–13.00, 14.00–19.00; lør 8.30–12.30; uden for åbningstiden oplyser telefonsvareren den vagthavende dyrlæge.",
-        "fi": "ma–pe 8.30–13.00, 14.00–19.00; la 8.30–12.30; virka-ajan ulkopuolella vastaaja kertoo päivystävän eläinlääkärin."
+        "fi": "ma–pe 8.30–13.00, 14.00–19.00; la 8.30–12.30; virka-ajan ulkopuolella vastaaja kertoo päivystävän eläinlääkärin.",
+        "nb": "man–fre 8.30–13.00, 14.00–19.00; lør 8.30–12.30; utenom åpningstid oppgir telefonsvareren dyrlegen på vakt."
       },
       "small_animals": true,
       "url": "https://veto16.fr/",
@@ -4591,7 +4739,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:30–19:00; so 8:30–12:00; pohotovostní služba mimo ordinační dobu jeden týden ze tří; na stejném čísle zjistíte pohotovostní kliniku pro víkend.",
         "sv": "mån–fre 8.30–12.00, 14.30–19.00; lör 8.30–12.00; jour utanför öppettider var tredje vecka; ring samma nummer för att få veta vilken klinik som har helgjour.",
         "da": "Man–fre 8.30–12.00, 14.30–19.00; lør 8.30–12.00; akutvagt uden for åbningstiden én uge ud af tre; ring på samme nummer for weekendens vagtklinik.",
-        "fi": "ma–pe 8.30–12.00, 14.30–19.00; la 8.30–12.00; virka-ajan ulkopuolinen päivystys joka kolmas viikko; soita samaan numeroon, niin saat viikonlopun päivystysklinikan tiedot."
+        "fi": "ma–pe 8.30–12.00, 14.30–19.00; la 8.30–12.00; virka-ajan ulkopuolinen päivystys joka kolmas viikko; soita samaan numeroon, niin saat viikonlopun päivystysklinikan tiedot.",
+        "nb": "man–fre 8.30–12.00, 14.30–19.00; lør 8.30–12.00; akuttjeneste utenom åpningstid én uke av tre; ring samme nummer for å få vite hvilken klinikk som har helgevakt."
       },
       "small_animals": true,
       "url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/albi-pastel-205",
@@ -4621,7 +4770,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–19:00; so 8:30–12:00; v neděli zavřeno; mimo ordinační dobu sdělí záznamník službu konajícího veterináře (střídání s Clinique de la Madeleine a dalšími ordinacemi v Albi).",
         "sv": "mån–fre 8.30–12.00, 14.00–19.00; lör 8.30–12.00; sön stängt; utanför öppettider anger telefonsvararen jourhavande veterinär (jourlista med Clinique de la Madeleine och andra praktiker i Albi).",
         "da": "Man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00; søn lukket; uden for åbningstiden oplyser telefonsvareren den vagthavende dyrlæge (vagtordning med Clinique de la Madeleine og andre praksisser i Albi).",
-        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00; su suljettu; virka-ajan ulkopuolella vastaaja kertoo päivystävän eläinlääkärin (vuorot jaetaan Clinique de la Madeleinen ja muiden Albin vastaanottojen kanssa)."
+        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00; su suljettu; virka-ajan ulkopuolella vastaaja kertoo päivystävän eläinlääkärin (vuorot jaetaan Clinique de la Madeleinen ja muiden Albin vastaanottojen kanssa).",
+        "nb": "man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00; søn stengt; utenom åpningstid oppgir telefonsvareren dyrlegen på vakt (vaktordning med Clinique de la Madeleine og andre klinikker i Albi)."
       },
       "small_animals": true,
       "url": "https://www.clinique-veterinaire-parc.com/",
@@ -4651,7 +4801,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–19:00; so 8:00–12:00, 14:00–18:00; v neděli zavřeno; hovory mimo ordinační dobu jsou přesměrovány na nejbližší pohotovost.",
         "sv": "mån–fre 8.00–12.00, 14.00–19.00; lör 8.00–12.00, 14.00–18.00; sön stängt; samtal utanför öppettider kopplas vidare till närmaste akutjour.",
         "da": "Man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00, 14.00–18.00; søn lukket; opkald uden for åbningstiden omdirigeres til nærmeste akutvagt.",
-        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00, 14.00–18.00; su suljettu; virka-ajan ulkopuoliset puhelut ohjataan lähimpään päivystykseen."
+        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00, 14.00–18.00; su suljettu; virka-ajan ulkopuoliset puhelut ohjataan lähimpään päivystykseen.",
+        "nb": "man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00, 14.00–18.00; søn stengt; samtaler utenom åpningstid videresendes til nærmeste akuttjeneste."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-mazeran-de-beziers-bez/",
@@ -4681,7 +4832,8 @@
         "cs": "Po–Pá 8:00–19:00; so 8:00–18:00; v neděli zavřeno; pohotovost: pracoviště ve službě na čísle +33 4 67 01 29 22.",
         "sv": "mån–fre 8.00–19.00; lör 8.00–18.00; sön stängt; akutfall: jourenhet på +33 4 67 01 29 22.",
         "da": "Man–fre 8.00–19.00; lør 8.00–18.00; søn lukket; akut: vagtfunktion på +33 4 67 01 29 22.",
-        "fi": "ma–pe 8.00–19.00; la 8.00–18.00; su suljettu; päivystys: päivystysyksikön numero +33 4 67 01 29 22."
+        "fi": "ma–pe 8.00–19.00; la 8.00–18.00; su suljettu; päivystys: päivystysyksikön numero +33 4 67 01 29 22.",
+        "nb": "man–fre 8.00–19.00; lør 8.00–18.00; søn stengt; nødtilfeller: vaktordning på +33 4 67 01 29 22."
       },
       "small_animals": true,
       "url": "https://www.veterinairefoch.com/",
@@ -4712,7 +4864,8 @@
         "cs": "Po–Pá 8:00–19:00; so 8:00–18:00; na objednání; v naléhavém případě vás stejné číslo spojí s veterinářem ve službě.",
         "sv": "mån–fre 8.00–19.00; lör 8.00–18.00; efter tidsbokning; vid akutfall når samma nummer jourhavande veterinär.",
         "da": "Man–fre 8.00–19.00; lør 8.00–18.00; efter aftale; ved akut sygdom når samme nummer den vagthavende dyrlæge.",
-        "fi": "ma–pe 8.00–19.00; la 8.00–18.00; ajanvarauksella; hätätapauksessa sama numero tavoittaa päivystävän eläinlääkärin."
+        "fi": "ma–pe 8.00–19.00; la 8.00–18.00; ajanvarauksella; hätätapauksessa sama numero tavoittaa päivystävän eläinlääkärin.",
+        "nb": "man–fre 8.00–19.00; lør 8.00–18.00; etter avtale; i nødstilfeller når du dyrlegen på vakt på samme nummer."
       },
       "small_animals": true,
       "url": "https://www.vetosud.com/",
@@ -4742,7 +4895,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–19:00; so 8:30–12:00, 14:00–18:00; mimo ordinační dobu pohotovostní linka +33 4 65 00 10 70; večer, o víkendech a svátcích pohotovost v Maison des urgences de Carcassonne, 230 rue Gustave Eiffel (střídání šesti ordinací z okolí Carcassonne).",
         "sv": "mån–fre 8.30–12.00, 14.00–19.00; lör 8.30–12.00, 14.00–18.00; utanför öppettider akutlinje +33 4 65 00 10 70; akutfall kvällar/helger/helgdagar på Maison des urgences de Carcassonne, 230 rue Gustave Eiffel (jourlista för sex praktiker i Carcassonneområdet).",
         "da": "Man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00, 14.00–18.00; uden for åbningstiden akutnummer +33 4 65 00 10 70; akut om aftenen/i weekender/på helligdage på Maison des urgences de Carcassonne, 230 rue Gustave Eiffel (vagtordning mellem seks praksisser i Carcassonne-området).",
-        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00, 14.00–18.00; virka-ajan ulkopuolella päivystysnumero +33 4 65 00 10 70; ilta-, viikonloppu- ja pyhäpäivystys Maison des urgences de Carcassonne, 230 rue Gustave Eiffel (kuuden Carcassonnen alueen vastaanoton vuorot)."
+        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00, 14.00–18.00; virka-ajan ulkopuolella päivystysnumero +33 4 65 00 10 70; ilta-, viikonloppu- ja pyhäpäivystys Maison des urgences de Carcassonne, 230 rue Gustave Eiffel (kuuden Carcassonnen alueen vastaanoton vuorot).",
+        "nb": "man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00, 14.00–18.00; hastelinje utenom åpningstid +33 4 65 00 10 70; nødtilfeller kveld/helg/helligdag på Maison des urgences de Carcassonne, 230 rue Gustave Eiffel (vaktordning for seks klinikker i Carcassonne-området)."
       },
       "small_animals": true,
       "url": "https://www.vetoremparts.fr/",
@@ -4772,7 +4926,8 @@
         "cs": "Pohotovost mimo ordinační dobu v oblasti Tarbes: pohotovostní klinika v Bizanos (Urgences vétérinaires Pau–Tarbes).",
         "sv": "För akutfall utanför öppettider i Tarbesområdet, se jourkliniken i Bizanos (Urgences vétérinaires Pau–Tarbes).",
         "da": "Ved akut hjælp uden for åbningstiden i Tarbes-området henvises til vagtklinikken i Bizanos (Urgences vétérinaires Pau–Tarbes).",
-        "fi": "Virka-ajan ulkopuolisissa päivystystapauksissa Tarbesin alueella katso Bizanosin päivystysklinikka (Urgences vétérinaires Pau–Tarbes)."
+        "fi": "Virka-ajan ulkopuolisissa päivystystapauksissa Tarbesin alueella katso Bizanosin päivystysklinikka (Urgences vétérinaires Pau–Tarbes).",
+        "nb": "Ved nødtilfeller utenom åpningstid i Tarbes-området, se vaktklinikken i Bizanos (Urgences vétérinaires Pau–Tarbes)."
       },
       "small_animals": true,
       "url": "https://veterinairelaeropostale.fr/",
@@ -4803,7 +4958,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–19:00; so 8:30–12:00, 14:00–17:00; mimo ordinační dobu: VetoAdom Alpin (+33 4 58 17 32 32) nebo Maison des Urgences Alpine (+33 4 58 39 00 00).",
         "sv": "mån–fre 8.30–12.00, 14.00–19.00; lör 8.30–12.00, 14.00–17.00; utanför öppettider: VetoAdom Alpin (+33 4 58 17 32 32) eller Maison des Urgences Alpine (+33 4 58 39 00 00).",
         "da": "Man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00, 14.00–17.00; uden for åbningstiden: VetoAdom Alpin (+33 4 58 17 32 32) eller Maison des Urgences Alpine (+33 4 58 39 00 00).",
-        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00, 14.00–17.00; virka-ajan ulkopuolella: VetoAdom Alpin (+33 4 58 17 32 32) tai Maison des Urgences Alpine (+33 4 58 39 00 00)."
+        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 8.30–12.00, 14.00–17.00; virka-ajan ulkopuolella: VetoAdom Alpin (+33 4 58 17 32 32) tai Maison des Urgences Alpine (+33 4 58 39 00 00).",
+        "nb": "man–fre 8.30–12.00, 14.00–19.00; lør 8.30–12.00, 14.00–17.00; utenom åpningstid: VetoAdom Alpin (+33 4 58 17 32 32) eller Maison des Urgences Alpine (+33 4 58 39 00 00)."
       },
       "small_animals": true,
       "url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/chamnord-236",
@@ -4833,7 +4989,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:30–19:00; so 8:30–12:00, 14:30–17:00; v neděli zavřeno; číslo zůstává aktivní i mimo ordinační dobu a nasměruje na pohotovost.",
         "sv": "mån–fre 8.30–12.00, 14.30–19.00; lör 8.30–12.00, 14.30–17.00; sön stängt; numret är aktivt utanför öppettider för att hänvisa akutfall.",
         "da": "Man–fre 8.30–12.00, 14.30–19.00; lør 8.30–12.00, 14.30–17.00; søn lukket; nummeret er aktivt uden for åbningstiden og henviser akutte tilfælde videre.",
-        "fi": "ma–pe 8.30–12.00, 14.30–19.00; la 8.30–12.00, 14.30–17.00; su suljettu; numero pysyy aktiivisena virka-ajan ulkopuolella ohjaten hätätapaukset eteenpäin."
+        "fi": "ma–pe 8.30–12.00, 14.30–19.00; la 8.30–12.00, 14.30–17.00; su suljettu; numero pysyy aktiivisena virka-ajan ulkopuolella ohjaten hätätapaukset eteenpäin.",
+        "nb": "man–fre 8.30–12.00, 14.30–19.00; lør 8.30–12.00, 14.30–17.00; søn stengt; nummeret er aktivt utenom åpningstid for å henvise nødtilfeller."
       },
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-des-chabanneries-bourg-les-valence-blv/",
@@ -4863,7 +5020,8 @@
         "cs": "Po–Pá 9:00–12:30, 14:00–18:30; o víkendech zavřeno; pohotovost mimo ordinační dobu přes veterináře ve službě na klinice Domancy (+33 4 50 93 51 46).",
         "sv": "mån–fre 9.00–12.30, 14.00–18.30; stängt på helger; akutfall utanför öppettider via jourhavande veterinär på kliniken i Domancy (+33 4 50 93 51 46).",
         "da": "Man–fre 9.00–12.30, 14.00–18.30; weekend lukket; akut uden for åbningstiden via vagthavende dyrlæge på klinikken i Domancy (+33 4 50 93 51 46).",
-        "fi": "ma–pe 9.00–12.30, 14.00–18.30; viikonloppuisin suljettu; päivystys virka-ajan ulkopuolella Domancyn klinikan päivystävän eläinlääkärin kautta (+33 4 50 93 51 46)."
+        "fi": "ma–pe 9.00–12.30, 14.00–18.30; viikonloppuisin suljettu; päivystys virka-ajan ulkopuolella Domancyn klinikan päivystävän eläinlääkärin kautta (+33 4 50 93 51 46).",
+        "nb": "man–fre 9.00–12.30, 14.00–18.30; stengt i helgene; nødtilfeller utenom åpningstid via dyrlegen på vakt ved klinikken i Domancy (+33 4 50 93 51 46)."
       },
       "small_animals": true,
       "url": "https://cabinetvetdelavallee.fr/",
@@ -4893,7 +5051,8 @@
         "cs": "Po–Pá 9:00–19:00; so 9:00–12:00, 14:00–17:00; mimo ordinační dobu vás spojí s pohotovostní službou skupiny (pokrývá pracoviště Chamonix a Megève).",
         "sv": "mån–fre 9.00–19.00; lör 9.00–12.00, 14.00–17.00; utanför öppettider kopplas samtalen till gruppens jourtjänst (täcker enheterna i Chamonix och Megève).",
         "da": "Man–fre 9.00–19.00; lør 9.00–12.00, 14.00–17.00; uden for åbningstiden forbindes opkald til gruppens vagtservice (dækker klinikkerne i Chamonix og Megève).",
-        "fi": "ma–pe 9.00–19.00; la 9.00–12.00, 14.00–17.00; virka-ajan ulkopuolella soittajat yhdistetään ryhmän päivystyspalveluun (kattaa Chamonixin ja Megèven toimipisteet)."
+        "fi": "ma–pe 9.00–19.00; la 9.00–12.00, 14.00–17.00; virka-ajan ulkopuolella soittajat yhdistetään ryhmän päivystyspalveluun (kattaa Chamonixin ja Megèven toimipisteet).",
+        "nb": "man–fre 9.00–19.00; lør 9.00–12.00, 14.00–17.00; utenom åpningstid settes innringere over til gruppens vakttjeneste (dekker lokasjonene i Chamonix og Megève)."
       },
       "small_animals": true,
       "url": "https://www.cliniquevetdelavallee.com/",
@@ -4923,7 +5082,8 @@
         "cs": "Po–Pá 9:00–12:30, 14:00–18:30; so 9:00–13:00; mimo ordinační dobu: pohotovostní služba skupiny.",
         "sv": "mån–fre 9.00–12.30, 14.00–18.30; lör 9.00–13.00; utanför öppettider: gruppens jourtjänst.",
         "da": "Man–fre 9.00–12.30, 14.00–18.30; lør 9.00–13.00; uden for åbningstiden: gruppens vagtservice.",
-        "fi": "ma–pe 9.00–12.30, 14.00–18.30; la 9.00–13.00; virka-ajan ulkopuolella: ryhmän päivystyspalvelu."
+        "fi": "ma–pe 9.00–12.30, 14.00–18.30; la 9.00–13.00; virka-ajan ulkopuolella: ryhmän päivystyspalvelu.",
+        "nb": "man–fre 9.00–12.30, 14.00–18.30; lør 9.00–13.00; utenom åpningstid: gruppens vakttjeneste."
       },
       "small_animals": true,
       "url": "https://www.cliniquevetdelavallee.com/",
@@ -4953,7 +5113,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:30–19:00; so 8:30–12:00; pohotovost v noci, v neděli a o svátcích na stejném čísle. Druhé pracoviště: 167 avenue Pasteur, Roquebrune-Cap-Martin (+33 4 92 10 32 11).",
         "sv": "mån–fre 8.30–12.00, 14.30–19.00; lör 8.30–12.00; akutfall nätter, söndagar och helgdagar på samma nummer. Ytterligare mottagning: 167 avenue Pasteur, Roquebrune-Cap-Martin (+33 4 92 10 32 11).",
         "da": "Man–fre 8.30–12.00, 14.30–19.00; lør 8.30–12.00; akut om natten, søndage og helligdage på samme nummer. Anden klinik: 167 avenue Pasteur, Roquebrune-Cap-Martin (+33 4 92 10 32 11).",
-        "fi": "ma–pe 8.30–12.00, 14.30–19.00; la 8.30–12.00; päivystys öisin, sunnuntaisin ja pyhinä samassa numerossa. Toinen toimipiste: 167 avenue Pasteur, Roquebrune-Cap-Martin (+33 4 92 10 32 11)."
+        "fi": "ma–pe 8.30–12.00, 14.30–19.00; la 8.30–12.00; päivystys öisin, sunnuntaisin ja pyhinä samassa numerossa. Toinen toimipiste: 167 avenue Pasteur, Roquebrune-Cap-Martin (+33 4 92 10 32 11).",
+        "nb": "man–fre 8.30–12.00, 14.30–19.00; lør 8.30–12.00; nødtilfeller natt, søndager og helligdager på samme nummer. Annen lokasjon: 167 avenue Pasteur, Roquebrune-Cap-Martin (+33 4 92 10 32 11)."
       },
       "small_animals": true,
       "url": "https://vetocareicarnoles.fr/",
@@ -4983,7 +5144,8 @@
         "cs": "Po–Pá 9:00–12:00, 15:00–19:00; so 9:00–12:00; v neděli zavřeno; pohotovost mimo ordinační dobu +33 4 93 65 40 54.",
         "sv": "mån–fre 9.00–12.00, 15.00–19.00; lör 9.00–12.00; sön stängt; akutfall utanför öppettider +33 4 93 65 40 54.",
         "da": "Man–fre 9.00–12.00, 15.00–19.00; lør 9.00–12.00; søn lukket; akut uden for åbningstiden +33 4 93 65 40 54.",
-        "fi": "ma–pe 9.00–12.00, 15.00–19.00; la 9.00–12.00; su suljettu; päivystys aukioloaikojen ulkopuolella +33 4 93 65 40 54."
+        "fi": "ma–pe 9.00–12.00, 15.00–19.00; la 9.00–12.00; su suljettu; päivystys aukioloaikojen ulkopuolella +33 4 93 65 40 54.",
+        "nb": "man–fre 9.00–12.00, 15.00–19.00; lør 9.00–12.00; søn stengt; nødtilfeller utenom åpningstid +33 4 93 65 40 54."
       },
       "small_animals": true,
       "url": "https://antibes.vet/",
@@ -5013,7 +5175,8 @@
         "cs": "Ordinace Po–So 8:00–19:00; pohotovost nonstop včetně neděle",
         "sv": "Besök mån–lör 8.00–19.00; akutfall dygnet runt, även söndagar",
         "da": "Konsultationer man–lør 8.00–19.00; akut døgnet rundt inkl. søndag",
-        "fi": "Vastaanotto ma–la 8.00–19.00; päivystys ympäri vuorokauden, myös sunnuntaisin"
+        "fi": "Vastaanotto ma–la 8.00–19.00; päivystys ympäri vuorokauden, myös sunnuntaisin",
+        "nb": "Konsultasjoner man–lør kl. 8.00–19.00; nødtilfeller hele døgnet, også søndager"
       },
       "url": "https://www.chvcordeliers.com/",
       "source_url": "https://www.chvcordeliers.com/",
@@ -5043,7 +5206,8 @@
         "cs": "Pouze pohotovostní ordinace: ve všední dny 20:00–8:00, v sobotu od 14:00, v neděli a o státních svátcích nonstop",
         "sv": "Endast akutpraktik: vardagar 20.00–8.00, lördagar från 14.00, dygnet runt på söndagar och helgdagar",
         "da": "Kun akut: hverdage 20.00–8.00, lørdag fra 14.00, døgnåben søndage og helligdage",
-        "fi": "Vain päivystysvastaanotto: arkisin 20.00–8.00, la klo 14.00 alkaen, su ja pyhinä ympäri vuorokauden"
+        "fi": "Vain päivystysvastaanotto: arkisin 20.00–8.00, la klo 14.00 alkaen, su ja pyhinä ympäri vuorokauden",
+        "nb": "Akuttklinikk: hverdager kl. 20.00–08.00, lørdag fra kl. 14.00, hele døgnet på søndager og helligdager"
       },
       "url": "https://www.maisondesurgences-neuilly.com/",
       "source_url": "https://www.maisondesurgences-neuilly.com/",
@@ -5073,7 +5237,8 @@
         "cs": "Pouze pohotovostní ordinace na objednání (kromě případů ohrožení života): ve všední dny 19:00–8:00, o víkendech do pondělí 8:00 (v neděli nonstop), o státních svátcích od 19:00 předchozího večera",
         "sv": "Endast akutpraktik efter tidsbokning (utom livshotande fall): vardagar 19.00–8.00, helger till mån 8.00 (sön dygnet runt), helgdagar från 19.00 kvällen före",
         "da": "Kun akut, efter aftale (undtagen ved livstruende tilfælde): hverdage 19.00–8.00, weekender til mandag 8.00 (døgnåben søndag), helligdage fra 19.00 aftenen før",
-        "fi": "Vain päivystysvastaanotto ajanvarauksella (paitsi hengenvaarallisissa tapauksissa): arkisin 19.00–8.00, viikonloppuisin maanantaihin klo 8.00 asti (sunnuntaisin ympäri vuorokauden), pyhinä edellisen illan klo 19.00 alkaen"
+        "fi": "Vain päivystysvastaanotto ajanvarauksella (paitsi hengenvaarallisissa tapauksissa): arkisin 19.00–8.00, viikonloppuisin maanantaihin klo 8.00 asti (sunnuntaisin ympäri vuorokauden), pyhinä edellisen illan klo 19.00 alkaen",
+        "nb": "Akuttklinikk kun etter timebestilling (unntatt livstruende tilfeller): hverdager kl. 19.00–08.00, helger til mandag kl. 08.00 (hele døgnet på søndager), helligdager fra kl. 19.00 kvelden før"
       },
       "url": "https://maison-des-urgences-veterinaires-macon.fr/cabinet-veterinaire-de-garde/",
       "source_url": "https://maison-des-urgences-veterinaires-macon.fr/cabinet-veterinaire-de-garde/",
@@ -5104,7 +5269,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–18:30; so 8:30–12:00; mimo ordinační dobu zavolejte na číslo ordinace",
         "sv": "mån–fre 8.00–12.00, 14.00–18.30; lör 8.30–12.00; utanför öppettider ring praktikens nummer",
         "da": "Man–fre 8.00–12.00, 14.00–18.30; lør 8.30–12.00; uden for åbningstiden ring til klinikkens nummer",
-        "fi": "ma–pe 8.00–12.00, 14.00–18.30; la 8.30–12.00; virka-ajan ulkopuolella soita vastaanoton numeroon"
+        "fi": "ma–pe 8.00–12.00, 14.00–18.30; la 8.30–12.00; virka-ajan ulkopuolella soita vastaanoton numeroon",
+        "nb": "man–fre 8.00–12.00, 14.00–18.30; lør 8.30–12.00; utenom åpningstid ring klinikkens nummer"
       },
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-dunkerque-59140-univet/",
       "quote": "En cas d'urgence, en dehors de nos horaires d'ouverture, Merci de contacter le cabinet au 03 28 66 62 63",
@@ -5135,7 +5301,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–19:00; so 8:00–12:00; mimo ordinační dobu přes společnou pohotovostní službu v Arrasu",
         "sv": "mån–fre 8.00–12.00, 14.00–19.00; lör 8.00–12.00; utanför öppettider via den gemensamma jourlistan i Arras",
         "da": "Man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00; uden for åbningstiden via den fælles vagtordning i Arras",
-        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00; virka-ajan ulkopuolella Arrasin yhteisten päivystysvuorojen kautta"
+        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00; virka-ajan ulkopuolella Arrasin yhteisten päivystysvuorojen kautta",
+        "nb": "man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00; utenom åpningstid via Arras' felles vaktordning"
       },
       "url": "https://www.cliniquedelaliberte.fr/",
       "source_url": "https://www.cliniquedelaliberte.fr/urgences",
@@ -5165,7 +5332,8 @@
         "cs": "Každá ordinace v Arrasu má službu celý týden, nonstop; číslo služby zjistíte na záznamníku svého veterináře; pouze případy ohrožení života, bez návštěv doma, s příplatkem",
         "sv": "Varje praktik i Arras har jour en hel vecka, dygnet runt; numret till jourhavande veterinär finns på din vanliga veterinärs telefonsvarare; endast livshotande akutfall, inga hembesök, jourtillägg",
         "da": "Hver praksis i Arras har vagt en hel uge, døgnet rundt; vagtnummeret fås fra din faste dyrlæges telefonsvarer; kun livstruende tilfælde, ingen hjemmebesøg, med tillæg",
-        "fi": "Jokainen Arrasin eläinlääkärivastaanotto päivystää kokonaisen viikon ympäri vuorokauden; päivystysnumero saat oman eläinlääkärisi vastaajasta; vain hengenvaarallisiin hätätapauksiin, ei kotikäyntejä, lisämaksu"
+        "fi": "Jokainen Arrasin eläinlääkärivastaanotto päivystää kokonaisen viikon ympäri vuorokauden; päivystysnumero saat oman eläinlääkärisi vastaajasta; vain hengenvaarallisiin hätätapauksiin, ei kotikäyntejä, lisämaksu",
+        "nb": "Hver klinikk i Arras har vakt en hel uke, hele døgnet; vakttelefonen får du på telefonsvareren til din vanlige dyrlege; kun for livstruende nødtilfeller, ingen hjemmebesøk, tillegg"
       },
       "url": "https://www.cliniquedelaliberte.fr/urgences",
       "source_url": "https://www.cliniquedelaliberte.fr/urgences",
@@ -5196,7 +5364,8 @@
         "cs": "Společná pohotovostní služba mimo ordinační dobu ordinací z okolí Valenciennes; hovor je přepojen na ordinaci ve službě",
         "sv": "Gemensam jourlista utanför öppettider för praktiker i Valenciennesområdet; samtalet kopplas till jourhavande praktik",
         "da": "Fælles vagtordning uden for åbningstiden for praksisser i Valenciennes-området; opkaldet stilles videre til den vagthavende praksis",
-        "fi": "Valenciennesin alueen vastaanottojen yhteiset päivystysvuorot virka-ajan ulkopuolella; puhelu siirretään päivystävälle vastaanotolle"
+        "fi": "Valenciennesin alueen vastaanottojen yhteiset päivystysvuorot virka-ajan ulkopuolella; puhelu siirretään päivystävälle vastaanotolle",
+        "nb": "Felles vaktordning utenom åpningstid for klinikker i Valenciennes-området; samtalen overføres til klinikken som har vakt"
       },
       "url": "https://calipsis.fr/",
       "source_url": "https://calipsis.fr/",
@@ -5226,7 +5395,8 @@
         "cs": "Po–So 8:00–18:30; pohotovost nonstop po telefonickém hovoru (služba GVGV, ošetření v ordinaci ve službě, bez návštěv doma)",
         "sv": "mån–lör 8.00–18.30; akutfall dygnet runt efter telefonsamtal (jourlista GVGV, mottagning hos jourhavande praktik, inga hembesök)",
         "da": "Man–lør 8.00–18.30; akut døgnet rundt efter telefonopkald (GVGV-vagtordning, ses på den vagthavende praksis, ingen hjemmebesøg)",
-        "fi": "ma–la 8.00–18.30; päivystys ympäri vuorokauden puhelinsoiton jälkeen (GVGV-vuorot, hoito päivystävällä vastaanotolla, ei kotikäyntejä)"
+        "fi": "ma–la 8.00–18.30; päivystys ympäri vuorokauden puhelinsoiton jälkeen (GVGV-vuorot, hoito päivystävällä vastaanotolla, ei kotikäyntejä)",
+        "nb": "man–lør 8.00–18.30; nødtilfeller hele døgnet etter telefonsamtale (GVGV-vaktordning, mottak ved klinikken på vakt, ingen hjemmebesøk)"
       },
       "url": "https://www.vetomusee.fr/",
       "source_url": "https://www.vetomusee.fr/la-clinique/les-urgences",
@@ -5257,7 +5427,8 @@
         "cs": "Po–Pá 8:15–12:15, 14:00–18:30; so 8:15–12:15, 14:00–17:00; pohotovost v noci, o víkendech a státních svátcích po telefonu",
         "sv": "mån–fre 8.15–12.15, 14.00–18.30; lör 8.15–12.15, 14.00–17.00; akutfall nätter, helger och helgdagar per telefon",
         "da": "man–fre 8.15–12.15, 14.00–18.30; lør 8.15–12.15, 14.00–17.00; akut om natten, i weekenden og på helligdage pr. telefon",
-        "fi": "ma–pe 8.15–12.15, 14.00–18.30; la 8.15–12.15, 14.00–17.00; päivystys öisin, viikonloppuisin ja pyhinä puhelimitse"
+        "fi": "ma–pe 8.15–12.15, 14.00–18.30; la 8.15–12.15, 14.00–17.00; päivystys öisin, viikonloppuisin ja pyhinä puhelimitse",
+        "nb": "man–fre 8.15–12.15, 14.00–18.30; lør 8.15–12.15, 14.00–17.00; nødtilfeller natt, helger og helligdager på telefon"
       },
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-beauvais-60000-univet/",
       "quote": "Urgences assurées les nuits, week-end et jours fériés sur appel téléphonique : 03 44 06 00 00",
@@ -5287,7 +5458,8 @@
         "cs": "Po, Út, Čt, Pá 9:00–12:00, 14:00–19:00; st 9:00–14:30; so 9:00–13:00; mimo ordinační dobu služba VET'TEAM deseti klinik z okolí Compiègne – na toto číslo volejte kdykoli a dozvíte se, který veterinář má službu",
         "sv": "mån, tis, tors, fre 9.00–12.00, 14.00–19.00; ons 9.00–14.30; lör 9.00–13.00; utanför öppettider VET'TEAM-jourlista för tio kliniker i Compiègneområdet – ring detta nummer när som helst för att få jourhavande veterinär",
         "da": "man, tirs, tors, fre 9.00–12.00, 14.00–19.00; ons 9.00–14.30; lør 9.00–13.00; uden for åbningstid vagtordningen VET'TEAM med ti klinikker i Compiègne-området – ring på dette nummer, når som helst, for at få den vagthavende dyrlæge",
-        "fi": "ma, ti, to, pe 9.00–12.00, 14.00–19.00; ke 9.00–14.30; la 9.00–13.00; virka-ajan ulkopuolella VET'TEAMin kymmenen Compiègnen alueen klinikan päivystysvuorot — soita tähän numeroon mihin aikaan tahansa, niin saat päivystävän eläinlääkärin"
+        "fi": "ma, ti, to, pe 9.00–12.00, 14.00–19.00; ke 9.00–14.30; la 9.00–13.00; virka-ajan ulkopuolella VET'TEAMin kymmenen Compiègnen alueen klinikan päivystysvuorot — soita tähän numeroon mihin aikaan tahansa, niin saat päivystävän eläinlääkärin",
+        "nb": "Man, tir, tor, fre 9.00–12.00, 14.00–19.00; ons 9.00–14.30; lør 9.00–13.00; utenom åpningstiden går vaktordningen VET'TEAM med ti klinikker i Compiègne-området – ring dette nummeret når som helst for å få tak i vakthavende dyrlege"
       },
       "url": "https://clinique-veto-familiale.fr/",
       "source_url": "https://clinique-veto-familiale.fr/urgences/",
@@ -5317,7 +5489,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–19:00; so 8:00–12:00, 14:00–17:00; pohotovost do 21:00",
         "sv": "mån–fre 8.00–12.00, 14.00–19.00; lör 8.00–12.00, 14.00–17.00; akutfall till 21.00",
         "da": "man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00, 14.00–17.00; akut til kl. 21.00",
-        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00, 14.00–17.00; päivystys klo 21 asti"
+        "fi": "ma–pe 8.00–12.00, 14.00–19.00; la 8.00–12.00, 14.00–17.00; päivystys klo 21 asti",
+        "nb": "man–fre 8.00–12.00, 14.00–19.00; lør 8.00–12.00, 14.00–17.00; nødtilfeller til kl. 21.00"
       },
       "url": "https://www.alliavet.fr/",
       "source_url": "https://www.alliavet.fr/",
@@ -5347,7 +5520,8 @@
         "cs": "Po, Út, St, Pá 8:00–12:00, 13:45–18:45; čt do 17:45; so 9:00–12:00",
         "sv": "mån, tis, ons, fre 8.00–12.00, 13.45–18.45; tors till 17.45; lör 9.00–12.00",
         "da": "man, tirs, ons, fre 8.00–12.00, 13.45–18.45; tors til 17.45; lør 9.00–12.00",
-        "fi": "ma, ti, ke, pe 8.00–12.00, 13.45–18.45; to klo 17.45 asti; la 9.00–12.00"
+        "fi": "ma, ti, ke, pe 8.00–12.00, 13.45–18.45; to klo 17.45 asti; la 9.00–12.00",
+        "nb": "Man, tir, ons, fre 8.00–12.00, 13.45–18.45; tor til 17.45; lør 9.00–12.00"
       },
       "source_url": "https://www.vetorino.com/veterinaire/saintquentin-02100/",
       "quote": "En cas d'urgence, veuillez appeler le 03 23 08 88 60",
@@ -5377,7 +5551,8 @@
         "cs": "Sideville Po–Pá 8:30–18:30, so 8:30–14:00; pohotovost nonstop po telefonu",
         "sv": "Sideville mån–fre 8.30–18.30, lör 8.30–14.00; akutfall dygnet runt per telefon",
         "da": "Sideville man–fre 8.30–18.30, lør 8.30–14.00; akut døgnet rundt pr. telefon",
-        "fi": "Sideville ma–pe 8.30–18.30, la 8.30–14.00; päivystys ympäri vuorokauden puhelimitse"
+        "fi": "Sideville ma–pe 8.30–18.30, la 8.30–14.00; päivystys ympäri vuorokauden puhelimitse",
+        "nb": "Sideville man–fre kl. 8.30–18.30, lør kl. 8.30–14.00; nødtilfeller hele døgnet på telefon"
       },
       "url": "https://www.cliniqueveterinaireladivette.com/",
       "source_url": "https://www.cliniqueveterinaireladivette.com/",
@@ -5408,7 +5583,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–18:30; so 8:00–12:00, 14:00–16:30",
         "sv": "mån–fre 8.00–12.00, 14.00–18.30; lör 8.00–12.00, 14.00–16.30",
         "da": "man–fre 8.00–12.00, 14.00–18.30; lør 8.00–12.00, 14.00–16.30",
-        "fi": "ma–pe 8.00–12.00, 14.00–18.30; la 8.00–12.00, 14.00–16.30"
+        "fi": "ma–pe 8.00–12.00, 14.00–18.30; la 8.00–12.00, 14.00–16.30",
+        "nb": "man–fre 8.00–12.00, 14.00–18.30; lør 8.00–12.00, 14.00–16.30"
       },
       "url": "https://www.vetocherbourgcentre.fr/",
       "source_url": "https://www.vetocherbourgcentre.fr/nos-services/",
@@ -5437,7 +5613,8 @@
         "cs": "Po–Pá 8:30–12:30, 14:00–19:00; so 8:30–19:00; v noci, o víkendech a svátcích přesměrování na V2TU Rouen",
         "sv": "mån–fre 8.30–12.30, 14.00–19.00; lör 8.30–19.00; nätter, helger och helgdagar hänvisas vidare till V2TU Rouen",
         "da": "man–fre 8.30–12.30, 14.00–19.00; lør 8.30–19.00; nat, weekend og helligdage videresendes til V2TU Rouen",
-        "fi": "ma–pe 8.30–12.30, 14.00–19.00; la 8.30–19.00; yöt, viikonloput ja pyhät ohjataan eteenpäin: V2TU Rouen"
+        "fi": "ma–pe 8.30–12.30, 14.00–19.00; la 8.30–19.00; yöt, viikonloput ja pyhät ohjataan eteenpäin: V2TU Rouen",
+        "nb": "man–fre 8.30–12.30, 14.00–19.00; lør 8.30–19.00; natt, helger og helligdager videresendes til V2TU Rouen"
       },
       "source_url": "https://www.veterinaire-monveto.com/cliniques/clinique-veterinaire-la-foret/",
       "quote": "V2TU Rouen assure notre relais en dehors de nos heures d’ouverture : la nuit, les week-ends et les jours fériés.",
@@ -5468,7 +5645,8 @@
         "cs": "Po–Pá 8:30–12:30, 13:30–19:00; so 8:30–12:00, 14:00–18:00; pohotovost nonstop přes číslo kliniky",
         "sv": "mån–fre 8.30–12.30, 13.30–19.00; lör 8.30–12.00, 14.00–18.00; akutfall dygnet runt via klinikens nummer",
         "da": "man–fre 8.30–12.30, 13.30–19.00; lør 8.30–12.00, 14.00–18.00; akut døgnet rundt via klinikkens nummer",
-        "fi": "ma–pe 8.30–12.30, 13.30–19.00; la 8.30–12.00, 14.00–18.00; päivystys ympäri vuorokauden klinikan numerosta"
+        "fi": "ma–pe 8.30–12.30, 13.30–19.00; la 8.30–12.00, 14.00–18.00; päivystys ympäri vuorokauden klinikan numerosta",
+        "nb": "man–fre 8.30–12.30, 13.30–19.00; lør 8.30–12.00, 14.00–18.00; nødtilfeller hele døgnet via klinikkens nummer"
       },
       "url": "https://clinique-coubertin.fr/",
       "source_url": "https://clinique-coubertin.fr/clinique-a-alencon/",
@@ -5499,7 +5677,8 @@
         "cs": "Po–Pá 8:30–12:30, 14:00–19:00; so 8:30–12:15, 14:00–18:30; v noci, v neděli a o svátcích zavolejte na kliniku a stiskněte 1 (malá zvířata) nebo 2 (koně)",
         "sv": "mån–fre 8.30–12.30, 14.00–19.00; lör 8.30–12.15, 14.00–18.30; nätter, söndagar och helgdagar ring kliniken och tryck 1 (smådjur) eller 2 (hästar)",
         "da": "man–fre 8.30–12.30, 14.00–19.00; lør 8.30–12.15, 14.00–18.30; om natten, søndage og helligdage ring til klinikken og tryk 1 (smådyr) eller 2 (heste)",
-        "fi": "ma–pe 8.30–12.30, 14.00–19.00; la 8.30–12.15, 14.00–18.30; yöt, sunnuntait ja pyhät soita klinikalle ja paina 1 (pieneläimet) tai 2 (hevoset)"
+        "fi": "ma–pe 8.30–12.30, 14.00–19.00; la 8.30–12.15, 14.00–18.30; yöt, sunnuntait ja pyhät soita klinikalle ja paina 1 (pieneläimet) tai 2 (hevoset)",
+        "nb": "man–fre 8.30–12.30, 14.00–19.00; lør 8.30–12.15, 14.00–18.30; natt, søndager og helligdager ring klinikken og trykk 1 (smådyr) eller 2 (hester)"
       },
       "url": "https://cvcf.fr/",
       "source_url": "https://cvcf.fr/",
@@ -5530,7 +5709,8 @@
         "cs": "Po–Pá 8:45–12:30, 13:30–18:30; mimo ordinační dobu veterinář ve službě na stejném čísle",
         "sv": "mån–fre 8.45–12.30, 13.30–18.30; utanför öppettider jourhavande veterinär via samma nummer",
         "da": "man–fre 8.45–12.30, 13.30–18.30; uden for åbningstid vagthavende dyrlæge på samme nummer",
-        "fi": "ma–pe 8.45–12.30, 13.30–18.30; virka-ajan ulkopuolella päivystävä eläinlääkäri samasta numerosta"
+        "fi": "ma–pe 8.45–12.30, 13.30–18.30; virka-ajan ulkopuolella päivystävä eläinlääkäri samasta numerosta",
+        "nb": "man–fre 8.45–12.30, 13.30–18.30; utenom åpningstid dyrlegen på vakt via samme nummer"
       },
       "url": "https://www.cliniqueveterinairequimper-cornouaille.fr/",
       "source_url": "https://www.cliniqueveterinairequimper-cornouaille.fr/",
@@ -5561,7 +5741,8 @@
         "cs": "Po–Pá 8:30–12:30, 13:45–19:00; so 9:00–12:00; pohotovostní služba mimo ordinační dobu na stejném čísle",
         "sv": "mån–fre 8.30–12.30, 13.45–19.00; lör 9.00–12.00; akutjour utanför öppettider på samma nummer",
         "da": "man–fre 8.30–12.30, 13.45–19.00; lør 9.00–12.00; akutvagt uden for åbningstid på samme nummer",
-        "fi": "ma–pe 8.30–12.30, 13.45–19.00; la 9.00–12.00; päivystys virka-ajan ulkopuolella samassa numerossa"
+        "fi": "ma–pe 8.30–12.30, 13.45–19.00; la 9.00–12.00; päivystys virka-ajan ulkopuolella samassa numerossa",
+        "nb": "man–fre 8.30–12.30, 13.45–19.00; lør 9.00–12.00; akuttjeneste utenom åpningstid på samme nummer"
       },
       "source_url": "https://www.argos-veterinaire.com/nos-cliniques-veterinaires-2/clinique/lorient-la-decouverte-930",
       "quote": "En dehors de nos horaires d'ouverture, un service d'urgence est assuré par nos soins au même numéro.",
@@ -5591,7 +5772,8 @@
         "cs": "Po–Pá 9:00–12:00, 14:00–19:00; so 9:00–12:00; pohotovost nonstop přes pohotovostní službu v okolí Vannes",
         "sv": "mån–fre 9.00–12.00, 14.00–19.00; lör 9.00–12.00; akutfall dygnet runt via en jourtjänst i Vannesområdet",
         "da": "man–fre 9.00–12.00, 14.00–19.00; lør 9.00–12.00; akut døgnet rundt via en vagtordning i Vannes-området",
-        "fi": "ma–pe 9.00–12.00, 14.00–19.00; la 9.00–12.00; päivystys ympäri vuorokauden Vannesin alueen päivystyspalvelun kautta"
+        "fi": "ma–pe 9.00–12.00, 14.00–19.00; la 9.00–12.00; päivystys ympäri vuorokauden Vannesin alueen päivystyspalvelun kautta",
+        "nb": "man–fre 9.00–12.00, 14.00–19.00; lør 9.00–12.00; nødtilfeller hele døgnet via en vaktordning i Vannes-området"
       },
       "url": "https://www.clinique-veterinaire-copernic.com/",
       "source_url": "https://www.clinique-veterinaire-copernic.com/",
@@ -5622,7 +5804,8 @@
         "cs": "Po, Út, Čt, Pá 8:30–12:30, 14:00–19:00; st 8:30–12:30; so 8:30–12:30, 14:00–17:00; mimo ordinační dobu sdělí záznamník veterináře ve službě",
         "sv": "mån, tis, tors, fre 8.30–12.30, 14.00–19.00; ons 8.30–12.30; lör 8.30–12.30, 14.00–17.00; utanför öppettider anger telefonsvararen jourhavande veterinär",
         "da": "man, tirs, tors, fre 8.30–12.30, 14.00–19.00; ons 8.30–12.30; lør 8.30–12.30, 14.00–17.00; uden for åbningstid oplyser telefonsvareren den vagthavende dyrlæge",
-        "fi": "ma, ti, to, pe 8.30–12.30, 14.00–19.00; ke 8.30–12.30; la 8.30–12.30, 14.00–17.00; virka-ajan ulkopuolella vastaaja kertoo päivystävän eläinlääkärin"
+        "fi": "ma, ti, to, pe 8.30–12.30, 14.00–19.00; ke 8.30–12.30; la 8.30–12.30, 14.00–17.00; virka-ajan ulkopuolella vastaaja kertoo päivystävän eläinlääkärin",
+        "nb": "Man, tir, tor, fre 8.30–12.30, 14.00–19.00; ons 8.30–12.30; lør 8.30–12.30, 14.00–17.00; utenom åpningstid oppgir telefonsvareren dyrlegen på vakt"
       },
       "url": "https://www.vetodelaprunelle.com/",
       "source_url": "https://www.vetodelaprunelle.com/",
@@ -5652,7 +5835,8 @@
         "cs": "Po–So 9:00–12:00, 14:00–19:00 na objednání; pohotovost po telefonu v rámci služby Presqu'île",
         "sv": "mån–lör 9.00–12.00, 14.00–19.00 efter tidsbokning; akutfall per telefon via joursystemet på Presqu'île",
         "da": "man–lør 9.00–12.00, 14.00–19.00 efter aftale; akut pr. telefon via Presqu'île-vagtordningen",
-        "fi": "ma–la 9.00–12.00, 14.00–19.00 ajanvarauksella; päivystys puhelimitse Presqu'île-päivystysjärjestelmän kautta"
+        "fi": "ma–la 9.00–12.00, 14.00–19.00 ajanvarauksella; päivystys puhelimitse Presqu'île-päivystysjärjestelmän kautta",
+        "nb": "man–lør 9.00–12.00, 14.00–19.00 etter avtale; nødtilfeller på telefon via vaktordningen i Presqu'île"
       },
       "url": "https://www.clinique-immavet.fr/",
       "source_url": "https://www.clinique-immavet.fr/",
@@ -5682,7 +5866,8 @@
         "cs": "Veterinář ve službě každou noc, v neděli a o státních svátcích pro vlastní pacienty kliniky; číslo na záznamníku kliniky",
         "sv": "Jourhavande veterinär varje natt, söndagar och helgdagar för klinikens egna patienter; numret finns på klinikens telefonsvarare",
         "da": "Vagthavende dyrlæge hver nat, søndag og på helligdage for klinikkens egne patienter; nummeret findes på klinikkens telefonsvarer",
-        "fi": "Päivystävä eläinlääkäri joka yö, sunnuntaisin ja pyhinä klinikan omille potilaille; numero klinikan vastaajassa"
+        "fi": "Päivystävä eläinlääkäri joka yö, sunnuntaisin ja pyhinä klinikan omille potilaille; numero klinikan vastaajassa",
+        "nb": "Vakthavende dyrlege hver natt, på søndager og helligdager for klinikkens egne pasienter; nummeret ligger på klinikkens telefonsvarer"
       },
       "url": "https://laroche.animea-vet.com/",
       "source_url": "https://laroche.animea-vet.com/urgences/",
@@ -5713,7 +5898,8 @@
         "cs": "Po–Pá 8:30–12:00, 13:30–19:00; so 8:30–13:00",
         "sv": "mån–fre 8.30–12.00, 13.30–19.00; lör 8.30–13.00",
         "da": "man–fre 8.30–12.00, 13.30–19.00; lør 8.30–13.00",
-        "fi": "ma–pe 8.30–12.00, 13.30–19.00; la 8.30–13.00"
+        "fi": "ma–pe 8.30–12.00, 13.30–19.00; la 8.30–13.00",
+        "nb": "man–fre 8.30–12.00, 13.30–19.00; lør 8.30–13.00"
       },
       "url": "https://vetobootz.fr/",
       "source_url": "https://vetobootz.fr/",
@@ -5744,7 +5930,8 @@
         "cs": "Po–Pá 8:00–12:00, 13:30–19:00; so 8:00–12:00, 14:00–18:00; pohotovost nonstop – před cestou zavolejte",
         "sv": "mån–fre 8.00–12.00, 13.30–19.00; lör 8.00–12.00, 14.00–18.00; akutjour dygnet runt – ring innan du kommer",
         "da": "man–fre 8.00–12.00, 13.30–19.00; lør 8.00–12.00, 14.00–18.00; akutvagt døgnet rundt – ring på forhånd",
-        "fi": "ma–pe 8.00–12.00, 13.30–19.00; la 8.00–12.00, 14.00–18.00; päivystys ympäri vuorokauden — soita etukäteen"
+        "fi": "ma–pe 8.00–12.00, 13.30–19.00; la 8.00–12.00, 14.00–18.00; päivystys ympäri vuorokauden — soita etukäteen",
+        "nb": "man–fre 8.00–12.00, 13.30–19.00; lør 8.00–12.00, 14.00–18.00; akuttjeneste hele døgnet – ring på forhånd"
       },
       "url": "https://www.cliniqueveterinairedelabutte.fr/",
       "source_url": "https://www.cliniqueveterinairedelabutte.fr/",
@@ -5775,7 +5962,8 @@
         "cs": "Po–Pá 8:00–19:30; so 8:00–18:00; mimo ordinační dobu zavolejte na kliniku",
         "sv": "mån–fre 8.00–19.30; lör 8.00–18.00; utanför öppettider ring kliniken",
         "da": "man–fre 8.00–19.30; lør 8.00–18.00; uden for åbningstid ring til klinikken",
-        "fi": "ma–pe 8.00–19.30; la 8.00–18.00; virka-ajan ulkopuolella soita klinikalle"
+        "fi": "ma–pe 8.00–19.30; la 8.00–18.00; virka-ajan ulkopuolella soita klinikalle",
+        "nb": "man–fre 8.00–19.30; lør 8.00–18.00; utenom åpningstid ring klinikken"
       },
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-drouaise-chartes-28000-univet/",
       "quote": "En cas d’urgence, en dehors des horaires d’ouverture,",
@@ -5804,7 +5992,8 @@
         "cs": "Po–Pá 8:30–12:00, 14:00–19:00; so 9:00–12:00, 14:00–18:00; služba 7 dní v týdnu 8:00–21:00, v neděli a o svátcích po telefonu 8:30–21:00",
         "sv": "mån–fre 8.30–12.00, 14.00–19.00; lör 9.00–12.00, 14.00–18.00; jour alla dagar 8.00–21.00, söndagar/helgdagar per telefon 8.30–21.00",
         "da": "man–fre 8.30–12.00, 14.00–19.00; lør 9.00–12.00, 14.00–18.00; vagt alle ugens dage 8.00–21.00, søndage/helligdage pr. telefon 8.30–21.00",
-        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 9.00–12.00, 14.00–18.00; päivystys joka päivä 8.00–21.00, sunnuntaisin ja pyhinä puhelimitse 8.30–21.00"
+        "fi": "ma–pe 8.30–12.00, 14.00–19.00; la 9.00–12.00, 14.00–18.00; päivystys joka päivä 8.00–21.00, sunnuntaisin ja pyhinä puhelimitse 8.30–21.00",
+        "nb": "man–fre 8.30–12.00, 14.00–19.00; lør 9.00–12.00, 14.00–18.00; vakt sju dager i uken 8.00–21.00, søndager/helligdager på telefon 8.30–21.00"
       },
       "source_url": "https://www.veterinaire-monveto.com/cliniques/clinique-veterinaire-vetamboise/",
       "quote": "La clinique assure les gardes 7/7 de 8h à 21h, le dimanche et jours fériés sur appel téléphonique de 8h30 à 21h.",
@@ -5835,7 +6024,8 @@
         "cs": "Po–Pá 8:30–12:00, 15:00–19:00; so 8:30–12:00, 14:00–17:00; pohotovost nonstop pro stávající pacienty – nejdříve zavolejte",
         "sv": "mån–fre 8.30–12.00, 15.00–19.00; lör 8.30–12.00, 14.00–17.00; akutfall dygnet runt för befintliga patienter – ring först",
         "da": "man–fre 8.30–12.00, 15.00–19.00; lør 8.30–12.00, 14.00–17.00; akut døgnet rundt for eksisterende patienter – ring først",
-        "fi": "ma–pe 8.30–12.00, 15.00–19.00; la 8.30–12.00, 14.00–17.00; päivystys ympäri vuorokauden nykyisille potilaille — soita ensin"
+        "fi": "ma–pe 8.30–12.00, 15.00–19.00; la 8.30–12.00, 14.00–17.00; päivystys ympäri vuorokauden nykyisille potilaille — soita ensin",
+        "nb": "man–fre 8.30–12.00, 15.00–19.00; lør 8.30–12.00, 14.00–17.00; nødtilfeller hele døgnet for eksisterende pasienter – ring først"
       },
       "url": "https://www.vetescapade.fr/",
       "source_url": "https://www.vetescapade.fr/",
@@ -5866,7 +6056,8 @@
         "cs": "Pohotovost pro psy, kočky a exotická zvířata na klinice v Épinalu; mimo ordinační dobu poradí placený regulační veterinář a spojí vás s veterinářem ve službě",
         "sv": "Akutfall för hundar, katter och NAC på kliniken i Épinal; utanför öppettider ger en samordnande veterinär råd mot avgift och kopplar vidare till jourhavande veterinär",
         "da": "Akut for hunde, katte og NAC på klinikken i Épinal; uden for åbningstid rådgiver en betalt vagtdyrlæge og viderestiller til den vagthavende dyrlæge",
-        "fi": "Päivystys koirille, kissoille ja eksoottisille lemmikeille Épinalin klinikalla; virka-ajan ulkopuolella maksullinen puhelinneuvonnan eläinlääkäri neuvoo ja yhdistää päivystävälle eläinlääkärille"
+        "fi": "Päivystys koirille, kissoille ja eksoottisille lemmikeille Épinalin klinikalla; virka-ajan ulkopuolella maksullinen puhelinneuvonnan eläinlääkäri neuvoo ja yhdistää päivystävälle eläinlääkärille",
+        "nb": "Nødtilfeller for hund, katt og andre kjæledyr (NAC) ved klinikken i Épinal; utenom åpningstid gir en betalt regulerende dyrlege råd og kobler deg videre til vakthavende dyrlege"
       },
       "url": "https://www.clinique-veto.fr/",
       "source_url": "https://www.clinique-veto.fr/",
@@ -5896,7 +6087,8 @@
         "cs": "Po–Pá 8:00–12:00, 14:00–19:00 na objednání; so 8:00–17:00",
         "sv": "mån–fre 8.00–12.00, 14.00–19.00, efter tidsbokning; lör 8.00–17.00",
         "da": "man–fre 8.00–12.00, 14.00–19.00 efter aftale; lør 8.00–17.00",
-        "fi": "ma–pe 8.00–12.00, 14.00–19.00 ajanvarauksella; la 8.00–17.00"
+        "fi": "ma–pe 8.00–12.00, 14.00–19.00 ajanvarauksella; la 8.00–17.00",
+        "nb": "man–fre 8.00–12.00, 14.00–19.00 etter avtale; lør 8.00–17.00"
       },
       "url": "https://www.vetoarche.fr/",
       "source_url": "https://www.vetoarche.fr/",
@@ -5926,7 +6118,8 @@
         "cs": "Po–Pá 8:30–12:00, 13:30–18:30; so 8:30–12:00, 13:30–16:00; pohotovost nonstop (i pro velká zvířata)",
         "sv": "mån–fre 8.30–12.00, 13.30–18.30; lör 8.30–12.00, 13.30–16.00; akutfall dygnet runt (även stora djur)",
         "da": "man–fre 8.30–12.00, 13.30–18.30; lør 8.30–12.00, 13.30–16.00; akut døgnet rundt (også store dyr)",
-        "fi": "ma–pe 8.30–12.00, 13.30–18.30; la 8.30–12.00, 13.30–16.00; päivystys ympäri vuorokauden (myös suuret eläimet)"
+        "fi": "ma–pe 8.30–12.00, 13.30–18.30; la 8.30–12.00, 13.30–16.00; päivystys ympäri vuorokauden (myös suuret eläimet)",
+        "nb": "man–fre 8.30–12.00, 13.30–18.30; lør 8.30–12.00, 13.30–16.00; nødtilfeller hele døgnet (også stordyr)"
       },
       "source_url": "https://www.vetorino.com/veterinaire/charleville-mezieres-08000/",
       "quote": "les vétérinaires assurent la gestion des urgences 24h/24 et 7j/7",
@@ -5957,7 +6150,8 @@
         "cs": "Po–Pá 8:00–18:30; so 8:00–16:00; společná pohotovostní služba nonstop po telefonu – před cestou zavolejte",
         "sv": "mån–fre 8.00–18.30; lör 8.00–16.00; gemensam jourlista dygnet runt per telefon – ring innan du åker",
         "da": "man–fre 8.00–18.30; lør 8.00–16.00; fælles vagtordning døgnet rundt pr. telefon – ring, før du kører",
-        "fi": "ma–pe 8.00–18.30; la 8.00–16.00; yhteiset päivystysvuorot ympäri vuorokauden puhelimitse — soita ennen lähtöä"
+        "fi": "ma–pe 8.00–18.30; la 8.00–16.00; yhteiset päivystysvuorot ympäri vuorokauden puhelimitse — soita ennen lähtöä",
+        "nb": "man–fre 8.00–18.30; lør 8.00–16.00; felles vaktordning hele døgnet på telefon – ring før du drar"
       },
       "url": "https://www.vetosources.fr/",
       "source_url": "https://www.vetosources.fr/urgence",
@@ -5988,7 +6182,8 @@
         "cs": "Po–Pá 8:30–18:30; so 9:00–12:00, 14:00–17:00; návazná péče pro vlastní pacienty nonstop po telefonickém hovoru",
         "sv": "mån–fre 8.30–18.30; lör 9.00–12.00, 14.00–17.00; vård dygnet runt för egna patienter efter telefonsamtal",
         "da": "man–fre 8.30–18.30; lør 9.00–12.00, 14.00–17.00; behandling døgnet rundt for egne patienter efter telefonisk kontakt",
-        "fi": "ma–pe 8.30–18.30; la 9.00–12.00, 14.00–17.00; hoidon jatkuvuus omille potilaille ympäri vuorokauden puhelinsoiton jälkeen"
+        "fi": "ma–pe 8.30–18.30; la 9.00–12.00, 14.00–17.00; hoidon jatkuvuus omille potilaille ympäri vuorokauden puhelinsoiton jälkeen",
+        "nb": "man–fre 8.30–18.30; lør 9.00–12.00, 14.00–17.00; oppfølging hele døgnet for egne pasienter etter telefonsamtale"
       },
       "url": "https://veterinaires-piedalloues.fr/",
       "source_url": "https://veterinaires-piedalloues.fr/",
@@ -6019,7 +6214,8 @@
         "cs": "Pohotovost a služba nonstop po telefonickém hovoru",
         "sv": "Akutfall och jour dygnet runt efter telefonsamtal",
         "da": "Akut og vagt døgnet rundt efter telefonisk kontakt",
-        "fi": "Päivystys ympäri vuorokauden puhelinsoiton jälkeen"
+        "fi": "Päivystys ympäri vuorokauden puhelinsoiton jälkeen",
+        "nb": "Nødtilfeller og vakt hele døgnet etter telefonsamtale"
       },
       "url": "https://www.amandiers-veterinaire-beaune.com/",
       "source_url": "https://www.amandiers-veterinaire-beaune.com/urgences-veterinaires-a-la-clinique-veterinaire-des-amandiers-situee-a-beaune/",
@@ -6050,7 +6246,8 @@
         "cs": "Po–Pá 8:00–12:00, 13:00–18:00; so 8:00–12:30; po 21:00 ve všední dny jsou pohotovostní případy odesílány do Chenôve (Dijon)",
         "sv": "mån–fre 8.00–12.00, 13.00–18.00; lör 8.00–12.30; efter 21.00 på vardagar skickas akutfall till Chenôve (Dijon)",
         "da": "man–fre 8.00–12.00, 13.00–18.00; lør 8.00–12.30; efter kl. 21.00 på hverdage henvises akutte tilfælde til Chenôve (Dijon)",
-        "fi": "ma–pe 8.00–12.00, 13.00–18.00; la 8.00–12.30; arkisin klo 21 jälkeen hätätapaukset ohjataan Chenôveen (Dijon)"
+        "fi": "ma–pe 8.00–12.00, 13.00–18.00; la 8.00–12.30; arkisin klo 21 jälkeen hätätapaukset ohjataan Chenôveen (Dijon)",
+        "nb": "man–fre 8.00–12.00, 13.00–18.00; lør 8.00–12.30; etter kl. 21.00 på hverdager sendes nødtilfeller til Chenôve (Dijon)"
       },
       "source_url": "https://univet.fr/clinique/clinique-veterinaire-chateau-beaune-21200-univet/",
       "quote": "Après 21h en semaine, les urgences sont envoyées vers Chenôve",

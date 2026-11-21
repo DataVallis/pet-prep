@@ -56,7 +56,8 @@
         "cs": "Po–Pá 9:00–19:00, so 9:00–16:00; pohotovost nonstop",
         "sv": "Mån–fre 9.00–19.00, lör 9.00–16.00; akuttjänst dygnet runt",
         "da": "Man–fre 9.00–19.00, lør 9.00–16.00; akutservice døgnet rundt",
-        "fi": "ma–pe 9.00–19.00, la 9.00–16.00; päivystys 24/7"
+        "fi": "ma–pe 9.00–19.00, la 9.00–16.00; päivystys 24/7",
+        "nb": "man–fre 9.00–19.00, lør 9.00–16.00; akuttjeneste hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.deiereklinik.lu/",
@@ -87,7 +88,8 @@
         "cs": "Po–Pá 8:00–20:00, so 8:00–17:00; pohotovost nonstop. Mimo ordinační dobu a o víkendech nejdřív zavolejte: pohotovostní partner EVC Luxembourg +352 27 83 93 00 (ve stejné budově)",
         "sv": "Mån–fre 8.00–20.00, lör 8.00–17.00; akuttjänst dygnet runt. Utanför öppettid och på helger ring först: akutpartner EVC Luxembourg +352 27 83 93 00 (i samma byggnad)",
         "da": "Man–fre 8.00–20.00, lør 8.00–17.00; akutservice døgnet rundt. Uden for åbningstid og i weekender ring først: akutpartner EVC Luxembourg +352 27 83 93 00 (samme bygning)",
-        "fi": "ma–pe 8.00–20.00, la 8.00–17.00; päivystys 24/7. Aukioloaikojen ulkopuolella ja viikonloppuisin soita ensin: päivystyskumppani EVC Luxembourg +352 27 83 93 00 (samassa rakennuksessa)"
+        "fi": "ma–pe 8.00–20.00, la 8.00–17.00; päivystys 24/7. Aukioloaikojen ulkopuolella ja viikonloppuisin soita ensin: päivystyskumppani EVC Luxembourg +352 27 83 93 00 (samassa rakennuksessa)",
+        "nb": "man–fre 8.00–20.00, lør 8.00–17.00; akuttjeneste hele døgnet, alle dager. Utenom åpningstid og i helgene, ring først: samarbeidspartner for nødtilfeller EVC Luxembourg +352 27 83 93 00 (samme bygg)"
       },
       "small_animals": true,
       "url": "https://vet.lu/",
@@ -117,7 +119,8 @@
         "cs": "Pohotovostní veterináři, kteří přijedou k vám domů kdekoli v Lucembursku, každý den v roce, nonstop",
         "sv": "Jourhavande veterinärer som kommer hem till dig var som helst i Luxembourg, årets alla dagar, dygnet runt",
         "da": "Akutdyrlæger, der kommer til dig hjemme overalt i Luxembourg, alle årets dage, døgnet rundt",
-        "fi": "Päivystävät eläinlääkärit tulevat kotiisi kaikkialla Luxemburgissa vuoden jokaisena päivänä, ympäri vuorokauden"
+        "fi": "Päivystävät eläinlääkärit tulevat kotiisi kaikkialla Luxemburgissa vuoden jokaisena päivänä, ympäri vuorokauden",
+        "nb": "Dyrleger på akuttoppdrag som kommer hjem til deg hvor som helst i Luxembourg, hver dag hele året, hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.sosvet.lu/",
@@ -149,7 +152,8 @@
         "cs": "Seznam pohotovostních veterinářů veterinární komory, rozdělený na malá zvířata, hospodářská zvířata a koňovité. Telefon je kancelář komory, nikoli pohotovostní linka",
         "sv": "Veterinärkammarens lista över jourhavande veterinärer, uppdelad på smådjur, lantbruksdjur och hästdjur. Telefonnumret går till kammarens kontor, inte till en akutlinje",
         "da": "Dyrlægekammerets liste over vagthavende dyrlæger, opdelt efter små dyr, husdyr og heste. Telefonen er kammerets kontor, ikke en akuttelefon",
-        "fi": "Eläinlääkärikamarin päivystävien eläinlääkäreiden luettelo pieneläimille, tuotantoeläimille ja hevosille. Puhelin on kamarin toimisto, ei päivystysnumero"
+        "fi": "Eläinlääkärikamarin päivystävien eläinlääkäreiden luettelo pieneläimille, tuotantoeläimille ja hevosille. Puhelin on kamarin toimisto, ei päivystysnumero",
+        "nb": "Dyrlegekammerets liste over dyrleger på vakt, inndelt etter smådyr, produksjonsdyr og hester. Telefonen er kammerets kontor, ikke en vakttelefon"
       }
     },
     {
@@ -174,7 +178,8 @@
         "cs": "Na objednání: Po, Út, Čt 8:30–18:30, Pá 8:30–18:00, ve středu a o víkendech zavřeno. Pohotovost: klinika Krakelshaff +352 52 13 13",
         "sv": "Efter bokad tid: mån, tis, tors 8.30–18.30, fre 8.30–18.00, stängt ons och helger. Akutfall: kliniken Krakelshaff +352 52 13 13",
         "da": "Efter aftale: man, tirs, tors 8.30–18.30, fre 8.30–18.00, lukket onsdag og weekender. Akutte tilfælde: Krakelshaff-klinikken +352 52 13 13",
-        "fi": "Ajanvarauksella: ma, ti, to 8.30–18.30, pe 8.30–18.00, ke ja viikonloppuisin suljettu. Päivystys: Krakelshaffin klinikka +352 52 13 13"
+        "fi": "Ajanvarauksella: ma, ti, to 8.30–18.30, pe 8.30–18.00, ke ja viikonloppuisin suljettu. Päivystys: Krakelshaffin klinikka +352 52 13 13",
+        "nb": "Etter timebestilling: man, tir, tor kl. 8.30–18.30, fre kl. 8.30–18.00, stengt onsdag og i helgene. Nødtilfeller: klinikken Krakelshaff +352 52 13 13"
       },
       "small_animals": true,
       "url": "https://www.veterinaire-jaeger.lu/",
@@ -203,7 +208,8 @@
         "cs": "Ordinační dobu zjistíte telefonicky",
         "sv": "Ring för öppettider",
         "da": "Ring for åbningstider",
-        "fi": "Soita ja kysy aukioloajat"
+        "fi": "Soita ja kysy aukioloajat",
+        "nb": "Ring for å høre åpningstidene"
       },
       "small_animals": true,
       "url": "https://colvet.lu/",
@@ -233,7 +239,8 @@
         "cs": "Na objednání Po–So, v úterý a ve čtvrtek odpoledne zavřeno; návštěvy doma na vyžádání. Mimo ordinační dobu: SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33",
         "sv": "Efter bokad tid mån–lör, stängt tis- och torsdagseftermiddagar; hembesök på begäran. Utanför öppettid: SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33",
         "da": "Efter aftale man–lør, lukket tirsdag og torsdag eftermiddag; hjemmebesøg efter ønske. Uden for åbningstid: SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33",
-        "fi": "Ajanvarauksella ma–la, ti ja to iltapäivisin suljettu; kotikäynnit pyynnöstä. Aukioloaikojen ulkopuolella: SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33"
+        "fi": "Ajanvarauksella ma–la, ti ja to iltapäivisin suljettu; kotikäynnit pyynnöstä. Aukioloaikojen ulkopuolella: SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33",
+        "nb": "Etter timebestilling man–lør, stengt tirsdag og torsdag ettermiddag; hjemmebesøk på forespørsel. Utenfor åpningstid: SOSVET +352 27 510 112, Krakelshaff +352 52 13 13, Bereldange +352 33 40 33"
       },
       "small_animals": true,
       "url": "https://www.vethowald.lu/en",
@@ -263,7 +270,8 @@
         "cs": "Na objednání Po–So; v neděli zavřeno kromě pohotovostí (řiďte se pokyny na záznamníku)",
         "sv": "Efter bokad tid mån–lör; stängt söndag utom för akutfall (följ instruktionerna på telefonsvararen)",
         "da": "Efter aftale man–lør; søndag lukket undtagen ved akutte tilfælde (følg anvisningerne på telefonsvareren)",
-        "fi": "Ajanvarauksella ma–la; su suljettu paitsi päivystystapauksissa (noudata puhelinvastaajan ohjeita)"
+        "fi": "Ajanvarauksella ma–la; su suljettu paitsi päivystystapauksissa (noudata puhelinvastaajan ohjeita)",
+        "nb": "Etter timebestilling man–lør; søndag stengt unntatt for nødtilfeller (følg instruksjonene på telefonsvareren)"
       },
       "small_animals": true,
       "url": "https://www.veterinaire.eu/",
@@ -293,7 +301,8 @@
         "cs": "Sekretariát Po–Čt 8:00–12:30 a 13:30–17:00, v pátek do 16:30, o víkendech zavřeno",
         "sv": "Sekretariat mån–tors 8.00–12.30 och 13.30–17.00, fre till 16.30, stängt helger",
         "da": "Sekretariat man–tors 8.00–12.30 og 13.30–17.00, fre til 16.30, lukket weekender",
-        "fi": "Sihteeristö ma–to 8.00–12.30 ja 13.30–17.00, pe klo 16.30 asti, viikonloppuisin suljettu"
+        "fi": "Sihteeristö ma–to 8.00–12.30 ja 13.30–17.00, pe klo 16.30 asti, viikonloppuisin suljettu",
+        "nb": "Sekretariat man–tor kl. 8.00–12.30 og 13.30–17.00, fre til kl. 16.30, stengt i helger"
       },
       "small_animals": true,
       "url": "https://www.pallevet.lu/en",
@@ -323,7 +332,8 @@
         "cs": "Na objednání Po–Pá 9:00–13:00 a 14:00–18:00",
         "sv": "Efter bokad tid mån–fre 9.00–13.00 och 14.00–18.00",
         "da": "Efter aftale man–fre 9.00–13.00 og 14.00–18.00",
-        "fi": "Ajanvarauksella ma–pe 9.00–13.00 ja 14.00–18.00"
+        "fi": "Ajanvarauksella ma–pe 9.00–13.00 ja 14.00–18.00",
+        "nb": "Etter timebestilling man–fre kl. 9.00–13.00 og 14.00–18.00"
       },
       "small_animals": true,
       "url": "https://pawsandpals.lu/en/",
@@ -353,7 +363,8 @@
         "cs": "Po–Pá 9:00–13:00 a 14:00–18:00, so 9:00–12:00, v neděli a o státních svátcích zavřeno",
         "sv": "Mån–fre 9.00–13.00 och 14.00–18.00, lör 9.00–12.00, stängt söndagar och helgdagar",
         "da": "Man–fre 9.00–13.00 og 14.00–18.00, lør 9.00–12.00, lukket søndage og helligdage",
-        "fi": "ma–pe 9.00–13.00 ja 14.00–18.00, la 9.00–12.00, su ja pyhäpäivinä suljettu"
+        "fi": "ma–pe 9.00–13.00 ja 14.00–18.00, la 9.00–12.00, su ja pyhäpäivinä suljettu",
+        "nb": "man–fre 9.00–13.00 og 14.00–18.00, lør 9.00–12.00, stengt søndager og offentlige helligdager"
       },
       "small_animals": true,
       "url": "https://www.sudvet.lu/",
@@ -383,7 +394,8 @@
         "cs": "Po–Pá 8:30–12:00 a 14:00–19:00, so 8:30–12:00",
         "sv": "Mån–fre 8.30–12.00 och 14.00–19.00, lör 8.30–12.00",
         "da": "Man–fre 8.30–12.00 og 14.00–19.00, lør 8.30–12.00",
-        "fi": "ma–pe 8.30–12.00 ja 14.00–19.00, la 8.30–12.00"
+        "fi": "ma–pe 8.30–12.00 ja 14.00–19.00, la 8.30–12.00",
+        "nb": "man–fre 8.30–12.00 og 14.00–19.00, lør 8.30–12.00"
       },
       "small_animals": true,
       "url": "https://vtr.lu/cabinet/",
@@ -413,7 +425,8 @@
         "cs": "Na objednání Po–Pá 8:00–12:00 a 14:00–19:00, so 9:00–12:00; víkendová pohotovostní linka 621 173 884; pokud je nedostupná, volejte 112",
         "sv": "Efter bokad tid mån–fre 8.00–12.00 och 14.00–19.00, lör 9.00–12.00; akutlinje på helger 621 173 884; om ingen svarar ring 112",
         "da": "Efter aftale man–fre 8.00–12.00 og 14.00–19.00, lør 9.00–12.00; akuttelefon i weekender 621 173 884; hvis ingen svarer, ring 112",
-        "fi": "Ajanvarauksella ma–pe 8.00–12.00 ja 14.00–19.00, la 9.00–12.00; viikonlopun päivystysnumero 621 173 884; jos et saa yhteyttä, soita 112"
+        "fi": "Ajanvarauksella ma–pe 8.00–12.00 ja 14.00–19.00, la 9.00–12.00; viikonlopun päivystysnumero 621 173 884; jos et saa yhteyttä, soita 112",
+        "nb": "Etter timebestilling man–fre kl. 8.00–12.00 og 14.00–19.00, lør kl. 9.00–12.00; helgevakttelefon 621 173 884; hvis ingen svarer, ring 112"
       },
       "small_animals": true,
       "url": "http://www.cvi.lu/",
@@ -443,7 +456,8 @@
         "cs": "Po–Út a Čt–Pá 8:30–12:00 a 14:00–18:30, ve středu 8:30–12:00, so 9:00–12:00 na objednání; pohotovostní linka +352 621 411 847",
         "sv": "Mån–tis och tors–fre 8.30–12.00 och 14.00–18.30, ons 8.30–12.00, lör 9.00–12.00 efter bokad tid; akutlinje +352 621 411 847",
         "da": "Man–tirs og tors–fre 8.30–12.00 og 14.00–18.30, ons 8.30–12.00, lør 9.00–12.00 efter aftale; akuttelefon +352 621 411 847",
-        "fi": "ma–ti ja to–pe 8.30–12.00 ja 14.00–18.30, ke 8.30–12.00, la 9.00–12.00 ajanvarauksella; päivystysnumero +352 621 411 847"
+        "fi": "ma–ti ja to–pe 8.30–12.00 ja 14.00–18.30, ke 8.30–12.00, la 9.00–12.00 ajanvarauksella; päivystysnumero +352 621 411 847",
+        "nb": "man–tir og tor–fre 8.30–12.00 og 14.00–18.30, ons 8.30–12.00, lør 9.00–12.00 etter avtale; nødtelefon +352 621 411 847"
       },
       "small_animals": true,
       "url": "https://www.veterinaire-scaloni.lu/",
@@ -473,7 +487,8 @@
         "cs": "Telefonicky Po–Pá 7:45–19:00, so 8:00–16:00 (so 8:00–12:00 od 1. srpna); mimo ordinační dobu viz stránka pohotovosti veterinární komory",
         "sv": "Telefon mån–fre 7.45–19.00, lör 8.00–16.00 (lör 8.00–12.00 från 1 augusti); utanför öppettid se veterinärkammarens akutsida",
         "da": "Telefon man–fre 7.45–19.00, lør 8.00–16.00 (lør 8.00–12.00 fra 1. august); uden for åbningstid se dyrlægekammerets side om akuthjælp",
-        "fi": "Puhelin ma–pe 7.45–19.00, la 8.00–16.00 (la 8.00–12.00 elokuun 1. päivästä alkaen); aukioloaikojen ulkopuolella katso eläinlääkärikamarin päivystyssivu"
+        "fi": "Puhelin ma–pe 7.45–19.00, la 8.00–16.00 (la 8.00–12.00 elokuun 1. päivästä alkaen); aukioloaikojen ulkopuolella katso eläinlääkärikamarin päivystyssivu",
+        "nb": "Telefon man–fre 7.45–19.00, lør 8.00–16.00 (lør 8.00–12.00 fra 1. august); utenom åpningstid se dyrlegekammerets side for akuttjeneste"
       },
       "small_animals": true,
       "url": "https://www.cabinet-veterinaire.lu/en/",
@@ -503,7 +518,8 @@
         "cs": "Ordinační dobu zjistíte telefonicky",
         "sv": "Ring för öppettider",
         "da": "Ring for åbningstider",
-        "fi": "Soita ja kysy aukioloajat"
+        "fi": "Soita ja kysy aukioloajat",
+        "nb": "Ring for å høre åpningstidene"
       },
       "small_animals": true,
       "source_url": "https://mertert.lu/social-2/urgences/veterinaire/",
@@ -532,7 +548,8 @@
         "cs": "Ordinační dobu zjistíte telefonicky",
         "sv": "Ring för öppettider",
         "da": "Ring for åbningstider",
-        "fi": "Soita ja kysy aukioloajat"
+        "fi": "Soita ja kysy aukioloajat",
+        "nb": "Ring for å høre åpningstidene"
       },
       "small_animals": true,
       "source_url": "https://mertert.lu/social-2/urgences/veterinaire/",
@@ -561,7 +578,8 @@
         "cs": "Ordinační dobu zjistíte telefonicky",
         "sv": "Ring för öppettider",
         "da": "Ring for åbningstider",
-        "fi": "Soita ja kysy aukioloajat"
+        "fi": "Soita ja kysy aukioloajat",
+        "nb": "Ring for å høre åpningstidene"
       },
       "small_animals": true,
       "source_url": "https://mertert.lu/social-2/urgences/veterinaire/",
@@ -590,7 +608,8 @@
         "cs": "Ordinační dobu zjistíte telefonicky",
         "sv": "Ring för öppettider",
         "da": "Ring for åbningstider",
-        "fi": "Soita ja kysy aukioloajat"
+        "fi": "Soita ja kysy aukioloajat",
+        "nb": "Ring for å høre åpningstidene"
       },
       "small_animals": true,
       "source_url": "https://mertert.lu/social-2/urgences/veterinaire/",
@@ -618,7 +637,8 @@
         "cs": "Výjezdní veterinář pro koně, pony a osly; dojíždí do stájí",
         "sv": "Mobil veterinär för hästar, ponnyer och åsnor; besöker stall",
         "da": "Mobil dyrlæge for heste, ponyer og æsler; kommer ud til stalde",
-        "fi": "Liikkuva hevosten, ponien ja aasien eläinlääkäri; käy talleilla"
+        "fi": "Liikkuva hevosten, ponien ja aasien eläinlääkäri; käy talleilla",
+        "nb": "Mobil dyrlege for hest, ponni og esel; besøker stallene"
       },
       "small_animals": false,
       "url": "https://www.equinevet.lu",

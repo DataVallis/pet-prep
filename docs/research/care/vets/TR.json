@@ -116,7 +116,8 @@
         "cs": "Pohotovostní služba otevřena nonstop, 7 dní v týdnu, včetně víkendů a státních svátků",
         "sv": "Akutmottagning öppen dygnet runt, alla dagar i veckan, även på helger och helgdagar",
         "da": "Akutvagt døgnåben, alle ugens dage, også weekender og helligdage",
-        "fi": "Päivystyspalvelu auki 24 h, 7 vrk viikossa, myös viikonloppuisin ja pyhäpäivinä"
+        "fi": "Päivystyspalvelu auki 24 h, 7 vrk viikossa, myös viikonloppuisin ja pyhäpäivinä",
+        "nb": "Akuttjeneste åpen hele døgnet, sju dager i uken, også i helger og på helligdager"
       },
       "small_animals": true,
       "url": "https://www.anatoliapet.com/",
@@ -146,7 +147,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu, bez objednání; telefon i na WhatsApp",
         "sv": "Öppet dygnet runt, alla dagar i veckan, ingen tidsbokning behövs; telefon även på WhatsApp",
         "da": "Døgnåben, alle ugens dage, uden tidsbestilling; telefonen også på WhatsApp",
-        "fi": "Auki 24 h, 7 vrk viikossa, ajanvarausta ei tarvita; puhelin myös WhatsAppissa"
+        "fi": "Auki 24 h, 7 vrk viikossa, ajanvarausta ei tarvita; puhelin myös WhatsAppissa",
+        "nb": "Åpent hele døgnet, alle dager i uken, ingen timebestilling nødvendig; telefon også på WhatsApp"
       },
       "small_animals": true,
       "url": "https://animalpark.tr/vet/",
@@ -176,7 +178,8 @@
         "cs": "Veterinární pohotovost nonstop",
         "sv": "Akut veterinärvård dygnet runt",
         "da": "Akut dyrlægevagt døgnet rundt",
-        "fi": "Eläinlääkärin päivystyspalvelu 24/7"
+        "fi": "Eläinlääkärin päivystyspalvelu 24/7",
+        "nb": "Dyrlegevakt hele døgnet, alle dager"
       },
       "small_animals": true,
       "url": "https://www.gloriavet.com/",
@@ -206,7 +209,8 @@
         "cs": "Nonstop pohotovostní služba pro Kadıköy, Üsküdar, Acıbadem a Altunizade",
         "sv": "Akutjour dygnet runt för Kadıköy, Üsküdar, Acıbadem och Altunizade",
         "da": "Akutvagt døgnet rundt for Kadıköy, Üsküdar, Acıbadem og Altunizade",
-        "fi": "Päivystyspalvelu ympäri vuorokauden Kadıköyn, Üsküdarin, Acıbademin ja Altunizaden alueella"
+        "fi": "Päivystyspalvelu ympäri vuorokauden Kadıköyn, Üsküdarin, Acıbademin ja Altunizaden alueella",
+        "nb": "Døgnåpen akuttvakt for Kadıköy, Üsküdar, Acıbadem og Altunizade"
       },
       "small_animals": true,
       "url": "https://vet216kosuyolu.com/vet216-uskudar-veteriner-klinigi/",
@@ -236,7 +240,8 @@
         "cs": "Otevřeno nonstop pro kočky a psy",
         "sv": "Öppet dygnet runt för katter och hundar",
         "da": "Døgnåben for katte og hunde",
-        "fi": "Auki 24/7 kissoille ja koirille"
+        "fi": "Auki 24/7 kissoille ja koirille",
+        "nb": "Åpent hele døgnet, alle dager, for katter og hunder"
       },
       "small_animals": true,
       "url": "https://www.pulseveteriner.com/",
@@ -267,7 +272,8 @@
         "cs": "Pohotovostní veterinární péče každý den nonstop",
         "sv": "Akut och jourhavande veterinärvård alla dagar, dygnet runt",
         "da": "Akut dyrlægehjælp og vagt hver dag, døgnet rundt",
-        "fi": "Päivystys ja päivystävän eläinlääkärin hoito joka päivä, 24 h"
+        "fi": "Päivystys ja päivystävän eläinlääkärin hoito joka päivä, 24 h",
+        "nb": "Akutt- og vakttjeneste hos dyrlege alle dager, hele døgnet"
       },
       "small_animals": true,
       "url": "https://beylerbeyiveterinerklinigi.com/",
@@ -298,7 +304,8 @@
         "cs": "Veterinární pohotovost nonstop; WhatsApp +90 553 939 47 77",
         "sv": "Akut veterinärvård dygnet runt; WhatsApp +90 553 939 47 77",
         "da": "Akut dyrlægevagt døgnet rundt; WhatsApp +90 553 939 47 77",
-        "fi": "Eläinlääkärin päivystyspalvelu 24/7; WhatsApp +90 553 939 47 77"
+        "fi": "Eläinlääkärin päivystyspalvelu 24/7; WhatsApp +90 553 939 47 77",
+        "nb": "Akutt dyrlegetjeneste hele døgnet; WhatsApp +90 553 939 47 77"
       },
       "small_animals": true,
       "url": "https://www.hospetia.com/",
@@ -329,7 +336,8 @@
         "cs": "Otevřeno nonstop, včetně pohotovostní péče",
         "sv": "Öppet dygnet runt, med akutvård",
         "da": "Døgnåben, akut hjælp døgnet rundt",
-        "fi": "Auki 24 h, päivystys 24/7"
+        "fi": "Auki 24 h, päivystys 24/7",
+        "nb": "Åpent hele døgnet, akuttbehandling alle dager"
       },
       "small_animals": true,
       "url": "https://besiktasveteriner.com/",
@@ -359,7 +367,8 @@
         "cs": "Pohotovostní poliklinika nonstop pro kočky a psy; mobil +90 538 667 83 61",
         "sv": "Akutmottagning dygnet runt för katter och hundar; mobil +90 538 667 83 61",
         "da": "Akut poliklinik døgnet rundt for katte og hunde; mobil +90 538 667 83 61",
-        "fi": "Kissojen ja koirien päivystyspoliklinikka 24/7; matkapuhelin +90 538 667 83 61"
+        "fi": "Kissojen ja koirien päivystyspoliklinikka 24/7; matkapuhelin +90 538 667 83 61",
+        "nb": "Akuttpoliklinikk for katter og hunder hele døgnet; mobil +90 538 667 83 61"
       },
       "small_animals": true,
       "url": "https://leventveteriner.com/",
@@ -390,7 +399,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní linka +90 552 278 11 00",
         "sv": "Öppet dygnet runt, alla dagar i veckan; akutlinje +90 552 278 11 00",
         "da": "Døgnåben, alle ugens dage; akutlinje +90 552 278 11 00",
-        "fi": "Auki 24 h, 7 vrk viikossa; päivystysnumero +90 552 278 11 00"
+        "fi": "Auki 24 h, 7 vrk viikossa; päivystysnumero +90 552 278 11 00",
+        "nb": "Åpent hele døgnet, alle dager i uken; akuttelefon +90 552 278 11 00"
       },
       "small_animals": true,
       "url": "https://housevetveteriner.com/",
@@ -420,7 +430,8 @@
         "cs": "Otevřeno nonstop každý den v týdnu",
         "sv": "Öppet dygnet runt, alla veckodagar",
         "da": "Døgnåben alle ugens dage",
-        "fi": "Auki 24 h viikon jokaisena päivänä"
+        "fi": "Auki 24 h viikon jokaisena päivänä",
+        "nb": "Åpent hele døgnet, alle ukedager"
       },
       "small_animals": true,
       "url": "https://patipalace.com/",
@@ -450,7 +461,8 @@
         "cs": "Otevřeno nonstop bez přestávky",
         "sv": "Öppet dygnet runt utan avbrott",
         "da": "Åben døgnet rundt uden pause",
-        "fi": "Auki 24/7 keskeytyksittä"
+        "fi": "Auki 24/7 keskeytyksittä",
+        "nb": "Åpent hele døgnet, alle dager, uten avbrudd"
       },
       "small_animals": true,
       "url": "https://www.maslakvetzoo.com/",
@@ -479,7 +491,8 @@
         "cs": "Poliklinika nonstop s jednotkou intenzivní péče; WhatsApp nonstop; mobil +90 506 344 05 05",
         "sv": "Klinik med intensivvårdsavdelning dygnet runt; WhatsApp dygnet runt; mobil +90 506 344 05 05",
         "da": "Poliklinik døgnet rundt med intensivafdeling; WhatsApp døgnet rundt; mobil +90 506 344 05 05",
-        "fi": "Poliklinikka ja tehohoitoyksikkö 24/7; WhatsApp 24/7; matkapuhelin +90 506 344 05 05"
+        "fi": "Poliklinikka ja tehohoitoyksikkö 24/7; WhatsApp 24/7; matkapuhelin +90 506 344 05 05",
+        "nb": "Poliklinikk med intensivavdeling hele døgnet; WhatsApp hele døgnet; mobil +90 506 344 05 05"
       },
       "small_animals": true,
       "url": "https://leventcityveteriner.com/sariyer/",
@@ -510,7 +523,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně nocí, víkendů a státních svátků",
         "sv": "Öppet dygnet runt, alla dagar i veckan, även nätter, helger och helgdagar",
         "da": "Døgnåben, alle ugens dage, også nætter, weekender og helligdage",
-        "fi": "Auki 24 h, 7 vrk viikossa, myös öisin, viikonloppuisin ja pyhäpäivinä"
+        "fi": "Auki 24 h, 7 vrk viikossa, myös öisin, viikonloppuisin ja pyhäpäivinä",
+        "nb": "Åpent hele døgnet, alle dager i uken, også netter, helger og offentlige helligdager"
       },
       "small_animals": true,
       "url": "https://www.vet34.com/",
@@ -541,7 +555,8 @@
         "cs": "Otevřeno nonstop každý den, včetně pohotovosti a nedělí; telefon i na WhatsApp",
         "sv": "Öppet dygnet runt alla dagar, även för akutfall och på söndagar; telefon även på WhatsApp",
         "da": "Døgnåben hver dag, også akut og om søndagen; telefonen også på WhatsApp",
-        "fi": "Auki 24 h joka päivä, myös päivystyspotilaille ja sunnuntaisin; puhelin myös WhatsAppissa"
+        "fi": "Auki 24 h joka päivä, myös päivystyspotilaille ja sunnuntaisin; puhelin myös WhatsAppissa",
+        "nb": "Åpent hele døgnet alle dager, også for nødtilfeller og på søndager; telefon også på WhatsApp"
       },
       "small_animals": true,
       "url": "https://animalove-basaksehir-veteriner.com/",
@@ -571,7 +586,8 @@
         "cs": "Otevřeno každý den nonstop",
         "sv": "Öppet alla dagar, dygnet runt",
         "da": "Døgnåben hver dag",
-        "fi": "Auki joka päivä, 24 h"
+        "fi": "Auki joka päivä, 24 h",
+        "nb": "Åpent hele døgnet, alle dager"
       },
       "small_animals": true,
       "url": "https://sirinpati.com/bagcilar-acil-veteriner/",
@@ -600,7 +616,8 @@
         "cs": "Pohotovostní veterinární klinika nonstop, 7 dní v týdnu; vůz pro návštěvy doma",
         "sv": "Jourhavande veterinärklinik dygnet runt, alla dagar i veckan; fordon för hembesök",
         "da": "Dyrlægevagt døgnet rundt, alle ugens dage; bil til hjemmebesøg",
-        "fi": "Päivystävä eläinlääkäriklinikka 24 h, 7 vrk viikossa; kotikäyntiauto"
+        "fi": "Päivystävä eläinlääkäriklinikka 24 h, 7 vrk viikossa; kotikäyntiauto",
+        "nb": "Døgnåpen vaktklinikk, alle dager i uken; bil for hjemmebesøk"
       },
       "small_animals": true,
       "url": "https://www.auraveteriner.com/",
@@ -631,7 +648,8 @@
         "cs": "Veterinární pohotovost nonstop",
         "sv": "Akut veterinärvård dygnet runt",
         "da": "Akut dyrlægevagt døgnet rundt",
-        "fi": "Eläinlääkärin päivystyspalvelu 24/7"
+        "fi": "Eläinlääkärin päivystyspalvelu 24/7",
+        "nb": "Akutt dyrlegetjeneste hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.petivveteriner.com/beylikduzu",
@@ -660,7 +678,8 @@
         "cs": "Otevírací dobu si před cestou ověřte telefonicky",
         "sv": "Ring innan du kommer för att bekräfta öppettiderna",
         "da": "Ring på forhånd for at få bekræftet åbningstiderne",
-        "fi": "Varmista aukioloajat soittamalla etukäteen"
+        "fi": "Varmista aukioloajat soittamalla etukäteen",
+        "nb": "Ring på forhånd for å bekrefte åpningstidene"
       },
       "small_animals": true,
       "url": "https://www.atasehirveteriner.com/",
@@ -690,7 +709,8 @@
         "cs": "Otevřeno každý den 9:00–20:00; číslo pohotovostního veterináře +90 552 666 57 47",
         "sv": "Öppet alla dagar 09.00–20.00; jourhavande veterinärens nummer +90 552 666 57 47",
         "da": "Åben hver dag 09.00–20.00; dyrlægevagtens nummer +90 552 666 57 47",
-        "fi": "Auki joka päivä 9.00–20.00; päivystävän eläinlääkärin numero +90 552 666 57 47"
+        "fi": "Auki joka päivä 9.00–20.00; päivystävän eläinlääkärin numero +90 552 666 57 47",
+        "nb": "Åpent alle dager kl. 09.00–20.00; vakttelefon for dyrlege +90 552 666 57 47"
       },
       "small_animals": true,
       "url": "https://leylekvet.com/",
@@ -720,7 +740,8 @@
         "cs": "Po–So 10:00–21:00, ne 11:00–19:00; v případě pohotovosti nejdřív zavolejte",
         "sv": "Mån–lör 10.00–21.00, sön 11.00–19.00; ring innan du kommer vid akutfall",
         "da": "man–lør 10.00–21.00, søn 11.00–19.00; ring på forhånd ved akutte tilfælde",
-        "fi": "ma–la 10.00–21.00, su 11.00–19.00; hätätapauksissa soita etukäteen"
+        "fi": "ma–la 10.00–21.00, su 11.00–19.00; hätätapauksissa soita etukäteen",
+        "nb": "man–lør 10.00–21.00, søn 11.00–19.00; ring på forhånd ved nødtilfeller"
       },
       "small_animals": true,
       "url": "https://citypetveterinerklinigi.com/",
@@ -750,7 +771,8 @@
         "cs": "Denně 10:30–21:00; veterinář na místě do půlnoci",
         "sv": "Dagligen 10.30–21.00; veterinär på plats till midnatt",
         "da": "Dagligt 10.30–21.00; dyrlæge til stede til midnat",
-        "fi": "Joka päivä 10.30–21.00; eläinlääkäri paikalla keskiyöhön asti"
+        "fi": "Joka päivä 10.30–21.00; eläinlääkäri paikalla keskiyöhön asti",
+        "nb": "Alle dager 10.30–21.00; dyrlege på stedet til midnatt"
       },
       "small_animals": true,
       "url": "https://cevizlibagvet.com/fatih-veteriner-klinigi/",
@@ -780,7 +802,8 @@
         "cs": "Po–So 9:30–24:00, ne 10:00–20:00",
         "sv": "Mån–lör 09.30–24.00, sön 10.00–20.00",
         "da": "man–lør 09.30–00.00, søn 10.00–20.00",
-        "fi": "ma–la 9.30–24.00, su 10.00–20.00"
+        "fi": "ma–la 9.30–24.00, su 10.00–20.00",
+        "nb": "man–lør 09.30–00.00, søn 10.00–20.00"
       },
       "small_animals": true,
       "url": "https://www.floryaveterinerklinigi.com/iletisim",
@@ -808,7 +831,8 @@
         "cs": "Městská jednotka pro toulavá zvířata; střídavě Büyükada (Po, St), Burgazada (Út), Kınalıada (Čt), Heybeliada (Pá); objednání telefonicky",
         "sv": "Kommunal enhet för gatudjur; roterar mellan Büyükada (mån, ons), Burgazada (tis), Kınalıada (tors), Heybeliada (fre); tidsbokning via telefon",
         "da": "Kommunal enhed for herreløse dyr; skifter mellem Büyükada (man, ons), Burgazada (tirs), Kınalıada (tors), Heybeliada (fre); tidsbestilling på telefon",
-        "fi": "Kunnallinen kulkueläinyksikkö; kiertää Büyükadassa (ma, ke), Burgazadassa (ti), Kınalıadassa (to) ja Heybeliadassa (pe); ajanvaraus puhelimitse"
+        "fi": "Kunnallinen kulkueläinyksikkö; kiertää Büyükadassa (ma, ke), Burgazadassa (ti), Kınalıadassa (to) ja Heybeliadassa (pe); ajanvaraus puhelimitse",
+        "nb": "Kommunal enhet for gatedyr; roterer mellom Büyükada (man, ons), Burgazada (tirs), Kınalıada (tors), Heybeliada (fre); timebestilling på telefon"
       },
       "small_animals": false,
       "url": "https://adalar.bel.tr/duyurular/veterinerlik-birimi-calisma-programi/",
@@ -838,7 +862,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně nocí a víkendů; kontakt přes WhatsApp",
         "sv": "Öppet dygnet runt, alla dagar i veckan, även nätter och helger; kontakt via WhatsApp",
         "da": "Døgnåben, alle ugens dage, også nætter og weekender; kontakt via WhatsApp",
-        "fi": "Auki 24 h, 7 vrk viikossa, myös öisin ja viikonloppuisin; yhteydenotto WhatsAppin kautta"
+        "fi": "Auki 24 h, 7 vrk viikossa, myös öisin ja viikonloppuisin; yhteydenotto WhatsAppin kautta",
+        "nb": "Åpent hele døgnet, alle dager i uken, også netter og helger; kontakt via WhatsApp"
       },
       "small_animals": true,
       "url": "https://umraniyeveterinerklinigi.com/",
@@ -869,7 +894,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní klinika",
         "sv": "Öppet dygnet runt, alla dagar i veckan; akutklinik",
         "da": "Døgnåben, alle ugens dage; akutklinik",
-        "fi": "Auki 24 h, 7 vrk viikossa; päivystysklinikka"
+        "fi": "Auki 24 h, 7 vrk viikossa; päivystysklinikka",
+        "nb": "Åpent hele døgnet, alle dager i uken; akuttklinikk"
       },
       "small_animals": true,
       "url": "https://www.limavet.com/",
@@ -897,7 +923,8 @@
         "cs": "Nonstop provoz; před cestou zavolejte",
         "sv": "Service dygnet runt; ring innan du kommer",
         "da": "Åben døgnet rundt; ring på forhånd",
-        "fi": "Palvelu ympäri vuorokauden (24/7); soita etukäteen"
+        "fi": "Palvelu ympäri vuorokauden (24/7); soita etukäteen",
+        "nb": "Døgnåpen tjeneste (sju dager i uken, hele døgnet); ring på forhånd"
       },
       "small_animals": true,
       "url": "https://www.veticana.com/",
@@ -928,7 +955,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://www.marioveteriner.com/",
@@ -958,7 +986,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu; nonstop pohotovostní telefonní linka",
         "sv": "Öppet dygnet runt, alla dagar i veckan; akuttelefon dygnet runt",
         "da": "Døgnåben, alle ugens dage; akuttelefon døgnet rundt",
-        "fi": "Auki 24 h, 7 vrk viikossa; päivystyspuhelin 24 h"
+        "fi": "Auki 24 h, 7 vrk viikossa; päivystyspuhelin 24 h",
+        "nb": "Åpent hele døgnet, alle dager i uken; døgnåpen akuttelefon"
       },
       "small_animals": true,
       "url": "http://maywellveteriner.com/iletisim/",
@@ -988,7 +1017,8 @@
         "cs": "Otevřeno každý den nonstop",
         "sv": "Öppet alla dagar, dygnet runt",
         "da": "Døgnåben hver dag",
-        "fi": "Auki joka päivä, 24/7"
+        "fi": "Auki joka päivä, 24/7",
+        "nb": "Åpent hele døgnet, alle dager"
       },
       "small_animals": true,
       "url": "https://marcaveteriner.com/",
@@ -1019,7 +1049,8 @@
         "cs": "Otevřeno každý den nonstop; jednotka intenzivní péče",
         "sv": "Öppet alla dagar, dygnet runt; intensivvårdsavdelning",
         "da": "Døgnåben hver dag; intensivafdeling",
-        "fi": "Auki joka päivä, 24 h; tehohoitoyksikkö"
+        "fi": "Auki joka päivä, 24 h; tehohoitoyksikkö",
+        "nb": "Åpent hele døgnet, alle dager; intensivavdeling"
       },
       "small_animals": true,
       "url": "https://www.vetuniverseveteriner.com/",
@@ -1049,7 +1080,8 @@
         "cs": "Pohotovostní služba nonstop, 7 dní v týdnu",
         "sv": "Akutmottagning dygnet runt, alla dagar i veckan",
         "da": "Akutvagt døgnet rundt, alle ugens dage",
-        "fi": "Päivystyspalvelu 24 h, 7 vrk viikossa"
+        "fi": "Päivystyspalvelu 24 h, 7 vrk viikossa",
+        "nb": "Akuttjeneste hele døgnet, sju dager i uken"
       },
       "small_animals": true,
       "url": "https://www.dozveterinerklinigi.com/",
@@ -1080,7 +1112,8 @@
         "cs": "Otevřeno 7 dní v týdnu nonstop (pohotovost)",
         "sv": "Öppet alla dagar i veckan, dygnet runt (akut)",
         "da": "Åben alle ugens dage, døgnet rundt (akut)",
-        "fi": "Auki 7 vrk viikossa, 24 h (päivystys)"
+        "fi": "Auki 7 vrk viikossa, 24 h (päivystys)",
+        "nb": "Åpent sju dager i uken, hele døgnet (nødtilfeller)"
       },
       "small_animals": true,
       "url": "https://cihangirpark.com.tr/",
@@ -1110,7 +1143,8 @@
         "cs": "Otevřeno nonstop, pohotovostní linka nonstop",
         "sv": "Öppet dygnet runt, med akutlinje dygnet runt",
         "da": "Åben døgnet rundt, akutlinje døgnet rundt",
-        "fi": "Auki ympäri vuorokauden, päivystyspuhelin 24/7"
+        "fi": "Auki ympäri vuorokauden, päivystyspuhelin 24/7",
+        "nb": "Åpent døgnet rundt, akuttlinje alle dager"
       },
       "small_animals": true,
       "url": "https://www.petivveteriner.com/avcilar",
@@ -1141,7 +1175,8 @@
         "cs": "Otevírací dobu zjistíte telefonicky",
         "sv": "Ring innan du kommer för att få veta öppettiderna",
         "da": "Ring på forhånd for åbningstider",
-        "fi": "Tarkista aukioloajat soittamalla"
+        "fi": "Tarkista aukioloajat soittamalla",
+        "nb": "Ring på forhånd for å høre åpningstidene"
       },
       "small_animals": true,
       "url": "https://istanimal.com/",
@@ -1171,7 +1206,8 @@
         "cs": "Denně 9:30–21:30; pohotovostní případy nonstop telefonicky",
         "sv": "Dagligen 09.30–21.30; akutfall via telefon dygnet runt",
         "da": "Dagligt 09.30–21.30; akutte tilfælde på telefon døgnet rundt",
-        "fi": "Joka päivä 9.30–21.30; päivystystapaukset puhelimitse 24/7"
+        "fi": "Joka päivä 9.30–21.30; päivystystapaukset puhelimitse 24/7",
+        "nb": "Alle dager 09.30–21.30; nødtilfeller hele døgnet på telefon"
       },
       "small_animals": true,
       "url": "https://vetpartnerveteriner.com/",
@@ -1200,7 +1236,8 @@
         "cs": "Po–So 10:00–23:00; noční a víkendová pohotovostní podpora",
         "sv": "Mån–lör 10.00–23.00; akutstöd nattetid och på helger",
         "da": "man–lør 10.00–23.00; akut hjælp om natten og i weekenden",
-        "fi": "ma–la 10.00–23.00; päivystystuki öisin ja viikonloppuisin"
+        "fi": "ma–la 10.00–23.00; päivystystuki öisin ja viikonloppuisin",
+        "nb": "man–lør 10.00–23.00; akuttstøtte natt og helg"
       },
       "small_animals": true,
       "url": "https://www.vetix.com.tr/",
@@ -1230,7 +1267,8 @@
         "cs": "Denně 10:00–20:30",
         "sv": "Dagligen 10.00–20.30",
         "da": "Dagligt 10.00–20.30",
-        "fi": "Joka päivä 10.00–20.30"
+        "fi": "Joka päivä 10.00–20.30",
+        "nb": "Alle dager 10.00–20.30"
       },
       "small_animals": true,
       "url": "https://www.vetumayveteriner.com/",
@@ -1259,7 +1297,8 @@
         "cs": "Denně 9:00–21:00",
         "sv": "Dagligen 09.00–21.00",
         "da": "Dagligt 09.00–21.00",
-        "fi": "Joka päivä 9.00–21.00"
+        "fi": "Joka päivä 9.00–21.00",
+        "nb": "Alle dager 09.00–21.00"
       },
       "small_animals": true,
       "url": "https://www.petisveteriner.com/acilveteriner",
@@ -1289,7 +1328,8 @@
         "cs": "Pro pohotovost k zastižení kdykoli (telefonický kontakt nonstop)",
         "sv": "Nåbar vid akutfall när som helst (telefonkontakt dygnet runt)",
         "da": "Kan kontaktes ved akutte tilfælde når som helst (telefon døgnet rundt)",
-        "fi": "Tavoitettavissa hätätapauksissa milloin tahansa (puhelimitse 24/7)"
+        "fi": "Tavoitettavissa hätätapauksissa milloin tahansa (puhelimitse 24/7)",
+        "nb": "Kan kontaktes for nødtilfeller når som helst (telefon hele døgnet, alle dager)"
       },
       "small_animals": true,
       "url": "https://sisliveterinerklinigi.com/",
@@ -1319,7 +1359,8 @@
         "cs": "Po–So 9:30–20:00, ne 12:00–16:00",
         "sv": "Mån–lör 09.30–20.00, sön 12.00–16.00",
         "da": "man–lør 09.30–20.00, søn 12.00–16.00",
-        "fi": "ma–la 9.30–20.00, su 12.00–16.00"
+        "fi": "ma–la 9.30–20.00, su 12.00–16.00",
+        "nb": "man–lør 9.30–20.00, søn 12.00–16.00"
       },
       "small_animals": true,
       "url": "https://junoveteriner.com/",
@@ -1349,7 +1390,8 @@
         "cs": "Po–So 9:30–19:30, v neděli zavřeno",
         "sv": "Mån–lör 09.30–19.30, söndag stängt",
         "da": "man–lør 09.30–19.30, lukket om søndagen",
-        "fi": "ma–la 9.30–19.30, su suljettu"
+        "fi": "ma–la 9.30–19.30, su suljettu",
+        "nb": "man–lør 9.30–19.30, stengt søndag"
       },
       "small_animals": true,
       "url": "https://www.mecidiyekoyveterinerklinigi.com.tr/",
@@ -1379,7 +1421,8 @@
         "cs": "Telefonické informace a doporučení nonstop; před cestou zavolejte.",
         "sv": "Telefoninformation och remittering dygnet runt; ring innan du kommer",
         "da": "Telefonisk information og henvisning døgnet rundt; ring på forhånd",
-        "fi": "Puhelinneuvonta ja jatkohoitoon ohjaus 24/7; soita etukäteen"
+        "fi": "Puhelinneuvonta ja jatkohoitoon ohjaus 24/7; soita etukäteen",
+        "nb": "Telefoninformasjon og henvisning hele døgnet, alle dager; ring på forhånd"
       },
       "small_animals": true,
       "url": "https://bomontiveteriner.com/iletisim/",
@@ -1408,7 +1451,8 @@
         "cs": "Ordinační dobu zjistíte telefonicky",
         "sv": "Ring för att få veta öppettiderna",
         "da": "Ring for åbningstider",
-        "fi": "Soita ja kysy aukioloajat"
+        "fi": "Soita ja kysy aukioloajat",
+        "nb": "Ring for å høre åpningstidene"
       },
       "small_animals": true,
       "url": "https://www.whitevet.com.tr/",
@@ -1438,7 +1482,8 @@
         "cs": "Denně 10:00–22:00; mimo tuto dobu veterinář v pohotovosti telefonicky, před návštěvou zavolejte.",
         "sv": "Dagligen 10.00–22.00; jourhavande veterinär via telefon utanför öppettiderna, ring innan du kommer",
         "da": "Dagligt 10.00–22.00; dyrlægevagt på telefon uden for åbningstid, ring før besøg",
-        "fi": "Joka päivä 10.00–22.00; päivystävä eläinlääkäri puhelimitse aukioloajan ulkopuolella, soita ennen tuloa"
+        "fi": "Joka päivä 10.00–22.00; päivystävä eläinlääkäri puhelimitse aukioloajan ulkopuolella, soita ennen tuloa",
+        "nb": "Alle dager 10.00–22.00; vakthavende dyrlege på telefon utenom åpningstid, ring før du kommer"
       },
       "small_animals": true,
       "url": "https://www.vetorium.com/",
@@ -1466,7 +1511,8 @@
         "cs": "Pohotovostní podpora nonstop; před cestou zavolejte.",
         "sv": "Akutstöd dygnet runt; ring innan du kommer",
         "da": "Akut hjælp døgnet rundt; ring på forhånd",
-        "fi": "Päivystystuki 24/7; soita etukäteen"
+        "fi": "Päivystystuki 24/7; soita etukäteen",
+        "nb": "Akuttilbud hele døgnet, alle dager; ring på forhånd"
       },
       "small_animals": true,
       "url": "https://bambiveteriner.com/",
@@ -1496,7 +1542,8 @@
         "cs": "Příjem pacientů 10:00–20:00; hospitalizace a pohotovostní operace mimo tuto dobu; před cestou zavolejte.",
         "sv": "Patienter tas emot 10.00–20.00; slutenvård och akutkirurgi utanför dessa tider; ring innan du kommer",
         "da": "Modtagelse af patienter 10.00–20.00; indlæggelse og akut kirurgi uden for disse tider; ring på forhånd",
-        "fi": "Potilaiden vastaanotto 10.00–20.00; vuodeosastohoito ja päivystysleikkaukset tämän ajan ulkopuolella; soita etukäteen"
+        "fi": "Potilaiden vastaanotto 10.00–20.00; vuodeosastohoito ja päivystysleikkaukset tämän ajan ulkopuolella; soita etukäteen",
+        "nb": "Pasientmottak kl. 10.00–20.00; innleggelse og akuttkirurgi utenom dette tidsrommet; ring på forhånd"
       },
       "small_animals": true,
       "url": "https://www.sirinvet.com/",
@@ -1526,7 +1573,8 @@
         "cs": "Ordinační dobu zjistíte telefonicky",
         "sv": "Ring för att få veta öppettiderna",
         "da": "Ring for åbningstider",
-        "fi": "Soita ja kysy aukioloajat"
+        "fi": "Soita ja kysy aukioloajat",
+        "nb": "Ring for å høre åpningstidene"
       },
       "small_animals": true,
       "url": "https://www.vet-center.com/",
@@ -1555,7 +1603,8 @@
         "cs": "Ordinační dobu zjistíte telefonicky",
         "sv": "Ring för att få veta öppettiderna",
         "da": "Ring for åbningstider",
-        "fi": "Soita ja kysy aukioloajat"
+        "fi": "Soita ja kysy aukioloajat",
+        "nb": "Ring for å høre åpningstidene"
       },
       "small_animals": true,
       "url": "https://www.fatihsifaveterinerklinigi.com/",
@@ -1585,7 +1634,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu, přijímá i noční pohotovosti; telefon také na WhatsAppu.",
         "sv": "Öppet dygnet runt, alla dagar i veckan, tar även emot akutfall på natten; telefon även på WhatsApp",
         "da": "Døgnåben, alle ugens dage, tager også imod akutte tilfælde om natten; telefonen også på WhatsApp",
-        "fi": "Auki 24 h, 7 vrk viikossa, ottaa vastaan myös yöllisiä hätätapauksia; puhelin myös WhatsAppissa"
+        "fi": "Auki 24 h, 7 vrk viikossa, ottaa vastaan myös yöllisiä hätätapauksia; puhelin myös WhatsAppissa",
+        "nb": "Åpent hele døgnet, alle dager i uken, tar også imot nødtilfeller om natten; telefon også på WhatsApp"
       },
       "small_animals": true,
       "url": "https://www.caglayanveterinerklinigi.com/",
@@ -1616,7 +1666,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu, pro pohotovosti; telefon také na WhatsAppu.",
         "sv": "Öppet dygnet runt, alla dagar i veckan, för akutfall; telefon även på WhatsApp",
         "da": "Døgnåben, alle ugens dage, til akutte tilfælde; telefonen også på WhatsApp",
-        "fi": "Auki 24 h, 7 vrk viikossa päivystystapauksille; puhelin myös WhatsAppissa"
+        "fi": "Auki 24 h, 7 vrk viikossa päivystystapauksille; puhelin myös WhatsAppissa",
+        "nb": "Åpent hele døgnet, alle dager i uken for nødtilfeller; telefon også på WhatsApp"
       },
       "small_animals": true,
       "url": "https://aksucoskunveteriner.com/",
@@ -1646,7 +1697,8 @@
         "cs": "Pohotovostní služba 7 dní v týdnu, nonstop, včetně nedělí; telefon také na WhatsAppu.",
         "sv": "Akutmottagning alla dagar i veckan, dygnet runt, även på söndagar; telefon även på WhatsApp",
         "da": "Akutvagt alle ugens dage, døgnet rundt, også om søndagen; telefonen også på WhatsApp",
-        "fi": "Päivystyspalvelu 7 vrk viikossa, 24 h, myös sunnuntaisin; puhelin myös WhatsAppissa"
+        "fi": "Päivystyspalvelu 7 vrk viikossa, 24 h, myös sunnuntaisin; puhelin myös WhatsAppissa",
+        "nb": "Akuttjeneste sju dager i uken, hele døgnet, også søndager; telefonen også på WhatsApp"
       },
       "small_animals": true,
       "url": "https://www.antalyadunyaveteriner.com/",
@@ -1677,7 +1729,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovostní linka také na WhatsAppu.",
         "sv": "Öppet dygnet runt, alla dagar i veckan; akutlinje även på WhatsApp",
         "da": "Døgnåben, alle ugens dage; akutlinjen også på WhatsApp",
-        "fi": "Auki 24 h, 7 vrk viikossa; päivystysnumero myös WhatsAppissa"
+        "fi": "Auki 24 h, 7 vrk viikossa; päivystysnumero myös WhatsAppissa",
+        "nb": "Åpent hele døgnet, alle dager i uken; akuttelefonen også på WhatsApp"
       },
       "small_animals": true,
       "url": "https://www.premiumveteriner.com/",
@@ -1708,7 +1761,8 @@
         "cs": "Nonstop pohotovostní telefonní linka; před cestou zavolejte.",
         "sv": "Stödlinje för akutfall dygnet runt; ring innan du kommer",
         "da": "Akuttelefon døgnet rundt; ring på forhånd",
-        "fi": "Päivystyspuhelin ympäri vuorokauden; soita etukäteen"
+        "fi": "Päivystyspuhelin ympäri vuorokauden; soita etukäteen",
+        "nb": "Støttetelefon for akutte tilfeller hele døgnet; ring på forhånd"
       },
       "small_animals": true,
       "url": "https://akdenizhayvanhastanesi.com/",
@@ -1738,7 +1792,8 @@
         "cs": "Telefonicky dostupné nonstop, 7 dní v týdnu; otevírací dobu si ověřte telefonicky.",
         "sv": "Nåbar via telefon dygnet runt, alla dagar i veckan; bekräfta öppettiderna via telefon",
         "da": "Kan kontaktes på telefon døgnet rundt, alle ugens dage; bekræft åbningstiderne på telefon",
-        "fi": "Tavoitettavissa puhelimitse ympäri vuorokauden, 7 vrk viikossa; varmista aukioloajat puhelimitse"
+        "fi": "Tavoitettavissa puhelimitse ympäri vuorokauden, 7 vrk viikossa; varmista aukioloajat puhelimitse",
+        "nb": "Nås på telefon hele døgnet, sju dager i uken; bekreft åpningstidene på telefon"
       },
       "small_animals": true,
       "url": "https://www.laralifevetclinic.com/",
@@ -1768,7 +1823,8 @@
         "cs": "Nonstop telefonní linka podpory; před cestou zavolejte.",
         "sv": "Telefonstöd dygnet runt; ring innan du kommer",
         "da": "Hjælpetelefon døgnet rundt; ring på forhånd",
-        "fi": "Tukipuhelin ympäri vuorokauden; soita etukäteen"
+        "fi": "Tukipuhelin ympäri vuorokauden; soita etukäteen",
+        "nb": "Støttetelefon hele døgnet; ring på forhånd"
       },
       "small_animals": true,
       "url": "https://www.kemervet.com/",
@@ -1798,7 +1854,8 @@
         "cs": "Po–So 9:30–19:00, ne 10:00–16:00",
         "sv": "Mån–lör 09.30–19.00, sön 10.00–16.00",
         "da": "man–lør 09.30–19.00, søn 10.00–16.00",
-        "fi": "ma–la 9.30–19.00, su 10.00–16.00"
+        "fi": "ma–la 9.30–19.00, su 10.00–16.00",
+        "nb": "man–lør 9.30–19.00, søn 10.00–16.00"
       },
       "small_animals": true,
       "url": "https://www.sidevet.net/tr/iletisim",
@@ -1840,7 +1897,8 @@
         "cs": "Otevírací doba 9:00–20:00; také nonstop pohotovostní služba.",
         "sv": "Öppettider 09.00–20.00; även akutmottagning dygnet runt.",
         "da": "Åbningstid 09.00–20.00; også akutvagt døgnet rundt.",
-        "fi": "Aukioloaika 9.00–20.00; lisäksi päivystys 24 h."
+        "fi": "Aukioloaika 9.00–20.00; lisäksi päivystys 24 h.",
+        "nb": "Åpningstid kl. 09.00–20.00; også akuttjeneste hele døgnet."
       },
       "small_animals": true,
       "url": "https://maviankaveteriner.com/",
@@ -1870,7 +1928,8 @@
         "cs": "Otevřeno Po–So 8:00–20:00, v neděli zavřeno.",
         "sv": "Öppet måndag–lördag 08.00–20.00, stängt på söndagar.",
         "da": "Åben mandag–lørdag 08.00–20.00, lukket om søndagen.",
-        "fi": "Auki maanantaista lauantaihin 8.00–20.00, sunnuntaisin suljettu."
+        "fi": "Auki maanantaista lauantaihin 8.00–20.00, sunnuntaisin suljettu.",
+        "nb": "Åpent man–lør 08.00–20.00, stengt søndager."
       },
       "small_animals": true,
       "url": "https://kocavet.com.tr/",
@@ -1900,7 +1959,8 @@
         "cs": "Otevřeno Po–Pá 10:00–19:00, so 10:00–18:00, ne 11:00–17:00; v případě pohotovosti nejdřív zavolejte.",
         "sv": "Öppet mån–fre 10.00–19.00, lör 10.00–18.00, sön 11.00–17.00; vid akutfall ring först.",
         "da": "Åben man–fre 10.00–19.00, lør 10.00–18.00, søn 11.00–17.00; ring først ved akutte tilfælde.",
-        "fi": "Auki ma–pe 10.00–19.00, la 10.00–18.00, su 11.00–17.00; hätätapauksessa soita ensin."
+        "fi": "Auki ma–pe 10.00–19.00, la 10.00–18.00, su 11.00–17.00; hätätapauksessa soita ensin.",
+        "nb": "Åpent man–fre 10.00–19.00, lør 10.00–18.00, søn 11.00–17.00; ring først ved nødtilfeller."
       },
       "small_animals": true,
       "url": "https://vetopya.com/",
@@ -1928,7 +1988,8 @@
         "cs": "Nonstop telefonní linka podpory: +90 542 213 66 36.",
         "sv": "Telefonstöd dygnet runt: +90 542 213 66 36.",
         "da": "Hjælpetelefon døgnet rundt: +90 542 213 66 36.",
-        "fi": "Tukipuhelin 24/7: +90 542 213 66 36."
+        "fi": "Tukipuhelin 24/7: +90 542 213 66 36.",
+        "nb": "Støttetelefon hele døgnet: +90 542 213 66 36."
       },
       "small_animals": true,
       "url": "https://www.antalyaveterinerklinigi.com/",
@@ -1958,7 +2019,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu; telefon také na WhatsAppu",
         "sv": "Öppet dygnet runt, alla dagar i veckan; telefon även på WhatsApp",
         "da": "Døgnåben, alle ugens dage; telefonen også på WhatsApp",
-        "fi": "Auki 24 h, 7 vrk viikossa; puhelin myös WhatsAppissa"
+        "fi": "Auki 24 h, 7 vrk viikossa; puhelin myös WhatsAppissa",
+        "nb": "Åpent hele døgnet, alle dager i uken; telefon også på WhatsApp"
       },
       "small_animals": true,
       "url": "https://www.westvet.com.tr/",
@@ -1989,7 +2051,8 @@
         "cs": "Veterinární pohotovost 7 dní v týdnu, nonstop",
         "sv": "Akut veterinärvård alla dagar i veckan, dygnet runt",
         "da": "Akut dyrlægevagt alle ugens dage, døgnet rundt",
-        "fi": "Eläinlääkärin päivystyspalvelu 7 vrk viikossa, 24 h"
+        "fi": "Eläinlääkärin päivystyspalvelu 7 vrk viikossa, 24 h",
+        "nb": "Dyrlegevakt sju dager i uken, hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.batikentveteriner.com.tr/",
@@ -2020,7 +2083,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://www.humanimal.com.tr/",
@@ -2050,7 +2114,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://www.starvetveteriner.com/",
@@ -2080,7 +2145,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://www.veterinerankara.com/",
@@ -2111,7 +2177,8 @@
         "cs": "Pohotovostní služba 7 dní v týdnu, nonstop",
         "sv": "Akutjour alla dagar i veckan, dygnet runt",
         "da": "Akutvagt alle ugens dage, døgnet rundt",
-        "fi": "Päivystyspalvelu 7 vrk viikossa, 24 h"
+        "fi": "Päivystyspalvelu 7 vrk viikossa, 24 h",
+        "nb": "Akuttvakttjeneste sju dager i uken, hele døgnet"
       },
       "small_animals": true,
       "url": "https://dorukgiller.com/ankara-nobetci-veteriner-klinigi/",
@@ -2140,7 +2207,8 @@
         "cs": "Pohotovost a ambulance nonstop, 7 dní v týdnu; laboratoř pouze v pracovní dny v ordinační dobu",
         "sv": "Akut och öppenvård dygnet runt, alla dagar i veckan; laboratoriet endast på vardagar under arbetstid",
         "da": "Akut og ambulant behandling døgnet rundt, alle ugens dage; laboratoriet kun på hverdage i arbejdstiden",
-        "fi": "Päivystys- ja vastaanottopalvelu 24 h, 7 vrk viikossa; laboratorio vain arkisin virka-aikaan"
+        "fi": "Päivystys- ja vastaanottopalvelu 24 h, 7 vrk viikossa; laboratorio vain arkisin virka-aikaan",
+        "nb": "Akutt- og poliklinisk tjeneste hele døgnet, sju dager i uken; laboratorium kun i arbeidstiden på hverdager"
       },
       "small_animals": true,
       "url": "https://hayvanhastanesi.xn--yaamkent-owb.com.tr/",
@@ -2171,7 +2239,8 @@
         "cs": "Pohotovostní služba nonstop, 7 dní v týdnu",
         "sv": "Akutmottagning dygnet runt, alla dagar i veckan",
         "da": "Akutvagt døgnet rundt, alle ugens dage",
-        "fi": "Päivystyspalvelu 24 h, 7 vrk viikossa"
+        "fi": "Päivystyspalvelu 24 h, 7 vrk viikossa",
+        "nb": "Akuttjeneste hele døgnet, sju dager i uken"
       },
       "small_animals": true,
       "url": "https://www.izmirhayvanhastanesi.com.tr/",
@@ -2202,7 +2271,8 @@
         "cs": "Běžná otevírací doba Po–So 9:00–21:00, ne 12:00–17:00; pohotovost dnem i nocí na telefonu +90 538 694 44 55",
         "sv": "Ordinarie öppettider mån–lör 09.00–21.00, sön 12.00–17.00; akutfall dag och natt via telefon +90 538 694 44 55",
         "da": "Almindelig åbningstid man–lør 09.00–21.00, søn 12.00–17.00; akutte tilfælde dag og nat på telefon +90 538 694 44 55",
-        "fi": "Normaali aukioloaika ma–la 9.00–21.00, su 12.00–17.00; päivystys yötä päivää puhelimitse +90 538 694 44 55"
+        "fi": "Normaali aukioloaika ma–la 9.00–21.00, su 12.00–17.00; päivystys yötä päivää puhelimitse +90 538 694 44 55",
+        "nb": "Ordinær åpningstid man–lør kl. 9.00–21.00, søn 12.00–17.00; nødtilfeller dag og natt på telefon +90 538 694 44 55"
       },
       "small_animals": true,
       "url": "https://www.kiymetveteriner.com/",
@@ -2232,7 +2302,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://vethovenveteriner.com.tr/",
@@ -2263,7 +2334,8 @@
         "cs": "Otevřeno nonstop, každý den",
         "sv": "Öppet dygnet runt, alla dagar",
         "da": "Døgnåben hver dag",
-        "fi": "Auki 24 h joka päivä"
+        "fi": "Auki 24 h joka päivä",
+        "nb": "Åpent hele døgnet, alle dager"
       },
       "small_animals": true,
       "url": "https://www.vetsim.com.tr/",
@@ -2292,7 +2364,8 @@
         "cs": "Pohotovostní služba otevřena nonstop, 7 dní v týdnu",
         "sv": "Akutmottagning öppen dygnet runt, alla dagar i veckan",
         "da": "Akutvagt døgnåben, alle ugens dage",
-        "fi": "Päivystyspalvelu auki 24 h, 7 vrk viikossa"
+        "fi": "Päivystyspalvelu auki 24 h, 7 vrk viikossa",
+        "nb": "Akuttjeneste åpen hele døgnet, sju dager i uken"
       },
       "small_animals": true,
       "url": "https://www.dogavet.net/contact.php",
@@ -2323,7 +2396,8 @@
         "cs": "Běžná otevírací doba Po–So 9:00–19:00; nonstop pohotovostní péče pro registrované pacienty",
         "sv": "Ordinarie öppettider mån–lör 09.00–19.00; akutvård dygnet runt för registrerade patienter",
         "da": "Almindelig åbningstid man–lør 09.00–19.00; akut hjælp døgnet rundt for registrerede patienter",
-        "fi": "Normaali aukioloaika ma–la 9.00–19.00; päivystys 24 h rekisteröidyille potilaille"
+        "fi": "Normaali aukioloaika ma–la 9.00–19.00; päivystys 24 h rekisteröidyille potilaille",
+        "nb": "Ordinær åpningstid man–lør kl. 9.00–19.00; akuttbehandling hele døgnet for registrerte pasienter"
       },
       "small_animals": true,
       "url": "https://www.alsancakveteriner.com/",
@@ -2353,7 +2427,8 @@
         "cs": "Po–So 9:00–24:00, ne 10:00–19:00; pohotovost bez objednání, nejdřív zavolejte",
         "sv": "Mån–lör 09.00–24.00, sön 10.00–19.00; akutfall utan tidsbokning, ring först",
         "da": "man–lør 09.00–24.00, søn 10.00–19.00; akutte tilfælde uden tidsbestilling, ring først",
-        "fi": "ma–la 9.00–24.00, su 10.00–19.00; päivystys ilman ajanvarausta, soita ensin"
+        "fi": "ma–la 9.00–24.00, su 10.00–19.00; päivystys ilman ajanvarausta, soita ensin",
+        "nb": "man–lør 9.00–24.00, søn 10.00–19.00; nødtilfeller tas imot uten timebestilling, ring først"
       },
       "small_animals": true,
       "url": "https://pityvet.com/tr",
@@ -2383,7 +2458,8 @@
         "cs": "Otevřeno nonstop; pohotovost dostupná 7 dní v týdnu",
         "sv": "Öppet dygnet runt; akutfall kan nås alla dagar i veckan",
         "da": "Døgnåben; akutte tilfælde kan kontakte klinikken alle ugens dage",
-        "fi": "Auki 24 h; päivystys tavoitettavissa 7 vrk viikossa"
+        "fi": "Auki 24 h; päivystys tavoitettavissa 7 vrk viikossa",
+        "nb": "Åpent hele døgnet; nødtilfeller kan nås alle dager i uken"
       },
       "small_animals": true,
       "url": "https://www.drfimarine.com/",
@@ -2413,7 +2489,8 @@
         "cs": "Nonstop provoz",
         "sv": "Service dygnet runt",
         "da": "Åben døgnet rundt",
-        "fi": "Palvelu ympäri vuorokauden"
+        "fi": "Palvelu ympäri vuorokauden",
+        "nb": "Døgnåpen tjeneste"
       },
       "small_animals": true,
       "url": "https://www.siriusveteriner.com.tr/",
@@ -2444,7 +2521,8 @@
         "cs": "Pohotovostní služba 7 dní v týdnu, nonstop",
         "sv": "Akutmottagning alla dagar i veckan, dygnet runt",
         "da": "Akutvagt alle ugens dage, døgnet rundt",
-        "fi": "Päivystyspalvelu 7 vrk viikossa, 24 h"
+        "fi": "Päivystyspalvelu 7 vrk viikossa, 24 h",
+        "nb": "Akuttjeneste sju dager i uken, hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.newlifeveteriner.com/",
@@ -2474,7 +2552,8 @@
         "cs": "Běžná otevírací doba 9:00–20:00; pohotovostní služba nonstop",
         "sv": "Ordinarie öppettider 09.00–20.00; akutmottagning dygnet runt",
         "da": "Almindelig åbningstid 09.00–20.00; akutvagt døgnet rundt",
-        "fi": "Normaali aukioloaika 9.00–20.00; päivystys ympäri vuorokauden"
+        "fi": "Normaali aukioloaika 9.00–20.00; päivystys ympäri vuorokauden",
+        "nb": "Ordinær åpningstid kl. 9.00–20.00; akuttjeneste hele døgnet"
       },
       "small_animals": true,
       "url": "https://bodrumarvenveterinerklinigi.com.tr/",
@@ -2505,7 +2584,8 @@
         "cs": "Po–Pá 9:30–19:30, so 9:30–19:00, ne 10:00–18:00",
         "sv": "Mån–fre 09.30–19.30, lör 09.30–19.00, sön 10.00–18.00",
         "da": "man–fre 09.30–19.30, lør 09.30–19.00, søn 10.00–18.00",
-        "fi": "ma–pe 9.30–19.30, la 9.30–19.00, su 10.00–18.00"
+        "fi": "ma–pe 9.30–19.30, la 9.30–19.00, su 10.00–18.00",
+        "nb": "Man–fre 09.30–19.30, lør 09.30–19.00, søn 10.00–18.00"
       },
       "small_animals": true,
       "url": "https://horizonveteriner.com/",
@@ -2535,7 +2615,8 @@
         "cs": "Pohotovostní veterinární klinika, nonstop, 7 dní v týdnu",
         "sv": "Jourhavande akutklinik, dygnet runt, alla dagar i veckan",
         "da": "Akutklinik med vagt, døgnåben alle ugens dage",
-        "fi": "Päivystysklinikka 24 h, 7 vrk viikossa"
+        "fi": "Päivystysklinikka 24 h, 7 vrk viikossa",
+        "nb": "Døgnåpen akuttklinikk med vakt, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://www.patipark.com.tr/",
@@ -2564,7 +2645,8 @@
         "cs": "Pohotovostní služba; před cestou zavolejte.",
         "sv": "Akutmottagning; ring innan du kommer",
         "da": "Akutvagt; ring på forhånd",
-        "fi": "Päivystyspalvelu; soita etukäteen"
+        "fi": "Päivystyspalvelu; soita etukäteen",
+        "nb": "Dyrlegevakt; ring på forhånd"
       },
       "small_animals": true,
       "url": "https://fethiyevetpati.com/",
@@ -2594,7 +2676,8 @@
         "cs": "Po–So 9:00–19:30, ne 10:00–19:00; pohotovost mimo ordinační dobu telefonicky",
         "sv": "Mån–lör 09.00–19.30, sön 10.00–19.00; akutfall efter öppettid via telefon",
         "da": "man–lør 09.00–19.30, søn 10.00–19.00; akutte tilfælde uden for åbningstid på telefon",
-        "fi": "ma–la 9.00–19.30, su 10.00–19.00; päivystys aukioloajan jälkeen puhelimitse"
+        "fi": "ma–la 9.00–19.30, su 10.00–19.00; päivystys aukioloajan jälkeen puhelimitse",
+        "nb": "man–lør 9.00–19.30, søn 10.00–19.00; nødtilfeller utenom åpningstiden på telefon"
       },
       "small_animals": true,
       "url": "https://enpativet.com/",
@@ -2638,7 +2721,8 @@
         "cs": "Denně 9:00–19:00; v případě pohotovosti zavolejte",
         "sv": "Dagligen 09.00–19.00; ring vid akutfall",
         "da": "Dagligt 09.00–19.00; ring ved akutte tilfælde",
-        "fi": "Joka päivä 9.00–19.00; hätätapauksissa soita"
+        "fi": "Joka päivä 9.00–19.00; hätätapauksissa soita",
+        "nb": "Alle dager 09.00–19.00; ring ved nødtilfeller"
       },
       "small_animals": true,
       "url": "https://www.dalamanveterinerklinigi.com/",
@@ -2668,7 +2752,8 @@
         "cs": "Po–Pá 9:00–19:00, ne 9:00–15:00",
         "sv": "Mån–fre 09.00–19.00, sön 09.00–15.00",
         "da": "man–fre 09.00–19.00, søn 09.00–15.00",
-        "fi": "ma–pe 9.00–19.00, su 9.00–15.00"
+        "fi": "ma–pe 9.00–19.00, su 9.00–15.00",
+        "nb": "Man–fre 09.00–19.00, søn 09.00–15.00"
       },
       "small_animals": true,
       "url": "https://kayavetdatca.com/",
@@ -2698,7 +2783,8 @@
         "cs": "Po–So 9:00–19:00, v neděli zavřeno",
         "sv": "Mån–lör 09.00–19.00, sön stängt",
         "da": "man–lør 09.00–19.00, søn lukket",
-        "fi": "ma–la 9.00–19.00, su suljettu"
+        "fi": "ma–la 9.00–19.00, su suljettu",
+        "nb": "man–lør 9.00–19.00, stengt søndag"
       },
       "small_animals": true,
       "url": "https://datcaveteriner.com/",
@@ -2728,7 +2814,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu, bez objednání",
         "sv": "Öppet dygnet runt, alla dagar i veckan, ingen tidsbokning behövs",
         "da": "Døgnåben, alle ugens dage, uden tidsbestilling",
-        "fi": "Auki 24 h, 7 vrk viikossa, ajanvarausta ei tarvita"
+        "fi": "Auki 24 h, 7 vrk viikossa, ajanvarausta ei tarvita",
+        "nb": "Åpent hele døgnet, alle dager i uken, ingen timebestilling nødvendig"
       },
       "small_animals": true,
       "url": "https://www.rotaveteriner.com.tr/",
@@ -2758,7 +2845,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu, pro pohotovosti",
         "sv": "Öppet dygnet runt, alla dagar i veckan, för akutfall",
         "da": "Døgnåben, alle ugens dage, til akutte tilfælde",
-        "fi": "Auki 24 h, 7 vrk viikossa päivystystapauksille"
+        "fi": "Auki 24 h, 7 vrk viikossa päivystystapauksille",
+        "nb": "Åpent hele døgnet, alle dager i uken for nødtilfeller"
       },
       "small_animals": true,
       "url": "https://www.pet224.com/",
@@ -2789,7 +2877,8 @@
         "cs": "Veterinární služba 7 dní v týdnu, nonstop",
         "sv": "Veterinärvård alla dagar i veckan, dygnet runt",
         "da": "Dyrlægehjælp alle ugens dage, døgnet rundt",
-        "fi": "Eläinlääkäripalvelu 7 vrk viikossa, 24 h"
+        "fi": "Eläinlääkäripalvelu 7 vrk viikossa, 24 h",
+        "nb": "Dyrlegetjeneste sju dager i uken, hele døgnet"
       },
       "small_animals": true,
       "url": "https://petclassveteriner.com/bursa-nilufer-nobetci-veteriner/",
@@ -2820,7 +2909,8 @@
         "cs": "Univerzitní veterinární nemocnice; otevírací dobu si ověřte telefonicky",
         "sv": "Universitetets djursjukhus; ring för att bekräfta öppettiderna",
         "da": "Universitetsdyrehospital; ring for at få bekræftet åbningstiderne",
-        "fi": "Yliopiston eläinsairaala; varmista aukioloajat soittamalla"
+        "fi": "Yliopiston eläinsairaala; varmista aukioloajat soittamalla",
+        "nb": "Universitetsdyresykehus; ring for å bekrefte åpningstider"
       },
       "small_animals": true,
       "url": "https://uludag.edu.tr/hayvanhastanesi/about-us-69221",
@@ -2850,7 +2940,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně státních svátků",
         "sv": "Öppet dygnet runt, alla dagar i veckan, även helgdagar",
         "da": "Døgnåben, alle ugens dage, også på helligdage",
-        "fi": "Auki 24 h, 7 vrk viikossa, myös pyhäpäivinä"
+        "fi": "Auki 24 h, 7 vrk viikossa, myös pyhäpäivinä",
+        "nb": "Åpent hele døgnet, alle dager i uken, også helligdager"
       },
       "small_animals": true,
       "url": "https://heypati.com.tr/",
@@ -2880,7 +2971,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu; pohotovost bez objednání",
         "sv": "Öppet dygnet runt, alla dagar i veckan; akutfall utan tidsbokning",
         "da": "Døgnåben, alle ugens dage; akutte tilfælde uden tidsbestilling",
-        "fi": "Auki 24 h, 7 vrk viikossa; päivystys ilman ajanvarausta"
+        "fi": "Auki 24 h, 7 vrk viikossa; päivystys ilman ajanvarausta",
+        "nb": "Åpent hele døgnet, alle dager i uken; nødtilfeller uten timebestilling"
       },
       "small_animals": true,
       "url": "https://adanaartemishayvanhastanesi.com/",
@@ -2910,7 +3002,8 @@
         "cs": "Otevřeno každý den nonstop; telefon také na WhatsAppu",
         "sv": "Öppet alla dagar, dygnet runt; telefon även på WhatsApp",
         "da": "Døgnåben hver dag; telefonen også på WhatsApp",
-        "fi": "Auki joka päivä, 24/7; puhelin myös WhatsAppissa"
+        "fi": "Auki joka päivä, 24/7; puhelin myös WhatsAppissa",
+        "nb": "Åpent hele døgnet, alle dager; telefon også på WhatsApp"
       },
       "small_animals": true,
       "url": "https://adanaferahveterinerklinigi.com/",
@@ -2941,7 +3034,8 @@
         "cs": "Veterinární pohotovost nonstop, 7 dní v týdnu",
         "sv": "Akut veterinärvård dygnet runt, alla dagar i veckan",
         "da": "Akut dyrlægevagt døgnet rundt, alle ugens dage",
-        "fi": "Eläinlääkärin päivystyspalvelu 24 h, 7 vrk viikossa"
+        "fi": "Eläinlääkärin päivystyspalvelu 24 h, 7 vrk viikossa",
+        "nb": "Dyrlegevakt hele døgnet, sju dager i uken"
       },
       "small_animals": true,
       "url": "https://www.petical.com.tr/",
@@ -2972,7 +3066,8 @@
         "cs": "Pohotovostní veterinární služba nonstop, 7 dní v týdnu",
         "sv": "Jourhavande veterinär dygnet runt, alla dagar i veckan",
         "da": "Dyrlægevagt døgnet rundt, alle ugens dage",
-        "fi": "Päivystävä eläinlääkäripalvelu 24/7"
+        "fi": "Päivystävä eläinlääkäripalvelu 24/7",
+        "nb": "Vakthavende dyrlege hele døgnet, sju dager i uken"
       },
       "small_animals": true,
       "url": "https://www.veterinoloji.com/",
@@ -3002,7 +3097,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://www.canakkalevetlandvet.com/",
@@ -3031,7 +3127,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://ankahayvanhastanesi.com/",
@@ -3062,7 +3159,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://canakkalepetikoveteriner.com/",
@@ -3091,7 +3189,8 @@
         "cs": "Pohotovostní zákrok nonstop, 7 dní v týdnu",
         "sv": "Akutinsats dygnet runt, alla dagar i veckan",
         "da": "Akut indsats døgnet rundt, alle ugens dage",
-        "fi": "Päivystyshoito 24 h, 7 vrk viikossa"
+        "fi": "Päivystyshoito 24 h, 7 vrk viikossa",
+        "nb": "Akuttinngrep hele døgnet, sju dager i uken"
       },
       "small_animals": true,
       "url": "https://www.acarveterinerlik.com.tr/",
@@ -3121,7 +3220,8 @@
         "cs": "Otevírací dobu si ověřte telefonicky",
         "sv": "Ring för att bekräfta öppettiderna",
         "da": "Ring for at få bekræftet åbningstiderne",
-        "fi": "Varmista aukioloajat soittamalla"
+        "fi": "Varmista aukioloajat soittamalla",
+        "nb": "Ring for å bekrefte åpningstidene"
       },
       "small_animals": true,
       "url": "https://isikveterinerlik.com/",
@@ -3151,7 +3251,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu, včetně státních svátků",
         "sv": "Öppet dygnet runt, alla dagar i veckan, även helgdagar",
         "da": "Døgnåben, alle ugens dage, også på helligdage",
-        "fi": "Auki 24 h, 7 vrk viikossa, myös pyhäpäivinä"
+        "fi": "Auki 24 h, 7 vrk viikossa, myös pyhäpäivinä",
+        "nb": "Åpent hele døgnet, alle dager i uken, også helligdager"
       },
       "small_animals": true,
       "url": "https://www.vetpet.com.tr/gaziantep-veteriner/",
@@ -3182,7 +3283,8 @@
         "cs": "Pohotovostní služba 7 dní v týdnu, nonstop",
         "sv": "Akutmottagning alla dagar i veckan, dygnet runt",
         "da": "Akutvagt alle ugens dage, døgnet rundt",
-        "fi": "Päivystyspalvelu 7 vrk viikossa, 24 h"
+        "fi": "Päivystyspalvelu 7 vrk viikossa, 24 h",
+        "nb": "Akuttjeneste sju dager i uken, hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.petkingveteriner.com/",
@@ -3213,7 +3315,8 @@
         "cs": "Po–So 9:00–21:00, ne 10:00–21:00; pohotovostní telefonní linka nonstop",
         "sv": "Mån–lör 09.00–21.00, sön 10.00–21.00; akutlinje dygnet runt",
         "da": "man–lør 09.00–21.00, søn 10.00–21.00; akuttelefon døgnet rundt",
-        "fi": "ma–la 9.00–21.00, su 10.00–21.00; päivystyspuhelin ympäri vuorokauden"
+        "fi": "ma–la 9.00–21.00, su 10.00–21.00; päivystyspuhelin ympäri vuorokauden",
+        "nb": "man–lør 9.00–21.00, søn 10.00–21.00; nødtelefon hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.dogtorveteriner.com/",
@@ -3243,7 +3346,8 @@
         "cs": "Po–So 10:00–19:00, v neděli zavřeno; v případě pohotovosti před příchodem zavolejte",
         "sv": "Mån–lör 10.00–19.00, sön stängt; ring innan du kommer vid akutfall",
         "da": "man–lør 10.00–19.00, søn lukket; ring, før du kommer, ved akutte tilfælde",
-        "fi": "ma–la 10.00–19.00, su suljettu; hätätapauksissa soita ennen tuloa"
+        "fi": "ma–la 10.00–19.00, su suljettu; hätätapauksissa soita ennen tuloa",
+        "nb": "man–lør 10.00–19.00, søn stengt; ring før du kommer ved nødtilfeller"
       },
       "small_animals": true,
       "url": "https://www.canakbasveteriner.com/iletisim",
@@ -3272,7 +3376,8 @@
         "cs": "Běžná otevírací doba v pracovní dny 9:30–19:00; pohotovostní služba nonstop, 7 dní v týdnu",
         "sv": "Ordinarie öppettider vardagar 09.30–19.00; akutmottagning dygnet runt, alla dagar i veckan",
         "da": "Almindelig åbningstid på hverdage 09.30–19.00; akutvagt døgnet rundt, alle ugens dage",
-        "fi": "Normaali aukioloaika arkisin 9.30–19.00; päivystys 24 h, 7 vrk viikossa"
+        "fi": "Normaali aukioloaika arkisin 9.30–19.00; päivystys 24 h, 7 vrk viikossa",
+        "nb": "Ordinær åpningstid på hverdager kl. 9.30–19.00; akuttjeneste hele døgnet, sju dager i uken"
       },
       "small_animals": true,
       "url": "https://odunpazariveteriner.com.tr/",
@@ -3302,7 +3407,8 @@
         "cs": "Po–So 9:00–21:00; pohotovostní klinika, před cestou zavolejte",
         "sv": "Mån–lör 09.00–21.00; akutklinik, ring innan du kommer",
         "da": "man–lør 09.00–21.00; akutklinik, ring på forhånd",
-        "fi": "ma–la 9.00–21.00; päivystysklinikka, soita etukäteen"
+        "fi": "ma–la 9.00–21.00; päivystysklinikka, soita etukäteen",
+        "nb": "man–lør 9.00–21.00; akuttklinikk, ring på forhånd"
       },
       "small_animals": true,
       "url": "https://www.sayinveteriner.com/",
@@ -3331,7 +3437,8 @@
         "cs": "Po–So 10:00–22:00, ne 12:00–19:00",
         "sv": "Mån–lör 10.00–22.00, sön 12.00–19.00",
         "da": "man–lør 10.00–22.00, søn 12.00–19.00",
-        "fi": "ma–la 10.00–22.00, su 12.00–19.00"
+        "fi": "ma–la 10.00–22.00, su 12.00–19.00",
+        "nb": "man–lør 10.00–22.00, søn 12.00–19.00"
       },
       "small_animals": true,
       "url": "https://melodimveteriner.com/tepebasi-nobetci-veterinerler/",
@@ -3360,7 +3467,8 @@
         "cs": "Pohotovostní služba otevřena nonstop, 7 dní v týdnu",
         "sv": "Akutmottagning öppen dygnet runt, alla dagar i veckan",
         "da": "Akutvagt døgnåben, alle ugens dage",
-        "fi": "Päivystyspalvelu auki 24 h, 7 vrk viikossa"
+        "fi": "Päivystyspalvelu auki 24 h, 7 vrk viikossa",
+        "nb": "Akuttjeneste åpen hele døgnet, sju dager i uken"
       },
       "small_animals": true,
       "url": "https://trakyahayvanhastanesi.org/",
@@ -3391,7 +3499,8 @@
         "cs": "Služba 7 dní v týdnu, nonstop",
         "sv": "Service alla dagar i veckan, dygnet runt",
         "da": "Åben alle ugens dage, døgnet rundt",
-        "fi": "Palvelu 7 vrk viikossa, 24 h"
+        "fi": "Palvelu 7 vrk viikossa, 24 h",
+        "nb": "Tjeneste sju dager i uken, hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.vivaveteriner.com/",
@@ -3422,7 +3531,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://www.cerkezkoyveteriner.com.tr/",
@@ -3452,7 +3562,8 @@
         "cs": "Pohotovostní služba 7 dní v týdnu, nonstop",
         "sv": "Akutmottagning alla dagar i veckan, dygnet runt",
         "da": "Akutvagt alle ugens dage, døgnet rundt",
-        "fi": "Päivystyspalvelu 7 vrk viikossa, 24 h"
+        "fi": "Päivystyspalvelu 7 vrk viikossa, 24 h",
+        "nb": "Akuttjeneste sju dager i uken, hele døgnet"
       },
       "small_animals": true,
       "url": "https://marmaraveterinerlik.com/",
@@ -3483,7 +3594,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://ventusvet.com/sayfa/gebze-nobetci-veteriner",
@@ -3513,7 +3625,8 @@
         "cs": "Po–So 9:00–20:00, ne 9:00–19:00; nonstop pohotovostní péče, před cestou zavolejte",
         "sv": "Mån–lör 09.00–20.00, sön 09.00–19.00; akutvård dygnet runt, ring innan du kommer",
         "da": "man–lør 09.00–20.00, søn 09.00–19.00; akut hjælp døgnet rundt, ring på forhånd",
-        "fi": "ma–la 9.00–20.00, su 9.00–19.00; päivystys 24/7, soita etukäteen"
+        "fi": "ma–la 9.00–20.00, su 9.00–19.00; päivystys 24/7, soita etukäteen",
+        "nb": "man–lør 9.00–20.00, søn 9.00–19.00; akuttbehandling hele døgnet, ring på forhånd"
       },
       "small_animals": true,
       "url": "https://izmitacilveteriner.com/",
@@ -3543,7 +3656,8 @@
         "cs": "Veterinární pohotovost nonstop, 7 dní v týdnu",
         "sv": "Akut veterinärtjänst dygnet runt, alla dagar i veckan",
         "da": "Akut dyrlægevagt døgnet rundt, alle ugens dage",
-        "fi": "Eläinlääkärin päivystyspalvelu 24 h, 7 vrk viikossa"
+        "fi": "Eläinlääkärin päivystyspalvelu 24 h, 7 vrk viikossa",
+        "nb": "Dyrlegevakt hele døgnet, sju dager i uken"
       },
       "small_animals": true,
       "url": "https://denizlimerkezveteriner.com/",
@@ -3572,7 +3686,8 @@
         "cs": "Pohotovostní služba nonstop, 7 dní v týdnu",
         "sv": "Akutmottagning dygnet runt, alla dagar i veckan",
         "da": "Akutvagt døgnet rundt, alle ugens dage",
-        "fi": "Päivystyspalvelu 24 h, 7 vrk viikossa"
+        "fi": "Päivystyspalvelu 24 h, 7 vrk viikossa",
+        "nb": "Akuttjeneste hele døgnet, sju dager i uken"
       },
       "small_animals": true,
       "url": "https://www.vet20.com/",
@@ -3603,7 +3718,8 @@
         "cs": "Univerzitní veterinární nemocnice, otevřeno nonstop; pohotovostní klinika 7 dní v týdnu, pacienti se přijímají podle naléhavosti",
         "sv": "Universitetets djursjukhus, öppet dygnet runt; akutklinik alla dagar i veckan, patienter tas emot efter hur akut det är",
         "da": "Universitetsdyrehospital, døgnåbent; akutklinik alle ugens dage, patienter tages imod efter hastegrad",
-        "fi": "Yliopiston eläinsairaala, auki 24 h; päivystysklinikka 7 vrk viikossa, potilaat otetaan hoitoon kiireellisyysjärjestyksessä"
+        "fi": "Yliopiston eläinsairaala, auki 24 h; päivystysklinikka 7 vrk viikossa, potilaat otetaan hoitoon kiireellisyysjärjestyksessä",
+        "nb": "Universitetsdyresykehus, åpent hele døgnet; akuttklinikk alle dager, pasienter tas imot etter hastegrad"
       },
       "small_animals": true,
       "url": "https://hayvanhastanesi.aku.edu.tr/",
@@ -3634,7 +3750,8 @@
         "cs": "V pracovní dny 9:00–19:00, o víkendech 10:00–18:00",
         "sv": "Vardagar 09.00–19.00, helger 10.00–18.00",
         "da": "Hverdage 09.00–19.00, weekend 10.00–18.00",
-        "fi": "Arkisin 9.00–19.00, viikonloppuisin 10.00–18.00"
+        "fi": "Arkisin 9.00–19.00, viikonloppuisin 10.00–18.00",
+        "nb": "Hverdager 9.00–19.00, helger 10.00–18.00"
       },
       "small_animals": true,
       "url": "https://hatayaslanveteriner.kolay.vet/",
@@ -3662,7 +3779,8 @@
         "cs": "Ambulance v pracovní dny 8:30–17:00; pohotovostní služba nonstop",
         "sv": "Öppenvårdsklinik vardagar 08.30–17.00; akutmottagning dygnet runt",
         "da": "Ambulatorium på hverdage 08.30–17.00; akutvagt døgnet rundt",
-        "fi": "Vastaanotto arkisin 8.30–17.00; päivystys 24/7"
+        "fi": "Vastaanotto arkisin 8.30–17.00; päivystys 24/7",
+        "nb": "Poliklinikk på hverdager kl. 08.30–17.00; akuttjeneste hele døgnet, alle dager"
       },
       "small_animals": true,
       "url": "https://hayvanhastanesi.selcuk.edu.tr/",
@@ -3692,7 +3810,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu",
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
-        "fi": "Auki 24 h, 7 vrk viikossa"
+        "fi": "Auki 24 h, 7 vrk viikossa",
+        "nb": "Åpent hele døgnet, alle dager i uken"
       },
       "small_animals": true,
       "url": "https://www.ikonyumvet.com/konya-veteriner",
@@ -3721,7 +3840,8 @@
         "cs": "Pohotovostní služba nonstop",
         "sv": "Akutmottagning dygnet runt",
         "da": "Akutservice døgnet rundt",
-        "fi": "Päivystys 24/7"
+        "fi": "Päivystys 24/7",
+        "nb": "Akuttjeneste hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.notaveterinerkonya.com.tr/",
@@ -3750,7 +3870,8 @@
         "cs": "Po–Pá 9:00–19:00, so 9:00–15:00, v neděli zavřeno",
         "sv": "Mån–fre 09.00–19.00, lör 09.00–15.00, söndag stängt",
         "da": "man–fre 09.00–19.00, lør 09.00–15.00, lukket om søndagen",
-        "fi": "ma–pe 9.00–19.00, la 9.00–15.00, su suljettu"
+        "fi": "ma–pe 9.00–19.00, la 9.00–15.00, su suljettu",
+        "nb": "Man–fre 09.00–19.00, lør 09.00–15.00, stengt søndag"
       },
       "small_animals": true,
       "url": "https://piveterinerklinigi.com/",
@@ -3779,7 +3900,8 @@
         "cs": "Po–So 9:00–19:00, v neděli zavřeno",
         "sv": "Mån–lör 09.00–19.00, söndag stängt",
         "da": "man–lør 09.00–19.00, lukket om søndagen",
-        "fi": "ma–la 9.00–19.00, su suljettu"
+        "fi": "ma–la 9.00–19.00, su suljettu",
+        "nb": "man–lør 9.00–19.00, stengt søndag"
       },
       "small_animals": true,
       "url": "https://www.familyavet.com.tr/",
@@ -3808,7 +3930,8 @@
         "cs": "V pracovní dny 9:00–20:00, o víkendech 10:00–19:00",
         "sv": "Vardagar 09.00–20.00, helger 10.00–19.00",
         "da": "Hverdage 09.00–20.00, weekend 10.00–19.00",
-        "fi": "Arkisin 9.00–20.00, viikonloppuisin 10.00–19.00"
+        "fi": "Arkisin 9.00–20.00, viikonloppuisin 10.00–19.00",
+        "nb": "Hverdager 9.00–20.00, helger 10.00–19.00"
       },
       "small_animals": true,
       "url": "https://naturavet.kolay.vet/",
@@ -3837,7 +3960,8 @@
         "cs": "Denně 10:00–19:00",
         "sv": "Dagligen 10.00–19.00",
         "da": "Dagligt 10.00–19.00",
-        "fi": "Joka päivä 10.00–19.00"
+        "fi": "Joka päivä 10.00–19.00",
+        "nb": "Alle dager 10.00–19.00"
       },
       "small_animals": true,
       "url": "https://atanvet.kolay.vet/",
@@ -3893,7 +4017,8 @@
         "cs": "Otevřeno nonstop; nutné objednání",
         "sv": "Öppet dygnet runt; tidsbokning önskas",
         "da": "Døgnåben; helst med tidsbestilling",
-        "fi": "Auki 24/7; ajanvarausta pyydetään"
+        "fi": "Auki 24/7; ajanvarausta pyydetään",
+        "nb": "Åpent hele døgnet; time bestilles på forhånd"
       },
       "small_animals": true,
       "url": "https://www.petamicaveteriner.com/",
@@ -3937,7 +4062,8 @@
         "cs": "Telefonicky dostupné nonstop, 7 dní v týdnu; pohotovostní linka +90 533 159 26 00",
         "sv": "Nåbar via telefon dygnet runt, alla dagar i veckan; akutlinje +90 533 159 26 00",
         "da": "Kan kontaktes på telefon døgnet rundt, alle ugens dage; akutlinje +90 533 159 26 00",
-        "fi": "Tavoitettavissa puhelimitse 24 h, 7 vrk viikossa; päivystysnumero +90 533 159 26 00"
+        "fi": "Tavoitettavissa puhelimitse 24 h, 7 vrk viikossa; päivystysnumero +90 533 159 26 00",
+        "nb": "Nås på telefon hele døgnet, sju dager i uken; vakttelefon +90 533 159 26 00"
       },
       "small_animals": true,
       "url": "https://www.vetinternational.com.tr/iletisim/",
@@ -3967,7 +4093,8 @@
         "cs": "Po–So 9:30–18:00",
         "sv": "Mån–lör 09.30–18.00",
         "da": "man–lør 09.30–18.00",
-        "fi": "ma–la 9.30–18.00"
+        "fi": "ma–la 9.30–18.00",
+        "nb": "man–lør 9.30–18.00"
       },
       "small_animals": true,
       "url": "https://www.asvetkusadasi.com/",
@@ -4009,7 +4136,8 @@
         "cs": "Po–So 10:00–18:30, v neděli zavřeno",
         "sv": "Mån–lör 10.00–18.30, söndag stängt",
         "da": "man–lør 10.00–18.30, lukket om søndagen",
-        "fi": "ma–la 10.00–18.30, su suljettu"
+        "fi": "ma–la 10.00–18.30, su suljettu",
+        "nb": "man–lør 10.00–18.30, stengt søndag"
       },
       "small_animals": true,
       "url": "https://www.ozgencvet.com.tr/contact",
@@ -4038,7 +4166,8 @@
         "cs": "Po–So 9:00–19:00, ne 13:00–19:00",
         "sv": "Mån–lör 09.00–19.00, sön 13.00–19.00",
         "da": "man–lør 09.00–19.00, søn 13.00–19.00",
-        "fi": "ma–la 9.00–19.00, su 13.00–19.00"
+        "fi": "ma–la 9.00–19.00, su 13.00–19.00",
+        "nb": "man–lør 9.00–19.00, søn 13.00–19.00"
       },
       "small_animals": true,
       "url": "https://riva-veteriner-klinigi.vercel.app/",
@@ -4066,7 +4195,8 @@
         "cs": "Po–So 9:00–19:00, ne 10:00–17:00",
         "sv": "Mån–lör 09.00–19.00, sön 10.00–17.00",
         "da": "man–lør 09.00–19.00, søn 10.00–17.00",
-        "fi": "ma–la 9.00–19.00, su 10.00–17.00"
+        "fi": "ma–la 9.00–19.00, su 10.00–17.00",
+        "nb": "man–lør 9.00–19.00, søn 10.00–17.00"
       },
       "small_animals": true,
       "url": "https://petiteveteriner.com/",
@@ -4123,7 +4253,8 @@
         "cs": "Denně 9:00–19:00",
         "sv": "Dagligen 09.00–19.00",
         "da": "Dagligt 09.00–19.00",
-        "fi": "Joka päivä 9.00–19.00"
+        "fi": "Joka päivä 9.00–19.00",
+        "nb": "Alle dager 09.00–19.00"
       },
       "small_animals": true,
       "url": "https://akkentgaziantepdamlaveteriner.kolay.vet/",
@@ -4152,7 +4283,8 @@
         "cs": "Po–So 9:00–18:00",
         "sv": "Mån–lör 09.00–18.00",
         "da": "man–lør 09.00–18.00",
-        "fi": "ma–la 9.00–18.00"
+        "fi": "ma–la 9.00–18.00",
+        "nb": "man–lør 9.00–18.00"
       },
       "small_animals": true,
       "url": "https://www.trabzonveteriner.com/",

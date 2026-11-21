@@ -53,7 +53,8 @@
         "cs": "Nonstop. Také +375 29 392 80 81.",
         "sv": "Öppet dygnet runt. Även +375 29 392 80 81.",
         "da": "Åbent døgnet rundt. Også +375 29 392 80 81.",
-        "fi": "Auki ympäri vuorokauden. Myös +375 29 392 80 81."
+        "fi": "Auki ympäri vuorokauden. Myös +375 29 392 80 81.",
+        "nb": "Åpent døgnet rundt. Også +375 29 392 80 81."
       }
     },
     {
@@ -75,7 +76,8 @@
         "cs": "Nonstop, každý den. Lékaři bez objednání 9:00–19:00; po 21:00 lékař ve službě za noční tarif.",
         "sv": "Öppet dygnet runt, alla dagar. Mottagning utan tidsbokning 09.00–19.00; efter 21.00 jourhavande veterinär enligt nattaxa.",
         "da": "Døgnåben, alle dage. Dyrlæger uden tidsbestilling 09.00–19.00; efter 21.00 en vagthavende læge til nattakst.",
-        "fi": "Auki ympäri vuorokauden joka päivä. Vastaanotto ilman ajanvarausta 9–19; klo 21 jälkeen päivystävä eläinlääkäri yötaksalla."
+        "fi": "Auki ympäri vuorokauden joka päivä. Vastaanotto ilman ajanvarausta 9–19; klo 21 jälkeen päivystävä eläinlääkäri yötaksalla.",
+        "nb": "Åpent hele døgnet, alle dager. Leger uten timebestilling 09.00–19.00; etter 21.00 vakthavende lege til nattakst."
       }
     },
     {
@@ -97,7 +99,8 @@
         "cs": "Nonstop, každý den. Lékaři bez objednání 9:00–19:00; po 21:00 lékař ve službě za noční tarif.",
         "sv": "Öppet dygnet runt, alla dagar. Mottagning utan tidsbokning 09.00–19.00; efter 21.00 jourhavande veterinär enligt nattaxa.",
         "da": "Døgnåben, alle dage. Dyrlæger uden tidsbestilling 09.00–19.00; efter 21.00 en vagthavende læge til nattakst.",
-        "fi": "Auki ympäri vuorokauden joka päivä. Vastaanotto ilman ajanvarausta 9–19; klo 21 jälkeen päivystävä eläinlääkäri yötaksalla."
+        "fi": "Auki ympäri vuorokauden joka päivä. Vastaanotto ilman ajanvarausta 9–19; klo 21 jälkeen päivystävä eläinlääkäri yötaksalla.",
+        "nb": "Åpent hele døgnet, alle dager. Leger uten timebestilling 09.00–19.00; etter 21.00 vakthavende lege til nattakst."
       }
     },
     {
@@ -119,7 +122,8 @@
         "cs": "Aktuální otevírací dobu zjistíte na klinice.",
         "sv": "Kontakta kliniken för aktuella öppettider.",
         "da": "Kontakt klinikken for aktuelle åbningstider.",
-        "fi": "Kysy ajankohtaiset aukioloajat klinikalta."
+        "fi": "Kysy ajankohtaiset aukioloajat klinikalta.",
+        "nb": "Kontakt klinikken for å høre gjeldende åpningstider."
       }
     },
     {
@@ -141,7 +145,8 @@
         "cs": "Aktuální otevírací dobu zjistíte na klinice.",
         "sv": "Kontakta kliniken för aktuella öppettider.",
         "da": "Kontakt klinikken for aktuelle åbningstider.",
-        "fi": "Kysy ajankohtaiset aukioloajat klinikalta."
+        "fi": "Kysy ajankohtaiset aukioloajat klinikalta.",
+        "nb": "Kontakt klinikken for å høre gjeldende åpningstider."
       }
     },
     {
@@ -163,7 +168,8 @@
         "cs": "Denně 9:00–21:00.",
         "sv": "Öppet varje dag 09.00–21.00.",
         "da": "Åbent dagligt 09.00–21.00.",
-        "fi": "Auki päivittäin 9–21."
+        "fi": "Auki päivittäin 9–21.",
+        "nb": "Åpent alle dager kl. 09.00–21.00."
       }
     },
     {
@@ -185,7 +191,8 @@
         "cs": "Nonstop; přestávka ve středu 11:00–14:00.",
         "sv": "Öppet dygnet runt; paus på onsdagar 11.00–14.00.",
         "da": "Døgnåben; pause onsdag 11.00–14.00.",
-        "fi": "Auki ympäri vuorokauden; tauko keskiviikkoisin 11–14."
+        "fi": "Auki ympäri vuorokauden; tauko keskiviikkoisin 11–14.",
+        "nb": "Åpent hele døgnet; pause på onsdager 11.00–14.00."
       }
     },
     {
@@ -207,7 +214,8 @@
         "cs": "Denně 9:00–21:00; přestávka ve středu 11:00–14:00.",
         "sv": "Öppet varje dag 09.00–21.00; paus på onsdagar 11.00–14.00.",
         "da": "Åbent dagligt 09.00–21.00; pause onsdag 11.00–14.00.",
-        "fi": "Auki päivittäin 9–21; tauko keskiviikkoisin 11–14."
+        "fi": "Auki päivittäin 9–21; tauko keskiviikkoisin 11–14.",
+        "nb": "Åpent alle dager kl. 09.00–21.00; pause onsdager kl. 11.00–14.00."
       }
     },
     {
@@ -229,7 +237,8 @@
         "cs": "Denně 9:00–21:00; přestávka ve středu 11:00–14:00.",
         "sv": "Öppet varje dag 09.00–21.00; paus på onsdagar 11.00–14.00.",
         "da": "Åbent dagligt 09.00–21.00; pause onsdag 11.00–14.00.",
-        "fi": "Auki päivittäin 9–21; tauko keskiviikkoisin 11–14."
+        "fi": "Auki päivittäin 9–21; tauko keskiviikkoisin 11–14.",
+        "nb": "Åpent alle dager kl. 09.00–21.00; pause onsdager kl. 11.00–14.00."
       }
     },
     {
@@ -251,7 +260,8 @@
         "cs": "Nonstop, každý den; ne každý specialista je v noci ve službě, nejprve zavolejte.",
         "sv": "Öppet dygnet runt, alla dagar; inte alla specialister har jour på natten – ring först.",
         "da": "Åbent døgnet rundt, alle dage; ikke alle specialister er på vagt om natten – ring først.",
-        "fi": "Auki ympäri vuorokauden joka päivä; kaikki erikoislääkärit eivät ole paikalla öisin, joten soita ensin."
+        "fi": "Auki ympäri vuorokauden joka päivä; kaikki erikoislääkärit eivät ole paikalla öisin, joten soita ensin.",
+        "nb": "Åpent døgnet rundt, alle dager; ikke alle spesialister er på vakt om natten – ring først."
       }
     }
   ],
