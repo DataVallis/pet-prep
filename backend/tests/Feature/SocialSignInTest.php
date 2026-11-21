@@ -698,3 +698,28 @@ describe('RsaJwt', function () {
             ->and(RsaJwt::publicKeyFromJwk(['alg' => 'RS512'] + ssJwk('k')))->toBeNull();
     });
 });
+
+describe('POST /api/auth/social — acquisition source (VALIDATION_PLAN §4.1)', function () {
+    it('stores the answer when the call creates the account (detail only for other / ad)', function () {
+        ssGoogle(['acquisition_source' => 'ad', 'acquisition_detail' => ' IG-JESEN '])->assertOk()->assertJsonPath('created', true);
+
+        $user = User::sole();
+        expect($user->acquisition_source)->toBe('ad')
+            ->and($user->acquisition_detail)->toBe('IG-JESEN')
+            ->and($user->acquisition_recorded_at)->not->toBeNull();
+    });
+
+    it('ignores the fields for an existing account', function () {
+        ssGoogle()->assertOk()->assertJsonPath('created', true);
+        ssGoogle(['acquisition_source' => 'youtube'])->assertOk()->assertJsonPath('created', false);
+
+        expect(User::sole()->acquisition_source)->toBeNull();
+    });
+
+    it('never fails the sign-up over an invalid answer', function () {
+        ssGoogle(['acquisition_source' => 'carrier_pigeon', 'acquisition_detail' => ['x']])->assertOk()->assertJsonPath('created', true);
+
+        expect(User::sole()->acquisition_source)->toBeNull()
+            ->and(User::sole()->acquisition_detail)->toBeNull();
+    });
+});

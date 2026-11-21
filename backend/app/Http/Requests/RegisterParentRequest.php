@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Requests\Concerns\AcceptsAcquisitionSource;
 use App\Http\Requests\Concerns\NormalizesTimezoneInput;
 use App\Models\Family;
 use App\Models\User;
@@ -23,6 +24,7 @@ use Illuminate\Validation\Validator;
  */
 class RegisterParentRequest extends FormRequest
 {
+    use AcceptsAcquisitionSource;
     use NormalizesTimezoneInput;
 
     public const MAX_NAME_LENGTH = 60;
@@ -80,6 +82,9 @@ class RegisterParentRequest extends FormRequest
         // Device aliases (Etc/UTC, Asia/Calcutta, Europe/Kiev …) → canonical
         // name; unknown but valid → default (logged) instead of a 422.
         $this->normalizeTimezoneInput('timezone', fallbackToDefault: true);
+
+        // VALIDATION_PLAN §4.1: an unknown source becomes null — it never blocks the sign-up.
+        $this->prepareAcquisitionInput();
     }
 
     /**
@@ -96,6 +101,7 @@ class RegisterParentRequest extends FormRequest
             'timezone' => ['sometimes', 'string', 'timezone:all'],
             'accept_terms' => ['required', 'accepted'],
             'device_name' => ['nullable', 'string', 'max:255'],
+            ...$this->acquisitionRules(),
         ];
     }
 

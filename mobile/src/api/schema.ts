@@ -167,6 +167,10 @@ export interface paths {
          *       stored as `terms_accepted_at`.
          *     - No e-mail verification yet (M2-10b). Throttled: 5 / min and
          *       20 / hour per IP (429 with `Retry-After`).
+         *     - Optional `acquisition_source` (»Kje ste izvedeli za PetPrep?«,
+         *       VALIDATION_PLAN §4.1) + `acquisition_detail` (kept only with `other` /
+         *       `ad`, ≤ 60 characters): an unknown value is stored as null and never
+         *       fails the sign-up.
          *
          *     POST /api/register
          */
@@ -208,6 +212,10 @@ export interface paths {
          *     (no client ID configured) / `provider_unavailable` (provider keys
          *     unreachable). Validation errors are the usual 422 `errors`. Children
          *     never use this (PIN only). Throttled: 10 / min and 30 / hour per IP.
+         *
+         *     Optional `acquisition_source` / `acquisition_detail` (as at
+         *     `POST /api/register`) are stored only when this call creates the
+         *     account; for an existing account they are ignored.
          *
          *     POST /api/auth/social
          */
@@ -1754,7 +1762,10 @@ export interface paths {
          *     Score, today's routines, last 7 days and 12-week progress; pets with
          *     caretakers, traffic light, metrics, Care Score, today and timeline —
          *     M2-05 / M2-06) + legacy single-pet state, legacy traffic light
-         *     (escalation based, deprecated), quiet hours, recent activities
+         *     (escalation based, deprecated), quiet hours, recent activities, and
+         *     `phase2_interest` {submitted, notify, price_choice} (VALIDATION_PLAN
+         *     §4.4: this parent already sent the »Dobili smo pravo žival« form / with
+         *     a live »Obvestite me« consent / the stored price)
          */
         get: operations["parentDashboard.dashboard"];
         put?: never;
@@ -1825,9 +1836,96 @@ export interface paths {
          *     most once per 24 h per family → otherwise 422 `timezone_change_too_soon`
          *     with `next_allowed_at` (ISO 8601 in the current family zone). On success
          *     every family pet gets a `family_timezone_changed` broadcast.
+         *     (The acquisition answer goes through PATCH, not PUT.)
          */
         put: operations["parentSettings.update"];
         post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        /**
+         * Partial update of the parent settings: the family `timezone` (optional,
+         *     same rules as PUT) and / or the one-time »Kje ste izvedeli za PetPrep?«
+         *     answer (VALIDATION_PLAN §4.1, David 2026-11-21)
+         * @description - `acquisition_source` / `acquisition_detail` are stored only while this
+         *       parent has no answer yet — one chance for parents who signed up before
+         *       the question existed. Once set, they are ignored (still 200); an
+         *       unknown value is ignored too (never a 422). `detail` is kept only with
+         *       `other` / `ad`, trimmed, at most 60 characters.
+         *     - `timezone` is required only when the body carries no acquisition field.
+         *     - Order: the answer is stored FIRST, then the timezone — a 422
+         *       `timezone_change_too_soon` still keeps a stored answer.
+         *
+         *     PATCH /api/parent/settings
+         */
+        patch: operations["parentSettings.patch"];
+        trace?: never;
+    };
+    "/parent/dashboard-opened": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * The parent dashboard gained focus (after a cold start, a return to the
+         *     foreground or a push tap — `trigger`, optional). The server keeps at
+         *     most one open per parent per 30 minutes; a call inside that window is
+         *     accepted and ignored. Always 204. Throttled 30 / min per parent
+         * @description POST /api/parent/dashboard-opened
+         */
+        post: operations["parentValidation.dashboardOpened"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/parent/phase2-interest/viewed": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * The parent tapped »Dobili smo pravo žival«: the first tap is stored,
+         *     later taps update the last one. 204
+         * @description POST /api/parent/phase2-interest/viewed
+         */
+        post: operations["parentValidation.phase2Viewed"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/parent/phase2-interest": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Answer of the Phase-2 screen (»v pripravi« — nothing is sold): price
+         *     choice (monthly: free / 2,99 € / 5,99 €) and »Obvestite me, ko bo na
+         *     voljo«. One row per parent (a new answer replaces the old one). With
+         *     `notify` true the `email` is required (422 `code: email_required`) and
+         *     goes into the PetPrep e-mail store; `notify` false removes this
+         *     parent's address (`email` is then ignored). **Withdrawal:** a parent who
+         *     already answered may send only `{notify: false}` — the stored price
+         *     stays (»Ne obveščajte me več«). 200 `{status: "saved"}`
+         * @description POST /api/parent/phase2-interest
+         */
+        post: operations["parentValidation.phase2Submit"];
         delete?: never;
         options?: never;
         head?: never;
@@ -2708,6 +2806,18 @@ export interface components {
             design?: string | null;
         };
         /**
+         * DashboardOpenedRequest
+         * @description POST /api/parent/dashboard-opened (H6, VALIDATION_PLAN §4.1). An unknown `trigger` is stored as
+         *     null — a measurement call never fails over it.
+         */
+        DashboardOpenedRequest: {
+            /**
+             * @description What brought the dashboard into focus; optional (unknown → null).
+             * @enum {string|null}
+             */
+            trigger?: "launch" | "foreground" | "push" | null;
+        };
+        /**
          * DevicePlatform
          * @description Platform of a registered push device (M3-02). Mirrored in the `device_push_tokens_platform_check` constraint.
          * @enum {string}
@@ -3213,6 +3323,27 @@ export interface components {
          * @enum {string}
          */
         PartnerInquiryType: "series" | "sponsored_content" | "insurer" | "directory" | "shelter" | "other";
+        /**
+         * PatchParentSettingsRequest
+         * @description PATCH /api/parent/settings — a partial body (VALIDATION_PLAN §4.1, David 2026-11-21): the family
+         *     timezone and / or the one-time »Kje ste izvedeli za PetPrep?« answer. PUT keeps
+         *     UpdateParentSettingsRequest (timezone only, required).
+         */
+        PatchParentSettingsRequest: {
+            /**
+             * @description IANA identifier, case-sensitive (e.g. "Europe/Ljubljana"). Optional; required only
+             *     when the body carries no acquisition field (after(); static `sometimes` so the
+             *     OpenAPI type shows it optional).
+             */
+            timezone?: string;
+            /**
+             * @description »Kje ste izvedeli za PetPrep?« — optional; an unknown value is stored as null (never a 422).
+             * @enum {string|null}
+             */
+            acquisition_source?: "friend_family" | "instagram" | "tiktok" | "facebook" | "youtube" | "school_kindergarten" | "search" | "website" | "ad" | "other" | null;
+            /** @description Free text / campaign code, kept only with `other` or `ad`; trimmed, at most 60 characters (longer is cut). */
+            acquisition_detail?: string | null;
+        };
         /** Pet */
         Pet: {
             id: number;
@@ -3309,6 +3440,31 @@ export interface components {
          * @enum {string}
          */
         PetStateEnum: "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching";
+        /**
+         * Phase2InterestRequest
+         * @description POST /api/parent/phase2-interest (H7, VALIDATION_PLAN §4.4). `email` is required when `notify`
+         *     is true → 422 with `code: email_required` (an address that is not valid → `code: email_invalid`)
+         *     and ignored when `notify` is false; other validation errors are the usual 422 body.
+         *     `price_choice` may be left out only for a WITHDRAWAL — `{notify: false}` from a parent who already
+         *     answered (QA #1480 B1): the stored price stays, the consent and the e-mail go.
+         */
+        Phase2InterestRequest: {
+            /**
+             * @description »Koliko bi bili pripravljeni plačati?« — monthly options (David 2026-11-21 D3).
+             *     Required, except for a withdrawal `{notify: false}` of an existing answer (after();
+             *     static `sometimes` so the OpenAPI type lets the app send the withdrawal).
+             * @enum {string}
+             */
+            price_choice?: "free" | "monthly_2_99" | "monthly_5_99";
+            /** @description »Obvestite me, ko bo na voljo«. */
+            notify: boolean;
+            /**
+             * Format: email
+             * @description Required when `notify` is true (the app prefills the account e-mail). Printable ASCII
+             *     only, like the website's e-mail store.
+             */
+            email?: string | null;
+        };
         /**
          * PinLoginRequest
          * @description POST /api/child/pin-login (M2-02) — unauthenticated.
@@ -3435,6 +3591,13 @@ export interface components {
             /** @enum {unknown} */
             accept_terms: "yes" | "on" | "1" | 1 | "true" | true;
             device_name?: string | null;
+            /**
+             * @description »Kje ste izvedeli za PetPrep?« — optional; an unknown value is stored as null (never a 422).
+             * @enum {string|null}
+             */
+            acquisition_source?: "friend_family" | "instagram" | "tiktok" | "facebook" | "youtube" | "school_kindergarten" | "search" | "website" | "ad" | "other" | null;
+            /** @description Free text / campaign code, kept only with `other` or `ad`; trimmed, at most 60 characters (longer is cut). */
+            acquisition_detail?: string | null;
             password_confirmation: string;
         };
         /**
@@ -3565,6 +3728,13 @@ export interface components {
              */
             locale?: "en" | "sl" | null;
             device_name?: string | null;
+            /**
+             * @description »Kje ste izvedeli za PetPrep?« — optional; an unknown value is stored as null (never a 422).
+             * @enum {string|null}
+             */
+            acquisition_source?: "friend_family" | "instagram" | "tiktok" | "facebook" | "youtube" | "school_kindergarten" | "search" | "website" | "ad" | "other" | null;
+            /** @description Free text / campaign code, kept only with `other` or `ad`; trimmed, at most 60 characters (longer is cut). */
+            acquisition_detail?: string | null;
         };
         /**
          * SocialisationExperience
@@ -4308,6 +4478,13 @@ export interface operations {
                          * @enum {string}
                          */
                         time_format: "auto" | "24h" | "12h";
+                        /**
+                         * @description VALIDATION_PLAN §4.1: the parent's answer to »Kje ste izvedeli za PetPrep?«
+                         *     (null = not answered yet → the app may offer the question once, via
+                         *     PATCH /api/parent/settings). Always null for a child.
+                         * @enum {string|null}
+                         */
+                        acquisition_source: "friend_family" | "instagram" | "tiktok" | "facebook" | "youtube" | "school_kindergarten" | "search" | "website" | "ad" | "other" | null;
                     };
                 };
             };
@@ -31715,6 +31892,16 @@ export interface operations {
                         };
                         /** @description M6-W01 »Želje«: open wishes of all children, all pets of the family. */
                         wishes_open_count: string;
+                        /**
+                         * @description VALIDATION_PLAN §4.4 (H7): has THIS parent sent the Phase-2 form (»Hvala« instead of the
+                         *     form), with a live »Obvestite me« consent (`notify` false → a plain thank-you), which price?
+                         */
+                        phase2_interest: {
+                            submitted: boolean;
+                            notify: boolean;
+                            /** @enum {string|null} */
+                            price_choice: "free" | "monthly_2_99" | "monthly_5_99" | null;
+                        };
                     } | {
                         /** @enum {string} */
                         message: "No active pet session found." | "No child profile paired yet.";
@@ -32341,6 +32528,12 @@ export interface operations {
                         };
                         /** @description M6-W01 »Želje«: open wishes of all children, all pets of the family. */
                         wishes_open_count: string;
+                        phase2_interest: {
+                            submitted: boolean;
+                            notify: boolean;
+                            /** @enum {string|null} */
+                            price_choice: "free" | "monthly_2_99" | "monthly_5_99" | null;
+                        };
                     } | {
                         /** @constant */
                         message: "No child profile paired yet.";
@@ -32353,6 +32546,12 @@ export interface operations {
                         family: null;
                         /** @constant */
                         wishes_open_count: 0;
+                        phase2_interest: {
+                            submitted: boolean;
+                            notify: boolean;
+                            /** @enum {string|null} */
+                            price_choice: "free" | "monthly_2_99" | "monthly_5_99" | null;
+                        };
                     };
                 };
             };
@@ -32523,6 +32722,127 @@ export interface operations {
                         settings: {
                             timezone: string;
                         };
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "parentSettings.patch": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["PatchParentSettingsRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "Settings updated successfully.";
+                        settings: {
+                            timezone: string;
+                            /**
+                             * @description The stored answer (null = not answered yet).
+                             * @enum {string|null}
+                             */
+                            acquisition_source: "friend_family" | "instagram" | "tiktok" | "facebook" | "youtube" | "school_kindergarten" | "search" | "website" | "ad" | "other" | null;
+                        };
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "parentValidation.dashboardOpened": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["DashboardOpenedRequest"];
+            };
+        };
+        responses: {
+            /** @description No content */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "parentValidation.phase2Viewed": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description No content */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "Only parent profiles can do this.";
+                    };
+                };
+            };
+        };
+    };
+    "parentValidation.phase2Submit": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["Phase2InterestRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        status: "saved";
                     };
                 };
             };

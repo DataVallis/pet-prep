@@ -128,6 +128,8 @@ class User extends Authenticatable implements FilamentUser
             // M5-R14 – R20 follow-up: ClientFeature values of the latest authenticated request.
             'client_features' => 'array',
             'client_features_at' => 'datetime',
+            // VALIDATION_PLAN §4.1 (David 2026-11-21): when the parent answered »Kje ste izvedeli za PetPrep?«.
+            'acquisition_recorded_at' => 'datetime',
         ];
     }
 

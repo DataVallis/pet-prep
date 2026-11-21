@@ -7,6 +7,7 @@ use App\Enums\UserRole;
 use App\Exceptions\EmailTakenException;
 use App\Models\Family;
 use App\Models\User;
+use App\Services\Validation\AcquisitionAnswer;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Facades\DB;
 
@@ -17,7 +18,8 @@ use Illuminate\Support\Facades\DB;
  * hashed, terms_accepted_at = now, terms_version from config/legal.php) +
  * the parent's own family in the chosen timezone + the first Sanctum token
  * with the `parent` ability. No external HTTP (no breach-password lookup,
- * no e-mail sending — verification is M2-10b).
+ * no e-mail sending — verification is M2-10b). The optional »Kje ste izvedeli za
+ * PetPrep?« answer (VALIDATION_PLAN §4.1) is stored on the new parent; null = not answered.
  */
 class ParentRegistrationService
 {
@@ -36,12 +38,13 @@ class ParentRegistrationService
         string $password,
         string $timezone,
         string $deviceName,
+        ?AcquisitionAnswer $acquisition = null,
     ): array {
         $email = User::normalizeEmail($email);
         $termsVersion = (string) config('legal.terms_version', 'draft-2026-10');
 
         try {
-            return DB::transaction(function () use ($name, $email, $password, $timezone, $deviceName, $termsVersion): array {
+            return DB::transaction(function () use ($name, $email, $password, $timezone, $deviceName, $termsVersion, $acquisition): array {
                 $user = new User;
                 $user->forceFill([
                     'name' => $name,
@@ -54,6 +57,9 @@ class ParentRegistrationService
                     // Which legal texts were accepted (texts still pending).
                     'terms_version' => $termsVersion,
                 ]);
+                if ($acquisition !== null) {
+                    $user->forceFill($acquisition->columns());
+                }
                 $user->save();
 
                 // The User::created hook already gave the parent a family (from

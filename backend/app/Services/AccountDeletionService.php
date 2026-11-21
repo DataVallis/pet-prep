@@ -17,15 +17,18 @@ use App\Models\ChildLoginPin;
 use App\Models\Family;
 use App\Models\FamilyInvite;
 use App\Models\FamilyMember;
+use App\Models\ParentDashboardOpen;
 use App\Models\Pet;
 use App\Models\PetCaretaker;
 use App\Models\PetContract;
+use App\Models\Phase2Interest;
 use App\Models\QuietHours;
 use App\Models\User;
 use App\Models\UserSocialAccount;
 use App\Services\Auth\SocialIdentity;
 use App\Services\Auth\SocialTokenVerifier;
 use App\Services\Push\PushDeviceService;
+use App\Services\Validation\Phase2InterestService;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -42,6 +45,7 @@ use Laravel\Sanctum\PersonalAccessToken;
  *  - deleteParentAccount(): the parent's own account. The LAST parent of a
  *    family takes the whole family with them (children, pets, media files,
  *    contracts incl. signatures, logs, tokens, push devices, PINs, invites, quiet hours,
+ *    dashboard opens + Phase-2 answers and their »Obvestite me« e-mail (VALIDATION_PLAN §4),
  *    routines, M2-01d certificates + their PDFs) — plus orphaned legacy child accounts that point at one of its
  *    parents (users.parent_id) but belong to no family. If another parent
  *    remains, only this parent goes (user, tokens, invites); the deprecated
@@ -692,6 +696,14 @@ class AccountDeletionService
         // them (a parent leaving a family keeps no way into its children).
         $this->deleteSharedChildSessions($userIds);
         DB::table('sessions')->whereIn('user_id', $userIds)->delete();
+
+        // VALIDATION_PLAN §4.4: the »Obvestite me« address left on the Phase-2 screen leaves the
+        // e-mail store with the account (its `app_phase2` signups; the contact when nothing else is
+        // left on it). The phase2_interests and parent_dashboard_opens rows go explicitly too (the
+        // FKs cascade as well).
+        app(Phase2InterestService::class)->forgetEmailsOf($userIds);
+        Phase2Interest::whereIn('user_id', $userIds)->delete();
+        ParentDashboardOpen::whereIn('user_id', $userIds)->delete();
 
         $emails = User::whereIn('id', $userIds)->whereNotNull('email')->pluck('email')->all();
         if ($emails !== []) {

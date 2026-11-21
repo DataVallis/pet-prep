@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\DB;
  * last-seen time and never creates a second contact. The stored consent stays as given; only a
  * NEWER consent sentence accepted now replaces it (a cached old page never downgrades it).
  *
- * Written by POST /api/email-signups and the old POST /api/summary-leads. Nothing about the
+ * Written by POST /api/email-signups, the old POST /api/summary-leads and the parent app's Phase-2
+ * form (POST /api/parent/phase2-interest via Phase2InterestService, source `app_phase2`). Nothing about the
  * visitor's address or browser is stored, and nothing here logs or alerts with the e-mail.
  */
 class EmailSignupService
@@ -23,6 +24,17 @@ class EmailSignupService
      *                                      `utm_source|medium|campaign|content|term`, `referrer_host`
      */
     public function record(array $data): EmailContact
+    {
+        return $this->recordSignup($data)->contact;
+    }
+
+    /**
+     * The same as record(), returning the new signup row (its `contact` relation set) — for a
+     * writer that must later remove exactly its own signup (Phase2InterestService, VALIDATION_PLAN §4.4).
+     *
+     * @param  array<string, mixed>  $data  as record()
+     */
+    public function recordSignup(array $data): EmailSignup
     {
         // ASCII only (the requests), so strtolower matches PostgreSQL lower().
         $email = strtolower(trim((string) $data['email']));
@@ -35,11 +47,11 @@ class EmailSignupService
     /**
      * @param  array<string, mixed>  $data
      */
-    private function store(string $email, array $data): ?EmailContact
+    private function store(string $email, array $data): ?EmailSignup
     {
         $now = now();
 
-        return DB::transaction(function () use ($email, $data, $now): ?EmailContact {
+        return DB::transaction(function () use ($email, $data, $now): ?EmailSignup {
             // createOrFirst inside: two simultaneous first signups end as one contact (unique index).
             $contact = EmailContact::firstOrCreate(['email' => $email], [
                 'first_seen_at' => $now,
@@ -63,9 +75,10 @@ class EmailSignupService
                 $contact->update($update);
             }
 
-            $contact->signups()->create($this->signupRow($data, $now));
+            $signup = $contact->signups()->create($this->signupRow($data, $now));
+            $signup->setRelation('contact', $contact);
 
-            return $contact;
+            return $signup;
         });
     }
 
