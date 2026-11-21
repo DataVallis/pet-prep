@@ -123,6 +123,18 @@ describe('startSocialSignIn / completeSocialSignUp', () => {
     expect(d.saveMethod).toHaveBeenCalledWith('google');
   });
 
+  it('M5-08: the terms-sheet acquisition answer goes only with the terms_accepted retry', async () => {
+    const request = jest
+      .fn<Promise<SocialSignInResponse>, [SocialSignInRequest]>()
+      .mockRejectedValueOnce(refusal(422, 'terms_required'))
+      .mockResolvedValueOnce({ ...RESPONSE, created: true });
+    const d = deps({ request });
+    await startSocialSignIn('google', d);
+    await completeSocialSignUp(GOOGLE, d, { source: 'other', detail: 'Plakat v vrtcu' });
+    expect(request.mock.calls[0][0]).not.toHaveProperty('acquisition_source');
+    expect(request.mock.calls[1][0]).toMatchObject({ acquisition_source: 'other', acquisition_detail: 'Plakat v vrtcu', terms_accepted: true });
+  });
+
   it('cancelling the provider UI does nothing (no request)', async () => {
     const d = deps({ obtain: jest.fn(async () => ({ kind: 'cancelled' as const })) });
     await expect(startSocialSignIn('google', d)).resolves.toEqual({ kind: 'cancelled' });

@@ -8,14 +8,17 @@
  * Flow (`modules/auth/socialSignIn.ts`): provider UI → `POST /api/auth/social` → the same
  * session as a password login. A new identity answers `terms_required`: a sheet asks for
  * the terms + privacy consent (as on the e-mail sign-up) and retries with the SAME token.
- * Closing the provider UI does nothing.
+ * Closing the provider UI does nothing. M5-08: the sheet also asks the optional »Kje ste izvedeli za
+ * PetPrep?« (`AcquisitionPicker`); the answer goes with the `terms_accepted` retry.
  */
 
 import { useState } from 'react';
-import { ActivityIndicator, Modal, Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, KeyboardAvoidingView, Modal, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import GoogleSignInButton from '@/components/auth/GoogleSignInButton';
 import TermsCheckbox from '@/components/auth/TermsCheckbox';
+import AcquisitionPicker from '@/components/auth/AcquisitionPicker';
+import { EMPTY_ACQUISITION, type AcquisitionChoice } from '@/modules/validation/acquisition';
 import { AUTH_STYLES } from '@/components/auth/authStyles';
 import { Text } from '@/components/ui/Text';
 import {
@@ -53,6 +56,8 @@ export default function SocialSignInSection({ disabled = false, onBusyChange, pr
   const [pendingCredential, setPendingCredential] = useState<ProviderCredential | null>(null);
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [termsInvalid, setTermsInvalid] = useState(false);
+  // M5-08: optional answer on the new-account sheet, sent with the `terms_accepted` retry.
+  const [acquisition, setAcquisition] = useState<AcquisitionChoice>(EMPTY_ACQUISITION);
 
   if (!available.google && !apple) return null;
 
@@ -71,6 +76,7 @@ export default function SocialSignInSection({ disabled = false, onBusyChange, pr
       case 'terms_required':
         setTermsAccepted(false);
         setTermsInvalid(false);
+        setAcquisition(EMPTY_ACQUISITION);
         setPendingCredential(outcome.credential);
         return;
       case 'cancelled':
@@ -100,7 +106,7 @@ export default function SocialSignInSection({ disabled = false, onBusyChange, pr
     }
     setBusy('terms');
     try {
-      apply(await completeSocialSignUp(pendingCredential));
+      apply(await completeSocialSignUp(pendingCredential, undefined, acquisition));
     } finally {
       setBusy(null);
     }
@@ -155,12 +161,17 @@ export default function SocialSignInSection({ disabled = false, onBusyChange, pr
       </View>
 
       <Modal visible={pendingCredential !== null} transparent animationType="slide" onRequestClose={cancelTerms}>
-        <View style={styles.scrim}>
+        <KeyboardAvoidingView style={styles.scrim} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
           <View style={styles.sheet} testID={`${testID}-terms`} accessibilityViewIsModal>
             <Text style={styles.sheetTitle} accessibilityRole="header">
               {S.termsTitle}
             </Text>
             <Text style={styles.sheetBody}>{S.termsBody}</Text>
+            <ScrollView style={styles.sheetScroll} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}>
+              <View style={styles.sheetAcquisition}>
+                <AcquisitionPicker value={acquisition} onChange={setAcquisition} disabled={busy !== null} testID={`${testID}-acquisition`} />
+              </View>
+            </ScrollView>
             <TermsCheckbox
               checked={termsAccepted}
               onToggle={() => {
@@ -192,7 +203,7 @@ export default function SocialSignInSection({ disabled = false, onBusyChange, pr
               <Text style={styles.switchText}>{S.termsCancel}</Text>
             </Pressable>
           </View>
-        </View>
+        </KeyboardAvoidingView>
       </Modal>
     </View>
   );
@@ -220,4 +231,6 @@ const styles = StyleSheet.create({
   },
   sheetTitle: { fontFamily: fonts.display, fontSize: 24, letterSpacing: tightTracking(24), color: light.ink },
   sheetBody: { marginTop: 10, fontSize: 15, lineHeight: 21, color: light.inkMuted },
+  sheetScroll: { flexGrow: 0, maxHeight: 320 },
+  sheetAcquisition: { marginTop: 16 },
 });
