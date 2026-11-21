@@ -9,6 +9,7 @@ use Illuminate\Contracts\Validation\Validator as ValidatorContract;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\Validator;
 
 /**
  * POST /api/parent/phase2-interest (H7, VALIDATION_PLAN §4.4). `email` is required when `notify`
@@ -44,13 +45,30 @@ class Phase2InterestRequest extends FormRequest
     {
         return [
             // »Koliko bi bili pripravljeni plačati?« — monthly options (David 2026-11-21 D3).
-            // Optional only for a withdrawal `{notify: false}` of an existing answer.
-            'price_choice' => [$this->isWithdrawal() ? 'sometimes' : 'required', 'string', Rule::in(Phase2PriceChoice::values())],
+            // Required, except for a withdrawal `{notify: false}` of an existing answer (after();
+            // static `sometimes` so the OpenAPI type lets the app send the withdrawal).
+            'price_choice' => ['sometimes', 'string', Rule::in(Phase2PriceChoice::values())],
             // »Obvestite me, ko bo na voljo«.
             'notify' => ['required', 'boolean'],
             // Required when `notify` is true (the app prefills the account e-mail). Printable ASCII
             // only, like the website's e-mail store.
             'email' => ['exclude_unless:notify,true', 'nullable', 'required_if_accepted:notify', 'string', 'max:190', 'regex:/^[\x21-\x7E]+$/', 'email'],
+        ];
+    }
+
+    /**
+     * `price_choice` missing outside a withdrawal → required.
+     *
+     * @return array<int, callable>
+     */
+    public function after(): array
+    {
+        return [
+            function (Validator $validator): void {
+                if (! $this->has('price_choice') && ! $this->isWithdrawal()) {
+                    $validator->errors()->add('price_choice', __('validation.required', ['attribute' => 'price choice']));
+                }
+            },
         ];
     }
 

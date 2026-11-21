@@ -7,6 +7,7 @@ use App\Http\Requests\Concerns\NormalizesTimezoneInput;
 use App\Models\User;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Validator;
 
 /**
  * PATCH /api/parent/settings — a partial body (VALIDATION_PLAN §4.1, David 2026-11-21): the family
@@ -42,9 +43,26 @@ class PatchParentSettingsRequest extends FormRequest
     {
         return [
             // IANA identifier, case-sensitive (e.g. "Europe/Ljubljana"). Optional; required only
-            // when the body carries no acquisition field.
-            'timezone' => [$this->sentAcquisition() ? 'sometimes' : 'required', 'string', 'timezone:all'],
+            // when the body carries no acquisition field (after(); static `sometimes` so the
+            // OpenAPI type shows it optional).
+            'timezone' => ['sometimes', 'string', 'timezone:all'],
             ...$this->acquisitionRules(),
+        ];
+    }
+
+    /**
+     * A body with neither a timezone nor an acquisition field → `timezone` required (as PUT).
+     *
+     * @return array<int, callable>
+     */
+    public function after(): array
+    {
+        return [
+            function (Validator $validator): void {
+                if (! $this->has('timezone') && ! $this->sentAcquisition()) {
+                    $validator->errors()->add('timezone', __('validation.required', ['attribute' => 'timezone']));
+                }
+            },
         ];
     }
 

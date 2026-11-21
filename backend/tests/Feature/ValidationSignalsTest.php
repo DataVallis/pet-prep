@@ -201,6 +201,7 @@ describe('acquisition source via PATCH /api/parent/settings', function () {
             ->assertJsonPath('settings.timezone', 'Europe/Berlin')
             ->assertJsonPath('settings.acquisition_source', 'website');
         putJson('/api/parent/settings', [])->assertUnprocessable()->assertJsonValidationErrors('timezone');
+        patchJson('/api/parent/settings', [])->assertUnprocessable()->assertJsonValidationErrors('timezone');
         // PUT is unchanged: timezone required, the acquisition fields are not taken there.
         $other = User::factory()->parent()->create();
         vsAs($other);
