@@ -321,9 +321,9 @@ it('gives the Bernese Mountain Dog the new shorter_lifespan tag, family_pet, lar
 
     // Only the Bernese, the Rottweiler (RKC "Under 10 years", M5-R10-19), the Bulldog (M5-R10-20), the
     // Cane Corso (PDSA "Under 10 years", M5-R10-23), the Great Dane (RKC "Under 10 years", M5-R10-29) and the Mastiff
-    // (PDSA "Under 10 years", M5-R10-45), the Newfoundland (PDSA "Under 10 years", M5-R10-51), the Bloodhound (RKC "Under 10 years", M5-R10-62), the Pyrenean Mountain Dog (RKC "Under 10 years", M5-R10-78), the Irish Wolfhound (RKC "Under 10 years", M5-R10-80) the Flat-Coated Retriever (RKC "Under 10 years", M5-R10-101) and the Leonberger (RKC "Under 10 years", M5-R10-103) carry the chip so far.
+    // (PDSA "Under 10 years", M5-R10-45), the Newfoundland (PDSA "Under 10 years", M5-R10-51), the Bloodhound (RKC "Under 10 years", M5-R10-62), the Pyrenean Mountain Dog (RKC "Under 10 years", M5-R10-78), the Irish Wolfhound (RKC "Under 10 years", M5-R10-80) the Flat-Coated Retriever (RKC "Under 10 years", M5-R10-101) and the Leonberger (RKC "Under 10 years", M5-R10-103) carry the chip so far (M5-R10-132: also the Neapolitan Mastiff, RKC "Under 10 years").
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso, BreedType::GreatDane, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::SharPei, BreedType::ChowChow, BreedType::FlatCoatedRetriever, BreedType::Leonberger], true)) {
+        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso, BreedType::GreatDane, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::SharPei, BreedType::ChowChow, BreedType::FlatCoatedRetriever, BreedType::Leonberger, BreedType::NeapolitanMastiff], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('shorter_lifespan');
         }
     }
@@ -471,12 +471,13 @@ it('gives the Cane Corso the new not_for_small_children and drools tags, active_
     // `drools` also the Great Dane (PDSA S243, M5-R10-29), the Basset Hound (AKC S324, M5-R10-39) and the Mastiff (PetMD S374, M5-R10-45), the Newfoundland (PDSA S423 / PetMD S424, M5-R10-51) and the Bloodhound (PDSA S503, M5-R10-62); `not_for_small_children` also the Dobermann (PDSA S211,
     // M5-R10-125: `not_for_small_children` also the Pointer (WebMD S946 "they're not particularly good with young children.").
     // M5-R10-131: `not_for_small_children` also the Black Russian Terrier (VCA S990 "Children | Older kids").
+    // M5-R10-132: `drools` and `not_for_small_children` also the Neapolitan Mastiff (PetMD S996).
     // M5-R10-25), the Boxer (PDSA S219, M5-R10-26), the Great Dane (PDSA S243, M5-R10-29), the Belgian Malinois (AKC S316, M5-R10-38), the Hungarian Vizsla (PDSA S329, M5-R10-40), the Mastiff (PetMD S374, M5-R10-45), the Rhodesian Ridgeback (PDSA S390 / Woodgreen S392, M5-R10-47) the Dalmatian (PDSA S430, M5-R10-52), the Weimaraner (PDSA S480, M5-R10-59), the Giant Schnauzer (PetMD S497, M5-R10-61), the Bloodhound (PDSA S503, M5-R10-62), the Akita (PDSA S508, M5-R10-63) and the Pyrenean Mountain Dog (PetMD S604, M5-R10-78) and the Anatolian Shepherd Dog (PetMD S687, M5-R10-90).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff, BreedType::DogueDeBordeaux], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff, BreedType::DogueDeBordeaux, BreedType::NeapolitanMastiff], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('drools');
         }
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::Mastiff, BreedType::RhodesianRidgeback, BreedType::Dalmatian, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::AlaskanMalamute, BreedType::AnatolianShepherdDog, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::DogueDeBordeaux, BreedType::Borzoi, BreedType::Pointer, BreedType::BlackRussianTerrier], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::Mastiff, BreedType::RhodesianRidgeback, BreedType::Dalmatian, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::AlaskanMalamute, BreedType::AnatolianShepherdDog, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::DogueDeBordeaux, BreedType::Borzoi, BreedType::Pointer, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('not_for_small_children');
         }
     }
@@ -716,8 +717,9 @@ it('gives the Great Dane the new eyelid_problems tag and hips_hind_legs (welfare
     // Only the Great Dane, the Basset Hound (Breed Watch S322, M5-R10-39) the Mastiff (PDSA S370, Breed Watch S375, M5-R10-45) and the
     // Newfoundland (Breed Watch point via the Kennel Club BHCP S425, M5-R10-51) and the Bloodhound (RKC Breed Watch Category 2 S502,
     // PDSA eye problems S503, M5-R10-62) carry eyelid_problems so far.
+    // M5-R10-132: also the Neapolitan Mastiff (RKC Breed Watch Category 3 S994, PDSA eyelid problems S995).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::SharPei, BreedType::Pekingese, BreedType::ChowChow], true)) {
+        if (! in_array($breed, [BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::SharPei, BreedType::Pekingese, BreedType::ChowChow, BreedType::NeapolitanMastiff], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('eyelid_problems');
         }
     }

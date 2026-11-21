@@ -998,6 +998,13 @@ class FalAiService
                 .'dark oval eyes, medium-sized triangular hanging ears set high, '
                 .'a thick natural undocked sabre-shaped tail, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-132: FCI-Standard N° 197 (S993) — large, heavy, massive, bulky; short hard dense coat; loose skin with folds
+            // on the head (welfare, RKC Breed Watch Category 3: moderate folds, tight eyelids, open nostrils); grey; natural ears and tail.
+            BreedType::NeapolitanMastiff => 'A large, heavy and massive Neapolitan Mastiff, a bulky molosser with a broad flat skull and a deep chest, '
+                .'solid grey coat, a short, hard, dense coat, loose skin with moderate folds on the head and a moderate dewlap, '
+                .'tight eyelids, a clearly visible muzzle with a dark grey nose and open nostrils, small natural triangular ears, '
+                .'a thick natural tail hanging in a sabre curve, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2343,6 +2350,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'rough, thick, slightly waved double coat with a soft dense undercoat',
                 'markings' => 'abundant eyebrows, moustache and beard, triangular hanging ears, natural sabre-shaped tail, large black nose',
+            ],
+            // M5-R10-132: FCI S993 grey (the portrait default of the five standard colours).
+            BreedType::NeapolitanMastiff => [
+                'color_scheme' => 'grey',
+                'eye_color' => 'dark',
+                'fur_texture' => 'short, hard, dense coat of the same length all over',
+                'markings' => 'loose skin with moderate head folds and dewlap, tight eyelids, small natural ears, natural sabre tail, dark grey nose',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

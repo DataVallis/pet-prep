@@ -881,6 +881,12 @@
 | markings or grey patches); rough, thick double coat with eyebrows, moustache and beard; high-set hanging ears; natural tail.
 | No welfare trait. Black first (portrait default); weights unsourced → `verified => false`.
 |
+| Neapolitan Mastiff (M5-R10-132, docs/research/dog-data neapolitan_mastiff.appearance): "Large, heavy and massive dog with a
+| bulky appearance." (FCI-Standard N° 197, S993); "Preferred colours are: grey, lead grey and black, but also brown, fawn and
+| deep fawn (red deer)." (S993) → five colours (never extensive white or white on the head; tolerated shades not offered); short,
+| hard coat; loose skin with head folds. Welfare (RKC Breed Watch Category 3, S994; PDSA eyelid problems, S995): moderate folds
+| (`skin`), tight eyelids, visible muzzle with open nostrils (`muzzle`). Grey first (portrait default); weights unsourced.
+|
 | Mudi (M5-R10-126, docs/research/dog-data mudi.appearance): "Medium-sized herding dog with a wedge-shaped head. Prick ears.
 | Body topline is distinctly sloping towards the rear." (FCI-Standard N° 238, S949); colours black, white, fawn, ash (blue), liver,
 | ash-brown and cifra (merle) (S949 / FCI nomenclature S948); dense, shiny, wavy coat 3–7 cm; high-set prick ears; natural tail.
@@ -5566,6 +5572,45 @@ return [
             'tail' => ['thick natural tail set high, sabre-shaped'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-132 (docs/research/dog-data/data.json neapolitan_mastiff.appearance; runbook rules 2026-10-10: FCI-Standard N° 197
+    // (S993) — grey, black, brown, fawn, deep fawn; grey first = the portrait default; natural ears and tail; welfare traits).
+    'neapolitan_mastiff' => [
+        'display_name' => 'Neapolitan Mastiff',
+        // Colour frequencies are in no source (neapolitan_mastiff.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 197 (S993, https://fci.be/Nomenclature/Standards/197g02-en.pdf), RKC (S994), PDSA (S995) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S994 "Large"; S993 males 65–75 cm, 60–70 kg (paraphrase of the table)',
+            'build' => 'S993 "Large, heavy and massive dog with a bulky appearance."; "The skull is broad and flat, particularly between the ears."',
+            'coat_length' => 'S993 "Short and hard, dense, of the same length all over."',
+            'coat_color' => 'S993 "Preferred colours are: grey, lead grey and black, but also brown, fawn and deep fawn (red deer)." (weights unsourced; never extensive white patches or white on the head)',
+            'ear_carriage' => 'S993 "Small in relation to the size of the dog, of triangular shape"; "The ears are natural."',
+            'eye_color' => 'S993 "Set well apart on an equal frontal level; rather round in shape"; S995 eyelid problems "due to excessive skin over the face" (welfare: tight eyelids)',
+            'tail' => 'S993 "Broad and thick at the root"; at rest "hanging and curved in sabre fashion" (natural tail)',
+            'skin' => 'S993 "Thick, abundant, and lose all over the body, particularly on the head where it forms numerous folds and wrinkles."; never "in abundance to the extent to interfere with the dogs\' health and wellbeing" (welfare: moderate folds, S994 Breed Watch Category 3)',
+            'muzzle' => 'S993 "The ratio skull-muzzle is as 2 to 1."; nose "must not protrude beyond the outer vertical line of the lips." (welfare: visible muzzle, open nostrils)',
+        ],
+        'traits' => [
+            'size' => ['very large, heavy'],
+            'build' => [['value' => 'large, heavy and massive molosser with a bulky body slightly longer than tall, a broad flat skull and a deep chest', 'weight' => 3], 'powerful, heavy-boned and majestic, standing calmly on strong legs'],
+            'coat_length' => ['short, hard, dense coat of the same length all over'],
+            // FCI (S993): grey, black, brown, fawn, deep fawn; grey first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'grey', 'weight' => 40],
+                ['value' => 'black', 'weight' => 25],
+                ['value' => 'brown (mahogany)', 'weight' => 10],
+                ['value' => 'fawn', 'weight' => 15],
+                ['value' => 'deep fawn (red deer)', 'weight' => 10],
+            ],
+            'ear_carriage' => ['small, natural triangular ears hanging flat close to the cheeks'],
+            // Welfare (Breed Watch Category 3 via S994 / S995): eyelids in normal contact, no drooping, no haw.
+            'eye_color' => ['dark, rather round eyes set well apart, with tight eyelids, never drooping'],
+            'tail' => ['thick natural tail, broad at the root, hanging in a gentle sabre curve to the hock'],
+            'skin' => ['loose skin with moderate folds on the head and a moderate dewlap — never heavy folds over the eyes'],
+            'muzzle' => ['broad, deep muzzle a third of the head length, clearly visible, with open nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'skin', 'muzzle'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
