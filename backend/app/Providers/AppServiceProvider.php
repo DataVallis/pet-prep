@@ -351,6 +351,24 @@ class AppServiceProvider extends ServiceProvider
                 ->by('account-export:'.($request->user()?->id ?: ClientIp::rateLimitKey($request->ip())));
         });
 
+        // VALIDATION_PLAN §4.1 / §4.4 (David 2026-11-21): dashboard opens 30 / min per parent
+        // (the server keeps ≤ 1 row per 30 min anyway); the Phase-2 fake door 10 / min per parent.
+        RateLimiter::for('dashboard-opens', function (Request $request) {
+            if (app()->environment('testing')) {
+                return Limit::none();
+            }
+
+            return Limit::perMinute(30)->by('dashboard-opens:'.($request->user()?->id ?: ClientIp::rateLimitKey($request->ip())));
+        });
+
+        RateLimiter::for('phase2-interest', function (Request $request) {
+            if (app()->environment('testing')) {
+                return Limit::none();
+            }
+
+            return Limit::perMinute(10)->by('phase2-interest:'.($request->user()?->id ?: ClientIp::rateLimitKey($request->ip())));
+        });
+
         RateLimiter::for('family-invites', function (Request $request) {
             if (app()->environment('testing')) {
                 return Limit::none();

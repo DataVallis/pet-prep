@@ -10,12 +10,14 @@ use App\Models\ChallengeCertificate;
 use App\Models\DevicePushToken;
 use App\Models\Family;
 use App\Models\FamilyMember;
+use App\Models\ParentDashboardOpen;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\User;
 use App\Models\UserSocialAccount;
 use App\Services\Media\PetGrowthService;
 use App\Services\Media\PetMediaService;
+use App\Services\Validation\Phase2InterestService;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -26,7 +28,8 @@ use Laravel\Sanctum\PersonalAccessToken;
  *
  * Everything the family put into PetPrep or PetPrep derived from it, as one
  * JSON document: parents (name, e-mail, timezone, terms acceptance, sign-in
- * methods incl. linked Google / Apple identities — M2-10c), children
+ * methods incl. linked Google / Apple identities — M2-10c; the acquisition answer, dashboard opens
+ * and the Phase-2 interest with its »Obvestite me« e-mail — VALIDATION_PLAN §4), children
  * (nickname, birth year), quiet hours, invites, pets (state, appearance traits,
  * caretakers, contracts INCLUDING the child's signature — the family's own
  * drawing, SVG path data or base64 PNG), the full history (activities, steps,
@@ -107,7 +110,7 @@ class AccountExportService
         $childIds = $members->filter(fn (FamilyMember $m) => $m->role === FamilyRole::Child)->pluck('user_id')->map(fn ($id) => (int) $id)->all();
         $petIds = Pet::where('family_id', $family->id)->orderBy('id')->pluck('id')->map(fn ($id) => (int) $id)->all();
 
-        $this->assertSize($petIds);
+        $this->assertSize($petIds, $parentIds);
 
         $devices = $this->deviceCounts(array_merge($parentIds, $childIds));
         $push = $this->pushDevices(array_merge($parentIds, $childIds));
@@ -172,22 +175,34 @@ class AccountExportService
 
     /**
      * @param  list<int>  $petIds
+     * @param  list<int>  $parentIds
      *
      * @throws AccountDeletionException
      */
-    private function assertSize(array $petIds): void
+    private function assertSize(array $petIds, array $parentIds = []): void
     {
+        // H6: dashboard opens are rows too (≤ 48 a day per parent, kept 400 days).
+        $rows = $parentIds === [] ? 0 : ParentDashboardOpen::whereIn('user_id', $parentIds)->count();
         if ($petIds === []) {
+            $this->assertRows($rows);
+
             return;
         }
 
-        $rows = 0;
         foreach (['activities_log', 'pet_daily_steps', 'parent_walk_entries', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events', 'pet_training_sessions', 'pet_care_sessions', 'pet_wishes', 'pet_treat_events'] as $table) {
             $rows += DB::table($table)->whereIn('pet_id', $petIds)->count();
         }
         // M5-R05: free plays are exported as daily counts — only invitations are rows.
         $rows += DB::table('pet_play_events')->whereIn('pet_id', $petIds)->where('source', 'invitation')->count();
 
+        $this->assertRows($rows);
+    }
+
+    /**
+     * @throws AccountDeletionException
+     */
+    private function assertRows(int $rows): void
+    {
         if ($rows > (int) config('privacy.export_max_rows', 50000)) {
             throw new AccountDeletionException('export_too_large', 'The export is too large to build right now. Please contact support.', 413);
         }
@@ -221,6 +236,21 @@ class AccountExportService
             'devices' => (int) ($devices[$u->id] ?? 0),
             'push_devices' => $push[$u->id] ?? [],
             'created_at' => $this->iso($u->created_at),
+            // VALIDATION_PLAN §4.1 (David 2026-11-21): »Kje ste izvedeli za PetPrep?« (null = not answered).
+            'acquisition' => $u->acquisition_source === null ? null : [
+                'source' => $u->acquisition_source,
+                'detail' => $u->acquisition_detail,
+                'recorded_at' => $this->iso($u->acquisition_recorded_at),
+            ],
+            // H6: when this parent opened the dashboard (≤ 1 per 30 min, kept 400 days).
+            'dashboard_opens' => ParentDashboardOpen::where('user_id', $u->id)->orderBy('opened_at')->orderBy('id')
+                ->get(['opened_at', 'trigger'])
+                ->map(fn (ParentDashboardOpen $o) => [
+                    'opened_at' => $this->iso($o->opened_at),
+                    'trigger' => $o->trigger?->value,
+                ])->values()->all(),
+            // H7: the »Dobili smo pravo žival« answer, incl. the e-mail left for »Obvestite me«.
+            'phase2_interest' => app(Phase2InterestService::class)->exportFor($u),
         ];
     }
 

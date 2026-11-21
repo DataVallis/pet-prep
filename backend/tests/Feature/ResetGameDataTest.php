@@ -246,6 +246,9 @@ function rgSeed(): array
         'minutes' => 20, 'steps' => 2000, 'entry_id' => 'walk-reset-0001',
     ]);
     rgInsert('breed_fact_reads', ['user_id' => $child->id, 'breed_fact_id' => $factId, 'read_at' => $now]);
+    // VALIDATION_PLAN §4.1 / §4.4: a parent's dashboard open (H6) and Phase-2 answer (H7).
+    DB::table('parent_dashboard_opens')->insert(['user_id' => $parent->id, 'family_id' => $family->id, 'opened_at' => $now, 'trigger' => 'launch']);
+    DB::table('phase2_interests')->insert(['user_id' => $parent->id, 'family_id' => $family->id, 'first_viewed_at' => $now, 'last_viewed_at' => $now, 'created_at' => $now, 'updated_at' => $now]);
     rgInsert('breed_fact_shows', ['user_id' => $child->id, 'pet_id' => $pet->id, 'breed_fact_id' => $factId, 'program_week' => 1, 'local_date' => $today, 'shown_at' => $now]);
 
     // M5-T15: an AI budget warning (dedupe row) and the admin's bell notification.

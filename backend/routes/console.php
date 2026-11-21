@@ -80,6 +80,15 @@ Schedule::command('partner-inquiries:prune')
     ->name('prune-partner-inquiries')
     ->description('Delete partner inquiries older than 12 months');
 
+// Daily (H6, VALIDATION_PLAN §4.1, David 2026-11-21): delete parent dashboard opens older
+// than 400 days. 03:53 UTC — off the hour, after the other nightly prunes.
+Schedule::command('dashboard-opens:prune')
+    ->dailyAt('03:53')
+    // One DELETE query; 30 min covers any run (D34: explicit expiry).
+    ->withoutOverlapping(30)
+    ->name('prune-dashboard-opens')
+    ->description('Delete parent dashboard opens older than 400 days');
+
 // Daily (M4, PR #22 review; videos since M4-03): re-queue reference images and
 // state videos blocked by the AI budget or an exhausted fal balance. 00:23 UTC —
 // just after the budget day rolls over (AI_BUDGET_TIMEZONE defaults to UTC).

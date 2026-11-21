@@ -23,6 +23,7 @@ use App\Http\Controllers\GiftVoucherController;
 use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
 use App\Http\Controllers\ParentSettingsController;
+use App\Http\Controllers\ParentValidationController;
 use App\Http\Controllers\PartnerInquiryController;
 use App\Http\Controllers\PetGrowthController;
 use App\Http\Controllers\PetMediaController;
@@ -276,6 +277,14 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         // Dashboard & metrics
         Route::get('dashboard', [ParentDashboardController::class, 'dashboard']);
         Route::get('activities', [ParentDashboardController::class, 'activities']);
+        // VALIDATION_PLAN §4.1 / §4.4 (David 2026-11-21): dashboard opens (H6, ≤ 1 row per
+        // parent per 30 min) and the Phase-2 fake door »Dobili smo pravo žival« (H7).
+        Route::post('dashboard-opened', [ParentValidationController::class, 'dashboardOpened'])
+            ->middleware('throttle:dashboard-opens');
+        Route::post('phase2-interest/viewed', [ParentValidationController::class, 'phase2Viewed'])
+            ->middleware('throttle:phase2-interest');
+        Route::post('phase2-interest', [ParentValidationController::class, 'phase2Submit'])
+            ->middleware('throttle:phase2-interest');
 
         // Controls & interventions
         Route::post('hard-stop', [ParentDashboardController::class, 'toggleHardStop']);
@@ -286,6 +295,9 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
 
         // Family settings (timezone, M1-03)
         Route::put('settings', [ParentSettingsController::class, 'update']);
+        // VALIDATION_PLAN §4.1 (David 2026-11-21): same handler; also takes the one-time
+        // »Kje ste izvedeli za PetPrep?« answer (acquisition_source / acquisition_detail).
+        Route::patch('settings', [ParentSettingsController::class, 'patch']);
         // Time zone per pet (David 2026-11-09): own zone or back to the family zone.
         Route::put('pets/{pet}/timezone', [PetTimezoneController::class, 'update'])->whereNumber('pet');
         // Quiet hours per pet (David 2026-11-16): own schedule or back to the family's.

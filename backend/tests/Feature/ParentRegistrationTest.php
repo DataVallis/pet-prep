@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Providers\AppServiceProvider;
 use App\Services\FamilyService;
 use App\Services\ParentRegistrationService;
+use App\Services\Validation\AcquisitionAnswer;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -290,14 +291,14 @@ describe('e-mail uniqueness in the database (PR #25)', function () {
         // transaction — another request stores the same address.
         app()->bind(ParentRegistrationService::class, fn ($app) => new class($app->make(FamilyService::class)) extends ParentRegistrationService
         {
-            public function register(string $name, string $email, string $password, string $timezone, string $deviceName): array
+            public function register(string $name, string $email, string $password, string $timezone, string $deviceName, ?AcquisitionAnswer $acquisition = null): array
             {
                 DB::table('users')->insert([
                     'name' => 'Racer', 'email' => 'ana@example.com', 'password' => 'x',
                     'role' => 'parent', 'timezone' => 'Europe/Ljubljana', 'created_at' => now(), 'updated_at' => now(),
                 ]);
 
-                return parent::register($name, $email, $password, $timezone, $deviceName);
+                return parent::register($name, $email, $password, $timezone, $deviceName, $acquisition);
             }
         });
 
