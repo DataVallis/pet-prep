@@ -1763,9 +1763,9 @@ export interface paths {
          *     caretakers, traffic light, metrics, Care Score, today and timeline —
          *     M2-05 / M2-06) + legacy single-pet state, legacy traffic light
          *     (escalation based, deprecated), quiet hours, recent activities, and
-         *     `phase2_interest` {submitted, notify} (VALIDATION_PLAN §4.4: this
-         *     parent already sent the »Dobili smo pravo žival« form / with »Obvestite
-         *     me«)
+         *     `phase2_interest` {submitted, notify, price_choice} (VALIDATION_PLAN
+         *     §4.4: this parent already sent the »Dobili smo pravo žival« form / with
+         *     a live »Obvestite me« consent / the stored price)
          */
         get: operations["parentDashboard.dashboard"];
         put?: never;
@@ -1853,6 +1853,8 @@ export interface paths {
          *       unknown value is ignored too (never a 422). `detail` is kept only with
          *       `other` / `ad`, trimmed, at most 60 characters.
          *     - `timezone` is required only when the body carries no acquisition field.
+         *     - Order: the answer is stored FIRST, then the timezone — a 422
+         *       `timezone_change_too_soon` still keeps a stored answer.
          *
          *     PATCH /api/parent/settings
          */
@@ -1917,8 +1919,10 @@ export interface paths {
          *     choice (monthly: free / 2,99 € / 5,99 €) and »Obvestite me, ko bo na
          *     voljo«. One row per parent (a new answer replaces the old one). With
          *     `notify` true the `email` is required (422 `code: email_required`) and
-         *     goes into the PetPrep e-mail store; `notify` false removes an address
-         *     left here earlier. 200 `{status: "saved"}`
+         *     goes into the PetPrep e-mail store; `notify` false removes this
+         *     parent's address (`email` is then ignored). **Withdrawal:** a parent who
+         *     already answered may send only `{notify: false}` — the stored price
+         *     stays (»Ne obveščajte me več«). 200 `{status: "saved"}`
          * @description POST /api/parent/phase2-interest
          */
         post: operations["parentValidation.phase2Submit"];
@@ -3319,6 +3323,27 @@ export interface components {
          * @enum {string}
          */
         PartnerInquiryType: "series" | "sponsored_content" | "insurer" | "directory" | "shelter" | "other";
+        /**
+         * PatchParentSettingsRequest
+         * @description PATCH /api/parent/settings — a partial body (VALIDATION_PLAN §4.1, David 2026-11-21): the family
+         *     timezone and / or the one-time »Kje ste izvedeli za PetPrep?« answer. PUT keeps
+         *     UpdateParentSettingsRequest (timezone only, required).
+         */
+        PatchParentSettingsRequest: {
+            /**
+             * @description IANA identifier, case-sensitive (e.g. "Europe/Ljubljana"). Optional; required only
+             *     when the body carries no acquisition field (after(); static `sometimes` so the
+             *     OpenAPI type shows it optional).
+             */
+            timezone?: string;
+            /**
+             * @description »Kje ste izvedeli za PetPrep?« — optional; an unknown value is stored as null (never a 422).
+             * @enum {string|null}
+             */
+            acquisition_source?: "friend_family" | "instagram" | "tiktok" | "facebook" | "youtube" | "school_kindergarten" | "search" | "website" | "ad" | "other" | null;
+            /** @description Free text / campaign code, kept only with `other` or `ad`; trimmed, at most 60 characters (longer is cut). */
+            acquisition_detail?: string | null;
+        };
         /** Pet */
         Pet: {
             id: number;
@@ -3418,15 +3443,19 @@ export interface components {
         /**
          * Phase2InterestRequest
          * @description POST /api/parent/phase2-interest (H7, VALIDATION_PLAN §4.4). `email` is required when `notify`
-         *     is true → 422 with `code: email_required` (an address that is not valid → `code: email_invalid`);
-         *     other validation errors are the usual 422 body.
+         *     is true → 422 with `code: email_required` (an address that is not valid → `code: email_invalid`)
+         *     and ignored when `notify` is false; other validation errors are the usual 422 body.
+         *     `price_choice` may be left out only for a WITHDRAWAL — `{notify: false}` from a parent who already
+         *     answered (QA #1480 B1): the stored price stays, the consent and the e-mail go.
          */
         Phase2InterestRequest: {
             /**
              * @description »Koliko bi bili pripravljeni plačati?« — monthly options (David 2026-11-21 D3).
+             *     Required, except for a withdrawal `{notify: false}` of an existing answer (after();
+             *     static `sometimes` so the OpenAPI type lets the app send the withdrawal).
              * @enum {string}
              */
-            price_choice: "free" | "monthly_2_99" | "monthly_5_99";
+            price_choice?: "free" | "monthly_2_99" | "monthly_5_99";
             /** @description »Obvestite me, ko bo na voljo«. */
             notify: boolean;
             /**
@@ -3975,18 +4004,8 @@ export interface components {
         };
         /** UpdateParentSettingsRequest */
         UpdateParentSettingsRequest: {
-            /**
-             * @description IANA identifier, case-sensitive (e.g. "Europe/Ljubljana"). Always required on PUT; on
-             *     PATCH only when the body carries no acquisition field (VALIDATION_PLAN §4.1).
-             */
+            /** @description IANA identifier, case-sensitive (e.g. "Europe/Ljubljana"). */
             timezone: string;
-            /**
-             * @description »Kje ste izvedeli za PetPrep?« — optional; an unknown value is stored as null (never a 422).
-             * @enum {string|null}
-             */
-            acquisition_source?: "friend_family" | "instagram" | "tiktok" | "facebook" | "youtube" | "school_kindergarten" | "search" | "website" | "ad" | "other" | null;
-            /** @description Free text / campaign code, kept only with `other` or `ad`; trimmed, at most 60 characters (longer is cut). */
-            acquisition_detail?: string | null;
         };
         /**
          * UpdatePetNameRequest
@@ -31875,11 +31894,13 @@ export interface operations {
                         wishes_open_count: string;
                         /**
                          * @description VALIDATION_PLAN §4.4 (H7): has THIS parent sent the Phase-2 form (»Hvala« instead of the
-                         *     form), and with »Obvestite me« (`notify` false → a plain thank-you)?
+                         *     form), with a live »Obvestite me« consent (`notify` false → a plain thank-you), which price?
                          */
                         phase2_interest: {
                             submitted: boolean;
                             notify: boolean;
+                            /** @enum {string|null} */
+                            price_choice: "free" | "monthly_2_99" | "monthly_5_99" | null;
                         };
                     } | {
                         /** @enum {string} */
@@ -32510,6 +32531,8 @@ export interface operations {
                         phase2_interest: {
                             submitted: boolean;
                             notify: boolean;
+                            /** @enum {string|null} */
+                            price_choice: "free" | "monthly_2_99" | "monthly_5_99" | null;
                         };
                     } | {
                         /** @constant */
@@ -32526,6 +32549,8 @@ export interface operations {
                         phase2_interest: {
                             submitted: boolean;
                             notify: boolean;
+                            /** @enum {string|null} */
+                            price_choice: "free" | "monthly_2_99" | "monthly_5_99" | null;
                         };
                     };
                 };
@@ -32712,9 +32737,9 @@ export interface operations {
             path?: never;
             cookie?: never;
         };
-        requestBody: {
+        requestBody?: {
             content: {
-                "application/json": components["schemas"]["UpdateParentSettingsRequest"];
+                "application/json": components["schemas"]["PatchParentSettingsRequest"];
             };
         };
         responses: {
