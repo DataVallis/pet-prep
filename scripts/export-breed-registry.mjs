@@ -512,6 +512,7 @@ const SPECIES = [
       { id: 'american_hairless_terrier', synonyms: { en: ['AHT', 'Hairless Terrier'], sl: ['ameriski goli terier', 'goli terier'] } },
       { id: 'tibetan_spaniel', synonyms: { en: ['Tibbie'], sl: ['tibetanski spanjel', 'tibetan španjel'] } },
       { id: 'black_russian_terrier', synonyms: { en: ['Russian Black Terrier', 'Russian Terrier', 'Tchiorny Terrier', 'BRT', 'RBT'], sl: ['ruski crni terier', 'črni ruski terier', 'ruski terier'] } },
+      { id: 'neapolitan_mastiff', synonyms: { en: ['Mastino Napoletano', 'Neo', 'Neapolitan'], sl: ['napolitanski mastif', 'neapeljski mastif', 'mastino napoletano'] } },
     ],
   },
   {
@@ -3327,6 +3328,35 @@ const DOG_FACTS = {
       ['bloat_gdv', 'health.bloat'],
     ],
   },
+  // M5-R10-132. RKC Breeds A–Z page reached (S994): exercise 'Up to 1 hour per day', coat 'Short', grooming 'Once a week',
+  // sheds 'Yes', lifespan 'Under 10 years'; height + weight = FCI-Standard N° 197 (S993: males 65–75 / females 60–68 cm,
+  // males 60–70 / females 50–60 kg). Not found in Coren's ranking (S35 mirror — open for David). FCI origin Italy. Not exported:
+  // height / weight alternatives (PDSA, the same facts twice), lifespan.pdsa (same band as the RKC), lifespan.bell_hesketh_2021
+  // (an owner-survey mean — a number that would mislead), lifespan.petmd (span background), senior_from (derived),
+  // health.cherry_eye (no own key). No new health key.
+  neapolitan_mastiff: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not found in Coren's ranking (S35 mirror, 2026-11-21 — open for David) → no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['eyelid_problems', 'health.eyelids'],
+      ['bloat_gdv', 'health.gdv'],
+      ['heart_muscle_disease', 'health.heart_dcm'],
+      ['wobbler_syndrome', 'health.wobbler'],
+      ['back_disc_disease', 'health.back'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['epilepsy', 'health.epilepsy'],
+      ['certain_cancers', 'health.cancer'],
+    ],
+  },
 
 
 
@@ -3416,6 +3446,7 @@ export const DOG_CARE_TASKS = {
   american_hairless_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.american_hairless_terrier.tooth_brushing'], ['nail_trim', 1, 7, 'proposed_game_parameters.american_hairless_terrier.nail_trimming'], ['bath', 1, 7, 'proposed_game_parameters.american_hairless_terrier.bathing']],
   tibetan_spaniel: [['tooth_brushing', 7, 7, 'proposed_game_parameters.tibetan_spaniel.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.tibetan_spaniel.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.tibetan_spaniel.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.tibetan_spaniel.bathing']],
   black_russian_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.black_russian_terrier.ear_care'], ['nail_trim', 1, 7, 'proposed_game_parameters.black_russian_terrier.nail_trimming'], ['groomer_visit', 1, 42, 'proposed_game_parameters.black_russian_terrier.professional_grooming']],
+  neapolitan_mastiff: [['fold_cleaning', 7, 7, 'proposed_game_parameters.neapolitan_mastiff.face_fold_cleaning'], ['bath', 1, 28, 'proposed_game_parameters.neapolitan_mastiff.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4414,6 +4445,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.black_russian_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.black_russian_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.black_russian_terrier.exercise_minutes_senior',
+  },
+  neapolitan_mastiff: {
+    adult_minutes: ['proposed_game_parameters.neapolitan_mastiff.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.neapolitan_mastiff.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.neapolitan_mastiff.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.neapolitan_mastiff.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.neapolitan_mastiff.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.neapolitan_mastiff.exercise_minutes_senior',
   },
 
 

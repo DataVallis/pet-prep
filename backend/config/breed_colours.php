@@ -860,6 +860,14 @@ return [
         ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
         ['key' => 'black-grey', 'value' => 'black with intermingling grey hairs', 'en' => 'Black with grey hairs', 'sl' => 'Črn s sivimi dlakami'],
     ],
+    // M5-R10-132: FCI-Standard N° 197 (S993) — grey, black, brown, fawn, deep fawn; same order and values as breed_appearance.php.
+    'neapolitan_mastiff' => [
+        ['key' => 'grey', 'value' => 'grey', 'en' => 'Grey', 'sl' => 'Siv'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'mahogany', 'value' => 'brown (mahogany)', 'en' => 'Mahogany', 'sl' => 'Mahagonij'],
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plav'],
+        ['key' => 'deep-fawn', 'value' => 'deep fawn (red deer)', 'en' => 'Deep fawn', 'sl' => 'Temno plav'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

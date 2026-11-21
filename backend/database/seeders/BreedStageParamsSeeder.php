@@ -1540,6 +1540,22 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_BLACK_RUSSIAN_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-131)';
 
     /**
+     * M5-R10-132 Neapolitan Mastiff (unattended run 2026-11-21, data.json proposed_game_parameters.neapolitan_mastiff.*.decision):
+     * the values follow a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (RKC S994 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages young 9 /
+     * adult 36, arrival 2 / 9 / 36, learning multiplier 1.0 (not found in Coren's ranking, S35); care rates the Border
+     * Collie's. The senior boundary (RKC / PDSA "Under 10 years" has no lower bound, no McMillan 2024 / VetCompass median)
+     * is NOT covered by the confirmation: see PROPOSED_R10_NEAPOLITAN_MASTIFF_SENIOR.
+     */
+    public const CONFIRMED_R10_NEAPOLITAN_MASTIFF = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-132)';
+
+    /**
+     * M5-R10-132: senior boundary / senior arrival 74 months = 0.75 × the Bell & Hesketh 2021 mean age at death 8.17 y
+     * (S1000, the closest peer-reviewed breed value) — Claude's suggestion, verified=false, waiting for David.
+     */
+    public const PROPOSED_R10_NEAPOLITAN_MASTIFF_SENIOR = 'predlog Claude 2026-11-21 (najbližja vrstica pravila runbooka, M5-R10-132) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1966,6 +1982,10 @@ class BreedStageParamsSeeder extends Seeder
             'nail_trim' => [1, 'week', 'S990', 'Weekly pedicures', 'proposed_game_parameters.black_russian_terrier.nail_trimming', '"Weekly pedicures" → once a week'],
             'groomer_visit' => [1, 'six_weeks', 'S990', 'trimming by a professional groomer should occur every six to eight weeks.', 'proposed_game_parameters.black_russian_terrier.professional_grooming', '"every six to eight weeks" → the lower bound, 6 weeks (teeth: no source; bath: VCA "periodic" → no task)'],
         ],
+        'neapolitan_mastiff' => [
+            'fold_cleaning' => [7, 'day', 'S995', 'Their skin folds will need daily cleaning.', 'proposed_game_parameters.neapolitan_mastiff.face_fold_cleaning', '"daily cleaning" → every day'],
+            'bath' => [1, 'month', 'S996', 'will need a bath once or twice a month, according to the USNMC.', 'proposed_game_parameters.neapolitan_mastiff.bathing', '"once or twice a month" → the lower bound, every 4 weeks (ears "often", skin "regularly" → no task)'],
+        ],
     ];
 
     /**
@@ -2113,6 +2133,7 @@ class BreedStageParamsSeeder extends Seeder
         'norwegian_elkhound' => [7, 'S964', "You should brush your dog's coats for at least two minutes every day.", 'high', false],
         'tibetan_spaniel' => [2, 'S981', 'Grooming a couple of times per week is usually enough to keep their coats in tip-top condition.', 'high', false],
         'black_russian_terrier' => [7, 'S986', 'Every day', 'high', false],
+        'neapolitan_mastiff' => [1, 'S994', 'Once a week', 'high', false],
     ];
 
     /**
@@ -2310,13 +2331,14 @@ class BreedStageParamsSeeder extends Seeder
         'american_hairless_terrier' => ['S971', 'Begin socializing your American Hairless Terrier puppy as soon as you bring them home.'],
         'tibetan_spaniel' => ['S983', 'Begin socializing your Tibetan Spaniel puppy as soon as you bring them home.'],
         'black_russian_terrier' => ['S989', 'Early and consistent socialization is important for this breed to be comfortable around new people, animals, and situations.'],
+        'neapolitan_mastiff' => ['S996', 'Proper socialization and positive-reinforcement training from an early age'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -3164,6 +3186,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::AmericanHairlessTerrier => self::americanHairlessTerrierProfile(),
             BreedType::TibetanSpaniel => self::tibetanSpanielProfile(),
             BreedType::BlackRussianTerrier => self::blackRussianTerrierProfile(),
+            BreedType::NeapolitanMastiff => self::neapolitanMastiffProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -12339,6 +12362,89 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'black_russian_terrier.lifespan.rkc',
                 'quote' => 'Over 10 years',
                 'notes' => 'RKC Breeds A–Z lower bound (S986). PetMD / VCA 10–12 years (S989, S990); Wikipedia (S992, C) cites the 2024 UK study. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Neapolitan Mastiff (M5-R10-132). Stage boundaries young / adult, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_NEAPOLITAN_MASTIFF); weight, growth and lifespan are
+     * sourced. The senior boundary is Claude's suggestion (PROPOSED_R10_NEAPOLITAN_MASTIFF_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function neapolitanMastiffProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_NEAPOLITAN_MASTIFF;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S1000', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.neapolitan_mastiff.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog grows until 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [74, [
+                    'unit' => 'months', 'source_id' => 'S11,S1000', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.neapolitan_mastiff.senior_boundary_months', 'decision' => self::PROPOSED_R10_NEAPOLITAN_MASTIFF_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × the Bell & Hesketh 2021 owner-survey mean 8.17 y (S1000) = 73.5 → 74 months. RKC / PDSA "Under 10 years" (S994 / S995) has no lower bound; no McMillan 2024 / VetCompass median reachable. Alternatives: PetMD 7 y (S996) → 63; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 74],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.neapolitan_mastiff.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.neapolitan_mastiff.senior_boundary_months', 'decision' => self::PROPOSED_R10_NEAPOLITAN_MASTIFF_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 74 months (0.75 × 8.17 y, S1000).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months. PDSA (S995): not over-exercised as a puppy (paraphrase).',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S994', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.neapolitan_mastiff.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Up to 1 hour per day',
+                'notes' => 'RKC Breeds A–Z key fact (S994) "Up to 1 hour per day" → 60 min = 6,000 steps (runbook rule: up to N → N). PDSA (S995) "1 hour" agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.neapolitan_mastiff.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[50, 70], [
+                'unit' => 'kg', 'source_id' => 'S993', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'neapolitan_mastiff.adult_weight.fci',
+                'notes' => 'FCI-Standard N° 197 (S993): males 60–70, females 50–60 kg. PDSA (S995) 50–70 kg; PetMD (S996) 110–150 lb.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'neapolitan_mastiff.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 50–70 kg ≈ 110–154 lb, S993 → the Giant class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'neapolitan_mastiff.trainability.coren_rank',
+                'notes' => 'Not found in Coren\'s ranking (S35 read via a mirror 2026-11-21, which also lacked the Mastiff — unverified, open for David).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.neapolitan_mastiff.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not found in Coren\'s ranking (S35) → unranked rule → 1.0. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [8.17, [
+                'unit' => 'years', 'source_id' => 'S1000', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'neapolitan_mastiff.lifespan.bell_hesketh_2021',
+                'quote' => 'the Neapolitan Mastiff (n31) living the longest at 8.17 years',
+                'notes' => 'Bell & Hesketh 2021 owner-survey mean age at death (S1000, peer-reviewed; no per-breed median). RKC / PDSA "Under 10 years" (S994 / S995); PetMD 7–9 y (S996). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
