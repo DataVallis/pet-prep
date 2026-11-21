@@ -52,6 +52,11 @@ export interface UserResponse extends SessionUser {
    * default off). Read by the api wrapper below → `modules/errorReporting`.
    */
   app_error_reports?: boolean;
+  /**
+   * M5-08 (validation plan §4.1): where the parent heard of PetPrep — `null` = not answered yet,
+   * missing = an older server (then the app never asks). Always null for a child.
+   */
+  acquisition_source?: AuthUserBody['acquisition_source'];
 }
 
 /** `POST /api/login` response. */
@@ -63,7 +68,22 @@ export interface LoginResponse {
   awaiting_contract?: boolean | null;
 }
 
-/** `POST /api/register` body (M2-10a): parent self-registration. */
+/** `GET /api/user` 200 body as generated (only read for single fields; `UserResponse` stays the app's view). */
+type AuthUserBody = operations['auth.user']['responses'][200]['content']['application/json'];
+
+/** `PATCH /api/parent/settings` body (M5-08: the late acquisition answer; `timezone` optional). */
+export type PatchParentSettingsRequest = components['schemas']['PatchParentSettingsRequest'];
+
+/** M5-08 acquisition source: the answer to »Kje ste izvedeli za PetPrep?« (VALIDATION_PLAN §4.1). */
+export type AcquisitionSource = NonNullable<PatchParentSettingsRequest['acquisition_source']>;
+
+/**
+ * M5-08: the two optional fields `POST /api/register`, `POST /api/auth/social` and
+ * `PATCH /api/parent/settings` take. `acquisition_detail` (≤ 60 chars) only with `ad` / `other`.
+ */
+export type AcquisitionFields = Pick<PatchParentSettingsRequest, 'acquisition_source' | 'acquisition_detail'>;
+
+/** `POST /api/register` body (M2-10a): parent self-registration (+ the optional M5-08 acquisition fields). */
 export type RegisterParentRequest = components['schemas']['RegisterParentRequest'];
 
 /**
@@ -196,6 +216,22 @@ export type GiveTreatResponse = operations['wish.treat']['responses'][200]['cont
 export type ParentWishesResponse = operations['wish.parentIndex']['responses'][200]['content']['application/json'];
 export type DeclineWishResponse = operations['wish.decline']['responses'][200]['content']['application/json'];
 export type RedeemPetItemResponse = operations['wish.redeem']['responses'][200]['content']['application/json'];
+
+/** M5-08 H6: what brought the parent to the dashboard (`POST /api/parent/dashboard-opened`). */
+export type DashboardOpenTrigger = NonNullable<components['schemas']['DashboardOpenedRequest']['trigger']>;
+
+/** M5-08 H7: `POST /api/parent/phase2-interest` body (a withdrawal `{notify: false}` needs no price). */
+export type Phase2InterestRequest = components['schemas']['Phase2InterestRequest'];
+
+/** M5-08 H7: the fake door's price answer (D3 monthly). */
+export type Phase2PriceChoice = NonNullable<Phase2InterestRequest['price_choice']>;
+
+/** `POST /api/parent/phase2-interest` 200 body. */
+export type Phase2InterestResponse =
+  operations['parentValidation.phase2Submit']['responses'][200]['content']['application/json'];
+
+/** `PATCH /api/parent/settings` 200 body. */
+export type UpdateAcquisitionResponse = operations['parentSettings.patch']['responses'][200]['content']['application/json'];
 
 /** `GET /api/parent/dashboard` 200 response (union: paired / no pet / no child). */
 export type ParentDashboardResponse =
@@ -1355,6 +1391,36 @@ export const api = {
 
   /** GET /api/parent/dashboard — pet metrics, traffic light, quiet hours, activities. */
   getParentDashboard: () => apiRequest<ParentDashboardResponse>('/api/parent/dashboard'),
+
+  /**
+   * POST /api/parent/dashboard-opened {trigger} (M5-08 H6) — 204. Fire and forget: the caller
+   * debounces (30 min, `modules/validation/dashboardOpened.ts`), the server keeps ≤ 1 row per
+   * 30 min. Never touches the outage banner.
+   */
+  reportDashboardOpened: (trigger: DashboardOpenTrigger) =>
+    apiRequest<null>('/api/parent/dashboard-opened', { method: 'POST', body: { trigger }, silentStatus: true }),
+
+  /**
+   * POST /api/parent/phase2-interest/viewed (M5-08 H7) — 204; a tap on »Dobili smo pravo žival«.
+   * Fire and forget.
+   */
+  reportPhase2Viewed: () => apiRequest<null>('/api/parent/phase2-interest/viewed', { method: 'POST', silentStatus: true }),
+
+  /**
+   * POST /api/parent/phase2-interest (M5-08 H7) — upsert of the parent's answer, 200 `{status}`;
+   * 422 `email_required` / `email_invalid` when `notify` is true without a usable e-mail. A parent who
+   * already answered withdraws the consent with `{notify: false}` alone (the stored price stays).
+   */
+  submitPhase2Interest: (body: Phase2InterestRequest) =>
+    apiRequest<Phase2InterestResponse>('/api/parent/phase2-interest', { method: 'POST', body: { ...body } }),
+
+  /**
+   * PATCH /api/parent/settings {acquisition_source, acquisition_detail?} (M5-08) — the late answer of
+   * a parent who signed up before the question existed. The server takes it only while the stored
+   * source is still null (else 200 and ignored). `timezone` is optional on PATCH (PUT is unchanged).
+   */
+  updateAcquisitionSource: (body: AcquisitionFields) =>
+    apiRequest<UpdateAcquisitionResponse>('/api/parent/settings', { method: 'PATCH', body: { ...body } }),
 
   /** GET /api/parent/quiet-hours — quiet hours config + the family zone they are read in. */
   getQuietHours: () =>

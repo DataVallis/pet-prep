@@ -16,6 +16,8 @@ import { logout } from '@/modules/session/logout';
 import { saveSignInMethod } from '@/modules/session/signInMethod';
 import type { SignInPayload } from '@/store/appStore';
 import { strings } from '@/i18n/strings';
+import { acquisitionFields, EMPTY_ACQUISITION, type AcquisitionChoice } from '@/modules/validation/acquisition';
+import { markAcquisitionPromptDone } from '@/modules/validation/acquisitionPrefs';
 import { deviceTimezone } from './signup';
 import { SocialProviderError, obtainProviderCredential, type ProviderCredential, type ProviderResult, type SocialProvider } from './socialSdk';
 
@@ -68,9 +70,16 @@ const defaultDeps: SocialSignInDeps = {
 /** `POST /api/auth/social` body for a credential. */
 export function socialSignInBody(
   credential: ProviderCredential,
-  options: { termsAccepted: boolean; timezone: string | undefined; deviceName: string },
+  options: {
+    termsAccepted: boolean;
+    timezone: string | undefined;
+    deviceName: string;
+    /** M5-08: the optional answer from the terms sheet (server uses it only for a NEW account). */
+    acquisition?: AcquisitionChoice;
+  },
 ): SocialSignInRequest {
   return {
+    ...acquisitionFields(options.acquisition ?? EMPTY_ACQUISITION),
     provider: credential.provider,
     id_token: credential.idToken,
     ...(credential.nonce ? { nonce: credential.nonce } : {}),
@@ -137,8 +146,9 @@ export async function performSocialSignIn(
   credential: ProviderCredential,
   termsAccepted: boolean,
   deps: SocialSignInDeps = defaultDeps,
+  acquisition: AcquisitionChoice = EMPTY_ACQUISITION,
 ): Promise<{ session: SignInPayload; created: boolean }> {
-  const body = socialSignInBody(credential, { termsAccepted, timezone: deps.timezone(), deviceName: deps.device() });
+  const body = socialSignInBody(credential, { termsAccepted, timezone: deps.timezone(), deviceName: deps.device(), acquisition });
   let response: SocialSignInResponse;
   try {
     response = await deps.request(body);
@@ -153,6 +163,8 @@ export async function performSocialSignIn(
     throw new ApiError('Not a parent account.', 403, { code: 'not_a_parent' });
   }
   await deps.saveMethod(credential.provider);
+  // M5-08: the terms sheet asked »Kje ste izvedeli za PetPrep?« — never again on the dashboard.
+  if (termsAccepted && response.created === true) void markAcquisitionPromptDone(response.user.id);
   return {
     session: {
       token: response.token,
@@ -165,9 +177,14 @@ export async function performSocialSignIn(
   };
 }
 
-async function settle(credential: ProviderCredential, termsAccepted: boolean, deps: SocialSignInDeps): Promise<SocialSignInOutcome> {
+async function settle(
+  credential: ProviderCredential,
+  termsAccepted: boolean,
+  deps: SocialSignInDeps,
+  acquisition: AcquisitionChoice = EMPTY_ACQUISITION,
+): Promise<SocialSignInOutcome> {
   try {
-    const { session, created } = await performSocialSignIn(credential, termsAccepted, deps);
+    const { session, created } = await performSocialSignIn(credential, termsAccepted, deps, acquisition);
     return { kind: 'signed_in', session, created };
   } catch (err) {
     if (!termsAccepted && isTermsRequired(err)) return { kind: 'terms_required', credential };
@@ -187,7 +204,14 @@ export async function startSocialSignIn(provider: SocialProvider, deps: SocialSi
   return settle(result.credential, false, deps);
 }
 
-/** After the parent accepted the terms: the same ID token again, with `terms_accepted: true`. Never throws. */
-export function completeSocialSignUp(credential: ProviderCredential, deps: SocialSignInDeps = defaultDeps): Promise<SocialSignInOutcome> {
-  return settle(credential, true, deps);
+/**
+ * After the parent accepted the terms: the same ID token again, with `terms_accepted: true` and the
+ * optional M5-08 acquisition answer from the sheet. Never throws.
+ */
+export function completeSocialSignUp(
+  credential: ProviderCredential,
+  deps: SocialSignInDeps = defaultDeps,
+  acquisition: AcquisitionChoice = EMPTY_ACQUISITION,
+): Promise<SocialSignInOutcome> {
+  return settle(credential, true, deps, acquisition);
 }

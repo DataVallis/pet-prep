@@ -1,6 +1,6 @@
 # Validation plan — API contract (VALIDATION_PLAN §4.1, §4.4; H6, H7) — agreed 2026-11-21
 
-> **Status:** backend built (`feat/M5-08-validation-signals-v2`, 2026-11-21; supersedes #1480 after QA); app: in preparation (mobile PR follows). Contract additions of 2026-11-21 (coordinator, needed by the app) are marked *(addition)*, the QA #1480 changes *(QA)*; what the implementation decided where the contract was silent is in §4.
+> **Status:** backend built (`feat/M5-08-validation-signals-v2`, 2026-11-21; supersedes #1480 after QA); app built 2026-11-22 (`feat/M5-08-validation-signals-app-v2`, supersedes #1479 after QA). Contract additions of 2026-11-21 (coordinator, needed by the app) are marked *(addition)*, the QA #1480 changes *(QA)*; what the implementation decided where the contract was silent is in §4.
 
 David's decisions 2026-11-21:
 - (D1) The nightly breed / language runs keep running; the validation freeze does not apply to them.
